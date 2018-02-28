@@ -1,8 +1,8 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="crypto" audience="service" href="/docs/services/zcrypto/index.html"}
-IBM CloudCrypto
+{: .toc subcollection="hs-crypto" audience="service" href="/docs/services/hs-crypto/index.html"}
+IBM Cloud HyperSecure Crypto Services
 
     {: .navgroup id="learn"}
     index.md
