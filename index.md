@@ -52,8 +52,6 @@ The installation also includes the ACSP client library.  For more information, s
 > _**Disclaimer: At the current stage, the CloudCrypto service provides only self-signed certificates.**_
   
 You need to configure credentials in your ACSP client to make it operational. 
-## Getting credentials
-After you provision the {{site.data.keyword.cloud_notm}} HyperSecure Crypto Services instance, download the configuration credentials of ACSP client. 
 
 1. In your {{site.data.keyword.hscrypto}} service instance, select **Manage** from the navigation on the left.
 2. On the Manage screen, click the **Download Config** button to download the `acsp_client_credentials.uue` file.
