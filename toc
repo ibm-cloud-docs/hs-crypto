@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="hs-crypto" audience="service" href="/docs/services/hs-crypto/index.html"}
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.hpcrypto}}
+IBM Cloud Hyper Protect Crypto Services
 
     {: .navgroup id="learn"}
     index.md
