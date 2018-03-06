@@ -6,6 +6,7 @@ IBM Cloud Hyper Protect Crypto Services
 
     {: .navgroup id="learn"}
     index.md
+    overview.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
