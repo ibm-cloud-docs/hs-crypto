@@ -8,11 +8,6 @@ IBM Cloud Hyper Protect Crypto Services
     index.md
     {: .navgroup-end}
 
-    {: .navgroup id="howto"}
-    protect_key.md
-    protect_data.md
-    {: .navgroup-end}
-
     {: .navgroup id="reference"}
     [Key Protect service](https://console.bluemix.net/docs/services/keymgmt/index.html)
     [IBM Cloud Hyper Protect Developer Starter Kits](https://console.bluemix.net/docs/services/hypersecure-platform/index.html)
