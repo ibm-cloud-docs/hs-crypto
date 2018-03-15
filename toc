@@ -12,7 +12,6 @@ IBM Cloud Hyper Protect Crypto Services
     {: .navgroup id="howto"}
     protect_key.md
     protect_data.md
-    ios_dev.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
