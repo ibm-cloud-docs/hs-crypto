@@ -33,9 +33,10 @@ Before you begin, you must have a instance of {{site.data.keyword.hscrypto}} in 
 
 ## Installing ACSP client libraries
 
-Complete the following steps to install the ACSP client library in your local environment.
-1. Download the installation package from the [GitHub repository ![External link icon](image/external_link.svg "External link icon")](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:new_window}.
-2. Run the `acsp-pkcs11-client_1.5-3.5_amd64.deb` file to install the ACSP client libraries.
+Complete the following steps to install the ACSP client libraries in your local environment.
+
+1. Download the installation package from the [GitHub repository ![External link icon](image/external_link.svg "External link icon")](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:new_window}. In the **packages** folder, choose the installation package file that is suitable for your operation system and CPU architecture.
+2. Run the installation package file to install the ACSP client libraries.
 
 
 ## Configuring ACSP client
@@ -59,6 +60,8 @@ You need to configure credentials in your ACSP client to make it operational.
        `chown root.pkcs11 *`
 
 Now your ACSP client is operational and your {{site.data.keyword.hscrypto}} is ready to use!
+
+For more information about ACSP client installation and configureation, see [ACSP Client Installation and Configuration Guide ![External link icon](image/external_link.svg "External link icon")](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/doc/ACSP-client-config-guide.pdf){:new_window}.
 
 
 ## Getting support
