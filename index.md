@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-15"
 
 ---
 
@@ -35,28 +35,28 @@ Before you begin, you must have a instance of {{site.data.keyword.hscrypto}} in 
 
 Complete the following steps to install the ACSP client libraries in your local environment.
 
-1. Download the installation package from the [GitHub repository ![External link icon](image/external_link.svg "External link icon")](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:new_window}. In the **packages** folder, choose the installation package file that is suitable for your operation system and CPU architecture.
-2. Run the installation package file to install the ACSP client libraries.
+1. Download the installation package from the [GitHub repository ![External link icon](image/external_link.svg "External link icon")](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:new_window}. In the **packages** folder, choose the installation package file that is suitable for your operation system and CPU architecture. For example, for Ubuntu on x86, choose `dpkg -i acsp-pkcs11-client_1.5-3.5_amd64.deb`.
+2. Run the package file to install the ACSP client libraries.
 
 
 ## Configuring ACSP client
 
 > _**Disclaimer: At the current stage, {{site.data.keyword.hscrypto}} provides only self-signed certificates.**_
 
-You need to configure credentials in your ACSP client to make it operational.
+You need to configure the ACSP client to enable a proper secure communication channel (mutual TLS) to your service instance in the cloud.
 
 1. In your {{site.data.keyword.hscrypto}} service instance in {{site.data.keyword.cloud_notm}}, select **Manage** from the left navigator.
 2. On the "Manage" screen, click the **Download Config** button to download the `acsp_client_credentials.uue` file.
 3. Copy the `acsp_client_credentials.uue` file to the `/opt/ibm/acsp-pkcs11-client/config` directory in your local environment.
 4. In the `/opt/ibm/acsp-pkcs11-client/config` directory, decode the file with the following command:
-       `base64 -D -i acsp_client_credentials.uue -o acsp_client_credentials.tgz`
+       `base64 -D -i acsp_client_credentials.uue -o acsp_client_credentials.tar`
 5. Extract the client credentials file with the following command:
-       `tar zxf acsp_client_credentials.tgz`
-6. Enter the `server-config` folder wiht the following command:
+       `tar xf acsp_client_credentials.tar`
+6. Enter the `server-config` folder with the following command:
        `mv server-config/* ./`
 7. Rename the client credentials file with the following command:
        `mv acsp.properties.client acsp.properties`
-8. Change group ID of the files with the following command:
+8. (Optional:) Change group ID of the files with the following command:
        `chown root.pkcs11 *`
 
 Now your ACSP client is operational and your {{site.data.keyword.hscrypto}} is ready to use!
