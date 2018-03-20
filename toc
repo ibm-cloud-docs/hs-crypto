@@ -10,11 +10,13 @@ IBM Cloud Hyper Protect Crypto Services
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
+    pkcs11.md
     protect_key.md
     protect_data.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    api_reference.md
     [Key Protect](https://console.bluemix.net/docs/services/keymgmt/index.html)
     [Hyper Protect DBaaS](https://console.bluemix.net/docs/services/hypersecure-dbaas/index.html)
     [Container Services](https://console.bluemix.net/docs/containers/container_index.html)
