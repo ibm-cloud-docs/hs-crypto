@@ -49,7 +49,10 @@ the opensc package in most popular linux distros.
 ### Changing the User PIN
 Enter the command
 
-```pkcs11-tool --module /usr/lib/libacsp-pkcs11.so --slot <slot-id> --change-pin —login ```
+```
+pkcs11-tool --module /usr/lib/libacsp-pkcs11.so --slot <slot-id> --change-pin —login
+```
+{: codeblock}
 
 and follow the instructions in the command line.
 
@@ -70,11 +73,15 @@ PIN successfully changed
 2018.03.19 17:56:04.579 (72) ACSP50523I Closing connection(0)
 2018.03.19 17:56:04.580 (72) ACSP50512I Connection manager thread ending
 ```
+{: codeblock}
+
 
 ### Changing the SO PIN
 Enter the command
-
-```pkcs11-tool --module /usr/lib/libacsp-pkcs11.so --slot <slot-id> --change-pin --login --login-type so```
+```
+pkcs11-tool --module /usr/lib/libacsp-pkcs11.so --slot <slot-id> --change-pin --login --login-type so
+```
+{: codeblock}
 
 and follow the instructions in the command line.
 
@@ -95,3 +102,4 @@ PIN successfully changed
 2018.03.19 18:17:26.013 (99) ACSP50523I Closing connection(0)
 2018.03.19 18:17:26.014 (99) ACSP50512I Connection manager thread ending
 ```
+{: codeblock}
