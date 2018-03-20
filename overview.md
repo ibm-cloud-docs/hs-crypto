@@ -16,7 +16,7 @@ lastupdated: "2018-03-15"
 
 > _**Disclaimer: {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is still in experimental phase and it might change at anytime.**_
 
-Data and information security is crucial and essential for IT environments. As more and more data moves to the cloud, keeping date safe and secure becomes a non trivial challenge.  {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} offers cryptography with industry's highest security level to protect your data in a hyper secure manner.
+Data and information security is crucial and essential for IT environments. As more and more data moves to the cloud, keeping data safe and secure becomes a non trivial challenge.  {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} offers cryptography with industry's highest security level to protect your data in a hyper secure manner.
 {: shortdesc}
 
 {{site.data.keyword.hscrypto}} brings the security and integrity of System z to the cloud. The same state-of-the-art cryptographic technology that banks and financial services rely on is now offered to cloud users via {{site.data.keyword.cloud_notm}}. With {{site.data.keyword.hscrypto}}, you can secure your data at rest, in use, and in transit. {{site.data.keyword.hscrypto}} also binds the {{site.data.keyword.keymanagementservicefull_notm}} service and protect your keys in a hyper secure environment on System z.
