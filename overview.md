@@ -23,10 +23,10 @@ Data and information security is crucial and essential for IT environments. As m
 
 Behind the cloud, {{site.data.keyword.hscrypto}} offers network addressable hardware security modules (HSMs) to provide safe and secure cryptography via PKCS#11 application programming interfaces (APIs). You can access {{site.data.keyword.hscrypto}} with several popular programming languages such as Java, JavaScript, Swift, and so on.
 
-
+<!--
 ![Architecture](image/archi.png "Architecture")
 *Figure 1. Architecture*
-
+-->
 
 ## Provisioning a {{site.data.keyword.hscrypto}} instance
 {: #provision}
