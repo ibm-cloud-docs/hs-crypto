@@ -14,7 +14,7 @@ lastupdated: "2018-03-16"
 
 # Exploiting PKCS#11
 
-The provided API that is available via the ACSP client lib is [PKCS#11 ![External link icon](image/external_link.svg "External link icon")](https://console.bluemix.net/catalog/labs/){:new_window}.
+The provided API that is available via the ACSP client lib is [PKCS#11 ![External link icon](image/external_link.svg "External link icon")](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){:new_window}.
 
 Applications that support PKCS#11, like openssl, can be used directly with the installed ACSP dynamic library.
 
