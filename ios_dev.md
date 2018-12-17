@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-03-15"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -14,7 +14,9 @@ lastupdated: "2018-03-15"
 
 # Protecting your Apple application
 
-> _**Disclaimer: {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is still in experimental phase and it might change at anytime. At the current stage, {{site.data.keyword.hscrypto}} provides only self-signed certificates.**_
+***Need to verify whether this is still a validate topic***
+
+> _**Disclaimer: At the current stage, {{site.data.keyword.hscrypto}} provides only self-signed certificates.**_
 
 You can use {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} to protect your Apple applications.
 {:shortdesc}
@@ -24,4 +26,3 @@ You can use {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} to p
 
 ![Data in Apple app](image/ios_dev.png "Data in Apple app")
 *Figure 1. Protecting data in Apple applications*
-  

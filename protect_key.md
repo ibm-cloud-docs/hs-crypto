@@ -14,7 +14,7 @@ lastupdated: "2018-03-16"
 
 # Protecting your keys
 
-> _**Disclaimer: {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is still in experimental phase and it might change at anytime.**_
+***NOTE: Need to verify whether this topic is still needed in Beta. ***
 
 You can bind {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} and the {{site.data.keyword.keymanagementservicefull_notm}} to manage and protect your keys with hardware security modules (HSMs) using FIPS 140-2 Level 4 certified technology.
 {:shortdesc}
@@ -36,12 +36,12 @@ For more information about the {{site.data.keyword.keymanagementserviceshort}} s
 
 The following list describes the basic steps to set up the hyper protected environment for your keys with {{site.data.keyword.hscrypto}} and {{site.data.keyword.keymanagementserviceshort}} services.
 
-1. Provision an instance of {{site.data.keyword.hscrypto}}. For more information, see [Provisioning a {{site.data.keyword.hscrypto}} instance](overview.html#provision).
+1. Provision an instance of {{site.data.keyword.hscrypto}}. For more information, see [Provisioning a {{site.data.keyword.hscrypto}} instance](index.html#provision).
 2. Retrieve the instance ID of your {{site.data.keyword.hscrypto}} instance with the [bluemix resource service-instance ![External link icon](image/external_link.svg "External link icon")](){:new_window} command.
 3. Retrieve connection information of your {{site.data.keyword.hscrypto}} instance by calling the {{site.data.keyword.hscrypto}} API with the instance ID and your IAM token.  For example:
     ```cURL
     curl -X GET \
-        https://zcryptobroker.bluemix.net/crypto_v1/instances/<instance_ID> \
+        https://hpcs.cloud.ibm.com/crypto_v1/instances/<instance_ID> \
         -H 'Authorization: <IAM_token>' \
     ```
     {: codeblock}

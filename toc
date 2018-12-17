@@ -5,20 +5,52 @@
 IBM Cloud Hyper Protect Crypto Services
 
     {: .navgroup id="learn"}
-    index.md
-    overview.md
+    {: .topicgroup}
+    Getting started
+        index.md
+        getstarted_hsm.md
+
+    {: .topicgroup}
+    About IBM Cloud Hyper Protect Crypto Services
+        overview.md
+        use_case.md
+
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    pkcs11.md
-    protect_key.md
-    protect_data.md
+    provision.md
+    access-api.md
+    initialize_hsm.md
+    manage-access.md
+
+    {: .topicgroup}
+    Creating keys
+        create-root-keys.md
+        create-standard-keys.md
+
+    {: .topicgroup}
+    Importing keys
+        import-root-keys.md
+        import-standard-keys.md
+
+    {: .topicgroup}
+    Managing keys
+        view-keys.md
+        rotate-keys.md
+        wrap-keys.md
+        unwrap-keys.md
+        delete-keys.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    api_reference.md
+    [Hyper Protect Crypto API reference](https://console.bluemix.net/apidocs/hp-crypto){: new_window}
+    regions.md
     [Key Protect](https://console.bluemix.net/docs/services/keymgmt/index.html)
     [Hyper Protect DBaaS](https://console.bluemix.net/docs/services/hypersecure-dbaas/index.html)
     [Container Services](https://console.bluemix.net/docs/containers/container_index.html)
-    [Hyper Protect Developer Starter Kits for iOS](https://console.bluemix.net/docs/services/hypersecure-platform/index.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    FAQs.md
+    get_help.md
     {: .navgroup-end}

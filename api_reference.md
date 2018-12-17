@@ -49,7 +49,7 @@ The following table shows the operations that you can invoke with the {{site.dat
 ## Retrieve the connection info
 {: #retrieve_connection_info}
 
-Retrieves the connection info that has to be passed into {{site.data.keyword.keymanagementserviceshort}} by specifying the ID of the Crypto service instance.
+Retrieves the connection info that has to be passed into {{site.data.keyword.hscrypto}} by specifying the ID of the Crypto service instance.
 
 <table>
     <tr>
@@ -187,4 +187,3 @@ Replace the variables in the example request according to the following table.
     </tr>
     <caption style="caption-side:bottom;">Table 5. Response descriptions for the <code>GET /credentials/{id}</code> operation</caption>
 </table>
-
