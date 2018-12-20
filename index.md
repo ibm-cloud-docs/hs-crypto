@@ -33,7 +33,7 @@ Before you begin, you must create an instance of {{site.data.keyword.hscrypto}} 
 
 ## 2. Initialize your crypto instance
 
-To manage your keys, you need to initialize your crypto (HSM) instance first. For a quick getting-started tutorial, see [Getting started with crypto instance initialization](get_started_hsm.html). For detailed steps and best practices, see [Initializing crypto instances to protect key storage](initialize_hsm.md).
+To manage your keys, you need to initialize your crypto (HSM) instance first. For a quick getting-started tutorial, see [Getting started with crypto instance initialization](get_started_hsm.html). For detailed steps and best practices, see [Initializing crypto instances to protect key storage](initialize_hsm.html).
 
 ## 3. Manage your keys
 
