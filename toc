@@ -14,7 +14,6 @@ IBM Cloud Hyper Protect Crypto Services
     About IBM Cloud Hyper Protect Crypto Services
         overview.md
         use_case.md
-
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
