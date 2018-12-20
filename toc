@@ -8,7 +8,7 @@ IBM Cloud Hyper Protect Crypto Services
     {: .topicgroup}
     Getting started
         index.md
-        getstarted_hsm.md
+        get_started_hsm.md
 
     {: .topicgroup}
     About IBM Cloud Hyper Protect Crypto Services
