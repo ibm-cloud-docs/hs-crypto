@@ -70,7 +70,7 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
         <td>US South</td>
         <td>Dallas, US</td>
         <td>
-            <code>hpcs.us-south.cloud.ibm.com/</code>
+            <code>us-south.hpcs.cloud.ibm.com/</code>
         </td>
     </tr>
     <caption style="caption-side:bottom;">Table 1. Shows the available endpoint for the {{site.data.keyword.hscrypto}}} API</caption>

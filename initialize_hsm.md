@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-05"
+lastupdated: "2018-12-19"
 
 ---
 
@@ -22,7 +22,7 @@ Master keys protect the contents of key storage. Using the Trusted Key Entry plu
 
 The Trusted Key Entry plug-in provides a limited set of functions for managing domains on EP11 crypto modules assigned to an {{site.data.keyword.cloud}} user account. The plug-in allows you to load your master key values. The master key value is not known to any part of the {{site.data.keyword.cloud_notm}} other than the target domains on the target crypto modules.
 
-Take may take 20-30 minutes to complete this task.
+It might take 20-30 minutes for you to complete this task.
 
 ## Before you begin
 
