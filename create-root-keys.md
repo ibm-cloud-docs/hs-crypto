@@ -170,4 +170,4 @@ hs-crypto/access-api.html).
 ### What's next
 
 - To find out more about protecting keys with envelope encryption, check out [Wrapping keys](/docs/services/hs-crypto/wrap-keys.html).
-- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/hp-crypt){: new_window}.
+- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/hp-crypto){: new_window}.
