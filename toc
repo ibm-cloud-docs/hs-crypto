@@ -14,26 +14,30 @@ IBM Cloud Hyper Protect Crypto Services
     About IBM Cloud Hyper Protect Crypto Services
         overview.md
         use_case.md
+        keys_intro.md
+
+    whats_new.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     provision.md
     access-api.md
+    set-up-cli.md
     initialize_hsm.md
     manage-access.md
 
     {: .topicgroup}
-    Creating keys
+    Creating root keys and standard keys
         create-root-keys.md
         create-standard-keys.md
 
     {: .topicgroup}
-    Importing keys
+    Importing root keys and standard keys
         import-root-keys.md
         import-standard-keys.md
 
     {: .topicgroup}
-    Managing keys
+    Managing root keys and standard keys
         view-keys.md
         rotate-keys.md
         wrap-keys.md
@@ -50,6 +54,6 @@ IBM Cloud Hyper Protect Crypto Services
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    troubleshooting.md
     FAQs.md
-    get_help.md
     {: .navgroup-end}

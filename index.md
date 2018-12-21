@@ -14,7 +14,7 @@ lastupdated: "2018-11-30"
 
 # Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
 
-**Disclaimer**: {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is still in experimental phase and it might change at anytime.
+***Disclaimer: {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is still in experimental phase and it might change at anytime.***
 
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}} for short) provides a cloud hardware security module (HSM) for a dedicated key management service. {{site.data.keyword.hscrypto}} helps you encrypt your data at the safety and security level of IBM Z cryptography in a convenient and cost competitive manner.
 {:shortdesc}
@@ -36,17 +36,9 @@ Before you begin, you must create an instance of {{site.data.keyword.hscrypto}} 
 To manage your keys, you need to initialize your crypto (HSM) instance first. For a quick getting-started tutorial, see [Getting started with crypto instance initialization](get_started_hsm.html). For detailed steps and best practices, see [Initializing crypto instances to protect key storage](initialize_hsm.html).
 
 ## 3. Manage your keys
+{: #manage-keys}
 
-From the {{site.data.keyword.hscrypto}} dashboard, you can create new keys for cryptography, or you can import your existing keys.
-
-Choose from two key types:
-
-<dl>
-  <dt>Root keys</dt>
-    <dd>Root keys are symmetric key-wrapping keys that you fully manage in {{site.data.keyword.hscrypto}}. You can use a root key to protect other cryptographic keys with advanced encryption. To learn more, see <a href="/docs/services/key-protect/concepts/envelope-encryption.html">Envelope encryption</a>.</dd>
-  <dt>Standard keys</dt>
-    <dd>Standard keys are symmetric keys that are used for cryptography. You can use a standard key to directly encrypt and decrypt data.</dd>
-</dl>
+From the {{site.data.keyword.hscrypto}} dashboard, you can create new root keys or standard keys for cryptography, or you can import your existing keys. For more information on root keys and standard keys, see [Introduction to keys](keys_intro.html).
 
 ### Creating new keys
 {: #create-keys}

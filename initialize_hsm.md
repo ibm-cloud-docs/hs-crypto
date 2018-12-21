@@ -33,8 +33,7 @@ Before you load master keys, install the latest Trusted Key Entry plug-in with t
   ```
   {: pre}
 
-  To install the CLI plug-in, see [Setting up the CLI](/docs/services/key-protect/set-up-cli.html). When you log in to the [{{site.data.keyword.cloud_notm}} CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/cli/index.html#overview){: new_window}, you're notified when updates are available. Be sure to keep your CLI up-to-date so that you can use the commands and flags that are available for the Trusted Key Entry CLI plug-in.
-  {: tip}
+  **Tip**: To install the CLI plug-in, see [Setting up the CLI](/docs/services/key-protect/set-up-cli.html). When you log in to the [{{site.data.keyword.cloud_notm}} CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/cli/index.html#overview){: new_window}, you're notified when updates are available. Be sure to keep your CLI up-to-date so that you can use the commands and flags that are available for the Trusted Key Entry CLI plug-in.
 
 And also, set the environment variable CLOUDTKEFILES to indicate the subdirectory where you want to store the key parts and signature keys.
 
@@ -89,8 +88,7 @@ To load the new master key register, complete the following tasks using the {{si
 
   Each master key part is saved in a password-protected file on the workstation.
 
-  You must generate at least two master key parts. For added security, three key parts can be used and each key part can be owned by a different person. The key part owner should be the only person who knows the password associated with the key part file.
-  {: important}
+  **Important**: You must generate at least two master key parts. For added security, three key parts can be used and each key part can be owned by a different person. The key part owner should be the only person who knows the password associated with the key part file.
 
   * To display the existing master key parts on the workstation, use the following command:
     ```
@@ -118,8 +116,7 @@ To load the new master key register, complete the following tasks using the {{si
 
   A domain administrator must sign the command to load the new master key register. The first step is to generate a signature key on your workstation. The private part is used to create signatures. The public part is placed in a certificate that is installed in a target domain to define a domain administrator.
 
-  For added security, the signature key owner can be a different person from the master key part owners. The signature key owner should be the only person who knows the password associated with the signature key file.
-  {: important}
+  **Important**: For added security, the signature key owner can be a different person from the master key part owners. The signature key owner should be the only person who knows the password associated with the signature key file.
 
   * To display the existing signature keys on the workstation, use the following command:
     ```
@@ -137,8 +134,7 @@ To load the new master key register, complete the following tasks using the {{si
 
 3.  **Load one or more domain administrators in the target domain**
 
-  To load a master key register, all key part files and the signature key file must be present on a common workstation. If the files were generated on separate workstations, you might need to rename the files before you transfer them to the common workstation to avoid a name collision. The key part file owners and the signature key file owner must be present together at the common workstation so they can enter the file passwords at the appropriate time when the master key register is loaded.
-  {: important}
+  **Important**: To load a master key register, all key part files and the signature key file must be present on a common workstation. If the files were generated on separate workstations, you might need to rename the files before you transfer them to the common workstation to avoid a name collision. The key part file owners and the signature key file owner must be present together at the common workstation so they can enter the file passwords at the appropriate time when the master key register is loaded.
 
   After a domain leaves imprint mode, all administrative commands sent to the domain must be signed by an administrator that the domain recognizes.
 
@@ -177,8 +173,7 @@ To load the new master key register, complete the following tasks using the {{si
 
   * To select the administrator to sign the command, use the command:
 
-  The command to exit imprint mode must be signed by a domain administrator. After the domain leaves imprint mode, all commands to the domain must be signed.
-  {: tip}
+  **Tip**: The command to exit imprint mode must be signed by a domain administrator. After the domain leaves imprint mode, all commands to the domain must be signed.
 
     ```
     ibmcloud tke sigkey-sel

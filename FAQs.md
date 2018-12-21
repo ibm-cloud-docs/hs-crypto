@@ -35,6 +35,10 @@ FIPS 140-2 Level 4 is a very high protection level not widely available in the m
 
 ## Key management
 
+### Can {{site.data.keyword.hscrypto}} be used in combination with {{site.data.keyword.keymanagementserviceshort}} service?
+
+ {{site.data.keyword.hscrypto}} is a managed Crypto Service that comes with a fully compatible {{site.data.keyword.keymanagementserviceshort}} API, that has an identical user experience as Key Protect. The major difference is, that {{site.data.keyword.hscrypto}} relies on a HSM that has been FIPS 140-2 lvl 4 certified. And it provides full control with the HSM master key being managed by the customer (KYOK). The service is dedicated per instance compared to the multi-tenant setup for {{site.data.keyword.keymanagementserviceshort}}. {{site.data.keyword.hscrypto}} also offers HSM capabilities for cryptographic operations like sign/verify, key generate, cryptographic hashing, encrypt/decrypt, and wrap/unwrap. 
+
 ### How long can a key name be?
 {: #key_names}
 
