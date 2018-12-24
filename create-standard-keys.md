@@ -22,8 +22,7 @@ You can create a standard encryption key with the {{site.data.keyword.cloud}} {{
 ## Creating standard keys with the GUI
 {: #gui}
 
-[After you create an instance of the service](/docs/services/hs-crypto/provision.html), complete the following steps to create a standard key with the {{site.data.keyword.{{site.data.keyword.hscrypto}}
-hscrypto}} GUI.
+[After you create an instance of the service](/docs/services/hs-crypto/provision.html), complete the following steps to create a standard key with the {{site.data.keyword.hscrypto}} GUI.
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/){: new_window}.
 2. From your {{site.data.keyword.cloud_notm}} dashboard, select your provisioned instance of {{site.data.keyword.hscrypto}}.
