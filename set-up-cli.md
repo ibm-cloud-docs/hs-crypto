@@ -29,7 +29,7 @@ export KP_PRIVATE_ADDR=<URL>
 ```
 {: pre}
 
-In this command, the *<URL>* is the endpoint that is displayed on the **Manage** page of the user interface. Or, you can retrieve the endpoint URL through the API. For example:
+In this command, the *URL* is the endpoint that is displayed on the **Manage** page of the user interface. Or, you can retrieve the endpoint URL through the API. For example:
 
 ```
 export KP_PRIVATE_ADDR="https://us-south.hpcs.cloud.ibm.com:<port>"
