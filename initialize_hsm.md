@@ -17,10 +17,10 @@ lastupdated: "2018-12-19"
 # Initializing crypto instances to protect key storage
 {: #initialize-hsm}
 
-Master keys protect the contents of key storage. Using the Trusted Key Entry plug-in, you can load the master keys to a common workstation to protect your key storage.   
+Master keys protect the contents of key storage. Using the Trusted Key Entry plug-in, you can load the master key registers of crypto instances in your {{site.data.keyword.cloud}} user account with values that you choose and control.   
 {:shortdesc}
 
-The Trusted Key Entry plug-in provides a limited set of functions for managing domains on EP11 crypto modules assigned to an {{site.data.keyword.cloud}} user account. The plug-in allows you to load your master key values. The master key value is not known to any part of the {{site.data.keyword.cloud_notm}} other than the target domains on the target crypto modules.
+The Trusted Key Entry plug-in provides a limited set of functions for managing domains on EP11 crypto modules assigned to an {{site.data.keyword.cloud_notm}} user account. The plug-in allows you to load your master key values. The master key value is not known to any part of the {{site.data.keyword.cloud_notm}} other than the target domains on the target crypto modules.
 
 It might take 20-30 minutes for you to complete this task.
 
@@ -35,7 +35,7 @@ Before you load master keys, install the latest Trusted Key Entry plug-in with t
 
   **Tip**: To install the CLI plug-in, see [Setting up the CLI](/docs/services/key-protect/set-up-cli.html). When you log in to the [{{site.data.keyword.cloud_notm}} CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/cli/index.html#overview){: new_window}, you're notified when updates are available. Be sure to keep your CLI up-to-date so that you can use the commands and flags that are available for the Trusted Key Entry CLI plug-in.
 
-And also, set the environment variable CLOUDTKEFILES to indicate the subdirectory where you want to store the key parts and signature keys.
+You must also set the environment variable CLOUDTKEFILES on your workstation to indicate the subdirectory where key part files and signature key files are created and saved. The environment variable gives the absolute path of the subdirectory.
 
 ## Identifying the crypto module domains assigned to a user account
 {: #IdentifyDomains}
