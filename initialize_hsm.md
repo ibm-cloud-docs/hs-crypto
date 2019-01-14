@@ -33,7 +33,7 @@ Before you load master keys, install the latest Trusted Key Entry plug-in with t
   ```
   {: pre}
 
-  **Tip**: To install the CLI plug-in, see [Setting up the CLI](/docs/services/key-protect/set-up-cli.html). When you log in to the [{{site.data.keyword.cloud_notm}} CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/cli/index.html#overview){: new_window}, you're notified when updates are available. Be sure to keep your CLI up-to-date so that you can use the commands and flags that are available for the Trusted Key Entry CLI plug-in.
+  **Tip**: To install the CLI plug-in, see [Setting up the CLI](/docs/services/hs-crypto/set-up-cli.html). When you log in to the [{{site.data.keyword.cloud_notm}} CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/cli/index.html#overview){: new_window}, you're notified when updates are available. Be sure to keep your CLI up-to-date so that you can use the commands and flags that are available for the Trusted Key Entry CLI plug-in.
 
 You must also set the environment variable CLOUDTKEFILES on your workstation to indicate the subdirectory where key part files and signature key files are created and saved. The environment variable gives the absolute path of the subdirectory.
 
@@ -84,35 +84,7 @@ Before the new master key register can be loaded, install one or more administra
 
 To load the new master key register, complete the following tasks using the {{site.data.keyword.cloud_notm}} CLI plug-in:
 
-1. **Generate a set of master key parts to use**
-
-  Each master key part is saved in a password-protected file on the workstation.
-
-  **Important**: You must generate at least two master key parts. For added security, three key parts can be used and each key part can be owned by a different person. The key part owner should be the only person who knows the password associated with the key part file.
-
-  * To display the existing master key parts on the workstation, use the following command:
-    ```
-    ibmcloud tke mks
-    ```
-    {: pre}
-
-  * To generate and save a random master key part on the workstation, use the command:
-    ```
-    ibmcloud tke mk-add --random
-    ```
-    {: pre}
-
-    When prompted, enter a description for the key part and a password to protect the file. You must remember the password. If the password is lost, you cannot use the key part.
-
-  * To enter a known key part value and save it in a file on the workstation, use the following command:
-    ```
-    ibmcloud tke mk-add --value
-    ```
-    {: pre}
-
-    When prompted, enter the key part value as a hexadecimal string for the 32-byte key part.  And then enter a description for the key part and a password to protect the key part file.
-
-2. **Generate one or more signature keys**
+1. **Generate one or more signature keys**
 
   A domain administrator must sign the command to load the new master key register. The first step is to generate a signature key on your workstation. The private part is used to create signatures. The public part is placed in a certificate that is installed in a target domain to define a domain administrator.
 
@@ -132,7 +104,7 @@ To load the new master key register, complete the following tasks using the {{si
 
     When prompted, enter an administrator name and a password to protect the file. You must remember the password. If the password is lost, the signature key cannot be used.
 
-3.  **Load one or more domain administrators in the target domain**
+2.  **Load one or more domain administrators in the target domain**
 
   **Important**: To load a master key register, all key part files and the signature key file must be present on a common workstation. If the files were generated on separate workstations, you might need to rename the files before you transfer them to the common workstation to avoid a name collision. The key part file owners and the signature key file owner must be present together at the common workstation so they can enter the file passwords at the appropriate time when the master key register is loaded.
 
@@ -158,7 +130,7 @@ To load the new master key register, complete the following tasks using the {{si
 
   In imprint mode, the command to install a domain administrator does not need to be signed. After leaving imprint mode, domain administrators can still be added, but the command to install a domain administrator must be signed by a domain administrator that is already installed in the domain.
 
-4. **Leave imprint mode in the target domain**
+3. **Leave imprint mode in the target domain**
 
   A domain in imprint mode is not considered secure. You cannot run most of the administrative commands, such as loading the new master key register, in imprint mode.
 
@@ -186,6 +158,34 @@ To load the new master key register, complete the following tasks using the {{si
 
   If a signature key file is already selected for signing administrative commands, this is indicated when the list of signature key files is displayed.
 
+4. **Generate a set of master key parts to use**
+
+  Each master key part is saved in a password-protected file on the workstation.
+
+  **Important**: You must generate at least two master key parts. For added security, three key parts can be used and each key part can be owned by a different person. The key part owner should be the only person who knows the password associated with the key part file.
+
+  * To display the existing master key parts on the workstation, use the following command:
+  ```
+  ibmcloud tke mks
+  ```
+  {: pre}
+
+  * To generate and save a random master key part on the workstation, use the command:
+    ```
+    ibmcloud tke mk-add --random
+    ```
+    {: pre}
+
+    When prompted, enter a description for the key part and a password to protect the file. You must remember the password. If the password is lost, you cannot use the key part.
+
+  * To enter a known key part value and save it in a file on the workstation, use the following command:
+    ```
+    ibmcloud tke mk-add --value
+    ```
+    {: pre}
+
+    When prompted, enter the key part value as a hexadecimal string for the 32-byte key part.  And then enter a description for the key part and a password to protect the key part file.
+
 5. **Load the new master key register**
 
   To load the new master key register, use the following command:
@@ -207,6 +207,17 @@ To load the new master key register, complete the following tasks using the {{si
   ibmcloud tke domain-mk-commit
   ```
   {: pre}
+
+7. **Move the master key**
+
+  Move the master key to the current master key register with the following command:
+
+  ```
+  ibmcloud tke domain-mk-setimm
+  ```
+  {: pre}
+
+  When prompted, enter the password for the signature key file.
 
 ## Reference: Other Trusted Key Entry plug-in commands
 
