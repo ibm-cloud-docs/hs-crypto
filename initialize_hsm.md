@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-19"
+  years: 2018, 2019
+lastupdated: "2019-01-15"
 
 ---
 
@@ -208,9 +208,9 @@ To load the new master key register, complete the following tasks using the {{si
   ```
   {: pre}
 
-7. **Move the master key**
+7. **Activate the master key**
 
-  Move the master key to the current master key register with the following command:
+  Activate the master key by moving the master key to the current master key register with the following command:
 
   ```
   ibmcloud tke domain-mk-setimm
