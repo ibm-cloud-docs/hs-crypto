@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-20"
+  years: 2018, 2019
+lastupdated: "2019-01-15"
 
 ---
 
@@ -23,9 +23,31 @@ lastupdated: "2018-12-20"
 General problems with using {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} might include providing the correct headers or credentials when you interact with the API. In many cases, you can recover from these problems by following a few easy steps.
 {: shortdesc}
 
+## Error occurred when deleting an initialized {{site.data.keyword.hscrypto}} instance
+
+You might receive an error similar to the following when you delete an initialized {{site.data.keyword.hscrypto}} instance:
+
+```
+FAILED
+Error response from server. Status code: 400; description: 400 DELETE https://zCryptoBroker.mybluemix.net/v2/service_instances/ failed with error status 409. Conflict.
+```
+{: codeblock}
+{: tsSymptoms}
+
+You have not cleared (zeroized) the initialized {{site.data.keyword.hscrypto}} instance before you delete the instance.
+{: tsCauses}
+
+Run the following command before you delete the instance:
+
+```
+ibmcloud tke domain-zeroize
+```
+{: codeblock}
+{: tsResolve}
+
 ## Unauthorized token after running commands related to the Trusted Key Entry plug-in
 
-You might receive messages similar to the folloiwng after you run a `tke` CLI commands:
+You might receive messages similar to the following after you run a `tke` CLI commands:
 
 ```
 ibmcloud tke domains
@@ -89,7 +111,7 @@ You can check whether {{site.data.keyword.cloud_notm}} is available by going to 
 
 You can review the forums to see whether other users ran into the same problem. When you are using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.cloud_notm}} development teams.
 
-- If you have technical questions about {{{site.data.keyword.hscrypto}}, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/){: new_window} and tag your question with  "ibm-cloud" and "hyperprotect-crypto".
+- If you have technical questions about {{site.data.keyword.hscrypto}}, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/){: new_window} and tag your question with  "ibm-cloud" and "hyperprotect-crypto".
 - For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/index.html){: new_window} forum. Include the "ibm-cloud" and "hyperprotect-crypto" tags.
 
 See [Getting help ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/support/index.html#getting-help){: new_window} for more details about using the forums.
