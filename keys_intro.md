@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-20"
+  years: 2018, 2019
+lastupdated: "2019-01-15"
 
 ---
 
@@ -33,7 +33,11 @@ You can manage standard keys by following steps in [Manage your keys](index.html
 
 ## Master keys
 
-*Master keys* are used to encrypt the crypto instance (HSM) that crypto-processes and manages root keys and standard keys. With the master key, you own the root of trust that encrypts the entire chain of Keys including root keys and standard keys. Because of the established end-to-end secured channel to the crypto instance (HSM), only the administrators of the {{site.data.keyword.hscrypto}} instance can set and manage the master key. One crypto instance (HSM) can have only one master key. If you delete the master key of the {{site.data.keyword.hscrypto}} instance, you can effectively crypto-shred all data that was encrypted with the keys managed in the service.
+*Master keys* are used to encrypt the crypto instance (HSM) that crypto-processes and manages root keys and standard keys. With the master key, you own the root of trust that encrypts the entire chain of Keys including root keys and standard keys.
+
+Because of the established end-to-end secured channel to the crypto instance (HSM), only the administrators of the {{site.data.keyword.hscrypto}} instance can set and manage the master key. Note that IBM does not back up or touch the master key, and has no way to copy it or restore it to a different machine or data center.
+
+One crypto instance (HSM) can have only one master key. If you delete the master key of the {{site.data.keyword.hscrypto}} instance, you can effectively crypto-shred all data that was encrypted with the keys managed in the service.
 
 You can manage master keys when [Initializing crypto instances to protect key storage](initialize_hsm.html).
 

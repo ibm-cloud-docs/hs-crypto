@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-28"
+  years: 2018, 2019
+lastupdated: "2019-01-15"
 
 ---
 
@@ -36,6 +36,8 @@ The following are a few highlights of using {{site.data.keyword.hscrypto}} to pr
 ## VMware image protection with Keep Your Own Keys
 
 Similar to data at rest protection, {{site.data.keyword.hscrypto}} can also protect VMware image at rest for encryption and decryption through VMware Key Management Interoperability Protocol.
+
+As a single-tenant service, {{site.data.keyword.hscrypto}} offers dedicated control of the Hardware Security Module for VMware images per customer. {{site.data.keyword.hscrypto}} extends the family of key management services in the {{site.data.keyword.cloud_notm}} towards single-tenant instances with dedicated hardware secret control.
 
 ![VMware image protection with KYOK](image/byok_vm.png "VMware image protection with KYOK")
 

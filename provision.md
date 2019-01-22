@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-10-02"
+  years: 2018, 2019
+lastupdated: "2019-01-21"
 
 ---
 
@@ -26,10 +26,9 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/){: new_window}.
 2. Click **Catalog** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
-3. Scroll down to the bottom of the **Catalog** page, and click the link to [IBM Cloud Experimental Services ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/labs/){: new_window}.
-4. From the All Categories navigation pane, click the **Security and Identity** category.
-5. From the list of services, click the **{{site.data.keyword.hscrypto}}** tile.
-6. Select a service plan, and click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
+3. From the All Categories navigation pane, click the **Security and Identity** category.
+4. From the list of services, click the **{{site.data.keyword.hscrypto}}** tile.
+5. Select a service plan, and click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 
 ![Provisioning the service](image/provisioning.gif "Provisioning the service")
 

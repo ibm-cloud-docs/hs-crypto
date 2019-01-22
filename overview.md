@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-28"
+  years: 2018, 2019
+lastupdated: "2019-01-16"
 
 ---
 
@@ -13,6 +13,8 @@ lastupdated: "2018-11-28"
 {:pre: .pre}
 
 # {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} overview
+
+***Disclaimer: {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is in the BETA phase and is for tryout and test purpose only. To prevent data loss, use only test data in the current service. This restriction also applies to using {{site.data.keyword.hscrypto}} with other  {{site.data.keyword.cloud_notm}} services. ***
 
 Data and information security is crucial and essential for IT environments. As more and more data moves to the cloud, keeping data protected becomes a non-trivial challenge.  {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} offers cryptography with technology that has attained industry's highest security level to protect your data.
 {: shortdesc}
@@ -59,3 +61,29 @@ The following are the key features of {{site.data.keyword.hscrypto}}:
 <!-- {{site.data.keyword.hscrypto}} also leverages the **IBM Advanced Crypto Service Provider (ACSP)** solution that enables remote access to the IBM’s cryptographic coprocessors. ACSP allows for utilization of strong hardware-based cryptography as a service in distributed environments where data security cannot be guaranteed. {{site.data.keyword.hscrypto}} utilizes ACSP as a *network hardware security module (NetHSM)* that provides access to HSM via PKCS#11 standard APIs.-->
 
 <!-- With {{site.data.keyword.hscrypto}}, your **SSL keys are offloaded** to a {{site.data.keyword.hscrypto}} to ensure security and protection of those sensitive keys.  Besides, the certificate lifecycle management gets common approach to manage certtificates and offers the visibility to certificate expiration.-->
+
+## Roles and responsibilities
+
+The following table shows the roles that {{site.data.keyword.hscrypto}} supports.
+
+<table>
+  <tr>
+    <th>Roles</th>
+    <th>Responsibilities</th>
+  </tr>
+  <tr>
+    <td>HSM (domain) administrator</td>
+    <td>
+      Signs administrative commands such as for installing another domain administrator, and provides signature keys.
+    </td>
+  </tr>
+  <tr>
+    <td>Key owner</td>
+    <td>Provides master key parts for initializing a crypto instance.</td>
+  </tr>
+  <tr>
+    <td>Service user</td>
+    <td>Stores, retrieves, and generates root keys and standard keys through user interface and APIs.</td>
+  </tr>
+  <caption style="caption-side:bottom;">Table 1. Roles and responsibilities</caption>
+</table>

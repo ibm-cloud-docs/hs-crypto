@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-20"
+  years: 2018, 2019
+lastupdated: "2019-01-21"
 
 ---
 
@@ -17,6 +17,13 @@ lastupdated: "2018-12-20"
 
 Stay up-to-date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+## January 2019
+{: #Jan-2019}
+
+{{site.data.keyword.hscrypto}} Beta version is released. You can now access the {{site.data.keyword.hscrypto}} service through **Catalog** > **Security and Identity** directly.
+
+As of January 21, 2019, provisioning new Hyper Protect Crypto Services Experimental instances will no longer be possible. Existing instances will have support until the End of Experimental Support Date (February 22, 2019).
 
 ## December 2018
 {: #Dec-2018}
