@@ -14,7 +14,7 @@ lastupdated: "2019-01-16"
 
 # Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
 
-***Disclaimer: {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is in the BETA phase and is for tryout and test purpose only. To prevent data loss, use only test data in the current service. This restriction also applies to using {{site.data.keyword.hscrypto}} with other  {{site.data.keyword.cloud_notm}} services. ***
+<!-- ***Disclaimer: {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is in the BETA phase and is for tryout and test purpose only. To prevent data loss, use only test data in the current service. This restriction also applies to using {{site.data.keyword.hscrypto}} with other  {{site.data.keyword.cloud_notm}} services. *** -->
 
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}} for short) provides a cloud hardware security module (HSM) for a dedicated key management service. {{site.data.keyword.hscrypto}} helps you encrypt your data at the safety and security level of IBM Z cryptography in a convenient and cost competitive manner.
 {:shortdesc}
