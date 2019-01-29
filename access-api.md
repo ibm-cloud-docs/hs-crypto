@@ -107,8 +107,7 @@ Before you call any {{site.data.keyword.keymanagementserviceshort}} APIs, call t
 
 When you make an API call to the service, structure your API request according to how you initially provisioned your instance of {{site.data.keyword.hscrypto}}.
 
-To build your request, pair a [regional service endpoint](/docs/services/{{site.data.keyword.hscrypto}}
-hs-crypto/regions.html) with the appropriate authentication credentials. For example, if you created a service instance for the `us-south` region, use the following endpoint and API headers to browse keys in your service:
+To build your request, pair a [regional service endpoint](/docs/services/hs-crypto/regions.html) with the appropriate authentication credentials. For example, if you created a service instance for the `us-south` region, use the following endpoint and API headers to browse keys in your service:
 
 ```cURL
 curl -X GET \

@@ -16,8 +16,6 @@ lastupdated: "2018-10-06"
 # Regions and locations
 {: #regions}
 
-***NOTE: This is only a template file. Will need to update per HPCS region requirements.***
-
 You can connect your applications with the {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} service by specifying a regional service endpoint.
 {: shortdesc}
 
