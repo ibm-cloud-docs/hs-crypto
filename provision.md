@@ -12,6 +12,7 @@ lastupdated: "2019-01-21"
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
+{:gif: data-image-type='gif'}
 
 # Provisioning the service
 {: #provision}
@@ -31,6 +32,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
 5. Select a service plan, and click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 
 ![Provisioning the service](image/provisioning.gif "Provisioning the service")
+{: gif}
 
 *Figure 1. Provisioning the service*
 

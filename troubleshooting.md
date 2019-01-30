@@ -38,12 +38,12 @@ You have not cleared (zeroized) the initialized {{site.data.keyword.hscrypto}} i
 {: tsCauses}
 
 Run the following command before you delete the instance:
+{: tsResolve}
 
 ```
 ibmcloud tke domain-zeroize
 ```
 {: codeblock}
-{: tsResolve}
 
 ## Unauthorized token after running commands related to the Trusted Key Entry plug-in
 
