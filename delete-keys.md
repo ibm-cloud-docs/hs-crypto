@@ -42,7 +42,7 @@ After you delete a key, the key transitions to the _Destroyed_ state. Keys in th
 To delete a key and its contents, make a `DELETE` call to the following endpoint.
 
 ```
-https://keyprotect.<region>.bluemix.net/api/v2/keys/<key_ID>
+https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 ```
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto/access-api.html).
@@ -55,7 +55,7 @@ https://keyprotect.<region>.bluemix.net/api/v2/keys/<key_ID>
 
     ```cURL
     curl -X DELETE \
-      https://keyprotect.<region>.bluemix.net/api/v2/keys/<key_ID> \
+      https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID> \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
       -H 'prefer: <return_preference>'

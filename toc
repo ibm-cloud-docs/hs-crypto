@@ -1,6 +1,5 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
-{:new_window: target="_blank"}
 
 {: .toc subcollection="hs-crypto" audience="service" arm="3917560" href="/docs/services/hs-crypto/index.html" path="services/hs-crypto"}
 IBM Cloud Hyper Protect Crypto Services
@@ -47,11 +46,10 @@ IBM Cloud Hyper Protect Crypto Services
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Hyper Protect Crypto API reference](https://console.bluemix.net/apidocs/hp-crypto){: new_window}
+    [Hyper Protect Crypto API reference](https://console.bluemix.net/apidocs/hp-crypto)
     regions.md
-    [Key Protect](https://console.bluemix.net/docs/services/key-protect/index.html)
-    [Hyper Protect DBaaS](https://console.bluemix.net/docs/services/hyper-protect-dbaas/index.html)
-    [Container Services](https://console.bluemix.net/docs/containers/container_index.html)
+    [Key Protect](/services/key-protect/key-protect-getting-started-tutorial)
+    [Hyper Protect DBaaS](/services/hyper-protect-dbaas/hyper-protect-dbaas-gettingstarted)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

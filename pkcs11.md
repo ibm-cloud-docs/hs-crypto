@@ -13,6 +13,7 @@ lastupdated: "2018-11-11"
 {:pre: .pre}
 
 # Exploiting PKCS#11
+{: #pkcs11}
 
 ***Need to verrify whether the section included is needed.***
 
@@ -46,4 +47,4 @@ slot.
 To get the service exploited quickly for testing purposes, in this stage, there is a default
 user PIN setup already: `98765432`
 
-<!-- It is highly recommended to change the default PKCS11 user PIN for each used slot. For more information, see [Changing User PIN and SO PIN](change_PIN.html).-->
+<!-- It is highly recommended to change the default PKCS11 user PIN for each used slot. For more information, see [Changing User PIN and SO PIN](/docs/services/hs-crypto/change_PIN.html).-->

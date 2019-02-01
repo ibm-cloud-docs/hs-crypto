@@ -13,6 +13,7 @@ lastupdated: "2019-01-15"
 {:pre: .pre}
 
 # {{site.data.keyword.hscrypto}} use cases
+{: #use-cases}
 
 This page includes the use cases that are currently included in {{site.data.keyword.hscrypto}}. These use cases will be continuously evolving in later releases.
 {:shortdesc}

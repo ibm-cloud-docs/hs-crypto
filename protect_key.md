@@ -36,7 +36,7 @@ For more information about the {{site.data.keyword.keymanagementserviceshort}} s
 
 The following list describes the basic steps to set up the hyper protected environment for your keys with {{site.data.keyword.hscrypto}} and {{site.data.keyword.keymanagementserviceshort}} services.
 
-1. Provision an instance of {{site.data.keyword.hscrypto}}. For more information, see [Provisioning a {{site.data.keyword.hscrypto}} instance](index.html#provision).
+1. Provision an instance of {{site.data.keyword.hscrypto}}. For more information, see [Provisioning a {{site.data.keyword.hscrypto}} instance](/docs/services/hs-crypto/index.html#provision).
 2. Retrieve the instance ID of your {{site.data.keyword.hscrypto}} instance with the [bluemix resource service-instance ![External link icon](image/external_link.svg "External link icon")](){:new_window} command.
 3. Retrieve connection information of your {{site.data.keyword.hscrypto}} instance by calling the {{site.data.keyword.hscrypto}} API with the instance ID and your IAM token.  For example:
     ```cURL
@@ -49,7 +49,7 @@ The following list describes the basic steps to set up the hyper protected envir
 5. Grant access between the two service instances with Identity and Access Management (IAM). For more information, see [Granting access between services ![External link icon](image/external_link.svg "External link icon")](https://console.bluemix.net/docs/iam/authorizations.html){:new_window}.
 
 <!--
-You need to provision instances for both {{site.data.keyword.hscrypto}} and {{site.data.keyword.keymanagementserviceshort}} services. For more information, see [Provisioning a {{site.data.keyword.hscrypto}} instance](overview.html#provision) and [Provisioning a {{site.data.keyword.keymanagementserviceshort}} instance](https://console.bluemix.net/docs/services/keymgmt/keyprotect_provision.html).
+You need to provision instances for both {{site.data.keyword.hscrypto}} and {{site.data.keyword.keymanagementserviceshort}} services. For more information, see [Provisioning a {{site.data.keyword.hscrypto}} instance](/docs/services/hs-crypto/overview.html#provision) and [Provisioning a {{site.data.keyword.keymanagementserviceshort}} instance](https://console.bluemix.net/docs/services/keymgmt/keyprotect_provision.html).
 After you have both service instances, grant access between them.  When you need to grant access between {{site.data.keyword.hscrypto}} and {{site.data.keyword.keymanagementserviceshort}} service instances, you can set authorizations by using the {{site.data.keyword.iamlong}} dashboard. Authorizations enable service to service access policies, so you can associate your storage buckets in COS with root keys provisioned in {{site.data.keyword.keymanagementserviceshort}}.
 Complete the following steps to create an authorization:
 1. From the {{site.data.keyword.cloud_notm}} menu bar, click **Manage** &gt; **Account** &gt; **Identity and Access**, and then select **Authorizations**.

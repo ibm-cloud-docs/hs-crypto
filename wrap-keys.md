@@ -16,8 +16,6 @@ lastupdated: "2018-10-02"
 # Wrapping keys
 {: #wrap-keys}
 
-***Need to update the API endpoint***
-
 You can manage and protect your encryption keys with a root key by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} API, if you are a privileged user.
 {: shortdesc}
 
@@ -38,7 +36,7 @@ You can protect a specified data encryption key (DEK) with a root key that you m
 [After you designate a root key in the service](/docs/services/hs-crypto/create-root-keys.html), you can wrap a DEK with advanced encryption by making a `POST` call to the following endpoint.
 
 ```
-https://keyprotect.<region>.bluemix.net/api/v2/keys/<key_ID>?action=wrap
+https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
 ```
 {: codeblock}
 
@@ -55,7 +53,7 @@ https://keyprotect.<region>.bluemix.net/api/v2/keys/<key_ID>?action=wrap
 
     ```cURL
     curl -X POST \
-      'https://keyprotect.<region>.bluemix.net/api/v2/keys/<key_ID>?action=wrap' \
+      'https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap' \
       -H 'accept: application/vnd.ibm.kms.key_action+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \

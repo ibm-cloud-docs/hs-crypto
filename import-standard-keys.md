@@ -68,7 +68,7 @@ You can add your existing encryption keys with the {{site.data.keyword.hscrypto}
 Create a standard key by making a `POST` call to the following endpoint:
 
 ```
-https://keyprotect.<region>.bluemix.net/api/v2/keys
+https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys
 ```
 {: codeblock}
 
@@ -78,7 +78,7 @@ https://keyprotect.<region>.bluemix.net/api/v2/keys
 
     ```cURL
     curl -X POST \
-      https://keyprotect.<region>.bluemix.net/api/v2/keys \
+      https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
       -H 'content-type: application/vnd.ibm.kms.key+json' \
@@ -181,7 +181,7 @@ https://keyprotect.<region>.bluemix.net/api/v2/keys
 
     ```cURL
     curl -X GET \
-      https://keyprotect.<region>.bluemix.net/api/v2/keys \
+      https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys \
       -H 'accept: application/vnd.ibm.collection+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \

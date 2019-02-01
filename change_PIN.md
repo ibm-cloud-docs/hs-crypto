@@ -13,6 +13,7 @@ lastupdated: "2018-10-30"
 {:pre: .pre}
 
 # Changing User PIN and SO PIN
+{: #change-pin}
 
 It is highly recommended to change the default PKCS11 user PIN for each used slot.
 Also, the admin of the service should change the SO (Security Officer) PIN
@@ -80,4 +81,4 @@ PIN successfully changed
 ```
 {: codeblock}
 
-For more information about PKCS11, see [Exploiting PKCS11](pkcs11.html).
+For more information about PKCS11, see [Exploiting PKCS11](/docs/services/hs-crypto/pkcs11.html).

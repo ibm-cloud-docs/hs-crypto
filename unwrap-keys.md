@@ -27,7 +27,7 @@ To learn how key wrapping helps you control the security of at-rest data in the 
 [After you make a wrap call to the service](/docs/services/hs-crypto/wrap-keys.html), you can unwrap a specified data encryption key (DEK) to access its contents by making a `POST` call to the following endpoint.
 
 ```
-https://keyprotect.<region>.bluemix.net/api/v2/keys/<key_id>?action=unwrap
+https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=unwrap
 ```
 {: codeblock}
 
@@ -43,7 +43,7 @@ https://keyprotect.<region>.bluemix.net/api/v2/keys/<key_id>?action=unwrap
 
     ```cURL
     curl -X POST \
-      'https://keyprotect.<region>.bluemix.net/api/v2/keys/<key_ID>?action=unwrap' \
+      'https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=unwrap' \
       -H 'accept: application/vnd.ibm.kms.key_action+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \

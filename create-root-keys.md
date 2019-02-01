@@ -61,7 +61,7 @@ Root keys are symmetric key-wrapping keys that are used to protect the security 
 Create a root key by making a `POST` call to the following endpoint.
 
 ```
-https://keyprotect.<region>.bluemix.net/api/v2/keys
+https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys
 ```
 {: codeblock}
 
@@ -72,7 +72,7 @@ hs-crypto/access-api.html).
 
     ```cURL
     curl -X POST \
-      https://keyprotect.<region>.bluemix.net/api/v2/keys \
+      https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
       -H 'content-type: application/vnd.ibm.kms.key+json' \
@@ -157,7 +157,7 @@ hs-crypto/access-api.html).
 
     ```cURL
     curl -X GET \
-      https://keyprotect.<region>.bluemix.net/api/v2/keys \
+      https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys \
       -H 'accept: application/vnd.ibm.collection+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \

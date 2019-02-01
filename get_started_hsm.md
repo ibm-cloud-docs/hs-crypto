@@ -15,6 +15,7 @@ lastupdated: "2018-10-07"
 {:tip: .tip}
 
 # Getting started with crypto instance initialization
+{: #get-started-hsm}
 
 <!-- Master keys protect the contents of key storage in a host logical partition.--> This tutorial shows you how to initialize the crypto instance by loading the master keys to protect your key storage with the Trusted Key Entry plug-in. After you initialize the crypto instance, you can start managing your root keys.   
 {:shortdesc}
@@ -23,7 +24,7 @@ lastupdated: "2018-10-07"
 
 Before you start, perform the following steps:
 
-1. Provision the {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} service. For detailed steps, see [Provisioning {{site.data.keyword.hscrypto}}](provision.html).
+1. Provision the {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} service. For detailed steps, see [Provisioning {{site.data.keyword.hscrypto}}](/docs/services/hs-crypto/provision.html).
 
 2. Install the latest Trusted Key Entry plug-in through {{site.data.keyword.cloud_notm}} command-line interface (CLI) with the following command:
 
@@ -170,4 +171,4 @@ To load the master key register, one or more domain administrators must be defin
 
 ## What's next
 
-Now you can start using your crypto instance. For details on implementing the procedure in a production environment, see [Protecting key storage by initializing crypto instances](initialize_hsm.html).
+Now you can start using your crypto instance. For details on implementing the procedure in a production environment, see [Protecting key storage by initializing crypto instances](/docs/services/hs-crypto/initialize_hsm.html).

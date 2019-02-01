@@ -52,7 +52,7 @@ If you imported the root key initially, you must provide a new base64 encoded ke
 [After you designate a root key in the service](/docs/services/hs-crypto/create-root-keys.html), you can rotate your key by making a `POST` call to the following endpoint.
 
 ```
-https://keyprotect.<region>.bluemix.net/api/v2/keys/<key_ID>?action=rotate
+https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rotate
 ```
 {: codeblock}
 
@@ -64,7 +64,7 @@ https://keyprotect.<region>.bluemix.net/api/v2/keys/<key_ID>?action=rotate
 
     ```cURL
     curl -X POST \
-      'https://keyprotect.<region>.bluemix.net/api/v2/keys/<key_ID>?action=rotate' \
+      'https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rotate' \
       -H 'accept: application/vnd.ibm.kms.key_action+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
@@ -120,7 +120,7 @@ https://keyprotect.<region>.bluemix.net/api/v2/keys/<key_ID>?action=rotate
 
     ```cURL
     curl -X GET \
-    https://keyprotect.<region>.bluemix.net/api/v2/keys \
+    https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys \
     -H 'accept: application/vnd.ibm.collection+json' \
     -H 'authorization: Bearer <IAM_token>' \
     -H 'bluemix-instance: <instance_ID>' \

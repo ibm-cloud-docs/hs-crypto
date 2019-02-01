@@ -73,7 +73,7 @@ You can retrieve the contents of your keys by using the {{site.data.keyword.hscr
 For a high-level view, you can browse keys that are managed in your provisioned instance of {{site.data.keyword.hscrypto}} by making a `GET` call to the following endpoint.
 
 ```
-https://keyprotect.<region>.bluemix.net/api/v2/keys
+https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys
 ```
 {: codeblock}
 
@@ -83,7 +83,7 @@ https://keyprotect.<region>.bluemix.net/api/v2/keys
 
     ```cURL
     curl -X GET \
-    https://keyprotect.<region>.bluemix.net/api/v2/keys \
+    https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys \
     -H 'accept: application/vnd.ibm.collection+json' \
     -H 'authorization: Bearer <IAM_token>' \
     -H 'bluemix-instance: <instance_ID>' \
@@ -183,7 +183,7 @@ You can use the following example request to retrieve a different set of keys.
 
   ```cURL
   curl -X GET \
-  https://keyprotect.<region>.bluemix.net/api/v2/keys?offset=<offset>&limit=<limit> \
+  https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys?offset=<offset>&limit=<limit> \
   -H 'accept: application/vnd.ibm.collection+json' \
   -H 'authorization: Bearer <IAM_token>' \
   -H 'bluemix-instance: <instance_ID>' \
@@ -251,7 +251,7 @@ Offset is the location of a particular key in a data set. The `offset` value is 
 To view detailed information about a specific key, you can make a `GET` call to the following endpoint.
 
 ```
-https://keyprotect.<region>.bluemix.net/api/v2/keys/<key_ID>
+https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 ```
 {: codeblock}
 
@@ -265,7 +265,7 @@ https://keyprotect.<region>.bluemix.net/api/v2/keys/<key_ID>
 
     ```cURL
     curl -X GET \
-      https://keyprotect.<region>.bluemix.net/api/v2/keys/<key_ID> \
+      https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID> \
       -H 'accept: application/vnd.ibm.kms.key+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \

@@ -13,6 +13,7 @@ lastupdated: "2018-03-16"
 {:pre: .pre}
 
 # API Reference
+{: #api-reference}
 
 This document is the REST API specification for the {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}. This service is part of the {{site.data.keyword.cloud_notm}} Platform and is used to allow cryptographic operatons.
 {: shortdesc}

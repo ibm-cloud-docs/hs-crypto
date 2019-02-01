@@ -13,6 +13,7 @@ lastupdated: "2018-02-27"
 {:pre: .pre}
 
 # ACSP client library
+{: #acsp-client-library}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} enables you to use Advanced Crypto Service Provider (ACSP) client to access hardware security modules (HSMs) via PKCS#11 application programming interfaces (APIs).  
 {:shortdesc}
