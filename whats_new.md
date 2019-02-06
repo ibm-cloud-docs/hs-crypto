@@ -21,7 +21,7 @@ Stay up-to-date with the new features that are available for {{site.data.keyword
 ## February 2019
 {: #Feb-2019}
 
-{{site.data.keyword.hscrypto}} Beta version is released. You can now access the {{site.data.keyword.hscrypto}} service through **Catalog** > **Security and Identity** directly.
+{{site.data.keyword.hscrypto}} Beta is released. You can now access the {{site.data.keyword.hscrypto}} service through **Catalog** > **Security and Identity** directly.
 
 As of February 5, 2019, provisioning new Hyper Protect Crypto Services Experimental instances will no longer be possible. Existing instances will have support until the End of Experimental Support Date.
 
