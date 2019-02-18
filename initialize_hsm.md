@@ -90,6 +90,22 @@ To load the new master key register, complete the following tasks using the {{si
 
   **Important**: For added security, the signature key owner can be a different person from the master key part owners. The signature key owner should be the only person who knows the password associated with the signature key file.
 
+  * To create a random master key part, use the following command:
+    ```
+    ibmcloud tke mk-add --random
+    ```
+    {: pre}
+
+    When prompted, enter a description for the key part and a password for the key part file. Repeat to create additional key parts.
+
+  * To create a master key part with a known value, use the following command:
+    ```
+    ibmcloud tke mk-add --value
+    ```
+    {: pre}
+
+    When prompted, enter the known key part value as a hexadecimal string, then enter a description and a password for the key part file. Repeat to create additional key parts.
+
   * To display the existing signature keys on the workstation, use the following command:
     ```
     ibmcloud tke sigkeys
