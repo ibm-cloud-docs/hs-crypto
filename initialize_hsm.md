@@ -90,22 +90,6 @@ To load the new master key register, complete the following tasks using the {{si
 
   **Important**: For added security, the signature key owner can be a different person from the master key part owners. The signature key owner should be the only person who knows the password associated with the signature key file.
 
-  * To create a random master key part, use the following command:
-    ```
-    ibmcloud tke mk-add --random
-    ```
-    {: pre}
-
-    When prompted, enter a description for the key part and a password for the key part file. Repeat to create additional key parts.
-
-  * To create a master key part with a known value, use the following command:
-    ```
-    ibmcloud tke mk-add --value
-    ```
-    {: pre}
-
-    When prompted, enter the known key part value as a hexadecimal string, then enter a description and a password for the key part file. Repeat to create additional key parts.
-
   * To display the existing signature keys on the workstation, use the following command:
     ```
     ibmcloud tke sigkeys
@@ -119,6 +103,16 @@ To load the new master key register, complete the following tasks using the {{si
     {: pre}
 
     When prompted, enter an administrator name and a password to protect the file. You must remember the password. If the password is lost, the signature key cannot be used.
+
+  * To select the administrator to sign the command, use the command:
+    ```
+    ibmcloud tke sigkey-sel
+    ```
+    {: pre}
+
+    A list of signature key files found on the workstation is displayed. When prompted, enter the key number of the signature key file to select for signing subsequent administrative commands. If a signature key file is already selected for signing administrative commands, this is indicated when the list of signature key files is displayed.
+
+    **Tip**: The command to exit imprint mode must be signed by a domain administrator. After the domain leaves imprint mode, all commands to the domain must be signed.
 
 2.  **Load one or more domain administrators in the target domain**
 
@@ -150,7 +144,7 @@ To load the new master key register, complete the following tasks using the {{si
 
   A domain in imprint mode is not considered secure. You cannot run most of the administrative commands, such as loading the new master key register, in imprint mode.
 
-  * After you install one or more domain administrators, exit imprint mode by using the command:
+  After you install one or more domain administrators, exit imprint mode by using the command:
 
     ```
     ibmcloud tke domain-exit-impr
@@ -159,21 +153,6 @@ To load the new master key register, complete the following tasks using the {{si
 
     The command to exit imprint mode must be signed by one of the installed domain administrators.
 
-  * To select the administrator to sign the command, use the command:
-
-  **Tip**: The command to exit imprint mode must be signed by a domain administrator. After the domain leaves imprint mode, all commands to the domain must be signed.
-
-    ```
-    ibmcloud tke sigkey-sel
-    ```
-    {: pre}
-
-    A list of signature key files found on the workstation is displayed.
-
-    When prompted, enter the key number of the signature key file to select for signing subsequent administrative commands.
-
-  If a signature key file is already selected for signing administrative commands, this is indicated when the list of signature key files is displayed.
-
 4. **Generate a set of master key parts to use**
 
   Each master key part is saved in a password-protected file on the workstation.
@@ -181,10 +160,10 @@ To load the new master key register, complete the following tasks using the {{si
   **Important**: You must generate at least two master key parts. For added security, three key parts can be used and each key part can be owned by a different person. The key part owner should be the only person who knows the password associated with the key part file.
 
   * To display the existing master key parts on the workstation, use the following command:
-  ```
-  ibmcloud tke mks
-  ```
-  {: pre}
+    ```
+    ibmcloud tke mks
+    ```
+    {: pre}
 
   * To generate and save a random master key part on the workstation, use the command:
     ```
