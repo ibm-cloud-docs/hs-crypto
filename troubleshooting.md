@@ -4,6 +4,10 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-01-15"
 
+Keywords: troubleshoot, problems, known issues
+
+subcollection: IBM Cloud Hyper Protect Crypto Services
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -66,9 +70,9 @@ The token is not refreshed.
 Log in to {{site.data.keyword.cloud_notm}} again with the `ibmcloud login` command to refresh the token.
 {: tsResolve}
 
-## Got `error CKR_IBM_WK_NOT_INITIALIZED` when using {{site.data.keyword.keymanagementserviceshort}} CLI or API
+## Got `error CKR_IBM_WK_NOT_INITIALIZED` when using CLI or API
 
-When you use {{site.data.keyword.keymanagementserviceshort}} CLI or API, you might got an error message similar to the following:
+When you use CLI or API, you might got an error message similar to the following:
 
 ```
 ibmcloud kp -i <service_instance_id> wrap <key_id>
@@ -88,14 +92,14 @@ Make sure the HSM master key has been properly set.
 ## Unable to create or delete keys
 {: #unable-to-create-keys}
 
-When you access the {{site.data.keyword.keymanagementserviceshort}} user interface, you do not see the options to add or delete keys.
+When you access the {{site.data.keyword.hscrypto}} user interface, you do not see the options to add or delete keys.
 
-From the {{site.data.keyword.cloud_notm}} dashboard, you select your instance of the {{site.data.keyword.keymanagementserviceshort}} service.
+From the {{site.data.keyword.cloud_notm}} dashboard, you select your instance of the {{site.data.keyword.hscrypto}} service.
 {: tsSymptoms}
 
 You can see a list of keys, but you do not see options to add or delete keys.
 
-You do not have the correct authorization to perform {{site.data.keyword.keymanagementserviceshort}} actions.
+You do not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions.
 {: tsCauses}
 
 Verify with your administrator that you are assigned the correct role in the applicable resource group or service instance. For more information about roles, see [Roles and permissions](/docs/services/key-protect/manage-access.html#roles).
@@ -107,13 +111,13 @@ Verify with your administrator that you are assigned the correct role in the app
 If you have problems or questions when you are using {{site.data.keyword.hscrypto}}, you can check {{site.data.keyword.cloud_notm}}, or get help by searching for information or by asking questions through a forum. You can also open a support ticket.
 {: shortdesc}
 
-You can check whether {{site.data.keyword.cloud_notm}} is available by going to the [status page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/status?tags=platform,runtimes,services).
+You can check whether {{site.data.keyword.cloud_notm}} is available by going to the [status page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/status?tags=platform,runtimes,services).
 
 You can review the forums to see whether other users ran into the same problem. When you are using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.cloud_notm}} development teams.
 
 - If you have technical questions about {{site.data.keyword.hscrypto}}, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/){: new_window} and tag your question with  "ibm-cloud" and "hyperprotect-crypto".
 - For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/index.html){: new_window} forum. Include the "ibm-cloud" and "hyperprotect-crypto" tags.
 
-See [Getting help ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/support/index.html#getting-help){: new_window} for more details about using the forums.
+See [Getting help ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/docs/support/index.html#getting-help){: new_window} for more details about using the forums.
 
-For more information about opening an {{site.data.keyword.IBM_notm}} support ticket, or about support levels and ticket severities, see [Contacting support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/support/index.html#contacting-support){: new_window}.
+For more information about opening an {{site.data.keyword.IBM_notm}} support ticket, or about support levels and ticket severities, see [Contacting support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/docs/support/index.html#contacting-support){: new_window}.
