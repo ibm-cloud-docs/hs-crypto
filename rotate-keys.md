@@ -24,9 +24,6 @@ subcollection: hs-crypto
 You can rotate your root keys on-demand by using {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
-Rotating master keys is currently not supported.
-{: important}
-
 When you rotate your root key, you shorten the lifetime of the key, and you limit the amount of information that is protected by that key.   
 
 To learn how key rotation helps you meet industry standards and cryptographic best practices, see [Key rotation](/docs/services/key-protect/concepts/key-rotation.html).
