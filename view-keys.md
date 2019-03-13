@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-10-02"
+  years: 2018, 2019
+lastupdated: "2019-03-13"
+
+Keywords: view keys, key configuration, key type
+
+subcollection: hs-crypto
 
 ---
 
@@ -22,21 +26,22 @@ lastupdated: "2018-10-02"
 Audit your key configuration regularly:
 
 - Examine when keys were created and determine whether it's time to rotate the key.
-- [Monitor API calls to {{site.data.keyword.hscrypto}} with {{site.data.keyword.cloudaccesstrailshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/cloud-activity-tracker/tutorials/manage_events_cli.html){: new_window}.
+- Monitor API calls to {{site.data.keyword.hscrypto}} with {{site.data.keyword.cloudaccesstrailshort}}.
 - Inspect which users have access to keys and if the level of access is appropriate.
 
 For more information about auditing access to your resources, see [Managing user access with Cloud IAM](/docs/services/hs-crypto/manage-access.html).
 
 ## Viewing keys with the GUI
-{: #gui}
+{: #view-key-gui}
 
 If you prefer to inspect the keys in your service by using a graphical interface, you can use the {{site.data.keyword.hscrypto}} dashboard.
 
 [After you create or import your existing keys into the service](/docs/services/hs-crypto/create-root-keys.html), complete the following steps to view your keys.
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/).
-2. From your {{site.data.keyword.cloud_notm}} dashboard, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-3. Browse the general characteristics of your keys from the {{site.data.keyword.hscrypto}} dashboard:
+1. [Log in to the {{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/).
+2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
+3. Browse the general characteristics of your keys from the application details page:
 
     <table>
       <tr>
@@ -49,7 +54,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
       </tr>
       <tr>
         <td>ID</td>
-        <td>A unique key ID that was assigned to your key by the {{site.data.keyword.hscrypto}} service. You can use the ID value to make calls to the service with the [{{site.data.keyword.hscrypto}} API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/hp-crypto).</td>
+        <td>A unique key ID that was assigned to your key by the {{site.data.keyword.hscrypto}} service. You can use the ID value to make calls to the service with the [{{site.data.keyword.hscrypto}} API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto).</td>
       </tr>
       <tr>
         <td>State</td>
@@ -63,7 +68,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
     </table>
 
 ## Viewing keys with the API
-{: #api}
+{: #view-key-api}
 
 You can retrieve the contents of your keys by using the {{site.data.keyword.hscrypto}} API.
 
@@ -73,7 +78,7 @@ You can retrieve the contents of your keys by using the {{site.data.keyword.hscr
 For a high-level view, you can browse keys that are managed in your provisioned instance of {{site.data.keyword.hscrypto}} by making a `GET` call to the following endpoint.
 
 ```
-https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys
+https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ```
 {: codeblock}
 
@@ -83,7 +88,7 @@ https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys
 
     ```cURL
     curl -X GET \
-    https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys \
+    https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
     -H 'accept: application/vnd.ibm.collection+json' \
     -H 'authorization: Bearer <IAM_token>' \
     -H 'bluemix-instance: <instance_ID>' \
@@ -91,8 +96,8 @@ https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys
     ```
     {: codeblock}
 
-    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/hp-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Replace the variables in the example request according to the following table.
     <table>
@@ -183,7 +188,7 @@ You can use the following example request to retrieve a different set of keys.
 
   ```cURL
   curl -X GET \
-  https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys?offset=<offset>&limit=<limit> \
+  https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys?offset=<offset>&limit=<limit> \
   -H 'accept: application/vnd.ibm.collection+json' \
   -H 'authorization: Bearer <IAM_token>' \
   -H 'bluemix-instance: <instance_ID>' \
@@ -251,7 +256,7 @@ Offset is the location of a particular key in a data set. The `offset` value is 
 To view detailed information about a specific key, you can make a `GET` call to the following endpoint.
 
 ```
-https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
+https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 ```
 {: codeblock}
 
@@ -265,7 +270,7 @@ https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 
     ```cURL
     curl -X GET \
-      https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID> \
+      https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID> \
       -H 'accept: application/vnd.ibm.kms.key+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
@@ -335,4 +340,4 @@ https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {:screen}
 
-    For a detailed description of the available parameters, see the {{site.data.keyword.hscrypto}} [REST API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/hp-crypto){: new_window}.
+    For a detailed description of the available parameters, see the {{site.data.keyword.hscrypto}} [REST API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.

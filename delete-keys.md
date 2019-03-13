@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-10-02"
+  years: 2018, 2019
+lastupdated: "2019-03-13"
+
+Keywords: details of the DELETE request, delete encryption key, deleting keys, Variable Description region
+
+subcollection: hs-crypto
 
 ---
 
@@ -22,17 +26,18 @@ You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to delete
 **Important:** When you delete a key, you permanently shred its contents and associated data. The action cannot be reversed. Destroying resources is not recommended for production environments, but might be useful for temporary environments such as testing or QA.
 
 ## Deleting keys with the GUI
-{: #gui}
+{: #delete-keys-gui}
 
 If you prefer to delete your encryption keys by using a graphical interface, you can use the {{site.data.keyword.hscrypto}} GUI.
 
 [After you create or import your existing keys into the service](/docs/services/hs-crypto/create-root-keys.html), complete the following steps to delete a key:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/){: new_window}.
-2. From the {{site.data.keyword.cloud_notm}} dashboard, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-3. Use the **Keys** table to browse the keys in your service.
-4. Click the ⋮ icon to open a list of options for the key that you want to delete.
-5. From the options menu, click **Delete key** and confirm the key deletion in the next screen.
+1. [Log in to the {{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/){: new_window}.
+2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
+4. Use the **Keys** table to browse the keys in your service.
+5. Click the ⋮ icon to open a list of options for the key that you want to delete.
+6. From the options menu, click **Delete key** and confirm the key deletion in the next screen.
 
 After you delete a key, the key transitions to the _Destroyed_ state. Keys in this state are no longer recoverable. Metadata that is associated with the key, such as the key's deletion date, is kept in the {{site.data.keyword.hscrypto}} database.
 
@@ -42,7 +47,7 @@ After you delete a key, the key transitions to the _Destroyed_ state. Keys in th
 To delete a key and its contents, make a `DELETE` call to the following endpoint.
 
 ```
-https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
+https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 ```
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto/access-api.html).
@@ -55,15 +60,15 @@ https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 
     ```cURL
     curl -X DELETE \
-      https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID> \
+      https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID> \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
       -H 'prefer: <return_preference>'
     ```
     {: codeblock}
 
-    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/hp-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Replace the variables in the example request according to the following table.
     <table>
@@ -89,7 +94,7 @@ https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
       </tr>
       <tr>
         <td><varname>return_preference</varname></td>
-        <td><p>A header that alters server behavior for <code>POST</code> and <code>DELETE</code> operations.</p><p>When you set the <em>return_preference</em> variable to <code>return=minimal</code>, the service returns a successful deletion response. When you set the variable to <code>return=representation</code>, the service returns the both the key material and the key metadata.</p></td>
+        <td><p>A header that alters server behavior for <code>POST</code> and <code>DELETE</code> operations.</p><p>When you set the <em>return_preference</em> variable to <code>return=minimal</code>, the service returns a successful deletion response. When you set the variable to <code>return=representation</code>, the service returns both the key material and the key metadata.</p></td>
       </tr>
       <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to delete keys with the {{site.data.keyword.hscrypto}} API.</caption>
     </table>
@@ -124,4 +129,4 @@ https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {: screen}
 
-    For a detailed description of the available parameters, see the {{site.data.keyword.hscrypto}} [REST API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/hp-crypto){: new_window}.
+    For a detailed description of the available parameters, see the {{site.data.keyword.hscrypto}} [REST API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.

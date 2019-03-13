@@ -1,9 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-10-02"
+  years: 2018, 2019
+lastupdated: "2019-03-13"
 
+Keywords: root keys, import keys, symmetric key, Hyper Protect Crypto Services GUI
+
+subcollection: hs-crypto
 ---
 
 {:shortdesc: .shortdesc}
@@ -23,14 +26,15 @@ You can use
 Root keys are symmetric key-wrapping keys that are used to protect the security of encrypted data in the cloud. For more information about root keys, see [Envelope encryption](/docs/services/key-protect/concepts/envelope-encryption.html).
 
 ## Importing root keys with the GUI
-{: #gui}
+{: #import-root-key-gui}
 
 [After you create an instance of the service](/docs/services/
 hs-crypto/provision.html), complete the following steps to add your existing root key with the {{site.data.keyword.hscrypto}} GUI.
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/){: new_window}.
-2. From your {{site.data.keyword.cloud_notm}} dashboard, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-3. To import a key, click **Add key** and select the **Enter existing key** window.
+1. [Log in to the {{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/){: new_window}.
+2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
+4. To import a key, click **Add key** and select the **Import your own key** window.
 
     Specify the key's details:
 
@@ -57,7 +61,7 @@ hs-crypto/provision.html), complete the following steps to add your existing roo
           <p>Ensure that the key material meets the following requirements:</p>
           <p>
             <ul>
-              <li>The key must be 256, 384, or 512 bits.</li>
+              <li>The key must be 128, 192, or 256 bits.</li>
               <li>The bytes of data, for example 32 bytes for 256 bits, must be encoded by using base64 encoding.</li>
             </ul>
           </p>
@@ -66,25 +70,25 @@ hs-crypto/provision.html), complete the following steps to add your existing roo
       <caption style="caption-side:bottom;">Table 1. Describes the <b>Enter existing key</b> settings</caption>
     </table>
 
-4. When you are finished filling out the key's details, click **Add new key** to confirm.
+5. When you are finished filling out the key's details, click **Import key** to confirm.
 
 ## Importing root keys with the API
-{: #api}
+{: #import-root-key-api}
 
 Add your existing root key by making a `POST` call to the following endpoint.
 
 ```
-https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys
+https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ```
 {: codeblock}
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto/access-api.html).
 
-1. Call the [{{site.data.keyword.hscrypto}} API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/hp-crypto){: new_window} with the following cURL command.
+1. Call the [{{site.data.keyword.hscrypto}} API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window} with the following cURL command.
 
     ```cURL
     curl -X POST \
-      https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys \
+      https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
       -H 'content-type: application/vnd.ibm.kms.key+json' \
@@ -108,8 +112,8 @@ https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys
     ```
     {: codeblock}
 
-    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/hp-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Replace the variables in the example request according to the following table.
     <table>
@@ -158,7 +162,7 @@ https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys
           <p>Ensure that the key material meets the following requirements:</p>
           <p>
             <ul>
-              <li>The key must be 256, 384, or 512 bits.</li>
+              <li>The key must be 128, 192, or 256 bits.</li>
               <li>The bytes of data, for example 32 bytes for 256 bits, must be encoded by using base64 encoding.</li>
             </ul>
           </p>
@@ -183,7 +187,7 @@ https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys
 
     ```cURL
     curl -X GET \
-      https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys \
+      https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
       -H 'accept: application/vnd.ibm.collection+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
@@ -194,7 +198,7 @@ https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys
 **Note:** When you add an existing root key to the service, the key stays within the bounds of {{site.data.keyword.hscrypto}}, and its key material cannot be retrieved.
 
 ### What's next
+{: #import-root-key-next}
 
 - To find out more about protecting keys with envelope encryption, check out [Wrapping keys](/docs/services/hs-crypto/wrap-keys.html).
-- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/
-hp-crypto){: new_window}.
+- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.

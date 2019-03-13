@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-10-02"
+  years: 2018, 2019
+lastupdated: "2019-03-13"
+
+Keywords: root key, data encryption key, Hyper Protect Crypto Services
+
+subcollection: hs-crypto
 
 ---
 
@@ -25,18 +29,18 @@ When you wrap a data encryption key (DEK) with a root key, {{site.data.keyword.h
 To learn how key wrapping helps you control the security of at-rest data in the cloud, see [Envelope encryption](/docs/services/key-protect/concepts/envelope-encryption.html).
 
 ## Wrapping keys by using the API
-{: #api}
+{: #wrap-keys-api}
 
 You can protect a specified data encryption key (DEK) with a root key that you manage in {{site.data.keyword.hscrypto}}
 .
 
-**Important:** When you supply a root key for wrapping, ensure that the root key is 256, 384, or 512 bits so that the wrap call can succeed. If you create a root key in the service, {{site.data.keyword.hscrypto}}
- generates a 256-bit key from its HSMs, supported by the AES-GCM algorithm.
+When you supply a root key for wrapping, ensure that the root key is 128, 192, or 256 bits so that the wrap call can succeed. If you create a root key in the service, {{site.data.keyword.hscrypto}}
+ generates a 256-bit key from its HSMs, supported by the AES-CBC algorithm.
 
 [After you designate a root key in the service](/docs/services/hs-crypto/create-root-keys.html), you can wrap a DEK with advanced encryption by making a `POST` call to the following endpoint.
 
 ```
-https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
+https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
 ```
 {: codeblock}
 
@@ -53,7 +57,7 @@ https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
 
     ```cURL
     curl -X POST \
-      'https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap' \
+      'https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap' \
       -H 'accept: application/vnd.ibm.kms.key_action+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
@@ -67,9 +71,8 @@ https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
     ```
     {: codeblock}
 
-    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}}
- API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/hp-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Replace the variables in the example request according to the following table.
 
