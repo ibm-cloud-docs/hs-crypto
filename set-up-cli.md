@@ -22,7 +22,7 @@ lastupdated: "2018-12-20"
 - To find out more about using the CLI, check out the [{{site.data.keyword.keymanagementserviceshort}} CLI reference doc](/docs/services/key-protect/cli-reference.html).
 - To find out about accessing the CLI, check out [Setting up the {{site.data.keyword.keymanagementserviceshort}} CLI](/docs/services/key-protect/set-up-cli.html).
 
-Before you are able to use the {{site.data.keyword.keymanagementserviceshort}} CLI plug-in on a {{site.data.keyword.hscrypto}} instance, run the following command first:
+Before you are able to use the {{site.data.keyword.keymanagementserviceshort}} CLI plug-in on a {{site.data.keyword.hscrypto}} instance (service instance for short), run the following command first:
 
 ```
 export KP_PRIVATE_ADDR=<URL>
