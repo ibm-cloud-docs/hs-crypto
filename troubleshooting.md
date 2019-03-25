@@ -27,9 +27,9 @@ subcollection: IBM Cloud Hyper Protect Crypto Services
 General problems with using {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} might include providing the correct headers or credentials when you interact with the API. In many cases, you can recover from these problems by following a few easy steps.
 {: shortdesc}
 
-## Error occurred when deleting an initialized service instance
+## Error occurred when deleting an initialized {{site.data.keyword.hscrypto}} instance
 
-You might receive an error similar to the following when you delete an initialized service instance:
+You might receive an error similar to the following when you delete an initialized {{site.data.keyword.hscrypto}} instance:
 
 ```
 FAILED
@@ -38,7 +38,7 @@ Error response from server. Status code: 400; description: 400 DELETE https://zC
 {: codeblock}
 {: tsSymptoms}
 
-You have not cleared (zeroized) the initialized service instance before you delete the instance.
+You have not cleared (zeroized) the initialized {{site.data.keyword.hscrypto}} instance before you delete the instance.
 {: tsCauses}
 
 Run the following command before you delete the instance:
