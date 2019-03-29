@@ -4,6 +4,10 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-01-15"
 
+Keywords: Hyper Protect Crypto Services, Keep Your Own Keys, VMware
+
+subcollection: hs-crypto
+
 ---
 
 {:new_window: target="_blank"}
@@ -19,6 +23,7 @@ This page includes the use cases that are currently included in {{site.data.keyw
 {:shortdesc}
 
 ## Data at rest encryption with Keep Your Own Keys
+{: #data-at-rest-encryption}
 
 You can use {{site.data.keyword.hscrypto}} to encrypt your data at rest in the highest security level with your own keys. {{site.data.keyword.hscrypto}} provides the key management capabilities to generate and manage your keys using {{site.data.keyword.keymanagementservicefull_notm}} APIs.
 
@@ -35,6 +40,7 @@ The following are a few highlights of using {{site.data.keyword.hscrypto}} to pr
 *Figure 1. Data at rest encryption with KYOK*
 
 ## VMware image protection with Keep Your Own Keys
+{: #vmware-image-protection}
 
 Similar to data at rest protection, {{site.data.keyword.hscrypto}} can also protect VMware image at rest for encryption and decryption through VMware Key Management Interoperability Protocol.
 

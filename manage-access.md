@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-10-02"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
+
+Keywords: user access, Cloud IAM roles, encryption keys
+
+subcollection: hs-crypto
 
 ---
 
@@ -13,7 +17,7 @@ lastupdated: "2018-10-02"
 {:pre: .pre}
 {:tip: .tip}
 
-# Managing user access to keys
+# Managing user access
 {: #manage-access}
 
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} supports a centralized access control system, governed by {{site.data.keyword.iamlong}}, to help you manage users and access for your encryption keys.
@@ -85,13 +89,14 @@ The following table shows how identity and access roles map to {{site.data.keywo
   <caption style="caption-side:bottom;">Table 1. Describes how identity and access roles map to {{site.data.keyword.hscrypto}} permissions</caption>
 </table>
 
-**Note**: Cloud IAM user roles provide access at the service or service instance level. [Cloud Foundry roles ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/iam/cfaccess.html){: new_window} are separate and define access at the organization or the space level.
+<!-- **Note**: Cloud IAM user roles provide access at the service or service instance level. [Cloud Foundry roles](/docs/iam/cfaccess.html) are separate and define access at the organization or the space level. -->
 
-To learn more about {{site.data.keyword.iamshort}}, check out [User roles and permissions ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/iam/users_roles.html#userroles){: new_window}.
+To learn more about {{site.data.keyword.iamshort}}, check out [User roles and permissions](/docs/iam/users_roles.html#userroles).
 
 ### What's next
+{: #manage-access-next}
 
 Account owners and admins can invite users and set service policies that correspond to the {{site.data.keyword.hscrypto}} actions the users can perform.
 
-- For more information about assigning user roles in the {{site.data.keyword.cloud_notm}} UI, see [Managing IAM access ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/iam/mngiam.html){: new_window}.
+- For more information about assigning user roles in the {{site.data.keyword.cloud_notm}} UI, see [Managing IAM access](/docs/iam/mngiam.html).
 - To learn about granting advanced permissions to access specific encryption keys, see [Managing access to keys](/docs/services/hs-crypto/manage-access-api.html).

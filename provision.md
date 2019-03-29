@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-21"
+lastupdated: "2019-03-21"
+
+Keywords: provision, instance of Hyper Protect Crypto Services
+
+subcollection: hs-crypto
 
 ---
 
@@ -12,6 +16,7 @@ lastupdated: "2019-01-21"
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
+{:important: .important}
 {:gif: data-image-type='gif'}
 
 # Provisioning the service
@@ -21,15 +26,20 @@ You can create an instance of {{site.data.keyword.cloud_notm}} {{site.data.keywo
 {: shortdesc}
 
 ## Provisioning from the {{site.data.keyword.cloud_notm}} console
-{: #gui}
+{: #provision-gui}
 
 To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console, complete the following steps:
 
-1. [Log in to your {{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/){: new_window}.
+1. [Log in to your {{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/){: new_window}.
 2. Click **Catalog** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
 3. From the All Categories navigation pane, click the **Security and Identity** category.
 4. From the list of services, click the **{{site.data.keyword.hscrypto}}** tile.
-5. Select a service plan, and click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
+5. **Optional**: In the **Tags** field, add tags to organize your resources. If your tags are billing related, consider writing tags as key:value pairs to help group related tags, such as `costctr:124`. For more information on tags, see [Working with tags](/docs/resources?topic=resources-tag#tag).
+6. Under **Number of crypto units**, select the number of  crypto units that meets your performance needs.
+
+  A service instance supports up to six crypto units. In a production environment, it is recommended to select at least two crypto units to enable high availability. If you select three or more crypto units, these crypto units are distributed among three supported availability zones in the selected region.
+  {: important}
+7. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 
 ![Provisioning the service](image/provisioning.gif "Provisioning the service")
 {: gif}
@@ -37,11 +47,11 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
 *Figure 1. Provisioning the service*
 
 <!-- ## Provisioning from the {{site.data.keyword.cloud_notm}} CLI
-{: #cli}
+{: #provision-cli}
 
 To provision an instance of {{site.data.keyword.hscrypto}} using the {{site.data.keyword.cloud_notm}} CLI, complete the following steps:
 
-1. Download and install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview){: new_window} with the  following command:
+1. Download and install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview){: new_window} with the following command:
 
     ```sh
     curl -sl https://ibm.biz/idt-installer | bash
@@ -134,9 +144,9 @@ To manage access to your encryption keys with [Cloud Foundry roles](/docs/iam/cf
     ibmcloud service list
     ```
     {: pre}
-
+-->
 
 ### What's next
+{: #provision-next}
 
-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}.
-- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/hp-crypto){: new_window}.-->
+Find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.

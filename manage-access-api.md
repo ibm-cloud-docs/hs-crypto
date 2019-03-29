@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-10-02"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
+
+Keywords: instance ID, account ID, Access Management
+
+subcollection: hs-crypto
 
 ---
 
@@ -19,10 +23,10 @@ lastupdated: "2018-10-02"
 With {{site.data.keyword.iamlong}}, you can enable granular access control for your encryption keys by creating and modifying access policies.
 {: shortdesc}
 
-This page walks you through scenarios for managing access to your encryption keys with the [Access Management API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}.
+This page walks you through scenarios for managing access to your encryption keys with the [Access Management API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iampap.ng.bluemix.net/v1/docs/#/Policies/post_v1_policies){: new_window}.
 
 ## Before you begin
-{: #prereqs}
+{: #prereqs-manage-api}
 
 To work with the API, generate your authentication credentials, such as your [access token](/docs/services/hs-crypto/access-api.html#retrieve-token) and [instance ID](/docs/services/hs-crypto/access-api.html#retrieve-instance-ID). You also need the ID of the {{site.data.keyword.hscrypto}} key that you want to manage access for.
 
@@ -32,7 +36,7 @@ To learn about viewing key IDs, see [Viewing keys](/docs/services/hs-crypto/view
 ### Retrieving your account ID
 {: #retrieve-account-ID}
 
-After you've retrieved your credentials, determine the scope of access for your new access policy by retrieving the ID of the account that contains your {{site.data.keyword.hscrypto}} service instance.
+After you've retrieved your credentials, determine the scope of access for your new access policy by retrieving the ID of the account that contains your {{site.data.keyword.hscrypto}} instance (service instance for short).
 
 To retrieve your account ID, complete the following steps:
 
@@ -134,7 +138,7 @@ curl -X POST \
   ],
   "resources": [
     {
-      "serviceName": "IBM Key Protect",
+      "serviceName": "Hyper Protect Crypto Services",
       "accountId": "<account_ID>",
       "region": "<region>",
       "serviceInstance": "<instance_ID>",
@@ -146,10 +150,10 @@ curl -X POST \
 ```
 {: codeblock}
 
-If you need to manage access to keys within a specified Cloud Foundry org and space, replace `serviceInstance` with `organizationId` and `spaceId`. To learn more, see the [Access Management API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}.
+<!-- If you need to manage access to keys within a specified Cloud Foundry org and space, replace `serviceInstance` with `organizationId` and `spaceId`. To learn more, see the [Access Management API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}.
 {: tip}
 
-Replace `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>`, and `<key_ID>` with the appropriate values.
+Replace `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>`, and `<key_ID>` with the appropriate values. -->
 
 **Optional:** Verify that the policy was successfully created.
 
@@ -182,7 +186,7 @@ curl -X PUT \
   ],
   "resources": [
     {
-      "serviceName": "IBM Key Protect",
+      "serviceName": "Hyper Protect Crypto Services",
       "accountId": "<account_ID>",
       "region": "<region>",
       "serviceInstance": "<instance_ID>",

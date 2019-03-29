@@ -1,0 +1,66 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="hs-crypto" audience="service" arm="3917560" href="/docs/services/hs-crypto/index.html" path="services/hs-crypto"}
+IBM Cloud Hyper Protect Crypto Services
+
+    {: .navgroup id="learn"}
+    {: .topicgroup}
+    시작하기
+        index.md
+        get_started_hsm.md
+        [동영상: Hyper Protect Crypto Services 시작하기](https://youtu.be/QRRn1OV4RmI)
+
+    {: .topicgroup}
+    IBM Cloud Hyper Protect Crypto Services 정보
+        overview.md
+        use_case.md
+        keys_intro.md
+
+    whats_new.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    provision.md
+    access-api.md
+    set-up-cli.md
+    initialize_hsm.md
+
+    {: .topicgroup}
+    액세스 관리
+        manage-access.md
+        manage-access-api.md
+
+    {: .topicgroup}
+    루트 키 및 표준 키 작성
+        create-root-keys.md
+        create-standard-keys.md
+
+    {: .topicgroup}
+    루트 키 및 표준 키 가져오기
+        import-root-keys.md
+        import-standard-keys.md
+
+    {: .topicgroup}
+    루트 키 및 표준 키 관리
+        view-keys.md
+        rotate-keys.md
+        wrap-keys.md
+        unwrap-keys.md
+        delete-keys.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [Hyper Protect Crypto API 참조](https://{DomainName}/apidocs/hp-crypto)
+    regions.md
+    at-events.md
+    ha-dr.md
+    [Key Protect](/services/key-protect/key-protect-getting-started-tutorial)
+    [Hyper Protect DBaaS](/services/hyper-protect-dbaas/hyper-protect-dbaas-gettingstarted)
+    related-links.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    troubleshooting.md
+    FAQs.md
+    {: .navgroup-end}

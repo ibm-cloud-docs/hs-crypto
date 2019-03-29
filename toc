@@ -9,12 +9,12 @@ IBM Cloud Hyper Protect Crypto Services
     Getting started
         index.md
         get_started_hsm.md
-        [Video: Getting started with Hyper Protect Crypto Services](https://youtu.be/QRRn1OV4RmI)
 
     {: .topicgroup}
     About IBM Cloud Hyper Protect Crypto Services
         overview.md
         use_case.md
+        service_instance_concepts.md
         keys_intro.md
 
     whats_new.md
@@ -25,7 +25,12 @@ IBM Cloud Hyper Protect Crypto Services
     access-api.md
     set-up-cli.md
     initialize_hsm.md
-    manage-access.md
+    transition-keys.md
+
+    {: .topicgroup}
+    Managing access
+        manage-access.md
+        manage-access-api.md
 
     {: .topicgroup}
     Creating root keys and standard keys
@@ -47,10 +52,13 @@ IBM Cloud Hyper Protect Crypto Services
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Hyper Protect Crypto API reference](https://console.bluemix.net/apidocs/hp-crypto)
+    [Hyper Protect Crypto API reference](https://{DomainName}/apidocs/hs-crypto)
     regions.md
+    at-events.md
+    ha-dr.md
     [Key Protect](/services/key-protect/key-protect-getting-started-tutorial)
     [Hyper Protect DBaaS](/services/hyper-protect-dbaas/hyper-protect-dbaas-gettingstarted)
+    related-links.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

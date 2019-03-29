@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-08"
+  years: 2018, 2019
+lastupdated: "2019-02-20"
+
+Keywords: REST API, RESTful API, access token, instance ID
+
+subcollection: hs-crypto
 
 ---
 
@@ -26,16 +30,16 @@ To work with the API, you need to generate your service and authentication crede
 
 You can authenticate with {{site.data.keyword.hscrypto}} by retrieving an access token from {{site.data.keyword.iamshort}}. With a [service ID](/docs/iam/serviceid.html#serviceids), you can work with the {{site.data.keyword.hscrypto}} API on behalf of your service or application on or outside {{site.data.keyword.cloud_notm}}, without needing to share your personal user credentials.  
 
-<!-- If you want to authenticate with your user credentials, you can retrieve your token by running `ibmcloud iam oauth-tokens` in the [{{site.data.keyword.cloud_notm}} CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/cli/index.html#overview){: new_window}.
+<!-- If you want to authenticate with your user credentials, you can retrieve your token by running `ibmcloud iam oauth-tokens` in the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview).
 {: tip} -->
 
 Complete the following steps to retrieve an access token:
 
-1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** &gt; **Security** &gt; **Identity and Access** &gt; **Service IDs**. Follow the process to [create a service ID](/docs/iam/serviceid.html#creating-a-service-id){: new_window}.
-2. Use the **Actions** menu to [define an access policy for your new service ID](/docs/iam/serviceidaccess.html){: new_window}.
+1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** &gt; **Security** &gt; **Identity and Access** &gt; **Service IDs**. Follow the process to [create a service ID](/docs/iam/serviceid.html#creating-a-service-id).
+2. Use the **Actions** menu to [define an access policy for your new service ID](/docs/iam/serviceidaccess.html).
 
     For more information about managing access for your {{site.data.keyword.hscrypto}} resources, see [Roles and permissions](/docs/services/hs-crypto/manage-access.html#roles).
-3. Use the **API keys** section to [create an API key to associate with the service ID](/docs/iam/serviceid_keys.html#serviceidapikeys){: new_window}. Save your API key by downloading it to a secure location.
+3. Use the **API keys** section to [create an API key to associate with the service ID](/docs/iam/serviceid_keys.html#serviceidapikeys). Save your API key by downloading it to a secure location.
 4. Call the {{site.data.keyword.iamshort}} API to retrieve your access token.
 
     ```cURL
@@ -68,9 +72,9 @@ Complete the following steps to retrieve an access token:
 ## Retrieving your instance ID
 {: #retrieve-instance-ID}
 
-You can retrieve the identifying information for your {{site.data.keyword.hscrypto}} service instance by using the [{{site.data.keyword.cloud_notm}} CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/cli/index.html#overview){: new_window}. Use an instance ID to manage your encryption keys within a specified instance of {{site.data.keyword.hscrypto}} in your account.
+You can retrieve the identifying information for your {{site.data.keyword.hscrypto}} service instance by using the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview). Use an instance ID to manage your encryption keys within a specified instance of {{site.data.keyword.hscrypto}} in your account.
 
-1. Log in to {{site.data.keyword.cloud_notm}} with the [{{site.data.keyword.cloud_notm}} CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/cli/index.html#overview){: new_window}.
+1. Log in to {{site.data.keyword.cloud_notm}} with the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview).
 
     ```sh
     ibmcloud login
@@ -100,7 +104,7 @@ You can retrieve the identifying information for your {{site.data.keyword.hscryp
 ## Retrieving connection information
 {: #retrieve-connection-info}
 
-Before you call any {{site.data.keyword.keymanagementserviceshort}} APIs, call the **Retrieve the connection info** API first to retrieve the connection information. For more information, see [the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/hp-crypto){: new_window}.
+Before you call any {{site.data.keyword.keymanagementserviceshort}} APIs, call the **Retrieve the connection info** API first to retrieve the connection information. For more information, see [the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
 
 ## Forming your API request
 {: #form-api-request}
@@ -111,7 +115,7 @@ To build your request, pair a [regional service endpoint](/docs/services/hs-cryp
 
 ```cURL
 curl -X GET \
-    https://us-south.hpcs.cloud.ibm.com:<port>/api/v2/key \
+    https://us-south.hs-crypto.cloud.ibm.com:<port>/api/v2/key \
     -H 'accept: application/vnd.ibm.collection+json' \
     -H 'authorization: Bearer <access_token>' \
     -H 'bluemix-instance: <instance_ID>' \
@@ -119,6 +123,8 @@ curl -X GET \
 {: codeblock}
 
 ### What's next
+{: #api-next}
 
-- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/hp-crypto){: new_window}.
-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}.
+To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+
+<!-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}. -->

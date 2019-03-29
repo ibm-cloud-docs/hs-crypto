@@ -2,11 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-22"
+lastupdated: "2019-01-15"
 
 Keywords: troubleshoot, problems, known issues
 
-subcollection: IBM Cloud Hyper Protect Crypto Services
+subcollection: hs-crypto
 
 ---
 
@@ -27,9 +27,10 @@ subcollection: IBM Cloud Hyper Protect Crypto Services
 General problems with using {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} might include providing the correct headers or credentials when you interact with the API. In many cases, you can recover from these problems by following a few easy steps.
 {: shortdesc}
 
-## Error occurred when deleting an initialized {{site.data.keyword.hscrypto}} instance
+## Error occurred when deleting an initialized service instance
+{: #troubleshoot-delete-instance}
 
-You might receive an error similar to the following when you delete an initialized {{site.data.keyword.hscrypto}} instance:
+You might receive an error similar to the following when you delete an initialized service instance:
 
 ```
 FAILED
@@ -38,7 +39,7 @@ Error response from server. Status code: 400; description: 400 DELETE https://zC
 {: codeblock}
 {: tsSymptoms}
 
-You have not cleared (zeroized) the initialized {{site.data.keyword.hscrypto}} instance before you delete the instance.
+You have not cleared (zeroized) the initialized service instance before you delete the instance.
 {: tsCauses}
 
 Run the following command before you delete the instance:
@@ -50,6 +51,7 @@ ibmcloud tke domain-zeroize
 {: codeblock}
 
 ## Unauthorized token after running commands related to the Trusted Key Entry plug-in
+{: #troubleshoot-unauthorized-token}
 
 You might receive messages similar to the following after you run a `tke` CLI commands:
 
@@ -71,6 +73,7 @@ Log in to {{site.data.keyword.cloud_notm}} again with the `ibmcloud login` comma
 {: tsResolve}
 
 ## Got `error CKR_IBM_WK_NOT_INITIALIZED` when using CLI or API
+{: #troubleshoot-error-CLI-API}
 
 When you use CLI or API, you might got an error message similar to the following:
 
@@ -115,9 +118,9 @@ You can check whether {{site.data.keyword.cloud_notm}} is available by going to 
 
 You can review the forums to see whether other users ran into the same problem. When you are using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.cloud_notm}} development teams.
 
-- If you have technical questions about {{site.data.keyword.hscrypto}}, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/){: new_window} and tag your question with  "ibm-cloud" and "hyperprotect-crypto".
-- For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/index.html){: new_window} forum. Include the "ibm-cloud" and "hyperprotect-crypto" tags.
+- If you have technical questions about {{site.data.keyword.hscrypto}}, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://stackoverflow.com/questions/tagged/hyper-protect-crypto){: new_window} and tag your question with  "ibm-cloud" and "hyper-protect-crypto".
+- For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/hyper-protect-crypto/){: new_window} forum. Include the "ibm-cloud" and "hyper-protect-crypto" tags.
 
-See [Getting help ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/docs/support/index.html#getting-help){: new_window} for more details about using the forums.
+See [Getting help ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/get-support?topic=get-support-using-avatar#using-avatar){: new_window} for more details about using the forums.
 
-For more information about opening an {{site.data.keyword.IBM_notm}} support ticket, or about support levels and ticket severities, see [Contacting support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/docs/support/index.html#contacting-support){: new_window}.
+For more information about opening an {{site.data.keyword.IBM_notm}} support ticket, or about support levels and ticket severities, see [Contacting support ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/get-support?topic=get-support-getting-customer-support){: new_window}.

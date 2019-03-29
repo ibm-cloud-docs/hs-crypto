@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-10-02"
+  years: 2018, 2019
+lastupdated: "2019-02-20"
+
+Keywords: data encryption key, original key material, unwrap call
+
+subcollection: hs-crypto
 
 ---
 
@@ -22,12 +26,12 @@ You can unwrap a data encryption key (DEK) to access its contents by using the {
 To learn how key wrapping helps you control the security of at-rest data in the cloud, see [Envelope encryption](/docs/services/key-protect/concepts/envelope-encryption.html).
 
 ## Unwrapping keys by using the API
-{: #api}
+{: #unwrap-key-api}
 
 [After you make a wrap call to the service](/docs/services/hs-crypto/wrap-keys.html), you can unwrap a specified data encryption key (DEK) to access its contents by making a `POST` call to the following endpoint.
 
 ```
-https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=unwrap
+https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=unwrap
 ```
 {: codeblock}
 
@@ -43,7 +47,7 @@ https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=unwrap
 
     ```cURL
     curl -X POST \
-      'https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=unwrap' \
+      'https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=unwrap' \
       -H 'accept: application/vnd.ibm.kms.key_action+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
@@ -56,9 +60,8 @@ https://<region>.hpcs.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=unwrap
     }'
     ```
     {: codeblock}
-
-    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/hp-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Replace the variables in the example request according to the following table.
     <table>
