@@ -63,13 +63,13 @@ When you delete a key, you permanently shred its contents and associated data. T
 
 Before you delete a key, ensure that you no longer require access to any data that is associated with the key.
 
-## Pricing
+<!-- ## Pricing
 {: #pricing}
 
-<!-- ### Where can I find the detailed pricing information?
+### Where can I find the detailed pricing information?
 {: #pricing_info}
 
-You can refer to the **Pricing** tab on the [{{site.data.keyword.hscrypto}} home page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/hyper-protect-crypto){: new_window} for details. -->
+You can refer to the **Pricing** tab on the [{{site.data.keyword.hscrypto}} home page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/hyper-protect-crypto){: new_window} for details.
 
 ### Is there a pricing example I can refer to?
 {: #pricing_example}
@@ -88,4 +88,4 @@ The following table contains the pricing details.
 | 1,000,000 additional API calls (10,000 API calls x 100) for Crypto unit 2 | $1 ($0.01 x 100) |
 | End of month charge | $3142  |
 
-*Table 1. Charge of two crypto units with monthly API calls of 2,000,000 per crypto unit*
+*Table 1. Charge of two crypto units with monthly API calls of 2,000,000 per crypto unit* -->
