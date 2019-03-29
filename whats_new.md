@@ -33,7 +33,7 @@ As of March 29, 2019, provisioning new Hyper Protect Crypto Services Beta instan
 
 See [Migrating keys from a Beta service instance](/docs/services/hs-crypto/transition-keys.html) for information on migrating keys to a production service instance.
 
-For more information about the {{site.data.keyword.hscrypto}} offering, see the [{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} home page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/hyper-protect-crypto){:new_window}.
+For more information about the {{site.data.keyword.hscrypto}} offering, see the [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} home page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/hyper-protect-crypto){:new_window}.
 
 ### High availability and disaster recovery
 {: #ha-dr-new}
