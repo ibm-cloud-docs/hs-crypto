@@ -18,114 +18,114 @@ subcollection: hs-crypto
 {:important: .important}
 {:tip: .tip}
 
-# Einführung in {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
+# Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
 {: #get-started}
 
-<!-- {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is in the BETA phase and is for tryout and test purpose only. To prevent data loss, use only test data in the current service. This restriction also applies to using {{site.data.keyword.hscrypto}} with other  {{site.data.keyword.cloud_notm}} services.
-{:important} -->
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}} for short) is a key management and cloud hardware security module (HSM). It is designed to enable you to take control of your cloud data encryption keys and cloud hardware security models, and is the only service in the industry built on FIPS 140-2 Level 4-certified hardware.
+{:shortdesc}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (abgekürzt {{site.data.keyword.hscrypto}}) stellt ein Cloud-Hardwaresicherheitsmodul (HSM) für einen dedizierten Schlüsselverwaltungsservice bereit. {{site.data.keyword.hscrypto}} hilft Ihnen, Ihre Daten auf der Sicherheitsstufe der IBM Z-Kryptografie bequem und kostengünstig zu verschlüsseln.{:shortdesc}
-
-{{site.data.keyword.hscrypto}} wird in {{site.data.keyword.keymanagementservicefull_notm}}-APIs integriert, um Schlüssel zu generieren und zu verschlüsseln. Die Funktion "Eigene Schlüssel behalten" (KYOK) wird auch von {{site.data.keyword.hscrypto}} aktiviert, um Zugriff auf Verschlüsselungshardware zu bieten, die für FIPS 140-2 Stufe 4 zertifizierte Technologie beinhaltet, die höchste erreichbare Sicherheitsstufe. {{site.data.keyword.hscrypto}} bietet Netz-adressierbare Hardwaresicherheitsmodule (HSMs)<!-- and is accessible via PKCS#11 application programming interfaces (APIs) with several popular programming languages such as Java, JavaScript, Swift, and so on-->.  <!-- You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client, which communicates with the ACSP server to enable you to access the backend cryptographic resources.--> Weitere Informationen über {{site.data.keyword.hscrypto}} finden Sie in der [Übersicht zu {{site.data.keyword.hscrypto}}](/docs/services/hs-crypto/overview.html). Weitere Informationen zu Sicherheitsanforderungen für Verschlüsselungsmodule finden Sie in der [NIST-Spezifikation für die FIPS 140-2-Stufe ![Symbol für externen Link](image/external_link.svg "Symbol für externen Link")](https://csrc.nist.gov/publications/detail/fips/140/2/final){:new_window}.
+{{site.data.keyword.hscrypto}} integrates with {{site.data.keyword.keymanagementservicefull_notm}} APIs to generate and encrypt keys. The Keep Your Own Keys (KYOK) function is also enabled by {{site.data.keyword.hscrypto}} to provide access to cryptographic hardware that is FIPS 140-2 Level 4 certified technology, the highest level attainable of security. {{site.data.keyword.hscrypto}} offers network addressable HSMs. <!-- and is accessible via PKCS#11 application programming interfaces (APIs) with several popular programming languages such as Java, JavaScript, Swift, and so on-->.  <!-- You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client, which communicates with the ACSP server to enable you to access the backend cryptographic resources.--> For more information about {{site.data.keyword.hscrypto}}, see [{{site.data.keyword.hscrypto}} overview](/docs/services/hs-crypto/overview.html). For more information about security requirements for cryptographic modules, see [the specification of the NIST for FIPS 140-2 Level ![External link icon](image/external_link.svg "External link icon")](https://csrc.nist.gov/publications/detail/fips/140/2/final){:new_window}.
 
 <!-- {{site.data.keyword.hscrypto}} is the cryptography that {{site.data.keyword.blockchainfull_notm}} Platform is built with. It is also a member of the {{site.data.keyword.cloud_notm}} Hyper Protect Family, including [{{site.data.keyword.cloud_notm}} Hyper Protect DBaaS ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/docs/services/hypersecure-dbaas/index.html){:new_window}, {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}, [{{site.data.keyword.cloud_notm}} Container Service ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/docs/containers/container_index.html){:new_window}, and [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}} ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/docs/services/hypersecure-platform/index.html){:new_window}. -->
 
-In diesem Lernprogramm erfahren Sie, wie Sie Ihre Verschlüsselungsinstanz mithilfe von Masterschlüsseln verwalten und wie Sie über das {{site.data.keyword.hscrypto}}-Dashboard Verschlüsselungsschlüssel erstellen bzw. vorhandene hinzufügen.
+This tutorial guides you how to set up your service instance by managing your master keys, and create and add existing cryptographic keys by using the {{site.data.keyword.hscrypto}} dashboard.
 
 
-## Schritt 1: Service bereitstellen
-{: #provision}
+## Step 1: Provision the service
+{: #provision-service}
 
-Vor dem Beginn müssen Sie über die {{site.data.keyword.cloud_notm}}-Konsole eine Instanz von {{site.data.keyword.hscrypto}} erstellen. Eine genaue Beschreibung der Schritte finden Sie unter [Service bereitstellen](/docs/services/hs-crypto/provision.html).
+Before you begin, you must create an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console. For detailed steps, see [Provisioning the service](/docs/services/hs-crypto/provision.html).
 
-## Schritt 2: Verschlüsselungsinstanz initialisieren
+## Step 2: Initialize your service instance
+{: #initialize-crypto}
 
-Um Ihre Schlüssel zu verwalten, müssen Sie zuerst Ihre Verschlüsselungsinstanz (HSM) initialisieren. Ein Lernprogramm für den Schnelleinstieg finden Sie unter [Einführung in die Initialisierung der Verschlüsselungsinstanz](/docs/services/hs-crypto/get_started_hsm.html). Eine ausführliche Beschreibung der Schritte sowie bewährte Verfahren finden Sie unter [Verschlüsselungsinstanzen zum Schutz des Schlüsselspeichers initialisieren](/docs/services/hs-crypto/initialize_hsm.html).
+To manage your keys, you need to initialize your service instance first. For a quick getting-started tutorial, see [Getting started with service instance initialization](/docs/services/hs-crypto/get_started_hsm.html). For detailed steps and best practices, see [Initializing service instances to protect key storage](/docs/services/hs-crypto/initialize_hsm.html).
 
-## Schritt 3: Schlüssel verwalten
+## Step 3: Manage your keys
 {: #manage-keys}
 
-Über das {{site.data.keyword.hscrypto}}-Dashboard können Sie neue Rootschlüssel oder Standardschlüssel für die Verschlüsselung erstellen oder vorhandene Schlüssel importieren. Weitere Informationen zu Rootschlüsseln und Standardschlüsseln finden Sie unter [Einführung in Schlüssel](/docs/services/hs-crypto/keys_intro.html).
+From the {{site.data.keyword.hscrypto}} dashboard, you can create new root keys or standard keys for cryptography, or you can import your existing keys. For more information on root keys and standard keys, see [Introduction to keys](/docs/services/hs-crypto/keys_intro.html).
 
-### Neue Schlüssel erstellen
+### Creating new keys
 {: #create-keys}
 
-Führen Sie die folgenden Schritte aus, um Ihren ersten Verschlüsselungsschlüssel zu erstellen.
+Complete the following steps to create your first cryptographic key.
 
-1. Klicken Sie im {{site.data.keyword.hscrypto}}-Dashboard auf **Verwalten** &gt; **Schlüssel hinzufügen**.
-2. Wenn Sie einen neuen Schlüssel erstellen möchten, wählen Sie das Fenster **Schlüssel erstellen** aus.
+1. From the {{site.data.keyword.hscrypto}} dashboard, click **Manage** &gt; **Add key**.
+2. To create a new key, select the **Create a key** window.
 
-    Geben Sie die Schlüsseldetails an:
+    Specify the key's details:
 
     <table>
       <tr>
-        <th>Einstellung</th>
-        <th>Beschreibung</th>
+        <th>Setting</th>
+        <th>Description</th>
       </tr>
       <tr>
         <td>Name</td>
         <td>
-          <p>Ein eindeutiger, lesbarer Alias zur einfachen Identifikation Ihres Schlüssels.</p>
-          <p>Stellen Sie aus Datenschutzgründen sicher, dass der Schlüsselname keine personenbezogenen Daten (PII) wie den Namen oder den Standort enthält.</p>
+          <p>A unique, human-readable alias for easy identification of your key.</p>
+          <p>To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
         </td>
       </tr>
       <tr>
-        <td>Schlüsseltyp</td>
-        <td>Der <a href="/docs/services/key-protect/concepts/envelope-encryption.html#key-types">Schlüsseltyp</a>, den Sie in {{site.data.keyword.hscrypto}} verwalten möchten.</td>
+        <td>Key type</td>
+        <td>The <a href="/docs/services/key-protect/concepts/envelope-encryption.html#key-types">type of key</a> that you would like to manage in {{site.data.keyword.hscrypto}}.</td>
       </tr>
-      <caption style="caption-side:bottom;">Tabelle 1. Beschreibung der Einstellungen für <b>Schlüssel erstellen</b></caption>
+      <caption style="caption-side:bottom;">Table 1. Description of the <b>Create a key</b> settings</caption>
     </table>
 
-3. Geben Sie die Details zum Schlüssel ein und klicken Sie anschließend zum Bestätigen auf **Schlüssel erstellen**.
+3. When you are finished filling out the key's details, click **Create key** to confirm.
 
-Die im Service generierten Schlüssel sind symmetrische 256-Bit-Schlüssel, die vom AES-GCM-Algorithmus unterstützt werden. Um eine höhere Sicherheit zu erhalten, werden die Schlüssel von FIPS 140-2 Stufe 4-zertifizierten Hardwaresicherheitsmodulen (HSMs) generiert, die sich in sicheren {{site.data.keyword.cloud_notm}}-Rechenzentren befinden.
+Keys that are created in the service are symmetric 256-bit keys, supported by the AES-CBC algorithm. For added security, keys are generated by FIPS 140-2 Level 4 certified hardware security modules (HSMs) that are located in secure {{site.data.keyword.cloud_notm}} data centers.
 
-### Eigene Schlüssel importieren
+### Importing your own keys
 {: #import-keys}
 
-Sicherheitsvorteile erhalten Sie auch mit einer KYOK-Unterstützung (Keep Your Own Key), wenn Sie dem Service vorhandene Schlüssel hinzufügen und vorhandene Schlüssel verwalten.
+You can enable the security benefits of Keep Your Own Key (KYOK) by introducing your existing keys to the service and managing your existing keys.
 
-Führen Sie die folgenden Schritte aus, um einen vorhandenen Schlüssel hinzuzufügen.
+Complete the following steps to add an existing key.
 
-1. Klicken Sie im {{site.data.keyword.hscrypto}}-Dashboard auf **Verwalten** &gt; **Schlüssel hinzufügen**.
-2. Wenn Sie einen vorhandenen Schlüssel hochladen möchten, wählen Sie das Fenster **Eigenen Schlüssel importieren ** aus.
+1. From the {{site.data.keyword.hscrypto}} dashboard, click **Manage** &gt; **Add key**.
+2. To upload an existing key, select the **Import your own key** window.
 
-    Geben Sie die Schlüsseldetails an:
+    Specify the key's details:
 
     <table>
       <tr>
-        <th>Einstellung</th>
-        <th>Beschreibung</th>
+        <th>Setting</th>
+        <th>Description</th>
       </tr>
       <tr>
         <td>Name</td>
         <td>
-          <p>Ein eindeutiger, lesbarer Alias zur einfachen Identifikation Ihres Schlüssels.</p>
-          <p>Stellen Sie aus Datenschutzgründen sicher, dass der Schlüsselname keine personenbezogenen Daten (PII) wie den Namen oder den Standort enthält.</p>
+          <p>A unique, human-readable alias for easy identification of your key.</p>
+          <p>To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
         </td>
       </tr>
       <tr>
-        <td>Schlüsseltyp</td>
-        <td>Der <a href="/docs/services/key-protect/concepts/envelope-encryption.html#key-types">Schlüsseltyp</a>, den Sie in {{site.data.keyword.hscrypto}} verwalten möchten.</td>
+        <td>Key type</td>
+        <td>The <a href="/docs/services/key-protect/concepts/envelope-encryption.html#key-types">type of key</a> that you would like to manage in {{site.data.keyword.hscrypto}}.</td>
       </tr>
       <tr>
-        <td>Schlüsselinformationen</td>
-        <td>Die Schlüsselinformationen, z. B. ein symmetrischer Schlüssel, die im {{site.data.keyword.hscrypto}}-Service gespeichert werden sollen. Der bereitgestellte Schlüssel muss base64-codiert sein.</td>
+        <td>Key material</td>
+        <td>The key material, such as a symmetric key, that you want to store in the {{site.data.keyword.hscrypto}} service. The key that you provide must be base64 encoded.</td>
       </tr>
-      <caption style="caption-side:bottom;">Tabelle 2. Beschreibung der Einstellungen für <b>Eigenen Schlüssel importieren</b></caption>
+      <caption style="caption-side:bottom;">Table 2. Description of the <b>Import your own key</b> settings</caption>
     </table>
 
-3. Geben Sie die Details zum Schlüssel ein und klicken Sie anschließend zum Bestätigen auf **Schlüssel importieren**.
+3. When you are finished filling out the key's details, click **Import key** to confirm.
 
-Mit dem {{site.data.keyword.hscrypto}}-Dashboard können Sie die allgemeinen Merkmale Ihrer neuen Schlüssel überprüfen.
+From the {{site.data.keyword.hscrypto}} dashboard, you can inspect the general characteristics of your new keys.
 
-## Weitere Schritte
+## What's next
+{: #get-started-next}
 
-Sie können Ihre Schlüssel nun verwenden, um Ihre Apps und Services zu codieren. Wenn Sie einen Rootschlüssel zum Service hinzugefügt haben, können Sie weitere Informationen zur Verwendung des Rootschlüssels für den Schutz der Schlüssel, mit denen Ihre ruhenden Daten verschlüsselt werden, abrufen. Lesen die zum Einstieg [Wrapping für Schlüssel durchführen](/docs/services/hs-crypto/wrap-keys.html).
+Now you can use your keys to code your apps and services. If you added a root key to the service, you might want to learn more about using the root key to protect the keys that encrypt your at-rest data. Check out [Wrapping keys](/docs/services/hs-crypto/wrap-keys.html) to get started.
 
-- Weitere Informationen zum Verwalten und Schützen der Verschlüsselungsschlüssel mithilfe eines Rootschlüssels finden Sie in [Envelope-Verschlüsselungg](/docs/services/key-protect/concepts/envelope-encryption.html).
-- Weitere Informationen zur Integration des {{site.data.keyword.hscrypto}}-Service in andere Clouddaten-Lösungen, finden Sie [in der Integrationsdokumentation](/docs/services/key-protect/integrations/integrate-services.html).
-- Weitere Informationen zur programmgesteuerten Verwaltung von Schlüsseln [finden Sie in der {{site.data.keyword.hscrypto}}-API-Referenzdokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
+- To find out more about managing and protecting your encryption keys with a root key, check out [Envelope encryption](/docs/services/key-protect/concepts/envelope-encryption.html).
+<!-- - To find out more about integrating the {{site.data.keyword.hscrypto}} service with other cloud data solutions, [check out the Integrations doc](/docs/services/key-protect/integrations/integrate-services.html). -->
+- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
 
 <!-- Complete the following steps to provision {{site.data.keyword.hscrypto}}:
 1. Log in to your [IBM Cloud account ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/){:new_window}.
