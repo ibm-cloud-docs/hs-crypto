@@ -66,10 +66,10 @@ Before you delete a key, ensure that you no longer require access to any data th
 ## Pricing
 {: #pricing}
 
-### Where can I find the detailed pricing information?
+<!-- ### Where can I find the detailed pricing information?
 {: #pricing_info}
 
-You can refer to the **Pricing** tab on the [{{site.data.keyword.hscrypto}} home page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/hyper-protect-crypto){: new_window} for details.
+You can refer to the **Pricing** tab on the [{{site.data.keyword.hscrypto}} home page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/hyper-protect-crypto){: new_window} for details. -->
 
 ### Is there a pricing example I can refer to?
 {: #pricing_example}
