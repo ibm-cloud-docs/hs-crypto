@@ -46,7 +46,7 @@ Ejecute el mandato siguiente antes de suprimir la instancia:
 {: tsResolve}
 
 ```
-ibmcloud tke domain-zeroize
+ibmcloud tke cryptounit-zeroize
 ```
 {: codeblock}
 
@@ -55,7 +55,7 @@ ibmcloud tke domain-zeroize
 Es posible que reciba mensajes similares a los siguientes después de ejecutar los mandatos de CLI `tke`:
 
 ```
-ibmcloud tke domains
+ibmcloud tke cryptounits
 FAILED
 Error querying crypto instances.
 Status code: 401
@@ -84,7 +84,7 @@ Bad Request: rpc error: code = Unknown desc = GRPC Return Code: [0X434B525F484F5
 {: codeblock}
 {: tsSymptoms}
 
-Al ejecutar el mandato `ibmcloud tke domain-compare`, no ha obtenido una confirmación
+Al ejecutar el mandato `ibmcloud tke cryptounit-compare`, no ha obtenido una confirmación
 `Valid` sobre el CURRENT MASTER KEY REGISTER (registro de clave maestra actual).
 {: tsCauses}
 

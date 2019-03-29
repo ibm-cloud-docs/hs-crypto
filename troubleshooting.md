@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-15"
+lastupdated: "2019-03-29"
 
 Keywords: troubleshoot, problems, known issues
 
@@ -46,7 +46,7 @@ Run the following command before you delete the instance:
 {: tsResolve}
 
 ```
-ibmcloud tke domain-zeroize
+ibmcloud tke cryptounit-zeroize
 ```
 {: codeblock}
 
@@ -56,9 +56,9 @@ ibmcloud tke domain-zeroize
 You might receive messages similar to the following after you run a `tke` CLI commands:
 
 ```
-ibmcloud tke domains
+ibmcloud tke cryptounits
 FAILED
-Error querying crypto instances.
+Error querying service instances.
 Status code: 401
 Message: Unauthorized
 Your access token is invalid, expired, or does not have the necessary permissions to access this instance.`
@@ -86,7 +86,7 @@ Bad Request: rpc error: code = Unknown desc = GRPC Return Code: [0X434B525F484F5
 {: codeblock}
 {: tsSymptoms}
 
-When you ran the `ibmcloud tke domain-compare` command, you did not get a `Valid` confirmation on the CURRENT MASTER KEY REGISTER.
+When you ran the `ibmcloud tke cryptounit-compare` command, you did not get a `Valid` confirmation on the CURRENT MASTER KEY REGISTER.
 {: tsCauses}
 
 Make sure the HSM master key has been properly set.

@@ -45,7 +45,7 @@ Error response from server. Status code: 400; description: 400 DELETE https://zC
 {: tsResolve}
 
 ```
-ibmcloud tke domain-zeroize
+ibmcloud tke cryptounit-zeroize
 ```
 {: codeblock}
 
@@ -54,7 +54,7 @@ ibmcloud tke domain-zeroize
 `tke` CLI コマンドを実行した後に以下のようなメッセージを受け取ることがあります。
 
 ```
-ibmcloud tke domains
+ibmcloud tke cryptounits
 FAILED
 Error querying crypto instances.
 Status code: 401
@@ -83,7 +83,7 @@ Bad Request: rpc error: code = Unknown desc = GRPC Return Code: [0X434B525F484F5
 {: codeblock}
 {: tsSymptoms}
 
-`ibmcloud tke domain-compare` コマンドを実行したときに、CURRENT MASTER KEY REGISTER で `Valid` 確認を受け取りませんでした。
+`ibmcloud tke cryptounit-compare` コマンドを実行したときに、CURRENT MASTER KEY REGISTER で `Valid` 確認を受け取りませんでした。
 {: tsCauses}
 
 HSM マスター鍵が適切に設定されていることを確認してください。

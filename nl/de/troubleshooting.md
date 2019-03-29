@@ -45,7 +45,7 @@ Führen Sie vor dem Löschen der Instanz folgenden Befehl aus:
 {: tsResolve}
 
 ```
-ibmcloud tke domain-zeroize
+ibmcloud tke cryptounit-zeroize
 ```
 {: codeblock}
 
@@ -54,7 +54,7 @@ ibmcloud tke domain-zeroize
 Nach Ausführung eines `tke`-CLI-Befehls erhalten Sie möglicherweise eine Nachricht wie die folgende:
 
 ```
-ibmcloud tke domains
+ibmcloud tke cryptounits
 FAILED
 Error querying crypto instances.
 Status code: 401
@@ -83,7 +83,7 @@ Bad Request: rpc error: code = Unknown desc = GRPC Return Code: [0X434B525F484F5
 {: codeblock}
 {: tsSymptoms}
 
-Nachdem Sie den Befehl `ibmcloud tke domain-compare` ausgeführt haben, erhalten Sie keine Bestätigung `Valid` in CURRENT MASTER KEY REGISTER (aktuelles Masterschlüssel-Register).
+Nachdem Sie den Befehl `ibmcloud tke cryptounit-compare` ausgeführt haben, erhalten Sie keine Bestätigung `Valid` in CURRENT MASTER KEY REGISTER (aktuelles Masterschlüssel-Register).
 {: tsCauses}
 
 Stellen Sie sicher, dass der HSM-Masterschlüssel ordnungsgemäß festgelegt wurde.

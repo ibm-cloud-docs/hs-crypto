@@ -45,7 +45,7 @@ Immetti il seguente comando prima di eliminare l'istanza:
 {: tsResolve}
 
 ```
-ibmcloud tke domain-zeroize
+ibmcloud tke cryptounit-zeroize
 ```
 {: codeblock}
 
@@ -54,7 +54,7 @@ ibmcloud tke domain-zeroize
 Potresti ricevere messaggi simili ai seguenti dopo aver eseguito i comandi della CLI `tke`:
 
 ```
-ibmcloud tke domains
+ibmcloud tke cryptounits
 FAILED
 Error querying crypto instances.
 Status code: 401
@@ -83,7 +83,7 @@ Bad Request: rpc error: code = Unknown desc = GRPC Return Code: [0X434B525F484F5
 {: codeblock}
 {: tsSymptoms}
 
-Quando hai eseguito il comando `ibmcloud tke domain-compare`, non hai ricevuto una conferma `Valid` sul REGISTRO CHIAVE MASTER CORRENTE.
+Quando hai eseguito il comando `ibmcloud tke cryptounit-compare`, non hai ricevuto una conferma `Valid` sul REGISTRO CHIAVE MASTER CORRENTE.
 {: tsCauses}
 
 Assicurati che la chiave master HSM sia stata impostata correttamente.

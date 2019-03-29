@@ -45,7 +45,7 @@ subcollection: hs-crypto
 {: tsResolve}
 
 ```
-ibmcloud tke domain-zeroize
+ibmcloud tke cryptounit-zeroize
 ```
 {: codeblock}
 
@@ -54,7 +54,7 @@ ibmcloud tke domain-zeroize
 在运行 `tke` CLI 命令之后，您可能会收到类似以下内容的消息：
 
 ```
-ibmcloud tke domains
+ibmcloud tke cryptounits
 失败
 查询加密实例时出错。
 状态码：401
@@ -83,7 +83,7 @@ ibmcloud kp -i <service_instance_id> wrap <key_id>
 {: codeblock}
 {: tsSymptoms}
 
-在运行 `ibmcloud tke domain-compare` 命令时，您未在当前主密钥寄存器上收到`有效`确认。
+在运行 `ibmcloud tke cryptounit-compare` 命令时，您未在当前主密钥寄存器上收到`有效`确认。
 {: tsCauses}
 
 确保 HSM 主密钥设置正确。
