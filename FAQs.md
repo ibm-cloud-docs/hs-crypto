@@ -74,18 +74,18 @@ You can refer to the **Pricing** tab on the [{{site.data.keyword.hscrypto}} home
 ### Is there a pricing example I can refer to?
 {: #pricing_example}
 
-Here is one. If you have a requirement of 5000 keys to be crypto-processed, for high availability, you need to set up two crypto units. The amount is $3140 ($1570 per crypto unit) per month. The first 1,000,000 API calls are free of charge. However, if you perform 2,000,000 API calls per month per crypto unit, you will be charged additional $1 ($0.01 per 10,000 API calls over 1,000,000 API calls) per crypto unit. In total, there will be a monthly charge of $3142 ($3140 for the crypto units and $2 for the additional API calls on both crypto units) for your service instance.
+Here is one. If you have a requirement of 5000 keys to be crypto-processed, for high availability, you need to set up two crypto units. The amount is $3120 ($1560 per crypto unit) per month. The first 1,000,000 API calls are free of charge. However, if you perform 2,000,000 API calls per month per crypto unit, you will be charged additional $1 ($0.01 per 10,000 API calls over 1,000,000 API calls) per crypto unit. In total, there will be a monthly charge of $3142 ($3140 for the crypto units and $2 for the additional API calls on both crypto units) for your service instance.
 
 The following table contains the pricing details.
 
 | Pricing components | Cost per month |
 |-----|----------------|
-| Crypto unit 1 | $1570 |
-| Crypto unit 2 | $1570 |
+| Crypto unit 1 | $1560 |
+| Crypto unit 2 | $1560 |
 | First 1,000,000 API calls for Crypto unit 1 | $0 |
 | 1,000,000 additional API calls (10,000 API calls x 100) for Crypto unit 1 | $1 ($0.01 x 100) |
 | First 1,000,000 API calls for Crypto unit 2 | $0 |
 | 1,000,000 additional API calls (10,000 API calls x 100) for Crypto unit 2 | $1 ($0.01 x 100) |
-| End of month charge | $3142  |
+| End of month charge | $3122  |
 
 *Table 1. Charge of two crypto units with monthly API calls of 2,000,000 per crypto unit* -->
