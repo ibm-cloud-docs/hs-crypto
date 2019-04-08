@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-08"
 
 Keywords: key storage, HSM, hardware security module
 
@@ -183,7 +183,7 @@ To load the new master key register, A crypto unit administrator must sign the c
   ```
   {: pre}
 
-  A list of signature key files found on the workstation is displayed. When prompted, enter the key number of the signature key file to select for signing subsequent administrative commands. <!--If a signature key file is already selected for signing administrative commands, this is indicated when the list of signature key files is displayed. -->
+  A list of signature key files found on the workstation is displayed. When prompted, enter the key number of the signature key file to select for signing subsequent administrative commands. And then enter the password for the signature key file. <!--If a signature key file is already selected for signing administrative commands, this is indicated when the list of signature key files is displayed. -->
 
   <!-- **Tip**: Before you run the `cryptounit-exit-impr` command to exit imprint mode, the command needs to be signed by a crypto unit administrator using the signature key. After the crypto unit exits imprint mode, all commands to the crypto unit must be signed. -->
 
@@ -223,6 +223,8 @@ After you add one or more crypto unit administrators, exit imprint mode by using
   ibmcloud tke cryptounit-exit-impr
   ```
   {: pre}
+
+  When prompted, enter the password for the current signature key file.
 
   ** Important:** The command to exit imprint mode must be signed by one of the added crypto unit administrators using the signature key. After the crypto unit exits imprint mode, all commands to the crypto unit must be signed.
 
@@ -270,7 +272,7 @@ ibmcloud tke cryptounit-mk-load
 
 A list of the master key parts that are found on the workstation is displayed.
 
-When prompted, enter the key parts to be loaded into the new master key register. And enter the password for each selected key part file.
+When prompted, enter the key parts to be loaded into the new master key register, the password for the current signature key file, and password for each selected key part file sequentially.
 
 ### Step 6: Commit the new master key register
 {: #step6-commit-master-key}
@@ -283,6 +285,8 @@ ibmcloud tke cryptounit-mk-commit
 ```
 {: pre}
 
+When prompted, enter the password for the current signature key file.
+
 ### Step 7: Activate the master key
 {: #step7-activate-master-key}
 
@@ -292,6 +296,14 @@ Activate the master key by moving the master key to the current master key regis
 ibmcloud tke cryptounit-mk-setimm
 ```
 {: pre}
+
+A message is displayed asking whether to accept the new master key.
+
+Consider the following before taking actions:
+* If it is your first time to initialize the service instance, you can ignore this message and type `y` to continue.
+* If you have started managing keys with the service instance and want to reload the same master key that was used before, ensure that no key management actions are in progress and type `y` to continue.
+* If you have started managing keys with the service instance and want to load a new master key, type `N` to cancel. Loading a new master key is currently not supported. By doing so, all your managed keys will be unusable.
+{: tip}
 
 ## What's next
 {: #initialize-crypto-next}
@@ -304,103 +316,3 @@ For more details on other options of the Trusted Key Entry plug-in commands, run
 ibmcloud tke help
 ```
 {: pre}
-
-<!--
-## Reference: Other Trusted Key Entry plug-in commands
-{: #initialize-crypto-reference}
-
-The following list describes the remaining commands implemented by the plug-in and discusses when they would be used.
-
-* **ibmcloud tke mk-rm**
-
-  This command removes a file that contains a master key part from the workstation.
-
-  After you enter the command, a list of master key parts that are found on the workstation is displayed. When prompted, enter the key number of the key part that is to be removed.
-
-  After a key part is removed from the local workstation, it can no longer be used.
-
-* **ibmcloud tke sigkey-rm**
-
-  This command removes a file that contains a signature key from the workstation.
-
-  After you enter the command, a list of signature keys found on the workstation is displayed. When prompted, enter the key number of the signature key file that is to be removed.
-
-  Be cautious of removing a signature key from the workstation. If any crypto units that are assigned to the user account exit imprint mode, and if the signature key being removed from the workstation is the only added administrator for the crypto unit, executing new administrative functions in the crypto unit is not possible after you remove the signature key. If no backup of the signature key file exists, the only way for recovery is to contact {{site.data.keyword.cloud_notm}} support to clear the crypto unit and place it in imprint mode.
-
-* **ibmcloud tke cryptounit-admin-rm**
-
-  This command removes an administrator from the selected crypto units.
-
-  When this command is issued for a crypto unit in imprint mode, this command does not need to be signed. After the crypto unit exits imprint mode, this command must be signed by an existing crypto unit administrator.
-
-  For a crypto unit not in imprint mode, the command fails if the administrator being removed is the last administrator defined for the crypto unit.
-
-
-* **ibmcloud tke cryptounit-zeroize**
-
-  This command clears the selected crypto units and places them back in imprint mode.  All crypto unit administrators are removed, and the new and current master key registers are cleared.
-
-  When this command is issued for a crypto unit in imprint mode, this command does not need to be signed. After the crypto unit exits imprint mode, this command must be signed by an existing crypto unit administrator.
-
-  When this command is issued to a group of crypto units, the current signature key must be recognized as a crypto unit administrator by all crypto units not in imprint mode in order for the command to be accepted.
-
-
-* **ibmcloud tke cryptounit-mk**
-
-  This command displays the status and verification pattern for the new and current master key registers for the selected crypto units.
-
-* **ibmcloud tke cryptounit-mk-clrcur**
-
-  This command clears the current master key register in the selected crypto units.
-
-  This command cannot be executed in imprint mode.
-
-  Clearing the current master key register makes any key storage protected by the current master key unusable.
-
-* **ibmcloud tke cryptounit-mk-clrnew**
-
-  This command clears the new master key register in the selected crypto units.
-
-  This command cannot be executed in imprint mode.
-
-* **ibmcloud tke cryptounit-mk-setimm**
-
-  This command moves the value of the new master key register to the current master key register, and clears the new master key register in the selected crypto units.
-
-  This command cannot be executed in imprint mode.
-
-  This command does not initialize or re-encipher key storage and should be used only when key storage in the target LPARs is prepared to accept the new master key value. If in doubt, do not use this command, because it can cause keys in existing key storage to become unusable.
-
-The following is a full list of plug-in commands. You can also find the commands by using the plug-in help function:
-```
-NAME:
-   ibmcloud tke - A CLI plug-in to manage crypto module cryptounits in the IBM Cloud
-USAGE:
-   ibmcloud tke command [arguments...] [command options]
-
-COMMANDS:
-   mks                Lists master key parts stored on this workstation.
-   mk-add             Creates and saves a new master key part.
-   mk-rm              Removes a master key part from this workstation.
-   sigkeys            Lists the signature keys stored on this workstation.
-   sigkey-add         Generates and saves a new signature key.
-   sigkey-rm          Removes a signature key from this workstation.
-   sigkey-sel         Selects the signature key to use to sign commands.
-   cryptounits            Displays the cryptounits for the current resource group.
-   cryptounit-add         Adds cryptounits to the set of cryptounits to work with.
-   cryptounit-rm          Removes cryptounits from the set of cryptounits to work with.
-   cryptounit-admins      Lists administrators added in the selected cryptounits.
-   cryptounit-admin-add   Add a cryptounit administrator to the selected cryptounits.
-   cryptounit-admin-rm    Removes a cryptounit administrator from the selected cryptounits.
-   cryptounit-compare     Compares configuration settings of the selected cryptounits.
-   cryptounit-exit-impr   Exits imprint mode in the selected cryptounits.
-   cryptounit-zeroize     Zeroizes the selected cryptounits.
-   cryptounit-mk          Displays master key registers for the selected cryptounits.
-   cryptounit-mk-clrcur   Clears the current master key register.
-   cryptounit-mk-clrnew   Clears the new master key register.
-   cryptounit-mk-commit   Commits the new master key register.
-   cryptounit-mk-setimm   Does set immediate on the master key registers.
-   cryptounit-mk-load     Loads the new master key register.
-   help, h            Show help
-   ```
--->
