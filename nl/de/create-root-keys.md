@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root keys, create root keys, Hyper Protect Crypto Services GUI, symmetric key
 
@@ -25,13 +25,14 @@ Sie können mit {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} Roots
 Rootschlüssel sind symmetrische Key-Wrapping-Schlüssel, die die Sicherheit verschlüsselter Daten in der Cloud gewährleisten. Weitere Informationen zu Rootschlüsseln finden Sie in [Envelope-Verschlüsselung](/docs/services/key-protect/concepts/envelope-encryption.html).
 
 ## Rootschlüssel mit der GUI erstellen
-{: #gui}
+{: #root-key-gui}
 
 [Führen Sie nach dem Erstellen einer Instanz dieses Services](/docs/services/hs-crypto/provision.html) die folgenden Schritte aus, um einen Rootschlüssel mit der {{site.data.keyword.hscrypto}}-GUI zu erstellen.
 
 1. [Melden Sie sich bei der {{site.data.keyword.cloud_notm}}-Konsole ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/){: new_window} an.
-2. Wählen Sie in Ihrem {{site.data.keyword.cloud_notm}}-Dashboard die bereitgestellte Instanz von {{site.data.keyword.hscrypto}} aus.
-3. Zum Erstellen eines neuen Schlüssels klicken Sie auf **Schlüssel hinzufügen** und wählen Sie das Fenster **Neuen Schlüssel generieren** aus.
+2. Rufen Sie **Menü** &gt; **Ressourcenliste** auf, um eine Liste Ihrer Ressourcen anzuzeigen. 
+3. Wählen Sie in Ihrer {{site.data.keyword.cloud_notm}}-Ressourcenliste die bereitgestellte Instanz von {{site.data.keyword.hscrypto}} aus. 
+4. Zum Erstellen eines neuen Schlüssels klicken Sie auf **Schlüssel hinzufügen** und wählen Sie das Fenster **Schlüssel erstellen** aus. 
 
     Geben Sie die Schlüsseldetails an:
 
@@ -54,10 +55,12 @@ Rootschlüssel sind symmetrische Key-Wrapping-Schlüssel, die die Sicherheit ver
       <caption style="caption-side:bottom;">Tabelle 1. Beschreibung der Einstellungen für <b>Neuen Schlüssel generieren</b></caption>
     </table>
 
-4. Wenn Sie die Details zum Schlüssel vollständig ausgefüllt haben, klicken Sie zur Bestätigung auf **Schlüssel generieren**.
+5. Geben Sie die Details zum Schlüssel ein und klicken Sie anschließend zum Bestätigen auf **Schlüssel erstellen**.
+
+Die im Service generierten Schlüssel sind symmetrische 256-Bit-Schlüssel, die vom AES-CBC-Algorithmus unterstützt werden. Um eine höhere Sicherheit zu erhalten, werden die Schlüssel von FIPS 140-2 Stufe 4-zertifizierten Hardwaresicherheitsmodulen (HSMs) generiert, die sich in sicheren {{site.data.keyword.cloud_notm}}-Rechenzentren befinden.
 
 ## Rootschlüssel mit der API erstellen
-{: #api}
+{: #root-key-api}
 
 Erstellen Sie einen Rootschlüssel, indem Sie einen `POST`-Aufruf zum folgenden Endpunkt absetzen.
 
@@ -66,10 +69,9 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ```
 {: codeblock}
 
-1. [Rufen Sie Ihren Service- und Authentifizierungsnachweis ab, um mit den Schlüsseln im Service zu arbeiten.](/docs/services/{{site.data.keyword.hscrypto}}hs-crypto/access-api.html)
+1. [Rufen Sie Ihren Service- und Authentifizierungsnachweis ab, um mit den Schlüsseln im Service zu arbeiten.](/docs/services/hs-crypto/access-api.html)
 
-
-2. Rufen Sie die [{{site.data.keyword.hscrypto}}-API ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} mit dem folgenden cURL-Befehl auf.
+2. Rufen Sie die [{{site.data.keyword.hscrypto}}-API ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/hs-crypto){: new_window} mit dem folgenden cURL-Befehl auf.
 
     ```cURL
     curl -X POST \
@@ -95,11 +97,11 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     }'
     ```
     {: codeblock}
+<!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+    {: tip} -->
 
-    Um mit Schlüsseln in Cloud Foundry-Organisationen und -Bereichen zu arbeiten, ersetzen Sie `Bluemix-Instance` durch die entsprechenden Header `Bluemix-org` und `Bluemix-space`. [Weitere Informationen finden Sie in der {{site.data.keyword.hscrypto}}-API-Referenzdokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    Ersetzen Sie die Variablen in der Beispielanforderung anhand der Angaben in der folgenden Tabelle. 
 
-    Ersetzen Sie die Variablen in der Beispielanforderung anhand der Angaben in der folgenden Tabelle.
     <table>
       <tr>
         <th>Variable</th>
@@ -169,6 +171,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 **Hinweis:** Nachdem Sie einen Rootschlüssel mit dem Service erstellt haben, ist der Schlüssel an {{site.data.keyword.hscrypto}} gebunden und seine Schlüsselinformationen können nicht abgerufen werden.
 
 ### Weitere Schritte
+{: #root-key-next}
 
 - Weitere Informationen zum Schutz von Schlüsseln mit der Envelope-Verschlüsselung finden Sie in [Schlüssel einschließen](/docs/services/hs-crypto/wrap-keys.html).
-- Weitere Informationen zur programmgesteuerten Verwaltung von Schlüsseln [finden Sie in der {{site.data.keyword.hscrypto}}-API-Referenzdokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
+- Weitere Informationen zur programmgesteuerten Verwaltung von Schlüsseln [finden Sie in der {{site.data.keyword.hscrypto}}-API-Referenzdokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/hs-crypto){: new_window}.

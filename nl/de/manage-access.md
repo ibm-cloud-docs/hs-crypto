@@ -89,11 +89,12 @@ In der folgenden Tabelle erhalten Sie Informationen dazu, wie die Identitäts- u
   <caption style="caption-side:bottom;">Tabelle 1. Informationen zur Zuordnung von Identitäts- und Zugriffsrollen zu {{site.data.keyword.hscrypto}}-Berechtigungen</caption>
 </table>
 
-**Hinweis:** Cloud-IAM-Benutzerrollen bieten Zugriff auf Service- oder Serviceinstanzebene. [Cloud Foundry-Rollen](/docs/iam/cfaccess.html) sind separat und definieren den Zugriff auf Organisations- oder Bereichsebene.
+<!-- **Note**: Cloud IAM user roles provide access at the service or service instance level. [Cloud Foundry roles](/docs/iam/cfaccess.html) are separate and define access at the organization or the space level. -->
 
 Weitere Informationen zu {{site.data.keyword.iamshort}} finden Sie in [Benutzerrollen und -berechtigungen](/docs/iam/users_roles.html#userroles).
 
 ### Weitere Schritte
+{: #manage-access-next}
 
 Kontoeigner und Administratoren können Benutzer einladen und Servicerichtlinien festlegen, die den {{site.data.keyword.hscrypto}}-Aktionen entsprechen, die die Benutzer ausführen können.
 

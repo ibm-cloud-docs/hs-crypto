@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root keys, Rotate key, key rotation
 
@@ -24,9 +24,6 @@ subcollection: hs-crypto
 Vous pouvez effectuer une rotation de vos clés racine à la demande à l'aide d'{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
-La rotation des clés maîtresses n'est pas actuellement prise en charge.
-{: important}
-
 Lorsque vous effectuez une rotation de votre clé racine, vous raccourcissez sa durée de vie et limitez la quantité d'informations qu'elle protège.   
 
 Pour savoir comment la rotation des clés vous aide à répondre aux normes de l'industrie et à respecter les meilleures pratiques en matière de cryptographie, voir [Rotation des clés](/docs/services/key-protect/concepts/key-rotation.html).
@@ -35,23 +32,24 @@ La rotation est disponible uniquement pour les clés racine.
 {: tip}
 
 ## Rotation de clés racine à l'aide de l'interface graphique
-{: #gui}
+{: #rotate-root-key-gui}
 
 Si vous préférez effectuer une rotation de vos clés racine à l'aide d'une interface graphique, vous pouvez utiliser l'interface graphique utilisateur {{site.data.keyword.hscrypto}}.
 
 [Après avoir créé ou importé vos clés racine existantes dans le service](/docs/services/hs-crypto/create-root-keys.html), procédez comme suit pour effectuer une rotation de clé :
 
 1. [Connectez-vous à la console {{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/){: new_window}.
-2. Dans votre tableau de bord {{site.data.keyword.cloud_notm}}, sélectionnez l'instance {{site.data.keyword.hscrypto}} mise à disposition.
-3. Utilisez le tableau **Clés** pour parcourir les clés du service.
-4. Cliquez sur l'icône ⋮ pour ouvrir la liste des options de la clé à laquelle appliquer une rotation.
-5. Dans le menu d'options, cliquez sur **Rotate key** et confirmez la rotation dans l'écran suivant.
+2. Accédez à **Menu** &gt; **Liste de ressources** pour afficher la liste de vos ressources.
+3. Dans la liste de ressources {{site.data.keyword.cloud_notm}}, sélectionnez votre instance {{site.data.keyword.hscrypto}} mise à disposition.
+4. Sur la page des détails de l'application, parcourez les clés de votre service dans le tableau **Clés**.
+5. Cliquez sur l'icône ⋮ pour ouvrir la liste des options de la clé à laquelle appliquer une rotation.
+6. Dans le menu d'options, cliquez sur **Rotate key** et confirmez la rotation dans l'écran suivant.
 
 Si vous avez initialement importé la clé racine, pour effectuer sa rotation, vous devez fournir une nouvelle matière de clé encodée en base64. Pour plus d'informations, voir [Importation de clés racine à l'aide de l'interface graphique utilisateur](/docs/services/hs-crypto/import-root-keys.html#gui).
 {: tip}
 
 ## Rotation de clés racine à l'aide de l'API
-{: #api}
+{: #rotate-root-kay-api}
 
 [Après avoir désigné une clé racine dans le service](/docs/services/hs-crypto/create-root-keys.html), vous pouvez la faire tourner en envoyant un appel `POST` au point d'extrémité suivant.
 
@@ -109,7 +107,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rota
           <p>Pour procéder à la rotation d'une clé initialement générée dans {{site.data.keyword.hscrypto}}, omettez l'attribut <code>payload</code> et transmettez une demande entity-body vide. Pour procéder à la rotation d'une clé importée, fournissez une matière de clé répondant aux exigences suivantes :</p>
           <p>
             <ul>
-              <li>La clé doit être une clé à 256, 384 ou 512 bits.</li>
+              <li>La clé doit être une clé à 128, 192 ou 256 bits.</li>
               <li>Les octets de données, par exemple 32 octets pour 256 bits, doivent être encodés en base64.</li>
             </ul>
           </p>

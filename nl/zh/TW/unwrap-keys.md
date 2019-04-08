@@ -26,7 +26,7 @@ subcollection: hs-crypto
 若要瞭解金鑰包裝如何協助您控制雲端中靜置資料的安全，請參閱[封套加密](/docs/services/key-protect/concepts/envelope-encryption.html)。
 
 ## 使用 API 解除包裝金鑰
-{: #api}
+{: #unwrap-key-api}
 
 [對服務發出 wrap 呼叫之後](/docs/services/hs-crypto/wrap-keys.html)，即可對下列端點發出 `POST` 呼叫，以解除包裝指定的資料加密金鑰 (DEK) 來存取其內容。
 
@@ -60,9 +60,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=unwr
     }'
     ```
     {: codeblock}
-
-    若要在您帳戶的 Cloud Foundry 組織及空間內使用金鑰，請將 `Bluemix-Instance` 取代為適當的 `Bluemix-org` 及 `Bluemix-space` 標頭。[如需相關資訊，請參閱 {{site.data.keyword.hscrypto}} API 參考資料文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     根據下表取代範例要求中的變數。
     <table>

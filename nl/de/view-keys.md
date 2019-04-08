@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: view keys, key configuration, key type
 
@@ -26,22 +26,23 @@ subcollection: hs-crypto
 Prüfen Sie Ihre Schlüsselkonfiguration regelmäßig:
 
 - Untersuchen Sie, wann die Schlüssel erstellt wurden und stellen Sie fest, ob es an der Zeit ist, den Schlüssel zu wechseln.
-- [Überwachung von API-Aufrufen an {{site.data.keyword.hscrypto}} mit {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/tutorials/manage_events_cli.html).
+- überwachen Sie API-Aufrufe an {{site.data.keyword.hscrypto}} mit {{site.data.keyword.cloudaccesstrailshort}}. 
 - Untersuchen Sie, welche Benutzer auf Schlüssel zugreifen können, und ob entsprechende Zugriffsberechtigungen
 erteilt wurden.
 
 Weitere Informationen zum Prüfen des Zugriffs auf Ihre Ressourcen finden Sie in [Benutzerzugriff mit Cloud IAM verwalten](/docs/services/hs-crypto/manage-access.html).
 
 ## Schlüssel mit GUI anzeigen
-{: #gui}
+{: #view-key-gui}
 
 Wenn Sie die Überprüfung von Verschlüsselungsschlüssel über eine grafische Oberfläche bevorzugen, dann können Sie hierzu das {{site.data.keyword.hscrypto}}-Dashboard verwenden.
 
 [Nach dem Erstellen oder Importieren der vorhandenen Schlüssel in den Service](/docs/services/hs-crypto/create-root-keys.html) müssen Sie die folgenden Schritte ausführen, um Ihre Schlüssel anzuzeigen.
 
 1. [Melden Sie sich bei der {{site.data.keyword.cloud_notm}}-Konsole ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/) an.
-2. Wählen Sie in Ihrem {{site.data.keyword.cloud_notm}}-Dashboard die bereitgestellte Instanz von {{site.data.keyword.hscrypto}} aus.
-3. Durchsuchen Sie die allgemeinen Merkmale Ihrer Schlüssel über das {{site.data.keyword.hscrypto}}-Dashboard:
+2. Rufen Sie **Menü** &gt; **Ressourcenliste** auf, um eine Liste Ihrer Ressourcen anzuzeigen. 
+3. Wählen Sie in Ihrer {{site.data.keyword.cloud_notm}}-Ressourcenliste die bereitgestellte Instanz von {{site.data.keyword.hscrypto}} aus. 
+3. Durchsuchen Sie die allgemeinen Merkmale Ihrer Schlüssel über die Anwendungsdetailseite: 
 
     <table>
       <tr>
@@ -54,7 +55,7 @@ Wenn Sie die Überprüfung von Verschlüsselungsschlüssel über eine grafische 
       </tr>
       <tr>
         <td>ID</td>
-        <td>Eine eindeutige Schlüssel-ID, die Ihrem Schlüssel vom {{site.data.keyword.hscrypto}}-Service zugewiesen wurde. Mit dem ID-Wert können Sie den Service mit der [{{site.data.keyword.hscrypto}}-API ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/apidocs/hs-crypto) aufrufen.</td>
+        <td>Eine eindeutige Schlüssel-ID, die Ihrem Schlüssel vom {{site.data.keyword.hscrypto}}-Service zugewiesen wurde. Mit dem ID-Wert können Sie den Service mit der [{{site.data.keyword.hscrypto}}-API ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/hs-crypto) aufrufen.</td>
       </tr>
       <tr>
         <td>Status</td>
@@ -68,7 +69,7 @@ Wenn Sie die Überprüfung von Verschlüsselungsschlüssel über eine grafische 
     </table>
 
 ## Schlüssel mit API anzeigen
-{: #api}
+{: #view-key-api}
 
 Sie können den Inhalt Ihrer Schlüssel abrufen, indem Sie die {{site.data.keyword.hscrypto}}-API verwenden.
 
@@ -95,9 +96,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     -H 'correlation-id: <correlation_ID>' \
     ```
     {: codeblock}
-
-    Um mit Schlüsseln in Cloud Foundry-Organisationen und -Bereichen zu arbeiten, ersetzen Sie `Bluemix-Instance` durch die entsprechenden Header `Bluemix-org` und `Bluemix-space`. [Weitere Informationen finden Sie in der {{site.data.keyword.hscrypto}}-API-Referenzdokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Ersetzen Sie die Variablen in der Beispielanforderung anhand der Angaben in der folgenden Tabelle.
     <table>
@@ -262,7 +262,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 
 1. [Rufen Sie Ihren Service- und Authentifizierungsnachweis ab, um mit den Schlüsseln im Service zu arbeiten.](/docs/services/hs-crypto/access-api.html)
 
-2. Rufen Sie die ID des Schlüssels ab, auf den Sie zugreifen oder den Sie verwalten möchten. 
+2. Rufen Sie die ID des Schlüssels ab, auf den Sie zugreifen oder den Sie verwalten möchten.
 
     Der ID-Wert wird für den Zugriff auf ausführliche Informationen zu dem Schlüssel (z. B. auf die Schlüsselinformationen selbst) verwendet. Sie können die ID für einen angegebenen Schlüssel abrufen, indem Sie die Anforderung `GET /v2/keys` absetzen oder indem Sie auf die {{site.data.keyword.hscrypto}}-GUI zugreifen.
 
@@ -340,4 +340,4 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {:screen}
 
-    Eine detaillierte Beschreibung der verfügbaren Parameter finden Sie in der {{site.data.keyword.hscrypto}} [REST-API-Referenzdokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
+    Eine detaillierte Beschreibung der verfügbaren Parameter finden Sie in der {{site.data.keyword.hscrypto}} [REST-API-Referenzdokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/hs-crypto){: new_window}.

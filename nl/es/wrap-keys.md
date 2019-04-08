@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root key, data encryption key, Hyper Protect Crypto Services
 
@@ -28,11 +28,11 @@ Cuando envuelve una clave de cifrado de datos (DEK) con una clave raíz, {{site.
 Para conocer cómo el envolvimiento de claves ayuda a controlar la seguridad de los datos en reposo en la nube, consulte [Cifrado de sobre](/docs/services/key-protect/concepts/envelope-encryption.html).
 
 ## Envolvimiento de claves utilizando la API
-{: #api}
+{: #wrap-keys-api}
 
 Proteja una clave de cifrado de datos (DEK) específica con una clave raíz que gestionará en {{site.data.keyword.hscrypto}}.
 
-**Importante:** cuando se envuelve una clave raíz, asegúrese de que la clave raíz es de 256, 384 o 512 bits para que la llamada de envolvimiento sea satisfactoria. Si crea una clave raíz en el servicio, {{site.data.keyword.hscrypto}} genera una clave de 256 bits a partir de sus HSM, soportada por el algoritmo AES-CGM.
+Cuando proporcione una clave raíz para el envolvimiento, asegúrese de que la clave raíz es de 128, 192 o 256 bits para que la llamada de envolvimiento sea satisfactoria. Si crea una clave raíz en el servicio, {{site.data.keyword.hscrypto}} genera una clave de 256 bits a partir de sus HSM, soportada por el algoritmo AES-CBC.
 
 [Después de designar una clave raíz en el servicio](/docs/services/hs-crypto/create-root-keys.html), puede envolver una DEK con cifrado avanzado realizando una llamada `POST` al siguiente punto final.
 
@@ -66,9 +66,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
     }'
     ```
     {: codeblock}
-
-    Para trabajar con claves dentro de un espacio y organización de Cloud Foundry en su cuenta, sustituya `Bluemix-Instance` con las cabeceras adecuadas de `Bluemix-org` y `Bluemix-space`. [Para obtener más información, consulte el documento de referencia de la API de {{site.data.keyword.hscrypto}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Sustituya las variables en la solicitud de ejemplo siguiendo la siguiente tabla.
 
@@ -109,8 +108,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
         <td><varname>datos_adicionales</varname></td>
         <td>Opcional: datos de autenticación adicionales (AAD) que se utilizan para proteger aún más la clave. Cada serie puede contener hasta 255 caracteres. Si proporcionó los AAD cuando realizó al servicio la llamada de envolvimiento, debe especificar los mismos AAD durante la llamada de desenvolvimiento subsiguiente.<br></br>Importante: El servicio {{site.data.keyword.hscrypto}} no guarda datos de autenticación adicionales. Si proporciona AAD, guarde los datos en una ubicación segura para asegurarse de que pueda acceder y proporcionar los mismos AAD durante las llamadas de desenvolvimiento subsiguientes.</td>
       </tr>
-      <caption style="caption-side:bottom;">Tabla 1. Describe las variables necesarias para envolver una clave especificada en {{site.data.keyword.hscrypto}}
-.</caption>
+      <caption style="caption-side:bottom;">Tabla 1. Describe las variables necesarias para envolver una clave especificada en {{site.data.keyword.hscrypto}}.</caption>
     </table>
 
     La clave envuelta, con el material de la clave codificado en base64, se devuelve en el cuerpo de entidad de la respuesta. El siguiente objeto JSON muestra un valor devuelto de ejemplo.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: standard keys, import keys, encryption keys, Hyper Protect Crypto Services GUI
 
@@ -23,13 +23,14 @@ subcollection: hs-crypto
 Vous pouvez ajouter des clés de chiffrement existantes à l'aide de l'interface graphique {{site.data.keyword.hscrypto}} ou à l'aide d'un programme via l'API {{site.data.keyword.hscrypto}}.
 
 ## Importation de clés standard à l'aide de l'interface graphique
-{: #gui}
+{: #import-standard-key-gui}
 
 [Après avoir créé une instance du service](/docs/services/hs-crypto/provision.html), procédez comme suit pour entrer votre clé standard existante à l'aide de l'interface graphique {{site.data.keyword.hscrypto}}.
 
 1. [Connectez-vous à la console {{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/){: new_window}.
-2. Dans votre tableau de bord {{site.data.keyword.cloud_notm}}, sélectionnez l'instance {{site.data.keyword.hscrypto}} mise à disposition.
-3. Pour importer une nouvelle clé, cliquez sur **Add key** et sélectionnez la fenêtre **Enter existing key**.
+2. Accédez à **Menu** &gt; **Liste de ressources** pour afficher la liste de vos ressources.
+3. Dans la liste de ressources {{site.data.keyword.cloud_notm}}, sélectionnez votre instance {{site.data.keyword.hscrypto}} mise à disposition.
+4. Pour importer une nouvelle clé, cliquez sur **Add key**, puis sélectionnez la fenêtre **Import your own key**.
 
     Indiquez les détails relatifs à la clé :
 
@@ -64,10 +65,10 @@ Vous pouvez ajouter des clés de chiffrement existantes à l'aide de l'interface
       <caption style="caption-side:bottom;">Tableau 1. Description des paramètres <b>Generate new key</b></caption>
     </table>
 
-4. Une fois les détails de la clé indiqués, cliquez sur **Generate new key** pour confirmer l'opération.
+5. Une fois les détails de la clé indiqués, cliquez sur **Import key** pour confirmer l'opération.
 
 ## Création de clés standard à l'aide de l'API
-{: #api}
+{: #create-standard-key-api}
 
 Créez une clé standard en soumettant un appel `POST` au point d'extrémité suivant :
 
@@ -78,7 +79,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 1. [Extrayez vos données d'authentification et de service afin d'utiliser les clés dans le service](/docs/services/hs-crypto/access-api.html).
 
-1. Appelez l'[API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} à l'aide de la commande cURL suivante. 
+1. Appelez l'[{{site.data.keyword.hscrypto}}API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/hs-crypto){: new_window} à l'aide de la commande cURL suivante.
 
     ```cURL
     curl -X POST \
@@ -106,9 +107,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     }'
     ```
     {: codeblock}
-
-    Pour utiliser les clés dans une organisation et un espace Cloud Foundry de votre compte, remplacez `Bluemix-Instance` par les en-têtes `Bluemix-org` et `Bluemix-space` appropriés. [Pour plus d'informations, consultez la documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Remplacez les variables dans l'exemple de demande en fonction du tableau suivant :
     <table>
@@ -195,6 +195,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 
 ### Etapes suivantes
+{: #import-standard-key-next}
 
-- Pour plus d'informations sur la gestion de vos clés à l'aide d'un programme, [consultez la documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-- Pour obtenir un exemple expliquant comment les clés stockées dans {{site.data.keyword.hscrypto}} peuvent fonctionner pour chiffrer et déchiffrer des données, [reportez-vous à l'exemple d'application disponible dans GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}.
+Pour plus d'informations sur la gestion de vos clés à l'aide d'un programme, [voir la documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+
+<!-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}.  -->

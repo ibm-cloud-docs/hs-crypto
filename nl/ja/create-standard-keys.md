@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: standard keys, standard encryption key, creating standard keys, create standard keys
 
@@ -23,13 +23,14 @@ subcollection: hs-crypto
 {: shortdesc}
 
 ## GUI を使用した標準鍵の作成
-{: #gui}
+{: #standard-key-gui}
 
 [サービスのインスタンスを作成した後](/docs/services/hs-crypto/provision.html)、以下の手順を実行して、{{site.data.keyword.hscrypto}} GUI で標準鍵を作成します。
 
 1. [{{site.data.keyword.cloud_notm}} コンソール ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") にログインします](https://cloud.ibm.com/){: new_window}。
-2. {{site.data.keyword.cloud_notm}} ダッシュボードで、{{site.data.keyword.hscrypto}} のプロビジョン済みインスタンスを選択します。
-3. 新しい鍵を作成するには、**「鍵の追加」**をクリックして、**「新しい鍵の生成 (Generate a new key)」**ウィンドウを選択します。
+2. **「メニュー」**&gt;**「リソース・リスト」**に移動し、リソースのリストを表示します。
+3. {{site.data.keyword.cloud_notm}} リソース・リストで、{{site.data.keyword.hscrypto}} のプロビジョン済みインスタンスを選択します。
+4. 新しい鍵を作成するには、**「鍵の追加」**をクリックして、**「鍵の作成 (Create a key)」**ウィンドウを選択します。
 
     鍵の詳細を以下のように指定します。
 
@@ -52,10 +53,9 @@ subcollection: hs-crypto
       <caption style="caption-side:bottom;">表 1. <b>「新しい鍵の生成 (Generate new key)」</b>の設定の説明</caption>
     </table>
 
-4. 鍵の詳細の記入が完了したら、**「鍵の生成」**をクリックして確認します。
+5. 鍵の詳細の記入が完了したら、**「鍵の作成 (Create key)」**をクリックして確認します。
 
 ## API を使用した標準鍵の作成
-{: #api}
 
 以下のエンドポイントへの `POST` 呼び出しを行うことにより、標準鍵を作成します。
 
@@ -66,7 +66,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 1. [サービス内で鍵の処理を行うために、サービス資格情報および認証資格情報を取得します](/docs/services/hs-crypto/access-api.html)。
 
-2. 以下の cURL コマンドを使用して [{{site.data.keyword.hscrypto}} API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} を呼び出します。
+2. 以下の cURL コマンドを使用して [{{site.data.keyword.hscrypto}} API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/hs-crypto){: new_window} を呼び出します。
 
     ```cURL
     curl -X POST \
@@ -93,9 +93,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     }'
     ```
     {: codeblock}
-
-    アカウントの指定された Cloud Foundry 組織およびスペース内で鍵の処理を行うには、`Bluemix-Instance` を、適切な `Bluemix-org` および `Bluemix-space` のヘッダーに置き換えます。 [詳しくは、{{site.data.keyword.hscrypto}} API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} を参照してください。
-    {: tip}
+<!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+    {: tip} -->
 
     次の表に従って、例の要求内の変数を置き換えてください。
     <table>
@@ -170,6 +169,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 
 ### 次に行うこと
+{: #standard-key-next}
 
-- プログラムでの鍵の管理について詳しくは、[{{site.data.keyword.hscrypto}} API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} を確認してください。
-- {{site.data.keyword.hscrypto}} に保管されている鍵を使用してデータを暗号化および暗号化解除する方法の例は、[GitHub にあるサンプル・アプリで確認してください ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}。
+プログラムでの鍵の管理について詳しくは、[{{site.data.keyword.hscrypto}} API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/hs-crypto){: new_window} を確認してください。
+
+<!-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}.-->

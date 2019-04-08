@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: details of the DELETE request, delete encryption key, deleting keys, Variable Description region
 
@@ -27,17 +27,18 @@ subcollection: hs-crypto
 
 
 ## 使用 GUI 删除密钥
-{: #gui}
+{: #delete-keys-gui}
 
 如果想要使用图形界面来删除加密密钥，那么可以使用 {{site.data.keyword.hscrypto}} GUI。
 
 [在您创建密钥或将现有密钥导入服务后](/docs/services/hs-crypto/create-root-keys.html)，请完成以下步骤以删除密钥：
 
 1. [登录到 {{site.data.keyword.cloud_notm}} 控制台 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/){: new_window}。
-2. 从 {{site.data.keyword.cloud_notm}} 仪表板，选择 {{site.data.keyword.hscrypto}} 的已供应实例。
-3. 使用**密钥**表以浏览服务中的密钥。
-4. 单击 ⋮ 图标以打开要删除的密钥的选项列表。
-5. 从选项菜单中，单击**删除密钥**，然后在下一个屏幕中进行确认。
+2. 转至**菜单** &gt; **资源列表**，以查看您的资源列表。
+3. 从 {{site.data.keyword.cloud_notm}} 资源列表，选择 {{site.data.keyword.hscrypto}} 的已供应实例。
+4. 使用**密钥**表以浏览服务中的密钥。
+5. 单击 ⋮ 图标以打开要删除的密钥的选项列表。
+6. 从选项菜单中，单击**删除密钥**，然后在下一个屏幕中进行确认。
 
 删除密钥后，该密钥会转变为_已销毁_状态。处于此状态的密钥不再可恢复。与密钥关联的元数据（例如，密钥的删除日期）会保存在 {{site.data.keyword.hscrypto}} 数据库中。
 
@@ -66,9 +67,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
       -H 'prefer: <return_preference>'
     ```
     {: codeblock}
-
-    要使用帐户中 Cloud Foundry 组织和空间内的密钥，请将 `Bluemix-Instance` 替换为相应的 `Bluemix-org` 和 `Bluemix-space` 头。[有关更多信息，请参阅 {{site.data.keyword.hscrypto}} API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     根据下表替换示例请求中的变量。
     <table>
@@ -129,4 +129,4 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {: screen}
 
-    有关可用参数的详细描述，请参阅 {{site.data.keyword.hscrypto}} [REST API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
+    有关可用参数的详细描述，请参阅 {{site.data.keyword.hscrypto}} [REST API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/hs-crypto){: new_window}。

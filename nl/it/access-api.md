@@ -106,7 +106,7 @@ per generare una passcode monouso.
 ## Richiamo delle informazioni sulla connessione
 {: #retrieve-connection-info}
 
-Prima di chiamare qualsiasi API {{site.data.keyword.keymanagementserviceshort}}, richiama prima l'API **Retrieve the connection info** per recuperare le informazioni sulla connessione. Per ulteriori informazioni, vedi [la documentazione di riferimento API di {{site.data.keyword.hscrypto}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
+Prima di chiamare qualsiasi API {{site.data.keyword.keymanagementserviceshort}}, richiama prima l'API **Retrieve the connection info** per recuperare le informazioni sulla connessione. Per ulteriori informazioni, vedi [la documentazione di riferimento API di {{site.data.keyword.hscrypto}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
 
 ## Creazione della tua richiesta API
 {: #form-api-request}
@@ -125,6 +125,8 @@ curl -X GET \
 {: codeblock}
 
 ### Operazioni successive
+{: #api-next}
 
-- Per ulteriori informazioni sulla gestione a livello programmatico delle tue chiavi, [consulta la documentazione di riferimento API di {{site.data.keyword.hscrypto}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-- Per visualizzare un esempio di come è possibile utilizzare le chiavi archiviate in {{site.data.keyword.hscrypto}} per crittografare e decrittografare i dati, [controlla l'applicazione di esempio in GitHub ![Icona di link esterno](../../icons/launch-glyph.svg "Icona di link esterno")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}.
+Per ulteriori informazioni sulla gestione a livello programmatico delle tue chiavi, [consulta la documentazione di riferimento API di {{site.data.keyword.hscrypto}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+
+<!-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}. -->

@@ -27,9 +27,10 @@ subcollection: hs-crypto
 使用 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} 的一般問題可能包括當您與 API 互動時提供正確的標頭或認證。在許多情況下，您可以遵照一些簡單的步驟，從這些問題回復。
 {: shortdesc}
 
-## 刪除已起始設定的 {{site.data.keyword.hscrypto}} 實例時發生錯誤
+## 刪除已起始設定的服務實例時發生錯誤
+{: #troubleshoot-delete-instance}
 
-當您刪除已起始設定的 {{site.data.keyword.hscrypto}} 實例時，可能會收到類似下列內容的錯誤：
+當您刪除已起始設定的服務實例時，可能會收到類似下列內容的錯誤：
 
 ```
 FAILED
@@ -38,23 +39,24 @@ Error response from server. Status code: 400; description: 400 DELETE https://zC
 {: codeblock}
 {: tsSymptoms}
 
-在您刪除已起始設定的 {{site.data.keyword.hscrypto}} 實例之前，尚未清除（歸零）該實例。
+在您刪除已起始設定的服務實例之前，尚未清除（歸零）該實例。
 {: tsCauses}
 
 請在刪除實例之前執行下列指令：
 {: tsResolve}
 
 ```
-ibmcloud tke cryptounit-zeroize
+ibmcloud tke domain-zeroize
 ```
 {: codeblock}
 
 ## 執行與授信金鑰登錄外掛程式相關的指令之後，記號未獲授權
+{: #troubleshoot-unauthorized-token}
 
 在您執行 `tke` CLI 指令之後，可能會收到類似下列內容的訊息：
 
 ```
-ibmcloud tke cryptounits
+ibmcloud tke domains
 FAILED
 Error querying crypto instances.
 Status code: 401
@@ -71,6 +73,7 @@ Your access token is invalid, expired, or does not have the necessary permission
 {: tsResolve}
 
 ## 使用 CLI 或 API 時收到 `error CKR_IBM_WK_NOT_INITIALIZED`
+{: #troubleshoot-error-CLI-API}
 
 當您使用 CLI 或 API 時，可能會收到類似下列內容的錯誤訊息：
 
@@ -83,7 +86,7 @@ Bad Request: rpc error: code = Unknown desc = GRPC Return Code: [0X434B525F484F5
 {: codeblock}
 {: tsSymptoms}
 
-當您執行 `ibmcloud tke cryptounit-compare` 指令時，未在 CURRENT MASTER KEY REGISTER 上取得 `Valid` 配置。
+當您執行 `ibmcloud tke domain-compare` 指令時，未在 CURRENT MASTER KEY REGISTER 上取得 `Valid` 配置。
 {: tsCauses}
 
 請確定 HSM 主要金鑰已正確設定。
@@ -115,9 +118,9 @@ Bad Request: rpc error: code = Unknown desc = GRPC Return Code: [0X434B525F484F5
 
 您可以檢閱討論區，看看是否其他使用者也遇到相同問題。使用討論區提問時，請標記您的問題，以便 {{site.data.keyword.cloud_notm}} 開發團隊能看到它。
 
-- 如果您有 {{site.data.keyword.hscrypto}} 的相關技術問題，請將問題張貼在 [Stack Overflow ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://stackoverflow.com/){: new_window}，並使用 "ibm-cloud" 和 "hyperprotect-crypto" 來標記問題。
-- 若為服務及開始使用指示的相關問題，請使用 [IBM developerWorks dW Answers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/answers/index.html){: new_window} 討論區。請包含 "ibm-cloud" 和 "hyperprotect-crypto" 標籤。
+- 如果您有 {{site.data.keyword.hscrypto}} 的相關技術問題，請將問題張貼在 [Stack Overflow ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://stackoverflow.com/questions/tagged/hyper-protect-crypto){: new_window}，並使用 "ibm-cloud" 和 "hyper-protect-crypto" 來標記問題。
+- 若為服務及開始使用指示的相關問題，請使用 [IBM developerWorks dW Answers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/answers/topics/hyper-protect-crypto/){: new_window} 討論區。請包含 "ibm-cloud" 和 "hyper-protect-crypto" 標籤。
 
-如需使用討論區的詳細資料，請參閱[取得協助 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/docs/support/index.html#getting-help){: new_window}。
+如需使用討論區的詳細資料，請參閱[取得協助 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/get-support?topic=get-support-using-avatar#using-avatar){: new_window}。
 
-如需開立 {{site.data.keyword.IBM_notm}} 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/docs/support/index.html#contacting-support){: new_window}。
+如需開立 {{site.data.keyword.IBM_notm}} 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/get-support?topic=get-support-getting-customer-support){: new_window}。

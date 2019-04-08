@@ -26,7 +26,7 @@ Utilisez le service {{site.data.keyword.cloudaccesstrailfull}} pour savoir comme
 
 Le service {{site.data.keyword.cloudaccesstrailfull_notm}} enregistre les activités initiées par l'utilisateur qui changent l'état d'un service dans {{site.data.keyword.cloud_notm}}.
 
-Pour plus d'informations, consultez la [documentation {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla).
+Pour plus d'informations, voir la [documentation {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla).
 
 ## Liste des événements
 {: #events}
@@ -74,7 +74,7 @@ Le tableau suivant répertorie les actions qui génèrent un événement :
 </table>
 
 ## Où consulter les événements
-{: #gui}
+{: #view-events-gui}
 
 <!-- Option 2: Add the following sentence if your service sends events to the account domain. -->
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root key, data encryption key, Hyper Protect Crypto Services
 
@@ -29,11 +29,11 @@ associe la puissance de plusieurs algorithmes pour protéger la confidentialité
 Pour découvrir comment l'encapsulage de clés peut vous aider à contrôler la sécurité des données au repos dans le cloud, reportez-vous à la rubrique [Chiffrement d'enveloppe](/docs/services/key-protect/concepts/envelope-encryption.html).
 
 ## Encapsulage de clés à l'aide de l'API
-{: #api}
+{: #wrap-keys-api}
 
 Vous pouvez protéger la clé DEK indiquée avec une clé racine que vous gérez dans {{site.data.keyword.hscrypto}}.
 
-**Important :** Lorsque vous indiquez une clé racine pour l'encapsulage, vérifiez qu'il s'agit d'une clé racine de 256, 384 ou 512 bits pour que l'opération aboutisse. Si vous créez une clé racine dans le service, {{site.data.keyword.hscrypto}} génère à partir de son module HSM une clé 256 bits prise en charge par l'algorithme AES-GCM.
+Quand vous fournissez une clé racine pour l'encapsulage, vérifiez qu'il s'agit d'une clé racine de 128, 192 ou 256 bits pour que l'opération aboutisse. Si vous créez une clé racine dans le service, {{site.data.keyword.hscrypto}} génère, à partir de son module HSM, une clé de 256 bits, prise en charge par l'algorithme AES-GCM.
 
 [Après avoir désigné une clé racine dans le service](/docs/services/hs-crypto/create-root-keys.html), vous pouvez encapsuler une clé DEK avec un chiffrement avancé en soumettant un appel `POST` au point d'extrémité suivant.
 
@@ -68,10 +68,8 @@ la matière de la clé en soumettant une demande GET /v2/keys/<key_ID>](/docs/se
     }'
     ```
     {: codeblock}
-
-    Pour utiliser les clés dans une organisation et un espace Cloud Foundry de votre compte, remplacez `Bluemix-Instance` par les en-têtes `Bluemix-org` et `Bluemix-space` appropriés. [Pour plus d'informations, consultez la {{site.data.keyword.hscrypto}}
- documentation de référence de l'API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Remplacez les variables dans l'exemple de demande en fonction du tableau suivant :
 
@@ -83,7 +81,7 @@ la matière de la clé en soumettant une demande GET /v2/keys/<key_ID>](/docs/se
       <tr>
         <td><varname>region</varname></td>
         <td>Abréviation de la région, comme <code>us-south</code> ou <code>eu-gb</code>, représentant la zone géographique dans laquelle votre instance de service {{site.data.keyword.hscrypto}}
-réside. Pour plus d'informations, consultez <a href="/docs/services/hs-crypto/regions.html#endpoints">Points d'extrémité de service régional</a>.</td>
+réside. Pour plus d'informations, voir <a href="/docs/services/hs-crypto/regions.html#endpoints">Points d'extrémité de service régional</a>.</td>
       </tr>
       <tr>
         <td><varname>key_ID</varname></td>
@@ -95,8 +93,7 @@ réside. Pour plus d'informations, consultez <a href="/docs/services/hs-crypto/r
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
-        <td>Identificateur unique affecté à votre instance de service {{site.data.keyword.hscrypto}}.
-Pour plus d'informations, voir <a href="/docs/services/hs-crypto/access-api.html#retrieve-instance-ID">Extraction d'un ID d'instance</a>.</td>
+        <td>Identificateur unique affecté à votre instance de service {{site.data.keyword.hscrypto}}. Pour plus d'informations, voir <a href="/docs/services/hs-crypto/access-api.html#retrieve-instance-ID">Extraction d'un ID d'instance</a>.</td>
       </tr>
       <tr>
         <td><varname>correlation_ID</varname></td>

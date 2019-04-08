@@ -14,6 +14,7 @@ IBM Cloud Hyper Protect Crypto Services
     Sobre o IBM Cloud Hyper Protect Crypto Services
         overview.md
         use_case.md
+        service_instance_concepts.md
         keys_intro.md
 
     whats_new.md
@@ -24,6 +25,7 @@ IBM Cloud Hyper Protect Crypto Services
     access-api.md
     set-up-cli.md
     initialize_hsm.md
+    transition-keys.md
 
     {: .topicgroup}
     Gerenciando o acesso
@@ -50,7 +52,7 @@ IBM Cloud Hyper Protect Crypto Services
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Referência de API do Hyper Protect Crypto](https://{DomainName}/apidocs/hp-crypto)
+    [Referência de API do Hyper Protect Crypto](https://{DomainName}/apidocs/hs-crypto)
     regions.md
     at-events.md
     ha-dr.md

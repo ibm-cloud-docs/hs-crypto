@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: view keys, key configuration, key type
 
@@ -26,21 +26,22 @@ subcollection: hs-crypto
 정기적으로 키 구성 감사:
 
 - 키가 작성된 시점을 확인하고 키를 순환할 시점인지 판별합니다.
-- [{{site.data.keyword.cloudaccesstrailshort}}로 {{site.data.keyword.hscrypto}}에 대한 API 호출을 모니터합니다.](/docs/services/cloud-activity-tracker/tutorials/manage_events_cli.html)
+- {{site.data.keyword.cloudaccesstrailshort}}로 {{site.data.keyword.hscrypto}}에 대한 API 호출을 모니터합니다.
 - 어떤 사용자에게 키에 대한 액세스 권한이 있고, 해당 액세스 레벨은 적합한지 검사합니다.
 
 리소스에 대한 액세스 감사에 대한 자세한 정보는 [Cloud IAM으로 사용자 액세스 관리](/docs/services/hs-crypto/manage-access.html)를 참조하십시오.
 
 ## GUI로 키 보기
-{: #gui}
+{: #view-key-gui}
 
 그래픽 인터페이스를 사용한 서비스의 키 검사를 원하는 경우 {{site.data.keyword.hscrypto}} 대시보드를 사용할 수 있습니다.
 
 [키를 작성하거나 기존 키를 서비스로 가져온 후](/docs/services/hs-crypto/create-root-keys.html) 다음 단계를 완료하여 키를 확인하십시오.
 
 1. [{{site.data.keyword.cloud_notm}} 콘솔 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")에 로그인](https://cloud.ibm.com/)하십시오.
-2. {{site.data.keyword.cloud_notm}} 대시보드에서 {{site.data.keyword.hscrypto}}의 프로비저닝된 인스턴스를 선택하십시오.
-3. {{site.data.keyword.hscrypto}} 대시보드에서 키의 일반 특성을 찾아보십시오.
+2. **메뉴** &gt; **리소스 목록**으로 이동하여 리소스 목록을 보십시오.
+3. {{site.data.keyword.cloud_notm}} 리소스 목록에서 {{site.data.keyword.hscrypto}}의 프로비저닝된 인스턴스를 선택하십시오.
+3. 애플리케이션 세부사항 페이지에서 키의 일반 특성을 찾아보십시오.
 
     <table>
       <tr>
@@ -53,7 +54,7 @@ subcollection: hs-crypto
       </tr>
       <tr>
         <td>ID</td>
-        <td>{{site.data.keyword.hscrypto}} 서비스에서 키에 지정한 고유 키 ID입니다. ID 값을 사용하여 [{{site.data.keyword.hscrypto}} API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/apidocs/hs-crypto)를 통해 서비스에 대한 호출을 작성할 수 있습니다.</td>
+        <td>{{site.data.keyword.hscrypto}} 서비스에서 키에 지정한 고유 키 ID입니다. ID 값을 사용하여 [{{site.data.keyword.hscrypto}} API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/hs-crypto)를 통해 서비스에 대한 호출을 작성할 수 있습니다.</td>
       </tr>
       <tr>
         <td>상태</td>
@@ -67,7 +68,7 @@ subcollection: hs-crypto
     </table>
 
 ## API로 키 보기
-{: #api}
+{: #view-key-api}
 
 {{site.data.keyword.hscrypto}} API를 사용하여 키의 컨텐츠를 검색할 수 있습니다.
 
@@ -94,9 +95,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     -H 'correlation-id: <correlation_ID>' \
     ```
     {: codeblock}
-
-    계정에서 Cloud Foundry 조직과 영역 내의 키에 대한 작업을 수행하려면 `Bluemix-Instance`를 적절한 `Bluemix-org` 및 `Bluemix-space` 헤더로 바꾸십시오. [자세한 정보는 {{site.data.keyword.hscrypto}} API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     다음 표에 따라 예제 요청의 변수를 대체하십시오.
     <table>
@@ -337,4 +337,4 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {:screen}
 
-    사용 가능한 매개변수에 대한 자세한 설명은 {{site.data.keyword.hscrypto}} [REST API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}를 참조하십시오.
+    사용 가능한 매개변수에 대한 자세한 설명은 {{site.data.keyword.hscrypto}} [REST API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/hs-crypto){: new_window}를 참조하십시오.

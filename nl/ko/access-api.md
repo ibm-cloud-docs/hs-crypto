@@ -104,7 +104,7 @@ API 관련 작업을 수행하려면 서비스 및 인증 인증 정보를 생�
 ## 연결 정보 검색
 {: #retrieve-connection-info}
 
-{{site.data.keyword.keymanagementserviceshort}} API를 호출하기 전에 먼저 **연결 정보 검색** API를 호출하여 연결 정보를 검색하십시오. 자세한 정보는 [{{site.data.keyword.hscrypto}} API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}를 참조하십시오.
+{{site.data.keyword.keymanagementserviceshort}} API를 호출하기 전에 먼저 **연결 정보 검색** API를 호출하여 연결 정보를 검색하십시오. 자세한 정보는 [{{site.data.keyword.hscrypto}} API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/hs-crypto){: new_window}를 참조하십시오.
 
 ## API 요청 구성
 {: #form-api-request}
@@ -123,6 +123,8 @@ curl -X GET \
 {: codeblock}
 
 ### 다음에 수행할 작업
+{: #api-next}
 
-- 프로그래밍 방식으로 키를 관리하는 방법에 대해 자세히 알아보려면 [{{site.data.keyword.hscrypto}} API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 확인하십시오.](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}
-- 데이터를 암호화하고 복호화하기 위해 {{site.data.keyword.hscrypto}}에 저장된 키가 작동하는 방식에 대한 예를 보려면 [GitHub에서 샘플 앱 확인 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}을 수행하십시오.
+프로그래밍 방식으로 키를 관리하는 방법에 대해 자세히 알아보려면 [{{site.data.keyword.hscrypto}} API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 확인하십시오](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+
+<!-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}. -->

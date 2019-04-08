@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root key, data encryption key, Hyper Protect Crypto Services
 
@@ -23,16 +23,19 @@ subcollection: hs-crypto
 권한 있는 사용자인 경우 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} API를 사용하여 암호화 키를 관리하고 루트 키로 보호할 수 있습니다.
 {: shortdesc}
 
-루트 키로 데이터 암호화 키(DEK)를 랩핑하면 {{site.data.keyword.hscrypto}}가 여러 알고리즘의 장점을 결합하여 암호화된 데이터의 무결성과 개인정보를 보호합니다.  
+루트 키로 데이터 암호화 키(DEK)를 랩핑하면 {{site.data.keyword.hscrypto}}가
+여러 알고리즘의 장점을 결합하여 암호화된 데이터의 무결성과 개인정보를 보호합니다.   
 
 키 랩핑을 통해 클라우드에서 저장 데이터의 보안을 제어하는 방법을 알아보려면 [엔벨로프 암호화](/docs/services/key-protect/concepts/envelope-encryption.html)를 참조하십시오.
 
 ## API를 사용하여 키 랩핑
-{: #api}
+{: #wrap-keys-api}
 
-{{site.data.keyword.hscrypto}}에서 관리하는 루트 키로 지정된 데이터 암호화 키(DEK)를 보호할 수 있습니다.
+{{site.data.keyword.hscrypto}}에서 관리하는 루트 키로 지정된 데이터 암호화 키(DEK)를 보호할 수 있습니다
+.
 
-**중요:** 랩핑을 위해 루트 키를 제공하는 경우 랩핑 호출에 성공할 수 있도록 루트 키가 256, 384 또는 512비트인지 확인하십시오. 서비스에서 루트 키를 작성하는 경우 {{site.data.keyword.hscrypto}}가 HSM에서 256비트 키를 생성하며, 이는 AES-GCM 알고리즘에서 지원됩니다.
+랩핑을 위해 루트 키를 제공하는 경우 랩핑 호출에 성공할 수 있도록 루트 키가 128, 192 또는 256비트인지 확인하십시오. 서비스에서 루트 키를 작성하는 경우 {{site.data.keyword.hscrypto}}가
+HSM에서 256비트 키를 생성하며, 이는 AES-CBC 알고리즘에서 지원됩니다.
 
 [서비스에서 루트 키를 지정하면](/docs/services/hs-crypto/create-root-keys.html) 다음 엔드포인트에 대한 `POST` 호출을 작성하여 고급 암호화로 DEK를 랩핑할 수 있습니다.
 
@@ -45,7 +48,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
 
 2. 관리하고 보호할 DEK의 키 자료를 복사하십시오.
 
-    {{site.data.keyword.hscrypto}} 서비스 인스턴스에 대한 관리자 또는 작성자 권한이 있으면 [`GET /v2/keys/<key_ID>` 요청을 작성하여 특정 키의 키 자료를 검색할 수 있습니다](/docs/services/hs-crypto/view-keys.html#api).
+    {{site.data.keyword.hscrypto}} 서비스 인스턴스에 대한 관리자 또는 작성자 권한이 있으면
+ [`GET /v2/keys/<key_ID>` 요청을 작성하여 특정 키의 키 자료를 검색할 수 있습니다](/docs/services/hs-crypto/view-keys.html#api).
 
 3. 랩핑에 사용할 루트 키의 ID를 복사하십시오.
 
@@ -66,10 +70,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
     }'
     ```
     {: codeblock}
-
-    계정에서 Cloud Foundry 조직과 영역 내의 키에 대한 작업을 수행하려면 `Bluemix-Instance`를 적절한 `Bluemix-org` 및 `Bluemix-space` 헤더로 바꾸십시오. [자세한 정보는 다음을 참조하십시오. {{site.data.keyword.hscrypto}}
- API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     다음 표에 따라 예제 요청의 변수를 대체하십시오.
 
@@ -80,7 +82,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>{{site.data.keyword.hscrypto}} 서비스 인스턴스가 상주하는 지리적 영역을 표시하는 지역 약어(예: <code>us-south</code> 또는 <code>eu-gb</code>)입니다. 자세한 정보는 <a href="/docs/services/hs-crypto/regions.html#endpoints">지역 서비스 엔드포인트</a>를 참조하십시오.</td>
+        <td>{{site.data.keyword.hscrypto}} 서비스 인스턴스가 상주하는 지리적 영역을 표시하는 지역 약어(예: <code>us-south</code> 또는 <code>eu-gb</code>)입니다. 
+ 자세한 정보는 <a href="/docs/services/hs-crypto/regions.html#endpoints">지역 서비스 엔드포인트</a>를 참조하십시오.</td>
       </tr>
       <tr>
         <td><varname>key_ID</varname></td>
@@ -88,11 +91,12 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
-        <td>사용자의 {{site.data.keyword.cloud_notm}} 액세스 토큰입니다. cURL 요청에 Bearer 값 등 <code>IAM</code> 토큰의 전체 컨텐츠를 포함하십시오. 자세한 정보는 <a href="/docs/services/hs-crypto/access-api.html#retrieve-token">액세스 토큰 검색</a>을 참조하십시오.</td>
+        <td>사용자의 {{site.data.keyword.cloud_notm}} 액세스 토큰입니다. cURL 요청에 Bearer 값 등 <code>IAM</code> 토큰의 전체 컨텐츠를 포함하십시오. 
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
         <td>{{site.data.keyword.hscrypto}} 서비스 인스턴스에 지정된 고유 ID입니다. 자세한 정보는 <a href="/docs/services/hs-crypto/access-api.html#retrieve-instance-ID">인스턴스 ID 검색</a>을 참조하십시오.</td>
+ 자세한 정보는 <a href="/docs/services/hs-crypto/access-api.html#retrieve-token">액세스 토큰 검색</a>을 참조하십시오.</td>
       </tr>
       <tr>
         <td><varname>correlation_ID</varname></td>
@@ -108,7 +112,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
       </tr>
       <tr>
         <td><varname>additional_data</varname></td>
-        <td>선택사항: 키를 추가로 보호하는 데 사용되는 추가 인증 데이터(AAD)입니다. 각 문자열은 최대 255자입니다. 서비스에 대한 랩핑 호출을 작성할 때 AAD를 제공한 경우 후속 랩핑 해제 호출 중에 동일한 AAD를 지정해야 합니다.<br></br>중요사항: {{site.data.keyword.hscrypto}} 서비스는 추가 인증 데이터를 저장하지 않습니다. AAD를 제공하는 경우에는 후속 랩핑 해제 요청 중에 동일한 AAD를 액세스 및 제공할 수 있도록 안전한 위치에 데이터를 저장하십시오.</td>
+        <td>선택사항: 키를 추가로 보호하는 데 사용되는 추가 인증 데이터(AAD)입니다. 각 문자열은 최대 255자입니다. 서비스에 대한 랩핑 호출을 작성할 때 AAD를 제공한 경우 후속 랩핑 해제 호출 중에 동일한 AAD를 지정해야 합니다.<br></br>중요사항: {{site.data.keyword.hscrypto}} 
       </tr>
       <caption style="caption-side:bottom;">표 1. {{site.data.keyword.hscrypto}}에서 지정된 키를 랩핑하는 데 필요한 변수에 대한 설명</caption>
     </table>

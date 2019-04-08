@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-05"
+lastupdated: "2019-03-13"
 
 Keywords: dedicated key management service, IBM Key, Own Keys
 
@@ -21,28 +21,25 @@ subcollection: hs-crypto
 # {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} 시작하기
 {: #get-started}
 
-<!-- {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is in the BETA phase and is for tryout and test purpose only. To prevent data loss, use only test data in the current service. This restriction also applies to using {{site.data.keyword.hscrypto}} with other  {{site.data.keyword.cloud_notm}} services.
-{:important} -->
-
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}(줄여서 {{site.data.keyword.hscrypto}})는 전용 키 관리 서비스에 대한 클라우드 하드웨어 보안 모듈(HSM)을 제공합니다. {{site.data.keyword.hscrypto}}는 편리하고 비용 경쟁력이 있는 방법으로 IBM Z 암호화의 안전 및 보안 레벨에서 암호화하는 데 도움이 됩니다.
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}(줄여서 {{site.data.keyword.hscrypto}})는 키 관리 및 클라우드 하드웨어 보안 모듈(HSM)입니다. 클라우드 데이터 암호화 키 및 클라우드 하드웨어 보안 모델을 제어할 수 있도록 디자인되었으며 FIPS 140-2 레벨 4로 인증된 하드웨어를 기반으로 빌드된 업계의 유일한 서비스입니다.
 {:shortdesc}
 
-키를 생성하고 암호화하기 위해 {{site.data.keyword.hscrypto}}가 {{site.data.keyword.keymanagementservicefull_notm}} API와 통합됩니다. 또한 {{site.data.keyword.hscrypto}}에서 KYOK(Keep Your Own Key) 기능이 사용되어 달성 가능한 가장 높은 보안 레벨인 FIPS 140-2 레벨 4로 인증된 기술인 암호화 하드웨어에 대한 액세스를 제공할 수 있습니다. {{site.data.keyword.hscrypto}}는 네트워크 주소 지정 가능 하드웨어 보안 모듈(HSM)을 제공합니다<!-- and is accessible via PKCS#11 application programming interfaces (APIs) with several popular programming languages such as Java, JavaScript, Swift, and so on-->.  <!-- You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client, which communicates with the ACSP server to enable you to access the backend cryptographic resources.--> {{site.data.keyword.hscrypto}}에 대한 자세한 정보는 [{{site.data.keyword.hscrypto}} 개요](/docs/services/hs-crypto/overview.html)를 참조하십시오. 암호화 모듈의 보안 요구사항에 대한 자세한 정보는 [FIPS 140-2 레벨에 대한 NIST의 스펙 ![외부 링크 아이콘](image/external_link.svg "외부 링크 아이콘")](https://csrc.nist.gov/publications/detail/fips/140/2/final){:new_window}을 참조하십시오.
+키를 생성하고 암호화하기 위해 {{site.data.keyword.hscrypto}}가 {{site.data.keyword.keymanagementservicefull_notm}} API와 통합됩니다. 또한 {{site.data.keyword.hscrypto}}에서 KYOK(Keep Your Own Key) 기능이 사용되어 달성 가능한 가장 높은 보안 레벨인 FIPS 140-2 레벨 4로 인증된 기술인 암호화 하드웨어에 대한 액세스를 제공할 수 있습니다. {{site.data.keyword.hscrypto}}는 네트워크 주소 지정 가능 HSM을 제공합니다. <!-- and is accessible via PKCS#11 application programming interfaces (APIs) with several popular programming languages such as Java, JavaScript, Swift, and so on-->.  <!-- You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client, which communicates with the ACSP server to enable you to access the backend cryptographic resources.--> {{site.data.keyword.hscrypto}}에 대한 자세한 정보는 [{{site.data.keyword.hscrypto}} 개요](/docs/services/hs-crypto/overview.html)를 참조하십시오. 암호화 모듈의 보안 요구사항에 대한 자세한 정보는 [FIPS 140-2 레벨에 대한 NIST의 스펙 ![외부 링크 아이콘](image/external_link.svg "외부 링크 아이콘")](https://csrc.nist.gov/publications/detail/fips/140/2/final){:new_window}을 참조하십시오.
 
 <!-- {{site.data.keyword.hscrypto}} is the cryptography that {{site.data.keyword.blockchainfull_notm}} Platform is built with. It is also a member of the {{site.data.keyword.cloud_notm}} Hyper Protect Family, including [{{site.data.keyword.cloud_notm}} Hyper Protect DBaaS ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/docs/services/hypersecure-dbaas/index.html){:new_window}, {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}, [{{site.data.keyword.cloud_notm}} Container Service ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/docs/containers/container_index.html){:new_window}, and [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}} ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/docs/services/hypersecure-platform/index.html){:new_window}. -->
 
-이 튜토리얼은 {{site.data.keyword.hscrypto}} 대시보드를 통해 마스터 키를 관리하고 기존 암호화 키를 작성 및 추가하여 암호화 인스턴스를 설정하는 방법을 안내합니다.
-
+이 튜토리얼은 {{site.data.keyword.hscrypto}} 대시보드를 통해 마스터 키를 관리하고 기존 암호화 키를 작성 및 추가하여 서비스 인스턴스를 설정하는 방법을 안내합니다.
 
 
 ## 1단계: 서비스 프로비저닝
-{: #provision}
+{: #provision-service}
 
 시작하기 전에 {{site.data.keyword.cloud_notm}} 콘솔에서 {{site.data.keyword.hscrypto}}의 인스턴스를 작성해야 합니다. 자세한 단계는 [서비스 프로비저닝](/docs/services/hs-crypto/provision.html)을 참조하십시오.
 
-## 2단계: 암호화 인스턴스 초기화
+## 2단계: 서비스 인스턴스 초기화
+{: #initialize-crypto}
 
-키를 관리하려면 암호화(HSM) 인스턴스를 초기화해야 합니다. 빠른 시작 튜토리얼은 [암호화 인스턴스 초기화 시작하기](/docs/services/hs-crypto/get_started_hsm.html)를 참조하십시오. 자세한 단계와 우수 사례는 [키 스토리지를 보호하기 위해 암호화 인스턴스 초기화](/docs/services/hs-crypto/initialize_hsm.html)를 참조하십시오.
+키를 관리하려면 서비스 인스턴스를 초기화해야 합니다. 빠른 시작 튜토리얼은 [서비스 인스턴스 초기화 시작하기](/docs/services/hs-crypto/get_started_hsm.html)를 참조하십시오. 자세한 단계와 우수 사례는 [키 스토리지를 보호하기 위해 서비스 인스턴스 초기화](/docs/services/hs-crypto/initialize_hsm.html)를 참조하십시오.
 
 ## 3단계: 키 관리
 {: #manage-keys}
@@ -80,7 +77,7 @@ subcollection: hs-crypto
 
 3. 키의 세부사항 채우기를 완료한 후 확인하려면 **키 작성**을 클릭하십시오.
 
-서비스에서 작성된 키는 대칭 256비트 키이며, AES-GCM 알고리즘으로 지원됩니다. 보안 추가를 위해 키가 보안 {{site.data.keyword.cloud_notm}} 데이터 센터에 있는 FIPS 140-2 레벨 4 인증 HSM(Hardware Security Module)에서 생성됩니다.
+서비스에서 작성된 키는 대칭 256비트 키이며, AES-CBC 알고리즘으로 지원됩니다. 보안 추가를 위해 키가 보안 {{site.data.keyword.cloud_notm}} 데이터 센터에 있는 FIPS 140-2 레벨 4 인증 HSM(Hardware Security Module)에서 생성됩니다.
 
 ### 고유 키 가져오기
 {: #import-keys}
@@ -122,12 +119,13 @@ subcollection: hs-crypto
 {{site.data.keyword.hscrypto}} 대시보드에서 새 키의 일반 특성을 검사할 수 있습니다.
 
 ## 다음에 수행할 작업
+{: #get-started-next}
 
 이제 키를 사용하여 앱과 서비스를 코딩할 수 있습니다. 서비스에 루트 키를 추가한 경우 루트 키를 사용하여 저장 데이터를 암호화하는 키를 보호하는 방법에 대해 자세히 알아보십시오. 시작하려면 [키 랩핑](/docs/services/hs-crypto/wrap-keys.html)을 확인하십시오.
 
 - 루트 키를 사용한 암호화 키 관리 및 보호에 대해 알아보려면 [엔벨로프 암호화](/docs/services/key-protect/concepts/envelope-encryption.html)를 확인하십시오.
-- {{site.data.keyword.hscrypto}} 서비스와 다른 클라우드 데이터 솔루션과의 통합에 대해 자세히 알아보려면 [통합 문서를 확인](/docs/services/key-protect/integrations/integrate-services.html)하십시오.
-- 프로그래밍 방식으로 키를 관리하는 방법에 대해 자세히 알아보려면 [{{site.data.keyword.hscrypto}} API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 확인하십시오.](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}
+<!-- - To find out more about integrating the {{site.data.keyword.hscrypto}} service with other cloud data solutions, [check out the Integrations doc](/docs/services/key-protect/integrations/integrate-services.html). -->
+- 프로그래밍 방식으로 키를 관리하는 방법에 대해 자세히 알아보려면 [{{site.data.keyword.hscrypto}} API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 확인하십시오](https://{DomainName}/apidocs/hs-crypto){: new_window}.
 
 <!-- Complete the following steps to provision {{site.data.keyword.hscrypto}}:
 1. Log in to your [IBM Cloud account ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/){:new_window}.

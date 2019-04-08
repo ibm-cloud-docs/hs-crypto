@@ -24,7 +24,7 @@ Conéctese a sus aplicaciones con {{site.data.keyword.cloud_notm}} {{site.data.k
 {: shortdesc}
 
 <!-- ## Available regions
-{: #regions}
+{: #available-regions}
 
 {{site.data.keyword.hscrypto}} is available in the following regions and locations: -->
 
@@ -32,7 +32,7 @@ Conéctese a sus aplicaciones con {{site.data.keyword.cloud_notm}} {{site.data.k
 ## Puntos finales de servicio
 {: #endpoints}
 
-Si va a gestionar sus recursos de {{site.data.keyword.hscrypto}} mediante programación, consulte la tabla siguiente para determinar los puntos finales de API a utilizar cuando se conecte a la [API de {{site.data.keyword.hscrypto}}](https://cloud.ibm.com/apidocs/hs-crypto):
+Si va a gestionar sus recursos de {{site.data.keyword.hscrypto}} mediante programación, consulte la tabla siguiente para determinar los puntos finales de API a utilizar cuando se conecte a la [API de {{site.data.keyword.hscrypto}}](https://{DomainName}/apidocs/hs-crypto):
 
 <table>
     <tr>
@@ -76,7 +76,7 @@ Si va a gestionar sus recursos de {{site.data.keyword.hscrypto}} mediante progra
             <code>us-south.hs-crypto.cloud.ibm.com</code>
         </td>
     </tr>
-    <caption style="caption-side:bottom;">Tabla 1. Muestra el punto final disponible para la API de {{site.data.keyword.hscrypto}}}</caption>
+    <caption style="caption-side:bottom;">Tabla 1. Muestra el punto final disponible para la API de {{site.data.keyword.hscrypto}}</caption>
 </table>
 
 <!--For {{site.data.keyword.hscrypto}} service instances that exist within a Cloud Foundry org or space, use the legacy `https://ibm-key-protect.edge.bluemix.net` endpoint to interact with the {{site.data.keyword.keymanagementserviceshort}} API.

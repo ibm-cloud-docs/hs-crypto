@@ -26,9 +26,9 @@ subcollection: hs-crypto
 Cette page vous guide à travers plusieurs scénarios de gestion de l'accès à vos clés de chiffrement à l'aide de l'[API Access Management ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://iampap.ng.bluemix.net/v1/docs/#/Policies/post_v1_policies){: new_window}.
 
 ## Avant de commencer
-{: #prereqs}
+{: #prereqs-manage-api}
 
-Pour utiliser l'API, générez vos données d'authentification, par exemple, votre [jeton d'accès](/docs/services/hs-crypto/access-api.html#retrieve-token) et  votre [ID d'instance](/docs/services/hs-crypto/access-api.html#retrieve-instance-ID). Vous avez également besoin de l'ID de la clé {{site.data.keyword.hscrypto}} dont vous souhaitez gérer l'accès.
+Pour utiliser l'API, générez vos données d'authentification, par exemple, votre [jeton d'accès](/docs/services/hs-crypto/access-api.html#retrieve-token) et votre [ID d'instance](/docs/services/hs-crypto/access-api.html#retrieve-instance-ID). Vous avez également besoin de l'ID de la clé {{site.data.keyword.hscrypto}} dont vous souhaitez gérer l'accès.
 
 Pour savoir comment afficher les ID de clé, voir [Affichage des clés](/docs/services/hs-crypto/view-keys.html).
 {: tip}
@@ -36,12 +36,12 @@ Pour savoir comment afficher les ID de clé, voir [Affichage des clés](/docs/se
 ### Extraction de votre ID de compte
 {: #retrieve-account-ID}
 
-Après avoir extrait vos données d'identification, déterminez la portée de votre nouvelle règle d'accès en procédant à l'extraction de l'ID du compte qui contient votre instance de service {{site.data.keyword.hscrypto}}.
+Une fois que vous avez extrait vos données d'identification, déterminez la portée de l'accès à appliquer à votre nouvelle règle d'accès en extrayant l'ID du compte qui contient votre instance {{site.data.keyword.hscrypto}} (ou instance de service, en abrégé).
 
 Pour extraire votre ID de compte, procédez comme suit :
 
 1. Connectez-vous à l'interface de ligne de commande d'{{site.data.keyword.cloud_notm}}.
-```sh
+    ```sh
     ibmcloud login [--sso]
     ```
     {: codeblock}
@@ -150,10 +150,10 @@ curl -X POST \
 ```
 {: codeblock}
 
-Si vous devez gérer l'accès aux clés dans une organisation et un espace Cloud Foundry spécifique, remplacez `serviceInstance` par `organizationId` et `spaceId`. Pour en savoir plus, consultez la [documentation de référence des API Access Management ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}.
+<!-- If you need to manage access to keys within a specified Cloud Foundry org and space, replace `serviceInstance` with `organizationId` and `spaceId`. To learn more, see the [Access Management API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}.
 {: tip}
 
-Remplacez `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>` et `<key_ID>` par les valeurs appropriées.
+Replace `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>`, and `<key_ID>` with the appropriate values. -->
 
 **Facultatif :** vérifiez que la règle a été créée.
 

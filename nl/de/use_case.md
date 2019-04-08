@@ -23,6 +23,7 @@ Diese Seite beschreibt die Anwendungsfälle, die derzeit in {{site.data.keyword.
 {:shortdesc}
 
 ## Verschlüsselung ruhender Daten mit "Keep Your Own Keys" (KYOK)
+{: #data-at-rest-encryption}
 
 Mit {{site.data.keyword.hscrypto}} können Sie Ihre Daten in der höchsten Sicherheitsstufe mit eigenen Schlüsseln verschlüsseln. {{site.data.keyword.hscrypto}} stellt die Schlüsselverwaltungsfunktionen bereit, mit denen Sie Ihre Schlüssel über {{site.data.keyword.keymanagementservicefull_notm}}-APIs generieren und verwalten können.
 
@@ -39,6 +40,7 @@ Nachstehend einige besondere Merkmale der Verwendung von {{site.data.keyword.hsc
 *Abbildung 1. Verschlüsselung ruhender Daten mit KYOK*
 
 ## Schutz von VMware-Images mit "Keep Your Own Keys" (KYOK)
+{: #vmware-image-protection}
 
 Ähnlich wie beim Schutz ruhender Daten kann {{site.data.keyword.hscrypto}} auch ruhende VMware-Images für Verschlüsselung und Entschlüsselung über das Key Management Interoperability Protocol schützen.
 

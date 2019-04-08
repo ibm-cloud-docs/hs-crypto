@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root keys, import keys, symmetric key, Hyper Protect Crypto Services GUI
 
@@ -26,14 +26,15 @@ Vous pouvez utiliser
 Les clés racine sont des clés d'encapsulage de clés symétriques qui permettent d'assurer la sécurité des données chiffrées dans le cloud. Pour plus d'informations sur les clés racine, voir [Chiffrement d'enveloppe](/docs/services/key-protect/concepts/envelope-encryption.html).
 
 ## Importation de clés racine à l'aide de l'interface graphique
-{: #gui}
+{: #import-root-key-gui}
 
 [Après avoir créé une instance du service](/docs/services/
 hs-crypto/provision.html), effectuez les étapes suivantes pour ajouter votre clé racine existante avec l'interface graphique de {{site.data.keyword.hscrypto}}.
 
 1. [Connectez-vous à la console {{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/){: new_window}.
-2. Dans votre tableau de bord {{site.data.keyword.cloud_notm}}, sélectionnez l'instance {{site.data.keyword.hscrypto}} mise à disposition.
-3. Pour importer une clé, cliquez sur **Add key** et sélectionnez la fenêtre **Enter existing key**.
+2. Accédez à **Menu** &gt; **Liste de ressources** pour afficher la liste de vos ressources.
+3. Dans la liste de ressources {{site.data.keyword.cloud_notm}}, sélectionnez votre instance {{site.data.keyword.hscrypto}} mise à disposition.
+4. Pour importer une clé, cliquez sur **Add key**, puis sélectionnez la fenêtre **Import your own key**.
 
     Indiquez les détails relatifs à la clé :
 
@@ -60,7 +61,7 @@ hs-crypto/provision.html), effectuez les étapes suivantes pour ajouter votre cl
           <p>Vérifiez que la matière de la clé remplit les conditions suivantes :</p>
           <p>
             <ul>
-              <li>La clé doit être une clé à 256, 384 ou 512 bits.</li>
+              <li>La clé doit être une clé à 128, 192 ou 256 bits.</li>
               <li>Les octets de données, par exemple 32 octets pour 256 bits, doivent être encodés en base64.</li>
             </ul>
           </p>
@@ -69,10 +70,10 @@ hs-crypto/provision.html), effectuez les étapes suivantes pour ajouter votre cl
       <caption style="caption-side:bottom;">Tableau 1. Description des paramètres <b>Enter existing key</b></caption>
     </table>
 
-4. Une fois les détails de la clé indiqués, cliquez sur **Add new key** pour confirmer l'opération.
+5. Une fois les détails de la clé indiqués, cliquez sur **Import key** pour confirmer l'opération.
 
 ## Importation de clés racine avec l'API
-{: #api}
+{: #import-root-key-api}
 
 Ajoutez votre clé racine existante en soumettant un appel `POST` au point d'extrémité suivant.
 
@@ -83,7 +84,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 1. [Extrayez vos données d'authentification et de service afin d'utiliser les clés dans le service](/docs/services/hs-crypto/access-api.html).
 
-1. Appelez l'API [{{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} à l'aide de la commande cURL suivante. 
+1. Appelez l'[{{site.data.keyword.hscrypto}}API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/hs-crypto){: new_window} à l'aide de la commande cURL suivante.
 
     ```cURL
     curl -X POST \
@@ -110,9 +111,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     }'
     ```
     {: codeblock}
-
-    Pour utiliser les clés dans une organisation et un espace Cloud Foundry de votre compte, remplacez `Bluemix-Instance` par les en-têtes `Bluemix-org` et `Bluemix-space` appropriés. [Pour plus d'informations, consultez la documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Remplacez les variables dans l'exemple de demande en fonction du tableau suivant :
     <table>
@@ -161,7 +161,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
           <p>Vérifiez que la matière de la clé remplit les conditions suivantes :</p>
           <p>
             <ul>
-              <li>La clé doit être une clé à 256, 384 ou 512 bits.</li>
+              <li>La clé doit être une clé à 128, 192 ou 256 bits.</li>
               <li>Les octets de données, par exemple 32 octets pour 256 bits, doivent être encodés en base64.</li>
             </ul>
           </p>
@@ -197,8 +197,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 **Remarque :** Lorsque vous ajoutez une clé racine existante au service, la clé reste dans les limites du service {{site.data.keyword.hscrypto}} et sa matière ne peut pas être extraite.
 
 ### Etapes suivantes
+{: #import-root-key-next}
 
 - Pour plus d'informations sur la protection de clés à l'aide du chiffrement d'enveloppe, voir [Encapsulage de clés](/docs/services/hs-crypto/wrap-keys.html).
-- Pour plus d'informations sur la gestion de vos clés à l'aide d'un programme, [consultez la documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/apidocs/
-hs-crypto){: new_window}.
-
+- Pour plus d'informations sur la gestion de vos clés à l'aide d'un programme, [voir la documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/hs-crypto){: new_window}.

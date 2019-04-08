@@ -74,7 +74,7 @@ subcollection: hs-crypto
 </table>
 
 ## 이벤트 확인 위치
-{: #gui}
+{: #view-events-gui}
 
 <!-- Option 2: Add the following sentence if your service sends events to the account domain. -->
 

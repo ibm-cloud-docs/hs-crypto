@@ -89,11 +89,12 @@ subcollection: hs-crypto
   <caption style="caption-side:bottom;">表 1. 說明身分及存取角色如何對映至 {{site.data.keyword.hscrypto}} 許可權</caption>
 </table>
 
-**附註**：Cloud IAM 使用者角色提供服務或服務實例層次的存取權。[Cloud Foundry 角色](/docs/iam/cfaccess.html)是分開的，其定義組織或空間層次的存取權。
+<!-- **Note**: Cloud IAM user roles provide access at the service or service instance level. [Cloud Foundry roles](/docs/iam/cfaccess.html) are separate and define access at the organization or the space level. -->
 
 若要進一步瞭解 {{site.data.keyword.iamshort}}，請參閱[使用者角色及許可權](/docs/iam/users_roles.html#userroles)。
 
 ### 下一步為何？
+{: #manage-access-next}
 
 帳戶擁有者及管理者可以邀請使用者，以及設定對應於使用者可執行之 {{site.data.keyword.hscrypto}} 動作的服務原則。
 

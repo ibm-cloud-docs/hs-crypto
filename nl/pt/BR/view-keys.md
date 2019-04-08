@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: view keys, key configuration, key type
 
@@ -26,21 +26,22 @@ O {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} fornece um sistema 
 Audite a configuração de chaves com regularidade:
 
 - Examine quando as chaves foram criadas e determine se é hora de girar a chave.
-- [ Monitore chamadas API para  {{site.data.keyword.hscrypto}}  com o  {{site.data.keyword.cloudaccesstrailshort}} ](/docs/services/cloud-activity-tracker/tutorials/manage_events_cli.html).
+- Monitore chamadas de API para o {{site.data.keyword.hscrypto}} com o {{site.data.keyword.cloudaccesstrailshort}}.
 - Inspecione quais usuários têm acesso a chaves e se o nível de acesso é apropriado.
 
 Para obter mais informações sobre o acesso de auditoria a seus recursos, consulte [Gerenciando acesso de usuário com o Cloud IAM](/docs/services/hs-crypto/manage-access.html).
 
 ## Visualizando chaves com a GUI
-{: #gui}
+{: #view-key-gui}
 
 Se você preferir inspecionar as chaves em seu serviço usando uma interface gráfica, será possível usar o painel {{site.data.keyword.hscrypto}}.
 
 [Depois de criar ou importar suas chaves existentes para o serviço](/docs/services/hs-crypto/create-root-keys.html), conclua as etapas a seguir para visualizar suas chaves.
 
 1. [Efetue login no console do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/).
-2. No painel do {{site.data.keyword.cloud_notm}}, selecione sua instância provisionada do {{site.data.keyword.hscrypto}}.
-3. Procure as características gerais das suas chaves no painel do {{site.data.keyword.hscrypto}}:
+2. Acesse **Menu** &gt; **Lista de recursos** para visualizar uma lista de seus recursos.
+3. Em sua lista de recursos do {{site.data.keyword.cloud_notm}}, selecione a sua instância provisionada do {{site.data.keyword.hscrypto}}.
+3. Procure as características gerais de suas chaves por meio da página de detalhes do aplicativo:
 
     <table>
       <tr>
@@ -53,7 +54,7 @@ Se você preferir inspecionar as chaves em seu serviço usando uma interface gr�
       </tr>
       <tr>
         <td>ID</td>
-        <td>Um ID de chave exclusiva que foi designado à sua chave pelo serviço do {{site.data.keyword.hscrypto}}. É possível usar o valor ID para fazer chamadas para o serviço com a [API do {{site.data.keyword.hscrypto}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/apidocs/hs-crypto).</td>
+        <td>Um ID de chave exclusiva que foi designado à sua chave pelo serviço do {{site.data.keyword.hscrypto}}. É possível usar o valor do ID para fazer chamadas para o serviço com a API do [{{site.data.keyword.hscrypto}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/apidocs/hs-crypto).</td>
       </tr>
       <tr>
         <td>Estado</td>
@@ -67,7 +68,7 @@ Se você preferir inspecionar as chaves em seu serviço usando uma interface gr�
     </table>
 
 ## Visualizando chaves com a API
-{: #api}
+{: #view-key-api}
 
 É possível recuperar os conteúdos de suas chaves usando a API do {{site.data.keyword.hscrypto}}.
 
@@ -89,9 +90,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     curl -X GET \ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \ -H 'accept: application/vnd.ibm.collection+json' \ -H 'authorization: Bearer <IAM_token>' \ -H 'bluemix-instance: <instance_ID>' \ -H 'correlation-id: <correlation_ID>' \
     ```
     {: codeblock}
-
-    Para trabalhar com chaves dentro de uma organização e um espaço do Cloud Foundry em sua conta, substitua `Bluemix-Instance` pelos cabeçalhos `Bluemix-org` e `Bluemix-space` apropriados. [Para obter mais informações, consulte o doc de referência da API do {{site.data.keyword.hscrypto}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Substitua as variáveis na solicitação de exemplo de acordo com a tabela a seguir.
     <table>
@@ -315,4 +315,4 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {:screen}
 
-    Para obter uma descrição detalhada dos parâmetros disponíveis, veja o {{site.data.keyword.hscrypto}} [documento de referência da API de REST ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
+    Para obter uma descrição detalhada dos parâmetros disponíveis, veja o {{site.data.keyword.hscrypto}} [documento de referência da API de REST ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/apidocs/hs-crypto){: new_window}.

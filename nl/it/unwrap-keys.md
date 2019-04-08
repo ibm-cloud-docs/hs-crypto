@@ -26,7 +26,7 @@ Puoi spacchettare una chiave di crittografia dei dati (o DEK, data encryption ke
 Per ulteriori informazioni su come l'impacchettamento ti aiuta a controllare la sicurezza dei dati inattivi nel cloud, consulta [Crittografia envelope](/docs/services/key-protect/concepts/envelope-encryption.html).
 
 ## Spacchettamento delle chiavi utilizzando l'API
-{: #api}
+{: #unwrap-key-api}
 
 [Dopo aver effettuato una chiamata di impacchettamento al servizio](/docs/services/hs-crypto/wrap-keys.html), puoi spacchettare una chiave di crittografia dei dati (o DEK, data encryption key) specificata per accedere al suo contenuto eseguendo una chiamata `POST` al seguente endpoint.
 
@@ -60,9 +60,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=unwr
     }'
     ```
     {: codeblock}
-
-    Per utilizzare le chiavi in un'organizzazione o uno spazio Cloud Foundry nel tuo account, sostituisci `Bluemix-Instance` con le intestazioni `Bluemix-org` e `Bluemix-space` appropriate. [Per ulteriori informazioni, vedi la documentazione di riferimento API di {{site.data.keyword.hscrypto}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Sostituisci le variabili nella richiesta di esempio in base alla seguente tabella.
     <table>

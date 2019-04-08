@@ -26,7 +26,7 @@ Mit {{site.data.keyword.iamlong}} können Sie eine differenzierte Zugriffssteuer
 Diese Seite führt Sie durch Szenarios für die Verwaltung des Zugriffs auf Ihre Chiffrierschlüssel mit der [API für die Zugriffsverwaltung ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") ](https://iampap.ng.bluemix.net/v1/docs/#/Policies/post_v1_policies){: new_window}.
 
 ## Vorbereitungen
-{: #prereqs}
+{: #prereqs-manage-api}
 
 Für die Arbeit mit der API generieren Sie Ihre Authentifizierungsnachweise, z. B. [Zugriffstoken](/docs/services/hs-crypto/access-api.html#retrieve-token) und [Instanz-ID](/docs/services/hs-crypto/access-api.html#retrieve-instance-ID). Darüber hinaus benötigen Sie die ID des {{site.data.keyword.hscrypto}}-Schlüssels, für den Sie den Zugriff verwalten möchten.
 
@@ -36,7 +36,7 @@ Weitere Informationen zum Anzeigen von Schlüssel-IDs finden Sie unter [Schlüss
 ### Konto-ID abrufen
 {: #retrieve-account-ID}
 
-Nachdem Sie Ihre Berechtigungsnachweise abgerufen haben, bestimmen Sie den Zugriffsbereich für Ihre neue Zugriffsrichtlinie, indem Sie die ID des Kontos abrufen, das Ihre {{site.data.keyword.hscrypto}}-Serviceinstanz enthält.
+Nachdem Sie Ihre Berechtigungsnachweise abgerufen haben, bestimmen Sie den Zugriffsbereich für Ihre neue Zugriffsrichtlinie, indem Sie die ID des Kontos abrufen, das Ihre {{site.data.keyword.hscrypto}}-Instanz (kurz: Serviceinstanz) enthält. 
 
 Zum Abrufen Ihrer Konto-ID führen Sie die folgenden Schritte aus:
 
@@ -150,10 +150,10 @@ curl -X POST \
 ```
 {: codeblock}
 
-Wenn Sie den Zugriff auf Schlüssel innerhalb einer angegebenen Cloud Foundry-Organisation und eines festgelegten Cloud Foundry-Bereichs verwalten müssen, ersetzen Sie `serviceInstance` durch `organizationId` und `spaceId`. Weitere Informationen finden Sie in der [Referenzdokumentation zur API für die Zugriffsverwaltung ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}.
+<!-- If you need to manage access to keys within a specified Cloud Foundry org and space, replace `serviceInstance` with `organizationId` and `spaceId`. To learn more, see the [Access Management API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}.
 {: tip}
 
-Ersetzen Sie `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>` und `<key_ID>` durch die entsprechenden Werte.
+Replace `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>`, and `<key_ID>` with the appropriate values. -->
 
 **Optional:** Überprüfen Sie, ob die Richtlinie erfolgreich erstellt wurde.
 

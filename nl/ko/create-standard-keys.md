@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: standard keys, standard encryption key, creating standard keys, create standard keys
 
@@ -23,13 +23,14 @@ subcollection: hs-crypto
 {: shortdesc}
 
 ## GUI로 표준 키 작성
-{: #gui}
+{: #standard-key-gui}
 
 [서비스의 인스턴스를 작성한 후](/docs/services/hs-crypto/provision.html), 다음 단계를 완료하여 {{site.data.keyword.hscrypto}} GUI로 표준 키를 작성하십시오.
 
 1. [{{site.data.keyword.cloud_notm}} 콘솔 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")에 로그인하십시오.](https://cloud.ibm.com/){: new_window}
-2. {{site.data.keyword.cloud_notm}} 대시보드에서 {{site.data.keyword.hscrypto}}의 프로비저닝된 인스턴스를 선택하십시오.
-3. 키를 새로 작성하려면 **키 추가**를 클릭하고 **새 키 생성** 창을 선택하십시오.
+2. **메뉴** &gt; **리소스 목록**으로 이동하여 리소스 목록을 보십시오.
+3. {{site.data.keyword.cloud_notm}} 리소스 목록에서 {{site.data.keyword.hscrypto}}의 프로비저닝된 인스턴스를 선택하십시오.
+4. 키를 새로 작성하려면 **키 추가**를 클릭하고 **키 작성** 창을 선택하십시오.
 
     키의 세부사항을 지정하십시오.
 
@@ -52,10 +53,9 @@ subcollection: hs-crypto
       <caption style="caption-side:bottom;">표 1. <b>새 키 생성</b> 설정에 대한 설명</caption>
     </table>
 
-4. 키의 세부사항 채우기를 완료한 후 **키 생성**을 클릭하여 확인하십시오.
+5. 키의 세부사항 채우기를 완료한 후 확인하려면 **키 작성**을 클릭하십시오.
 
 ## API로 표준 키 작성
-{: #api}
 
 다음 엔드포인트에 대한 `POST` 호출을 작성하여 표준 키를 작성하십시오.
 
@@ -66,7 +66,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 1. [서비스 및 인증 인증 정보를 검색하여 서비스에서 키에 대한 작업을 수행하십시오](/docs/services/hs-crypto/access-api.html).
 
-2. 다음 cURL 명령을 사용하여 [{{site.data.keyword.hscrypto}} API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}를 호출하십시오.
+2. 다음 cURL 명령을 사용하여 [{{site.data.keyword.hscrypto}} API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/hs-crypto){: new_window}를 호출하십시오.
 
     ```cURL
     curl -X POST \
@@ -93,9 +93,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     }'
     ```
     {: codeblock}
-
-    계정에 지정된 Cloud Foundry 조직과 영역 내에서 키에 대한 작업을 수행하려면 `Bluemix-Instance`를 해당 `Bluemix-org` 및 `Bluemix-space` 헤더로 바꾸십시오. [자세한 정보는 {{site.data.keyword.hscrypto}} API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}
-    {: tip}
+<!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+    {: tip} -->
 
     다음 표에 따라 예제 요청의 변수를 대체하십시오.
     <table>
@@ -170,6 +169,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 
 ### 다음에 수행할 작업
+{: #standard-key-next}
 
-- 프로그래밍 방식으로 키를 관리하는 방법에 대해 자세히 알아보려면 [{{site.data.keyword.hscrypto}} API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 확인하십시오.](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}
-- 데이터를 암호화하고 복호화하기 위해 {{site.data.keyword.hscrypto}}에 저장된 키가 작동하는 방식에 대한 예를 보려면 [GitHub에서 샘플 앱 확인 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}을 수행하십시오.
+프로그래밍 방식으로 키를 관리하는 방법에 대해 자세히 알아보려면 [{{site.data.keyword.hscrypto}} API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 확인하십시오](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+
+<!-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}.-->

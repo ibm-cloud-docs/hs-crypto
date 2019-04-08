@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root keys, Rotate key, key rotation
 
@@ -24,9 +24,6 @@ subcollection: hs-crypto
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} を使用して、ルート鍵をオンデマンドでローテートできます。
 {: shortdesc}
 
-マスター鍵のローテートは、現在サポートされていません。
-{: important}
-
 ルート鍵をローテートすると、鍵の存続期間が短くなり、その鍵で保護される情報量が制限されます。   
 
 鍵のローテーションがどのように業界標準や暗号のベスト・プラクティスへの準拠に役立つのかについては、『[鍵のローテーション](/docs/services/key-protect/concepts/key-rotation.html)』を参照してください。
@@ -35,23 +32,24 @@ subcollection: hs-crypto
 {: tip}
 
 ## GUI を使用したルート鍵のローテート
-{: #gui}
+{: #rotate-root-key-gui}
 
 グラフィカル・インターフェースを使用してルート鍵をローテートする場合は、{{site.data.keyword.hscrypto}} GUI を使用できます。
 
 [サービス内にルート鍵を作成するか、既存のルート鍵をインポートした後](/docs/services/hs-crypto/create-root-keys.html)、鍵をローテートするには以下のステップを実行します。
 
 1. [{{site.data.keyword.cloud_notm}} コンソール ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") にログインします](https://cloud.ibm.com/){: new_window}。
-2. {{site.data.keyword.cloud_notm}} ダッシュボードで、{{site.data.keyword.hscrypto}} のプロビジョン済みインスタンスを選択します。
-3. **「鍵 (Keys)」**テーブルを使用して、サービス内の鍵を表示します。
-4. 「⋮」アイコンをクリックして、ローテートする鍵に関するオプションのリストを開きます。
-5. オプション・メニューで**「鍵のローテート (Rotate key)」**をクリックし、次の画面でローテーションを確認します。
+2. **「メニュー」**&gt;**「リソース・リスト」**に移動し、リソースのリストを表示します。
+3. {{site.data.keyword.cloud_notm}} リソース・リストで、{{site.data.keyword.hscrypto}} のプロビジョン済みインスタンスを選択します。
+4. アプリケーションの詳細ページで、**「鍵 (Keys)」**テーブルを使用して、サービス内の鍵を表示します。
+5. 「⋮」アイコンをクリックして、ローテートする鍵に関するオプションのリストを開きます。
+6. オプション・メニューで**「鍵のローテート (Rotate key)」**をクリックし、次の画面でローテーションを確認します。
 
 ルート鍵を最初にインポートした場合、鍵をローテートするには、 新しい Base64 エンコードの鍵素材を指定する必要があります。 詳しくは、[GUI を使用したルート鍵のインポート](/docs/services/hs-crypto/import-root-keys.html#gui)を参照してください。
 {: tip}
 
 ## API を使用したルート鍵のローテート
-{: #api}
+{: #rotate-root-kay-api}
 
 [サービス内でルート鍵を指定した後](/docs/services/hs-crypto/create-root-keys.html)、以下のエンドポイントへの `POST` 呼び出しを行うことにより、鍵をローテートできます。
 
@@ -109,7 +107,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rota
           <p>{{site.data.keyword.hscrypto}} によって最初に生成された鍵をローテートする場合は、<code>payload</code> 属性を省略し、空の要求エンティティー本体を渡します。 インポートした鍵をローテートする場合は、以下の要件を満たしている鍵素材を指定します。</p>
           <p>
             <ul>
-              <li>鍵は 256 ビット、384 ビット、または 512 ビットでなければならない。</li>
+              <li>鍵は 128 ビット、192 ビット、または 256 ビットでなければならない。</li>
               <li>データのバイト数 (例えば、256 ビットの場合は 32 バイト) は、base64 エンコードを使用してエンコードされていなければならない。</li>
             </ul>
           </p>

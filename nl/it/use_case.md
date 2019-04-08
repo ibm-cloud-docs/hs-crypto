@@ -23,6 +23,7 @@ Questa pagina descrive i casi di utilizzo attualmente inclusi in {{site.data.key
 {:shortdesc}
 
 ## Crittografia dei dati inattivi con KYOK (Keep Your Own Keys)
+{: #data-at-rest-encryption}
 
 Puoi utilizzare {{site.data.keyword.hscrypto}} per crittografare i tuoi dati inattivi nel più alto livello di sicurezza con le tue chiavi. {{site.data.keyword.hscrypto}} fornisce le funzionalità di gestione delle chiavi per generare e gestire le tue chiavi utilizzando le API {{site.data.keyword.keymanagementservicefull_notm}}.
 
@@ -39,6 +40,7 @@ Di seguito sono riportati alcuni punti salienti dell'utilizzo di {{site.data.key
 *Figura 1. Crittografia dei dati inattivi con KYOK*
 
 ## Protezione dell'immagine VMware con KYOK (Keep Your Own Keys)
+{: #vmware-image-protection}
 
 Analogamente alla protezione dei dati inattivi, {{site.data.keyword.hscrypto}} può anche proteggere l'immagine VMware inattiva per la crittografia e la decrittografia tramite il protocollo KMIP (Key Management Interoperability Protocol) VMware.
 

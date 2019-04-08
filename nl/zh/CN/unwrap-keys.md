@@ -26,7 +26,7 @@ subcollection: hs-crypto
 要了解密钥打包如何帮助您控制云中静态数据的安全性，请参阅[包络加密](/docs/services/key-protect/concepts/envelope-encryption.html)。
 
 ## 使用 API 解包密钥
-{: #api}
+{: #unwrap-key-api}
 
 [对服务发出打包调用后](/docs/services/hs-crypto/wrap-keys.html)，可以通过对以下端点发出 `POST` 调用来将指定的数据加密密钥 (DEK) 解包以访问其内容。
 
@@ -60,9 +60,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=unwr
     }'
     ```
     {: codeblock}
-
-    要使用帐户中 Cloud Foundry 组织和空间内的密钥，请将 `Bluemix-Instance` 替换为相应的 `Bluemix-org` 和 `Bluemix-space` 头。[有关更多信息，请参阅 {{site.data.keyword.hscrypto}} API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     根据下表替换示例请求中的变量。
     <table>

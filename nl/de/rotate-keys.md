@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root keys, Rotate key, key rotation
 
@@ -24,9 +24,6 @@ subcollection: hs-crypto
 Sie können Rootschlüssel mit {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} bedarfsgesteuert turnusmäßig wechseln (Schlüsselrotation).
 {: shortdesc}
 
-Die Rotation von Masterschlüsseln wird gegenwärtig nicht unterstützt.
-{: important}
-
 Durch die Rotation des Rootschlüssels wird die Laufzeit des Schlüssels verkürzt und die Menge der durch den betreffenden Schlüssel geschützten Informationen wird begrenzt.   
 
 Die Schlüsselrotation unterstützt Sie bei der Einhaltung branchenspezifischer Vorgaben und dem Einsatz bewährter Verschlüsselungsverfahren. Informationen hierzu finden Sie in [Schlüsselrotation](/docs/services/key-protect/concepts/key-rotation.html).
@@ -35,23 +32,24 @@ Die Rotation ist nur für Rootschlüssel verfügbar.
 {: tip}
 
 ## Schlüsselrotation für Rootschlüssel mit der GUI
-{: #gui}
+{: #rotate-root-key-gui}
 
 Wenn Sie die Rotation von Rootschlüsseln über eine grafische Oberfläche bevorzugen, können Sie hierzu die {{site.data.keyword.hscrypto}}-GUI verwenden.
 
 [Nach dem Erstellen oder Importieren der vorhandenen Rootschlüssel in den Service](/docs/services/hs-crypto/create-root-keys.html) führen Sie die folgenden Schritte aus, um eine Schlüsselrotation durchzuführen:
 
 1. [Melden Sie sich bei der {{site.data.keyword.cloud_notm}}-Konsole ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/){: new_window} an.
-2. Wählen Sie in Ihrem {{site.data.keyword.cloud_notm}}-Dashboard die bereitgestellte Instanz von {{site.data.keyword.hscrypto}} aus.
-3. Verwenden Sie die Tabelle **Schlüssel** zum Durchsuchen der Schlüssel in Ihrem Service.
-4. Klicken Sie auf das Symbol ⋮, um eine Liste der Optionen für den Schlüssel zu öffnen, für den Sie eine Rotation durchführen möchten.
-5. Klicken Sie im Auswahlmenü auf **Schlüsselrotation** und bestätigen Sie die Rotation in der nächsten Anzeige.
+2. Rufen Sie **Menü** &gt; **Ressourcenliste** auf, um eine Liste Ihrer Ressourcen anzuzeigen. 
+3. Wählen Sie in Ihrer {{site.data.keyword.cloud_notm}}-Ressourcenliste die bereitgestellte Instanz von {{site.data.keyword.hscrypto}} aus. 
+4. Verwenden Sie die Tabelle **Schlüssel** auf der Anwendungsdetailseite, um die Schlüssel in Ihrem Service zu durchsuchen. 
+5. Klicken Sie auf das Symbol ⋮, um eine Liste der Optionen für den Schlüssel zu öffnen, für den Sie eine Rotation durchführen möchten.
+6. Klicken Sie im Auswahlmenü auf **Schlüsselrotation** und bestätigen Sie die Rotation in der nächsten Anzeige.
 
 Wenn Sie den Rootschlüssel zu Anfang importiert haben, müssen Sie neue, mit Base64-Codierung verschlüsselte Schlüsselinformationen für die Schlüsselrotation angeben. Weitere Informationen finden Sie in [Rootschlüssel über die GUI importieren](/docs/services/hs-crypto/import-root-keys.html#gui).
 {: tip}
 
 ## Schlüsselrotation für Rootschlüssel mit der API
-{: #api}
+{: #rotate-root-kay-api}
 
 [Nach der Angabe eines Rootschlüssels im Service](/docs/services/hs-crypto/create-root-keys.html) können Sie eine Rotation für den Schlüssel durchführen, indem Sie einen `POST`-Aufruf an den folgenden Endpunkt vornehmen.
 
@@ -109,7 +107,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rota
           <p>Geben Sie für die Rotation eines Schlüssels, der ursprünglich in {{site.data.keyword.hscrypto}} generiert wurde, das Attribut <code>payload</code> nicht an und übergeben Sie einen leeren Entitätshauptteil für die Anforderung. Geben Sie für die Rotation eines importierten Schlüssels Schlüsselinformationen an, die die folgenden Voraussetzungen erfüllen:</p>
           <p>
             <ul>
-              <li>Der Schlüssel muss 256, 384 oder 512 Bit groß sein.</li>
+              <li>Der Schlüssel muss 128, 192 oder 256 Bit groß sein. </li>
               <li>Die Byte der Daten (z. B. 32 Byte oder 256 Bit) müssen mit der base64-Codierung verschlüsselt werden.</li>
             </ul>
           </p>

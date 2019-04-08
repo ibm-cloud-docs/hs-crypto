@@ -74,7 +74,7 @@ La seguente tabella elenca le azioni che generano un evento:
 </table>
 
 ## Dove visualizzare gli eventi
-{: #gui}
+{: #view-events-gui}
 
 <!-- Option 2: Add the following sentence if your service sends events to the account domain. -->
 

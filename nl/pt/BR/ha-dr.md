@@ -30,7 +30,7 @@ Use esta página para saber mais sobre as estratégias de disponibilidade e recu
 ## Locais, arrendamento e disponibilidade
 {: #availability}
 
-O {{site.data.keyword.hscrypto}}  é um serviço regional de diversos locatários.
+<!-- {{site.data.keyword.hscrypto}} is a multi-tenant, regional service. -->
 
 É possível criar recursos do {{site.data.keyword.hscrypto}} em uma das [regiões suportadas do {{site.data.keyword.cloud_notm}}](/docs/services/hs-crypto/regions.html), que representam a área geográfica na qual suas solicitações do {{site.data.keyword.hscrypto}} são manipuladas e processadas. Cada região do {{site.data.keyword.cloud_notm}} contém [múltiplas zonas de disponibilidade ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2018/06/expansion-availability-zones-global-regions/) para atender aos requisitos de acesso local, baixa latência e segurança da região.
 

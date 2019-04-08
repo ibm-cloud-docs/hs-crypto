@@ -30,7 +30,7 @@ Utilizza questa pagina per ulteriori informazioni sulla disponibilità e sulle s
 ## Ubicazioni, locazione e disponibilità
 {: #availability}
 
-{{site.data.keyword.hscrypto}} è un servizio regionale a più tenant.
+<!-- {{site.data.keyword.hscrypto}} is a multi-tenant, regional service. -->
 
 Puoi creare risorse {{site.data.keyword.hscrypto}} in una delle [regioni {{site.data.keyword.cloud_notm}}](/docs/services/hs-crypto/regions.html) supportate, che rappresentano l'area geografica in cui vengono gestite ed elaborate le tue richieste {{site.data.keyword.hscrypto}}. Ogni regione {{site.data.keyword.cloud_notm}} contiene [più zone di disponibilità ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2018/06/expansion-availability-zones-global-regions/) per soddisfare i requisiti di accesso locale, bassa latenza e sicurezza per la regione.
 

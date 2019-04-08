@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2018, 2019
@@ -26,7 +26,7 @@ subcollection: hs-crypto
 此頁面帶領您查看數個情境，使用[存取管理 API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://iampap.ng.bluemix.net/v1/docs/#/Policies/post_v1_policies){: new_window} 管理加密金鑰的存取權。
 
 ## 在開始之前
-{: #prereqs}
+{: #prereqs-manage-api}
 
 若要使用 API，請產生鑑別認證（例如[存取記號](/docs/services/hs-crypto/access-api.html#retrieve-token)及[實例 ID](/docs/services/hs-crypto/access-api.html#retrieve-instance-ID)）。您也需要要管理其存取權的 {{site.data.keyword.hscrypto}} 金鑰 ID。
 
@@ -36,7 +36,7 @@ subcollection: hs-crypto
 ### 擷取帳戶 ID
 {: #retrieve-account-ID}
 
-在您擷取認證之後，請擷取包含 {{site.data.keyword.hscrypto}} 服務實例的帳戶 ID 來判定新存取原則的存取範圍。
+在您擷取認證之後，請擷取包含 {{site.data.keyword.hscrypto}}  實例（簡稱為服務實例）的帳戶 ID 來判定新存取原則的存取範圍。
 
 若要擷取帳戶 ID，請完成下列步驟：
 
@@ -54,11 +54,7 @@ subcollection: hs-crypto
     Authenticating...
     OK
 
-    
-
     Select an account (or press enter to skip):
-
-    
 
     1. sample-account (b6hnh3560ehqjkf89s4ba06i367801e)
     Enter a number> 1
@@ -82,8 +78,7 @@ subcollection: hs-crypto
 
 若要擷取使用者 ID，請完成下列步驟：
 
-1. [要求使用者提供 IAM 記號](/docs/services/hs-crypto/access-api.html#retrieve-token)。
-    IAM 記號結構如下：
+1. [要求使用者提供 IAM 記號](/docs/services/hs-crypto/access-api.html#retrieve-token)。IAM 記號結構如下：
 
     ```sh
     IAM token: Bearer <value>.<value>.<value>
@@ -154,10 +149,10 @@ curl -X POST \
 ```
 {: codeblock}
 
-如果您需要管理所指定 Cloud Foundry 組織及空間內金鑰的存取，請將 `serviceInstance` 取代為 `organizationId` 及 `spaceId`。若要進一步瞭解，請參閱[存取管理 API 參考資料文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}。
+<!-- If you need to manage access to keys within a specified Cloud Foundry org and space, replace `serviceInstance` with `organizationId` and `spaceId`. To learn more, see the [Access Management API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}.
 {: tip}
 
-在後續指令中，將 `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>` 及 `<key_ID>` 取代為適當值。
+Replace `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>`, and `<key_ID>` with the appropriate values. -->
 
 **選用項目：**確認已順利建立原則。
 

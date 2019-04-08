@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root key, data encryption key, Hyper Protect Crypto Services
 
@@ -28,11 +28,11 @@ subcollection: hs-crypto
 若要瞭解金鑰包裝如何協助您控制雲端中靜置資料的安全，請參閱[封套加密](/docs/services/key-protect/concepts/envelope-encryption.html)。
 
 ## 使用 API 包裝金鑰
-{: #api}
+{: #wrap-keys-api}
 
 您可以使用您在 {{site.data.keyword.hscrypto}} 中管理的根金鑰來保護指定的資料加密金鑰 (DEK)。
 
-**重要事項：**當您提供用於包裝的根金鑰時，請確定根金鑰是 256、384 或 512 位元，以讓 wrap 呼叫成功。如果您在服務中建立根金鑰，{{site.data.keyword.hscrypto}} 會從其 HSM 產生 AES-GCM 演算法所支援的 256 位元金鑰。
+當您提供用於包裝的根金鑰時，請確定根金鑰是 128、192 或 256 位元，以讓 wrap 呼叫成功。如果您在服務中建立根金鑰，{{site.data.keyword.hscrypto}} 會從其 HSM 產生 AES-CBC 演算法所支援的 256 位元金鑰。
 
 [在服務中指定根金鑰之後](/docs/services/hs-crypto/create-root-keys.html)，即可對下列端點發出 `POST` 呼叫，以使用進階加密來包裝 DEK。
 
@@ -66,9 +66,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
     }'
     ```
     {: codeblock}
-
-    若要在您帳戶的 Cloud Foundry 組織及空間內使用金鑰，請將 `Bluemix-Instance` 取代為適當的 `Bluemix-org` 及 `Bluemix-space` 標頭。如需相關資訊，請參閱 [{{site.data.keyword.hscrypto}} API 參考資料文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     根據下表取代範例要求中的變數。
 

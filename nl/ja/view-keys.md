@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: view keys, key configuration, key type
 
@@ -21,27 +21,28 @@ subcollection: hs-crypto
 {: #view-keys}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} により、
-暗号鍵を表示、管理、監査する集中システムが提供されます。 鍵と鍵へのアクセス制限を監査して、リソースのセキュリティーを確保します。
+暗号鍵を表示、管理、監査する集中システムが提供されます。鍵と鍵へのアクセス制限を監査して、リソースのセキュリティーを確保します。
 {: shortdesc}
 
 定期的に鍵の構成を監査するために、以下を行います。
 
 - いつ鍵が作成されたかを調べ、鍵をローテートする時期かどうかを判断します。
-- [{{site.data.keyword.cloudaccesstrailshort}} を使用して、{{site.data.keyword.hscrypto}} への API 呼び出しをモニターします](/docs/services/cloud-activity-tracker/tutorials/manage_events_cli.html)。
+- {{site.data.keyword.cloudaccesstrailshort}} を使用して、{{site.data.keyword.hscrypto}} への API 呼び出しをモニターします。
 - どのユーザーが鍵へのアクセス権限を持っているか、アクセス権限のレベルは適切かどうかを検査します。
 
 リソースへのアクセス権限の監査について詳しくは、[Cloud IAM を使用したユーザーのアクセス権限の管理](/docs/services/hs-crypto/manage-access.html)を参照してください。
 
 ## GUI を使用した鍵の表示
-{: #gui}
+{: #view-key-gui}
 
 グラフィカル・インターフェースを使用してサービス内の鍵を検査したい場合は、{{site.data.keyword.hscrypto}} ダッシュボードを使用できます。
 
 [サービス内に鍵を作成するか、既存の鍵をインポートした後](/docs/services/hs-crypto/create-root-keys.html)、以下の手順を実行して、鍵を表示します。
 
 1. [{{site.data.keyword.cloud_notm}} コンソール ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") にログインします](https://cloud.ibm.com/)。
-2. {{site.data.keyword.cloud_notm}} ダッシュボードで、{{site.data.keyword.hscrypto}} のプロビジョン済みインスタンスを選択します。
-3. {{site.data.keyword.hscrypto}} ダッシュボードで、以下のような鍵の一般的な特性を参照します。
+2. **「メニュー」**&gt;**「リソース・リスト」**に移動し、リソースのリストを表示します。
+3. {{site.data.keyword.cloud_notm}} リソース・リストで、{{site.data.keyword.hscrypto}} のプロビジョン済みインスタンスを選択します。
+3. アプリケーションの詳細ページで、以下のような鍵の一般的な特性を参照します。
 
     <table>
       <tr>
@@ -54,7 +55,7 @@ subcollection: hs-crypto
       </tr>
       <tr>
         <td>ID</td>
-        <td>{{site.data.keyword.hscrypto}} サービスによって鍵に割り当てられた固有の鍵 ID。 この ID 値を使用して、[{{site.data.keyword.hscrypto}} API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/apidocs/hs-crypto)でサービスを呼び出すことができます。</td>
+        <td>{{site.data.keyword.hscrypto}} サービスによって鍵に割り当てられた固有の鍵 ID。 この ID 値を使用して、[{{site.data.keyword.hscrypto}} API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/hs-crypto)でサービスを呼び出すことができます。</td>
       </tr>
       <tr>
         <td>状態</td>
@@ -68,7 +69,7 @@ subcollection: hs-crypto
     </table>
 
 ## API を使用した鍵の表示
-{: #api}
+{: #view-key-api}
 
 {{site.data.keyword.hscrypto}} API を使用して、鍵の内容を取得できます。
 
@@ -95,9 +96,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     -H 'correlation-id: <correlation_ID>' \
     ```
     {: codeblock}
-
-    ご使用のアカウントの Cloud Foundry 組織およびスペース内で鍵の処理を行うには、`Bluemix-Instance` を、適切な `Bluemix-org` および `Bluemix-space` のヘッダーに置き換えます。 [詳しくは、{{site.data.keyword.hscrypto}} API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} を参照してください。
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     次の表に従って、例の要求内の変数を置き換えてください。
     <table>
@@ -206,14 +206,14 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
       <td><p><varname>offset</varname></p></td>
       <td>
         <p>オプション: スキップする鍵の数。</p>
-        <p>例えば、インスタンスに 50 個の鍵があって、26 個から 50 個までの鍵をリストしたい場合、<code>../keys?offset=25</code> を使用します。 <code>offset</code> を <code>limit</code> と組み合わせて、使用可能なリソースの一部を取り出すこともできます。</p>
+        <p>例えば、インスタンスに 50 個の鍵があって、26 個から 50 個までの鍵をリストしたい場合、<code>../keys?offset=25</code> を使用します。<code>offset</code> を <code>limit</code> と組み合わせて、使用可能なリソースの一部を取り出すこともできます。</p>
       </td>
     </tr>
     <tr>
       <td><p><varname>limit</varname></p></td>
       <td>
         <p>オプション: 取得する鍵の数。</p>
-        <p>例えば、インスタンスに 100 個の鍵があって、10 個のみの鍵をリストしたい場合、<code>../keys?limit=10</code> を使用します。 <code>limit</code> の最大値は 5000 です。</p>
+        <p>例えば、インスタンスに 100 個の鍵があって、10 個のみの鍵をリストしたい場合、<code>../keys?limit=10</code> を使用します。<code>limit</code> の最大値は 5000 です。</p>
       </td>
     </tr>
     <caption style="caption-side:bottom;">表 2. <code>limit</code> 変数および <code>offset</code> 変数についての説明</caption>
@@ -338,4 +338,4 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {:screen}
 
-    使用可能なパラメーターについて詳しくは、{{site.data.keyword.hscrypto}} [REST API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} を参照してください。
+    使用可能なパラメーターについて詳しくは、{{site.data.keyword.hscrypto}} [REST API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/hs-crypto){: new_window} を参照してください。

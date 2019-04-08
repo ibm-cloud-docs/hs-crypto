@@ -30,7 +30,7 @@ Auf dieser Seite erfahren Sie mehr über Hochverfügbarkeit und Disaster-Recover
 ## Standorte, Tenancy und Verfügbarkeit
 {: #availability}
 
-{{site.data.keyword.hscrypto}} ist ein regionaler Multi-Tenant-Service.
+<!-- {{site.data.keyword.hscrypto}} is a multi-tenant, regional service. -->
 
 Sie können {{site.data.keyword.hscrypto}}-Ressourcen in einer der unterstützten [{{site.data.keyword.cloud_notm}}-Regionen](/docs/services/hs-crypto/regions.html) erstellen, die den geografischen Bereich darstellen, in dem Ihre {{site.data.keyword.hscrypto}}-Anfragen abgewickelt und verarbeitet werden. Jede {{site.data.keyword.cloud_notm}}-Region enthält [mehrere Verfügbarkeitszonen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2018/06/expansion-availability-zones-global-regions/), um die Anforderungen an die Sicherheit, geringe Latenz und Sicherheit für die Region zu erfüllen.
 

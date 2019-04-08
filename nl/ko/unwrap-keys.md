@@ -26,7 +26,7 @@ subcollection: hs-crypto
 키 랩핑을 통해 클라우드에서 저장 데이터의 보안을 제어하는 방법을 알아보려면 [엔벨로프 암호화](/docs/services/key-protect/concepts/envelope-encryption.html)를 참조하십시오.
 
 ## API를 사용하여 키 랩핑 해제
-{: #api}
+{: #unwrap-key-api}
 
 [서비스에 대한 랩핑 호출을 작성하면](/docs/services/hs-crypto/wrap-keys.html) 다음 엔드포인트에 대한 `POST` 호출을 작성하여 해당 컨텐츠에 액세스하도록 지정된 데이터 암호화 키(DEK)를 랩핑 해제할 수 있습니다.
 
@@ -60,9 +60,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=unwr
     }'
     ```
     {: codeblock}
-
-    계정에서 Cloud Foundry 조직과 영역 내의 키에 대한 작업을 수행하려면 `Bluemix-Instance`를 적절한 `Bluemix-org` 및 `Bluemix-space` 헤더로 바꾸십시오. [자세한 정보는 {{site.data.keyword.hscrypto}} API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     다음 표에 따라 예제 요청의 변수를 대체하십시오.
     <table>

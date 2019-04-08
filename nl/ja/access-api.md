@@ -104,7 +104,7 @@ API で作業するには、サービス資格情報と認証資格情報を生�
 ## 接続情報の取得
 {: #retrieve-connection-info}
 
-いずれかの {{site.data.keyword.keymanagementserviceshort}} API を呼び出す前に、まず**接続情報の取得** API を呼び出して接続情報を取得します。詳しくは、[the {{site.data.keyword.hscrypto}} API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} を参照してください。
+いずれかの {{site.data.keyword.keymanagementserviceshort}} API を呼び出す前に、まず**接続情報の取得** API を呼び出して接続情報を取得します。 詳しくは、[the {{site.data.keyword.hscrypto}} API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/hs-crypto){: new_window} を参照してください。
 
 ## API 要求の作成
 {: #form-api-request}
@@ -123,6 +123,8 @@ curl -X GET \
 {: codeblock}
 
 ### 次に行うこと
+{: #api-next}
 
-- プログラムでの鍵の管理について詳しくは、[{{site.data.keyword.hscrypto}} API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} を確認してください。
-- {{site.data.keyword.hscrypto}} に保管されている鍵を使用してデータを暗号化および暗号化解除する方法の例は、[GitHub にあるサンプル・アプリで確認してください ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}。
+プログラムでの鍵の管理について詳しくは、[{{site.data.keyword.hscrypto}} API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/hs-crypto){: new_window} を確認してください。
+
+<!-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}. -->

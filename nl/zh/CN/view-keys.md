@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: view keys, key configuration, key type
 
@@ -26,21 +26,22 @@ subcollection: hs-crypto
 定期审计密钥配置：
 
 - 检查创建密钥的时间并确定是否需要对密钥进行循环。
-- [使用 {{site.data.keyword.cloudaccesstrailshort}} 监视对 {{site.data.keyword.hscrypto}} 的 API 调用](/docs/services/cloud-activity-tracker/tutorials/manage_events_cli.html)。
+- 使用 {{site.data.keyword.cloudaccesstrailshort}} 监视对 {{site.data.keyword.hscrypto}} 的 API 调用。
 - 检查哪些用户对密钥具有访问权以及访问级别是否正确。
 
 有关审计对资源的访问权的更多信息，请参阅[使用 Cloud IAM 管理用户访问权](/docs/services/hs-crypto/manage-access.html)。
 
 ## 使用 GUI 查看密钥
-{: #gui}
+{: #view-key-gui}
 
 如果想要使用图形界面来检查服务中的密钥，那么可以使用 {{site.data.keyword.hscrypto}} 仪表板。
 
 [创建密钥或将现有密钥导入服务后](/docs/services/hs-crypto/create-root-keys.html)，请完成以下步骤以查看密钥。
 
 1. [登录到 {{site.data.keyword.cloud_notm}} 控制台 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/)。
-2. 从 {{site.data.keyword.cloud_notm}} 仪表板，选择 {{site.data.keyword.hscrypto}} 的已供应实例。
-3. 在 {{site.data.keyword.hscrypto}} 仪表板中，浏览密钥的常规特征：
+2. 转至**菜单** &gt; **资源列表**，以查看您的资源列表。
+3. 从 {{site.data.keyword.cloud_notm}} 资源列表，选择 {{site.data.keyword.hscrypto}} 的已供应实例。
+3. 在应用程序详细信息页面中，浏览密钥的常规特征：
 
     <table>
       <tr>
@@ -53,7 +54,7 @@ subcollection: hs-crypto
       </tr>
       <tr>
         <td>标识</td>
-        <td>{{site.data.keyword.hscrypto}} 服务指定给密钥的唯一密钥标识。可以使用标识值通过 [{{site.data.keyword.hscrypto}} API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/apidocs/hs-crypto) 来调用服务。</td>
+        <td>{{site.data.keyword.hscrypto}} 服务指定给密钥的唯一密钥标识。可以使用标识值通过 [{{site.data.keyword.hscrypto}} API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/hs-crypto) 来调用服务。</td>
       </tr>
       <tr>
         <td>状态</td>
@@ -67,7 +68,7 @@ subcollection: hs-crypto
     </table>
 
 ## 使用 API 查看密钥
-{: #api}
+{: #view-key-api}
 
 您可以通过使用 {{site.data.keyword.hscrypto}} API 来检索密钥的内容。
 
@@ -95,9 +96,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     -H 'correlation-id: <correlation_ID>' \
     ```
     {: codeblock}
-
-    要使用帐户中 Cloud Foundry 组织和空间内的密钥，请将 `Bluemix-Instance` 替换为相应的 `Bluemix-org` 和 `Bluemix-space` 头。[有关更多信息，请参阅 {{site.data.keyword.hscrypto}} API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     根据下表替换示例请求中的变量。
     <table>
@@ -338,4 +338,4 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {:screen}
 
-    有关可用参数的详细描述，请参阅 {{site.data.keyword.hscrypto}} [REST API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
+    有关可用参数的详细描述，请参阅 {{site.data.keyword.hscrypto}} [REST API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/hs-crypto){: new_window}。

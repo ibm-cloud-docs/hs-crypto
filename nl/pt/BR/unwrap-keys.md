@@ -26,7 +26,7 @@ subcollection: hs-crypto
 Para saber como a quebra de chave ajuda a controlar a segurança de dados em descanso na nuvem, consulte [Criptografia de envelope](/docs/services/key-protect/concepts/envelope-encryption.html).
 
 ## Desagrupando chaves usando a API
-{: #api}
+{: #unwrap-key-api}
 
 [Após você fazer uma chamada de agrupamento para o serviço](/docs/services/hs-crypto/wrap-keys.html), poderá desagrupar uma chave de criptografia de dados (DEK) especificada para acessar os seus conteúdos fazendo uma chamada `POST` para o terminal a seguir.
 
@@ -59,9 +59,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=unwr
     }'
     ```
     {: codeblock}
-
-    Para trabalhar com chaves dentro de uma organização e um espaço do Cloud Foundry em sua conta, substitua `Bluemix-Instance` pelos cabeçalhos `Bluemix-org` e `Bluemix-space` apropriados. [Para obter mais informações, consulte o doc de referência da API do {{site.data.keyword.hscrypto}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Substitua as variáveis na solicitação de exemplo de acordo com a tabela a seguir.
     <table>

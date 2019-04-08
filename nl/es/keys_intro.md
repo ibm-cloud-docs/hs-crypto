@@ -24,27 +24,30 @@ subcollection: hs-crypto
 {:shortdesc}
 
 ## Claves raíz
+{: #introduce-root-keys}
 
 Las *claves raíz* son claves que se utilizan para envolver otras claves y que gestiona en su totalidad con {{site.data.keyword.hscrypto}}. Una clave raíz sirve para proteger otras claves criptográficas con cifrado avanzado. Para obtener más información, consulte <a href="/docs/services/key-protect/concepts/envelope-encryption.html">Cifrado de sobre</a>.
 
 Puede gestionar claves raíz siguiendo los pasos de [Gestionar las claves](/docs/services/hs-crypto/index.html#manage-keys).
 
 ## Claves estándar
+{: #introduce-standard-keys}
 
 Las *claves estándar* son claves simétricas que se utilizan para la criptografía. Puede utilizar una clave estándar para cifrar y descifrar datos directamente.
 
 Puede gestionar claves estándar siguiendo los pasos de [Gestionar las claves](/docs/services/hs-crypto/index.html#manage-keys).
 
 ## Claves maestras
+{: #introduce-master-keys}
 
-Las *claves maestras* se utilizan para cifrar la instancia criptográfica (HSM) que procesa de manera criptográfica y gestiona las claves raíz y las claves estándar. Con la clave maestra, es propietario de la raíz de confianza que cifra toda la cadena de claves, incluyendo las claves raíz y las claves estándar.
+Las *claves maestras* se utilizan para cifrar la instancia de servicio para el almacén de claves. Con la clave maestra, es propietario de la raíz de confianza que cifra toda la cadena de claves, incluyendo las claves raíz y las claves estándar.
 
-Debido al canal seguro de extremo a extremo con la instancia criptográfica (HSM), únicamente los administradores de la instancia de {{site.data.keyword.hscrypto}} pueden establecer y gestionar la clave maestra. Tenga en cuenta que IBM no realiza copias de seguridad ni toca la clave maestra, y no tiene ninguna manera de copiarla ni restaurarla en una máquina o centro de datos diferente.
+Debido al canal seguro de extremo a extremo establecido para la instancia de servicio, únicamente los administradores de la instancia de servicio pueden establecer y gestionar la clave maestra. Tenga en cuenta que IBM no realiza copias de seguridad ni toca la clave maestra, y no tiene ninguna manera de copiarla ni restaurarla en una máquina o centro de datos diferente.
 
-Una instancia criptográfica (HSM) solo puede tener una clave maestra. Si suprime la clave maestra de la instancia de
-{{site.data.keyword.hscrypto}}, puede destruir criptográficamente de forma efectiva todos los datos que se han cifrado con las claves gestionadas en el servicio.
+Una instancia de servicio solo puede tener una clave maestra. Si suprime la clave maestra de la instancia de
+servicio, puede destruir criptográficamente de forma efectiva todos los datos que se han cifrado con las claves gestionadas en el servicio.
 
-Puede gestionar claves maestras con la [Inicialización de instancias criptográficas para proteger el almacén de claves](/docs/services/hs-crypto/initialize_hsm.html).
+Puede gestionar claves maestras con la [Inicialización de instancias de servicio para proteger el almacén de claves](/docs/services/hs-crypto/initialize_hsm.html).
 
 No se admite la rotación de clave maestra en la etapa actual.
 {:important}

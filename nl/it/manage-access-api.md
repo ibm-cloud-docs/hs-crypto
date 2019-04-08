@@ -26,7 +26,7 @@ Con {{site.data.keyword.iamlong}}, puoi abilitare il controllo dell'accesso gran
 Questa pagina ti guida attraverso gli scenari per la gestione dell'accesso alle tue chiavi di crittografia con [Access Management API ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://iampap.ng.bluemix.net/v1/docs/#/Policies/post_v1_policies){: new_window}.
 
 ## Prima di cominciare
-{: #prereqs}
+{: #prereqs-manage-api}
 
 Per lavorare con l'API, genera le tue credenziali di autenticazione, come il [token di accesso](/docs/services/hs-crypto/access-api.html#retrieve-token) e l'[ID istanza](/docs/services/hs-crypto/access-api.html#retrieve-instance-ID). Ti serve anche l'ID della chiave {{site.data.keyword.hscrypto}} per cui vuoi gestire l'accesso.
 
@@ -36,7 +36,7 @@ Per informazioni sulla visualizzazione degli ID chiave, vedi [Visualizzazione de
 ### Richiamo del tuo ID account
 {: #retrieve-account-ID}
 
-Dopo aver richiamato le tue credenziali, determina l'ambito di accesso per la tua nuova politica di accesso richiamando l'ID dell'account che contiene la tua istanza del servizio {{site.data.keyword.hscrypto}}.
+Dopo aver richiamato le tue credenziali, determina l'ambito di accesso per la tua nuova politica di accesso richiamando l'ID dell'account che contiene la tua istanza {{site.data.keyword.hscrypto}} (istanza del servizio in breve).
 
 Per richiamare il tuo ID account, completa la seguente procedura:
 
@@ -151,10 +151,10 @@ curl -X POST \
 ```
 {: codeblock}
 
-Se hai bisogno di gestire l'accesso alle chiavi in un'organizzazione e uno spazio Cloud Foundry specifici, sostituisci `serviceInstance` con `organizationId` e `spaceId`. Per ulteriori informazioni, vedi la [documentazione di riferimento di Access Management API ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}.
+<!-- If you need to manage access to keys within a specified Cloud Foundry org and space, replace `serviceInstance` with `organizationId` and `spaceId`. To learn more, see the [Access Management API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}.
 {: tip}
 
-Sostituisci `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>` e `<key_ID>` con i valori appropriati.
+Replace `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>`, and `<key_ID>` with the appropriate values. -->
 
 **Facoltativo:** verifica che la politica sia stata creata correttamente.
 

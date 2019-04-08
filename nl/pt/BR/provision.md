@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-21"
+lastupdated: "2019-03-21"
 
 Keywords: provision, instance of Hyper Protect Crypto Services
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
+{:important: .important}
 {:gif: data-image-type='gif'}
 
 # Fornecendo o serviço
@@ -25,7 +26,7 @@ subcollection: hs-crypto
 {: shortdesc}
 
 ## Provisionando por meio do console do {{site.data.keyword.cloud_notm}}
-{: #gui}
+{: #provision-gui}
 
 Para provisionar uma instância do {{site.data.keyword.hscrypto}} por meio do console do {{site.data.keyword.cloud_notm}}, conclua as etapas a seguir:
 
@@ -33,8 +34,11 @@ Para provisionar uma instância do {{site.data.keyword.hscrypto}} por meio do co
 2. Clique em **Catálogo** para visualizar a lista de serviços que estão disponíveis no {{site.data.keyword.cloud_notm}}.
 3. Na área de janela de navegação Todas as categorias, clique na categoria **Segurança e identidade**.
 4. Na lista de serviços, clique no azulejo **{{site.data.keyword.hscrypto}}**.
-5. Selecione um plano de serviço e clique em **Criar** para provisionar uma instância do
-{{site.data.keyword.hscrypto}} na conta, região e grupo de recursos no qual você efetuou login.
+5. **Opcional**: no campo **Tags**, inclua tags para organizar os seus recursos. Se as suas tags estiverem relacionadas ao faturamento, considere escrever tags como pares de chave:valor para ajudar a agrupar tags relacionadas, como `costctr:124`. Para obter mais informações sobre tags, consulte [Trabalhando com tags](/docs/resources?topic=resources-tag#tag).
+6. Sob **Número de unidades de criptografia**, selecione o número de unidades de criptografia que atenda às suas necessidades de desempenho.
+
+  Uma instância de serviço suporta até seis unidades de criptografia. Em um ambiente de produção, é recomendável selecionar pelo menos duas unidades de criptografia para ativar a alta disponibilidade. Se você selecionar três ou mais unidades de criptografia, essas unidades de criptografia serão distribuídas entre três zonas de disponibilidade suportadas na região selecionada. {: important}
+7. Clique em **Criar** para provisionar uma instância do {{site.data.keyword.hscrypto}} na conta, na região e no grupo de recursos em que você efetuou login.
 
 ![Fornecendo o serviço](image/provisioning.gif "Fornecendo o serviço")
 {: gif}
@@ -42,7 +46,7 @@ Para provisionar uma instância do {{site.data.keyword.hscrypto}} por meio do co
 *Figura 1. Fornecendo o serviço*
 
 <!-- ## Provisioning from the {{site.data.keyword.cloud_notm}} CLI
-{: #cli}
+{: #provision-cli}
 
 To provision an instance of {{site.data.keyword.hscrypto}} using the {{site.data.keyword.cloud_notm}} CLI, complete the following steps:
 
@@ -139,9 +143,9 @@ To manage access to your encryption keys with [Cloud Foundry roles](/docs/iam/cf
     ibmcloud service list
     ```
     {: pre}
+-->
 
+### O que vem a seguir
+{: #provision-next}
 
-### What's next
-
-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}.
-- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.-->
+Descubra mais sobre como gerenciar programaticamente as suas chaves, [verifique o doc de referência da API do {{site.data.keyword.hscrypto}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/apidocs/hs-crypto){: new_window}.

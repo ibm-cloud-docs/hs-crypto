@@ -89,11 +89,12 @@ subcollection: hs-crypto
   <caption style="caption-side:bottom;">表 1. ID およびアクセス役割が {{site.data.keyword.hscrypto}} 許可にどのようにマップされるのかについての説明</caption>
 </table>
 
-**注**: Cloud IAM ユーザー役割は、サービス・レベルまたはサービス・インスタンス・レベルでアクセス権限を提供します。 [Cloud Foundry 役割](/docs/iam/cfaccess.html)は、これとは別個のもので、組織レベルまたはスペース・レベルでアクセス権限を定義します。
+<!-- **Note**: Cloud IAM user roles provide access at the service or service instance level. [Cloud Foundry roles](/docs/iam/cfaccess.html) are separate and define access at the organization or the space level. -->
 
 {{site.data.keyword.iamshort}} について詳しくは、[ユーザーの役割と許可](/docs/iam/users_roles.html#userroles)を確認してください。
 
 ### 次に行うこと
+{: #manage-access-next}
 
 アカウントの所有者および管理者は、ユーザーを招待し、ユーザーが実行できる {{site.data.keyword.hscrypto}} アクションに対応するサービス・ポリシーを設定できます。
 

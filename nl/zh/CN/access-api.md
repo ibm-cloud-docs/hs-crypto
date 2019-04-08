@@ -104,7 +104,7 @@ subcollection: hs-crypto
 ## 检索连接信息
 {: #retrieve-connection-info}
 
-在调用任何 {{site.data.keyword.keymanagementserviceshort}} API 之前，请先调用**检索连接信息** API 以检索连接信息。有关更多信息，请参阅 [{{site.data.keyword.hscrypto}} API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
+在调用任何 {{site.data.keyword.keymanagementserviceshort}} API 之前，请先调用**检索连接信息** API 以检索连接信息。有关更多信息，请参阅 [{{site.data.keyword.hscrypto}} API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/hs-crypto){: new_window}。
 
 ## 构成 API 请求
 {: #form-api-request}
@@ -123,6 +123,8 @@ curl -X GET \
 {: codeblock}
 
 ### 后续工作
+{: #api-next}
 
-- 要了解有关以编程方式管理密钥的更多信息，请[查看 {{site.data.keyword.hscrypto}} API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
-- 要查看 {{site.data.keyword.hscrypto}} 中存储的密钥如何对数据进行加密和解密的示例，请[查看 GitHub 中的样本应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}。
+要了解有关以编程方式管理密钥的更多信息，请[查看 {{site.data.keyword.hscrypto}} API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/hs-crypto){: new_window}。
+
+<!-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}. -->

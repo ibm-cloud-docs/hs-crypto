@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root key, data encryption key, Hyper Protect Crypto Services
 
@@ -28,13 +28,12 @@ Ao agrupar uma chave de criptografia de dados (DEK) com uma chave raiz, o {{site
 Para saber como a quebra de chave ajuda a controlar a segurança de dados em descanso na nuvem, consulte [Criptografia de envelope](/docs/services/key-protect/concepts/envelope-encryption.html).
 
 ## Agrupando chaves usando a API
-{: #api}
+{: #wrap-keys-api}
 
 É possível proteger uma chave de criptografia de dados especificada (DEK) com uma chave raiz que você gerencia em {{site.data.keyword.hscrypto}}.
 
-
-**Importante:** ao fornecer uma chave raiz para agrupamento, assegure-se de que a chave raiz seja 256, 384 ou 512 bits para que a chamada de agrupamento possa ser bem-sucedida. Se você criar uma chave raiz no serviço, o {{site.data.keyword.hscrypto}}
- gerará uma chave de 256 bits de seus HSMs, suportada pelo algoritmo AES-GCM.
+Ao fornecer uma chave raiz para agrupamento, assegure-se de que a chave raiz seja de 128, 192 ou 256 bits para que a chamada de agrupamento possa ser bem-sucedida. Se você criar uma chave raiz no serviço, o {{site.data.keyword.hscrypto}}
+gerará uma chave de 256 bits por meio de seus HSMs, suportada pelo algoritmo AES-CBC.
 
 [Após você designar uma chave raiz no serviço](/docs/services/hs-crypto/create-root-keys.html), poderá agrupar uma DEK com criptografia avançada fazendo uma chamada `POST` para o terminal a seguir.
 
@@ -68,10 +67,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
     }'
     ```
     {: codeblock}
-
-    Para trabalhar com chaves dentro de uma organização e um espaço do Cloud Foundry em sua conta, substitua `Bluemix-Instance` pelos cabeçalhos `Bluemix-org` e `Bluemix-space` apropriados. [Para obter mais informações, consulte o doc de referência da API do {{site.data.keyword.hscrypto}}
-![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Substitua as variáveis na solicitação de exemplo de acordo com a tabela a seguir.
 

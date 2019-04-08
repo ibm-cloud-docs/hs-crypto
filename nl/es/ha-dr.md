@@ -31,7 +31,7 @@ Utilice esta página para obtener más información sobre las estrategias de dis
 ## Ubicaciones, arrendamiento y disponibilidad
 {: #availability}
 
-{{site.data.keyword.hscrypto}} es un servicio regional multiarrendatario.
+<!-- {{site.data.keyword.hscrypto}} is a multi-tenant, regional service. -->
 
 Puede crear recursos de {{site.data.keyword.hscrypto}} en una de las [regiones de {{site.data.keyword.cloud_notm}}](/docs/services/hs-crypto/regions.html) admitidas, que representan la zona geográfica donde se pueden gestionar y procesar sus solicitudes de
 {{site.data.keyword.hscrypto}}. Cada región de {{site.data.keyword.cloud_notm}} contiene

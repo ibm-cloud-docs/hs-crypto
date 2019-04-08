@@ -26,7 +26,7 @@ Con {{site.data.keyword.iamlong}}, puede habilitar el control de acceso granular
 Esta página le guía a través de casos de ejemplo para gestionar el acceso a las claves de cifrado con la [API de gestión de accesos ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://iampap.ng.bluemix.net/v1/docs/#/Policies/post_v1_policies){: new_window}.
 
 ## Antes de empezar
-{: #prereqs}
+{: #prereqs-manage-api}
 
 Para trabajar con la API, genere las credenciales de autenticación, como la [señal de acceso](/docs/services/hs-crypto/access-api.html#retrieve-token) y el [ID de instancia](/docs/services/hs-crypto/access-api.html#retrieve-instance-ID). También necesita el ID de la clave de {{site.data.keyword.hscrypto}} para la que desea gestionar el acceso.
 
@@ -36,7 +36,7 @@ Para obtener más información sobre la visualización de ID de clave, consulte 
 ### Recuperación del ID de cuenta
 {: #retrieve-account-ID}
 
-Después de haber recuperado las credenciales, determine el ámbito de acceso de su nueva política de acceso recuperando el ID de la cuenta que contiene la instancia de servicio de {{site.data.keyword.hscrypto}}.
+Después de haber recuperado las credenciales, determine el ámbito de acceso de su nueva política de acceso recuperando el ID de la cuenta que contiene la instancia de {{site.data.keyword.hscrypto}} (instancia de servicio para abreviar).
 
 Para recuperar el ID de cuenta, siga estos pasos:
 
@@ -133,7 +133,7 @@ curl -X POST \
   -d '{
   "roles": [
     {
-      "id": "crn:v1:bluemix:public:iam::::role:<rol_IAM>"
+      "id": "crn:v1:bluemix:public:iam::::role:<IAM_role>"
     }
   ],
   "resources": [
@@ -150,17 +150,17 @@ curl -X POST \
 ```
 {: codeblock}
 
-Si necesita gestionar el acceso a claves dentro de un espacio y organización concretos de Cloud Foundry, sustituya `serviceInstance` con `organizationId` y `spaceId`. Para obtener más información, consulte el [documento de referencia de la API de gestión de acceso ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}.
+<!-- If you need to manage access to keys within a specified Cloud Foundry org and space, replace `serviceInstance` with `organizationId` and `spaceId`. To learn more, see the [Access Management API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}.
 {: tip}
 
-Sustituya `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>` y `<key_ID>` por los valores adecuados.
+Replace `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>`, and `<key_ID>` with the appropriate values. -->
 
 **Opcional:** Verifique que la política se ha creado satisfactoriamente.
 
 ```cURL
 curl -X GET \
-  https://iam.bluemix.net/acms/v1/scopes/a%2F<ID_cuenta>/users/<ID_usuario>/policies \
-  -H 'Authorization: Bearer <señal_IAM_admin>' \
+  https://iam.bluemix.net/acms/v1/scopes/a%2F<account_ID>/users/<user_ID>/policies \
+  -H 'Authorization: Bearer <Admin_IAM_token>' \
   -H 'Accept: application/json' \
 ```
 {: codeblock}

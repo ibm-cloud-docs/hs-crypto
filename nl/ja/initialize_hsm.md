@@ -18,58 +18,56 @@ subcollection: hs-crypto
 {:important: .important}
 {:tip: .tip}
 
-# Initializing service instances
+# サービス・インスタンスの初期化
 {: #initialize-hsm}
 
-Before using the {{site.data.keyword.hscrypto}} instance (service instance for short), you need to load master key registers using the Trusted Key Entry plug-in.
+{{site.data.keyword.hscrypto}} インスタンス (略してサービス・インスタンス) を使い始める前に、Trusted Key Entry プラグインを使用してマスター鍵レジスターをロードする必要があります。
 {:shortdesc}
 
-To initialize service instances, you need to load the master key with the Trusted Key Entry plug-in to your key storage, service instance first. The Trusted Key Entry plug-in allows you to load your master key values.
+サービス・インスタンスを初期化するには、まず Trusted Key Entry プラグインを使用してマスター鍵をサービス・インスタンスの鍵ストレージにロードする必要があります。この Trusted Key Entry プラグインを使用してマスター鍵の値をロードすることができます。
 
-For an introduction to service instance initialization and other concepts, see [Introduction to service instance initialization](/docs/services/hs-crypto/service_instance_concepts.html#introduce-service).
+サービス・インスタンスの初期化とその他の概念の概要については、[サービス・インスタンス初期化の概要](/docs/services/hs-crypto/service_instance_concepts.html#introduce-service)を参照してください。
 
-The following diagram gives you an overview of steps you need to take to initialize the service instance. Click each step on the diagram for detailed instructions.
+次の図は、サービス・インスタンスを初期化するために必要な手順の概要を示しています。詳細な手順については、図の各手順をクリックしてください。
 
-<img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="image/hsm_initialization_flow.png" width="750" alt="Click each step to get more details on the flow." style="width:750px;" />
+<img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="image/hsm_initialization_flow.png" width="750" alt="フローの詳細を確認するには、各手順をクリックしてください。" style="width:750px;" />
 <map name="home_map1" id="home_map1">
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Verify API endpoint" title="Verify API endpoint" shape="rect" coords="151, 20, 241, 78" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Set up CLI" title="Set up CLI" shape="rect" coords="276, 20, 365, 78" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" alt="Install TKE plugin" title="Install TKE plugin" shape="rect" coords="401, 20, 493, 78" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" alt="Set up local directory for key files" title="Set up local directory for key files" shape="rect" coords="528, 20, 619, 78" />
-
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units" alt="Display assigned crypto units" title="Display assigned crypto units" shape="rect" coords="148, 111, 241, 171" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units1" alt="Add crypto units" title="Add crypto units" shape="rect" coords="276, 111, 366, 171" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units2" alt="Remove crypto units" title="Remove crypto units" shape="rect" coords="402, 111, 493, 171" />
-
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step1-create-signature-keys" alt="Create one or more signature keys" title="Create signature keys" shape="rect" coords="149, 206, 242, 264" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Manage crypto unit administrators" title="Manage crypto unit administrators" shape="rect" coords="281, 206, 366, 264" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Add one or more administrators in the target crypto unit" title="Add crypto unit administrators" shape="rect" coords="242, 296, 312, 358" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step3-exit-imprint-mode" alt="Exit imprint mode in the target crypto unit" title="Exit imprint mode" shape="rect" coords="328, 301, 396, 359" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step4-create-master-key" alt="Create a set of master key parts to use" title="Create master key parts" shape="rect" coords="401, 208, 493, 266" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="Load master key registers" title="Load master key register" shape="rect" coords="525, 207, 620, 264" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="Load new master key registers" title="Load new master key register" shape="rect" coords="455, 297, 525, 358" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step6-commit-master-key" alt="Commit the new master key register" title="Commit the new master key register" shape="rect" coords="539, 297, 610, 358" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step7-activate-master-key" alt="Activate the master key" title="Activate master key register" shape="rect" coords="619, 297, 689, 358" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="API エンドポイントの検証" title="API エンドポイントの検証" shape="rect" coords="151, 20, 241, 78" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="CLI のセットアップ" title="CLI のセットアップ" shape="rect" coords="276, 20, 365, 78" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" alt="TKE プラグインのインストール" title="TKE プラグインのインストール" shape="rect" coords="401, 20, 493, 78" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" alt="鍵ファイル用のローカル・ディレクトリーのセットアップ" title="鍵ファイル用のローカル・ディレクトリーのセットアップ" shape="rect" coords="528, 20, 619, 78" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units" alt="割り当てられた暗号装置の表示" title="割り当てられた暗号装置の表示" shape="rect" coords="148, 111, 241, 171" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units1" alt="暗号装置の追加" title="暗号装置の追加" shape="rect" coords="276, 111, 366, 171" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units2" alt="暗号装置の削除" title="暗号装置の削除" shape="rect" coords="402, 111, 493, 171" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step1-create-signature-keys" alt="1 つ以上の署名鍵の作成" title="署名鍵の作成" shape="rect" coords="149, 206, 242, 264" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="暗号装置管理者の管理" title="暗号装置管理者の管理" shape="rect" coords="281, 206, 366, 264" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="ターゲット暗号装置での 1 人以上の管理者の追加" title="暗号装置管理者の追加" shape="rect" coords="242, 296, 312, 358" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step3-exit-imprint-mode" alt="ターゲット暗号装置でのインプリント・モードの終了" title="インプリント・モードの終了" shape="rect" coords="328, 301, 396, 359" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step4-create-master-key" alt="使用する一連のマスター鍵パーツの作成" title="マスター鍵パーツの作成" shape="rect" coords="401, 208, 493, 266" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="マスター鍵レジスターのロード" title="マスター鍵レジスターのロード" shape="rect" coords="525, 207, 620, 264" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="新規マスター鍵レジスターのロード" title="新規マスター鍵レジスターのロード" shape="rect" coords="455, 297, 525, 358" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step6-commit-master-key" alt="新規マスター鍵レジスターのコミット" title="新規マスター鍵レジスターのコミット" shape="rect" coords="539, 297, 610, 358" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step7-activate-master-key" alt="マスター鍵のアクティブ化" title="マスター鍵レジスターのアクティブ化" shape="rect" coords="619, 297, 689, 358" />
 </map>
 
-*Figure 1. Task flow of service instance initialization*
+*図 1. サービス・インスタンスの初期化のタスク・フロー*
 
-It might take 20-30 minutes for you to complete this task.
+このタスクは完了までに 20 分から 30 分かかる可能性があります。
 
-## Before you begin
+## 始めに
 {: #initialize-crypto-prerequisites}
 
-1. Run the following command to make sure that you are logged in to the correct API endpoint:
+1. 以下のコマンドを実行して、正しい API エンドポイントにログインしていることを確認します。
 
   ```
   ibmcloud api https://api.ng.bluemix.net
   ```
   {: pre}
 
-2. Install the {{site.data.keyword.keymanagementservicefull}} plug-in. For detailed steps, see [Setting up the CLI](/docs/services/hs-crypto/set-up-cli.html). When you log in to the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview), you're notified when updates are available. Be sure to keep your {{site.data.keyword.keymanagementservicefull}} plug-in up-to-date so that you can use the commands and flags that are available for the Trusted Key Entry CLI plug-in.
+2. {{site.data.keyword.keymanagementservicefull}} プラグインをインストールします。詳細な手順については、[CLI のセットアップ](/docs/services/hs-crypto/set-up-cli.html)を参照してください。[{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview) にログインすると、更新が使用可能な場合は通知されます。 Trusted Key Entry CLI プラグインで使用可能なコマンドおよびフラグを使用できるように、{{site.data.keyword.keymanagementservicefull}} プラグインは必ず最新状態に保ってください。
 {: #initialize-crypto-prerequisites2}
 
-3. Install the latest latest Trusted Key Entry plug-in with the following command:
+3. 次のコマンドを使用して、最新の Trusted Key Entry プラグインをインストールします。
 {: #initialize-crypto-prerequisites3}
 
   ```
@@ -77,36 +75,36 @@ It might take 20-30 minutes for you to complete this task.
   ```
   {: pre}
 
-  **Note:** If you are using the Beta instance of ({{site.data.keyword.hscrypto}}, run the 'ibmcloud plugin install tke -v 0.0.6' to get the latest beta version of the Trusted Key Entry plug-in. Do not install later versions of the Trusted Key Entry plug-in.
+  **重要:** {{site.data.keyword.hscrypto}} のベータ・インスタンスを使用している場合は、'ibmcloud plugin install tke -v 0.0.4' を実行して、Trusted Key Entry プラグインの最新のベータ版を入手してください。それ以降のバージョンの Trusted Key Entry プラグインをインストールしないでください。
 
-4. Set the environment variable CLOUDTKEFILES on your workstation. Specify a directory where you want master key part files and signature key part files to be created and saved. Create the directory if it does not already exist.
+4. ワークステーションで環境変数 CLOUDTKEFILES を設定します。マスター鍵パーツ・ファイルと署名鍵パーツ・ファイルを作成して保存するディレクトリーを指定します。ディレクトリーが存在しない場合は作成してください。
 {: #initialize-crypto-prerequisites4}
 
-  * On Linux or MacOS, add the following line to the `.bash_profile` file:
+  * Linux または MacOS の場合は、次の行を `.bash_profile` ファイルに追加します。
      ```
      export CLOUDTKEFILES=<path>
      ```
      {: pre}
-     For example, you can specify the *path* to `/Users/tke-files`.
-  * On Windows, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a CLOUDTKEFILES environment variable and set the value to the path to the key files. For example, `C:\users\tke-files`.
+     例えば、*path* を `/Users/tke-files` に指定することができます。
+  * Windows の場合は、**コントロール パネル**で、検索ボックスに `environment variable` と入力して、「環境変数」ウィンドウを見つけます。CLOUDTKEFILES 環境変数を作成し、その値を鍵ファイルへのパスに設定します。例えば、`C:\users\tke-files` と指定します。
 
-## Adding or removing crypto units that are assigned to a user account
+## ユーザー・アカウントに割り当てられている暗号装置の追加または削除
 {: #Identify_crypto_units}
 
-Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user account are in a group known as *a service instance*. A service instance can have up to six crypto units. All crypto units in a service instance should be configured the same. If one part of the {{site.data.keyword.cloud_notm}} cannot be accessed, the crypto units in a service instance can be used interchangeably for load balancing or for availability.
+{{site.data.keyword.cloud_notm}} ユーザー・アカウントに割り当てられた暗号装置は、*サービス・インスタンス* というグループにあります。サービス・インスタンスには最大 6 つの暗号装置を設定できます。1 つのサービス・インスタンスに属するすべての暗号装置は、同じ構成内容にする必要があります。{{site.data.keyword.cloud_notm}} の 1 つの部分にアクセスできない場合、サービス・インスタンス内の暗号装置を代わりに使用できるので、ロード・バランシングや可用性の向上に役立ちます。
 
-Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start in a cleared state known as *imprint mode*.
+{{site.data.keyword.cloud_notm}} ユーザーに割り当てられた暗号装置は、*インプリント・モード* というクリアな状態で開始します。
 
-The master key registers in all crypto units in a single service instance must be set the same. The same set of administrators must be added in all crypto units, and all crypto units must exit imprint mode at the same time.
+単一のサービス・インスタンス内のすべての暗号装置のマスター鍵レジスターは、同じ設定内容にする必要があります。すべての暗号装置に同一セットの管理者を追加する必要があります。また、すべての暗号装置が同時にインプリント・モードを終了する必要があります。
 
-* To display the service instances and crypto units assigned to a user account, use the following command:
+* ユーザー・アカウントに割り当てられたサービス・インスタンスと暗号装置を表示するには、次のコマンドを使用します。
   {: #Identify_crypto_units1}
   ```
   ibmcloud tke cryptounits
   ```
   {: pre}
 
-  The following is a sample output that is displayed. The SELECTED column in the output table identifies the crypto units that are targeted by subsequent administrative commands that are issued by the Trusted Key Entry plug-in.
+  表示される出力例を以下に示します。出力表の SELECTED 列は、Trusted Key Entry プラグインによって発行される後続の管理コマンドのターゲットとなる暗号装置を示します。
 
   ```
   SERVICE INSTANCE: 482cf2ce-a06c-4265-9819-0b4acf54f2ba
@@ -121,184 +119,184 @@ The master key registers in all crypto units in a single service instance must b
   ```
   {: screen}
 
-* To add additional crypto units to the selected crypto unit list, use the following command:
+* 選択した暗号装置リストに暗号装置を追加するには、次のコマンドを使用します。
   {: #Identify_crypto_units2}
   ```
   ibmcloud tke cryptounit-add
   ```
   {: pre}
 
-  A list of the crypto units that are assigned to the current user account is displayed. When prompted, enter a list of crypto unit numbers to be added to the selected crypto unit list.
+  現在のユーザー・アカウントに割り当てられた暗号装置のリストが表示されます。 プロンプトが出されたら、選択した暗号装置リストに追加する暗号装置番号のリストを入力します。
 
-* To remove crypto units from the selected crypto unit list, use the following command:
+* 選択した暗号装置リストから暗号装置を削除するには、次のコマンドを使用します。
   {: #Identify_crypto_units3}
   ```
   ibmcloud tke cryptounit-rm
   ```
   {: pre}
 
-  A list of crypto unitss that are assigned to the current user account is displayed. When prompted, enter a list of crypto unit numbers to be removed from the selected crypto unit list.
+  現在のユーザー・アカウントに割り当てられた暗号装置のリストが表示されます。 プロンプトが出されたら、選択した暗号装置リストから削除する暗号装置番号のリストを入力します。
 
-  **Tip:** In general, either all crypto units or none of the crypto units in a service instance are selected. This causes subsequent administrative commands to update all crypto units of a service instance consistently. However, if the crypto units of a service instance become configured differently, you need to select and work with crypto units individually to restore a consistent configuration to all crypto units in a service instance.
+  **ヒント:** 一般に、サービス・インスタンス内のすべての暗号装置が選択されているか、まったく選択されていないかのどちらかです。このようにすると、後続の管理コマンドによってサービス・インスタンスのすべての暗号装置が更新されるときに一貫性が保たれます。 しかし、1 つのサービス・インスタンスに属する一部の暗号装置の構成内容が異なっている場合、そのサービス・インスタンスに属するすべての暗号装置の構成内容を一貫性のある状態に復元するために、暗号装置を個別に選択して操作する必要があります。
 
-  You can compare the configuration settings of the selected crypto units with the following command:
+  次のコマンドを使用して、選択した暗号装置の構成設定を比較することができます。
   ```
   ibmcloud tke cryptounit-compare
   ```
   {: pre}
 
-## Loading master keys
+## マスター鍵のロード
 {: #load-master-keys}
 
 <!-- A service instance is implemented as one or more crypto units on IBM cryptographic coprocessors. -->
 
-Before the new master key register can be loaded, add one or more administrators in the target crypto units and exit imprint mode.
+新しいマスター鍵レジスターにロードするには、その前にターゲット暗号装置に 1 つ以上の管理者を追加し、インプリント・モードを終了します。
 
-To load the new master key register, complete the following tasks using the {{site.data.keyword.cloud_notm}} CLI plug-in:
+新規マスター鍵レジスターにロードするには、{{site.data.keyword.cloud_notm}} CLI プラグインを使用して以下のタスクを実行します。
 
-### Step 1: Create one or more signature keys
+### ステップ 1: 1 つ以上の署名鍵の作成
 {: #step1-create-signature-keys}
 
-To load the new master key register, A crypto unit administrator must sign the command with a unique signature key. The first step is to create one or more signature key files that contain signature keys on your workstation. <!-- The private part of the signature key file is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. -->
+新規マスター鍵レジスターにロードするには、暗号装置管理者は固有の署名鍵でコマンドに署名する必要があります。最初のステップは、ワークステーション上に署名鍵を含む 1 つ以上の署名鍵ファイルを作成することです。<!-- The private part of the signature key file is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. -->
 
-**Important**: For security considerations, the signature key owner can be a different person from the master key part owners. The signature key owner should be the only person who knows the password associated with the signature key file.
+**重要**: セキュリティーを考慮して、署名鍵の所有者はマスター鍵パーツの所有者とは別の人にすることができます。署名鍵の所有者は、署名鍵ファイルに関連付けられたパスワードを知る唯一の人にする必要があります。
 
-* To display the existing signature keys on the workstation, use the following command:
+* ワークステーション上の既存の署名鍵を表示するには、次のコマンドを使用します。
   ```
   ibmcloud tke sigkeys
   ```
   {: pre}
 
-* To create and save a new signature key on the workstation, use the following command:
+* ワークステーション上で新規署名鍵を作成して保存するには、次のコマンドを使用します。
   ```
   ibmcloud tke sigkey-add
   ```
   {: pre}
 
-  When prompted, enter an administrator name and a password to protect the signature key file. You must remember the password. If the password is lost, the signature key cannot be used.
+  プロンプトが出されたら、管理者名と、署名鍵ファイルを保護するためのパスワードを入力します。 パスワードは忘れないようにしてください。 パスワードを失くした場合、署名鍵は使用できなくなります。
 
-* To select the administrator to sign future commands, use the command:
+* 将来のコマンドに署名する管理者を選択するには、次のコマンドを使用します。
   ```
   ibmcloud tke sigkey-sel
   ```
   {: pre}
 
-  A list of signature key files found on the workstation is displayed. When prompted, enter the key number of the signature key file to select for signing subsequent administrative commands. <!--If a signature key file is already selected for signing administrative commands, this is indicated when the list of signature key files is displayed. -->
+  ワークステーション上で検出された署名鍵ファイルのリストが表示されます。 プロンプトが出されたら、後続の管理コマンドに署名するために選択する署名鍵ファイルの鍵番号を入力します。 <!--If a signature key file is already selected for signing administrative commands, this is indicated when the list of signature key files is displayed. -->
 
   <!-- **Tip**: Before you run the `cryptounit-exit-impr` command to exit imprint mode, the command needs to be signed by a crypto unit administrator using the signature key. After the crypto unit exits imprint mode, all commands to the crypto unit must be signed. -->
 
-### Step 2: Add one or more administrators in the target crypto unit
+### ステップ 2: ターゲット暗号装置の 1 つ以上の管理者の追加
 {: #step2-load-admin}
 
 <!-- After a crypto unit exits imprint mode, all administrative commands sent to the crypto unit must be signed by an administrator that is added to the crypto unit. -->
 
-* To display the existing administrators for a crypto unit, use the following command:
+* 暗号装置の既存の管理者を表示するには、次のコマンドを使用します。
   ```
   ibmcloud tke cryptounit-admins
   ```
   {: pre}
 
-* To add a new administrator, use the following command:
+* 新規管理者を追加するには、次のコマンドを使用します。
   ```
   ibmcloud tke cryptounit-admin-add
   ```
   {: pre}
 
-  A list of the signature key files that are found on the workstation is displayed.
+  ワークステーション上で検出された署名鍵ファイルのリストが表示されます。
 
-  When prompted, select the signature key file that is associated with the crypto unit administrator to be added. And then enter the password for the selected signature key file.
+  プロンプトが出されたら、追加する暗号装置管理者と関連付けられている署名鍵ファイルを選択します。次に、選択した署名鍵ファイルのパスワードを入力します。
 
-  You can repeat the command to add additional crypto unit administrators if needed. Any administrator can independently run commands in the crypto unit.
+  必要であれば、コマンドを繰り返して追加の暗号装置管理者を追加します。 どの管理者も暗号装置内で独立してコマンドを実行できます。
 
-  In imprint mode, the command to add a crypto unit administrator does not need to be signed. After leaving imprint mode, to add crypto unit administrators, the command to be used must be signed by a crypto unit administrator that is already added in the crypto unit.
+  インプリント・モードでは、暗号装置管理者を追加するコマンドに署名する必要はありません。 インプリント・モードを離れた後に暗号装置管理者を追加するには、使用されるコマンドに、その暗号装置に既に追加されている暗号装置管理者が署名する必要があります。
 
-### Step 3: Exit imprint mode in the target crypto unit
+### ステップ 3: ターゲット暗号装置のインプリント・モードの終了
 {: #step3-exit-imprint-mode}
 
-A crypto unit in imprint mode is not considered secure. You cannot run most of the administrative commands, such as loading the new master key register, in imprint mode.
+インプリント・モードの暗号装置はセキュアではないと見なされます。 インプリント・モードでは、新規マスター鍵レジスターへのロードなど、ほとんどの管理コマンドは実行できません。
 
-After you add one or more crypto unit administrators, exit imprint mode by using the command:
+1 つ以上の暗号装置管理者を追加した後、次のコマンドを使用してインプリント・モードを終了します。
 
   ```
   ibmcloud tke cryptounit-exit-impr
   ```
   {: pre}
 
-  ** Important:** The command to exit imprint mode must be signed by one of the added crypto unit administrators using the signature key. After the crypto unit exits imprint mode, all commands to the crypto unit must be signed.
+  **重要:** インプリント・モードを終了するコマンドには、追加済みのいずれかの暗号装置管理者が署名鍵を使用して署名する必要があります。暗号装置でインプリント・モードを終了した後、その暗号装置に対するすべてのコマンドに署名が必要になります。
 
-### Step 4: Create a set of master key parts to use
+### ステップ 4: 使用する一連のマスター鍵パーツの作成
 {: #step4-create-master-key}
 
-Each master key part is saved in a password-protected file on the workstation.
+各マスター鍵パーツは、ワークステーション上のパスワード保護されたファイルに保存されます。
 
-**Important**: You must create at least two master key parts. For security considerations, three master key parts can be used and each key part can be owned by a different person. The key part owner should be the only person who knows the password associated with the key part file.
+**重要**: 少なくとも 2 つのマスター鍵パーツを作成する必要があります。 セキュリティーを考慮して、3 つのマスター鍵パーツを使用することが可能で、別々の人が各鍵パーツを所有することができます。鍵パーツの所有者は、鍵パーツ・ファイルに関連付けられたパスワードを知る唯一の人にする必要があります。
 
-* To display the existing master key parts on the workstation, use the following command:
+* ワークステーション上の既存のマスター鍵パーツを表示するには、次のコマンドを使用します。
   ```
   ibmcloud tke mks
   ```
   {: pre}
 
-* To create and save a random master key part on the workstation, use the command:
+* ワークステーション上でランダムなマスター鍵パーツを作成して保存するには、次のコマンドを使用します。
   ```
   ibmcloud tke mk-add --random
   ```
   {: pre}
 
-  When prompted, enter a description for the key part and a password to protect the key part file. You must remember the password. If the password is lost, you cannot use the key part.
+  プロンプトが出されたら、鍵パーツの説明と、鍵パーツ・ファイルを保護するためのパスワードを入力します。 パスワードは忘れないようにしてください。 パスワードを失くした場合、鍵パーツは使用できなくなります。
 
-* To enter a known key part value and save it in a file on the workstation, use the following command:
+* 既知の鍵パーツ値を入力してそれをワークステーション上のファイルに保存するには、次のコマンドを使用します。
   ```
   ibmcloud tke mk-add --value
   ```
   {: pre}
 
-  When prompted, enter the key part value as a hexadecimal string for the 32-byte key part. And then enter a description for the key part and a password to protect the key part file.
+  プロンプトが出されたら、32 バイトの鍵パーツの 16 進数ストリングとして鍵パーツ値を入力します。 次に、鍵パーツの説明と、鍵パーツ・ファイルを保護するためのパスワードを入力します。
 
-### Step 5: Load the new master key register
+### ステップ 5: 新規マスター鍵レジスターへのロード
 {: #step5-load-master-key}
 
-**Important**: To load a master key register, all master key part files and the signature key file must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The master key part file owners and the signature key file owner need to enter the file passwords when the master key register is loaded on the common workstation.
+**重要**: マスター鍵レジスターにロードするには、すべてのマスター鍵パーツ・ファイルと署名鍵ファイルが共通のワークステーションに存在する必要があります。 ファイルが別々のワークステーションで作成された場合は、衝突を避けるためにファイル名にそれぞれ別の名前を付けてください。マスター鍵パーツ・ファイルの所有者と署名鍵ファイルの所有者は、マスター鍵レジスターが共通のワークステーションにロードされるときにファイル・パスワードを入力する必要があります。
 
-For information on how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/services/hs-crypto/service_instance_concepts.html#introduce-key-registers).
+マスター鍵のロード方法については、[マスター鍵レジスター](/docs/services/hs-crypto/service_instance_concepts.html#introduce-key-registers)の詳細図を参照してください。
 
-To load the new master key register, use the following command:
+新規マスター鍵レジスターにロードするには、次のコマンドを使用します。
 ```
 ibmcloud tke cryptounit-mk-load
 ```
 {: pre}
 
-A list of the master key parts that are found on the workstation is displayed.
+ワークステーションで検出されたマスター鍵パーツのリストが表示されます。
 
-When prompted, enter the key parts to be loaded into the new master key register. And enter the password for each selected key part file.
+プロンプトが出されたら、新規マスター鍵レジスターにロードする鍵パーツを入力します。 次に、選択した各鍵パーツ・ファイルのパスワードを入力します。
 
-### Step 6: Commit the new master key register
+### ステップ 6: 新規マスター鍵レジスターのコミット
 {: #step6-commit-master-key}
 
-Loading the new master key register places the new master key register in the full uncommitted state. Before you can use the new master key register to initialize or re-encipher key storage, place the new master key register in the committed state. For information on how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/services/hs-crypto/service_instance_concepts.html#introduce-key-registers).
+新規マスター鍵レジスターにロードすると、新規マスター鍵レジスターが完全な非コミット状態になります。 新規マスター鍵レジスターを使用して鍵ストレージを初期化または再暗号化するには、その前に新規マスター鍵レジスターをコミット状態にします。 マスター鍵のロード方法については、[マスター鍵レジスター](/docs/services/hs-crypto/service_instance_concepts.html#introduce-key-registers)の詳細図を参照してください。
 
-To commit the new master key register, use the following command:
+新規マスター鍵レジスターをコミットするには、次のコマンドを使用します。
 ```
 ibmcloud tke cryptounit-mk-commit
 ```
 {: pre}
 
-### Step 7: Activate the master key
+### ステップ 7: マスター鍵のアクティブ化
 {: #step7-activate-master-key}
 
-Activate the master key by moving the master key to the current master key register with the following command:
+次のコマンドでマスター鍵を現行のマスター鍵レジスターに移動することによって、マスター鍵をアクティブ化します。
 
 ```
 ibmcloud tke cryptounit-mk-setimm
 ```
 {: pre}
 
-## What's next
+## 次に行うこと
 {: #initialize-crypto-next}
 
-Go to the **Manage** tab of your managed {{site.data.keyword.hscrypto}} dashboard to manage root keys and standard keys.
+管理対象の {{site.data.keyword.hscrypto}} ダッシュボードの**「管理」**タブに移動し、ルート鍵と標準鍵を管理します。
 
-For more details on other options of the Trusted Key Entry plug-in commands, run the following command in the CLI:
+Trusted Key Entry プラグイン・コマンドの他のオプションについて詳しくは、CLI で次のコマンドを実行してください。
 
 ```
 ibmcloud tke help

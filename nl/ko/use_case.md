@@ -23,6 +23,7 @@ subcollection: hs-crypto
 {:shortdesc}
 
 ## KYOK(Keep Your Own Keys)를 사용하여 저장 데이터 암호화
+{: #data-at-rest-encryption}
 
 {{site.data.keyword.hscrypto}}를 사용하면 고유 키를 통해 가장 높은 보안 레벨에서 저장 데이터를 암호화할 수 있습니다. {{site.data.keyword.hscrypto}}는 {{site.data.keyword.keymanagementservicefull_notm}} API를 사용하여 키를 생성하고 관리하는 키 관리 기능을 제공합니다.
 
@@ -39,6 +40,7 @@ subcollection: hs-crypto
 *그림 1. KYOK를 사용한 저장 데이터 암호화*
 
 ## KYOK(Keep Your Own Key)를 사용하여 VMware 이미지 보호
+{: #vmware-image-protection}
 
 저장 데이터 보호와 마찬가지로 {{site.data.keyword.hscrypto}}는 VMware KMIP(Key Management Interoperability Protocol)를 통해 암호화 및 복호화를 위해 VMware 저장 이미지를 보호할 수도 있습니다.
 

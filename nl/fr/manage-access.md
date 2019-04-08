@@ -89,13 +89,14 @@ Le tableau suivant montre la façon dont les rôles Identity and Access sont map
   <caption style="caption-side:bottom;">Tableau 1. Description de la façon dont les rôles Identity and Access sont mappés aux droits {{site.data.keyword.hscrypto}}</caption>
 </table>
 
-**Remarque** : les rôles utilisateur Cloud IAM fournissent un accès au niveau du service ou de l'instance de service. Les [rôles Cloud Foundry](/docs/iam/cfaccess.html) sont distincts et définissent l'accès au niveau de l'organisation ou de l'espace.
+<!-- **Note**: Cloud IAM user roles provide access at the service or service instance level. [Cloud Foundry roles](/docs/iam/cfaccess.html) are separate and define access at the organization or the space level. -->
 
-Pour en savoir plus sur {{site.data.keyword.iamshort}}, consultez la section [Rôles et droits utilisateur](/docs/iam/users_roles.html#userroles).
+Pour en savoir plus sur {{site.data.keyword.iamshort}}, voir la section [Rôles et droits utilisateur](/docs/iam/users_roles.html#userroles).
 
 ### Etapes suivantes
+{: #manage-access-next}
 
 Les propriétaires de compte et les administrateurs peuvent inviter des utilisateurs et définir des règles de service qui correspondent aux actions {{site.data.keyword.hscrypto}} que les utilisateurs peuvent exécuter.
 
-- Pour plus d'informations sur l'attribution de rôles aux utilisateurs dans l'Interface utilisateur {{site.data.keyword.cloud_notm}}, consultez [Gestion de l'accès IAM](/docs/iam/mngiam.html).
+- Pour plus d'informations sur l'attribution de rôles aux utilisateurs dans l'Interface utilisateur {{site.data.keyword.cloud_notm}}, voir [Gestion de l'accès IAM](/docs/iam/mngiam.html).
 - Pour en savoir plus sur l'affectation de droits avancés pour accéder à des clés de chiffrement spécifiques, voir [Gestion de l'accès aux clés](/docs/services/hs-crypto/manage-access-api.html).

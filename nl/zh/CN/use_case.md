@@ -23,6 +23,7 @@ subcollection: hs-crypto
 {:shortdesc}
 
 ## 使用“保管自己的密钥”进行静态数据加密
+{: #data-at-rest-encryption}
 
 您可以使用 {{site.data.keyword.hscrypto}}，通过自己的密钥以最高安全级别加密静态数据。{{site.data.keyword.hscrypto}} 提供密钥管理功能，可使用 {{site.data.keyword.keymanagementservicefull_notm}} API 生成并管理密钥。
 
@@ -39,6 +40,7 @@ subcollection: hs-crypto
 *图 1. 使用 KYOK 加密静态数据*
 
 ## 使用“保管自己的密钥”保护 VMware 映像
+{: #vmware-image-protection}
 
 {{site.data.keyword.hscrypto}} 与静态数据保护类似，也可以保护静态 VMware 映像以通过 VMware Key Management Interoperability 协议进行加密和解密。
 

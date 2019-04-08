@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-21"
+lastupdated: "2019-03-21"
 
 Keywords: provision, instance of Hyper Protect Crypto Services
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
+{:important: .important}
 {:gif: data-image-type='gif'}
 
 # Den Service bereitstellen
@@ -25,7 +26,7 @@ Sie können eine Instanz von {{site.data.keyword.cloud_notm}} {{site.data.keywor
 {: shortdesc}
 
 ## Bereitstellung über {{site.data.keyword.cloud_notm}}-Konsole durchführen
-{: #gui}
+{: #provision-gui}
 
 Zur Bereitstellung einer Instanz von {{site.data.keyword.hscrypto}} über die {{site.data.keyword.cloud_notm}}-Konsole führen Sie die folgenden Schritte aus:
 
@@ -33,15 +34,20 @@ Zur Bereitstellung einer Instanz von {{site.data.keyword.hscrypto}} über die {{
 2. Klicken Sie auf **Katalog**, um die Liste der Services anzuzeigen, die unter {{site.data.keyword.cloud_notm}} zur Verfügung stehen.
 3. Klicken Sie im Navigationsbereich 'Alle Kategorien' auf die Kategorie **Sicherheit und Identität**.
 4. Klicken Sie in der Serviceliste auf die **{{site.data.keyword.hscrypto}}**-Kachel.
-5. Wählen Sie einen Serviceplan aus und klicken Sie auf **Erstellen**, um eine Instanz von {{site.data.keyword.hscrypto}} im Konto, in der Region und in der Ressourcengruppe, bei denen Sie angemeldet sind, bereitzustellen.
+5. **Optional**: Fügen Sie im Feld **Tags** Tags hinzu, um Ihre Ressourcen zu organisieren. Wenn es sich um abrechnungsbezogene Tags handelt, empfiehlt es sich möglicherweise, die Tags als Schlüssel/Wert-Paare zu schreiben, um zusammengehörige Tags zu gruppieren, z. B. `costctr:124`. Weitere Informationen zu Tags finden Sie unter [Mit Tags arbeiten](/docs/resources?topic=resources-tag#tag). 
+6. Wählen Sie unter **Anzahl der Verschlüsselungseinheiten** die Anzahl der Verschlüsselungseinheiten aus, die Ihren Leistungsanforderungen entspricht. 
 
-![Den Service bereitstellen](image/provisioning.gif "Den Service bereitstellen")
+  Eine Serviceinstanz unterstützt bis zu sechs Verschlüsselungseinheiten. In einer Produktionsumgebung wird empfohlen, mindestens zwei Verschlüsselungseinheiten auszuwählen, um eine hohe Verfügbarkeit zu ermöglichen. Wenn Sie drei oder mehr Verschlüsselungseinheiten auswählen, werden diese Verschlüsselungseinheiten auf drei unterstützte Verfügbarkeitszonen in der ausgewählten Region verteilt.
+  {: important}
+7. Klicken Sie auf **Erstellen**, um eine Instanz von {{site.data.keyword.hscrypto}} im Konto, in der Region und in der Ressourcengruppe bereitzustellen, in dem/der Sie angemeldet sind. 
+
+![Service bereitstellen](image/provisioning.gif "Service bereitstellen")
 {: gif}
 
-*Abbildung 1. Den Service bereitstellen*
+*Abbildung 1. Service bereitstellen*
 
 <!-- ## Provisioning from the {{site.data.keyword.cloud_notm}} CLI
-{: #cli}
+{: #provision-cli}
 
 To provision an instance of {{site.data.keyword.hscrypto}} using the {{site.data.keyword.cloud_notm}} CLI, complete the following steps:
 
@@ -138,9 +144,9 @@ To manage access to your encryption keys with [Cloud Foundry roles](/docs/iam/cf
     ibmcloud service list
     ```
     {: pre}
+-->
 
+### Weitere Schritte
+{: #provision-next}
 
-### What's next
-
-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}.
-- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.-->
+Weitere Informationen zur programmgesteuerten Verwaltung von Schlüsseln [finden Sie in der{{site.data.keyword.hscrypto}}-API-Referenz ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/hs-crypto){: new_window}. 

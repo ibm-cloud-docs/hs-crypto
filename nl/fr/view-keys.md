@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: view keys, key configuration, key type
 
@@ -26,21 +26,22 @@ subcollection: hs-crypto
 Effectuez un audit régulier de la configuration de vos clés :
 
 - Voyez quand les clés ont été créées et déterminez s'il n'est pas temps d'effectuer une rotation.
-- [Surveillez les appels d'API dans {{site.data.keyword.hscrypto}} avec {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/tutorials/manage_events_cli.html).
+- Surveillez les appels API dans {{site.data.keyword.hscrypto}} avec {{site.data.keyword.cloudaccesstrailshort}}.
 - Vérifiez quels sont les utilisateurs qui ont accès aux clés et assurez-vous que leur niveau d'accès est approprié.
 
 Pour plus d'informations sur l'audit d'accès à vos ressources, voir la [gestion de l'accès utilisateur avec Cloud IAM](/docs/services/hs-crypto/manage-access.html).
 
 ## Affichage des clés avec l'interface graphique utilisateur
-{: #gui}
+{: #view-key-gui}
 
 Si vous préférez examiner les clés de votre service à l'aide d'une interface graphique, vous pouvez utiliser le tableau de bord {{site.data.keyword.hscrypto}}.
 
 [Après avoir créé ou importé les clés existantes dans le service](/docs/services/hs-crypto/create-root-keys.html), vous pouvez les afficher en procédant comme suit :
 
 1. [Connectez-vous à la console {{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/).
-2. Dans votre tableau de bord {{site.data.keyword.cloud_notm}}, sélectionnez l'instance {{site.data.keyword.hscrypto}} mise à disposition.
-3. Parcourez les caractéristiques générales de vos clés dans le tableau de bord {{site.data.keyword.hscrypto}} :
+2. Accédez à **Menu** &gt; **Liste de ressources** pour afficher la liste de vos ressources.
+3. Dans la liste de ressources {{site.data.keyword.cloud_notm}}, sélectionnez votre instance {{site.data.keyword.hscrypto}} mise à disposition.
+3. Parcourez les caractéristiques générales de vos clés dans la page Détails de l'application :
 
     <table>
       <tr>
@@ -48,12 +49,12 @@ Si vous préférez examiner les clés de votre service à l'aide d'une interface
         <th>Description</th>
       </tr>
       <tr>
-        <td>Name</td>
+        <td>Nom</td>
         <td>Alias unique et lisible qui est affecté à votre clé.</td>
       </tr>
       <tr>
         <td>ID</td>
-        <td>ID de clé unique affecté à votre clé par {{site.data.keyword.hscrypto}}. Vous pouvez utiliser la valeur de l'ID pour appeler le service avec l'API [{{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/apidocs/hs-crypto).</td>
+        <td>ID de clé unique affecté à votre clé par {{site.data.keyword.hscrypto}}. Vous pouvez utiliser la valeur de l'ID pour appeler le service avec l'API [{{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/hs-crypto).</td>
       </tr>
       <tr>
         <td>Etat</td>
@@ -67,7 +68,7 @@ Si vous préférez examiner les clés de votre service à l'aide d'une interface
     </table>
 
 ## Affichage des clés avec l'API
-{: #api}
+{: #view-key-api}
 
 Vous pouvez extraire le contenu de vos clés à l'aide de l'API {{site.data.keyword.hscrypto}}.
 
@@ -94,9 +95,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     -H 'correlation-id: <correlation_ID>' \
     ```
     {: codeblock}
-
-    Pour utiliser les clés dans une organisation et un espace Cloud Foundry de votre compte, remplacez `Bluemix-Instance` par les en-têtes `Bluemix-org` et `Bluemix-space` appropriés. [Pour plus d'informations, consultez la documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Remplacez les variables dans l'exemple de demande en fonction du tableau suivant :
     <table>
@@ -106,7 +106,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>Abréviation de la région, comme <code>us-south</code> ou <code>eu-gb</code>, représentant la zone géographique dans laquelle votre instance de service {{site.data.keyword.hscrypto}} réside. Pour plus d'informations, consultez <a href="/docs/services/hs-crypto/regions.html#endpoints">Points d'extrémité de service régional</a>.</td>
+        <td>Abréviation de la région, comme <code>us-south</code> ou <code>eu-gb</code>, représentant la zone géographique dans laquelle votre instance de service {{site.data.keyword.hscrypto}} réside. Pour plus d'informations, voir <a href="/docs/services/hs-crypto/regions.html#endpoints">Points d'extrémité de service régional</a>.</td>
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
@@ -211,7 +211,7 @@ Vous pouvez utiliser l'exemple de demande suivant pour extraire un autre ensembl
     <tr>
       <td><p><varname>limit</varname></p></td>
       <td>
-        <p>Optionnel : nombre de clés à extraire. </p>
+        <p>Optionnel : nombre de clés à extraire.</p>
         <p>Par exemple, si vous avez 100 clés dans votre instance et que vous souhaitez répertorier 10 clés seulement, utilisez <code>../keys?limit=10</code>. La valeur maximale pour <code>limit</code> est 5000.</p>
       </td>
     </tr>
@@ -284,7 +284,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>Abréviation de la région, comme <code>us-south</code> ou <code>eu-gb</code>, représentant la zone géographique dans laquelle votre instance de service {{site.data.keyword.hscrypto}} réside. Pour plus d'informations, consultez <a href="/docs/services/hs-crypto/regions.html#endpoints">Points d'extrémité de service régional</a>.</td>
+        <td>Abréviation de la région, comme <code>us-south</code> ou <code>eu-gb</code>, représentant la zone géographique dans laquelle votre instance de service {{site.data.keyword.hscrypto}} réside. Pour plus d'informations, voir <a href="/docs/services/hs-crypto/regions.html#endpoints">Points d'extrémité de service régional</a>.</td>
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
@@ -337,4 +337,4 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {:screen}
 
-    Pour obtenir une description détaillée des paramètres disponibles, consultez la {{site.data.keyword.hscrypto}} [documentation de référence de l'API REST ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
+    Pour obtenir une description détaillée des paramètres disponibles, voir la {{site.data.keyword.hscrypto}} [documentation de référence de l'API REST ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.

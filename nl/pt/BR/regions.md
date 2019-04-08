@@ -24,7 +24,7 @@ subcollection: hs-crypto
 {: shortdesc}
 
 <!-- ## Available regions
-{: #regions}
+{: #available-regions}
 
 {{site.data.keyword.hscrypto}} is available in the following regions and locations: -->
 
@@ -32,7 +32,7 @@ subcollection: hs-crypto
 ## Terminais de serviço
 {: #endpoints}
 
-Se você estiver gerenciando seus recursos do {{site.data.keyword.hscrypto}} programaticamente, consulte a tabela a seguir para determinar os terminais de API a serem usados ao se conectar à [API do {{site.data.keyword.hscrypto}}](https://cloud.ibm.com/apidocs/hs-crypto):
+Se você estiver gerenciando os seus recursos do {{site.data.keyword.hscrypto}} programaticamente, consulte a tabela a seguir para determinar os terminais de API a serem usados ao se conectar à API do [{{site.data.keyword.hscrypto}}](https://{DomainName}/apidocs/hs-crypto):
 
 <table>
     <tr>

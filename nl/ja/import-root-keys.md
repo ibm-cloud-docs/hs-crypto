@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root keys, import keys, symmetric key, Hyper Protect Crypto Services GUI
 
@@ -25,14 +25,15 @@ subcollection: hs-crypto
 ルート鍵は、クラウド内の暗号化データのセキュリティーを保護するために使用される対称鍵ラップ鍵です。 ルート鍵について詳しくは、[エンベロープ暗号化](/docs/services/key-protect/concepts/envelope-encryption.html)を参照してください。
 
 ## GUI を使用したルート鍵のインポート
-{: #gui}
+{: #import-root-key-gui}
 
 [サービスのインスタンスを作成した後](/docs/services/
 hs-crypto/provision.html)、以下の手順を実行して、{{site.data.keyword.hscrypto}} GUI で既存のルート鍵を追加します。
 
 1. [{{site.data.keyword.cloud_notm}} コンソール ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") にログインします](https://cloud.ibm.com/){: new_window}。
-2. {{site.data.keyword.cloud_notm}} ダッシュボードで、{{site.data.keyword.hscrypto}} のプロビジョン済みインスタンスを選択します。
-3. 鍵をインポートするには、**「鍵の追加」**をクリックして、**「既存の鍵の入力 (Enter existing key)」**ウィンドウを選択します。
+2. **「メニュー」**&gt;**「リソース・リスト」**に移動し、リソースのリストを表示します。
+3. {{site.data.keyword.cloud_notm}} リソース・リストで、{{site.data.keyword.hscrypto}} のプロビジョン済みインスタンスを選択します。
+4. 鍵をインポートするには、**「鍵の追加」**をクリックして、**「独自の鍵をインポート (Import your own key)」**ウィンドウを選択します。
 
     鍵の詳細を以下のように指定します。
 
@@ -59,7 +60,7 @@ hs-crypto/provision.html)、以下の手順を実行して、{{site.data.keyword
           <p>鍵の素材が以下の要件に適合していることを確認してください。</p>
           <p>
             <ul>
-              <li>鍵は 256 ビット、384 ビット、または 512 ビットでなければならない。</li>
+              <li>鍵は 128 ビット、192 ビット、または 256 ビットでなければならない。</li>
               <li>データのバイト数 (例えば、256 ビットの場合は 32 バイト) は、base64 エンコードを使用してエンコードされていなければならない。</li>
             </ul>
           </p>
@@ -68,10 +69,10 @@ hs-crypto/provision.html)、以下の手順を実行して、{{site.data.keyword
       <caption style="caption-side:bottom;">表 1. <b>「既存の鍵の入力 (Enter existing key)」</b>の設定の説明</caption>
     </table>
 
-4. 鍵の詳細の記入が完了したら、**「新しい鍵の追加 (Add new key)」**をクリックして確認します。
+5. 鍵の詳細の記入が完了したら、**「鍵のインポート (Import key)」**をクリックして確認します。
 
 ## API を使用したルート鍵のインポート
-{: #api}
+{: #import-root-key-api}
 
 以下のエンドポイントへの `POST` 呼び出しを行うことにより、既存のルート鍵を追加します。
 
@@ -82,7 +83,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 1. [サービス内で鍵の処理を行うために、サービス資格情報および認証資格情報を取得します](/docs/services/hs-crypto/access-api.html)。
 
-1. 以下の cURL コマンドを使用して [{{site.data.keyword.hscrypto}} API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} を呼び出します。
+1. 以下の cURL コマンドを使用して [{{site.data.keyword.hscrypto}} API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/hs-crypto){: new_window} を呼び出します。
 
     ```cURL
     curl -X POST \
@@ -109,9 +110,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     }'
     ```
     {: codeblock}
-
-    ご使用のアカウントの Cloud Foundry 組織およびスペース内で鍵の処理を行うには、`Bluemix-Instance` を、適切な `Bluemix-org` および `Bluemix-space` のヘッダーに置き換えます。 [詳しくは、{{site.data.keyword.hscrypto}} API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} を参照してください。
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     次の表に従って、例の要求内の変数を置き換えてください。
     <table>
@@ -160,7 +160,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
           <p>鍵の素材が以下の要件に適合していることを確認してください。</p>
           <p>
             <ul>
-              <li>鍵は 256 ビット、384 ビット、または 512 ビットでなければならない。</li>
+              <li>鍵は 128 ビット、192 ビット、または 256 ビットでなければならない。</li>
               <li>データのバイト数 (例えば、256 ビットの場合は 32 バイト) は、base64 エンコードを使用してエンコードされていなければならない。</li>
             </ul>
           </p>
@@ -196,7 +196,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 **注:** 既存のルート鍵をサービスに追加すると、鍵は {{site.data.keyword.hscrypto}} の境界内にとどまり、その鍵の素材を取り出すことはできません。
 
 ### 次に行うこと
+{: #import-root-key-next}
 
 - エンベロープ暗号化を使用した鍵の保護について詳しくは、[鍵のラッピング](/docs/services/hs-crypto/wrap-keys.html)を確認してください。
-- プログラムでの鍵の管理について詳しくは、[{{site.data.keyword.hscrypto}} API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} を確認してください。
-
+- プログラムでの鍵の管理について詳しくは、[{{site.data.keyword.hscrypto}} API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/hs-crypto){: new_window} を確認してください。

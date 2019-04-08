@@ -27,9 +27,10 @@ subcollection: hs-crypto
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} の使用に関する一般的な問題には、API との対話の際に正しいヘッダーまたは資格情報を提供することが含まれることがあります。 多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
 {: shortdesc}
 
-## 初期化された {{site.data.keyword.hscrypto}} インスタンスを削除する際にエラーが発生する
+## 初期化されたサービス・インスタンスを削除する際にエラーが発生する
+{: #troubleshoot-delete-instance}
 
-初期化された {{site.data.keyword.hscrypto}} インスタンスを削除する際に、以下のようなエラーを受け取ることがあります。
+初期化されたサービス・インスタンスを削除する際に、以下のようなエラーを受け取ることがあります。
 
 ```
 FAILED
@@ -38,23 +39,24 @@ Error response from server. Status code: 400; description: 400 DELETE https://zC
 {: codeblock}
 {: tsSymptoms}
 
-インスタンスを削除する前に、初期化された {{site.data.keyword.hscrypto}} インスタンスをクリア (ゼロ化) していませんでした。
+インスタンスを削除する前に、初期化されたサービス・インスタンスをクリア (ゼロ化) していませんでした。
 {: tsCauses}
 
 インスタンスを削除する前に、次のコマンドを実行してください。
 {: tsResolve}
 
 ```
-ibmcloud tke cryptounit-zeroize
+ibmcloud tke domain-zeroize
 ```
 {: codeblock}
 
 ## Trusted Key Entry プラグインに関連したコマンドの実行後の無許可トークン
+{: #troubleshoot-unauthorized-token}
 
 `tke` CLI コマンドを実行した後に以下のようなメッセージを受け取ることがあります。
 
 ```
-ibmcloud tke cryptounits
+ibmcloud tke domains
 FAILED
 Error querying crypto instances.
 Status code: 401
@@ -71,6 +73,7 @@ Your access token is invalid, expired, or does not have the necessary permission
 {: tsResolve}
 
 ## CLI または API の使用時に `error CKR_IBM_WK_NOT_INITIALIZED` を受け取った
+{: #troubleshoot-error-CLI-API}
 
 CLI または API を使用する際に、以下のようなエラー・メッセージを受け取ることがあります。
 
@@ -83,7 +86,7 @@ Bad Request: rpc error: code = Unknown desc = GRPC Return Code: [0X434B525F484F5
 {: codeblock}
 {: tsSymptoms}
 
-`ibmcloud tke cryptounit-compare` コマンドを実行したときに、CURRENT MASTER KEY REGISTER で `Valid` 確認を受け取りませんでした。
+`ibmcloud tke domain-compare` コマンドを実行したときに、CURRENT MASTER KEY REGISTER で `Valid` 確認を受け取りませんでした。
 {: tsCauses}
 
 HSM マスター鍵が適切に設定されていることを確認してください。
@@ -115,9 +118,9 @@ HSM マスター鍵が適切に設定されていることを確認してくだ�
 
 フォーラムを参照して、他のユーザーも同じ問題を経験していないか調べることができます。 フォーラムを使用して質問するときは、{{site.data.keyword.cloud_notm}} 開発チームの目に止まるように、質問にタグを付けてください。
 
-- {{site.data.keyword.hscrypto}} について技術的な質問がある場合は、[スタック・オーバーフロー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://stackoverflow.com/){: new_window} に質問を投稿し、その質問に「ibm-cloud」と「hyperprotect-crypto」のタグを付けてください。
-- サービスや使用開始の手順についての質問には、[IBM developerWorks dW Answers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/answers/index.html){: new_window} フォーラムを使用してください。 「ibm-cloud」と「hyperprotect-crypto」のタグを付けてください。
+- {{site.data.keyword.hscrypto}} について技術的な質問がある場合は、[スタック・オーバーフロー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://stackoverflow.com/questions/tagged/hyper-protect-crypto){: new_window} に質問を投稿し、その質問に「ibm-cloud」と「hyper-protect-crypto」のタグを付けてください。
+- サービスや使用開始の手順についての質問には、[IBM developerWorks dW Answers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/answers/topics/hyper-protect-crypto/){: new_window} フォーラムを使用してください。 「ibm-cloud」と「hyper-protect-crypto」のタグを付けてください。
 
-フォーラムの使用について詳しくは、[ヘルプの利用 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/docs/support/index.html#getting-help){: new_window} を参照してください。
+フォーラムの使用について詳しくは、[ヘルプの利用 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/get-support?topic=get-support-using-avatar#using-avatar){: new_window} を参照してください。
 
-{{site.data.keyword.IBM_notm}} サポート・チケットのオープンや、サポート・レベルおよびチケットの重大度について詳しくは、[サポートへの問い合わせ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/docs/support/index.html#contacting-support){: new_window} を参照してください。
+{{site.data.keyword.IBM_notm}} サポート・チケットのオープンや、サポート・レベルおよびチケットの重大度について詳しくは、[サポートへの問い合わせ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/get-support?topic=get-support-getting-customer-support){: new_window} を参照してください。

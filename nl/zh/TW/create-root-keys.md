@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root keys, create root keys, Hyper Protect Crypto Services GUI, symmetric key
 
@@ -25,13 +25,14 @@ subcollection: hs-crypto
 根金鑰是用來保護雲端中已加密資料安全的對稱金鑰包裝金鑰。如需根金鑰的相關資訊，請參閱[封套加密](/docs/services/key-protect/concepts/envelope-encryption.html)。
 
 ## 使用 GUI 建立根金鑰
-{: #gui}
+{: #root-key-gui}
 
 [在建立服務的實例之後](/docs/services/hs-crypto/provision.html)，請完成下列步驟以使用 {{site.data.keyword.hscrypto}} GUI 來建立根金鑰。
 
 1. [登入 {{site.data.keyword.cloud_notm}} 主控台 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/){: new_window}。
-2. 從 {{site.data.keyword.cloud_notm}} 儀表板，選取已佈建的 {{site.data.keyword.hscrypto}} 實例。
-3. 若要建立新的金鑰，請按一下**新增金鑰**，然後選取**產生新金鑰**視窗。
+2. 移至**功能表** &gt; **資源清單**，以檢視您的資源清單。
+3. 從 {{site.data.keyword.cloud_notm}} 資源清單，選取已佈建的 {{site.data.keyword.hscrypto}} 實例。
+4. 若要建立新的金鑰，請按一下**新增金鑰**，然後選取**建立金鑰**視窗。
 
     指定金鑰的詳細資料：
 
@@ -54,10 +55,12 @@ subcollection: hs-crypto
       <caption style="caption-side:bottom;">表 1. 說明<b>產生新金鑰</b>設定</caption>
     </table>
 
-4. 當您填寫完金鑰的詳細資料時，請按一下**產生金鑰**以便確認。
+5. 當您填寫完金鑰的詳細資料時，請按一下**建立金鑰**以便確認。
+
+在服務中所建立的金鑰是 AES-CBC 演算法所支援的對稱 256 位元金鑰。為了加強安全，金鑰是由位於安全 {{site.data.keyword.cloud_notm}} 資料中心的 FIPS 140-2 Level 4 認證硬體安全模組 (HSM) 所產生。
 
 ## 使用 API 建立根金鑰
-{: #api}
+{: #root-key-api}
 
 對下列端點發出 `POST` 呼叫來建立根金鑰。
 
@@ -66,10 +69,9 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ```
 {: codeblock}
 
-1. [擷取服務及鑑別認證以在服務中使用金鑰](/docs/services/{{site.data.keyword.hscrypto}}hs-crypto/access-api.html)。
+1. [擷取服務及鑑別認證以在服務中使用金鑰](/docs/services/hs-crypto/access-api.html)。
 
-
-2. 使用下列 cURL 指令，來呼叫 [{{site.data.keyword.hscrypto}} API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
+2. 使用下列 cURL 指令，來呼叫 [{{site.data.keyword.hscrypto}} API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/apidocs/hs-crypto){: new_window}。
 
     ```cURL
     curl -X POST \
@@ -95,11 +97,11 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     }'
     ```
     {: codeblock}
-
-    若要在您帳戶的 Cloud Foundry 組織及空間內使用金鑰，請將 `Bluemix-Instance` 取代為適當的 `Bluemix-org` 及 `Bluemix-space` 標頭。[如需相關資訊，請參閱 {{site.data.keyword.hscrypto}} API 參考資料文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
-    {: tip}
+<!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+    {: tip} -->
 
     根據下表取代範例要求中的變數。
+
     <table>
       <tr>
         <th>變數</th>
@@ -169,6 +171,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 **附註：**在您使用服務建立根金鑰之後，金鑰會保留在 {{site.data.keyword.hscrypto}} 的範圍內，而且無法擷取其金鑰資料。
 
 ### 下一步為何？
+{: #root-key-next}
 
 - 若要進一步瞭解如何使用封套加密來保護金鑰，請參閱[包裝金鑰](/docs/services/hs-crypto/wrap-keys.html)。
-- 若要進一步瞭解如何以程式設計方式管理您的金鑰，[請參閱 {{site.data.keyword.hscrypto}} API 參考資料文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
+- 若要進一步瞭解如何以程式設計方式管理您的金鑰，[請參閱 {{site.data.keyword.hscrypto}} API 參考資料文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/apidocs/hs-crypto){: new_window}。

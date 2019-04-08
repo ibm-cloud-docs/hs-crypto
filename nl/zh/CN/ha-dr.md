@@ -30,7 +30,7 @@ subcollection: hs-crypto
 ## 位置、租户和可用性
 {: #availability}
 
-{{site.data.keyword.hscrypto}} 是多租户区域服务。
+<!-- {{site.data.keyword.hscrypto}} is a multi-tenant, regional service. -->
 
 您可以在某个受支持的 [{{site.data.keyword.cloud_notm}} 区域](/docs/services/hs-crypto/regions.html)中创建 {{site.data.keyword.hscrypto}} 资源，这些区域表示处理和应对 {{site.data.keyword.hscrypto}} 请求的地理区域。每个 {{site.data.keyword.cloud_notm}} 区域中都包含[多个可用性专区 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2018/06/expansion-availability-zones-global-regions/)，可满足该区域的本地访问、低等待时间和安全性需求。
 

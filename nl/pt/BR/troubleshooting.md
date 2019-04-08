@@ -27,9 +27,10 @@ subcollection: hs-crypto
 Problemas gerais com o uso do {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} podem incluir o fornecimento de cabeçalhos ou credenciais corretos quando você interage com a API. Em muitos casos, é possível recuperar-se desses problemas seguindo algumas etapas simples.
 {: shortdesc}
 
-## Ocorreu um erro ao excluir uma instância inicializada do {{site.data.keyword.hscrypto}}
+## Ocorreu um erro ao excluir uma instância de serviço inicializada
+{: #troubleshoot-delete-instance}
 
-É possível receber um erro semelhante ao seguinte ao excluir uma instância inicializada do {{site.data.keyword.hscrypto}}:
+É possível receber um erro semelhante ao seguinte ao excluir uma instância de serviço inicializada:
 
 ```
 FAILED Resposta do erro do servidor. Status code: 400; description: 400 DELETE https://zCryptoBroker.mybluemix.net/v2/service_instances/ failed with error status 409. Conflito.
@@ -37,23 +38,24 @@ FAILED Resposta do erro do servidor. Status code: 400; description: 400 DELETE h
 {: codeblock}
 {: tsSymptoms}
 
-Você não limpou (zerou) a instância inicializada do {{site.data.keyword.hscrypto}} antes de excluir a instância.
+Você não limpou (zerou) a instância de serviço inicializada antes de excluir a instância.
 {: tsCauses}
 
 Execute o comando a seguir antes de excluir a instância:
 {: tsResolve}
 
 ```
-ibmcloud tke cryptounit-zeroize
+ibmcloud tke domain-zeroize
 ```
 {: codeblock}
 
 ## Token não autorizado depois de executar comandos relacionados ao plug-in Trusted Key Entry
+{: #troubleshoot-unauthorized-token}
 
 É possível receber mensagens semelhantes às seguintes depois de executar comandos da CLI `tke`:
 
 ```
-ibmcloud tke cryptounits
+ibmcloud tke domains
 FAILED
 Error querying crypto instances.
 Status code: 401
@@ -70,6 +72,7 @@ Efetue login no {{site.data.keyword.cloud_notm}} novamente com o comando `ibmclo
 {: tsResolve}
 
 ## Obtido o erro `CKR_IBM_WK_NOT_INITIALIZED` ao usar a CLI ou a API
+{: #troubleshoot-error-CLI-API}
 
 Ao usar a CLI ou a API, é possível obter uma mensagem de erro semelhante à seguinte:
 
@@ -82,7 +85,7 @@ Bad Request: rpc error: code = Unknown desc = GRPC Return Code: [0X434B525F484F5
 {: codeblock}
 {: tsSymptoms}
 
-Quando você executou o comando `ibmcloud tke cryptounit-compare`, não obteve uma confirmação `Valid` no CURRENT MASTER KEY REGISTER.
+Quando você executou o comando `ibmcloud tke domain-compare`, não obteve uma confirmação `Valid` no CURRENT MASTER KEY REGISTER.
 {: tsCauses}
 
 Certifique-se de que a chave mestra do HSM tenha sido configurada corretamente.
@@ -114,9 +117,9 @@ Se você tiver problemas ou perguntas quando estiver usando o {{site.data.keywor
 
 Você pode revisar os fóruns para ver se outros usuários tiveram o mesmo problema. Quando estiver usando os fóruns para fazer uma pergunta, identifique sua pergunta para que ela seja vista pela equipe de desenvolvimento do {{site.data.keyword.cloud_notm}}.
 
-- Se você tiver perguntas técnicas sobre o {{site.data.keyword.hscrypto}}, poste sua pergunta no [Stack Overflow ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://stackoverflow.com/){: new_window} e identifique-a com "ibm-cloud" e "hyperprotect-crypto".
-- Para perguntas sobre o serviço e instruções de introdução, use o fórum [IBM developerWorks dW Answers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/answers/index.html){: new_window}. Inclua as tags "ibm-cloud" e "hyperprotect-crypto".
+- Se você tiver perguntas técnicas sobre o {{site.data.keyword.hscrypto}}, poste a sua pergunta no [Stack Overflow ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://stackoverflow.com/questions/tagged/hyper-protect-crypto){: new_window} e identifique a sua pergunta com "ibm-cloud" e "hyper-protect-crypto".
+- Para perguntas sobre o serviço e instruções de introdução, use o fórum [IBM developerWorks dW Answers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/answers/topics/hyper-protect-crypto/){: new_window}. Inclua as identificações "ibm-cloud" e "hyper-protect-crypto".
 
-Consulte [Obtendo ajuda![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/docs/support/index.html#getting-help){: new_window} para obter mais detalhes sobre o uso dos fóruns.
+Consulte [Obtendo ajuda![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/get-support?topic=get-support-using-avatar#using-avatar){: new_window} para obter mais detalhes sobre o uso dos fóruns.
 
-Para obter mais informações sobre como abrir um chamado de suporte do {{site.data.keyword.IBM_notm}} ou sobre níveis de suporte e severidades de chamado, veja [Entrando em contato com o suporte ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/docs/support/index.html#contacting-support){: new_window}.
+Para obter mais informações sobre como abrir um chamado de suporte do {{site.data.keyword.IBM_notm}} ou sobre níveis de suporte e severidades de chamado, veja [Entrando em contato com o suporte ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/get-support?topic=get-support-getting-customer-support){: new_window}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root keys, import keys, symmetric key, Hyper Protect Crypto Services GUI
 
@@ -26,14 +26,15 @@ subcollection: hs-crypto
 Chaves raiz são chaves simétricas de quebra de chaves usadas para proteger a segurança dos dados criptografados na nuvem. Para obter mais informações sobre chaves raiz, consulte [Criptografia de envelope](/docs/services/key-protect/concepts/envelope-encryption.html).
 
 ## Importando chaves raiz com a GUI
-{: #gui}
+{: #import-root-key-gui}
 
 [Depois de criar uma instância do serviço](/docs/services/
 hs-crypto/provision.html), conclua as etapas a seguir para incluir sua chave raiz existente com a GUI do {{site.data.keyword.hscrypto}}.
 
 1. [Efetue login no console do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/){: new_window}.
-2. No painel do {{site.data.keyword.cloud_notm}}, selecione sua instância provisionada do {{site.data.keyword.hscrypto}}.
-3. Para importar uma chave, clique em **Incluir chave** e selecione a janela **Inserir chave existente**.
+2. Acesse **Menu** &gt; **Lista de recursos** para visualizar uma lista de seus recursos.
+3. Em sua lista de recursos do {{site.data.keyword.cloud_notm}}, selecione a sua instância provisionada do {{site.data.keyword.hscrypto}}.
+4. Para importar uma chave, clique em **Incluir chave** e selecione a janela **Importar sua própria chave**.
 
     Especifique os detalhes da chave:
 
@@ -60,7 +61,7 @@ hs-crypto/provision.html), conclua as etapas a seguir para incluir sua chave rai
           <p>Certifique-se de que o material da chave atenda aos seguintes requisitos:</p>
           <p>
             <ul>
-              <li>A chave de ser de 256, 384 ou 512 bits.</li>
+              <li>A chave deve ser de 128, 192 ou 256 bits.</li>
               <li>Os bytes de dados, por exemplo, 32 bytes para 256 bits, devem ser codificados usando codificação base64.</li>
             </ul>
           </p>
@@ -69,10 +70,10 @@ hs-crypto/provision.html), conclua as etapas a seguir para incluir sua chave rai
       <caption style="caption-side:bottom;">Tabela 1. Descreve as configurações <b>Inserir chave existente</b></caption>
     </table>
 
-4. Quando você tiver concluído o preenchimento dos detalhes da chave, clique em **Incluir nova chave** para confirmar.
+5. Quando você tiver concluído o preenchimento dos detalhes da chave, clique em **Importar chave** para confirmar.
 
 ## Importando chaves raiz com a API
-{: #api}
+{: #import-root-key-api}
 
 Inclua a sua chave raiz existente fazendo uma chamada `POST` para o terminal a seguir.
 
@@ -83,7 +84,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 1. [Recupere suas credenciais de serviço e autenticação para trabalhar com chaves no serviço](/docs/services/hs-crypto/access-api.html).
 
-1. Chame a [API do {{site.data.keyword.hscrypto}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} com o comando cURL a seguir.
+1. Chame a API do [{{site.data.keyword.hscrypto}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/apidocs/hs-crypto){: new_window} com o comando cURL a seguir.
 
     ```cURL
     curl -X POST \
@@ -99,20 +100,13 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
      },
      "resources": [
        {
-       "type": "application/vnd.ibm.kms.key+json",
-       "name": "<key_alias>",
-       "description": "<key_description>",
-       "expirationDate": "<YYYY-MM-DDTHH:MM:SS.SSZ>",
-       "payload": "<key_material>",
-       "extractable": <key_type>
-       }
+       "type": "application/vnd.ibm.kms.key+json", "name": "<key_alias>", "description": "<key_description>", "expirationDate": "<YYYY-MM-DDTHH:MM:SS.SSZ>", "payload": "<key_material>", "extractable": <key_type> }
      ]
     }'
     ```
     {: codeblock}
-
-    Para trabalhar com chaves dentro de uma organização e um espaço do Cloud Foundry em sua conta, substitua `Bluemix-Instance` pelos cabeçalhos `Bluemix-org` e `Bluemix-space` apropriados. [Para obter mais informações, consulte o doc de referência da API do {{site.data.keyword.hscrypto}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Substitua as variáveis na solicitação de exemplo de acordo com a tabela a seguir.
     <table>
@@ -161,7 +155,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
           <p>Certifique-se de que o material da chave atenda aos seguintes requisitos:</p>
           <p>
             <ul>
-              <li>A chave de ser de 256, 384 ou 512 bits.</li>
+              <li>A chave deve ser de 128, 192 ou 256 bits.</li>
               <li>Os bytes de dados, por exemplo, 32 bytes para 256 bits, devem ser codificados usando codificação base64.</li>
             </ul>
           </p>
@@ -197,7 +191,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 **Nota:** ao incluir uma chave raiz existente no serviço, a chave permanece dentro dos limites de {{site.data.keyword.hscrypto}} e seu material da chave não pode ser recuperado.
 
 ### O que vem a seguir
+{: #import-root-key-next}
 
 - Para descobrir mais sobre como proteger chaves com criptografia de envelope, consulte [Chaves de quebra](/docs/services/hs-crypto/wrap-keys.html).
-- Para saber mais sobre como gerenciar programaticamente suas chaves, [verifique o doc de referência da API do {{site.data.keyword.hscrypto}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/apidocs/
-hs-crypto){: new_window}.
+- Para descobrir mais sobre como gerenciar programaticamente as suas chaves, [verifique o doc de referência da API do {{site.data.keyword.hscrypto}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/apidocs/hs-crypto){: new_window}.

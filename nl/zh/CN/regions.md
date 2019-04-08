@@ -24,7 +24,7 @@ subcollection: hs-crypto
 {: shortdesc}
 
 <!-- ## Available regions
-{: #regions}
+{: #available-regions}
 
 {{site.data.keyword.hscrypto}} is available in the following regions and locations: -->
 
@@ -32,7 +32,7 @@ subcollection: hs-crypto
 ## 服务端点
 {: #endpoints}
 
-如果是以编程方式管理 {{site.data.keyword.hscrypto}} 资源，请参阅下表以确定连接到 [{{site.data.keyword.hscrypto}} API](https://cloud.ibm.com/apidocs/hs-crypto) 时要使用的 API 端点：
+如果是以编程方式管理 {{site.data.keyword.hscrypto}} 资源，请参阅下表以确定连接到 [{{site.data.keyword.hscrypto}} API](https://{DomainName}/apidocs/hs-crypto) 时要使用的 API 端点：
 
 <table>
     <tr>

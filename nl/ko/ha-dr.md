@@ -30,7 +30,7 @@ subcollection: hs-crypto
 ## 위치, 테넌시 및 가용성
 {: #availability}
 
-{{site.data.keyword.hscrypto}}는 멀티 테넌트 지역 서비스입니다.
+<!-- {{site.data.keyword.hscrypto}} is a multi-tenant, regional service. -->
 
 {{site.data.keyword.hscrypto}} 요청이 처리되는 지리적 영역을 나타내는 지원되는 [{{site.data.keyword.cloud_notm}} 지역](/docs/services/hs-crypto/regions.html) 중 하나에서 {{site.data.keyword.hscrypto}} 리소스를 작성할 수 있습니다. 지역에 대한 로컬 액세스, 짧은 대기 시간 및 보안 요구사항을 충족하기 위해 각 {{site.data.keyword.cloud_notm}} 지역에는 [여러 가용성 구역 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/bluemix/2018/06/expansion-availability-zones-global-regions/)이 포함되어 있습니다.
 

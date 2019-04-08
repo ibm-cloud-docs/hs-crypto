@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-21"
+lastupdated: "2019-03-21"
 
 Keywords: provision, instance of Hyper Protect Crypto Services
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
+{:important: .important}
 {:gif: data-image-type='gif'}
 
 # Mise à disposition du service
@@ -25,7 +26,7 @@ Vous pouvez créer une instance de {{site.data.keyword.cloud_notm}} {{site.data.
 {: shortdesc}
 
 ## Mise à disposition à partir de la console {{site.data.keyword.cloud_notm}}
-{: #gui}
+{: #provision-gui}
 
 Pour mettre à disposition une instance de {{site.data.keyword.hscrypto}} à partir de la console {{site.data.keyword.cloud_notm}}, effectuez les étapes suivantes :
 
@@ -33,7 +34,11 @@ Pour mettre à disposition une instance de {{site.data.keyword.hscrypto}} à par
 2. Cliquez sur **Catalogue** pour afficher la liste des services disponibles sur {{site.data.keyword.cloud_notm}}.
 3. Dans le panneau de navigation Toutes les catégories, cliquez sur la catégorie **Sécurité et identité**.
 4. Dans la liste de services, cliquez sur la vignette **{{site.data.keyword.hscrypto}}**.
-5. Sélectionnez un plan de service et cliquez sur **Créer** pour mettre à disposition une instance de {{site.data.keyword.hscrypto}} dans le compte, la région et le groupe de ressources auxquels vous êtes connecté.
+5. **Facultatif** : dans la zone **Etiquettes**, ajoutez des étiquettes pour organiser vos ressources. Si vos étiquettes sont liées à la facturation, pensez à les écrire sous la forme de paires clé:valeur pour regrouper les étiquettes associées, comme `costctr:124`. Pour plus d'informations sur les étiquettes, voir [Utilisation d'étiquettes](/docs/resources?topic=resources-tag#tag).
+6. Sous la rubrique relative au **nombre d'unités crypto**, sélectionnez le nombre d'unités crypto répondant à vos besoins de performance.
+
+  Une instance de service prend en charge jusqu'à six unités crypto. Dans un environnement de production, il est conseillé de sélectionner au moins deux unités crypto pour activer la haute disponibilité. Si vous sélectionnez trois unités crypto ou plus, ces unités sont réparties dans les trois zones de disponibilité prises en charge dans la région sélectionnée.{: important}
+7. Cliquez sur **Créer** pour mettre à disposition une instance d'{{site.data.keyword.hscrypto}} dans le compte, la région ou le groupe de ressources dans lequel vous êtes connecté.
 
 ![Mise à disposition du service](image/provisioning.gif "Mise à disposition du service")
 {: gif}
@@ -41,7 +46,7 @@ Pour mettre à disposition une instance de {{site.data.keyword.hscrypto}} à par
 *Figure 1. Mise à disposition du service*
 
 <!-- ## Provisioning from the {{site.data.keyword.cloud_notm}} CLI
-{: #cli}
+{: #provision-cli}
 
 To provision an instance of {{site.data.keyword.hscrypto}} using the {{site.data.keyword.cloud_notm}} CLI, complete the following steps:
 
@@ -138,9 +143,9 @@ To manage access to your encryption keys with [Cloud Foundry roles](/docs/iam/cf
     ibmcloud service list
     ```
     {: pre}
+-->
 
+### Etapes suivantes
+{: #provision-next}
 
-### What's next
-
-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}.
-- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.-->
+Pour plus d'informations sur la gestion de vos clés à l'aide d'un programme, [voir la documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/hs-crypto){: new_window}.

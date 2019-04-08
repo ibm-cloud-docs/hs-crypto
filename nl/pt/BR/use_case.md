@@ -23,6 +23,7 @@ Esta página inclui os casos de uso atualmente incluídos no {{site.data.keyword
 {:shortdesc}
 
 ## Criptografia de dados em repouso com Keep Your Own Keys
+{: #data-at-rest-encryption}
 
 É possível usar o {{site.data.keyword.hscrypto}} para criptografar seus dados em repouso no nível de segurança mais alto com suas próprias chaves. O {{site.data.keyword.hscrypto}} fornece os recursos de gerenciamento de chave para gerar e gerenciar suas chaves usando APIs do {{site.data.keyword.keymanagementservicefull_notm}}.
 
@@ -39,6 +40,7 @@ A seguir estão alguns destaques do uso do {{site.data.keyword.hscrypto}} para p
 *Figura 1. Criptografia de dados em repouso com KYOK*
 
 ## Proteção da imagem do VMware com keep Your Own Keys
+{: #vmware-image-protection}
 
 Semelhante à proteção de dados em repouso, o {{site.data.keyword.hscrypto}} também pode proteger a imagem do VMware em repouso para criptografia e decriptografia por meio do VMware Key Management Interoperability Protocol.
 

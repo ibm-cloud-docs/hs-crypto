@@ -24,7 +24,7 @@ Vous pouvez connecter vos applications à {{site.data.keyword.cloud_notm}} {{sit
 {: shortdesc}
 
 <!-- ## Available regions
-{: #regions}
+{: #available-regions}
 
 {{site.data.keyword.hscrypto}} is available in the following regions and locations: -->
 
@@ -32,13 +32,13 @@ Vous pouvez connecter vos applications à {{site.data.keyword.cloud_notm}} {{sit
 ## Points d'extrémité de service
 {: #endpoints}
 
-Si vous gérez vos ressources {{site.data.keyword.hscrypto}} programmatiquement, reportez-vous au tableau suivant pour déterminer les points d'extrémité d'API à utiliser lorsque vous vous connectez à l'[API {{site.data.keyword.hscrypto}}](https://cloud.ibm.com/apidocs/hs-crypto) :
+Si vous gérez vos ressources {{site.data.keyword.hscrypto}} à l'aide d'un programme, reportez-vous au tableau suivant pour déterminer les points d'extrémité d'API à utiliser lorsque vous vous connectez à l'[API {{site.data.keyword.hscrypto}}](https://{DomainName}/apidocs/hs-crypto):
 
 <table>
     <tr>
         <th>Nom de région</th>
         <th>Emplacement géographique</th>
-        <th>Point d'extrémité d'API de service</th>
+        <th>Noeud final d'API de service</th>
     </tr>
   <!--
     <tr>

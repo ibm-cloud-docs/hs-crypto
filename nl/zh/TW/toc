@@ -14,15 +14,18 @@ IBM Cloud Hyper Protect Crypto Services
     關於 IBM Cloud Hyper Protect Crypto Services
         overview.md
         use_case.md
+        service_instance_concepts.md
         keys_intro.md
 
-    whats_new.md{: .navgroup-end}
+    whats_new.md
+    {: .navgroup-end}
 
     {: .navgroup id="howto"}
     provision.md
     access-api.md
     set-up-cli.md
     initialize_hsm.md
+    transition-keys.md
 
     {: .topicgroup}
     管理存取
@@ -49,7 +52,7 @@ IBM Cloud Hyper Protect Crypto Services
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Hyper Protect Crypto API 參考資料](https://{DomainName}/apidocs/hp-crypto)
+    [Hyper Protect Crypto API 參考資料](https://{DomainName}/apidocs/hs-crypto)
     regions.md
     at-events.md
     ha-dr.md

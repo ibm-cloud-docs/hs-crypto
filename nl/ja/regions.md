@@ -24,7 +24,7 @@ subcollection: hs-crypto
 {: shortdesc}
 
 <!-- ## Available regions
-{: #regions}
+{: #available-regions}
 
 {{site.data.keyword.hscrypto}} is available in the following regions and locations: -->
 
@@ -32,7 +32,7 @@ subcollection: hs-crypto
 ## サービス・エンドポイント
 {: #endpoints}
 
-{{site.data.keyword.hscrypto}} リソースをプログラムで管理している場合は、次の表を参照して、[{{site.data.keyword.hscrypto}} API](https://cloud.ibm.com/apidocs/hs-crypto) への接続時に使用する API エンドポイントを判断してください。
+{{site.data.keyword.hscrypto}} リソースをプログラムで管理している場合は、次の表を参照して、[{{site.data.keyword.hscrypto}} API](https://{DomainName}/apidocs/hs-crypto) への接続時に使用する API エンドポイントを判断してください。
 
 <table>
     <tr>

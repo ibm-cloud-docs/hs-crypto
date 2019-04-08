@@ -27,9 +27,10 @@ subcollection: hs-crypto
 I problemi generali con l'utilizzo di {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} potrebbero includere il fornire intestazioni o credenziali corrette quando interagisci con l'API. In molti casi, puoi risolvere questi problemi seguendo pochi semplici passi.
 {: shortdesc}
 
-## Si è verificato un errore durante l'eliminazione di un'istanza {{site.data.keyword.hscrypto}} inizializzata
+## Si è verificato un errore durante l'eliminazione di un'istanza del servizio inizializzata
+{: #troubleshoot-delete-instance}
 
-Potresti ricevere un errore simile al seguente quando elimini un'istanza {{site.data.keyword.hscrypto}} inizializzata:
+Potresti ricevere un errore simile al seguente quando elimini un'istanza servizio inizializzata:
 
 ```
 FAILED
@@ -38,23 +39,24 @@ Error response from server. Status code: 400; description: 400 DELETE https://zC
 {: codeblock}
 {: tsSymptoms}
 
-Non hai cancellato (azzerato) l'istanza {{site.data.keyword.hscrypto}} inizializzata prima di eliminarla.
+Non hai cancellato (azzerato) l'istanza del servizio inizializzata prima di eliminarla.
 {: tsCauses}
 
 Immetti il seguente comando prima di eliminare l'istanza:
 {: tsResolve}
 
 ```
-ibmcloud tke cryptounit-zeroize
+ibmcloud tke domain-zeroize
 ```
 {: codeblock}
 
 ## Token non autorizzato dopo l'esecuzione dei comandi relativi al plug-in Trusted Key Entry
+{: #troubleshoot-unauthorized-token}
 
 Potresti ricevere messaggi simili ai seguenti dopo aver eseguito i comandi della CLI `tke`:
 
 ```
-ibmcloud tke cryptounits
+ibmcloud tke domains
 FAILED
 Error querying crypto instances.
 Status code: 401
@@ -71,6 +73,7 @@ Accedi di nuovo a {{site.data.keyword.cloud_notm}} con il comando `ibmcloud logi
 {: tsResolve}
 
 ## Ricevi `error CKR_IBM_WK_NOT_INITIALIZED` quando utilizzi la CLI o l'API
+{: #troubleshoot-error-CLI-API}
 
 Quando utilizzi la CLI o l'API, potresti ricevere un messaggio di errore simile al seguente:
 
@@ -83,7 +86,7 @@ Bad Request: rpc error: code = Unknown desc = GRPC Return Code: [0X434B525F484F5
 {: codeblock}
 {: tsSymptoms}
 
-Quando hai eseguito il comando `ibmcloud tke cryptounit-compare`, non hai ricevuto una conferma `Valid` sul REGISTRO CHIAVE MASTER CORRENTE.
+Quando hai eseguito il comando `ibmcloud tke domain-compare`, non hai ricevuto una conferma `Valid` sul REGISTRO CHIAVE MASTER CORRENTE.
 {: tsCauses}
 
 Assicurati che la chiave master HSM sia stata impostata correttamente.
@@ -116,9 +119,9 @@ Puoi controllare se {{site.data.keyword.cloud_notm}} è disponibile andando alla
 Puoi rivedere i forum per controllare se altri utenti hanno riscontrato lo stesso problema. Quando stai utilizzando i forum per fare una domanda, contrassegna con una tag la tua domanda in modo che sia visualizzabile dai team di sviluppo
 {{site.data.keyword.cloud_notm}}.
 
-- Se hai domande tecniche su {{site.data.keyword.hscrypto}}, inserisci la tua domanda in [Stack Overflow ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://stackoverflow.com/){: new_window} e contrassegnala con le tag  "ibm-cloud" e "hyperprotect-crypto".
-- Per domande sul servizio e sulle istruzioni introduttive, utilizza il forum [IBM developerWorks dW Answers ![Icona di link esterno](../../icons/launch-glyph.svg "Icona di link esterno")](https://developer.ibm.com/answers/index.html){: new_window}. Includi le tag "ibm-cloud" e "hyperprotect-crypto".
+- Se hai domande tecniche su {{site.data.keyword.hscrypto}}, inserisci la tua domanda in [Stack Overflow ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://stackoverflow.com/questions/tagged/hyper-protect-crypto){: new_window} e contrassegnala con le tag  "ibm-cloud" e "hyper-protect-crypto".
+- Per domande sul servizio e sulle istruzioni introduttive, utilizza il forum [IBM developerWorks dW Answers ![Icona di link esterno](../../icons/launch-glyph.svg "Icona di link esterno")](https://developer.ibm.com/answers/topics/hyper-protect-crypto/){: new_window}. Includi le tag "ibm-cloud" e "hyper-protect-crypto".
 
-Per ulteriori dettagli sull'utilizzo dei forum, consulta il documento relativo a [come ottenere assistenza ![Icona di link esterno](../../icons/launch-glyph.svg "Icona di link esterno")](https://cloud.ibm.com/docs/support/index.html#getting-help){: new_window}.
+Per ulteriori dettagli sull'utilizzo dei forum, consulta il documento relativo a [come ottenere assistenza ![Icona di link esterno](../../icons/launch-glyph.svg "Icona di link esterno")](/docs/get-support?topic=get-support-using-avatar#using-avatar){: new_window}.
 
-Per ulteriori informazioni sull'apertura di un ticket di supporto {{site.data.keyword.IBM_notm}} o sui livelli di supporto e sulla gravità dei ticket, vedi [Come contattare il supporto ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/docs/support/index.html#contacting-support){: new_window}.
+Per ulteriori informazioni sull'apertura di un ticket di supporto {{site.data.keyword.IBM_notm}} o sui livelli di supporto e sulla gravità dei ticket, vedi [Come contattare il supporto ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/get-support?topic=get-support-getting-customer-support){: new_window}.

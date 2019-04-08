@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2018, 2019
@@ -27,7 +27,7 @@ criptografia criando e modificando políticas de acesso.
 Esta página apresenta os cenários para gerenciar o acesso às suas chaves de criptografia com a [API de Gerenciamento de acesso ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://iampap.ng.bluemix.net/v1/docs/#/Policies/post_v1_policies){: new_window}.
 
 ## Antes de Começar
-{: #prereqs}
+{: #prereqs-manage-api}
 
 Para trabalhar com a API, gere as suas credenciais de autenticação, como o [token de acesso](/docs/services/hs-crypto/access-api.html#retrieve-token) e o [ID da instância](/docs/services/hs-crypto/access-api.html#retrieve-instance-ID). É necessário o ID da chave do {{site.data.keyword.hscrypto}} cujo acesso você deseja gerenciar.
 
@@ -37,7 +37,7 @@ Para aprender sobre como visualizar IDs de chave, veja [Visualizando chaves](/do
 ### Recuperando seu ID da conta
 {: #retrieve-account-ID}
 
-Após você ter recuperado as suas credenciais, determine o escopo de acesso para a sua nova política de acesso recuperando o ID da conta que contém a sua instância de serviço do {{site.data.keyword.hscrypto}}.
+Após você ter recuperado as suas credenciais, determine o escopo de acesso para a sua nova política de acesso recuperando o ID da conta que contém a sua instância do {{site.data.keyword.hscrypto}} (instância de serviço para abreviação).
 
 Para recuperar o seu ID da conta, conclua as etapas a seguir:
 
@@ -144,13 +144,10 @@ curl -X POST \
 ```
 {: codeblock}
 
-Se você precisar gerenciar o acesso às chaves dentro de uma organização e espaço especificados do Cloud Foundry, substitua
-`serviceInstance` por `organizationId` e `spaceid`. Para saber mais, consulte o
-[doc de referência de API de gerenciamento de acesso
-![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}.
+<!-- If you need to manage access to keys within a specified Cloud Foundry org and space, replace `serviceInstance` with `organizationId` and `spaceId`. To learn more, see the [Access Management API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}.
 {: tip}
 
-Substitua `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>` e `<key_ID>`  com os valores apropriados.
+Replace `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>`, and `<key_ID>` with the appropriate values. -->
 
 **Opcional:** verifique se a política foi criada com êxito.
 

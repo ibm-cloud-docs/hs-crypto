@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root keys, create root keys, Hyper Protect Crypto Services GUI, symmetric key
 
@@ -25,13 +25,14 @@ subcollection: hs-crypto
 根密钥是用于保护云中已加密数据的安全性的对称密钥打包密钥。有关根密钥的更多信息，请参阅[包络加密](/docs/services/key-protect/concepts/envelope-encryption.html)。
 
 ## 使用 GUI 创建根密钥
-{: #gui}
+{: #root-key-gui}
 
 [创建服务的实例后](/docs/services/hs-crypto/provision.html)，请完成以下步骤以使用 {{site.data.keyword.hscrypto}} GUI 来创建根密钥。
 
 1. [登录到 {{site.data.keyword.cloud_notm}} 控制台 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/){: new_window}。
-2. 从 {{site.data.keyword.cloud_notm}} 仪表板，选择 {{site.data.keyword.hscrypto}} 的已供应实例。
-3. 要创建新密钥，请单击**添加密钥**，然后选择**生成新密钥**窗口。
+2. 转至**菜单** &gt; **资源列表**，以查看您的资源列表。
+3. 从 {{site.data.keyword.cloud_notm}} 资源列表，选择 {{site.data.keyword.hscrypto}} 的已供应实例。
+4. 要创建新密钥，请单击**添加密钥**，然后选择**创建密钥**窗口。
 
     指定密钥的详细信息：
 
@@ -54,10 +55,12 @@ subcollection: hs-crypto
       <caption style="caption-side:bottom;">表 1. 描述<b>生成新密钥</b>设置</caption>
     </table>
 
-4. 填写完密钥详细信息后，单击**生成密钥**以进行确认。
+5. 填写完密钥详细信息后，单击**创建密钥**以进行确认。
+
+服务中创建的密钥是 AES-CBC 算法支持的 256 位对称密钥。为了提高安全性，密钥通过位于安全 {{site.data.keyword.cloud_notm}} 数据中心且通过 FIPS 140-2 4 级认证的硬件安全模块 (HSM) 生成。
 
 ## 使用 API 创建根密钥
-{: #api}
+{: #root-key-api}
 
 通过对以下端点执行 `POST` 调用来创建根密钥。
 
@@ -66,11 +69,9 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ```
 {: codeblock}
 
-1. [检索服务和认证凭证以与服务中的密钥一起使用](/docs/services/{{site.data.keyword.hscrypto}}
-hs-crypto/access-api.html)。
+1. [检索服务和认证凭证以与服务中的密钥一起使用](/docs/services/hs-crypto/access-api.html)。
 
-
-2. 使用以下 cURL 命令调用 [{{site.data.keyword.hscrypto}} API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
+2. 使用以下 cURL 命令调用 [{{site.data.keyword.hscrypto}} API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/hs-crypto){: new_window}。
 
     ```cURL
     curl -X POST \
@@ -96,11 +97,11 @@ hs-crypto/access-api.html)。
     }'
     ```
     {: codeblock}
-
-    要使用帐户中 Cloud Foundry 组织和空间内的密钥，请将 `Bluemix-Instance` 替换为相应的 `Bluemix-org` 和 `Bluemix-space` 头。[有关更多信息，请参阅 {{site.data.keyword.hscrypto}} API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
-    {: tip}
+<!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+    {: tip} -->
 
     根据下表替换示例请求中的变量。
+
     <table>
       <tr>
         <th>变量</th>
@@ -170,6 +171,7 @@ hs-crypto/access-api.html)。
 **注：**使用该服务创建根密钥后，该密钥会始终位于 {{site.data.keyword.hscrypto}} 的边界内，并且无法检索其密钥资料。
 
 ### 后续工作
+{: #root-key-next}
 
 - 要了解有关使用包络加密保护密钥的更多信息，请查看[打包密钥](/docs/services/hs-crypto/wrap-keys.html)。
-- 要了解有关以编程方式管理密钥的更多信息，请[查看 {{site.data.keyword.hscrypto}} API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
+- 要了解有关以编程方式管理密钥的更多信息，请[查看 {{site.data.keyword.hscrypto}} API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/hs-crypto){: new_window}。

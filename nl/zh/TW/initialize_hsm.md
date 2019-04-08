@@ -18,58 +18,58 @@ subcollection: hs-crypto
 {:important: .important}
 {:tip: .tip}
 
-# Initializing service instances
+# 起始設定服務實例
 {: #initialize-hsm}
 
-Before using the {{site.data.keyword.hscrypto}} instance (service instance for short), you need to load master key registers using the Trusted Key Entry plug-in.
+在使用 {{site.data.keyword.hscrypto}} 實例（簡稱為服務實例）之前，您需要先使用「授信金鑰登錄」外掛程式來載入主要金鑰登錄。
 {:shortdesc}
 
-To initialize service instances, you need to load the master key with the Trusted Key Entry plug-in to your key storage, service instance first. The Trusted Key Entry plug-in allows you to load your master key values.
+若要起始設定服務實例，您需要先使用「授信金鑰登錄」外掛程式，將主要金鑰載入至您的金鑰儲存空間/服務實例。「授信金鑰登錄」外掛程式可讓您載入主要金鑰值。
 
-For an introduction to service instance initialization and other concepts, see [Introduction to service instance initialization](/docs/services/hs-crypto/service_instance_concepts.html#introduce-service).
+如需服務實例起始設定及其他概念的簡介，請參閱[服務實例起始設定簡介](/docs/services/hs-crypto/service_instance_concepts.html#introduce-service)。
 
-The following diagram gives you an overview of steps you need to take to initialize the service instance. Click each step on the diagram for detailed instructions.
+下列圖表提供您起始設定服務實例所需採取的步驟概觀。請按一下圖表上的每一個步驟以取得詳細指示。
 
-<img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="image/hsm_initialization_flow.png" width="750" alt="Click each step to get more details on the flow." style="width:750px;" />
+<img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="image/hsm_initialization_flow.png" width="750" alt="按一下流程上的每一個步驟以取得其他詳細資料。" style="width:750px;" />
 <map name="home_map1" id="home_map1">
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Verify API endpoint" title="Verify API endpoint" shape="rect" coords="151, 20, 241, 78" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Set up CLI" title="Set up CLI" shape="rect" coords="276, 20, 365, 78" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" alt="Install TKE plugin" title="Install TKE plugin" shape="rect" coords="401, 20, 493, 78" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" alt="Set up local directory for key files" title="Set up local directory for key files" shape="rect" coords="528, 20, 619, 78" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="驗證 API 端點" title="驗證 API 端點" shape="rect" coords="151, 20, 241, 78" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="設定 CLI" title="設定 CLI" shape="rect" coords="276, 20, 365, 78" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" alt="安裝 TKE 外掛程式" title="安裝 TKE 外掛程式" shape="rect" coords="401, 20, 493, 78" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" alt="設定金鑰檔的本端目錄" title="設定金鑰檔的本端目錄" shape="rect" coords="528, 20, 619, 78" />
 
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units" alt="Display assigned crypto units" title="Display assigned crypto units" shape="rect" coords="148, 111, 241, 171" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units1" alt="Add crypto units" title="Add crypto units" shape="rect" coords="276, 111, 366, 171" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units2" alt="Remove crypto units" title="Remove crypto units" shape="rect" coords="402, 111, 493, 171" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units" alt="顯示已指派的加密單位" title="顯示已指派的加密單位" shape="rect" coords="148, 111, 241, 171" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units1" alt="新增加密單位" title="新增加密單位" shape="rect" coords="276, 111, 366, 171" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units2" alt="移除加密單位" title="移除加密單位" shape="rect" coords="402, 111, 493, 171" />
 
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step1-create-signature-keys" alt="Create one or more signature keys" title="Create signature keys" shape="rect" coords="149, 206, 242, 264" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Manage crypto unit administrators" title="Manage crypto unit administrators" shape="rect" coords="281, 206, 366, 264" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Add one or more administrators in the target crypto unit" title="Add crypto unit administrators" shape="rect" coords="242, 296, 312, 358" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step3-exit-imprint-mode" alt="Exit imprint mode in the target crypto unit" title="Exit imprint mode" shape="rect" coords="328, 301, 396, 359" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step4-create-master-key" alt="Create a set of master key parts to use" title="Create master key parts" shape="rect" coords="401, 208, 493, 266" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="Load master key registers" title="Load master key register" shape="rect" coords="525, 207, 620, 264" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="Load new master key registers" title="Load new master key register" shape="rect" coords="455, 297, 525, 358" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step6-commit-master-key" alt="Commit the new master key register" title="Commit the new master key register" shape="rect" coords="539, 297, 610, 358" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step7-activate-master-key" alt="Activate the master key" title="Activate master key register" shape="rect" coords="619, 297, 689, 358" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step1-create-signature-keys" alt="建立一個以上簽章金鑰" title="建立簽章金鑰" shape="rect" coords="149, 206, 242, 264" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="管理加密單位管理者" title="管理加密單位管理者" shape="rect" coords="281, 206, 366, 264" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="在目標加密單位中新增一個以上管理者" title="新增加密單位管理者" shape="rect" coords="242, 296, 312, 358" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step3-exit-imprint-mode" alt="結束目標加密單位中的印記模式" title="結束印記模式" shape="rect" coords="328, 301, 396, 359" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step4-create-master-key" alt="建立要使用的主要金鑰部分集" title="建立主要金鑰部分" shape="rect" coords="401, 208, 493, 266" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="載入主要金鑰登錄" title="載入主要金鑰登錄" shape="rect" coords="525, 207, 620, 264" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="載入新的主要金鑰登錄" title="載入新的主要金鑰登錄" shape="rect" coords="455, 297, 525, 358" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step6-commit-master-key" alt="確定新的主要金鑰登錄" title="確定新的主要金鑰登錄" shape="rect" coords="539, 297, 610, 358" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step7-activate-master-key" alt="啟動主要金鑰" title="啟動主要金鑰登錄" shape="rect" coords="619, 297, 689, 358" />
 </map>
 
-*Figure 1. Task flow of service instance initialization*
+*圖 1. 服務實例起始設定的作業流程*
 
-It might take 20-30 minutes for you to complete this task.
+您可能需要 20-30 分鐘的時間才能完成此作業。
 
-## Before you begin
+## 在開始之前
 {: #initialize-crypto-prerequisites}
 
-1. Run the following command to make sure that you are logged in to the correct API endpoint:
+1. 執行下列指令以確定您已登入至正確的 API 端點：
 
   ```
   ibmcloud api https://api.ng.bluemix.net
   ```
   {: pre}
 
-2. Install the {{site.data.keyword.keymanagementservicefull}} plug-in. For detailed steps, see [Setting up the CLI](/docs/services/hs-crypto/set-up-cli.html). When you log in to the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview), you're notified when updates are available. Be sure to keep your {{site.data.keyword.keymanagementservicefull}} plug-in up-to-date so that you can use the commands and flags that are available for the Trusted Key Entry CLI plug-in.
+2. 安裝 {{site.data.keyword.keymanagementservicefull}} 外掛程式。如需詳細步驟，請參閱[設定 CLI](/docs/services/hs-crypto/set-up-cli.html)。當您登入 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview) 時，會在有更新可供使用時收到通知。請務必使 {{site.data.keyword.keymanagementservicefull}} 外掛程式保持最新狀態，以便您能夠使用可用於「授信金鑰登錄 CLI」外掛程式的指令及旗標。
 {: #initialize-crypto-prerequisites2}
 
-3. Install the latest latest Trusted Key Entry plug-in with the following command:
+3. 使用下列指令安裝最新的「授信金鑰登錄」外掛程式。
 {: #initialize-crypto-prerequisites3}
 
   ```
@@ -77,36 +77,35 @@ It might take 20-30 minutes for you to complete this task.
   ```
   {: pre}
 
-  **Note:** If you are using the Beta instance of ({{site.data.keyword.hscrypto}}, run the 'ibmcloud plugin install tke -v 0.0.6' to get the latest beta version of the Trusted Key Entry plug-in. Do not install later versions of the Trusted Key Entry plug-in.
+  **重要事項：**如果您使用 {{site.data.keyword.hscrypto}} 測試版實例，則請執行 'ibmcloud plugin install tke -v 0.0.4' 以取得最新測試版的「授信金鑰登錄」外掛程式。請不要安裝之後的「授信金鑰登錄」外掛程式版本。
 
-4. Set the environment variable CLOUDTKEFILES on your workstation. Specify a directory where you want master key part files and signature key part files to be created and saved. Create the directory if it does not already exist.
+4. 設定您工作站上的 CLOUDTKEFILES 環境變數。指定您想要建立並儲存主要金鑰部分檔案及簽章金鑰部分檔案所在的目錄。如果目錄不存在，則請建立它。
 {: #initialize-crypto-prerequisites4}
 
-  * On Linux or MacOS, add the following line to the `.bash_profile` file:
+  * 在 Linux 或 MacOS 上，將下列行新增至 `.bash_profile` 檔案：
      ```
      export CLOUDTKEFILES=<path>
      ```
      {: pre}
-     For example, you can specify the *path* to `/Users/tke-files`.
-  * On Windows, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a CLOUDTKEFILES environment variable and set the value to the path to the key files. For example, `C:\users\tke-files`.
+     例如，您可以將 *path* 指定為 `/Users/tke-files`。
+  * 在 Windows 上，在**控制台**的搜尋方框中鍵入 `environment variable` 來搜尋「環境變數」視窗。建立 CLOUDTKEFILES 環境變數並設定金鑰檔路徑的值。例如，`C:\users\tke-files`。
 
-## Adding or removing crypto units that are assigned to a user account
+## 新增或移除指派給使用者帳戶的加密單位
 {: #Identify_crypto_units}
 
-Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user account are in a group known as *a service instance*. A service instance can have up to six crypto units. All crypto units in a service instance should be configured the same. If one part of the {{site.data.keyword.cloud_notm}} cannot be accessed, the crypto units in a service instance can be used interchangeably for load balancing or for availability.
+指派給 {{site.data.keyword.cloud_notm}} 使用者帳戶的加密單位位於稱為*服務實例* 的群組中。服務實例最多可以具有 6 個加密單位。在一個服務實例中的所有加密單元應該有相同的配置。如果無法存取 {{site.data.keyword.cloud_notm}} 的某個部分，服務實例中的加密單位可交換使用以實現負載平衡或取得可用性。
 
-Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start in a cleared state known as *imprint mode*.
+指派給 {{site.data.keyword.cloud_notm}} 使用者的加密單位以稱為*印記模式* 的全新狀態啟動。
 
-The master key registers in all crypto units in a single service instance must be set the same. The same set of administrators must be added in all crypto units, and all crypto units must exit imprint mode at the same time.
+單一服務實例的所有加密單位中主要金鑰登錄的設定都必須相同。同一組管理者必須新增至所有加密單位中，而所有加密單位必須同時結束印記模式。
 
-* To display the service instances and crypto units assigned to a user account, use the following command:
-  {: #Identify_crypto_units1}
+* 若要顯示指派給使用者帳戶的服務實例及加密單位，請使用下列指令：{: #Identify_crypto_units1}
   ```
   ibmcloud tke cryptounits
   ```
   {: pre}
 
-  The following is a sample output that is displayed. The SELECTED column in the output table identifies the crypto units that are targeted by subsequent administrative commands that are issued by the Trusted Key Entry plug-in.
+  以下是顯示的範例輸出。輸出表格中的 SELECTED 直欄可識別由「授信金鑰登錄」外掛程式所發出的後續管理指令設為目標的加密單位。
 
   ```
   SERVICE INSTANCE: 482cf2ce-a06c-4265-9819-0b4acf54f2ba
@@ -121,184 +120,184 @@ The master key registers in all crypto units in a single service instance must b
   ```
   {: screen}
 
-* To add additional crypto units to the selected crypto unit list, use the following command:
+* 若要將其他加密單位新增至選取的加密單位清單中，請使用下列指令：
   {: #Identify_crypto_units2}
   ```
   ibmcloud tke cryptounit-add
   ```
   {: pre}
 
-  A list of the crypto units that are assigned to the current user account is displayed. When prompted, enter a list of crypto unit numbers to be added to the selected crypto unit list.
+  即會顯示指派給現行使用者帳戶的加密單位清單。收到提示時，請輸入要新增至所選取加密單位清單的加密單位編號清單。
 
-* To remove crypto units from the selected crypto unit list, use the following command:
+* 若要從選取的加密單位清單中移除加密單位，請使用下列指令：
   {: #Identify_crypto_units3}
   ```
   ibmcloud tke cryptounit-rm
   ```
   {: pre}
 
-  A list of crypto unitss that are assigned to the current user account is displayed. When prompted, enter a list of crypto unit numbers to be removed from the selected crypto unit list.
+  即會顯示指派給現行使用者帳戶的加密單位清單。收到提示時，請輸入要從所選取加密單位清單中移除的加密單位編號清單。
 
-  **Tip:** In general, either all crypto units or none of the crypto units in a service instance are selected. This causes subsequent administrative commands to update all crypto units of a service instance consistently. However, if the crypto units of a service instance become configured differently, you need to select and work with crypto units individually to restore a consistent configuration to all crypto units in a service instance.
+  **提示：**，對於所選取服務實例中的加密單位，一般而言會全選或是都不選。這會使後續管理指令一致地更新服務實例的所有加密單位。不過，如果服務實例的加密單位是以不同方式配置，您必須個別選取及使用這些加密單位，以將一致的配置還原到服務實例中的所有加密單位。
 
-  You can compare the configuration settings of the selected crypto units with the following command:
+  若要比較所選取加密單位的配置設定，請使用下列指令：
   ```
   ibmcloud tke cryptounit-compare
   ```
   {: pre}
 
-## Loading master keys
+## 載入主要金鑰
 {: #load-master-keys}
 
 <!-- A service instance is implemented as one or more crypto units on IBM cryptographic coprocessors. -->
 
-Before the new master key register can be loaded, add one or more administrators in the target crypto units and exit imprint mode.
+在可以載入新的主要金鑰登錄之前，請在目標加密單位中新增一個以上的管理者並結束印記模式。
 
-To load the new master key register, complete the following tasks using the {{site.data.keyword.cloud_notm}} CLI plug-in:
+若要載入新的主要金鑰登錄，請使用 {{site.data.keyword.cloud_notm}} CLI 外掛程式完成下列作業：
 
-### Step 1: Create one or more signature keys
+### 步驟 1：建立一個以上的簽章金鑰
 {: #step1-create-signature-keys}
 
-To load the new master key register, A crypto unit administrator must sign the command with a unique signature key. The first step is to create one or more signature key files that contain signature keys on your workstation. <!-- The private part of the signature key file is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. -->
+若要載入新的主要金鑰登錄，則加密單位管理者必須使用唯一的簽章金鑰來簽署指令。首要步驟為建立一個以上簽章金鑰檔，其包含您的工作站上的簽章金鑰。<!-- The private part of the signature key file is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. -->
 
-**Important**: For security considerations, the signature key owner can be a different person from the master key part owners. The signature key owner should be the only person who knows the password associated with the signature key file.
+**重要事項**：為了安全考量，簽章金鑰擁有者可以是與主要金鑰部分擁有者不同的人員。簽章金鑰擁有者應該是知道簽章金鑰檔相關聯密碼的唯一人員。
 
-* To display the existing signature keys on the workstation, use the following command:
+* 若要在工作站上顯示現有的簽章金鑰，請使用下列指令：
   ```
   ibmcloud tke sigkeys
   ```
   {: pre}
 
-* To create and save a new signature key on the workstation, use the following command:
+* 若要在工作站上建立並儲存新的簽章金鑰，請使用下列指令：
   ```
   ibmcloud tke sigkey-add
   ```
   {: pre}
 
-  When prompted, enter an administrator name and a password to protect the signature key file. You must remember the password. If the password is lost, the signature key cannot be used.
+  收到提示時，請輸入管理者名稱及密碼以保護簽章金鑰檔。您必須記住密碼。如果遺失密碼，就無法使用簽章金鑰。
 
-* To select the administrator to sign future commands, use the command:
+* 若要選取管理者來簽署未來的指令，請使用下列指令：
   ```
   ibmcloud tke sigkey-sel
   ```
   {: pre}
 
-  A list of signature key files found on the workstation is displayed. When prompted, enter the key number of the signature key file to select for signing subsequent administrative commands. <!--If a signature key file is already selected for signing administrative commands, this is indicated when the list of signature key files is displayed. -->
+  即會顯示工作站上找到的簽章金鑰檔清單。收到提示時，請輸入要選取以用來簽署後續管理指令之簽章金鑰檔的金鑰編號。
 
   <!-- **Tip**: Before you run the `cryptounit-exit-impr` command to exit imprint mode, the command needs to be signed by a crypto unit administrator using the signature key. After the crypto unit exits imprint mode, all commands to the crypto unit must be signed. -->
 
-### Step 2: Add one or more administrators in the target crypto unit
+### 步驟 2：在目標加密單位中新增一個以上的管理者
 {: #step2-load-admin}
 
 <!-- After a crypto unit exits imprint mode, all administrative commands sent to the crypto unit must be signed by an administrator that is added to the crypto unit. -->
 
-* To display the existing administrators for a crypto unit, use the following command:
+* 若要顯示加密單位的現有管理者，請使用下列指令：
   ```
   ibmcloud tke cryptounit-admins
   ```
   {: pre}
 
-* To add a new administrator, use the following command:
+* 若要新增新的管理者，請使用下列指令：
   ```
   ibmcloud tke cryptounit-admin-add
   ```
   {: pre}
 
-  A list of the signature key files that are found on the workstation is displayed.
+  即會顯示工作站上找到的簽章金鑰檔清單。
 
-  When prompted, select the signature key file that is associated with the crypto unit administrator to be added. And then enter the password for the selected signature key file.
+  收到提示時，請選取與要新增之加密單位管理者相關聯的的簽章金鑰檔。然後，輸入所選取簽章金鑰檔的密碼。
 
-  You can repeat the command to add additional crypto unit administrators if needed. Any administrator can independently run commands in the crypto unit.
+  必要的話，您可以重複此指令以新增其他的加密單位管理者。任何管理者都能在加密單位中個別執行指令。
 
-  In imprint mode, the command to add a crypto unit administrator does not need to be signed. After leaving imprint mode, to add crypto unit administrators, the command to be used must be signed by a crypto unit administrator that is already added in the crypto unit.
+  在印記模式中，用來新增加密單位管理者的指令不需經過簽署。離開印記模式之後，若要新增加密單位管理者，則要使用的指令必須由已新增至加密單位中的加密單位管理者進行簽署。
 
-### Step 3: Exit imprint mode in the target crypto unit
+### 步驟 3：在目標加密單位中結束印記模式
 {: #step3-exit-imprint-mode}
 
-A crypto unit in imprint mode is not considered secure. You cannot run most of the administrative commands, such as loading the new master key register, in imprint mode.
+處於印記模式的加密單位不被視為安全。您無法在印記模式中執行大部分的管理指令，例如載入新的主要金鑰登錄。
 
-After you add one or more crypto unit administrators, exit imprint mode by using the command:
+當您新增一個以上的加密單位管理者之後，請使用下列指令來結束印記模式：
 
   ```
   ibmcloud tke cryptounit-exit-impr
   ```
   {: pre}
 
-  ** Important:** The command to exit imprint mode must be signed by one of the added crypto unit administrators using the signature key. After the crypto unit exits imprint mode, all commands to the crypto unit must be signed.
+  **重要事項：**結束印記模式的指令必須經由已新增的其中一個使用簽章金鑰的加密單位管理者簽署。當加密單位結束印記模式之後，加密單位的所有指令都必須經過簽署。
 
-### Step 4: Create a set of master key parts to use
+### 步驟 4：建立一組要使用的主要金鑰部分
 {: #step4-create-master-key}
 
-Each master key part is saved in a password-protected file on the workstation.
+每個主要金鑰部分都儲存在工作站上受密碼保護的檔案中。
 
-**Important**: You must create at least two master key parts. For security considerations, three master key parts can be used and each key part can be owned by a different person. The key part owner should be the only person who knows the password associated with the key part file.
+**重要事項**：您必須建立至少兩個主要金鑰部分。為了安全考量，可以使用三個主要金鑰部分，而每個金鑰部分可由不同的人員擁有。金鑰部分擁有者應該是知道金鑰部分檔案相關聯密碼的唯一人員。
 
-* To display the existing master key parts on the workstation, use the following command:
+* 若要在工作站上顯示現有的主要金鑰部分，請使用下列指令：
   ```
   ibmcloud tke mks
   ```
   {: pre}
 
-* To create and save a random master key part on the workstation, use the command:
+* 若要在工作站上建立並儲存隨機主要金鑰部分，請使用下列指令：
   ```
   ibmcloud tke mk-add --random
   ```
   {: pre}
 
-  When prompted, enter a description for the key part and a password to protect the key part file. You must remember the password. If the password is lost, you cannot use the key part.
+  收到提示時，請輸入金鑰部分的說明及用來保護金鑰部分檔案的密碼。您必須記住密碼。如果遺失密碼，您就無法使用金鑰部分。
 
-* To enter a known key part value and save it in a file on the workstation, use the following command:
+* 若要輸入已知的金鑰部分值，並將其儲存在工作站的檔案中，請使用下列指令：
   ```
   ibmcloud tke mk-add --value
   ```
   {: pre}
 
-  When prompted, enter the key part value as a hexadecimal string for the 32-byte key part. And then enter a description for the key part and a password to protect the key part file.
+  收到提示時，請針對 32 位元組金鑰部分以十六進位字串輸入金鑰部分值。然後，輸入金鑰部分的說明及用來保護金鑰部分檔案的密碼。
 
-### Step 5: Load the new master key register
+### 步驟 5：載入新的主要金鑰登錄
 {: #step5-load-master-key}
 
-**Important**: To load a master key register, all master key part files and the signature key file must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The master key part file owners and the signature key file owner need to enter the file passwords when the master key register is loaded on the common workstation.
+**重要事項**：若要載入主要金鑰登錄，共用工作站必須具有所有主要金鑰部分檔案及簽章金鑰檔。如果是在個別的工作站上建立這些檔案，請確定檔名不同以避免衝突。在共用工作站上載入主要金鑰登錄時，主要金鑰部分檔案擁有者及簽章金鑰檔擁有者需要輸入檔案密碼。
 
-For information on how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/services/hs-crypto/service_instance_concepts.html#introduce-key-registers).
+如需如何載入主要金鑰的相關資訊，請參閱[主要金鑰登錄](/docs/services/hs-crypto/service_instance_concepts.html#introduce-key-registers)中的詳細說明。
 
-To load the new master key register, use the following command:
+若要載入新的主要金鑰登錄，請使用下列指令：
 ```
 ibmcloud tke cryptounit-mk-load
 ```
 {: pre}
 
-A list of the master key parts that are found on the workstation is displayed.
+即會顯示工作站上找到的主要金鑰部分清單。
 
-When prompted, enter the key parts to be loaded into the new master key register. And enter the password for each selected key part file.
+收到提示時，請輸入要載入到新主要金鑰登錄的金鑰部分。然後，輸入每個所選取金鑰部分檔案的密碼。
 
-### Step 6: Commit the new master key register
+### 步驟 6：確定新的主要金鑰登錄
 {: #step6-commit-master-key}
 
-Loading the new master key register places the new master key register in the full uncommitted state. Before you can use the new master key register to initialize or re-encipher key storage, place the new master key register in the committed state. For information on how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/services/hs-crypto/service_instance_concepts.html#introduce-key-registers).
+載入新的主要金鑰登錄會將新的主要金鑰登錄置於完全未確定的狀態。在您可以使用新的主要金鑰登錄來起始設定或重新加密金鑰儲存空間之前，請將新的主要金鑰登錄置於已確定的狀態。如需如何載入主要金鑰的相關資訊，請參閱[主要金鑰登錄](/docs/services/hs-crypto/service_instance_concepts.html#introduce-key-registers)中的詳細說明。
 
-To commit the new master key register, use the following command:
+若要確定新的主要金鑰登錄，請使用下列指令：
 ```
 ibmcloud tke cryptounit-mk-commit
 ```
 {: pre}
 
-### Step 7: Activate the master key
+### 步驟 7：啟動主要金鑰
 {: #step7-activate-master-key}
 
-Activate the master key by moving the master key to the current master key register with the following command:
+使用下列指令，將主要金鑰移至現行的主要金鑰登錄來啟動主要金鑰：
 
 ```
 ibmcloud tke cryptounit-mk-setimm
 ```
 {: pre}
 
-## What's next
+## 下一步為何？
 {: #initialize-crypto-next}
 
-Go to the **Manage** tab of your managed {{site.data.keyword.hscrypto}} dashboard to manage root keys and standard keys.
+請移至您的受管理 {{site.data.keyword.hscrypto}} 儀表板的**管理**標籤，以管理根金鑰及標準金鑰。
 
-For more details on other options of the Trusted Key Entry plug-in commands, run the following command in the CLI:
+如需「授信金鑰登錄」外掛程式指令的詳細資料，請在 CLI 中執行下列指令：
 
 ```
 ibmcloud tke help

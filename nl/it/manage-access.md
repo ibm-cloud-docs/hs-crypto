@@ -90,11 +90,12 @@ La seguente tabella mostra come i ruoli di identità e accesso vengono associati
   <caption style="caption-side:bottom;">Tabella 1. Descrive come i ruoli di identità e accesso vengono associati alle autorizzazioni {{site.data.keyword.hscrypto}}</caption>
 </table>
 
-**Nota**: i ruoli utente Cloud IAM forniscono l'accesso a livello di servizio o di istanza del servizio. I [ruoli Cloud Foundry](/docs/iam/cfaccess.html) sono separati e definiscono l'accesso al livello di organizzazione o di spazio.
+<!-- **Note**: Cloud IAM user roles provide access at the service or service instance level. [Cloud Foundry roles](/docs/iam/cfaccess.html) are separate and define access at the organization or the space level. -->
 
 Per ulteriori informazioni su {{site.data.keyword.iamshort}}, consulta [Ruoli utente e autorizzazioni](/docs/iam/users_roles.html#userroles).
 
 ### Operazioni successive
+{: #manage-access-next}
 
 Gli amministratori e i proprietari dell'account possono invitare gli utenti e configurare le politiche del servizio che corrispondono alle azioni {{site.data.keyword.hscrypto}} che possono eseguire gli utenti.
 

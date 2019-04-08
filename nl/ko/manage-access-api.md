@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2018, 2019
@@ -26,7 +26,7 @@ subcollection: hs-crypto
 이 페이지에서는 [액세스 관리 API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://iampap.ng.bluemix.net/v1/docs/#/Policies/post_v1_policies){: new_window}를 사용하여 암호화 키에 대한 액세스를 관리하기 위한 시나리오를 안내합니다.
 
 ## 시작하기 전에
-{: #prereqs}
+{: #prereqs-manage-api}
 
 API에 대해 작업하려면 [액세스 토큰](/docs/services/hs-crypto/access-api.html#retrieve-token) 및 [인스턴스 ID](/docs/services/hs-crypto/access-api.html#retrieve-instance-ID)와 같은 인증 인증 정보를 생성하십시오. 액세스를 관리할 {{site.data.keyword.hscrypto}} 키의 ID도 필요합니다.
 
@@ -36,7 +36,7 @@ API에 대해 작업하려면 [액세스 토큰](/docs/services/hs-crypto/access
 ### 계정 ID 검색
 {: #retrieve-account-ID}
 
-인증 정보를 검색한 후 {{site.data.keyword.hscrypto}} 서비스 인스턴스를 포함하는 계정의 ID를 검색하여 새 액세스 정책에 대한 액세스 범위를 판별하십시오.
+인증 정보를 검색한 후 {{site.data.keyword.hscrypto}} 인스턴스(간략히 서비스 인스턴스)를 포함하는 계정의 ID를 검색하여 새 액세스 정책에 대한 액세스 범위를 판별하십시오.
 
 계정 ID를 검색하려면 다음 단계를 완료하십시오.
 
@@ -150,10 +150,10 @@ curl -X POST \
 ```
 {: codeblock}
 
-지정된 Cloud Foundry 조직 및 영역 내의 키에 대한 액세스를 관리해야 하는 경우 `serviceInstance`를 `organizationId` 및 `spaceId`로 대체하십시오. 자세히 보려면 [액세스 관리 API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}를 참조하십시오.
+<!-- If you need to manage access to keys within a specified Cloud Foundry org and space, replace `serviceInstance` with `organizationId` and `spaceId`. To learn more, see the [Access Management API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}.
 {: tip}
 
-`<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>` 및 `<key_ID>`를 적절한 값으로 대체하십시오.
+Replace `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>`, and `<key_ID>` with the appropriate values. -->
 
 **선택사항:** 정책이 작성되었는지 확인하십시오.
 
@@ -198,7 +198,7 @@ curl -X PUT \
 ```
 {: codeblock}
 
-`<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>` 및 `<key_ID>`를 적절한 값으로 대체하십시오.
+`<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>` 및 `<key_ID>`을 적절한 값으로 대체하십시오.
 
 **선택사항:** 정책이 업데이트되었는지 확인하십시오.
 

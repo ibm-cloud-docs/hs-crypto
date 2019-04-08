@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: standard keys, import keys, encryption keys, Hyper Protect Crypto Services GUI
 
@@ -23,13 +23,14 @@ subcollection: hs-crypto
 您可以使用 {{site.data.keyword.hscrypto}} GUI 或使用 {{site.data.keyword.hscrypto}} API 透過程式設計方式，來新增現有加密金鑰。
 
 ## 使用 GUI 匯入標準金鑰
-{: #gui}
+{: #import-standard-key-gui}
 
 [在建立服務的實例之後](/docs/services/hs-crypto/provision.html)，請完成下列步驟以使用 {{site.data.keyword.hscrypto}} GUI 來輸入現有標準金鑰。
 
 1. [登入 {{site.data.keyword.cloud_notm}} 主控台 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/){: new_window}。
-2. 從 {{site.data.keyword.cloud_notm}} 儀表板，選取已佈建的 {{site.data.keyword.hscrypto}} 實例。
-3. 若要匯入新金鑰，請按一下**新增金鑰**，然後選取**輸入現有金鑰**視窗。
+2. 移至**功能表** &gt; **資源清單**，以檢視您的資源清單。
+3. 從 {{site.data.keyword.cloud_notm}} 資源清單，選取已佈建的 {{site.data.keyword.hscrypto}} 實例。
+4. 若要匯入新的金鑰，請按一下**新增金鑰**，然後選取**匯入自己的金鑰**視窗。
 
     指定金鑰的詳細資料：
 
@@ -64,10 +65,10 @@ subcollection: hs-crypto
       <caption style="caption-side:bottom;">表 1. 說明<b>產生新金鑰</b>設定</caption>
     </table>
 
-4. 當您填寫完金鑰的詳細資料時，請按一下**產生金鑰**以便確認。
+5. 當您填寫完金鑰的詳細資料時，請按一下**匯入金鑰**以便確認。
 
 ## 使用 API 建立標準金鑰
-{: #api}
+{: #create-standard-key-api}
 
 對下列端點發出 `POST` 呼叫來建立標準金鑰：
 
@@ -78,7 +79,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 1. [擷取服務及鑑別認證以在服務中使用金鑰](/docs/services/hs-crypto/access-api.html)。
 
-1. 使用下列 cURL 指令，來呼叫 [{{site.data.keyword.hscrypto}} API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
+1. 使用下列 cURL 指令，來呼叫 [{{site.data.keyword.hscrypto}} API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/apidocs/hs-crypto){: new_window}。
 
     ```cURL
     curl -X POST \
@@ -106,9 +107,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     }'
     ```
     {: codeblock}
-
-    若要在您帳戶的 Cloud Foundry 組織及空間內使用金鑰，請將 `Bluemix-Instance` 取代為適當的 `Bluemix-org` 及 `Bluemix-space` 標頭。[如需相關資訊，請參閱 {{site.data.keyword.hscrypto}} API 參考資料文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     根據下表取代範例要求中的變數。
     <table>
@@ -195,6 +195,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 
 ### 下一步為何？
+{: #import-standard-key-next}
 
-- 若要進一步瞭解如何以程式設計方式管理您的金鑰，[請參閱 {{site.data.keyword.hscrypto}} API 參考資料文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
-- 若要查看 {{site.data.keyword.hscrypto}} 中所儲存的金鑰如何運作來加密及解密資料的範例，請[試用 GitHub 中的範例應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}。
+若要進一步瞭解如何以程式設計方式管理您的金鑰，[請參閱 {{site.data.keyword.hscrypto}} API 參考資料文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/apidocs/hs-crypto){: new_window}。
+
+<!-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}.  -->

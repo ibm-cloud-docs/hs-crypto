@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: details of the DELETE request, delete encryption key, deleting keys, Variable Description region
 
@@ -26,17 +26,18 @@ Puoi utilizzare {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} per e
 **Importante:** quando elimini una chiave, distruggi permanentemente il suo contenuto e i dati associati. L'azione è irreversibile. Distruggere le risorse non è consigliato negli ambienti di produzione, ma può essere utile negli ambienti temporanei come test o QA.
 
 ## Eliminazione delle chiavi con la GUI
-{: #gui}
+{: #delete-keys-gui}
 
 Se preferisci eliminare le tue chiavi di crittografia con un'interfaccia grafica, puoi utilizzare la GUI {{site.data.keyword.hscrypto}}.
 
 [Dopo aver creato o importato le tue chiavi esistenti nel servizio](/docs/services/hs-crypto/create-root-keys.html), completa la seguente procedura per eliminare una chiave:
 
 1. [Accedi alla console {{site.data.keyword.cloud_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/){: new_window}.
-2. Dal dashboard {{site.data.keyword.cloud_notm}}, seleziona l'istanza di {{site.data.keyword.hscrypto}} di cui è stato eseguito il provisioning.
-3. Utilizza la tabella **Keys** per sfogliare le chiavi nel tuo servizio.
-4. Fai clic sull'icona con tre punti per aprire un elenco di opzioni per la chiave che desideri eliminare.
-5. Dal menu di opzioni, fai clic su **Delete key** e conferma l'eliminazione della chiave nella schermata successiva.
+2. Vai a **Menu** &gt; **Elenco risorse** per visualizzare un elenco delle tue risorse.
+3. Dal tuo elenco risorse {{site.data.keyword.cloud_notm}}, seleziona la tua istanza di cui è stato eseguito il provisioning di {{site.data.keyword.hscrypto}}.
+4. Utilizza la tabella **Keys** per sfogliare le chiavi nel tuo servizio.
+5. Fai clic sull'icona con tre punti per aprire un elenco di opzioni per la chiave che desideri eliminare.
+6. Dal menu di opzioni, fai clic su **Delete key** e conferma l'eliminazione della chiave nella schermata successiva.
 
 Dopo aver eliminato una chiave, la chiave passa allo stato _Destroyed_. Le chiavi in questo stato non sono più ripristinabili. I metadati associati alla chiave, come la data di eliminazione della chiave, vengono conservati nel database {{site.data.keyword.hscrypto}}.
 
@@ -65,9 +66,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
       -H 'prefer: <return_preference>'
     ```
     {: codeblock}
-
-    Per utilizzare le chiavi in un'organizzazione o uno spazio Cloud Foundry nel tuo account, sostituisci `Bluemix-Instance` con le intestazioni `Bluemix-org` e `Bluemix-space` appropriate. [Per ulteriori informazioni, vedi la documentazione di riferimento API di {{site.data.keyword.hscrypto}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Sostituisci le variabili nella richiesta di esempio in base alla seguente tabella.
     <table>
@@ -128,4 +128,4 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {: screen}
 
-    Per una descrizione dettagliata dei parametri disponibili, consulta la [documentazione di riferimento API REST ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} di {{site.data.keyword.hscrypto}}.
+    Per una descrizione dettagliata dei parametri disponibili, consulta {{site.data.keyword.hscrypto}} [REST API reference doc ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/apidocs/hs-crypto){: new_window}.

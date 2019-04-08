@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root key, data encryption key, Hyper Protect Crypto Services
 
@@ -28,12 +28,12 @@ subcollection: hs-crypto
 鍵ラッピングが、クラウド内の保存データのセキュリティー管理にどのように役立つかについては、[エンベロープ暗号化](/docs/services/key-protect/concepts/envelope-encryption.html)を参照してください。
 
 ## API を使用した鍵のラッピング
-{: #api}
+{: #wrap-keys-api}
 
 {{site.data.keyword.hscrypto}} 内で管理するルート鍵を使用して、指定されたデータ暗号化鍵 (DEK) を保護することができます。
 
-**重要:** ラッピングのためにルート鍵を提供する場合、ラップ呼び出しが成功できるように、ルート鍵が 256 ビット、384 ビット、または 512 ビットであることを確認してください。 サービス内にルート鍵を作成する場合、{{site.data.keyword.hscrypto}}
- はその HSM から、AES-GCM アルゴリズムによってサポートされている 256 ビット鍵を生成します。
+ラッピングのためにルート鍵を提供する場合、ラップ呼び出しが成功できるように、ルート鍵が 128 ビット、192 ビット、または 256 ビットであることを確認してください。 サービス内にルート鍵を作成する場合、{{site.data.keyword.hscrypto}}
+ はその HSM から、AES-CBC アルゴリズムによってサポートされている 256 ビット鍵を生成します。
 
 [サービス内でルート鍵を指定した後](/docs/services/hs-crypto/create-root-keys.html)、以下のエンドポイントへの `POST` 呼び出しを行うことにより、拡張暗号化を使用して DEK をラップできます。
 
@@ -68,10 +68,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
     }'
     ```
     {: codeblock}
-
-    ご使用のアカウントの Cloud Foundry 組織およびスペース内で鍵の処理を行うには、`Bluemix-Instance` を、適切な `Bluemix-org` および `Bluemix-space` のヘッダーに置き換えます。 詳しくは、[{{site.data.keyword.hscrypto}}
- API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} を参照してください。
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     次の表に従って、例の要求内の変数を置き換えてください。
 
@@ -82,7 +80,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>{{site.data.keyword.hscrypto}} サービス・インスタンスが存在している地理的領域を表す、地域の省略形 (例: <code>us-south</code> または <code>eu-gb</code>)。 詳しくは、<a href="/docs/services/hs-crypto/regions.html#endpoints">地域のサービス・エンドポイント</a>を参照してください。</td>
+        <td>{{site.data.keyword.hscrypto}} サービス・インスタンスが存在している地理的領域を表す、地域の省略形 (例: <code>us-south</code> または <code>eu-gb</code>)。詳しくは、<a href="/docs/services/hs-crypto/regions.html#endpoints">地域のサービス・エンドポイント</a>を参照してください。</td>
       </tr>
       <tr>
         <td><varname>key_ID</varname></td>
@@ -94,7 +92,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
-        <td>{{site.data.keyword.hscrypto}} サービス・インスタンスに割り当てられた固有 ID。 詳しくは、<a href="/docs/services/hs-crypto/access-api.html#retrieve-instance-ID">インスタンス ID の取得</a>を参照してください。</td>
+        <td>{{site.data.keyword.hscrypto}} サービス・インスタンスに割り当てられた固有 ID。詳しくは、<a href="/docs/services/hs-crypto/access-api.html#retrieve-instance-ID">インスタンス ID の取得</a>を参照してください。</td>
       </tr>
       <tr>
         <td><varname>correlation_ID</varname></td>
@@ -110,7 +108,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
       </tr>
       <tr>
         <td><varname>additional_data</varname></td>
-        <td>オプション: 鍵をさらにセキュアにするために使用される追加認証データ (AAD)。 各ストリングは、最大 255 文字を保持できます。 サービスに対してラップ呼び出を行ったときに AAD を提供した場合は、後続のアンラップ呼び出し時にも同じ AAD を指定する必要があります。<br></br>重要: {{site.data.keyword.hscrypto}} サービスは、追加認証データを保存しません。 AAD を提供する場合は、同じ AAD にアクセスすることや、後続のアンラップ要求時に同じ AAD を提供することが確実にできるようにするため、データを安全な場所に保存してください。</td>
+        <td>オプション: 鍵をさらにセキュアにするために使用される追加認証データ (AAD)。 各ストリングは、最大 255 文字を保持できます。 サービスに対してラップ呼び出を行ったときに AAD を提供した場合は、後続のアンラップ呼び出し時にも同じ AAD を指定する必要があります。<br></br>重要: {{site.data.keyword.hscrypto}} サービスは、追加認証データを保存しません。AAD を提供する場合は、同じ AAD にアクセスすることや、後続のアンラップ要求時に同じ AAD を提供することが確実にできるようにするため、データを安全な場所に保存してください。</td>
       </tr>
       <caption style="caption-side:bottom;">表 1. {{site.data.keyword.hscrypto}} で指定の鍵をラップするために必要な変数についての説明</caption>
     </table>

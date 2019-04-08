@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: details of the DELETE request, delete encryption key, deleting keys, Variable Description region
 
@@ -26,17 +26,18 @@ Vous pouvez utiliser {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} 
 **Important :** : lorsque vous supprimez une clé, vous détruisez définitivement son contenu et les données associées. L'action est irréversible. La destruction de ressources n'est pas recommandée dans les environnements de production, mais peut être utile dans les environnements temporaires tels que les environnements de test ou d'assurance qualité.
 
 ## Suppression de clés avec l'interface graphique utilisateur
-{: #gui}
+{: #delete-keys-gui}
 
 Si vous préférez supprimer vos clés de chiffrement à l'aide d'une interface graphique, vous pouvez utiliser l'interface graphique utilisateur {{site.data.keyword.hscrypto}}.
 
 [Après avoir créé ou importé vos clés existantes dans le service](/docs/services/hs-crypto/create-root-keys.html), procédez comme suit pour supprimer une clé :
 
 1. [Connectez-vous à la console {{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/){: new_window}.
-2. Dans le tableau de bord {{site.data.keyword.cloud_notm}}, sélectionnez l'instance {{site.data.keyword.hscrypto}} mise à disposition.
-3. Utilisez le tableau **Clés** pour parcourir les clés du service.
-4. Cliquez sur l'icône pour ouvrir la liste des options de la clé à supprimer..
-5. Dans le menu d'options, cliquez sur **Supprimer la clé** et confirmez la suppression dans l'écran suivant.
+2. Accédez à **Menu** &gt; **Liste de ressources** pour afficher la liste de vos ressources.
+3. Dans la liste de ressources {{site.data.keyword.cloud_notm}}, sélectionnez votre instance {{site.data.keyword.hscrypto}} mise à disposition.
+4. Utilisez le tableau **Clés** pour parcourir les clés du service.
+5. Cliquez sur l'icône pour ouvrir la liste des options de la clé à supprimer..
+6. Dans le menu d'options, cliquez sur **Supprimer la clé** et confirmez la suppression dans l'écran suivant.
 
 Une fois supprimée, la clé passe à l'état _Détruit_. Les clés qui se trouvent dans cet état sont irrécupérables. Les métadonnées associées à la clé, comme la date de suppression de la clé, sont conservées dans la base de données {{site.data.keyword.hscrypto}}.
 
@@ -65,9 +66,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
       -H 'prefer: <return_preference>'
     ```
     {: codeblock}
-
-    Pour utiliser les clés dans une organisation et un espace Cloud Foundry de votre compte, remplacez `Bluemix-Instance` par les en-têtes `Bluemix-org` et `Bluemix-space` appropriés. [Pour plus d'informations, consultez la documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Remplacez les variables dans l'exemple de demande en fonction du tableau suivant :
     <table>
@@ -77,7 +77,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>Abréviation de la région, comme <code>us-south</code> ou <code>eu-gb</code>, représentant la zone géographique dans laquelle votre instance de service {{site.data.keyword.hscrypto}} réside. Pour plus d'informations, consultez <a href="/docs/services/hs-crypto/regions.html#endpoints">Points d'extrémité de service régional</a>.</td>
+        <td>Abréviation de la région, comme <code>us-south</code> ou <code>eu-gb</code>, représentant la zone géographique dans laquelle votre instance de service {{site.data.keyword.hscrypto}} réside. Pour plus d'informations, voir <a href="/docs/services/hs-crypto/regions.html#endpoints">Points d'extrémité de service régional</a>.</td>
       </tr>
       <tr>
         <td><varname>key_ID</varname></td>
@@ -128,4 +128,4 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {: screen}
 
-    Pour obtenir une description détaillée des paramètres disponibles, consultez la {{site.data.keyword.hscrypto}} [documentation de référence de l'API REST ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
+    Pour obtenir une description détaillée des paramètres disponibles, voir la {{site.data.keyword.hscrypto}} [documentation de référence de l'API REST ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.

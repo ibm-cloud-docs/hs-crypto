@@ -30,7 +30,7 @@ Utilisez cette page pour en apprendre plus sur les stratégies de disponibilité
 ## Lieux, location et disponibilité
 {: #availability}
 
-{{site.data.keyword.hscrypto}} est un service régional multi-locataire.
+<!-- {{site.data.keyword.hscrypto}} is a multi-tenant, regional service. -->
 
 Vous pouvez créer des ressources {{site.data.keyword.hscrypto}} dans l'une des [régions {{site.data.keyword.cloud_notm}}](/docs/services/hs-crypto/regions.html) prises en charge, c'est-à-dire les secteurs géographiques où vos demandes {{site.data.keyword.hscrypto}} sont prises en charge et traitées. Chaque région {{site.data.keyword.cloud_notm}} contient [plusieurs zones de disponibilité ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2018/06/expansion-availability-zones-global-regions/) afin de répondre à ses exigences d'accès local, de faible temps de latence et de sécurité.
 
@@ -42,4 +42,4 @@ Vos clés de chiffrement sont confinées dans la région où vous les créez. {{
 ## Récupération après sinistre
 {: #disaster-recovery}
 
-{{site.data.keyword.hscrypto}} met en oeuvre un service régional de récupération après sinistre avec un objectif de temps de reprise (RTO) d'une heure. Le service obéit aux règles d'{{site.data.keyword.cloud_notm}} en ce qui concerne la planification face aux risques d'événements catastrophiques et la récupération de tels événements. Pour plus d'informations, consultez [Récupération après sinistre](/docs/overview/zero_downtime.html#disaster-recovery).
+{{site.data.keyword.hscrypto}} met en oeuvre un service régional de récupération après sinistre avec un objectif de temps de reprise (RTO) d'une heure. Le service obéit aux règles d'{{site.data.keyword.cloud_notm}} en ce qui concerne la planification face aux risques d'événements catastrophiques et la récupération de tels événements. Pour plus d'informations, voir [Récupération après sinistre](/docs/overview/zero_downtime.html#disaster-recovery).

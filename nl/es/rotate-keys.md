@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root keys, Rotate key, key rotation
 
@@ -24,9 +24,6 @@ subcollection: hs-crypto
 Puede rotar las claves raíz bajo demanda utilizando {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
-Actualmente no se admite la rotación de claves maestras.
-{: important}
-
 Cuando se rota la clave raíz, se acorta el tiempo de vida de la clave y se limita la cantidad de información que protege dicha clave.   
 
 Para obtener información sobre como la rotación de claves le ayuda a cumplir los estándares del sector y las mejores prácticas en criptografía, consulte [Rotación de claves](/docs/services/key-protect/concepts/key-rotation.html).
@@ -35,23 +32,24 @@ La rotación solo está disponible para las claves raíz.
 {: tip}
 
 ## Rotación de claves raíz con la GUI
-{: #gui}
+{: #rotate-root-key-gui}
 
 Si prefiere rotar sus claves raíz utilizando una interfaz gráfica, puede utilizar la GUI de {{site.data.keyword.hscrypto}}.
 
 [Después de crear o importar sus claves raíz existentes en el servicio](/docs/services/hs-crypto/create-root-keys.html), complete los siguientes pasos para rotar una clave:
 
 1. [Inicie sesión en la consola de {{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/){: new_window}.
-2. Desde el panel de control de {{site.data.keyword.cloud_notm}} seleccione su instancia suministrada de {{site.data.keyword.hscrypto}}.
-3. Utilice la tabla de **Claves** tabla para examinar las claves en el servicio.
-4. Pulse el icono ⋮ para abrir una lista de opciones para la clave que desea rotar.
-5. En el menú de opciones, pulse **Rotar clave** y confirme la rotación en la pantalla siguiente.
+2. Vaya a **Menú** &gt; **Lista de recursos** para ver una lista de sus recursos.
+3. Desde la lista de recursos de {{site.data.keyword.cloud_notm}} seleccione su instancia suministrada de {{site.data.keyword.hscrypto}}.
+4. En la página de detalles de la aplicación, utilice la tabla de **Claves** tabla para examinar las claves en el servicio.
+5. Pulse el icono ⋮ para abrir una lista de opciones para la clave que desea rotar.
+6. En el menú de opciones, pulse **Rotar clave** y confirme la rotación en la pantalla siguiente.
 
 Si importó la clave raíz inicialmente, debe proporcionar nuevo material de clave con codificación base64 para rotar la clave. Para obtener más información, consulte [Importación de claves raíz con la interfaz gráfica de usuario](/docs/services/hs-crypto/import-root-keys.html#gui).
 {: tip}
 
 ## Rotación de raíz claves utilizando la API
-{: #api}
+{: #rotate-root-kay-api}
 
 [Después de designar una clave raíz en el servicio](/docs/services/hs-crypto/create-root-keys.html), puede rotar la clave realizando una llamada `POST` al siguiente punto final.
 
@@ -109,7 +107,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rota
           <p>Para rotar una clave que {{site.data.keyword.hscrypto}} generó inicialmente, omita el atributo <code>payload</code> y pase un cuerpo de entidad de solicitud vacía. Para rotar una clave importada, proporcione un material de clave que cumpla los siguientes requisitos:</p>
           <p>
             <ul>
-              <li>La clave debe ser de 256, 384 o 512 bits.</li>
+              <li>La clave debe ser de 128, 192 o 256 bits.</li>
               <li>Los bytes de datos, por ejemplo, 32 bytes para 256 bits, se deben codificar en base64.</li>
             </ul>
           </p>

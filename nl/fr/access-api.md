@@ -35,7 +35,7 @@ Vous pouvez vous authentifier auprès de {{site.data.keyword.hscrypto}} en extra
 
 Pour extraire un jeton d'accès, procédez comme suit :
 
-1. Dans la console {{site.data.keyword.cloud_notm}}, accédez à  **Gérer** &gt; **Sécurité** &gt; **Identity and Access** &gt; **ID de service**. Suivez la procédure indiquée pour [créer un ID de service](/docs/iam/serviceid.html#creating-a-service-id).
+1. Dans la console {{site.data.keyword.cloud_notm}}, accédez à **Gérer** &gt; **Sécurité** &gt; **Identity and Access** &gt; **ID de service**. Suivez la procédure indiquée pour [créer un ID de service](/docs/iam/serviceid.html#creating-a-service-id).
 2. Utilisez le menu **Actions** afin de [définir une règle d'accès pour votre nouvel ID de service](/docs/iam/serviceidaccess.html).
 
     Pour plus d'informations sur la gestion des accès pour les ressources {{site.data.keyword.hscrypto}}, voir [Rôles et droits](/docs/services/hs-crypto/manage-access.html#roles).
@@ -104,7 +104,7 @@ Vous pouvez extraire les informations d'identification de votre instance de serv
 ## Extraction des informations de connexion
 {: #retrieve-connection-info}
 
-Avant d'appeler une API {{site.data.keyword.keymanagementserviceshort}} quelle qu'elle soit, appelez l'API **Retrieve the connection info** afin de récupérer les informations de connexion. Pour plus d'informations, consultez la [documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
+Avant d'appeler une API {{site.data.keyword.keymanagementserviceshort}} quelle qu'elle soit, appelez l'API **Retrieve the connection info** afin de récupérer les informations de connexion. Pour plus d'informations, voir [ la documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
 
 ## Mise en forme de la demande d'API
 {: #form-api-request}
@@ -123,6 +123,8 @@ curl -X GET \
 {: codeblock}
 
 ### Etapes suivantes
+{: #api-next}
 
-- Pour plus d'informations sur la gestion de vos clés à l'aide d'un programme, [consultez la documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-- Pour obtenir un exemple expliquant comment les clés stockées dans {{site.data.keyword.hscrypto}} peuvent fonctionner pour chiffrer et déchiffrer des données, [reportez-vous à l'exemple d'application disponible dans GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}.
+Pour plus d'informations sur la gestion de vos clés à l'aide d'un programme, [voir la documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+
+<!-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}. -->

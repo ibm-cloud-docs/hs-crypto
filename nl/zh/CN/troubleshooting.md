@@ -27,9 +27,10 @@ subcollection: hs-crypto
 使用 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} 的常见问题可能包括在与 API 交互时提供正确的头或凭证。在多种情况下，可通过执行几个简单步骤以解决这些问题。
 {: shortdesc}
 
-## 删除已初始化的 {{site.data.keyword.hscrypto}} 实例时发生错误
+## 删除已初始化的服务实例时发生错误
+{: #troubleshoot-delete-instance}
 
-在删除已初始化的 {{site.data.keyword.hscrypto}} 实例时，您可能会收到类似以下内容的错误：
+在删除已初始化的服务实例时，您可能会收到类似以下内容的错误：
 
 ```
 失败
@@ -38,23 +39,24 @@ subcollection: hs-crypto
 {: codeblock}
 {: tsSymptoms}
 
-您在删除已初始化的 {{site.data.keyword.hscrypto}} 实例之前并未将其清除（清零）。
+您在删除已初始化的服务实例之前并未将其清除（清零）。
 {: tsCauses}
 
 在删除实例前，先运行以下命令：
 {: tsResolve}
 
 ```
-ibmcloud tke cryptounit-zeroize
+ibmcloud tke domain-zeroize
 ```
 {: codeblock}
 
 ## 运行与 Trusted Key Entry 插件相关的命令之后未授权的令牌
+{: #troubleshoot-unauthorized-token}
 
 在运行 `tke` CLI 命令之后，您可能会收到类似以下内容的消息：
 
 ```
-ibmcloud tke cryptounits
+ibmcloud tke domains
 失败
 查询加密实例时出错。
 状态码：401
@@ -71,6 +73,7 @@ ibmcloud tke cryptounits
 {: tsResolve}
 
 ## 在使用 CLI 或 API 时收到 `error CKR_IBM_WK_NOT_INITIALIZED`
+{: #troubleshoot-error-CLI-API}
 
 在使用 CLI 或 API 时，您可能会收到类似以下内容的错误消息：
 
@@ -83,7 +86,7 @@ ibmcloud kp -i <service_instance_id> wrap <key_id>
 {: codeblock}
 {: tsSymptoms}
 
-在运行 `ibmcloud tke cryptounit-compare` 命令时，您未在当前主密钥寄存器上收到`有效`确认。
+在运行 `ibmcloud tke domain-compare` 命令时，您未在当前主密钥寄存器上收到`有效`确认。
 {: tsCauses}
 
 确保 HSM 主密钥设置正确。
@@ -115,9 +118,9 @@ ibmcloud kp -i <service_instance_id> wrap <key_id>
 
 可以查看论坛以了解是否有其他用户遇到相同问题。使用论坛进行提问时，请标记您的问题，以便 {{site.data.keyword.cloud_notm}} 开发团队可以看到。
 
-- 如果有关于 {{site.data.keyword.hscrypto}} 的技术问题，请将您的问题发布到 [Stack Overflow ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://stackoverflow.com/){: new_window} 上，并使用“ibm-cloud”和“hyperprotect-crypto”标记问题。
-- 有关服务的问题和入门指示信息，请使用 [IBM developerWorks dW Answers ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/index.html){: new_window} 论坛。请包括“ibm-cloud”和“hyperprotect-crypto”标记。
+- 如果有关于 {{site.data.keyword.hscrypto}} 的技术问题，请将您的问题发布到 [Stack Overflow ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://stackoverflow.com/questions/tagged/hyper-protect-crypto){: new_window} 上，并使用“ibm-cloud”和“hyper-protect-crypto”标记问题。
+- 有关服务的问题和入门指示信息，请使用 [IBM developerWorks dW Answers ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/topics/hyper-protect-crypto/){: new_window} 论坛。请包括“ibm-cloud”和“hyper-protect-crypto”标记。
 
-有关使用论坛的更多详细信息，请参阅[获取帮助 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/docs/support/index.html#getting-help){: new_window}。
+有关使用论坛的更多详细信息，请参阅[获取帮助 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/get-support?topic=get-support-using-avatar#using-avatar){: new_window}。
 
-有关提交 {{site.data.keyword.IBM_notm}} 支持凭单或支持级别和凭单严重性的更多信息，请参阅[联系支持人员 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/docs/support/index.html#contacting-support){: new_window}。
+有关提交 {{site.data.keyword.IBM_notm}} 支持凭单或支持级别和凭单严重性的更多信息，请参阅[联系支持人员 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/get-support?topic=get-support-getting-customer-support){: new_window}。

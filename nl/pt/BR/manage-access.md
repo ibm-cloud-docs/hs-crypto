@@ -94,11 +94,12 @@ chaves, convidar novos usuários e designar políticas de acesso para outros usu
   <caption style="caption-side:bottom;">Tabela 1. Descreve como as funções de identidade e acesso são mapeadas para permissões do {{site.data.keyword.hscrypto}}</caption>
 </table>
 
-**Nota**: funções de usuário do Cloud IAM fornecem acesso no nível de serviço ou de instância de serviço. As [funções do Cloud Foundry](/docs/iam/cfaccess.html) são separadas e definem o acesso no nível da organização ou do espaço.
+<!-- **Note**: Cloud IAM user roles provide access at the service or service instance level. [Cloud Foundry roles](/docs/iam/cfaccess.html) are separate and define access at the organization or the space level. -->
 
 Para saber mais sobre o {{site.data.keyword.iamshort}}, confira [Funções e permissões do usuário](/docs/iam/users_roles.html#userroles).
 
 ### O que vem a seguir
+{: #manage-access-next}
 
 Os proprietários e administradores de conta podem convidar usuários e configurar políticas de serviço que correspondem às ações do {{site.data.keyword.hscrypto}} que os usuários podem executar.
 

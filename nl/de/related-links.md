@@ -22,7 +22,7 @@ subcollection: hs-crypto
 # Zugehörige Links
 {: #related-links}
 
-Zusätzliche Ressourcen geben Ihnen weitere Informationen zur Verwaltung der Verschlüsselung mit {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}}.
+Zusätzliche Ressourcen, die Ihnen weitere Informationen zur Verwaltung der Verschlüsselung mit {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} zur Verfügung stellen. 
 
 ## Videos
 {: #videos}

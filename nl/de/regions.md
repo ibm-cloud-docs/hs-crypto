@@ -24,7 +24,7 @@ Sie können Ihre Anwendungen mit {{site.data.keyword.cloud_notm}} {{site.data.ke
 {: shortdesc}
 
 <!-- ## Available regions
-{: #regions}
+{: #available-regions}
 
 {{site.data.keyword.hscrypto}} is available in the following regions and locations: -->
 
@@ -32,7 +32,7 @@ Sie können Ihre Anwendungen mit {{site.data.keyword.cloud_notm}} {{site.data.ke
 ## Serviceendpunkte
 {: #endpoints}
 
-Wenn Sie Ihre {{site.data.keyword.hscrypto}}-Ressourcen programmgesteuert verwalten, können Sie mithilfe der folgenden Tabelle die API-Endpunkte bestimmen, die für die Verbindung zur [{{site.data.keyword.hscrypto}}-API](https://cloud.ibm.com/apidocs/hs-crypto) verwendet werden:
+Wenn Sie Ihre {{site.data.keyword.hscrypto}}-Ressourcen programmgesteuert verwalten, können Sie mithilfe der folgenden Tabelle die API-Endpunkte bestimmen, die für die Verbindung zur [{{site.data.keyword.hscrypto}}-API](https://{DomainName}/apidocs/hs-crypto) verwendet werden:
 
 <table>
     <tr>

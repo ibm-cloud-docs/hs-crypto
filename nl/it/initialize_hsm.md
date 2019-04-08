@@ -18,58 +18,58 @@ subcollection: hs-crypto
 {:important: .important}
 {:tip: .tip}
 
-# Initializing service instances
+# Inizializzazione delle istanze del servizio
 {: #initialize-hsm}
 
-Before using the {{site.data.keyword.hscrypto}} instance (service instance for short), you need to load master key registers using the Trusted Key Entry plug-in.
+Prima di utilizzare l'istanza {{site.data.keyword.hscrypto}} (istanza del servizio in breve), devi caricare i registri della chiave master utilizzando il plugin Trusted Key Entry.
 {:shortdesc}
 
-To initialize service instances, you need to load the master key with the Trusted Key Entry plug-in to your key storage, service instance first. The Trusted Key Entry plug-in allows you to load your master key values.
+Per inizializzare le istanze del servizio, devi prima caricare la chiave master con il plugin Trusted Key Entry nella tua istanza del servizio di archiviazione delle chiavi. Il plugin Trusted Key Entry ti consente di caricare i tuoi valori della chiave master.
 
-For an introduction to service instance initialization and other concepts, see [Introduction to service instance initialization](/docs/services/hs-crypto/service_instance_concepts.html#introduce-service).
+Per un'introduzione all'inizializzazione dell'istanza del servizio e altri concetti, vedi [Introduzione all'inizializzazione dell'istanza del servizio](/docs/services/hs-crypto/service_instance_concepts.html#introduce-service).
 
-The following diagram gives you an overview of steps you need to take to initialize the service instance. Click each step on the diagram for detailed instructions.
+Il seguente diagramma ti fornisce una panoramica della procedura che devi seguire per inizializzare l'istanza del servizio. Fai clic su ogni passo nel diagramma per le istruzioni dettagliate.
 
-<img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="image/hsm_initialization_flow.png" width="750" alt="Click each step to get more details on the flow." style="width:750px;" />
+<img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="image/hsm_initialization_flow.png" width="750" alt="Fai clic su ogni passo per ottenere ulteriori dettagli sul flusso." style="width:750px;" />
 <map name="home_map1" id="home_map1">
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Verify API endpoint" title="Verify API endpoint" shape="rect" coords="151, 20, 241, 78" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Set up CLI" title="Set up CLI" shape="rect" coords="276, 20, 365, 78" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" alt="Install TKE plugin" title="Install TKE plugin" shape="rect" coords="401, 20, 493, 78" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" alt="Set up local directory for key files" title="Set up local directory for key files" shape="rect" coords="528, 20, 619, 78" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Verifica l'endpoint API" title="Verifica l'endpoint API" shape="rect" coords="151, 20, 241, 78" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Configura la CLI" title="Configura la CLI" shape="rect" coords="276, 20, 365, 78" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" alt="Installa il plugin TKE" title="Installa il plugin TKE" shape="rect" coords="401, 20, 493, 78" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" alt="Configura la directory locale per i file della chiave" title="Configura la directory locale per i file della chiave" shape="rect" coords="528, 20, 619, 78" />
 
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units" alt="Display assigned crypto units" title="Display assigned crypto units" shape="rect" coords="148, 111, 241, 171" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units1" alt="Add crypto units" title="Add crypto units" shape="rect" coords="276, 111, 366, 171" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units2" alt="Remove crypto units" title="Remove crypto units" shape="rect" coords="402, 111, 493, 171" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units" alt="Visualizza le unità di crittografia assegnate" title="Visualizza le unità di crittografia assegnate" shape="rect" coords="148, 111, 241, 171" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units1" alt="Aggiungi le unità di crittografia" title="Aggiungi le unità di crittografia" shape="rect" coords="276, 111, 366, 171" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units2" alt="Rimuovi le unità di crittografia" title="Rimuovi le unità di crittografia" shape="rect" coords="402, 111, 493, 171" />
 
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step1-create-signature-keys" alt="Create one or more signature keys" title="Create signature keys" shape="rect" coords="149, 206, 242, 264" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Manage crypto unit administrators" title="Manage crypto unit administrators" shape="rect" coords="281, 206, 366, 264" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Add one or more administrators in the target crypto unit" title="Add crypto unit administrators" shape="rect" coords="242, 296, 312, 358" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step3-exit-imprint-mode" alt="Exit imprint mode in the target crypto unit" title="Exit imprint mode" shape="rect" coords="328, 301, 396, 359" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step4-create-master-key" alt="Create a set of master key parts to use" title="Create master key parts" shape="rect" coords="401, 208, 493, 266" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="Load master key registers" title="Load master key register" shape="rect" coords="525, 207, 620, 264" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="Load new master key registers" title="Load new master key register" shape="rect" coords="455, 297, 525, 358" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step6-commit-master-key" alt="Commit the new master key register" title="Commit the new master key register" shape="rect" coords="539, 297, 610, 358" />
-<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step7-activate-master-key" alt="Activate the master key" title="Activate master key register" shape="rect" coords="619, 297, 689, 358" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step1-create-signature-keys" alt="Crea una o più chiavi di firma" title="Crea le chiavi di firma" shape="rect" coords="149, 206, 242, 264" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Gestisci gli amministratori dell'unità di crittografia" title="Gestisci gli amministratori dell'unità di crittografia" shape="rect" coords="281, 206, 366, 264" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Aggiungi uno o più amministratori nell'unità di crittografia di destinazione" title="Aggiungi gli amministratori dell'unità di crittografia" shape="rect" coords="242, 296, 312, 358" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step3-exit-imprint-mode" alt="Esci dalla modalità impronta nell'unità di crittografia di destinazione" title="Esci dalla modalità impronta" shape="rect" coords="328, 301, 396, 359" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step4-create-master-key" alt="Crea una serie di parti della chiave master da utilizzare" title="Crea una serie di parti della chiave master" shape="rect" coords="401, 208, 493, 266" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="Carica i registri della chiave master" title="Carica il registro della chiave master" shape="rect" coords="525, 207, 620, 264" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="Carica i nuovi registri della chiave master" title="Carica il nuovo registro della chiave master" shape="rect" coords="455, 297, 525, 358" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step6-commit-master-key" alt="Esegui il commit del nuovo registro della chiave master" title="Esegui il commit del nuovo registro della chiave master" shape="rect" coords="539, 297, 610, 358" />
+<area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step7-activate-master-key" alt="Attiva la chiave master" title="Attiva il registro della chiave master" shape="rect" coords="619, 297, 689, 358" />
 </map>
 
-*Figure 1. Task flow of service instance initialization*
+*Figura 1. Flusso di attività dell'inizializzazione dell'istanza del servizio*
 
-It might take 20-30 minutes for you to complete this task.
+Per completare questa attività potrebbero essere necessari 20-30 minuti.
 
-## Before you begin
+## Prima di cominciare
 {: #initialize-crypto-prerequisites}
 
-1. Run the following command to make sure that you are logged in to the correct API endpoint:
+1. Immetti il seguente comando per assicurarti di aver eseguito l'accesso all'endpoint API corretto:
 
   ```
   ibmcloud api https://api.ng.bluemix.net
   ```
   {: pre}
 
-2. Install the {{site.data.keyword.keymanagementservicefull}} plug-in. For detailed steps, see [Setting up the CLI](/docs/services/hs-crypto/set-up-cli.html). When you log in to the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview), you're notified when updates are available. Be sure to keep your {{site.data.keyword.keymanagementservicefull}} plug-in up-to-date so that you can use the commands and flags that are available for the Trusted Key Entry CLI plug-in.
+2. Installa il plugin {{site.data.keyword.keymanagementservicefull}}. Per la procedura dettagliata, vedi [Configurazione della CLI](/docs/services/hs-crypto/set-up-cli.html). Quando accedi alla [CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview), ricevi una notifica quando sono disponibili degli aggiornamenti. Assicurati di mantenere aggiornato il tuo plugin {{site.data.keyword.keymanagementservicefull}} in modo da poter usare i comandi e gli indicatori disponibili per il plugin della CLI Trusted Key Entry.
 {: #initialize-crypto-prerequisites2}
 
-3. Install the latest latest Trusted Key Entry plug-in with the following command:
+3. Installa il plugin Trusted Key Entry più recente con il seguente comando:
 {: #initialize-crypto-prerequisites3}
 
   ```
@@ -77,36 +77,36 @@ It might take 20-30 minutes for you to complete this task.
   ```
   {: pre}
 
-  **Note:** If you are using the Beta instance of ({{site.data.keyword.hscrypto}}, run the 'ibmcloud plugin install tke -v 0.0.6' to get the latest beta version of the Trusted Key Entry plug-in. Do not install later versions of the Trusted Key Entry plug-in.
+  **Importante:** se stai utilizzando l'istanza beta di {{site.data.keyword.hscrypto}}, esegui 'ibmcloud plugin install tke -v 0.0.4' per ottenere la versione beta più recente del plugin Trusted Key Entry. Non installare le versioni successive del plugin Trusted Key Entry.
 
-4. Set the environment variable CLOUDTKEFILES on your workstation. Specify a directory where you want master key part files and signature key part files to be created and saved. Create the directory if it does not already exist.
+4. Imposta la variabile di ambiente CLOUDTKEFILES sulla tua workstation. Specifica una directory in cui vuoi vengano creati e salvati i file della parte della chiave master e della chiave di firma. Crea la directory se ancora non esiste.
 {: #initialize-crypto-prerequisites4}
 
-  * On Linux or MacOS, add the following line to the `.bash_profile` file:
+  * Su Linux o MacOS, aggiungi la seguente riga al file `.bash_profile`:
      ```
      export CLOUDTKEFILES=<path>
      ```
      {: pre}
-     For example, you can specify the *path* to `/Users/tke-files`.
-  * On Windows, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a CLOUDTKEFILES environment variable and set the value to the path to the key files. For example, `C:\users\tke-files`.
+     Ad esempio, puoi specificare *path* con `/Users/tke-files`.
+  * Su Windows, nel **Pannello di controllo**, immetti `environment variable` nella casella di ricerca per individuare la finestra Variabili di ambienti. Crea una variabile di ambiente CLOUDTKEFILES e impostane il valore sul percorso ai file della chiave. Ad esempio, `C:\users\tke-files`.
 
-## Adding or removing crypto units that are assigned to a user account
+## Aggiunta e rimozione delle unità di crittografia assegnate a un account utente
 {: #Identify_crypto_units}
 
-Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user account are in a group known as *a service instance*. A service instance can have up to six crypto units. All crypto units in a service instance should be configured the same. If one part of the {{site.data.keyword.cloud_notm}} cannot be accessed, the crypto units in a service instance can be used interchangeably for load balancing or for availability.
+Le unità di crittografia assegnate a un account utente di {{site.data.keyword.cloud_notm}} si trovano in un gruppo noto come *istanza del servizio*. Un'istanza del servizio può avere fino a sei unità di crittografia. Tutte le unità di crittografia in un'istanza del servizio dovrebbero essere configurate allo stesso modo. Se non è possibile accedere a una parte di {{site.data.keyword.cloud_notm}}, le unità di crittografia in un'istanza del servizio possono essere utilizzate in modo intercambiabile per il bilanciamento del carico o per la disponibilità.
 
-Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start in a cleared state known as *imprint mode*.
+Le unità di crittografia assegnate a un utente {{site.data.keyword.cloud_notm}} iniziano in uno stato cancellato noto come *modalità di impronta*. 
 
-The master key registers in all crypto units in a single service instance must be set the same. The same set of administrators must be added in all crypto units, and all crypto units must exit imprint mode at the same time.
+I registri della chiave master in tutte le unità di crittografia in una sola istanza del servizio devono essere impostati allo stesso modo. La stessa serie di amministratori deve essere aggiunta a tutte le unità di crittografia e tutte le unità di crittografia devono uscire dalla modalità di impronta contemporaneamente.
 
-* To display the service instances and crypto units assigned to a user account, use the following command:
+* Per visualizzare le istanze del servizio e le unità di crittografia assegnati a un account utente, utilizza il seguente comando:
   {: #Identify_crypto_units1}
   ```
   ibmcloud tke cryptounits
   ```
   {: pre}
 
-  The following is a sample output that is displayed. The SELECTED column in the output table identifies the crypto units that are targeted by subsequent administrative commands that are issued by the Trusted Key Entry plug-in.
+  Il seguente è un output di esempio che viene visualizzato. La colonna SELECTED nella tabella di output identifica le unità di crittografia che verranno utilizzate dai successivi comandi di gestione emessi dal plug-in Trusted Key Entry. 
 
   ```
   SERVICE INSTANCE: 482cf2ce-a06c-4265-9819-0b4acf54f2ba
@@ -121,184 +121,184 @@ The master key registers in all crypto units in a single service instance must b
   ```
   {: screen}
 
-* To add additional crypto units to the selected crypto unit list, use the following command:
+* Per aggiungere ulteriori unità di crittografia all'elenco di unità di crittografia selezionato, utilizza il seguente comando:
   {: #Identify_crypto_units2}
   ```
   ibmcloud tke cryptounit-add
   ```
   {: pre}
 
-  A list of the crypto units that are assigned to the current user account is displayed. When prompted, enter a list of crypto unit numbers to be added to the selected crypto unit list.
+  Viene visualizzato un elenco delle unità di crittografia che sono assegnate all'account utente corrente. Quando richiesto, immetti un elenco di numeri di unità di crittografia da aggiungere all'elenco delle unità di crittografia selezionato.
 
-* To remove crypto units from the selected crypto unit list, use the following command:
+* Per rimuovere le unità di crittografia dall'elenco di unità di crittografia selezionato, utilizza il seguente comando:
   {: #Identify_crypto_units3}
   ```
   ibmcloud tke cryptounit-rm
   ```
   {: pre}
 
-  A list of crypto unitss that are assigned to the current user account is displayed. When prompted, enter a list of crypto unit numbers to be removed from the selected crypto unit list.
+  Viene visualizzato un elenco delle unità di crittografia che sono assegnate all'account utente corrente. Quando richiesto, immetti un elenco di numeri di unità di crittografia da rimuovere dall'elenco delle unità di crittografia selezionato.
 
-  **Tip:** In general, either all crypto units or none of the crypto units in a service instance are selected. This causes subsequent administrative commands to update all crypto units of a service instance consistently. However, if the crypto units of a service instance become configured differently, you need to select and work with crypto units individually to restore a consistent configuration to all crypto units in a service instance.
+  **Suggerimento:** in generale, vengono selezionate tutte o nessuna delle unità di crittografia in un'istanza del servizio. In questo modo, i successivi comandi di gestione aggiornano in modo coerente tutte le unità di crittografia di un'istanza del servizio. Tuttavia, se le unità di crittografia di un'istanza del servizio vengono configurate in modo diverso, devi selezionare e utilizzare le unità di crittografia singolarmente per ripristinare una configurazione coerente per tutte le unità di crittografia in un'istanza del servizio.
 
-  You can compare the configuration settings of the selected crypto units with the following command:
+  Puoi confrontare le impostazioni di configurazione delle unità di crittografia selezionate con il seguente comando:
   ```
   ibmcloud tke cryptounit-compare
   ```
   {: pre}
 
-## Loading master keys
+## Caricamento delle chiavi master
 {: #load-master-keys}
 
 <!-- A service instance is implemented as one or more crypto units on IBM cryptographic coprocessors. -->
 
-Before the new master key register can be loaded, add one or more administrators in the target crypto units and exit imprint mode.
+Prima di poter caricare il nuovo registro della chiave master, aggiungi uno o più amministratori nelle unità di crittografia di destinazione ed esci dalla modalità di impronta.
 
-To load the new master key register, complete the following tasks using the {{site.data.keyword.cloud_notm}} CLI plug-in:
+Per caricare il nuovo registro della chiave master, completa le seguenti attività utilizzando il plug-in della CLI {{site.data.keyword.cloud_notm}}:
 
-### Step 1: Create one or more signature keys
+### Passo 1: crea una o più chiavi di firma
 {: #step1-create-signature-keys}
 
-To load the new master key register, A crypto unit administrator must sign the command with a unique signature key. The first step is to create one or more signature key files that contain signature keys on your workstation. <!-- The private part of the signature key file is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. -->
+Per caricare il nuovo registro della chiave master, un amministratore dell'unità di crittografia deve firmare il comando con una chiave di firma univoca. Il primo passo è di creare uno o più file delle chiavi di firma che contengono le chiavi di firma sulla tua workstation. <!-- The private part of the signature key file is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. -->
 
-**Important**: For security considerations, the signature key owner can be a different person from the master key part owners. The signature key owner should be the only person who knows the password associated with the signature key file.
+**Importante**: per motivi di sicurezza, il proprietario della chiave di firma può essere una persona diversa dai proprietari delle parti della chiave master. Il proprietario della chiave di firma deve essere l'unica persona a conoscere la password associata al file delle chiavi di firma.
 
-* To display the existing signature keys on the workstation, use the following command:
+* Per visualizzare le chiavi di firma esistenti sulla workstation, utilizza il seguente comando:
   ```
   ibmcloud tke sigkeys
   ```
   {: pre}
 
-* To create and save a new signature key on the workstation, use the following command:
+* Per creare e salvare una nuova chiave di firma sulla workstation, utilizza il seguente comando:
   ```
   ibmcloud tke sigkey-add
   ```
   {: pre}
 
-  When prompted, enter an administrator name and a password to protect the signature key file. You must remember the password. If the password is lost, the signature key cannot be used.
+  Quando richiesto, immetti un nome amministratore e una password per proteggere il file delle chiavi di firma. Devi ricordare la password. Se la password viene persa, non è possibile utilizzare la chiave di firma.
 
-* To select the administrator to sign future commands, use the command:
+* Per selezionare l'amministratore per la firma di futuri comandi, utilizza il comando:
   ```
   ibmcloud tke sigkey-sel
   ```
   {: pre}
 
-  A list of signature key files found on the workstation is displayed. When prompted, enter the key number of the signature key file to select for signing subsequent administrative commands. <!--If a signature key file is already selected for signing administrative commands, this is indicated when the list of signature key files is displayed. -->
+  Viene visualizzato un elenco di file delle chiavi di firma trovati sulla workstation. Quando richiesto, immetti il numero chiave del file delle chiavi di firma da selezionare per la firma dei successivi comandi di gestione. <!--If a signature key file is already selected for signing administrative commands, this is indicated when the list of signature key files is displayed. -->
 
   <!-- **Tip**: Before you run the `cryptounit-exit-impr` command to exit imprint mode, the command needs to be signed by a crypto unit administrator using the signature key. After the crypto unit exits imprint mode, all commands to the crypto unit must be signed. -->
 
-### Step 2: Add one or more administrators in the target crypto unit
+### Passo 2: aggiungi uno o più amministratori nell'unità di crittografia di destinazione
 {: #step2-load-admin}
 
 <!-- After a crypto unit exits imprint mode, all administrative commands sent to the crypto unit must be signed by an administrator that is added to the crypto unit. -->
 
-* To display the existing administrators for a crypto unit, use the following command:
+* Per visualizzare gli amministratori esistenti per un'unità di crittografia, utilizza il seguente comando:
   ```
   ibmcloud tke cryptounit-admins
   ```
   {: pre}
 
-* To add a new administrator, use the following command:
+* Per aggiungere un nuovo amministratore, utilizza il seguente comando:
   ```
   ibmcloud tke cryptounit-admin-add
   ```
   {: pre}
 
-  A list of the signature key files that are found on the workstation is displayed.
+  Viene visualizzato un elenco dei file delle chiavi di firma trovati sulla workstation.
 
-  When prompted, select the signature key file that is associated with the crypto unit administrator to be added. And then enter the password for the selected signature key file.
+  Quando richiesto, seleziona il file delle chiavi di firma associato all'amministratore dell'unità di crittografia che deve essere aggiunto. Quindi, immetti la password per il file delle chiavi di firma selezionato.
 
-  You can repeat the command to add additional crypto unit administrators if needed. Any administrator can independently run commands in the crypto unit.
+  Se necessario, puoi ripetere il comando per aggiungere ulteriori amministratori dell'unità di crittografia. Qualsiasi amministratore può eseguire in modo indipendente i comandi nell'unità di crittografia.
 
-  In imprint mode, the command to add a crypto unit administrator does not need to be signed. After leaving imprint mode, to add crypto unit administrators, the command to be used must be signed by a crypto unit administrator that is already added in the crypto unit.
+  Nella modalità di impronta, non è necessario firmare il comando per aggiungere un amministratore dell'unità di crittografia. Dopo aver lasciato la modalità di impronta, per aggiungere degli amministratori dell'unità di crittografia, il comando da utilizzare deve essere firmato da un amministratore dell'unità di crittografia che è stato già aggiunto nell'unità di crittografia.
 
-### Step 3: Exit imprint mode in the target crypto unit
+### Passo 3: esci dalla modalità di impronta nell'unità di crittografia di destinazione
 {: #step3-exit-imprint-mode}
 
-A crypto unit in imprint mode is not considered secure. You cannot run most of the administrative commands, such as loading the new master key register, in imprint mode.
+Un'unità di crittografia in modalità di impronta non è considerata sicura. In modalità di impronta, non puoi eseguire la maggior parte dei comandi di gestione, come il caricamento del nuovo registro della chiave master.
 
-After you add one or more crypto unit administrators, exit imprint mode by using the command:
+Dopo aver aggiunto uno o più amministratori dell'unità di crittografia, esci dalla modalità di impronta utilizzando il comando:
 
   ```
   ibmcloud tke cryptounit-exit-impr
   ```
   {: pre}
 
-  ** Important:** The command to exit imprint mode must be signed by one of the added crypto unit administrators using the signature key. After the crypto unit exits imprint mode, all commands to the crypto unit must be signed.
+  **Importante:** il comando per uscire dalla modalità di impronta deve essere firmato da uno degli amministratori dell'unità di crittografia aggiunti utilizzando la chiave di firma. Dopo che l'unità di crittografia ha lasciato la modalità di impronta, tutti i comandi per l'unità di crittografia devono essere firmati.
 
-### Step 4: Create a set of master key parts to use
+### Passo 4: crea una serie di parti della chiave master da utilizzare
 {: #step4-create-master-key}
 
-Each master key part is saved in a password-protected file on the workstation.
+Ogni parte della chiave master viene salvata in un file protetto da password sulla workstation.
 
-**Important**: You must create at least two master key parts. For security considerations, three master key parts can be used and each key part can be owned by a different person. The key part owner should be the only person who knows the password associated with the key part file.
+**Importante**: devi creare almeno due parti della chiave master. Per motivi di sicurezza, è possibile utilizzare tre parti della chiave master e ciascuna parte può essere posseduta da una persona diversa. Il proprietario della parte della chiave deve essere l'unica persona a conoscere la password associata al file delle parti della chiave.
 
-* To display the existing master key parts on the workstation, use the following command:
+* Per visualizzare le parti della chiave master esistenti sulla workstation, utilizza il seguente comando:
   ```
   ibmcloud tke mks
   ```
   {: pre}
 
-* To create and save a random master key part on the workstation, use the command:
+* Per creare e salvare una parte della chiave master casuale sulla workstation, utilizza il comando:
   ```
   ibmcloud tke mk-add --random
   ```
   {: pre}
 
-  When prompted, enter a description for the key part and a password to protect the key part file. You must remember the password. If the password is lost, you cannot use the key part.
+  Quando richiesto, immetti una descrizione per la parte della chiave e una password per proteggere il file delle parti della chiave. Devi ricordare la password. Se la password viene persa, non puoi utilizzare la parte della chiave.
 
-* To enter a known key part value and save it in a file on the workstation, use the following command:
+* Per immettere un valore di parte della chiave noto e salvarlo in un file sulla workstation, utilizza il seguente comando:
   ```
   ibmcloud tke mk-add --value
   ```
   {: pre}
 
-  When prompted, enter the key part value as a hexadecimal string for the 32-byte key part. And then enter a description for the key part and a password to protect the key part file.
+  Quando richiesto, immetti il valore di parte della chiave come stringa esadecimale per la parte della chiave a 32 byte. Quindi, immetti una descrizione per la parte della chiave e una password per proteggere il file delle parti della chiave.
 
-### Step 5: Load the new master key register
+### Passo 5: carica il nuovo registro della chiave master
 {: #step5-load-master-key}
 
-**Important**: To load a master key register, all master key part files and the signature key file must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The master key part file owners and the signature key file owner need to enter the file passwords when the master key register is loaded on the common workstation.
+**Importante**: per caricare un registro della chiave master, tutti i file delle parti della chiave master e il file delle chiavi di firma devono essere presenti su una workstation comune. Se i file sono stati creati su workstation separate, assicurati che i nomi file siano diversi per evitare conflitti. I proprietari dei file delle parti della chiave master e il proprietario del file delle chiavi di firma, devono immettere le password del file quando il registro della chiave master viene caricato sulla workstation comune.
 
-For information on how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/services/hs-crypto/service_instance_concepts.html#introduce-key-registers).
+Per informazioni su come viene caricata la chiave master, vedi le illustrazioni dettagliate in [Registri della chiave master](/docs/services/hs-crypto/service_instance_concepts.html#introduce-key-registers).
 
-To load the new master key register, use the following command:
+Per caricare il nuovo registro della chiave master, utilizza il seguente comando:
 ```
 ibmcloud tke cryptounit-mk-load
 ```
 {: pre}
 
-A list of the master key parts that are found on the workstation is displayed.
+Viene visualizzato un elenco di parti della chiave master trovate sulla workstation.
 
-When prompted, enter the key parts to be loaded into the new master key register. And enter the password for each selected key part file.
+Quando richiesto, immetti le parti della chiave da caricare nel nuovo registro della chiave master. Quindi, immetti la password per ogni file delle parti della chiave selezionato.
 
-### Step 6: Commit the new master key register
+### Passo 6: esegui il commit del nuovo registro della chiave master
 {: #step6-commit-master-key}
 
-Loading the new master key register places the new master key register in the full uncommitted state. Before you can use the new master key register to initialize or re-encipher key storage, place the new master key register in the committed state. For information on how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/services/hs-crypto/service_instance_concepts.html#introduce-key-registers).
+Il caricamento del nuovo registro della chiave master colloca il nuovo registro nello stato full uncommitted. Prima di poter utilizzare il nuovo registro della chiave master per inizializzare o ricodificare l'archiviazione chiavi, colloca il nuovo registro della chiave master nello stato committed. Per informazioni su come viene caricata la chiave master, vedi le illustrazioni dettagliate in [Registri della chiave master](/docs/services/hs-crypto/service_instance_concepts.html#introduce-key-registers).
 
-To commit the new master key register, use the following command:
+Per eseguire il commit del nuovo registro della chiave master, utilizza il seguente comando:
 ```
 ibmcloud tke cryptounit-mk-commit
 ```
 {: pre}
 
-### Step 7: Activate the master key
+### Passo 7: attiva la chiave master
 {: #step7-activate-master-key}
 
-Activate the master key by moving the master key to the current master key register with the following command:
+Attiva la chiave master spostandola nel registro della chiave master corrente utilizzando il seguente comando:
 
 ```
 ibmcloud tke cryptounit-mk-setimm
 ```
 {: pre}
 
-## What's next
+## Operazioni successive
 {: #initialize-crypto-next}
 
-Go to the **Manage** tab of your managed {{site.data.keyword.hscrypto}} dashboard to manage root keys and standard keys.
+Vai alla scheda **Manage** del tuo dashboard {{site.data.keyword.hscrypto}} gestito per gestire le chiavi root e standard.
 
-For more details on other options of the Trusted Key Entry plug-in commands, run the following command in the CLI:
+Per ulteriori dettagli sulle altre opzioni dei comandi del plugin Trusted Key Entry, immetti il seguente comando nella CLI:
 
 ```
 ibmcloud tke help

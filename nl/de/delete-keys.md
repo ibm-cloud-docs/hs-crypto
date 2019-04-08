@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: details of the DELETE request, delete encryption key, deleting keys, Variable Description region
 
@@ -26,17 +26,18 @@ Sie können {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} verwenden
 **Wichtig:** Wenn Sie einen Schlüssel löschen, werden der Schlüsselinhalt und die zugehörigen Daten endgültig geschreddert. Die Aktion kann nicht rückgängig gemacht werden. Das Löschen von Ressourcen wird in Produktionsumgebungen nicht empfohlen. Diese Vorgehensweise kann jedoch in temporären Umgebungen (z. B. in Testumgebungen oder QA-Umgebungen) von Nutzen sein.
 
 ## Schlüssel mit GUI löschen
-{: #gui}
+{: #delete-keys-gui}
 
 Wenn Sie die Löschung von Verschlüsselungsschlüssel über eine grafische Oberfläche bevorzugen, dann können Sie hierzu die {{site.data.keyword.hscrypto}}-GUI verwenden.
 
 [Nach dem Erstellen oder Importieren der vorhandenen Schlüssel in den Service](/docs/services/hs-crypto/create-root-keys.html) müssen Sie die folgenden Schritte ausführen, um einen Schlüssel zu löschen:
 
 1. [Melden Sie sich bei der {{site.data.keyword.cloud_notm}}-Konsole ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/){: new_window} an.
-2. Wählen Sie im {{site.data.keyword.cloud_notm}}-Dashboard Ihre bereitgestellte Instanz von {{site.data.keyword.hscrypto}} aus.
-3. Verwenden Sie die Tabelle **Schlüssel** zum Durchsuchen der Schlüssel in Ihrem Service.
-4. Klicken Sie auf das Symbol, um eine Liste mit Optionen für den Schlüssel zu öffnen, den Sie löschen möchten.
-5. Klicken Sie im Auswahlmenü auf **Schlüssel löschen** und bestätigen Sie die Schlüssellöschung in der nächsten Anzeige.
+2. Rufen Sie **Menü** &gt; **Ressourcenliste** auf, um eine Liste Ihrer Ressourcen anzuzeigen. 
+3. Wählen Sie in Ihrer {{site.data.keyword.cloud_notm}}-Ressourcenliste die bereitgestellte Instanz von {{site.data.keyword.hscrypto}} aus. 
+4. Verwenden Sie die Tabelle **Schlüssel** zum Durchsuchen der Schlüssel in Ihrem Service.
+5. Klicken Sie auf das Symbol, um eine Liste mit Optionen für den Schlüssel zu öffnen, den Sie löschen möchten.
+6. Klicken Sie im Auswahlmenü auf **Schlüssel löschen** und bestätigen Sie die Schlüssellöschung in der nächsten Anzeige.
 
 Sobald der Schlüssel gelöscht wurde, nimmt der Schlüssel den Status _Gelöscht_ an. Schlüssel, die sich in diesem Status befinden, sind nicht wiederherstellbar. Die zugehörigen Metadaten für den Schlüssel (z. B. das Löschdatum des Schlüssels) werden in der {{site.data.keyword.hscrypto}}-Datenbank aufbewahrt.
 
@@ -65,9 +66,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
       -H 'prefer: <return_preference>'
     ```
     {: codeblock}
-
-    Um mit Schlüsseln in Cloud Foundry-Organisationen und -Bereichen zu arbeiten, ersetzen Sie `Bluemix-Instance` durch die entsprechenden Header `Bluemix-org` und `Bluemix-space`. [Weitere Informationen finden Sie in der {{site.data.keyword.hscrypto}}-API-Referenzdokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Ersetzen Sie die Variablen in der Beispielanforderung anhand der Angaben in der folgenden Tabelle.
     <table>
@@ -128,4 +128,4 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {: screen}
 
-    Eine detaillierte Beschreibung der verfügbaren Parameter finden Sie in der {{site.data.keyword.hscrypto}} [REST-API-Referenzdokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
+    Eine detaillierte Beschreibung der verfügbaren Parameter finden Sie in der {{site.data.keyword.hscrypto}} [REST-API-Referenzdokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/apidocs/hs-crypto){: new_window}.

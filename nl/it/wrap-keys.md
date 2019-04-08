@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root key, data encryption key, Hyper Protect Crypto Services
 
@@ -28,11 +28,12 @@ Quando impacchetti una chiave di crittografia dei dati (o DEK, data encryption k
 Per ulteriori informazioni su come l'impacchettamento ti aiuta a controllare la sicurezza dei dati inattivi nel cloud, consulta [Crittografia envelope](/docs/services/key-protect/concepts/envelope-encryption.html).
 
 ## Impacchettamento delle chiavi utilizzando l'API
-{: #api}
+{: #wrap-keys-api}
 
 Puoi proteggere una chiave di crittografia dei dati (o DEK, data encryption key) specificata con una chiave root che gestisci in {{site.data.keyword.hscrypto}}.
 
-**Importante:** quando fornisci una chiave root per l'impacchettamento, assicurati che la chiave root sia di 256, 384 o 512 bit in modo che la chiamata di impacchettamento possa avere esito positivo. Se crei una chiave root nel servizio, {{site.data.keyword.hscrypto}} genera una chiave di 256-bit dai suoi HSM, supportata dall'algoritmo AES-GCM.
+Quando fornisci una chiave root per l'impacchettamento, assicurati che la chiave root sia di 128, 192 o 256 bit in modo che la chiamata di impacchettamento possa avere esito positivo. Se crei una chiave root nel servizio, {{site.data.keyword.hscrypto}} genera una chiave di 256-bit dai suoi HSM, supportata dall'algoritmo AES-CBC.
+
 
 [Dopo aver designato una chiave root nel servizio](/docs/services/hs-crypto/create-root-keys.html), puoi impacchettare una DEK con la crittografia avanzata effettuando una chiamata `POST` al seguente endpoint.
 
@@ -66,10 +67,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
     }'
     ```
     {: codeblock}
-
-    Per utilizzare le chiavi in un'organizzazione o uno spazio Cloud Foundry nel tuo account, sostituisci `Bluemix-Instance` con le intestazioni `Bluemix-org` e `Bluemix-space` appropriate. [Per ulteriori informazioni, vedi la documentazione di riferimento API di {{site.data.keyword.hscrypto}}
-![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Sostituisci le variabili nella richiesta di esempio in base alla seguente tabella.
 

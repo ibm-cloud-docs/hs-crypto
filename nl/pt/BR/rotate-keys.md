@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root keys, Rotate key, key rotation
 
@@ -24,9 +24,6 @@ subcollection: hs-crypto
 É possível girar suas chaves raiz sob demanda usando o {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
-A rotação das chaves mestras não é suportada atualmente.
-{: important}
-
 Ao girar sua chave raiz, você encurta o tempo de vida da chave e limita a quantia de informações que são protegidas por
 essa chave.   
 
@@ -37,7 +34,7 @@ A rotação está disponível apenas para chaves raízes.
 {: tip}
 
 ## Girando chaves raiz com a GUI
-{: #gui}
+{: #rotate-root-key-gui}
 
 Se você preferir girar suas chaves raiz usando uma interface gráfica, será possível usar a GUI do {{site.data.keyword.hscrypto}}.
 
@@ -45,16 +42,17 @@ Se você preferir girar suas chaves raiz usando uma interface gráfica, será po
 para o serviço](/docs/services/hs-crypto/create-root-keys.html), conclua as etapas a seguir para girar uma chave:
 
 1. [Efetue login no console do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/){: new_window}.
-2. No painel do {{site.data.keyword.cloud_notm}}, selecione sua instância provisionada do {{site.data.keyword.hscrypto}}.
-3. Use a tabela de **Chaves** para procurar as chaves em seu serviço.
-4. Clique no ícone de ? para abrir uma lista de opções para a chave que você deseja girar.
-5. No menu de opções, clique em **Girar chave** e confirme a rotação na próxima tela.
+2. Acesse **Menu** &gt; **Lista de recursos** para visualizar uma lista de seus recursos.
+3. Em sua lista de recursos do {{site.data.keyword.cloud_notm}}, selecione a sua instância provisionada do {{site.data.keyword.hscrypto}}.
+4. Na página de detalhes do aplicativo, use a tabela de **Chaves** para procurar as chaves em seu serviço.
+5. Clique no ícone de ? para abrir uma lista de opções para a chave que você deseja girar.
+6. No menu de opções, clique em **Girar chave** e confirme a rotação na próxima tela.
 
 No caso de se importar a chave raiz inicialmente, será necessário fornecer um novo material de chave codificada base64 para girar a chave. Para obter mais informações, consulte [Importando chaves raiz com a GUI](/docs/services/hs-crypto/import-root-keys.html#gui).
 {: tip}
 
 ## Girando chaves raiz usando a API
-{: #api}
+{: #rotate-root-kay-api}
 
 [Depois de designar uma chave raiz no serviço](/docs/services/hs-crypto/create-root-keys.html), é
 possível girar sua chave fazendo uma chamada de `POST` para o terminal a seguir.
@@ -112,7 +110,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rota
           <p>Para girar uma chave que foi gerada inicialmente pelo {{site.data.keyword.hscrypto}}, omita o atributo <code>payload</code> e transmita um corpo da entidade de solicitação vazio. Para girar uma chave importada, forneça um material de chave que atenda aos requisitos a seguir:</p>
           <p>
             <ul>
-              <li>A chave de ser de 256, 384 ou 512 bits.</li>
+              <li>A chave deve ser de 128, 192 ou 256 bits.</li>
               <li>Os bytes de dados, por exemplo, 32 bytes para 256 bits, devem ser codificados usando codificação base64.</li>
             </ul>
           </p>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-21"
+lastupdated: "2019-03-21"
 
 Keywords: provision, instance of Hyper Protect Crypto Services
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
+{:important: .important}
 {:gif: data-image-type='gif'}
 
 # 供应服务
@@ -25,7 +26,7 @@ subcollection: hs-crypto
 {: shortdesc}
 
 ## 从 {{site.data.keyword.cloud_notm}} 控制台供应
-{: #gui}
+{: #provision-gui}
 
 要从 {{site.data.keyword.cloud_notm}} 控制台供应 {{site.data.keyword.hscrypto}} 的实例，请完成以下步骤。
 
@@ -33,7 +34,12 @@ subcollection: hs-crypto
 2. 单击**目录**以查看 {{site.data.keyword.cloud_notm}} 上可用的服务的列表。
 3. 在“所有类别”导航窗格中，单击**安全性和身份**类别。
 4. 从服务列表中，单击 **{{site.data.keyword.hscrypto}}** 磁贴。
-5. 选择服务套餐，然后单击**创建**以在您登录到的帐户、区域和资源组中供应 {{site.data.keyword.hscrypto}} 实例。
+5. **可选**：在**标记**字段中，添加标记以组织资源。如果标记与计费有关，请考虑将标记编写为 key:value 对，以帮助将相关的标记（如 `costctr:124`）分组在一起。有关标记的更多信息，请参阅[使用标记](/docs/resources?topic=resources-tag#tag)。
+6. 在**加密单元数**下，选择可满足性能需求的加密单元数。
+
+  服务实例最多可支持 6 个加密单元。在生产环境中，建议选择至少两个加密单元，以支持高可用性。如果选择三个或更多加密单元，那么这些加密单元会分布在选定区域的三个支持的可用性专区中。
+  {: important}
+7. 单击**创建**以在您登录到的帐户、区域和资源组中供应 {{site.data.keyword.hscrypto}} 实例。
 
 ![供应服务](image/provisioning.gif "供应服务")
 {: gif}
@@ -41,7 +47,7 @@ subcollection: hs-crypto
 *图 1. 供应服务*
 
 <!-- ## Provisioning from the {{site.data.keyword.cloud_notm}} CLI
-{: #cli}
+{: #provision-cli}
 
 To provision an instance of {{site.data.keyword.hscrypto}} using the {{site.data.keyword.cloud_notm}} CLI, complete the following steps:
 
@@ -138,9 +144,9 @@ To manage access to your encryption keys with [Cloud Foundry roles](/docs/iam/cf
     ibmcloud service list
     ```
     {: pre}
+-->
 
+### 后续工作
+{: #provision-next}
 
-### What's next
-
-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}.
-- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.-->
+要了解有关以编程方式管理密钥的更多信息，请[查看 {{site.data.keyword.hscrypto}} API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/hs-crypto){: new_window}。

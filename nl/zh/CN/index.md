@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-05"
+lastupdated: "2019-03-13"
 
 Keywords: dedicated key management service, IBM Key, Own Keys
 
@@ -21,27 +21,25 @@ subcollection: hs-crypto
 # {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} 入门
 {: #get-started}
 
-<!-- {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is in the BETA phase and is for tryout and test purpose only. To prevent data loss, use only test data in the current service. This restriction also applies to using {{site.data.keyword.hscrypto}} with other  {{site.data.keyword.cloud_notm}} services.
-{:important} -->
-
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}（简称 {{site.data.keyword.hscrypto}}）为专用密钥管理服务提供云硬件安全模块 (HSM)。{{site.data.keyword.hscrypto}} 帮助您以方便、节省成本的方式在 IBM Z 密码术的安全级别对数据进行加密。
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}（简称 {{site.data.keyword.hscrypto}}）是密钥管理和云硬件安全模块 (HSM)。它旨在让您能够控制云数据加密密钥和云硬件安全模型，并且是行业中唯一构建于 FIPS 140-2 4 级认证硬件上的服务。
 {:shortdesc}
 
-{{site.data.keyword.hscrypto}} 与 {{site.data.keyword.keymanagementservicefull_notm}} API 集成以生成并加密密钥。{{site.data.keyword.hscrypto}} 也支持使用“保管自己的密钥”(KYOK) 功能来访问加密硬件，这是 FIPS 140-2 4 级认证的技术，是可实现的最高级别安全性。{{site.data.keyword.hscrypto}} 提供网络可寻址的硬件安全模块 (HSM)<!-- and is accessible via PKCS#11 application programming interfaces (APIs) with several popular programming languages such as Java, JavaScript, Swift, and so on-->。  <!-- You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client, which communicates with the ACSP server to enable you to access the backend cryptographic resources.--> 有关 {{site.data.keyword.hscrypto}} 的更多信息，请参阅 [{{site.data.keyword.hscrypto}} 概述](/docs/services/hs-crypto/overview.html)。有关加密模块的安全性需求的更多信息，请参阅 [ FIPS 140-2 级别的 NIST 规范 ![外部链接图标](image/external_link.svg "外部链接图标")](https://csrc.nist.gov/publications/detail/fips/140/2/final){:new_window}。
+{{site.data.keyword.hscrypto}} 与 {{site.data.keyword.keymanagementservicefull_notm}} API 集成以生成并加密密钥。{{site.data.keyword.hscrypto}} 也支持使用“保管自己的密钥”(KYOK) 功能来访问加密硬件，这是 FIPS 140-2 4 级认证的技术，是可实现的最高级别安全性。{{site.data.keyword.hscrypto}} 提供网络可寻址 HSM。<!-- and is accessible via PKCS#11 application programming interfaces (APIs) with several popular programming languages such as Java, JavaScript, Swift, and so on-->.  <!-- You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client, which communicates with the ACSP server to enable you to access the backend cryptographic resources.--> 有关 {{site.data.keyword.hscrypto}} 的更多信息，请参阅 [{{site.data.keyword.hscrypto}} 概述](/docs/services/hs-crypto/overview.html)。有关加密模块的安全性需求的更多信息，请参阅 [ FIPS 140-2 级别的 NIST 规范 ![外部链接图标](image/external_link.svg "外部链接图标")](https://csrc.nist.gov/publications/detail/fips/140/2/final){:new_window}。
 
 <!-- {{site.data.keyword.hscrypto}} is the cryptography that {{site.data.keyword.blockchainfull_notm}} Platform is built with. It is also a member of the {{site.data.keyword.cloud_notm}} Hyper Protect Family, including [{{site.data.keyword.cloud_notm}} Hyper Protect DBaaS ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/docs/services/hypersecure-dbaas/index.html){:new_window}, {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}, [{{site.data.keyword.cloud_notm}} Container Service ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/docs/containers/container_index.html){:new_window}, and [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}} ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/docs/services/hypersecure-platform/index.html){:new_window}. -->
 
-本教程会引导您逐步通过管理主密钥来加密实例，并使用 {{site.data.keyword.hscrypto}} 仪表板来创建密钥和添加现有密钥。
+本教程会引导您逐步通过管理主密钥来设置服务实例，并使用 {{site.data.keyword.hscrypto}} 仪表板来创建密钥和添加现有密钥。
 
 
 ## 第 1 步：供应服务
-{: #provision}
+{: #provision-service}
 
 在开始之前，必须从 {{site.data.keyword.cloud_notm}} 控制台创建 {{site.data.keyword.hscrypto}} 的实例。有关详细步骤，请参阅[供应服务](/docs/services/hs-crypto/provision.html)。
 
-## 第 2 步：初始化加密实例
+## 第 2 步：初始化服务实例
+{: #initialize-crypto}
 
-要管理密钥，您需要先初始化加密 (HSM) 实例。有关快速入门教程，请参阅[加密实例初始化入门](/docs/services/hs-crypto/get_started_hsm.html)。有关详细步骤和最佳实践，请参阅[初始化加密实例以保护密钥存储器](/docs/services/hs-crypto/initialize_hsm.html)。
+要管理密钥，您需要先初始化服务实例。有关快速入门教程，请参阅[服务实例初始化入门](/docs/services/hs-crypto/get_started_hsm.html)。有关详细步骤和最佳实践，请参阅[初始化服务实例以保护密钥存储器](/docs/services/hs-crypto/initialize_hsm.html)。
 
 ## 第 3 步：管理密钥
 {: #manage-keys}
@@ -79,7 +77,7 @@ subcollection: hs-crypto
 
 3. 填写完密钥详细信息后，单击**创建密钥**以进行确认。
 
-服务中创建的密钥是 AES-GCM 算法支持的 256 位对称密钥。为了提高安全性，密钥通过位于安全 {{site.data.keyword.cloud_notm}} 数据中心且通过 FIPS 140-2 4 级认证的硬件安全模块 (HSM) 生成。
+服务中创建的密钥是 AES-CBC 算法支持的 256 位对称密钥。为了提高安全性，密钥通过位于安全 {{site.data.keyword.cloud_notm}} 数据中心且通过 FIPS 140-2 4 级认证的硬件安全模块 (HSM) 生成。
 
 ### 导入自己的密钥
 {: #import-keys}
@@ -121,12 +119,13 @@ subcollection: hs-crypto
 在 {{site.data.keyword.hscrypto}} 仪表板中，可以检查新密钥的常规特征。
 
 ## 后续工作
+{: #get-started-next}
 
 现在，可使用密钥对应用程序和服务进行编码。如果向服务添加了根密钥，那么可能要了解有关使用根密钥来保护用于加密静态数据的密钥的更多信息。请查看[打包密钥](/docs/services/hs-crypto/wrap-keys.html)以开始。
 
 - 要查找有关使用根密钥来管理和保护加密密钥的更多信息，请查看[包络加密](/docs/services/key-protect/concepts/envelope-encryption.html)。
-- 要了解有关将 {{site.data.keyword.hscrypto}} 服务与其他云数据解决方案集成的更多信息，请[查看“集成”文档](/docs/services/key-protect/integrations/integrate-services.html)。
-- 要了解有关以编程方式管理密钥的更多信息，请[查看 {{site.data.keyword.hscrypto}} API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
+<!-- - To find out more about integrating the {{site.data.keyword.hscrypto}} service with other cloud data solutions, [check out the Integrations doc](/docs/services/key-protect/integrations/integrate-services.html). -->
+- 要了解有关以编程方式管理密钥的更多信息，请[查看 {{site.data.keyword.hscrypto}} API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/apidocs/hs-crypto){: new_window}。
 
 <!-- Complete the following steps to provision {{site.data.keyword.hscrypto}}:
 1. Log in to your [IBM Cloud account ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/){:new_window}.

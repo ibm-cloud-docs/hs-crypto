@@ -22,7 +22,7 @@ subcollection: hs-crypto
 # Link correlati
 {: #related-links}
 
-Ulteriori risorse per fornirti maggiori informazioni sulla gestione della crittografia in {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}}.
+Ulteriori risorse per fornirti maggiori informazioni sulla gestione della crittografia in {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}.
 
 ## Video
 {: #videos}

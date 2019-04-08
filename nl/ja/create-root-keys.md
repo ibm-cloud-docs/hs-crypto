@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root keys, create root keys, Hyper Protect Crypto Services GUI, symmetric key
 
@@ -25,13 +25,14 @@ subcollection: hs-crypto
 ルート鍵は、クラウド内の暗号化データのセキュリティーを保護するために使用される対称鍵ラップ鍵です。 ルート鍵について詳しくは、[エンベロープ暗号化](/docs/services/key-protect/concepts/envelope-encryption.html)を参照してください。
 
 ## GUI を使用したルート鍵の作成
-{: #gui}
+{: #root-key-gui}
 
 [サービスのインスタンスを作成した後](/docs/services/hs-crypto/provision.html)、以下の手順を実行して、{{site.data.keyword.hscrypto}} GUI でルート鍵を作成します。
 
 1. [{{site.data.keyword.cloud_notm}} コンソール ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") にログインします](https://cloud.ibm.com/){: new_window}。
-2. {{site.data.keyword.cloud_notm}} ダッシュボードで、{{site.data.keyword.hscrypto}} のプロビジョン済みインスタンスを選択します。
-3. 新しい鍵を作成するには、**「鍵の追加」**をクリックして、**「新しい鍵の生成 (Generate a new key)」**ウィンドウを選択します。
+2. **「メニュー」**&gt;**「リソース・リスト」**に移動し、リソースのリストを表示します。
+3. {{site.data.keyword.cloud_notm}} リソース・リストで、{{site.data.keyword.hscrypto}} のプロビジョン済みインスタンスを選択します。
+4. 新しい鍵を作成するには、**「鍵の追加」**をクリックして、**「鍵の作成 (Create a key)」**ウィンドウを選択します。
 
     鍵の詳細を以下のように指定します。
 
@@ -54,10 +55,12 @@ subcollection: hs-crypto
       <caption style="caption-side:bottom;">表 1. <b>「新しい鍵の生成 (Generate new key)」</b>の設定の説明</caption>
     </table>
 
-4. 鍵の詳細の記入が完了したら、**「鍵の生成」**をクリックして確認します。
+5. 鍵の詳細の記入が完了したら、**「鍵の作成 (Create key)」**をクリックして確認します。
+
+サービス内で作成される鍵は、AES-CBC アルゴリズムによってサポートされている、対称 256 ビット鍵です。 セキュリティーを強化するために、鍵はセキュアな {{site.data.keyword.cloud_notm}} データ・センターにある FIPS 140-2 レベル 4 認証ハードウェア・セキュリティー・モジュール (HSM) で生成されます。
 
 ## API を使用したルート鍵の作成
-{: #api}
+{: #root-key-api}
 
 以下のエンドポイントへの `POST` 呼び出しを行うことにより、ルート鍵を作成します。
 
@@ -66,10 +69,9 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ```
 {: codeblock}
 
-1. [サービス内で鍵の処理を行うために、サービス資格情報および認証資格情報を取得します](/docs/services/{{site.data.keyword.hscrypto}}hs-crypto/access-api.html)。
+1. [サービス内で鍵の処理を行うために、サービス資格情報および認証資格情報を取得します](/docs/services/hs-crypto/access-api.html)。
 
-
-2. 以下の cURL コマンドを使用して [{{site.data.keyword.hscrypto}} API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} を呼び出します。
+2. 以下の cURL コマンドを使用して [{{site.data.keyword.hscrypto}} API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/hs-crypto){: new_window} を呼び出します。
 
     ```cURL
     curl -X POST \
@@ -95,11 +97,11 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     }'
     ```
     {: codeblock}
-
-    ご使用のアカウントの Cloud Foundry 組織およびスペース内で鍵の処理を行うには、`Bluemix-Instance` を、適切な `Bluemix-org` および `Bluemix-space` のヘッダーに置き換えます。 [詳しくは、{{site.data.keyword.hscrypto}} API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} を参照してください。
-    {: tip}
+<!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+    {: tip} -->
 
     次の表に従って、例の要求内の変数を置き換えてください。
+
     <table>
       <tr>
         <th>変数</th>
@@ -169,6 +171,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 **注:** サービスでルート鍵を作成した後、鍵は {{site.data.keyword.hscrypto}} の境界内にとどまり、その鍵の素材を取り出すことはできません。
 
 ### 次に行うこと
+{: #root-key-next}
 
 - エンベロープ暗号化を使用した鍵の保護について詳しくは、[鍵のラッピング](/docs/services/hs-crypto/wrap-keys.html)を確認してください。
-- プログラムでの鍵の管理について詳しくは、[{{site.data.keyword.hscrypto}} API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} を確認してください。
+- プログラムでの鍵の管理について詳しくは、[{{site.data.keyword.hscrypto}} API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/apidocs/hs-crypto){: new_window} を確認してください。

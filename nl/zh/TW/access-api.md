@@ -104,7 +104,7 @@ subcollection: hs-crypto
 ## 擷取連線資訊
 {: #retrieve-connection-info}
 
-在您呼叫任何 {{site.data.keyword.keymanagementserviceshort}} API 之前，請先呼叫 **Retrieve the connection info** API 來擷取連線資訊。如需相關資訊，請參閱 [{{site.data.keyword.hscrypto}}API 參考資料文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
+在您呼叫任何 {{site.data.keyword.keymanagementserviceshort}} API 之前，請先呼叫 **Retrieve the connection info** API 來擷取連線資訊。如需相關資訊，請參閱 [{{site.data.keyword.hscrypto}}API 參考資料文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/apidocs/hs-crypto){: new_window}。
 
 ## 形成 API 要求
 {: #form-api-request}
@@ -123,6 +123,8 @@ curl -X GET \
 {: codeblock}
 
 ### 下一步為何？
+{: #api-next}
 
-- 若要進一步瞭解如何以程式設計方式管理您的金鑰，[請參閱 {{site.data.keyword.hscrypto}} API 參考資料文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
-- 若要查看 {{site.data.keyword.hscrypto}} 中所儲存的金鑰如何運作來加密及解密資料的範例，請[試用 GitHub 中的範例應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}。
+若要進一步瞭解如何以程式設計方式管理您的金鑰，[請參閱 {{site.data.keyword.hscrypto}} API 參考資料文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/apidocs/hs-crypto){: new_window}。
+
+<!-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}. -->

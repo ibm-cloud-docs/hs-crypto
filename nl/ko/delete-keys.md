@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: details of the DELETE request, delete encryption key, deleting keys, Variable Description region
 
@@ -26,17 +26,18 @@ subcollection: hs-crypto
 **중요:** 키를 삭제하면 해당 컨텐츠 및 연관된 데이터가 영구 삭제됩니다. 이 조치는 되돌릴 수 없습니다. 프로덕션 환경의 경우에는 리소스 영구 삭제가 권장되지 않지만, 테스트나 QA 등의 임시 환경의 경우에는 유용할 수 있습니다.
 
 ## GUI로 키 삭제
-{: #gui}
+{: #delete-keys-gui}
 
 그래픽 인터페이스를 사용한 암호화 키 삭제를 원하는 경우 {{site.data.keyword.hscrypto}} GUI를 사용할 수 있습니다.
 
 [키를 새로 작성하거나 기존 키를 서비스로 가져온 후](/docs/services/hs-crypto/create-root-keys.html) 다음 단계를 완료하여 키를 삭제하십시오.
 
 1. [{{site.data.keyword.cloud_notm}} 콘솔 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")에 로그인하십시오.](https://cloud.ibm.com/){: new_window}
-2. {{site.data.keyword.cloud_notm}} 대시보드에서 {{site.data.keyword.hscrypto}}의 프로비저닝된 인스턴스를 선택하십시오.
-3. **키** 테이블을 사용하여 서비스에서 키를 찾아보십시오.
-4. 아이콘을 클릭하여 삭제할 키에 대한 옵션 목록을 여십시오.
-5. 옵션 메뉴에서 **키 삭제**를 클릭한 후 다음 화면에서 키 삭제를 확인하십시오.
+2. **메뉴** &gt; **리소스 목록**으로 이동하여 리소스 목록을 보십시오.
+3. {{site.data.keyword.cloud_notm}} 리소스 목록에서 {{site.data.keyword.hscrypto}}의 프로비저닝된 인스턴스를 선택하십시오.
+4. **키** 테이블을 사용하여 서비스에서 키를 찾아보십시오.
+5. 아이콘을 클릭하여 삭제할 키에 대한 옵션 목록을 여십시오.
+6. 옵션 메뉴에서 **키 삭제**를 클릭한 후 다음 화면에서 키 삭제를 확인하십시오.
 
 키를 삭제하면 키가 _영구 삭제됨_ 상태로 전이됩니다. 이 상태의 키는 더 이상 복구 불가능합니다. 키와 연관된 메타데이터(예: 키의 삭제 날짜)가 {{site.data.keyword.hscrypto}} 데이터베이스에 보관됩니다.
 
@@ -65,9 +66,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
       -H 'prefer: <return_preference>'
     ```
     {: codeblock}
-
-    계정에서 Cloud Foundry 조직과 영역 내의 키에 대한 작업을 수행하려면 `Bluemix-Instance`를 적절한 `Bluemix-org` 및 `Bluemix-space` 헤더로 바꾸십시오. [자세한 정보는 {{site.data.keyword.hscrypto}} API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     다음 표에 따라 예제 요청의 변수를 대체하십시오.
     <table>
@@ -128,4 +128,4 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {: screen}
 
-    사용 가능한 매개변수에 대한 자세한 설명은 {{site.data.keyword.hscrypto}} [REST API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}를 참조하십시오.
+    사용 가능한 매개변수에 대한 자세한 설명은 {{site.data.keyword.hscrypto}} [REST API 참조 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/apidocs/hs-crypto){: new_window}를 참조하십시오.

@@ -24,7 +24,7 @@ subcollection: hs-crypto
 {: shortdesc}
 
 <!-- ## Available regions
-{: #regions}
+{: #available-regions}
 
 {{site.data.keyword.hscrypto}} is available in the following regions and locations: -->
 
@@ -32,7 +32,7 @@ subcollection: hs-crypto
 ## 서비스 엔드포인트
 {: #endpoints}
 
-{{site.data.keyword.hscrypto}} 리소스를 프로그래밍 방식으로 관리하는 경우 [{{site.data.keyword.hscrypto}} API](https://cloud.ibm.com/apidocs/hs-crypto)에 연결할 때 사용할 API 엔드포인트를 판별하려면 다음 표를 확인하십시오.
+{{site.data.keyword.hscrypto}} 리소스를 프로그래밍 방식으로 관리하는 경우 [{{site.data.keyword.hscrypto}} API](https://{DomainName}/apidocs/hs-crypto)에 연결할 때 사용할 API 엔드포인트를 판별하려면 다음 표를 확인하십시오.
 
 <table>
     <tr>

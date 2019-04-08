@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root keys, Rotate key, key rotation
 
@@ -24,9 +24,6 @@ subcollection: hs-crypto
 您可以使用 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} 按需轮换根密钥。
 {: shortdesc}
 
-当前不支持轮换主密钥。
-{: important}
-
 轮换根密钥可缩短密钥的生命周期，并限制受密钥保护的信息量。   
 
 要了解密钥轮换如何帮助您符合行业标准和加密最佳实践，请参阅[密钥轮换](/docs/services/key-protect/concepts/key-rotation.html)。
@@ -35,23 +32,24 @@ subcollection: hs-crypto
 {: tip}
 
 ## 使用 GUI 轮换根密钥
-{: #gui}
+{: #rotate-root-key-gui}
 
 如果想要使用图形界面来轮换根密钥，那么可以使用 {{site.data.keyword.hscrypto}} GUI。
 
 [在创建根密钥或将现有根密钥导入到服务后](/docs/services/hs-crypto/create-root-keys.html)，请完成以下步骤来轮换密钥：
 
 1. [登录到 {{site.data.keyword.cloud_notm}} 控制台 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/){: new_window}。
-2. 从 {{site.data.keyword.cloud_notm}} 仪表板，选择 {{site.data.keyword.hscrypto}} 的已供应实例。
-3. 使用**密钥**表以浏览服务中的密钥。
-4. 单击 ⋮ 图标以打开要轮换的密钥的选项列表。
-5. 从选项菜单中，单击**轮换密钥**，然后在下一个屏幕中进行确认。
+2. 转至**菜单** &gt; **资源列表**，以查看您的资源列表。
+3. 从 {{site.data.keyword.cloud_notm}} 资源列表，选择 {{site.data.keyword.hscrypto}} 的已供应实例。
+4. 在应用程序详细信息页面上，使用**密钥**表以浏览服务中的密钥。
+5. 单击 ⋮ 图标以打开要轮换的密钥的选项列表。
+6. 从选项菜单中，单击**轮换密钥**，然后在下一个屏幕中进行确认。
 
 如果最初导入的是根密钥，那么必须提供新的 Base64 编码的密钥资料，才能轮换密钥。有关更多信息，请参阅[使用 GUI 导入根密钥](/docs/services/hs-crypto/import-root-keys.html#gui)。
 {: tip}
 
 ## 使用 API 轮换根密钥
-{: #api}
+{: #rotate-root-kay-api}
 
 [在服务中指定根密钥后](/docs/services/hs-crypto/create-root-keys.html)，可以通过对以下端点发出 `POST` 调用来轮换密钥。
 
@@ -109,7 +107,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rota
           <p>要轮换最初由 {{site.data.keyword.hscrypto}} 生成的密钥，请省略 <code>payload</code> 属性并传递空请求 entity-body。要轮换已导入的密钥，请提供满足以下需求的密钥资料：</p>
           <p>
             <ul>
-              <li>密钥必须为 256 位、384 位或 512 位。</li>
+              <li>密钥必须为 128 位、192 位或 256 位。</li>
               <li>数据字节（例如，对于 256 位，为 32 个字节）必须使用 Base64 编码进行编码。</li>
             </ul>
           </p>

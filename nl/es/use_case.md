@@ -23,6 +23,7 @@ En esta página se incluyen los casos de uso que contiene actualmente {{site.dat
 {:shortdesc}
 
 ## Cifrado de datos en reposo con Keep Your Own Keys
+{: #data-at-rest-encryption}
 
 Puede utilizar {{site.data.keyword.hscrypto}} para cifrar los datos en reposo en el nivel de seguridad más alto con sus propias claves. {{site.data.keyword.hscrypto}} proporciona las funciones de gestión de claves para generar y gestionar sus claves utilizando API de
 {{site.data.keyword.keymanagementservicefull_notm}}.
@@ -41,6 +42,7 @@ A continuación se muestran algunas de las principales características del uso 
 *Figura 1. Cifrado de datos en reposo con KYOK*
 
 ## Protección de imagen de VMware con Keep Your Own Keys
+{: #vmware-image-protection}
 
 De forma similar a la protección de datos en reposo, {{site.data.keyword.hscrypto}} también puede proteger la imagen VMware en reposo del cifrado y el descifrado a través del Protocolo de interoperatividad de gestión de claves de VMware.
 

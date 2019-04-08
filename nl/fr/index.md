@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-05"
+lastupdated: "2019-03-13"
 
 Keywords: dedicated key management service, IBM Key, Own Keys
 
@@ -21,27 +21,25 @@ subcollection: hs-crypto
 # Initiation à {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
 {: #get-started}
 
-<!-- {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is in the BETA phase and is for tryout and test purpose only. To prevent data loss, use only test data in the current service. This restriction also applies to using {{site.data.keyword.hscrypto}} with other  {{site.data.keyword.cloud_notm}} services.
-{:important} -->
-
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}} en abrégé) fournit un module matériel de sécurité (HSM) cloud pour un service de gestion de clés dédié. {{site.data.keyword.hscrypto}} vous aide à chiffrer vos données aux niveaux de sûreté et de sécurité caractéristiques de la cryptographie d'IBM Z d'une manière qui soit à la fois pratique et économique.
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}}, en plus court) est un module HSM (Hardware Security Module) de cloud et de gestion des clés. Conçu pour vous permettre de prendre le contrôle des clés de chiffrement de vos données de cloud et des modèles de sécurité matérielle de cloud, il s'agit du seul service de l'industrie généré sur un matériel certifié FIPS 140-2 Level 4.
 {:shortdesc}
 
-{{site.data.keyword.hscrypto}} fonctionne en intégration avec les API de {{site.data.keyword.keymanagementservicefull_notm}} pour générer et chiffrer les clés. Le mécanisme KYKO (Keep Your Own Keys) est également rendu possible par {{site.data.keyword.hscrypto}} afin de fournir l'accès aux matériels cryptographiques à technologie certifiée FIPS 140-2 Level 4, le plus haut niveau de sécurité qui soit. {{site.data.keyword.hscrypto}} offre des modules matériels de sécurité (HSM) adressables sur le réseau<!-- and is accessible via PKCS#11 application programming interfaces (APIs) with several popular programming languages such as Java, JavaScript, Swift, and so on-->.  <!-- You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client, which communicates with the ACSP server to enable you to access the backend cryptographic resources.--> Pour plus d'informations sur {{site.data.keyword.hscrypto}}, consultez [Présentation de {{site.data.keyword.hscrypto}}](/docs/services/hs-crypto/overview.html). Pour plus d'informations sur les exigences de sécurité pour les modules cryptographiques, consultez la [spécification (en anglais) du NIST for FIPS 140-2 Level ![Icône de lien externe](image/external_link.svg "Icône de lien externe")](https://csrc.nist.gov/publications/detail/fips/140/2/final){:new_window}.
+{{site.data.keyword.hscrypto}} fonctionne en intégration avec les API de {{site.data.keyword.keymanagementservicefull_notm}} pour générer et chiffrer les clés. Le mécanisme KYOK (Keep Your Own Keys) est également rendu possible par {{site.data.keyword.hscrypto}} afin de fournir l'accès aux matériels cryptographiques à technologie certifiée FIPS 140-2 Level 4, le plus haut niveau de sécurité qui soit. {{site.data.keyword.hscrypto}} offre des modules HSM (Hardware Security Module) adressables en réseau. <!-- and is accessible via PKCS#11 application programming interfaces (APIs) with several popular programming languages such as Java, JavaScript, Swift, and so on-->.  <!-- You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client, which communicates with the ACSP server to enable you to access the backend cryptographic resources.--> Pour plus d'informations sur {{site.data.keyword.hscrypto}}, consultez [Présentation de {{site.data.keyword.hscrypto}}](/docs/services/hs-crypto/overview.html). Pour plus d'informations sur les exigences de sécurité pour les modules cryptographiques, consultez la [spécification (en anglais) du NIST for FIPS 140-2 Level ![Icône de lien externe](image/external_link.svg "Icône de lien externe")](https://csrc.nist.gov/publications/detail/fips/140/2/final){:new_window}.
 
 <!-- {{site.data.keyword.hscrypto}} is the cryptography that {{site.data.keyword.blockchainfull_notm}} Platform is built with. It is also a member of the {{site.data.keyword.cloud_notm}} Hyper Protect Family, including [{{site.data.keyword.cloud_notm}} Hyper Protect DBaaS ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/docs/services/hypersecure-dbaas/index.html){:new_window}, {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}, [{{site.data.keyword.cloud_notm}} Container Service ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/docs/containers/container_index.html){:new_window}, and [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}} ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/docs/services/hypersecure-platform/index.html){:new_window}. -->
 
-Ce tutoriel vous montre comment configurer votre instance crypto en gérant vos clés maîtresses, en créant de nouvelles clés cryptographiques et en ajoutant des clés cryptographiques existantes à l'aide du tableau de bord {{site.data.keyword.hscrypto}}.
+Ce tutoriel vous montre comment configurer votre instance crypto en gérant vos clés maître, en créant de nouvelles clés cryptographiques et en ajoutant des clés cryptographiques existantes via le tableau de bord {{site.data.keyword.hscrypto}}.
 
 
 ## Etape 1 : Mettez à disposition le service
-{: #provision}
+{: #provision-service}
 
 Avant de commencer, vous devez créer une instance de {{site.data.keyword.hscrypto}} à partir de la console {{site.data.keyword.cloud_notm}}. Pour les étapes détaillées, consultez [Mise à disposition du service](/docs/services/hs-crypto/provision.html).
 
-## Etape 2 : Initialisez votre instance crypto
+## Etape 2 : Initialisez votre instance de service
+{: #initialize-crypto}
 
-Pour gérer vos clés, vous devez d'abord initialiser votre instance crypto (HSM). Pour une initiation rapide, consultez [Démarrer avec l'initialisation de l'instance crypto](/docs/services/hs-crypto/get_started_hsm.html). Pour les étapes détaillées et les bonnes pratiques, consultez [Initialisation des instances crypto pour protéger le stockage des clés](/docs/services/hs-crypto/initialize_hsm.html).
+Pour gérer vos clés, vous devez d'abord initialiser votre instance de service. Pour une initiation rapide, voir [Initiation à l'initialisation d'une instance de service](/docs/services/hs-crypto/get_started_hsm.html). Pour les étapes détaillées et les bonnes pratiques, voir la rubrique [Initialisation des instances de service](/docs/services/hs-crypto/initialize_hsm.html) pour protéger le stockage de clés.
 
 ## Etape 3 : Gérez vos clés
 {: #manage-keys}
@@ -121,12 +119,12 @@ Pour ajouter une clé existante, procédez comme suit :
 Dans le tableau de bord {{site.data.keyword.hscrypto}}, vous pouvez examiner les caractéristiques générales des nouvelles clés.
 
 ## Etapes suivantes
+{: #get-started-next}
 
 Vous pouvez désormais utiliser vos clés pour coder vos applications et services. Si vous avez ajouté une clé racine au service, vous voudrez peut-être en savoir plus sur l'utilisation de la clé racine pour protéger les clés qui chiffrent vos données au repos. Reportez-vous à [Encapsulage de clés](/docs/services/hs-crypto/wrap-keys.html) pour commencer.
-
 - Pour plus d'informations sur la gestion et la protection de vos clés de chiffrement avec une clé racine, voir [Chiffrement d'enveloppe](/docs/services/key-protect/concepts/envelope-encryption.html).
-- Pour plus d'informations sur l'intégration du service {{site.data.keyword.hscrypto}} à d'autres solutions de données de cloud, [voir la documentation relative aux intégrations](/docs/services/key-protect/integrations/integrate-services.html).
-- Pour plus d'informations sur la gestion de vos clés à l'aide d'un programme, [consultez la documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
+<!-- - To find out more about integrating the {{site.data.keyword.hscrypto}} service with other cloud data solutions, [check out the Integrations doc](/docs/services/key-protect/integrations/integrate-services.html). -->
+- Pour plus d'informations sur la gestion de vos clés à l'aide d'un programme, [voir la documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
 
 <!-- Complete the following steps to provision {{site.data.keyword.hscrypto}}:
 1. Log in to your [IBM Cloud account ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/){:new_window}.

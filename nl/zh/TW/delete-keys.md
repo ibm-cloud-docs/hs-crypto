@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: details of the DELETE request, delete encryption key, deleting keys, Variable Description region
 
@@ -26,17 +26,18 @@ subcollection: hs-crypto
 **重要事項**：當您刪除金鑰時，會永久地清除其內容及相關聯的資料。無法回復此動作。不建議針對正式作業環境破壞資源，但可能適用於測試或 QA 等暫時性環境。
 
 ## 使用 GUI 刪除金鑰
-{: #gui}
+{: #delete-keys-gui}
 
 如果您偏好使用圖形介面來刪除加密金鑰，可以使用 {{site.data.keyword.hscrypto}} GUI。
 
 [在建立金鑰或將現有金鑰匯入到服務之後](/docs/services/hs-crypto/create-root-keys.html)，請完成下列步驟來刪除金鑰：
 
 1. [登入 {{site.data.keyword.cloud_notm}} 主控台 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/){: new_window}。
-2. 從 {{site.data.keyword.cloud_notm}} 儀表板中，選取已佈建的 {{site.data.keyword.hscrypto}} 實例。
-3. 使用**金鑰**表格，以瀏覽服務中的金鑰。
-4. 按一下 ⋮ 圖示，以開啟您要刪除之金鑰的選項清單。
-5. 從選項功能表，按一下**刪除金鑰**，並在下一個畫面中確認刪除金鑰。
+2. 移至**功能表** &gt; **資源清單**，以檢視您的資源清單。
+3. 從 {{site.data.keyword.cloud_notm}} 資源清單，選取已佈建的 {{site.data.keyword.hscrypto}} 實例。
+4. 使用**金鑰**表格，以瀏覽服務中的金鑰。
+5. 按一下 ⋮ 圖示，以開啟您要刪除之金鑰的選項清單。
+6. 從選項功能表，按一下**刪除金鑰**，並在下一個畫面中確認刪除金鑰。
 
 刪除金鑰之後，金鑰會轉移至_已破壞_ 狀態。無法再回復這種狀態下的金鑰。與金鑰相關聯的 meta 資料（例如金鑰刪除日期）會保存在 {{site.data.keyword.hscrypto}} 資料庫中。
 
@@ -65,9 +66,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
       -H 'prefer: <return_preference>'
     ```
     {: codeblock}
-
-    若要在您帳戶的 Cloud Foundry 組織及空間內使用金鑰，請將 `Bluemix-Instance` 取代為適當的 `Bluemix-org` 及 `Bluemix-space` 標頭。[如需相關資訊，請參閱 {{site.data.keyword.hscrypto}} API 參考資料文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     根據下表取代範例要求中的變數。
     <table>
@@ -128,4 +128,4 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {: screen}
 
-    如需可用參數的詳細說明，請參閱 {{site.data.keyword.hscrypto}} [REST API 參考資料文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}。
+    如需可用參數的詳細說明，請參閱 {{site.data.keyword.hscrypto}} [REST API 參考資料文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/apidocs/hs-crypto){: new_window}。

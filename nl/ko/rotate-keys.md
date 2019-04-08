@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root keys, Rotate key, key rotation
 
@@ -24,9 +24,6 @@ subcollection: hs-crypto
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}를 사용하여 요청 시 루트 키를 순환할 수 있습니다.
 {: shortdesc}
 
-현재 마스터 키 순환은 지원되지 않습니다.
-{: important}
-
 루트 키를 순환하는 경우 키의 수명이 줄어들고 해당 키로 보호되는 정보의 양이 제한됩니다.   
 
 키 순환을 통해 산업 표준 및 암호화 우수 사례를 충족시키는 방법을 알아보려면 [키 순환](/docs/services/key-protect/concepts/key-rotation.html)을 참조하십시오.
@@ -35,23 +32,24 @@ subcollection: hs-crypto
 {: tip}
 
 ## GUI로 루트 키 순환
-{: #gui}
+{: #rotate-root-key-gui}
 
 그래픽 인터페이스를 사용한 루트 키 순환을 원하는 경우 {{site.data.keyword.hscrypto}} GUI를 사용할 수 있습니다.
 
 [키를 새로 작성하거나 기존 루트 키를 서비스로 가져온 후](/docs/services/hs-crypto/create-root-keys.html) 다음 단계를 완료하여 키를 순환하십시오.
 
 1. [{{site.data.keyword.cloud_notm}} 콘솔 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")에 로그인하십시오.](https://cloud.ibm.com/){: new_window}
-2. {{site.data.keyword.cloud_notm}} 대시보드에서 {{site.data.keyword.hscrypto}}의 프로비저닝된 인스턴스를 선택하십시오.
-3. **키** 테이블을 사용하여 서비스에서 키를 찾아보십시오.
-4. ⋮ 아이콘을 클릭하여 순환할 키에 대한 옵션 목록을 여십시오.
-5. 옵션 메뉴에서 **키 삭제**를 클릭한 후 다음 화면에서 순환을 확인하십시오.
+2. **메뉴** &gt; **리소스 목록**으로 이동하여 리소스 목록을 보십시오.
+3. {{site.data.keyword.cloud_notm}} 리소스 목록에서 {{site.data.keyword.hscrypto}}의 프로비저닝된 인스턴스를 선택하십시오.
+4. 애플리케이션 세부사항 페이지에서 **키** 테이블을 사용하여 서비스에서 키를 찾아보십시오.
+5. ⋮ 아이콘을 클릭하여 순환할 키에 대한 옵션 목록을 여십시오.
+6. 옵션 메뉴에서 **키 삭제**를 클릭한 후 다음 화면에서 순환을 확인하십시오.
 
 처음에 루트 키를 가져온 경우 키를 순환하여면 base64로 인코딩된 새 키 자료를 제공해야 합니다. 자세한 정보는 [GUI를 사용하여 루트 키 가져오기](/docs/services/hs-crypto/import-root-keys.html#gui)를 참조하십시오.
 {: tip}
 
 ## API를 사용하여 루트 키 순환
-{: #api}
+{: #rotate-root-kay-api}
 
 [서비스에서 루트 키를 지정하면](/docs/services/hs-crypto/create-root-keys.html) 다음 엔드포인트에 대한 `POST` 호출을 작성하여 키를 순환할 수 있습니다.
 
@@ -109,7 +107,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rota
           <p>{{site.data.keyword.hscrypto}}로 초기에 생성된 키를 순환하려면 <code>payload</code> 속성을 생략하고 비어 있는 요청 엔티티-본문을 전달하십시오. 가져온 키를 순환하려면 다음 요구사항을 충족시키는 키 자료를 제공하십시오.</p>
           <p>
             <ul>
-              <li>키가 256, 384 또는 512비트여야 합니다.</li>
+              <li>키가 128, 192 또는 256비트여야 합니다.</li>
               <li>base64 인코딩을 사용하여 데이터 바이트(예: 256비트의 경우 32바이트)를 인코딩해야 합니다.</li>
             </ul>
           </p>

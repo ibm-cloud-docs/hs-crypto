@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2018, 2019
@@ -7,7 +7,6 @@ lastupdated: "2019-02-18"
 Keywords: instance ID, account ID, Access Management
 
 subcollection: hs-crypto
-
 
 ---
 
@@ -27,9 +26,9 @@ subcollection: hs-crypto
 このページでは、[Access Management API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://iampap.ng.bluemix.net/v1/docs/#/Policies/post_v1_policies){: new_window} を使用して暗号鍵へのアクセス権限を管理するためのシナリオをいくつか紹介します。
 
 ## 始めに
-{: #prereqs}
+{: #prereqs-manage-api}
 
-この API を使用して処理を行うために、認証資格情報 (例えば、[アクセス・トークン](/docs/services/hs-crypto/access-api.html#retrieve-token)および[インスタンス ID](/docs/services/hs-crypto/access-api.html#retrieve-instance-ID)) を生成してください。また、アクセス権限を管理したい {{site.data.keyword.hscrypto}} 鍵の ID も必要です。
+この API を使用して処理を行うために、認証資格情報 (例えば、[アクセス・トークン](/docs/services/hs-crypto/access-api.html#retrieve-token)および[インスタンス ID](/docs/services/hs-crypto/access-api.html#retrieve-instance-ID)) を生成してください。 また、アクセス権限を管理したい {{site.data.keyword.hscrypto}} 鍵の ID も必要です。
 
 鍵 ID の表示について詳しくは、[鍵の表示](/docs/services/hs-crypto/view-keys.html)を参照してください。
 {: tip}
@@ -37,7 +36,7 @@ subcollection: hs-crypto
 ### アカウント ID の取得
 {: #retrieve-account-ID}
 
-資格情報を取得した後、{{site.data.keyword.hscrypto}} サービス・インスタンスを含んでいるアカウントの ID を取得することによって、新規アクセス・ポリシーのアクセス権限の範囲を判別します。
+資格情報を取得した後、{{site.data.keyword.hscrypto}} インスタンス (略してサービス・インスタンス) を含んでいるアカウントの ID を取得することによって、新規アクセス・ポリシーのアクセス権限の範囲を判別します。
 
 アカウント ID を取得するには、以下のステップを実行します。
 
@@ -151,10 +150,10 @@ curl -X POST \
 ```
 {: codeblock}
 
-指定された Cloud Foundry 組織およびスペース内の鍵へのアクセス権限を管理する必要がある場合は、`serviceInstance` を `organizationId` および `spaceId` に置き換えます。 詳しくは、[Access Management API リファレンス資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window} を参照してください。
+<!-- If you need to manage access to keys within a specified Cloud Foundry org and space, replace `serviceInstance` with `organizationId` and `spaceId`. To learn more, see the [Access Management API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}.
 {: tip}
 
-`<user_ID>`、`<Admin_IAM_token>`、`<IAM_role>`、`<region>`、`<account_ID>`、`<instance_ID>`、および `<key_ID>` を、適切な値に置き換えてください。
+Replace `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>`, and `<key_ID>` with the appropriate values. -->
 
 **オプション:** ポリシーが正常に作成されたことを確認します。
 

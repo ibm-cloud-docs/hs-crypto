@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2018, 2019
@@ -26,7 +26,7 @@ subcollection: hs-crypto
 此页面将引导您完成几个方案，以使用[访问管理 API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://iampap.ng.bluemix.net/v1/docs/#/Policies/post_v1_policies){: new_window} 来管理加密密钥的访问权。
 
 ## 开始之前
-{: #prereqs}
+{: #prereqs-manage-api}
 
 要使用 API，请生成认证凭证，例如，[访问令牌](/docs/services/hs-crypto/access-api.html#retrieve-token)和[实例标识](/docs/services/hs-crypto/access-api.html#retrieve-instance-ID)。您还需要想要管理其访问权的 {{site.data.keyword.hscrypto}} 密钥的标识。
 
@@ -36,7 +36,7 @@ subcollection: hs-crypto
 ### 检索帐户标识
 {: #retrieve-account-ID}
 
-在检索凭证后，通过检索包含 {{site.data.keyword.hscrypto}} 服务实例的帐户的标识，确定新访问策略的访问权作用域。
+在检索凭证后，通过检索包含 {{site.data.keyword.hscrypto}} 实例（简称服务实例）的帐户的标识，确定新访问策略的访问权作用域。
 
 要检索帐户标识，请完成以下步骤：
 
@@ -154,10 +154,10 @@ curl -X POST \
 ```
 {: codeblock}
 
-如果需要管理对指定 Cloud Foundry 组织和空间内密钥的访问权，请将 `serviceInstance` 替换为 `organizationId` 和 `spaceId`。要了解更多信息，请参阅 [Access Management API 参考文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}。
+<!-- If you need to manage access to keys within a specified Cloud Foundry org and space, replace `serviceInstance` with `organizationId` and `spaceId`. To learn more, see the [Access Management API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iampap.ng.bluemix.net/v1/docs/#!/Access_Policies/){: new_window}.
 {: tip}
 
-将 `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>` 和 `<key_ID>` 替换为相应的值。
+Replace `<user_ID>`, `<Admin_IAM_token>`, `<IAM_role>`, `<region>`, `<account_ID>`, `<instance_ID>`, and `<key_ID>` with the appropriate values. -->
 
 **可选：**验证是否已成功创建策略。
 

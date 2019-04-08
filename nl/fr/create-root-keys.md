@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root keys, create root keys, Hyper Protect Crypto Services GUI, symmetric key
 
@@ -25,13 +25,14 @@ Vous pouvez utiliser {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} 
 Les clés racine sont des clés d'encapsulage de clés symétriques qui permettent d'assurer la sécurité des données chiffrées dans le cloud. Pour plus d'informations sur les clés racine, voir [Chiffrement d'enveloppe](/docs/services/key-protect/concepts/envelope-encryption.html).
 
 ## Création de clés racine avec l'interface graphique
-{: #gui}
+{: #root-key-gui}
 
 [Après avoir créé une instance du service](/docs/services/hs-crypto/provision.html), procédez comme suit pour créer une clé standard avec l'interface graphique {{site.data.keyword.hscrypto}}.
 
 1. [Connectez-vous à la console {{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/){: new_window}.
-2. Dans votre tableau de bord {{site.data.keyword.cloud_notm}}, sélectionnez l'instance {{site.data.keyword.hscrypto}} mise à disposition.
-3. Pour créer une clé, cliquez sur **Add key** et sélectionnez la fenêtre **Generate a new key**.
+2. Accédez à **Menu** &gt; **Liste de ressources** pour afficher la liste de vos ressources.
+3. Dans la liste de ressources {{site.data.keyword.cloud_notm}}, sélectionnez votre instance {{site.data.keyword.hscrypto}} mise à disposition.
+4. Pour créer une nouvelle clé, cliquez sur **Add key** et sélectionnez la fenêtre **Create a key**.
 
     Indiquez les détails relatifs à la clé :
 
@@ -54,10 +55,12 @@ Les clés racine sont des clés d'encapsulage de clés symétriques qui permette
       <caption style="caption-side:bottom;">Tableau 1. Description des paramètres <b>Generate new key</b></caption>
     </table>
 
-4. Une fois les détails de la clé indiqués, cliquez sur **Generate new key** pour confirmer l'opération.
+5. Une fois les détails de la clé indiqués, cliquez sur **Create key** pour confirmer l'opération.
+
+Les clés qui sont créées dans le service sont des clés symétriques de 256 bits prises en charge par l'algorithme AES-GCM. Pour renforcer la sécurité, elles sont générées par des modules HSM (Hardware Security Module) certifiés FIPS 140-2 niveau 4 résidant dans des centres de données {{site.data.keyword.cloud_notm}} sécurisés.
 
 ## Création de clés racine avec l'API
-{: #api}
+{: #root-key-api}
 
 Créez une clé racine en soumettant une demande `POST` au point d'extrémité suivant.
 
@@ -66,11 +69,9 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ```
 {: codeblock}
 
-1. [Extrayez vos données d'authentification et de service afin d'utiliser les clés dans le service](/docs/services/{{site.data.keyword.hscrypto}}
-hs-crypto/access-api.html).
+1. [Extrayez vos données d'authentification et de service afin d'utiliser les clés dans le service](/docs/services/hs-crypto/access-api.html).
 
-
-2. Appelez l'[API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} à l'aide de la commande cURL suivante. 
+2. Appelez l'[{{site.data.keyword.hscrypto}}API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/hs-crypto){: new_window} à l'aide de la commande cURL suivante.
 
     ```cURL
     curl -X POST \
@@ -96,11 +97,11 @@ hs-crypto/access-api.html).
     }'
     ```
     {: codeblock}
-
-    Pour utiliser les clés dans une organisation et un espace Cloud Foundry de votre compte, remplacez `Bluemix-Instance` par les en-têtes `Bluemix-org` et `Bluemix-space` appropriés. [Pour plus d'informations, consultez la documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+<!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+    {: tip} -->
 
     Remplacez les variables dans l'exemple de demande en fonction du tableau suivant :
+
     <table>
       <tr>
         <th>Variable</th>
@@ -108,7 +109,7 @@ hs-crypto/access-api.html).
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>Abréviation de la région, comme <code>us-south</code> ou <code>eu-gb</code>, représentant la zone géographique dans laquelle votre instance de service {{site.data.keyword.hscrypto}} réside. Pour plus d'informations, consultez <a href="/docs/services/hs-crypto/regions.html#endpoints">Points d'extrémité de service régional</a>.</td>
+        <td>Abréviation de la région, comme <code>us-south</code> ou <code>eu-gb</code>, représentant la zone géographique dans laquelle votre instance de service {{site.data.keyword.hscrypto}} réside. Pour plus d'informations, voir <a href="/docs/services/hs-crypto/regions.html#endpoints">Points d'extrémité de service régional</a>.</td>
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
@@ -170,6 +171,7 @@ hs-crypto/access-api.html).
 **Remarque :** Lorsque vous créez une clé racine avec le service, la clé reste dans les limites de {{site.data.keyword.hscrypto}} et sa matière ne peut pas être extraite.
 
 ### Etapes suivantes
+{: #root-key-next}
 
 - Pour plus d'informations sur la protection de clés à l'aide du chiffrement d'enveloppe, voir [Encapsulage de clés](/docs/services/hs-crypto/wrap-keys.html).
-- Pour plus d'informations sur la gestion de vos clés à l'aide d'un programme, [consultez la documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
+- Pour plus d'informations sur la gestion de vos clés à l'aide d'un programme, [voir la documentation de référence de l'API {{site.data.keyword.hscrypto}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/apidocs/hs-crypto){: new_window}.

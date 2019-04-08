@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: view keys, key configuration, key type
 
@@ -26,21 +26,22 @@ subcollection: hs-crypto
 Audite la configuración de las claves de forma regular:
 
 - Examine cuando se crean las claves y determine si es momento de rotar la clave.
-- [Supervise llamadas API a {{site.data.keyword.hscrypto}} con {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/tutorials/manage_events_cli.html).
+- Supervise llamadas de API a {{site.data.keyword.hscrypto}} con {{site.data.keyword.cloudaccesstrailshort}}.
 - Inspeccione qué usuarios tienen acceso a las claves y si el nivel de acceso es apropiado.
 
 Para obtener más información sobre cómo auditar el acceso a sus recursos, consulte [Gestión del acceso de usuarios con IAM Cloud](/docs/services/hs-crypto/manage-access.html).
 
 ## Visualización de claves con GUI
-{: #gui}
+{: #view-key-gui}
 
 Si prefiere examinar las claves en el servicio mediante una interfaz gráfica, puede utilizar el panel de control de {{site.data.keyword.hscrypto}}.
 
 [Después de crear o importar sus claves existentes en el servicio](/docs/services/hs-crypto/create-root-keys.html), complete los siguientes pasos para visualizar sus claves.
 
 1. [Inicie sesión en la consola de {{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/).
-2. Desde el panel de control de {{site.data.keyword.cloud_notm}} seleccione su instancia suministrada de {{site.data.keyword.hscrypto}}.
-3. Examine las características generales de sus claves desde el panel de control de {{site.data.keyword.hscrypto}}:
+2. Vaya a **Menú** &gt; **Lista de recursos** para ver una lista de sus recursos.
+3. Desde la lista de recursos de {{site.data.keyword.cloud_notm}} seleccione su instancia suministrada de {{site.data.keyword.hscrypto}}.
+3. Examine las características generales de sus claves desde la página de detalles de la aplicación:
 
     <table>
       <tr>
@@ -53,7 +54,7 @@ Si prefiere examinar las claves en el servicio mediante una interfaz gráfica, p
       </tr>
       <tr>
         <td>ID</td>
-        <td>ID de clave exclusivo que se asignó a su clave con el servicio de {{site.data.keyword.hscrypto}}. Puede utilizar el valor de ID para realizar llamadas al servicio con la [API de {{site.data.keyword.hscrypto}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/apidocs/hs-crypto).</td>
+        <td>ID de clave exclusivo que se asignó a su clave con el servicio de {{site.data.keyword.hscrypto}}. Puede utilizar el valor de ID para realizar llamadas al servicio con la [API de {{site.data.keyword.hscrypto}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/apidocs/hs-crypto).</td>
       </tr>
       <tr>
         <td>Estado</td>
@@ -67,7 +68,7 @@ Si prefiere examinar las claves en el servicio mediante una interfaz gráfica, p
     </table>
 
 ## Visualización de claves con la API
-{: #api}
+{: #view-key-api}
 
 Puede recuperar el contenido de sus claves utilizando la API {{site.data.keyword.hscrypto}}.
 
@@ -94,9 +95,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     -H 'correlation-id: <correlation_ID>' \
     ```
     {: codeblock}
-
-    Para trabajar con claves dentro de un espacio y organización de Cloud Foundry en su cuenta, sustituya `Bluemix-Instance` con las cabeceras adecuadas de `Bluemix-org` y `Bluemix-space`. [Para obtener más información, consulte el documento de referencia de la API de {{site.data.keyword.hscrypto}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Sustituya las variables en la solicitud de ejemplo siguiendo la siguiente tabla.
     <table>
@@ -337,4 +337,4 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {:screen}
 
-    Para ver una descripción detallada de los parámetros disponibles, consulte el [documento de referencia de la API REST ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} de {{site.data.keyword.hscrypto}}.
+    Para ver una descripción detallada de los parámetros disponibles, consulte el [documento de referencia de la API REST ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/apidocs/hs-crypto){: new_window} de {{site.data.keyword.hscrypto}}.

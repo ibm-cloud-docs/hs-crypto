@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: details of the DELETE request, delete encryption key, deleting keys, Variable Description region
 
@@ -26,18 +26,18 @@ subcollection: hs-crypto
 **Importante:** ao excluir uma chave, você fragmenta permanentemente seus conteúdos e dados associados. A ação não pode ser invertida. A destruição de recursos não é recomendada para ambientes de produção, mas pode ser útil para ambientes temporários, como de teste ou QA.
 
 ## Excluindo chaves com a GUI
-{: #gui}
+{: #delete-keys-gui}
 
 Se você preferir excluir suas chaves de criptografia usando uma interface gráfica, será possível usar a GUI do {{site.data.keyword.hscrypto}}.
 
 [Depois de criar ou importar as chaves existentes no serviço](/docs/services/hs-crypto/create-root-keys.html),conclua as etapas a seguir para excluir a chave:
 
 1. [Efetue login no console do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/){: new_window}.
-2. No painel do {{site.data.keyword.cloud_notm}}, selecione sua instância provisionada do
-{{site.data.keyword.hscrypto}}.
-3. Use a tabela de **Chaves** para procurar as chaves em seu serviço.
-4. Clique no ícone ⋮ para abrir uma lista de opções para a chave que você deseja excluir.
-5. No menu de opções, clique em **Excluir chave** e confirme a exclusão da chave na próxima tela.
+2. Acesse **Menu** &gt; **Lista de recursos** para visualizar uma lista de seus recursos.
+3. Em sua lista de recursos do {{site.data.keyword.cloud_notm}}, selecione a sua instância provisionada do {{site.data.keyword.hscrypto}}.
+4. Use a tabela de **Chaves** para procurar as chaves em seu serviço.
+5. Clique no ícone ⋮ para abrir uma lista de opções para a chave que você deseja excluir.
+6. No menu de opções, clique em **Excluir chave** e confirme a exclusão da chave na próxima tela.
 
 Depois de excluir uma chave, a chave transita para o estado _Destruído_. As chaves nesse estado não são mais recuperáveis. Metadados que estão associados à chave, como a data de exclusão da chave, são mantidos no banco de dados do {{site.data.keyword.hscrypto}}.
 
@@ -66,9 +66,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
       -H 'prefer: <return_preference>'
     ```
     {: codeblock}
-
-    Para trabalhar com chaves dentro de uma organização e um espaço do Cloud Foundry em sua conta, substitua `Bluemix-Instance` pelos cabeçalhos `Bluemix-org` e `Bluemix-space` apropriados. [Para obter mais informações, consulte o doc de referência da API do {{site.data.keyword.hscrypto}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+        {: tip} -->
 
     Substitua as variáveis na solicitação de exemplo de acordo com a tabela a seguir.
     <table>
@@ -129,4 +128,4 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {: screen}
 
-    Para obter uma descrição detalhada dos parâmetros disponíveis, veja o {{site.data.keyword.hscrypto}} [documento de referência da API de REST ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
+    Para obter uma descrição detalhada dos parâmetros disponíveis, veja o {{site.data.keyword.hscrypto}} [documento de referência da API de REST ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/apidocs/hs-crypto){: new_window}.

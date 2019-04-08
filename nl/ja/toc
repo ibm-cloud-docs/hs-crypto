@@ -6,7 +6,7 @@ IBM Cloud Hyper Protect Crypto Services
 
     {: .navgroup id="learn"}
     {: .topicgroup}
-    始めに
+    概説
         index.md
         get_started_hsm.md
 
@@ -14,6 +14,7 @@ IBM Cloud Hyper Protect Crypto Services
     IBM Cloud Hyper Protect Crypto Services について
         overview.md
         use_case.md
+        service_instance_concepts.md
         keys_intro.md
 
     whats_new.md
@@ -24,6 +25,7 @@ IBM Cloud Hyper Protect Crypto Services
     access-api.md
     set-up-cli.md
     initialize_hsm.md
+    transition-keys.md
 
     {: .topicgroup}
     アクセス権限の管理
@@ -50,7 +52,7 @@ IBM Cloud Hyper Protect Crypto Services
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Hyper Protect Crypto API の資料](https://{DomainName}/apidocs/hp-crypto)
+    [Hyper Protect Crypto API の資料](https://{DomainName}/apidocs/hs-crypto)
     regions.md
     at-events.md
     ha-dr.md

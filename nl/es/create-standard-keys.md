@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: standard keys, standard encryption key, creating standard keys, create standard keys
 
@@ -23,13 +23,14 @@ Puede crear una clave de cifrado estándar con la interfaz gráfica de usuario d
 {: shortdesc}
 
 ## Creación de claves estándar con la interfaz gráfica de usuario
-{: #gui}
+{: #standard-key-gui}
 
 [Después de crear una instancia del servicio](/docs/services/hs-crypto/provision.html), siga los siguientes pasos para crear una clave estándar con la interfaz gráfica de usuario de {{site.data.keyword.hscrypto}}.
 
 1. [Inicie sesión en la consola de {{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/){: new_window}.
-2. Desde el panel de control de {{site.data.keyword.cloud_notm}} seleccione su instancia suministrada de {{site.data.keyword.hscrypto}}.
-3. Para crear una nueva clave, pulse **Añadir clave** seleccione la ventana **Generar una nueva clave**.
+2. Vaya a **Menú** &gt; **Lista de recursos** para ver una lista de sus recursos.
+3. Desde la lista de recursos de {{site.data.keyword.cloud_notm}} seleccione su instancia suministrada de {{site.data.keyword.hscrypto}}.
+4. Para crear una nueva clave, pulse **Añadir clave** seleccione la ventana **Crear una clave**.
 
     Especifique los detalles de la clave:
 
@@ -52,10 +53,9 @@ Puede crear una clave de cifrado estándar con la interfaz gráfica de usuario d
       <caption style="caption-side:bottom;">Tabla 1. Describe los valores de <b>Generar nueva clave</b></caption>
     </table>
 
-4. Cuando haya terminado de cumplimentar los detalles de la clave, pulse **Generar clave** para confirmar.
+5. Cuando haya terminado de cumplimentar los detalles de la clave, pulse **Crear una clave** para confirmar.
 
 ## Creación de claves estándar con la API
-{: #api}
 
 Cree una clave estándar realizando una llamada `POST` al siguiente punto final.
 
@@ -66,7 +66,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 1. [Recupere sus credenciales de servicio y de autenticación para trabajar con claves en el servicio](/docs/services/hs-crypto/access-api.html).
 
-2. Llame a la [API de {{site.data.keyword.hscrypto}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window} con el mandato de cURL siguiente.
+2. Llame a la [API de {{site.data.keyword.hscrypto}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/apidocs/hs-crypto){: new_window} con el mandato de cURL siguiente.
 
     ```cURL
     curl -X POST \
@@ -93,10 +93,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     }'
     ```
     {: codeblock}
-
-    Para trabajar con claves dentro de un espacio y organización de Cloud Foundry especificado en su cuenta, sustituya `Bluemix-Instance` con las cabeceras adecuadas de `Bluemix-org` y `Bluemix-space`. [Para obtener más información, consulte el documento de referencia de la API de {{site.data.keyword.hscrypto}}
-![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-    {: tip}
+<!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+    {: tip} -->
 
     Sustituya las variables en la solicitud de ejemplo siguiendo la siguiente tabla.
     <table>
@@ -171,6 +169,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 
 ### Qué hacer a continuación
+{: #standard-key-next}
 
-- Para obtener más información sobre cómo gestionar las claves mediante programación, [consulte el documento de referencia de la API de {{site.data.keyword.hscrypto}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/apidocs/hs-crypto){: new_window}.
-- Para ver un ejemplo de cómo se almacenan las claves en {{site.data.keyword.hscrypto}} para cifrar y descifrar datos [consulte la app de ejemplo en GitHub ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}.
+Para obtener más información sobre cómo gestionar las claves mediante programación, [consulte el documento de referencia de la API de {{site.data.keyword.hscrypto}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+
+<!-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}.-->

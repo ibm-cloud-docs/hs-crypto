@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-03-13"
 
 Keywords: root keys, Rotate key, key rotation
 
@@ -24,9 +24,6 @@ subcollection: hs-crypto
 您可以使用 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} 依需求替換根金鑰。
 {: shortdesc}
 
-目前不支援替換主要金鑰。
-{: important}
-
 當您替換根金鑰時，會縮短金鑰的生命期限，並限制該金鑰所保護的資訊數量。   
 
 若要瞭解金鑰替換如何協助您符合業界標準及加密的最佳作法，請參閱[金鑰替換](/docs/services/key-protect/concepts/key-rotation.html)。
@@ -35,23 +32,24 @@ subcollection: hs-crypto
 {: tip}
 
 ## 使用 GUI 替換根金鑰
-{: #gui}
+{: #rotate-root-key-gui}
 
 如果您偏好使用圖形介面來替換根金鑰，可以使用 {{site.data.keyword.hscrypto}} GUI。
 
 [在建立根金鑰或將現有根金鑰匯入到服務之後](/docs/services/hs-crypto/create-root-keys.html)，請完成下列步驟來替換金鑰：
 
 1. [登入 {{site.data.keyword.cloud_notm}} 主控台 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/){: new_window}。
-2. 從 {{site.data.keyword.cloud_notm}} 儀表板，選取已佈建的 {{site.data.keyword.hscrypto}} 實例。
-3. 使用**金鑰**表格，以瀏覽服務中的金鑰。
-4. 按一下 ⋮ 圖示，以開啟您要替換之金鑰的選項清單。
-5. 從選項功能表中，按一下**替換金鑰**，並在下一個畫面中確認替換金鑰。
+2. 移至**功能表** &gt; **資源清單**，以檢視您的資源清單。
+3. 從 {{site.data.keyword.cloud_notm}} 資源清單，選取已佈建的 {{site.data.keyword.hscrypto}} 實例。
+4. 在應用程式詳細資料頁面上使用**金鑰**表格，以瀏覽服務中的金鑰。
+5. 按一下 ⋮ 圖示，以開啟您要替換之金鑰的選項清單。
+6. 從選項功能表中，按一下**替換金鑰**，並在下一個畫面中確認替換金鑰。
 
 如果一開始就匯入了根金鑰，則必須提供以 base64 編碼的新金鑰資料來替換該金鑰。如需相關資訊，請參閱[使用 GUI 匯入根金鑰](/docs/services/hs-crypto/import-root-keys.html#gui)。
 {: tip}
 
 ## 使用 API 替換根金鑰
-{: #api}
+{: #rotate-root-kay-api}
 
 [在服務中指定根金鑰之後](/docs/services/hs-crypto/create-root-keys.html)，即可對下列端點發出 `POST` 呼叫來替換金鑰。
 
@@ -109,7 +107,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rota
           <p>若要替換 {{site.data.keyword.hscrypto}} 最初產生的金鑰，請省略 <code>payload</code> 屬性並傳遞空的要求實體內文。若要替換匯入的金鑰，請提供符合下列需求的金鑰資料：</p>
           <p>
             <ul>
-              <li>金鑰必須是 256、384 或 512 位元。</li>
+              <li>金鑰必須是 128、192 或 256 位元。</li>
               <li>必須使用 base64 編碼來編碼資料位元組（例如 32 位元組適用於 256 位元）。</li>
             </ul>
           </p>
