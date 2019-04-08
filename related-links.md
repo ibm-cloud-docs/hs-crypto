@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-29"
 
 Keywords: links, Hyper Protect Crypto Services, reference
 
@@ -34,6 +34,7 @@ Additional resources to help you learn about managing encryption with {{site.dat
 ## Blogs
 {: #blogs}
 
+- [IBM Cloud Hyper Protect Crypto Services is Now Available on IBM Public Cloud ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2019/03/ibm-cloud-hyper-protect-crypto-services-is-now-available-on-ibm-public-cloud/){: new_window}
 - [Announcing IBM Cloud Hyper Protect Crypto Services – BETA ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2019/01/announcing-ibm-cloud-hyper-protect-crypto-services-beta/){: new_window}
 - [IBM Unveils New Offerings for Faster and More Secured Path to Hybrid Cloud ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://newsroom.ibm.com/2019-02-12-IBM-Unveils-New-Offerings-for-Faster-and-More-Secured-Path-to-Hybrid-Cloud){: new_window}
 - [The Best of IBM Z and LinuxONE in the public and private cloud ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/systems/the-best-of-ibm-z-and-linuxone-in-the-public-and-private-cloud/){: new_window}

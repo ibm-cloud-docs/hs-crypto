@@ -18,7 +18,7 @@ subcollection: hs-crypto
 {:tip: .tip}
 {:important: .important}
 
-# Accessing {{site.data.keyword.keymanagementserviceshort}} CLI on a {{site.data.keyword.hscrypto}} instance
+# Accessing {{site.data.keyword.keymanagementserviceshort}} CLI through a {{site.data.keyword.hscrypto}} instance
 {: #set-up-cli}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is integrated with {{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in, so that you can use the {{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in to create, import, and manage encryption root keys and standard keys.

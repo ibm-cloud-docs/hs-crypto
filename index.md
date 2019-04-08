@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-03-29"
 
-Keywords: dedicated key management service, IBM Key, Own Keys
+Keywords: dedicated key management service, IBM Key, Key storage
 
 subcollection: hs-crypto
 
