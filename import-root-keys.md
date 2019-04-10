@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-10"
 
 Keywords: root keys, import keys, symmetric key, Hyper Protect Crypto Services GUI
 
@@ -28,8 +28,7 @@ Root keys are symmetric key-wrapping keys that are used to protect the security 
 ## Importing root keys with the GUI
 {: #import-root-key-gui}
 
-[After you create an instance of the service](/docs/services/
-hs-crypto/provision.html), complete the following steps to add your existing root key with the {{site.data.keyword.hscrypto}} GUI.
+[After you create an instance of the service](/docs/services/hs-crypto/provision.html), complete the following steps to add your existing root key with the {{site.data.keyword.hscrypto}} GUI.
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/){: new_window}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
@@ -52,7 +51,7 @@ hs-crypto/provision.html), complete the following steps to add your existing roo
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The <a href="/docs/services/key-protect/concepts/envelope-encryption.html#key-types">type of key</a> that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Root key</b>.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Root key</b>.</td>
       </tr>
       <tr>
         <td>Key material</td>

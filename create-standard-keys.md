@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-10"
 
 Keywords: standard keys, standard encryption key, creating standard keys, create standard keys
 
@@ -48,7 +48,7 @@ You can create a standard encryption key with the {{site.data.keyword.cloud}} {{
       </tr>
       <tr></tr>
         <td>Key type</td>
-        <td>The <a href="/docs/services/key-protect/concepts/envelope-encryption.html#key-types">type of key</a> that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Standard key</b>.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Standard key</b>.</td>
       </tr>
       <caption style="caption-side:bottom;">Table 1. Describes the <b>Generate new key</b> settings</caption>
     </table>

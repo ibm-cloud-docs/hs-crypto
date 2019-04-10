@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-10"
 
 Keywords: dedicated key management service, IBM Key, Key storage
 
@@ -70,7 +70,7 @@ Complete the following steps to create your first cryptographic key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The <a href="/docs/services/key-protect/concepts/envelope-encryption.html#key-types">type of key</a> that you would like to manage in {{site.data.keyword.hscrypto}}.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}.</td>
       </tr>
       <caption style="caption-side:bottom;">Table 1. Description of the <b>Create a key</b> settings</caption>
     </table>
@@ -105,7 +105,7 @@ Complete the following steps to add an existing key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The <a href="/docs/services/key-protect/concepts/envelope-encryption.html#key-types">type of key</a> that you would like to manage in {{site.data.keyword.hscrypto}}.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}.</td>
       </tr>
       <tr>
         <td>Key material</td>

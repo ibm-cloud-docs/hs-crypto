@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-10"
 
 Keywords: root keys, create root keys, Hyper Protect Crypto Services GUI, symmetric key
 
@@ -50,7 +50,7 @@ Root keys are symmetric key-wrapping keys that are used to protect the security 
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The <a href="/docs/services/key-protect/concepts/envelope-encryption.html#key-types">type of key</a> that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Root key</b>.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Root key</b>.</td>
       </tr>
       <caption style="caption-side:bottom;">Table 1. Describes the <b>Generate new key</b> settings</caption>
     </table>

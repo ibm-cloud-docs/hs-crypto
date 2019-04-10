@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-10"
 
 Keywords: standard keys, import keys, encryption keys, Hyper Protect Crypto Services GUI
 
@@ -48,7 +48,7 @@ You can add your existing encryption keys with the {{site.data.keyword.hscrypto}
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The <a href="/docs/services/key-protect/concepts/envelope-encryption.html#key-types">type of key</a> that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Standard key</b>.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Standard key</b>.</td>
       </tr>
       <tr>
         <td>Key material</td>
