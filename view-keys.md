@@ -62,7 +62,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
       </tr>
       <tr>
         <td>Type</td>
-        <td>The [key type](/docs/services/key-protect/concepts/envelope-encryption.html#key-types) that describes your key's designated purpose within the service.</td>
+        <td>The key type that describes your key's designated purpose within the service.</td>
       </tr>
       <caption style="caption-side:bottom;">Table 1. Describes the <b>Keys</b> table</caption>
     </table>
