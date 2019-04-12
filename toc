@@ -9,7 +9,7 @@ IBM Cloud Hyper Protect Crypto Services
     Getting started
         index.md
         get_started_hsm.md
-        [Video: Getting started with IBM Cloud Hyper Protect Crypto Services](https://youtu.be/QAhr46qJBVo)
+        [Video: Getting started with IBM Cloud Hyper Protect Crypto Services](https://youtu.be/vMz5K8rc00k)
 
     {: .topicgroup}
     About IBM Cloud Hyper Protect Crypto Services
