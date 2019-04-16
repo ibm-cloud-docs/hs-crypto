@@ -30,7 +30,6 @@ IBM Cloud Hyper Protect Crypto Services
     {: .topicgroup}
     管理访问权
         manage-access.md
-        manage-access-api.md
 
     {: .topicgroup}
     创建根密钥和标准密钥

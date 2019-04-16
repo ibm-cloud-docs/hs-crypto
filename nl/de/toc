@@ -30,7 +30,6 @@ IBM Cloud Hyper Protect Crypto Services
     {: .topicgroup}
     Zugriff verwalten
         manage-access.md
-        manage-access-api.md
 
     {: .topicgroup}
     Root- und Standardschlüssel erstellen

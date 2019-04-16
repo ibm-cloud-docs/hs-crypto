@@ -30,7 +30,6 @@ IBM Cloud Hyper Protect Crypto Services
     {: .topicgroup}
     Gerenciando o acesso
         manage-access.md
-        manage-access-api.md
 
     {: .topicgroup}
     Criando chaves raiz e chaves padrão

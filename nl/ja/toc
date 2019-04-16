@@ -30,7 +30,6 @@ IBM Cloud Hyper Protect Crypto Services
     {: .topicgroup}
     アクセス権限の管理
         manage-access.md
-        manage-access-api.md
 
     {: .topicgroup}
     ルート鍵と標準鍵の作成
