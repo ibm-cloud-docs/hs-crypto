@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-04-19"
 
 Keywords: key storage, HSM, hardware security module
 
@@ -62,7 +62,7 @@ It might take 20-30 minutes for you to complete this task.
 1. Run the following command to make sure that you are logged in to the correct API endpoint:
 
   ```
-  ibmcloud api https://api.ng.bluemix.net
+  ibmcloud target -r us-south
   ```
   {: pre}
 

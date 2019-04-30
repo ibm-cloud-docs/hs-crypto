@@ -17,7 +17,8 @@ IBM Cloud Hyper Protect Crypto Services
         use_case.md
         service_instance_concepts.md
         keys_intro.md
-
+        
+    integrate-services.md
     whats_new.md
     {: .navgroup-end}
 
