@@ -34,7 +34,7 @@ Before you start, perform the following steps:
 2. Run the following command to make sure that you are logged in to the correct API endpoint:
 
   ```
-  ibmcloud api https://api.ng.bluemix.net
+  ibmcloud target -r us-south
   ```
   {: pre}
 
