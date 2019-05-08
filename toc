@@ -17,7 +17,7 @@ IBM Cloud Hyper Protect Crypto Services
         use_case.md
         service_instance_concepts.md
         keys_intro.md
-        
+
     integrate-services.md
     whats_new.md
     {: .navgroup-end}
@@ -53,7 +53,7 @@ IBM Cloud Hyper Protect Crypto Services
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Hyper Protect Crypto API reference](https://{DomainName}/apidocs/hs-crypto)
+    [Hyper Protect Crypto Services API reference](https://{DomainName}/apidocs/hs-crypto)
     regions.md
     at-events.md
     ha-dr.md

@@ -69,7 +69,7 @@ It might take 20-30 minutes for you to complete this task.
 2. Install the {{site.data.keyword.keymanagementservicefull}} plug-in. For detailed steps, see [Setting up the CLI](/docs/services/hs-crypto/set-up-cli.html). When you log in to the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview), you're notified when updates are available. Be sure to keep your {{site.data.keyword.keymanagementservicefull}} plug-in up-to-date so that you can use the commands and flags that are available for the Trusted Key Entry CLI plug-in.
 {: #initialize-crypto-prerequisites2}
 
-3. Install the latest latest Trusted Key Entry plug-in with the following command:
+3. Install the latest Trusted Key Entry plug-in with the following command:
 {: #initialize-crypto-prerequisites3}
 
   ```
