@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-09"
 
 Keywords: frequently asked questions, critical security parameters, cryptographic module, Security Level
 
@@ -159,7 +159,7 @@ Before you delete a key, ensure that you no longer require access to any data th
 ## Where can I find the detailed pricing information?
 {: #pricing_info}
 
-Pricing can be found on the [{{site.data.keyword.hscrypto}} catalog page ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services?cm_mc_uid=31713117745615537421882&cm_mc_sid_50200000=37117111555483426683&cm_mc_sid_52640000=50865531555483426686){:new_window}, or on the **Pricing** tab of the [{{site.data.keyword.hscrypto}} home page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/hyper-protect-crypto){: new_window}.
+Pricing can be found in the IBM Catalog -  [{{site.data.keyword.hscrypto}} ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){:new_window}.
 
 ## Is there a pricing example I can refer to?
 {: #pricing_example}
@@ -228,7 +228,7 @@ Before you delete a key, ensure that you no longer require access to any data th
 ### Where can I find the detailed pricing information?
 {: #pricing_info}
 
-You can refer to the **Pricing** tab on the [{{site.data.keyword.hscrypto}} home page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/hyper-protect-crypto){: new_window} for details.
+You can find Pricing in the IBM Catalog - [{{site.data.keyword.hscrypto}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){: new_window}.
 
 ### Is there a pricing example I can refer to?
 {: #pricing_example}
