@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-05-10"
 
 Keywords: frequently asked questions, critical security parameters, cryptographic module, Security Level
 
@@ -113,7 +113,7 @@ It’s ultimately based upon the level of control and security your business req
 </tr>
 </thead>
 <tbody><tr><td rowspan="2">Key management</td>
-<td><p>Multi-tenant key management service with key vaulting provided by IBM controlled, FIPS 140-2 Level 3 compliant HSMs.</p>
+<td><p>Multi-tenant key management service with key vaulting provided by IBM controlled, FIPS 140-2 Level 2 compliant HSMs.</p>
 
 <p>Provides Bring-Your-Own-Key (BYOK) support for you to use your own keys for data protection.</p>
 </td>
@@ -135,7 +135,7 @@ It’s ultimately based upon the level of control and security your business req
 ## How is {{site.data.keyword.hscrypto}} different from {{site.data.keyword.keymanagementserviceshort}}?
 {: #differentiators}
 
-{{site.data.keyword.keymanagementservicefull}} is a multi-tenant key management service with key vaulting provided by FIPS 140-2 Level 3 IBM-managed HSMs.
+{{site.data.keyword.keymanagementservicefull}} is a multi-tenant key management service with key vaulting provided by FIPS 140-2 Level 2 IBM-managed HSMs.
 
 {{site.data.keyword.hscrypto}} is a single-tenant service designed for you to look for complete control of your data encryption keys and cloud HSMs that protect these keys. Additionally, this service also supports industry standards such as Public-Key Cryptography Standards #11 (PKCS #11) for cryptographic services like digital signing and Secure Sockets Layer (SSL) offloading.
 
