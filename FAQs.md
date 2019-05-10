@@ -25,24 +25,36 @@ You can use the following FAQs to help you with {{site.data.keyword.cloud}} {{si
 ## What's {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?
 {: #what-is-hpcs}
 
-{{site.data.keyword.cloud_notm}}  {{site.data.keyword.hscrypto}} is a dedicated key management and cloud HSM service that provides:
+{{site.data.keyword.cloud_notm}}  {{site.data.keyword.hscrypto}} is a dedicated key management and cloud Hardware Security Module (HSM) service that provides:
 
 * A dedicated key management service with Bring Your Own Key data-at-rest encryption with customer-managed keys in IBM Cloud’s data and storage services.
 * A cloud HSM for cryptographic operations utilizing FIPS 140-2 Level 4 certified HSM Hardware.
 
+## What is key management?
+{: #what-key-management}
+
+{{site.data.keyword.hscrypto}} integrates with [{{site.data.keyword.keymanagementservicefull}} ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/catalog/services/key-protect){:new_window} for {{site.data.keyword.cloud_notm}} APIs to generate and encrypt keys. The Keep Your Own Keys function is also enabled by {{site.data.keyword.hscrypto}} to provide access to cryptographic hardware that is FIPS 140-2 Level 4 certified technology, the highest level attainable certification level. {{site.data.keyword.hscrypto}} offers network addressable HSMs.
+
+## What is Hardware Security Module (HSM)?
+{: #what-is-hsm}
+
+A Hardware Security Module (HSM) provides secure key storage and cryptographic operations within a tamper-resistant hardware device for sensitive data. HSMs are used to provision cryptographic keys and are designed to securely store cryptographic key material and use the key material without exposing it outside the cryptographic boundary of the hardware.
+
 ## How do I know if {{site.data.keyword.hscrypto}} is right for my company?
 {: #choose-hs-crypto}
 
-With {{site.data.keyword.hscrypto}} you can ensure regulatory compliance and strengthen data security by protecting data with encryption keys in IBM’s fully managed, dedicated key management system and cloud HSM service that supports Keep Your Own Key. Keep your own  keys for cloud data encryption protected by a dedicated cloud HSM.
+If you are concerned on data security and compliance in the cloud, you are able to maintain complete control over data encryption and signature keys in a cloud consumable HSM with industry-leading security for cloud data and digital assets, regulatory compliance support through data encryption and controls on privileged access. {{site.data.keyword.cloud_notm}} administrators have NO access to the keys.
 
-If you are concerned on data security and compliance in the cloud, you are able to maintain complete control over data encryption and signature keys in a cloud consumable HSM with industry-leading security for cloud data and digital assets, regulatory compliance support through data encryption and controls on privileged access. {{site.data.keyword.cloud_notm}} administrators have no access to the keys.
+With {{site.data.keyword.hscrypto}} you can ensure regulatory compliance and strengthen data security by protecting data with encryption keys in IBM’s fully managed, dedicated key management system and cloud HSM service that supports Keep Your Own Key. Keep your own  keys for cloud data encryption protected by a dedicated cloud HSM. If you are running regulation intensive applications or applications with sensitive data, this solution is right for you.
 
 Key features are:
 
 * Full control of the entire key hierarchy including the HSM master keys
+* Tamper-proof hardware device for sensitive data
 * Industry-leading security for cloud data and digital  assets
 * Reduced data compromise risk because of in-built protection against privileged access threats
 * Regulatory compliance through data encryption and controls on privileged  access
+* Keep Your Own Keys (KYOK). Bring your own administrator, they are the only ones who can see your data.
 
 ## Why is {{site.data.keyword.hscrypto}} better than other cloud HSMs or key management services?
 {: #hs-crypto-advantages}
@@ -70,35 +82,25 @@ The Federal Information Processing Standard (FIPS) Publication 140-2 is a U.S. g
 
   A cryptographic module is required to either include special environmental protection features designed to detect fluctuations and delete CSPs, or to undergo environmental failure testing to ensure that the module will not be affected by fluctuations outside of the normal operating range in a manner that can compromise the security of the module. At this security level, the physical security mechanisms provide a complete envelope of protection around the cryptographic module with the intent of detecting and responding to all unauthorized attempts at physical access. Penetration of the cryptographic module enclosure from any direction has a very high probability of being detected, resulting in the immediate zeroization of all plaintext CSPs.
 
-  {{site.data.keyword.hscrypto}} is the only cloud HSM in the public cloud market built on an HSM designed to meet FIPS 140-2 Level 4 certification requirements. The certification was achieved on 3/20/2019 and is listed on the [Cryptographic Module Validation Pgram (CVMP) Validated Modules List ![External link icon](image/external_link.svg "External link icon")](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules){:new_window}.
+  {{site.data.keyword.hscrypto}} is the only cloud HSM in the public cloud market built on an HSM designed to meet FIPS 140-2 Level 4 certification requirements. The certification was achieved on 3/20/2019 and is listed on the [Cryptographic Module Validation Program (CVMP) Validated Modules List ![External link icon](image/external_link.svg "External link icon")](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules){:new_window}.
 
 ## What crypto card does {{site.data.keyword.hscrypto}} use?
 {: #crypto-card}
 
-{{site.data.keyword.hscrypto}} use the IBM 4768 crypto card, also referred to as Crypto Express 6S (CEX6S). IBM CEX6S is designed to be certified at FIPS 140-2 Level 4, the highest level of certification achievable for commercial cryptographic devices. The certification was achieved on 3/20/2019 and is listed on the [Cryptographic Module Validation Pgram (CVMP) Validated Modules List ![External link icon](image/external_link.svg "External link icon")](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules){:new_window}.
+{{site.data.keyword.hscrypto}} use the IBM 4768 crypto card, also referred to as Crypto Express 6S (CEX6S). IBM CEX6S is designed to be certified at FIPS 140-2 Level 4, the highest level of certification achievable for commercial cryptographic devices. The certification was achieved on 3/20/2019 and is listed on the [Cryptographic Module Validation Program (CVMP) Validated Modules List ![External link icon](image/external_link.svg "External link icon")](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules){:new_window}.
 
 For  more information, see the [IBM CryptoCards page ![External link icon](image/external_link.svg "External link icon")](https://www.ibm.com/security/cryptocards/cryptonews){:new_window} and [IBM CryptoCards Overview ![External link icon](image/external_link.svg "External link icon")](https://www.ibm.com/security/cryptocards/pciecc3/overview){:new_window}.
-
-## What is Hardware Security Module?
-{: #what-is-hsm}
-
-A Hardware Security Module (HSM) provides secure key storage and cryptographic operations within a tamper-resistant hardware device for sensitive data. HSMs are used to provision cryptographic keys and are designed to securely store cryptographic key material and use the key material without exposing it outside the cryptographic boundary of the hardware.
 
 ## How is this service different from {{site.data.keyword.cloud_notm}} HSM?
 {: #differentiators-cloud-hsm}
 
 IBM has an IaaS {{site.data.keyword.cloud_notm}} HSM service, which is different from the {{site.data.keyword.hscrypto}}. {{site.data.keyword.cloud_notm}} HSM is FIPS 140-2 Level 3 compliant.
-{{site.data.keyword.hscrypto}} is a managed HSM service where no special skills are needed to manage the HSM other than loading of the keys. High availability, backup (currently is backed up daily by the service and is not triggered by users), and scaling can all be done using cloud APIs. This is also the only cloud HSM built on FIPS 140-2 Level 4 certified hardware.
+{{site.data.keyword.hscrypto}} is a managed HSM service where no special skills are needed to manage the HSM other than loading of the keys. High availability, backup (currently is backed up daily by the service and is not triggered by users), and scaling can all be done using cloud APIs. {{site.data.keyword.hscrypto}} is the only cloud HSM in the market built on FIPS 140-2 Level 4 certified hardware.
 
 ## I have workloads running in a data center where {{site.data.keyword.hscrypto}} is not available. Can I still subscribe to this service?
 {: #data-center-question}
 
 Yes. {{site.data.keyword.hscrypto}} can be accessed remotely worldwide for key management and cloud HSM capabilities.
-
-## What is key management?
-{: #what-key-management}
-
-{{site.data.keyword.hscrypto}} integrates with [{{site.data.keyword.keymanagementservicefull}} ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/catalog/services/key-protect){:new_window} for {{site.data.keyword.cloud_notm}} APIs to generate and encrypt keys. The Keep Your Own Keys function is also enabled by {{site.data.keyword.hscrypto}} to provide access to cryptographic hardware that is FIPS 140-2 Level 4 certified technology, the highest level attainable certification level. {{site.data.keyword.hscrypto}} offers network addressable HSMs.
 
 ## Can {{site.data.keyword.hscrypto}} be used in combination with {{site.data.keyword.keymanagementserviceshort}} service?
 {: #combine-with-Key-Protect}
