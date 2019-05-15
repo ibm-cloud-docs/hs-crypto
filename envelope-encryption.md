@@ -22,8 +22,6 @@ subcollection: hs-crypto
 # Protecting data with envelope encryption
 {: #envelope-encryption}
 
-*** Content is still under development and is not yet complete.***
-
 Envelope encryption is the practice of encrypting data with a data encryption key (DEK) and then encrypting the DEK with a root key that you can fully manage.
 {: shortdesc}
 
