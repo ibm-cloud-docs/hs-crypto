@@ -81,7 +81,7 @@ subcollection: hs-crypto
 ## Understanding your integration
 {: #understand-integration}
 
-When you integrate a supported service with {{site.data.keyword.hscrypto}}, you enable envelope encryption<!--[envelope encryption](/docs/services/hs-crypto/envelope-encryption.html)--> for that service. This integration allows you to use a root key that you store in {{site.data.keyword.hscrypto}} to wrap the data encryption keys that encrypt your data at rest.
+When you integrate a supported service with {{site.data.keyword.hscrypto}}, you enable [envelope encryption](/docs/services/hs-crypto/envelope-encryption.html) for that service. This integration allows you to use a root key that you store in {{site.data.keyword.hscrypto}} to wrap the data encryption keys that encrypt your data at rest.
 
 For example, you can create a root key, manage the key in {{site.data.keyword.hscrypto}}, and use the root key to protect the data that is stored across different cloud services.
 
@@ -116,7 +116,7 @@ To find out more about programmatically managing your keys in {{site.data.keywor
 ## Integrating a supported service
 {: #grant-access}
 
-To add an integration, create an authorization between services by using the {{site.data.keyword.iamlong}} dashboard. Authorizations enable service to service access policies, so you can associate a resource in your cloud data service with a root key<!--[root key](/docs/services/hs-crypto/envelope-encryption?topic=hs-crypto-envelope-encryption#key-types)--> that you manage in {{site.data.keyword.hscrypto}}.
+To add an integration, create an authorization between services by using the {{site.data.keyword.iamlong}} dashboard. Authorizations enable service to service access policies, so you can associate a resource in your cloud data service with a [root key](/docs/services/hs-crypto/envelope-encryption?topic=hs-crypto-envelope-encryption#key-types) that you manage in {{site.data.keyword.hscrypto}}.
 
 Be sure to provision both services in the same region before you create an authorization. To learn more about service authorizations, see [Granting access between services ![External link icon](../../../icons/launch-glyph.svg "External link icon")](/docs/iam?topic=iam-serviceauth){: new_window}.
 {: note}
