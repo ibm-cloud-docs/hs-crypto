@@ -22,7 +22,7 @@ subcollection: hs-crypto
 You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to create root keys by using the {{site.data.keyword.hscrypto}} GUI, or programmatically with the {{site.data.keyword.hscrypto}} API.
 {: shortdesc}
 
-Root keys are symmetric key-wrapping keys that are used to protect the security of encrypted data in the cloud. For more information about root keys, see [Envelope encryption](/docs/services/key-protect/concepts/envelope-encryption.html).
+Root keys are symmetric key-wrapping keys that are used to protect the security of encrypted data in the cloud. For more information about root keys, see [Envelope encryption](/docs/services/hs-crypto/envelope-encryption.html).
 
 ## Creating root keys with the GUI
 {: #root-key-gui}
@@ -50,7 +50,7 @@ Root keys are symmetric key-wrapping keys that are used to protect the security 
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Root key</b>.</td>
+        <td>The <a href="/docs/services/hs-crypto/envelope-encryption.html#key-types">type of key</a> that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Root key</b>.</td>
       </tr>
       <caption style="caption-side:bottom;">Table 1. Describes the <b>Generate new key</b> settings</caption>
     </table>

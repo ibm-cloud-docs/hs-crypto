@@ -26,7 +26,7 @@ subcollection: hs-crypto
 ## Root Keys
 {: #introduce-root-keys}
 
-*Root keys* are symmetric key-wrapping keys that you fully manage in {{site.data.keyword.hscrypto}}. You can use a root key to protect other cryptographic keys with advanced encryption. To learn more, see <a href="/docs/services/key-protect/concepts/envelope-encryption.html">Envelope encryption</a>.
+*Root keys* are symmetric key-wrapping keys that you fully manage in {{site.data.keyword.hscrypto}}. You can use a root key to protect other cryptographic keys with advanced encryption. To learn more, see <a href="/docs/services/hs-crypto/envelope-encryption.html">Envelope encryption</a>.
 
 You can manage root keys by following steps in [Manage your keys](/docs/services/hs-crypto/index.html#manage-keys).
 

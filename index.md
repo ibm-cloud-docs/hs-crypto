@@ -123,8 +123,8 @@ From the {{site.data.keyword.hscrypto}} dashboard, you can inspect the general c
 
 Now you can use your keys to encode your apps and services. If you added a root key to the service, you might want to learn more about using the root key to protect the keys that encrypt your at-rest data. Check out [Wrapping keys](/docs/services/hs-crypto/wrap-keys.html) to get started.
 
-- To find out more about managing and protecting your encryption keys with a root key, check out [Envelope encryption](/docs/services/key-protect/concepts/envelope-encryption.html).
-<!-- - To find out more about integrating the {{site.data.keyword.hscrypto}} service with other cloud data solutions, [check out the Integrations doc](/docs/services/key-protect/integrations/integrate-services.html). -->
+- To find out more about managing and protecting your encryption keys with a root key, check out [Envelope encryption](/docs/services/hs-crypto/envelope-encryption.html).
+- To find out more about integrating the {{site.data.keyword.hscrypto}} service with other cloud data solutions, [check out the Integrations doc](/docs/services/hs-crypto/integrate-services.html).
 - To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
 
 <!-- Complete the following steps to provision {{site.data.keyword.hscrypto}}:

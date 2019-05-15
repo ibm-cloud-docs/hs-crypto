@@ -26,7 +26,7 @@ You can manage and protect your encryption keys with a root key by using the {{s
 When you wrap a data encryption key (DEK) with a root key, {{site.data.keyword.hscrypto}}
  combines the strength of multiple algorithms to protect the privacy and the integrity of your encrypted data.  
 
-To learn how key wrapping helps you control the security of at-rest data in the cloud, see [Envelope encryption](/docs/services/key-protect/concepts/envelope-encryption.html).
+To learn how key wrapping helps you control the security of at-rest data in the cloud, see [Envelope encryption](/docs/services/hs-crypto/envelope-encryption.html).
 
 ## Wrapping keys by using the API
 {: #wrap-keys-api}

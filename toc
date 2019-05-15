@@ -16,17 +16,17 @@ IBM Cloud Hyper Protect Crypto Services
         overview.md
         use_case.md
         service_instance_concepts.md
+        envelope-encryption.md
         keys_intro.md
-
     integrate-services.md
     whats_new.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     provision.md
+    initialize_hsm.md
     access-api.md
     set-up-cli.md
-    initialize_hsm.md
     transition-keys.md
 
     {: .topicgroup}

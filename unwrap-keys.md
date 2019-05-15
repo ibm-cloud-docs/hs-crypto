@@ -23,7 +23,7 @@ subcollection: hs-crypto
 You can unwrap a data encryption key (DEK) to access its contents by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} API, if you are a privileged user. Unwrapping a DEK decrypts and checks the integrity of its contents, returning the original key material to your {{site.data.keyword.cloud_notm}} data service.
 {: shortdesc}
 
-To learn how key wrapping helps you control the security of at-rest data in the cloud, see [Envelope encryption](/docs/services/key-protect/concepts/envelope-encryption.html).
+To learn how key wrapping helps you control the security of at-rest data in the cloud, see [Envelope encryption](/docs/services/hs-crypto/envelope-encryption.html).
 
 ## Unwrapping keys by using the API
 {: #unwrap-key-api}
