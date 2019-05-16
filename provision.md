@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-21"
+lastupdated: "2019-05-16"
 
 Keywords: provision, instance of Hyper Protect Crypto Services
 
@@ -37,7 +37,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
 5. **Optional**: In the **Tags** field, add tags to organize your resources. If your tags are billing related, consider writing tags as key:value pairs to help group related tags, such as `costctr:124`. For more information on tags, see [Working with tags](/docs/resources?topic=resources-tag#tag).
 6. Under **Number of crypto units**, select the number of  crypto units that meets your performance needs.
 
-  A service instance supports up to six crypto units. In a production environment, it is recommended to select at least two crypto units to enable high availability. If you select three or more crypto units, these crypto units are distributed among three supported availability zones in the selected region.
+  In a production environment, it is recommended to select at least two crypto units to enable high availability. If you select three or more crypto units, these crypto units are distributed among three supported availability zones in the selected region.
   {: important}
 7. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 
