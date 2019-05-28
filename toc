@@ -18,7 +18,7 @@ IBM Cloud Hyper Protect Crypto Services
         service_instance_concepts.md
         envelope-encryption.md
         keys_intro.md
-        
+
     integrate-services.md
     whats_new.md
     {: .navgroup-end}
@@ -55,6 +55,7 @@ IBM Cloud Hyper Protect Crypto Services
 
     {: .navgroup id="reference"}
     [Hyper Protect Crypto Services API reference](https://{DomainName}/apidocs/hs-crypto)
+    /hs-crypto-cli-plugin/hs-crypto-tke_cli_plugin
     regions.md
     at-events.md
     ha-dr.md
