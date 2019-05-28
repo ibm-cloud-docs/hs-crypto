@@ -31,7 +31,7 @@ New as of: 2019-03-29
 
 As of March 29, 2019, provisioning new Hyper Protect Crypto Services Beta instances will no longer be possible. Existing instances will have support until the End of Beta Support Date (April 30, 2019).
 
-See [Migrating keys from a Beta service instance](/docs/services/hs-crypto/transition-keys.html) for information on migrating keys to a production service instance.
+<!-- See [Migrating keys from a Beta service instance](/docs/services/hs-crypto/transition-keys.html) for information on migrating keys to a production service instance. -->
 
 For more information about the {{site.data.keyword.hscrypto}} offering, see the [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} home page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/hyper-protect-crypto){:new_window}.
 
