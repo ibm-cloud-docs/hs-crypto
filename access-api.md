@@ -30,13 +30,13 @@ To work with the API, you need to generate your service and authentication crede
 
 You can authenticate with {{site.data.keyword.hscrypto}} by retrieving an access token from {{site.data.keyword.iamshort}}. With a [service ID](/docs/iam/serviceid.html#serviceids), you can work with the {{site.data.keyword.hscrypto}} API on behalf of your service or application on or outside {{site.data.keyword.cloud_notm}}, without needing to share your personal user credentials.  
 
-<!-- If you want to authenticate with your user credentials, you can retrieve your token by running `ibmcloud iam oauth-tokens` in the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview).
-{: tip} -->
+If you want to authenticate with your user credentials, you can retrieve your token by running `ibmcloud iam oauth-tokens` in the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview).
+{: tip}
 
 Complete the following steps to retrieve an access token:
 
-1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** &gt; **Security** &gt; **Identity and Access** &gt; **Service IDs**. Follow the process to [create a service ID](/docs/iam/serviceid.html#creating-a-service-id).
-2. Use the **Actions** menu to [define an access policy for your new service ID](/docs/iam/serviceidaccess.html).
+1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** &gt; **Access (IAM)** &gt; **Service IDs**. Follow the process to [create a service ID](/docs/iam/serviceid.html#creating-a-service-id).
+2. Use the **Access policies** section to [define an access policy for your new service ID](/docs/iam/serviceidaccess.html).
 
     For more information about managing access for your {{site.data.keyword.hscrypto}} resources, see [Roles and permissions](/docs/services/hs-crypto/manage-access.html#roles).
 3. Use the **API keys** section to [create an API key to associate with the service ID](/docs/iam/serviceid_keys.html#serviceidapikeys). Save your API key by downloading it to a secure location.
