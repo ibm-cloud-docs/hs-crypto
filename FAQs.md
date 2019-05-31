@@ -141,11 +141,6 @@ It’s ultimately based upon the level of control and security your business req
 
 {{site.data.keyword.hscrypto}} is a single-tenant service designed for you to look for complete control of your data encryption keys and cloud HSMs that protect these keys. Additionally, this service also supports industry standards such as Public-Key Cryptography Standards #11 (PKCS #11) for cryptographic services like digital signing and Secure Sockets Layer (SSL) offloading.
 
-## How long can a key name be?
-{: #key-name-length}
-
-You can use a key name that is up to 50 characters in length.
-
 ## Can I use language characters as part of the key name?
 {: #key-name-rules}
 
