@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-25"
+lastupdated: "2019-06-28"
 
 Keywords: release note, new
 
@@ -26,25 +26,6 @@ Stay up-to-date with the new features that are available for {{site.data.keyword
 ## June 2019
 {: #June-2019}
 
-<!--### Added: {{site.data.keyword.hscrypto}} Cloud HSM now supports cryptographic operations through GREP11 APIs
-{: #added-EP11}
-New as of: 2019-06-26
-
-The managed cloud Hardware Security Module (HSM) supports Enterprise Public-Key Cryptography Standards (PKCS) #11, so your applications can integrate cryptographic operations like digital signing and validation via Enterprise PKCS#11 (EP11) API. The EP11 library provides an interface very similar to the industry-standard PKCS #11 API.
-
-{{site.data.keyword.hscrypto}} provides a set of Enterprise PKCS #11 (EP11) APIs over gRPC calls (also referred to as *GREP11*), with which, all the Crypto functions are executed in HSM on cloud. GREP11 is designed to be a stateless interface for cloud programs. You can access Hyper Protect Crypto Services with several popular programming languages such as Golang, Java, and Swift.
-
-For more information on the GREP11 API, see [EP11 introduction](/docs/services/hs-crypto/hs-crypto?topic=hs-crypto-enterprise_PKCS11_overview) and [GREP11 API reference](/docs/services/hs-crypto/grep11-api-ref.html).
-
-<!-- ### Added: {{site.data.keyword.hscrypto}} adds beta support for transport keys
-New as of: 2019-06-26
-
-Enable the secure import of encryption keys to the cloud by creating transport encryption keys for your {{site.data.keyword.hscrypto}}.
-
-For more information, see [Bringing your encryption keys to the cloud](/docs/services/hs-crypto?topic=hs-crypto-importing-keys).
-
-Transport keys are currently a beta feature. Beta features can change at any time, and future updates might introduce changes that are incompatible with the latest version.
-{: important}-->
 ### Added: {{site.data.keyword.hscrypto}} expands into Sydney region
 {: #added-sydney-region}
 New as of: 2019-06-28
@@ -52,14 +33,6 @@ New as of: 2019-06-28
 You can now create {{site.data.keyword.hscrypto}} resources in the Sydney region.
 
 For more information, see [Regions and locations](/docs/services/hs-crypto?topic=hs-crypto-regions).
-<!--
-### Added: {{site.data.keyword.cloud_notm}} private network support
-{: #added-private-endpoint}
-New as of: 2019-06-26
-
-You can now create and manage {{site.data.keyword.hscrypto}} resources through the {{site.data.keyword.cloud_notm}} private network.
-
-For more information on the configuration needed, see [Connecting to {{site.data.keyword.hscrypto}} on the {{site.data.keyword.cloud_notm}} private network](/docs/services/hs-crypto?topic=hs-crypto-private-endpoints).-->
 
 ## March 2019
 {: #March-2019}

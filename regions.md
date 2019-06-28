@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-25"
+lastupdated: "2019-06-28"
 
 Keywords: regional service endpoint, Hyper Protect Crypto Services resources, API endpoints
 
