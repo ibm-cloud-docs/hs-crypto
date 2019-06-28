@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-06-25"
 
 Keywords: regional service endpoint, Hyper Protect Crypto Services resources, API endpoints
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
+{:external: target="_blank" .external}
 
 # Regions and locations
 {: #regions}
@@ -38,8 +39,9 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
     <tr>
         <th>Region name</th>
         <th>Geographic location</th>
-        <th>Service API endpoint</th>
-    </tr>
+        <th>Key management service API endpoint</th>
+<!--        <th>GREP11 service API endpoint</th>
+    </tr> -->
   <!--
     <tr>
         <td>Germany</td>
@@ -48,13 +50,18 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
             <code></code>
         </td>
     </tr>
+    -->
     <tr>
         <td>Sydney</td>
         <td>Sydney, Australia</td>
         <td>
-            <code></code>
+            <code>au-syd.hs-crypto.cloud.ibm.com</code>
         </td>
+<!--        <td>
+            <code>ep11.au-syd.hs-crypto.cloud.ibm.com</code>
+        </td> -->
     </tr>
+    <!--
     <tr>
         <td>United Kingdom</td>
         <td>London, England</td>
@@ -75,11 +82,11 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
         <td>
             <code>us-south.hs-crypto.cloud.ibm.com</code>
         </td>
+<!--        <td>
+            <code>ep11.us-south.hs-crypto.cloud.ibm.com</code>
+        </td> -->
     </tr>
-    <caption style="caption-side:bottom;">Table 1. Shows the available endpoint for the {{site.data.keyword.hscrypto}}} API</caption>
+    <caption style="caption-side:bottom;">Table 1. Shows the available endpoint for the {{site.data.keyword.hscrypto}} API</caption>
 </table>
-
-<!--For {{site.data.keyword.hscrypto}} service instances that exist within a Cloud Foundry org or space, use the legacy `https://ibm-key-protect.edge.bluemix.net` endpoint to interact with the {{site.data.keyword.keymanagementserviceshort}} API.
-{: tip}-->
 
 For more information about authenticating with {{site.data.keyword.hscrypto}}, see [Accessing the API](/docs/services/hs-crypto/access-api.html).
