@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-18"
+lastupdated: "2019-07-01"
 
 Keywords: user access, Cloud IAM roles, encryption keys
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
+{:external: target="_blank" .external}
 
 # Managing user access
 {: #manage-access}
@@ -89,14 +90,12 @@ The following table shows how identity and access roles map to {{site.data.keywo
   <caption style="caption-side:bottom;">Table 1. Describes how identity and access roles map to {{site.data.keyword.hscrypto}} permissions</caption>
 </table>
 
-<!-- **Note**: Cloud IAM user roles provide access at the service or service instance level. [Cloud Foundry roles](/docs/iam/cfaccess.html) are separate and define access at the organization or the space level. -->
-
-To learn more about {{site.data.keyword.iamshort}}, check out [User roles and permissions](/docs/iam/users_roles.html#userroles).
+To learn more about {{site.data.keyword.iamshort}}, check out [User roles and permissions](/docs/iam?topic=iam-userroles#userroles).
 
 ### What's next
 {: #manage-access-next}
 
 Account owners and admins can invite users and set service policies that correspond to the {{site.data.keyword.hscrypto}} actions the users can perform.
 
-- For more information about assigning user roles in the {{site.data.keyword.cloud_notm}} UI, see [Managing IAM access](/docs/iam/mngiam.html).
-- To learn about granting advanced permissions to access specific encryption keys, see [Managing access to keys](/docs/services/hs-crypto/manage-access-api.html).
+- For more information about assigning user roles in the {{site.data.keyword.cloud_notm}} UI, see [Managing IAM access](/docs/iam?topic=iam-iammanidaccser).
+- To learn about granting advanced permissions to access specific encryption keys, see [Managing access to keys](/docs/services/hs-crypto?topic=hs-crypto-manage-access-api).

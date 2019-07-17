@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-07-01"
 
 Keywords: key storage, service instance, HSM, hardware security module
 
@@ -17,6 +17,7 @@ subcollection: hs-crypto
 {:pre: .pre}
 {:important: .important}
 {:tip: .tip}
+{:external: target="_blank" .external}
 
 # Getting started with service instance initialization
 {: #get-started-hsm}
@@ -29,14 +30,16 @@ subcollection: hs-crypto
 
 Before you start, perform the following steps:
 
-1. Provision the {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} instance (service instance for short). For detailed steps, see [Provisioning {{site.data.keyword.hscrypto}}](/docs/services/hs-crypto/provision.html).
+1. Provision the {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} instance (service instance for short). For detailed steps, see [Provisioning {{site.data.keyword.hscrypto}}](/docs/services/hs-crypto?topic=hs-crypto-provision).
 
 2. Run the following command to make sure that you are logged in to the correct API endpoint:
 
   ```
-  ibmcloud target -r us-south
+  ibmcloud target -r <region>
   ```
   {: pre}
+
+  To find out the regions that {{site.data.keyword.hscrypto}} supports, see [Regions and locations](/docs/services/hs-crypto?topic=hs-crypto-regions).
 
 3. Install the latest Trusted Key Entry plug-in through {{site.data.keyword.cloud_notm}} command-line interface (CLI) with the following command:
 
@@ -45,7 +48,7 @@ Before you start, perform the following steps:
   ```
   {: pre}
 
-  To install the CLI plug-in, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html).
+  To install the CLI plug-in, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
   {: tip}
 
 4. Set the environment variable CLOUDTKEFILES to indicate the subdirectory where you want to store the key parts and signature keys
@@ -188,4 +191,4 @@ To load the master key register, one or more crypto unit administrators must be 
 ## What's next
 {: #hsm-next}
 
-Now you can start using your service instance. For details on implementing the procedure in a production environment, see [Initializing service instances to protect key storage](/docs/services/hs-crypto/initialize_hsm.html).
+Now you can start using your service instance. For details on implementing the procedure in a production environment, see [Initializing service instances to protect key storage](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-13"
+lastupdated: "2019-07-01"
 
 Keywords: root key, data encryption key, Hyper Protect Crypto Services
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
+{:external: target="_blank" .external}
 
 # Wrapping keys
 {: #wrap-keys}
@@ -26,7 +27,7 @@ You can manage and protect your encryption keys with a root key by using the {{s
 When you wrap a data encryption key (DEK) with a root key, {{site.data.keyword.hscrypto}}
  combines the strength of multiple algorithms to protect the privacy and the integrity of your encrypted data.  
 
-To learn how key wrapping helps you control the security of at-rest data in the cloud, see [Envelope encryption](/docs/services/hs-crypto/envelope-encryption.html).
+To learn how key wrapping helps you control the security of at-rest data in the cloud, see [Envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption).
 
 ## Wrapping keys by using the API
 {: #wrap-keys-api}
@@ -37,19 +38,19 @@ You can protect a specified data encryption key (DEK) with a root key that you m
 When you supply a root key for wrapping, ensure that the root key is 128, 192, or 256 bits so that the wrap call can succeed. If you create a root key in the service, {{site.data.keyword.hscrypto}}
  generates a 256-bit key from its HSMs, supported by the AES-CBC algorithm.
 
-[After you designate a root key in the service](/docs/services/hs-crypto/create-root-keys.html), you can wrap a DEK with advanced encryption by making a `POST` call to the following endpoint.
+[After you designate a root key in the service](/docs/services/hs-crypto?topic=hs-crypto-create-root-keys), you can wrap a DEK with advanced encryption by making a `POST` call to the following endpoint.
 
 ```
-https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
+https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
 ```
 {: codeblock}
 
-1. [Retrieve your service and authentication credentials to work with keys in the service.](/docs/services/hs-crypto/access-api.html)
+1. [Retrieve your service and authentication credentials to work with keys in the service.](/docs/services/hs-crypto?topic=hs-crypto-set-up-api)
 
 2. Copy the key material of the DEK that you want to manage and protect.
 
     If you have manager or writer privileges for your {{site.data.keyword.hscrypto}}
- service instance, [you can retrieve the key material for a specific key by making a `GET /v2/keys/<key_ID>` request](/docs/services/hs-crypto/view-keys.html#api).
+ service instance, [you can retrieve the key material for a specific key by making a `GET /v2/keys/<key_ID>` request](/docs/services/hs-crypto?topic=hs-crypto-view-keys#view-key-api).
 
 3. Copy the ID of the root key that you want to use for wrapping.
 
@@ -57,7 +58,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
 
     ```cURL
     curl -X POST \
-      'https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap' \
+      'https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap' \
       -H 'accept: application/vnd.ibm.kms.key_action+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
@@ -70,8 +71,6 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
     }'
     ```
     {: codeblock}
-    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
-        {: tip} -->
 
     Replace the variables in the example request according to the following table.
 
@@ -82,8 +81,8 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>The region abbreviation, such as <code>us-south</code> or <code>eu-gb</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}}
- service instance resides. For more information, see <a href="/docs/services/hs-crypto/regions.html#endpoints">Regional service endpoints</a>.</td>
+        <td>The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}}
+ service instance resides. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-regions#endpoints">Regional service endpoints</a>.</td>
       </tr>
       <tr>
         <td><varname>key_ID</varname></td>
@@ -91,12 +90,12 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
-        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto/access-api.html#retrieve-token">Retrieving an access token</a>.</td>
+        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
         <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}}
- service instance. For more information, see <a href="/docs/services/hs-crypto/access-api.html#retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+ service instance. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
       </tr>
       <tr>
         <td><varname>correlation_ID</varname></td>

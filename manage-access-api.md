@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-18"
+lastupdated: "2019-07-01"
 
 Keywords: instance ID, account ID, Access Management
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
+{:external: target="_blank" .external}
 
 # Managing access to keys
 {: #manage-access-api}
@@ -23,14 +24,12 @@ subcollection: hs-crypto
 With {{site.data.keyword.iamlong}}, you can enable granular access control for your encryption keys by creating and modifying access policies.
 {: shortdesc}
 
-<!-- This page walks you through scenarios for managing access to your encryption keys with the [Access Management API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iampap.ng.bluemix.net/v1/docs/#/Policies/post_v1_policies){: new_window}. -->
-
 ## Before you begin
 {: #prereqs-manage-api}
 
-To work with the API, generate your authentication credentials, such as your [access token](/docs/services/hs-crypto/access-api.html#retrieve-token) and [instance ID](/docs/services/hs-crypto/access-api.html#retrieve-instance-ID). You also need the ID of the {{site.data.keyword.hscrypto}} key that you want to manage access for.
+To work with the API, generate your authentication credentials, such as your [access token](/docs/services/hs-crypto?topic=hs-crypto-retrieve-access-token) and [instance ID](/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID). You also need the ID of the {{site.data.keyword.hscrypto}} key that you want to manage access for.
 
-To learn about viewing key IDs, see [Viewing keys](/docs/services/hs-crypto/view-keys.html).
+To learn about viewing key IDs, see [Viewing keys](/docs/services/hs-crypto?topic=hs-crypto-view-keys).
 {: tip}
 
 ### Retrieving your account ID
@@ -78,7 +77,7 @@ Retrieve the user ID of the user whose access you would like to modify.
 
 To retrieve the user ID, complete the following steps:
 
-1. [Ask the user to provide an IAM token](/docs/services/hs-crypto/access-api.html#retrieve-token).
+1. [Ask the user to provide an IAM token](/docs/services/hs-crypto?topic=hs-crypto-retrieve-access-token).
     The IAM token structure is as follows:
 
     ```sh
@@ -133,7 +132,7 @@ curl -X POST \
   -d '{
   "roles": [
     {
-      "id": "crn:v1:bluemix:public:iam::::role:<IAM_role>"
+      "id": "crn:v1:public:iam::::role:<IAM_role>"
     }
   ],
   "resources": [
@@ -176,7 +175,7 @@ curl -X PUT \
   -d '{
   "roles": [
     {
-      "id": "crn:v1:bluemix:public:iam::::role:<IAM_role>"
+      "id": "crn:v1:public:iam::::role:<IAM_role>"
     }
   ],
   "resources": [

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-07-01"
 
 Keywords: data encryption key, original key material, unwrap call
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
+{:external: target="_blank" .external}
 
 # Unwrapping keys
 {: #unwrap-keys}
@@ -23,19 +24,19 @@ subcollection: hs-crypto
 You can unwrap a data encryption key (DEK) to access its contents by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} API, if you are a privileged user. Unwrapping a DEK decrypts and checks the integrity of its contents, returning the original key material to your {{site.data.keyword.cloud_notm}} data service.
 {: shortdesc}
 
-To learn how key wrapping helps you control the security of at-rest data in the cloud, see [Envelope encryption](/docs/services/hs-crypto/envelope-encryption.html).
+To learn how key wrapping helps you control the security of at-rest data in the cloud, see [Envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption).
 
 ## Unwrapping keys by using the API
 {: #unwrap-key-api}
 
-[After you make a wrap call to the service](/docs/services/hs-crypto/wrap-keys.html), you can unwrap a specified data encryption key (DEK) to access its contents by making a `POST` call to the following endpoint.
+[After you make a wrap call to the service](/docs/services/hs-crypto?topic=hs-crypto-wrap-keys), you can unwrap a specified data encryption key (DEK) to access its contents by making a `POST` call to the following endpoint.
 
 ```
-https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=unwrap
+https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=unwrap
 ```
 {: codeblock}
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto/access-api.html).
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-set-up-api).
 
 2. Copy the ID of the root key that you used to perform the initial wrap request.
 
@@ -47,7 +48,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=unwr
 
     ```cURL
     curl -X POST \
-      'https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=unwrap' \
+      'https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=unwrap' \
       -H 'accept: application/vnd.ibm.kms.key_action+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
@@ -60,8 +61,6 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=unwr
     }'
     ```
     {: codeblock}
-    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
-        {: tip} -->
 
     Replace the variables in the example request according to the following table.
     <table>
@@ -71,7 +70,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=unwr
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>The region abbreviation, such as <code>us-south</code> or <code>eu-gb</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/services/hs-crypto/regions.html#endpoints">Regional service endpoints</a>.</td>
+        <td>The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-regions#endpoints">Regional service endpoints</a>.</td>
       </tr>
       <tr>
         <td><varname>key_ID</varname></td>
@@ -79,11 +78,11 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=unwr
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
-        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto/access-api.html#retrieve-token">Retrieving an access token</a>.</td>
+        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
-        <td>The unique identifier that is assigned to your{{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto/access-api.html#retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+        <td>The unique identifier that is assigned to your{{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
       </tr>
       <tr>
         <td><varname>correlation_ID</varname></td>

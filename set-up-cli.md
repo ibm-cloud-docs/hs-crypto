@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-07-10"
 
 Keywords: IBM Cloud CLI plug-in, ibmcloud commands, IBM Cloud command-line interface
 
@@ -17,6 +17,7 @@ subcollection: hs-crypto
 {:pre: .pre}
 {:tip: .tip}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # Accessing {{site.data.keyword.keymanagementserviceshort}} CLI through a {{site.data.keyword.hscrypto}} instance
 {: #set-up-cli}
@@ -37,13 +38,15 @@ Before you are able to use the {{site.data.keyword.keymanagementserviceshort}} C
     In this command, the *URL* is the endpoint that is displayed on the **Manage** tab of your provisioned {{site.data.keyword.hscrypto}} dashboard. For example:
 
     ```
-    export KP_PRIVATE_ADDR="https://us-south.hs-crypto.cloud.ibm.com:<port>"
+    export KP_PRIVATE_ADDR="https://api.us-south.hs-crypto.cloud.ibm.com:<port>"
     ```
     {: pre}
 
-  * On Windows, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a KP_PRIVATE_ADDR environment variable and set the value to the endpoint that is displayed on the **Manage** tab of your provisioned {{site.data.keyword.hscrypto}} dashboard. For example, `https://us-south.hs-crypto.cloud.ibm.com:<port>`.
+    To find out the regions that {{site.data.keyword.hscrypto}} supports, see [Regions and locations](/docs/services/hs-crypto?topic=hs-crypto-regions).
 
-  You can also retrieve the endpoint URL through the API. For details, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+  * On Windows, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a KP_PRIVATE_ADDR environment variable and set the value to the endpoint that is displayed on the **Manage** tab of your provisioned {{site.data.keyword.hscrypto}} dashboard. For example, `https://api.us-south.hs-crypto.cloud.ibm.com:<port>`.
+
+  You can also retrieve the endpoint URL through the API. For details, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
 
 2. Set the KP_INSTANCE_ID environment variable on you workstation:
 
@@ -60,6 +63,6 @@ Before you are able to use the {{site.data.keyword.keymanagementserviceshort}} C
 
   Alternatively, you can use the `-i <instance_ID>` option on the `ibmcloud kp` command to set the instance ID.
 
-3. For information on accessing the {{site.data.keyword.keymanagementserviceshort}} CLI, check out [Setting up the {{site.data.keyword.keymanagementserviceshort}} CLI](/docs/services/key-protect/set-up-cli.html).
+3. To find out more about using the CLI, check out the [{{site.data.keyword.keymanagementserviceshort}} CLI reference doc](/docs/services/key-protect?topic=key-protect-cli-reference).
 
-4. To find out more about using the CLI, check out the [{{site.data.keyword.keymanagementserviceshort}} CLI reference doc](/docs/services/key-protect/cli-reference.html).
+<!-- For information on accessing the {{site.data.keyword.keymanagementserviceshort}} CLI, check out [Setting up the {{site.data.keyword.keymanagementserviceshort}} CLI](/docs/services/key-protect?topic=key-protect-set-up-cli). -->

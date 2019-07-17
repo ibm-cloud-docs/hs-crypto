@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-13"
+lastupdated: "2019-07-01"
 
 Keywords: root keys, Rotate key, key rotation
 
@@ -17,6 +17,7 @@ subcollection: hs-crypto
 {:pre: .pre}
 {:tip: .tip}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # Rotating keys
 {: #rotating-keys}
@@ -26,7 +27,7 @@ You can rotate your root keys on-demand by using {{site.data.keyword.cloud}} {{s
 
 When you rotate your root key, you shorten the lifetime of the key, and you limit the amount of information that is protected by that key.   
 
-To learn how key rotation helps you meet industry standards and cryptographic best practices, see [Key rotation](/docs/services/key-protect/concepts/key-rotation.html).
+To learn how key rotation helps you meet industry standards and cryptographic best practices, see [Key rotation](/docs/services/key-protect/concepts?topic=key-protect-key-rotation).
 
 Rotation is available only for root keys.
 {: tip}
@@ -36,29 +37,29 @@ Rotation is available only for root keys.
 
 If you prefer to rotate your root keys by using a graphical interface, you can use the {{site.data.keyword.hscrypto}} GUI.
 
-[After you create or import your existing root keys into the service](/docs/services/hs-crypto/create-root-keys.html), complete the following steps to rotate a key:
+[After you create or import your existing root keys into the service](/docs/services/hs-crypto?topic=hs-crypto-create-root-keys), complete the following steps to rotate a key:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/){: new_window}.
+1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the application details page, use the **Keys** table to browse the keys in your service.
 5. Click the ⋮ icon to open a list of options for the key that you want to rotate.
 6. From the options menu, click **Rotate key** and confirm the rotation in the next screen.
 
-If you imported the root key initially, you must provide a new base64 encoded key material to rotate the key. For more information, see [Importing root keys with the GUI](/docs/services/hs-crypto/import-root-keys.html#gui).
+If you imported the root key initially, you must provide a new base64 encoded key material to rotate the key. For more information, see [Importing root keys with the GUI](/docs/services/hs-crypto?topic=hs-crypto-import-root-keys#import-root-key-gui).
 {: tip}
 
 ## Rotating root keys by using the API
 {: #rotate-root-kay-api}
 
-[After you designate a root key in the service](/docs/services/hs-crypto/create-root-keys.html), you can rotate your key by making a `POST` call to the following endpoint.
+[After you designate a root key in the service](/docs/services/hs-crypto?topic=hs-crypto-create-root-keys), you can rotate your key by making a `POST` call to the following endpoint.
 
 ```
-https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rotate
+https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rotate
 ```
 {: codeblock}
 
-1. [Retrieve your service and authentication credentials to work with keys in the service.](/docs/services/hs-crypto/access-api.html)
+1. [Retrieve your service and authentication credentials to work with keys in the service.](/docs/services/hs-crypto?topic=hs-crypto-set-up-api)
 
 2. Copy the ID of the root key that you want to rotate.
 
@@ -66,7 +67,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rota
 
     ```cURL
     curl -X POST \
-      'https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rotate' \
+      'https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rotate' \
       -H 'accept: application/vnd.ibm.kms.key_action+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
@@ -86,7 +87,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rota
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>The region abbreviation, such as <code>us-south</code> or <code>eu-gb</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/services/hs-crypto/regions.html#endpoints">Regional service endpoints</a>.</td>
+        <td>The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-regions#endpoints">Regional service endpoints</a>.</td>
       </tr>
       <tr>
         <td><varname>key_ID</varname></td>
@@ -94,11 +95,11 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rota
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
-        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto/access-api.html#retrieve-token">Retrieving an access token</a>.</td>
+        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
-        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto/access-api.html#retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
       </tr>
       <tr>
         <td><varname>key_material</varname></td>
@@ -122,7 +123,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rota
 
     ```cURL
     curl -X GET \
-    https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
+    https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
     -H 'accept: application/vnd.ibm.collection+json' \
     -H 'authorization: Bearer <IAM_token>' \
     -H 'bluemix-instance: <instance_ID>' \

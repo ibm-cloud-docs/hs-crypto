@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-07-01"
 
 Keywords: links, Hyper Protect Crypto Services, reference
 
@@ -18,6 +18,7 @@ subcollection: hs-crypto
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # Related links
 {: #related-links}
@@ -27,21 +28,21 @@ Additional resources to help you learn about managing encryption with {{site.dat
 ## Videos
 {: #videos}
 
-- [IBM Think 2019: Introduction to Z as a Service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/events/think/watch/replay/120157283/){: new_window}
-- [IBM Think 2019: IBM Cloud Hyper Protect family and Secure Service Container ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/events/think/watch/replay/120171746/){: new_window}
-- [IBM Think 2019: IBM Cloud security ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/events/think/watch/replay/120118486/){: new_window}
+- [IBM Think 2019: Introduction to Z as a Service](https://www.ibm.com/events/think/watch/replay/120157283/){: external}
+- [IBM Think 2019: IBM Cloud Hyper Protect family and Secure Service Container](https://www.ibm.com/events/think/watch/replay/120171746/){: external}
+- [IBM Think 2019: IBM Cloud security](https://www.ibm.com/events/think/watch/replay/120118486/){: external}
 
 ## Blogs
 {: #blogs}
 
-- [IBM Cloud Hyper Protect Crypto Services is Now Available on IBM Public Cloud ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2019/03/ibm-cloud-hyper-protect-crypto-services-is-now-available-on-ibm-public-cloud/){: new_window}
-- [Announcing IBM Cloud Hyper Protect Crypto Services – BETA ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2019/01/announcing-ibm-cloud-hyper-protect-crypto-services-beta/){: new_window}
-- [IBM Unveils New Offerings for Faster and More Secured Path to Hybrid Cloud ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://newsroom.ibm.com/2019-02-12-IBM-Unveils-New-Offerings-for-Faster-and-More-Secured-Path-to-Hybrid-Cloud){: new_window}
-- [The Best of IBM Z and LinuxONE in the public and private cloud ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/systems/the-best-of-ibm-z-and-linuxone-in-the-public-and-private-cloud/){: new_window}
-- [The State of IBM Cloud Security: Think 2019 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2019/02/cloud-security-right/){: new_window}
-- [IBM Think 2019: Fueling Customer Success with VMware on the IBM Cloud ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2019/02/security-innovation-and-choice-for-vmware-on-ibm-cloud/){: new_window}
+- [IBM Cloud Hyper Protect Crypto Services is Now Available on IBM Public Cloud](https://www.ibm.com/blogs/cloud-archive/2019/03/ibm-cloud-hyper-protect-crypto-services-is-now-available-on-ibm-public-cloud/){: external}
+- [Announcing IBM Cloud Hyper Protect Crypto Services – BETA](https://www.ibm.com/cloud/blog/announcements/announcing-ibm-cloud-hyper-protect-crypto-services-beta){: external}
+- [IBM Unveils New Offerings for Faster and More Secured Path to Hybrid Cloud](https://newsroom.ibm.com/2019-02-12-IBM-Unveils-New-Offerings-for-Faster-and-More-Secured-Path-to-Hybrid-Cloud){: external}
+- [The Best of IBM Z and LinuxONE in the public and private cloud](https://www.ibm.com/blogs/systems/the-best-of-ibm-z-and-linuxone-in-the-public-and-private-cloud/){: external}
+- [The State of IBM Cloud Security: Think 2019](https://www.ibm.com/cloud/blog/cloud-security-right){: external}
+- [IBM Think 2019: Fueling Customer Success with VMware on the IBM Cloud](https://www.ibm.com/cloud/blog/security-innovation-and-choice-for-vmware-on-ibm-cloud){: external}
 
 ## More about IBM Hyper Protect services
 {: #related_services}
 
-- [IBM Hyper Protect Services ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/hyper-protect-services){: new_window}
+- [IBM Hyper Protect Services](https://www.ibm.com/cloud/hyper-protect-services){: external}

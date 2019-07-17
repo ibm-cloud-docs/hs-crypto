@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-07-10"
 
 Keywords: key storage, HSM, hardware security module
 
@@ -10,23 +10,23 @@ subcollection: hs-crypto
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:important: .important}
 {:tip: .tip}
+{:external: target="_blank" .external}
 
 # Initializing service instances
 {: #initialize-hsm}
 
-Before using the {{site.data.keyword.hscrypto}} instance (service instance for short), you need to load master key registers using the Trusted Key Entry plug-in.
+Before using the {{site.data.keyword.hscrypto}} instance (service instance for short), you need to load master key registers using the Trusted Key Entry CLI plug-in.
 {:shortdesc}
 
 To initialize service instances, you need to load the master key with the Trusted Key Entry plug-in to your key storage, service instance first. The Trusted Key Entry plug-in allows you to load your master key values.
 
-For an introduction to service instance initialization and other concepts, see [Introduction to service instance initialization](/docs/services/hs-crypto/service_instance_concepts.html#introduce-service).
+For an introduction to service instance initialization and other concepts, see [Introduction to service instance initialization](/docs/services/hs-crypto?topic=hs-crypto-introduce-service#introduce-service).
 
 The following diagram gives you an overview of steps you need to take to initialize the service instance. Click each step on the diagram for detailed instructions.
 
@@ -62,11 +62,13 @@ It might take 20-30 minutes for you to complete this task.
 1. Run the following command to make sure that you are logged in to the correct API endpoint:
 
   ```
-  ibmcloud target -r us-south
+  ibmcloud target -r <region>
   ```
   {: pre}
 
-2. Install the {{site.data.keyword.keymanagementservicefull}} plug-in. For detailed steps, see [Setting up the CLI](/docs/services/hs-crypto/set-up-cli.html). When you log in to the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview), you're notified when updates are available. Be sure to keep your {{site.data.keyword.keymanagementservicefull}} plug-in up-to-date so that you can use the commands and flags that are available for the Trusted Key Entry CLI plug-in.
+  To find out the regions that {{site.data.keyword.hscrypto}} supports, see [Regions and locations](/docs/services/hs-crypto?topic=hs-crypto-regions).
+
+2. [Install the {{site.data.keyword.keymanagementservicefull}} plug-in](/docs/services/key-protect?topic=key-protect-set-up-cli#install-cli). After installation, see [Setting up the CLI](/docs/services/hs-crypto?topic=hs-crypto-set-up-cli) for detailed configuration steps. When you log in to the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started#overview), you're notified when updates are available. Be sure to keep your {{site.data.keyword.keymanagementservicefull}} plug-in up-to-date so that you can use the commands and flags that are available for the Trusted Key Entry CLI plug-in.
 {: #initialize-crypto-prerequisites2}
 
 3. Install the latest Trusted Key Entry plug-in with the following command:
@@ -77,7 +79,7 @@ It might take 20-30 minutes for you to complete this task.
   ```
   {: pre}
 
-  **Important:** If you are using the Beta instance of ({{site.data.keyword.hscrypto}}, run the `ibmcloud plugin install tke -v 0.0.4` to get the latest beta version of the Trusted Key Entry plug-in. Do not install later versions of the Trusted Key Entry plug-in.
+<!-- **Important:** If you are using the Beta instance of ({{site.data.keyword.hscrypto}}, run the `ibmcloud plugin install tke -v 0.0.4` to get the latest beta version of the Trusted Key Entry plug-in. Do not install later versions of the Trusted Key Entry plug-in. -->
 
 4. Set the environment variable CLOUDTKEFILES on your workstation. Specify a directory where you want master key part files and signature key part files to be created and saved. Create the directory if it does not already exist.
 {: #initialize-crypto-prerequisites4}
@@ -137,7 +139,7 @@ The master key registers in all crypto units in a single service instance must b
   ```
   {: pre}
 
-  A list of crypto unitss that are assigned to the current user account is displayed. When prompted, enter a list of crypto unit numbers to be removed from the selected crypto unit list.
+  A list of crypto units that are assigned to the current user account is displayed. When prompted, enter a list of crypto unit numbers to be removed from the selected crypto unit list.
 
   **Tip:** In general, either all crypto units or none of the crypto units in a service instance are selected. This causes subsequent administrative commands to update all crypto units of a service instance consistently. However, if the crypto units of a service instance become configured differently, you need to select and work with crypto units individually to restore a consistent configuration to all crypto units in a service instance.
 
@@ -262,7 +264,7 @@ Each master key part is saved in a password-protected file on the workstation.
 
 **Important**: To load a master key register, all master key part files and the signature key file must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The master key part file owners and the signature key file owner need to enter the file passwords when the master key register is loaded on the common workstation.
 
-For information on how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/services/hs-crypto/service_instance_concepts.html#introduce-key-registers).
+For information on how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/services/hs-crypto?topic=hs-crypto-introduce-service#introduce-key-registers).
 
 To load the new master key register, use the following command:
 ```
@@ -277,7 +279,7 @@ When prompted, enter the key parts to be loaded into the new master key register
 ### Step 6: Commit the new master key register
 {: #step6-commit-master-key}
 
-Loading the new master key register places the new master key register in the full uncommitted state. Before you can use the new master key register to initialize or re-encipher key storage, place the new master key register in the committed state. For information on how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/services/hs-crypto/service_instance_concepts.html#introduce-key-registers).
+Loading the new master key register places the new master key register in the full uncommitted state. Before you can use the new master key register to initialize or re-encipher key storage, place the new master key register in the committed state. For information on how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/services/hs-crypto?topic=hs-crypto-introduce-service#introduce-key-registers).
 
 To commit the new master key register, use the following command:
 ```

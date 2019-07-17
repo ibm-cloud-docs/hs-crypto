@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-16"
+lastupdated: "2019-07-01"
 
 Keywords: hsm, Trusted Key Entry plug-in, service instance, imprint mode
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # Introduction to service instance initialization
 {: #introduce-service}
@@ -67,7 +68,7 @@ Master keys are used to encrypt the service instances for key storage. With the 
 
 A master key is composed of several master key parts. For security considerations, each key part can be owned by a different person. The key part owner should be the only person who knows the password associated with the key part file.
 
-For more information on the key types that {{site.data.keyword.hscrypto}} manages, see [Introduction to keys](/docs/services/hs-crypto/keys_intro.html#introduce-keys).
+For more information on the key types that {{site.data.keyword.hscrypto}} manages, see [Introduction to keys](/docs/services/hs-crypto?topic=hs-crypto-introduce-keys#introduce-keys).
 
 ## Master key parts
 {: #introduce-key-parts}

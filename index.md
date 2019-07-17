@@ -17,6 +17,7 @@ subcollection: hs-crypto
 {:pre: .pre}
 {:important: .important}
 {:tip: .tip}
+{:external: target="_blank" .external}
 
 # Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
 {: #get-started}
@@ -121,50 +122,11 @@ From the {{site.data.keyword.hscrypto}} dashboard, you can inspect the general c
 ## What's next
 {: #get-started-next}
 
-Now you can use your keys to encode your apps and services. If you added a root key to the service, you might want to learn more about using the root key to protect the keys that encrypt your at-rest data. Check out [Wrapping keys](/docs/services/hs-crypto/wrap-keys.html) to get started.
+## What's next
+{: #get-started-next}
 
-- To find out more about managing and protecting your encryption keys with a root key, check out [Envelope encryption](/docs/services/hs-crypto/envelope-encryption.html).
-- To find out more about integrating the {{site.data.keyword.hscrypto}} service with other cloud data solutions, [check out the Integrations doc](/docs/services/hs-crypto/integrate-services.html).
-- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+You can start to use your keys to encode your apps and services. If you added a root key to the service, you might want to learn more about using the root key to protect the keys that encrypt your at-rest data. Check out [Wrapping keys](/docs/services/hs-crypto?topic=hs-crypto-wrap-keys) to get started.
 
-<!-- Complete the following steps to provision {{site.data.keyword.hscrypto}}:
-1. Log in to your [IBM Cloud account ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/){:new_window}.
-2. Visit [{{site.data.keyword.cloud_notm}} Experimental Services ![External link icon](image/external_link.svg "External link icon")](https://cloud.ibm.com/catalog/labs/){:new_window} to see the list of services in experimental phase.
-3. From the **All Categories** navigation pane on the left, click the **Security** category under **Platform**.
-4. From the list of services, click the **{{site.data.keyword.hscrypto}}** tile.
-5. Select the **{{site.data.keyword.hscrypto}} Lite Plan**, and click **Create** to provision an instance of {{site.data.keyword.IBM_notm}} CloudCrypto in the account, region, and resource group where you log in.-->
-
-<!-- ## Installing ACSP client libraries -->
-
-<!-- You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client. Complete the following steps to install the ACSP client libraries in your local environment. -->
-
-<!-- 1. Download the installation package from the [GitHub repository ![External link icon](image/external_link.svg "External link icon")](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:new_window}. In the **packages** folder, choose the installation package file that is suitable for your operation system and CPU architecture. For example, for Ubuntu on x86, choose `acsp-pkcs11-client_1.5-3.5_amd64.deb`.
-2. Install the package to install the ACSP client libraries with the `dpkg` command. For example, `dpkg -i acsp-pkcs11-client_1.5-3.5_amd64.deb`. -->
-
-
-
-<!-- ## Configuring ACSP client -->
-
-<!-- At the current stage, {{site.data.keyword.hscrypto}} provides only self-signed certificates.
-
-You need to configure the ACSP client to enable a proper secure communication channel (mutual TLS) to your service instance in the cloud. -->
-
-<!-- 1. In your {{site.data.keyword.hscrypto}} service instance in {{site.data.keyword.cloud_notm}}, select **Manage** from the left navigator.
-2. On the "Manage" screen, click the **Download Config** button to download the `acsp_client_credentials.uue` file.
-3. Copy the `acsp_client_credentials.uue` file to the `/opt/ibm/acsp-pkcs11-client/config` directory in your local environment.
-4. In the `/opt/ibm/acsp-pkcs11-client/config` directory, decode the file with the following command:
-       `base64 --decode acsp_client_credentials.uue > acsp_client_credentials.tar`
-5. Extract the client credentials file with the following command:
-       `tar xf acsp_client_credentials.tar`
-6. Move the `server-config` files into the default place with the following command:
-       `mv server-config/* ./`
-7. Rename the client credentials file with the following command:
-       `mv acsp.properties.client acsp.properties`
-8. (Optional:) Change group ID of the files with the following command:
-       `chown root.pkcs11 *`
-9. Enable ACSP to use the proper config for the service instance in the cloud:
-       `export ACSP_P11=/opt/ibm/acsp-pkcs11-client/config/acsp.properties` -->
-
-<!-- Now your ACSP client is operational and your {{site.data.keyword.hscrypto}} is ready to use!
-
-For more information about ACSP client installation and configuration, see [ACSP Client Installation and Configuration Guide ![External link icon](image/external_link.svg "External link icon")](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/doc/ACSP-client-config-guide.pdf){:new_window}. -->
+- To find out more about managing and protecting your encryption keys with a root key, check out [Envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption).
+- To find out more about integrating the {{site.data.keyword.hscrypto}} service with other cloud data solutions, [check out the Integrations doc](/docs/services/hs-crypto?topic=hs-crypto-integrate-services).
+- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.

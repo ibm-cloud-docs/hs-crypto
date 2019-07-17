@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-07-01"
 
 Keywords: standard keys, import keys, encryption keys, Hyper Protect Crypto Services GUI
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
+{:external: target="_blank" .external}
 
 # Importing standard keys
 {: #import-standard-keys}
@@ -25,9 +26,9 @@ You can add your existing encryption keys with the {{site.data.keyword.hscrypto}
 ## Importing standard keys with the GUI
 {: #import-standard-key-gui}
 
-[After you create an instance of the service](/docs/services/hs-crypto/provision.html), complete the following steps to enter your existing standard key with the {{site.data.keyword.hscrypto}} GUI.
+[After you create an instance of the service](/docs/services/hs-crypto?topic=hs-crypto-provision), complete the following steps to enter your existing standard key with the {{site.data.keyword.hscrypto}} GUI.
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/){: new_window}.
+1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. To import a new key, click **Add key** and select the **Import your own key** window.
@@ -48,7 +49,7 @@ You can add your existing encryption keys with the {{site.data.keyword.hscrypto}
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Standard key</b>.</td>
+        <td>The <a href="/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption#key-types">type of key</a> that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Standard key</b>.</td>
       </tr>
       <tr>
         <td>Key material</td>
@@ -73,17 +74,17 @@ You can add your existing encryption keys with the {{site.data.keyword.hscrypto}
 Create a standard key by making a `POST` call to the following endpoint:
 
 ```
-https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
+https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ```
 {: codeblock}
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto/access-api.html).
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-set-up-api).
 
-1. Call the [{{site.data.keyword.hscrypto}} API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window} with the following cURL command.
+1. Call the [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto){: external} with the following cURL command.
 
     ```cURL
     curl -X POST \
-      https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
+      https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
       -H 'content-type: application/vnd.ibm.kms.key+json' \
@@ -116,15 +117,15 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>The region abbreviation, such as <code>us-south</code> or <code>eu-gb</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/services/hs-crypto/regions.html#endpoints">Regional service endpoints</a>.</td>
+        <td>The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-regions#endpoints">Regional service endpoints</a>.</td>
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
-        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto/access-api.html#retrieve-token">Retrieving an access token</a>.</td>
+        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
-        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto/access-api.html#retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
       </tr>
       <tr>
         <td><varname>correlation_ID</varname></td>
@@ -174,7 +175,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
         <caption style="caption-side:bottom;">Table 2. Describes the variables that are needed to add a standard key with the {{site.data.keyword.hscrypto}} API</caption>
     </table>
 
-    To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-122.pdf){: new_window}.
+    To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-122.pdf){: external}.
     {: tip}
 
     A successful `POST /v2/keys` response returns the ID value for your key, along with other metadata. The ID is a unique identifier that is assigned to your key and is used for subsequent calls to the {{site.data.keyword.hscrypto}} API.
@@ -183,7 +184,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
     ```cURL
     curl -X GET \
-      https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
+      https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
       -H 'accept: application/vnd.ibm.collection+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
@@ -195,6 +196,4 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ### What's next
 {: #import-standard-key-next}
 
-To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
-
-<!-- To see an example of how keys stored in {{site.data.keyword.hscrypto}} can work to encrypt and decrypt data, [check out the sample app in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/key-protect-helloworld-python){: new_window}.  -->
+To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.

@@ -18,8 +18,9 @@ subcollection: hs-crypto
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
-# Protecting data with envelope encryption
+# Introduction to envelope encryption
 {: #envelope-encryption}
 
 Envelope encryption is the practice of encrypting data with a data encryption key (DEK) and then encrypting the DEK with a root key that you can fully manage.
@@ -50,7 +51,7 @@ Envelope encryption is the practice of encrypting data with a data encryption ke
 </table>
 
 ## How it works
-{: #overview}
+{: #envelope-encryption-overview}
 
 Envelope encryption combines the strength of multiple encryption algorithms to protect your sensitive data in the cloud. It works by wrapping one or more data encryption keys (DEKs) with advanced encryption by using a root key that you can fully manage. This key wrapping process creates wrapped DEKs that protect your stored data from unauthorized access or exposure. Unwrapping a DEK reverses the envelope encryption process by using the same root key, resulting in decrypted and authenticated data.
 
@@ -61,7 +62,7 @@ The following diagram shows a contextual view of the key wrapping functionality.
 ![The diagram shows a contextual view of envelope encryption.](image/envelope-encryption.png "The diagram shows a contextual view of envelope encryption.")
 *Figure 1. Contextual view of envelope encryption*
 
-Envelope encryption is treated briefly in the NIST Special Publication 800-57, Recommendation for Key Management. To learn more, see [NIST SP 800-57 Pt. 1 Rev. 4. ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0){: new_window}
+Envelope encryption is treated briefly in the NIST Special Publication 800-57, Recommendation for Key Management. To learn more, see [NIST SP 800-57 Pt. 1 Rev. 4.](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0){: external}
 
 ## Key types
 {: #key-types}
@@ -75,7 +76,7 @@ The service manages two key types, root keys and standard keys, for the advanced
     <dd>Standard keys are a way to persist a secret, such as a password or an encryption key. When you use {{site.data.keyword.hscrypto}} to store standard keys, you enable hardware security module (HSM) storage for your secrets, fine-grained access control to your resources with <a href="/docs/services/hs-crypto?topic=hs-crypto-manage-access" target="_blank">{{site.data.keyword.iamshort}} (IAM)</a>, and the ability to audit API calls to the service with <a href="/docs/services/hs-crypto?topic=hs-crypto-at-events" target="_blank">{{site.data.keyword.cloudaccesstrailshort}}</a>.</dd>
 </dl>
 
-After you create keys in {{site.data.keyword.hscrypto}}, the system returns an ID value that you can use to make API calls to the service. You can retrieve the ID value for your keys with the {{site.data.keyword.hscrypto}} user interface or the [{{site.data.keyword.hscrypto}} API](https://{DomainName}/apidocs/hs-crypto).
+After you create keys in {{site.data.keyword.hscrypto}}, the system returns an ID value that you can use to make API calls to the service. You can retrieve the ID value for your keys with the {{site.data.keyword.hscrypto}} user interface or the [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto).
 
 ## Wrapping keys
 {: #wrapping}

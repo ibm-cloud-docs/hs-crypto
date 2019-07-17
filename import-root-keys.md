@@ -15,6 +15,9 @@ subcollection: hs-crypto
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:external: target="_blank" .external}
 
 # Importing root keys
 {: #import-root-keys}
@@ -28,7 +31,7 @@ Root keys are symmetric key-wrapping keys that are used to protect the security 
 ## Importing root keys with the GUI
 {: #import-root-key-gui}
 
-[After you create an instance of the service](/docs/services/hs-crypto/provision.html), complete the following steps to add your existing root key with the {{site.data.keyword.hscrypto}} GUI.
+After you [create an instance of the service](/docs/services/hs-crypto?topic=hs-crypto-provision), complete the following steps to add your existing root key with the {{site.data.keyword.hscrypto}} GUI.
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/){: new_window}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
@@ -51,7 +54,9 @@ Root keys are symmetric key-wrapping keys that are used to protect the security 
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The <a href="/docs/services/hs-crypto/envelope-encryption.html#key-types">type of key</a> that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Root key</b>.</td>
+        <td>
+          The <a href="/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption#key-types">type of key</a> that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Root key</b>.
+        </td>
       </tr>
       <tr>
         <td>Key material</td>
@@ -77,17 +82,17 @@ Root keys are symmetric key-wrapping keys that are used to protect the security 
 Add your existing root key by making a `POST` call to the following endpoint.
 
 ```
-https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
+https://https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ```
 {: codeblock}
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto/access-api.html).
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-retrieve-access-token).
 
-1. Call the [{{site.data.keyword.hscrypto}} API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window} with the following cURL command.
+2. Call the [{{site.data.keyword.hscrypto}} API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window} with the following cURL command.
 
     ```cURL
     curl -X POST \
-      https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
+      https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
       -H 'content-type: application/vnd.ibm.kms.key+json' \
@@ -123,11 +128,11 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
-        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto/access-api.html#retrieve-token">Retrieving an access token</a>.</td>
+        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
-        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto/access-api.html#retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-id">Retrieving an instance ID</a>.</td>
       </tr>
       <tr>
         <td><varname>correlation_ID</varname></td>
@@ -179,11 +184,11 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
     A successful `POST /v2/keys` response returns the ID value for your key, along with other metadata. The ID is a unique identifier that is assigned to your key and is used for subsequent calls to the {{site.data.keyword.hscrypto}} API.
 
-2. Optional: Verify that the key was added by running the following call to browse the keys in your {{site.data.keyword.hscrypto}} service instance.
+3. Optional: Verify that the key was added by running the following call to browse the keys in your {{site.data.keyword.hscrypto}} service instance.
 
     ```cURL
     curl -X GET \
-      https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
+      https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
       -H 'accept: application/vnd.ibm.collection+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
@@ -196,5 +201,5 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ### What's next
 {: #import-root-key-next}
 
-- To find out more about protecting keys with envelope encryption, check out [Wrapping keys](/docs/services/hs-crypto/wrap-keys.html).
-- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+- To find out more about protecting keys with envelope encryption, check out [Wrapping keys](/docs/services/hs-crypto?topic=hs-crypto-wrap-keys).
+- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.

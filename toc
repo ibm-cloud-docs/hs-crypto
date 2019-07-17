@@ -26,13 +26,15 @@ IBM Cloud Hyper Protect Crypto Services
     {: .navgroup id="howto"}
     provision.md
     initialize_hsm.md
-    access-api.md
-    set-up-cli.md
-    transition-keys.md
 
     {: .topicgroup}
-    Managing access
-        manage-access.md
+    Accessing the APIs
+        set-up-api.md
+        retrieve-access-token.md
+        retrieve-instance-id.md
+
+    set-up-cli.md
+
 
     {: .topicgroup}
     Creating root keys and standard keys

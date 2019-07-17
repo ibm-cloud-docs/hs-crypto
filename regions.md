@@ -55,7 +55,7 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
         <td>Sydney</td>
         <td>Sydney, Australia</td>
         <td>
-            <code>au-syd.hs-crypto.cloud.ibm.com</code>
+            <code>api.au-syd.hs-crypto.cloud.ibm.com</code>
         </td>
 <!--        <td>
             <code>ep11.au-syd.hs-crypto.cloud.ibm.com</code>
@@ -80,7 +80,7 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
         <td>US South</td>
         <td>Dallas, US</td>
         <td>
-            <code>us-south.hs-crypto.cloud.ibm.com</code>
+            <code>api.us-south.hs-crypto.cloud.ibm.com</code>
         </td>
 <!--        <td>
             <code>ep11.us-south.hs-crypto.cloud.ibm.com</code>
@@ -89,4 +89,4 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
     <caption style="caption-side:bottom;">Table 1. Shows the available endpoint for the {{site.data.keyword.hscrypto}} API</caption>
 </table>
 
-For more information about authenticating with {{site.data.keyword.hscrypto}}, see [Accessing the API](/docs/services/hs-crypto/access-api.html).
+For more information about authenticating with {{site.data.keyword.hscrypto}}, see [Setting up the APIs](/docs/services/hs-crypto?topic=hs-crypto-set-up-api).

@@ -17,6 +17,7 @@ subcollection: hs-crypto
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # {{site.data.keyword.cloudaccesstrailshort}} events
 {: #at-events}
@@ -26,7 +27,7 @@ Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users an
 
 The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}.
 
-For more information, see the [{{site.data.keyword.cloudaccesstrailshort}} documentation](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla).
+For more information, see the [{{site.data.keyword.cloudaccesstrailshort}} documentation](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started).
 
 ## List of events
 {: #events}

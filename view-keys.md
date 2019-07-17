@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-13"
+lastupdated: "2019-07-09"
 
 Keywords: view keys, key configuration, key type
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
+{:external: target="_blank" .external}
 
 # Viewing keys
 {: #view-keys}
@@ -29,16 +30,16 @@ Audit your key configuration regularly:
 - Monitor API calls to {{site.data.keyword.hscrypto}} with {{site.data.keyword.cloudaccesstrailshort}}.
 - Inspect which users have access to keys and if the level of access is appropriate.
 
-For more information about auditing access to your resources, see [Managing user access with Cloud IAM](/docs/services/hs-crypto/manage-access.html).
+For more information about auditing access to your resources, see [Managing user access with Cloud IAM](/docs/services/hs-crypto?topic=hs-crypto-manage-access).
 
 ## Viewing keys with the GUI
 {: #view-key-gui}
 
 If you prefer to inspect the keys in your service by using a graphical interface, you can use the {{site.data.keyword.hscrypto}} dashboard.
 
-[After you create or import your existing keys into the service](/docs/services/hs-crypto/create-root-keys.html), complete the following steps to view your keys.
+[After you create or import your existing keys into the service](/docs/services/hs-crypto?topic=hs-crypto-create-root-keys), complete the following steps to view your keys.
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/).
+1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 3. Browse the general characteristics of your keys from the application details page:
@@ -54,15 +55,15 @@ If you prefer to inspect the keys in your service by using a graphical interface
       </tr>
       <tr>
         <td>ID</td>
-        <td>A unique key ID that was assigned to your key by the {{site.data.keyword.hscrypto}} service. You can use the ID value to make calls to the service with the [{{site.data.keyword.hscrypto}} API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto).</td>
+        <td>A unique key ID that was assigned to your key by the {{site.data.keyword.hscrypto}} service. You can use the ID value to make calls to the service with the [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto).</td>
       </tr>
       <tr>
         <td>State</td>
-        <td>The [key state](/docs/services/key-protect/concepts/key-states.html) based on [NIST Special Publication 800-57, Recommendation for Key Management ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r4.pdf). These states include <i>Pre-active</i>, <i>Active</i>, <i>Deactivated</i>, and <i>Destroyed</i>.</td>
+        <td>The [key state](/docs/services/key-protect/concepts?topic=key-protect-key-states) based on [NIST Special Publication 800-57, Recommendation for Key Management](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r4.pdf). These states include <i>Pre-active</i>, <i>Active</i>, <i>Deactivated</i>, and <i>Destroyed</i>.</td>
       </tr>
       <tr>
         <td>Type</td>
-        <td>The key type that describes your key's designated purpose within the service.</td>
+        <td>The <a href="/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption#key-types">type of key</a> that describes your key's designated purpose within the service.</td>
       </tr>
       <caption style="caption-side:bottom;">Table 1. Describes the <b>Keys</b> table</caption>
     </table>
@@ -78,25 +79,23 @@ You can retrieve the contents of your keys by using the {{site.data.keyword.hscr
 For a high-level view, you can browse keys that are managed in your provisioned instance of {{site.data.keyword.hscrypto}} by making a `GET` call to the following endpoint.
 
 ```
-https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
+https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ```
 {: codeblock}
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto/access-api.html).
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-set-up-api).
 
 2. Run the following cURL command to view general characteristics about your keys.
 
     ```cURL
     curl -X GET \
-    https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
+    https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
     -H 'accept: application/vnd.ibm.collection+json' \
     -H 'authorization: Bearer <IAM_token>' \
     -H 'bluemix-instance: <instance_ID>' \
     -H 'correlation-id: <correlation_ID>' \
     ```
     {: codeblock}
-    <!--    To work with keys within a Cloud Foundry org and space in your account, replace `Bluemix-Instance` with the appropriate `Bluemix-org` and `Bluemix-space` headers. [For more information, see the {{site.data.keyword.hscrypto}} API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
-        {: tip} -->
 
     Replace the variables in the example request according to the following table.
     <table>
@@ -106,15 +105,15 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>The region abbreviation, such as <code>us-south</code> or <code>eu-gb</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/services/hs-crypto/regions.html#endpoints">Regional service endpoints</a>.</td>
+        <td>The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-regions#endpoints">Regional service endpoints</a>.</td>
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
-        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto/access-api.html#retrieve-token">Retrieving an access token</a>.</td>
+        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
-        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto/access-api.html#retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
       </tr>
       <tr>
         <td><varname>correlation_ID</varname></td>
@@ -187,7 +186,7 @@ You can use the following example request to retrieve a different set of keys.
 
   ```cURL
   curl -X GET \
-  https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys?offset=<offset>&limit=<limit> \
+  https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys?offset=<offset>&limit=<limit> \
   -H 'accept: application/vnd.ibm.collection+json' \
   -H 'authorization: Bearer <IAM_token>' \
   -H 'bluemix-instance: <instance_ID>' \
@@ -237,7 +236,7 @@ For usage notes, check out the following examples for setting your `limit` and `
   </tr>
   <tr>
     <td><code>.../keys?offset=25&limit=50</code></td>
-    <td>Lists keys 26 - 50.</td>
+    <td>Lists keys 26 - 75.</td>
   </tr>
   <tr>
     <td><code>.../keys?offset=3000&limit=50</code></td>
@@ -255,11 +254,11 @@ Offset is the location of a particular key in a data set. The `offset` value is 
 To view detailed information about a specific key, you can make a `GET` call to the following endpoint.
 
 ```
-https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
+https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 ```
 {: codeblock}
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto/access-api.html).
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-set-up-api).
 
 2. Retrieve the ID of the key you would like to access or manage.
 
@@ -269,7 +268,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 
     ```cURL
     curl -X GET \
-      https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID> \
+      https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID> \
       -H 'accept: application/vnd.ibm.kms.key+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
@@ -286,15 +285,15 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>The region abbreviation, such as <code>us-south</code> or <code>eu-gb</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. See <a href="/docs/services/hs-crypto/regions.html#endpoints">Regional service endpoints</a> for more information.</td>
+        <td>The region abbreviation, such as <code>us-south</code> or <code>eu-gb</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. See <a href="/docs/services/hs-crypto?topic=hs-crypto-regions#endpoints">Regional service endpoints</a> for more information.</td>
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
-        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto/access-api.html#retrieve-token">Retrieving an access token</a>.</td>
+        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
-        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto/access-api.html#retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
       </tr>
       <tr>
         <td><varname>correlation_ID</varname></td>
@@ -339,4 +338,4 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {:screen}
 
-    For a detailed description of the available parameters, see the {{site.data.keyword.hscrypto}} [REST API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+    For a detailed description of the available parameters, see the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.

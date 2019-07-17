@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-13"
+lastupdated: "2019-07-01"
 
 Keywords: details of the DELETE request, delete encryption key, deleting keys, Variable Description region
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
+{:external: target="_blank" .external}
 
 # Deleting keys
 {: #deleting-keys}
@@ -30,9 +31,9 @@ You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to delete
 
 If you prefer to delete your encryption keys by using a graphical interface, you can use the {{site.data.keyword.hscrypto}} GUI.
 
-[After you create or import your existing keys into the service](/docs/services/hs-crypto/create-root-keys.html), complete the following steps to delete a key:
+[After you create or import your existing keys into the service](/docs/services/hs-crypto?topic=hs-crypto-create-root-keys), complete the following steps to delete a key:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/){: new_window}.
+1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. Use the **Keys** table to browse the keys in your service.
@@ -47,10 +48,10 @@ After you delete a key, the key transitions to the _Destroyed_ state. Keys in th
 To delete a key and its contents, make a `DELETE` call to the following endpoint.
 
 ```
-https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
+https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 ```
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto/access-api.html).
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-set-up-api).
 
 2. Retrieve the ID of the key that you would like to delete.
 
@@ -60,7 +61,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 
     ```cURL
     curl -X DELETE \
-      https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID> \
+      https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID> \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
       -H 'prefer: <return_preference>'
@@ -75,7 +76,7 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>The region abbreviation, such as <code>us-south</code> or <code>eu-gb</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/services/hs-crypto/regions.html#endpoints">Regional service endpoints</a>.</td>
+        <td>The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-regions#endpoints">Regional service endpoints</a>.</td>
       </tr>
       <tr>
         <td><varname>key_ID</varname></td>
@@ -83,11 +84,11 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
-        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto/access-api.html#retrieve-token">Retrieving an access token</a>.</td>
+        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
-        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto/access-api.html#retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
       </tr>
       <tr>
         <td><varname>return_preference</varname></td>
@@ -126,4 +127,4 @@ https://<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     ```
     {: screen}
 
-    For a detailed description of the available parameters, see the {{site.data.keyword.hscrypto}} [REST API reference doc ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/hs-crypto){: new_window}.
+    For a detailed description of the available parameters, see the {{site.data.keyword.hscrypto}} [ key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.

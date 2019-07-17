@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-05"
+lastupdated: "2019-07-01"
 
 Keywords: IBM Key, data security, Hyper Protect Crypto Services, HSM
 
@@ -17,13 +17,14 @@ subcollection: hs-crypto
 {:pre: .pre}
 {:important: .important}
 
-# {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} overview
+# Overview
 {: #overview}
 
 Data and information security is crucial and essential for IT environments. As more and more data moves to the cloud, keeping data protected becomes a non-trivial challenge.  {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} offers cryptography with technology that has attained industry's highest security level to protect your data.
 {: shortdesc}
 
 ## Why {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?
+{: #why_hpcs}
 
 Built on IBM LinuxONE technology, {{site.data.keyword.hscrypto}} helps ensure that only you have access to your keys. A single-tenant key-management service with key vaulting provided by dedicated customer-controlled HSMs helps you create encryption keys with ease. Alternatively, you can bring your own encryption keys to manage. The managed cloud HSM supports industry standards, <!-- such as PKCS #11,--> so your applications can integrate cryptographic operations like digital signing and validation.
 

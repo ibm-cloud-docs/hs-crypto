@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-07-01"
 
 Keywords: troubleshoot, problems, known issues
 
@@ -20,8 +20,10 @@ subcollection: hs-crypto
 {:pre: .pre}
 {:tip: .tip}
 {:codeblock: .codeblock}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
+{:external: target="_blank" .external}
 
-# Troubleshooting
+# Troubleshooting for {{site.data.keyword.hscrypto}}
 {: #troubleshooting}
 
 General problems with using {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} might include providing the correct headers or credentials when you interact with the API. In many cases, you can recover from these problems by following a few easy steps.
@@ -29,6 +31,7 @@ General problems with using {{site.data.keyword.cloud}} {{site.data.keyword.hscr
 
 ## Error occurred when deleting an initialized service instance
 {: #troubleshoot-delete-instance}
+{: troubleshoot}
 
 You might receive an error similar to the following when you delete an initialized service instance:
 
@@ -52,6 +55,7 @@ ibmcloud tke cryptounit-zeroize
 
 ## Unauthorized token after running commands related to the Trusted Key Entry plug-in
 {: #troubleshoot-unauthorized-token}
+{: troubleshoot}
 
 You might receive messages similar to the following after you run a `tke` CLI commands:
 
@@ -74,6 +78,7 @@ Log in to {{site.data.keyword.cloud_notm}} again with the `ibmcloud login` comma
 
 ## Got `error CKR_IBM_WK_NOT_INITIALIZED` when using CLI or API
 {: #troubleshoot-error-CLI-API}
+{: troubleshoot}
 
 When you use CLI or API, you might got an error message similar to the following:
 
@@ -94,6 +99,7 @@ Make sure the HSM master key has been properly set.
 
 ## Unable to create or delete keys
 {: #unable-to-create-keys}
+{: troubleshoot}
 
 When you access the {{site.data.keyword.hscrypto}} user interface, you do not see the options to add or delete keys.
 
@@ -105,22 +111,23 @@ You can see a list of keys, but you do not see options to add or delete keys.
 You do not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions.
 {: tsCauses}
 
-Verify with your administrator that you are assigned the correct role in the applicable resource group or service instance. For more information about roles, see [Roles and permissions](/docs/services/key-protect/manage-access.html#roles).
+Verify with your administrator that you are assigned the correct role in the applicable resource group or service instance. For more information about roles, see [Roles and permissions](/docs/services/key-protect?topic=key-protect-manage-access#roles).
 {: tsResolve}
 
 ## Getting help and support
 {: #getting-help}
+{: troubleshoot}
 
 If you have problems or questions when you are using {{site.data.keyword.hscrypto}}, you can check {{site.data.keyword.cloud_notm}}, or get help by searching for information or by asking questions through a forum. You can also open a support ticket.
 {: shortdesc}
 
-You can check whether {{site.data.keyword.cloud_notm}} is available by going to the [status page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/status?tags=platform,runtimes,services).
+You can check whether {{site.data.keyword.cloud_notm}} is available by going to the [status page](https://cloud.ibm.com/status?tags=platform,runtimes,services).
 
 You can review the forums to see whether other users ran into the same problem. When you are using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.cloud_notm}} development teams.
 
-- If you have technical questions about {{site.data.keyword.hscrypto}}, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://stackoverflow.com/questions/tagged/hyper-protect-crypto){: new_window} and tag your question with  "ibm-cloud" and "hyper-protect-crypto".
-- For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/hyper-protect-crypto/){: new_window} forum. Include the "ibm-cloud" and "hyper-protect-crypto" tags.
+- If you have technical questions about {{site.data.keyword.hscrypto}}, post your question on [Stack Overflow](https://stackoverflow.com/questions/tagged/hyper-protect-crypto){: external} and tag your question with  "ibm-cloud" and "hyper-protect-crypto".
+- For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/hyper-protect-crypto){: external} forum. Include the "ibm-cloud" and "hyper-protect-crypto" tags.
 
-See [Getting help ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/get-support?topic=get-support-using-avatar#using-avatar){: new_window} for more details about using the forums.
+See [Getting help](/docs/get-support?topic=get-support-getting-customer-support){: external} for more details about using the forums.
 
-For more information about opening an {{site.data.keyword.IBM_notm}} support ticket, or about support levels and ticket severities, see [Contacting support ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/get-support?topic=get-support-getting-customer-support){: new_window}.
+For more information about opening an {{site.data.keyword.IBM_notm}} support ticket, or about support levels and ticket severities, see [Contacting support](/docs/get-support?topic=get-support-getting-customer-support){: external}.
