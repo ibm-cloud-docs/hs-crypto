@@ -26,7 +26,7 @@ You can use
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to secure your existing root keys by using the {{site.data.keyword.hscrypto}} GUI, or programmatically with the {{site.data.keyword.hscrypto}} API.
 {: shortdesc}
 
-Root keys are symmetric key-wrapping keys that are used to protect the security of encrypted data in the cloud. For more information about root keys, see [Envelope encryption](/docs/services/hs-crypto/envelope-encryption.html).
+Root keys are symmetric key-wrapping keys that are used to protect the security of encrypted data in the cloud. For more information about root keys, see [Envelope encryption](/docs/services/hs-crypto/hs-crypto?topic=hs-crypto-envelope-encryption).
 
 ## Importing root keys with the GUI
 {: #import-root-key-gui}
@@ -124,7 +124,7 @@ https://https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>The region abbreviation, such as <code>us-south</code> or <code>eu-gb</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/services/hs-crypto/regions.html#endpoints">Regional service endpoints</a>.</td>
+        <td>The region abbreviation, such as <code>us-south</code> or <code>eu-gb</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-regions#endpoints">Regional service endpoints</a>.</td>
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
@@ -132,7 +132,7 @@ https://https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
-        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-id">Retrieving an instance ID</a>.</td>
+        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
       </tr>
       <tr>
         <td><varname>correlation_ID</varname></td>

@@ -53,9 +53,9 @@ New as of: 2019-03-29
 
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}, which now supports three availability zones in a selected region, is a highly available service with automatic features that help keep your applications secure and operational.
 
-You can create {{site.data.keyword.hscrypto}} resources in the supported [{{site.data.keyword.cloud_notm}} regions](/docs/services/hs-crypto/regions.html), which represent the geographic area where your {{site.data.keyword.hscrypto}} requests are handled and processed. Each {{site.data.keyword.cloud_notm}} region contains [multiple availability zones](https://www.ibm.com/cloud/blog/announcements/expansion-availability-zones-global-regions) to meet local access, low latency, and security requirements for the region.
+You can create {{site.data.keyword.hscrypto}} resources in the supported [{{site.data.keyword.cloud_notm}} regions](/docs/services/hs-crypto?topic=hs-crypto-regions), which represent the geographic area where your {{site.data.keyword.hscrypto}} requests are handled and processed. Each {{site.data.keyword.cloud_notm}} region contains [multiple availability zones](https://www.ibm.com/cloud/blog/announcements/expansion-availability-zones-global-regions) to meet local access, low latency, and security requirements for the region.
 
-For more information, see [High availability and disaster recovery](/docs/services/hs-crypto/ha-dr.html).
+For more information, see [High availability and disaster recovery](/docs/services/hs-crypto?topic=hs-crypto-ha-dr).
 
 ### Scalability
 {: #scalability-new}
@@ -63,7 +63,7 @@ New as of: 2019-03-29
 
 The service instance can be scaled out to a maximum of six crypto units to meet your performance requirement. Each crypto unit can crypto-process 5000 keys. In a production environment, it is recommended to select at least two crypto units to enable high availability. By selecting three or more crypto units, these crypto units are distributed among three availability zones in the selected region.
 
-Read [Provisioning the service](/docs/services/hs-crypto/provision.html) for more information.
+Read [Provisioning the service](/docs/services/hs-crypto?topic=hs-crypto-provision) for more information.
 
 ## February 2019
 {: #Feb-2019}
@@ -85,7 +85,7 @@ New as of: 2018-12-19
 
 {{site.data.keyword.hscrypto}} now supports Keep Your Own Keys (KYOK) so that you have more control and authority over your data with encryption keys that you can keep, control, and manage. You can initialize and manage your service instance with {{site.data.keyword.cloud}} command-line interface (CLI).
 
-For more information, see [Initializing service instances to protect key storage](/docs/services/hs-crypto/initialize_hsm.html).
+For more information, see [Initializing service instances to protect key storage](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm).
 
 ### Added: Integration of {{site.data.keyword.keymanagementserviceshort}} API
 {: #kp-api}
@@ -93,7 +93,7 @@ New as of: 2018-12-19
 
 {{site.data.keyword.keymanagementserviceshort}} API is now integrated with Hyper Protect Crypto Services to generate and protect your keys. You can call the {{site.data.keyword.keymanagementserviceshort}} API directly through {{site.data.keyword.hscrypto}}.
 
-For more information, see [Setting up the APIs](/docs/services/hs-crypto/set-up-api.html) and [{{site.data.keyword.hscrypto}} key management API reference](https://{DomainName}/apidocs/hs-crypto){:external}.
+For more information, see [Setting up the APIs](/docs/services/hs-crypto?topic=hs-crypto-set-up-api) and [{{site.data.keyword.hscrypto}} key management API reference](https://{DomainName}/apidocs/hs-crypto){:external}.
 
 ### Deprecated: Function of accessing {{site.data.keyword.hscrypto}} through ACSP
 {: #deprecated-acsp}
