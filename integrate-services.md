@@ -45,7 +45,7 @@ After you [create an instance of the service](/docs/services/hs-crypto?topic=hs-
     </tr>
     <tr>
         <td>
-          <p>{{site.data.keyword.cloud_notm}} Block Storage for Virtual Private Cloud</p>
+          <p>{{site.data.keyword.cloud_notm}} {{site.data.keyword.blockstorageshort}} for Virtual Private Cloud</p>
         </td>
         <td>
           <p>Add [envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption) to your block storage volume by using {{site.data.keyword.hscrypto}}. Use root keys that you manage in {{site.data.keyword.hscrypto}} to protect the data encryption keys that encrypt your data at rest.</p>
@@ -54,7 +54,7 @@ After you [create an instance of the service](/docs/services/hs-crypto?topic=hs-
     </tr>
     <tr>
         <td>
-          <p>{{site.data.keyword.cloud_notm}} Virtual Private Cloud</p>
+          <p>{{site.data.keyword.cloud_notm}} {{site.data.keyword.BluVirtServers_short}} for Virtual Private Cloud</p>
         </td>
         <td>
           <p>Create an encrypted block storage volume when you create a virtual server instance by using {{site.data.keyword.hscrypto}}. Use root keys that you manage in {{site.data.keyword.hscrypto}} to protect the data encryption keys that encrypt your data at rest.</p>
