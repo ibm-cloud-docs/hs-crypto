@@ -119,8 +119,6 @@ Complete the following steps to add an existing key.
 
 From the {{site.data.keyword.hscrypto}} dashboard, you can inspect the general characteristics of your new keys.
 
-## What's next
-{: #get-started-next}
 
 ## What's next
 {: #get-started-next}
