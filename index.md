@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-07-25"
 
 Keywords: dedicated key management service, IBM Key, Key storage
 
@@ -22,7 +22,7 @@ subcollection: hs-crypto
 # Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
 {: #get-started}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}} for short) is a key management and cloud hardware security module (HSM). It is designed to enable you to take control of your cloud data encryption keys and cloud hardware security models, and is the only service in the industry built on FIPS 140-2 Level 4-certified hardware.
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}} for short) is a dedicated key management service and hardware security module (HSM). It is designed to enable you to take control of your cloud data encryption keys and cloud hardware security models, and is the only service in the industry built on FIPS 140-2 Level 4-certified hardware.
 {:shortdesc}
 
 {{site.data.keyword.hscrypto}} integrates with {{site.data.keyword.keymanagementservicefull_notm}} APIs to generate and encrypt keys. The Keep Your Own Keys (KYOK) function is also enabled by {{site.data.keyword.hscrypto}} to provide access to cryptographic hardware that is FIPS 140-2 Level 4 certified technology, the highest level attainable of security. {{site.data.keyword.hscrypto}} offers network addressable HSMs. <!-- and is accessible via PKCS#11 application programming interfaces (APIs) with several popular programming languages such as Java, JavaScript, Swift, and so on. You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client, which communicates with the ACSP server to enable you to access the backend cryptographic resources.--> For more information about {{site.data.keyword.hscrypto}}, see [{{site.data.keyword.hscrypto}} overview](/docs/services/hs-crypto?topic=hs-crypto-overview). For more information about security requirements for cryptographic modules, see [the specification of the NIST for FIPS 140-2 Level ![External link icon](image/external_link.svg "External link icon")](https://csrc.nist.gov/publications/detail/fips/140/2/final){:new_window}.
