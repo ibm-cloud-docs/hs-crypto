@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-12"
+lastupdated: "2019-08-02"
 
 Keywords: provision, instance of Hyper Protect Crypto Services
 
@@ -64,10 +64,35 @@ To provision an instance of {{site.data.keyword.hscrypto}} using the {{site.data
     If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the CLI output to generate a one-time passcode.
     {: tip}
 
-3. Run the following command to create a {{site.data.keyword.hscrypto}} instance:
+3. Select the region and resource group where you would like to create a {{site.data.keyword.hscrypto}} service instance. You can use the following command to set your target region and resource group.
 
+    ```sh
+    ibmcloud target -r <region_name> -g <resource_group_name>
     ```
-    ibmcloud resource service-instance-create <instance_name> hs-crypto standard <region> [-p '{"units": <number_of_crypto_units>}']
+    {: pre}
+
+    Replace the variables in the sample command according to the following table.
+
+    <table>
+      <tr>
+        <th>Variables</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>*region_name*</td>
+        <td>The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/services/hs-crypto?topic=hs-crypto-regions).</td>
+      </tr>
+      <tr>
+        <td>*resource_group_name*</td>
+        <td>The resource group where you organize and manage the instance. You can select the initial resource group that is named `Default` or other groups that you create. For more information, see [Creating and managing resource groups](/docs/resources?topic=resources-rgs).</td>
+      </tr>
+      <caption style="caption-side:bottom;">Table1. Describes command variables to set the target region and resource group</caption>
+    </table>
+
+4. Run the following command to create a {{site.data.keyword.hscrypto}} instance:
+
+    ```sh
+    ibmcloud resource service-instance-create <instance_name> hs-crypto standard <region_name> [-p '{"units": <number_of_crypto_units>}']
     ```
     {: pre}
 
@@ -83,19 +108,19 @@ To provision an instance of {{site.data.keyword.hscrypto}} using the {{site.data
         <td>Mandatory. The name of your {{site.data.keyword.hscrypto}} service instance.</td>
       </tr>
       <tr>
-        <td>*region*</td>
+        <td>*region_name*</td>
         <td>Mandatory. The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/services/hs-crypto?topic=hs-crypto-regions).</td>
       </tr>
       <tr>
         <td>*number_of_crypto_units*</td>
         <td>Optional. Multiple crypto units are distributed among different supported availability zones in the selected region to increase availability. You can specify one to three crypto units. In a production environment, it is recommended to select at least two crypto units to enable high availability. If you do not specify the number of crypto units, two crypto units are assigned by default.</td>
       </tr>
-      <caption style="caption-side:bottom;">Table1. Description of command variables to create a {{site.data.keyword.hscrypto}} service instance</caption>
+      <caption style="caption-side:bottom;">Table2. Describes command variables to create a {{site.data.keyword.hscrypto}} service instance</caption>
     </table>
 
-4. Verify the service instance is created successfully. Run the following command to get all the service instances you create. Check whether the {{site.data.keyword.hscrypto}} service instance is among the list.
+5. Verify the service instance is created successfully. Run the following command to get all the service instances you create. Check whether the {{site.data.keyword.hscrypto}} service instance is among the list.
 
-    ```
+    ```sh
     ibmcloud resource service-instances
     ```
     {: pre}
@@ -106,4 +131,4 @@ To provision an instance of {{site.data.keyword.hscrypto}} using the {{site.data
 
 * [Initialize your service instance](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm) so that {{site.data.keyword.hscrypto}} can provide key management and data management functions.
 * To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
-<!-- * To find out more about managing your data using the cloud HSM function of {{site.data.keyword.hscrypto}}, [check out the GREP11 API reference doc](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref).-->
+* To find out more about managing your data using the cloud HSM function of {{site.data.keyword.hscrypto}}, [check out the GREP11 API reference doc](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref).

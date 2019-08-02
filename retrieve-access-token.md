@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-08-02"
 
 keywords: access token, IAM token, generate access token, generate IAM token, get access token, get IAM token, IAM token API, IAM token CLI
 
@@ -40,14 +40,19 @@ You can use the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli
     If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the CLI output to generate a one-time passcode.
     {: note}
 
-2. Select the account, region, and resource group that contain your provisioned instance of {{site.data.keyword.hscrypto}}.
+3. Select the region and resource group where you would like to create a {{site.data.keyword.hscrypto}} service instance. You can use the following command to set your target region and resource group.
+
+    ```sh
+    ibmcloud target -r <region_name> -g <resource_group_name>
+    ```
+    {: pre}
 
 3. Run the following command to retrieve your Cloud IAM access token.
 
     ```sh
     ibmcloud iam oauth-tokens
     ```
-    {: codeblock}
+    {: pre}
 
     The following truncated example shows a retrieved IAM token.
 
@@ -63,20 +68,20 @@ You can also retrieve your access token programmatically by first creating a [se
 
 1. Log in to {{site.data.keyword.cloud_notm}} with the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
 
-    ```sh
-    ibmcloud login
-    ```
-    {: pre}
+  ```sh
+  ibmcloud login
+  ```
+  {: pre}
 
-    If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the CLI output to generate a one-time passcode.
-    {: note}
+  If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the CLI output to generate a one-time passcode.
+  {: note}
 
 2. Select the account, region, and resource group that contain your provisioned instance of {{site.data.keyword.hscrypto}}.
 
 3. Create a [service ID](/docs/iam?topic=iam-serviceids#creating-a-service-id) for your application.
 
   ```sh
-  ibmcloud iam service-id-create SERVICE_ID_NAME
+  ibmcloud iam service-id-create <service_ID_name>
                      [-d, --description DESCRIPTION]
   ```
   {: pre}
@@ -89,7 +94,7 @@ You can also retrieve your access token programmatically by first creating a [se
 5. Create a [service ID API key](/docs/iam?topic=iam-serviceidapikeys).
 
   ```sh
-  ibmcloud iam service-api-key-create API_KEY_NAME SERVICE_ID_NAME
+  ibmcloud iam service-api-key-create <API_key_name><service_ID_name>
                      [-d, --description DESCRIPTION]
                      [--file FILE_NAME]
   ```
@@ -99,16 +104,16 @@ You can also retrieve your access token programmatically by first creating a [se
 
 6. Call the [IAM Identity Services API](https://{DomainName}/apidocs/iam-identity-token-api) to retrieve your access token.
 
-    ```cURL
-    curl -X POST \
-      "https://iam.cloud.ibm.com/identity/token" \
-      -H "Content-Type: application/x-www-form-urlencoded" \
-      -H "Accept: application/json" \
-      -d "grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&apikey=<API_KEY>" > token.json
-    ```
-    {: codeblock}
+  ```cURL
+  curl -X POST \
+    "https://iam.cloud.ibm.com/identity/token" \
+    -H "Content-Type: application/x-www-form-urlencoded" \
+    -H "Accept: application/json" \
+    -d "grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&apikey=<API_key>" > token.json
+  ```
+  {: codeblock}
 
-    In the request, replace `<API_KEY>` with the API key that you created in the previous step. The following truncated example shows the contents of the `token.json` file:
+    In the request, replace `<API_key>` with the API key that you created in the previous step. The following truncated example shows the contents of the `token.json` file:
 
     ```
     {
