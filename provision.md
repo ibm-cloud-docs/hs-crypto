@@ -131,4 +131,3 @@ To provision an instance of {{site.data.keyword.hscrypto}} using the {{site.data
 
 * [Initialize your service instance](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm) so that {{site.data.keyword.hscrypto}} can provide key management and data management functions.
 * To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
-* To find out more about managing your data using the cloud HSM function of {{site.data.keyword.hscrypto}}, [check out the GREP11 API reference doc](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref).
