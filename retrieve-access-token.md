@@ -82,7 +82,7 @@ You can also retrieve your access token programmatically by first creating a [se
 
   ```sh
   ibmcloud iam service-id-create <service_ID_name>
-                     [-d, --description DESCRIPTION]
+                     [-d, --description <description>]
   ```
   {: pre}
 
@@ -94,9 +94,9 @@ You can also retrieve your access token programmatically by first creating a [se
 5. Create a [service ID API key](/docs/iam?topic=iam-serviceidapikeys).
 
   ```sh
-  ibmcloud iam service-api-key-create <API_key_name><service_ID_name>
-                     [-d, --description DESCRIPTION]
-                     [--file FILE_NAME]
+  ibmcloud iam service-api-key-create <API_key_name> <service_ID_name>
+                     [-d, --description <description>]
+                     [--file <file_name>]
   ```
   {: pre}
 
