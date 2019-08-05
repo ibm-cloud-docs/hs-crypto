@@ -34,7 +34,7 @@ After you [create an instance of the service](/docs/services/hs-crypto?topic=hs-
         <th>Service</th>
         <th>Description</th>
     </tr>
-    <tr>
+<!--    <tr>
         <td>
           <p>{{site.data.keyword.cos_full_notm}}</p>
         </td>
@@ -42,7 +42,7 @@ After you [create an instance of the service](/docs/services/hs-crypto?topic=hs-
           <p>Add [envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption) to your storage buckets by using {{site.data.keyword.hscrypto}}. Use root keys that you manage in {{site.data.keyword.hscrypto}} to protect the data encryption keys that encrypt your data at rest.</p>
           <p>Before using {{site.data.keyword.hscrypto}} instance as the root keys provider, make sure to [authorize access](/docs/iam?topic=iam-serviceauth) between {{site.data.keyword.cos_full_notm}} (source service) and {{site.data.keyword.hscrypto}} (target source). To learn more, check out [Manage encryption](/docs/services/cloud-object-storage?topic=cloud-object-storage-encryption).</p>
         </td>
-    </tr>
+    </tr> -->
     <tr>
         <td>
           <p>{{site.data.keyword.cloud_notm}} {{site.data.keyword.blockstorageshort}} for Virtual Private Cloud</p>
