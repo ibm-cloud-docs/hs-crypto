@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-08-07"
 
 Keywords: root keys, import keys, symmetric key, Hyper Protect Crypto Services GUI
 
@@ -82,7 +82,7 @@ After you [create an instance of the service](/docs/services/hs-crypto?topic=hs-
 Add your existing root key by making a `POST` call to the following endpoint.
 
 ```
-https://https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
+https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ```
 {: codeblock}
 
