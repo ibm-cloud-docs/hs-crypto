@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-15"
+lastupdated: "2019-08-18"
 
 Keywords: Hyper Protect Crypto Services, Keep Your Own Keys, VMware
 
@@ -49,3 +49,5 @@ As a single-tenant service, {{site.data.keyword.hscrypto}} offers dedicated cont
 ![VMware image protection with KYOK](image/byok_vm.png "VMware image protection with KYOK")
 
 *Figure 2. VMware image protection with KYOK*
+
+Check out the [overview video on IBM Cloud Hyper Protect Crypto Services and VMware on {{site.data.keyword.cloud_notm}} solutions](https://youtu.be/9n8-hQBMYWQ){: external} for more information. For a step-to-step tutorial, see [Use IBM Cloud Hyper Protect Crypto Services to encrypt VMware disks](https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/){: external} and the [demo video](https://youtu.be/huQ5wUfrW4c){: external}.

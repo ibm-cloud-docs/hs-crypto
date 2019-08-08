@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-07-01"
 
-Keywords: links, Hyper Protect Crypto Services, reference
+Keywords: links, Hyper Protect Crypto Services, reference, related information, related topics, related links, blogs, videos
 
 subcollection: hs-crypto
 
@@ -28,6 +28,8 @@ Additional resources to help you learn about managing encryption with {{site.dat
 ## Videos
 {: #videos}
 
+- [IBM Cloud Hyper Protect Crypto Services overview](https://youtu.be/0LiltyNMwgo){: external}
+- [Integrating IBM Cloud Hyper Protect Crypto Services with VMware on {{site.data.keyword.cloud_notm}}](https://youtu.be/huQ5wUfrW4c){: external}
 - [IBM Think 2019: Introduction to Z as a Service](https://www.ibm.com/events/think/watch/replay/120157283/){: external}
 - [IBM Think 2019: IBM Cloud Hyper Protect family and Secure Service Container](https://www.ibm.com/events/think/watch/replay/120171746/){: external}
 - [IBM Think 2019: IBM Cloud security](https://www.ibm.com/events/think/watch/replay/120118486/){: external}
@@ -43,6 +45,14 @@ Additional resources to help you learn about managing encryption with {{site.dat
 - [IBM Think 2019: Fueling Customer Success with VMware on the IBM Cloud](https://www.ibm.com/cloud/blog/security-innovation-and-choice-for-vmware-on-ibm-cloud){: external}
 
 ## More about IBM Hyper Protect services
-{: #related_services}
+{: #more_information}
 
 - [IBM Hyper Protect Services](https://www.ibm.com/cloud/hyper-protect-services){: external}
+
+Related {{site.data.keyword.IBM_notm}} Services
+{: #related_services}
+
+- [{{site.data.keyword.keymanagementserviceshort}}](/docs/services/key-protect){: external}
+- [{{site.data.keyword.ihsdbaas_mongodb_full}}](/docs/services/hyper-protect-dbaas-for-mongodb){: external}
+- [{{site.data.keyword.ihsdbaas_postgresql_full}}](/docs/services/hyper-protect-dbaas){: external}
+- [{{site.data.keyword.hpvs}}](/docs/services/hp-virtual-servers){: external}

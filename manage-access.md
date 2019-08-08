@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-07-01"
 
-Keywords: user access, Cloud IAM roles, encryption keys
+Keywords: user access, IBM Cloud IAM roles, encryption keys, user permissions, manage access
 
 subcollection: hs-crypto
 
@@ -27,11 +27,11 @@ subcollection: hs-crypto
 A good practice is to grant access permissions as you invite new users to your account or service. For example, consider the following guidelines:
 
 - **Enable user access to the resources in your account by assigning Cloud IAM roles.**
-    Rather than sharing your admin credentials, create new policies for users who need access to the encryption keys in your account. If you are the admin for your account, you are automatically assigned a _Manager_ policy with access to all resources under the account.
+    Rather than sharing your admin credentials, create new policies for users who need access to the encryption keys in your account. If you are the admin for your account, you are automatically assigned a *Manager* policy with access to all resources under the account.
 - **Grant roles and permissions at the smallest scope needed.**
-    For example, if a user needs to access only a high-level view of keys within a specified space, grant the _Reader_ role to the user for that space.
+    For example, if a user needs to access only a high-level view of keys within a specified space, grant the *Reader* role to the user for that space.
 - **Regularly audit who can manage access control and delete key resources.**
-    Remember that granting a _Manager_ role to a user means that the user can modify service policies for other users, in addition to destroying resources.
+    Remember that granting a *Manager* role to a user means that the user can modify service policies for other users, in addition to destroying resources.
 
 ## Roles and permissions
 {: #roles}
@@ -92,7 +92,7 @@ The following table shows how identity and access roles map to {{site.data.keywo
 
 To learn more about {{site.data.keyword.iamshort}}, check out [User roles and permissions](/docs/iam?topic=iam-userroles#userroles).
 
-### What's next
+## What's next
 {: #manage-access-next}
 
 Account owners and admins can invite users and set service policies that correspond to the {{site.data.keyword.hscrypto}} actions the users can perform.

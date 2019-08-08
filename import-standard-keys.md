@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-07-01"
 
-Keywords: standard keys, import keys, encryption keys, Hyper Protect Crypto Services GUI
+Keywords: standard keys, import keys, encryption keys, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key, standard key API examples
 
 subcollection: hs-crypto
 
@@ -68,10 +68,10 @@ You can add your existing encryption keys with the {{site.data.keyword.hscrypto}
 
 5. When you are finished filling out the key's details, click **Import key** to confirm.
 
-## Creating standard keys with the API
-{: #create-standard-key-api}
+## Importing standard keys with the API
+{: #import-standard-key-api}
 
-Create a standard key by making a `POST` call to the following endpoint:
+Import a standard key by making a `POST` call to the following endpoint:
 
 ```
 https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
@@ -193,7 +193,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     {: codeblock}
 
 
-### What's next
+## What's next
 {: #import-standard-key-next}
 
 To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.

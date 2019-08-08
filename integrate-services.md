@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-18"
+lastupdated: "2019-08-06"
 
 keywords: Hyper Protect Crypto Services integration, integrate service with Hyper Protect Crypto Services
 
@@ -40,7 +40,7 @@ After you [create an instance of the service](/docs/services/hs-crypto?topic=hs-
         </td>
         <td>
           <p>Add [envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption) to your storage buckets by using {{site.data.keyword.hscrypto}}. Use root keys that you manage in {{site.data.keyword.hscrypto}} to protect the data encryption keys that encrypt your data at rest.</p>
-          <p>Before using {{site.data.keyword.hscrypto}} instance as the root keys provider, make sure to [authorize access](/docs/iam?topic=iam-serviceauth) between {{site.data.keyword.cos_full_notm}} (source service) and {{site.data.keyword.hscrypto}} (target source). To learn more, check out [Manage encryption](/docs/services/cloud-object-storage?topic=cloud-object-storage-encryption).</p>
+          <p>Before using {{site.data.keyword.hscrypto}} instance as the root keys provider, make sure to <a href="/docs/iam?topic=iam-serviceauth" target="_blank">authorize access <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a> between {{site.data.keyword.cos_full_notm}} (source service) and {{site.data.keyword.hscrypto}} (target source). To learn more, check out <a href="/docs/services/cloud-object-storage?topic=cloud-object-storage-encryption" target="_blank">Manage encryption <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a>.</p>
         </td>
     </tr> -->
     <tr>
@@ -49,7 +49,7 @@ After you [create an instance of the service](/docs/services/hs-crypto?topic=hs-
         </td>
         <td>
           <p>Add [envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption) to your block storage volume by using {{site.data.keyword.hscrypto}}. Use root keys that you manage in {{site.data.keyword.hscrypto}} to protect the data encryption keys that encrypt your data at rest.</p>
-          <p>Before using {{site.data.keyword.hscrypto}} instance as the root keys provider, make sure to [authorize access](/docs/iam?topic=iam-serviceauth) between {{site.data.keyword.blockstorageshort}} (source service) and {{site.data.keyword.hscrypto}} (target source). To learn more, check out [Creating block storage volumes with customer-managed encryption](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).</p>
+          <p>Before using {{site.data.keyword.hscrypto}} instance as the root keys provider, make sure to <a href="/docs/iam?topic=iam-serviceauth" target="_blank">authorize access <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a> between {{site.data.keyword.blockstorageshort}} (source service) and {{site.data.keyword.hscrypto}} (target source). To learn more, check out <a href="/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption" target="_blank">Creating block storage volumes with customer-managed encryption <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a>.</p>
         </td>
     </tr>
     <tr>
@@ -58,7 +58,7 @@ After you [create an instance of the service](/docs/services/hs-crypto?topic=hs-
         </td>
         <td>
           <p>Create an encrypted block storage volume when you create a virtual server instance by using {{site.data.keyword.hscrypto}}. Use root keys that you manage in {{site.data.keyword.hscrypto}} to protect the data encryption keys that encrypt your data at rest.</p>
-          <p>Before using {{site.data.keyword.hscrypto}} instance as the root keys provider, make sure to [authorize access](/docs/iam?topic=iam-serviceauth) between {{site.data.keyword.blockstorageshort}} (source service) and {{site.data.keyword.hscrypto}} (target source). To learn more, check out [Creating virtual server instances with customer-managed encryption](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-instances-byok).</p>
+          <p>Before using {{site.data.keyword.hscrypto}} instance as the root keys provider, make sure to <a href="/docs/iam?topic=iam-serviceauth" target="_blank">authorize access <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a> between {{site.data.keyword.blockstorageshort}} (source service) and {{site.data.keyword.hscrypto}} (target source). To learn more, check out <a href="/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-instances-byok" target="_blank">Creating virtual server instances with customer-managed encryption <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a>.</p>
         </td>
     </tr>
     <tr>
@@ -66,11 +66,12 @@ After you [create an instance of the service](/docs/services/hs-crypto?topic=hs-
           <p>Key Management Interoperability Protocol (KMIP) for VMware on {{site.data.keyword.cloud_notm}}</p>
         </td>
         <td>
-          <p>Use {{site.data.keyword.hscrypto}} to provide highly secured key management capability for {{site.data.keyword.vmwaresolutions_full_notm}}. To learn more, check out [KMIP for VMware on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations).</p>
+          <p>Use {{site.data.keyword.hscrypto}} to provide highly secured key management capability for {{site.data.keyword.vmwaresolutions_full_notm}}. To learn more, check out <a href="/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations" target="_blank">KMIP for VMware on {{site.data.keyword.cloud_notm}} overview <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a> and the <a href="https://youtu.be/9n8-hQBMYWQ" target="_blank">overview video on IBM Cloud Hyper Protect Crypto Services and VMware on {{site.data.keyword.cloud_notm}} solutions <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a>.</p>
+          <p>For detailed tutorials, see <a href="https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/" target="_blank">Use IBM Cloud Hyper Protect Crypto Services to encrypt VMware disks <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a> and the <a href="https://youtu.be/huQ5wUfrW4c" target="_blank">demo video <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a>.</p>
         </td>
     </tr>
 
-    <!--
+<!--
     <tr>
         <td>
           <p>{{site.data.keyword.containerlong_notm}}</p>
@@ -95,7 +96,7 @@ After you [create an instance of the service](/docs/services/hs-crypto?topic=hs-
           <p>Strengthen your encryption at rest strategy by associating root keys with your {{site.data.keyword.cloudant_short_notm}} Dedicated Hardware instance. To learn more, check out the [{{site.data.keyword.cloudant_short_notm}} documentation](/docs/services/Cloudant/offerings?topic=cloudant-security#secure-access-control).</p>
         </td>
     </tr>
-    -->
+-->
 
     <caption style="caption-side:bottom;">Table 1. Describes the integrations that are available for {{site.data.keyword.hscrypto}}</caption>
 </table>
@@ -108,7 +109,7 @@ When you integrate a supported service with {{site.data.keyword.hscrypto}}, you 
 
 For example, you can create a root key, manage the key in {{site.data.keyword.hscrypto}}, and use the root key to protect the data that is stored across different cloud services.
 
-![The diagram shows a contextual view of your {{site.data.keyword.hscrypto}} integration.](image/hpcs-integrations.png)
+![The diagram shows a contextual view of your {{site.data.keyword.hscrypto}} integration.](/image/hpcs-integrations.png)
 
 ### {{site.data.keyword.hscrypto}} API methods
 {: #envelope-encryption-api-methods}

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="hs-crypto" category="security" audience="service" arm="3917560" href="/docs/services/hs-crypto/index.html" path="services/hs-crypto"}
+{: .toc subcollection="hs-crypto" category="security" audience="service" arm="3917560" href="/docs/services/hs-crypto?topic=hs-crypto-get-started" path="services/hs-crypto"}
 IBM Cloud Hyper Protect Crypto Services
 
     {: .navgroup id="learn"}
@@ -13,13 +13,18 @@ IBM Cloud Hyper Protect Crypto Services
 
     {: .topicgroup}
     About IBM Cloud Hyper Protect Crypto Services
+        [Video: IBM Cloud Hyper Protect Crypto Services overview](https://youtu.be/0LiltyNMwgo)
         overview.md
         use_case.md
         service_instance_concepts.md
         envelope-encryption.md
         keys_intro.md
-
     integrate-services.md
+
+    {: .topicgroup}
+    Tutorials
+        [Using IBM Cloud Hyper Protect Crypto Services to encrypt VMware disks](https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/)
+
     whats_new.md
     {: .navgroup-end}
 
@@ -35,14 +40,13 @@ IBM Cloud Hyper Protect Crypto Services
 
     set-up-cli.md
 
-
     {: .topicgroup}
-    Creating root keys and standard keys
+    Creating keys
         create-root-keys.md
         create-standard-keys.md
 
     {: .topicgroup}
-    Importing root keys and standard keys
+    Importing keys
         import-root-keys.md
         import-standard-keys.md
 
@@ -55,14 +59,25 @@ IBM Cloud Hyper Protect Crypto Services
         delete-keys.md
     {: .navgroup-end}
 
+
     {: .navgroup id="reference"}
-    [Hyper Protect Crypto Services API reference](https://{DomainName}/apidocs/hs-crypto)
+    {: .topicgroup}
+    API references
+        [Key management API reference](https://{DomainName}/apidocs/hs-crypto)
     /hs-crypto-cli-plugin/hs-crypto-tke_cli_plugin
     regions.md
+
+    {: .topicgroup}
+    User access permissions
+        manage-access.md
+        manage-access-api.md
+
     at-events.md
-    ha-dr.md
-    [Key Protect](/services/key-protect/key-protect-getting-started-tutorial)
-    [Hyper Protect DBaaS](/services/hyper-protect-dbaas/hyper-protect-dbaas-gettingstarted)
+
+    {: .topicgroup}
+    Data security
+        ha-dr.md
+
     related-links.md
     {: .navgroup-end}
 

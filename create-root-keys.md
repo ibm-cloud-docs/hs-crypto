@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-07-01"
 
-Keywords: root keys, create root keys, Hyper Protect Crypto Services GUI, symmetric key
+Keywords: root keys, create root keys, Hyper Protect Crypto Services GUI, symmetric key, create key-wrapping key, create CRK, create CMK, create customer key, key-wrapping key, root key API examples
 
 subcollection: hs-crypto
 ---
@@ -171,7 +171,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 After you create a root key with the service, the key stays within the bounds of {{site.data.keyword.hscrypto}}, and its key material cannot be retrieved.
 {: note}
 
-### What's next
+## What's next
 {: #root-key-next}
 
 - To find out more about protecting keys with envelope encryption, check out [Wrapping keys](/docs/services/hs-crypto?topic=hs-crypto-wrap-keys).
