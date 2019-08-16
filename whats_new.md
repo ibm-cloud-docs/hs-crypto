@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-13"
+lastupdated: "2019-08-16"
 
 Keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -39,7 +39,7 @@ For more information on the GREP11 API, see [EP11 introduction](/docs/services/h
 
 ### Added: {{site.data.keyword.hscrypto}} adds support for private endpoints
 {: #added-private-endpoints}
-New as of: 2019-08-15
+New as of: 2019-08-16
 
 You can now connect to {{site.data.keyword.hscrypto}} over the {{site.data.keyword.cloud_notm}} private network by targeting a private endpoint for the service.
 
@@ -51,7 +51,7 @@ To get started, enable [virtual routing and forwarding (VRF) and service endpoin
 ### Added: {{site.data.keyword.hscrypto}} expands into the Frankfurt region
 {: #added-frankfurt-region}
 
-New as of: 2019-08-15
+New as of: 2019-08-16
 
 You can now create {{site.data.keyword.hscrypto}} resources in the Frankfurt region.
 
@@ -60,7 +60,7 @@ For more information, see [Regions and locations](/docs/services/hs-crypto?topic
 ### Added: {{site.data.keyword.cloud_notm}} service integration
 {: #added-service-integration}
 
-New as of: 2019-08-15
+New as of: 2019-08-16
 
 {{site.data.keyword.hscrypto}} can now be integrated with several {{site.data.keyword.cloud_notm}} services. For more information, see [Integrating services](/docs/services/hs-crypto?topic=hs-crypto-integrate-services). 
 
