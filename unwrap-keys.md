@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-07-01"
 
-Keywords: data encryption key, original key material, unwrap call
+Keywords: data encryption key, original key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, envelope encryption API examples
 
 subcollection: hs-crypto
 
@@ -36,7 +36,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=
 ```
 {: codeblock}
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-set-up-api).
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
 2. Copy the ID of the root key that you used to perform the initial wrap request.
 

@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-07-01"
 
-Keywords: details of the DELETE request, delete encryption key, deleting keys, Variable Description region
+Keywords: details of the DELETE request, delete encryption key, deleting keys, Variable Description region, delete key API examples
 
 subcollection: hs-crypto
 
@@ -51,7 +51,7 @@ To delete a key and its contents, make a `DELETE` call to the following endpoint
 https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 ```
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-set-up-api).
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
 2. Retrieve the ID of the key that you would like to delete.
 

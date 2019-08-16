@@ -62,12 +62,13 @@ The following table shows how identity and access roles map to {{site.data.keywo
   </tr>
   <tr>
     <td><p>Writer</p></td>
-    <td><p>A writer can create keys, modify keys, and access key material.</p></td>
+    <td><p>A writer can create keys, modify keys, rotate keys, and access key material.</p></td>
     <td>
       <p>
         <ul>
           <li>Create keys</li>
           <li>View keys</li>
+          <li>Rotate keys</li>
           <li>Wrap keys</li>
           <li>Unwrap keys</li>
         </ul>
@@ -97,5 +98,4 @@ To learn more about {{site.data.keyword.iamshort}}, check out [User roles and pe
 
 Account owners and admins can invite users and set service policies that correspond to the {{site.data.keyword.hscrypto}} actions the users can perform.
 
-- For more information about assigning user roles in the {{site.data.keyword.cloud_notm}} UI, see [Managing IAM access](/docs/iam?topic=iam-iammanidaccser).
-- To learn about granting advanced permissions to access specific encryption keys, see [Managing access to keys](/docs/services/hs-crypto?topic=hs-crypto-manage-access-api).
+For more information about assigning user roles in the {{site.data.keyword.cloud_notm}} UI, see [Managing IAM access](/docs/iam?topic=iam-iammanidaccser).

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-13"
 
-Keywords: release note, new
+Keywords: release note, new, changelog, what's new, service updates, service bulletin
 
 subcollection: hs-crypto
 
@@ -14,6 +14,7 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
+{:note: .note}
 {:pre: .pre}
 {:external: target="_blank" .external}
 
@@ -23,12 +24,52 @@ subcollection: hs-crypto
 Stay up-to-date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+## August 2019
+{: #August-2019}
+
+<!-- ### Added: {{site.data.keyword.hscrypto}} Cloud HSM now supports EP11 cryptographic operations over gRPC
+{: #added-EP11}
+New as of: 2019-08-15
+
+The managed cloud Hardware Security Module (HSM) supports Enterprise Public-Key Cryptography Standards (PKCS) #11, so your applications can integrate cryptographic operations like digital signing and validation via Enterprise PKCS#11 (EP11) API. The EP11 library provides an interface very similar to the industry-standard PKCS #11 API.
+
+{{site.data.keyword.hscrypto}} provides a set of Enterprise PKCS #11 (EP11) APIs over gRPC calls (also referred to as *GREP11*), with which, all the Crypto functions are executed in HSM on cloud. GREP11 is designed to be a stateless interface for cloud programs.
+
+For more information on the GREP11 API, see [EP11 introduction](/docs/services/hs-crypto/hs-crypto?topic=hs-crypto-enterprise_PKCS11_overview) and [GREP11 API reference](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref). -->
+
+### Added: {{site.data.keyword.hscrypto}} adds support for private endpoints
+{: #added-private-endpoints}
+New as of: 2019-08-15
+
+You can now connect to {{site.data.keyword.hscrypto}} over the {{site.data.keyword.cloud_notm}} private network by targeting a private endpoint for the service.
+
+To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your infrastructure account. For more information, see [Using private endpoints](/docs/services/hs-crypto?topic=hs-crypto-private-endpoints).
+
+<!-- The private endpoint is currently only available for the key management service.
+{: note} -->
+
+### Added: {{site.data.keyword.hscrypto}} expands into the Frankfurt region
+{: #added-frankfurt-region}
+
+New as of: 2019-08-15
+
+You can now create {{site.data.keyword.hscrypto}} resources in the Frankfurt region.
+
+For more information, see [Regions and locations](/docs/services/hs-crypto?topic=hs-crypto-regions).
+
+### Added: {{site.data.keyword.cloud_notm}} service integration
+{: #added-service-integration}
+
+New as of: 2019-08-15
+
+{{site.data.keyword.hscrypto}} can now be integrated with several {{site.data.keyword.cloud_notm}} services. For more information, see [Integrating services](/docs/services/hs-crypto?topic=hs-crypto-integrate-services). 
+
 ## June 2019
 {: #June-2019}
 
 ### Added: {{site.data.keyword.hscrypto}} expands into Sydney region
 {: #added-sydney-region}
-New as of: 2019-06-28
+New as of: 2019-06-26
 
 You can now create {{site.data.keyword.hscrypto}} resources in the Sydney region.
 
@@ -45,7 +86,7 @@ As of March 29, 2019, provisioning new Hyper Protect Crypto Services Beta instan
 
 <!-- See [Migrating keys from a Beta service instance](/docs/services/hs-crypto/transition-keys.html) for information on migrating keys to a production service instance. -->
 
-For more information about the {{site.data.keyword.hscrypto}} offering, see the [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} home page](https://www.ibm.com/cloud/hyper-protect-crypto){:external}.
+For more information about the {{site.data.keyword.hscrypto}} offering, see the [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} home page](https://www.ibm.com/cloud/hyper-protect-crypto){: external}.
 
 ### High availability and disaster recovery
 {: #ha-dr-new}
@@ -93,7 +134,7 @@ New as of: 2018-12-19
 
 {{site.data.keyword.keymanagementserviceshort}} API is now integrated with Hyper Protect Crypto Services to generate and protect your keys. You can call the {{site.data.keyword.keymanagementserviceshort}} API directly through {{site.data.keyword.hscrypto}}.
 
-For more information, see [Setting up the APIs](/docs/services/hs-crypto?topic=hs-crypto-set-up-api) and [{{site.data.keyword.hscrypto}} key management API reference](https://{DomainName}/apidocs/hs-crypto){:external}.
+For more information, see [Setting up the key management APIs](/docs/services/hs-crypto?topic=hs-crypto-set-up-kms-api) and [{{site.data.keyword.hscrypto}} key management API reference](https://{DomainName}/apidocs/hs-crypto){: external}.
 
 ### Deprecated: Function of accessing {{site.data.keyword.hscrypto}} through ACSP
 {: #deprecated-acsp}

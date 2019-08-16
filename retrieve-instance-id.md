@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-08-06"
 
 keywords: instance ID, get instance ID, get instance GUID, instance ID API, instance ID CLI
 
@@ -53,7 +53,13 @@ You can also retrieve the instance ID for your service instance by using the [{{
     If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the CLI output to generate a one-time passcode.
     {: note}
 
-2. Select the account, region, and resource group that contain your provisioned instance of {{site.data.keyword.hscrypto}}.
+2. Select the region and resource group that contain your provisioned instance of {{site.data.keyword.hscrypto}}. You can use the following command to set your target region and resource group.
+
+    ```sh
+    ibmcloud target -r <region_name> -g <resource_group_name>
+    ```
+    {: pre}
+
 
 3. Retrieve the Cloud Resource Name (CRN) that uniquely identifies your {{site.data.keyword.hscrypto}} service instance.
 
@@ -69,18 +75,18 @@ You can also retrieve the instance ID for your service instance by using the [{{
     ```
     {: screen}
 
-    The _42454b3b-5b06-407b-a4b3-34d9ef323901_ value is an example instance ID.
+    The `42454b3b-5b06-407b-a4b3-34d9ef323901` value is an example instance ID.
 
 
 ## Retrieving an instance ID with the API
 {: #retrieve-instance-ID-api}
 
-You might want to retrieve the instance ID programmatically to help you build and connect your application. You can call the [{{site.data.keyword.cloud_notm}} Resource Controller API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/resource-controller), and then pipe the JSON output to `jq` to extract this value.
+You might want to retrieve the instance ID programmatically to help you build and connect your application. You can call the [{{site.data.keyword.cloud_notm}} Resource Controller API](https://{DomainName}/apidocs/resource-controller){: external}, and then pipe the JSON output to `jq` to extract this value.
 
 1. [Retrieve an {{site.data.keyword.cloud_notm}} IAM access token](/docs/services/hs-crypto?topic=hs-crypto-retrieve-access-token).
 2. Call the [Resource Controller API](https://{DomainName}/apidocs/resource-controller){: external} to retrieve your instance ID.
 
-    ```sh
+    ```curl
     curl -X GET \
     https://resource-controller.cloud.ibm.com/v2/resource_instances \
     -H 'Authorization: Bearer <access_token>' | jq -r '.resources[] | select(.name | contains("<instance_name>")) | .guid'

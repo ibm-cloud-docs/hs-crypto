@@ -71,7 +71,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ```
 {: codeblock}
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-set-up-api).
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
 2. Call the [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto){: external} with the following cURL command.
 

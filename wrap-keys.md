@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-07-01"
 
-Keywords: root key, data encryption key, Hyper Protect Crypto Services
+Keywords: root key, wrap key, encrypt data encryption key, protect data encryption key, envelope encryption API examples
 
 subcollection: hs-crypto
 
@@ -45,7 +45,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
 ```
 {: codeblock}
 
-1. [Retrieve your service and authentication credentials to work with keys in the service.](/docs/services/hs-crypto?topic=hs-crypto-set-up-api)
+1. [Retrieve your service and authentication credentials to work with keys in the service.](/docs/services/hs-crypto?topic=hs-crypto-set-up-kms-api)
 
 2. Copy the key material of the DEK that you want to manage and protect.
 

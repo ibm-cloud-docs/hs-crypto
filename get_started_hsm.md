@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-07-01"
 
-Keywords: key storage, service instance, HSM, hardware security module
+Keywords: key storage, service instance, HSM, hardware security module, key ceremony, getting started, code example
 
 subcollection: hs-crypto
 
@@ -22,7 +22,7 @@ subcollection: hs-crypto
 # Getting started with service instance initialization
 {: #get-started-hsm}
 
-<!-- Master keys protect the contents of key storage in a host logical partition.--> This tutorial shows you how to initialize the service instance by loading the master keys to protect your key storage with the Trusted Key Entry plug-in. After you initialize the service instance, you can start managing your root keys.   
+This tutorial shows you how to initialize the service instance by loading the master keys to protect your key storage with the Trusted Key Entry plug-in. After you initialize the service instance, you can start managing your root keys.   
 {:shortdesc}
 
 ## Prerequisite

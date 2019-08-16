@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-07-01"
 
-Keywords: troubleshoot, problems, known issues
+Keywords: troubleshoot, problems, known issues, can't delete service, can't use Hyper Protect Crypto Services, can't create key, can't delete key
 
 subcollection: hs-crypto
 

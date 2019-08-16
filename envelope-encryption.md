@@ -59,7 +59,7 @@ Envelope encryption also wraps root keys that are managed in a service instance 
 
 The following diagram shows a contextual view of the key wrapping functionality.
 
-![The diagram shows a contextual view of envelope encryption.](image/envelope-encryption.png "The diagram shows a contextual view of envelope encryption.")
+![The diagram shows a contextual view of envelope encryption.](/image/envelope-encryption.png "The diagram shows a contextual view of envelope encryption.")
 *Figure 1. Contextual view of envelope encryption*
 
 Envelope encryption is treated briefly in the NIST Special Publication 800-57, Recommendation for Key Management. To learn more, see [NIST SP 800-57 Pt. 1 Rev. 4.](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0){: external}
@@ -85,7 +85,7 @@ Root keys help you group, manage, and protect data encryption keys (DEKs) stored
 
 After you designate a root key in {{site.data.keyword.hscrypto}}, you can send a key wrap request to the service by using the {{site.data.keyword.hscrypto}} API. The key wrap operation provides both confidentiality and integrity protection for a DEK. The following diagram shows the key wrapping process in action.
 
-![Wrapping data](image/wrapping-keys.png "The diagram shows key wrapping in action.")
+![Wrapping data](/image/wrapping-keys.png "The diagram shows key wrapping in action.")
 *Figure 2. Wrapping data*
 
 The following table describes the inputs needed to perform a key wrap operation:
@@ -113,7 +113,7 @@ Unwrapping a data encryption key (DEK) decrypts and authenticates the contents w
 If your business application needs to access the contents of your wrapped DEKs, you can use the {{site.data.keyword.hscrypto}} API to send an unwrap request to the service. To unwrap a DEK, you specify the ID value of the root key and the `ciphertext` value returned during the initial wrap request. To complete the unwrap request, you must also supply the additional authenticated data (AAD) to check the integrity of the key contents.
 
 The following diagram shows key unwrapping in action.
-![Unwrapping data](image/unwrapping-keys.png "Unwrapping data")
+![Unwrapping data](/image/unwrapping-keys.png "Unwrapping data")
 *Figure 3. Unwrapping data*
 
 After you send the unwrap request, the system reverses the key wrapping process by using the same AES algorithms. A successful unwrap operation returns the base64 encoded `plaintext` value to your {{site.data.keyword.cloud_notm}} data at rest service.

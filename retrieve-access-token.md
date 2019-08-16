@@ -40,7 +40,7 @@ You can use the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli
     If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the CLI output to generate a one-time passcode.
     {: note}
 
-3. Select the region and resource group where you would like to create a {{site.data.keyword.hscrypto}} service instance. You can use the following command to set your target region and resource group.
+2. Select the region and resource group where you would like to create a {{site.data.keyword.hscrypto}} service instance. You can use the following command to set your target region and resource group.
 
     ```sh
     ibmcloud target -r <region_name> -g <resource_group_name>
@@ -76,7 +76,12 @@ You can also retrieve your access token programmatically by first creating a [se
   If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the CLI output to generate a one-time passcode.
   {: note}
 
-2. Select the account, region, and resource group that contain your provisioned instance of {{site.data.keyword.hscrypto}}.
+2. Select the region and resource group where you would like to create a {{site.data.keyword.hscrypto}} service instance. You can use the following command to set your target region and resource group.
+
+    ```sh
+    ibmcloud target -r <region_name> -g <resource_group_name>
+    ```
+    {: pre}
 
 3. Create a [service ID](/docs/iam?topic=iam-serviceids#creating-a-service-id) for your application.
 
@@ -126,7 +131,7 @@ You can also retrieve your access token programmatically by first creating a [se
     ```
     {: screen}
 
-    Use the full `access_token` value, prefixed by the _Bearer_ token type, to programmatically manage keys for your service using the {{site.data.keyword.hscrypto}} API. To see an example {{site.data.keyword.hscrypto}} API request, check out [Forming your key management API request](/docs/services/hs-crypto?topic=hs-crypto-set-up-api#form-kms-api-request).
+    Use the full `access_token` value, prefixed by the _Bearer_ token type, to programmatically manage keys for your service using the {{site.data.keyword.hscrypto}} API. To see an example {{site.data.keyword.hscrypto}} API request, check out [Forming your key management API request](/docs/services/hs-crypto?topic=hs-crypto-set-up-kms-api#form-kms-api-request).
 
     Access tokens are valid for 1 hour, but you can regenerate them as needed. To maintain access to the service, regenerate the access token for your API key on a regular basis by calling the [IAM Identity Services API](https://{DomainName}/apidocs/iam-identity-token-api).   
     {: note }

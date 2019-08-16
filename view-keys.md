@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-07-09"
 
-Keywords: view keys, key configuration, key type
+Keywords: view keys, key configuration, key type, list encryption keys, view encryption key, retrieve encryption key, retrieve key API examples
 
 subcollection: hs-crypto
 
@@ -83,7 +83,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ```
 {: codeblock}
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-set-up-api).
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
 2. Run the following cURL command to view general characteristics about your keys.
 
@@ -258,7 +258,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 ```
 {: codeblock}
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-set-up-api).
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
 2. Retrieve the ID of the key you would like to access or manage.
 

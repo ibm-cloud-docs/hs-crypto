@@ -28,7 +28,7 @@ A {{site.data.keyword.hscrypto}} instance (service instance for short) is a grou
 
 The following diagram illustrates a services instance with two crypto units.
 
-![Service instance components](image/service_instance.png "Service instance components")
+![Service instance components](/image/service_instance.png "Service instance components")
 *Figure 1. Service instance components*
 
 ## Hardware security module
@@ -82,5 +82,5 @@ Each crypto unit has two master key registers: a new master key register and a c
 
 The following diagram illustrates how the master key register state changes, and how the master key is loaded.
 
-![Loading master keys](image/master_key_register.png "How to load a master key")
+![Loading master keys](/image/master_key_register.png "How to load a master key")
 *Figure 1. Loading master keys*  

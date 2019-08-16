@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-07-01"
 
-Keywords: root keys, Rotate key, key rotation
+Keywords: root keys, rotate key, key rotation, rotate encryption key, encryption key rotation, rotate key API examples
 
 subcollection: hs-crypto
 
@@ -59,7 +59,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
 ```
 {: codeblock}
 
-1. [Retrieve your service and authentication credentials to work with keys in the service.](/docs/services/hs-crypto?topic=hs-crypto-set-up-api)
+1. [Retrieve your service and authentication credentials to work with keys in the service.](/docs/services/hs-crypto?topic=hs-crypto-set-up-kms-api)
 
 2. Copy the ID of the root key that you want to rotate.
 

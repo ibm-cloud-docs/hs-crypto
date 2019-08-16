@@ -33,12 +33,13 @@ IBM Cloud Hyper Protect Crypto Services
     initialize_hsm.md
 
     {: .topicgroup}
-    Accessing the APIs
-        set-up-api.md
+    Accessing the key management and GREP11 APIs
+        set-up-kms-api.md
         retrieve-access-token.md
         retrieve-instance-id.md
 
     set-up-cli.md
+    crypto-private-network.md
 
     {: .topicgroup}
     Creating keys
@@ -61,17 +62,10 @@ IBM Cloud Hyper Protect Crypto Services
 
 
     {: .navgroup id="reference"}
-    {: .topicgroup}
-    API references
-        [Key management API reference](https://{DomainName}/apidocs/hs-crypto)
+    [Key management API reference](https://{DomainName}/apidocs/hs-crypto)
     /hs-crypto-cli-plugin/hs-crypto-tke_cli_plugin
     regions.md
-
-    {: .topicgroup}
-    User access permissions
-        manage-access.md
-        manage-access-api.md
-
+    manage-access.md
     at-events.md
 
     {: .topicgroup}

@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-07-10"
 
-Keywords: key storage, HSM, hardware security module
+Keywords: key storage, HSM, hardware security module, key ceremony, load master key, master key register, initialize Hyper Protect Crypto Services instance
 
 subcollection: hs-crypto
 
@@ -30,7 +30,7 @@ For an introduction to service instance initialization and other concepts, see [
 
 The following diagram gives you an overview of steps you need to take to initialize the service instance. Click each step on the diagram for detailed instructions.
 
-<img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="image/hsm_initialization_flow.png" width="750" alt="Click each step to get more details on the flow." style="width:750px;" />
+<img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="/image/hsm_initialization_flow.png" width="750" alt="Click each step to get more details on the flow." style="width:750px;" />
 <map name="home_map1" id="home_map1">
 <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Verify API endpoint" title="Verify API endpoint" shape="rect" coords="151, 20, 241, 78" />
 <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Set up CLI" title="Set up CLI" shape="rect" coords="276, 20, 365, 78" />
@@ -68,7 +68,7 @@ It might take 20-30 minutes for you to complete this task.
 
   To find out the regions that {{site.data.keyword.hscrypto}} supports, see [Regions and locations](/docs/services/hs-crypto?topic=hs-crypto-regions).
 
-2. [Install the {{site.data.keyword.keymanagementservicefull}} plug-in](/docs/services/key-protect?topic=key-protect-set-up-cli#install-cli). After installation, see [Setting up the CLI](/docs/services/hs-crypto?topic=hs-crypto-set-up-cli) for detailed configuration steps. When you log in to the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started#overview), you're notified when updates are available. Be sure to keep your {{site.data.keyword.keymanagementservicefull}} plug-in up-to-date so that you can use the commands and flags that are available for the Trusted Key Entry CLI plug-in.
+2. [Install the {{site.data.keyword.keymanagementservicefull}} plug-in](/docs/services/key-protect?topic=key-protect-set-up-cli#install-cli). After installation, see [Setting up the CLI](/docs/services/hs-crypto?topic=hs-crypto-set-up-cli) for detailed configuration steps. When you log in to the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started#overview), you're notified when updates are available. Be sure to keep your {{site.data.keyword.keymanagementserviceshort}} plug-in up-to-date so that you can use the commands and flags that are available for the Trusted Key Entry CLI plug-in.
 {: #initialize-crypto-prerequisites2}
 
 3. Install the latest Trusted Key Entry plug-in with the following command:
@@ -78,7 +78,6 @@ It might take 20-30 minutes for you to complete this task.
   ibmcloud plugin install tke
   ```
   {: pre}
-
 <!-- **Important:** If you are using the Beta instance of ({{site.data.keyword.hscrypto}}, run the `ibmcloud plugin install tke -v 0.0.4` to get the latest beta version of the Trusted Key Entry plug-in. Do not install later versions of the Trusted Key Entry plug-in. -->
 
 4. Set the environment variable CLOUDTKEFILES on your workstation. Specify a directory where you want master key part files and signature key part files to be created and saved. Create the directory if it does not already exist.

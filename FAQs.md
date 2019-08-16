@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-07-01"
 
-Keywords: frequently asked questions, critical security parameters, cryptographic module, Security Level
+Keywords: frequently asked questions, critical security parameters, cryptographic module, Security Level，questions and answers
 
 subcollection: hs-crypto
 
@@ -23,6 +23,7 @@ subcollection: hs-crypto
 {: #faqs}
 
 You can use the following FAQs to help you with {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
+{: shortdesc}
 
 ## What's {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?
 {: #what-is-hpcs}
@@ -37,7 +38,7 @@ You can use the following FAQs to help you with {{site.data.keyword.cloud}} {{si
 {: #what-key-management}
 {: faq}
 
-{{site.data.keyword.hscrypto}} integrates with [{{site.data.keyword.keymanagementservicefull}}](https://cloud.ibm.com/catalog/services/key-protect){:external} for {{site.data.keyword.cloud_notm}} APIs to generate and encrypt keys. The Keep Your Own Keys function is also enabled by {{site.data.keyword.hscrypto}} to provide access to cryptographic hardware that is FIPS 140-2 Level 4 certified technology, the highest level attainable certification level. {{site.data.keyword.hscrypto}} offers network addressable HSMs.
+{{site.data.keyword.hscrypto}} integrates with [{{site.data.keyword.keymanagementservicefull}}](https://cloud.ibm.com/catalog/services/key-protect){: external} for {{site.data.keyword.cloud_notm}} APIs to generate and encrypt keys. The Keep Your Own Keys function is also enabled by {{site.data.keyword.hscrypto}} to provide access to cryptographic hardware that is FIPS 140-2 Level 4 certified technology, the highest level attainable certification level. {{site.data.keyword.hscrypto}} offers network addressable HSMs.
 
 ## What is Hardware Security Module (HSM)?
 {: #what-is-hsm}
@@ -57,16 +58,16 @@ Key features are:
 
 * Full control of the entire key hierarchy including the HSM master keys
 * Tamper-proof hardware device for sensitive data
-* Industry-leading security for cloud data and digital  assets
+* Industry-leading security for cloud data and digital assets
 * Reduced data compromise risk because of in-built protection against privileged access threats
-* Regulatory compliance through data encryption and controls on privileged  access
-* Keep Your Own Keys (KYOK). Bring your own administrator, they are the only ones who can see your data.
+* Regulatory compliance through data encryption and controls on privileged access
+* Keep Your Own Keys (KYOK). Bring your own administrators. They are the only ones who can see your data.
 
 ## Why is {{site.data.keyword.hscrypto}} better than other cloud HSMs or key management services?
 {: #hs-crypto-advantages}
 {: faq}
 
-This is the only cloud HSM in the public cloud market to be built on FIPS 140-2 Level 4 certified hardware. Additionally, IBM offers a unique initialization scheme  through a key ceremony to take ownership of the HSM (bring your own administrator), supporting multiple distinct roles with administration and HSM master key management responsibilities. This provides you with complete control of the key hierarchy including the HSMs that protect your keys.
+This is the only cloud HSM in the public cloud market to be built on FIPS 140-2 Level 4 certified hardware. Additionally, IBM offers a unique initialization scheme for the HSM master key to take ownership of the HSM (bring your own administrator), supporting multiple distinct roles with administration and HSM master key management responsibilities. This provides you with complete control of the key hierarchy including the HSMs that protect your keys.
 
 ## What is a 140-2 FIPS Level 4 Certification and how can I validate it?
 {: #FIPS-level4-meaning}
@@ -74,8 +75,8 @@ This is the only cloud HSM in the public cloud market to be built on FIPS 140-2 
 
 The Federal Information Processing Standard (FIPS) Publication 140-2 is a U.S. government computer security standard that is used to approve cryptographic modules.
 
-* [Security Requirements for Cryptographic Modules](https://csrc.nist.gov/publications/detail/fips/140/2/final){:external}.
-* [Cryptographic Module Validation Program](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Standards){:external}.
+* [Security Requirements for Cryptographic Modules](https://csrc.nist.gov/publications/detail/fips/140/2/final){: external}.
+* [Cryptographic Module Validation Program](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Standards){: external}.
 * FIPS 140-2 defines four levels of security, including FIPS 140-2 Level 1, 2, 3, and Level 4.
 
 ## What is the difference between FIPS 140-2 Level 1, 2, 3, and Level 4?
@@ -91,15 +92,15 @@ The Federal Information Processing Standard (FIPS) Publication 140-2 is a U.S. g
 
   A cryptographic module is required to either include special environmental protection features designed to detect fluctuations and delete CSPs, or to undergo environmental failure testing to ensure that the module will not be affected by fluctuations outside of the normal operating range in a manner that can compromise the security of the module. At this security level, the physical security mechanisms provide a complete envelope of protection around the cryptographic module with the intent of detecting and responding to all unauthorized attempts at physical access. Penetration of the cryptographic module enclosure from any direction has a very high probability of being detected, resulting in the immediate zeroization of all plaintext CSPs.
 
-  {{site.data.keyword.hscrypto}} is the only cloud HSM in the public cloud market built on an HSM designed to meet FIPS 140-2 Level 4 certification requirements. The certification was achieved on 3/20/2019 and is listed on the [Cryptographic Module Validation Program (CVMP) Validated Modules List](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules){:external}.
+  {{site.data.keyword.hscrypto}} is the only cloud HSM in the public cloud market built on an HSM designed to meet FIPS 140-2 Level 4 certification requirements. The certification was achieved on 3/20/2019 and is listed on the [Cryptographic Module Validation Program (CVMP) Validated Modules List](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules){: external}.
 
 ## What crypto card does {{site.data.keyword.hscrypto}} use?
 {: #crypto-card}
 {: faq}
 
-{{site.data.keyword.hscrypto}} use the IBM 4768 crypto card, also referred to as Crypto Express 6S (CEX6S). IBM CEX6S is designed to be certified at FIPS 140-2 Level 4, the highest level of certification achievable for commercial cryptographic devices. The certification was achieved on 3/20/2019 and is listed on the [Cryptographic Module Validation Program (CVMP) Validated Modules List](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules){:external}.
+{{site.data.keyword.hscrypto}} use the IBM 4768 crypto card, also referred to as Crypto Express 6S (CEX6S). IBM CEX6S is designed to be certified at FIPS 140-2 Level 4, the highest level of certification achievable for commercial cryptographic devices. The certification was achieved on 3/20/2019 and is listed on the [Cryptographic Module Validation Program (CVMP) Validated Modules List](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules){: external}.
 
-For  more information, see the [IBM CryptoCards page](https://www.ibm.com/security/cryptocards/cryptonews){:external} and [IBM CryptoCards Overview](https://www.ibm.com/security/cryptocards/pciecc3/overview){:external}.
+For  more information, see the [IBM CryptoCards page](https://www.ibm.com/security/cryptocards/cryptonews){: external} and [IBM CryptoCards Overview](https://www.ibm.com/security/cryptocards/pciecc3/overview){: external}.
 
 ## How is this service different from {{site.data.keyword.cloud_notm}} HSM?
 {: #differentiators-cloud-hsm}
@@ -136,7 +137,7 @@ It’s ultimately based upon the level of control and security your business req
     <tr>
       <td headers="capabilities" rowspan="2">Key management</td>
       <td headers="keyprotect">
-        <p>Multi-tenant key management service with key vaulting provided by IBM controlled, FIPS 140-2 Level 2 compliant HSMs.</p>
+        <p>Multi-tenant key management service with key vaulting provided by IBM controlled, FIPS 140-2 Level 3 compliant HSMs.</p>
         <p>Provides Bring-Your-Own-Key (BYOK) support for you to use your own keys for data protection.</p>
       </td>
       <td headers="hpcryto">
@@ -186,7 +187,7 @@ Before you delete a key, ensure that you no longer require access to any data th
 {: #pricing_info}
 {: faq}
 
-Pricing can be found in the IBM Catalog -  [{{site.data.keyword.hscrypto}}](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){:external}.
+Pricing can be found in the IBM Catalog -  [{{site.data.keyword.hscrypto}}](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){: external}.
 
 ## Is there a pricing example I can refer to?
 {: #pricing_example}
