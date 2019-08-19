@@ -74,7 +74,7 @@ curl -X GET \
     "kms": {
       "public": "api.<region>.hs-crypto.cloud.ibm.com:<port>",
       "private":"api.private.<region>.hs-crypto.cloud.ibm.com:<port>"
-    },
+    }
   }
   ```
   {: screen}

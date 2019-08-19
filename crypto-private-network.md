@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-08-13"
+lastupdated: "2019-08-19"
 
 keywords: private endpoints, private network, dedicated network, VRF, service endpoints
 
@@ -120,14 +120,14 @@ After you configure your VSI to accept {{site.data.keyword.cloud_notm}} private 
 
   * Set the KP_INSTANCE_ID environment variable to target the service instance:
 
-    ```sh
+    ```
     export KP_INSTANCE_ID=<instance_ID>
     ```
     {: pre}
 
   * Set the KP_PRIVATE_ADDR environment variable to target the private endpoint:
 
-    ```sh
+    ```
     export KP_PRIVATE_ADDR=https://api.private.<region>.hs-crypto.cloud.ibm.com:<port>
     ```
     {: pre}
@@ -142,6 +142,7 @@ After you configure your VSI to accept {{site.data.keyword.cloud_notm}} private 
 
     You can find the instance ID and private endpoint URL listed in the **Manage** tab of the service dashboard. Alternatively, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#retrieve-the-api-endpoint-url){: external}. The returned value includes:
 
+    <!--
      ```
      {
        "instance_id": "<instance_ID>",
@@ -155,6 +156,17 @@ After you configure your VSI to accept {{site.data.keyword.cloud_notm}} private 
        }
      }
     ```
+    -->
+
+    ```
+    {
+      "instance_id": "<instance_ID>",
+      "kms": {
+        "public": "api.<region>.hs-crypto.cloud.ibm.com:<port>",
+        "private":"api.private.<region>.hs-crypto.cloud.ibm.com:<port>"
+      }
+    }
+    ```
     {: screen}
 
     The private endpoint URL is returned in `private`. For key management endpoint, use the value returned in the `kms` section.
@@ -164,25 +176,25 @@ After you configure your VSI to accept {{site.data.keyword.cloud_notm}} private 
 
 You might want to test your network connection after you set up your private network.
 
-* To test the private network connection for the key management service, use {{site.data.keyword.keymanagementserviceshort}} CLI to perform an action towards the {{site.data.keyword.hscrypto}} service instance on the private network.
+To test the private network connection for the key management service, use {{site.data.keyword.keymanagementserviceshort}} CLI to perform an action towards the {{site.data.keyword.hscrypto}} service instance. The following example shows how to create a root key on the private network.
 
-  1. Create a [root key](/docs/services/hs-crypto?topic=hs-crypto-create-root-keys) by targeting the private endpoint.
+1. Create a [root key](/docs/services/hs-crypto?topic=hs-crypto-create-root-keys) by targeting the private endpoint.
 
-      ```sh
-      ibmcloud kp create <key_name> -i <instance_ID>
-      ```
-      {: pre}
+  ```sh
+  ibmcloud kp create <key_name> -i <instance_ID>
+  ```
+  {: pre}
 
-      Replace `<key_name>` with a human-readable alias for easy identification of your key. Replace `<instance_ID>` with the {{site.data.keyword.cloud_notm}} instance ID that identifies your {{site.data.keyword.hscrypto}} service instance.
+  Replace `<key_name>` with a human-readable alias for easy identification of your key. Replace `<instance_ID>` with the {{site.data.keyword.cloud_notm}} instance ID that identifies your {{site.data.keyword.hscrypto}} service instance.
 
-  2. Optional: Verify that the key was created successfully by listing the keys that are available in your {{site.data.keyword.hscrypto}} service instance.
+2. Optional: Verify that the key was created successfully by listing the keys that are available in your {{site.data.keyword.hscrypto}} service instance.
 
-      ```sh
-      ibmcloud kp list -i <instance_ID>
-      ```
-      {: pre}
+  ```sh
+  ibmcloud kp list -i <instance_ID>
+  ```
+  {: pre}
 
-      Replace `<instance_ID>` with the {{site.data.keyword.cloud_notm}} instance ID that identifies your {{site.data.keyword.hscrypto}} service instance.
+  Replace `<instance_ID>` with the {{site.data.keyword.cloud_notm}} instance ID that identifies your {{site.data.keyword.hscrypto}} service instance.
 
 <!-- * To test the private network connection for the GREP11 service, generate a GREP11 API request. For details, check out [Generating a GREP API request](/docs/services/hs-crypto?topic=hs-crypto-set-up-grep11-api#form-grep11-api-request). -->
 

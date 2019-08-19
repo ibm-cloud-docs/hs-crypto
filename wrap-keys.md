@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-08-19"
 
 Keywords: root key, wrap key, encrypt data encryption key, protect data encryption key, envelope encryption API examples
 
@@ -66,8 +66,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
       -H 'correlation-id: <correlation_ID>' \
       -H 'prefer: <return_preference>' \
       -d '{
-      "plaintext": "<data_key>",
-      "aad": ["<additional_data>", "<additional_data>"]
+      "plaintext": "<data_key>"
     }'
     ```
     {: codeblock}
@@ -109,11 +108,12 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
         <td><varname>data_key</varname></td>
         <td>Optional: The key material of the DEK that you want to manage and protect. The <code>plaintext</code> value must be base64 encoded. To generate a new DEK, omit the <code>plaintext</code> attribute. The service generates a random plaintext (32 bytes) and wraps that value.</td>
       </tr>
+      <!--
       <tr>
         <td><varname>additional_data</varname></td>
-        <td>Optional: The additional authentication data (AAD) that is used to further secure the key. Each string can hold up to 255 characters. If you supply AAD when you make a wrap call to the service, you must specify the same AAD during the subsequent unwrap call.<br></br>Important: The {{site.data.keyword.hscrypto}}
- service does not save additional authentication data. If you supply AAD, save the data to a secure location to ensure that you can access and provide the same AAD during subsequent unwrap requests.</td>
+        <td>Optional: The additional authentication data (AAD) that is used to further secure the key. Each string can hold up to 255 characters. If you supply AAD when you make a wrap call to the service, you must specify the same AAD during the subsequent unwrap call.<br></br>Important: The {{site.data.keyword.hscrypto}} service does not save additional authentication data. If you supply AAD, save the data to a secure location to ensure that you can access and provide the same AAD during subsequent unwrap requests.</td>
       </tr>
+      -->
       <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to wrap a specified key in {{site.data.keyword.hscrypto}}
 .</caption>
     </table>
@@ -124,7 +124,6 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
     {
       "plaintext": "VGhpcyBpcyBhIHNlY3JldCBtZXNzYWdlLg==",
       "ciphertext": "eyJjaXBoZXJ0ZXh0Ijoic3VLSDNRcmdEZjdOZUw4Rkc4L2FKYjFPTWcyd3A2eDFvZlA4MEc0Z1B2RmNrV2g3cUlidHphYXU0eHpKWWoxZyIsImhhc2giOiJiMmUyODdkZDBhZTAwZGZlY2Q3OGJmMDUxYmNmZGEyNWJkNGUzMjBkYjBhN2FjNzVhMWYzZmNkMDZlMjAzZWYxNWM5MTY4N2JhODg2ZWRjZGE2YWVlMzFjYzk2MjNkNjA5YTRkZWNkN2E5Y2U3ZDc5ZTRhZGY1MWUyNWFhYWM5MjhhNzg3NmZjYjM2NDFjNTQzMTZjMjMwOGY2MThlZGM2OTE3MjAyYjA5YTdjMjA2YzkxNTBhOTk1NmUxYzcxMTZhYjZmNmQyYTQ4MzZiZTM0NTk0Y2IwNzJmY2RmYTk2ZSJ9"
-      "aad": ["data1", "data2"]
     }
     ```
     {:screen}

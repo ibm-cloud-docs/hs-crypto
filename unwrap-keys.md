@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-08-19"
 
 Keywords: data encryption key, original key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, envelope encryption API examples
 
@@ -56,8 +56,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=
       -H 'correlation-id: <correlation_ID>' \
       -H 'prefer: <return_preference>' \
       -d '{
-      "ciphertext": "<encrypted_data_key>",
-      "aad": ["<additional_data>", "<additional_data>"]
+      "ciphertext": "<encrypted_data_key>"
     }'
     ```
     {: codeblock}
@@ -92,10 +91,12 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=
         <td><varname>return_preference</varname></td>
         <td><p>A header that alters server behavior for <code>POST</code> and <code>DELETE</code> operations.</p><p>When you set the <em>return_preference</em> variable to <code>return=minimal</code>, the service returns only the key metadata, such as the key name and ID value, in the response entity-body. When you set the variable to <code>return=representation</code>, the service returns both the key material and the key metadata.</p></td>
       </tr>
+      <!--
       <tr>
         <td><varname>additional_data</varname></td>
         <td>Optional: The additional authentication data (AAD) that is used to further secure the key. Each string can hold up to 255 characters. If you supply AAD when you make a wrap call to the service, you must specify the same AAD during the unwrap call.</td>
       </tr>
+      -->
       <tr>
         <td><varname>encrypted_data_key</varname></td>
         <td>The <code>ciphertext</code> value that was returned during a wrap operation.</td>

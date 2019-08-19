@@ -198,7 +198,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 **Note:** When you add an existing root key to the service, the key stays within the bounds of {{site.data.keyword.hscrypto}}, and its key material cannot be retrieved.
 
-### What's next
+## What's next
 {: #import-root-key-next}
 
 - To find out more about protecting keys with envelope encryption, check out [Wrapping keys](/docs/services/hs-crypto?topic=hs-crypto-wrap-keys).
