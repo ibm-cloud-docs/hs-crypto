@@ -33,7 +33,7 @@ IBM Cloud Hyper Protect Crypto Services
     initialize_hsm.md
 
     {: .topicgroup}
-    Accessing the key management and GREP11 APIs
+    Accessing the key management APIs
         set-up-kms-api.md
         retrieve-access-token.md
         retrieve-instance-id.md
