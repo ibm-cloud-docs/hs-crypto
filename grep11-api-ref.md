@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-09"
+lastupdated: "2019-08-22"
 
 Keywords: EP11, PKCS#11, GREP11, API reference, EP11 over gRPC,
 
@@ -22,13 +22,6 @@ subcollection: hs-crypto
 {:important: .important}
 {:deprecated: .deprecated}
 {:preview: .preview}
-{:generic: data-hd-programlang="generic"}
-{:java: data-hd-programlang="java"}
-{:go: data-hd-programlang="go"}
-{:ruby: data-hd-programlang="ruby"}
-{:c#: data-hd-programlang="c#"}
-{:python: data-hd-programlang="python"}
-{:javascript: data-hd-programlang="javascript"}
 {:subsection: outputclass="subsection"}
 {:row-headers .row-headers}
 {:new_window: target="_blank"}
@@ -69,7 +62,7 @@ A GREP11 API endpoint, a service ID API key, an IAM endpoint, and an instance ID
 
 Enterprise PKCS #11 (EP11) over gRPC relies on the gRPC specification for [error handling](https://grpc.io/docs/guides/error/){: external}. When an error occurs, gRPC clients receive a [`message Status` protocol buffer](https://github.com/grpc/grpc/blob/master/src/proto/grpc/status/status.proto){: external}.
 
-```proto
+```proto3
 message Status {
     int32 code = 1;
     string message = 2;
@@ -86,7 +79,7 @@ In the error message,
 
 Enterprise PKCS #11 (EP11) over gRPC uses the `Detail` field to attach extra error code information.
 
-```proto
+```proto3
 message Grep11Error {
     uint64 Code = 1;
     string Detail = 2;
@@ -4320,4 +4313,4 @@ SetAttributeValueResponse, err := cryptoClient.SetAttributeValue(context.Backgro
 
 For complete Golang examples on Enterprise PKCS #11 (EP11) over gRPC, see [GREP11 examples](https://github.com/vpaprots/ibm-cloud-hyperprotectcrypto/tree/master/golang){: external}.
 
-GREP11 API supports programming languages with [gRPC libraries](https://developers.google.com/protocol-buffers/){:external}. In the [sample](https://github.com/vpaprots/ibm-cloud-hyperprotectcrypto){:external} Github repository, only Golang code examples are provided.
+GREP11 API supports programming languages with [gRPC libraries](https://www.grpc.io/docs/){:external}. In the [sample](https://github.com/vpaprots/ibm-cloud-hyperprotectcrypto){:external} Github repository, only Golang code examples are provided.

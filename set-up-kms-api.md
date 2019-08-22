@@ -51,7 +51,7 @@ curl -X GET \
 {: codeblock}
 
 * Replace `<port>` with the port number of your API endpoint. To get the `<port>`, from your provisioned service instance dashboard, click **Manage** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#retrieve-the-api-endpoint-url){: external}. The returned value includes:
-<!--
+
   ```
   {
     "instance_id": "<instance_ID>",
@@ -62,18 +62,6 @@ curl -X GET \
     "ep11": {
       "public": "ep11.<region>.hs-crypto.cloud.ibm.com:<port>",
       "private":""
-    }
-  }
-  ```
-  {: screen}
-  -->
-
-  ```
-  {
-    "instance_id": "<instance_ID>",
-    "kms": {
-      "public": "api.<region>.hs-crypto.cloud.ibm.com:<port>",
-      "private":"api.private.<region>.hs-crypto.cloud.ibm.com:<port>"
     }
   }
   ```

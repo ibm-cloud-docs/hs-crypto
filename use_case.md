@@ -49,7 +49,7 @@ As a single-tenant service, {{site.data.keyword.hscrypto}} offers dedicated cont
 
 Check out the [overview video on IBM Cloud Hyper Protect Crypto Services and VMware on {{site.data.keyword.cloud_notm}} solutions](https://youtu.be/9n8-hQBMYWQ){: external} for more information. For a step-to-step tutorial, see [Use IBM Cloud Hyper Protect Crypto Services to encrypt VMware disks](https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/){: external} and the [demo video](https://youtu.be/huQ5wUfrW4c){: external}.
 
-<!--## Using {{site.data.keyword.hscrypto}} as Enterprise PKCS #11 HSMs
+## Using {{site.data.keyword.hscrypto}} as Enterprise PKCS #11 HSMs
 {: #ep11_hsm}
 
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} provides a set of Enterprise PKCS #11 ([EP11](/docs/services/hs-crypto?topic=hs-crypto-enterprise_PKCS11_overview)) APIs. All crypto functions are executed in HSMs at the cloud side. User application needs to call these functions through [gRPC](https://grpc.io).
@@ -62,4 +62,3 @@ supports secure connectivity from cloud application to cloud HSM, and allows for
 ![EP11 HSM](/image/PKCS11.png "Application driven data integrity and confidentiality")
 
 *Figure 3. Application driven data integrity and confidentiality*
--->

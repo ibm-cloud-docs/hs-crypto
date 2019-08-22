@@ -39,32 +39,32 @@ Hardware security module (HSM) is a physical device that safeguards and manages 
 ## Crypto unit
 {: #introduce-crypto-unit}
 
-A crypto unit is the single unit that represents an HSM and the corresponding software stack dedicated to HSM. Each crypto unit can manage up to 5000 digital keys. If you are setting up a production environment, it is suggested to assign at least two crypto units per service instance for high availability. All crypto units in a service instance should be configured the same. If one part of the IBM Cloud cannot be accessed, the crypto units in a service instance can be used interchangeably.
+A crypto unit is a single unit that represents an HSM and the corresponding software stack dedicated to HSM. Each crypto unit can manage up to 5000 digital keys. If you are setting up a production environment, it is suggested to assign at least two crypto units per service instance for high availability. The two crypto units are located in different [availability zones](https://www.ibm.com/cloud/blog/announcements/expansion-availability-zones-global-regions){: external} within the region that you select when creating the service instance. If one part of availability zones cannot be accessed, the crypto units in a service instance can be used interchangeably. All crypto units in a service instance should be configured the same.
 
 ## Trusted Key Entry plug-in
 {: #introduce-TKE}
 
-Using the Trusted Key Entry plug-in, you can load the master key registers of service instances in your {{site.data.keyword.cloud}} user account with values that you choose and control. The Trusted Key Entry plug-in provides a set of functions for managing crypto units assigned to an {{site.data.keyword.cloud_notm}} user account. The plug-in allows you to load your master key values.
+Trusted Key Entry (TKE) plug-in is a CLI plugin working with {{site.data.keyword.cloud_notm}} CLI. The TKE plug-in provides a set of functions for managing crypto units assigned to an {{site.data.keyword.cloud_notm}} user account. Use the TKE plug-in to set up administrators and load the master key. For more information, see [Initializing service instances](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm) and [Trusted Key Entry CLI plug-in reference](/docs/services/hs-crypto?topic=hs-crypto-tke_cli_plugin).
 
 ## Administrators
 {: #introduce-administrators}
 
-Administrators can be added to the target crypto units for issuing commands to the crypto units. An administrator owns one private signature key. After signature keys are generated, you need to add the administrators with the signature keys to the target crypto unit.
+Administrators can be added to the target crypto units for issuing commands to the crypto units. You can add multiple administrators to one crypto unit to increase security. Each administrator owns one private [signature key](#introduce-signature-keys) for identity authentication. After signature keys are generated, you need to add the administrators with the signature keys to the target crypto unit.
 
 ## Signature keys
 {: #introduce-signature-keys}
 
-An administrator must sign any commands issued to the crypto unit with a signature. The private part of the signature key file is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. Commands issued in imprint mode do not need to be signed.
+An administrator must sign any commands issued to the crypto unit with a signature. The private part of the signature key file is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. Commands issued in [imprint mode](#introduce-imprint-mode) do not need to be signed.
 
 ## Imprint mode
 {: #introduce-imprint-mode}
 
-Crypto units that are assigned to an IBM Cloud user start in a cleared state known as imprint mode. A crypto unit in imprint mode is not secure. The master key registers cannot be loaded in imprint mode. You can only set up crypto unit administrators and clear the crypto unit in imprint mode. Commands issued to a crypto unit in imprint mode do not need to be signed. However, the command to exit imprint mode must be signed by one of the added crypto unit administrators using the signature key.
+Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start in a cleared state known as imprint mode. A crypto unit in imprint mode is not secure. You can only set up crypto unit administrators and signature keys in imprint mode. Commands issued to a crypto unit in imprint mode do not need to be signed. However, the command to exit imprint mode must be signed by one of the added crypto unit administrators using the signature key. Make sure to exit imprint mode before you configure [master keys](#introduce-master-key).
 
 ## Master keys
 {: #introduce-master-key}
 
-Master keys are used to encrypt the service instances for key storage. With the master key, you own the root of trust that encrypts the entire chain of keys including root keys and standard keys. IBM does not back up or touch the master key, and has no way to copy it or restore it to a different machine or data center. One service instance can have only one master key. If you delete the master key of the service instance, you can effectively crypto-shred all data that was encrypted with the keys managed in the service.
+Master keys are used to encrypt the service instances for key storage. With the master key, you take the full control of the cloud HSM and own the root of trust that encrypts the entire chain of keys including root keys and standard keys. You need to configure the master key first before you can manage root keys and standard keys. {{site.data.keyword.IBM_notm}} does not back up or touch the master key, and has no way to copy it or restore it to a different machine or data center. One service instance can have only one master key. If you delete the master key of the service instance, you can effectively crypto-shred all data that was encrypted with the keys managed in the service.
 
 A master key is composed of several master key parts. For security considerations, each key part can be owned by a different person. The key part owner should be the only person who knows the password associated with the key part file.
 

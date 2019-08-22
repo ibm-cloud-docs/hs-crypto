@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-08-19"
+lastupdated: "2019-08-22"
 
 keywords: private endpoints, private network, dedicated network, VRF, service endpoints
 
@@ -28,8 +28,8 @@ You can create and manage {{site.data.keyword.hscrypto}} resources through the {
 
 Public endpoints provide a connection to your deployment on the public network. Your environment needs to have internet access to connect to a deployment. A deployment with a service endpoint on the private network gets an endpoint that is not accessible from the public internet. Once your environment has access to the {{site.data.keyword.cloud_notm}} private network, an internet connection is not required to connect to your deployment.
 
-<!--The private endpoint is currently only available for the key management service.
-{: note} -->
+The private endpoint is currently only available for the key management service.
+{: note}
 
 <!-- To get started, enable [virtual routing and forwarding (VRF) and service endpoints](docs/account?topic=account-vrf-service-endpoint){: external} for your infrastructure account. After you enable VRF for your account, you can connect to {{site.data.keyword.hscrypto}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network. -->
 
@@ -113,63 +113,40 @@ After you configure your VSI to accept {{site.data.keyword.cloud_notm}} private 
     See [Enabling VRF and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} to learn how to set up your account for connecting to a private network.
     {: tip}
 
-3. Set environment variables to target the {{site.data.keyword.hscrypto}} service instance and private endpoint.
+3. Set the environment variable to target the {{site.data.keyword.hscrypto}} private endpoint.
 
   Use the following commands on Linux or MacOS only. For how to set environment variables on Windows, see [Accessing {{site.data.keyword.keymanagementserviceshort}} CLI](/docs/services/hs-crypto?topic=hs-crypto-set-up-cli).
   {: note}
 
-  * Set the KP_INSTANCE_ID environment variable to target the service instance:
+  Set the KP_PRIVATE_ADDR environment variable to target the private endpoint:
 
-    ```
-    export KP_INSTANCE_ID=<instance_ID>
-    ```
-    {: pre}
+  ```
+  export KP_PRIVATE_ADDR=https://api.private.<region>.hs-crypto.cloud.ibm.com:<port>
+  ```
+  {: pre}
 
-  * Set the KP_PRIVATE_ADDR environment variable to target the private endpoint:
+  You can find the private endpoint URL listed in the **Manage** tab of the service dashboard. Alternatively, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#retrieve-the-api-endpoint-url){: external}. The returned value includes:
 
-    ```
-    export KP_PRIVATE_ADDR=https://api.private.<region>.hs-crypto.cloud.ibm.com:<port>
-    ```
-    {: pre}
-
-    <!--  
-    * For GREP11 API:
-      ```sh
-      export KP_PRIVATE_ADDR=https://ep11.private.<region>.hs-crypto.cloud.ibm.com:<port>
-      ```
-      {: pre}
-    -->
-
-    You can find the instance ID and private endpoint URL listed in the **Manage** tab of the service dashboard. Alternatively, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#retrieve-the-api-endpoint-url){: external}. The returned value includes:
-
-    <!--
-     ```
-     {
-       "instance_id": "<instance_ID>",
-       "kms": {
-         "public": "api.<region>.hs-crypto.cloud.ibm.com:<port>",
-         "private":"api.private.<region>.hs-crypto.cloud.ibm.com:<port>"
-       }
-       "ep11": {
-         "public": "ep11.<region>.hs-crypto.cloud.ibm.com:<port>",
-         "private":""
-       }
-     }
-    ```
-    -->
-
-    ```
-    {
-      "instance_id": "<instance_ID>",
-      "kms": {
-        "public": "api.<region>.hs-crypto.cloud.ibm.com:<port>",
-        "private":"api.private.<region>.hs-crypto.cloud.ibm.com:<port>"
-      }
+  ```
+  {
+    "instance_id": "<instance_ID>",
+    "kms": {
+      "public": "api.<region>.hs-crypto.cloud.ibm.com:<port>",
+      "private":"api.private.<region>.hs-crypto.cloud.ibm.com:<port>"
+    },
+    "ep11": {
+      "public": "ep11.<region>.hs-crypto.cloud.ibm.com:<port>",
+      "private":""
     }
-    ```
-    {: screen}
+  }
+  ```
+  {: screen}
 
-    The private endpoint URL is returned in `private`. For key management endpoint, use the value returned in the `kms` section.
+  The private endpoint URL is returned in `private`. For key management endpoint, use the value returned in the `kms` section.
+
+  The KP_PRIVATE_ADDR environment variable is used to set the API endpoint URL both for public endpoint and private endpoint. If you want to use the public endpoint, make sure to set the KP_PRIVATE_ADDR environment variable as the public endpoint URL that is returned in the `public` field in the `kms` section.
+  {: important}
+
 
 ## Step 3: Test your private network connection
 {: #Test-private-connection}

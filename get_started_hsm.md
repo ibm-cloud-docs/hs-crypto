@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-08-22"
 
 Keywords: key storage, service instance, HSM, hardware security module, key ceremony, getting started, code example
 
@@ -35,7 +35,7 @@ Before you start, perform the following steps:
 2. Run the following command to make sure that you are logged in to the correct API endpoint:
 
   ```
-  ibmcloud target -r <region>
+  ibmcloud target -r <region_name>
   ```
   {: pre}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-14"
+lastupdated: "2019-08-22"
 
 keywords: set up API, use EP11 API, access EP11 API, EP11 over gRPC, GREP11
 
@@ -44,7 +44,7 @@ In order to remotely access cloud HSM on {{site.data.keyword.hscrypto}} to perfo
 
 A [sample](https://github.com/vpaprots/ibm-cloud-hyperprotectcrypto){:external} Github repository is provided for you to test the GREP11 API in Golang. GREP11 API supports programming languages with [gRPC libraries](https://developers.google.com/protocol-buffers/){:external}. In the [sample](https://github.com/vpaprots/ibm-cloud-hyperprotectcrypto){:external} Github repository, only Golang code examples are provided.
 
-You can use the following Golang code example to generate random data by calling the `GenerateRandomRequest()` function.
+You can use the following Golang code example to generate random data by calling the `GenerateRandom` function.
 
 This example assumes that additional required Golang packages are included via import statements, such as the [gRPC](https://godoc.org/google.golang.org/grpc){: external} and [http](https://golang.org/pkg/net/http/){: external} packages. The ` import pb "github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/golang/grpc"` statement is used by GREP11 to perform API function calls.
 {: note}

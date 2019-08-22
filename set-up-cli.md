@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-13"
+lastupdated: "2019-08-21"
 
 Keywords: IBM Cloud CLI plug-in, ibmcloud commands, IBM Cloud command-line interface, KMS CLI, Key Protect CLI, Hyper Protect Crypto Services CLI
 
@@ -50,6 +50,9 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
   * On Windows, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a KP_PRIVATE_ADDR environment variable and set the value to the endpoint that is displayed on the **Manage** tab of your provisioned {{site.data.keyword.hscrypto}} dashboard. For example, `https://api.us-south.hs-crypto.cloud.ibm.com:<port>`.
 
   You can also retrieve the endpoint URL through the API. For details, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+
+  Depending on whether you are using public or private endpoint, choose the corresponding endpoint URL to set the value of the KP_PRIVATE_ADDR environment variable.
+  {: important}
 
 3. Set the KP_INSTANCE_ID environment variable on you workstation:
 

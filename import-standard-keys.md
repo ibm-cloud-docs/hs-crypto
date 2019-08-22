@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-08-22"
 
 Keywords: standard keys, import keys, encryption keys, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key, standard key API examples
 
@@ -31,7 +31,7 @@ You can add your existing encryption keys with the {{site.data.keyword.hscrypto}
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. To import a new key, click **Add key** and select the **Import your own key** window.
+4. To import a new key, click **Add key** and select **Use existing key**.
 
     Specify the key's details:
 
@@ -41,15 +41,15 @@ You can add your existing encryption keys with the {{site.data.keyword.hscrypto}
         <th>Description</th>
       </tr>
       <tr>
+        <td>Key type</td>
+        <td>The <a href="/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption#key-types">type of key</a> that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Standard key</b>.</td>
+      </tr>
+      <tr>
         <td>Name</td>
         <td>
           <p>A unique, human-readable alias for easy identification of your key.</p>
           <p>To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
         </td>
-      </tr>
-      <tr>
-        <td>Key type</td>
-        <td>The <a href="/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption#key-types">type of key</a> that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Standard key</b>.</td>
       </tr>
       <tr>
         <td>Key material</td>
@@ -66,7 +66,7 @@ You can add your existing encryption keys with the {{site.data.keyword.hscrypto}
       <caption style="caption-side:bottom;">Table 1. Describes the <b>Generate new key</b> settings</caption>
     </table>
 
-5. When you are finished filling out the key's details, click **Import key** to confirm.
+5. When you are finished filling out the key's details, click **Add key** to confirm.
 
 ## Importing standard keys with the API
 {: #import-standard-key-api}

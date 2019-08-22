@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-08-22"
 
 Keywords: IBM keys, data security, Hyper Protect Crypto Services, Cloud HSM, hardware securty module, PKCS #11, openSSL
 
@@ -29,15 +29,15 @@ Data and information security is crucial and essential for IT environments. As m
 
 Built on IBM LinuxONE technology, {{site.data.keyword.hscrypto}} helps ensure that only you have access to your keys and data. A key-management service with key vaulting provided by dedicated customer-controlled HSMs helps you create encryption keys with ease. Alternatively, you can bring your own encryption keys to manage.
 
-<!-- The managed cloud HSM supports industry standards, such as Enterprise Public-Key Cryptography Standards (PKCS) #11, so your applications can integrate cryptographic operations like digital signing and validation via Enterprise PKCS#11 ([EP11](/docs/services/hs-crypto?topic=hs-crypto-enterprise_PKCS11_overview) API). The EP11 library provides an interface very similar to the industry-standard [PKCS #11 application programming interface (API)](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}. For more information on EP11 library structure, see [the EP11 library structure reference guide](https://www.ibm.com/downloads/cas/WXRDPRAN){: external}.
+The managed cloud HSM supports industry standards, such as Enterprise Public-Key Cryptography Standards (PKCS) #11, so your applications can integrate cryptographic operations like digital signing and validation via Enterprise PKCS#11 ([EP11](/docs/services/hs-crypto?topic=hs-crypto-enterprise_PKCS11_overview) API). The EP11 library provides an interface very similar to the industry-standard [PKCS #11 application programming interface (API)](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}. For more information on EP11 library structure, see [the EP11 library structure reference guide](https://www.ibm.com/downloads/cas/WXRDPRAN){: external}.
 
-{{site.data.keyword.hscrypto}} leverages frameworks such as gRPC to enable remote application access. [gRPC](https://grpc.io/){: external} is a modern open source high performance remote procedure call (RPC) framework that can connect services in and across data centers for load balancing, tracing, health checking, and authentication. Applications access {{site.data.keyword.hscrypto}} by calling EP11 API remotely over gRPC. -->
+{{site.data.keyword.hscrypto}} leverages frameworks such as gRPC to enable remote application access. [gRPC](https://grpc.io/){: external} is a modern open source high performance remote procedure call (RPC) framework that can connect services in and across data centers for load balancing, tracing, health checking, and authentication. Applications access {{site.data.keyword.hscrypto}} by calling EP11 API remotely over gRPC.
 
 {{site.data.keyword.hscrypto}} is a single-tenant, dedicated HSM that is controlled by you. IBM Cloud administrators have no access. The service is built on FIPS 140-2 Level 4-certified hardware, the highest offered by any cloud provider in the industry. IBM is the first to provide cloud command-line interface (CLI) for HSM master key initialization to help enable you to take ownership of the cloud HSM.
 
 <!-- With {{site.data.keyword.hscrypto}}, your SSL keys are offloaded to a {{site.data.keyword.hscrypto}} instance to ensure security and protection of those sensitive keys. Besides, the certificate lifecycle management gets common approach to manage certificates and offers the visibility to certificate expiration. -->
 
-<!-- {{site.data.keyword.hscrypto}} is the cryptography that {{site.data.keyword.blockchainfull_notm}} Platform is built with. This cryptography mechanism ensures that the blockchain network is running in a highly protected and isolated environment, and accelerates hashing, sign/verify operations, and node-to-node communications in the network. -->
+<!-- {{site.data.keyword.hscrypto}} is the cryptography that {{site.data.keyword.blockchainfull_notm}} Platform is built with. This cryptography mechanism ensures that the blockchain network is running in a highly protected and isolated environment, and accelerates hashing, sign/verify operations, and node-to-node communications in the network. The success of {{site.data.keyword.blockchainfull_notm}} Platform proves the capability and value of {{site.data.keyword.hscrypto}}. -->
 
 ## How does {{site.data.keyword.hscrypto}} work?
 {: #architecture}
@@ -48,7 +48,7 @@ The following architectural diagram shows how {{site.data.keyword.hscrypto}} wor
 *Figure 1. {{site.data.keyword.hscrypto}} architecture*  
 
 The following are a few highlights of the {{site.data.keyword.hscrypto}} architecture:
-<!-- - Applications connect to {{site.data.keyword.hscrypto}} through EP11 API.-->
+- Applications connect to {{site.data.keyword.hscrypto}} through EP11 API.
 - Dedicated KeyStore in {{site.data.keyword.hscrypto}} is provided to ensure data isolation and security. Privileged users are locked out for protection against abusive use of system administrator credentials or root user credentials.
 - Secure Service Container (SSC) provides the enterprise-level of security and impregnability that enterprise customers have come to expect from IBM Z technology.
 - FIPS 140-2 Level 4 compliant cloud HSM is enabled for highest physical protection of secrets.  
@@ -76,9 +76,9 @@ The following are a few highlights of the {{site.data.keyword.hscrypto}} archite
 ### Cloud HSMs
 {: #cloud-hsm}
 
-<!-- * **Customer-controlled HSM**
+* **Customer-controlled HSM**
 
-  The available support for customer-controlled cloud hardware security modules (HSM) accessible through EP11, which allows for digital keys to be protected in accordance with industry regulations in {{site.data.keyword.cloud_notm}} and to be accessed only by the customer. -->
+  The available support for customer-controlled cloud hardware security modules (HSM) accessible through gRPC APIs, which allows users to access EP11 library for cryptography operations. Customer-controlled HSM provides advanced control and authority for digital keys to be protected in accordance with industry regulations in {{site.data.keyword.cloud_notm}} and to be accessed only by the customer.
 
 * **FIPS 140-2 Level 4 certified technology provided**
 

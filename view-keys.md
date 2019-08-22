@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-09"
+lastupdated: "2019-08-22"
 
 Keywords: view keys, key configuration, key type, list encryption keys, view encryption key, retrieve encryption key, retrieve key API examples
 
@@ -58,7 +58,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
         <td>A unique key ID that was assigned to your key by the {{site.data.keyword.hscrypto}} service. You can use the ID value to make calls to the service with the [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto).</td>
       </tr>
       <tr>
-        <td>State</td>
+        <td>Status</td>
         <td>The [key state](/docs/services/key-protect/concepts?topic=key-protect-key-states) based on [NIST Special Publication 800-57, Recommendation for Key Management](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r4.pdf). These states include <i>Pre-active</i>, <i>Active</i>, <i>Deactivated</i>, and <i>Destroyed</i>.</td>
       </tr>
       <tr>

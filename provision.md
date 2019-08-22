@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-02"
+lastupdated: "2019-08-22"
 
 Keywords: provision, instance of Hyper Protect Crypto Services, service instance, create service instance, KMS service instance, cloud HSM service instance
 
@@ -38,7 +38,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
 5. **Optional**: In the **Tags** field, add tags to organize your resources. If your tags are billing related, consider writing tags as key:value pairs to help group related tags, such as `costctr:124`. For more information on tags, see [Working with tags](/docs/resources?topic=resources-tag#tag).
 6. Under **Number of crypto units**, select the number of crypto units that meets your performance needs.
 
-  In a production environment, it is recommended to select at least two crypto units to enable high availability. If you select three or more crypto units, these crypto units are distributed among three supported availability zones in the selected region.
+  In a production environment, it is recommended to select at least two crypto units to enable high availability. If you select three or more crypto units, these crypto units are distributed among different supported availability zones in the selected region.
   {: important}
 7. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 
@@ -131,4 +131,4 @@ To provision an instance of {{site.data.keyword.hscrypto}} using the {{site.data
 
 * [Initialize your service instance](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm) so that {{site.data.keyword.hscrypto}} can provide key management and data management functions.
 * To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
-<!-- * To find out more about managing your data using the cloud HSM function of {{site.data.keyword.hscrypto}}, [check out the GREP11 API reference doc](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref). -->
+* To find out more about managing your data using the cloud HSM function of {{site.data.keyword.hscrypto}}, [check out the GREP11 API reference doc](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref).

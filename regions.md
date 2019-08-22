@@ -50,9 +50,8 @@ You can connect your applications with the {{site.data.keyword.cloud_notm}} {{si
 ## Service endpoints
 {: #service-endpoints}
 
-If you are managing your {{site.data.keyword.hscrypto}} resources programmatically, see the following table to determine the API endpoints to use when you connect to the [Key management API](https://{DomainName}/apidocs/hs-crypto)<!-- and  [GREP11 API](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref)-->.
+If you are managing your {{site.data.keyword.hscrypto}} resources programmatically, see the following table to determine the API endpoints to use when you connect to the [Key management API](https://{DomainName}/apidocs/hs-crypto) and  [GREP11 API](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
-<!--
 | Region        | Public key management service endpoints             |Public GREP11 service endpoints|
 | ------------- | ---------------------------- |---------------------------- |
 | Dallas        | `api.us-south.hs-crypto.cloud.ibm.com` |`ep11.us-south.hs-crypto.cloud.ibm.com` |
@@ -76,30 +75,5 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 {: tab-group="region-endpoint"}
 {: class="comparison-tab-table"}
 {: row-headers}
--->
 
-| Region        | Public key management service endpoints             |
-| ------------- | ---------------------------- |
-| Dallas        | `api.us-south.hs-crypto.cloud.ibm.com` |
-| Sydney        | `api.au-syd.hs-crypto.cloud.ibm.com`   |
-| Frankfurt     | `api.eu-de.hs-crypto.cloud.ibm.com`    |
-{: caption="Table 1. Lists public endpoints for interacting with {{site.data.keyword.hscrypto}} API over IBM Cloud's public network" caption-side="top"}
-{: #table-1}
-{: tab-title="Public"}
-{: tab-group="region-endpoint"}
-{: class="comparison-tab-table"}
-{: row-headers}
-
-| Region        | Private key management service endpoints             |    
-| ------------- | ------------------------------------ |
-| Dallas        | `api.private.us-south.hs-crypto.cloud.ibm.com` |
-| Sydney        | `api.private.au-syd.hs-crypto.cloud.ibm.com`   |
-| Frankfurt     | `api.private.eu-de.hs-crypto.cloud.ibm.com`    |
-{: caption="Table 2. Lists private endpoints for interacting with {{site.data.keyword.hscrypto}} API over IBM Cloud's private network" caption-side="top"}
-{: #table-2}
-{: tab-title="Private"}
-{: tab-group="region-endpoint"}
-{: class="comparison-tab-table"}
-{: row-headers}
-
-For more information about authenticating with {{site.data.keyword.hscrypto}}, see [Setting up the key management APIs](/docs/services/hs-crypto?topic=hs-crypto-set-up-kms-api)<!-- and [Setting up the GREP11 API](/docs/services/hs-crypto?topic=hs-crypto-set-up-grep11-api)-->.
+For more information about authenticating with {{site.data.keyword.hscrypto}}, see [Setting up the key management APIs](/docs/services/hs-crypto?topic=hs-crypto-set-up-kms-api) and [Setting up the GREP11 API](/docs/services/hs-crypto?topic=hs-crypto-set-up-grep11-api).

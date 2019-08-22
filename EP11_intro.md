@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-05"
+lastupdated: "2019-08-22"
 
 Keywords: PKCS11, EP11, Hyper Protect Crypto Services, HSM, GREP11, EP11 over gRPC, PKCS #11, Cloud HSM
 
@@ -45,7 +45,7 @@ PKCS #11 functions that are marked with asterisks (*) in the table are implement
 |---------------|-------------|---------|-----------------|
 |C_Initialize|N/A|N/A|Initializes Cryptoki.|
 |C_Finalize|N/A|N/A|Clean up miscellaneous Cryptoki-associated resources.|
-|C_GetInfo*|N/A|GetInfo|Obtains general information about Cryptoki.|
+|C_GetInfo|N/A|N/A|Obtains general information about Cryptoki.|
 |C_GetFunctionList|N/A|N/A|Obtains entry points of Cryptoki library functions.|
 |C_GetSlotList|N/A|N/A|Obtains a list of slots in the system.|
 |C_GetSlotInfo|N/A|N/A|Obtains information about a particular slot.|

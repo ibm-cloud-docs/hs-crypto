@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-16"
+lastupdated: "2019-08-22"
 
 Keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,15 +27,15 @@ Stay up-to-date with the new features that are available for {{site.data.keyword
 ## August 2019
 {: #August-2019}
 
-<!-- ### Added: {{site.data.keyword.hscrypto}} Cloud HSM now supports EP11 cryptographic operations over gRPC
+### Added: {{site.data.keyword.hscrypto}} Cloud HSM now supports EP11 cryptographic operations over gRPC
 {: #added-EP11}
-New as of: 2019-08-15
+New as of: 2019-08-22
 
 The managed cloud Hardware Security Module (HSM) supports Enterprise Public-Key Cryptography Standards (PKCS) #11, so your applications can integrate cryptographic operations like digital signing and validation via Enterprise PKCS#11 (EP11) API. The EP11 library provides an interface very similar to the industry-standard PKCS #11 API.
 
 {{site.data.keyword.hscrypto}} provides a set of Enterprise PKCS #11 (EP11) APIs over gRPC calls (also referred to as *GREP11*), with which, all the Crypto functions are executed in HSM on cloud. GREP11 is designed to be a stateless interface for cloud programs.
 
-For more information on the GREP11 API, see [EP11 introduction](/docs/services/hs-crypto/hs-crypto?topic=hs-crypto-enterprise_PKCS11_overview) and [GREP11 API reference](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref). -->
+For more information on the GREP11 API, see [EP11 introduction](/docs/services/hs-crypto/hs-crypto?topic=hs-crypto-enterprise_PKCS11_overview) and [GREP11 API reference](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
 ### Added: {{site.data.keyword.hscrypto}} adds support for private endpoints
 {: #added-private-endpoints}
@@ -45,8 +45,8 @@ You can now connect to {{site.data.keyword.hscrypto}} over the {{site.data.keywo
 
 To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your infrastructure account. For more information, see [Using private endpoints](/docs/services/hs-crypto?topic=hs-crypto-private-endpoints).
 
-<!-- The private endpoint is currently only available for the key management service.
-{: note} -->
+The private endpoint is currently only available for the key management service.
+{: note}
 
 ### Added: {{site.data.keyword.hscrypto}} expands into the Frankfurt region
 {: #added-frankfurt-region}

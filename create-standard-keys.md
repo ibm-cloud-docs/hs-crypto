@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-08-22"
 
 Keywords: standard keys, standard encryption key, create standard keys, create standard encryption key, create secret, persist secret, create encryption key, standard encryption key API examples
 
@@ -31,7 +31,7 @@ You can create a standard encryption key with the {{site.data.keyword.cloud}} {{
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. To create a new key, click **Add key** and select the **Create a key** window.
+4. To create a new key, click **Add key** and select **Generate key**.
 
     Specify the key's details:
 
@@ -41,20 +41,20 @@ You can create a standard encryption key with the {{site.data.keyword.cloud}} {{
         <th>Description</th>
       </tr>
       <tr>
+        <td>Key type</td>
+        <td>The <a href="/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption#key-types">type of key</a> that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Standard key</b>.</td>
+      </tr>
+      <tr>
         <td>Name</td>
         <td>
           <p>A unique, human-readable alias for easy identification of your key.</p>
           <p>To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
         </td>
       </tr>
-      <tr></tr>
-        <td>Key type</td>
-        <td>The <a href="/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption#key-types">type of key</a> that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <b>Standard key</b>.</td>
-      </tr>
       <caption style="caption-side:bottom;">Table 1. Describes the <b>Generate new key</b> settings</caption>
     </table>
 
-5. When you are finished filling out the key's details, click **Create key** to confirm.
+5. When you are finished filling out the key's details, click **Add key** to confirm.
 
 ## Creating standard keys with the API
 {: #create-standard-key-api}

@@ -19,6 +19,7 @@ IBM Cloud Hyper Protect Crypto Services
         service_instance_concepts.md
         envelope-encryption.md
         keys_intro.md
+        EP11_intro.md
     integrate-services.md
 
     {: .topicgroup}
@@ -33,8 +34,9 @@ IBM Cloud Hyper Protect Crypto Services
     initialize_hsm.md
 
     {: .topicgroup}
-    Accessing the key management APIs
+    Accessing the key management and GREP11 APIs
         set-up-kms-api.md
+        set-up-grep11-api.md
         retrieve-access-token.md
         retrieve-instance-id.md
 
@@ -63,6 +65,7 @@ IBM Cloud Hyper Protect Crypto Services
 
     {: .navgroup id="reference"}
     [Key management API reference](https://{DomainName}/apidocs/hs-crypto)
+    grep11-api-ref.md
     /hs-crypto-cli-plugin/hs-crypto-tke_cli_plugin
     regions.md
     manage-access.md

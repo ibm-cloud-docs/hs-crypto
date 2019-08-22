@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-08-22"
 
 Keywords: details of the DELETE request, delete encryption key, deleting keys, Variable Description region, delete key API examples
 
@@ -37,7 +37,7 @@ If you prefer to delete your encryption keys by using a graphical interface, you
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. Use the **Keys** table to browse the keys in your service.
-5. Click the ⋮ icon to open a list of options for the key that you want to delete.
+5. Select the key that you want to delete and click the three dots icon to open a list of options for the key.
 6. From the options menu, click **Delete key** and confirm the key deletion in the next screen.
 
 After you delete a key, the key transitions to the _Destroyed_ state. Keys in this state are no longer recoverable. Metadata that is associated with the key, such as the key's deletion date, is kept in the {{site.data.keyword.hscrypto}} database.
