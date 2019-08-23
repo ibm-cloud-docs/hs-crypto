@@ -31,8 +31,6 @@ Use this page to learn more about availability and disaster recovery strategies 
 ## Locations, tenancy, and availability
 {: #availability}
 
-<!-- {{site.data.keyword.hscrypto}} is a multi-tenant, regional service. -->
-
 You can create {{site.data.keyword.hscrypto}} resources in one of the supported [{{site.data.keyword.cloud_notm}} regions](/docs/services/hs-crypto?topic=hs-crypto-regions), which represent the geographic area where your {{site.data.keyword.hscrypto}} requests are handled and processed. Each {{site.data.keyword.cloud_notm}} region contains [multiple availability zones](https://www.ibm.com/cloud/blog/announcements/expansion-availability-zones-global-regions) to meet local access, low latency, and security requirements for the region.
 
 As you plan your encryption at rest strategy with {{site.data.keyword.cloud_notm}}, keep in mind that provisioning {{site.data.keyword.hscrypto}} in a region that is nearest to you is more likely to result in faster, more reliable connections when you interact with the {{site.data.keyword.hscrypto}} APIs. Choose a specific region if the users, apps, or services that depend on a {{site.data.keyword.hscrypto}} resource are geographically concentrated. Remember that users and services who are far away from the region might experience higher latency.
