@@ -49,7 +49,7 @@ Additional resources to help you learn about managing encryption with {{site.dat
 
 - [IBM Hyper Protect Services](https://www.ibm.com/cloud/hyper-protect-services){: external}
 
-Related {{site.data.keyword.IBM_notm}} Services
+## Related {{site.data.keyword.IBM_notm}} Services
 {: #related_services}
 
 - [{{site.data.keyword.keymanagementserviceshort}}](/docs/services/key-protect){: external}
