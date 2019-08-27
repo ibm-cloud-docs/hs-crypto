@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-08-27"
 
 Keywords: links, Hyper Protect Crypto Services, reference, related information, related topics, related links, blogs, videos
 
