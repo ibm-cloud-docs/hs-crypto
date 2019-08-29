@@ -198,7 +198,7 @@ To run the sample code:
 ## What's next
 {: #get-started-next}
 
-- Now You can start to use your keys to encode your apps and services. If you added a root key to the service, you might want to learn more about using the root key to protect the keys that encrypt your at-rest data. Check out [Wrapping keys](/docs/services/hs-crypto?topic=hs-crypto-wrap-keys) to get started.
+- Now you can start to use your keys to encode your apps and services. If you added a root key to the service, you might want to learn more about using the root key to protect the keys that encrypt your at-rest data. Check out [Wrapping keys](/docs/services/hs-crypto?topic=hs-crypto-wrap-keys) to get started.
 
   - To find out more about managing and protecting your encryption keys with a root key, check out [Envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption).
   - To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
