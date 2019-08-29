@@ -372,7 +372,7 @@ message DigestResponse {
     <th>Description</th>
   <td>
   <p>Implementation of PKCS #11 <code>C_Digest</code>.</p>
-  <p>Note that if a digest object has had exactly 0 (zero) bytes appended to it after creation, in any combination of zero byte transfers, it may still perform a one-pass Digest, even if it should be rejected by a strict implementation. This is a feature.</p>
+  <p>Note that if a digest object has had exactly 0 (zero) bytes appended to it after creation, in any combination of zero byte transfers, it may still perform a one-pass Digest, even if it should be rejected by a strict implementation.</p>
   <p>Does not update <code>(state, slen)</code>.</p>
   <p>Implementations <i>may</i> perform
   <code>DigestUpdate</code>, <code>DigestFinal<code>, or <code>Digest</code> calls on cleartext digest objects in host code, bypassing HSM backends altogether. This choice may or may not be visible to host code, and it does not impact the security of the operation (as clear objects can not digest sensitive data). </p>
@@ -923,7 +923,7 @@ message EncryptInitResponse {
 	<td>
   <p>Implementation of PKCS #11 <code>C_EncryptInit</code>.</p>
   <p>The <code>(key, klen)</code> blob may be a public-key object, or a secret-key blob. Key type must be consistent with <code>pmech</code>.</p>
-  <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI <i>must be MACed</i>, as returned by <code>GenerateKeyPair</code> or alternatively <code>UnwrapKey</code>. The Encrypt state is created without session restrictions.</p>
+  <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI is integrity-protected with a MAC key, as returned by <code>GenerateKeyPair</code> or alternatively <code>UnwrapKey</code>. The Encrypt state is created without session restrictions.</p>
   <p>For secret-key mechanisms, the Encrypt state inherits object session restrictions from <prm>key,klen<prm>.</p>
   <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
   <p><code>(key, klen)</code> must be a key blob.</p>
@@ -2162,7 +2162,7 @@ message VerifyInitResponse {
   <p>If initializing an HMAC operation, session restrictions of the <code>Verify</code> object are inherited from the HMAC key. Since SPKIs are not tied to sessions, public-key Verify states are session-free.</p>
   <p>The <code>key</code>,<code>klen</code> blob must be mapped from the PKCS #11 <code>hKey</code> parameter.</p>
   <p>**Note**: <code>SignInit</code> and <code>VerifyInit</code> are internally the
-  same for HMAC and other symmetric/MAC mechanisms, other than enforcing different restrictions different restrictions (sign and verify, respectively).</p>
+  same for HMAC and other symmetric/MAC mechanisms.</p>
 </td>
   </tr>
   <tr>
@@ -4100,8 +4100,8 @@ message GetAttributeValueResponse {
 	<td><p>Implementation of PKCS #11 <code>C_GetAttributeValue</code>.</p>
   <p>Does not represent/need sessions (part of blob), therefore does not
   use the <code>hSession</code> parameter.</p>
-  <p>Since currently, we can do shortcuts (such as enumerate actual values
-  instead of being more generic), decoding is straightforward.</p>
+  <p>EP11 uses more straightforward ways to decode, such as enumerating actual values
+  instead of being more generic.</p>
   </td>
   </tr>
   <tr>
