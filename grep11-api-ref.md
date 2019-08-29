@@ -263,7 +263,7 @@ message DigestInitResponse {
     <th>Description</th>
 	<td><p>Implementation of PKCS #11 <code>C_DigestInit</code>.</p>
   <p>Create wrapped digest state.</p>
-  <p>**Note**: size queries are supported, but the wrapped state is always returned by the backend, unlike most size queries (which return an output size, instead of actual output). <code>Digest</code> states are sufficiently small that they do not introduce noticeable transport overhead, except obviously object wrapping.</p>
+  <p>**Note**: size queries are supported, but the wrapped state is always returned by the backend, unlike most size queries (which return an output size, instead of actual output). <code>Digest</code> states are sufficiently small that they do not introduce noticeable transport overhead.</p>
   <p>During size queries, the host just discards the returned state, and reports blob size (in <code>len</code>).  When returning blob, *len is checked against returned size.</p>
   <p>The <code>state</code>,<code>len</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must tie blob to session.)</p></td>
   </tr>
