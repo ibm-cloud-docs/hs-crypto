@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-08-30"
 
 Keywords: frequently asked questions, critical security parameters, cryptographic module, Security Level，questions and answers
 
@@ -52,7 +52,7 @@ A Hardware Security Module (HSM) provides secure key storage and cryptographic o
 
 If you are concerned on data security and compliance in the cloud, you are able to maintain complete control over data encryption and signature keys in a cloud consumable HSM with industry-leading security for cloud data and digital assets, regulatory compliance support through data encryption and controls on privileged access. {{site.data.keyword.cloud_notm}} administrators have NO access to the keys.
 
-With {{site.data.keyword.hscrypto}} you can ensure regulatory compliance and strengthen data security by protecting data with encryption keys in IBM’s fully managed, dedicated key management system and cloud HSM service that supports Keep Your Own Key. Keep your own  keys for cloud data encryption protected by a dedicated cloud HSM. If you are running regulation intensive applications or applications with sensitive data, this solution is right for you.
+With {{site.data.keyword.hscrypto}} you can ensure regulatory compliance and strengthen data security by protecting data with encryption keys in a fully managed, dedicated key management system and cloud HSM service that supports Keep Your Own Key. Keep your own  keys for cloud data encryption protected by a dedicated cloud HSM. If you are running regulation intensive applications or applications with sensitive data, this solution is right for you.
 
 Key features are:
 
@@ -86,11 +86,11 @@ The Federal Information Processing Standard (FIPS) Publication 140-2 is a U.S. g
 * **Level 1**: The lowest level of security. No specific physical security mechanisms are required in a Security Level 1 cryptographic module beyond the basic requirement for production-grade components.
 * **Level 2**: Improves the physical security mechanisms of a Level 1 cryptographic module by requiring features that show evidence of tampering, including tamper-evident coatings or seals that must be broken to attain physical access to the plaintext cryptographic keys and critical security parameters (CSPs) within the module, or pick-resistant locks on covers or doors to protect against unauthorized physical access. Security Level 2 requires, at minimum, role-based authentication in which a cryptographic module authenticates the authorization of an operator to assume a specific role and perform a corresponding set of services.
 * **Level 3**: Provides a high probability of detecting and responding to attempts at physical access, use or modification of the cryptographic module. The physical security mechanisms can include the use of strong enclosures and tamper-detection/response circuitry that zeroizes all plaintext CSPs when the removable covers/doors of the cryptographic module are opened. Security Level 3 requires identity-based authentication mechanisms, enhancing the security provided by the role-based authentication mechanisms specified for Security Level 2.
-* **Level 4**: The highest level of security. At this security level, the physical security mechanisms provide a complete envelope of protection around the cryptographic module with the intent of detecting and responding to all unauthorized attempts at physical access. Penetration of the cryptographic module enclosure from any direction has a very high probability of being detected of all plaintext CSPs.
+* **Level 4**: The highest level of security. At this security level, the physical security mechanisms provide a complete envelope of protection around the cryptographic module with the intent of detecting and responding to all unauthorized attempts at physical access. Penetration of the cryptographic module enclosure from any direction has a very high probability of being detected, resulting in the immediate zeroization of all plaintext CSPs.
 
   Security Level 4 cryptographic modules are useful for operation in physically unprotected environments. Security Level 4 also protects a cryptographic module against a security compromise because of environmental conditions or fluctuations outside of the module's normal operating ranges for voltage and temperature. Intentional excursions beyond the normal operating ranges can be used by an attacker to prevent a cryptographic module's defenses.
 
-  A cryptographic module is required to either include special environmental protection features designed to detect fluctuations and delete CSPs, or to undergo environmental failure testing to ensure that the module will not be affected by fluctuations outside of the normal operating range in a manner that can compromise the security of the module. At this security level, the physical security mechanisms provide a complete envelope of protection around the cryptographic module with the intent of detecting and responding to all unauthorized attempts at physical access. Penetration of the cryptographic module enclosure from any direction has a very high probability of being detected, resulting in the immediate zeroization of all plaintext CSPs.
+  A cryptographic module is required to either include special environmental protection features designed to detect fluctuations and delete CSPs, or to undergo environmental failure testing to ensure that the module will not be affected by fluctuations outside of the normal operating range in a manner that can compromise the security of the module. At this security level, the physical security mechanisms provide a complete envelope of protection around the cryptographic module with the intent of detecting and responding to all unauthorized attempts at physical access.
 
   {{site.data.keyword.hscrypto}} is the only cloud HSM in the public cloud market built on an HSM designed to meet FIPS 140-2 Level 4 certification requirements. The certification was achieved on 3/20/2019 and is listed on the [Cryptographic Module Validation Program (CVMP) Validated Modules List](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules){: external}.
 

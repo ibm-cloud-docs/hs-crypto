@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-22"
+lastupdated: "2019-08-30"
 
 Keywords: EP11, PKCS#11, GREP11, API reference, EP11 over gRPC,
 
@@ -3591,7 +3591,7 @@ message UnwrapKeyResponse {
     <th>Description</th>
 	<td>
   <p>Implementation of PKCS #11 <code>C_UnwrapKey</code>.</p>
-  <p><code>uwmech</code> specifies the encryption mechanism used to decrypt wrapped data. <code>ptempl</code> is a <i>key(pair)</i> parameter list, specifying how to transform the unwrapped data to a new key (must include <code>CKA_KEY_TYPE</code>; for others see <code>GenerateKey</code> and <code>GenerateKeyPair</code>).</p>
+  <p><code>uwmech</code> specifies the encryption mechanism used to decrypt wrapped data. <code>ptempl</code> is a <i>key(pair)</i> parameter list, specifying how to transform the unwrapped data to a new key (must include <code>CKA_KEY_TYPE</code>).</p>
   <p>The generated object is returned under <code>(unwrapped, uwlen)</code> as a blob. Symmetric keys return their key checksum (3 bytes) under <code>(csum, cslen)</code>; public-key objects return their public key as an SPKI in <code>(csum, cslen)</code>. Both forms are followed by a 4-byte big-endian value, encoding bitcount of the unwrapped key.</p>
   <p>When transforming an SPKI to a MACed SPKI, one must use CKM_IBM_TRANSPORTKEY as the unwrapping mechanism. This mode supplies the raw SPKI as wrapped data, and ignores the KEK.</p>
   <p>Note that <code>UnwrapKey</code> produces parity-adjusted DES keys (within the blobs), but tolerates input with improper parity.</p>
@@ -3635,7 +3635,7 @@ CK_RV m_UnwrapKey (
     <p>Some mechanisms may modify, or attempt to modify. the contents of the `pMechanism` structure at the same time that the key is unwrapped.</p>
     <p>If a call to `C_UnwrapKey` cannot support the precise template supplied to it, it will fail and return without creating any key object.</p>
     <p>The key object created by a successful call to `C_UnwrapKey` will have its `CKA_LOCAL` attribute set to `CK_FALSE`.</p>
-    <p>To partition the unwrapping keys so they can only unwrap a subset of keys the attribute `CKA_UNWRAP_TEMPLATE` can be used on the unwrapping key to specify an attribute set that will be added to attributes of the key to be unwrapped. If the attributes do not conflict with the user supplied attribute template, in â€˜pTemplateâ€™, then the unwrap will proceed. The value of this attribute is an attribute template and the size is the number of items in the template times the size of `CK_ATTRIBUTE`. If this attribute is not present on the unwrapping key then no additional attributes will be added. If any attribute conflict occurs on an attempt to unwrap a key then the function SHALL return `CKR_TEMPLATE_INCONSISTENT`.</p>
+    <p>To partition the unwrapping keys so they can only unwrap a subset of keys the attribute `CKA_UNWRAP_TEMPLATE` can be used on the unwrapping key to specify an attribute set that will be added to attributes of the key to be unwrapped. If the attributes do not conflict with the user supplied attribute template, in `pTemplate`, then the unwrap will proceed. The value of this attribute is an attribute template and the size is the number of items in the template times the size of `CK_ATTRIBUTE`. If this attribute is not present on the unwrapping key then no additional attributes will be added. If any attribute conflict occurs on an attempt to unwrap a key then the function SHALL return `CKR_TEMPLATE_INCONSISTENT`.</p>
     </td>
   </tr>
   <tr>
@@ -3897,7 +3897,7 @@ CK_RV m_GetMechanismList (
   <tr>
     <th>Description</th>
     <td>
-    <p>`C_GetMechanismList` is used to obtain a list of mechanism types supported by a token. SlotID is the ID of the token's slot; `pulCount` points to the location that receives the number of mechanisms.</p>
+    <p>`C_GetMechanismList` is used to obtain a list of mechanism types supported by a token. `SlotID` is the ID of the token's slot; `pulCount` points to the location that receives the number of mechanisms.</p>
     <p>
     There are two ways for an application to call `C_GetMechanismList`:
     <ol>
@@ -4142,7 +4142,7 @@ CK_RV m_GetAttributeValue (
     </ol>
     </p>
     <p>If case 1 applies to any of the requested attributes, then the call should return the value `CKR_ATTRIBUTE_SENSITIVE`. If case 2 applies to any of the requested attributes, then the call should return the value `CKR_ATTRIBUTE_TYPE_INVALID`. If case 5 applies to any of the requested attributes, then the call should return the value `CKR_BUFFER_TOO_SMALL`. As usual, if more than one of these error codes is applicable, `Cryptoki` may return any of them. Only if none of them applies to any of the requested attributes will `CKR_OK` be returned.</p>
-    <p>In the special case of an attribute whose value is an array of attributes, for example` CKA_WRAP_TEMPLATE`, where it is passed in with `pValue` not NULL, then if the `pValue` of elements within the array is NULL_PTR then the `ulValueLen` of elements within the array will be set to the required length. If the `pValue` of elements within the array is not NULL_PTR, then the `ulValueLen` element of attributes within the array must reflect the space that the corresponding `pValue` points to, and `pValue` is filled in if there is sufficient room. Therefore it is important to initialize the contents of a buffer before calling `C_GetAttributeValue` to get such an array value. If any `ulValueLen` within the array isn't large enough, it will be set to `CK_UNAVAILABLE_INFORMATION` and the function will return `CKR_BUFFER_TOO_SMALL`, as it does if an attribute in the `pTemplate` argument has `ulValueLen` too small. Note that any attribute whose value is an array of attributes is identifiable by virtue of the attribute type having the `CKF_ARRAY_ATTRIBUTE` bit set.</p>
+    <p>In the special case of an attribute whose value is an array of attributes, for example` CKA_WRAP_TEMPLATE`, where it is passed in with `pValue` not NULL, then if the `pValue` of elements within the array is NULL_PTR then the `ulValueLen` of elements within the array will be set to the required length. If the `pValue` of elements within the array is not NULL_PTR, then the `ulValueLen` element of attributes within the array must reflect the space that the corresponding `pValue` points to, and `pValue` is filled in if there is sufficient room. Therefore it is important to initialize the contents of a buffer before calling `C_GetAttributeValue` to get such an array value. If any `ulValueLen` within the array isn't large enough, it will be set to `CK_UNAVAILABLE_INFORMATION` and the function will return `CKR_BUFFER_TOO_SMALL`, as it does if an attribute in the `pTemplate` argument has `ulValueLen` too small. Note that any attribute whose value is an array of attributes is identifiable by virtue of the attribute type having the `CKF_ARRAY_ATTRIBUTE` set.</p>
     <p>Note that the error codes `CKR_ATTRIBUTE_SENSITIVE`, `CKR_ATTRIBUTE_TYPE_INVALID`, and `CKR_BUFFER_TOO_SMALL` do not denote true errors for `C_GetAttributeValue`. If a call to `C_GetAttributeValue` returns any of these three values, then the call must nonetheless have processed every attribute in the template supplied to `C_GetAttributeValue`. Each attribute in the template whose value can be returned by the call to `C_GetAttributeValue` will be returned by the call to `C_GetAttributeValue`.</p>
     </td>
   </tr>
@@ -4230,7 +4230,7 @@ message SetAttributeValueResponse {
 	<td>
   <p>Implementation of PKCS #11 <code>C_SetAttributeValue</code>.</p>
   <p>attribute packing: see _GetAttrValue</p>
-  <p>Currently, we only send Boolean attributes, all other attributes are handled by host (and we don't let modify arrays, such as WRAP_TEMPLATE).</p>
+  <p>Currently, Ep11 only sends Boolean attributes, all other attributes are handled by host (and EP11 does not modify arrays, such as WRAP_TEMPLATE).</p>
   <p>Does not represent/need sessions (part of blob), therefore does not use the PKCS #11 <code>hSession</code> parameter.</p>
   </td>
   </tr>

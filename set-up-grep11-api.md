@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-22"
+lastupdated: "2019-08-30"
 
 keywords: set up API, use EP11 API, access EP11 API, EP11 over gRPC, GREP11
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Setting up the GREP11 API
 {: #set-up-grep11-api}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides an Enterprise PKCS #11 (EP11) API over gRPC calls (also referred to as *GREP11 API*) to remotely access the {{site.data.keyword.hscrypto}} service instance for data encryption and management.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides an Enterprise PKCS #11 (EP11) API over gRPC (also referred to as *GREP11 API*) to remotely access the {{site.data.keyword.hscrypto}} service instance for data encryption and management.
 {: shortdesc}
 
 ## Retrieving your IBM Cloud credentials
