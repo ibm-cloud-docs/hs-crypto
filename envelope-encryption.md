@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-09-02"
 
 keywords: data-at-rest encryption, envelope encryption, root key, data encryption key, protect data encryption key, encrypt data encryption key, wrap data encryption key, unwrap data encryption key
 
@@ -113,6 +113,7 @@ Unwrapping a data encryption key (DEK) decrypts and authenticates the contents w
 If your business application needs to access the contents of your wrapped DEKs, you can use the {{site.data.keyword.hscrypto}} API to send an unwrap request to the service. To unwrap a DEK, you specify the ID value of the root key and the `ciphertext` value returned during the initial wrap request. To complete the unwrap request, you must also supply the additional authenticated data (AAD) to check the integrity of the key contents.
 
 The following diagram shows key unwrapping in action.
+
 ![Unwrapping data](/image/unwrapping-keys.png "Unwrapping data")
 *Figure 3. Unwrapping data*
 
