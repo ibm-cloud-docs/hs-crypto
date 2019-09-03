@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Introduction to envelope encryption
 {: #envelope-encryption}
 
-Envelope encryption is the practice of encrypting data with a data encryption key (DEK) and then encrypting the DEK with a root key that you can fully manage.
+Envelope encryption is the practice of encrypting data with a data encryption key (DEK) and then wrapping the DEK with a root key that you can fully manage. The root keys in {{site.data.keyword.hscrypto}} service instance are also wrapped and protected by the service instance master key.
 {: shortdesc}
 
 {{site.data.keyword.hscrypto}} protects your stored data with advanced encryption and offers several benefits:
@@ -33,7 +33,7 @@ Envelope encryption is the practice of encrypting data with a data encryption ke
   <th>Description</th>
   <tr>
     <td>Customer-managed encryption keys</td>
-    <td>With the service, you can provision root keys to protect the security of your encrypted data in the cloud. Root keys serve as master key-wrapping keys, which help you manage and safeguard the data encryption keys (DEKs) provisioned in {{site.data.keyword.cloud_notm}} data services. You decide whether to import your existing root keys, or have {{site.data.keyword.hscrypto}} generate them on your behalf.</td>
+    <td>With the service, you can provision root keys to protect the security of your encrypted data in the cloud. Root keys serve as key-wrapping keys, which help you manage and safeguard the data encryption keys (DEKs) provisioned in {{site.data.keyword.cloud_notm}} data services. You decide whether to import your existing root keys, or have {{site.data.keyword.hscrypto}} generate them on your behalf.</td>
   </tr>
   <tr>
     <td>Confidentiality and integrity protection</td>
@@ -110,11 +110,11 @@ If you send a wrap request without specifying the plaintext to encrypt, the AES-
 
 Unwrapping a data encryption key (DEK) decrypts and authenticates the contents within the key, returning the original key material to your data service.
 
-If your business application needs to access the contents of your wrapped DEKs, you can use the {{site.data.keyword.hscrypto}} API to send an unwrap request to the service. To unwrap a DEK, you specify the ID value of the root key and the `ciphertext` value returned during the initial wrap request. To complete the unwrap request, you must also supply the additional authenticated data (AAD) to check the integrity of the key contents.
+If your business application needs to access the contents of your wrapped DEKs, you can use the {{site.data.keyword.hscrypto}} API to send an unwrap request to the service. To unwrap a DEK, you need to specify the ID value of the root key and the `ciphertext` value returned during the initial wrap request.
 
 The following diagram shows key unwrapping in action.
 
-![Unwrapping data](/image/unwrapping-keys.png "Unwrapping data")
+![Unwrapping data](/image/unwrapping-keys.png "The diagram shows key unwrapping in action.")
 *Figure 3. Unwrapping data*
 
 After you send the unwrap request, the system reverses the key wrapping process by using the same AES algorithms. A successful unwrap operation returns the base64 encoded `plaintext` value to your {{site.data.keyword.cloud_notm}} data at rest service.
