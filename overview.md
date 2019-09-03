@@ -71,7 +71,7 @@ The following are a few highlights of the {{site.data.keyword.hscrypto}} archite
 
 * **Access management and auditing**
 
-  {{site.data.keyword.hscrypto}} can integrate with other IBM Cloud services for access management, logging and monitoring, auditing to control key access and support-compliance requirements.
+  {{site.data.keyword.hscrypto}} can integrate with other IBM Cloud services so as to manage key access, log and monitor security events, and support compliance requirements.
 
 ### Cloud HSMs
 {: #cloud-hsm}
