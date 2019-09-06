@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-30"
+lastupdated: "2019-09-06"
 
 Keywords: EP11, PKCS#11, GREP11, API reference, EP11 over gRPC,
 
@@ -3302,7 +3302,7 @@ message GenerateKeyPairResponse {
   <p>If tying an object to a session, <code>(pin, plen)</code> must have been returned by <code>Login</code> to that session. Leaving <code>pin</code> <code>NULL</code> creates a public object, one which will survive its login session.</p>
   <p>Returns wrapped private key to <code>(key, klen)</code>, public key as a MACed ASN.1/DER structure in <code>(pubkey, pklen)</code>.</p>
   <p>Supported parameter combinations with special notes (beyond those documented by PKCS #11) are the following:</p>
-  <p>RSA keys reject public exponents below 17 (0x11). Control points may further restrict the accepted minimum. The Fermat4 exponent, 0x10001, is controlled by a specific control point, matching public-exponent restrictions of FIPS 186-3 (section B.3.1).</p> <p>EC keys (<code>CKM_EC_KEY_PAIR_GEN</code>): curve parameters may be specified as OIDs or symbolic names (our namedCurve variant). Supported symbolic names are "<code>P-nnn</code>" for FP NIST curves (<code>nnn</code> is a supported prime bitcount, 192 to 521), "<code>BP-nnnR</code>" for regular BP curves, and "<code>BP-nnnT</code>" for twisted BP curves of bitcount nnn (160 to 512). (Names must be supplied as ASCII strings, without zero-termination.)</p>
+  <p>RSA keys reject public exponents below 17 (0x11). Control points may further restrict the accepted minimum. The Fermat4 exponent, 0x10001, is controlled by a specific control point, matching public-exponent restrictions of FIPS 186-3 (section B.3.1).</p> <p>EC keys (<code>CKM_EC_KEY_PAIR_GEN</code>): curve parameters may be specified as OIDs or symbolic names (our namedCurve variant). Supported symbolic names are "<code>P-nnn</code>" for NIST curves (<code>nnn</code> is a supported prime bitcount, 192 to 521), "<code>BP-nnnR</code>" for regular BP curve. (Names must be supplied as ASCII strings, without zero-termination.)</p>
   <p>DSA keys (<code>CKM_DSA_KEY_PAIR_GEN</code>): pass P,Q,G structure as the <code>CKA_IBM_STRUCT_PARAMS</code> attribute of public attributes. Note that individual P,Q,G parameters may not be passed through regular PKCS #11 parameters, they must be combined to a single structure.</p>
   <p>DH keys (<code>CKM_DH_PKCS_KEY_PAIR_GEN</code>): pass P,G structure as the <code>CKA_IBM_STRUCT_PARAMS</code> attribute of public attributes. Note that individual P,G parameters may not be passed through regular PKCS #11 parameters, they must be combined to a single structure. When selecting a private-key (X) bitcount, use the <code>XCP_U32_VALUE_BITS</code> attribute. If not present, or an explicit 0 is supplied, bitcount is selected based on P bitcount.</p>
   <p>Use of session (Login) state replaces standard use of sessions, the mapping is outside library scope.</p>

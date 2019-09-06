@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-03"
+lastupdated: "2019-09-06"
 
 Keywords: PKCS11, EP11, HSM, GREP11, EP11 over gRPC, Cloud HSM, cloud cryptography
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 
-# Enterprise PKCS #11 on {{site.data.keyword.hscrypto}}
+# Enterprise PKCS #11 of {{site.data.keyword.hscrypto}}
 {: #enterprise_PKCS11_overview}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides the cloud cryptography capability by allowing users to access Enterprise PKCS #11 (EP11) cryptography library over [gRPC](https://grpc.io){: external} (also referred to as *GREP11*) API calls.
@@ -34,7 +34,7 @@ PKCS #11 API defines a platform-independent API to cryptographic tokens, such as
 
 More information about the EP11 Library can be found in the [Enterprise PKCS #11 (EP11) Library structure document](https://www.ibm.com/downloads/cas/WXRDPRAN){: external}. For details about EP11 capabilities and extensions, see [EP11 introduction](https://www.ibm.com/security/cryptocards/pciecc3/software#1062266){: external}.
 
-## EP11 over gRPC introduction
+## Introduction to EP11 over gRPC
 {: #grep11_intro}
 
 {{site.data.keyword.hscrypto}} provides a set of EP11 APIs over gRPC calls, with which all the Crypto functions are executed in a Hardware Security Module (HSM) on the cloud. EP11 over gRPC is designed to be a stateless interface for cryptographic operations on cloud.
@@ -117,7 +117,7 @@ PKCS #11 functions that are marked with asterisks (*) in the table are implement
 |C_WrapKey*      |m_WrapKey|WrapKey|Wraps (encrypts) a key.|
 |C_UnwrapKey*    |m_UnwrapKey|UnwrapKey|Unwraps (decrypts) a key.|
 |C_DeriveKey*    |m_DeriveKey|DeriveKey|Derives a key from a base key.|
-|C_SeedRandom*   |m_SeedRandom|SeedRandom|Mixes in additional seed material to the random number generator.|
+|C_SeedRandom*   |m_SeedRandom|SeedRandom|Adds seed material to the random number generator.|
 |C_GenerateRandom*|m_GenerateRandom|GenerateRandom|Generates random data.|
 |C_GetFunctionStatus|N/A|N/A|Legacy function which always returns `CKR_FUNCTION_NOT_PARALLEL`.|
 |C_CancelFunction|N/A|N/A|Legacy function which always returns `CKR_FUNCTION_NOT_PARALLEL`.|
