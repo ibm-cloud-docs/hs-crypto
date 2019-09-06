@@ -12,14 +12,15 @@ IBM Cloud Hyper Protect Crypto Services
         [Video: Getting started with IBM Cloud Hyper Protect Crypto Services](https://youtu.be/vMz5K8rc00k)
 
     {: .topicgroup}
-    About IBM Cloud Hyper Protect Crypto Services
-        [Video: IBM Cloud Hyper Protect Crypto Services overview](https://youtu.be/0LiltyNMwgo)
+    About
         overview.md
         use_case.md
         service_instance_concepts.md
         envelope-encryption.md
         keys_intro.md
         EP11_intro.md
+        [Video: IBM Cloud Hyper Protect Crypto Services overview](https://youtu.be/0LiltyNMwgo)
+
     integrate-services.md
 
     {: .topicgroup}

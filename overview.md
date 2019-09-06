@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-02"
+lastupdated: "2019-09-06"
 
 Keywords: IBM keys, key management, data security, Hyper Protect Crypto Services, Cloud HSM, hardware security module, PKCS11, openSSL, hsm encryption
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 
-# Overview of {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
+# Overview
 {: #overview}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} offers advanced cloud key management service and Hardware Security Module (HSM) encryption capability with technology that has attained industry's highest security level to protect your data.

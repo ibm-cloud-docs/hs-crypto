@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-30"
+lastupdated: "2019-09-06"
 
 Keywords: Hyper Protect Crypto Services, Keep Your Own Keys, VMware integration, use cases, Bring your Own Keys, KYOK,
 
@@ -17,7 +17,7 @@ subcollection: hs-crypto
 {:pre: .pre}
 {:external: target="_blank" .external}
 
-# Use cases of {{site.data.keyword.hscrypto}}
+# Use cases
 {: #use-cases}
 
 Read this topic to find out details about {{site.data.keyword.hscrypto}} use cases. These use cases will be continuously evolving in later releases.
