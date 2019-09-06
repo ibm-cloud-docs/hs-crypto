@@ -71,10 +71,7 @@ IBM Cloud Hyper Protect Crypto Services
     regions.md
     manage-access.md
     at-events.md
-
-    {: .topicgroup}
-    Data security
-        ha-dr.md
+    ha-dr.md
 
     related-links.md
     {: .navgroup-end}
