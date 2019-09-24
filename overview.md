@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-06"
+lastupdated: "2019-09-23"
 
 Keywords: IBM keys, key management, data security, Hyper Protect Crypto Services, Cloud HSM, hardware security module, PKCS11, openSSL, hsm encryption
 
@@ -27,13 +27,15 @@ subcollection: hs-crypto
 ## Why {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?
 {: #why_hpcs}
 
-Data and information security is crucial and essential for IT environments. As more and more data moves to the cloud, keeping data protected becomes a non-trivial challenge. Built on IBM LinuxONE technology, {{site.data.keyword.hscrypto}} helps ensure that only you have access to your keys and data. A key-management service with key vaulting provided by dedicated customer-controlled HSMs helps you create encryption keys with ease. Alternatively, you can bring your own encryption keys to manage.
+Data and information security is crucial and essential for IT environments. As more and more data moves to the cloud, keeping data protected becomes a non-trivial challenge. Built on IBM LinuxONE technology, {{site.data.keyword.hscrypto}} helps ensure that only you have access to your keys and data. A single-tenant key management service with key vaulting provided by dedicated customer-controlled HSMs helps you easily create and manage your encryption keys. Alternatively, you can bring your own encryption keys to the cloud. The service uses the same key-provider API as {{site.data.keyword.keymanagementserviceshort}}, a multi-tenant key management service, so as to provide a consistent approach to adopting {{site.data.keyword.cloud_notm}} services.
 
-The managed cloud HSM supports industry standards, such as Enterprise Public-Key Cryptography Standards (PKCS) #11, so your applications can integrate cryptographic operations like digital signing and validation via Enterprise PKCS#11 ([EP11](/docs/services/hs-crypto?topic=hs-crypto-enterprise_PKCS11_overview) API). The EP11 library provides an interface very similar to the industry-standard [PKCS #11 application programming interface (API)](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}. For more information on EP11 library structure, see [the EP11 library structure reference guide](https://www.ibm.com/downloads/cas/WXRDPRAN){: external}.
+{{site.data.keyword.hscrypto}} is a dedicated HSM that is controlled by you. {{site.data.keyword.cloud_notm}} administrators have no access. The service is built on FIPS 140-2 Level 4-certified hardware, the highest offered by any cloud provider in the industry. IBM is the first to provide cloud command-line interface (CLI) for HSM master key initialization to help enable you to take ownership of the cloud HSM.
+
+{{site.data.keyword.hscrypto}} can integrate with {{site.data.keyword.cloud_notm}} data and storage services as well as VMware vSphere and VSAN, for providing data-at-rest encryption. The managed cloud HSM supports industry standards, such as Enterprise Public-Key Cryptography Standards (PKCS) #11, so your applications can integrate cryptographic operations such as digital signing and validation via Enterprise PKCS#11 ([EP11](/docs/services/hs-crypto?topic=hs-crypto-enterprise_PKCS11_overview) API). The EP11 library provides an interface very similar to the industry-standard [PKCS #11 application programming interface (API)](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}. For more information on EP11 library structure, see [the EP11 library structure reference guide](https://www.ibm.com/downloads/cas/WXRDPRAN){: external}.
 
 {{site.data.keyword.hscrypto}} leverages frameworks such as gRPC to enable remote application access. [gRPC](https://grpc.io/){: external} is a modern open source high performance remote procedure call (RPC) framework that can connect services in and across data centers for load balancing, tracing, health checking, and authentication. Applications access {{site.data.keyword.hscrypto}} by calling EP11 API remotely over gRPC.
 
-{{site.data.keyword.hscrypto}} is a single-tenant, dedicated HSM that is controlled by you. IBM Cloud administrators have no access. The service is built on FIPS 140-2 Level 4-certified hardware, the highest offered by any cloud provider in the industry. IBM is the first to provide cloud command-line interface (CLI) for HSM master key initialization to help enable you to take ownership of the cloud HSM.
+With the built-in encryption of {{site.data.keyword.hscrypto}}, you can easily build cloud applications with sensitive data. {{site.data.keyword.hscrypto}} provides you with complete control of your data and encryption keys, including the HSM master key, and helps meet regulatory compliance due to technology that provides controls on the external and privilege user access to data and keys.
 
 <!-- With {{site.data.keyword.hscrypto}}, your SSL keys are offloaded to a {{site.data.keyword.hscrypto}} instance to ensure security and protection of those sensitive keys. Besides, the certificate lifecycle management gets common approach to manage certificates and offers the visibility to certificate expiration. -->
 
@@ -44,13 +46,13 @@ The managed cloud HSM supports industry standards, such as Enterprise Public-Key
 
 The following architectural diagram shows how {{site.data.keyword.hscrypto}} works.
 
-![{{site.data.keyword.hscrypto}} architecture](/image/architecture.png "{{site.data.keyword.hscrypto}} architecture")
+![{{site.data.keyword.hscrypto}} architecture](/image/architecture.svg "{{site.data.keyword.hscrypto}} architecture")
 *Figure 1. {{site.data.keyword.hscrypto}} architecture*  
 
 The following are a few highlights of the {{site.data.keyword.hscrypto}} architecture:
 - Applications connect to {{site.data.keyword.hscrypto}} through EP11 API.
 - Dedicated KeyStore in {{site.data.keyword.hscrypto}} is provided to ensure data isolation and security. Privileged users are locked out for protection against abusive use of system administrator credentials or root user credentials.
-- Secure Service Container (SSC) provides the enterprise-level of security and impregnability that enterprise customers have come to expect from IBM LinuxONE technology.
+- [Secure Service Container (SSC)](https://www.ibm.com/marketplace/secure-service-container){: external} provides the enterprise-level of security and impregnability that enterprise customers have come to expect from [IBM LinuxONE](https://www.ibm.com/it-infrastructure/linuxone){: external} technology.
 - FIPS 140-2 Level 4 compliant cloud HSM is enabled for highest physical protection of secrets.  
 
 ## Key features
