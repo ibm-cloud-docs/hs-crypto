@@ -37,6 +37,7 @@ Additional resources to help you learn about managing encryption with {{site.dat
 ## Blogs
 {: #blogs}
 
+- [IBM Cloud solution for highly regulated and business-critical workloads in a new secure and compliant hybrid architecture](https://www.hytrust.com/blog/hytrust-ibm-cloud-secure-and-compliant-hybrid-architecture/){: external}
 - [Announcing {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}—Hardware Security Module Services](https://www.ibm.com/cloud/blog/announcing-ibm-cloud-hyper-protect-crypto-services-hardware-security-module-services){: external}
 - [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} is Now Available on IBM Public Cloud](https://www.ibm.com/blogs/cloud-archive/2019/03/ibm-cloud-hyper-protect-crypto-services-is-now-available-on-ibm-public-cloud/){: external}
 - [Announcing {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} – BETA](https://www.ibm.com/cloud/blog/announcements/announcing-ibm-cloud-hyper-protect-crypto-services-beta){: external}
