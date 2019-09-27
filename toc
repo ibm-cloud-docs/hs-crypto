@@ -15,6 +15,7 @@ IBM Cloud Hyper Protect Crypto Services
     About
         overview.md
         use_case.md
+        data-security.md
         hs-crypto-concepts.md
         service_instance_overview.md
         envelope-encryption.md
@@ -72,11 +73,7 @@ IBM Cloud Hyper Protect Crypto Services
     manage-access.md
     at-events.md
 
-    {: .topicgroup}
-    Data security
-        ha-dr.md
-        data-security.md
-
+    ha-dr.md
     related-links.md
     {: .navgroup-end}
 

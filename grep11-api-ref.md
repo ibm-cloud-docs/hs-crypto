@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-06"
+lastupdated: "2019-09-26"
 
 Keywords: EP11, PKCS#11, GREP11, API reference, EP11 over gRPC,
 
@@ -30,25 +30,8 @@ subcollection: hs-crypto
 # GREP11 API reference
 {: #grep11-api-ref}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of Enterprise PKCS #11 (EP11) APIs over [gRPC](https://grpc.io){: external} calls (also referred to *GREP11*), with which all the Crypto functions are executed in a Hardware Security Module (HSM) on the cloud.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of Enterprise PKCS #11 (EP11) APIs over [gRPC](https://grpc.io){: external} calls (also referred to *GREP11*), with which all the Crypto functions are executed in a Hardware Security Module (HSM) in the cloud.
 {: shortdesc}
-
-By using the GREP11 API, you can perform the following operations:
-
-- Key generation
-- Encrypt and decrypt
-- Sign and verify
-- Wrap and unwrap keys
-- Derive keys
-- Build message digest
-- Retrieve mechanism information
-
-For each operation, there are a series of suboperations. For example, the `Encrypt` operation is composed of `EncryptInit()`, `Encrypt()`, `EncryptUpdate()`, `EncryptFinal()`, and `EncryptSingle()` suboperations.
-
-- `EncryptInit()` is used to initialize an operation.
-- `Encrypt()` is used to encrypt data without the need to perform `EncryptUpdate()` and `EncryptFinal()` suboperations. This suboperation needs to be performed after the `EncryptInit()` call.
-- `EncryptUpdate()` and `EncryptFinal()` are used in combination to perform data encryption. These suboperations need to be performed after the `EncryptInit()` call.  
-- `EncryptSingle()` is an IBM EP11 extension to the standard PKCS#11 specification, and is used to perform a single call to encrypt data without the need to run the `EncryptInit()`, `Encrypt()`, `EncryptUpdate()`, or `EncryptFinal()` sub-operation.
 
 For information on how the GREP11 functions are related to PKCS #11 and EP11, see [GREP11 introduction](/docs/services/hs-crypto?topic=hs-crypto-enterprise_PKCS11_overview#grep11_intro).
 
@@ -97,12 +80,12 @@ Here is an [example]( https://github.com/vpaprots/ibm-cloud-hyperprotectcrypto/b
 
 Enterprise PKCS #11 (EP11) over gRPC defines gRPC functions based on the EP11 implementation of the PKCS #11 specification. The following function descriptions are created based on the [PKCS #11 specification](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}, with notes specific to EP11. All parameter definitions are in the original form of EP11. For more details about EP11, refer to [Enterprise PKCS #11 (EP11) Library structure](https://www.ibm.com/downloads/cas/WXRDPRAN){: external}.
 
-EP11 function parameters are mapped to the protocol buffer types that can be found in the following functions. You can learn more about protocol buffer types [here](https://developers.google.com/protocol-buffers/docs/proto3#scalar){: external}.
+EP11 function parameters are mapped to the protocol buffer types that can be found in the following functions. You can learn more about protocol buffer types in [Google Developers](https://developers.google.com/protocol-buffers/docs/proto3#scalar){: external}.
 
 Because the EP11 library is a subset of the PKCS #11 API library, and GREP11 functions are variants from the corresponding EP11 functions, the corresponding functions of EP11 and PKCS #11 are also listed in the GREP11 function tables for your reference. For more details on PKCS #11 and the legal statement, see the [PKCS #11 specification](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}. For details about EP11, see [Enterprise PKCS #11 (EP11) Library structure](https://www.ibm.com/downloads/cas/WXRDPRAN){: external}.
 {: note}
 
-Enterprise PKCS #11 (EP11) over gRPC supports programming languages such as Golang, JavaScript, and Java. At the current stage, only code snippets for Golang are included in the API reference. The content will be enriched in later phases.
+Enterprise PKCS #11 (EP11) over gRPC supports any programming languages with a gRPC library. At the current stage, only code snippets for Golang are included in the API reference. The content will be enriched in later phases.
 
 <br/>
 

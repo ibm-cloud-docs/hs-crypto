@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-02"
+lastupdated: "2019-09-26"
 
 Keywords: Hyper Protect Crypto Services, hsm, Trusted Key Entry plug-in, service instance, imprint mode, smart card, master key, load master key
 
@@ -30,8 +30,7 @@ Crypto units contain master keys that encrypt the contents of key storage. With 
 
 The following diagram illustrates a services instance with two crypto units.
 
-![Service instance components](/image/kms_service.png "Service instance components")
-*Figure 1. Service instance components*
+![Service instance components](/image/kms_service.svg "Service instance components"){: caption="Figure 1. Service instance components" caption-side="bottom"}
 
 ## Understanding the master key and master key parts
 {: #understand-master-key}
@@ -52,10 +51,14 @@ In a production environment, the master key has to be built from at least three 
 
 The smart card chip is a Hardware Security Module (HSM) with encryption capability. The key part is generated inside the smart card's HSM and never leaves the smart cards HSM unless it is encrypted. The administrator's signature key is generated in the smart card's HSM and the private part never leaves the smart card's HSM. -->
 
-## Understanding imprint mode
+## Understanding imprint mode and signature keys
 {: #understand-imprint-mode}
 
-On a {{site.data.keyword.hscrypto}} service instance, the crypto units start their life in a clear state known as *Imprint Mode*. A crypto unit in imprint mode is not secure. You can only set up crypto unit administrators and create administrator signature keys in imprint mode. Each administrator owns a signature key, and needs to be added to the crypto unit. Commands issued to a crypto unit in imprint mode do not need to be signed by administrators.
+On a {{site.data.keyword.hscrypto}} service instance, the crypto units start their life in a clear state known as *Imprint Mode*. A crypto unit in imprint mode is not secure.
+
+If the crypto unit is not in imprint mode, an administrator must sign any commands that are not issued to the crypto unit with their own *signature key*. Each administrator needs to added their signature key to the assigned crypto unit. The private part of the signature key is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator.
+
+However, you can only set up administrators and create administrator signature keys in imprint mode. Commands issued to a crypto unit in imprint mode do not need to be signed with any administrator signature keys.  
 
 The master key can be loaded only after the crypto unit exits imprint mode. The command to exit imprint mode must be signed by one of the added crypto unit administrators using the signature key.
 
@@ -76,7 +79,6 @@ Do the following for each crypto unit to build the master key:
 
 The following diagram illustrates how the master key register state changes, and how the master key is loaded.
 
-![Loading master keys](/image/master_key_register.png "How to load a master key")
-*Figure 2. Loading master keys*
+![Loading master keys](/image/master_key_register.svg "How to load a master key"){: caption="Figure 2. Loading master key" caption-side="bottom"}
 
 For detailed steps of loading master keys, see [Initializing service instances](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm).

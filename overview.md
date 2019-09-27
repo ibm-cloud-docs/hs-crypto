@@ -46,8 +46,7 @@ With the built-in encryption of {{site.data.keyword.hscrypto}}, you can easily b
 
 The following architectural diagram shows how {{site.data.keyword.hscrypto}} works.
 
-![{{site.data.keyword.hscrypto}} architecture](/image/architecture.png "{{site.data.keyword.hscrypto}} architecture")
-*Figure 1. {{site.data.keyword.hscrypto}} architecture*  
+![{{site.data.keyword.hscrypto}} architecture](/image/architecture.svg "{{site.data.keyword.hscrypto}} architecture"){: caption="Figure 1. {{site.data.keyword.hscrypto}} architecture" caption-side="bottom"} 
 
 The following are a few highlights of the {{site.data.keyword.hscrypto}} architecture:
 - Applications connect to {{site.data.keyword.hscrypto}} through EP11 API.

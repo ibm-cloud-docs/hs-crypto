@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-13"
+lastupdated: "2019-09-26"
 
 Keywords: regional service endpoint, Hyper Protect Crypto Services resources, API endpoints, public service endpoint, private service endpoint, available regions
 
@@ -21,7 +21,7 @@ subcollection: hs-crypto
 # Regions and locations
 {: #regions}
 
-You can connect your applications with the {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} by specifying a regional service endpoint.
+You can connect your applications with the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} by specifying a regional service endpoint.
 {: shortdesc}
 
  ## Available regions
@@ -43,7 +43,10 @@ You can connect your applications with the {{site.data.keyword.cloud_notm}} {{si
         <dd>By default, you can connect to resources in your account over the {{site.data.keyword.cloud_notm}} public network. Your data is encrypted in transit by using the Transport Security Layer (TLS) 1.2 protocol.
         </dd>
     <dt>Private endpoints</dt>
-        <dd>For added benefits, you can also enable <a href="/docs/account?topic=account-vrf-service-endpoint" target="_blank" class="external"> virtual routing and forwarding (VRF) and service endpoints</a> for your infrastructure account. When you enable VRF for your account, you can connect to {{site.data.keyword.hscrypto}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network. To learn more about VRF, see <a href="/docs/resources?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud" target="_blank" class="external">Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}</a>. To learn how to connect to {{site.data.keyword.hscrypto}} by using a private endpoint, see <a href="/docs/services/hs-crypto?topic=hs-crypto-private-endpoints">Connecting to {{site.data.keyword.hscrypto}} on the {{site.data.keyword.cloud_notm}} private network</a>.
+        <dd>
+        <p>For added benefits, you can also enable <a href="/docs/account?topic=account-vrf-service-endpoint" target="_blank" class="external"> virtual routing and forwarding (VRF) and service endpoints</a> for your infrastructure account. When you enable VRF for your account, you can connect to {{site.data.keyword.hscrypto}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network.</p>
+        <p>Private endpoints are currently only available for the key management service.</p>
+        <p>To learn more about VRF, see <a href="/docs/resources?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud" target="_blank" class="external">Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}</a>. To learn how to connect to {{site.data.keyword.hscrypto}} by using a private endpoint, see <a href="/docs/services/hs-crypto?topic=hs-crypto-private-endpoints">Connecting to {{site.data.keyword.hscrypto}} on the {{site.data.keyword.cloud_notm}} private network</a><p>.
         </dd>
 </dl>
 

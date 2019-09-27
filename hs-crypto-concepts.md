@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-19"
+lastupdated: "2019-09-26"
 
 Keywords: key concepts, HSM concepts，Hyper Protect Crypto Services concepts, terms, terminology
 
@@ -84,7 +84,7 @@ Administrators can be added to the target crypto units for issuing commands to t
 ### Signature keys
 {: #signature-key-concept}
 
-An administrator must sign any commands issued to the crypto unit with a signature. The private part of the signature key file is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. Commands issued in [imprint mode](#imprint-mode-concept) do not need to be signed.
+An administrator must sign any commands issued to the crypto unit with a signature key. The private part of the signature key file is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. Commands issued in [imprint mode](#imprint-mode-concept) do not need to be signed with any signature keys.
 
 ### Imprint mode
 {: #imprint-mode-concept}
@@ -151,5 +151,4 @@ gRPC is a modern open source high performance remote procedure call (RPC) framew
 
 Refer to the following architectural diagram to see how components of {{site.data.keyword.hscrypto}} co-works to protect your sensitive data and keys.
 
-![Service instance components](/image/hs-crypto-components.png "Service instance components")
-*Figure 1. Service instance components*
+![Service instance components](/image/hs-crypto-components.svg "Service instance components"){: caption="Figure 1. Interaction with {{site.data.keyword.hscrypto}} components" caption-side="bottom"}

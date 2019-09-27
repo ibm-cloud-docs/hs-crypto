@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-08-22"
+lastupdated: "2019-09-26"
 
 keywords: private endpoints, private network, dedicated network, VRF, service endpoints
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Using private network
 {: #private-endpoints}
 
-You can create and manage {{site.data.keyword.hscrypto}} resources through the {{site.data.keyword.cloud_notm}} private network.
+You can create and manage {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} resources through the {{site.data.keyword.cloud_notm}} private network.
 {: shortdesc}
 
 Public endpoints provide a connection to your deployment on the public network. Your environment needs to have internet access to connect to a deployment. A deployment with a service endpoint on the private network gets an endpoint that is not accessible from the public internet. Once your environment has access to the {{site.data.keyword.cloud_notm}} private network, an internet connection is not required to connect to your deployment.

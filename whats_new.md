@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-22"
+lastupdated: "2019-09-26"
 
 Keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -62,7 +62,14 @@ For more information, see [Regions and locations](/docs/services/hs-crypto?topic
 
 New as of: 2019-08-16
 
-{{site.data.keyword.hscrypto}} can now be integrated with several {{site.data.keyword.cloud_notm}} services. For more information, see [Integrating services](/docs/services/hs-crypto?topic=hs-crypto-integrate-services). 
+{{site.data.keyword.hscrypto}} can now be integrated with the following {{site.data.keyword.cloud_notm}} services:
+
+- {{site.data.keyword.cos_full_notm}}
+- {{site.data.keyword.cloud_notm}} {{site.data.keyword.blockstorageshort}} for Virtual Private Cloud
+- {{site.data.keyword.cloud_notm}} {{site.data.keyword.BluVirtServers_short}} for Virtual Private Cloud
+- Key Management Interoperability Protocol (KMIP) for VMware on {{site.data.keyword.cloud_notm}}
+
+For more information, see [Integrating services](/docs/services/hs-crypto?topic=hs-crypto-integrate-services). 
 
 ## June 2019
 {: #June-2019}

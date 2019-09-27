@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-06"
+lastupdated: "2019-09-26"
 
 keywords: instance ID, get instance ID, get instance GUID, instance ID API, instance ID CLI
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Retrieving your instance ID
 {: #retrieve-instance-ID}
 
-You can target an individual {{site.data.keyword.hscrypto}} service instance for operations by including its unique identifier, or instance ID, in API requests to the service.
+You can target an individual {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance for operations by including its unique identifier, or instance ID, in API requests to the service.
 {: shortdesc}
 
 ## Viewing your instance ID in the {{site.data.keyword.cloud_notm}} console
@@ -41,7 +41,7 @@ You can view the instance ID that is associated with your {{site.data.keyword.hs
 ## Retrieving an instance ID with the CLI
 {: #retrieve-instance-ID-cli}
 
-You can also retrieve the instance ID for your service instance by using the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
+You can also retrieve the instance ID for your service instance by using the {{site.data.keyword.cloud_notm}} CLI.
 
 1. Log in to {{site.data.keyword.cloud_notm}} with the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
 

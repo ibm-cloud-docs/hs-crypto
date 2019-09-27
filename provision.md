@@ -42,10 +42,8 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
   {: important}
 7. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 
-![Provisioning the service](/image/provisioning.gif "Provisioning the service")
+![Provisioning the service](/image/provisioning.gif "Provisioning the service"){: caption="Figure 1. Provisioning the service" caption-side="bottom"}
 {: gif}
-
-*Figure 1. Provisioning the service*
 
 ## Provisioning from the {{site.data.keyword.cloud_notm}} CLI
 {: #provision-cli}

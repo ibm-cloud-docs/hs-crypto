@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-03"
+lastupdated: "2019-09-25"
 
 Keywords: Hyper Protect Crypto Services, Keep Your Own Keys, VMware integration, use cases, Bring your Own Keys, KYOK,
 
@@ -34,8 +34,7 @@ You can use {{site.data.keyword.hscrypto}} to encrypt your data at rest for clou
 
  {{site.data.keyword.keymanagementservicefull_notm}} APIs are integrated for key generation and protection. These keys can be used to provide record or field-level encryption by the application to protect data from other insider threats such as database administrators.
 
-![data at rest encryption with KYOK](/image/byok.png "Data at rest encryption with KYOK")
-*Figure 1. Data at rest encryption with KYOK*
+![data at rest encryption with KYOK](/image/byok.svg "Data at rest encryption with KYOK"){: caption="Figure 1. Data at rest encryption with KYOK" caption-side="bottom"}
 
 Organizations using the VMware environment in {{site.data.keyword.cloud_notm}} to process and store personal information demands the highest level of security. As a user of {{site.data.keyword.hscrypto}}, you get your own dedicated slot that you set up on your own to ensure that no body else can access. Because {{site.data.keyword.hscrypto}} and VMware do not talk to the same interfaces, the Key Management Interoperability Protocol for VMware acts as an intermediary to allow the VMware environment to store and use keys from {{site.data.keyword.hscrypto}}.
 
@@ -43,9 +42,7 @@ As a single-tenant service, {{site.data.keyword.hscrypto}} offers dedicated cont
 
 Check out the [overview video on IBM Cloud Hyper Protect Crypto Services and VMware on {{site.data.keyword.cloud_notm}} solutions](https://youtu.be/9n8-hQBMYWQ){: external} for more information. For a step-to-step tutorial, see [Use IBM Cloud Hyper Protect Crypto Services to encrypt VMware disks](https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/){: external} and the [demo video](https://youtu.be/huQ5wUfrW4c){: external}.
 
-![VMware image protection with KYOK](/image/byok_vm.png "VMware image protection with KYOK")
-
-*Figure 2. VMware image protection with KYOK*
+![VMware image protection with KYOK](/image/byok_vm.svg "VMware image protection with KYOK"){: caption="Figure 2. VMware image protection with KYOK" caption-side="bottom"}
 
 ## Using {{site.data.keyword.hscrypto}} as Enterprise PKCS #11 HSMs
 {: #ep11_hsm}
@@ -57,9 +54,7 @@ supports secure connectivity from cloud application to cloud HSM, and allows for
 
 As IBM is starting to provide a new set of capabilities to support your workloads moving to the cloud, you can benefit from the cryptographic capabilities of {{site.data.keyword.hscrypto}} for both your new and existing workloads. With the introduction of Enterprise PKCS#11 over gRPC, you have access to a full range of cryptographic operations, such as signing, signature validation, message authentication codes, random number generation.
 
-![EP11 HSM](/image/PKCS11.png "Application driven data integrity and confidentiality")
-
-*Figure 3. Application driven data integrity and confidentiality*
+![EP11 HSM](/image/PKCS11.svg "Cryptographic operations with Enterprise PKCS#11"){: caption="Figure 3. Cryptographic operations with Enterprise PKCS#11" caption-side="bottom"}
 
 ## What's next
 {: #use-case-next}

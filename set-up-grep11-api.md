@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-30"
+lastupdated: "2019-09-26"
 
 keywords: set up API, use EP11 API, access EP11 API, EP11 over gRPC, GREP11
 
@@ -186,11 +186,11 @@ In the example, update the following variables:
 
   For the GREP11 service, use the `<region>` and `<port>` in the `ep11` section.
 
-  * Replace `<service_ID_API_key>` with the service ID API key that is retrieved. The service ID API Key can be retrieved by following the instruction in [Managing service ID API key](/docs/iam?topic=iam-serviceidapikeys).
+* Replace `<service_ID_API_key>` with the service ID API key that is retrieved. The service ID API Key can be retrieved by following the instruction in [Managing service ID API key](/docs/iam?topic=iam-serviceidapikeys).
 
-  * Replace `<instance_ID>` with the instance ID that uniquely identified your service instance. Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance by following the instruction in [Retrieving your instance ID](/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+* Replace `<instance_ID>` with the instance ID that uniquely identified your service instance. Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance by following the instruction in [Retrieving your instance ID](/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 
-If the sample request is processed successfully, random data with a length of 16 bytes will be returned, as specified in ep11.AES_BLOCKSIZE.
+If the sample request is processed successfully, random data with a length of 16 bytes will be returned, as specified in `ep11.AES_BLOCKSIZE`.
 
 The previous authentication example as well as additional Golang code examples can be found at:
  -  [GREP11 API examples](https://github.com/vpaprots/ibm-cloud-hyperprotectcrypto/blob/master/golang/examples/server_test.go){: external}

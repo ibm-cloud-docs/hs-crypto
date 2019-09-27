@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-06"
+lastupdated: "2019-09-26"
 
 Keywords: PKCS11, EP11, HSM, GREP11, EP11 over gRPC, Cloud HSM, cloud cryptography
 
@@ -41,9 +41,26 @@ More information about the EP11 Library can be found in the [Enterprise PKCS #11
 
 {{site.data.keyword.hscrypto}} leverages frameworks such as gRPC to enable remote application access. gRPC is a modern open source high performance remote procedure call (RPC) framework that can connect services in and across data centers for load balancing, tracing, health checking, and authentication. Applications access {{site.data.keyword.hscrypto}} by calling the EP11 API remotely through gRPC. For more information on gRPC, see [the gRPC documentaion](https://grpc.io/docs/guides/index.html){: external}.
 
+With the GREP11 APIs, you can perform the following operations:
+
+- Key generation
+- Encrypt and decrypt
+- Sign and verify
+- Wrap and unwrap keys
+- Derive keys
+- Build message digest
+- Retrieve mechanism information
+
+For each operation, there are a series of suboperations. For example, the `Encrypt` operation is composed of `EncryptInit()`, `Encrypt()`, `EncryptUpdate()`, `EncryptFinal()`, and `EncryptSingle()` suboperations.
+
+- `EncryptInit()` is used to initialize an operation.
+- `Encrypt()` is used to encrypt data without the need to perform `EncryptUpdate()` and `EncryptFinal()` suboperations. This suboperation needs to be performed after the `EncryptInit()` call.
+- `EncryptUpdate()` and `EncryptFinal()` are used in combination to perform data encryption. These suboperations need to be performed after the `EncryptInit()` call.  
+- `EncryptSingle()` is an IBM EP11 extension to the standard PKCS#11 specification, and is used to perform a single call to encrypt data without the need to run the `EncryptInit()`, `Encrypt()`, `EncryptUpdate()`, or `EncryptFinal()` sub-operation.
+
 The following table shows the implemented functions in EP11 over gRPC, and how the functions are related to PKCS #11 and EP11. For more information on the GREP11 API, see [GREP11 API reference](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
-PKCS #11 functions that are marked with asterisks (*) in the table are implemented by EP11 over gRPC. Others are not implemented.
+PKCS #11 functions that are marked with an asterisk (*) in the table are implemented by EP11 over gRPC. Others are not implemented.
 {: note}
 
 |PKCS #11        |Enterprise PKCS #11        |Enterprise PKCS #11 over gRPC   | Description     |
