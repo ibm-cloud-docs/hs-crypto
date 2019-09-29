@@ -29,7 +29,7 @@ Before using the {{site.data.keyword.hscrypto}} instance (service instance for s
 
 To initialize service instances, you need to load the master key with the Trusted Key Entry plug-in to your key storage, service instance first. The Trusted Key Entry plug-in allows you to load your master key values.
 
-For an introduction to service instance initialization and other concepts, see [Introduction to service instance initialization](/docs/services/hs-crypto?topic=hs-crypto-introduce-service#introduce-service).
+For an introduction to service instance initialization and other fundamental concepts, see [Introduction to service instance initialization](/docs/services/hs-crypto?topic=hs-crypto-introduce-service#introduce-service) and {{site.data.keyword.hscrypto}} [components and concepts](/docs/services/hs-crypto?topic=hs-crypto-understand-concepts).
 
 The following diagram gives you an overview of steps you need to take to initialize the service instance. Click each step on the diagram for detailed instructions.
 {: hide-dashboard}
@@ -324,6 +324,6 @@ Consider the following before taking actions:
   ibmcloud tke help
   ```
   {: pre}
-- Go to the **Manage** tab of your instance dashboard to [manage root keys and standard keys](/docs/services/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the [{{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+- Go to the **Manage** tab of your instance dashboard to [manage root keys and standard keys](/docs/services/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
 - To learn more about using Enterprise PKCS #11 APIs to perform cryptographic operations for your applications, check out [Encrypt your data using Cloud HSM](/docs/services/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm) and the [GREP11 API reference doc](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref).
 - Use {{site.data.keyword.hscrypto}} as the root key provider for other {{site.data.keyword.cloud_notm}} services. For more information about integrating {{site.data.keyword.hscrypto}}, check out [Integrating services](/docs/services/hs-crypto?topic=hs-crypto-integrate-services).
