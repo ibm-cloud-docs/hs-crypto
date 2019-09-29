@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-26"
+lastupdated: "2019-09-29"
 
 Keywords: key storage, HSM, hardware security module, key ceremony, load master key, master key register, initialize Hyper Protect Crypto Services instance
 
@@ -34,28 +34,34 @@ For an introduction to service instance initialization and other concepts, see [
 The following diagram gives you an overview of steps you need to take to initialize the service instance. Click each step on the diagram for detailed instructions.
 {: hide-dashboard}
 
-<img usemap="#home_map1" border="0" class="image hide-dashboard" id="image_ztx_crb_f1b2" src="/image/hsm_initialization_flow.svg" width="750" alt="Click each step to get more details on the flow." style="width:750px;" />{: caption="Figure 1. Task flow of service instance initialization" caption-side="bottom"}
-{: hide-dashboard}
+The following diagram gives you an overview of steps you need to take to initialize the service instance.
+{: hide-in-docs}
 
-<map name="home_map1" id="home_map1" class="hide-dashboard">
-  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" target="_blank" alt="Verify API endpoint" title="Verify API endpoint" shape="rect" coords="126, 32, 226, 82" />
-  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" target="_blank" alt="Set up CLI" title="Set up CLI" shape="rect" coords="260, 32, 360, 82" />
-  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" target="_blank" alt="Install TKE plugin" title="Install TKE plugin" shape="rect" coords="394, 32, 494, 82" />
-  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" target="_blank" alt="Set up local directory for key files" title="Set up local directory for key files" shape="rect" coords="528, 32, 628, 82" />
+<figure>
+  <img usemap="#home_map1" border="0" class="image hide-dashboard" id="image_ztx_crb_f1b2" src="/image/hsm_initialization_flow.svg" width="750" alt="Click each step to get more details on the flow." />
+  <img border="0" class="image hide-in-docs" id="image_ztx_crb_f1b2" src="/image/hsm_initialization_flow.svg" width="750" alt="Click each step to get more details on the flow." />
+  <figcaption>Figure 1. Task flow of service instance initialization</figcaption>
+</figure>
 
-  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units" target="_blank" alt="Display assigned crypto units" title="Display assigned crypto units" shape="rect" coords="126, 123, 226, 173" />
-  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units1" target="_blank" alt="Add crypto units" title="Add crypto units" shape="rect" coords="260, 123, 360, 173" />
-  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units2" target="_blank" alt="Remove crypto units" title="Remove crypto units" shape="rect" coords="394, 123, 494, 173" />
+<map name="home_map1" id="home_map1">
+  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Verify API endpoint" title="Verify API endpoint" shape="rect" coords="126, 32, 226, 82" />
+  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Set up CLI" title="Set up CLI" shape="rect" coords="260, 32, 360, 82" />
+  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" alt="Install TKE plugin" title="Install TKE plugin" shape="rect" coords="394, 32, 494, 82" />
+  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" alt="Set up local directory for key files" title="Set up local directory for key files" shape="rect" coords="528, 32, 628, 82" />
 
-  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step1-create-signature-keys" target="_blank" alt="Create one or more signature keys" title="Create signature keys" shape="rect" coords="126, 214, 226, 264" />
-  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" target="_blank" alt="Manage crypto unit administrators" title="Manage crypto unit administrators" shape="rect" coords="260, 214, 360, 264" />
-  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" target="_blank" alt="Add one or more administrators in the target crypto unit" title="Add crypto unit administrators" shape="rect" coords="219, 290, 299, 340" />
-  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step3-exit-imprint-mode" target="_blank" alt="Exit imprint mode in the target crypto unit" title="Exit imprint mode" shape="rect" coords="318, 290, 398, 340" />
-  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step4-create-master-key" target="_blank" alt="Create a set of master key parts to use" title="Create master key parts" shape="rect" coords="394, 214, 494, 264" />
-  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" target="_blank" alt="Load master key registers" title="Load master key register" shape="rect" coords="528, 214, 628, 264" />
-  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" target="_blank" alt="Load new master key registers" title="Load new master key register" shape="rect" coords="440, 290, 520, 340" />
-  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step6-commit-master-key" target="_blank" alt="Commit the new master key register" title="Commit the new master key register" shape="rect" coords="539, 290, 619, 340" />
-  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step7-activate-master-key" target="_blank" alt="Activate the master key" title="Activate master key register" shape="rect" coords="638, 290, 718, 340" />
+  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units" alt="Display assigned crypto units" title="Display assigned crypto units" shape="rect" coords="126, 123, 226, 173" />
+  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units1" alt="Add crypto units" title="Add crypto units" shape="rect" coords="260, 123, 360, 173" />
+  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units2" alt="Remove crypto units" title="Remove crypto units" shape="rect" coords="394, 123, 494, 173" />
+
+  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step1-create-signature-keys" alt="Create one or more signature keys" title="Create signature keys" shape="rect" coords="126, 214, 226, 264" />
+  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Manage crypto unit administrators" title="Manage crypto unit administrators" shape="rect" coords="260, 214, 360, 264" />
+  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Add one or more administrators in the target crypto unit" title="Add crypto unit administrators" shape="rect" coords="219, 290, 299, 340" />
+  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step3-exit-imprint-mode" alt="Exit imprint mode in the target crypto unit" title="Exit imprint mode" shape="rect" coords="318, 290, 398, 340" />
+  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step4-create-master-key" alt="Create a set of master key parts to use" title="Create master key parts" shape="rect" coords="394, 214, 494, 264" />
+  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="Load master key registers" title="Load master key register" shape="rect" coords="528, 214, 628, 264" />
+  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="Load new master key registers" title="Load new master key register" shape="rect" coords="440, 290, 520, 340" />
+  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step6-commit-master-key" alt="Commit the new master key register" title="Commit the new master key register" shape="rect" coords="539, 290, 619, 340" />
+  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step7-activate-master-key" alt="Activate the master key" title="Activate master key register" shape="rect" coords="638, 290, 718, 340" />
 </map>
 
 It might take 20-30 minutes for you to complete this task.
