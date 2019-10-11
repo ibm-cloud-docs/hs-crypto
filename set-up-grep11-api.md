@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-26"
+lastupdated: "2019-10-11"
 
 keywords: set up API, use EP11 API, access EP11 API, EP11 over gRPC, GREP11
 
@@ -42,7 +42,7 @@ In order to remotely access cloud HSM on {{site.data.keyword.hscrypto}} to perfo
 ### Example: Generating random data using the `GenerateRandomRequest()` function
 {: #generate-random-request-example}
 
-A [sample](https://github.com/vpaprots/ibm-cloud-hyperprotectcrypto){:external} Github repository is provided for you to test the GREP11 API in Golang. GREP11 API supports programming languages with [gRPC libraries](https://developers.google.com/protocol-buffers/){:external}. In the [sample](https://github.com/vpaprots/ibm-cloud-hyperprotectcrypto){:external} Github repository, only Golang code examples are provided.
+A [sample](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} Github repository is provided for you to test the GREP11 API in Golang. GREP11 API supports programming languages with [gRPC libraries](https://developers.google.com/protocol-buffers/){:external}. In the [sample](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} Github repository, only Golang code examples are provided.
 
 You can use the following Golang code example to generate random data by calling the `GenerateRandom` function.
 
@@ -193,8 +193,8 @@ In the example, update the following variables:
 If the sample request is processed successfully, random data with a length of 16 bytes will be returned, as specified in `ep11.AES_BLOCKSIZE`.
 
 The previous authentication example as well as additional Golang code examples can be found at:
- -  [GREP11 API examples](https://github.com/vpaprots/ibm-cloud-hyperprotectcrypto/blob/master/golang/examples/server_test.go){: external}
- -  [IBM Cloud IAM support for GREP11](https://github.com/vpaprots/ibm-cloud-hyperprotectcrypto/blob/master/golang/util/util.go){: external}
+ -  [GREP11 API examples](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/golang/examples/server_test.go){: external}
+ -  [IBM Cloud IAM support for GREP11](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/golang/util/util.go){: external}
 
 ## What's next
 {: #set-up-grep11-api-next-steps}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-30"
+lastupdated: "2019-10-11"
 
 Keywords: IBM Cloud Hyper Protect Crypto Services, getting started, example, dedicated key management service, IBM Key, Key storage, HSM, cloud hardware security module
 
@@ -129,14 +129,14 @@ From the {{site.data.keyword.hscrypto}} dashboard, you can inspect the general c
 
 You can remotely access {{site.data.keyword.hscrypto}} Cloud HSM using EP11 over gRPC (GREP11). To perform cryptographic operations using GREP11 API, you need to generate a GREP11 API request, and pass the GREP11 API endpoint URL, service ID API key, IAM endpoint, and instance ID through the API call.
 
-A [sample](https://github.com/vpaprots/ibm-cloud-hyperprotectcrypto){:external} Github repository is provided for you to test the GREP11 API in Golang. GREP11 API supports programming languages with [gRPC libraries](https://developers.google.com/protocol-buffers/){:external}. In the [sample](https://github.com/vpaprots/ibm-cloud-hyperprotectcrypto){:external} Github repository, only Golang code examples are provided.
+A [sample](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} Github repository is provided for you to test the GREP11 API in Golang. GREP11 API supports programming languages with [gRPC libraries](https://developers.google.com/protocol-buffers/){:external}. In the [sample](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} Github repository, only Golang code examples are provided.
 
 Before you use the samples, perform the following tasks:
   1. Set up the Go environment:
     - [Install Go tools](https://golang.org/doc/install){:external}
     - [Set up your workspace directory](https://golang.org/doc/code.html#Workspaces){:external}
     - [Set the GOPATH environment variable](https://golang.org/doc/code.html#GOPATH){:external}
-  2. Clone the [sample](https://github.com/vpaprots/ibm-cloud-hyperprotectcrypto){:external} repository to the `$GOPATH/src/github.com/ibm-developer/` directory.
+  2. Clone the [sample](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} repository to the `$GOPATH/src/github.com/ibm-developer/` directory.
 
 
 To run the sample code:
@@ -199,13 +199,11 @@ To run the sample code:
 {: #get-started-next}
 
 - Now you can start to use your keys to encode your apps and services. If you added a root key to the service, you might want to learn more about using the root key to protect the keys that encrypt your at-rest data. Check out [Wrapping keys](/docs/services/hs-crypto?topic=hs-crypto-wrap-keys) to get started.
-
   - To find out more about managing and protecting your encryption keys with a root key, check out [Envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption).
   - To find out more about programmatically managing your keys, check out the [{{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
-
 - You can also manage and protect your data with {{site.data.keyword.hscrypto}}. To find out more about encrypting your data using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [GREP11 API reference doc](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref).
-
 - To find out more about integrating the {{site.data.keyword.hscrypto}} service with other cloud data solutions, [check out the Integrations doc](/docs/services/hs-crypto?topic=hs-crypto-integrate-services).
+- In case you want to delete an initialized service instance, make sure to clear all crypto unit administrators and the master keys with the command `ibmcloud tke cryptounit-zeroize` before you delete the instance.
 
 <!-- ## Installing ACSP client libraries -->
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-26"
+lastupdated: "2019-10-11"
 
 Keywords: EP11, PKCS#11, GREP11, API reference, EP11 over gRPC,
 
@@ -73,7 +73,7 @@ message Grep11Error {
 
 The `Code` field can be cast to the ***CK_RV*** value in PKCS #11. This field contains the error codes defined by the [PKCS #11 specification](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959729){: external} or the vendor extensions defined by EP11. EP11 uses only a subset of return values that PKCS #11 defines. See the **10.1.6 Return values** section in [Enterprise PKCS #11 Library structure](https://www.ibm.com/downloads/cas/WXRDPRAN) for details.
 
-Here is an [example]( https://github.com/vpaprots/ibm-cloud-hyperprotectcrypto/blob/ad02bb8b58bf6845d9953e98aa38afda3099a658/golang/examples/server_test.go#L518){: external} in Golang that deals with errors.
+Here is an [example]( https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/golang/examples/server_test.go#L518){: external} in Golang that deals with errors.
 
 ## GREP11 functions
 {: #grep11-functions}
@@ -4294,6 +4294,6 @@ SetAttributeValueResponse, err := cryptoClient.SetAttributeValue(context.Backgro
 ## Code examples
 {: #code-example}
 
-For complete Golang examples on Enterprise PKCS #11 (EP11) over gRPC, see [GREP11 examples](https://github.com/vpaprots/ibm-cloud-hyperprotectcrypto/tree/master/golang){: external}.
+For complete Golang examples on Enterprise PKCS #11 (EP11) over gRPC, see [GREP11 examples](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/golang){: external}.
 
-GREP11 API supports programming languages with [gRPC libraries](https://www.grpc.io/docs/){:external}. In the [sample](https://github.com/vpaprots/ibm-cloud-hyperprotectcrypto){:external} Github repository, only Golang code examples are provided.
+GREP11 API supports programming languages with [gRPC libraries](https://www.grpc.io/docs/){:external}. In the [sample](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} Github repository, only Golang code examples are provided.
