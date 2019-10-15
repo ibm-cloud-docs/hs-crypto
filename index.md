@@ -42,7 +42,7 @@ Before you begin, you must create an instance of {{site.data.keyword.hscrypto}} 
 ## Step 2: Initialize your service instance
 {: #initialize-crypto}
 
-To manage your keys, you need to initialize your service instance first. For a quick getting-started tutorial, see [Getting started with service instance initialization](/docs/services/hs-crypto?topic=hs-crypto-get-started-hsm). For detailed steps and best practices, see [Initializing service instances to protect key storage](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm).
+To manage your keys, you need to initialize your service instance first. For a quick getting-started tutorial, see [Getting started with service instance initialization](/docs/services/hs-crypto?topic=hs-crypto-get-started-hsm). For detailed steps and best practices, see [Key management service components and concepts](/docs/services/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts).
 
 ## Step 3: Manage your data and keys
 {: #manage-data-key}
