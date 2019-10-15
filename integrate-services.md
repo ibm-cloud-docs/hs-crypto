@@ -109,7 +109,7 @@ When you integrate a supported service with {{site.data.keyword.hscrypto}}, you 
 
 For example, you can create a root key, manage the key in {{site.data.keyword.hscrypto}}, and use the root key to protect the data that is stored across different cloud services.
 
-![The diagram shows a contextual view of your {{site.data.keyword.hscrypto}} integration.](/image/hpcs-integrations-01.svg "Cloud services integrates with Hyper Protect Crypto Services"){: caption="Figure 1. Integrating {{site.data.keyword.hscrypto}}" caption-side="bottom"}
+![The diagram shows a contextual view of your {{site.data.keyword.hscrypto}} integration.](/image/hpcs-integrations.svg "Cloud services integrates with Hyper Protect Crypto Services"){: caption="Figure 1. Integrating {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 
 ### {{site.data.keyword.hscrypto}} API methods
 {: #envelope-encryption-api-methods}
