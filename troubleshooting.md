@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-10-18"
 
 Keywords: troubleshoot, problems, known issues, can't delete service, can't use Hyper Protect Crypto Services, can't create key, can't delete key
 
@@ -37,7 +37,8 @@ You might receive an error similar to the following when you delete an initializ
 
 ```
 FAILED
-Error response from server. Status code: 400; description: 400 DELETE https://zCryptoBroker.mybluemix.net/v2/service_instances/ failed with error status 409. Conflict.
+Error Code: RC-ServiceBrokerErrorResponse
+Message: Service Broker returned error status code 409
 ```
 {: codeblock}
 {: tsSymptoms}
@@ -111,7 +112,7 @@ You can see a list of keys, but you do not see options to add or delete keys.
 You do not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions.
 {: tsCauses}
 
-Verify with your administrator that you are assigned the correct role in the applicable resource group or service instance. For more information about roles, see [Roles and permissions](/docs/services/key-protect?topic=key-protect-manage-access#roles).
+Verify with your administrator that you are assigned the correct role in the applicable resource group or service instance. For more information about roles, see [Roles and permissions](/docs/services/hs-crypto?topic=hs-crypto-manage-access#roles).
 {: tsResolve}
 
 ## Getting help and support
