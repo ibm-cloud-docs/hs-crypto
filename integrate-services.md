@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-25"
+lastupdated: "2019-10-23"
 
 keywords: Hyper Protect Crypto Services integration, integrate service with Hyper Protect Crypto Services
 
@@ -41,6 +41,7 @@ After you [create an instance of the service](/docs/services/hs-crypto?topic=hs-
         <td>
           <p>Add [envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption) to your storage buckets by using {{site.data.keyword.hscrypto}}. Use root keys that you manage in {{site.data.keyword.hscrypto}} to protect the data encryption keys that encrypt your data at rest.</p>
           <p>Before using {{site.data.keyword.hscrypto}} instance as the root keys provider, make sure to <a href="/docs/iam?topic=iam-serviceauth" target="_blank">authorize access <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a> between {{site.data.keyword.cos_full_notm}} (source service) and {{site.data.keyword.hscrypto}} (target service). To learn more about integrating {{site.data.keyword.cos_short}}, check out <a href="/docs/services/cloud-object-storage?topic=cloud-object-storage-encryption#encryption-kp" target="_blank">Server-side encryption with {{site.data.keyword.keymanagementservicelong_notm}} or {{site.data.keyword.hscrypto}} <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a>.</p>
+          <p>A demo video is available at <a href="https://www.ibm.com/demos/collection/IBM-Cloud-Hyper-Protect-Crypto-Services/" target="_blank">IBM Demos <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a> and <a href="https://www.youtube.com/watch?v=e_4RO7r_t8M&feature=youtu.be" target="_blank">YouTube<img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a> for you to better understand how the integration works. </p>
         </td>
     </tr>
     <tr>
