@@ -203,7 +203,6 @@ To run the sample code:
   - To find out more about programmatically managing your keys, check out the [{{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
 - You can also manage and protect your data with {{site.data.keyword.hscrypto}}. To find out more about encrypting your data using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [GREP11 API reference doc](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref).
 - To find out more about integrating the {{site.data.keyword.hscrypto}} service with other cloud data solutions, [check out the Integrations doc](/docs/services/hs-crypto?topic=hs-crypto-integrate-services).
-- In case you want to delete an initialized service instance, make sure to clear all crypto unit administrators and the master keys with the command `ibmcloud tke cryptounit-zeroize` before you delete the instance.
 
 <!-- ## Installing ACSP client libraries -->
 

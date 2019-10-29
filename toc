@@ -34,6 +34,7 @@ IBM Cloud Hyper Protect Crypto Services
     {: .navgroup id="howto"}
     provision.md
     initialize_hsm.md
+    delete-instance.md
 
     {: .topicgroup}
     Accessing the key management and GREP11 APIs

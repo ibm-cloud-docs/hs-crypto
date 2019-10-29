@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-22"
+lastupdated: "2019-10-17"
 
 Keywords: provision, instance of Hyper Protect Crypto Services, service instance, create service instance, KMS service instance, cloud HSM service instance
 
@@ -20,7 +20,7 @@ subcollection: hs-crypto
 {:gif: data-image-type='gif'}
 {:external: target="_blank" .external}
 
-# Provisioning the service
+# Provisioning service instances
 {: #provision}
 
 You can create an instance of {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} by using the {{site.data.keyword.cloud_notm}} console or the {{site.data.keyword.cloud_notm}} CLI.
@@ -128,5 +128,6 @@ To provision an instance of {{site.data.keyword.hscrypto}} using the {{site.data
 {: #provision-next}
 
 * [Initialize your service instance](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm) so that {{site.data.keyword.hscrypto}} can provide key management and data management functions.
-* To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
-* To find out more about managing your data using the cloud HSM function of {{site.data.keyword.hscrypto}}, [check out the GREP11 API reference doc](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref).
+* To find out more about programmatically managing your keys, check out the [{{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+* To find out more about managing your data using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [GREP11 API reference doc](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref).
+* If you need to delete your service instance, refer to [Deleting service instances](/docs/services/hs-crypto?topic=hs-crypto-delete-instance) for instructions.

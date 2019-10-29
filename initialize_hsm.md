@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-29"
+lastupdated: "2019-10-29"
 
 Keywords: key storage, HSM, hardware security module, key ceremony, load master key, master key register, initialize Hyper Protect Crypto Services instance
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:pre: .pre}
 {:important: .important}
 {:tip: .tip}
+{:note: .note}
 {:hide-in-docs: .hide-in-docs}
 {:hide-dashboard: .hide-dashboard}
 {:external: target="_blank" .external}
@@ -51,7 +52,6 @@ The following diagram gives you an overview of steps you need to take to initial
 
   <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units" alt="Display assigned crypto units" title="Display assigned crypto units" shape="rect" coords="126, 123, 226, 173" />
   <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units1" alt="Add crypto units" title="Add crypto units" shape="rect" coords="260, 123, 360, 173" />
-  <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units2" alt="Remove crypto units" title="Remove crypto units" shape="rect" coords="394, 123, 494, 173" />
 
   <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step1-create-signature-keys" alt="Create one or more signature keys" title="Create signature keys" shape="rect" coords="126, 214, 226, 264" />
   <area href="/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Manage crypto unit administrators" title="Manage crypto unit administrators" shape="rect" coords="260, 214, 360, 264" />
@@ -314,7 +314,6 @@ Consider the following before taking actions:
 * If it is your first time to initialize the service instance, you can ignore this message and type `y` to continue.
 * If you have started managing keys with the service instance and want to reload the same master key that was used before, ensure that no key management actions are in progress and type `y` to continue.
 * If you have started managing keys with the service instance and want to load a new master key, type `N` to cancel. Loading a new master key is currently not supported. By doing so, all your managed keys will be unusable.
-{: tip}
 
 ## What's next
 {: #initialize-crypto-next}
