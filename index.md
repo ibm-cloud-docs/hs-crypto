@@ -42,7 +42,7 @@ Before you begin, you must create an instance of {{site.data.keyword.hscrypto}} 
 ## Step 2: Initialize your service instance
 {: #initialize-crypto}
 
-To manage your keys, you need to initialize your service instance first. For a quick getting-started tutorial, see [Getting started with service instance initialization](/docs/services/hs-crypto?topic=hs-crypto-get-started-hsm). For detailed steps and best practices, see [Key management service components and concepts](/docs/services/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts).
+To manage your keys, you need to initialize your service instance first. For a quick getting-started tutorial, see [Getting started with service instance initialization](/docs/services/hs-crypto?topic=hs-crypto-get-started-hsm). For detailed steps and best practices, see [Initializing service instances](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm).
 
 ## Step 3: Manage your data and keys
 {: #manage-data-key}
@@ -50,7 +50,7 @@ To manage your keys, you need to initialize your service instance first. For a q
 ### 1. Manage your keys through key management service
 {: #manage-keys}
 
-From the {{site.data.keyword.hscrypto}} dashboard, you can create new root keys or standard keys for cryptography, or you can import your existing keys. For more information on root keys and standard keys, see [Introduction to keys](/docs/services/hs-crypto?topic=hs-crypto-introduce-keys).
+From the {{site.data.keyword.hscrypto}} dashboard, you can create new root keys or standard keys for cryptography, or you can import your existing keys. For more information on root keys and standard keys, see [Key management service components and concepts](/docs/services/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts).
 
 #### Creating new keys
 {: #create-keys}
