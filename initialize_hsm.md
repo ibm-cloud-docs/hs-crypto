@@ -40,7 +40,7 @@ The following diagram gives you an overview of steps you need to take to initial
 
 <figure>
   <img usemap="#home_map1" border="0" class="image hide-dashboard" id="image_ztx_crb_f1b2" src="/image/hsm_initialization_flow.svg" width="750" alt="Click each step to get more details on the flow." />
-  <img border="0" class="image hide-in-docs" id="image_ztx_crb_f1b2" src="/image/hsm_initialization_flow.svg" width="750" alt="Click each step to get more details on the flow." />
+  <img border="0" class="image hide-in-docs" id="image_ztx_crb_f1b2_2" src="/image/hsm_initialization_flow.svg" width="750" alt="Click each step to get more details on the flow." />
   <figcaption>Figure 1. Task flow of service instance initialization</figcaption>
 </figure>
 

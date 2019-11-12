@@ -38,7 +38,7 @@ After you zeroize the crypto unit, the administrator signature keys and the mast
 {: important}
 
 ## Step 2: Delete your service instance
-{: #delete-instance}
+{: #delete-instance-step}
 
 After you set the crypto units to imprint mode, you can choose to delete your service instance through the {{site.data.keyword.cloud_notm}} console resources page, the instance details page, or the CLI.
 
