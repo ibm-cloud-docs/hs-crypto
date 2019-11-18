@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-10-23"
+lastupdated: "2019-11-18"
 
 keywords: Hyper Protect Crypto Services integration, integrate service with Hyper Protect Crypto Services
 
@@ -25,7 +25,6 @@ subcollection: hs-crypto
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} integrates with data and storage solutions to help you bring and manage your own encryption in the cloud.
 {: shortdesc}
-
 
 After you [create an instance of the service](/docs/services/hs-crypto?topic=hs-crypto-provision) and [initialize the service instance](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm), you can integrate {{site.data.keyword.hscrypto}} with the following supported services:
 
@@ -71,16 +70,25 @@ After you [create an instance of the service](/docs/services/hs-crypto?topic=hs-
           <p>For detailed tutorials, see <a href="https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/" target="_blank">Use IBM Cloud Hyper Protect Crypto Services to encrypt VMware disks <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a> and the <a href="https://youtu.be/huQ5wUfrW4c" target="_blank">demo video <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a>.</p>
         </td>
     </tr>
-
-<!--
     <tr>
         <td>
-          <p>{{site.data.keyword.containerlong_notm}}</p>
+          <p><a href="https://cloud.ibm.com/kubernetes/catalog/cluster" target="_blank">{{site.data.keyword.containerlong_notm}} (IKS) <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a></p>
         </td>
         <td>
-          <p>Use [envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption) to protect secrets in your {{site.data.keyword.containershort_notm}} cluster. To learn more, check out [Encrypting Kubernetes secrets by using {{site.data.keyword.keymanagementserviceshort}} ](/docs/containers?topic=containers-encryption#keyprotect).</p>
+          <p>Leverage [envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption) to add a layer of security to your data in your {{site.data.keyword.containershort_notm}} cluster. Use your own root keys managed by {{site.data.keyword.hscrypto}} to protect Kubernetes secrets and enable more granular control over user access. To learn more about integrating IKS, check out <a href="/docs/containers?topic=containers-encryption#keyprotect" target="_blank">Encrypting the Kubernetes master's local disk and secrets by using a KMS provider <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a>.</p>
         </td>
     </tr>
+    <tr>
+        <td>
+          <p><a href="https://cloud.ibm.com/kubernetes/catalog/openshiftcluster" target="_blank">{{site.data.keyword.openshiftlong_notm}} <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a></p>
+        </td>
+        <td>
+          <p>Leverage [envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption) to add a layer of security to your data in your {{site.data.keyword.openshiftshort}} cluster. Use your own root keys managed by {{site.data.keyword.hscrypto}} to protect {{site.data.keyword.openshiftshort}} secrets and enable more granular control over user access. To learn more about integrating {{site.data.keyword.openshiftshort}}, check out <a href="/docs/openshift?topic=openshift-encryption#keyprotect" target="_blank">Encrypting the {{site.data.keyword.openshiftshort}} master's local disk and secrets by using a KMS provider <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a>.</p>
+        </td>
+    </tr>
+
+
+<!--
     <tr>
         <td>
           <p>{{site.data.keyword.databases-for-postgresql_full_notm}}</p>
