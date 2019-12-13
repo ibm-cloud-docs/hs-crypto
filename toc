@@ -27,6 +27,8 @@ IBM Cloud Hyper Protect Crypto Services
     {: .topicgroup}
     Tutorials
         [Using IBM Cloud Hyper Protect Crypto Services to encrypt VMware disks](https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/)
+        [Applying end to end security to a cloud application](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-cloud-e2e-security)
+        [Enhancing security of your deployed application](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-extended-app-security)
 
     whats_new.md
     {: .navgroup-end}
