@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-11-18"
+lastupdated: "2019-12-12"
 
 keywords: Hyper Protect Crypto Services integration, integrate service with Hyper Protect Crypto Services
 
@@ -19,6 +19,8 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 {:external: target="_blank" .external}
+{:table: .aria-labeledby="caption"}
+{:term: .term}
 
 # Integrating services
 {: #integrate-services}
@@ -28,88 +30,46 @@ subcollection: hs-crypto
 
 After you [create an instance of the service](/docs/services/hs-crypto?topic=hs-crypto-provision) and [initialize the service instance](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm), you can integrate {{site.data.keyword.hscrypto}} with the following supported services:
 
-<table>
-    <tr>
-        <th>Service</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>
-          <p><a href="https://cloud.ibm.com/catalog/services/cloud-object-storage" target="_blank">{{site.data.keyword.cos_full_notm}} <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a></p>
-        </td>
-        <td>
-          <p>Add [envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption) to your storage buckets by using {{site.data.keyword.hscrypto}}. Use root keys that you manage in {{site.data.keyword.hscrypto}} to protect the data encryption keys that encrypt your data at rest.</p>
-          <p>Before using {{site.data.keyword.hscrypto}} instance as the root keys provider, make sure to <a href="/docs/iam?topic=iam-serviceauth" target="_blank">authorize access <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a> between {{site.data.keyword.cos_full_notm}} (source service) and {{site.data.keyword.hscrypto}} (target service). To learn more about integrating {{site.data.keyword.cos_short}}, check out <a href="/docs/services/cloud-object-storage?topic=cloud-object-storage-encryption#encryption-kp" target="_blank">Server-side encryption with {{site.data.keyword.keymanagementservicelong_notm}} or {{site.data.keyword.hscrypto}} <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a>.</p>
-          <p>A demo video is available at <a href="https://www.ibm.com/demos/collection/IBM-Cloud-Hyper-Protect-Crypto-Services/" target="_blank">IBM Demos <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a> and <a href="https://www.youtube.com/watch?v=e_4RO7r_t8M&feature=youtu.be" target="_blank">YouTube<img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a> for you to better understand how the integration works. </p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-          <p><a href="https://cloud.ibm.com/vpc/storage/storageVolumes" target="_blank">{{site.data.keyword.cloud_notm}} {{site.data.keyword.blockstorageshort}} for Virtual Private Cloud <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a></p>
-        </td>
-        <td>
-          <p>Add [envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption) to your block storage volume by using {{site.data.keyword.hscrypto}}. Use root keys that you manage in {{site.data.keyword.hscrypto}} to protect the data encryption keys that encrypt your data at rest.</p>
-          <p>Before using {{site.data.keyword.hscrypto}} instance as the root keys provider, make sure to <a href="/docs/iam?topic=iam-serviceauth" target="_blank">authorize access <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a> between {{site.data.keyword.blockstorageshort}} (source service) and {{site.data.keyword.hscrypto}} (target service). To learn more about integrating {{site.data.keyword.block_storage_is_short}}, check out <a href="/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption" target="_blank">Creating block storage volumes with customer-managed encryption <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a>.</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-          <p><a href="https://cloud.ibm.com/vpc/compute/vs" target="_blank">{{site.data.keyword.cloud_notm}} {{site.data.keyword.BluVirtServers_short}} for Virtual Private Cloud <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a></p>
-        </td>
-        <td>
-          <p>Create an encrypted block storage volume when you create a virtual server instance by using {{site.data.keyword.hscrypto}}. Use root keys that you manage in {{site.data.keyword.hscrypto}} to protect the data encryption keys that encrypt your data at rest.</p>
-          <p>Before using {{site.data.keyword.hscrypto}} instance as the root keys provider, make sure to <a href="/docs/iam?topic=iam-serviceauth" target="_blank">authorize access <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a> between {{site.data.keyword.blockstorageshort}} (source service) and {{site.data.keyword.hscrypto}} (target service). To learn more about integrating {{site.data.keyword.vsi_is_short}}, check out <a href="/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-instances-byok" target="_blank">Creating virtual server instances with customer-managed encryption <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a>.</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-          <p><a href="https://cloud.ibm.com/infrastructure/vmware-solutions/console/gettingstarted/KMIPAdapter" target="_blank">Key Management Interoperability Protocol (KMIP) for VMware on {{site.data.keyword.cloud_notm}} <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a></p>
-        </td>
-        <td>
-          <p>Use {{site.data.keyword.hscrypto}} to provide highly secured key management capability for {{site.data.keyword.vmwaresolutions_full_notm}}. To learn more about integrating VMware Solutions, check out <a href="/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations" target="_blank">KMIP for VMware on {{site.data.keyword.cloud_notm}} overview <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a> and the <a href="https://youtu.be/9n8-hQBMYWQ" target="_blank">overview video on IBM Cloud Hyper Protect Crypto Services and VMware on {{site.data.keyword.cloud_notm}} solutions <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a>.</p>
-          <p>For detailed tutorials, see <a href="https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/" target="_blank">Use IBM Cloud Hyper Protect Crypto Services to encrypt VMware disks <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a> and the <a href="https://youtu.be/huQ5wUfrW4c" target="_blank">demo video <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a>.</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-          <p><a href="https://cloud.ibm.com/kubernetes/catalog/cluster" target="_blank">{{site.data.keyword.containerlong_notm}} (IKS) <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a></p>
-        </td>
-        <td>
-          <p>Leverage [envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption) to add a layer of security to your data in your {{site.data.keyword.containershort_notm}} cluster. Use your own root keys managed by {{site.data.keyword.hscrypto}} to protect Kubernetes secrets and enable more granular control over user access. To learn more about integrating IKS, check out <a href="/docs/containers?topic=containers-encryption#keyprotect" target="_blank">Encrypting the Kubernetes master's local disk and secrets by using a KMS provider <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a>.</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-          <p><a href="https://cloud.ibm.com/kubernetes/catalog/openshiftcluster" target="_blank">{{site.data.keyword.openshiftlong_notm}} <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a></p>
-        </td>
-        <td>
-          <p>Leverage [envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption) to add a layer of security to your data in your {{site.data.keyword.openshiftshort}} cluster. Use your own root keys managed by {{site.data.keyword.hscrypto}} to protect {{site.data.keyword.openshiftshort}} secrets and enable more granular control over user access. To learn more about integrating {{site.data.keyword.openshiftshort}}, check out <a href="/docs/openshift?topic=openshift-encryption#keyprotect" target="_blank">Encrypting the {{site.data.keyword.openshiftshort}} master's local disk and secrets by using a KMS provider <img src="https://cloud.ibm.com/docs-content/v1/content/icons/launch-glyph.svg" alt="external link icon" /></a>.</p>
-        </td>
-    </tr>
+|Service|Description|
+|-------|-----------|
+|[{{site.data.keyword.ihsdbaas_postgresql_full}}](https://cloud.ibm.com/catalog/services/hyper-protect-dbaas-for-postgresql){: external}|Associate the encryption keys that you manage in {{site.data.keyword.hscrypto}} with your {{site.data.keyword.ihsdbaas_postgresql_full}} service instance to encrypt your database, so that you have full control over your keys and data. </br></br> To learn more about integrating {{site.data.keyword.ihsdbaas_postgresql_full}}, check out [{{site.data.keyword.hscrypto}} integration](/docs/services/hyper-protect-dbaas-for-postgresql?topic=hyper-protect-dbaas-for-postgresql-hpcs-byok).|
+|[{{site.data.keyword.ihsdbaas_mongodb_full}}](https://cloud.ibm.com/catalog/services/hyper-protect-dbaas-for-mongodb){: external}|Associate the encryption keys that you manage in {{site.data.keyword.hscrypto}} with your {{site.data.keyword.ihsdbaas_mongodb_full}} service instance to encrypt your database, so that you have full control over your keys and data. </br></br> To learn more about integrating {{site.data.keyword.ihsdbaas_mongodb_full}}, check out [{{site.data.keyword.hscrypto}} integration](/docs/services/hyper-protect-dbaas-for-mongodb?topic=hyper-protect-dbaas-for-mongodb-hpcs-byok).|
+{: caption="Table 1. Supported database services" caption-side="top"}
+{: #table-1}
+{: tab-title="Databases"}
+{: tab-group="supported-services"}
+{: class="simple-tab-table"}
 
+|Service|Description|
+|-------|-----------|
+|[{{site.data.keyword.cos_full_notm}}](https://cloud.ibm.com/catalog/services/cloud-object-storage){: external}|Add [envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption) to your storage buckets by using {{site.data.keyword.hscrypto}}. Use root keys that you manage in {{site.data.keyword.hscrypto}} to protect the data encryption keys that encrypt your data at rest. </br></br> A demo video is available at [IBM Demos](https://www.ibm.com/demos/collection/IBM-Cloud-Hyper-Protect-Crypto-Services/){: external} and [YouTube](https://www.youtube.com/watch?v=e_4RO7r_t8M){: external} for you to better understand how the integration works. To learn more about integrating {{site.data.keyword.cos_short}}, check out [Server-side encryption with {{site.data.keyword.keymanagementservicelong_notm}} or {{site.data.keyword.hscrypto}}](/docs/services/cloud-object-storage?topic=cloud-object-storage-encryption#encryption-kp).|
+|[{{site.data.keyword.cloud_notm}} {{site.data.keyword.blockstorageshort}} for Virtual Private Cloud](https://cloud.ibm.com/vpc/storage/storageVolumes){: external}|Add [envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption) to your block storage volume by using {{site.data.keyword.hscrypto}}. Use root keys that you manage in {{site.data.keyword.hscrypto}} to protect the data encryption keys that encrypt your data at rest. </br></br> To learn more about integrating {{site.data.keyword.block_storage_is_short}}, check out [Creating block storage volumes with customer-managed encryption](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).|
+{: caption="Table 2. Supported storage services" caption-side="bottom"}
+{: #table-2}
+{: tab-title="Storage"}
+{: tab-group="supported-services"}
+{: class="simple-tab-table"}
 
-<!--
-    <tr>
-        <td>
-          <p>{{site.data.keyword.databases-for-postgresql_full_notm}}</p>
-        </td>
-        <td>
-          <p>Protect your databases by associating root keys with your {{site.data.keyword.databases-for-postgresql}} deployment. To learn more, check out the [{{site.data.keyword.databases-for-postgresql}} documentation](/docs/services/databases-for-postgresql?topic=databases-for-postgresql-key-protect).</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-          <p>{{site.data.keyword.cloudant_short_notm}} for {{site.data.keyword.cloud_notm}} ({{site.data.keyword.cloud_notm}} Dedicated)</p>
-        </td>
-        <td>
-          <p>Strengthen your encryption at rest strategy by associating root keys with your {{site.data.keyword.cloudant_short_notm}} Dedicated Hardware instance. To learn more, check out the [{{site.data.keyword.cloudant_short_notm}} documentation](/docs/services/Cloudant/offerings?topic=cloudant-security#secure-access-control).</p>
-        </td>
-    </tr>
--->
+|Service|Description|
+|-------|-----------|
+|[{{site.data.keyword.cloud_notm}} {{site.data.keyword.BluVirtServers_short}} for Virtual Private Cloud](https://cloud.ibm.com/vpc/compute/vs){: external}|Create an encrypted block storage volume when you create a virtual server instance by using {{site.data.keyword.hscrypto}}. Use root keys that you manage in {{site.data.keyword.hscrypto}} to protect the data encryption keys that encrypt your data at rest. </br></br> To learn more about integrating {{site.data.keyword.vsi_is_short}}, check out [Creating virtual server instances with customer-managed encryption](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-creating-instances-byok).|
+|[Key Management Interoperability Protocol (KMIP) for VMware on {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/infrastructure/vmware-solutions/console/gettingstarted/KMIPAdapter){: external}|Use {{site.data.keyword.hscrypto}} to provide highly secured key management capability for {{site.data.keyword.vmwaresolutions_full_notm}}. </br></br> To learn more about integrating VMware Solutions, check out [KMIP for VMware on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) and the [Overview video on {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} and VMware on {{site.data.keyword.cloud_notm}} solutions](https://www.youtube.com/watch?v=9n8-hQBMYWQ){: external}. For detailed tutorials, see [Use {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} to encrypt VMware disks](https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/) and the [demo video](https://www.youtube.com/watch?v=huQ5wUfrW4c){: external}.|
+|[HyTrust DataControl for {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/infrastructure/vmware-solutions/console/gettingstarted/HyTrustDC){: external}|The HyTrust DataControl service integrates with {{site.data.keyword.hscrypto}} to protect your data with strong encryption and scalable key management. The service provides encryption at both the operating system level and at the data level to secure your workloads throughout their lifecycles. </br></br> To learn more about HyTrust DataControl, see the [HyTrust DataControl overview](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc_considerations) and [HyTrust website](https://www.hytrust.com/datacontrol-ibm-cloud/){: external}.|
+{: caption="Table 3. Supported compute services" caption-side="bottom"}
+{: #table-3}
+{: tab-title="Compute"}
+{: tab-group="supported-services"}
+{: class="simple-tab-table"}
 
-    <caption style="caption-side:bottom;">Table 1. Describes the integrations that are available for {{site.data.keyword.hscrypto}}</caption>
-</table>
-
+|Service|Description|
+|-------|-----------|
+|[{{site.data.keyword.containerlong_notm}} (IKS)](https://cloud.ibm.com/kubernetes/catalog/cluster){: external}|Leverage [envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption) to add a layer of security to your data in your {{site.data.keyword.containershort_notm}} cluster. Use your own root keys managed by {{site.data.keyword.hscrypto}} to protect Kubernetes secrets and enable more granular control over user access. </br></br> To learn more about integrating IKS, check out [Encrypting the Kubernetes master's local disk and secrets by using a KMS provider](/docs/containers?topic=containers-encryption#keyprotect).|
+|[{{site.data.keyword.openshiftlong_notm}}](https://cloud.ibm.com/kubernetes/catalog/openshiftcluster){: external}|Leverage [envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption) to add a layer of security to your data in your {{site.data.keyword.openshiftshort}} cluster. Use your own root keys managed by {{site.data.keyword.hscrypto}} to protect {{site.data.keyword.openshiftshort}} secrets and enable more granular control over user access. </br></br> To learn more about integrating {{site.data.keyword.openshiftshort}}, check out [Encrypting the {{site.data.keyword.openshiftshort}} master's local disk and secrets by using a KMS provider](/docs/openshift?topic=openshift-encryption#keyprotect).|
+{: caption="Table 4. Supported container services" caption-side="bottom"}
+{: #table-4}
+{: tab-title="Container"}
+{: tab-group="supported-services"}
+{: class="simple-tab-table"}
 
 ## Understanding your integration
 {: #understand-integration}
@@ -140,7 +100,7 @@ The following table lists the API methods that add or remove envelope encryption
     <td><code>POST /keys/{root_key_ID}?action=unwrap</code></td>
     <td><a href="/docs/services/hs-crypto?topic=hs-crypto-unwrap-keys">Unwrap (decrypt) a data encryption key</a></td>
   </tr>
-  <caption style="caption-side:bottom;">Table 2. Describes the {{site.data.keyword.hscrypto}} API methods</caption>
+  <caption style="caption-side:bottom;">Table 5. Describes the {{site.data.keyword.hscrypto}} API methods</caption>
 </table>
 
 To find out more about programmatically managing your keys in {{site.data.keyword.hscrypto}}, check out the [{{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
@@ -165,7 +125,7 @@ When you're ready to integrate a service, use the following steps to create an a
 
 5. Enable the **Reader** role.
 
-    With _Reader_ permissions, your source service can browse the root keys that are provisioned in the specified instance of {{site.data.keyword.hscrypto}}.
+    With *Reader* permissions, your source service can browse the root keys that are provisioned in the specified instance of {{site.data.keyword.hscrypto}}.
 
 6. Click **Authorize**.
 -->
