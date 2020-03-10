@@ -116,7 +116,7 @@ Key features include the following:
 
 When you use {{site.data.keyword.hscrypto}}, you create a service instance with multiple crypto units that reside in different availability zones in a region. The service instance is built on [Secure Service Container (SSC)](https://www.ibm.com/marketplace/secure-service-container){: external}, which ensures isolated container runtime environment and provides the enterprise level of security and impregnability. The multiple crypto units in a service instance are automatically synchronized and load balanced across muiltiple availability zones. If one availability zone cannot be accessed, the crypto units in a service instance can be used interchangeably. 
 
-A crypto unit is a single unit that represents a hardware security module and the corresponding software stack that is dedicated to the hardware security module for cryptography. Encryption keys are generated in the crypto units and stored in the dedicated Keystore for you to manage and use via standard RESTful APIs. With{{site.data.keyword.hscrypto}}, you take the ownership of the crypto units by loading the master key and assigning your own administrators through CLI. In this way, you have an exclusive control over your encryption keys. 
+A crypto unit is a single unit that represents a hardware security module and the corresponding software stack that is dedicated to the hardware security module for cryptography. Encryption keys are generated in the crypto units and stored in the dedicated Keystore for you to manage and use via standard RESTful APIs. With{{site.data.keyword.hscrypto}}, you take the ownership of the crypto units by loading the master key and assigning your own administrators through CLI or the Management Utilities applications. In this way, you have an exclusive control over your encryption keys. 
 
 {{site.data.keyword.hscrypto}} built on FIPS 140-2 Level 4 HSM supports Enterprise PKCS #11 for cryptographic operations. The functions can be accessed through gRPC API calls.
 
@@ -179,7 +179,17 @@ Yes, a free trial period of 60 days is available for {{site.data.keyword.hscrypt
 {: #faq-hpcs-prerequisites}
 {: faq}
 
-There are no prerequisites for using {{site.data.keyword.hscrypto}}. The service can be provisioned quickly by following instructions in [Provisioning service instances](/docs/hs-crypto?topic=hs-crypto-provision). However, in order to perform key management and cryptographic operations, you need to initialize service instances first by using [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
+There are no prerequisites for using {{site.data.keyword.hscrypto}}. The service can be provisioned quickly by following instructions in [Provisioning service instances](/docs/hs-crypto?topic=hs-crypto-provision). However, in order to perform key management and cryptographic operations, you need to initialize service instances first by using [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or the [Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
+
+### How to initialize {{site.data.keyword.hscrypto}} service instances?
+{: #faq-how-to-initialize}
+{: faq}
+
+To initialize the service instance, you need to create administrator signature keys, exit the imprint mode, and load the master key to the instance. To meet various security requirements of your enterprises, IBM offers you the following options to load the master key: 
+
+- Using the [IBM {{site.data.keyword.hscrypto}} Management Utilities](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-management-utilities) for the highest level of security, use the Management Utilities to initialize the service instance. This solution uses smart cards to store signature keys and master key parts. Signature keys and master key parts never appear in the clear outside the smart card.
+
+- Using the [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-tke-plugin) for a solution that does not require the procurement of smart card readers and smart cards, use the TKE CLI plug-in to initialize the service instance. This solution uses workstation files encrypted with a key that is derived from a file password to store signature keys and master key parts. When the keys are used, file contents are decrypted and appear temporarily in the clear in workstation memory.
 
 ### How many crypto units should I set up in my service instance?
 {: #faq-crypto-units-number}
@@ -386,7 +396,13 @@ Backing up the keys manually is currently not supported.
 {: faq}
 {: support}
 
-When you delete a key, the key is no longer recoverable and the cloud services that use the key can no longer decrypt data that is associated with the key. Your data remains in those services in its encrypted form. Before you delete a key, ensure that you no longer require access to any data that is associated with the key. This action currently cannot be reversed. 
+When you delete a key, the key is no longer recoverable and the cloud services that use the key can no longer decrypt data that is associated with the key. Your data remains in those services in its encrypted form. Before you delete a key, ensure that you no longer require access to any data that is associated with the key. This action currently cannot be reversed.
+
+### What happens if I lose the signature key or the master key parts?
+{: #faq-lose-signature-key}
+{: faq}
+
+If your signature key or master key part is lost, you are not able to initialize your service instance, and your service instance is not accessible. You need to back up you key files on your workstation or back up your smart cards that hold your signature key or master key parts depending on how to store your keys. 
 
 ## Support and maintenance
 {: #faq-support-maintenance}
