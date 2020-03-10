@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-08-30"
+  years: 2018, 2020
+lastupdated: "2020-03-10"
 
 Keywords: frequently asked questions, critical security parameters, cryptographic module, Security Level，questions and answers
 
@@ -165,7 +165,7 @@ It’s ultimately based upon the level of control and security your business req
 {: #differentiators}
 {: faq}
 
-{{site.data.keyword.keymanagementservicefull}} is a multi-tenant key management service with key vaulting provided by FIPS 140-2 Level 2 IBM-managed HSMs.
+{{site.data.keyword.keymanagementservicefull}} is a multi-tenant key management service with key vaulting provided by FIPS 140-2 Level 3 IBM-managed HSMs.
 
 {{site.data.keyword.hscrypto}} is a single-tenant service designed for you to look for complete control of your data encryption keys and cloud HSMs that protect these keys. Additionally, this service also supports industry standards such as Public-Key Cryptography Standards #11 (PKCS #11) for cryptographic services like digital signing and Secure Sockets Layer (SSL) offloading.
 
