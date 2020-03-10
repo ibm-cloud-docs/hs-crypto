@@ -189,7 +189,7 @@ To initialize the service instance, you need to create administrator signature k
 
 - Using the [IBM {{site.data.keyword.hscrypto}} Management Utilities](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-management-utilities) for the highest level of security, use the Management Utilities to initialize the service instance. This solution uses smart cards to store signature keys and master key parts. Signature keys and master key parts never appear in the clear outside the smart card.
 
-- Using the [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-tke-plugin) for a solution that does not require the procurement of smart card readers and smart cards, use the TKE CLI plug-in to initialize the service instance. This solution uses workstation files encrypted with a key that is derived from a file password to store signature keys and master key parts. When the keys are used, file contents are decrypted and appear temporarily in the clear in workstation memory.
+- Using the [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-tke-plugin) for a solution that does not require the purchase of smart card readers and smart cards, use the TKE CLI plug-in to initialize the service instance. This solution uses workstation files encrypted with a key that is derived from a file password to store signature keys and master key parts. When the keys are used, file contents are decrypted and appear temporarily in the clear in workstation memory.
 
 ### How many crypto units should I set up in my service instance?
 {: #faq-crypto-units-number}
