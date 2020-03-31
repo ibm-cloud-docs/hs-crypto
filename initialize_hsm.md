@@ -78,7 +78,7 @@ It might take 20-30 minutes for you to complete this task.
 
   To find out the regions that {{site.data.keyword.hscrypto}} supports, see [Regions and locations](/docs/services/hs-crypto?topic=hs-crypto-regions).
 
-2. [Install the {{site.data.keyword.keymanagementservicefull}} plug-in](/docs/services/key-protect?topic=key-protect-set-up-cli#install-cli). After installation, see [Setting up the CLI](/docs/services/hs-crypto?topic=hs-crypto-set-up-cli) for detailed configuration steps. When you log in to the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started#overview), you're notified when updates are available. Be sure to keep your {{site.data.keyword.keymanagementserviceshort}} plug-in up-to-date so that you can use the commands and flags that are available for the Trusted Key Entry CLI plug-in.
+2. [Install the {{site.data.keyword.keymanagementservicefull}} plug-in](/docs/services/key-protect?topic=key-protect-set-up-cli#install-cli). After installation, see [Setting up the CLI](/docs/services/hs-crypto?topic=hs-crypto-set-up-cli) for detailed configuration steps. When you log in to the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started#step3-configure-idt-env), you're notified when updates are available. Be sure to keep your {{site.data.keyword.keymanagementserviceshort}} plug-in up-to-date so that you can use the commands and flags that are available for the Trusted Key Entry CLI plug-in.
 {: #initialize-crypto-prerequisites2}
 
 3. Install the latest Trusted Key Entry plug-in with the following command:
@@ -273,7 +273,7 @@ Each master key part is saved in a password-protected file on the workstation.
 
 **Important**: To load a master key register, all master key part files and the signature key file must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The master key part file owners and the signature key file owner need to enter the file passwords when the master key register is loaded on the common workstation.
 
-For information on how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/services/hs-crypto?topic=hs-crypto-introduce-service#introduce-key-registers).
+For information on how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/services/hs-crypto?topic=hs-crypto-introduce-service#understand-key-ceremony).
 
 To load the new master key register, use the following command:
 ```
@@ -288,7 +288,7 @@ When prompted, enter the key parts to be loaded into the new master key register
 ### Step 6: Commit the new master key register
 {: #step6-commit-master-key}
 
-Loading the new master key register places the new master key register in the full uncommitted state. Before you can use the new master key register to initialize or re-encipher key storage, place the new master key register in the committed state. For information on how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/services/hs-crypto?topic=hs-crypto-introduce-service#introduce-key-registers).
+Loading the new master key register places the new master key register in the full uncommitted state. Before you can use the new master key register to initialize or re-encipher key storage, place the new master key register in the committed state. For information on how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/services/hs-crypto?topic=hs-crypto-introduce-service#understand-key-ceremony).
 
 To commit the new master key register, use the following command:
 ```

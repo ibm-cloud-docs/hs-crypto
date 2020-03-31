@@ -83,7 +83,7 @@ You can also retrieve your access token programmatically by first creating a [se
     ```
     {: pre}
 
-3. Create a [service ID](/docs/iam?topic=iam-serviceids#creating-a-service-id) for your application.
+3. Create a [service ID](/docs/iam?topic=iam-serviceids#create_serviceid) for your application.
 
   ```sh
   ibmcloud iam service-id-create <service_ID_name>
@@ -133,5 +133,5 @@ You can also retrieve your access token programmatically by first creating a [se
 
     Use the full `access_token` value, prefixed by the _Bearer_ token type, to programmatically manage keys for your service using the {{site.data.keyword.hscrypto}} API. To see an example {{site.data.keyword.hscrypto}} API request, check out [Forming your key management API request](/docs/services/hs-crypto?topic=hs-crypto-set-up-kms-api#form-kms-api-request).
 
-    Access tokens are valid for 1 hour, but you can regenerate them as needed. To maintain access to the service, regenerate the access token for your API key on a regular basis by calling the [IAM Identity Services API](https://{DomainName}/apidocs/iam-identity-token-api).   
+    Access tokens are valid for 1 hour, but you can regenerate them as needed. To maintain access to the service, regenerate the access token for your API key on a regular basis by calling the [IAM Identity Services API](https://{DomainName}/apidocs/iam-identity-token-api).
     {: note }
