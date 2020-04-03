@@ -77,7 +77,8 @@ IBM Cloud Hyper Protect Crypto Services
     at-events.md
 
     ha-dr.md
-    related-links.md
+    [IBM Redbooks: Securing Your Critical Workloads with IBM Hyper Protect Services](http://www.redbooks.ibm.com/abstracts/sg248469.html?Open)
+    [IBM Cloud Hyper Protect Services resources](https://ibm-hyper-protect.github.io/)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
