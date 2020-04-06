@@ -29,6 +29,8 @@ subcollection: hs-crypto
 General problems with using {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} might include providing the correct headers or credentials when you interact with the API. In many cases, you can recover from these problems by following a few easy steps.
 {: shortdesc}
 
+**Hint**: When using `ibmcloud` cli, to get detailed error message, set `IBMCLOUD_TRACE=true`.
+
 ## Error occurred when deleting an initialized service instance
 {: #troubleshoot-delete-instance}
 {: troubleshoot}
