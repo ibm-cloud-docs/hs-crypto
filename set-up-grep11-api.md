@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-10-11"
+  years: 2018-2020
+lastupdated: "2020-01-08"
 
 keywords: set up API, use EP11 API, access EP11 API, EP11 over gRPC, GREP11
 
@@ -31,8 +31,8 @@ subcollection: hs-crypto
 
 To work with the APIs, you need to generate your service and authentication credentials. To gather your credentials:
 
-1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/services/hs-crypto?topic=hs-crypto-retrieve-access-token).
-2. [Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance](/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
+2. [Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 
 ## Generating a GREP11 API request
 {: #form-grep11-api-request}
@@ -42,11 +42,11 @@ In order to remotely access cloud HSM on {{site.data.keyword.hscrypto}} to perfo
 ### Example: Generating random data using the `GenerateRandomRequest()` function
 {: #generate-random-request-example}
 
-A [sample](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} Github repository is provided for you to test the GREP11 API in Golang. GREP11 API supports programming languages with [gRPC libraries](https://developers.google.com/protocol-buffers/){:external}. In the [sample](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} Github repository, only Golang code examples are provided.
+GREP11 API supports programming languages with [gRPC libraries](https://grpc.io/docs/){:external}. A [sample Github repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} is provided for you to test the GREP11 API in Golang and JavaScript.
 
 You can use the following Golang code example to generate random data by calling the `GenerateRandom` function.
 
-This example assumes that additional required Golang packages are included via import statements, such as the [gRPC](https://godoc.org/google.golang.org/grpc){: external} and [http](https://golang.org/pkg/net/http/){: external} packages. The ` import pb "github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/golang/grpc"` statement is used by GREP11 to perform API function calls.
+This example assumes that additional required Golang packages are included via import statements, such as the [gRPC](https://godoc.org/google.golang.org/grpc){: external} and [http](https://golang.org/pkg/net/http/){: external} packages. The `import pb "github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/golang/grpc"` statement is used by GREP11 to perform API function calls.
 {: note}
 
 ```Golang
@@ -137,7 +137,7 @@ func (cr *IAMPerRPCCredentials) getToken(ctx context.Context) (err error) {
 // Generating a GREP11 API function call
 
 // The following IBM Cloud items need to be changed prior to running the sample program
-const address = "ep11.<region>.hs-crypto.cloud.ibm.com:<port>"
+const address = "<service_endpoint>"
 var callOpts = []grpc.DialOption{
     grpc.WithTransportCredentials(credentials.NewTLS(&tls.Config{})),
     grpc.WithPerRPCCredentials(&IAMPerRPCCredentials{
@@ -167,7 +167,7 @@ if err != nil {
 
 In the example, update the following variables:
 
-* Replace `<region>` and `<port>` with the value of your GREP11 API endpoint. You can find the GREP11 API endpoint URL on the service dashboard. To find the service endpoint URL, from your provisioned service instance dashboard, click **Manage**  &gt; **EP11 endpoint URL**. Alternatively, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#retrieve-the-api-endpoint-url){: external}. The returned value includes the following.
+* Replace `<service_endpoint>` with the value of your GREP11 API endpoint. You can find the GREP11 API endpoint URL on the service dashboard. To find the service endpoint URL, from your provisioned service instance dashboard, click **Manage**  &gt; **EP11 endpoint URL**. Alternatively, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#retrieve-the-api-endpoint-url){: external}. The returned value includes the following. Depending on whether you are using public or [private network](/docs/hs-crypto?topic=hs-crypto-private-endpoints), use the public or private service endpoint value that is returned in the `ep11` section.
 
    ```
    {
@@ -178,17 +178,15 @@ In the example, update the following variables:
      },
      "ep11": {
        "public": "ep11.<region>.hs-crypto.cloud.ibm.com:<port>",
-       "private":""
+       "private":"ep11.private.<region>.hs-crypto.cloud.ibm.com:<port>"
      }
    }
   ```
   {: screen}
 
-  For the GREP11 service, use the `<region>` and `<port>` in the `ep11` section.
-
 * Replace `<service_ID_API_key>` with the service ID API key that is retrieved. The service ID API Key can be retrieved by following the instruction in [Managing service ID API key](/docs/iam?topic=iam-serviceidapikeys).
 
-* Replace `<instance_ID>` with the instance ID that uniquely identified your service instance. Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance by following the instruction in [Retrieving your instance ID](/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+* Replace `<instance_ID>` with the instance ID that uniquely identified your service instance. Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 
 If the sample request is processed successfully, random data with a length of 16 bytes will be returned, as specified in `ep11.AES_BLOCKSIZE`.
 
@@ -199,4 +197,4 @@ The previous authentication example as well as additional Golang code examples c
 ## What's next
 {: #set-up-grep11-api-next-steps}
 
-You're all set to start managing your encryption keys and data. To find out more about managing your data using the cloud HSM function of {{site.data.keyword.hscrypto}}, [check out the GREP11 API reference doc](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref).
+You're all set to start managing your encryption keys and data. To find out more about managing your data using the cloud HSM function of {{site.data.keyword.hscrypto}}, [check out the GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).

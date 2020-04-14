@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-09-26"
 
-Keywords: regional service endpoint, Hyper Protect Crypto Services resources, API endpoints, public service endpoint, private service endpoint, available regions
+keywords: regional service endpoint, Hyper Protect Crypto Services resources, API endpoints, public service endpoint, private service endpoint, available regions
 
 subcollection: hs-crypto
 
@@ -46,14 +46,14 @@ You can connect your applications with the {{site.data.keyword.cloud}} {{site.da
         <dd>
         <p>For added benefits, you can also enable <a href="/docs/account?topic=account-vrf-service-endpoint" target="_blank" class="external"> virtual routing and forwarding (VRF) and service endpoints</a> for your infrastructure account. When you enable VRF for your account, you can connect to {{site.data.keyword.hscrypto}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network.</p>
         <p>Private endpoints are currently only available for the key management service.</p>
-        <p>To learn more about VRF, see <a href="/docs/resources?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud" target="_blank" class="external">Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}</a>. To learn how to connect to {{site.data.keyword.hscrypto}} by using a private endpoint, see <a href="/docs/services/hs-crypto?topic=hs-crypto-private-endpoints">Connecting to {{site.data.keyword.hscrypto}} on the {{site.data.keyword.cloud_notm}} private network</a><p>.
+        <p>To learn more about VRF, see <a href="/docs/resources?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud" target="_blank" class="external">Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}</a>. To learn how to connect to {{site.data.keyword.hscrypto}} by using a private endpoint, see <a href="/docs/hs-crypto?topic=hs-crypto-private-endpoints">Connecting to {{site.data.keyword.hscrypto}} on the {{site.data.keyword.cloud_notm}} private network</a><p>.
         </dd>
 </dl>
 
 ## Service endpoints
 {: #service-endpoints}
 
-If you are managing your {{site.data.keyword.hscrypto}} resources programmatically, see the following table to determine the API endpoints to use when you connect to the [Key management API](https://{DomainName}/apidocs/hs-crypto) and  [GREP11 API](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref).
+If you are managing your {{site.data.keyword.hscrypto}} resources programmatically, see the following table to determine the API endpoints to use when you connect to the [Key management API](https://{DomainName}/apidocs/hs-crypto) and  [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
 | Region        | Public key management service endpoints             |Public GREP11 service endpoints|
 | ------------- | ---------------------------- |---------------------------- |
@@ -69,9 +69,9 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 
 | Region        | Private key management service endpoints             |Private GREP11 service endpoints|                 
 | ------------- | ------------------------------------ |------------------------------------ |
-| Dallas        | `api.private.us-south.hs-crypto.cloud.ibm.com` | N/A |
-| Sydney        | `api.private.au-syd.hs-crypto.cloud.ibm.com`   | N/A |
-| Frankfurt     | `api.private.eu-de.hs-crypto.cloud.ibm.com`    | N/A |
+| Dallas        | `api.private.us-south.hs-crypto.cloud.ibm.com` | `ep11.private.us-south.hs-crypto.cloud.ibm.com` |
+| Sydney        | `api.private.au-syd.hs-crypto.cloud.ibm.com`   | `ep11.private.au-syd.hs-crypto.cloud.ibm.com` |
+| Frankfurt     | `api.private.eu-de.hs-crypto.cloud.ibm.com`    | `ep11.private.eu-de.hs-crypto.cloud.ibm.com` |
 {: caption="Table 2. Lists private endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's private network" caption-side="top"}
 {: #table-2}
 {: tab-title="Private"}
@@ -79,4 +79,4 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 {: class="comparison-tab-table"}
 {: row-headers}
 
-For more information about authenticating with {{site.data.keyword.hscrypto}}, see [Setting up the key management APIs](/docs/services/hs-crypto?topic=hs-crypto-set-up-kms-api) and [Setting up the GREP11 API](/docs/services/hs-crypto?topic=hs-crypto-set-up-grep11-api).
+For more information about authenticating with {{site.data.keyword.hscrypto}}, see [Setting up the key management APIs](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api) and [Setting up the GREP11 API](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api).

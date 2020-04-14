@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-08-14"
+  years: 2018-2020
+lastupdated: "2020-01-08"
 
 keywords: set up API, use key management API, use KMS API, access Hyper Protect Crypto Services API, access KMS API
 
@@ -31,15 +31,15 @@ subcollection: hs-crypto
 
 To work with the APIs, you need to generate your service and authentication credentials. To gather your credentials:
 
-1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/services/hs-crypto?topic=hs-crypto-retrieve-access-token).
-2. [Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance](/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
+2. [Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 
 ## Forming your key management API request
 {: #form-kms-api-request}
 
 When you make an API call to the service, structure your API request according to how you initially provisioned your instance of {{site.data.keyword.hscrypto}}.
 
-To build your request, pair a [regional service endpoint](/docs/services/hs-crypto?topic=hs-crypto-regions) with the appropriate authentication credentials. For example, if you created a service instance for the `us-south` region, use the following endpoint and API headers to browse keys in your service:
+To build your request, pair a [regional service endpoint](/docs/hs-crypto?topic=hs-crypto-regions) with the appropriate authentication credentials. For example, if you created a service instance for the `us-south` region, use the following endpoint and API headers to browse keys in your service:
 
 ```cURL
 curl -X GET \
@@ -61,7 +61,7 @@ curl -X GET \
     },
     "ep11": {
       "public": "ep11.<region>.hs-crypto.cloud.ibm.com:<port>",
-      "private":""
+      "private":"ep11.private.<region>.hs-crypto.cloud.ibm.com:<port>"
     }
   }
   ```
