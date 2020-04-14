@@ -45,8 +45,7 @@ You can connect your applications with the {{site.data.keyword.cloud}} {{site.da
     <dt>Private endpoints</dt>
         <dd>
         <p>For added benefits, you can also enable <a href="/docs/account?topic=account-vrf-service-endpoint" target="_blank" class="external"> virtual routing and forwarding (VRF) and service endpoints</a> for your infrastructure account. When you enable VRF for your account, you can connect to {{site.data.keyword.hscrypto}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network.</p>
-        <p>Private endpoints are currently only available for the key management service.</p>
-        <p>To learn more about VRF, see <a href="/docs/resources?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud" target="_blank" class="external">Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}</a>. To learn how to connect to {{site.data.keyword.hscrypto}} by using a private endpoint, see <a href="/docs/hs-crypto?topic=hs-crypto-private-endpoints">Connecting to {{site.data.keyword.hscrypto}} on the {{site.data.keyword.cloud_notm}} private network</a><p>.
+        <p>To learn more about VRF, see <a href="/docs/resources?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud" target="_blank" class="external">Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}</a>. To learn how to connect to {{site.data.keyword.hscrypto}} by using a private endpoint, see <a href="/docs/hs-crypto?topic=hs-crypto-private-endpoints">Connecting to {{site.data.keyword.hscrypto}} on the {{site.data.keyword.cloud_notm}} private network</a>.</p>
         </dd>
 </dl>
 
@@ -67,7 +66,7 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 {: class="comparison-tab-table"}
 {: row-headers}
 
-| Region        | Private key management service endpoints             |Private GREP11 service endpoints|                 
+| Region        | Private key management service endpoints             |Private GREP11 service endpoints|
 | ------------- | ------------------------------------ |------------------------------------ |
 | Dallas        | `api.private.us-south.hs-crypto.cloud.ibm.com` | `ep11.private.us-south.hs-crypto.cloud.ibm.com` |
 | Sydney        | `api.private.au-syd.hs-crypto.cloud.ibm.com`   | `ep11.private.au-syd.hs-crypto.cloud.ibm.com` |
