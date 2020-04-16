@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-21"
+lastupdated: "2019-12-19"
 
-Keywords: IBM Cloud CLI plug-in, ibmcloud commands, IBM Cloud command-line interface, KMS CLI, Key Protect CLI, Hyper Protect Crypto Services CLI
+keywords: IBM Cloud CLI plug-in, ibmcloud commands, IBM Cloud command-line interface, KMS CLI, Key Protect CLI, Hyper Protect Crypto Services CLI
 
 subcollection: hs-crypto
 
@@ -18,20 +18,21 @@ subcollection: hs-crypto
 {:tip: .tip}
 {:important: .important}
 {:external: target="_blank" .external}
+{:term: .term}
 
 # Accessing {{site.data.keyword.keymanagementserviceshort}} CLI through a {{site.data.keyword.hscrypto}} instance
 {: #set-up-cli}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is integrated with {{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in, so that you can use the {{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in to create, import, and manage encryption root keys and standard keys.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is integrated with {{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in, so that you can use the {{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in to create, import, and manage encryption [root keys](#x6946961){: term} and standard keys.
 {: shortdesc}
 
-Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a {{site.data.keyword.hscrypto}} instance (service instance for short), you need to perform the following steps :
+Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a {{site.data.keyword.hscrypto}} instance (service instance for short), you need to perform the following steps:
 
-1. Install the [{{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in](/docs/services/key-protect?topic=key-protect-set-up-cli#install-cli).
+1. Install the [{{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in](/docs/key-protect?topic=key-protect-set-up-cli#install-cli).
 
-2. Set the KP_PRIVATE_ADDR environment variable on you workstation:
+2. Set the KP_PRIVATE_ADDR environment variable on your workstation:
 
-  * On Linux or MacOS, run the following command:
+  * On the Linux&reg; operating system or MacOS, run the following command:
 
     ```
     export KP_PRIVATE_ADDR=<URL>
@@ -45,18 +46,18 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
     ```
     {: pre}
 
-    To find out the regions that {{site.data.keyword.hscrypto}} supports, see [Regions and locations](/docs/services/hs-crypto?topic=hs-crypto-regions).
+    To find out the regions that {{site.data.keyword.hscrypto}} supports, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
-  * On Windows, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a KP_PRIVATE_ADDR environment variable and set the value to the endpoint that is displayed on the **Manage** tab of your provisioned {{site.data.keyword.hscrypto}} dashboard. For example, `https://api.us-south.hs-crypto.cloud.ibm.com:<port>`.
+  * On the Windows&reg; operating system, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a KP_PRIVATE_ADDR environment variable and set the value to the endpoint that is displayed on the **Manage** tab of your provisioned {{site.data.keyword.hscrypto}} dashboard. For example, `https://api.us-south.hs-crypto.cloud.ibm.com:<port>`.
 
   You can also retrieve the endpoint URL through the API. For details, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
 
   Depending on whether you are using public or private endpoint, choose the corresponding endpoint URL to set the value of the KP_PRIVATE_ADDR environment variable.
   {: important}
 
-3. Set the KP_INSTANCE_ID environment variable on you workstation:
+3. Set the KP_INSTANCE_ID environment variable on your workstation:
 
-  * On Linux or MacOS, run the following command:
+  * On the Linux operating system or MacOS, run the following command:
 
     ```
     export KP_INSTANCE_ID=<instance_ID>
@@ -73,4 +74,4 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
 ## Next steps
 {: #cli-next-steps}
 
-To find out more about using the CLI, check out the [{{site.data.keyword.keymanagementserviceshort}} CLI reference doc](/docs/services/key-protect?topic=key-protect-cli-reference).
+To find out more about using the CLI, check out the [{{site.data.keyword.keymanagementserviceshort}} CLI reference doc](/docs/key-protect?topic=key-protect-cli-reference).

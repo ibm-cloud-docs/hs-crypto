@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-10-11"
+  years: 2018, 2020
+lastupdated: "2020-02-10"
 
-Keywords: EP11, PKCS#11, GREP11, API reference, EP11 over gRPC,
+keywords: EP11, PKCS#11, GREP11, API reference, EP11 over gRPC
 
 subcollection: hs-crypto
 
@@ -26,19 +26,20 @@ subcollection: hs-crypto
 {:row-headers .row-headers}
 {:new_window: target="_blank"}
 {:external: target="_blank" .external}
+{:term: .term}
 
 # GREP11 API reference
 {: #grep11-api-ref}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of Enterprise PKCS #11 (EP11) APIs over [gRPC](https://grpc.io){: external} calls (also referred to *GREP11*), with which all the Crypto functions are executed in a Hardware Security Module (HSM) in the cloud.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of Enterprise PKCS #11 (EP11) APIs over [gRPC](https://grpc.io){: external} calls (also referred to *GREP11*), with which all the Crypto functions are executed in a [Hardware Security Module (HSM)](#x6704988){: term} in the cloud.
 {: shortdesc}
 
-For information on how the GREP11 functions are related to PKCS #11 and EP11, see [GREP11 introduction](/docs/services/hs-crypto?topic=hs-crypto-enterprise_PKCS11_overview#grep11_intro).
+For more information about how the GREP11 functions are related to PKCS #11 and EP11, see [GREP11 introduction](/docs/hs-crypto?topic=hs-crypto-HSM-overview#grep11_intro).
 
 ## Accessing the API
 {: #access-grep11-functions}
 
-A GREP11 API endpoint, a service ID API key, an IAM endpoint, and an instance ID are needed for initialization before performing any GREP11 API function calls. For details, see [Generating a GREP11 API request](/docs/services/hs-crypto?topic=hs-crypto-set-up-grep11-api#form-grep11-api-request).
+A GREP11 API endpoint, a service ID API key, an IAM endpoint, and an instance ID are needed for initialization before you perform any GREP11 API function calls. For more information, see [Generating a GREP11 API request](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#form-grep11-api-request).
 
 ## Error handling
 {: #grep11-error-handling}
@@ -58,7 +59,7 @@ In the error message,
 
 - `code` includes the status code, which should be an enumerated-type (enum) value of the `google.rpc.Code` field.
 - `message` includes a developer-facing error message in English. Any user-facing error message should be localized and sent in the `google.rpc.Status.details` field, or localized by the user.
-- `details` lists messages that carry the error details. A common set of message types are available for APIs to use.
+- `details` lists messages that carry the error details. A common set of message types is available for APIs to use.
 
 Enterprise PKCS #11 (EP11) over gRPC uses the `Detail` field to attach extra error code information.
 
@@ -71,21 +72,21 @@ message Grep11Error {
 ```
 {: codeblock}
 
-The `Code` field can be cast to the ***CK_RV*** value in PKCS #11. This field contains the error codes defined by the [PKCS #11 specification](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959729){: external} or the vendor extensions defined by EP11. EP11 uses only a subset of return values that PKCS #11 defines. See the **10.1.6 Return values** section in [Enterprise PKCS #11 Library structure](https://www.ibm.com/downloads/cas/WXRDPRAN) for details.
+The `Code` field can be cast to the ***CK_RV*** value in PKCS #11. This field contains the error codes that are defined by the [PKCS #11 specification](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959729){: external} or the vendor extensions that are defined by EP11. EP11 uses only a subset of return values that PKCS #11 defines. See the **10.1.6 Return values** section in [Enterprise PKCS #11 Library structure](https://www.ibm.com/downloads/cas/WXRDPRAN) for more information.
 
-Here is an [example]( https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/golang/examples/server_test.go#L518){: external} in Golang that deals with errors.
+An [example](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/golang/examples/server_test.go#L518){: external} in Golang that deals with errors is available.
 
 ## GREP11 functions
 {: #grep11-functions}
 
-Enterprise PKCS #11 (EP11) over gRPC defines gRPC functions based on the EP11 implementation of the PKCS #11 specification. The following function descriptions are created based on the [PKCS #11 specification](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}, with notes specific to EP11. All parameter definitions are in the original form of EP11. For more details about EP11, refer to [Enterprise PKCS #11 (EP11) Library structure](https://www.ibm.com/downloads/cas/WXRDPRAN){: external}.
+Enterprise PKCS #11 (EP11) over gRPC defines gRPC functions based on the EP11 implementation of the PKCS #11 specification. The following function descriptions are created based on the [PKCS #11 specification](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}, with notes specific to EP11. All parameter definitions are in the original form of EP11. For more information about EP11, refer to [Enterprise PKCS #11 (EP11) Library structure](https://www.ibm.com/downloads/cas/WXRDPRAN){: external}.
 
 EP11 function parameters are mapped to the protocol buffer types that can be found in the following functions. You can learn more about protocol buffer types in [Google Developers](https://developers.google.com/protocol-buffers/docs/proto3#scalar){: external}.
 
-Because the EP11 library is a subset of the PKCS #11 API library, and GREP11 functions are variants from the corresponding EP11 functions, the corresponding functions of EP11 and PKCS #11 are also listed in the GREP11 function tables for your reference. For more details on PKCS #11 and the legal statement, see the [PKCS #11 specification](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}. For details about EP11, see [Enterprise PKCS #11 (EP11) Library structure](https://www.ibm.com/downloads/cas/WXRDPRAN){: external}.
+Because the EP11 library is a subset of the PKCS #11 API library, and GREP11 functions are variants from the corresponding EP11 functions, the corresponding functions of EP11 and PKCS #11 are also listed in the GREP11 function tables for your reference. For more information about PKCS #11 and the legal statement, see the [PKCS #11 specification](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}. For more information about EP11, see [Enterprise PKCS #11 (EP11) Library structure](https://www.ibm.com/downloads/cas/WXRDPRAN){: external}.
 {: note}
 
-Enterprise PKCS #11 (EP11) over gRPC supports any programming languages with a gRPC library. At the current stage, only code snippets for Golang are included in the API reference. The content will be enriched in later phases.
+Enterprise PKCS #11 (EP11) over gRPC supports any programming languages with a gRPC library. At the current stage, only code snippets for Golang and JavaScript are included in the API reference. The content is enriched in later phases.
 
 <br/>
 
@@ -147,7 +148,7 @@ CK_RV m_GenerateRandom (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_GenerateRandom` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_GenerateRandom` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -247,7 +248,7 @@ message DigestInitResponse {
 	<td><p>Implementation of PKCS #11 <code>C_DigestInit</code>.</p>
   <p>Create wrapped digest state.</p>
   <p>**Note**: size queries are supported, but the wrapped state is always returned by the backend, unlike most size queries (which return an output size, instead of actual output). <code>Digest</code> states are sufficiently small that they do not introduce noticeable transport overhead.</p>
-  <p>During size queries, the host just discards the returned state, and reports blob size (in <code>len</code>).  When returning blob, *len is checked against returned size.</p>
+  <p>During size queries, the host just discards the returned state, and reports blob size (in <code>len</code>).  When blob is being returned, *len is checked against returned size.</p>
   <p>The <code>state</code>,<code>len</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must tie blob to session.)</p></td>
   </tr>
   <tr>
@@ -263,7 +264,7 @@ CK_RV m_DigestInit (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_DigestInit` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_DigestInit` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -276,7 +277,7 @@ CK_RV m_DigestInit (
   <tr>
     <th>Description</th>
     <td><p>`C_DigestInit` initializes a message-digesting operation. `hSession` is the session’s handle; pMechanism points to the digesting mechanism.</p>
-    <p>After calling `C_DigestInit`, the application can either call `C_Digest` to digest data in a single part; or call `C_DigestUpdate` zero or more times, followed by `C_DigestFinal`, to digest data in multiple parts.  The message-digesting operation is active until the application uses a call to C_Digest or `C_DigestFinal` to actually obtain the message digest. To process additional data (in single or multiple parts), the application must call `1C_DigestInit1` again.</p>
+    <p>After the application calls `C_DigestInit`, the application can either call `C_Digest` to digest data in a single part; or call `C_DigestUpdate` zero or more times, followed by `C_DigestFinal`, to digest data in multiple parts.  The message-digesting operation is active until the application uses a call to C_Digest or `C_DigestFinal` to obtain the message digest. To process additional data (in single or multiple parts), the application must call `1C_DigestInit1` again.</p>
     </td>
   </tr>
   <tr>
@@ -355,10 +356,10 @@ message DigestResponse {
     <th>Description</th>
   <td>
   <p>Implementation of PKCS #11 <code>C_Digest</code>.</p>
-  <p>Note that if a digest object has had exactly 0 (zero) bytes appended to it after creation, in any combination of zero byte transfers, it may still perform a one-pass Digest, even if it should be rejected by a strict implementation.</p>
+  <p>Note that if a digest object has had exactly 0 (zero) bytes appended to it after creation, in any combination of zero-byte transfers, it can still perform a one-pass Digest, even if it should be rejected by a strict implementation.</p>
   <p>Does not update <code>(state, slen)</code>.</p>
-  <p>Implementations <i>may</i> perform
-  <code>DigestUpdate</code>, <code>DigestFinal<code>, or <code>Digest</code> calls on cleartext digest objects in host code, bypassing HSM backends altogether. This choice may or may not be visible to host code, and it does not impact the security of the operation (as clear objects can not digest sensitive data). </p>
+  <p>Implementations might perform
+  <code>DigestUpdate</code>, <code>DigestFinal<code>, or <code>Digest</code> calls on cleartext digest objects in host code, bypassing HSM backends altogether. This choice might or might not be visible to host code, and it does not impact the security of the operation (as clear objects might not digest sensitive data). </p>
   <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. The <code>state</code> blob was output from: <code>DigestInit</code>.</p>
   </td>
   </tr>
@@ -376,7 +377,7 @@ CK_RV m_Digest (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Digest` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Digest` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -389,10 +390,10 @@ CK_RV m_Digest (
   <tr>
     <th>Description</th>
     <td><p>`C_Digest` digests data in a single part. `hSession` is the session’s handle, pData points to the data; `ulDataLen` is the length of the data; `pDigest` points to the location that receives the message digest; `pulDigestLen` points to the location that holds the length of the message digest.</p>
-    <p>`C_Digest` uses the convention described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The digest operation must have been initialized with `C_DigestInit`.  A call to `C_Digest` always terminates the active digest operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (i.e., one which returns `CKR_OK`) to determine the length of the buffer needed to hold the message digest.</p>
+    <p>`C_Digest` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The digest operation must have been initialized with `C_DigestInit`.  A call to `C_Digest` always terminates the active digest operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one which returns `CKR_OK`) to determine the length of the buffer needed to hold the message digest.</p>
     <p>`C_Digest` cannot be used to terminate a multi-part operation, and must be called after `C_DigestInit` without intervening `C_DigestUpdate` calls.</p>
-    <p>The input data and digest output can be in the same place, i.e., it is OK if pData and pDigest point to the same location.</p>
+    <p>The input data and digest output can be in the same place, that is, it is OK if pData and pDigest point to the same location.</p>
     <p>`C_Digest` is equivalent to a sequence of `C_DigestUpdate` operations followed by `C_DigestFinal`.</p>
     </td>
   </tr>
@@ -500,7 +501,7 @@ CK_RV m_DigestUpdate (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_DigestUpdate` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_DigestUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -514,7 +515,7 @@ CK_RV m_DigestUpdate (
     <th>Description</th>
     <td>
     <p>`C_DigestUpdate` continues a multiple-part message-digesting operation, processing another data part. `hSession` is the session’s handle, `pPart` points to the data part; `ulPartLen` is the length of the data part.</p>
-    <p>The message-digesting operation must have been initialized with `C_DigestInit`. Calls to this function and `C_DigestKey` may be interspersed any number of times in any order. A call to `C_DigestUpdate` which results in an error terminates the current digest operation.</p>
+    <p>The message-digesting operation must have been initialized with `C_DigestInit`. Calls to this function and `C_DigestKey` can be interspersed any number of times in any order. A call to `C_DigestUpdate` which results in an error terminates the current digest operation.</p>
     </td>
   </tr>
   <tr>
@@ -618,7 +619,7 @@ CK_RV m_DigestKey (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_DigestKey` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_DigestKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -631,7 +632,7 @@ CK_RV m_DigestKey (
   <tr>
     <th>Description</th>
     <td><p>`C_DigestKey` continues a multiple-part message-digesting operation by digesting the value of a secret key. `hSession` is the session’s handle; `hKey` is the handle of the secret key to be digested.</p>
-    <p>The message-digesting operation must have been initialized with `C_DigestInit`. Calls to this function and `C_DigestUpdate` may be interspersed any number of times in any order.</p>
+    <p>The message-digesting operation must have been initialized with `C_DigestInit`. Calls to this function and `C_DigestUpdate` can be interspersed any number of times in any order.</p>
     <p>If the value of the supplied key cannot be digested purely for some reason related to its length, `C_DigestKey` should return the error code `CKR_KEY_SIZE_RANGE`.</p>
     </td>
   </tr>
@@ -728,7 +729,7 @@ CK_RV m_DigestFinal (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_DigestFinal` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_DigestFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -741,8 +742,8 @@ CK_RV m_DigestFinal (
   <tr>
     <th>Description</th>
     <td><p>`C_DigestFinal` finishes a multiple-part message-digesting operation, returning the message digest. `hSession` is the session’s handle; `pDigest` points to the location that receives the message digest; `pulDigestLen` points to the location that holds the length of the message digest.</p>
-    <p>`C_DigestFinal` uses the convention described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The digest operation must have been initialized with `C_DigestInit`.  A call to `C_DigestFinal` always terminates the active digest operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (i.e., one which returns `CKR_OK`) to determine the length of the buffer needed to hold the message digest.</p>
+    <p>`C_DigestFinal` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The digest operation must have been initialized with `C_DigestInit`.  A call to `C_DigestFinal` always terminates the active digest operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one which returns `CKR_OK`) to determine the length of the buffer needed to hold the message digest.</p>
     </td>
   </tr>
   <tr>
@@ -823,7 +824,7 @@ message DigestSingleResponse {
 	<td>
   <p>Nonstandard extension, combination of <code>DigestInit</code> and <code>Digest</code>. Digests data in one pass, with one call, without constructing an intermediate digest state, and unnecessary roundtrips.</p>
   <p>This is the preferred method of digesting cleartext for XCP-aware applications. Functionally, <code>DigestSingle</code> is equivalent to <code>DigestInit</code> followed immediately by <code>Digest</code>.</p>
-  <p>If a key needs to be digested, one <i>must</i> use <code>DigestInit</code> and <code>DigestKey</code>, since this function does not handle key blobs.</p>
+  <p>If a key needs to be digested, one <em>must</em> use <code>DigestInit</code> and <code>DigestKey</code>, since this function does not handle key blobs.</p>
   <p>Does not return any state to host, only digest result. There are no non-PKCS #11 parameters, since everything is used directly from the PKCS #11 call.</p>
   </td>
   </tr>
@@ -841,7 +842,7 @@ CK_RV m_DigestSingle (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_DigestSingle` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_DigestSingle` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -905,7 +906,7 @@ message EncryptInitResponse {
     <th>Description</th>
 	<td>
   <p>Implementation of PKCS #11 <code>C_EncryptInit</code>.</p>
-  <p>The <code>(key, klen)</code> blob may be a public-key object, or a secret-key blob. Key type must be consistent with <code>pmech</code>.</p>
+  <p>The <code>(key, klen)</code> blob can be a public-key object, or a secret-key blob. Key type must be consistent with <code>pmech</code>.</p>
   <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI is integrity-protected with a MAC key, as returned by <code>GenerateKeyPair</code> or alternatively <code>UnwrapKey</code>. The Encrypt state is created without session restrictions.</p>
   <p>For secret-key mechanisms, the Encrypt state inherits object session restrictions from <prm>key,klen<prm>.</p>
   <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
@@ -926,7 +927,7 @@ CK_RV m_EncryptInit (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_EncryptInit` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_EncryptInit` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -940,7 +941,7 @@ CK_RV m_EncryptInit (
     <th>Description</th>
     <td><p>`C_EncryptInit` initializes an encryption operation. `hSession` is the session’s handle; `pMechanism` points to the encryption mechanism; `hKey` is the handle of the encryption key.</p>
     <p>The `CKA_ENCRYPT` attribute of the encryption key, which indicates whether the key supports encryption, must be `CK_TRUE`.</p>
-    <p>After calling `C_EncryptInit`, the application can either call C_Encrypt to encrypt data in a single part; or call `C_EncryptUpdate` zero or more times, followed by `C_EncryptFinal`, to encrypt data in multiple parts.  The encryption operation is active until the application uses a call to `C_Encrypt` or `C_EncryptFinal` to actually obtain the final piece of ciphertext.  To process additional data (in single or multiple parts), the application must call `C_EncryptInit` again.</p>
+    <p>After the application calls `C_EncryptInit`, the application can either call C_Encrypt to encrypt data in a single part; or call `C_EncryptUpdate` zero or more times, followed by `C_EncryptFinal`, to encrypt data in multiple parts.  The encryption operation is active until the application uses a call to `C_Encrypt` or `C_EncryptFinal` to obtain the final piece of ciphertext.  To process additional data (in single or multiple parts), the application must call `C_EncryptInit` again.</p>
     </td>
   </tr>
   <tr>
@@ -1036,7 +1037,7 @@ CK_RV m_DecryptInit (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_DecryptInit` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_DecryptInit` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -1051,7 +1052,7 @@ CK_RV m_DecryptInit (
     <td>
     <p>`C_DecryptInit` initializes a decryption operation. `hSession` is the session’s handle; `pMechanism` points to the decryption mechanism; `hKey` is the handle of the decryption key.</p>
     <p>The `CKA_DECRYPT` attribute of the decryption key, which indicates whether the key supports decryption, must be `CK_TRUE`.</p>
-    <p>After calling `C_DecryptInit`, the application can either call C_Decrypt to decrypt data in a single part; or call C_DecryptUpdate zero or more times, followed by `C_DecryptFinal`, to decrypt data in multiple parts.  The decryption operation is active until the application uses a call to `C_Decrypt` or `C_DecryptFinal` to actually obtain the final piece of plaintext. To process additional data (in single or multiple parts), the application must call `C_DecryptInit` again.</p>
+    <p>After the application calls `C_DecryptInit`, the application can either call C_Decrypt to decrypt data in a single part; or call C_DecryptUpdate zero or more times, followed by `C_DecryptFinal`, to decrypt data in multiple parts.  The decryption operation is active until the application uses a call to `C_Decrypt` or `C_DecryptFinal` to obtain the final piece of plaintext. To process additional data (in single or multiple parts), the application must call `C_DecryptInit` again.</p>
     </td>
   </tr>
   <tr>
@@ -1151,7 +1152,7 @@ CK_RV m_EncryptUpdate (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_EncryptUpdate` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_EncryptUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -1164,9 +1165,9 @@ CK_RV m_EncryptUpdate (
   <tr>
     <th>Description</th>
     <td><p>`C_EncryptUpdate` continues a multiple-part encryption operation, processing another data part. `hSession` is the session’s handle; `pPart` points to the data part; `ulPartLen` is the length of the data part; `pEncryptedPart` points to the location that receives the encrypted data part; `pulEncryptedPartLen` points to the location that holds the length in bytes of the encrypted data part.</p>
-    <p>`C_EncryptUpdate` uses the convention described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The encryption operation must have been initialized with `C_EncryptInit`.  This function may be called any number of times in succession. A call to `C_EncryptUpdate` which results in an error other than `CKR_BUFFER_TOO_SMALL` terminates the current encryption operation.</p>
-    <p>The `plaintext` and `ciphertext` can be in the same place, i.e., it is OK if `pPart` and `pEncryptedPart` point to the same location.</p>
+    <p>`C_EncryptUpdate` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The encryption operation must have been initialized with `C_EncryptInit`.  This function can be called any number of times in succession. A call to `C_EncryptUpdate` which results in an error other than `CKR_BUFFER_TOO_SMALL` terminates the current encryption operation.</p>
+    <p>The `plaintext` and `ciphertext` can be in the same place, that is, it is OK if `pPart` and `pEncryptedPart` point to the same location.</p>
     </td>
   </tr>
   <tr>
@@ -1268,7 +1269,7 @@ CK_RV m_DecryptUpdate (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_DecryptUpdate` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_DecryptUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -1281,9 +1282,9 @@ CK_RV m_DecryptUpdate (
   <tr>
     <th>Description</th>
     <td><p>`C_DecryptUpdate` continues a multiple-part decryption operation, processing another encrypted data part. `hSession` is the session’s handle; `pEncryptedPart` points to the encrypted data part; `ulEncryptedPartLen` is the length of the encrypted data part; `pPart` points to the location that receives the recovered data part; `pulPartLen` points to the location that holds the length of the recovered data part.</p>
-    <p>`C_DecryptUpdate` uses the convention described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The decryption operation must have been initialized with `C_DecryptInit`.  This function may be called any number of times in succession.  A call to `C_DecryptUpdate` which results in an error other than CKR_BUFFER_TOO_SMALL terminates the current decryption operation.</p>
-    <p>The ciphertext and plaintext can be in the same place, i.e., it is OK if `pEncryptedPart` and `pPart` point to the same location.</p></td>
+    <p>`C_DecryptUpdate` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The decryption operation must have been initialized with `C_DecryptInit`.  This function can be called any number of times in succession.  A call to `C_DecryptUpdate` which results in an error other than CKR_BUFFER_TOO_SMALL terminates the current decryption operation.</p>
+    <p>The ciphertext and plaintext can be in the same place, that is, it is OK if `pEncryptedPart` and `pPart` point to the same location.</p></td>
   </tr>
   <tr>
     <th>Parameters</th>
@@ -1389,7 +1390,7 @@ CK_RV m_Encrypt (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Encrypt` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Encrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -1402,11 +1403,11 @@ CK_RV m_Encrypt (
   <tr>
     <th>Description</th>
     <td><p>`C_Encrypt` encrypts single-part data. `hSession` is the session’s handle; `pData` points to the data; `ulDataLen` is the length in bytes of the data; `pEncryptedData` points to the location that receives the encrypted data; `pulEncryptedDataLen` points to the location that holds the length in bytes of the encrypted data.</p>
-    <p>`C_Encrypt` uses the convention described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The encryption operation must have been initialized with `C_EncryptInit`.  A call to `C_Encrypt` always terminates the active encryption operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (i.e., one which returns `CKR_OK`) to determine the length of the buffer needed to hold the ciphertext.</p>
+    <p>`C_Encrypt` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The encryption operation must have been initialized with `C_EncryptInit`.  A call to `C_Encrypt` always terminates the active encryption operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one which returns `CKR_OK`) to determine the length of the buffer that is needed to hold the ciphertext.</p>
     <p>`C_Encrypt` cannot be used to terminate a multi-part operation, and must be called after `C_EncryptInit` without intervening `C_EncryptUpdate` calls.</p>
-    <p>For some encryption mechanisms, the input plaintext data has certain length constraints (either because the mechanism can only encrypt relatively short pieces of plaintext, or because the mechanism’s input data must consist of an integral number of blocks).  If these constraints are not satisfied, then `C_Encrypt` will fail with return code `CKR_DATA_LEN_RANGE`.</p>
-    <p>The plaintext and ciphertext can be in the same place, i.e., it is OK if `pData` and `pEncryptedData` point to the same location.</p>
+    <p>For some encryption mechanisms, the input plaintext data has certain length constraints (either because the mechanism can encrypt only relatively short pieces of plaintext, or because the mechanism’s input data must consist of an integral number of blocks).  If these constraints are not satisfied, then `C_Encrypt` fails with return code `CKR_DATA_LEN_RANGE`.</p>
+    <p>The plaintext and ciphertext can be in the same place, that is, it is OK if `pData` and `pEncryptedData` point to the same location.</p>
     <p>For most mechanisms, `C_Encrypt` is equivalent to a sequence of `C_EncryptUpdate` operations followed by `C_EncryptFinal`.</p>
     </td>
   </tr>
@@ -1510,7 +1511,7 @@ CK_RV m_Decrypt (const unsigned char *state, size_t slen,
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Decrypt` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -1532,7 +1533,7 @@ CK_RV m_Decrypt (const unsigned char *state, size_t slen,
           <li>`pulDataLen` points to the location that holds the length of the recovered data.</li>
         </ul>
       </p>
-    <p>`C_Decrypt` uses the convention described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>`C_Decrypt` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
     <p>The decryption operation should be initialized with `C_DecryptInit`. A call to `C_Decrypt` always terminates the active decryption operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call with `CKR_OK` returned to determine the length of the buffer needed to hold the plaintext.</p>
     <p>`C_Decrypt` cannot be used to terminate a multi-part operation, and should be called after `C_DecryptInit` without intervening `C_DecryptUpdate` calls.</p>
     <p>The ciphertext and plaintext can be in the same place, which means it is acceptable if pEncryptedData and pData point to the same location.</p>
@@ -1640,7 +1641,7 @@ CK_RV m_EncryptFinal (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_EncryptFinal` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_EncryptFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -1653,8 +1654,8 @@ CK_RV m_EncryptFinal (
   <tr>
     <th>Description</th>
     <td><p>`C_EncryptFinal` finishes a multiple-part encryption operation. `hSession` is the session’s handle; `pLastEncryptedPart` points to the location that receives the last encrypted data part, if any; `pulLastEncryptedPartLen` points to the location that holds the length of the last encrypted data part.</p>
-    <p>`C_EncryptFinal` uses the convention described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The encryption operation must have been initialized with `C_EncryptInit`.  A call to `C_EncryptFinal` always terminates the active encryption operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (i.e., one which returns `CKR_OK`) to determine the length of the buffer needed to hold the ciphertext.</p>
+    <p>`C_EncryptFinal` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The encryption operation must have been initialized with `C_EncryptInit`.  A call to `C_EncryptFinal` always terminates the active encryption operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one which returns `CKR_OK`) to determine the length of the buffer needed to hold the ciphertext.</p>
     <p>For some multi-part encryption mechanisms, the input plaintext data has certain length constraints, because the mechanism’s input data must consist of an integral number of blocks.  If these constraints are not satisfied, then `C_EncryptFinal` will fail with return code `CKR_DATA_LEN_RANGE`.</p>
     </td>
   </tr>
@@ -1755,7 +1756,7 @@ CK_RV m_DecryptFinal (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_DecryptFinal` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_DecryptFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -1768,9 +1769,9 @@ CK_RV m_DecryptFinal (
   <tr>
     <th>Description</th>
     <td><p>`C_DecryptFinal` finishes a multiple-part decryption operation. `hSession` is the session’s handle; `pLastPart` points to the location that receives the last recovered data part, if any; `pulLastPartLen` points to the location that holds the length of the last recovered data part.</p>
-    <p>`C_DecryptFinal` uses the convention described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The decryption operation must have been initialized with `C_DecryptInit`.  A call to `C_DecryptFinal` always terminates the active decryption operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (i.e., one which `returns CKR_OK`) to determine the length of the buffer needed to hold the plaintext.</p>
-    <p>If the input ciphertext data cannot be decrypted because it has an inappropriate length, then either `CKR_ENCRYPTED_DATA_INVALID` or `CKR_ENCRYPTED_DATA_LEN_RANGE` may be returned.</p>
+    <p>`C_DecryptFinal` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The decryption operation must have been initialized with `C_DecryptInit`.  A call to `C_DecryptFinal` always terminates the active decryption operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one which `returns CKR_OK`) to determine the length of the buffer needed to hold the plaintext.</p>
+    <p>If the input ciphertext data cannot be decrypted because it has an inappropriate length, then either `CKR_ENCRYPTED_DATA_INVALID` or `CKR_ENCRYPTED_DATA_LEN_RANGE` can be returned.</p>
     </td>
   </tr>
   <tr>
@@ -1855,8 +1856,8 @@ message EncryptSingleResponse {
     <th>Description</th>
 	<td>
   <p>Non-standard variant of <code>Encrypt</code>. Processes data in one pass, with one call. Does not return any state to host, only encrypted data.</p>
-  <p>This is the preferred method of encrypting data in one pass for XCP-aware applications. Functionally it is equivalent to <code>EncryptInit</code> followed immediately by <code>Encrypt</code>, but it saves roundtrips and wrapping/unwrapping.</p>
-  <p>If the backend supports resident keys, the key may be also a resident-key handle.</p>
+  <p>This is the preferred method of encrypting data in one pass for XCP-aware applications. Functionally it is equivalent to <code>EncryptInit</code> followed immediately by <code>Encrypt</code>, but it saves roundtrips, wrapping, and unwrapping.</p>
+  <p>If the backend supports resident keys, the key can be also a resident-key handle.</p>
   <p>See also: <code>Encrypt</code>, <code>EncryptInit</code>, <code>DecryptSingle</code>.</p>
   <p>The <code>key</code> blob was output from: <code>GenerateKey</code>, <code>UnwrapKey</code>.</p>
 </td>
@@ -1876,7 +1877,7 @@ CK_RV m_EncryptSingle (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_EncryptSingle` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_EncryptSingle` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -1942,8 +1943,8 @@ message DecryptSingleResponse {
     <th>Description</th>
 	<td>
   <p>Non-standard variant of <code>Decrypt</code>. Processes data in one pass, with one call. Does not return any state to host, only decrypted data.</p>
-  <p>This is the preferred method of encrypting data in one pass for XCP-aware applications. Functionally it is equivalent to <code>DecryptInit</code> followed immediately by <code>Decrypt</code>, but it saves roundtrips and wrapping/unwrapping.</p>
-  <p>If the backend supports resident keys, the key may be also a resident-key handle.</p>
+  <p>This is the preferred method of encrypting data in one pass for XCP-aware applications. Functionally it is equivalent to <code>DecryptInit</code> followed immediately by <code>Decrypt</code>, but it saves roundtrips, wrapping, and unwrapping.</p>
+  <p>If the backend supports resident keys, the key can be also a resident-key handle.</p>
   <p>See also: <code>Decrypt</code>, <code>DecryptInit</code>, <code>EncryptSingle</code>.</p>
   <p>The <code>key</code> blob was output from: <code>GenerateKey</code>, <code>UnwrapKey</code>.</p>
 </td>
@@ -1963,7 +1964,7 @@ CK_RV m_DecryptSingle (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Decrypt` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -2043,7 +2044,7 @@ CK_RV m_SignInit (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Decrypt` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -2057,7 +2058,7 @@ CK_RV m_SignInit (
     <th>Description</th>
     <td><p>`C_SignInit` initializes a signature operation, where the signature is an appendix to the data. `hSession` is the session's handle; `pMechanism` points to the signature mechanism; `hKey` is the handle of the signature key.</p>
     <p>The `CKA_SIGN` attribute of the signature key, which indicates whether the key supports signatures with appendix, must be `CK_TRUE`.</p>
-    <p>After calling `C_SignInit`, the application can either call `C_Sign` to sign in a single part; or call `C_SignUpdate` one or more times, followed by `C_SignFinal`, to sign data in multiple parts. The signature operation is active until the application uses a call to `C_Sign` or `C_SignFinal` to actually obtain the signature. To process additional data (in single or multiple parts), the application must call `C_SignInit` again.</p></td>
+    <p>After the application calls `C_SignInit`, the application can either call `C_Sign` to sign in a single part; or call `C_SignUpdate` one or more times, followed by `C_SignFinal`, to sign data in multiple parts. The signature operation is active until the application uses a call to `C_Sign` or `C_SignFinal` to obtain the signature. To process additional data (in single or multiple parts), the application must call `C_SignInit` again.</p></td>
   </tr>
   <tr>
     <th>Parameters</th>
@@ -2140,9 +2141,9 @@ message VerifyInitResponse {
   <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_VerifyInit</code>. Given a key blob <code>(key, klen)</code>, initialize a verify session state in <code>(state, slen)</code>. The key blob may be a public key object, or HMAC key bytes. Key blob type must be consistent with <code>pmech</code>.</p>
-  <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI may be MACed (such as returned earlier by <code>GenerateKeyPair</code>) or just the SPKI itself (if obtained from an external source, such as a certificate).</p>
-  <p>If initializing an HMAC operation, session restrictions of the <code>Verify</code> object are inherited from the HMAC key. Since SPKIs are not tied to sessions, public-key Verify states are session-free.</p>
+  <p>Implementation of PKCS #11 <code>C_VerifyInit</code>. Given a key blob <code>(key, klen)</code>, initialize a verify session state in <code>(state, slen)</code>. The key blob can be a public key object, or HMAC key bytes. Key blob type must be consistent with <code>pmech</code>.</p>
+  <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI CKA_UNWRAP be MACed (such as returned earlier by <code>GenerateKeyPair</code>) or just the SPKI itself (if obtained from an external source, such as a certificate).</p>
+  <p>If an HMAC operation is initialized, session restrictions of the <code>Verify</code> object are inherited from the HMAC key. Since SPKIs are not tied to sessions, public-key Verify states are session-free.</p>
   <p>The <code>key</code>,<code>klen</code> blob must be mapped from the PKCS #11 <code>hKey</code> parameter.</p>
   <p>**Note**: <code>SignInit</code> and <code>VerifyInit</code> are internally the
   same for HMAC and other symmetric/MAC mechanisms.</p>
@@ -2162,7 +2163,7 @@ message VerifyInitResponse {
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_VerifyInit` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_VerifyInit` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -2176,7 +2177,7 @@ message VerifyInitResponse {
     <th>Description</th>
     <td><p>`C_VerifyInit` initializes a verification operation, where the signature is an appendix to the data. `hSession` is the session's handle; `pMechanism` points to the structure that specifies the verification mechanism; `hKey` is the handle of the verification key.</p>
     <p>The `CKA_VERIFY` attribute of the verification key, which indicates whether the key supports verification where the signature is an appendix to the data, must be `CK_TRUE`.</p>
-    <p>After calling `C_VerifyInit`, the application can either call `C_Verify` to verify a signature on data in a single part; or call `C_VerifyUpdate` one or more times, followed by `C_VerifyFinal`, to verify a signature on data in multiple parts. The verification operation is active until the application calls `C_Verify` or `C_VerifyFinal`. To process additional data (in single or multiple parts), the application must call `C_VerifyInit` again.</p></td>
+    <p>After the application calls `C_VerifyInit`, the application can either call `C_Verify` to verify a signature on data in a single part; or call `C_VerifyUpdate` one or more times, followed by `C_VerifyFinal`, to verify a signature on data in multiple parts. The verification operation is active until the application calls `C_Verify` or `C_VerifyFinal`. To process additional data (in single or multiple parts), the application must call `C_VerifyInit` again.</p></td>
   </tr>
   <tr>
     <th>Parameters</th>
@@ -2276,7 +2277,7 @@ CK_RV m_SignUpdate (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_SignUpdate` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_SignUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -2289,7 +2290,7 @@ CK_RV m_SignUpdate (
   <tr>
     <th>Description</th>
     <td><p>`C_SignUpdate` continues a multiple-part signature operation, processing another data part. `hSession` is the session's handle, pPart points to the data part; `ulPartLen` is the length of the data part.</p>
-    <p>The signature operation must have been initialized with `C_SignInit`. This function may be called any number of times in succession. A call to `C_SignUpdate` which results in an error terminates the current signature operation.</p></td>
+    <p>The signature operation must have been initialized with `C_SignInit`. This function can be called any number of times in succession. A call to `C_SignUpdate` which results in an error terminates the current signature operation.</p></td>
   </tr>
   <tr>
     <th>Parameters</th>
@@ -2389,7 +2390,7 @@ CK_RV m_VerifyUpdate (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_VerifyUpdate` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_VerifyUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -2402,7 +2403,7 @@ CK_RV m_VerifyUpdate (
   <tr>
     <th>Description</th>
     <td><p>`C_VerifyUpdate` continues a multiple-part verification operation, processing another data part. `hSession` is the session's handle, `pPart` points to the data part; `ulPartLen` is the length of the data part.</p>
-    <p>The verification operation must have been initialized with `C_VerifyInit`. This function may be called any number of times in succession. A call to `C_VerifyUpdate` which results in an error terminates the current verification operation.</p></td>
+    <p>The verification operation must have been initialized with `C_VerifyInit`. This function can be called any number of times in succession. A call to `C_VerifyUpdate` which results in an error terminates the current verification operation.</p></td>
   </tr>
   <tr>
     <th>Parameters</th>
@@ -2503,7 +2504,7 @@ CK_RV m_SignFinal (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_SignFinal` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_SignFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -2516,8 +2517,8 @@ CK_RV m_SignFinal (
   <tr>
     <th>Description</th>
     <td><p>`C_SignFinal` finishes a multiple-part signature operation, returning the signature. `hSession` is the session's handle; `pSignature` points to the location that receives the signature; `pulSignatureLen` points to the location that holds the length of the signature.</p>
-    <p>`C_SignFinal` uses the convention described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The signing operation must have been initialized with `C_SignInit`. A call to `C_SignFinal` always terminates the active signing operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (i.e., one which returns `CKR_OK`) to determine the length of the buffer needed to hold the signature.</p></td>
+    <p>`C_SignFinal` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The signing operation must have been initialized with `C_SignInit`. A call to `C_SignFinal` always terminates the active signing operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one which returns `CKR_OK`) to determine the length of the buffer needed to hold the signature.</p></td>
   </tr>
   <tr>
     <th>Parameters</th>
@@ -2617,7 +2618,7 @@ CK_RV m_VerifyFinal (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_VerifyFinal` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_VerifyFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -2631,7 +2632,7 @@ CK_RV m_VerifyFinal (
     <th>Description</th>
     <td><p>`C_VerifyFinal` finishes a multiple-part verification operation, checking the signature. `hSession` is the session's handle; `pSignature` points to the signature; `ulSignatureLen` is the length of the signature.</p>
     <p>The verification operation must have been initialized with `C_VerifyInit`. A call to `C_VerifyFinal` always terminates the active verification operation.</p>
-    <p>A successful call to `C_VerifyFinal` should return either the value `CKR_OK` (indicating that the supplied signature is valid) or `CKR_SIGNATURE_INVALID` (indicating that the supplied signature is invalid). If the signature can be seen to be invalid purely on the basis of its length, then `CKR_SIGNATURE_LEN_RANGE` should be returned. In any of these cases, the active verifying operation is terminated.</p></td>
+    <p>A successful call to `C_VerifyFinal` should return either the value `CKR_OK` (indicating that the supplied signature is valid) or `CKR_SIGNATURE_INVALID` (indicating that the supplied signature is invalid). If the signature is invalid based on its length, then `CKR_SIGNATURE_LEN_RANGE` should be returned. In any of these cases, the active verifying operation is terminated.</p></td>
   </tr>
   <tr>
     <th>Parameters</th>
@@ -2734,7 +2735,7 @@ CK_RV m_Sign (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Sign` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Sign` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -2747,8 +2748,8 @@ CK_RV m_Sign (
   <tr>
     <th>Description</th>
     <td><p>`C_Sign` signs data in a single part, where the signature is an appendix to the data. `hSession` is the session's handle; `pData` points to the data; `ulDataLen` is the length of the data; `pSignature` points to the location that receives the signature; `pulSignatureLen` points to the location that holds the length of the signature.</p>
-    <p>`C_Sign` uses the convention described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The signing operation must have been initialized with `C_SignInit`. A call to `C_Sign` always terminates the active signing operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (i.e., one which returns `CKR_OK`) to determine the length of the buffer needed to hold the signature.</p>
+    <p>`C_Sign` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The signing operation must have been initialized with `C_SignInit`. A call to `C_Sign` always terminates the active signing operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one which returns `CKR_OK`) to determine the length of the buffer needed to hold the signature.</p>
     <p>`C_Sign` cannot be used to terminate a multi-part operation, and must be called after `C_SignInit` without intervening `C_SignUpdate` calls.</p>
     <p>For most mechanisms, `C_Sign` is equivalent to a sequence of `C_SignUpdate` operations followed by `C_SignFinal`.</p></td>
   </tr>
@@ -2856,7 +2857,7 @@ CK_RV m_Verify (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Verify` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Verify` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -2870,7 +2871,7 @@ CK_RV m_Verify (
     <th>Description</th>
     <td><p>`C_Verify` verifies a signature in a single-part operation, where the signature is an appendix to the data. `hSession` is the session's handle; `pData` points to the data; `ulDataLen` is the length of the data; `pSignature` points to the signature; `ulSignatureLen` is the length of the signature.</p>
     <p>The verification operation must have been initialized with `C_VerifyInit`. A call to `C_Verify` always terminates the active verification operation.</p>
-    <p>A successful call to `C_Verify` should return either the value `CKR_OK` (indicating that the supplied signature is valid) or `CKR_SIGNATURE_INVALID` (indicating that the supplied signature is invalid). If the signature can be seen to be invalid purely on the basis of its length, then `CKR_SIGNATURE_LEN_RANGE` should be returned. In any of these cases, the active signing operation is terminated.</p>
+    <p>A successful call to `C_Verify` should return either the value `CKR_OK` (indicating that the supplied signature is valid) or `CKR_SIGNATURE_INVALID` (indicating that the supplied signature is invalid). If the signature is invalid purely based on its length, then `CKR_SIGNATURE_LEN_RANGE` should be returned. In any of these cases, the active signing operation is terminated.</p>
     <p>`C_Verify` cannot be used to terminate a multi-part operation, and must be called after `C_VerifyInit` without intervening `C_VerifyUpdate` calls.</p>
     <p>For most mechanisms, `C_Verify` is equivalent to a sequence of `C_VerifyUpdate` operations followed by `C_VerifyFinal`.</p></td>
   </tr>
@@ -2960,7 +2961,7 @@ message SignSingleResponse {
     <th>Description</th>
 	<td>
   <p>Nonstandard extension, combination of <code>SignInit</code> and <code>Sign</code>. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host, only result.</p>
-  <p>This is the preferred way of signing, without an additional roundtrip and en/decryption. Functionally, <code>SignSingle</code> is equivalent to <code>SignInit</code> followed immediately by <code>Sign</code>.</p>
+  <p>This is the preferred way of signing, without an additional roundtrip, encryption, and decryption. Functionally, <code>SignSingle</code> is equivalent to <code>SignInit</code> followed immediately by <code>Sign</code>.</p>
   <p>The <code>(key, klen)</code> blob and the <code>pmech</code> mechanism together must be passable to <code>SignInit</code>.</p>
   <p>Multi-data requests for HMAC and CMAC signatures are supported (sub-variants 2 and 3).</p>
   <p>See also: <code>SignInit</code>, <code>Sign</code>, <code>VerifySingle</code>.</p>
@@ -2981,7 +2982,7 @@ CK_RV m_SignSingle (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Decrypt` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -3046,10 +3047,10 @@ message VerifySingleResponse {
   <tr>
     <th>Description</th>
 	<td>
-  <p>Nonstandard extension, combination of <code>VerifyInit</code> and <code>Verify</code>. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host, only verification result. There is no size query, since this function returns a Boolean.</p>
-  <p>This is the preferred way of verifying a signature, without an additional roundtrip and en/decryption. Functionally, <code>VerifySingle</code> is equivalent to <code>VerifyInit</code> followed immediately by a <code>Verify</code>.</p>
+  <p>Nonstandard extension, combination of <code>VerifyInit</code> and <code>Verify</code>. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host, only verification result. No size query is available because this function returns a Boolean.</p>
+  <p>This is the preferred way of verifying a signature, without an additional roundtrip, encryption, decryption. Functionally, <code>VerifySingle</code> is equivalent to <code>VerifyInit</code> followed immediately by a <code>Verify</code>.</p>
   <p>The <code>(key, klen)</code> blob and the <code>pmech</code> mechanism together must be passable to <code>VerifyInit</code>.</p>
-  <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI may be MACed (such as returned as a public key from <code>GenerateKeyPair</code>) or just the SPKI itself (if obtained from an external source, such as a certificate).</p>
+  <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI can be MACed (such as returned as a public key from <code>GenerateKeyPair</code>) or just the SPKI itself (if obtained from an external source, such as a certificate).</p>
   <p>See also: <code>VerifyInit</code>, <code>Verify</code>, <code>SignSingle</code>.</p>
   </td>
   </tr>
@@ -3068,7 +3069,7 @@ CK_RV m_VerifySingle (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_VerifySingle` return values. For details, see the <i><b>Return values</b></i> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_VerifySingle` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -3136,12 +3137,12 @@ message GenerateKeyResponse {
     <th>Description</th>
 	<td>
   <p>Implementation of PKCS #11 <code>C_GenerateKey</code>.</p>
-  <p>TDES keys are generated with proper parity. This is not observable by the host, but it is needed for proper interoperability: other PKCS #11 implementations <i>should</i> reject DES keys with parity problems.</p>
-  <p>If tying an object to a session, <code>(pin, plen)</code> must have been returned by <code>Login</code> to that session. Leaving <code>pin</code> <code>NULL</code> creates a public object, one not bound to a login session.</p>
-  <p><code>(key, klen)</code> will return the key blob. <code>(csum, clen)</code> will contain the key's checksum, i.e., the most significant bytes of an all-zero block encrypted by the key. NULL <code>clen</code> is possible, for example for symmetric-key mechanisms without <code>CKA_CHECK_VALUE</code> parameters (such as RC4).</p>
-  <p><code>ptempl</code> is used only if the key length (i.e., the <code>CKA_VALUE_LEN</code> attribute) is needed by the mechanism. If the mechanism implicitly specifies key size, <code>ptempl</code> is not checked for size.</p>
+  <p>TDES keys are generated with proper parity. This is not observable by the host, but it is needed for proper interoperability: other PKCS #11 implementations <em>should</em> reject DES keys with parity problems.</p>
+  <p>If an object is tied to a session, <code>(pin, plen)</code> must have been returned by <code>Login</code> to that session. Leaving <code>pin</code> <code>NULL</code> creates a public object, one not bound to a login session.</p>
+  <p><code>(key, klen)</code> will return the key blob. <code>(csum, clen)</code> will contain the key's checksum, that is, the most significant bytes of an all-zero block encrypted by the key. NULL <code>clen</code> is possible, for example for symmetric-key mechanisms without <code>CKA_CHECK_VALUE</code> parameters (such as RC4).</p>
+  <p><code>ptempl</code> is used only if the key length (that is, the <code>CKA_VALUE_LEN</code> attribute) is needed by the mechanism. If the mechanism implicitly specifies key size, <code>ptempl</code> is not checked for size.</p>
   <p>DSA and DH parameter generation ignores <code>(csum, clen)</code>, generating only parameter structures.</p>
-  <p>DSA,DH parameters (<code>CKM_DSA_PARAMETER_GEN</code> etc.): pass modulus bitcount in <code>CKA_PRIME_BITS</code> of attributes. Writes P,Q,G structure as cleartext output (i.e., not a blob).</p>
+  <p>DSA,DH parameters (<code>CKM_DSA_PARAMETER_GEN</code> etc.): pass modulus bitcount in <code>CKA_PRIME_BITS</code> of attributes. Writes P,Q,G structure as cleartext output (that is, not a blob).</p>
   <p>The <code>pin</code> blob was output from: <code>Login</code>.</p>
   <p>PKCS #11 <code>phKey</code> is not mapped to any EP11 parameter. (Host library must bind wrapped key to handle.)</p>
   </td>
@@ -3162,7 +3163,7 @@ CK_RV m_GenerateKey (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_GenerateKey` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_GenerateKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -3177,7 +3178,7 @@ CK_RV m_GenerateKey (
     <td>
     <p>`C_GenerateKey` generates a secret key or set of domain parameters, creating a new object. `hSession` is the session's handle; `pMechanism` points to the generation mechanism; `pTemplate` points to the template for the new key or set of domain parameters; `ulCount` is the number of attributes in the template; `phKey` points to the location that receives the handle of the new key or set of domain parameters.</p>
     <p>If the generation mechanism is for domain parameter generation, the `CKA_CLASS` attribute will have the value `CKO_DOMAIN_PARAMETERS`; otherwise, it will have the value `CKO_SECRET_KEY`.</p>
-    <p>Since the type of key or domain parameters to be generated is implicit in the generation mechanism, the template does not need to supply a key type. If it does supply a key type which is inconsistent with the generation mechanism, `C_GenerateKey` fails and returns the error code `CKR_TEMPLATE_INCONSISTENT`. The `CKA_CLASS` attribute is treated similarly.</p>
+    <p>Since the type of key or domain parameters to be generated is implicit in the generation mechanism, the template does not need to supply a key type. If it does supply a key type that is inconsistent with the generation mechanism, `C_GenerateKey` fails and returns the error code `CKR_TEMPLATE_INCONSISTENT`. The `CKA_CLASS` attribute is treated similarly.</p>
     <p>If a call to `C_GenerateKey` cannot support the precise template supplied to it, it will fail and return without creating an object.</p>
     <p>The object created by a successful call to `C_GenerateKey` will have its `CKA_LOCAL` attribute set to `CK_TRUE`.</p>
     </td>
@@ -3285,9 +3286,9 @@ message GenerateKeyPairResponse {
   <p>If tying an object to a session, <code>(pin, plen)</code> must have been returned by <code>Login</code> to that session. Leaving <code>pin</code> <code>NULL</code> creates a public object, one which will survive its login session.</p>
   <p>Returns wrapped private key to <code>(key, klen)</code>, public key as a MACed ASN.1/DER structure in <code>(pubkey, pklen)</code>.</p>
   <p>Supported parameter combinations with special notes (beyond those documented by PKCS #11) are the following:</p>
-  <p>RSA keys reject public exponents below 17 (0x11). Control points may further restrict the accepted minimum. The Fermat4 exponent, 0x10001, is controlled by a specific control point, matching public-exponent restrictions of FIPS 186-3 (section B.3.1).</p> <p>EC keys (<code>CKM_EC_KEY_PAIR_GEN</code>): curve parameters may be specified as OIDs or symbolic names (our namedCurve variant). Supported symbolic names are "<code>P-nnn</code>" for NIST curves (<code>nnn</code> is a supported prime bitcount, 192 to 521), "<code>BP-nnnR</code>" for regular BP curve. (Names must be supplied as ASCII strings, without zero-termination.)</p>
-  <p>DSA keys (<code>CKM_DSA_KEY_PAIR_GEN</code>): pass P,Q,G structure as the <code>CKA_IBM_STRUCT_PARAMS</code> attribute of public attributes. Note that individual P,Q,G parameters may not be passed through regular PKCS #11 parameters, they must be combined to a single structure.</p>
-  <p>DH keys (<code>CKM_DH_PKCS_KEY_PAIR_GEN</code>): pass P,G structure as the <code>CKA_IBM_STRUCT_PARAMS</code> attribute of public attributes. Note that individual P,G parameters may not be passed through regular PKCS #11 parameters, they must be combined to a single structure. When selecting a private-key (X) bitcount, use the <code>XCP_U32_VALUE_BITS</code> attribute. If not present, or an explicit 0 is supplied, bitcount is selected based on P bitcount.</p>
+  <p>RSA keys reject public exponents below 17 (0x11). Control points can further restrict the accepted minimum. The Fermat4 exponent, 0x10001, is controlled by a specific control point, matching public-exponent restrictions of FIPS 186-3 (section B.3.1).</p> <p>EC keys (<code>CKM_EC_KEY_PAIR_GEN</code>): curve parameters can be specified as OIDs or symbolic names (our namedCurve variant). Supported symbolic names are "<code>P-nnn</code>" for NIST curves (<code>nnn</code> is a supported prime bitcount, 192 to 521), "<code>BP-nnnR</code>" for regular BP curve. (Names must be supplied as ASCII strings, without zero-termination.)</p>
+  <p>DSA keys (<code>CKM_DSA_KEY_PAIR_GEN</code>): pass P,Q,G structure as the <code>CKA_IBM_STRUCT_PARAMS</code> attribute of public attributes. Note that individual P,Q,G parameters might not be passed through regular PKCS #11 parameters, they must be combined to a single structure.</p>
+  <p>DH keys (<code>CKM_DH_PKCS_KEY_PAIR_GEN</code>): pass P,G structure as the <code>CKA_IBM_STRUCT_PARAMS</code> attribute of public attributes. Note that individual P,G parameters might not be passed through regular PKCS #11 parameters, they must be combined to a single structure. When selecting a private-key (X) bitcount, use the <code>XCP_U32_VALUE_BITS</code> attribute. If not present, or an explicit 0 is supplied, bitcount is selected based on P bitcount.</p>
   <p>Use of session (Login) state replaces standard use of sessions, the mapping is outside library scope.</p>
   <p>The <code>pin</code> blob was output from: <code>Login</code>.</p>
   <p>PKCS #11 <code>hSession</code> is not mapped to any EP11 parameter. (The call is not directly associated with any session.)</p>
@@ -3312,7 +3313,7 @@ const unsigned char *pin, size_t pinlen,
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_GenerateKeyPair` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_GenerateKeyPair` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -3326,8 +3327,8 @@ const unsigned char *pin, size_t pinlen,
     <th>Description</th>
     <td>
     <p>`C_GenerateKeyPair` generates a public/private key pair, creating new key objects. `hSession` is the session's handle; `pMechanism` points to the key generation mechanism; `pPublicKeyTemplate` points to the template for the public key; `ulPublicKeyAttributeCount` is the number of attributes in the public-key template; `pPrivateKeyTemplate` points to the template for the private key; `ulPrivateKeyAttributeCount` is the number of attributes in the private-key template; `phPublicKey` points to the location that receives the handle of the new public key; `phPrivateKey` points to the location that receives the handle of the new private key.</p>
-    <p>Since the types of keys to be generated are implicit in the key pair generation mechanism, the templates do not need to supply key types. If one of the templates does supply a key type which is inconsistent with the key generation mechanism, `C_GenerateKeyPair` fails and returns the error code `CKR_TEMPLATE_INCONSISTENT`. The `CKA_CLASS` attribute is treated similarly.</p>
-    <p>If a call to `C_GenerateKeyPair` cannot support the precise templates supplied to it, it will fail and return without creating any key objects.</p>
+    <p>Since the types of keys to be generated are implicit in the key pair generation mechanism, the templates do not need to supply key types. If one of the templates does supply a key type that is inconsistent with the key generation mechanism, `C_GenerateKeyPair` fails and returns the error code `CKR_TEMPLATE_INCONSISTENT`. The `CKA_CLASS` attribute is treated similarly.</p>
+    <p>If a call to `C_GenerateKeyPair` cannot support the precise templates that are supplied to it, it will fail and return without creating any key objects.</p>
     <p>A call to `C_GenerateKeyPair` will never create just one key and return. A call can fail, and create no keys; or it can succeed, and create a matching public/private key pair.</p>
     <p>The key objects created by a successful call to `C_GenerateKeyPair` will have their `CKA_LOCAL` attributes set to `CK_TRUE`.</p>
     <p>Note carefully the order of the arguments to `C_GenerateKeyPair`. The last two arguments do not have the same order as they did in the original Cryptoki Version 1.0 document. The order of these two arguments has caused some unfortunate confusion.</p>
@@ -3454,7 +3455,7 @@ CK_RV m_WrapKey (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_WrapKey` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_WrapKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -3467,20 +3468,20 @@ CK_RV m_WrapKey (
   <tr>
     <th>Description</th>
     <td>
-    <p>`C_WrapKey` wraps (i.e., encrypts) a private or secret key. `hSession` is the session's handle; `pMechanism` points to the wrapping mechanism; `hWrappingKey` is the handle of the wrapping key; `hKey` is the handle of the key to be wrapped; `pWrappedKey` points to the location that receives the wrapped key; and `pulWrappedKeyLen` points to the location that receives the length of the wrapped key.</p>
-    <p>`C_WrapKey` uses the convention described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>`C_WrapKey` wraps (that is, encrypts) a private or secret key. `hSession` is the session's handle; `pMechanism` points to the wrapping mechanism; `hWrappingKey` is the handle of the wrapping key; `hKey` is the handle of the key to be wrapped; `pWrappedKey` points to the location that receives the wrapped key; and `pulWrappedKeyLen` points to the location that receives the length of the wrapped key.</p>
+    <p>`C_WrapKey` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
     <p>The `CKA_WRAP` attribute of the wrapping key, which indicates whether the key supports wrapping, must be `CK_TRUE`. The `CKA_EXTRACTABLE` attribute of the key to be wrapped must also be `CK_TRUE`.</p>
     <p>If the key to be wrapped cannot be wrapped for some token-specific reason, despite its having its `CKA_EXTRACTABLE` attribute set to `CK_TRUE`, then `C_WrapKey` fails with error code `CKR_KEY_NOT_WRAPPABLE`. If it cannot be wrapped with the specified wrapping key and mechanism solely because of its length, then `C_WrapKey` fails with error code `CKR_KEY_SIZE_RANGE`.</p>
     <p>
     `C_WrapKey` can be used in the following situations:
     <ul>
     <li>To wrap any secret key with a public key that supports encryption and decryption.</li>
-    <li>To wrap any secret key with any other secret key. Consideration must be given to key size and mechanism strength or the token may not allow the operation.</li>
+    <li>To wrap any secret key with any other secret key. Consideration must be given to key size and mechanism strength or the token might not allow the operation.</li>
     <li>To wrap a private key with any secret key.</li>
     </ul>
     </p>
-    <p>Of course, tokens vary in which types of keys can actually be wrapped with which mechanisms.</p>
-    <p>To partition the wrapping keys so they can only wrap a subset of extractable keys the attribute `CKA_WRAP_TEMPLATE` can be used on the wrapping key to specify an attribute set that will be compared against the attributes of the key to be wrapped. If all attributes match according to the `C_FindObject` rules of attribute matching then the wrap will proceed. The value of this attribute is an attribute template and the size is the number of items in the template times the size of `CK_ATTRIBUTE`. If this attribute is not supplied then any template is acceptable. If an attribute is not present, it will not be checked. If any attribute mismatch occurs on an attempt to wrap a key then the function SHALL return `CKR_KEY_HANDLE_INVALID`.</p>
+    <p>Tokens vary in which types of keys can be wrapped with which mechanisms.</p>
+    <p>To partition the wrapping keys so that they can wrap only a subset of extractable keys, the attribute `CKA_WRAP_TEMPLATE` can be used on the wrapping key to specify an attribute set that can be compared against the attributes of the key to be wrapped. If all attributes match according to the `C_FindObject` rules of attribute matching, the wrap operation will proceed. The value of this attribute is an attribute template and the size is the number of items in the template times the size of `CK_ATTRIBUTE`. If this attribute is not supplied, any template is acceptable. If an attribute is not present, it will not be checked. If any attribute mismatch occurs on an attempt to wrap a key, the function will return `CKR_KEY_HANDLE_INVALID`.</p>
     </td>
   </tr>
   <tr>
@@ -3574,9 +3575,9 @@ message UnwrapKeyResponse {
     <th>Description</th>
 	<td>
   <p>Implementation of PKCS #11 <code>C_UnwrapKey</code>.</p>
-  <p><code>uwmech</code> specifies the encryption mechanism used to decrypt wrapped data. <code>ptempl</code> is a <i>key(pair)</i> parameter list, specifying how to transform the unwrapped data to a new key (must include <code>CKA_KEY_TYPE</code>).</p>
+  <p><code>uwmech</code> specifies the encryption mechanism that is used to decrypt wrapped data. <code>ptempl</code> is a <em>key(pair)</em> parameter list, specifying how to transform the unwrapped data to a new key (must include <code>CKA_KEY_TYPE</code>).</p>
   <p>The generated object is returned under <code>(unwrapped, uwlen)</code> as a blob. Symmetric keys return their key checksum (3 bytes) under <code>(csum, cslen)</code>; public-key objects return their public key as an SPKI in <code>(csum, cslen)</code>. Both forms are followed by a 4-byte big-endian value, encoding bitcount of the unwrapped key.</p>
-  <p>When transforming an SPKI to a MACed SPKI, one must use CKM_IBM_TRANSPORTKEY as the unwrapping mechanism. This mode supplies the raw SPKI as wrapped data, and ignores the KEK.</p>
+  <p>When an SPKI is being tranformed to a MACed SPKI, one must use CKM_IBM_TRANSPORTKEY as the unwrapping mechanism. This mode supplies the raw SPKI as wrapped data, and ignores the KEK.</p>
   <p>Note that <code>UnwrapKey</code> produces parity-adjusted DES keys (within the blobs), but tolerates input with improper parity.</p>
   </td>
   </tr>
@@ -3599,7 +3600,7 @@ CK_RV m_UnwrapKey (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_UnwrapKey` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_UnwrapKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -3615,10 +3616,10 @@ CK_RV m_UnwrapKey (
     <p>`C_UnwrapKey` unwraps (i.e. decrypts) a wrapped key, creating a new private key or secret key object. `hSession` is the session's handle; `pMechanism` points to the unwrapping mechanism; `hUnwrappingKey` is the handle of the unwrapping key; `pWrappedKey` points to the wrapped key; `ulWrappedKeyLen` is the length of the wrapped key; `pTemplate` points to the template for the new key; `ulAttributeCount` is the number of attributes in the template; `phKey` points to the location that receives the handle of the recovered key.</p>
     <p>The `CKA_UNWRAP` attribute of the unwrapping key, which indicates whether the key supports unwrapping, must be `CK_TRUE`.</p>
     <p>The new key will have the `CKA_ALWAYS_SENSITIVE` attribute set to `CK_FALSE`, and the `CKA_NEVER_EXTRACTABLE` attribute set to `CK_FALSE`. The `CKA_EXTRACTABLE` attribute is by default set to `CK_TRUE`.</p>
-    <p>Some mechanisms may modify, or attempt to modify. the contents of the `pMechanism` structure at the same time that the key is unwrapped.</p>
+    <p>Some mechanisms can modify, or attempt to modify. the contents of the `pMechanism` structure at the same time that the key is unwrapped.</p>
     <p>If a call to `C_UnwrapKey` cannot support the precise template supplied to it, it will fail and return without creating any key object.</p>
     <p>The key object created by a successful call to `C_UnwrapKey` will have its `CKA_LOCAL` attribute set to `CK_FALSE`.</p>
-    <p>To partition the unwrapping keys so they can only unwrap a subset of keys the attribute `CKA_UNWRAP_TEMPLATE` can be used on the unwrapping key to specify an attribute set that will be added to attributes of the key to be unwrapped. If the attributes do not conflict with the user supplied attribute template, in `pTemplate`, then the unwrap will proceed. The value of this attribute is an attribute template and the size is the number of items in the template times the size of `CK_ATTRIBUTE`. If this attribute is not present on the unwrapping key then no additional attributes will be added. If any attribute conflict occurs on an attempt to unwrap a key then the function SHALL return `CKR_TEMPLATE_INCONSISTENT`.</p>
+    <p>To partition the unwrapping keys so they can only unwrap a subset of keys the attribute `CKA_UNWRAP_TEMPLATE` can be used on the unwrapping key to specify an attribute set that will be added to attributes of the key to be unwrapped. If the attributes do not conflict with the user supplied attribute template, in `pTemplate`, the unwrap operation will proceed. The value of this attribute is an attribute template and the size is the number of items in the template times the size of `CK_ATTRIBUTE`. If this attribute is not present on the unwrapping key then no additional attributes will be added. If any attribute conflict occurs on an attempt to unwrap a key then the function SHALL return `CKR_TEMPLATE_INCONSISTENT`.</p>
     </td>
   </tr>
   <tr>
@@ -3744,7 +3745,7 @@ CK_RV m_DeriveKey (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_DeriveKey` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_DeriveKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -3867,7 +3868,7 @@ CK_RV m_GetMechanismList (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_GetMechanismList` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_GetMechanismList` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -3882,9 +3883,9 @@ CK_RV m_GetMechanismList (
     <td>
     <p>`C_GetMechanismList` is used to obtain a list of mechanism types supported by a token. `SlotID` is the ID of the token's slot; `pulCount` points to the location that receives the number of mechanisms.</p>
     <p>
-    There are two ways for an application to call `C_GetMechanismList`:
+    Two ways are available for an application to call `C_GetMechanismList`:
     <ol>
-    <li>If `pMechanismList` is `NULL_PTR`, then all that `C_GetMechanismList` does is return (in `*pulCount`) the number of mechanisms, without actually returning a list of mechanisms. The contents of `*pulCount` on entry to `C_GetMechanismList` has no meaning in this case, and the call returns the value `CKR_OK`.</li>
+    <li>If `pMechanismList` is `NULL_PTR`, then all that `C_GetMechanismList` does is return (in `*pulCount`) the number of mechanisms, without returning a list of mechanisms. The contents of `*pulCount` on entry to `C_GetMechanismList` has no meaning in this case, and the call returns the value `CKR_OK`.</li>
     <li>If `pMechanismList` is not `NULL_PTR`, then `*pulCount` must contain the size (in terms of `CK_MECHANISM_TYPE` elements) of the buffer pointed to by pMechanismList. If that buffer is large enough to hold the list of mechanisms, then the list is returned in it, and `CKR_OK` is returned. If not, then the call to `C_GetMechanismList` returns the value `CKR_BUFFER_TOO_SMALL`. In either case, the value `*pulCount` is set to hold the number of mechanisms.</li>
     </ol>
     </p>
@@ -3985,7 +3986,7 @@ CK_RV m_GetMechanismInfo (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_GetMechanismInfo` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_GetMechanismInfo` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -3998,7 +3999,7 @@ CK_RV m_GetMechanismInfo (
   <tr>
     <th>Description</th>
     <td>
-    <p>`C_GetMechanismInfo` obtains information about a particular mechanism possibly supported by a token. `slotID` is the ID of the token's slot; `type` is the type of mechanism; `pInfo` points to the location that receives the mechanism information.</p>
+    <p>`C_GetMechanismInfo` obtains information about a particular mechanism that might be supported by a token. `slotID` is the ID of the token's slot; `type` is the type of mechanism; `pInfo` points to the location that receives the mechanism information.</p>
     </td>
   </tr>
   <tr>
@@ -4081,7 +4082,7 @@ message GetAttributeValueResponse {
   <tr>
     <th>Description</th>
 	<td><p>Implementation of PKCS #11 <code>C_GetAttributeValue</code>.</p>
-  <p>Does not represent/need sessions (part of blob), therefore does not
+  <p>Does not represent or need sessions (part of blob), therefore does not
   use the <code>hSession</code> parameter.</p>
   <p>EP11 uses more straightforward ways to decode, such as enumerating actual values
   instead of being more generic.</p>
@@ -4100,7 +4101,7 @@ CK_RV m_GetAttributeValue (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_GetAttributeValue` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_GetAttributeValue` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -4117,15 +4118,15 @@ CK_RV m_GetAttributeValue (
     <p>
     For each (`type`, `pValue`, `ulValueLen`) triple in the template, `C_GetAttributeValue` performs the following algorithm:
     <ol>
-    <li>If the specified attribute (i.e., the attribute specified by the type field) for the object cannot be revealed because the object is sensitive or unextractable, then the `ulValueLen` field in that triple is modified to hold the value `CK_UNAVAILABLE_INFORMATION`.</li>
+    <li>If the specified attribute (that is, the attribute that is specified by the type field) for the object cannot be revealed because the object is sensitive or unextractable, then the `ulValueLen` field in that triple is modified to hold the value `CK_UNAVAILABLE_INFORMATION`.</li>
     <li>Otherwise, if the specified value for the object is invalid (the object does not possess such an attribute), then the `ulValueLen` field in that triple is modified to hold the value `CK_UNAVAILABLE_INFORMATION`.</li>
     <li>Otherwise, if the `pValue` field has the value `NULL_PTR`, then the `ulValueLen` field is modified to hold the exact length of the specified attribute for the object.</li>
-    <li>Otherwise, if the length specified in `ulValueLen` is large enough to hold the value of the specified attribute for the object, then that attribute is copied into the buffer located at `pValue`, and the `ulValueLen` field is modified to hold the exact length of the attribute.</li>
+    <li>Otherwise, if the length specified in `ulValueLen` is large enough to hold the value of the specified attribute for the object, then that attribute is copied into the buffer that is located at `pValue`, and the `ulValueLen` field is modified to hold the exact length of the attribute.</li>
     <li>Otherwise, the `ulValueLen` field is modified to hold the value `CK_UNAVAILABLE_INFORMATION`.</li>
     </ol>
     </p>
-    <p>If case 1 applies to any of the requested attributes, then the call should return the value `CKR_ATTRIBUTE_SENSITIVE`. If case 2 applies to any of the requested attributes, then the call should return the value `CKR_ATTRIBUTE_TYPE_INVALID`. If case 5 applies to any of the requested attributes, then the call should return the value `CKR_BUFFER_TOO_SMALL`. As usual, if more than one of these error codes is applicable, `Cryptoki` may return any of them. Only if none of them applies to any of the requested attributes will `CKR_OK` be returned.</p>
-    <p>In the special case of an attribute whose value is an array of attributes, for example` CKA_WRAP_TEMPLATE`, where it is passed in with `pValue` not NULL, then if the `pValue` of elements within the array is NULL_PTR then the `ulValueLen` of elements within the array will be set to the required length. If the `pValue` of elements within the array is not NULL_PTR, then the `ulValueLen` element of attributes within the array must reflect the space that the corresponding `pValue` points to, and `pValue` is filled in if there is sufficient room. Therefore it is important to initialize the contents of a buffer before calling `C_GetAttributeValue` to get such an array value. If any `ulValueLen` within the array isn't large enough, it will be set to `CK_UNAVAILABLE_INFORMATION` and the function will return `CKR_BUFFER_TOO_SMALL`, as it does if an attribute in the `pTemplate` argument has `ulValueLen` too small. Note that any attribute whose value is an array of attributes is identifiable by virtue of the attribute type having the `CKF_ARRAY_ATTRIBUTE` set.</p>
+    <p>If case 1 applies to any of the requested attributes, then the call should return the value `CKR_ATTRIBUTE_SENSITIVE`. If case 2 applies to any of the requested attributes, then the call should return the value `CKR_ATTRIBUTE_TYPE_INVALID`. If case 5 applies to any of the requested attributes, then the call should return the value `CKR_BUFFER_TOO_SMALL`. As usual, if more than one of these error codes is applicable, `Cryptoki` can return any of them. Only if none of them applies to any of the requested attributes will `CKR_OK` be returned.</p>
+    <p>In the special case of an attribute whose value is an array of attributes, for example` CKA_WRAP_TEMPLATE`, where it is passed in with `pValue` not NULL, then if the `pValue` of elements within the array is NULL_PTR then the `ulValueLen` of elements within the array will be set to the required length. If the `pValue` of elements within the array is not NULL_PTR, then the `ulValueLen` element of attributes within the array must reflect the space that the corresponding `pValue` points to, and `pValue` is filled in if there is sufficient room. Therefore it is important to initialize the contents of a buffer before `C_GetAttributeValue` is called to get such an array value. If any `ulValueLen` within the array isn't large enough, it will be set to `CK_UNAVAILABLE_INFORMATION` and the function will return `CKR_BUFFER_TOO_SMALL`, as it does if an attribute in the `pTemplate` argument has `ulValueLen` too small. Note that any attribute whose value is an array of attributes is identifiable by the `CKF_ARRAY_ATTRIBUTE` set of the attribute type.</p>
     <p>Note that the error codes `CKR_ATTRIBUTE_SENSITIVE`, `CKR_ATTRIBUTE_TYPE_INVALID`, and `CKR_BUFFER_TOO_SMALL` do not denote true errors for `C_GetAttributeValue`. If a call to `C_GetAttributeValue` returns any of these three values, then the call must nonetheless have processed every attribute in the template supplied to `C_GetAttributeValue`. Each attribute in the template whose value can be returned by the call to `C_GetAttributeValue` will be returned by the call to `C_GetAttributeValue`.</p>
     </td>
   </tr>
@@ -4214,7 +4215,7 @@ message SetAttributeValueResponse {
   <p>Implementation of PKCS #11 <code>C_SetAttributeValue</code>.</p>
   <p>attribute packing: see _GetAttrValue</p>
   <p>Currently, Ep11 only sends Boolean attributes, all other attributes are handled by host (and EP11 does not modify arrays, such as WRAP_TEMPLATE).</p>
-  <p>Does not represent/need sessions (part of blob), therefore does not use the PKCS #11 <code>hSession</code> parameter.</p>
+  <p>Does not represent or need sessions (part of blob), therefore does not use the PKCS #11 <code>hSession</code> parameter.</p>
   </td>
   </tr>
   <tr>
@@ -4230,7 +4231,7 @@ CK_RV m_SetAttributeValue (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_SetAttributeValue` return values. For details, see the <i><b>Return values</b></i> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_SetAttributeValue` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/downloads/cas/WXRDPRAN" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: caption="Table 2. EP11" caption-side="top"}
@@ -4244,10 +4245,10 @@ CK_RV m_SetAttributeValue (
     <th>Description</th>
     <td>
     <p>`C_SetAttributeValue` modifies the value of one or more attributes of an object. `hSession` is the session's handle; `hObject` is the object's handle; `pTemplate` points to a template that specifies which attribute values are to be modified and their new values; `ulCount` is the number of attributes in the template.</p>
-    <p>Certain objects may not be modified. Calling `C_SetAttributeValue` on such objects will result in the `CKR_ACTION_PROHIBITED` error code. An application can consult the object's `CKA_MODIFIABLE` attribute to determine if an object may be modified or not.</p>
+    <p>Certain objects might not be modified. Calling `C_SetAttributeValue` on such objects will result in the `CKR_ACTION_PROHIBITED` error code. An application can consult the object's `CKA_MODIFIABLE` attribute to determine whether an object can be modified.</p>
     <p>Only session objects can be modified during a read-only session.</p>
-    <p>The template may specify new values for any attributes of the object that can be modified. If the template specifies a value of an attribute which is incompatible with other existing attributes of the object, the call fails with the return code `CKR_TEMPLATE_INCONSISTENT`.</p>
-    <p>Not all attributes can be modified; see Section 4.1.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749" target="_blank">PKCS #11 API specification</a> for more details.</p>
+    <p>The template can specify new values for any attributes of the object that can be modified. If the template specifies a value of an attribute that is incompatible with other existing attributes of the object, the call fails with the return code `CKR_TEMPLATE_INCONSISTENT`.</p>
+    <p>Not all attributes can be modified; see Section 4.1.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749" target="_blank">PKCS #11 API specification</a> for more more information.</p>
     </td>
   </tr>
   <tr>
@@ -4294,6 +4295,6 @@ SetAttributeValueResponse, err := cryptoClient.SetAttributeValue(context.Backgro
 ## Code examples
 {: #code-example}
 
-For complete Golang examples on Enterprise PKCS #11 (EP11) over gRPC, see [GREP11 examples](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/golang){: external}.
+GREP11 API supports programming languages with [gRPC libraries](https://www.grpc.io/docs/){:external}. In the [sample Github repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external}, Golang and JavaScript code examples are provided to test the GREP11 API.
 
-GREP11 API supports programming languages with [gRPC libraries](https://www.grpc.io/docs/){:external}. In the [sample](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} Github repository, only Golang code examples are provided.
+For complete Golang examples, see [GREP11 Golang examples](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/tree/master/golang){: external}. For complete JavaScript examples, see [GREP11 JavaScript examples](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/tree/master/js){: external}.

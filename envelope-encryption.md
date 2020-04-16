@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-09-26"
+  years: 2018, 2020
+lastupdated: "2020-04-01"
 
 keywords: data-at-rest encryption, envelope encryption, root key, data encryption key, protect data encryption key, encrypt data encryption key, wrap data encryption key, unwrap data encryption key
 
@@ -19,11 +19,12 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 {:external: target="_blank" .external}
+{:term: .term}
 
-# Introduction to envelope encryption
+# Envelope encryption in key management service
 {: #envelope-encryption}
 
-Envelope encryption is the practice of encrypting data with a data encryption key (DEK) and then wrapping the DEK with a root key that you can fully manage. The root keys in {{site.data.keyword.hscrypto}} service instance are also wrapped and protected by the service instance master key.
+In the key management service of {{site.data.keyword.hscrypto}}, envelope encryption is the practice of encrypting data with a [data encryption key (DEK)](#x4791827){: term} and then wrapping the DEK with a [root key](#x6946961){: term} that you can fully manage. The root keys in {{site.data.keyword.hscrypto}} service instance are also wrapped and protected by the hardware security module (HSM) [master key](#x2908413){: term}.
 {: shortdesc}
 
 {{site.data.keyword.hscrypto}} protects your stored data with advanced encryption and offers several benefits:
@@ -50,6 +51,28 @@ Envelope encryption is the practice of encrypting data with a data encryption ke
   <caption style="caption-side:bottom;">Table 1. Describes the benefits of customer-managed encryption</caption>
 </table>
 
+## Keys in envelope encryption
+{: #key-types}
+
+The following keys are used in envelope encryption for the advanced encryption and management of data.
+
+<dl>
+  <dt>Master keys</dt>
+  <dd>Master keys, also known as HSM master keys, are encryption keys used to protect the {{site.data.keyword.hscrypto}} instances. The master key provides full control of the hardware security module and ownership of the root of trust that encrypts the entire hierarchy of keys, including <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">root keys</a> and <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">standard keys</a>.</dd>
+  <dt>Root keys</dt>
+  <dd>Root keys, also known as customer root keys (CRKs), are primary resources in {{site.data.keyword.hscrypto}}. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other keys that are stored in a data service. With {{site.data.keyword.hscrypto}}, you can create, store, and manage the lifecycle of root keys to achieve full control of other keys stored in the cloud.</dd>
+  <dt>Data encryption keys</dt>
+  <dd>Data encryption keys (DEKs) are cryptographic keys that you use for data encryption. They are provided by user-owned applications and are used to encrypt data stored in applications. Root keys that are managed in {{site.data.keyword.hscrypto}} serve as wrapping keys to protect DEKs.</dd>
+  <!--
+  <dt>Standard keys</dt>
+    <dd>Standard keys are a way to persist a secret, such as a password or an encryption key. When you use {{site.data.keyword.hscrypto}} to store standard keys, you enable hardware security module (HSM) storage for your secrets, fine-grained access control to your resources with <a href="/docs/hs-crypto?topic=hs-crypto-manage-access" target="_blank">{{site.data.keyword.iamshort}} (IAM)</a>, and the ability to audit API calls to the service with <a href="/docs/hs-crypto?topic=hs-crypto-at-events" target="_blank">{{site.data.keyword.cloudaccesstrailshort}}</a>.</dd>
+  -->
+</dl>
+
+<!--
+After you create keys in {{site.data.keyword.hscrypto}}, the system returns an ID value that you can use to make API calls to the service. You can retrieve the ID value for your keys with the {{site.data.keyword.hscrypto}} user interface or the [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto).
+-->
+
 ## How it works
 {: #envelope-encryption-overview}
 
@@ -63,20 +86,6 @@ The following diagram shows a contextual view of the key wrapping functionality.
 
 Envelope encryption is treated briefly in the NIST Special Publication 800-57, Recommendation for Key Management. To learn more, see [NIST SP 800-57 Pt. 1 Rev. 4.](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0){: external}
 
-## Key types
-{: #key-types}
-
-The service manages two key types, root keys and standard keys, for the advanced encryption and management of data.
-
-<dl>
-  <dt>Root keys</dt>
-    <dd>Root keys are primary resources in {{site.data.keyword.hscrypto}}. They are symmetric key-wrapping keys used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other keys stored in a data service. With {{site.data.keyword.hscrypto}}, you can create, store, and manage the lifecycle of root keys to achieve full control of other keys stored in the cloud. Unlike a standard key, a root key can never leave the bounds of the {{site.data.keyword.hscrypto}} service.</dd>
-  <dt>Standard keys</dt>
-    <dd>Standard keys are a way to persist a secret, such as a password or an encryption key. When you use {{site.data.keyword.hscrypto}} to store standard keys, you enable hardware security module (HSM) storage for your secrets, fine-grained access control to your resources with <a href="/docs/services/hs-crypto?topic=hs-crypto-manage-access" target="_blank">{{site.data.keyword.iamshort}} (IAM)</a>, and the ability to audit API calls to the service with <a href="/docs/services/hs-crypto?topic=hs-crypto-at-events" target="_blank">{{site.data.keyword.cloudaccesstrailshort}}</a>.</dd>
-</dl>
-
-After you create keys in {{site.data.keyword.hscrypto}}, the system returns an ID value that you can use to make API calls to the service. You can retrieve the ID value for your keys with the {{site.data.keyword.hscrypto}} user interface or the [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto).
-
 ## Wrapping keys
 {: #wrapping}
 
@@ -86,7 +95,7 @@ After you designate a root key in {{site.data.keyword.hscrypto}}, you can send a
 
 ![Wrapping data](/image/wrapping-keys.svg "The diagram shows key wrapping in action."){: caption="Figure 2. Wrapping data" caption-side="bottom"}
 
-The following table describes the inputs needed to perform a key wrap operation:
+The following table describes the inputs that are needed to perform a key wrap operation:
 <table>
   <th>Input</th>
   <th>Description</th>
@@ -95,10 +104,10 @@ The following table describes the inputs needed to perform a key wrap operation:
     <td>The ID value for the root key that you want to use for wrapping. The root key can be imported into the service, or it can originate in {{site.data.keyword.hscrypto}} instance. Root keys that are used for wrapping must be 128, 192, or 256 bits so that a wrap request can succeed.</td>
   </tr>
   <tr>
-    <td>Plaintext</td>
+    <td>Plain text</td>
     <td>Optional: The data encryption key (DEK) that you want to use for data encryption. This value must be base64 encoded. To generate a new DEK, you can omit the <code>plaintext</code> property. A random plaintext (32 bytes) that is rooted in an HSM is generated and is then wrapped.</td>
   </tr>
-    <caption style="caption-side:bottom;">Table 2. Inputs required for key wrapping in {{site.data.keyword.hscrypto}}</caption>
+  <caption style="caption-side:bottom;">Table 2. Inputs required for key wrapping in {{site.data.keyword.hscrypto}}</caption>
 </table>
 
 If you send a wrap request without specifying the plaintext to encrypt, the AES-CBC encryption algorithm generates and converts a plaintext to an unintelligible form of data called a ciphertext. This process outputs a 256-bit DEK with new key material. The system then uses an AES key-wrapping algorithm, which wraps the DEK and its key material with the specified root key. A successful wrap operation returns a base64 encoded wrapped DEK that you can store in an {{site.data.keyword.cloud_notm}} app or service.
@@ -108,7 +117,7 @@ If you send a wrap request without specifying the plaintext to encrypt, the AES-
 
 Unwrapping a data encryption key (DEK) decrypts and authenticates the contents within the key, returning the original key material to your data service.
 
-If your business application needs to access the contents of your wrapped DEKs, you can use the {{site.data.keyword.hscrypto}} API to send an unwrap request to the service. To unwrap a DEK, you need to specify the ID value of the root key and the `ciphertext` value returned during the initial wrap request.
+If your business application needs to access the contents of your wrapped DEKs, you can use the {{site.data.keyword.hscrypto}} API to send an unwrap request to the service. To unwrap a DEK, you need to specify the ID value of the root key and the `ciphertext` value that is returned during the initial wrap request.
 
 The following diagram shows key unwrapping in action.
 

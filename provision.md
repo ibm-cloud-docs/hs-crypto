@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-10-17"
+  years: 2018, 2020
+lastupdated: "2020-04-01"
 
-Keywords: provision, instance of Hyper Protect Crypto Services, service instance, create service instance, KMS service instance, cloud HSM service instance
+keywords: provision, instance of Hyper Protect Crypto Services, service instance, create service instance, KMS service instance, cloud HSM service instance
 
 subcollection: hs-crypto
 
@@ -19,6 +19,7 @@ subcollection: hs-crypto
 {:important: .important}
 {:gif: data-image-type='gif'}
 {:external: target="_blank" .external}
+{:term: .term}
 
 # Provisioning service instances
 {: #provision}
@@ -35,20 +36,19 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
 2. Click **Catalog** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
 3. From the All Categories navigation pane, click the **Security and Identity** category.
 4. From the list of services, click the **{{site.data.keyword.hscrypto}}** tile.
-5. **Optional**: In the **Tags** field, add tags to organize your resources. If your tags are billing related, consider writing tags as key:value pairs to help group related tags, such as `costctr:124`. For more information on tags, see [Working with tags](/docs/resources?topic=resources-tag#tag).
-6. Under **Number of crypto units**, select the number of crypto units that meets your performance needs.
+5. **Optional**: In the **Tags** field, add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/resources?topic=resources-tag#tag).
+6. Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs.
 
-  In a production environment, it is recommended to select at least two crypto units to enable high availability. If you select three or more crypto units, these crypto units are distributed among different supported availability zones in the selected region.
+  In a production environment, it is suggestedto select at least two crypto units to enable high availability. If you select three or more crypto units, these crypto units are distributed among different supported availability zones in the selected region.
   {: important}
 7. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 
-![Provisioning the service](/image/provisioning.gif "Provisioning the service"){: caption="Figure 1. Provisioning the service" caption-side="bottom"}
-{: gif}
+![Provisioning the service](/image/provision.gif "Provisioning the service"){: caption="Figure 1. Provisioning the service" caption-side="bottom"}{: gif}
 
 ## Provisioning from the {{site.data.keyword.cloud_notm}} CLI
 {: #provision-cli}
 
-To provision an instance of {{site.data.keyword.hscrypto}} using the {{site.data.keyword.cloud_notm}} CLI, complete the following steps:
+To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.keyword.cloud_notm}} CLI, complete the following steps:
 
 1. Download and install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started){: external}.
 
@@ -78,7 +78,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} using the {{site.data
       </tr>
       <tr>
         <td>*region_name*</td>
-        <td>The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/services/hs-crypto?topic=hs-crypto-regions).</td>
+        <td>The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions).</td>
       </tr>
       <tr>
         <td>*resource_group_name*</td>
@@ -107,16 +107,16 @@ To provision an instance of {{site.data.keyword.hscrypto}} using the {{site.data
       </tr>
       <tr>
         <td>*region_name*</td>
-        <td>Mandatory. The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/services/hs-crypto?topic=hs-crypto-regions).</td>
+        <td>Mandatory. The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions).</td>
       </tr>
       <tr>
         <td>*number_of_crypto_units*</td>
-        <td>Optional. Multiple crypto units are distributed among different supported availability zones in the selected region to increase availability. You can specify one to three crypto units. In a production environment, it is recommended to select at least two crypto units to enable high availability. If you do not specify the number of crypto units, two crypto units are assigned by default.</td>
+        <td>Optional. Multiple crypto units are distributed among different supported availability zones in the selected region to increase availability. You can specify 1 to 3 crypto units. In a production environment, it is suggested to select at least two crypto units to enable high availability. If you do not specify the number of crypto units, two crypto units are assigned by default.</td>
       </tr>
       <caption style="caption-side:bottom;">Table2. Describes command variables to create a {{site.data.keyword.hscrypto}} service instance</caption>
     </table>
 
-5. Verify the service instance is created successfully. Run the following command to get all the service instances you create. Check whether the {{site.data.keyword.hscrypto}} service instance is among the list.
+5. Verify that the service instance is created successfully. Run the following command to get all the service instances you create. Check whether the {{site.data.keyword.hscrypto}} service instance is among the list.
 
     ```sh
     ibmcloud resource service-instances
@@ -127,7 +127,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} using the {{site.data
 ## What's next
 {: #provision-next}
 
-* [Initialize your service instance](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm) so that {{site.data.keyword.hscrypto}} can provide key management and data management functions.
+* Initialize your service instance with the [{{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) or the [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) so that {{site.data.keyword.hscrypto}} can provide key management and data management functions.
 * To find out more about programmatically managing your keys, check out the [{{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
-* To find out more about managing your data using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [GREP11 API reference doc](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref).
-* If you need to delete your service instance, refer to [Deleting service instances](/docs/services/hs-crypto?topic=hs-crypto-delete-instance) for instructions.
+* To find out more about managing your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+* If you need to delete your service instance, refer to [Deleting service instances](/docs/hs-crypto?topic=hs-crypto-delete-instance) for instructions.

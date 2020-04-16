@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-08-22"
+  years: 2018, 2020
+lastupdated: "2020-03-13"
 
-Keywords: view keys, key configuration, key type, list encryption keys, view encryption key, retrieve encryption key, retrieve key API examples
+keywords: view keys, key configuration, key type, list encryption keys, view encryption key, retrieve encryption key, retrieve key API examples
 
 subcollection: hs-crypto
 
@@ -30,14 +30,14 @@ Audit your key configuration regularly:
 - Monitor API calls to {{site.data.keyword.hscrypto}} with {{site.data.keyword.cloudaccesstrailshort}}.
 - Inspect which users have access to keys and if the level of access is appropriate.
 
-For more information about auditing access to your resources, see [Managing user access with Cloud IAM](/docs/services/hs-crypto?topic=hs-crypto-manage-access).
+For more information about auditing access to your resources, see [Managing user access with Cloud IAM](/docs/hs-crypto?topic=hs-crypto-manage-access).
 
 ## Viewing keys with the GUI
 {: #view-key-gui}
 
 If you prefer to inspect the keys in your service by using a graphical interface, you can use the {{site.data.keyword.hscrypto}} dashboard.
 
-[After you create or import your existing keys into the service](/docs/services/hs-crypto?topic=hs-crypto-create-root-keys), complete the following steps to view your keys.
+[After you create or import your existing keys into the service](/docs/hs-crypto?topic=hs-crypto-create-root-keys), complete the following steps to view your keys.
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
@@ -59,19 +59,31 @@ If you prefer to inspect the keys in your service by using a graphical interface
       </tr>
       <tr>
         <td>Status</td>
-        <td>The [key state](/docs/services/key-protect/concepts?topic=key-protect-key-states) based on [NIST Special Publication 800-57, Recommendation for Key Management](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r4.pdf). These states include <i>Pre-active</i>, <i>Active</i>, <i>Deactivated</i>, and <i>Destroyed</i>.</td>
+        <td>The key state based on [NIST Special Publication 800-57, Recommendation for Key Management](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r4.pdf). These states include <em>Preactive</em>, <em>Active</em>, <em>Deactivated</em>, and <em>Destroyed</em>.</td>
+      </tr>
+      <tr>
+        <td>Imported</td>
+        <td>Indicates whether the key is imported. `True` indicates that the key is imported by the user; `False` indicates that the key is created in the service instance.</td>
+      </tr>
+      <tr>
+        <td>Last updated</td>
+        <td>The time that the key is last updated. </td>
+      </tr>
+      <tr>
+        <td>Created</td>
+        <td>The date and time that the key is created.</td>
       </tr>
       <tr>
         <td>Type</td>
-        <td>The <a href="/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption#key-types">type of key</a> that describes your key's designated purpose within the service.</td>
+        <td>The type of key that describes your key's designated purpose within the service.</td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Describes the <b>Keys</b> table</caption>
+      <caption style="caption-side:bottom;">Table 1. Describes the <strong>Keys</strong> table</caption>
     </table>
 
 ## Viewing keys with the API
 {: #view-key-api}
 
-You can retrieve the contents of your keys by using the {{site.data.keyword.hscrypto}} API.
+You can retrieve the contents of your keys by using the {{site.data.keyword.hscrypto}} key management API.
 
 ### Retrieving a list of your keys
 {: #retrieve-keys-api}
@@ -83,9 +95,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ```
 {: codeblock}
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-set-up-kms-api).
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
-2. Run the following cURL command to view general characteristics about your keys.
+2. View general characteristics about your keys by running the following cURL command.
 
     ```cURL
     curl -X GET \
@@ -105,21 +117,21 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
+        <td>The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
-        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
+        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
-        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
       </tr>
       <tr>
         <td><varname>correlation_ID</varname></td>
         <td>Optional: The unique identifier that is used to track and correlate transactions.</td>
       </tr>
-      <caption style="caption-side:bottom;">Table 2. Describes the variables that are needed to view keys with the {{site.data.keyword.hscrypto}} API</caption>
+      <caption style="caption-side:bottom;">Table 2. Describes the variables that are needed to view keys with the {{site.data.keyword.hscrypto}} key management API</caption>
     </table>
 
     A successful `GET /v2/keys` request returns a collection of keys that are available in your {{site.data.keyword.hscrypto}} service instance.
@@ -143,7 +155,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
           "creationDate": "YYYY-MM-DDTHH:MM:SSZ",
           "algorithmMetadata": {
             "bitLength": "256",
-            "mode": "GCM"
+            "mode": "CBC_PAD"
           },
           "extractable": true,
           "imported": false
@@ -162,7 +174,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
           "lastRotateDate": "YYYY-MM-DDTHH:MM:SSZ",
           "algorithmMetadata": {
             "bitLength": "256",
-            "mode": "GCM"
+            "mode": "CBC_PAD"
           },
           "extractable": false,
           "imported": true
@@ -258,7 +270,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 ```
 {: codeblock}
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/services/hs-crypto?topic=hs-crypto-set-up-kms-api).
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
 2. Retrieve the ID of the key you would like to access or manage.
 
@@ -285,15 +297,15 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. See <a href="/docs/services/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a> for more information.</td>
+        <td>The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. See <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a> for more information.</td>
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
-        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
+        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
-        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
       </tr>
       <tr>
         <td><varname>correlation_ID</varname></td>
@@ -303,7 +315,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
         <td><varname>key_ID</varname></td>
         <td>The identifier for the key that you retrieved in [step 1](#retrieve-keys-api).</td>
       </tr>
-      <caption style="caption-side:bottom;">Table 4. Describes the variables that are needed to view a specified key with the {{site.data.keyword.hscrypto}} API</caption>
+      <caption style="caption-side:bottom;">Table 4. Describes the variables that are needed to view a specified key with the {{site.data.keyword.hscrypto}} key management API</caption>
     </table>
 
     A successful `GET v2/keys/<key_ID>` response returns details about your key and the key material. The following JSON object shows an example returned value for a standard key.
@@ -328,7 +340,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
             "creationDate": "YYYY-MM-DDTHH:MM:SSZ",
             "algorithmMetadata": {
                 "bitLength": "256",
-                "mode": "GCM"
+                "mode": "CBC_PAD"
             },
             "extractable": true,
             "imported": false

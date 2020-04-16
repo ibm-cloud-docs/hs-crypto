@@ -1,14 +1,13 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="hs-crypto" category="security" audience="service" arm="3917560" href="/docs/services/hs-crypto?topic=hs-crypto-get-started" path="services/hs-crypto"}
+{: .toc subcollection="hs-crypto" category="security" audience="service" href="/docs/hs-crypto?topic=hs-crypto-get-started" console-page="/catalog/services/hyper-protect-crypto-services" product-page="https://www.ibm.com/cloud/hyper-protect-services" path="hs-crypto"}
 IBM Cloud Hyper Protect Crypto Services
 
     {: .navgroup id="learn"}
     {: .topicgroup}
     Getting started
         index.md
-        get_started_hsm.md
         [Video: Getting started with IBM Cloud Hyper Protect Crypto Services](https://www.youtube.com/watch?v=df2q-QdJPgQ&feature=youtu.be)
 
     {: .topicgroup}
@@ -19,24 +18,31 @@ IBM Cloud Hyper Protect Crypto Services
         hs-crypto-concepts.md
         service_instance_overview.md
         envelope-encryption.md
-        EP11_intro.md
+        HSM-intro.md
         [Video: IBM Cloud Hyper Protect Crypto Services overview](https://youtu.be/0LiltyNMwgo)
 
-    integrate-services.md
+    {: .topicgroup}
+    Integrations
+        integrate-services.md
 
     {: .topicgroup}
     Tutorials
         [Using IBM Cloud Hyper Protect Crypto Services to encrypt VMware disks](https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/)
-        [Applying end to end security to a cloud application](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-cloud-e2e-security)
-        [Enhancing security of your deployed application](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-extended-app-security)
+        [Applying end to end security to a cloud application](https://{DomainName}/docs/tutorials?topic=solution-tutorials-cloud-e2e-security)
+        [Enhancing security of your deployed application](https://{DomainName}/docs/tutorials?topic=solution-tutorials-extended-app-security)
+        [Create secure microservices writing to a consolidated database](https://developer.ibm.com/patterns/create-a-secured-microservices-and-deploy-it-to-a-consolidated-database/)
 
     whats_new.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     provision.md
-    initialize_hsm.md
-    delete-instance.md
+    initialize-hsm-cli.md
+
+    {: .topicgroup}
+    Initializing service instances with the Management Utilities
+        prepare-management-utilities.md
+        initialize-hsm-management-utilities.md
 
     {: .topicgroup}
     Accessing the key management and GREP11 APIs
@@ -46,7 +52,6 @@ IBM Cloud Hyper Protect Crypto Services
         retrieve-instance-id.md
 
     set-up-cli.md
-    crypto-private-network.md
 
     {: .topicgroup}
     Creating keys
@@ -58,25 +63,41 @@ IBM Cloud Hyper Protect Crypto Services
         import-root-keys.md
         import-standard-keys.md
 
+    view-keys.md
+
     {: .topicgroup}
-    Managing root keys and standard keys
-        view-keys.md
-        rotate-keys.md
+    Protecting keys
         wrap-keys.md
         unwrap-keys.md
-        delete-keys.md
-    {: .navgroup-end}
+        rewrap-keys.md
 
+    {: .topicgroup}
+    Rotating keys
+        rotate-keys.md
+
+    delete-keys.md
+    delete-instance.md
+
+    {: .topicgroup}
+    Enhancing security for Hyper Protect Crypto Services
+        manage-access.md
+        grant-access-keys.md
+        crypto-private-network.md
+        at-events.md
+
+    {: .topicgroup}
+    High availability and disaster recovery
+        ha-dr.md
+        restore-data.md
+    {: .navgroup-end}
 
     {: .navgroup id="reference"}
     [Key management API reference](https://{DomainName}/apidocs/hs-crypto)
     grep11-api-ref.md
+    [Key Protect CLI reference](https://{DomainName}/docs/key-protect?topic=key-protect-cli-reference)
     /hs-crypto-cli-plugin/hs-crypto-tke_cli_plugin
     regions.md
-    manage-access.md
-    at-events.md
-
-    ha-dr.md
+    shared-responsibilities.md
     [IBM Redbooks: Securing Your Critical Workloads with IBM Hyper Protect Services](http://www.redbooks.ibm.com/abstracts/sg248469.html?Open)
     [IBM Cloud Hyper Protect Services resources](https://ibm-hyper-protect.github.io/)
     {: .navgroup-end}

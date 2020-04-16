@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-10-11"
+  years: 2018, 2020
+lastupdated: "2020-04-01"
 
-Keywords: IBM Cloud Hyper Protect Crypto Services, getting started, example, dedicated key management service, IBM Key, Key storage, HSM, cloud hardware security module
+keywords: IBM Cloud Hyper Protect Crypto Services, getting started, example, dedicated key management service, IBM Key, Key storage, HSM, cloud hardware security module
 
 subcollection: hs-crypto
 
@@ -18,31 +18,41 @@ subcollection: hs-crypto
 {:important: .important}
 {:tip: .tip}
 {:external: target="_blank" .external}
+{:term: .term}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 
 # Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
 {: #get-started}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}} for short) is a dedicated key management service and hardware security module (HSM). It is designed to enable you to take control of your cloud data encryption keys and cloud hardware security modules, and is the only service in the industry built on FIPS 140-2 Level 4-certified hardware.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}} for short) is a dedicated key management service and [hardware security module (HSM)](#x6704988){: term}. With this service, you can take control of your cloud [data encryption keys](#x4791827){: term} and cloud hardware security modules. {{site.data.keyword.hscrypto}} is also the only service in the industry that is built on FIPS 140-2 Level 4-certified hardware.
 {:shortdesc}
 
-{{site.data.keyword.hscrypto}} integrates with {{site.data.keyword.keymanagementservicefull_notm}} API to generate and encrypt keys. The Keep Your Own Keys (KYOK) function is also enabled by {{site.data.keyword.hscrypto}} to provide access to cryptographic hardware that is FIPS 140-2 Level 4 certified technology, the highest level attainable of security.
+{{site.data.keyword.hscrypto}} integrates with {{site.data.keyword.keymanagementservicefull_notm}} API to generate and encrypt keys. The Keep Your Own Key (KYOK) function is also enabled by {{site.data.keyword.hscrypto}} to provide access to cryptographic hardware that is FIPS 140-2 Level 4 certified technology, the highest level attainable of security.
 
-{{site.data.keyword.hscrypto}} offers network addressable HSMs and is accessible via [Enterprise PKCS#11 (EP11)](/docs/services/hs-crypto?topic=hs-crypto-enterprise_PKCS11_overview) application programming interface (API). <!-- You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client, which communicates with the ACSP server to enable you to access the backend cryptographic resources.-->  Applications can access {{site.data.keyword.hscrypto}} remotely by calling EP11 API through frameworks such as [gRPC](https://grpc.io/){: external}. For more information about {{site.data.keyword.hscrypto}}, see [{{site.data.keyword.hscrypto}} overview](/docs/services/hs-crypto?topic=hs-crypto-overview). For more information about security requirements for cryptographic modules, see [the specification of the NIST for FIPS 140-2 Level](https://csrc.nist.gov/publications/detail/fips/140/2/final){: external}.
+{{site.data.keyword.hscrypto}} offers you network addressable HSMs. You can access the HSMs via [Enterprise PKCS#11 (EP11)](/docs/hs-crypto?topic=hs-crypto-HSM-overview) application programming interface (API). <!-- You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client, which communicates with the ACSP server to enable you to access the backend cryptographic resources.-->  Applications can access {{site.data.keyword.hscrypto}} remotely by calling EP11 API through frameworks such as [gRPC](https://grpc.io/){: external}. For more information about {{site.data.keyword.hscrypto}}, see [{{site.data.keyword.hscrypto}} overview](/docs/hs-crypto?topic=hs-crypto-overview). For more information about security requirements for cryptographic modules, see [the specification of the NIST for FIPS 140-2 Level](https://csrc.nist.gov/publications/detail/fips/140/2/final){: external}.
 
-<!-- {{site.data.keyword.hscrypto}} is the cryptography that {{site.data.keyword.blockchainfull_notm}} Platform is built with. It is also a member of the {{site.data.keyword.cloud_notm}} Hyper Protect Family, including [{{site.data.keyword.cloud_notm}} Hyper Protect DBaaS](https://cloud.ibm.com/docs/services/hypersecure-dbaas/index.html){: external}, {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}, [{{site.data.keyword.cloud_notm}} Container Service](https://cloud.ibm.com/docs/containers/container_index.html){: external}, and [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}}](https://cloud.ibm.com/docs/services/hypersecure-platform/index.html){: external}. -->
+<!-- {{site.data.keyword.hscrypto}} is the cryptography that {{site.data.keyword.blockchainfull_notm}} Platform is built with. It is also a member of the {{site.data.keyword.cloud_notm}} Hyper Protect Family, including [{{site.data.keyword.cloud_notm}} Hyper Protect DBaaS](https://cloud.ibm.com/docs/hypersecure-dbaas/index.html){: external}, {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}, [{{site.data.keyword.cloud_notm}} Container Service](https://cloud.ibm.com/docs/containers/container_index.html){: external}, and [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}}](https://cloud.ibm.com/docs/hypersecure-platform/index.html){: external}. -->
 
-This tutorial guides you how to set up your service instance by managing your master keys, and create and add existing cryptographic keys by using the {{site.data.keyword.hscrypto}} dashboard.
-
+This tutorial guides you how to set up your service instance by managing your [master keys](#x2908413){: term}, and create and add existing cryptographic keys by using the {{site.data.keyword.hscrypto}} dashboard.
 
 ## Step 1: Provision the service
 {: #provision-service}
+{: help}
+{: support}
 
-Before you begin, you must create an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console. For detailed steps, see [Provisioning the service](/docs/services/hs-crypto?topic=hs-crypto-provision).
+Before you begin, you must create an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console. For detailed steps, see [Provisioning the service](/docs/hs-crypto?topic=hs-crypto-provision).
 
 ## Step 2: Initialize your service instance
 {: #initialize-crypto}
+{: help}
+{: support}
 
-To manage your keys, you need to initialize your service instance first. For a quick getting-started tutorial, see [Getting started with service instance initialization](/docs/services/hs-crypto?topic=hs-crypto-get-started-hsm). For detailed steps and best practices, see [Initializing service instances](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm).
+To manage your keys, you need to initialize your service instance first. Two options are provided for initializing a service instance. You can use the {{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities to initialize a service instance by using master key parts stored on smart cards. This provides the highest level of security. You can also use the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) command-line interface (CLI) plug-in to initialize your service instance.
+
+For detailed steps and best practices of using the Management Utilities, see [Setting up the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities) and [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
+
+For detailed steps and best practices using the TKE CLI plug-in, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
 ## Step 3: Manage your data and keys
 {: #manage-data-key}
@@ -50,10 +60,12 @@ To manage your keys, you need to initialize your service instance first. For a q
 ### 1. Manage your keys through key management service
 {: #manage-keys}
 
-From the {{site.data.keyword.hscrypto}} dashboard, you can create new root keys or standard keys for cryptography, or you can import your existing keys. For more information on root keys and standard keys, see [Key management service components and concepts](/docs/services/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts).
+From the {{site.data.keyword.hscrypto}} dashboard, you can create new [root keys](#x6946961){: term} or standard keys for cryptography, or you can import your existing keys. For more information about root keys and standard keys, see [Key management service components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts).
 
 #### Creating new keys
 {: #create-keys}
+{: help}
+{: support}
 
 Complete the following steps to create your first cryptographic key.
 
@@ -69,16 +81,16 @@ Complete the following steps to create your first cryptographic key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can seletct <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
       </tr>
       <tr>
         <td>Name</td>
         <td>
           <p>A unique, human-readable alias for easy identification of your key.</p>
-          <p>To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
+          <p>To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location.</p>
         </td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Description of the <b>Create a key</b> settings</caption>
+      <caption style="caption-side:bottom;">Table 1. Description of the <strong>Create a key</strong> settings</caption>
     </table>
 
 3. When you are finished filling out the key's details, click **Add key** to confirm.
@@ -87,6 +99,8 @@ Keys that are created in the service are symmetric 256-bit keys, supported by th
 
 #### Importing your own keys
 {: #import-keys}
+{: help}
+{: support}
 
 You can enable the security benefits of Bring Your Own Key (BYOK) by bringing your existing keys to the service.
 
@@ -104,44 +118,46 @@ Complete the following steps to add an existing key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can seletct <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
       </tr>
       <tr>
         <td>Name</td>
         <td>
           <p>A unique, human-readable alias for easy identification of your key.</p>
-          <p>To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
+          <p>To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location.</p>
         </td>
       </tr>
       <tr>
         <td>Key material</td>
         <td>The key material, such as a symmetric key, that you want to store in the {{site.data.keyword.hscrypto}} service. The key that you provide must be base64 encoded.</td>
       </tr>
-      <caption style="caption-side:bottom;">Table 2. Description of the <b>Import your own key</b> settings</caption>
+      <caption style="caption-side:bottom;">Table 2. Description of the <strong>Import your own key</strong> settings</caption>
     </table>
 
 3. When you are finished filling out the key's details, click **Add key** to confirm.
 
 From the {{site.data.keyword.hscrypto}} dashboard, you can inspect the general characteristics of your new keys.
 
-### 2. Encrypte your data using Cloud HSM
+### 2. Encrypte your data with Cloud HSM
 {: #encrypt-data-hsm}
+{: help}
+{: support}
 
-You can remotely access {{site.data.keyword.hscrypto}} Cloud HSM using EP11 over gRPC (GREP11). To perform cryptographic operations using GREP11 API, you need to generate a GREP11 API request, and pass the GREP11 API endpoint URL, service ID API key, IAM endpoint, and instance ID through the API call.
+You can remotely access {{site.data.keyword.hscrypto}} Cloud HSM by using EP11 over gRPC (GREP11). To perform cryptographic operations with GREP11 API, you need to generate a GREP11 API request, and pass the GREP11 API endpoint URL, service ID API key, IAM endpoint, and instance ID through the API call.
 
-A [sample](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} Github repository is provided for you to test the GREP11 API in Golang. GREP11 API supports programming languages with [gRPC libraries](https://developers.google.com/protocol-buffers/){:external}. In the [sample](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} Github repository, only Golang code examples are provided.
+GREP11 API supports programming languages with [gRPC libraries](https://grpc.io/docs/){:external}. A [sample Github repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} is provided for you to test the GREP11 API in Golang and JavaScript. The following procedure takes the Golang code as an example to test GREP11 functions.
 
 Before you use the samples, perform the following tasks:
   1. Set up the Go environment:
-    - [Install Go tools](https://golang.org/doc/install){:external}
-    - [Set up your workspace directory](https://golang.org/doc/code.html#Workspaces){:external}
-    - [Set the GOPATH environment variable](https://golang.org/doc/code.html#GOPATH){:external}
-  2. Clone the [sample](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} repository to the `$GOPATH/src/github.com/ibm-developer/` directory.
+    - [Install Go tools](https://golang.org/doc/install){:external}.
+    - [Set up your workspace directory](https://golang.org/doc/code.html#Workspaces){:external}.
+    - [Set the GOPATH environment variable](https://golang.org/doc/code.html#GOPATH){:external}.
+  2. Clone the [sample repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} to the `$GOPATH/src/github.com/ibm-developer/` directory.
 
 
-To run the sample code:
+To run the sample code, perform the following steps:
 
-1. Update the following code snippet in the `server_test.go` file of the `src/github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/golang/examples` directory:  
+1. Update the following code snippet in the `server_test.go` file of the `src/github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/golang/examples` directory:
 
   ```Golang
   const address = "ep11.<region>.hs-crypto.cloud.ibm.com:<port>"
@@ -160,7 +176,7 @@ To run the sample code:
   In the code example,
   - Replace `<region>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance dashboard, click **Manage**  &gt; **EP11 endpoint URL**.
   - Replace `<service_ID_API_key>` with the service ID API key that is created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/iam?topic=iam-serviceidapikeys){: external}.
-  - Replace `<instance_ID>` with the instance ID that uniquely identified your service instance. Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance by following the instruction in [Retrieving your instance ID](/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+  - Replace `<instance_ID>` with the instance ID that uniquely identified your service instance. Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 
 2. Change the directory with the following command:
 
@@ -171,7 +187,7 @@ To run the sample code:
 
 3. Execute the example by running the `go test -v` command.
 
-  The sample program generates output similar to the following:
+  The sample program generates output similar to the following one:
   ```Bash
 	=== RUN   Example_getMechanismInfo
 	--- PASS: Example_getMechanismInfo (0.02s)
@@ -198,11 +214,12 @@ To run the sample code:
 ## What's next
 {: #get-started-next}
 
-- Now you can start to use your keys to encode your apps and services. If you added a root key to the service, you might want to learn more about using the root key to protect the keys that encrypt your at-rest data. Check out [Wrapping keys](/docs/services/hs-crypto?topic=hs-crypto-wrap-keys) to get started.
-  - To find out more about managing and protecting your encryption keys with a root key, check out [Envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption).
+- Now you can start to use your keys to encode your apps and services. If you added a root key to the service, you might want to learn more about using the root key to protect the keys that encrypt your at-rest data. Check out [Wrapping keys](/docs/hs-crypto?topic=hs-crypto-wrap-keys) to get started.
+  - To find out more about managing and protecting your encryption keys with a root key, check out [Envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
   - To find out more about programmatically managing your keys, check out the [{{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
-- You can also manage and protect your data with {{site.data.keyword.hscrypto}}. To find out more about encrypting your data using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [GREP11 API reference doc](/docs/services/hs-crypto?topic=hs-crypto-grep11-api-ref).
-- To find out more about integrating the {{site.data.keyword.hscrypto}} service with other cloud data solutions, [check out the Integrations doc](/docs/services/hs-crypto?topic=hs-crypto-integrate-services).
+- You can also manage and protect your data with {{site.data.keyword.hscrypto}}. To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+- To find out more about integrating the {{site.data.keyword.hscrypto}} service with other cloud data solutions, [check out the Integrations doc](/docs/hs-crypto?topic=hs-crypto-integrate-services).
+- To learn more about {{site.data.keyword.hscrypto}} concepts, check out [Components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
 
 <!-- ## Installing ACSP client libraries -->
 

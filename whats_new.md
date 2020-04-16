@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-14"
+lastupdated: "2020-04-16"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -17,6 +17,7 @@ subcollection: hs-crypto
 {:note: .note}
 {:pre: .pre}
 {:external: target="_blank" .external}
+{:term: .term}
 
 # What's new
 {: #what-new}
@@ -25,10 +26,35 @@ Stay up-to-date with the new features that are available for {{site.data.keyword
 {: shortdesc}
 
 ## April 2020
-{: #April-2020}
+{: #March-2020}
+
+### Added: {{site.data.keyword.hscrypto}} adds support for the Management Utilities
+{: #added-management-utilities}
+
+{{site.data.keyword.hscrypto}} now supports loading master key parts and signature keys from smart cards for service instance initialization. It ensures the highest level of protection for master key parts and signature keys.
+
+The Management Utilities are two applications that use smart cards to configure service instances. The Smart Card Utility Program sets up and manages the smart cards used. The Trusted Key Entry (TKE) application uses those smart cards to configure service instances. To use the Management Utilities, you need to order IBM-supported smart cards and smart card readers.
+
+For more information, see [Understanding the Management Utilities](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-management-utilities) and [Loading master keys with the Management Utilities](/docs/key-protect?topic=key-protect-grant-access-keys).
+
+<!-- ### Added: {{site.data.keyword.hscrypto}} adds support for {{site.data.keyword.at_full_notm}}
+{: #added-at-logdna-support}
+
+You can now monitor API calls to {{site.data.keyword.hscrypto}} by using {{site.data.keyword.at_full_notm}}.
+
+To learn more about monitoring {{site.data.keyword.hscrypto}} activity, see [Activity Tracker events](/docs/hs-crypto?topic=hs-crypto-at-events). -->
+
+<!-- ### Added: {{site.data.keyword.hscrypto}} aligns the key management functions with {{site.data.keyword.keymanagementserviceshort}}
+{: #added-key-protect-concurrency}
+
+{{site.data.keyword.hscrypto}} now supports the same level of key management functions as {{site.data.keyword.keymanagementserviceshort}} with FIPS 140-2 Level 4-compliant HSM. The added functions include the following:
+
+* [Support for import token to securely upload keys](/docs/hs-crypto?topic=hs-crypto-create-import-tokens)
+* [Support for policy-based key rotation](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy)
+* [Support for key rewrapping](/docs/hs-crypto?topic=hs-crypto-rewrap-keys) -->
 
 ### Updated: {{site.data.keyword.cloud_notm}} service integration
-{: #added-service-integration-201912}
+{: #added-service-integration}
 
 {{site.data.keyword.hscrypto}} can now be integrated with additional {{site.data.keyword.cloud_notm}} services:
 
@@ -41,7 +67,7 @@ Stay up-to-date with the new features that are available for {{site.data.keyword
 For more information, see [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services). 
 
 ### Added: {{site.data.keyword.hscrypto}} adds support for EP11 private endpoints
-{: #added-private-endpoints-202001}
+{: #added-private-endpoints}
 
 You can now connect to {{site.data.keyword.hscrypto}} over the {{site.data.keyword.cloud_notm}} private network by targeting a private endpoint for the Enterprise PKCS #11 service.
 
@@ -142,7 +168,7 @@ For more information, see [High availability and disaster recovery](/docs/hs-cry
 ### Scalability
 {: #scalability-new}
 
-The service instance can be scaled out to a maximum of six crypto units to meet your performance requirement. Each crypto unit can crypto-process 5000 keys. In a production environment, it is recommended to select at least two crypto units to enable high availability. By selecting three or more crypto units, these crypto units are distributed among three availability zones in the selected region.
+The service instance can be scaled out to a maximum of six [crypto units](#x9860404){: term} to meet your performance requirement. Each crypto unit can crypto-process 5000 keys. In a production environment, it is recommended to select at least two crypto units to enable high availability. By selecting three or more crypto units, these crypto units are distributed among three availability zones in the selected region.
 
 Read [Provisioning the service](/docs/hs-crypto?topic=hs-crypto-provision) for more information.
 

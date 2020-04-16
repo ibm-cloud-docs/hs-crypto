@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-08-19"
+  years: 2018, 2020
+lastupdated: "2020-01-02"
 
-Keywords: root key, wrap key, encrypt data encryption key, protect data encryption key, envelope encryption API examples
+keywords: root key, wrap key, encrypt data encryption key, protect data encryption key, envelope encryption API examples
 
 subcollection: hs-crypto
 
@@ -17,17 +17,18 @@ subcollection: hs-crypto
 {:pre: .pre}
 {:tip: .tip}
 {:external: target="_blank" .external}
+{:term: .term}
 
 # Wrapping keys
 {: #wrap-keys}
 
-You can manage and protect your encryption keys with a root key by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} API, if you are a privileged user.
+You can manage and protect your encryption keys with a [root key](#x6946961){: term} by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management API, if you are a privileged user.
 {: shortdesc}
 
-When you wrap a data encryption key (DEK) with a root key, {{site.data.keyword.hscrypto}}
+When you wrap a [data encryption key (DEK)](#x4791827){: term} with a root key, {{site.data.keyword.hscrypto}}
  combines the strength of multiple algorithms to protect the privacy and the integrity of your encrypted data.  
 
-To learn how key wrapping helps you control the security of at-rest data in the cloud, see [Envelope encryption](/docs/services/hs-crypto?topic=hs-crypto-envelope-encryption).
+To learn how key wrapping helps you control the security of at-rest data in the cloud, see [Envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
 
 ## Wrapping keys by using the API
 {: #wrap-keys-api}
@@ -38,19 +39,19 @@ You can protect a specified data encryption key (DEK) with a root key that you m
 When you supply a root key for wrapping, ensure that the root key is 128, 192, or 256 bits so that the wrap call can succeed. If you create a root key in the service, {{site.data.keyword.hscrypto}}
  generates a 256-bit key from its HSMs, supported by the AES-CBC algorithm.
 
-[After you designate a root key in the service](/docs/services/hs-crypto?topic=hs-crypto-create-root-keys), you can wrap a DEK with advanced encryption by making a `POST` call to the following endpoint.
+[After you designate a root key in the service](/docs/hs-crypto?topic=hs-crypto-create-root-keys), you can wrap a DEK with advanced encryption by making a `POST` call to the following endpoint.
 
 ```
 https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
 ```
 {: codeblock}
 
-1. [Retrieve your service and authentication credentials to work with keys in the service.](/docs/services/hs-crypto?topic=hs-crypto-set-up-kms-api)
+1. [Retrieve your service and authentication credentials to work with keys in the service.](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api)
 
 2. Copy the key material of the DEK that you want to manage and protect.
 
     If you have manager or writer privileges for your {{site.data.keyword.hscrypto}}
- service instance, [you can retrieve the key material for a specific key by making a `GET /v2/keys/<key_ID>` request](/docs/services/hs-crypto?topic=hs-crypto-view-keys#view-key-api).
+ service instance, [you can retrieve the key material for a specific key by making a `GET /v2/keys/<key_ID>` request](/docs/hs-crypto?topic=hs-crypto-view-keys#view-key-api).
 
 3. Copy the ID of the root key that you want to use for wrapping.
 
@@ -81,7 +82,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
       <tr>
         <td><varname>region</varname></td>
         <td>The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}}
- service instance resides. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
+ service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
       </tr>
       <tr>
         <td><varname>key_ID</varname></td>
@@ -89,12 +90,12 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
-        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
+        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
         <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}}
- service instance. For more information, see <a href="/docs/services/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+ service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
       </tr>
       <tr>
         <td><varname>correlation_ID</varname></td>
