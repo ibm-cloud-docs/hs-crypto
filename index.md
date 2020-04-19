@@ -138,7 +138,7 @@ Complete the following steps to add an existing key.
 
 From the {{site.data.keyword.hscrypto}} dashboard, you can inspect the general characteristics of your new keys.
 
-### 2. Encrypte your data with Cloud HSM
+### 2. Encrypt your data with Cloud HSM
 {: #encrypt-data-hsm}
 {: help}
 {: support}
