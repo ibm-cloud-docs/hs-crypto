@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-27"
+lastupdated: "2020-04-22"
 
 keywords: frequently asked questions, critical security parameters, cryptographic module, Security Level，questions and answers
 
@@ -206,14 +206,19 @@ It is recommended to procure eight or 10 smart cards and two smart card readers.
 
 If you are in the United States, you can order smart cards and smart card readers online. For details, see [Order smart cards and smart card readers](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader).
 
-For procurement from other countries, contact IBM Part Sales through one of the following email addresses, and provide the Field Replaceable Unit (FRU) number of the smart card, which is 00RY790 in this case.
+For procurement from other countries, contact IBM Part Sales through the following email addresses. For countries that are not listed, contact `ppricing@de.ibm.com`. In the email, provide the Field Replaceable Unit (FRU) number, 00RY790, for the smart card.
 
 |Country| Email address |
 |--------------|-----------------------|
-|Germany | partsale@de.ibm.com|
-|Switzerland | pasa@ch.ibm.com|
 |Belgium  | parts@be.ibm.com|
+|Germany | partsale@de.ibm.com|
+|France | vtepce@fr.ibm.com|
+|Ireland | emeapart@ie.ibm.com|
+|Poland | parts@pl.ibm.com|
+|Portugal | ptsales@pt.ibm.com|
+|South Africa    |autoship@za.ibm.com |
 |Spain    | ventadepiezas@es.ibm.com|
+|Switzerland | pasa@ch.ibm.com|
 |UK | parts_sales@uk.ibm.com|
 {: caption="Table 2. IBM Part Sales contacts" caption-side="top"}
 

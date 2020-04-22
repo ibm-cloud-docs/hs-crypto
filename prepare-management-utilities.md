@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-04-22"
 
 keywords: smart card, smart card reader, trusted key entry, tke, master key, initialize service, load master key
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 {:important: .important}
 {:external: target="_blank" .external}
 {:term: .term}
@@ -49,16 +50,8 @@ Complete the following steps to order smart cards:
 
 3. Click **Add to Current Order** and continue to check out.
 
-Online smart card ordering is currently only available in the United States. For procurement from other countries, contact IBM Part Sales through one of the following email addresses, and provide the Field Replaceable Unit (FRU) number of the smart card, which is 00RY790 in this case.
-
-|Country| Email address |
-|--------------|-----------------------|
-|Germany | partsale@de.ibm.com|
-|Switzerland | pasa@ch.ibm.com|
-|Belgium  | parts@be.ibm.com|
-|Spain    | ventadepiezas@es.ibm.com|
-|UK | parts_sales@uk.ibm.com|
-{: caption="Table 1. IBM Part Sales contacts" caption-side="top"}
+Online smart card ordering is currently only available in the United States. For procurement from other countries, see [FAQ: How can I procure smart cards and smart card readers?](/docs/hs-crypto?topic=hs-crypto-faqs#faq-procure-smart-card).
+{: note}
 
 ### Ordering smart card readers
 
