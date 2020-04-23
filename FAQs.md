@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-22"
+lastupdated: "2020-04-23"
 
 keywords: frequently asked questions, critical security parameters, cryptographic module, Security Level，questions and answers
 
@@ -211,9 +211,11 @@ For procurement from other countries, contact IBM Part Sales through the followi
 |Country| Email address |
 |--------------|-----------------------|
 |Belgium  | parts@be.ibm.com|
+|Denmark  | reservedele@dk.ibm.com|
 |Germany | partsale@de.ibm.com|
 |France | vtepce@fr.ibm.com|
 |Ireland | emeapart@ie.ibm.com|
+|Israel | psale@il.ibm.com|
 |Poland | parts@pl.ibm.com|
 |Portugal | ptsales@pt.ibm.com|
 |South Africa    |autoship@za.ibm.com |
