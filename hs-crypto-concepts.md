@@ -167,6 +167,6 @@ gRPC is a modern open source high performance remote procedure call (RPC) framew
 ## {{site.data.keyword.hscrypto}} architecture
 {: #hs-crypto-architecture}
 
-Refer to the following architectural diagram to see how components of {{site.data.keyword.hscrypto}} co-works to protect your sensitive data and keys.
+Refer to the following architectural diagram to see how components of {{site.data.keyword.hscrypto}} co-work to protect your sensitive data and keys.
 
 ![Service instance components](/image/hs-crypto-components.svg "Service instance components"){: caption="Figure 1. Interaction with {{site.data.keyword.hscrypto}} components" caption-side="bottom"}
