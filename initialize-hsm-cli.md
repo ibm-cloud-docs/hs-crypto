@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-11"
+lastupdated: "2020-04-21"
 
 keywords: key storage, HSM, hardware security module, key ceremony, load master key, master key register, initialize Hyper Protect Crypto Services instance, Trusted Key Entry CLI plug-in, TKE CLI plug-in
 
@@ -32,14 +32,9 @@ Before you can use the {{site.data.keyword.hscrypto}} instance (service instance
 For an introduction to the options of service instance initialization and other fundamental concepts, see [Introduction to service instance initialization](/docs/hs-crypto?topic=hs-crypto-introduce-service#introduce-service) and {{site.data.keyword.hscrypto}} [components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
 
 The following diagram gives you an overview of steps you need to take to initialize the service instance. Click each step on the diagram for detailed instructions.
-{: hide-dashboard}
-
-The following diagram gives you an overview of steps you need to take to initialize the service instance with TKE CLI plug-in.
-{: hide-in-docs}
 
 <figure>
-  <img usemap="#home_map1" border="0" class="image hide-dashboard" id="image_ztx_crb_f1b2" src="/image/hsm_initialization_flow.svg" width="750" alt="Click each step to get more details on the flow." />
-  <img border="0" class="image hide-in-docs" id="image_ztx_crb_f1b2_2" src="/image/hsm_initialization_flow.svg" width="750" alt="Click each step to get more details on the flow." />
+  <img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="/image/hsm_initialization_flow.svg" width="750" alt="Click each step to get more details on the flow." />
   <figcaption>Figure 1. Task flow of service instance initialization</figcaption>
 </figure>
 
@@ -62,6 +57,10 @@ The following diagram gives you an overview of steps you need to take to initial
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step6-commit-master-key" alt="Commit the new master key register" title="Commit the new master key register" shape="rect" coords="539, 290, 619, 340" />
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step7-activate-master-key" alt="Activate the master key" title="Activate master key register" shape="rect" coords="638, 290, 718, 340" />
 </map>
+
+You can also watch the following video to learn how to initialize {{site.data.keyword.hscrypto}} instances with {{site.data.keyword.cloud_notm}} TKE CLI plug-in:
+
+<iframe class="embed-responsive-item" id="youtubeplayer" title="Initialize Hyper Protect Crypto Services with IBM Cloud TKE CLI" type="text/html" width="640" height="390" src="//www.youtube.com/embed/df2q-QdJPgQ?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
 
 It might take 20 - 30 minutes for you to complete this task.
 

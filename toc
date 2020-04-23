@@ -8,7 +8,8 @@ IBM Cloud Hyper Protect Crypto Services
     {: .topicgroup}
     Getting started
         index.md
-        [Video: Getting started with IBM Cloud Hyper Protect Crypto Services](https://www.youtube.com/watch?v=df2q-QdJPgQ&feature=youtu.be)
+        [Video: Initializing Hyper Protect Crypto Services with IBM Cloud TKE CLI](https://www.youtube.com/watch?v=df2q-QdJPgQ&feature=youtu.be)
+        [Video: Initializing Hyper Protect Crypto Services with smart cards](https://www.youtube.com/watch?v=VTkGd_mcwyI&feature=youtu.be)
 
     {: .topicgroup}
     About
@@ -19,7 +20,7 @@ IBM Cloud Hyper Protect Crypto Services
         service_instance_overview.md
         envelope-encryption.md
         HSM-intro.md
-        [Video: IBM Cloud Hyper Protect Crypto Services overview](https://youtu.be/0LiltyNMwgo)
+        [Video: IBM Cloud Hyper Protect Crypto Services overview](https://www.youtube.com/watch?v=0LiltyNMwgo&feature=youtu.be)
 
     {: .topicgroup}
     Integrations

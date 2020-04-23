@@ -52,7 +52,7 @@ You can create a standard encryption key with the {{site.data.keyword.cloud}} {{
           <p>To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
         </td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Describes the <strong>Generate new key</strong> settings</caption>
+      <caption style="caption-side:bottom;">Table 1. Describes the <strong>Create a key</strong> settings</caption>
     </table>
 
 5. When you are finished filling out the key's details, click **Add key** to confirm.

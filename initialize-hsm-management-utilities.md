@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-24"
+lastupdated: "2020-04-21"
 
 keywords: key storage, HSM, hardware security module, key ceremony, load master key, master key register, initialize Hyper Protect Crypto Services instance, smart card, Trusted Key Entry application, TKE client, Management Utilities
 
@@ -30,6 +30,10 @@ Before you can use a service instance, you need to load the [master keys](#x2908
 {: shortdesc}
 
 The [Management Utilities](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-management-utilities) use smart cards to hold [signature keys](#x8250375){: term} and master key parts. You need to complete the tasks in [Setting up the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities) before you can complete the steps in this task.
+
+You can also watch the following video to learn how to initialize {{site.data.keyword.hscrypto}} instances with the Management Utilities:
+
+<iframe class="embed-responsive-item" id="youtubeplayer" title="Initialize Hyper Protect Crypto Services with IBM Cloud TKE CLI" type="text/html" width="640" height="390" src="//www.youtube.com/embed/VTkGd_mcwyI?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
 
 ## Before you begin
 {: #initialize-crypto-utilities-prerequisites}

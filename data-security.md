@@ -97,15 +97,14 @@ To ensure GDPR compliance for your {{site.data.keyword.hscrypto}} resources, [en
 - [{{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Data Sheet Addendum (DSA)](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=46E9C81025D811E895B382FBC780E8BA){: external}
 - [{{site.data.keyword.IBM_notm}} Data Processing Addendum (DPA)](https://www.ibm.com/support/customer/csol/terms/?cat=dpa){: external}
 
-<!--  
-### HIPAA support
+<!-- ### HIPAA support
 {: #hipaa-ready}
 
 {{site.data.keyword.hscrypto}} meets controls for the US Health Insurance Portability and Accountability Act (HIPAA) to ensure safeguarding of protected health information (PHI).
 
-If you or your company is a covered entity as defined by HIPAA, you can enable the HIPPA Supported setting for your {{site.data.keyword.cloud_notm}} account. To find out more, see [Enabling the HIPAA Supported setting](/docs/account?topic=account-eu-hipaa-supported#enabling-hipaa).
+If you or your company is a covered entity as defined by HIPAA, you can enable the HIPPA Supported setting for your {{site.data.keyword.cloud_notm}} account. To find out more, see [Enabling the HIPAA Supported setting](/docs/account?topic=account-eu-hipaa-supported#enabling-hipaa). -->
 
-### IRAP support
+<!--### IRAP support
 {: #IRAP-support}
 
 {{site.data.keyword.hscrypto}} meets the requirements of the Information Security Registered Assessors Program (IRAP) to provide high-quality information and communications technology services to government in support of Australia’s security.

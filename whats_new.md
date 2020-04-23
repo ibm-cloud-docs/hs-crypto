@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-16"
+lastupdated: "2020-04-07"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -17,7 +17,6 @@ subcollection: hs-crypto
 {:note: .note}
 {:pre: .pre}
 {:external: target="_blank" .external}
-{:term: .term}
 
 # What's new
 {: #what-new}
@@ -54,7 +53,7 @@ To learn more about monitoring {{site.data.keyword.hscrypto}} activity, see [Act
 * [Support for key rewrapping](/docs/hs-crypto?topic=hs-crypto-rewrap-keys) -->
 
 ### Updated: {{site.data.keyword.cloud_notm}} service integration
-{: #added-service-integration}
+{: #added-service-integration-201912}
 
 {{site.data.keyword.hscrypto}} can now be integrated with additional {{site.data.keyword.cloud_notm}} services:
 
@@ -67,7 +66,7 @@ To learn more about monitoring {{site.data.keyword.hscrypto}} activity, see [Act
 For more information, see [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services). 
 
 ### Added: {{site.data.keyword.hscrypto}} adds support for EP11 private endpoints
-{: #added-private-endpoints}
+{: #added-private-endpoints-202001}
 
 You can now connect to {{site.data.keyword.hscrypto}} over the {{site.data.keyword.cloud_notm}} private network by targeting a private endpoint for the Enterprise PKCS #11 service.
 
@@ -168,7 +167,7 @@ For more information, see [High availability and disaster recovery](/docs/hs-cry
 ### Scalability
 {: #scalability-new}
 
-The service instance can be scaled out to a maximum of six [crypto units](#x9860404){: term} to meet your performance requirement. Each crypto unit can crypto-process 5000 keys. In a production environment, it is recommended to select at least two crypto units to enable high availability. By selecting three or more crypto units, these crypto units are distributed among three availability zones in the selected region.
+The service instance can be scaled out to a maximum of six crypto units to meet your performance requirement. Each crypto unit can crypto-process 5000 keys. In a production environment, it is recommended to select at least two crypto units to enable high availability. By selecting three or more crypto units, these crypto units are distributed among three availability zones in the selected region.
 
 Read [Provisioning the service](/docs/hs-crypto?topic=hs-crypto-provision) for more information.
 

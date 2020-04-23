@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-10"
+lastupdated: "2020-04-21"
 
 keywords: IBM keys, key management, data security, Hyper Protect Crypto Services, Cloud HSM, hardware security module, PKCS11, openSSL, hsm encryption
 
@@ -25,6 +25,10 @@ subcollection: hs-crypto
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is a dedicated key management service and [Hardware Security Module (HSM)](#x6704988){: term} that is built on the {{site.data.keyword.IBM}} LinuxONE platform. {{site.data.keyword.hscrypto}} offers the highest level of protection in the cloud industry for your sensitive data with FIPS 140-2 Level 4 certified hardware.
 {: shortdesc}
 
+Watch the following video to learn how {{site.data.keyword.hscrypto}} provides you with exclusive encryption key control and industry-leading cloud data protection:
+
+<iframe class="embed-responsive-item" id="youtubeplayer" title="Initialize Hyper Protect Crypto Services with IBM Cloud TKE CLI" type="text/html" width="640" height="390" src="//www.youtube.com/embed/0LiltyNMwgo?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
+
 ## Why {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?
 {: #why_hpcs}
 
@@ -43,7 +47,7 @@ With the built-in encryption of {{site.data.keyword.hscrypto}}, you can easily b
 <!-- {{site.data.keyword.hscrypto}} is the cryptography that {{site.data.keyword.blockchainfull_notm}} Platform is built with. This cryptography mechanism ensures that the blockchain network is running in a highly protected and isolated environment, and accelerates hashing, sign/verify operations, and node-to-node communications in the network. The success of {{site.data.keyword.blockchainfull_notm}} Platform proves the capability and value of {{site.data.keyword.hscrypto}}. -->
 
 ## How does {{site.data.keyword.hscrypto}} work?
-{: #architecture}
+{: #how-hpcs-work}
 
 The following architectural diagram shows how {{site.data.keyword.hscrypto}} works.
 
@@ -53,7 +57,7 @@ The following are a few highlights of the {{site.data.keyword.hscrypto}} archite
 - Applications connect to {{site.data.keyword.hscrypto}} through EP11 API.
 - Dedicated keystore in {{site.data.keyword.hscrypto}} is provided to ensure data isolation and security. Privileged users are locked out for protection against abusive use of system administrator credentials or root user credentials.
 - [Secure Service Container (SSC)](https://www.ibm.com/marketplace/secure-service-container){: external} provides the enterprise level of security and impregnability that enterprise customers expect from [IBM LinuxONE](https://www.ibm.com/it-infrastructure/linuxone){: external} technology.
-- FIPS 140-2 Level 4 compliant cloud HSM is enabled for highest physical protection of secrets.  
+- FIPS 140-2 Level 4 compliant cloud HSM is enabled for highest physical protection of secrets.
 
 ## Key features
 {: #key-features}
