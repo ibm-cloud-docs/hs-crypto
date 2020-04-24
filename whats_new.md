@@ -25,10 +25,10 @@ Stay up-to-date with the new features that are available for {{site.data.keyword
 {: shortdesc}
 
 ## April 2020
-{: #March-2020}
+{: #april-2020}
 
 ### Added: {{site.data.keyword.hscrypto}} adds support for the Management Utilities
-{: #added-management-utilities}
+{: #added-management-utilities-202004}
 
 {{site.data.keyword.hscrypto}} now supports loading master key parts and signature keys from smart cards for service instance initialization. It ensures the highest level of protection for master key parts and signature keys.
 
@@ -53,7 +53,7 @@ To learn more about monitoring {{site.data.keyword.hscrypto}} activity, see [Act
 * [Support for key rewrapping](/docs/hs-crypto?topic=hs-crypto-rewrap-keys) -->
 
 ### Updated: {{site.data.keyword.cloud_notm}} service integration
-{: #added-service-integration-201912}
+{: #added-service-integration-202004}
 
 {{site.data.keyword.hscrypto}} can now be integrated with additional {{site.data.keyword.cloud_notm}} services:
 
@@ -66,7 +66,7 @@ To learn more about monitoring {{site.data.keyword.hscrypto}} activity, see [Act
 For more information, see [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services). 
 
 ### Added: {{site.data.keyword.hscrypto}} adds support for EP11 private endpoints
-{: #added-private-endpoints-202001}
+{: #added-private-endpoints-202004}
 
 You can now connect to {{site.data.keyword.hscrypto}} over the {{site.data.keyword.cloud_notm}} private network by targeting a private endpoint for the Enterprise PKCS #11 service.
 

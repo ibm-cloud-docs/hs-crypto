@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2020
 lastupdated: "2020-04-23"
 
-keywords: IBM Cloud Hyper Protect Crypto Services, getting started, example, dedicated key management service, IBM Key, Key storage, HSM, cloud hardware security module
+keywords: IBM Cloud Hyper Protect Crypto Services, getting started, example, dedicated key management service, IBM Key, Key storage, encryption key, cloud encryption, encryption at rest, cryptographic key management, HSM, cloud hardware security module
 
 subcollection: hs-crypto
 
@@ -32,7 +32,7 @@ subcollection: hs-crypto
 
 {{site.data.keyword.hscrypto}} offers you network addressable HSMs. You can access the HSMs via [Enterprise PKCS#11 (EP11)](/docs/hs-crypto?topic=hs-crypto-HSM-overview) application programming interface (API). <!-- You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client, which communicates with the ACSP server to enable you to access the backend cryptographic resources.-->  Applications can access {{site.data.keyword.hscrypto}} remotely by calling EP11 API through frameworks such as [gRPC](https://grpc.io/){: external}.
 
-To learn more about how {{site.data.keyword.hscrypto}} provides you with exclusive encryption key control and industry-leading cloud data protection, see [{{site.data.keyword.hscrypto}} overview](/docs/hs-crypto?topic=hs-crypto-overview). For more information about security requirements for cryptographic modules, see [the specification of the NIST for FIPS 140-2 Level](https://csrc.nist.gov/publications/detail/fips/140/2/final){: external}.
+To learn more about how {{site.data.keyword.hscrypto}} provides you with exclusive encryption key control and data protection in the cloud, see [{{site.data.keyword.hscrypto}} overview](/docs/hs-crypto?topic=hs-crypto-overview). For more information about security requirements for cryptographic modules, see [the specification of the NIST for FIPS 140-2 Level](https://csrc.nist.gov/publications/detail/fips/140/2/final){: external}.
 
 <!-- {{site.data.keyword.hscrypto}} is the cryptography that {{site.data.keyword.blockchainfull_notm}} Platform is built with. It is also a member of the {{site.data.keyword.cloud_notm}} Hyper Protect Family, including [{{site.data.keyword.cloud_notm}} Hyper Protect DBaaS](https://cloud.ibm.com/docs/hypersecure-dbaas/index.html){: external}, {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}, [{{site.data.keyword.cloud_notm}} Container Service](https://cloud.ibm.com/docs/containers/container_index.html){: external}, and [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}}](https://cloud.ibm.com/docs/hypersecure-platform/index.html){: external}. -->
 

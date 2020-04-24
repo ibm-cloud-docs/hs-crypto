@@ -25,7 +25,7 @@ subcollection: hs-crypto
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is a dedicated key management service and [Hardware Security Module (HSM)](#x6704988){: term} that is built on the {{site.data.keyword.IBM}} LinuxONE platform. {{site.data.keyword.hscrypto}} offers the highest level of protection in the cloud industry for your sensitive data with FIPS 140-2 Level 4 certified hardware.
 {: shortdesc}
 
-Watch the following video to learn how {{site.data.keyword.hscrypto}} provides you with exclusive encryption key control and industry-leading cloud data protection:
+Watch the following video to learn how {{site.data.keyword.hscrypto}} provides you with exclusive encryption key control and data protection in the cloud:
 
 <iframe class="embed-responsive-item" id="youtubeplayer" title="Initialize Hyper Protect Crypto Services with IBM Cloud TKE CLI" type="text/html" width="640" height="390" src="//www.youtube.com/embed/0LiltyNMwgo?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
 
