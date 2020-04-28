@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-04-28"
 
 keywords: hsm, tke, Trusted Key Entry plug-in, initialize service, imprint mode, smart card, master key, load master key
 
@@ -94,7 +94,7 @@ The following diagram illustrates the relationship between various components wh
 ### Understanding smart cards
 {: #understand-smart-cards}
 
-A smart card is an HSM that looks like a credit card with an embedded chip. The chip can perform a limited set of cryptographic operations and is loaded with custom software. In the Management Utilities, the Smart Card Utility Program loads custom software on the smart card to create two types of smart cards:
+A smart card looks like a credit card with an embedded chip. The chip can perform a limited set of cryptographic operations and is loaded with custom software. In the Management Utilities, the Smart Card Utility Program loads custom software on the smart card to create two types of smart cards:
 
 - Certificate authority smart cards
 

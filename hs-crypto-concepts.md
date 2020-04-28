@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-01"
+lastupdated: "2020-04-28"
 
 keywords: key concepts, HSM concepts，Hyper Protect Crypto Services concepts, terms, terminology
 
@@ -115,7 +115,7 @@ The Management Utilities provide an alternate way of configuring service instanc
 ### Smart cards
 {: #smart-card-concept}
 
-A smart card is an HSM that looks like a credit card with an embedded chip. The chip can perform a limited set of cryptographic operations and is loaded with custom software. In the Management Utilities, the Smart Card Utility Program loads custom software on the smart card to create two types of smart cards:
+A smart card looks like a credit card with an embedded chip. The chip can perform a limited set of cryptographic operations and is loaded with custom software. In the Management Utilities, the Smart Card Utility Program loads custom software on the smart card to create two types of smart cards:
 
 - Certificate authority smart cards - Establish a set of smart cards that can work together, called a smart card zone.
 - Enterprise PKCS #11 (EP11) smart cards - Hold an administrator signature key and up to 85 master key parts. With EP11 smart cards, you can sign a command by using a private signature key that is stored on the smart card and encrypt a master key part for delivery to a crypto unit.
