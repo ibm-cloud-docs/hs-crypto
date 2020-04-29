@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-10"
+lastupdated: "2020-04-29"
 
 keywords: EP11, PKCS#11, GREP11, API reference, EP11 over gRPC
 
@@ -2142,7 +2142,7 @@ message VerifyInitResponse {
     <th>Description</th>
 	<td>
   <p>Implementation of PKCS #11 <code>C_VerifyInit</code>. Given a key blob <code>(key, klen)</code>, initialize a verify session state in <code>(state, slen)</code>. The key blob can be a public key object, or HMAC key bytes. Key blob type must be consistent with <code>pmech</code>.</p>
-  <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI CKA_UNWRAP be MACed (such as returned earlier by <code>GenerateKeyPair</code>) or just the SPKI itself (if obtained from an external source, such as a certificate).</p>
+  <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI CKA_UNWRAP can be MACed (such as returned earlier by <code>GenerateKeyPair</code>) or just the SPKI itself (if obtained from an external source, such as a certificate).</p>
   <p>If an HMAC operation is initialized, session restrictions of the <code>Verify</code> object are inherited from the HMAC key. Since SPKIs are not tied to sessions, public-key Verify states are session-free.</p>
   <p>The <code>key</code>,<code>klen</code> blob must be mapped from the PKCS #11 <code>hKey</code> parameter.</p>
   <p>**Note**: <code>SignInit</code> and <code>VerifyInit</code> are internally the

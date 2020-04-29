@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-22"
+lastupdated: "2020-04-29"
 
 keywords: smart card, smart card reader, trusted key entry, tke, master key, initialize service, load master key
 
@@ -210,7 +210,7 @@ To install the applications on Linux, complete the following steps:
     ```
     {: pre}
 
-  3. When prompted, choose not to install links to the Management Utilities applications, and then install the applications to any subdirectories.
+  3. When prompted, choose the installation folder for the Management Utilities and then select the **Don't create links** option.
 
 ### Optional: Verifying the integrity and authenticity of the installation file
 {: #verify-code-signing}
