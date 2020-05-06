@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-23"
+lastupdated: "2020-05-06"
 
 keywords: frequently asked questions, critical security parameters, cryptographic module, Security Level，questions and answers
 
@@ -152,7 +152,7 @@ Yes. {{site.data.keyword.hscrypto}} can be accessed remotely worldwide for key m
 
 A monthly charge for each provisioned crypto unit and API calls is billed at a rate of $0.01 USD per 10,000 API calls over 1 million API calls. The detailed [pricing plan](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){: external} is available for your reference.
 
-For example, if you want to crypto-process 5000 keys by using {{site.data.keyword.hscrypto}}, for high availability, you need to set up two crypto units. The amount is $3120 ($1560 per crypto unit) per month. The first 1,000,000 API calls are free of charge. However, if you perform 2,000,000 API calls per month per crypto unit, you are charged additional $1 ($0.01 per 10,000 API calls over 1,000,000 API calls) per crypto unit. In total, there is a monthly charge of $3142 ($3140 for the crypto units and $2 for the additional API calls on both crypto units) for your service instance. The following table contains the pricing details.
+For example, if you want to crypto-process 5000 keys by using {{site.data.keyword.hscrypto}}, for high availability, you need to set up two crypto units. The amount is $3120 ($1560 per crypto unit) per month. The first 1,000,000 API calls per crypto unit are free of charge. However, if you perform 2,000,000 API calls per month per crypto unit, you are charged additional $1 ($0.01 per 10,000 API calls over 1,000,000 API calls) per crypto unit. In total, there is a monthly charge of $3142 ($3140 for the crypto units and $2 for the additional API calls on both crypto units) for your service instance. The following table contains the pricing details.
 
 | Pricing components | Cost per month |
 |-----|----------------|
