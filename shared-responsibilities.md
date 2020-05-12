@@ -43,7 +43,7 @@ You and IBM share responsibilities for the set up and maintenance of your {{site
 {: caption="Table 1. Responsibilites for incident and operations" caption-side="top"}
 
 
-## Change management
+<!-- ## Change management
 {: #change-management}
 
 You and IBM share responsibilities for keeping {{site.data.keyword.hscrypto}} service components at the latest version. You are responsible for change management of your application data.
@@ -52,7 +52,7 @@ You and IBM share responsibilities for keeping {{site.data.keyword.hscrypto}} se
 |----------|-----------------------|--------|
 | Applications| Provide major, minor, and patch version updates for {{site.data.keyword.hscrypto}} interfaces. | Use the [API](https://{DomainName}/apidocs/hs-crypto){: external}, [CLI](https://{DomainName}/docs/key-protect?topic=key-protect-cli-reference)
 /hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin){: external}, or console tools to apply the provided updates, including version updates, new features, and security patches. |
-{: caption="Table 2. Responsibilites for change management" caption-side="top"}
+{: caption="Table 2. Responsibilites for change management" caption-side="top"} -->
 
 
 ## Identity and access management
@@ -63,7 +63,7 @@ You and IBM share responsibilities for controlling access to your {{site.data.ke
 | Task | {{site.data.keyword.IBM_notm}} responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
 | Applications| IBM does not have access to your resources but provides you with the ability to restrict user access to resources.   | Depending on your needs, restrict access to resources and service functionality by using Cloud IAM access policies. For more information, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
-{: caption="Table 3. Responsibilites for identity and access management" caption-side="top"}
+{: caption="Table 2. Responsibilites for identity and access management" caption-side="top"}
 
 ## Security and regulation compliance
 {: #security-compliance}
@@ -74,7 +74,7 @@ IBM is responsible for the security and compliance of {{site.data.keyword.hscryp
 |----------|-----------------------|--------|
 | Applications| Maintain controls that are commensurate to [various industry compliance standards](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#compliance-ready).  | Set up and maintain security and regulation compliance for your apps and data. For example, you can enable extra security settings to meet your compliance needs by choosing how and when to [import](/docs/hs-crypto?topic=hs-crypto-importing-keys#plan-ahead), [wrap](/docs/hs-crypto?topic=hs-crypto-wrap-keys), [rotate](/docs/hs-crypto?topic=hs-crypto-importing-keys#plan-ahead), [rewrap](/docs/hs-crypto?topic=hs-crypto-rewrap-keys), and [delete](/docs/hs-crypto?topic=hs-crypto-delete-keys) keys. |
 |Encryption| IBM is responsible for the encryption of data and keys. | Keep your root of trust, the master key parts, on either your workstation or smart cards. |
-{: caption="Table 4. Responsibilites for security and regulation compliance" caption-side="top"}
+{: caption="Table 3. Responsibilites for security and regulation compliance" caption-side="top"}
 
 ## Disaster recovery
 {: #disaster-recovery}
@@ -84,4 +84,4 @@ IBM is responsible for the recovery of {{site.data.keyword.hscrypto}} components
 | Task | {{site.data.keyword.IBM_notm}} responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
 | Applications | Continuously perform in-region and cross-region backups of key resources, automatically recover and restart service components after any in-region disaster event, and restore your data in another supported region based on opened customer tickets.| If a regional disaster that affects all available zones occurs, open a support ticket for IBM to [restore your data from another region](/docs/hs-crypto?topic=hs-crypto-restore-data), and manually load your master key to the new service instance. |
-{: caption="Table 5. Responsibilites for disaster recovery" caption-side="top"}
+{: caption="Table 4. Responsibilites for disaster recovery" caption-side="top"}
