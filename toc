@@ -96,7 +96,7 @@ IBM Cloud Hyper Protect Crypto Services
     [Key management API reference](https://{DomainName}/apidocs/hs-crypto)
     grep11-api-ref.md
     [Key Protect CLI reference](https://{DomainName}/docs/key-protect?topic=key-protect-cli-reference)
-    /hs-crypto-cli-plugin/hs-crypto-tke_cli_plugin
+    /hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin
     regions.md
     shared-responsibilities.md
     [IBM Redbooks: Securing Your Critical Workloads with IBM Hyper Protect Services](http://www.redbooks.ibm.com/abstracts/sg248469.html?Open)
