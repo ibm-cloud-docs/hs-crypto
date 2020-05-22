@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-12-09"
+lastupdated: "2020-05-22"
 
 keywords: Hyper Protect Crypto Services, hsm, Trusted Key Entry plug-in, service instance, imprint mode, smart card, master key, load master key
 
@@ -53,7 +53,7 @@ For each operation, there are a series of suboperations. For example, the `Encry
 
 - `EncryptInit()` is used to initialize an operation.
 - `Encrypt()` is used to encrypt data without the need to perform `EncryptUpdate()` and `EncryptFinal()` suboperations. This suboperation needs to be performed after the `EncryptInit()` call.
-- `EncryptUpdate()` and `EncryptFinal()` are used in combination to perform data encryption. These suboperations need to be performed after the `EncryptInit()` call.  
+- `EncryptUpdate()` and `EncryptFinal()` are used in combination to perform data encryption. These suboperations need to be performed after the `EncryptInit()` call.
 - `EncryptSingle()` is an IBM EP11 extension to the standard PKCS#11 specification, and is used to perform a single call to encrypt data without the need to run the `EncryptInit()`, `Encrypt()`, `EncryptUpdate()`, or `EncryptFinal()` sub-operation.
 
 The following table shows the implemented functions in EP11 over gRPC, and how the functions are related to PKCS #11 and EP11. For more information on the GREP11 API, see [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
@@ -97,32 +97,32 @@ PKCS #11 functions that are marked with an asterisk (*) in the table are impleme
 |C_Encrypt*  |m_Encrypt|Encrypt|Encrypts single-part data.|
 |C_EncryptUpdate*|m_EncryptUpdate|EncryptUpdate|Continues a multiple-part encryption operation.|
 |C_EncryptFinal* |m_EncryptFinal|EncryptFinal|Finishes a multiple-part encryption operation.|
-|N/A            |m_EncryptSingle|EncryptSingle|`{{site.data.keyword.IBM_notm}}` extension, non-standard variant of Encrypt. Processes data in one pass, with one call. Does not return any state to host other than encrypted data.|
+|N/A            |m_EncryptSingle|EncryptSingle|{{site.data.keyword.IBM_notm}} extension, non-standard variant of Encrypt. Processes data in one pass, with one call. Does not return any state to host other than encrypted data.|
 |C_DecryptInit*  |m_DecryptInit|DecryptInit|Initializes a decryption operation.|
 |C_Decrypt*  |m_Decrypt|Decrypt|Decrypts single-part encrypted data.|
 |C_DecryptUpdate*|m_DecryptUpdate|DecryptUpdate|Continues a multiple-part decryption operation.|
 |C_DecryptFinal*|m_DecryptFinal|DecryptFinal|Finishes a multiple-part decryption operation.|
-|N/A         |m_DecryptSingle |DecryptSingle|`{{site.data.keyword.IBM_notm}}` extension, non-standard variant of Decrypt. Processes data in one pass, with one call. Does not return any state to host other than decrypted data.|
+|N/A         |m_DecryptSingle |DecryptSingle|{{site.data.keyword.IBM_notm}} extension, non-standard variant of Decrypt. Processes data in one pass, with one call. Does not return any state to host other than decrypted data.|
 |C_DigestInit*   |m_DigestInit|DigestInit|Initializes a message-digesting operation.|
 |C_Digest*      |m_Digest|Digest|Digests single-part data.|
 |C_DigestUpdate* |m_DigestUpdate|DigestUpdate|Continues a multiple-part digesting operation.|
 |C_DigestKey|N/A|N/A|Digests a key.|
 |C_DigestFinal*  |m_DigestFinal|DigestFinal|Finishes a multiple-part digesting operation.|
-|N/A         |m_DigestSingle|DigestSingle|`{{site.data.keyword.IBM_notm}}` extension, nonstandard extension, combination of DigestInit and Digest. Digests data in one pass, with one call, without constructing an intermediate digest state, and unnecessary roundtrips|
+|N/A         |m_DigestSingle|DigestSingle|{{site.data.keyword.IBM_notm}} extension, nonstandard extension, combination of DigestInit and Digest. Digests data in one pass, with one call, without constructing an intermediate digest state, and unnecessary roundtrips|
 |C_SignInit*    |m_SignInit|SignInit|Initializes a signature operation.|
 |C_Sign*       |m_Sign|Sign|Signs single-part data.|
 |C_SignUpdate*   |m_SignUpdate|SignUpdate|Continues a multiple-part signature operation.|
 |C_SignFinal*    |m_SignFinal|SignFinal|Finishes a multiple-part signature operation.|
 |C_SignRecoverInit|N/A|N/A|Initializes a signature operation, where the data is recovered from the signature.|
 |C_SignRecover|N/A|N/A|Signs single-part data, where the data is recovered from the signature.|
-|N/A         |m_SignSingle|SignSingle|`{{site.data.keyword.IBM_notm}}` extension, nonstandard extension, combination of SignInit and Sign. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host other than the result.|
+|N/A         |m_SignSingle|SignSingle|{{site.data.keyword.IBM_notm}} extension, nonstandard extension, combination of SignInit and Sign. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host other than the result.|
 |C_VerifyInit*   |m_VerifyInit|VerifyInit|Initializes a verification operation.|
 |C_Verify*       |m_Verify|Verify|Verifies a signature on single-part data.|
 |C_VerifyUpdate* |m_VerifyUpdate|VerifyUpdate|Continues a multiple-part verification operation.|
 |C_VerifyFinal*  |m_VerifyFinal|VerifyFinal|Finishes a multiple-part verification operation.|
 |C_VerifyRecoverInit|N/A|N/A|Initializes a verification operation where the data is recovered from the signature.|
 |C_VerifyRecover|N/A|N/A|Verifies a signature on single-part data, where the data is recovered from the signature.|
-|N/A         |m_VerifySingle |VerifySingle|`{{site.data.keyword.IBM_notm}}` extension, nonstandard extension, combination of VerifyInit and Verify. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host other than verification result.|
+|N/A         |m_VerifySingle |VerifySingle|{{site.data.keyword.IBM_notm}} extension, nonstandard extension, combination of VerifyInit and Verify. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host other than verification result.|
 |C_DigestEncryptUpdate|N/A|N/A|Continues simultaneous multiple-part digesting and encryption operations.|
 |C_DecryptDigestUpdate|N/A|N/A|Continues simultaneous multiple-part decryption and digesting operations.|
 |C_SignEncryptUpdate|N/A|N/A|Continues simultaneous multiple-part signature and encryption operations.|
@@ -132,7 +132,7 @@ PKCS #11 functions that are marked with an asterisk (*) in the table are impleme
 |C_WrapKey*      |m_WrapKey|WrapKey|Wraps (encrypts) a key.|
 |C_UnwrapKey*    |m_UnwrapKey|UnwrapKey|Unwraps (decrypts) a key.|
 |C_DeriveKey*    |m_DeriveKey|DeriveKey|Derives a key from a base key.|
-|C_SeedRandom*   |m_SeedRandom|SeedRandom|Adds seed material to the random number generator.|
+|C_SeedRandom   |N/A|N/A|Adds seed material to the random number generator.|
 |C_GenerateRandom*|m_GenerateRandom|GenerateRandom|Generates random data.|
 |C_GetFunctionStatus|N/A|N/A|Legacy function which always returns `CKR_FUNCTION_NOT_PARALLEL`.|
 |C_CancelFunction|N/A|N/A|Legacy function which always returns `CKR_FUNCTION_NOT_PARALLEL`.|
