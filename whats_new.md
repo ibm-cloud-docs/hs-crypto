@@ -36,7 +36,7 @@ The signature thresholds of a crypto unit control how many administrative signat
 
 For information on how to initialize a service instance using the TKE CLI, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
-For information on how to initialize a service instance using the Management Utilities, see [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
+For information on how to initialize a service instance using the Management Utilities, see [Setting up the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities) and [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
 ## April 2020
 {: #april-2020}
