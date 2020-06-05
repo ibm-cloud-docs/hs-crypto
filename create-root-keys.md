@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2020
 lastupdated: "2020-02-25"
 
-keywords: root keys, create root keys, Hyper Protect Crypto Services GUI, symmetric key, create key-wrapping key, create CRK, create CMK, create customer key, key-wrapping key, root key API examples
+keywords: root key, create root key, add key, root key api, api key, symmetric key, key material, key management, create key-wrapping key, create crk, create customer key, key-wrapping key
 
 subcollection: hs-crypto
 

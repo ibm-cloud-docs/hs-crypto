@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2020
 lastupdated: "2020-01-02"
 
-keywords: standard keys, import keys, encryption keys, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key, standard key API examples
+keywords: standard key, import key, key material, import key api, bring your own key, byok, encryption key, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key
 
 subcollection: hs-crypto
 

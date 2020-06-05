@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-18"
+lastupdated: "2020-05-27"
 
-keywords: details of the DELETE request, delete encryption key, deleting keys, Variable Description region, delete key API examples
+keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 
 subcollection: hs-crypto
 
@@ -21,7 +21,7 @@ subcollection: hs-crypto
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Deleting keys
+# Deleting root keys or standard keys
 {: #delete-keys}
 
 If you are an administrator of the {{site.data.keyword.cloud_notm}} space or {{site.data.keyword.hscrypto}} service instance, you are authorized to delete an encryption key and the associated data in {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
@@ -133,9 +133,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 
     For a detailed description of the available parameters, see the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
 
-    ## What's next
-    {: #delete-key-next}
+## What's next
+{: #delete-key-next}
 
-    - To create another root key, check out [Creating root keys](/docs/hs-crypto?topic=hs-crypto-create-root-keys).
-    - To delete the service instance, check out [Deleting service instances](/docs/hs-crypto?topic=hs-crypto-delete-instance)
-    - To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+- To create another root key, check out [Creating root keys](/docs/hs-crypto?topic=hs-crypto-create-root-keys).
+- To delete the service instance, check out [Deleting service instances](/docs/hs-crypto?topic=hs-crypto-delete-instance)
+- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.

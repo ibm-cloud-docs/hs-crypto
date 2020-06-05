@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2020
 lastupdated: "2020-04-01"
 
-keywords: provision, instance of Hyper Protect Crypto Services, service instance, create service instance, KMS service instance, cloud HSM service instance
+keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
 subcollection: hs-crypto
 

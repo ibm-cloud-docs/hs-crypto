@@ -14,6 +14,7 @@ IBM Cloud Hyper Protect Crypto Services
     {: .topicgroup}
     About
         overview.md
+        architecture-workload-isolation.md
         use_case.md
         data-security.md
         hs-crypto-concepts.md
@@ -28,10 +29,10 @@ IBM Cloud Hyper Protect Crypto Services
 
     {: .topicgroup}
     Tutorials
-        [Using IBM Cloud Hyper Protect Crypto Services to encrypt VMware disks](https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/)
-        [Applying end to end security to a cloud application](https://{DomainName}/docs/tutorials?topic=solution-tutorials-cloud-e2e-security)
-        [Enhancing security of your deployed application](https://{DomainName}/docs/tutorials?topic=solution-tutorials-extended-app-security)
-        [Create secure microservices writing to a consolidated database](https://developer.ibm.com/patterns/create-a-secured-microservices-and-deploy-it-to-a-consolidated-database/)
+        [Tutorial: Using IBM Cloud Hyper Protect Crypto Services to encrypt VMware disks](https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/)
+        [Tutorial: Applying end to end security to a cloud application](https://{DomainName}/docs/tutorials?topic=solution-tutorials-cloud-e2e-security)
+        [Tutorial: Enhancing security of your deployed application](https://{DomainName}/docs/tutorials?topic=solution-tutorials-extended-app-security)
+        [Tutorial: Create secure microservices writing to a consolidated database](https://developer.ibm.com/patterns/create-a-secured-microservices-and-deploy-it-to-a-consolidated-database/)
 
     whats_new.md
     {: .navgroup-end}
@@ -46,7 +47,7 @@ IBM Cloud Hyper Protect Crypto Services
         initialize-hsm-management-utilities.md
 
     {: .topicgroup}
-    Accessing the key management and GREP11 APIs
+    Setting up API calls
         set-up-kms-api.md
         set-up-grep11-api.md
         retrieve-access-token.md
@@ -93,13 +94,18 @@ IBM Cloud Hyper Protect Crypto Services
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Key management API reference](https://{DomainName}/apidocs/hs-crypto)
-    grep11-api-ref.md
-    [Key Protect CLI reference](https://{DomainName}/docs/key-protect?topic=key-protect-cli-reference)
-    /hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin
+    {: .topicgroup}
+    Key management service reference
+        [Key management API](https://{DomainName}/apidocs/hs-crypto)
+        [Key management CLI](https://{DomainName}/docs/key-protect?topic=key-protect-cli-reference)
+        [Trusted Key Entry CLI](https://{DomainName}/docs/hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin)
+
+    {: .topicgroup}
+    Cloud hardware security module reference
+        grep11-api-ref.md
+
     regions.md
     shared-responsibilities.md
-    [IBM Redbooks: Securing Your Critical Workloads with IBM Hyper Protect Services](http://www.redbooks.ibm.com/abstracts/sg248469.html?Open)
     [IBM Cloud Hyper Protect Services resources](https://ibm-hyper-protect.github.io/)
     {: .navgroup-end}
 

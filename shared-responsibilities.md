@@ -4,7 +4,7 @@ copyright:
   years: 2020
 lastupdated: "2020-05-12"
 
-keywords: shared responsibilities, disaster recovery, incident management
+keywords: shared responsibilities, shared responsibility model, disaster recovery, incident management, operation management
 
 subcollection: hs-crypto
 ---

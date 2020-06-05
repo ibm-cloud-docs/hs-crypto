@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2020
 lastupdated: "2020-03-26"
 
-keywords: grant access, iam access, assign access, access policy, key access
+keywords: grant access, iam, iam access, assign access, access policy, key access
 
 subcollection: hs-crypto
 

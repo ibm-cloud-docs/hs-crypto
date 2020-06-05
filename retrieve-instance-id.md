@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-09-26"
 
-keywords: instance ID, get instance ID, get instance GUID, instance ID API, instance ID CLI
+keywords: service id, service ids, instance id, get instance id, get instance guid, instance id api, instance id cli
 
 subcollection: hs-crypto
 

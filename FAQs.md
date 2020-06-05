@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-06"
+lastupdated: "2020-06-03"
 
-keywords: frequently asked questions, critical security parameters, cryptographic module, Security Level，questions and answers
+keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips
 
 subcollection: hs-crypto
 
@@ -58,6 +58,11 @@ A Hardware Security Module (HSM) provides secure key storage and cryptographic o
 {: faq}
 
 A cloud HSM is a cloud-based hardware security module that enables you to manage your own encryption keys and to perform cryptographic operations in {{site.data.keyword.cloud_notm}}. {{site.data.keyword.hscrypto}} is built on FIPS 140-2 Level 4 certified HSM, which offers the highest level of protection in the cloud industry. With the Keep Your Own Key (KYOK) support, customers can configure the [master key](#x2908413){: term} and take the ownership of the cloud HSM. Customers have full control and authority over the entire key hierarchy, where no {{site.data.keyword.cloud_notm}} administrators have access to your keys.
+
+### How does {{site.data.keyword.hscrypto}} provide a single-tenant cloud service?
+{: #faq-single-tenant}
+
+{{site.data.keyword.hscrypto}} is a single-tenant cloud service because each customer has a dedicated software stack and a dedicated HSM domain for every crypto unit. As a customer, you are assured that you are interacting with a dedicated service stack that only processes your data. For additional information on the service architecture, see [How does Hyper Protect Crypto Services work](/docs/hs-crypto?topic=hs-crypto-overview#how-hpcs-work).
 
 ### What are the responsibilities of users and {{site.data.keyword.cloud_notm}} for {{site.data.keyword.hscrypto}}?
 {: #faq-responsibilities-users-cloud}
@@ -314,17 +319,31 @@ Yes, you can find the [SLA](https://www-03.ibm.com/software/sla/sladb.nsf/sla/bm
 ## Security and compliance
 {: #faq-security-compliance}
 
-### What level of access does IBM have to my service instances?
+### How can I manage user access to my service instances? Does IBM have access to my instances?
 {: #faq-hpcs-ibm-access}
 {: faq}
 
-IBM or any third-party users do not have access to your service instances or your keys. You are the only person who has access to your service instance and keys managed.
+IBM or any third-party users do not have access to your service instances or your keys. By loading the master key to your service instance, you take the ownership of the cloud HSM and you have the exclusive control of your resources managed by {{site.data.keyword.hscrypto}}.
 
-### Can I share my service instance with other users? How can I manage the user's access?
+{{site.data.keyword.hscrypto}} follows the {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) standard. You can [manage user access by assigning different IAM roles](/docs/hs-crypto?topic=hs-crypto-manage-access) and [grant access to specific keys](/docs/hs-crypto?topic=hs-crypto-grant-access-keys) to enable more granular access control.
+
+<!-- ### Can I share my service instance with other users? How can I manage the user's access?
 {: #faq-hpcs-user-access}
 {: faq}
 
-{{site.data.keyword.hscrypto}} follows the {{site.data.keyword.cloud_notm}} Identity and Access Management standard. You can share the service instance access through adding users in the access group. For more information, see [Managing access in {{site.data.keyword.cloud_notm}}](/docs/iam?topic=iam-cloudaccess).
+{{site.data.keyword.hscrypto}} follows the {{site.data.keyword.cloud_notm}} Identity and Access Management standard. You can share the service instance access through adding users in the access group. For more information, see [Managing access in {{site.data.keyword.cloud_notm}}](/docs/iam?topic=iam-cloudaccess). -->
+
+### How does IBM offer a unique and secure process for service initialization (key ceremony)?
+{: #faq-hpcs-user-access}
+{: faq}
+
+{{site.data.keyword.hscrypto}} sets up signature keys for crypto unit administrators during the service initialization process to ensure that the master key parts are loaded to the HSM with no one can intercept.
+
+A master key is composed of at least two master key parts. Each master key custodian owns one encrypted master key part. In most cases, a master key custodian can also be a crypto unit administrator. In order to load the master key to the service instance, master key custodians need to load their key parts separately using their own administrator signature keys.
+
+A signature key is composed of an asymmetric key pair. The private part of the signature key is owned by the crypto unit administrator, while the public part is placed in a certificate that is used to define an administrator and never leaves the crypto unit.
+
+This design ensures that no one can get full access of the master key, even the crypto unit administrators.
 
 ### What is a 140-2 FIPS Level 4 Certification and how can I validate it?
 {: #faq-fips-level4-meaning}
@@ -351,11 +370,20 @@ The Federal Information Processing Standard (FIPS) Publication 140-2 is a US gov
 
   {{site.data.keyword.hscrypto}} is the only cloud HSM in the public cloud market that is built on an HSM designed to meet FIPS 140-2 Level 4 certification requirements. The certification is listed on the [Cryptographic Module Validation Program (CVMP) Validated Modules List](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules){: external}.
 
-### What cryptographic algorithms are used and supported by {{site.data.keyword.hscrypto}}?
+### What cryptographic algorithms are used in {{site.data.keyword.hscrypto}} key management service?
 {: #faq-cryptographic-algorithms}
 {: faq}
 
-{{site.data.keyword.hscrypto}} supports the Advanced Encryption Standard of Cipher Blocker Chaining (AES-CBC) algorithm for cryptographic operations.
+{{site.data.keyword.hscrypto}} key management service uses the Advanced Encryption Standard of Cipher Blocker Chaining (AES-CBC) algorithm for creating, wrapping, unwrapping, and rewrapping keys.
+
+### How does EP11 differ from PKCS#11?
+{: #faq-ep11-pkcs11}
+
+Enterprise PKCS#11 (EP11) is aligned with PKCS#11 in terms of concepts and functions. An experienced PKCS#11 developer can easily start using EP11 functions. However, they have the following major differences:
+
+- EP11 is built to allow high availability and scalability by design.
+- EP11 is a stateless protocol, whereas PKCS#11 is stateful. The stateless design of EP11 allows for the use of external key stores as well as scaling to multiple backends.
+- EP11 over gRPC (GREP11) defines a network protocol that can be directly used in cloud applications.
 
 ### What EP11 mechanisms are supported by the GREP11 functions?
 {: #faq-EP11-mechanisms}
@@ -374,7 +402,7 @@ The following table includes the EP11 mechanisms that are categorized by GREP11 
 |Wrap | CKM_AES_CBC CKM_AES_CBC_PAD CKM_DES3_CBC CKM_DES3_CBC_PAD CKM_IBM_ATTRIBUTEBOUND_WRAP CKM_IBM_RETAINKEY CKM_RSA_PKCS CKM_RSA_PKCS_OAEP|
 |Unwrap | CKM_AES_CBC CKM_AES_CBC_PAD CKM_DES3_CBC CKM_DES3_CBC_PAD CKM_IBM_ATTRIBUTEBOUND_WRAP CKM_RSA_PKCS CKM_RSA_PKCS_OAEP|
 |Derive | CKM_DH_PKCS_DERIVE CKM_ECDH1_DERIVE CKM_GENERIC_SECRET_KEY_GEN CKM_IBM_DH_PKCS_DERIVE_RAW CKM_IBM_EAC CKM_IBM_ECDH1_DERIVE_RAW CKM_SHA1_KEY_DERIVATION CKM_SHA224_KEY_DERIVATION CKM_SHA256_KEY_DERIVATION CKM_SHA384_KEY_DERIVATION CKM_SHA512_KEY_DERIVATION|
-{: caption="Table 3. Mechanisms supported by GREP11" caption-side="top"}
+{: caption="Table 4. Mechanisms supported by GREP11" caption-side="top"}
 
 For more information on the EP11 mechanisms, see the [Enterprise PKCS#11 (EP11) Library structure guide](https://www.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=15022415USEN&dd=yes&){: external}.
 
@@ -397,7 +425,9 @@ Yes, you can monitor the status of your service instance through [Activity Track
 {: #faq-ha-configuration}
 {: faq}
 
-It is recommended that you provision at least two crypto units for high availability. If one available zone that contains your provisioned service instance goes down, {{site.data.keyword.hscrypto}} has automatic in-region data failover in place.
+It is recommended that you provision at least two crypto units for high availability, so that there is always at least one additional crypto unit operating in case of a crypto unit failure. {{site.data.keyword.hscrypto}} is built to provide hight availability by default.
+
+For additional details, see [High availability and disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr).
 
 ### Can I back up my service instance manually?
 {: #faq-backup-manually}

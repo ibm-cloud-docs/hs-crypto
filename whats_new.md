@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-07"
+lastupdated: "2020-06-02"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -24,6 +24,20 @@ subcollection: hs-crypto
 Stay up-to-date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+## June 2020
+{: #june-2020}
+
+### Added: Support for multiple administrative signatures for administrative commands
+{: #added-multiple-signature-202006}
+
+Both the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) command-line interface (CLI) plug-in and the {{site.data.keyword.hscrypto}} Management Utilities now support signature thresholds greater than one.
+
+The signature thresholds of a crypto unit control how many administrative signatures are required for a command to be executed. With this change, you can set as many as eight administrative signatures for an administrative command to be executed during service instance initialization. Eight is also the maximum number of administrators that can be added to a crypto unit. For detailed information, see [Signature thresholds](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept).
+
+For information on how to initialize a service instance using the TKE CLI, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
+
+For information on how to initialize a service instance using the Management Utilities, see [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
+
 ## April 2020
 {: #april-2020}
 
@@ -35,13 +49,6 @@ Stay up-to-date with the new features that are available for {{site.data.keyword
 The Management Utilities are two applications that use smart cards to configure service instances. The Smart Card Utility Program sets up and manages the smart cards used. The Trusted Key Entry (TKE) application uses those smart cards to configure service instances. To use the Management Utilities, you need to order IBM-supported smart cards and smart card readers.
 
 For more information, see [Understanding the Management Utilities](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-management-utilities) and [Loading master keys with the Management Utilities](/docs/key-protect?topic=key-protect-grant-access-keys).
-
-<!-- ### Added: {{site.data.keyword.hscrypto}} adds support for {{site.data.keyword.at_full_notm}}
-{: #added-at-logdna-support}
-
-You can now monitor API calls to {{site.data.keyword.hscrypto}} by using {{site.data.keyword.at_full_notm}}.
-
-To learn more about monitoring {{site.data.keyword.hscrypto}} activity, see [Activity Tracker events](/docs/hs-crypto?topic=hs-crypto-at-events). -->
 
 <!-- ### Added: {{site.data.keyword.hscrypto}} aligns the key management functions with {{site.data.keyword.keymanagementserviceshort}}
 {: #added-key-protect-concurrency}

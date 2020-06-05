@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2020
 lastupdated: "2020-04-02"
 
-keywords: Hyper Protect Crypto Services, data security, Hyper Protect Crypto Services compliance, encryption key deletion
+keywords: security compliance, ibmcloud security compliance, compliant, data security, data encryption, data delete, common criteria, fips, iso, gdpr
 
 subcollection: hs-crypto
 

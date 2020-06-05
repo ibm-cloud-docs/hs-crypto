@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-12-09"
 
-keywords: disaster recovery, High availability, HA, DR, recoverablity
+keywords: disaster recovery, high availability, ha, dr, recoverablity, availability, failover
 
 subcollection: hs-crypto
 

@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-09-26"
 
-keywords: regional service endpoint, Hyper Protect Crypto Services resources, API endpoints, public service endpoint, private service endpoint, available regions
+keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
 subcollection: hs-crypto
 

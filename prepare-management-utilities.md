@@ -4,7 +4,7 @@ copyright:
   years: 2019, 2020
 lastupdated: "2020-04-29"
 
-keywords: smart card, smart card reader, trusted key entry, tke, master key, initialize service, load master key
+keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
 subcollection: hs-crypto
 
@@ -183,7 +183,7 @@ Two applications are provided as part of the Management Utilities: the [Smart Ca
 
 To install the utilities on Windows 10, complete the following steps:
 
-1. Download the installation file `cloudtke.exe` from [GitHub](https://github.com/IBM-Cloud/hpcs-management-utilities/){:external} to your workstation.
+1. Download the latest installation file `cloudtke.exe` from [GitHub](https://github.com/IBM-Cloud/hpcs-management-utilities/){:external} to your workstation.
 2. In the directory that the downloaded installation file is located, double click the file to install.
 
 ### Installing the Management Utilities on Linux
@@ -192,9 +192,9 @@ To install the utilities on Windows 10, complete the following steps:
 
 To install the applications on Linux, complete the following steps:
 
-1. Download the installation file, `cloudtke.bin`, from [GitHub](https://github.com/IBM-Cloud/hpcs-management-utilities/releases){: external} to your workstation.
+1. Download the latest installation file, `cloudtke.bin`, from [GitHub](https://github.com/IBM-Cloud/hpcs-management-utilities/releases){: external} to your workstation.
 2. (Optional) [Verify the integrity and authenticity of the downloaded `cloudtke.bin` file](#verify-code-signing).
-3. Open the terminal, enter the directory that the downloaded installation file is located, and perform the following steps to install the applications:
+3. From the command line, enter the directory that the downloaded installation file is located, and perform the following steps to install the applications:
 
   1. Add the execute permission to the installation file by running the following command:
 
@@ -224,7 +224,7 @@ Complete the following steps to make sure the applications are not tampered with
 Perform step 2 to step 4 by using the [OpenSSL command-line tool](https://wiki.openssl.org/index.php/Binaries){: external}.
 {: tip}
 
-1. Download the following files from [GitHub](https://github.com/IBM-Cloud/hpcs-management-utilities/releases){: external} to the same directory where you store the `cloudtke.bin` file:
+1. Download the latest version of following files from [GitHub](https://github.com/IBM-Cloud/hpcs-management-utilities/releases){: external} to the same directory where you store the `cloudtke.bin` file:
   * `cloudtke.sig`: The signed cryptographic hash of `cloudtke.bin` (SHA-256).
   * `digicert_cert.pem`: An intermediate code signing certificate to prove the Management Utilities signing certificate.
   * `signing_cert.pem`: The signing certificate of the Management Utilities.

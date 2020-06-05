@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2020-05-22"
+lastupdated: "2020-05-27"
 
-keywords: Hyper Protect Crypto Services, hsm, Trusted Key Entry plug-in, service instance, imprint mode, smart card, master key, load master key
+keywords: hsm, cloud hsm, tke cli, trusted key entry plug-in, ep11, grep11, cryptographic operations, cryptographic functions, imprint mode, smart card, master key, load master key
 
 subcollection: hs-crypto
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 {:external: target="_blank" .external}
 {:term: .term}
 
-# Cloud HSM and EP11 over gRPC
+# Introducing cloud HSM and EP11 over gRPC
 {: #HSM-overview}
 
 Hardware security module (HSM) is a physical device that safeguards and manages digital keys for strong authentication and provides crypto-processing. HSMs protect the cryptographic infrastructure by securely managing, storing, and protecting cryptographic keys inside a tamper-resistant device.

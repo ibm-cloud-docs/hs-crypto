@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-01-02"
+lastupdated: "2020-05-27"
 
-keywords: rewrap key, reencrypt data encryption key, rewrap API examples
+keywords: rewrap key, reencrypt data encryption key, rewrap api, key id
 
 subcollection: hs-crypto
 
@@ -20,7 +20,7 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 
-# Rewrapping keys
+# Rewrapping data encryption keys with root keys
 {: #rewrap-keys}
 
 Reencrypt your data encryption keys by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management API.

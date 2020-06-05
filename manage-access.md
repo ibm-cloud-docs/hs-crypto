@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2020-03-30"
 
-keywords: user access, IBM Cloud IAM roles, encryption keys, user permissions, manage access
+keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
 subcollection: hs-crypto
 

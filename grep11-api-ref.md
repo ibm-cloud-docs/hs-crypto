@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-29"
+lastupdated: "2020-05-27"
 
-keywords: EP11, PKCS#11, GREP11, API reference, EP11 over gRPC
+keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
 subcollection: hs-crypto
 

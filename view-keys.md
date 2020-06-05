@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2020
 lastupdated: "2020-03-13"
 
-keywords: view keys, key configuration, key type, list encryption keys, view encryption key, retrieve encryption key, retrieve key API examples
+keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
 subcollection: hs-crypto
 
@@ -59,7 +59,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
       </tr>
       <tr>
         <td>Status</td>
-        <td>The key state based on [NIST Special Publication 800-57, Recommendation for Key Management](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r4.pdf). These states include <em>Preactive</em>, <em>Active</em>, <em>Deactivated</em>, and <em>Destroyed</em>.</td>
+        <td>The [key state](/docs/hs-crypto?topic=hs-crypto-key-rotation#key-transitions) based on [NIST Special Publication 800-57, Recommendation for Key Management](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r4.pdf). These states include <em>Preactive</em>, <em>Active</em>, <em>Deactivated</em>, and <em>Destroyed</em>.</td>
       </tr>
       <tr>
         <td>Imported</td>

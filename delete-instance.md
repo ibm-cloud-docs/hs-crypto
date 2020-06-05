@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2019
 lastupdated: "2019-12-19"
 
-keywords: delete, delete service instance, IBM Cloud console, IBM Cloud CLI
+keywords: delete, delete service instance, crypto unit, ibm cloud cli, clear crypto unit, uninstall
 
 subcollection: hs-crypto
 
@@ -75,7 +75,7 @@ follow one of these procedures depending on your operating system:
 
 - Linux&reg; operating system
 
-  1. Open a terminal window and enter the directory where the Management Utilities are installed with the following command:
+  1. From the command line, enter the directory where the Management Utilities are installed with the following command:
     ```
     cd <management_utilities_directory>
     ```

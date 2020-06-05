@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-21"
+lastupdated: "2020-06-02"
 
-keywords: key storage, HSM, hardware security module, key ceremony, load master key, master key register, initialize Hyper Protect Crypto Services instance, Trusted Key Entry CLI plug-in, TKE CLI plug-in
+keywords: key storage, hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, key part, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
 subcollection: hs-crypto
 
@@ -26,7 +26,7 @@ subcollection: hs-crypto
 # Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in
 {: #initialize-hsm}
 
-Before you can use the {{site.data.keyword.hscrypto}} instance (service instance for short), you need to first initialize your service instance by loading the [master key](#x2908413){: term} to your key storage, service instance. You can choose to load the master key from smart cards with the {{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities or from your workstation with the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) command-line interface (CLI) plug-in. To load the master key with {{site.data.keyword.cloud_notm}} TKE CLI plug-in, follow these steps.
+Before you can use the {{site.data.keyword.hscrypto}} instance (service instance for short), you need to first initialize your service instance by loading the [master key](#x2908413){: term} to your service instance. You can choose to load the master key from smart cards with the {{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities or from your workstation with the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) command-line interface (CLI) plug-in. To load the master key with {{site.data.keyword.cloud_notm}} TKE CLI plug-in, follow these steps.
 {: shortdesc}
 
 For an introduction to the options of service instance initialization and other fundamental concepts, see [Introduction to service instance initialization](/docs/hs-crypto?topic=hs-crypto-introduce-service#introduce-service) and {{site.data.keyword.hscrypto}} [components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
@@ -171,7 +171,7 @@ To load the new master key register, complete the following tasks with the {{sit
 
 To load the new master key register, A crypto unit administrator must sign the command with a unique signature key. The first step is to create one or more signature key files that contain signature keys on your workstation. <!-- The private part of the signature key file is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. -->
 
-For security considerations, the signature key owner can be a different person from the master key part owners. The signature key owner needs to be the only person who knows the password that is associated with the signature key file.
+For security considerations, the signature key owners can be different people from the master key part owners. The signature key owner needs to be the only person who knows the password that is associated with the signature key file.
 {: important}
 
 * To display the existing signature keys on the workstation, use the following command:
@@ -188,15 +188,18 @@ For security considerations, the signature key owner can be a different person f
 
   When prompted, enter an administrator name and a password to protect the signature key file. You must remember the password. If the password is lost, the signature key can't be used.
 
-* To select the administrator to sign future commands, use the command:
+  Repeat the command to create multiple signature keys if needed.
+
+* To select the administrators to sign future commands, use the command:
+
   ```
   ibmcloud tke sigkey-sel
   ```
   {: pre}
 
-  A list of signature key files that are found on the workstation is displayed. When prompted, enter the key number of the signature key file to select for signing later administrative commands. And then enter the password for the signature key file. <!--If a signature key file is already selected for signing administrative commands, this is indicated when the list of signature key files is displayed. -->
+  A list of signature keys that are found on the workstation is displayed. When prompted, enter the key numbers of the signature key files to select for signing future administrative commands. When prompted, enter the passwords for the signature key files.
 
-  <!-- **Tip**: Before you run the `cryptounit-exit-impr` command to exit imprint mode, the command needs to be signed by a crypto unit administrator by using the signature key. After the crypto unit exits imprint mode, all commands to the crypto unit must be signed. -->
+  This command determines what signature keys are allowed to sign future commands. There is no limit to the number of signature key files that you can select. If you select more signature keys than required to sign a command, the actual signature keys that are used will be determined at the time the command is executed.
 
 ### Step 2: Add one or more administrators in the target crypto unit
 {: #step2-load-admin}
@@ -219,29 +222,34 @@ For security considerations, the signature key owner can be a different person f
 
   When prompted, select the signature key file that is associated with the crypto unit administrator to be added. And then enter the password for the selected signature key file.
 
-  You can repeat the command to add extra crypto unit administrators if needed. Any administrator can independently run commands in the crypto unit.
+  You can repeat the command to add extra crypto unit administrators if needed.
 
-  In imprint mode, the command to add a crypto unit administrator doesn't need to be signed. After the crypto unit leaves imprint mode, to add crypto unit administrators, the command to be used must be signed by a crypto unit administrator that is already added in the crypto unit.
+  The number of administrators that you add to a crypto unit needs to be equal to or greater than the signature threshold value and the revocation signature threshold value that you intend to set in [Step 3](#step3-exit-imprint-mode). For example, if you are about to set the signature threshold or revocation signature threshold value to eight, you need to add eight administrators to the crypto unit.
+  {: tip}
 
-For security and compliance reasons, the administrator name of the crypto unit might be shown up in logs for auditing purposes.
-{: note}
+  In imprint mode, the command to add a crypto unit administrator doesn't need to be signed. After the crypto unit leaves imprint mode, the signature threshold value for the crypto unit determines how many crypto unit administrators must sign the command.
 
-### Step 3: Exit imprint mode in the target crypto unit
+  For security and compliance reasons, the administrator name of the crypto unit might be shown up in logs for auditing purposes.
+  {: note}
+
+### Step 3: Set the signature thresholds to exit imprint mode in the target crypto unit
 {: #step3-exit-imprint-mode}
 
-A crypto unit in imprint mode isn't considered secure. You can't run most of the administrative commands, such as loading the new master key register, in imprint mode.
+A crypto unit in imprint mode isn't considered secure. You can't run most of the administrative commands, such as loading the new master key register, in imprint mode.
 
 After you add one or more crypto unit administrators, exit imprint mode by using the command:
 
-  ```
-  ibmcloud tke cryptounit-exit-impr
-  ```
-  {: pre}
+```
+ibmcloud tke cryptounit-thrhld-set
+```
+{: pre}
 
-  When prompted, enter the password for the current signature key file.
+When prompted, enter values for the signature threshold and revocation signature threshold. The signature threshold controls how many signatures are required to execute most administrative commands. The revocation signature threshold controls how many signatures are required to remove an administrator after you have left imprint mode. Some commands require only one signature, regardless of how the signature threshold is set.
 
-  The command to exit imprint mode must be signed by one of the added crypto unit administrators with the signature key. After the crypto unit exits imprint mode, all commands to the crypto unit must be signed.
-  {: important}
+The signature threshold values must be numbers between one and eight. The signature threshold and revocation signature threshold can be different. Setting the signature thresholds to a value greater than one is a way to enforce dual control for sensitive operations.
+
+The command to exit imprint mode must be signed by as many administrators as specified by the new signature threshold value. After crypto units leave imprint mode, all commands to the crypto unit must be signed. After the crypto unit exits imprint mode, you can still change the signature thresholds on the crypto unit by using the `cryptounit-thrhld-set` command. To display the current signature threshold values, run the `ibmcloud tke cryptounit-thrhlds` command.
+{: important}
 
 ### Step 4: Create a set of master key parts to use
 {: #step4-create-master-key}
@@ -276,7 +284,7 @@ You must create at least two master key parts. For security considerations, thre
 ### Step 5: Load the new master key register
 {: #step5-load-master-key}
 
-To load a master key register, all master key part files and the signature key file must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The master key part file owners and the signature key file owner need to enter the file passwords when the master key register is loaded on the common workstation.
+To load a master key register, all master key part files and signature key files to be used must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The master key part file owners and the signature key file owners need to enter the file passwords when the master key register is loaded on the common workstation.
 {: important}
 
 For information about how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-key-ceremony).
@@ -289,7 +297,7 @@ ibmcloud tke cryptounit-mk-load
 
 A list of the master key parts that are found on the workstation is displayed.
 
-When prompted, enter the key parts to be loaded into the new master key register, the password for the current signature key file, and password for each selected key part file sequentially.
+When prompted, enter the key parts to be loaded into the new master key register, the password for the signature key file to be used, and password for each selected key part file. For this command, only one signature key is needed.
 
 ### Step 6: Commit the new master key register
 {: #step6-commit-master-key}
@@ -302,7 +310,7 @@ ibmcloud tke cryptounit-mk-commit
 ```
 {: pre}
 
-When prompted, enter the password for the current signature key file.
+When prompted, enter the passwords for the signature key files to be used.
 
 ### Step 7: Activate the master key
 {: #step7-activate-master-key}
@@ -320,6 +328,8 @@ Consider the following before you take actions:
 * If it is your first time to initialize the service instance, you can ignore this message and type `y` to continue.
 * If you have started managing keys with the service instance and want to reload the same master key that was used before, ensure that no key management actions are in progress and type `y` to continue.
 * If you have started managing keys with the service instance and want to load a new master key, type `N` to cancel. Loading a new master key is currently not supported. By doing so, all your managed keys are unusable.
+
+When prompted, enter the password for the signature key file to be used. For this command, only one signature key is needed.
 
 ## What's next
 {: #initialize-crypto-cli-next}

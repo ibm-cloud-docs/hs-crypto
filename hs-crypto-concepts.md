@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-28"
+lastupdated: "2020-05-13"
 
-keywords: key concepts, HSM concepts，Hyper Protect Crypto Services concepts, terms, terminology
+keywords: concept, keep your own key, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
 subcollection: hs-crypto
 
@@ -92,6 +92,15 @@ An administrator must sign any commands that are issued to the crypto unit with 
 
 Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start in a cleared state that is known as *imprint mode*. Most crypto unit operations are disabled in imprint mode, and a crypto unit in imprint mode is not secure. You can add administrators in imprint mode and exit imprint mode by using a signed command. After the crypto unit exits imprint mode, all commands to configure a crypto unit must be signed. You must exit imprint mode before you can load [master keys](#master-key-concept).
 
+### Signature thresholds
+{: #signature-thresholds-concept}
+
+The signature thresholds of a crypto unit control how many administrative signatures are needed to run a command. In imprint mode, the signature thresholds are set to zero. To exit imprint mode, set the signature thresholds to a value greater than zero. When a crypto unit is zeroized, the signature thresholds are reset to zero.
+
+There are two types of signature thresholds on a crypto unit. The main signature threshold controls how many signatures are needed to run most administrative commands. The revocation signature threshold controls how many signatures are needed to remove an administrator. Some commands need only one signature, regardless of how the signature threshold is set.
+
+Setting the signature thresholds to a value greater than one enables dual control from multiple administrators for sensitive operations. The maximum value that you can set the signature threshold and revocation signature threshold is eight, which is also the maximum number of administrators that can be added to a crypto unit.
+
 ### Master keys
 {: #master-key-concept}
 
@@ -105,7 +114,7 @@ A master key is composed of several master key parts. For security consideratio
 ### {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in
 {: #tke-concept}
 
-Trusted Key Entry (TKE) command-line interface (CLI) plug-in is a CLI plug-in working with {{site.data.keyword.cloud_notm}} CLI. The TKE plug-in provides a set of functions for managing crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user account. You can use the TKE plug-in to set up administrators and load the master key with the requirements of a medium level of security. For detailed instructions, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm). For the complete command reference, see [Trusted Key Entry CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-tke_cli_plugin).
+Trusted Key Entry (TKE) command-line interface (CLI) plug-in is a CLI plug-in working with {{site.data.keyword.cloud_notm}} CLI. The TKE plug-in provides a set of functions for managing crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user account. You can use the TKE plug-in to set up administrators and load the master key with the requirements of a medium level of security. For detailed instructions, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm). For the complete command reference, see [Trusted Key Entry CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin).
 
 ### Management Utilities
 {: #management-utilities-concept}
@@ -163,10 +172,3 @@ gRPC is a modern open source high performance remote procedure call (RPC) framew
 {: #grep11-concept}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of Enterprise PKCS #11 (EP11) APIs over [gRPC](https://grpc.io){: external} calls (also referred to as GREP11), with which all the Crypto functions are executed in a cloud HSM. EP11 over gRPC is a stateless interface for cryptographic operations on cloud. For more information about the GREP11 API, see [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
-
-## {{site.data.keyword.hscrypto}} architecture
-{: #hs-crypto-architecture}
-
-Refer to the following architectural diagram to see how components of {{site.data.keyword.hscrypto}} co-work to protect your sensitive data and keys.
-
-![Service instance components](/image/hs-crypto-components.svg "Service instance components"){: caption="Figure 1. Interaction with {{site.data.keyword.hscrypto}} components" caption-side="bottom"}

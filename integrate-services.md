@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-23"
+lastupdated: "2020-05-27"
 
-keywords: Hyper Protect Crypto Services integration, integrate service with Hyper Protect Crypto Services
+keywords: integration, encryption at rest, cloud object storage, object storage, kmip, containers, vmware, database, compute
 
 subcollection: hs-crypto
 
@@ -22,7 +22,7 @@ subcollection: hs-crypto
 {:table: .aria-labeledby="caption"}
 {:term: .term}
 
-# Integrating services
+# Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}
 {: #integrate-services}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} integrates with data and storage solutions to help you bring and manage your own encryption in the cloud.
@@ -33,17 +33,6 @@ subcollection: hs-crypto
 
 After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision) and [initialize the service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm), you can integrate {{site.data.keyword.hscrypto}} with the following supported services.
 
-### Database services
-{: #database-integration}
-
-Associate the encryption keys that you manage in {{site.data.keyword.hscrypto}} with your database service instances and leverage [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) to add another layer of protection to your data. With full control over your keys, no one else including {{site.data.keyword.cloud_notm}} administrators can access your data.
-
-|Service|Integration instructions|
-|-------|-----------|
-|[{{site.data.keyword.ihsdbaas_postgresql_full}}](https://cloud.ibm.com/catalog/services/hyper-protect-dbaas-for-postgresql){: external}|For detailed steps of how to integrate {{site.data.keyword.ihsdbaas_postgresql_full}}, check out [{{site.data.keyword.hscrypto}} integration](/docs/hyper-protect-dbaas-for-postgresql?topic=hyper-protect-dbaas-for-postgresql-hpcs-byok).|
-|[{{site.data.keyword.ihsdbaas_mongodb_full}}](https://cloud.ibm.com/catalog/services/hyper-protect-dbaas-for-mongodb){: external}|For detailed steps of how to integrate {{site.data.keyword.ihsdbaas_mongodb_full}}, check out [{{site.data.keyword.hscrypto}} integration](/docs/hyper-protect-dbaas-for-mongodb?topic=hyper-protect-dbaas-for-mongodb-hpcs-byok).|
-{: caption="Table 1. Supported database services" caption-side="bottom"}
-
 ### Storage services
 {: #storage-integration}
 
@@ -53,7 +42,19 @@ Add [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) t
 |-------|-----------|
 |[{{site.data.keyword.cos_full_notm}}](https://cloud.ibm.com/catalog/services/cloud-object-storage){: external}|For detailed steps of how to integrate {{site.data.keyword.cos_full_notm}}, check out the following references: <ul><li>Demo video: [Integrating {{site.data.keyword.cos_full_notm}} with {{site.data.keyword.hscrypto}}](https://www.youtube.com/watch?v=e_4RO7r_t8M){: external}</li><li>Instructions: [Server-side encryption with {{site.data.keyword.keymanagementservicelong_notm}} or {{site.data.keyword.hscrypto}}](/docs/cloud-object-storage?topic=cloud-object-storage-encryption#encryption-kp)</li></ul>|
 |[{{site.data.keyword.cloud_notm}} {{site.data.keyword.blockstorageshort}} for Virtual Private Cloud](https://cloud.ibm.com/vpc/storage/storageVolumes){: external}|For detailed steps of how to integrate {{site.data.keyword.block_storage_is_short}}, check out [Creating block storage volumes with customer-managed encryption](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).|
-{: caption="Table 2. Supported storage services" caption-side="bottom"}
+{: caption="Table 1. Supported storage services" caption-side="bottom"}
+
+### Database services
+{: #database-integration}
+
+Associate the encryption keys that you manage in {{site.data.keyword.hscrypto}} with your database service instances and leverage [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) to add another layer of protection to your data. With full control over your keys, no one else including {{site.data.keyword.cloud_notm}} administrators can access your data.
+
+|Service|Integration instructions|
+|-------|-----------|
+|[{{site.data.keyword.ihsdbaas_postgresql_full}}](https://cloud.ibm.com/catalog/services/hyper-protect-dbaas-for-postgresql){: external}|For detailed steps of how to integrate {{site.data.keyword.ihsdbaas_postgresql_full}}, check out [{{site.data.keyword.hscrypto}} integration](/docs/hyper-protect-dbaas-for-postgresql?topic=hyper-protect-dbaas-for-postgresql-hpcs-byok).|
+|[{{site.data.keyword.ihsdbaas_mongodb_full}}](https://cloud.ibm.com/catalog/services/hyper-protect-dbaas-for-mongodb){: external}|For detailed steps of how to integrate {{site.data.keyword.ihsdbaas_mongodb_full}}, check out [{{site.data.keyword.hscrypto}} integration](/docs/hyper-protect-dbaas-for-mongodb?topic=hyper-protect-dbaas-for-mongodb-hpcs-byok).|
+{: caption="Table 2. Supported database services" caption-side="bottom"}
+
 
 ### Compute services
 {: #compute-integration}

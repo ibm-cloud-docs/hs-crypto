@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2020
 lastupdated: "2020-02-18"
 
-keywords: standard keys, standard encryption key, create standard keys, create standard encryption key, create secret, persist secret, create encryption key, standard encryption key API examples
+keywords: standard key, encryption key, create standard key, create encryption key, add key, key material, key management, create secret, persist secret, create encryption key, encryption key api, api key
 
 subcollection: hs-crypto
 

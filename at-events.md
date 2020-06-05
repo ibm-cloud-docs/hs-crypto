@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2020
 lastupdated: "2020-03-23"
 
-keywords: Hyper Protect Crypto Services, event, security, IBM, activity tracker, LogDNA, KMS API calls, monitor KMS events
+keywords: event, security, monitor event, audit event, activity tracker, logdna event
 
 subcollection: hs-crypto
 

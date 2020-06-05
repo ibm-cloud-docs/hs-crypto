@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-21"
+lastupdated: "2020-05-18"
 
-keywords: IBM keys, key management, data security, Hyper Protect Crypto Services, Cloud HSM, hardware security module, PKCS11, openSSL, hsm encryption
+keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
 subcollection: hs-crypto
 
@@ -22,7 +22,7 @@ subcollection: hs-crypto
 # Overview
 {: #overview}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is a dedicated key management service and [Hardware Security Module (HSM)](#x6704988){: term} that is built on the {{site.data.keyword.IBM}} LinuxONE platform. {{site.data.keyword.hscrypto}} offers the highest level of protection in the cloud industry for your sensitive data with FIPS 140-2 Level 4 certified hardware.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is a dedicated key management service and [Hardware Security Module (HSM)](#x6704988){: term} that provides you with the Keep Your Own Key capability for cloud data encryption. Built on FIPS 140-2 Level 4 certified hardware, {{site.data.keyword.hscrypto}} allows you to have exclusive control of your encryption keys.
 {: shortdesc}
 
 Watch the following video to learn how {{site.data.keyword.hscrypto}} provides you with exclusive encryption key control and data protection in the cloud:
@@ -49,9 +49,7 @@ With the built-in encryption of {{site.data.keyword.hscrypto}}, you can easily b
 ## How does {{site.data.keyword.hscrypto}} work?
 {: #how-hpcs-work}
 
-The following architectural diagram shows how {{site.data.keyword.hscrypto}} works.
-
-![{{site.data.keyword.hscrypto}} architecture](/image/architecture.svg "{{site.data.keyword.hscrypto}} architecture"){: caption="Figure 1. {{site.data.keyword.hscrypto}} architecture" caption-side="bottom"}
+For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service architecture, workload isolation, and dependencies](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation).
 
 The following are a few highlights of the {{site.data.keyword.hscrypto}} architecture:
 - Applications connect to {{site.data.keyword.hscrypto}} through EP11 API.
@@ -71,15 +69,11 @@ The following are a few highlights of the {{site.data.keyword.hscrypto}} archite
 
   {{site.data.keyword.hscrypto}} provides a single-tenant key management service that allows you to create, import, rotate, and manage keys with standardized APIs. After the encryption keys are deleted, you can be assured that your data is no longer retrievable.
 
-* **Encryption for IBM Cloud services**
+* **Encryption for {{site.data.keyword.cloud_notm}} data and workload services**
 
-  By integrating with other {{site.data.keyword.cloud_notm}} services, {{site.data.keyword.hscrypto}} offers the capability of bringing your own encryption to the cloud. The service provides double-layer protection for your cloud data by wrapping the encryption keys that are associated with your cloud services.
+  By [integrating with other {{site.data.keyword.cloud_notm}} services](/docs/hs-crypto?topic=hs-crypto-integrate-services), {{site.data.keyword.hscrypto}} offers the capability of bringing your own encryption to the cloud. The service provides double-layer protection for your cloud data by wrapping the encryption keys that are associated with your cloud services.
 
-* **Access management and auditing**
-
-  {{site.data.keyword.hscrypto}} integrates with {{site.data.keyword.iamshort}} (IAM) to enable your granular control over user access to service resources. You can also monitor activities of Hyper Protect Crypto Services by using {{site.data.keyword.at_full_notm}}.
-
-### Cloud HSMs
+### Cloud hardmare security module
 {: #cloud-hsm}
 
 * **Customer-controlled HSM**
@@ -93,6 +87,11 @@ The following are a few highlights of the {{site.data.keyword.hscrypto}} archite
 * **Security certification**
 
   The service is built on FIPS 140-2 Level 4-certified hardware, the highest security level that is offered in the industry. The HSM is also certified to meet the Common Criteria Part 3 conformant EAL 4.
+
+### Integration with {{site.data.keyword.iamshort}} and {{site.data.keyword.at_full_notm}}
+{: #iam-activity-tracker}
+
+{{site.data.keyword.hscrypto}} integrates with {{site.data.keyword.iamshort}} (IAM) to enable [your granular control over user access to service resources](/docs/hs-crypto?topic=hs-crypto-manage-access). You can also [monitor and audit events and activities of Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-at-events) by using {{site.data.keyword.at_full_notm}}.
 
 <!-- {{site.data.keyword.hscrypto}} also leverages the ACSP solution that enables remote access to the IBM’s cryptographic coprocessors. ACSP allows for utilization of strong hardware-based cryptography as a service in distributed environments where data security cannot be guaranteed. {{site.data.keyword.hscrypto}} utilizes ACSP as a *network hardware security module (NetHSM)* that provides access to HSM via PKCS#11 standard API.-->
 

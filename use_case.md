@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2020
 lastupdated: "2020-02-10"
 
-keywords: Hyper Protect Crypto Services, Keep Your Own Key, VMware integration, use cases, Bring your Own Keys, KYOK
+keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases 
 
 subcollection: hs-crypto
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-21"
+lastupdated: "2020-05-13"
 
-keywords: key storage, HSM, hardware security module, key ceremony, load master key, master key register, initialize Hyper Protect Crypto Services instance, smart card, Trusted Key Entry application, TKE client, Management Utilities
+keywords: key storage, hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, key part, initialize service, smart card, trusted key entry application, tke application, management utilities, cloudtkefiles
 
 subcollection: hs-crypto
 
@@ -86,19 +86,19 @@ Currently, only the Windows&reg; 10 and Linux operating systems are supported to
 
 Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start in a cleared state that is known as [imprint mode](#x9860399){: term}. To load the master key from the smart cards, complete the following steps with the Trusted Key Entry application:
 
-### Step 1: Generate the signature key and master key parts
+### Step 1: Generate the signature keys and master key parts
 {: #step1-generate-keys-management-utilities}
 
-1. To generate the signature key for the administrator,  select the **Smart card** tab, and click **Generate signature key**.
+1. To generate a signature key for an administrator, select the **Smart card** tab, and click **Generate signature key**.
 
   When prompted, insert an [EP11 smart card](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-smart-cards) in smart card reader 2, enter a name for the administrator, and enter the personal identification number (PIN) for the smart card on the smart card reader PIN pad.
 
-  An administrator signature key is generated and stored on the smart card.
+  An administrator signature key is generated and stored on the smart card. Repeat this step to create multiple signature keys if needed.
 
   Each smart card can contain only one signature key. If you want to set up multiple administrators, repeat this step by using different EP11 smart cards.
   {: tip}
 
-2. To generate the master key parts for service instance initialization, on the **Smart card** tab, click **Generate key parts**.
+2. To generate the master key parts for service instance initialization, on the **Smart card** tab, click **Generate key part**.
 
   If prompted, insert an EP11 smart card in smart card reader 2 and enter the smart card PIN. Enter a description for the key part.
 
@@ -110,6 +110,7 @@ Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start
   {: important}
 
 3. (Optional) If you want to create a backup copy of an EP11 smart card, click **Copy smart card** on the **Smart card** tab and follow the prompts.
+4. (Optional) The signature keys and master key parts that are created with the TKE CLI plug-in and saved in a workstation file can be copied to a smart card. To do this, on the **Smart card** tab, click **Copy signature key file** or **Copy key part file** and follow the instructions. To copy the signature key or key part to a smart card, you need to provide the password for the file.
 
 ### Step 2: Select the crypto units where the master key is to be loaded
 {: #step2-select-crypto-units-management-utilities}
@@ -135,17 +136,19 @@ The public signature key and administrator name are read from the smart card and
 For security and compliance reasons, the administrator name of the crypto unit might be shown up in logs for auditing purposes.
 {: note}
 
-Repeat this step if you want to add multiple administrators.
+Repeat this step if you want to add multiple administrators. You must add at least as many administrators to a crypto unit as the larger of the signature threshold value and the revocation signature threshold value you intend to set in Step 4.
 
-### Step 4: Exit imprint mode in the selected crypto units
+### Step 4: Set the signature thresholds to exit imprint mode in the selected crypto units
 {: #step4-exit-imprint-mode-management-utilities}
 
-When crypto units in service instances are assigned to a user, they begin in a cleared state that is called imprint mode. In imprint mode, most operations on the crypto unit are disabled. To load the master key in a crypto unit, you must first exit imprint mode. The command to exit imprint mode must be signed by an administrator.
+When crypto units in service instances are assigned to a user, they begin in a cleared state that is called imprint mode. In imprint mode, most operations on the crypto unit are disabled. To load the master key in a crypto unit, you must first exit imprint mode by setting the signature thresholds to a value greater than zero.
 
-1. To exit imprint mode, select the **Imprint mode** tab and click **Exit imprint mode**.
-2. If prompted, insert an EP11 smart card with an administrator signature key that is defined to the selected crypto units in smart card reader 1, and enter the smart card PIN on the smart card reader PIN pad.
+1. To set the signature thresholds, select the **Signature thresholds** tab and click **Change signature thresholds**.
+2. When prompted, enter the new signature threshold value and the new revocation signature threshold value. 
+  The values must be numbers between one and eight and do not need to be the same. The signature threshold controls how many signatures are needed to run most administrative commands. The revocation signature threshold controls how many signatures are needed to remove an administrator after you leave imprint mode. Some commands need only one signature, regardless of how the signature threshold is set.
+3. If prompted, insert an EP11 smart card with an administrator signature key that is defined to the selected crypto units in smart card reader 1 and enter the smart card PIN on the smart card reader PIN pad. Repeat this operation if prompted for additional EP11 smart cards with signature keys. When exiting imprint mode, the number of signatures needed for this command is the new signature threshold value. 
 
-After the crypto units exit imprint mode, `No` is displayed the `IMPRINT MODE` column of the **Imprint mode** tab, which indicates that the crypto units is not in imprint mode.
+After the signature threshold values are set, the new values are displayed on the **Signature thresholds** page. Setting the signature thresholds to a value greater than one enables dual control from multiple administrators for sensitive operations.
 
 When an EP11 smart card with a valid administrator signature key is inserted in smart card reader 1 and its PIN is entered, the smart card can be used to sign multiple commands. In the following Step 5, if the reader already contains an EP11 smart card with a valid signature key and the PIN is entered, you're not prompted to insert an EP11 smart card with a signature key in smart card reader 1.
 {: tip}
@@ -170,7 +173,7 @@ After all master key parts are loaded, the New Master Key Register is in Full Un
 {: #step5-commit-new-register-management-utilities}
 
 1. Click **Commit** to move the master key to the Full Committed state.
-2. If prompted,  in smart card reader 1, insert an EP11 smart card with an administrator signature key that is defined to the selected crypto units, and enter the smart card PIN on the smart card reader PIN pad.
+2. If prompted, in smart card reader 1, insert an EP11 smart card with an administrator signature key that is defined to the selected crypto units and enter the smart card PIN on the smart card reader PIN pad. Repeat this operation if prompted for additional EP11 smart cards with signature keys.
 
 After the process is complete, the New Master Key Register is in Full Committed state.
 

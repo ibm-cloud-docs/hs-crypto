@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-28"
+lastupdated: "2020-05-27"
 
-keywords: hsm, tke, Trusted Key Entry plug-in, initialize service, imprint mode, smart card, master key, load master key
+keywords: initialize service, key ceremony, hsm, tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
 subcollection: hs-crypto
 
@@ -19,10 +19,10 @@ subcollection: hs-crypto
 {:external: target="_blank" .external}
 {:term: .term}
 
-# Introduction to service instance initialization
+# Initializing your service instance
 {: #introduce-service}
 
-Before you start initializing the service instance of {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}, you might want to understand the process logic first.  
+Before you start initializing the service instance of {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}, you might want to understand the process logic first.
 {:shortdesc}
 
 A {{site.data.keyword.hscrypto}} instance (service instance for short) is a group of [crypto units](#x9860404){: term} that are assigned to an {{site.data.keyword.cloud_notm}} user account. Crypto units contain [master keys](#x2908413){: term} that encrypt the contents of key storage. With the Keep You Own Keys technology, the service instance administrators are the only person who can access the master key.
@@ -66,7 +66,7 @@ Signature keys are created and assigned by following this procedure:
 You need to keep in mind of the following items when you initialize the service instance:
 
 - The command to exit imprint mode must be signed by one of the added crypto unit administrators by using the signature key.
-- After the crypto unit exits imprint mode, the administrator need to sign any commands with their own signature key.
+- After the crypto unit exits imprint mode, the administrators need to sign any commands with their own signature keys.
 - The master key can be loaded only after the crypto unit exits imprint mode.
 
 ## Understanding master keys and master key parts
@@ -121,7 +121,7 @@ It is suggested that each master key part is created on a separate EP11 smart ca
 
 - Create a certificate authority smart card and a backup certificate authority smart card.
 - Create two EP11 smart cards to hold an administrator signature key. Generate the administrator signature key on one EP11 smart card and copy it to the other.
-- Create four or six EP11 smart cards to hold master key parts. Generate an EP11 master key part on two or three of the smart cards, depending on whether you want to use two or three key parts when you load your master key. Copy each key part value to a backup EP11 smart card.  
+- Create four or six EP11 smart cards to hold master key parts. Generate an EP11 master key part on two or three of the smart cards, depending on whether you want to use two or three key parts when you load your master key. Copy each key part value to a backup EP11 smart card.
 
 ### Understanding smart card readers
 {: #understand-smart-card-reader}
@@ -149,7 +149,7 @@ The Trusted Key Entry application is one of the two applications that are instal
 
 When you choose to store the signature key and master key parts on your workstation, use the {{site.data.keyword.cloud_notm}} TKE CLI plug-in to load the master key. With the TKE CLI plug-in, you can load the master key by issuing corresponding commands. No additional hardware is needed. However, as master key parts are stored on your local workstation, the TKE CLI plug-in provides a comparatively lower level of security.
 
-For the complete command reference, see [Trusted Key Entry CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-tke_cli_plugin). For detailed instructions, see [Initializing service instances with {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
+For the complete command reference, see [Trusted Key Entry CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin). For detailed instructions, see [Initializing service instances with {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
 ## Understanding how master key is loaded
 {: #understand-key-ceremony}
@@ -166,6 +166,6 @@ The following flow chart illustrates how the master key register state changes, 
 
 In the following chart, each crypto unit loads the master key with the following steps:
 
-1. Load the New Master Key Register with the master key. After the master key is loaded, the New Master Key Register is in FULL UNCOMMITTED state.  
+1. Load the New Master Key Register with the master key. After the master key is loaded, the New Master Key Register is in FULL UNCOMMITTED state.
 2. Commit the New Master Key Register. After it is committed, the New Master Key Register is in FULL COMMITTED state.
-3. Activate the Current Master Key Register. By doing so, the New Master Key Register value is copied into the Current Master Key Register, and the New Master Key Register is cleared.   
+3. Activate the Current Master Key Register. By doing so, the New Master Key Register value is copied into the Current Master Key Register, and the New Master Key Register is cleared.

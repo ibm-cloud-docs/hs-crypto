@@ -4,7 +4,7 @@ copyright:
   years: 2018-2020
 lastupdated: "2020-01-08"
 
-keywords: private endpoints, private network, dedicated network, VRF, service endpoints
+keywords: private, private endpoints, private network, private connection, crypto network, dedicated network, VRF, service endpoints, regions, location
 
 subcollection: hs-crypto
 
@@ -78,7 +78,7 @@ If you are using the key management service of {{site.data.keyword.hscrypto}}, a
 If you are using the GREP11 service, the service handles the private endpoint connection. You need to only switch your GREP11 service endpoint to the private endpoint per instructions in [Generating a GREP11 API request](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#form-grep11-api-request).
 {: note}
 
-1. In a terminal window, log in to {{site.data.keyword.cloud_notm}}.
+1. From the command line, log in to {{site.data.keyword.cloud_notm}}.
 
     ```sh
     ibmcloud login

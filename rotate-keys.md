@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-18"
+lastupdated: "2020-05-12"
 
-keywords: root keys, rotate key, key rotation, rotate encryption key, encryption key rotation, rotate key API examples
+keywords: rotate, rotate key, rotate encryption key, rotate root key, rotate root key manually, key rotation, rotate key api
 
 subcollection: hs-crypto
 
@@ -22,18 +22,17 @@ subcollection: hs-crypto
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Rotating keys on-demand
+# Rotating root keys manually
 {: #rotate-keys}
 
 You can rotate your [root keys](#x6946961){: term} on-demand by using {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
-When you rotate your root key, you shorten the lifetime of the key, and you limit the amount of information that is protected by that key.   
+When you rotate your root key, you shorten the lifetime of the key, and you limit the amount of information that is protected by that key.
 
-Rotation is available only for root keys.
-{: tip}
+To learn how key rotation helps you meet industry standards and cryptographic best practices, see [Key rotation](/docs/hs-crypto/concepts?topic=hs-crypto-key-rotation).
 
-## Rotating root keys with the GUI
+## Rotating root keys in the GUI
 {: #rotate-root-key-gui}
 
 If you prefer to rotate your root keys by using a graphical interface, you can use the {{site.data.keyword.hscrypto}} GUI.
@@ -44,18 +43,38 @@ If you prefer to rotate your root keys by using a graphical interface, you can u
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the application details page, use the **Keys** table to browse the keys in your service.
-5. Select the key that you want to rotate and click the overflow icon to open a list of options for the key.
-6. From the options menu, click **Rotate key** and confirm the rotation in the next screen.
+5. Select the key that you want to rotate and click the overflow icon (⋯) to open a list of options for the key.
+6. From the options menu, click **Rotate key**.
 
-If you imported the root key initially, you must provide a new base64 encoded key material to rotate the key. For more information, see [Importing root keys with the GUI](/docs/hs-crypto?topic=hs-crypto-import-root-keys#import-root-key-gui).
-{: tip}
+    If you initially provided the key material for the key, specify the following details:
 
-## Rotating root keys by using the API
-{: #rotate-root-kay-api}
-{: help}
-{: support}
+    <table>
+      <tr>
+        <th>Setting</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Key material</td>
+        <td>
+          <p>The new base64 encoded key material that you want to store and manage in the service.</p>
+          <p>Ensure that the key material meets the following requirements:</p>
+          <p>
+            <ul>
+              <li>The key must be 128, 192, or 256 bits.</li>
+              <li>The bytes of data, for example 32 bytes for 256 bits, must be encoded by using base64 encoding.</li>
+            </ul>
+          </p>
+        </td>
+      </tr>
+      <caption style="caption-side:bottom;">Table 1. Describes the <b>Rotate key</b> settings</caption>
+    </table>
 
-[After you designate a root key in the service](/docs/hs-crypto?topic=hs-crypto-create-root-keys), you can rotate your key by making a `POST` call to the following endpoint.
+7.  When you are finished, click **Rotate key** to confirm.
+
+## Rotating root keys with the API
+{: #rotate-root-key-api}
+
+You can rotate a root key by making a `POST` call to the following endpoint.
 
 ```
 https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=rotate
@@ -66,7 +85,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
 
 2. Copy the ID of the root key that you want to rotate.
 
-4. Run the following cURL command to replace the key with new key material.
+    You can find the ID for a key in your service instance by [retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys), or by accessing the {{site.data.keyword.hscrypto}} dashboard.
+
+3. Replace the key with new key material by running the following cURL command.
 
     ```cURL
     curl -X POST \
@@ -90,24 +111,24 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
+        <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
       </tr>
       <tr>
         <td><varname>key_ID</varname></td>
-        <td>The unique identifier for the root key that you want to rotate.</td>
+        <td><strong>Required.</strong> The unique identifier for the root key that you want to rotate.</td>
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
-        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
+        <td><strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
-        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+        <td><strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
       </tr>
       <tr>
         <td><varname>key_material</varname></td>
         <td>
-          <p>The base64 encoded key material that you want to store and manage in the service. This value is required if you initially imported the key material when you added the key to the service.</p>
+          <p>The new base64 encoded key material that you want to store and manage in the service. This value is required if you initially imported the key material when you added the key to the service.</p>
           <p>To rotate a key that was initially generated by {{site.data.keyword.hscrypto}}, omit the <code>payload</code> attribute and pass an empty request entity-body. To rotate an imported key, provide a key material that meets the following requirements:</p>
           <p>
             <ul>

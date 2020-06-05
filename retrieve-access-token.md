@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2020
 lastupdated: "2020-01-02"
 
-keywords: access token, IAM token, generate access token, generate IAM token, get access token, get IAM token, IAM token API, IAM token CLI
+keywords: access token, api key, iam token, generate access token, generate iam token, get access token, iam token api, token cli
 
 subcollection: hs-crypto
 
@@ -133,5 +133,5 @@ You can also retrieve your access token programmatically by first creating a [se
 
     Use the full `access_token` value, prefixed by the _Bearer_ token type, to programmatically manage keys for your service using the {{site.data.keyword.hscrypto}} key management API. To see an example {{site.data.keyword.hscrypto}} key management API request, check out [Forming your key management API request](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#form-kms-api-request).
 
-    Access tokens are valid for 1 hour, but you can regenerate them as needed. To maintain access to the service, regenerate the access token for your API key on a regular basis by calling the [IAM Identity Services API](https://{DomainName}/apidocs/iam-identity-token-api).   
+    Access tokens are valid for 1 hour, but you can regenerate them as needed. To maintain access to the service, regenerate the access token for your API key on a regular basis by calling the [IAM Identity Services API](https://{DomainName}/apidocs/iam-identity-token-api).
     {: note }

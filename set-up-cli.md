@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-12-19"
+  years: 2018, 2020
+lastupdated: "2020-05-27"
 
-keywords: IBM Cloud CLI plug-in, ibmcloud commands, IBM Cloud command-line interface, KMS CLI, Key Protect CLI, Hyper Protect Crypto Services CLI
+keywords: ibmcloud cli, hpcs cli, ibmcloud commands, ibm cloud command-line interface, key protect cli, kms cli
 
 subcollection: hs-crypto
 
@@ -20,7 +20,7 @@ subcollection: hs-crypto
 {:external: target="_blank" .external}
 {:term: .term}
 
-# Accessing {{site.data.keyword.keymanagementserviceshort}} CLI through a {{site.data.keyword.hscrypto}} instance
+# Performing key management operations with the command-line interface
 {: #set-up-cli}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is integrated with {{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in, so that you can use the {{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in to create, import, and manage encryption [root keys](#x6946961){: term} and standard keys.
@@ -70,8 +70,10 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
 
   Alternatively, you can use the `-i <instance_ID>` option on the `ibmcloud kp` command to set the instance ID.
 
+4. Run the specific command to perform key management operations. For the full list of commands, check out the [key management CLI reference](/docs/key-protect?topic=key-protect-cli-reference).
 
-## Next steps
+## What's next
 {: #cli-next-steps}
 
-To find out more about using the CLI, check out the [{{site.data.keyword.keymanagementserviceshort}} CLI reference doc](/docs/key-protect?topic=key-protect-cli-reference).
+- You can also perform key management operations with API calls, check out [Managing your keys with the key management API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
+- Learn how to perform cryptographic operations with Enterprise PKCS #11 (EP11) APIs over gRPC (GREP11), refer to [Performing cryptographic operations with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api).

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018-2020
-lastupdated: "2020-01-08"
+lastupdated: "2020-05-27"
 
-keywords: set up API, use key management API, use KMS API, access Hyper Protect Crypto Services API, access KMS API
+keywords: set up api, kms api, key protect api, key management api, using api
 
 subcollection: hs-crypto
 
@@ -20,7 +20,7 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 
-# Setting up the key management API
+# Managing your keys with the key management API
 {: #set-up-kms-api}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a key management API to store, retrieve, and generate encryption keys.

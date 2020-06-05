@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018-2020
-lastupdated: "2020-01-08"
+lastupdated: "2020-05-27"
 
-keywords: set up API, use EP11 API, access EP11 API, EP11 over gRPC, GREP11
+keywords: set up api, api key, cryptographic operations, use ep11 api, access ep11 api, ep11 over grpc, using api
 
 subcollection: hs-crypto
 
@@ -20,7 +20,7 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 
-# Setting up the GREP11 API
+# Performing cryptographic operations with the GREP11 API
 {: #set-up-grep11-api}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides an Enterprise PKCS #11 (EP11) API over gRPC (also referred to as *GREP11 API*) to remotely access the {{site.data.keyword.hscrypto}} service instance for data encryption and management.
@@ -59,7 +59,7 @@ import pb "github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/golang/grpc"
 type IAMPerRPCCredentials struct {
 	expiration  time.Time
 	updateLock  sync.Mutex
-	Instance    string // IBM Cloud HPCS instance ID  
+	Instance    string // IBM Cloud HPCS instance ID
 	AccessToken string // IBM Cloud IAM access token
 	APIKey      string // Service ID API key
 	Endpoint    string // IBM Cloud IAM endpoint
