@@ -169,14 +169,14 @@ FAILED
 Error reported by EP11 crypto module.
 Return code: 209
 Reason code: 71
-Error message: Change not allowed.  You are not allowed to change a threshold value if the corresponding attribute control bit is reset.
+Error message: Change not allowed. You are not allowed to change a threshold value if the corresponding attribute control bit is reset.
 ```
 {: screen}
 
 The TKE plug-in through version 0.0.11 restricts the ability to set the signature threshold and revocation signature threshold to a value other than one. The restriction can be removed by zeroizing the crypto unit.
 {: tsCauses}
 
-To set the signature threshold or revocation signature threshold to a value greater than one, [zeroize the crypto unit](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step). This removes the restriction. Then reinstall the administrators that you want to use and set the threshold values by using either the latest version of the TKE plug-in or the Trusted Key Entry application.
+To set the signature threshold or revocation signature threshold to a value greater than one, [zeroize the crypto unit](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step). This removes the restriction. Then reinstall the administrators that you want to use and set the threshold values by using either the latest version of the TKE plug-in or the Trusted Key Entry application.
 {: tsResolve}
 
 Zeroizing a crypto unit clears the master key registers. To fully recover the state of a crypto unit after zeroizing it, you need to reload the master key registers and the administrators. Depending on your loading method, see [Loading master keys with the TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#load-master-keys) or [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#load-master-key-management-utilities) for instructions.

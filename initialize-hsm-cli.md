@@ -58,9 +58,11 @@ The following diagram gives you an overview of steps you need to take to initial
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step7-activate-master-key" alt="Activate the master key" title="Activate master key register" shape="rect" coords="638, 290, 718, 340" />
 </map>
 
+<!--
 You can also watch the following video to learn how to initialize {{site.data.keyword.hscrypto}} instances with {{site.data.keyword.cloud_notm}} TKE CLI plug-in:
 
 <iframe class="embed-responsive-item" id="youtubeplayer" title="Initialize Hyper Protect Crypto Services with IBM Cloud TKE CLI" type="text/html" width="640" height="390" src="//www.youtube.com/embed/df2q-QdJPgQ?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
+-->
 
 It might take 20 - 30 minutes for you to complete this task.
 
@@ -197,9 +199,9 @@ For security considerations, the signature key owners can be different people fr
   ```
   {: pre}
 
-  A list of signature keys that are found on the workstation is displayed. When prompted, enter the key numbers of the signature key files to select for signing future administrative commands. When prompted, enter the passwords for the signature key files.
+  A list of signature keys that are found on the workstation is displayed. When prompted, enter the key numbers of the signature key files to select for signing future administrative commands. When prompted, enter the passwords for the signature key files.
 
-  This command determines what signature keys are allowed to sign future commands. There is no limit to the number of signature key files that you can select. If you select more signature keys than required to sign a command, the actual signature keys that are used will be determined at the time the command is executed.
+  This command determines what signature keys are allowed to sign future commands. There is no limit to the number of signature key files that you can select. If you select more signature keys than required to sign a command, the actual signature keys that are used will be determined at the time the command is executed.
 
 ### Step 2: Add one or more administrators in the target crypto unit
 {: #step2-load-admin}
@@ -235,7 +237,7 @@ For security considerations, the signature key owners can be different people fr
 ### Step 3: Set the signature thresholds to exit imprint mode in the target crypto unit
 {: #step3-exit-imprint-mode}
 
-A crypto unit in imprint mode isn't considered secure. You can't run most of the administrative commands, such as loading the new master key register, in imprint mode.
+A crypto unit in imprint mode isn't considered secure. You can't run most of the administrative commands, such as loading the new master key register, in imprint mode.
 
 After you add one or more crypto unit administrators, exit imprint mode by using the command:
 
@@ -248,7 +250,7 @@ When prompted, enter values for the signature threshold and revocation signature
 
 The signature threshold values must be numbers between one and eight. The signature threshold and revocation signature threshold can be different. Setting the signature thresholds to a value greater than one is a way to enforce dual control for sensitive operations.
 
-The command to exit imprint mode must be signed by as many administrators as specified by the new signature threshold value. After crypto units leave imprint mode, all commands to the crypto unit must be signed. After the crypto unit exits imprint mode, you can still change the signature thresholds on the crypto unit by using the `cryptounit-thrhld-set` command. To display the current signature threshold values, run the `ibmcloud tke cryptounit-thrhlds` command.
+The command to exit imprint mode must be signed by as many administrators as specified by the new signature threshold value. After crypto units leave imprint mode, all commands to the crypto unit must be signed. After the crypto unit exits imprint mode, you can still change the signature thresholds on the crypto unit by using the `cryptounit-thrhld-set` command. To display the current signature threshold values, run the `ibmcloud tke cryptounit-thrhlds` command.
 {: important}
 
 ### Step 4: Create a set of master key parts to use
