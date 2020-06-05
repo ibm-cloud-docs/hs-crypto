@@ -27,12 +27,12 @@ Stay up-to-date with the new features that are available for {{site.data.keyword
 ## June 2020
 {: #june-2020}
 
-### Added: Support for multiple administrative signatures for administrative commands
+### Added: Support for multiple signatures for administrative commands
 {: #added-multiple-signature-202006}
 
 Both the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) command-line interface (CLI) plug-in and the {{site.data.keyword.hscrypto}} Management Utilities now support signature thresholds greater than one.
 
-The signature thresholds of a crypto unit control how many administrative signatures are required for a command to be executed. With this change, you can set as many as eight administrative signatures for an administrative command to be executed during service instance initialization. Eight is also the maximum number of administrators that can be added to a crypto unit. For detailed information, see [Signature thresholds](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept).
+The signature thresholds of a crypto unit control how many administrative signatures are required for a command to be executed. With this change, you can set as many as eight signatures for an administrative command to be executed during service instance initialization. Eight is also the maximum number of administrators that can be added to a crypto unit. For detailed information, see [Signature thresholds](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept).
 
 For information on how to initialize a service instance using the TKE CLI, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
