@@ -8,8 +8,6 @@ IBM Cloud Hyper Protect Crypto Services
     {: .topicgroup}
     Getting started
         index.md
-        [Video: Initializing Hyper Protect Crypto Services with IBM Cloud TKE CLI](https://www.youtube.com/watch?v=df2q-QdJPgQ&feature=youtu.be)
-        [Video: Initializing Hyper Protect Crypto Services with smart cards](https://www.youtube.com/watch?v=VTkGd_mcwyI&feature=youtu.be)
 
     {: .topicgroup}
     About
