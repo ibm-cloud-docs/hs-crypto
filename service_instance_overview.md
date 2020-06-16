@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-27"
+lastupdated: "2020-06-11"
 
 keywords: initialize service, key ceremony, hsm, tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -117,11 +117,13 @@ Because smart cards are the only place where signature keys and master key parts
 
 The contents of an EP11 smart card can be copied to another EP11 smart card that was created in the same smart card zone by using the Trusted Key Entry application. On the **Smart card** tab, click **Copy smart card**, and follow the prompts.
 
-It is suggested that each master key part is created on a separate EP11 smart card and be assigned to a different person. Backup copies of all smart cards need to be created and stored in a safe place. It is suggested that you buy 8 or 10 smart cards and initialize them this way:
+It is suggested that each master key part is created on a separate EP11 smart card and be assigned to a different person. Backup copies of all smart cards need to be created and stored in a safe place. It is suggested that you buy eight or 10 smart cards and initialize them this way:
 
 - Create a certificate authority smart card and a backup certificate authority smart card.
 - Create two EP11 smart cards to hold an administrator signature key. Generate the administrator signature key on one EP11 smart card and copy it to the other.
 - Create four or six EP11 smart cards to hold master key parts. Generate an EP11 master key part on two or three of the smart cards, depending on whether you want to use two or three key parts when you load your master key. Copy each key part value to a backup EP11 smart card.
+
+For greater security, you can generate administrator signature keys on additional EP11 smart cards and set the signature thresholds in your crypto units to a value greater than one. You can install up to eight administrators in your crypto units and specify that up to eight signatures are required for some administrative commands.
 
 ### Understanding smart card readers
 {: #understand-smart-card-reader}
