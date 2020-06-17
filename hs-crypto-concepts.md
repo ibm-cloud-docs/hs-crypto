@@ -114,7 +114,7 @@ A master key is composed of several master key parts. For security consideratio
 ### {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in
 {: #tke-concept}
 
-Trusted Key Entry (TKE) command-line interface (CLI) plug-in is a CLI plug-in working with {{site.data.keyword.cloud_notm}} CLI. The TKE plug-in provides a set of functions for managing crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user account. You can use the TKE plug-in to set up administrators and load the master key with the requirements of a medium level of security. For detailed instructions, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm). For the complete command reference, see [Trusted Key Entry CLI plug-in reference]((/docs/hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin)).
+Trusted Key Entry (TKE) command-line interface (CLI) plug-in is a CLI plug-in working with {{site.data.keyword.cloud_notm}} CLI. The TKE plug-in provides a set of functions for managing crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user account. You can use the TKE plug-in to set up administrators and load the master key with the requirements of a medium level of security. For detailed instructions, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm). For the complete command reference, see [Trusted Key Entry CLI plug-in reference](/docs/hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin).
 
 ### Management Utilities
 {: #management-utilities-concept}
