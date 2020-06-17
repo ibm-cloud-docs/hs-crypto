@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-06-11"
+lastupdated: "2020-06-17"
 
 keywords: initialize service, key ceremony, hsm, tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -151,7 +151,7 @@ The Trusted Key Entry application is one of the two applications that are instal
 
 When you choose to store the signature key and master key parts on your workstation, use the {{site.data.keyword.cloud_notm}} TKE CLI plug-in to load the master key. With the TKE CLI plug-in, you can load the master key by issuing corresponding commands. No additional hardware is needed. However, as master key parts are stored on your local workstation, the TKE CLI plug-in provides a comparatively lower level of security.
 
-For the complete command reference, see [Trusted Key Entry CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin). For detailed instructions, see [Initializing service instances with {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
+For the complete command reference, see [Trusted Key Entry CLI plug-in reference]((/docs/hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin)). For detailed instructions, see [Initializing service instances with {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
 ## Understanding how master key is loaded
 {: #understand-key-ceremony}
