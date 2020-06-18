@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-13"
+lastupdated: "2020-06-18"
 
 keywords: key storage, hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, key part, initialize service, smart card, trusted key entry application, tke application, management utilities, cloudtkefiles
 
@@ -31,11 +31,9 @@ Before you can use a service instance, you need to load the [master keys](#x2908
 
 The [Management Utilities](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-management-utilities) use smart cards to hold [signature keys](#x8250375){: term} and master key parts. You need to complete the tasks in [Setting up the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities) before you can complete the steps in this task.
 
-<!--
 You can also watch the following video to learn how to initialize {{site.data.keyword.hscrypto}} instances with the Management Utilities:
 
 <iframe class="embed-responsive-item" id="youtubeplayer" title="Initialize Hyper Protect Crypto Services with IBM Cloud TKE CLI" type="text/html" width="640" height="390" src="//www.youtube.com/embed/VTkGd_mcwyI?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
--->
 
 ## Before you begin
 {: #initialize-crypto-utilities-prerequisites}
@@ -150,7 +148,7 @@ When crypto units in service instances are assigned to a user, they begin in a c
   The values must be numbers between one and eight and do not need to be the same. The signature threshold controls how many signatures are needed to run most administrative commands. The revocation signature threshold controls how many signatures are needed to remove an administrator after you leave imprint mode. Some commands need only one signature, regardless of how the signature threshold is set.
 3. If prompted, insert an EP11 smart card with an administrator signature key that is defined to the selected crypto units in smart card reader 1 and enter the smart card PIN on the smart card reader PIN pad. Repeat this operation if prompted for additional EP11 smart cards with signature keys. When exiting imprint mode, the number of signatures needed for this command is the new signature threshold value. 
 
-After the signature threshold values are set, the new values are displayed on the **Signature thresholds** page. Setting the signature thresholds to a value greater than one enables dual control from multiple administrators for sensitive operations.
+After the signature threshold values are set, the new values are displayed on the **Signature thresholds** page. Setting the signature thresholds to a value greater than one enables [quorum authentication](/docs/hs-crypto?topic=hs-crypto-understand-concepts#quorum-authenticaion-concept) from multiple administrators for sensitive operations.
 
 When an EP11 smart card with a valid administrator signature key is inserted in smart card reader 1 and its PIN is entered, the smart card can be used to sign multiple commands. In the following Step 5, if the reader already contains an EP11 smart card with a valid signature key and the PIN is entered, you're not prompted to insert an EP11 smart card with a signature key in smart card reader 1.
 {: tip}

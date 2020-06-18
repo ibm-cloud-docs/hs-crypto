@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-06-17"
+lastupdated: "2020-06-18"
 
 keywords: concept, keep your own key, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -92,6 +92,11 @@ An administrator must sign any commands that are issued to the crypto unit with 
 
 Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start in a cleared state that is known as *imprint mode*. Most crypto unit operations are disabled in imprint mode, and a crypto unit in imprint mode is not secure. You can add administrators in imprint mode and exit imprint mode by using a signed command. After the crypto unit exits imprint mode, all commands to configure a crypto unit must be signed. You must exit imprint mode before you can load [master keys](#master-key-concept).
 
+### Quorum authentication
+{: #quorum-authenticaion-concept}
+
+Quorum authentication is the way to approve an operation by a set number of crypto unit administrators. Some sensitive operations require a sufficient number of crypto unit administrators to enter their credentials. Quorum authentication assures that no single person can make a critical change on the crypto unit. Instead, a minimum number of crypto unit administrators (at least two) must cooperate to do these operations. Quorum authentication requires more than one crypto unit administrator to approve an operation, which enables an extra layer of protection on the crypto unit.
+
 ### Signature thresholds
 {: #signature-thresholds-concept}
 
@@ -99,7 +104,7 @@ The signature thresholds of a crypto unit control how many administrative signat
 
 There are two types of signature thresholds on a crypto unit. The main signature threshold controls how many signatures are needed to run most administrative commands. The revocation signature threshold controls how many signatures are needed to remove an administrator. Some commands need only one signature, regardless of how the signature threshold is set.
 
-Setting the signature thresholds to a value greater than one enables dual control from multiple administrators for sensitive operations. The maximum value that you can set the signature threshold and revocation signature threshold is eight, which is also the maximum number of administrators that can be added to a crypto unit.
+Setting the signature thresholds to a value greater than one enables quorum authentication from multiple administrators for sensitive operations. The maximum value that you can set the signature threshold and revocation signature threshold is eight, which is also the maximum number of administrators that can be added to a crypto unit.
 
 ### Master keys
 {: #master-key-concept}

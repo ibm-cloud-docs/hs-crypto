@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-06-02"
+lastupdated: "2020-06-18"
 
 keywords: key storage, hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, key part, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -58,11 +58,9 @@ The following diagram gives you an overview of steps you need to take to initial
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step7-activate-master-key" alt="Activate the master key" title="Activate master key register" shape="rect" coords="638, 290, 718, 340" />
 </map>
 
-<!--
 You can also watch the following video to learn how to initialize {{site.data.keyword.hscrypto}} instances with {{site.data.keyword.cloud_notm}} TKE CLI plug-in:
 
 <iframe class="embed-responsive-item" id="youtubeplayer" title="Initialize Hyper Protect Crypto Services with IBM Cloud TKE CLI" type="text/html" width="640" height="390" src="//www.youtube.com/embed/df2q-QdJPgQ?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
--->
 
 It might take 20 - 30 minutes for you to complete this task.
 
@@ -199,9 +197,9 @@ For security considerations, the signature key owners can be different people fr
   ```
   {: pre}
 
-  A list of signature keys that are found on the workstation is displayed. When prompted, enter the key numbers of the signature key files to select for signing future administrative commands. When prompted, enter the passwords for the signature key files.
+  A list of signature keys that are found on the workstation is displayed. When prompted, enter the key numbers of the signature key files to select for signing future administrative commands. When prompted, enter the passwords for the signature key files.
 
-  This command determines what signature keys are allowed to sign future commands. There is no limit to the number of signature key files that you can select. If you select more signature keys than required to sign a command, the actual signature keys that are used will be determined at the time the command is executed.
+  This command determines what signature keys are allowed to sign future commands. There is no limit to the number of signature key files that you can select. If you select more signature keys than required to sign a command, the actual signature keys that are used will be determined at the time the command is executed.
 
 ### Step 2: Add one or more administrators in the target crypto unit
 {: #step2-load-admin}
@@ -237,7 +235,7 @@ For security considerations, the signature key owners can be different people fr
 ### Step 3: Set the signature thresholds to exit imprint mode in the target crypto unit
 {: #step3-exit-imprint-mode}
 
-A crypto unit in imprint mode isn't considered secure. You can't run most of the administrative commands, such as loading the new master key register, in imprint mode.
+A crypto unit in imprint mode isn't considered secure. You can't run most of the administrative commands, such as loading the new master key register, in imprint mode.
 
 After you add one or more crypto unit administrators, exit imprint mode by using the command:
 
@@ -248,9 +246,9 @@ ibmcloud tke cryptounit-thrhld-set
 
 When prompted, enter values for the signature threshold and revocation signature threshold. The signature threshold controls how many signatures are required to execute most administrative commands. The revocation signature threshold controls how many signatures are required to remove an administrator after you have left imprint mode. Some commands require only one signature, regardless of how the signature threshold is set.
 
-The signature threshold values must be numbers between one and eight. The signature threshold and revocation signature threshold can be different. Setting the signature thresholds to a value greater than one is a way to enforce dual control for sensitive operations.
+The signature threshold values must be numbers between one and eight. The signature threshold and revocation signature threshold can be different. Setting the signature thresholds to a value greater than one is a way to enforce [quorum authentication](/docs/hs-crypto?topic=hs-crypto-understand-concepts#quorum-authenticaion-concept) for sensitive operations.
 
-The command to exit imprint mode must be signed by as many administrators as specified by the new signature threshold value. After crypto units leave imprint mode, all commands to the crypto unit must be signed. After the crypto unit exits imprint mode, you can still change the signature thresholds on the crypto unit by using the `cryptounit-thrhld-set` command. To display the current signature threshold values, run the `ibmcloud tke cryptounit-thrhlds` command.
+The command to exit imprint mode must be signed by as many administrators as specified by the new signature threshold value. After crypto units leave imprint mode, all commands to the crypto unit must be signed. After the crypto unit exits imprint mode, you can still change the signature thresholds on the crypto unit by using the `cryptounit-thrhld-set` command. To display the current signature threshold values, run the `ibmcloud tke cryptounit-thrhlds` command.
 {: important}
 
 ### Step 4: Create a set of master key parts to use
@@ -344,3 +342,4 @@ When prompted, enter the password for the signature key file to be used. For thi
 - Go to the **Manage** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
 - To learn more about using Enterprise PKCS #11 APIs to perform cryptographic operations for your applications, check out [Encrypt your data with Cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm) and the [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 - Use {{site.data.keyword.hscrypto}} as the root key provider for other {{site.data.keyword.cloud_notm}} services. For more information about integrating {{site.data.keyword.hscrypto}}, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
+- For information on how to rotate the master key, see [Rotating master keys with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli).

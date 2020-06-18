@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-06-05"
+lastupdated: "2020-06-18"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,16 +27,16 @@ Stay up-to-date with the new features that are available for {{site.data.keyword
 ## June 2020
 {: #june-2020}
 
-### Added: Support for multiple signatures for administrative commands
-{: #added-multiple-signature-202006}
+### Added: Support for quorum authentication
+{: #added-quorum-authentication-202006}
 
-Both the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) command-line interface (CLI) plug-in and the {{site.data.keyword.hscrypto}} Management Utilities now support signature thresholds greater than one.
+Both the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) command-line interface (CLI) plug-in and the {{site.data.keyword.hscrypto}} Management Utilities now support [quorum authentication](/docs/hs-crypto?topic=hs-crypto-understand-concepts#quorum-authenticaion-concept).
 
-The signature thresholds of a crypto unit control how many administrative signatures are required for a command to be executed. With this change, you can set as many as eight signatures for an administrative command to be executed during service instance initialization. Eight is also the maximum number of administrators that can be added to a crypto unit. For detailed information, see [Signature thresholds](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept).
+Quorum authentication is the way to approve an operation by a set number of crypto unit administrators. Some sensitive operations require a sufficient number of crypto unit administrators to enter their credentials. Setting the [signature thresholds](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept) to a value greater than one enables quorum authentication.
 
-For information on how to initialize a service instance using the TKE CLI, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
+For information on how to initialize a service instance using the TKE CLI and enable quorum authentication, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
-For information on how to initialize a service instance using the Management Utilities, see [Setting up the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities) and [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
+For information on how to initialize a service instance using the Management Utilities and enable quorum authentication, see [Setting up the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities) and [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
 ## April 2020
 {: #april-2020}
