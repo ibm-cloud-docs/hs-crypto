@@ -30,7 +30,7 @@ You can use the following FAQs to help you with {{site.data.keyword.cloud}} {{si
 ## General
 {: #faq-basics}
 
-### What's {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?
+## What's {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?
 {: #faq-what-is-hpcs}
 {: faq}
 
@@ -41,43 +41,43 @@ You can use the following FAQs to help you with {{site.data.keyword.cloud}} {{si
 - Data-at-rest encryption with customer-owned keys with seamless [integration with other {{site.data.keyword.cloud_notm}} data and storage services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
 - Enterprise PKCS #11 library for cryptographic operations, which is enabled by the {{site.data.keyword.hscrypto}} HSMs with the highest security level in the cloud.
 
-### What is a key management service?
+## What is a key management service?
 {: #faq-what-key-management}
 {: faq}
 
 {{site.data.keyword.hscrypto}} provides a single-tenant key management service that allows you to create, import, rotate, and manage keys. Once the encryption keys are deleted, you can be assured that your data that is protected by these keys is no longer retrievable. The service is built on FIPS 140-2 Level 4 certified HSM, which offers the highest level of protection in the cloud industry. {{site.data.keyword.hscrypto}} provides the same set of [key management APIs](https://{DomainName}/apidocs/hs-crypto) as [{{site.data.keyword.keymanagementservicefull_notm}}](https://cloud.ibm.com/catalog/services/key-protect){: external} for you to build your applications or leverage {{site.data.keyword.cloud_notm}} data and infrastructure services.
 
-### What is Hardware Security Module?
+## What is Hardware Security Module?
 {: #faq-what-is-hsm}
 {: faq}
 
 A Hardware Security Module (HSM) provides secure key storage and cryptographic operations within a tamper-resistant hardware device for sensitive data. HSMs use the key material without exposing it outside the cryptographic boundary of the hardware.
 
-### What is a cloud HSM?
+## What is a cloud HSM?
 {: #faq-what-is-cloud-hsm}
 {: faq}
 
 A cloud HSM is a cloud-based hardware security module that enables you to manage your own encryption keys and to perform cryptographic operations in {{site.data.keyword.cloud_notm}}. {{site.data.keyword.hscrypto}} is built on FIPS 140-2 Level 4 certified HSM, which offers the highest level of protection in the cloud industry. With the Keep Your Own Key (KYOK) support, customers can configure the [master key](#x2908413){: term} and take the ownership of the cloud HSM. Customers have full control and authority over the entire key hierarchy, where no {{site.data.keyword.cloud_notm}} administrators have access to your keys.
 
-### How does {{site.data.keyword.hscrypto}} provide a single-tenant cloud service?
+## How does {{site.data.keyword.hscrypto}} provide a single-tenant cloud service?
 {: #faq-single-tenant}
 
 {{site.data.keyword.hscrypto}} is a single-tenant cloud service because each customer has a dedicated software stack and a dedicated HSM domain for every crypto unit. As a customer, you are assured that you are interacting with a dedicated service stack that only processes your data. For additional information on the service architecture, see [How does Hyper Protect Crypto Services work](/docs/hs-crypto?topic=hs-crypto-overview#how-hpcs-work).
 
-### What are the responsibilities of users and {{site.data.keyword.cloud_notm}} for {{site.data.keyword.hscrypto}}?
+## What are the responsibilities of users and {{site.data.keyword.cloud_notm}} for {{site.data.keyword.hscrypto}}?
 {: #faq-responsibilities-users-cloud}
 {: faq}
 
 {{site.data.keyword.hscrypto}} is a platform-as-a-service on {{site.data.keyword.cloud_notm}}. {{site.data.keyword.cloud_notm}} is responsible for management of servers, network, storage, virtualization, middleware, and runtime, which ensures good performance and high availability. Customers are responsible for the management of data and applications, specifically encryption keys that are stored in {{site.data.keyword.hscrypto}} and user applications that use keys or cryptographic functions for cryptographic operations.
 
-### How is this service different from {{site.data.keyword.cloud_notm}} HSM?
+## How is this service different from {{site.data.keyword.cloud_notm}} HSM?
 {: #faq-differentiators-cloud-hsm}
 {: faq}
 {: support}
 
 IBM has an IaaS {{site.data.keyword.cloud_notm}} HSM service, which is different from the {{site.data.keyword.hscrypto}}. {{site.data.keyword.cloud_notm}} HSM is FIPS 140-2 Level 3 compliant. {{site.data.keyword.hscrypto}} provides a managed HSM service where no special skills are needed to manage the HSM other than loading of the keys. <!--High availability, backup (currently is backed up daily by the service and is not triggered by users), and scaling can all be done by using cloud APIs.--> {{site.data.keyword.hscrypto}} is currently the only cloud service that provides HSMs that are built on FIPS 140-2 Level 4 certified hardware and that allow users to have control of the master key.
 
-### How is {{site.data.keyword.hscrypto}} different from {{site.data.keyword.keymanagementserviceshort}}?
+## How is {{site.data.keyword.hscrypto}} different from {{site.data.keyword.keymanagementserviceshort}}?
 {: #faq-differentiators-key-protect}
 {: faq}
 {: support}
@@ -86,7 +86,7 @@ IBM has an IaaS {{site.data.keyword.cloud_notm}} HSM service, which is different
 
 {{site.data.keyword.hscrypto}} is a single-tenant service that is designed for you to look for complete control of your data encryption keys and cloud HSMs that protect these keys. Additionally, this service also supports industry standards such as Public-Key Cryptography Standards #11 (PKCS #11) for cryptographic services like digital signing and Secure Sockets Layer (SSL) offloading.
 
-### What can I do with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?
+## What can I do with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?
 {: #faq-what-do-with-hpcs}
 {: faq}
 
@@ -98,7 +98,7 @@ IBM has an IaaS {{site.data.keyword.cloud_notm}} HSM service, which is different
 
 For more information, see [{{site.data.keyword.hscrypto}} use cases](/docs/hs-crypto?topic=hs-crypto-use-cases).
 
-### How do I know whether {{site.data.keyword.hscrypto}} is right for my company?
+## How do I know whether {{site.data.keyword.hscrypto}} is right for my company?
 {: #faq-choose-hs-crypto}
 {: faq}
 
@@ -115,7 +115,7 @@ Key features include the following:
 * Regulatory compliance through data encryption and controls on privileged access
 * Keep Your Own Key (KYOK) that ensures your full control of the entire key hierarchy
 
-### How does {{site.data.keyword.hscrypto}} work?
+## How does {{site.data.keyword.hscrypto}} work?
 {: #faq-how-hpcs-work}
 {: faq}
 
@@ -125,7 +125,7 @@ A crypto unit is a single unit that represents a hardware security module and th
 
 {{site.data.keyword.hscrypto}} built on FIPS 140-2 Level 4 HSM supports Enterprise PKCS #11 for cryptographic operations. The functions can be accessed through gRPC API calls.
 
-### What crypto card does {{site.data.keyword.hscrypto}} use?
+## What crypto card does {{site.data.keyword.hscrypto}} use?
 {: #faq-crypto-card}
 {: faq}
 {: support}
@@ -134,13 +134,13 @@ A crypto unit is a single unit that represents a hardware security module and th
 
 For  more information, see the [IBM CryptoCards News page](https://www.ibm.com/security/cryptocards/cryptonews){: external} and [IBM CryptoCards CEX6S / 4768 Overview](https://www.ibm.com/security/cryptocards/pciecc3/overview){: external}.
 
-### Which IBM regions are {{site.data.keyword.hscrypto}} available in?
+## Which IBM regions are {{site.data.keyword.hscrypto}} available in?
 {: #faq-hpcs-regions}
 {: faq}
 
 Currently, {{site.data.keyword.hscrypto}} is available in Dallas, Sydney, and Frankfurt. For an up-to-date list of supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
-### I have workloads in a data center where {{site.data.keyword.hscrypto}} is not available. Can I still subscribe to this service?
+## I have workloads in a data center where {{site.data.keyword.hscrypto}} is not available. Can I still subscribe to this service?
 {: #faq-data-center}
 {: faq}
 {: support}
@@ -150,7 +150,7 @@ Yes. {{site.data.keyword.hscrypto}} can be accessed remotely worldwide for key m
 ## Pricing
 {: #faq-pricing}
 
-### How am I charged for my use of {{site.data.keyword.hscrypto}}?
+## How am I charged for my use of {{site.data.keyword.hscrypto}}?
 {: #faq-how-charge-hpcs}
 {: faq}
 {: support}
@@ -171,7 +171,7 @@ For example, if you want to crypto-process 5000 keys by using {{site.data.keywor
 {: caption="Table 1. A billing example of two crypto units with monthly API calls of 2,000,000 per crypto unit" caption-side="bottom"}
 
 <!--
-### Is there a free trial for {{site.data.keyword.hscrypto}}?
+## Is there a free trial for {{site.data.keyword.hscrypto}}?
 {: #faq-free-trial}
 {: faq}
 
@@ -181,13 +181,13 @@ Yes, a free trial period of 60 days is available for {{site.data.keyword.hscrypt
 ## Provisioning and operations
 {: #faq-provisioning-operations}
 
-### Are there any prerequisites for using {{site.data.keyword.hscrypto}}?
+## Are there any prerequisites for using {{site.data.keyword.hscrypto}}?
 {: #faq-hpcs-prerequisites}
 {: faq}
 
 There are no prerequisites for using {{site.data.keyword.hscrypto}}. The service can be provisioned quickly by following instructions in [Provisioning service instances](/docs/hs-crypto?topic=hs-crypto-provision). However, in order to perform key management and cryptographic operations, you need to initialize service instances first by using [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or the [Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) by using smart cards.
 
-### How to initialize {{site.data.keyword.hscrypto}} service instances?
+## How to initialize {{site.data.keyword.hscrypto}} service instances?
 {: #faq-how-to-initialize}
 {: faq}
 {: support}
@@ -198,14 +198,14 @@ To initialize the service instance, you need to create administrator signature k
 
 - Using the [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-tke-plugin) for a solution that does not require the procurement of smart card readers and smart cards. This solution uses workstation files encrypted with a key that is derived from a file password to store signature keys and master key parts. When the keys are used, file contents are decrypted and appear temporarily in the clear in workstation memory.
 
-### Are there any recommendations on how to set up smart cards?
+## Are there any recommendations on how to set up smart cards?
 {: #faq-smart-card-setup}
 {: faq}
 {: support}
 
 It is recommended to procure eight or 10 smart cards and two smart card readers. The smart cards can be set up to contain a primary set and a backup set. For details of the recommendations, see [Smart card setup recommendations](/docs/hs-crypto?topic=hs-crypto-introduce-service#smart-card-considerations). To find out details on how to procure and set up smart cards and other Management Utilities components, see [Setting up the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities).
 
-### How can I procure smart cards and smart card readers?
+## How can I procure smart cards and smart card readers?
 {: #faq-procure-smart-card}
 {: faq}
 
@@ -229,26 +229,26 @@ For procurement from other countries, contact IBM Part Sales through the followi
 |UK | parts_sales@uk.ibm.com|
 {: caption="Table 2. IBM Part Sales contacts" caption-side="top"}
 
-### How many crypto units should I set up in my service instance?
+## How many crypto units should I set up in my service instance?
 {: #faq-crypto-units-number}
 {: faq}
 
 You need to set up at least two crypto units for high availability. {{site.data.keyword.hscrypto}} currently sets the upper limit of crypto unit to three.
 
-### Can I use {{site.data.keyword.hscrypto}} along with other {{site.data.keyword.cloud_notm}} services?
+## Can I use {{site.data.keyword.hscrypto}} along with other {{site.data.keyword.cloud_notm}} services?
 {: #faq-hpcs-with-cloud-services}
 {: faq}
 
 Yes. {{site.data.keyword.hscrypto}} can be integrated with many {{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.vmwaresolutions_short}}, {{site.data.keyword.containerlong_notm}}, and {{site.data.keyword.openshiftlong_notm}}. For a complete list of services and instructions on integrations, see [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services). 
 
-### How does my application connect to a {{site.data.keyword.hscrypto}} service instance?
+## How does my application connect to a {{site.data.keyword.hscrypto}} service instance?
 {: #faq-application-connection}
 {: faq}
 
 {{site.data.keyword.hscrypto}} provides the standard APIs for users to access. Your applications can connect to a {{site.data.keyword.hscrypto}} service instance by using the APIs directly over the public internet. If a more secured and isolated connection is needed, you can also use [private endpoints](/docs/hs-crypto?topic=hs-crypto-private-endpoints). You can connect your service instance through {{site.data.keyword.cloud_notm}} service endpoints over the {{site.data.keyword.cloud_notm}} private network.
 
 <!--
-### Can I use language characters as part of the key name?
+## Can I use language characters as part of the key name?
 {: #faq-key-name-rules}
 {: faq}
 {: support}
@@ -256,32 +256,32 @@ Yes. {{site.data.keyword.hscrypto}} can be integrated with many {{site.data.keyw
 Language characters, such as Chinese characters, cannot be used as part of the key name.
 -->
 
-### Can I generate master key on-premises and store the master key parts in the smart cards?
+## Can I generate master key on-premises and store the master key parts in the smart cards?
 {: #faq-generate-master-key-on-premises}
 
 Generating master key on-premises is currently not supported.
 
-### Can I import root keys from an on-premises HSM?
+## Can I import root keys from an on-premises HSM?
 {: #faq-import-key-on-premises}
 {: faq}
 
 Importing root keys from an on-premises HSM is currently not supported.
 
-### Can I use {{site.data.keyword.hscrypto}} only for cryptographic operations, but use other {{site.data.keyword.cloud_notm}} services such as {{site.data.keyword.keymanagementserviceshort}} for key management?
+## Can I use {{site.data.keyword.hscrypto}} only for cryptographic operations, but use other {{site.data.keyword.cloud_notm}} services such as {{site.data.keyword.keymanagementserviceshort}} for key management?
 {: #faq-hpcs-with-key-protect}
 {: faq}
 
 Yes. {{site.data.keyword.hscrypto}} can be used with {{site.data.keyword.keymanagementserviceshort}} for key management. In this way, {{site.data.keyword.hscrypto}} is responsible for only cryptographic operations, while {{site.data.keyword.keymanagementserviceshort}} provides key management service secured by multi-tenant FIPS 140-2 Level 3 certified cloud-based HSM.
 
 <!--
-### Can I use {{site.data.keyword.hscrypto}} only for cryptographic operations, but use my existing on-premises key management system for key storage?
+## Can I use {{site.data.keyword.hscrypto}} only for cryptographic operations, but use my existing on-premises key management system for key storage?
 {: #faq-hpcs-cryptography-only}
 {: faq}
 
 Integration with on-premises key management system is currently not supported.
 -->
 
-### Can I use {{site.data.keyword.hscrypto}} in conjunction with other cloud provider services such as AWS and Azure?
+## Can I use {{site.data.keyword.hscrypto}} in conjunction with other cloud provider services such as AWS and Azure?
 {: #faq-hpcs-other-cloud-vendor}
 {: faq}
 
@@ -290,27 +290,27 @@ Yes. Any application can connect to {{site.data.keyword.hscrypto}} and use our A
 ## Performance and capacity
 {: #faq-performance-capacity}
 
-### How many keys can be stored in a {{site.data.keyword.hscrypto}} service instance?
+## How many keys can be stored in a {{site.data.keyword.hscrypto}} service instance?
 {: #faq-keys-number}
 {: faq}
 
 A {{site.data.keyword.hscrypto}} service instance can hold a maximum of 5000 keys.
 
 <!--
-### How many cryptographic operations per second can {{site.data.keyword.hscrypto}} perform?
+## How many cryptographic operations per second can {{site.data.keyword.hscrypto}} perform?
 {: #faq-cryptographic-operations-number}
 {: faq}
 
 *Answers needed*
 -->
 
-### Can I add or remove crypto units after I provision a service instance?
+## Can I add or remove crypto units after I provision a service instance?
 {: #faq-add-remove-crypto-unit}
 {: faq}
 
 Adding or removing crypto units is currently not supported.
 
-### Is there a Service Level Agreement (SLA) specifically for {{site.data.keyword.hscrypto}}?
+## Is there a Service Level Agreement (SLA) specifically for {{site.data.keyword.hscrypto}}?
 {: #faq-hpcs-sla}
 {: faq}
 
@@ -319,7 +319,7 @@ Yes, you can find the [SLA](https://www-03.ibm.com/software/sla/sladb.nsf/sla/bm
 ## Security and compliance
 {: #faq-security-compliance}
 
-### How can I manage user access to my service instances? Does IBM have access to my instances?
+## How can I manage user access to my service instances? Does IBM have access to my instances?
 {: #faq-hpcs-ibm-access}
 {: faq}
 
@@ -327,13 +327,13 @@ IBM or any third-party users do not have access to your service instances or you
 
 {{site.data.keyword.hscrypto}} follows the {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) standard. You can [manage user access by assigning different IAM roles](/docs/hs-crypto?topic=hs-crypto-manage-access) and [grant access to specific keys](/docs/hs-crypto?topic=hs-crypto-grant-access-keys) to enable more granular access control.
 
-<!-- ### Can I share my service instance with other users? How can I manage the user's access?
+<!-- ## Can I share my service instance with other users? How can I manage the user's access?
 {: #faq-hpcs-user-access}
 {: faq}
 
 {{site.data.keyword.hscrypto}} follows the {{site.data.keyword.cloud_notm}} Identity and Access Management standard. You can share the service instance access through adding users in the access group. For more information, see [Managing access in {{site.data.keyword.cloud_notm}}](/docs/iam?topic=iam-cloudaccess). -->
 
-### How does IBM offer a unique and secure process for service initialization (key ceremony)?
+## How does IBM offer a unique and secure process for service initialization (key ceremony)?
 {: #faq-hpcs-user-access}
 {: faq}
 
@@ -345,7 +345,7 @@ A signature key is composed of an asymmetric key pair. The private part of the s
 
 This design ensures that no one can get full access of the master key, even the crypto unit administrators.
 
-### What is a 140-2 FIPS Level 4 Certification and how can I validate it?
+## What is a 140-2 FIPS Level 4 Certification and how can I validate it?
 {: #faq-fips-level4-meaning}
 {: faq}
 
@@ -355,7 +355,7 @@ The Federal Information Processing Standard (FIPS) Publication 140-2 is a US gov
 - [Cryptographic Module Validation Program](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Standards){: external}.
 - FIPS 140-2 defines four levels of security, including FIPS 140-2 Level 1, 2, 3, and Level 4.
 
-### What is the difference between FIPS 140-2 Level 1, 2, 3, and Level 4?
+## What is the difference between FIPS 140-2 Level 1, 2, 3, and Level 4?
 {: #faq-fips-levels}
 {: faq}
 
@@ -370,13 +370,13 @@ The Federal Information Processing Standard (FIPS) Publication 140-2 is a US gov
 
   {{site.data.keyword.hscrypto}} is the only cloud HSM in the public cloud market that is built on an HSM designed to meet FIPS 140-2 Level 4 certification requirements. The certification is listed on the [Cryptographic Module Validation Program (CVMP) Validated Modules List](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules){: external}.
 
-### What cryptographic algorithms are used in {{site.data.keyword.hscrypto}} key management service?
+## What cryptographic algorithms are used in {{site.data.keyword.hscrypto}} key management service?
 {: #faq-cryptographic-algorithms}
 {: faq}
 
 {{site.data.keyword.hscrypto}} key management service uses the Advanced Encryption Standard of Cipher Blocker Chaining (AES-CBC) algorithm for creating, wrapping, unwrapping, and rewrapping keys.
 
-### How does EP11 differ from PKCS#11?
+## How does EP11 differ from PKCS#11?
 {: #faq-ep11-pkcs11}
 
 Enterprise PKCS#11 (EP11) is aligned with PKCS#11 in terms of concepts and functions. An experienced PKCS#11 developer can easily start using EP11 functions. However, they have the following major differences:
@@ -385,7 +385,7 @@ Enterprise PKCS#11 (EP11) is aligned with PKCS#11 in terms of concepts and funct
 - EP11 is a stateless protocol, whereas PKCS#11 is stateful. The stateless design of EP11 allows for the use of external key stores as well as scaling to multiple backends.
 - EP11 over gRPC (GREP11) defines a network protocol that can be directly used in cloud applications.
 
-### What EP11 mechanisms are supported by the GREP11 functions?
+## What EP11 mechanisms are supported by the GREP11 functions?
 {: #faq-EP11-mechanisms}
 {: faq}
 
@@ -406,13 +406,13 @@ The following table includes the EP11 mechanisms that are categorized by GREP11 
 
 For more information on the EP11 mechanisms, see the [Enterprise PKCS#11 (EP11) Library structure guide](https://www.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=15022415USEN&dd=yes&){: external}.
 
-### What compliance standards does {{site.data.keyword.hscrypto}} meet?
+## What compliance standards does {{site.data.keyword.hscrypto}} meet?
 {: #faq-compliance-standards}
 {: faq}
 
 {{site.data.keyword.hscrypto}} meets controls for global, industry, and regional compliance standards, such as GDPR, HIPAA,<!-- IRAP,--> and ISO. As the HSM used by {{site.data.keyword.hscrypto}}, the IBM 4768 crypto card is also certified with Common Criteria EAL4 and FIPS 140-2 Level 4. For more information, see [Security and compliance](/docs/hs-crypto?topic=hs-crypto-security-and-compliance).
 
-### Can I monitor my service instance?
+## Can I monitor my service instance?
 {: #faq-monitor-instance}
 {: faq}
 
@@ -421,7 +421,7 @@ Yes, you can monitor the status of your service instance through [Activity Track
 ## High availability and disaster recovery
 {: #faq-ha-dr}
 
-### How do I set up a high availability configuration?
+## How do I set up a high availability configuration?
 {: #faq-ha-configuration}
 {: faq}
 
@@ -429,44 +429,44 @@ It is recommended that you provision at least two crypto units for high availabi
 
 For additional details, see [High availability and disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr).
 
-### Can I back up my service instance manually?
+## Can I back up my service instance manually?
 {: #faq-backup-manually}
 {: faq}
 
 You need to only back up your master key parts and signature keys for service initialization. Your data in {{site.data.keyword.hscrypto}} is backed up automatically by {{site.data.keyword.cloud_notm}} daily.
 
-### What happens if my service instance fails?
+## What happens if my service instance fails?
 {: #faq-instance-fail}
 {: faq}
 
 {{site.data.keyword.cloud_notm}} has automatic in-region failover plan in place. Currently, your data is backed up daily by the service  and you don't need to do anything to enable it. For [cross-region data restores](/docs/hs-crypto?topic=hs-crypto-ha-dr), you need to open an IBM support ticket so that IBM can restore the service instance for you.
 
-### How can I restore the content from backups?
+## How can I restore the content from backups?
 {: #faq-store-backup}
 {: faq}
 
 For cross-region data restores, you need to open an IBM support ticket so that IBM can restore the service instance for you. For more information, see [Restoring your data from another region](/docs/hs-crypto?topic=hs-crypto-restore-data).
 
-### What happens if I delete my service instances?
+## What happens if I delete my service instances?
 {: #faq-delete-instance}
 {: faq}
 
 If you delete your service instance, your keys that are managed are not accessible.
 
-### Can I back up the keys before I delete a service instance?
+## Can I back up the keys before I delete a service instance?
 {: #faq-backup-keys}
 {: faq}
 
 Backing up the keys manually is currently not supported.
 
-### What happens when I delete a key?
+## What happens when I delete a key?
 {: #faq-delete-a-key}
 {: faq}
 {: support}
 
 When you delete a key, the key is no longer recoverable and the cloud services that use the key can no longer decrypt data that is associated with the key. Your data remains in those services in its encrypted form. Before you delete a key, ensure that you no longer require access to any data that is associated with the key. This action currently cannot be reversed.
 
-### What happens if I lose the signature key or the master key parts?
+## What happens if I lose the signature key or the master key parts?
 {: #faq-lose-signature-key}
 {: faq}
 
@@ -475,13 +475,13 @@ If your signature key or master key part is lost, you are not able to initialize
 ## Support and maintenance
 {: #faq-support-maintenance}
 
-### How is routine maintenance performed on {{site.data.keyword.hscrypto}}?
+## How is routine maintenance performed on {{site.data.keyword.hscrypto}}?
 {: #faq-routine-maintenance}
 {: faq}
 
 If one available zone that contains your provisioned service instance goes down, {{site.data.keyword.hscrypto}} has automatic in-region data failover in place if you have 2 or 3 crypto units provisioned. IBM also performs cross-region backup for your key resources. Your data is automatically backed up in another supported region daily. If a regional disaster that affects all available zones occurs, you need to open a support ticket so that IBM can restore your data in another supported [{{site.data.keyword.cloud_notm}} regions](/docs/hs-crypto?topic=hs-crypto-regions) from the backup. And then, you need to manually load your master key to your new service instance. For more information, see [Restoring your data from another region](/docs/hs-crypto?topic=hs-crypto-restore-data).
 
-### How do I get support for {{site.data.keyword.hscrypto}}?
+## How do I get support for {{site.data.keyword.hscrypto}}?
 {: #faq-hpcs-support}
 {: faq}
 
