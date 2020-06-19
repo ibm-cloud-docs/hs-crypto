@@ -49,8 +49,8 @@ The following diagram gives you an overview of steps you need to take to initial
 
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step1-create-signature-keys" alt="Create one or more signature keys" title="Create signature keys" shape="rect" coords="126, 214, 226, 264" />
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Manage crypto unit administrators" title="Manage crypto unit administrators" shape="rect" coords="260, 214, 360, 264" />
-  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Add one or more administrators in the target crypto unit" title="Add crypto unit administrators" shape="rect" coords="219, 290, 299, 340" />
-  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step3-exit-imprint-mode" alt="Exit imprint mode in the target crypto unit" title="Exit imprint mode" shape="rect" coords="318, 290, 398, 340" />
+  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Add one or more administrators in the target crypto unit" title="Add crypto unit administrators" shape="rect" coords="178, 290, 258, 340" />
+  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step3-exit-imprint-mode" alt="Exit imprint mode and enable quorum authentication in the target crypto unit" title="Exit imprint mode and enable quorum authentication" shape="rect" coords="282, 290, 398, 340" />
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step4-create-master-key" alt="Create a set of master key parts to use" title="Create master key parts" shape="rect" coords="394, 214, 494, 264" />
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="Load master key registers" title="Load master key register" shape="rect" coords="528, 214, 628, 264" />
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="Load new master key registers" title="Load new master key register" shape="rect" coords="440, 290, 520, 340" />
