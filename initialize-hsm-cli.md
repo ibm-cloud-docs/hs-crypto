@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-06-18"
+lastupdated: "2020-06-22"
 
 keywords: key storage, hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, key part, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -49,8 +49,8 @@ The following diagram gives you an overview of steps you need to take to initial
 
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step1-create-signature-keys" alt="Create one or more signature keys" title="Create signature keys" shape="rect" coords="126, 214, 226, 264" />
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Manage crypto unit administrators" title="Manage crypto unit administrators" shape="rect" coords="260, 214, 360, 264" />
-  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Add one or more administrators in the target crypto unit" title="Add crypto unit administrators" shape="rect" coords="178, 290, 258, 340" />
-  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step3-exit-imprint-mode" alt="Exit imprint mode and enable quorum authentication in the target crypto unit" title="Exit imprint mode and enable quorum authentication" shape="rect" coords="282, 290, 398, 340" />
+  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Add one or more administrators in the target crypto unit" title="Add crypto unit administrators" shape="rect" coords="158, 290, 238, 340" />
+  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step3-exit-imprint-mode" alt="Set quorum authentication thresholds to exit imprint mode in the target crypto unit" title="Set quorum authentication thresholds to exit imprint mode in the target crypto unit" shape="rect" coords="260, 290, 398, 340" />
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step4-create-master-key" alt="Create a set of master key parts to use" title="Create master key parts" shape="rect" coords="394, 214, 494, 264" />
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="Load master key registers" title="Load master key register" shape="rect" coords="528, 214, 628, 264" />
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key" alt="Load new master key registers" title="Load new master key register" shape="rect" coords="440, 290, 520, 340" />
@@ -232,7 +232,7 @@ For security considerations, the signature key owners can be different people fr
   For security and compliance reasons, the administrator name of the crypto unit might be shown up in logs for auditing purposes.
   {: note}
 
-### Step 3: Set the signature thresholds to exit imprint mode in the target crypto unit
+### Step 3: Set the quorum authentication thresholds to exit imprint mode in the target crypto unit
 {: #step3-exit-imprint-mode}
 
 A crypto unit in imprint mode isn't considered secure. You can't run most of the administrative commands, such as loading the new master key register, in imprint mode.

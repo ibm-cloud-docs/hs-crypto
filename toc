@@ -96,7 +96,7 @@ IBM Cloud Hyper Protect Crypto Services
     Key management service reference
         [Key management API](https://{DomainName}/apidocs/hs-crypto)
         [Key management CLI](https://{DomainName}/docs/key-protect?topic=key-protect-cli-reference)
-        [Trusted Key Entry CLI](https://{DomainName}/docs/hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin)
+        [Trusted Key Entry CLI](https://{DomainName}/docs/hs-crypto-cli-plugin?topic=hs-crypto-cli-plugin-tke_cli_plugin)
 
     {: .topicgroup}
     Cloud hardware security module reference
