@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-06-22"
+lastupdated: "2020-06-28"
 
 keywords: key storage, hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, key part, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -58,11 +58,9 @@ The following diagram gives you an overview of steps you need to take to initial
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step7-activate-master-key" alt="Activate the master key" title="Activate master key register" shape="rect" coords="638, 290, 718, 340" />
 </map>
 
-<!--
 You can also watch the following video to learn how to initialize {{site.data.keyword.hscrypto}} instances with {{site.data.keyword.cloud_notm}} TKE CLI plug-in:
 
-<iframe class="embed-responsive-item" id="youtubeplayer" title="Initialize Hyper Protect Crypto Services with IBM Cloud TKE CLI" type="text/html" width="640" height="390" src="//www.youtube.com/embed/df2q-QdJPgQ?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
--->
+<iframe class="embed-responsive-item" id="youtubeplayer" title="Initialize Hyper Protect Crypto Services with IBM Cloud TKE CLI" type="text/html" width="640" height="390" src="//www.youtube.com/embed/Xb3DxniCh9I?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
 
 It might take 20 - 30 minutes for you to complete this task.
 
