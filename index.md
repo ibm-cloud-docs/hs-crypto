@@ -54,7 +54,7 @@ To manage your keys, you need to initialize your service instance first. Two opt
 
 For detailed steps and best practices of using the Management Utilities, see [Setting up the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities) and [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities). The [video of initializing {{site.data.keyword.hscrypto}} with smart cards](https://www.youtube.com/watch?v=FtRPRzF0dSs&feature=youtu.be){: external} also demonstrates the detailed procedure.
 
-For detailed steps and best practices of using the TKE CLI plug-in, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) and watch the [demonstration video of initializing {{site.data.keyword.hscrypto}} with {{site.data.keyword.cloud_notm}} TKE CLI](https://www.youtube.com/watch?v=Xb3DxniCh9I&feature=youtu.be){: external}.
+For detailed steps and best practices of using the TKE CLI plug-in, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) and watch the [demonstration video of initializing {{site.data.keyword.hscrypto}} with {{site.data.keyword.cloud_notm}} TKE CLI](https://www.youtube.com/watch?v=_qP2HZ4u5Kg&feature=youtu.be){: external}.
 
 ## Step 3: Manage your data and keys
 {: #manage-data-key}

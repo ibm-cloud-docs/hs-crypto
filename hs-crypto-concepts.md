@@ -166,7 +166,7 @@ Public-Key Cryptography Standards (PKCS) #11 API defines a platform-independent 
 ### Enterprise PKCS #11
 {: #ep11-concept}
 
-Enterprise PKCS #11 (EP11) is designed for customers that are seeking support for open standards and enhanced security. The EP11 library provides a stateless interface, which is similar to the industry-standard PKCS #11 API. The HSM that crypto units run on supports EP11 library, so users can call EP11 API through [gRPC](#grpc-concept) for their own key management and data encryption. For more information, see [Introduction to Enterprise PKCS #11](/docs/hs-crypto?topic=hs-crypto-HSM-overview) and [Enterprise PKCS #11 (EP11) Library structure document](https://www.ibm.com/downloads/cas/WXRDPRAN){: external}.
+Enterprise PKCS #11 (EP11) is designed for customers that are seeking support for open standards and enhanced security. The EP11 library provides a stateless interface, which is similar to the industry-standard PKCS #11 API. The HSM that crypto units run on supports EP11 library, so users can call EP11 API through [gRPC](#grpc-concept) for their own key management and data encryption. For more information, see [Introduction to Enterprise PKCS #11](/docs/hs-crypto?topic=hs-crypto-HSM-overview) and [Enterprise PKCS #11 (EP11) Library structure document](http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf){: external}.
 
 ### gRPC
 {: #grpc-concept}

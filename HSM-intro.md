@@ -33,7 +33,7 @@ With the introduction of Enterprise PKCS#11 (EP11) over [gRPC](https://grpc.io){
 
 EP11 is designed for customers that are seeking support for open standards and enhanced security. The EP11 library provides a stateless interface, which is similar to the industry-standard [Public-Key Cryptography Standards (PKCS) #11 API](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}. PKCS #11 API defines a platform-independent API to cryptographic tokens, such as hardware security modules (HSM) and smart cards. Existing applications that use PKCS #11 can benefit from enhanced security with secure key cryptography as well as stateless interface, which makes the cryptographic operations much more efficient.
 
-More information about the EP11 Library can be found in the [Enterprise PKCS #11 (EP11) Library structure document](https://www.ibm.com/downloads/cas/WXRDPRAN){: external}. For more information about EP11 capabilities and extensions, see [EP11 introduction](https://www.ibm.com/security/cryptocards/pciecc3/software#1062266){: external}.
+More information about the EP11 Library can be found in the [Enterprise PKCS #11 (EP11) Library structure document](http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf){: external}. For more information about EP11 capabilities and extensions, see [EP11 introduction](https://www.ibm.com/security/cryptocards/pciecc3/software#1062266){: external}.
 
 {{site.data.keyword.hscrypto}} provides a set of EP11 APIs over gRPC calls, with which all the cryptographic functions are executed in the HSM of {{site.data.keyword.hscrypto}}. EP11 over gRPC is a stateless interface for cryptographic operations on cloud.
 
