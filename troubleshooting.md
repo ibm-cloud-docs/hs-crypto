@@ -138,7 +138,7 @@ You call any {{site.data.keyword.hscrypto}} key management API method. You see a
 You do not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions in the specified service instance.
 {: tsCauses}
 
-Verify with an administrator that you are assigned the correct platform and service access roles in the applicable service instance. For more information about roles, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles.
+Verify with an administrator that you are assigned the correct platform and service access roles in the applicable service instance. For more information about roles, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).
 {: tsResolve}
 
 ## Unable to create or import keys
