@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018-2020
-lastupdated: "2020-05-27"
+lastupdated: "2020-07-02"
 
 keywords: set up api, kms api, key protect api, key management api, using api
 
@@ -78,4 +78,4 @@ Want to track your API requests in case something goes wrong? When you include t
 ## What's next
 {: #set-up-kms-api-next-steps}
 
-You're all set to start managing your encryption keys and data. To find out more about programmatically managing your keys, [check out the key management API reference doc](https://{DomainName}/apidocs/key-protect){: external}.
+You're all set to start managing your encryption keys and data. To find out more about programmatically managing your keys, [check out the key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
