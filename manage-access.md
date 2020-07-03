@@ -55,10 +55,10 @@ Use {{site.data.keyword.cloud_notm}} platform access roles to grant permissions 
 
 | Action | Viewer | Editor | Operator | Admininistrator |
 |-----|-----|-----|-----|----|
-| View {{site.data.keyword.hscrypto}} instances | ![Check mark icon](../../icons/checkmark-icon.svg) | ![Check mark icon](../../icons/checkmark-icon.svg) | ![Check mark icon](../../icons/checkmark-icon.svg) | ![Check mark icon](../../icons/checkmark-icon.svg) |
-| Create {{site.data.keyword.hscrypto}} instances |  | ![Check mark icon](../../icons/checkmark-icon.svg) | | ![Check mark icon](../../icons/checkmark-icon.svg) |
-| Delete {{site.data.keyword.hscrypto}} instances | | ![Check mark icon](../../icons/checkmark-icon.svg) |  | ![Check mark icon](../../icons/checkmark-icon.svg) |
-| Invite new users and manage access policies | | | | ![Check mark icon](../../icons/checkmark-icon.svg) |
+| View {{site.data.keyword.hscrypto}} instances | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Create {{site.data.keyword.hscrypto}} instances |  | ![Check mark icon](../icons/checkmark-icon.svg) | | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Delete {{site.data.keyword.hscrypto}} instances | | ![Check mark icon](../icons/checkmark-icon.svg) |  | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Invite new users and manage access policies | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
 {: caption="Table 2. Lists platform management roles as they apply to {{site.data.keyword.hscrypto}}" caption-side="top"}
 
 If you're an account owner, you are automatically assigned _Administrator_ platform access to your {{site.data.keyword.hscrypto}} service instances so you can further assign roles and customize access policies for others.
