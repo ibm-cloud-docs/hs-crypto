@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-03"
+lastupdated: "2020-05-13"
 
 keywords: troubleshoot, problems, known issues, can't delete service, can't use hyper protect crypto services, can't create key, can't delete key
 
@@ -234,42 +234,6 @@ The procedure varies depending on the method that you use to initialize the serv
     {: pre}
 
 -  If you've initialized your service instance through the TKE application, in the user interface of the application, select **Imprint mode** &gt; **Zeroize crypto unit**.
-
-## Unable to list crypto units
-{: #troubleshoot-list-crypto-units}
-{: troubleshoot}
-{: support}
-
-You might receive an error similar to the following one when you list crypto units using the command `ibmcloud tke cryptounits`:
-{: tsSymptoms}
-
-```
-ibmcloud tke cryptounits
-API endpoint:     https://cloud.ibm.com
-Region:           XX-XX
-User:             foo.bar@domgain.email
-Account:          myaccount (GUID)
-Resource group:   Default
-
-No service instances were found for the current resource group.
-```
-{: screen}
-
-The reason might be one of the following cases:
-{: tsCauses}
-
-- You are not logged in to the correct region or resource group where your service instance resides.
-- If you have multiple accounts, you are not using the correct account with which your service instance is created, or your account doesn't have the permission to view the service instance.
-
-1.  Make sure you are logged in to the correct region and resource group with the following commmand:
-{: tsResolve}
-
-    ```
-    ibmcloud target -r <region> -g <resource_group>
-    ```
-    {: pre}
-
-2.  Make sure your account is at least assigned as the _Viewer_ [platform access role](/docs/hs-crypto?topic=hs-crypto-manage-access#platform-mgmt-roles) to view the service instance information. The account with which you create the service instance is granted as the _Administrator_ by default and can assign various roles that correspond to the specific {{site.data.keyword.hscrypto}} permissions. For more information about roles and permissions, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
 
 ## Unable to rotate root keys
 {: #unable-to-rotate-root-keys}
