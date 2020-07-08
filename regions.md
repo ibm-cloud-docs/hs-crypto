@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-26"
+lastupdated: "2020-07-02"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -30,8 +30,13 @@ You can connect your applications with the {{site.data.keyword.cloud}} {{site.da
 {{site.data.keyword.hscrypto}} is available in the following regions and locations:
 
 - Dallas, US
-- Sydney, Australia
 - Frankfurt, Germany
+- Sydney, Australia
+- Washington DC, US
+
+You can create {{site.data.keyword.hscrypto}} resources in one of the supported {{site.data.keyword.cloud_notm}} regions, which represent the
+geographic area where your {{site.data.keyword.hscrypto}} requests are handled and processed. To learn more, see
+[Locations, tenancy, and availability](/docs/hs-crypto?topic=hs-crypto-ha-dr#availability).
 
 ## Connectivity options
 {: #connectivity-options}
@@ -57,8 +62,9 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 | Region        | Public key management service endpoints             |Public GREP11 service endpoints|
 | ------------- | ---------------------------- |---------------------------- |
 | Dallas        | `api.us-south.hs-crypto.cloud.ibm.com` |`ep11.us-south.hs-crypto.cloud.ibm.com` |
-| Sydney        | `api.au-syd.hs-crypto.cloud.ibm.com`   |`ep11.au-syd.hs-crypto.cloud.ibm.com`   |
 | Frankfurt     | `api.eu-de.hs-crypto.cloud.ibm.com`    |`ep11.eu-de.hs-crypto.cloud.ibm.com`    |
+| Sydney        | `api.au-syd.hs-crypto.cloud.ibm.com`   |`ep11.au-syd.hs-crypto.cloud.ibm.com`   |
+| Washington DC | `api.us-east.hs-crypto.cloud.ibm.com`  |`ep11.us-east.hs-crypto.cloud.ibm.com`  |
 {: caption="Table 1. Lists public endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's public network" caption-side="top"}
 {: #table-1}
 {: tab-title="Public"}
@@ -69,8 +75,9 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 | Region        | Private key management service endpoints             |Private GREP11 service endpoints|
 | ------------- | ------------------------------------ |------------------------------------ |
 | Dallas        | `api.private.us-south.hs-crypto.cloud.ibm.com` | `ep11.private.us-south.hs-crypto.cloud.ibm.com` |
-| Sydney        | `api.private.au-syd.hs-crypto.cloud.ibm.com`   | `ep11.private.au-syd.hs-crypto.cloud.ibm.com` |
-| Frankfurt     | `api.private.eu-de.hs-crypto.cloud.ibm.com`    | `ep11.private.eu-de.hs-crypto.cloud.ibm.com` |
+| Frankfurt     | `api.private.eu-de.hs-crypto.cloud.ibm.com`    | `ep11.private.eu-de.hs-crypto.cloud.ibm.com`    |
+| Sydney        | `api.private.au-syd.hs-crypto.cloud.ibm.com`   | `ep11.private.au-syd.hs-crypto.cloud.ibm.com`   |
+| Washington DC | `api.private.us-east.hs-crypto.cloud.ibm.com`  | `ep11.private.us-east.hs-crypto.cloud.ibm.com`  |
 {: caption="Table 2. Lists private endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's private network" caption-side="top"}
 {: #table-2}
 {: tab-title="Private"}

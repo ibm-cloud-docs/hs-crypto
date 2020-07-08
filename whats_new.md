@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-06-18"
+lastupdated: "2020-07-08"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -23,6 +23,16 @@ subcollection: hs-crypto
 
 Stay up-to-date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+## July 2020
+{: #july-2020}
+
+### Added: {{site.data.keyword.hscrypto}} expands into the Washington DC region
+{: #added-wdc-region}
+
+You can now create {{site.data.keyword.hscrypto}} resources in the Washington DC (US East) region.
+
+For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
 ## June 2020
 {: #june-2020}
@@ -48,16 +58,7 @@ For information on how to initialize a service instance using the Management Uti
 
 The Management Utilities are two applications that use smart cards to configure service instances. The Smart Card Utility Program sets up and manages the smart cards used. The Trusted Key Entry (TKE) application uses those smart cards to configure service instances. To use the Management Utilities, you need to order IBM-supported smart cards and smart card readers.
 
-For more information, see [Understanding the Management Utilities](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-management-utilities) and [Loading master keys with the Management Utilities](/docs/key-protect?topic=key-protect-grant-access-keys).
-
-<!-- ### Added: {{site.data.keyword.hscrypto}} aligns the key management functions with {{site.data.keyword.keymanagementserviceshort}}
-{: #added-key-protect-concurrency}
-
-{{site.data.keyword.hscrypto}} now supports the same level of key management functions as {{site.data.keyword.keymanagementserviceshort}} with FIPS 140-2 Level 4-compliant HSM. The added functions include the following:
-
-* [Support for import token to securely upload keys](/docs/hs-crypto?topic=hs-crypto-create-import-tokens)
-* [Support for policy-based key rotation](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy)
-* [Support for key rewrapping](/docs/hs-crypto?topic=hs-crypto-rewrap-keys) -->
+For more information, see [Understanding the Management Utilities](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-management-utilities) and [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
 ### Updated: {{site.data.keyword.cloud_notm}} service integration
 {: #added-service-integration-202004}
