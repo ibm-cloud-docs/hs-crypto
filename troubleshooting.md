@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-03"
+lastupdated: "2020-07-09"
 
 keywords: troubleshoot, problems, known issues, can't delete service, can't use hyper protect crypto services, can't create key, can't delete key
 
@@ -56,7 +56,7 @@ Take the following steps to unblock the EP11 smart card:
 5. When prompted, enter the second certificate authority PIN on the smart card reader PIN pad.
 5. When prompted, insert the EP11 smart card to be unblocked in smart card reader 2 and click **OK**.
 
-## Failed to activate the new master key during the master key rotation process
+<!-- ## Failed to activate the new master key during the master key rotation process
 {: #troubleshoot-master-key-rotation}
 {: troubleshoot}
 {: support}
@@ -68,7 +68,7 @@ You accidentally exit the TKE CLI window when the root keys are being rewrapped 
 {: tsCauses}
 
 Run the `cryptounit-mk-rotate` command again to resume the root key rewrap operations. When prompted, enter the password for the current signature key file to activate the new master key.
-{: tsResolve}
+{: tsResolve} -->
 
 ## Got a `CKR_IBM_WK_NOT_INITIALIZED` error when you use CLI or API
 {: #troubleshoot-error-CLI-API}

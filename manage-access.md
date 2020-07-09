@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-06"
+lastupdated: "2020-07-09"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -111,7 +111,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
 
-| Action | Reader | ReaderPlus | Writer | Manager |
+<!-- | Action | Reader | ReaderPlus | Writer | Manager |
 |-----|-----|-----|-----|----|
 | Create an import token | | | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Retrieve an import token | | | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
@@ -119,7 +119,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 {: caption="Table 4. Lists service access roles as they apply to import token resources" caption-side="top"}
 {: tab-title="Import tokens"}
 {: tab-group="IAM-roles"}
-{: class="comparison-tab-table"}
+{: class="comparison-tab-table"} -->
 
 | Action | Reader | ReaderPlus | Writer | Manager |
 |-----|-----|-----|-----|----|

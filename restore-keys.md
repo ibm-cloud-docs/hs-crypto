@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-07-02"
+lastupdated: "2020-07-09"
 
 keywords: restore key, restore a deleted key, re-import a key
 
@@ -235,7 +235,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
     ```
     {: screen}
 
-### Using an import token to restore a key
+<!-- ### Using an import token to restore a key
 {: #restore-keys-secure-api}
 
 If you initially used an import token to import the root key, you can restore the key by making a `POST` call to the following endpoint.
@@ -471,4 +471,4 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
       ]
     }
     ```
-    {: screen}
+    {: screen} -->

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-06"
+lastupdated: "2020-07-09"
 
 keywords: rotate, rotate key, rotate encryption key, rotate root key, rotate root key manually, key rotation, rotate key api
 
@@ -204,7 +204,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
     {: tip}
 
 
-### Using an import token to rotate a key
+<!-- ### Using an import token to rotate a key
 {: #rotate-root-keys-secure-api}
 
 If you initially imported a root key by using an import token, you can rotate the key by making a `POST` call to the following endpoint.
@@ -328,7 +328,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
 
     Review the `lastRotateDate` and `keyVersion` values in the response entity-body to inspect the date and time that your key was last rotated.
 
-    You can also list the versions that are available for the key by using the {{site.data.keyword.hscrypto}} API. To learn more, see [Viewing key versions](/docs/hs-crypto?topic=hs-crypto-view-key-versions).
+    You can also list the versions that are available for the key by using the {{site.data.keyword.hscrypto}} API. To learn more, see [Viewing key versions](/docs/hs-crypto?topic=hs-crypto-view-key-versions). -->
 
 ## What's next
 {: #rotate-key-next}
