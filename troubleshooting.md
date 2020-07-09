@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-13"
+lastupdated: "2020-07-03"
 
 keywords: troubleshoot, problems, known issues, can't delete service, can't use hyper protect crypto services, can't create key, can't delete key
 
@@ -169,14 +169,14 @@ FAILED
 Error reported by EP11 crypto module.
 Return code: 209
 Reason code: 71
-Error message: Change not allowed. You are not allowed to change a threshold value if the corresponding attribute control bit is reset.
+Error message: Change not allowed.  You are not allowed to change a threshold value if the corresponding attribute control bit is reset.
 ```
 {: screen}
 
 The TKE plug-in through version 0.0.11 restricts the ability to set the signature threshold and revocation signature threshold to a value other than one. The restriction can be removed by zeroizing the crypto unit.
 {: tsCauses}
 
-To set the signature threshold or revocation signature threshold to a value greater than one, [zeroize the crypto unit](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step). This removes the restriction. Then reinstall the administrators that you want to use and set the threshold values by using either the latest version of the TKE plug-in or the Trusted Key Entry application.
+To set the signature threshold or revocation signature threshold to a value greater than one, [zeroize the crypto unit](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step). This removes the restriction. Then reinstall the administrators that you want to use and set the threshold values by using either the latest version of the TKE plug-in or the Trusted Key Entry application.
 {: tsResolve}
 
 Zeroizing a crypto unit clears the master key registers. To fully recover the state of a crypto unit after zeroizing it, you need to reload the master key registers and the administrators. Depending on your loading method, see [Loading master keys with the TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#load-master-keys) or [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#load-master-key-management-utilities) for instructions.
@@ -234,6 +234,43 @@ The procedure varies depending on the method that you use to initialize the serv
     {: pre}
 
 -  If you've initialized your service instance through the TKE application, in the user interface of the application, select **Imprint mode** &gt; **Zeroize crypto unit**.
+
+## Unable to list crypto units
+{: #troubleshoot-list-crypto-units}
+{: troubleshoot}
+
+You might receive an error message similar to the following one when you list crypto units using command `ibmcloud tke cryptounits`:
+{: tsSymptoms}
+
+```
+ibmcloud tke cryptounits
+API endpoint:     https://cloud.ibm.com
+Region:           XX-XX
+User:             john.doe@abc.com
+Account:          myaccount (GUID)
+Resource group:   Default
+
+No service instances were found for the current resource group.
+```
+{: screen}
+
+It might be caused by one of the following reasons:
+{: tsCauses}
+
+- You haven't logged in to the correct region or resource group where your service instance resides.
+- If you have multiple accounts, you are not using the correct account with which your service instance is created. Or, your account doesn't have the permission to view the service instance.
+
+Try the following solutions:
+{: tsResolve}
+
+- Make sure that you are logged in to the correct region and resource group with the following command:
+
+    ```
+    ibmcloud target -r <region> -g <resource_group>
+    ```
+    {: pre}
+
+- Make sure that your account is assigned at least a _Viewer_ [platform access role](/docs/hs-crypto?topic=hs-crypto-manage-access#platform-mgmt-roles) to view the service instance information. The account with which you create the service instance is granted as the _Administrator_ role by default and can assign various roles that correspond to the specific {{site.data.keyword.hscrypto}} permissions. For more information about roles and permissions, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
 
 ## Unable to rotate root keys
 {: #unable-to-rotate-root-keys}
@@ -332,7 +369,7 @@ You receive an error similar to the following one when you start the Trusted Key
 A valid authentication token is needed for the TKE application to send requests to {{site.data.keyword.cloud_notm}}. You must log in to {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.cloud_notm}} CLI to create a valid authentication token before you can run the TKE application. These might be the causes of this error:
 {: tsCauses}
 
-- you've not logged in to {{site.data.keyword.cloud_notm}} to create an authentication token.
+- You've not logged in to {{site.data.keyword.cloud_notm}} to create an authentication token.
 - Your authentication token has expired after 1 hour.
 
 From the command line, log in to the {{site.data.keyword.cloud_notm}} with the `ibmcloud login` command. Click **Refresh Panel** on the **Crypto units** tab to retry the query of your service instance.

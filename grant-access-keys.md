@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-07-06"
 
 keywords: grant access, iam, iam access, assign access, access policy, key access
 
@@ -51,10 +51,12 @@ To assign access:
 2. Select the user, and click the overflow icon to open a list of options for that user.
 3. From the options menu, click **Assign access**.
 4. Click **Assign access to resources**.
-5. From the list of services, select **Hyper Protect Crypto Services**.
-6. From the list of service instances, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
-7. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
-8. Click **Assign**.
+5. Click the **IAM services** button.
+6. From the list of services, select **Hyper Protect Crypto Services**.
+7. From the list of service instances, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
+8. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
+9. Click **Add**.
+10. Continue to add platform and service access roles as needed and when you are finished, click **Assign**.
 
 ## Granting access to a single key in an instance
 {: #grant-access-key-level}
@@ -86,4 +88,5 @@ Use the retrieved key ID to create a access policy:
    1. For **Resource type**, enter *key*.
    2. For **Resource ID**, enter the ID that is assigned to your key by the {{site.data.keyword.hscrypto}} service.
 8. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
-9. Click **Assign**.
+9. Click **Add**.
+10. Continue to add platform and service access roles as needed and when you are finished, click **Assign**.

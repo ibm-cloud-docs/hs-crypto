@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-05-12"
+lastupdated: "2020-07-06"
 
 keywords: shared responsibilities, shared responsibility model, disaster recovery, incident management, operation management
 
@@ -33,7 +33,7 @@ Review the following sections for the specific responsibilities for you and for 
 ## Incident and operations management
 {: #incident-and-ops}
 
-You and IBM share responsibilities for the set up and maintenance of your {{site.data.keyword.hscrypto}} service instance for your application workloads. You are responsible for incident and operations management of your application data.
+Incident and operations management includes tasks such as high availability, monitoring, and incident management. You and IBM share responsibilities for the set up and maintenance of your {{site.data.keyword.hscrypto}} service instance for your application workloads. You are responsible for incident and operations management of your application data.
 
 | Task | {{site.data.keyword.IBM_notm}} responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
@@ -46,7 +46,7 @@ You and IBM share responsibilities for the set up and maintenance of your {{site
 <!-- ## Change management
 {: #change-management}
 
-You and IBM share responsibilities for keeping {{site.data.keyword.hscrypto}} service components at the latest version. You are responsible for change management of your application data.
+Change management includes tasks such as deployment, configuration, upgrades, patching, configuration changes, and deletion. You and IBM share responsibilities for keeping {{site.data.keyword.hscrypto}} service components at the latest version. You are responsible for change management of your application data.
 
 | Task | {{site.data.keyword.IBM_notm}} responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
@@ -58,7 +58,7 @@ You and IBM share responsibilities for keeping {{site.data.keyword.hscrypto}} se
 ## Identity and access management
 {: #iam-responsibilities}
 
-You and IBM share responsibilities for controlling access to your {{site.data.keyword.hscrypto}} instances and resources. You are responsible for identity and access management to your application data.
+Identity and access management includes tasks such as authentication, authorization, access control policies, and approving, granting, and revoking access. You and IBM share responsibilities for controlling access to your {{site.data.keyword.hscrypto}} instances and resources. You are responsible for identity and access management to your application data.
 
 | Task | {{site.data.keyword.IBM_notm}} responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
@@ -68,7 +68,7 @@ You and IBM share responsibilities for controlling access to your {{site.data.ke
 ## Security and regulation compliance
 {: #security-compliance}
 
-IBM is responsible for the security and compliance of {{site.data.keyword.hscrypto}}. You are responsible for the security and compliance of your application data.
+Security and regulation compliance includes tasks such as security controls implementation and compliance certification. IBM is responsible for the security and compliance of {{site.data.keyword.hscrypto}}. You are responsible for the security and compliance of your application data.
 
 | Task | {{site.data.keyword.IBM_notm}} responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
@@ -79,7 +79,7 @@ IBM is responsible for the security and compliance of {{site.data.keyword.hscryp
 ## Disaster recovery
 {: #disaster-recovery}
 
-IBM is responsible for the recovery of {{site.data.keyword.hscrypto}} components in case of disaster. You are responsible for the recovery of the workloads that run {{site.data.keyword.hscrypto}} and your application data.
+Disaster recovery includes tasks such as providing dependencies on disaster recovery sites, provision disaster recovery environments, data and configuration backup, replicating data and configuration to the disaster recovery environment, and failover on disaster events. IBM is responsible for the recovery of {{site.data.keyword.hscrypto}} components in case of disaster. You are responsible for the recovery of the workloads that run {{site.data.keyword.hscrypto}} and your application data.
 
 | Task | {{site.data.keyword.IBM_notm}} responsibilities | Your responsibilities |
 |----------|-----------------------|--------|

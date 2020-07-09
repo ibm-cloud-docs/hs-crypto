@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018-2020
-lastupdated: "2020-07-02"
+lastupdated: "2020-07-03"
 
 keywords: set up api, kms api, key protect api, key management api, using api
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Managing your keys with the key management API
 {: #set-up-kms-api}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a key management API to store, retrieve, and generate encryption keys.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [key management API](https://{DomainName}/apidocs/hs-crypto){: external} to store, retrieve, and generate encryption keys.
 {: shortdesc}
 
 ## Retrieving your IBM Cloud credentials

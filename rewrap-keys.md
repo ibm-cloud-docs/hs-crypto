@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-27"
+lastupdated: "2020-07-06"
 
 keywords: rewrap key, reencrypt data encryption key, rewrap api, key id
 
@@ -26,7 +26,7 @@ subcollection: hs-crypto
 Reencrypt your data encryption keys by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
-When you [rotate a root key in {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-rotate-keys), new cryptographic key material becomes available for protecting the data encryption keys (DEKs) that are associated with the root key. With the rewrap API, you can reencrypt or rewrap your DEKS without exposing the keys in their plaintext form.
+When you [rotate a root key in {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-key-rotation), new cryptographic key material becomes available for protecting the data encryption keys (DEKs) that are associated with the root key. With the rewrap API, you can reencrypt or rewrap your DEKS without exposing the keys in their plaintext form.
 
 To learn how envelope encryption helps you control the security of at-rest data in the cloud, see [Protecting data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
 
@@ -99,38 +99,24 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
       <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to rewrap keys in {site.data.keyword.hscrypto}}.</caption>
     </table>
 
-    The newly wrapped data encryption key is returned in the response entity-body. The following JSON object shows an example returned value.
+    The newly wrapped data encryption key, original key version (`keyVersion`)
+    that is associated with the supplied ciphertext and latest key version
+    (`rewrappedKeyVersion`) associated with the new ciphertext is returned in
+    the response entity-body. The following JSON object shows an example
+    returned value.
 
-    ```
+    ```json
     {
-      "ciphertext": "eyJjaXBoZXJ0ZXh0IjoiZkZ2T3VXM1lGSHJLTDNBeGxZUlJ4ZWlvdVl5bGs0d1M1NUlKQTBJWUdJdmxheEhmZloxYjh2VE5tNHc9IiwiaGFzaCI6ImVBaTNRcnUrbVRwMngvNjIxQW9KSW9CSWtLdkN5Nm9tUlg2TUZZS1BDb24zdnRrQ2xCOVBtL2VWazdTSWI2OW0wWVVYbE1ITEdPNVpldERQZjdlSjZRPT0iLCJpdiI6ImRyYURvRDhBbmFNTlJJYTJ1MG53WUE9PSIsInZlcnNpb24iOiIzLjAuMCIsImhhbmRsZSI6ImNiZTA4OTU4LWFlNzktNDJjMS1hYWNhLWVhY2U3NTM1ODc2OCJ9"
+      "ciphertext": "eyJjaX ... h0Ijoi ... c1ZCJ9",
+      "keyVersion": {
+        "id": "02fd6835-6001-4482-a892-13bd2085f75d"
+      },
+      "rewrappedKeyVersion": {
+        "id": "12e8c9c2-a162-472d-b7d6-8b9a86b815a6"
+      }
     }
     ```
-    {:screen}
+    {: screen}
 
-    Store and use the new `ciphertext` value for future envelope encryption operations so that your data is protected by the latest root key.
-
-
-<!--
-5. Optional. Verify that the key was successfully rewrapped by base64 decoding the `ciphertext` value.
-
-    ```
-    echo <ciphertext> | base64 --decode ; echo
-    ```
-    {: codeblock}
-
-    Replace `<ciphertext>` with the base64 encoded value that was returned in the previous step. The following JSON object shows an example CLI output.
-
-    ```
-    {
-      "ciphertext":"mIzRrwZAA8+WqRckG6gt1ji8HlEEJPSiV+TRBSR4GVr+FlAZlC5KvRriRF0=",
-      "iv":"lbwxXlAW2DS7+5jGz5Y1Kg==",
-      "version":"4.0.0",
-      "handle":"8e309bae-b3ec-4270-9b87-89f8697fe54f"
-    }
-    ```
-    {:screen}
-
-    QUESTION: How do I know that the wDEK has been rewrapped? Does the version number change, or just the ciphertext value? What do the iv, version, and handle values represent (internal security parameters?)
-
--->
+    Store and use the new `ciphertext` value for future envelope encryption
+    operations so that your data is protected by the latest root key.

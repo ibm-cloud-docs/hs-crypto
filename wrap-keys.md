@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-27"
+lastupdated: "2020-07-06"
 
 keywords: root key, wrap key, encrypt data encryption key, protect data encryption key, key wrap api
 
@@ -65,7 +65,6 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
       -H 'bluemix-instance: <instance_ID>' \
       -H 'content-type: application/vnd.ibm.kms.key_action+json' \
       -H 'correlation-id: <correlation_ID>' \
-      -H 'prefer: <return_preference>' \
       -d '{
       "plaintext": "<data_key>"
     }'
@@ -81,20 +80,20 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}}
+        <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}}
  service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
       </tr>
       <tr>
         <td><varname>key_ID</varname></td>
-        <td>The unique identifier for the root key that you want to use for wrapping.</td>
+        <td><strong>Required.</strong> The unique identifier for the root key that you want to use for wrapping.</td>
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
-        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
+        <td><strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
-        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}}
+        <td><strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}}
  service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
       </tr>
       <tr>
@@ -102,29 +101,50 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
         <td>Optional: The unique identifier that is used to track and correlate transactions.</td>
       </tr>
       <tr>
-        <td><varname>return_preference</varname></td>
-        <td><p>A header that alters server behavior for <code>POST</code> and <code>DELETE</code> operations.</p><p>When you set the <em>return_preference</em> variable to <code>return=minimal</code>, the service returns only the key metadata, such as the key name and ID value, in the response entity-body. When you set the variable to <code>return=representation</code>, the service returns both the key material and the key metadata.</p></td>
-      </tr>
-      <tr>
         <td><varname>data_key</varname></td>
         <td>Optional: The key material of the DEK that you want to manage and protect. The <code>plaintext</code> value must be base64 encoded. To generate a new DEK, omit the <code>plaintext</code> attribute. The service generates a random plaintext (32 bytes) and wraps that value.</td>
       </tr>
-      <!--
-      <tr>
-        <td><varname>additional_data</varname></td>
-        <td>Optional: The additional authentication data (AAD) that is used to further secure the key. Each string can hold up to 255 characters. If you supply AAD when you make a wrap call to the service, you must specify the same AAD during the subsequent unwrap call.<br></br>Important: The {{site.data.keyword.hscrypto}} service does not save additional authentication data. If you supply AAD, save the data to a secure location to ensure that you can access and provide the same AAD during subsequent unwrap requests.</td>
-      </tr>
-      -->
       <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to wrap a specified key in {{site.data.keyword.hscrypto}}
 .</caption>
     </table>
 
-    Your wrapped key, containing the base64 encoded key material, is returned in the response entity-body. The following JSON object shows an example returned value.
+    Your wrapped data encryption key, containing the base64 encoded key
+    material, is returned in the response entity-body. The response body also
+    contains the ID of the key version that was used to wrap the supplied
+    plaintext. The following JSON object shows an example returned value.
 
-    ```
+    ```json
     {
-      "plaintext": "VGhpcyBpcyBhIHNlY3JldCBtZXNzYWdlLg==",
-      "ciphertext": "eyJjaXBoZXJ0ZXh0Ijoic3VLSDNRcmdEZjdOZUw4Rkc4L2FKYjFPTWcyd3A2eDFvZlA4MEc0Z1B2RmNrV2g3cUlidHphYXU0eHpKWWoxZyIsImhhc2giOiJiMmUyODdkZDBhZTAwZGZlY2Q3OGJmMDUxYmNmZGEyNWJkNGUzMjBkYjBhN2FjNzVhMWYzZmNkMDZlMjAzZWYxNWM5MTY4N2JhODg2ZWRjZGE2YWVlMzFjYzk2MjNkNjA5YTRkZWNkN2E5Y2U3ZDc5ZTRhZGY1MWUyNWFhYWM5MjhhNzg3NmZjYjM2NDFjNTQzMTZjMjMwOGY2MThlZGM2OTE3MjAyYjA5YTdjMjA2YzkxNTBhOTk1NmUxYzcxMTZhYjZmNmQyYTQ4MzZiZTM0NTk0Y2IwNzJmY2RmYTk2ZSJ9"
+      "ciphertext": "eyJjaXBoZXJ0ZXh0IjoiYmFzZTY0LWtleS1nb2VzLWhlcmUiLCJpdiI6IjRCSDlKREVmYU1RM3NHTGkiLCJ2ZXJzaW9uIjoiNC4wLjAiLCJoYW5kbGUiOiJ1dWlkLWdvZXMtaGVyZSJ9",
+      "keyVersion": {
+        "id": "02fd6835-6001-4482-a892-13bd2085f75d"
+      }
     }
     ```
-    {:screen}
+    {: screen}
+
+    If you omit the `plaintext` attribute when you make the wrap request, the
+    service returns both the generated data encryption key (DEK) and the wrapped
+    DEK in base64 encoded format.
+
+    ```json
+    {
+      "plaintext": "Rm91ciBzY29yZSBhbmQgc2V2ZW4geWVhcnMgYWdv",
+      "ciphertext": "eyJjaXBoZXJ0ZXh0IjoiYmFzZTY0LWtleS1nb2VzLWhlcmUiLCJpdiI6IjRCSDlKREVmYU1RM3NHTGkiLCJ2ZXJzaW9uIjoiNC4wLjAiLCJoYW5kbGUiOiJ1dWlkLWdvZXMtaGVyZSJ9",
+      "keyVersion": {
+        "id": "12e8c9c2-a162-472d-b7d6-8b9a86b815a6"
+      }
+    }
+    ```
+    {: screen}
+
+    The `plaintext` value represents the unwrapped DEK, and the `ciphertext`
+    value represents the wrapped DEK. The `keyVersion.id` value represents the
+    version of the root key that was used for wrapping.
+
+    If you want {{site.data.keyword.hscrypto}} to generate a
+    new data encryption key (DEK) on your behalf, you can also pass in an empty
+    body on a wrap request. Your generated DEK, containing the base64 encoded
+    key material, is returned in the response entity-body, along with the
+    wrapped DEK.
+    {: tip}

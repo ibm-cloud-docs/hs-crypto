@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-06-03"
+lastupdated: "2020-06-18"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips
 
@@ -170,13 +170,11 @@ For example, if you want to crypto-process 5000 keys by using {{site.data.keywor
 | End of month charge | $3122  |
 {: caption="Table 1. A billing example of two crypto units with monthly API calls of 2,000,000 per crypto unit" caption-side="bottom"}
 
-<!--
 ## Is there a free trial for {{site.data.keyword.hscrypto}}?
 {: #faq-free-trial}
 {: faq}
 
-Yes, a free trial period of 60 days is available for {{site.data.keyword.hscrypto}}. 
--->
+Yes, a free trial period of 30 days is available for {{site.data.keyword.hscrypto}}. 
 
 ## Provisioning and operations
 {: #faq-provisioning-operations}
@@ -185,7 +183,11 @@ Yes, a free trial period of 60 days is available for {{site.data.keyword.hscrypt
 {: #faq-hpcs-prerequisites}
 {: faq}
 
-There are no prerequisites for using {{site.data.keyword.hscrypto}}. The service can be provisioned quickly by following instructions in [Provisioning service instances](/docs/hs-crypto?topic=hs-crypto-provision). However, in order to perform key management and cryptographic operations, you need to initialize service instances first by using [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or the [Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) by using smart cards.
+To use {{site.data.keyword.hscrypto}}, you need to have a Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account. Other than that, there are no prerequisites.
+
+If you don't have an {{site.data.keyword.cloud_notm}} account, create a Lite account first by going to [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/login){: external} and clicking **Create an {{site.data.keyword.Bluemix_notm}} account**. And then [upgrade it to a Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-upgrading-account). You can also [apply your promo code](/docs/billing-usage?topic=billing-usage-applying-promo-codes) if you have one. For more information about {{site.data.keyword.cloud_notm}} accounts, see [FAQs for accounts](/docs/account?topic=account-accountfaqs).
+
+The service can be provisioned quickly by following instructions in [Provisioning service instances](/docs/hs-crypto?topic=hs-crypto-provision). However, in order to perform key management and cryptographic operations, you need to initialize service instances first by using [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or the [Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) by using smart cards.
 
 ## How to initialize {{site.data.keyword.hscrypto}} service instances?
 {: #faq-how-to-initialize}
@@ -308,7 +310,7 @@ A {{site.data.keyword.hscrypto}} service instance can hold a maximum of 5000 key
 {: #faq-add-remove-crypto-unit}
 {: faq}
 
-Adding or removing crypto units is currently not supported.
+Yes, you can request to add or remove crypto units by raising support tickets in the IBM Support Center. For detailed instructions, see [Adding or removing crypto units](/docs/hs-crypto?topic=hs-crypto-add-remove-crypto-units).
 
 ## Is there a Service Level Agreement (SLA) specifically for {{site.data.keyword.hscrypto}}?
 {: #faq-hpcs-sla}
@@ -439,7 +441,7 @@ You need to only back up your master key parts and signature keys for service in
 {: #faq-instance-fail}
 {: faq}
 
-{{site.data.keyword.cloud_notm}} has automatic in-region failover plan in place. Currently, your data is backed up daily by the service  and you don't need to do anything to enable it. For [cross-region data restores](/docs/hs-crypto?topic=hs-crypto-ha-dr), you need to open an IBM support ticket so that IBM can restore the service instance for you.
+{{site.data.keyword.cloud_notm}} has automatic in-region failover plan in place. Currently, your data is backed up daily by the service and you don't need to do anything to enable it. For [cross-region data restores](/docs/hs-crypto?topic=hs-crypto-ha-dr), you need to open an IBM support ticket so that IBM can restore the service instance for you.
 
 ## How can I restore the content from backups?
 {: #faq-store-backup}

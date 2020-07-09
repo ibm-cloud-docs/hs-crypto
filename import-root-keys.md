@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-25"
+lastupdated: "2020-07-06"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -25,7 +25,10 @@ subcollection: hs-crypto
 You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to secure your existing root keys by using the {{site.data.keyword.hscrypto}} GUI, or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
-Root keys are symmetric key-wrapping keys that are used to protect the security of encrypted data in the cloud. For more information about root keys, see [Envelope encryption](/docs/services/hs-crypto/hs-crypto?topic=hs-crypto-envelope-encryption).
+Root keys are symmetric key-wrapping keys that are used to protect the security of encrypted data in the cloud. For more information about importing root keys, see [Bringing your encryption keys to the cloud](/docs/hs-crypto?topic=hs-crypto-importing-keys).
+
+Plan ahead for importing keys by [reviewing your options for creating and encrypting key material](/docs/hs-crypto?topic=hs-crypto-importing-keys#plan-ahead). For added security, you can enable the secure import of the key material by using an [import token](/docs/hs-crypto?topic=hs-crypto-importing-keys#using-import-tokens) to encrypt your key material before you bring it to the cloud.
+{: note}
 
 ## Importing root keys with the GUI
 {: #import-root-key-gui}
@@ -195,12 +198,104 @@ Complete the following steps to import root keys using the {{site.data.keyword.k
 
 2. Import a root key with the following command:
 
-  ```
-  ibmcloud kp create
-  ```
-{:pre}
+    ```
+    ibmcloud kp key create
+    ```
+    {: pre}
 
-You can find additional parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-reference#kp-create).
+    You can find additional parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-reference#kp-key-create).
+
+## Base64 encoding your key material
+{: #encode-key-material-root-key}
+
+When importing an existing root key, it is required to include the encrypted key material that you want to store and manage in the service.
+
+### Using OpenSSL to encode existing key material
+{: #open-ssl-encoding-root-key}
+
+1. Download and install [OpenSSL](https://github.com/openssl/openssl#for-production-use){:external}.
+2. Base64 encode your key material string by running the following command:
+
+    ```
+    $ openssl base64 -in <infile> -out <outfile>
+    ```
+    {: codeblock}
+
+    Replace the variables in the example request according to the following table.
+
+    <table>
+      <tr>
+        <th>Variable</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>
+          <varname>infile</varname>
+        </td>
+        <td>
+          <p>
+            The name of the file where your key material string resides.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <varname>outfile</varname>
+        </td>
+        <td>
+          <p>
+            The name of the file where your base64 encoded key material will be outputted once the command has run.
+          </p>
+          <p>
+            Ensure that the key is 128, 192, or 256 bits in length.
+          </p>
+        </td>
+      </tr>
+
+      <caption style="caption-side:bottom;">
+        Table 3. Describes the variables that are needed to base64 encode your key material.
+      </caption>
+    </table>
+
+  If you want to output the base64 material in the command line directly rather than a file, run the command `openssl enc -base6<<< '<key_material_string>'`, where key_material_string is the key material input for your imported key.
+  {: note}
+
+### Using OpenSSL to create and encode new key material
+{: #open-ssl-encoding-new-key-material-root-key}
+
+1. Download and install [OpenSSL](https://github.com/openssl/openssl#for-production-use){:external}.
+2. Base64 encode your key material string by running the following command:
+
+    ```
+    $ openssl rand <bit_length> -base64
+    ```
+    {: codeblock}
+
+    Replace the variable in the example request according to the following table.
+
+    <table>
+      <tr>
+        <th>Variable</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>
+          <varname>bit_length</varname>
+        </td>
+        <td>
+          <p>
+            The length of the key, measured in bits.
+          </p>
+          <p>
+            Acceptable bit lengths: 128, 192, 256
+          </p>
+        </td>
+      </tr>
+
+      <caption style="caption-side:bottom;">
+        Table 4. Describes the variable that is needed to create and encode new key material.
+      </caption>
+    </table>
 
 ## What's next
 {: #import-root-key-next}

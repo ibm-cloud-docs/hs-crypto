@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-01"
+lastupdated: "2020-07-02"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -27,6 +27,15 @@ subcollection: hs-crypto
 You can create an instance of {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} by using the {{site.data.keyword.cloud_notm}} console or the {{site.data.keyword.cloud_notm}} CLI.
 {: shortdesc}
 
+## Before you begin
+{: #provision-prerequisites}
+
+In order to provision a {{site.data.keyword.hscrypto}} instance, make sure that you have a [Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-accounts).
+
+1. To check your account type, go to [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/login){: external} and click **Management** > **Account** > **Account settings**.
+
+2. If you have a Lite account and want to use {{site.data.keyword.hscrypto}}, [upgrade your account to a Pay-As-You-Go or Subscription account](/docs/account?topic=account-upgrading-account). You can also [apply your promo code](/docs/billing-usage?topic=billing-usage-applying-promo-codes) if you have one.
+
 ## Provisioning from the {{site.data.keyword.cloud_notm}} console
 {: #provision-gui}
 
@@ -34,16 +43,18 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: new_window}.
 2. Click **Catalog** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
-3. From the All Categories navigation pane, click the **Security and Identity** category.
-4. From the list of services, click the **{{site.data.keyword.hscrypto}}** tile.
-5. **Optional**: In the **Tags** field, add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/resources?topic=resources-tag#tag).
-6. Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs.
+3. From the Catalog navigation pane, click **Services**. And then, under **Category**, select **Security**.
+4. From the list of services displayed, click the **{{site.data.keyword.hscrypto}}** tile.
+5. Fill in the form with the details that are required.
+  1. Select a [region](/docs/hs-crypto?topic=hs-crypto-regions) that you want to create your {{site.data.keyword.hscrypto}} resources in.
+  2. **Optional**: In the **Tags** field, add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/resources?topic=resources-tag#tag).
+  3. Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs.
 
-  In a production environment, it is suggestedto select at least two crypto units to enable high availability. If you select three or more crypto units, these crypto units are distributed among different supported availability zones in the selected region.
-  {: important}
-7. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
+    In a production environment, it is suggested to select at least two crypto units to enable high availability. If you select three or more crypto units, these crypto units are distributed among different supported availability zones in the selected region.
+    {: important}
+6. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 
-![Provisioning the service](/image/provision.gif "Provisioning the service"){: caption="Figure 1. Provisioning the service" caption-side="bottom"}{: gif}
+<!-- ![Provisioning the service](/image/provision.gif "Provisioning the service"){: caption="Figure 1. Provisioning the service" caption-side="bottom"}{: gif} -->
 
 ## Provisioning from the {{site.data.keyword.cloud_notm}} CLI
 {: #provision-cli}

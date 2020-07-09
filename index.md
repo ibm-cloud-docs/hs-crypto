@@ -19,6 +19,7 @@ subcollection: hs-crypto
 {:tip: .tip}
 {:external: target="_blank" .external}
 {:term: .term}
+{:note: .note}
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
@@ -38,12 +39,21 @@ To learn more about how {{site.data.keyword.hscrypto}} provides you with exclusi
 
 This tutorial guides you how to set up your service instance by loading your [master keys](#x2908413){: term}, and create and add existing cryptographic keys by using the {{site.data.keyword.hscrypto}} dashboard.
 
+## Before you begin
+{: #get-started-prerequisites}
+
+In order to use {{site.data.keyword.hscrypto}}, make sure that you have a [Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-accounts).
+
+1. To check your account type, go to [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/login){: external} and click **Management** > **Account** > **Account settings**.
+
+2. If you have a Lite account and want to use {{site.data.keyword.hscrypto}}, [upgrade your account to a Pay-As-You-Go or Subscription account](/docs/account?topic=account-upgrading-account). You can also [apply your promo code](/docs/billing-usage?topic=billing-usage-applying-promo-codes) if you have one.
+
 ## Step 1: Provision the service
 {: #provision-service}
 {: help}
 {: support}
 
-Before you begin, you must create an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console. For detailed steps, see [Provisioning the service](/docs/hs-crypto?topic=hs-crypto-provision).
+You must first create an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console. For detailed steps, see [Provisioning the service](/docs/hs-crypto?topic=hs-crypto-provision).
 
 ## Step 2: Initialize your service instance
 {: #initialize-crypto}
@@ -63,6 +73,9 @@ For detailed steps and best practices of using the TKE CLI plug-in, see [Initial
 {: #manage-keys}
 
 From the {{site.data.keyword.hscrypto}} dashboard, you can create new [root keys](#x6946961){: term} or standard keys for data encryption, or you can import your existing keys. For more information about root keys and standard keys, see [Key management service components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts).
+
+This tutorial walks you through the procedure in the GUI. If you want to manage encryption keys using the key management API, check out [the API reference](https://{DomainName}/apidocs/hs-crypto){: external}.
+{: note}
 
 #### Creating new keys
 {: #create-keys}

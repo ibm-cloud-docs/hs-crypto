@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-13"
+lastupdated: "2020-07-07"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 {:tip: .tip}
 {:external: target="_blank" .external}
 
-# Viewing keys
+# Viewing a list of root keys or standard keys
 {: #view-keys}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a centralized system to view, manage, and audit your encryption keys. Audit your keys and access restrictions to keys to ensure the security of your resources.
@@ -27,12 +27,12 @@ subcollection: hs-crypto
 Audit your key configuration regularly:
 
 - Examine when keys were created and determine whether it's time to rotate the key.
-- Monitor API calls to {{site.data.keyword.hscrypto}} with {{site.data.keyword.cloudaccesstrailshort}}.
+- [Monitor API calls to {{site.data.keyword.hscrypto}} with {{site.data.keyword.cloudaccesstrailshort}}](/docs/hs-crypto?topic=hs-crypto-at-events).
 - Inspect which users have access to keys and if the level of access is appropriate.
 
-For more information about auditing access to your resources, see [Managing user access with Cloud IAM](/docs/hs-crypto?topic=hs-crypto-manage-access).
+For more information about auditing access to your resources, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
 
-## Viewing keys with the GUI
+## Viewing root keys or standard keys with the GUI
 {: #view-key-gui}
 
 If you prefer to inspect the keys in your service by using a graphical interface, you can use the {{site.data.keyword.hscrypto}} dashboard.
@@ -42,7 +42,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-3. Browse the general characteristics of your keys from the application details page:
+4. Browse the general characteristics of your keys from the application details page:
 
     <table>
       <tr>
@@ -58,8 +58,8 @@ If you prefer to inspect the keys in your service by using a graphical interface
         <td>A unique key ID that was assigned to your key by the {{site.data.keyword.hscrypto}} service. You can use the ID value to make calls to the service with the [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto).</td>
       </tr>
       <tr>
-        <td>Status</td>
-        <td>The [key state](/docs/hs-crypto?topic=hs-crypto-key-rotation#key-transitions) based on [NIST Special Publication 800-57, Recommendation for Key Management](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r4.pdf). These states include <em>Preactive</em>, <em>Active</em>, <em>Deactivated</em>, and <em>Destroyed</em>.</td>
+        <td>State</td>
+        <td>The [key state](/docs/hs-crypto?topic=hs-crypto-key-states) based on [NIST Special Publication 800-57, Recommendation for Key Management](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r4.pdf). These states include <em>Preactive</em>, <em>Active</em>, <em>Deactivated</em>, and <em>Destroyed</em>.</td>
       </tr>
       <tr>
         <td>Imported</td>
@@ -67,7 +67,11 @@ If you prefer to inspect the keys in your service by using a graphical interface
       </tr>
       <tr>
         <td>Last updated</td>
-        <td>The time that the key is last updated. </td>
+        <td>The date and time that the key is last updated. This field gets updated when the key is created, rotated, or any part of the key metadata is modified. </td>
+      </tr>
+      <tr>
+        <td>Last rotated</td>
+        <td>The date and time that the key is last rotated. </td>
       </tr>
       <tr>
         <td>Created</td>
@@ -80,15 +84,24 @@ If you prefer to inspect the keys in your service by using a graphical interface
       <caption style="caption-side:bottom;">Table 1. Describes the <strong>Keys</strong> table</caption>
     </table>
 
-## Viewing keys with the API
+    Not all key characteristics are displayed by default. To customize how the **Keys** table is to be presented, click the **Settings** icon and check the columns to be displayed.
+    {: tip}
+
+    Not seeing the full list of keys that are stored in your service instance?
+    Verify with your administrator that you are assigned the correct role for
+    the applicable service instance or individual key. For more information
+    about roles, see
+    [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).
+
+## Viewing root keys or standard keys with the key management API
 {: #view-key-api}
 
 You can retrieve the contents of your keys by using the {{site.data.keyword.hscrypto}} key management API.
 
-### Retrieving a list of your keys
+### Retrieving a list of your root keys or standard keys
 {: #retrieve-keys-api}
 
-For a high-level view, you can browse keys that are managed in your provisioned instance of {{site.data.keyword.hscrypto}} by making a `GET` call to the following endpoint.
+For a high-level view, you can browse your root keys or standard keys that are managed in your provisioned instance of {{site.data.keyword.hscrypto}} by making a `GET` call to the following endpoint.
 
 ```
 https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
@@ -134,57 +147,69 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
       <caption style="caption-side:bottom;">Table 2. Describes the variables that are needed to view keys with the {{site.data.keyword.hscrypto}} key management API</caption>
     </table>
 
-    A successful `GET /v2/keys` request returns a collection of keys that are available in your {{site.data.keyword.hscrypto}} service instance.
+    A successful `GET /v2/keys` request returns a collection of keys that are available in your {{site.data.keyword.hscrypto}} instance.
 
-    ```
+    ```json
     {
       "metadata": {
-        "collectionType": "application/vnd.ibm.collection+json",
+        "collectionType": "application/vnd.ibm.kms.key+json",
         "collectionTotal": 2
       },
       "resources": [
         {
-          "id": "...",
+          "id": "02fd6835-6001-4482-a892-13bd2085f75d",
           "type": "application/vnd.ibm.kms.key+json",
-          "name": "Standard key",
-          "description": "...",
+          "name": "Root-key",
           "state": 1,
-          "crn": "...",
-          "algorithmType": "AES",
+          "crn": "crn:v1:bluemix:public:hs-crypto:us-south:a/f047b55a3362ac06afad8a3f2f5586ea:12e8c9c2-a162-472d-b7d6-8b9a86b815a6:key:02fd6835-6001-4482-a892-13bd2085f75d",
           "createdBy": "...",
-          "creationDate": "YYYY-MM-DDTHH:MM:SSZ",
-          "algorithmMetadata": {
-            "bitLength": "256",
-            "mode": "CBC_PAD"
-          },
-          "extractable": true,
-          "imported": false
-        },
-        {
-          "id": "...",
-          "type": "application/vnd.ibm.kms.key+json",
-          "name": "Root key",
-          "description": "...",
-          "state": 1,
-          "crn": "...",
-          "algorithmType": "AES",
-          "createdBy": "...",
-          "creationDate": "YYYY-MM-DDTHH:MM:SSZ",
-          "lastUpdateDate": "YYYY-MM-DDTHH:MM:SSZ",
-          "lastRotateDate": "YYYY-MM-DDTHH:MM:SSZ",
+          "creationDate": "2020-03-11T16:30:06Z",
+          "lastUpdateDate": "2020-03-11T16:30:06Z",
           "algorithmMetadata": {
             "bitLength": "256",
             "mode": "CBC_PAD"
           },
           "extractable": false,
-          "imported": true
+          "imported": true,
+          "algorithmMode": "CBC_PAD",
+          "algorithmBitSize": 256,
+          "dualAuthDelete": {
+            "enabled": false
+          }
+        },
+        {
+          "id": "2291e4ae-a14c-4af9-88f0-27c0cb2739e2",
+          "type": "application/vnd.ibm.kms.key+json",
+          "name": "Standard-key",
+          "state": 1,
+          "crn": "crn:v1:bluemix:public:hs-crypto:us-south:a/f047b55a3362ac06afad8a3f2f5586ea:30372f20-d9f1-40b3-b486-a709e1932c9c:key:2291e4ae-a14c-4af9-88f0-27c0cb2739e2",
+          "createdBy": "...",
+          "creationDate": "2020-03-12T03:50:12Z",
+          "lastUpdateDate": "2020-03-12T03:50:12Z",
+          "algorithmMetadata": {
+            "bitLength": "256",
+            "mode": "CBC_PAD"
+          },
+          "extractable": true,
+          "imported": false,
+          "algorithmMode": "CBC_PAD",
+          "algorithmBitSize": 256,
+          "dualAuthDelete": {
+            "enabled": false
+          }
         }
       ]
     }
     ```
-    {:screen}
+    {: screen}
 
-    By default, `GET /keys` returns your first 2000 keys, but you can adjust this limit by using the `limit` parameter at query time. To learn more about `limit` and `offset`, see [Retrieving a subset of keys](#retrieve_subset_keys_api).
+    By default, `GET api/v2/keys` returns your first 200 keys, but you can adjust this limit by using the `limit` parameter at query time. To learn more about `limit` and `offset`, see
+    [Retrieving a subset of keys](#retrieve-subset-keys-api).
+
+    Not seeing the full list of keys? You might need to use `limit` and `offset`
+    or check with your administrator to ensure you're assigned the correct level
+    access to keys in your instance. To learn more, see
+    [Unable to view or list keys](/docs/hs-crypto?topic=/hs-crypto-troubleshooting#unable-to-list-keys-api).
     {: tip}
 
 ### Retrieving a subset of keys
@@ -196,40 +221,57 @@ For example, you might have 3000 total keys that are stored in your {{site.data.
 
 You can use the following example request to retrieve a different set of keys.
 
-  ```cURL
-  curl -X GET \
-  https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys?offset=<offset>&limit=<limit> \
+```cURL
+curl -X GET \
+  'https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys?offset=<offset>&limit=<limit>' \
   -H 'accept: application/vnd.ibm.collection+json' \
   -H 'authorization: Bearer <IAM_token>' \
-  -H 'bluemix-instance: <instance_ID>' \
-  -H 'correlation-id: <correlation_ID>' \
-  ```
-  {: codeblock}
+  -H 'bluemix-instance: <instance_ID>'
+```
+{: codeblock}
 
-  Replace the `limit` and `offset` variables in your request according to the following table.
-  <table>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><p><varname>offset</varname></p></td>
-      <td>
-        <p>Optional: The number of keys to skip.</p>
-        <p>For example, if you have 50 keys in your instance, and you want to list keys 26 - 50, use
-            <code>../keys?offset=25</code>. You can also pair <code>offset</code> with <code>limit</code> to page through your available resources.</p>
-      </td>
-    </tr>
-    <tr>
-      <td><p><varname>limit</varname></p></td>
-      <td>
-        <p>Optional: The number of keys to retrieve.</p>
-        <p>For example, if you have 100 keys in your instance, and you want to list only 10 keys, use
-            <code>../keys?limit=10</code>. The maximum value for <code>limit</code> is 5000.</p>
-      </td>
-    </tr>
-    <caption style="caption-side:bottom;">Table 2. Describes the <code>limit</code> and <code>offset</code> variables</caption>
-  </table>
+Replace the `limit` and `offset` variables in your request according to the
+following table.
+
+<table>
+  <tr>
+    <th>Variable</th>
+    <th>Description</th>
+  </tr>
+
+  <tr>
+    <td>
+      <varname>offset</varname>
+    </td>
+    <td>
+      <p>
+        The number of keys to skip.
+      </p>
+      <p>
+        For example, if you have 50 keys in your instance, and you want to list keys 26 - 50, use <code>../keys?offset=25</code>. You can also pair <code>offset</code> with <code>limit</code> to page through your available resources.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <varname>limit</varname>
+    </td>
+    <td>
+      <p>
+        The number of keys to retrieve.
+      </p>
+      <p>
+        For example, if you have 100 keys in your instance, and you want to list only 10 keys, use <code>../keys?limit=10</code>. The maximum value for <code>limit</code> is 5000.
+      </p>
+    </td>
+  </tr>
+
+  <caption style="caption-side:bottom;">
+    Table 2. Describes the <code>limit</code> and <code>offset</code> variables
+  </caption>
+</table>
+
 
 For usage notes, check out the following examples for setting your `limit` and `offset` query parameters.
 
@@ -260,94 +302,96 @@ For usage notes, check out the following examples for setting your `limit` and `
 Offset is the location of a particular key in a data set. The `offset` value is zero-based, which means that the 10th encryption key in a data set is at offset 9.
 {: tip}
 
-### Retrieving a key by ID
-{: #retrieve-key-api}
+### Retrieving keys by state
+{: #filter-keys-state-api}
 
-To view detailed information about a specific key, you can make a `GET` call to the following endpoint.
+By specifying the `state` parameter at query time, you can retrieve keys that are in the states that you specify.
 
-```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
+For example, you might have keys in your service instance that are in the active, suspended, and destroyed states, but you only want to retrieve keys in the active state when you make a `GET /keys` request.
+
+The state query parameter takes in a list of integers from 0 to 5 delimited by commas with no whitespace or trailing commas. Valid states are based on NIST SP 800-57. For more information on key states, see [Key states and transitions](/docs/hs-crypto?topic=hs-crypto-key-states).
+{: note}
+
+You can use the following example request to retrieve a different set of keys.
+
+```cURL
+curl -X GET \
+  'https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys?state=<state_integers>' \
+  -H 'accept: application/vnd.ibm.collection+json' \
+  -H 'authorization: Bearer <IAM_token>' \
+  -H 'bluemix-instance: <instance_ID>'
 ```
 {: codeblock}
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
+Replace the `state` variable in your request according to the following table.
 
-2. Retrieve the ID of the key you would like to access or manage.
+<table>
+  <tr>
+    <th>Variable</th>
+    <th>Description</th>
+  </tr>
 
-    The ID value is used to access detailed information about the key, such as the key material itself. You can retrieve the ID for a specified key by making a `GET /v2/keys` request, or by accessing the {{site.data.keyword.hscrypto}} GUI.
+  <tr>
+    <td>
+      <varname>state</varname>
+    </td>
+    <td>
+      <p>
+        The states of the keys to be retrieved. States are integers and
+        correspond to the Pre-activation = 0, Active = 1, Suspended = 2,
+        Deactivated = 3, and Destroyed = 5 values.
+      </p>
+      <p>
+        For example, if you want to only list keys in the active state in your
+        service instance, use <code>../keys?state=1</code>. You can also pair
+        <code>state</code> with<code>offset</code> with <code>limit</code> to
+        page through your available resources.
+      </p>
+    </td>
+  </tr>
 
-3. Run the following cURL command to get details about your key and the key material.
+  <caption style="caption-side:bottom;">
+    Table 4. Describes the <code>state</code> variable.
+  </caption>
+</table>
 
-    ```cURL
-    curl -X GET \
-      https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID> \
-      -H 'accept: application/vnd.ibm.kms.key+json' \
-      -H 'authorization: Bearer <IAM_token>' \
-      -H 'bluemix-instance: <instance_ID>' \
-      -H 'correlation-id: <correlation_ID>' \
-    ```
-    {: codeblock}
+For usage notes, check out the following examples for setting your `state` query
+parameter.
 
-    Replace the variables in the example request according to the following table.
+<table>
+  <tr>
+    <th>URL</th>
+    <th>Description</th>
+  </tr>
 
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><varname>region</varname></td>
-        <td>The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. See <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a> for more information.</td>
-      </tr>
-      <tr>
-        <td><varname>IAM_token</varname></td>
-        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>instance_ID</varname></td>
-        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>correlation_ID</varname></td>
-        <td>Optional: The unique identifier that is used to track and correlate transactions.</td>
-      </tr>
-      <tr>
-        <td><varname>key_ID</varname></td>
-        <td>The identifier for the key that you retrieved in [step 1](#retrieve-keys-api).</td>
-      </tr>
-      <caption style="caption-side:bottom;">Table 4. Describes the variables that are needed to view a specified key with the {{site.data.keyword.hscrypto}} key management API</caption>
-    </table>
+  <tr>
+    <td>
+      <code>.../keys</code>
+    </td>
+    <td>
+      Lists all of your available resources, up to the first 200 keys.
+    </td>
+  </tr>
 
-    A successful `GET v2/keys/<key_ID>` response returns details about your key and the key material. The following JSON object shows an example returned value for a standard key.
+  <tr>
+    <td>
+      <code>.../keys?state=5</code>
+    </td>
+    <td>
+      Lists keys in the deleted state.
+    </td>
+  </tr>
 
-    ```
-    {
-        "metadata": {
-            "collectionTotal": 1,
-            "collectionType": "application/vnd.ibm.kms.key+json"
-        },
-        "resources": [
-        {
-            "id": "...",
-            "type": "application/vnd.ibm.kms.key+json",
-            "name": "Standard key",
-            "description": "...",
-            "state": 1,
-            "crn": "...",
-            "algorithmType": "AES",
-            "payload": "...",
-            "createdBy": "...",
-            "creationDate": "YYYY-MM-DDTHH:MM:SSZ",
-            "algorithmMetadata": {
-                "bitLength": "256",
-                "mode": "CBC_PAD"
-            },
-            "extractable": true,
-            "imported": false
-        }
-      ]
-    }
-    ```
-    {:screen}
+  <tr>
+    <td>
+      <code>.../keys?state=2,3</code>
+    </td>
+    <td>
+      Lists keys in the suspended and deactivated state.
+    </td>
+  </tr>
 
-    For a detailed description of the available parameters, see the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+  <caption style="caption-side:bottom;">
+    Table 5. Provides usage notes for the stage query parameter.
+  </caption>
+</table>

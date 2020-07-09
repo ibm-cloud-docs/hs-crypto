@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-27"
+lastupdated: "2020-07-06"
 
 keywords: data encryption key, key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, unwrap api
 
@@ -37,6 +37,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=
 ```
 {: codeblock}
 
+Root keys that contain the same key material can unwrap the same data encryption key (WDEK).
+{: note}
+
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
 2. Copy the ID of the [root key](#x6946961){: term} that you used to perform the initial wrap request.
@@ -55,7 +58,6 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=
       -H 'bluemix-instance: <instance_ID>' \
       -H 'content-type: application/vnd.ibm.kms.key_action+json' \
       -H 'correlation-id: <correlation_ID>' \
-      -H 'prefer: <return_preference>' \
       -d '{
       "ciphertext": "<encrypted_data_key>"
     }'
@@ -70,34 +72,24 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td>The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
+        <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
       </tr>
       <tr>
         <td><varname>key_ID</varname></td>
-        <td>The unique identifier for the root key that you used for the initial wrap request.</td>
+        <td><strong>Required.</strong> The unique identifier for the root key that you used for the initial wrap request.</td>
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
-        <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
+        <td><strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
-        <td>The unique identifier that is assigned to your{{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+        <td><strong>Required.</strong> The unique identifier that is assigned to your{{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
       </tr>
       <tr>
         <td><varname>correlation_ID</varname></td>
         <td>Optional: The unique identifier that is used to track and correlate transactions.</td>
       </tr>
-      <tr>
-        <td><varname>return_preference</varname></td>
-        <td><p>A header that alters server behavior for <code>POST</code> and <code>DELETE</code> operations.</p><p>When you set the <em>return_preference</em> variable to <code>return=minimal</code>, the service returns only the key metadata, such as the key name and ID value, in the response entity-body. When you set the variable to <code>return=representation</code>, the service returns both the key material and the key metadata.</p></td>
-      </tr>
-      <!--
-      <tr>
-        <td><varname>additional_data</varname></td>
-        <td>Optional: The additional authentication data (AAD) that is used to further secure the key. Each string can hold up to 255 characters. If you supply AAD when you make a wrap call to the service, you must specify the same AAD during the unwrap call.</td>
-      </tr>
-      -->
       <tr>
         <td><varname>encrypted_data_key</varname></td>
         <td>The <code>ciphertext</code> value that was returned during a wrap operation.</td>
@@ -105,11 +97,19 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=
       <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to unwrap keys in {{site.data.keyword.hscrypto}}.</caption>
     </table>
 
-    The original key material is returned in the response entity-body. The following JSON object shows an example returned value.
+    The original key material is returned in the response entity-body. The response body also contains the ID of the key version that was used to unwrap the supplied ciphertext. The following JSON object shows an example returned value.
 
-    ```
+    ```json
     {
-      "plaintext": "VGhpcyBpcyBhIHNlY3JldCBtZXNzYWdlLg=="
+      "plaintext": "Rm91ciBzY29yZSBhbmQgc2V2ZW4geWVhcnMgYWdv",
+      "keyVersion": {
+        "id": "02fd6835-6001-4482-a892-13bd2085f75d"
+      }
     }
     ```
-    {:screen}
+    {: screen}
+
+    If {{site.data.keyword.hscrypto}} detects that you rotated
+    the root key that is used to unwrap and access your data, the service also returns a newly wrapped data encryption key (`ciphertext`) in the unwrap response body. The latest key version (`rewrappedKeyVersion`) that is associated with the new `ciphertext` is also returned. Store and use the new
+    `ciphertext` value for future envelope encryption operations so that your data is protected by the latest root key.
+    {: note}

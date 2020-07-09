@@ -34,6 +34,20 @@ You can now create {{site.data.keyword.hscrypto}} resources in the Washington DC
 
 For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
+### Added: {{site.data.keyword.hscrypto}} aligns the key management functions with {{site.data.keyword.keymanagementserviceshort}}
+{: #added-key-protect-concurrency}
+
+{{site.data.keyword.hscrypto}} now supports the same level of key management functions as {{site.data.keyword.keymanagementserviceshort}} with FIPS 140-2 Level 4-compliant HSM. The added functions include the following:
+
+<!-- * [Importing token to securely upload keys](/docs/hs-crypto?topic=hs-crypto-create-import-tokens) -->
+* [Policy-based key rotation](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy)
+* [Viewing root key versions](/docs/hs-crypto?topic=hs-crypto-view-key-versions)
+* [Disabling and enabling root keys](/docs/hs-crypto?topic=hs-crypto-disable-keys)
+* Dual authorization policies for {{site.data.keyword.hscrypto}} [instances](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth) and [keys](/docs/hs-crypto?topic=hs-crypto-set-dual-auth-key-policy)
+* [Viewing details about an encryption key](/docs/hs-crypto?topic=hs-crypto-view-key-details)
+* [Viewing associations between root keys and IBM Cloud resources](/docs/hs-crypto?topic=hs-crypto-view-protected-resources)
+* [Restoring a deleted key](/docs/hs-crypto?topic=hs-crypto-restore-keys)
+
 ## June 2020
 {: #june-2020}
 

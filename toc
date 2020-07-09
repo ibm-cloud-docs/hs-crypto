@@ -13,19 +13,29 @@ IBM Cloud Hyper Protect Crypto Services
 
     {: .topicgroup}
     About
+        [Video: IBM Cloud Hyper Protect Crypto Services overview](https://www.youtube.com/watch?v=0LiltyNMwgo&feature=youtu.be)
         overview.md
-        architecture-workload-isolation.md
         use_case.md
         data-security.md
         hs-crypto-concepts.md
         service_instance_overview.md
-        envelope-encryption.md
-        HSM-intro.md
-        [Video: IBM Cloud Hyper Protect Crypto Services overview](https://www.youtube.com/watch?v=0LiltyNMwgo&feature=youtu.be)
+
+        {: .topicgroup}
+        About key management service
+            importing-keys.md
+            envelope-encryption.md
+            key-states.md
+
+        {: .topicgroup}
+        About cloud hardware security module
+            HSM-intro.md
+
+        key-rotation.md
 
     {: .topicgroup}
     Integrations
         integrate-services.md
+        view-protected-resources.md
 
     {: .topicgroup}
     Tutorials
@@ -38,13 +48,17 @@ IBM Cloud Hyper Protect Crypto Services
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    provision.md
-    initialize-hsm-cli.md
-
     {: .topicgroup}
-    Initializing service instances with the Management Utilities
-        prepare-management-utilities.md
-        initialize-hsm-management-utilities.md
+    Setting up the service
+        provision.md
+        initialize-hsm-cli.md
+
+        {: .topicgroup}
+        Initializing service instances with the Management Utilities
+            prepare-management-utilities.md
+            initialize-hsm-management-utilities.md
+
+        settings-dual-auth.md
 
     {: .topicgroup}
     Setting up API calls
@@ -65,7 +79,11 @@ IBM Cloud Hyper Protect Crypto Services
         import-root-keys.md
         import-standard-keys.md
 
-    view-keys.md
+    {: .topicgroup}
+    Viewing keys
+        view-keys.md
+        view-key-details.md
+        retrieve-key.md
 
     {: .topicgroup}
     Protecting keys
@@ -75,15 +93,27 @@ IBM Cloud Hyper Protect Crypto Services
 
     {: .topicgroup}
     Rotating keys
+        set-rotation-policy.md
         rotate-keys.md
+        view-key-versions.md
 
-    delete-keys.md
+    disable-keys.md
+
+    {: .topicgroup}
+    Deleting keys
+        delete-keys.md
+        delete-dual-auth-keys.md
+        set-dual-auth-policy.md
+
+    restore-keys.md
+    add-remove-crypto-units.md
     delete-instance.md
 
     {: .topicgroup}
-    Enhancing security for Hyper Protect Crypto Services
+    Enhancing security
         manage-access.md
         grant-access-keys.md
+        architecture-workload-isolation.md
         crypto-private-network.md
         at-events.md
 
@@ -96,9 +126,9 @@ IBM Cloud Hyper Protect Crypto Services
     {: .navgroup id="reference"}
     {: .topicgroup}
     Key management service reference
-        [Key management API](https://{DomainName}/apidocs/hs-crypto)
-        [Key management CLI](https://{DomainName}/docs/key-protect?topic=key-protect-cli-reference)
-        [Trusted Key Entry CLI](https://{DomainName}/docs/hs-crypto-cli-plugin?topic=hs-crypto-cli-plugin-tke_cli_plugin)
+        [Key management API reference](https://{DomainName}/apidocs/hs-crypto)
+        [Key management CLI reference](https://{DomainName}/docs/key-protect?topic=key-protect-cli-reference)
+        [Trusted Key Entry CLI reference](https://{DomainName}/docs/hs-crypto-cli-plugin?topic=hs-crypto-cli-plugin-tke_cli_plugin)
 
     {: .topicgroup}
     Cloud hardware security module reference
