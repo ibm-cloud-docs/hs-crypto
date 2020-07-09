@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-06-30"
+lastupdated: "2020-07-09"
 
 keywords: view resoure, root key encryption resources, protected resource, protected service, envelope encryption, key registration, view registration, list registrations
 
@@ -40,7 +40,7 @@ When you use a root key to protect at-rest data with envelope encryption, the cl
 Key registration is an extra feature that's available only if the cloud service enables it as part of its integration with {{site.data.keyword.hscrypto}}. To determine whether an [integrated service](/docs/hs-crypto?topic=hs-crypto-integrate-services) supports key registration, refer to its service documentation for more information.
 {: note}
 
-## Viewing protected resources with the GUI
+<!-- ## Viewing protected resources with the GUI
 {: #view-protected-resources-gui}
 
 You can browse the registrations that are available between your {{site.data.keyword.hscrypto}} keys and cloud resources by using the {{site.data.keyword.hscrypto}} GUI.
@@ -84,7 +84,7 @@ You can browse the registrations that are available between your {{site.data.key
 (CRN), and retention policy.
 
 Besides searching for a resource, you can also filter the resources by the name of a cloud service that is associated with the resource or by the retention policy. To do so, click the filter button, select the filter options from the list, and click **Apply**.
-{: tip}
+{: tip} -->
 
 ## Viewing protected resources with the API
 {: #view-protected-resources-api}

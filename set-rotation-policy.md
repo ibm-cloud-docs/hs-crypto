@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-27"
+lastupdated: "2020-07-09"
 
 keywords: rotate, rotate root key, automatic key rotation, set rotation policy, policy based key rotation
 
@@ -34,7 +34,7 @@ You can create a rotation policy only for root keys that are generated in {{site
 Want to learn more about your key rotation options in {{site.data.keyword.hscrypto}}? Check out [Comparing your key rotation options](/docs/hs-crypto?topic=hs-crypto-key-rotation#compare-key-rotation-options) for more information.
 {: tip}
 
-## Managing rotation polices in the GUI
+<!-- ## Managing rotation polices in the GUI
 {: #manage-policies-gui}
 
 If you prefer to manage policies for your root keys by using a graphical interface, you can use the {{site.data.keyword.hscrypto}} GUI.
@@ -51,7 +51,7 @@ If you prefer to manage policies for your root keys by using a graphical interfa
 
 8. Click **Create policy** to set the policy for the key.
 
-When it's time to rotate the key based on the rotation interval that you specify, {{site.data.keyword.hscrypto}} automatically replaces the root key with new key material.
+When it's time to rotate the key based on the rotation interval that you specify, {{site.data.keyword.hscrypto}} automatically replaces the root key with new key material. -->
 
 ## Managing rotation policies with the API
 {: #manage-rotation-policies-api}
