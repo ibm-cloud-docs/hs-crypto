@@ -235,7 +235,7 @@ The procedure varies depending on the method that you use to initialize the serv
 
 -  If you've initialized your service instance through the TKE application, in the user interface of the application, select **Imprint mode** &gt; **Zeroize crypto unit**.
 
-## Unable to list crypto units
+<!-- ## Unable to list crypto units
 {: #troubleshoot-list-crypto-units}
 {: troubleshoot}
 
@@ -270,7 +270,7 @@ Try the following solutions:
     ```
     {: pre}
 
-- Make sure that your account is assigned at least a _Viewer_ [platform access role](/docs/hs-crypto?topic=hs-crypto-manage-access#platform-mgmt-roles) to view the service instance information. The account with which you create the service instance is granted as the _Administrator_ role by default and can assign various roles that correspond to the specific {{site.data.keyword.hscrypto}} permissions. For more information about roles and permissions, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
+- Make sure that your account is assigned at least a _Viewer_ [platform access role](/docs/hs-crypto?topic=hs-crypto-manage-access#platform-mgmt-roles) to view the service instance information. The account with which you create the service instance is granted as the _Administrator_ role by default and can assign various roles that correspond to the specific {{site.data.keyword.hscrypto}} permissions. For more information about roles and permissions, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access). -->
 
 ## Unable to rotate root keys
 {: #unable-to-rotate-root-keys}
