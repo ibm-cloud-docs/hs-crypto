@@ -25,12 +25,11 @@ IBM Cloud Hyper Protect Crypto Services
             importing-keys.md
             envelope-encryption.md
             key-states.md
+            key-rotation.md
 
         {: .topicgroup}
         About cloud hardware security module
             HSM-intro.md
-
-        key-rotation.md
 
     {: .topicgroup}
     Integrations
