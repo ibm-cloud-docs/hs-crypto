@@ -140,7 +140,7 @@ dashboard.
       <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to delete keys with the {{site.data.keyword.hscrypto}} key management API.</caption>
     </table>
 
-    If the _return_preference_ variable is set to `return=representation`, the details of the `DELETE` request are returned in the response entity-body.
+    If the *return_preference* variable is set to `return=representation`, the details of the `DELETE` request are returned in the response entity-body.
 
     The following JSON object shows an example returned value.
 
