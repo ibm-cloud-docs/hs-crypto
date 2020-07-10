@@ -37,7 +37,7 @@ For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypt
 ### Added: {{site.data.keyword.hscrypto}} aligns the key management functions with {{site.data.keyword.keymanagementserviceshort}}
 {: #added-key-protect-concurrency}
 
-{{site.data.keyword.hscrypto}} now supports the same level of key management functions as {{site.data.keyword.keymanagementserviceshort}} with FIPS 140-2 Level 4-compliant HSM. The added functions include the following:
+{{site.data.keyword.hscrypto}}, built on FIPS 140-2 Level 4-compliant HSM, now supports the same level of key management functions as {{site.data.keyword.keymanagementserviceshort}}. The added functions include the following:
 
 <!-- * [Importing token to securely upload keys](/docs/hs-crypto?topic=hs-crypto-create-import-tokens) -->
 * [Policy-based key rotation](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy)
