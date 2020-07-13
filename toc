@@ -38,10 +38,11 @@ IBM Cloud Hyper Protect Crypto Services
 
     {: .topicgroup}
     Tutorials
-        [Tutorial: Using IBM Cloud Hyper Protect Crypto Services to encrypt VMware disks](https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/)
         [Tutorial: Applying end to end security to a cloud application](https://{DomainName}/docs/tutorials?topic=solution-tutorials-cloud-e2e-security)
-        [Tutorial: Enhancing security of your deployed application](https://{DomainName}/docs/tutorials?topic=solution-tutorials-extended-app-security)
         [Tutorial: Create secure microservices writing to a consolidated database](https://developer.ibm.com/patterns/create-a-secured-microservices-and-deploy-it-to-a-consolidated-database/)
+        [Tutorial: Encrypt Kubernetes secrets with IBM Cloud Hyper Protect Crypto Services](https://developer.ibm.com/tutorials/encrypt-kubernetes-secrets-with-hyper-protect-crypto-services/)
+        [Tutorial: Enhancing security of your deployed application](https://{DomainName}/docs/tutorials?topic=solution-tutorials-extended-app-security)
+        [Tutorial: Using IBM Cloud Hyper Protect Crypto Services to encrypt VMware disks](https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/)
 
     whats_new.md
     {: .navgroup-end}
