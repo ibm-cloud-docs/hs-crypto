@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-18"
+lastupdated: "2020-07-13"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -73,7 +73,7 @@ The following are a few highlights of the {{site.data.keyword.hscrypto}} archite
 
   By [integrating with other {{site.data.keyword.cloud_notm}} services](/docs/hs-crypto?topic=hs-crypto-integrate-services), {{site.data.keyword.hscrypto}} offers the capability of bringing your own encryption to the cloud. The service provides double-layer protection for your cloud data by wrapping the encryption keys that are associated with your cloud services.
 
-### Cloud hardmare security module
+### Cloud hardware security module
 {: #cloud-hsm}
 
 * **Customer-controlled HSM**
