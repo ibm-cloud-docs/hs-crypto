@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="hs-crypto" category="security" audience="service" href="/docs/hs-crypto?topic=hs-crypto-get-started" console-page="/catalog/services/hyper-protect-crypto-services" product-page="https://www.ibm.com/cloud/hyper-protect-services" path="hs-crypto"}
+{: .toc subcollection="hs-crypto" category="security" audience="service" href="/docs/hs-crypto?topic=hs-crypto-get-started" console-page="/catalog/services/hyper-protect-crypto-services" product-page="https://www.ibm.com/cloud/hyper-protect-crypto" path="hs-crypto"}
 IBM Cloud Hyper Protect Crypto Services
 
     {: .navgroup id="learn"}
@@ -36,15 +36,15 @@ IBM Cloud Hyper Protect Crypto Services
         integrate-services.md
         view-protected-resources.md
 
-    {: .topicgroup}
-    Tutorials
-        [Tutorial: Applying end to end security to a cloud application](https://{DomainName}/docs/tutorials?topic=solution-tutorials-cloud-e2e-security)
-        [Tutorial: Create secure microservices writing to a consolidated database](https://developer.ibm.com/patterns/create-a-secured-microservices-and-deploy-it-to-a-consolidated-database/)
-        [Tutorial: Encrypt Kubernetes secrets with IBM Cloud Hyper Protect Crypto Services](https://developer.ibm.com/tutorials/encrypt-kubernetes-secrets-with-hyper-protect-crypto-services/)
-        [Tutorial: Enhancing security of your deployed application](https://{DomainName}/docs/tutorials?topic=solution-tutorials-extended-app-security)
-        [Tutorial: Using IBM Cloud Hyper Protect Crypto Services to encrypt VMware disks](https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/)
-
     whats_new.md
+    {: .navgroup-end}
+
+    {: .navgroup id="tutorial"}
+    [Tutorial: Applying end to end security to a cloud application](https://{DomainName}/docs/tutorials?topic=solution-tutorials-cloud-e2e-security)
+    [Tutorial: Create secure microservices writing to a consolidated database](https://developer.ibm.com/patterns/create-a-secured-microservices-and-deploy-it-to-a-consolidated-database/)
+    [Tutorial: Encrypt Kubernetes secrets with IBM Cloud Hyper Protect Crypto Services](https://developer.ibm.com/tutorials/encrypt-kubernetes-secrets-with-hyper-protect-crypto-services/)
+    [Tutorial: Enhancing security of your deployed application](https://{DomainName}/docs/tutorials?topic=solution-tutorials-extended-app-security)
+    [Tutorial: Using IBM Cloud Hyper Protect Crypto Services to encrypt VMware disks](https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
