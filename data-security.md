@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-02"
+lastupdated: "2020-07-17"
 
 keywords: security compliance, ibmcloud security compliance, compliant, data security, data encryption, data delete, common criteria, fips, iso, gdpr
 
@@ -97,26 +97,26 @@ To ensure GDPR compliance for your {{site.data.keyword.hscrypto}} resources, [en
 - [{{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Data Sheet Addendum (DSA)](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=46E9C81025D811E895B382FBC780E8BA){: external}
 - [{{site.data.keyword.IBM_notm}} Data Processing Addendum (DPA)](https://www.ibm.com/support/customer/csol/terms/?cat=dpa){: external}
 
-<!-- ### HIPAA support
+### HIPAA support
 {: #hipaa-ready}
 
 {{site.data.keyword.hscrypto}} meets controls for the US Health Insurance Portability and Accountability Act (HIPAA) to ensure safeguarding of protected health information (PHI).
 
-If you or your company is a covered entity as defined by HIPAA, you can enable the HIPPA Supported setting for your {{site.data.keyword.cloud_notm}} account. To find out more, see [Enabling the HIPAA Supported setting](/docs/account?topic=account-eu-hipaa-supported#enabling-hipaa). -->
+If you or your company is a covered entity as defined by HIPAA, you can enable the HIPPA Supported setting for your {{site.data.keyword.cloud_notm}} account. To find out more, see [Enabling the HIPAA Supported setting](/docs/account?topic=account-eu-hipaa-supported#enabling-hipaa).
 
-<!--### IRAP support
+### IRAP support
 {: #IRAP-support}
 
 {{site.data.keyword.hscrypto}} meets the requirements of the Information Security Registered Assessors Program (IRAP) to provide high-quality information and communications technology services to government in support of Australia’s security.
 
-For more information, see [{{site.data.keyword.cloud_notm}} regional compliance programs](https://www.ibm.com/cloud/compliance/regional){: external}.-->
+For more information, see [{{site.data.keyword.cloud_notm}} regional compliance programs](https://www.ibm.com/cloud/compliance/regional){: external}.
 
 ### ISO 27001, 27017, 27018
 {: #iso}
 
 {{site.data.keyword.hscrypto}} is ISO 27001, 27017, 27018 certified. You can view compliance certifications by visiting [Compliance on the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/compliance){: external}.
 
-<!-- ### SOC 2 Type 1
+### SOC 2 Type 1
 {: #soc2-type1}
 
-{{site.data.keyword.hscrypto}} is SOC 2 Type 1 certified. For information about requesting an {{site.data.keyword.cloud_notm}} SOC 2 report, see [Compliance on the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/compliance){: external}.-->
+{{site.data.keyword.hscrypto}} is SOC 2 Type 1 certified. For information about requesting an {{site.data.keyword.cloud_notm}} SOC 2 report, see [Compliance on the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/compliance){: external}.
