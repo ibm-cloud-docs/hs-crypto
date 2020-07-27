@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2020-05-27"
+lastupdated: "2020-07-27"
 
 keywords: hsm, cloud hsm, tke cli, trusted key entry plug-in, ep11, grep11, cryptographic operations, cryptographic functions, imprint mode, smart card, master key, load master key
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:important: .important}
+{:note: .note}
 {:external: target="_blank" .external}
 {:term: .term}
 
@@ -27,6 +28,9 @@ Hardware security module (HSM) is a physical device that safeguards and manages 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is a cloud-based, FIPS 140-2 Level 4 certified HSM. With the support of Bring Your Own Key (BYOK), {{site.data.keyword.hscrypto}} acts as a dedicated key management service to provide a complete envelope of protection around the cryptographic keys. The customer-controlled {{site.data.keyword.hscrypto}} HSM backbones the key management service through the Keep Your Own Key (KYOK) support and [master key](#x2908413){: term} protection with the highest level of security for cryptography. It guarantees that no one, including cloud admins, has access to your keys. In order to use {{site.data.keyword.hscrypto}} to protect your keys and data, you need to first load the master key parts to the HSM. For more information, see [Introduction to service instance initialization](/docs/hs-crypto?topic=hs-crypto-introduce-service). For a detailed procedure, see [Initializing service instances](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
 With the introduction of Enterprise PKCS#11 (EP11) over [gRPC](https://grpc.io){: external}, you can also leverage the cloud HSM of {{site.data.keyword.hscrypto}} to access a full range of cryptographic operations to your sensitive data. The cryptographic operations include signing, signature validation, message authentication codes, random number generation.
+
+EP11 over gRPC (*GREP11* for short) utilizes gRPC to allow you to perform remote cryptographic procedure calls, and, by default, imposes message size limits. For GREP11, the maximum receiving message size is 4 MB and the outgoing message size currently has no limit.
+{: note}
 
 ## Introduction to EP11 over gRPC
 {: #grep11_intro}
