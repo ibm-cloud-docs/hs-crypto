@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-06-28"
+lastupdated: "2020-07-21"
 
 keywords: key storage, hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, key part, initialize service, smart card, trusted key entry application, tke application, management utilities, cloudtkefiles
 
@@ -40,7 +40,7 @@ You can also watch the following video to learn how to initialize {{site.data.ke
 
 1. Make sure that you've [provisioned a {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-provision), and [installed the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities).
 
-2. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started#step1-install-idt){:external} and [log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cloud-cli-getting-started#step3-configure-idt-env){: external}. If you've multiple accounts, select the account that your service instance is created with. Select the region and resource group where the service instance is located with the following command:
+2. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started#step1-install-idt){:external} and [log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cli-getting-started#step3-configure-idt-env){: external}. If you've multiple accounts, select the account that your service instance is created with. Select the region and resource group where the service instance is located with the following command:
 
   ```
   ibmcloud target -r <region> -g <resource_group>
@@ -49,10 +49,17 @@ You can also watch the following video to learn how to initialize {{site.data.ke
 
   To find out the regions that {{site.data.keyword.hscrypto}} supports, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
-3. Install the latest TKE CLI plug-in with the following command. The minimum required TKE CLI plug-in level is 0.0.11:
+3. Install the latest TKE CLI plug-in with the following command:
 
   ```
   ibmcloud plugin install tke
+  ```
+  {: pre}
+
+  If you already have the TKE CLI plug-in installed, upgrade it to the latest version with the following command:
+
+  ```
+  ibmcloud plugin update tke
   ```
   {: pre}
 
@@ -61,7 +68,7 @@ You can also watch the following video to learn how to initialize {{site.data.ke
   <!--
 Currently, only the Windows&reg; 10 and Linux operating systems are supported to use the TKE application.
 
-  - On Windows, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a CLOUDTKEFILES environment variable and set the value to the path for storing reference files. For example, `C:\users\tke-files`.
+  - On Windows, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a `CLOUDTKEFILES` environment variable, set the value to the path for storing reference files (For example, `C:\users\tke-files`), and restart your computer.
   -->
 
   - On the Linux operating system, add the following line to the `.bash_profile` file:
@@ -117,6 +124,9 @@ Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start
 
 Select the **Crypto units** tab. A list of [crypto units](#x9860404){: term} that are assigned to your user account is displayed. The SELECTED column shows what crypto units you're going to work with in later commands.
 
+For information on how to retrieve your service instance ID, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+{: tip}
+
 - To select extra crypto units to work with, click **Add crypto units** and enter the CRYPTO UNIT NUM (crypto unit numbers) of the extra crypto units you want to work with. You can enter multiple crypto unit numbers, which are separated by a space.
 - To remove crypto units from the set you're going to work with, click **Remove crypto units** and enter the CRYPTO UNIT NUM of the crypto units you want to remove. You can enter multiple crypto unit numbers, which are separated by a space.
 
@@ -136,7 +146,7 @@ The public signature key and administrator name are read from the smart card and
 For security and compliance reasons, the administrator name of the crypto unit might be shown up in logs for auditing purposes.
 {: note}
 
-Repeat this step if you want to add multiple administrators. You must add at least as many administrators to a crypto unit as the larger of the signature threshold value and the revocation signature threshold value you intend to set in Step 4.
+Repeat this step if you want to add multiple administrators. The number of administrators added must be equal to or greater than the larger of the [signature threshold](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept) value as well as the revocation signature threshold value that you intend to set in Step 4. The signature threshold controls how many signatures are needed to run most administrative commands. The revocation signature threshold controls how many signatures are needed to remove an administrator.
 
 ### Step 4: Set the signature thresholds to exit imprint mode in the selected crypto units
 {: #step4-exit-imprint-mode-management-utilities}
@@ -156,6 +166,8 @@ When an EP11 smart card with a valid administrator signature key is inserted in 
 ### Step 5: Load the master key
 {: #step5-load-master-key-management-utilities}
 
+For more information about the state transition of the master key register, see [Understanding how master key is loaded](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-key-ceremony).
+
 #### Load the new master key register
 {: #step5-load-new-register-management-utilities}
 
@@ -167,7 +179,7 @@ When an EP11 smart card with a valid administrator signature key is inserted in 
 6. Repeat substep 4 and 5 for each master key part to be loaded.
 7. If prompted, in smart card reader 1, insert the EP11 smart card with an administrator signature key that is defined to the selected crypto units, and enter the smart card PIN on the smart card reader PIN pad.
 
-After all master key parts are loaded, the New Master Key Register is in Full Uncommitted state. For more information about the state transition of the master key register, see [Understanding how master key is loaded](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-key-ceremony).
+After all master key parts are loaded, the New Master Key Register is in Full Uncommitted state.
 
 #### Commit the new master key register
 {: #step5-commit-new-register-management-utilities}
@@ -180,7 +192,7 @@ After the process is complete, the New Master Key Register is in Full Committed 
 #### Activate the master key
 {: #step5-activate-master-key-management-utilities}
 
-Perform this step only when you're setting up a service instance for the first time and the service instance doesn't have key storage that contains keys. If the service instance has key storage that contains keys, this command changes the value of the Current Master Key Register and the keys in key storage become unusable.
+Perform this step only when you're setting up a service instance for the first time, which means both the New Master Key Register and Current Master Key Register of the key storage should not contain any keys. If the key storage contains keys, this command changes the value of the Current Master Key Register and the keys in key storage become unusable.
 {: important}
 
 1. Click **Set immediate** to move the value of the New Master Key Register to the Current Master Key Register and clear the New Master Key Register.
