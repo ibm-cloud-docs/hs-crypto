@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-06"
+lastupdated: "2020-07-27"
 
 keywords: grant access, iam, iam access, assign access, access policy, key access
 
@@ -48,9 +48,9 @@ Review [roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to
 To assign access:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
-2. Select the user, and click the overflow icon to open a list of options for that user.
+2. Select the user, and click the overflow (...) icon to open a list of options for that user.
 3. From the options menu, click **Assign access**.
-4. Click **Assign access to resources**.
+4. Click **Assign users additional access**.
 5. Click the **IAM services** button.
 6. From the list of services, select **Hyper Protect Crypto Services**.
 7. From the list of service instances, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
@@ -79,9 +79,9 @@ To get the ID for a specific key, you can:
 Use the retrieved key ID to create a access policy:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
-2. Select the user, and click the overflow icon to open a list of options for that user.
+2. Select the user, and click the overflow (...) icon to open a list of options for that user.
 3. From the options menu, click **Assign access**.
-4. Click **Assign access to resources**.
+4. Click **Assign users additional access**.
 5. From the list of services, select **Hyper Protect Crypto Services**.
 6. From the list of service instances, select the {{site.data.keyword.hscrypto}} service instance that contains the key that you want to grant access to.
 7. Enter identifying information about the key.
