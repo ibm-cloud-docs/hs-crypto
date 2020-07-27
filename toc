@@ -136,6 +136,7 @@ IBM Cloud Hyper Protect Crypto Services
 
     regions.md
     shared-responsibilities.md
+    open-source-licenses.md
     [IBM Cloud Hyper Protect Services resources](https://ibm-hyper-protect.github.io/)
     {: .navgroup-end}
 
