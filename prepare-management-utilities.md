@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-07-27"
+lastupdated: "2020-07-29"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -324,4 +324,4 @@ If you enter a wrong PIN for an EP11 smart card continuously for three times, th
 {: #prepare-management-utilities-next}
 
 - After you set up the Management Utilities, you can start to load the master key with the TKE application. For detailed instructions, see [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
-- If you need to uninstall the Management Utilities, refer to [Uninstall the Management Utilities](/docs/hs-crypto?topic=hs-crypto-delete-instance#uninstall-management-utilities).
+- If you need to uninstall the Management Utilities, you need to follow the instructions to [zeroize your crypto units first](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step) and then [uninstall the Management Utilities](/docs/hs-crypto?topic=hs-crypto-delete-instance#uninstall-management-utilities).
