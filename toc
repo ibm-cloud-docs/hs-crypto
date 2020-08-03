@@ -141,6 +141,34 @@ IBM Cloud Hyper Protect Crypto Services
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    troubleshooting.md
-    FAQs.md
+    {: .topicgroup}
+    Troubleshooting
+        troubleshooting-general.md
+        troubleshooting-authenticate-api.md
+        troubleshooting-block-smart-card.md
+        troubleshooting-change-signature-thresholds.md
+        troubleshooting-create-keys.md
+        troubleshooting-delete-instance.md
+        troubleshooting-delete-keys.md
+        troubleshooting-error-CLI-API.md
+        troubleshooting-list-crypto-units.md
+        troubleshooting-list-keys-api.md
+        troubleshooting-list-specific-keys.md
+        troubleshooting-master-key-rotation.md
+        troubleshooting-no-smart-card.md
+        troubleshooting-rotate-root-keys.md
+        troubleshooting-unauthorized-token-tke-application.md
+        troubleshooting-unauthorized-token.md
+
+    {: .topicgroup}
+    FAQs
+        FAQs-general.md
+        FAQs-pricing.md
+        FAQs-operations.md
+        FAQs-performance.md
+        FAQs-security.md
+        FAQs-ha-dr.md
+        FAQs-maintenance.md
+
+    support.md
     {: .navgroup-end}
