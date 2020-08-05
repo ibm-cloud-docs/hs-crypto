@@ -5,7 +5,7 @@
     "load the master key to my hyper protect crypto services instance",
     "after I provision a hyper protect crypto services instance",
     "after I create an HPCS instance",
-    "initializing an HPCS instance",  
+    "initializing an HPCS instance",
     "make my hyper protect crypto services instance work",
     "can't create keys in my hyper protect crypto services instance",
     "can't add keys in my hyper protect crypto services instance"
@@ -15,17 +15,17 @@
     "configure smart cards in hyper protect crypto services",
     "use smart cards in hyper protect crypto services",
     "use management utilities in hyper protect crypto services",
-    "configuring smart card in HPCS", 
+    "configuring smart card in HPCS",
     "recommendations on smart cards settings in hyper protect crypto services",
     "how many smart cards do I need to make my hyper protect crypto services instance work",
     "how many smart cards are needed in hyper protect crypto services"
-	  
+
   ],
   "faq-hpcs-with-cloud-services":[
     "use hyper protect crypto services with other IBM cloud services",
     "use hyper protect crypto services to protect other services",
     "integrate hyper protect crypto services with other services",
-    "integrating HPCS with other cloud services",  
+    "integrating HPCS with other cloud services",
     "enable hyper protect crypto services to manage my keys when using other services",
     "use hyper protect crypto services with object storage",
     "use hyper protect crypto services with database services",
@@ -51,7 +51,7 @@
     "grant access to my keys in hyper protect crypto services",
     "access control in hyper protect crypto services",
     "access authorization in hyper protect crypto services",
-    "access to HPCS",  
+    "access to HPCS",
     "access management in hyper protect crypto services"
   ],
   "faq-cryptographic-algorithms":[
@@ -95,7 +95,7 @@
     "audit events for hyper protect crypto services",
     "track how my HPCS instance is used",
     "use activity tracker in hyper protect crypto services",
-    "see logs for HPCS activity",  
+    "see logs for HPCS activity",
     "view log recording my hyper protect crypto services instance activities"
   ],
   "faq-ha-configuration":[
@@ -103,7 +103,7 @@
     "high availability configuration in hyper protect crypto services",
     "ha settings in hyper protect crypto services",
     "high availability settings in hyper protect crypto services",
-    "HA configuration for HPCS",  
+    "HA configuration for HPCS",
     "make sure my hyper protect crypto services instance is highly available",
     "mechanisms to support high availability requirements in hyper protect crypto services",
     "configure my hyper protect crypto services instance to increase availability"
@@ -112,7 +112,7 @@
     "What happens if my hyper protect crypto services instance fails",
     "hyper protect crypto services instance fails",
     "my hyper protect crypto services instance crashes",
-    "HPCS is failing",  
+    "HPCS is failing",
     "failover plan in hyper protect crypto services",
     "back up my hyper protect crypto services instance",
     "back up keys in hyper protect crypto services"
@@ -122,7 +122,7 @@
     "recover my hyper protect crypto services instance",
     "restore my keys in hyper protect crypto services",
     "restore data after my hyper protect crypto services instance crashes",
-    "backups for hyper protect crypto services",  
+    "backups for hyper protect crypto services",
     "recover data after my HPCS instance crash",
     "disaster recovery in hyper protect crypto services",
     "dr in hyper protect crypto services"
@@ -163,7 +163,7 @@
     "troubleshoot the smart card application error",
     "how to start the smart card applications in HPCS"
   ],
-  "unable-to-authenticate-api":[
+  "troubleshoot-unable-to-authenticate-api":[
     "unable to authenticate through the key management API",
     "troubleshoot 401 unauthorized error in hyper protect crypto services",
     "unable to make the key management API request for HPCS",
@@ -181,7 +181,7 @@
     "change a signature threshold value for hyper protect crypto services",
     "to change a signature threshold value"
   ],
-  "unable-to-delete-keys":[
+  "troubleshoot-unable-to-delete-keys":[
     "unable to delete keys in hyper protect crypto services",
     "unable to delete root keys for hyper protect crypto services",
     "not able to delete root keys within HPCS",
@@ -200,7 +200,7 @@
     "not able to delete an initialized service instance of HPCS",
     "delete an initialized service instance for hyper protect crypto services"
   ],
-  "unable-to-rotate-root-keys":[
+  "troubleshoot-unable-to-rotate-root-keys":[
     "unable to rotate root keys in hyper protect crypto services",
     "not able to rotate root keys for HPCS",
     "failed to rotate a root key in hyper protect crypto services",
@@ -209,7 +209,7 @@
     "not able to rotate root keys in hyper protect crypto services",
     "hyper protect crypto services roles and permissions for rotating keys"
   ],
-  "unable-to-list-keys-api":[
+  "troubleshoot-unable-to-list-keys-api":[
     "unable to view keys for hyper protect crypto services",
     "unable to list keys in hyper protect crypto services",
     "not able to view root keys in hyper protect crypto services",
@@ -218,7 +218,7 @@
     "why am I not able to view HPCS root keys with API",
     "why can't I list root keys with API in HPCS"
   ],
-  "unable-to-list-specific-keys":[
+  "troubleshoot-unable-to-list-specific-keys":[
     "unable to view specific keys in hyper protect crypto services",
     "unable to list specific keys for hyper protect crypto services",
     "not able to view specific hyper protect crypto services root keys",
@@ -246,4 +246,3 @@
     "access token expired when using the Trusted Key Entry application"
   ]
 }
-

@@ -16,7 +16,6 @@ subcollection: hs-crypto
 {:tsSymptoms: .tsSymptoms}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:codeblock: .codeblock}
@@ -30,7 +29,7 @@ subcollection: hs-crypto
 {: troubleshoot}
 {: support}
 
-After you run the `cryptounit-mk-rotate` command in the TKE CLI, you might not be able to activate the new master key. 
+After you run the `cryptounit-mk-rotate` command in the TKE CLI, you might not be able to activate the new master key.
 {:shortdesc}
 
 You are not able to activate the new master key after you run the `cryptounit-mk-rotate` command.

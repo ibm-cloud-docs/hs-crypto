@@ -16,7 +16,6 @@ subcollection: hs-crypto
 {:tsSymptoms: .tsSymptoms}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:codeblock: .codeblock}

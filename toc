@@ -128,12 +128,12 @@ IBM Cloud Hyper Protect Crypto Services
     Key management service reference
         [Key management API reference](https://{DomainName}/apidocs/hs-crypto)
         [Key management CLI reference](https://{DomainName}/docs/key-protect?topic=key-protect-cli-reference)
-        [Trusted Key Entry CLI reference](https://{DomainName}/docs/hs-crypto-cli-plugin?topic=hs-crypto-cli-plugin-tke_cli_plugin)
 
     {: .topicgroup}
     Cloud hardware security module reference
         grep11-api-ref.md
 
+    [Trusted Key Entry CLI reference](https://{DomainName}/docs/hs-crypto-cli-plugin?topic=hs-crypto-cli-plugin-tke_cli_plugin)
     regions.md
     shared-responsibilities.md
     open-source-licenses.md
@@ -141,25 +141,6 @@ IBM Cloud Hyper Protect Crypto Services
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    {: .topicgroup}
-    Troubleshooting
-        troubleshooting-general.md
-        troubleshooting-authenticate-api.md
-        troubleshooting-block-smart-card.md
-        troubleshooting-change-signature-thresholds.md
-        troubleshooting-create-keys.md
-        troubleshooting-delete-instance.md
-        troubleshooting-delete-keys.md
-        troubleshooting-error-CLI-API.md
-        troubleshooting-list-crypto-units.md
-        troubleshooting-list-keys-api.md
-        troubleshooting-list-specific-keys.md
-        troubleshooting-master-key-rotation.md
-        troubleshooting-no-smart-card.md
-        troubleshooting-rotate-root-keys.md
-        troubleshooting-unauthorized-token-tke-application.md
-        troubleshooting-unauthorized-token.md
-
     {: .topicgroup}
     FAQs
         FAQs-general.md
@@ -169,6 +150,33 @@ IBM Cloud Hyper Protect Crypto Services
         FAQs-security.md
         FAQs-ha-dr.md
         FAQs-maintenance.md
+
+    {: .topicgroup}
+    Troubleshooting key management API or CLI
+        troubleshooting-authenticate-api.md
+        troubleshooting-list-keys-api.md
+        troubleshooting-list-specific-keys.md
+        troubleshooting-error-CLI-API.md
+
+    {: .topicgroup}
+    Troubleshooting IBM Cloud console
+        troubleshooting-create-keys.md
+        troubleshooting-delete-keys.md
+        troubleshooting-rotate-root-keys.md
+        troubleshooting-delete-instance.md
+
+    {: .topicgroup}
+    Troubleshooting Trusted Key Entry
+        troubleshooting-unauthorized-token.md
+        troubleshooting-unauthorized-token-tke-application.md
+        troubleshooting-master-key-rotation.md
+        troubleshooting-list-crypto-units.md
+        troubleshooting-change-signature-thresholds.md
+
+    {: .topicgroup}
+    Troubleshooting smart cards
+        troubleshooting-block-smart-card.md
+        troubleshooting-no-smart-card.md
 
     support.md
     {: .navgroup-end}

@@ -17,7 +17,6 @@ subcollection: hs-crypto
 {:pre: .pre}
 {:tip: .tip}
 {:important: .important}
-{:gif: data-image-type='gif'}
 {:external: target="_blank" .external}
 {:term: .term}
 
@@ -54,7 +53,6 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
     {: important}
 6. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 
-<!-- ![Provisioning the service](/image/provision.gif "Provisioning the service"){: caption="Figure 1. Provisioning the service" caption-side="bottom"}{: gif} -->
 
 ## Provisioning from the {{site.data.keyword.cloud_notm}} CLI
 {: #provision-cli}
