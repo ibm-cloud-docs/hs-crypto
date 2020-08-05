@@ -13,7 +13,6 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:important: .important}
@@ -40,26 +39,25 @@ In order to provision a {{site.data.keyword.hscrypto}} instance, make sure that 
 
 To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console, complete the following steps:
 
-1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: new_window}.
+1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 2. Click **Catalog** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
 3. From the Catalog navigation pane, click **Services**. And then, under **Category**, select **Security**.
 4. From the list of services displayed, click the **{{site.data.keyword.hscrypto}}** tile.
 5. Fill in the form with the details that are required.
   1. Select a [region](/docs/hs-crypto?topic=hs-crypto-regions) that you want to create your {{site.data.keyword.hscrypto}} resources in.
-  2. **Optional**: In the **Tags** field, add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/resources?topic=resources-tag#tag).
+  2. **Optional**: In the **Tags** field, add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/account?topic=account-tag).
   3. Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs.
 
     In a production environment, it is suggested to select at least two crypto units to enable high availability. If you select three or more crypto units, these crypto units are distributed among different supported availability zones in the selected region.
     {: important}
 6. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 
-
 ## Provisioning from the {{site.data.keyword.cloud_notm}} CLI
 {: #provision-cli}
 
 To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.keyword.cloud_notm}} CLI, complete the following steps:
 
-1. Download and install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started){: external}.
+1. Download and install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external}.
 
 2. Log in to {{site.data.keyword.cloud_notm}} through the {{site.data.keyword.cloud_notm}} CLI with the following command:
 
@@ -91,7 +89,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.
       </tr>
       <tr>
         <td>*resource_group_name*</td>
-        <td>The resource group where you organize and manage the instance. You can select the initial resource group that is named `Default` or other groups that you create. For more information, see [Creating and managing resource groups](/docs/resources?topic=resources-rgs).</td>
+        <td>The resource group where you organize and manage the instance. You can select the initial resource group that is named `Default` or other groups that you create. For more information, see [Creating and managing resource groups](/docs/account?topic=account-rgs).</td>
       </tr>
       <caption style="caption-side:bottom;">Table1. Describes command variables to set the target region and resource group</caption>
     </table>

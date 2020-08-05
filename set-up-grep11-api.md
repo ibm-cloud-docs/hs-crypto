@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018-2020
-lastupdated: "2020-05-27"
+lastupdated: "2020-07-21"
 
 keywords: set up api, api key, cryptographic operations, use ep11 api, access ep11 api, ep11 over grpc, using api
 
@@ -13,7 +13,6 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
@@ -184,7 +183,7 @@ In the example, update the following variables:
   ```
   {: screen}
 
-* Replace `<service_ID_API_key>` with the service ID API key that is retrieved. The service ID API Key can be retrieved by following the instruction in [Managing service ID API key](/docs/iam?topic=iam-serviceidapikeys).
+* Replace `<service_ID_API_key>` with the service ID API key that is retrieved. The service ID API Key can be retrieved by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys).
 
 * Replace `<instance_ID>` with the instance ID that uniquely identified your service instance. Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 

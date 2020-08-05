@@ -26,7 +26,7 @@ subcollection: hs-crypto
 You can enable different levels of access to {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} resources in your {{site.data.keyword.cloud_notm}} account by creating and modifying {{site.data.keyword.cloud_notm}} IAM access policies.
 {: shortdesc}
 
-As a service administrator or an account owner, determine an [access policy type](/docs/iam?topic=iam-userroles#policytypes) for users, service IDs, and access groups based on your internal access control requirements. For example, if you want to grant user access to {{site.data.keyword.hscrypto}} at the smallest scope available, you can [assign access to a single key](#grant-access-key-level) in an instance.
+As a service administrator or an account owner, determine an [access policy type](/docs/account?topic=account-userroles#policytypes) for users, service IDs, and access groups based on your internal access control requirements. For example, if you want to grant user access to {{site.data.keyword.hscrypto}} at the smallest scope available, you can [assign access to a single key](#grant-access-key-level) in an instance.
 
 A good practice is to grant access permissions as you invite new users to your account or service. For example, consider the following guidelines:
 
@@ -56,7 +56,7 @@ To assign access:
 7. From the list of service instances, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
 8. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
 9. Click **Add**.
-10. Continue to add platform and service access roles as needed and when you are finished, click **Assign**.
+10. Continue to add platform and service access roles as needed and click **Assign**.
 
 ## Granting access to a single key in an instance
 {: #grant-access-key-level}
@@ -89,4 +89,4 @@ Use the retrieved key ID to create a access policy:
    2. For **Resource ID**, enter the ID that is assigned to your key by the {{site.data.keyword.hscrypto}} service.
 8. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
 9. Click **Add**.
-10. Continue to add platform and service access roles as needed and when you are finished, click **Assign**.
+10. Continue to add platform and service access roles as needed and click **Assign**.

@@ -13,7 +13,6 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
@@ -28,9 +27,9 @@ Get started with the {{site.data.keyword.hscrypto}} key management APIs by authe
 ## Retrieving an access token with the CLI
 {: #retrieve-token-cli}
 
-You can use the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started) to quickly generate your personal Cloud IAM access token.
+You can use the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started) to quickly generate your personal Cloud IAM access token.
 
-1. Log in to {{site.data.keyword.cloud_notm}} with the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
+1. Log in to {{site.data.keyword.cloud_notm}} with the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
 
     ```sh
     ibmcloud login
@@ -64,9 +63,9 @@ You can use the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli
 ## Retrieving an access token with the API
 {: #retrieve-token-api}
 
-You can also retrieve your access token programmatically by first creating a [service ID API key](/docs/iam?topic=iam-serviceidapikeys) for your application, and then exchanging your API key for an {{site.data.keyword.cloud_notm}} IAM token.
+You can also retrieve your access token programmatically by first creating a [service ID API key](/docs/account?topic=account-serviceidapikeys) for your application, and then exchanging your API key for an {{site.data.keyword.cloud_notm}} IAM token.
 
-1. Log in to {{site.data.keyword.cloud_notm}} with the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
+1. Log in to {{site.data.keyword.cloud_notm}} with the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
 
   ```sh
   ibmcloud login
@@ -83,7 +82,7 @@ You can also retrieve your access token programmatically by first creating a [se
     ```
     {: pre}
 
-3. Create a [service ID](/docs/iam?topic=iam-serviceids#create_serviceid) for your application.
+3. Create a [service ID](/docs/account?topic=account-serviceids#create_serviceid) for your application.
 
   ```sh
   ibmcloud iam service-id-create <service_ID_name>
@@ -91,12 +90,12 @@ You can also retrieve your access token programmatically by first creating a [se
   ```
   {: pre}
 
-4. [Assign an access policy](/docs/iam?topic=iam-serviceidpolicy) for the service ID.
+4. [Assign an access policy](/docs/account?topic=account-assign-access-resources) for the service ID.
 
-    You can assign access permissions for your service ID [by using the {{site.data.keyword.cloud_notm}} console](/docs/iam?topic=iam-serviceidpolicy#access_new). To learn how the _Manager_, _Writer_, and _Reader_ access roles map to specific {{site.data.keyword.hscrypto}} service actions, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).
+    You can assign access permissions for your service ID [by using the {{site.data.keyword.cloud_notm}} console](/docs/account?topic=account-assign-access-resources#assign_new_access). To learn how the _Manager_, _Writer_, and _Reader_ access roles map to specific {{site.data.keyword.hscrypto}} service actions, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).
     {: tip}
 
-5. Create a [service ID API key](/docs/iam?topic=iam-serviceidapikeys).
+5. Create a [service ID API key](/docs/account?topic=account-serviceidapikeys).
 
   ```sh
   ibmcloud iam service-api-key-create <API_key_name> <service_ID_name>

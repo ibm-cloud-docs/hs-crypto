@@ -50,9 +50,9 @@ The following diagram illustrates how {{site.data.keyword.hscrypto}} workload of
 
 {{site.data.keyword.hscrypto}} has dependencies on the following {{site.data.keyword.cloud_notm}} services:
 
-- [{{site.data.keyword.iamlong}} (IAM)](/docs/iam?topic=iam-getstarted)
+- [{{site.data.keyword.iamlong}} (IAM)](/docs/account?topic=account-iamoverview)
 - [{{site.data.keyword.databases-for-postgresql_full_notm}}](/docs/databases-for-postgresql?topic=databases-for-postgresql-getting-started)
-- [{{site.data.keyword.cloudant_short_notm}}](/docs/Cloudant?topic=cloudant-getting-started-with-cloudant)
-- [{{site.data.keyword.la_full_notm}}](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-getting-started)
-- [{{site.data.keyword.at_full_notm}}](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started)
-- [{{site.data.keyword.mon_full_notm}}](/docs/Monitoring-with-Sysdig?topic=Sysdig-getting-started)
+- [{{site.data.keyword.cloudant_short_notm}}](/docs/Cloudant?topic=Cloudant-getting-started-with-cloudant)
+- [{{site.data.keyword.la_full_notm}}](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-getting-started)
+- [{{site.data.keyword.at_full_notm}}](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started)
+- [{{site.data.keyword.mon_full_notm}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started)

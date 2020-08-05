@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018-2020
-lastupdated: "2020-01-08"
+lastupdated: "2020-07-21"
 
 keywords: private, private endpoints, private network, private connection, crypto network, dedicated network, VRF, service endpoints, regions, location
 
@@ -31,20 +31,20 @@ Public endpoints provide a connection to your deployment on the public network. 
 
 To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your infrastructure account. After you enable VRF for your account, you can connect to {{site.data.keyword.hscrypto}} by using a private IP that is accessible only through the private network of {{site.data.keyword.cloud_notm}}.
 
-After you create a {{site.data.keyword.hscrypto}} service instance, you can enable a [private network connection](/docs/hs-crypto?topic=hs-crypto-regions#connectivity-options) for managing {{site.data.keyword.hscrypto}} resources in your account. To learn more about private connections on {{site.data.keyword.cloud_notm}}, see [Service endpoints for private connections](/docs/resources?topic=resources-service-endpoints){:external}.
+After you create a {{site.data.keyword.hscrypto}} service instance, you can enable a [private network connection](/docs/hs-crypto?topic=hs-crypto-regions#connectivity-options) for managing {{site.data.keyword.hscrypto}} resources in your account. To learn more about private connections on {{site.data.keyword.cloud_notm}}, see [Service endpoints for private connections](/docs/account?topic=account-service-endpoints-overview){:external}.
 
 ## Before you begin
 {: #private-endpoint-prereqs}
 
 1. Ensure that your {{site.data.keyword.cloud_notm}} infrastructure account is enabled for [virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint#vrf).
 
-    When you enable VRF, a separate routing table is created for your account, and connections to and from your account's resources are routed separately on the {{site.data.keyword.cloud_notm}} network. To learn more about VRF technology, see [Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/resources?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
+    When you enable VRF, a separate routing table is created for your account, and connections to and from your account's resources are routed separately on the {{site.data.keyword.cloud_notm}} network. To learn more about VRF technology, see [Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
 
     Enabling VRF permanently alters networking for your account. Be sure that you understand the impact to your account and resources. After you enable VRF, it cannot be disabled.
     {: important}
 2. Ensure that your {{site.data.keyword.cloud_notm}} infrastructure account is enabled for [service endpoints](/docs/account?topic=account-vrf-service-endpoint#service-endpoint).
 
-    When you enable service endpoints, you can connect to {{site.data.keyword.hscrypto}} by using a private IP that is accessible only through the private network of {{site.data.keyword.cloud_notm}}. To find out more, see [Service endpoints for private connections](/docs/resources?topic=resources-service-endpoints).
+    When you enable service endpoints, you can connect to {{site.data.keyword.hscrypto}} by using a private IP that is accessible only through the private network of {{site.data.keyword.cloud_notm}}. To find out more, see [Service endpoints for private connections](/docs/account?topic=account-service-endpoints-overview).
 
     After you enable service endpoints for your account, all existing and future {{site.data.keyword.hscrypto}} resources and service instances become available from both the public and private endpoint.
     {: note}
@@ -160,7 +160,7 @@ To test the private network connection for the key management service, use {{sit
   ```
   {: pre}
 
-  Replace `<key_name>` with a human-readable alias for easy identification of your key. Replace `<instance_ID>` with the {{site.data.keyword.cloud_notm}} instance ID that identifies your {{site.data.keyword.hscrypto}} service instance.
+  Replace `<key_name>` with a human-readable alias for easy identification of your key. Replace `<instance_ID>` with [the {{site.data.keyword.cloud_notm}} instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID) that identifies your {{site.data.keyword.hscrypto}} service instance.
 
 2. Optional: Verify that the key was created successfully by listing the keys that are available in your {{site.data.keyword.hscrypto}} service instance.
 

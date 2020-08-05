@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-07-17"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -13,7 +13,6 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:external: target="_blank" .external}
@@ -46,9 +45,9 @@ The following diagram illustrates the roles and permissions.
 
 With {{site.data.keyword.iamshort}} (IAM), you, as an account owner or a service administrator, can manage and define access for service users and resources in your {{site.data.keyword.cloud_notm}} account.
 
-To simplify access, {{site.data.keyword.hscrypto}} aligns with IAM roles so that each user has a different view of the service, according to the role the user is assigned. If you are a service administrator, you can assign Cloud IAM roles that correspond to the specific {{site.data.keyword.hscrypto}} permissions you want to grant to members of your team.
+To simplify access, {{site.data.keyword.hscrypto}} aligns with [IAM roles](/docs/account?topic=account-userroles) so that each user has a different view of the service, according to the role the user is assigned. If you are a service administrator, you can assign Cloud IAM roles that correspond to the specific {{site.data.keyword.hscrypto}} permissions you want to grant to members of your team.
 
-This section discusses {{site.data.keyword.cloud_notm}} IAM roles in the context of {{site.data.keyword.hscrypto}}. For complete IAM documentation and how to assign access, see [Managing access in {{site.data.keyword.cloud_notm}}](/docs/iam?topic=iam-cloudaccess).
+This section discusses {{site.data.keyword.cloud_notm}} IAM roles in the context of {{site.data.keyword.hscrypto}}. For complete IAM documentation and how to assign access, see [Managing access in {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-cloudaccess).
 {: note}
 
 Use {{site.data.keyword.cloud_notm}} platform access roles to grant permissions at the account level, such as the ability to create or delete instances in your {{site.data.keyword.cloud_notm}} account.
@@ -105,8 +104,8 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | List key policies | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Set instance policies | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
 | List instance policies | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
-{: #table-3}
-{: caption="Table 3. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} policy resources" caption-side="top"}
+{: #table-4}
+{: caption="Table 4. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} policy resources" caption-side="top"}
 {: tab-title="Policies"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
@@ -115,8 +114,8 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 |-----|-----|-----|-----|----|
 | Create an import token | | | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Retrieve an import token | | | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
-{: #table-4}
-{: caption="Table 4. Lists service access roles as they apply to import token resources" caption-side="top"}
+{: #table-5}
+{: caption="Table 5. Lists service access roles as they apply to import token resources" caption-side="top"}
 {: tab-title="Import tokens"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"} -->
@@ -129,8 +128,8 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Update a registration[^services-2] | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Replace a registration[^services-3] | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Delete a registration[^services-4] | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
-{: #table-5}
-{: caption="Table 5. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} registration resources" caption-side="top"}
+{: #table-6}
+{: caption="Table 6. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} registration resources" caption-side="top"}
 {: tab-title="Registrations"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
@@ -146,8 +145,8 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Action | Reader | ReaderPlus | Writer | Manager |
 |-----|-----|-----|-----|----|
 | Perform cryptographic operations through GREP11 APIs | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg)| ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
-{: #table-6}
-{: caption="Table 6. Lists service access roles as they apply to GREP11 resources" caption-side="top"}
+{: #table-7}
+{: caption="Table 7. Lists service access roles as they apply to GREP11 resources" caption-side="top"}
 {: tab-title="GREP11"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
@@ -163,15 +162,15 @@ If you have multiple {{site.data.keyword.hscrypto}} instances in different accou
 
 2. **Organize account resources in resource groups**
 
-  {{site.data.keyword.hscrypto}} instances are associated with child accounts of the enterprise. Within each account, you can organize service instances in resource groups, so that you can assign different access policies to each resource group to enable independent access control. For how to create resource groups and organize resources, refer to [Best practices for organizing resources in a resource group](/docs/resources?topic=resources-bp_resourcegroups).
+  {{site.data.keyword.hscrypto}} instances are associated with child accounts of the enterprise. Within each account, you can organize service instances in resource groups, so that you can assign different access policies to each resource group to enable independent access control. For how to create resource groups and organize resources, refer to [Best practices for organizing resources](/docs/account?topic=account-account_setup).
 
 3. **Assign access to manage the enterprise and resources**
 
-  Based on the {{site.data.keyword.hscrypto}} IAM [platform roles](#platform-mgmt-roles) and [service roles](#service-access-roles) listed above, you can assign users respective access to each tier of the enterprise hierarchy. You can also group users or [service IDs](/docs/iam?topic=iam-serviceids) by defining access groups to streamline the process of assigning access. For detailed information on assigning access, refer to [User management for enterprises](/docs/iam?topic=iam-enterprise-access) and [Best practices for assigning access](/docs/iam?topic=iam-account_setup).
+  Based on the {{site.data.keyword.hscrypto}} IAM [platform roles](#platform-mgmt-roles) and [service roles](#service-access-roles) listed above, you can assign users respective access to each tier of the enterprise hierarchy. You can also group users or [service IDs](/docs/account?topic=account-serviceids) by defining access groups to streamline the process of assigning access. For detailed information on assigning access, refer to [User management for enterprises](/docs/account?topic=account-enterprise-access) and [Managing access to resources](/docs/account?topic=account-assign-access-resources).
 
 4. **Use {{site.data.keyword.cloud_notm}} API keys**
 
-  You can create [{{site.data.keyword.cloud_notm}} API keys](/docs/iam?topic=iam-manapikey) for users or services to track and control API usage. The user API key is associated with the user identity and inherits all access that the user is assigned. The service API key is granted the access that is associated with a specific service ID. API keys can also be used to [generate IAM tokens](/iam?topic=iam-iamtoken_from_apikey) for API calls authentication. For how to manage API keys, refer to [Managing user API keys](/docs/iam?topic=iam-userapikey) and [Managing service ID API keys](/docs/iam?topic=iam-serviceidapikeys).
+  You can create [{{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-manapikey) for users or services to track and control API usage. The user API key is associated with the user identity and inherits all access that the user is assigned. The service API key is granted the access that is associated with a specific service ID. API keys can also be used to [generate IAM tokens](/docs/account?topic=account-iamtoken_from_apikey) for API calls authentication. For how to manage API keys, refer to [Managing user API keys](/docs/account?topic=account-userapikey) and [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
 
 The following is an example of how to use the enterprise to manage multiple instances and user access. Assume your organization has two {{site.data.keyword.hscrypto}} instances for development and production, and there are two separate teams managing and operating these instances. you can create the following enterprise hierarchy to better manage accounts, instances, and user access:
 
@@ -183,6 +182,4 @@ The following is an example of how to use the enterprise to manage multiple inst
 ## What's next
 {: #manage-access-next}
 
-Account owners and admins can invite users and set service policies that correspond to the {{site.data.keyword.hscrypto}} actions the users can perform.
-
-For more information about assigning user roles, see [Managing IAM access](/docs/iam?topic=iam-iammanidaccser).
+Account owners and admins can invite users and set service policies that correspond to the {{site.data.keyword.hscrypto}} actions the users can perform. For more information about assigning user roles, see [Managing access to resources](/docs/account?topic=account-assign-access-resources).

@@ -260,7 +260,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/registrations?ur
       <tr>
         <td><varname>url_encoded_CRN_query</varname></td>
         <td>
-          <p>Filters for resources that are associated with a specified [Cloud Resource Name (CRN)](/docs/resources?topic=resources-crn) by using URL encoded
+          <p>Filters for resources that are associated with a specified [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) by using URL encoded
         wildcard characters (`*`). The parameter should contain all CRN segments and must be URL encoded.</p>
           <p>To view examples, see [CRN query examples](#crn-query-examples).</p>
         </td>
@@ -279,7 +279,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/registrations?ur
 #### CRN query examples
 {: #crn-query-examples}
 
-Use URL encoded CRN queries that contain all CRN segments. To learn more about CRN segments and format, see [Cloud Resource Names](/docs/resources?topic=resources-crn).
+Use URL encoded CRN queries that contain all CRN segments. To learn more about CRN segments and format, see [Cloud Resource Names](/docs/account?topic=account-crn).
 
 When an integrated service calls the {{site.data.keyword.hscrypto}} key management APIs, {{site.data.keyword.hscrypto}} replaces the given CRN query (up to the `service-instance` segment) with the CRN of the calling service. This means that the services that use {{site.data.keyword.hscrypto}} to associate keys with resources on your behalf can only view or query for CRNs that match the first 8 segments of their service CRN.
 {: note}
