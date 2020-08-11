@@ -10,7 +10,7 @@ subcollection: hs-crypto
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -70,7 +70,7 @@ For detailed steps and best practices of using the TKE CLI plug-in, see [Initial
 ### 1. Manage your encryption keys through key management service
 {: #manage-keys-dashboard}
 
-From the {{site.data.keyword.hscrypto}} dashboard, you can create new [root keys](#x6946961){: term} or standard keys for data encryption, or you can import your existing keys. For more information about root keys and standard keys, see [Key management service components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts).
+From the {{site.data.keyword.hscrypto}} dashboard, you can create new root keys or standard keys for data encryption, or you can import your existing keys. For more information about root keys and standard keys, see [Key management service components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts).
 
 This tutorial walks you through the procedure in the GUI. If you want to manage encryption keys using the key management API, check out [the API reference](https://{DomainName}/apidocs/hs-crypto){: external}.
 {: note}
