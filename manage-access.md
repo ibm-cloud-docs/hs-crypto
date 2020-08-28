@@ -77,7 +77,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 
 * Trusted Key Entry (TKE) uses either smart cards or software CLI plug-in with IAM authentication. Commands that deals with managing keys locally on the smart card or CLI are not included. Those commands do not interact with the HSM domain.
 * Key Management APIs are used for envelope encryption and deals with root keys that are used by {{site.data.keyword.cloud_notm}} services for encrypting data-at-rest.
-* HSM APIs (the PKCS #11 API and Enterprise PKCS11 API over gRPC) are used for application-level encryption.
+<!-- * HSM APIs (the PKCS #11 API and Enterprise PKCS #11 API over gRPC) are used for application-level encryption.-->
 
 | Action | Reader | ReaderPlus | Writer | Manager |Crypto unit administrator|
 |-----|-----|-----|-----|----|----|
