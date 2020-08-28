@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-07-02"
 
 keywords: event, security, monitor event, audit event, activity tracker, logdna event
 
@@ -72,7 +72,7 @@ The following table lists the policy actions that generate an event:
 | `hs-crypto.instancepolicies.default` | Invalid policy request event                 |
 {: caption="Table 2. Policy actions" caption-side="top"}
 
-<!-- ## Import token events
+## Import token events
 {: #import-token-actions}
 
 The following table lists the import token actions that generate an event:
@@ -83,7 +83,6 @@ The following table lists the import token actions that generate an event:
 | `hs-crypto.importtoken.read`    | Retrieve an import token               |
 | `hs-crypto.importtoken.default` | Invalid import token request event     |
 {: caption="Table 3. Import token actions" caption-side="top"}
--->
 
 ## Registration events
 {: #registration-actions}

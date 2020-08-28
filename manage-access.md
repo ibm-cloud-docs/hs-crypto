@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-17"
+lastupdated: "2020-08-26"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -52,7 +52,7 @@ This section discusses {{site.data.keyword.cloud_notm}} IAM roles in the context
 
 Use {{site.data.keyword.cloud_notm}} platform access roles to grant permissions at the account level, such as the ability to create or delete instances in your {{site.data.keyword.cloud_notm}} account.
 
-| Action | Viewer | Editor | Operator | Admininistrator |
+| Action | Viewer | Editor | Operator | Administrator |
 |-----|-----|-----|-----|----|
 | View {{site.data.keyword.hscrypto}} instances | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Create {{site.data.keyword.hscrypto}} instances |  | ![Check mark icon](../icons/checkmark-icon.svg) | | ![Check mark icon](../icons/checkmark-icon.svg) |
@@ -73,7 +73,24 @@ As a service administrator, use the service access roles to grant permissions of
 - As a **Writer**, you can create keys, modify keys, rotate keys, and access key.
 - As a **Manager**, you can perform all actions that a Reader, ReaderPlus and Writer can perform, including the ability to delete keys and set dual authorization and rotation policies for keys.
 
-The following table shows how service access roles map to {{site.data.keyword.hscrypto}} permissions.
+The following table shows how service access roles map to {{site.data.keyword.hscrypto}} permissions. IAM roles are the default roles provided. Custom roles can be defined by the user.
+
+* Trusted Key Entry (TKE) uses either smart cards or software CLI plug-in with IAM authentication. Commands that deals with managing keys locally on the smart card or CLI are not included. Those commands do not interact with the HSM domain.
+* Key Management APIs are used for envelope encryption and deals with root keys that are used by {{site.data.keyword.cloud_notm}} services for encrypting data-at-rest.
+* HSM APIs (the PKCS #11 API and Enterprise PKCS11 API over gRPC) are used for application-level encryption.
+
+| Action | Reader | ReaderPlus | Writer | Manager |Crypto unit administrator|
+|-----|-----|-----|-----|----|----|
+| TKE view state: `ibmcloud tke cryptounit-admins`,`ibmcloud tke cryptounit-compare`,`ibmcloud tke cryptounit-thrhlds`,`ibmcloud tke cryptounit-mk` | | | | ![Check mark icon](../icons/checkmark-icon.svg) | |
+| TKE set context: `ibmcloud tke-cryptounit-add`, `ibmcloud tke-cryptounit-rm` | | | | ![Check mark icon](../icons/checkmark-icon.svg) | |
+| TKE admin add or remove: `ibmcloud tke cryptounit-admin-add`, `ibmcloud tke cryptounit-admin-rm`| | | | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| TKE Set Admin Quorum Threshold: `ibmcloud tke -cryptounit-thrhld-set`|  |  |  | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| TKE Master Key operations (load, rotate, clear, zeroize): `ibmcloud tke cryptounit-mk-*` |  |  |  | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+{: #table-3}
+{: caption="Table 3. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} TKE commands" caption-side="top"}
+{: tab-title="Trusted Key Entry commands"}
+{: tab-group="IAM-roles"}
+{: class="comparison-tab-table"}
 
 | Action | Reader | ReaderPlus | Writer | Manager |
 |-----|-----|-----|-----|----|
@@ -92,45 +109,21 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Cancel deletion for a key | | | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Delete a key | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Restore a key | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
-{: #table-3}
-{: caption="Table 3. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} key resources" caption-side="top"}
-{: tab-title="Keys"}
-{: tab-group="IAM-roles"}
-{: class="comparison-tab-table"}
-
-| Action | Reader | ReaderPlus | Writer | Manager |
-|-----|-----|-----|-----|----|
 | Set key policies | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
 | List key policies | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Set instance policies | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
 | List instance policies | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
-{: #table-4}
-{: caption="Table 4. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} policy resources" caption-side="top"}
-{: tab-title="Policies"}
-{: tab-group="IAM-roles"}
-{: class="comparison-tab-table"}
-
-<!-- | Action | Reader | ReaderPlus | Writer | Manager |
-|-----|-----|-----|-----|----|
 | Create an import token | | | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Retrieve an import token | | | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
-{: #table-5}
-{: caption="Table 5. Lists service access roles as they apply to import token resources" caption-side="top"}
-{: tab-title="Import tokens"}
-{: tab-group="IAM-roles"}
-{: class="comparison-tab-table"} -->
-
-| Action | Reader | ReaderPlus | Writer | Manager |
-|-----|-----|-----|-----|----|
 | Create a registration[^services-1] | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | List registrations for a key | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | List registrations for any key | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Update a registration[^services-2] | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Replace a registration[^services-3] | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Delete a registration[^services-4] | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
-{: #table-6}
-{: caption="Table 6. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} registration resources" caption-side="top"}
-{: tab-title="Registrations"}
+{: #table-4}
+{: caption="Table 4. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} key resources" caption-side="top"}
+{: tab-title="Key management"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
 
@@ -142,14 +135,31 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 
 [^services-4]: This action is performed on your behalf by an [integrated service](/docs/hs-crypto?topic=hs-crypto-integrate-services) that has enabled support for key registration. [Learn more](/docs/hs-crypto?topic=hs-crypto-view-protected-resources)
 
-| Action | Reader | ReaderPlus | Writer | Manager |
+<!-- | Action | Reader | ReaderPlus | Writer | Manager |
 |-----|-----|-----|-----|----|
-| Perform cryptographic operations through GREP11 APIs | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg)| ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
-{: #table-7}
-{: caption="Table 7. Lists service access roles as they apply to GREP11 resources" caption-side="top"}
-{: tab-title="GREP11"}
+| Get mechanism list and info |![Check mark icon](../icons/checkmark-icon.svg) |![Check mark icon](../icons/checkmark-icon.svg) |![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Create/delete keystore | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
+| List keystores | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Generate key | | | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Generate key pair |  |  | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Store key |  |  | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Generate random | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| List keys | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Get/Set key attribute | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Wrap key | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Rewrap key | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Unwrap key | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Update key | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Encrypt  | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Decrypt | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Sign | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Verify | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Digest | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+{: #table-5}
+{: caption="Table 5. Lists service access roles as they apply to HSM APIs" caption-side="top"}
+{: tab-title="HSM APIs"}
 {: tab-group="IAM-roles"}
-{: class="comparison-tab-table"}
+{: class="comparison-tab-table"} -->
 
 ## Managing access to multiple instances
 {: #manage-multiple-instances}
