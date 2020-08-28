@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-08-28"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -10,7 +10,7 @@ subcollection: hs-crypto
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -23,6 +23,32 @@ subcollection: hs-crypto
 
 Stay up-to-date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+##August 2020
+{: #august-2020}
+
+<!-- ### Added: Support for performing cryptographic operations with the standard PKCS #11 API
+{: #added-pkcs11}
+
+{{site.data.keyword.hscrypto}} now supports performing cryptographic operations with the standard Public-Key Cryptography Standards (PKCS) #11 API.
+
+With the support of PKCS #11 API, you don't need to change your existing applications that use PKCS #11 standard to make it run in the {{site.data.keyword.hscrypto}} cloud HSM environment. The PKCS #11 library accepts the PKCS #11 API requests from your applications and remotely accesses the cloud HSM to execute the corresponding cryptographic functions.
+
+For more information about the PKCS #11 API, see [Introducing PKCS #11](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro) and [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref). -->
+
+### Added: Support for import tokens to securely upload encryption keys
+{: #added-import-tokens}
+
+If you have *Writer* or *Manager* access permissions, you can now create import tokens to enable added security for encryption keys that you upload to {{site.data.keyword.hscrypto}}.
+
+To find out more about your options for importing keys, check out [Creating import tokens](/docs/hs-crypto?topic=hs-crypto-create-import-tokens). For a guided tutorial, see [Tutorial: Creating and importing encryption keys](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys).
+
+<!-- ### Added: Master key rotation
+{: #added-master-key-rotation}
+
+You can now rotate your master key on-demand by using the {{site.data.keyword.cloud}} Trusted Key Entry CLI plug-in so as to meet industry standards and cryptographic best practices. For more information on how it works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-key-rotation#master-key-rotation-intro).
+
+For the detailed instructions, see [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli). -->
 
 ## July 2020
 {: #july-2020}
@@ -39,7 +65,6 @@ For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypt
 
 {{site.data.keyword.hscrypto}}, built on FIPS 140-2 Level 4-compliant HSM, now supports the same level of key management functions as {{site.data.keyword.keymanagementserviceshort}}. The added functions include the following:
 
-<!-- * [Importing token to securely upload keys](/docs/hs-crypto?topic=hs-crypto-create-import-tokens) -->
 * [Policy-based key rotation](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy)
 * [Viewing root key versions](/docs/hs-crypto?topic=hs-crypto-view-key-versions)
 * [Disabling and enabling root keys](/docs/hs-crypto?topic=hs-crypto-disable-keys)
@@ -94,40 +119,17 @@ You can now connect to {{site.data.keyword.hscrypto}} over the {{site.data.keywo
 
 To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your infrastructure account. For more information, see [Using private endpoints](/docs/hs-crypto?topic=hs-crypto-private-endpoints).
 
-<!-- ### Changed: Platform and service access roles
-{: #changed-access-roles}
-
-{{site.data.keyword.hscrypto}} is updating its user access roles and how they correspond to {{site.data.keyword.hscrypto}} service actions. {{site.data.keyword.hscrypto}} updates access roles according to the following table:
-
-| Service action | Current role assignments | New role assignments |
-| --- | --- | --- |
-| Create keys | Administrator, Editor, Writer, Manager | Writer, Manager |
-| Retrieve a key by ID | Administrator, Editor, Writer, Manager | Writer, Manager |
-| Retrieve a list of keys | Administrator, Editor, Writer, Manager, Viewer, Reader | Reader, Writer, Manager |
-| Wrap keys | Administrator, Editor, Writer, Manager, Viewer, Reader | Reader, Writer, Manager |
-| Unwrap keys | Administrator, Editor, Writer, Manager, Viewer, Reader | Reader, Writer, Manager |
-| Rewrap keys | Administrator, Editor, Writer, Manager, Viewer, Reader | Reader, Writer, Manager |
-| Rotate keys | Administrator, Editor, Writer, Manager | Writer, Manager |
-| Set rotation policies | Administrator, Manager | Manager |
-| Retrieve rotation policies | Administrator, Manager | Manager |
-| Delete a key by ID | Administrator, Manager | Manager |
-{: caption="Table 1. Lists upcoming changes to {{site.data.keyword.hscrypto}} service access roles" caption-side="top"}
-
-As an account owner or admin, review the existing access policies for all {{site.data.keyword.hscrypto}} users in your account to ensure that they are assigned the appropriate levels of access.
-
-To learn more about {{site.data.keyword.hscrypto}} roles and permissions, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access). -->
-
 ## August 2019
 {: #August-2019}
 
 ### Added: {{site.data.keyword.hscrypto}} Cloud HSM now supports EP11 cryptographic operations over gRPC
 {: #added-EP11}
 
-The managed cloud Hardware Security Module (HSM) supports Enterprise Public-Key Cryptography Standards (PKCS) #11, so your applications can integrate cryptographic operations like digital signing and validation via Enterprise PKCS#11 (EP11) API. The EP11 library provides an interface similar to the industry-standard PKCS #11 API.
+The managed cloud Hardware Security Module (HSM) supports Enterprise Public-Key Cryptography Standards (PKCS) #11, so your applications can integrate cryptographic operations like digital signing and validation via Enterprise PKCS #11 (EP11) API. The EP11 library provides an interface similar to the industry-standard PKCS #11 API.
 
 {{site.data.keyword.hscrypto}} provides a set of Enterprise PKCS #11 (EP11) APIs over gRPC calls (also referred to as *GREP11*), with which, all the Crypto functions are executed in HSM on cloud. GREP11 is a stateless interface for cloud programs.
 
-For more information about the GREP11 API, see [EP11 introduction](/docs/hs-crypto/hs-crypto?topic=hs-crypto-HSM-overview) and [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+For more information about the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11_intro) and [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
 ### Added: {{site.data.keyword.hscrypto}} adds support for private endpoints
 {: #added-private-endpoints}
