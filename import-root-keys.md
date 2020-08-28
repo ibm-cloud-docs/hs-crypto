@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-07-21"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -12,7 +12,6 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
@@ -27,8 +26,8 @@ You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to secure
 
 Root keys are symmetric key-wrapping keys that are used to protect the security of encrypted data in the cloud. For more information about importing root keys, see [Bringing your encryption keys to the cloud](/docs/hs-crypto?topic=hs-crypto-importing-keys).
 
-<!-- Plan ahead for importing keys by [reviewing your options for creating and encrypting key material](/docs/hs-crypto?topic=hs-crypto-importing-keys#plan-ahead). For added security, you can enable the secure import of the key material by using an [import token](/docs/hs-crypto?topic=hs-crypto-importing-keys#using-import-tokens) to encrypt your key material before you bring it to the cloud.
-{: note} -->
+Plan ahead for importing keys by [reviewing your options for creating and encrypting key material](/docs/hs-crypto?topic=hs-crypto-importing-keys#plan-ahead). For added security, you can enable the secure import of the key material by using an [import token](/docs/hs-crypto?topic=hs-crypto-importing-keys#using-import-tokens) to encrypt your key material before you bring it to the cloud.
+{: note}
 
 ## Importing root keys with the GUI
 {: #import-root-key-gui}
@@ -38,7 +37,8 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. To import a key, click **Add key** and select **Import a key**.
+4. To import a key, select the **Manage keys** tab in the side menu.
+5. In the **Keys** table, click **Add key** and select **Import a key**.
 
     Specify the key's details:
 
@@ -48,7 +48,7 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
         <th>Description</th>
       </tr>
       <tr>
-        <td>Name</td>
+        <td>Key name</td>
         <td>
           <p>A unique, human-readable alias for easy identification of your key.</p>
           <p>To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
@@ -74,7 +74,7 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
       <caption style="caption-side:bottom;">Table 1. Describes the <strong>Import a key</strong> settings</caption>
     </table>
 
-5. When you are finished filling out the key's details, click **Import key** to confirm.
+5. When you finish filling out the key's details, click **Import key** to confirm.
 
 ## Importing root keys with the API
 {: #import-root-key-api}

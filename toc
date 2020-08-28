@@ -40,6 +40,7 @@ IBM Cloud Hyper Protect Crypto Services
     {: .navgroup-end}
 
     {: .navgroup id="tutorial"}
+    tutorials/secure-import.md
     [Tutorial: Applying end to end security to a cloud application](https://{DomainName}/docs/tutorials?topic=solution-tutorials-cloud-e2e-security)
     [Tutorial: Create secure microservices writing to a consolidated database](https://developer.ibm.com/patterns/create-a-secured-microservices-and-deploy-it-to-a-consolidated-database/)
     [Tutorial: Encrypt Kubernetes secrets with IBM Cloud Hyper Protect Crypto Services](https://developer.ibm.com/tutorials/encrypt-kubernetes-secrets-with-hyper-protect-crypto-services/)
@@ -78,6 +79,7 @@ IBM Cloud Hyper Protect Crypto Services
     Importing keys
         import-root-keys.md
         import-standard-keys.md
+        create-import-tokens.md
 
     {: .topicgroup}
     Viewing keys
