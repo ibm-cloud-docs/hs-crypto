@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-07-29"
+lastupdated: "2020-09-07"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -10,7 +10,7 @@ subcollection: hs-crypto
 
 ---
 
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -24,7 +24,7 @@ subcollection: hs-crypto
 # Setting up the Management Utilities
 {: #prepare-management-utilities}
 
-With the [{{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-management-utilities), you can initialize service instances with the highest level of security. The Management Utilities use smart cards for storing [signature keys](#x8250375){: term} and [master key](#x2908413){: term} parts.
+With the [{{site.data.keyword.IBM}} {{site.data.keyword.hscrypto}} Management Utilities](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-management-utilities), you can initialize service instances with the highest level of security. The Management Utilities use smart cards for storing [signature keys](#x8250375){: term} and [master key](#x2908413){: term} parts.
 {: shortdesc}
 
 The following diagram gives you an overview of steps you need to take to initialize service instances with the Management Utilities. This topic covers the steps to set up the Management Utilities. For the detailed instructions on initialize the service instance, see [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
@@ -48,7 +48,7 @@ Complete the following steps to order smart cards:
 
 2. Enter the quantity of packages. Each package contains a set of two smart cards.
 
-  A minimum of two smart cards is needed to use the Management Utilities: a certificate authority smart card and an Enterprise PKCS#11 (EP11) smart card. The certificate authority smart card defines a set of smart cards that can work together. This set of smart cards is called a smart card zone. EP11 smart cards hold a signature key and one or more master key parts that are used to configure service instances. Currently, the Management Utilities support 2 or 3 master key parts to be loaded.
+  A minimum of two smart cards is needed to use the Management Utilities: a certificate authority smart card and an Enterprise PKCS #11 (EP11) smart card. The certificate authority smart card defines a set of smart cards that can work together. This set of smart cards is called a smart card zone. EP11 smart cards hold a signature key and one or more master key parts that are used to configure service instances. Currently, the Management Utilities support 2 or 3 master key parts to be loaded.
 
   For added security, the 2 or 3 master key parts that are used to configure a service instance can be generated on separate EP11 smart cards that are assigned to different people. The signature key used to sign commands to the crypto module can be generated on a separate EP11 smart card. Three or four EP11 smart cards would then be needed to configure a service instance.
 
@@ -69,6 +69,9 @@ Complete the following steps to order smart card readers:
 {: #install-smart-card-reader-driver}
 
 You need to install the Identiv SPR332 V2 smart card reader driver on your local workstation. Currently, only Red Hat Enterprise Linux&reg; 8.0.0 is supported.
+
+You need to take the [smart card considerations](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy) into account when you plan the security policy for your workstation and smart card readers. <!-- Otherwise, your smart cards might be exposed to [some vulnerabilities](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy#smart-card-vulnerabilities).-->
+{: note}
 
 <!--
 Currently, you can choose to install it on the Microsoft Windows&reg; 10 or the Linux&reg; operating system.

@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="hs-crypto" category="security" audience="service" href="/docs/hs-crypto?topic=hs-crypto-get-started" console-page="/catalog/services/hyper-protect-crypto-services" product-page="https://www.ibm.com/cloud/hyper-protect-crypto" path="hs-crypto"}
-IBM Cloud Hyper Protect Crypto Services
+Hyper Protect Crypto Services
 
     {: .navgroup id="learn"}
     {: .topicgroup}
@@ -137,6 +137,7 @@ IBM Cloud Hyper Protect Crypto Services
 
     [Trusted Key Entry CLI reference](https://{DomainName}/docs/hs-crypto-cli-plugin?topic=hs-crypto-cli-plugin-tke_cli_plugin)
     regions.md
+    smart-card-considerations.md
     shared-responsibilities.md
     open-source-licenses.md
     [IBM Cloud Hyper Protect Services resources](https://ibm-hyper-protect.github.io/)
