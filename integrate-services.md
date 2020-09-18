@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-21"
+lastupdated: "2020-09-18"
 
 keywords: integration, encryption at rest, cloud object storage, object storage, kmip, containers, vmware, database, compute
 
@@ -13,7 +13,6 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
@@ -28,12 +27,9 @@ subcollection: hs-crypto
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} integrates with data and storage solutions to help you bring and manage your own encryption in the cloud.
 {: shortdesc}
 
-## Supported services for integration
-{: #support-services-integration}
-
 After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision) and [initialize the service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm), you can integrate {{site.data.keyword.hscrypto}} with the following supported services.
 
-### Storage services
+## Integrating with storage services
 {: #storage-integration}
 
 Add [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) to your storage by using {{site.data.keyword.hscrypto}}. Use root keys that you manage in {{site.data.keyword.hscrypto}} to protect the data encryption keys that encrypt your data at rest.
@@ -45,7 +41,7 @@ Add [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) t
 |[{{site.data.keyword.cloud_notm}} {{site.data.keyword.blockstorageshort}} for Virtual Private Cloud (Gen 2 compute)](https://cloud.ibm.com/vpc-ext/storage/storageVolumes){: external}  | For detailed steps of how to integrate {{site.data.keyword.block_storage_is_short}} (Gen 2 compute), check out [Creating block storage volumes with customer-managed encryption](/docs/vpc?topic=vpc-block-storage-vpc-encryption).  |
 {: caption="Table 1. Supported storage services" caption-side="bottom"}
 
-### Database services
+## Integrating with database services
 {: #database-integration}
 
 Associate the encryption keys that you manage in {{site.data.keyword.hscrypto}} with your database service instances and leverage [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) to add another layer of protection to your data. With full control over your keys, no one else including {{site.data.keyword.cloud_notm}} administrators can access your data.
@@ -57,7 +53,7 @@ Associate the encryption keys that you manage in {{site.data.keyword.hscrypto}} 
 {: caption="Table 2. Supported database services" caption-side="bottom"}
 
 
-### Compute services
+## Integrating with compute services
 {: #compute-integration}
 
 Use {{site.data.keyword.hscrypto}} to provide secure key management capability for compute services.
@@ -69,7 +65,7 @@ Use {{site.data.keyword.hscrypto}} to provide secure key management capability f
 |[HyTrust DataControl for {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/infrastructure/vmware-solutions/console/gettingstarted/HyTrustDC){: external}|The HyTrust DataControl service integrates with {{site.data.keyword.hscrypto}} to protect your data with strong encryption and scalable key management. The service provides encryption at both the operating system level and at the data level to secure your workloads throughout their lifecycles. </br></br> To learn more about HyTrust DataControl, check out the following references:<ul><li>Overview: [HyTrust DataControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)</li><li>Website: [HyTrust DataControl for {{site.data.keyword.cloud_notm}}](https://www.hytrust.com/datacontrol-ibm-cloud/){: external}</li></ul>|
 {: caption="Table 3. Supported compute services" caption-side="bottom"}
 
-### Container services
+## Integrating with container services
 {: #container-integration}
 
 Use your own root keys managed by {{site.data.keyword.hscrypto}} to protect container secrets and enable more granular control over user access.
@@ -119,7 +115,7 @@ To find out more about programmatically managing your keys in {{site.data.keywor
 ## Integrating a supported service
 {: #grant-access}
 
-To add an integration, create an authorization between services by using the {{site.data.keyword.iamlong}} dashboard. Authorizations enable service to service access policies, so you can associate a resource in your cloud data service with a [root key](/docs/hs-crypto/envelope-encryption?topic=hs-crypto-envelope-encryption#key-types) that you manage in {{site.data.keyword.hscrypto}}.
+To add an integration, create an authorization between services by using the {{site.data.keyword.iamlong}} dashboard. Authorizations enable service to service access policies, so you can associate a resource in your cloud data service with a root key that you manage in {{site.data.keyword.hscrypto}}.
 
 Be sure to provision both services in the same region before you create an authorization. To learn more about service authorizations, see [Granting access between services](/docs/account?topic=account-serviceauth){: external}.
 {: note}
