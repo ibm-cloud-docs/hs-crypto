@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-07-02"
+lastupdated: "2020-07-22"
 
 keywords: disable key, enable key, suspend key, suspend operations on a key
 
@@ -33,6 +33,67 @@ As an admin, you might need to temporarily disable a root key if you suspect a p
 If you are using a cloud service that is integrated with {{site.data.keyword.hscrypto}}, your data might not be accessible after disabling a root key. To determine whether an [integrated service](/docs/hs-crypto?topic=hs-crypto-integrate-services) supports revoking access to data by disabling a {{site.data.keyword.hscrypto}} root key, refer to its service documentation.
 {: note}
 
+When you disable a root key, the key transitions to the
+[_Suspended_ state](/docs/hs-crypto?topic=hs-crypto-key-states),
+and it can no longer be used to cryptographically protect data.
+
+When you enable a root key that was previously disabled, the key transitions
+from the _Suspended_ to the _Active_ key state. This action restores the key's
+encrypt and decrypt operations.
+
+You must wait 30 seconds after disabling a root key before you are able to enable it again.
+
+If you're using an integrated Cloud Service that supports revoking access to a
+disabled root key, the service may take up to a maximum of 4 hours before access
+to the root key's associated data is revoked or restored. After access to the associated
+data is revoked or restored, a corresponding enable event is displayed in the Activity
+Tracker web UI.
+{: note}
+
+## Disabling and enabling root keys with the GUI
+{: #disable-enable-ui}
+
+If you prefer to enable or disable your root keys by using a graphical interface, you can use the IBM Cloud console.
+
+### Disabling a root key
+{: #disable-ui}
+
+[After you create or import your existing keys into the service](/docs/hs-crypto?topic=hs-crypto-create-root-keys),
+complete the following steps to disable a key:
+
+1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
+2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your
+provisioned instance of {{site.data.keyword.hscrypto}}.
+4. On the **Manage** page, use the **Keys** table to browse the keys in
+your service instance.
+5. Click the overflow (⋯) icon to open a list of options for the key that you want to
+disable.
+6. From the options menu, click **Disable key**, enter the key name to confirm the key to be disabled, and click **Disable key**.
+
+After the key is disabled, the **State** of the key is transitioned to `Suspended` in the **Keys** table.
+
+### Enabling a root key
+{: #enable-ui}
+
+If you want to reenable a root key that is [disabled](#disable-ui),
+complete the following steps:
+
+You must wait 30 seconds after disabling a root key before you are able to enable it again.
+{: note}
+
+1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
+2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your
+provisioned instance of {{site.data.keyword.hscrypto}}.
+4. On the **Manage** page, use the **Keys** table to browse the keys in
+your service.
+5. Click the overflow (⋯) icon to open a list of options for the key that you want to
+enable.
+6. From the options menu, click **Enable key**.
+
+ After the key is enabled, the **State** of the key is transitioned to `Active` in the **Keys** table.
+
 ## Disabling and enabling root keys with the API
 {: #disable-enable-api}
 
@@ -57,11 +118,11 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
 
 2. Retrieve the key management API endpoint URL.
 
-    You can get the API endpoint from your provisioned service instance dashboard by clicking **Manage** &gt; **Key management endpoint URL**, or you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#retrieve-the-api-endpoint-url){: external} with an API call. Select the public or private key manage endpoint URL based on your needs.
+    You can get the API endpoint from your provisioned service instance dashboard through **Manage** &gt; **Connect** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external} with an API call. Select the public or private key manage endpoint URL based on your needs.
 
 3. Retrieve the ID of the root key that you want to disable.
 
-    You can retrieve the ID for a specified key by making a [list keys API request](https://{DomainName}/apidocs/hs-crypto#list-keys){: external}, or by viewing your keys in the {{site.data.keyword.hscrypto}} dashboard.
+    You can retrieve the ID for a specified key by making a [list keys API request](https://{DomainName}/apidocs/hs-crypto#getkeys){: external}, or by viewing your keys in the {{site.data.keyword.hscrypto}} dashboard.
 
 4. Disable the root key and suspend its encrypt and decrypt operations by making the following API call.
 
@@ -219,11 +280,11 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
 
 2. Retrieve the key management API endpoint URL.
 
-    You can get the API endpoint from your provisioned service instance dashboard by clicking **Manage** &gt; **Key management endpoint URL**, or you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#retrieve-the-api-endpoint-url){: external} with an API call. Select the public or private key manage endpoint URL based on your needs.
+    You can get the API endpoint from your provisioned service instance dashboard by clicking **Manage** &gt; **Key management endpoint URL**, or you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external} with an API call. Select the public or private key manage endpoint URL based on your needs.
 
 3. Retrieve the ID of the disabled root key that you want to enable.
 
-    You can retrieve the ID for a specified key by making a [list keys API request](https://{DomainName}/apidocs/hs-crypto#list-keys){: external}, or by viewing your keys in the {{site.data.keyword.hscrypto}} dashboard.
+    You can retrieve the ID for a specified key by making a [list keys API request](https://{DomainName}/apidocs/hs-crypto#getkeys){: external}, or by viewing your keys in the {{site.data.keyword.hscrypto}} dashboard.
 
 4. Enable the root key and restore its encrypt and decrypt operations by making the following API call.
 

@@ -28,7 +28,7 @@ subcollection: hs-crypto
 You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to safely delete root keys or standard keys by using a dual authorization process.
 {: shortdesc}
 
-When you delete an encryption key, you shred its contents and associated data. Any data that is encrypted by the key becomes inaccessible.
+When you delete an encryption key, you shred its contents and associated data. Only imported root keys can be restored after deletion. Any data that is encrypted by the key becomes inaccessible.
 [Destroying resources](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#data-deletion) is not recommended for production environments, but might be useful for temporary environments such as testing or QA.
 {: important}
 
@@ -38,7 +38,7 @@ Keep in mind the following considerations before you delete a key:
 that's actively protecting a cloud resource. Before you delete a key,
 [review the resources](/docs/hs-crypto?topic=hs-crypto-view-protected-resources)
 that are associated with the key.
-- You can [force deletion on a key](#delete-key-force)
+- You can [force deletion on a key](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-key-force)
 that's protecting a cloud resource. However, the action won't succeed if the key's associated resource is non-erasable due to a retention policy. You can verify whether a key is associated with a non-erasable resource by [checking the registration details](/docs/hs-crypto?topic=hs-crypto-view-protected-resources#view-protected-resources-api) for the key.
 
 ## Deleting a key using dual authorization

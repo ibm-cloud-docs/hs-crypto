@@ -13,7 +13,6 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:faq: data-hd-content-type='faq'}
@@ -34,15 +33,15 @@ This topic can help you with general questions about {{site.data.keyword.cloud}}
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} is a dedicated key management service and cloud [Hardware Security Module (HSM)](#x6704988){: term} service that provides the following features:
 
 - Keep Your Own Key (KYOK) with the FIPS 140-2 Level 4 certified HSM that ensures your full control of the entire key hierarchy where no {{site.data.keyword.cloud_notm}} administrators have access to your keys.
-- Single-tenant key management system that allows you to create, import, rotate, and manage keys with standardized APIs.
+- Single-tenant key management system that allows you to create, import, rotate, and manage keys with the standardized API.
 - Data-at-rest encryption with customer-owned keys with seamless [integration with other {{site.data.keyword.cloud_notm}} data and storage services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
-- Enterprise PKCS #11 library for cryptographic operations, which is enabled by the {{site.data.keyword.hscrypto}} HSMs with the highest security level in the cloud.
+- Enterprise PKCS #11 (EP11) library for cryptographic operations, which is enabled by the {{site.data.keyword.hscrypto}} HSMs with the highest security level in the cloud.
 
 ## What is a key management service?
 {: #faq-what-key-management}
 {: faq}
 
-{{site.data.keyword.hscrypto}} provides a single-tenant key management service that allows you to create, import, rotate, and manage keys. Once the encryption keys are deleted, you can be assured that your data that is protected by these keys is no longer retrievable. The service is built on FIPS 140-2 Level 4 certified HSM, which offers the highest level of protection in the cloud industry. {{site.data.keyword.hscrypto}} provides the same set of [key management APIs](https://{DomainName}/apidocs/hs-crypto) as [{{site.data.keyword.keymanagementservicefull_notm}}](https://cloud.ibm.com/catalog/services/key-protect){: external} for you to build your applications or leverage {{site.data.keyword.cloud_notm}} data and infrastructure services.
+{{site.data.keyword.hscrypto}} provides a single-tenant key management service that allows you to create, import, rotate, and manage keys. Once the encryption keys are deleted, you can be assured that your data that is protected by these keys is no longer retrievable. The service is built on FIPS 140-2 Level 4 certified HSM, which offers the highest level of protection in the cloud industry. {{site.data.keyword.hscrypto}} provides the same [key management API](https://{DomainName}/apidocs/hs-crypto) as [{{site.data.keyword.keymanagementservicefull_notm}}](https://cloud.ibm.com/catalog/services/key-protect){: external} for you to build your applications or leverage {{site.data.keyword.cloud_notm}} data and infrastructure services.
 
 ## What is Hardware Security Module?
 {: #faq-what-is-hsm}
@@ -89,7 +88,7 @@ IBM has an IaaS {{site.data.keyword.cloud_notm}} HSM service, which is different
 
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} can be used for key management service and cryptographic operations.
 
-{{site.data.keyword.hscrypto}} can integrate with {{site.data.keyword.cloud_notm}} data and storage services as well as VMware&reg; vSphere&reg; and VSAN, for providing data-at-rest encryption. The managed cloud HSM supports industry standards, such as Enterprise Public-Key Cryptography Standards (PKCS) #11. Your applications can integrate cryptographic operations such as digital signing and validation via Enterprise PKCS#11 (EP11 API). The EP11 library provides an interface similar to the industry-standard PKCS #11 application programming interface (API).
+{{site.data.keyword.hscrypto}} can integrate with {{site.data.keyword.cloud_notm}} data and storage services as well as VMware&reg; vSphere&reg; and VSAN, for providing data-at-rest encryption. The managed cloud HSM supports industry standards, such as Enterprise Public-Key Cryptography Standards (PKCS) #11. Your applications can integrate cryptographic operations such as digital signing and validation via Enterprise PKCS #11 (EP11 API). The EP11 library provides an interface similar to the industry-standard PKCS #11 application programming interface (API).
 
 {{site.data.keyword.hscrypto}} leverages frameworks such as gRPC to enable remote application access. gRPC is a modern open source high-performance remote procedure call (RPC) framework that can connect services in and across data centers for load balancing, tracing, health checking, and authentication. Applications access {{site.data.keyword.hscrypto}} by calling EP11 API remotely over gRPC.
 
@@ -118,7 +117,7 @@ Key features include the following:
 
 When you use {{site.data.keyword.hscrypto}}, you create a service instance with multiple crypto units that reside in different availability zones in a region. The service instance is built on [Secure Service Container (SSC)](https://www.ibm.com/marketplace/secure-service-container){: external}, which ensures isolated container runtime environment and provides the enterprise level of security and impregnability. The multiple crypto units in a service instance are automatically synchronized and load balanced across muiltiple availability zones. If one availability zone cannot be accessed, the crypto units in a service instance can be used interchangeably. 
 
-A crypto unit is a single unit that represents a hardware security module and the corresponding software stack that is dedicated to the hardware security module for cryptography. Encryption keys are generated in the crypto units and stored in the dedicated Keystore for you to manage and use via standard RESTful APIs. With{{site.data.keyword.hscrypto}}, you take the ownership of the crypto units by loading the master key and assigning your own administrators through CLI or the Management Utilities applications. In this way, you have an exclusive control over your encryption keys. 
+A crypto unit is a single unit that represents a hardware security module and the corresponding software stack that is dedicated to the hardware security module for cryptography. Encryption keys are generated in the crypto units and stored in the dedicated keystore for you to manage and use via the standard RESTful API. With{{site.data.keyword.hscrypto}}, you take the ownership of the crypto units by loading the master key and assigning your own administrators through CLI or the Management Utilities applications. In this way, you have an exclusive control over your encryption keys. 
 
 {{site.data.keyword.hscrypto}} built on FIPS 140-2 Level 4 HSM supports Enterprise PKCS #11 for cryptographic operations. The functions can be accessed through gRPC API calls.
 

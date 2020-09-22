@@ -13,7 +13,6 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
@@ -29,7 +28,7 @@ subcollection: hs-crypto
 ## Retrieving your IBM Cloud credentials
 {: #retrieve-kms-credentials}
 
-To work with the APIs, you need to generate your service and authentication credentials. To gather your credentials:
+To work with the API, you need to generate your service and authentication credentials. To gather your credentials:
 
 1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
 2. [Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
@@ -50,7 +49,7 @@ curl -X GET \
 ```
 {: codeblock}
 
-* Replace `<port>` with the port number of your API endpoint. To get the `<port>`, from your provisioned service instance dashboard, click **Manage** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#retrieve-the-api-endpoint-url){: external}. The returned value includes:
+* Replace `<port>` with the port number of your API endpoint. You can get the `<port>` in your provisioned service instance dashboard through **Manage** &gt; **Connect** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external}. The returned value includes:
 
   ```
   {

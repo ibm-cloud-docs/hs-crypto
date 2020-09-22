@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-26"
+lastupdated: "2020-07-21"
 
 keywords: service id, service ids, instance id, get instance id, get instance guid, instance id api, instance id cli
 
@@ -13,7 +13,6 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
@@ -26,7 +25,7 @@ subcollection: hs-crypto
 You can target an individual {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance for operations by including its unique identifier, or instance ID, in API requests to the service.
 {: shortdesc}
 
-## Viewing your instance ID in the {{site.data.keyword.cloud_notm}} console
+## Viewing your instance ID with the GUI
 {: #view-instance-ID}
 
 You can view the instance ID that is associated with your {{site.data.keyword.hscrypto}} service instance by navigating to your {{site.data.keyword.cloud_notm}} resource list.
@@ -34,7 +33,7 @@ You can view the instance ID that is associated with your {{site.data.keyword.hs
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external}.
 2. Go to **Menu** &gt; **Resource List**, and then click **Services** to browse a list of your cloud services.
 3. Click the table row that describes your {{site.data.keyword.hscrypto}} service instance.
-4. From the **Manage** tab of the service details view, copy the **Instance ID** value.
+4. Go to **Manage** &gt; **Connect**, and copy the **Instance ID** value.
 
     This **Instance ID** uniquely identifies your {{site.data.keyword.hscrypto}} service instance.
 
@@ -43,7 +42,7 @@ You can view the instance ID that is associated with your {{site.data.keyword.hs
 
 You can also retrieve the instance ID for your service instance by using the {{site.data.keyword.cloud_notm}} CLI.
 
-1. Log in to {{site.data.keyword.cloud_notm}} with the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
+1. Log in to {{site.data.keyword.cloud_notm}} with the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
 
     ```sh
     ibmcloud login

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-07-17"
+lastupdated: "2020-08-25"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, data security, compliance
 
@@ -13,7 +13,6 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:faq: data-hd-content-type='faq'}
@@ -84,13 +83,13 @@ The Federal Information Processing Standard (FIPS) Publication 140-2 is a US gov
 
 {{site.data.keyword.hscrypto}} key management service uses the Advanced Encryption Standard of Cipher Blocker Chaining (AES-CBC) algorithm for creating, wrapping, unwrapping, and rewrapping keys.
 
-## How does EP11 differ from PKCS#11?
+## How does EP11 differ from PKCS #11?
 {: #faq-ep11-pkcs11}
 
-Enterprise PKCS#11 (EP11) is aligned with PKCS#11 in terms of concepts and functions. An experienced PKCS#11 developer can easily start using EP11 functions. However, they have the following major differences:
+Enterprise PKCS #11 (EP11) is aligned with PKCS #11 in terms of concepts and functions. An experienced PKCS #11 developer can easily start using EP11 functions. However, they have the following major differences:
 
 - EP11 is built to allow high availability and scalability by design.
-- EP11 is a stateless protocol, whereas PKCS#11 is stateful. The stateless design of EP11 allows for the use of external key stores as well as scaling to multiple backends.
+- EP11 is a stateless protocol, whereas PKCS #11 is stateful. The stateless design of EP11 allows for the use of external key stores as well as scaling to multiple backends.
 - EP11 over gRPC (GREP11) defines a network protocol that can be directly used in cloud applications.
 
 ## What EP11 mechanisms are supported by the GREP11 functions?
@@ -110,9 +109,9 @@ The following table includes the EP11 mechanisms that are categorized by GREP11 
 |Wrap | CKM_AES_CBC CKM_AES_CBC_PAD CKM_DES3_CBC CKM_DES3_CBC_PAD CKM_IBM_ATTRIBUTEBOUND_WRAP CKM_IBM_RETAINKEY CKM_RSA_PKCS CKM_RSA_PKCS_OAEP|
 |Unwrap | CKM_AES_CBC CKM_AES_CBC_PAD CKM_DES3_CBC CKM_DES3_CBC_PAD CKM_IBM_ATTRIBUTEBOUND_WRAP CKM_RSA_PKCS CKM_RSA_PKCS_OAEP|
 |Derive | CKM_DH_PKCS_DERIVE CKM_ECDH1_DERIVE CKM_GENERIC_SECRET_KEY_GEN CKM_IBM_DH_PKCS_DERIVE_RAW CKM_IBM_EAC CKM_IBM_ECDH1_DERIVE_RAW CKM_SHA1_KEY_DERIVATION CKM_SHA224_KEY_DERIVATION CKM_SHA256_KEY_DERIVATION CKM_SHA384_KEY_DERIVATION CKM_SHA512_KEY_DERIVATION|
-{: caption="Table 4. Mechanisms supported by GREP11" caption-side="top"}
+{: caption="Table 4. Mechanisms supported by GREP11" caption-side="bottom"}
 
-For more information on the EP11 mechanisms, see the [Enterprise PKCS#11 (EP11) Library structure guide](https://www.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=15022415USEN&dd=yes&){: external}.
+For more information on the EP11 mechanisms, see the [Enterprise PKCS #11 (EP11) Library structure guide](https://www.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=15022415USEN&dd=yes&){: external}.
 
 ## What compliance standards does {{site.data.keyword.hscrypto}} meet?
 {: #faq-compliance-standards}

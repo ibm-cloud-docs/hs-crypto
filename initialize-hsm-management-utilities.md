@@ -21,6 +21,7 @@ subcollection: hs-crypto
 {:hide-dashboard: .hide-dashboard}
 {:external: target="_blank" .external}
 {:term: .term}
+{:video: .video}
 
 
 # Loading master keys with the Management Utilities
@@ -33,7 +34,7 @@ The [Management Utilities](/docs/hs-crypto?topic=hs-crypto-introduce-service#und
 
 You can also watch the following video to learn how to initialize {{site.data.keyword.hscrypto}} instances with the Management Utilities:
 
-<iframe class="embed-responsive-item" id="youtubeplayer" title="Initialize Hyper Protect Crypto Services with IBM Cloud TKE CLI" type="text/html" width="640" height="390" src="//www.youtube.com/embed/FtRPRzF0dSs?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
+![Initialize Hyper Protect Crypto Services with the Management Utilities](https://www.youtube.com/embed/FtRPRzF0dSs){: video output="iframe" id="youtubeplayer" frameborder="0" width="560" height="315" webkitallowfullscreen mozallowfullscreen allowfullscreen}
 
 ## Before you begin
 {: #initialize-crypto-utilities-prerequisites}

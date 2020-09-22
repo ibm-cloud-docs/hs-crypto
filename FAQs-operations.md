@@ -13,7 +13,6 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:faq: data-hd-content-type='faq'}
@@ -77,7 +76,7 @@ For procurement from other countries, contact IBM Part Sales through the followi
 |Spain    | ventadepiezas@es.ibm.com|
 |Switzerland | pasa@ch.ibm.com|
 |UK | parts_sales@uk.ibm.com|
-{: caption="Table 2. IBM Part Sales contacts" caption-side="top"}
+{: caption="Table 2. IBM Part Sales contacts" caption-side="bottom"}
 
 ## How many crypto units should I set up in my service instance?
 {: #faq-crypto-units-number}

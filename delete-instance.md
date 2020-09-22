@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-12-19"
+  years: 2018, 2020
+lastupdated: "2020-07-21"
 
 keywords: delete, delete service instance, crypto unit, ibm cloud cli, clear crypto unit, uninstall
 
@@ -57,7 +57,7 @@ ibmcloud plugin uninstall tke
 ```
 {: pre}
 
-If you want to uninstall the entire {{site.data.keyword.cloud_notm}} CLI, refer to [Uninstalling the stand-alone {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-uninstall-ibmcloud-cli).
+If you want to uninstall the entire {{site.data.keyword.cloud_notm}} CLI, refer to [Uninstalling the stand-alone {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-uninstall-ibmcloud-cli).
 
 ### Uninstall the Management Utilities
 {: #uninstall-management-utilities}
@@ -126,4 +126,4 @@ ibmcloud resource service-instance-delete <instance_name|instance_ID>
 ```
 {: pre}
 
-Replace *instance_name* with your instance name and *instance_ID* with your instance ID. You can use either the instance name or the instance ID to run the command.
+Replace *instance_name* with your instance name and *instance_ID* with your [service instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). You can use either the instance name or the service instance ID to run the command.

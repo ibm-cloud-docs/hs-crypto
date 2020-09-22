@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-21"
+lastupdated: "2020-09-22"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -34,21 +34,19 @@ subcollection: hs-crypto
 {: shortdesc}
 {: hide-dashboard}
 
-{{site.data.keyword.hscrypto}} integrates with {{site.data.keyword.keymanagementserviceshort}} application programming interface (API) to generate and encrypt keys. The Keep Your Own Key (KYOK) function is also enabled to provide access to cryptographic HSMs. You can access the network addressable HSMs by remotely making [Enterprise PKCS#11 (EP11)](/docs/hs-crypto?topic=hs-crypto-HSM-overview) API calls through frameworks such as [gRPC](https://grpc.io/){: external}.
+{{site.data.keyword.hscrypto}} integrates with {{site.data.keyword.keymanagementserviceshort}} application programming interface (API) to generate and encrypt keys. The Keep Your Own Key (KYOK) function is also enabled to provide access to cryptographic HSMs. You can access the network addressable HSMs by making Enterprise PKCS #11 over gRPC (GREP11) API calls to perform cryptographic operations.
 {: hide-dashboard}
+
 <!-- You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client, which communicates with the ACSP server to enable you to access the backend cryptographic resources.-->
 
-To learn more about how {{site.data.keyword.hscrypto}} provides you with exclusive encryption key control and data protection in the cloud, see [{{site.data.keyword.hscrypto}} overview](/docs/hs-crypto?topic=hs-crypto-overview). For more information about security requirements for cryptographic modules, see [the specification of the NIST for FIPS 140-2 Level](https://csrc.nist.gov/publications/detail/fips/140/2/final){: external}.
-{: hide-dashboard}
+<!--{{site.data.keyword.hscrypto}} is the cryptography that {{site.data.keyword.blockchainfull_notm}} Platform is built with. It is also a member of the {{site.data.keyword.cloud_notm}} Hyper Protect Family, including [{{site.data.keyword.cloud_notm}} Hyper Protect DBaaS](https://cloud.ibm.com/docs/hypersecure-dbaas/index.html){: external}, {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}, [{{site.data.keyword.cloud_notm}} Container Service](https://cloud.ibm.com/docs/containers/container_index.html){: external}, and [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}}](https://cloud.ibm.com/docs/hypersecure-platform/index.html){: external}. -->
 
-<!-- {{site.data.keyword.hscrypto}} is the cryptography that {{site.data.keyword.blockchainfull_notm}} Platform is built with. It is also a member of the {{site.data.keyword.cloud_notm}} Hyper Protect Family, including [{{site.data.keyword.cloud_notm}} Hyper Protect DBaaS](https://cloud.ibm.com/docs/hypersecure-dbaas/index.html){: external}, {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}, [{{site.data.keyword.cloud_notm}} Container Service](https://cloud.ibm.com/docs/containers/container_index.html){: external}, and [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}}](https://cloud.ibm.com/docs/hypersecure-platform/index.html){: external}. -->
-
-This tutorial guides you how to set up your service instance by loading your [master keys](#x2908413){: term}, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with EP11 over gRPC (GREP11) API.
+This tutorial guides you how to set up your service instance by loading your [master keys](#x2908413){: term}, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the GREP11 API.
 {: hide-dashboard}
 
 <!-- the following is shown on the dashboard-->
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, built on FIPS 140-2 Level 4-certified hardware, allows you to take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. This tutorial guides you how to initialize your service instance by loading your master key, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with EP11 over gRPC (GREP11) API.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, built on FIPS 140-2 Level 4-certified hardware, allows you to take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. This tutorial guides you how to initialize your service instance by loading your master key, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the Enterprise PKCS #11 over gRPC (GREP11) API.
 {: hide-in-docs}
 
 ## Step 1: Initialize your service instance
@@ -62,17 +60,17 @@ For detailed steps and best practices of using the Management Utilities, see [Se
 
 For detailed steps and best practices of using the TKE CLI plug-in, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) and watch the [demonstration video of initializing {{site.data.keyword.hscrypto}} with {{site.data.keyword.cloud_notm}} TKE CLI](https://www.youtube.com/watch?v=_qP2HZ4u5Kg&feature=youtu.be){: external}.
 
-## Step 2: Manage your data and keys
+## Step 2: Using the key management service and cloud hardware security module
 {: #manage-data-key-dashboard}
 {: hide-in-docs}
 {: notoc}
 
-### 1. Manage your encryption keys through key management service
+### Managing your encryption keys through key management service
 {: #manage-keys-dashboard}
 
 From the {{site.data.keyword.hscrypto}} dashboard, you can create new root keys or standard keys for data encryption, or you can import your existing keys. For more information about root keys and standard keys, see [Key management service components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts).
 
-This tutorial walks you through the procedure in the GUI. If you want to manage encryption keys using the key management API, check out [the API reference](https://{DomainName}/apidocs/hs-crypto){: external}.
+This tutorial walks you through the procedure in the GUI. If you want to manage encryption keys using the key management API or CLI, check out [the API reference](/apidocs/hs-crypto){: external} and [the CLI reference](/docs/key-protect?topic=key-protect-cli-reference){: external}.
 {: note}
 
 #### Creating new keys
@@ -147,12 +145,15 @@ Complete the following steps to add an existing key.
 
 From the {{site.data.keyword.hscrypto}} dashboard, you can inspect the general characteristics of your new keys.
 
-### 2. Encrypt your data with Cloud HSM
+### Encrypting your data with cloud HSM
 {: #encrypt-data-hsm-dashboard}
 
-You can remotely access {{site.data.keyword.hscrypto}} Cloud HSM by using GREP11. To perform cryptographic operations with GREP11 API, you need to generate a GREP11 API request, and pass the GREP11 API endpoint URL, service ID API key, IAM endpoint, and instance ID through the API call.
+You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations with the GREP11 API.
 
-GREP11 API supports programming languages with [gRPC libraries](https://grpc.io/docs/){:external}. A [sample Github repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} is provided for you to test the GREP11 API in Golang and JavaScript. The following procedure takes the Golang code as an example to test GREP11 functions.
+#### Performing cryptographic operations with the GREP11 API
+{: #cryptographic-operations-with-grep11-dashboard}
+
+To perform cryptographic operations with the GREP11 API, you need to make sure your applications are developed with programming languages supported by [gRPC](https://grpc.io/docs/languages/){:external}. A [sample Github repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} is provided for you to test the GREP11 API in Golang and JavaScript. The following procedure takes the Golang code as an example to test GREP11 functions.
 
 Before you use the samples, perform the following tasks:
 
@@ -256,12 +257,12 @@ For detailed steps and best practices of using the TKE CLI plug-in, see [Initial
 {: #manage-data-key}
 {: hide-dashboard}
 
-### 1. Manage your encryption keys through key management service
+### Manage your encryption keys through key management service
 {: #manage-keys}
 
 From the {{site.data.keyword.hscrypto}} dashboard, you can create new [root keys](#x6946961){: term} or standard keys for data encryption, or you can import your existing keys. For more information about root keys and standard keys, see [Key management service components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts).
 
-This tutorial walks you through the procedure in the GUI. If you want to manage encryption keys using the key management API, check out [the API reference](https://{DomainName}/apidocs/hs-crypto){: external}.
+This tutorial walks you through the procedure in the GUI. If you want to manage encryption keys using the key management API or CLI, check out [the API reference](/apidocs/hs-crypto){: external} and [the CLI reference](/docs/key-protect?topic=key-protect-cli-reference){: external}.
 {: note}
 
 #### Creating new keys
@@ -340,14 +341,17 @@ Complete the following steps to add an existing key.
 
 From the {{site.data.keyword.hscrypto}} dashboard, you can inspect the general characteristics of your new keys.
 
-### 2. Encrypt your data with Cloud HSM
+### Encrypt your data with cloud HSM
 {: #encrypt-data-hsm}
 {: help}
 {: support}
 
-You can remotely access {{site.data.keyword.hscrypto}} Cloud HSM by using GREP11. To perform cryptographic operations with GREP11 API, you need to generate a GREP11 API request, and pass the GREP11 API endpoint URL, service ID API key, IAM endpoint, and instance ID through the API call.
+You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations with the GREP11 API.
 
-GREP11 API supports programming languages with [gRPC libraries](https://grpc.io/docs/){:external}. A [sample Github repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} is provided for you to test the GREP11 API in Golang and JavaScript. The following procedure takes the Golang code as an example to test GREP11 functions.
+#### Performing cryptographic operations with the GREP11 API
+{: #cryptographic-operations-with-grep11}
+
+To perform cryptographic operations with the GREP11 API, you need to make sure your applications are developed with programming languages supported by [gRPC](https://grpc.io/docs/languages/){:external}. A [sample Github repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} is provided for you to test the GREP11 API in Golang and JavaScript. The following procedure takes the Golang code as an example to test GREP11 functions.
 
 Before you use the samples, perform the following tasks:
 
@@ -423,7 +427,7 @@ To run the sample code, perform the following steps:
 - {{site.data.keyword.hscrypto}} provides advanced encryption to your at-rest data with envelope encryption, check out [Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) to see how it works.
 - You can use {{site.data.keyword.hscrypto}} as the root key provider for other services such as {{site.data.keyword.cos_full_notm}} to bring your own encryption to your applications or data. Check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services) for the full list of supported services.
 - To learn more about {{site.data.keyword.hscrypto}} concepts and terminologies, check out [Components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
-- Manage your keys with [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto){: external} and [{{site.data.keyword.keymanagementserviceshort}} CLI](/docs/key-protect?topic=key-protect-cli-reference){: external}. Encrypt your data and perform cryptographic operations with [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+- Manage your keys with [{{site.data.keyword.hscrypto}} key management API](/apidocs/hs-crypto){: external} and [{{site.data.keyword.keymanagementserviceshort}} CLI](/docs/key-protect?topic=key-protect-cli-reference){: external}. Encrypt your data and perform cryptographic operations with the [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
 <br>
 <p class="hide-dashboard" style="background-color: #e0e0e0; border: 1px solid #161616; padding: 10px; font-weight: bold">

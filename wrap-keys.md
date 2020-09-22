@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-06"
+lastupdated: "2020-07-16"
 
 keywords: root key, wrap key, encrypt data encryption key, protect data encryption key, key wrap api
 
@@ -13,7 +13,6 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:external: target="_blank" .external}
@@ -102,7 +101,21 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
       </tr>
       <tr>
         <td><varname>data_key</varname></td>
-        <td>Optional: The key material of the DEK that you want to manage and protect. The <code>plaintext</code> value must be base64 encoded. To generate a new DEK, omit the <code>plaintext</code> attribute. The service generates a random plaintext (32 bytes) and wraps that value.</td>
+        <td><p>
+          The key material of the DEK that you want to manage and protect. The
+          <code>plaintext</code> value must be base64 encoded.
+        </p>
+        <p>
+          For more information on encoding your key material, see
+          [Encoding your key material](/docs/key-protect?topic=key-protect-import-root-keys#open-ssl-encoding-root-new-key-material).
+        </p>
+        <p>
+          To generate a new DEK, omit the <code>plaintext</code> attribute.
+          The service generates a random plaintext (32 bytes), wraps that
+          value, and then returns both the generated and wrapped values in the
+          response. The generated and wrapped values are base64 encoded and
+          you will need to decode them in order to decrypt the keys.
+        </p></td>
       </tr>
       <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to wrap a specified key in {{site.data.keyword.hscrypto}}
 .</caption>
@@ -139,7 +152,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
     {: screen}
 
     The `plaintext` value represents the unwrapped DEK, and the `ciphertext`
-    value represents the wrapped DEK. The `keyVersion.id` value represents the
+    value represents the wrapped DEK and are both base64 encoded. The `keyVersion.id` value represents the
     version of the root key that was used for wrapping.
 
     If you want {{site.data.keyword.hscrypto}} to generate a

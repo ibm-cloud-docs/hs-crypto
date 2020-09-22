@@ -72,7 +72,7 @@ Common Criteria is an international standard (ISO/IEC 15408) to assess the secur
 
 {{site.data.keyword.hscrypto}} has extra controls in place to protect your {{site.data.keyword.hscrypto}} resources in the European Union (EU).
 
-If you use {{site.data.keyword.hscrypto}} resources in the Frankfurt, Germany region to process personal data for European citizens, you can enable the EU Supported setting for your {{site.data.keyword.cloud_notm}} account. To find out more, see [Enabling the EU Supported setting](/docs/account?topic=account-eu-hipaa-supported#bill_eusupported) and [Requesting support for resources in the European Union](/docs/get-support?topic=get-support-getting-customer-support#eusupported). -->
+If you use {{site.data.keyword.hscrypto}} resources in the Frankfurt, Germany region to process personal data for European citizens, you can enable the EU Supported setting for your {{site.data.keyword.cloud_notm}} account. To find out more, see [Enabling the EU Supported setting](/docs/account?topic=account-eu-hipaa-supported#bill_eusupported) and [Requesting support for resources in the European Union](/docs/get-support?topic=get-support-using-avatar#eusupported). -->
 
 ### FIPS 140-2 Level 4
 {: #fips}

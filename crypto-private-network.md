@@ -123,7 +123,7 @@ If you are using the GREP11 service, the service handles the private endpoint co
   ```
   {: pre}
 
-  You can find the private endpoint URL listed in the **Manage** tab of the service dashboard. Alternatively, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#retrieve-the-api-endpoint-url){: external}. The returned value includes the following:
+  You can find the private endpoint URL listed in the **Manage** tab of the service dashboard. Alternatively, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external}. The returned value includes the following:
 
   ```
   {
@@ -171,11 +171,7 @@ To test the private network connection for the key management service, use {{sit
 
   Replace `<instance_ID>` with the {{site.data.keyword.cloud_notm}} instance ID that identifies your {{site.data.keyword.hscrypto}} service instance.
 
-<!-- * To test the private network connection for the GREP11 service, generate a GREP11 API request. For details, check out [Generating a GREP API request](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#form-grep11-api-request). -->
-
 ## Next steps
 {: #private-network-next-steps}
 
 You're now set to interact with {{site.data.keyword.hscrypto}} through a private endpoint. To find out more about managing keys with {{site.data.keyword.hscrypto}}, [check out the {{site.data.keyword.keymanagementserviceshort}} CLI reference doc](/docs/key-protect?topic=key-protect-cli-reference).
-
-<!-- - To find out more about managing your data using the cloud HSM function of {{site.data.keyword.hscrypto}}, [check out the GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).-->

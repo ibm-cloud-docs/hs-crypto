@@ -38,7 +38,7 @@ two users to delete any keys that are created after the policy is enabled.
 
 The dual authorization capability is available only through the
 {{site.data.keyword.hscrypto}} key management API. To find out more about
-accessing the {{site.data.keyword.hscrypto}} key management APIs, check out
+accessing the {{site.data.keyword.hscrypto}} key management API, check out
 [Setting up the API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 {: preview}
 

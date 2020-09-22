@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-08-25"
 
 keywords: key storage, hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, key part, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -21,6 +21,7 @@ subcollection: hs-crypto
 {:hide-dashboard: .hide-dashboard}
 {:external: target="_blank" .external}
 {:term: .term}
+{:video: .video}
 
 
 # Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in
@@ -35,7 +36,7 @@ The following diagram gives you an overview of steps you need to take to initial
 
 <figure>
   <img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="/image/hsm_initialization_flow.svg" width="750" alt="Click each step to get more details on the flow." />
-  <figcaption>Figure 1. Task flow of service instance initialization</figcaption>
+  <figcaption>Figure 1. Task flow of service instance initialization with the TKE CLI plug-in</figcaption>
 </figure>
 
 <map name="home_map1" id="home_map1">
@@ -60,16 +61,16 @@ The following diagram gives you an overview of steps you need to take to initial
 
 You can also watch the following video to learn how to initialize {{site.data.keyword.hscrypto}} instances with {{site.data.keyword.cloud_notm}} TKE CLI plug-in:
 
-<iframe class="embed-responsive-item" id="youtubeplayer" title="Initialize Hyper Protect Crypto Services with IBM Cloud TKE CLI" type="text/html" width="640" height="390" src="//www.youtube.com/embed/_qP2HZ4u5Kg?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
+![Initialize Hyper Protect Crypto Services with IBM Cloud TKE CLI](https://www.youtube.com/embed/_qP2HZ4u5Kg){: video output="iframe" id="youtubeplayer" frameborder="0" width="560" height="315" webkitallowfullscreen mozallowfullscreen allowfullscreen}
 
 It might take 20 - 30 minutes for you to complete this task.
 
 ## Before you begin
 {: #initialize-crypto-prerequisites}
 
-1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started#step1-install-idt){:external}.
+1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started#step1-install-idt){:external}.
 
-2. [Log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cloud-cli-getting-started#step3-configure-idt-env){: external}. If you have multiple accounts, select the account that your service instance is created with. Make sure that you're logged in to the correct region and resource group where the service instance locates with the following command:
+2. [Log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cli-getting-started#step3-configure-idt-env){: external}. If you have multiple accounts, select the account that your service instance is created with. Make sure that you're logged in to the correct region and resource group where the service instance locates with the following command:
 {: #initialize-crypto-prerequisites2}
 
   ```
@@ -97,7 +98,7 @@ It might take 20 - 30 minutes for you to complete this task.
      {: pre}
      For example, you can specify the *path* to `/Users/tke-files`.
 
-  * On Windows&reg;, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a CLOUDTKEFILES environment variable and set the value to the path to the key files. For example, `C:\users\tke-files`.
+  * On Windows&reg;, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a `CLOUDTKEFILES` environment variable, set the value to the path for storing reference files (For example, `C:\users\tke-files`), and restart your computer.
 
 ## Adding or removing crypto units that are assigned to a user account
 {: #Identify_crypto_units}

@@ -13,7 +13,6 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:faq: data-hd-content-type='faq'}
@@ -37,6 +36,6 @@ If one available zone that contains your provisioned service instance goes down,
 {: #faq-hpcs-support}
 {: faq}
 
-If you have technical questions about {{site.data.keyword.hscrypto}}, post your question on [Stack Overflow](https://stackoverflow.com/questions/tagged/hyper-protect-crypto){: external} and tag your question with `ibm-cloud` and `hyper-protect-crypto`. For questions about the service and getting started instructions, use the [IBM Developer Answers](https://developer.ibm.com/answers/topics/hyper-protect-crypto/){: external}. Include the `ibm-cloud` and `hyper-protect-crypto` tags. See [Getting help](/docs/get-support?topic=get-support-getting-customer-support) for more details about using the forums.
+If you have technical questions about {{site.data.keyword.hscrypto}}, post your question on [Stack Overflow](https://stackoverflow.com/questions/tagged/hyper-protect-crypto){: external} and tag your question with `ibm-cloud` and `hyper-protect-crypto`. For questions about the service and getting started instructions, use the [IBM Developer Answers](https://developer.ibm.com/answers/topics/hyper-protect-crypto/){: external}. Include the `ibm-cloud` and `hyper-protect-crypto` tags.
 
-For more information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](/docs/get-support?topic=get-support-getting-customer-support).
+For more information about opening an IBM support ticket, or about support levels and ticket severities, see [Using the Support Center](/docs/get-support?topic=get-support-using-avatar).

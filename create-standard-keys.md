@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-18"
+lastupdated: "2020-09-21"
 
 keywords: standard key, encryption key, create standard key, create encryption key, add key, key material, key management, create secret, persist secret, create encryption key, encryption key api, api key
 
@@ -13,7 +13,6 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:external: target="_blank" .external}
@@ -28,6 +27,9 @@ You can create a standard encryption key with the {{site.data.keyword.cloud}} {{
 {: #standard-key-gui}
 
 [After you create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision), complete the following steps to create a standard key with the {{site.data.keyword.hscrypto}} GUI.
+
+If you enable [dual authorization settings for your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth), keep in mind that any keys that you add to the service require an authorization from two users to delete keys.
+{: note}
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
@@ -46,7 +48,7 @@ You can create a standard encryption key with the {{site.data.keyword.cloud}} {{
         <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <strong><a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a></strong>.</td>
       </tr>
       <tr>
-        <td>Name</td>
+        <td>Key name</td>
         <td>
           <p>A unique, human-readable alias for easy identification of your key.</p>
           <p>To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
@@ -55,7 +57,7 @@ You can create a standard encryption key with the {{site.data.keyword.cloud}} {{
       <caption style="caption-side:bottom;">Table 1. Describes the <strong>Create a key</strong> settings</caption>
     </table>
 
-5. When you are finished filling out the key's details, click **Add key** to confirm.
+5. When you finish filling out the key's details, click **Add key** to confirm.
 
 ## Creating standard keys with the API
 {: #create-standard-key-api}

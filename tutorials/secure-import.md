@@ -2,11 +2,16 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-28"
+lastupdated: "2020-08-31"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
 subcollection: hs-crypto
+
+content-type: tutorial
+services: hs-crypto
+account-plan: paid
+completion-time: 30m
 
 ---
 
@@ -19,10 +24,13 @@ subcollection: hs-crypto
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:step: data-tutorial-type='step'}
 
 
 # Tutorial: Creating and importing encryption keys
 {: #tutorial-import-keys}
+{: toc-content-type="tutorial"}
+{: toc-completion-time="30m"}
 
 Learn how to create, encrypt, and bring your encryption keys to the cloud by using {{site.data.keyword.hscrypto}}.
 {: shortdesc}
@@ -86,10 +94,11 @@ The following high-level steps give you an overview on how to create and import 
 
 For detailed instructions, complete the following steps:
 
-## Step 1. Create an import token
+## Create an import token
 {: #tutorial-import-create-token}
+{: step}
 
-With your service credentials, you can start interacting with the key management APIs to create and bring your encryption keys to the service.
+With your service credentials, you can start interacting with the key management API to create and bring your encryption keys to the service.
 
 In the following step, you'll create a [import token](/docs/hs-crypto?topic=hs-crypto-importing-keys#using-import-tokens) for your {{site.data.keyword.hscrypto}} service instance. By creating an import token based on a policy that you specify, you enable extra security for your encryption key while it's in flight to the service.
 
@@ -149,8 +158,9 @@ In the following step, you'll create a [import token](/docs/hs-crypto?topic=hs-c
     ```
     {: screen}
 
-## Step 2. Retrieve the import token
+## Retrieve the import token
 {: #tutorial-import-retrieve-token}
+{: step}
 
 In the previous step, you created an import token and you viewed the metadata that is associated with the token.
 
@@ -214,8 +224,9 @@ To retrieve the import token contents:
 
     The public key is now downloaded to your workstation in PEM format. Continue to the next step.
 
-## Step 3. Create an encryption key
+## Create an encryption key
 {: #tutorial-import-create-key}
+{: step}
 
 With {{site.data.keyword.hscrypto}}, you can enable the security benefits of Keep Your Own Key (KYOK) by creating and uploading your own keys for use on {{site.data.keyword.cloud_notm}}.
 
@@ -238,8 +249,9 @@ From the command line, run the following `openssl` command to create a 256-bit e
 
   Success! Your encryption key is now saved in a file called `PlainTextKey.bin`. Continue to the next step.
 
-## Step 4. Encrypt the nonce
+## Encrypt the nonce
 {: #tutorial-import-encrypt-nonce}
+{: step}
 
 For extra security, {{site.data.keyword.hscrypto}} requires nonce verification when you import a key to the service.
 
@@ -308,8 +320,9 @@ To encrypt the nonce value:
 
     The `encryptedNonce` value represents the original nonce that is wrapped (or encrypted) by the encryption key that you generated using OpenSSL. The `iv` value is the initialization vector (IV) that is created by the AES-CBC algorithm, and it's required later so that {{site.data.keyword.hscrypto}}can successfully decrypt the nonce.
 
-## Step 5. Encrypt the key
+## Encrypt the key
 {: #tutorial-import-encrypt-key}
+{: step}
 
 Next, use the public key that was distributed by {{site.data.keyword.hscrypto}} in [step 5](#tutorial-import-retrieve-token) to encrypt the symmetric key that you generated using OpenSSL.
 
@@ -340,8 +353,9 @@ Next, use the public key that was distributed by {{site.data.keyword.hscrypto}} 
 
   Success! You're all set to upload your encrypted key into {{site.data.keyword.hscrypto}}. Continue to the next step.
 
-## Step 6. Import the key
+## Import the key
 {: #tutorial-import-encrypted-key}
+{: step}
 
 You can now import the encrypted key using the key management API.
 
@@ -458,8 +472,9 @@ To import the key:
 
     You can browse the general characteristics of your keys from the application details page. Choose from a list of options for managing your key, such as [rotating the key](/docs/hs-crypto?topic=hs-crypto-rotate-keys#rotate-root-key-gui) or [deleting the key](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-keys-gui).
 
-## Step 7. Clean up
+## Clean up
 {: #tutorial-import-clean-up}
+{: step}
 
 1. Gather the identifier for the encryption key that you imported in the previous step.
 
@@ -756,7 +771,7 @@ Now that you've provisioned an instance of {{site.data.keyword.hscrypto}} and th
 
 {{site.data.keyword.hscrypto}} provides a graphical user interface and a REST API to create, track, and manage encryption keys. The key management API requires a valid {{site.data.keyword.cloud_notm}} IAM token and an instance ID to authenticate with the service.
 
-In this step, you'll use the {{site.data.keyword.cloud_notm}} CLI to gather the authentication credentials you need to start interacting with {{site.data.keyword.hscrypto}} key management APIs. To retrieve and prepare your credentials for later steps, you'll also set the credentials as environment variables from the command line.
+In this step, you'll use the {{site.data.keyword.cloud_notm}} CLI to gather the authentication credentials you need to start interacting with the {{site.data.keyword.hscrypto}} key management API. To retrieve and prepare your credentials for later steps, you'll also set the credentials as environment variables from the command line.
 
 1. From the command line, set the key management API endpoint as an environment variable.
 

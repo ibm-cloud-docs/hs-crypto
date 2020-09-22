@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-07-21"
 
 keywords: rotate, rotate root key, automatic key rotation, set rotation policy, policy based key rotation
 
@@ -34,7 +34,7 @@ You can create a rotation policy only for root keys that are generated in {{site
 Want to learn more about your key rotation options in {{site.data.keyword.hscrypto}}? Check out [Comparing your key rotation options](/docs/hs-crypto?topic=hs-crypto-key-rotation#compare-key-rotation-options) for more information.
 {: tip}
 
-<!-- ## Managing rotation polices in the GUI
+## Managing rotation polices in the GUI
 {: #manage-policies-gui}
 
 If you prefer to manage policies for your root keys by using a graphical interface, you can use the {{site.data.keyword.hscrypto}} GUI.
@@ -42,16 +42,16 @@ If you prefer to manage policies for your root keys by using a graphical interfa
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the application details page, use the **Keys** table to browse the keys in your service.
-5. Click the overflow icon to open a list of options for a specific key.
-6. From the options menu, click **Manage policy** to manage the rotation policy for the key.
+4. On the **Manage** page, use the **Keys** table to browse the keys in your service.
+5. Click the overflow (...) icon to open a list of options for a specific key.
+6. From the options menu, click **Edit policy** to manage the rotation policy for the key.
 7. From the list of rotation options, select a frequency of rotation in months.
 
     If your key has an existing rotation policy, the interface displays the key's existing rotation period.
 
-8. Click **Create policy** to set the policy for the key.
+8. Click **Save policy** to set the policy for the key.
 
-When it's time to rotate the key based on the rotation interval that you specify, {{site.data.keyword.hscrypto}} automatically replaces the root key with new key material. -->
+When it's time to rotate the key based on the rotation interval that you specify, {{site.data.keyword.hscrypto}} automatically replaces the root key with new key material.
 
 ## Managing rotation policies with the API
 {: #manage-rotation-policies-api}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-02"
+lastupdated: "2020-07-21"
 
 keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 
@@ -31,7 +31,7 @@ If you are a manager for your {{site.data.keyword.cloud}}
 {{site.data.keyword.hscrypto}} instance, you can use  {{site.data.keyword.hscrypto}} to delete root keys or standard keys and its contents, .
 
 When you delete a key, you shred its contents and associated data. Any data that
-is encrypted by the key becomes inaccessible.
+is encrypted by the key becomes inaccessible. Only imported root keys can be restored after deletion.
 [Destroying resources](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#data-deletion)
 is not recommended for production environments, but might be useful for
 temporary environments such as testing or QA.
@@ -66,11 +66,11 @@ console.
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the application details page, use the **Keys** table to browse the keys in your service.
+4. On the **Manage** page, use the **Keys** table to browse the keys in your service.
 5. Select the key that you want to delete and click the overflow (⋯) icon to open a list of options for the key.
-6. From the options menu, click **Delete key** and confirm the key deletion in the next screen.
+6. From the options menu, click **Delete key**, enter the key name to confirm the key to be deleted, and click **Delete key**.
 
-After you delete a key, the key transitions to the _Destroyed_ state. Keys in this state are no longer recoverable. Metadata that is associated with the key, such as the key's deletion date, is kept in the {{site.data.keyword.hscrypto}} database.
+After you delete a key, the key transitions to the _Destroyed_ state. Only imported keys in this state can be recovered. Metadata that is associated with the key, such as the key's deletion date, is kept in the {{site.data.keyword.hscrypto}} database.
 
 ## Deleting keys with the API
 {: #delete-keys-api}
@@ -365,6 +365,7 @@ dashboard.
 ## What's next
 {: #delete-key-next}
 
+- To restore a previously deleted root key, check out [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys).
 - To create another root key, check out [Creating root keys](/docs/hs-crypto?topic=hs-crypto-create-root-keys).
 - To delete the service instance, check out [Deleting service instances](/docs/hs-crypto?topic=hs-crypto-delete-instance)
 - To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.

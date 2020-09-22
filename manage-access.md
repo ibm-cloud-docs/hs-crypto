@@ -33,7 +33,7 @@ The following table shows the roles that {{site.data.keyword.hscrypto}} supports
 |Service administrator|Manages [platform access](#platform-mgmt-roles) and [service access](#service-access-roles), [grants access to keys](/docs/hs-crypto?topic=hs-crypto-grant-access-keys), creates and deletes service instances, and manages keys. An {{site.data.keyword.cloud_notm}} account owner is automatically assigned the service administrator permission.|
 |Crypto unit administrator|Provides signature keys, and signs Trusted Key Entry (TKE) administrative commands such as for adding another crypto unit administrator. In some cases, a crypto unit administrator can also be a master key custodian.|
 |Master key custodian|Provides master key parts for initializing a service instance. In some cases, a master key custodian can also be a crypto unit administrator.|
-|Service user|Manages root keys and standard keys through user interface and APIs, and performs cryptographic operations through EP11 APIs over gRPC. Based on the [platform access roles](#platform-mgmt-roles) and [service access roles](#service-access-roles), service users can be further categorized with various permissions.|
+|Service user|Manages root keys and standard keys through user interface and the API, and performs cryptographic operations through the Enterprise PKCS #11 over gRPC (GREP11) API. Based on the [platform access roles](#platform-mgmt-roles) and [service access roles](#service-access-roles), service users can be further categorized with various permissions.|
 {: caption="Table 1. Roles and permissions" caption-side="bottom"}
 
 The following diagram illustrates the roles and permissions.
@@ -58,7 +58,7 @@ Use {{site.data.keyword.cloud_notm}} platform access roles to grant permissions 
 | Create {{site.data.keyword.hscrypto}} instances |  | ![Check mark icon](../icons/checkmark-icon.svg) | | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Delete {{site.data.keyword.hscrypto}} instances | | ![Check mark icon](../icons/checkmark-icon.svg) |  | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Invite new users and manage access policies | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
-{: caption="Table 2. Lists platform management roles as they apply to {{site.data.keyword.hscrypto}}" caption-side="top"}
+{: caption="Table 2. Lists platform management roles as they apply to {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 
 If you're an account owner, you are automatically assigned _Administrator_ platform access to your {{site.data.keyword.hscrypto}} service instances so you can further assign roles and customize access policies for others.
 {: note}
@@ -76,8 +76,8 @@ As a service administrator, use the service access roles to grant permissions of
 The following table shows how service access roles map to {{site.data.keyword.hscrypto}} permissions. IAM roles are the default roles provided. Custom roles can be defined by the user.
 
 * Trusted Key Entry (TKE) uses either smart cards or software CLI plug-in with IAM authentication. Commands that deals with managing keys locally on the smart card or CLI are not included. Those commands do not interact with the HSM domain.
-* Key Management APIs are used for envelope encryption and deals with root keys that are used by {{site.data.keyword.cloud_notm}} services for encrypting data-at-rest.
-<!-- * HSM APIs (the PKCS #11 API and Enterprise PKCS #11 API over gRPC) are used for application-level encryption.-->
+* The Key Management API is used for envelope encryption and deals with root keys that are used by {{site.data.keyword.cloud_notm}} services for encrypting data-at-rest.
+* HSM APIs (the GREP11 API) are used for application-level encryption.
 
 | Action | Reader | ReaderPlus | Writer | Manager |Crypto unit administrator|
 |-----|-----|-----|-----|----|----|
@@ -87,7 +87,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | TKE Set Admin Quorum Threshold: `ibmcloud tke -cryptounit-thrhld-set`|  |  |  | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | TKE Master Key operations (load, rotate, clear, zeroize): `ibmcloud tke cryptounit-mk-*` |  |  |  | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 {: #table-3}
-{: caption="Table 3. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} TKE commands" caption-side="top"}
+{: caption="Table 3. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} TKE commands" caption-side="bottom"}
 {: tab-title="Trusted Key Entry commands"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
@@ -122,7 +122,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Replace a registration[^services-3] | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Delete a registration[^services-4] | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 {: #table-4}
-{: caption="Table 4. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} key resources" caption-side="top"}
+{: caption="Table 4. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} key resources" caption-side="bottom"}
 {: tab-title="Key management"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
@@ -135,7 +135,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 
 [^services-4]: This action is performed on your behalf by an [integrated service](/docs/hs-crypto?topic=hs-crypto-integrate-services) that has enabled support for key registration. [Learn more](/docs/hs-crypto?topic=hs-crypto-view-protected-resources)
 
-<!-- | Action | Reader | ReaderPlus | Writer | Manager |
+| Action | Reader | ReaderPlus | Writer | Manager |
 |-----|-----|-----|-----|----|
 | Get mechanism list and info |![Check mark icon](../icons/checkmark-icon.svg) |![Check mark icon](../icons/checkmark-icon.svg) |![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Create/delete keystore | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
@@ -156,10 +156,10 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Verify | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Digest | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 {: #table-5}
-{: caption="Table 5. Lists service access roles as they apply to HSM APIs" caption-side="top"}
+{: caption="Table 5. Lists service access roles as they apply to HSM APIs" caption-side="bottom"}
 {: tab-title="HSM APIs"}
 {: tab-group="IAM-roles"}
-{: class="comparison-tab-table"} -->
+{: class="comparison-tab-table"}
 
 ## Managing access to multiple instances
 {: #manage-multiple-instances}

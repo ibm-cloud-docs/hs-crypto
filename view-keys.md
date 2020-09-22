@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-07"
+lastupdated: "2020-07-22"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -13,7 +13,6 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:external: target="_blank" .external}
@@ -42,7 +41,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. Browse the general characteristics of your keys from the application details page:
+4. On the **Manage** page, browse the general characteristics of your keys in the **Keys** table:
 
     <table>
       <tr>
@@ -59,7 +58,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
       </tr>
       <tr>
         <td>State</td>
-        <td>The [key state](/docs/hs-crypto?topic=hs-crypto-key-states) based on [NIST Special Publication 800-57, Recommendation for Key Management](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r4.pdf). These states include <em>Preactive</em>, <em>Active</em>, <em>Deactivated</em>, and <em>Destroyed</em>.</td>
+        <td>The [key state](/docs/hs-crypto?topic=hs-crypto-key-states) based on [NIST Special Publication 800-57, Recommendation for Key Management](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0). These states include <em>Pre-active</em>, <em>Active</em>, <em>Suspended</em>, <em>Deactivated</em>, and <em>Destroyed</em>.</td>
       </tr>
       <tr>
         <td>Imported</td>
@@ -67,19 +66,31 @@ If you prefer to inspect the keys in your service by using a graphical interface
       </tr>
       <tr>
         <td>Last updated</td>
-        <td>The date and time that the key is last updated. This field gets updated when the key is created, rotated, or any part of the key metadata is modified. </td>
+        <td>The date and time that the key was last updated. This field gets updated when the key is created, rotated, or any part of the key metadata is modified. </td>
       </tr>
       <tr>
         <td>Last rotated</td>
-        <td>The date and time that the key is last rotated. </td>
+        <td>The date and time that the key was last rotated. </td>
       </tr>
       <tr>
         <td>Created</td>
-        <td>The date and time that the key is created.</td>
+        <td>The date and time that the key was created.</td>
       </tr>
       <tr>
         <td>Type</td>
         <td>The type of key that describes your key's designated purpose within the service.</td>
+      </tr>
+      <tr>
+        <td>Dual authorization enabled</td>
+        <td>The status of a dual authorization policy on the key. <ul><li>`True`: Dual authorization is required to delete the key.</li> <li>`False`: No prior authorization is required to delete the key.</li></ul></td>
+      </tr>
+      <tr>
+        <td>Set for deletion</td>
+        <td>Indicates if a delete authorization is issued for a key. <ul><li>`True`: An authorization to delete this key is issued by the first user. A second user with a Manager access policy can safely delete the key.</li> <li>`False`: The key is not set for deletion. No further action is needed. </li></ul> </td>
+      </tr>
+      <tr>
+        <td>Deletion expiration</td>
+        <td>The date that an authorization for deletion expires for the key. If this date passes, the authorization is no longer valid. If `False` is the value for the `Dual authorization enabled` or `Set for deletion` column of the key, the `Deletion expiration` column is left empty.</td>
       </tr>
       <caption style="caption-side:bottom;">Table 1. Describes the <strong>Keys</strong> table</caption>
     </table>
@@ -92,6 +103,9 @@ If you prefer to inspect the keys in your service by using a graphical interface
     the applicable service instance or individual key. For more information
     about roles, see
     [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).
+
+    You can also search for a specific key by using the search bar in the **Keys** table.
+    {: tip}
 
 ## Viewing root keys or standard keys with the key management API
 {: #view-key-api}
@@ -209,7 +223,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     Not seeing the full list of keys? You might need to use `limit` and `offset`
     or check with your administrator to ensure you're assigned the correct level
     access to keys in your instance. To learn more, see
-    [Unable to view or list keys](/docs/hs-crypto?topic=/hs-crypto-troubleshooting#unable-to-list-keys-api).
+    [Unable to view or list keys](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-list-keys-api).
     {: tip}
 
 ### Retrieving a subset of keys

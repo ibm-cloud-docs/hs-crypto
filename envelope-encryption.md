@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-06"
+lastupdated: "2020-07-22"
 
 keywords: encryption at rest, envelope encryption, root key, data encryption key, key encryption key, key protect, protect data encryption key, encrypt data encryption key, wrap data encryption key, unwrap data encryption key
 
@@ -13,7 +13,6 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
@@ -82,14 +81,14 @@ The following diagram shows a contextual view of envelope encryption.
 
 ![The diagram shows a contextual view of envelope encryption.](/image/envelope-encryption.svg "The diagram shows a contextual view of envelope encryption."){: caption="Figure 1. Contextual view of envelope encryption" caption-side="bottom"}
 
-Envelope encryption is treated briefly in the NIST Special Publication 800-57, Recommendation for Key Management. To learn more, see [NIST SP 800-57 Pt. 1 Rev. 4.](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0){: external}
+Envelope encryption is treated briefly in the NIST Special Publication 800-57, Recommendation for Key Management. To learn more, see [NIST SP 800-57 Pt. 1 Rev. 4](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0){: external}
 
 ## Wrapping keys
 {: #wrapping}
 
 Root keys help you group, manage, and protect data encryption keys (DEKs) stored in the cloud. You can wrap one or more DEKs with advanced encryption by designating a root key in {{site.data.keyword.hscrypto}} that you can fully manage.
 
-After you designate a root key in {{site.data.keyword.hscrypto}}, you can send a key wrap request to the service by using the [{{site.data.keyword.hscrypto}} key management API](/apidocs/hs-crypto#invoke-an-action-on-a-key){: external}.
+After you designate a root key in {{site.data.keyword.hscrypto}}, you can send a key wrap request to the service by using the [{{site.data.keyword.hscrypto}} key management API](/apidocs/hs-crypto#actiononkey){: external}.
 The key wrap operation provides both confidentiality and integrity protection for a DEK.
 
 The following diagram shows the key wrapping process in action.
@@ -120,7 +119,7 @@ If you send a wrap request without specifying the plaintext to encrypt, the AES-
 
 Unwrapping a data encryption key (DEK) decrypts and authenticates the contents within the key, returning the original key material to your data service.
 
-If your business application needs to access the contents of your wrapped DEKs, you can use the [{{site.data.keyword.hscrypto}} key management API](/apidocs/hs-crypto#invoke-an-action-on-a-key){: external} to send an
+If your business application needs to access the contents of your wrapped DEKs, you can use the [{{site.data.keyword.hscrypto}} key management API](/apidocs/hs-crypto#actiononkey){: external} to send an
 unwrap request to the service. To unwrap a DEK, you specify the ID value of the root key and the `ciphertext` value returned during the initial wrap request.
 
 The following diagram shows key unwrapping in action.

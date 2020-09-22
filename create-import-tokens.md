@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-28"
+lastupdated: "2020-07-06"
 
 keywords: create import token, secure import, key material, key wrapping key, import token api, bring your own key, byok
 

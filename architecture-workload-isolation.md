@@ -20,7 +20,7 @@ keywords: hyper protect crypto services architecture, service architecture, arch
 # Service architecture
 {: #architecture-workload-isolation}
 
-Review the service architecture, workload isolation characteristics, and service dependencies for {{site.data.keyword.hscrypto}}.
+Review the service architecture, workload isolation characteristics, and service dependencies for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
 ## {{site.data.keyword.hscrypto}} architecture

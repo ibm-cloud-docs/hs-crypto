@@ -21,7 +21,7 @@ subcollection: hs-crypto
 # Retrieving an access token
 {: #retrieve-access-token}
 
-Get started with the {{site.data.keyword.hscrypto}} key management APIs by authenticating your requests to the service with an {{site.data.keyword.iamlong}} (IAM) access token.
+Get started with the {{site.data.keyword.hscrypto}} key management API by authenticating your requests to the service with an {{site.data.keyword.iamlong}} (IAM) access token.
 {: shortdesc}
 
 ## Retrieving an access token with the CLI

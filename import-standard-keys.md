@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-06"
+lastupdated: "2020-09-09"
 
 keywords: standard key, import key, key material, import key api, bring your own key, byok, encryption key, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key
 
@@ -13,7 +13,6 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
 {:external: target="_blank" .external}
@@ -31,7 +30,8 @@ You can add your existing encryption keys with the {{site.data.keyword.hscrypto}
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. To import a new key, click **Add key** and select **Use existing key**.
+4. To import a key, select the **Manage** tab in the side menu.
+5. In the **Keys** table, click **Add key** and select **Import a key**.
 
     Specify the key's details:
 
@@ -45,7 +45,7 @@ You can add your existing encryption keys with the {{site.data.keyword.hscrypto}
         <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <strong><a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a></strong>.</td>
       </tr>
       <tr>
-        <td>Name</td>
+        <td>Key name</td>
         <td>
           <p>A unique, human-readable alias for easy identification of your key.</p>
           <p>To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
@@ -66,7 +66,7 @@ You can add your existing encryption keys with the {{site.data.keyword.hscrypto}
       <caption style="caption-side:bottom;">Table 1. Describes the <strong>Generate new key</strong> settings</caption>
     </table>
 
-5. When you are finished filling out the key's details, click **Add key** to confirm.
+5. When you finish filling out the key's details, click **Import key** to confirm.
 
 ## Importing standard keys with the API
 {: #import-standard-key-api}
@@ -270,7 +270,7 @@ When importing an existing standard key, it is required to include the encrypted
 2. Base64 encode your key material string by running the following command:
 
     ```
-    $ openssl rand <bit_length> -base64
+    $ openssl rand <byte_length> -base64
     ```
     {: codeblock}
 
@@ -283,14 +283,14 @@ When importing an existing standard key, it is required to include the encrypted
       </tr>
       <tr>
         <td>
-          <varname>bit_length</varname>
+          <varname>byte_length</varname>
         </td>
         <td>
           <p>
-            The length of the key, measured in bits.
+            The length of the key, measured in bytes.
           </p>
           <p>
-            Acceptable bit lengths: 128, 192, 256
+            Acceptable byte lengths: 16, 24, 32
           </p>
         </td>
       </tr>
