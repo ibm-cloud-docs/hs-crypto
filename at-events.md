@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-22"
+lastupdated: "2020-09-24"
 
 keywords: event, security, monitor event, audit event, activity tracker, logdna event
 
@@ -301,51 +301,6 @@ The following fields include extra information:
 longer accessible.
 - The `responseData.remainingRetrievals` field includes the number of times the import token can be retrieved within its expiration time before it is no longer
 accessible.
-
-### Key with registrations events
-{: #key-registration-events}
-
-#### Rotate key
-{: #rotate-key-registrations-success}
-
-The following fields include extra information:
-
-- The `responseData.eventAckData.eventId` field includes the unique identifier that is associated with the event.
-- The `responseData.eventAckData.eventType` field includes the type of lifecycle action that is associated with the event.
-- The `responseData.eventAckData.newKeyVersionId` field includes the unique identifier of the latest key version used to wrap input ciphertext on wrap requests.
-- The `responseData.eventAckData.newKeyVersionCreationDate` field includes the date that the latest key version was created.
-- The `responseData.eventAckData.oldKeyVersionId` field includes the unique identifier of the previous key version used to wrap input ciphertext on wrap requests.
-- The `responseData.eventAckData.oldKeyVersionCreationDate` field includes the date that the previous key version was created.
-
-#### Restore key
-{: #restore-key-registrations-success}
-
-The following fields include extra information:
-
-- The `responseData.eventAckData.eventId` field includes the unique identifier that is associated with the event.
-- The `responseData.eventAckData.eventType` field includes the type of lifecycle action that is associated with the event.
-- The `responseData.eventAckData.keyState` field includes the integer that correlates to the state of the key associated with the event.
-- The `responseData.eventAckData.eventAckTimeStamp` field includes the date and time that the event was acknowledged.
-
-#### Enable Key
-{: #enable-key-registrations-success}
-
-The following fields include extra information:
-
-- The `responseData.eventAckData.eventId` field includes the unique identifier that is associated with the event.
-- The `responseData.eventAckData.eventType` field includes the type of lifecycle action that is associated with the event.
-- The `responseData.eventAckData.keyState` field includes the integer that correlates to the state of the key associated with the event.
-- The `responseData.eventAckData.eventAckTimeStamp` field includes the date and time that the event was acknowledged.
-
-#### Disable key
-{: #disable-key-registration-success}
-
-The following fields include extra information:
-
-- The `responseData.eventAckData.eventId` field includes the unique identifier that is associated with the event.
-- The `responseData.eventAckData.eventType` field includes the type of lifecycle action that is associated with the event.
-- The `responseData.eventAckData.keyState` field includes the integer that correlates to the state of the key associated with the event.
-- The `responseData.eventAckData.eventAckTimeStamp` field includes the date and time that the event was acknowledged.
 
 ### Registration events
 {: #registration-events}
