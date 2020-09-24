@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-07-02"
+lastupdated: "2020-09-24"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -129,7 +129,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
         </td>
         <td>
           <strong>Required.</strong> The unique identifier for the root key that
-          you want to rotate.
+          you want to delete.
         </td>
       </tr>
 
@@ -440,7 +440,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
         </td>
         <td>
           <strong>Required.</strong> The unique identifier for the root key that
-          you want to rotate.
+          you want to delete.
         </td>
       </tr>
 
