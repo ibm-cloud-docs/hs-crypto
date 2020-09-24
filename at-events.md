@@ -345,19 +345,6 @@ your service instance and `responseData.totalResources` is 0, you may need to qu
 the deleted state using the `state` parameter or adjust the `offset` and `limit` parameters in
 your request.
 
-### Lifecycle action on a key with registrations did not complete
-{: #protected-resource-key-failure}
-
-The `responseData.reasonForFailure` and `responseData.resourceCRN` fields contain information on why the action wasn't able to
-be completed.
-
-If the event has a `reason.reasonCode` of 409, the action could not be completed due to the adopting service's key state
-conflicting with the key state that {{site.data.keyword.hscrypto}} has.
-
-If the event has a `reason.reasonCode` of 408, the action could not be completed because
-{{site.data.keyword.hscrypto}} was not notified that all appropriate actions were taken within 4 hours of the
-action request.
-
 ## Event severity
 {: event-severity}
 
