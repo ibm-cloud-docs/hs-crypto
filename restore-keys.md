@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-07-21"
+lastupdated: "2020-09-22"
 
 keywords: restore key, restore a deleted key, re-import a key
 
@@ -45,7 +45,7 @@ complete the following steps to restore the key:
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your
 provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Manage** page, use the **Keys** table to browse the keys in
+4. On the **Manage keys** page, use the **Keys** table to browse the keys in
 your service instance.
 5. Click **Restore Key** to open a new tab.
 6. Enter the key ID and original key material that was associated with the deleted key, and click **Restore Key**.
@@ -68,7 +68,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
 
 2. Retrieve the key management API endpoint URL.
 
-    You can get the API endpoint from your provisioned service instance dashboard by clicking **Manage** &gt; **Connect** &gt; **Key management endpoint URL**, or you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#retrieve-the-api-endpoint-url){: external} with an API call. Select the public or private key manage endpoint URL based on your needs.
+    You can get the API endpoint from your provisioned service instance dashboard through **Overview** &gt; **Connect** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external} with an API call. Select the public or private key manage endpoint URL based on your needs.
 
 3. Retrieve the ID of the key that you want to restore.
 
@@ -270,7 +270,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
 
 2. Retrieve the key management API endpoint URL.
 
-    You can get the API endpoint from your provisioned service instance dashboard by clicking **Manage** &gt; **Connect** &gt; **Key management endpoint URL**, or you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external} with an API call. Select the public or private key manage endpoint URL based on your needs.
+    You can get the API endpoint from your provisioned service instance dashboard by clicking **Manage** &gt; **Key management endpoint URL**, or you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external} with an API call. Select the public or private key manage endpoint URL based on your needs.
 
 3. Retrieve the ID of the key that you want to restore.
 

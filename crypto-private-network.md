@@ -123,7 +123,9 @@ If you are using the GREP11 service, the service handles the private endpoint co
   ```
   {: pre}
 
-  You can find the private endpoint URL listed in the **Manage** tab of the service dashboard. Alternatively, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external}. The returned value includes the following:
+  You can find the Key management private endpoint URL listed in the service dashboard under **Overview** &gt; **Connect** &gt; **Key management private endpoint URL**.
+
+  Alternatively, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external}. The returned value includes the following:
 
   ```
   {

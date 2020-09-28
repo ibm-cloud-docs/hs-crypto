@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-09-28"
 
 keywords: root key, create root key, add key, root key api, api key, symmetric key, key material, key management, create key-wrapping key, create crk, create customer key, key-wrapping key
 
@@ -38,7 +38,8 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. To create a new key, click **Add key** and select **Create a key**.
+4. To create a new key, select the **Manage keys** tab in the side menu.
+5. In the **Keys** table, click **Add key**, and select **Create a key**.
 
     Specify the key's details:
 
@@ -52,7 +53,7 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
         <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <strong><a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a></strong>.</td>
       </tr>
       <tr>
-        <td>Key Name</td>
+        <td>Key name</td>
         <td>
           <p>A unique, human-readable alias for easy identification of your key.</p>
           <p>To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>

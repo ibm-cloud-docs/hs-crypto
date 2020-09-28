@@ -51,7 +51,7 @@ You can browse the registrations that are available between your {{site.data.key
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Manage** page, use the **Keys** table to browse the keys in your service.
+4. On the **Manage keys** page, use the **Keys** table to browse the keys in your service.
 5. To view the protected resources of a specific root key, click the overflow (⋯) icon to open a list of options for the key, and select **View associated resources** to browse all resources protected by the key.
 
   <table>
@@ -110,6 +110,77 @@ You can browse the registrations that are available between your {{site.data.key
   </table>
 
 You can use the search field to search for any resources associated with the root key either with the resource name or the key version ID.
+{: tip}
+
+### Viewing resources in your instance
+{: #view-protected-resources-console-instance}
+
+1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
+2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
+5. On the **Associated resources** page, use the **Associated resources** table to browse the registrations in your service.
+
+  <table>
+    <tr>
+      <th>Column</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>`Resource name`</td>
+      <td>The name of the cloud resource, such as a Cloud Object Storage bucket, that is associated with the key.</td>
+    </tr>
+    <tr>
+      <td>`Key ID`</td>
+      <td>The ID that identifies the root key that is associated with the specified cloud resource.</td>
+    </tr>
+    <tr>
+      <td>`Service name`</td>
+      <td>The name of the {{site.data.keyword.cloud_notm}} service instance that the resource resides in.</td>
+    </tr>
+    <tr>
+      <td>`Retention policy`</td>
+      <td>Indicates whether the cloud resource can be erased. If the value is `True`, the cloud resource can't be erased, and the key that is associated with the cloud resource can't be deleted. If the value is `False`, the cloud resource can be erased. You can delete the key that is associated with the cloud resource if needed.</td>
+    </tr>
+    <caption style="caption-side:bottom;">Table 4. Describes the <strong>Associated resources</strong> table</caption>
+  </table>
+
+5. Click the caret (^) icon under the `Resource name` column to view a list of details for a specific registration.
+
+  The following table describes the registration details.
+
+  <table>
+    <tr>
+      <th>Field</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>`Created`</td>
+      <td>The date and time that the resource was first associated with the key. </td>
+    </tr>
+    <tr>
+      <td>`Last updated`</td>
+      <td>The date and time that the registration was updated.</td>
+    </tr>
+    <tr>
+      <td>`Description`</td>
+      <td>The description of the registration.</td>
+    </tr>
+    <tr>
+      <td>`Key version ID`</td>
+      <td>The version of the root key that's protecting the cloud resource.</td>
+    </tr>
+    <tr>
+      <td>`Key version date`</td>
+      <td>The date and time that the root key version was updated.</td>
+    </tr>
+    <tr>
+      <td>`Cloud resource name`</td>
+      <td>Represents the cloud resource that is associated with the key, including the Cloud Resource Name (CRN), version, cname, ctype, etc.</td>
+    </tr>
+    <caption style="caption-side:bottom;">Table 5. Describes the properties that are associated with a resource</caption>
+  </table>
+
+Besides searching for a resource, you can also for resources by Resource Name, key ID, and retention policy. To do so, click the `Filter` button, select the filter options from the list, and click **Apply**.
 {: tip}
 
 ## Viewing protected resources with the API

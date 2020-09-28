@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-17"
+lastupdated: "2020-09-28"
 
-keywords: security compliance, ibmcloud security compliance, compliant, data security, data encryption, data delete, common criteria, fips, iso, gdpr
+keywords: security and compliance, ibmcloud security compliance, compliant, data security, data encryption, data delete, common criteria, fips, iso, gdpr
 
 subcollection: hs-crypto
 
@@ -24,7 +24,7 @@ subcollection: hs-crypto
 # Security and compliance
 {: #security-and-compliance}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} has data security strategies in place to meet your compliance needs and ensure that your data remains secure and protected in the cloud.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} has data security strategies in place to meet your security and compliance needs and ensure that your data remains protected in the cloud.
 {: shortdesc}
 
 ## Security readiness

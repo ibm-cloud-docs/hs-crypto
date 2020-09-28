@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-07-22"
+lastupdated: "2020-09-22"
 
 keywords: disable key, enable key, suspend key, suspend operations on a key
 
@@ -65,7 +65,7 @@ complete the following steps to disable a key:
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your
 provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Manage** page, use the **Keys** table to browse the keys in
+4. On the **Manage keys** page, use the **Keys** table to browse the keys in
 your service instance.
 5. Click the overflow (⋯) icon to open a list of options for the key that you want to
 disable.
@@ -86,7 +86,7 @@ You must wait 30 seconds after disabling a root key before you are able to enabl
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your
 provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Manage** page, use the **Keys** table to browse the keys in
+4. On the **Manage keys** page, use the **Keys** table to browse the keys in
 your service.
 5. Click the overflow (⋯) icon to open a list of options for the key that you want to
 enable.
@@ -118,7 +118,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
 
 2. Retrieve the key management API endpoint URL.
 
-    You can get the API endpoint from your provisioned service instance dashboard through **Manage** &gt; **Connect** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external} with an API call. Select the public or private key manage endpoint URL based on your needs.
+    You can get the API endpoint from your provisioned service instance dashboard through **Overview** &gt; **Connect** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external} with an API call. Select the public or private key manage endpoint URL based on your needs.
 
 3. Retrieve the ID of the root key that you want to disable.
 

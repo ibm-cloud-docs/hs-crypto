@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018-2020
-lastupdated: "2020-07-21"
+lastupdated: "2020-09-22"
 
 keywords: set up api, api key, cryptographic operations, use ep11 api, access ep11 api, ep11 over grpc, using api
 
@@ -166,7 +166,7 @@ if err != nil {
 
 In the example, update the following variables:
 
-* Replace `<service_endpoint>` with the value of your GREP11 API endpoint. You can find the GREP11 API endpoint URL on the service dashboard. You can find the service endpoint URL in your provisioned service instance dashboard through **Manage** &gt; **Connect** &gt; **EP11 endpoint URL**. Alternatively, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external}. The returned value includes the following. Depending on whether you are using public or [private network](/docs/hs-crypto?topic=hs-crypto-private-endpoints), use the public or private service endpoint value that is returned in the `ep11` section.
+* Replace `<service_endpoint>` with the value of your GREP11 API endpoint. You can find the GREP11 API endpoint URL on the service dashboard. You can find the service endpoint URL in your provisioned service instance dashboard through **Overview** &gt; **Connect** &gt; **EP11 endpoint URL**. Alternatively, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external}. The returned value includes the following. Depending on whether you are using public or [private network](/docs/hs-crypto?topic=hs-crypto-private-endpoints), use the public or private service endpoint value that is returned in the `ep11` section.
 
    ```
    {

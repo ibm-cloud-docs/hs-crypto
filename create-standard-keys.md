@@ -34,7 +34,8 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. To create a new key, click **Add key** and select **Create a key**.
+4. To create a new key, select the **Manage keys** tab in the side menu.
+5. In the **Keys** table, click **Add key**, and select **Create a key**.
 
     Specify the key's details:
 

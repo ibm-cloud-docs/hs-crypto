@@ -33,7 +33,7 @@ You can view the instance ID that is associated with your {{site.data.keyword.hs
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external}.
 2. Go to **Menu** &gt; **Resource List**, and then click **Services** to browse a list of your cloud services.
 3. Click the table row that describes your {{site.data.keyword.hscrypto}} service instance.
-4. Go to **Manage** &gt; **Connect**, and copy the **Instance ID** value.
+4. Go to **Overview** &gt; **Instance**, and copy the **Instance ID** value.
 
     This **Instance ID** uniquely identifies your {{site.data.keyword.hscrypto}} service instance.
 

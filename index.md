@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-22"
+lastupdated: "2020-09-28"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -28,13 +28,11 @@ subcollection: hs-crypto
 # Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
 {: #get-started}
 
-<!-- Tiffany: Need to update the info on where to find the service endpoint URL in this topic when the Overview tab is enabled at staging. -->
-
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}} for short) is a dedicated key management service and [hardware security module (HSM)](#x6704988){: term}. This service allows you to take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. {{site.data.keyword.hscrypto}} is also the only service in the cloud industry that is built on FIPS 140-2 Level 4-certified hardware.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}} for short) is a dedicated key management service and [hardware security module (HSM)](#x6704988){: term} based on {{site.data.keyword.cloud_notm}}. This service allows you to take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. {{site.data.keyword.hscrypto}} is also the only service in the cloud industry that is built on FIPS 140-2 Level 4-certified hardware.
 {: shortdesc}
 {: hide-dashboard}
 
-{{site.data.keyword.hscrypto}} integrates with {{site.data.keyword.keymanagementserviceshort}} application programming interface (API) to generate and encrypt keys. The Keep Your Own Key (KYOK) function is also enabled to provide access to cryptographic HSMs. You can access the network addressable HSMs by making Enterprise PKCS #11 over gRPC (GREP11) API calls to perform cryptographic operations.
+{{site.data.keyword.hscrypto}} integrates with {{site.data.keyword.keymanagementserviceshort}} application programming interface (API) to generate and manage keys. The Keep Your Own Key (KYOK) function is also enabled to provide access to cloud-based cryptographic HSMs. You can access the network addressable HSMs by making or Enterprise PKCS #11 over gRPC (GREP11) API calls to perform cryptographic operations.
 {: hide-dashboard}
 
 <!-- You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client, which communicates with the ACSP server to enable you to access the backend cryptographic resources.-->
@@ -78,7 +76,7 @@ This tutorial walks you through the procedure in the GUI. If you want to manage 
 
 Complete the following steps to create your first cryptographic key.
 
-1. From the {{site.data.keyword.hscrypto}} dashboard, click **Manage** &gt; **Add key**.
+1. From the {{site.data.keyword.hscrypto}} console, click **Manage keys** &gt; **Add key**.
 2. To create a new key, select **Create a key**.
 
     Specify the key's details:
@@ -93,7 +91,7 @@ Complete the following steps to create your first cryptographic key.
         <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can seletct <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
       </tr>
       <tr>
-        <td>Name</td>
+        <td>Key name</td>
         <td>
           <p>A unique, human-readable alias for easy identification of your key.</p>
           <p>To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location.</p>
@@ -113,8 +111,8 @@ You can enable the security benefits of Bring Your Own Key (BYOK) by bringing yo
 
 Complete the following steps to add an existing key.
 
-1. From the {{site.data.keyword.hscrypto}} dashboard, click **Manage** &gt; **Add key**.
-2. To upload an existing key, select **Use existing key**.
+1. From the {{site.data.keyword.hscrypto}} dashboard, click **Manage keys** &gt; **Add key**.
+2. To upload an existing key, select **Import a key**.
 
     Specify the key's details:
 
@@ -128,7 +126,7 @@ Complete the following steps to add an existing key.
         <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can seletct <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
       </tr>
       <tr>
-        <td>Name</td>
+        <td>Key name</td>
         <td>
           <p>A unique, human-readable alias for easy identification of your key.</p>
           <p>To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location.</p>
@@ -141,7 +139,7 @@ Complete the following steps to add an existing key.
       <caption style="caption-side:bottom;">Table 2. Description of the <strong>Import your own key</strong> settings</caption>
     </table>
 
-3. When you finish filling out the key's details, click **Add key** to confirm.
+3. When you finish filling out the key's details, click **Import key** to confirm.
 
 From the {{site.data.keyword.hscrypto}} dashboard, you can inspect the general characteristics of your new keys.
 
@@ -184,7 +182,7 @@ To run the sample code, perform the following steps:
   {: codeblock}
 
   In the code example,
-  - Replace `<region>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance dashboard, click **Manage**  &gt; **EP11 endpoint URL**.
+  - Replace `<region>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance console, click **Overview**  &gt; **Connect** &gt; **EP11 endpoint URL**.
   - Replace `<service_ID_API_key>` with the service ID API key that is created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
   - Replace `<instance_ID>` with the instance ID that uniquely identified your service instance. Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 
@@ -272,7 +270,7 @@ This tutorial walks you through the procedure in the GUI. If you want to manage 
 
 Complete the following steps to create your first cryptographic key.
 
-1. From the {{site.data.keyword.hscrypto}} dashboard, click **Manage** &gt; **Add key**.
+1. From the {{site.data.keyword.hscrypto}} dashboard, click **Manage keys** &gt; **Add key**.
 2. To create a new key, select **Create a key**.
 
     Specify the key's details:
@@ -287,7 +285,7 @@ Complete the following steps to create your first cryptographic key.
         <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can seletct <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
       </tr>
       <tr>
-        <td>Name</td>
+        <td>Key name</td>
         <td>
           <p>A unique, human-readable alias for easy identification of your key.</p>
           <p>To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location.</p>
@@ -309,8 +307,8 @@ You can enable the security benefits of Bring Your Own Key (BYOK) by bringing yo
 
 Complete the following steps to add an existing key.
 
-1. From the {{site.data.keyword.hscrypto}} dashboard, click **Manage** &gt; **Add key**.
-2. To upload an existing key, select **Use existing key**.
+1. From the {{site.data.keyword.hscrypto}} dashboard, click **Manage keys** &gt; **Add key**.
+2. To upload an existing key, select **Import a key**.
 
     Specify the key's details:
 
@@ -324,7 +322,7 @@ Complete the following steps to add an existing key.
         <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can seletct <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
       </tr>
       <tr>
-        <td>Name</td>
+        <td>Key name</td>
         <td>
           <p>A unique, human-readable alias for easy identification of your key.</p>
           <p>To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location.</p>
@@ -337,7 +335,7 @@ Complete the following steps to add an existing key.
       <caption style="caption-side:bottom;">Table 2. Description of the <strong>Import your own key</strong> settings</caption>
     </table>
 
-3. When you finish filling out the key's details, click **Add key** to confirm.
+3. When you finish filling out the key's details, click **Import key** to confirm.
 
 From the {{site.data.keyword.hscrypto}} dashboard, you can inspect the general characteristics of your new keys.
 
@@ -382,7 +380,7 @@ To run the sample code, perform the following steps:
   {: codeblock}
 
   In the code example,
-  - Replace `<region>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance dashboard, click **Manage**  &gt; **EP11 endpoint URL**.
+  - Replace `<region>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance dashboard, click **Overview**  &gt; **Connect** &gt; **EP11 endpoint URL**.
   - Replace `<service_ID_API_key>` with the service ID API key that is created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
   - Replace `<instance_ID>` with the instance ID that uniquely identified your service instance. Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 

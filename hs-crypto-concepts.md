@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-28"
+lastupdated: "2020-09-28"
 
-keywords: concept, keep your own key, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
+keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
 subcollection: hs-crypto
 
@@ -23,13 +23,13 @@ subcollection: hs-crypto
 # Components and concepts
 {: #understand-concepts}
 
-Before you can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to manage keys and protect data, learn the basic components and concepts of {{site.data.keyword.hscrypto}}.
+Before you can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to manage encryption keys and protect data, learn the basic components and concepts of {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
 ## Key management service
 {: #key-management-concepts}
 
-Learn concepts that are related to the {{site.data.keyword.hscrypto}} [key management feature](/docs/hs-crypto?topic=hs-crypto-overview#key-management). The list starts with the most fundamental concepts.
+Learn concepts that are related to the {{site.data.keyword.hscrypto}} [key management feature](/docs/hs-crypto?topic=hs-crypto-overview#key-management) to manage encryption keys. The list starts with the most fundamental concepts.
 
 ### Root keys
 {: #root-key-concept}
@@ -44,7 +44,7 @@ Standard keys are another resources in {{site.data.keyword.hscrypto}} to directl
 ### Data encryption keys
 {: #dek-concept}
 
-Data encryption keys (DEKs) are cryptographic keys that you use for data encryption. They are provided by user-owned applications and are used to encrypt data stored in applications. Root keys that are managed in {{site.data.keyword.hscrypto}} serve as wrapping keys to protect DEKs. To learn more, see [Introduction to envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
+Data encryption keys (DEKs) are cryptographic keys that you use for data encryption. They are provided by user-owned applications and are used to encrypt data stored in applications. Root keys that you manage in {{site.data.keyword.hscrypto}} serve as wrapping keys to protect DEKs. To learn more, see [Introduction to envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
 
 ### Envelope encryption
 {: #envelope-encryption-concept}
@@ -109,7 +109,7 @@ Setting the signature thresholds to a value greater than one enables quorum auth
 ### Master keys
 {: #master-key-concept}
 
-Master keys, also known as HSM master keys, are used to encrypt the service instances for key storage. With the master key, you take the full control of the cloud HSM and own the root of trust that encrypts the entire hierarchy of keys, including root keys and standard keys. You need to configure the master key first before you can manage root keys and standard keys. {{site.data.keyword.IBM_notm}} does not back up or touch the master key, and has no way to copy it or restore it to a different machine or data center. One service instance can have only one master key. If you delete the master key of the service instance, you can effectively crypto-shred all data that was encrypted with the keys that are managed in the service.
+Master keys, also known as HSM master keys, are used to encrypt the service instances for key storage. With the master key, you take the full control of the cloud HSM and own the root of trust that encrypts the entire hierarchy of encryption keys, including root keys and standard keys. You need to configure the master key first before you can manage encryption keys. {{site.data.keyword.IBM_notm}} does not back up or touch the master key, and has no way to copy it or restore it to a different machine or data center. One service instance can have only one master key. If you delete the master key of the service instance, you can effectively crypto-shred all data that was encrypted with the keys that are managed in the service.
 
 ### Master key part
 {: #master-key-part-concept}
@@ -156,7 +156,7 @@ The Trusted Key Entry (TKE) application is one of the two applications that are 
 ### Keep Your Own Key
 {: #kyok-concept}
 
-{{site.data.keyword.hscrypto}} supports Keep Your Own Key (KYOK) feature. You can configure the master key to take the full control of the cloud HSM, so that you have full control and authority over encryption keys that you can bring, control, and manage. No one except you have access to your data.
+{{site.data.keyword.hscrypto}} supports the Keep Your Own Key (KYOK) feature. You can configure the master key to take the full control of the cloud HSM, so that you have full control and authority over encryption keys that you can bring, control, and manage. No one except you have access to your encryption keys.
 
 ### PKCS #11
 {: #pkcs-concept}
@@ -176,4 +176,4 @@ gRPC is a modern open source high performance remote procedure call (RPC) framew
 ### Enterprise PKCS #11 over gRPC
 {: #grep11-concept}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of Enterprise PKCS #11 (EP11) over [gRPC](https://grpc.io){: external} API calls (also referred to as GREP11), with which all the Crypto functions are executed in a cloud HSM. EP11 over gRPC is a stateless interface for cryptographic operations on cloud. For more information about the GREP11 API, see [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of the Enterprise PKCS #11 (EP11) over [gRPC](https://grpc.io){: external} API calls (also referred to as GREP11), with which all the Crypto functions are executed in a cloud HSM. EP11 over gRPC is a stateless interface for cryptographic operations on cloud. For more information about the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11_intro) and [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).

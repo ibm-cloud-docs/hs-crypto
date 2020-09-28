@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-07-01"
+lastupdated: "2020-09-28"
 
 keywords: instance settings, service settings, dual authorization
 
@@ -21,15 +21,12 @@ subcollection: hs-crypto
 {:important: .important}
 {:preview: .preview}
 
-# Managing dual authorization for your service instance
+# Managing dual authorization of your service instance
 {: #manage-dual-auth}
 
 After you set up your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}
 instance, you can manage dual authorization by using the key management API.
 {: shortdesc}
-
-## Managing dual authorization settings
-{: #manage-dual-auth-instance-policy}
 
 Dual authorization for {{site.data.keyword.hscrypto}} instances is an extra policy that helps to prevent accidental or malicious
 deletion of keys. When you enable this policy at the instance level,
@@ -59,8 +56,25 @@ created under a dual authorization policy will continue to require actions from
 two users before the keys can be deleted. After a key inherits a dual
 authorization policy, the policy cannot be reverted.
 
-### Enabling dual authorization for your service instance
+## Enabling dual authorization for your service instance
 {: #enable-dual-auth-instance-policy}
+
+### Enabling dual authorization for your service instance with the GUI
+{: #enable-dual-auth-instance-policy-ui}
+
+If you prefer to enable a dual authorization policy on your instance by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
+
+After creating a service instance, complete the following steps to create a dual authorization policy:
+
+1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
+2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your
+provisioned instance of {{site.data.keyword.hscrypto}}.
+4. On the **Manage instance policies** page, choose **Dual authorization deletion policy** and hit the switch to enable the policy.
+5. Click **Create policy**. If you disabled the policy before, click **Update policy**.
+
+### Enabling dual authorization for your service instance with the API
+{: #enable-dual-auth-instance-policy-api}
 
 As an instance manager, enable a dual authorization policy for a
 {{site.data.keyword.hscrypto}} instance by making a
@@ -199,8 +213,22 @@ the policies that are available for your
     ```
     {: codeblock}
 
-### Disabling dual authorization for your service instance
+## Disabling dual authorization for your service instance
 {: #disable-dual-auth-instance-policy}
+
+### Disabling dual authorization for your service instance with the GUI
+{: #disable-dual-auth-instance-policy-ui}
+
+If you prefer to disable a dual authorization policy on your instance by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console. Complete the following steps to disable a dual authorization policy:
+
+1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
+2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
+4. On the **Manage instance policies** page, choose **Dual authorization deletion policy** and hit the switch to disable the policy.
+5. Click **Update policy**.
+
+### Disabling dual authorization for your service instance with the API
+{: #disable-dual-auth-instance-policy-api}
 
 As an instance manager, disable an existing dual authorization policy for a
 {{site.data.keyword.hscrypto}} instance by making a

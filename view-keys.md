@@ -41,7 +41,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Manage** page, browse the general characteristics of your keys in the **Keys** table:
+4. On the **Manage keys** page, browse the general characteristics of your keys in the **Keys** table:
 
     <table>
       <tr>

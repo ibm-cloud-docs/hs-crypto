@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-31"
+lastupdated: "2020-09-24"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -235,17 +235,15 @@ In the following step, you'll create a 256-bit AES symmetric key on your local w
 This tutorial uses the OpenSSL cryptography toolkit to generate a pseudo-random key, but you might want to [explore different options](/docs/hs-crypto?topic=hs-crypto-importing-keys#plan-ahead) for generating stronger keys based on your security needs. For example, you might want to use your organization's internal key management system, backed by an on-premises hardware security module (HSM), to create and export keys.
 {: note}
 
-From the command line, run the following `openssl` command to create a 256-bit encryption key.
+If you want to create a 256-bit encryption key, from the command line, run the following `openssl` command:
 
   ```sh
   openssl rand 32 > PlainTextKey.bin
   ```
   {: pre}
 
-  ```sh
-  KEY_MATERIAL="$(openssl enc -base64 -A -in PlainTextKey.bin)"
-  ```
-  {: pre}
+  You can skip this step if you use your own key in this tutorial.
+  {: tip}
 
   Success! Your encryption key is now saved in a file called `PlainTextKey.bin`. Continue to the next step.
 
@@ -259,33 +257,41 @@ In cryptography, a nonce serves as a session token that checks the originality o
 
 To encrypt the nonce value:
 
-1. Encode the key that you generated in the previous step, and set the encoded value as an environment variable.
+1. If you generate the key by following [step 3](#tutorial-import-create-key), to encode the key and set the encoded value as an environment variable, perform the following command:
 
     ```sh
     KEY_MATERIAL=$(openssl enc -base64 -A -in PlainTextKey.bin)
     ```
     {: pre}
 
-2. Gather the nonce value that you retrieved in step 4.
+    You can skip this step if you use your own key in this tutorial.
+    {: tip}
+
+2. Gather the nonce value that you retrieved in [step 2](#tutorial-import-retrieve-token).
 
     ```sh
     NONCE=$(jq -r '.nonce' getImportTokenResponse.json)
     ```
     {: pre}
 
-3. [Download the sample `kms-encrypt-nonce` binary](https://github.com/IBM-Cloud/kms-samples/releases/tag/v1.1){: external} that is compatible with your operating system. Extract the file, and then move the binary to the `hs-crypto-test` directory.
+3. If you are going to use the API to perform the subsequent steps, do the following:
 
-    The binary contains a script that you can use to run AES-CBC encryption on the nonce value by using the key that you generated in [step 5](#tutorial-import-retrieve-token). To learn more about the script, [check out the source file on GitHub](https://github.com/IBM-Cloud/kms-samples/blob/master/secure-import/encrypt.go){:external}.
+  You don't need to perform this step if you are going to use the CLI.
+  {: tip}
+
+  1. [Download the sample `kms-encrypt-nonce` binary](https://github.com/IBM-Cloud/kms-samples/releases/tag/v1.1){: external} that is compatible with your operating system. Extract the file, and then move the binary to the `hs-crypto-test` directory.
+
+    The binary contains a script that you can use to run AES-CBC encryption on the nonce value by using the key that you generated in [step 2](#tutorial-import-retrieve-token). To learn more about the script, [check out the source file on GitHub](https://github.com/IBM-Cloud/kms-samples/blob/master/secure-import/encrypt.go){:external}.
     {: note}
 
-4. Mark the file as executable by running the following  `chmod` command.
+  2. Mark the file as executable by running the following  `chmod` command.
 
     ```sh
     chmod +x ./kms-encrypt-nonce
     ```
     {: pre}
 
-5. Run the script to encrypt the nonce value with the encryption key that you generated in [step 5](#tutorial-import-retrieve-token). Then, save the response to a file called `EncryptedValues.json`.
+4. Run the script to encrypt the nonce value with the encryption key that you generated in [step 2](#tutorial-import-retrieve-token). Then, save the response to a file called `EncryptedValues.json`.
 
   * **Use the API**:
 
@@ -301,7 +307,7 @@ To encrypt the nonce value:
     ```
     {: pre}
 
-6. Optional: Inspect the contents of the JSON file.
+5. Optional: Inspect the contents of the JSON file.
 
     ```sh
     jq '.' EncryptedValues.json
@@ -324,7 +330,7 @@ To encrypt the nonce value:
 {: #tutorial-import-encrypt-key}
 {: step}
 
-Next, use the public key that was distributed by {{site.data.keyword.hscrypto}} in [step 5](#tutorial-import-retrieve-token) to encrypt the symmetric key that you generated using OpenSSL.
+Next, use the public key that was distributed by {{site.data.keyword.hscrypto}} in [step 2](#tutorial-import-retrieve-token) to encrypt the symmetric key that you generated using OpenSSL.
 
 * Encrypt the generated key with the key management API:
 
@@ -363,34 +369,20 @@ To import the key:
 
 1. Gather the encrypted key, the encrypted nonce, and the initialization vector (IV) values.
 
-  * **Use the API**:
+  ```sh
+  ENCRYPTED_KEY=$(openssl enc -base64 -A -in EncryptedKey.bin)
+  ```
+  {: pre}
 
-    ```sh
-    ENCRYPTED_KEY=$(openssl enc -base64 -A -in EncryptedKey.bin)
-    ```
-    {: pre}
+  ```sh
+  ENCRYPTED_NONCE=$(jq -r '.encryptedNonce' EncryptedValues.json)
+  ```
+  {: pre}
 
-    ```sh
-    ENCRYPTED_NONCE=$(jq -r '.encryptedNonce' EncryptedValues.json)
-    ```
-    {: pre}
-
-    ```sh
-    IV=$(jq -r '.iv' EncryptedValues.json)
-    ```
-    {: pre}
-
-  * **Use the CLI**:
-
-    ```sh
-    ENCRYPTED_NONCE=$(jq -r '.encryptedNonce' EncryptedValues.json)
-    ```
-    {: pre}
-
-    ```sh
-    IV=$(jq -r '.iv' EncryptedValues.json)
-    ```
-    {: pre}
+  ```sh
+  IV=$(jq -r '.iv' EncryptedValues.json)
+  ```
+  {: pre}
 
 2. Store the encrypted key in your {{site.data.keyword.hscrypto}} service instance.
 
@@ -424,7 +416,7 @@ To import the key:
 
     In the request body, you provide the encryption key that you prepared in the previous step. You also supply the encrypted nonce and the IV values that are required to verify the request. Finally, the `extractable` value set to `false` designates your new key as a root key in the service that you can use for envelope encryption.
 
-    If the API request fails with an import token expired error, [return to step 4](#tutorial-import-create-token) to create a new import token. Remember that import tokens and their associated public keys expire based on the policy that you specify at creation time.
+    If the API request fails with an import token expired error, [return to step 1](#tutorial-import-create-token) to create a new import token. Remember that import tokens and their associated public keys expire based on the policy that you specify at creation time.
     {: tip}
 
   * **Use the CLI**:

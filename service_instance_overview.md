@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-06-17"
+lastupdated: "2020-09-25"
 
-keywords: initialize service, key ceremony, hsm, tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
+keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
 subcollection: hs-crypto
 
@@ -22,7 +22,7 @@ subcollection: hs-crypto
 # Initializing your service instance
 {: #introduce-service}
 
-Before you start initializing the service instance of {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}, you might want to understand the process logic first.
+Before you start initializing the service instance of {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} with the Management Utilities or the cloud Trusted Key Entry (TKE) CLI, you might want to understand the process logic first.
 {:shortdesc}
 
 A {{site.data.keyword.hscrypto}} instance (service instance for short) is a group of [crypto units](#x9860404){: term} that are assigned to an {{site.data.keyword.cloud_notm}} user account. Crypto units contain [master keys](#x2908413){: term} that encrypt the contents of key storage. With the Keep You Own Keys technology, the service instance administrators are the only person who can access the master key.
@@ -37,7 +37,7 @@ To initialize the service instance, you need to create administrator [signature 
 
   For the highest level of security, use the {{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities to initialize the service instance. This solution uses smart cards to store signature keys and master key parts. Signature keys and master key parts never appear in the clear outside the smart card. For more information, see [Understanding the Management Utilities](#understand-management-utilities).
 
-- Using the {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in
+- Using the {{site.data.keyword.cloud_notm}} TKE CLI plug-in
 
   For a solution that does not require the purchase of smart card readers and smart cards, use the Trusted Key Entry (TKE) CLI plug-in to initialize the service instance. This solution uses workstation files encrypted with a key that is derived from a file password to store signature keys and master key parts. When the keys are used, file contents are decrypted and appear temporarily in the clear in workstation memory. For more information, see [Understanding the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](#understand-tke-plugin).
 
@@ -149,9 +149,9 @@ The Trusted Key Entry application is one of the two applications that are instal
 ## Understanding the {{site.data.keyword.cloud_notm}} TKE CLI plug-in
 {: #understand-tke-plugin}
 
-When you choose to store the signature key and master key parts on your workstation, use the {{site.data.keyword.cloud_notm}} TKE CLI plug-in to load the master key. With the TKE CLI plug-in, you can load the master key by issuing corresponding commands. No additional hardware is needed. However, as master key parts are stored on your local workstation, the TKE CLI plug-in provides a comparatively lower level of security.
+When you choose to store the signature key and master key parts on your workstation, use the {{site.data.keyword.cloud_notm}} TKE CLI plug-in to load the master key. With the cloud TKE CLI plug-in, you can load the master key by issuing corresponding commands. No additional hardware is needed. However, as master key parts are stored on your local workstation, the cloud TKE CLI plug-in provides a comparatively lower level of security.
 
-For the complete command reference, see [Trusted Key Entry CLI plug-in reference](/docs/hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin). For detailed instructions, see [Initializing service instances with {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
+For the complete command reference, see [{{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in reference](/docs/hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin). For detailed instructions, see [Initializing service instances with {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
 ## Understanding how master key is loaded
 {: #understand-key-ceremony}
