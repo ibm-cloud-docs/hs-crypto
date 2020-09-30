@@ -24,7 +24,7 @@ subcollection: hs-crypto
 Stay up-to-date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
-##September 2020
+## September 2020
 {: #september-2020}
 
 ### Added: Support for performing cryptographic operations with the standard PKCS #11 API
@@ -45,7 +45,7 @@ You can now rotate your master key on-demand by using the {{site.data.keyword.cl
 
 For the detailed instructions, see [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli).
 
-##August 2020
+## August 2020
 {: #august-2020}
 
 ### Added: Support for import tokens to securely upload encryption keys
