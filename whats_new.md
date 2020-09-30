@@ -32,7 +32,7 @@ Stay up-to-date with the new features that are available for {{site.data.keyword
 
 {{site.data.keyword.hscrypto}} now supports performing cryptographic operations with the standard Public-Key Cryptography Standards (PKCS) #11 API.
 
-With the support of PKCS #11 API, you don't need to change your existing applications that use PKCS #11 standard to make it run in the {{site.data.keyword.hscrypto}} cloud HSM environment. The PKCS #11 library accepts the PKCS #11 API requests from your applications and remotely accesses the cloud HSM to execute the corresponding cryptographic functions.
+With the support of PKCS #11 API, you do not need to change your existing applications that use PKCS #11 standard to make it run in the {{site.data.keyword.hscrypto}} cloud HSM environment. The PKCS #11 library accepts the PKCS #11 API requests from your applications and remotely accesses the cloud HSM to execute the corresponding cryptographic functions.
 
 For more information about the PKCS #11 API use cases, see [Using Hyper Protect Crypto Services as PKCS #11 HSMs](/docs/hs-crypto?topic=hs-crypto-use-cases#pkcs11_hsm).
 
