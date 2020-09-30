@@ -56,7 +56,7 @@ geographic area where your {{site.data.keyword.hscrypto}} requests are handled a
 ## Service endpoints
 {: #service-endpoints}
 
-If you are managing your {{site.data.keyword.hscrypto}} resources programmatically, see the following table to determine the API endpoints to use when you connect to the [Key management API](https://{DomainName}/apidocs/hs-crypto) and the [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+If you are managing your {{site.data.keyword.hscrypto}} resources programmatically, see the following table to determine the API endpoints to use when you connect to the [Key management API](https://{DomainName}/apidocs/hs-crypto), [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref), and  [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
 | Region        | Public key management service endpoints             |Public GREP11 service endpoints|
 | ------------- | ---------------------------- |---------------------------- |
@@ -84,4 +84,4 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 {: class="comparison-tab-table"}
 {: row-headers}
 
-For more information about authenticating with {{site.data.keyword.hscrypto}}, see [Setting up the key management API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api) and [Performing cryptographic operations with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api).
+For more information about authenticating with {{site.data.keyword.hscrypto}}, see [Setting up the key management API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api), [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api), and [Performing cryptographic operations with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api).

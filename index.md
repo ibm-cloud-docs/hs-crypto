@@ -32,19 +32,19 @@ subcollection: hs-crypto
 {: shortdesc}
 {: hide-dashboard}
 
-{{site.data.keyword.hscrypto}} integrates with {{site.data.keyword.keymanagementserviceshort}} application programming interface (API) to generate and manage keys. The Keep Your Own Key (KYOK) function is also enabled to provide access to cloud-based cryptographic HSMs. You can access the network addressable HSMs by making or Enterprise PKCS #11 over gRPC (GREP11) API calls to perform cryptographic operations.
+{{site.data.keyword.hscrypto}} integrates with {{site.data.keyword.keymanagementserviceshort}} application programming interface (API) to generate and manage keys. The Keep Your Own Key (KYOK) function is also enabled to provide access to cloud-based cryptographic HSMs. You can access the network addressable HSMs by making standard PKCS #11 API calls or Enterprise PKCS #11 over gRPC (GREP11) API calls to perform cryptographic operations.
 {: hide-dashboard}
 
 <!-- You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client, which communicates with the ACSP server to enable you to access the backend cryptographic resources.-->
 
 <!--{{site.data.keyword.hscrypto}} is the cryptography that {{site.data.keyword.blockchainfull_notm}} Platform is built with. It is also a member of the {{site.data.keyword.cloud_notm}} Hyper Protect Family, including [{{site.data.keyword.cloud_notm}} Hyper Protect DBaaS](https://cloud.ibm.com/docs/hypersecure-dbaas/index.html){: external}, {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}, [{{site.data.keyword.cloud_notm}} Container Service](https://cloud.ibm.com/docs/containers/container_index.html){: external}, and [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}}](https://cloud.ibm.com/docs/hypersecure-platform/index.html){: external}. -->
 
-This tutorial guides you how to set up your service instance by loading your [master keys](#x2908413){: term}, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the GREP11 API.
+This tutorial guides you how to set up your service instance by loading your [master keys](#x2908413){: term}, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the GREP11 API.
 {: hide-dashboard}
 
 <!-- the following is shown on the dashboard-->
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, built on FIPS 140-2 Level 4-certified hardware, allows you to take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. This tutorial guides you how to initialize your service instance by loading your master key, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the Enterprise PKCS #11 over gRPC (GREP11) API.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, built on FIPS 140-2 Level 4-certified hardware, allows you to take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. This tutorial guides you how to initialize your service instance by loading your master key, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the Enterprise PKCS #11 over gRPC (GREP11) API.
 {: hide-in-docs}
 
 ## Step 1: Initialize your service instance
@@ -107,7 +107,7 @@ Keys that are created in the service are symmetric 256-bit keys, supported by th
 #### Importing your own keys
 {: #import-keys-dashboard}
 
-You can enable the security benefits of Bring Your Own Key (BYOK) by bringing your existing keys to the service.
+You can bring your existing keys to the service, so that you can still use the same encryption keys to protect your applications or data.
 
 Complete the following steps to add an existing key.
 
@@ -146,7 +146,19 @@ From the {{site.data.keyword.hscrypto}} dashboard, you can inspect the general c
 ### Encrypting your data with cloud HSM
 {: #encrypt-data-hsm-dashboard}
 
-You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations with the GREP11 API.
+You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations with the PKCS #11 API or with the GREP11 API.
+
+#### Performing cryptographic operations with the PKCS #11 API
+{: #cryptographic-operations-with-pkcs11-dashboard}
+
+To perform cryptographic operations with the PKCS #11 API, complete the following steps:
+
+1. Follow the [Best practices for setting up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access) to create different service ID API keys for the various PKCS #11 user types.
+2. [Download the latest PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} and move it into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64` or `/usr/lib`.
+3. Create a configuration file named `grep11client.yaml` based on the [template](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step2-setup-configuration-file) and move the configuration file into the same folder as the PKCS #11 library. Optionally, the PKCS #11 library can be placed in the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not already exist.
+4. Depending on features and security requirements of your application, pass different service ID API keys that you previously create to allow your applications to perform the corresponding cryptographic operations.
+
+For detailed instructions, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
 
 #### Performing cryptographic operations with the GREP11 API
 {: #cryptographic-operations-with-grep11-dashboard}
@@ -303,7 +315,7 @@ Keys that are created in the service are symmetric 256-bit keys, supported by th
 {: help}
 {: support}
 
-You can enable the security benefits of Bring Your Own Key (BYOK) by bringing your existing keys to the service.
+You can bring your existing keys to the service, so that you can still use the same encryption keys to protect your applications or data.
 
 Complete the following steps to add an existing key.
 
@@ -344,7 +356,19 @@ From the {{site.data.keyword.hscrypto}} dashboard, you can inspect the general c
 {: help}
 {: support}
 
-You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations with the GREP11 API.
+You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations with the PKCS #11 API or with the GREP11 API.
+
+#### Performing cryptographic operations with the PKCS #11 API
+{: #cryptographic-operations-with-pkcs11}
+
+To perform cryptographic operations with the PKCS #11 API, complete the following steps:
+
+1. Follow the [Best practices for setting up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access) to create different service ID API keys for the various PKCS #11 user types.
+2. [Download the latest PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} and move it into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64` or `/usr/lib`.
+3. Create a configuration file named `grep11client.yaml` based on the [template](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step2-setup-configuration-file) and move the configuration file into the same folder as the PKCS #11 library. Optionally, the PKCS #11 library can be placed in the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not already exist.
+4. Depending on features and security requirements of your application, pass different service ID API keys that you previously create to allow your applications to perform the corresponding cryptographic operations.
+
+For detailed instructions, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
 
 #### Performing cryptographic operations with the GREP11 API
 {: #cryptographic-operations-with-grep11}
@@ -425,7 +449,7 @@ To run the sample code, perform the following steps:
 - {{site.data.keyword.hscrypto}} provides advanced encryption to your at-rest data with envelope encryption, check out [Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) to see how it works.
 - You can use {{site.data.keyword.hscrypto}} as the root key provider for other services such as {{site.data.keyword.cos_full_notm}} to bring your own encryption to your applications or data. Check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services) for the full list of supported services.
 - To learn more about {{site.data.keyword.hscrypto}} concepts and terminologies, check out [Components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
-- Manage your keys with [{{site.data.keyword.hscrypto}} key management API](/apidocs/hs-crypto){: external} and [{{site.data.keyword.keymanagementserviceshort}} CLI](/docs/key-protect?topic=key-protect-cli-reference){: external}. Encrypt your data and perform cryptographic operations with the [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+- Manage your keys with [{{site.data.keyword.hscrypto}} key management API](/apidocs/hs-crypto){: external} and [{{site.data.keyword.keymanagementserviceshort}} CLI](/docs/key-protect?topic=key-protect-cli-reference){: external}. Encrypt your data and perform cryptographic operations with the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) or the [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
 <br>
 <p class="hide-dashboard" style="background-color: #e0e0e0; border: 1px solid #161616; padding: 10px; font-weight: bold">

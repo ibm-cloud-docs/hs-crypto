@@ -328,7 +328,7 @@ A message is displayed asking whether to accept the new master key.
 Consider the following before you take actions:
 * If it is your first time to initialize the service instance, you can ignore this message and type `y` to continue.
 * If you have started managing keys with the service instance and want to reload the same master key that was used before, ensure that no key management actions are in progress and type `y` to continue.
-* If you have started managing keys with the service instance and want to load a new master key, type `N` to cancel. Loading a new master key is currently not supported. By doing so, all your managed keys are unusable.
+* If you have started managing keys with the service instance and want to load a new master key, type `N` to cancel. For more information about rotating the master key, see [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli).
 
 When prompted, enter the password for the signature key file to be used. For this command, only one signature key is needed.
 
@@ -341,5 +341,6 @@ When prompted, enter the password for the signature key file to be used. For thi
   ```
   {: pre}
 - Go to the **Manage** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
-- To learn more about using Enterprise PKCS #11 APIs to perform cryptographic operations for your applications, check out [Encrypt your data with Cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm) and the [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+- To learn more about performing cryptographic operations with the cloud HSM, see [Introducing cloud HSM](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm).
 - Use {{site.data.keyword.hscrypto}} as the root key provider for other {{site.data.keyword.cloud_notm}} services. For more information about integrating {{site.data.keyword.hscrypto}}, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
+- For information on how to rotate the master key, see [Rotating master keys with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli).

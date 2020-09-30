@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-08-25"
+lastupdated: "2020-09-30"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, data security, compliance
 
@@ -89,27 +89,14 @@ The Federal Information Processing Standard (FIPS) Publication 140-2 is a US gov
 Enterprise PKCS #11 (EP11) is aligned with PKCS #11 in terms of concepts and functions. An experienced PKCS #11 developer can easily start using EP11 functions. However, they have the following major differences:
 
 - EP11 is built to allow high availability and scalability by design.
-- EP11 is a stateless protocol, whereas PKCS #11 is stateful. The stateless design of EP11 allows for the use of external key stores as well as scaling to multiple backends.
+- EP11 is a stateless protocol, whereas PKCS #11 is stateful. The stateless design of EP11 allows for the use of external keystores as well as scaling to multiple backends.
 - EP11 over gRPC (GREP11) defines a network protocol that can be directly used in cloud applications.
 
 ## What EP11 mechanisms are supported by the GREP11 functions?
 {: #faq-EP11-mechanisms}
 {: faq}
 
-The following table includes the EP11 mechanisms that are categorized by GREP11 function groups:
-
-|Function group| Supported mechanisms |
-|--------------|-----------------------|
-|Encrypt | CKM_AES_CBC CKM_AES_CBC_PAD CKM_AES_ECB CKM_DES3_CBC CKM_DES3_CBC_PAD CKM_DES3_ECB CKM_IBM_EC_MULTIPLY CKM_RSA_PKCS CKM_RSA_PKCS_OAEP|
-|Decrypt | CKM_AES_CBC CKM_AES_CBC_PAD CKM_AES_ECB CKM_DES3_CBC CKM_DES3_CBC_PAD CKM_DES3_ECB CKM_RSA_PKCS CKM_RSA_PKCS_OAEP|
-|Digest  | CKM_IBM_SHA512_224 CKM_IBM_SHA512_256 CKM_SHA224 CKM_SHA256 CKM_SHA384 CKM_SHA512 CKM_SHA512_224 CKM_SHA512_256 CKM_SHA_1|
-|Sign    | CKM_DSA CKM_DSA_SHA1 CKM_ECDSA CKM_ECDSA_SHA1 CKM_ECDSA_SHA224 CKM_ECDSA_SHA256 CKM_ECDSA_SHA384 CKM_ECDSA_SHA512 CKM_IBM_CMAC CKM_IBM_ECDSA_SHA224 CKM_IBM_ECDSA_SHA256 CKM_IBM_ECDSA_SHA384 CKM_IBM_ECDSA_SHA512 CKM_IBM_SHA512_224_HMAC CKM_IBM_SHA512_256_HMAC CKM_RSA_PKCS CKM_RSA_PKCS_PSS CKM_RSA_X9_31 CKM_SHA1_RSA_PKCS CKM_SHA1_RSA_PKCS_PSS CKM_SHA1_RSA_X9_31 CKM_SHA224_HMAC CKM_SHA224_RSA_PKCS CKM_SHA224_RSA_PKCS_PSS CKM_SHA256_HMAC CKM_SHA256_RSA_PKCS CKM_SHA256_RSA_PKCS_PSS CKM_SHA384_HMAC CKM_SHA384_RSA_PKCS CKM_SHA384_RSA_PKCS_PSS CKM_SHA512_224_HMAC CKM_SHA512_256_HMAC CKM_SHA512_HMAC CKM_SHA512_RSA_PKCS CKM_SHA512_RSA_PKCS_PSS CKM_SHA_1_HMAC|
-|Verify | CKM_DSA CKM_DSA_SHA1 CKM_ECDSA CKM_ECDSA_SHA1 CKM_ECDSA_SHA224 CKM_ECDSA_SHA256 CKM_ECDSA_SHA384 CKM_ECDSA_SHA512 CKM_IBM_CMAC CKM_IBM_ECDSA_SHA224 CKM_IBM_ECDSA_SHA256 CKM_IBM_ECDSA_SHA384 CKM_IBM_ECDSA_SHA512 CKM_IBM_SHA512_224_HMAC CKM_IBM_SHA512_256_HMAC CKM_RSA_PKCS CKM_RSA_PKCS_PSS CKM_RSA_X9_31 CKM_SHA1_RSA_PKCS CKM_SHA1_RSA_PKCS_PSS CKM_SHA1_RSA_X9_31 CKM_SHA224_HMAC CKM_SHA224_RSA_PKCS CKM_SHA224_RSA_PKCS_PSS CKM_SHA256_HMAC CKM_SHA256_RSA_PKCS CKM_SHA256_RSA_PKCS_PSS CKM_SHA384_HMAC CKM_SHA384_RSA_PKCS CKM_SHA384_RSA_PKCS_PSS CKM_SHA512_224_HMAC CKM_SHA512_256_HMAC CKM_SHA512_HMAC CKM_SHA512_RSA_PKCS CKM_SHA512_RSA_PKCS_PSS CKM_SHA_1_HMAC|
-|Generate | CKM_AES_KEY_GEN CKM_DES2_KEY_GEN CKM_DES3_KEY_GEN CKM_DH_PKCS_KEY_PAIR_GEN CKM_DH_PKCS_PARAMETER_GEN CKM_DSA_KEY_PAIR_GEN CKM_DSA_PARAMETER_GEN CKM_EC_KEY_PAIR_GEN CKM_GENERIC_SECRET_KEY_GEN CKM_PBE_SHA1_DES3_EDE_CBC CKM_RSA_PKCS_KEY_PAIR_GEN CKM_RSA_X9_31_KEY_PAIR_GEN|
-|Wrap | CKM_AES_CBC CKM_AES_CBC_PAD CKM_DES3_CBC CKM_DES3_CBC_PAD CKM_IBM_ATTRIBUTEBOUND_WRAP CKM_IBM_RETAINKEY CKM_RSA_PKCS CKM_RSA_PKCS_OAEP|
-|Unwrap | CKM_AES_CBC CKM_AES_CBC_PAD CKM_DES3_CBC CKM_DES3_CBC_PAD CKM_IBM_ATTRIBUTEBOUND_WRAP CKM_RSA_PKCS CKM_RSA_PKCS_OAEP|
-|Derive | CKM_DH_PKCS_DERIVE CKM_ECDH1_DERIVE CKM_GENERIC_SECRET_KEY_GEN CKM_IBM_DH_PKCS_DERIVE_RAW CKM_IBM_EAC CKM_IBM_ECDH1_DERIVE_RAW CKM_SHA1_KEY_DERIVATION CKM_SHA224_KEY_DERIVATION CKM_SHA256_KEY_DERIVATION CKM_SHA384_KEY_DERIVATION CKM_SHA512_KEY_DERIVATION|
-{: caption="Table 4. Mechanisms supported by GREP11" caption-side="bottom"}
+Mechanisms can vary depending on the level of firmware in the IBM 4768 crypto card (also referred to as Crypto Express 6S). For mechanisms that are currently supported, see [Supported mechanisms](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#mechanism_list).
 
 For more information on the EP11 mechanisms, see the [Enterprise PKCS #11 (EP11) Library structure guide](https://www.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=15022415USEN&dd=yes&){: external}.
 

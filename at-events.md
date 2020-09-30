@@ -32,7 +32,10 @@ To enable {{site.data.keyword.at_full_notm}} for your {{site.data.keyword.hscryp
 
 To see which {{site.data.keyword.hscrypto}} key management API requests correlate to the actions below, [check out the key management API reference doc](/apidocs/hs-crypto){: external}.
 
-## Key events
+## Supported events
+{: #at-supported-events}
+
+### Key events
 {: #key-actions}
 
 The following table lists the key actions that generate an event:
@@ -59,7 +62,7 @@ The following table lists the key actions that generate an event:
 | `hs-crypto.secrets.default`             | Invalid key request event                                    |
 {: caption="Table 1. Lifecycle Key Actions" caption-side="top"}
 
-## Policy events
+### Policy events
 {: #policy-actions}
 
 The following table lists the policy actions that generate an event:
@@ -72,9 +75,9 @@ The following table lists the policy actions that generate an event:
 | `hs-crypto.instancepolicies.write`   | Set instance policies                        |
 | `hs-crypto.policies.default`         | Invalid policy request event                 |
 | `hs-crypto.instancepolicies.default` | Invalid policy request event                 |
-{: caption="Table 2. Policy actions" caption-side="top"}
+{: caption="Table 2. Policy actions" caption-side="bottom"}
 
-## Import token events
+### Import token events
 {: #import-token-actions}
 
 The following table lists the import token actions that generate an event:
@@ -84,9 +87,9 @@ The following table lists the import token actions that generate an event:
 | `hs-crypto.importtoken.create`  | Create an import token                 |
 | `hs-crypto.importtoken.read`    | Retrieve an import token               |
 | `hs-crypto.importtoken.default` | Invalid import token request event     |
-{: caption="Table 3. Import token actions" caption-side="top"}
+{: caption="Table 3. Import token actions" caption-side="bottom"}
 
-## Registration events
+### Registration events
 {: #registration-actions}
 
 The following table lists the registration actions that generate an event:
@@ -95,7 +98,7 @@ The following table lists the registration actions that generate an event:
 | --------------------------------------- | -------------------------------------------------------- |
 | `hs-crypto.registrations.list`                | List registrations for any key                           |
 | `hs-crypto.registrations.default`             | Invalid registration request event                       |
-{: caption="Table 4. Registration actions" caption-side="top"}
+{: caption="Table 4. Registration actions" caption-side="bottom"}
 
 
 ## Viewing events
@@ -136,19 +139,19 @@ There are some common fields that {{site.data.keyword.hscrypto}} uses outside of
     <tr>
       <td><p><varname>`requestData.requestURI`</varname></p></td>
       <td>
-        <p>the URI of the API request that was made.</p>
+        <p>The URI of the API request that was made.</p>
       </td>
     </tr>
     <tr>
       <td><p><varname>`requestData.instanceID`</varname></p></td>
       <td>
-        <p>the unique identifier of your {{site.data.keyword.hscrypto}} service instance.</p>
+        <p>The unique identifier of your {{site.data.keyword.hscrypto}} service instance.</p>
       </td>
     </tr>
      <tr>
       <td><p><varname>`correlationId`</varname></p></td>
       <td>
-        <p>the unique identifier of the API request that generated the event.</p>
+        <p>The unique identifier of the API request that generated the event.</p>
       </td>
     </tr>
     <caption style="caption-side:bottom;">Table 6. Describes the common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service
@@ -157,8 +160,7 @@ There are some common fields that {{site.data.keyword.hscrypto}} uses outside of
 
 For more information on the event fields in the Cloud Auditing Data Federation (CADF) event model, see [Event Fields](https://test.cloud.ibm.com/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-event){: external}
 
-While `initiator.host.address` is a field that is part of the Cloud Auditing Data Federation model, the host address field will not be shown for requests made through
-private networks.
+While `initiator.host.address` is a field that is part of the Cloud Auditing Data Federation model, the host address field will not be shown for requests made through private networks.
 {: important}
 
 ### Key action events
@@ -318,19 +320,17 @@ The following field includes extra information:
 ### Unable to delete a key
 {: #delete-key-failure}
 
-If the delete key event has a `reason.reasonCode`of 409, the key could not be deleted because it is possibly protecting one or more cloud resources that have a retention
+If the delete key event has a `reason.reasonCode`of `409`, the key cannot be deleted because it is possibly protecting one or more cloud resources that have a retention
 policy. Make a GET request to `/keys/{id}/registrations` to learn which resources this key is associated with. A registration with `"preventKeyDeletion": true`
 indicates that the associated resource has a retention policy. To enable deletion, contact an account owner to remove the retention policy on each resource
 that is associated with this key.
 
-A delete key event could also receive a `reason.reasonCode` of 409 due to a dual auth deletion policy on the key. Make a GET request to `/api/v2/keys/{id}/policies` to see if there is a
-dual authorization policy associated with your key. If there is a policy set, contact the other authorized user to delete the key.
-
+A delete key event might also receive a `reason.reasonCode` of `409` due to a dual auth deletion policy on the key. Make a GET request to `/api/v2/keys/{id}/policies` to see if there is a dual authorization policy associated with your key. If there is a policy set, contact the other authorized user to delete the key.
 
 ### Unable to authenticate while make a request
 {: #authenticate-failure}
 
-If the event has a `reason.reasonCode` of 401, you may not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions in the specified service instance. Verify with an
+If the event has a `reason.reasonCode` of `401`, you might not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions in the specified service instance. Verify with an
 administrator that you are assigned the correct platform and service access roles in the applicable service instance. For more
 information about roles, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access).
 
@@ -341,7 +341,7 @@ Check that you are using a valid token that is associated with an account author
 {: #list-keys-failure}
 
 If you make a call to `GET api/v2/keys` to list the keys that are available in
-your service instance and `responseData.totalResources` is 0, you may need to query for keys in
+your service instance and `responseData.totalResources` is 0, you might need to query for keys in
 the deleted state using the `state` parameter or adjust the `offset` and `limit` parameters in
 your request.
 

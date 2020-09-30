@@ -163,6 +163,36 @@ The Trusted Key Entry (TKE) application is one of the two applications that are 
 
 Public-Key Cryptography Standards (PKCS) #11 API defines a platform-independent API to cryptographic tokens, such as HSM and smart cards. Existing applications that use PKCS #11 can benefit from enhanced security by using secure key cryptography as well as stateless interface, which makes the cryptographic operations much more efficient. For more information, see [PKCS #11 API](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}.
 
+### Cryptoki
+{: #cryptoki-concept}
+
+The Cryptographic Token Interface defined in the PKCS #11 standard. Cryptoki follows a simple object based approach, addressing the goals of technology independence and resource sharing.
+
+### PKCS #11 library
+{: #pkcs11-library-concept}
+
+A PKCS #11 library that implements the Cryptoki API functions that are specified in the PKCS #11 standard. With the PKCS #11 library, your applications can use the PKCS #11 API to access the {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations. To learn more about how to set up the library, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
+
+### Cryptoki token
+{: #cryptoki-token-concept}
+
+The logical view of a cryptographic device that is defined by Cryptoki. For more information, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Logical view of a token](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759983){: external}.
+
+### Cryptoki session
+{: #cryptoki-session-concept}
+
+A logical connection between an application and a token. Cryptoki requires that an application open one or more sessions with a token to gain access to the objects and functions of the token. A session can be a read/write (R/W) session or a read-only (R/O) session. For more information, see [Introducing PKCS #11 - Session](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-session-intro).
+
+### Cryptoki object
+{: #cryptoki-object-concept}
+
+An item that is stored on a token. An object can be data, a certificate, or a key. A data object is defined by an application. A certificate object stores a certificate. A key object stores a cryptographic key. Each characteristic of the object is defined in an *attribute*. For more information, see [Introducing PKCS #11 - Key object](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-object-intro).
+
+### Mechanism
+{: #mechanism-concept}
+
+A process for implementing a cryptographic operation.
+
 ### Enterprise PKCS #11
 {: #ep11-concept}
 

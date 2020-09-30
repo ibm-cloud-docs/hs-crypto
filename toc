@@ -29,7 +29,9 @@ Hyper Protect Crypto Services
 
         {: .topicgroup}
         About cloud hardware security module
-            HSM-intro.md
+            introduce-hsm.md
+            introduce-pkcs11.md
+            introduce-grep11.md
 
         key-rotation.md
 
@@ -50,6 +52,11 @@ Hyper Protect Crypto Services
         [Tutorial: Encrypting Kubernetes secrets with IBM Cloud Hyper Protect Crypto Services](https://developer.ibm.com/tutorials/encrypt-kubernetes-secrets-with-hyper-protect-crypto-services/)
         [Tutorial: Enhancing security of your deployed application](https://{DomainName}/docs/tutorials?topic=solution-tutorials-extended-app-security)
         [Tutorial: Using IBM Cloud Hyper Protect Crypto Services to encrypt VMware disks](https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/)
+
+    {: .topicgroup}
+    Tutorials on cloud hardware security module
+        tutorials/tde-pkcs11.md
+        tutorials/db2-pkcs11.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -68,6 +75,7 @@ Hyper Protect Crypto Services
     {: .topicgroup}
     Setting up API calls
         set-up-kms-api.md
+        set-up-pkcs-api.md
         set-up-grep11-api.md
         retrieve-access-token.md
         retrieve-instance-id.md
@@ -99,6 +107,7 @@ Hyper Protect Crypto Services
 
     {: .topicgroup}
     Rotating keys
+        rotate-master-key.md
         set-rotation-policy.md
         rotate-keys.md
         view-key-versions.md
@@ -119,6 +128,7 @@ Hyper Protect Crypto Services
     Enhancing security
         manage-access.md
         grant-access-keys.md
+        pkcs11-best-practices.md
         crypto-private-network.md
         at-events.md
 
@@ -136,6 +146,7 @@ Hyper Protect Crypto Services
 
     {: .topicgroup}
     Cloud hardware security module reference
+        pkcs11-api-ref.md
         grep11-api-ref.md
 
     [Trusted Key Entry CLI reference](https://{DomainName}/docs/hs-crypto-cli-plugin?topic=hs-crypto-cli-plugin-tke_cli_plugin)

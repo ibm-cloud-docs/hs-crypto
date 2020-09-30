@@ -33,7 +33,7 @@ The following table shows the roles that {{site.data.keyword.hscrypto}} supports
 |Service administrator|Manages [platform access](#platform-mgmt-roles) and [service access](#service-access-roles), [grants access to keys](/docs/hs-crypto?topic=hs-crypto-grant-access-keys), creates and deletes service instances, and manages keys. An {{site.data.keyword.cloud_notm}} account owner is automatically assigned the service administrator permission.|
 |Crypto unit administrator|Provides signature keys, and signs Trusted Key Entry (TKE) administrative commands such as for adding another crypto unit administrator. In some cases, a crypto unit administrator can also be a master key custodian.|
 |Master key custodian|Provides master key parts for initializing a service instance. In some cases, a master key custodian can also be a crypto unit administrator.|
-|Service user|Manages root keys and standard keys through user interface and the API, and performs cryptographic operations through the Enterprise PKCS #11 over gRPC (GREP11) API. Based on the [platform access roles](#platform-mgmt-roles) and [service access roles](#service-access-roles), service users can be further categorized with various permissions.|
+|Service user|Manages root keys and standard keys through user interface and the API, and performs cryptographic operations through the PKCS #11 API or the Enterprise PKCS #11 over gRPC (GREP11) API. Based on the [platform access roles](#platform-mgmt-roles) and [service access roles](#service-access-roles), service users can be further categorized with various permissions.|
 {: caption="Table 1. Roles and permissions" caption-side="bottom"}
 
 The following diagram illustrates the roles and permissions.
@@ -77,7 +77,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 
 * Trusted Key Entry (TKE) uses either smart cards or software CLI plug-in with IAM authentication. Commands that deals with managing keys locally on the smart card or CLI are not included. Those commands do not interact with the HSM domain.
 * The Key Management API is used for envelope encryption and deals with root keys that are used by {{site.data.keyword.cloud_notm}} services for encrypting data-at-rest.
-* HSM APIs (the GREP11 API) are used for application-level encryption.
+* HSM APIs (the PKCS #11 API and the GREP11 API) are used for application-level encryption.
 
 | Action | Reader | ReaderPlus | Writer | Manager |Crypto unit administrator|
 |-----|-----|-----|-----|----|----|

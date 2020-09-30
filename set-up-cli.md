@@ -79,4 +79,4 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
 {: #cli-next-steps}
 
 - You can also perform key management operations with API calls, check out [Managing your keys with the key management API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
-- Learn how to perform cryptographic operations with Enterprise PKCS #11 (EP11) APIs over gRPC (GREP11), refer to [Performing cryptographic operations with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api).
+- To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-25"
+lastupdated: "2020-09-30"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -24,17 +24,29 @@ subcollection: hs-crypto
 Stay up-to-date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
-##August 2020
-{: #august-2020}
+##September 2020
+{: #september-2020}
 
-<!-- ### Added: Support for performing cryptographic operations with the standard PKCS #11 API
+### Added: Support for performing cryptographic operations with the standard PKCS #11 API
 {: #added-pkcs11}
 
 {{site.data.keyword.hscrypto}} now supports performing cryptographic operations with the standard Public-Key Cryptography Standards (PKCS) #11 API.
 
 With the support of PKCS #11 API, you don't need to change your existing applications that use PKCS #11 standard to make it run in the {{site.data.keyword.hscrypto}} cloud HSM environment. The PKCS #11 library accepts the PKCS #11 API requests from your applications and remotely accesses the cloud HSM to execute the corresponding cryptographic functions.
 
-For more information about the PKCS #11 API, see [Introducing PKCS #11](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro) and [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref). -->
+For more information about the PKCS #11 API use cases, see [Using Hyper Protect Crypto Services as PKCS #11 HSMs](/docs/hs-crypto?topic=hs-crypto-use-cases#pkcs11_hsm).
+
+To learn more about the PKCS #11 API, see [Introducing PKCS #11](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro) and [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref).
+
+### Added: Master key rotation
+{: #added-master-key-rotation}
+
+You can now rotate your master key on-demand by using the {{site.data.keyword.cloud}} Trusted Key Entry CLI plug-in so as to meet industry standards and cryptographic best practices. For more information on how it works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-key-rotation#master-key-rotation-intro).
+
+For the detailed instructions, see [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli).
+
+##August 2020
+{: #august-2020}
 
 ### Added: Support for import tokens to securely upload encryption keys
 {: #added-import-tokens}
@@ -42,13 +54,6 @@ For more information about the PKCS #11 API, see [Introducing PKCS #11](/docs/hs
 If you have *Writer* or *Manager* access permissions, you can now create import tokens to enable added security for encryption keys that you upload to {{site.data.keyword.hscrypto}}.
 
 To find out more about your options for importing keys, check out [Creating import tokens](/docs/hs-crypto?topic=hs-crypto-create-import-tokens). For a guided tutorial, see [Tutorial: Creating and importing encryption keys](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys).
-
-<!-- ### Added: Master key rotation
-{: #added-master-key-rotation}
-
-You can now rotate your master key on-demand by using the {{site.data.keyword.cloud}} Trusted Key Entry CLI plug-in so as to meet industry standards and cryptographic best practices. For more information on how it works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-key-rotation#master-key-rotation-intro).
-
-For the detailed instructions, see [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli). -->
 
 ## July 2020
 {: #july-2020}
