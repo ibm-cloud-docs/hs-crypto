@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2020-09-24"
+lastupdated: "2020-10-01"
 
 keywords: hsm, cloud hsm, tke cli, pkcs11, PKCS11 library, cryptographic operations, cryptographic functions, PKCS 11
 
@@ -117,4 +117,4 @@ The CKA_TOKEN attribute should be set to `TRUE` in key or key pair generation te
 
 The in-memory keystores are composed of two isolated keystores. If an application logs in as a `normal user` using the `C_Login` function and the CKA_TOKEN attribute is set to `FALSE` or not set, the generated objects are stored in the private session object keystore. However, if an application logs in as an `SO user` or does not log in (thus it is an anonymous user), and the CKA_TOKEN attribute is set to `FALSE` or not set, the generated objects are stored in the public session object keystore.
 
-The database-backed keystores are composed of two isolated keystores. If an application logs in as a `normal user` using the `C_Login` function and the CKA_TOKEN attribute is set to `TRUE`, the generated objects are stored in the private token object keystore. However, if an application logs in as an `SO user` or does not log in (thus it is an anonymous user),  and the CKA_TOKEN attribute is set to `TRUE` or not set, the generated objects are stored in the public token object keystore.
+The database-backed keystores are composed of two isolated keystores. If an application logs in as a `normal user` using the `C_Login` function and the CKA_TOKEN attribute is set to `TRUE`, the generated objects are stored in the private token object keystore. However, if an application logs in as an `SO user` or does not log in (thus it is an anonymous user),  and the CKA_TOKEN attribute is set to `TRUE`, the generated objects are stored in the public token object keystore.
