@@ -188,7 +188,7 @@ For more information about creating services IDs, see [Creating and working with
 
 You can grant access to service IDs within a {{site.data.keyword.hscrypto}} service instance by using the {{site.data.keyword.cloud_notm}} console.
 
-The following table shows the custom role that each type of users should be assigned.
+The following table shows the custom role(s) that each type of user should be assigned.
 
 | Keystore type | SO user | Normal user | Anonymous user |
 |-----|-----|-----|-----|
