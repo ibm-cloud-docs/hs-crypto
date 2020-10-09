@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-24"
+lastupdated: "2020-10-09"
 
 keywords: encrypt IBM Db2 databases, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -26,7 +26,7 @@ completion-time: 2h
 {:important: .important}
 {:step: data-tutorial-type='step'}
 
-# Tutorial: Using IBM Db2 native encryption with {{site.data.keyword.hscrypto}} PKCS #11
+# Tutorial: Using {{site.data.keyword.hscrypto}} PKCS #11 for IBM Db2 native encryption
 {: #tutorial-db2-pkcs11}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="2h"}
