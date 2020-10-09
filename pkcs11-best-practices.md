@@ -132,7 +132,7 @@ To create a service ID for the SO user and the corresponding API key, complete t
   2. Create a name `SO user` and description for the SO user service ID.
   3. Click **Create**.
 3. To create an API key for the service ID, follow these steps:
-  1. Go to the **API keys** tab.
+  1. Click the **API keys** tab on the `SO user` service ID page.
   2. Click **Create**.
   3. Add a name and description to easily identify the API key, for example, `SO user API key`.
   4. Click **Create**.
@@ -152,7 +152,7 @@ To create a service ID for the normal user and the corresponding API key, comple
   2. Create a name `Normal user` and description for the normal user service ID.
   3. Click **Create**.
 3. To create an API key for the service ID, follow these steps:
-  1. Go to the **API keys** tab.
+  1. Click the **API keys** tab on the `Normal user` service ID page.
   2. Click **Create**.
   3. Add a name and description to easily identify the API key, for example, `Normal user API key`.
   4. Click **Create**.
@@ -173,7 +173,7 @@ To create a service ID for the anonymous user and the corresponding API key, com
   3. Click **Create**.
 3. To create an API key for the service ID, follow these steps:
   1. Go to the **API keys** tab.
-  2. Click **Create**.
+  2. Click the **API keys** tab on the `Anonymous user` service ID page.
   3. Add a name and description to easily identify the API key, for example, `Anonymous user API key`.
   4. Click **Create**.
   5. Save your API key by copying or downloading it to secure location.
@@ -188,7 +188,7 @@ For more information about creating services IDs, see [Creating and working with
 
 You can grant access to service IDs within a {{site.data.keyword.hscrypto}} service instance by using the {{site.data.keyword.cloud_notm}} console.
 
-The following table shows the custom role that each type of users should be assigned.
+The following table shows the custom role that each type of user should be assigned.
 
 | Keystore type | SO user | Normal user | Anonymous user |
 |-----|-----|-----|-----|
@@ -206,11 +206,11 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 To assign access to the public keystore for the SO user, follow these steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
-1. Select the `SO user` service ID, and click the overflow (...) icon to open a list of options.
+1. Hover your mouse over the `SO user` service ID, and click the overflow (...) icon located to the right of the `SO user` row to open a list of options.
 1. From the options menu, click **Assign access**.
 1. Click **Assign service ID additional access**, and then click the **IAM services** button.
-1. From the list of services, select **Hyper Protect Crypto Services**.
-1. From the list of service instances, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
+1. Click **No service access** under **What type of access do you want to assign?** and select **Hyper Protect Crypto Services**.
+1. Click **Service Instance ID** and select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
 <!-- 1. Enter the identifying information about the key.
    * For **Resource type**, enter `keystore`.
    * For **Resource ID**, enter a Universally Unique Identifier (UUID) that uniquely identifies the keystore. For example, `21000000-0000-0000-0200-000000000222`. For more information about UUID, see [Generate a UUID compliant with RFC 4122](https://www.cryptosys.net/pki/uuid-rfc4122.html){: external}.
@@ -227,11 +227,11 @@ To assign access to the public keystore for the SO user, follow these steps:
 To assign access to the private keystore for the SO user, follow these steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
-1. Select the `SO user` service ID, and click the overflow (...) icon to open a list of options.
+1. Hover your mouse over the `SO user` service ID, and click the overflow (...) icon located to the right of the `SO user` row to open a list of options.
 1. From the options menu, click **Assign access**.
 1. Click **Assign service ID additional access**, and then click the **IAM services** button.
-1. From the list of services, select **Hyper Protect Crypto Services**.
-1. From the list of service instances, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
+1. Click **No service access** under **What type of access do you want to assign?** and select **Hyper Protect Crypto Services**.
+1. Click **Service Instance ID** and select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
 <!--1. Enter the identifying information about the key.
    * For **Resource type**, enter `keystore`.
    * For **Resource ID**, enter a Universally Unique Identifier (UUID) that uniquely identifies the keystore. For example, `11000000-0000-0000-0200-000000000111`. For more information about UUID, see [Generate a UUID compliant with RFC 4122](https://www.cryptosys.net/pki/uuid-rfc4122.html){: external}.
@@ -250,11 +250,11 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 To assign access to the public keystore for the normal user, follow these steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
-1. Select the `Normal user` service ID, and click the overflow (...) icon to open a list of options.
+1. Hover your mouse over the `Normal user` service ID, and click the overflow (...) icon located to the right of the `Normal user` row to open a list of options.
 1. From the options menu, click **Assign access**.
 1. Click **Assign service ID additional access**, and then click the **IAM services** button.
-1. From the list of services, select **Hyper Protect Crypto Services**.
-1. From the list of service instances, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
+1. Click **No service access** under **What type of access do you want to assign?** and select **Hyper Protect Crypto Services**.
+1. Click **Service Instance ID** and select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
 <!-- 1. Enter the identifying information about the key.
    * For **Resource type**, enter `keystore`.
    * For **Resource ID**, enter a Universally Unique Identifier (UUID) that uniquely identifies the keystore. For example, `21000000-0000-0000-0200-000000000222`. For more information about UUID, see [Generate a UUID compliant with RFC 4122](https://www.cryptosys.net/pki/uuid-rfc4122.html){: external}.
@@ -269,11 +269,11 @@ To assign access to the public keystore for the normal user, follow these steps:
 To assign access to the private keystore for the normal user, follow these steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
-1. Select the `Normal user` service ID, and click the overflow (...) icon to open a list of options.
+1. Hover your mouse over the `Normal user` service ID, and click the overflow (...) icon located to the right of the `Normal user` row to open a list of options.
 1. From the options menu, click **Assign access**.
 1. Click **Assign service ID additional access**, and then click the **IAM services** button.
-1. From the list of services, select **Hyper Protect Crypto Services**.
-1. From the list of service instances, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
+1. Click **No service access** under **What type of access do you want to assign?** and select **Hyper Protect Crypto Services**.
+1. Click **Service Instance ID** and select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
 <!--1. Enter the identifying information about the key.
    * For **Resource type**, enter `keystore`.
    * For **Resource ID**, enter a Universally Unique Identifier (UUID) that uniquely identifies the keystore. For example, `11000000-0000-0000-0200-000000000111`. For more information about UUID, see [Generate a UUID compliant with RFC 4122](https://www.cryptosys.net/pki/uuid-rfc4122.html){: external}.
@@ -292,11 +292,11 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 To assign access to the public keystore for the anonymous user, follow these steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
-1. Select the `Anonymous user` service ID, and click the overflow (...) icon to open a list of options.
+1. Hover your mouse over the `Anonymous user` service ID, and click the overflow (...) icon located to the right of the `Anonymous user` row to open a list of options.
 1. From the options menu, click **Assign access**.
 1. Click **Assign service ID additional access**, and then click the **IAM services** button.
-1. From the list of services, select **Hyper Protect Crypto Services**.
-1. From the list of service instances, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
+1. Click **No service access** under **What type of access do you want to assign?** and select **Hyper Protect Crypto Services**.
+1. Click **Service Instance ID** and select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
 <!-- 1. Enter the identifying information about the key.
    * For **Resource type**, enter `keystore`.
    * For **Resource ID**, enter a Universally Unique Identifier (UUID) that uniquely identifies the keystore. For example, `21000000-0000-0000-0200-000000000222`. For more information about UUID, see [Generate a UUID compliant with RFC 4122](https://www.cryptosys.net/pki/uuid-rfc4122.html){: external}.
