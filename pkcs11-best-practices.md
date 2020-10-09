@@ -30,7 +30,7 @@ To align with industry-standard security requirements and [Permitted object acce
 
 The PKCS #11 standard defines two user types: security officer and normal user. If a user does not perform a `C_Login` function call, the user is considered as an anonymous user.
 
-There are two types of keystores are defined in the PKCS #11 library that users can access:
+There are two types of keystores that are defined in the PKCS #11 library that users can access:
 
 * **Public keystore**: Stores keys that are less sensitive and that are to be accessed by any user types.
 * **Private keystore**: Stores keys that encrypt sensitive data and that are to be accessed by normal users only.
