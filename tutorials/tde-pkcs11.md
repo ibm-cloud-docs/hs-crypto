@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-09"
+lastupdated: "2020-10-14"
 
 keywords: encrypt Oracle Transparent Database, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -238,23 +238,28 @@ The directory `/opt/oracle/extapi/64/hsm` and the subfolders must contain only o
 ### 4. Check the library setup
 {: #tutorial-tde-library-check}
 
-Run the following command as `root` to check the library setup:
+1. Install the command-line utility OpenSC (pkcs11-tool) with the following command:
 
-```linux
-sudo yum install opensc
+  ```linux
+  sudo yum install opensc
+  ```
+  {: codeblock}
 
-pkcs11-tool --module=/opt/oracle/extapi/64/hsm/ibm/pkcs11-grep11.so -I
-```
-{: codeblock}
+2. Run the following command as `root` to check the library setup:
 
-This command prints information about the manufacturer and the library, for example:
+  ```linux
+  pkcs11-tool --module=/opt/oracle/extapi/64/hsm/ibm/pkcs11-grep11.so -I
+  ```
+  {: codeblock}
 
-```
-Cryptoki version 2.40
-Manufacturer     IBM ...
-Library          GREP11 PKCS11 client ...
-```
-{: codeblock}
+  This command prints information about the manufacturer and the library, for example:
+
+   ```
+  Cryptoki version 2.40
+  Manufacturer     IBM ...
+  Library          GREP11 PKCS11 client ...
+  ```
+  {: codeblock}
 
 ### 5. Initialize the {{site.data.keyword.hscrypto}} PKCS #11 library
 {: #tutorial-tde-initialize-library}

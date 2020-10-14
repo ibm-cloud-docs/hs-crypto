@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-09"
+lastupdated: "2020-10-14"
 
 keywords: encrypt IBM Db2 databases, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -224,10 +224,16 @@ logging:
 ### 4. Initialize the {{site.data.keyword.hscrypto}} PKCS #11 library
 {: #tutorial-db2-initialize-library}
 
-1. Run the following commands as `root` to initialize the library setup.
+1. Install the command-line utility OpenSC (pkcs11-tool) with the following command:
 
   ```
   yum install opensc
+  ```
+  {: codeblock}
+
+2. Run the following command as `root` to initialize the library setup.
+
+  ```
   pkcs11-tool --module=/pkcs11/pkcs11-grep11.so -I
   ```
   {: codeblock}
@@ -240,7 +246,7 @@ logging:
   ```
   {: screen}
 
-2. To initialize a token, run the following commands and replace `<your_api_key>` by the API key that you created.
+3. To initialize a token, run the following commands and replace `<your_api_key>` by the API key that you created.
 
   ```
   pkcs11-tool  --module /pkcs11/pkcs11-grep11.so --init-token --label dbtoken --so-pin <your api key>
