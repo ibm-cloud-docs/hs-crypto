@@ -2554,7 +2554,6 @@ CK_RV m_Decrypt (const unsigned char *state, size_t slen,
   target_t target
 ) ;
     </pre>
-    </code>
     </td>
   </tr>
   <tr>
@@ -4367,7 +4366,7 @@ message DigestResponse {
   <p>Note that if a digest object has had exactly 0 (zero) bytes appended to it after creation, in any combination of zero-byte transfers, it can still perform a one-pass Digest, even if it should be rejected by a strict implementation.</p>
   <p>Does not update <code>(state, slen)</code>.</p>
   <p>Implementations might perform
-  <code>DigestUpdate</code>, <code>DigestFinal<code>, or <code>Digest</code> calls on cleartext digest objects in host code, bypassing HSM backends altogether. This choice might or might not be visible to host code, and it does not impact the security of the operation (as clear objects might not digest sensitive data). </p>
+  <code>DigestUpdate</code>, <code>DigestFinal</code>, or <code>Digest</code> calls on cleartext digest objects in host code, bypassing HSM backends altogether. This choice might or might not be visible to host code, and it does not impact the security of the operation (as clear objects might not digest sensitive data). </p>
   <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. The <code>state</code> blob was output from: <code>DigestInit</code>.</p>
   </td>
   </tr>
