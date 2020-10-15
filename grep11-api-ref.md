@@ -2598,7 +2598,6 @@ CK_DEFINE_FUNCTION(CK_RV, C_Decrypt)(
   CK_ULONG_PTR pulDataLen
 );
     </pre>
-    </code>
     </td>
   </tr>
   <tr>
@@ -2726,7 +2725,6 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptUpdate)(
   CK_ULONG_PTR pulPartLen
 );
     </pre>
-    </code>
     </td>
   </tr>
   <tr>
@@ -4227,7 +4225,6 @@ message DigestInitResponse {
 		bytes State = 1;
 	}
     </pre>
-    </code>
     </td>
   </tr>
   <tr>

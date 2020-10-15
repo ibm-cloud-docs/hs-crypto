@@ -133,7 +133,7 @@ A mechanism is referred to as a process to implement a cryptographic operation. 
 
 <!--
 |Mechanism|Encrypt and decrypt|Sign and verify|Sign recover and verify recover|Digest|Generate key or generate key pair|Wrap and unwrap|Derive|
-|---------------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|
+| --------------- | --------------- | --------------- | --------------- | --------------- | --------------- | --------------- | --------------- |
 | CKM_RSA_PKCS_KEY_PAIR_GEN  | N/A  | N/A  |  N/A |  N/A | Yes | N/A  | N/A  |
 | CKM_RSA_X9_31_KEY_PAIR_GEN| N/A  | N/A  | N/A  |  N/A | Yes | N/A  | N/A  |
 | CKM_RSA_PKCS | Yes (Single-part operations only) | Yes (Single-part operations only) | Yes | N/A  |  N/A | Yes   |  N/A |
