@@ -102,7 +102,7 @@ To rotate the master key, follow these steps:
   1. Start master key rotation by running the following command:
 
     ```
-    cryptounit-mk-rotate
+    ibmcloud tke cryptounit-mk-rotate
     ```
     {: pre}
 
