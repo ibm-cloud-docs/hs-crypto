@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-09"
+lastupdated: "2020-10-19"
 
 keywords: standard key, import key, key material, import key api, bring your own key, byok, encryption key, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key
 
@@ -15,6 +15,7 @@ subcollection: hs-crypto
 {:screen: .screen}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 {:external: target="_blank" .external}
 
 # Importing standard keys
@@ -54,11 +55,12 @@ You can add your existing encryption keys with the {{site.data.keyword.hscrypto}
       <tr>
         <td>Key material</td>
         <td>
-          <p>The base64 encoded key material, such as a symmetric key, that you want to manage in the service.</p>
+          <p>The base64 encoded key material, such as a symmetric key, that you want to manage in the service. For more information, see [Base64 encoding your key material](#encode-key-material-standard-key).</p>
           <p>Ensure that the key material meets the following requirements:</p>
-          <p><ul>
-              <li>The key can be up to 10,000 bytes in size.</li>
-              <li>The bytes of data must be base64 encoded.</li>
+          <p>
+            <ul>
+              <li>The key can be up to 7,500 bytes in length.</li>
+              <li>The key must be base64-encoded.</li>
             </ul>
           </p>
         </td>
@@ -156,11 +158,12 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
       <tr>
         <td><varname>key_material</varname></td>
         <td>
-          <p>The base64 encoded key material, such as a symmetric key, that you want to manage in the service.</p>
+          <p>The base64 encoded key material, such as a symmetric key, that you want to manage in the service. For more information, see [Base64 encoding your key material](#encode-key-material-standard-key).</p>
           <p>Ensure that the key material meets the following requirements:</p>
-          <p><ul>
-              <li>The key can be up to 10,000 bytes in size.</li>
-              <li>The bytes of data must be base64 encoded.</li>
+          <p>
+            <ul>
+              <li>The key can be up to 7,500 bytes in length.</li>
+              <li>The key must be base64-encoded.</li>
             </ul>
           </p>
         </td>
@@ -247,20 +250,16 @@ When importing an existing standard key, it is required to include the encrypted
         </td>
         <td>
           <p>
-            The name of the file where your base64 encoded key material will be outputted once the command has run.
-          </p>
-          <p>
-            Ensure that the key is 128, 192, or 256 bits in length.
+            The name of the file where your base64-encoded key material will be created once the command has run.
           </p>
         </td>
       </tr>
-
       <caption style="caption-side:bottom;">
         Table 3. Describes the variables that are needed to base64 encode your key material.
       </caption>
     </table>
 
-  If you want to output the base64 material in the command line directly rather than a file, run the command `openssl enc -base64 <<< '<key_material_string>'`, where key_material_string is the key material input for your imported key.
+  If you want to output the base64 material in the command line directly rather than a file, run the command `openssl enc -base64 <<< '<key_material_string>'`, where *key_material_string* is the key material input for your imported key.
   {: note}
 
 ### Using OpenSSL to create and encode new key material
@@ -287,14 +286,10 @@ When importing an existing standard key, it is required to include the encrypted
         </td>
         <td>
           <p>
-            The length of the key, measured in bytes.
-          </p>
-          <p>
-            Acceptable byte lengths: 16, 24, 32
+            The length of the key, measured in bytes. Acceptable byte length can be up to 7,500 bytes.
           </p>
         </td>
       </tr>
-
       <caption style="caption-side:bottom;">
         Table 4. Describes the variable that is needed to create and encode new key material.
       </caption>

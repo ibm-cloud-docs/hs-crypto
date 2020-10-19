@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-09"
+lastupdated: "2020-10-19"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -61,12 +61,12 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
       <tr>
         <td>Key material</td>
         <td>
-          <p>The base64 encoded key material, such as an existing key-wrapping key, that you want to store and manage in the service.</p>
+          <p>The base64 encoded key material, such as an existing key-wrapping key, that you want to store and manage in the service. For more information, see [Base64 encoding your key material](#encode-key-material-root-key).</p>
           <p>Ensure that the key material meets the following requirements:</p>
           <p>
             <ul>
-              <li>The key must be 128, 192, or 256 bits.</li>
-              <li>The bytes of data, for example 32 bytes for 256 bits, must be encoded by using base64 encoding.</li>
+              <li>The key must be 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits in length.</li>
+              <li>The key must be base64-encoded.</li>
             </ul>
           </p>
         </td>
@@ -153,12 +153,12 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
         <tr>
           <td><varname>key_material</varname></td>
           <td>
-            <p>The base64 encoded key material, such as an existing key-wrapping key, that you want to store and manage in the service.</p>
+            <p>The base64 encoded key material, such as an existing key-wrapping key, that you want to store and manage in the service. For more information, see [Base64 encoding your key material](#encode-key-material-root-key).</p>
             <p>Ensure that the key material meets the following requirements:</p>
             <p>
               <ul>
-                <li>The key must be 128, 192, or 256 bits.</li>
-                <li>The bytes of data, for example 32 bytes for 256 bits, must be encoded by using base64 encoding.</li>
+                <li>The key must be 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits in length.</li>
+                <li>The key must be base64-encoded.</li>
               </ul>
             </p>
           </td>
@@ -236,6 +236,9 @@ When importing an existing root key, it is required to include the encrypted key
           <p>
             The name of the file where your key material string resides.
           </p>
+          <p>
+            Ensure that the key is 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits in length.
+          </p>
         </td>
       </tr>
       <tr>
@@ -244,20 +247,16 @@ When importing an existing root key, it is required to include the encrypted key
         </td>
         <td>
           <p>
-            The name of the file where your base64 encoded key material will be outputted once the command has run.
-          </p>
-          <p>
-            Ensure that the key is 128, 192, or 256 bits in length.
+            The name of the file where your base64-encoded key material will be created once the command has run.
           </p>
         </td>
       </tr>
-
       <caption style="caption-side:bottom;">
         Table 3. Describes the variables that are needed to base64 encode your key material.
       </caption>
     </table>
 
-  If you want to output the base64 material in the command line directly rather than a file, run the command `openssl enc -base6<<< '<key_material_string>'`, where key_material_string is the key material input for your imported key.
+  If you want to output the base64 material in the command line directly rather than a file, run the command `openssl enc -base6<<< '<key_material_string>'`, where *key_material_string* is the key material input for your imported key.
   {: note}
 
 ### Using OpenSSL to create and encode new key material
@@ -287,11 +286,10 @@ When importing an existing root key, it is required to include the encrypted key
             The length of the key, measured in bytes.
           </p>
           <p>
-            Acceptable byte lengths: 16, 24, 32
+            Acceptable byte lengths are 16, 24, or 32 bytes, corresponding to 128, 192, or 256 bits in length.
           </p>
         </td>
       </tr>
-
       <caption style="caption-side:bottom;">
         Table 4. Describes the variable that is needed to create and encode new key material.
       </caption>
