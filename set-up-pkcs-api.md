@@ -233,7 +233,10 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
 ## Step 4: Use the PKCS #11 library to make PKCS #11 API calls
 {: #step4-use-pkcs-library}
 
-After you set up the library and the configuration file, the keystores must be initialized. To initialize the keystores, the security officer (SO) user needs to perform a `C_InitToken` operation. Once the keystores have been initialized, you can then use the PKCS #11 library to call the standard PKCS #11 functions to generate, store, and list keys. For the detailed list of supported PKCS #11 functions, see [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref).
+After you set up the library and the configuration file, the keystores must be initialized. To initialize the keystores, the security officer (SO) user needs to perform a `C_InitToken` operation.
+{: important}
+
+Once the keystores have been initialized, you can then use the PKCS #11 library to call the standard PKCS #11 functions to generate, store, and list keys. For the detailed list of supported PKCS #11 functions, see [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref).
 
 Depending on features and security requirements of your application, you might need to pass different service ID API keys that you created in the [previous prerequisites step](#prerequisite-pkcs-api) in order to allow your applications to perform the corresponding operations. For example, if your application needs to delete a keystore, you should provide the SO user API key, while if your application needs to access the private keystore to store new keys, you should provide the normal user API key. For more information about user access management for the PKCS #11 API, see [Best practices for setting up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access).
 
