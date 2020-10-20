@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-10"
+lastupdated: "2020-10-20"
 
 keywords: pkcs11 access, pkcs 11 authentication, set up PKCS 11 API, best practice for setting up pkcs11 users
 
@@ -30,26 +30,23 @@ To align with industry-standard security requirements and [Permitted object acce
 
 The PKCS #11 standard defines two user types: security officer and normal user. If a user does not perform a `C_Login` function call, the user is considered as an anonymous user.
 
-There are two types of keystores that are defined in the PKCS #11 library that users can access:
+<!-- There are two types of keystores that are defined in the PKCS #11 library that users can access:
 
 * **Public keystore**: Stores keys that are less sensitive and that are to be accessed by any user types.
 * **Private keystore**: Stores keys that encrypt sensitive data and that are to be accessed by normal users only.
 
-For more information about keystores, see the keystore introduction in [Introducing PKCS #11](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro).
+For more information about keystores, see the keystore introduction in [Introducing PKCS #11](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro).  -->
 
 In the {{site.data.keyword.hscrypto}} PKCS #11 library configuration file `grep11client.yaml`, the following user types are predefined, with each assigned a [service ID API key](/docs/account?topic=account-serviceidapikeys):
 
-* **Security officer (SO)**: Manages both public and private keystores, and keys in the public keystore.
+* **Security officer (SO)**: <!-- Manages both public and private keystores, and keys in the public keystore. -->
+  An SO user can be a person who owns the SO API key in an enterprise. This person is able to initialize the PKCS #11 token and delete all key objects in<!--public and private--> keystores. This person can be the one who sets up the {{site.data.keyword.hscrypto}} instance and the {{site.data.keyword.iamshort}} (IAM) roles. The PKCS #11 application can perform administrative Cryptoki function calls, such as `C_InitToken`, after it logs in as an SO user type.
 
-  An SO user can be a person who owns the SO API key in an enterprise. This person is able to initialize the PKCS #11 token and delete all key objects in public and private keystores. This person can be the one who sets up the {{site.data.keyword.hscrypto}} instance and the {{site.data.keyword.iamshort}} (IAM) roles. The PKCS #11 application can perform administrative Cryptoki function calls, such as `C_InitToken`, after it logs in as an SO user type.
+* **Normal user**: <!--Manages keys in both public and private keystores. Only normal users have access to keys in the private keystore. -->
+  Normal users are the ones who have access to the normal user API key. The normal user API key should be distributed only to a limited group of people, who need access to the<!--private token--> keystore where more sensitive keys are stored, such as keys for signing and encrypting contracts. In this case, the PKCS #11 application calls the `C_Login` function using the normal user API key as the PIN and becomes a normal user to access the<!-- private token--> keystore.
 
-* **Normal user**: Manages keys in both public and private keystores. Only normal users have access to keys in the private keystore.
-
-  Normal users are the ones who have access to the normal user API key. The normal user API key should be distributed only to a limited group of people, who need access to the private token keystore where more sensitive keys are stored, such as keys for signing and encrypting contracts. In this case, the PKCS #11 application calls the `C_Login` function using the normal user API key as the PIN and becomes a normal user to access the private token keystore.
-
-* **Anonymous user**: Manages keys in the public keystore only.
-
-  The anonymous user API key can be distributed to anyone in the enterprise so that anonymous users can access the public keystore to perform daily work, such as signing a document. The confidentiality level of the keys in the public keystore is lower than keys in the private keystore. The API key is configured in the PKCS #11 library configuration file `grep11client.yaml` and the anonymous user does not need to call the `C_Login` function.
+* **Anonymous user**: <!-- Manages keys in the public keystore only. -->
+  The anonymous user API key can be distributed to anyone in the enterprise so that anonymous users can access the <!--public-->keystore to perform daily work, such as signing a document. <!--The confidentiality level of the keys in the public keystore is lower than keys in the private keystore. --> The API key is configured in the PKCS #11 library configuration file `grep11client.yaml` and the anonymous user does not need to call the `C_Login` function.
 
 A PKCS #11 application works as only one of the three user types at any time, no matter how many sessions are opened. Each user type needs an API key for authentication. To create the API keys, you need to first create two custom IAM roles, and then create service IDs for the three user types, and then map the custom IAM roles to the service IDs.
 
@@ -188,22 +185,11 @@ For more information about creating services IDs, see [Creating and working with
 
 You can grant access to service IDs within a {{site.data.keyword.hscrypto}} service instance by using the {{site.data.keyword.cloud_notm}} console.
 
-The following table shows the custom role or roles that each type of user should be assigned.
-
-| Keystore type | SO user | Normal user | Anonymous user |
-|-----|-----|-----|-----|
-| Public keystore | Keystore operator, Key operator | Key operator |Key operator|
-| Private keystore | Keystore operator | Key operator |N/A |
-{: caption="Table 1. Lists PKCS #11 keystore user types and corresponding custom roles" caption-side="bottom"}
-
 ### 1. Assign the custom roles to the SO user service ID
 
 To assign the custom roles that are defined in [Step 1](#step1-create-custom-roles) to the SO user service ID that are created in the previous step, follow these steps:
 
-#### Assign access to the public keystore
-{: #assign-access-public-keystore-so-user}
-
-To assign access to the public keystore for the SO user, follow these steps:
+To assign access to the keystores for the SO user, follow these steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
 2. Hover your mouse over the `SO user` service ID, and click the overflow (...) icon located to the right of the `SO user` row to open a list of options.
@@ -221,33 +207,11 @@ To assign access to the public keystore for the SO user, follow these steps:
   * `Key operator`
 8. Click **Add**, and then click **Assign** after confirmation.
 
-#### Assign access to the private keystore
-{: #assign-access-private-keystore-so-user}
-
-To assign access to the private keystore for the SO user, follow these steps:
-
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
-2. Hover your mouse over the `SO user` service ID, and click the overflow (...) icon located to the right of the `SO user` row to open a list of options.
-3. From the options menu, click **Assign access**.
-4. Click **Assign service ID additional access**, and then click the **IAM services** button.
-5. Click **No service access** under **What type of access do you want to assign?** and select **Hyper Protect Crypto Services**.
-6. Under **Service Instance ID**, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
-<!--1. Enter the identifying information about the key.
-   * For **Resource type**, enter `keystore`.
-   * For **Resource ID**, enter a Universally Unique Identifier (UUID) that uniquely identifies the keystore. For example, `11000000-0000-0000-0200-000000000111`. For more information about UUID, see [Generate a UUID compliant with RFC 4122](https://www.cryptosys.net/pki/uuid-rfc4122.html){: external}.
-     The UUID is to be used in the `grep11client.yaml` file when defining the PKCS #11 user type in the `tokenspaceID` field.
-     {: tip} -->
-7. Under **Custom access**, check the box for `Keystore operator`.
-8. Click **Add**, and then click **Assign** after confirmation.
-
 ### 2. Assign the custom roles to the normal user service ID
 
 To assign the custom roles that are defined in [Step 1](#step1-create-custom-roles) to the normal user service ID that are created in the previous step, follow these steps:
 
-#### Assign access to the public keystore
-{: #assign-access-public-keystore-normal-user}
-
-To assign access to the public keystore for the normal user, follow these steps:
+To assign access to the keystores for the normal user, follow these steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
 2. Hover your mouse over the `Normal user` service ID, and click the overflow (...) icon located to the right of the `Normal user` row to open a list of options.
@@ -263,33 +227,11 @@ To assign access to the public keystore for the normal user, follow these steps:
 7. Under **Custom access**, check the box for `Key operator`.
 8. Click **Add**, and then click **Assign** after confirmation.
 
-#### Assign access to the private keystore
-{: #assign-access-private-keystore-normal-user}
-
-To assign access to the private keystore for the normal user, follow these steps:
-
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
-2. Hover your mouse over the `Normal user` service ID, and click the overflow (...) icon located to the right of the `Normal user` row to open a list of options.
-3. From the options menu, click **Assign access**.
-4. Click **Assign service ID additional access**, and then click the **IAM services** button.
-5. Click **No service access** under **What type of access do you want to assign?** and select **Hyper Protect Crypto Services**.
-6. Under **Service Instance ID**, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
-<!--1. Enter the identifying information about the key.
-   * For **Resource type**, enter `keystore`.
-   * For **Resource ID**, enter a Universally Unique Identifier (UUID) that uniquely identifies the keystore. For example, `11000000-0000-0000-0200-000000000111`. For more information about UUID, see [Generate a UUID compliant with RFC 4122](https://www.cryptosys.net/pki/uuid-rfc4122.html){: external}.
-     The UUID is to be used in the `grep11client.yaml` file when defining the PKCS #11 user type in the `tokenspaceID` field.
-     {: tip} -->
-7. Under **Custom access**, check the box for `Key operator`.
-8. Click **Add**, and then click **Assign** after confirmation.
-
 ### 3. Assign the custom roles to the anonymous user service ID
 
 To assign the custom roles that are defined in [Step 1](#step1-create-custom-roles) to the anonymous user service ID that are created in the previous step, follow these steps:
 
-#### Assign access to the public keystore
-{: #assign-access-public-keystore-anonymous-user}
-
-To assign access to the public keystore for the anonymous user, follow these steps:
+To assign access to the keystore for the anonymous user, follow these steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
 2. Hover your mouse over the `Anonymous user` service ID, and click the overflow (...) icon located to the right of the `Anonymous user` row to open a list of options.
