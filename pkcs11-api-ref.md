@@ -51,7 +51,7 @@ The PKCS #11 API of {{site.data.keyword.hscrypto}} follows the [standard method 
 
 The PKCS #11 standard defines an API called *Cryptoki*. The following table lists the PKCS #11 *Cryptoki* API functions and descriptions.
 
-Not all PKCS #11 functions are currently implemented by {{site.data.keyword.hscrypto}}. Functions that are implemented are marked with `Yes` in the table. For other limitations of using the PKCS #11 API, see [known issues and limitations - Using the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-known-issues#pkcs-known-issues).
+Not all PKCS #11 functions are currently implemented by {{site.data.keyword.hscrypto}}. Functions that are implemented are marked with `Yes` in the table.
 {: note}
 
 |Category   |PKCS #11 function       |Implemented? (Yes/No)        | Description     |

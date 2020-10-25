@@ -155,7 +155,7 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
 
 1. Follow the [Best practices for setting up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access) to create different service ID API keys for the various PKCS #11 user types.
 2. [Download the latest PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} and move it into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64` or `/usr/lib`.
-3. Create a configuration file named `grep11client.yaml` based on the [template](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step2-setup-configuration-file) and move the configuration file into the same folder as the PKCS #11 library. Optionally, the PKCS #11 library can be placed in the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not already exist.
+3. Create a configuration file named `grep11client.yaml` based on the [template](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file) and move the configuration file into the same folder as the PKCS #11 library. Optionally, the PKCS #11 library can be placed in the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not already exist.
 4. Depending on features and security requirements of your application, pass different service ID API keys that you previously create to allow your applications to perform the corresponding cryptographic operations.
 
 For detailed instructions, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
@@ -365,7 +365,7 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
 
 1. Follow the [Best practices for setting up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access) to create different service ID API keys for the various PKCS #11 user types.
 2. [Download the latest PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} and move it into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64` or `/usr/lib`.
-3. Create a configuration file named `grep11client.yaml` based on the [template](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step2-setup-configuration-file) and move the configuration file into the same folder as the PKCS #11 library. Optionally, the PKCS #11 library can be placed in the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not already exist.
+3. Create a configuration file named `grep11client.yaml` based on the [template](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file) and move the configuration file into the same folder as the PKCS #11 library. Optionally, the PKCS #11 library can be placed in the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not already exist.
 4. Depending on features and security requirements of your application, pass different service ID API keys that you previously create to allow your applications to perform the corresponding cryptographic operations.
 
 For detailed instructions, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).

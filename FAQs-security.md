@@ -59,7 +59,7 @@ This design ensures that no one can get full access of the master key, even the 
 The Federal Information Processing Standard (FIPS) Publication 140-2 is a US government computer security standard that is used to approve cryptographic modules.
 
 - [Security Requirements for Cryptographic Modules](https://csrc.nist.gov/publications/detail/fips/140/2/final){: external}.
-- [Cryptographic Module Validation Program](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Standards){: external}.
+- [Cryptographic Module Validation Program](https://csrc.nist.gov/Projects/cryptographic-module-validation-program){: external}.
 - FIPS 140-2 defines four levels of security, including FIPS 140-2 Level 1, 2, 3, and Level 4.
 
 ## What is the difference between FIPS 140-2 Level 1, 2, 3, and Level 4?
@@ -96,7 +96,7 @@ Enterprise PKCS #11 (EP11) is aligned with PKCS #11 in terms of concepts and fun
 {: #faq-EP11-mechanisms}
 {: faq}
 
-Mechanisms can vary depending on the level of firmware in the IBM 4768 crypto card (also referred to as Crypto Express 6S). For mechanisms that are currently supported, see [Supported mechanisms](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#mechanism_list).
+Mechanisms can vary depending on the level of firmware in the IBM 4768 crypto card (also referred to as Crypto Express 6S). For mechanisms that are currently supported, see [Supported mechanisms](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-mechanism-list).
 
 For more information on the EP11 mechanisms, see the [Enterprise PKCS #11 (EP11) Library structure guide](https://www.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=15022415USEN&dd=yes&){: external}.
 
