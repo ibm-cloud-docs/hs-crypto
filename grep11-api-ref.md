@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-27"
+lastupdated: "2020-10-26"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -117,12 +117,12 @@ PKCS #11 functions that are marked with an asterisk (*) in the table are impleme
 |C_Encrypt*  |m_Encrypt|Encrypt|Encrypts single-part data.|
 |C_EncryptUpdate*|m_EncryptUpdate|EncryptUpdate|Continues a multiple-part encryption operation.|
 |C_EncryptFinal* |m_EncryptFinal|EncryptFinal|Finishes a multiple-part encryption operation.|
-|N/A            |m_EncryptSingle|EncryptSingle|{{site.data.keyword.IBM_notm}} extension, non-standard variant of Encrypt. Processes data in one pass, with one call. Does not return any state to host other than encrypted data.|
+|N/A            |m_EncryptSingle|EncryptSingle|{{site.data.keyword.IBM_notm}} extension, non-standard variant of `Encrypt`. Processes data in one pass, with one call. Does not return any state to host other than encrypted data.|
 |C_DecryptInit*  |m_DecryptInit|DecryptInit|Initializes a decryption operation.|
 |C_Decrypt*  |m_Decrypt|Decrypt|Decrypts single-part encrypted data.|
 |C_DecryptUpdate*|m_DecryptUpdate|DecryptUpdate|Continues a multiple-part decryption operation.|
 |C_DecryptFinal*|m_DecryptFinal|DecryptFinal|Finishes a multiple-part decryption operation.|
-|N/A         |m_DecryptSingle |DecryptSingle|{{site.data.keyword.IBM_notm}} extension, non-standard variant of Decrypt. Processes data in one pass, with one call. Does not return any state to host other than decrypted data.|
+|N/A         |m_DecryptSingle |DecryptSingle|{{site.data.keyword.IBM_notm}} extension, non-standard variant of `Decrypt`. Processes data in one pass, with one call. Does not return any state to host other than decrypted data.|
 |C_DigestInit*   |m_DigestInit|DigestInit|Initializes a message-digesting operation.|
 |C_Digest*      |m_Digest|Digest|Digests single-part data. The length of the input data should not be zero and the pointer that points to the input data location should not be NULL. |
 |C_DigestUpdate* |m_DigestUpdate|DigestUpdate|Continues a multiple-part digesting operation. The length of the input data should not be zero and the pointer that points to the input data location should not be NULL. |
@@ -151,6 +151,7 @@ PKCS #11 functions that are marked with an asterisk (*) in the table are impleme
 |C_GenerateKeyPair*|m_GenerateKeyPair|GenerateKeyPair|Generates a public-key/private-key pair.|
 |C_WrapKey*      |m_WrapKey|WrapKey|Wraps (encrypts) a key.|
 |C_UnwrapKey*    |m_UnwrapKey|UnwrapKey|Unwraps (decrypts) a key.|
+|N/A   | N/A  | RewrapKeyBlob  | Transfers ownership of a BLOB that is controlled by the current master key to the new master key when the new master key is committed.  |
 |C_DeriveKey*    |m_DeriveKey|DeriveKey|Derives a key from a base key.|
 |C_SeedRandom   |N/A|N/A|Adds seed material to the random number generator.|
 |C_GenerateRandom*|m_GenerateRandom|GenerateRandom|Generates random data. The length of the random data should not be zero and the pointer that points to the random data location should not be NULL.|
@@ -166,10 +167,10 @@ A mechanism is referred to as a process to implement a cryptographic operation. 
 | Function group | Supported mechanisms |
 |--------------|-----------------------|
 |Encrypt and decrypt | CKM_RSA_PKCS[^services-1], CKM_RSA_PKCS_OAEP[^services-2], CKM_AES_ECB, CKM_AES_CBC, CKM_AES_CBC_PAD, CKM_DES3_ECB, CKM_DES3_CBC, CKM_DES3_CBC_PAD|
-|Sign and verify  | CKM_RSA_PKCS[^services-3], CKM_RSA_PKCS_PSS[^services-4], CKM_RSA_X9_31[^services-5], CKM_SHA1_RSA_PKCS, CKM_SHA256_RSA_PKCS, CKM_SHA224_RSA_PKCS, CKM_SHA384_RSA_PKCS, CKM_SHA512_RSA_PKCS, CKM_SHA1_RSA_PKCS_PSS, CKM_SHA224_RSA_PKCS_PSS, CKM_SHA256_RSA_PKCS_PSS, CKM_SHA384_RSA_PKCS_PSS, CKM_SHA512_RSA_PKCS_PSS, CKM_SHA1_RSA_X9_31, CKM_DSA[^services-6], CKM_DSA_SHA1, CKM_ECDSA[^services-7], CKM_ECDSA_SHA1, CKM_ECDSA_SHA224, CKM_ECDSA_SHA256, CKM_ECDSA_SHA384, CKM_ECDSA_SHA512, CKM_SHA1_HMAC, CKM_SHA256_HMAC, CKM_SHA384_HMAC, CKM_SHA512_HMAC, CKM_SHA512_224_HMAC, CKM_SHA512_256_HMAC|
+|Sign and verify  | CKM_RSA_PKCS[^services-3], CKM_RSA_PKCS_PSS[^services-4], CKM_RSA_X9_31[^services-5], CKM_SHA1_RSA_PKCS, CKM_SHA256_RSA_PKCS, CKM_SHA224_RSA_PKCS, CKM_SHA384_RSA_PKCS, CKM_SHA512_RSA_PKCS, CKM_SHA1_RSA_PKCS_PSS, CKM_SHA224_RSA_PKCS_PSS, CKM_SHA256_RSA_PKCS_PSS, CKM_SHA384_RSA_PKCS_PSS, CKM_SHA512_RSA_PKCS_PSS, CKM_SHA1_RSA_X9_31, CKM_DSA[^services-6], CKM_DSA_SHA1, CKM_ECDSA[^services-7], CKM_ECDSA_SHA1, CKM_ECDSA_SHA224, CKM_ECDSA_SHA256, CKM_ECDSA_SHA384, CKM_ECDSA_SHA512, CKM_SHA1_HMAC, CKM_SHA256_HMAC, CKM_SHA384_HMAC, CKM_SHA512_HMAC, CKM_SHA512_224_HMAC, CKM_SHA512_256_HMAC, CKM_IBM_ED25519_SHA512, CKM_IBM_ED448_SHA3|
 |Sign recover and verify recover    | CKM_RSA_PKCS, CKM_RSA_PKCS_OAEP|
 |Digest |CKM_SHA_1, CKM_SHA224, CKM_SHA256, CKM_SHA384, CKM_SHA512, CKM_SHA512_224, CKM_SHA512_256|
-|Generate key or generate key pair 	 |CKM_RSA_PKCS_KEY_PAIR_GEN, CKM_RSA_X9_31_KEY_PAIR_GEN, CKM_DSA_KEY_PAIR_GEN, CKM_DSA_PARAMETER_GEN, CKM_EC_KEY_PAIR_GEN (CKM_ECDSA_KEY_PAIR_GEN), CKM_DH_PKCS_KEY_PAIR_GEN, CKM_DH_PKCS_PARAMETER_GEN, CKM_GENERIC_SECRET_KEY_GEN, CKM_AES_KEY_GEN, CKM_DES2_KEY_GEN, CKM_DES3_KEY_GEN, CKM_PBE_SHA1_DES3_EDE_CBC|
+|Generate key or generate key pair 	 |CKM_RSA_PKCS_KEY_PAIR_GEN, CKM_RSA_X9_31_KEY_PAIR_GEN, CKM_DSA_KEY_PAIR_GEN, CKM_DSA_PARAMETER_GEN, CKM_EC_KEY_PAIR_GEN (CKM_ECDSA_KEY_PAIR_GEN), CKM_DH_PKCS_KEY_PAIR_GEN, CKM_DH_PKCS_PARAMETER_GEN, CKM_GENERIC_SECRET_KEY_GEN, CKM_AES_KEY_GEN, CKM_DES2_KEY_GEN, CKM_DES3_KEY_GEN|
 |Wrap and unwrap | CKM_RSA_PKCS, CKM_RSA_PKCS_OAEP, CKM_AES_ECB, CKM_AES_CBC, CKM_AES_CBC_PAD, CKM_DES3_ECB, CKM_DES3_CBC, CKM_DES3_CBC_PAD|
 |Derive | CKM_ECDH1_DERIVE, CKM_DH_PKCS_DERIVE, CKM_DES3_ECB_ENCRYPT_DATA, CKM_SHA1_KEY_DERIVATION, CKM_SHA224_KEY_DERIVATION, CKM_SHA256_KEY_DERIVATION, CKM_SHA384_KEY_DERIVATION, CKM_SHA512_KEY_DERIVATION, CKM_IBM_BTC_DERIVE|
 {: caption="Table 2. Describes the supported GREP11 mechanisms" caption-side="bottom"}
@@ -195,22 +196,22 @@ GREP11 attributes define object characteristics that setup how an object can be 
 
 |Attribute| Supported key types |
 |--------------|-----------------------|
-| CKA_TRUSTED                         |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys        |
-| CKA_KEY_TYPE                       | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys          |
-| CKA_ENCRYPT                         |   EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys      |
-| CKA_DECRYPT                         |EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, PBE keys, Generic keys          |
-| CKA_WRAP                            |     EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys      |
-| CKA_UNWRAP                          | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, PBE keys, Generic keys         |
-| CKA_SIGN                            |EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, PBE keys, Generic keys         |
-| CKA_VERIFY                          |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys |
-| CKA_DERIVE                          | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys          |
+| CKA_TRUSTED                         |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys        |
+| CKA_KEY_TYPE                       | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_ENCRYPT                         |   EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys      |
+| CKA_DECRYPT                         |EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
+| CKA_WRAP                            |     EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys      |
+| CKA_UNWRAP                          | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
+| CKA_SIGN                            |EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
+| CKA_VERIFY                          |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys |
+| CKA_DERIVE                          | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_MODULUS_BITS                   |        RSA public keys    |
 | CKA_PUBLIC_EXPONENT                |     RSA private keys      |
 | CKA_VALUE_LEN                      |         AES keys  |
-| CKA_EXTRACTABLE                     | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, PBE keys, Generic keys          |
-| CKA_LOCAL                           | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys          |
+| CKA_EXTRACTABLE                     | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
+| CKA_LOCAL                           | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_EC_PARAMS (CKA_ECDSA_PARAMS) | EC private keys, EC public keys        |
-| CKA_WRAP_WITH_TRUSTED             | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, PBE keys, Generic keys          |
+| CKA_WRAP_WITH_TRUSTED             | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
 {: caption="Table 3. Describes the supported attributes" caption-side="bottom"}
 
 ## Performing cryptographic operations with GREP11 functions
@@ -340,7 +341,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismList)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/mechanism-list.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.GetMechanismList({}, (err, response) => {
@@ -457,7 +458,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismInfo)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/mechanism-info.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.GetMechanismInfo({
@@ -611,7 +612,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateKey)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/encrypt-and-decrypt.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   let keyLen = 128;
@@ -793,7 +794,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateKeyPair)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/sign-and-verify-rsa.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   const publicKeyTemplate = new util.AttributeMap(
@@ -959,7 +960,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateKeyPair)(
     ```
     {: codeblock}
 
-  - [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/derive-keys.js){: external}
+  - JavaScript code snippet
 
     ```JavaScript
     const deriveKeyTemplate = new util.AttributeMap(
@@ -1117,7 +1118,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_WrapKey)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/wrap-and-unwrap-key.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.WrapKey({
@@ -1276,7 +1277,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_UnwrapKey)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/wrap-and-unwrap-key.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   const aesUnwrapKeyTemplate = new util.AttributeMap(
@@ -1747,7 +1748,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateRandom)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/encrypt-and-decrypt.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.GenerateRandom({
@@ -1878,7 +1879,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptInit)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/encrypt-and-decrypt.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.EncryptInit({
@@ -2141,7 +2142,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptUpdate)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/encrypt-and-decrypt.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.EncryptUpdate({
@@ -2264,7 +2265,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptFinal)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/encrypt-and-decrypt.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.EncryptFinal({
@@ -2337,7 +2338,7 @@ CK_RV m_EncryptSingle (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_EncryptSingle` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Encrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #EncryptSingle_EP11}
@@ -2360,7 +2361,7 @@ CK_RV m_EncryptSingle (
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/derive-keys.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.EncryptSingle({
@@ -2375,7 +2376,6 @@ CK_RV m_EncryptSingle (
   });
   ```
   {: codeblock}
-
 
 ### DecryptInit
 {: #grep11-DecryptInit}
@@ -2487,7 +2487,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptInit)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/encrypt-and-decrypt.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.DecryptInit({
@@ -2752,7 +2752,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptUpdate)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/encrypt-and-decrypt.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.DecryptUpdate({
@@ -2875,7 +2875,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptFinal)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/encrypt-and-decrypt.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.DecryptFinal({
@@ -2972,7 +2972,7 @@ CK_RV m_DecryptSingle (
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/derive-keys.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.DecryptSingle({
@@ -3102,7 +3102,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_SignInit)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/sign-and-verify-rsa.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.SignInit({
@@ -3232,7 +3232,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_Sign)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/sign-and-verify-rsa.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.Sign({
@@ -3573,7 +3573,7 @@ CK_RV m_SignSingle (
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/fabric/CryptoSuite_EP11.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.SignSingle({
@@ -3703,7 +3703,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_VerifyInit)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/sign-and-verify-rsa.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.VerifyInit({
@@ -3837,7 +3837,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_Verify)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/sign-and-verify-rsa.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.Verify({
@@ -4310,7 +4310,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestInit)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/digest-multiple.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.DigestInit({
@@ -4444,7 +4444,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_Digest)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/digest-single.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.Digest({
@@ -4571,7 +4571,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestUpdate)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/digest-multiple.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.DigestUpdate({
@@ -4694,7 +4694,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestFinal)(
   ```
   {: codeblock}
 
-- [JavaScript code snippet](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/js/examples/digest-multiple.js){: external}
+- JavaScript code snippet
 
   ```JavaScript
   client.DigestFinal({

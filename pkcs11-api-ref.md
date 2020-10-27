@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-27"
+lastupdated: "2020-10-26"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -37,7 +37,9 @@ For more information about PKCS #11,  see [Introducing PKCS #11](/docs/hs-crypto
 ## Installing and configuring PKCS #11 library
 {: #setup-pkcs11-library}
 
-To perform a PKCS #11 API call, you need to first [install the PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external}, and then [set up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access).
+To perform a PKCS #11 API call, you need to first [install the PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external}, and then [set up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access). 
+
+The library file names use the naming convention: pkcs11-grep11-<**platform**>.so.<**version**>. The platform is either *amd64* or *s390x* and the version is the standard *major.minor.build* syntax. After downloading the library, move the library into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64` or `/usr/lib`.
 
 To access the PKCS #11 API, you then need to configure the PKCS #11 library by setting the API endpoint, service instance ID, and API key in the `grep11client.yaml` configuration file, and then initialize the library. For detailed instructions, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
 
@@ -195,16 +197,15 @@ A mechanism is referred to as a process to implement a cryptographic operation. 
 | CKM_SHA512_224_HMAC | N/A | Yes  | N/A | N/A | N/A | N/A | N/A |
 | CKM_SHA512_256 | N/A | N/A | N/A | Yes | N/A | N/A | N/A |
 | CKM_SHA512_256_HMAC | N/A | Yes  | N/A | N/A | N/A | N/A | N/A |
-| CKM_PBE_SHA1_DES3_EDE_CBC | N/A | N/A | N/A | N/A | Yes | N/A | N/A |
 -->
 
 | Function group | Supported mechanisms |
 |--------------|-----------------------|
 |Encrypt and decrypt | CKM_RSA_PKCS[^services-1], CKM_RSA_PKCS_OAEP[^services-2], CKM_AES_ECB, CKM_AES_CBC, CKM_AES_CBC_PAD, CKM_DES3_ECB, CKM_DES3_CBC, CKM_DES3_CBC_PAD|
-|Sign and verify  | CKM_RSA_PKCS[^services-3], CKM_RSA_PKCS_PSS[^services-4], CKM_RSA_X9_31[^services-5], CKM_SHA1_RSA_PKCS, CKM_SHA256_RSA_PKCS, CKM_SHA224_RSA_PKCS, CKM_SHA384_RSA_PKCS, CKM_SHA512_RSA_PKCS, CKM_SHA1_RSA_PKCS_PSS, CKM_SHA224_RSA_PKCS_PSS, CKM_SHA256_RSA_PKCS_PSS, CKM_SHA384_RSA_PKCS_PSS, CKM_SHA512_RSA_PKCS_PSS, CKM_SHA1_RSA_X9_31, CKM_DSA[^services-6], CKM_DSA_SHA1, CKM_ECDSA[^services-7], CKM_ECDSA_SHA1, CKM_ECDSA_SHA224, CKM_ECDSA_SHA256, CKM_ECDSA_SHA384, CKM_ECDSA_SHA512, CKM_SHA1_HMAC, CKM_SHA256_HMAC, CKM_SHA384_HMAC, CKM_SHA512_HMAC, CKM_SHA512_224_HMAC, CKM_SHA512_256_HMAC|
+|Sign and verify  | CKM_RSA_PKCS[^services-3], CKM_RSA_PKCS_PSS[^services-4], CKM_RSA_X9_31[^services-5], CKM_SHA1_RSA_PKCS, CKM_SHA256_RSA_PKCS, CKM_SHA224_RSA_PKCS, CKM_SHA384_RSA_PKCS, CKM_SHA512_RSA_PKCS, CKM_SHA1_RSA_PKCS_PSS, CKM_SHA224_RSA_PKCS_PSS, CKM_SHA256_RSA_PKCS_PSS, CKM_SHA384_RSA_PKCS_PSS, CKM_SHA512_RSA_PKCS_PSS, CKM_SHA1_RSA_X9_31, CKM_DSA[^services-6], CKM_DSA_SHA1, CKM_ECDSA[^services-7], CKM_ECDSA_SHA1, CKM_ECDSA_SHA224, CKM_ECDSA_SHA256, CKM_ECDSA_SHA384, CKM_ECDSA_SHA512, CKM_SHA1_HMAC, CKM_SHA256_HMAC, CKM_SHA384_HMAC, CKM_SHA512_HMAC, CKM_SHA512_224_HMAC, CKM_SHA512_256_HMAC, CKM_IBM_ED25519_SHA512, CKM_IBM_ED448_SHA3|
 |Sign recover and verify recover    | CKM_RSA_PKCS, CKM_RSA_PKCS_OAEP|
 |Digest |CKM_SHA_1, CKM_SHA224, CKM_SHA256, CKM_SHA384, CKM_SHA512, CKM_SHA512_224, CKM_SHA512_256|
-|Generate key or generate key pair 	 |CKM_RSA_PKCS_KEY_PAIR_GEN, CKM_RSA_X9_31_KEY_PAIR_GEN, CKM_DSA_KEY_PAIR_GEN, CKM_DSA_PARAMETER_GEN, CKM_EC_KEY_PAIR_GEN (CKM_ECDSA_KEY_PAIR_GEN), CKM_DH_PKCS_KEY_PAIR_GEN, CKM_DH_PKCS_PARAMETER_GEN, CKM_GENERIC_SECRET_KEY_GEN, CKM_AES_KEY_GEN, CKM_DES2_KEY_GEN, CKM_DES3_KEY_GEN, CKM_PBE_SHA1_DES3_EDE_CBC|
+|Generate key or generate key pair 	 |CKM_RSA_PKCS_KEY_PAIR_GEN, CKM_RSA_X9_31_KEY_PAIR_GEN, CKM_DSA_KEY_PAIR_GEN, CKM_DSA_PARAMETER_GEN, CKM_EC_KEY_PAIR_GEN (CKM_ECDSA_KEY_PAIR_GEN), CKM_DH_PKCS_KEY_PAIR_GEN, CKM_DH_PKCS_PARAMETER_GEN, CKM_GENERIC_SECRET_KEY_GEN, CKM_AES_KEY_GEN, CKM_DES2_KEY_GEN, CKM_DES3_KEY_GEN|
 |Wrap and unwrap | CKM_RSA_PKCS, CKM_RSA_PKCS_OAEP, CKM_AES_ECB, CKM_AES_CBC, CKM_AES_CBC_PAD, CKM_DES3_ECB, CKM_DES3_CBC, CKM_DES3_CBC_PAD|
 |Derive | CKM_ECDH1_DERIVE, CKM_DH_PKCS_DERIVE, CKM_DES3_ECB_ENCRYPT_DATA, CKM_SHA1_KEY_DERIVATION, CKM_SHA224_KEY_DERIVATION, CKM_SHA256_KEY_DERIVATION, CKM_SHA384_KEY_DERIVATION, CKM_SHA512_KEY_DERIVATION, CKM_IBM_BTC_DERIVE|
 {: caption="Table 2. Describes the supported PKCS #11 mechanisms" caption-side="bottom"}
@@ -228,66 +229,66 @@ A mechanism is referred to as a process to implement a cryptographic operation. 
 
 PKCS #11 attributes define object characteristics that setup how an object can be used and accessed. The following table shows the supported attributes and their relationship to the various supported key types.
 <!--
-| Attribute Name                       | EC private keys | EC public keys | RSA private keys | RSA public keys | DH private keys | DH public keys | DSA private keys | DSA public keys | AES keys| DES keys | PBE keys | Generic keys |
+| Attribute Name                       | EC private keys | EC public keys | RSA private keys | RSA public keys | DH private keys | DH public keys | DSA private keys | DSA public keys | AES keys| DES keys | Generic keys |
 | ------------------------------------ | ---------- | --------- | ----------- | ---------- | ---------- | --------- | ----------- | ---------- | --- | --- | --- | ------- |
-| CKA_CLASS                           | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes   | Yes       |
-| CKA_TOKEN                           | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes   | Yes       |
-| CKA_PRIVATE                         | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes   | Yes       |
-| CKA_LABEL                           | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes   | Yes       |
-| CKA_TRUSTED                         |    N/A        | Yes         |    N/A         | Yes          |    N/A        | Yes         |    N/A         | Yes          | Yes   | Yes   | Yes   | Yes       |
-| CKA_KEY_TYPE                       | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes   | Yes       |
-| CKA_SUBJECT                         | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          |   N/A  |  N/A   |   N/A  |     N/A    |
-| CKA_ID                              | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes   | Yes       |
-| CKA_SENSITIVE                       | Yes          |       N/A    | Yes           |       N/A     | Yes          |    N/A       | Yes           |     N/A       | Yes   | Yes   | Yes   | Yes       |
-| CKA_ENCRYPT                         |    N/A        | Yes         |      N/A       | Yes          |      N/A      | Yes         |        N/A     | Yes          | Yes   | Yes   | Yes   | Yes       |
-| CKA_DECRYPT                         | Yes          |     N/A      | Yes           |     N/A       | Yes          |      N/A     | Yes           |       N/A     | Yes   | Yes   | Yes   | Yes       |
-| CKA_WRAP                            |      N/A      | Yes         |      N/A       | Yes          |      N/A      | Yes         |     N/A        | Yes          | Yes   | Yes   | Yes   | Yes       |
-| CKA_UNWRAP                          | Yes          |      N/A     | Yes           |      N/A      | Yes          |    N/A       | Yes           |     N/A       | Yes   | Yes   | Yes   | Yes       |
-| CKA_SIGN                            | Yes          |      N/A     | Yes           |      N/A      | Yes          |     N/A      | Yes           |      N/A      | Yes   | Yes   | Yes   | Yes       |
-| CKA_VERIFY                          |     N/A       | Yes         |     N/A        | Yes          |      N/A      | Yes         |     N/A        | Yes          | Yes   | Yes   | Yes   | Yes       |
-| CKA_DERIVE                          | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes   | Yes       |
-| CKA_START_DATE                     | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes   | Yes       |
-| CKA_END_DATE                       | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes   | Yes       |
-| CKA_MODULUS                         |        N/A    |     N/A      | Yes           |      N/A      |     N/A       |     N/A      |      N/A       |     N/A       |  N/A   |   N/A  |  N/A   |    N/A     |
-| CKA_MODULUS_BITS                   |       N/A     |       N/A    |      N/A       |      Yes      |      N/A      |      N/A     |     N/A        |     N/A       |  N/A   |   N/A  |  N/A   |       N/A  |
-| CKA_PUBLIC_EXPONENT                |     N/A       |     N/A      | Yes           |       N/A     |       N/A     |     N/A      |      N/A       |     N/A       |   N/A  |   N/A  |  N/A   |  N/A       |
-| CKA_VALUE_LEN                      |        N/A    |       N/A    |     N/A        |       N/A     |        N/A    |    N/A       |     N/A        |     N/A       | Yes   |    N/A |   N/A  |    N/A     |
-| CKA_EXTRACTABLE                     | Yes          |       N/A    | Yes           |     N/A       | Yes          |      N/A     | Yes           |       N/A     | Yes   | Yes   | Yes   | Yes       |
-| CKA_LOCAL                           | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes   | Yes       |
-| CKA_EC_PARAMS (CKA_ECDSA_PARAMS) | Yes          | Yes         |      N/A       |        N/A    |         N/A   |      N/A     |      N/A       |    N/A        |   N/A  |   N/A  |   N/A  |   N/A      |
-| CKA_EC_POINT                       |       N/A     | Yes         |      N/A       |     N/A       |       N/A     |    N/A       |      N/A       |    N/A        |  N/A   |  N/A   |   N/A  |      N/A   |
-| CKA_WRAP_WITH_TRUSTED             | Yes          |       N/A    | Yes           |     N/A       | Yes          |     N/A      | Yes           | N/A      | Yes   | Yes   | Yes   | Yes       |
+| CKA_CLASS                           | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_TOKEN                           | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_PRIVATE                         | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_LABEL                           | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_TRUSTED                         |    N/A        | Yes         |    N/A         | Yes          |    N/A        | Yes         |    N/A         | Yes          | Yes   | Yes   | Yes       |
+| CKA_KEY_TYPE                       | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_SUBJECT                         | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          |   N/A  |  N/A   |   N/A  |
+| CKA_ID                              | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_SENSITIVE                       | Yes          |       N/A    | Yes           |       N/A     | Yes          |    N/A       | Yes           |     N/A       | Yes   | Yes   | Yes       |
+| CKA_ENCRYPT                         |    N/A        | Yes         |      N/A       | Yes          |      N/A      | Yes         |        N/A     | Yes          | Yes   | Yes   | Yes       |
+| CKA_DECRYPT                         | Yes          |     N/A      | Yes           |     N/A       | Yes          |      N/A     | Yes           |       N/A     | Yes   | Yes   | Yes       |
+| CKA_WRAP                            |      N/A      | Yes         |      N/A       | Yes          |      N/A      | Yes         |     N/A        | Yes          | Yes   | Yes   | Yes       |
+| CKA_UNWRAP                          | Yes          |      N/A     | Yes           |      N/A      | Yes          |    N/A       | Yes           |     N/A       | Yes   | Yes   | Yes       |
+| CKA_SIGN                            | Yes          |      N/A     | Yes           |      N/A      | Yes          |     N/A      | Yes           |      N/A      | Yes   | Yes   | Yes       |
+| CKA_VERIFY                          |     N/A       | Yes         |     N/A        | Yes          |      N/A      | Yes         |     N/A        | Yes          | Yes   | Yes   | Yes       |
+| CKA_DERIVE                          | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_START_DATE                     | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_END_DATE                       | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_MODULUS                         |        N/A    |     N/A      | Yes           |      N/A      |     N/A       |     N/A      |      N/A       |     N/A       |  N/A   |   N/A  |  N/A   |
+| CKA_MODULUS_BITS                   |       N/A     |       N/A    |      N/A       |      Yes      |      N/A      |      N/A     |     N/A        |     N/A       |  N/A   |   N/A  |      N/A  |
+| CKA_PUBLIC_EXPONENT                |     N/A       |     N/A      | Yes           |       N/A     |       N/A     |     N/A      |      N/A       |     N/A       |   N/A  |   N/A  |  N/A   |
+| CKA_VALUE_LEN                      |        N/A    |       N/A    |     N/A        |       N/A     |        N/A    |    N/A       |     N/A        |     N/A       | Yes   |    N/A |   N/A  |
+| CKA_EXTRACTABLE                     | Yes          |       N/A    | Yes           |     N/A       | Yes          |      N/A     | Yes           |       N/A     | Yes   | Yes   | Yes       |
+| CKA_LOCAL                           | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_EC_PARAMS (CKA_ECDSA_PARAMS) | Yes          | Yes         |      N/A       |        N/A    |         N/A   |      N/A     |      N/A       |    N/A        |   N/A  |   N/A  |   N/A  |
+| CKA_EC_POINT                       |       N/A     | Yes         |      N/A       |     N/A       |       N/A     |    N/A       |      N/A       |    N/A        |  N/A   |  N/A   |   N/A  |
+| CKA_WRAP_WITH_TRUSTED             | Yes          |       N/A    | Yes           |     N/A       | Yes          |     N/A      | Yes           | N/A      | Yes   | Yes   | Yes       |
 -->
 
 |Attribute| Supported key types |
 |--------------|-----------------------|
-| CKA_CLASS                           | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys          |
-| CKA_TOKEN                           | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys          |
-| CKA_PRIVATE                         | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys          |
-| CKA_LABEL                           |EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys          |
-| CKA_TRUSTED                         |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys        |
-| CKA_KEY_TYPE                       | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys          |
+| CKA_CLASS                           | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_TOKEN                           | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_PRIVATE                         | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_LABEL                           |EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_TRUSTED                         |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys        |
+| CKA_KEY_TYPE                       | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_SUBJECT                         | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys         |
-| CKA_ID                              | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys        |
-| CKA_SENSITIVE                       | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, PBE keys, Generic keys         |
-| CKA_ENCRYPT                         |   EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys      |
-| CKA_DECRYPT                         |EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, PBE keys, Generic keys          |
-| CKA_WRAP                            |     EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys      |
-| CKA_UNWRAP                          | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, PBE keys, Generic keys         |
-| CKA_SIGN                            |EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, PBE keys, Generic keys         |
-| CKA_VERIFY                          |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys |
-| CKA_DERIVE                          | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys          |
-| CKA_START_DATE                     | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys          |
-| CKA_END_DATE                       | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys          |
+| CKA_ID                              | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys        |
+| CKA_SENSITIVE                       | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
+| CKA_ENCRYPT                         |   EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys      |
+| CKA_DECRYPT                         |EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
+| CKA_WRAP                            |     EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys      |
+| CKA_UNWRAP                          | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
+| CKA_SIGN                            |EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
+| CKA_VERIFY                          |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys |
+| CKA_DERIVE                          | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_START_DATE                     | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_END_DATE                       | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_MODULUS                         |       RSA private keys    |
 | CKA_MODULUS_BITS                   |        RSA public keys    |
 | CKA_PUBLIC_EXPONENT                |     RSA private keys      |
 | CKA_VALUE_LEN                      |         AES keys  |
-| CKA_EXTRACTABLE                     | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, PBE keys, Generic keys          |
-| CKA_LOCAL                           | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, PBE keys, Generic keys          |
+| CKA_EXTRACTABLE                     | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
+| CKA_LOCAL                           | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_EC_PARAMS (CKA_ECDSA_PARAMS) | EC private keys, EC public keys        |
 | CKA_EC_POINT                       |      EC public keys  |
-| CKA_WRAP_WITH_TRUSTED             | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, PBE keys, Generic keys          |
+| CKA_WRAP_WITH_TRUSTED             | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
 {: caption="Table 3. Describes the supported attributes" caption-side="bottom"}
 
 ## Supported curve names for generating Elliptic Curve keys
