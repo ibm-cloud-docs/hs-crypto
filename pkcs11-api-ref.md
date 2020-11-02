@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-26"
+lastupdated: "2020-11-02"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -37,7 +37,7 @@ For more information about PKCS #11,  see [Introducing PKCS #11](/docs/hs-crypto
 ## Installing and configuring PKCS #11 library
 {: #setup-pkcs11-library}
 
-To perform a PKCS #11 API call, you need to first [install the PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external}, and then [set up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access). 
+To perform a PKCS #11 API call, you need to first [install the PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external}, and then [set up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access).
 
 The library file names use the naming convention: pkcs11-grep11-<**platform**>.so.<**version**>. The platform is either *amd64* or *s390x* and the version is the standard *major.minor.build* syntax. After downloading the library, move the library into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64` or `/usr/lib`.
 
@@ -203,7 +203,6 @@ A mechanism is referred to as a process to implement a cryptographic operation. 
 |--------------|-----------------------|
 |Encrypt and decrypt | CKM_RSA_PKCS[^services-1], CKM_RSA_PKCS_OAEP[^services-2], CKM_AES_ECB, CKM_AES_CBC, CKM_AES_CBC_PAD, CKM_DES3_ECB, CKM_DES3_CBC, CKM_DES3_CBC_PAD|
 |Sign and verify  | CKM_RSA_PKCS[^services-3], CKM_RSA_PKCS_PSS[^services-4], CKM_RSA_X9_31[^services-5], CKM_SHA1_RSA_PKCS, CKM_SHA256_RSA_PKCS, CKM_SHA224_RSA_PKCS, CKM_SHA384_RSA_PKCS, CKM_SHA512_RSA_PKCS, CKM_SHA1_RSA_PKCS_PSS, CKM_SHA224_RSA_PKCS_PSS, CKM_SHA256_RSA_PKCS_PSS, CKM_SHA384_RSA_PKCS_PSS, CKM_SHA512_RSA_PKCS_PSS, CKM_SHA1_RSA_X9_31, CKM_DSA[^services-6], CKM_DSA_SHA1, CKM_ECDSA[^services-7], CKM_ECDSA_SHA1, CKM_ECDSA_SHA224, CKM_ECDSA_SHA256, CKM_ECDSA_SHA384, CKM_ECDSA_SHA512, CKM_SHA1_HMAC, CKM_SHA256_HMAC, CKM_SHA384_HMAC, CKM_SHA512_HMAC, CKM_SHA512_224_HMAC, CKM_SHA512_256_HMAC, CKM_IBM_ED25519_SHA512, CKM_IBM_ED448_SHA3|
-|Sign recover and verify recover    | CKM_RSA_PKCS, CKM_RSA_PKCS_OAEP|
 |Digest |CKM_SHA_1, CKM_SHA224, CKM_SHA256, CKM_SHA384, CKM_SHA512, CKM_SHA512_224, CKM_SHA512_256|
 |Generate key or generate key pair 	 |CKM_RSA_PKCS_KEY_PAIR_GEN, CKM_RSA_X9_31_KEY_PAIR_GEN, CKM_DSA_KEY_PAIR_GEN, CKM_DSA_PARAMETER_GEN, CKM_EC_KEY_PAIR_GEN (CKM_ECDSA_KEY_PAIR_GEN), CKM_DH_PKCS_KEY_PAIR_GEN, CKM_DH_PKCS_PARAMETER_GEN, CKM_GENERIC_SECRET_KEY_GEN, CKM_AES_KEY_GEN, CKM_DES2_KEY_GEN, CKM_DES3_KEY_GEN|
 |Wrap and unwrap | CKM_RSA_PKCS, CKM_RSA_PKCS_OAEP, CKM_AES_ECB, CKM_AES_CBC, CKM_AES_CBC_PAD, CKM_DES3_ECB, CKM_DES3_CBC, CKM_DES3_CBC_PAD|
