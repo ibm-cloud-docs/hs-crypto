@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-12-09"
+lastupdated: "2020-11-02"
 
 keywords: disaster recovery, high availability, ha, dr, recoverablity, availability, failover
 
@@ -41,7 +41,7 @@ Your encryption keys are confined to the region that you created them in. {{site
 ## In-region data redundancy and failover
 {: #data-failover}
 
-Provisioning at least two [crypto units](#x9860404){: term} for high availability is suggested. If one available zone that contains your provisioned service instance goes down, {{site.data.keyword.hscrypto}} has automatic in-region data failover in place. The service follows {{site.data.keyword.cloud_notm}} requirements for planning and recovering from disaster events. For more information, see [Disaster recovery](/docs/overview?topic=overview-zero-downtime#disaster-recovery).
+Multiple [crypto units](#x9860404){: term} in a service instance are automatically synchronized and load balanced across multiple availability zones. If one available zone that contains your provisioned service instance cannot be accessed, {{site.data.keyword.hscrypto}} has automatic in-region data failover in place. The service follows {{site.data.keyword.cloud_notm}} requirements for planning and recovering from disaster events. For more information, see [Disaster recovery](/docs/overview?topic=overview-zero-downtime#disaster-recovery).
 
 ## Cross-region disaster recovery
 {: #cross-region-disaster-recovery}

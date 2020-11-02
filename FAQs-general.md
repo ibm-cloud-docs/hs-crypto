@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-30"
+lastupdated: "2020-11-02"
 
 keywords: general frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips
 
@@ -115,7 +115,7 @@ Key features include the following:
 {: #faq-how-hpcs-work}
 {: faq}
 
-When you use {{site.data.keyword.hscrypto}}, you create a service instance with multiple crypto units that reside in different availability zones in a region. The service instance is built on [Secure Service Container (SSC)](https://www.ibm.com/marketplace/secure-service-container){: external}, which ensures isolated container runtime environment and provides the enterprise level of security and impregnability. The multiple crypto units in a service instance are automatically synchronized and load balanced across muiltiple availability zones. If one availability zone cannot be accessed, the crypto units in a service instance can be used interchangeably. 
+When you use {{site.data.keyword.hscrypto}}, you create a service instance with multiple crypto units that reside in different availability zones in a region. The service instance is built on [Secure Service Container (SSC)](https://www.ibm.com/marketplace/secure-service-container){: external}, which ensures isolated container runtime environment and provides the enterprise level of security and impregnability. The multiple crypto units in a service instance are automatically synchronized and load balanced across multiple availability zones. If one availability zone cannot be accessed, the crypto units in a service instance can be used interchangeably. 
 
 A crypto unit is a single unit that represents a hardware security module and the corresponding software stack that is dedicated to the hardware security module for cryptography. Encryption keys are generated in the crypto units and stored in the dedicated keystore for you to manage and use via the standard RESTful API. With{{site.data.keyword.hscrypto}}, you take the ownership of the crypto units by loading the master key and assigning your own administrators through CLI or the Management Utilities applications. In this way, you have an exclusive control over your encryption keys. 
 
