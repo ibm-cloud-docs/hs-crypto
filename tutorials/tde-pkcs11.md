@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-14"
+lastupdated: "2020-11-03"
 
 keywords: encrypt Oracle Transparent Database, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -232,7 +232,7 @@ logging:
   ```
   {: codeblock}
 
-The directory `/opt/oracle/extapi/64/hsm` and the subfolders must contain only one library file. Remove any other files that exist in that directory.
+The directory `/opt/oracle/extapi/64/hsm` and the subdirectories can contain only one library file. Remove any other library files that exist in that directory and the subdirectories.
 {: note}
 
 ### 4. Check the library setup

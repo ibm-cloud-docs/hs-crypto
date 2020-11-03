@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-14"
+lastupdated: "2020-11-03"
 
 keywords: encrypt IBM Db2 databases, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -265,7 +265,7 @@ logging:
 {: #tutorial-db2-encrypt}
 {: step}
 
-Now, let's take on the role of the database administrator.
+Now, let's set up Db2 native encryption. To do so, make sure that you have all database administrator privileges.
 
 1. Create the file `/pkcs11/keystore.conf` with the following content:
 
