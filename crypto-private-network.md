@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018-2020
-lastupdated: "2020-07-21"
+lastupdated: "2020-11-02"
 
 keywords: private, private endpoints, private network, private connection, crypto network, dedicated network, VRF, service endpoints, regions, location
 
@@ -116,37 +116,46 @@ If you are using the GREP11 service, the service handles the private endpoint co
   Use the following commands on the Linux&reg; operating system or MacOS only. For how to set environment variables on the Windows&reg; operating system, see [Accessing {{site.data.keyword.keymanagementserviceshort}} CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli).
   {: note}
 
-  Set the KP_PRIVATE_ADDR environment variable to target the private endpoint:
+  * Set the KP_PRIVATE_ADDR environment variable to target the private endpoint for the key management service:
 
-  ```
-  export KP_PRIVATE_ADDR=https://api.private.<region>.hs-crypto.cloud.ibm.com:<port>
-  ```
-  {: pre}
+    ```
+    export KP_PRIVATE_ADDR=https://api.private.<region>.hs-crypto.cloud.ibm.com:<port>
+    ```
+    {: pre}
 
-  You can find the Key management private endpoint URL listed in the service dashboard under **Overview** &gt; **Connect** &gt; **Key management private endpoint URL**.
+    You can find the Key management private endpoint URL listed in the service dashboard under **Overview** &gt; **Connect** &gt; **Key management private endpoint URL**.
 
-  Alternatively, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external}. The returned value includes the following:
+    Alternatively, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external}. The returned value includes the following:
 
-  ```
+    ```
   {
-    "instance_id": "<instance_ID>",
-    "kms": {
-      "public": "api.<region>.hs-crypto.cloud.ibm.com:<port>",
-      "private":"api.private.<region>.hs-crypto.cloud.ibm.com:<port>"
-    },
-    "ep11": {
-      "public": "ep11.<region>.hs-crypto.cloud.ibm.com:<port>",
-      "private":"ep11.private.<region>.hs-crypto.cloud.ibm.com:<port>"
+      "instance_id": "<instance_ID>",
+      "kms": {
+        "public": "api.<region>.hs-crypto.cloud.ibm.com:<port>",
+        "private":"api.private.<region>.hs-crypto.cloud.ibm.com:<port>"
+      },
+      "ep11": {
+        "public": "ep11.<region>.hs-crypto.cloud.ibm.com:<port>",
+        "private":"ep11.private.<region>.hs-crypto.cloud.ibm.com:<port>"
+      }
     }
-  }
-  ```
-  {: screen}
+    ```
+    {: screen}
 
-  The private endpoint URL is returned in `private`. For key management endpoint, use the value that is returned in the `kms` section.
+    The private endpoint URL is returned in `private`. For key management endpoint, use the value that is returned in the `kms` section.
 
-  The KP_PRIVATE_ADDR environment variable is used to set the API endpoint URL both for public endpoint and private endpoint. If you want to use the public endpoint, make sure to set the KP_PRIVATE_ADDR environment variable as the public endpoint URL that is returned in the `public` field in the `kms` section.
-  {: important}
+    The KP_PRIVATE_ADDR environment variable is used to set the API endpoint URL both for public endpoint and private endpoint. If you want to use the public endpoint, make sure to set the KP_PRIVATE_ADDR environment variable as the public endpoint URL that is returned in the `public` field in the `kms` section.
+    {: important}
 
+  * Set the TKE_PRIVATE_ADDR environment variable to target the private endpoint for the Trusted Key Entry (TKE) plugin. Use the same <region> value as for the key management service endpoint:
+
+    ```
+    export TKE_PRIVATE_ADDR=https://tke.private.<region>.hs-crypto.cloud.ibm.com
+    ```
+    {: pre}
+
+    The TKE_PRIVATE_ADDR environment variable is used to set the API endpoint URL both for public endpoint and private endpoint. If you want to use the public endpoint, make sure to set the TKE_PRIVATE_ADDR environment variable as the public endpoint URL: `https://tke.<region>.hs-crypto.cloud.ibm.com`.
+    {: important}
 
 ## Step 3: Test your private network connection
 {: #Test-private-connection}
