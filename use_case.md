@@ -56,7 +56,7 @@ Check out the [overview video on IBM Cloud Hyper Protect Crypto Services and VMw
 ## Using {{site.data.keyword.hscrypto}} as PKCS #11 HSMs
 {: #pkcs11_hsm}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} provides the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref). PKCS #11 is defined as one of the Public-Key Cryptography Standards. Cryptographic operations are executed inside the HSMs at the cloud side. This allows for schemes where a cryptographic key is never in the clear outside the HSM, and all according sensitive cryptographic operations are handled inside the HSM boundary as well.
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} provides the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref). PKCS #11 is defined as one of the Public-Key Cryptography Standards. Cryptographic operations are executed inside the HSMs at the cloud side. This allows for schemes where a cryptographic key is never in the clear outside the HSM, and all corresponding sensitive cryptographic operations are handled inside the HSM boundary as well.
 
 ### Application-level encryption using the PKCS #11 API
 {: #app-encryption-pkcs11}
