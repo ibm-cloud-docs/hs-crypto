@@ -70,7 +70,7 @@ Complete the following steps to order smart card readers:
 
 You need to install the Identiv SPR332 V2 smart card reader driver on your local workstation. Currently, only Red Hat Enterprise Linux&reg; 8.0.0 is supported.
 
-You need to take the [smart card considerations](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy) into account when you plan your security policy for your workstation and smart card readers. Otherwise, your smart cards might be exposed to [some vulnerabilities](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy#smart-card-vulnerabilities).
+You need to take the [smart card considerations](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy) into account when you plan your security policy for your workstation and smart card readers.
 {: note}
 
 <!--
