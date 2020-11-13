@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-30"
+lastupdated: "2020-10-20"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -23,6 +23,14 @@ subcollection: hs-crypto
 
 Stay up-to-date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+## November 2020
+{: #november-2020}
+
+### Added: TKE activity tracker events
+{: #add-tke-at-events}
+
+{{site.data.keyword.hscrypto}} now supports the Trusted Key Entry (TKE) events auditing. You can now use {{site.data.keyword.at_full_notm}} to monitor TKE activities and analyze failed actions. For more information, see [Auditing events for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-at-events).
 
 ## September 2020
 {: #september-2020}

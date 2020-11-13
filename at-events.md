@@ -2,15 +2,16 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-24"
+lastupdated: "2020-10-09"
 
 keywords: event, security, monitor event, audit event, activity tracker, logdna event
 
 subcollection: hs-crypto
 
 ---
-{:shortdesc: .shortdesc}
 
+
+{:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:table: .aria-labeledby="caption"}
 {:pre: .pre}
@@ -30,7 +31,7 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 
 To enable {{site.data.keyword.at_full_notm}} for your {{site.data.keyword.hscrypto}} instance, you need to provision an instance of the {{site.data.keyword.at_full_notm}} service in the same region where your {{site.data.keyword.hscrypto}} instance is located. For more information, see the [getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started).
 
-To see which {{site.data.keyword.hscrypto}} key management API requests correlate to the actions below, [check out the key management API reference doc](/apidocs/hs-crypto){: external}.
+To see which {{site.data.keyword.hscrypto}} key management requests or Trusted Key Entry (TKE) requests correlate to the actions below, check out the [key management API reference doc](/apidocs/hs-crypto){: external} and [TKE CLI reference](/docs/hs-crypto-cli-plugin?topic=hs-crypto-cli-plugin-tke_cli_plugin){: external}.
 
 ## Supported events
 {: #at-supported-events}
@@ -60,7 +61,7 @@ The following table lists the key actions that generate an event:
 | `hs-crypto.secrets.disable`             | Disable operations for a key                                 |
 | `hs-crypto.secrets.eventack`            | Acknowledge a lifecycle action on a key                      |
 | `hs-crypto.secrets.default`             | Invalid key request event                                    |
-{: caption="Table 1. Lifecycle Key Actions" caption-side="top"}
+{: caption="Table 1. Lifecycle Key Actions" caption-side="bottom"}
 
 ### Policy events
 {: #policy-actions}
@@ -96,10 +97,27 @@ The following table lists the registration actions that generate an event:
 
 | Action                                  | Description                                              |
 | --------------------------------------- | -------------------------------------------------------- |
-| `hs-crypto.registrations.list`                | List registrations for any key                           |
-| `hs-crypto.registrations.default`             | Invalid registration request event                       |
+| `hs-crypto.registrations.list`          | List registrations for any key                           |
+| `hs-crypto.registrations.default`       | Invalid registration request event                       |
 {: caption="Table 4. Registration actions" caption-side="bottom"}
 
+### Trusted Key Entry events
+{: #tke-actions}
+
+The following table lists the Trusted Key Entry (TKE) actions that generate an event:
+
+| Action                         | Description                                  |
+| ------------------------------ | -------------------------------------------- |
+| `hs-crypto.tke-cryptounit-admin.add` | Add a crypto unit administrator to the selected crypto units  |
+| `hs-crypto.tke-cryptounit-admin.remove`  | Remove a crypto unit administrator from the selected crypto units |
+| `hs-crypto.tke-cryptounit-threshold.set` | Set the signature thresholds for the selected crypto units |
+| `hs-crypto.tke-cryptounit-master-key-register.add` | Load the new master key register |
+| `hs-crypto.tke-cryptounit-master-key-register.commit`   | Commit the new master key register  |
+| `hs-crypto.tke-cryptounit-master-key-register.activate` | Activate the current master key register  |
+| `hs-crypto.tke-cryptounit-new-master-key-register.clear` | Clear the new master key register |
+| `hs-crypto.tke-cryptounit-current-master-key-register.clear` | Clear the current master key register |
+| `hs-crypto.tke-cryptounit.reset`   | Zeroize and reset the selected crypto units |
+{: caption="Table 5. Trusted Key Entry actions" caption-side="bottom"}
 
 ## Viewing events
 {: #at-ui}
@@ -117,7 +135,7 @@ see [Launching the web UI through the IBM Cloud UI](/docs/Activity-Tracker-with-
 | `us-east`                 | `us-east`                                       |
 | `eu-de`                   | `eu-de`                                         |
 | `au-syd`                  | `au-syd`                                        |
-{: caption="Table 5. Activity Tracker regions" caption-side="top"}
+{: caption="Table 6. Activity Tracker regions" caption-side="bottom"}
 
 ## Analyzing successful events
 {: #at-events-analyze}
@@ -129,6 +147,7 @@ Fields are not guaranteed to appear unless the request is successful.
 
 ### Common fields
 {: #at-common fields}
+
 There are some common fields that {{site.data.keyword.hscrypto}} uses outside of the CADF event model to provide more insight into your data.
 
   <table>
@@ -152,9 +171,10 @@ There are some common fields that {{site.data.keyword.hscrypto}} uses outside of
       <td><p><varname>`correlationId`</varname></p></td>
       <td>
         <p>The unique identifier of the API request that generated the event.</p>
+        <p>Note: This field is currently not supported in TKE events.</p>
       </td>
     </tr>
-    <caption style="caption-side:bottom;">Table 6. Describes the common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service
+    <caption style="caption-side:bottom;">Table 7. Describes the common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service
     actions.</caption>
   </table>
 
@@ -314,6 +334,69 @@ The following field includes extra information:
 
 - The `responseData.totalResources` field includes the total amount of registrations returned in the response.
 
+### Trusted Key Entry events
+{: #tke-events-success}
+
+The following table lists the returned values that indicate a successful TKE event.
+
+| Field name | Returned value |
+| -------- | ----------- |
+|`outcome` | `success`  |
+| `reason.reasonCode`  | `200`  |
+| `reason.reasonType`  |`OK`  |
+{: caption="Table 8. Describes the returned values of a successful TKE event" caption-side="bottom"}
+
+The following common fields for TKE events include extra information:
+
+- The `requestData.location` field includes the specific location of the crypto unit. The location follows this format:
+
+  *\[region\].\[availability zone\].\[hardware security module (HSM) module index\].\[HSM domain index\]*.
+
+  For example, if you provision your instance in the `us-east` region, the value returned is similar to `[us-east].[AZ2-CSSTAG2].[03].[22]`.
+- The `target.id` field includes the [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) of the crypto unit.
+- The `target.name` field also includes the location of the crypto unit.
+- The `target.typeURI` field includes the URI of the object that the action is targeting at. For example, if you perform the `hs-crypto.tke-cryptounit-master-key-register.add` action, the value returned is `hs-crypto/tke-cryptounit/master-key-register`.
+
+For the following TKE events, there are some specific fields that indicate more information.
+
+#### Add a crypto unit administrator
+{: #tke-add-admin-success}
+
+- The `requestData.adminId` field includes the SHA-256 hash of the signature key file associated with the administrator to be added.
+- The `responseData.adminIds` field lists the SHA-256 hashes of the signature key files associated with all the administrators that are currently added to the crypto unit.
+
+#### Remove a crypto unit administrator
+{: #tke-remove-admin-success}
+
+- The `requestData.adminId` field includes the SHA-256 hash of the signature key file associated with the administrator to be removed.
+- The `responseData.adminIds` field lists the SHA-256 hashes of the signature key files associated with all the administrators that are currently added to the crypto unit.
+
+#### Set the signature thresholds
+{: #tke-set-threshold-success}
+
+- The `requestData.signatureThreshold` field includes the [main signature threshold](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept) that you set on the crypto unit.
+- The `requestData.revocationSignatureThreshold` field includes the [revocation signature threshold](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept) that you set on the crypto unit.
+- The `responseData.signatureThreshold` field includes the [main signature threshold](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept) that is successfully set on the crypto unit.
+- The `responseData.revocationSignatureThreshold` field includes the [revocation signature threshold](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept) that is successfully set on the crypto unit.
+
+#### Load the new master key register
+{: #tke-load-new-master-success}
+
+- The `requestData.masterKeyIds` field lists the SHA-256 hashes of all the master key parts files that you select to load to the crypto unit.
+- The `responseData.verificationPattern` field includes the SHA-256 hash of the master key that is composed of the selected master key parts and is loaded to the new master key register.
+
+#### Commit the new master key register
+{: #tke-commit-new-master-success}
+
+- The `requestData.verificationPattern` field includes the SHA-256 hash of the master key that is loaded to the new master key register.
+- The `responseData.masterKeyIds` field lists the SHA-256 hashes of all the master key parts files that compose the master key.
+
+#### Activate the current master key register
+{: #tke-activate-current-master-success}
+
+- The `requestData.verificationPattern` field includes the SHA-256 hash of the master key that is loaded and committed to the new master key register.
+- The `responseData.verificationPattern` field includes the SHA-256 hash of the master key that is activated.
+
 ## Analyzing failed events
 {: #at-events-analyze-failed}
 
@@ -345,16 +428,30 @@ your service instance and `responseData.totalResources` is 0, you might need to 
 the deleted state using the `state` parameter or adjust the `offset` and `limit` parameters in
 your request.
 
+### Unable to perform Trusted Key Entry actions
+{: #tke-actions-failure}
+
+Failed TKE events have an `outcome` of `failure`. The `reason.reasonType` and `reason.reasonForFailure` fields contain information on why the action wasn't able to be completed.
+
+If the event has a `reason.reasonCode` of `400`, the action cannot be completed because the operation to the crypto units is not supported or is not valid. Check whether the TKE command that you use is valid by referring to the [TKE CLI reference](/docs/hs-crypto-cli-plugin?topic=hs-crypto-cli-plugin-tke_cli_plugin){: external}.
+
+If the event has a `reason.reasonCode` of `401` or `403`, the action cannot be completed because your access token is not valid or does not have the necessary permissions to access this instance. [Refresh your access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token) and check whether you have [appropriate permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to perform the corresponding actions.
+
+If the event has a `reason.reasonCode` of `500`, check out the value of `reason.reasonForFailure` to identify the reasons of failure and the corresponding actions that you need to take.
+
 ## Event severity
 {: event-severity}
 
 The severity for all Activity Tracker events with
-{{site.data.keyword.hscrypto}} are based on the type of request
-that was made, then status code. For example, if you make a create key request
+{{site.data.keyword.hscrypto}} is based on the type of request
+that was made, then status code. For example, if you make a request to create a key
 with an invalid key, but you are also unauthenticated for the service instance
 that you included in the request, the unauthentication will take precedence and
 the event will be evaluated as a `401` bad request call with a severity of
 `critical`.
+
+The severity level for all TKE events is `critical` due to the sensitivity of the actions.
+{: important}
 
 The following table lists the actions associated with each severity level:
 
@@ -368,6 +465,15 @@ The following table lists the actions associated with each severity level:
       <td>
         <p><code>hs-crypto.secrets.delete</code></p>
         <p><code>hs-crypto.registrations.delete</code></p>
+        <p><code>hs-crypto.tke-cryptounit-admin.add</code></p>
+        <p><code>hs-crypto.tke-cryptounit-admin.remove</code></p>
+        <p><code>hs-crypto.tke-cryptounit-current-master-key-register.clear</code></p>
+        <p><code>hs-crypto.tke-cryptounit-new-master-key-register.clear</code></p>
+        <p><code>hs-crypto.tke-cryptounit-master-key-register.add</code></p>
+        <p><code>hs-crypto.tke-cryptounit-master-key-register.commit</code></p>
+        <p><code>hs-crypto.tke-cryptounit-master-key-register.activate</code></p>
+        <p><code>hs-crypto.tke-cryptounit-threshold.set</code></p>
+        <p><code>hs-crypto.tke-cryptounit.reset</code></p>
       </td>
     </tr>
     <tr>
@@ -392,32 +498,16 @@ The following table lists the actions associated with each severity level:
         <p><code>hs-crypto.registrations.list</code></p>
       </td>
     </tr>
-    <caption style="caption-side:bottom;">Table 7. Describes the severity level for
+    <caption style="caption-side:bottom;">Table 9. Describes the severity level for
     {{site.data.keyword.hscrypto}} service actions.</caption>
   </table>
 
 The following table lists the status codes associated with each severity level:
 
-<table>
-    <tr>
-      <th>Severity</th>
-      <th>Status Code</th>
-    </tr>
-    <tr>
-      <td><p><varname>Critical</varname></p></td>
-      <td>
-        <p><code>503</code>, <code>507</code></p>
-        <p><code>401</code>, <code>403</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td><p><varname>Warning</varname></p></td>
-      <td>
-        <p><code>502</code>, <code>502</code>, <code>504</code></p>
-        <p><code>505</code>, <code>400</code>, <code>409</code></p>
-        <p><code>424</code></p>
-      </td>
-    </tr>
-    <caption style="caption-side:bottom;">Table 8. Describes the severity level for
-    {{site.data.keyword.hscrypto}} response status codes.</caption>
-  </table>
+| Severity | Status code |
+| -------- | ----------- |
+| Critical | `400`[^services-1], `401`, `403`, `500`, `503`, `507`  |
+| Warning  | `400`, `409`, `424`, `502`, `504`, `505`  |
+{: caption="Table 10. Describes the severity level for {{site.data.keyword.hscrypto}} response status codes." caption-side="bottom"}
+
+[^services-1]: For Trusted Key Entry events.
