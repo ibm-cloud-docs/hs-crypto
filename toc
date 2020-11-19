@@ -121,6 +121,7 @@ Hyper Protect Crypto Services
         set-dual-auth-policy.md
 
     restore-keys.md
+    enable-mechanisms.md
     add-remove-crypto-units.md
     delete-instance.md
 

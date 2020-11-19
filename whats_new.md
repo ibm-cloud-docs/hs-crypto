@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-10-20"
+lastupdated: "2020-11-19"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,6 +27,11 @@ Stay up-to-date with the new features that are available for {{site.data.keyword
 ## November 2020
 {: #november-2020}
 
+### Added: Support fot the BIP32 mechanism
+{: #add-bip32-mechanism}
+
+{{site.data.keyword.hscrypto}} now supports the Bitcoin Improvement Proposal 0032 (BIP32) standard for hierarchical deterministic wallets to define how to derive private and public keys of a digital wallet. To enable BIP 32, follow the instructions in [Enabling BIP32 deterministic wallets](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-BIP32).
+
 ### Added: TKE activity tracker events
 {: #add-tke-at-events}
 
@@ -40,7 +45,7 @@ Stay up-to-date with the new features that are available for {{site.data.keyword
 
 {{site.data.keyword.hscrypto}} now supports performing cryptographic operations with the standard Public-Key Cryptography Standards (PKCS) #11 API.
 
-With the support of PKCS #11 API, you do not need to change your existing applications that use PKCS #11 standard to make it run in the {{site.data.keyword.hscrypto}} cloud HSM environment. The PKCS #11 library accepts the PKCS #11 API requests from your applications and remotely accesses the cloud HSM to execute the corresponding cryptographic functions.
+With the support of PKCS #11 API, you don not need to change your existing applications that use PKCS #11 standard to make it run in the {{site.data.keyword.hscrypto}} cloud HSM environment. The PKCS #11 library accepts the PKCS #11 API requests from your applications and remotely accesses the cloud HSM to execute the corresponding cryptographic functions.
 
 For more information about the PKCS #11 API use cases, see [Using Hyper Protect Crypto Services as PKCS #11 HSMs](/docs/hs-crypto?topic=hs-crypto-use-cases#pkcs11_hsm).
 
