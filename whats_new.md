@@ -27,7 +27,7 @@ Stay up-to-date with the new features that are available for {{site.data.keyword
 ## November 2020
 {: #november-2020}
 
-### Added: Support fot the BIP32 mechanism
+### Added: Support for the BIP32 mechanism
 {: #add-bip32-mechanism}
 
 {{site.data.keyword.hscrypto}} now supports the Bitcoin Improvement Proposal 0032 (BIP32) standard for hierarchical deterministic wallets to define how to derive private and public keys of a digital wallet. To enable BIP 32, follow the instructions in [Enabling BIP32 deterministic wallets](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-BIP32).
