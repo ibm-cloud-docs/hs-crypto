@@ -97,7 +97,7 @@ Complete the following steps to create your first cryptographic key.
           <p>To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location.</p>
         </td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Description of the <strong>Create a key</strong> settings</caption>
+      <caption style="caption-side:bottom;">Table 1. Description of the settings to create a key</caption>
     </table>
 
 3. When you finish filling out the key's details, click **Add key** to confirm.
@@ -136,7 +136,7 @@ Complete the following steps to add an existing key.
         <td>Key material</td>
         <td>The key material, such as a symmetric key, that you want to store in the {{site.data.keyword.hscrypto}} service. The key that you provide must be base64 encoded.</td>
       </tr>
-      <caption style="caption-side:bottom;">Table 2. Description of the <strong>Import your own key</strong> settings</caption>
+      <caption style="caption-side:bottom;">Table 2. Description of the settings to import your own key</caption>
     </table>
 
 3. When you finish filling out the key's details, click **Import key** to confirm.
@@ -303,7 +303,7 @@ Complete the following steps to create your first cryptographic key.
           <p>To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location.</p>
         </td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Description of the <strong>Create a key</strong> settings</caption>
+      <caption style="caption-side:bottom;">Table 1. Description of the settings to create a key</caption>
     </table>
 
 3. When you finish filling out the key's details, click **Add key** to confirm.
@@ -344,7 +344,7 @@ Complete the following steps to add an existing key.
         <td>Key material</td>
         <td>The key material, such as a symmetric key, that you want to store in the {{site.data.keyword.hscrypto}} service. The key that you provide must be base64 encoded.</td>
       </tr>
-      <caption style="caption-side:bottom;">Table 2. Description of the <strong>Import your own key</strong> settings</caption>
+      <caption style="caption-side:bottom;">Table 2. Description of the settings to import your own key</caption>
     </table>
 
 3. When you finish filling out the key's details, click **Import key** to confirm.
