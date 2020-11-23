@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-28"
+lastupdated: "2020-11-23"
 
 keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases
 
@@ -102,7 +102,7 @@ In the context of web servers, the TLS/SSL protocol allows a website to establis
 
 TLS/SSL offloading to the {{site.data.keyword.hscrypto}} HSM enables data in transit protection for web, API, and mobile transactions using the standard PKCS #11 API. {{site.data.keyword.hscrypto}} enables you to integrate TLS/SSL offloading with other cloud proxies.
 
-<!-- For a code pattern on how {{site.data.keyword.hscrypto}} TLS/SSL offloading works, see [CODE PATTERN LINK]. -->
+For a tutorial on how to offload the SSL workload to a load balancer such as NGINX while managing keys using {{site.data.keyword.hscrypto}}, see [Using {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} to offload NGINX TLS](https://developer.ibm.com/components/ibmz/tutorials/use-hyper-protect-crypto-services-to-offload-nginx-tls/){: external}.
 
 ![Protecting data in transit with TLS/SSL offloading](/image/ssl-offloading.svg "Protecting data in transit with TLS/SSL offloading"){: caption="Figure 6. Protecting data in transit with TLS/SSL offloading" caption-side="bottom"}
 

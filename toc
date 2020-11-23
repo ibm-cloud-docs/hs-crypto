@@ -57,6 +57,7 @@ Hyper Protect Crypto Services
     Tutorials on cloud hardware security module
         tutorials/tde-pkcs11.md
         tutorials/db2-pkcs11.md
+        [Tutorial: Using IBM Cloud Hyper Protect Crypto Services to offload NGINX TLS](https://developer.ibm.com/components/ibmz/tutorials/use-hyper-protect-crypto-services-to-offload-nginx-tls/)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
