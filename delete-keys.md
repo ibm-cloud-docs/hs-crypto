@@ -53,7 +53,7 @@ for the key. Then, you must contact an account owner to remove the retention
 policy on each resource that is associated with the key before you can delete
 the key.
 
-## Deleting keys with the GUI
+## Deleting keys with the console
 {: #delete-keys-gui}
 
 By default, {{site.data.keyword.hscrypto}} requires one
@@ -66,7 +66,7 @@ console.
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Manage keys** page, use the **Keys** table to browse the keys in your service.
+4. On the **Key management service keys** page, use the **Keys** table to browse the keys in your service.
 5. Select the key that you want to delete and click the overflow (⋯) icon to open a list of options for the key.
 6. From the options menu, click **Delete key**, enter the key name to confirm the key to be deleted, and click **Delete key**.
 
@@ -97,8 +97,7 @@ at query time to delete the key.
 2. Retrieve the ID of the key that you would like to delete.
 
 You can find the ID for a key in your service instance by
-[retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys), or by accessing the {{site.data.keyword.hscrypto}}
-dashboard.
+[retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys), or by accessing the {{site.data.keyword.cloud_notm}} console.
 
 3. Run the following cURL command to permanently delete the key and its contents.
 
@@ -215,7 +214,7 @@ dashboard.
 
         You can retrieve the ID for a specified key by making a `GET /v2/keys/`
         request, or by viewing your keys in the
-        {{site.data.keyword.hscrypto}} dashboard.
+        {{site.data.keyword.cloud_notm}} console.
 
     3. Run the following cURL command to force delete the key and its contents.
 

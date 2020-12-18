@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-09-07"
+lastupdated: "2020-12-04"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -31,6 +31,9 @@ The following diagram gives you an overview of steps you need to take to initial
 
 ![The task flow of service instance initialization with the Management Utilities](/image/hsm_initialization_flow_smartcard.svg "The task flow of service instance initialization with the Management Utilities"){: caption="Figure 1. Task flow of service instance initialization with the Management Utilities" caption-side="bottom"}
 
+Initializing a service instance through a private network using the Management Utilities is currently not supported.
+{: note}
+
 ## Step 1: Order smart cards and smart card readers
 {: #order-smart-card-and-reader}
 
@@ -58,12 +61,12 @@ Complete the following steps to order smart cards:
 
 ### Ordering smart card readers
 
-Complete the following steps to order smart card readers:
+The supported smart card reader type is SPR332 v2.0 Secure Class 2 PIN Pad Reader (part number 905127-1). The following are a few third-party online shops where you can order a smart card reader. The deliver policy might vary depending on your geographical locations:
 
-1. On the [Identiv SPR332 V2.0 smart card readers online shop web page](https://shop.identiv.com/smart-card-readers/contact-contactless/spr332v2.htm){: external}, enter the number of the smart card readers.
-
-  You need at least two smart card readers. Smart card reader 1 for initializing the certificate authority smart card and retrieving the signature key to sign commands. And smart card reader 2 for initializing EP11 smart cards and retrieving master key parts to be loaded.
-2. Click **Add to Cart** and continue to check out.
+* [Identiv](https://shop.identiv.com/smart-card-readers/contact-contactless/spr332v2.htm){: external}
+* [Digifeat](https://digifeat.com/product/spr332-v2-0/){: external}
+* [SCM PC-Card GmbH](https://www.scm-pc-card.de/all-products/101/spr332-v2){: external}
+* [Amazon](https://www.amazon.de/SPR332-Speed-Secure-Kartenleser-Online-Abrechnung/dp/B0092NGGWW){: external}
 
 ## Step 2: Install the smart card reader driver
 {: #install-smart-card-reader-driver}
@@ -186,7 +189,7 @@ Before you install the smart card reader driver on a Linux operating system, dow
 ## Step 3: Install the Management Utilities
 {: #install-management-utility-application}
 
-Two applications are provided as part of the Management Utilities: the [Smart Card Utility Program](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-smart-card-application) and the [Trusted Key Entry (TKE) application](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-tke-application). The Smart Card Utility Program allows you to initialize the smart cards to use. The TKE application uses the smart cards to load master keys in service instances.
+Two applications are provided as part of the Management Utilities: the [Smart Card Utility Program](/docs/hs-crypto?topic=hs-crypto-understand-concepts#smart-card-utility-concept) and the [Trusted Key Entry (TKE) application](/docs/hs-crypto?topic=hs-crypto-understand-concepts#tke-client-concept). The Smart Card Utility Program allows you to initialize the smart cards to use. The TKE application uses the smart cards to load master keys in service instances.
 
 <!--
 ### Installing the Management Utilities on Windows 10

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-09"
+lastupdated: "2020-11-17"
 
 keywords: data encryption key, key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, unwrap api
 
@@ -32,7 +32,7 @@ To learn how key wrapping helps you control the security of at-rest data in the 
 [After you make a wrap call to the service](/docs/hs-crypto?topic=hs-crypto-wrap-keys), you can unwrap a specified data encryption key (DEK) to access its contents by making a `POST` call to the following endpoint.
 
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>?action=unwrap
+https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/unwrap
 ```
 {: codeblock}
 
@@ -43,7 +43,7 @@ Root keys that contain the same key material can unwrap the same data encryption
 
 2. Copy the ID of the [root key](#x6946961){: term} that you used to perform the initial wrap request.
 
-    You can retrieve the ID for a key by making a `GET /v2/keys` request, or by viewing your keys in the {{site.data.keyword.hscrypto}} GUI.
+    You can retrieve the ID for a key by making a `GET /v2/keys` request, or by viewing your keys in the {{site.data.keyword.cloud_notm}} console.
 
 3. Copy the `ciphertext` value that was returned during the initial wrap request.
 

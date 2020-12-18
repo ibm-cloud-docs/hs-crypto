@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-11-19"
+lastupdated: "2020-12-16"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -23,6 +23,72 @@ subcollection: hs-crypto
 
 Stay up-to-date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+<!--
+### Updated: The cryptography algorithm that is used to generate signature keys
+{: #update-signature-key-algorithm}
+
+The cryptography algorithm to generate signature keys is updated from Rivest–Shamir–Adleman 2048 (RSA 2048) to P521 Elliptic Curve (P521 EC). The cryptographic strength of P521 EC keys is equivalent to RSA 15360, which means the updated signature keys can provide the higher level of security comparing to the previous signature keys. The previous RSA 2048 signature keys are still valid and can be used.
+-->
+
+## December 2020
+{: #december-2020}
+
+### Added: `ReencryptSingle` function in GREP11 API
+{: #add-reencryptsingle-function-grep11}
+
+The GREP11 API now supports the `ReencryptSingle` function which enables you to decrypt data with the original key and subsequently encrypt the raw data with a different key in a single call within the cloud HSM. This single call is a viable option where a large amount of data needs to be reencrypted with different keys, and bypasses the need to perform a combination of `DecryptSingle` and `EncryptSingle` functions for each data item that needs to be reencrypted. For more information, see [GREP11 API reference - `ReencryptSingle` function](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-ReencryptSingle).
+
+### Added: Support for the SLIP10 mechanism and Edwards-curve algorithm
+{: #add-slip10-eddsa}
+
+{{site.data.keyword.hscrypto}} now supports the SLIP10 mechanism for hierarchical deterministic wallets to derive private and public key pairs. It now also supports the Edwards-curve (ED) 25519 and ED448 algorithms for digital signatures. Before you can use ED algorithms, make sure to enable this feature by following the instructions in [Enabling Edwards-curve Digital Signature Algorithm](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-EdDSA).
+
+### Added: Managing EP11 keystores and keys with the {{site.data.keyword.cloud_notm}} console
+{: #add-ep11-keystores-keys-console}
+
+Apart from using the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) to manage Enterprise PKCS #11 (EP11) keystores and keys, you can now use the {{site.data.keyword.cloud_notm}} console to view, create, and delete EP11 keystores and keys. For more information, see [Managing EP11 keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui) and [Managing EP11 keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui).
+
+### Added: Provisioning and managing service instances with the private-only network
+{: #add-private-only-network}
+
+To achieve increased security, you can now limit the network access to your service instance to the private-only network. You can either [choose the allowed network when you provision the service instance](/docs/hs-crypto?topic=hs-crypto-provision) or [update the network access policy after you set up the instance](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies).
+
+### Added: Support for accessing service instances through the Virtual Private Endpoint
+{: #add-vpe}
+
+You can now connect your {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) instance to your {{site.data.keyword.hscrypto}} instance through a virtual private endpoint (VPE) gateway, so that you can manage your keys using {{site.data.keyword.hscrypto}} through a private network. For more information, see [Securing connection to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-secure-connection) and [Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC](/docs/hs-crypto?topic=hs-crypto-secure-connection#create-vpe-gateway).
+
+### Added: Managing the key create and import access policy
+{: #add-key-create-import-access}
+
+After you set up your {{site.data.keyword.hscrypto}} instance, you can enable and update the key create and import access policy to control actions permissions for root keys and standard keys. For more information, see [Managing the key create and import access policy](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess).
+
+### Updated: Key management API
+{: #update-kms-api-december}
+
+The {{site.data.keyword.hscrypto}} key management API is updated with the following changes:
+
+- Updated: The API methods for the following key actions are now transitioned to individual request paths. The generic path format (except the action of restoring a key) is `/api/v2/keys/<key_ID>/actions/<action>` where `key_ID` is the UUID of the key and `action` is the action name that you want to execute.
+  - [Wrap a key](/apidocs/hs-crypto#wrapkey)
+  - [Unwrap a key](/apidocs/hs-crypto#unwrapkey)
+  - [Rewrap a key](/apidocs/hs-crypto#rewrapkey)
+  - [Rotate a key](/apidocs/hs-crypto#rotatekey)
+  - [Authorize deletion for a key with a dual authorization policy](/apidocs/hs-crypto#setkeyfordeletion)
+  - [Remove an authorization for a key with a dual authorization policy](/apidocs/hs-crypto#unsetkeyfordeletion)
+  - [Enable operations for a key](/apidocs/hs-crypto#enablekey)
+  - [Disable operations for a key](/apidocs/hs-crypto#disablekey)
+  - [Restore a key](/apidocs/hs-crypto#restorekey)
+
+- Updated: You can now use the following two methods to manage the allowed network policy and the key create and import access policy:
+  - [Set instance policies](/apidocs/hs-crypto#putinstancepolicy)
+  - [List instance policies](/apidocs/hs-crypto#getinstancepolicy)
+
+- Deprecated: [Invoke an action on a key](/apidocs/hs-crypto#actiononkey)
+
+  This method is originally used for performing actions on a key, such as wrap, unwrap, and rotate. It is now replaced with individual request path for each action.
+
+For more information about the API updates, see [{{site.data.keyword.hscrypto}} key management API reference](/apidocs/hs-crypto){: external}.
 
 ## November 2020
 {: #november-2020}
@@ -54,7 +120,7 @@ To learn more about the PKCS #11 API, see [Introducing PKCS #11](/docs/hs-crypto
 ### Added: Master key rotation
 {: #added-master-key-rotation}
 
-You can now rotate your master key on-demand by using the {{site.data.keyword.cloud}} Trusted Key Entry CLI plug-in so as to meet industry standards and cryptographic best practices. For more information on how it works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-key-rotation#master-key-rotation-intro).
+You can now rotate your master key on demand by using the {{site.data.keyword.cloud}} Trusted Key Entry CLI plug-in so as to meet industry standards and cryptographic best practices. For more information on how it works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-key-rotation#master-key-rotation-intro).
 
 For the detailed instructions, see [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli).
 
@@ -135,7 +201,7 @@ For more information, see [Integrating services](/docs/hs-crypto?topic=hs-crypto
 
 You can now connect to {{site.data.keyword.hscrypto}} over the {{site.data.keyword.cloud_notm}} private network by targeting a private endpoint for the Enterprise PKCS #11 service.
 
-To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your infrastructure account. For more information, see [Using private endpoints](/docs/hs-crypto?topic=hs-crypto-private-endpoints).
+To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your infrastructure account. For more information, see [Using private endpoints](/docs/hs-crypto?topic=hs-crypto-secure-connection).
 
 ## August 2019
 {: #August-2019}
@@ -154,7 +220,7 @@ For more information about the GREP11 API, see [Introducing EP11 over gRPC](/doc
 
 You can now connect to {{site.data.keyword.hscrypto}} over the {{site.data.keyword.cloud_notm}} private network by targeting a private endpoint for the service.
 
-To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your infrastructure account. For more information, see [Using private endpoints](/docs/hs-crypto?topic=hs-crypto-private-endpoints).
+To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your infrastructure account. For more information, see [Using private endpoints](/docs/hs-crypto?topic=hs-crypto-secure-connection).
 
 ### Added: {{site.data.keyword.hscrypto}} expands into the Frankfurt region
 {: #added-frankfurt-region}

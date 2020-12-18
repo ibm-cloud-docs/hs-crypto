@@ -52,8 +52,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/metadat
     The ID value is used to access detailed information about the key. You can
     find the ID for a key in your service instance by
     [retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys),
-    or by accessing the {{site.data.keyword.hscrypto}}
-    dashboard.
+    or by accessing the {{site.data.keyword.cloud_notm}} console.
 
 3. Get details about the key by running the following cURL command.
 

@@ -31,17 +31,17 @@ Audit your key configuration regularly:
 
 For more information about auditing access to your resources, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
 
-## Viewing root keys or standard keys with the GUI
+## Viewing root keys or standard keys with the console
 {: #view-key-gui}
 
-If you prefer to inspect the keys in your service by using a graphical interface, you can use the {{site.data.keyword.hscrypto}} dashboard.
+If you prefer to inspect the keys in your service by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 
 [After you create or import your existing keys into the service](/docs/hs-crypto?topic=hs-crypto-create-root-keys), complete the following steps to view your keys.
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Manage keys** page, browse the general characteristics of your keys in the **Keys** table:
+4. On the **Key management service keys** page, browse the general characteristics of your keys in the **Keys** table:
 
     <table>
       <tr>

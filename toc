@@ -61,67 +61,82 @@ Hyper Protect Crypto Services
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
+    provision.md
+
     {: .topicgroup}
-    Setting up the service
-        provision.md
+    Initializing service instances
         initialize-hsm-cli.md
 
-        {: .topicgroup}
+        {: topicgroup}
         Initializing service instances with the Management Utilities
             prepare-management-utilities.md
             initialize-hsm-management-utilities.md
 
+    {: .topicgroup}
+    Managing instance policies
+        settings-network-policy.md
         settings-dual-auth.md
+        settings-key-create-import-access.md
+
+    retrieve-access-token.md
+    retrieve-instance-id.md
 
     {: .topicgroup}
     Setting up API calls
         set-up-kms-api.md
         set-up-pkcs-api.md
         set-up-grep11-api.md
-        retrieve-access-token.md
-        retrieve-instance-id.md
 
     set-up-cli.md
 
     {: .topicgroup}
-    Creating keys
-        create-root-keys.md
-        create-standard-keys.md
+    Managing key management service keys
+
+        {: .topicgroup}
+        Creating keys
+            create-root-keys.md
+            create-standard-keys.md
+
+        {: .topicgroup}
+        Importing keys
+            import-root-keys.md
+            import-standard-keys.md
+            create-import-tokens.md
+
+        {: .topicgroup}
+        Viewing keys
+            view-keys.md
+            view-key-details.md
+            retrieve-key.md
+
+        {: .topicgroup}
+        Protecting keys
+            wrap-keys.md
+            unwrap-keys.md
+            rewrap-keys.md
+
+        {: .topicgroup}
+        Rotating keys
+            set-rotation-policy.md
+            rotate-keys.md
+            view-key-versions.md
+
+        disable-keys.md
+
+        {: .topicgroup}
+        Deleting keys
+            delete-keys.md
+            delete-dual-auth-keys.md
+            set-dual-auth-policy.md
+
+        restore-keys.md
 
     {: .topicgroup}
-    Importing keys
-        import-root-keys.md
-        import-standard-keys.md
-        create-import-tokens.md
+    Managing Enterprise PKCS #11 keystores and keys
+        manage-pkcs11-keystores.md
+        manage-pkcs11-keys.md
 
-    {: .topicgroup}
-    Viewing keys
-        view-keys.md
-        view-key-details.md
-        retrieve-key.md
-
-    {: .topicgroup}
-    Protecting keys
-        wrap-keys.md
-        unwrap-keys.md
-        rewrap-keys.md
-
-    {: .topicgroup}
-    Rotating keys
-        rotate-master-key.md
-        set-rotation-policy.md
-        rotate-keys.md
-        view-key-versions.md
-
-    disable-keys.md
-
-    {: .topicgroup}
-    Deleting keys
-        delete-keys.md
-        delete-dual-auth-keys.md
-        set-dual-auth-policy.md
-
-    restore-keys.md
+    rotate-master-key.md
     enable-mechanisms.md
     add-remove-crypto-units.md
     delete-instance.md
@@ -130,9 +145,10 @@ Hyper Protect Crypto Services
     Enhancing security
         manage-access.md
         grant-access-keys.md
+        secure-connection.md
         pkcs11-best-practices.md
-        crypto-private-network.md
         at-events.md
+        manage-security-compliance.md
 
     {: .topicgroup}
     High availability and disaster recovery

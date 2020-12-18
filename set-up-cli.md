@@ -47,7 +47,7 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
 
     To find out the regions that {{site.data.keyword.hscrypto}} supports, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
-  * On the Windows&reg; operating system, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a KP_PRIVATE_ADDR environment variable and set the value to the endpoint that is displayed on the **Manage** tab of your provisioned {{site.data.keyword.hscrypto}} dashboard. For example, `https://api.us-south.hs-crypto.cloud.ibm.com:<port>`.
+  * On the Windows&reg; operating system, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a KP_PRIVATE_ADDR environment variable and set the value to the endpoint that is displayed on the **Manage** tab of your provisioned {{site.data.keyword.cloud_notm}} console. For example, `https://api.us-south.hs-crypto.cloud.ibm.com:<port>`.
 
   You can also retrieve the endpoint URL through the API. For details, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
 
@@ -63,7 +63,7 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
     ```
     {: pre}
 
-    In this command, the *instance_ID* is displayed on the **Manage** tab of your provisioned {{site.data.keyword.hscrypto}} dashboard. *instance_ID* is in a Universally Unique Identifier (UUID) format.
+    In this command, the *instance_ID* is displayed on the **Manage** tab of your provisioned {{site.data.keyword.cloud_notm}} console. *instance_ID* is in a Universally Unique Identifier (UUID) format.
 
   * On Windows, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a KP_INSTANCE_ID environment variable and set the value to the instance ID value that is displayed on the **Manage** tab of your provisioned {{site.data.keyword.hscrypto}} dashboard.
 

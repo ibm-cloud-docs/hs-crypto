@@ -20,10 +20,10 @@ subcollection: hs-crypto
 # Creating standard keys
 {: #create-standard-keys}
 
-You can create a standard encryption key with the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} GUI, or programmatically with the {{site.data.keyword.hscrypto}} key management API.
+You can create a standard encryption key with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
-## Creating standard keys with the GUI
+## Creating standard keys with the console
 {: #standard-key-gui}
 
 [After you create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision), complete the following steps to create a standard key with the {{site.data.keyword.hscrypto}} GUI.
@@ -34,7 +34,7 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. To create a new key, select the **Manage keys** tab in the side menu.
+4. To create a new key, select the **Key management service keys** tab in the side menu.
 5. In the **Keys** table, click **Add key**, and select **Create a key**.
 
     Specify the key's details:

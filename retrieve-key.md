@@ -53,7 +53,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
     The ID value is used to access detailed information about the standard key, such as
     the key material itself. You can retrieve the ID for a specified key by
     making a `GET /v2/keys` request, or by accessing the
-    {{site.data.keyword.hscrypto}} GUI.
+    {{site.data.keyword.cloud_notm}} console.
 
 3. Run the following cURL command to get details about your key and the key
 material.

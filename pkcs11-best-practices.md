@@ -61,7 +61,7 @@ You need to create two custom roles, one for operating keys and one for operatin
 ### 1. Create a custom role for operating keys
 {: #create-key-operator}
 
-This role is used to generate and manage keys in the PKCS #11 keystores. However, this role does not have permissions to manage PKCS #11 keystores.
+This role is used to generate and manage keys in the Enterprise PKCS #11 (EP11) keystores. However, this role does not have permissions to manage EP11 keystores.
 
 1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)**, and select **Roles**.
 2. Click **Create**.
@@ -98,7 +98,7 @@ This role is used to generate and manage keys in the PKCS #11 keystores. However
 ### 2. Create a custom role for operating keystores
 {: #create-keystore-operator}
 
-This role is used to create and delete PKCS #11 keystores but does not have permissions to manage keys.
+This role is used to create and delete EP11 keystores but does not have permissions to manage keys.
 
 1. In the {{site.data.keyword.cloud}} console, go to **Manage** > **Access (IAM)**, and select **Roles**.
 2. Click **Create**.

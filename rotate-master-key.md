@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-08-24"
+lastupdated: "2020-12-03"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -17,8 +17,6 @@ subcollection: hs-crypto
 {:important: .important}
 {:tip: .tip}
 {:note: .note}
-{:hide-in-docs: .hide-in-docs}
-{:hide-dashboard: .hide-dashboard}
 {:external: target="_blank" .external}
 {:term: .term}
 
@@ -26,7 +24,7 @@ subcollection: hs-crypto
 # Rotating master keys
 {: #rotate-master-key-cli}
 
-You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance on a regular basis to meet industry standards and cryptographic best practices. You can rotate your master key on-demand by using the {{site.data.keyword.cloud_notm}} TKE CLI plug-in.
+You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance on a regular basis to meet industry standards and cryptographic best practices. You can rotate your master key on demand by using the {{site.data.keyword.cloud_notm}} TKE CLI plug-in.
 {: shortdesc}
 
 Before you start rotating the master key, make sure that you understand {{site.data.keyword.hscrypto}} concepts, such as [master keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-concept), [master key parts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-part-concept), and [signature keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-key-concept), and understand [how a master key is rotated](/docs/hs-crypto?topic=hs-crypto-key-rotation#how-master-key-rotation-works) .
@@ -39,7 +37,7 @@ After the master key is rotated, all root keys encrypted by the current master k
 Before you start, make sure that you have done the following:
 
 1. [Install the TKE CLI and set the environment variable CLOUDTKEFILES on your workstation](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites).
-2. Check and make sure that the Current Master Key Register is in `Valid` state with [the current master key loaded](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#load-master-keys), the New Master Key Register is empty, and the crypto units of the service instance are not in [imprint mode](/docs/hs-crypto?topic=hs-crypto-understand-concepts#imprint-mode-concept) by running the following command:
+2. Check and make sure that the current master key register is in `Valid` state with [the current master key loaded](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#load-master-keys), the new master key register is empty, and the crypto units of the service instance are not in [imprint mode](/docs/hs-crypto?topic=hs-crypto-understand-concepts#imprint-mode-concept) by running the following command:
 
   ```
   ibmcloud tke cryptounit-compare
@@ -47,7 +45,6 @@ Before you start, make sure that you have done the following:
   {: pre}
 3. The new master key parts are prepared for rotation. For information on how to create a new master key part, see [Create a set of master key parts to use](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step4-create-master-key).
 4. [Log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cli-getting-started#step3-configure-idt-env){: external}. If you have multiple accounts, select the account that your service instance is created with. Make sure that you're logged in to the correct region and resource group where the service instance locates with the following command:
-{: #initialize-crypto-prerequisites2}
 
   ```
   ibmcloud target -r <region> -g <resource_group>
@@ -61,7 +58,7 @@ Before you start, make sure that you have done the following:
 
 To rotate the master key, follow these steps:
 
-1. Load the new master key parts to the New Master Key Register with the following command:
+1. Load the new master key parts to the new master key register with the following command:
 
   ```
   ibmcloud tke cryptounit-mk-load
@@ -74,9 +71,9 @@ To rotate the master key, follow these steps:
 
   When prompted, enter the master key parts to be loaded into the new master key register, the password for the signature key file to be used, and password for each selected key part file sequentially.
 
-  The new master key is now in `Full uncommited` state in the New Master Key Register.
+  The new master key is now in `Full uncommited` state in the new master key register.
 
-  To load a new master key, you need to enter at least two master key parts. Make sure that at least one master key part is not used for the current master key. Otherwise, the same master key is generated and you are not able to load it to the New Master Key Register.
+  To load a new master key, you need to enter at least two master key parts. Make sure that at least one master key part is not used for the current master key. Otherwise, the same master key is generated and you are not able to load it to the new master key register.
   {: important}
 
 2. Commit the new master key with the following command:
@@ -88,7 +85,7 @@ To rotate the master key, follow these steps:
 
   When prompted, enter the passwords for the signature key files to be used.
 
-  The new master key is now in `Full commited` state in the New Master Key Register.
+  The new master key is now in `Full commited` state in the new master key register.
 
 3. If you have any encryption keys that are encrypted with the current master key using the GREP11 API and are not stored in the {{site.data.keyword.hscrypto}} keystore, call the [RewrapKeyBlob GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-rewrapKeyBlob) to reencrypt the keys with the new master key.
 
@@ -127,7 +124,7 @@ To rotate the master key, follow these steps:
 
     A success message is displayed when the master key rotation is completed.
 
-    The new master key is now in `Valid` state in the Current Master Key Register. Check out [Master key rotation](/docs/hs-crypto?topic=hs-crypto-key-rotation#how-master-key-rotation-works) for information on how the key states change.
+    The new master key is now in `Valid` state in the current master key register. Check out [Master key rotation](/docs/hs-crypto?topic=hs-crypto-key-rotation#how-master-key-rotation-works) for information on how the key states change.
 
 You have successfully rotated the currently master key with the new master key. Your root keys and encryption keys are now well-protected by the new master key.
 
@@ -135,5 +132,5 @@ You have successfully rotated the currently master key with the new master key. 
 {: #rotate-master-key-next}
 
 - To learn more about key rotation, check out [Key rotation introduction](/docs/hs-crypto?topic=hs-crypto-key-rotation).
-- Go to the **Manage** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+- Go to the **Key management service keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
 - To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).

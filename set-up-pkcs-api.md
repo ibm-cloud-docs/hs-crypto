@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-26"
+lastupdated: "2020-12-02"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -181,7 +181,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
       </tr>
       <tr>
         <td><em>EP11_endpoint_URL</em></td>
-        <td>The {{site.data.keyword.hscrypto}} Enterprise PKCS #11 (EP11) API endpoint. You can get it through <strong>Overview</strong> &gt; <strong>Connect</strong> &gt; <strong>EP11 endpoint URL</strong> in the {{site.data.keyword.cloud_notm}} console, or you can dynamically [retrieve the endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external} with the API. Depending on whether you are using a public or [private network](/docs/hs-crypto?topic=hs-crypto-private-endpoints), use the public or private EP11 endpoint URL accordingly. </td>
+        <td>The {{site.data.keyword.hscrypto}} Enterprise PKCS #11 (EP11) API endpoint. You can get it through <strong>Overview</strong> &gt; <strong>Connect</strong> &gt; <strong>EP11 endpoint URL</strong> in the {{site.data.keyword.cloud_notm}} console, or you can dynamically [retrieve the endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external} with the API. Depending on whether you are using a public or [private network](/docs/hs-crypto?topic=hs-crypto-secure-connection), use the public or private EP11 endpoint URL accordingly. </td>
       </tr>
       <tr>
         <td><em>EP11_endpoint_port_number</em></td>
@@ -198,7 +198,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
       <tr>
         <td><em>private_key_store_spaceid</em></td>
         <td>
-        <p>The 128-bit [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html){: external} of the private keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/).</p> <p>{{site.data.keyword.hscrypto}} provides you with two database-backed PKCS #11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access.</p>
+        <p>The 128-bit [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html){: external} of the private keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/).</p> <p>{{site.data.keyword.hscrypto}} provides you with two database-backed EP11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access.</p>
         </td>
       </tr>
       <tr>
@@ -208,7 +208,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
       <tr>
         <td><em>public_key_store_spaceid</em></td>
         <td>
-          <p>The 128-bit [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html){: external} of the public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/).</p> <p>{{site.data.keyword.hscrypto}} provides you with two database-backed PKCS #11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access.</p>
+          <p>The 128-bit [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html){: external} of the public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/).</p> <p>{{site.data.keyword.hscrypto}} provides you with two database-backed EP11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access.</p>
         </td>
       </tr>
       <tr>

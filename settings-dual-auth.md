@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-28"
+lastupdated: "2020-11-04"
 
 keywords: instance settings, service settings, dual authorization
 
@@ -28,16 +28,16 @@ After you set up your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}
 instance, you can manage dual authorization by using the key management API.
 {: shortdesc}
 
+This policy only applies to key management service keys and related operations.
+{: important}
+
+## Understanding dual authorization of your service instance
+{: #understand-daul-auth-policy}
+
 Dual authorization for {{site.data.keyword.hscrypto}} instances is an extra policy that helps to prevent accidental or malicious
 deletion of keys. When you enable this policy at the instance level,
 {{site.data.keyword.hscrypto}} requires an authorization from
 two users to delete any keys that are created after the policy is enabled.
-
-The dual authorization capability is available only through the
-{{site.data.keyword.hscrypto}} key management API. To find out more about
-accessing the {{site.data.keyword.hscrypto}} key management API, check out
-[Setting up the API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
-{: preview}
 
 Before you enable dual authorization for your service instance, keep in mind the
 following considerations:
@@ -49,31 +49,27 @@ existing keys are not affected by the policy change and will still require a
 single authorization for deletion.
 - **You can always disable a dual authorization policy for your service instance.**
 If you want to
-[disable an existing dual authorization policy](#disable-dual-auth-instance-policy)
+disable an existing dual authorization policy
 to allow for single authorization, keep in mind that the change is applicable
 only for future keys that you add to the instance. Any existing keys that were
 created under a dual authorization policy will continue to require actions from
 two users before the keys can be deleted. After a key inherits a dual
 authorization policy, the policy cannot be reverted.
 
-## Enabling dual authorization for your service instance
-{: #enable-dual-auth-instance-policy}
-
-### Enabling dual authorization for your service instance with the GUI
+## Enabling dual authorization for your service instance with the console
 {: #enable-dual-auth-instance-policy-ui}
 
-If you prefer to enable a dual authorization policy on your instance by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
+As an instance manager, if you prefer to enable a dual authorization policy on your instance by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 
 After creating a service instance, complete the following steps to create a dual authorization policy:
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
-3. From your {{site.data.keyword.cloud_notm}} resource list, select your
-provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Manage instance policies** page, choose **Dual authorization deletion policy** and hit the switch to enable the policy.
-5. Click **Create policy**. If you disabled the policy before, click **Update policy**.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
+4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
+5. In the **Dual authorization deletion** section, check the box for `Require two users to approve key deletions`, and click **Save policy**.
 
-### Enabling dual authorization for your service instance with the API
+## Enabling dual authorization for your service instance with the API
 {: #enable-dual-auth-instance-policy-api}
 
 As an instance manager, enable a dual authorization policy for a
@@ -87,7 +83,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/instance/policies?pol
 
 1. [Retrieve your authentication credentials to work with the API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
-    To enable and disable dual authorization policies, you must be assigned a
+    To enable and disable dual authorization policy, you must be assigned a
     _Manager_ access policy for your service instance. To learn how IAM roles
     map to {{site.data.keyword.hscrypto}} service actions,
     check out
@@ -213,21 +209,20 @@ the policies that are available for your
     ```
     {: codeblock}
 
-## Disabling dual authorization for your service instance
-{: #disable-dual-auth-instance-policy}
-
-### Disabling dual authorization for your service instance with the GUI
+## Disabling dual authorization for your service instance with the console
 {: #disable-dual-auth-instance-policy-ui}
 
-If you prefer to disable a dual authorization policy on your instance by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console. Complete the following steps to disable a dual authorization policy:
+As an instance manager, if you prefer to disable a dual authorization policy on your instance by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
+
+After creating a service instance, complete the following steps to create a dual authorization policy:
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Manage instance policies** page, choose **Dual authorization deletion policy** and hit the switch to disable the policy.
-5. Click **Update policy**.
+4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
+5. In the **Dual authorization deletion** section, clear the box for `Require two users to approve key deletions`, and click **Save policy**.
 
-### Disabling dual authorization for your service instance with the API
+## Disabling dual authorization for your service instance with the key management API
 {: #disable-dual-auth-instance-policy-api}
 
 As an instance manager, disable an existing dual authorization policy for a
@@ -241,7 +236,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/instance/policies?pol
 
 1. [Retrieve your authentication credentials to work with the API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
-    To enable and disable dual authorization policies, you must be assigned a
+    To enable and disable dual authorization policy, you must be assigned a
     _Manager_ access policy for your service instance. To learn how IAM roles
     map to {{site.data.keyword.hscrypto}} service actions,
     check out

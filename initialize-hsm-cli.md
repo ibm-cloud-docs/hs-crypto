@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-25"
+lastupdated: "2020-12-08"
 
 keywords: key storage, hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, key part, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -30,7 +30,7 @@ subcollection: hs-crypto
 Before you can use the {{site.data.keyword.hscrypto}} instance (service instance for short), you need to first initialize your service instance by loading the [master key](#x2908413){: term} to your service instance. You can choose to load the master key from smart cards with the {{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities or from your workstation with the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) command-line interface (CLI) plug-in. To load the master key with {{site.data.keyword.cloud_notm}} TKE CLI plug-in, follow these steps.
 {: shortdesc}
 
-For an introduction to the options of service instance initialization and other fundamental concepts, see [Introduction to service instance initialization](/docs/hs-crypto?topic=hs-crypto-introduce-service#introduce-service) and {{site.data.keyword.hscrypto}} [components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
+For an introduction to the options of service instance initialization and other fundamental concepts, see [Introduction to service instance initialization](/docs/hs-crypto?topic=hs-crypto-introduce-service) and {{site.data.keyword.hscrypto}} [components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
 
 The following diagram gives you an overview of steps you need to take to initialize the service instance. Click each step on the diagram for detailed instructions.
 
@@ -46,7 +46,7 @@ The following diagram gives you an overview of steps you need to take to initial
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" alt="Set up local directory for key files" title="Set up local directory for key files" shape="rect" coords="528, 32, 628, 82" />
 
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units" alt="Display assigned crypto units" title="Display assigned crypto units" shape="rect" coords="126, 123, 226, 173" />
-  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units1" alt="Add crypto units" title="Add crypto units" shape="rect" coords="260, 123, 360, 173" />
+  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units2" alt="Add crypto units" title="Add crypto units" shape="rect" coords="260, 123, 360, 173" />
 
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step1-create-signature-keys" alt="Create one or more signature keys" title="Create signature keys" shape="rect" coords="126, 214, 226, 264" />
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Manage crypto unit administrators" title="Manage crypto unit administrators" shape="rect" coords="260, 214, 360, 264" />
@@ -100,17 +100,17 @@ It might take 20 - 30 minutes for you to complete this task.
 
   * On Windows&reg;, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a `CLOUDTKEFILES` environment variable, set the value to the path for storing reference files (For example, `C:\users\tke-files`), and restart your computer.
 
-## Adding or removing crypto units that are assigned to a user account
+## Adding or removing crypto units that are assigned to service instances
 {: #Identify_crypto_units}
 
-[Crypto units](#x9860404){: term} that are assigned to an {{site.data.keyword.cloud_notm}} user account are in a group that is known as *a service instance*. A service instance can have up to six crypto units. All crypto units in a service instance need to be configured the same. If one part of the {{site.data.keyword.cloud_notm}} can't be accessed, the crypto units in a service instance can be used interchangeably for load balancing or for availability.
+[Crypto units](#x9860404){: term} that are assigned to an {{site.data.keyword.cloud_notm}} user account are in groups that are known as *service instances*. A service instance can have up to six crypto units. All crypto units in a service instance need to be configured the same. If one part of the {{site.data.keyword.cloud_notm}} can't be accessed, the crypto units in a service instance can be used interchangeably for load balancing or for availability.
 
 Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start in a cleared state that is known as [imprint mode](#x9860399){: term}.
 
 The master key registers in all crypto units in a single service instance must be set the same. The same set of administrators must be added in all crypto units, and all crypto units must exit imprint mode at the same time.
 
-* To display the service instances and crypto units that are assigned to a user account, use the following command:
-  {: #Identify_crypto_units1}
+* To display the service instances and crypto units in the target resource group under the current user account, use the following command:
+
   ```
   ibmcloud tke cryptounits
   ```
@@ -138,16 +138,19 @@ The master key registers in all crypto units in a single service instance must b
   ```
   {: pre}
 
-  A list of the crypto units that are assigned to the current user account is displayed. When prompted, enter a list of crypto unit numbers to be added to the selected crypto unit list.
+  A list of the crypto units in the target resource group under the current user account is displayed. When prompted, enter a list of crypto unit numbers to be added to the selected crypto unit list.
+
+  If you are using a public network, crypto units that are associated with service instances with the network policy set to `private-only` are not to be listed. You can access private-only crypto units only through a private network. For more information about setting up a private-only connection, see [Target the private endpoint for the TKE plug-in](/docs/hs-crypto?topic=hs-crypto-secure-connection#target-tke-private-endpoint).
+  {: note}
 
 * To remove crypto units from the selected crypto unit list, use the following command:
-  {: #Identify_crypto_units3}
+
   ```
   ibmcloud tke cryptounit-rm
   ```
   {: pre}
 
-  A list of crypto units that are assigned to the current user account is displayed. When prompted, enter a list of crypto unit numbers to be removed from the selected crypto unit list.
+  A list of the crypto units in the target resource group under the current user account is displayed. When prompted, enter a list of crypto unit numbers to be removed from the selected crypto unit list.
 
   In general, either all crypto units or none of the crypto units in a service instance are selected. This operation causes later administrative commands to update all crypto units of a service instance consistently. However, if the crypto units of a service instance become configured differently, you need to select and work with crypto units individually to restore a consistent configuration to all crypto units in a service instance.
   {: tip}
@@ -160,8 +163,6 @@ The master key registers in all crypto units in a single service instance must b
 
 ## Loading master keys
 {: #load-master-keys}
-
-<!-- A service instance is implemented as one or more crypto units on IBM cryptographic coprocessors. -->
 
 Before the new master key register can be loaded, add one or more administrators in the target crypto units and exit imprint mode.
 
@@ -340,7 +341,7 @@ When prompted, enter the password for the signature key file to be used. For thi
   ibmcloud tke help
   ```
   {: pre}
-- Go to the **Manage** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+- Go to the **Key management service keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
 - To learn more about performing cryptographic operations with the cloud HSM, see [Introducing cloud HSM](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm).
 - Use {{site.data.keyword.hscrypto}} as the root key provider for other {{site.data.keyword.cloud_notm}} services. For more information about integrating {{site.data.keyword.hscrypto}}, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
 - For information on how to rotate the master key, see [Rotating master keys with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli).

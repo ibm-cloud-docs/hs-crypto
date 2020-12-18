@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-28"
+lastupdated: "2020-11-04"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -34,7 +34,7 @@ Learn concepts that are related to the {{site.data.keyword.hscrypto}} [key manag
 ### Root keys
 {: #root-key-concept}
 
-Root keys, also known as customer root keys (CRKs), are primary resources in {{site.data.keyword.hscrypto}}. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other keys that are stored in a data service. With {{site.data.keyword.hscrypto}}, you can create, store, and manage the lifecycle of root keys to achieve full control of other keys that are stored in the cloud. Unlike a standard key, a root key can never leave the bounds of the {{site.data.keyword.hscrypto}} service. To learn more, see [Introduction to envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) and [Manage your keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys).
+Root keys, also known as customer root keys (CRKs), are primary resources in {{site.data.keyword.hscrypto}}. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other data encryption keys (DEKs) that are stored in a data service. With {{site.data.keyword.hscrypto}}, you can create, store, and manage the lifecycle of root keys. Root keys that are created in {{site.data.keyword.hscrypto}} are symmetric 256-bit AES keys. Unlike a standard key, a root key can never leave the bounds of the {{site.data.keyword.hscrypto}} service. To learn more, see [Introduction to envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) and [Manage your keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys).
 
 ### Standard keys
 {: #standard-key-concept}
@@ -109,12 +109,12 @@ Setting the signature thresholds to a value greater than one enables quorum auth
 ### Master keys
 {: #master-key-concept}
 
-Master keys, also known as HSM master keys, are used to encrypt the service instances for key storage. With the master key, you take the full control of the cloud HSM and own the root of trust that encrypts the entire hierarchy of encryption keys, including root keys and standard keys. You need to configure the master key first before you can manage encryption keys. {{site.data.keyword.IBM_notm}} does not back up or touch the master key, and has no way to copy it or restore it to a different machine or data center. One service instance can have only one master key. If you delete the master key of the service instance, you can effectively crypto-shred all data that was encrypted with the keys that are managed in the service.
+Master keys, also known as HSM master keys, are used to encrypt the service instances for key storage. With the master key, you take the ownership of the cloud HSM and own the root of trust that encrypts the entire hierarchy of encryption keys, including root keys and standard keys in the key management keystore and Enterprise PKCS #11 (EP11) keys in the EP11 keystore. You need to configure the master key first before you can manage encryption keys. {{site.data.keyword.IBM_notm}} does not back up or touch the master key, and has no way to copy it or restore it to a different machine or data center. One service instance can have only one master key. If you delete the master key of the service instance, you can effectively crypto-shred all data that was encrypted with the keys that are managed in the service.
 
 ### Master key part
 {: #master-key-part-concept}
 
-A master key is composed of several master key parts. For security considerations, each key part can be owned by a different person. Key parts are stored in workstation files when the [TKE CLI plug-in](#tke-concept) is used to configure crypto units. Key parts are stored on [smart cards](#smart-card-concept) when the [{{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities](#management-utilities-concept) are used to configure crypto units. The key part owner needs to be the only person who knows the file password or the smart card personal identification number (PIN) for the key part.
+A master key is composed of several master key parts. Master key parts that are created in {{site.data.keyword.hscrypto}} are symmetric 256-bit AES keys. For security considerations, each key part can be owned by a different person. Key parts are stored in workstation files when the [TKE CLI plug-in](#tke-concept) is used to configure crypto units. Key parts are stored on [smart cards](#smart-card-concept) when the [{{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities](#management-utilities-concept) are used to configure crypto units. The key part owner needs to be the only person who knows the file password or the smart card personal identification number (PIN) for the key part.
 
 ### {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in
 {: #tke-concept}
@@ -134,7 +134,11 @@ A smart card looks like a credit card with an embedded chip. The chip can perfo
 - Certificate authority smart cards - Establish a set of smart cards that can work together, called a smart card zone.
 - Enterprise PKCS #11 (EP11) smart cards - Hold an administrator signature key and up to 85 master key parts. With EP11 smart cards, you can sign a command by using a private signature key that is stored on the smart card and encrypt a master key part for delivery to a crypto unit.
 
-Smart cards are protected by a PIN that must be entered on a smart card reader PIN pad before the smart card performs some operations.
+Smart cards are protected by a personal identification number (PIN) that must be entered on a smart card reader PIN pad before the smart card performs the operations. The EP11 smart card has a single PIN. The certificate authority smart card has two PINs and both must be entered to enable operations.
+
+On an EP11 smart card, if an incorrect PIN is entered three times, the smart card becomes blocked and can't be used for operations that require PIN entry. An EP11 smart card can be unblocked by using the Smart Card Utility Program. You need the certificate authority smart card that is used to initialize the EP11 smart card to unblock an EP11 smart card. To unblock an EP11 smart card, select **EP11 Smart Card** > **Unblock EP11 smart card** from the menu, and follow the prompts.
+
+A certificate authority smart card becomes blocked if an incorrect PIN is entered five times. If a certificate authority smart card becomes blocked, it can't be unblocked.
 
 ### Smart card readers
 {: #smart-card-reader-concept}

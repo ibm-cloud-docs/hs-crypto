@@ -22,15 +22,15 @@ subcollection: hs-crypto
 # Creating root keys
 {: #create-root-keys}
 
-You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to create [root keys](#x6946961){: term} by using the {{site.data.keyword.hscrypto}} GUI, or programmatically with the {{site.data.keyword.hscrypto}} key management API.
+You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to create [root keys](#x6946961){: term} by using the {{site.data.keyword.hscrypto}} console, or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
 Root keys are symmetric key-wrapping keys that are used to protect the security of encrypted data in the cloud. For more information about root keys, see [Envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
 
-## Creating root keys with the GUI
+## Creating root keys with the console
 {: #root-key-gui}
 
-[After you create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision), complete the following steps to create a root key with the {{site.data.keyword.hscrypto}} GUI.
+[After you create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision), complete the following steps to create a root key with the {{site.data.keyword.cloud_notm}} console.
 
 If you enable [dual authorization settings for your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth), keep in mind that any keys that you add to the service require an authorization from two users to delete keys.
 {: note}
@@ -38,7 +38,7 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. To create a new key, select the **Manage keys** tab in the side menu.
+4. To create a new key, select the **Key management service keys** tab in the side menu.
 5. In the **Keys** table, click **Add key**, and select **Create a key**.
 
     Specify the key's details:

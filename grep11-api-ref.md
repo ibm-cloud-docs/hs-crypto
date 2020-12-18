@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-11-02"
+lastupdated: "2020-12-01"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -30,7 +30,7 @@ subcollection: hs-crypto
 # Cryptographic operations: GREP11 API
 {: #grep11-api-ref}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of cryptography functions that are executed in a [Hardware Security Module (HSM)](#x6704988){: term} in the cloud. You can perform cryptographic operations by remotely accessing these functions with the Enterprise PKCS #11 (EP11) over gRPC API calls (also referred to GREP11).
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of cryptography functions that are executed in a [Hardware Security Module (HSM)](#x6704988){: term} in the cloud. You can perform cryptographic operations by remotely accessing these functions with the Enterprise PKCS #11 (EP11) over gRPC API calls (also referred to as GREP11).
 {: shortdesc}
 
 For more information about how the GREP11 functions are related to PKCS #11 and EP11, see [GREP11 introduction](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm#access-cloud-hsm-pkcs11).
@@ -43,7 +43,7 @@ A GREP11 API endpoint, a service ID API key, an IAM endpoint, and an instance ID
 ## Error handling
 {: #grep11-error-handling}
 
-Enterprise PKCS #11 (EP11) over gRPC relies on the gRPC specification for [error handling](https://grpc.io/docs/guides/error/){: external}. When an error occurs, gRPC clients receive a [`message Status` protocol buffer](https://github.com/grpc/grpc/blob/master/src/proto/grpc/status/status.proto){: external}.
+GREP11 relies on the gRPC specification for [error handling](https://grpc.io/docs/guides/error/){: external}. When an error occurs, gRPC clients receive a [`message Status` protocol buffer](https://github.com/grpc/grpc/blob/master/src/proto/grpc/status/status.proto){: external}.
 
 ```proto3
 message Status {
@@ -60,7 +60,7 @@ In the error message,
 - `message` includes a developer-facing error message in English. Any user-facing error message should be localized and sent in the `google.rpc.Status.details` field, or localized by the user.
 - `details` lists messages that carry the error details. A common set of message types is available for the API to use.
 
-Enterprise PKCS #11 (EP11) over gRPC uses the `Detail` field to attach extra error code information.
+GREP11 uses the `Detail` field to attach extra error code information.
 
 ```proto3
 message Grep11Error {
@@ -118,6 +118,7 @@ PKCS #11 functions that are marked with an asterisk (*) in the table are impleme
 |C_EncryptUpdate*|m_EncryptUpdate|EncryptUpdate|Continues a multiple-part encryption operation.|
 |C_EncryptFinal* |m_EncryptFinal|EncryptFinal|Finishes a multiple-part encryption operation.|
 |N/A            |m_EncryptSingle|EncryptSingle|{{site.data.keyword.IBM_notm}} extension, non-standard variant of `Encrypt`. Processes data in one pass, with one call. Does not return any state to host other than encrypted data.|
+|N/A   |m_ReencryptSingle| ReencryptSingle  | {{site.data.keyword.IBM_notm}} extension, non-standard variant of `Encrypt`. Decrypts data with the original key and encrypts the raw data with a different key in a single call within the cloud HSM. Does not return any state to host other than the reencrypted data. |
 |C_DecryptInit*  |m_DecryptInit|DecryptInit|Initializes a decryption operation.|
 |C_Decrypt*  |m_Decrypt|Decrypt|Decrypts single-part encrypted data.|
 |C_DecryptUpdate*|m_DecryptUpdate|DecryptUpdate|Continues a multiple-part decryption operation.|
@@ -151,7 +152,7 @@ PKCS #11 functions that are marked with an asterisk (*) in the table are impleme
 |C_GenerateKeyPair*|m_GenerateKeyPair|GenerateKeyPair|Generates a public-key/private-key pair.|
 |C_WrapKey*      |m_WrapKey|WrapKey|Wraps (encrypts) a key.|
 |C_UnwrapKey*    |m_UnwrapKey|UnwrapKey|Unwraps (decrypts) a key.|
-|N/A   | N/A  | RewrapKeyBlob  | Transfers ownership of a BLOB that is controlled by the current master key to the new master key when the new master key is committed.  |
+|N/A   | N/A  | RewrapKeyBlob  | Transfers ownership of a BLOB that is controlled by the current master key to the new master key when the new master key is committed. This function is a special administration command that is supported only by GREP11. |
 |C_DeriveKey*    |m_DeriveKey|DeriveKey|Derives a key from a base key.|
 |C_SeedRandom   |N/A|N/A|Adds seed material to the random number generator.|
 |C_GenerateRandom*|m_GenerateRandom|GenerateRandom|Generates random data. The length of the random data should not be zero and the pointer that points to the random data location should not be NULL.|
@@ -188,29 +189,29 @@ A mechanism is referred to as a process to implement a cryptographic operation. 
 
 [^services-7]: This mechanism supports only single-part operations that are not able to utilize any of the Update GREP11 functions, such as EncryptUpdate, DecryptUpdate, and DigestUpdate.
 
-## Supported attributes
+## Supported attributes and key types
 {: #grep11-attribute-list}
 
-GREP11 attributes define object characteristics that setup how an object can be used and accessed. The following table shows the supported attributes and their relationship to the various supported key types.
+GREP11 attributes define object characteristics that set up how an object can be used and accessed. The following table shows the supported attributes and their relationship to the various supported key types.
 
-|Attribute| Supported key types |
-|--------------|-----------------------|
-| CKA_TRUSTED                         |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys        |
-| CKA_KEY_TYPE                       | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
-| CKA_ENCRYPT                         |   EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys      |
-| CKA_DECRYPT                         |EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
-| CKA_WRAP                            |     EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys      |
-| CKA_UNWRAP                          | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
-| CKA_SIGN                            |EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
-| CKA_VERIFY                          |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys |
-| CKA_DERIVE                          | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
-| CKA_MODULUS_BITS                   |        RSA public keys    |
-| CKA_PUBLIC_EXPONENT                |     RSA private keys      |
-| CKA_VALUE_LEN                      |         AES keys  |
-| CKA_EXTRACTABLE                     | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
-| CKA_LOCAL                           | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
-| CKA_EC_PARAMS (CKA_ECDSA_PARAMS) | EC private keys, EC public keys        |
-| CKA_WRAP_WITH_TRUSTED             | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
+| Attribute    | Description           | Supported key types |
+|--------------|-----------------------|---------------------|
+| CKA_TRUSTED  | The certificate or key can be trusted for the application that it was created. | EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys |
+| CKA_KEY_TYPE | Type of key.      | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys  |
+| CKA_ENCRYPT  | CK_TRUE if key supports encryption. | EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys      |
+| CKA_DECRYPT  | CK_TRUE if key supports decryption. | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
+| CKA_WRAP     | CK_TRUE if key supports wrapping (can be used to wrap other keys). |   EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys      |
+| CKA_UNWRAP   | CK_TRUE if key supports unwrapping (can be used to unwrap other keys). | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
+| CKA_SIGN     | CK_TRUE if key supports signatures where the signature is an appendix to the data. | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
+| CKA_VERIFY   | CK_TRUE if key supports verification where the signature is an appendix to the data. | EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys |
+| CKA_DERIVE   | CK_TRUE if key supports key derivation (other keys can be derived from this key). Default is CK_FALSE. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_MODULUS_BITS  | Length in bits of modulus n. |       RSA public keys    |
+| CKA_PUBLIC_EXPONENT  | Public exponent e.             |     RSA private keys      |
+| CKA_VALUE_LEN  |    Length in bytes of key value.     |         AES keys  |
+| CKA_EXTRACTABLE  | CK_TRUE if key is extractable and can be wrapped. | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
+| CKA_LOCAL  | CK_TRUE only if the key was generated locally (on the token) with a `C_GenerateKey` or `C_GenerateKeyPair` call or created with a `C_CopyObject` call as a copy of a key which had its CKA_LOCAL attribute set to CK_TRUE.   | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_EC_PARAMS (CKA_ECDSA_PARAMS) | DER-encoding of an ANSI X9.62 Parameters value. | EC private keys, EC public keys        |
+| CKA_WRAP_WITH_TRUSTED  | CK_TRUE if the key can only be wrapped with a wrapping key that has CKA_TRUSTED set to CK_TRUE. Default is CK_FALSE. | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
 {: caption="Table 3. Describes the supported attributes" caption-side="bottom"}
 
 ## Performing cryptographic operations with GREP11 functions
@@ -473,7 +474,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismInfo)(
 ## Generating and deriving keys
 {: #grep11-operation-generate-keys}
 
-GREP11 provides the following functions to generate cryptographic keys for symmetric and asymmetric encryption. Based on the mechanism and key length you specify, you can generate various types of keys for various usage. You can also derive a key from a base key to stretch keys into longer keys or to obtain keys of a required format.
+GREP11 provides the following functions to generate symmetric and asymmetric cryptographic keys. Based on the mechanism and key length you specify, you can generate various types of keys for various usage. You can also derive a key from a base key to stretch keys into longer keys or to obtain keys of a required format.
 
 ### GenerateKey
 {: #grep11-GenerateKey}
@@ -1304,7 +1305,10 @@ CK_DEFINE_FUNCTION(CK_RV, C_UnwrapKey)(
 ### RewrapKeyBlob
 {: #grep11-rewrapKeyBlob}
 
-The `RewrapKeyBlob` function reencrypts generated key binary large objects (BLOBs) with the new committed master key that is contained within the HSM. Keys that are reencrypted can be used only after the HSM is finalized with the new committed master key. There is no corresponding PKCS #11 function for `RewrapKeyBlob`.
+The `RewrapKeyBlob` function reencrypts generated key binary large objects (BLOBs) with the new committed master key that is contained within the HSM. Keys that are reencrypted can be used only after the HSM is finalized with the new committed master key.
+
+This function is a special administration command that is supported only by GREP11. There is no corresponding EP11 function or PKCS #11 function for `RewrapKeyBlob`.
+{: note}
 
 <table>
   <tr>
@@ -1331,7 +1335,7 @@ The `RewrapKeyBlob` function reencrypts generated key binary large objects (BLOB
 </table>
 {: #RewrapKeyBlob_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="Encrypt"}
+{: tab-group="RewrapKeyBlob"}
 {: class="simple-tab-table"}
 
 **Code snippets**
@@ -2375,6 +2379,128 @@ CK_RV m_EncryptSingle (
   });
   ```
   {: codeblock}
+
+### ReencryptSingle
+{: #grep11-ReencryptSingle}
+
+The `ReencryptSingle` function allows you to decrypt data with the original key and subsequently encrypt the raw data with a different key in a single call within the cloud HSM. The key types used for this operation can be the same or different. This function is an IBM EP11 extension to the standard PKCS #11 specification. This single call is a viable option where a large amount of data needs to be reencrypted with different keys, and bypasses the need to perform a combination of `DecryptSingle` and `EncryptSingle` functions for each data item that needs to be reencrypted. It does not return any state to host and only returns the reencrypted data.
+
+<table>
+  <tr>
+    <th>Description</th>
+    <td>Binds to EP11 `m_ReencryptSingle`<td>
+  </tr>
+  <tr>
+    <th>Parameters</th>
+    <td>
+    <pre>
+message ReencryptSingleRequest {
+    bytes DecKey = 1;
+    bytes EncKey = 2;
+    Mechanism DecMech = 3;
+    Mechanism EncMech = 4;
+    bytes Ciphered = 5;
+}
+
+message ReencryptSingleResponse {
+    bytes Reciphered = 6;
+}
+    </pre>
+    </td>
+  </tr>
+  <tr>
+    <th>Return values</th>
+    <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
+  </tr>
+</table>
+{: #ReencryptSingle_GREP11}
+{: tab-title="Enterprise PKCS #11 over gRPC"}
+{: tab-group="ReencryptSingle"}
+{: class="simple-tab-table"}
+
+<table>
+  <tr>
+    <th>Description</th>
+	<td>
+    <p>Non-standard variant of <code>Encrypt</code>. Processes data in one pass, with one call. Does not return any state to host, only the reencrypted data.</p>
+    <p>Decrypts data with the original key and subsequently encrypts the raw data with a different key within the cloud HSM.</p>
+  </td>
+  </tr>
+  <tr>
+    <th>Parameters</th>
+    <td>
+    <pre>
+CK_RV m_ReencryptSingle (
+  const unsigned char \*dkey, size_t dkeylen,
+  const unsigned char \*ekey, size_t ekeylen,
+  CK_MECHANISM_PTR decmech,
+  CK_MECHANISM_PTR encmech,
+  CK_BYTE_PTR in, CK_ULONG inlen,
+  CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
+  target_t target);
+    </pre>
+    </td>
+  </tr>
+  <tr>
+    <th>Return values</th>
+    <td>A subset of `C_Encrypt` and `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+  </tr>
+</table>
+{: #ReencryptSingle_EP11}
+{: tab-title="Enterprise PKCS #11"}
+{: tab-group="ReencryptSingle"}
+{: class="simple-tab-table"}
+
+**Code snippets**
+
+- Golang code snippet
+
+  ```Golang
+  var msg = []byte("Data to encrypt")
+  EncryptKey1Request := &pb.EncryptSingleRequest{
+      Key:   GenerateKey1Response.KeyBytes,
+      Mech:  &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
+      Plain: msg,
+  }
+  EncryptKey1Response, err := cryptoClient.EncryptSingle(context.Background(), EncryptKey1Request)
+  if err != nil {
+      return nil, fmt.Errorf("Encrypt error: %s", err)
+  }
+
+  ReencryptSingleRequest := &pb.ReencryptSingleRequest{
+      DecKey:   GenerateKey1Response.KeyBytes, // orginal key
+      EncKey:   GenerateKey2Response.KeyBytes, // new key
+      DecMech:  &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
+      EncMech:  &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
+      Ciphered: RencryptKey1Response.Ciphered,
+  }
+
+  ReencryptSingleResponse, err := cryptoClient.ReencryptSingle(context.Background(), ReencryptSingleRequest)
+  ```
+  {: codeblock}
+
+<!--
+- JavaScript code snippet
+
+  ```JavaScript
+  client.ReencryptSingle({
+    Decmech: {
+      Mechanism: mech1,
+      Parameter: iv
+    },
+    Encmech: {
+      Mechanism: mech2,
+      Parameter: iv
+    },
+    In: encipherState.Ciphered,
+    DKey: keyBlob1,
+    Ekey: keyBlob2,
+  }, (err, response) => {
+    callback(err, response);
+  });
+  ```
+  {: codeblock}
+-->
 
 ### DecryptInit
 {: #grep11-DecryptInit}
@@ -4241,7 +4367,7 @@ message DigestInitResponse {
 	<td><p>Implementation of PKCS #11 <code>C_DigestInit</code>.</p>
   <p>Create wrapped digest state.</p>
   <p>**Note**: size queries are supported, but the wrapped state is always returned by the backend, unlike most size queries (which return an output size, instead of actual output). <code>Digest</code> states are sufficiently small that they do not introduce noticeable transport overhead.</p>
-  <p>During size queries, the host just discards the returned state, and reports blob size (in <code>len</code>).  When blob is being returned, *len is checked against returned size.</p>
+  <p>During size queries, the host just discards the returned state, and reports blob size (in <code>len</code>).  When blob is being returned, <code>len</code> is checked against returned size.</p>
   <p>The <code>state</code>,<code>len</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must tie blob to session.)</p></td>
   </tr>
   <tr>

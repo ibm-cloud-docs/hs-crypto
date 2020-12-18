@@ -70,7 +70,7 @@ Retrieve the unique identifier that is associated with the key that you want to 
 
 To get the ID for a specific key, you can:
 
-- [Access the {{site.data.keyword.hscrypto}} GUI](/docs/hs-crypto?topic=hs-crypto-view-keys#view-key-gui) to browse the keys that are stored in your service instance.
+- [Access the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-view-keys#view-key-gui) to browse the keys that are stored in your service instance.
 - [Use the {{site.data.keyword.hscrypto}} key management API](/docs/hs-crypto?topic=hs-crypto-view-keys#retrieve-keys-api) to retrieve a list of your keys, along with metadata about the keys.
 
 ### Step 2. Create an access policy

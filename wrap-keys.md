@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-16"
+lastupdated: "2020-11-17"
 
 keywords: root key, wrap key, encrypt data encryption key, protect data encryption key, key wrap api
 
@@ -41,7 +41,7 @@ When you supply a root key for wrapping, ensure that the root key is 128, 192, o
 [After you designate a root key in the service](/docs/hs-crypto?topic=hs-crypto-create-root-keys), you can wrap a DEK with advanced encryption by making a `POST` call to the following endpoint.
 
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap
+https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/wrap
 ```
 {: codeblock}
 
@@ -58,7 +58,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
 
     ```cURL
     curl -X POST \
-      'https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=wrap' \
+      'https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/wrap' \
       -H 'accept: application/vnd.ibm.kms.key_action+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-29"
+lastupdated: "2020-11-25"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -54,12 +54,14 @@ To get started, you need the {{site.data.keyword.cloud_notm}} CLI so that you ca
 
 1. Create an [{{site.data.keyword.cloud_notm}} account](https://{DomainName}){: external}.
 2. Download and install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started) for your operating system.
-3. Download and install the [{{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in](/docs/key-protect?topic=key-protect-set-up-cli) v0.4.0 or later, and [configure it to use in {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-set-up-cli).
+3. Download and install the [{{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in](/docs/key-protect?topic=key-protect-set-up-cli) v0.4.0 or later, and [configure it to use in {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-set-up-cli). Make sure to update the `KP_PRIVATE_ADDR` variable to the current instance key management endpoint URL.
+
   To check your {{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in version:
   ```
   ibmcloud plugin show key-protect
   ```
   {: pre}
+
   To update your {{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in to the latest version:
   ```
   ibmcloud plugin update key-protect -r 'IBM Cloud'
@@ -134,8 +136,7 @@ In the following step, you'll create a [import token](/docs/hs-crypto?topic=hs-c
   * **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
 
     ```
-    ibmcloud kp import-token create --max-retrievals=1 --expiration=1200 > createImportTokenResponse.json
-
+    ibmcloud kp import-token create --instance-id $INSTANCE_ID --max-retrievals=1 --expiration=1200 > createImportTokenResponse.json
     ```
     {: pre}
 
@@ -284,7 +285,7 @@ To encrypt the nonce value:
     The binary contains a script that you can use to run AES-CBC encryption on the nonce value by using the key that you generated in [step 2](#tutorial-import-retrieve-token). To learn more about the script, [check out the source file on GitHub](https://github.com/IBM-Cloud/kms-samples/blob/master/secure-import/encrypt.go){:external}.
     {: note}
 
-  2. If you are using Linux, mark the file as executable by running the following  `chmod` command. You can skip this step if you are using Windows. 
+  2. If you are using Linux, mark the file as executable by running the following  `chmod` command. You can skip this step if you are using Windows.
 
     ```sh
     chmod +x ./kms-encrypt-nonce
@@ -405,7 +406,7 @@ To import the key:
             "type": "application/vnd.ibm.kms.key+json",
             "payload": "'"$ENCRYPTED_KEY"'",
             "extractable": false,
-            "encryptionAlgorithm": "RSAES_OAEP_SHA_256",
+            "encryptionAlgorithm": "RSAES_OAEP_SHA_1",
             "encryptedNonce": "'"$ENCRYPTED_NONCE"'",
             "iv": "'"$IV"'"
           }
@@ -569,7 +570,7 @@ After you set up an {{site.data.keyword.cloud_notm}} account, complete the follo
 ## Step 2. Initialize the {{site.data.keyword.hscrypto}} service instance
 {: #tutorial-initialize-instance}
 
-1. Install the Trusted Key Entry plugin with the following command:
+1. Install the Trusted Key Entry plug-in with the following command:
 
     ```sh
     ibmcloud plugin install tke

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-28"
+lastupdated: "2020-12-09"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -66,9 +66,9 @@ For detailed steps and best practices of using the TKE CLI plug-in, see [Initial
 ### Managing your encryption keys through key management service
 {: #manage-keys-dashboard}
 
-From the {{site.data.keyword.hscrypto}} dashboard, you can create new root keys or standard keys for data encryption, or you can import your existing keys. For more information about root keys and standard keys, see [Key management service components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts).
+From the {{site.data.keyword.cloud_notm}} console, you can create new root keys or standard keys for data encryption, or you can import your existing keys. For more information about root keys and standard keys, see [Key management service components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts).
 
-This tutorial walks you through the procedure in the GUI. If you want to manage encryption keys using the key management API or CLI, check out [the API reference](/apidocs/hs-crypto){: external} and [the CLI reference](/docs/key-protect?topic=key-protect-cli-reference){: external}.
+This tutorial walks you through the procedure in the console. If you want to manage encryption keys using the key management API or CLI, check out [the API reference](/apidocs/hs-crypto){: external} and [the CLI reference](/docs/key-protect?topic=key-protect-cli-reference){: external}.
 {: note}
 
 #### Creating new keys
@@ -76,7 +76,7 @@ This tutorial walks you through the procedure in the GUI. If you want to manage 
 
 Complete the following steps to create your first cryptographic key.
 
-1. From the {{site.data.keyword.hscrypto}} console, click **Manage keys** &gt; **Add key**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **Key management service keys** &gt; **Add key**.
 2. To create a new key, select **Create a key**.
 
     Specify the key's details:
@@ -111,7 +111,7 @@ You can bring your existing keys to the service, so that you can still use the s
 
 Complete the following steps to add an existing key.
 
-1. From the {{site.data.keyword.hscrypto}} dashboard, click **Manage keys** &gt; **Add key**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **Key management service keys** &gt; **Add key**.
 2. To upload an existing key, select **Import a key**.
 
     Specify the key's details:
@@ -141,7 +141,7 @@ Complete the following steps to add an existing key.
 
 3. When you finish filling out the key's details, click **Import key** to confirm.
 
-From the {{site.data.keyword.hscrypto}} dashboard, you can inspect the general characteristics of your new keys.
+From the {{site.data.keyword.cloud_notm}} console, you can inspect the general characteristics of your new keys.
 
 ### Encrypting your data with cloud HSM
 {: #encrypt-data-hsm-dashboard}
@@ -232,6 +232,19 @@ To run the sample code, perform the following steps:
   ok  	github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/golang/examples	1.667s
   ```
 
+## (Optional) Step 3: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC
+{: #get-started-vpe-gateway-dashboard}
+{: hide-in-docs}
+{: notoc}
+
+If you have an [{{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) instance](/docs/vpc?topic=vpc-getting-started), you can connect the VPC instance to your {{site.data.keyword.hscrypto}} instance through [a virtual private endpoint (VPE) gateway](/docs/vpc?topic=vpc-about-vpe), so that you can manage your keys using {{site.data.keyword.hscrypto}} through a private network.
+
+Follow these steps:
+
+1. [Provision a generation 2 VPC instance](/docs/vpc?topic=vpc-getting-started).
+2. [Enable a private endpoint for your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-secure-connection).
+3. [Create a {{site.data.keyword.hscrypto}} VPE gateway for your VPC instance](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
+
 <!-- The following is shown in docs app-->
 
 ## Before you begin
@@ -270,9 +283,9 @@ For detailed steps and best practices of using the TKE CLI plug-in, see [Initial
 ### Manage your encryption keys through key management service
 {: #manage-keys}
 
-From the {{site.data.keyword.hscrypto}} dashboard, you can create new [root keys](#x6946961){: term} or standard keys for data encryption, or you can import your existing keys. For more information about root keys and standard keys, see [Key management service components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts).
+From the {{site.data.keyword.cloud_notm}} console, you can create new [root keys](#x6946961){: term} or standard keys for data encryption, or you can import your existing keys. For more information about root keys and standard keys, see [Key management service components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts).
 
-This tutorial walks you through the procedure in the GUI. If you want to manage encryption keys using the key management API or CLI, check out [the API reference](/apidocs/hs-crypto){: external} and [the CLI reference](/docs/key-protect?topic=key-protect-cli-reference){: external}.
+This tutorial walks you through the procedure in the console. If you want to manage encryption keys using the key management API or CLI, check out [the API reference](/apidocs/hs-crypto){: external} and [the CLI reference](/docs/key-protect?topic=key-protect-cli-reference){: external}.
 {: note}
 
 #### Creating new keys
@@ -282,7 +295,7 @@ This tutorial walks you through the procedure in the GUI. If you want to manage 
 
 Complete the following steps to create your first cryptographic key.
 
-1. From the {{site.data.keyword.hscrypto}} dashboard, click **Manage keys** &gt; **Add key**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **Key management service keys** &gt; **Add key**.
 2. To create a new key, select **Create a key**.
 
     Specify the key's details:
@@ -319,7 +332,7 @@ You can bring your existing keys to the service, so that you can still use the s
 
 Complete the following steps to add an existing key.
 
-1. From the {{site.data.keyword.hscrypto}} dashboard, click **Manage keys** &gt; **Add key**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **Key management service keys** &gt; **Add key**.
 2. To upload an existing key, select **Import a key**.
 
     Specify the key's details:
@@ -349,7 +362,7 @@ Complete the following steps to add an existing key.
 
 3. When you finish filling out the key's details, click **Import key** to confirm.
 
-From the {{site.data.keyword.hscrypto}} dashboard, you can inspect the general characteristics of your new keys.
+From the {{site.data.keyword.cloud_notm}} console, you can inspect the general characteristics of your new keys.
 
 ### Encrypt your data with cloud HSM
 {: #encrypt-data-hsm}
@@ -441,6 +454,18 @@ To run the sample code, perform the following steps:
 	PASS
   ok  	github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/golang/examples	1.667s
   ```
+
+## (Optional) Step 4: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC
+{: #get-started-vpe-gateway}
+{: hide-dashboard}
+
+If you have an [{{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) instance](/docs/vpc?topic=vpc-getting-started), you can connect the VPC instance to your {{site.data.keyword.hscrypto}} instance through [a virtual private endpoint (VPE) gateway](/docs/vpc?topic=vpc-about-vpe), so that you can manage your keys using {{site.data.keyword.hscrypto}} through a private network.
+
+Follow these steps:
+
+1. [Provision a generation 2 VPC instance](/docs/vpc?topic=vpc-getting-started).
+2. [Enable a private endpoint for your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-secure-connection).
+3. [Create a {{site.data.keyword.hscrypto}} VPE gateway for your VPC instance](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
 
 ## What's next
 {: #get-started-next}

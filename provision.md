@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-02"
+lastupdated: "2020-12-08"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -44,12 +44,27 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
 3. From the Catalog navigation pane, click **Services**. And then, under **Category**, select **Security**.
 4. From the list of services displayed, click the **{{site.data.keyword.hscrypto}}** tile.
 5. Fill in the form with the details that are required.
-  1. Select a [region](/docs/hs-crypto?topic=hs-crypto-regions) that you want to create your {{site.data.keyword.hscrypto}} resources in.
-  2. **Optional**: In the **Tags** field, add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/account?topic=account-tag).
-  3. Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs.
 
-    In a production environment, it is suggested to select at least two crypto units to enable high availability. If you select three or more crypto units, these crypto units are distributed among different supported availability zones in the selected region.
+  1. Select a [region](/docs/hs-crypto?topic=hs-crypto-regions) that you want to create your {{site.data.keyword.hscrypto}} resources in.
+  2. Under **Service name**, enter a name for your service instance.
+  3. Under **Select a resource group**, select the resource group where you want to organize and manage your service intance. You can select the initial resource group that is named `Default` or other groups that you create. For more information, see [Creating and managing resource groups](/docs/account?topic=account-rgs).
+  4. **Optional**: In the **Tags** field, add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/account?topic=account-tag).
+  5. Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs.
+
+    In a production environment, select at least two crypto units to enable high availability. If you select three or more crypto units, these crypto units are distributed among different supported availability zones in the selected region.
     {: important}
+
+  6. Under **Allowed network**, choose the network access to your service instance:
+
+    * **Public and private**: Manage your instance through both public and private network using the {{site.data.keyword.cloud_notm}} console, CLI, or API. This is the default option.
+    * **Private only**: Access your service instance only through private network using CLI or API. The {{site.data.keyword.cloud_notm}} console is not available for the private-only network access.
+
+    A private instance accepts API requests through only the private endpoints. The private endpoints are only accessible when your {{site.data.keyword.cloud_notm}} account, along with all associated resources, is enabled with [virtual routing and forwarding (VRF) and service endpoints]((/docs/account?topic=account-vrf-service-endpoint)). You cannot access your private only instance through the CLI or API if your server or machine is outside the {{site.data.keyword.cloud_notm}} network.
+    {: important}
+
+  After you provision the service instance, you can still [update the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies).
+  {: tip}
+
 6. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 
 ## Provisioning from the {{site.data.keyword.cloud_notm}} CLI
@@ -69,7 +84,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.
     If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the CLI output to generate a one-time passcode.
     {: tip}
 
-3. Select the region and resource group where you would like to create a {{site.data.keyword.hscrypto}} service instance. You can use the following command to set your target region and resource group.
+3. Select the region and resource group where you want to create a {{site.data.keyword.hscrypto}} service instance. You can use the following command to set your target region and resource group.
 
     ```sh
     ibmcloud target -r <region_name> -g <resource_group_name>
@@ -97,7 +112,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.
 4. Run the following command to create a {{site.data.keyword.hscrypto}} instance:
 
     ```sh
-    ibmcloud resource service-instance-create <instance_name> hs-crypto standard <region_name> [-p '{"units": <number_of_crypto_units>}']
+    ibmcloud resource service-instance-create <instance_name> hs-crypto standard <region_name> [-p '{"units": <number_of_crypto_units>, "allowed_network": "<network_access>"}']
     ```
     {: pre}
 
@@ -118,18 +133,28 @@ To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.
       </tr>
       <tr>
         <td>*number_of_crypto_units*</td>
-        <td>Optional. Multiple crypto units are distributed among different supported availability zones in the selected region to increase availability. You can specify 1 to 3 crypto units. In a production environment, it is suggested to select at least two crypto units to enable high availability. If you do not specify the number of crypto units, two crypto units are assigned by default.</td>
+        <td><p>Optional. Multiple crypto units are distributed among different supported availability zones in the selected region to increase availability.</p>
+        <p>Select at least two crypto units to enable high availability. If you do not specify the number of crypto units, two crypto units are assigned by default.</p></td>
+      </tr>
+      <tr>
+        <td>*network_access*</td>
+        <td><p>Optional. Use this parameter to specify the network access to your service instance.</p>
+        <p>The default setting is **public and private**, which means you can manage your instance through both public and private network using the {{site.data.keyword.cloud_notm}} console, CLI, or API.</p>
+        <p>If you set the value to **private-only**, you can access your service instance only through private network using CLI or API. The {{site.data.keyword.cloud_notm}} console is not available for the private-only network access.</p>
+        <p>After you provision the service instance, you can still [update the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies).</p></td>
       </tr>
       <caption style="caption-side:bottom;">Table2. Describes command variables to create a {{site.data.keyword.hscrypto}} service instance</caption>
     </table>
 
-5. Verify that the service instance is created successfully. Run the following command to get all the service instances you create. Check whether the {{site.data.keyword.hscrypto}} service instance is among the list.
+    A private instance accepts API requests through only the private endpoints. The private endpoints are only accessible when your {{site.data.keyword.cloud_notm}} account, along with all associated resources, is enabled with [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint). You cannot access your private only instance through the CLI or API if your server or machine is outside the {{site.data.keyword.cloud_notm}} network.
+    {: important}
+
+5. Verify that the service instance is created successfully. Run the following command to get all the service instances that you create. Check whether the {{site.data.keyword.hscrypto}} service instance is among the list.
 
     ```sh
     ibmcloud resource service-instances
     ```
     {: pre}
-
 
 ## What's next
 {: #provision-next}

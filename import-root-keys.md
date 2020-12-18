@@ -21,7 +21,7 @@ subcollection: hs-crypto
 # Importing root keys
 {: #import-root-keys}
 
-You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to secure your existing root keys by using the {{site.data.keyword.hscrypto}} GUI, or programmatically with the {{site.data.keyword.hscrypto}} key management API.
+You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to secure your existing root keys by using the {{site.data.keyword.cloud_notm}} console, or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
 Root keys are symmetric key-wrapping keys that are used to protect the security of encrypted data in the cloud. For more information about importing root keys, see [Bringing your encryption keys to the cloud](/docs/hs-crypto?topic=hs-crypto-importing-keys).
@@ -29,7 +29,7 @@ Root keys are symmetric key-wrapping keys that are used to protect the security 
 Plan ahead for importing keys by [reviewing your options for creating and encrypting key material](/docs/hs-crypto?topic=hs-crypto-importing-keys#plan-ahead). For added security, you can enable the secure import of the key material by using an [import token](/docs/hs-crypto?topic=hs-crypto-importing-keys#using-import-tokens) to encrypt your key material before you bring it to the cloud.
 {: note}
 
-## Importing root keys with the GUI
+## Importing root keys with the console
 {: #import-root-key-gui}
 
 After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision), complete the following steps to add your existing root key with the {{site.data.keyword.hscrypto}} GUI.
@@ -37,7 +37,7 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. To import a key, select the **Manage keys** tab in the side menu.
+4. To import a key, select the **Key management service keys** tab in the side menu.
 5. In the **Keys** table, click **Add key** and select **Import a key**.
 
     Specify the key's details:

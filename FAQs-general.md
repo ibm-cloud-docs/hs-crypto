@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-11-02"
+lastupdated: "2020-11-24"
 
 keywords: general frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips
 
@@ -78,9 +78,34 @@ IBM has an IaaS {{site.data.keyword.cloud_notm}} HSM service, which is different
 {: faq}
 {: support}
 
-{{site.data.keyword.keymanagementservicefull_notm}} is a shared multi-tenant key management service with key vaulting that is provided by FIPS 140-2 Level 3 HSMs. The HSMs are managed by IBM and you are not able to take the ownership.
+{{site.data.keyword.keymanagementservicefull_notm}} is a shared multi-tenant key management service that supports the Bring Your Own Key (BYOK) capability. The service is built on  FIPS 140-2 Level 3 certified HSMs, which are managed by IBM.
 
-{{site.data.keyword.hscrypto}} is a single-tenant service that is designed for you to look for complete control of your data encryption keys and cloud HSMs that protect these keys. Additionally, this service also supports industry standards such as Public-Key Cryptography Standards #11 (PKCS #11) for cryptographic services like digital signing and Secure Sockets Layer (SSL) offloading.
+{{site.data.keyword.hscrypto}} is a single-tenant key management service and cloud HSM that allows you to fully manage your encryption keys and to perform cryptographic operations. This service is built on FIPS 140-2 Level 4 certified HSMs and supports the Keep Your Own Key (KYOK) capability. You can take the ownership to ensure your full control of the entire key hierarchy with no access even from {{site.data.keyword.cloud_notm}} administrators. {{site.data.keyword.hscrypto}} also supports industry standards such as Public-Key Cryptography Standards #11 (PKCS #11) for cryptographic operations like digital signing and Secure Sockets Layer (SSL) offloading.
+
+## How is Keep Your Own Key different from Bring Your Own Key?
+{: #faq-differentiators-KYOK}
+{: faq}
+{: support}
+
+Bring Your Own Key (BYOK) is a way for you to use your own keys to encrypt data. The key management services that provide BYOK are typically multi-tenant services. With these services, you can import your encryption keys from the on-premise hardware security modules (HSM) and then manage the keys.
+
+With Keep Your Own Key (KYOK), IBM brings industry-leading level of control that you can exercise on your own encryption keys. In addition to the BYOK capabilities, KYOK provides technical assurance that IBM cannot access the customer keys. With KYOK, you have exclusive control of the entire key hierarchy including the master key.
+
+The following table details the differences between KYOK and BYOK.
+
+| Cloud key management capabilities                            | BYOK  | KYOK   |
+| --------------------------------- | ---------------------------------------------- |---------------------------------------------- |
+| Managing encryption key lifecycle                         |                Yes                 |                 Yes                |
+| Integrating with other cloud services|           Yes                     |            Yes                     |
+| Bringing your own keys from on-premise HSMs                      |                Yes                 |                 Yes                |
+| Operational assurance: Cloud service providers will not access keys |                Yes                 |                 Yes           |
+| Technical assurance: IBM cannot access the keys          |                No                 |                   Yes                |
+| Single tenant, dedicated key management service           |                No                 |                    Yes              |
+| Exclusive control of your master key                      |                No                  |                   Yes               |
+| Highest level security: FIPS 140-2 Level 4 HSM           |                No                  |                   Yes                |
+| Managing your master key with smart cards                 |                No                  |                   Yes                |
+| Performing key ceremony                                   |                No                  |                    Yes               |
+{: caption="Table 1. Comparing BYOK with KYOK" caption-side="bottom"}
 
 ## What can I do with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?
 {: #faq-what-do-with-hpcs}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-21"
+lastupdated: "2020-12-08"
 
 keywords: key storage, hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, key part, initialize service, smart card, trusted key entry application, tke application, management utilities, cloudtkefiles
 
@@ -123,7 +123,7 @@ Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start
 ### Step 2: Select the crypto units where the master key is to be loaded
 {: #step2-select-crypto-units-management-utilities}
 
-Select the **Crypto units** tab. A list of [crypto units](#x9860404){: term} that are assigned to your user account is displayed. The SELECTED column shows what crypto units you're going to work with in later commands.
+Select the **Crypto units** tab. A list of [crypto units](#x9860404){: term} in the target resource group under the current user account is displayed. The SELECTED column shows what crypto units you're going to work with in later commands.
 
 For information on how to retrieve your service instance ID, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 {: tip}
@@ -180,31 +180,31 @@ For more information about the state transition of the master key register, see 
 6. Repeat substep 4 and 5 for each master key part to be loaded.
 7. If prompted, in smart card reader 1, insert the EP11 smart card with an administrator signature key that is defined to the selected crypto units, and enter the smart card PIN on the smart card reader PIN pad.
 
-After all master key parts are loaded, the New Master Key Register is in Full Uncommitted state.
+After all master key parts are loaded, the new master key register is in `Full uncommitted` state.
 
 #### Commit the new master key register
 {: #step5-commit-new-register-management-utilities}
 
-1. Click **Commit** to move the master key to the Full Committed state.
+1. Click **Commit** to move the master key to the `Full committed` state.
 2. If prompted, in smart card reader 1, insert an EP11 smart card with an administrator signature key that is defined to the selected crypto units and enter the smart card PIN on the smart card reader PIN pad. Repeat this operation if prompted for additional EP11 smart cards with signature keys.
 
-After the process is complete, the New Master Key Register is in Full Committed state.
+After the process is complete, the new master key register is in `Full committed` state.
 
 #### Activate the master key
 {: #step5-activate-master-key-management-utilities}
 
-Perform this step only when you're setting up a service instance for the first time, which means both the New Master Key Register and Current Master Key Register of the key storage should not contain any keys. If the key storage contains keys, this command changes the value of the Current Master Key Register and the keys in key storage become unusable.
+Perform this step only when you're setting up a service instance for the first time, which means both the new master key register and current master key register of the key storage should not contain any keys. If the key storage contains keys, this command changes the value of the current master key register and the keys in key storage become unusable.
 {: important}
 
-1. Click **Set immediate** to move the value of the New Master Key Register to the Current Master Key Register and clear the New Master Key Register.
+1. Click **Set immediate** to move the value of the new master key register to the current master key register and clear the new master key register.
 2. Click **Yes** if you are ready to move the master key to the current master key register. This action can't be reversed.
 3. If prompted, insert an EP11 smart card with an administrator signature key that is defined to the selected crypto units in smart card reader 1, and enter the smart card PIN on the smart card reader PIN pad.
 
-The crypto units in the Current Master Key Register is now in `Valid` status, which indicates that your master key is loaded to your service instance.
+The crypto units in the current master key register is now in `Valid` status, which indicates that your master key is loaded to your service instance.
 
 ## What's next
 {: #initialize-crypto-utilities-management-utilities-next}
 
-- Go to the **Manage** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+- Go to the **Key management service keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
 - To learn more about performing cryptographic operations with the cloud HSM, see [Introducing cloud HSM](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm).
 - Use {{site.data.keyword.hscrypto}} as the root key provider for other {{site.data.keyword.cloud_notm}} services. For more information about integrating {{site.data.keyword.hscrypto}}, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).

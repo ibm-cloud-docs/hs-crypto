@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-22"
+lastupdated: "2020-11-17"
 
 keywords: disable key, enable key, suspend key, suspend operations on a key
 
@@ -50,10 +50,10 @@ data is revoked or restored, a corresponding enable event is displayed in the Ac
 Tracker web UI.
 {: note}
 
-## Disabling and enabling root keys with the GUI
+## Disabling and enabling root keys with the console
 {: #disable-enable-ui}
 
-If you prefer to enable or disable your root keys by using a graphical interface, you can use the IBM Cloud console.
+If you prefer to enable or disable your root keys by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 
 ### Disabling a root key
 {: #disable-ui}
@@ -65,7 +65,7 @@ complete the following steps to disable a key:
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your
 provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Manage keys** page, use the **Keys** table to browse the keys in
+4. On the **Key management service keys** page, use the **Keys** table to browse the keys in
 your service instance.
 5. Click the overflow (⋯) icon to open a list of options for the key that you want to
 disable.
@@ -86,7 +86,7 @@ You must wait 30 seconds after disabling a root key before you are able to enabl
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your
 provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Manage keys** page, use the **Keys** table to browse the keys in
+4. On the **Key management service keys** page, use the **Keys** table to browse the keys in
 your service.
 5. Click the overflow (⋯) icon to open a list of options for the key that you want to
 enable.
@@ -108,7 +108,7 @@ If you're using an integrated cloud service that supports revoking access to a d
 You can disable a root key that's in the _Active_ key state by making a `POST` call to the following endpoint.
 
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=disable
+https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/disable
 ```
 
 1. [Retrieve your authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#retrieve-kms-credentials).
@@ -122,13 +122,13 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
 
 3. Retrieve the ID of the root key that you want to disable.
 
-    You can retrieve the ID for a specified key by making a [list keys API request](https://{DomainName}/apidocs/hs-crypto#getkeys){: external}, or by viewing your keys in the {{site.data.keyword.hscrypto}} dashboard.
+    You can retrieve the ID for a specified key by making a [list keys API request](https://{DomainName}/apidocs/hs-crypto#getkeys){: external}, or by viewing your keys in the {{site.data.keyword.cloud_notm}} console.
 
 4. Disable the root key and suspend its encrypt and decrypt operations by making the following API call.
 
     ```cURL
     curl -X POST \
-      https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=disable \
+      https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/disable \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>'
     ```
@@ -270,7 +270,7 @@ If you're using an integrated cloud service that supports revoking access to a d
 You can enable a root key that's in the _Suspended_ key state by making a `POST` call to the following endpoint.
 
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=enable
+https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/enable
 ```
 
 1. [Retrieve your authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#retrieve-kms-credentials).
@@ -293,7 +293,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=
 
     ```cURL
     curl -X POST \
-      https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?action=enable \
+      https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/enable \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>'
     ```

@@ -25,7 +25,7 @@ subcollection: hs-crypto
 You can target an individual {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance for operations by including its unique identifier, or instance ID, in API requests to the service.
 {: shortdesc}
 
-## Viewing your instance ID with the GUI
+## Viewing your instance ID with the console
 {: #view-instance-ID}
 
 You can view the instance ID that is associated with your {{site.data.keyword.hscrypto}} service instance by navigating to your {{site.data.keyword.cloud_notm}} resource list.
