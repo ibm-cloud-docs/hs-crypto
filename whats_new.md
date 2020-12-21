@@ -51,6 +51,11 @@ The GREP11 API now supports the `ReencryptSingle` function which enables you to 
 Apart from using the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) to manage Enterprise PKCS #11 (EP11) keystores and keys, you can now use the {{site.data.keyword.cloud_notm}} console to view, create, and delete EP11 keystores and keys. For more information, see [Managing EP11 keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui) and [Managing EP11 keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui).
 -->
 
+### Added: Using Terraform to manage {{site.data.keyword.hscrypto}} instances and resources
+{: #add-terraform}
+
+Terraform is an open source software that enables you to configure and automate cloud resource provisioning and management. Now you can provision and initialize {{site.data.keyword.hscrypto}} instances, manage root keys and standard keys with the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in. For more information, see [Managing key management service resources with Terraform](/docs/terraform?topic=terraform-kms-resources) and the [sample Terraform template for {{site.data.keyword.hscrypto}}](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-hpcs-crypto){: external}.
+
 ### Added: Provisioning and managing service instances with the private-only network
 {: #add-private-only-network}
 
