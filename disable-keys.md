@@ -65,13 +65,13 @@ complete the following steps to disable a key:
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your
 provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Key management service keys** page, use the **Keys** table to browse the keys in
+4. On the **Manage keys** page, use the **Key management service keys** table to browse the keys in
 your service instance.
 5. Click the overflow (⋯) icon to open a list of options for the key that you want to
 disable.
 6. From the options menu, click **Disable key**, enter the key name to confirm the key to be disabled, and click **Disable key**.
 
-After the key is disabled, the **State** of the key is transitioned to `Suspended` in the **Keys** table.
+After the key is disabled, the **State** of the key is transitioned to `Suspended` in the **Key management service keys** table.
 
 ### Enabling a root key
 {: #enable-ui}
@@ -86,13 +86,13 @@ You must wait 30 seconds after disabling a root key before you are able to enabl
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your
 provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Key management service keys** page, use the **Keys** table to browse the keys in
+4. On the **Manage keys** page, use the **Key management service keys** table to browse the keys in
 your service.
 5. Click the overflow (⋯) icon to open a list of options for the key that you want to
 enable.
 6. From the options menu, click **Enable key**.
 
- After the key is enabled, the **State** of the key is transitioned to `Active` in the **Keys** table.
+ After the key is enabled, the **State** of the key is transitioned to `Active` in the **Key management service keys** table.
 
 ## Disabling and enabling root keys with the API
 {: #disable-enable-api}

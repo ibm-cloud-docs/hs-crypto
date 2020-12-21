@@ -90,52 +90,43 @@ Hyper Protect Crypto Services
     set-up-cli.md
 
     {: .topicgroup}
-    Managing key management service keys
-
-        {: .topicgroup}
-        Creating keys
-            create-root-keys.md
-            create-standard-keys.md
-
-        {: .topicgroup}
-        Importing keys
-            import-root-keys.md
-            import-standard-keys.md
-            create-import-tokens.md
-
-        {: .topicgroup}
-        Viewing keys
-            view-keys.md
-            view-key-details.md
-            retrieve-key.md
-
-        {: .topicgroup}
-        Protecting keys
-            wrap-keys.md
-            unwrap-keys.md
-            rewrap-keys.md
-
-        {: .topicgroup}
-        Rotating keys
-            set-rotation-policy.md
-            rotate-keys.md
-            view-key-versions.md
-
-        disable-keys.md
-
-        {: .topicgroup}
-        Deleting keys
-            delete-keys.md
-            delete-dual-auth-keys.md
-            set-dual-auth-policy.md
-
-        restore-keys.md
+    Creating keys
+        create-root-keys.md
+        create-standard-keys.md
 
     {: .topicgroup}
-    Managing Enterprise PKCS #11 keystores and keys
-        manage-pkcs11-keystores.md
-        manage-pkcs11-keys.md
+    Importing keys
+        import-root-keys.md
+        import-standard-keys.md
+        create-import-tokens.md
 
+    {: .topicgroup}
+    Viewing keys
+        view-keys.md
+        view-key-details.md
+        retrieve-key.md
+
+    {: .topicgroup}
+    Protecting keys
+        wrap-keys.md
+        unwrap-keys.md
+        rewrap-keys.md
+
+    {: .topicgroup}
+    Rotating keys
+        set-rotation-policy.md
+        rotate-keys.md
+        view-key-versions.md
+
+    disable-keys.md
+
+    {: .topicgroup}
+    Deleting keys
+        delete-keys.md
+        delete-dual-auth-keys.md
+        set-dual-auth-policy.md
+
+    restore-keys.md
     rotate-master-key.md
     enable-mechanisms.md
     add-remove-crypto-units.md

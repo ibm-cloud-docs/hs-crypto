@@ -44,10 +44,12 @@ The GREP11 API now supports the `ReencryptSingle` function which enables you to 
 
 {{site.data.keyword.hscrypto}} now supports the SLIP10 mechanism for hierarchical deterministic wallets to derive private and public key pairs. It now also supports the Edwards-curve (ED) 25519 and ED448 algorithms for digital signatures. Before you can use ED algorithms, make sure to enable this feature by following the instructions in [Enabling Edwards-curve Digital Signature Algorithm](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-EdDSA).
 
+<!--
 ### Added: Managing EP11 keystores and keys with the {{site.data.keyword.cloud_notm}} console
 {: #add-ep11-keystores-keys-console}
 
 Apart from using the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) to manage Enterprise PKCS #11 (EP11) keystores and keys, you can now use the {{site.data.keyword.cloud_notm}} console to view, create, and delete EP11 keystores and keys. For more information, see [Managing EP11 keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui) and [Managing EP11 keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui).
+-->
 
 ### Added: Provisioning and managing service instances with the private-only network
 {: #add-private-only-network}

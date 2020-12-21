@@ -76,7 +76,7 @@ This tutorial walks you through the procedure in the console. If you want to man
 
 Complete the following steps to create your first cryptographic key.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click **Key management service keys** &gt; **Add key**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **Manage keys** &gt; **Add key**.
 2. To create a new key, select **Create a key**.
 
     Specify the key's details:
@@ -111,7 +111,7 @@ You can bring your existing keys to the service, so that you can still use the s
 
 Complete the following steps to add an existing key.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click **Key management service keys** &gt; **Add key**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **Manage keys** &gt; **Add key**.
 2. To upload an existing key, select **Import a key**.
 
     Specify the key's details:
@@ -295,7 +295,7 @@ This tutorial walks you through the procedure in the console. If you want to man
 
 Complete the following steps to create your first cryptographic key.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click **Key management service keys** &gt; **Add key**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **Manage keys** &gt; **Add key**.
 2. To create a new key, select **Create a key**.
 
     Specify the key's details:
@@ -332,7 +332,7 @@ You can bring your existing keys to the service, so that you can still use the s
 
 Complete the following steps to add an existing key.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click **Key management service keys** &gt; **Add key**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **Manage keys** &gt; **Add key**.
 2. To upload an existing key, select **Import a key**.
 
     Specify the key's details:

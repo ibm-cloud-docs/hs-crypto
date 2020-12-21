@@ -51,7 +51,7 @@ You can browse the registrations that are available between your {{site.data.key
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Key management service keys** page, use the **Keys** table to browse the keys in your service.
+4. On the **Manage keys** page, use the **Key management service keys** table to browse the keys in your service.
 5. To view the protected resources of a specific root key, click the overflow (⋯) icon to open a list of options for the key, and select **View associated resources** to browse all resources protected by the key.
 
   <table>

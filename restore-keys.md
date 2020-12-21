@@ -45,11 +45,11 @@ complete the following steps to restore the key:
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your
 provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Key management service keys** page, use the **Keys** table to browse the keys in
+4. On the **Manage keys** page, use the **Key management service keys** table to browse the keys in
 your service instance.
 5. Click **Restore Key** to open a new tab.
 6. Enter the key ID and original key material that was associated with the deleted key, and click **Restore Key**.
-7. Confirm the key is restored in the updated **Keys** table.
+7. Confirm the key is restored in the updated **Key management service keys** table.
 
 ## Restoring a deleted key with the API
 {: #restore-api}

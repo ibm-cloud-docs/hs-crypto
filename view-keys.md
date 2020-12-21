@@ -41,7 +41,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Key management service keys** page, browse the general characteristics of your keys in the **Keys** table:
+4. On the **Manage keys** page, browse the general characteristics of your keys in the **Key management service keys** table:
 
     <table>
       <tr>
@@ -95,7 +95,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
       <caption style="caption-side:bottom;">Table 1. Describes the <strong>Keys</strong> table</caption>
     </table>
 
-    Not all key characteristics are displayed by default. To customize how the **Keys** table is to be presented, click the **Settings** icon and check the columns to be displayed.
+    Not all key characteristics are displayed by default. To customize how the **Key management service keys** table is to be presented, click the **Settings** icon and check the columns to be displayed.
     {: tip}
 
     Not seeing the full list of keys that are stored in your service instance?
@@ -104,7 +104,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
     about roles, see
     [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).
 
-    You can also search for a specific key by using the search bar in the **Keys** table.
+    You can also search for a specific key by using the search bar in the **Key management service keys** table.
     {: tip}
 
 ## Viewing root keys or standard keys with the key management API
