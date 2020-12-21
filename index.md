@@ -194,7 +194,7 @@ To run the sample code, perform the following steps:
   {: codeblock}
 
   In the code example,
-  - Replace `<region>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance console, click **Overview**  &gt; **Connect** &gt; **EP11 endpoint URL**.
+  - Replace `<region>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance console, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**.
   - Replace `<service_ID_API_key>` with the service ID API key that is created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
   - Replace `<instance_ID>` with the instance ID that uniquely identified your service instance. Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 
@@ -417,7 +417,7 @@ To run the sample code, perform the following steps:
   {: codeblock}
 
   In the code example,
-  - Replace `<region>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance dashboard, click **Overview**  &gt; **Connect** &gt; **EP11 endpoint URL**.
+  - Replace `<region>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance dashboard, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**.
   - Replace `<service_ID_API_key>` with the service ID API key that is created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
   - Replace `<instance_ID>` with the instance ID that uniquely identified your service instance. Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 
