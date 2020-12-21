@@ -43,7 +43,7 @@ After you create a {{site.data.keyword.hscrypto}} instance, complete the followi
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
+4. In the UI of the selected service instance, select the **Manage instance policies** tab in the side menu.
 5. In the **Allowed network** section, select the network that you want traffic to come through, and click **Save policy**. The default network policy is public and private, which allows access from both public and private networks.
 
     If a private-only network is enabled, you are not able to view or manage keys through the UI. However, you can still adjust the network setting later using the API or CLI.

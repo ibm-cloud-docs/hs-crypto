@@ -66,7 +66,7 @@ After creating a service instance, complete the following steps to create a dual
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
+4. In the UI of the selected service instance, select the **Manage instance policies** tab in the side menu.
 5. In the **Dual authorization deletion** section, check the box for `Require two users to approve key deletions`, and click **Save policy**.
 
 ## Enabling dual authorization for your service instance with the API
@@ -219,7 +219,7 @@ After creating a service instance, complete the following steps to create a dual
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
+4. In the UI of the selected service instance, select the **Manage instance policies** tab in the side menu.
 5. In the **Dual authorization deletion** section, clear the box for `Require two users to approve key deletions`, and click **Save policy**.
 
 ## Disabling dual authorization for your service instance with the key management API

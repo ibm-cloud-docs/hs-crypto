@@ -51,7 +51,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
   4. **Optional**: In the **Tags** field, add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/account?topic=account-tag).
   5. Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs.
 
-    In a production environment, select at least two crypto units to enable high availability. If you select three or more crypto units, these crypto units are distributed among different supported availability zones in the selected region.
+    In a production environment, select at least two crypto units to enable high availability. These crypto units are distributed among different supported availability zones in the selected region.
     {: important}
 
   6. Under **Allowed network**, choose the network access to your service instance:
