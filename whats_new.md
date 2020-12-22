@@ -54,7 +54,7 @@ Apart from using the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-r
 ### Added: Using Terraform to manage {{site.data.keyword.hscrypto}} instances and resources
 {: #add-terraform}
 
-Terraform is an open source software that enables you to configure and automate cloud resource provisioning and management. Now you can provision and initialize {{site.data.keyword.hscrypto}} instances, manage root keys and standard keys with the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in. For more information, see [Managing key management service resources with Terraform](/docs/terraform?topic=terraform-kms-resources) and the [sample Terraform template for {{site.data.keyword.hscrypto}}](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-hpcs-crypto){: external}.
+Terraform is an open source software that enables you to configure and automate cloud resource provisioning and management. Now you can provision and initialize {{site.data.keyword.hscrypto}} instances, as well as managing root keys and standard keys with the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in. For more information, see [Managing key management service resources with Terraform](/docs/terraform?topic=terraform-kms-resources), [Retrieving key management service data with Terraform](/docs/terraform?topic=terraform-kms-data-sources), and the [sample Terraform template for {{site.data.keyword.hscrypto}}](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-hpcs-crypto){: external}.
 
 ### Added: Provisioning and managing service instances with the private-only network
 {: #add-private-only-network}
