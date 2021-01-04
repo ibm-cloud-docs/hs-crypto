@@ -2468,7 +2468,7 @@ CK_RV m_ReencryptSingle (
   }
 
   ReencryptSingleRequest := &pb.ReencryptSingleRequest{
-      DecKey:   GenerateKey1Response.KeyBytes, // orginal key
+      DecKey:   GenerateKey1Response.KeyBytes, // original key
       EncKey:   GenerateKey2Response.KeyBytes, // new key
       DecMech:  &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
       EncMech:  &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
