@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:codeblock: .codeblock}
 {:note: .note}
 {:pre: .pre}
+{:important .important}
 {:external: target="_blank" .external}
 
 # What's new
