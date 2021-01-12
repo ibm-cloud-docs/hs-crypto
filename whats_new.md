@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-12-16"
+  years: 2018, 2021
+lastupdated: "2021-01-12"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -60,6 +60,9 @@ Terraform is an open source software that enables you to configure and automate 
 {: #add-private-only-network}
 
 To achieve increased security, you can now limit the network access to your service instance to the private-only network. You can either [choose the allowed network when you provision the service instance](/docs/hs-crypto?topic=hs-crypto-provision) or [update the network access policy after you set up the instance](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies).
+
+Before you update the network access policy, you need to initialize the service instance first. See [Initializing service instances with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) for instructions.
+{: important}
 
 ### Added: Support for accessing service instances through the Virtual Private Endpoint
 {: #add-vpe}

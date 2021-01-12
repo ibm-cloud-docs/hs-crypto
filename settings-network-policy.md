@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-12-15"
+  years: 2020, 2021
+lastupdated: "2021-01-12"
 
 keywords: instance settings, service settings, network access policies
 
@@ -26,6 +26,9 @@ subcollection: hs-crypto
 
 After you set up your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance, you manage network access policy by using the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
+
+Before you update the network access policy, you need to initialize the service instance first. See [Initializing service instances with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) for instructions.
+{: important}
 
 For more information on how the network access differs, see [Understanding the network access policy](/docs/hs-crypto?topic=hs-crypto-secure-connection#understand-network-access-policies).
 
