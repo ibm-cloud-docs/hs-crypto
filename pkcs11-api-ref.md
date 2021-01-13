@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-01-13"
+  years: 2020
+lastupdated: "2020-12-16"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -290,29 +290,19 @@ PKCS #11 attributes define object characteristics that set up how an object can 
 | CKA_WRAP_WITH_TRUSTED  | CK_TRUE if the key can only be wrapped with a wrapping key that has CKA_TRUSTED set to CK_TRUE. Default is CK_FALSE.  | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
 {: caption="Table 3. Describes the supported attributes" caption-side="bottom"}
 
-## Supported curve names
-{: #supported-pkcs-curve-name}
+## Supported curve names for generating Elliptic Curve keys
+{: #supported-pkcs-ecdsa-curve-name}
 
-The following table lists the supported curve names for different curve types. The number in the curve name means the supported prime bitcount.
+The PKCS #11 library supports limited types of curves for the mechanism `CKM_EC_KEY_PAIR_GEN` when you call the `C_GenerateKeyPair` function to generate Elliptic Curve (EC) keys. The curve name parameters must be specified as object identifiers (OIDs) using `CKA_EC_PARAMS`. You can get the OID by searching the curve name in the [OID repository](http://oid-info.com/basic-search.htm){: external}. The following table lists the supported curve names for different curve types. The number in the curve name means the supported prime bitcount.
 
-|Mechanism | Supported curve types | Supported curve names |
- ---------------------| --------------------- | ----------------------|
-|CKM_EC_KEY_PAIR_GEN[^services-8]| [National Institute of Standards and Technology (NIST) curves](https://www.ietf.org/rfc/rfc5480.txt){: external} | <ul><li>P-192, also known as secp192r1 and prime192v1.</li><li>P-224, also known as secp224r1.</li><li>P-256, also known as secp256r1 and prime256v1.</li><li>P-384, also known as secp384r1.</li><li>P-521, also known as secp521r.</li></ul> |
-|CKM_EC_KEY_PAIR_GEN[^services-8]| [Regular Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external} | <ul><li>BP-160R, also known as brainpoolP160r1.</li><li>BP-192R, also known as brainpoolP192r1.</li><li>BP-224R, also known as brainpoolP224r1.</li><li>BP-256R, also known as brainpoolP256r1.</li><li>BP-320R, also known as brainpoolP320r1.</li><li>BP-384R, also known as brainpoolP384r1.</li><li>BP-512R, also known as brainpoolP512r1.</li></ul> |
-|CKM_EC_KEY_PAIR_GEN[^services-8]| [Twisted Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external} | <ul><li>BP-160T, also known as brainpoolP160t1.</li><li>BP-192T, also known as brainpoolP192t1.</li><li>BP-224T, also known as brainpoolP224t1.</li><li>BP-256T, also known as brainpoolP256t1.</li><li>BP-320T, also known as brainpoolP320t1.</li><li>BP-384T, also known as brainpoolP384t1.</li><li>BP-512T, also known as brainpoolP512t1.</li></ul> |
-|CKM_EC_KEY_PAIR_GEN[^services-8]| [Standards for Efficient Cryptography (SEC) curves](https://www.secg.org/sec2-v2.pdf){: external} | <ul><li>secp256k1</li></ul> |
-|CKM_EC_KEY_PAIR_GEN[^services-8]| [Edwards curves](https://tools.ietf.org/html/rfc8032){: external} | <ul><li>Ed25519</li></li><li>Ed448</li></ul>|
-|CKM_IBM_BTC_DERIVE[^services-9]| [Standards for Efficient Cryptography (SEC) curves](https://www.secg.org/sec2-v2.pdf){: external} | <ul><li>secp256k1</li></ul>|
-|CKM_IBM_BTC_DERIVE[^services-10]| <p>[National Institute of Standards and Technology (NIST) curves](https://www.ietf.org/rfc/rfc5480.txt){: external}</p><p>[Edwards curves](https://tools.ietf.org/html/rfc8032){: external}</p> | <ul><li>secp256r1</li><li>secp256k1</li><li>Ed25519</li></ul>|
-|CKM_IBM_ED25519_SHA512[^services-11]| [Edwards curves](https://tools.ietf.org/html/rfc8032){: external} | <ul><li>Ed25519</li></ul>|
-|CKM_IBM_ED448_SHA3[^services-12]| [Edwards curves](https://tools.ietf.org/html/rfc8032){: external} | <ul><li>Ed448</li></ul>|
-{: caption="Table 4. PKCS #11 library supported curve types" caption-side="bottom"}
-
-[^services-8]: The PKCS #11 library supports limited types of curves for the mechanism `CKM_EC_KEY_PAIR_GEN` when you call the `C_GenerateKeyPair` function to generate Elliptic Curve (EC) keys. The curve name parameters must be specified as object identifiers (OIDs) using `CKA_EC_PARAMS`. You can get the OID by searching the curve name in the [OID repository](http://oid-info.com/basic-search.htm){: external}.
-[^services-9]: CKM_IBM_BTC_DERIVE is supported after you enable the BIP32/BIP3244 algorithm.
-[^services-10]: CKM_IBM_BTC_DERIVE is supported after you enable the SLIP10 algorithm.
-[^services-11]: CKM_IBM_ED25519_SHA512 is supported after you enable the EdDSA algorithm.
-[^services-12]: CKM_IBM_ED448_SHA3 is supported after you enable the EdDSA algorithm.
+| Supported curve types | Supported curve names |
+| --------------------- | ----------------------|
+| [National Institute of Standards and Technology (NIST) curves](https://www.ietf.org/rfc/rfc5480.txt){: external} | <ul><li>P-192, also known as secp192r1 and prime192v1.</li><li>P-224, also known as secp224r1.</li><li>P-256, also known as secp256r1 and prime256v1.</li><li>P-384, also known as secp384r1.</li><li>P-521, also known as secp521r.</li></ul> |
+| [Regular Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external} | <ul><li>BP-160R, also known as brainpoolP160r1.</li><li>BP-192R, also known as brainpoolP192r1.</li><li>BP-224R, also known as brainpoolP224r1.</li><li>BP-256R, also known as brainpoolP256r1.</li><li>BP-320R, also known as brainpoolP320r1.</li><li>BP-384R, also known as brainpoolP384r1.</li><li>BP-512R, also known as brainpoolP512r1.</li></ul> |
+| [Twisted Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external} | <ul><li>BP-160T, also known as brainpoolP160t1.</li><li>BP-192T, also known as brainpoolP192t1.</li><li>BP-224T, also known as brainpoolP224t1.</li><li>BP-256T, also known as brainpoolP256t1.</li><li>BP-320T, also known as brainpoolP320t1.</li><li>BP-384T, also known as brainpoolP384t1.</li><li>BP-512T, also known as brainpoolP512t1.</li></ul> |
+| [Standards for Efficient Cryptography (SEC) curves](https://www.secg.org/sec2-v2.pdf){: external} | <ul><li>secp256k1</li></ul> |
+| [Edwards curves](https://tools.ietf.org/html/rfc8032){: external} | <ul><li>Ed25519</li></li><li>Ed448</li></ul>|
+{: caption="Table 4. The supported curve types to generate Elliptic Curve keys" caption-side="bottom"}
 
 ## Standard PKCS #11 API reference
 
