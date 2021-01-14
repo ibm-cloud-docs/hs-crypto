@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-12-03"
+  years: 2020, 2021
+lastupdated: "2021-01-14"
 
 keywords: enable mechanisms, BTC, bitcoin mechanism, BIP32, BIP 0032, enable deterministic wallets, Digital Asset Platforms
 
@@ -112,7 +112,7 @@ To enable BIP32 for your service instance, follow these steps:
 ## Enabling Edwards-curve Digital Signature Algorithm
 {: #enable-EdDSA}
 
-Edwards-curve Digital Signature Algorithm (EdDSA) is a modern and secure digital signature algorithm based on performance-optimized elliptic curves. Both the ED25519 and ED448 curves are supported.
+Edwards-curve Digital Signature Algorithm (EdDSA) is a modern and secure digital signature algorithm based on performance-optimized elliptic curves.
 
 To enable EdDSA, follow these steps:
 
