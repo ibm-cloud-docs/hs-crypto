@@ -38,7 +38,7 @@ For an introduction to the {{site.data.keyword.hscrypto}} components, see [Compo
 {{site.data.keyword.hscrypto}} is a single-tenant, regional service that supports complete tenant-based workload isolation with the following characteristics:
 
 - Dedicated keystore in {{site.data.keyword.hscrypto}} is provided to ensure data isolation and security.
-- You have exclusive control to your hardware security module (HSM) and your HSM master key. Privileged users are locked out for protection against abusive use of system administrator credentials or root user credentials.
+- You have exclusive control to your hardware security module (HSM) and your master key. Privileged users are locked out for protection against abusive use of system administrator credentials or root user credentials.
 - [Secure Service Container (SSC)](https://www.ibm.com/marketplace/secure-service-container){: external} provides the enterprise level of security and impregnability that enterprise customers expect from [IBM LinuxONE](https://www.ibm.com/it-infrastructure/linuxone){: external} technology.
 
 The following diagram illustrates how {{site.data.keyword.hscrypto}} workload of each tenant is isolated.

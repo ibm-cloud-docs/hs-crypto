@@ -129,7 +129,7 @@ With {{site.data.keyword.hscrypto}}, you can ensure regulatory compliance and st
 
 Key features include the following:
 
-* Full control of the entire key hierarchy, including the HSM master keys
+* Full control of the entire key hierarchy, including the master keys
 * Tamper-proof hardware device for sensitive data
 * Industry-leading security for cloud data and digital assets
 * Reduced data compromise risk because of in-built protection against privileged access threats

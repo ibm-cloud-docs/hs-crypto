@@ -37,7 +37,7 @@ With envelope encryption, {{site.data.keyword.hscrypto}} protects your at-rest d
   </tr>
   <tr>
     <td>Confidentiality and integrity protection</td>
-    <td>{{site.data.keyword.hscrypto}} uses the Advanced Encryption Standard (AES) algorithm in Cipher Blocker Chaining (CBC) mode to create and protect keys. When you create keys in the service, {{site.data.keyword.hscrypto}} generates them in the {{site.data.keyword.hscrypto}} instance and the HSM master key encrypts the keys to ensure only you have the access.</td>
+    <td>{{site.data.keyword.hscrypto}} uses the Advanced Encryption Standard (AES) algorithm in Cipher Blocker Chaining (CBC) mode to create and protect keys. When you create keys in the service, {{site.data.keyword.hscrypto}} generates them in the {{site.data.keyword.hscrypto}} instance and the master key encrypts the keys to ensure only you have the access.</td>
   </tr>
   <tr>
     <td>Cryptographic shredding of data</td>

@@ -1,7 +1,7 @@
 {
   "faq-how-to-initialize":[
     "initialize hyper protect crypto services instances",
-    "configure the HSM master key in HPCS",
+    "configure the master key in HPCS",
     "load the master key to my hyper protect crypto services instance",
     "after I provision a hyper protect crypto services instance",
     "after I create an HPCS instance",
