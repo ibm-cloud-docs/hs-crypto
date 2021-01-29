@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-01-26"
+  years: 2021
+lastupdated: "2021-01-29"
 
 keywords: VMWare encryption, KMIP, Key management and distribution, Data appliance encryption, Netapp, vSphere, vSAN encryption
 
@@ -134,5 +134,4 @@ In this tutorial, you learned how to configure VMWare with KMIP in {{site.data.k
 
 - Learn more about [KMIP](http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=kmip){: external}.
 - Learn more about [KMIP for VMWare service](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_considerations)
-- Learn more about [VMware vSphere® encryption](/docs/vmwaresolutions?topic=vmwaresolutions-fss-encryption)
 - Learn more about [Using Encryption in Your vSphere Environment](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.security.doc/GUID-A29066CD-8EF8-4A4E-9FC9-8628E05FC859.html){: external}.
