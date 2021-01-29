@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-01-12"
+lastupdated: "2021-01-29"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 {:important .important}
 {:external: target="_blank" .external}
 
-# What's new
+# Release notes
 {: #what-new}
 
 Stay up-to-date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
@@ -31,6 +31,13 @@ Stay up-to-date with the new features that are available for {{site.data.keyword
 
 The cryptography algorithm to generate signature keys is updated from Rivest–Shamir–Adleman 2048 (RSA 2048) to P521 Elliptic Curve (P521 EC). The cryptographic strength of P521 EC keys is equivalent to RSA 15360, which means the updated signature keys can provide the higher level of security comparing to the previous signature keys. The previous RSA 2048 signature keys are still valid and can be used.
 -->
+
+## January 2021
+{: #january-2021}
+
+## Added: Support for a single-tenant KMIP adapter
+
+{{site.data.keyword.hscrypto}} now provides a single tenant KMIP adapter to manage the key distribution in the vSphere or vSAN environment. For more information, see [Configuring KMIP in {{site.data.keyword.hscrypto}} for key management and distribution](/docs/hs-crypto?topic=hs-crypto-tutorial-kmip-vmware).
 
 ## December 2020
 {: #december-2020}
