@@ -32,9 +32,6 @@ subcollection: hs-crypto
 When you use CLI or API, you receive a `CKR_IBM_WK_NOT_INITIALIZED` error message.
 {:shortdesc}
 
-When using `ibmcloud` CLI, to get the detailed error message, set `IBMCLOUD_TRACE=true`.
-{: tip}
-
 You might got an error message similar to the following message:
 {: tsSymptoms}
 
