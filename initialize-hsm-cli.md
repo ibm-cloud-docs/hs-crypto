@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-12-08"
+  years: 2018, 2021
+lastupdated: "2021-02-02"
 
-keywords: key storage, hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, key part, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
+keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
 subcollection: hs-crypto
 
@@ -226,8 +226,11 @@ For security considerations, the signature key owners can be different people fr
 
   You can repeat the command to add extra crypto unit administrators if needed.
 
-  The number of administrators that you add to a crypto unit needs to be equal to or greater than the signature threshold value and the revocation signature threshold value that you intend to set in [Step 3](#step3-exit-imprint-mode). For example, if you are about to set the signature threshold or revocation signature threshold value to eight, you need to add eight administrators to the crypto unit.
+  The number of administrators that you add to a crypto unit needs to be equal to or greater than the signature threshold value and the revocation signature threshold value that you intend to set in [Step 3](#step3-exit-imprint-mode). For example, if you are about to set the signature threshold or revocation signature threshold value to eight, you need to add at least eight administrators to the crypto unit.
   {: tip}
+
+  Do not remove the administrator signature key files from your workstation. Otherwise, you are not able to perform TKE actions that need to be signed, such as zeroizing crypto units and rotating master keys.
+  {: important}
 
   In imprint mode, the command to add a crypto unit administrator doesn't need to be signed. After the crypto unit leaves imprint mode, the signature threshold value for the crypto unit determines how many crypto unit administrators must sign the command.
 

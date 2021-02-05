@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-12-08"
+  years: 2018, 2021
+lastupdated: "2021-02-02"
 
-keywords: key storage, hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, key part, initialize service, smart card, trusted key entry application, tke application, management utilities, cloudtkefiles
+keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, smart card, trusted key entry application, tke application, management utilities
 
 subcollection: hs-crypto
 
@@ -148,6 +148,9 @@ For security and compliance reasons, the administrator name of the crypto unit m
 {: note}
 
 Repeat this step if you want to add multiple administrators. The number of administrators added must be equal to or greater than the larger of the [signature threshold](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept) value as well as the revocation signature threshold value that you intend to set in Step 4. The signature threshold controls how many signatures are needed to run most administrative commands. The revocation signature threshold controls how many signatures are needed to remove an administrator.
+
+Do not remove the administrator signature keys from your smart cards. Otherwise, you are not able to perform TKE actions that need to be signed, such as zeroizing crypto units and rotating master keys.
+{: important}
 
 ### Step 4: Set the signature thresholds to exit imprint mode in the selected crypto units
 {: #step4-exit-imprint-mode-management-utilities}
