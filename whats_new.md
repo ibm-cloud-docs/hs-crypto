@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-01-29"
+lastupdated: "2021-02-09"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -16,7 +16,7 @@ subcollection: hs-crypto
 {:codeblock: .codeblock}
 {:note: .note}
 {:pre: .pre}
-{:important .important}
+{:important: .important}
 {:external: target="_blank" .external}
 
 # Release notes
@@ -32,10 +32,21 @@ Stay up-to-date with the new features that are available for {{site.data.keyword
 The cryptography algorithm to generate signature keys is updated from Rivest–Shamir–Adleman 2048 (RSA 2048) to P521 Elliptic Curve (P521 EC). The cryptographic strength of P521 EC keys is equivalent to RSA 15360, which means the updated signature keys can provide the higher level of security comparing to the previous signature keys. The previous RSA 2048 signature keys are still valid and can be used.
 -->
 
+## February 2021
+{: #february-2021}
+
+### Added: key verification using the PKCS #11 API
+{: #add-key-verification}
+
+To ensure that no tampering has occurred to the keys that are stored in the {{site.data.keyword.hscrypto}} instance using the PKCS #11 API, a key verification mechanism is now provided for you to check the key objects that are stored in {{site.data.keyword.hscrypto}}. For instructions on how to verify key objects, see [Verifying that keys are protected by crypto units](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs11-key-verify).
+
+For an example of how to retrieve checksum values for AES, DES2, and DES3 keys along with the verification of the key checksums, see [the code sample](https://github.com/IBM-Cloud/hpcs-pkcs11/blob/master/samples/pkcs11-checksum.c){: external}.
+
 ## January 2021
 {: #january-2021}
 
-## Added: Support for a single-tenant KMIP adapter
+### Added: Support for a single-tenant KMIP adapter
+{: #add-support-kmip-adapter}
 
 {{site.data.keyword.hscrypto}} now provides a single tenant KMIP adapter to manage the key distribution in the vSphere or vSAN environment. For more information, see [Configuring KMIP in {{site.data.keyword.hscrypto}} for key management and distribution](/docs/hs-crypto?topic=hs-crypto-tutorial-kmip-vmware).
 
@@ -52,12 +63,10 @@ The GREP11 API now supports the `ReencryptSingle` function which enables you to 
 
 {{site.data.keyword.hscrypto}} now supports the SLIP10 mechanism for hierarchical deterministic wallets to derive private and public key pairs. It now also supports the Edwards-curve (ED) 25519 and ED448 algorithms for digital signatures. Before you can use ED algorithms, make sure to enable this feature by following the instructions in [Enabling Edwards-curve Digital Signature Algorithm](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-EdDSA).
 
-<!--
 ### Added: Managing EP11 keystores and keys with the {{site.data.keyword.cloud_notm}} console
 {: #add-ep11-keystores-keys-console}
 
 Apart from using the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) to manage Enterprise PKCS #11 (EP11) keystores and keys, you can now use the {{site.data.keyword.cloud_notm}} console to view, create, and delete EP11 keystores and keys. For more information, see [Managing EP11 keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui) and [Managing EP11 keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui).
--->
 
 ### Added: Using Terraform to manage {{site.data.keyword.hscrypto}} instances and resources
 {: #add-terraform}
@@ -69,7 +78,7 @@ Terraform is an open source software that enables you to configure and automate 
 
 To achieve increased security, you can now limit the network access to your service instance to the private-only network. You can either [choose the allowed network when you provision the service instance](/docs/hs-crypto?topic=hs-crypto-provision) or [update the network access policy after you set up the instance](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies).
 
-Before you update the network access policy, you need to initialize the service instance first. See [Initializing service instances with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) for instructions.
+Before you [update the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies), you need to initialize the service instance first. See [Initializing service instances with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) for instructions.
 {: important}
 
 ### Added: Support for accessing service instances through the Virtual Private Endpoint
@@ -138,7 +147,7 @@ To learn more about the PKCS #11 API, see [Introducing PKCS #11](/docs/hs-crypto
 ### Added: Master key rotation
 {: #added-master-key-rotation}
 
-You can now rotate your master key on demand by using the {{site.data.keyword.cloud}} Trusted Key Entry CLI plug-in so as to meet industry standards and cryptographic best practices. For more information on how it works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-key-rotation#master-key-rotation-intro).
+You can now rotate your master key on demand by using the {{site.data.keyword.cloud}} Trusted Key Entry CLI plug-in so as to meet industry standards and cryptographic best practices. For more information on how it works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
 
 For the detailed instructions, see [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli).
 
@@ -199,7 +208,7 @@ For information on how to initialize a service instance using the Management Uti
 
 The Management Utilities are two applications that use smart cards to configure service instances. The Smart Card Utility Program sets up and manages the smart cards used. The Trusted Key Entry (TKE) application uses those smart cards to configure service instances. To use the Management Utilities, you need to order IBM-supported smart cards and smart card readers.
 
-For more information, see [Understanding the Management Utilities](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-management-utilities) and [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
+For more information, see [Understanding the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-management-utilities) and [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
 ### Updated: {{site.data.keyword.cloud_notm}} service integration
 {: #added-service-integration-202004}

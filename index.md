@@ -88,7 +88,7 @@ Complete the following steps to create your first cryptographic key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can seletct <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
       </tr>
       <tr>
         <td>Key name</td>
@@ -123,7 +123,7 @@ Complete the following steps to add an existing key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can seletct <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
       </tr>
       <tr>
         <td>Key name</td>
@@ -307,7 +307,7 @@ Complete the following steps to create your first cryptographic key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can seletct <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
       </tr>
       <tr>
         <td>Key name</td>
@@ -344,7 +344,7 @@ Complete the following steps to add an existing key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can seletct <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
       </tr>
       <tr>
         <td>Key name</td>

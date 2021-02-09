@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020, 2021
-lastupdated: "2021-01-14"
+lastupdated: "2021-02-05"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -47,6 +47,21 @@ To access the PKCS #11 API, you then need to configure the PKCS #11 library by s
 {: #pkcs11-error-handling}
 
 The PKCS #11 API of {{site.data.keyword.hscrypto}} follows the [standard method of PKCS #11 Cryptographic Token Interface](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959729){: external} for error handling.
+
+## Verifying that keys are protected by crypto units
+{: #pkcs11-key-verify}
+
+The PKCS #11 API works with generated key objects that can be stored, updated, and retrieved from a remote keystore
+on {{site.data.keyword.cloud_notm}}. As an added level of protection, the key objects that are stored in {{site.data.keyword.cloud_notm}} can also be checked to ensure that no tampering has occurred.
+
+Every symmetric key that is generated, derived, or unwrapped contains a digital fingerprint that is stored in a key attribute called CKA_CHECK_VALUE. This attribute is a three-byte checksum for the key object itself.
+
+After you generate, derive, or unwrap a key object, it is recommended that you store the initial checksum value (contents of the CKA_CHECK_VALUE attribute) along
+with any unique identifiers of the key object separately. The separately stored checksums can then be used to verify if keys have been tampered with or not.
+
+To verify a key, perform an electronic codebook (ECB) encryption operation of a single block of null (0x00) bytes by using the key to be verified. If the first three bytes of the resulting cipher is identical to the value of the CKA_CHECK_VALUE key attribute that is stored locally for the same key, it indicates that the key object is not tampered with. Note that the CKA_CHECK_VALUE key attribute cannot be used to obtain any part of the key value.
+
+An example of how to retrieve checksum values for AES, DES2, and DES3 keys along with the verification of the key checksums can be found [here](https://github.com/IBM-Cloud/hpcs-pkcs11/blob/master/samples/pkcs11-checksum.c){: external}.
 
 ## PKCS #11 function list
 {: #pkcs11_function_list}
@@ -202,7 +217,7 @@ A mechanism is referred to as a process to implement a cryptographic operation. 
 | Function group | Supported mechanisms |
 |--------------|-----------------------|
 |Encrypt and decrypt | CKM_RSA_PKCS[^services-1], CKM_RSA_PKCS_OAEP[^services-2], CKM_AES_ECB, CKM_AES_CBC, CKM_AES_CBC_PAD, CKM_DES3_ECB, CKM_DES3_CBC, CKM_DES3_CBC_PAD|
-|Sign and verify  | CKM_RSA_PKCS[^services-3], CKM_RSA_PKCS_PSS[^services-4], CKM_RSA_X9_31[^services-5], CKM_SHA1_RSA_PKCS, CKM_SHA256_RSA_PKCS, CKM_SHA224_RSA_PKCS, CKM_SHA384_RSA_PKCS, CKM_SHA512_RSA_PKCS, CKM_SHA1_RSA_PKCS_PSS, CKM_SHA224_RSA_PKCS_PSS, CKM_SHA256_RSA_PKCS_PSS, CKM_SHA384_RSA_PKCS_PSS, CKM_SHA512_RSA_PKCS_PSS, CKM_SHA1_RSA_X9_31, CKM_DSA[^services-6], CKM_DSA_SHA1, CKM_ECDSA[^services-7], CKM_ECDSA_SHA1, CKM_ECDSA_SHA224, CKM_ECDSA_SHA256, CKM_ECDSA_SHA384, CKM_ECDSA_SHA512, CKM_SHA1_HMAC, CKM_SHA256_HMAC, CKM_SHA384_HMAC, CKM_SHA512_HMAC, CKM_SHA512_224_HMAC, CKM_SHA512_256_HMAC, CKM_IBM_ED25519_SHA512, CKM_IBM_ED448_SHA3|
+|Sign and verify  | CKM_RSA_PKCS[^services-3], CKM_RSA_PKCS_PSS[^services-4], CKM_RSA_X9_31[^services-5], CKM_SHA1_RSA_PKCS, CKM_SHA256_RSA_PKCS, CKM_SHA224_RSA_PKCS, CKM_SHA384_RSA_PKCS, CKM_SHA512_RSA_PKCS, CKM_SHA1_RSA_PKCS_PSS, CKM_SHA224_RSA_PKCS_PSS, CKM_SHA256_RSA_PKCS_PSS, CKM_SHA384_RSA_PKCS_PSS, CKM_SHA512_RSA_PKCS_PSS, CKM_SHA1_RSA_X9_31, CKM_DSA[^services-6], CKM_DSA_SHA1, CKM_ECDSA[^services-7], CKM_ECDSA_SHA1, CKM_ECDSA_SHA224, CKM_ECDSA_SHA256, CKM_ECDSA_SHA384, CKM_ECDSA_SHA512, CKM_SHA1_HMAC, CKM_SHA256_HMAC, CKM_SHA384_HMAC, CKM_SHA512_HMAC, CKM_SHA512_224_HMAC, CKM_SHA512_256_HMAC, CKM_IBM_ED25519_SHA512|
 |Digest |CKM_SHA_1, CKM_SHA224, CKM_SHA256, CKM_SHA384, CKM_SHA512, CKM_SHA512_224, CKM_SHA512_256|
 |Generate key or generate key pair 	 |CKM_RSA_PKCS_KEY_PAIR_GEN, CKM_RSA_X9_31_KEY_PAIR_GEN, CKM_DSA_KEY_PAIR_GEN, CKM_DSA_PARAMETER_GEN, CKM_EC_KEY_PAIR_GEN (CKM_ECDSA_KEY_PAIR_GEN), CKM_DH_PKCS_KEY_PAIR_GEN, CKM_DH_PKCS_PARAMETER_GEN, CKM_GENERIC_SECRET_KEY_GEN, CKM_AES_KEY_GEN, CKM_DES2_KEY_GEN, CKM_DES3_KEY_GEN|
 |Wrap and unwrap | CKM_RSA_PKCS, CKM_RSA_PKCS_OAEP, CKM_AES_ECB, CKM_AES_CBC, CKM_AES_CBC_PAD, CKM_DES3_ECB, CKM_DES3_CBC, CKM_DES3_CBC_PAD|
@@ -288,6 +303,7 @@ PKCS #11 attributes define object characteristics that set up how an object can 
 | CKA_EC_PARAMS (CKA_ECDSA_PARAMS) | DER-encoding of an ANSI X9.62 Parameters value. | EC private keys, EC public keys        |
 | CKA_EC_POINT | DER-encoding of ANSI X9.62 ECPoint value Q. |      EC public keys  |
 | CKA_WRAP_WITH_TRUSTED  | CK_TRUE if the key can only be wrapped with a wrapping key that has CKA_TRUSTED set to CK_TRUE. Default is CK_FALSE.  | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
+| CKA_CHECK_VALUE | The checksum of the key | AES keys, DES keys |
 {: caption="Table 3. Describes the supported attributes" caption-side="bottom"}
 
 ## Supported curves
@@ -325,6 +341,7 @@ The following curves are supported for mechanisms that are related to digital as
 {: caption="Table 5. Supported curve types for encrypting digital assets and signatures" caption-side="bottom"}
 
 ## Standard PKCS #11 API reference
+{: #pkcs11-standard-api-ref}
 
 To review the PKCS #11 standard documentation, see:
 * [Cryptographic Token Interface Usage Guide Version 2.40](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/pkcs11-ug-v2.40.html){: external}
