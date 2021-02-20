@@ -61,7 +61,7 @@ The GREP11 API now supports the `ReencryptSingle` function which enables you to 
 ### Added: Support for the SLIP10 mechanism and Edwards-curve algorithm
 {: #add-slip10-eddsa}
 
-{{site.data.keyword.hscrypto}} now supports the SLIP10 mechanism for hierarchical deterministic wallets to derive private and public key pairs. It now also supports the Edwards-curve (ED) 25519 algorithms for digital signatures. Before you can use ED algorithms, make sure to enable this feature by following the instructions in [Enabling Edwards-curve Digital Signature Algorithm](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-EdDSA).
+{{site.data.keyword.hscrypto}} now supports the SLIP10 mechanism for hierarchical deterministic wallets to derive private and public key pairs. It now also supports the Edwards-curve (ED) 25519 algorithm for digital signatures. Before you can use the ED algorithm, make sure to enable this feature by following the instructions in [Enabling Edwards-curve Digital Signature Algorithm](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-EdDSA).
 
 <!--
 ### Added: Managing EP11 keystores and keys with the {{site.data.keyword.cloud_notm}} console
