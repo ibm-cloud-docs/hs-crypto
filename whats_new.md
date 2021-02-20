@@ -61,12 +61,14 @@ The GREP11 API now supports the `ReencryptSingle` function which enables you to 
 ### Added: Support for the SLIP10 mechanism and Edwards-curve algorithm
 {: #add-slip10-eddsa}
 
-{{site.data.keyword.hscrypto}} now supports the SLIP10 mechanism for hierarchical deterministic wallets to derive private and public key pairs. It now also supports the Edwards-curve (ED) 25519 and ED448 algorithms for digital signatures. Before you can use ED algorithms, make sure to enable this feature by following the instructions in [Enabling Edwards-curve Digital Signature Algorithm](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-EdDSA).
+{{site.data.keyword.hscrypto}} now supports the SLIP10 mechanism for hierarchical deterministic wallets to derive private and public key pairs. It now also supports the Edwards-curve (ED) 25519 algorithms for digital signatures. Before you can use ED algorithms, make sure to enable this feature by following the instructions in [Enabling Edwards-curve Digital Signature Algorithm](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-EdDSA).
 
+<!--
 ### Added: Managing EP11 keystores and keys with the {{site.data.keyword.cloud_notm}} console
 {: #add-ep11-keystores-keys-console}
 
 Apart from using the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) to manage Enterprise PKCS #11 (EP11) keystores and keys, you can now use the {{site.data.keyword.cloud_notm}} console to view, create, and delete EP11 keystores and keys. For more information, see [Managing EP11 keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui) and [Managing EP11 keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui).
+-->
 
 ### Added: Using Terraform to manage {{site.data.keyword.hscrypto}} instances and resources
 {: #add-terraform}
@@ -147,7 +149,7 @@ To learn more about the PKCS #11 API, see [Introducing PKCS #11](/docs/hs-crypto
 ### Added: Master key rotation
 {: #added-master-key-rotation}
 
-You can now rotate your master key on demand by using the {{site.data.keyword.cloud}} Trusted Key Entry CLI plug-in so as to meet industry standards and cryptographic best practices. For more information on how it works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
+You can now rotate your master key on demand by using the {{site.data.keyword.cloud}} Trusted Key Entry CLI plug-in so as to meet industry standards and cryptographic best practices. For more information on how it works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-key-rotation#master-key-rotation-intro).
 
 For the detailed instructions, see [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli).
 
@@ -208,7 +210,7 @@ For information on how to initialize a service instance using the Management Uti
 
 The Management Utilities are two applications that use smart cards to configure service instances. The Smart Card Utility Program sets up and manages the smart cards used. The Trusted Key Entry (TKE) application uses those smart cards to configure service instances. To use the Management Utilities, you need to order IBM-supported smart cards and smart card readers.
 
-For more information, see [Understanding the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-management-utilities) and [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
+For more information, see [Understanding the Management Utilities](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-management-utilities) and [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
 ### Updated: {{site.data.keyword.cloud_notm}} service integration
 {: #added-service-integration-202004}
