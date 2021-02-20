@@ -59,7 +59,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
     * **Public and private**: Manage your instance through both public and private network using the {{site.data.keyword.cloud_notm}} console, CLI, or API. This is the default option.
     * **Private only**: Access your service instance only through private network using CLI or API. The {{site.data.keyword.cloud_notm}} console is not available for the private-only network access.
 
-    A private instance accepts API requests through only the private endpoints. The private endpoints are only accessible when your {{site.data.keyword.cloud_notm}} account, along with all associated resources, is enabled with [virtual routing and forwarding (VRF) and service endpoints]((/docs/account?topic=account-vrf-service-endpoint)). You cannot access your private only instance through the CLI or API if your server or machine is outside the {{site.data.keyword.cloud_notm}} network.
+    A private instance accepts API requests through only the private endpoints. The private endpoints are only accessible when your {{site.data.keyword.cloud_notm}} account, along with all associated resources, is enabled with [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint). You cannot access your private only instance through the CLI or API if your server or machine is outside the {{site.data.keyword.cloud_notm}} network.
     {: important}
 
   After you provision the service instance, you can still [update the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies).
