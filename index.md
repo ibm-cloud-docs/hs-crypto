@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-12-09"
+  years: 2018, 2021
+lastupdated: "2021-02-01"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -52,11 +52,7 @@ This tutorial guides you how to set up your service instance by loading your [ma
 {: hide-in-docs}
 {: notoc}
 
-To manage your keys, you need to initialize your service instance first. Two options are provided for initializing a service instance. You can use the {{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities to initialize a service instance by using master key parts stored on smart cards. This provides the highest level of security. You can also use the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) command-line interface (CLI) plug-in to initialize your service instance.
-
-For detailed steps and best practices of using the Management Utilities, see [Setting up the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities) and [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities). The [video of initializing {{site.data.keyword.hscrypto}} with smart cards](https://www.youtube.com/watch?v=FtRPRzF0dSs&feature=youtu.be){: external} also demonstrates the detailed procedure.
-
-For detailed steps and best practices of using the TKE CLI plug-in, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) and watch the [demonstration video of initializing {{site.data.keyword.hscrypto}} with {{site.data.keyword.cloud_notm}} TKE CLI](https://www.youtube.com/watch?v=_qP2HZ4u5Kg&feature=youtu.be){: external}.
+To manage your keys, you need to initialize your service instance first. For detailed steps, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
 ## Step 2: Using the key management service and cloud hardware security module
 {: #manage-data-key-dashboard}
@@ -66,10 +62,7 @@ For detailed steps and best practices of using the TKE CLI plug-in, see [Initial
 ### Managing your encryption keys through key management service
 {: #manage-keys-dashboard}
 
-From the {{site.data.keyword.cloud_notm}} console, you can create new root keys or standard keys for data encryption, or you can import your existing keys. For more information about root keys and standard keys, see [Key management service components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts).
-
-This tutorial walks you through the procedure in the console. If you want to manage encryption keys using the key management API or CLI, check out [the API reference](/apidocs/hs-crypto){: external} and [the CLI reference](/docs/key-protect?topic=key-protect-cli-reference){: external}.
-{: note}
+From the {{site.data.keyword.cloud_notm}} console, you can create new root keys or standard keys for data encryption, or you can import your existing keys.
 
 #### Creating new keys
 {: #create-keys-dashboard}
@@ -88,7 +81,7 @@ Complete the following steps to create your first cryptographic key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select **Root key** or **Standard key**.</td>
       </tr>
       <tr>
         <td>Key name</td>
@@ -123,7 +116,7 @@ Complete the following steps to add an existing key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select **Root key** or **Standard key**.</td>
       </tr>
       <tr>
         <td>Key name</td>
@@ -153,97 +146,174 @@ You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryp
 
 To perform cryptographic operations with the PKCS #11 API, complete the following steps:
 
-1. Follow the [Best practices for setting up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access) to create different service ID API keys for the various PKCS #11 user types.
-2. [Download the latest PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} and move it into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64` or `/usr/lib`.
-3. Create a configuration file named `grep11client.yaml` based on the [template](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file) and move the configuration file into the same folder as the PKCS #11 library. Optionally, the PKCS #11 library can be placed in the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not already exist.
-4. Depending on features and security requirements of your application, pass different service ID API keys that you previously create to allow your applications to perform the corresponding cryptographic operations.
+1. Generate an API key for accessing your {{site.data.keyword.hscrypto}} instance. Run the following command to create an API key for your {{site.data.keyword.cloud_notm}} account, and save the value of the API key for subsequent steps:
 
-For detailed instructions, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
+  ```
+  ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
+  ```
+  {: codeblock}
+
+2. Create a configuration file for the {{site.data.keyword.hscrypto}} PKCS #11 feature. The configuration file is named `grep11client.yaml`.
+
+  Adapt the following file template and name the file `grep11client.yaml`:
+
+  - Replace `<instance_id>` with the ID of your {{site.data.keyword.hscrypto}} instance
+  - Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance
+  - Replace `<your_api_key>` with the value of the API key that you created previously
+
+  ```yaml
+  iamcredentialtemplate: &defaultiamcredential
+            enabled: true
+            endpoint: "https://iam.cloud.ibm.com"
+            # Keep the 'apikey' empty. It will be overridden by the Anonymous user API key configured later.
+            apikey:
+            # The Universally Unique IDentifier (UUID) of your {{site.data.keyword.hscrypto}} instance.
+            instance: "<instance_id>"
+
+  tokens:
+    0:
+      grep11connection:
+        # The EP11 endpoint address starting from 'ep11'.
+        # For example: "ep11.us-south.hs-crypto.cloud.ibm.com"
+        address: "<EP11_endpoint_URL>"
+        # The EP11 endpoint port number
+        port: "<EP11_endpoint_port_number>"
+        tls:
+          # Grep11 requires TLS connection.
+          enabled: true
+          # Grep11 requires server only authentication, so 'mutual' should be set as 'false'.
+          mutual: false
+          # 'cacert' is a full-path certificate file.
+          # In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
+          cacert:
+          # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' should be empty.
+          certfile:
+          keyfile:
+      storage:
+        filestore:
+          enabled: false
+          storagepath:
+          # 'remotestore' should be enabled if you want to generate keys with the attribute CKA_TOKEN.
+        remotestore:
+          enabled: true
+      users:
+        0: # The index of the Security Officer (SO) user MUST be 0.
+          # The name for the Security Officer (SO) user. For example: "Administrator".
+          # NEVER put the API key under the SO user for security reasons.
+          name: "Administrator"
+          iamauth:
+            <<: *defaultiamcredential
+        1: # The index of the normal user MUST be 1.
+          # The name for the normal user. For example: "Normal user".
+          # NEVER put the API key under the normal user for security reasons.
+          name: "Normal user"
+           # The Space ID is a 128-bit UUID and can be chosen freely.
+           # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
+           # For example: "f00db2f1-4421-4032-a505-465bedfa845b".
+           # 'tokenspaceID' under the normal user is to identify the private keystore.
+          tokenspaceID: "f00db2f1-4421-4032-a505-465bedfa845b"
+          iamauth:
+            <<: *defaultiamcredential
+        2: # The index of the anonymous user MUST be 2.
+          # The name for the anonymous user. For example: "Anonymous".
+          name: "Anonymous"
+          # The Space ID is a 128-bit UUID and can be chosen freely.
+          # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
+          # For example: "ca22be26-b798-4fdf-8c83-3e3a492dc215".
+          # 'tokenspaceID' under the anonymous user is to identify the public keystore.
+          tokenspaceID: "ca22be26-b798-4fdf-8c83-3e3a492dc215"
+          iamauth:
+            <<: *defaultiamcredential
+            # This API key for the Anonymous user must be provided.
+            # It will overide the 'apikey' in the previous defaultcredentials.iamauth.apikey field
+            apikey: "<your_api_key>"
+  logging:
+    # Set the logging level.
+    # The supported levels, in an increasing order of verboseness, are:
+    # 'panic', 'fatal', 'error', 'warning'/'warn', 'info', 'debug', 'trace'.
+    # The Default value is 'debug'.
+    loglevel: debug
+    # The full path of your logging file.
+    # For example: /tmp/grep11client.log
+    logpath: /tmp/grep11client.log
+  ```
+  {: codeblock}
+
+3. Download and install the latest PKCS #11 library through [the GitHub repository](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} and move it into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64` or `/usr/lib`.
+
+4. Pass the API key that you previously create to allow your applications to perform the cryptographic operations.
 
 #### Performing cryptographic operations with the GREP11 API
 {: #cryptographic-operations-with-grep11-dashboard}
 
-To perform cryptographic operations with the GREP11 API, you need to make sure your applications are developed with programming languages supported by [gRPC](https://grpc.io/docs/languages/){:external}. A [sample Github repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} is provided for you to test the GREP11 API in Golang and JavaScript. The following procedure takes the Golang code as an example to test GREP11 functions.
+To perform cryptographic operations with the GREP11 API, you need to make sure your applications are developed with programming languages supported by gRPC.
 
-Before you use the samples, perform the following tasks:
+The following procedure uses Golang code as an example to test GREP11 functions.
 
-1. Set up the Go environment:
-
-  - [Install Go tools](https://golang.org/doc/install){:external}.
-  - [Set up your workspace directory](https://golang.org/doc/code.html#Workspaces){:external}.
-  - [Set the GOPATH environment variable](https://golang.org/doc/code.html#GOPATH){:external}.
-
-2. Clone the [sample repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} to the `$GOPATH/src/github.com/ibm-developer/` directory.
-
-To run the sample code, perform the following steps:
-
-1. Update the following code snippet in the `server_test.go` file of the `src/github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/golang/examples` directory:
+1. Install Golang by following [the instruction](https://golang.org/doc/install){:external}.
+2. Clone the [sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external} into a local directory of your choice. Go modules are used for this repository, so you don't need to place the cloned repository in your `GOPATH`. Refer to the repository's README file for additional information about the GREP11 Go code examples.
+3. Update the following code snippet in the `examples/server_test.go` file.
 
   ```Golang
-  const address = "ep11.<region>.hs-crypto.cloud.ibm.com:<port>"
-
-  var callOpts = []grpc.DialOption{
-    grpc.WithTransportCredentials(credentials.NewTLS(&tls.Config{})),
-    grpc.WithPerRPCCredentials(&util.IAMPerRPCCredentials{
-      APIKey:   "<service_ID_API_key>",
-      Endpoint: "https://iam.cloud.ibm.com",
-      Instance: "<instance_ID>",
-    }),
-  }
+  var (
+      address        = "<grep11_server_address>:<port>"
+      apiKey         = "<ibm_cloud_apikey>"
+      hpcsInstanceID = "<hpcs_instance_id>"
+  )
   ```
   {: codeblock}
 
   In the code example,
-  - Replace `<region>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance console, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**.
-  - Replace `<service_ID_API_key>` with the service ID API key that is created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
-  - Replace `<instance_ID>` with the instance ID that uniquely identified your service instance. Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+  - Replace `<grep11_server_address>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance console, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**.
+  - Replace `<ibm_cloud_apikey>` with the service ID API key that you created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
+  - Replace `<instance_ID>` with the instance ID that uniquely identifies your service instance. Retrieve the instance ID by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 
-2. Change the directory with the following command:
+4. From the `<your_repository_path>/hpcs-grep11-go/examples` directory, execute the examples by running the `go test -v -run Example` command.
+
+  The sample program produces output similar to the following:
 
   ```
-  cd $GOPATH/src/github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/golang/examples
+  === RUN   Example_getMechanismInfo
+  --- PASS: Example_getMechanismInfo (0.11s)
+  === RUN   Example_generateGenericKey
+  --- PASS: Example_generateGenericKey (0.09s)
+  === RUN   Example_encryptAndDecryptUsingAES
+  --- PASS: Example_encryptAndDecryptUsingAES (0.28s)
+  === RUN   Example_digest
+  --- PASS: Example_digest (0.18s)
+  === RUN   Example_signAndVerifyUsingRSAKeyPair
+  --- PASS: Example_signAndVerifyUsingRSAKeyPair (0.21s)
+  === RUN   Example_signAndVerifyUsingDSAKeyPair
+  --- PASS: Example_signAndVerifyUsingDSAKeyPair (0.99s)
+  === RUN   Example_deriveKeyUsingDHKeyPair
+  --- PASS: Example_deriveKeyUsingDHKeyPair (0.64s)
+  === RUN   Example_signAndVerifyUsingECDSAKeyPair
+  --- PASS: Example_signAndVerifyUsingECDSAKeyPair (0.16s)
+  === RUN   Example_signAndVerifyToTestErrorHandling
+  --- PASS: Example_signAndVerifyToTestErrorHandling (0.16s)
+  === RUN   Example_wrapAndUnwrapKey
+  --- PASS: Example_wrapAndUnwrapKey (0.20s)
+  === RUN   Example_deriveKey
+  --- PASS: Example_deriveKey (0.22s)
+  === RUN   Example_tls
+  --- PASS: Example_tls (0.14s)
+  PASS
+  ok      github.com/IBM-Cloud/hpcs-grep11-go/examples    13.106s
   ```
-  {: pre}
-
-3. Execute the example by running the `go test -v` command.
-
-  The sample program generates output similar to the following one:
-
-  ```Bash
-	=== RUN   Example_getMechanismInfo
-	--- PASS: Example_getMechanismInfo (0.02s)
-	=== RUN   Example_encryptAndDecrypt
-	--- PASS: Example_encryptAndDecrypt (0.03s)
-	=== RUN   Example_digest
-	--- PASS: Example_digest (0.02s)
-	=== RUN   Example_signAndVerifyUsingRSAKeyPair
-	--- PASS: Example_signAndVerifyUsingRSAKeyPair (0.66s)
-	=== RUN   Example_signAndVerifyUsingECDSAKeyPair
-	--- PASS: Example_signAndVerifyUsingECDSAKeyPair (0.04s)
-	=== RUN   Example_signAndVerifyToTestErrorHandling
-	--- PASS: Example_signAndVerifyToTestErrorHandling (0.04s)
-	=== RUN   Example_wrapAndUnwrapKey
-	--- PASS: Example_wrapAndUnwrapKey (0.65s)
-	=== RUN   Example_deriveKey
-	--- PASS: Example_deriveKey (0.11s)
-	=== RUN   Example_tls
-	--- PASS: Example_tls (0.05s)
-	PASS
-  ok  	github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/golang/examples	1.667s
-  ```
+  {: screen}
 
 ## (Optional) Step 3: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC
 {: #get-started-vpe-gateway-dashboard}
 {: hide-in-docs}
 {: notoc}
 
-If you have an [{{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) instance](/docs/vpc?topic=vpc-getting-started), you can connect the VPC instance to your {{site.data.keyword.hscrypto}} instance through [a virtual private endpoint (VPE) gateway](/docs/vpc?topic=vpc-about-vpe), so that you can manage your keys using {{site.data.keyword.hscrypto}} through a private network.
+If you have an {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) instance, you can connect the VPC instance to your {{site.data.keyword.hscrypto}} instance through a virtual private endpoint (VPE) gateway, so that you can manage your keys using {{site.data.keyword.hscrypto}} through a private network.
 
 Follow these steps:
 
-1. [Provision a generation 2 VPC instance](/docs/vpc?topic=vpc-getting-started).
-2. [Enable a private endpoint for your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-secure-connection).
-3. [Create a {{site.data.keyword.hscrypto}} VPE gateway for your VPC instance](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
+1. Provision a generation 2 VPC instance. For detailed instructions, see [Getting started with Virtual Private Cloud (VPC)](/docs/vpc?topic=vpc-getting-started).
+2. Enable a private endpoint for your {{site.data.keyword.hscrypto}} instance. For detailed instructions, see [Securing connection to Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-secure-connection).
+3. Create a {{site.data.keyword.hscrypto}} VPE gateway for your VPC instance. For detailed instructions, see [Creating an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
 
 <!-- The following is shown in docs app-->
 
@@ -251,10 +321,12 @@ Follow these steps:
 {: #get-started-prerequisites}
 {: hide-dashboard}
 
-In order to use {{site.data.keyword.hscrypto}}, make sure that you have a [Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-accounts).
+In order to use {{site.data.keyword.hscrypto}}, make sure that you have a Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account. For details about the {{site.data.keyword.cloud_notm}} account types, see [Account types](/docs/account?topic=account-accounts).
 
 1. To check your account type, go to [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/login){: external} and click **Management** > **Account** > **Account settings**.
-2. If you have a Lite account and want to use {{site.data.keyword.hscrypto}}, [upgrade your account to a Pay-As-You-Go or Subscription account](/docs/account?topic=account-upgrading-account). You can also [apply your promo code](/docs/billing-usage?topic=billing-usage-applying-promo-codes) if you have one.
+2. If you have a Lite account and want to use {{site.data.keyword.hscrypto}}, upgrade your account to a Pay-As-You-Go or Subscription account. You can also apply your promo code if you have one.
+
+  For detailed instructions, see [Upgrading your account](/docs/account?topic=account-upgrading-account) and [Applying promo codes](/docs/billing-usage?topic=billing-usage-applying-promo-codes).
 
 ## Step 1: Provision the service
 {: #provision-service}
@@ -270,23 +342,16 @@ You must first create an instance of {{site.data.keyword.hscrypto}} from the {{s
 {: support}
 {: hide-dashboard}
 
-To manage your keys, you need to initialize your service instance first. Two options are provided for initializing a service instance. You can use the {{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities to initialize a service instance by using master key parts stored on smart cards. This provides the highest level of security. You can also use the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) command-line interface (CLI) plug-in to initialize your service instance.
+To manage your keys, you need to initialize your service instance first. For detailed steps, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
-For detailed steps and best practices of using the Management Utilities, see [Setting up the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities) and [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities). The [video of initializing {{site.data.keyword.hscrypto}} with smart cards](https://www.youtube.com/watch?v=FtRPRzF0dSs&feature=youtu.be){: external} also demonstrates the detailed procedure.
-
-For detailed steps and best practices of using the TKE CLI plug-in, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) and watch the [demonstration video of initializing {{site.data.keyword.hscrypto}} with {{site.data.keyword.cloud_notm}} TKE CLI](https://www.youtube.com/watch?v=_qP2HZ4u5Kg&feature=youtu.be){: external}.
-
-## Step 3: Manage your data and keys
+## Step 3: Using the key management service and cloud hardware security module
 {: #manage-data-key}
 {: hide-dashboard}
 
-### Manage your encryption keys through key management service
+### Managing your encryption keys through key management service
 {: #manage-keys}
 
-From the {{site.data.keyword.cloud_notm}} console, you can create new [root keys](#x6946961){: term} or standard keys for data encryption, or you can import your existing keys. For more information about root keys and standard keys, see [Key management service components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts).
-
-This tutorial walks you through the procedure in the console. If you want to manage encryption keys using the key management API or CLI, check out [the API reference](/apidocs/hs-crypto){: external} and [the CLI reference](/docs/key-protect?topic=key-protect-cli-reference){: external}.
-{: note}
+From the {{site.data.keyword.cloud_notm}} console, you can create new root keys or standard keys for data encryption, or you can import your existing keys.
 
 #### Creating new keys
 {: #create-keys}
@@ -307,7 +372,7 @@ Complete the following steps to create your first cryptographic key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select **Root key** or **Standard key**.</td>
       </tr>
       <tr>
         <td>Key name</td>
@@ -344,7 +409,7 @@ Complete the following steps to add an existing key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a> or <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">Standard key</a>.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select **Root key** or **Standard key**.</td>
       </tr>
       <tr>
         <td>Key name</td>
@@ -364,7 +429,7 @@ Complete the following steps to add an existing key.
 
 From the {{site.data.keyword.cloud_notm}} console, you can inspect the general characteristics of your new keys.
 
-### Encrypt your data with cloud HSM
+### Encrypting your data with cloud HSM
 {: #encrypt-data-hsm}
 {: help}
 {: support}
@@ -376,96 +441,173 @@ You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryp
 
 To perform cryptographic operations with the PKCS #11 API, complete the following steps:
 
-1. Follow the [Best practices for setting up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access) to create different service ID API keys for the various PKCS #11 user types.
-2. [Download the latest PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} and move it into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64` or `/usr/lib`.
-3. Create a configuration file named `grep11client.yaml` based on the [template](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file) and move the configuration file into the same folder as the PKCS #11 library. Optionally, the PKCS #11 library can be placed in the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not already exist.
-4. Depending on features and security requirements of your application, pass different service ID API keys that you previously create to allow your applications to perform the corresponding cryptographic operations.
+1. Generate an API key for accessing your {{site.data.keyword.hscrypto}} instance. Run the following command to create an API key for your {{site.data.keyword.cloud_notm}} account, and save the value of the API key for subsequent steps:
 
-For detailed instructions, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
+  ```
+  ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
+  ```
+  {: codeblock}
+
+2. Create a configuration file for the {{site.data.keyword.hscrypto}} PKCS #11 feature. The configuration file is named `grep11client.yaml`.
+
+  Adapt the following file template and name the file `grep11client.yaml`:
+
+  - Replace `<instance_id>` with the ID of your {{site.data.keyword.hscrypto}} instance
+  - Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance
+  - Replace `<your_api_key>` with the value of the API key that you created previously
+
+  ```yaml
+  iamcredentialtemplate: &defaultiamcredential
+            enabled: true
+            endpoint: "https://iam.cloud.ibm.com"
+            # Keep the 'apikey' empty. It will be overridden by the Anonymous user API key configured later.
+            apikey:
+            # The Universally Unique IDentifier (UUID) of your {{site.data.keyword.hscrypto}} instance.
+            instance: "<instance_id>"
+
+  tokens:
+    0:
+      grep11connection:
+        # The EP11 endpoint address starting from 'ep11'.
+        # For example: "ep11.us-south.hs-crypto.cloud.ibm.com"
+        address: "<EP11_endpoint_URL>"
+        # The EP11 endpoint port number
+        port: "<EP11_endpoint_port_number>"
+        tls:
+          # Grep11 requires TLS connection.
+          enabled: true
+          # Grep11 requires server only authentication, so 'mutual' should be set as 'false'.
+          mutual: false
+          # 'cacert' is a full-path certificate file.
+          # In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
+          cacert:
+          # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' should be empty.
+          certfile:
+          keyfile:
+      storage:
+        filestore:
+          enabled: false
+          storagepath:
+          # 'remotestore' should be enabled if you want to generate keys with the attribute CKA_TOKEN.
+        remotestore:
+          enabled: true
+      users:
+        0: # The index of the Security Officer (SO) user MUST be 0.
+          # The name for the Security Officer (SO) user. For example: "Administrator".
+          # NEVER put the API key under the SO user for security reasons.
+          name: "Administrator"
+          iamauth:
+            <<: *defaultiamcredential
+        1: # The index of the normal user MUST be 1.
+          # The name for the normal user. For example: "Normal user".
+          # NEVER put the API key under the normal user for security reasons.
+          name: "Normal user"
+           # The Space ID is a 128-bit UUID and can be chosen freely.
+           # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
+           # For example: "f00db2f1-4421-4032-a505-465bedfa845b".
+           # 'tokenspaceID' under the normal user is to identify the private keystore.
+          tokenspaceID: "f00db2f1-4421-4032-a505-465bedfa845b"
+          iamauth:
+            <<: *defaultiamcredential
+        2: # The index of the anonymous user MUST be 2.
+          # The name for the anonymous user. For example: "Anonymous".
+          name: "Anonymous"
+          # The Space ID is a 128-bit UUID and can be chosen freely.
+          # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
+          # For example: "ca22be26-b798-4fdf-8c83-3e3a492dc215".
+          # 'tokenspaceID' under the anonymous user is to identify the public keystore.
+          tokenspaceID: "ca22be26-b798-4fdf-8c83-3e3a492dc215"
+          iamauth:
+            <<: *defaultiamcredential
+            # This API key for the Anonymous user must be provided.
+            # It will overide the 'apikey' in the previous defaultcredentials.iamauth.apikey field
+            apikey: "<your_api_key>"
+  logging:
+    # Set the logging level.
+    # The supported levels, in an increasing order of verboseness, are:
+    # 'panic', 'fatal', 'error', 'warning'/'warn', 'info', 'debug', 'trace'.
+    # The Default value is 'debug'.
+    loglevel: debug
+    # The full path of your logging file.
+    # For example: /tmp/grep11client.log
+    logpath: /tmp/grep11client.log
+  ```
+  {: codeblock}
+
+3. Download and install the latest PKCS #11 library through [the GitHub repository](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} and move it into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64` or `/usr/lib`.
+
+4. Pass the API key that you previously create to allow your applications to perform the cryptographic operations.
 
 #### Performing cryptographic operations with the GREP11 API
 {: #cryptographic-operations-with-grep11}
 
-To perform cryptographic operations with the GREP11 API, you need to make sure your applications are developed with programming languages supported by [gRPC](https://grpc.io/docs/languages/){:external}. A [sample Github repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} is provided for you to test the GREP11 API in Golang and JavaScript. The following procedure takes the Golang code as an example to test GREP11 functions.
+To perform cryptographic operations with the GREP11 API, you need to make sure your applications are developed with programming languages supported by gRPC.
 
-Before you use the samples, perform the following tasks:
+The following procedure uses Golang code as an example to test GREP11 functions.
 
-1. Set up the Go environment:
-
-  - [Install Go tools](https://golang.org/doc/install){:external}.
-  - [Set up your workspace directory](https://golang.org/doc/code.html#Workspaces){:external}.
-  - [Set the GOPATH environment variable](https://golang.org/doc/code.html#GOPATH){:external}.
-
-2. Clone the [sample repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} to the `$GOPATH/src/github.com/ibm-developer/` directory.
-
-To run the sample code, perform the following steps:
-
-1. Update the following code snippet in the `server_test.go` file of the `src/github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/golang/examples` directory:
+1. Install Golang by following [the instruction](https://golang.org/doc/install){:external}.
+2. Clone the [sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external} into a local directory of your choice. Go modules are used for this repository, so you don't need to place the cloned repository in your `GOPATH`. Refer to the repository's README file for additional information about the GREP11 Go code examples.
+3. Update the following code snippet in the `examples/server_test.go` file.
 
   ```Golang
-  const address = "ep11.<region>.hs-crypto.cloud.ibm.com:<port>"
-
-  var callOpts = []grpc.DialOption{
-    grpc.WithTransportCredentials(credentials.NewTLS(&tls.Config{})),
-    grpc.WithPerRPCCredentials(&util.IAMPerRPCCredentials{
-      APIKey:   "<service_ID_API_key>",
-      Endpoint: "https://iam.cloud.ibm.com",
-      Instance: "<instance_ID>",
-    }),
-  }
+  var (
+      address        = "<grep11_server_address>:<port>"
+      apiKey         = "<ibm_cloud_apikey>"
+      hpcsInstanceID = "<hpcs_instance_id>"
+  )
   ```
   {: codeblock}
 
   In the code example,
-  - Replace `<region>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance dashboard, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**.
-  - Replace `<service_ID_API_key>` with the service ID API key that is created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
-  - Replace `<instance_ID>` with the instance ID that uniquely identified your service instance. Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+  - Replace `<grep11_server_address>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance console, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**.
+  - Replace `<ibm_cloud_apikey>` with the service ID API key that you created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
+  - Replace `<instance_ID>` with the instance ID that uniquely identifies your service instance. Retrieve the instance ID by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 
-2. Change the directory with the following command:
+4. From the `<your_repository_path>/hpcs-grep11-go/examples` directory, execute the examples by running the `go test -v -run Example` command.
+
+  The sample program produces output similar to the following:
 
   ```
-  cd $GOPATH/src/github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/golang/examples
+  === RUN   Example_getMechanismInfo
+  --- PASS: Example_getMechanismInfo (0.11s)
+  === RUN   Example_generateGenericKey
+  --- PASS: Example_generateGenericKey (0.09s)
+  === RUN   Example_encryptAndDecryptUsingAES
+  --- PASS: Example_encryptAndDecryptUsingAES (0.28s)
+  === RUN   Example_digest
+  --- PASS: Example_digest (0.18s)
+  === RUN   Example_signAndVerifyUsingRSAKeyPair
+  --- PASS: Example_signAndVerifyUsingRSAKeyPair (0.21s)
+  === RUN   Example_signAndVerifyUsingDSAKeyPair
+  --- PASS: Example_signAndVerifyUsingDSAKeyPair (0.99s)
+  === RUN   Example_deriveKeyUsingDHKeyPair
+  --- PASS: Example_deriveKeyUsingDHKeyPair (0.64s)
+  === RUN   Example_signAndVerifyUsingECDSAKeyPair
+  --- PASS: Example_signAndVerifyUsingECDSAKeyPair (0.16s)
+  === RUN   Example_signAndVerifyToTestErrorHandling
+  --- PASS: Example_signAndVerifyToTestErrorHandling (0.16s)
+  === RUN   Example_wrapAndUnwrapKey
+  --- PASS: Example_wrapAndUnwrapKey (0.20s)
+  === RUN   Example_deriveKey
+  --- PASS: Example_deriveKey (0.22s)
+  === RUN   Example_tls
+  --- PASS: Example_tls (0.14s)
+  PASS
+  ok      github.com/IBM-Cloud/hpcs-grep11-go/examples    13.106s
   ```
-  {: pre}
-
-3. Execute the example by running the `go test -v` command.
-
-  The sample program generates output similar to the following one:
-
-  ```Bash
-	=== RUN   Example_getMechanismInfo
-	--- PASS: Example_getMechanismInfo (0.02s)
-	=== RUN   Example_encryptAndDecrypt
-	--- PASS: Example_encryptAndDecrypt (0.03s)
-	=== RUN   Example_digest
-	--- PASS: Example_digest (0.02s)
-	=== RUN   Example_signAndVerifyUsingRSAKeyPair
-	--- PASS: Example_signAndVerifyUsingRSAKeyPair (0.66s)
-	=== RUN   Example_signAndVerifyUsingECDSAKeyPair
-	--- PASS: Example_signAndVerifyUsingECDSAKeyPair (0.04s)
-	=== RUN   Example_signAndVerifyToTestErrorHandling
-	--- PASS: Example_signAndVerifyToTestErrorHandling (0.04s)
-	=== RUN   Example_wrapAndUnwrapKey
-	--- PASS: Example_wrapAndUnwrapKey (0.65s)
-	=== RUN   Example_deriveKey
-	--- PASS: Example_deriveKey (0.11s)
-	=== RUN   Example_tls
-	--- PASS: Example_tls (0.05s)
-	PASS
-  ok  	github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/golang/examples	1.667s
-  ```
+  {: screen}
 
 ## (Optional) Step 4: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC
 {: #get-started-vpe-gateway}
 {: hide-dashboard}
 
-If you have an [{{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) instance](/docs/vpc?topic=vpc-getting-started), you can connect the VPC instance to your {{site.data.keyword.hscrypto}} instance through [a virtual private endpoint (VPE) gateway](/docs/vpc?topic=vpc-about-vpe), so that you can manage your keys using {{site.data.keyword.hscrypto}} through a private network.
+If you have an {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) instance, you can connect the VPC instance to your {{site.data.keyword.hscrypto}} instance through a virtual private endpoint (VPE) gateway, so that you can manage your keys using {{site.data.keyword.hscrypto}} through a private network.
 
 Follow these steps:
 
-1. [Provision a generation 2 VPC instance](/docs/vpc?topic=vpc-getting-started).
-2. [Enable a private endpoint for your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-secure-connection).
-3. [Create a {{site.data.keyword.hscrypto}} VPE gateway for your VPC instance](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
+1. Provision a generation 2 VPC instance. For detailed instructions, see [Getting started with Virtual Private Cloud (VPC)](/docs/vpc?topic=vpc-getting-started).
+2. Enable a private endpoint for your {{site.data.keyword.hscrypto}} instance. For detailed instructions, see [Securing connection to Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-secure-connection).
+3. Create a {{site.data.keyword.hscrypto}} VPE gateway for your VPC instance. For detailed instructions, see [Creating an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
 
 ## What's next
 {: #get-started-next}

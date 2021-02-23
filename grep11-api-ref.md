@@ -2,7 +2,7 @@
 
 copyright:
 years: 2018, 2021
-lastupdated: "2020-02-09"
+lastupdated: "2021-02-09"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -73,7 +73,7 @@ message Grep11Error {
 
 The `Code` field can be cast to the ***CK_RV*** value in PKCS #11. This field contains the error codes that are defined by the [PKCS #11 specification](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959729){: external} or the vendor extensions that are defined by EP11. EP11 uses only a subset of return values that PKCS #11 defines. See the **10.1.6 Return values** section in [Enterprise PKCS #11 Library structure](http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf) for more information.
 
-An [example](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/golang/examples/server_test.go#L518){: external} in Golang that deals with errors is available.
+An [example](https://github.com/IBM-Cloud/hpcs-grep11-go/blob/master/examples/server_test.go#L863){: external} in Golang that deals with errors is available.
 
 ## GREP11 function list
 {: #grep11_function_list}
@@ -168,7 +168,7 @@ A mechanism is referred to as a process to implement a cryptographic operation. 
 | Function group | Supported mechanisms |
 |--------------|-----------------------|
 |Encrypt and decrypt | CKM_RSA_PKCS[^services-1], CKM_RSA_PKCS_OAEP[^services-2], CKM_AES_ECB, CKM_AES_CBC, CKM_AES_CBC_PAD, CKM_DES3_ECB, CKM_DES3_CBC, CKM_DES3_CBC_PAD|
-|Sign and verify  | CKM_RSA_PKCS[^services-3], CKM_RSA_PKCS_PSS[^services-4], CKM_RSA_X9_31[^services-5], CKM_SHA1_RSA_PKCS, CKM_SHA256_RSA_PKCS, CKM_SHA224_RSA_PKCS, CKM_SHA384_RSA_PKCS, CKM_SHA512_RSA_PKCS, CKM_SHA1_RSA_PKCS_PSS, CKM_SHA224_RSA_PKCS_PSS, CKM_SHA256_RSA_PKCS_PSS, CKM_SHA384_RSA_PKCS_PSS, CKM_SHA512_RSA_PKCS_PSS, CKM_SHA1_RSA_X9_31, CKM_DSA[^services-6], CKM_DSA_SHA1, CKM_ECDSA[^services-7], CKM_ECDSA_SHA1, CKM_ECDSA_SHA224, CKM_ECDSA_SHA256, CKM_ECDSA_SHA384, CKM_ECDSA_SHA512, CKM_SHA1_HMAC, CKM_SHA256_HMAC, CKM_SHA384_HMAC, CKM_SHA512_HMAC, CKM_SHA512_224_HMAC, CKM_SHA512_256_HMAC, CKM_IBM_ED25519_SHA512|
+|Sign and verify  | CKM_RSA_PKCS[^services-3], CKM_RSA_PKCS_PSS[^services-4], CKM_RSA_X9_31[^services-5], CKM_SHA1_RSA_PKCS, CKM_SHA256_RSA_PKCS, CKM_SHA224_RSA_PKCS, CKM_SHA384_RSA_PKCS, CKM_SHA512_RSA_PKCS, CKM_SHA1_RSA_PKCS_PSS, CKM_SHA224_RSA_PKCS_PSS, CKM_SHA256_RSA_PKCS_PSS, CKM_SHA384_RSA_PKCS_PSS, CKM_SHA512_RSA_PKCS_PSS, CKM_SHA1_RSA_X9_31, CKM_DSA[^services-6], CKM_DSA_SHA1, CKM_ECDSA[^services-7], CKM_ECDSA_SHA1, CKM_ECDSA_SHA224, CKM_ECDSA_SHA256, CKM_ECDSA_SHA384, CKM_ECDSA_SHA512, CKM_SHA1_HMAC, CKM_SHA256_HMAC, CKM_SHA384_HMAC, CKM_SHA512_HMAC, CKM_SHA512_224_HMAC, CKM_SHA512_256_HMAC, CKM_IBM_ED25519_SHA512, CKM_IBM_ECDSA_OTHER[^services-8]|
 |Digest |CKM_SHA_1, CKM_SHA224, CKM_SHA256, CKM_SHA384, CKM_SHA512, CKM_SHA512_224, CKM_SHA512_256|
 |Generate key or generate key pair 	 |CKM_RSA_PKCS_KEY_PAIR_GEN, CKM_RSA_X9_31_KEY_PAIR_GEN, CKM_DSA_KEY_PAIR_GEN, CKM_DSA_PARAMETER_GEN, CKM_EC_KEY_PAIR_GEN (CKM_ECDSA_KEY_PAIR_GEN), CKM_DH_PKCS_KEY_PAIR_GEN, CKM_DH_PKCS_PARAMETER_GEN, CKM_GENERIC_SECRET_KEY_GEN, CKM_AES_KEY_GEN, CKM_DES2_KEY_GEN, CKM_DES3_KEY_GEN|
 |Wrap and unwrap | CKM_RSA_PKCS, CKM_RSA_PKCS_OAEP, CKM_AES_ECB, CKM_AES_CBC, CKM_AES_CBC_PAD, CKM_DES3_ECB, CKM_DES3_CBC, CKM_DES3_CBC_PAD|
@@ -188,6 +188,8 @@ A mechanism is referred to as a process to implement a cryptographic operation. 
 [^services-6]: This mechanism supports only single-part operations that are not able to utilize any of the Update GREP11 functions, such as EncryptUpdate, DecryptUpdate, and DigestUpdate.
 
 [^services-7]: This mechanism supports only single-part operations that are not able to utilize any of the Update GREP11 functions, such as EncryptUpdate, DecryptUpdate, and DigestUpdate.
+
+[^services-8]: This mechanism is currently only available for GREP11 SignSingle and VerifySingle operations.
 
 ## Supported attributes and key types
 {: #grep11-attribute-list}
@@ -246,7 +248,13 @@ The following curves are supported for mechanisms that are related to digital as
 |SLIP10 |CKM_IBM_BTC_DERIVE| [Standards for Efficient Cryptography (SEC) curves](https://www.secg.org/sec2-v2.pdf){: external}| <ul><li>secp256k1</li></ul>|
 |SLIP10 |CKM_IBM_BTC_DERIVE|[Edwards curves](https://tools.ietf.org/html/rfc8032){: external} | <ul><li>Ed25519</li></ul>|
 |EdDSA |CKM_IBM_ED25519_SHA512| [Edwards curves](https://tools.ietf.org/html/rfc8032){: external} | <ul><li>Ed25519</li></ul>|
+|Schnorr |CKM_IBM_ECDSA_OTHER[^services-9]|[Standards for Efficient Cryptography (SEC) curves](https://www.secg.org/sec2-v2.pdf){: external}| <ul><li>secp256k1</li></li></ul>|
+|Schnorr |CKM_IBM_ECDSA_OTHER|[National Institute of Standards and Technology (NIST) curves](https://www.ietf.org/rfc/rfc5480.txt){: external} | <ul><li>P-256, also known as secp256r1 and prime256v1</li></ul>|
+|Schnorr |CKM_IBM_ECDSA_OTHER|[Regular Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}| <ul><li>BP-256R, also known as brainpoolP256r1</li></ul>|
+|Schnorr |CKM_IBM_ECDSA_OTHER|[Twisted Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external} | <ul><li>BP-256T, also known as brainpoolP256t1</li></ul>|
 {: caption="Table 5. Supported curve types for encrypting digital assets and signatures" caption-side="bottom"}
+
+[^services-9]: Mechanism CKM_IBM_ECDSA_OTHER is currently only available for GREP11 SignSingle and VerifySingle operations.
 
 ## Performing cryptographic operations with GREP11 functions
 {: #grep11-functions}
@@ -258,7 +266,10 @@ EP11 function parameters are mapped to the protocol buffer types that can be fou
 Because the EP11 library is a subset of the PKCS #11 API library, and GREP11 functions are variants from the corresponding EP11 functions, the corresponding functions of EP11 and PKCS #11 are also listed in the GREP11 function tables for your reference.
 {: note}
 
-GREP11 supports any programming languages with a gRPC library. At the current stage, only code snippets or examples for Golang and JavaScript are included in the API reference. The content is enriched in later phases.
+GREP11 supports any programming language with a gRPC library. At the current stage, only code snippets or examples for Golang and JavaScript are included in the API reference. The content is enriched in later phases. The code snippets are based on the following external GitHub repositories that provide complete examples for using the GREP11 API. Some of the code snippets reference helper functions within the examples repositories.
+
+- [The Golang examples repository](https://github.com/IBM-Cloud/hpcs-grep11-go){: external}
+- [The JavaScript examples repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/tree/master/js){: external}
 
 ## Retrieving supported crypto algorithms 
 {: #grep11-operation-retrieve-mechanisms}
@@ -282,7 +293,7 @@ The `GetMechanismList` function obtains a list of mechanism types supported by a
 message GetMechanismListRequest {
 }
 message GetMechanismListResponse {
-	repeated uint64 Mechs = 2;
+    repeated uint64 Mechs = 2;
 }
     </pre>
   </tr>
@@ -310,7 +321,7 @@ CK_RV m_GetMechanismList (
   CK_SLOT_ID slot,
   CK_MECHANISM_TYPE_PTR mechs, CK_ULONG_PTR mechslen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -401,10 +412,10 @@ The `GetMechanismInfo` Function obtains information about a particular mechanism
     <td>
     <pre>
 message GetMechanismInfoRequest {
-	uint64 Mech = 2;
+    uint64 Mech = 2;
 }
 message GetMechanismInfoResponse {
-	MechanismInfo MechInfo = 3;
+    MechanismInfo MechInfo = 3;
 }
     </pre>
     </td>
@@ -434,7 +445,7 @@ CK_RV m_GetMechanismInfo (
   CK_MECHANISM_TYPE mech,
   CK_MECHANISM_INFO_PTR mechInfo,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -485,7 +496,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismInfo)(
 
   ```Golang
   GetMechanismInfoRequest := &pb.GetMechanismInfoRequest {
-	  Mech: ep11.CKM_RSA_PKCS,
+      Mech: ep11.CKM_RSA_PKCS,
   }
 
   GetMechanismInfoResponse, err := cryptoClient.GetMechanismInfo(context.Background(), GetMechanismInfoRequest)
@@ -525,13 +536,12 @@ The `GenerateKey` function generates a secret key for symmetric encryption.
     <td>
     <pre>
 message GenerateKeyRequest {
-	Mechanism Mech = 1;
-	map Template = 2;
-  string KeyId = 4;
+    Mechanism Mech = 1;
+    map&lt;uint64,AttributeValue&gt; Template = 6;
 }
 message GenerateKeyResponse {
-	bytes Key = 4;
-	bytes CheckSum = 5;
+    bytes KeyBytes = 4;
+    bytes CheckSum = 5;
 }
     </pre>
     </td>
@@ -568,11 +578,11 @@ message GenerateKeyResponse {
 CK_RV m_GenerateKey (
   CK_MECHANISM_PTR mech,
   CK_ATTRIBUTE_PTR template, CK_ULONG templatelen,
-  const unsigned char *pin, size_t pinlen,
+  const unsigned char \*pin, size_t pinlen,
   unsigned char \*key, size_t \*keylen,
   unsigned char \*checkSum, size_t \*checkSumlen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -628,18 +638,19 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateKey)(
 - Golang code snippet
 
   ```Golang
-  GenerateKeyRequest := &pb.GenerateKeyRequest {
-  	Mech: &pb.Mechanism{Mechanism: ep11.CKM_AES_KEY_GEN},
-  	Template: util.NewAttributeMap(
-  		util.NewAttribute(ep11.CKA_VALUE_LEN, (uint64)(keyLen/8)),
-  		util.NewAttribute(ep11.CKA_WRAP, false),
-  		util.NewAttribute(ep11.CKA_UNWRAP, false),
-  		util.NewAttribute(ep11.CKA_ENCRYPT, true),
-  		util.NewAttribute(ep11.CKA_DECRYPT, true),
-  		util.NewAttribute(ep11.CKA_EXTRACTABLE, false), // set to false!
-  		util.NewAttribute(ep11.CKA_TOKEN, true),        // ignored by EP11
-  	),
-  	KeyId: uuid.NewV4().String(), // optional
+  // Setup the AES key's attributes
+  keyTemplate := ep11.EP11Attributes{
+      ep11.CKA_VALUE_LEN:   keyLen / 8,
+      ep11.CKA_WRAP:        false,
+      ep11.CKA_UNWRAP:      false,
+      ep11.CKA_ENCRYPT:     true,
+      ep11.CKA_DECRYPT:     true,
+      ep11.CKA_EXTRACTABLE: false,
+  }
+
+  GenerateKeyRequest := &pb.GenerateKeyRequest{
+      Mech:     &pb.Mechanism{Mechanism: ep11.CKM_AES_KEY_GEN},
+      Template: util.AttributeMap(keyTemplate),
   }
 
   GenerateKeyResponse, err := cryptoClient.GenerateKey(context.Background(), GenerateKeyRequest)
@@ -688,15 +699,13 @@ The `GenerateKeyPair` function generates a public key and private key pair.
     <td>
     <pre>
 message GenerateKeyPairRequest {
-	Mechanism Mech = 1;
-	map PubKeyTemplate = 2;
-	map PrivKeyTemplate = 3;
-	string PrivKeyId = 5;
-	string PubKeyId = 6;
+    Mechanism Mech = 1;
+    map&lt;uint64,AttributeValue&gt; PrivKeyTemplate = 7;
+    map&lt;uint64,AttributeValue&gt; PubKeyTemplate = 8;
 }
 message GenerateKeyPairResponse {
-	bytes PrivKey = 5;
-	bytes PubKey = 6;
+    bytes PrivKeyBytes = 5;
+    bytes PubKeyBytes = 6;
 }
     </pre>
     </td>
@@ -740,11 +749,11 @@ CK_RV m_GenerateKeyPair (
   CK_MECHANISM_PTR mech,
   CK_ATTRIBUTE_PTR pubKeyTemplate, CK_ULONG pubKeyTemplatelen,
   CK_ATTRIBUTE_PTR privKeyTemplate, CK_ULONG privKeyTemplatelen,
-  const unsigned char *pin, size_t pinlen,
+  const unsigned char \*pin, size_t pinlen,
   unsigned char \*privKey, size_t \*privKeylen,
   unsigned char \*pubKey, size_t \*pubKeylen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -804,27 +813,28 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateKeyPair)(
 - Golang code snippet
 
   ```Golang
-  GenerateKeyPairRequest := &pb.GenerateKeyPairRequest {
-  	Mech: &pb.Mechanism{Mechanism: ep11.CKM_RSA_PKCS_KEY_PAIR_GEN},
-  	PubKeyTemplate: util.NewAttributeMap(
-  		util.NewAttribute(ep11.CKA_ENCRYPT, true),
-  		util.NewAttribute(ep11.CKA_VERIFY, true), // to verify a signature
-  		util.NewAttribute(ep11.CKA_MODULUS_BITS, uint64(2048)),
-  		util.NewAttribute(ep11.CKA_PUBLIC_EXPONENT, publicExponent),
-  		util.NewAttribute(ep11.CKA_EXTRACTABLE, false),
-  	),
-  	PrivateKeyTemplate: util.NewAttributeMap(
-  		util.NewAttribute(ep11.CKA_PRIVATE, true),
-  		util.NewAttribute(ep11.CKA_SENSITIVE, true),
-  		util.NewAttribute(ep11.CKA_DECRYPT, true),
-  		util.NewAttribute(ep11.CKA_SIGN, true), // to generate a signature
-  		util.NewAttribute(ep11.CKA_EXTRACTABLE, false),
-  	),
-  	PrivKeyId:       uuid.NewV4().String(),
-  	PubKeyId:        uuid.NewV4().String(),
+  // Generate RSA key pair
+  publicExponent := []byte{0x11}
+  publicKeyTemplate := ep11.EP11Attributes{
+      ep11.CKA_ENCRYPT:         true,
+      ep11.CKA_VERIFY:          true,
+      ep11.CKA_MODULUS_BITS:    2048,
+      ep11.CKA_PUBLIC_EXPONENT: publicExponent,
+      ep11.CKA_EXTRACTABLE:     false,
   }
-
-  GenerateKeyPairResponse, err := cryptoClient.GenerateKeyPair(context.Background(), GenerateKeyPairRequest)
+  privateKeyTemplate := ep11.EP11Attributes{
+      ep11.CKA_PRIVATE:     true,
+      ep11.CKA_SENSITIVE:   true,
+      ep11.CKA_DECRYPT:     true,
+      ep11.CKA_SIGN:        true,
+      ep11.CKA_EXTRACTABLE: false,
+  }
+  GenerateKeypairRequest := &pb.GenerateKeyPairRequest{
+      Mech:            &pb.Mechanism{Mechanism: ep11.CKM_RSA_PKCS_KEY_PAIR_GEN},
+      PubKeyTemplate:  util.AttributeMap(publicKeyTemplate),
+      PrivKeyTemplate: util.AttributeMap(privateKeyTemplate),
+  }
+  GenerateKeyPairResponse, err := cryptoClient.GenerateKeyPair(context.Background(), GenerateKeypairRequest)
   ```
   {: codeblock}
 
@@ -861,162 +871,169 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateKeyPair)(
   ```
   {: codeblock}
 
-  ### DeriveKey
-  {: #grep11-DeriveKey}
+### DeriveKey
+{: #grep11-DeriveKey}
 
-  The `DeriveKey` function derives a key from a base key.
+The `DeriveKey` function derives a key from a base key.
 
-  <table>
-    <tr>
-      <th>Description</th>
-      <td>Binds to EP11 `m_DeriveKey`, which is an implementation of PKCS #11 `C_DeriveKey`.<td>
-    </tr>
-    <tr>
-      <th>Parameters</th>
-      <td>
-      <pre>
-  message DeriveKeyRequest {
-  	Mechanism Mech = 1;
-  	map Template = 2;
-  	bytes BaseKey = 3;
-  	bytes Data = 4;
-  	string NewKeyId = 6;
+<table>
+  <tr>
+    <th>Description</th>
+    <td>Binds to EP11 `m_DeriveKey`, which is an implementation of PKCS #11 `C_DeriveKey`.<td>
+  </tr>
+  <tr>
+    <th>Parameters</th>
+    <td>
+    <pre>
+message DeriveKeyRequest {
+  Mechanism Mech = 1;
+  bytes BaseKey = 3;
+  bytes Data = 4;
+  map&lt;uint64,AttributeValue&gt; Template = 8;
+}
+message DeriveKeyResponse {
+    bytes NewKeyBytes = 6;
+    bytes CheckSum = 7;
+}
+    </pre>
+    </td>
+  </tr>
+  <tr>
+    <th>Return values</th>
+    <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
+  </tr>
+</table>
+{: #DeriveKey_GREP11}
+{: tab-title="Enterprise PKCS #11 over gRPC"}
+{: tab-group="DeriveKey"}
+{: class="simple-tab-table"}
+
+<table>
+  <tr>
+    <th>Description</th>
+	<td>
+  <p>Implementation of PKCS #11 <code>C_DeriveKey</code>.</p>
+  <p>The <code>basekey</code>,<code>bklen</code> blob must be mapped from the PKCS #11 <code>hBaseKey</code> parameter.</p>
+  <p>PKCS #11 <code>hSession</code> is not mapped to any EP11 parameter. (The call is not directly associated with any session.)</p>
+  <p>PKCS #11 <code>phKey</code> is not mapped to any EP11 parameter. (Host library must bind returned key to handle.)</p>
+</td>
+  </tr>
+  <tr>
+    <th>Parameters</th>
+    <td>
+    <pre>
+CK_RV m_DeriveKey (
+  CK_MECHANISM_PTR mech,
+  CK_ATTRIBUTE_PTR template, CK_ULONG templatelen,
+  const unsigned char \*baseKey, size_t baseKeylen,
+  const unsigned char \*data, size_t datalen,
+  const unsigned char \*pin, size_t pinlen,
+  unsigned char \*newKey, size_t \*newKeylen,
+  unsigned char \*checkSum, size_t \*checkSumlen,
+  target_t target
+) ;
+    </pre>
+    </td>
+  </tr>
+  <tr>
+    <th>Return values</th>
+    <td>A subset of `C_DeriveKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+  </tr>
+</table>
+{: #DeriveKey_EP11}
+{: tab-title="Enterprise PKCS #11"}
+{: tab-group="DeriveKey"}
+{: class="simple-tab-table"}
+
+<table>
+  <tr>
+    <th>Description</th>
+    <td>
+    <p>`C_DeriveKey` derives a key from a base key, creating a new key object. `hSession` is the session's handle; `pMechanism` points to a structure that specifies the key derivation chanism; `hBaseKey` is the handle of the base key; `pTemplate` points to the template for the new key; `ulAttributeCount` is the number of attributes in the template; and `phKey` points to the location that receives the handle of the derived key.</p>
+    <p>The values of the `CKA_SENSITIVE`, `CKA_ALWAYS_SENSITIVE`, `CKA_EXTRACTABLE`, and `KA_NEVER_EXTRACTABLE` attributes for the base key affect the values that these attributes can hold for the newly-derived key. See the description of each particular key-derivation mechanism in Section 5.16.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749" target="_blank">PKCS #11 API specification</a> for any constraints of this type.</p>
+    <p>If a call to `C_DeriveKey` cannot support the precise template supplied to it, it will fail and return without creating any key object.</p>
+    <p>The key object created by a successful call to `C_DeriveKey` will have its `CKA_LOCAL` attribute set to `CK_FALSE`.</p>
+    </td>
+  </tr>
+  <tr>
+    <th>Parameters</th>
+    <td>
+    <pre>
+CK_DEFINE_FUNCTION(CK_RV, C_DeriveKey)(
+  CK_SESSION_HANDLE hSession,
+  CK_MECHANISM_PTR pMechanism,
+  CK_OBJECT_HANDLE hBaseKey,
+  CK_ATTRIBUTE_PTR pTemplate,
+  CK_ULONG ulAttributeCount,
+  CK_OBJECT_HANDLE_PTR phKey
+);
+    </pre>
+    </td>
+  </tr>
+  <tr>
+    <th>Return values</th>
+    <td>
+    CKR_ARGUMENTS_BAD, CKR_ATTRIBUTE_READ_ONLY, CKR_ATTRIBUTE_TYPE_INVALID, CKR_ATTRIBUTE_VALUE_INVALID, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_CURVE_NOT_SUPPORTED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_DOMAIN_PARAMS_INVALID, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_SESSION_READ_ONLY, CKR_TEMPLATE_INCOMPLETE, CKR_TEMPLATE_INCONSISTENT, CKR_TOKEN_WRITE_PROTECTED, CKR_USER_NOT_LOGGED_IN.
+    </td>
+  </tr>
+</table>
+{: #DeriveKey_PKCS11}
+{: tab-title="PKCS #11"}
+{: tab-group="DeriveKey"}
+{: class="simple-tab-table"}
+
+**Code snippets**
+
+- Golang code snippet
+
+  ```Golang
+  // Derive AES key for Alice
+  deriveKeyTemplate := ep11.EP11Attributes{
+      ep11.CKA_CLASS:     ep11.CKO_SECRET_KEY,
+      ep11.CKA_KEY_TYPE:  ep11.CKK_AES,
+      ep11.CKA_VALUE_LEN: 128 / 8,
+      ep11.CKA_ENCRYPT:   true,
+      ep11.CKA_DECRYPT:   true,
   }
-  message DeriveKeyResponse {
-  	bytes NewKey = 6;
-  	bytes CheckSum = 7;
+  // Extract Bob's EC coordinates
+  combinedCoordinates, err := util.GetPubkeyBytesFromSPKI(bobECKeypairResponse.PubKeyBytes)
+  if err != nil {
+      return nil, fmt.Errorf("Bob's EC public key cannot obtain coordinates: %s", err)
   }
-      </pre>
-      </td>
-    </tr>
-    <tr>
-      <th>Return values</th>
-      <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-    </tr>
-  </table>
-  {: #DeriveKey_GREP11}
-  {: tab-title="Enterprise PKCS #11 over gRPC"}
-  {: tab-group="DeriveKey"}
-  {: class="simple-tab-table"}
 
-  <table>
-    <tr>
-      <th>Description</th>
-  	<td>
-    <p>Implementation of PKCS #11 <code>C_DeriveKey</code>.</p>
-    <p>The <code>basekey</code>,<code>bklen</code> blob must be mapped from the PKCS #11 <code>hBaseKey</code> parameter.</p>
-    <p>PKCS #11 <code>hSession</code> is not mapped to any EP11 parameter. (The call is not directly associated with any session.)</p>
-    <p>PKCS #11 <code>phKey</code> is not mapped to any EP11 parameter. (Host library must bind returned key to handle.)</p>
-  </td>
-    </tr>
-    <tr>
-      <th>Parameters</th>
-      <td>
-      <pre>
-  CK_RV m_DeriveKey (
-    CK_MECHANISM_PTR mech,
-    CK_ATTRIBUTE_PTR template, CK_ULONG templatelen,
-    const unsigned char *baseKey, size_t baseKeylen,
-    const unsigned char *data, size_t datalen,
-    const unsigned char *pin, size_t pinlen,
-    unsigned char \*newKey, size_t \*newKeylen,
-    unsigned char \*checkSum, size_t \*checkSumlen,
-    target_t target
-  ) ;
-      </pre>
-      </td>
-    </tr>
-    <tr>
-      <th>Return values</th>
-      <td>A subset of `C_DeriveKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-    </tr>
-  </table>
-  {: #DeriveKey_EP11}
-  {: tab-title="Enterprise PKCS #11"}
-  {: tab-group="DeriveKey"}
-  {: class="simple-tab-table"}
+  aliceDeriveKeyRequest := &pb.DeriveKeyRequest{
+      Mech:     &pb.Mechanism{Mechanism: ep11.CKM_ECDH1_DERIVE, Parameter: util.SetMechParm(combinedCoordinates)},
+      Template: util.AttributeMap(deriveKeyTemplate),
+      BaseKey:  aliceECKeypairResponse.PrivKeyBytes,
+  }
 
-  <table>
-    <tr>
-      <th>Description</th>
-      <td>
-      <p>`C_DeriveKey` derives a key from a base key, creating a new key object. `hSession` is the session's handle; `pMechanism` points to a structure that specifies the key derivation mechanism; `hBaseKey` is the handle of the base key; `pTemplate` points to the template for the new key; `ulAttributeCount` is the number of attributes in the template; and `phKey` points to the location that receives the handle of the derived key.</p>
-      <p>The values of the `CKA_SENSITIVE`, `CKA_ALWAYS_SENSITIVE`, `CKA_EXTRACTABLE`, and `CKA_NEVER_EXTRACTABLE` attributes for the base key affect the values that these attributes can hold for the newly-derived key. See the description of each particular key-derivation mechanism in Section 5.16.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749" target="_blank">PKCS #11 API specification</a> for any constraints of this type.</p>
-      <p>If a call to `C_DeriveKey` cannot support the precise template supplied to it, it will fail and return without creating any key object.</p>
-      <p>The key object created by a successful call to `C_DeriveKey` will have its `CKA_LOCAL` attribute set to `CK_FALSE`.</p>
-      </td>
-    </tr>
-    <tr>
-      <th>Parameters</th>
-      <td>
-      <pre>
-  CK_DEFINE_FUNCTION(CK_RV, C_DeriveKey)(
-    CK_SESSION_HANDLE hSession,
-    CK_MECHANISM_PTR pMechanism,
-    CK_OBJECT_HANDLE hBaseKey,
-    CK_ATTRIBUTE_PTR pTemplate,
-    CK_ULONG ulAttributeCount,
-    CK_OBJECT_HANDLE_PTR phKey
+  // Derive AES key for Alice
+  aliceDeriveKeyResponse, err := cryptoClient.DeriveKey(context.Background(),  aliceDeriveKeyRequest)
+  ```
+  {: codeblock}
+
+- JavaScript code snippet
+
+  ```JavaScript
+  const deriveKeyTemplate = new util.AttributeMap(
+    new util.Attribute(ep11.CKA_CLASS, ep11.CKO_SECRET_KEY),
+    new util.Attribute(ep11.CKA_KEY_TYPE, ep11.CKK_AES),
+    new util.Attribute(ep11.CKA_VALUE_LEN, 128/8),
+    new util.Attribute(ep11.CKA_ENCRYPT, true),
+    new util.Attribute(ep11.CKA_DECRYPT, true),
   );
-      </pre>
-      </td>
-    </tr>
-    <tr>
-      <th>Return values</th>
-      <td>
-      CKR_ARGUMENTS_BAD, CKR_ATTRIBUTE_READ_ONLY, CKR_ATTRIBUTE_TYPE_INVALID, CKR_ATTRIBUTE_VALUE_INVALID, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_CURVE_NOT_SUPPORTED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_DOMAIN_PARAMS_INVALID, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_SESSION_READ_ONLY, CKR_TEMPLATE_INCOMPLETE, CKR_TEMPLATE_INCONSISTENT, CKR_TOKEN_WRITE_PROTECTED, CKR_USER_NOT_LOGGED_IN.
-      </td>
-    </tr>
-  </table>
-  {: #DeriveKey_PKCS11}
-  {: tab-title="PKCS #11"}
-  {: tab-group="DeriveKey"}
-  {: class="simple-tab-table"}
-
-  **Code snippets**
-
-  - Golang code snippet
-
-    ```Golang
-    DeriveKeyRequest := &pb.DeriveKeyRequest {
-    	Mech:     &pb.Mechanism{Mechanism: ep11.CKM_ECDH1_DERIVE, Parameter: combinedCoordinates},
-    	Template: util.NewAttributeMap(
-    		util.NewAttribute(ep11.CKA_CLASS, uint64(ep11.CKO_SECRET_KEY)),
-    		util.NewAttribute(ep11.CKA_KEY_TYPE, uint64(ep11.CKK_AES)),
-    		util.NewAttribute(ep11.CKA_VALUE_LEN, (uint64)(128/8)),
-    		util.NewAttribute(ep11.CKA_ENCRYPT, true),
-    		util.NewAttribute(ep11.CKA_DECRYPT, true),
-    	),
-    	BaseKey:  GenerateKeypairResponse.PrivKey, // EC generated key
-    }
-
-    DeriveKeyResponse, err := cryptoClient.DeriveKey(context.Background(), DeriveKeyRequest)
-    ```
-    {: codeblock}
-
-  - JavaScript code snippet
-
-    ```JavaScript
-    const deriveKeyTemplate = new util.AttributeMap(
-      new util.Attribute(ep11.CKA_CLASS, ep11.CKO_SECRET_KEY),
-      new util.Attribute(ep11.CKA_KEY_TYPE, ep11.CKK_AES),
-      new util.Attribute(ep11.CKA_VALUE_LEN, 128/8),
-      new util.Attribute(ep11.CKA_ENCRYPT, true),
-      new util.Attribute(ep11.CKA_DECRYPT, true),
-    );
-
-    client.DeriveKey({
-      Mech: {
-        Mechanism: ep11.CKM_ECDH1_DERIVE,
-        Parameter: combinedCoordinates
-      },
-      Template: deriveKeyTemplate,
-      BaseKey: data.PrivKey
-    }, (err, response) => {
-      callback(err, response);
-    });
-    ```
-    {: codeblock}
+  client.DeriveKey({
+    Mech: {
+      Mechanism: ep11.CKM_ECDH1_DERIVE,
+      Parameter: combinedCoordinates
+    },
+    Template: deriveKeyTemplate,
+    BaseKey: data.PrivKey
+  }, (err, response) => {
+    callback(err, response);
+  });
+  ```
+  {: codeblock}
 
 ## Protecting keys
 {: #grep11-operation-manage-keys}
@@ -1038,13 +1055,13 @@ The `WrapKey` function wraps (encrypts) a key.
     <td>
     <pre>
 message WrapKeyRequest {
-	bytes Key = 1;
-	bytes KeK = 2;
-	bytes MacKey = 3;
-	Mechanism Mech = 4;
+    bytes Key = 1;
+    bytes KeK = 2;
+    bytes MacKey = 3;
+    Mechanism Mech = 4;
 }
 message WrapKeyResponse {
-	bytes Wrapped = 5;
+    bytes Wrapped = 5;
 }
     </pre>
     </td>
@@ -1070,13 +1087,13 @@ message WrapKeyResponse {
     <td>
     <pre>
 CK_RV m_WrapKey (
-  const unsigned char *key, size_t keylen,
-  const unsigned char *keK, size_t keKlen,
-  const unsigned char *macKey, size_t macKeylen,
+  const unsigned char \*key, size_t keylen,
+  const unsigned char \*keK, size_t keKlen,
+  const unsigned char \*macKey, size_t macKeylen,
   const CK_MECHANISM_PTR mech,
   CK_BYTE_PTR wrapped, CK_ULONG_PTR wrappedlen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -1143,9 +1160,9 @@ CK_DEFINE_FUNCTION(CK_RV, C_WrapKey)(
 
   ```Golang
   WrapKeyRequest := &pb.WrapKeyRequest {
-  	Mech: &pb.Mechanism{Mechanism: ep11.CKM_RSA_PKCS},
-  	KeK:  GenerateKeyPairResponse.PubKey,
-  	Key:  GenerateKeyResponse.Key,
+      Mech: &pb.Mechanism{Mechanism: ep11.CKM_RSA_PKCS},
+      KeK:  GenerateKeyPairResponse.PubKeyBytes,
+      Key:  GenerateKeyResponse.KeyBytes,
   }
 
   WrapKeyResponse, err := cryptoClient.WrapKey(context.Background(), WrapKeyRequest)
@@ -1187,11 +1204,10 @@ message UnwrapKeyRequest {
   bytes KeK = 2;
   bytes MacKey = 3;
   Mechanism Mech = 5;
-  map Template = 6;
-  string UnwrappedId = 7;
+  map&lt;uint64,AttributeValue&gt; Template = 9;
 }
 message UnwrapKeyResponse {
-  bytes Unwrapped = 7;
+  bytes UnwrappedBytes = 7;
   bytes CheckSum = 8;
 }
     </pre>
@@ -1224,15 +1240,15 @@ message UnwrapKeyResponse {
     <pre>
 CK_RV m_UnwrapKey (
   const CK_BYTE_PTR wrapped, CK_ULONG wrappedlen,
-  const unsigned char *keK, size_t keKlen,
-  const unsigned char *macKey, size_t macKeylen,
-  const unsigned char *pin, size_t pinlen,
+  const unsigned char \*keK, size_t keKlen,
+  const unsigned char \*macKey, size_t macKeylen,
+  const unsigned char \*pin, size_t pinlen,
   const CK_MECHANISM_PTR mech,
   const CK_ATTRIBUTE_PTR template, CK_ULONG templatelen,
   unsigned char \*unwrapped, size_t \*unwrappedlen,
-  CK_BYTE_PTR checkSum, CK_ULONG *checkSumlen,
+  CK_BYTE_PTR checkSum, CK_ULONG \*checkSumlen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -1293,20 +1309,22 @@ CK_DEFINE_FUNCTION(CK_RV, C_UnwrapKey)(
 - Golang code snippet
 
   ```Golang
-  UnwrapKeyRequest := &pb.UnwrapKeyRequest {
-  	Mech:     &pb.Mechanism{Mechanism: ep11.CKM_RSA_PKCS},
-  	KeK:      GenerateKeyPairResponse.PrivKey,
-  	Wrapped:  WrapKeyResponse.Wrapped,
-  	Template: util.NewAttributeMap(
-  		util.NewAttribute(ep11.CKA_CLASS, ep11.CKO_SECRET_KEY),
-  		util.NewAttribute(ep11.CKA_KEY_TYPE, ep11.CKK_AES),
-  		util.NewAttribute(ep11.CKA_VALUE_LEN, (uint64)(128/8)),
-  		util.NewAttribute(ep11.CKA_ENCRYPT, true),
-  		util.NewAttribute(ep11.CKA_DECRYPT, true),
-  		util.NewAttribute(ep11.CKA_EXTRACTABLE, true), // must be true to be wrapped
-  	),
+  aesUnwrapKeyTemplate := ep11.EP11Attributes{
+      ep11.CKA_CLASS:       ep11.CKO_SECRET_KEY,
+      ep11.CKA_KEY_TYPE:    ep11.CKK_AES,
+      ep11.CKA_VALUE_LEN:   128 / 8,
+      ep11.CKA_ENCRYPT:     true,
+      ep11.CKA_DECRYPT:     true,
+      ep11.CKA_EXTRACTABLE: true, // must be true to be wrapped
+  }
+  UnwrapKeyRequest := &pb.UnwrapKeyRequest{
+      Mech:     &pb.Mechanism{Mechanism: ep11.CKM_RSA_PKCS},
+      KeK:      GenerateKeyPairResponse.PrivKeyBytes,
+      Wrapped:  WrapKeyResponse.Wrapped,
+      Template: util.AttributeMap(aesUnwrapKeyTemplate),
   }
 
+  // Unwrap the AES key
   UnwrapKeyResponse, err := cryptoClient.UnwrapKey(context.Background(), UnwrapKeyRequest)
   ```
   {: codeblock}
@@ -1353,12 +1371,12 @@ This function is a special administration command that is supported only by GREP
     <th>Parameters</th>
     <td>
     <pre>
-    message RewrapKeyBlobRequest {
-    	bytes WrappedKey = 1;
-    }
-    message RewrapKeyBlobResponse {
-    	bytes RewrappedKey = 1;
-    }
+message RewrapKeyBlobRequest {
+	bytes WrappedKey = 1;
+}
+message RewrapKeyBlobResponse {
+	bytes RewrappedKey = 1;
+}
     </pre>
     </td>
   </tr>
@@ -1377,9 +1395,12 @@ This function is a special administration command that is supported only by GREP
 - Golang code snippet
 
   ```Golang
-  rewrapKeyBlobRequest := &pb.RewrapKeyBlobRequest {
-      WrappedKey: generateKeyResponse.Key,
+  RewrapKeyBlobRequest := &pb.RewrapKeyBlobRequest {
+      WrappedKey: GenerateKeyResponse.KeyBytes,
   }
+
+  // Rewrap an existing key blob using the HSM's new wrapping key
+  RewrapKeyBlobResponse, err := cryptoClient.RewrapKeyBlob(context.Background(),  RewrapKeyBlobRequest)
   ```
   {: codeblock}
 
@@ -1414,11 +1435,11 @@ The `GetAttributeValue` function obtains an attribute value of an object.
     <td>
     <pre>
 message GetAttributeValueRequest {
-	bytes Object = 1;
-	map Attributes = 2;
+    bytes Object = 1;
+    map&lt;uint64,AttributeValue&gt; Attributes = 3;
 }
 message GetAttributeValueResponse {
-	map Attributes = 2;
+    map&lt;uint64,AttributeValue&gt; Attributes = 4;
 }
     </pre>
     </td>
@@ -1446,10 +1467,10 @@ message GetAttributeValueResponse {
     <td>
     <pre>
 CK_RV m_GetAttributeValue (
-  const unsigned char *object, size_t objectlen,
+  const unsigned char \*object, size_t objectlen,
   CK_ATTRIBUTE_PTR attributes, CK_ULONG attributeslen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -1513,9 +1534,14 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetAttributeValue)(
 - Golang code snippet
 
   ```Golang
-  GetAttributeValueRequest := &pb.GetAttributeValueRequest {
-  	Object:     GenerateKeyPairResponse.PrivKey,
-  	Attributes: util.NewAttributeMap(util.NewAttribute(ep11.CKA_SIGN, uint8(0)),
+  // Only retrieve supported EP11 attributes
+  attributeList := ep11.EP11Attributes{
+      ep11.CKA_DECRYPT: false, // attribute where you would like to retrieve its current value
+  }
+
+  GetAttributeValueRequest := &pb.GetAttributeValueRequest{
+      Object:     GenerateKeyPairResponse.PrivKeyBytes,
+      Attributes: util.AttributeMap(attributeList),
   }
 
   GetAttributeValueResponse, err := cryptoClient.GetAttributeValue(context.Background(), GetAttributeValueRequest)
@@ -1554,11 +1580,11 @@ The `SetAttributeValue` function modifies an attribute value of an object.
     <td>
     <pre>
 message SetAttributeValueRequest {
-	bytes Object = 1;
-	map Attributes = 2;
+    bytes Object = 1;
+    map&lt;uint64,AttributeValue&gt; Attributes = 3;
 }
 message SetAttributeValueResponse {
-	bytes Object = 1;
+    bytes Object = 1;
 }
     </pre>
     </td>
@@ -1588,10 +1614,10 @@ message SetAttributeValueResponse {
     <td>
     <pre>
 CK_RV m_SetAttributeValue (
-  unsigned char *object, size_t objectlen,
+  unsigned char \*object, size_t objectlen,
   CK_ATTRIBUTE_PTR attributes, CK_ULONG attributeslen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -1646,11 +1672,15 @@ CK_DEFINE_FUNCTION(CK_RV, C_SetAttributeValue)(
 - Golang code snippet
 
   ```Golang
-  SetAttributeValueRequest := &pb.SetAttributeValueRequest {
-  	Object:     GenerateKeyPairResponse.PrivKey,
-  	Attributes: util.NewAttributeMap(util.NewAttribute(ep11.CKA_SIGN, true),
+  // Only set supported R/W EP11 attributes
+  attributeList := ep11.EP11AttributeP{
+      CKA_DECRYPT: true,
   }
 
+  SetAttributeValueRequest := &pb.SetAttributeValueRequest{
+      Object:     GenerateKeyPair.PrivKeyBytes,
+      Attributes: util.AttributeMap(attributeList),
+  }
   SetAttributeValueResponse, err := cryptoClient.SetAttributeValue(context.Background(), SetAttributeValueRequest)
   ```
   {: codeblock}
@@ -1725,7 +1755,7 @@ message GenerateRandomResponse {
 CK_RV m_GenerateRandom (
   CK_BYTE_PTR rnd, CK_ULONG rndlen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -1778,7 +1808,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateRandom)(
 
   ```Golang
   GenerateRandomRequest := &pb.GenerateRandomRequest {
-  	Len: 1024,
+      Len: 1024,
   }
 
   GenerateRandomResponse, err := cryptoClient.GenerateRandom(context.Background(), GenerateRandomRequest)
@@ -1816,11 +1846,11 @@ The `EncryptInit` function initializes an encryption operation. You need to call
     <td>
     <pre>
 message EncryptInitRequest {
-	Mechanism Mech = 2;
-	bytes Key = 3;
+    Mechanism Mech = 2;
+    bytes Key = 3;
 }
 message EncryptInitResponse {
-	bytes State = 1;
+    bytes State = 1;
 }
     </pre>
     </td>
@@ -1854,9 +1884,9 @@ message EncryptInitResponse {
 CK_RV m_EncryptInit (
   unsigned char \*state, size_t \*statelen,
   CK_MECHANISM_PTR mech,
-  const unsigned char *key, size_t keylen,
+  const unsigned char \*key, size_t keylen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -1907,9 +1937,20 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptInit)(
 - Golang code snippet
 
   ```Golang
-  EncryptInitRequest := &pb.EncryptInitRequest {
-  	Mech: &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: iv},
-  	Key:  GenerateKeyResponse.Key,
+  // Generate 16 bytes of random data for the initialization vector
+  GenerateRandomRequest := &pb.GenerateRandomRequest{
+      Len: (uint64)(ep11.AES_BLOCK_SIZE),
+  }
+  GenerateRandomResponse, err := cryptoClient.GenerateRandom(context.Background(), GenerateRandomRequest)
+  if err != nil {
+      return nil, fmt.Errorf("GenerateRandom error: %s", err)
+  }
+  iv := GenerateRandomResponse.Rnd[:ep11.AES_BLOCK_SIZE]
+  fmt.Println("Generated IV")
+
+  EncryptInitRequest := &pb.EncryptInitRequest{
+      Mech: &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
+      Key:  GenerateKeyResponse.KeyBytes,
   }
 
   EncryptInitResponse, err := cryptoClient.EncryptInit(context.Background(), EncryptInitRequest)
@@ -1946,11 +1987,11 @@ The `Encrypt` function encrypts single-part data. You don't need to perform the 
     <td>
     <pre>
 message EncryptRequest {
-	bytes State = 1;
-	bytes Plain = 2;
+    bytes State = 1;
+    bytes Plain = 2;
 }
 message EncryptResponse {
-	bytes Ciphered = 3;
+    bytes Ciphered = 3;
 }
     </pre>
     </td>
@@ -1980,11 +2021,11 @@ message EncryptResponse {
     <td>
     <pre>
 CK_RV m_Encrypt (
-  const unsigned char *state, size_t statelen,
+  const unsigned char \*state, size_t statelen,
   CK_BYTE_PTR plain, CK_ULONG plainlen,
   CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -2041,9 +2082,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_Encrypt)(
 - Golang code snippet
 
   ```Golang
+  plainText := "Encrypt this message"
+
   EncryptRequest := &pb.EncryptRequest {
-  	State: EncryptInitResponse.State,
-  	Plain: plainText,
+      State: EncryptInitResponse.State,
+      Plain: plainText,
   }
 
   EncryptResponse, err := cryptoClient.Encrypt(context.Background(), EncryptRequest)
@@ -2078,12 +2121,12 @@ The `EncryptUpdate` function continues a multiple-part encryption operation. Bef
     <td>
     <pre>
 message EncryptUpdateRequest {
-	bytes State = 1;
-	bytes Plain = 2;
+    bytes State = 1;
+    bytes Plain = 2;
 }
 message EncryptUpdateResponse {
-	bytes State = 1;
-	bytes Ciphered = 3;
+    bytes State = 1;
+    bytes Ciphered = 3;
 }
     </pre>
     </td>
@@ -2112,11 +2155,11 @@ message EncryptUpdateResponse {
     <td>
     <pre>
 CK_RV m_EncryptUpdate (
-  unsigned char *state, size_t statelen,
+  unsigned char \*state, size_t statelen,
   CK_BYTE_PTR plain, CK_ULONG plainlen,
   CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -2170,12 +2213,29 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptUpdate)(
 - Golang code snippet
 
   ```Golang
-  EncryptUpdateRequest := &pb.EncryptUpdateRequest {
-  	State: EncryptInitResponse.State,
-  	Plain: plainText[:20],
+  plainText := `
+  This is a very long message that needs to be encrypted by performing
+  multiple EncrypytUpdate functions`
+
+  // Use EncryptUpdate if you would like to breakup
+  // the encrypt operation into multiple sub-operations
+  EncryptUpdateRequest1 := &pb.EncryptUpdateRequest {
+      State: EncryptInitResponse.State,
+      Plain: plainText[:20],
   }
 
-  EncryptUpdateResponse, err := cryptoClient.EncryptUpdate(context.Background(), EncryptUpdateRequest)
+  EncryptUpdateResponse, err := cryptoClient.EncryptUpdate(context.Background(), EncryptUpdateRequest1)
+
+  ciphertext := EncryptUpdateResponse.Ciphered[:]
+
+  EncryptUpdateRequest2 := &pb.EncryptUpdateRequest {
+      State: EncryptUpdateResponse.State,
+      Plain: plainText[20:],
+  }
+
+  EncryptUpdateResponse, err := cryptoClient.EncryptUpdate(context.Background(), EncryptUpdateRequest2)
+
+  ciphertext = append(ciphertext, EncryptUpdateResponse.Ciphered...)
   ```
   {: codeblock}
 
@@ -2206,10 +2266,10 @@ The `EncryptFinal` function finishes a multiple-part encryption operation.
     <td>
     <pre>
 message EncryptFinalRequest {
-	bytes State = 1;
+    bytes State = 1;
 }
 message EncryptFinalResponse {
-	bytes Ciphered = 2;
+    bytes Ciphered = 2;
 }
     </pre>
     </td>
@@ -2239,10 +2299,10 @@ message EncryptFinalResponse {
     <td>
     <pre>
 CK_RV m_EncryptFinal (
-  const unsigned char *state, size_t statelen,
+  const unsigned char \*state, size_t statelen,
   CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -2295,7 +2355,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptFinal)(
 
   ```Golang
   EncryptFinalRequest := &pb.EncryptFinalRequest {
-  	State: EncryptUpdateResponse.State,
+      State: EncryptUpdateResponse.State,
   }
 
   EncryptFinalResponse, err := cryptoClient.EncryptFinal(context.Background(), EncryptFinalRequest)
@@ -2328,12 +2388,12 @@ The `EncryptSingle` function processes data in one pass with one call. It does n
     <td>
     <pre>
 message EncryptSingleRequest {
-	bytes Key = 1;
-	Mechanism Mech = 2;
-	bytes Plain = 3;
+    bytes Key = 1;
+    Mechanism Mech = 2;
+    bytes Plain = 3;
 }
 message EncryptSingleResponse {
-	bytes Ciphered = 4;
+    bytes Ciphered = 4;
 }
     </pre>
     </td>
@@ -2364,12 +2424,12 @@ message EncryptSingleResponse {
     <td>
     <pre>
 CK_RV m_EncryptSingle (
-  const unsigned char *key, size_t keylen,
+  const unsigned char \*key, size_t keylen,
   CK_MECHANISM_PTR mech,
   CK_BYTE_PTR plain, CK_ULONG plainlen,
   CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -2388,10 +2448,23 @@ CK_RV m_EncryptSingle (
 - Golang code snippet
 
   ```Golang
-  EncryptSingleRequest := &pb.EncryptSingleRequest {
-  	Mech:  &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC, Parameter: iv},
-  	Key:   GenerateKeyResponse.Key,
-  	Plain: plainText,
+  // Generate 16 bytes of random data for the initialization vector
+  GenerateRandomRequest := &pb.GenerateRandomRequest{
+      Len: (uint64)(ep11.AES_BLOCK_SIZE),
+  }
+  GenerateRandomResponse, err := cryptoClient.GenerateRandom(context.Background(),  GenerateRandomRequest)
+  if err != nil {
+      return nil, fmt.Errorf("GenerateRandom error: %s", err)
+  }
+
+  iv := GenerateRandomResponse.Rnd[:ep11.AES_BLOCK_SIZE]
+  fmt.Println("Generated IV")
+
+  plainText := "Encrypt this message"
+  EncryptSingleRequest := &pb.EncryptSingleRequest{
+      Mech: &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
+      Key:  GenerateKeyResponse.KeyBytes,
+      Plain: plainText,
   }
 
   EncryptSingleResponse, err := cryptoClient.EncryptSingle(context.Background(), EncryptSingleRequest)
@@ -2551,11 +2624,11 @@ The `DecryptInit` function initializes a decryption operation. You need to call 
     <td>
     <pre>
 message DecryptInitRequest {
-	Mechanism Mech = 2;
-	bytes Key = 3;
+    Mechanism Mech = 2;
+    bytes Key = 3;
 }
 message DecryptInitResponse {
-	bytes State = 1;
+    bytes State = 1;
 }
     </pre>
     </td>
@@ -2583,9 +2656,9 @@ message DecryptInitResponse {
 CK_RV m_DecryptInit (
   unsigned char \*state, size_t \*statelen,
   CK_MECHANISM_PTR mech,
-  const unsigned char *key, size_t keylen,
+  const unsigned char \*key, size_t keylen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -2637,9 +2710,20 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptInit)(
 - Golang code snippet
 
   ```Golang
-  DecryptInitRequest := &pb.DecryptInitRequest {
-  	Mech: &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: iv},
-  	Key:  GenerateKeyResponse.Key,
+  // Generate 16 bytes of random data for the initialization vector
+  GenerateRandomRequest := &pb.GenerateRandomRequest{
+      Len: (uint64)(ep11.AES_BLOCK_SIZE),
+  }
+  GenerateRandomResponse, err := cryptoClient.GenerateRandom(context.Background(), GenerateRandomRequest)
+  if err != nil {
+      return nil, fmt.Errorf("GenerateRandom error: %s", err)
+  }
+  iv := GenerateRandomResponse.Rnd[:ep11.AES_BLOCK_SIZE]
+  fmt.Println("Generated IV")
+
+  DecryptInitRequest := &pb.DecryptInitRequest{
+      Mech: &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
+      Key:  GenerateKeyResponse.KeyBytes,
   }
 
   DecryptInitResponse, err := cryptoClient.DecryptInit(context.Background(), DecryptInitRequest)
@@ -2677,11 +2761,11 @@ The `Decrypt` function decrypts data in a single part. You don't need to perform
     <td>
     <pre>
 message DecryptRequest {
-  bytes State = 1;
-  bytes Ciphered = 2;
+    bytes State = 1;
+    bytes Ciphered = 2;
 }
 message DecryptResponse {
-  bytes Plain = 3;
+   bytes Plain = 3;
 }
     </pre>
     </td>
@@ -2711,7 +2795,7 @@ CK_RV m_Decrypt (const unsigned char *state, size_t slen,
   CK_BYTE_PTR cipher, CK_ULONG clen,
   CK_BYTE_PTR plain, CK_ULONG_PTR plen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -2775,9 +2859,9 @@ CK_DEFINE_FUNCTION(CK_RV, C_Decrypt)(
 - Golang code snippet
 
   ```Golang
-  DecryptRequest := &pb.DecryptRequest {
-  	State:    DecryptInitResponse.State,
-  	Ciphered: ciphertext,
+  DecryptRequest := &pb.DecryptRequest{
+      State:    DecryptInitResponse.State,
+      Ciphered: ciphertext, // encrypted data from a previous encrypt operation
   }
 
   DecryptResponse, err := cryptoClient.Decrypt(context.Background(), DecryptRequest)
@@ -2811,12 +2895,12 @@ The `DecryptUpdate` function continues a multiple-part decryption operation. Bef
     <td>
     <pre>
 message DecryptUpdateRequest {
-	bytes State = 1;
-	bytes Ciphered = 2;
+    bytes State = 1;
+    bytes Ciphered = 2;
 }
 message DecryptUpdateResponse {
-	bytes State = 1;
-	bytes Plain = 3;
+    bytes State = 1;
+    bytes Plain = 3;
 }
     </pre>
     </td>
@@ -2845,11 +2929,11 @@ message DecryptUpdateResponse {
     <td>
     <pre>
 CK_RV m_DecryptUpdate (
-  unsigned char *state, size_t statelen,
+  unsigned char \*state, size_t statelen,
   CK_BYTE_PTR ciphered, CK_ULONG cipheredlen,
   CK_BYTE_PTR plain, CK_ULONG_PTR plainlen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -2902,12 +2986,25 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptUpdate)(
 - Golang code snippet
 
   ```Golang
-  DecryptUpdateRequest := &pb.DecryptUpdateRequest {
-  	State:    DecryptInitResponse.State,
-  	Ciphered: ciphertext[:16],
+  // Use DecryptUpdate if you would like to breakup
+  // the decrypt operation into multiple sub-operations
+  DecryptUpdateRequest1 := &pb.DecryptUpdateRequest{
+      State:    DecryptInitResponse.State,
+      Ciphered: ciphertext[:16], // encrypted data from a previous encrypt operation
   }
 
-  DecryptUpdateResponse, err := cryptoClient.DecryptUpdate(context.Background(), DecryptUpdateRequest)
+  DecryptUpdateResponse, err := cryptoClient.DecryptUpdate(context.Background(), DecryptUpdateRequest1)
+
+  plaintext := DecryptUpdateResponse.Plain[:]
+
+  DecryptUpdateRequest2 := &pb.DecryptUpdateRequest{
+      State:    DecryptUpdateResponse.State,
+      Ciphered: ciphertext[16:], // encrypted data from a previous encrypt operation
+  }
+
+  DecryptUpdateResponse, err := cryptoClient.DecryptUpdate(context.Background(), DecryptUpdateRequest2)
+
+  plaintext = append(plaintext, DecryptUpdateResponse.Plain...)
   ```
   {: codeblock}
 
@@ -2939,10 +3036,10 @@ The `DecryptFinal` function finishes a multiple-part decryption operation.
     <td>
     <pre>
 message DecryptFinalRequest {
-	bytes State = 1;
+    bytes State = 1;
 }
 message DecryptFinalResponse {
-	bytes Plain = 2;
+    bytes Plain = 2;
 }
     </pre>
     </td>
@@ -2971,10 +3068,10 @@ message DecryptFinalResponse {
     <td>
     <pre>
 CK_RV m_DecryptFinal (
-  const unsigned char *state, size_t statelen,
+  const unsigned char \*state, size_t statelen,
   CK_BYTE_PTR plain, CK_ULONG_PTR plainlen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -3027,7 +3124,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptFinal)(
 
   ```Golang
   DecryptFinalRequest := &pb.DecryptFinalRequest {
-  	State: DecrypUpdateResponse.State,
+      State: DecrypUpdateResponse.State,
   }
 
   DecryptFinalResponse, err := cryptoClient.DecryptFinal(context.Background(), DecryptFinalRequest)
@@ -3061,12 +3158,12 @@ The `DecryptSingle` function processes data in one pass with one call. It does n
     <td>
     <pre>
 message DecryptSingleRequest {
-	bytes Key = 1;
-	Mechanism Mech = 2;
-	bytes Ciphered = 3;
+    bytes Key = 1;
+    Mechanism Mech = 2;
+    bytes Ciphered = 3;
 }
 message DecryptSingleResponse {
-	bytes Plain = 4;
+    bytes Plain = 4;
 }
     </pre>
     </td>
@@ -3097,12 +3194,12 @@ message DecryptSingleResponse {
     <td>
     <pre>
 CK_RV m_DecryptSingle (
-  const unsigned char *key, size_t keylen,
+  const unsigned char \*key, size_t keylen,
   CK_MECHANISM_PTR mech,
   CK_BYTE_PTR ciphered, CK_ULONG cipheredlen,
   CK_BYTE_PTR plain, CK_ULONG_PTR plainlen,
   target_t target
-) ;
+);
       </pre>
     </td>
   </tr>
@@ -3121,10 +3218,21 @@ CK_RV m_DecryptSingle (
 - Golang code snippet
 
   ```Golang
+  // Generate 16 bytes of random data for the initialization vector
+  GenerateRandomRequest := &pb.GenerateRandomRequest{
+      Len: (uint64)(ep11.AES_BLOCK_SIZE),
+  }
+  GenerateRandomResponse, err := cryptoClient.GenerateRandom(context.Background(),  GenerateRandomRequest)
+  if err != nil {
+      return nil, fmt.Errorf("GenerateRandom error: %s", err)
+  }
+  iv := GenerateRandomResponse.Rnd[:ep11.AES_BLOCK_SIZE]
+  fmt.Println("Generated IV")
+
   DecryptSingleRequest := &pb.DecryptSingleRequest {
-  	Mech:     &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC, Parameter: iv},
-  	Key:      GenerateKeyResponse.Key,
-  	Ciphered: EncryptSingleResponse.Ciphered,
+      Key:      GenerateKeyResponse.KeyBytes,
+      Mech:     &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
+      Ciphered: EncryptSingleResponse.Ciphered, // encrypted data from a previous encrypt operation
   }
 
   DecryptSingleResponse, err := cryptoClient.DecryptSingle(context.Background(), DecryptSingleRequest)
@@ -3168,11 +3276,11 @@ The `SignInit` function initializes a signature operation. You need to call this
     <td>
     <pre>
 message SignInitRequest {
-	Mechanism Mech = 2;
-	bytes PrivKey = 3;
+    Mechanism Mech = 2;
+    bytes PrivKey = 3;
 }
 message SignInitResponse {
-	bytes State = 1;
+    bytes State = 1;
 }
     </pre>
     </td>
@@ -3200,9 +3308,9 @@ message SignInitResponse {
 CK_RV m_SignInit (
   unsigned char \*state, size_t \*statelen,
   CK_MECHANISM_PTR mech,
-  const unsigned char *privKey, size_t privKeylen,
+  const unsigned char \*privKey, size_t privKeylen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -3253,8 +3361,8 @@ CK_DEFINE_FUNCTION(CK_RV, C_SignInit)(
 
   ```Golang
   SignInitRequest := &pb.SignInitRequest {
-  	Mech:    &pb.Mechanism{Mechanism: ep11.CKM_SHA1_RSA_PKCS},
-  	PrivKey: GenerateKeyPairResponse.PrivKey,
+      Mech:    &pb.Mechanism{Mechanism: ep11.CKM_SHA1_RSA_PKCS},
+      PrivKey: GenerateKeyPairResponse.PrivKeyBytes,
   }
 
   SignInitResponse, err := cryptoClient.SignInit(context.Background(), SignInitRequest)
@@ -3291,11 +3399,11 @@ The `Sign` function signs single-part data. You don't need to perform the `SignU
     <td>
     <pre>
 message SignRequest {
-	bytes State = 1;
-	bytes Data = 2;
+    bytes State = 1;
+    bytes Data = 2;
 }
 message SignResponse {
-	bytes Signature = 3;
+    bytes Signature = 3;
 }
     </pre>
     </td>
@@ -3325,11 +3433,11 @@ message SignResponse {
     <td>
     <pre>
 CK_RV m_Sign (
-  const unsigned char *state, size_t statelen,
+  const unsigned char \*state, size_t statelen,
   CK_BYTE_PTR data, CK_ULONG datalen,
   CK_BYTE_PTR signature, CK_ULONG_PTR signaturelen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -3382,11 +3490,13 @@ CK_DEFINE_FUNCTION(CK_RV, C_Sign)(
 - Golang code snippet
 
   ```Golang
-  SignRequest := &pb.SignRequest {
-  	State: SignInitResponse.State,
-  	Data:  signData,
+  msgHash := sha256.Sum256([]byte("This data needs to be signed"))
+  SignRequest := &pb.SignRequest{
+      State: SignInitResponse.State,
+      Data:  msgHash[:],
   }
 
+  // Sign the data
   SignResponse, err := cryptoClient.Sign(context.Background(), SignRequest)
   ```
   {: codeblock}
@@ -3419,11 +3529,11 @@ The `SignUpdate` function continues a multiple-part signature operation. Before 
     <td>
     <pre>
 message SignUpdateRequest {
-	bytes State = 1;
-	bytes Data = 2;
+    bytes State = 1;
+    bytes Data = 2;
 }
 message SignUpdateResponse {
-	bytes State = 1;
+    bytes State = 1;
 }
     </pre>
     </td>
@@ -3452,10 +3562,10 @@ message SignUpdateResponse {
     <td>
     <pre>
 CK_RV m_SignUpdate (
-  unsigned char *state, size_t statelen,
+  unsigned char \*state, size_t statelen,
   CK_BYTE_PTR data, CK_ULONG datalen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -3504,12 +3614,21 @@ CK_DEFINE_FUNCTION(CK_RV, C_SignUpdate)(
 - Golang code snippet
 
   ```Golang
-  SignUpdateRequest := &pb.SignUpdateRequest {
-  	State: SignInitResponse.State,
-  	Data:  msgHash[:],
+  // Use SignUpdate if you would like to breakup
+  // the sign operation into multiple sub-operations
+  SignUpdateRequest1 := &pb.SignUpdateRequest {
+      State: SignInitResponse.State,
+      Data:  msgHash[:16],
   }
 
-  SignUpdateResponse, err := cryptoClient.SignUpdate(context.Background(), SignUpdateRequest)
+  SignUpdateResponse, err := cryptoClient.SignUpdate(context.Background(), SignUpdateRequest1)
+
+  SignUpdateRequest2 := &pb.SignUpdateRequest {
+      State: SignUpdateResponse.State,
+      Data:  msgHash[16:],
+  }
+
+  SignUpdateResponse, err := cryptoClient.SignUpdate(context.Background(), SignUpdateRequest2)
   ```
   {: codeblock}
 
@@ -3541,10 +3660,10 @@ The `SignFinal` function finishes a multiple-part signature operation.
     <td>
     <pre>
 message SignFinalRequest {
-	bytes State = 1;
+    bytes State = 1;
 }
 message SignFinalResponse {
-	bytes Signature = 2;
+    bytes Signature = 2;
 }
     </pre>
     </td>
@@ -3574,10 +3693,10 @@ message SignFinalResponse {
     <td>
     <pre>
 CK_RV m_SignFinal (
-  const unsigned char *state, size_t statelen,
+  const unsigned char \*state, size_t statelen,
   CK_BYTE_PTR signature, CK_ULONG_PTR signaturelen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -3628,7 +3747,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_SignFinal)(
 
   ```Golang
   SignFinalRequest := &pb.SignFinalRequest {
-  	State: SignUpdateResponse.State,
+      State: SignUpdateResponse.State,
   }
 
   SignFinalResponse, err := cryptoClient.SignFinal(context.Background(), SignFinalRequest)
@@ -3662,12 +3781,12 @@ The `SignSingle` function signs or MACs data in one pass with one call and witho
     <td>
     <pre>
 message SignSingleRequest {
-	bytes PrivKey = 1;
-	Mechanism Mech = 2;
-	bytes Data = 3;
+    bytes PrivKey = 1;
+    Mechanism Mech = 2;
+    bytes Data = 3;
 }
 message SignSingleResponse {
-	bytes Signature = 4;
+    bytes Signature = 4;
 }
     </pre>
     </td>
@@ -3698,12 +3817,12 @@ message SignSingleResponse {
     <td>
     <pre>
 CK_RV m_SignSingle (
-  const unsigned char *privKey, size_t privKeylen,
+  const unsigned char \*privKey, size_t privKeylen,
   CK_MECHANISM_PTR mech,
   CK_BYTE_PTR data, CK_ULONG datalen,
   CK_BYTE_PTR signature, CK_ULONG_PTR signaturelen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -3722,10 +3841,11 @@ CK_RV m_SignSingle (
 - Golang code snippet
 
   ```Golang
+  msgHash := sha256.Sum256([]byte("This data needs to be signed"))
   SignSingleRequest := &pb.SignSingleRequest {
-  	PrivKey: GenerateKeyPairResponse.PrivKey,
-  	Mech:    &pb.Mechanism{Mechanism: ep11.CKM_SHA256_RSA_PKCS},
-  	Data:    msgHash[:],
+      PrivKey: GenerateKeyPairResponse.PrivKeyBytes,
+      Mech:    &pb.Mechanism{Mechanism: ep11.CKM_SHA256_RSA_PKCS},
+      Data:    msgHash[:],
   }
 
   SignSingleResponse, err := cryptoClient.SignSingle(context.Background(), SignSingleRequest)
@@ -3763,11 +3883,11 @@ The `VerifyInit` function initializes a verification operation. You need to call
     <td>
     <pre>
 message VerifyInitRequest {
-	Mechanism Mech = 2;
-	bytes PubKey = 3;
+    Mechanism Mech = 2;
+    bytes PubKey = 3;
 }
 message VerifyInitResponse {
-	bytes State = 1;
+    bytes State = 1;
 }
     </pre>
     </td>
@@ -3801,9 +3921,9 @@ message VerifyInitResponse {
 CK_RV m_VerifyInit (
   unsigned char \*state, size_t \*statelen,
   CK_MECHANISM_PTR mech,
-  const unsigned char *pubKey, size_t pubKeylen,
+  const unsigned char \*pubKey, size_t pubKeylen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -3854,8 +3974,8 @@ CK_DEFINE_FUNCTION(CK_RV, C_VerifyInit)(
 
   ```Golang
   VerifyInitRequest := &pb.VerifyInitRequest {
-  	Mech:   &pb.Mechanism{Mechanism: ep11.CKM_SHA1_RSA_PKCS},
-  	PubKey: GenerateKeyPairResponse.PubKey,
+      Mech:   &pb.Mechanism{Mechanism: ep11.CKM_SHA1_RSA_PKCS},
+      PubKey: GenerateKeyPairResponse.PubKeyBytes,
   }
 
   VerifyInitResponse, err := cryptoClient.VerifyInit(context.Background(), VerifyInitRequest)
@@ -3892,9 +4012,9 @@ The `Verify` function verifies a signature on single-part data. You don't need t
     <td>
     <pre>
 message VerifyRequest {
-	bytes State = 1;
-	bytes Data = 2;
-	bytes Signature = 3;
+    bytes State = 1;
+    bytes Data = 2;
+    bytes Signature = 3;
 }
 message VerifyResponse {
 }
@@ -3928,11 +4048,11 @@ message VerifyResponse {
     <td>
     <pre>
 CK_RV m_Verify (
-  const unsigned char *state, size_t statelen,
+  const unsigned char \*state, size_t statelen,
   CK_BYTE_PTR data, CK_ULONG datalen,
   CK_BYTE_PTR signature, CK_ULONG signaturelen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -3987,9 +4107,9 @@ CK_DEFINE_FUNCTION(CK_RV, C_Verify)(
 
   ```Golang
   VerifyRequest := &pb.VerifyRequest {
-  	State:     VerifyInitResponse.State,
-  	Data:      signData,
-  	Signature: SignResponse.Signature,
+      State:     VerifyInitResponse.State,
+      Data:      msgHash[:],
+      Signature: SignResponse.Signature,
   }
 
   VerifyResponse, err := cryptoClient.Verify(context.Background(), VerifyRequest)
@@ -4025,11 +4145,11 @@ The `VerifyUpdate` function continues a multiple-part verification operation. Be
     <td>
     <pre>
 message VerifyUpdateRequest {
-	bytes State = 1;
-	bytes Data = 2;
+    bytes State = 1;
+    bytes Data = 2;
 }
 message VerifyUpdateResponse {
-	bytes State = 1;
+    bytes State = 1;
 }
     </pre>
     </td>
@@ -4058,10 +4178,10 @@ message VerifyUpdateResponse {
     <td>
     <pre>
 CK_RV m_VerifyUpdate (
-  unsigned char *state, size_t statelen,
+  unsigned char \*state, size_t statelen,
   CK_BYTE_PTR data, CK_ULONG datalen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -4110,12 +4230,21 @@ CK_DEFINE_FUNCTION(CK_RV, C_VerifyUpdate)(
 - Golang code snippet
 
   ```Golang
-  VerifyUpdateRequest := &pb.VerifyUpdateRequest {
-  	State: VerifyInitResponse.State,
-  	Data:  msgHash[:],
+  // Use VerifyUpdate if you would like to breakup
+  // the verify operation into multiple sub-operations
+  VerifyUpdateRequest1 := &pb.VerifyUpdateRequest {
+      State: VerifyInitResponse.State,
+      Data:  msgHash[:16],
   }
 
-  VerifyUpdateResponse, err := cryptoClient.VerifyUpdate(context.Background(), VerifyUpdateRequest)
+  VerifyUpdateResponse, err := cryptoClient.VerifyUpdate(context.Background(), VerifyUpdateRequest1)
+
+  VerifyUpdateRequest2 := &pb.VerifyUpdateRequest {
+      State: VerifyUpdateResponse.State,
+      Data:  msgHash[16:],
+  }
+
+  VerifyUpdateResponse, err := cryptoClient.VerifyUpdate(context.Background(), VerifyUpdateRequest2)
   ```
   {: codeblock}
 
@@ -4147,8 +4276,8 @@ The `VerifyFinal` function finishes a multiple-part verification operation.
     <td>
     <pre>
 message VerifyFinalRequest {
-	bytes State = 1;
-	bytes Signature = 2;
+    bytes State = 1;
+    bytes Signature = 2;
 }
 message VerifyFinalResponse {
 }
@@ -4180,10 +4309,10 @@ message VerifyFinalResponse {
     <td>
     <pre>
 CK_RV m_VerifyFinal (
-  const unsigned char *state, size_t statelen,
+  const unsigned char \*state, size_t statelen,
   CK_BYTE_PTR signature, CK_ULONG signaturelen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -4234,8 +4363,8 @@ CK_DEFINE_FUNCTION(CK_RV, C_VerifyFinal)(
 
   ```Golang
   VerifyFinalRequest := &pb.VerifyFinalRequest {
-  	State:     VerifyUpdateResponse.State,
-  	Signature: SignSingleResponse.Signature,
+      State:     VerifyUpdateResponse.State,
+      Signature: SignResponse.Signature,
   }
 
   VerifyFinalResponse, err := cryptoClient.VerifyFinal(context.Background(), VerifyFinalRequest)
@@ -4270,10 +4399,10 @@ The `VerifySingle` function signs or MACs data in one pass with one call and wit
     <td>
     <pre>
 message VerifySingleRequest {
-	bytes PubKey = 1;
-	Mechanism Mech = 2;
-	bytes Data = 3;
-	bytes Signature = 4;
+    bytes PubKey = 1;
+    Mechanism Mech = 2;
+    bytes Data = 3;
+    bytes Signature = 4;
 }
 message VerifySingleResponse {
 }
@@ -4306,12 +4435,12 @@ message VerifySingleResponse {
     <td>
     <pre>
 CK_RV m_VerifySingle (
-  const unsigned char *pubKey, size_t pubKeylen,
+  const unsigned char \*pubKey, size_t pubKeylen,
   CK_MECHANISM_PTR mech,
   CK_BYTE_PTR data, CK_ULONG datalen,
   CK_BYTE_PTR signature, CK_ULONG signaturelen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -4331,10 +4460,10 @@ CK_RV m_VerifySingle (
 
   ```Golang
   VerifySingleRequest := &pb.VerifySingleRequest {
-  	PubKey:    GenerateKeyPairResponse.PubKey,
-  	Mech:      &pb.Mechanism{Mechanism: ep11.CKM_SHA256_RSA_PKCS},
-  	Data:      msgHash[:],
-  	Signature: SignSingleResponse.Signature,
+      PubKey:    GenerateKeyPairResponse.PubKeyByytes,
+      Mech:      &pb.Mechanism{Mechanism: ep11.CKM_SHA256_RSA_PKCS},
+      Data:      msgHash[:],
+      Signature: SignSingleResponse.Signature,
   }
 
   VerifySingleResponse, err := cryptoClient.VerifySingle(context.Background(), VerifySingleRequest)
@@ -4377,11 +4506,11 @@ The `DigestInit` function initializes a message-digesting operation. You need to
     <td>
     <pre>
 message DigestInitRequest {
-		Mechanism Mech = 2;
-	}
+    Mechanism Mech = 2;
+}
 message DigestInitResponse {
-		bytes State = 1;
-	}
+    bytes State = 1;
+}
     </pre>
     </td>
   </tr>
@@ -4401,7 +4530,7 @@ message DigestInitResponse {
 	<td><p>Implementation of PKCS #11 <code>C_DigestInit</code>.</p>
   <p>Create wrapped digest state.</p>
   <p>**Note**: size queries are supported, but the wrapped state is always returned by the backend, unlike most size queries (which return an output size, instead of actual output). <code>Digest</code> states are sufficiently small that they do not introduce noticeable transport overhead.</p>
-  <p>During size queries, the host just discards the returned state, and reports blob size (in <code>len</code>).  When blob is being returned, <code>len</code> is checked against returned size.</p>
+  <p>During size queries, the host just discards the returned state, and reports blob size (in <code>len</code>). When blob is being returned, <code>len</code> is checked against returned size.</p>
   <p>The <code>state</code>,<code>len</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must tie blob to session.)</p></td>
   </tr>
   <tr>
@@ -4412,7 +4541,7 @@ CK_RV m_DigestInit (
   unsigned char \*state, size_t \*len,
   const CK_MECHANISM_PTR mech,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -4462,7 +4591,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestInit)(
 
   ```Golang
   DigestInitRequest := &pb.DigestInitRequest {
-  	Mech: &pb.Mechanism{Mechanism: ep11.CKM_SHA256},
+      Mech: &pb.Mechanism{Mechanism: ep11.CKM_SHA256},
   }
 
   DigestInitResponse, err := cryptoClient.DigestInit(context.Background(), DigestInitRequest)
@@ -4498,12 +4627,12 @@ The `Digest` function digests single-part data. You don't need to call the `Dige
     <td>
     <pre>
 message DigestRequest {
-		bytes State = 1;
-		bytes Data = 2;
-  }
+    bytes State = 1;
+    bytes Data = 2;
+}
 message DigestResponse {
-		bytes Digest = 3;
-	}
+    bytes Digest = 3;
+}
     </pre>
     </td>
   </tr>
@@ -4534,11 +4663,11 @@ message DigestResponse {
     <td>
     <pre>
 CK_RV m_Digest (
-  const unsigned char *state, size_t statelen,
+  const unsigned char \*state, size_t statelen,
   CK_BYTE_PTR data, CK_ULONG datalen,
   CK_BYTE_PTR digest, CK_ULONG_PTR digestlen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -4594,9 +4723,10 @@ CK_DEFINE_FUNCTION(CK_RV, C_Digest)(
 - Golang code snippet
 
   ```Golang
+  digestData := []byte("Create a digest for this string")
   DigestRequest := &pb.DigestRequest {
-  	State: DigestInitResponse.State,
-  	Data:  digestData,
+      State: DigestInitResponse.State,
+      Data:  digestData,
   }
 
   DigestResponse, err := cryptoClient.Digest(context.Background(), DigestRequest)
@@ -4631,11 +4761,11 @@ The `DigestUpdate` function continues a multiple-part digesting operation. Befor
     <td>
     <pre>
 message DigestUpdateRequest {
-	bytes State = 1;
-	bytes Data = 2;
+    bytes State = 1;
+    bytes Data = 2;
 }
 message DigestUpdateResponse {
-	bytes State = 1;
+    bytes State = 1;
 }
     </pre>
     </td>
@@ -4667,10 +4797,10 @@ message DigestUpdateResponse {
     <td>
     <pre>
 CK_RV m_DigestUpdate (
-  unsigned char *state, size_t statelen,
+  unsigned char \*state, size_t statelen,
   CK_BYTE_PTR data, CK_ULONG datalen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -4721,12 +4851,21 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestUpdate)(
 - Golang code snippet
 
   ```Golang
-  DigestUpdateRequest := &pb.DigestUpdateRequest {
-  	State: DigestInitResponse.State,
-  	Data:  digestData[:64],
+  // Use DigestUpdate if you would like to breakup
+  // the digest operation into multiple sub-operations
+  DigestUpdateRequest1 := &pb.DigestUpdateRequest {
+      State: DigestInitResponse.State,
+      Data:  digestData[:16],
   }
 
-  DigestUpdateResponse, err := cryptoClient.DigestUpdate(context.Background(), DigestUpdateRequest)
+  DigestUpdateResponse, err := cryptoClient.DigestUpdate(context.Background(), DigestUpdateRequest1)
+
+  DigestUpdateRequest2 := &pb.DigestUpdateRequest {
+      State: DigestUpdateResponse.State,
+      Data:  digestData[16:],
+  }
+
+  DigestUpdateResponse, err := cryptoClient.DigestUpdate(context.Background(), DigestUpdateRequest2)
   ```
   {: codeblock}
 
@@ -4758,10 +4897,10 @@ The `DigestFinal` function finishes a multiple-part digesting operation.
     <td>
     <pre>
 message DigestFinalRequest {
-	bytes State = 1;
+    bytes State = 1;
 }
 message DigestFinalResponse {
-	bytes Digest = 2;
+    bytes Digest = 2;
 }
     </pre>
     </td>
@@ -4791,10 +4930,10 @@ message DigestFinalResponse {
     <td>
     <pre>
 CK_RV m_DigestFinal (
-  const unsigned char *state, size_t statelen,
+  const unsigned char \*state, size_t statelen,
   CK_BYTE_PTR digest, CK_ULONG_PTR digestlen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -4846,7 +4985,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestFinal)(
 
   ```Golang
   DigestFinalRequest := &pb.DigestFinalRequest {
-  	State: DigestUpdateResponse.State,
+      State: DigestUpdateResponse.State,
   }
 
   DigestFinalResponse, err := cryptoClient.DigestFinal(context.Background(), DigestFinalRequest)
@@ -4879,11 +5018,11 @@ The `DigestSingle` function digests data in one pass with one call and without c
     <td>
     <pre>
 message DigestSingleRequest {
-	Mechanism Mech = 1;
-	bytes Data = 2;
+    Mechanism Mech = 1;
+    bytes Data = 2;
 }
 message DigestSingleResponse {
-	bytes Digest = 3;
+    bytes Digest = 3;
 }
     </pre>
     </td>
@@ -4917,7 +5056,7 @@ CK_RV m_DigestSingle (
   CK_BYTE_PTR data, CK_ULONG datalen,
   CK_BYTE_PTR digest, CK_ULONG_PTR digestlen,
   target_t target
-) ;
+);
     </pre>
     </td>
   </tr>
@@ -4936,9 +5075,10 @@ CK_RV m_DigestSingle (
 - Golang code snippet
 
   ```Golang
+  digestData := []byte("Create a digest for this string")
   DigestSingleRequest := &pb.DigestSingleRequest {
-  	Mech: &pb.Mechanism{Mechanism: ep11.CKM_SHA256},
-  	Data: digestData,
+      Mech: &pb.Mechanism{Mechanism: ep11.CKM_SHA256},
+      Data: digestData,
   }
 
   DigestSingleResponse, err := cryptoClient.DigestSingle(context.Background(), DigestSingleRequest)
@@ -4962,6 +5102,7 @@ CK_RV m_DigestSingle (
 ## Code examples
 {: #code-example}
 
-GREP11 API supports programming languages with [gRPC libraries](https://www.grpc.io/docs/){:external}. In the [sample Github repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external}, Golang and JavaScript code examples are provided to test the GREP11 API.
+GREP11 API supports programming languages with [gRPC libraries](https://www.grpc.io/docs/){:external}. Two sample GitHub repositories are provided for you to test the GREP11 API:
 
-For complete Golang examples, see [GREP11 Golang examples](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/tree/master/golang){: external}. For complete JavaScript examples, see [GREP11 JavaScript examples](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/tree/master/js){: external}.
+- [The sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external}
+- [The sample GitHub repository for JavaScript](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/tree/master/js){: external}

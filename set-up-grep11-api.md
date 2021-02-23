@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018-2020
-lastupdated: "2020-09-22"
+  years: 2018, 2021
+lastupdated: "2021-02-23"
 
 keywords: set up api, api key, cryptographic operations, use ep11 api, access ep11 api, ep11 over grpc, using api
 
@@ -41,15 +41,18 @@ In order to remotely access cloud HSM on {{site.data.keyword.hscrypto}} to perfo
 ### Example: Generating random data using the `GenerateRandomRequest()` function
 {: #generate-random-request-example}
 
-GREP11 API supports programming languages with [gRPC libraries](https://grpc.io/docs/){:external}. A [sample Github repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:external} is provided for you to test the GREP11 API in Golang and JavaScript.
+GREP11 API supports programming languages with [gRPC libraries](https://grpc.io/docs/){:external}. Two sample GitHub repositories are provided for you to test the GREP11 API:
+
+- [The sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external}
+- [The sample GitHub repository for JavaScript](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/tree/master/js){: external}
 
 You can use the following Golang code example to generate random data by calling the `GenerateRandom` function.
 
-This example assumes that additional required Golang packages are included via import statements, such as the [gRPC](https://godoc.org/google.golang.org/grpc){: external} and [http](https://golang.org/pkg/net/http/){: external} packages. The `import pb "github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/golang/grpc"` statement is used by GREP11 to perform API function calls.
+This example assumes that additional required Golang packages are included via import statements, such as the [gRPC](https://godoc.org/google.golang.org/grpc){: external} and [http](https://golang.org/pkg/net/http/){: external} packages. The `import pb "github.com/IBM-Cloud/hpcs-grep11-go/grpc"` statement is used by GREP11 to perform API function calls.
 {: note}
 
 ```Golang
-import pb "github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/golang/grpc"
+import pb "github.com/IBM-Cloud/hpcs-grep11-go/grpc"
 
 // Data structure and supporting methods used for GREP11 authentication
 // IAMPerRPCCredentials type defines the fields required for IBM Cloud IAM authentication
@@ -58,13 +61,13 @@ import pb "github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/golang/grpc"
 type IAMPerRPCCredentials struct {
 	expiration  time.Time
 	updateLock  sync.Mutex
-	Instance    string // IBM Cloud HPCS instance ID
-	AccessToken string // IBM Cloud IAM access token
-	APIKey      string // Service ID API key
-	Endpoint    string // IBM Cloud IAM endpoint
+	Instance    string // Always Required - IBM Cloud HPCS instance ID
+	AccessToken string // Required if APIKey nor Endpoint are specified - IBM Cloud IAM access token
+	APIKey      string // Required if AccessToken is not specified - IBM Cloud API key
+	Endpoint    string // Required if AccessToken is not specified - IBM Cloud IAM endpoint
 }
 
-// GetRequestMetadata is used by gRPC for authentication
+// GetRequestMetadata is used by GRPC for authentication
 func (cr *IAMPerRPCCredentials) GetRequestMetadata(ctx context.Context, uri ...string) (map[string]string, error) {
 	// Set token if empty or Set token if expired
 	if len(cr.APIKey) != 0 && len(cr.Endpoint) != 0 && time.Now().After(cr.expiration) {
@@ -132,41 +135,45 @@ func (cr *IAMPerRPCCredentials) getToken(ctx context.Context) (err error) {
 	return nil
 }
 
-
 // Generating a GREP11 API function call
 
 // The following IBM Cloud items need to be changed prior to running the sample program
-const address = "<service_endpoint>"
+const address = "<grep11_server_address>:<port>"
+
 var callOpts = []grpc.DialOption{
-    grpc.WithTransportCredentials(credentials.NewTLS(&tls.Config{})),
-    grpc.WithPerRPCCredentials(&IAMPerRPCCredentials{
-        APIKey:   "<service_ID_API_key>",
-        Endpoint: "https://iam.cloud.ibm.com",
-        Instance: "<instance_ID>",
-    }),
+  grpc.WithTransportCredentials(credentials.NewTLS(&tls.Config{})),
+  grpc.WithPerRPCCredentials(&util.IAMPerRPCCredentials{
+    APIKey:   "<ibm_cloud_apikey>",
+    Endpoint: "https://iam.cloud.ibm.com",
+    Instance: "<hpcs_instance_id>",
+  }),
 }
 
 conn, err := grpc.Dial(address, callOpts...)
 if err != nil {
-    panic(fmt.Errorf("Could not connect to server: %s", err))
+		panic(fmt.Errorf("Could not connect to server: %s", err))
 }
 defer conn.Close()
 
 cryptoClient := pb.NewCryptoClient(conn)
 
-RandomRequestTemplate := &pb.GenerateRandomRequest{
-    Len: (uint64)(ep11.AES_BLOCK_SIZE),
+rngTemplate := &pb.GenerateRandomRequest{
+		Len: (uint64)(ep11.AES_BLOCK_SIZE),
 }
-rng, err := cryptoClient.GenerateRandom(context.Background(), RandomRequestTemplate)
+
+// Generate 16 bytes of random data for the initialization vector
+rng, err := cryptoClient.GenerateRandom(context.Background(), rngTemplate)
 if err != nil {
-    panic(fmt.Errorf("GenerateRandom Error: %s", err))
+		panic(fmt.Errorf("GenerateRandom Error: %s", err))
 }
+iv := rng.Rnd[:ep11.AES_BLOCK_SIZE]
+fmt.Println("Generated IV")
 ```
 {: codeblock}
 
 In the example, update the following variables:
 
-* Replace `<service_endpoint>` with the value of your GREP11 API endpoint. You can find the GREP11 API endpoint URL on the service dashboard. You can find the service endpoint URL in your provisioned service instance dashboard through **Overview** &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**. Alternatively, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external}. The returned value includes the following. Depending on whether you are using public or [private network](/docs/hs-crypto?topic=hs-crypto-secure-connection), use the public or private service endpoint value that is returned in the `ep11` section.
+* Replace `<grep11_server_address>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance console, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**. Alternatively, you can dynamically [retrieve the API endpoint URL](/apidocs/hs-crypto#getinstance){: external}. The returned value includes the following. Depending on whether you are using public or [private network](/docs/hs-crypto?topic=hs-crypto-secure-connection), use the public or private service endpoint value that is returned in the `ep11` section.
 
    ```
    {
@@ -183,15 +190,15 @@ In the example, update the following variables:
   ```
   {: screen}
 
-* Replace `<service_ID_API_key>` with the service ID API key that is retrieved. The service ID API Key can be retrieved by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys).
+* Replace `<ibm_cloud_apikey>` with the service ID API key that you created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
 
-* Replace `<instance_ID>` with the instance ID that uniquely identified your service instance. Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+* Replace `<instance_ID>` with the instance ID that uniquely identifies your service instance. Retrieve the instance ID by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 
 If the sample request is processed successfully, random data with a length of 16 bytes will be returned, as specified in `ep11.AES_BLOCKSIZE`.
 
 The previous authentication example as well as additional Golang code examples can be found at:
- -  [GREP11 API examples](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/golang/examples/server_test.go){: external}
- -  [IBM Cloud IAM support for GREP11](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/golang/util/util.go){: external}
+ -  [GREP11 API examples](https://github.com/IBM-Cloud/hpcs-grep11-go/tree/master/examples){: external}
+ -  [IBM Cloud IAM support for GREP11](https://github.com/IBM-Cloud/hpcs-grep11-go/blob/master/util/util.go){: external}
 
 ## What's next
 {: #set-up-grep11-api-next-steps}
