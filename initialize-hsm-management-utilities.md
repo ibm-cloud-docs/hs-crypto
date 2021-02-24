@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-02-02"
+lastupdated: "2021-02-24"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, smart card, trusted key entry application, tke application, management utilities
 
@@ -34,7 +34,7 @@ The [Management Utilities](/docs/hs-crypto?topic=hs-crypto-introduce-service#und
 
 You can also watch the following video to learn how to initialize {{site.data.keyword.hscrypto}} instances with the Management Utilities:
 
-![Initialize Hyper Protect Crypto Services with the Management Utilities](https://www.youtube.com/embed/FtRPRzF0dSs){: video output="iframe" id="youtubeplayer" frameborder="0" width="560" height="315" webkitallowfullscreen mozallowfullscreen allowfullscreen}
+![Initialize Hyper Protect Crypto Services with the Management Utilities](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_lo2fmwbb){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
 
 ## Before you begin
 {: #initialize-crypto-utilities-prerequisites}
