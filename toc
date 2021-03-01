@@ -128,6 +128,12 @@ Hyper Protect Crypto Services
 
     restore-keys.md
     rotate-master-key.md
+
+    {: .topicgroup}
+    Managing Enterprise PKCS #11 keystores and keys
+        manage-pkcs11-keystores.md
+        manage-pkcs11-keys.md
+
     enable-mechanisms.md
     add-remove-crypto-units.md
     delete-instance.md
