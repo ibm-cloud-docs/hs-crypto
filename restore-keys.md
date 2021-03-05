@@ -298,7 +298,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/restore
         "resources": [
           {
             "payload": "<encrypted_key>",
-            "encryptionAlgorithm": "RSAES_OAEP_SHA_256",
+            "encryptionAlgorithm": "RSAES_OAEP_SHA_1",
             "encryptedNonce": "<encrypted_nonce>",
             "iv": "<iv>"
           }
