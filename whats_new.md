@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-01"
+lastupdated: "2021-03-12"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -31,8 +31,14 @@ Stay up-to-date with the new features that are available for {{site.data.keyword
 
 The cryptography algorithm to generate signature keys is updated from Rivest–Shamir–Adleman 2048 (RSA 2048) to P521 Elliptic Curve (P521 EC). The cryptographic strength of P521 EC keys is equivalent to RSA 15360, which means the updated signature keys can provide the higher level of security comparing to the previous signature keys. The previous RSA 2048 signature keys are still valid and can be used.
 -->
+
 ## March 2021
 {: #march-2021}
+
+### Added: Using Virtual Private Endpoints for VPC
+{: #add-vpe-for-vpc}
+
+You can now create virtual private endpoints (VPEs) for your {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) instance to access {{site.data.keyword.hscrypto}} within your VPC network. For more information, see [Using a virtual private endpoint for VPC](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc).
 
 ### Added: Managing EP11 keystores and keys with the {{site.data.keyword.cloud_notm}} console
 {: #add-ep11-keystores-keys-console}

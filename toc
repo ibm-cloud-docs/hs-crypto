@@ -86,6 +86,7 @@ Hyper Protect Crypto Services
         set-up-kms-api.md
         set-up-pkcs-api.md
         set-up-grep11-api.md
+        virtual-private-endpoint.md
 
     set-up-cli.md
 
