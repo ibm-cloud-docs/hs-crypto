@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-11-23"
+  years: 2018, 2021
+lastupdated: "2021-03-24"
 
 keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases
 
@@ -117,7 +117,7 @@ You as a cloud developer can use standard interfaces from your applications for
 
 As IBM is starting to provide a new set of capabilities to support your workloads moving to the cloud, you can benefit from the cryptographic capabilities of {{site.data.keyword.hscrypto}} for both your new and existing workloads. With the introduction of Enterprise PKCS #11 over gRPC (GREP11), you have access to a full range of cryptographic operations, such as signing, signature validation, message authentication codes, random number generation.
 
-Here are some code samples for [using GREP11 with Golang and JavaScript](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){: external} that you can try out.
+Here are some code samples for [using GREP11 with Golang](https://github.com/IBM-Cloud/hpcs-grep11-go) and [JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js){: external} that you can try out.
 
 ![EP11 HSM](/image/PKCS11.svg "Cryptographic operations with Enterprise PKCS #11"){: caption="Figure 7. Cryptographic operations with Enterprise PKCS #11" caption-side="bottom"}
 

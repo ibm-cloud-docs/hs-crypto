@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-12-03"
+  years: 2020, 2021
+lastupdated: "2021-03-24"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -92,7 +92,7 @@ To rotate the master key, follow these steps:
   Make sure to perform this step before you rotate the master key. Otherwise, your keys that are encrypted with the current master key cannot be reencrypted and used.
   {: important}
 
-  For an introduction to the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11_intro). You can also find code examples on the GREP11 API usage in [GitHub](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){: external}.
+  For an introduction to the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11_intro). You can also find code examples written in [Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external} and [JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js) on the GREP11 API usage.
 
 4. Rotate the current master key with the new master key and reencrypt the root keys that are managed by performing the following steps:
 

@@ -2,7 +2,7 @@
 
 copyright:
 years: 2018, 2021
-lastupdated: "2021-02-09"
+lastupdated: "2021-03-11"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -269,7 +269,7 @@ Because the EP11 library is a subset of the PKCS #11 API library, and GREP11 fun
 GREP11 supports any programming language with a gRPC library. At the current stage, only code snippets or examples for Golang and JavaScript are included in the API reference. The content is enriched in later phases. The code snippets are based on the following external GitHub repositories that provide complete examples for using the GREP11 API. Some of the code snippets reference helper functions within the examples repositories.
 
 - [The Golang examples repository](https://github.com/IBM-Cloud/hpcs-grep11-go){: external}
-- [The JavaScript examples repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/tree/master/js){: external}
+- [The JavaScript examples repository](https://github.com/IBM-Cloud/hpcs-grep11-js){: external}
 
 ## Retrieving supported crypto algorithms 
 {: #grep11-operation-retrieve-mechanisms}
@@ -389,9 +389,10 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismList)(
 - JavaScript code snippet
 
   ```JavaScript
-  client.GetMechanismList({}, (err, response) => {
-    callback(err, response);
-    console.log('MECHANISMS:', response.Mechs);
+  client.GetMechanismList({}, (err, data) => {
+  if (err) throw err;
+
+  console.log('MECHANISMS:', data.Mechs);
   });
   ```
   {: codeblock}
@@ -508,9 +509,10 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismInfo)(
   ```JavaScript
   client.GetMechanismInfo({
     Mech: ep11.CKM_AES_KEY_GEN
-  }, (err, response) => {
-    callback(err, response);
-    console.log('MECHANISM INFO:', response.MechInfo);
+  }, (err, data) => {
+    if (err) throw err;
+
+    console.log('MECHANISM INFO:', data.MechInfo);
   });
   ```
   {: codeblock}
@@ -671,13 +673,12 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateKey)(
     new util.Attribute(ep11.CKA_EXTRACTABLE, false),
     new util.Attribute(ep11.CKA_TOKEN, true)
   );
-
   client.GenerateKey({
     Mech: { Mechanism: ep11.CKM_AES_KEY_GEN },
     Template: keyTemplate,
     KeyId: uuidv4()
-  }, (err, response) => {
-    callback(err, response);
+  }, (err, data={}) => {
+    cb(err, data.KeyBytes, data.CheckSum);
   });
 
   ```
@@ -1015,6 +1016,9 @@ CK_DEFINE_FUNCTION(CK_RV, C_DeriveKey)(
 - JavaScript code snippet
 
   ```JavaScript
+  //results are created through GenerateKeyPair
+  const [alice, bob] = results;
+
   const deriveKeyTemplate = new util.AttributeMap(
     new util.Attribute(ep11.CKA_CLASS, ep11.CKO_SECRET_KEY),
     new util.Attribute(ep11.CKA_KEY_TYPE, ep11.CKK_AES),
@@ -1022,16 +1026,30 @@ CK_DEFINE_FUNCTION(CK_RV, C_DeriveKey)(
     new util.Attribute(ep11.CKA_ENCRYPT, true),
     new util.Attribute(ep11.CKA_DECRYPT, true),
   );
-  client.DeriveKey({
-    Mech: {
-      Mechanism: ep11.CKM_ECDH1_DERIVE,
-      Parameter: combinedCoordinates
-    },
-    Template: deriveKeyTemplate,
-    BaseKey: data.PrivKey
-  }, (err, response) => {
-    callback(err, response);
-  });
+
+  const derived = [];
+
+  async.eachSeries([
+    { PubKey: bob.PubKeyBytes, PrivKey: alice.PrivKeyBytes },
+    { PubKey: alice.PubKeyBytes, PrivKey: bob.PrivKeyBytes }
+  ], (data, cb) => {
+    const combinedCoordinates = util.getPubKeyBytesFromSPKI(data.PubKey);
+
+    client.DeriveKey({
+      Mech: {
+        Mechanism: ep11.CKM_ECDH1_DERIVE,
+        ParameterB: combinedCoordinates
+      },
+      Template: deriveKeyTemplate,
+      BaseKey: data.PrivKey
+    }, (err, data={}) => {
+      if (!err) {
+        derived.push(data);
+      }
+
+      cb(err);
+    });
+  }
   ```
   {: codeblock}
 
@@ -1176,10 +1194,10 @@ CK_DEFINE_FUNCTION(CK_RV, C_WrapKey)(
     Mech: {
       Mechanism: ep11.CKM_RSA_PKCS
     },
-    KeK: rsa.PubKey,
-    Key: aes.Key
-  }, (err, response) => {
-    callback(err, response);
+    KeK: rsa.PubKeyBytes,
+    Key: aes.KeyBytes
+  }, (err, data={}) => {
+    cb(err, data.Wrapped);
   });
   ```
   {: codeblock}
@@ -1342,14 +1360,14 @@ CK_DEFINE_FUNCTION(CK_RV, C_UnwrapKey)(
   );
 
   client.UnwrapKey({
-    Mech: {
-      Mechanism: ep11.CKM_RSA_PKCS
-    },
-    KeK: rsa.PrivKey,
-    Wrapped: wrapped,
-    Template: aesUnwrapKeyTemplate
-  }, (err, response) => {
-    callback(err, response);
+      Mech: {
+          Mechanism: ep11.CKM_RSA_PKCS
+      },
+      KeK: rsa.PrivKeyBytes,
+      Wrapped: wrapped,
+      Template: aesUnwrapKeyTemplate
+  }, (err, data={}) => {
+      cb(err, wrapped, data.UnwrappedBytes, data.CheckSum);
   });
   ```
   {: codeblock}
@@ -1961,13 +1979,13 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptInit)(
 
   ```JavaScript
   client.EncryptInit({
-    Mech: {
+  	Mech: {
       Mechanism: ep11.CKM_AES_CBC_PAD,
-      Parameter: iv
+      ParameterB: iv
     },
     Key: key
-  }, (err, response) => {
-    callback(err, response);
+  }, (err, data={}) => {
+    cb(err, data.State);
   });
   ```
   {: codeblock}
@@ -2244,9 +2262,9 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptUpdate)(
   ```JavaScript
   client.EncryptUpdate({
     State: state,
-    Plain: Buffer.from(message.substr(0, 20))
-  }, (err, response) => {
-    callback(err, response);
+    Plain: Buffer.from(message.substr(20))
+  }, (err, data={}) => {
+    cb(err, data.State, Buffer.concat([ciphertext, data.Ciphered]));
   });
   ```
   {: codeblock}
@@ -2367,8 +2385,8 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptFinal)(
   ```JavaScript
   client.EncryptFinal({
     State: state
-  }, (err, response) => {
-    callback(err, response);
+  }, (err, data={}) => {
+    cb(err, Buffer.concat([ciphertext, data.Ciphered]));
   });
   ```
   {: codeblock}
@@ -2477,7 +2495,7 @@ CK_RV m_EncryptSingle (
   client.EncryptSingle({
     Mech: {
       Mechanism: ep11.CKM_AES_CBC_PAD,
-      Parameter: iv
+      ParameterB: iv
     },
     Key: aliceDerived.NewKey,
     Plain: Buffer.from(message)
@@ -2586,18 +2604,17 @@ CK_RV m_ReencryptSingle (
   ```
   {: codeblock}
 
-<!--
 - JavaScript code snippet
 
   ```JavaScript
   client.ReencryptSingle({
     Decmech: {
       Mechanism: mech1,
-      Parameter: iv
+      ParameterB: iv
     },
     Encmech: {
       Mechanism: mech2,
-      Parameter: iv
+      ParameterB: iv
     },
     In: encipherState.Ciphered,
     DKey: keyBlob1,
@@ -2607,7 +2624,6 @@ CK_RV m_ReencryptSingle (
   });
   ```
   {: codeblock}
--->
 
 ### DecryptInit
 {: #grep11-DecryptInit}
@@ -2736,11 +2752,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptInit)(
   client.DecryptInit({
     Mech: {
       Mechanism: ep11.CKM_AES_CBC_PAD,
-      Parameter: iv
+      ParameterB: iv
     },
     Key: key
-  }, (err, response) => {
-    callback(err, response);
+  }, (err, data={}) => {
+    cb(err, data.State);
   });
   ```
   {: codeblock}
@@ -3014,8 +3030,8 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptUpdate)(
   client.DecryptUpdate({
     State: state,
     Ciphered: ciphertext.slice(0, 16)
-  }, (err, response) => {
-    callback(err, response);
+  }, (err, data={}) => {
+    cb(err, data.State, data.Plain);
   });
   ```
   {: codeblock}
@@ -3136,8 +3152,8 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptFinal)(
   ```JavaScript
   client.DecryptFinal({
     State: state
-  }, (err, response) => {
-    callback(err, response);
+  }, (err, data={}) => {
+    cb(err, Buffer.concat([plaintext, data.Plain]));
   });
   ```
   {: codeblock}
@@ -3245,7 +3261,7 @@ CK_RV m_DecryptSingle (
   client.DecryptSingle({
     Mech: {
       Mechanism: ep11.CKM_AES_CBC_PAD,
-      Parameter: iv
+      ParameterB: iv
     },
     Key: bobDerived.NewKey,
     Ciphered: ciphertext
@@ -3376,9 +3392,9 @@ CK_DEFINE_FUNCTION(CK_RV, C_SignInit)(
     Mech: {
       Mechanism: ep11.CKM_SHA1_RSA_PKCS
     },
-    PrivKey: keys.PrivKey
-  }, (err, response) => {
-    callback(err, response);
+    PrivKey: keys.PrivKeyBytes
+  }, (err, data={}) => {
+    cb(err, data.State);
   });
   ```
   {: codeblock}
@@ -3507,8 +3523,8 @@ CK_DEFINE_FUNCTION(CK_RV, C_Sign)(
   client.Sign({
     State: state,
     Data: dataToSign
-  }, (err, response) => {
-    callback(err, response);
+  }, (err, data={}) => {
+    cb(err, data.Signature);
   });
   ```
   {: codeblock}
@@ -3989,9 +4005,9 @@ CK_DEFINE_FUNCTION(CK_RV, C_VerifyInit)(
     Mech: {
       Mechanism: ep11.CKM_SHA1_RSA_PKCS
     },
-    PubKey: keys.PubKey
-  }, (err, response) => {
-    callback(err, response);
+    PubKey: keys.PubKeyBytes
+  }, (err, data={}) => {
+    cb(err, signature, data.State);
   });
   ```
   {: codeblock}
@@ -4123,8 +4139,8 @@ CK_DEFINE_FUNCTION(CK_RV, C_Verify)(
     State: state,
     Data: dataToSign,
     Signature: signature
-  }, (err, response) => {
-    callback(err, response);
+  }, (err, data={}) => {
+    cb(err, signature);
   });
   ```
   {: codeblock}
@@ -4737,11 +4753,12 @@ CK_DEFINE_FUNCTION(CK_RV, C_Digest)(
 
   ```JavaScript
   client.Digest({
-    State: state,
-    Data: Buffer.from(digestData)
-  }, (err, response) => {
-    callback(err, response);
-  });
+      State: state,
+      Data: Buffer.from(digestData)
+    }, (err, data={}) => {
+      cb(err, data.Digest);
+    });
+  }
   ```
   {: codeblock}
 
@@ -4875,8 +4892,8 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestUpdate)(
   client.DigestUpdate({
     State: state,
     Data: Buffer.from(digestData.substr(0, 64))
-  }, (err, response) => {
-    callback(err, response);
+  }, (err, data={}) => {
+    cb(err, data.State);
   });
   ```
   {: codeblock}
@@ -5105,4 +5122,4 @@ CK_RV m_DigestSingle (
 GREP11 API supports programming languages with [gRPC libraries](https://www.grpc.io/docs/){:external}. Two sample GitHub repositories are provided for you to test the GREP11 API:
 
 - [The sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external}
-- [The sample GitHub repository for JavaScript](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/tree/master/js){: external}
+- [The sample GitHub repository for JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js){: external}

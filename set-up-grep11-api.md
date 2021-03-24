@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-02-23"
+lastupdated: "2021-03-24"
 
 keywords: set up api, api key, cryptographic operations, use ep11 api, access ep11 api, ep11 over grpc, using api
 
@@ -44,7 +44,7 @@ In order to remotely access cloud HSM on {{site.data.keyword.hscrypto}} to perfo
 GREP11 API supports programming languages with [gRPC libraries](https://grpc.io/docs/){:external}. Two sample GitHub repositories are provided for you to test the GREP11 API:
 
 - [The sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external}
-- [The sample GitHub repository for JavaScript](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/tree/master/js){: external}
+- [The sample GitHub repository for JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js){: external}
 
 You can use the following Golang code example to generate random data by calling the `GenerateRandom` function.
 
