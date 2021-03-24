@@ -165,7 +165,7 @@ Hyper Protect Crypto Services
         pkcs11-api-ref.md
         grep11-api-ref.md
 
-    /hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin
+    [Trusted Key Entry CLI reference](https://{DomainName}/docs/hs-crypto-cli-plugin?topic=hs-crypto-cli-plugin-tke_cli_plugin)
     regions.md
     smart-card-considerations.md
     shared-responsibilities.md
@@ -212,5 +212,4 @@ Hyper Protect Crypto Services
         troubleshooting-no-smart-card.md
 
     support.md
-    sitemap.md
     {: .navgroup-end}
