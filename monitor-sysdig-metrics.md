@@ -43,8 +43,6 @@ The following contains examples of metrics that can be measured in your {{site.d
 - API request latency over time
 - Total API requests categorized by response code
 
-**(PKCS 11 and GREP11 API also availble?)**
-
 ## Before you begin
 {: #operational-metrics-considerations}
 
