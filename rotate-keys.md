@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-11-17"
+  years: 2018, 2021
+lastupdated: "2021-03-17"
 
 keywords: rotate, rotate key, rotate encryption key, rotate root key, rotate root key manually, key rotation, rotate key api
 
@@ -29,10 +29,12 @@ You can rotate your [root keys](#x6946961){: term} on demand by using {{site.dat
 
 When you rotate your root key, you shorten the lifetime of the key, and you limit the amount of information that is protected by that key.
 
-To learn how key rotation helps you meet industry standards and cryptographic best practices, see [Key rotation](/docs/hs-crypto/concepts?topic=hs-crypto-key-rotation).
+To learn how key rotation helps you meet industry standards and cryptographic best practices, see [Key rotation](/docs/hs-crypto/concepts?topic=hs-crypto-root-key-rotation-intro).
 
 ## Rotating root keys in the console
 {: #rotate-root-key-gui}
+{: help}
+{: support}
 
 If you prefer to rotate your root keys by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 
@@ -41,7 +43,7 @@ If you prefer to rotate your root keys by using a graphical interface, you can u
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Manage keys** page, use the **Key management service keys** table to browse the keys in your service.
+4. On the **Key management service keys** page, use the **Keys** table to browse the keys in your service.
 5. Select the key that you want to rotate and click the overflow icon (⋯) to open a list of options for the key.
 6. From the options menu, click **Rotate key**.
 
@@ -88,16 +90,17 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 
 3. Replace the key with new key material by running the following cURL command.
 
-    ```cURL
+    ```sh
     curl -X POST \
       'https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/rotate' \
       -H 'accept: application/vnd.ibm.kms.key_action+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
+      -H "x-kms-key-ring: <key_ring_ID>" \
       -H 'content-type: application/vnd.ibm.kms.key_action+json' \
       -d '{
-        'payload: <key_material>'
-      }'
+            "payload": "<key_material>"
+          }'
     ```
     {: codeblock}
 
@@ -123,6 +126,23 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
       <tr>
         <td><varname>instance_ID</varname></td>
         <td><strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+      </tr>
+      <tr>
+        <td>
+          <varname>key_ring_ID</varname>
+        </td>
+        <td>
+          <p>
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore recommended to specify the key ring ID for a more optimized request.
+          </p>
+          <p>
+            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+          </p>
+          <p>
+            For more information, see
+            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+          </p>
+        </td>
       </tr>
       <tr>
         <td><varname>key_material</varname></td>

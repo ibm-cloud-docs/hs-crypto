@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-11-17"
+  years: 2021
+lastupdated: "2021-03-17"
 
 keywords: disable key, enable key, suspend key, suspend operations on a key
 
@@ -65,13 +65,13 @@ complete the following steps to disable a key:
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your
 provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Manage keys** page, use the **Key management service keys** table to browse the keys in
+4. On the **Key management service keys** page, use the **Keys** table to browse the keys in
 your service instance.
 5. Click the overflow (⋯) icon to open a list of options for the key that you want to
 disable.
 6. From the options menu, click **Disable key**, enter the key name to confirm the key to be disabled, and click **Disable key**.
 
-After the key is disabled, the **State** of the key is transitioned to `Suspended` in the **Key management service keys** table.
+After the key is disabled, the **State** of the key is transitioned to `Suspended` in the **Keys** table.
 
 ### Enabling a root key
 {: #enable-ui}
@@ -86,13 +86,13 @@ You must wait 30 seconds after disabling a root key before you are able to enabl
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your
 provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Manage keys** page, use the **Key management service keys** table to browse the keys in
+4. On the **Key management service keys** page, use the **Keys** table to browse the keys in
 your service.
 5. Click the overflow (⋯) icon to open a list of options for the key that you want to
 enable.
 6. From the options menu, click **Enable key**.
 
- After the key is enabled, the **State** of the key is transitioned to `Active` in the **Key management service keys** table.
+ After the key is enabled, the **State** of the key is transitioned to `Active` in the **Keys** table.
 
 ## Disabling and enabling root keys with the API
 {: #disable-enable-api}
@@ -126,11 +126,12 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 
 4. Disable the root key and suspend its encrypt and decrypt operations by making the following API call.
 
-    ```cURL
+    ```sh
     curl -X POST \
-      https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/disable \
-      -H 'authorization: Bearer <IAM_token>' \
-      -H 'bluemix-instance: <instance_ID>'
+      "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/disable" \
+      -H "authorization: Bearer <IAM_token>" \
+      -H "bluemix-instance: <instance_ID>" \
+      -H "x-kms-key-ring: <key_ring_ID>"
     ```
     {: codeblock}
 
@@ -192,7 +193,23 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
           </p>
         </td>
       </tr>
-
+      <tr>
+        <td>
+          <varname>key_ring_ID</varname>
+        </td>
+        <td>
+          <p>
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore recommended to specify the key ring ID for a more optimized request.
+          </p>
+          <p>
+            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+          </p>
+          <p>
+            For more information, see
+            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+          </p>
+        </td>
+      </tr>
       <caption style="caption-side:bottom;">
         Table 1. Describes the variables that are needed to disable root keys with the {{site.data.keyword.hscrypto}} API.
       </caption>
@@ -218,43 +235,43 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 
     ```json
     {
-      "metadata": {
-        "collectionType": "application/vnd.ibm.kms.key+json",
-        "collectionTotal": 1
-      },
-      "resources": [
-        {
-          "type": "application/vnd.ibm.kms.key+json",
-          "id": "02fd6835-6001-4482-a892-13bd2085f75d",
-          "name": "...",
-          "description": "...",
-          "tags": [
-            "..."
-          ],
-          "state": 2,
-          "extractable": false,
-          "crn": "crn:v1:bluemix:public:kms:us-south:a/f047b55a3362ac06afad8a3f2f5586ea:12e8c9c2-a162-472d-b7d6-8b9a86b815a6:key:02fd6835-6001-4482-a892-13bd2085f75d",
-          "imported": true,
-          "creationDate": "2020-03-10T20:41:27Z",
-          "createdBy": "...",
-          "algorithmType": "AES",
-          "algorithmMetadata": {
-            "bitLength": "128",
-            "mode": "CBC_PAD"
-          },
-          "algorithmBitSize": 128,
-          "algorithmMode": "CBC_PAD",
-          "lastUpdateDate": "2020-03-16T20:41:27Z",
-          "keyVersion": {
-            "id": "30372f20-d9f1-40b3-b486-a709e1932c9c",
-            "creationDate": "2020-03-12T03:37:32Z"
-          },
-          "dualAuthDelete": {
-            "enabled": false
-          },
-          "deleted": false
-        }
-      ]
+        "metadata": {
+            "collectionType": "application/vnd.ibm.kms.key+json",
+            "collectionTotal": 1
+        },
+        "resources": [
+            {
+                "type": "application/vnd.ibm.kms.key+json",
+                "id": "02fd6835-6001-4482-a892-13bd2085f75d",
+                "name": "...",
+                "description": "...",
+                "tags": [
+                    "..."
+                ],
+                "state": 2,
+                "extractable": false,
+                "crn": "crn:v1:bluemix:public:kms:us-south:a/f047b55a3362ac06afad8a3f2f5586ea:12e8c9c2-a162-472d-b7d6-8b9a86b815a6:key:02fd6835-6001-4482-a892-13bd2085f75d",
+                "imported": true,
+                "creationDate": "2020-03-10T20:41:27Z",
+                "createdBy": "...",
+                "algorithmType": "AES",
+                "algorithmMetadata": {
+                    "bitLength": "128",
+                    "mode": "CBC_PAD"
+                },
+                "algorithmBitSize": 128,
+                "algorithmMode": "CBC_PAD",
+                "lastUpdateDate": "2020-03-16T20:41:27Z",
+                "keyVersion": {
+                    "id": "30372f20-d9f1-40b3-b486-a709e1932c9c",
+                    "creationDate": "2020-03-12T03:37:32Z"
+                },
+                "dualAuthDelete": {
+                    "enabled": false
+                },
+                "deleted": false
+            }
+        ]
     }
     ```
     {: screen}
@@ -291,11 +308,12 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
     You must wait 30 seconds after disabling a root key before you are able to enable it again.
     {: note}
 
-    ```cURL
+    ```sh
     curl -X POST \
-      https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/enable \
-      -H 'authorization: Bearer <IAM_token>' \
-      -H 'bluemix-instance: <instance_ID>'
+      "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/enable" \
+      -H "authorization: Bearer <IAM_token>" \
+      -H "bluemix-instance: <instance_ID>" \
+      -H "x-kms-key-ring: <key_ring_ID>"
     ```
     {: codeblock}
 
@@ -357,7 +375,23 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
           </p>
         </td>
       </tr>
-
+      <tr>
+        <td>
+          <varname>key_ring_ID</varname>
+        </td>
+        <td>
+          <p>
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore recommended to specify the key ring ID for a more optimized request.
+          </p>
+          <p>
+            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+          </p>
+          <p>
+            For more information, see
+            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+          </p>
+        </td>
+      </tr>
       <caption style="caption-side:bottom;">
         Table 2. Describes the variables that are needed to enable root keys with the {{site.data.keyword.hscrypto}} API.
       </caption>

@@ -78,7 +78,7 @@ After you [enable dual authorization for an instance](/docs/hs-crypto?topic=hs-c
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your
 provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Manage keys** page, use the **Key management service keys** table to browse the keys in
+4. On the **Key management service keys** page, use the **Keys** table to browse the keys in
 your service.
 5. Click the overflow (⋯) icon to open a list of options for the key that you want to
 delete.
@@ -93,7 +93,7 @@ associated resources.
 To delete the key, the second approver must have _Manager_ access policy for the instance or key in
 order to authorize the key for deletion.
 
-1. In the **Key management service keys** table of the **Manage keys** page, you can find keys that are authorized for deletion with the following indicators:
+1. In the **Keys** table of the **Key management service keys** page, you can find keys that are authorized for deletion with the following indicators:
   * The `Set for deletion` column has a value of `True`. The authorization expiration time is displayed in the `Deletion expiration` column.
   * A trash can icon is displayed in the `State` column. Hover over the icon to view the deletion expiration date.
 

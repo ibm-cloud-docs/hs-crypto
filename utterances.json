@@ -127,6 +127,16 @@
     "disaster recovery in hyper protect crypto services",
     "dr in hyper protect crypto services"
   ],
+  "faq-hpcs-ibm-access":[
+    "assign IAM roles to access hpcs",
+    "grant IAM rights to allow use hpcs resource",
+    "grant IAM access to hpcs",
+    "which IAM rights must I grant",
+    "which IAM roles should I assign",
+    "hyper protect crypto services IAM roles",
+    "hpcs resource IAM rights",
+    "authorize hyper protect crypto services rights"
+  ],
   "troubleshoot-block-smart-card":[
     "blocked PIN on EP11 smart card",
     "smart card PIN failure count exceeded",

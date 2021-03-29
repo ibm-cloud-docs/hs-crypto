@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-06-30"
+  years: 2018, 2021
+lastupdated: "2021-03-17"
 
 keywords: get key, get encryption key, view encryption key, retrieve encryption key, API examples
 
@@ -42,7 +42,7 @@ To view detailed information about a specific key, you can make a `GET` call to
 the following endpoint.
 
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
+https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID_or_alias>
 ```
 {: codeblock}
 
@@ -58,12 +58,13 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 3. Run the following cURL command to get details about your key and the key
 material.
 
-    ```cURL
+    ```sh
     curl -X GET \
-      'https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>' \
+      "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID_or_alias>" \
       -H 'accept: application/vnd.ibm.kms.key+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
+      -H "x-kms-key-ring: <key_ring_ID>" \
       -H 'correlation-id: <correlation_ID>'
     ```
     {: codeblock}
@@ -95,7 +96,14 @@ material.
           </p>
         </td>
       </tr>
-
+      <tr>
+        <td>
+          <varname>key_ID_or_alias</varname>
+        </td>
+        <td>
+          <strong>Required.</strong> The identifier or alias for the key that you want to retrieve.
+        </td>
+      </tr>
       <tr>
         <td>
           <varname>IAM_token</varname>
@@ -129,7 +137,23 @@ material.
           </p>
         </td>
       </tr>
-
+      <tr>
+        <td>
+          <varname>key_ring_ID</varname>
+        </td>
+        <td>
+          <p>
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore recommended to specify the key ring ID for a more optimized request.
+          </p>
+          <p>
+            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+          </p>
+          <p>
+            For more information, see
+            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+          </p>
+        </td>
+      </tr>
       <tr>
         <td>
           <varname>correlation_ID</varname>
@@ -139,59 +163,54 @@ material.
           transactions.
         </td>
       </tr>
-
-      <tr>
-        <td>
-          <varname>key_ID</varname>
-        </td>
-        <td>
-          <strong>Required.</strong> The identifier for the key that you
-          retrieved in [step 1](#retrieve-keys-api).
-        </td>
-      </tr>
-
       <caption style="caption-side:bottom;">
         Table 4. Describes the variables that are needed to view a specified key
         with the {{site.data.keyword.hscrypto}} key management API
       </caption>
     </table>
 
-    A successful `GET api/v2/keys/<key_ID>` response returns details about your
+    A successful `GET api/v2/keys/<key_ID_or_alias>` response returns details about your
     key and the key material. The following JSON object shows an example
     returned value for a standard key.
 
     ```json
+    ```json
     {
-      "metadata": {
-        "collectionType": "application/vnd.ibm.kms.key+json",
-        "collectionTotal": 1
-      },
-      "resources": [
-        {
-          "type": "application/vnd.ibm.kms.key+json",
-          "id": "02fd6835-6001-4482-a892-13bd2085f75d",
-          "name": "test-standard-key",
-          "state": 1,
-          "extractable": true,
-          "crn": "crn:v1:bluemix:public:hs-crypto:us-south:a/f047b55a3362ac06afad8a3f2f5586ea:12e8c9c2-a162-472d-b7d6-8b9a86b815a6:key:02fd6835-6001-4482-a892-13bd2085f75d",
-          "imported": false,
-          "creationDate": "2020-03-12T03:50:12Z",
-          "createdBy": "...",
-          "algorithmType": "AES",
-          "algorithmMetadata": {
-            "bitLength": "256",
-            "mode": "CBC_PAD"
-          },
-          "algorithmBitSize": 256,
-          "algorithmMode": "CBC_PAD",
-          "lastUpdateDate": "2020-03-12T03:50:12Z",
-          "dualAuthDelete": {
-            "enabled": false
-          },
-          "deleted": false,
-          "payload": "Rm91ciBzY29yZSBhbmQgc2V2ZW4geWVhcnMgYWdv..."
-        }
-      ]
+        "metadata": {
+            "collectionType": "application/vnd.ibm.kms.key+json",
+            "collectionTotal": 1
+        },
+        "resources": [
+            {
+                "type": "application/vnd.ibm.kms.key+json",
+                "id": "02fd6835-6001-4482-a892-13bd2085f75d",
+                "name": "test-standard-key",
+                "aliases": [
+                    "alias-1",
+                    "alias-2"
+                  ],
+                "state": 1,
+                "expirationDate": "2020-03-15T03:50:12Z",
+                "extractable": true,
+                "crn": "crn:v1:bluemix:public:kms:us-south:a/f047b55a3362ac06afad8a3f2f5586ea:12e8c9c2-a162-472d-b7d6-8b9a86b815a6:key:02fd6835-6001-4482-a892-13bd2085f75d",
+                "imported": false,
+                "creationDate": "2020-03-12T03:50:12Z",
+                "createdBy": "...",
+                "algorithmType": "AES",
+                "algorithmMetadata": {
+                    "bitLength": "256",
+                    "mode": "CBC_PAD"
+                },
+                "algorithmBitSize": 256,
+                "algorithmMode": "CBC_PAD",
+                "lastUpdateDate": "2020-03-12T03:50:12Z",
+                "dualAuthDelete": {
+                    "enabled": false
+                },
+                "deleted": false,
+                "payload": "Rm91ciBzY29yZSBhbmQgc2V2ZW4geWVhcnMgYWdv..."
+            }
+        ]
     }
     ```
     {: screen}
@@ -200,39 +219,43 @@ material.
 
     ```json
     {
-      "metadata": {
-        "collectionType": "application/vnd.ibm.kms.key+json",
-        "collectionTotal": 1
-      },
-      "resources": [
-        {
-          "type": "application/vnd.ibm.kms.key+json",
-          "id": "2291e4ae-a14c-4af9-88f0-27c0cb2739e2",
-          "name": "test-root-key",
-          "state": 1,
-          "extractable": false,
-          "crn": "crn:v1:bluemix:public:hs-crypto:us-south:a/f047b55a3362ac06afad8a3f2f5586ea:30372f20-d9f1-40b3-b486-a709e1932c9c:key:2291e4ae-a14c-4af9-88f0-27c0cb2739e2",
-          "imported": false,
-          "creationDate": "2020-03-05T16:28:38Z",
-          "createdBy": "...",
-          "algorithmType": "AES",
-          "algorithmMetadata": {
-            "bitLength": "256",
-            "mode": "CBC_PAD"
-          },
-          "algorithmBitSize": 256,
-          "algorithmMode": "CBC_PAD",
-          "lastUpdateDate": "2020-03-05T16:39:25Z",
-          "keyVersion": {
-            "id": "436901cb-f4e4-45f4-bd65-91a7f6d13461",
-            "creationDate": "2020-03-05T16:39:25Z"
-          },
-          "dualAuthDelete": {
-            "enabled": false
-          },
-          "deleted": false
-        }
-      ]
+        "metadata": {
+            "collectionType": "application/vnd.ibm.kms.key+json",
+            "collectionTotal": 1
+        },
+        "resources": [
+            {
+                "type": "application/vnd.ibm.kms.key+json",
+                "id": "2291e4ae-a14c-4af9-88f0-27c0cb2739e2",
+                "aliases": [
+                    "alias-1",
+                    "alias-2"
+                ],
+                "name": "test-root-key",
+                "state": 1,
+                "extractable": false,
+                "crn": "crn:v1:bluemix:public:kms:us-south:a/f047b55a3362ac06afad8a3f2f5586ea:30372f20-d9f1-40b3-b486-a709e1932c9c:key:2291e4ae-a14c-4af9-88f0-27c0cb2739e2",
+                "imported": false,
+                "creationDate": "2020-03-05T16:28:38Z",
+                "createdBy": "...",
+                "algorithmType": "AES",
+                "algorithmMetadata": {
+                    "bitLength": "256",
+                    "mode": "CBC_PAD"
+                },
+                "algorithmBitSize": 256,
+                "algorithmMode": "CBC_PAD",
+                "lastUpdateDate": "2020-03-05T16:39:25Z",
+                "keyVersion": {
+                    "id": "436901cb-f4e4-45f4-bd65-91a7f6d13461",
+                    "creationDate": "2020-03-05T16:39:25Z"
+                },
+                "dualAuthDelete": {
+                    "enabled": false
+                },
+                "deleted": false
+            }
+        ]
     }
     ```
     {: screen}

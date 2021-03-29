@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-08-26"
+  years: 2020, 2021
+lastupdated: "2021-01-07"
 
 keywords: troubleshoot, problems, known issues, can't list crypto units
 
@@ -62,4 +62,4 @@ Try the following solutions:
     ```
     {: pre}
 
-- Make sure that your account is assigned at least a _Viewer_ [platform access role](/docs/hs-crypto?topic=hs-crypto-manage-access#platform-mgmt-roles) and a _Manager_ [service access role](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles) to list the crypto units. The account with which you create the service instance is granted as the _Administrator_ role by default and can assign various roles that correspond to the specific {{site.data.keyword.hscrypto}} permissions. For more information about roles and permissions, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
+- Make sure that your account is assigned the _Manager_ [service access role](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles) to list the crypto units. The account with which you create the service instance is granted as the _Administrator_ role by default and can assign various roles that correspond to the specific {{site.data.keyword.hscrypto}} permissions. For more information about roles and permissions, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).

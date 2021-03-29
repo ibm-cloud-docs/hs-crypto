@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-12-07"
+  years: 2018, 2021
+lastupdated: "2021-03-17"
 
 keywords: event, security, monitor event, audit event, activity tracker, logdna event
 
@@ -45,6 +45,10 @@ The following table lists the key actions that generate an event:
 | --------------------------------- | ------------------------------------------------------------ |
 | `hs-crypto.secrets.create`              | Create a key                                                 |
 | `hs-crypto.secrets.delete`              | Delete a key                                                 |
+| `hs-crypto.secrets.patch`               | Patch a key                                                  |
+| `hs-crypto.secrets.createalias`         | Create a key alias                                           |
+| `hs-crypto.secrets.deletealias`         | Delete a key alias                                           |
+| `hs-crypto.secrets.expire`              | Expire a key                                                 |
 | `hs-crypto.secrets.read`                | Retrieve all key information                                 |
 | `hs-crypto.secrets.readmetadata`        | Retrieve key metadata (excluding key payload, if applicable) |
 | `hs-crypto.secrets.head`                | Retrieve key total                                           |
@@ -97,9 +101,27 @@ The following table lists the registration actions that generate an event:
 
 | Action                                  | Description                                              |
 | --------------------------------------- | -------------------------------------------------------- |
+| `hs-crypto.registrations.create`   | Create a registration between a key and a cloud resource  |
 | `hs-crypto.registrations.list`          | List registrations for any key                           |
+| `hs-crypto.registrations.merge`   |  Update a registration between a key and a cloud resource |
+| `hs-crypto.registrations.write`   | Replace registration between a key and a cloud resource  |
+| `hs-crypto.registrations.delete`   | Delete registration between a key and a cloud resource  |
 | `hs-crypto.registrations.default`       | Invalid registration request event                       |
 {: caption="Table 4. Registration actions" caption-side="bottom"}
+
+### Key with registration events
+{: #protected-resource-key-actions}
+
+The following table lists the event acknowledgement actions that generate an event:
+
+| Action                          | Description                                     |
+| ------------------------------- | ----------------------------------------------- |
+| `hs-crypto.secrets.ack-delete`  | Delete a key with registrations                 |
+| `hs-crypto.secrets.ack-restore` | Restore a key with registrations                |
+| `hs-crypto.secrets.ack-rotate`  | Rotate a key with registrations                 |
+| `hs-crypto.secrets.ack-enable`  | Enable operations for a key with registrations  |
+| `hs-crypto.secrets.ack-disable` | Disable operations for a key with registrations |
+{: caption="Table 5. Event acknowledgement actions that involve keys that protect cloud resources" caption-side="bottom"}
 
 ### Trusted Key Entry events
 {: #tke-actions}
@@ -117,7 +139,7 @@ The following table lists the Trusted Key Entry (TKE) actions that generate an e
 | `hs-crypto.tke-cryptounit-new-master-key-register.clear` | Clear the new master key register |
 | `hs-crypto.tke-cryptounit-current-master-key-register.clear` | Clear the current master key register |
 | `hs-crypto.tke-cryptounit.reset`   | Zeroize and reset the selected crypto units |
-{: caption="Table 5. Trusted Key Entry actions" caption-side="bottom"}
+{: caption="Table 6. Trusted Key Entry actions" caption-side="bottom"}
 
 ### KMIP for VMware events
 {: #at-events-kmip}
@@ -136,7 +158,7 @@ The initiator ID is derived from the TLS (Transport Layer Security) certificate 
 | `hs-crypto.kmip-key.activate` | A KMIP key is activated. |
 | `hs-crypto.kmip-key.revoke` | A KMIP key is revoked. |
 | `hs-crypto.kmip-key.destroy` | A KMIP key is destroyed. |
-{: caption="Table 6. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
+{: caption="Table 7. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
 
 ## Viewing events
 {: #at-ui}
@@ -153,8 +175,9 @@ see [Launching the web UI through the IBM Cloud UI](/docs/Activity-Tracker-with-
 | `us-south`                | `us-south`                                      |
 | `us-east`                 | `us-east`                                       |
 | `eu-de`                   | `eu-de`                                         |
+| `eu-gb`                   | `eu-gb`                                         |
 | `au-syd`                  | `au-syd`                                        |
-{: caption="Table 7. Activity Tracker regions" caption-side="bottom"}
+{: caption="Table 8. Activity Tracker regions" caption-side="bottom"}
 
 ## Analyzing successful events
 {: #at-events-analyze}
@@ -193,7 +216,7 @@ There are some common fields that {{site.data.keyword.hscrypto}} uses outside of
         <p>Note: This field is currently not supported in TKE events.</p>
       </td>
     </tr>
-    <caption style="caption-side:bottom;">Table 8. Describes the common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service
+    <caption style="caption-side:bottom;">Table 9. Describes the common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service
     actions.</caption>
   </table>
 
@@ -228,6 +251,17 @@ The following fields include extra information:
 The following field includes extra information:
 
 - The `responseData.keyState` field includes the integer that correlates to the state of the key.
+
+#### Expire Key
+{: #expire-key-success}
+
+The following field includes extra information:
+
+- The `requestData.keyType` field includes the type of key that was created.
+- The `responseData.keyId` field includes the unique identifier associated with the key.
+- The `requestData.expirationDate` field includes the date that the key expired on.
+- The `responseData.initialValue.keyState` field includes the integer that correlates to the previous state of the key.
+- The `responseData.newValue.keyState` field includes the integer that correlates to the current state of the key.
 
 #### Wrap or unwrap key
 {: #wrap-unwrap-key-success}
@@ -281,6 +315,14 @@ The following fields include extra information:
 - The `responseData.keyVersionId` field includes the unique identifier of the current key version used to wrap input ciphertext on wrap requests.
 - The `responseData.keyVersionCreationDate` field includes the date that the current version of the key was created.
 
+#### Patch key
+{: #patch-key-success}
+
+The following fields include extra information:
+
+- The `requestData.initialValue.keyRingId` field includes the ID of the key ring that the key previously belonged to.
+- The `requestData.newValue.keyRingId` field includes the ID of the key ring that the key currently belongs to.
+
 #### List key versions
 {: #list-key-versions-success}
 
@@ -309,17 +351,41 @@ new initiatorID of the person who set the dual authorization policy.
 ### Policy events
 {: #policy-at-events}
 
-#### Set instance policies
-{: #set-policy-success}
+#### Allowed network policies
+{: #allowed-network-event}
 
 The following fields include extra information:
 
-<!-- The `requestData.initialValue.policyAllowedNetworkEnabled` field includes if your allowed network policy was previously enabled or disabled.
+- The `requestData.initialValue.policyAllowedNetworkEnabled` field includes if your allowed network policy was previously enabled or disabled.
 - The `requestData.initialValue.policyAllowedNetworkAttribute` field includes if your allowed network policy was previously only for public networks or both public and private networks.
 - The `requestData.newValue.policyAllowedNetworkEnabled` field includes if your allowed network policy is currently enabled or disabled.
-- The `requestData.newValue.policyAllowedNetworkAttribute` field includes if your allowed network policy is currently only for public networks or both public and private networks.  -->
+- The `requestData.newValue.policyAllowedNetworkAttribute` field includes if your allowed network policy is currently only for public networks or both public and private networks.
+
+#### Dual auth delete policies
+{: #dual-auth-event}
+
+The following fields include extra information:
+
 - The `requestData.initialValue.policyDualAuthDeleteEnabled` field includes if your dual auth delete policy was previously enabled or disabled.
 - The `requestData.newValue.policyDualAuthDeleteEnabled` field includes if your dual auth delete policy is currently enabled or disabled.
+
+#### Key creation and importation access policies
+{: #allowed-key-creation-policy}
+
+The following fields include extra information:
+
+- The `requestData.initialValue.PolicyKCIAEnabled` field includes if your key creation and importation policy was previously enabled or disabled.
+- The `requestData.newValue.PolicyKCIAEnabled` field includes if your key creation and importation policy is currently enabled or disabled.
+- The `requestData.initialValue.PolicyKCIAAttrCRK` field includes if your key creation and importation policy previously allowed the creation of root keys.
+- The `requestData.newValue.PolicyKCIAAttrCRK` field includes if your key creation and importation policy allows the creation of root keys.
+- The `requestData.initialValue.PolicyKCIAAttrCSK` field includes if your key creation and importation policy previously allowed the creation of standard keys.
+- The `requestData.newValue.PolicyKCIAAttrCSK` field includes if your key creation and importation policy allows the creation of standard keys.
+- The `requestData.initialValue.PolicyKCIAAttrIRK` field includes if your key creation and importation policy previously allowed imported root keys.
+- The `requestData.newValue.PolicyKCIAAttrIRK` field includes if your key creation and importation policy allows imported root keys.
+- The `requestData.initialValue.PolicyKCIAAttrISK` field includes if your key creation and importation policy previously allowed imported standard keys.
+- The `requestData.newValue.PolicyKCIAAttrISK` field includes if your key creation and importation policy allows imported standard keys.
+- The `requestData.initialValue.PolicyKCIAAttrET` field includes if your key creation and importation policy previously required keys to be imported via import token.
+- The `requestData.newValue.PolicyKCIAAttrET` field includes if your key creation and importation policy requires keys to be imported via import token.
 
 ### Import token events
 {: #import-token-events}
@@ -343,6 +409,51 @@ longer accessible.
 - The `responseData.remainingRetrievals` field includes the number of times the import token can be retrieved within its expiration time before it is no longer
 accessible.
 
+### Key with registrations events
+{: #key-registration-events}
+
+#### Rotate key
+{: #rotate-key-registrations-success}
+
+The following fields include extra information:
+
+- The `responseData.eventAckData.eventId` field includes the unique identifier that is associated with the event.
+- The `responseData.eventAckData.eventType` field includes the type of lifecycle action that is associated with the event.
+- The `responseData.eventAckData.newKeyVersionId` field includes the unique identifier of the latest key version used to wrap input ciphertext on wrap requests.
+- The `responseData.eventAckData.newKeyVersionCreationDate` field includes the date that the latest key version was created.
+- The `responseData.eventAckData.oldKeyVersionId` field includes the unique identifier of the previous key version used to wrap input ciphertext on wrap requests.
+- The `responseData.eventAckData.oldKeyVersionCreationDate` field includes the date that the previous key version was created.
+
+#### Restore key
+{: #restore-key-registrations-success}
+
+The following fields include extra information:
+
+- The `responseData.eventAckData.eventId` field includes the unique identifier that is associated with the event.
+- The `responseData.eventAckData.eventType` field includes the type of lifecycle action that is associated with the event.
+- The `responseData.eventAckData.keyState` field includes the integer that correlates to the state of the key associated with the event.
+- The `responseData.eventAckData.eventAckTimeStamp` field includes the date and time that the event was acknowledged.
+
+#### Enable Key
+{: #enable-key-registrations-success}
+
+The following fields include extra information:
+
+- The `responseData.eventAckData.eventId` field includes the unique identifier that is associated with the event.
+- The `responseData.eventAckData.eventType` field includes the type of lifecycle action that is associated with the event.
+- The `responseData.eventAckData.keyState` field includes the integer that correlates to the state of the key associated with the event.
+- The `responseData.eventAckData.eventAckTimeStamp` field includes the date and time that the event was acknowledged.
+
+#### Disable key
+{: #disable-key-registration-success}
+
+The following fields include extra information:
+
+- The `responseData.eventAckData.eventId` field includes the unique identifier that is associated with the event.
+- The `responseData.eventAckData.eventType` field includes the type of lifecycle action that is associated with the event.
+- The `responseData.eventAckData.keyState` field includes the integer that correlates to the state of the key associated with the event.
+- The `responseData.eventAckData.eventAckTimeStamp` field includes the date and time that the event was acknowledged.
+
 ### Registration events
 {: #registration-events}
 
@@ -363,7 +474,7 @@ The following table lists the returned values that indicate a successful TKE eve
 |`outcome` | `success`  |
 | `reason.reasonCode`  | `200`  |
 | `reason.reasonType`  |`OK`  |
-{: caption="Table 9. Describes the returned values of a successful TKE event" caption-side="bottom"}
+{: caption="Table 10. Describes the returned values of a successful TKE event" caption-side="bottom"}
 
 The following common fields for TKE events include extra information:
 
@@ -447,6 +558,19 @@ your service instance and `responseData.totalResources` is 0, you might need to 
 the deleted state using the `state` parameter or adjust the `offset` and `limit` parameters in
 your request.
 
+### Lifecycle action on a key with registrations did not complete
+{: #protected-resource-key-failure}
+
+The `responseData.reasonForFailure` and `responseData.resourceCRN` fields contain information on why the action wasn't able to
+be completed.
+
+If the event has a `reason.reasonCode` of `409`, the action cannot be completed due to the adopting service's key state
+conflicting with the key state that {{site.data.keyword.hscrypto}} has.
+
+If the event has a `reason.reasonCode` of `408`, the action cannot be completed because
+{{site.data.keyword.hscrypto}} was not notified that all appropriate actions were taken within 4 hours of the
+action request.
+
 ### Unable to perform Trusted Key Entry actions
 {: #tke-actions-failure}
 
@@ -517,7 +641,7 @@ The following table lists the actions associated with each severity level:
         <p><code>hs-crypto.registrations.list</code></p>
       </td>
     </tr>
-    <caption style="caption-side:bottom;">Table 10. Describes the severity level for
+    <caption style="caption-side:bottom;">Table 11. Describes the severity level for
     {{site.data.keyword.hscrypto}} service actions.</caption>
   </table>
 
@@ -527,6 +651,6 @@ The following table lists the status codes associated with each severity level:
 | -------- | ----------- |
 | Critical | `400`[^services-1], `401`, `403`, `500`, `503`, `507`  |
 | Warning  | `400`, `409`, `424`, `502`, `504`, `505`  |
-{: caption="Table 11. Describes the severity level for {{site.data.keyword.hscrypto}} response status codes." caption-side="bottom"}
+{: caption="Table 12. Describes the severity level for {{site.data.keyword.hscrypto}} response status codes." caption-side="bottom"}
 
 [^services-1]: For Trusted Key Entry events.

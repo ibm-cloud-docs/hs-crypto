@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020,2021
-lastupdated: "2021-03-01"
+  years: 2020, 2021
+lastupdated: "2021-03-11"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -20,6 +20,8 @@ subcollection: hs-crypto
 {:tip: .tip}
 {:external: target="_blank" .external}
 {:term: .term}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 
 # Managing EP11 keys with the {{site.data.keyword.cloud_notm}} console
 {: #manage-ep11-key-ui}
@@ -39,6 +41,13 @@ Before you can manage EP11 keystores and keys with the console, complete the fol
 
 ## Viewing EP11 keys
 {: #view-ep11-key-ui}
+
+For default service access roles that support viewing EP11 keys, see [service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles). If you are to create custom roles, make sure to assign the following actions to the custom role:
+
+* `hs-crypto.keystore.listkeystoresbyids`
+* `hs-crypto.keystore.listkeysbyids`
+
+For instructions on creating custom roles, see [Creating custom roles](/docs/account?topic=account-custom-roles).
 
 On the {{site.data.keyword.hscrypto}} dashboard, do the following to view EP11 key details:
 
@@ -98,6 +107,18 @@ On the {{site.data.keyword.hscrypto}} dashboard, do the following to view EP11 k
 
 ## Creating EP11 keys
 {: #create-ep11-key-ui}
+{: help}
+{: support}
+
+For default service access roles that support creating EP11 keys, see [service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles). If you are to create custom roles, make sure to assign the following actions to the custom role:
+
+* `hs-crypto.keystore.listkeystoresbyids`
+* `hs-crypto.keystore.listkeysbyids`
+* `hs-crypto.crypto.generatekey`
+* `hs-crypto.crypto.generatekeypair`
+* `hs-crypto.keystore.storenewkey`
+
+For instructions on creating custom roles, see [Creating custom roles](/docs/account?topic=account-custom-roles).
 
 Complete the following steps to create an EP11 key:
 
@@ -140,7 +161,7 @@ Complete the following steps to create an EP11 key:
     * If you are creating an asymmetric key, specify key attributes on the **Public key attributes** and **Private key attributes** pages subsequently:
 
         1. The required attributes are listed with the default values. To modify the attribute values, click the pencil icon.
-        2. To add additional attributes, click **Add public attribute** or **Add private attribute** depending on which page you are on. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list) and [supported curve names for Elliptic Curve keys](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#supported-pkcs-ecdsa-curve-name).
+        2. To add additional attributes, click **Add public attribute** or **Add private attribute** depending on which page you are on. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list) and [supported curve names for Elliptic Curve keys](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#supported-pkcs11-ec-curve-name).
         3. (Optional) You can delete additional attributes by clicking the trash can icon. The required attributes cannot be deleted.
         4. Click **Next** to continue.
 
@@ -163,6 +184,14 @@ You have successfully created a EP11 key. The created key is displayed as the fi
 
 ## Deleting EP11 keys
 {: #delete-ep11-key-ui}
+
+For default service access roles that support deleting EP11 keys, see [service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles). If you are to create custom roles, make sure to assign the following actions to the custom role:
+
+* `hs-crypto.keystore.listkeystoresbyids`
+* `hs-crypto.keystore.listkeysbyids`
+* `hs-crypto.keystore.deletekey`
+
+For instructions on creating custom roles, see [Creating custom roles](/docs/account?topic=account-custom-roles).
 
 If you want to delete an EP11 key, complete the following steps:
 

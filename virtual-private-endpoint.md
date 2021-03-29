@@ -72,7 +72,7 @@ When connecting to a VPE via [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gateway
   </tr>
 
   <tr>
-    <td rowspan="4">Key management service</td>
+    <td rowspan="5">Key management service</td>
     <td>api.private.us-south.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:api.private.us-south.hs-crypto.cloud.ibm.com</td>
   </tr>
@@ -89,14 +89,13 @@ When connecting to a VPE via [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gateway
     <td>api.private.au-syd.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:api.private.au-syd.hs-crypto.cloud.ibm.com</td>
   </tr>
-  <!--
   <tr>
     <td>api.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:eu-gb:::endpoint:api.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
   </tr>
-  -->
+
   <tr>
-    <td rowspan="4">Enterprise PKCS #11</td>
+    <td rowspan="5">Enterprise PKCS #11</td>
     <td>ep11.private.us-south.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:ep11.private.us-south.hs-crypto.cloud.ibm.com</td>
   </tr>
@@ -112,14 +111,13 @@ When connecting to a VPE via [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gateway
     <td>ep11.private.au-syd.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:ep11.private.au-syd.hs-crypto.cloud.ibm.com</td>
   </tr>
-  <!--
   <tr>
     <td>ep11.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:eu-gb:::endpoint:ep11.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
   </tr>
-  -->
+
   <tr>
-    <td rowspan="4">Trusted Key Entry (TKE)</td>
+    <td rowspan="5">Trusted Key Entry (TKE)</td>
     <td>tke.private.us-south.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:tke.private.us-south.hs-crypto.cloud.ibm.com</td>
   </tr>
@@ -135,14 +133,13 @@ When connecting to a VPE via [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gateway
     <td>tke.private.au-syd.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:tke.private.au-syd.hs-crypto.cloud.ibm.com</td>
   </tr>
-  <!--
   <tr>
     <td>tke.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:eu-gb:::endpoint:tke.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
   </tr>
-  -->
+
   <tr>
-    <td rowspan="4">Key Management Interoperability Protocol (KMIP) adapter</td>
+    <td rowspan="5">Key Management Interoperability Protocol (KMIP) adapter</td>
     <td>kmip.private.us-south.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:kmip.private.us-south.hs-crypto.cloud.ibm.com</td>
   </tr>
@@ -158,11 +155,10 @@ When connecting to a VPE via [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gateway
     <td>kmip.private.au-syd.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:kmip.private.au-syd.hs-crypto.cloud.ibm.com</td>
   </tr>
-  <!--
   <tr>
     <td>kmip.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:eu-gb:::endpoint:kmip.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
   </tr>
-  -->
+
   <caption>Table 1. Private endpoints for connecting {{site.data.keyword.hscrypto}} over {{site.data.keyword.cloud_notm}} private network</caption>
 </table>

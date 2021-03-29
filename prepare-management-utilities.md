@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-12-04"
+  years: 2019, 2021
+lastupdated: "2021-03-08"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -21,23 +21,23 @@ subcollection: hs-crypto
 {:external: target="_blank" .external}
 {:term: .term}
 
-# Setting up the Management Utilities
+# Setting up smart cards and the Management Utilities
 {: #prepare-management-utilities}
 
-With the [{{site.data.keyword.IBM}} {{site.data.keyword.hscrypto}} Management Utilities](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-management-utilities), you can initialize service instances with the highest level of security. The Management Utilities use smart cards for storing [signature keys](#x8250375){: term} and [master key](#x2908413){: term} parts.
+With smart cards and the [{{site.data.keyword.IBM}} {{site.data.keyword.hscrypto}} Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-management-utilities), you can initialize service instances with the highest level of security. The Management Utilities use smart cards for storing [signature keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-key-concept) and [master key parts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-part-concept).
 {: shortdesc}
 
-The following diagram gives you an overview of steps you need to take to initialize service instances with the Management Utilities. This topic covers the steps to set up the Management Utilities. For the detailed instructions on initialize the service instance, see [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
+The following diagram gives you an overview of steps you need to take to initialize service instances with smart cards and the Management Utilities. This topic covers the steps to set up the Management Utilities. For the detailed instructions on initialize the service instance, see [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
-![The task flow of service instance initialization with the Management Utilities](/image/hsm_initialization_flow_smartcard.svg "The task flow of service instance initialization with the Management Utilities"){: caption="Figure 1. Task flow of service instance initialization with the Management Utilities" caption-side="bottom"}
+![The task flow of service instance initialization with smart cards and the Management Utilities](/image/hsm_initialization_flow_smartcard.svg "The task flow of service instance initialization with smart cards and the Management Utilities"){: caption="Figure 1. Task flow of service instance initialization with smart cards and the Management Utilities" caption-side="bottom"}
 
-Initializing a service instance through a private network using the Management Utilities is currently not supported.
+Initializing a service instance through a private network using smart cards and the Management Utilities is currently not supported.
 {: note}
 
 ## Step 1: Order smart cards and smart card readers
 {: #order-smart-card-and-reader}
 
-Before you can configure smart cards, you need to first order [smart cards](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-smart-cards) and [smart card readers](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-smart-card-reader) online.
+Before you can configure smart cards, you need to first order [smart cards](/docs/hs-crypto?topic=hs-crypto-understand-concepts#smart-card-concept) and [smart card readers](/docs/hs-crypto?topic=hs-crypto-understand-concepts#smart-card-reader-concept) online.
 
 ### Ordering smart cards
 {: #order-smart-card}
@@ -55,7 +55,7 @@ Complete the following steps to order smart cards:
 
   For added security, the 2 or 3 master key parts that are used to configure a service instance can be generated on separate EP11 smart cards that are assigned to different people. The signature key used to sign commands to the crypto module can be generated on a separate EP11 smart card. Three or four EP11 smart cards would then be needed to configure a service instance.
 
-  It is also suggested to create backup copies of all used smart cards and to save the backup smart cards in a secure place. For maximum security, 10 smart cards would be needed, including backup smart cards (two certificate authority smart cards and eight EP11 smart cards).
+  It is also suggested to [create backup copies of all used smart cards](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup) and to save the backup smart cards in a secure place. For maximum security, 10 smart cards would be needed, including backup smart cards (two certificate authority smart cards and eight EP11 smart cards).
 
 3. Click **Add to Current Order** and continue to check out.
 
@@ -63,7 +63,7 @@ Complete the following steps to order smart cards:
 
 The supported smart card reader type is SPR332 v2.0 Secure Class 2 PIN Pad Reader (part number 905127-1). The following are a few third-party online shops where you can order a smart card reader. The deliver policy might vary depending on your geographical locations:
 
-* [Identiv](https://shop.identiv.com/smart-card-readers/contact-contactless/spr332v2.htm){: external}
+* [Identiv](https://shop.identiv.com/products/spr332-v2-0-secure-class-2-pin-pad-reader){: external}
 * [Digifeat](https://digifeat.com/product/spr332-v2-0/){: external}
 * [SCM PC-Card GmbH](https://www.scm-pc-card.de/all-products/101/spr332-v2){: external}
 * [Amazon](https://www.amazon.de/SPR332-Speed-Secure-Kartenleser-Online-Abrechnung/dp/B0092NGGWW){: external}
@@ -73,7 +73,7 @@ The supported smart card reader type is SPR332 v2.0 Secure Class 2 PIN Pad Reade
 
 You need to install the Identiv SPR332 V2 smart card reader driver on your local workstation. Currently, only Red Hat Enterprise Linux&reg; 8.0.0 is supported.
 
-You need to take the [smart card considerations](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy) into account when you plan your security policy for your workstation and smart card readers.
+You need to take the [smart card considerations](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy) into account when you plan your security policy for your workstation and smart card readers. Otherwise, your smart cards might be exposed to [some vulnerabilities](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy#smart-card-vulnerabilities).
 {: note}
 
 <!--
@@ -329,5 +329,5 @@ If you enter a wrong PIN for an EP11 smart card continuously for three times, th
 ## What's next
 {: #prepare-management-utilities-next}
 
-- After you set up the Management Utilities, you can start to load the master key with the TKE application. For detailed instructions, see [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
+- After you set up the Management Utilities, you can start to load the master key with the TKE application. For detailed instructions, see [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 - If you need to uninstall the Management Utilities, you need to follow the instructions to [zeroize your crypto units first](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step) and then [uninstall the Management Utilities](/docs/hs-crypto?topic=hs-crypto-delete-instance#uninstall-management-utilities).

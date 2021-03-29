@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-02-01"
+lastupdated: "2021-03-19"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -25,6 +25,41 @@ subcollection: hs-crypto
 {:hide-in-docs: .hide-in-docs}
 {:hide-dashboard: .hide-dashboard}
 
+<style>
+        .solutionBoxContainer {}
+        .solutionBoxContainer a {
+            text-decoration: none !important;
+            border: none !important;
+        }
+        .solutionBox {
+            float: left !important;
+            width: 100% !important;
+            min-height: 290px;
+            margin: 0 10px 20px 0 !important;
+            padding: 16px !important;
+            background-color: #f4f4f4 !important;
+            border: 1px solid #f4f4f4;
+        }
+        .clearBox {
+          clear: both !important;
+          height: 0;
+        }
+        @media screen and (min-width: 960px) {
+            .solutionBox {
+            width: calc(50% - 3%) !important;
+            }
+        }
+        @media screen and (min-width: 1298px) {
+            .solutionBox {
+            width: calc(33% - 2%) !important;
+            }
+        }
+        .solutionBox:hover {
+            border: 1px rgb(136, 151, 162)solid !important;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important;
+        }
+    </style>
+
 # Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
 {: #get-started}
 
@@ -35,12 +70,39 @@ subcollection: hs-crypto
 {{site.data.keyword.hscrypto}} integrates with {{site.data.keyword.keymanagementserviceshort}} application programming interface (API) to generate and manage keys. The Keep Your Own Key (KYOK) function is also enabled to provide access to cloud-based cryptographic HSMs. You can access the network addressable HSMs by making standard PKCS #11 API calls or Enterprise PKCS #11 over gRPC (GREP11) API calls to perform cryptographic operations.
 {: hide-dashboard}
 
-<!-- You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client, which communicates with the ACSP server to enable you to access the backend cryptographic resources.-->
-
-<!--{{site.data.keyword.hscrypto}} is the cryptography that {{site.data.keyword.blockchainfull_notm}} Platform is built with. It is also a member of the {{site.data.keyword.cloud_notm}} Hyper Protect Family, including [{{site.data.keyword.cloud_notm}} Hyper Protect DBaaS](https://cloud.ibm.com/docs/hypersecure-dbaas/index.html){: external}, {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}, [{{site.data.keyword.cloud_notm}} Container Service](https://cloud.ibm.com/docs/containers/container_index.html){: external}, and [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}}](https://cloud.ibm.com/docs/hypersecure-platform/index.html){: external}. -->
-
-This tutorial guides you how to set up your service instance by loading your [master keys](#x2908413){: term}, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the GREP11 API.
+This tutorial shows you the high-level steps on how to set up your service instance by loading your [master keys](#x2908413){: term}, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the GREP11 API.
 {: hide-dashboard}
+
+If you want to learn detailed steps on how to initialize a {{site.data.keyword.hscrypto}} service instance, click the following tabs to view different options:
+{: hide-dashboard}
+
+<div class="solutionBoxContainer hide-dashboard">
+  <div class="solutionBox">
+    <a href = "/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities">
+      <div>
+        <p><strong><img src="image/smart-card.svg" alt="Smart card icon" width="20" style="width:20px; border-style: none"/> Use smart cards </p></strong>
+        <p class="bx--type-caption">For the highest level of security, choose this option. It uses smart cards to store signature keys and master key parts. Signature keys and master key parts never appear in the clear outside the smart card.</p>
+      </div>
+    </a>
+  </div>
+  <div class="solutionBox">
+    <a href = "/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit">
+      <div>
+         <p><strong><img src="image/recovery-crypto-unit.svg" alt="Recovery crypto unit icon" width="20" style="width:20px; border-style: none"/> Use recovery crypto units</p></strong>
+         <p class="bx--type-caption">If one or more recovery crypto units are allocated for your service instance, you can choose this option. A random master key value is automatically generated in a recovery crypto unit and never appears in the clear outside of the HSMs.</p>
+      </div>
+    </a>
+  </div>
+  <div class="solutionBox">
+    <a href = "/docs/hs-crypto?topic=hs-crypto-initialize-hsm">
+      <div>
+         <p><strong><img src="image/tke-cli.svg" alt="TKE CLI icon" width="20" style="width:20px; border-style: none"/> Use key part files</p></strong>
+         <p class="bx--type-caption">Initialize your service instance by using master key parts that you create and store in files on your local workstation. In this case, the workstation key files serve as a backup copy of your master key value.</p>
+      </div>
+    </a>
+  </div>
+  <div class="clearBox"></div>
+</div>
 
 <!-- the following is shown on the dashboard-->
 
@@ -52,7 +114,19 @@ This tutorial guides you how to set up your service instance by loading your [ma
 {: hide-in-docs}
 {: notoc}
 
-To manage your keys, you need to initialize your service instance first. For detailed steps, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
+To manage your keys, you need to initialize your service instance first. Depending on where your service instance locates and your security requirements, {{site.data.keyword.hscrypto}} provides you with the following three approaches to initializing your service instance:
+
+- [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
+
+  This approach gives you the highest security, which enables you to store and manage master key parts using smart cards.
+
+- [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
+
+  If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`) where the recovery crypto units are enabled, you can choose this approach where the master key is randomly generated within a recovery crypto unit and then exported to other crypto units.
+
+- [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+
+  You can also initialize your service instance using master key parts that are stored in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. 
 
 ## Step 2: Using the key management service and cloud hardware security module
 {: #manage-data-key-dashboard}
@@ -69,7 +143,7 @@ From the {{site.data.keyword.cloud_notm}} console, you can create new root keys 
 
 Complete the following steps to create your first cryptographic key.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click **Manage keys** &gt; **Add key**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **Key management service keys** &gt; **Add key**.
 2. To create a new key, select **Create a key**.
 
     Specify the key's details:
@@ -104,7 +178,7 @@ You can bring your existing keys to the service, so that you can still use the s
 
 Complete the following steps to add an existing key.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click **Manage keys** &gt; **Add key**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **Key management service keys** &gt; **Add key**.
 2. To upload an existing key, select **Import a key**.
 
     Specify the key's details:
@@ -256,9 +330,9 @@ The following procedure uses Golang code as an example to test GREP11 functions.
 
   ```Golang
   var (
-      address        = "<grep11_server_address>:<port>"
-      apiKey         = "<ibm_cloud_apikey>"
-      hpcsInstanceID = "<hpcs_instance_id>"
+      Address        = "<grep11_server_address>:<port>"
+      APIKey         = "<ibm_cloud_apikey>"
+      HPCSInstanceID = "<hpcs_instance_id>"
   )
   ```
   {: codeblock}
@@ -330,19 +404,29 @@ In order to use {{site.data.keyword.hscrypto}}, make sure that you have a Pay-As
 
 ## Step 1: Provision the service
 {: #provision-service}
-{: help}
-{: support}
 {: hide-dashboard}
 
 You must first create an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console. For detailed steps, see [Provisioning the service](/docs/hs-crypto?topic=hs-crypto-provision).
 
 ## Step 2: Initialize your service instance
 {: #initialize-crypto}
+{: hide-dashboard}
 {: help}
 {: support}
-{: hide-dashboard}
 
-To manage your keys, you need to initialize your service instance first. For detailed steps, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
+To manage your keys, you need to initialize your service instance first. Depending on where your service instance locates and your security requirements, {{site.data.keyword.hscrypto}} provides you with the following three approaches to initializing your service instance:
+
+- [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
+
+  This approach gives you the highest security, which enables you to store and manage master key parts using smart cards.
+
+- [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
+
+  If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`) where the recovery crypto units are enabled, you can choose this approach where the master key is randomly generated within a recovery crypto unit and then exported to other crypto units.
+
+- [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+
+  You can also initialize your service instance using master key parts that are stored in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. 
 
 ## Step 3: Using the key management service and cloud hardware security module
 {: #manage-data-key}
@@ -360,7 +444,7 @@ From the {{site.data.keyword.cloud_notm}} console, you can create new root keys 
 
 Complete the following steps to create your first cryptographic key.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click **Manage keys** &gt; **Add key**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **Key management service keys** &gt; **Add key**.
 2. To create a new key, select **Create a key**.
 
     Specify the key's details:
@@ -397,7 +481,7 @@ You can bring your existing keys to the service, so that you can still use the s
 
 Complete the following steps to add an existing key.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click **Manage keys** &gt; **Add key**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **Key management service keys** &gt; **Add key**.
 2. To upload an existing key, select **Import a key**.
 
     Specify the key's details:
@@ -431,13 +515,13 @@ From the {{site.data.keyword.cloud_notm}} console, you can inspect the general c
 
 ### Encrypting your data with cloud HSM
 {: #encrypt-data-hsm}
-{: help}
-{: support}
 
 You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations with the PKCS #11 API or with the GREP11 API.
 
 #### Performing cryptographic operations with the PKCS #11 API
 {: #cryptographic-operations-with-pkcs11}
+{: help}
+{: support}
 
 To perform cryptographic operations with the PKCS #11 API, complete the following steps:
 
@@ -540,6 +624,8 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
 
 #### Performing cryptographic operations with the GREP11 API
 {: #cryptographic-operations-with-grep11}
+{: help}
+{: support}
 
 To perform cryptographic operations with the GREP11 API, you need to make sure your applications are developed with programming languages supported by gRPC.
 
@@ -551,9 +637,9 @@ The following procedure uses Golang code as an example to test GREP11 functions.
 
   ```Golang
   var (
-      address        = "<grep11_server_address>:<port>"
-      apiKey         = "<ibm_cloud_apikey>"
-      hpcsInstanceID = "<hpcs_instance_id>"
+      Address        = "<grep11_server_address>:<port>"
+      APIKey         = "<ibm_cloud_apikey>"
+      HPCSInstanceID = "<hpcs_instance_id>"
   )
   ```
   {: codeblock}

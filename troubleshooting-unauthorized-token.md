@@ -41,7 +41,7 @@ FAILED
 Error querying service instances.
 Status code: 401
 Message: Unauthorized
-Your access token is invalid, expired, or does not have the necessary permissions to access this instance.`
+Your access token is invalid, expired, or does not have the necessary permissions to access this instance.
 ```
 {: codeblock}
 

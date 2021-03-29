@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-06-30"
+  years: 2018, 2021
+lastupdated: "2021-03-17"
 
 keywords: get details for a key, get key configuration, get details, view encryption key details, view encryption key, retrieve encryption key details, API examples
 
@@ -41,7 +41,7 @@ To view detailed information about a specific root key or a standard key, you ca
 the following endpoint.
 
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/metadata
+https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID_or_alias>/metadata
 ```
 {: codeblock}
 
@@ -56,12 +56,13 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/metadat
 
 3. Get details about the key by running the following cURL command.
 
-    ```cURL
+    ```sh
     curl -X GET \
-      'https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/metadata' \
+      'https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID_or_alias>/metadata' \
       -H 'accept: application/vnd.ibm.kms.key+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
+      -H 'x-kms-key-ring: <key_ring_ID>' \
       -H 'correlation-id: <correlation_ID>'
     ```
     {: codeblock}
@@ -93,7 +94,15 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/metadat
           </p>
         </td>
       </tr>
-
+      <tr>
+        <td>
+          <varname>key_ID</varname>
+        </td>
+        <td>
+          <strong>Required.</strong> The identifier or alias for the key that you want to
+          inspect.
+        </td>
+      </tr>
       <tr>
         <td>
           <varname>IAM_token</varname>
@@ -127,7 +136,23 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/metadat
           </p>
         </td>
       </tr>
-
+      <tr>
+        <td>
+          <varname>key_ring_ID</varname>
+        </td>
+        <td>
+          <p>
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore recommended to specify the key ring ID for a more optimized request.
+          </p>
+          <p>
+            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+          </p>
+          <p>
+            For more information, see
+            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+          </p>
+        </td>
+      </tr>
       <tr>
         <td>
           <varname>correlation_ID</varname>
@@ -138,23 +163,13 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/metadat
         </td>
       </tr>
 
-      <tr>
-        <td>
-          <varname>key_ID</varname>
-        </td>
-        <td>
-          <strong>Required.</strong> The identifier for the key that you want to
-          inspect.
-        </td>
-      </tr>
-
       <caption style="caption-side:bottom;">
         Table 1. Describes the variables that are needed to view a details about
         a key with the {{site.data.keyword.hscrypto}} key management API
       </caption>
     </table>
 
-    A successful `GET api/v2/keys/<key_ID>/metadata` response returns details
+    A successful `GET api/v2/keys/<key_ID_or_alias>/metadata` response returns details
     about your key. The following JSON object shows an example returned value
     for a standard key.
 

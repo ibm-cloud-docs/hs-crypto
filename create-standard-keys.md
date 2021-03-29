@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-09-21"
+  years: 2018, 2021
+lastupdated: "2021-03-19"
 
 keywords: standard key, encryption key, create standard key, create encryption key, add key, key material, key management, create secret, persist secret, create encryption key, encryption key api, api key
 
@@ -34,8 +34,8 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. To create a new key, select the **Manage keys** tab in the side menu.
-5. In the **Key management service keys** table, click **Add key**, and select **Create a key**.
+4. To create a new key, select the **Key management service keys** tab in the side menu.
+5. In the **Keys** table, click **Add key**, and select **Create a key**.
 
     Specify the key's details:
 
@@ -53,6 +53,23 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
         <td>
           <p>A unique, human-readable alias for easy identification of your key.</p>
           <p>To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Key alias</td>
+        <td>
+          <p>(Optional) One or more unique, human-readable aliases that you want to assign to your key for easy recognition.</p>
+          <p>Alias size can be between 2 - 90 characters. You can set up to five key alias for the key, with each separated by a comma.</p>
+          <p>Note: Each alias must be alphanumeric, case sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>Key ring</td>
+        <td>
+          <p>(Optional) Select a key ring from the dropdown list that contains the existing key rings. If you don't assign a key ring, the key will be added to the default key ring.</p>
+          <p>For more information about key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+          </p>
         </td>
       </tr>
       <caption style="caption-side:bottom;">Table 1. Describes the <strong>Create a key</strong> settings</caption>
@@ -74,29 +91,31 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 2. Call the [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto){: external} with the following cURL command.
 
-    ```cURL
+    ```sh
     curl -X POST \
-      https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
-      -H 'authorization: Bearer <IAM_token>' \
-      -H 'bluemix-instance: <instance_ID>' \
-      -H 'content-type: application/vnd.ibm.kms.key+json' \
-      -H 'correlation-id: <correlation_ID>' \
-      -H 'prefer: <return_preference>' \
+      "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys" \
+      -H "authorization: Bearer <IAM_token>" \
+      -H "bluemix-instance: <instance_ID>" \
+      -H "content-type: application/vnd.ibm.kms.key+json" \
+      -H "x-kms-key-ring: <key_ring_ID>" \
+      -H "correlation-id: <correlation_ID>" \
+      -H "prefer: <return_preference>" \
       -d '{
-     "metadata": {
-       "collectionType": "application/vnd.ibm.kms.key+json",
-       "collectionTotal": 1
-     },
-     "resources": [
-       {
-       "type": "application/vnd.ibm.kms.key+json",
-       "name": "<key_alias>",
-       "description": "<key_description>",
-       "expirationDate": "<YYYY-MM-DDTHH:MM:SS.SSZ>",
-       "extractable": <key_type>
-       }
-     ]
-    }'
+              "metadata": {
+                  "collectionType": "application/vnd.ibm.kms.key+json",
+                  "collectionTotal": 1
+              },
+              "resources": [
+                  {
+                      "type": "application/vnd.ibm.kms.key+json",
+                       "name": "<key_name>",
+                       "aliases": [alias_list],
+                       "description": "<key_description>",
+                       "expirationDate": "<YYYY-MM-DDTHH:MM:SS.SSZ>",
+                       "extractable": <key_type>
+                  }
+              ]
+          }'
     ```
     {: codeblock}
 
@@ -107,45 +126,74 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
         <th>Description</th>
       </tr>
       <tr>
-        <td><varname>region</varname></td>
+        <td>region</td>
         <td>The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
       </tr>
       <tr>
-        <td><varname>IAM_token</varname></td>
+        <td>IAM_token</td>
         <td>Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
       </tr>
       <tr>
-        <td><varname>instance_ID</varname></td>
+        <td>instance_ID</td>
         <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
       </tr>
       <tr>
-        <td><varname>correlation_ID</varname></td>
+        <td>key_ring_ID</td>
+        <td>
+          <p>
+            <strong>Optional.</strong> The unique identifier of the target key ring that you want to assign the key to. If unspecified, the header is automatically
+            set to `default` and the key will belong to the default key ring in the specified
+            {{site.data.keyword.hscrypto}} instance.
+          </p>
+          <p>
+            For more information, see
+            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+          </p>
+        </td>
+      </tr>
+      <tr>
+      <tr>
+        <td>correlation_ID</td>
         <td>The unique identifier that is used to track and correlate transactions.</td>
       </tr>
       <tr>
-        <td><varname>return_preference</varname></td>
+        <td>return_preference</td>
         <td><p>Optional: A header that alters server behavior for <code>POST</code> and <code>DELETE</code> operations.</p><p>When you set the <em>return_preference</em> variable to <code>return=minimal</code>, the service returns only the key metadata, such as the key name and ID value, in the response entity-body. When you set the variable to <code>return=representation</code>, the service returns both the key material and the key metadata.</p></td>
       </tr>
       <tr>
-        <td><varname>key_alias</varname></td>
+        <td>key_name</td>
         <td>
           <p>A unique, human-readable name for easy identification of your key.</p>
           <p>Important: To protect your privacy, do not store your personal data as metadata for your key.</p>
         </td>
       </tr>
       <tr>
-        <td><varname>key_description</varname></td>
+        <td>alias\_list</td>
+        <td>
+          <p><strong>Optional.</strong>
+            One or more unique, human-readable aliases assigned to your key.
+          </p>
+          <p>
+            <strong>Important:</strong> To protect your privacy, do not store your
+            personal data as metadata for your key.
+          </p>
+          <p>Each alias must be alphanumeric, case sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (\_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be between 2 - 90 characters (inclusive).
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>key_description</td>
         <td>
           <p>Optional: An extended description of your key.</p>
           <p>Important: To protect your privacy, do not store your personal data as metadata for your key.</p>
         </td>
       </tr>
       <tr>
-        <td><varname>YYYY-MM-DD</varname><br><varname>HH:MM:SS.SS</varname></td>
+        <td>YYYY-MM-DD<br>HH:MM:SS.SS</td>
         <td>Optional: The date and time that the key expires in the system, in RFC 3339 format. If the <code>expirationDate</code> attribute is omitted, the key does not expire. </td>
       </tr>
       <tr>
-        <td><varname>key_type</varname></td>
+        <td>key_type</td>
         <td>
           <p>A boolean value that determines whether the key material can leave the service.</p>
           <p>When you set the <code>extractable</code> attribute to <code>true</code>, the service creates a standard key that you can store in your apps or services.</p>

@@ -32,8 +32,8 @@ When you use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to creat
 
 | Benefit | Description |
 | --- | --- |
-| Keep Your Own Key (KYOK) | If you choose to export symmetric keys from your internal key management infrastructure, you can use {{site.data.keyword.hscrypto}} to securely bring them to the cloud. The [KYOK feature](/docs/hs-crypto?topic=hs-crypto-understand-concepts#kyok-concept) ensures that you own the root trust of your key hierarchy and that no one except you have access to your encryption keys. |
-| Secure import of root key material | When you export your keys to the cloud, you want assurance that the key material is protected while it's in flight. Mitigate against man-in-the-middle attacks by [using an import token](#using-import-tokens) to securely import root key material into your {{site.data.keyword.hscrypto}} service instance. |
+| Keep Your Own Key (KYOK) | If you choose to export symmetric keys from your internal key management infrastructure, you can use {{site.data.keyword.hscrypto}} to securely bring them to the cloud. The KYOK feature ensures that you own the root trust of your key hierarchy and that no one except you have access to your encryption keys. |
+| Secure import of root key material | When you export your keys to the cloud, you want assurance that the key material is protected while it's in flight. Mitigate against man-in-the-middle attacks by using an import token to securely import root key material into your {{site.data.keyword.hscrypto}} service instance. |
 {: caption="Table 1. Describes the benefits of importing key material" caption-side="bottom"}
 
 ## Planning ahead for importing key material
@@ -101,14 +101,13 @@ The following table lists the API methods that set up an import token for your s
 
 | Method | Description |
 | --- | --- |
-| `POST api/v2/import_token` | [Create an import token](/docs/hs-crypto?topic=hs-crypto-create-import-tokens) |
-| `GET api/v2/import_token` | [Retrieve an import token](/docs/hs-crypto?topic=hs-crypto-create-import-tokens) |
+| `POST api/v2/import_token` | Create an import token |
+| `GET api/v2/import_token` | Retrieve an import token |
 {: caption="Table 2. Describes the key management API methods" caption-side="bottom"}
-
-To find out more about programmatically managing your keys in {{site.data.keyword.hscrypto}}, check out the [{{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
 
 ## What's next
 {: #importing-keys-next}
 
 - To learn how to create an import token for your service instance, see [Creating an import token](/docs/hs-crypto?topic=hs-crypto-create-import-tokens).
 - To find out more about importing keys to the service, see [Importing root keys](/docs/hs-crypto?topic=hs-crypto-import-root-keys).
+- To find out more about programmatically managing your keys in {{site.data.keyword.hscrypto}}, check out the [{{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.

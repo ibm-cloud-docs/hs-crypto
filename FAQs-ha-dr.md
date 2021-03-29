@@ -49,6 +49,7 @@ You need to only back up your master key parts and signature keys for service in
 ## How can I restore the content from backups?
 {: #faq-store-backup}
 {: faq}
+{: support}
 
 For cross-region data restores, you need to open an IBM support ticket so that IBM can restore the service instance for you. For more information, see [Restoring your data from another region](/docs/hs-crypto?topic=hs-crypto-restore-data).
 
@@ -67,7 +68,6 @@ Backing up the keys manually is currently not supported.
 ## What happens when I delete a key?
 {: #faq-delete-a-key}
 {: faq}
-{: support}
 
 When you delete a key, the key is no longer recoverable and the cloud services that use the key can no longer decrypt data that is associated with the key. Your data remains in those services in its encrypted form. Before you delete a key, ensure that you no longer require access to any data that is associated with the key. This action currently cannot be reversed.
 

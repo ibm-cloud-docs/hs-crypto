@@ -31,7 +31,7 @@ When you set an automatic rotation policy for a root key, you shorten the lifeti
 You can create a rotation policy only for root keys that are generated in {{site.data.keyword.hscrypto}}. If you imported the root key initially, you must provide new base64 encoded key material to rotate the key. For more information, see [Rotating root keys on demand](/docs/hs-crypto?topic=hs-crypto-rotate-keys#rotate-keys).
 {: note}
 
-Want to learn more about your key rotation options in {{site.data.keyword.hscrypto}}? Check out [Comparing your key rotation options](/docs/hs-crypto?topic=hs-crypto-key-rotation#compare-key-rotation-options) for more information.
+Want to learn more about your key rotation options in {{site.data.keyword.hscrypto}}? Check out [Comparing your key rotation options](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#compare-key-rotation-options) for more information.
 {: tip}
 
 ## Managing rotation polices in the console
@@ -42,7 +42,7 @@ If you prefer to manage policies for your root keys by using a graphical interfa
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Manage keys** page, use the **Key management service keys** table to browse the keys in your service.
+4. On the **Key management service keys** page, use the **Keys** table to browse the keys in your service.
 5. Click the overflow (...) icon to open a list of options for a specific key.
 6. From the options menu, click **Edit policy** to manage the rotation policy for the key.
 7. From the list of rotation options, select a frequency of rotation in months.

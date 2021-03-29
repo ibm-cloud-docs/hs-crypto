@@ -228,7 +228,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
       <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to create the PKCS #11 configuration file</caption>
     </table>
 
-2. Move the configuration file into the same folder as the PKCS #11 library. Optionally, the PKCS #11 library can be placed in the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not already exist.
+2. Move the configuration file into the same directory as the application (for example, pkcs11-tool) that uses the PKCS #11 library. Optionally, the PKCS #11 configuration file can be placed in the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not already exist.
 
 ## Step 4: Use the PKCS #11 library to make PKCS #11 API calls
 {: #step4-use-pkcs-library}

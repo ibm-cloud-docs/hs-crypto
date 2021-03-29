@@ -25,8 +25,6 @@ subcollection: hs-crypto
 
 # Restoring your data from another region
 {: #restore-data}
-{: help}
-{: support}
 
 If a regional disaster that affects all available zones occurs, you're notified through the [IBM Cloud status](https://cloud.ibm.com/status?selected=status){: external} web page and an email. In this case, you need to open an IBM Support ticket. IBM can then provision a new service instance for you in another region by using the same instance ID, and restore all the key resources from the backup. And then, you need to load your [master key](#x2908413){: term} to the new service instance in the new region.
 {: shortdesc}
@@ -63,7 +61,7 @@ To restore a backup to an existing service instance, follow these steps:
 
   When the restore completes successfully, you will get an email notification, which includes the new region information that your service instance resides in. Alternatively, you can check the state by clicking **Support**. For more information about {{site.data.keyword.IBM_notm}} Support, see [Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter){: external}.
 
-4. After the restore is done, load your master key to the service instance in the new region. Depending on how you store your master key parts, you can follow the instructions in [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
+4. After the restore is done, load your master key to the service instance in the new region. Depending on how you store your master key parts, you can follow the instructions in [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
   Make sure to load the same master key to the service instance in the new region so that your key resources can still be accessed.
   {: important}

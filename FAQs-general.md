@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-11-24"
+  years: 2020, 2021
+lastupdated: "2021-01-07"
 
 keywords: general frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips
 
@@ -41,7 +41,7 @@ This topic can help you with general questions about {{site.data.keyword.cloud}}
 {: #faq-what-key-management}
 {: faq}
 
-{{site.data.keyword.hscrypto}} provides a single-tenant key management service that allows you to create, import, rotate, and manage keys. Once the encryption keys are deleted, you can be assured that your data that is protected by these keys is no longer retrievable. The service is built on FIPS 140-2 Level 4 certified HSM, which offers the highest level of protection in the cloud industry. {{site.data.keyword.hscrypto}} provides the same [key management API](https://{DomainName}/apidocs/hs-crypto) as [{{site.data.keyword.keymanagementservicefull_notm}}](https://cloud.ibm.com/catalog/services/key-protect){: external} for you to build your applications or leverage {{site.data.keyword.cloud_notm}} data and infrastructure services.
+{{site.data.keyword.hscrypto}} provides a single-tenant key management service that allows you to create, import, rotate, and manage keys. Once the encryption keys are deleted, you can be assured that your data that is protected by these keys is no longer retrievable. The service is built on FIPS 140-2 Level 4 certified HSM, which offers the highest level of protection in the cloud industry. {{site.data.keyword.hscrypto}} provides the same [key management API](https://{DomainName}/apidocs/hs-crypto) as {{site.data.keyword.keymanagementservicefull_notm}} for you to build your applications or leverage {{site.data.keyword.cloud_notm}} data and infrastructure services.
 
 ## What is Hardware Security Module?
 {: #faq-what-is-hsm}
@@ -164,6 +164,5 @@ Currently, {{site.data.keyword.hscrypto}} is available in Dallas, Sydney, and Fr
 ## I have workloads in a data center where {{site.data.keyword.hscrypto}} is not available. Can I still subscribe to this service?
 {: #faq-data-center}
 {: faq}
-{: support}
 
 Yes. {{site.data.keyword.hscrypto}} can be accessed remotely worldwide for key management and cloud HSM capabilities.

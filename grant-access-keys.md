@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-07-27"
+  years: 2018, 2021
+lastupdated: "2021-03-17"
 
 keywords: grant access, iam, iam access, assign access, access policy, key access
 
@@ -90,3 +90,35 @@ Use the retrieved key ID to create a access policy:
 8. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
 9. Click **Add**.
 10. Continue to add platform and service access roles as needed and click **Assign**.
+
+## Granting access to key rings in an instance
+{: #grant-access-key-ring-level}
+
+A key ring is a collection of keys located within your service instance, in which you can restrict access via IAM access policy. For information on key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+
+You can grant access to key rings within a {{site.data.keyword.hscrypto}} instance by using the
+{{site.data.keyword.cloud_notm}} console, IAM API, or IAM CLI.
+
+Review [roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to learn how {{site.data.keyword.cloud_notm}} IAM roles map to {{site.data.keyword.hscrypto}} actions.
+{: tip}
+
+### Granting access to key rings with the console
+{: #grant-access-key-ring-console}
+
+To assign access to a key ring with the console:
+
+1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
+2. Select a table row, and click the overflow icon (...) to open a list of options for that user.
+3. From the options menu, click **Assign access**.
+4. Click **Assign users additional access**.
+5. Click the **IAM services** button.
+6. From the list of services, select **{{site.data.keyword.hscrypto}}**.
+7. Select **Services based on attributes**.
+8. Select the **Instance ID** attribute and select the instance where the key ring resides.
+9. Select the **Key Ring ID** attribute and enter the ID associated with the key ring.
+8. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
+9. Click **Add**.
+10. Continue to add platform and service access roles as needed. When you finish all the access assignment, click **Assign**.
+
+You can also create an access policy via IAM [API](/apidocs/iam-policy-management#create-policy){: external} or [CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create){ :external}.
+{: note}

@@ -121,7 +121,7 @@ You can also retrieve your access token programmatically by using an [API key](/
 
       Specify the API key a unique name with the `<API_key_name>` parameter and replace `<service_ID_name>` with the unique alias that you assigned to your service ID in the previous step. Make sure to save your API key for later use by either using the `<API_key_file_name>` parameter or copying the API key value from the command response.
 
-4. [Assign the user or the service ID the appropriate access](/docs/account?topic=account-assign-access-resources#assign_new_access) to your {{site.data.keyword.hscrypto}} instance based on your access policy.
+4. [Assign the user or the service ID the appropriate access](/docs/account?topic=account-assign-access-resources) to your {{site.data.keyword.hscrypto}} instance based on your access policy.
 
   To learn how the IAM access roles map to specific {{site.data.keyword.hscrypto}} service actions, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).
   {: tip}

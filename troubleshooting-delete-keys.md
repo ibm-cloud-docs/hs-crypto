@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-07-17"
+  years: 2020, 2021
+lastupdated: "2021-02-01"
 
 keywords: troubleshoot, problems, known issues, can't delete keys
 
@@ -44,7 +44,9 @@ Conflict: Key could not be deleted. Status: 409, Correlation ID: 160cc463-71d1-4
 This key is actively protecting one or more cloud resources, such as a Cloud Object Storage bucket.
 {: tsCauses}
 
-For your protection, {{site.data.keyword.hscrypto}} prevents the deletion of a key that's actively encrypting data in the cloud.
+{{site.data.keyword.hscrypto}} blocks the deletion of any key that's actively protecting a cloud resource. Before you delete a key, [review the resources](/docs/hs-crypto?topic=hs-crypto-view-protected-resources) that are associated with the key.
 {: tsResolve}
 
-To delete the key, first delete the resources that are associated with the key, and then delete the key.
+You can [force deletion on a key](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-key-force) that's protecting a cloud resource. However, the action won't succeed if the key's associated resource is non-erasable due to a retention policy. You can verify whether a key is associated with a non-erasable resource by [checking the registration details](/docs/hs-crypto?topic=hs-crypto-view-protected-resources#view-protected-resources-api) for the key. Then, you must contact an account owner to remove the retention policy on each resource that is associated with the key before you can delete the key.
+
+If you don't need the resources that are associated with the key any more, you can also first delete the associated resources and then delete the key.

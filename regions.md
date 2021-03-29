@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2020-12-02"
+  years: 2018, 2021
+lastupdated: "2021-03-24"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -14,7 +14,9 @@ subcollection: hs-crypto
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
+{:important: .important}
 {:tip: .tip}
+{:note: .note}
 {:external: target="_blank" .external}
 
 # Regions and locations
@@ -37,6 +39,9 @@ You can create {{site.data.keyword.hscrypto}} resources in one of the supported 
 geographic area where your {{site.data.keyword.hscrypto}} requests are handled and processed. To learn more, see
 [Locations, tenancy, and availability](/docs/hs-crypto?topic=hs-crypto-ha-dr#availability).
 
+Currently, the `us-south` and `us-east` regions are enabled with recovery crypto units by default, which means, when a service instance is provisioned in either regions, you are enabled with the option to back up your master keys in the recovery crypto units located in both regions. For details, see [Introducing service instance initialization modes](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit).
+{: note}
+
 ## Connectivity options
 {: #connectivity-options}
 
@@ -49,7 +54,7 @@ geographic area where your {{site.data.keyword.hscrypto}} requests are handled a
     <dt>Private endpoints</dt>
         <dd>
         <p>For added benefits, you can also enable <a href="/docs/account?topic=account-vrf-service-endpoint" target="_blank" class="external"> virtual routing and forwarding (VRF) and service endpoints</a> for your infrastructure account. When you enable VRF for your account, you can connect to {{site.data.keyword.hscrypto}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network.</p>
-        <p>To learn more about VRF, see <a href="/docs/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud" target="_blank" class="external">Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}</a>. To learn how to connect to {{site.data.keyword.hscrypto}} by using a private endpoint, see <a href="/docs/hs-crypto?topic=hs-crypto-secure-connection">Connecting to {{site.data.keyword.hscrypto}} on the {{site.data.keyword.cloud_notm}} private network</a>.</p>
+        <p>To learn how to connect to {{site.data.keyword.hscrypto}} by using a private endpoint, see <a href="/docs/hs-crypto?topic=hs-crypto-secure-connection">Connecting to {{site.data.keyword.hscrypto}} on the {{site.data.keyword.cloud_notm}} private network</a>.</p>
         </dd>
 </dl>
 
@@ -82,6 +87,9 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 {: tab-title="Private"}
 {: tab-group="region-endpoint"}
 {: class="comparison-tab-table"}
-{: row-headers}
 
-For more information about authenticating with {{site.data.keyword.hscrypto}}, see [Setting up the key management API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api), [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api), and [Performing cryptographic operations with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api).
+For more information about authenticating with {{site.data.keyword.hscrypto}}, see the following topics:
+
+* [Setting up the key management API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api)
+* [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api)
+* [Performing cryptographic operations with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api).

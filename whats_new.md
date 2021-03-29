@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-12"
+lastupdated: "2021-03-24"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -34,6 +34,37 @@ The cryptography algorithm to generate signature keys is updated from Rivest–S
 
 ## March 2021
 {: #march-2021}
+
+### Added: Initializing the service instance using recovery crypto units
+{: #add-recovery-crypto-units}
+
+Besides using smart cards and the Hyper Protect Crypto Services Management Utilities and using key part files, you can now also initialize your service instance by using recover crypto units in the Dallas (`us-south`) and Washington DC (`us-east`) regions.
+
+When you provision a service instance in either of the Dallas or Washington DC region, two recovery units are automatically assigned without additional costs. A random master key value is automatically generated in a recovery crypto unit and copied to the other crypto units for the service instance. The master key value never appears in the clear outside of the HSMs.
+
+For more information about the differences between the service instance initialization approaches, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit).
+
+For detailed instructions, see [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit).
+
+### Added: Using {{site.data.keyword.mon_full_notm}} to measure {{site.data.keyword.hscrypto}} metrics
+{: #add-sysdig-metrics}
+
+By enabling metrics instance policy, you can now use {{site.data.keyword.mon_full_notm}} to measure how users and applications interact with {{site.data.keyword.hscrypto}}. For more information, see [Managing metrics](/docs/hs-crypto?topic=hs-crypto-manage-sysdig-metrics) and [Monitoring with Sysdig operational metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics).
+
+### Added: Synchronizing protected resources associated with root keys
+{: #add-sync-resources}
+
+When the state of a root key changes, the protected resources that are associated with the root key are notified of the key lifecycle event and are encouraged to respond accordingly. In the case where the resources do not respond to the key lifecycle notification, you can now manually initiate a renotification to those associated cloud services. For more information, see [Synchronizing associated resources](/docs/hs-crypto?topic=hs-crypto-sync-associated-resources).
+
+### Added: Grouping keys using key rings
+{: #add-key-ring}
+
+You can now group the keys in your {{site.data.keyword.hscrypto}} instance by creating a key ring. In this case, you can manage keys and control access at the key ring level. For how to use key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+
+### Added: Managing key aliases for a key
+{: #add-key-alias}
+
+Key aliases are unique human-readable names that can be used to identify a key. You can now create up to five aliases for a key for easy recognition. For how to use key aliases, see [Managing key aliases](/docs/hs-crypto?topic=hs-crypto-manage-key-alias).
 
 ### Added: Using Virtual Private Endpoints for VPC
 {: #add-vpe-for-vpc}
@@ -91,7 +122,7 @@ Terraform is an open source software that enables you to configure and automate 
 
 To achieve increased security, you can now limit the network access to your service instance to the private-only network. You can either [choose the allowed network when you provision the service instance](/docs/hs-crypto?topic=hs-crypto-provision) or [update the network access policy after you set up the instance](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies).
 
-Before you [update the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies), you need to initialize the service instance first. See [Initializing service instances with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) for instructions.
+Before you [update the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies), you need to initialize the service instance first. See [Initializing service instances with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) for instructions.
 {: important}
 
 ### Added: Support for accessing service instances through the Virtual Private Endpoint
@@ -209,7 +240,7 @@ Quorum authentication is the way to approve an operation by a set number of cryp
 
 For information on how to initialize a service instance using the TKE CLI and enable quorum authentication, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
-For information on how to initialize a service instance using the Management Utilities and enable quorum authentication, see [Setting up the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities) and [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
+For information on how to initialize a service instance using the Management Utilities and enable quorum authentication, see [Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities) and [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
 ## April 2020
 {: #april-2020}
@@ -221,7 +252,7 @@ For information on how to initialize a service instance using the Management Uti
 
 The Management Utilities are two applications that use smart cards to configure service instances. The Smart Card Utility Program sets up and manages the smart cards used. The Trusted Key Entry (TKE) application uses those smart cards to configure service instances. To use the Management Utilities, you need to order IBM-supported smart cards and smart card readers.
 
-For more information, see [Understanding the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-management-utilities) and [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
+For more information, see [Understanding the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-management-utilities) and [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
 ### Updated: {{site.data.keyword.cloud_notm}} service integration
 {: #added-service-integration-202004}

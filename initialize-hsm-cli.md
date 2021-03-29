@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-02-24"
+lastupdated: "2021-03-03"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -24,15 +24,15 @@ subcollection: hs-crypto
 {:video: .video}
 
 
-# Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in
+# Initializing service instances using key part files
 {: #initialize-hsm}
 
-Before you can use the {{site.data.keyword.hscrypto}} instance (service instance for short), you need to first initialize your service instance by loading the [master key](#x2908413){: term} to your service instance. You can choose to load the master key from smart cards with the {{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities or from your workstation with the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) command-line interface (CLI) plug-in. To load the master key with {{site.data.keyword.cloud_notm}} TKE CLI plug-in, follow these steps.
+Before you can use your {{site.data.keyword.hscrypto}} instance, you need to first initialize your service instance by loading the master key. This topic guides you through the steps to initialize your service instance by using key part files through {{site.data.keyword.cloud_notm}} TKE CLI plug-in.
 {: shortdesc}
 
-For an introduction to the options of service instance initialization and other fundamental concepts, see [Introduction to service instance initialization](/docs/hs-crypto?topic=hs-crypto-introduce-service) and {{site.data.keyword.hscrypto}} [components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
+For an introduction to the approaches of service instance initialization and the related fundamental concepts, see [Initializing service instances](/docs/hs-crypto?topic=hs-crypto-introduce-service) and [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
 
-The following diagram gives you an overview of steps you need to take to initialize the service instance. Click each step on the diagram for detailed instructions.
+The following diagram gives you an overview of steps you need to take to initialize the service instance using master key parts stored in files. Click each step on the diagram for detailed instructions.
 
 <figure>
   <img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="/image/hsm_initialization_flow.svg" width="750" alt="Click each step to get more details on the flow." />
@@ -41,12 +41,12 @@ The following diagram gives you an overview of steps you need to take to initial
 
 <map name="home_map1" id="home_map1">
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Install IBM Cloud CLI" title="Install IBM Cloud CLI" shape="rect" coords="126, 32, 226, 82" />
-  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites2" alt="Log in to IBM Cloud" title="Log in to IBM Cloud" shape="rect" coords="260, 32, 360, 82" />
-  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites3" alt="Install TKE CLI plug-in" title="Install TKE CLI plug-in" shape="rect" coords="394, 32, 494, 82" />
-  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites4" alt="Set up local directory for key files" title="Set up local directory for key files" shape="rect" coords="528, 32, 628, 82" />
+  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Log in to IBM Cloud" title="Log in to IBM Cloud" shape="rect" coords="260, 32, 360, 82" />
+  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Install TKE CLI plug-in" title="Install TKE CLI plug-in" shape="rect" coords="394, 32, 494, 82" />
+  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Set up local directory for key files" title="Set up local directory for key files" shape="rect" coords="528, 32, 628, 82" />
 
-  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units" alt="Display assigned crypto units" title="Display assigned crypto units" shape="rect" coords="126, 123, 226, 173" />
-  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#Identify_crypto_units2" alt="Add crypto units" title="Add crypto units" shape="rect" coords="260, 123, 360, 173" />
+  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#identify_crypto_units" alt="Display assigned crypto units" title="Display assigned crypto units" shape="rect" coords="126, 123, 226, 173" />
+  <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#identify_crypto_units2" alt="Add crypto units" title="Add crypto units" shape="rect" coords="260, 123, 360, 173" />
 
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step1-create-signature-keys" alt="Create one or more signature keys" title="Create signature keys" shape="rect" coords="126, 214, 226, 264" />
   <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Manage crypto unit administrators" title="Manage crypto unit administrators" shape="rect" coords="260, 214, 360, 264" />
@@ -64,45 +64,11 @@ You can also watch the following video to learn how to initialize {{site.data.ke
 ![Initialize Hyper Protect Crypto Services with IBM Cloud TKE CLI](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=0_z5c589ou
 ){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
 
-It might take 20 - 30 minutes for you to complete this task.
-
-## Before you begin
+Before you start the instance initialization, make sure that you complete [the prerequisite steps](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite). It might take 20 - 30 minutes for you to complete this task.
 {: #initialize-crypto-prerequisites}
 
-1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started#step1-install-idt){:external}.
-
-2. [Log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cli-getting-started#step3-configure-idt-env){: external}. If you have multiple accounts, select the account that your service instance is created with. Make sure that you're logged in to the correct region and resource group where the service instance locates with the following command:
-{: #initialize-crypto-prerequisites2}
-
-  ```
-  ibmcloud target -r <region> -g <resource_group>
-  ```
-  {: pre}
-
-  To find out the regions that {{site.data.keyword.hscrypto}} supports, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
-
-3. Install the latest TKE CLI plug-in with the following command:
-{: #initialize-crypto-prerequisites3}
-
-  ```
-  ibmcloud plugin install tke
-  ```
-  {: pre}
-
-4. Set the environment variable CLOUDTKEFILES on your workstation. Specify a directory where you want master key part files and [signature key](#x8250375){: term} part files to be created and saved. Create the directory if it doesn't exist.
-{: #initialize-crypto-prerequisites4}
-
-  * On the Linux&reg; operating system or MacOS, add the following line to the `.bash_profile` file:
-     ```
-     export CLOUDTKEFILES=<path>
-     ```
-     {: pre}
-     For example, you can specify the *path* to `/Users/tke-files`.
-
-  * On Windows&reg;, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a `CLOUDTKEFILES` environment variable, set the value to the path for storing reference files (For example, `C:\users\tke-files`), and restart your computer.
-
 ## Adding or removing crypto units that are assigned to service instances
-{: #Identify_crypto_units}
+{: #identify_crypto_units}
 
 [Crypto units](#x9860404){: term} that are assigned to an {{site.data.keyword.cloud_notm}} user account are in groups that are known as *service instances*. A service instance can have up to six crypto units. All crypto units in a service instance need to be configured the same. If one part of the {{site.data.keyword.cloud_notm}} can't be accessed, the crypto units in a service instance can be used interchangeably for load balancing or for availability.
 
@@ -133,7 +99,7 @@ The master key registers in all crypto units in a single service instance must b
   {: screen}
 
 * To add extra crypto units to the selected crypto unit list, use the following command:
-  {: #Identify_crypto_units2}
+  {: #identify_crypto_units2}
   ```
   ibmcloud tke cryptounit-add
   ```
@@ -227,7 +193,7 @@ For security considerations, the signature key owners can be different people fr
 
   You can repeat the command to add extra crypto unit administrators if needed.
 
-  The number of administrators that you add to a crypto unit needs to be equal to or greater than the signature threshold value and the revocation signature threshold value that you intend to set in [Step 3](#step3-exit-imprint-mode). For example, if you are about to set the signature threshold or revocation signature threshold value to eight, you need to add at least eight administrators to the crypto unit.
+  The number of administrators that you add to a crypto unit needs to be equal to or greater than the signature threshold value and the revocation signature threshold value that you intend to set in [Step 3](#step3-exit-imprint-mode). For example, if you are about to set the signature threshold or revocation signature threshold value to two, you need to add at least two administrators to the crypto unit. You can add up to eight administrators to a crypto unit.
   {: tip}
 
   Do not remove the administrator signature key files from your workstation. Otherwise, you are not able to perform TKE actions that need to be signed, such as zeroizing crypto units and rotating master keys.
@@ -345,7 +311,7 @@ When prompted, enter the password for the signature key file to be used. For thi
   ibmcloud tke help
   ```
   {: pre}
-- Go to the **Manage keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+- Go to the **Key management service keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
 - To learn more about performing cryptographic operations with the cloud HSM, see [Introducing cloud HSM](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm).
 - Use {{site.data.keyword.hscrypto}} as the root key provider for other {{site.data.keyword.cloud_notm}} services. For more information about integrating {{site.data.keyword.hscrypto}}, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
 - For information on how to rotate the master key, see [Rotating master keys with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli).

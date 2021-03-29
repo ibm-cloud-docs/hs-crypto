@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-11-17"
+  years: 2018, 2021
+lastupdated: "2021-03-17"
 
 keywords: rewrap key, reencrypt data encryption key, rewrap api, key id
 
@@ -26,7 +26,7 @@ subcollection: hs-crypto
 Reencrypt your data encryption keys by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
-When you [rotate a root key in {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-key-rotation), new cryptographic key material becomes available for protecting the data encryption keys (DEKs) that are associated with the root key. With the rewrap API, you can reencrypt or rewrap your DEKS without exposing the keys in their plaintext form.
+When you [rotate a root key in {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro), new cryptographic key material becomes available for protecting the data encryption keys (DEKs) that are associated with the root key. With the rewrap API, you can reencrypt or rewrap your DEKS without exposing the keys in their plaintext form.
 
 To learn how envelope encryption helps you control the security of at-rest data in the cloud, see [Protecting data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
 
@@ -52,16 +52,17 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 3. Copy the `ciphertext` value that was returned during the latest wrap request.
 4. Rewrap the key with the latest root key material by running the following cURL command.
 
-    ```cURL
+    ```sh
     curl -X POST \
       'https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/rewrap' \
       -H 'accept: application/vnd.ibm.kms.key_action+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
       -H 'content-type: application/vnd.ibm.kms.key_action+json' \
+      -H "x-kms-key-ring: <key_ring_ID>" \
       -H 'correlation-id: <correlation_ID>' \
       -d '{
-      "ciphertext": "<encrypted_data_key>",
+      "ciphertext": "<encrypted_data_key>"
     }'
     ```
     {: codeblock}
@@ -87,6 +88,23 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
       <tr>
         <td><varname>instance_ID</varname></td>
         <td><strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+      </tr>
+      <tr>
+        <td>
+          <varname>key_ring_ID</varname>
+        </td>
+        <td>
+          <p>
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore recommended to specify the key ring ID for a more optimized request.
+          </p>
+          <p>
+            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+          </p>
+          <p>
+            For more information, see
+            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+          </p>
+        </td>
       </tr>
       <tr>
         <td><varname>correlation_ID</varname></td>

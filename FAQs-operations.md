@@ -34,7 +34,7 @@ To use {{site.data.keyword.hscrypto}}, you need to have a Pay-As-You-Go or Subsc
 
 If you don't have an {{site.data.keyword.cloud_notm}} account, create a Lite account first by going to [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/login){: external} and clicking **Create an {{site.data.keyword.Bluemix_notm}} account**. And then [upgrade it to a Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-upgrading-account). You can also [apply your promo code](/docs/billing-usage?topic=billing-usage-applying-promo-codes) if you have one. For more information about {{site.data.keyword.cloud_notm}} accounts, see [FAQs for accounts](/docs/account?topic=account-accountfaqs).
 
-The service can be provisioned quickly by following instructions in [Provisioning service instances](/docs/hs-crypto?topic=hs-crypto-provision). However, in order to perform key management and cryptographic operations, you need to initialize service instances first by using [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or the [Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) by using smart cards.
+The service can be provisioned quickly by following instructions in [Provisioning service instances](/docs/hs-crypto?topic=hs-crypto-provision). However, in order to perform key management and cryptographic operations, you need to [initialize service instances](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode) first by using {{site.data.keyword.cloud_notm}} TKE CLI plug-in or the Management Utilities.
 
 ## How to initialize {{site.data.keyword.hscrypto}} service instances?
 {: #faq-how-to-initialize}
@@ -43,16 +43,30 @@ The service can be provisioned quickly by following instructions in [Provisionin
 
 To initialize the service instance, you need to create administrator signature keys, exit the imprint mode, and load the master key to the instance. To meet various security requirements of your enterprises, IBM offers you the following options to load the master key: 
 
-- Using the [IBM {{site.data.keyword.hscrypto}} Management Utilities](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-management-utilities) for the highest level of security. This solution uses smart cards to store signature keys and master key parts. Signature keys and master key parts never appear in the clear outside the smart card.
+- [Using the IBM {{site.data.keyword.hscrypto}} Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) for the highest level of security. This solution uses smart cards to store signature keys and master key parts. Signature keys and master key parts never appear in the clear outside the smart card.
 
-- Using the [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-tke-plugin) for a solution that does not require the procurement of smart card readers and smart cards. This solution uses workstation files encrypted with a key that is derived from a file password to store signature keys and master key parts. When the keys are used, file contents are decrypted and appear temporarily in the clear in workstation memory.
+- Using the {{site.data.keyword.cloud_notm}} TKE CLI plug-in for a solution that does not require the procurement of smart card readers and smart cards. This solution supports two approaches to initializing service instances: [using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit) and [using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm). When you use recovery crypto units, the master key is automatically generated within crypto units and you don't need to create multiple master key parts. When you use key part files, file contents are decrypted and appear temporarily in the clear in workstation memory.
+
+For more information, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
 
 ## Are there any recommendations on how to set up smart cards?
 {: #faq-smart-card-setup}
 {: faq}
 {: support}
 
-It is recommended to procure eight or 10 smart cards and two smart card readers. The smart cards can be set up to contain a primary set and a backup set. For details of the recommendations, see [Smart card setup recommendations](/docs/hs-crypto?topic=hs-crypto-introduce-service#smart-card-considerations). To find out details on how to procure and set up smart cards and other Management Utilities components, see [Setting up the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities).
+It is suggested that each master key part is created on a separate EP11 smart card and be assigned to a different person. Backup copies of all smart cards need to be created and stored in a safe place. It is suggested that you order eight or 10 smart cards and initialize them this way:
+
+- Create a certificate authority smart card and a backup certificate authority smart card.
+- Create two EP11 smart cards to hold an administrator signature key. Generate the administrator signature key on one EP11 smart card and copy it to the other.
+- Create four or six EP11 smart cards to hold master key parts. Generate an EP11 master key part on two or three of the smart cards, depending on whether you want to use two or three key parts when you load your master key. Copy each key part value to a backup EP11 smart card.
+
+A backup certificate authority smart card can be created by using the Smart Card Utility Program. Select **CA Smart Card** > **Backup CA smart card** from the menu, and follow the prompts.
+
+The contents of an EP11 smart card can be copied to another EP11 smart card that was created in the same smart card zone by using the Trusted Key Entry application. On the **Smart card** tab, click **Copy smart card**, and follow the prompts.
+
+For greater security, you can generate administrator signature keys on additional EP11 smart cards and set the signature thresholds in your crypto units to a value greater than one. You can install up to eight administrators in your crypto units and specify that up to eight signatures are required for some administrative commands.
+
+To find out details on how to procure and set up smart cards and other Management Utilities components, see [Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities).
 
 ## How can I procure smart cards and smart card readers?
 {: #faq-procure-smart-card}
@@ -100,7 +114,6 @@ Yes. {{site.data.keyword.hscrypto}} can be integrated with many {{site.data.keyw
 ## Can I use language characters as part of the key name?
 {: #faq-key-name-rules}
 {: faq}
-{: support}
 
 Language characters, such as Chinese characters, cannot be used as part of the key name.
 -->

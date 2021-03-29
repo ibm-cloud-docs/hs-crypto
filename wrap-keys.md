@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-11-17"
+  years: 2018, 2021
+lastupdated: "2021-03-17"
 
 keywords: root key, wrap key, encrypt data encryption key, protect data encryption key, key wrap api
 
@@ -56,13 +56,14 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 
 4. Run the following cURL command to protect the key with a wrap operation.
 
-    ```cURL
+    ```sh
     curl -X POST \
       'https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/wrap' \
       -H 'accept: application/vnd.ibm.kms.key_action+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
       -H 'content-type: application/vnd.ibm.kms.key_action+json' \
+      -H 'x-kms-key-ring: <key_ring_ID>' \
       -H 'correlation-id: <correlation_ID>' \
       -d '{
       "plaintext": "<data_key>"
@@ -79,8 +80,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
       </tr>
       <tr>
         <td><varname>region</varname></td>
-        <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}}
- service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
+        <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
       </tr>
       <tr>
         <td><varname>key_ID</varname></td>
@@ -92,8 +92,24 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
       </tr>
       <tr>
         <td><varname>instance_ID</varname></td>
-        <td><strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}}
- service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+        <td><strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+      </tr>
+      <tr>
+        <td>
+          <varname>key_ring_ID</varname>
+        </td>
+        <td>
+          <p>
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore recommended to specify the key ring ID for a more optimized request.
+          </p>
+          <p>
+            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+          </p>
+          <p>
+            For more information, see
+            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+          </p>
+        </td>
       </tr>
       <tr>
         <td><varname>correlation_ID</varname></td>
@@ -117,8 +133,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
           you will need to decode them in order to decrypt the keys.
         </p></td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to wrap a specified key in {{site.data.keyword.hscrypto}}
-.</caption>
+      <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to wrap a specified key in {{site.data.keyword.hscrypto}}.</caption>
     </table>
 
     Your wrapped data encryption key, containing the base64 encoded key

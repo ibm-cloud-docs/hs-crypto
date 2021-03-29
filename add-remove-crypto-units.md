@@ -75,10 +75,10 @@ Before you can use the new crypto units, complete the following two steps to ini
 ### Step 2: Initialize the new crypto units
 {: #step2-initialize-new-crypto-units}
 
-Depending on how you store your master key parts, you might initialize the new crypto units with the TKE CLI plug-in or the Management Utilities. Make sure to configure the new crypto units the same as the existing crypto units by referring to the following instructions:
+Depending on how you store your master key parts, you might initialize the new crypto units with the TKE CLI plug-in, or smart cards together with the Management Utilities. Make sure to configure the new crypto units the same as the existing crypto units by referring to the following instructions:
 
-- If you load the master key from your workstation, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
-- If you load the master key from smart cards, see [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
+- If you load the master key from your workstation, see [Initializing service instances using the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+- If you load the master key from smart cards, see [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
 Additional monthly costs apply for each new crypto unit. You can check the detailed charges on the [billing and usage](https://cloud.ibm.com/billing/){: external} page under your account.
 {: important}

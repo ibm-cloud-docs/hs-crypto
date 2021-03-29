@@ -81,7 +81,7 @@ complete the following steps to enable the key create and import access policy:
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. In the UI of the selected service instance, select the **Manage instance policies** tab in the side menu.
+4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
 5. In the **Create and import key access** section, check or clear the corresponding boxes to update the keyCreateImportAccess settings, and then click **Save policy**.
 
   * `Allow creation of root keys`: Check the box to allow root keys to be created in your {{site.data.keyword.hscrypto}} instance.

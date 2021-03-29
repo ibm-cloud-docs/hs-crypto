@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-11-04"
+  years: 2020, 2021
+lastupdated: "2021-03-17"
 
 keywords: instance settings, service settings, dual authorization
 
@@ -66,7 +66,7 @@ After creating a service instance, complete the following steps to create a dual
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. In the UI of the selected service instance, select the **Manage instance policies** tab in the side menu.
+4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
 5. In the **Dual authorization deletion** section, check the box for `Require two users to approve key deletions`, and click **Save policy**.
 
 ## Enabling dual authorization for your service instance with the API
@@ -93,12 +93,13 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/instance/policies?pol
 2. Enable a dual authorization policy for your service instance by running the
 following cURL command.
 
-    ```cURL
+    ```sh
     curl -X PUT \
       'https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/instance/policies?policy=dualAuthDelete' \
       -H 'accept: application/vnd.ibm.kms.policy+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
+      -H 'x-kms-key-ring: <key_ring_ID>' \
       -H 'content-type: application/vnd.ibm.kms.policy+json' \
       -d '{
         "metadata": {
@@ -178,7 +179,23 @@ following cURL command.
           </p>
         </td>
       </tr>
-
+      <tr>
+        <td>
+          <varname>key_ring_ID</varname>
+        </td>
+        <td>
+          <p>
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore recommended to specify the key ring ID for a more optimized request.
+          </p>
+          <p>
+            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+          </p>
+          <p>
+            For more information, see
+            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+          </p>
+        </td>
+      </tr>
       <caption style="caption-side:bottom;">
         Table 1. Describes the variables that are needed to enable dual
         authorization at the instance level.
@@ -219,7 +236,7 @@ After creating a service instance, complete the following steps to create a dual
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. In the UI of the selected service instance, select the **Manage instance policies** tab in the side menu.
+4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
 5. In the **Dual authorization deletion** section, clear the box for `Require two users to approve key deletions`, and click **Save policy**.
 
 ## Disabling dual authorization for your service instance with the key management API
@@ -252,6 +269,7 @@ running the following cURL command.
       -H 'accept: application/vnd.ibm.kms.policy+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
+      -H 'x-kms-key-ring: <key_ring_ID>' \
       -H 'content-type: application/vnd.ibm.kms.policy+json' \
       -d '{
         "metadata": {
@@ -331,7 +349,23 @@ running the following cURL command.
           </p>
         </td>
       </tr>
-
+      <tr>
+        <td>
+          <varname>key_ring_ID</varname>
+        </td>
+        <td>
+          <p>
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore recommended to specify the key ring ID for a more optimized request.
+          </p>
+          <p>
+            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+          </p>
+          <p>
+            For more information, see
+            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+          </p>
+        </td>
+      </tr>
       <caption style="caption-side:bottom;">
         Table 1. Describes the variables that are needed to enable dual
         authorization at the instance level.

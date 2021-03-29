@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-03-01"
+lastupdated: "2021-03-11"
 
 keywords: pkcs11 keystore, ep11 keystore, create pkcs11 keystore, generate pkcs11 keystore, view ep11 keystore, delete ep11 keystore, view pkcs11 keystore
 
@@ -20,6 +20,8 @@ subcollection: hs-crypto
 {:tip: .tip}
 {:external: target="_blank" .external}
 {:term: .term}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 
 # Managing EP11 keystores with the {{site.data.keyword.cloud_notm}} console
 {: #manage-ep11-keystores-ui}
@@ -41,6 +43,12 @@ Before you can manage EP11 keystores with the console, complete the following st
 
 ## Viewing EP11 keystores
 {: #view-ep11-keystore-ui}
+
+For default service access roles that support viewing EP11 keystores, see [service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles). If you are to create custom roles, make sure to assign the following action to the custom role:
+
+* `hs-crypto.keystore.listkeystoresbyids`
+
+For instructions on creating custom roles, see [Creating custom roles](/docs/account?topic=account-custom-roles).
 
 To view a list of created EP11 keystores, on the {{site.data.keyword.hscrypto}} dashboard, select the **Enterprise PKCS #11 keystores** tab in the side menu.
 
@@ -76,6 +84,15 @@ An EP11 keystore table is displayed with the following details.
 
 ## Creating EP11 keystores
 {: #create-ep11-keystore-ui}
+{: help}
+{: support}
+
+For default service access roles that support creating EP11 keystores, see [service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles). If you are to create custom roles, make sure to assign the following actions to the custom role:
+
+* `hs-crypto.keystore.listkeystoresbyids`
+* `hs-crypto.keystore.createkeystore`
+
+For instructions on creating custom roles, see [Creating custom roles](/docs/account?topic=account-custom-roles).
 
 Complete the following steps to create an EP11 keystore:
 
@@ -91,6 +108,13 @@ Complete the following steps to create an EP11 keystore:
 
 ## Deleting EP11 keystores
 {: #delete-ep11-keystore-ui}
+
+For default service access roles that support deleting EP11 keystores, see [service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles). If you are to create custom roles, make sure to assign the following actions to the custom role:
+
+* `hs-crypto.keystore.listkeystoresbyids`
+* `hs-crypto.keystore.deletekeystore`
+
+For instructions on creating custom roles, see [Creating custom roles](/docs/account?topic=account-custom-roles).
 
 If you want to delete an EP11 keystore, complete the following steps:
 

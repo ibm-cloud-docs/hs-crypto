@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-08-26"
+  years: 2018, 2021
+lastupdated: "2021-03-18"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -85,7 +85,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | TKE set context: `ibmcloud tke-cryptounit-add`, `ibmcloud tke-cryptounit-rm` | | | | ![Check mark icon](../icons/checkmark-icon.svg) | |
 | TKE admin add or remove: `ibmcloud tke cryptounit-admin-add`, `ibmcloud tke cryptounit-admin-rm`| | | | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | TKE Set Admin Quorum Threshold: `ibmcloud tke -cryptounit-thrhld-set`|  |  |  | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
-| TKE Master Key operations (load, rotate, clear, zeroize): `ibmcloud tke cryptounit-mk-*` |  |  |  | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| TKE Master Key operations (load, rotate, clear, zeroize, recover): `ibmcloud tke cryptounit-mk-*`, `ibmcloud tke auto-init`, `ibmcloud tke auto-mk-rotate`, `ibmcloud tke auto-recover` |  |  |  | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 {: #table-3}
 {: caption="Table 3. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} TKE commands" caption-side="bottom"}
 {: tab-title="Trusted Key Entry commands"}
@@ -98,6 +98,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Import a key | | | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Retrieve a key | | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Retrieve key metadata | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Retrieve key total | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | List keys | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Wrap a key | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Unwrap a key | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
@@ -109,6 +110,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Cancel deletion for a key | | | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Delete a key | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Restore a key | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Patch a key | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Set key policies | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
 | List key policies | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Set instance policies | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
@@ -121,6 +123,11 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Update a registration[^services-2] | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Replace a registration[^services-3] | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
 | Delete a registration[^services-4] | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Create a key ring | | | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| List key rings | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Delete a key ring | | | | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Create a key alias| | | ![Check mark icon](../icons/checkmark-icon.svg) | ![Check mark icon](../icons/checkmark-icon.svg) |
+| Delete a key alias| | | | ![Check mark icon](../icons/checkmark-icon.svg) |
 {: #table-4}
 {: caption="Table 4. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} key resources" caption-side="bottom"}
 {: tab-title="Key management"}

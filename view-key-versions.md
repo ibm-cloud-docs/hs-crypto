@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-06-30"
+  years: 2018, 2021
+lastupdated: "2021-03-17"
 
 keywords: key versions, get key versions, list key versions
 
@@ -35,7 +35,7 @@ rotation history of a root key by viewing its key version history.
 
 Key versions are available only for root keys. To learn more about how key
 rotation works in {{site.data.keyword.hscrypto}}, check out
-[Comparing your key rotation options](/docs/hs-crypto?topic=hs-crypto-key-rotation#compare-key-rotation-options).
+[Comparing your key rotation options](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#compare-key-rotation-options).
 {: note}
 
 ## Viewing root key versions with the key management API
@@ -61,11 +61,12 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/{id}/versions
 3. Get a list of versions that are associated with the root key by running the
 following cURL command.
 
-    ```cURL
+    ```sh
     curl -X GET \
       'https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/versions' \
       -H 'accept: application/vnd.ibm.kms.key.version+json' \
       -H 'authorization: Bearer <IAM_token>' \
+      -H 'x-kms-key-ring: <key_ring_ID>' \
       -H 'bluemix-instance: <instance_ID>'
     ```
     {: codeblock}
@@ -123,7 +124,23 @@ following cURL command.
           </p>
         </td>
       </tr>
-
+      <tr>
+        <td>
+          <varname>key_ring_ID</varname>
+        </td>
+        <td>
+          <p>
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore recommended to specify the key ring ID for a more optimized request.
+          </p>
+          <p>
+            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+          </p>
+          <p>
+            For more information, see
+            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+          </p>
+        </td>
+      </tr>
       <tr>
         <td>
           <varname>instance_ID</varname>

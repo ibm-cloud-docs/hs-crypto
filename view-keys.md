@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-07-22"
+  years: 2018, 2021
+lastupdated: "2021-03-17"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -41,7 +41,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Manage keys** page, browse the general characteristics of your keys in the **Key management service keys** table:
+4. On the **Key management service keys** page, browse the general characteristics of your keys in the **Keys** table:
 
     <table>
       <tr>
@@ -49,12 +49,20 @@ If you prefer to inspect the keys in your service by using a graphical interface
         <th>Description</th>
       </tr>
       <tr>
-        <td>Name</td>
-        <td>The unique, human-readable alias that was assigned to your key.</td>
+        <td>Key name</td>
+        <td>The unique, human-readable name that was assigned to your key.</td>
       </tr>
       <tr>
-        <td>ID</td>
+        <td>Key ID</td>
         <td>A unique key ID that was assigned to your key by the {{site.data.keyword.hscrypto}} service. You can use the ID value to make calls to the service with the [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto).</td>
+      </tr>
+      <tr>
+        <td>Key alias</td>
+        <td>The human-readable aliases that you specify for easy recognition when you create the key.</td>
+      </tr>
+      <tr>
+        <td>Ker ring ID</td>
+        <td>The key ring that the key belongs to.</td>
       </tr>
       <tr>
         <td>State</td>
@@ -95,7 +103,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
       <caption style="caption-side:bottom;">Table 1. Describes the <strong>Keys</strong> table</caption>
     </table>
 
-    Not all key characteristics are displayed by default. To customize how the **Key management service keys** table is to be presented, click the **Settings** icon and check the columns to be displayed.
+    Not all key characteristics are displayed by default. To customize how the **Keys** table is to be presented, click the **Settings** icon and check the columns to be displayed.
     {: tip}
 
     Not seeing the full list of keys that are stored in your service instance?
@@ -104,7 +112,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
     about roles, see
     [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).
 
-    You can also search for a specific key by using the search bar in the **Key management service keys** table.
+    You can also search for a specific key by using the search bar in the **Keys** table.
     {: tip}
 
 ## Viewing root keys or standard keys with the key management API
@@ -126,12 +134,13 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 2. View general characteristics about your keys by running the following cURL command.
 
-    ```cURL
+    ```sh
     curl -X GET \
-    https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
+    "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys" \
     -H 'accept: application/vnd.ibm.collection+json' \
     -H 'authorization: Bearer <IAM_token>' \
     -H 'bluemix-instance: <instance_ID>' \
+    -H 'x-kms-key-ring: <key_ring_ID>' \
     -H 'correlation-id: <correlation_ID>' \
     ```
     {: codeblock}
@@ -153,6 +162,23 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
       <tr>
         <td><varname>instance_ID</varname></td>
         <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+      </tr>
+      <tr>
+        <td>
+          <varname>key_ring_ID</varname>
+        </td>
+        <td>
+          <p>
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore recommended to specify the key ring ID for a more optimized request.
+          </p>
+          <p>
+            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+          </p>
+          <p>
+            For more information, see
+            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+          </p>
+        </td>
       </tr>
       <tr>
         <td><varname>correlation_ID</varname></td>

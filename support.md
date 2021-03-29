@@ -27,7 +27,6 @@ subcollection: hs-crypto
 # Getting help and support
 {: #getting-help}
 {: troubleshoot}
-{: support}
 
 If you have problems or questions when you're using {{site.data.keyword.hscrypto}}, you can check {{site.data.keyword.cloud}} status, get help by searching for information or by asking questions through Stack Overflow, or open a support ticket on the IBM Support Center.
 {:shortdesc}

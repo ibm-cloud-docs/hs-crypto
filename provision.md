@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-12-08"
+  years: 2018, 2021
+lastupdated: "2021-02-26"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -46,6 +46,8 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
 5. Fill in the form with the details that are required.
 
   1. Select a [region](/docs/hs-crypto?topic=hs-crypto-regions) that you want to create your {{site.data.keyword.hscrypto}} resources in.
+
+    Currently, the `us-south` and `us-east` regions are enabled with recovery crypto units by default, which means, when a service instance is provisioned in either regions, you are enabled with the option to back up your master keys in the recovery crypto units located in both regions. For details, see [Introducing service instance initialization modes](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit).
   2. Under **Service name**, enter a name for your service instance.
   3. Under **Select a resource group**, select the resource group where you want to organize and manage your service intance. You can select the initial resource group that is named `Default` or other groups that you create. For more information, see [Creating and managing resource groups](/docs/account?topic=account-rgs).
   4. **Optional**: In the **Tags** field, add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/account?topic=account-tag).
@@ -53,6 +55,12 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
 
     In a production environment, select at least two crypto units to enable high availability. These crypto units are distributed among different supported availability zones in the selected region.
     {: important}
+
+  <!--
+  6. Under **Backup region**, select the region where you want to back up your instance master key.
+
+    If you [initialize your service instance using the recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode), the master key is automatically backed up in the backup region that you specify. If the region where your service instance locates fails, the cross-region backup is to be used for the master key recovery. For more information, see [Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit).
+  -->
 
   6. Under **Allowed network**, choose the network access to your service instance:
 
@@ -129,7 +137,8 @@ To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.
       </tr>
       <tr>
         <td>*region_name*</td>
-        <td>Mandatory. The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions).</td>
+        <td><p>Mandatory. The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions).</p>
+        <p>Currently, the `us-south` and `us-east` regions are enabled with recovery crypto units by default, which means, when a service instance is provisioned in either regions, you are enabled with the option to back up your master keys in the recovery crypto units located in both regions. For details, see [Introducing service instance initialization modes](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit).</p></td>
       </tr>
       <tr>
         <td>*number_of_crypto_units*</td>

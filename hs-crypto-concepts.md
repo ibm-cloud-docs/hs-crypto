@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-11-04"
+  years: 2018, 2021
+lastupdated: "2021-03-04"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -70,22 +70,32 @@ This section covers concepts that are related to {{site.data.keyword.hscrypto}} 
 ### Hardware security module
 {: #hsm-concept}
 
-Hardware security module (HSM) is a physical device that safeguards and manages digital keys for strong authentication and provides crypto-processing. HSMs of {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} are FIPS 140-2 Level 4 certified, which is the highest level of security for cryptographic hardware. At this security level, the physical security mechanisms provide a complete envelope of protection around the cryptographic module with the intent of detecting and responding to all unauthorized attempts at physical access.
+A hardware security module (HSM) is a physical device that safeguards and manages digital keys for strong authentication and provides crypto-processing. HSMs of {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} are FIPS 140-2 Level 4 certified, which is the highest level of security for cryptographic hardware. At this security level, the physical security mechanisms provide a complete envelope of protection around the cryptographic module with the intent of detecting and responding to all unauthorized attempts at physical access.
 
 ### Crypto units
 {: #crypto-unit-concept}
 
-A crypto unit is a single unit that represents an HSM and the corresponding software stack that is dedicated to the HSM for cryptography. Each crypto unit can manage up to 5000 digital keys. If you are setting up a production environment, it is suggested to assign at least two crypto units per service instance for high availability. The two crypto units are located in different [availability zones](https://www.ibm.com/cloud/data-centers/){: external} within the region that you select when you create the service instance. If one part of availability zones cannot be accessed, the crypto units in a service instance can be used interchangeably. All crypto units in a service instance need to be configured the same.
+A crypto unit is a single unit that represents an HSM and the corresponding software stack that is dedicated to the HSM for cryptography. In {{site.data.keyword.hscrypto}}, the following two types of crypto unit are available:
+
+- Operational crypto unit
+
+  When you create a {{site.data.keyword.hscrypto}} instance, the number of crypto units that you specify is the number of operational crypto units. For high availability and disaster recovery, you should set up at least two operational crypto units that are located in different [availability zones](https://www.ibm.com/cloud/data-centers/){: external} of the same region where your service instance resides. Operatioanl crypto units are used to manage encryption keys and perform cryptographic operations. Each operational crypto unit can manage up to 5000 digital keys.
+
+- Recovery crypto unit
+
+  If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`), recovery crypto units are automatically assigned to your service instance in pair with the operational crypto units without additional costs. Each operational crypto unit has a corresponding recovery crypto unit. A recovery crypto unit is used to generate the random master key which is then securely exported to operational crypto units and other recovery crypto units to [initialize the service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit).
+
+  Recovery crypto units can also be used as backup crypto units that save a copy of the master key value used by the operational crypto units. If the master key is lost or destroyed, you can [recover the master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit) using signed TKE administrative commands.
 
 ### Administrators
 {: #admin-concept}
 
-Administrators can be added to the target crypto units for issuing commands to the crypto units. You can add multiple administrators to one crypto unit to increase security. Each administrator owns one private [signature key](#signature-key-concept) for identity authentication.
+Administrators can be added to the target crypto units for issuing commands to the crypto units. You can add up to eight administrators to one crypto unit to increase security. Each administrator owns one private [signature key](#signature-key-concept) for identity authentication.
 
 ### Signature keys
 {: #signature-key-concept}
 
-An administrator must sign any commands that are issued to the crypto unit with a signature key. The private part of the signature key is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. Commands issued in [imprint mode](#imprint-mode-concept) do not need to be signed with any signature keys.
+An administrator must sign any commands that are issued to the crypto unit with a signature key. The signature keys that are created in {{site.data.keyword.hscrypto}} are P521 Elliptic Curve (EC) keys. The private part of the signature key is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. Commands issued in [imprint mode](#imprint-mode-concept) do not need to be signed with any signature keys.
 
 ### Imprint mode
 {: #imprint-mode-concept}
@@ -106,25 +116,25 @@ There are two types of signature thresholds on a crypto unit. The main signature
 
 Setting the signature thresholds to a value greater than one enables quorum authentication from multiple administrators for sensitive operations. The maximum value that you can set the signature threshold and revocation signature threshold is eight, which is also the maximum number of administrators that can be added to a crypto unit.
 
-### Master keys
+### Master key
 {: #master-key-concept}
 
-Master keys, also known as HSM master keys, are used to encrypt the service instances for key storage. With the master key, you take the ownership of the cloud HSM and own the root of trust that encrypts the entire hierarchy of encryption keys, including root keys and standard keys in the key management keystore and Enterprise PKCS #11 (EP11) keys in the EP11 keystore. You need to configure the master key first before you can manage encryption keys. {{site.data.keyword.IBM_notm}} does not back up or touch the master key, and has no way to copy it or restore it to a different machine or data center. One service instance can have only one master key. If you delete the master key of the service instance, you can effectively crypto-shred all data that was encrypted with the keys that are managed in the service.
+The master key, also known as HSM master key, is used to encrypt the service instance for key storage. It is a symmetric 256-bit AES key. With the master key, you take the ownership of the cloud HSM and own the root of trust that encrypts the entire hierarchy of encryption keys, including root keys and standard keys in the key management keystore and Enterprise PKCS #11 (EP11) keys in the EP11 keystore. You need to configure the master key first before you can manage encryption keys. One service instance can have only one master key. If you delete the master key of the service instance, you can effectively crypto-shred all data that was encrypted with the keys that are managed in the service.
 
 ### Master key part
 {: #master-key-part-concept}
 
-A master key is composed of several master key parts. Master key parts that are created in {{site.data.keyword.hscrypto}} are symmetric 256-bit AES keys. For security considerations, each key part can be owned by a different person. Key parts are stored in workstation files when the [TKE CLI plug-in](#tke-concept) is used to configure crypto units. Key parts are stored on [smart cards](#smart-card-concept) when the [{{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities](#management-utilities-concept) are used to configure crypto units. The key part owner needs to be the only person who knows the file password or the smart card personal identification number (PIN) for the key part.
+If you initialize your service instance using key part files, or using smart cards together with the Management Utilities, a master key is composed of several master key parts. Master key parts that are created in {{site.data.keyword.hscrypto}} are symmetric 256-bit AES keys. For security considerations, each key part can be owned by a different person. Key parts are stored in workstation key part files when the [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](#tke-concept) is used to load the master key. Key parts are stored on [smart cards](#smart-card-concept) when the [{{site.data.keyword.hscrypto}} Management Utilities](#management-utilities-concept) are used to load the master key. The key part owner needs to be the only person who knows the file password or the smart card personal identification number (PIN) for the key part.
 
 ### {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in
 {: #tke-concept}
 
-Trusted Key Entry (TKE) command-line interface (CLI) plug-in is a CLI plug-in working with {{site.data.keyword.cloud_notm}} CLI. The TKE plug-in provides a set of functions for managing crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user account. You can use the TKE plug-in to set up administrators and load the master key with the requirements of a medium level of security. For detailed instructions, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm). For the complete command reference, see [Trusted Key Entry CLI plug-in reference](/docs/hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin).
+Trusted Key Entry (TKE) command-line interface (CLI) plug-in is a CLI plug-in working with {{site.data.keyword.cloud_notm}} CLI. The TKE plug-in provides a set of functions for managing crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user account. You can use the TKE plug-in to set up administrators and load the master key with the requirements of a medium level of security. The TKE CLI plug-in provides two approaches to initializing service instances: [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) and [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit). For the complete command reference, see [Trusted Key Entry CLI plug-in reference](/docs/hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin).
 
 ### Management Utilities
 {: #management-utilities-concept}
 
-The Management Utilities provide an alternate way of configuring service instances with signature keys and master key parts that are stored on smart cards with the highest level of security. To use the Management Utilities, you must order IBM-supported smart card readers and smart cards. For detailed instructions on installing and configuring the Management Utilities, see [Setting up the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities) and [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
+The Management Utilities provide an alternate way of configuring service instances with signature keys and master key parts that are stored on smart cards with the highest level of security. To use the Management Utilities, you must order IBM-supported smart card readers and smart cards. For detailed instructions on installing and configuring the Management Utilities, see [Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities) and [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
 ### Smart cards
 {: #smart-card-concept}

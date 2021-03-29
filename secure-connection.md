@@ -100,7 +100,7 @@ environment is set up before setting the network access policy to
 `private-only`.
 {: note}
 
-There are several ways for you to update the network settings. However, before you update the network access policy, you need to initialize the service instance first. See [Initializing service instances with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [Loading master keys with the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) for instructions.
+There are several ways for you to update the network settings. However, before you update the network access policy, you need to initialize the service instance first. See [Initializing service instances with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) for instructions.
 
 * When you [provision a service instance](/docs/hs-crypto?topic=hs-crypto-provision), you can choose between the `private-only` and `public-and-private` options using either the {{site.data.keyword.cloud_notm}} console or CLI.
 * [Manage and update the network settings](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies) after you provision and initialize the service instance.

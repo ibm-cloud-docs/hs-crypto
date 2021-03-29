@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-09-30"
+lastupdated: "2020-10-26"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, data security, compliance
 
@@ -29,6 +29,7 @@ This topic can help you with questions about data security in {{site.data.keywor
 ## How can I manage user access to my service instances? Does IBM have access to my instances?
 {: #faq-hpcs-ibm-access}
 {: faq}
+{: support}
 
 IBM or any third-party users do not have access to your service instances or your keys. By loading the master key to your service instance, you take the ownership of the cloud HSM and you have the exclusive control of your resources managed by {{site.data.keyword.hscrypto}}.
 
@@ -77,14 +78,25 @@ The Federal Information Processing Standard (FIPS) Publication 140-2 is a US gov
 
   {{site.data.keyword.hscrypto}} is the only cloud HSM in the public cloud market that is built on an HSM designed to meet FIPS 140-2 Level 4 certification requirements. The certification is listed on the [Cryptographic Module Validation Program (CVMP) Validated Modules List](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules){: external}.
 
-## What cryptographic algorithms are used in {{site.data.keyword.hscrypto}} key management service?
+## How to understand the key hierarchy for {{site.data.keyword.hscrypto}} KYOK?
 {: #faq-cryptographic-algorithms}
 {: faq}
+{: support}
 
-{{site.data.keyword.hscrypto}} key management service uses the Advanced Encryption Standard of Cipher Blocker Chaining (AES-CBC) algorithm for creating, wrapping, unwrapping, and rewrapping keys.
+The following table lists the keys that are needed for {{site.data.keyword.hscrypto}} Keep Your Own Key (KYOK) functionality.
+
+| Key types | Algorithms | Functions |
+| --------- | --------- | --------- |
+| Signature key   | P521 Elliptic Curve (EC) | When you [initialize your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-introduce-service) to load the master key, you need to use signature keys to issue commands to the crypto units. The private part of the signature key is used to create signatures and is stored on the customer side. The public part is placed in a certificate that is stored in the target crypto unit to define a crypto unit administrator. |
+| Master key   | 256-bit AES | You need to load your master key to the crypto units to take the ownership of the cloud HSM and own the root of trust that encrypts the entire hierarchy of encryption keys, including root keys and standard keys in the key management keystore and Enterprise PKCS #11 (EP11) keys in the EP11 keystore. Depending on [the method that you use to load the master key](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode), the master key is stored in different locations. |
+| Root key   | 256-bit AES  | Root keys are primary resources in {{site.data.keyword.hscrypto}} and are protected by the master key. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other data encryption keys (DEKs) that are stored in a data service. This practice of root key encryption is also called envelope encryption. For more information, see [Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption). |
+| Data encryption key (DEK)  | Controlled by the data service | Data encryption keys are used to encrypt data that is stored and managed by other customer-owned applications or data services. Root keys that you manage in {{site.data.keyword.hscrypto}} serve as wrapping keys to protect DEKs. For services that support the integration of {{site.data.keyword.hscrypto}} for envelope encryption, see [Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-integrate-services).  |
+{: caption="Table 1. {{site.data.keyword.hscrypto}} key types and algorithms" caption-side="bottom"}
 
 ## How does EP11 differ from PKCS #11?
 {: #faq-ep11-pkcs11}
+{: faq}
+{: support}
 
 Enterprise PKCS #11 (EP11) is aligned with PKCS #11 in terms of concepts and functions. An experienced PKCS #11 developer can easily start using EP11 functions. However, they have the following major differences:
 
@@ -92,13 +104,15 @@ Enterprise PKCS #11 (EP11) is aligned with PKCS #11 in terms of concepts and fun
 - EP11 is a stateless protocol, whereas PKCS #11 is stateful. The stateless design of EP11 allows for the use of external keystores as well as scaling to multiple backends.
 - EP11 over gRPC (GREP11) defines a network protocol that can be directly used in cloud applications.
 
+For more information, see [Comparing the PKCS #11 API with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm#compare-grep11-pkcs11).
+
 ## What EP11 mechanisms are supported by the GREP11 functions?
 {: #faq-EP11-mechanisms}
 {: faq}
 
 Mechanisms can vary depending on the level of firmware in the IBM 4768 crypto card (also referred to as Crypto Express 6S). For mechanisms that are currently supported, see [Supported mechanisms](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-mechanism-list).
 
-For more information on the EP11 mechanisms, see the [Enterprise PKCS #11 (EP11) Library structure guide](https://www.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=15022415USEN&dd=yes&){: external}.
+For more information on the EP11 mechanisms, see the [Enterprise PKCS #11 (EP11) Library structure guide](http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf){: external}.
 
 ## What compliance standards does {{site.data.keyword.hscrypto}} meet?
 {: #faq-compliance-standards}
