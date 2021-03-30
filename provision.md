@@ -15,6 +15,7 @@ subcollection: hs-crypto
 {:screen: .screen}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 {:important: .important}
 {:external: target="_blank" .external}
 {:term: .term}
@@ -53,8 +54,8 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
   4. **Optional**: In the **Tags** field, add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/account?topic=account-tag).
   5. Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs.
 
-    In a production environment, select at least two crypto units to enable high availability. These crypto units are distributed among different supported availability zones in the selected region.
-    {: important}
+    At least two crypto units are to be enabled for high availability. These crypto units are distributed among different supported availability zones in the selected region.
+    {: note}
 
   <!--
   6. Under **Backup region**, select the region where you want to back up your instance master key.
@@ -143,7 +144,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.
       <tr>
         <td>*number_of_crypto_units*</td>
         <td><p>Optional. Multiple crypto units are distributed among different supported availability zones in the selected region to increase availability.</p>
-        <p>Select at least two crypto units to enable high availability. If you do not specify the number of crypto units, two crypto units are assigned by default.</p></td>
+        <p>At least two crypto units are to be enabled for high availability. If you do not specify the number of crypto units, two crypto units are assigned by default.</p></td>
       </tr>
       <tr>
         <td>*network_access*</td>

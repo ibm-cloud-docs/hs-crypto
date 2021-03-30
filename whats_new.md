@@ -46,6 +46,13 @@ For more information about the differences between the service instance initiali
 
 For detailed instructions, see [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit).
 
+To rotate your master key, see [Rotating master keys using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit).
+
+### Added: {{site.data.keyword.hscrypto}} expands into the London region
+{: #add-london-region}
+
+You can now create {{site.data.keyword.hscrypto}} instances in the London (`eu-gb`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
+
 ### Added: Using {{site.data.keyword.mon_full_notm}} to measure {{site.data.keyword.hscrypto}} metrics
 {: #add-sysdig-metrics}
 

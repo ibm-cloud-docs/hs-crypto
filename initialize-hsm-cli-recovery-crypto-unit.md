@@ -31,6 +31,9 @@ For an introduction to the approaches of service instance initialization and the
 Currently, only the `us-south` and `us-east` regions are enabled with the recovery crypto units, which means, when a service instance is provisioned in either regions, you are by default enabled with the option to back up your master keys in the recovery crypto units located in both regions. For more information about supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 {: note}
 
+## Initializing service instances
+{: #initialize-hsm-recovery-crypto-unit-steps}
+
 To initialize your service instance using recovery crypto units, complete the following steps:
 
 1. Complete [the prerequisite steps](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite).

@@ -34,6 +34,9 @@ Make sure that you are assigned the **Manager** or **Crypto unit administrator**
 Use the `ibmcloud tke auto-mk-rotate` command to rotate your master key only when you have recovery crypto units set up and PKCS #11 keystores are not enabled in your service instance. Otherwise, refer to [Rotating master keys using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli) for instructions. For the recovery crypto unit supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 {: important}
 
+## Rotating master keys
+{: #rotate-master-key-cli-recovery-crypto-unit-steps}
+
 Before you rotate the master key using recovery crypto units, make sure that you complete the [steps to setup the IBM Cloud CLI with TKE plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite).
 
 To rotate master keys using recovery crypto units, use the following command:

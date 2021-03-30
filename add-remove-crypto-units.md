@@ -122,6 +122,9 @@ To remove crypto units from an exsiting service instance, you need to only [rais
 
 On the **Create a case** page, enter **Remove crypto units** as the subject, and include the number of crypto units that you want to remove in the case description.
 
+You need to keep at least two crypto units in a service instance for high availability.
+{: note}
+
 ## What's next
 {: #add-remove-crypto-units-next}
 
