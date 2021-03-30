@@ -169,7 +169,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
 
     A successful `POST api/v2/key_rings` request returns an HTTP `201 Created` response, which indicates that the key ring is created and is now available for holding standard and root keys.
 
-## Transferring a key to a different key ring
+<!-- ## Transferring a key to a different key ring
 {: #transfer-key-key-ring}
 
 As requirements change and new team members are brought into an org, you might create new key rings to reflect these organizational changes. After creating the key rings, it might be necessary to move a key from an existing key ring to a
@@ -357,6 +357,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
      ]
     }
     ```
+-->
 
 ## Granting access to a key ring
 {: #grant-access-key-ring}
