@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-02-23"
+lastupdated: "2021-03-30"
 
 keywords: integration, encryption at rest, cloud object storage, object storage, kmip, containers, vmware, database, compute
 
@@ -24,7 +24,7 @@ subcollection: hs-crypto
 # Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}
 {: #integrate-services}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} integrates with data and storage solutions to help you bring and manage your own encryption in the cloud.
+You can integrate {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to build solutions for you to bring and manage your own encryption in the cloud.
 {: shortdesc}
 
 After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision) and [initialize the service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm), you can integrate {{site.data.keyword.hscrypto}} with the following supported services.
@@ -50,6 +50,14 @@ Associate the encryption keys that you manage in {{site.data.keyword.hscrypto}} 
 |-------|-----------|
 |[{{site.data.keyword.ihsdbaas_postgresql_full}}](https://cloud.ibm.com/catalog/services/hyper-protect-dbaas-for-postgresql){: external}|For detailed steps of how to integrate {{site.data.keyword.ihsdbaas_postgresql_full}}, check out [{{site.data.keyword.hscrypto}} integration](/docs/hyper-protect-dbaas-for-postgresql?topic=hyper-protect-dbaas-for-postgresql-hpcs-byok).|
 |[{{site.data.keyword.ihsdbaas_mongodb_full}}](https://cloud.ibm.com/catalog/services/hyper-protect-dbaas-for-mongodb){: external}|For detailed steps of how to integrate {{site.data.keyword.ihsdbaas_mongodb_full}}, check out [{{site.data.keyword.hscrypto}} integration](/docs/hyper-protect-dbaas-for-mongodb?topic=hyper-protect-dbaas-for-mongodb-hpcs-byok).|
+|[{{site.data.keyword.cloud_notm}} Databases for DataStax](https://cloud.ibm.com/catalog/services/databases-for-cassandra){: external}|For detailed steps of how to integrate {{site.data.keyword.cloud_notm}} Databases, check out [the integration tutorial](/docs/cloud-databases?topic=cloud-databases-hpcs).|
+|[{{site.data.keyword.cloud_notm}} Databases for Elasticsearch](https://cloud.ibm.com/catalog/services/databases-for-elasticsearch){: external}|For detailed steps of how to integrate {{site.data.keyword.cloud_notm}} Databases, check out [the integration tutorial](/docs/cloud-databases?topic=cloud-databases-hpcs).|
+|[{{site.data.keyword.cloud_notm}} Databases for EnterpriseDB](https://cloud.ibm.com/catalog/services/databases-for-enterprisedb){: external}|For detailed steps of how to integrate {{site.data.keyword.cloud_notm}} Databases, check out [the integration tutorial](/docs/cloud-databases?topic=cloud-databases-hpcs).|
+|[{{site.data.keyword.cloud_notm}} Databases for etcd](https://cloud.ibm.com/catalog/services/databases-for-etcd){: external}|For detailed steps of how to integrate {{site.data.keyword.cloud_notm}} Databases, check out [the integration tutorial](/docs/cloud-databases?topic=cloud-databases-hpcs).|
+|[{{site.data.keyword.cloud_notm}} Databases for MongoDB](https://cloud.ibm.com/catalog/services/databases-for-mongodb){: external}|For detailed steps of how to integrate {{site.data.keyword.cloud_notm}} Databases, check out [the integration tutorial](/docs/cloud-databases?topic=cloud-databases-hpcs).|
+|[{{site.data.keyword.cloud_notm}} Databases for PostgreSQL](https://cloud.ibm.com/catalog/services/databases-for-postgresql){: external}|For detailed steps of how to integrate {{site.data.keyword.cloud_notm}} Databases, check out [the integration tutorial](/docs/cloud-databases?topic=cloud-databases-hpcs).|
+|[{{site.data.keyword.cloud_notm}} Databases for Redis](https://cloud.ibm.com/catalog/services/databases-for-redis){: external}|For detailed steps of how to integrate {{site.data.keyword.cloud_notm}} Databases, check out [the integration tutorial](/docs/cloud-databases?topic=cloud-databases-hpcs).|
+|[{{site.data.keyword.cloud_notm}} Databases for RabbitMQ](https://cloud.ibm.com/catalog/services/messages-for-rabbitmq){: external}|For detailed steps of how to integrate {{site.data.keyword.cloud_notm}} Databases, check out [the integration tutorial](/docs/cloud-databases?topic=cloud-databases-hpcs).|
 {: caption="Table 2. Supported database services" caption-side="bottom"}
 
 
