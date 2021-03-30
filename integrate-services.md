@@ -81,7 +81,7 @@ Use your own root keys managed by {{site.data.keyword.hscrypto}} to protect cont
 |Service|Integration instructions|
 |-------|-----------|
 |[{{site.data.keyword.containerlong_notm}}](https://cloud.ibm.com/kubernetes/catalog/cluster){: external}|For detailed steps of how to integrate {{site.data.keyword.containerlong_notm}}, check out [Encrypting the Kubernetes master's local disk and secrets by using a KMS provider](/docs/containers?topic=containers-encryption#keyprotect).|
-|[{{site.data.keyword.openshiftlong_notm}}](https://cloud.ibm.com/kubernetes/catalog/openshiftcluster){: external}|For detailed steps of how to integrate {{site.data.keyword.openshiftshort}}, check out [Encrypting the {{site.data.keyword.openshiftshort}} master's local disk and secrets by using a KMS provider](/docs/openshift?topic=openshift-encryption#keyprotect).|
+|[{{site.data.keyword.openshiftlong_notm}}](https://cloud.ibm.com/kubernetes/catalog/openshiftcluster){: external}|<ul><li> You can integrate {{site.data.keyword.openshiftshort}} with the {{site.data.keyword.hscrypto}} key management service to protect sensitive information in your cluster, check out [Encrypting the {{site.data.keyword.openshiftshort}} master's local disk and secrets by using a KMS provider](/docs/openshift?topic=openshift-encryption#keyprotect).</li><li>You can also deploy the {{site.data.keyword.hscrypto}} Router to encrypt routes with a private key that is stored in the EP11 keystore of the {{site.data.keyword.hscrypto}} instance. For detailed steps, check out [Encrypting routes with keys stored in {{site.data.keyword.hscrypto}}](/docs/openshift?topic=openshift-hpcs-router). </li></ul>|
 {: caption="Table 4. Supported container services" caption-side="bottom"}
 
 
