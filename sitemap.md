@@ -235,7 +235,7 @@ Find what you are looking for in the compilation of topics that are available in
 - [Managing the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies)
 - [Managing dual authorization of your service instance](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth)
 - [Managing the key create and import access policy](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess)
-- [Managing metrics](/docs/hs-crypto?topic=hs-crypto-manage-sysdig-metrics)
+- [Managing metrics](/docs/hs-crypto?topic=hs-crypto-manage-smonitoring-metrics)
 
 
 

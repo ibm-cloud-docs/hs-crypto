@@ -54,9 +54,9 @@ To rotate your master key, see [Rotating master keys using recovery crypto units
 You can now create {{site.data.keyword.hscrypto}} instances in the London (`eu-gb`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
 ### Added: Using {{site.data.keyword.mon_full_notm}} to measure {{site.data.keyword.hscrypto}} metrics
-{: #add-sysdig-metrics}
+{: #add-monitoring-metrics}
 
-By enabling metrics instance policy, you can now use {{site.data.keyword.mon_full_notm}} to measure how users and applications interact with {{site.data.keyword.hscrypto}}. For more information, see [Managing metrics](/docs/hs-crypto?topic=hs-crypto-manage-sysdig-metrics) and [Monitoring with Sysdig operational metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics).
+By enabling metrics instance policy, you can now use {{site.data.keyword.mon_full_notm}} to measure how users and applications interact with {{site.data.keyword.hscrypto}}. For more information, see [Managing metrics](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics) and [Monitoring operational metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics).
 
 ### Added: Synchronizing protected resources associated with root keys
 {: #add-sync-resources}

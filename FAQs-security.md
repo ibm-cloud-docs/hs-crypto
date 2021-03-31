@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-10-26"
+  years: 2020, 2021
+lastupdated: "2021-03-31"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, data security, compliance
 
@@ -124,4 +124,4 @@ For more information on the EP11 mechanisms, see the [Enterprise PKCS #11 (EP11)
 {: #faq-monitor-instance}
 {: faq}
 
-Yes, you can monitor the status of your service instance through [Activity Tracker with LogDNA](/docs/hs-crypto?topic=hs-crypto-at-events).
+Yes, you can monitor the status of your service instance through [{{site.data.keyword.cloud_notm}} Activity Tracker](/docs/hs-crypto?topic=hs-crypto-at-events).

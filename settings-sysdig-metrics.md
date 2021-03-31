@@ -2,9 +2,9 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-12"
+lastupdated: "2021-03-31"
 
-keywords: sysdig, monitor metrics
+keywords: monitoring, monitor metrics
 
 subcollection: hs-crypto
 
@@ -22,9 +22,9 @@ subcollection: hs-crypto
 {:preview: .preview}
 
 # Managing metrics
-{: #manage-sysdig-metrics}
+{: #manage-monitoring-metrics}
 
-After you set up your {{site.data.keyword.hscrypto}} instance, you can manage Sysdig metrics by using the service API.
+After you set up your {{site.data.keyword.hscrypto}} instance, you can manage Monitoring metrics by using the service API.
 {: shortdesc}
 
 ## Managing metrics settings
@@ -40,7 +40,7 @@ Before you enable operational metrics for your {{site.data.keyword.hscrypto}} in
 
 - You need to provision a {{site.data.keyword.mon_short}} instance first in order to see the metrics.
 
-  You need to [provision a {{site.data.keyword.mon_short}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision){: external} that is located in the same region as the {{site.data.keyword.hscrypto}} instance that you want to receive operational metrics for. After you provision the {{site.data.keyword.mon_short}} instance, you need to [enable platform metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics#configure-sysdig).
+  You need to [provision a {{site.data.keyword.mon_short}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision){: external} that is located in the same region as the {{site.data.keyword.hscrypto}} instance that you want to receive operational metrics for. After you provision the {{site.data.keyword.mon_short}} instance, you need to [enable platform metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics#configure-monitoring).
 
 ### Enabling metrics for your {{site.data.keyword.hscrypto}} instance with the Console
 {: #enable-metrics-instance-policy-ui}
@@ -51,7 +51,7 @@ After you create a {{site.data.keyword.hscrypto}} instance, provision a {{site.d
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
-5. In the **Metrics** section, check **Send metrics to Sysdig** and click **Save policy**.
+5. In the **Metrics** section, check **Send metrics to Monitoring** and click **Save policy**.
 
 ### Enabling metrics for your {{site.data.keyword.hscrypto}} instance with the API
 {: #enable-metrics-instance-policy-api}

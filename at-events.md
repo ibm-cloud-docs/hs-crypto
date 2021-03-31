@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2021
 lastupdated: "2021-03-17"
 
-keywords: event, security, monitor event, audit event, activity tracker, logdna event
+keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
 subcollection: hs-crypto
 

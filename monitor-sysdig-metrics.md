@@ -2,9 +2,9 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-12"
+lastupdated: "2021-03-31"
 
-keywords: measure interactions, metrics, sysdig, operational metrics
+keywords: measure interactions, metrics, monitoring, operational metrics
 
 subcollection: hs-crypto
 
@@ -43,6 +43,8 @@ The following contains examples of metrics that can be measured in your {{site.d
 - API request latency over time
 - Total API requests categorized by response code
 
+**(PKCS 11 and GREP11 API also availble?)**
+
 ## Before you begin
 {: #operational-metrics-considerations}
 
@@ -52,21 +54,21 @@ information on {{site.data.keyword.mon_short}} pricing, see [Pricing](/docs/Moni
 
 Before you provision an instance of {{site.data.keyword.mon_short}}, consider the following guidance:
 
-- You need to enable the [metrics policy](/docs/hs-crypto?topic=hs-crypto-manage-sysdig-metrics) for your {{site.data.keyword.hscrypto}} instance in order to retrieve operational metrics.
+- You need to enable the [metrics policy](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics) for your {{site.data.keyword.hscrypto}} instance in order to retrieve operational metrics.
 - Other {{site.data.keyword.cloud_notm}} users with `administrator` or `editor` permissions can manage the {{site.data.keyword.mon_short}} service in the {{site.data.keyword.cloud_notm}}. These users must also have platform permissions to create resources within the resource group where they plan to provision the instance.
 
 ## Connecting {{site.data.keyword.mon_short}} with {{site.data.keyword.hscrypto}}
-{: #connect-sysdig-hpcs}
+{: #connect-monitoring-hpcs}
 
 Your dashboard show metrics for all {{site.data.keyword.hscrypto}} instances that are in the same region as the {{site.data.keyword.mon_short}} instance with an enabled metrics policy.
 {: note}
 
 ### Configure a {{site.data.keyword.mon_short}} instance for metrics
-{: #configure-sysdig}
+{: #configure-monitoring}
 
 To enable platform metrics in a region, complete the following steps:
 
-1. [Provision an instance of {{site.data.keyword.mon_short}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision){: external} in the region of the {{site.data.keyword.hscrypto}} instance that contains an [enabled metrics policy](/docs/hs-crypto?topic=hs-crypto-manage-sysdig-metrics).
+1. [Provision an instance of {{site.data.keyword.mon_short}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision){: external} in the region of the {{site.data.keyword.hscrypto}} instance that contains an [enabled metrics policy](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics).
 2. Go to the [monitoring dashboard](/observe/monitoring){: external}.
 3. Click **Configure platform metrics**.
 4. Select the region where the {{site.data.keyword.hscrypto}} instance is created.
@@ -77,12 +79,12 @@ To enable platform metrics in a region, complete the following steps:
 ## {{site.data.keyword.hscrypto}} Metrics Details
 {: #hpcs-metrics}
 
-You can use the metrics in your Sysdig dashboard to measure the types of requests being made to your service instance as well as the latency of the requests.
+You can use the metrics in your Monitoring dashboard to measure the types of requests being made to your service instance as well as the latency of the requests.
 
 ### API Hits
 {: #api-hits}
 
-The type and amount of API requests being made to your {{site.data.keyword.hscrypto}} instance. For example, you can track how many API requests that have been made by an authorized user by setting an [alert](#set-monitor-alerts). The alert triggers when your sysdig instance notices a frequent amount of `401` status codes being returned from your {{site.data.keyword.hscrypto}} instance.
+The type and amount of API requests being made to your {{site.data.keyword.hscrypto}} instance. For example, you can track how many API requests that have been made by an authorized user by setting an [alert](#set-monitor-alerts). The alert triggers when your Monitoring instance notices a frequent amount of `401` status codes being returned from your {{site.data.keyword.hscrypto}} instance.
 
 <table>
   <tr>
@@ -367,7 +369,7 @@ Due to {{site.data.keyword.mon_short}} limitations, you will only be able to see
 ## Default Dashboards
 {: #default-dashboards}
 
-You need to configure platform metrics and enable a [metrics policy](/docs/hs-crypto?topic=hs-crypto-manage-sysdig-metrics)
+You need to configure platform metrics and enable a [metrics policy](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics)
 on your service instance in order to view your {{site.data.keyword.hscrypto}} operational metrics dashboard.
 
 ### How to find the {{site.data.keyword.mon_short}} dashboard for your {{site.data.keyword.hscrypto}} service instance using {{site.data.keyword.hscrypto}} console
@@ -383,7 +385,7 @@ After configuring your {{site.data.keyword.mon_short}} instance to receive platf
 
 After configuring your {{site.data.keyword.mon_short}} instance to receive platform metrics, complete the following steps:
 
-1. Go to the [monitoring dashboard](/observe/monitoring){: external} and find your sysdig instance that is configured to receive platform metrics.
+1. Go to the [monitoring dashboard](/observe/monitoring){: external} and find your Monitoring instance that is configured to receive platform metrics.
 2. In the **View Dashboard** column, click **View {{site.data.keyword.mon_short}}**.
 3. Once you are in the {{site.data.keyword.mon_short}} platform, click **Dashboards** on the side menu.
 4. Select **IBM** under the **Dashboard Templates** section.
