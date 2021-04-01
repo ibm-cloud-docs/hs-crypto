@@ -51,7 +51,7 @@ After you create a {{site.data.keyword.hscrypto}} instance, provision a {{site.d
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
-5. In the **Metrics** section, check **Send metrics to Monitoring** and click **Save policy**.
+5. In the **Metrics** section, check **Send metrics to IBM Cloud Monitoring** and click **Save policy**.
 
 ### Enabling metrics for your {{site.data.keyword.hscrypto}} instance with the API
 {: #enable-metrics-instance-policy-api}
