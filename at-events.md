@@ -45,7 +45,6 @@ The following table lists the key actions that generate an event:
 | --------------------------------- | ------------------------------------------------------------ |
 | `hs-crypto.secrets.create`              | Create a key                                                 |
 | `hs-crypto.secrets.delete`              | Delete a key                                                 |
-| `hs-crypto.secrets.patch`               | Patch a key                                                  |
 | `hs-crypto.secrets.createalias`         | Create a key alias                                           |
 | `hs-crypto.secrets.deletealias`         | Delete a key alias                                           |
 | `hs-crypto.secrets.expire`              | Expire a key                                                 |
@@ -101,27 +100,9 @@ The following table lists the registration actions that generate an event:
 
 | Action                                  | Description                                              |
 | --------------------------------------- | -------------------------------------------------------- |
-| `hs-crypto.registrations.create`   | Create a registration between a key and a cloud resource  |
 | `hs-crypto.registrations.list`          | List registrations for any key                           |
-| `hs-crypto.registrations.merge`   |  Update a registration between a key and a cloud resource |
-| `hs-crypto.registrations.write`   | Replace registration between a key and a cloud resource  |
-| `hs-crypto.registrations.delete`   | Delete registration between a key and a cloud resource  |
 | `hs-crypto.registrations.default`       | Invalid registration request event                       |
 {: caption="Table 4. Registration actions" caption-side="bottom"}
-
-### Key with registration events
-{: #protected-resource-key-actions}
-
-The following table lists the event acknowledgement actions that generate an event:
-
-| Action                          | Description                                     |
-| ------------------------------- | ----------------------------------------------- |
-| `hs-crypto.secrets.ack-delete`  | Delete a key with registrations                 |
-| `hs-crypto.secrets.ack-restore` | Restore a key with registrations                |
-| `hs-crypto.secrets.ack-rotate`  | Rotate a key with registrations                 |
-| `hs-crypto.secrets.ack-enable`  | Enable operations for a key with registrations  |
-| `hs-crypto.secrets.ack-disable` | Disable operations for a key with registrations |
-{: caption="Table 5. Event acknowledgement actions that involve keys that protect cloud resources" caption-side="bottom"}
 
 ### Trusted Key Entry events
 {: #tke-actions}
@@ -139,7 +120,7 @@ The following table lists the Trusted Key Entry (TKE) actions that generate an e
 | `hs-crypto.tke-cryptounit-new-master-key-register.clear` | Clear the new master key register |
 | `hs-crypto.tke-cryptounit-current-master-key-register.clear` | Clear the current master key register |
 | `hs-crypto.tke-cryptounit.reset`   | Zeroize and reset the selected crypto units |
-{: caption="Table 6. Trusted Key Entry actions" caption-side="bottom"}
+{: caption="Table 5. Trusted Key Entry actions" caption-side="bottom"}
 
 ### KMIP for VMware events
 {: #at-events-kmip}
@@ -158,7 +139,7 @@ The initiator ID is derived from the TLS (Transport Layer Security) certificate 
 | `hs-crypto.kmip-key.activate` | A KMIP key is activated. |
 | `hs-crypto.kmip-key.revoke` | A KMIP key is revoked. |
 | `hs-crypto.kmip-key.destroy` | A KMIP key is destroyed. |
-{: caption="Table 7. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
+{: caption="Table 6. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
 
 ## Viewing events
 {: #at-ui}
@@ -177,7 +158,7 @@ see [Launching the web UI through the IBM Cloud UI](/docs/Activity-Tracker-with-
 | `eu-de`                   | `eu-de`                                         |
 | `eu-gb`                   | `eu-gb`                                         |
 | `au-syd`                  | `au-syd`                                        |
-{: caption="Table 8. Activity Tracker regions" caption-side="bottom"}
+{: caption="Table 7. Activity Tracker regions" caption-side="bottom"}
 
 ## Analyzing successful events
 {: #at-events-analyze}
@@ -216,7 +197,7 @@ There are some common fields that {{site.data.keyword.hscrypto}} uses outside of
         <p>Note: This field is currently not supported in TKE events.</p>
       </td>
     </tr>
-    <caption style="caption-side:bottom;">Table 9. Describes the common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service
+    <caption style="caption-side:bottom;">Table 8. Describes the common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service
     actions.</caption>
   </table>
 
@@ -315,14 +296,6 @@ The following fields include extra information:
 - The `responseData.keyVersionId` field includes the unique identifier of the current key version used to wrap input ciphertext on wrap requests.
 - The `responseData.keyVersionCreationDate` field includes the date that the current version of the key was created.
 
-#### Patch key
-{: #patch-key-success}
-
-The following fields include extra information:
-
-- The `requestData.initialValue.keyRingId` field includes the ID of the key ring that the key previously belonged to.
-- The `requestData.newValue.keyRingId` field includes the ID of the key ring that the key currently belongs to.
-
 #### List key versions
 {: #list-key-versions-success}
 
@@ -409,51 +382,6 @@ longer accessible.
 - The `responseData.remainingRetrievals` field includes the number of times the import token can be retrieved within its expiration time before it is no longer
 accessible.
 
-### Key with registrations events
-{: #key-registration-events}
-
-#### Rotate key
-{: #rotate-key-registrations-success}
-
-The following fields include extra information:
-
-- The `responseData.eventAckData.eventId` field includes the unique identifier that is associated with the event.
-- The `responseData.eventAckData.eventType` field includes the type of lifecycle action that is associated with the event.
-- The `responseData.eventAckData.newKeyVersionId` field includes the unique identifier of the latest key version used to wrap input ciphertext on wrap requests.
-- The `responseData.eventAckData.newKeyVersionCreationDate` field includes the date that the latest key version was created.
-- The `responseData.eventAckData.oldKeyVersionId` field includes the unique identifier of the previous key version used to wrap input ciphertext on wrap requests.
-- The `responseData.eventAckData.oldKeyVersionCreationDate` field includes the date that the previous key version was created.
-
-#### Restore key
-{: #restore-key-registrations-success}
-
-The following fields include extra information:
-
-- The `responseData.eventAckData.eventId` field includes the unique identifier that is associated with the event.
-- The `responseData.eventAckData.eventType` field includes the type of lifecycle action that is associated with the event.
-- The `responseData.eventAckData.keyState` field includes the integer that correlates to the state of the key associated with the event.
-- The `responseData.eventAckData.eventAckTimeStamp` field includes the date and time that the event was acknowledged.
-
-#### Enable Key
-{: #enable-key-registrations-success}
-
-The following fields include extra information:
-
-- The `responseData.eventAckData.eventId` field includes the unique identifier that is associated with the event.
-- The `responseData.eventAckData.eventType` field includes the type of lifecycle action that is associated with the event.
-- The `responseData.eventAckData.keyState` field includes the integer that correlates to the state of the key associated with the event.
-- The `responseData.eventAckData.eventAckTimeStamp` field includes the date and time that the event was acknowledged.
-
-#### Disable key
-{: #disable-key-registration-success}
-
-The following fields include extra information:
-
-- The `responseData.eventAckData.eventId` field includes the unique identifier that is associated with the event.
-- The `responseData.eventAckData.eventType` field includes the type of lifecycle action that is associated with the event.
-- The `responseData.eventAckData.keyState` field includes the integer that correlates to the state of the key associated with the event.
-- The `responseData.eventAckData.eventAckTimeStamp` field includes the date and time that the event was acknowledged.
-
 ### Registration events
 {: #registration-events}
 
@@ -474,7 +402,7 @@ The following table lists the returned values that indicate a successful TKE eve
 |`outcome` | `success`  |
 | `reason.reasonCode`  | `200`  |
 | `reason.reasonType`  |`OK`  |
-{: caption="Table 10. Describes the returned values of a successful TKE event" caption-side="bottom"}
+{: caption="Table 9. Describes the returned values of a successful TKE event" caption-side="bottom"}
 
 The following common fields for TKE events include extra information:
 
@@ -641,7 +569,7 @@ The following table lists the actions associated with each severity level:
         <p><code>hs-crypto.registrations.list</code></p>
       </td>
     </tr>
-    <caption style="caption-side:bottom;">Table 11. Describes the severity level for
+    <caption style="caption-side:bottom;">Table 10. Describes the severity level for
     {{site.data.keyword.hscrypto}} service actions.</caption>
   </table>
 
@@ -651,6 +579,6 @@ The following table lists the status codes associated with each severity level:
 | -------- | ----------- |
 | Critical | `400`[^services-1], `401`, `403`, `500`, `503`, `507`  |
 | Warning  | `400`, `409`, `424`, `502`, `504`, `505`  |
-{: caption="Table 12. Describes the severity level for {{site.data.keyword.hscrypto}} response status codes." caption-side="bottom"}
+{: caption="Table 11. Describes the severity level for {{site.data.keyword.hscrypto}} response status codes." caption-side="bottom"}
 
 [^services-1]: For Trusted Key Entry events.
