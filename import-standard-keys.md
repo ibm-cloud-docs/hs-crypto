@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-10-19"
+  years: 2018, 2021
+lastupdated: "2021-04-09"
 
 keywords: standard key, import key, key material, import key api, bring your own key, byok, encryption key, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key
 
@@ -53,6 +53,23 @@ You can add your existing encryption keys with the {{site.data.keyword.cloud_not
         </td>
       </tr>
       <tr>
+        <td>Key alias</td>
+        <td>
+          <p>(Optional) One or more unique, human-readable aliases that you want to assign to your key for easy recognition.</p>
+          <p>Alias size can be between 2 - 90 characters. You can set up to five key alias for the key, with each separated by a comma.</p>
+          <p>Note: Each alias must be alphanumeric, case sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>Key ring ID</td>
+        <td>
+          <p>Select a key ring from the dropdown list that contains the existing key rings. If you don't assign a key ring, the key will be added to the default key ring.</p>
+          <p>For more information about key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+          </p>
+        </td>
+      </tr>
+      <tr>
         <td>Key material</td>
         <td>
           <p>The base64 encoded key material, such as a symmetric key, that you want to manage in the service. For more information, see [Base64 encoding your key material](#encode-key-material-standard-key).</p>
@@ -63,6 +80,12 @@ You can add your existing encryption keys with the {{site.data.keyword.cloud_not
               <li>The key must be base64-encoded.</li>
             </ul>
           </p>
+        </td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td>
+          <p>(Optional) Add an extended description for your key. It should be two to 240 characters in length.</p>
         </td>
       </tr>
       <caption style="caption-side:bottom;">Table 1. Describes the <strong>Generate new key</strong> settings</caption>

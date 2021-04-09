@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-17"
+lastupdated: "2021-04-09"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -49,20 +49,24 @@ If you prefer to inspect the keys in your service by using a graphical interface
         <th>Description</th>
       </tr>
       <tr>
-        <td>Key name</td>
+        <td>Name</td>
         <td>The unique, human-readable name that was assigned to your key.</td>
       </tr>
       <tr>
-        <td>Key ID</td>
+        <td>ID</td>
         <td>A unique key ID that was assigned to your key by the {{site.data.keyword.hscrypto}} service. You can use the ID value to make calls to the service with the [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto).</td>
       </tr>
       <tr>
-        <td>Key alias</td>
+        <td>Alias</td>
         <td>The human-readable aliases that you specify for easy recognition when you create the key.</td>
       </tr>
       <tr>
         <td>Ker ring ID</td>
         <td>The key ring that the key belongs to.</td>
+      </tr>
+      <tr>
+        <td>Type</td>
+        <td>The type of key that describes your key's designated purpose within the service.</td>
       </tr>
       <tr>
         <td>State</td>
@@ -83,10 +87,6 @@ If you prefer to inspect the keys in your service by using a graphical interface
       <tr>
         <td>Created</td>
         <td>The date and time that the key was created.</td>
-      </tr>
-      <tr>
-        <td>Type</td>
-        <td>The type of key that describes your key's designated purpose within the service.</td>
       </tr>
       <tr>
         <td>Dual authorization enabled</td>
