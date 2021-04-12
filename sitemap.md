@@ -1323,6 +1323,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys)
 
+[How do I know whether a key can be restored?](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-eligibility)
+
 [Restoring a deleted key with the console](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-ui)
 
 [Restoring a deleted key with the API](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-api)
