@@ -38,7 +38,7 @@ The following table shows the roles that {{site.data.keyword.hscrypto}} supports
 
 The following diagram illustrates the roles and permissions.
 
-![{{site.data.keyword.hscrypto}} roles](/image/roles.svg "{{site.data.keyword.hscrypto}} roles and responsibilities"){: caption="Figure 1. {{site.data.keyword.hscrypto}} roles and responsibilities" caption-side="bottom"}
+![{{site.data.keyword.hscrypto}} roles](/images/roles.svg "{{site.data.keyword.hscrypto}} roles and responsibilities"){: caption="Figure 1. {{site.data.keyword.hscrypto}} roles and responsibilities" caption-side="bottom"}
 
 ### Platform access roles
 {: #platform-mgmt-roles}
@@ -191,7 +191,7 @@ If you have multiple {{site.data.keyword.hscrypto}} instances in different accou
 
 The following is an example of how to use the enterprise to manage multiple instances and user access. Assume your organization has two {{site.data.keyword.hscrypto}} instances for development and production, and there are two separate teams managing and operating these instances. you can create the following enterprise hierarchy to better manage accounts, instances, and user access:
 
-![An example of the enterprise hierarchy and user access management](/image/enterprise_hierarchy_example.svg "An example of the enterprise hierarchy and user access management"){: caption="Figure 2. An example of the enterprise hierarchy and user access management" caption-side="bottom"}
+![An example of the enterprise hierarchy and user access management](/images/enterprise_hierarchy_example.svg "An example of the enterprise hierarchy and user access management"){: caption="Figure 2. An example of the enterprise hierarchy and user access management" caption-side="bottom"}
 
 - Use separate accounts and distinct resource groups to manage instances for development purpose and production purpose.
 - Assign users the minimum access to the corresponding resources. For example, assign the enterprise managers the administrator role for accounts and billing management; assign the developer team members the editor and manager roles for performing operations towards the development instance; assign other members the viewer and reader role for only viewing instance resources.

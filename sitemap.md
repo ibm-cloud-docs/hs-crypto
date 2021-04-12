@@ -758,7 +758,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Master key rotation](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro)
 * [How master key rotation works](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#how-master-key-rotation-works)
-  * [Rotating master keys using key part files](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#how-master-key-rotation-works-use-files)
+  * [Rotating master keys using key parts](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#how-master-key-rotation-works-use-key-parts)
   * [Rotating master keys using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#how-master-key-rotation-works-recovery-crypto-unit)
 * [What's next](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#master-key-rotation-next)
 
@@ -778,13 +778,17 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-integrate-services)
 
-[Integrating with storage services](/docs/hs-crypto?topic=hs-crypto-integrate-services#storage-integration)
+[Storage service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#storage-integration)
 
-[Integrating with database services](/docs/hs-crypto?topic=hs-crypto-integrate-services#database-integration)
+[Database service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#database-integration)
 
-[Integrating with compute services](/docs/hs-crypto?topic=hs-crypto-integrate-services#compute-integration)
+[Compute service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#compute-integration)
 
-[Integrating with container services](/docs/hs-crypto?topic=hs-crypto-integrate-services#container-integration)
+[Container service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#container-integration)
+
+[Ingestion service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#Ingestion-integrations)
+
+[Security service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#security-service-integrations)
 
 [Understanding your integration](/docs/hs-crypto?topic=hs-crypto-integrate-services#understand-integration)
 

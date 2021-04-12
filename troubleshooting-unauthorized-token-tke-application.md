@@ -35,7 +35,7 @@ You receive an error message when you start the Trusted Key Entry application.
 You might receive the following error message:
 {: tsSymptoms}
 
-![Unauthorized when you run TKE CLI plug-in commands](/image/tke_401.gif "Unauthorized when you run TKE CLI plug-in commands"){: caption="Figure 3. Unauthorized when you start the Trusted Key Entry application" caption-side="bottom"}
+![Unauthorized when you run TKE CLI plug-in commands](/images/tke_401.gif "Unauthorized when you run TKE CLI plug-in commands"){: caption="Figure 3. Unauthorized when you start the Trusted Key Entry application" caption-side="bottom"}
 
 A valid authentication token is needed for the TKE application to send requests to {{site.data.keyword.cloud_notm}}. You must log in to {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.cloud_notm}} CLI to create a valid authentication token before you can run the TKE application. These might be the causes of this error:
 {: tsCauses}

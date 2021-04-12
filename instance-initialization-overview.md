@@ -34,13 +34,11 @@ To initialize your service instance, you need to create [signature keys](#x82503
 
 A crypto unit is composed of an HSM and the corresponding software stack that is dedicated to the HSM. Each crypto unit can manage up to 5000 digital keys. If you're setting up a production environment, it is suggested to assign at least two crypto units for high availability when you create a {{site.data.keyword.hscrypto}} instance. The crypto units are located in different availability zones within the region that you select when you create the service instance. All crypto units in a service instance need to be configured the same. If one availability zone can't be accessed, the crypto units in a service instance can be used interchangeably. Crypto units contain the master key that encrypts the contents of key storage, including root keys and standard keys in the key management keystore and Enterprise PKCS #11 (EP11) keys in the EP11 keystore.
 
-<!--The following diagram illustrates a services instance with two crypto units.
 
-![Service instance components](/image/kms_service.svg "Service instance components"){: caption="Figure 1. Service instance components" caption-side="bottom"} -->
 
 To issue commands for crypto units to perform actions, you need to assign administrators to the crypto units. Each administrator has an associated signature key for identity authentication. The following flow chart shows how the signature keys are created and assigned to a service instance with two crypto units.
 
-![Creating and assigning signature keys](/image/sigkey_flow-02.svg "How to create and assign signature keys"){: caption="Figure 2. Creating and assigning signature keys" caption-side="bottom"}
+![Creating and assigning signature keys](/images/sigkey_flow-02.svg "How to create and assign signature keys"){: caption="Figure 2. Creating and assigning signature keys" caption-side="bottom"}
 
 Signature keys are created and assigned by following this procedure:
 
@@ -65,7 +63,7 @@ To load the master key, each crypto unit has two master key registers: a new mas
 
 The following flow chart illustrates how the master key register state changes, and how the master key is loaded.
 
-![Loading master keys](/image/master_key_register-02.svg "How to load a master key"){: caption="Figure 3. Loading master key" caption-side="bottom"}
+![Loading master keys](/images/master_key_register-02.svg "How to load a master key"){: caption="Figure 3. Loading master key" caption-side="bottom"}
 
 In the chart, each crypto unit loads the master key with the following steps:
 
