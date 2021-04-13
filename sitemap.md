@@ -1328,7 +1328,6 @@ Find what you are looking for in the compilation of topics that are available in
 [Restoring a deleted key with the console](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-ui)
 
 [Restoring a deleted key with the API](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-api)
-* [Using an import token to restore a key](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-secure-api)
 
 
 ## Managing protected resources associated with root keys
