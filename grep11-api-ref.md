@@ -2,7 +2,7 @@
 
 copyright:
 years: 2018, 2021
-lastupdated: "2021-03-11"
+lastupdated: "2021-04-13"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -252,6 +252,8 @@ The following curves are supported for mechanisms that are related to digital as
 |Schnorr |CKM_IBM_ECDSA_OTHER|[National Institute of Standards and Technology (NIST) curves](https://www.ietf.org/rfc/rfc5480.txt){: external} | <ul><li>P-256, also known as secp256r1 and prime256v1</li></ul>|
 |Schnorr |CKM_IBM_ECDSA_OTHER|[Regular Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}| <ul><li>BP-256R, also known as brainpoolP256r1</li></ul>|
 |Schnorr |CKM_IBM_ECDSA_OTHER|[Twisted Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external} | <ul><li>BP-256T, also known as brainpoolP256t1</li></ul>|
+|Schnorr |ECSG_IBM_ECSDSA_S256| <ul><li>[Standards for Efficient Cryptography (SEC) curves](https://www.secg.org/sec2-v2.pdf){: external}</li> <li>[Regular Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}</li> <li>[Twisted Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}</li>/ul> | <ul><li>secp256r1</li><li>secp256k1</li><li>BP-256R, also known as brainpoolP256r1</li><li>BP-256T, also known as brainpoolP256t1</li></ul>|
+|Schnorr-Zilliqa |ECSG_IBM_ECSDSA_COMPR_MULTI| <ul><li>[Standards for Efficient Cryptography (SEC) curves](https://www.secg.org/sec2-v2.pdf){: external}</li> <li>[Regular Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}</li><li>[Twisted Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}</li></ul> | <ul><li>secp256r1</li><li>secp256k1</li><li>BP-256R, also known as brainpoolP256r1</li><li>BP-256T, also known as brainpoolP256t1</li></ul>|
 {: caption="Table 5. Supported curve types for encrypting digital assets and signatures" caption-side="bottom"}
 
 [^services-9]: Mechanism CKM_IBM_ECDSA_OTHER is currently only available for GREP11 SignSingle and VerifySingle operations.
