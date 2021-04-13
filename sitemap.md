@@ -1667,8 +1667,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 [{{site.data.keyword.hscrypto}} notices and information](/docs/hs-crypto?topic=hs-crypto-open-source-licenses#notice)
 
-[Host Appliance notices and information](/docs/hs-crypto?topic=hs-crypto-open-source-licenses#host-appliance-notices)
-
 
 ## IBM Cloud Hyper Protect Services resources
 
