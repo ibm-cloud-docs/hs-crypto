@@ -12,6 +12,16 @@ Hyper Protect Crypto Services
         [Video: Initializing Hyper Protect Crypto Services with smart cards](https://mediacenter.ibm.com/media/1_lo2fmwbb)
 
     {: .topicgroup}
+    Internal adopters
+        internal/kyok-cheatsheet.md
+        internal/onboard-service.md
+        internal/configure-api.md
+        internal/key-registration.md
+        internal/plan-key-rotation.md
+        internal/plan-crypto-erasure.md
+        internal/kms-provider.md
+
+    {: .topicgroup}
     Understanding Hyper Protect Crypto Services
         [Video: IBM Cloud Hyper Protect Crypto Services overview](https://mediacenter.ibm.com/media/1_zxwh6ixm)
         overview.md
@@ -71,14 +81,12 @@ Hyper Protect Crypto Services
         initialize-hsm-prerequisite.md
 
         {: topicgroup}
-        Initializing service instances using the CLI
-            initialize-hsm-cli-recovery-crypto-unit.md
+        Initializing service instances using key parts
             initialize-hsm-cli.md
-
-        {: .topicgroup}
-        Initializing service instances using smart cards and the Management Utilities
             prepare-management-utilities.md
             initialize-hsm-management-utilities.md
+
+        initialize-hsm-cli-recovery-crypto-unit.md
 
     {: .topicgroup}
     Managing instance policies
@@ -101,8 +109,9 @@ Hyper Protect Crypto Services
 
     {: .topicgroup}
     Managing master keys
+        rotate-master-key-key-files.md
+        rotate-master-key-smart-cards.md
         rotate-master-key-recovery-crypto-unit.md
-        rotate-master-key.md
         recover-master-key.md
 
     {: .topicgroup}
@@ -170,8 +179,13 @@ Hyper Protect Crypto Services
     Enhancing security
         manage-access.md
         grant-access-keys.md
+
+        {: .topicgroup}
+        Granting users access to manage EP11 keystores and keys
+            pkcs11-ui-best-practices.md
+            pkcs11-best-practices.md
+
         secure-connection.md
-        pkcs11-best-practices.md
         at-events.md
         monitor-sysdig-metrics.md
         manage-security-compliance.md
@@ -242,7 +256,13 @@ Hyper Protect Crypto Services
     Troubleshooting master key rotation
         troubleshooting-master-key-rotation.md
         troubleshooting-master-key-rotation-key-files.md
+        troubleshooting-master-key-rotation-smart-cards.md
         troubleshooting-master-key-rotation-recovery.md
+
+    {: .topicgroup}
+    Error messages
+        error-messages-kms.md
+        error-messages-tke.md
 
     support.md
     sitemap.md

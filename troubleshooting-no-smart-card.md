@@ -35,7 +35,7 @@ You get an error when you start the Smart Card Utility Program or the Trusted Ke
 You might receive the following error message:
 {: tsSymptoms}
 
-![No smart card readers found when you start the application](/image/no_smart_card_readers.gif "Blocked PIN on EP11 smart card"){: caption="Figure 2. No smart card readers found when you start the application" caption-side="bottom"}
+![No smart card readers found when you start the application](/images/no_smart_card_readers.gif "Blocked PIN on EP11 smart card"){: caption="Figure 2. No smart card readers found when you start the application" caption-side="bottom"}
 
 The Identiv SPR332 smart card readers are not attached to your workstation, or the device driver for the smart card reader is not correctly installed on your workstation.
 {: tsCauses}
@@ -43,4 +43,4 @@ The Identiv SPR332 smart card readers are not attached to your workstation, or t
 Attach two Identiv SPR332 smart card readers to the USB ports of your workstation. If you've attached two Identiv SPR332 smart card readers to your workstation and still get this error, [install the device driver](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-smart-card-reader-driver).
 {: tsResolve}
 
-<!--[Installing smart card reader driver on Windows 10](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#reader-driver-windows) or [Installing smart card reader driver on Linux](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#reader-driver-linux) to install the device driver.-->
+

@@ -62,10 +62,7 @@ The following keys are used in envelope encryption for the advanced encryption a
   <dd>Root keys, also known as customer root keys (CRKs), are primary resources in {{site.data.keyword.hscrypto}}. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other keys that are stored in a data service. With {{site.data.keyword.hscrypto}}, you can create, store, and manage the lifecycle of root keys to achieve full control of other keys stored in the cloud.</dd>
   <dt>Data encryption keys</dt>
   <dd>Data encryption keys (DEKs) are cryptographic keys that you use for data encryption. They are provided by user-owned applications and are used to encrypt data stored in applications. Root keys that are managed in {{site.data.keyword.hscrypto}} serve as wrapping keys to protect DEKs.</dd>
-  <!--
-  <dt>Standard keys</dt>
-    <dd>Standard keys are a way to persist data, such as a password or an encryption key. When you use {{site.data.keyword.hscrypto}} to store standard keys, you enable hardware security module (HSM) storage for data, fine-grained access control to your resources with <a href="/docs/hs-crypto?topic=hs-crypto-manage-access" target="_blank">{{site.data.keyword.iamshort}} (IAM)</a>, and the ability to audit API calls to the service with <a href="/docs/hs-crypto?topic=hs-crypto-at-events" target="_blank">{{site.data.keyword.cloudaccesstrailshort}}</a>.</dd>
-  -->
+  
 </dl>
 
 After you create a key in {{site.data.keyword.hscrypto}}, the system returns a key ID that is used to uniquely identify the key resource. You can use this ID value to make API calls to the service.
@@ -79,7 +76,7 @@ Root keys that are managed in a {{site.data.keyword.hscrypto}} service instance 
 
 The following diagram shows a contextual view of envelope encryption.
 
-![The diagram shows a contextual view of envelope encryption.](/image/envelope-encryption.svg "The diagram shows a contextual view of envelope encryption."){: caption="Figure 1. Contextual view of envelope encryption" caption-side="bottom"}
+![The diagram shows a contextual view of envelope encryption.](/images/envelope-encryption.svg "The diagram shows a contextual view of envelope encryption."){: caption="Figure 1. Contextual view of envelope encryption" caption-side="bottom"}
 
 Envelope encryption is treated briefly in the NIST Special Publication 800-57, Recommendation for Key Management. To learn more, see [NIST SP 800-57 Pt. 1 Rev. 4](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0){: external}
 
@@ -93,26 +90,9 @@ The key wrap operation provides both confidentiality and integrity protection fo
 
 The following diagram shows the key wrapping process in action.
 
-![Wrapping data](/image/wrapping-keys.svg "The diagram shows key wrapping in action."){: caption="Figure 2. Wrapping data" caption-side="bottom"}
+![Wrapping data](/images/wrapping-keys.svg "The diagram shows key wrapping in action."){: caption="Figure 2. Wrapping data" caption-side="bottom"}
 
-<!--
-The following table describes the inputs that are needed to perform a key wrap operation:
-<table>
-  <th>Input</th>
-  <th>Description</th>
-  <tr>
-    <td>Root key ID</td>
-    <td>The ID value for the root key that you want to use for wrapping. The root key can be imported into the service, or it can be originated in {{site.data.keyword.hscrypto}} instance. Root keys that are used for wrapping must be 128, 192, or 256 bits so that a wrap request can succeed.</td>
-  </tr>
-  <tr>
-    <td>Plain text</td>
-    <td>Optional: The data encryption key (DEK) that you want to use for data encryption. This value must be base64 encoded. To generate a new DEK, you can omit the <code>plaintext</code> property. A random plaintext (32 bytes) that is rooted in an HSM is generated and is then wrapped.</td>
-  </tr>
-  <caption style="caption-side:bottom;">Table 2. Inputs required for key wrapping in {{site.data.keyword.hscrypto}}</caption>
-</table>
 
-If you send a wrap request without specifying the plaintext to encrypt, the AES-CBC encryption algorithm generates and converts a plaintext to an unintelligible form of data called a ciphertext. This process outputs a 256-bit DEK with new key material. The system then uses an AES key-wrapping algorithm, which wraps the DEK and its key material with the specified root key. A successful wrap operation returns a base64 encoded wrapped DEK that you can store in an {{site.data.keyword.cloud_notm}} app or service.
--->
 
 ## Unwrapping keys
 {: #unwrapping}
@@ -124,7 +104,7 @@ unwrap request to the service. To unwrap a DEK, you specify the ID value of the 
 
 The following diagram shows key unwrapping in action.
 
-![Unwrapping data](/image/unwrapping-keys.svg "The diagram shows key unwrapping in action."){: caption="Figure 3. Unwrapping data" caption-side="bottom"}
+![Unwrapping data](/images/unwrapping-keys.svg "The diagram shows key unwrapping in action."){: caption="Figure 3. Unwrapping data" caption-side="bottom"}
 
 After you send the unwrap request, the system reverses the key wrapping process by using the same AES algorithms. A successful unwrap operation returns the base64 encoded `plaintext` value to your {{site.data.keyword.cloud_notm}} data at rest service.
 
