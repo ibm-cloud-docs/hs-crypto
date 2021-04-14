@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-03-24"
+lastupdated: "2021-04-14"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -24,21 +24,22 @@ subcollection: hs-crypto
 
 
 # Rotating master keys using key part files
-{: #rotate-master-key-cli}
+{: #rotate-master-key-cli-key-part}
 
-You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance on a regular basis to meet industry standards and cryptographic best practices. This topic guides you through the steps to rotate the master key using workstation key part files.
+You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance on a regular basis to meet industry standards and cryptographic best practices. This topic guides you through the steps to rotate the master key using master key part files on your local workstation.
 {: shortdesc}
 
-Make sure that you are assigned the **Manager** or **Crypto unit administrator** service access role to perform TKE CLI operations. For more information about the access management, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
+Rotating the master key reencrypts the keys in key storage using the new master key value. After the keys in key storage are reencrypted, the value in the new master key register is promoted to the current master key register. Before you start rotating the master key, you need to:
 
-Before you start rotating the master key, make sure that you understand {{site.data.keyword.hscrypto}} concepts, such as [master keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-concept), [master key parts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-part-concept), and [signature keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-key-concept), and understand [how a master key is rotated](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro) .
+- Understand {{site.data.keyword.hscrypto}} concepts, such as [master keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-concept), [master key parts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-part-concept), and [signature keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-key-concept), and understand [how a master key is rotated](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
+- Assign the **Manager** or **Crypto unit administrator** service access role to perform TKE CLI operations. For more information about the access management, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
+- Configure all crypto units in the service instance exactly the same.
 
-Rotating the master key reencrypts the keys in key storage using the new master key value. After the keys in key storage are reencrypted, the value in the new master key register is promoted to the current master key register.
-
-For a successful master key rotation, make sure to configure all crypto units in the service instance exactly the same. 
+You can rotate your master key only when PKCS #11 keystores are not enabled in your service instance.
+{: important}
 
 ## Before you begin
-{: #rotate-master-key-cli-prerequisites}
+{: #rotate-master-key-cli-key-part-prerequisites}
 
 Before you start, make sure that you have done the following:
 
@@ -51,12 +52,12 @@ Before you start, make sure that you have done the following:
   {: pre}
 3. The new master key parts are prepared for rotation. For information on how to create a new master key part, see [Create a set of master key parts to use](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step4-create-master-key).
 
-## Rotating master keys
-{: #rotate-master-key-cli-steps}
+## Rotating master keys using key part files
+{: #rotate-master-key-cli-key-part-steps}
 {: help}
 {: support}
 
-To rotate the master key, follow these steps:
+To rotate the master key using key part files on your workstation, follow these steps:
 
 1. Load the new master key parts to the new master key register with the following command:
 
@@ -125,7 +126,7 @@ You have successfully rotated the currently master key with the new master key. 
 If an error occurs during master key rotation, see [Why can't I rotate master keys using key part files](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-part-files).
 
 ## What's next
-{: #rotate-master-key-next}
+{: #rotate-master-key-cli-key-part-next}
 
 - To learn more about master key rotation, check out [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
 - Go to the **Key management service keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.

@@ -279,9 +279,9 @@ Find what you are looking for in the compilation of topics that are available in
 ### Managing master keys
 {: #sitemap_managing_master_keys}
 
-
+- [Rotating master keys using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part)
+- [Rotating master keys using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards)
 - [Rotating master keys using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit)
-- [Rotating master keys using key parts](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-key-parts)
 - [Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit)
 
 
@@ -601,6 +601,11 @@ Find what you are looking for in the compilation of topics that are available in
 [Video: Initializing Hyper Protect Crypto Services with IBM Cloud TKE CLI](https://mediacenter.ibm.com/media/0_z5c589ou){: external}
 
 [Video: Initializing Hyper Protect Crypto Services with smart cards](https://mediacenter.ibm.com/media/1_lo2fmwbb){: external}
+
+
+## Internal adopters
+{: #sitemap_internal_adopters}
+
 
 
 ## Understanding Hyper Protect Crypto Services
@@ -965,17 +970,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite#initialize-hsm-prerequisite-whats-next)
 
 
-## Initializing service instances using recovery crypto units
-{: #sitemap_initializing_service_instances_using_recovery_crypto_units}
-
-
-[Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
-
-[Initializing service instances](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit#initialize-hsm-recovery-crypto-unit-steps)
-
-[What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit#initialize-hsm-recovery-crypto-unit-whats-next)
-
-
 ## Initializing service instances using key part files
 {: #sitemap_initializing_service_instances_using_key_part_files}
 
@@ -996,30 +990,54 @@ Find what you are looking for in the compilation of topics that are available in
 [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-cli-next)
 
 
+## Setting up smart cards and the Management Utilities
+{: #sitemap_setting_up_smart_cards_and_the_management_utilities}
+
+
+[Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities)
+
+[Step 1: Order smart cards and smart card readers](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader)
+* [Ordering smart cards](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card)
+* [Ordering smart card readers](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#ordering-smart-card-readers)
+
+[Step 2: Install the smart card reader driver](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-smart-card-reader-driver)
+
+[Step 3: Install the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-management-utility-application)
+
+[Step 4: Configure smart cards with the Smart Card Utility Program](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#configure-smart-card-utility)
+* [Initializing the certificate authority smart card](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#initialize-ca-smart-card)
+* [Initializing the EP11 smart card](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#initialize-ep11-smart-card)
+
+[What's next](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#prepare-management-utilities-next)
+
+
 ## Initializing service instances using smart cards and the Management Utilities
 {: #sitemap_initializing_service_instances_using_smart_cards_and_the_management_utilities}
 
 
-[Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities)
-* [Step 1: Order smart cards and smart card readers](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader)
-  * [Ordering smart cards](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card)
-  * [Ordering smart card readers](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#ordering-smart-card-readers)
-* [Step 2: Install the smart card reader driver](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-smart-card-reader-driver)
-* [Step 3: Install the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-management-utility-application)
-* [Step 4: Configure smart cards with the Smart Card Utility Program](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#configure-smart-card-utility)
-  * [Initializing the certificate authority smart card](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#initialize-ca-smart-card)
-  * [Initializing the EP11 smart card](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#initialize-ep11-smart-card)
-* [What's next](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#prepare-management-utilities-next)
-
 [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#initialize-hsm-management-utilities-prerequisites)
-* [Loading the master key from the smart cards](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#load-master-key-management-utilities)
-  * [Step 1: Generate the signature keys and master key parts](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step1-generate-keys-management-utilities)
-  * [Step 2: Select the crypto units where the master key is to be loaded](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step2-select-crypto-units-management-utilities)
-  * [Step 3: Add administrators to the selected crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step3-add-administrator-management-utilities)
-  * [Step 4: Set the signature thresholds to exit imprint mode in the selected crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step4-exit-imprint-mode-management-utilities)
-  * [Step 5: Load the master key](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step5-load-master-key-management-utilities)
-* [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#initialize-crypto-utilities-management-utilities-next)
+
+[Before you begin](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#initialize-hsm-management-utilities-prerequisites)
+
+[Loading the master key from the smart cards](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#load-master-key-management-utilities)
+* [Step 1: Generate the signature keys and master key parts](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step1-generate-keys-management-utilities)
+* [Step 2: Select the crypto units where the master key is to be loaded](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step2-select-crypto-units-management-utilities)
+* [Step 3: Add administrators to the selected crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step3-add-administrator-management-utilities)
+* [Step 4: Set the signature thresholds to exit imprint mode in the selected crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step4-exit-imprint-mode-management-utilities)
+* [Step 5: Load the master key](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step5-load-master-key-management-utilities)
+
+[What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#initialize-crypto-utilities-management-utilities-next)
+
+
+## Initializing service instances using recovery crypto units
+{: #sitemap_initializing_service_instances_using_recovery_crypto_units}
+
+
+[Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
+
+[Initializing service instances](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit#initialize-hsm-recovery-crypto-unit-steps)
+
+[What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit#initialize-hsm-recovery-crypto-unit-whats-next)
 
 
 ## Managing instance policies
@@ -1118,14 +1136,19 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_managing_master_keys}
 
 
+[Rotating master keys using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part)
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-prerequisites)
+* [Rotating master keys using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-steps)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-next)
+
+[Rotating master keys using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards)
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards#rotate-master-key-smart-cards-prerequisites)
+* [Rotating master keys using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards#rotate-master-key-smart-cards-steps)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards#rotate-master-key-smart-cards-next)
+
 [Rotating master keys using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit)
 * [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit#rotate-master-key-cli-recovery-crypto-unit-steps)
 * [What's next](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit#rotate-master-key-cli-recovery-crypto-unit-next)
-
-[Rotating master keys using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli)
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli#rotate-master-key-cli-prerequisites)
-* [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli#rotate-master-key-cli-steps)
-* [What's next](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli#rotate-master-key-next)
 
 [Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit)
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit#recover-master-key-prerequisites)
@@ -1441,19 +1464,10 @@ Find what you are looking for in the compilation of topics that are available in
 * [Granting access to key rings in an instance](/docs/hs-crypto?topic=hs-crypto-grant-access-keys#grant-access-key-ring-level)
   * [Granting access to key rings with the console](/docs/hs-crypto?topic=hs-crypto-grant-access-keys#grant-access-key-ring-console)
 
-[Securing connection to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-secure-connection)
-* [Understanding the network access policy](/docs/hs-crypto?topic=hs-crypto-secure-connection#understand-network-access-policies)
-  * [Public and private network access](/docs/hs-crypto?topic=hs-crypto-secure-connection#public-and-private)
-  * [Private network access only](/docs/hs-crypto?topic=hs-crypto-secure-connection#private-only)
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-secure-connection#private-endpoint-prereqs)
-* [Step 1: Configure the private network of {{site.data.keyword.cloud_notm}} on your virtual server](/docs/hs-crypto?topic=hs-crypto-secure-connection#configure-network)
-* [Step 2: Provision a service instance and select the network access](/docs/hs-crypto?topic=hs-crypto-secure-connection#service-endpoint-private-endpoints)
-* [Step 3:  Target the {{site.data.keyword.hscrypto}} private endpoint for the TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-secure-connection#target-tke-private-endpoint)
-* [Step 4: Initialize the service instance](/docs/hs-crypto?topic=hs-crypto-secure-connection#secure-connection-key-ceremony)
-* [Step 5: Target the {{site.data.keyword.hscrypto}} private endpoint for key management service](/docs/hs-crypto?topic=hs-crypto-secure-connection#target-internal-endpoint)
-* [Step 6: Test your private network connection](/docs/hs-crypto?topic=hs-crypto-secure-connection#Test-private-connection)
-* [(Optional) Step 7: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC](/docs/hs-crypto?topic=hs-crypto-secure-connection#create-vpe-gateway)
-* [What's next](/docs/hs-crypto?topic=hs-crypto-secure-connection#secure-connection-next)
+
+## Granting users access to manage EP11 keystores and keys
+{: #sitemap_granting_users_access_to_manage_ep11_keystores_and_keys}
+
 
 [Best practices for setting up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access)
 * [ PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#pkcs11-user-types)
@@ -1470,47 +1484,106 @@ Find what you are looking for in the compilation of topics that are available in
   * [3. Assign the custom roles to the anonymous user service ID](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#3.-assign-the-custom-roles-to-the-anonymous-user-service-id)
 * [ What's next](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#pkcs11-best-practices-next)
 
+
+## Securing connection to {{site.data.keyword.hscrypto}}
+{: #sitemap_securing_connection_to_}
+
+
+[Securing connection to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-secure-connection)
+
+[Understanding the network access policy](/docs/hs-crypto?topic=hs-crypto-secure-connection#understand-network-access-policies)
+* [Public and private network access](/docs/hs-crypto?topic=hs-crypto-secure-connection#public-and-private)
+* [Private network access only](/docs/hs-crypto?topic=hs-crypto-secure-connection#private-only)
+
+[Before you begin](/docs/hs-crypto?topic=hs-crypto-secure-connection#private-endpoint-prereqs)
+
+[Step 1: Configure the private network of {{site.data.keyword.cloud_notm}} on your virtual server](/docs/hs-crypto?topic=hs-crypto-secure-connection#configure-network)
+
+[Step 2: Provision a service instance and select the network access](/docs/hs-crypto?topic=hs-crypto-secure-connection#service-endpoint-private-endpoints)
+
+[Step 3:  Target the {{site.data.keyword.hscrypto}} private endpoint for the TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-secure-connection#target-tke-private-endpoint)
+
+[Step 4: Initialize the service instance](/docs/hs-crypto?topic=hs-crypto-secure-connection#secure-connection-key-ceremony)
+
+[Step 5: Target the {{site.data.keyword.hscrypto}} private endpoint for key management service](/docs/hs-crypto?topic=hs-crypto-secure-connection#target-internal-endpoint)
+
+[Step 6: Test your private network connection](/docs/hs-crypto?topic=hs-crypto-secure-connection#Test-private-connection)
+
+[(Optional) Step 7: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC](/docs/hs-crypto?topic=hs-crypto-secure-connection#create-vpe-gateway)
+
+[What's next](/docs/hs-crypto?topic=hs-crypto-secure-connection#secure-connection-next)
+
+
+## Auditing events for {{site.data.keyword.hscrypto}}
+{: #sitemap_auditing_events_for_}
+
+
 [Auditing events for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-at-events)
-* [Supported events](/docs/hs-crypto?topic=hs-crypto-at-events#at-supported-events)
-  * [Key events](/docs/hs-crypto?topic=hs-crypto-at-events#key-actions)
-  * [Policy events](/docs/hs-crypto?topic=hs-crypto-at-events#policy-actions)
-  * [Import token events](/docs/hs-crypto?topic=hs-crypto-at-events#import-token-actions)
-  * [Registration events](/docs/hs-crypto?topic=hs-crypto-at-events#registration-actions)
-  * [Trusted Key Entry events](/docs/hs-crypto?topic=hs-crypto-at-events#tke-actions)
-  * [KMIP for VMware events](/docs/hs-crypto?topic=hs-crypto-at-events#at-events-kmip)
-* [Viewing events](/docs/hs-crypto?topic=hs-crypto-at-events#at-ui)
-* [Analyzing successful events](/docs/hs-crypto?topic=hs-crypto-at-events#at-events-analyze)
-  * [Common fields](/docs/hs-crypto?topic=hs-crypto-at-events#at-common fields)
-  * [Key action events](/docs/hs-crypto?topic=hs-crypto-at-events#key-action-events)
-  * [Policy events](/docs/hs-crypto?topic=hs-crypto-at-events#policy-at-events)
-  * [Import token events](/docs/hs-crypto?topic=hs-crypto-at-events#import-token-events)
-  * [Registration events](/docs/hs-crypto?topic=hs-crypto-at-events#registration-events)
-  * [Trusted Key Entry events](/docs/hs-crypto?topic=hs-crypto-at-events#tke-events-success)
-* [Analyzing failed events](/docs/hs-crypto?topic=hs-crypto-at-events#at-events-analyze-failed)
-  * [Unable to delete a key](/docs/hs-crypto?topic=hs-crypto-at-events#delete-key-failure)
-  * [Unable to authenticate while make a request](/docs/hs-crypto?topic=hs-crypto-at-events#authenticate-failure)
-  * [Unable to view or list keys in a service instance](/docs/hs-crypto?topic=hs-crypto-at-events#list-keys-failure)
-  * [Lifecycle action on a key with registrations did not complete](/docs/hs-crypto?topic=hs-crypto-at-events#protected-resource-key-failure)
-  * [Unable to perform Trusted Key Entry actions](/docs/hs-crypto?topic=hs-crypto-at-events#tke-actions-failure)
-* [Event severity](/docs/hs-crypto?topic=hs-crypto-at-events#event-severity)
+
+[Supported events](/docs/hs-crypto?topic=hs-crypto-at-events#at-supported-events)
+* [Key events](/docs/hs-crypto?topic=hs-crypto-at-events#key-actions)
+* [Policy events](/docs/hs-crypto?topic=hs-crypto-at-events#policy-actions)
+* [Import token events](/docs/hs-crypto?topic=hs-crypto-at-events#import-token-actions)
+* [Registration events](/docs/hs-crypto?topic=hs-crypto-at-events#registration-actions)
+* [Trusted Key Entry events](/docs/hs-crypto?topic=hs-crypto-at-events#tke-actions)
+* [KMIP for VMware events](/docs/hs-crypto?topic=hs-crypto-at-events#at-events-kmip)
+
+[Viewing events](/docs/hs-crypto?topic=hs-crypto-at-events#at-ui)
+
+[Analyzing successful events](/docs/hs-crypto?topic=hs-crypto-at-events#at-events-analyze)
+* [Common fields](/docs/hs-crypto?topic=hs-crypto-at-events#at-common fields)
+* [Key action events](/docs/hs-crypto?topic=hs-crypto-at-events#key-action-events)
+* [Policy events](/docs/hs-crypto?topic=hs-crypto-at-events#policy-at-events)
+* [Import token events](/docs/hs-crypto?topic=hs-crypto-at-events#import-token-events)
+* [Registration events](/docs/hs-crypto?topic=hs-crypto-at-events#registration-events)
+* [Trusted Key Entry events](/docs/hs-crypto?topic=hs-crypto-at-events#tke-events-success)
+
+[Analyzing failed events](/docs/hs-crypto?topic=hs-crypto-at-events#at-events-analyze-failed)
+* [Unable to delete a key](/docs/hs-crypto?topic=hs-crypto-at-events#delete-key-failure)
+* [Unable to authenticate while make a request](/docs/hs-crypto?topic=hs-crypto-at-events#authenticate-failure)
+* [Unable to view or list keys in a service instance](/docs/hs-crypto?topic=hs-crypto-at-events#list-keys-failure)
+* [Lifecycle action on a key with registrations did not complete](/docs/hs-crypto?topic=hs-crypto-at-events#protected-resource-key-failure)
+* [Unable to perform Trusted Key Entry actions](/docs/hs-crypto?topic=hs-crypto-at-events#tke-actions-failure)
+
+[Event severity](/docs/hs-crypto?topic=hs-crypto-at-events#event-severity)
+
+
+## {{site.data.keyword.mon_short}} operational metrics
+{: #sitemap__operational_metrics}
+
 
 [{{site.data.keyword.mon_short}} operational metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics)
-* [What metrics are available for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-operational-metrics#hpcs-metrics-available)
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-operational-metrics#operational-metrics-considerations)
-* [Connecting {{site.data.keyword.mon_short}} with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-operational-metrics#connect-monitoring-hpcs)
-  * [Configure a {{site.data.keyword.mon_short}} instance for metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics#configure-monitoring)
-* [{{site.data.keyword.hscrypto}} Metrics Details](/docs/hs-crypto?topic=hs-crypto-operational-metrics#hpcs-metrics)
-  * [API Hits](/docs/hs-crypto?topic=hs-crypto-operational-metrics#api-hits)
-* [Latency](/docs/hs-crypto?topic=hs-crypto-operational-metrics#latency)
-* [Attributes for Segmentation](/docs/hs-crypto?topic=hs-crypto-operational-metrics#attributes-for-segmentation)
-* [Metrics Filter Attributes](/docs/hs-crypto?topic=hs-crypto-operational-metrics#metrics-filter-attributes)
-* [Default Dashboards](/docs/hs-crypto?topic=hs-crypto-operational-metrics#default-dashboards)
-  * [How to find the {{site.data.keyword.mon_short}} dashboard for your {{site.data.keyword.hscrypto}} service instance using {{site.data.keyword.hscrypto}} console](/docs/hs-crypto?topic=hs-crypto-operational-metrics#monitor-dashboard-console)
-  * [How to find the {{site.data.keyword.mon_short}} dashboard for your {{site.data.keyword.hscrypto}} service instance using observability page](/docs/hs-crypto?topic=hs-crypto-operational-metrics#monitor-dashboard-observability)
-* [Setting Alerts](/docs/hs-crypto?topic=hs-crypto-operational-metrics#set-monitor-alerts)
+
+[What metrics are available for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-operational-metrics#hpcs-metrics-available)
+
+[Before you begin](/docs/hs-crypto?topic=hs-crypto-operational-metrics#operational-metrics-considerations)
+
+[Connecting {{site.data.keyword.mon_short}} with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-operational-metrics#connect-monitoring-hpcs)
+* [Configure a {{site.data.keyword.mon_short}} instance for metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics#configure-monitoring)
+
+[{{site.data.keyword.hscrypto}} Metrics Details](/docs/hs-crypto?topic=hs-crypto-operational-metrics#hpcs-metrics)
+* [API Hits](/docs/hs-crypto?topic=hs-crypto-operational-metrics#api-hits)
+
+[Latency](/docs/hs-crypto?topic=hs-crypto-operational-metrics#latency)
+
+[Attributes for Segmentation](/docs/hs-crypto?topic=hs-crypto-operational-metrics#attributes-for-segmentation)
+
+[Metrics Filter Attributes](/docs/hs-crypto?topic=hs-crypto-operational-metrics#metrics-filter-attributes)
+
+[Default Dashboards](/docs/hs-crypto?topic=hs-crypto-operational-metrics#default-dashboards)
+* [How to find the {{site.data.keyword.mon_short}} dashboard for your {{site.data.keyword.hscrypto}} service instance using {{site.data.keyword.hscrypto}} console](/docs/hs-crypto?topic=hs-crypto-operational-metrics#monitor-dashboard-console)
+* [How to find the {{site.data.keyword.mon_short}} dashboard for your {{site.data.keyword.hscrypto}} service instance using observability page](/docs/hs-crypto?topic=hs-crypto-operational-metrics#monitor-dashboard-observability)
+
+[Setting Alerts](/docs/hs-crypto?topic=hs-crypto-operational-metrics#set-monitor-alerts)
+
+
+## Managing security and compliance with {{site.data.keyword.hscrypto}}
+{: #sitemap_managing_security_and_compliance_with_}
+
 
 [Managing security and compliance with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance)
-* [Monitoring security and compliance posture with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#monitor-certificate-manager)
+
+[Monitoring security and compliance posture with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#monitor-certificate-manager)
 
 
 ## High availability and disaster recovery
@@ -1799,6 +1872,11 @@ Find what you are looking for in the compilation of topics that are available in
 [Why can't I rotate master keys using key part files?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-part-files)
 
 [Why can't I rotate master keys using recovery crypto units?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-recovery-crypto-units)
+
+
+## Error messages
+{: #sitemap_error_messages}
+
 
 
 ## Getting help and support
