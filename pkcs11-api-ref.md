@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020, 2021
-lastupdated: "2021-04-13"
+lastupdated: "2021-02-09"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -148,7 +148,71 @@ Not all PKCS #11 functions are currently implemented by {{site.data.keyword.hscr
 
 A mechanism is referred to as a process to implement a cryptographic operation. It can vary depending on the level of firmware in the IBM 4768 crypto card (also referred to as Crypto Express 6S). The following table shows the mechanisms that are currently supported and how they relate to common *Cryptoki* function categories.
 
-
+<!--
+|Mechanism|Encrypt and decrypt|Sign and verify|Sign recover and verify recover|Digest|Generate key or generate key pair|Wrap and unwrap|Derive|
+| --------------- | --------------- | --------------- | --------------- | --------------- | --------------- | --------------- | --------------- |
+| CKM_RSA_PKCS_KEY_PAIR_GEN  | N/A  | N/A  |  N/A |  N/A | Yes | N/A  | N/A  |
+| CKM_RSA_X9_31_KEY_PAIR_GEN| N/A  | N/A  | N/A  |  N/A | Yes | N/A  | N/A  |
+| CKM_RSA_PKCS | Yes (Single-part operations only) | Yes (Single-part operations only) | Yes | N/A  |  N/A | Yes   |  N/A |
+| CKM_RSA_PKCS_PSS  | N/A | Yes (Single-part operations only) |  N/A | N/A  | N/A  | N/A |  N/A |
+| CKM_RSA_X9_31  | N/A | Yes (Single-part operations only) | N/A | N/A | N/A | N/A | N/A |
+| CKM_SHA1_RSA_PKCS  | N/A | Yes   | N/A | N/A | N/A | N/A | N/A |
+| CKM_SHA256_RSA_PKCS  | N/A | Yes  | N/A | N/A | N/A | N/A | N/A |
+| CKM_SHA224_RSA_PKCS  | N/A | Yes  | N/A | N/A | N/A | N/A | N/A |
+| CKM_SHA384_RSA_PKCS  | N/A | Yes | N/A | N/A | N/A | N/A | N/A |
+| CKM_SHA512_RSA_PKCS  | N/A | Yes  | N/A | N/A | N/A | N/A | N/A |
+| CKM_SHA1_RSA_PKCS_PSS| N/A | Yes | N/A | N/A | N/A | N/A | N/A |
+| CKM_SHA224_RSA_PKCS_PSS| N/A | Yes   | N/A | N/A | N/A | N/A | N/A |
+| CKM_SHA256_RSA_PKCS_PSS| N/A | Yes | N/A | N/A | N/A | N/A | N/A |
+| CKM_SHA384_RSA_PKCS_PSS| N/A | Yes  | N/A | N/A | N/A | N/A | N/A |
+| CKM_SHA512_RSA_PKCS_PSS| N/A | Yes | N/A | N/A | N/A | N/A | N/A |
+| CKM_SHA1_RSA_X9_31| N/A | Yes | N/A | N/A | N/A | N/A | N/A |
+| CKM_DSA_KEY_PAIR_GEN | N/A | N/A | N/A | N/A | Yes | N/A | N/A |
+| CKM_DSA_PARAMETER_GEN | N/A | N/A | N/A | N/A | Yes | N/A | N/A |
+| CKM_DSA| N/A | Yes (Single-part operations only) | N/A | N/A | N/A | N/A | N/A |
+| CKM_DSA_SHA1| N/A | Yes | N/A | N/A | N/A | N/A | N/A |
+| CKM_EC_KEY_PAIR_GEN (CKM_ECDSA_KEY_PAIR_GEN) | N/A | N/A  | N/A | N/A | Yes | N/A | N/A |
+| CKM_ECDSA | N/A | Yes (Single-part operations only) | N/A | N/A | N/A | N/A | N/A |
+| CKM_ECDSA_SHA1 | N/A | Yes | N/A | N/A | N/A | N/A | N/A |
+| CKM_ECDSA_SHA224| N/A | Yes | N/A | N/A | N/A | N/A | N/A |
+| CKM_ECDSA_SHA256| N/A | Yes | N/A | N/A | N/A | N/A | N/A |
+| CKM_ECDSA_SHA384| N/A | Yes | N/A | N/A | N/A | N/A | N/A |
+| CKM_ECDSA_SHA512| N/A | Yes| N/A | N/A | N/A | N/A | N/A |
+| CKM_ECDH1_DERIVE| N/A | N/A | N/A | N/A | N/A | N/A | Yes |
+| CKM_DH_PKCS_KEY_PAIR_GEN| N/A | N/A | N/A | N/A | Yes | N/A | N/A |
+| CKM_DH_PKCS_PARAMETER_GEN| N/A | N/A | N/A | N/A | Yes | N/A | N/A |
+| CKM_DH_PKCS_DERIVE |   N/A   | N/A | N/A | N/A | N/A | N/A | Yes |
+| CKM_GENERIC_SECRET_KEY_GEN | N/A | N/A | N/A | N/A | Yes | N/A | N/A |
+| CKM_AES_KEY_GEN| N/A | N/A | N/A | N/A | Yes | N/A | N/A |
+| CKM_AES_ECB | Yes | N/A | N/A | N/A | N/A | Yes | N/A |
+| CKM_AES_CBC | Yes | N/A | N/A | N/A | N/A | Yes  | N/A |
+| CKM_AES_CBC_PAD | Yes  | N/A | N/A | N/A | N/A | Yes | N/A |
+| CKM_DES3_ECB_ENCRYPT_DATA | N/A | N/A | N/A | N/A | N/A | N/A | Yes |
+| CKM_DES2_KEY_GEN | N/A | N/A | N/A | N/A | Yes | N/A | N/A |
+| CKM_DES3_KEY_GEN| N/A | N/A | N/A | N/A | Yes | N/A | N/A |
+| CKM_DES3_ECB | Yes | N/A | N/A | N/A | N/A | Yes | N/A |
+| CKM_DES3_CBC | Yes  |   N/A| N/A | N/A | N/A | Yes    | N/A |
+| CKM_DES3_CBC_PAD| Yes | N/A | N/A | N/A | N/A | Yes  | N/A |
+| CKM_SHA_1 | N/A | N/A | N/A | Yes | N/A |   N/A  | N/A |
+| CKM_SHA1_HMAC | N/A | Yes | N/A | N/A | N/A | N/A | N/A |
+| CKM_SHA1_KEY_DERIVATION | N/A | N/A | N/A | N/A | N/A | N/A | Yes |
+| CKM_SHA224 |  N/A  | N/A | N/A | Yes | N/A | N/A | N/A |
+| CKM_SHA224_HMAC | N/A | Yes   | N/A | N/A | N/A | N/A | N/A |
+| CKM_SHA224_KEY_DERIVATION| N/A | N/A | N/A | N/A | N/A | N/A | Yes |
+| CKM_SHA256 | N/A |  N/A   | N/A | Yes | N/A | N/A | N/A |
+| CKM_SHA256_HMAC| N/A | Yes  | N/A | N/A | N/A | N/A | N/A |
+| CKM_SHA256_KEY_DERIVATION | N/A | N/A | N/A | N/A | N/A | N/A | Yes |
+| CKM_SHA384| N/A |  N/A    | N/A | Yes | N/A | N/A | N/A |
+| CKM_SHA384_HMAC | N/A | Yes  | N/A | N/A | N/A | N/A | N/A |
+| CKM_SHA384_KEY_DERIVATION| N/A |  N/A   | N/A | N/A | N/A | N/A | Yes |
+| CKM_SHA512| N/A | N/A | N/A | Yes | N/A | N/A | N/A |
+| CKM_SHA512_HMAC|   N/A   | Yes  | N/A | N/A | N/A | N/A | N/A |
+| CKM_SHA512_KEY_DERIVATION| N/A | N/A | N/A | N/A | N/A | N/A | Yes |
+| CKM_SHA512_224| N/A | N/A | N/A | Yes | N/A | N/A | N/A |
+| CKM_SHA512_224_HMAC | N/A | Yes  | N/A | N/A | N/A | N/A | N/A |
+| CKM_SHA512_256 | N/A | N/A | N/A | Yes | N/A | N/A | N/A |
+| CKM_SHA512_256_HMAC | N/A | Yes  | N/A | N/A | N/A | N/A | N/A |
+-->
 
 | Function group | Supported mechanisms |
 |--------------|-----------------------|
@@ -178,7 +242,37 @@ A mechanism is referred to as a process to implement a cryptographic operation. 
 {: #pkcs-attribute-list}
 
 PKCS #11 attributes define object characteristics that set up how an object can be used and accessed. The following table shows the supported attributes and their relationship to the various supported key types.
-
+<!--
+| Attribute Name                       | EC private keys | EC public keys | RSA private keys | RSA public keys | DH private keys | DH public keys | DSA private keys | DSA public keys | AES keys| DES keys | Generic keys |
+| ------------------------------------ | ---------- | --------- | ----------- | ---------- | ---------- | --------- | ----------- | ---------- | --- | --- | --- | ------- |
+| CKA_CLASS                           | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_TOKEN                           | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_PRIVATE                         | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_LABEL                           | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_TRUSTED                         |    N/A        | Yes         |    N/A         | Yes          |    N/A        | Yes         |    N/A         | Yes          | Yes   | Yes   | Yes       |
+| CKA_KEY_TYPE                       | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_SUBJECT                         | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          |   N/A  |  N/A   |   N/A  |
+| CKA_ID                              | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_SENSITIVE                       | Yes          |       N/A    | Yes           |       N/A     | Yes          |    N/A       | Yes           |     N/A       | Yes   | Yes   | Yes       |
+| CKA_ENCRYPT                         |    N/A        | Yes         |      N/A       | Yes          |      N/A      | Yes         |        N/A     | Yes          | Yes   | Yes   | Yes       |
+| CKA_DECRYPT                         | Yes          |     N/A      | Yes           |     N/A       | Yes          |      N/A     | Yes           |       N/A     | Yes   | Yes   | Yes       |
+| CKA_WRAP                            |      N/A      | Yes         |      N/A       | Yes          |      N/A      | Yes         |     N/A        | Yes          | Yes   | Yes   | Yes       |
+| CKA_UNWRAP                          | Yes          |      N/A     | Yes           |      N/A      | Yes          |    N/A       | Yes           |     N/A       | Yes   | Yes   | Yes       |
+| CKA_SIGN                            | Yes          |      N/A     | Yes           |      N/A      | Yes          |     N/A      | Yes           |      N/A      | Yes   | Yes   | Yes       |
+| CKA_VERIFY                          |     N/A       | Yes         |     N/A        | Yes          |      N/A      | Yes         |     N/A        | Yes          | Yes   | Yes   | Yes       |
+| CKA_DERIVE                          | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_START_DATE                     | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_END_DATE                       | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_MODULUS                         |        N/A    |     N/A      | Yes           |      N/A      |     N/A       |     N/A      |      N/A       |     N/A       |  N/A   |   N/A  |  N/A   |
+| CKA_MODULUS_BITS                   |       N/A     |       N/A    |      N/A       |      Yes      |      N/A      |      N/A     |     N/A        |     N/A       |  N/A   |   N/A  |      N/A  |
+| CKA_PUBLIC_EXPONENT                |     N/A       |     N/A      | Yes           |       N/A     |       N/A     |     N/A      |      N/A       |     N/A       |   N/A  |   N/A  |  N/A   |
+| CKA_VALUE_LEN                      |        N/A    |       N/A    |     N/A        |       N/A     |        N/A    |    N/A       |     N/A        |     N/A       | Yes   |    N/A |   N/A  |
+| CKA_EXTRACTABLE                     | Yes          |       N/A    | Yes           |     N/A       | Yes          |      N/A     | Yes           |       N/A     | Yes   | Yes   | Yes       |
+| CKA_LOCAL                           | Yes          | Yes         | Yes           | Yes          | Yes          | Yes         | Yes           | Yes          | Yes   | Yes   | Yes       |
+| CKA_EC_PARAMS (CKA_ECDSA_PARAMS) | Yes          | Yes         |      N/A       |        N/A    |         N/A   |      N/A     |      N/A       |    N/A        |   N/A  |   N/A  |   N/A  |
+| CKA_EC_POINT                       |       N/A     | Yes         |      N/A       |     N/A       |       N/A     |    N/A       |      N/A       |    N/A        |  N/A   |  N/A   |   N/A  |
+| CKA_WRAP_WITH_TRUSTED             | Yes          |       N/A    | Yes           |     N/A       | Yes          |     N/A      | Yes           | N/A      | Yes   | Yes   | Yes       |
+-->
 
 | Attribute | Description | Supported key types |
 |--------------|-----------------------|--------|
@@ -243,8 +337,7 @@ The following curves are supported for mechanisms that are related to digital as
 |SLIP10 |CKM_IBM_BTC_DERIVE| [Standards for Efficient Cryptography (SEC) curves](https://www.secg.org/sec2-v2.pdf){: external}| <ul><li>secp256k1</li></ul>|
 |SLIP10 |CKM_IBM_BTC_DERIVE|[Edwards curves](https://tools.ietf.org/html/rfc8032){: external} | <ul><li>Ed25519</li></ul>|
 |EdDSA |CKM_IBM_ED25519_SHA512| [Edwards curves](https://tools.ietf.org/html/rfc8032){: external} | <ul><li>Ed25519</li></ul>|
-|Schnorr |ECSG_IBM_ECSDSA_S256| <ul><li>[Standards for Efficient Cryptography (SEC) curves](https://www.secg.org/sec2-v2.pdf){: external}</li><li>[Regular Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}</li><li>[Twisted Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}</li></ul> | <ul><li>secp256r1</li><li>secp256k1</li><li>BP-256R, also known as brainpoolP256r1</li><li>BP-256T, also known as brainpoolP256t1</li></ul>|
-|Schnorr-Zilliqa |ECSG_IBM_ECSDSA_COMPR_MULTI| <ul><li>[Standards for Efficient Cryptography (SEC) curves](https://www.secg.org/sec2-v2.pdf){: external}</li> <li>[Regular Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}</li> <li>[Twisted Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}</li>/ul> | <ul><li>secp256r1</li><li>secp256k1</li><li>BP-256R, also known as brainpoolP256r1</li><li>BP-256T, also known as brainpoolP256t1</li></ul>|
+<!-- |EdDSA |CKM_IBM_ED448_SHA3| [Edwards curves](https://tools.ietf.org/html/rfc8032){: external} | <ul><li>Ed448</li></ul>| -->
 {: caption="Table 5. Supported curve types for encrypting digital assets and signatures" caption-side="bottom"}
 
 ## Standard PKCS #11 API reference

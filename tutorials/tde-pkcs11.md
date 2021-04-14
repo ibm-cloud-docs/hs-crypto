@@ -43,11 +43,15 @@ One important question when planning for TDE therefore is: Where do you keep the
 
 This tutorial shows how you can keep complete and exclusive control of your TDE master encryption keys by storing them in {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}. For this purpose, you need to use the PKCS #11 integration feature of {{site.data.keyword.hscrypto}}.
 
+<!-- {{site.data.keyword.hscrypto}} allows for secure key generation and storage and takes advantage of an industry-leading, customer-managed dedicated hardware security module (HSM). This is the only public-cloud HSM that offers FIPS 140-2 level 4 data protection, which means that it’s highly tamper resistant (it can sense any attempt to compromise the HSM via physical, chemical, or environmental changes and immediately responds by auto-erasing the keys stored, which then invalidates the data that the keys protect).
 
+{{site.data.keyword.hscrypto}} offers Keep Your Own Key (KYOK) capabilities, that means you and your authorized users have exclusive and complete key control — even {{site.data.keyword.cloud_notm}} admins cannot access your encryption keys. Store your keys here, and you can be sure that they’re kept safe.
+
+With the PKCS #11 integration feature, {{site.data.keyword.hscrypto}} now supports the industry-standard PKCS #11 API. -->
 
 With this tutorial, you are going to implement the setup that is depicted in the following illustration.
 
-![Transparent Database Encryption using the standard PKCS #11 API](../images/pkcs_database.svg "Transparent Database Encryption using the standard PKCS #11 API"){: caption="Figure 1. Transparent Database Encryption using the standard PKCS #11 API" caption-side="bottom"}
+![Transparent Database Encryption using the standard PKCS #11 API](../image/pkcs_database.svg "Transparent Database Encryption using the standard PKCS #11 API"){: caption="Figure 1. Transparent Database Encryption using the standard PKCS #11 API" caption-side="bottom"}
 
 In this setup, the Oracle Database is to call operations to manage the TDE master encryption keys on the {{site.data.keyword.hscrypto}} PKCS #11 library. The {{site.data.keyword.hscrypto}} PKCS #11 library interacts with your {{site.data.keyword.hscrypto}} instance, which provides the best of class technology for storing and managing your TDE master encryption keys.
 

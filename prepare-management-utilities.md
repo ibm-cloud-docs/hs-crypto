@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-04-01"
+lastupdated: "2021-03-08"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -29,7 +29,10 @@ With smart cards and the [{{site.data.keyword.IBM}} {{site.data.keyword.hscrypto
 
 The following diagram gives you an overview of steps you need to take to initialize service instances with smart cards and the Management Utilities. This topic covers the steps to set up the Management Utilities. For the detailed instructions on initialize the service instance, see [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
-![The task flow of service instance initialization with smart cards and the Management Utilities](/images/hsm_initialization_flow_smartcard.svg "The task flow of service instance initialization with smart cards and the Management Utilities"){: caption="Figure 1. Task flow of service instance initialization with smart cards and the Management Utilities" caption-side="bottom"}
+![The task flow of service instance initialization with smart cards and the Management Utilities](/image/hsm_initialization_flow_smartcard.svg "The task flow of service instance initialization with smart cards and the Management Utilities"){: caption="Figure 1. Task flow of service instance initialization with smart cards and the Management Utilities" caption-side="bottom"}
+
+Initializing a service instance through a private network using smart cards and the Management Utilities is currently not supported.
+{: note}
 
 ## Step 1: Order smart cards and smart card readers
 {: #order-smart-card-and-reader}
@@ -73,11 +76,61 @@ You need to install the Identiv SPR332 V2 smart card reader driver on your local
 You need to take the [smart card considerations](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy) into account when you plan your security policy for your workstation and smart card readers. Otherwise, your smart cards might be exposed to [some vulnerabilities](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy#smart-card-vulnerabilities).
 {: note}
 
+<!--
+Currently, you can choose to install it on the Microsoft Windows&reg; 10 or the Linux&reg; operating system.
 
+### Installing smart card reader driver on Windows 10
+{: #reader-driver-windows}
+
+By default, the Windows 10 operating system uses the Microsoft USB CCID smart card reader driver, which, however, does not support secure personal identification number (PIN) entry. To upgrade the driver to Identiv SPR332 V2, take the following steps:
+
+1. Plug the Identiv SPR332 V2 smart card readers into the USB ports on the Windows workstation.
+2. Open the Device Manager by typing **Device Manager** in the search box on the Windows taskbar and selecting it from the menu.
+3. Expand **Smart card readers** in Device Manager. If any entry says **Microsoft Usbccid Smartcard Reader (WUDF)**, select **Update driver** and double click **Search automatically for updated driver software**.
+4. Repeat step 3 for all entries under the **Smart card readers** section.
+5. Check and update the firmware level of the smart card driver to 7.06 by downloading **SPR332v2 Firmware Update 7.06** from the [Identiv SPR332 v2.0 Support website](https://support.identiv.com/spr332/){: external}.
+
+  Firmware prior to 7.06 might cause misinterpretation of some PIN entry actions, such as cancellation or time-out.
+
+### Installing smart card reader driver on Linux
+{: #reader-driver-linux}
+-->
 
 Before you install the smart card reader driver on a Linux operating system, download and extract the driver package from the [Identiv SPR332 v2.0 Support website](https://support.identiv.com/spr332/){: external}. And then, install the smart card reader driver by completing the following steps:
 
+<!--depending on your Linux distributions:
 
+- Fedora 30
+
+  1. Install the `pcsc-lite` package with the following command:
+
+    ```
+    sudo dnf install pcsc-lite
+    ```
+    {:pre}
+
+  2. Install the `libusb` package with the following command:
+
+    ```
+    sudo dnf install libusb
+    ```
+    {:pre}
+
+  3. Run the `install.sh` script, which is included in the downloaded driver package.
+
+- openSUSE Leap 15.1
+
+  1. Install the `pcsc-ccid` package with the following command:
+
+    ```
+    sudo zypper install pcsc-ccid
+    ```
+    {:pre}
+
+  2. Run the `install.sh` script, which is included in the downloaded driver package.
+
+  3. Restart the system to restart the `pcsc` daemon.
+-->
 
 - Red Hat Enterprise Linux 8.0.0
 
@@ -120,14 +173,36 @@ Before you install the smart card reader driver on a Linux operating system, dow
     ```
     {: pre}
 
+<!--
+- Ubuntu 18.04.3 LTS
 
+  1. Install the `pcscd` package with the following command:
+
+    ```
+    sudo apt install pcscd
+    ```
+    {:pre}
+
+  2. Run the `install.sh` script, which is included in the downloaded driver package.
+-->
 
 ## Step 3: Install the Management Utilities
 {: #install-management-utility-application}
 
 Two applications are provided as part of the Management Utilities: the [Smart Card Utility Program](/docs/hs-crypto?topic=hs-crypto-understand-concepts#smart-card-utility-concept) and the [Trusted Key Entry (TKE) application](/docs/hs-crypto?topic=hs-crypto-understand-concepts#tke-client-concept). The Smart Card Utility Program allows you to initialize the smart cards to use. The TKE application uses the smart cards to load master keys in service instances.
 
+<!--
+### Installing the Management Utilities on Windows 10
+{: #install-application-windows}
 
+To install the utilities on Windows 10, complete the following steps:
+
+1. Download the latest installation file `cloudtke.exe` from [GitHub](https://github.com/IBM-Cloud/hpcs-management-utilities/){:external} to your workstation.
+2. In the directory that the downloaded installation file is located, double click the file to install.
+
+### Installing the Management Utilities on Linux
+{: #install-application-linux}
+-->
 
 To install the applications on Red Hat Enterprise Linux&reg; 8.0.0, complete the following steps:
 
@@ -239,7 +314,17 @@ To create and initialize an EP11 smart card, follow these steps:
 
 Your EP11 smart cards are created and personalized.
 
+<!--
+### Unblocking an EP11 smart card
+{: #unblock-ep11-smart-card}
 
+If you enter a wrong PIN for an EP11 smart card continuously for three times, the EP11 smart card becomes blocked. You need to use the certificate authority smart card that sets the EP11 smart card zone to unblock the EP11 smart card.
+
+1. Select **EP11 Smart Card** &gt; **Unblock EP11 smart card** from the menu.
+2. Insert the certificate authority smart card associated with the EP11 smart card in smart card reader 1, and click **OK**.
+3. Enter the PIN of the certificate authority smart card on the smart card reader PIN pad.
+4. Insert the EP11 smart card that you want to unblock in smart card reader 2, and click **OK**.
+-->
 
 ## What's next
 {: #prepare-management-utilities-next}

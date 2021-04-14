@@ -62,7 +62,7 @@ The PKCS #11 and GREP11 APIs utilize gRPC to allow you to perform remote cryptog
 
 Both the PKCS #11 API and the GREP11 API access the EP11 library enabled by the {{site.data.keyword.hscrypto}} cloud HSM to execute cryptographic functions. The following diagram illustrates the two options to interact with the cloud HSM.
 
-![Performing cryptographic operations with the PKCS #11 API or the GREP11 API](/images/pkcs-vs-grep11.svg "Performing cryptographic operations with the PKCS #11 API or the GREP11 API"){: caption="Figure 1. Performing cryptographic operations with PKCS #11 API or GREP11 API" caption-side="bottom"}
+![Performing cryptographic operations with the PKCS #11 API or the GREP11 API](/image/pkcs-vs-grep11.svg "Performing cryptographic operations with the PKCS #11 API or the GREP11 API"){: caption="Figure 1. Performing cryptographic operations with PKCS #11 API or GREP11 API" caption-side="bottom"}
 
 Comparing with the GREP11 API, the implementation of the standard PKCS #11 API enables portable applications and provides a wider range of cryptographic operations. The following table shows the main differences between the two options.
 

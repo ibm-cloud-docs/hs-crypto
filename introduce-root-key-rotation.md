@@ -79,11 +79,11 @@ When you rotate a root key in {{site.data.keyword.hscrypto}}, you're not charged
 Behind the scenes, the {{site.data.keyword.hscrypto}} key management API drives the key rotation process.
 
 The following diagram shows a contextual view of the key rotation functionality.
-![The diagram shows a contextual view of key rotation.](/images/key_rotation_min.svg "Key rotation"){: caption="Figure 1. Key rotation" caption-side="bottom"}
+![The diagram shows a contextual view of key rotation.](/image/key_rotation_min.svg "Key rotation"){: caption="Figure 1. Key rotation" caption-side="bottom"}
 
 With each rotation request, {{site.data.keyword.hscrypto}} associates new key material with your root key.
 
-![The diagram shows a micro view the root key stack.](/images/root_key_stack_min.svg "Root key stack"){: caption="Figure 2. Root key stack" caption-side="bottom"}
+![The diagram shows a micro view the root key stack.](/image/root_key_stack_min.svg "Root key stack"){: caption="Figure 2. Root key stack" caption-side="bottom"}
 
 To learn how to use the {{site.data.keyword.hscrypto}} key management API to rotate your root keys, see [Rotating keys](/docs/hs-crypto?topic=hs-crypto-rotate-keys).
 {: tip}

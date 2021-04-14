@@ -104,7 +104,7 @@ If you want to learn detailed steps on how to initialize a {{site.data.keyword.h
   <div class="clearBox"></div>
 </div>
 
-
+<!-- the following is shown on the dashboard-->
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, built on FIPS 140-2 Level 4-certified hardware, allows you to take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. This tutorial guides you how to initialize your service instance by loading your master key, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the Enterprise PKCS #11 over gRPC (GREP11) API.
 {: hide-in-docs}
@@ -389,7 +389,7 @@ Follow these steps:
 2. Enable a private endpoint for your {{site.data.keyword.hscrypto}} instance. For detailed instructions, see [Securing connection to Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-secure-connection).
 3. Create a {{site.data.keyword.hscrypto}} VPE gateway for your VPC instance. For detailed instructions, see [Creating an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
 
-
+<!-- The following is shown in docs app-->
 
 ## Before you begin
 {: #get-started-prerequisites}
@@ -706,5 +706,38 @@ Follow these steps:
 
 <br>
 <p class="hide-dashboard" style="background-color: #e0e0e0; border: 1px solid #161616; padding: 10px; font-weight: bold">
-<img src="/images/survey.svg" alt="survey" style="vertical-align:middle"> Let us know your feedback by taking a <a href="https://surveys.hotjar.com/587f4609-7eeb-48cb-85dc-95f81906513b" target="_blank">one-minute survey</a>.
+<img src="/image/survey.svg" alt="survey" style="vertical-align:middle"> Let us know your feedback by taking a <a href="https://surveys.hotjar.com/587f4609-7eeb-48cb-85dc-95f81906513b" target="_blank">one-minute survey</a>.
 </p>
+
+<!-- ## Installing ACSP client libraries -->
+
+<!-- You can access {{site.data.keyword.hscrypto}} via an Advanced Cryptography Service Provider (ACSP) client. Complete the following steps to install the ACSP client libraries in your local environment. -->
+
+<!-- 1. Download the installation package from the [GitHub repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){: external}. In the **packages** folder, choose the installation package file that is suitable for your operation system and CPU architecture. For example, for Ubuntu on x86, choose `acsp-pkcs11-client_1.5-3.5_amd64.deb`.
+2. Install the package to install the ACSP client libraries with the `dpkg` command. For example, `dpkg -i acsp-pkcs11-client_1.5-3.5_amd64.deb`. -->
+
+<!-- ## Configuring ACSP client -->
+
+<!-- At the current stage, {{site.data.keyword.hscrypto}} provides only self-signed certificates.
+
+You need to configure the ACSP client to enable a proper secure communication channel (mutual TLS) to your service instance in the cloud. -->
+
+<!-- 1. In your {{site.data.keyword.hscrypto}} service instance in {{site.data.keyword.cloud_notm}}, select **Manage** from the left navigator.
+2. On the "Manage" screen, click the **Download Config** button to download the `acsp_client_credentials.uue` file.
+3. Copy the `acsp_client_credentials.uue` file to the `/opt/ibm/acsp-pkcs11-client/config` directory in your local environment.
+4. In the `/opt/ibm/acsp-pkcs11-client/config` directory, decode the file with the following command:
+       `base64 --decode acsp_client_credentials.uue > acsp_client_credentials.tar`
+5. Extract the client credentials file with the following command:
+       `tar xf acsp_client_credentials.tar`
+6. Move the `server-config` files into the default place with the following command:
+       `mv server-config/* ./`
+7. Rename the client credentials file with the following command:
+       `mv acsp.properties.client acsp.properties`
+8. (Optional:) Change group ID of the files with the following command:
+       `chown root.pkcs11 *`
+9. Enable ACSP to use the proper config for the service instance in the cloud:
+       `export ACSP_P11=/opt/ibm/acsp-pkcs11-client/config/acsp.properties` -->
+
+<!-- Now your ACSP client is operational and your {{site.data.keyword.hscrypto}} is ready to use!
+
+For more information about ACSP client installation and configuration, see [ACSP Client Installation and Configuration Guide](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto/blob/master/doc/ACSP-client-config-guide.pdf){: external}. -->

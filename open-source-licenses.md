@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2021-04-13"
+lastupdated: "2020-08-12"
 
 keywords: open source licenses
 
@@ -38,7 +38,7 @@ This Notices file may identify information that is not used by, or that was not 
 
 ```
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-NON-IBM-LICENSE INFORMATION FOR EXCLUDED COMPONENTS
+NOTICES AND INFORMATION
 
 Hyper Protect Crypto Services
 
@@ -46,16 +46,53 @@ Hyper Protect Crypto Services
 
 TABLE OF CONTENTS
 
-THIS NON-IBM-LICENSE FILE CONSISTS OF THE FOLLOWING SECTIONS:
+THE REMAINDER OF THIS IBM NOTICES FILE CONSISTS OF THE FOLLOWING
+SECTIONS:
 
+CC-BY-3.0  
+CC-BY-4.0  
 CC-BY-SA-1.0  
 CC-BY-SA-2.0  
 CC-BY-SA-2.5  
 CC-BY-SA-3.0  
+CC-BY-SA-4.0  
 GPL V2  
 GPL V3  
 SIL OPEN FONT LICENSE 1.1  
 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+CREATIVE COMMONS ATTRIBUTION 3.0
+
+The Program includes some or all of the following works licensed under
+the Creative Commons.
+The url to the license is https://creativecommons.org/licenses/by/3.0/legalcode
+
+GO-GITHUB, DOCUMENTATION [hashicorp/vault] (https://github.com/hashicorp/vault/archive/v0.9.6.zip),
+GO GOPHER [hashicorp/vault] (https://github.com/hashicorp/vault/archive/v0.9.6.zip),
+THE FONT AWESOME DOCUMENTATION [smartystreets/goconvey] (https://github.com/smartystreets/goconvey/archive/505e41936337.zip),
+H2DEMO/TMPL.GO [x/net] (https://github.com/x/net/archive/0de0cce0169b.zip),
+TMPL.GO (CONTENT) [cloudfoundry/gosigar] (https://github.com/cloudfoundry/gosigar/archive/v1.1.0.zip),
+DIR.TMPL [x/tools] (https://github.com/cloudfoundry/gosigar/archive/v1.1.0.zip)
+
+END OF CREATIVE COMMONS ATTRIBUTION 3.0 NOTICES AND INFORMATION
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+CREATIVE COMMONS ATTRIBUTION 4.0
+
+The Program includes some or all of the following works licensed under
+the Creative Commons.
+The url to the license is https://creativecommons.org/licenses/by/4.0/legalcode
+
+CONTRIBUTING.MD DOCUMENTATION OPENCONTAINERS GO-DIGEST [docker/docker]
+(https://github.com/docker/docker/archive/ac058c1629dc.zip),
+GO-DIGEST-README.MD FILE AND CONTRIBUTING.MD
+[docker/distribution] (https://github.com/docker/distribution/tree/v2.7.0),
+MOBY TERM AND IPVS DOCUMENTATION.
+DOCKER LINBETWORK DOCUMENTATION README.MD [docker/docker] (https://github.com/docker/docker/archive/ac058c1629dc.zip),
+CONTAINERD DOCUMENTATION [docker/docker] (https://github.com/docker/docker/archive/ac058c1629dc.zip)
+
+END OF CREATIVE COMMONS ATTRIBUTION 4.0 NOTICES AND INFORMATION
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 CREATIVE COMMONS ATTRIBUTION SHARE ALIKE 1.0 GENERIC
@@ -64,10 +101,11 @@ The Program includes some or all of the following works licensed under
 the Creative Commons.
 The url to the license is https://creativecommons.org/licenses/by-sa/1.0/legalcode
 
-CASES/MAP_TEST.GO [golang.org/x/text]
-(https://proxy.golang.org/golang.org/x/text/@v/v0.3.6-0.20210227105805-e3aa4adf54f6.zip)
+MAP_TEST.GO [x/text] (https://github.com/x/text/archive/v0.3.2.zip),
+TESTTEXT [cloudfoundry/gosigar]
+(https://github.com/cloudfoundry/gosigar/archive/v1.1.0.zip)
 
-END OF CREATIVE COMMONS ATTRIBUTION SHARE ALIKE 1.0 GENERIC NON-IBM-LICENSE INFORMATION
+END OF CREATIVE COMMONS ATTRIBUTION SHARE ALIKE 1.0 GENERIC NOTICES AND INFORMATION
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 CREATIVE COMMONS ATTRIBUTION SHARE ALIKE 2.0 GENERIC
@@ -76,10 +114,11 @@ The Program includes some or all of the following works licensed under
 the Creative Commons.
 The url to the license is https://creativecommons.org/licenses/by-sa/2.0/legalcode
 
-THREEBYTEUTF8 THAI [golang.org/x/text]
-(https://proxy.golang.org/golang.org/x/text/@v/v0.3.6-0.20210227105805-e3aa4adf54f6.zip)
+TESTTEXT [cloudfoundry/gosigar]
+(https://github.com/cloudfoundry/gosigar/archive/v1.1.0.zip),
+THREEBYTEUTF8 [x/text] (https://github.com/x/text/archive/v0.3.2.zip)
 
-END OF CREATIVE COMMONS ATTRIBUTION SHARE ALIKE 2.0 GENERIC NON-IBM-LICENSE INFORMATION
+END OF CREATIVE COMMONS ATTRIBUTION SHARE ALIKE 2.0 GENERIC NOTICES AND INFORMATION
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 CREATIVE COMMONS ATTRIBUTION SHARE ALIKE 2.5 GENERIC
@@ -88,10 +127,11 @@ The Program includes some or all of the following works licensed under
 the Creative Commons.
 The url to the license is https://creativecommons.org/licenses/by-sa/2.5/legalcode
 
-CASES/MAP_TEST.GO [golang.org/x/text]
-(https://proxy.golang.org/golang.org/x/text/@v/v0.3.6-0.20210227105805-e3aa4adf54f6.zip)
+MAP_TEST.GO [x/text] (https://github.com/x/text/archive/v0.3.2.zip),
+TESTTEXT [cloudfoundry/gosigar]
+(https://github.com/cloudfoundry/gosigar/archive/v1.1.0.zip)
 
-END OF CREATIVE COMMONS ATTRIBUTION SHARE ALIKE 2.5 GENERIC NON-IBM-LICENSE INFORMATION
+END OF CREATIVE COMMONS ATTRIBUTION SHARE ALIKE 2.5 GENERIC NOTICES AND INFORMATION
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 CREATIVE COMMONS ATTRIBUTION SHARE ALIKE 3.0 GENERIC
@@ -100,38 +140,39 @@ The Program includes some or all of the following works licensed under
 the Creative Commons.
 The url to the license is https://creativecommons.org/licenses/by-sa/3.0/legalcode
 
-CASES/MAP_TEST.GO [golang.org/x/text]
-(https://proxy.golang.org/golang.org/x/text/@v/v0.3.6-0.20210227105805-e3aa4adf54f6.zip)
+MAP_TEST.GO [x/text] (https://github.com/x/text/archive/v0.3.2.zip),
+TESTTEXT [cloudfoundry/gosigar]
+(https://github.com/cloudfoundry/gosigar/archive/v1.1.0.zip)
 
-END OF CREATIVE COMMONS ATTRIBUTION SHARE ALIKE 3.0 GENERIC NON-IBM-LICENSE INFORMATION
+END OF CREATIVE COMMONS ATTRIBUTION SHARE ALIKE 3.0 GENERIC NOTICES AND INFORMATION
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+CREATIVE COMMONS ATTRIBUTION SHARE ALIKE 4.0 GENERIC
+
+The Program includes some or all of the following works licensed under
+the Creative Commons.
+The url to the license is https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+GLOB LOGO [Glob] (http://registry.npmjs.org/glob/-/glob-7.1.6.tgz),
+GO-METRICS [containerd/containerd] (https://github.com/containerd/containerd/archive/v1.2.7.zip),
+GO-DIGEST, DOCUMENTATION [hashicorp/vault]
+(https://github.com/hashicorp/vault/archive/v0.9.6.zip)
+
+END OF CREATIVE COMMONS ATTRIBUTION SHARE ALIKE 4.0 GENERIC NOTICES AND INFORMATION
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 GNU GENERAL PUBLIC LICENSE, VERSION 2
 
 The Program includes some or all of the following licensed to you as
 Separately Licensed Code under the GNU General Public License. For copies
-of the source code for this software, send an email to <Eshrak.H.Assaf@ibm.com>
+of the source code for this software, send an email to <guenther.jornitz@de.ibm.com>
 identifying the IBM product and the GPL-licensed program for which you
 are requesting the source code
 
-NULLMAILER, PYTHON-MELD3 DEBIAN PACKAGING [python-meld3], DEBIAN
-[nullmailer], OPENRC-RUN [github.com/docker/docker], SUPERVISOR
+OPENRC/DOCKER.INITD [docker/docker], FUNC (S *DOCKERSUITE)
+TESTBUILDLABELS [docker/docker]
 
-END OF GNU GENERAL PUBLIC LICENSE, VERSION 2 NON-IBM-LICENSE INFORMATION
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-GNU GENERAL PUBLIC LICENSE, VERSION 3
-
-The Program includes some or all of the following licensed to you as
-Separately Licensed Code under the GNU General Public License. For copies
-of the source code for this software, send an email to <Eshrak.H.Assaf@ibm.com>
-identifying the IBM product and the GPL-licensed program for which you
-are requesting the source code
-
-GO-ETHEREUM [github.com/Zilliqa/gozilliqa-sdk],
-GITHUB.COM/ZILLIQA/GOZILLIQA-SDK
-
-END OF GNU GENERAL PUBLIC LICENSE, VERSION 3 NON-IBM-LICENSE INFORMATION
+END OF GNU GENERAL PUBLIC LICENSE, VERSION 2 NOTICES AND INFORMATION
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 SIL OPEN FONT LICENSE 1.1
@@ -139,17 +180,11 @@ SIL OPEN FONT LICENSE 1.1
 The Program includes some or all of the following works licensed under
 the SIL OPEN FONT LICENSE 1.1
 
-IBM PLEX TYPEFACE [carbon-components]
+SIL OPEN FONT LICENSE
 
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
-
------------------------------------------------------------
-SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
------------------------------------------------------------
-
+Version 1.1 - 26 February 2007
 PREAMBLE
+
 The goals of the Open Font License (OFL) are to stimulate worldwide
 development of collaborative font projects, to support the font creation
 efforts of academic and linguistic communities, and to provide a free and
@@ -164,8 +199,8 @@ names are not used by derivative works. The fonts and derivatives,
 however, cannot be released under any other type of license. The
 requirement for fonts to remain under this license does not apply
 to any document created using the fonts or their derivatives.
-
 DEFINITIONS
+
 "Font Software" refers to the set of files released by the Copyright
 Holder(s) under this license and clearly marked as such. This may
 include source files, build scripts and documentation.
@@ -177,14 +212,14 @@ copyright statement(s).
 distributed by the Copyright Holder(s).
 
 "Modified Version" refers to any derivative made by adding to, deleting,
-or substituting -- in part or in whole -- any of the components of the
+or substituting — in part or in whole — any of the components of the
 Original Version, by changing formats or by porting the Font Software to a
 new environment.
 
 "Author" refers to any designer, engineer, programmer, technical
 writer or other person who contributed to the Font Software.
-
 PERMISSION & CONDITIONS
+
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of the Font Software, to use, study, copy, merge, embed, modify,
 redistribute, and sell modified and unmodified copies of the Font
@@ -216,12 +251,12 @@ must be distributed entirely under this license, and must not be
 distributed under any other license. The requirement for fonts to
 remain under this license does not apply to any document created
 using the Font Software.
-
 TERMINATION
+
 This license becomes null and void if any of the above conditions are
 not met.
-
 DISCLAIMER
+
 THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
 MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
@@ -232,12 +267,59 @@ DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 
-END OF SIL OPEN FONT LICENSE 1.1 NON-IBM-LICENSE INFORMATION
+ORBITRON [smartystreets/goconvey], THE FONT AWESOME FONT
+[smartystreets/goconvey], FONT [youtube/vitess]
+
+END OF SIL OPEN FONT LICENSE 1.1 LICENSE NOTICES AND INFORMATION
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-END OF NON-IBM-LICENSE INFORMATION
+END OF IBM NOTICES AND INFORMATION
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-END OF NON-IBM-LICENSE INFORMATION FILE
+END OF NOTICE FILE
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+```
+
+## Host Appliance notices and information
+{: #host-appliance-notices}
+
+```
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+CREATIVE COMMONS BY SA 2.5
+
+The Program includes some or all of the following that IBM obtained
+under the Creative Commons BY SA 2.5 License.
+
+howto.diveintomark
+
+https://creativecommons.org/licenses/by-sa/2.5/
+
+END OF CREATIVE COMMONS BY SA 2.5 NOTICES AND INFORMATION
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+CREATIVE COMMONS BY 3.0
+
+The Program includes some or all of the following that IBM obtained
+under the Creative Commons BY 3.0 License.
+
+distribute-0.6.34/docs/build/html/_sources/index.txt
+
+https://creativecommons.org/licenses/by/3.0/
+
+END OF CREATIVE COMMONS 3.0 NOTICES AND INFORMATION
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+CREATIVE COMMONS ATTRIBUTION SHARE ALIKE 4.0 GENERIC
+
+The Program includes some or all of the following works licensed under
+the Creative Commons.
+The url to the license is
+https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+GO-METRICS [containerd]
+(http://archive.ubuntu.com/ubuntu/pool/universe/c/containerd/containerd_1.3.3-0ubuntu1~18.04.2.debian.tar.xz)
+
+END OF CREATIVE COMMONS ATTRIBUTION SHARE ALIKE 4.0 GENERIC NOTICES AND
+INFORMATION
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ```

@@ -45,9 +45,9 @@ Enterprise PKCS #11 over gRPC (GREP11) is also supported by {{site.data.keyword.
 
 With the built-in encryption of {{site.data.keyword.hscrypto}}, you can easily build cloud applications with sensitive data. {{site.data.keyword.hscrypto}} provides you with complete control of your data and encryption keys, including the master key. The service also helps your business meet regulatory compliance with the technology that provides exclusive controls on the external and privileged user access to data and keys.
 
+<!-- With {{site.data.keyword.hscrypto}}, your SSL keys are offloaded to a {{site.data.keyword.hscrypto}} instance to ensure security and protection of those sensitive keys. Besides, the certificate lifecycle management gets common approach to manage certificates and offers the visibility to certificate expiration. -->
 
-
-
+<!-- {{site.data.keyword.hscrypto}} is the cryptography that {{site.data.keyword.blockchainfull_notm}} Platform is built with. This cryptography mechanism ensures that the blockchain network is running in a highly protected and isolated environment, and accelerates hashing, sign/verify operations, and node-to-node communications in the network. The success of {{site.data.keyword.blockchainfull_notm}} Platform proves the capability and value of {{site.data.keyword.hscrypto}}. -->
 
 ## How does {{site.data.keyword.hscrypto}} work?
 {: #how-hpcs-work}
@@ -98,7 +98,7 @@ For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service arc
 
 You can also monitor and audit events and activities of {{site.data.keyword.hscrypto}} by using {{site.data.keyword.at_full_notm}}. For more information, see [Auditing events for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-at-events) .
 
-
+<!-- {{site.data.keyword.hscrypto}} also leverages the ACSP solution that enables remote access to the IBM’s cryptographic coprocessors. ACSP allows for utilization of strong hardware-based cryptography as a service in distributed environments where data security cannot be guaranteed. {{site.data.keyword.hscrypto}} utilizes ACSP as a *network hardware security module (NetHSM)* that provides access to HSM via PKCS #11 standard API.-->
 
 ## What's next
 {: #overview-next}
@@ -112,5 +112,5 @@ You can also monitor and audit events and activities of {{site.data.keyword.hscr
 
 <br>
 <p style="background-color: #e0e0e0; border: 1px solid #161616; padding: 10px; font-weight: bold">
-<img src="/images/survey.svg" alt="survey" style="vertical-align:middle"> Let us know your feedback by taking a <a href="https://surveys.hotjar.com/587f4609-7eeb-48cb-85dc-95f81906513b" target="_blank">one-minute survey</a>.
+<img src="/image/survey.svg" alt="survey" style="vertical-align:middle"> Let us know your feedback by taking a <a href="https://surveys.hotjar.com/587f4609-7eeb-48cb-85dc-95f81906513b" target="_blank">one-minute survey</a>.
 </p>

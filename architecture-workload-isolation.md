@@ -28,7 +28,7 @@ Review the service architecture, workload isolation characteristics, and service
 
 The following architecture diagram shows how {{site.data.keyword.hscrypto}} components work to protect your sensitive data and keys.
 
-![Service instance components](/images/hs-crypto-components.svg "Service instance components"){: caption="Figure 1. Interaction with {{site.data.keyword.hscrypto}} components" caption-side="bottom"}
+![Service instance components](/image/hs-crypto-components.svg "Service instance components"){: caption="Figure 1. Interaction with {{site.data.keyword.hscrypto}} components" caption-side="bottom"}
 
 For an introduction to the {{site.data.keyword.hscrypto}} components, see [Components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
 
@@ -43,7 +43,7 @@ For an introduction to the {{site.data.keyword.hscrypto}} components, see [Compo
 
 The following diagram illustrates how {{site.data.keyword.hscrypto}} workload of each tenant is isolated.
 
-![{{site.data.keyword.hscrypto}} workload isolation](/images/workload-isolation.svg "{{site.data.keyword.hscrypto}} workload isolation"){: caption="Figure 2. {{site.data.keyword.hscrypto}} workload isolation" caption-side="bottom"}
+![{{site.data.keyword.hscrypto}} workload isolation](/image/workload-isolation.svg "{{site.data.keyword.hscrypto}} workload isolation"){: caption="Figure 2. {{site.data.keyword.hscrypto}} workload isolation" caption-side="bottom"}
 
 ## Service dependencies
 {: #service_dependencies}

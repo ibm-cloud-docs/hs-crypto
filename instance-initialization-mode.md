@@ -51,7 +51,7 @@ The Management Utilities are composed of two applications that use smart cards t
 
 The following diagram illustrates the relationship between various components when you use the Management Utilities to initialize a service instance.
 
-![The architecture of using smart cards and the Management Utilities](/images/tke_application_architecture.svg "Using the Management Utilities"){: caption="Figure 1. Using smart cards and the Management Utilities to initialize service instances" caption-side="bottom"}
+![The architecture of using smart cards and the Management Utilities](/image/tke_application_architecture.svg "Using the Management Utilities"){: caption="Figure 1. Using smart cards and the Management Utilities to initialize service instances" caption-side="bottom"}
 
 - The Smart Card Utility Program
 
@@ -115,7 +115,7 @@ Currently, only the `us-south` and `us-east` regions are enabled with the recove
 
 The following diagram shows the components of an example service instance with two recovery crypto units:
 
-![The architecture of using recovery crypto units to initialize service instances](/images/minimum_touch_architecture.svg "Using recovery crypto units to initialize service instances"){: caption="Figure 2. Initializing service instances using recovery crypto units" caption-side="bottom"}
+![The architecture of using recovery crypto units to initialize service instances](/image/minimum_touch_architecture.svg "Using recovery crypto units to initialize service instances"){: caption="Figure 2. Initializing service instances using recovery crypto units" caption-side="bottom"}
 
 The following sections explain each component in detail.
 
@@ -144,7 +144,7 @@ Two recovery units are automatically assigned to your service instance without a
 
 The sole purpose of the recovery crypto units is to save a backup copy of the master key value. The recovery crypto units are not used when running operational workloads. If the current master key value is lost or destroyed, you can recover the master key value from either of the recovery crypto units by using the `ibmcloud tke auto-mk-recover` command. This command copies the value in the current master key register of a recovery crypto unit to the current master key register of other crypto units.
 
-
+<!--To enable cross-region recovery, you can allocate recovery crypto units in a region other than the region that the operational crypto units reside in. However, to load the master key to the operational crypto units, you need to allocate at least one recovery crypto unit in the region of the operational crypto units. The example in the diagram assumes that one recovery crypto unit is located in the same region and the other is in a different region.-->
 
 Currently, only the `us-south` and `us-east` regions are enabled with the recovery crypto units, which means, when a service instance is provisioned in either region, you are by default enabled with the option to back up your master keys in the recovery crypto units located in both regions. For more information about supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 {: note}
