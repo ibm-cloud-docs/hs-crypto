@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-13"
+lastupdated: "2021-04-15"
 
 keywords: restore key, restore a deleted key, recover a deleted key, re-import a key
 
@@ -27,7 +27,7 @@ subcollection: hs-crypto
 # Restoring keys
 {: #restore-keys}
 
-You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to restore a previously deleted root key and access its associated data on the cloud.
+You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to restore a previously deleted key and access its associated data on the cloud.
 {: shortdesc}
 
 When a key is deleted, it is moved to a _Destroyed_ state. However, information about the key (such as its metadata) can still be viewed and you have 30 days to restore the key to an _Active_ state. For this reason, a key deletion is considered a _Soft deletion_ where the key still exists but can no longer be used to access the data that is encrypted by the key. This topic describes the process to restore a key and the limitations of the key restoration process.
