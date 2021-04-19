@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-24"
+lastupdated: "2021-04-19"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -31,6 +31,16 @@ Stay up-to-date with the new features that are available for {{site.data.keyword
 
 The cryptography algorithm to generate signature keys is updated from Rivest–Shamir–Adleman 2048 (RSA 2048) to P521 Elliptic Curve (P521 EC). The cryptographic strength of P521 EC keys is equivalent to RSA 15360, which means the updated signature keys can provide the higher level of security comparing to the previous signature keys. The previous RSA 2048 signature keys are still valid and can be used.
 -->
+
+## April 2021
+{: #april-2021}
+
+### Added: Rotating your master key using smart cards and the Management Utilities
+{: #add-master-key-rotation-smart-cards}
+
+Besides rotating your master key [using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part) and [using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit), you can now also rotate the master key if you are using smart cards and the Management Utilities.
+
+For detailed instructions, see [Rotating master keys using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards). For information on how master key rotation works, see [Rotating master keys using key parts](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#how-master-key-rotation-works-use-key-parts). 
 
 ## March 2021
 {: #march-2021}
