@@ -40,7 +40,7 @@ The cryptography algorithm to generate signature keys is updated from Rivest–S
 
 Besides rotating your master key [using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part) and [using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit), you can now also rotate the master key if you are using smart cards and the Management Utilities.
 
-For detailed instructions, see [Rotating master keys using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards). For information on how master key rotation works, see [Rotating master keys using key parts](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#how-master-key-rotation-works-use-key-parts). 
+For detailed instructions, see [Rotating master keys using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards). For information on how master key rotation works, see [Rotating master keys using key parts](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#how-master-key-rotation-works-use-key-parts).
 
 ## March 2021
 {: #march-2021}
@@ -58,10 +58,10 @@ For detailed instructions, see [Initializing service instances using recovery cr
 
 To rotate your master key, see [Rotating master keys using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit).
 
-### Added: {{site.data.keyword.hscrypto}} expands into the London region
+<!-- ### Added: {{site.data.keyword.hscrypto}} expands into the London region
 {: #add-london-region}
 
-You can now create {{site.data.keyword.hscrypto}} instances in the London (`eu-gb`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
+You can now create {{site.data.keyword.hscrypto}} instances in the London (`eu-gb`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). -->
 
 ### Added: Using {{site.data.keyword.mon_full_notm}} to measure {{site.data.keyword.hscrypto}} metrics
 {: #add-monitoring-metrics}
