@@ -38,7 +38,7 @@ Key Management Interoperability Protocol (KMIP) is a communication protocol for 
 
 The following diagram illustrates the overall workflow of how the KMIP adapter provided in the {{site.data.keyword.hscrypto}} instance works with a VMWare customer environment.
 
-![KMIP workflow with VMWare customer environment](../image/kmip-vmware-workflow.svg "KMIP adapter"){: caption="Figure 1. KMIP workflow with VMWare customer environment" caption-side="bottom"}
+![KMIP workflow with VMWare customer environment](../images/kmip-vmware-workflow.svg "KMIP adapter"){: caption="Figure 1. KMIP workflow with VMWare customer environment" caption-side="bottom"}
 
 The overall workflow includes the following steps:
 1. Create a {{site.data.keyword.hscrypto}} service instance and your root key.

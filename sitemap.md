@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-24"
+lastupdated: "2021-04-06"
 
 keywords: site map, doc structure, information architecture
 
@@ -213,19 +213,19 @@ Find what you are looking for in the compilation of topics that are available in
 - [Before you begin](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite)
 
 
-#### Initializing service instances using the CLI
-{: #sitemap_initialize_using_CLI}
+#### Initializing service instances using key parts
+{: #sitemap_initialize_using_key_parts}
 
 
-- [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
 - [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
-
-
-#### Initializing service instances using smart cards and the Management Utilities
-{: #sitemap_initialize_using_smart_cards}
-
 - [Setting up the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities)
 - [Loading master keys using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
+
+
+#### Initializing service instances using recovery crypto units
+{: #sitemap_initialize_using_recovery_crypto_units}
+
+- [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
 
 
 ### Managing instance policies
@@ -235,7 +235,7 @@ Find what you are looking for in the compilation of topics that are available in
 - [Managing the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies)
 - [Managing dual authorization of your service instance](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth)
 - [Managing the key create and import access policy](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess)
-- [Managing metrics](/docs/hs-crypto?topic=hs-crypto-manage-smonitoring-metrics)
+- [Managing metrics](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics)
 
 
 
@@ -279,9 +279,9 @@ Find what you are looking for in the compilation of topics that are available in
 ### Managing master keys
 {: #sitemap_managing_master_keys}
 
-
+- [Rotating master keys using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part)
+- [Rotating master keys using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards)
 - [Rotating master keys using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit)
-- [Rotating master keys using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli)
 - [Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit)
 
 
@@ -563,6 +563,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 - [Why do I fail to load the new master key during the master key rotation process?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation)
 - [Why can't I rotate master keys using key part files?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-part-files)
+- [Why can't I rotate master keys using smart cards?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-smart-cards)
 - [Why can't I rotate master keys using recovery crypto units?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-recovery-crypto-units)
 
 ### Error messages

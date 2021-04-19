@@ -51,7 +51,7 @@ The Management Utilities are composed of two applications that use smart cards t
 
 The following diagram illustrates the relationship between various components when you use the Management Utilities to initialize a service instance.
 
-![The architecture of using smart cards and the Management Utilities](/image/tke_application_architecture.svg "Using the Management Utilities"){: caption="Figure 1. Using smart cards and the Management Utilities to initialize service instances" caption-side="bottom"}
+![The architecture of using smart cards and the Management Utilities](/images/tke_application_architecture.svg "Using the Management Utilities"){: caption="Figure 1. Using smart cards and the Management Utilities to initialize service instances" caption-side="bottom"}
 
 - The Smart Card Utility Program
 
@@ -115,7 +115,7 @@ Currently, only the `us-south` and `us-east` regions are enabled with the recove
 
 The following diagram shows the components of an example service instance with two recovery crypto units:
 
-![The architecture of using recovery crypto units to initialize service instances](/image/minimum_touch_architecture.svg "Using recovery crypto units to initialize service instances"){: caption="Figure 2. Initializing service instances using recovery crypto units" caption-side="bottom"}
+![The architecture of using recovery crypto units to initialize service instances](/images/minimum_touch_architecture.svg "Using recovery crypto units to initialize service instances"){: caption="Figure 2. Initializing service instances using recovery crypto units" caption-side="bottom"}
 
 The following sections explain each component in detail.
 

@@ -200,7 +200,7 @@ To learn more about the PKCS #11 API, see [Introducing PKCS #11](/docs/hs-crypto
 
 You can now rotate your master key on demand by using the {{site.data.keyword.cloud}} Trusted Key Entry CLI plug-in so as to meet industry standards and cryptographic best practices. For more information on how it works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
 
-For the detailed instructions, see [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli).
+For the detailed instructions, see [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-key-parts).
 
 ## August 2020
 {: #august-2020}

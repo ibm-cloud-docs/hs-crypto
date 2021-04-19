@@ -20,10 +20,11 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 
-# Best practices for setting up PKCS #11 user types
+# Setting up PKCS #11 API user types
 {: #best-practice-pkcs11-access}
 
-To align with industry-standard security requirements and [Permitted object accesses by sessions](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759993) that is defined in the PKCS #11 Usage Guide, it is recommended to set up the PKCS #11 user types in your {{site.data.keyword.hscrypto}} instance.
+To align with industry-standard security requirements and [Permitted object accesses by sessions](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759993) that is defined in the PKCS #11 Usage Guide, it is recommended to set up the PKCS #11 user types in your {{site.data.keyword.hscrypto}} instance when you use the PKCS #11 API.
+{: shortdesc}
 
 ##  PKCS #11 user types
 {: #pkcs11-user-types}

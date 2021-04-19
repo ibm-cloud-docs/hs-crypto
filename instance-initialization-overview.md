@@ -36,11 +36,11 @@ A crypto unit is composed of an HSM and the corresponding software stack that is
 
 <!--The following diagram illustrates a services instance with two crypto units.
 
-![Service instance components](/image/kms_service.svg "Service instance components"){: caption="Figure 1. Service instance components" caption-side="bottom"} -->
+![Service instance components](/images/kms_service.svg "Service instance components"){: caption="Figure 1. Service instance components" caption-side="bottom"} -->
 
 To issue commands for crypto units to perform actions, you need to assign administrators to the crypto units. Each administrator has an associated signature key for identity authentication. The following flow chart shows how the signature keys are created and assigned to a service instance with two crypto units.
 
-![Creating and assigning signature keys](/image/sigkey_flow-02.svg "How to create and assign signature keys"){: caption="Figure 2. Creating and assigning signature keys" caption-side="bottom"}
+![Creating and assigning signature keys](/images/sigkey_flow-02.svg "How to create and assign signature keys"){: caption="Figure 2. Creating and assigning signature keys" caption-side="bottom"}
 
 Signature keys are created and assigned by following this procedure:
 
@@ -65,7 +65,7 @@ To load the master key, each crypto unit has two master key registers: a new mas
 
 The following flow chart illustrates how the master key register state changes, and how the master key is loaded.
 
-![Loading master keys](/image/master_key_register-02.svg "How to load a master key"){: caption="Figure 3. Loading master key" caption-side="bottom"}
+![Loading master keys](/images/master_key_register-02.svg "How to load a master key"){: caption="Figure 3. Loading master key" caption-side="bottom"}
 
 In the chart, each crypto unit loads the master key with the following steps:
 

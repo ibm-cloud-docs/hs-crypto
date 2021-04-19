@@ -79,7 +79,7 @@ Root keys that are managed in a {{site.data.keyword.hscrypto}} service instance 
 
 The following diagram shows a contextual view of envelope encryption.
 
-![The diagram shows a contextual view of envelope encryption.](/image/envelope-encryption.svg "The diagram shows a contextual view of envelope encryption."){: caption="Figure 1. Contextual view of envelope encryption" caption-side="bottom"}
+![The diagram shows a contextual view of envelope encryption.](/images/envelope-encryption.svg "The diagram shows a contextual view of envelope encryption."){: caption="Figure 1. Contextual view of envelope encryption" caption-side="bottom"}
 
 Envelope encryption is treated briefly in the NIST Special Publication 800-57, Recommendation for Key Management. To learn more, see [NIST SP 800-57 Pt. 1 Rev. 4](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0){: external}
 
@@ -93,7 +93,7 @@ The key wrap operation provides both confidentiality and integrity protection fo
 
 The following diagram shows the key wrapping process in action.
 
-![Wrapping data](/image/wrapping-keys.svg "The diagram shows key wrapping in action."){: caption="Figure 2. Wrapping data" caption-side="bottom"}
+![Wrapping data](/images/wrapping-keys.svg "The diagram shows key wrapping in action."){: caption="Figure 2. Wrapping data" caption-side="bottom"}
 
 <!--
 The following table describes the inputs that are needed to perform a key wrap operation:
@@ -124,7 +124,7 @@ unwrap request to the service. To unwrap a DEK, you specify the ID value of the 
 
 The following diagram shows key unwrapping in action.
 
-![Unwrapping data](/image/unwrapping-keys.svg "The diagram shows key unwrapping in action."){: caption="Figure 3. Unwrapping data" caption-side="bottom"}
+![Unwrapping data](/images/unwrapping-keys.svg "The diagram shows key unwrapping in action."){: caption="Figure 3. Unwrapping data" caption-side="bottom"}
 
 After you send the unwrap request, the system reverses the key wrapping process by using the same AES algorithms. A successful unwrap operation returns the base64 encoded `plaintext` value to your {{site.data.keyword.cloud_notm}} data at rest service.
 

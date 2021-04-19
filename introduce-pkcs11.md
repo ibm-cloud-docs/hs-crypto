@@ -55,7 +55,7 @@ To connect and use the PKCS #11 API, you need to understand the PKCS #11 API tha
 
 Before you can use the PKCS #11 API, you need to first install the PKCS #11 library, so that the PKCS #11 application can interact with the PKCS #11 library, which then calls cryptographic functions implemented by {{site.data.keyword.hscrypto}} through gRPC. The following diagram shows the key components implemented by the {{site.data.keyword.hscrypto}} PKCS #11 library and the interactions among different components.
 
-![Performing cryptographic operations with the PKCS #11 API](/image/pkcs-components.svg "Performing cryptographic operations with the PKCS #11 API"){: caption="Figure 1. Performing cryptographic operations with the PKCS #11 API" caption-side="bottom"}
+![Performing cryptographic operations with the PKCS #11 API](/images/pkcs-components.svg "Performing cryptographic operations with the PKCS #11 API"){: caption="Figure 1. Performing cryptographic operations with the PKCS #11 API" caption-side="bottom"}
 
 The following sections explain each PKCS #11 component in detail.
 
@@ -90,7 +90,7 @@ As shown in the following diagram, a PKCS #11 key object is an example of a PKCS
   * Private key: The private component of a key pair that is used to decrypt messages. The private key is also used to create signatures.
   * Secret key: A secret key is a generated stream of bits that is used to encrypt and decrypt messages symmetrically.
 
-![PKCS #11 object classes](/image/object-class.svg "PKCS #11 object classes"){: caption="Figure 2. PKCS #11 object classes" caption-side="bottom"}
+![PKCS #11 object classes](/images/object-class.svg "PKCS #11 object classes"){: caption="Figure 2. PKCS #11 object classes" caption-side="bottom"}
 
 The data and certificate object classes are not supported in this implementation.
 {: note}

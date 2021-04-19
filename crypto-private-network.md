@@ -39,7 +39,6 @@ After you create a {{site.data.keyword.hscrypto}} service instance, you can enab
 ## Before you begin
 {: #private-endpoint-prereqs}
 
-<!-- 1. [Initialize your service instance using the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm). Using the Management Utilities in a private network is not currently supported. -->
 1. Ensure that your {{site.data.keyword.cloud_notm}} infrastructure account is enabled for [virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint#vrf).
 
     When you enable VRF, a separate routing table is created for your account, and connections to and from your account's resources are routed separately on the {{site.data.keyword.cloud_notm}} network. To learn more about VRF technology, see [Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).

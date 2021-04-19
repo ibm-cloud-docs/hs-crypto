@@ -112,5 +112,5 @@ You can also monitor and audit events and activities of {{site.data.keyword.hscr
 
 <br>
 <p style="background-color: #e0e0e0; border: 1px solid #161616; padding: 10px; font-weight: bold">
-<img src="/image/survey.svg" alt="survey" style="vertical-align:middle"> Let us know your feedback by taking a <a href="https://surveys.hotjar.com/587f4609-7eeb-48cb-85dc-95f81906513b" target="_blank">one-minute survey</a>.
+<img src="/images/survey.svg" alt="survey" style="vertical-align:middle"> Let us know your feedback by taking a <a href="https://surveys.hotjar.com/587f4609-7eeb-48cb-85dc-95f81906513b" target="_blank">one-minute survey</a>.
 </p>

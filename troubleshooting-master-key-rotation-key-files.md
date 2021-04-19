@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-12"
+lastupdated: "2021-04-01"
 
 keywords: failed master key rotation, failed to use key part files to rotate master keys, tke cryptounit-mk-rotate failure, troubleshoot master key rotation failure
 
@@ -35,13 +35,13 @@ When you run the `ibmcloud tke cryptounit-mk-rotate` command to rotate master ke
 During master key rotation, the new master key registers are loaded with the new master key value to be used. The contents of key storage are reencrypted using the current and new master key values. When the reencryption of key storage is complete, the new master key value is promoted to the current master key registers and the new master key registers are cleared.
 {: tsSymptoms}
 
-For detailed instructions on how to rotate the master key, see [Rotating master keys using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli).
+For detailed instructions on how to rotate the master key, see [Rotating master keys using key parts](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-key-parts).
 
 If an error occurs during master key rotation, the action you take to recover depends on how much of the process has completed. An incorrect recovery action can cause the master key value for key storage to be lost and contents of key storage to become unusable. You need to carefully check the command output before the error occurred to determine what recovery action to take.
 
 Some errors are detected before the command starts to work with key storage or the master key registers. For example, if your authentication token has expired, an error is reported. To recover, you need to log into the IBM Cloud. Similarly, if the initial conditions needed to run the command are not met, an error is reported. Correct the initial conditions and run the command again.
 
-The following initial conditions can be reported as an error by the `ibmcloud tke cryptounit-mk-rotate` and `ibmcloud tke auto-mk-rotate` commands:
+The following initial conditions can be reported as an error by the `ibmcloud tke cryptounit-mk-rotate` command:
 
 * When you rotate your master key using key part files, an invalid set of crypto units is selected.
 * One or more crypto units is in imprint mode.
@@ -52,7 +52,7 @@ The following initial conditions can be reported as an error by the `ibmcloud tk
 
 Operational workloads cannot be run until master key rotation has completed.
 
-If an error occurs when you run the `ibmcloud tke auto-mk-rotate` command to rotate master keys, check whether the error is an expired authentication token or failed pre-check. If it is not, check whether the following messages are displayed:
+If an error occurs when you run the ibmcloud tke cryptounit-mk-rotate command to rotate master keys, check whether the error is an expired authentication token or failed pre-check. If it is not, check whether the following messages are displayed:
 {: tsResolve}
 
 ```

@@ -40,7 +40,7 @@ The following initial conditions can be reported as an error by the `ibmcloud tk
 
 Operational workloads cannot be run until master key rotation has completed.
 
-## Recovering from an error when rotating master keys using key part files
+## Recovering from an error when rotating master keys using key parts
 {: #recover-master-key-error-key-part-files}
 
 If an error occurs when you run the `ibmcloud tke cryptounit-mk-rotate` command to rotate the master keys, check whether the error is an expired authentication token or failed pre-check. If it is not, check whether the following message that indicates the re-enciphering of key storage has completed is displayed:

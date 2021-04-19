@@ -35,7 +35,7 @@ You get an error when you start the Smart Card Utility Program or the Trusted Ke
 You might receive the following error message:
 {: tsSymptoms}
 
-![No smart card readers found when you start the application](/image/no_smart_card_readers.gif "Blocked PIN on EP11 smart card"){: caption="Figure 2. No smart card readers found when you start the application" caption-side="bottom"}
+![No smart card readers found when you start the application](/images/no_smart_card_readers.gif "Blocked PIN on EP11 smart card"){: caption="Figure 2. No smart card readers found when you start the application" caption-side="bottom"}
 
 The Identiv SPR332 smart card readers are not attached to your workstation, or the device driver for the smart card reader is not correctly installed on your workstation.
 {: tsCauses}

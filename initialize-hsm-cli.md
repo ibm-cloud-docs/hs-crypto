@@ -35,7 +35,7 @@ For an introduction to the approaches of service instance initialization and the
 The following diagram gives you an overview of steps you need to take to initialize the service instance using master key parts stored in files. Click each step on the diagram for detailed instructions.
 
 <figure>
-  <img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="/image/hsm_initialization_flow.svg" width="750" alt="Click each step to get more details on the flow." />
+  <img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="/images/hsm_initialization_flow.svg" width="750" alt="Click each step to get more details on the flow." />
   <figcaption>Figure 1. Task flow of service instance initialization with the TKE CLI plug-in</figcaption>
 </figure>
 
@@ -299,7 +299,7 @@ A message is displayed asking whether to accept the new master key.
 Consider the following before you take actions:
 * If it is your first time to initialize the service instance, you can ignore this message and type `y` to continue.
 * If you have started managing keys with the service instance and want to reload the same master key that was used before, ensure that no key management actions are in progress and type `y` to continue.
-* If you have started managing keys with the service instance and want to load a new master key, type `N` to cancel. For more information about rotating the master key, see [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli).
+* If you have started managing keys with the service instance and want to load a new master key, type `N` to cancel. For more information about rotating the master key, see [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-key-parts).
 
 When prompted, enter the password for the signature key file to be used. For this command, only one signature key is needed.
 
@@ -314,4 +314,4 @@ When prompted, enter the password for the signature key file to be used. For thi
 - Go to the **Key management service keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
 - To learn more about performing cryptographic operations with the cloud HSM, see [Introducing cloud HSM](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm).
 - Use {{site.data.keyword.hscrypto}} as the root key provider for other {{site.data.keyword.cloud_notm}} services. For more information about integrating {{site.data.keyword.hscrypto}}, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
-- For information on how to rotate the master key, see [Rotating master keys with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli).
+- For information on how to rotate the master key, see [Rotating master keys with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-key-parts).

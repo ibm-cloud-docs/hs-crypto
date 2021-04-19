@@ -41,7 +41,7 @@ If an error occurs during master key rotation, the action you take to recover de
 
 Some errors are detected before the command starts to work with key storage or the master key registers. For example, if your authentication token has expired, an error is reported. To recover, you need to log into the IBM Cloud. Similarly, if the initial conditions needed to run the command are not met, an error is reported. Correct the initial conditions and run the command again.
 
-The following initial conditions can be reported as an error by the `ibmcloud tke cryptounit-mk-rotate` and `ibmcloud tke auto-mk-rotate` commands:
+The following initial conditions can be reported as an error by the `ibmcloud tke auto-mk-rotate` command:
 
 * When you rotate your master key using key part files, an invalid set of crypto units is selected.
 * One or more crypto units is in imprint mode.

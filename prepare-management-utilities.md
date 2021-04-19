@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-03-08"
+lastupdated: "2021-04-01"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -29,10 +29,7 @@ With smart cards and the [{{site.data.keyword.IBM}} {{site.data.keyword.hscrypto
 
 The following diagram gives you an overview of steps you need to take to initialize service instances with smart cards and the Management Utilities. This topic covers the steps to set up the Management Utilities. For the detailed instructions on initialize the service instance, see [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
-![The task flow of service instance initialization with smart cards and the Management Utilities](/image/hsm_initialization_flow_smartcard.svg "The task flow of service instance initialization with smart cards and the Management Utilities"){: caption="Figure 1. Task flow of service instance initialization with smart cards and the Management Utilities" caption-side="bottom"}
-
-Initializing a service instance through a private network using smart cards and the Management Utilities is currently not supported.
-{: note}
+![The task flow of service instance initialization with smart cards and the Management Utilities](/images/hsm_initialization_flow_smartcard.svg "The task flow of service instance initialization with smart cards and the Management Utilities"){: caption="Figure 1. Task flow of service instance initialization with smart cards and the Management Utilities" caption-side="bottom"}
 
 ## Step 1: Order smart cards and smart card readers
 {: #order-smart-card-and-reader}
