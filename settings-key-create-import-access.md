@@ -408,7 +408,7 @@ key create and import access policy.
         <td>
           <p>
             <strong>Required.</strong> The region abbreviation, such as
-            <code>us-south</code> or <code>eu-gb</code>, that represents the
+            <code>us-south</code>, that represents the
             geographic area where your
             {{site.data.keyword.hscrypto}} instance
             resides.

@@ -82,7 +82,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
         </td>
         <td>
           <p>
-            <strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-gb</code>, that represents the
+            <strong>Required.</strong> The region abbreviation, such as <code>us-south</code>, that represents the
             geographic area where your {{site.data.keyword.hscrypto}} instance resides.
           </p>
           <p>

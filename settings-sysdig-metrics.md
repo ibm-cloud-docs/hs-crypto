@@ -108,7 +108,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=met
         </td>
         <td>
           <p>
-            <strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-gb</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
+            <strong>Required.</strong> The region abbreviation, such as <code>us-south</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
           </p>
           <p>
             For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
@@ -221,7 +221,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=met
         </td>
         <td>
           <p>
-            <strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-gb</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
+            <strong>Required.</strong> The region abbreviation, such as <code>us-south</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
           </p>
           <p>
             For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
