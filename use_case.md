@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-24"
+lastupdated: "2021-04-21"
 
 keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases
 
@@ -49,7 +49,7 @@ Organizations that use the VMware&reg; environment in {{site.data.keyword.cloud_
 
 As a single-tenant service, {{site.data.keyword.hscrypto}} offers dedicated control of the Hardware Security Module for VMware images for each customer. {{site.data.keyword.hscrypto}} extends the family of key management services in the {{site.data.keyword.cloud_notm}} towards single-tenant instances with dedicated hardware secret control.
 
-Check out the [overview video on IBM Cloud Hyper Protect Crypto Services and VMware on {{site.data.keyword.cloud_notm}} solutions](https://youtu.be/9n8-hQBMYWQ){: external} for more information. For a step-to-step tutorial, see [Use IBM Cloud Hyper Protect Crypto Services to encrypt VMware disks](https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-encrypt-vmware-disks/){: external} and the [demo video](https://youtu.be/huQ5wUfrW4c){: external}.
+Check out the [overview video on IBM Cloud Hyper Protect Crypto Services and VMware on {{site.data.keyword.cloud_notm}} solutions](https://youtu.be/9n8-hQBMYWQ){: external} for more information. For a step-to-step tutorial, see [/docs/hs-crypto?topic=hs-crypto-tutorial-kmip-vmware](/docs/hs-crypto?topic=hs-crypto-tutorial-kmip-vmware) and the [demo video](https://mediacenter.ibm.com/media/1_e5gk6ktn){: external}.
 
 ![VMware image protection and vSAN encryption with KYOK](/images/byok_vm.svg "VMware image protection with KYOK"){: caption="Figure 2. VMware image protection with KYOK" caption-side="bottom"}
 
