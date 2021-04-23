@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-04-23"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -169,7 +169,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
 
     A successful `POST api/v2/key_rings` request returns an HTTP `201 Created` response, which indicates that the key ring is created and is now available for holding standard and root keys.
 
-<!-- ## Transferring a key to a different key ring
+## Transferring a key to a different key ring
 {: #transfer-key-key-ring}
 
 As requirements change and new team members are brought into an org, you might create new key rings to reflect these organizational changes. After creating the key rings, it might be necessary to move a key from an existing key ring to a
@@ -357,7 +357,6 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
      ]
     }
     ```
--->
 
 ## Granting access to a key ring
 {: #grant-access-key-ring}
@@ -522,7 +521,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
 
 You can delete a key ring with the console or with the key management API.
 
-The `Default` key ring can not be deleted. You are also not able to delete a key ring if the key ring contains at least one key, regardless of the key state (including keys in the _Destroyed_ state).
+The `Default` key ring cannot be deleted. You are also not able to delete a key ring if the key ring contains at least one key, regardless of the key state (including keys in the _Destroyed_ state).
 {: important}
 
 ### Deleting key rings with the console
@@ -549,7 +548,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings/<key_ring_i
 1. [Retrieve your authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 2. Retrieve the ID of the key ring that you want to delete.
 
-    You can find the ID for a key ring in your {site.data.keyword.hscrypto}} instance by [retrieving a list of your key rings](#list-key-ring).
+    You can find the ID for a key ring in your {{site.data.keyword.hscrypto}} instance by [retrieving a list of your key rings](#list-key-ring).
 
 3. Run the following `curl` command to delete the key ring.
 
