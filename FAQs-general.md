@@ -87,7 +87,7 @@ IBM has an IaaS {{site.data.keyword.cloud_notm}} HSM service, which is different
 {: faq}
 {: support}
 
-Bring Your Own Key (BYOK) is a way for you to use your own keys to encrypt data. The key management services that provide BYOK are typically multi-tenant services. With these services, you can import your encryption keys from the on-premise hardware security modules (HSM) and then manage the keys.
+Bring Your Own Key (BYOK) is a way for you to use your own keys to encrypt data. The key management services that provide BYOK are typically multi-tenant services. With these services, you can import your encryption keys from the on-premises hardware security modules (HSM) and then manage the keys.
 
 With Keep Your Own Key (KYOK), IBM brings industry-leading level of control that you can exercise on your own encryption keys. In addition to the BYOK capabilities, KYOK provides technical assurance that IBM cannot access the customer keys. With KYOK, you have exclusive control of the entire key hierarchy, which includes the master key.
 
@@ -95,12 +95,12 @@ The following table details the differences between KYOK and BYOK.
 
 | Cloud key management capabilities                            | BYOK  | KYOK   |
 | --------------------------------- | ---------------------------------------------- |---------------------------------------------- |
-| Managing encryption key lifecycle                         |                Yes                 |                 Yes                |
+| Managing encryption key lifecycle                        |                Yes                 |                 Yes                |
 | Integrating with other cloud services|           Yes                     |            Yes                     |
-| Bringing your own keys from on-premise HSMs                      |                Yes                 |                 Yes                |
-| Operational assurance - Cloud service providers cannot access keys |                Yes                 |                 Yes           |
+| Bringing your own keys from on-premises HSMs                      |                Yes                 |                 Yes                |
+| Operational assurance - Cloud service providers cannot access keys. |                Yes                 |                 Yes           |
 | Technical assurance - IBM cannot access the keys          |                No                 |                   Yes                |
-| Single tenant, dedicated key management service           |                No                 |                    Yes              |
+| Single tenant, dedicated key management service.          |                No                 |                    Yes              |
 | Exclusive control of your master key                      |                No                  |                   Yes               |
 | Highest level security - FIPS 140-2 Level 4 HSM           |                No                  |                   Yes                |
 | Managing your master key with smart cards                 |                No                  |                   Yes                |
