@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-31"
+lastupdated: "2021-04-26"
 
 keywords: monitoring, monitor metrics
 
@@ -30,7 +30,7 @@ After you set up your {{site.data.keyword.hscrypto}} instance, you can manage Mo
 ## Managing metrics settings
 {: #manage-metrics-policy}
 
-Metrics for {{site.data.keyword.hscrypto}} instances is an extra policy that allows you to receive the operational metrics for your {{site.data.keyword.hscrypto}} instance. When you enable this policy, {{site.data.keyword.mon_short}} can be used to monitor any operations that are performed on the resources in your {{site.data.keyword.hscrypto}} instance.
+Metrics for {{site.data.keyword.hscrypto}} instances is an extra policy, with which, you can receive the operational metrics for your {{site.data.keyword.hscrypto}} instance. When you enable this policy, {{site.data.keyword.mon_short}} can be used to monitor any operations that are performed on the resources in your {{site.data.keyword.hscrypto}} instance.
 
 Before you enable operational metrics for your {{site.data.keyword.hscrypto}} instance, keep in mind the following considerations:
 
@@ -155,7 +155,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=met
     This new policy only reports on operations that occur after the policy is enabled.
     {: note}
 
-3. Optional: Verify that the metrics policy is created by browsing the policies that are available for your {site.data.keyword.hscrypto}} instance.
+3. Optional: Verify that the metrics policy is created by browsing the policies that are available for your {{site.data.keyword.hscrypto}} instance.
 
     ```sh
     $ curl -X GET \

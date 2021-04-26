@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-10-30"
+  years: 2020, 2021
+lastupdated: "2021-04-26"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning and operations
 
@@ -24,7 +24,7 @@ subcollection: hs-crypto
 # FAQs: Pricing
 {: #faq-pricing}
 
-This topic can help you with questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} pricing.
+Read to get answers for questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} pricing.
 {: shortdesc}
 
 ## How am I charged for my use of {{site.data.keyword.hscrypto}}?
@@ -37,7 +37,7 @@ Each provisioned crypto unit is charged $1560 USD per calendar month. The first 
 {{site.data.keyword.cloud_notm}} account billing cycles are based on Universal Time Coordinated (UTC). The billing cycle begins at 00:00:00 UTC on the first day of the month and ends at 23:59:59 UTC on the last calendar day of the month. For example, if you create a service instance on August 15 and delete it on September 15, it is counted as two calendar months and you are charged $3120 per crypto unit.
 {: note}
 
-Here is a detailed example for your reference. If you want to crypto-process 5000 keys by using two crypto units of {{site.data.keyword.hscrypto}} for high availability. The amount is $3120 ($1560 per crypto unit) per calendar month. The first 1,000,000 API calls per service instance are free of charge. However, if you perform 3,000,000 API calls per month, you are charged additional $2 ($0.01 per 10,000 API calls over 1,000,000 API calls). In total, there is a monthly charge of $3142 ($3140 for the two crypto units and $2 for the additional 2,000,000 API calls) for your service instance. The following table contains the pricing details.
+The following example is for your reference. If you want to crypto-process 5000 keys by using two crypto units of {{site.data.keyword.hscrypto}} for high availability. The amount is $3120 ($1560 per crypto unit) per calendar month. The first 1,000,000 API calls per service instance are free of charge. However, if you perform 3,000,000 API calls per month, you are charged additional $2 ($0.01 per 10,000 API calls over 1,000,000 API calls). In total, there is a monthly charge of $3142 ($3140 for the two crypto units and $2 for the additional 2,000,000 API calls) for your service instance. The following table contains the pricing details.
 
 | Pricing components | Cost per month |
 |-----|----------------|

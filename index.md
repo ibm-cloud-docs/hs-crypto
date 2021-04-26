@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-19"
+lastupdated: "2021-04-26"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -63,7 +63,7 @@ subcollection: hs-crypto
 # Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
 {: #get-started}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}} for short) is a dedicated key management service and [hardware security module (HSM)](#x6704988){: term} based on {{site.data.keyword.cloud_notm}}. This service allows you to take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. {{site.data.keyword.hscrypto}} is also the only service in the cloud industry that is built on FIPS 140-2 Level 4-certified hardware.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}} for short) is a dedicated key management service and [hardware security module (HSM)](#x6704988){: term} based on {{site.data.keyword.cloud_notm}}. With this service, you can take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. {{site.data.keyword.hscrypto}} is also the only service in the cloud industry that is built on FIPS 140-2 Level 4-certified hardware.
 {: shortdesc}
 {: hide-dashboard}
 
@@ -80,7 +80,7 @@ If you want to learn detailed steps on how to initialize a {{site.data.keyword.h
   <div class="solutionBox">
     <a href = "/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities">
       <div>
-        <p><strong><img src="image/smart-card.svg" alt="Smart card icon" width="20" style="width:20px; border-style: none"/> Use smart cards </p></strong>
+        <p><strong><img src="/images/smart-card.svg" alt="Smart card icon" width="20" style="width:20px; border-style: none"/> Use smart cards </p></strong>
         <p class="bx--type-caption">For the highest level of security, choose this option. It uses smart cards to store signature keys and master key parts. Signature keys and master key parts never appear in the clear outside the smart card.</p>
       </div>
     </a>
@@ -88,7 +88,7 @@ If you want to learn detailed steps on how to initialize a {{site.data.keyword.h
   <div class="solutionBox">
     <a href = "/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit">
       <div>
-         <p><strong><img src="image/recovery-crypto-unit.svg" alt="Recovery crypto unit icon" width="20" style="width:20px; border-style: none"/> Use recovery crypto units</p></strong>
+         <p><strong><img src="/images/recovery-crypto-unit.svg" alt="Recovery crypto unit icon" width="20" style="width:20px; border-style: none"/> Use recovery crypto units</p></strong>
          <p class="bx--type-caption">If one or more recovery crypto units are allocated for your service instance, you can choose this option. A random master key value is automatically generated in a recovery crypto unit and never appears in the clear outside of the HSMs.</p>
       </div>
     </a>
@@ -96,7 +96,7 @@ If you want to learn detailed steps on how to initialize a {{site.data.keyword.h
   <div class="solutionBox">
     <a href = "/docs/hs-crypto?topic=hs-crypto-initialize-hsm">
       <div>
-         <p><strong><img src="image/tke-cli.svg" alt="TKE CLI icon" width="20" style="width:20px; border-style: none"/> Use key part files</p></strong>
+         <p><strong><img src="/images/tke-cli.svg" alt="TKE CLI icon" width="20" style="width:20px; border-style: none"/> Use key part files</p></strong>
          <p class="bx--type-caption">Initialize your service instance by using master key parts that you create and store in files on your local workstation. In this case, the workstation key files serve as a backup copy of your master key value.</p>
       </div>
     </a>
@@ -104,9 +104,9 @@ If you want to learn detailed steps on how to initialize a {{site.data.keyword.h
   <div class="clearBox"></div>
 </div>
 
-<!-- the following is shown on the dashboard-->
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, built on FIPS 140-2 Level 4-certified hardware, allows you to take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. This tutorial guides you how to initialize your service instance by loading your master key, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the Enterprise PKCS #11 over gRPC (GREP11) API.
+
+With {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} that is built on FIPS 140-2 Level 4-certified hardware, you can take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. This tutorial guides you how to initialize your service instance by loading your master key, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the Enterprise PKCS #11 over gRPC (GREP11) API.
 {: hide-in-docs}
 
 ## Step 1: Initialize your service instance
@@ -389,7 +389,7 @@ Follow these steps:
 2. Enable a private endpoint for your {{site.data.keyword.hscrypto}} instance. For detailed instructions, see [Securing connection to Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-secure-connection).
 3. Create a {{site.data.keyword.hscrypto}} VPE gateway for your VPC instance. For detailed instructions, see [Creating an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
 
-<!-- The following is shown in docs app-->
+
 
 ## Before you begin
 {: #get-started-prerequisites}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-12-02"
+  years: 2020, 2021
+lastupdated: "2021-04-26"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning, operations
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # FAQs: Provisioning and operations
 {: #faq-provisioning-operations}
 
-This topic can help you with questions about provisioning an {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance and related operations.
+Read to get answers for questions about provisioning an {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance and related operations.
 {: shortdesc}
 
 ## Are there any prerequisites for using {{site.data.keyword.hscrypto}}?
@@ -110,13 +110,7 @@ Yes. {{site.data.keyword.hscrypto}} can be integrated with many {{site.data.keyw
 
 {{site.data.keyword.hscrypto}} provides the standard APIs for users to access. Your applications can connect to a {{site.data.keyword.hscrypto}} service instance by using the APIs directly over the public internet. If a more secured and isolated connection is needed, you can also use [private endpoints](/docs/hs-crypto?topic=hs-crypto-secure-connection). You can connect your service instance through {{site.data.keyword.cloud_notm}} service endpoints over the {{site.data.keyword.cloud_notm}} private network.
 
-<!--
-## Can I use language characters as part of the key name?
-{: #faq-key-name-rules}
-{: faq}
 
-Language characters, such as Chinese characters, cannot be used as part of the key name.
--->
 
 ## Can I generate master key on-premises and store the master key parts in the smart cards?
 {: #faq-generate-master-key-on-premises}
@@ -135,13 +129,7 @@ Importing root keys from an on-premises HSM is currently not supported.
 
 Yes. {{site.data.keyword.hscrypto}} can be used with {{site.data.keyword.keymanagementserviceshort}} for key management. In this way, {{site.data.keyword.hscrypto}} is responsible for only cryptographic operations, while {{site.data.keyword.keymanagementserviceshort}} provides key management service secured by multi-tenant FIPS 140-2 Level 3 certified cloud-based HSM.
 
-<!--
-## Can I use {{site.data.keyword.hscrypto}} only for cryptographic operations, but use my existing on-premises key management system for key storage?
-{: #faq-hpcs-cryptography-only}
-{: faq}
 
-Integration with on-premises key management system is currently not supported.
--->
 
 ## Can I use {{site.data.keyword.hscrypto}} in conjunction with other cloud provider services such as AWS and Azure?
 {: #faq-hpcs-other-cloud-vendor}

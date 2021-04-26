@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-02-02"
+lastupdated: "2021-04-26"
 
 keywords: delete, delete service instance, crypto unit, ibm cloud cli, clear crypto unit, uninstall
 
@@ -22,7 +22,7 @@ subcollection: hs-crypto
 # Deleting service instances
 {: #delete-instance}
 
-You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance with the {{site.data.keyword.cloud_notm}} console or the {{site.data.keyword.cloud_notm}} CLI. To do so, you need to first set all the [crypto units](#x9860404){: term} of the service instance back to [imprint mode](#x9860399){: term} by zeroizing the crypto units.
+You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance with the {{site.data.keyword.cloud_notm}} console or the {{site.data.keyword.cloud_notm}} CLI. To do so, you need to first set all the [crypto units](#x9860404){: term} of the service instance back to the [imprint mode](#x9860399){: term} by zeroizing the crypto units.
 {: shortdesc}
 
 ## Step 1: Zeroize crypto units
@@ -66,14 +66,7 @@ If you want to uninstall the entire {{site.data.keyword.cloud_notm}} CLI, refer 
 
 If you initialize your service instance by loading master key parts from smart cards, follow these steps to uninstall the {{site.data.keyword.hscrypto}} Management Utilities.
 
-<!--
-follow one of these procedures depending on your operating system:
 
-- Windows&reg; 10 operating system
-
-  1. Open the **Control Panel** and select **Uninstall a program**.
-  2. Locate the **{{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities** and click **Uninstall**.
--->
 
 - Linux&reg; operating system
 

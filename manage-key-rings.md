@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-04-26"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -169,195 +169,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
 
     A successful `POST api/v2/key_rings` request returns an HTTP `201 Created` response, which indicates that the key ring is created and is now available for holding standard and root keys.
 
-<!-- ## Transferring a key to a different key ring
-{: #transfer-key-key-ring}
 
-As requirements change and new team members are brought into an org, you might create new key rings to reflect these organizational changes. After creating the key rings, it might be necessary to move a key from an existing key ring to a
-new key ring that has different IAM permissions. For example, you might be onboarding a team that will need specific access to a key that belongs to a custom, non-default key ring. You can create a new key ring that is dedicated to the onboarding team and, since keys can only be associated with one key ring at a time, you will need to move the key to the new key ring.
-
-After transferring a key to a different key ring, it may take up to ten minutes for the change to take effect.
-{: important}
-
-### Transferring a key to a different key ring with the console
-{: #transfer-key-ring-ui}
-
-You can transfer a key to a different key ring with the console by completing the following steps:
-
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
-2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
-3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. Select the **Key management service keys** tab in the side menu to open the **Keys** table.
-5. Find the key that you want to transfer from the list and click the overflow icon (...) to open the option list.
-6. Click **Edit key ring**.
-7. Select the key ring ID that you want to move the key to and click **Save**.
-
-### Transferring a key to a different key ring with the API
-{: #transfer-key-ring-api}
-
-Transfer a key to a different key ring by making a `PATCH` call to the following endpoint.
-
-```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
-```
-{: codeblock}
-
-1. [Retrieve your authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
-
-    To update the key ring of a key, you must have at least _Manager_ service access to the key and the target key ring. To learn how IAM roles map to {{site.data.keyword.hscrypto}} service actions, check out [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
-    {: note}
-
-2. Update the key ring of a key by running the following `curl` command.
-
-    ```sh
-    $ curl -X PATCH \
-      "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>" \
-      -H 'accept: application/vnd.ibm.kms.key+json' \
-      -H 'authorization: Bearer <IAM_token>' \
-      -H 'bluemix-instance: <instance_ID>' \
-      -H 'content-type: application/vnd.ibm.kms.key+json' \
-      -H "x-kms-key-ring: <original_key_ring_ID>" \
-      -H "correlation-id: <correlation_ID>" \
-      -d '{
-        "keyRingID": "<new_key_ring_ID>"
-      }'
-    ```
-    {: codeblock}
-
-    Replace the variables in the example request according to the following table.
-
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>region</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The region abbreviation, such as <code>us-south</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
-          </p>
-          <p>
-            For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
-          </p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>IAM_token</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the <code>curl</code> request.
-          </p>
-          <p>
-            For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-          </p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>instance_ID</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance.
-          </p>
-          <p>
-            For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
-          </p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>original_key_ring_ID</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Optional.</strong> The unique identifier of the key ring that the key currently belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore recommended to specify the key ring ID for a more optimized request.
-          </p>
-          <p>
-            Note: If you create a key without an `x-kms-key-ring` header, the key ring for the key is: `default`.
-          </p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>correlation_ID</varname>
-        </td>
-        <td>
-          The unique identifier that is used to track and correlate transactions.
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>new_key_ring_ID</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The unique identifier for the target key ring that you want to move the key to.
-          </p>
-        </td>
-      </tr>
-
-      <caption style="caption-side:bottom;">
-        Table 2. Describes the variables that are needed to update a key's key ring with the key management API
-      </caption>
-    </table>
-
-    A successful `PATCH api/v2/keys/key_ID` request returns the key's metadata, including the ID of the key ring that the key now belongs to.
-
-    ```json
-    {
-     "metadata": {
-         "collectionType": "application/vnd.ibm.kms.key+json",
-         "collectionTotal": 1
-     },
-     "resources": [
-         {
-             "type": "application/vnd.ibm.kms.key+json",
-             "id": "02fd6835-6001-4482-a892-13bd2085f75d",
-             "name": "test-root-key",
-             "aliases": [
-                 "alias-1",
-                 "alias-2"
-               ],
-             "description": "A test root key",
-             "state": 1,
-             "extractable": false,
-             "keyRingID": "new-key-ring",
-             "crn": "crn:v1:bluemix:public:kms:us-south:a/f047b55a3362ac06afad8a3f2f5586ea:12e8c9c2-a162-472d-b7d6-8b9a86b815a6:key:02fd6835-6001-4482-a892-13bd2085f75d",
-             "imported": false,
-             "creationDate": "2020-03-12T03:37:32Z",
-             "createdBy": "...",
-             "algorithmType": "AES",
-             "algorithmMetadata": {
-                 "bitLength": "256",
-                 "mode": "CBC_PAD"
-             },
-             "algorithmBitSize": 256,
-             "algorithmMode": "CBC_PAD",
-             "lastUpdateDate": "2020-03-12T03:37:32Z",
-             "keyVersion": {
-                 "id": "2291e4ae-a14c-4af9-88f0-27c0cb2739e2",
-                 "creationDate": "2020-03-12T03:37:32Z"
-             },
-             "dualAuthDelete": {
-                 "enabled": false
-             },
-             "deleted": false
-         }
-     ]
-    }
-    ```
--->
 
 ## Granting access to a key ring
 {: #grant-access-key-ring}
@@ -522,7 +334,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
 
 You can delete a key ring with the console or with the key management API.
 
-The `Default` key ring can not be deleted. You are also not able to delete a key ring if the key ring contains at least one key, regardless of the key state (including keys in the _Destroyed_ state).
+The `Default` key ring cannot be deleted. You are also not able to delete a key ring if the key ring contains at least one key, regardless of the key state (including keys in the _Destroyed_ state).
 {: important}
 
 ### Deleting key rings with the console
@@ -549,7 +361,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings/<key_ring_i
 1. [Retrieve your authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 2. Retrieve the ID of the key ring that you want to delete.
 
-    You can find the ID for a key ring in your {site.data.keyword.hscrypto}} instance by [retrieving a list of your key rings](#list-key-ring).
+    You can find the ID for a key ring in your {{site.data.keyword.hscrypto}} instance by [retrieving a list of your key rings](#list-key-ring).
 
 3. Run the following `curl` command to delete the key ring.
 

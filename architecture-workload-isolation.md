@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-04-08"
+  years: 2021
+lastupdated: "2021-04-26"
 
 keywords: hyper protect crypto services architecture, service architecture, architecture diagram, workload isolation, crypto units, secure service container, ssc, public isolation for hyper protect crypto services, compute isolation for hyper protect crypto services
 
@@ -26,11 +26,13 @@ Review the service architecture, workload isolation characteristics, and service
 ## {{site.data.keyword.hscrypto}} architecture
 {: #architecture}
 
-The following architecture diagram shows how {{site.data.keyword.hscrypto}} components work to protect your sensitive data and keys.
+The following architecture diagram shows how you interact with {{site.data.keyword.hscrypto}} components to protect your sensitive data and keys.
 
 ![Service instance components](/images/hs-crypto-components.svg "Service instance components"){: caption="Figure 1. Interaction with {{site.data.keyword.hscrypto}} components" caption-side="bottom"}
 
-For an introduction to the {{site.data.keyword.hscrypto}} components, see [Components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
+
+
+For more information about the {{site.data.keyword.hscrypto}} components, see [Components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
 
 ## {{site.data.keyword.hscrypto}} workload isolation
 {: #workload-isolation}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-02-26"
+lastupdated: "2021-04-26"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -57,11 +57,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
     At least two crypto units are to be enabled for high availability. These crypto units are distributed among different supported availability zones in the selected region.
     {: note}
 
-  <!--
-  6. Under **Backup region**, select the region where you want to back up your instance master key.
-
-    If you [initialize your service instance using the recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode), the master key is automatically backed up in the backup region that you specify. If the region where your service instance locates fails, the cross-region backup is to be used for the master key recovery. For more information, see [Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit).
-  -->
+  
 
   6. Under **Allowed network**, choose the network access to your service instance:
 
@@ -82,7 +78,6 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
 To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.keyword.cloud_notm}} CLI, complete the following steps:
 
 1. Download and install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external}.
-
 2. Log in to {{site.data.keyword.cloud_notm}} through the {{site.data.keyword.cloud_notm}} CLI with the following command:
 
     ```sh

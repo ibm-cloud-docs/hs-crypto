@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-03"
+lastupdated: "2021-04-26"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -70,7 +70,7 @@ Before you start the instance initialization, make sure that you complete [the p
 ## Adding or removing crypto units that are assigned to service instances
 {: #identify_crypto_units}
 
-[Crypto units](#x9860404){: term} that are assigned to an {{site.data.keyword.cloud_notm}} user account are in groups that are known as *service instances*. A service instance can have up to six crypto units. All crypto units in a service instance need to be configured the same. If one part of the {{site.data.keyword.cloud_notm}} can't be accessed, the crypto units in a service instance can be used interchangeably for load balancing or for availability.
+[Crypto units](#x9860404){: term} that are assigned to an {{site.data.keyword.cloud_notm}} user account are in groups that are known as service instances. A service instance can have up to six crypto units. All crypto units in a service instance need to be configured the same. If one part of the {{site.data.keyword.cloud_notm}} can't be accessed, the crypto units in a service instance can be used interchangeably for load balancing or for availability.
 
 Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start in a cleared state that is known as [imprint mode](#x9860399){: term}.
 
@@ -138,7 +138,7 @@ To load the new master key register, complete the following tasks with the {{sit
 ### Step 1: Create one or more signature keys
 {: #step1-create-signature-keys}
 
-To load the new master key register, A crypto unit administrator must sign the command with a unique signature key. The first step is to create one or more signature key files that contain signature keys on your workstation. <!-- The private part of the signature key file is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. -->
+To load the new master key register, A crypto unit administrator must sign the command with a unique signature key. The first step is to create one or more signature key files that contain signature keys on your workstation. 
 
 For security considerations, the signature key owners can be different people from the master key part owners. The signature key owner needs to be the only person who knows the password that is associated with the signature key file.
 {: important}
@@ -173,7 +173,7 @@ For security considerations, the signature key owners can be different people fr
 ### Step 2: Add one or more administrators in the target crypto unit
 {: #step2-load-admin}
 
-<!-- After a crypto unit exits imprint mode, all administrative commands sent to the crypto unit must be signed by an administrator that is added to the crypto unit. -->
+
 
 * To display the existing administrators for a crypto unit, use the following command:
   ```

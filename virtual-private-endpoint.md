@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-04"
+lastupdated: "2021-04-26"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway
 
@@ -60,7 +60,7 @@ The table lists {{site.data.keyword.hscrypto}} private endpoints that are suppor
 
 You can connect to your {{site.data.keyword.hscrypto}} instance in another region using supported endpoints that corresponds to the service region. For example, from the Dallas VPC region, you can connect to your {{site.data.keyword.hscrypto}} instance created in the `us-east` region using the corresponding `us-east` endpoints.
 
-When connecting to a VPE via [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gateway#vpe-ordering-cli) or [API](/docs/vpc?topic=vpc-ordering-endpoint-gateway#vpe-ordering-api), you will need to specify the CRN of the region that you will use to connect to the {{site.data.keyword.hscrypto}}. Use the following table to locate the CRN of the target region.
+When connecting to a VPE through [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gateway#vpe-ordering-cli) or [API](/docs/vpc?topic=vpc-ordering-endpoint-gateway#vpe-ordering-api), you will need to specify the CRN of the region that you will use to connect to the {{site.data.keyword.hscrypto}}. Use the following table to locate the CRN of the target region.
 {: note}
 
 <table>
@@ -89,7 +89,7 @@ When connecting to a VPE via [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gateway
     <td>api.private.au-syd.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:api.private.au-syd.hs-crypto.cloud.ibm.com</td>
   </tr>
-
+  
   <tr>
     <td rowspan="4">Enterprise PKCS #11</td>
     <td>ep11.private.us-south.hs-crypto.cloud.ibm.com</td>
@@ -107,7 +107,7 @@ When connecting to a VPE via [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gateway
     <td>ep11.private.au-syd.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:ep11.private.au-syd.hs-crypto.cloud.ibm.com</td>
   </tr>
-
+  
   <tr>
     <td rowspan="4">Trusted Key Entry (TKE)</td>
     <td>tke.private.us-south.hs-crypto.cloud.ibm.com</td>
@@ -125,7 +125,7 @@ When connecting to a VPE via [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gateway
     <td>tke.private.au-syd.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:tke.private.au-syd.hs-crypto.cloud.ibm.com</td>
   </tr>
-
+  
   <tr>
     <td rowspan="4">Key Management Interoperability Protocol (KMIP) adapter</td>
     <td>kmip.private.us-south.hs-crypto.cloud.ibm.com</td>
@@ -143,6 +143,6 @@ When connecting to a VPE via [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gateway
     <td>kmip.private.au-syd.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:kmip.private.au-syd.hs-crypto.cloud.ibm.com</td>
   </tr>
-
+  
   <caption>Table 1. Private endpoints for connecting {{site.data.keyword.hscrypto}} over {{site.data.keyword.cloud_notm}} private network</caption>
 </table>

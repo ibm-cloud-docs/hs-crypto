@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-03-31"
+lastupdated: "2021-04-26"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, data security, compliance
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # FAQs: Security and compliance
 {: #faq-security-compliance}
 
-This topic can help you with questions about data security in {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
+Read to get answers for questions about data security in {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
 ## How can I manage user access to my service instances? Does IBM have access to my instances?
@@ -35,11 +35,7 @@ IBM or any third-party users do not have access to your service instances or you
 
 {{site.data.keyword.hscrypto}} follows the {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) standard. You can [manage user access by assigning different IAM roles](/docs/hs-crypto?topic=hs-crypto-manage-access) and [grant access to specific keys](/docs/hs-crypto?topic=hs-crypto-grant-access-keys) to enable more granular access control.
 
-<!-- ## Can I share my service instance with other users? How can I manage the user's access?
-{: #faq-hpcs-user-access}
-{: faq}
 
-{{site.data.keyword.hscrypto}} follows the {{site.data.keyword.cloud_notm}} Identity and Access Management standard. You can share the service instance access through adding users in the access group. For more information, see [Managing access in {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-cloudaccess). -->
 
 ## How does IBM offer a unique and secure process for service initialization (key ceremony)?
 {: #faq-hpcs-user-access}
@@ -118,7 +114,7 @@ For more information on the EP11 mechanisms, see the [Enterprise PKCS #11 (EP11)
 {: #faq-compliance-standards}
 {: faq}
 
-{{site.data.keyword.hscrypto}} meets controls for global, industry, and regional compliance standards, such as GDPR, HIPAA,<!-- IRAP,--> and ISO. As the HSM used by {{site.data.keyword.hscrypto}}, the IBM 4768 crypto card is also certified with Common Criteria EAL4 and FIPS 140-2 Level 4. For more information, see [Security and compliance](/docs/hs-crypto?topic=hs-crypto-security-and-compliance).
+{{site.data.keyword.hscrypto}} meets controls for global, industry, and regional compliance standards, such as GDPR, HIPAA, and ISO. As the HSM used by {{site.data.keyword.hscrypto}}, the IBM 4768 crypto card is also certified with Common Criteria EAL4 and FIPS 140-2 Level 4. For more information, see [Security and compliance](/docs/hs-crypto?topic=hs-crypto-security-and-compliance).
 
 ## Can I monitor my service instance?
 {: #faq-monitor-instance}
