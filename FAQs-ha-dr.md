@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-07-17"
+  years: 2020, 2021
+lastupdated: "2021-04-26"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, HA, DR, high availability, disaster recovery
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # FAQs: High availability and disaster recovery
 {: #faq-ha-dr}
 
-This topic can help you with high-availability and disaster-recovery related questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
+Read to get answers for high-availability and disaster-recovery related questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
 ## How do I set up a high availability configuration?

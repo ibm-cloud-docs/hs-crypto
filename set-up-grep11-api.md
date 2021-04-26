@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-24"
+lastupdated: "2021-04-26"
 
 keywords: set up api, api key, cryptographic operations, use ep11 api, access ep11 api, ep11 over grpc, using api
 
@@ -48,7 +48,7 @@ GREP11 API supports programming languages with [gRPC libraries](https://grpc.io/
 
 You can use the following Golang code example to generate random data by calling the `GenerateRandom` function.
 
-This example assumes that additional required Golang packages are included via import statements, such as the [gRPC](https://godoc.org/google.golang.org/grpc){: external} and [http](https://golang.org/pkg/net/http/){: external} packages. The `import pb "github.com/IBM-Cloud/hpcs-grep11-go/grpc"` statement is used by GREP11 to perform API function calls.
+This example assumes that additional required Golang packages are included through import statements, such as the [gRPC](https://godoc.org/google.golang.org/grpc){: external} and [http](https://golang.org/pkg/net/http/){: external} packages. The `import pb "github.com/IBM-Cloud/hpcs-grep11-go/grpc"` statement is used by GREP11 to perform API function calls.
 {: note}
 
 ```Golang

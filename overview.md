@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-02-23"
+lastupdated: "2021-04-26"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Overview
 {: #overview}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is a dedicated key management service and [Hardware Security Module (HSM)](#x6704988){: term} that provides you with the Keep Your Own Key capability for cloud data encryption. Built on FIPS 140-2 Level 4 certified hardware, {{site.data.keyword.hscrypto}} allows you to have exclusive control of your encryption keys.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is a dedicated key management service and [Hardware Security Module (HSM)](#x6704988){: term} that provides you with the Keep Your Own Key capability for cloud data encryption. Built on FIPS 140-2 Level 4 certified hardware, {{site.data.keyword.hscrypto}} provides you with exclusive control of your encryption keys.
 {: shortdesc}
 
 Watch the following video to learn how {{site.data.keyword.hscrypto}} provides you with exclusive encryption key control and data protection in the cloud:
@@ -45,9 +45,9 @@ Enterprise PKCS #11 over gRPC (GREP11) is also supported by {{site.data.keyword.
 
 With the built-in encryption of {{site.data.keyword.hscrypto}}, you can easily build cloud applications with sensitive data. {{site.data.keyword.hscrypto}} provides you with complete control of your data and encryption keys, including the master key. The service also helps your business meet regulatory compliance with the technology that provides exclusive controls on the external and privileged user access to data and keys.
 
-<!-- With {{site.data.keyword.hscrypto}}, your SSL keys are offloaded to a {{site.data.keyword.hscrypto}} instance to ensure security and protection of those sensitive keys. Besides, the certificate lifecycle management gets common approach to manage certificates and offers the visibility to certificate expiration. -->
 
-<!-- {{site.data.keyword.hscrypto}} is the cryptography that {{site.data.keyword.blockchainfull_notm}} Platform is built with. This cryptography mechanism ensures that the blockchain network is running in a highly protected and isolated environment, and accelerates hashing, sign/verify operations, and node-to-node communications in the network. The success of {{site.data.keyword.blockchainfull_notm}} Platform proves the capability and value of {{site.data.keyword.hscrypto}}. -->
+
+
 
 ## How does {{site.data.keyword.hscrypto}} work?
 {: #how-hpcs-work}
@@ -70,7 +70,7 @@ For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service arc
 
 * **Key lifecycle management**
 
-  {{site.data.keyword.hscrypto}} provides a single-tenant key management service that allows you to create, import, rotate, and manage keys with the standardized API. After the encryption keys are deleted, you can be assured that your data is no longer retrievable.
+  {{site.data.keyword.hscrypto}} provides a single-tenant key management service to create, import, rotate, and manage keys with the standardized API. After the encryption keys are deleted, you can be assured that your data is no longer retrievable.
 
 * **Encryption for {{site.data.keyword.cloud_notm}} data and workload services**
 
@@ -81,7 +81,7 @@ For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service arc
 
 * **Customer-controlled HSM**
 
-  With Keep Your Own Key, {{site.data.keyword.hscrypto}} allows you to take the ownership of the HSM through assigning your own administrators and loading master keys. This ensures your full control of the entire key hierarchy with no access even from {{site.data.keyword.cloud_notm}} administrators.
+  With Keep Your Own Key, you can take the ownership of the HSM through assigning your own administrators and loading master keys with {{site.data.keyword.hscrypto}}. This ensures your full control of the entire key hierarchy with no access even from {{site.data.keyword.cloud_notm}} administrators.
 
 * **Cryptographic operations**
 
@@ -98,7 +98,7 @@ For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service arc
 
 You can also monitor and audit events and activities of {{site.data.keyword.hscrypto}} by using {{site.data.keyword.at_full_notm}}. For more information, see [Auditing events for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-at-events) .
 
-<!-- {{site.data.keyword.hscrypto}} also leverages the ACSP solution that enables remote access to the IBM’s cryptographic coprocessors. ACSP allows for utilization of strong hardware-based cryptography as a service in distributed environments where data security cannot be guaranteed. {{site.data.keyword.hscrypto}} utilizes ACSP as a *network hardware security module (NetHSM)* that provides access to HSM via PKCS #11 standard API.-->
+
 
 ## What's next
 {: #overview-next}

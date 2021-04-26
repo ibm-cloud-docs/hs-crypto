@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-07-17"
+  years: 2020, 2021
+lastupdated: "2021-04-26"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # FAQs: Performance and capacity
 {: #faq-performance-capacity}
 
-This topic can help you with questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} performance and capacity.
+Read to get answers for questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} performance and capacity.
 {: shortdesc}
 
 ## How many keys can be stored in a {{site.data.keyword.hscrypto}} service instance?
@@ -32,13 +32,7 @@ This topic can help you with questions about {{site.data.keyword.cloud}} {{site.
 
 A {{site.data.keyword.hscrypto}} service instance can hold a maximum of 5000 keys.
 
-<!--
-## How many cryptographic operations per second can {{site.data.keyword.hscrypto}} perform?
-{: #faq-cryptographic-operations-number}
-{: faq}
 
-*Answers needed*
--->
 
 ## Can I add or remove crypto units after I provision a service instance?
 {: #faq-add-remove-crypto-unit}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-01"
+lastupdated: "2021-04-26"
 
 keywords: integration, encryption at rest, cloud object storage, object storage, kmip, containers, vmware, database, compute
 
@@ -114,7 +114,7 @@ You can integrate {{site.data.keyword.hscrypto}} with the following security-rel
 ## Understanding your integration
 {: #understand-integration}
 
-When you integrate a supported service with {{site.data.keyword.hscrypto}}, you enable [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) for that service. This integration allows you to use a root key that you store in {{site.data.keyword.hscrypto}} to wrap the data encryption keys that encrypt your data at rest.
+When you integrate a supported service with {{site.data.keyword.hscrypto}}, you enable [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) for that service. With this integration, you can use a root key that you store in {{site.data.keyword.hscrypto}} to wrap the data encryption keys that encrypt your data at rest.
 
 For example, you can create a root key, manage the key in {{site.data.keyword.hscrypto}}, and use the root key to protect the data that is stored across different cloud services.
 

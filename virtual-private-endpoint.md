@@ -60,7 +60,7 @@ The table lists {{site.data.keyword.hscrypto}} private endpoints that are suppor
 
 You can connect to your {{site.data.keyword.hscrypto}} instance in another region using supported endpoints that corresponds to the service region. For example, from the Dallas VPC region, you can connect to your {{site.data.keyword.hscrypto}} instance created in the `us-east` region using the corresponding `us-east` endpoints.
 
-When connecting to a VPE via [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gateway#vpe-ordering-cli) or [API](/docs/vpc?topic=vpc-ordering-endpoint-gateway#vpe-ordering-api), you will need to specify the CRN of the region that you will use to connect to the {{site.data.keyword.hscrypto}}. Use the following table to locate the CRN of the target region.
+When connecting to a VPE through [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gateway#vpe-ordering-cli) or [API](/docs/vpc?topic=vpc-ordering-endpoint-gateway#vpe-ordering-api), you will need to specify the CRN of the region that you will use to connect to the {{site.data.keyword.hscrypto}}. Use the following table to locate the CRN of the target region.
 {: note}
 
 <table>

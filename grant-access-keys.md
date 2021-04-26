@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-17"
+lastupdated: "2021-04-26"
 
 keywords: grant access, iam, iam access, assign access, access policy, key access
 
@@ -94,7 +94,7 @@ Use the retrieved key ID to create a access policy:
 ## Granting access to key rings in an instance
 {: #grant-access-key-ring-level}
 
-A key ring is a collection of keys located within your service instance, in which you can restrict access via IAM access policy. For information on key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+A key ring is a collection of keys located within your service instance, in which you can restrict access through IAM access policy. For information on key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
 
 You can grant access to key rings within a {{site.data.keyword.hscrypto}} instance by using the
 {{site.data.keyword.cloud_notm}} console, IAM API, or IAM CLI.
@@ -120,5 +120,5 @@ To assign access to a key ring with the console:
 9. Click **Add**.
 10. Continue to add platform and service access roles as needed. When you finish all the access assignment, click **Assign**.
 
-You can also create an access policy via IAM [API](/apidocs/iam-policy-management#create-policy){: external} or [CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create){ :external}.
+You can also create an access policy through IAM [API](/apidocs/iam-policy-management#create-policy){: external} or [CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create){ :external}.
 {: note}

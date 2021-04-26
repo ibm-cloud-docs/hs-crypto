@@ -63,7 +63,7 @@ subcollection: hs-crypto
 # Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
 {: #get-started}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}} for short) is a dedicated key management service and [hardware security module (HSM)](#x6704988){: term} based on {{site.data.keyword.cloud_notm}}. This service allows you to take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. {{site.data.keyword.hscrypto}} is also the only service in the cloud industry that is built on FIPS 140-2 Level 4-certified hardware.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}} for short) is a dedicated key management service and [hardware security module (HSM)](#x6704988){: term} based on {{site.data.keyword.cloud_notm}}. With this service, you can take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. {{site.data.keyword.hscrypto}} is also the only service in the cloud industry that is built on FIPS 140-2 Level 4-certified hardware.
 {: shortdesc}
 {: hide-dashboard}
 
@@ -106,7 +106,7 @@ If you want to learn detailed steps on how to initialize a {{site.data.keyword.h
 
 
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, built on FIPS 140-2 Level 4-certified hardware, allows you to take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. This tutorial guides you how to initialize your service instance by loading your master key, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the Enterprise PKCS #11 over gRPC (GREP11) API.
+With {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} that is built on FIPS 140-2 Level 4-certified hardware, you can take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. This tutorial guides you how to initialize your service instance by loading your master key, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the Enterprise PKCS #11 over gRPC (GREP11) API.
 {: hide-in-docs}
 
 ## Step 1: Initialize your service instance

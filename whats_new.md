@@ -127,7 +127,7 @@ The GREP11 API now supports the `ReencryptSingle` function which enables you to 
 ### Added: Using Terraform to manage {{site.data.keyword.hscrypto}} instances and resources
 {: #add-terraform}
 
-Terraform is an open source software that enables you to configure and automate cloud resource provisioning and management. Now you can provision and initialize {{site.data.keyword.hscrypto}} instances, as well as managing root keys and standard keys with the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in. For more information, see [Managing key management service resources with Terraform](/docs/terraform?topic=terraform-kms-resources), [Retrieving key management service data with Terraform](/docs/terraform?topic=terraform-kms-data-sources), and the [sample Terraform template for {{site.data.keyword.hscrypto}}](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-hpcs-crypto){: external}.
+Terraform is an open source software to configure and automate cloud resource provisioning and management. Now you can provision and initialize {{site.data.keyword.hscrypto}} instances, as well as managing root keys and standard keys with the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in. For more information, see [Managing key management service resources with Terraform](/docs/terraform?topic=terraform-kms-resources), [Retrieving key management service data with Terraform](/docs/terraform?topic=terraform-kms-data-sources), and the [sample Terraform template for {{site.data.keyword.hscrypto}}](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-hpcs-crypto){: external}.
 
 ### Added: Provisioning and managing service instances with the private-only network
 {: #add-private-only-network}
@@ -230,7 +230,7 @@ For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypt
 ### Added: {{site.data.keyword.hscrypto}} aligns the key management functions with {{site.data.keyword.keymanagementserviceshort}}
 {: #added-key-protect-concurrency}
 
-{{site.data.keyword.hscrypto}}, built on FIPS 140-2 Level 4-compliant HSM, now supports the same level of key management functions as {{site.data.keyword.keymanagementserviceshort}}. The added functions include the following:
+{{site.data.keyword.hscrypto}}, built on FIPS 140-2 Level 4-compliant HSM, now supports the same level of key management functions as {{site.data.keyword.keymanagementserviceshort}}. The added functions are as follow:
 
 * [Policy-based key rotation](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy)
 * [Viewing root key versions](/docs/hs-crypto?topic=hs-crypto-view-key-versions)
@@ -292,7 +292,7 @@ To get started, enable [virtual routing and forwarding (VRF) and service endpoin
 ### Added: {{site.data.keyword.hscrypto}} Cloud HSM now supports EP11 cryptographic operations over gRPC
 {: #added-EP11}
 
-The managed cloud Hardware Security Module (HSM) supports Enterprise Public-Key Cryptography Standards (PKCS) #11, so your applications can integrate cryptographic operations like digital signing and validation via Enterprise PKCS #11 (EP11) API. The EP11 library provides an interface similar to the industry-standard PKCS #11 API.
+The managed cloud Hardware Security Module (HSM) supports Enterprise Public-Key Cryptography Standards (PKCS) #11, so your applications can integrate cryptographic operations like digital signing and validation through Enterprise PKCS #11 (EP11) API. The EP11 library provides an interface similar to the industry-standard PKCS #11 API.
 
 {{site.data.keyword.hscrypto}} provides a set of Enterprise PKCS #11 (EP11) over gRPC API calls (also referred to as *GREP11*), with which, all the Crypto functions are executed in HSM on cloud. GREP11 is a stateless interface for cloud programs.
 

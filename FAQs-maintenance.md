@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-07-17"
+  years: 2020, 2021
+lastupdated: "2021-04-26"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, maintenance
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # FAQs: Support and maintenance
 {: #faq-support-maintenance}
 
-This topic can help you with support and maintenance related questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
+Read to get answers for support and maintenance related questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
 ## How is routine maintenance performed on {{site.data.keyword.hscrypto}}?

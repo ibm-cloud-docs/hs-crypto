@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-09-28"
+  years: 2018, 2021
+lastupdated: "2021-04-26"
 
 keywords: security and compliance, ibmcloud security compliance, compliant, data security, data encryption, data delete, common criteria, fips, iso, gdpr
 
@@ -67,12 +67,7 @@ As the Hardware Security Module (HSM) used by {{site.data.keyword.hscrypto}}, th
 
 Common Criteria is an international standard (ISO/IEC 15408) to assess the security of computer security products. Common Criteria provides assurance that the process of specification, implementation, and evaluation of a computer security product is complied with the standards and requirements defined.
 
-<!-- ### EU support
-{: #eu-support}
 
-{{site.data.keyword.hscrypto}} has extra controls in place to protect your {{site.data.keyword.hscrypto}} resources in the European Union (EU).
-
-If you use {{site.data.keyword.hscrypto}} resources in the Frankfurt, Germany region to process personal data for European citizens, you can enable the EU Supported setting for your {{site.data.keyword.cloud_notm}} account. To find out more, see [Enabling the EU Supported setting](/docs/account?topic=account-eu-hipaa-supported#bill_eusupported) and [Requesting support for resources in the European Union](/docs/get-support?topic=get-support-using-avatar#eusupported). -->
 
 ### FIPS 140-2 Level 4
 {: #fips}
@@ -83,7 +78,7 @@ FIPS 140-2 defines four levels of security, including FIPS 140-2 Level 1, 2, 3, 
 
 {{site.data.keyword.hscrypto}} uses the IBM 4768 crypto card, which is certified at FIPS 140-2 Level 4, the highest level of certification achievable for commercial cryptographic devices. {{site.data.keyword.hscrypto}} is the only cloud HSM in the public cloud market that is built on an HSM designed to meet FIPS 140-2 Level 4 certification requirements.
 
-Here is the [certificate for IBM 4768 Cryptographic Coprocessor Security Module](https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/3410){: external}.
+The following certificate is for [IBM 4768 Cryptographic Coprocessor Security Module](https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/3410){: external}.
 
 ### General Data Protection Regulation
 {: #gdpr}

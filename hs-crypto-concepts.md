@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-04"
+lastupdated: "2021-04-26"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -51,15 +51,9 @@ Data encryption keys (DEKs) are cryptographic keys that you use for data encrypt
 
 Envelope encryption is the practice of encrypting data with a DEK and then encrypting the DEK with a root key that you can fully manage. To learn more, see [Introduction to envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
 
-<!-- ### Bring Your Own Key
-{: #byok-concept}
 
-The Bring Your Own Keys (BYOK) feature allows you to import your existing keys to {{site.data.keyword.hscrypto}} service instances that protect your keys with advanced encryption. With BYOK, you can extend your own keys from internal key management infrastructure to the cloud in a highly secured environment.-->
 
-<!-- ### Transport Keys
-{: #transport-key-concept}
 
-Transport keys are a resource type in {{site.data.keyword.hscrypto}} that enable the secure import of root key material to your service instance. By using a transport key to encrypt your key material on-premises, you protect root keys while they're in flight to {{site.data.keyword.hscrypto}} based on the policies that you specify. For example, you can set a policy on the transport key that limits the use of the key based on time and usage count. -->
 
 
 ## Cloud hardware security module

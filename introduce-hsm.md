@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020,2021
-lastupdated: "2021-01-13"
+  years: 2020, 2021
+lastupdated: "2021-04-26"
 
 keywords: hsm, cloud hsm, ep11, grep11, pkcs, cryptographic operations, cryptographic functions
 
@@ -43,7 +43,7 @@ In order to use the {{site.data.keyword.hscrypto}} cloud HSM to protect your key
 ### Accessing the cloud HSM with the PKCS #11 API
 {: #access-cloud-hsm-pkcs11}
 
-[Public-Key Cryptography Standards (PKCS) #11](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external} is an industry standard that defines a platform-independent API, called Cryptoki, for devices such as HSMs that hold cryptographic information and perform cryptographic operations. {{site.data.keyword.hscrypto}} allows you to use the standard PKCS #11 API to access the cloud HSM with the PKCS #11 library. The library connects your applications to the cloud HSM to perform cryptographic operations.
+[Public-Key Cryptography Standards (PKCS) #11](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external} is an industry standard that defines a platform-independent API, called Cryptoki, for devices such as HSMs that hold cryptographic information and perform cryptographic operations. With {{site.data.keyword.hscrypto}}, you can use the standard PKCS #11 API to access the cloud HSM with the PKCS #11 library. The library connects your applications to the cloud HSM to perform cryptographic operations.
 
 With the support of the PKCS #11 API, you don't need to change your existing applications that use the PKCS #11 standard to make them run in the {{site.data.keyword.hscrypto}} cloud HSM environment. The PKCS #11 library accepts the PKCS #11 API requests from your applications and remotely accesses the cloud HSM to execute the corresponding cryptographic functions. For more information about the PKCS #11 API, see [Introducing PKCS #11](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro).
 

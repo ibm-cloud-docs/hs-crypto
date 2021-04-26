@@ -374,8 +374,8 @@ The following fields include extra information:
 - The `requestData.newValue.PolicyKCIAAttrIRK` field includes if your key creation and importation policy allows imported root keys.
 - The `requestData.initialValue.PolicyKCIAAttrISK` field includes if your key creation and importation policy previously allowed imported standard keys.
 - The `requestData.newValue.PolicyKCIAAttrISK` field includes if your key creation and importation policy allows imported standard keys.
-- The `requestData.initialValue.PolicyKCIAAttrET` field includes if your key creation and importation policy previously required keys to be imported via import token.
-- The `requestData.newValue.PolicyKCIAAttrET` field includes if your key creation and importation policy requires keys to be imported via import token.
+- The `requestData.initialValue.PolicyKCIAAttrET` field includes if your key creation and importation policy previously required keys to be imported through import token.
+- The `requestData.newValue.PolicyKCIAAttrET` field includes if your key creation and importation policy requires keys to be imported through import token.
 
 ### Import token events
 {: #import-token-events}
