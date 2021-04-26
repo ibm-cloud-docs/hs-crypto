@@ -41,7 +41,6 @@ You can restore a deleted key within 30 days of its deletion. This capability is
 
 
 
-
 ## Restoring a deleted key with the console
 {: #restore-keys-ui}
 {: help}
@@ -93,9 +92,6 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/restore
 
    You cannot restore a key that has an expiration date that is current or in the past.
    {: important}
-
-    
-
     
     ```sh
     curl -X POST \
@@ -117,7 +113,6 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/restore
     ```
     {: codeblock}
     
-
     Replace the variables in the example request according to the following table.
 
     <table>
