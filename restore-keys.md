@@ -316,9 +316,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/restore
 
 6. Restore the key and regain access to its associated data by running the following `curl` command.
 
-  ```cURL
+  ```sh
   curl -X POST \
-    https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/restore \
+    'https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/restore' \
     -H 'authorization: Bearer <IAM_token>' \
     -H 'bluemix-instance: <instance_ID>' \
     -d '{
@@ -459,9 +459,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/restore
 
 7. Optional: Verify that the key was restored by retrieving details about the key.
 
-  ```cURL
+  ```sh
   curl -X GET \
-    https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>/metadata \
+    'https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>/metadata' \
     -H 'authorization: Bearer <IAM_token>' \
     -H 'bluemix-instance: <instance_ID>' \
     -H 'accept: application/vnd.ibm.kms.key+json'

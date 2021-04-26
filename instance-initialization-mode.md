@@ -122,7 +122,7 @@ The following sections explain each component in detail.
 ### Understanding {{site.data.keyword.cloud_notm}} TKE CLI plug-in
 {: #understand-tke-plugin}
 
-The TKE CLI plug-in is an addition to the {{site.data.keyword.cloud_notm}} command-line interface (CLI) that allows you to send commands to the crypto units in your service instance to load the master key. The TKE CLI plug-in supports two approaches for loading the master key.
+The TKE CLI plug-in is an addition to the {{site.data.keyword.cloud_notm}} command-line interface (CLI). With the TKE CLI plug-in, you can send commands to the crypto units in your service instance to load the master key. The TKE CLI plug-in supports two approaches for loading the master key.
 
 If your service instance has recovery crypto units, you can load the master key by running the `ibmcloud tke auto-init` command. This command guides you through steps to add administrators and set the signature thresholds, and then generates a random master key value in one of the recovery crypto units in your service instance and copies the value to the other crypto units. For more information on this approach see [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit).
 
