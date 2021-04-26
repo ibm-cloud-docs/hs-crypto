@@ -214,8 +214,6 @@ For audit purposes, you can monitor the activity trail of a deleted root key thr
 
 **[Need to add an image displaying the activity tracker fields for a successful end to end key deletion event]**
 
-
-
 ## Next steps
 {: #crypto-erasure-next-steps}
 

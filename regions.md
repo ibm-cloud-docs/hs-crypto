@@ -31,9 +31,7 @@ You can connect your applications with the {{site.data.keyword.cloud}} {{site.da
 {{site.data.keyword.hscrypto}} is available in the following regions and locations:
 
 - Dallas, US: `us-south`
-- Frankfurt, Germany: `eu-de`
-
-- Sydney, Australia: `au-syd`
+- Frankfurt, Germany: `eu-de`- Sydney, Australia: `au-syd`
 - Washington DC, US: `us-east`
 
 You can create {{site.data.keyword.hscrypto}} resources in one of the supported {{site.data.keyword.cloud_notm}} regions, which represent the

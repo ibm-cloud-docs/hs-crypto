@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-21"
+lastupdated: "2021-04-26"
 
 keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases
 
@@ -34,7 +34,7 @@ With the integration in the {{site.data.keyword.cloud_notm}} Security Architectu
 Encryption keys that are generated and protected by {{site.data.keyword.hscrypto}} can be used to provide application record-level or field-level encryption to protect data from other insider threats such as from database administrators.
 
 ###  Data at rest encryption with KYOK
-{: data-at-rest-encryption-kyok}
+{: #data-at-rest-encryption-kyok}
 
 Keys are protected by customer-managed dedicated HSMs, which means, only you have access to your data. The cryptographic capabilities of  {{site.data.keyword.hscrypto}} are built on top of a FIPS 140-2 Level 4 Certified Hardware Security Module. You can benefit from the cryptographic capabilities of {{site.data.keyword.hscrypto}} for both your new and existing workloads. The {{site.data.keyword.keymanagementservicefull_notm}} API is integrated for generating and protecting encryption keys.
 
@@ -43,7 +43,7 @@ Refer to [Apply end to end security to a cloud application](/docs/solution-tutor
 ![data at rest encryption with KYOK](/images/byok.svg "Data at rest encryption with KYOK"){: caption="Figure 1. Data at rest encryption with KYOK" caption-side="bottom"}
 
 ###  VMware image protection with KYOK
-{: vmware--encryption-kyok}
+{: #vmware-encryption-kyok}
 
 Organizations that use the VMware&reg; environment in {{site.data.keyword.cloud_notm}} to process and store personal information demands the highest level of security. As a user of {{site.data.keyword.hscrypto}}, you get your own dedicated slot that you set up on your own to ensure that no body else can access. Because {{site.data.keyword.hscrypto}} and VMware do not talk to the same interfaces, the Key Management Interoperability Protocol for VMware component acts as an intermediary to allow the VMware environment to store and use keys from {{site.data.keyword.hscrypto}}.
 
@@ -65,7 +65,7 @@ Check out the [overview video on IBM Cloud Hyper Protect Crypto Services and VMw
 
 You can use the PKCS #11 API to encrypt applications between clouds. With the support of PKCS #11, you have access to a full range of advanced cryptographic operations, such as signing, signature validation, message authentication codes, and more advanced encryption schemes.
 
-<!-- For a tutorial on how to encrypt applications with the {{site.data.keyword.hscrypto}} PKCS #11 API, see [Tutorial: Use PKCS #11 APIs to access {{site.data.keyword.hscrypto}} from a {{site.data.keyword.hpvs}} platform](URL needed). -->
+
 
 ![Application encryption using PKCS #11](/images/application-encryption-pkcs11.svg "Application encryption using PKCS #11"){: caption="Figure 3. Application encryption using PKCS #11" caption-side="bottom"}
 

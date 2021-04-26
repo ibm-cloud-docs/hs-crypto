@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-08"
+lastupdated: "2021-04-26"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, smart card, trusted key entry application, tke application, management utilities
 
@@ -45,6 +45,7 @@ You can also watch the following video to learn how to initialize {{site.data.ke
 2. Complete [the prerequisite steps](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite) before you initialize your service instance.
 3. Plug the two smart card readers into the USB ports of your workstation.
 4. Start the Trusted Key Entry application by changing to the subdirectory where you install the Management Utilities applications and running the following command:
+
   ```
   ./tke
   ```
@@ -73,7 +74,7 @@ Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start
 
   A random master key part is generated and stored on the smart card.
 
-  To create more master key parts, repeat this step.<!-- You can create up to 85 master key parts on an EP11 smart card.-->
+  To create more master key parts, repeat this step.
 
   You need to generate at least two master key parts to load a master key. For added security, it is recommended to generate three master key parts. To improve security, you can choose to generate signature keys and master key parts on separate smart cards and assign each smart card to a different person. For more information, see [Smart card setup recommendations](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup).
   {: important}

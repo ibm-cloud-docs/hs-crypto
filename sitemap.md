@@ -787,6 +787,11 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_granting_users_access_to_manage_ep11_keystores_and_keys}
 
 
+[Granting users access to manage EP11 keystores and keys through UI](/docs/hs-crypto?topic=hs-crypto-grant-pkcs11-ui-access)
+* [(Optional) Step 1: Create custom IAM roles](/docs/hs-crypto?topic=hs-crypto-grant-pkcs11-ui-access#step1-create-custom-roles-pkcs11-ui)
+* [Step 2: Assign IAM roles to users](/docs/hs-crypto?topic=hs-crypto-grant-pkcs11-ui-access#step2-assign-iam-roles-pkcs-ui)
+* [ What's next](/docs/hs-crypto?topic=hs-crypto-grant-pkcs11-ui-access#pkcs11-ui-best-practices-next)
+
 [Setting up PKCS #11 API user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access)
 * [ PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#pkcs11-user-types)
 * [Step 1: Create custom IAM roles](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#step1-create-custom-roles)

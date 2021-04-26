@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-07-17"
+  years: 2020, 2021
+lastupdated: "2021-04-26"
 
 keywords: troubleshoot, problems, known issues, can't delete service, no smart card readers found when you start application
 
@@ -40,7 +40,7 @@ You might receive the following error message:
 The Identiv SPR332 smart card readers are not attached to your workstation, or the device driver for the smart card reader is not correctly installed on your workstation.
 {: tsCauses}
 
-Attach two Identiv SPR332 smart card readers to the USB ports of your workstation. If you've attached two Identiv SPR332 smart card readers to your workstation and still get this error, [install the device driver](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-smart-card-reader-driver).
+Attach two Identiv SPR332 smart card readers to the USB ports of your workstation. If you have attached two Identiv SPR332 smart card readers to your workstation and still get this error, [install the device driver](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-smart-card-reader-driver).
 {: tsResolve}
 
-<!--[Installing smart card reader driver on Windows 10](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#reader-driver-windows) or [Installing smart card reader driver on Linux](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#reader-driver-linux) to install the device driver.-->
+

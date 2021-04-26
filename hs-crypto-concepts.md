@@ -77,7 +77,7 @@ A crypto unit is a single unit that represents an HSM and the corresponding soft
 
 - Recovery crypto unit
 
-  If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`), recovery crypto units are automatically assigned to your service instance in pair with the operational crypto units without additional costs. Each operational crypto unit has a corresponding recovery crypto unit. A recovery crypto unit is used to generate the random master key which is then securely exported to operational crypto units and other recovery crypto units to [initialize the service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit).
+  If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`), two recovery crypto units are automatically assigned to your service instance without additional costs. A recovery crypto unit is used to generate the random master key which is then securely exported to operational crypto units and the other recovery crypto unit to [initialize the service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit).
 
   Recovery crypto units can also be used as backup crypto units that save a copy of the master key value used by the operational crypto units. If the master key is lost or destroyed, you can [recover the master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit) using signed TKE administrative commands.
 

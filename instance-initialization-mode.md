@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-03-09"
+lastupdated: "2021-04-26"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -122,7 +122,7 @@ The following sections explain each component in detail.
 ### Understanding {{site.data.keyword.cloud_notm}} TKE CLI plug-in
 {: #understand-tke-plugin}
 
-The TKE CLI plug-in is an addition to the {{site.data.keyword.cloud_notm}} command-line interface (CLI) that lets you send commands to the crypto units in your service instance to load the master key.  The TKE CLI plug-in supports two approaches for loading the master key.
+The TKE CLI plug-in is an addition to the {{site.data.keyword.cloud_notm}} command-line interface (CLI) that allows you to send commands to the crypto units in your service instance to load the master key. The TKE CLI plug-in supports two approaches for loading the master key.
 
 If your service instance has recovery crypto units, you can load the master key by running the `ibmcloud tke auto-init` command. This command guides you through steps to add administrators and set the signature thresholds, and then generates a random master key value in one of the recovery crypto units in your service instance and copies the value to the other crypto units. For more information on this approach see [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit).
 
@@ -144,7 +144,7 @@ Two recovery units are automatically assigned to your service instance without a
 
 The sole purpose of the recovery crypto units is to save a backup copy of the master key value. The recovery crypto units are not used when running operational workloads. If the current master key value is lost or destroyed, you can recover the master key value from either of the recovery crypto units by using the `ibmcloud tke auto-mk-recover` command. This command copies the value in the current master key register of a recovery crypto unit to the current master key register of other crypto units.
 
-<!--To enable cross-region recovery, you can allocate recovery crypto units in a region other than the region that the operational crypto units reside in. However, to load the master key to the operational crypto units, you need to allocate at least one recovery crypto unit in the region of the operational crypto units. The example in the diagram assumes that one recovery crypto unit is located in the same region and the other is in a different region.-->
+
 
 Currently, only the `us-south` and `us-east` regions are enabled with the recovery crypto units, which means, when a service instance is provisioned in either region, you are by default enabled with the option to back up your master keys in the recovery crypto units located in both regions. For more information about supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 {: note}

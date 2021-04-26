@@ -155,7 +155,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=met
     This new policy only reports on operations that occur after the policy is enabled.
     {: note}
 
-3. Optional: Verify that the metrics policy is created by browsing the policies that are available for your {site.data.keyword.hscrypto}} instance.
+3. Optional: Verify that the metrics policy is created by browsing the policies that are available for your {{site.data.keyword.hscrypto}} instance.
 
     ```sh
     $ curl -X GET \
