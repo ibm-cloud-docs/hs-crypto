@@ -64,7 +64,7 @@ When connecting to a VPE through [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gat
 {: note}
 
 <table>
-
+  
   <tr>
     <th>{{site.data.keyword.hscrypto}} feature</th>
     <th>Supported endpoints</th>
@@ -90,6 +90,7 @@ When connecting to a VPE through [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gat
     <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:api.private.au-syd.hs-crypto.cloud.ibm.com</td>
   </tr>
   
+  
   <tr>
     <td rowspan="4">Enterprise PKCS #11</td>
     <td>ep11.private.us-south.hs-crypto.cloud.ibm.com</td>
@@ -107,6 +108,7 @@ When connecting to a VPE through [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gat
     <td>ep11.private.au-syd.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:ep11.private.au-syd.hs-crypto.cloud.ibm.com</td>
   </tr>
+  
   
   <tr>
     <td rowspan="4">Trusted Key Entry (TKE)</td>
@@ -126,6 +128,7 @@ When connecting to a VPE through [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gat
     <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:tke.private.au-syd.hs-crypto.cloud.ibm.com</td>
   </tr>
   
+  
   <tr>
     <td rowspan="4">Key Management Interoperability Protocol (KMIP) adapter</td>
     <td>kmip.private.us-south.hs-crypto.cloud.ibm.com</td>
@@ -143,6 +146,7 @@ When connecting to a VPE through [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gat
     <td>kmip.private.au-syd.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:kmip.private.au-syd.hs-crypto.cloud.ibm.com</td>
   </tr>
+  
   
   <caption>Table 1. Private endpoints for connecting {{site.data.keyword.hscrypto}} over {{site.data.keyword.cloud_notm}} private network</caption>
 </table>
