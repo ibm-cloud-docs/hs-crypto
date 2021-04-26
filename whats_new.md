@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-04-26"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -25,12 +25,7 @@ subcollection: hs-crypto
 Stay up-to-date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
-<!--
-### Updated: The cryptography algorithm that is used to generate signature keys
-{: #update-signature-key-algorithm}
 
-The cryptography algorithm to generate signature keys is updated from Rivest–Shamir–Adleman 2048 (RSA 2048) to P521 Elliptic Curve (P521 EC). The cryptographic strength of P521 EC keys is equivalent to RSA 15360, which means the updated signature keys can provide the higher level of security comparing to the previous signature keys. The previous RSA 2048 signature keys are still valid and can be used.
--->
 
 ## April 2021
 {: #april-2021}
@@ -57,11 +52,6 @@ For more information about the differences between the service instance initiali
 For detailed instructions, see [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit).
 
 To rotate your master key, see [Rotating master keys using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit).
-
-<!-- ### Added: {{site.data.keyword.hscrypto}} expands into the London region
-{: #add-london-region}
-
-You can now create {{site.data.keyword.hscrypto}} instances in the London (`eu-gb`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). -->
 
 ### Added: Using {{site.data.keyword.mon_full_notm}} to measure {{site.data.keyword.hscrypto}} metrics
 {: #add-monitoring-metrics}
@@ -92,6 +82,11 @@ You can now create virtual private endpoints (VPEs) for your {{site.data.keyword
 {: #add-ep11-keystores-keys-console}
 
 Apart from using the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) to manage Enterprise PKCS #11 (EP11) keystores and keys, you can now use the {{site.data.keyword.cloud_notm}} console to view, create, and delete EP11 keystores and keys. For more information, see [Managing EP11 keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui) and [Managing EP11 keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui).
+
+### Updated: The cryptography algorithm that is used to generate signature keys
+{: #update-signature-key-algorithm}
+
+The cryptography algorithm to generate signature keys is updated from Rivest–Shamir–Adleman 2048 (RSA 2048) to P521 Elliptic Curve (P521 EC). The cryptographic strength of P521 EC keys is equivalent to RSA 15360, which means the updated signature keys can provide the higher level of security comparing to the previous signature keys. The previous RSA 2048 signature keys are still valid and can be used.
 
 ## February 2021
 {: #february-2021}
@@ -347,7 +342,7 @@ For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypt
 
 As of 29 March 2019, provisioning new Hyper Protect Crypto Services Beta instances will no longer be possible. Existing instances will have support until the End of Beta Support Date (30 April 2019).
 
-<!-- See [Migrating keys from a Beta service instance](/docs/hs-crypto/transition-keys.html) for information on migrating keys to a production service instance. -->
+
 
 For more information about the {{site.data.keyword.hscrypto}} offering, see the [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} home page](https://www.ibm.com/cloud/hyper-protect-crypto){: external}.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-23"
+lastupdated: "2021-04-26"
 
 keywords: site map, doc structure, information architecture
 
@@ -560,8 +560,6 @@ Find what you are looking for in the compilation of topics that are available in
 [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings)
 
 [Creating key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#create-key-ring)
-
-[Transferring a key to a different key ring](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#transfer-key-key-ring)
 
 [Granting access to a key ring](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#grant-access-key-ring)
 

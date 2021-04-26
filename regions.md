@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-24"
+lastupdated: "2021-04-26"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -32,6 +32,7 @@ You can connect your applications with the {{site.data.keyword.cloud}} {{site.da
 
 - Dallas, US: `us-south`
 - Frankfurt, Germany: `eu-de`
+
 - Sydney, Australia: `au-syd`
 - Washington DC, US: `us-east`
 
@@ -63,6 +64,9 @@ Currently, the `us-south` and `us-east` regions are enabled with recovery crypto
 
 If you are managing your {{site.data.keyword.hscrypto}} resources programmatically, see the following table to determine the API endpoints to use when you connect to the [Key management API](https://{DomainName}/apidocs/hs-crypto), [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref), and  [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
+
+
+
 | Region        | Public key management service endpoints             |Public GREP11 service endpoints|
 | ------------- | ---------------------------- |---------------------------- |
 | Dallas        | `api.us-south.hs-crypto.cloud.ibm.com` |`ep11.us-south.hs-crypto.cloud.ibm.com` |
@@ -74,7 +78,6 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 {: tab-title="Public"}
 {: tab-group="region-endpoint"}
 {: class="comparison-tab-table"}
-{: row-headers}
 
 | Region        | Private key management service endpoints             |Private GREP11 service endpoints|
 | ------------- | ------------------------------------ |------------------------------------ |
@@ -87,6 +90,7 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 {: tab-title="Private"}
 {: tab-group="region-endpoint"}
 {: class="comparison-tab-table"}
+
 
 For more information about authenticating with {{site.data.keyword.hscrypto}}, see the following topics:
 
