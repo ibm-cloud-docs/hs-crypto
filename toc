@@ -178,7 +178,6 @@ Hyper Protect Crypto Services
         secure-connection.md
         at-events.md
         monitor-sysdig-metrics.md
-        manage-security-compliance.md
 
     {: .topicgroup}
     High availability and disaster recovery
