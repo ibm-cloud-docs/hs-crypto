@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-04-29"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway
 
@@ -73,78 +73,78 @@ When connecting to a VPE through [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gat
 
   <tr>
     <td rowspan="4">Key management service</td>
-    <td>api.private.us-south.hs-crypto.cloud.ibm.com</td>
-    <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:api.private.us-south.hs-crypto.cloud.ibm.com</td>
-  </tr>
-
-  <tr>
-    <td>api.private.us-east.hs-crypto.cloud.ibm.com</td>
-    <td>crn:v1:bluemix:public:hs-crypto:us-east:::endpoint:api.private.us-east.hs-crypto.cloud.ibm.com</td>
+    <td>api.private.au-syd.hs-crypto.cloud.ibm.com</td>
+    <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:api.private.au-syd.hs-crypto.cloud.ibm.com</td>
   </tr>
   <tr>
     <td>api.private.eu-de.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:eu-de:::endpoint:api.private.eu-de.hs-crypto.cloud.ibm.com</td>
   </tr>
   <tr>
-    <td>api.private.au-syd.hs-crypto.cloud.ibm.com</td>
-    <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:api.private.au-syd.hs-crypto.cloud.ibm.com</td>
+    <td>api.private.us-east.hs-crypto.cloud.ibm.com</td>
+    <td>crn:v1:bluemix:public:hs-crypto:us-east:::endpoint:api.private.us-east.hs-crypto.cloud.ibm.com</td>
+  </tr>
+  <tr>
+    <td>api.private.us-south.hs-crypto.cloud.ibm.com</td>
+    <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:api.private.us-south.hs-crypto.cloud.ibm.com</td>
   </tr>
   
   
+
   <tr>
     <td rowspan="4">Enterprise PKCS #11</td>
-    <td>ep11.private.us-south.hs-crypto.cloud.ibm.com</td>
-    <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:ep11.private.us-south.hs-crypto.cloud.ibm.com</td>
-  </tr>
-  <tr>
-    <td>ep11.private.us-east.hs-crypto.cloud.ibm.com</td>
-    <td>crn:v1:bluemix:public:hs-crypto:us-east:::endpoint:ep11.private.us-east.hs-crypto.cloud.ibm.com</td>
+    <td>ep11.private.au-syd.hs-crypto.cloud.ibm.com</td>
+    <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:ep11.private.au-syd.hs-crypto.cloud.ibm.com</td>
   </tr>
   <tr>
     <td>ep11.private.eu-de.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:eu-de:::endpoint:ep11.private.eu-de.hs-crypto.cloud.ibm.com</td>
   </tr>
   <tr>
-    <td>ep11.private.au-syd.hs-crypto.cloud.ibm.com</td>
-    <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:ep11.private.au-syd.hs-crypto.cloud.ibm.com</td>
+    <td>ep11.private.us-east.hs-crypto.cloud.ibm.com</td>
+    <td>crn:v1:bluemix:public:hs-crypto:us-east:::endpoint:ep11.private.us-east.hs-crypto.cloud.ibm.com</td>
+  </tr>
+  <tr>
+    <td>ep11.private.us-south.hs-crypto.cloud.ibm.com</td>
+    <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:ep11.private.us-south.hs-crypto.cloud.ibm.com</td>
   </tr>
   
   
   <tr>
     <td rowspan="4">Trusted Key Entry (TKE)</td>
-    <td>tke.private.us-south.hs-crypto.cloud.ibm.com</td>
-    <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:tke.private.us-south.hs-crypto.cloud.ibm.com</td>
-  </tr>
-  <tr>
-    <td>tke.private.us-east.hs-crypto.cloud.ibm.com</td>
-    <td>crn:v1:bluemix:public:hs-crypto:us-east:::endpoint:tke.private.us-east.hs-crypto.cloud.ibm.com</td>
+    <td>tke.private.au-syd.hs-crypto.cloud.ibm.com</td>
+    <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:tke.private.au-syd.hs-crypto.cloud.ibm.com</td>
   </tr>
   <tr>
     <td>tke.private.eu-de.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:eu-de:::endpoint:tke.private.eu-de.hs-crypto.cloud.ibm.com</td>
   </tr>
   <tr>
-    <td>tke.private.au-syd.hs-crypto.cloud.ibm.com</td>
-    <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:tke.private.au-syd.hs-crypto.cloud.ibm.com</td>
+    <td>tke.private.us-east.hs-crypto.cloud.ibm.com</td>
+    <td>crn:v1:bluemix:public:hs-crypto:us-east:::endpoint:tke.private.us-east.hs-crypto.cloud.ibm.com</td>
+  </tr>
+  <tr>
+    <td>tke.private.us-south.hs-crypto.cloud.ibm.com</td>
+    <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:tke.private.us-south.hs-crypto.cloud.ibm.com</td>
   </tr>
   
   
   <tr>
     <td rowspan="4">Key Management Interoperability Protocol (KMIP) adapter</td>
-    <td>kmip.private.us-south.hs-crypto.cloud.ibm.com</td>
-    <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:kmip.private.us-south.hs-crypto.cloud.ibm.com</td>
-  </tr>
-  <tr>
-    <td>kmip.private.us-east.hs-crypto.cloud.ibm.com</td>
-    <td>crn:v1:bluemix:public:hs-crypto:us-east:::endpoint:kmip.private.us-east.hs-crypto.cloud.ibm.com</td>
+    <td>kmip.private.au-syd.hs-crypto.cloud.ibm.com</td>
+    <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:kmip.private.au-syd.hs-crypto.cloud.ibm.com</td>
   </tr>
   <tr>
     <td>kmip.private.eu-de.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:eu-de:::endpoint:kmip.private.eu-de.hs-crypto.cloud.ibm.com</td>
   </tr>
   <tr>
-    <td>kmip.private.au-syd.hs-crypto.cloud.ibm.com</td>
-    <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:kmip.private.au-syd.hs-crypto.cloud.ibm.com</td>
+    <td>kmip.private.us-east.hs-crypto.cloud.ibm.com</td>
+    <td>crn:v1:bluemix:public:hs-crypto:us-east:::endpoint:kmip.private.us-east.hs-crypto.cloud.ibm.com</td>
+  </tr>
+  <tr>
+    <td>kmip.private.us-south.hs-crypto.cloud.ibm.com</td>
+    <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:kmip.private.us-south.hs-crypto.cloud.ibm.com</td>
   </tr>
   
   
