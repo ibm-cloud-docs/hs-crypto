@@ -221,33 +221,67 @@ Find what you are looking for in the compilation of topics that are available in
 * [Frequency of root key rotation](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#rotation-frequency)
 * [What's next](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#root-key-rotation-next)
 
+
+## Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}
+{: #sitemap_integrating__services_with_{{site.data.keyword.hscrypto}}}
+
+
 [Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-integrate-services)
-* [Storage service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#storage-integration)
-* [Database service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#database-integration)
-* [Compute service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#compute-integration)
-* [Container service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#container-integration)
-* [Ingestion service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#Ingestion-integrations)
-* [Security service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#security-service-integrations)
-* [Understanding your integration](/docs/hs-crypto?topic=hs-crypto-integrate-services#understand-integration)
-* [What's next](/docs/hs-crypto?topic=hs-crypto-integrate-services#integration-next-steps)
+
+[Storage service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#storage-integration)
+
+[Database service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#database-integration)
+
+[Compute service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#compute-integration)
+
+[Container service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#container-integration)
+
+[Ingestion service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#Ingestion-integrations)
+
+[Security service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#security-service-integrations)
+
+[Understanding your integration](/docs/hs-crypto?topic=hs-crypto-integrate-services#understand-integration)
+
+[What's next](/docs/hs-crypto?topic=hs-crypto-integrate-services#integration-next-steps)
+
+
+## Release notes
+{: #sitemap_release_notes}
+
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new)
-* [April 2021](/docs/hs-crypto?topic=hs-crypto-what-new#april-2021)
-* [March 2021](/docs/hs-crypto?topic=hs-crypto-what-new#march-2021)
-* [February 2021](/docs/hs-crypto?topic=hs-crypto-what-new#february-2021)
-* [January 2021](/docs/hs-crypto?topic=hs-crypto-what-new#january-2021)
-* [December 2020](/docs/hs-crypto?topic=hs-crypto-what-new#december-2020)
-* [November 2020](/docs/hs-crypto?topic=hs-crypto-what-new#november-2020)
-* [September 2020](/docs/hs-crypto?topic=hs-crypto-what-new#september-2020)
-* [August 2020](/docs/hs-crypto?topic=hs-crypto-what-new#august-2020)
-* [July 2020](/docs/hs-crypto?topic=hs-crypto-what-new#july-2020)
-* [June 2020](/docs/hs-crypto?topic=hs-crypto-what-new#june-2020)
-* [April 2020](/docs/hs-crypto?topic=hs-crypto-what-new#april-2020)
-* [August 2019](/docs/hs-crypto?topic=hs-crypto-what-new#August-2019)
-* [June 2019](/docs/hs-crypto?topic=hs-crypto-what-new#June-2019)
-* [March 2019](/docs/hs-crypto?topic=hs-crypto-what-new#March-2019)
-* [February 2019](/docs/hs-crypto?topic=hs-crypto-what-new#Feb-2019)
-* [December 2018](/docs/hs-crypto?topic=hs-crypto-what-new#Dec-2018)
+
+[April 2021](/docs/hs-crypto?topic=hs-crypto-what-new#april-2021)
+
+[March 2021](/docs/hs-crypto?topic=hs-crypto-what-new#march-2021)
+
+[February 2021](/docs/hs-crypto?topic=hs-crypto-what-new#february-2021)
+
+[January 2021](/docs/hs-crypto?topic=hs-crypto-what-new#january-2021)
+
+[December 2020](/docs/hs-crypto?topic=hs-crypto-what-new#december-2020)
+
+[November 2020](/docs/hs-crypto?topic=hs-crypto-what-new#november-2020)
+
+[September 2020](/docs/hs-crypto?topic=hs-crypto-what-new#september-2020)
+
+[August 2020](/docs/hs-crypto?topic=hs-crypto-what-new#august-2020)
+
+[July 2020](/docs/hs-crypto?topic=hs-crypto-what-new#july-2020)
+
+[June 2020](/docs/hs-crypto?topic=hs-crypto-what-new#june-2020)
+
+[April 2020](/docs/hs-crypto?topic=hs-crypto-what-new#april-2020)
+
+[August 2019](/docs/hs-crypto?topic=hs-crypto-what-new#August-2019)
+
+[June 2019](/docs/hs-crypto?topic=hs-crypto-what-new#June-2019)
+
+[March 2019](/docs/hs-crypto?topic=hs-crypto-what-new#March-2019)
+
+[February 2019](/docs/hs-crypto?topic=hs-crypto-what-new#Feb-2019)
+
+[December 2018](/docs/hs-crypto?topic=hs-crypto-what-new#Dec-2018)
 
 
 ## Tutorials on key management service

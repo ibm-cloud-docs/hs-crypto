@@ -41,6 +41,7 @@ Hyper Protect Crypto Services
         About key rotation
             introduce-master-key-rotation.md
             introduce-root-key-rotation.md
+
     integrate-services.md
     whats_new.md
     {: .navgroup-end}
@@ -157,8 +158,6 @@ Hyper Protect Crypto Services
     Managing Enterprise PKCS #11 keystores and keys
         manage-pkcs11-keystores.md
         manage-pkcs11-keys.md
-
-
 
     enable-mechanisms.md
     add-remove-crypto-units.md
