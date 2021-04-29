@@ -41,7 +41,6 @@ Hyper Protect Crypto Services
         About key rotation
             introduce-master-key-rotation.md
             introduce-root-key-rotation.md
-
     integrate-services.md
     whats_new.md
     {: .navgroup-end}
