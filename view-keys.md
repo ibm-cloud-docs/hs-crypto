@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-09"
+lastupdated: "2021-04-30"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -73,8 +73,8 @@ If you prefer to inspect the keys in your service by using a graphical interface
         <td>The [key state](/docs/hs-crypto?topic=hs-crypto-key-states) based on [NIST Special Publication 800-57, Recommendation for Key Management](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0). These states include <em>Pre-active</em>, <em>Active</em>, <em>Suspended</em>, <em>Deactivated</em>, and <em>Destroyed</em>.</td>
       </tr>
       <tr>
-        <td>Imported</td>
-        <td>Indicates whether the key is imported. `True` indicates that the key is imported by the user; `False` indicates that the key is created in the service instance.</td>
+        <td>Origin</td>
+        <td>Indicates whether the key is imported. `Created` indicates that the key is created by the service instance; `Imported` indicates that the key is imported by the user.</td>
       </tr>
       <tr>
         <td>Last updated</td>
@@ -112,7 +112,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
     about roles, see
     [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).
 
-    You can also search for a specific key by using the search bar in the **Keys** table.
+    You can also search for a specific key by using the search bar, or filter keys based on your needs by clicking the **Filter** icon in the **Keys** table.
     {: tip}
 
 ## Viewing root keys or standard keys with the key management API

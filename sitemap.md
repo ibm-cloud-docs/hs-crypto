@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-29"
+lastupdated: "2021-04-30"
 
 keywords: site map, doc structure, information architecture
 
@@ -616,6 +616,7 @@ Find what you are looking for in the compilation of topics that are available in
 * [Viewing root keys or standard keys with the key management API](/docs/hs-crypto?topic=hs-crypto-view-keys#view-key-api)
 
 [Viewing details about a root key or a standard key](/docs/hs-crypto?topic=hs-crypto-view-key-details)
+* [Viewing key details with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-view-key-details#view-key-details-ui)
 * [Viewing key details with the key management API](/docs/hs-crypto?topic=hs-crypto-view-key-details#view-key-details-api)
 
 [Retrieving a root key or a standard key](/docs/hs-crypto?topic=hs-crypto-retrieve-key)
@@ -688,6 +689,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys)
+
+[How do I know whether a key can be restored?](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-eligibility)
 
 [Restoring a deleted key with the console](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-ui)
 

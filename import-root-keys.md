@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-09"
+lastupdated: "2021-04-30"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -86,6 +86,12 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
               <li>The key must be base64-encoded.</li>
             </ul>
           </p>
+        </td>
+      </tr>
+      <tr>
+        <td>Expiration date</td>
+        <td>
+          <p>(Optional) Set the date and time when the key get expired. After the expiration date, the key moves into the _Deactivated_ state. For more information about key state, see [Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-key-states).</p>
         </td>
       </tr>
       <tr>
