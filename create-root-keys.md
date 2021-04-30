@@ -80,7 +80,7 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
       <tr>
         <td>Expiration date</td>
         <td>
-          <p>(Optional) Set the date and time when the key get expired. After the expiration date, the key moves into the _Deactivated_ state. For more information about key state, see [Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-key-states).</p>
+          <p>(Optional) Set the date and time when the key gets expired. After the expiration date, the key moves into the _Deactivated_ state. For more information about key state, see [Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-key-states).</p>
         </td>
       </tr>
       <tr>
