@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-07-21"
+  years: 2020, 2021
+lastupdated: "2021-04-28"
 
 keywords: crypto unit, add crypto units, remove crypto units, change crypto units number, adjust crypto units number, new crypto units, support center, support ticket, support case
 
@@ -118,7 +118,7 @@ After you initialize the new crypto units, you need to raise another support tic
 ## Removing crypto units from an existing service instance
 {: #remove-crypto-units}
 
-To remove crypto units from an exsiting service instance, you need to only [raise a support ticket](#step1-support-ticket-change-number).
+To remove crypto units from an existing service instance, you need to only [raise a support ticket](#step1-support-ticket-change-number).
 
 On the **Create a case** page, enter **Remove crypto units** as the subject, and include the number of crypto units that you want to remove in the case description.
 

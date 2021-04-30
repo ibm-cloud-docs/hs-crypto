@@ -159,8 +159,6 @@ Hyper Protect Crypto Services
         manage-pkcs11-keystores.md
         manage-pkcs11-keys.md
 
-
-
     enable-mechanisms.md
     add-remove-crypto-units.md
     delete-instance.md
@@ -178,7 +176,6 @@ Hyper Protect Crypto Services
         secure-connection.md
         at-events.md
         monitor-sysdig-metrics.md
-        manage-security-compliance.md
 
     {: .topicgroup}
     High availability and disaster recovery

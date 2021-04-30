@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-09"
+lastupdated: "2021-04-30"
 
 keywords: standard key, import key, key material, import key api, bring your own key, byok, encryption key, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key
 
@@ -80,6 +80,12 @@ You can add your existing encryption keys with the {{site.data.keyword.cloud_not
               <li>The key must be base64-encoded.</li>
             </ul>
           </p>
+        </td>
+      </tr>
+      <tr>
+        <td>Expiration date</td>
+        <td>
+          <p>(Optional) Set the date and time when the key gets expired. After the expiration date, the key moves into the _Deactivated_ state. For more information about key state, see [Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-key-states).</p>
         </td>
       </tr>
       <tr>

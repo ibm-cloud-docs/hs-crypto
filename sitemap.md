@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-04-30"
 
 keywords: site map, doc structure, information architecture
 
@@ -616,6 +616,7 @@ Find what you are looking for in the compilation of topics that are available in
 * [Viewing root keys or standard keys with the key management API](/docs/hs-crypto?topic=hs-crypto-view-keys#view-key-api)
 
 [Viewing details about a root key or a standard key](/docs/hs-crypto?topic=hs-crypto-view-key-details)
+* [Viewing key details with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-view-key-details#view-key-details-ui)
 * [Viewing key details with the key management API](/docs/hs-crypto?topic=hs-crypto-view-key-details#view-key-details-api)
 
 [Retrieving a root key or a standard key](/docs/hs-crypto?topic=hs-crypto-retrieve-key)
@@ -688,6 +689,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys)
+
+[How do I know whether a key can be restored?](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-eligibility)
 
 [Restoring a deleted key with the console](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-ui)
 
@@ -867,15 +870,6 @@ Find what you are looking for in the compilation of topics that are available in
 [Default Dashboards](/docs/hs-crypto?topic=hs-crypto-operational-metrics#default-dashboards)
 
 [Setting Alerts](/docs/hs-crypto?topic=hs-crypto-operational-metrics#set-monitor-alerts)
-
-
-## Managing security and compliance with {{site.data.keyword.hscrypto}}
-{: #sitemap_managing_security_and_compliance_with_}
-
-
-[Managing security and compliance with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance)
-
-[Monitoring security and compliance posture with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#monitor-certificate-manager)
 
 
 ## High availability and disaster recovery

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-09-02"
+  years: 2020, 2021
+lastupdated: "2021-04-30"
 
 keywords: view resoure, root key encryption resources, protected resource, protected service, envelope encryption, key registration, view registration, list registrations
 
@@ -130,6 +130,10 @@ You can use the search field to search for any resources associated with the roo
       <td>The name of the cloud resource, such as a Cloud Object Storage bucket, that is associated with the key.</td>
     </tr>
     <tr>
+      <td>`Key name`</td>
+      <td>The human-readable name that identifies the root key that is associated with the specified cloud resource.</td>
+    </tr>
+    <tr>
       <td>`Key ID`</td>
       <td>The ID that identifies the root key that is associated with the specified cloud resource.</td>
     </tr>
@@ -139,7 +143,7 @@ You can use the search field to search for any resources associated with the roo
     </tr>
     <tr>
       <td>`Retention policy`</td>
-      <td>Indicates whether the cloud resource can be erased. If the value is `True`, the cloud resource can't be erased, and the key that is associated with the cloud resource can't be deleted. If the value is `False`, the cloud resource can be erased. You can delete the key that is associated with the cloud resource if needed.</td>
+      <td>Indicates whether the cloud resource can be erased. If the value is `Enabled`, the cloud resource can't be erased, and the key that is associated with the cloud resource can't be deleted. If the value is `Disabled`, the cloud resource can be erased. You can delete the key that is associated with the cloud resource if needed.</td>
     </tr>
     <caption style="caption-side:bottom;">Table 4. Describes the <strong>Associated resources</strong> table</caption>
   </table>

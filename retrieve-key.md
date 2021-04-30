@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-17"
+lastupdated: "2021-04-30"
 
 keywords: get key, get encryption key, view encryption key, retrieve encryption key, API examples
 
@@ -173,7 +173,6 @@ material.
     key and the key material. The following JSON object shows an example
     returned value for a standard key.
 
-    ```json
     ```json
     {
         "metadata": {
