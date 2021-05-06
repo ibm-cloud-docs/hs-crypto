@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-06"
 
 keywords: general frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips
 
@@ -99,12 +99,12 @@ The following table details the differences between KYOK and BYOK.
 | Integrating with other cloud services|           Yes                     |            Yes                     |
 | Bringing your own keys from on-premises HSMs                      |                Yes                 |                 Yes                |
 | Operational assurance - Cloud service providers cannot access keys. |                Yes                 |                 Yes           |
-| Technical assurance - IBM cannot access the keys          |                No                 |                   Yes                |
+| Technical assurance - IBM cannot access the keys.          |                No                 |                   Yes                |
 | Single tenant, dedicated key management service.          |                No                 |                    Yes              |
-| Exclusive control of your master key                      |                No                  |                   Yes               |
-| Highest level security - FIPS 140-2 Level 4 HSM           |                No                  |                   Yes                |
-| Managing your master key with smart cards                 |                No                  |                   Yes                |
-| Performing key ceremony                                   |                No                  |                    Yes               |
+| Exclusive control of your master key.                     |                No                  |                   Yes               |
+| Highest level security - FIPS 140-2 Level 4 HSM.           |                No                  |                   Yes                |
+| Managing your master key with smart cards.                |                No                  |                   Yes                |
+| Performing key ceremony.                                  |                No                  |                    Yes               |
 {: caption="Table 1. Comparing BYOK with KYOK" caption-side="bottom"}
 
 ## What can I do with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?
@@ -127,14 +127,14 @@ If you are concerned on data security and compliance in the cloud, you are able 
 
 With {{site.data.keyword.hscrypto}}, you can ensure regulatory compliance and strengthen data security. Your data is protected with encryption keys in a fully managed, dedicated key management system and cloud HSM service that supports Keep Your Own Key. Keep your own keys for cloud data encryption protected by a dedicated cloud HSM. If you are running regulation intensive applications or applications with sensitive data, this solution is right for you.
 
-Key features are as follow:
+Key features are as follows:
 
-* Full control of the entire key hierarchy, including the master keys
-* Tamper-proof hardware device for sensitive data
-* Industry-leading security for cloud data and digital assets
-* Reduced data compromise risk because of in-built protection against privileged access threats
-* Regulatory compliance through data encryption and controls on privileged access
-* Keep Your Own Key (KYOK) that ensures your full control of the entire key hierarchy
+* Full control of the entire key hierarchy, including the master keys.
+* Tamper-proof hardware device for sensitive data.
+* Industry-leading security for cloud data and digital assets.
+* Reduced data compromise risk because of in-built protection against privileged access threats.
+* Regulatory compliance through data encryption and controls on privileged access.
+* Keep Your Own Key (KYOK) that ensures your full control of the entire key hierarchy.
 
 ## How does {{site.data.keyword.hscrypto}} work?
 {: #faq-how-hpcs-work}
