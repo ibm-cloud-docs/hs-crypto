@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-06"
 
 keywords: pkcs11 ui access, pkcs 11 account authentication
 
@@ -29,7 +29,7 @@ To enable users to manage Enterprise PKCS #11 (EP11) keystores and keys with the
 ## (Optional) Step 1: Create custom IAM roles
 {: #step1-create-custom-roles-pkcs11-ui}
 
-With the integration with {{site.data.keyword.iamshort}} (IAM), {{site.data.keyword.hscrypto}} provides you with multiple [existing IAM service roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles) to assign and control access. For more grannular access management, you can create custom roles based on your own needs. For example, if you want to assign a group of users only the access to view the EP11 keystores, you can create a custom role that only covers the action of `hs-crypto.keystore.listkeystoresbyids` and then assign these users with this custom role.
+With the integration with {{site.data.keyword.iamshort}} (IAM), {{site.data.keyword.hscrypto}} provides you with multiple [existing IAM service roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles) to assign and control access. For more granular access management, you can create custom roles based on your own needs. For example, if you want to assign a group of users only the access to view the EP11 keystores, you can create a custom role that only covers the action of `hs-crypto.keystore.listkeystoresbyids` and then assign these users with this custom role.
 
 To create a custom role, complete the following steps:
 
