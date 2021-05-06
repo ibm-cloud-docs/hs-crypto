@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-30"
+lastupdated: "2021-05-06"
 
 keywords: site map, doc structure, information architecture
 
@@ -228,21 +228,21 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-integrate-services)
 
-[Storage service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#storage-integration)
+* [Storage service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#storage-integration)
 
-[Database service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#database-integration)
+* [Database service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#database-integration)
 
-[Compute service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#compute-integration)
+* [Compute service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#compute-integration)
 
-[Container service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#container-integration)
+* [Container service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#container-integration)
 
-[Ingestion service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#Ingestion-integrations)
+* [Ingestion service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#Ingestion-integrations)
 
-[Security service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#security-service-integrations)
+* [Security service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#security-service-integrations)
 
-[Understanding your integration](/docs/hs-crypto?topic=hs-crypto-integrate-services#understand-integration)
+* [Understanding your integration](/docs/hs-crypto?topic=hs-crypto-integrate-services#understand-integration)
 
-[What's next](/docs/hs-crypto?topic=hs-crypto-integrate-services#integration-next-steps)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-integrate-services#integration-next-steps)
 
 
 ## Release notes
@@ -251,37 +251,37 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new)
 
-[April 2021](/docs/hs-crypto?topic=hs-crypto-what-new#april-2021)
+* [April 2021](/docs/hs-crypto?topic=hs-crypto-what-new#april-2021)
 
-[March 2021](/docs/hs-crypto?topic=hs-crypto-what-new#march-2021)
+* [March 2021](/docs/hs-crypto?topic=hs-crypto-what-new#march-2021)
 
-[February 2021](/docs/hs-crypto?topic=hs-crypto-what-new#february-2021)
+* [February 2021](/docs/hs-crypto?topic=hs-crypto-what-new#february-2021)
 
-[January 2021](/docs/hs-crypto?topic=hs-crypto-what-new#january-2021)
+* [January 2021](/docs/hs-crypto?topic=hs-crypto-what-new#january-2021)
 
-[December 2020](/docs/hs-crypto?topic=hs-crypto-what-new#december-2020)
+* [December 2020](/docs/hs-crypto?topic=hs-crypto-what-new#december-2020)
 
-[November 2020](/docs/hs-crypto?topic=hs-crypto-what-new#november-2020)
+* [November 2020](/docs/hs-crypto?topic=hs-crypto-what-new#november-2020)
 
-[September 2020](/docs/hs-crypto?topic=hs-crypto-what-new#september-2020)
+* [September 2020](/docs/hs-crypto?topic=hs-crypto-what-new#september-2020)
 
-[August 2020](/docs/hs-crypto?topic=hs-crypto-what-new#august-2020)
+* [August 2020](/docs/hs-crypto?topic=hs-crypto-what-new#august-2020)
 
-[July 2020](/docs/hs-crypto?topic=hs-crypto-what-new#july-2020)
+* [July 2020](/docs/hs-crypto?topic=hs-crypto-what-new#july-2020)
 
-[June 2020](/docs/hs-crypto?topic=hs-crypto-what-new#june-2020)
+* [June 2020](/docs/hs-crypto?topic=hs-crypto-what-new#june-2020)
 
-[April 2020](/docs/hs-crypto?topic=hs-crypto-what-new#april-2020)
+* [April 2020](/docs/hs-crypto?topic=hs-crypto-what-new#april-2020)
 
-[August 2019](/docs/hs-crypto?topic=hs-crypto-what-new#August-2019)
+* [August 2019](/docs/hs-crypto?topic=hs-crypto-what-new#August-2019)
 
-[June 2019](/docs/hs-crypto?topic=hs-crypto-what-new#June-2019)
+* [June 2019](/docs/hs-crypto?topic=hs-crypto-what-new#June-2019)
 
-[March 2019](/docs/hs-crypto?topic=hs-crypto-what-new#March-2019)
+* [March 2019](/docs/hs-crypto?topic=hs-crypto-what-new#March-2019)
 
-[February 2019](/docs/hs-crypto?topic=hs-crypto-what-new#Feb-2019)
+* [February 2019](/docs/hs-crypto?topic=hs-crypto-what-new#Feb-2019)
 
-[December 2018](/docs/hs-crypto?topic=hs-crypto-what-new#Dec-2018)
+* [December 2018](/docs/hs-crypto?topic=hs-crypto-what-new#Dec-2018)
 
 
 ## Tutorials on key management service
@@ -350,13 +350,13 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Provisioning service instances](/docs/hs-crypto?topic=hs-crypto-provision)
 
-[Before you begin](/docs/hs-crypto?topic=hs-crypto-provision#provision-prerequisites)
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-provision#provision-prerequisites)
 
-[Provisioning from the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-provision#provision-gui)
+* [Provisioning from the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-provision#provision-gui)
 
-[Provisioning from the {{site.data.keyword.cloud_notm}} CLI](/docs/hs-crypto?topic=hs-crypto-provision#provision-cli)
+* [Provisioning from the {{site.data.keyword.cloud_notm}} CLI](/docs/hs-crypto?topic=hs-crypto-provision#provision-cli)
 
-[What's next](/docs/hs-crypto?topic=hs-crypto-provision#provision-next)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-provision#provision-next)
 
 
 ## Initializing service instances
@@ -373,11 +373,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
 
-[Adding or removing crypto units that are assigned to service instances](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#identify_crypto_units)
+* [Adding or removing crypto units that are assigned to service instances](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#identify_crypto_units)
 
-[Loading master keys](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#load-master-keys)
+* [Loading master keys](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#load-master-keys)
 
-[What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-cli-next)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-cli-next)
 
 
 ## Setting up smart cards and the Management Utilities
@@ -386,15 +386,15 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities)
 
-[Step 1: Order smart cards and smart card readers](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader)
+* [Step 1: Order smart cards and smart card readers](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader)
 
-[Step 2: Install the smart card reader driver](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-smart-card-reader-driver)
+* [Step 2: Install the smart card reader driver](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-smart-card-reader-driver)
 
-[Step 3: Install the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-management-utility-application)
+* [Step 3: Install the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-management-utility-application)
 
-[Step 4: Configure smart cards with the Smart Card Utility Program](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#configure-smart-card-utility)
+* [Step 4: Configure smart cards with the Smart Card Utility Program](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#configure-smart-card-utility)
 
-[What's next](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#prepare-management-utilities-next)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#prepare-management-utilities-next)
 
 
 ## Initializing service instances using smart cards and the Management Utilities
@@ -403,11 +403,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
 
-[Before you begin](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#initialize-hsm-management-utilities-prerequisites)
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#initialize-hsm-management-utilities-prerequisites)
 
-[Loading the master key from the smart cards](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#load-master-key-management-utilities)
+* [Loading the master key from the smart cards](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#load-master-key-management-utilities)
 
-[What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#initialize-crypto-utilities-management-utilities-next)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#initialize-crypto-utilities-management-utilities-next)
 
 
 ## Initializing service instances using recovery crypto units
@@ -416,9 +416,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
 
-[Initializing service instances](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit#initialize-hsm-recovery-crypto-unit-steps)
+* [Initializing service instances](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit#initialize-hsm-recovery-crypto-unit-steps)
 
-[What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit#initialize-hsm-recovery-crypto-unit-whats-next)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit#initialize-hsm-recovery-crypto-unit-whats-next)
 
 
 ## Managing instance policies
@@ -455,9 +455,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token)
 
-[Retrieving an access token with the CLI](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token#retrieve-token-cli)
+* [Retrieving an access token with the CLI](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token#retrieve-token-cli)
 
-[Retrieving an access token with the API](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token#retrieve-token-api)
+* [Retrieving an access token with the API](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token#retrieve-token-api)
 
 
 ## Retrieving your instance ID
@@ -466,11 +466,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID)
 
-[Viewing your instance ID with the console](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID#view-instance-ID)
+* [Viewing your instance ID with the console](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID#view-instance-ID)
 
-[Retrieving an instance ID with the CLI](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID#retrieve-instance-ID-cli)
+* [Retrieving an instance ID with the CLI](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID#retrieve-instance-ID-cli)
 
-[Retrieving an instance ID with the API](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID#retrieve-instance-ID-api)
+* [Retrieving an instance ID with the API](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID#retrieve-instance-ID-api)
 
 
 ## Setting up API calls
@@ -506,7 +506,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Performing key management operations with the CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli)
 
-[What's next](/docs/hs-crypto?topic=hs-crypto-set-up-cli#cli-next-steps)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-cli#cli-next-steps)
 
 
 ## Managing master keys
@@ -559,13 +559,13 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings)
 
-[Creating key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#create-key-ring)
+* [Creating key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#create-key-ring)
 
-[Granting access to a key ring](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#grant-access-key-ring)
+* [Granting access to a key ring](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#grant-access-key-ring)
 
-[Listing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#list-key-ring)
+* [Listing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#list-key-ring)
 
-[Deleting key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#delete-key-ring)
+* [Deleting key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#delete-key-ring)
 
 
 ## Managing key aliases
@@ -574,11 +574,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Managing key aliases](/docs/hs-crypto?topic=hs-crypto-manage-key-alias)
 
-[Creating key aliases](/docs/hs-crypto?topic=hs-crypto-manage-key-alias#create-key-alias)
+* [Creating key aliases](/docs/hs-crypto?topic=hs-crypto-manage-key-alias#create-key-alias)
 
-[Deleting key aliases](/docs/hs-crypto?topic=hs-crypto-manage-key-alias#delete-key-alias)
+* [Deleting key aliases](/docs/hs-crypto?topic=hs-crypto-manage-key-alias#delete-key-alias)
 
-[APIs that use key alias](/docs/hs-crypto?topic=hs-crypto-manage-key-alias#key-alias-apis)
+* [APIs that use key alias](/docs/hs-crypto?topic=hs-crypto-manage-key-alias#key-alias-apis)
 
 
 ## Importing keys
@@ -661,9 +661,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Disabling root keys](/docs/hs-crypto?topic=hs-crypto-disable-keys)
 
-[Disabling and enabling root keys with the console](/docs/hs-crypto?topic=hs-crypto-disable-keys#disable-enable-ui)
+* [Disabling and enabling root keys with the console](/docs/hs-crypto?topic=hs-crypto-disable-keys#disable-enable-ui)
 
-[Disabling and enabling root keys with the API](/docs/hs-crypto?topic=hs-crypto-disable-keys#disable-enable-api)
+* [Disabling and enabling root keys with the API](/docs/hs-crypto?topic=hs-crypto-disable-keys#disable-enable-api)
 
 
 ## Deleting keys
@@ -690,11 +690,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys)
 
-[How do I know whether a key can be restored?](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-eligibility)
+* [How do I know whether a key can be restored?](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-eligibility)
 
-[Restoring a deleted key with the console](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-ui)
+* [Restoring a deleted key with the console](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-ui)
 
-[Restoring a deleted key with the API](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-api)
+* [Restoring a deleted key with the API](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-api)
 
 
 ## Managing protected resources associated with root keys
@@ -736,13 +736,13 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Enabling crypto mechanisms](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms)
 
-[Enabling BIP32 deterministic wallets](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-BIP32)
+* [Enabling BIP32 deterministic wallets](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-BIP32)
 
-[Enabling Edwards-curve Digital Signature Algorithm](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-EdDSA)
+* [Enabling Edwards-curve Digital Signature Algorithm](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-EdDSA)
 
-[Enabling the Schnorr algorithm](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-schnorr)
+* [Enabling the Schnorr algorithm](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-schnorr)
 
-[What's next](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#next-enable-mechanisms)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#next-enable-mechanisms)
 
 
 ## Adding or removing crypto units
@@ -751,11 +751,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Adding or removing crypto units](/docs/hs-crypto?topic=hs-crypto-add-remove-crypto-units)
 
-[Adding crypto units to an existing service instance](/docs/hs-crypto?topic=hs-crypto-add-remove-crypto-units#add-crypto-units)
+* [Adding crypto units to an existing service instance](/docs/hs-crypto?topic=hs-crypto-add-remove-crypto-units#add-crypto-units)
 
-[Removing crypto units from an existing service instance](/docs/hs-crypto?topic=hs-crypto-add-remove-crypto-units#remove-crypto-units)
+* [Removing crypto units from an existing service instance](/docs/hs-crypto?topic=hs-crypto-add-remove-crypto-units#remove-crypto-units)
 
-[What's next](/docs/hs-crypto?topic=hs-crypto-add-remove-crypto-units#add-remove-crypto-units-next)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-add-remove-crypto-units#add-remove-crypto-units-next)
 
 
 ## Deleting service instances
@@ -764,11 +764,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Deleting service instances](/docs/hs-crypto?topic=hs-crypto-delete-instance)
 
-[Step 1: Zeroize crypto units](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step)
+* [Step 1: Zeroize crypto units](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step)
 
-[Step 2: Optional - Uninstall the {{site.data.keyword.hscrypto}} utilities](/docs/hs-crypto?topic=hs-crypto-delete-instance#uninstall-utilities-step)
+* [Step 2: Optional - Uninstall the {{site.data.keyword.hscrypto}} utilities](/docs/hs-crypto?topic=hs-crypto-delete-instance#uninstall-utilities-step)
 
-[Step 3: Delete your service instance](/docs/hs-crypto?topic=hs-crypto-delete-instance#delete-instance-step)
+* [Step 3: Delete your service instance](/docs/hs-crypto?topic=hs-crypto-delete-instance#delete-instance-step)
 
 
 ## Enhancing security
@@ -809,25 +809,25 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Securing connection to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-secure-connection)
 
-[Understanding the network access policy](/docs/hs-crypto?topic=hs-crypto-secure-connection#understand-network-access-policies)
+* [Understanding the network access policy](/docs/hs-crypto?topic=hs-crypto-secure-connection#understand-network-access-policies)
 
-[Before you begin](/docs/hs-crypto?topic=hs-crypto-secure-connection#private-endpoint-prereqs)
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-secure-connection#private-endpoint-prereqs)
 
-[Step 1: Configure the private network of {{site.data.keyword.cloud_notm}} on your virtual server](/docs/hs-crypto?topic=hs-crypto-secure-connection#configure-network)
+* [Step 1: Configure the private network of {{site.data.keyword.cloud_notm}} on your virtual server](/docs/hs-crypto?topic=hs-crypto-secure-connection#configure-network)
 
-[Step 2: Provision a service instance and select the network access](/docs/hs-crypto?topic=hs-crypto-secure-connection#service-endpoint-private-endpoints)
+* [Step 2: Provision a service instance and select the network access](/docs/hs-crypto?topic=hs-crypto-secure-connection#service-endpoint-private-endpoints)
 
-[Step 3:  Target the {{site.data.keyword.hscrypto}} private endpoint for the TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-secure-connection#target-tke-private-endpoint)
+* [Step 3:  Target the {{site.data.keyword.hscrypto}} private endpoint for the TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-secure-connection#target-tke-private-endpoint)
 
-[Step 4: Initialize the service instance](/docs/hs-crypto?topic=hs-crypto-secure-connection#secure-connection-key-ceremony)
+* [Step 4: Initialize the service instance](/docs/hs-crypto?topic=hs-crypto-secure-connection#secure-connection-key-ceremony)
 
-[Step 5: Target the {{site.data.keyword.hscrypto}} private endpoint for key management service](/docs/hs-crypto?topic=hs-crypto-secure-connection#target-internal-endpoint)
+* [Step 5: Target the {{site.data.keyword.hscrypto}} private endpoint for key management service](/docs/hs-crypto?topic=hs-crypto-secure-connection#target-internal-endpoint)
 
-[Step 6: Test your private network connection](/docs/hs-crypto?topic=hs-crypto-secure-connection#Test-private-connection)
+* [Step 6: Test your private network connection](/docs/hs-crypto?topic=hs-crypto-secure-connection#Test-private-connection)
 
-[(Optional) Step 7: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC](/docs/hs-crypto?topic=hs-crypto-secure-connection#create-vpe-gateway)
+* [(Optional) Step 7: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC](/docs/hs-crypto?topic=hs-crypto-secure-connection#create-vpe-gateway)
 
-[What's next](/docs/hs-crypto?topic=hs-crypto-secure-connection#secure-connection-next)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-secure-connection#secure-connection-next)
 
 
 ## Auditing events for {{site.data.keyword.hscrypto}}
@@ -836,15 +836,15 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Auditing events for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-at-events)
 
-[Supported events](/docs/hs-crypto?topic=hs-crypto-at-events#at-supported-events)
+* [Supported events](/docs/hs-crypto?topic=hs-crypto-at-events#at-supported-events)
 
-[Viewing events](/docs/hs-crypto?topic=hs-crypto-at-events#at-ui)
+* [Viewing events](/docs/hs-crypto?topic=hs-crypto-at-events#at-ui)
 
-[Analyzing successful events](/docs/hs-crypto?topic=hs-crypto-at-events#at-events-analyze)
+* [Analyzing successful events](/docs/hs-crypto?topic=hs-crypto-at-events#at-events-analyze)
 
-[Analyzing failed events](/docs/hs-crypto?topic=hs-crypto-at-events#at-events-analyze-failed)
+* [Analyzing failed events](/docs/hs-crypto?topic=hs-crypto-at-events#at-events-analyze-failed)
 
-[Event severity](/docs/hs-crypto?topic=hs-crypto-at-events#event-severity)
+* [Event severity](/docs/hs-crypto?topic=hs-crypto-at-events#event-severity)
 
 
 ## {{site.data.keyword.mon_short}} operational metrics
@@ -853,23 +853,23 @@ Find what you are looking for in the compilation of topics that are available in
 
 [{{site.data.keyword.mon_short}} operational metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics)
 
-[What metrics are available for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-operational-metrics#hpcs-metrics-available)
+* [What metrics are available for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-operational-metrics#hpcs-metrics-available)
 
-[Before you begin](/docs/hs-crypto?topic=hs-crypto-operational-metrics#operational-metrics-considerations)
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-operational-metrics#operational-metrics-considerations)
 
-[Connecting {{site.data.keyword.mon_short}} with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-operational-metrics#connect-monitoring-hpcs)
+* [Connecting {{site.data.keyword.mon_short}} with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-operational-metrics#connect-monitoring-hpcs)
 
-[{{site.data.keyword.hscrypto}} Metrics Details](/docs/hs-crypto?topic=hs-crypto-operational-metrics#hpcs-metrics)
+* [{{site.data.keyword.hscrypto}} Metrics Details](/docs/hs-crypto?topic=hs-crypto-operational-metrics#hpcs-metrics)
 
-[Latency](/docs/hs-crypto?topic=hs-crypto-operational-metrics#latency)
+* [Latency](/docs/hs-crypto?topic=hs-crypto-operational-metrics#latency)
 
-[Attributes for Segmentation](/docs/hs-crypto?topic=hs-crypto-operational-metrics#attributes-for-segmentation)
+* [Attributes for Segmentation](/docs/hs-crypto?topic=hs-crypto-operational-metrics#attributes-for-segmentation)
 
-[Metrics Filter Attributes](/docs/hs-crypto?topic=hs-crypto-operational-metrics#metrics-filter-attributes)
+* [Metrics Filter Attributes](/docs/hs-crypto?topic=hs-crypto-operational-metrics#metrics-filter-attributes)
 
-[Default Dashboards](/docs/hs-crypto?topic=hs-crypto-operational-metrics#default-dashboards)
+* [Default Dashboards](/docs/hs-crypto?topic=hs-crypto-operational-metrics#default-dashboards)
 
-[Setting Alerts](/docs/hs-crypto?topic=hs-crypto-operational-metrics#set-monitor-alerts)
+* [Setting Alerts](/docs/hs-crypto?topic=hs-crypto-operational-metrics#set-monitor-alerts)
 
 
 ## High availability and disaster recovery
@@ -933,9 +933,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} Trusted Key Entry CLI](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin)
 
-[Installing the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin#install-tke-cli-plugin)
+* [Installing the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin#install-tke-cli-plugin)
 
-[{{site.data.keyword.cloud_notm}} TKE CLI plug-in commands](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin#commands_usage)
+* [{{site.data.keyword.cloud_notm}} TKE CLI plug-in commands](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin#commands_usage)
 
 
 ## Regions and locations
@@ -944,9 +944,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions)
 
-[Connectivity options](/docs/hs-crypto?topic=hs-crypto-regions#connectivity-options)
+* [Connectivity options](/docs/hs-crypto?topic=hs-crypto-regions#connectivity-options)
 
-[Service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints)
+* [Service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints)
 
 
 ## Smart card security considerations
@@ -955,9 +955,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Smart card security considerations](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy)
 
-[Smart card vulnerabilities](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy#smart-card-vulnerabilities)
+* [Smart card vulnerabilities](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy#smart-card-vulnerabilities)
 
-[Considerations for defining the Management Utilities security policy](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy#smart-card-security-plan)
+* [Considerations for defining the Management Utilities security policy](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy#smart-card-security-plan)
 
 
 ## Understanding your responsibilities when using {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
@@ -966,13 +966,13 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Understanding your responsibilities when using {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-shared-responsibilities)
 
-[Incident and operations management](/docs/hs-crypto?topic=hs-crypto-shared-responsibilities#incident-and-ops)
+* [Incident and operations management](/docs/hs-crypto?topic=hs-crypto-shared-responsibilities#incident-and-ops)
 
-[Identity and access management](/docs/hs-crypto?topic=hs-crypto-shared-responsibilities#iam-responsibilities)
+* [Identity and access management](/docs/hs-crypto?topic=hs-crypto-shared-responsibilities#iam-responsibilities)
 
-[Security and regulation compliance](/docs/hs-crypto?topic=hs-crypto-shared-responsibilities#security-compliance)
+* [Security and regulation compliance](/docs/hs-crypto?topic=hs-crypto-shared-responsibilities#security-compliance)
 
-[Disaster recovery](/docs/hs-crypto?topic=hs-crypto-shared-responsibilities#disaster-recovery)
+* [Disaster recovery](/docs/hs-crypto?topic=hs-crypto-shared-responsibilities#disaster-recovery)
 
 
 ## Open source licenses
@@ -981,9 +981,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Open source licenses](/docs/hs-crypto?topic=hs-crypto-open-source-licenses)
 
-[{{site.data.keyword.hscrypto}} notices and information](/docs/hs-crypto?topic=hs-crypto-open-source-licenses#notice)
+* [{{site.data.keyword.hscrypto}} notices and information](/docs/hs-crypto?topic=hs-crypto-open-source-licenses#notice)
 
-[Hosting appliance notices and information](/docs/hs-crypto?topic=hs-crypto-open-source-licenses#hosting-appliance-notice)
+* [Hosting appliance notices and information](/docs/hs-crypto?topic=hs-crypto-open-source-licenses#hosting-appliance-notice)
 
 
 ## IBM Cloud Hyper Protect Services resources
