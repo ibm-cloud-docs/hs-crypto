@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2020-07-21"
+  years: 2018, 2021
+lastupdated: "2021-05-06"
 
 keywords: service id, service ids, instance id, get instance id, get instance guid, instance id api, instance id cli
 
@@ -22,7 +22,7 @@ subcollection: hs-crypto
 # Retrieving your instance ID
 {: #retrieve-instance-ID}
 
-You can target an individual {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance for operations by including its unique identifier, or instance ID, in API requests to the service.
+You can target an individual {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance for operations by including the unique identifier, or instance ID, in API requests to the service.
 {: shortdesc}
 
 ## Viewing your instance ID with the console

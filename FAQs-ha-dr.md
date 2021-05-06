@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-06"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, HA, DR, high availability, disaster recovery
 
@@ -30,15 +30,15 @@ Read to get answers for high-availability and disaster-recovery related question
 {: #faq-ha-configuration}
 {: faq}
 
-It is recommended that you provision at least two crypto units for high availability, so that there is always at least one additional crypto unit operating in case of a crypto unit failure. {{site.data.keyword.hscrypto}} is built to provide hight availability by default.
+It is recommended that you provision at least two crypto units for high availability. In this way, there is always at least one extra crypto unit operating in a crypto unit failure. {{site.data.keyword.hscrypto}} is built to provide hight availability by default.
 
-For additional details, see [High availability and disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr).
+For more information, see [High availability and disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr).
 
 ## Can I back up my service instance manually?
 {: #faq-backup-manually}
 {: faq}
 
-You need to only back up your master key parts and signature keys for service initialization. Your data in {{site.data.keyword.hscrypto}} is backed up automatically by {{site.data.keyword.cloud_notm}} daily.
+You need to back up only your master key parts and signature keys for service initialization. Your data in {{site.data.keyword.hscrypto}} is backed up automatically by {{site.data.keyword.cloud_notm}} daily.
 
 ## What happens if my service instance fails?
 {: #faq-instance-fail}
@@ -63,16 +63,16 @@ If you delete your service instance, your keys that are managed are not accessib
 {: #faq-backup-keys}
 {: faq}
 
-Backing up the keys manually is currently not supported.
+Backing up the keys manually is not supported.
 
 ## What happens when I delete a key?
 {: #faq-delete-a-key}
 {: faq}
 
-When you delete a key, the key is no longer recoverable and the cloud services that use the key can no longer decrypt data that is associated with the key. Your data remains in those services in its encrypted form. Before you delete a key, ensure that you no longer require access to any data that is associated with the key. This action currently cannot be reversed.
+When you delete a key, the key is no longer recoverable and the cloud services that use the key can no longer decrypt data that is associated with the key. Your data remains in those services in the encrypted form. Before you delete a key, ensure that you no longer require access to any data that is associated with the key. This action cannot be reversed.
 
 ## What happens if I lose the signature key or the master key parts?
 {: #faq-lose-signature-key}
 {: faq}
 
-If your signature key or master key part is lost, you are not able to initialize your service instance, and your service instance is not accessible. You need to back up you key files on your workstation or back up your smart cards that hold your signature key or master key parts depending on how to store your keys. 
+If your signature key or master key part is lost, you are not able to initialize your service instance, and your service instance is not accessible. Depending on how to store your keys, back up you key files on your workstation or back up your smart cards. 

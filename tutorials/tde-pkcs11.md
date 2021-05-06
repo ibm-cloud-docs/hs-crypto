@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-06"
 
 keywords: encrypt Oracle Transparent Database, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -144,19 +144,19 @@ tokens:
       tls:
         # Grep11 requires TLS connection.
         enabled: true
-        # Grep11 requires server only authentication, so 'mutual' should be set as 'false'.
+        # Grep11 requires server only authentication, so 'mutual' needs to be set as 'false'.
         mutual: false
         # 'cacert' is a full-path certificate file.
         # In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
         cacert:
-        # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' should be empty.
+        # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' need to be empty.
         certfile:
         keyfile:
     storage:
       filestore:
         enabled: false
         storagepath:
-        # 'remotestore' should be enabled if you want to generate keys with the attribute CKA_TOKEN.
+        # 'remotestore' needs to be enabled if you want to generate keys with the attribute CKA_TOKEN.
       remotestore:
         enabled: true
     users:

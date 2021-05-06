@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-06"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -68,7 +68,7 @@ An example of how to retrieve checksum values for AES, DES2, and DES3 keys along
 
 The PKCS #11 standard defines an API called *Cryptoki*. The following table lists the PKCS #11 *Cryptoki* API functions and descriptions.
 
-Not all PKCS #11 functions are currently implemented by {{site.data.keyword.hscrypto}}. Functions that are implemented are marked with `Yes` in the table.
+Not all PKCS #11 functions are implemented by {{site.data.keyword.hscrypto}}. Functions that are implemented are marked with `Yes` in the table.
 {: note}
 
 |Category   |PKCS #11 function       |Implemented? (Yes/No)        | Description     |
@@ -112,8 +112,8 @@ Not all PKCS #11 functions are currently implemented by {{site.data.keyword.hscr
 |[Decryption](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959745){: external} |C_DecryptUpdate|Yes|Continues a multiple-part decryption operation.|
 |[Decryption](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959745){: external} |C_DecryptFinal|Yes|Finishes a multiple-part decryption operation.|
 |[Message digesting](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959746){: external} |C_DigestInit   |Yes|Initializes a message-digesting operation.|
-|[Message digesting](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959746){: external} |C_Digest      |Yes|Digests single-part data. The length of the input data should not be zero and the pointer that points to the input data location should not be NULL. |
-|[Message digesting](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959746){: external} |C_DigestUpdate |Yes|Continues a multiple-part digesting operation. The length of the input data should not be zero and the pointer that points to the input data location should not be NULL.|
+|[Message digesting](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959746){: external} |C_Digest      |Yes|Digests single-part data. The length of the input data cannot be zero and the pointer that points to the input data location cannot be NULL. |
+|[Message digesting](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959746){: external} |C_DigestUpdate |Yes|Continues a multiple-part digesting operation. The length of the input data cannot be zero and the pointer that points to the input data location cannot be NULL.|
 |[Message digesting](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959746){: external} |C_DigestKey|No|Digests a key.|
 |[Message digesting](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959746){: external} |C_DigestFinal  |Yes|Finishes a multiple-part digesting operation.|
 |[Signing and MACing](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959747){: external} |C_SignInit   |Yes|Initializes a signature operation.|
@@ -138,7 +138,7 @@ Not all PKCS #11 functions are currently implemented by {{site.data.keyword.hscr
 |[Key management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749){: external} |C_UnwrapKey    |Yes|Unwraps (decrypts) a key.|
 |[Key management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749){: external} |C_DeriveKey    |Yes|Derives a key from a base key.|
 |[Random number generation](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959750){: external} |C_SeedRandom   |No|Adds seed material to the random number generator.|
-|[Random number generation](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959750){: external} |C_GenerateRandom|Yes|Generates random data. The length of the random data should not be zero and the pointer that points to the random data location should not be NULL.|
+|[Random number generation](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959750){: external} |C_GenerateRandom|Yes|Generates random data. The length of the random data cannot be zero and the pointer that points to the random data location cannot be NULL.|
 |[Parallel function management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959751){: external} |C_GetFunctionStatus|No|Legacy function which always returns `CKR_FUNCTION_NOT_PARALLEL`.|
 |[Parallel function management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959751){: external} |C_CancelFunction|No|Legacy function which always returns `CKR_FUNCTION_NOT_PARALLEL`.|
 {: caption="Table 1. Describes the implemented PKCS #11 functions by service backend" caption-side="bottom"}
@@ -146,7 +146,7 @@ Not all PKCS #11 functions are currently implemented by {{site.data.keyword.hscr
 ## Supported mechanisms
 {: #pkcs-mechanism-list}
 
-A mechanism is referred to as a process to implement a cryptographic operation. It can vary depending on the level of firmware in the IBM 4768 crypto card (also referred to as Crypto Express 6S). The following table shows the mechanisms that are currently supported and how they relate to common *Cryptoki* function categories.
+A mechanism is referred to as a process to implement a cryptographic operation. It can vary depending on the level of firmware in the IBM 4768 crypto card (also referred to as Crypto Express 6S). The following table shows the mechanisms that are  supported and how they relate to common *Cryptoki* function categories.
 
 
 
@@ -205,7 +205,7 @@ PKCS #11 attributes define object characteristics that set up how an object can 
 | CKA_PUBLIC_EXPONENT | Public exponent e. |     RSA private keys      |
 | CKA_VALUE_LEN  |  Length in bytes of key value.   |         AES keys  |
 | CKA_EXTRACTABLE  | CK_TRUE if key is extractable and can be wrapped.  | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
-| CKA_LOCAL | CK_TRUE only if the key was generated locally (on the token) with a `C_GenerateKey` or `C_GenerateKeyPair` call or created with a `C_CopyObject` call as a copy of a key which had its CKA_LOCAL attribute set to CK_TRUE. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_LOCAL | CK_TRUE only if the key was generated locally (on the token) with a `C_GenerateKey` or `C_GenerateKeyPair` call or created with a `C_CopyObject` call as a copy of a key which had the CKA_LOCAL attribute set to CK_TRUE. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_EC_PARAMS (CKA_ECDSA_PARAMS) | DER-encoding of an ANSI X9.62 Parameters value. | EC private keys, EC public keys        |
 | CKA_EC_POINT | DER-encoding of ANSI X9.62 ECPoint value Q. |      EC public keys  |
 | CKA_WRAP_WITH_TRUSTED  | CK_TRUE if the key can only be wrapped with a wrapping key that has CKA_TRUSTED set to CK_TRUE. Default is CK_FALSE.  | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |

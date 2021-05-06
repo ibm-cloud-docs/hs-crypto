@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-06"
 
 keywords: set up api, api key, cryptographic operations, use ep11 api, access ep11 api, ep11 over grpc, using api
 
@@ -87,7 +87,7 @@ func (cr *IAMPerRPCCredentials) RequireTransportSecurity() bool {
 	return true
 }
 
-// getToken obtains a bearer token and its expiration
+// getToken obtains a bearer token and the expiration
 func (cr *IAMPerRPCCredentials) getToken(ctx context.Context) (err error) {
 	cr.updateLock.Lock()
 	defer cr.updateLock.Unlock()

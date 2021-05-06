@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-06"
 
 keywords: delete, delete service instance, crypto unit, ibm cloud cli, clear crypto unit, uninstall
 
@@ -22,22 +22,22 @@ subcollection: hs-crypto
 # Deleting service instances
 {: #delete-instance}
 
-You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance with the {{site.data.keyword.cloud_notm}} console or the {{site.data.keyword.cloud_notm}} CLI. To do so, you need to first set all the [crypto units](#x9860404){: term} of the service instance back to the [imprint mode](#x9860399){: term} by zeroizing the crypto units.
+You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance with the {{site.data.keyword.cloud_notm}} console or the {{site.data.keyword.cloud_notm}} CLI. To do so, you need to set all the [crypto units](#x9860404){: term} of the service instance back to the [imprint mode](#x9860399){: term} by zeroizing the crypto units.
 {: shortdesc}
 
 ## Step 1: Zeroize crypto units
 {: #zeroize-crypto-unit-step}
 
-If you have initialized your service instance and loaded the [master key](#x2908413){: term} to the service instance, you need to set the crypto units back to imprint mode first. You can clear all crypto unit administrators and the master key registers with one of the following options:
+If you initialize your service instance and load the [master key](#x2908413){: term} to the service instance, you need to set the crypto units back to imprint mode. You can clear all crypto unit administrators and the master key registers with one of the following options:
 
--  If you have initialized your service instance through {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) command-line interface (CLI) plug-in, run the following command to zeroize the crypto units in the TKE CLI plug-in:
+-  If you initialize your service instance through {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) command-line interface (CLI) plug-in, run the following command to zeroize the crypto units in the TKE CLI plug-in:
 
     ```
     ibmcloud tke cryptounit-zeroize
     ```
     {: pre}
 
--  If you have initialized your service instance through the Management Utilities, in the user interface of the TKE application, select **Imprint mode** &gt; **Zeroize crypto unit**.
+-  If you initialize your service instance through the Management Utilities, in the user interface of the TKE application, select **Imprint mode** &gt; **Zeroize crypto unit**.
 
 To zeroize the crypto units, enter the password for the administrator signature key to be used when prompted. Make sure that your signature key files are properly saved either on your workstation or on your smart cards. Otherwise, you are not able to perform this action.
 
@@ -59,7 +59,7 @@ ibmcloud plugin uninstall tke
 ```
 {: pre}
 
-If you want to uninstall the entire {{site.data.keyword.cloud_notm}} CLI, refer to [Uninstalling the stand-alone {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-uninstall-ibmcloud-cli).
+If you want to uninstall the entire {{site.data.keyword.cloud_notm}} CLI, see [Uninstalling the stand-alone {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-uninstall-ibmcloud-cli).
 
 ### Uninstall the Management Utilities
 {: #uninstall-management-utilities}

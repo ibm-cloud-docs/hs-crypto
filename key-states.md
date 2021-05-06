@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-01-27"
+lastupdated: "2021-05-06"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle
 
@@ -32,7 +32,7 @@ subcollection: hs-crypto
 
 Cryptographic keys, in their lifetime, transition through several states that are a function of how long the keys are in existence and whether data is protected.
 
-{{site.data.keyword.hscrypto}} provides a graphical user interface and a REST API for tracking keys as they move through several states in their lifecycle. The following diagram shows how a key passes through states between its generation and its destruction.
+{{site.data.keyword.hscrypto}} provides a graphical user interface and a REST API for tracking keys as they move through several states in their lifecycle. The following diagram shows how a key passes through states between the generation and the destruction.
 
 ![Encryption key states and transitions](/images/key-states.svg "Encryption key states and transitions")
 {: caption="Figure 1. Key states and transitions." caption-side="bottom"}
@@ -42,7 +42,7 @@ Cryptographic keys, in their lifetime, transition through several states that ar
 | Pre-active  |       0        | Keys are initially created in the _Pre-activation_ state. A pre-active key cannot be used to cryptographically protect data. |
 | Active      |       1        | Keys move immediately into the _Active_ state on the activation date. This transition marks the beginning of a key's cryptoperiod. Keys with no activation date become active immediately and remain active until they expire or are destroyed. |
 | Suspended   |       2        | A key moves into the _Suspended_ state when it is [disabled for encrypt and decrypt operations](/docs/hs-crypto?topic=hs-crypto-disable-keys). In this state, the key is unable to cryptographically protect data and can only be moved to the _Active_ or _Destroyed_ states. |
-| Deactivated |       3        | A key moves into the _Deactivated_ state on its expiration date, if one is assigned. In this state, the key is unable to cryptographically protect data and can only be moved to the _Destroyed_ state. |
+| Deactivated |       3        | A key moves into the _Deactivated_ state on the expiration date, if one is assigned. In this state, the key is unable to cryptographically protect data and can only be moved to the _Destroyed_ state. |
 | Destroyed   |       5        | Deleted keys are in the _Destroyed_ state. Keys in this state are not recoverable. Metadata that is associated with a key, such as the key's transition history and name, is kept in the {{site.data.keyword.hscrypto}} database. |
 {: caption="Table 1. Describes key states and transitions." caption-side="bottom"}
 

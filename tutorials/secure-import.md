@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-06"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -38,7 +38,7 @@ Learn how to create, encrypt, and bring your encryption keys to the cloud by usi
 ## Objectives
 {: #tutorial-import-objectives}
 
-This tutorial walks you through creating and securely importing encryption keys into the {{site.data.keyword.hscrypto}} service. It's intended for users who are new to the key management function of {{site.data.keyword.hscrypto}}, but who might have some familiarity with key management systems. The following steps should take about 20 minutes to complete.
+This tutorial walks you through creating and securely importing encryption keys into the {{site.data.keyword.hscrypto}} service. It's intended for users who are new to the key management function of {{site.data.keyword.hscrypto}}, but who might have some familiarity with key management systems. The following steps need to take about 20 minutes to complete.
 
 - Setting up the key management API
 - Preparing your {{site.data.keyword.hscrypto}} service instance to begin importing keys
@@ -130,7 +130,7 @@ In the following step, you'll create a [import token](/docs/hs-crypto?topic=hs-c
     ```
     {: pre}
 
-    In the request body, you can specify a policy on the import token that limits its use based on time and usage count. In this example, you set the expiration time for the import token to 1200 seconds (20 minutes), and you also allow only one retrieval of that token within the expiration time.
+    In the request body, you can specify a policy on the import token that limits the use based on time and usage count. In this example, you set the expiration time for the import token to 1200 seconds (20 minutes), and you also allow only one retrieval of that token within the expiration time.
     {: tip}
 
   * **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
@@ -147,7 +147,7 @@ In the following step, you'll create a [import token](/docs/hs-crypto?topic=hs-c
   ```
   {: pre}
 
-  The output displays the metadata that is associated with your import token, such as its creation date and policy details. The following snippet shows example output.
+  The output displays the metadata that is associated with your import token, such as the creation date and policy details. The following snippet shows example output.
 
   ```json
   {

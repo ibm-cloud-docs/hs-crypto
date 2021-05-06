@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-04-30"
+lastupdated: "2021-05-06"
 
 keywords: view resoure, root key encryption resources, protected resource, protected service, envelope encryption, key registration, view registration, list registrations
 
@@ -37,7 +37,7 @@ When you use a root key to protect at-rest data with envelope encryption, the cl
 | Security and compliance | As a security admin, you need a way to determine the risk that's involved with [destroying a root key](/docs/hs-crypto?topic=hs-crypto-delete-keys). You want to examine which keys are actively protecting what data so that you can evaluate exposures based on your organization's security or compliance needs. |
 {: caption="Table 1. Describes the benefits of key registration" caption-side="bottom"}
 
-Key registration is an extra feature that's available only if the cloud service enables it as part of its integration with {{site.data.keyword.hscrypto}}. To determine whether an [integrated service](/docs/hs-crypto?topic=hs-crypto-integrate-services) supports key registration, refer to its service documentation for more information.
+Key registration is an extra feature that's available only if the cloud service enables it as part of the integration with {{site.data.keyword.hscrypto}}. To determine whether an [integrated service](/docs/hs-crypto?topic=hs-crypto-integrate-services) supports key registration, see the service documentation for more information.
 {: note}
 
 ## Viewing protected resources with the console
@@ -320,7 +320,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/registr
     ```
     {:screen}
 
-    The `resourceCrn` value represents the unique identifier of the cloud resource that is encrypted by `keyId`. The metadata that is associated with the registration, such as its creation date, is also returned in the response body.
+    The `resourceCrn` value represents the unique identifier of the cloud resource that is encrypted by `keyId`. The metadata that is associated with the registration, such as the creation date, is also returned in the response body.
 
     By default, `GET api/v2/keys/registrations` returns the first 200 registrations, but you can adjust this limit by using the `limit` parameter at query time.
     {: note}
@@ -362,7 +362,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/registrations?ur
         <td><varname>url_encoded_CRN_query</varname></td>
         <td>
           <p>Filters for resources that are associated with a specified [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) by using URL encoded
-        wildcard characters (`*`). The parameter should contain all CRN segments and must be URL encoded.</p>
+        wildcard characters (`*`). The parameter needs to contain all CRN segments and must be URL encoded.</p>
           <p>To view examples, see [CRN query examples](#crn-query-examples).</p>
         </td>
       </tr>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-06"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, smart card, trusted key entry application, tke application, management utilities
 
@@ -126,7 +126,7 @@ When crypto units in service instances are assigned to a user, they begin in a c
 
 After the signature threshold values are set, the new values are displayed on the **Signature thresholds** page. Setting the signature thresholds to a value greater than one enables [quorum authentication](/docs/hs-crypto?topic=hs-crypto-understand-concepts#quorum-authenticaion-concept) from multiple administrators for sensitive operations.
 
-When an EP11 smart card with a valid administrator signature key is inserted in smart card reader 1 and its PIN is entered, the smart card can be used to sign multiple commands. In the following Step 5, if the reader already contains an EP11 smart card with a valid signature key and the PIN is entered, you're not prompted to insert an EP11 smart card with a signature key in smart card reader 1.
+When an EP11 smart card with a valid administrator signature key is inserted in smart card reader 1 and the PIN is entered, the smart card can be used to sign multiple commands. In the following Step 5, if the reader already contains an EP11 smart card with a valid signature key and the PIN is entered, you're not prompted to insert an EP11 smart card with a signature key in smart card reader 1.
 {: tip}
 
 ### Step 5: Load the master key

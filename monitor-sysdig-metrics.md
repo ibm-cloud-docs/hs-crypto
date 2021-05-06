@@ -27,7 +27,7 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 applications interact with {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
-{{site.data.keyword.mon_full_notm}} records data on the operations that occur inside of {{site.data.keyword.cloud_notm}}. With this service, you can gain operational visibility into the performance and health of your applications, services, and platforms. You can use its advanced features to monitor and troubleshoot, define alerts based on API response codes, and design custom dashboards.
+{{site.data.keyword.mon_full_notm}} records data on the operations that occur inside of {{site.data.keyword.cloud_notm}}. With this service, you can gain operational visibility into the performance and health of your applications, services, and platforms. You can use the advanced features to monitor and troubleshoot, define alerts based on API response codes, and design custom dashboards.
 
 For more information about the {{site.data.keyword.mon_short}} service, see the [getting started tutorial for {{site.data.keyword.mon_full_notm}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started-monitor){: external}.
 

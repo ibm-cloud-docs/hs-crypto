@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-12-02"
+  years: 2020, 2021
+lastupdated: "2021-05-06"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -35,7 +35,7 @@ Before you can set up and use the PKCS #11 API, you need to first follow the [Be
 
 You need to set up the PKCS #11 library on your workstation to make it available for your applications to call the standard PKCS #11 functions.
 
-The PKCS #11 library, for both the amd64 and s390x platforms, is currently supported only on Linux.
+The PKCS #11 library, for both the amd64 and s390x platforms, is supported only on Linux.
 {: note}
 
 1. [Download the latest PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external}. The library file names use the naming convention: pkcs11-grep11-<**platform**>.so.<**version**>. The platform is either *amd64* or *s390x* and the version is the standard *major.minor.build* syntax.
@@ -112,16 +112,16 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
           tls:
             # Grep11 requires TLS connection.
             enabled: true
-            # Grep11 requires server only authentication, so 'mutual' should be set as 'false'.
+            # Grep11 requires server only authentication, so 'mutual' needs to be set as 'false'.
             mutual: false
             # 'cacert' is a full-path certificate file.
             # In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
             cacert:
-            # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' should be empty.
+            # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' needs to be empty.
             certfile:
             keyfile:
         storage:
-            # 'remotestore' should be enabled if you want to generate keys with the attribute CKA_TOKEN.
+            # 'remotestore' needs to be enabled if you want to generate keys with the attribute CKA_TOKEN.
           remotestore:
             enabled: true
         users:
@@ -238,7 +238,7 @@ After you set up the library and the configuration file, the keystores must be i
 
 Once the keystores have been initialized, you can then use the PKCS #11 library to call the standard PKCS #11 functions to generate, store, and list keys. For the detailed list of supported PKCS #11 functions, see [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref).
 
-Depending on features and security requirements of your application, you might need to pass different service ID API keys that you created in the [previous prerequisites step](#prerequisite-pkcs-api) in order to allow your applications to perform the corresponding operations. For example, if your application needs to delete a keystore, you should provide the SO user API key, while if your application needs to access the private keystore to store new keys, you should provide the normal user API key. For more information about user access management for the PKCS #11 API, see [Best practices for setting up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access).
+Depending on features and security requirements of your application, you might need to pass different service ID API keys that you created in the [previous prerequisites step](#prerequisite-pkcs-api) in order to allow your applications to perform the corresponding operations. For example, if your application needs to delete a keystore, you need to provide the SO user API key, while if your application needs to access the private keystore to store new keys, you need to provide the normal user API key. For more information about user access management for the PKCS #11 API, see [Best practices for setting up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access).
 
 If you are running a Java PKCS #11 application on the IBM Z (s390x) platform, it is recommended that the OpenJ9 JVM be used. You can [download the JVM here](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.8%2B10_openj9-0.21.0/OpenJDK11U-jdk_s390x_linux_openj9_linuxXL_11.0.8_10_openj9-0.21.0.tar.gz){: external}.
 {: note}

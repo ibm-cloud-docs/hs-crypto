@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-03-03"
+lastupdated: "2021-05-06"
 
 keywords: initialize service instance, load master key, key ceremony, recovery crypto unit
 
@@ -100,7 +100,7 @@ To initialize your service instance using recovery crypto units, complete the fo
 
     To initialize and maintain your crypto units, administrators  must be installed. Each administrator has an associated signature key. Signature keys are stored in files protected by a password. To use the signature key, you must supply the password.
 
-    To enforce dual control, each signature key file should be assigned to a different user and only that user should know the password.
+    To enforce dual control, each signature key file needs to be assigned to a different user and only that user needs to know the password.
 
     You can install up to eight administrators in a crypto unit.  To set a signature threshold value of 1 and a revocation signature threshold of 1, you must install at least 1 administrator.
 

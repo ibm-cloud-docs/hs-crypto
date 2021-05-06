@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-30"
+lastupdated: "2021-05-06"
 
 keywords: standard key, encryption key, create standard key, create encryption key, add key, key material, key management, create secret, persist secret, create encryption key, encryption key api, api key
 
@@ -81,7 +81,7 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
       <tr>
         <td>Description</td>
         <td>
-          <p>(Optional) Add an extended description for your key. It should be two to 240 characters in length.</p>
+          <p>(Optional) Add an extended description for your key. It needs to be 2 to 240 characters in length.</p>
         </td>
       </tr>
       <caption style="caption-side:bottom;">Table 1. Describes the <strong>Create a key</strong> settings</caption>

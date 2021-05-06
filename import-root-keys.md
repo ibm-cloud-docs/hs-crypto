@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-30"
+lastupdated: "2021-05-06"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -97,7 +97,7 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
       <tr>
         <td>Description</td>
         <td>
-          <p>(Optional) Add an extended description for your key. It should be two to 240 characters in length.</p>
+          <p>(Optional) Add an extended description for your key. It needs to be two to 240 characters in length.</p>
         </td>
       </tr>
       <caption style="caption-side:bottom;">Table 1. Describes the <strong>Import a key</strong> settings</caption>

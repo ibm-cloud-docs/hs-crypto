@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-06"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -31,7 +31,7 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 
 To enable {{site.data.keyword.at_full_notm}} for your {{site.data.keyword.hscrypto}} instance, you need to provision an instance of the {{site.data.keyword.at_full_notm}} service in the same region where your {{site.data.keyword.hscrypto}} instance is located. For more information, see the [getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started).
 
-To see which {{site.data.keyword.hscrypto}} key management requests or Trusted Key Entry (TKE) requests correlate to the actions below, check out the [key management API reference doc](/apidocs/hs-crypto){: external} and [TKE CLI reference](/docs/hs-crypto-cli-plugin?topic=hs-crypto-cli-plugin-tke_cli_plugin){: external}.
+To see which {{site.data.keyword.hscrypto}} key management requests or Trusted Key Entry (TKE) requests correlate to the following actions, check out the [key management API reference doc](/apidocs/hs-crypto){: external} and [TKE CLI reference](/docs/hs-crypto-cli-plugin?topic=hs-crypto-cli-plugin-tke_cli_plugin){: external}.
 
 ## Supported events
 {: #at-supported-events}
@@ -46,27 +46,27 @@ The following table lists the key actions that generate an event:
 
 | Action                            | Description                                                  |
 | --------------------------------- | ------------------------------------------------------------ |
-| `hs-crypto.secrets.create`              | Create a key                                                 |
-| `hs-crypto.secrets.delete`              | Delete a key                                                 |
-| `hs-crypto.secrets.createalias`         | Create a key alias                                           |
-| `hs-crypto.secrets.deletealias`         | Delete a key alias                                           |
-| `hs-crypto.secrets.expire`              | Expire a key                                                 |
-| `hs-crypto.secrets.read`                | Retrieve all key information                                 |
-| `hs-crypto.secrets.readmetadata`        | Retrieve key metadata (excluding key payload, if applicable) |
-| `hs-crypto.secrets.head`                | Retrieve key total                                           |
-| `hs-crypto.secrets.list`                | List keys                                                    |
-| `hs-crypto.secrets.wrap`                | Wrap a key                                                   |
-| `hs-crypto.secrets.unwrap`              | Unwrap a key                                                 |
-| `hs-crypto.secrets.rewrap`              | Rewrap a key                                                 |
-| `hs-crypto.secrets.rotate`              | Rotate a key                                                 |
-| `hs-crypto.secrets.setkeyfordeletion`   | Authorize deletion for a key with Dual Authorization policy  |
-| `hs-crypto.secrets.unsetkeyfordeletion` | Cancel deletion for a key with Dual Authorization policy     |
-| `hs-crypto.secrets.restore`             | Restore a key                                                |
-| `hs-crypto.secrets.listkeyversions`     | List all the versions of a key                               |
-| `hs-crypto.secrets.enable`              | Enable operations for a key                                  |
-| `hs-crypto.secrets.disable`             | Disable operations for a key                                 |
-| `hs-crypto.secrets.eventack`            | Acknowledge a lifecycle action on a key                      |
-| `hs-crypto.secrets.default`             | Invalid key request event                                    |
+| `hs-crypto.secrets.create`              | Create a key.                                                 |
+| `hs-crypto.secrets.delete`              | Delete a key.                                                 |
+| `hs-crypto.secrets.createalias`         | Create a key alias.                                           |
+| `hs-crypto.secrets.deletealias`         | Delete a key alias.                                           |
+| `hs-crypto.secrets.expire`              | Expire a key.                                                |
+| `hs-crypto.secrets.read`                | Retrieve all key information.                                 |
+| `hs-crypto.secrets.readmetadata`        | Retrieve key metadata (excluding key payload, if applicable). |
+| `hs-crypto.secrets.head`                | Retrieve key total.                                           |
+| `hs-crypto.secrets.list`                | List keys.                                                    |
+| `hs-crypto.secrets.wrap`                | Wrap a key.                                                   |
+| `hs-crypto.secrets.unwrap`              | Unwrap a key.                                                 |
+| `hs-crypto.secrets.rewrap`              | Rewrap a key.                                                 |
+| `hs-crypto.secrets.rotate`              | Rotate a key.                                                 |
+| `hs-crypto.secrets.setkeyfordeletion`   | Authorize deletion for a key with Dual Authorization policy.  |
+| `hs-crypto.secrets.unsetkeyfordeletion` | Cancel deletion for a key with Dual Authorization policy.     |
+| `hs-crypto.secrets.restore`             | Restore a key.                                                |
+| `hs-crypto.secrets.listkeyversions`     | List all the versions of a key.                               |
+| `hs-crypto.secrets.enable`              | Enable operations for a key.                                  |
+| `hs-crypto.secrets.disable`             | Disable operations for a key.                                 |
+| `hs-crypto.secrets.eventack`            | Acknowledge a lifecycle action on a key.                      |
+| `hs-crypto.secrets.default`             | Invalid key request event.                                    |
 {: caption="Table 1. Lifecycle Key Actions" caption-side="bottom"}
 
 
@@ -77,12 +77,12 @@ The following table lists the policy actions that generate an event:
 
 | Action                         | Description                                  |
 | ------------------------------ | -------------------------------------------- |
-| `hs-crypto.policies.read`            | List key policies                            |
-| `hs-crypto.policies.write`           | Set key policies                             |
-| `hs-crypto.instancepolicies.read`    | List instance policies                       |
-| `hs-crypto.instancepolicies.write`   | Set instance policies                        |
-| `hs-crypto.policies.default`         | Invalid policy request event                 |
-| `hs-crypto.instancepolicies.default` | Invalid policy request event                 |
+| `hs-crypto.policies.read`            | List key policies.                            |
+| `hs-crypto.policies.write`           | Set key policies.                             |
+| `hs-crypto.instancepolicies.read`    | List instance policies.                       |
+| `hs-crypto.instancepolicies.write`   | Set instance policies.                        |
+| `hs-crypto.policies.default`         | Invalid policy request event.                 |
+| `hs-crypto.instancepolicies.default` | Invalid policy request event.                 |
 {: caption="Table 2. Policy actions" caption-side="bottom"}
 
 ### Import token events
@@ -92,9 +92,9 @@ The following table lists the import token actions that generate an event:
 
 | Action                    | Description                            |
 | ------------------------- | -------------------------------------- |
-| `hs-crypto.importtoken.create`  | Create an import token                 |
-| `hs-crypto.importtoken.read`    | Retrieve an import token               |
-| `hs-crypto.importtoken.default` | Invalid import token request event     |
+| `hs-crypto.importtoken.create`  | Create an import token.                 |
+| `hs-crypto.importtoken.read`    | Retrieve an import token.               |
+| `hs-crypto.importtoken.default` | Invalid import token request event.     |
 {: caption="Table 3. Import token actions" caption-side="bottom"}
 
 ### Registration events
@@ -107,8 +107,8 @@ The following table lists the registration actions that generate an event:
 
 | Action                                  | Description                                              |
 | --------------------------------------- | -------------------------------------------------------- |
-| `hs-crypto.registrations.list`          | List registrations for any key                           |
-| `hs-crypto.registrations.default`       | Invalid registration request event                       |
+| `hs-crypto.registrations.list`          | List registrations for any key.                           |
+| `hs-crypto.registrations.default`       | Invalid registration request event.                       |
 {: caption="Table 4. Registration actions" caption-side="bottom"}
 
 
@@ -121,14 +121,14 @@ The following table lists the Trusted Key Entry (TKE) actions that generate an e
 
 | Action                         | Description                                  |
 | ------------------------------ | -------------------------------------------- |
-| `hs-crypto.tke-cryptounit-admin.add` | Add a crypto unit administrator to the selected crypto units  |
-| `hs-crypto.tke-cryptounit-admin.remove`  | Remove a crypto unit administrator from the selected crypto units |
-| `hs-crypto.tke-cryptounit-threshold.set` | Set the signature thresholds for the selected crypto units |
-| `hs-crypto.tke-cryptounit-master-key-register.add` | Load the new master key register |
-| `hs-crypto.tke-cryptounit-master-key-register.commit`   | Commit the new master key register  |
-| `hs-crypto.tke-cryptounit-master-key-register.activate` | Activate the current master key register  |
-| `hs-crypto.tke-cryptounit-new-master-key-register.clear` | Clear the new master key register |
-| `hs-crypto.tke-cryptounit-current-master-key-register.clear` | Clear the current master key register |
+| `hs-crypto.tke-cryptounit-admin.add` | Add a crypto unit administrator to the selected crypto units.  |
+| `hs-crypto.tke-cryptounit-admin.remove`  | Remove a crypto unit administrator from the selected crypto units. |
+| `hs-crypto.tke-cryptounit-threshold.set` | Set the signature thresholds for the selected crypto units. |
+| `hs-crypto.tke-cryptounit-master-key-register.add` | Load the new master key register. |
+| `hs-crypto.tke-cryptounit-master-key-register.commit`   | Commit the new master key register.  |
+| `hs-crypto.tke-cryptounit-master-key-register.activate` | Activate the current master key register.  |
+| `hs-crypto.tke-cryptounit-new-master-key-register.clear` | Clear the new master key register. |
+| `hs-crypto.tke-cryptounit-current-master-key-register.clear` | Clear the current master key register. |
 | `hs-crypto.tke-cryptounit.reset`   | Zeroize and reset the selected crypto units |
 {: caption="Table 5. Trusted Key Entry actions" caption-side="bottom"}
 
@@ -173,7 +173,7 @@ see [Launching the web UI through the IBM Cloud UI](/docs/Activity-Tracker-with-
 ## Analyzing successful events
 {: #at-events-analyze}
 
-Most successful requests have unique `requestData` and `responseData`associated with each related event. The following sections describe the data of each {{site.data.keyword.hscrypto}} service action event.
+Most successful requests have unique `requestData` and `responseData` associated with each related event. The following sections describe the data of each {{site.data.keyword.hscrypto}} service action event.
 
 Fields are not guaranteed to appear unless the request is successful.
 {: note}
@@ -181,7 +181,7 @@ Fields are not guaranteed to appear unless the request is successful.
 ### Common fields
 {: #at-common fields}
 
-There are some common fields that {{site.data.keyword.hscrypto}} uses outside of the CADF event model to provide more insight into your data.
+Some common fields are available for {{site.data.keyword.hscrypto}} to use outside of the CADF event model to provide more insight into your data.
 
   <table>
     <tr>
@@ -204,7 +204,7 @@ There are some common fields that {{site.data.keyword.hscrypto}} uses outside of
       <td><p><varname>`correlationId`</varname></p></td>
       <td>
         <p>The unique identifier of the API request that generated the event.</p>
-        <p>Note: This field is currently not supported in TKE events.</p>
+        <p>Note: This field is not supported in TKE events.</p>
       </td>
     </tr>
     
@@ -212,18 +212,18 @@ There are some common fields that {{site.data.keyword.hscrypto}} uses outside of
     actions.</caption>
   </table>
 
-For more information on the event fields in the Cloud Auditing Data Federation (CADF) event model, see [Event Fields](https://test.cloud.ibm.com/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-event){: external}
+For more information about the event fields in the Cloud Auditing Data Federation (CADF) event model, see [Event Fields](https://test.cloud.ibm.com/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-event){: external}.
 
-While `initiator.host.address` is a field that is part of the Cloud Auditing Data Federation model, the host address field will not be shown for requests made through private networks.
+While `initiator.host.address` is a field that is part of the Cloud Auditing Data Federation model, the host address field is not shown for requests made through private networks.
 {: important}
 
 ### Key action events
 {: #key-action-events}
 
-Because of the sensitivity of the information for an encryption key, when an event is generated as a result of an API call to the service of {{site.data.keyword.hscrypto}}, the event that is generated does not include detailed information about the key, such as the payload and encrypted nonce.
+Because of the sensitivity of the information about an encryption key, the event that is generated does not include detailed information about the key, such as the payload and encrypted nonce.
 
 The `responseData.keyState` field is an integer and corresponds to the Pre-activation = 0, Active = 1, Suspended = 2, Deactivated = 3, and Destroyed = 5 values.
-For more information on key states, see [Key states and transitions](/docs/hs-crypto?topic=hs-crypto-key-states#key-transitions).
+For more information about key states, see [Key states and transitions](/docs/hs-crypto?topic=hs-crypto-key-states#key-transitions).
 {: note}
 
 #### Create key
@@ -232,8 +232,8 @@ For more information on key states, see [Key states and transitions](/docs/hs-cr
 The following fields include extra information:
 
 - The `requestData.keyType` field includes the type of key that was created.
-- The `responseData.keyId` field includes the unique identifier associated with the key.
-- The `responseData.keyVersionId` field includes the unique identifier of the current key version used to wrap input ciphertext on wrap requests.
+- The `responseData.keyId` field includes the unique identifier that is associated with the key.
+- The `responseData.keyVersionId` field includes the unique identifier of the current key version that is used to wrap input ciphertext on wrap requests.
 - The `responseData.keyVersionCreationDate` field includes the date that the current version of the key was created.
 - The `responseData.keyState` field includes the integer that correlates to the state of the key.
 
@@ -250,7 +250,7 @@ The following field includes extra information:
 The following field includes extra information:
 
 - The `requestData.keyType` field includes the type of key that was created.
-- The `responseData.keyId` field includes the unique identifier associated with the key.
+- The `responseData.keyId` field includes the unique identifier that is associated with the key.
 - The `requestData.expirationDate` field includes the date that the key expired on.
 - The `responseData.initialValue.keyState` field includes the integer that correlates to the previous state of the key.
 - The `responseData.newValue.keyState` field includes the integer that correlates to the current state of the key.
@@ -260,27 +260,27 @@ The following field includes extra information:
 
 The following field includes extra information:
 
-- The `responseData.keyVersionId` field includes the unique identifier of the current key version used to wrap input ciphertext on wrap requests.
+- The `responseData.keyVersionId` field includes the unique identifier of the current key version that is used to wrap input ciphertext on wrap requests.
 
 #### Rewrap key
 {: #rewrap-key-success}
 
 The following field includes extra information:
 
-- The `responseData.keyVersionId` field includes the unique identifier of the current key version used to wrap input ciphertext on wrap requests.
-- The `responseData.rewrappedKeyVersionId` field includes the unique identifier of the new key version used to wrap input ciphertext on wrap requests.
+- The `responseData.keyVersionId` field includes the unique identifier of the current key version that is used to wrap input ciphertext on wrap requests.
+- The `responseData.rewrappedKeyVersionId` field includes the unique identifier of the new key version that is used to wrap input ciphertext on wrap requests.
 
 #### Restore key
 {: #restore-key-success}
 
 The following field includes extra information:
 
-- The `responseData.keyVersionId` field includes the unique identifier of the current key version used to wrap input ciphertext on wrap requests.
+- The `responseData.keyVersionId` field includes the unique identifier of the current key version that is used to wrap input ciphertext on wrap requests.
 
 #### Rotate key
 {: #rotate-key-success}
 
-Rotate key doesn't have any additional fields outside of those from the [Common Fields](#at-common-fields) section
+Rotate key doesn't have any extra fields apart from the [Common Fields](#at-common-fields) section.
 {: note}
 
 #### Get key total
@@ -288,14 +288,14 @@ Rotate key doesn't have any additional fields outside of those from the [Common 
 
 The following field includes extra information:
 
-- The `responseData.totalResources` field includes the total amount of keys within the service instance.
+- The `responseData.totalResources` field includes the total number of keys within the service instance.
 
 #### List keys
 {: #list-keys-success}
 
 The following field includes extra information:
 
-- The `responseData.totalResources` field includes the total amount of keys returned in the response.
+- The `responseData.totalResources` field includes the total number of keys that are returned in the response.
 
 #### Get key or key metadata
 {: #get-key-success}
@@ -304,7 +304,7 @@ The following fields include extra information:
 
 - The `requestData.keyType` field includes the type of key that was retrieved.
 - The `responseData.keyState` field includes the integer that correlates to the state of the key.
-- The `responseData.keyVersionId` field includes the unique identifier of the current key version used to wrap input ciphertext on wrap requests.
+- The `responseData.keyVersionId` field includes the unique identifier of the current key version that is used to wrap input ciphertext on wrap requests.
 - The `responseData.keyVersionCreationDate` field includes the date that the current version of the key was created.
 
 
@@ -314,7 +314,7 @@ The following fields include extra information:
 
 The following field includes extra information:
 
-- The `responseData.totalResources` field includes the total amount of key versions returned in the response.
+- The `responseData.totalResources` field includes the total number of key versions returned in the response.
 
 #### Set or unset key for deletion
 {: #dual-auth-set-success}
@@ -344,8 +344,8 @@ The following fields include extra information:
 
 - The `requestData.initialValue.policyAllowedNetworkEnabled` field includes if your allowed network policy was previously enabled or disabled.
 - The `requestData.initialValue.policyAllowedNetworkAttribute` field includes if your allowed network policy was previously only for public networks or both public and private networks.
-- The `requestData.newValue.policyAllowedNetworkEnabled` field includes if your allowed network policy is currently enabled or disabled.
-- The `requestData.newValue.policyAllowedNetworkAttribute` field includes if your allowed network policy is currently only for public networks or both public and private networks.
+- The `requestData.newValue.policyAllowedNetworkEnabled` field includes if your allowed network policy is enabled or disabled.
+- The `requestData.newValue.policyAllowedNetworkAttribute` field includes if your allowed network policy is only for public networks or both public and private networks.
 
 #### Dual auth delete policies
 {: #dual-auth-event}
@@ -353,7 +353,7 @@ The following fields include extra information:
 The following fields include extra information:
 
 - The `requestData.initialValue.policyDualAuthDeleteEnabled` field includes if your dual auth delete policy was previously enabled or disabled.
-- The `requestData.newValue.policyDualAuthDeleteEnabled` field includes if your dual auth delete policy is currently enabled or disabled.
+- The `requestData.newValue.policyDualAuthDeleteEnabled` field includes if your dual auth delete policy is enabled or disabled.
 
 #### Key creation and importation access policies
 {: #allowed-key-creation-policy}
@@ -361,7 +361,7 @@ The following fields include extra information:
 The following fields include extra information:
 
 - The `requestData.initialValue.PolicyKCIAEnabled` field includes if your key creation and importation policy was previously enabled or disabled.
-- The `requestData.newValue.PolicyKCIAEnabled` field includes if your key creation and importation policy is currently enabled or disabled.
+- The `requestData.newValue.PolicyKCIAEnabled` field includes if your key creation and importation policy is enabled or disabled.
 - The `requestData.initialValue.PolicyKCIAAttrCRK` field includes if your key creation and importation policy previously allowed the creation of root keys.
 - The `requestData.newValue.PolicyKCIAAttrCRK` field includes if your key creation and importation policy allows the creation of root keys.
 - The `requestData.initialValue.PolicyKCIAAttrCSK` field includes if your key creation and importation policy previously allowed the creation of standard keys.
@@ -382,7 +382,7 @@ The following fields include extra information:
 The following fields include extra information:
 
 - The `responseData.expirationDate` field includes the expiration date of the import token.
-- The `responseData.maxAllowedRetrievals` field includes the maximum amount of times the import token can be retrieved within its expiration time before it is no
+- The `responseData.maxAllowedRetrievals` field includes the maximum number of times the import token can be retrieved within the expiration time before it is no
 longer accessible.
 
 #### Retrieve import token
@@ -390,9 +390,9 @@ longer accessible.
 
 The following fields include extra information:
 
-- The `responseData.maxAllowedRetrievals` field includes the maximum amount of times the import token can be retrieved within its expiration time before it is no
+- The `responseData.maxAllowedRetrievals` field includes the maximum number of times the import token can be retrieved within the expiration time before it is no
 longer accessible.
-- The `responseData.remainingRetrievals` field includes the number of times the import token can be retrieved within its expiration time before it is no longer
+- The `responseData.remainingRetrievals` field includes the number of times the import token can be retrieved within the expiration time before it is no longer
 accessible.
 
 
@@ -405,7 +405,7 @@ accessible.
 
 The following field includes extra information:
 
-- The `responseData.totalResources` field includes the total amount of registrations returned in the response.
+- The `responseData.totalResources` field includes the total number of registrations that are returned in the response.
 
 ### Trusted Key Entry events
 {: #tke-events-success}
@@ -425,24 +425,24 @@ The following common fields for TKE events include extra information:
 
   *\[region\].\[availability zone\].\[hardware security module (HSM) module index\].\[HSM domain index\]*.
 
-  For example, if you provision your instance in the `us-east` region, the value returned is similar to `[us-east].[AZ2-CSSTAG2].[03].[22]`.
+  For example, if you provision your instance in the `us-east` region, the value that is returned is similar to `[us-east].[AZ2-CSSTAG2].[03].[22]`.
 - The `target.id` field includes the [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) of the crypto unit.
 - The `target.name` field also includes the location of the crypto unit.
-- The `target.typeURI` field includes the URI of the object that the action is targeting at. For example, if you perform the `hs-crypto.tke-cryptounit-master-key-register.add` action, the value returned is `hs-crypto/tke-cryptounit/master-key-register`.
+- The `target.typeURI` field includes the URI of the object that the action is targeting at. For example, if you perform the `hs-crypto.tke-cryptounit-master-key-register.add` action, the value that is returned is `hs-crypto/tke-cryptounit/master-key-register`.
 
-For the following TKE events, there are some specific fields that indicate more information.
+For the following TKE events, some specific fields indicate more information.
 
 #### Add a crypto unit administrator
 {: #tke-add-admin-success}
 
-- The `requestData.adminId` field includes the SHA-256 hash of the signature key file associated with the administrator to be added.
-- The `responseData.adminIds` field lists the SHA-256 hashes of the signature key files associated with all the administrators that are currently added to the crypto unit.
+- The `requestData.adminId` field includes the SHA-256 hash of the signature key file that is associated with the administrator to be added.
+- The `responseData.adminIds` field lists the SHA-256 hashes of the signature key files associated with all the administrators that are added to the crypto unit.
 
 #### Remove a crypto unit administrator
 {: #tke-remove-admin-success}
 
-- The `requestData.adminId` field includes the SHA-256 hash of the signature key file associated with the administrator to be removed.
-- The `responseData.adminIds` field lists the SHA-256 hashes of the signature key files associated with all the administrators that are currently added to the crypto unit.
+- The `requestData.adminId` field includes the SHA-256 hash of the signature key file that is associated with the administrator to be removed.
+- The `responseData.adminIds` field lists the SHA-256 hashes of the signature key files associated with all the administrators that are   added to the crypto unit.
 
 #### Set the signature thresholds
 {: #tke-set-threshold-success}
@@ -481,30 +481,30 @@ policy. Make a GET request to `/keys/{id}/registrations` to learn which resource
 indicates that the associated resource has a retention policy. To enable deletion, contact an account owner to remove the retention policy on each resource
 that is associated with this key.
 
-A delete key event might also receive a `reason.reasonCode` of `409` due to a dual auth deletion policy on the key. Make a GET request to `/api/v2/keys/{id}/policies` to see if there is a dual authorization policy associated with your key. If there is a policy set, contact the other authorized user to delete the key.
+A delete key event might also receive a `reason.reasonCode` of `409` due to a dual auth deletion policy on the key. Make a GET request to `/api/v2/keys/{id}/policies` to see whether a dual authorization policy is associated with your key. If there is a policy set, contact the other authorized user to delete the key.
 
-### Unable to authenticate while make a request
+### Unable to authenticate while making a request
 {: #authenticate-failure}
 
 If the event has a `reason.reasonCode` of `401`, you might not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions in the specified service instance. Verify with an
 administrator that you are assigned the correct platform and service access roles in the applicable service instance. For more
 information about roles, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access).
 
-Check that you are using a valid token that is associated with an account authorized to perform the service action.
+Check that you are using a valid token that is associated with an account that is authorized to perform the service action.
 {: note}
 
 ### Unable to view or list keys in a service instance
 {: #list-keys-failure}
 
-If you make a call to `GET api/v2/keys` to list the keys that are available in
-your service instance and `responseData.totalResources` is 0, you might need to query for keys in
-the deleted state using the `state` parameter or adjust the `offset` and `limit` parameters in
+You can call `GET api/v2/keys` to list the keys that are available in
+your service instance. If `responseData.totalResources` is 0, query for keys in
+the deleted state by using the `state` parameter or adjust the `offset` and `limit` parameters in
 your request.
 
 ### Lifecycle action on a key with registrations did not complete
 {: #protected-resource-key-failure}
 
-The `responseData.reasonForFailure` and `responseData.resourceCRN` fields contain information on why the action wasn't able to
+The `responseData.reasonForFailure` and `responseData.resourceCRN` fields contain information about why the action wasn't able to
 be completed.
 
 If the event has a `reason.reasonCode` of `409`, the action cannot be completed due to the adopting service's key state
@@ -517,7 +517,7 @@ action request.
 ### Unable to perform Trusted Key Entry actions
 {: #tke-actions-failure}
 
-Failed TKE events have an `outcome` of `failure`. The `reason.reasonType` and `reason.reasonForFailure` fields contain information on why the action wasn't able to be completed.
+Failed TKE events have an `outcome` of `failure`. The `reason.reasonType` and `reason.reasonForFailure` fields contain information about why the action wasn't able to be completed.
 
 If the event has a `reason.reasonCode` of `400`, the action cannot be completed because the operation to the crypto units is not supported or is not valid. Check whether the TKE command that you use is valid by referring to the [TKE CLI reference](/docs/hs-crypto-cli-plugin?topic=hs-crypto-cli-plugin-tke_cli_plugin){: external}.
 
@@ -530,16 +530,15 @@ If the event has a `reason.reasonCode` of `500`, check out the value of `reason.
 
 The severity for all Activity Tracker events with
 {{site.data.keyword.hscrypto}} is based on the type of request
-that was made, then status code. For example, if you make a request to create a key
-with an invalid key, but you are also unauthenticated for the service instance
-that you included in the request, the unauthentication will take precedence and
-the event will be evaluated as a `401` bad request call with a severity of
+that was made, then status code. For example, you might request to create a key
+with an invalid key and are not authenticated in the service instance. The unauthentication takes precedence and
+the event is evaluated as a `401` bad request call with a severity of
 `critical`.
 
 The severity level for all TKE events is `critical` due to the sensitivity of the actions.
 {: important}
 
-The following table lists the actions associated with each severity level:
+The following table lists the actions that are associated with each severity level:
 
 <table>
     <tr>
@@ -587,7 +586,7 @@ The following table lists the actions associated with each severity level:
     <caption style="caption-side:bottom;">Table 10. Describes the severity level for {{site.data.keyword.hscrypto}} service actions.</caption>
   </table>
 
-The following table lists the status codes associated with each severity level:
+The following table lists the status codes that are associated with each severity level:
 
 | Severity | Status code |
 | -------- | ----------- |

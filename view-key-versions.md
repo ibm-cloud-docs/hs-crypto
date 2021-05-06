@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-17"
+lastupdated: "2021-05-06"
 
 keywords: key versions, get key versions, list key versions
 
@@ -31,7 +31,7 @@ View the versions that are associated with a root key by using
 
 When you rotate a root key, {{site.data.keyword.hscrypto}}
 creates a new version of the key. As a security admin, you can audit the
-rotation history of a root key by viewing its key version history.
+rotation history of a root key by viewing the key version history.
 
 Key versions are available only for root keys. To learn more about how key
 rotation works in {{site.data.keyword.hscrypto}}, check out
@@ -188,5 +188,5 @@ following cURL command.
     ```
     {: screen}
 
-    The `resources` object lists each key version, along with its ID and
+    The `resources` object lists each key version, along with the ID and
     creation date, in reverse chronological order.

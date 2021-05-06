@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-17"
+lastupdated: "2021-05-06"
 
 keywords: data encryption key, key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, unwrap api
 
@@ -21,7 +21,7 @@ subcollection: hs-crypto
 # Unwrapping data encryption keys with root keys
 {: #unwrap-keys}
 
-You can unwrap a [data encryption key (DEK)](#x4791827){: term} to access its contents by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management API, if you are a privileged user. Unwrapping a DEK decrypts and checks the integrity of its contents, returning the original key material to your {{site.data.keyword.cloud_notm}} data service.
+You can unwrap a [data encryption key (DEK)](#x4791827){: term} to access the contents by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management API, if you are a privileged user. Unwrapping a DEK decrypts and checks the integrity of the contents, returning the original key material to your {{site.data.keyword.cloud_notm}} data service.
 {: shortdesc}
 
 To learn how key wrapping helps you control the security of at-rest data in the cloud, see [Envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
@@ -29,7 +29,7 @@ To learn how key wrapping helps you control the security of at-rest data in the 
 ## Unwrapping keys by using the API
 {: #unwrap-key-api}
 
-[After you make a wrap call to the service](/docs/hs-crypto?topic=hs-crypto-wrap-keys), you can unwrap a specified data encryption key (DEK) to access its contents by making a `POST` call to the following endpoint.
+[After you make a wrap call to the service](/docs/hs-crypto?topic=hs-crypto-wrap-keys), you can unwrap a specified data encryption key (DEK) to access the contents by making a `POST` call to the following endpoint.
 
 ```
 https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/unwrap

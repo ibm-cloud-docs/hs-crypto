@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-04-15"
+lastupdated: "2021-05-06"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -91,7 +91,7 @@ To rotate the master key, follow these steps:
 
   The new master key is now in `Valid` state in the current master key register. Check out [Master key rotation](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro) for information on how the key states change.
 
-You have successfully rotated the currently master key with the new master key. Your root keys and encryption keys are now well-protected by the new master key.
+You have successfully rotated the current master key with the new master key. Your root keys and encryption keys are now well-protected by the new master key.
 
 If an error occurs during master key rotation, see [Why can't I rotate master keys using smart cards](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-smart-cards).
 

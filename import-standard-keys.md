@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-30"
+lastupdated: "2021-05-06"
 
 keywords: standard key, import key, key material, import key api, bring your own key, byok, encryption key, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key
 
@@ -91,7 +91,7 @@ You can add your existing encryption keys with the {{site.data.keyword.cloud_not
       <tr>
         <td>Description</td>
         <td>
-          <p>(Optional) Add an extended description for your key. It should be two to 240 characters in length.</p>
+          <p>(Optional) Add an extended description for your key. It needs to be two to 240 characters in length.</p>
         </td>
       </tr>
       <caption style="caption-side:bottom;">Table 1. Describes the <strong>Generate new key</strong> settings</caption>

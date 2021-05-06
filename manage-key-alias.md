@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-19"
+lastupdated: "2021-05-06"
 
 keywords: create key alias, key alias, delete key alias, add key alias, retrieve encryption key by alias, create alias API examples
 
@@ -28,7 +28,7 @@ You can use {{site.data.keyword.hscrypto}} to manage key aliases with the {{site
 {: shortdesc}
 
 Key aliases are unique human-readable names that can be used to identify a key. Aliases enable your service to refer to a key by recognizable custom names, rather than the auto-generated identifier provided by {{site.data.keyword.hscrypto}}. For example, if you
-create a key that has the the ID `02fd6835-6001-4482-a892-13bd2085f75d` and it is aliased as `US-South-Test-Key`, you can use `US-South-Test-Key` to refer to your key when you make calls to the {{site.data.keyword.hscrypto}} API to [retrieve a key](/docs/hs-crypto?topic=hs-crypto-retrieve-key) or its [metadata](/docs/hs-crypto?topic=hs-crypto-retrieve-key-metadata).
+create a key that has the the ID `02fd6835-6001-4482-a892-13bd2085f75d` and it is aliased as `US-South-Test-Key`, you can use `US-South-Test-Key` to refer to your key when you make calls to the {{site.data.keyword.hscrypto}} API to [retrieve a key](/docs/hs-crypto?topic=hs-crypto-retrieve-key) or the [metadata](/docs/hs-crypto?topic=hs-crypto-retrieve-key-metadata).
 
 Before you manage key alias for keys in {{site.data.keyword.hscrypto}}, keep in mind the following considerations:
 

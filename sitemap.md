@@ -670,7 +670,7 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_deleting_keys}
 
 
-[Deleting root keys or standard keys using a single authorization](/docs/hs-crypto?topic=hs-crypto-delete-keys)
+[Deleting root keys or standard keys with a single authorization](/docs/hs-crypto?topic=hs-crypto-delete-keys)
 * [Deleting keys with the console](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-keys-gui)
 * [Deleting keys with the API](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-keys-api)
 * [What's next](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-key-next)
@@ -1021,13 +1021,13 @@ Find what you are looking for in the compilation of topics that are available in
 * [How to initialize {{site.data.keyword.hscrypto}} service instances?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-how-to-initialize)
 * [Are there any recommendations on how to set up smart cards?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup)
 * [How can I procure smart cards and smart card readers?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-procure-smart-card)
-* [How many crypto units should I set up in my service instance?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-crypto-units-number)
+* [How many crypto units shall I set up in my service instance?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-crypto-units-number)
 * [Can I use {{site.data.keyword.hscrypto}} along with other {{site.data.keyword.cloud_notm}} services?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-hpcs-with-cloud-services)
 * [How does my application connect to a {{site.data.keyword.hscrypto}} service instance?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-application-connection)
 * [Can I generate master key on-premises and store the master key parts in the smart cards?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-generate-master-key-on-premises)
 * [Can I import root keys from an on-premises HSM?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-import-key-on-premises)
 * [Can I use {{site.data.keyword.hscrypto}} only for cryptographic operations, but use other {{site.data.keyword.cloud_notm}} services such as {{site.data.keyword.keymanagementserviceshort}} for key management?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-hpcs-with-key-protect)
-* [Can I use {{site.data.keyword.hscrypto}} in conjunction with other cloud provider services such as AWS and Azure?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-hpcs-other-cloud-vendor)
+* [Can I use {{site.data.keyword.hscrypto}} along with other cloud provider services such as AWS and Azure?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-hpcs-other-cloud-vendor)
 
 [FAQs: Performance and capacity](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity)
 * [How many keys can be stored in a {{site.data.keyword.hscrypto}} service instance?](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-keys-number)

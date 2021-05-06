@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-30"
+lastupdated: "2021-05-06"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -161,7 +161,7 @@ After you set up your {{site.data.keyword.hscrypto}} instance, you can enable an
 
 The {{site.data.keyword.hscrypto}} key management API is updated with the following changes:
 
-- Updated: The API methods for the following key actions are now transitioned to individual request paths. The generic path format (except the action of restoring a key) is `/api/v2/keys/<key_ID>/actions/<action>` where `key_ID` is the UUID of the key and `action` is the action name that you want to execute.
+- Updated: The API methods for the following key actions are now transferred to individual request paths. The generic path format (except the action of restoring a key) is `/api/v2/keys/<key_ID>/actions/<action>` where `key_ID` is the UUID of the key and `action` is the action name that you want to execute.
   - [Wrap a key](/apidocs/hs-crypto#wrapkey)
   - [Unwrap a key](/apidocs/hs-crypto#unwrapkey)
   - [Rewrap a key](/apidocs/hs-crypto#rewrapkey)

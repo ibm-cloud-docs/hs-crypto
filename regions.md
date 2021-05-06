@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-06"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -45,7 +45,7 @@ Currently, the `us-south` and `us-east` regions are enabled with recovery crypto
 ## Connectivity options
 {: #connectivity-options}
 
-{{site.data.keyword.hscrypto}} offers two connectivity options for interacting with its service APIs.
+{{site.data.keyword.hscrypto}} offers two connectivity options for interacting with the service APIs.
 
 <dl>
     <dt>Public endpoints</dt>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-15"
+lastupdated: "2021-05-06"
 
 keywords: sync resources, sync registrations, key registration, notify key state to resources
 
@@ -28,7 +28,7 @@ You can initiate a manual data synchronization request between root keys and the
 
 When you perform a key lifecycle action (for example `rotation`, `restore`, `disable`, `enable`, `deletion`) on a root key that is associated with other IBM cloud services, those IBM cloud services are notified of the key lifecycle event and are encouraged to respond accordingly. However, in the case where the cloud services do not respond to the key lifecycle notification, you can use the sync API to initiate a renotification of the key lifecycle event to those associated cloud services.
 
-For example, you might delete a root key that has an association with {{site.data.keyword.cos_full_notm}} (COS). After waiting four hours for changes to take effect, you notice that you are still able to access the key's resources despite expecting to be blocked from accessing those resources. In this case, you should call the sync API to renotify COS of the deleted key lifecycle event, so that COS can block access to the resources.
+For example, you might delete a root key that has an association with {{site.data.keyword.cos_full_notm}} (COS). After waiting four hours for changes to take effect, you notice that you are still able to access the key's resources despite expecting to be blocked from accessing those resources. In this case, you need to call the sync API to renotify COS of the deleted key lifecycle event, so that COS can block access to the resources.
 
 The sync API only initiates a request for synchronization. The IBM services associated with the key are responsible for managing all related associated resources and ensuring that the key state and key versions are up to date.
 {: important}
