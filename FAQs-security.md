@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-07"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, data security, compliance
 
@@ -106,9 +106,9 @@ For more information, see [Comparing the PKCS #11 API with the GREP11 API](/docs
 {: #faq-EP11-mechanisms}
 {: faq}
 
-Mechanisms can vary depending on the level of firmware in the IBM 4768 crypto card (also referred to as Crypto Express 6S). For mechanisms that are currently supported, see [Supported mechanisms](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-mechanism-list).
+Mechanisms can vary depending on the level of firmware in the IBM 4768 crypto card (also referred to as Crypto Express 6S). For mechanisms that are   supported, see [Supported mechanisms](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-mechanism-list).
 
-For more information on the EP11 mechanisms, see the [Enterprise PKCS #11 (EP11) Library structure guide](http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf){: external}.
+For more information about the EP11 mechanisms, see the [Enterprise PKCS #11 (EP11) Library structure guide](http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf){: external}.
 
 ## What compliance standards does {{site.data.keyword.hscrypto}} meet?
 {: #faq-compliance-standards}

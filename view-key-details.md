@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-30"
+lastupdated: "2021-05-06"
 
 keywords: get details for a key, get key configuration, get details, view encryption key details, view encryption key, retrieve encryption key details, API examples
 
@@ -29,7 +29,7 @@ You can retrieve the general characteristics of a single encryption key by using
 {: shortdesc}
 
 Retrieving a root key or a standard key requires a _Writer_ or _Manager_ access policy, but you might
-need a way to view only the details about a root key or a standard key, such as its transition history
+need a way to view only the details about a root key or a standard key, such as the transition history
 or configuration, without retrieving the key itself. If you have _Reader_ access
 permissions, you can use the {{site.data.keyword.hscrypto}} key management
 API to retrieve only metadata about a root key or a standard key.

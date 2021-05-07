@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-07"
 
 keywords: set up api, api key, cryptographic operations, use ep11 api, access ep11 api, ep11 over grpc, using api
 
@@ -48,7 +48,7 @@ GREP11 API supports programming languages with [gRPC libraries](https://grpc.io/
 
 You can use the following Golang code example to generate random data by calling the `GenerateRandom` function.
 
-This example assumes that additional required Golang packages are included through import statements, such as the [gRPC](https://godoc.org/google.golang.org/grpc){: external} and [http](https://golang.org/pkg/net/http/){: external} packages. The `import pb "github.com/IBM-Cloud/hpcs-grep11-go/grpc"` statement is used by GREP11 to perform API function calls.
+This example assumes that extra required Golang packages are included through import statements, such as the [gRPC](https://godoc.org/google.golang.org/grpc){: external} and [http](https://golang.org/pkg/net/http/){: external} packages. The `import pb "github.com/IBM-Cloud/hpcs-grep11-go/grpc"` statement is used by GREP11 to perform API function calls.
 {: note}
 
 ```Golang
@@ -87,7 +87,7 @@ func (cr *IAMPerRPCCredentials) RequireTransportSecurity() bool {
 	return true
 }
 
-// getToken obtains a bearer token and its expiration
+// getToken obtains a bearer token and the expiration
 func (cr *IAMPerRPCCredentials) getToken(ctx context.Context) (err error) {
 	cr.updateLock.Lock()
 	defer cr.updateLock.Unlock()
@@ -196,7 +196,7 @@ In the example, update the following variables:
 
 If the sample request is processed successfully, random data with a length of 16 bytes will be returned, as specified in `ep11.AES_BLOCKSIZE`.
 
-The previous authentication example as well as additional Golang code examples can be found at:
+The previous authentication example as well as more Golang code examples can be found at:
  -  [GREP11 API examples](https://github.com/IBM-Cloud/hpcs-grep11-go/tree/master/examples){: external}
  -  [IBM Cloud IAM support for GREP11](https://github.com/IBM-Cloud/hpcs-grep11-go/blob/master/util/util.go){: external}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-17"
+lastupdated: "2021-05-07"
 
 keywords: data encryption key, key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, unwrap api
 
@@ -21,7 +21,7 @@ subcollection: hs-crypto
 # Unwrapping data encryption keys with root keys
 {: #unwrap-keys}
 
-You can unwrap a [data encryption key (DEK)](#x4791827){: term} to access its contents by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management API, if you are a privileged user. Unwrapping a DEK decrypts and checks the integrity of its contents, returning the original key material to your {{site.data.keyword.cloud_notm}} data service.
+You can unwrap a [data encryption key (DEK)](#x4791827){: term} to access the contents by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management API, if you are a privileged user. Unwrapping a DEK decrypts and checks the integrity of the contents, returning the original key material to your {{site.data.keyword.cloud_notm}} data service.
 {: shortdesc}
 
 To learn how key wrapping helps you control the security of at-rest data in the cloud, see [Envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
@@ -29,7 +29,7 @@ To learn how key wrapping helps you control the security of at-rest data in the 
 ## Unwrapping keys by using the API
 {: #unwrap-key-api}
 
-[After you make a wrap call to the service](/docs/hs-crypto?topic=hs-crypto-wrap-keys), you can unwrap a specified data encryption key (DEK) to access its contents by making a `POST` call to the following endpoint.
+[After you make a wrap call to the service](/docs/hs-crypto?topic=hs-crypto-wrap-keys), you can unwrap a specified data encryption key (DEK) to access the contents by making a `POST` call to the following endpoint.
 
 ```
 https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/unwrap
@@ -92,7 +92,7 @@ Root keys that contain the same key material can unwrap the same data encryption
         </td>
         <td>
           <p>
-            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore recommended to specify the key ring ID for a more optimized request.
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. It is recommended to specify the key ring ID for a more optimized request.
           </p>
           <p>
             Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
@@ -114,7 +114,7 @@ Root keys that contain the same key material can unwrap the same data encryption
       <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to unwrap keys in {{site.data.keyword.hscrypto}}.</caption>
     </table>
 
-    The original key material is returned in the response entity-body. The response body also contains the ID of the key version that was used to unwrap the supplied ciphertext. The following JSON object shows an example returned value.
+    The original key material is returned in the response entity-body. The response body also contains the ID of the key version that was used to unwrap the supplied ciphertext. The following JSON object shows a sample returned value.
 
     ```json
     {
@@ -133,7 +133,7 @@ Root keys that contain the same key material can unwrap the same data encryption
 ## Decoding your key material
 {: #how-to-decode-key-material}
 
-When you unwrap a data encryption key, the key material is returned in base64 encoding. You will need to decode the key before encrypting it.
+When you unwrap a data encryption key, the key material is returned in base64 encoding. You need to decode the key before you encrypt it.
 
 ### Using OpenSSL to decode key material
 {: #open-ssl-encoding-root-unwrap}
@@ -169,8 +169,8 @@ When you unwrap a data encryption key, the key material is returned in base64 en
       </td>
       <td>
         <p>
-          The name of the file where your decoded key material will be be
-          outputted once the command has ran.
+          The name of the file where your decoded key material is
+          outputted after the command is run.
         </p>
       </td>
     </tr>

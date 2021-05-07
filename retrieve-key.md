@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-30"
+lastupdated: "2021-05-06"
 
 keywords: get key, get encryption key, view encryption key, retrieve encryption key, API examples
 
@@ -29,7 +29,7 @@ You can retrieve a root key or standard key by using
 {: shortdesc}
 
 If you have a _Writer_ or _Manager_ access policy, you can retrieve the contents
-of a standard key, such as its key material and policy details.
+of a standard key, such as the key material and policy details.
 
 [Root keys](#x6946961){: term} stay within the bounds of a hardware security
 module. The key material for a root key cannot be retrieved.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: measure interactions, metrics, monitoring, operational metrics
 
@@ -27,29 +27,29 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 applications interact with {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
-{{site.data.keyword.mon_full_notm}} records data on the operations that occur inside of {{site.data.keyword.cloud_notm}}. With this service, you can gain operational visibility into the performance and health of your applications, services, and platforms. You can use its advanced features to monitor and troubleshoot, define alerts based on API response codes, and design custom dashboards.
+{{site.data.keyword.mon_full_notm}} records data on the operations that occur inside of {{site.data.keyword.cloud_notm}}. With this service, you can gain operational visibility into the performance and health of your applications, services, and platforms. You can use the advanced features to monitor and troubleshoot, define alerts based on API response codes, and design custom dashboards.
 
 For more information about the {{site.data.keyword.mon_short}} service, see the [getting started tutorial for {{site.data.keyword.mon_full_notm}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started-monitor){: external}.
 
 ## What metrics are available for {{site.data.keyword.hscrypto}}?
 {: #hpcs-metrics-available}
 
-You can use {{site.data.keyword.mon_short}} to track the type of API requests being made to your {{site.data.keyword.hscrypto}} instance as well as the latency of the requests.
+You can use {{site.data.keyword.mon_short}} to track the type of API requests that are made to your {{site.data.keyword.hscrypto}} instance as well as the latency of the requests.
 
-The following contains examples of metrics that can be measured in your {{site.data.keyword.mon_short}} dashboard:
+The following list contains examples of metrics that can be measured in your {{site.data.keyword.mon_short}} dashboard:
 
-- Total requests being made to your {{site.data.keyword.hscrypto}} instance
-- Successful and failed API requests categorized by API type
-- API request latency over time
-- Total API requests categorized by response code
+- Total requests that are made to your {{site.data.keyword.hscrypto}} instance.
+- Successful and failed API requests categorized by API type.
+- API request latency over time.
+- Total API requests categorized by response code.
 
 
 
 ## Before you begin
 {: #operational-metrics-considerations}
 
-Enabling {{site.data.keyword.hscrypto}} service metrics will add new metrics to your {{site.data.keyword.mon_short}} instance. For
-information on {{site.data.keyword.mon_short}} pricing, see [Pricing](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-pricing_plans){: external}.
+Enabling {{site.data.keyword.hscrypto}} service metrics add new metrics to your {{site.data.keyword.mon_short}} instance. For more
+information about {{site.data.keyword.mon_short}} pricing, see [Pricing](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-pricing_plans){: external}.
 {: important}
 
 Before you provision an instance of {{site.data.keyword.mon_short}}, consider the following guidance:
@@ -79,12 +79,12 @@ To enable platform metrics in a region, complete the following steps:
 ## {{site.data.keyword.hscrypto}} Metrics Details
 {: #hpcs-metrics}
 
-You can use the metrics in your Monitoring dashboard to measure the types of requests being made to your service instance as well as the latency of the requests.
+You can use the metrics in your Monitoring dashboard to measure the types of requests that are made to your service instance as well as the latency of the requests.
 
 ### API Hits
 {: #api-hits}
 
-The type and amount of API requests being made to your {{site.data.keyword.hscrypto}} instance. For example, you can track how many API requests that have been made by an authorized user by setting an [alert](#set-monitor-alerts). The alert triggers when your Monitoring instance notices a frequent amount of `401` status codes being returned from your {{site.data.keyword.hscrypto}} instance.
+The type and number of API requests that are made to your {{site.data.keyword.hscrypto}} instance. For example, you can track how many API requests that are made by an authorized user by setting an [alert](#set-monitor-alerts). The alert triggers when your Monitoring instance notices a frequent number of `401` status codes that are returned from your {{site.data.keyword.hscrypto}} instance.
 
 <table>
   <tr>
@@ -136,7 +136,7 @@ The type and amount of API requests being made to your {{site.data.keyword.hscry
 ## Latency
 {: #latency}
 
-The amount of time it takes {{site.data.keyword.hscrypto}} to receive an API request and respond to it.
+The number of time it takes {{site.data.keyword.hscrypto}} to receive an API request and respond to it.
 
 The latency is calculated by getting the average of all requests of the same type that occur within 60 seconds.
 {: note}
@@ -232,7 +232,7 @@ You can filter your metrics by using the following attributes.
       <code>ibm_ctype</code>
     </td>
     <td>
-      public, dedicated, or local.
+      Public, dedicated, or local.
     </td>
   </tr>
 
@@ -352,7 +352,7 @@ You can scope down your metrics by using the following scope filters. These filt
       <code>ibmKmsApi</code>
     </td>
     <td>
-      The {{site.data.keyword.hscrypto}} API call associated
+      The {{site.data.keyword.hscrypto}} API calls associated
       with the metric.
     </td>
   </tr>
@@ -363,7 +363,7 @@ You can scope down your metrics by using the following scope filters. These filt
   </caption>
 </table>
 
-Due to {{site.data.keyword.mon_short}} limitations, you will only be able to see the values in the dropdown filters for up to six hours at a time. You can manually type in value into scope variables to use scope filters for given time periods.
+Because of {{site.data.keyword.mon_short}} limitations, you are able to see the values in the filters for up to 6 hours at a time. You can manually type in value into scope variables to use scope filters for given time periods.
 {: note}
 
 ## Default Dashboards
@@ -372,18 +372,18 @@ Due to {{site.data.keyword.mon_short}} limitations, you will only be able to see
 You need to configure platform metrics and enable a [metrics policy](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics)
 on your service instance in order to view your {{site.data.keyword.hscrypto}} operational metrics dashboard.
 
-### How to find the {{site.data.keyword.mon_short}} dashboard for your {{site.data.keyword.hscrypto}} service instance using {{site.data.keyword.hscrypto}} console
+### How to find the {{site.data.keyword.mon_short}} dashboard for your {{site.data.keyword.hscrypto}} service instance by using {{site.data.keyword.hscrypto}} console
 {: #monitor-dashboard-console}
 
-After configuring your {{site.data.keyword.mon_short}} instance to receive platform metrics, complete the following steps:
+After you configure your {{site.data.keyword.mon_short}} instance to receive platform metrics, complete the following steps:
 
 1. [Provision your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-provision#provision-gui).
 2. Click **Actions** and select **Monitoring**.
 
-### How to find the {{site.data.keyword.mon_short}} dashboard for your {{site.data.keyword.hscrypto}} service instance using observability page
+### How to find the {{site.data.keyword.mon_short}} dashboard for your {{site.data.keyword.hscrypto}} service instance by using observability page
 {: #monitor-dashboard-observability}
 
-After configuring your {{site.data.keyword.mon_short}} instance to receive platform metrics, complete the following steps:
+After you configure your {{site.data.keyword.mon_short}} instance to receive platform metrics, complete the following steps:
 
 1. Go to the [monitoring dashboard](/observe/monitoring){: external} and find your Monitoring instance that is configured to receive platform metrics.
 2. In the **View Dashboard** column, click **View {{site.data.keyword.mon_short}}**.
@@ -397,7 +397,7 @@ You are able to see any metrics in your {{site.data.keyword.mon_short}} instance
 ## Setting Alerts
 {: #set-monitor-alerts}
 
-You can set alerts on your {{site.data.keyword.mon_short}} dashboard to notify you of certain metrics. To setup alerts, complete the following steps:
+You can set alerts on your {{site.data.keyword.mon_short}} dashboard to notify you of certain metrics. To set up alerts, complete the following steps:
 
 1. Click **Alerts** on the side menu.
 2. Click **Add Alert** and select **Metric** as the alert type.
@@ -407,4 +407,4 @@ You can set alerts on your {{site.data.keyword.mon_short}} dashboard to notify y
 6. Configure and set up the notification channel and notification interval.
 8. Click **CREATE**.
 
-For more information on configuring metric alerts, see [Metric Alerts](https://docs.sysdig.com/en/metric-alerts.html){: external}.
+For more information about configuring metric alerts, see [Metric Alerts](https://docs.sysdig.com/en/metric-alerts.html){: external}.

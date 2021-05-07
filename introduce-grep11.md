@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-11-13"
+  years: 2018, 2021
+lastupdated: "2021-05-07"
 
 keywords: hsm, cloud hsm, tke cli, trusted key entry plug-in, ep11, grep11, cryptographic operations, cryptographic functions
 
@@ -48,6 +48,6 @@ For some operations, there are a series of sub-operations. For example, the mult
 - `EncryptUpdate()` and `EncryptFinal()` are used in combination to perform multi-part data encryption. These sub-operations need to be performed after the `EncryptInit()` call.
 - `EncryptSingle()` is an IBM EP11 extension to the standard PKCS #11 specification, and is used to perform a single call to encrypt single-part data without the need to run the `EncryptInit()` and `Encrypt()` sub-operations.
 
-The following diagram shows the three calling sequence flows of GREP11 functions to perform encryption. The flows can also apply to other operations such as decrypt, digest, sign and verify. For more information on the GREP11 API, see [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+The following diagram shows the three calling sequence flows of GREP11 functions to perform encryption. The flows can also apply to other operations such as decrypt, digest, sign and verify. For more information about the GREP11 API, see [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
 ![GREP11 functions calling flow for encryption](/images/grep11-encryption-flow.svg "GREP11 functions calling flow for encryption"){: caption="Figure 1. Three calling flows of GREP11 functions for encryption" caption-side="bottom"}

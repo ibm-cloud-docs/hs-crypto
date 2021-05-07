@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-17"
+lastupdated: "2021-05-06"
 
 keywords: rewrap key, reencrypt data encryption key, rewrap api, key id
 
@@ -33,7 +33,7 @@ To learn how envelope encryption helps you control the security of at-rest data 
 ## Rewrapping keys by using the API
 {: #rewrap-key-api}
 
-You can reencrypt a specified data encryption key (DEK) with a root key that you manage in {{site.data.keyword.hscrypto}}, without exposing the DEK in its plaintext form.
+You can reencrypt a specified data encryption key (DEK) with a root key that you manage in {{site.data.keyword.hscrypto}}, without exposing the DEK in the plaintext form.
 
 Rewrapping keys works by combining `unwrap` and `wrap` calls to the service. For example, you can emulate a `rewrap` operation by first calling the `unwrap` API to access a DEK, and then calling the `wrap` API to reencrypt the DEK by using the newest root key material.
 {: note}

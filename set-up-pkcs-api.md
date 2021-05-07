@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-12-02"
+  years: 2020, 2021
+lastupdated: "2021-05-07"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -28,25 +28,25 @@ subcollection: hs-crypto
 ## Prerequisites
 {: #prerequisite-pkcs-api}
 
-Before you can set up and use the PKCS #11 API, you need to first follow the [Best practices for setting up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access) to create different service ID API keys for the various PKCS #11 user types.
+Before you can set up and use the PKCS #11 API, first follow the [Best practices for setting up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access) to create different service ID API keys for the various PKCS #11 user types.
 
 ## Step 1: Set up the PKCS #11 library
 {: #step1-setup-pkcs-library}
 
 You need to set up the PKCS #11 library on your workstation to make it available for your applications to call the standard PKCS #11 functions.
 
-The PKCS #11 library, for both the amd64 and s390x platforms, is currently supported only on Linux.
+The PKCS #11 library, for both the amd64 and s390x platforms, is supported only on Linux&reg;.
 {: note}
 
 1. [Download the latest PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external}. The library file names use the naming convention: pkcs11-grep11-<**platform**>.so.<**version**>. The platform is either *amd64* or *s390x* and the version is the standard *major.minor.build* syntax.
-2. Move the library into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64` or `/usr/lib`.
+2. Move the library into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64`, or `/usr/lib`.
 
 ## Step 2: (Optional) Verify the integrity and authenticity of the PKCS #11 library
 {: #step2-verify-pkcs-library}
 
 For maximum security, verify the integrity and authenticity of the PKCS #11 library before you run your PKCS #11 applications to use the library.
 
-{{site.data.keyword.hscrypto}} enables [signed code verification](https://en.wikipedia.org/wiki/Code_signing){: external} to ensure that the signature matches the original code. If the downloaded PKCS #11 library file is altered or corrupted, a different signature is produced and the verification fails. To make sure the files are not tampered with or corrupted during the download process, complete the following steps by using the [OpenSSL command-line tool](https://wiki.openssl.org/index.php/Binaries){: external}.
+{{site.data.keyword.hscrypto}} enables [signed code verification](https://en.wikipedia.org/wiki/Code_signing){: external} to ensure that the signature matches the original code. If the downloaded PKCS #11 library file is altered or corrupted, a different signature is produced and the verification fails. To make sure that the files are not tampered with or corrupted during the download process, complete the following steps by using the [OpenSSL command-line tool](https://wiki.openssl.org/index.php/Binaries){: external}.
 
 1. Download the latest version of the following files from the [library repository](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} to the same directory where you store the PKCS #11 library:
 
@@ -90,7 +90,7 @@ For maximum security, verify the integrity and authenticity of the PKCS #11 libr
 
 In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic functions, you need to complete the following steps to set up the configuration file.
 
-1. Create a configuration file named `grep11client.yaml` based on the following example. The [library repository](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} also provides a template for you to adapt. You can refer to the comments in the code to understand each field.
+1. Create a configuration file that is named `grep11client.yaml` based on the following example. The [library repository](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} also provides a template for you to adapt. You can refer to the comments in the code to understand each field.
 
     ```yaml
     iamcredentialtemplate: &defaultiamcredential
@@ -112,16 +112,16 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
           tls:
             # Grep11 requires TLS connection.
             enabled: true
-            # Grep11 requires server only authentication, so 'mutual' should be set as 'false'.
+            # Grep11 requires server only authentication, so 'mutual' needs to be set as 'false'.
             mutual: false
             # 'cacert' is a full-path certificate file.
             # In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
             cacert:
-            # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' should be empty.
+            # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' needs to be empty.
             certfile:
             keyfile:
         storage:
-            # 'remotestore' should be enabled if you want to generate keys with the attribute CKA_TOKEN.
+            # 'remotestore' needs to be enabled if you want to generate keys with the attribute CKA_TOKEN.
           remotestore:
             enabled: true
         users:
@@ -157,7 +157,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
               apikey: "<apikey_for_anonymous_user>"
     logging:
       # Set the logging level.
-      # The supported levels, in an increasing order of verboseness, are:
+      # The supported levels, in an increasing order of verboseness:
       # 'panic', 'fatal', 'error', 'warning'/'warn', 'info', 'debug', 'trace'.
       # The Default value is 'warning'.
       loglevel: <logging_level>
@@ -181,7 +181,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
       </tr>
       <tr>
         <td><em>EP11_endpoint_URL</em></td>
-        <td>The {{site.data.keyword.hscrypto}} Enterprise PKCS #11 (EP11) API endpoint. You can get it through <strong>Overview</strong> &gt; <strong>Connect</strong> &gt; <strong>EP11 endpoint URL</strong> in the {{site.data.keyword.cloud_notm}} console, or you can dynamically [retrieve the endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external} with the API. Depending on whether you are using a public or [private network](/docs/hs-crypto?topic=hs-crypto-secure-connection), use the public or private EP11 endpoint URL accordingly. </td>
+        <td>The {{site.data.keyword.hscrypto}} Enterprise PKCS #11 (EP11) API endpoint. You can get it through <strong>Overview</strong> &gt; <strong>Connect</strong> &gt; <strong>EP11 endpoint URL</strong> in the {{site.data.keyword.cloud_notm}} console, or you can dynamically [retrieve the endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external} with the API. Depending on whether you are using a public or [private network](/docs/hs-crypto?topic=hs-crypto-secure-connection), use the public or private EP11 endpoint URL. </td>
       </tr>
       <tr>
         <td><em>EP11_endpoint_port_number</em></td>
@@ -203,7 +203,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
       </tr>
       <tr>
         <td><em>anonymous_user_name</em></td>
-        <td>The name for the anonymous user. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. If an end-user does not login using the `C_Login` Cryptoki function, then the user is known as an anonymous user. For more information about the PKCS #11 user types, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984){: external}.</td>
+        <td>The name for the anonymous user. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. If a user does not log in by using the `C_Login` Cryptoki function, then the user is known as an anonymous user. For more information about the PKCS #11 user types, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984){: external}.</td>
       </tr>
       <tr>
         <td><em>public_key_store_spaceid</em></td>
@@ -219,16 +219,16 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
       </tr>
       <tr>
         <td><em>logging_level</em></td>
-        <td>The supported logging levels, in an increasing order of verboseness, are: `panic`, `fatal`, `error`, `warning`/`warn`, `info`, `debug`, and `trace`. The Default value is `warning`. For more information about the logging levels, see [Logging levels](http://www.thejoyofcode.com/Logging_Levels_and_how_to_use_them.aspx){: external}.</td>
+        <td>The supported logging levels, in an increasing order of verboseness: `panic`, `fatal`, `error`, `warning`/`warn`, `info`, `debug`, and `trace`. The Default value is `warning`. For more information about the logging levels, see [Logging levels](http://www.thejoyofcode.com/Logging_Levels_and_how_to_use_them.aspx){: external}.</td>
       </tr>
       <tr>
         <td><em>log_file_path</em></td>
         <td>The full path of your logging file. It saves all the logs that are generated when your applications interact with the {{site.data.keyword.hscrypto}} cloud HSM to execute PKCS #11 functions.</td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to create the PKCS #11 configuration file</caption>
+      <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to create the PKCS #11 configuration file.</caption>
     </table>
 
-2. Move the configuration file into the same directory as the application (for example, pkcs11-tool) that uses the PKCS #11 library. Optionally, the PKCS #11 configuration file can be placed in the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not already exist.
+2. Move the configuration file into the same directory as the application (for example, pkcs11-tool) that uses the PKCS #11 library. Optionally, the PKCS #11 configuration file can be placed in the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not exist.
 
 ## Step 4: Use the PKCS #11 library to make PKCS #11 API calls
 {: #step4-use-pkcs-library}
@@ -236,11 +236,11 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
 After you set up the library and the configuration file, the keystores must be initialized. To initialize the keystores, the security officer (SO) user needs to perform a `C_InitToken` operation.
 {: important}
 
-Once the keystores have been initialized, you can then use the PKCS #11 library to call the standard PKCS #11 functions to generate, store, and list keys. For the detailed list of supported PKCS #11 functions, see [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref).
+After the keystores are initialized, use the PKCS #11 library to call the standard PKCS #11 functions to generate, store, and list keys. For the detailed list of supported PKCS #11 functions, see [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref).
 
-Depending on features and security requirements of your application, you might need to pass different service ID API keys that you created in the [previous prerequisites step](#prerequisite-pkcs-api) in order to allow your applications to perform the corresponding operations. For example, if your application needs to delete a keystore, you should provide the SO user API key, while if your application needs to access the private keystore to store new keys, you should provide the normal user API key. For more information about user access management for the PKCS #11 API, see [Best practices for setting up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access).
+Depending on features and security requirements of your application, pass different service ID API keys that you created in the [previous prerequisites step](#prerequisite-pkcs-api) so that your applications can perform the corresponding operations. For example, if your application needs to delete a keystore, provide the SO user API key. If your application needs to access the private keystore to store new keys, you need to provide the normal user API key. For more information about user access management for the PKCS #11 API, see [Best practices for setting up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access).
 
-If you are running a Java PKCS #11 application on the IBM Z (s390x) platform, it is recommended that the OpenJ9 JVM be used. You can [download the JVM here](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.8%2B10_openj9-0.21.0/OpenJDK11U-jdk_s390x_linux_openj9_linuxXL_11.0.8_10_openj9-0.21.0.tar.gz){: external}.
+If you are running a Java PKCS #11 application on the IBM Z (s390x) platform, it is recommended to use the OpenJ9 JVM. You can [download the JVM here](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.8%2B10_openj9-0.21.0/OpenJDK11U-jdk_s390x_linux_openj9_linuxXL_11.0.8_10_openj9-0.21.0.tar.gz){: external}.
 {: note}
 
 ## What's next

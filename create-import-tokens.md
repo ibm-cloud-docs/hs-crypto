@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-07-06"
+  years: 2018, 2021
+lastupdated: "2021-05-07"
 
 keywords: create import token, secure import, key material, key wrapping key, import token api, bring your own key, byok
 
@@ -83,12 +83,12 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/import_token
         </tr>
         <tr>
           <td><varname>use_count</varname></td>
-          <td>The number of times that an import token can be retrieved within its expiration time before it is no longer accessible. The default value is 1.</td>
+          <td>The number of times that an import token can be retrieved within the expiration time before it is no longer accessible. The default value is 1.</td>
         </tr>
           <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to create an import token with the Key management API</caption>
       </table>
 
-    A successful `POST api/v2/import_token` request creates an import token for your service instance. The response body contains the metadata that is associated with your import token, such as its creation date and policy details. The following snippet shows example output.
+    A successful `POST api/v2/import_token` request creates an import token for your service instance. The response body contains the metadata that is associated with your import token, such as the creation date and policy details. The following snippet shows example output.
 
     ```json
     {
@@ -114,7 +114,7 @@ Complete the following steps to create an import token using the {{site.data.key
   ```
   {:pre}
 
-  You can find additional parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-reference#kp-import-token-create).
+  You can find more parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-reference#kp-import-token-create).
 
 ## Retrieving an import token with the API
 {: #retrieve-import-token-api}
@@ -160,7 +160,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/import_token
         <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to retrieve an import token with the key management API</caption>
       </table>
 
-    A successful `GET api/v2/import_token` request retrieves the import token for your service instance. The response body contains the metadata that is associated with your import token, such as its creation date and policy details. The following snippet shows example output with truncated values.
+    A successful `GET api/v2/import_token` request retrieves the import token for your service instance. The response body contains the metadata that is associated with your import token, such as the creation date and policy details. The following snippet shows example output with truncated values.
 
     ```json
     {
@@ -192,7 +192,7 @@ Complete the following steps to retrieve an import token using the {{site.data.k
   ```
   {:pre}
 
-  You can find additional parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-reference#kp-import-token-show).
+  You can find more parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-reference#kp-import-token-show).
 
 ## What's next
 {: #create-import-token-next-steps}

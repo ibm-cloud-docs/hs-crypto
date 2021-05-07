@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-06"
 
 keywords: encryption at rest, envelope encryption, root key, data encryption key, key encryption key, key protect, protect data encryption key, encrypt data encryption key, wrap data encryption key, unwrap data encryption key
 
@@ -45,7 +45,7 @@ With envelope encryption, {{site.data.keyword.hscrypto}} protects your at-rest d
   </tr>
   <tr>
     <td>Delegated user access control</td>
-    <td>By assigning {{site.data.keyword.iamshort}} (IAM) roles, {{site.data.keyword.hscrypto}} supports a centralized access control system to enable granular access for your keys. You can refer to [Granting access to keys](/docs/hs-crypto?topic=hs-crypto-grant-access-keys) for detailed information.</td>
+    <td>By assigning {{site.data.keyword.iamshort}} (IAM) roles, {{site.data.keyword.hscrypto}} supports a centralized access control system to enable granular access for your keys. You can see [Granting access to keys](/docs/hs-crypto?topic=hs-crypto-grant-access-keys) for detailed information.</td>
   </tr>
   <caption style="caption-side:bottom;">Table 1. Describes the benefits of customer-managed encryption</caption>
 </table>

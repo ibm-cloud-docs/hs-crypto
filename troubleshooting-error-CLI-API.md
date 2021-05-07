@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-07-17"
+  years: 2020, 2021
+lastupdated: "2021-05-07"
 
-keywords: troubleshoot, problems, known issues, got a an error when using CLI or API
+keywords: troubleshoot, problems, known issues, got a an error when I use CLI or API
 
 subcollection: hs-crypto
 
@@ -24,7 +24,7 @@ subcollection: hs-crypto
 {:support: data-reuse='support'}
 {:term: .term}
 
-# Why am I receiving a `CKR_IBM_WK_NOT_INITIALIZED` error when using CLI or API?
+# Why am I receiving a `CKR_IBM_WK_NOT_INITIALIZED` error when I use CLI or API?
 {: #troubleshoot-error-CLI-API}
 {: troubleshoot}
 {: support}
@@ -46,5 +46,5 @@ Bad Request: rpc error: code = Unknown desc = GRPC Return Code: [0X434B525F484F5
 When you ran the `ibmcloud tke cryptounit-compare` command, you didn't get a `Valid` confirmation on the CURRENT MASTER KEY REGISTER.
 {: tsCauses}
 
-Make sure the HSM [master key](#x2908413){: term} has been properly set.
+Make sure the HSM [master key](#x2908413){: term} is properly set.
 {: tsResolve}

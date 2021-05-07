@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-11-05"
+  years: 2020, 2021
+lastupdated: "2021-05-06"
 
 keywords: instance settings, service settings, key creation/import, key create policy, key creation/import, key policy
 
@@ -45,7 +45,7 @@ only permits the creation or importation of keys in your
 {{site.data.keyword.hscrypto}} instance that follow the key
 creation and importation settings listed on the key create and import access policy.
 
-Setting and retrieving the key create and import access policy is currently supported through the
+Setting and retrieving the key create and import access policy is supported through the
 API only. To find out more about accessing
 the {{site.data.keyword.hscrypto}} key management API, check out
 [Setting up the API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).

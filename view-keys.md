@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-30"
+lastupdated: "2021-05-07"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -349,7 +349,7 @@ By specifying the `state` parameter at query time, you can retrieve keys that ar
 
 For example, you might have keys in your service instance that are in the active, suspended, and destroyed states, but you only want to retrieve keys in the active state when you make a `GET /keys` request.
 
-The state query parameter takes in a list of integers from 0 to 5 delimited by commas with no whitespace or trailing commas. Valid states are based on NIST SP 800-57. For more information on key states, see [Key states and transitions](/docs/hs-crypto?topic=hs-crypto-key-states).
+The state query parameter takes in a list of integers from 0 to 5 delimited by commas with no whitespace or trailing commas. Valid states are based on NIST SP 800-57. For more information about key states, see [Key states and transitions](/docs/hs-crypto?topic=hs-crypto-key-states).
 {: note}
 
 You can use the following example request to retrieve a different set of keys.

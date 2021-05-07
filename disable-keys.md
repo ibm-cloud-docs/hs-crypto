@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-17"
+lastupdated: "2021-05-07"
 
 keywords: disable key, enable key, suspend key, suspend operations on a key
 
@@ -28,24 +28,24 @@ subcollection: hs-crypto
 You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to disable or enable a root key and temporarily revoke access to the key's associated data on the cloud.
 {: shortdesc}
 
-As an admin, you might need to temporarily disable a root key if you suspect a possible security exposure, compromise, or breach with your data. When you disable a root key, you suspend its encrypt and decrypt operations. After confirming that a security risk is no longer active, you can restore access to your data by enabling the disabled root key.
+As an admin, you might need to temporarily disable a root key if you suspect a possible security exposure, compromise, or breach with your data. When you disable a root key, you suspend the encrypt and decrypt operations. After you confirm that a security risk is no longer active, you can restore access to your data by enabling the disabled root key.
 
-If you are using a cloud service that is integrated with {{site.data.keyword.hscrypto}}, your data might not be accessible after disabling a root key. To determine whether an [integrated service](/docs/hs-crypto?topic=hs-crypto-integrate-services) supports revoking access to data by disabling a {{site.data.keyword.hscrypto}} root key, refer to its service documentation.
+If you are using a cloud service that is integrated with {{site.data.keyword.hscrypto}}, your data might not be accessible after you disable a root key. To determine whether an [integrated service](/docs/hs-crypto?topic=hs-crypto-integrate-services) supports revoking access to data by disabling a {{site.data.keyword.hscrypto}} root key, see the service documentation.
 {: note}
 
-When you disable a root key, the key transitions to the
+When you disable a root key, the key moves to the
 [_Suspended_ state](/docs/hs-crypto?topic=hs-crypto-key-states),
 and it can no longer be used to cryptographically protect data.
 
-When you enable a root key that was previously disabled, the key transitions
+When you enable a root key that was previously disabled, the key moves
 from the _Suspended_ to the _Active_ key state. This action restores the key's
 encrypt and decrypt operations.
 
-You must wait 30 seconds after disabling a root key before you are able to enable it again.
+You must wait 30 seconds after you disable a root key before you are able to enable it again.
 
-If you're using an integrated Cloud Service that supports revoking access to a
-disabled root key, the service may take up to a maximum of 4 hours before access
-to the root key's associated data is revoked or restored. After access to the associated
+For an integrated Cloud Service that supports revoking access to a
+disabled root key, the service can take up to 4 hours to revoke or restore access
+to the associated data of the root key. After access to the associated
 data is revoked or restored, a corresponding enable event is displayed in the Activity
 Tracker web UI.
 {: note}
@@ -71,7 +71,7 @@ your service instance.
 disable.
 6. From the options menu, click **Disable key**, enter the key name to confirm the key to be disabled, and click **Disable key**.
 
-After the key is disabled, the **State** of the key is transitioned to `Suspended` in the **Keys** table.
+After the key is disabled, the **State** of the key is moved to `Suspended` in the **Keys** table.
 
 ### Enabling a root key
 {: #enable-ui}
@@ -79,7 +79,7 @@ After the key is disabled, the **State** of the key is transitioned to `Suspende
 If you want to reenable a root key that is [disabled](#disable-ui),
 complete the following steps:
 
-You must wait 30 seconds after disabling a root key before you are able to enable it again.
+You must wait 30 seconds after you disable a root key before you are able to enable it again.
 {: note}
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
@@ -92,7 +92,7 @@ your service.
 enable.
 6. From the options menu, click **Enable key**.
 
- After the key is enabled, the **State** of the key is transitioned to `Active` in the **Keys** table.
+ After the key is enabled, the **State** of the key is transferredto `Active` in the **Keys** table.
 
 ## Disabling and enabling root keys with the API
 {: #disable-enable-api}
@@ -100,9 +100,9 @@ enable.
 ### Disabling a root key
 {: #disable-api}
 
-When you disable a root key, the key transitions to the [_Suspended_ state](/docs/hs-crypto?topic=hs-crypto-key-states), and it can no longer be used to encrypt data.
+When you disable a root key, the key moves to the [_Suspended_ state](/docs/hs-crypto?topic=hs-crypto-key-states), and it can no longer be used to encrypt data.
 
-If you're using an integrated cloud service that supports revoking access to a disabled root key, the service may take up to a maximum of four hours before access to the root key's associated data is revoked. After access to the associated data is revoked, a corresponding disable event is displayed in the Activity Tracker web UI.
+For an integrated cloud service that supports revoking access to a disabled root key, the service can take up to 4 hours to revoke access to the associated data of the root key. After access to the associated data is revoked, a corresponding disable event is displayed in the Activity Tracker web UI.
 {: note}
 
 You can disable a root key that's in the _Active_ key state by making a `POST` call to the following endpoint.
@@ -124,7 +124,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 
     You can retrieve the ID for a specified key by making a [list keys API request](https://{DomainName}/apidocs/hs-crypto#getkeys){: external}, or by viewing your keys in the {{site.data.keyword.cloud_notm}} console.
 
-4. Disable the root key and suspend its encrypt and decrypt operations by making the following API call.
+4. Disable the root key and suspend the encrypt and decrypt operations by making the following API call.
 
     ```sh
     curl -X POST \
@@ -228,7 +228,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
     ```
     {: codeblock}
 
-    Review the `state` field in the response body to verify that the key transitioned to the _Suspended_ key state. The following JSON output shows the metadata details for a disabled root key.
+    Review the `state` field in the response body to verify that the key moved to the _Suspended_ key state. The following JSON output shows the metadata details for a disabled root key.
 
     The integer mapping for the _Suspended_ key state is 2. Key States are based on NIST SP 800-57.
     {: note}
@@ -279,9 +279,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 ### Enabling a disabled root key
 {: #enable-api}
 
-When you enable a root key that was previously disabled, the key transitions from the _Suspended_ to the _Active_ key state. This action restores the key's encrypt and decrypt operations.
+When you enable a root key that was previously disabled, the key moves from the _Suspended_ to the _Active_ key state. This action restores the key's encrypt and decrypt operations.
 
-If you're using an integrated cloud service that supports revoking access to a disabled root key, the service may take up to a maximum of four hours before access to the root key's associated data is restored. After access to the associated data is restored, a corresponding enable event is displayed in the Activity Tracker web UI.
+For an integrated cloud service that supports revoking access to a disabled root key, the service can take up to 4 hours to restore access to the associated data of the root key. After access to the associated data is restored, a corresponding enable event is displayed in the Activity Tracker web UI.
 {: note}
 
 You can enable a root key that's in the _Suspended_ key state by making a `POST` call to the following endpoint.
@@ -303,9 +303,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 
     You can retrieve the ID for a specified key by making a [list keys API request](https://{DomainName}/apidocs/hs-crypto#getkeys){: external}, or by viewing your keys in the {{site.data.keyword.hscrypto}} dashboard.
 
-4. Enable the root key and restore its encrypt and decrypt operations by making the following API call.
+4. Enable the root key and restore the encrypt and decrypt operations by making the following API call.
 
-    You must wait 30 seconds after disabling a root key before you are able to enable it again.
+    You must wait 30 seconds after you disable a root key before you are able to enable it again.
     {: note}
 
     ```sh
@@ -410,7 +410,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
     ```
     {: codeblock}
 
-    Review the `state` field in the response body to verify that the root key transitioned to the _Active_ key state. The following JSON output shows the metadata details for an active key.
+    Review the `state` field in the response body to verify that the root key moved to the _Active_ key state. The following JSON output shows the metadata details for an active key.
 
     The integer mapping for the _Active_ key state is 1. Key States are based on NIST SP 800-57.
     {: note}

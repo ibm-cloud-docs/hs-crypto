@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-30"
+lastupdated: "2021-05-07"
 
 keywords: restore key, restore a deleted key, recover a deleted key, re-import a key
 
@@ -27,11 +27,11 @@ subcollection: hs-crypto
 # Restoring keys
 {: #restore-keys}
 
-You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to restore a previously deleted key and access its associated data on the cloud.
+You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to restore a previously deleted key and access the associated data on the cloud.
 {: shortdesc}
 
 
-When a key is deleted, it is moved to a _Destroyed_ state. However, information about the key (such as its metadata) can still be viewed and you have 30 days to restore the key to an _Active_ state. For this reason, a key deletion is considered a _Soft deletion_ where the key still exists but can no longer be used to access the data that is encrypted by the key. This topic describes the process to restore a key and the limitations of the key restoration process.
+When a key is deleted, it is moved to a _Destroyed_ state. However, information about the key (such as the metadata) can still be viewed and you have 30 days to restore the key to an _Active_ state. For this reason, a key deletion is considered a _Soft deletion_ where the key still exists but can no longer be used to access the data that is encrypted by the key. This topic describes the process to restore a key and the limitations of the key restoration process.
 
 This soft deletion period, in which a key has been deleted but can still be restored, lasts for 30 days. Between 30 days and 90 days, the key data can still be accessed, but the key can no longer be restored. After 90 days, the key becomes eligible to be automatically purged, which can occur at any time after 90 days. Purged keys, unlike destroyed keys, are gone forever.
 
@@ -107,7 +107,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/restore
 
     You can retrieve the ID for a specified key by making a [list keys API request](/apidocs/hs-crypto#getkeys){: external}, or by viewing your keys in the {{site.data.keyword.cloud_notm}} console.
 
-4. Run the following `curl` command to restore the key and regain access to its associated data. Note that you must wait 30 seconds after deleting a key before you are able to restore it.
+4. Run the following `curl` command to restore the key and regain access to the associated data. Note that you must wait 30 seconds after deleting a key before you are able to restore it.
 
    You cannot restore a key that has an expiration date that is current or in the past.
    {: important}
@@ -220,7 +220,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/restore
 
     Where the `<key_id>` is the ID of the key, the `<instance_ID>` is the name of your instance, and your `<IAM_token>` is your IAM token.
 
-    Review the `state` field in the response body to verify that the key transitioned to the _Active_ key state. The following JSON output shows the metadata details for an _Active_ key.
+    Review the `state` field in the response body to verify that the key moved to the _Active_ key state. The following JSON output shows the metadata details for an _Active_ key.
 
     The integer mapping for the _Active_ key state is 1. Key states are based on NIST SP 800-57.
     {: note}

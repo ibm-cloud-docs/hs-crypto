@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-17"
+lastupdated: "2021-05-07"
 
 keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 
@@ -24,13 +24,13 @@ subcollection: hs-crypto
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Deleting root keys or standard keys using a single authorization
+# Deleting root keys or standard keys with a single authorization
 {: #delete-keys}
 
 If you are a manager for your {{site.data.keyword.cloud}}
-{{site.data.keyword.hscrypto}} instance, you can use  {{site.data.keyword.hscrypto}} to delete root keys or standard keys and its contents, .
+{{site.data.keyword.hscrypto}} instance, you can use  {{site.data.keyword.hscrypto}} to delete root keys or standard keys and the contents.
 
-When you delete a key, you shred its contents and associated data. Any data that
+When you delete a key, you shred the contents and associated data. Any data that
 is encrypted by the key becomes inaccessible. Only imported root keys can be restored after deletion.
 [Destroying resources](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#data-deletion)
 is not recommended for production environments, but might be useful for
@@ -45,7 +45,7 @@ that's actively protecting a cloud resource. Before you delete a key,
 that are associated with the key.
 - You can
 [force deletion on a key](#delete-key-force)
-that's protecting a cloud resource. However, the action won't succeed if the
+that's protecting a cloud resource. However, the action can't succeed if the
 key's associated resource is non-erasable due to a retention policy. You can
 verify whether a key is associated with a non-erasable resource by
 [checking the registration details](/docs/hs-crypto?topic=hs-crypto-view-protected-resources#view-protected-resources-api)
@@ -72,19 +72,19 @@ console.
 5. Select the key that you want to delete and click the overflow (⋯) icon to open a list of options for the key.
 6. From the options menu, click **Delete key**, enter the key name to confirm the key to be deleted, and click **Delete key**.
 
-After you delete a key, the key transitions to the _Destroyed_ state. Only imported keys in this state can be recovered. Metadata that is associated with the key, such as the key's deletion date, is kept in the {{site.data.keyword.hscrypto}} database.
+After you delete a key, the key moves to the _Destroyed_ state. Only imported keys in this state can be recovered. Metadata that is associated with the key, such as the key's deletion date, is kept in the {{site.data.keyword.hscrypto}} database.
 
 ## Deleting keys with the API
 {: #delete-keys-api}
 
-By default, {{site.data.keyword.hscrypto}} requires one authorization to delete a key. You can delete a key and its contents by making a
+By default, {{site.data.keyword.hscrypto}} requires one authorization to delete a key. You can delete a key and the contents by making a
 `DELETE` call to the following endpoint.
 
 ```
 https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 ```
 
-This action won't succeed if the key is actively protecting one or more cloud
+This action can't succeed if the key is actively protecting one or more cloud
 resources. You can
 [review the resources](/docs/hs-crypto?topic=hs-crypto-view-protected-resources)
 that are associated with the key, or
@@ -99,7 +99,7 @@ at query time to delete the key.
 You can find the ID for a key in your service instance by
 [retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys), or by accessing the {{site.data.keyword.cloud_notm}} console.
 
-3. Run the following cURL command to permanently delete the key and its contents.
+3. Run the following cURL command to permanently delete the key and the contents.
 
     ```sh
     curl -X DELETE \
@@ -139,10 +139,10 @@ You can find the ID for a key in your service instance by
         </td>
         <td>
           <p>
-            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore recommended to specify the key ring ID for a more optimized request.
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. Therefore, it is recommended to specify the key ring ID for a more optimized request.
           </p>
           <p>
-            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is `default`.
           </p>
           <p>
             For more information, see
@@ -159,7 +159,7 @@ You can find the ID for a key in your service instance by
 
     If the `return_preference` variable is set to `return=representation`, the details of the `DELETE` request are returned in the response entity-body.
 
-    The following JSON object shows an example returned value.
+    The following JSON object shows a sample returned value.
 
     ```json
     {
@@ -207,16 +207,16 @@ You can find the ID for a key in your service instance by
 ### Using the `force` query parameter
 {: #delete-key-force}
 
-{{site.data.keyword.hscrypto}} blocks the deletion of a key that's protecting a cloud resource, such as a {{site.data.keyword.cos_full_notm}} bucket. You can force delete a key and its contents by making a `DELETE` call to the following endpoint.
+{{site.data.keyword.hscrypto}} blocks the deletion of a key that's protecting a cloud resource, such as a {{site.data.keyword.cos_full_notm}} bucket. You can force-delete a key and the contents by making a `DELETE` call to the following endpoint.
 
 ```
 https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?force=true
 ```
 
-When you delete a key that has registrations associated with it, you shred the key's contents and associated data. Any data that is encrypted by the key becomes inaccessible.
+When you delete a key with registrations that are associated, you shred the key's contents and associated data. Any data that is encrypted by the key becomes inaccessible.
 {: note}
 
-This action won't succeed if the key is protecting a resource that's non-erasable due to a retention policy. You can verify whether a key is associated with a non-erasable resource by [checking the registration details](/docs/hs-crypto?topic=hs-crypto-view-protected-resources) for the key. Then, you must contact an account owner to remove the retention policy on each resource that is associated with the key before you can delete the key.
+This action can't succeed if the key is protecting a resource that's non-erasable due to a retention policy. You can verify whether a key is associated with a non-erasable resource by [checking the registration details](/docs/hs-crypto?topic=hs-crypto-view-protected-resources) for the key. Then, you must contact an account owner to remove the retention policy on each resource that is associated with the key before you can delete the key.
 {: important}
 
 1. [Retrieve your authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
@@ -225,7 +225,7 @@ This action won't succeed if the key is protecting a resource that's non-erasabl
 
   You can retrieve the ID for a specified key by making a `GET /v2/keys/`request, or by viewing your keys in the {{site.data.keyword.cloud_notm}} console.
 
-3. Run the following cURL command to force delete the key and its contents.
+3. Run the following cURL command to force-delete the key and the contents.
 
   ```sh
   curl -X DELETE \
@@ -295,10 +295,10 @@ This action won't succeed if the key is protecting a resource that's non-erasabl
       </td>
       <td>
         <p>
-          <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore recommended to specify the key ring ID for a more optimized request.
+          <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. Therefore, it is recommended to specify the key ring ID for a more optimized request.
         </p>
         <p>
-          Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+          Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is default.
         </p>
         <p>
           For more information, see
@@ -321,7 +321,7 @@ This action won't succeed if the key is protecting a resource that's non-erasabl
 
   If the `return_preference` variable is set to `return=representation`, the details of the `DELETE` request are returned in the response entity-body.
 
-  The following JSON object shows an example returned value.
+  The following JSON object shows a sample returned value.
 
   ```json
   {

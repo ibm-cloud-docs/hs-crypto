@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-11-03"
+  years: 2020, 2021
+lastupdated: "2021-05-06"
 
 keywords: encrypt IBM Db2 databases, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -38,7 +38,7 @@ Db2 native encryption uses a two-tiered key hierarchy: Data is encrypted with a 
 
 A master key is used to encrypt a DEK. Each encrypted database is associated with one master key at one time.
 
-One important question when planning for Db2 native encryption therefore is: Where do you keep the master key, and how do you secure it?
+One important question when you plan for Db2 native encryption is where you keep the master key and how you secure it.
 
 ## Objectives
 {: #tutorial-db2-objectives}
@@ -47,7 +47,7 @@ This tutorial shows how you can keep complete and exclusive control of your mast
 
 With this tutorial, you are going to implement the setup that is depicted in the following illustration.
 
-![IBM Db2 default encryption using the standard PKCS #11 API](../images/pkcs_db2.svg "IBM Db2 default encryption using the standard PKCS #11 API"){: caption="Figure 1. IBM Db2 default encryption using the standard PKCS #11 API" caption-side="bottom"}
+![IBM Db2 default encryption with the standard PKCS #11 API](../images/pkcs_db2.svg "IBM Db2 default encryption with the standard PKCS #11 API"){: caption="Figure 1. IBM Db2 default encryption with the standard PKCS #11 API" caption-side="bottom"}
 
 In this setup, Db2 is to call operations to manage the master keys on the {{site.data.keyword.hscrypto}} PKCS #11 library. The {{site.data.keyword.hscrypto}} PKCS #11 library interacts with your {{site.data.keyword.hscrypto}} instance, which provides the best of class technology for storing and managing your master keys.
 
@@ -62,7 +62,7 @@ To complete this tutorial, you need to meet the following prerequisites:
 ## Task flow
 {: #tutorial-db2-steps}
 
-To complete this solution, we'll walk through the following steps:
+To complete this solution, let's walk through the following steps:
 
 1. [Initialize your {{site.data.keyword.hscrypto}} instance](#tutorial-db2-initialize)
 1. [Set up the {{site.data.keyword.hscrypto}} PKCS #11 library](#tutorial-db2-pkcs11-setup)
@@ -139,19 +139,19 @@ tokens:
       tls:
         # Grep11 requires TLS connection.
         enabled: true
-        # Grep11 requires server only authentication, so 'mutual' should be set as 'false'.
+        # Grep11 requires server only authentication, so 'mutual' needs to be set as 'false'.
         mutual: false
         # 'cacert' is a full-path certificate file.
         # In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
         cacert:
-        # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' should be empty.
+        # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' need to be empty.
         certfile:
         keyfile:
     storage:
       filestore:
         enabled: false
         storagepath:
-        # 'remotestore' should be enabled if you want to generate keys with the attribute CKA_TOKEN.
+        # 'remotestore' needs to be enabled if you want to generate keys with the attribute CKA_TOKEN.
       remotestore:
         enabled: true
     users:
@@ -296,7 +296,7 @@ Now, let's set up Db2 native encryption. To do so, make sure that you have all d
   ```
   {: codeblock}
 
-4. To update the Db2 configuration run the following command as user `db2inst1`:
+4. To update the Db2 configuration, run the following command as user `db2inst1`:
 
   ```
   db2 update dbm cfg using keystore_location /pkcs11/keystore.conf keystore_type pkcs11
@@ -313,7 +313,7 @@ Now, let's set up Db2 native encryption. To do so, make sure that you have all d
   ```
   {: codeblock}
 
-  You need to specify the environment variable `DB2_DEK_MAC_TYPE=HMAC` before starting Db2. If you use Db2 on Windows, you need to set the Db2 profile variable by using the following command:
+  You need to specify the environment variable `DB2_DEK_MAC_TYPE=HMAC` before you start Db2. If you use Db2 on Windows, you need to set the Db2 profile variable by using the following command:
   {: note}
 
   ```

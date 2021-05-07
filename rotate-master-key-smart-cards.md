@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-04-15"
+lastupdated: "2021-05-07"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -22,7 +22,7 @@ subcollection: hs-crypto
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Rotating master keys using smart cards and the Management Utilities
+# Rotating master keys by using smart cards and the Management Utilities
 {: #rotate-master-key-smart-cards}
 
 You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance on a regular basis to meet industry standards and cryptographic best practices. This topic guides you through the steps to rotate the master key using smart cards and the Management Utilities.
@@ -69,7 +69,7 @@ To rotate the master key, follow these steps:
 2. Commit the new master key by following these steps:
 
   1. Click **Commit** to move the master key to the `Full committed` state.
-  2. If prompted, in smart card reader 1, insert an EP11 smart card with an administrator signature key that is defined to the selected crypto units and enter the smart card PIN on the smart card reader PIN pad. Repeat this operation if prompted for additional EP11 smart cards with signature keys.
+  2. If prompted, in smart card reader 1, insert an EP11 smart card with an administrator signature key that is defined to the selected crypto units and enter the smart card PIN on the smart card reader PIN pad. Repeat this operation if prompted for more EP11 smart cards with signature keys.
 
   After the process is complete, the new master key register is in `Full committed` state.
 
@@ -91,7 +91,7 @@ To rotate the master key, follow these steps:
 
   The new master key is now in `Valid` state in the current master key register. Check out [Master key rotation](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro) for information on how the key states change.
 
-You have successfully rotated the currently master key with the new master key. Your root keys and encryption keys are now well-protected by the new master key.
+You have successfully rotated the current master key with the new master key. Your root keys and encryption keys are now well-protected by the new master key.
 
 If an error occurs during master key rotation, see [Why can't I rotate master keys using smart cards](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-smart-cards).
 

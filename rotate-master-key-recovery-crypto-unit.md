@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-03-12"
+lastupdated: "2021-05-07"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -21,25 +21,25 @@ subcollection: hs-crypto
 {:term: .term}
 
 
-# Rotating master keys using recovery crypto units
+# Rotating master keys by using recovery crypto units
 {: #rotate-master-key-cli-recovery-crypto-unit}
 
-This topic guides you through the steps to rotate the master key using recovery crypto units. In this case, a random master key value is generated in a recovery crypto unit, securely transferred to other crypto units, and rotated automatically with the `ibmcloud tke auto-mk-rotate` command.
+To rotate the master key by using recovery crypto units, follow these steps. In this case, a random master key value is generated in a recovery crypto unit, securely transferred to other crypto units, and rotated automatically with the `ibmcloud tke auto-mk-rotate` command.
 {: shortdesc}
 
-When master key rotation is taking place, you are temporarily not able to access your key store. To learn how master key rotation works, see [the introduction to the master key rotation](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
+When master key rotation is taking place, you are temporarily not able to access your keystore. To learn how master key rotation works, see [the introduction to the master key rotation](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
 
 Make sure that you are assigned the **Manager** or **Crypto unit administrator** service access role to perform TKE CLI operations. For more information about the access management, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
 
-Use the `ibmcloud tke auto-mk-rotate` command to rotate your master key only when you have recovery crypto units set up and PKCS #11 keystores are not enabled in your service instance. Otherwise, refer to [Rotating master keys using key parts](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-key-parts) for instructions. For the recovery crypto unit supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
+Use the `ibmcloud tke auto-mk-rotate` command to rotate your master key only when you have recovery crypto units set up and PKCS #11 keystores are not enabled in your service instance. Otherwise, see [Rotating master keys by using key parts](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-key-parts) for instructions. For the recovery crypto unit supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 {: important}
 
 ## Rotating master keys
 {: #rotate-master-key-cli-recovery-crypto-unit-steps}
 
-Before you rotate the master key using recovery crypto units, make sure that you complete the [steps to setup the IBM Cloud CLI with TKE plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite).
+Before you rotate the master key by using recovery crypto units, make sure that you complete the [steps to set up the IBM Cloud CLI with TKE plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite).
 
-To rotate master keys using recovery crypto units, use the following command:
+To rotate master keys by using recovery crypto units, use the following command:
 
 ```
 ibmcloud tke auto-mk-rotate
@@ -48,17 +48,17 @@ ibmcloud tke auto-mk-rotate
 
 If multiple service instances are assigned to your resource group, select the service instance where the master key is to be rotated from the service instance list displayed.
 
-After you select a service instance, all crypto units in the service instance become selected. The command checks the initial state of the crypto units to make sure the master keys can be rotated:
+After you select a service instance, all crypto units in the service instance become selected. The command checks the initial state of the crypto units to make sure that the master keys can be rotated:
 
-* If the required initial conditions are not met, an error is reported and the command ends. If this happens, you can check how your crypto units are configured by running the `ibmcloud tke cryptounit-compare` command.
-* If the required initial conditions are met, a random master key value is generated in the new master key register of one of the recovery crypto units. The value is securely copied to the other crypto units of the service instance. A command is issued to reencrypt the contents of key storage for your service instance using the current and new master key register values.
+* If the required initial conditions are not met, an error is reported and the command ends. In this case, you can check how your crypto units are configured by running the `ibmcloud tke cryptounit-compare` command.
+* If the required initial conditions are met, a random master key value is generated in the new master key register of one of the recovery crypto units. The value is securely copied to the other crypto units of the service instance. A command is issued to reencrypt the contents of key storage for your service instance by using the current and new master key register values.
 
-When key storage has been completely reencrypted, the value in the new master key register is promoted to the current master key register in all crypto units and the new master key registers are cleared. A success message is displayed when the master key rotation is completed.
+When key storage is completely reencrypted, the value in the new master key register is promoted to the current master key register in all crypto units and the new master key registers are cleared. A success message is displayed when the master key rotation is completed.
 
 It might take approximately 60 seconds to reencrypt 3000 root keys. When the master key is being rotated, you cannot perform any key-related actions except for deleting keys.
 {: note}
 
-If an error occurs during master key rotation, see [Why can't I rotate master keys using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-recovery-crypto-units).
+If an error occurs during master key rotation, see [Why can't I rotate master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-recovery-crypto-units).
 
 ## What's next
 {: #rotate-master-key-cli-recovery-crypto-unit-next}
