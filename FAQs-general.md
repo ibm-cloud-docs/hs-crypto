@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: general frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips
 
@@ -58,7 +58,7 @@ A cloud HSM is a cloud-based hardware security module to manage your own encrypt
 ## How does {{site.data.keyword.hscrypto}} provide a single-tenant cloud service?
 {: #faq-single-tenant}
 
-{{site.data.keyword.hscrypto}} is a single-tenant cloud service because each customer has a dedicated software stack and a dedicated HSM domain for every crypto unit. As a customer, you are assured that you are interacting with a dedicated service stack that processes only your data. For more information on the service architecture, see [How does Hyper Protect Crypto Services work](/docs/hs-crypto?topic=hs-crypto-overview#how-hpcs-work).
+{{site.data.keyword.hscrypto}} is a single-tenant cloud service because each customer has a dedicated software stack and a dedicated HSM domain for every crypto unit. As a customer, you are assured that you are interacting with a dedicated service stack that processes only your data. For more information about the service architecture, see [How does Hyper Protect Crypto Services work](/docs/hs-crypto?topic=hs-crypto-overview#how-hpcs-work).
 
 ## What are the responsibilities of users and {{site.data.keyword.cloud_notm}} for {{site.data.keyword.hscrypto}}?
 {: #faq-responsibilities-users-cloud}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -164,7 +164,7 @@ Complete the following steps to create your first cryptographic key.
           <p>To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location.</p>
         </td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Description of the settings to create a key</caption>
+      <caption style="caption-side:bottom;">Table 1. Description of the settings to create a key.</caption>
     </table>
 
 3. When you finish filling out the key's details, click **Add key** to confirm.
@@ -203,7 +203,7 @@ Complete the following steps to add an existing key.
         <td>Key material</td>
         <td>The key material, such as a symmetric key, that you want to store in the {{site.data.keyword.hscrypto}} service. The key that you provide must be base64 encoded.</td>
       </tr>
-      <caption style="caption-side:bottom;">Table 2. Description of the settings to import your own key</caption>
+      <caption style="caption-side:bottom;">Table 2. Description of the settings to import your own key.</caption>
     </table>
 
 3. When you finish filling out the key's details, click **Import key** to confirm.
@@ -231,9 +231,9 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
 
   Adapt the following file template and name the file `grep11client.yaml`:
 
-  - Replace `<instance_id>` with the ID of your {{site.data.keyword.hscrypto}} instance
-  - Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance
-  - Replace `<your_api_key>` with the value of the API key that you created previously
+  - Replace `<instance_id>` with the ID of your {{site.data.keyword.hscrypto}} instance.
+  - Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance.
+  - Replace `<your_api_key>` with the value of the API key that you created previously.
 
   ```yaml
   iamcredentialtemplate: &defaultiamcredential
@@ -325,7 +325,7 @@ To perform cryptographic operations with the GREP11 API, you need to make sure y
 The following procedure uses Golang code as an example to test GREP11 functions.
 
 1. Install Golang by following [the instruction](https://golang.org/doc/install){:external}.
-2. Clone the [sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external} into a local directory of your choice. Go modules are used for this repository, so you don't need to place the cloned repository in your `GOPATH`. Refer to the repository's README file for additional information about the GREP11 Go code examples.
+2. Clone the [sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external} into a local directory of your choice. Go modules are used for this repository, so you don't need to place the cloned repository in your `GOPATH`. Refer to the repository's README file for more information about the GREP11 Go code examples.
 3. Update the following code snippet in the `examples/server_test.go` file.
 
   ```Golang
@@ -465,7 +465,7 @@ Complete the following steps to create your first cryptographic key.
           <p>To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location.</p>
         </td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Description of the settings to create a key</caption>
+      <caption style="caption-side:bottom;">Table 1. Description of the settings to create a key.</caption>
     </table>
 
 3. When you finish filling out the key's details, click **Add key** to confirm.
@@ -506,7 +506,7 @@ Complete the following steps to add an existing key.
         <td>Key material</td>
         <td>The key material, such as a symmetric key, that you want to store in the {{site.data.keyword.hscrypto}} service. The key that you provide must be base64 encoded.</td>
       </tr>
-      <caption style="caption-side:bottom;">Table 2. Description of the settings to import your own key</caption>
+      <caption style="caption-side:bottom;">Table 2. Description of the settings to import your own key.</caption>
     </table>
 
 3. When you finish filling out the key's details, click **Import key** to confirm.
@@ -536,9 +536,9 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
 
   Adapt the following file template and name the file `grep11client.yaml`:
 
-  - Replace `<instance_id>` with the ID of your {{site.data.keyword.hscrypto}} instance
-  - Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance
-  - Replace `<your_api_key>` with the value of the API key that you created previously
+  - Replace `<instance_id>` with the ID of your {{site.data.keyword.hscrypto}} instance.
+  - Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance.
+  - Replace `<your_api_key>` with the value of the API key that you created previously.
 
   ```yaml
   iamcredentialtemplate: &defaultiamcredential
@@ -632,7 +632,7 @@ To perform cryptographic operations with the GREP11 API, you need to make sure y
 The following procedure uses Golang code as an example to test GREP11 functions.
 
 1. Install Golang by following [the instruction](https://golang.org/doc/install){:external}.
-2. Clone the [sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external} into a local directory of your choice. Go modules are used for this repository, so you don't need to place the cloned repository in your `GOPATH`. Refer to the repository's README file for additional information about the GREP11 Go code examples.
+2. Clone the [sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external} into a local directory of your choice. Go modules are used for this repository, so you don't need to place the cloned repository in your `GOPATH`. Refer to the repository's README file for more information about the GREP11 Go code examples.
 3. Update the following code snippet in the `examples/server_test.go` file.
 
   ```Golang

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: hsm, cloud hsm, tke cli, pkcs11, PKCS11 library, cryptographic operations, cryptographic functions, PKCS 11
 
@@ -23,22 +23,22 @@ subcollection: hs-crypto
 # Introducing PKCS #11
 {: #pkcs11-intro}
 
-PKCS #11 is a standard that specifies an application programming interface (API), called *Cryptoki*, for devices that hold cryptographic information and perform cryptographic functions. The Cryptoki API follows a simple object based approach, addressing the goals of technology independence (any kind of device) and resource sharing (multiple applications accessing multiple devices), presenting to applications a common, logical view of the device called a *cryptographic token*.
+PKCS #11 is a standard that specifies an application programming interface (API), called *Cryptoki*, for devices that hold cryptographic information and perform cryptographic functions. The Cryptoki API follows a simple object-based approach. The approach addresses the goals of technology independence and resource sharing, presenting to applications a common, logical view of the device called a *cryptographic token*.
 
 Cryptoki isolates an application from the details of the cryptographic device. The application does not have to change the interface to a different type of device or to run in a different environment. Thus, the application is portable. The functions of the Cryptoki API are organized into the following categories:
 
-* [General-purpose functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959740){: external} (4 functions)
-* [Slot and token management functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959741){: external} (9 functions)
-* [Session management functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959742){: external} (8 functions)
-* [Object management functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} (9 functions)
-* [Encryption functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959744){: external} (4 functions)
-* [Decryption functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959745){: external} (4 functions)
-* [Message digesting functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959746){: external} (5 functions)
+* [General-purpose functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959740){: external} (four functions)
+* [Slot and token management functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959741){: external} (nine functions)
+* [Session management functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959742){: external} (eight functions)
+* [Object management functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} (nine functions)
+* [Encryption functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959744){: external} (four functions)
+* [Decryption functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959745){: external} (four functions)
+* [Message digesting functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959746){: external} (five functions)
 * [Signing, verifying, and MAC functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959747){: external} (12 functions)
-* [Dual-purpose cryptographic functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959748){: external} (4 functions)
-* [Key management functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749){: external} (5 functions)
-* [Random number generation functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959750){: external} (2 functions)
-* [Parallel function management functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959751){: external} (2 functions)
+* [Dual-purpose cryptographic functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959748){: external} (four functions)
+* [Key management functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749){: external} (five functions)
+* [Random number generation functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959750){: external} (two functions)
+* [Parallel function management functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959751){: external} (two functions)
 
 Not all PKCS #11 functions are implemented by {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}. For the implemented PKCS #11 functions, see [Supported PKCS #11 functions](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs11_function_list).
 {: note}
@@ -51,9 +51,9 @@ To review the PKCS #11 standard documentation, see:
 ## PKCS #11 implementation components
 {: #pkcs11-components}
 
-To connect and use the PKCS #11 API, you need to understand the PKCS #11 API that is implemented by {{site.data.keyword.hscrypto}} and the relationship with the GREP11 API. For more information, see [Comparing the PKCS #11 API with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm#compare-grep11-pkcs11). With the support of the PKCS #11 API, you don't need to change your existing applications that use the PKCS #11 standard to make them run in the {{site.data.keyword.hscrypto}} cloud HSM environment. {{site.data.keyword.hscrypto}} also provides the isolated keystores to store cryptographic keys generated by the PKCS #11 functions. These keys are protected by the master key and the applications never see the key files locally.
+To connect and use the PKCS #11 API, you need to understand the PKCS #11 API that is implemented by {{site.data.keyword.hscrypto}} and the relationship with the GREP11 API. For more information, see [Comparing the PKCS #11 API with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm#compare-grep11-pkcs11). With the support of the PKCS #11 API, you don't need to change your existing applications that use the PKCS #11 standard. {{site.data.keyword.hscrypto}} also provides the isolated keystores to store cryptographic keys generated by the PKCS #11 functions. These keys are protected by the master key and the applications never see the key files locally.
 
-Before you can use the PKCS #11 API, you need to first install the PKCS #11 library, so that the PKCS #11 application can interact with the PKCS #11 library, which then calls cryptographic functions implemented by {{site.data.keyword.hscrypto}} through gRPC. The following diagram shows the key components implemented by the {{site.data.keyword.hscrypto}} PKCS #11 library and the interactions among different components.
+Before you can use the PKCS #11 API, first install the PKCS #11 library. In this way, the PKCS #11 application can interact with the PKCS #11 library, which then calls cryptographic functions that are implemented by {{site.data.keyword.hscrypto}} through gRPC. The following diagram shows the key components that are implemented by the {{site.data.keyword.hscrypto}} PKCS #11 library and the interactions among different components.
 
 ![Performing cryptographic operations with the PKCS #11 API](/images/pkcs-components.svg "Performing cryptographic operations with the PKCS #11 API"){: caption="Figure 1. Performing cryptographic operations with the PKCS #11 API" caption-side="bottom"}
 
@@ -62,7 +62,7 @@ The following sections explain each PKCS #11 component in detail.
 ### Application
 {: #pkcs11-application-intro}
 
-An application runs within a single address space. All threads of control are running in the application. An application becomes a Cryptoki application by calling the Cryptoki function `C_Initialize` from one of the threads. After this call is made, the application can call other Cryptoki functions. When the application has finished using Cryptoki, it calls the Cryptoki function `C_Finalize` and ceases to be a Cryptoki application.
+An application runs within a single address space. All threads of control are running in the application. An application becomes a Cryptoki application by calling the Cryptoki function `C_Initialize` from one of the threads. After this call is made, the application can call other Cryptoki functions. When the application finishes using Cryptoki, it calls the Cryptoki function `C_Finalize` and ceases to be a Cryptoki application.
 
 ### User
 {: #pkcs11-user-intro}
@@ -98,9 +98,9 @@ The data and certificate object classes are not supported in this implementation
 ### {{site.data.keyword.iamshort}}
 {: #pkcs11-iam-intro}
 
-IBM {{site.data.keyword.iamshort}} (IAM) provides user authentication and access control for the implementation of the PKCS #11 API. Through the use of API keys, the PKCS #11 library obtains bearer tokens that are used to perform Cryptoki API calls. 
+IBM {{site.data.keyword.iamshort}} (IAM) provides user authentication and access control for the implementation of the PKCS #11 API. By using API keys, the PKCS #11 library obtains bearer tokens that are used to perform Cryptoki API calls. 
 
-This implementation of PKCS #11 equates an API key with a user's PIN. For information about setting up the service ID and the corresponding API key, see [Create service IDs for the SO user, normal user, and anonymous user](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#step2-create-service-id-api-key).
+This implementation of PKCS #11 equates an API key with a user's PIN. For more information about setting up the service ID and the corresponding API key, see [Create service IDs for the SO user, normal user, and anonymous user](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#step2-create-service-id-api-key).
 {: note}
 
 ### Crypto service
@@ -111,7 +111,7 @@ As part of the PKCS #11 library initialization process, a gRPC connection is mad
 ### Keystore
 {: #pkcs11-keystore-intro}
 
-There are two major types of keystores:
+Two major types of keystores are available:
 
 * **In-memory keystores**: Stores key objects temporarily in memory. Key objects that are stored in the in-memory keystore are also known as *session objects*. Session objects in a specific session are destroyed when you call the `C_CloseSession` function for that session. Session objects in all sessions are destroyed after the `C_Finalize` function is called.
 * **Database-backed keystores**: Stores key objects in databases. Key objects that are stored in the database-backed keystore are also known as *token objects*.
@@ -129,7 +129,7 @@ Depending on the [user types](#pkcs11-user-intro) and key attributes settings, t
 
 * The CKA_PRIVATE attribute value decides whether a key that is generated by normal users is to be stored in a public or private keystore.
 
-  By default, if a user is logged in as a normal user, generated keys are stored in the private keystores, except for the case where CKA_PRIVATE is set to `FALSE`. If a user is logged in as an SO user or is not logged in (known as an anonymous user), then generated keys are always stored in the public keystores. If an SO user or an anonymous user specifies CKA_PRIVATE to `TRUE` in the key generation templates, an error will be returned from the server.
+  By default, if a user is logged in as a normal user, generated keys are stored in the private keystores, except for the case where CKA_PRIVATE is set to `FALSE`. If a user is logged in as an SO user or is not logged in (known as an anonymous user), then generated keys are always stored in the public keystores. If an SO user or an anonymous user specifies CKA_PRIVATE to `TRUE` in the key generation templates, an error is returned from the server.
 
   For an asymmetric key pair, you need to set the CKA_PRIVATE attribute separately for both the public and private keys, which means the key pairs can be stored in different keystores.
 

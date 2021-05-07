@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 
@@ -72,7 +72,7 @@ console.
 5. Select the key that you want to delete and click the overflow (⋯) icon to open a list of options for the key.
 6. From the options menu, click **Delete key**, enter the key name to confirm the key to be deleted, and click **Delete key**.
 
-After you delete a key, the key transfers to the _Destroyed_ state. Only imported keys in this state can be recovered. Metadata that is associated with the key, such as the key's deletion date, is kept in the {{site.data.keyword.hscrypto}} database.
+After you delete a key, the key moves to the _Destroyed_ state. Only imported keys in this state can be recovered. Metadata that is associated with the key, such as the key's deletion date, is kept in the {{site.data.keyword.hscrypto}} database.
 
 ## Deleting keys with the API
 {: #delete-keys-api}

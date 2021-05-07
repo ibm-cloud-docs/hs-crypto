@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -62,7 +62,7 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
         <td>Key alias</td>
         <td>
           <p>(Optional) One or more unique, human-readable aliases that you want to assign to your key for easy recognition.</p>
-          <p>Alias size can be between 2 - 90 characters. You can set up to five key alias for the key, with each separated by a comma.</p>
+          <p>Alias size can be 2 - 90 characters. You can set up to five key alias for the key, with each separated by a comma.</p>
           <p>Note: Each alias must be alphanumeric, case sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`.
           </p>
         </td>
@@ -70,7 +70,7 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
       <tr>
         <td>Key ring ID</td>
         <td>
-          <p>Select a key ring from the dropdown list that contains the existing key rings. If you don't assign a key ring, the key will be added to the default key ring.</p>
+          <p>Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key will be added to the default key ring.</p>
           <p>For more information about key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
           </p>
         </td>
@@ -232,7 +232,7 @@ Complete the following steps to import root keys using the {{site.data.keyword.k
     ```
     {: pre}
 
-    You can find additional parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-reference#kp-key-create).
+    You can find more parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-reference#kp-key-create).
 
 ## Base64 encoding your key material
 {: #encode-key-material-root-key}

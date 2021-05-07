@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-03-11"
+lastupdated: "2021-05-07"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -161,15 +161,15 @@ Complete the following steps to create an EP11 key:
     * If you are creating an asymmetric key, specify key attributes on the **Public key attributes** and **Private key attributes** pages subsequently:
 
         1. The required attributes are listed with the default values. To modify the attribute values, click the pencil icon.
-        2. To add additional attributes, click **Add public attribute** or **Add private attribute** depending on which page you are on. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list) and [supported curve names for Elliptic Curve keys](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#supported-pkcs11-ec-curve-name).
-        3. (Optional) You can delete additional attributes by clicking the trash can icon. The required attributes cannot be deleted.
+        2. To add more attributes, click **Add public attribute** or **Add private attribute** depending on which page you are on. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list) and [supported curve names for Elliptic Curve keys](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#supported-pkcs11-ec-curve-name).
+        3. (Optional) You can delete more attributes by clicking the trash can icon. The required attributes cannot be deleted.
         4. Click **Next** to continue.
 
     * If you are creating a symmetric key, such as an AES key, a DES key, and a Generic key, specify key attributes on the **Key attributes** page:
 
         1. The required attributes are listed with the default values. To modify the attribute values, click the pencil icon.
-        2. To add additional attributes, click **Add attributes**. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list).
-        3. (Optional) You can delete additional attributes by clicking the trash can icon. The required attributes cannot be deleted.
+        2. To add more attributes, click **Add attributes**. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list).
+        3. (Optional) You can delete more attributes by clicking the trash can icon. The required attributes cannot be deleted.
         4. Click **Next** to continue.
 
   3. On the **Confirmation** page, verify the key details and click **Create key**.

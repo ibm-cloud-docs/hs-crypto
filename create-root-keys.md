@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: root key, create root key, add key, root key api, api key, symmetric key, key material, key management, create key-wrapping key, create crk, create customer key, key-wrapping key
 
@@ -217,7 +217,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-122.pdf){: external}.
     {: tip}
 
-    If you set the `expirationDate` in your request, the key is transferred to the deactivated state within 1 hour past the key's expiration date.
+    If you set the `expirationDate` in your request, the key is moved to the deactivated state within 1 hour past the key's expiration date.
     {: note}
 
     A successful `POST /v2/keys` response returns the ID value for your key, along with other metadata. The ID is a unique identifier that is assigned to your key and is used for subsequent calls to the {{site.data.keyword.hscrypto}} key management API.

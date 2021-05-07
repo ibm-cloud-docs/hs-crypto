@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: enable kyok, hyper protect crypto service onboarding, internal, kyok, onboard service, crn token
 
@@ -73,7 +73,7 @@ help during this process.
 
 To grant access between your service (the "source" service) and
 {{site.data.keyword.hscrypto}} (the "target" service), we
-recommend using a CRN token. This process requires a single additional request
+recommend using a CRN token. This process requires a single extra request
 to IAM.
 
 Do not propagate the end user's token through the system because this not good

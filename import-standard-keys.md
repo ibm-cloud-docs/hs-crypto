@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: standard key, import key, key material, import key api, bring your own key, byok, encryption key, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key
 
@@ -56,7 +56,7 @@ You can add your existing encryption keys with the {{site.data.keyword.cloud_not
         <td>Key alias</td>
         <td>
           <p>(Optional) One or more unique, human-readable aliases that you want to assign to your key for easy recognition.</p>
-          <p>Alias size can be between 2 - 90 characters. You can set up to five key alias for the key, with each separated by a comma.</p>
+          <p>Alias size can be 2 - 90 characters. You can set up to five key aliases for the key, with each separated by a comma.</p>
           <p>Note: Each alias must be alphanumeric, case sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`.
           </p>
         </td>
@@ -64,7 +64,7 @@ You can add your existing encryption keys with the {{site.data.keyword.cloud_not
       <tr>
         <td>Key ring ID</td>
         <td>
-          <p>Select a key ring from the dropdown list that contains the existing key rings. If you don't assign a key ring, the key will be added to the default key ring.</p>
+          <p>Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key is added to the default key ring.</p>
           <p>For more information about key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
           </p>
         </td>
@@ -76,7 +76,7 @@ You can add your existing encryption keys with the {{site.data.keyword.cloud_not
           <p>Ensure that the key material meets the following requirements:</p>
           <p>
             <ul>
-              <li>The key can be up to 7,500 bytes in length.</li>
+              <li>The key can be up to 7,500 bytes.</li>
               <li>The key must be base64-encoded.</li>
             </ul>
           </p>
@@ -191,7 +191,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
           <p>Ensure that the key material meets the following requirements:</p>
           <p>
             <ul>
-              <li>The key can be up to 7,500 bytes in length.</li>
+              <li>The key can be up to 7,500 bytes.</li>
               <li>The key must be base64-encoded.</li>
             </ul>
           </p>
@@ -227,7 +227,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ## Importing stardard keys with the CLI
 {: #import-standard-key-cli}
 
-Complete the following steps to import standard keys using the {{site.data.keyword.keymanagementserviceshort}} CLI, which is integrated in {{site.data.keyword.hscrypto}}:
+Complete the following steps to import standard keys that uses the {{site.data.keyword.keymanagementserviceshort}} CLI, which is integrated in {{site.data.keyword.hscrypto}}:
 
 1. [Set up the {{site.data.keyword.keymanagementserviceshort}} CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli).
 
@@ -238,12 +238,12 @@ Complete the following steps to import standard keys using the {{site.data.keywo
     ```
     {: pre}
 
-    You can find additional parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-reference#kp-key-create).
+    You can find extra parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-reference#kp-key-create).
 
 ## Base64 encoding your key material
 {: #encode-key-material-standard-key}
 
-When importing an existing standard key, it is required to include the encrypted key material that you want to store and manage in the service.
+When you import an existing standard key, it is required to include the encrypted key material that you want to store and manage in the service.
 
 ### Using OpenSSL to encode existing key material
 {: #open-ssl-encoding-standard-key}
@@ -279,7 +279,7 @@ When importing an existing standard key, it is required to include the encrypted
         </td>
         <td>
           <p>
-            The name of the file where your base64-encoded key material will be created once the command has run.
+            The name of the file where your base64-encoded key material is created when the command is run.
           </p>
         </td>
       </tr>
@@ -315,7 +315,7 @@ When importing an existing standard key, it is required to include the encrypted
         </td>
         <td>
           <p>
-            The length of the key, measured in bytes. Acceptable byte length can be up to 7,500 bytes.
+            The length of the key, which is measured in bytes. Acceptable byte length can be up to 7,500 bytes.
           </p>
         </td>
       </tr>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: create key alias, key alias, delete key alias, add key alias, retrieve encryption key by alias, create alias API examples
 
@@ -27,29 +27,33 @@ subcollection: hs-crypto
 You can use {{site.data.keyword.hscrypto}} to manage key aliases with the {{site.data.keyword.hscrypto}} API.
 {: shortdesc}
 
-Key aliases are unique human-readable names that can be used to identify a key. Aliases enable your service to refer to a key by recognizable custom names, rather than the auto-generated identifier provided by {{site.data.keyword.hscrypto}}. For example, if you
-create a key that has the the ID `02fd6835-6001-4482-a892-13bd2085f75d` and it is aliased as `US-South-Test-Key`, you can use `US-South-Test-Key` to refer to your key when you make calls to the {{site.data.keyword.hscrypto}} API to [retrieve a key](/docs/hs-crypto?topic=hs-crypto-retrieve-key) or the [metadata](/docs/hs-crypto?topic=hs-crypto-retrieve-key-metadata).
+Key aliases are unique human-readable names that can be used to identify a key. Aliases enable your service to refer to a key by recognizable custom names, rather than the auto-generated identifier provided by {{site.data.keyword.hscrypto}}. Assume that you
+create a key that has the ID `02fd6835-6001-4482-a892-13bd2085f75d` and it is aliased as `US-South-Test-Key`. You can use `US-South-Test-Key` to refer to your key when you make calls to the {{site.data.keyword.hscrypto}} API to [retrieve a key](/docs/hs-crypto?topic=hs-crypto-retrieve-key) or the [metadata](/docs/hs-crypto?topic=hs-crypto-retrieve-key-metadata).
 
 Before you manage key alias for keys in {{site.data.keyword.hscrypto}}, keep in mind the following considerations:
 
 - An alias is independent from a key.
 
-  An alias is its own resource and any actions taken on it do not affect the associated key. For example, deleting an alias will not delete the associated key.
+  An alias is its own resource and any actions that are taken on it do not affect the associated key. For example, deleting an alias does not delete the associated key.
 
-- An alias can only be associated with one key at a time.
+- An alias can be associated with only one key at a time.
 
-  An alias can only be associated with one key that is located in the same instance and region. If you would like to change the key that the alias is associated with, you will need to delete the alias, wait up to ten minutes, then recreate the alias and map it to the key.
+  An alias can be associated with only one key that is located in the same instance and region. If you want to change the key that the alias is associated with, you need to perform the following steps:
+
+  1. Delete the alias.
+  2. Wait up to 10 minutes.
+  3. Re-create the alias and map it to the key.
 
 - You can create an alias with the same name in a different instance or region.
 
-  Each alias will be associated with a different key in each instance or region. This enables your service's application code to be reusable in different instances or regions. For example, if you have an alias named `Application Key` in both the `us-south` and `us-east` regions, with each linked to a different key.
+  Each alias is associated with a different key in each instance or region, with which, your service's application code can be reusable in different instances or regions. For example, if you name an alias `Application Key` in both the `us-south` and `us-east` regions, with each linked to a different key.
 
 ## Creating key aliases
 {: #create-key-alias}
 
 To create a key alias for a key, you can use either the console or the key management API.
 
-Each key can have up to five aliases. There is a limit of 1,000 aliases per instance.
+Each key can have up to five aliases. It is limited to 1,000 aliases per instance.
 {: note}
 
 ### Creating key alias with the console
@@ -64,7 +68,7 @@ Create a key alias with the console by completing the following steps:
 5. Click the overflow icon (...) to open the list of options for the key and click **Edit key aliases**.
 6. Enter key aliases separated by a comma. You can add up to five aliases for a key.
 
-  Each alias must be alphanumeric, case sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be between 2 - 90 characters (inclusive).
+  Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive).
 
 7. Click **Save**.
 
@@ -137,7 +141,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
             <strong>Required.</strong> A unique, human-readable name for easy identification of your key.
           </p>
           <p>
-          Each alias must be alphanumeric, case sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be between 2 - 90 characters (inclusive).
+          Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive).
           </p>
           <p>
             <strong>Note</strong> You cannot have duplicate alias names in your {{site.data.keyword.hscrypto}} instance.
@@ -185,7 +189,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
 
       <caption style="caption-side:bottom;">
         Table 1. Describes the variables that are needed to create a key alias
-        with the {{site.data.keyword.hscrypto}} API
+        with the {{site.data.keyword.hscrypto}} API.
       </caption>
     </table>
 
@@ -348,13 +352,13 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
 
       <caption style="caption-side:bottom;">
         Table 2. Describes the variables that are needed to delete a key alias
-        with the {{site.data.keyword.hscrypto}} API
+        with the {{site.data.keyword.hscrypto}} API.
       </caption>
     </table>
 
     A successful `DELETE api/v2/keys/<key_ID>/aliases/<key_alias>` request returns an HTTP `204 No Content` response, which indicates that the alias associated with your key was deleted.
 
-    It takes up to 10 minutes for an alias to be completely deleted from the service.
+    It takes up to 10 minutes for an alias to be deleted from the service.
     {: important}
 
 ## APIs that use key alias
@@ -364,8 +368,8 @@ The following table lists the APIs where you can use key alias.
 
 | API | Key Alias Impact |
 | --- | ---------------- |
-| [Create Root Keys](/docs/hs-crypto?topic=hs-crypto-create-root-keys) | You can create up to 5 aliases while creating a root key. |
-| [Create Standard Keys](/docs/hs-crypto?topic=hs-crypto-create-standard-keys) | You can create up to 5 aliases while creating a standard key. |
-| [Retrieve a key](/docs/hs-crypto?topic=hs-crypto-retrieve-key) | You can retrieve a key by ID or alias. |
+| [Create Root Keys.](/docs/hs-crypto?topic=hs-crypto-create-root-keys) | You can create up to five aliases while you create a root key. |
+| [Create Standard Keys.](/docs/hs-crypto?topic=hs-crypto-create-standard-keys) | You can create up to five aliases while you create a standard key. |
+| [Retrieve a key.](/docs/hs-crypto?topic=hs-crypto-retrieve-key) | You can retrieve a key by ID or alias. |
 | [View key metadata](/docs/hs-crypto?topic=hs-crypto-view-key-details) | You can retrieve the metadata of a key by ID or alias. |
 {: caption="Table 3. Describes the variables that are APIs that use key alias." caption-side="top"}

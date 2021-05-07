@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: hyper protect crypto services integration, kms provider, set up kms provider
 
@@ -41,7 +41,7 @@ Teams can integrate to the following list of KMS providers:
 
 To integrate with a KMS provider, adopting teams must modify how their service discovers KMS instances for a given user so that the corresponding KMS endpoints are found dynamically, without needing to hardcode to the {{site.data.keyword.hscrypto}} public API.
 
-In turn, KMS providers need to register their services appropriately and provide additional information to the resource controller to make themselves and their instances easily discoverable by the adopting teams.
+In turn, KMS providers need to register their services appropriately and provide more information to the resource controller to make themselves and their instances easily discoverable by the adopting teams.
 
 ## Setting up your service as a KMS provider
 {: #set-up-kms-provider}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -285,7 +285,7 @@ To encrypt the nonce value:
     The binary contains a script that you can use to run AES-CBC encryption on the nonce value by using the key that you generated in [step 2](#tutorial-import-retrieve-token). To learn more about the script, [check out the source file on GitHub](https://github.com/IBM-Cloud/kms-samples/blob/master/secure-import/encrypt.go){:external}.
     {: note}
 
-  2. If you are using Linux, mark the file as executable by running the following  `chmod` command. You can skip this step if you are using Windows.
+  2. If you are using Linux&reg;, mark the file as executable by running the following  `chmod` command. You can skip this step if you are using Windows.
 
     ```sh
     chmod +x ./kms-encrypt-nonce

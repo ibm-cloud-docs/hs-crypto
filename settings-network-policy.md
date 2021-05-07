@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-01-12"
+lastupdated: "2021-05-07"
 
 keywords: instance settings, service settings, network access policies
 
@@ -30,7 +30,7 @@ After you set up your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}
 Before you update the network access policy, you need to initialize the service instance first. See [Initializing service instances with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) for instructions.
 {: important}
 
-For more information on how the network access differs, see [Understanding the network access policy](/docs/hs-crypto?topic=hs-crypto-secure-connection#understand-network-access-policies).
+For more information about how the network access differs, see [Understanding the network access policy](/docs/hs-crypto?topic=hs-crypto-secure-connection#understand-network-access-policies).
 
 ## Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the console
 {: #update-network-access-policy-ui}

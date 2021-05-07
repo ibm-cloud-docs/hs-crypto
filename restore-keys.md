@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: restore key, restore a deleted key, recover a deleted key, re-import a key
 
@@ -220,7 +220,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/restore
 
     Where the `<key_id>` is the ID of the key, the `<instance_ID>` is the name of your instance, and your `<IAM_token>` is your IAM token.
 
-    Review the `state` field in the response body to verify that the key transferred to the _Active_ key state. The following JSON output shows the metadata details for an _Active_ key.
+    Review the `state` field in the response body to verify that the key moved to the _Active_ key state. The following JSON output shows the metadata details for an _Active_ key.
 
     The integer mapping for the _Active_ key state is 1. Key states are based on NIST SP 800-57.
     {: note}

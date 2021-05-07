@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-07"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -92,7 +92,7 @@ When you use smart cards, consider the following recommendations:
 
   - Create four or six EP11 smart cards to hold master key parts. Generate an EP11 master key part on two or three of the smart cards, depending on whether you want to use two or three key parts when you load your master key. Copy each key part value to a backup EP11 smart card.
 
-- For greater security, generate administrator signature keys on additional EP11 smart cards and set the signature thresholds in your crypto units to a value greater than one. You can install up to eight administrators in your crypto units and specify that up to eight signatures are required for some administrative commands.
+- For greater security, generate administrator signature keys on more EP11 smart cards and set the signature thresholds in your crypto units to a value greater than one. You can install up to eight administrators in your crypto units and specify that up to eight signatures are required for some administrative commands.
 
 ### Understanding smart card readers
 {: #understand-smart-card-reader}
@@ -124,11 +124,11 @@ The following sections explain each component in detail.
 
 The TKE CLI plug-in is an addition to the {{site.data.keyword.cloud_notm}} command-line interface (CLI). With the TKE CLI plug-in, you can send commands to the crypto units in your service instance to load the master key. The TKE CLI plug-in supports two approaches for loading the master key.
 
-If your service instance has recovery crypto units, you can load the master key by running the `ibmcloud tke auto-init` command. This command guides you through steps to add administrators and set the signature thresholds, and then generates a random master key value in one of the recovery crypto units in your service instance and copies the value to the other crypto units. For more information on this approach see [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit).
+If your service instance has recovery crypto units, you can load the master key by running the `ibmcloud tke auto-init` command. This command guides you through steps to add administrators and set the signature thresholds, and then generates a random master key value in one of the recovery crypto units in your service instance and copies the value to the other crypto units. For more information about this approach see [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit).
 
 You can also use the TKE CLI plug-in to load the master key using key parts stored in key part files. This approach can be taken regardless of whether your service instance has any recovery crypto units. Using this approach, you run a series of commands to generate signature keys and master key parts, add administrators, set the signature thresholds, and load the master key registers. For more information see [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
-You need to be assigned the appropriate role to perform TKE CLI plug-in operations. For more information on the available service access roles, see [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
+You need to be assigned the appropriate role to perform TKE CLI plug-in operations. For more information about the available service access roles, see [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
 
 For a complete list of commands available in the TKE CLI plug-in, see [{{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in reference](/docs/hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin).
 
@@ -140,7 +140,7 @@ Operational crypto units are used to manage encryption keys and perform cryptogr
 ### Understanding recovery crypto units
 {: #understand-recovery-crypto-unit}
 
-Two recovery units are automatically assigned to your service instance without additional costs. One recovery unit is allocated in the same region as the operational crypto units, and the other is allocated in a backup region. When you run the `ibmcloud tke auto-init` or `ibmcloud tke auto-mk-rotate` command, a random master key value is generated in one of the recovery crypto units and then securely exported to the other crypto units for the service instance.
+Two recovery units are automatically assigned to your service instance without extra costs. One recovery unit is allocated in the same region as the operational crypto units, and the other is allocated in a backup region. When you run the `ibmcloud tke auto-init` or `ibmcloud tke auto-mk-rotate` command, a random master key value is generated in one of the recovery crypto units and then securely exported to the other crypto units for the service instance.
 
 The sole purpose of the recovery crypto units is to save a backup copy of the master key value. The recovery crypto units are not used when running operational workloads. If the current master key value is lost or destroyed, you can recover the master key value from either of the recovery crypto units by using the `ibmcloud tke auto-mk-recover` command. This command copies the value in the current master key register of a recovery crypto unit to the current master key register of other crypto units.
 

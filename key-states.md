@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle
 
@@ -41,17 +41,17 @@ Cryptographic keys, in their lifetime, transition through several states that ar
 |-------------|-----------------|-------------|
 | Pre-active  |       0        | Keys are initially created in the _Pre-activation_ state. A pre-active key cannot be used to cryptographically protect data. |
 | Active      |       1        | Keys move immediately into the _Active_ state on the activation date. This transition marks the beginning of a key's cryptoperiod. Keys with no activation date become active immediately and remain active until they expire or are destroyed. |
-| Suspended   |       2        | A key moves into the _Suspended_ state when it is [disabled for encrypt and decrypt operations](/docs/hs-crypto?topic=hs-crypto-disable-keys). In this state, the key is unable to cryptographically protect data and can only be moved to the _Active_ or _Destroyed_ states. |
-| Deactivated |       3        | A key moves into the _Deactivated_ state on the expiration date, if one is assigned. In this state, the key is unable to cryptographically protect data and can only be moved to the _Destroyed_ state. |
+| Suspended   |       2        | A key moves into the _Suspended_ state when it is [disabled for encrypt and decrypt operations](/docs/hs-crypto?topic=hs-crypto-disable-keys). In this state, the key is unable to cryptographically protect data and can be moved only to the _Active_ or _Destroyed_ states. |
+| Deactivated |       3        | A key moves into the _Deactivated_ state on the expiration date, if one is assigned. In this state, the key is unable to cryptographically protect data and can be moved only to the _Destroyed_ state. |
 | Destroyed   |       5        | Deleted keys are in the _Destroyed_ state. Keys in this state are not recoverable. Metadata that is associated with a key, such as the key's transition history and name, is kept in the {{site.data.keyword.hscrypto}} database. |
 {: caption="Table 1. Describes key states and transitions." caption-side="bottom"}
 
 ## Key states and service actions
 {: #key-states-service-actions}
 
-Key states affect whether an action that is performed on a key succeeds or fails. For example, if a key is in the _Active_ state, you can't restore the key, because the key wasn't previously deleted.
+Key states affect whether an action that is performed on a key succeeds or fails. For example, if a key is in the _Active_ state, you can't restore the key because the key wasn't previously deleted.
 
-The following table shows how {{site.data.keyword.hscrypto}} handles service actions based on the state of a key. The column headers represent the key states, and the row headers represent the actions that you can perform on a key. The check mark icon (![Check mark icon](../icons/checkmark-icon.svg)) indicates that the action on a key is expected to succeed based on the key state.
+The following table shows how {{site.data.keyword.hscrypto}} handles service actions based on the state of a key. The column headers represent the key states, and the row headers represent the actions that you can perform on a key. The checkmark icon (![checkmark icon](../icons/checkmark-icon.svg)) indicates that the action on a key is expected to succeed based on the key state.
 
 <table>
   <tr>
@@ -63,83 +63,83 @@ The following table shows how {{site.data.keyword.hscrypto}} handles service act
   </tr>
 
   <tr>
-    <td>Get key</td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
+    <td>Get key.</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
   </tr>
 
   <tr>
-    <td>List keys</td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
-    <td></td>
-  </tr>
-
-  <tr>
-    <td>Rotate key</td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
-    <td></td>
-    <td></td>
+    <td>List keys.</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
     <td></td>
   </tr>
 
   <tr>
-    <td>Wrap key</td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
+    <td>Rotate key.</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
 
   <tr>
-    <td>Unwrap key</td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
-    <td></td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
-    <td></td>
-  </tr>
-
-  <tr>
-    <td>Rewrap key</td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
-    <td></td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
-    <td></td>
-  </tr>
-
-  <tr>
-    <td>Disable key</td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
+    <td>Wrap key.</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
 
   <tr>
-    <td>Enable key</td>
+    <td>Unwrap key.</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
     <td></td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Rewrap key.</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
+    <td></td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Disable key.</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
+    <td></td>
     <td></td>
     <td></td>
   </tr>
 
   <tr>
-    <td>Delete key</td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
+    <td>Enable key.</td>
+    <td></td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
+    <td></td>
     <td></td>
   </tr>
 
   <tr>
-    <td>Restore key</td>
+    <td>Delete key.</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Restore key.</td>
     <td></td>
     <td></td>
     <td></td>
-    <td>![Check mark icon](../icons/checkmark-icon.svg)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg)</td>
   </tr>
 </table>
 {: caption="Table 2. Describes how key states affect service actions." caption-side="bottom"}

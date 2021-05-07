@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: sync resources, sync registrations, key registration, notify key state to resources
 
@@ -26,11 +26,11 @@ subcollection: hs-crypto
 You can initiate a manual data synchronization request between root keys and the associated cloud resources, such as {{site.data.keyword.cos_full_notm}} buckets or Cloud Databases deployments, by using the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
-When you perform a key lifecycle action (for example `rotation`, `restore`, `disable`, `enable`, `deletion`) on a root key that is associated with other IBM cloud services, those IBM cloud services are notified of the key lifecycle event and are encouraged to respond accordingly. However, in the case where the cloud services do not respond to the key lifecycle notification, you can use the sync API to initiate a renotification of the key lifecycle event to those associated cloud services.
+When you perform a key lifecycle action on a root key that is associated with other IBM cloud services, those IBM cloud services are notified of the key lifecycle event and are encouraged to respond. However, if the cloud services do not respond to the key lifecycle notification, use the sync API to initiate a renotification of the key lifecycle event to those associated cloud services.
 
-For example, you might delete a root key that has an association with {{site.data.keyword.cos_full_notm}} (COS). After waiting four hours for changes to take effect, you notice that you are still able to access the key's resources despite expecting to be blocked from accessing those resources. In this case, you need to call the sync API to renotify COS of the deleted key lifecycle event, so that COS can block access to the resources.
+For example, you might delete a root key that has an association with {{site.data.keyword.cos_full_notm}}. After you wait for 4 hours for changes to take effect, you notice that you are still able to access the key's resources despite expecting to be blocked from accessing those resources. In this case, you need to call the sync API to renotify {{site.data.keyword.cos_full_notm}} of the deleted key lifecycle event, so that {{site.data.keyword.cos_full_notm}} can block access to the resources.
 
-The sync API only initiates a request for synchronization. The IBM services associated with the key are responsible for managing all related associated resources and ensuring that the key state and key versions are up to date.
+The sync API initiates only a request for synchronization. The IBM services that are associated with the key are responsible for managing all related associated resources and ensuring that the key state and key versions are up to date.
 {: important}
 
 ## Syncing associated resources with the console
@@ -138,7 +138,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
       </caption>
     </table>
 
-    A successful sync API request returns an HTTP `204 No Content` response, which indicates that the IBM cloud service that is associated with the specified key has been notified.
+    A successful sync API request returns an HTTP `204 No Content` response, which indicates that the IBM cloud service that is associated with the specified key is notified.
 
-The sync API can only be initialized if it has been longer than an hour since the last notification to the associated cloud services of the key. If you send a request to this API and the key has been synced or a key lifecycle action has been taken within the past hour, the API returns a `409 Conflict` response.
+The sync API can be initialized only when it is longer than an hour since the last notification to the associated cloud services of the key. If you send a request to this API and the key is synced or a key lifecycle action is taken within the past hour, the API returns a `409 Conflict` response.
 {: important}

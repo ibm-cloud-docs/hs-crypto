@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: encrypt Oracle Transparent Database, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -31,12 +31,12 @@ completion-time: 2h
 {: toc-content-type="tutorial"}
 {: toc-completion-time="2h"}
 
-Transparent Data Encryption (TDE) is a well-established technology to encrypt sensitive data in databases. TDE is supported by various popular database systems, both in the cloud and on premises, like Oracle&reg; database. With TDE, a database system encrypts data on database storage media, such as tablespaces and files, and on backup media. The database system automatically and transparently encrypts and decrypts data when it is used by authorized users and applications. Database users do not need to be aware of TDE and database applications do not need to be adapted specifically for TDE.
+Transparent Data Encryption (TDE) is a well-established technology to encrypt sensitive data in databases. TDE is supported by various popular database systems, both in the cloud and on premises, like Oracle&reg; database. With TDE, a database system encrypts data on database storage media, such as table spaces and files, and on backup media. The database system automatically and transparently encrypts and decrypts data when it is used by authorized users and applications. Database users do not need to be aware of TDE and database applications do not need to be adapted specifically for TDE.
 {: shortdesc}
 
-Typically, TDE uses a two-tiered key hierarchy, composed of a TDE master encryption key and a TDE data encryption key. The TDE data encryption key is used to encrypt and decrypt data, while the TDE master encryption key is used to encrypt and decrypt the TDE data encryption key.
+Typically, TDE uses a two-tiered key hierarchy, which is composed of a TDE master encryption key and a TDE data encryption key. The TDE data encryption key is used to encrypt and decrypt data, while the TDE master encryption key is used to encrypt and decrypt the TDE data encryption key.
 
-One important question when planning for TDE therefore is: Where do you keep the TDE master encryption key, and how do you secure it?
+Therefore, one important question when you plan for TDE is: Where do you keep the TDE master encryption key, and how do you secure it?
 
 ## Objectives
 {: #tutorial-tde-objectives}
@@ -47,7 +47,7 @@ This tutorial shows how you can keep complete and exclusive control of your TDE 
 
 With this tutorial, you are going to implement the setup that is depicted in the following illustration.
 
-![Transparent Database Encryption using the standard PKCS #11 API](../images/pkcs_database.svg "Transparent Database Encryption using the standard PKCS #11 API"){: caption="Figure 1. Transparent Database Encryption using the standard PKCS #11 API" caption-side="bottom"}
+![Transparent Database Encryption by using the standard PKCS #11 API](../images/pkcs_database.svg "Transparent Database Encryption by using the standard PKCS #11 API"){: caption="Figure 1. Transparent Database Encryption by using the standard PKCS #11 API" caption-side="bottom"}
 
 In this setup, the Oracle Database is to call operations to manage the TDE master encryption keys on the {{site.data.keyword.hscrypto}} PKCS #11 library. The {{site.data.keyword.hscrypto}} PKCS #11 library interacts with your {{site.data.keyword.hscrypto}} instance, which provides the best of class technology for storing and managing your TDE master encryption keys.
 
@@ -56,17 +56,17 @@ In this setup, the Oracle Database is to call operations to manage the TDE maste
 
 To complete this tutorial, you need to meet the following prerequisites:
 
-- [Sign up an {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmwaresolutions-signing_required_accounts#signing_required_accounts-cloud)
-- [Provision a {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-provision)
+- [Sign up an {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmwaresolutions-signing_required_accounts#signing_required_accounts-cloud).
+- [Provision a {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-provision).
 
 ## Task flow
 {: #tutorial-tde-steps}
 
-To complete this solution, we'll walk through the following steps:
+To complete this solution, let's walk through the following steps:
 
-1. [Initialize your {{site.data.keyword.hscrypto}} instance](#tutorial-tde-initialize)
-1. [Set up the {{site.data.keyword.hscrypto}} PKCS #11 library in your Oracle Database environment](#tutorial-tde-pkcs11-setup)
-1. [Set up Oracle Database TDE and encrypt your data](#tutorial-dte-encrypt)
+1. [Initialize your {{site.data.keyword.hscrypto}} instance](#tutorial-tde-initialize).
+1. [Set up the {{site.data.keyword.hscrypto}} PKCS #11 library in your Oracle Database environment](#tutorial-tde-pkcs11-setup).
+1. [Set up Oracle Database TDE and encrypt your data](#tutorial-dte-encrypt).
 
 Let's start with the {{site.data.keyword.hscrypto}} instance initialization process.
 
@@ -95,7 +95,7 @@ ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscry
 {: #tutorial-tde-db-setup}
 
 You need an Oracle Database Enterprise Edition installation with Oracle Advanced Security.
-This tutorial uses a single instance Oracle Database 19.3 Enterprise Edition Docker container. See [Oracle Database on Docker](https://github.com/oracle/docker-images/tree/master/OracleDatabase){: external} for further information about Oracle Database containers and instructions on building a respective container.
+This tutorial uses a single instance Oracle Database 19.3 Enterprise Edition Docker container. For more information about Oracle Database containers and instructions on building a respective container, see [Oracle Database on Docker](https://github.com/oracle/docker-images/tree/master/OracleDatabase){: external}.
 
 1. Start the Oracle Database container:
   ```
@@ -111,7 +111,7 @@ This tutorial uses a single instance Oracle Database 19.3 Enterprise Edition Doc
   ```
   {: codeblock}
 
-  This shell will be used to run the commands as `root` for the subsequent steps.
+  This shell can be used to run the commands as `root` for the subsequent steps.
 
 ### 2. Configure the {{site.data.keyword.hscrypto}} PKCS #11 library
 {: #tutorial-tde-library-setup}
@@ -120,9 +120,9 @@ Now create a configuration file for the {{site.data.keyword.hscrypto}} PKCS #11 
 The configuration file is named `grep11client.yaml`.
 
 Adapt the following file template and name the file `grep11client.yaml`:
-- Replace `<instance_id>` with the ID of your {{site.data.keyword.hscrypto}} instance
-- Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance
-- Replace `<your_api_key>` with the value of the API key that you created previously
+- Replace `<instance_id>` with the ID of your {{site.data.keyword.hscrypto}} instance.
+- Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance.
+- Replace `<your_api_key>` with the value of the API key that you created.
 
 ```yaml
 iamcredentialtemplate: &defaultiamcredential
@@ -208,7 +208,7 @@ logging:
 
 1. [Download the latest PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external}.
 
-2. Copy the previously created configuration file `grep11client.yaml` and the PKCS #11 library `pkcs11-grep11-<platform>.so.<version>` into the home folder in your Oracle Database container.
+2. Copy the created configuration file `grep11client.yaml` and the PKCS #11 library `pkcs11-grep11-<platform>.so.<version>` into the home folder in your Oracle Database container.
 
 3. Run the following commands as `root` to install the {{site.data.keyword.hscrypto}} PKCS #11 library in your Oracle Database setup.
 
@@ -267,7 +267,7 @@ The directory `/opt/oracle/extapi/64/hsm` and the subdirectories can contain onl
   ```
   {: codeblock}
 
-  This shell will be used to run the commands as user `oracle` for the subsequent steps.
+  This shell can be used to run the commands as user `oracle` for the subsequent steps.
 
 2. To initialize a token, run the following commands and replace `<your_api_key>` by the API key that you created.
 
@@ -297,7 +297,7 @@ Now let's take on the role of the database administrator.
   ```
   {: codeblock}
 
-  To do so you can for example run the following command:
+  To do so, you can for example run the following command:
   ```
   echo "encryption_wallet_location=(source=(method=hsm))" >> $ORACLE_HOME/network/admin/sqlnet.ora
   ```
@@ -358,7 +358,7 @@ Now let's take on the role of the database administrator.
 ## Next steps
 {: #tutorial-tde-summary}
 
-Your sensitive data is now stored safely in encrypted tablespaces and encrypted columns. And the TDE master encryption key is kept in {{site.data.keyword.hscrypto}} in a highly secure and tamper-proof manner.
+Your sensitive data is now stored safely in encrypted tables paces and encrypted columns. And the TDE master encryption key is kept in {{site.data.keyword.hscrypto}} in a highly secure and tamper-proof manner.
 
 In this tutorial, you learned how to set up Oracle Database TDE with {{site.data.keyword.hscrypto}}.
 

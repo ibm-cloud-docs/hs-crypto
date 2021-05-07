@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: pkcs11 access, pkcs 11 authentication, set up PKCS 11 API, best practice for setting up pkcs11 users
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Setting up PKCS #11 API user types
 {: #best-practice-pkcs11-access}
 
-To align with industry-standard security requirements and [Permitted object accesses by sessions](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759993) that is defined in the PKCS #11 Usage Guide, it is recommended to set up the PKCS #11 user types in your {{site.data.keyword.hscrypto}} instance when you use the PKCS #11 API.
+To align with industry-standard security requirements and [Permitted object accesses by sessions](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759993), it is recommended to set up the PKCS #11 user types in your {{site.data.keyword.hscrypto}} instance when you use the PKCS #11 API.
 {: shortdesc}
 
 ##  PKCS #11 user types
@@ -39,12 +39,12 @@ In the {{site.data.keyword.hscrypto}} PKCS #11 library configuration file `grep1
   An SO user can be a person who owns the SO API key in an enterprise. This person is able to initialize the PKCS #11 token and delete all key objects in keystores. This person can be the one who sets up the {{site.data.keyword.hscrypto}} instance and the {{site.data.keyword.iamshort}} (IAM) roles. The PKCS #11 application can perform administrative Cryptoki function calls, such as `C_InitToken`, after it logs in as an SO user type.
 
 * **Normal user**: 
-  Normal users are the ones who have access to the normal user API key. The normal user API key needs to be distributed only to a limited group of people, who need access to the keystore where more sensitive keys are stored, such as keys for signing and encrypting contracts. In this case, the PKCS #11 application calls the `C_Login` function using the normal user API key as the PIN and becomes a normal user to access the keystore.
+  Normal users are the ones who have access to the normal user API key. The normal user API key needs to be distributed only to a limited group of people, who need access to the keystore where more sensitive keys are stored, such as keys for signing and encrypting contracts. In this case, the PKCS #11 application calls the `C_Login` function by using the normal user API key as the PIN and becomes a normal user to access the keystore.
 
 * **Anonymous user**: 
   The anonymous user API key can be distributed to anyone in the enterprise so that anonymous users can access the keystore to perform daily work, such as signing a document.  The API key is configured in the PKCS #11 library configuration file `grep11client.yaml` and the anonymous user does not need to call the `C_Login` function.
 
-A PKCS #11 application works as only one of the three user types at any time, no matter how many sessions are opened. Each user type needs an API key for authentication. To create the API keys, you need to first create two custom IAM roles, and then create service IDs for the three user types, and then map the custom IAM roles to the service IDs.
+A PKCS #11 application works as only one of the three user types at any time, no matter how many sessions are opened. Each user type needs an API key for authentication. To create the API keys, you need to first create two custom IAM roles. And then, create service IDs for the three user types, and map the custom IAM roles to the service IDs.
 
 To perform the following steps, you need to have the `Administrator` [platform access](/docs/account?topic=account-userroles#platformroles) in your {{site.data.keyword.cloud}} account.
 {: tip}
@@ -62,7 +62,7 @@ This role is used to generate and manage keys in the Enterprise PKCS #11 (EP11) 
 1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)**, and select **Roles**.
 2. Click **Create**.
 3. Enter a name for your role; for example, `key operator`. This name must be unique within the account. Users see this role name in the console when they assign access to the service.
-4. Enter an ID for the role. This ID is used in the CRN, which is used when assigning access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `KeyOperator`
+4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `KeyOperator`
 5. Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the console when a user assigns access to the service.
 6. From the list of services, select **Hyper Protect Crypto Services**.
 7. Select **Add** for the following actions:
@@ -99,7 +99,7 @@ This role is used to create and delete EP11 keystores but does not have permissi
 1. In the {{site.data.keyword.cloud}} console, go to **Manage** > **Access (IAM)**, and select **Roles**.
 2. Click **Create**.
 3. Enter a name for your role; for example, `keystore operator`. This name must be unique within the account. Users see this role name in the console when they assign access to the service.
-4. Enter an ID for the role. This ID is used in the CRN, which is used when assigning access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `KeystoreOperator`
+4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `KeystoreOperator`
 5. Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the console when a user assigns access to the service.
 6. From the list of services, select **Hyper Protect Crypto Services**.
 7. Select **Add** for the following actions:
@@ -183,12 +183,12 @@ You can grant access to service IDs within a {{site.data.keyword.hscrypto}} serv
 
 ### 1. Assign the custom roles to the SO user service ID
 
-To assign the custom roles that are defined in [Step 1](#step1-create-custom-roles) to the SO user service ID that are created in the previous step, follow these steps:
+To assign the custom roles that are defined in [Step 1](#step1-create-custom-roles) to the SO user service ID, follow these steps:
 
 To assign access to the keystores for the SO user, follow these steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
-2. Hover your mouse over the `SO user` service ID, and click the overflow (...) icon located to the right of the `SO user` row to open a list of options.
+2. Hover your mouse over the `SO user` service ID, and click the overflow (...) icon to open a list of options.
 3. From the options menu, click **Assign access**.
 4. Click **Assign service ID additional access**, and then click the **IAM services** button.
 5. Click **No service access** under **What type of access do you want to assign?** and select **Hyper Protect Crypto Services**.
@@ -201,12 +201,12 @@ To assign access to the keystores for the SO user, follow these steps:
 
 ### 2. Assign the custom roles to the normal user service ID
 
-To assign the custom roles that are defined in [Step 1](#step1-create-custom-roles) to the normal user service ID that are created in the previous step, follow these steps:
+To assign the custom roles that are defined in [Step 1](#step1-create-custom-roles) to the normal user service ID, follow these steps:
 
 To assign access to the keystores for the normal user, follow these steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
-2. Hover your mouse over the `Normal user` service ID, and click the overflow (...) icon located to the right of the `Normal user` row to open a list of options.
+2. Hover your mouse over the `Normal user` service ID, and click the overflow (...) icon to open a list of options.
 3. From the options menu, click **Assign access**.
 4. Click **Assign service ID additional access**, and then click the **IAM services** button.
 5. Click **No service access** under **What type of access do you want to assign?** and select **Hyper Protect Crypto Services**.
@@ -217,12 +217,12 @@ To assign access to the keystores for the normal user, follow these steps:
 
 ### 3. Assign the custom roles to the anonymous user service ID
 
-To assign the custom roles that are defined in [Step 1](#step1-create-custom-roles) to the anonymous user service ID that are created in the previous step, follow these steps:
+To assign the custom roles that are defined in [Step 1](#step1-create-custom-roles) to the anonymous user service ID, follow these steps:
 
 To assign access to the keystore for the anonymous user, follow these steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
-2. Hover your mouse over the `Anonymous user` service ID, and click the overflow (...) icon located to the right of the `Anonymous user` row to open a list of options.
+2. Hover your mouse over the `Anonymous user` service ID, and click the overflow (...) icon to open a list of options.
 3. From the options menu, click **Assign access**.
 4. Click **Assign service ID additional access**, and then click the **IAM services** button.
 5. Click **No service access** under **What type of access do you want to assign?** and select **Hyper Protect Crypto Services**.
@@ -234,4 +234,4 @@ To assign access to the keystore for the anonymous user, follow these steps:
 ##  What's next
 {: #pkcs11-best-practices-next}
 
-You have successfully set up the PKCS #11 user types. Continue to read [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api) on how to use the PKCS #11 API.
+Continue to read [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api) on how to use the PKCS #11 API.

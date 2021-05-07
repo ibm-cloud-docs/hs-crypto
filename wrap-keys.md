@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: root key, wrap key, encrypt data encryption key, protect data encryption key, key wrap api
 
@@ -117,7 +117,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
           The key material of the DEK that you want to manage and protect. The <code>plaintext</code> value must be base64 encoded.
         </p>
         <p>
-          For more information on encoding your key material, see
+          For more information about encoding your key material, see
           [Encoding your key material](/docs/key-protect?topic=key-protect-import-root-keys#open-ssl-encoding-root-new-key-material).
         </p>
         <p>

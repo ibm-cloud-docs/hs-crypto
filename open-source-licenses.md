@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: open source licenses
 
@@ -19,10 +19,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 
-# Open source licenses
+# Open-source licenses
 {: #open-source-licenses}
 
-The {{site.data.keyword.IBM}} license agreement and any applicable information on the web download page for {{site.data.keyword.IBM_notm}} products refers Licensee to this file for details concerning notices applicable to code included in {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}.
+The {{site.data.keyword.IBM}} license agreement and any applicable information on the web download page for {{site.data.keyword.IBM_notm}} products refers Licensee to this file for details that concern notices applicable to code included in {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
 Notwithstanding the terms and conditions of any other agreement Licensee may have with {{site.data.keyword.IBM_notm}} or any of the related or affiliated entities (collectively "{{site.data.keyword.IBM_notm}}"), the third-party code identified below is subject to the terms and conditions of the {{site.data.keyword.IBM_notm}} license agreement for the Program and not the license terms that may be contained in the notices below. The notices are provided for informational purposes.

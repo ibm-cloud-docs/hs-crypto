@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: standard key, encryption key, create standard key, create encryption key, add key, key material, key management, create secret, persist secret, create encryption key, encryption key api, api key
 
@@ -59,7 +59,7 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
         <td>Key alias</td>
         <td>
           <p>(Optional) One or more unique, human-readable aliases that you want to assign to your key for easy recognition.</p>
-          <p>Alias size can be between 2 - 90 characters. You can set up to five key alias for the key, with each separated by a comma.</p>
+          <p>Alias size can be 2 - 90 characters. You can set up to five key alias for the key, with each separated by a comma.</p>
           <p>Note: Each alias must be alphanumeric, case sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`.
           </p>
         </td>
@@ -67,7 +67,7 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
       <tr>
         <td>Key ring ID</td>
         <td>
-          <p>Select a key ring from the dropdown list that contains the existing key rings. If you don't assign a key ring, the key will be added to the default key ring.</p>
+          <p>Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key will be added to the default key ring.</p>
           <p>For more information about key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
           </p>
         </td>
@@ -189,7 +189,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
             <strong>Important:</strong> To protect your privacy, do not store your
             personal data as metadata for your key.
           </p>
-          <p>Each alias must be alphanumeric, case sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (\_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be between 2 - 90 characters (inclusive).
+          <p>Each alias must be alphanumeric, case sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (\_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive).
           </p>
         </td>
       </tr>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-07"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -230,8 +230,8 @@ Mechanism `CKM_EC_KEY_PAIR_GEN` is supported when you call the `GenerateKeyPair`
 | GREP11 mechanism | Supported curve types | Supported curve names |
 | ---------------------| --------------------- | ----------------------|
 |CKM_EC_KEY_PAIR_GEN| [National Institute of Standards and Technology (NIST) curves](https://www.ietf.org/rfc/rfc5480.txt){: external} | <ul><li>P-192, also known as secp192r1 and prime192v1.</li><li>P-224, also known as secp224r1.</li><li>P-256, also known as secp256r1 and prime256v1.</li><li>P-384, also known as secp384r1.</li><li>P-521, also known as secp521r.</li></ul> |
-|CKM_EC_KEY_PAIR_GEN| [Regular Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external} | <ul><li>BP-160R, also known as brainpoolP160r1.</li><li>BP-192R, also known as brainpoolP192r1.</li><li>BP-224R, also known as brainpoolP224r1.</li><li>BP-256R, also known as brainpoolP256r1.</li><li>BP-320R, also known as brainpoolP320r1.</li><li>BP-384R, also known as brainpoolP384r1.</li><li>BP-512R, also known as brainpoolP512r1.</li></ul> |
-|CKM_EC_KEY_PAIR_GEN| [Twisted Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external} | <ul><li>BP-160T, also known as brainpoolP160t1.</li><li>BP-192T, also known as brainpoolP192t1.</li><li>BP-224T, also known as brainpoolP224t1.</li><li>BP-256T, also known as brainpoolP256t1.</li><li>BP-320T, also known as brainpoolP320t1.</li><li>BP-384T, also known as brainpoolP384t1.</li><li>BP-512T, also known as brainpoolP512t1.</li></ul> |
+|CKM_EC_KEY_PAIR_GEN| [Regular Brain pool (BP) curves](https://tools.ietf.org/html/rfc5639){: external} | <ul><li>BP-160R, also known as brainpoolP160r1.</li><li>BP-192R, also known as brainpoolP192r1.</li><li>BP-224R, also known as brainpoolP224r1.</li><li>BP-256R, also known as brainpoolP256r1.</li><li>BP-320R, also known as brainpoolP320r1.</li><li>BP-384R, also known as brainpoolP384r1.</li><li>BP-512R, also known as brainpoolP512r1.</li></ul> |
+|CKM_EC_KEY_PAIR_GEN| [Twisted Brain pool (BP) curves](https://tools.ietf.org/html/rfc5639){: external} | <ul><li>BP-160T, also known as brainpoolP160t1.</li><li>BP-192T, also known as brainpoolP192t1.</li><li>BP-224T, also known as brainpoolP224t1.</li><li>BP-256T, also known as brainpoolP256t1.</li><li>BP-320T, also known as brainpoolP320t1.</li><li>BP-384T, also known as brainpoolP384t1.</li><li>BP-512T, also known as brainpoolP512t1.</li></ul> |
 |CKM_EC_KEY_PAIR_GEN| [Standards for Efficient Cryptography (SEC) curves](https://www.secg.org/sec2-v2.pdf){: external} | <ul><li>secp256k1</li></ul> |
 |CKM_EC_KEY_PAIR_GEN| [Edwards curves](https://tools.ietf.org/html/rfc8032){: external} | <ul><li>Ed25519</li></ul>|
 {: caption="Table 4. Supported curve types for generating EC keys" caption-side="bottom"}
@@ -250,10 +250,10 @@ The following curves are supported for mechanisms that are related to digital as
 |EdDSA |CKM_IBM_ED25519_SHA512| [Edwards curves](https://tools.ietf.org/html/rfc8032){: external} | <ul><li>Ed25519</li></ul>|
 |Schnorr |CKM_IBM_ECDSA_OTHER|[Standards for Efficient Cryptography (SEC) curves](https://www.secg.org/sec2-v2.pdf){: external}| <ul><li>secp256k1</li></li></ul>|
 |Schnorr |CKM_IBM_ECDSA_OTHER|[National Institute of Standards and Technology (NIST) curves](https://www.ietf.org/rfc/rfc5480.txt){: external} | <ul><li>P-256, also known as secp256r1 and prime256v1</li></ul>|
-|Schnorr |CKM_IBM_ECDSA_OTHER|[Regular Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}| <ul><li>BP-256R, also known as brainpoolP256r1</li></ul>|
-|Schnorr |CKM_IBM_ECDSA_OTHER|[Twisted Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external} | <ul><li>BP-256T, also known as brainpoolP256t1</li></ul>|
-|Schnorr |ECSG_IBM_ECSDSA_S256| <ul><li>[Standards for Efficient Cryptography (SEC) curves](https://www.secg.org/sec2-v2.pdf){: external}</li> <li>[Regular Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}</li> <li>[Twisted Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}</li>/ul> | <ul><li>secp256r1</li><li>secp256k1</li><li>BP-256R, also known as brainpoolP256r1</li><li>BP-256T, also known as brainpoolP256t1</li></ul>|
-|Schnorr-Zilliqa |ECSG_IBM_ECSDSA_COMPR_MULTI| <ul><li>[Standards for Efficient Cryptography (SEC) curves](https://www.secg.org/sec2-v2.pdf){: external}</li> <li>[Regular Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}</li><li>[Twisted Brainpool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}</li></ul> | <ul><li>secp256r1</li><li>secp256k1</li><li>BP-256R, also known as brainpoolP256r1</li><li>BP-256T, also known as brainpoolP256t1</li></ul>|
+|Schnorr |CKM_IBM_ECDSA_OTHER|[Regular Brain pool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}| <ul><li>BP-256R, also known as brainpoolP256r1</li></ul>|
+|Schnorr |CKM_IBM_ECDSA_OTHER|[Twisted Brain pool (BP) curves](https://tools.ietf.org/html/rfc5639){: external} | <ul><li>BP-256T, also known as brainpoolP256t1</li></ul>|
+|Schnorr |ECSG_IBM_ECSDSA_S256| <ul><li>[Standards for Efficient Cryptography (SEC) curves](https://www.secg.org/sec2-v2.pdf){: external}</li> <li>[Regular Brain pool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}</li> <li>[Twisted Brain pool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}</li>/ul> | <ul><li>secp256r1</li><li>secp256k1</li><li>BP-256R, also known as brainpoolP256r1</li><li>BP-256T, also known as brainpoolP256t1</li></ul>|
+|Schnorr-Zilliqa |ECSG_IBM_ECSDSA_COMPR_MULTI| <ul><li>[Standards for Efficient Cryptography (SEC) curves](https://www.secg.org/sec2-v2.pdf){: external}</li> <li>[Regular Brain pool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}</li><li>[Twisted Brain pool (BP) curves](https://tools.ietf.org/html/rfc5639){: external}</li></ul> | <ul><li>secp256r1</li><li>secp256k1</li><li>BP-256R, also known as brainpoolP256r1</li><li>BP-256T, also known as brainpoolP256t1</li></ul>|
 {: caption="Table 5. Supported curve types for encrypting digital assets and signatures" caption-side="bottom"}
 
 ## Performing cryptographic operations with GREP11 functions
