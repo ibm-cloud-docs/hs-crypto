@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-08"
 
 keywords: standard key, import key, key material, import key api, bring your own key, byok, encryption key, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key
 
@@ -64,7 +64,7 @@ You can add your existing encryption keys with the {{site.data.keyword.cloud_not
       <tr>
         <td>Key ring ID</td>
         <td>
-          <p>Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key is added to the default key ring.</p>
+          <p>Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key is added to the `default` key ring.</p>
           <p>For more information about key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
           </p>
         </td>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-08"
 
 keywords: root key, create root key, add key, root key api, api key, symmetric key, key material, key management, create key-wrapping key, create crk, create customer key, key-wrapping key
 
@@ -72,7 +72,7 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
       <tr>
         <td>Key ring ID</td>
         <td>
-          <p>Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key is added to the default key ring.</p>
+          <p>Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key is added to the `default` key ring.</p>
           <p>For more information about key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
           </p>
         </td>

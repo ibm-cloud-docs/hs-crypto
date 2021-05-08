@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-08"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -70,7 +70,7 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
       <tr>
         <td>Key ring ID</td>
         <td>
-          <p>Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key will be added to the default key ring.</p>
+          <p>Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key will be added to the `default` key ring.</p>
           <p>For more information about key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
           </p>
         </td>
