@@ -670,12 +670,13 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_deleting_keys}
 
 
-[Deleting root keys or standard keys with a single authorization](/docs/hs-crypto?topic=hs-crypto-delete-keys)
+[Deleting keys with a single authorization](/docs/hs-crypto?topic=hs-crypto-delete-keys)
 * [Deleting keys with the console](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-keys-gui)
 * [Deleting keys with the API](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-keys-api)
 * [What's next](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-key-next)
 
-[Deleting root keys or standard keys using dual authorization](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys)
+[Deleting keys using dual authorization](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys)
+* [Considerations for deleting a key using dual authorization](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#dual-auth-deletion-considerations)
 * [Authorize deletion for a key with the console](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#set-key-deletion-console)
 * [Authorize deletion for a key with the API](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#set-key-deletion-api)
 * [What's next](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#delete-daul-auth-keys-next)

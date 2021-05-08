@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-08"
 
 keywords: security and compliance, ibmcloud security compliance, compliant, data security, data encryption, data delete, common criteria, fips, iso, gdpr
 
@@ -45,11 +45,13 @@ Access to the service takes place over HTTPS, and internal {{site.data.keyword.h
 ### Data deletion
 {: #data-deletion}
 
-When you delete a key from the key management service, the service marks the key as deleted, and the key moves to the _Destroyed_ state. Keys in this state are no longer recoverable, and the cloud services that use the key can no longer decrypt data that is associated with the key. Your data remains in those services in the encrypted form. Metadata that is associated with a key, such as the key's transition history and name, is kept in the {{site.data.keyword.hscrypto}} database.
+When you delete a key from {{site.data.keyword.hscrypto}}, the service marks the key as deleted, and the key moves to the _Destroyed_ state. Keys in this state can no longer decrypt data that is associated with the key. Therefore, before you delete a key, review the data that is associated with the key and ensure that you no longer require access to it. Do not delete a key that is actively protecting data in your production environments.
 
-Deleting a key in {{site.data.keyword.hscrypto}} is a destructive operation. Keep in mind that after you delete a key, the action cannot be reversed, and any data that is associated with the key is immediately lost at the moment the key is deleted. Before you delete a key, review the data that is associated with the key and ensure that you no longer require access to it. Do not delete a key that is actively protecting data in your production environments.
+Within 30 days after you delete a key, you can restore the key to reverse the deletion. For more information, see [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys).
 
-To help you determine what data is protected by a key, you can view how your {{site.data.keyword.hscrypto}} service instance maps to your existing cloud services by running `ibmcloud iam authorization-policies`. To learn more about viewing service authorizations from the console, see [Granting access between services](/docs/account?topic=account-serviceauth).
+Note that even if the key is not restored, your data remains in those services in the encrypted form. Metadata that is associated with a key, such as the key's transition history and name, is kept in the {{site.data.keyword.hscrypto}} database.
+
+To help you determine what data is protected by a key, you can use the key management API to [view associations between a key and your cloud resources](/docs/hs-crypto?topic=hs-crypto-view-protected-resources).
 {: note}
 
 ## Compliance readiness

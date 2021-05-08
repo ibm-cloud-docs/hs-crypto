@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-08"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, HA, DR, high availability, disaster recovery
 
@@ -69,7 +69,7 @@ Backing up the keys manually is not supported.
 {: #faq-delete-a-key}
 {: faq}
 
-When you delete a key, the key is no longer recoverable and the cloud services that use the key can no longer decrypt data that is associated with the key. Your data remains in those services in the encrypted form. Before you delete a key, ensure that you no longer require access to any data that is associated with the key. This action cannot be reversed.
+Within 30 days after you delete a key, you can still view the key and restore the key to reverse the deletion. After 90 days, the key is purged and permanently removed from your instance. The data that is associated with the key becomes inaccessible. Before you delete a key, make sure that the key is not actively protecting any resources. For more information, see [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys).
 
 ## What happens if I lose the signature key or the master key parts?
 {: #faq-lose-signature-key}
