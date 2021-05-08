@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-08"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -22,11 +22,12 @@ subcollection: hs-crypto
 {:preview: .preview}
 {:term: .term}
 
-# Deleting root keys or standard keys using dual authorization
+# Deleting keys using dual authorization
 {: #delete-dual-auth-keys}
 
 You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to safely delete root keys or standard keys by using a dual authorization process.
 {: shortdesc}
+
 
 When you delete an encryption key, you shred the contents and associated data. Any data that is encrypted by the key becomes inaccessible. Only imported root keys can be restored after deletion.
 [Destroying resources](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#data-deletion) is not recommended for production environments, but might be useful for temporary environments such as testing or QA.
@@ -40,6 +41,12 @@ that's actively protecting a cloud resource. Before you delete a key,
 that are associated with the key.
 - You can [force deletion on a key](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-key-force)
 that's protecting a cloud resource. However, the action won't succeed if the key's associated resource is non-erasable due to a retention policy. You can verify whether a key is associated with a non-erasable resource by [checking the registration details](/docs/hs-crypto?topic=hs-crypto-view-protected-resources#view-protected-resources-api) for the key.
+
+
+
+
+## Considerations for deleting a key using dual authorization
+{: #dual-auth-deletion-considerations}
 
 Deleting a key that has a
 [dual authorization policy](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth)
@@ -65,6 +72,7 @@ the key. During this period, the key remains in the
 and all key operations are allowed on the key. To complete the deletion, the
 second user with a _Manager_ access policy can use the
 {{site.data.keyword.cloud_notm}} console or API to delete the key.
+- **The key and its associated data become inaccessible 90 days after the key is deleted.** When you delete a key, the key can be restored within 30 days after the deletion. You are able to retrieve associated data such as key metadata, registrations, and policies for up to 90 days. After 90 days, the key becomes eligible to be automatically purged and its associated data will be permanently removed from the your instance.
 
 ## Authorize deletion for a key with the console
 {: #set-key-deletion-console}
@@ -375,7 +383,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 ## What's next
 {: #delete-daul-auth-keys-next}
 
-- To restore a previously deleted root key, check out [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys).
+- To restore a previously deleted key, check out [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys).
 - To create another root key, check out [Creating root keys](/docs/hs-crypto?topic=hs-crypto-create-root-keys).
 - To delete the service instance, check out [Deleting service instances](/docs/hs-crypto?topic=hs-crypto-delete-instance)
 - To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.

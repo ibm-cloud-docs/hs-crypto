@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-08"
 
 keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 
@@ -24,11 +24,11 @@ subcollection: hs-crypto
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Deleting root keys or standard keys with a single authorization
+# Deleting keys with a single authorization
 {: #delete-keys}
 
-If you are a manager for your {{site.data.keyword.cloud}}
-{{site.data.keyword.hscrypto}} instance, you can use  {{site.data.keyword.hscrypto}} to delete root keys or standard keys and the contents.
+If you are a manager for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance, you can use {{site.data.keyword.hscrypto}} to delete root keys or standard keys and the contents.
+
 
 When you delete a key, you shred the contents and associated data. Any data that
 is encrypted by the key becomes inaccessible. Only imported root keys can be restored after deletion.
@@ -53,6 +53,9 @@ for the key. Then, you must contact an account owner to remove the retention
 policy on each resource that is associated with the key before you can delete
 the key.
 
+
+
+
 ## Deleting keys with the console
 {: #delete-keys-gui}
 {: help}
@@ -72,7 +75,7 @@ console.
 5. Select the key that you want to delete and click the overflow (⋯) icon to open a list of options for the key.
 6. From the options menu, click **Delete key**, enter the key name to confirm the key to be deleted, and click **Delete key**.
 
-After you delete a key, the key moves to the _Destroyed_ state. Only imported keys in this state can be recovered. Metadata that is associated with the key, such as the key's deletion date, is kept in the {{site.data.keyword.hscrypto}} database.
+After you delete a key, the key moves to the _Destroyed_ state. You can [restore the deleted key](/docs/hs-crypto?topic=hs-crypto-restore-keys) within 30 days after its deletion. Metadata that is associated with the key, such as the key's deletion date, is kept in the {{site.data.keyword.hscrypto}} database.
 
 ## Deleting keys with the API
 {: #delete-keys-api}
@@ -93,11 +96,9 @@ at query time to delete the key.
 {: important}
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
-
 2. Retrieve the ID of the key that you would like to delete.
 
-You can find the ID for a key in your service instance by
-[retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys), or by accessing the {{site.data.keyword.cloud_notm}} console.
+  You can find the ID for a key in your service instance by [retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys), or by accessing the {{site.data.keyword.cloud_notm}} console.
 
 3. Run the following cURL command to permanently delete the key and the contents.
 
@@ -361,7 +362,7 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
 ## What's next
 {: #delete-key-next}
 
-- To restore a previously deleted root key, check out [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys).
+- To restore a previously deleted key, check out [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys).
 - To create another root key, check out [Creating root keys](/docs/hs-crypto?topic=hs-crypto-create-root-keys).
 - To delete the service instance, check out [Deleting service instances](/docs/hs-crypto?topic=hs-crypto-delete-instance)
 - To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
