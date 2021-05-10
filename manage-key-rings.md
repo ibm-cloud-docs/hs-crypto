@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-08"
+lastupdated: "2021-05-10"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -55,8 +55,6 @@ Before you create a key ring for your {{site.data.keyword.hscrypto}} instance, k
 
 Before you can group keys into a key ring, you need to create a key ring first. You can use either the console or the key management API to create a key ring.
 
-You can have up to 50 key rings for a service instance.
-{: note}
 
 ### Creating key rings with the console
 {: #create-key-ring-ui}
