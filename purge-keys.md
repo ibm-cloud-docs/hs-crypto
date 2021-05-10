@@ -168,6 +168,6 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/purge
     For a detailed description of the available parameters, see the {{site.data.keyword.hscrypto}} [key management API reference doc](/apidocs/hs-crypto){: external}.
 
 ## What's next
-{: #delete-purge-keys-next}
+{: #purge-keys-next}
 
 - To learn how to deleting and purging keys, see [About deleting and purging keys](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys).
