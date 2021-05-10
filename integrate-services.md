@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-10"
 
 keywords: integration, encryption at rest, cloud object storage, object storage, kmip, containers, vmware, database, compute
 
@@ -37,8 +37,7 @@ Add [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) t
 |Service|Integration instructions|
 |-------|-----------|
 |[{{site.data.keyword.cos_full_notm}}](https://cloud.ibm.com/catalog/services/cloud-object-storage){: external}|For detailed steps of how to integrate {{site.data.keyword.cos_full_notm}}, check out the following references: <ul><li>Demo video: [Integrating {{site.data.keyword.cos_full_notm}} with {{site.data.keyword.hscrypto}}](https://mediacenter.ibm.com/media/0_mgxwp16v){: external}</li><li>Instructions: [Server-side encryption with {{site.data.keyword.keymanagementservicelong_notm}} or {{site.data.keyword.hscrypto}}](/docs/cloud-object-storage?topic=cloud-object-storage-encryption)</li></ul>|
-|[{{site.data.keyword.cloud_notm}} {{site.data.keyword.blockstorageshort}} for Virtual Private Cloud (Gen 1 compute)](https://cloud.ibm.com/vpc/storage/storageVolumes){: external}|For detailed steps of how to integrate {{site.data.keyword.block_storage_is_short}} (Gen 1 compute), check out [Creating block storage volumes with customer-managed encryption](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).|
-|[{{site.data.keyword.cloud_notm}} {{site.data.keyword.blockstorageshort}} for Virtual Private Cloud (Gen 2 compute)](https://cloud.ibm.com/vpc-ext/storage/storageVolumes){: external}  | For detailed steps of how to integrate {{site.data.keyword.block_storage_is_short}} (Gen 2 compute), check out [Creating block storage volumes with customer-managed encryption](/docs/vpc?topic=vpc-block-storage-vpc-encryption).  |
+|[{{site.data.keyword.cloud_notm}} {{site.data.keyword.blockstorageshort}} for Virtual Private Cloud](https://cloud.ibm.com/vpc-ext/storage/storageVolumes){: external}  | For detailed steps of how to integrate {{site.data.keyword.block_storage_is_short}}, check out [Creating block storage volumes with customer-managed encryption](/docs/vpc?topic=vpc-block-storage-vpc-encryption).  |
 {: caption="Table 1. Supported storage services" caption-side="bottom"}
 
 ## Database service integrations
