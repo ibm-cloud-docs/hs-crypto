@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-11"
 
 keywords: pkcs11 ui access, pkcs 11 account authentication
 
@@ -103,7 +103,7 @@ To create a custom role, complete the following steps:
         </ul>
       </td>
     </tr>
-    <caption style="caption-side:bottom;">Table 1. Actions corresponding to the EP11 keystore or key operations with the console</caption>
+    <caption>Table 1. Actions corresponding to the EP11 keystore or key operations with the console</caption>
   </table>
 
 8. Click **Create** after you select the appropriate actions for your custom role.

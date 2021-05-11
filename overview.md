@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-11"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -109,8 +109,3 @@ You can also monitor and audit events and activities of {{site.data.keyword.hscr
 - To find out more about the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11_intro) and [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 - For more information about the compliance certificates that {{site.data.keyword.hscrypto}} receives, see [Security and compliance](/docs/hs-crypto?topic=hs-crypto-security-and-compliance).
 - To find more about available {{site.data.keyword.cloud_notm}} services for integration, see [Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-integrate-services).
-
-<br>
-<p style="background-color: #e0e0e0; border: 1px solid #161616; padding: 10px; font-weight: bold">
-<img src="/images/survey.svg" alt="survey" style="vertical-align:middle"> Let us know your feedback by taking a <a href="https://surveys.hotjar.com/587f4609-7eeb-48cb-85dc-95f81906513b" target="_blank">one-minute survey</a>.
-</p>

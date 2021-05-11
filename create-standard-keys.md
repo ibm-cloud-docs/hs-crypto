@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-08"
+lastupdated: "2021-05-11"
 
 keywords: standard key, encryption key, create standard key, create encryption key, add key, key material, key management, create secret, persist secret, create encryption key, encryption key api, api key
 
@@ -84,7 +84,7 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
           <p>(Optional) Add an extended description for your key. It needs to be 2 to 240 characters in length.</p>
         </td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Describes the <strong>Create a key</strong> settings</caption>
+      <caption>Table 1. Describes the <strong>Create a key</strong> settings</caption>
     </table>
 
 5. When you finish filling out the key's details, click **Create key** to confirm.
@@ -211,7 +211,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
           <p>When you set the <code>extractable</code> attribute to <code>true</code>, the service creates a standard key that you can store in your apps or services.</p>
         </td>
       </tr>
-        <caption style="caption-side:bottom;">Table 2. Describes the variables that are needed to add a standard key with the {{site.data.keyword.hscrypto}} key management API</caption>
+        <caption>Table 2. Describes the variables that are needed to add a standard key with the {{site.data.keyword.hscrypto}} key management API</caption>
     </table>
 
     To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-122.pdf){: external}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-08"
+lastupdated: "2021-05-11"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -225,7 +225,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
         </td>
       </tr>
 
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 1. Describes the variables that are needed to set a key for
         deletion.
       </caption>
@@ -368,7 +368,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
         </td>
       </tr>
 
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 2. Describes the variables that are needed to unset a key for
         deletion.
       </caption>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-11"
 
 keywords: crypto unit, add crypto units, remove crypto units, change crypto units number, adjust crypto units number, new crypto units, support center, support ticket, support case
 
@@ -58,7 +58,7 @@ To add or remove crypto units, you need to first raise a support ticket.
       <td>Selected resources</td>
       <td>Select your {{site.data.keyword.hscrypto}} service instance.</td>
     </tr>
-    <caption style="caption-side:bottom;">Table 1. Describes the fields that are required to add crypto units</caption>
+    <caption>Table 1. Describes the fields that are required to add crypto units</caption>
   </table>
 
 3. Check the **Email me updates about this issue** box, and click **Continue to review > Create case**.
@@ -108,7 +108,7 @@ After you initialize the new crypto units, you need to raise another support tic
       <td>Selected resources</td>
       <td>Select your {{site.data.keyword.hscrypto}} service instance.</td>
     </tr>
-    <caption style="caption-side:bottom;">Table 2. Describes the fields that are required to activate new crypto units</caption>
+    <caption>Table 2. Describes the fields that are required to activate new crypto units</caption>
   </table>
 
 3. Check the **Email me updates about this issue** box, and click **Continue to review > Create case**.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-08"
+lastupdated: "2021-05-11"
 
 keywords: standard key, import key, key material, import key api, bring your own key, byok, encryption key, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key
 
@@ -94,7 +94,7 @@ You can add your existing encryption keys with the {{site.data.keyword.cloud_not
           <p>(Optional) Add an extended description for your key. It needs to be two to 240 characters in length.</p>
         </td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Describes the <strong>Generate new key</strong> settings</caption>
+      <caption>Table 1. Describes the <strong>Generate new key</strong> settings</caption>
     </table>
 
 5. When you finish filling out the key's details, click **Import key** to confirm.
@@ -204,7 +204,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
           <p>When you set the <code>extractable</code> attribute to <code>true</code>, the service designates the key as a standard key that you can store in your apps or services.</p>
         </td>
       </tr>
-        <caption style="caption-side:bottom;">Table 2. Describes the variables that are needed to add a standard key with the {{site.data.keyword.hscrypto}} key management API</caption>
+        <caption>Table 2. Describes the variables that are needed to add a standard key with the {{site.data.keyword.hscrypto}} key management API</caption>
     </table>
 
     To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-122.pdf){: external}.
@@ -283,7 +283,7 @@ When you import an existing standard key, it is required to include the encrypte
           </p>
         </td>
       </tr>
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 3. Describes the variables that are needed to base64 encode your key material.
       </caption>
     </table>
@@ -319,7 +319,7 @@ When you import an existing standard key, it is required to include the encrypte
           </p>
         </td>
       </tr>
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 4. Describes the variable that is needed to create and encode new key material.
       </caption>
     </table>

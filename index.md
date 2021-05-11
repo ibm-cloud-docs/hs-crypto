@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-11"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -25,40 +25,6 @@ subcollection: hs-crypto
 {:hide-in-docs: .hide-in-docs}
 {:hide-dashboard: .hide-dashboard}
 
-<style>
-        .solutionBoxContainer {}
-        .solutionBoxContainer a {
-            text-decoration: none !important;
-            border: none !important;
-        }
-        .solutionBox {
-            float: left !important;
-            width: 100% !important;
-            min-height: 290px;
-            margin: 0 10px 20px 0 !important;
-            padding: 16px !important;
-            background-color: #f4f4f4 !important;
-            border: 1px solid #f4f4f4;
-        }
-        .clearBox {
-          clear: both !important;
-          height: 0;
-        }
-        @media screen and (min-width: 960px) {
-            .solutionBox {
-            width: calc(50% - 3%) !important;
-            }
-        }
-        @media screen and (min-width: 1298px) {
-            .solutionBox {
-            width: calc(33% - 2%) !important;
-            }
-        }
-        .solutionBox:hover {
-            border: 1px rgb(136, 151, 162)solid !important;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important;
-        }
-    </style>
 
 # Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
 {: #get-started}
@@ -72,37 +38,6 @@ subcollection: hs-crypto
 
 This tutorial shows you the high-level steps on how to set up your service instance by loading your [master keys](#x2908413){: term}, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the GREP11 API.
 {: hide-dashboard}
-
-If you want to learn detailed steps on how to initialize a {{site.data.keyword.hscrypto}} service instance, click the following tabs to view different options:
-{: hide-dashboard}
-
-<div class="solutionBoxContainer hide-dashboard">
-  <div class="solutionBox">
-    <a href = "/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities">
-      <div>
-        <p><strong><img src="/images/smart-card.svg" alt="Smart card icon" width="20" style="width:20px; border-style: none"/> Use smart cards </p></strong>
-        <p class="bx--type-caption">For the highest level of security, choose this option. It uses smart cards to store signature keys and master key parts. Signature keys and master key parts never appear in the clear outside the smart card.</p>
-      </div>
-    </a>
-  </div>
-  <div class="solutionBox">
-    <a href = "/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit">
-      <div>
-         <p><strong><img src="/images/recovery-crypto-unit.svg" alt="Recovery crypto unit icon" width="20" style="width:20px; border-style: none"/> Use recovery crypto units</p></strong>
-         <p class="bx--type-caption">If one or more recovery crypto units are allocated for your service instance, you can choose this option. A random master key value is automatically generated in a recovery crypto unit and never appears in the clear outside of the HSMs.</p>
-      </div>
-    </a>
-  </div>
-  <div class="solutionBox">
-    <a href = "/docs/hs-crypto?topic=hs-crypto-initialize-hsm">
-      <div>
-         <p><strong><img src="/images/tke-cli.svg" alt="TKE CLI icon" width="20" style="width:20px; border-style: none"/> Use key part files</p></strong>
-         <p class="bx--type-caption">Initialize your service instance by using master key parts that you create and store in files on your local workstation. In this case, the workstation key files serve as a backup copy of your master key value.</p>
-      </div>
-    </a>
-  </div>
-  <div class="clearBox"></div>
-</div>
 
 
 
@@ -164,7 +99,7 @@ Complete the following steps to create your first cryptographic key.
           <p>To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location.</p>
         </td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Description of the settings to create a key.</caption>
+      <caption>Table 1. Description of the settings to create a key.</caption>
     </table>
 
 3. When you finish filling out the key's details, click **Add key** to confirm.
@@ -203,7 +138,7 @@ Complete the following steps to add an existing key.
         <td>Key material</td>
         <td>The key material, such as a symmetric key, that you want to store in the {{site.data.keyword.hscrypto}} service. The key that you provide must be base64 encoded.</td>
       </tr>
-      <caption style="caption-side:bottom;">Table 2. Description of the settings to import your own key.</caption>
+      <caption>Table 2. Description of the settings to import your own key.</caption>
     </table>
 
 3. When you finish filling out the key's details, click **Import key** to confirm.
@@ -465,7 +400,7 @@ Complete the following steps to create your first cryptographic key.
           <p>To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location.</p>
         </td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Description of the settings to create a key.</caption>
+      <caption>Table 1. Description of the settings to create a key.</caption>
     </table>
 
 3. When you finish filling out the key's details, click **Add key** to confirm.
@@ -506,7 +441,7 @@ Complete the following steps to add an existing key.
         <td>Key material</td>
         <td>The key material, such as a symmetric key, that you want to store in the {{site.data.keyword.hscrypto}} service. The key that you provide must be base64 encoded.</td>
       </tr>
-      <caption style="caption-side:bottom;">Table 2. Description of the settings to import your own key.</caption>
+      <caption>Table 2. Description of the settings to import your own key.</caption>
     </table>
 
 3. When you finish filling out the key's details, click **Import key** to confirm.
@@ -703,8 +638,3 @@ Follow these steps:
 - You can use {{site.data.keyword.hscrypto}} as the root key provider for other services such as {{site.data.keyword.cos_full_notm}} to bring your own encryption to your applications or data. Check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services) for the full list of supported services.
 - To learn more about {{site.data.keyword.hscrypto}} concepts and terminologies, check out [Components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
 - Manage your keys with [{{site.data.keyword.hscrypto}} key management API](/apidocs/hs-crypto){: external} and [{{site.data.keyword.keymanagementserviceshort}} CLI](/docs/key-protect?topic=key-protect-cli-reference){: external}. Encrypt your data and perform cryptographic operations with the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) or the [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
-
-<br>
-<p class="hide-dashboard" style="background-color: #e0e0e0; border: 1px solid #161616; padding: 10px; font-weight: bold">
-<img src="/images/survey.svg" alt="survey" style="vertical-align:middle"> Let us know your feedback by taking a <a href="https://surveys.hotjar.com/587f4609-7eeb-48cb-85dc-95f81906513b" target="_blank">one-minute survey</a>.
-</p>

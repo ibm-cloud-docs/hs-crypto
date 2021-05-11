@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-11"
 
 keywords: measure interactions, metrics, monitoring, operational metrics
 
@@ -128,7 +128,7 @@ The type and number of API requests that are made to your {{site.data.keyword.hs
     </td>
   </tr>
 
-  <caption style="caption-side:bottom;">
+  <caption>
     Table 1. Describes the API Hits metrics.
   </caption>
 </table>
@@ -183,7 +183,7 @@ The latency is calculated by getting the average of all requests of the same typ
     </td>
   </tr>
 
-  <caption style="caption-side:bottom;">
+  <caption>
     Table 2. Describes the Latency metrics.
   </caption>
 </table>
@@ -301,7 +301,7 @@ You can filter your metrics by using the following attributes.
     </td>
   </tr>
 
-  <caption style="caption-side:bottom;">
+  <caption>
     Table 3. Describes the attributes use for segmenting metrics.
   </caption>
 </table>
@@ -357,7 +357,7 @@ You can scope down your metrics by using the following scope filters. These filt
     </td>
   </tr>
 
-  <caption style="caption-side:bottom;">
+  <caption>
     Table 3. Describes the scope filters for
     {{site.data.keyword.hscrypto}} metrics.
   </caption>

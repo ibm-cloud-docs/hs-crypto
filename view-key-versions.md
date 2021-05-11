@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-11"
 
 keywords: key versions, get key versions, list key versions
 
@@ -158,7 +158,7 @@ following cURL command.
         </td>
       </tr>
 
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 1. Describes the variables that are needed to list key versions
         with the {{site.data.keyword.hscrypto}} key management API
       </caption>

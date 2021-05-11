@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-10"
+lastupdated: "2021-05-11"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -160,7 +160,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
         </td>
       </tr>
 
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 1. Describes the variables that are needed to create a key ring with the key management API
       </caption>
     </table>
@@ -300,7 +300,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
         </p>
       </td>
     </tr>
-    <caption style="caption-side:bottom;">
+    <caption>
     Table 4. Describes the variables that are needed to view key rings with the key management API.
     </caption>
   </table>
@@ -434,7 +434,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings/<key_ring_i
         </td>
       </tr>
 
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 5. Describes the variables that are needed to delete keys with the key management API.
       </caption>
     </table>

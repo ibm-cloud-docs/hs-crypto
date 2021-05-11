@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-11"
 
 keywords: monitoring, monitor metrics
 
@@ -144,7 +144,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=met
         </td>
       </tr>
 
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 1. Describes the variables that are needed to enable a metrics
         policy.
       </caption>
@@ -257,7 +257,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=met
         </td>
       </tr>
 
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 2. Describes the variables that are needed to disable metrics
         policies.
       </caption>

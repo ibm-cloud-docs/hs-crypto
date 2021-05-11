@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-07-01"
+  years: 2017, 2021
+lastupdated: "2021-05-11"
 
 keywords: set deletion policy, dual authorization, policy-based, key deletion
 
@@ -168,7 +168,7 @@ following cURL command.
         </td>
       </tr>
 
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 1. Describes the variables that are needed to view a dual
         authorization policy for a key with the
         {{site.data.keyword.hscrypto}} key management API.
@@ -335,7 +335,7 @@ command.
         </td>
       </tr>
 
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 2. Describes the variables that are needed to update a dual
         authorization policy with the
         {{site.data.keyword.hscrypto}} key management API.
