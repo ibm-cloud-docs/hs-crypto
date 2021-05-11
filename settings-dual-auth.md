@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-03-17"
+lastupdated: "2021-05-11"
 
 keywords: instance settings, service settings, dual authorization
 
@@ -196,7 +196,7 @@ following cURL command.
           </p>
         </td>
       </tr>
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 1. Describes the variables that are needed to enable dual
         authorization at the instance level.
       </caption>
@@ -366,7 +366,7 @@ running the following cURL command.
           </p>
         </td>
       </tr>
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 1. Describes the variables that are needed to enable dual
         authorization at the instance level.
       </caption>

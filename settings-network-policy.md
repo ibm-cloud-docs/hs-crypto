@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-11"
 
 keywords: instance settings, service settings, network access policies
 
@@ -165,7 +165,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
         </td>
       </tr>
 
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 1. Describes the variables that are needed to set a network access policy at the instance level.
       </caption>
     </table>
@@ -294,7 +294,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
         </td>
       </tr>
 
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 2. Describes the variables that are needed to disable a network access policy at the instance level.
       </caption>
     </table>

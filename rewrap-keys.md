@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-11"
 
 keywords: rewrap key, reencrypt data encryption key, rewrap api, key id
 
@@ -114,7 +114,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
         <td><varname>encrypted_data_key</varname></td>
         <td><strong>Required.</strong> The <code>ciphertext</code> value that was returned by the original wrap operation.</td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to rewrap keys in {site.data.keyword.hscrypto}}.</caption>
+      <caption>Table 1. Describes the variables that are needed to rewrap keys in {site.data.keyword.hscrypto}}.</caption>
     </table>
 
     The newly wrapped data encryption key, original key version (`keyVersion`)

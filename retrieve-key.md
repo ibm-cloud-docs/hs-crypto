@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-11"
 
 keywords: get key, get encryption key, view encryption key, retrieve encryption key, API examples
 
@@ -163,7 +163,7 @@ material.
           transactions.
         </td>
       </tr>
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 4. Describes the variables that are needed to view a specified key
         with the {{site.data.keyword.hscrypto}} key management API
       </caption>

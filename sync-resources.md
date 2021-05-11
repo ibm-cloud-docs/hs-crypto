@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-11"
 
 keywords: sync resources, sync registrations, key registration, notify key state to resources
 
@@ -133,7 +133,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
         </td>
       </tr>
 
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 1. Describes the variables that are needed to initiate a renotification of a key lifecycle event.
       </caption>
     </table>

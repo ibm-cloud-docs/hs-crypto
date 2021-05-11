@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-11"
 
 keywords: root key, wrap key, encrypt data encryption key, protect data encryption key, key wrap api
 
@@ -124,7 +124,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
           To generate a new DEK, omit the <code>plaintext</code> attribute. The service generates a random plaintext (32 bytes), wraps that value, and then returns both the generated and wrapped values in the response. The generated and wrapped values are base64 encoded and you will need to decode them in order to decrypt the keys.
         </p></td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to wrap a specified key in {{site.data.keyword.hscrypto}}.</caption>
+      <caption>Table 1. Describes the variables that are needed to wrap a specified key in {{site.data.keyword.hscrypto}}.</caption>
     </table>
 
     Your wrapped data encryption key, containing the base64 encoded key material, is returned in the response entity-body. The response body also contains the ID of the key version that was used to wrap the supplied plaintext. The following JSON object shows an example returned value.

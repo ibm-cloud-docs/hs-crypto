@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-11"
 
 keywords: restore key, restore a deleted key, recover a deleted key, re-import a key
 
@@ -197,7 +197,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/restore
         </td>
       </tr>
       
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 1. Describes the variables that are needed to restore keys with the {{site.data.keyword.hscrypto}} API.
       </caption>
     </table>

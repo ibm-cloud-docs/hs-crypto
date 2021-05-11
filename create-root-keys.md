@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-08"
+lastupdated: "2021-05-11"
 
 keywords: root key, create root key, add key, root key api, api key, symmetric key, key material, key management, create key-wrapping key, create crk, create customer key, key-wrapping key
 
@@ -89,7 +89,7 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
           <p>(Optional) Add an extended description for your key. It can be two to 240 characters in length.</p>
         </td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Describes the settings to create a key</caption>
+      <caption>Table 1. Describes the settings to create a key</caption>
     </table>
 
 5. When you finish filling out the key's details, click **Create key** to confirm.
@@ -211,7 +211,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
           <p>When you set the <code>extractable</code> attribute to <code>false</code>, the service creates a root key that you can use for <code>wrap</code> or <code>unwrap</code> operations.</p>
         </td>
       </tr>
-        <caption style="caption-side:bottom;">Table 2. Describes the variables that are needed to add a root key with the {{site.data.keyword.hscrypto}} key management API</caption>
+        <caption>Table 2. Describes the variables that are needed to add a root key with the {{site.data.keyword.hscrypto}} key management API</caption>
     </table>
 
     To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-122.pdf){: external}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-11"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -100,7 +100,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
         <td>Deletion expiration</td>
         <td>The date that an authorization for deletion expires for the key. If this date passes, the authorization is no longer valid. If `False` is the value for the `Dual authorization enabled` or `Set for deletion` column of the key, the `Deletion expiration` column is left empty.</td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Describes the <strong>Keys</strong> table</caption>
+      <caption>Table 1. Describes the <strong>Keys</strong> table</caption>
     </table>
 
     Not all key characteristics are displayed by default. To customize how the **Keys** table is to be presented, click the **Settings** icon and check the columns to be displayed.
@@ -184,7 +184,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
         <td><varname>correlation_ID</varname></td>
         <td>Optional: The unique identifier that is used to track and correlate transactions.</td>
       </tr>
-      <caption style="caption-side:bottom;">Table 2. Describes the variables that are needed to view keys with the {{site.data.keyword.hscrypto}} key management API</caption>
+      <caption>Table 2. Describes the variables that are needed to view keys with the {{site.data.keyword.hscrypto}} key management API</caption>
     </table>
 
     A successful `GET /v2/keys` request returns a collection of keys that are available in your {{site.data.keyword.hscrypto}} instance.
@@ -307,7 +307,7 @@ following table.
     </td>
   </tr>
 
-  <caption style="caption-side:bottom;">
+  <caption>
     Table 2. Describes the <code>limit</code> and <code>offset</code> variables
   </caption>
 </table>
@@ -336,7 +336,7 @@ For usage notes, check out the following examples for setting your `limit` and `
     <td><code>.../keys?offset=3000&limit=50</code></td>
     <td>Lists keys 3001 - 3050.</td>
   </tr>
-  <caption style="caption-side:bottom;">Table 3. Provides usage notes for the limit and offset query parameters</caption>
+  <caption>Table 3. Provides usage notes for the limit and offset query parameters</caption>
 </table>
 
 Offset is the location of a particular key in a data set. The `offset` value is zero-based, which means that the 10th encryption key in a data set is at offset 9.
@@ -390,7 +390,7 @@ Replace the `state` variable in your request according to the following table.
     </td>
   </tr>
 
-  <caption style="caption-side:bottom;">
+  <caption>
     Table 4. Describes the <code>state</code> variable.
   </caption>
 </table>
@@ -431,7 +431,7 @@ parameter.
     </td>
   </tr>
 
-  <caption style="caption-side:bottom;">
+  <caption>
     Table 5. Provides usage notes for the stage query parameter.
   </caption>
 </table>

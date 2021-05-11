@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-11"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -225,7 +225,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
         <td><em>log_file_path</em></td>
         <td>The full path of your logging file. It saves all the logs that are generated when your applications interact with the {{site.data.keyword.hscrypto}} cloud HSM to execute PKCS #11 functions.</td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to create the PKCS #11 configuration file.</caption>
+      <caption>Table 1. Describes the variables that are needed to create the PKCS #11 configuration file.</caption>
     </table>
 
 2. Move the configuration file into the same directory as the application (for example, pkcs11-tool) that uses the PKCS #11 library. Optionally, the PKCS #11 configuration file can be placed in the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not exist.

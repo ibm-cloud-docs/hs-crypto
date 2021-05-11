@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-11"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -208,7 +208,7 @@ Some common fields are available for {{site.data.keyword.hscrypto}} to use outsi
       </td>
     </tr>
     
-    <caption style="caption-side:bottom;">Table 8. Describes the common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service
+    <caption>Table 8. Describes the common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service
     actions.</caption>
   </table>
 
@@ -583,7 +583,7 @@ The following table lists the actions that are associated with each severity lev
         <p><code>hs-crypto.registrations.list</code></p>
       </td>
     </tr>
-    <caption style="caption-side:bottom;">Table 10. Describes the severity level for {{site.data.keyword.hscrypto}} service actions.</caption>
+    <caption>Table 10. Describes the severity level for {{site.data.keyword.hscrypto}} service actions.</caption>
   </table>
 
 The following table lists the status codes that are associated with each severity level:

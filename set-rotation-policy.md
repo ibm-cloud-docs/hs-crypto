@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-04-30"
+lastupdated: "2021-05-11"
 
 keywords: rotate, rotate root key, automatic key rotation, set rotation policy, policy based key rotation
 
@@ -106,7 +106,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
         <td><varname>correlation_ID</varname></td>
         <td>The unique identifier that is used to track and correlate transactions.</td>
       </tr>
-        <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to create a rotation policy with the {{site.data.keyword.hscrypto}} key management API</caption>
+        <caption>Table 1. Describes the variables that are needed to create a rotation policy with the {{site.data.keyword.hscrypto}} key management API</caption>
     </table>
 
     A successful `GET api/v2/keys/{id}/policies` response returns policy details that are associated with your key. The following JSON object shows an example response for a root key that has an existing rotation policy.
@@ -204,7 +204,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
         <td><strong>Required.</strong> An integer value that determines the key rotation interval time in months. The minimum is <code>1</code> and the maximum is <code>12</code>.
         </td>
       </tr>
-        <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to create a rotation policy with the {{site.data.keyword.hscrypto}} key management API</caption>
+        <caption>Table 2. Describes the variables that are needed to create a rotation policy with the {{site.data.keyword.hscrypto}} key management API</caption>
     </table>
 
     A successful `PUT api/v2/keys/{id}/policies` response returns policy details that are associated with your key. The following JSON object shows an example response for a root key that has an existing rotation policy.
@@ -300,7 +300,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
         <td><strong>Required.</strong> An integer value that determines the key rotation interval time in months. The minimum is <code>1</code> and the maximum is <code>12</code>.
         </td>
       </tr>
-        <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to create a rotation policy with the {{site.data.keyword.hscrypto}} key management API</caption>
+        <caption>Table 3. Describes the variables that are needed to create a rotation policy with the {{site.data.keyword.hscrypto}} key management API</caption>
     </table>
 
     A successful `PUT api/v2/keys/{id}/policies` response returns updated policy details that are associated with your key. The following JSON object shows an example response for a root key with an updated rotation policy.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-11"
 
 keywords: disable key, enable key, suspend key, suspend operations on a key
 
@@ -210,7 +210,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
           </p>
         </td>
       </tr>
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 1. Describes the variables that are needed to disable root keys with the {{site.data.keyword.hscrypto}} API.
       </caption>
     </table>
@@ -392,7 +392,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
           </p>
         </td>
       </tr>
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 2. Describes the variables that are needed to enable root keys with the {{site.data.keyword.hscrypto}} API.
       </caption>
     </table>

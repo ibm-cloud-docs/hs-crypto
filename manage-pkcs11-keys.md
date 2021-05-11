@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-11"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -97,7 +97,7 @@ On the {{site.data.keyword.hscrypto}} dashboard, do the following to view EP11 k
       <td>Type</td>
       <td>The type of the EP11 key that is managed in {{site.data.keyword.hscrypto}}.</td>
     </tr>
-        <caption style="caption-side:bottom;">Table 1. Describes the EP11 keys table</caption>
+        <caption>Table 1. Describes the EP11 keys table</caption>
     </table>
 
 2. To view details of the [key attributes](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list), click the overflow icon (...) of the key row, and then select **Show more details**.
@@ -151,7 +151,7 @@ Complete the following steps to create an EP11 key:
         <p>You can find all available keystores by clicking the **Enterprise PKCS #11 keystores** tab in the side menu.</p>
       </td>
     </tr>
-        <caption style="caption-side:bottom;">Table 2. Describes the Identifier page</caption>
+        <caption>Table 2. Describes the Identifier page</caption>
     </table>
 
     By default, two key IDs are automatically generated. One is for the public key, the other is for the private key. However, if you select a symmetric key type, such as an AES key, a DES key, or a Generic key, only one key ID is shown on the page.

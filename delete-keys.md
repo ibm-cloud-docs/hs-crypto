@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-08"
+lastupdated: "2021-05-11"
 
 keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 
@@ -155,7 +155,7 @@ at query time to delete the key.
         <td><varname>return_preference</varname></td>
         <td><p>A header that alters server behavior for <code>POST</code> and <code>DELETE</code> operations.</p><p>When you set the <em>return_preference</em> variable to <code>return=minimal</code>, the service returns a successful deletion response. When you set the variable to <code>return=representation</code>, the service returns both the key material and the key metadata.</p></td>
       </tr>
-      <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to delete keys with the {{site.data.keyword.hscrypto}} key management API.</caption>
+      <caption>Table 1. Describes the variables that are needed to delete keys with the {{site.data.keyword.hscrypto}} key management API.</caption>
     </table>
 
     If the `return_preference` variable is set to `return=representation`, the details of the `DELETE` request are returned in the response entity-body.
@@ -317,7 +317,7 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
       </td>
     </tr>
 
-    <caption style="caption-side:bottom;">Table 1. Describes the variables that are needed to delete keys with the {{site.data.keyword.hscrypto}} key management API.</caption>
+    <caption>Table 1. Describes the variables that are needed to delete keys with the {{site.data.keyword.hscrypto}} key management API.</caption>
   </table>
 
   If the `return_preference` variable is set to `return=representation`, the details of the `DELETE` request are returned in the response entity-body.

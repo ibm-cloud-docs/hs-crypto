@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-11"
 
 keywords: create key alias, key alias, delete key alias, add key alias, retrieve encryption key by alias, create alias API examples
 
@@ -187,7 +187,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
         </td>
       </tr>
 
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 1. Describes the variables that are needed to create a key alias
         with the {{site.data.keyword.hscrypto}} API.
       </caption>
@@ -350,7 +350,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
         </td>
       </tr>
 
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 2. Describes the variables that are needed to delete a key alias
         with the {{site.data.keyword.hscrypto}} API.
       </caption>

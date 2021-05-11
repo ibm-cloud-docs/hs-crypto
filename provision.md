@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-11"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -110,7 +110,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.
         <td>*resource_group_name*</td>
         <td>The resource group where you organize and manage the instance. You can select the initial resource group that is named `Default` or other groups that you create. For more information, see [Creating and managing resource groups](/docs/account?topic=account-rgs).</td>
       </tr>
-      <caption style="caption-side:bottom;">Table1. Describes command variables to set the target region and resource group</caption>
+      <caption>Table 1. Describes command variables to set the target region and resource group</caption>
     </table>
 
 4. Run the following command to create a {{site.data.keyword.hscrypto}} instance:
@@ -148,7 +148,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.
         <p>If you set the value to **private-only**, you can access your service instance only through private network using CLI or API. The {{site.data.keyword.cloud_notm}} console is not available for the private-only network access.</p>
         <p>After you provision the service instance, you can still [update the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies).</p></td>
       </tr>
-      <caption style="caption-side:bottom;">Table2. Describes command variables to create a {{site.data.keyword.hscrypto}} service instance</caption>
+      <caption>Table 2. Describes command variables to create a {{site.data.keyword.hscrypto}} service instance</caption>
     </table>
 
     A private instance accepts API requests through only the private endpoints. The private endpoints are only accessible when your {{site.data.keyword.cloud_notm}} account, along with all associated resources, is enabled with [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint). You cannot access your private only instance through the CLI or API if your server or machine is outside the {{site.data.keyword.cloud_notm}} network.

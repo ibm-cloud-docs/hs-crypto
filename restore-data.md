@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-07-21"
+  years: 2019, 2021
+lastupdated: "2021-05-11"
 
 keywords: disaster recovery, restore, recovery, cross region restore, support ticket, support center
 
@@ -54,7 +54,7 @@ To restore a backup to an existing service instance, follow these steps:
       <td>Selected resources (optional)</td>
       <td>Select your {{site.data.keyword.hscrypto}} service instance.</td>
     </tr>
-    <caption style="caption-side:bottom;">Table 1. Describes the fields that are displayed on the <strong>Create a case</strong> page</caption>
+    <caption>Table 1. Describes the fields that are displayed on the <strong>Create a case</strong> page</caption>
   </table>
 
 3. Check the **Email me updates about this issue** box, and click **Continue to review > Create case**.

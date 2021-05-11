@@ -30,7 +30,7 @@ In the event that a key is no longer needed, you can delete and ultimately purge
 
 When you delete a key, the key moves into a [_Destroyed_ state](/docs/hs-crypto?topic=hs-crypto-key-states). Within 30 days after the deletion, the key can still be viewed and restored. After 90 days, the key is automatically purged and you will no longer able to view the key. The data that is associated with the key is also permanently removed from the {{site.data.keyword.hscrypto}} instance. If you want to purge a key before 90 days, you can also do it manually four hours after it is moved into the _Destroyed_ state.
 
-After a key is purged, its associated data can no longer be accessed. As a result, it is not recommended to [destroy resources](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#data-deletion) in production environments unless it is necessary.
+After a key is purged, the associated data can no longer be accessed. As a result, it is not recommended to [destroy resources](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#data-deletion) in production environments unless it is necessary.
 {: important}
 
 The following table lists the time frames in which you can view, restore, and purge the key after you delete a key.
@@ -53,7 +53,7 @@ The following table lists the APIs that you can use to retrieve data related to 
 | [Get a key](/docs/hs-crypto?topic=hs-crypto-retrieve-key)                       | Retrieve key details                                     |
 | [Get key metadata](/docs/hs-crypto?topic=hs-crypto-view-key-details)     | Retrieve key metadata                                    |
 | [Get registrations](/docs/hs-crypto?topic=hs-crypto-view-protected-resources) | Retrieve a list of registrations associated with the key |
-{: caption="Table 2. Lists the API that users can use to view details about a key and its registrations." caption-side="bottom"}
+{: caption="Table 2. Lists the API that users can use to view details about a key and the registrations." caption-side="bottom"}
 
 After a key is purged, you receive a 404 HTTP Not Found error when you call any API methods that use the key ID of a purged key. If you are required to retain any data that is associated to a purged key, such as key metadata, registrations, and policies, for an extended period of time, it is recommended to perform the necessary API or CLI calls to retrieve and store that data in your own storage device.
 {: tip}

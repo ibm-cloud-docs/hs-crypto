@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-11"
 
 keywords: instance settings, service settings, key creation/import, key create policy, key creation/import, key policy
 
@@ -315,7 +315,7 @@ existing value for the omitted field is overwritten by the default value.
         </td>
       </tr>
 
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 1. Describes the variables that are needed to enable
         the key create and import access policy.
       </caption>
@@ -454,7 +454,7 @@ key create and import access policy.
         </td>
       </tr>
 
-      <caption style="caption-side:bottom;">
+      <caption>
         Table 2. Describes the variables that are needed to disable
         the key create and import access policy.
       </caption>
