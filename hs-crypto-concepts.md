@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-12"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -69,17 +69,18 @@ A hardware security module (HSM) is a physical device that safeguards and manage
 ### Crypto units
 {: #crypto-unit-concept}
 
-A crypto unit is a single unit that represents an HSM and the corresponding software stack that is dedicated to the HSM for cryptography. In {{site.data.keyword.hscrypto}}, the following two types of crypto unit are available:
+A crypto unit is a single unit that represents an HSM and the corresponding software stack that is dedicated to the HSM for cryptography. In {{site.data.keyword.hscrypto}}, the following three types of crypto unit are available:
 
 - Operational crypto unit
 
-  When you create a {{site.data.keyword.hscrypto}} instance, the number of crypto units that you specify is the number of operational crypto units. For high availability and disaster recovery, you need to set up at least two operational crypto units that are located in different [availability zones](https://www.ibm.com/cloud/data-centers/){: external} of the same region where your service instance resides. Operatioanl crypto units are used to manage encryption keys and perform cryptographic operations. Each operational crypto unit can manage up to 5000 digital keys.
+  When you create a {{site.data.keyword.hscrypto}} instance, the number of crypto units that you specify is the number of operational crypto units. For high availability and disaster recovery, you need to set up at least two operational crypto units that are located in different [availability zones](https://www.ibm.com/cloud/data-centers/){: external} of the same region where your service instance resides. Operational crypto units are used to manage encryption keys and perform cryptographic operations. Each operational crypto unit can manage up to 5000 digital keys.
 
 - Recovery crypto unit
 
   If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`), two recovery crypto units are automatically assigned to your service instance without extra costs. A recovery crypto unit is used to generate the random master key which is then securely exported to operational crypto units and the other recovery crypto unit to [initialize the service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit).
 
   Recovery crypto units can also be used as backup crypto units that save a copy of the master key value used by the operational crypto units. If the master key is lost or destroyed, you can [recover the master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit) using signed TKE administrative commands.
+
 
 ### Administrators
 {: #admin-concept}

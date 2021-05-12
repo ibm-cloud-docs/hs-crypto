@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2020-11-02"
+  years: 2018, 2021
+lastupdated: "2021-05-12"
 
 keywords: disaster recovery, high availability, ha, dr, recoverablity, availability, failover
 
@@ -46,4 +46,4 @@ Multiple [crypto units](#x9860404){: term} in a service instance are automatical
 ## Cross-region disaster recovery
 {: #cross-region-disaster-recovery}
 
-IBM also performs cross-region backup for your key resources. Your data is automatically backed up in another supported region daily. If a regional disaster that affects all available zones occurs, you need to open a support ticket so that IBM can restore your data in another supported [{{site.data.keyword.cloud_notm}} region](/docs/hs-crypto?topic=hs-crypto-regions) from the backup. And then, you need to manually load your [master key](#x2908413){: term} to your new service instance again. In this process, you're the only person who owns the master key. IBM administrators or any third-party users can't access your data or keys in the backup or the restored service instance. For the detailed instruction, see [Restoring your data from another region](/docs/hs-crypto?topic=hs-crypto-restore-data).
+IBM also performs cross-region backup for your key resources. Your data is automatically backed up in another supported region daily. If a regional disaster that affects all available zones occurs, you need to open a support ticket so that IBM can restore your data in another supported [{{site.data.keyword.cloud_notm}} region](/docs/hs-crypto?topic=hs-crypto-regions) from the backup. And then, you need to manually load your [master key](#x2908413){: term} to your new service instance again. In this process, you're the only person who owns the master key. IBM administrators or any third-party users can't access your data or keys in the backup or the restored service instance. For more information about the recovery process, see [Restoring your data from another region](/docs/hs-crypto?topic=hs-crypto-restore-data).
