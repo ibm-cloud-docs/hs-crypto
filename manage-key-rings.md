@@ -218,7 +218,6 @@ The key rings table contains the following information:
 | Column | Description |
 | ------ | ----------- |
 | Key ring ID   | The unique identifier that you specify when you create the key ring. |
-| Last updated  | The date and time that the key ring was last updated. This field gets updated when the keyring is created or modified.  |
 | Created   | The date and time that the key ring was created. |
 {: caption="Table 3. Describes the columns for the key ring table" caption-side="bottom"}
 
