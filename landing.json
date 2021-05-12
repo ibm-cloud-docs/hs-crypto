@@ -28,10 +28,10 @@
     {
       "title": "IBM Cloud Hyper Protect Crypto Services overview",
       "href": "https://mediacenter.ibm.com/media/1_zxwh6ixm",
-      "thumbnail": "/images/HPCS_overview_video_thumbnail.png"
+      "thumbnail": "/images/hpcs_overview_video_thumbnail.png"
     },
     {
-      "title": "Initializing Hyper Protect Crypto Services with IBM Cloud TKE CLI",
+      "title": "Initializing Hyper Protect Crypto Services with key parts",
       "href": "https://mediacenter.ibm.com/media/0_z5c589ou",
       "thumbnail": "/images/initialize_cli_thumbnail.png"
     },
@@ -41,25 +41,25 @@
       "thumbnail": "/images/smart_card_thumbnail.png"
     },
     {
-      "title": "HPCS and KMIP for VMware on IBM Cloud",
+      "title": "Hyper Protect Crypto Services and KMIP for VMware on IBM Cloud",
       "href": "https://mediacenter.ibm.com/media/0_4wm4bq4s",
       "thumbnail": "/images/vmware_intro_thumbnail.png"
     },
     {
-      "title": "Configuring KMIP in HPCS for key management and distribution",
+      "title": "Configuring KMIP in Hyper Protect Crypto Services for key management and distribution",
       "href": "https://mediacenter.ibm.com/media/1_e5gk6ktn",
       "thumbnail": "/images/vmware_integration_thumbnail.png"
     },
     {
-      "title": "Integrating COS with HPCS",
+      "title": "Integrating Cloud Object Storage with Hyper Protect Crypto Services",
       "href": "https://mediacenter.ibm.com/media/0_mgxwp16v",
       "thumbnail": "/images/cos_integration_thumbnail.png"
     }
   ],
   "section_learn": {
     "developer": "https://developer.ibm.com/components/hyper-protect/",
-    "Marketing page": "https://www.ibm.com/cloud/hyper-protect-crypto",
-    "Resources": "https://ibm-hyper-protect.github.io/"
+    "marketing": "https://www.ibm.com/cloud/hyper-protect-crypto",
+    "resources": "https://ibm-hyper-protect.github.io/"
   },
   "section_updates": {
     "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
