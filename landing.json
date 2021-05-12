@@ -1,7 +1,7 @@
 {
   "title": "IBM Cloud Hyper Protect Crypto Services documentation",
   "lastupdated": "2021-05-12",
-  "introduction": "Find useful information about and links of Hyper Protect Crypto Services.",
+  "introduction": "Find useful information about Hyper Protect Crypto Services.",
   "section_devtools": {
     "api": "/apidocs/hs-crypto",
     "cli": "/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin",
