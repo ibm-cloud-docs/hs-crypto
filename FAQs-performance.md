@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-05-12"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -31,6 +31,7 @@ Read to get answers for questions about {{site.data.keyword.cloud}} {{site.data.
 {: faq}
 
 A {{site.data.keyword.hscrypto}} service instance can hold a maximum of 5000 keys.
+
 
 
 
