@@ -57,6 +57,7 @@
     }
   ],
   "section_learn": {
+    "catalog": "/catalog/services/hyper-protect-crypto-services",
     "developer": "https://developer.ibm.com/components/hyper-protect/",
     "marketing": "https://www.ibm.com/cloud/hyper-protect-crypto",
     "resources": "https://ibm-hyper-protect.github.io/"
