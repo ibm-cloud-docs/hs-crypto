@@ -367,19 +367,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite#initialize-hsm-prerequisite-whats-next)
 
 
-## Initializing service instances using key part files
-{: #sitemap_initializing_service_instances_using_key_part_files}
-
-
-[Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
-
-* [Adding or removing crypto units that are assigned to service instances](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#identify_crypto_units)
-
-* [Loading master keys](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#load-master-keys)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-cli-next)
-
-
 ## Setting up smart cards and the Management Utilities
 {: #sitemap_setting_up_smart_cards_and_the_management_utilities}
 
@@ -419,6 +406,19 @@ Find what you are looking for in the compilation of topics that are available in
 * [Initializing service instances](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit#initialize-hsm-recovery-crypto-unit-steps)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit#initialize-hsm-recovery-crypto-unit-whats-next)
+
+
+## Initializing service instances using key part files
+{: #sitemap_initializing_service_instances_using_key_part_files}
+
+
+[Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+
+* [Adding or removing crypto units that are assigned to service instances](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#identify_crypto_units)
+
+* [Loading master keys](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#load-master-keys)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-cli-next)
 
 
 ## Managing instance policies
@@ -513,11 +513,6 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_managing_master_keys}
 
 
-[Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part)
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-prerequisites)
-* [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-steps)
-* [What's next](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-next)
-
 [Rotating master keys by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards)
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards#rotate-master-key-smart-cards-prerequisites)
 * [Rotating master keys using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards#rotate-master-key-smart-cards-steps)
@@ -526,6 +521,11 @@ Find what you are looking for in the compilation of topics that are available in
 [Rotating master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit)
 * [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit#rotate-master-key-cli-recovery-crypto-unit-steps)
 * [What's next](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit#rotate-master-key-cli-recovery-crypto-unit-next)
+
+[Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part)
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-prerequisites)
+* [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-steps)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-next)
 
 [Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit)
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit#recover-master-key-prerequisites)

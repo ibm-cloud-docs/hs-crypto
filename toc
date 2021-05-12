@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="hs-crypto" category="security" audience="service" href="/docs/hs-crypto?topic=hs-crypto-get-started" console-page="/catalog/services/hyper-protect-crypto-services" product-page="https://www.ibm.com/cloud/hyper-protect-crypto" path="hs-crypto"}
+{: .toc subcollection="hs-crypto" category="security" audience="service" href="/docs/hs-crypto?topic=hs-crypto-get-started" console-page="/catalog/services/hyper-protect-crypto-services" product-page="https://www.ibm.com/cloud/hyper-protect-crypto" href="/docs/hs-crypto" path="hs-crypto"}
 Hyper Protect Crypto Services
 
     {: .navgroup id="learn"}
@@ -71,12 +71,12 @@ Hyper Protect Crypto Services
         initialize-hsm-prerequisite.md
 
         {: topicgroup}
-        Initializing service instances using key parts
-            initialize-hsm-cli.md
+        Initializing service instances using smart cards and the Management Utilities
             prepare-management-utilities.md
             initialize-hsm-management-utilities.md
 
         initialize-hsm-cli-recovery-crypto-unit.md
+        initialize-hsm-cli.md
 
     {: .topicgroup}
     Managing instance policies
@@ -99,9 +99,9 @@ Hyper Protect Crypto Services
 
     {: .topicgroup}
     Managing master keys
-        rotate-master-key-key-files.md
         rotate-master-key-smart-cards.md
         rotate-master-key-recovery-crypto-unit.md
+        rotate-master-key-key-files.md
         recover-master-key.md
 
     {: .topicgroup}
