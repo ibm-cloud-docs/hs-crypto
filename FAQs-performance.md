@@ -34,7 +34,6 @@ A {{site.data.keyword.hscrypto}} service instance can hold a maximum of 5000 key
 
 
 
-
 ## Can I add or remove crypto units after I provision a service instance?
 {: #faq-add-remove-crypto-unit}
 {: faq}

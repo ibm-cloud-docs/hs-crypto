@@ -69,7 +69,7 @@ A hardware security module (HSM) is a physical device that safeguards and manage
 ### Crypto units
 {: #crypto-unit-concept}
 
-A crypto unit is a single unit that represents an HSM and the corresponding software stack that is dedicated to the HSM for cryptography. In {{site.data.keyword.hscrypto}}, the following three types of crypto unit are available:
+A crypto unit is a single unit that represents an HSM and the corresponding software stack that is dedicated to the HSM for cryptography. In {{site.data.keyword.hscrypto}}, the following types of crypto unit are available:
 
 - Operational crypto unit
 
