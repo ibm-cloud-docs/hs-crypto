@@ -28,7 +28,7 @@
     {
       "title": "IBM Cloud Hyper Protect Crypto Services overview",
       "href": "https://mediacenter.ibm.com/media/1_zxwh6ixm",
-      "thumbnail": "/images/hpcs_overview_video_thumbnail.png"
+      "thumbnail": "/images/overview_video_thumbnail.png"
     },
     {
       "title": "Initializing Hyper Protect Crypto Services with key parts",
@@ -57,10 +57,7 @@
     }
   ],
   "section_learn": {
-    "catalog": "/catalog/services/hyper-protect-crypto-services",
-    "developer": "https://developer.ibm.com/components/hyper-protect/",
-    "marketing": "https://www.ibm.com/cloud/hyper-protect-crypto",
-    "resources": "https://ibm-hyper-protect.github.io/"
+    "developer": "https://developer.ibm.com/components/hyper-protect/"
   },
   "section_updates": {
     "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
