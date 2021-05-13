@@ -28,32 +28,32 @@
     {
       "title": "IBM Cloud Hyper Protect Crypto Services overview",
       "href": "https://mediacenter.ibm.com/media/1_zxwh6ixm",
-      "thumbnail": "/images/overview_video_thumbnail.png"
+      "thumbnail": "/images/thumbnail_overview_video.png"
     },
     {
       "title": "Initializing Hyper Protect Crypto Services with key parts",
       "href": "https://mediacenter.ibm.com/media/0_z5c589ou",
-      "thumbnail": "/images/initialize_cli_thumbnail.png"
+      "thumbnail": "/images/thumbnail_initialize_cli.png"
     },
     {
       "title": "Initializing Hyper Protect Crypto Services with smart cards",
       "href": "https://mediacenter.ibm.com/media/1_lo2fmwbb",
-      "thumbnail": "/images/smart_card_thumbnail.png"
+      "thumbnail": "/images/thumbnail_initialize_smart_card.png"
     },
     {
       "title": "Hyper Protect Crypto Services and KMIP for VMware on IBM Cloud",
       "href": "https://mediacenter.ibm.com/media/0_4wm4bq4s",
-      "thumbnail": "/images/vmware_intro_thumbnail.png"
+      "thumbnail": "/images/thumbnail_vmware_intro.png"
     },
     {
       "title": "Configuring KMIP in Hyper Protect Crypto Services for key management and distribution",
       "href": "https://mediacenter.ibm.com/media/1_e5gk6ktn",
-      "thumbnail": "/images/vmware_integration_thumbnail.png"
+      "thumbnail": "/images/thumbnail_vmware_integration.png"
     },
     {
       "title": "Integrating Cloud Object Storage with Hyper Protect Crypto Services",
       "href": "https://mediacenter.ibm.com/media/0_mgxwp16v",
-      "thumbnail": "/images/cos_integration_thumbnail.png"
+      "thumbnail": "/images/thumbnail_cos_integration.png"
     }
   ],
   "section_learn": {
