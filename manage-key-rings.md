@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-05-12"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -28,8 +28,7 @@ subcollection: hs-crypto
 You can use {{site.data.keyword.hscrypto}} to create a group of keys for a target group of users that require the same {{site.data.keyword.iamshort}} (IAM) access permissions.
 {: shortdesc}
 
-As an account admin, you can bundle the keys in your {{site.data.keyword.hscrypto}} instance into groups called _key rings_. A key ring is a collection of keys in your service instance that require the same IAM access permissions. For example, if you have a group of team members who need a particular type of access to a specific group of keys, you can create a key ring for those
-keys and assign the appropriate IAM access policy to the target user group. The users that are assigned access to the key ring can create and manage the resources that exist within the key ring.
+As an account admin, you can bundle the keys in your {{site.data.keyword.hscrypto}} instance into groups called _key rings_. A key ring is a collection of keys in your service instance that require the same IAM access permissions. For example, if you have a group of team members who need a particular type of access to a specific group of keys, you can create a key ring for those keys and assign the appropriate IAM access policy to the target user group. The users that are assigned access to the key ring can create and manage the resources that exist within the key ring.
 
 Key rings are also useful in cases where it is important for one business unit to have access to a set of keys that another business unit cannot have. An account admin can create key rings for each business unit and [assign the appropriate level of access](#grant-access-key-ring) to the appropriate users. In the case where the account admin would like to delegate platform management of a specific key ring to someone else, they can assign a user a [platform administrator role at the key ring level](/docs/account?topic=account-userroles#platformroles). The sub administrator will then have the ability to manage the key ring and grant access to the appropriate users.
 
@@ -50,10 +49,12 @@ Before you create a key ring for your {{site.data.keyword.hscrypto}} instance, k
 
   A key can only belong to one key ring. Key ring assignment happens upon key creation. If a key ring ID is not passed in upon creation, the key will belong to the default key ring. You can update the key ring after the key creation.
 
+
 ## Creating key rings
 {: #create-key-ring}
 
 Before you can group keys into a key ring, you need to create a key ring first. You can use either the console or the key management API to create a key ring.
+
 
 
 ### Creating key rings with the console
@@ -217,7 +218,6 @@ The key rings table contains the following information:
 | Column | Description |
 | ------ | ----------- |
 | Key ring ID   | The unique identifier that you specify when you create the key ring. |
-| Last updated  | The date and time that the key ring was last updated. This field gets updated when the keyring is created or modified.  |
 | Created   | The date and time that the key ring was created. |
 {: caption="Table 3. Describes the columns for the key ring table" caption-side="bottom"}
 
