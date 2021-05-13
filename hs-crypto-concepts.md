@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-12"
+lastupdated: "2021-05-13"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -73,7 +73,7 @@ A crypto unit is a single unit that represents an HSM and the corresponding soft
 
 - Operational crypto unit
 
-  When you create a {{site.data.keyword.hscrypto}} instance, the number of crypto units that you specify is the number of operational crypto units. For high availability and disaster recovery, you need to set up at least two operational crypto units that are located in different [availability zones](https://www.ibm.com/cloud/data-centers/){: external} of the same region where your service instance resides. Operational crypto units are used to manage encryption keys and perform cryptographic operations. Each operational crypto unit can manage up to 5000 digital keys.
+  When you create a {{site.data.keyword.hscrypto}} instance, the number of crypto units that you specify is the number of operational crypto units. For high availability and disaster recovery, you need to set up at least two operational crypto units in different [availability zones](https://www.ibm.com/cloud/data-centers/){: external} of the same region where your service instance resides. Operational crypto units are used to manage encryption keys and perform cryptographic operations. Each operational crypto unit can manage up to 5000 digital keys.
 
 - Recovery crypto unit
 
