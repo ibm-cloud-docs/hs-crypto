@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-05-17"
 
 keywords: get details for a key, get key configuration, get details, view encryption key details, view encryption key, retrieve encryption key details, API examples
 
@@ -154,7 +154,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID_or_alias
         </td>
         <td>
           <p>
-            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore recommended to specify the key ring ID for a more optimized request.
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore suggested to specify the key ring ID for a more optimized request.
           </p>
           <p>
             Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.

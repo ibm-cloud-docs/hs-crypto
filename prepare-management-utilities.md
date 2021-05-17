@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-17"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -222,7 +222,7 @@ To create and initialize a certificate authority smart card, follow these steps:
 
 The certificate authority is created.
 
-It is recommended to create a backup copy of your certificate authority smart card. You can create a backup copy by clicking **CA Smart Card** &gt; **Backup CA smart card**.
+It is suggested to create a backup copy of your certificate authority smart card. You can create a backup copy by clicking **CA Smart Card** &gt; **Backup CA smart card**.
 {: important}
 
 ### Initializing the EP11 smart card

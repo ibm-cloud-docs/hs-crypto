@@ -33,7 +33,7 @@ If you are a manager for your {{site.data.keyword.cloud}} {{site.data.keyword.hs
 When you delete a key, you shred the contents and associated data. Any data that
 is encrypted by the key becomes inaccessible. Only imported root keys can be restored after deletion.
 [Destroying resources](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#data-deletion)
-is not recommended for production environments, but might be useful for
+is not suggested for production environments, but might be useful for
 temporary environments such as testing or QA.
 {: important}
 
@@ -140,7 +140,7 @@ at query time to delete the key.
         </td>
         <td>
           <p>
-            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. Therefore, it is recommended to specify the key ring ID for a more optimized request.
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request.
           </p>
           <p>
             Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is `default`.
@@ -296,7 +296,7 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
       </td>
       <td>
         <p>
-          <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. Therefore, it is recommended to specify the key ring ID for a more optimized request.
+          <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request.
         </p>
         <p>
           Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is default.
