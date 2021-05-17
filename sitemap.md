@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-13"
+lastupdated: "2021-05-17"
 
 keywords: site map, doc structure, information architecture
 
@@ -670,12 +670,12 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_deleting_keys}
 
 
-[Deleting keys with a single authorization](/docs/hs-crypto?topic=hs-crypto-delete-keys)
+[Deleting keys by using a single authorization](/docs/hs-crypto?topic=hs-crypto-delete-keys)
 * [Deleting keys with the console](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-keys-gui)
 * [Deleting keys with the API](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-keys-api)
 * [What's next](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-key-next)
 
-[Deleting keys using dual authorization](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys)
+[Deleting keys by using dual authorization](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys)
 * [Considerations for deleting a key using dual authorization](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#dual-auth-deletion-considerations)
 * [Authorize deletion for a key with the console](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#set-key-deletion-console)
 * [Authorize deletion for a key with the API](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#set-key-deletion-api)

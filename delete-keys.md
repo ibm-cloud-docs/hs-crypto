@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-05-17"
 
 keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 
@@ -24,7 +24,7 @@ subcollection: hs-crypto
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Deleting keys with a single authorization
+# Deleting keys by using a single authorization
 {: #delete-keys}
 
 If you are a manager for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance, you can use {{site.data.keyword.hscrypto}} to delete root keys or standard keys and the contents.

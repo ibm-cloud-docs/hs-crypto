@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-05-17"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -22,7 +22,7 @@ subcollection: hs-crypto
 {:preview: .preview}
 {:term: .term}
 
-# Deleting keys using dual authorization
+# Deleting keys by using dual authorization
 {: #delete-dual-auth-keys}
 
 You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to safely delete root keys or standard keys by using a dual authorization process.
