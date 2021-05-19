@@ -37,12 +37,12 @@ To mitigate risk of stolen private keys, cloud users store the private key of th
 With {{site.data.keyword.hscrypto}}, you have two options to encrypt your workloads:
 
 * Using the key management service
-  With the key management service provided, you can benefit from envelope encryption to protect your keys. Envelope encryption is the practice of encrypting data with a data encryption key (DEK) and then wrapping the DEK with a root key that you can fully manage. The root keys in {{site.data.keyword.hscrypto}} instance are also wrapped and protected by the master key that is protected in the hardware security module (HSM) of the {{site.data.keyword.hscrypto}} instance. By leveraging the key management service, your regulated workloads are protected with the envelope encryption machanism.
+  With the key management service provided, you can benefit from envelope encryption to protect your keys. Envelope encryption is the practice of encrypting data with a data encryption key (DEK) and then wrapping the DEK with a root key that you can fully manage. The root keys in {{site.data.keyword.hscrypto}} instance are also wrapped and protected by the master key that is protected in the hardware security module (HSM) of the {{site.data.keyword.hscrypto}} instance. By leveraging the key management service, your regulated workloads are protected with the envelope encryption mechanism.
 
   For more information about the key management service, see [Bringing your encryption keys to the cloud](/docs/hs-crypto?topic=hs-crypto-importing-keys) and [Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
 .
 * Using the GREP11 and PKCS #11 APIs
-  {{site.data.keyword.hscrypto}} provides a set of cryptographic functions that are executed in the cloud HSM. You can perform cryptographic operations such as key generation, data encryption, and signature verification. To do so, you can access the cloud HSM with either the PKCS #11 API or the Enterprise PKCS #11 over gRPC (GREP11) API. These operations ensure that your private keys and data are protected by the HSM that meets the regulatory requirements.
+  {{site.data.keyword.hscrypto}} provides a set of cryptographic functions that are run in the cloud HSM. You can perform cryptographic operations such as key generation, data encryption, and signature verification. To do so, you can access the cloud HSM with either the PKCS #11 API or the Enterprise PKCS #11 over gRPC (GREP11) API. These operations ensure that your private keys and data are protected by the HSM that meets the regulatory requirements.
 
   Both the PKCS #11 API and the GREP11 API access the EP11 library that is enabled by the {{site.data.keyword.hscrypto}} cloud HSM to execute cryptographic functions. Comparing with the GREP11 API, the implementation of the standard PKCS #11 API enables portable applications and provides a wider range of cryptographic operations.
 
@@ -56,7 +56,7 @@ The following use cases show how {{site.data.keyword.hscrypto}} can work with ot
 ### Managing VMware regulated workloads with {{site.data.keyword.hscrypto}}
 {: #vmware-regulated-workloads}
 
-VMware vSphere® encryption is the tool the {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads relies upon to secure management and production virtual machines while at-rest or in-transit. {{site.data.keyword.hscrypto}} through the Key Management Interoperability Protocol (KMIP) on the {{site.data.keyword.cloud_notm}} is the KMS required for the vCenter. {{site.data.keyword.hscrypto}} is a mandatory service. On-premises key management service integration is possible through {{site.data.keyword.hscrypto}}.
+VMware vSphere® encryption is the tool the {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads relies on to secure management and production virtual machines while at-rest or in-transit. {{site.data.keyword.hscrypto}} through the Key Management Interoperability Protocol (KMIP) on the {{site.data.keyword.cloud_notm}} is the KMS required for the vCenter. {{site.data.keyword.hscrypto}} is a mandatory service. On-premises key management service integration is possible through {{site.data.keyword.hscrypto}}.
 
 For more information about how the encryption works, see [the VMware reference doc](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-encryption).
 
