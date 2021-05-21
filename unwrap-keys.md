@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-05-17"
 
 keywords: data encryption key, key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, unwrap api
 
@@ -92,7 +92,7 @@ Root keys that contain the same key material can unwrap the same data encryption
         </td>
         <td>
           <p>
-            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. It is recommended to specify the key ring ID for a more optimized request.
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. It is suggested to specify the key ring ID for a more optimized request.
           </p>
           <p>
             Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.

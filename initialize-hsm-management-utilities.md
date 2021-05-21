@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-21"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, smart card, trusted key entry application, tke application, management utilities
 
@@ -76,7 +76,7 @@ Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start
 
   To create more master key parts, repeat this step.
 
-  You need to generate at least two master key parts to load a master key. For added security, it is recommended to generate three master key parts. To improve security, you can choose to generate signature keys and master key parts on separate smart cards and assign each smart card to a different person. For more information, see [Smart card setup recommendations](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup).
+  You need to generate at least two master key parts to load a master key. For added security, it is suggested to generate three master key parts. To improve security, you can choose to generate signature keys and master key parts on separate smart cards and assign each smart card to a different person. For more information, see [Smart card setup recommendations](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup).
   {: important}
 
 3. (Optional) If you want to create a backup copy of an EP11 smart card, click **Copy smart card** on the **Smart card** tab and follow the prompts.
@@ -95,6 +95,8 @@ For more information about how to retrieve your service instance ID, see [Retrie
 
 When the operations are done, `true` is displayed in the SELECTED column for each crypto unit that is to be affected by later commands. If more than one crypto unit is assigned to a service instance, all crypto units in the service instance must be configured the same.
 
+
+
 ### Step 3: Add administrators to the selected crypto units
 {: #step3-add-administrator-management-utilities}
 
@@ -110,7 +112,7 @@ For security and compliance reasons, the administrator name of the crypto unit m
 {: note}
 
 Repeat this step if you want to add multiple administrators. The number of administrators that are added must be equal to or greater than the larger of the following values:
-* The [signature threshold](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept) value. The signature threshold controls how many signatures are needed to run most administrative commands.  
+* The [signature threshold](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept) value. The signature threshold controls how many signatures are needed to run most administrative commands.
 * The revocation signature threshold value that you intend to set in Step 4. The revocation signature threshold controls how many signatures are needed to remove an administrator.
 
 Do not remove the administrator signature keys from your smart cards. Otherwise, you are not able to perform TKE actions that need to be signed, such as zeroizing crypto units and rotating master keys.

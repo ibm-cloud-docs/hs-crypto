@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-17"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -56,7 +56,7 @@ on {{site.data.keyword.cloud_notm}}. As an added level of protection, the key ob
 
 Every symmetric key that is generated, derived, or unwrapped contains a digital fingerprint that is stored in a key attribute called CKA_CHECK_VALUE. This attribute is a 3-byte checksum for the key object itself.
 
-After you generate, derive, or unwrap a key object, it is recommended that you store the initial checksum value (contents of the CKA_CHECK_VALUE attribute) along with any unique identifiers of the key object separately. The separately stored checksums can then be used to verify whether keys are tampered with or not.
+After you generate, derive, or unwrap a key object, it is suggested that you store the initial checksum value (contents of the CKA_CHECK_VALUE attribute) along with any unique identifiers of the key object separately. The separately stored checksums can then be used to verify whether keys are tampered with or not.
 
 To verify a key, perform an electronic codebook (ECB) encryption operation of a single block of null (0x00) bytes by using the key to be verified. If the first 3 bytes of the resulting cipher is identical to the value of the CKA_CHECK_VALUE key attribute that is stored locally for the same key, it indicates that the key object is not tampered with. The CKA_CHECK_VALUE key attribute cannot be used to obtain any part of the key value.
 

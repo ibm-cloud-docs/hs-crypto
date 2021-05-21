@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-17"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -367,7 +367,7 @@ For more information, see [High availability and disaster recovery](/docs/hs-cry
 ### Scalability
 {: #scalability-new}
 
-The service instance can be scaled out to a maximum of six crypto units to meet your performance requirement. Each crypto unit can crypto-process 5000 keys. In a production environment, it is recommended to select at least two crypto units to enable high availability. By selecting three or more crypto units, these crypto units are distributed among three availability zones in the selected region.
+The service instance can be scaled out to a maximum of six crypto units to meet your performance requirement. Each crypto unit can crypto-process 5000 keys. In a production environment, it is suggested to select at least two crypto units to enable high availability. By selecting three or more crypto units, these crypto units are distributed among three availability zones in the selected region.
 
 Read [Provisioning the service](/docs/hs-crypto?topic=hs-crypto-provision) for more information.
 

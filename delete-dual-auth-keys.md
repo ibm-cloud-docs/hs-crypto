@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-05-17"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -22,7 +22,7 @@ subcollection: hs-crypto
 {:preview: .preview}
 {:term: .term}
 
-# Deleting keys using dual authorization
+# Deleting keys by using dual authorization
 {: #delete-dual-auth-keys}
 
 You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to safely delete root keys or standard keys by using a dual authorization process.
@@ -30,7 +30,7 @@ You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to safely
 
 
 When you delete an encryption key, you shred the contents and associated data. Any data that is encrypted by the key becomes inaccessible. Only imported root keys can be restored after deletion.
-[Destroying resources](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#data-deletion) is not recommended for production environments, but might be useful for temporary environments such as testing or QA.
+[Destroying resources](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#data-deletion) is not suggested for production environments, but might be useful for temporary environments such as testing or QA.
 {: important}
 
 Keep in mind the following considerations before you delete a key:
