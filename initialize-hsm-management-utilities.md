@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-17"
+lastupdated: "2021-05-21"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, smart card, trusted key entry application, tke application, management utilities
 
@@ -94,6 +94,8 @@ For more information about how to retrieve your service instance ID, see [Retrie
 - To remove crypto units from the set you're going to work with, click **Remove crypto units** and enter the CRYPTO UNIT NUM of the crypto units you want to remove. You can enter multiple crypto unit numbers, which are separated by a space.
 
 When the operations are done, `true` is displayed in the SELECTED column for each crypto unit that is to be affected by later commands. If more than one crypto unit is assigned to a service instance, all crypto units in the service instance must be configured the same.
+
+
 
 ### Step 3: Add administrators to the selected crypto units
 {: #step3-add-administrator-management-utilities}

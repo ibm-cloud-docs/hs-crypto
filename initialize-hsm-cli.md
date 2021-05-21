@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-21"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -70,7 +70,7 @@ Before you start the instance initialization, make sure that you complete [the p
 ## Adding or removing crypto units that are assigned to service instances
 {: #identify_crypto_units}
 
-[Crypto units](#x9860404){: term} that are assigned to an {{site.data.keyword.cloud_notm}} user account are in groups that are known as service instances. A service instance can have up to six crypto units. All crypto units in a service instance need to be configured the same. If one part of the {{site.data.keyword.cloud_notm}} can't be accessed, the crypto units in a service instance can be used interchangeably for load balancing or for availability.
+Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user account are in groups that are known as service instances. A service instance can have up to six [operational crypto units](/docs/hs-crypto?topic=hs-crypto-understand-concepts#crypto-unit-concept). All crypto units in a service instance need to be configured the same. If one availability zone in the region where your instance is located can't be accessed, the operational crypto units can be used interchangeably for load balancing or for high availability.
 
 Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start in a cleared state that is known as [imprint mode](#x9860399){: term}.
 
@@ -106,7 +106,7 @@ The master key registers in all crypto units in a single service instance must b
   {: pre}
 
   A list of the crypto units in the target resource group under the current user account is displayed. When prompted, enter a list of crypto unit numbers to be added to the selected crypto unit list.
-
+  
   If you are using a public network, crypto units that are associated with service instances with the network policy set to `private-only` are not to be listed. You can access private-only crypto units only through a private network. For more information about setting up a private-only connection, see [Target the private endpoint for the TKE plug-in](/docs/hs-crypto?topic=hs-crypto-secure-connection#target-tke-private-endpoint).
   {: note}
 
