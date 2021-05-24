@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-21"
+lastupdated: "2021-05-24"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -84,20 +84,21 @@ The master key registers in all crypto units in a single service instance must b
   {: pre}
 
   The following output is an example that is displayed. The SELECTED column in the output table identifies the crypto units that are targeted by later administrative commands that are issued by the TKE CLI plug-in.
-
+  
+  
   ```
   SERVICE INSTANCE: 482cf2ce-a06c-4265-9819-0b4acf54f2ba
-  CRYPTO UNIT NUM   SELECTED   LOCATION
-  1                 true       [us-south].[AZ3-CS3].[02].[03]
-  2                 true       [us-south].[AZ2-CS2].[02].[03]
+  CRYPTO UNIT NUM   SELECTED    LOCATION
+  1                 false       [us-south].[AZ3-CS3].[02].[03]
+  2                 false       [us-south].[AZ2-CS2].[02].[03]
 
   SERVICE INSTANCE: 96fe3f8d-9792-45bc-a9fb-2594222deaf2
-  CRYPTO UNIT NUM   SELECTED   LOCATION
-  3                 true       [us-south].[AZ1-CS4].[00].[03]
-  4                 true       [us-south].[AZ2-CS5].[03].[03]
+  CRYPTO UNIT NUM   SELECTED    LOCATION
+  5                 false       [us-south].[AZ1-CS4].[00].[03]
+  6                 false       [us-south].[AZ2-CS5].[03].[03]
   ```
   {: screen}
-
+  
 * To add extra crypto units to the selected crypto unit list, use the following command:
   {: #identify_crypto_units2}
   ```
