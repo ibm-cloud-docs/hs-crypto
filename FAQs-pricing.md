@@ -43,11 +43,10 @@ The following example is for your reference. If you want to crypto-process 5000 
 |-----|----------------|
 | Operational crypto unit 1 | $1560 |
 | Operational crypto unit 2 | $1560 |
-| Failover crypto unit 1 | $1560 |
 | First 1,000,000 API calls | $0 |
 | 2,000,000 extra API calls| $2 ($0.01 x 200) |
 | End of month charge   | $3122  |
-{: caption="Table 1. A billing example of 2 operational with monthly API calls of 3,000,000 in total" caption-side="bottom"}
+{: caption="Table 1. A billing example of 2 operational crypto units with monthly API calls of 3,000,000 in total" caption-side="bottom"}
 
 ## Is there a free trial for {{site.data.keyword.hscrypto}}?
 {: #faq-free-trial}

@@ -94,8 +94,8 @@ The master key registers in all crypto units in a single service instance must b
 
   SERVICE INSTANCE: 96fe3f8d-9792-45bc-a9fb-2594222deaf2
   CRYPTO UNIT NUM   SELECTED    LOCATION
-  5                 false       [us-south].[AZ1-CS4].[00].[03]
-  6                 false       [us-south].[AZ2-CS5].[03].[03]
+  3                 false       [us-south].[AZ1-CS4].[00].[03]
+  4                 false       [us-south].[AZ2-CS5].[03].[03]
   ```
   {: screen}
   
