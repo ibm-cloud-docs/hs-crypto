@@ -34,7 +34,7 @@ When you use the {{site.data.keyword.hscrypto}} user interface or REST API, you'
 From the {{site.data.keyword.cloud_notm}} dashboard, you select your instance of the {{site.data.keyword.hscrypto}} service.
 {: tsSymptoms}
 
-You're assigned a _Manager_ access policy for the service instance. You try to delete a key, but the action fails with either of the following two error messages.
+You're assigned a _Manager_ access policy for the service instance. You try to delete a key, but the action fails with either of the following 2 error messages.
 
 Error message 1:
 
@@ -46,17 +46,22 @@ Conflict: Key could not be deleted. Status: 409, Correlation ID: 160cc463-71d1-4
 Error message 2:
 
 ```
-The service was not able to delete key "<key_name>. Because the key is enabled with the dual authorization policy and you set the key for deletion, a second approver needs to continue with the key deletion operation.
+The service was not able to delete key "<key_name>". Because the key is enabled with the dual authorization policy and you set the key for deletion, a second approver needs to continue with the key deletion operation.
 ```
 {: screen}
 
 The following reasons cause the errors:
 {: tsCauses}
 
-- If you encounter the first error message, this key is actively protecting one or more cloud resources, such as a Cloud Object Storage bucket.
-- If you encounter the second error message, this key is enabled with the dual authorization policy that requires a deletion authorization from two users. You set the key for deletion and you need to contact the second approver to complete the deletion.
+- Error message 1:
 
-See the following instructions to solve the errors:
+  This key is actively protecting one or more cloud resources, such as a Cloud Object Storage bucket.
+
+- Error message 2:
+
+  This key is enabled with the dual authorization policy that requires a deletion authorization from two users. You set the key for deletion and you need to contact the second approver to complete the deletion.
+
+See the following instructions to solve the problems:
 {: tsResolve}
 
 - Error message 1:
