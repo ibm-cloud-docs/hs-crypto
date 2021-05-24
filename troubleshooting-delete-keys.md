@@ -36,19 +36,19 @@ From the {{site.data.keyword.cloud_notm}} dashboard, you select your instance of
 
 You're assigned a _Manager_ access policy for the service instance. You try to delete a key, but the action fails with either of the following 2 error messages.
 
-Error message 1:
+- Error message 1:
 
-```
-Conflict: Key could not be deleted. Status: 409, Correlation ID: 160cc463-71d1-4b30-a5f2-d3f7e9f2b75e
-```
-{: screen}
+  ```
+  Conflict: Key could not be deleted. Status: 409, Correlation ID: 160cc463-71d1-4b30-a5f2-d3f7e9f2b75e
+  ```
+  {: screen}
 
-Error message 2:
+- Error message 2:
 
-```
-The service was not able to delete key "<key_name>". Because the key is enabled with the dual authorization policy and you set the key for deletion, a second approver needs to continue with the key deletion operation.
-```
-{: screen}
+  ```
+  The service was not able to delete key "<key_name>". Because the key is enabled with the dual authorization policy and you set the key for deletion, a second approver needs to continue with the key deletion operation.
+  ```
+  {: screen}
 
 The following reasons cause the errors:
 {: tsCauses}
