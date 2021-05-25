@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-19"
+lastupdated: "2021-05-25"
 
 keywords: regulated workloads, FS Cloud, IBM Cloud for Financial Services, FS Cloud use cases
 
@@ -51,7 +51,7 @@ With {{site.data.keyword.hscrypto}}, you have two options to encrypt your worklo
 ## Regulated workloads use cases
 {: #regulated-workloads-use-cases}
 
-The following use cases show how {{site.data.keyword.hscrypto}} can work with other {{site.data.keyword.cloud_notm}} services to manage your regulated workloads. For a complete list of {site.data.keyword.cloud_notm} services that can integrate with {{site.data.keyword.hscrypto}}, see [Integrating IBM Cloud services with Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-integrate-services). 
+The following use cases show how {{site.data.keyword.hscrypto}} can work with other {{site.data.keyword.cloud_notm}} services to manage your regulated workloads. For a complete list of {{site.data.keyword.cloud_notm}} services that can integrate with {{site.data.keyword.hscrypto}}, see [Integrating IBM Cloud services with Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-integrate-services). 
 
 ### Managing VMware regulated workloads with {{site.data.keyword.hscrypto}}
 {: #vmware-regulated-workloads}
