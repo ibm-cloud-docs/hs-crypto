@@ -53,9 +53,9 @@ You're assigned a _Manager_ access policy for the service instance. You try to d
 The following reasons might cause the errors:
 {: tsCauses}
 
-- If you see error message 1, this key is actively protecting one or more cloud resources, such as a Cloud Object Storage bucket.
+- If error message 1 is displayed, this key is actively protecting one or more cloud resources, such as a Cloud Object Storage bucket.
 
-- If you see error message 2, this key is enabled with the dual authorization policy that requires a deletion authorization from two users. You set the key for deletion and you need to contact the second approver to complete the deletion.
+- If error message 2 is displayed, this key is enabled with the dual authorization policy that requires a deletion authorization from two users. You set the key for deletion and you need to contact the second approver to complete the deletion.
 
 The following instructions can help you solve the problems:
 {: tsResolve}
