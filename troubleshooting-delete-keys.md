@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-25"
+lastupdated: "2021-05-26"
 
 keywords: troubleshoot, problems, known issues, can't delete keys
 
@@ -28,7 +28,7 @@ subcollection: hs-crypto
 {: #troubleshoot-unable-to-delete-keys}
 {: troubleshoot}
 
-When you use the {{site.data.keyword.hscrypto}} user interface or REST API, you're unable to delete a key.
+When you use the {{site.data.keyword.hscrypto}} user interface, you're unable to delete a key.
 {:shortdesc}
 
 From the {{site.data.keyword.cloud_notm}} dashboard, you select your instance of the {{site.data.keyword.hscrypto}} service.
@@ -39,7 +39,7 @@ You're assigned a _Manager_ access policy for the service instance. You try to d
 - Error message 1:
 
   ```
-  Conflict: Key could not be deleted. Status: 409, Correlation ID: 160cc463-71d1-4b30-a5f2-d3f7e9f2b75e
+  The service was not able to delete key "<key_name>". The key cannot be deleted because it is protecting one or more cloud resources that have a retention policy.
   ```
   {: screen}
 
