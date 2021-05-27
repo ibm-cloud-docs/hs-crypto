@@ -187,7 +187,7 @@ Hyper Protect Crypto Services
     {: .topicgroup}
     Key management service reference
         [Key management API reference](https://{DomainName}/apidocs/hs-crypto)
-        [Key management CLI reference](https://{DomainName}/docs/key-protect?topic=key-protect-cli-reference)
+        [Key management CLI reference](https://{DomainName}/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference)
 
     {: .topicgroup}
     Cloud hardware security module reference

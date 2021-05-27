@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-26"
+lastupdated: "2021-05-27"
 
 keywords: site map, doc structure, information architecture
 
@@ -892,7 +892,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Key management API reference](https://{DomainName}/apidocs/hs-crypto){: external}
 
-[Key management CLI reference](https://{DomainName}/docs/key-protect?topic=key-protect-cli-reference){: external}
+[Key management CLI reference](https://{DomainName}/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference){: external}
 
 
 ## Cloud hardware security module reference

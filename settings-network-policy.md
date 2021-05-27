@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-05-27"
 
 keywords: instance settings, service settings, network access policies
 
@@ -189,7 +189,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
 ## Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the CLI
 {: #update-network-access-policy-cli}
 
-You can also update the network access policy for your {{site.data.keyword.hscrypto}} instance using the CLI. For more information, see [the CLI reference](/docs/key-protect?topic=key-protect-cli-reference#kp-instance-policy-update-allowed){: external}.
+You can also update the network access policy for your {{site.data.keyword.hscrypto}} instance using the CLI. For more information, see [the CLI reference](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference#kp-instance-policy-update-allowed){: external}.
 
 ## Disabling the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management API
 {: #disable-network-access-policy-api}
