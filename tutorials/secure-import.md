@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-28"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -423,7 +423,7 @@ To import the key:
   * **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
 
     ```
-    ibmcloud kp key create new-imported-key --key-material ${ENCRYPTED_KEY} --encrypted-nonce ${ENCRYPTED_NONCE} --iv ${IV} > createRootKeyResponse.json
+    ibmcloud kp key create new-imported-key --key-material "${ENCRYPTED_KEY}" --encrypted-nonce "${ENCRYPTED_NONCE}" --iv "${IV}" --encryption-algorithm RSAES_OAEP_SHA_1 > createRootKeyResponse.json
     ```
     {: pre}
 
