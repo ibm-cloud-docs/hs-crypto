@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-05-27"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -232,7 +232,7 @@ Complete the following steps to import root keys using the {{site.data.keyword.k
     ```
     {: pre}
 
-    You can find more parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-reference#kp-key-create).
+    You can find more parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference#kp-key-create).
 
 ## Base64 encoding your key material
 {: #encode-key-material-root-key}
@@ -330,4 +330,4 @@ When importing an existing root key, it is required to include the encrypted key
 - To find out more about protecting keys with envelope encryption, check out [Wrapping keys](/docs/hs-crypto?topic=hs-crypto-wrap-keys).
 - To find out instruction on creating a key, check out [Creating root keys](/docs/hs-crypto?topic=hs-crypto-create-root-keys) or [Creating standard keys](/docs/hs-crypto?topic=hs-crypto-create-standard-keys).
 - To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
-- To find out more about using the {{site.data.keyword.keymanagementserviceshort}} CLI, check out the [{{site.data.keyword.keymanagementserviceshort}} CLI reference doc](/docs/key-protect?topic=key-protect-cli-reference).
+- To find out more about using the {{site.data.keyword.keymanagementserviceshort}} CLI, check out the [{{site.data.keyword.keymanagementserviceshort}} CLI reference doc](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference).

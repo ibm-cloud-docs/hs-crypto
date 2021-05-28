@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-05-27"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -46,20 +46,18 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
 4. From the list of services displayed, click the **{{site.data.keyword.hscrypto}}** tile.
 5. Fill in the form with the details that are required.
 
-  1. Select a [region](/docs/hs-crypto?topic=hs-crypto-regions) that you want to create your {{site.data.keyword.hscrypto}} resources in.
+  - Under **Region**, select a [region](/docs/hs-crypto?topic=hs-crypto-regions) that you want to create your {{site.data.keyword.hscrypto}} resources in.
 
     Currently, the `us-south` and `us-east` regions are enabled with recovery crypto units by default, which means, when a service instance is provisioned in either regions, you are enabled with the option to back up your master keys in the recovery crypto units located in both regions. For details, see [Introducing service instance initialization modes](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit).
-  2. Under **Service name**, enter a name for your service instance.
-  3. Under **Select a resource group**, select the resource group where you want to organize and manage your service intance. You can select the initial resource group that is named `Default` or other groups that you create. For more information, see [Creating and managing resource groups](/docs/account?topic=account-rgs).
-  4. **Optional**: In the **Tags** field, add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/account?topic=account-tag).
-  5. Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs.
+  - Under **Service name**, enter a name for your service instance.
+  - Under **Select a resource group**, select the resource group where you want to organize and manage your service intance. You can select the initial resource group that is named `Default` or other groups that you create. For more information, see [Creating and managing resource groups](/docs/account?topic=account-rgs).
+  - Under **Tags** (Optional), add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/account?topic=account-tag).
+  - Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs.
 
     At least two crypto units are to be enabled for high availability. These crypto units are distributed among different supported availability zones in the selected region.
     {: note}
-
   
-
-  6. Under **Allowed network**, choose the network access to your service instance:
+  - Under **Allowed network**, choose the network access to your service instance:
 
     * **Public and private**: Manage your instance through both public and private network using the {{site.data.keyword.cloud_notm}} console, CLI, or API. This is the default option.
     * **Private only**: Access your service instance only through private network using CLI or API. The {{site.data.keyword.cloud_notm}} console is not available for the private-only network access.
@@ -69,6 +67,8 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
 
   After you provision the service instance, you can still [update the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies).
   {: tip}
+
+  
 
 6. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 

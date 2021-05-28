@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-05-28"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -421,11 +421,12 @@ To import the key:
     {: tip}
 
   * **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
-
+    
     ```
     ibmcloud kp key create new-imported-key --key-material ${ENCRYPTED_KEY} --encrypted-nonce ${ENCRYPTED_NONCE} --iv ${IV} > createRootKeyResponse.json
     ```
     {: pre}
+    
 
   Behind the scenes, {{site.data.keyword.hscrypto}} receives your encrypted packet over a TLS 1.2 connection. Within a hardware security module, the system uses the private key to decrypt the symmetric key. Finally, the system uses the symmetric key and the IV to decrypt the nonce and verify the request. Your key is now stored in a tamper-resistant, FIPS 140-2 Level 4 validated hardware security module.
 
