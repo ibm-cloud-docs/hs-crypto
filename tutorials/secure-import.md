@@ -421,11 +421,12 @@ To import the key:
     {: tip}
 
   * **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
-
+    
     ```
-    ibmcloud kp key create new-imported-key --key-material "${ENCRYPTED_KEY}" --encrypted-nonce "${ENCRYPTED_NONCE}" --iv "${IV}" --encryption-algorithm RSAES_OAEP_SHA_1 > createRootKeyResponse.json
+    ibmcloud kp key create new-imported-key --key-material ${ENCRYPTED_KEY} --encrypted-nonce ${ENCRYPTED_NONCE} --iv ${IV} > createRootKeyResponse.json
     ```
     {: pre}
+    
 
   Behind the scenes, {{site.data.keyword.hscrypto}} receives your encrypted packet over a TLS 1.2 connection. Within a hardware security module, the system uses the private key to decrypt the symmetric key. Finally, the system uses the symmetric key and the IV to decrypt the nonce and verify the request. Your key is now stored in a tamper-resistant, FIPS 140-2 Level 4 validated hardware security module.
 
