@@ -186,7 +186,12 @@ Hyper Protect Crypto Services
     {: .navgroup id="reference"}
     {: .topicgroup}
     Key management service reference
-        [Key management API reference](https://{DomainName}/apidocs/hs-crypto)
+
+        {: .topicgroup}
+        Key management API
+            kms-api-change-log.md
+            [Key management API reference](https://{DomainName}/apidocs/hs-crypto)
+
         [Key management CLI reference](https://{DomainName}/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference)
 
     {: .topicgroup}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-28"
+lastupdated: "2021-06-01"
 
 keywords: site map, doc structure, information architecture
 
@@ -890,8 +890,15 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_key_management_service_reference}
 
 
-[Key management API reference](https://{DomainName}/apidocs/hs-crypto){: external}
 
+## Key management API
+{: #sitemap_key_management_api}
+
+
+[{{site.data.keyword.hscrypto}} key management API change log](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log)
+* [API versioning](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-versioning)
+* [April 2021](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-april-2021)
+* [Key management API reference](https://{DomainName}/apidocs/hs-crypto){: external}
 [Key management CLI reference](https://{DomainName}/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference){: external}
 
 
