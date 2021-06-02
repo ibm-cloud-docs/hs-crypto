@@ -43,22 +43,22 @@ Complete the following steps to create a {{site.data.keyword.hscrypto}} instance
 
   ```terraform
   resource "ibm_resource_instance" "hpcs" {
-    name     = "hpcsservice"
-    service  = "hs-crypto"
-    plan     = "standard"
-    location = "us-south"
-    parameters = {
-        units = 2
-   }
+     name     = "hpcsservice"
+     service  = "hs-crypto"
+     plan     = "standard"
+     location = "us-south"
+     parameters = {
+         units = 2
+    }
   }
 
   resource "ibm_iam_user_policy" "policy" {
-    ibm_id = "user@ibm.com"
-    roles  = ["Manager"]
+     ibm_id = "user@ibm.com"
+     roles  = ["Manager"]
 
-    resources {
-      service              = "hs-crypto"
-      resource_instance_id = element(split(":", ibm_resource_instance.hpcs.id), 7)
+     resources {
+       service              = "hs-crypto"
+       resource_instance_id = element(split(":", ibm_resource_instance.hpcs.id), 7)
     }
   }
   ```
@@ -67,10 +67,10 @@ Complete the following steps to create a {{site.data.keyword.hscrypto}} instance
   The following table lists supported parameters when you create a service instance with Terraform:
 
   <table>
-    <th>
-      <td>Parameter</td>
-      <td>Description</td>
-    </th>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
     <tr>
       <td>units</td>
       <td>The number of operational crypto units for your service instance. Valid values are 2 and 3. If you do not specify the number, 2 crypto units are assigned by default.</td>
@@ -79,10 +79,8 @@ Complete the following steps to create a {{site.data.keyword.hscrypto}} instance
       <td>allowed_network</td>
       <td>The network access to your service instance. Valid values are `public and private` and `private-only`. If you do not specify the value, the default setting is `public and private`.</td>
     </tr>
-    <caption>Table 1. Supported parameters to provision a service instance with Terraform</caption>
+    <caption>Table 1. Supported parameters for provisioning a service instance with Terraform</caption>
   </table>
-
-
 3. Initialize your service instance. Before you can manage your keys, you need to initialize your service instance first by using one of the following approaches:
 
   - [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
