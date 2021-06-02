@@ -96,6 +96,7 @@ Hyper Protect Crypto Services
         virtual-private-endpoint.md
 
     set-up-cli.md
+    terraform.md
 
     {: .topicgroup}
     Managing master keys
@@ -200,6 +201,7 @@ Hyper Protect Crypto Services
         grep11-api-ref.md
 
     /hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin
+    [Terraform reference](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key)
     regions.md
     smart-card-considerations.md
     shared-responsibilities.md

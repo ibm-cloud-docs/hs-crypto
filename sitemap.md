@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-01"
+lastupdated: "2021-06-02"
 
 keywords: site map, doc structure, information architecture
 
@@ -509,6 +509,17 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-cli#cli-next-steps)
 
 
+## Setting up Terraform for {{site.data.keyword.hscrypto}}
+{: #sitemap_setting_up_terraform_for_}
+
+
+[Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs)
+
+* [Example: Provisioning service instances by using Terraform](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs#terraform-provisioning-instance-hpcs)
+
+* [What's next?](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs#terraform-setup-hpcs-next)
+
+
 ## Managing master keys
 {: #sitemap_managing_master_keys}
 
@@ -944,6 +955,11 @@ Find what you are looking for in the compilation of topics that are available in
 * [Installing the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin#install-tke-cli-plugin)
 
 * [{{site.data.keyword.cloud_notm}} TKE CLI plug-in commands](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin#commands_usage)
+
+
+## Terraform reference
+
+[Terraform reference](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: external}
 
 
 ## Regions and locations
