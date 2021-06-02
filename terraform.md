@@ -81,35 +81,34 @@ Complete the following steps to create a {{site.data.keyword.hscrypto}} instance
     </tr>
     <caption>Table 1. Supported parameters for provisioning a service instance with Terraform</caption>
   </table>
-3. Initialize your service instance. Before you can manage your keys, you need to initialize your service instance first by using one of the following approaches:
-
-  - [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
-  - [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
-  - [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
-
-4. Initialize the Terraform CLI with the following command.
+3. Initialize the Terraform CLI with the following command.
 
   ```
   terraform init
   ```
   {: pre}
 
-5. Create a Terraform execution plan with the following command. The Terraform execution plan summarizes all the actions that need to be run to create the {{site.data.keyword.hscrypto}} instance in your account.
+4. Create a Terraform execution plan with the following command. The Terraform execution plan summarizes all the actions that need to be run to create the {{site.data.keyword.hscrypto}} instance in your account.
 
   ```
   terraform plan
   ```
   {: pre}
 
-6. Create the {{site.data.keyword.hscrypto}} instance and IAM access policy in {{site.data.keyword.cloud_notm}} by applying Terraform.
+5. Create the {{site.data.keyword.hscrypto}} instance and IAM access policy in {{site.data.keyword.cloud_notm}} by applying Terraform.
 
   ```
   terraform apply
   ```
   {: pre}
 
-7. From the [{{site.data.keyword.cloud_notm}} resource list](https://cloud.ibm.com/resources){: external}, select the {{site.data.keyword.hscrypto}} instance that you create and note the instance ID.
-8. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
+6. From the [{{site.data.keyword.cloud_notm}} resource list](https://cloud.ibm.com/resources){: external}, select the {{site.data.keyword.hscrypto}} instance that you create and note the instance ID.
+7. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
+8. Initialize your service instance. Before you can manage your keys, you need to initialize your service instance first by using one of the following approaches:
+
+  - [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
+  - [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+  - [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
 
 ## What's next?
 {: #terraform-setup-hpcs-next}
