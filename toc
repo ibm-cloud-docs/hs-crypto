@@ -96,7 +96,6 @@ Hyper Protect Crypto Services
         virtual-private-endpoint.md
 
     set-up-cli.md
-    terraform.md
 
     {: .topicgroup}
     Managing master keys

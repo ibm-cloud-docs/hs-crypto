@@ -509,17 +509,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-cli#cli-next-steps)
 
 
-## Setting up Terraform for {{site.data.keyword.hscrypto}}
-{: #sitemap_setting_up_terraform_for_}
-
-
-[Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs)
-
-* [Example: Provisioning service instances by using Terraform](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs#terraform-provisioning-instance-hpcs)
-
-* [What's next?](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs#terraform-setup-hpcs-next)
-
-
 ## Managing master keys
 {: #sitemap_managing_master_keys}
 
