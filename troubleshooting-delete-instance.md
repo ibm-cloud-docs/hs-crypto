@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-02-03"
+lastupdated: "2021-06-08"
 
 keywords: troubleshoot, problems, known issues, can't delete an initialized service instance
 
@@ -31,9 +31,6 @@ subcollection: hs-crypto
 
 You get an error when you delete an initialized service instance.
 {:shortdesc}
-
-When using {{site.data.keyword.cloud_notm}} CLI, to get the detailed error message, make sure that you set the environment variable `IBMCLOUD_TRACE=true`. For example: `IBMCLOUD_TRACE=true ibmcloud resource service-instance-delete`.
-{: tip}
 
 You might receive an error similar to the following one:
 {: tsSymptoms}
