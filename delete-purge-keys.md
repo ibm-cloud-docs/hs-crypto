@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # About deleting and purging keys
 {: #delete-purge-keys}
 
-You can use {{site.data.keyword.hscrypto}} to delete an encryption key and the key material if you are a [manager](/docs/hs-crypto?topic=hs-crypto-manage-access) for your {{site.data.keyword.hscrypto}} instance.
+You can delete an encryption key and the key material if you are a _[Manager](/docs/hs-crypto?topic=hs-crypto-manage-access)_ for your {{site.data.keyword.hscrypto}} instance.
 {: shortdesc}
 
 If a key is no longer needed, you can delete and ultimately purge keys. This action shreds the key material and makes any of the data encrypted with the keys inaccessible.

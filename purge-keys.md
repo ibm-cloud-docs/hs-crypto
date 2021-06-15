@@ -24,7 +24,7 @@ subcollection: hs-crypto
 # Purging keys manually
 {: #purge-keys}
 
-If you are a [manager](/docs/hs-crypto?topic=hs-crypto-manage-access) for your {{site.data.keyword.hscrypto}} instance, you can use {{site.data.keyword.hscrypto}} to purge a key to permanently remove a key from your instance.
+If you are assigned the _KMS Key Purge_ role for your {{site.data.keyword.hscrypto}} instance, you can purge a key to permanently remove a key from your instance.
 {: shortdesc}
 
 Before you purge keys, make sure that you understand [the concept of deleting and purging keys](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys) and review the [considerations](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys#delete-purge-keys-considerations).

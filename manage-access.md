@@ -103,7 +103,6 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Wrap a key. | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Unwrap a key. | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Rewrap a key. | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) |
-| Patch a key. | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Rotate a key. | | | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Disable a key. | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Enable a key. | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
