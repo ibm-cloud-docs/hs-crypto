@@ -24,7 +24,7 @@ subcollection: hs-crypto
 # Purging keys manually
 {: #purge-keys}
 
-If you are assigned the _KMS Key Purge_ role for your {{site.data.keyword.hscrypto}} instance, you can purge a key to permanently remove a key from your instance.
+A deleted key becomes purged automatically after 90 days of the deletion. If you are assigned the _KMS Key Purge_ role for your {{site.data.keyword.hscrypto}} instance, you can manually purge a key before 90 days to permanently remove a key from your instance.
 {: shortdesc}
 
 Before you purge keys, make sure that you understand [the concept of deleting and purging keys](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys) and review the [considerations](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys#delete-purge-keys-considerations).
