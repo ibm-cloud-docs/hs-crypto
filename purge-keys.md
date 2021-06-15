@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-17"
+lastupdated: "2021-06-15"
 
 keywords: purge key, permanently delete key, remove key, destroy key
 
@@ -28,6 +28,9 @@ If you are a [manager](/docs/hs-crypto?topic=hs-crypto-manage-access) for your {
 {: shortdesc}
 
 Before you purge keys, make sure that you understand [the concept of deleting and purging keys](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys) and review the [considerations](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys#delete-purge-keys-considerations).
+
+To manually purge a key, you need to be assigned the _KMS Key Purge_ role. Even a _Manager_ cannot purge a key. For more information about service access roles, see [IAM service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
+{: important}
 
 ## Purging keys in the console
 {: #purge-keys-gui}

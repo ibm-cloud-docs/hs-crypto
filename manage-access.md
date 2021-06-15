@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-06-15"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -40,7 +40,7 @@ The following diagram illustrates the roles and permissions.
 
 ![{{site.data.keyword.hscrypto}} roles](/images/roles.svg "{{site.data.keyword.hscrypto}} roles and responsibilities"){: caption="Figure 1. {{site.data.keyword.hscrypto}} roles and responsibilities" caption-side="bottom"}
 
-### Platform access roles
+### IAM platform access roles
 {: #platform-mgmt-roles}
 
 With {{site.data.keyword.iamshort}} (IAM), you, as an account owner or a service administrator, can manage and define access for service users and resources in your {{site.data.keyword.cloud_notm}} account.
@@ -63,15 +63,15 @@ Use {{site.data.keyword.cloud_notm}} platform access roles to grant permissions 
 If you're an account owner, you are automatically assigned _Administrator_ platform access to your {{site.data.keyword.hscrypto}} service instances so you can further assign roles and customize access policies for others.
 {: note}
 
-### Service access roles
+### IAM service access roles
 {: #service-access-roles}
 
 As a service administrator, use the service access roles to grant permissions of service users at the service level, such as the ability to view, create, or delete {{site.data.keyword.hscrypto}} keys.
 
-- As a **Reader**, you can browse a high-level view of keys and perform wrap and unwrap actions. Readers cannot access or modify key material.
-- As a **ReaderPlus**, you can browse a high-level view of keys, access key material for standard keys, and perform wrap and unwrap actions. The ReaderPlus role cannot modify key material.
-- As a **Writer**, you can create keys, modify keys, rotate keys, and access key.
-- As a **Manager**, you can perform all actions that a Reader, ReaderPlus and Writer can perform, including the ability to delete keys and set dual authorization and rotation policies for keys.
+- As a **Reader**, you can browse a high-level view of keys and use keys to perform wrap and unwrap actions. Readers cannot create, modify, or delete keys.
+- As a **ReaderPlus**, you have the same permissions as a Reader, with the additional ability to retrieve a standard key's material.
+- As a **Writer**, you can create, modify, rotate, and use keys. Writers cannot delete or disable keys.
+- As a **Manager**, you can perform all actions that a Reader, ReaderPlus and Writer can perform, including the ability to delete keys and set policies for keys.
 
 The following table shows how service access roles map to {{site.data.keyword.hscrypto}} permissions. IAM roles are the default roles provided. Custom roles can be defined by the user.
 
@@ -79,8 +79,8 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 * The Key Management API is used for envelope encryption and deals with root keys that are used by {{site.data.keyword.cloud_notm}} services for encrypting data-at-rest.
 * HSM APIs (the PKCS #11 API and the GREP11 API) are used for application-level encryption.
 
-| Action | Reader | ReaderPlus | Writer | Manager |Crypto unit administrator|
-|-----|-----|-----|-----|----|----|
+| Action | Reader | ReaderPlus | Writer | Manager | Crypto unit administrator|
+|--------|--------|------------|--------|---------|--------------------------|
 | TKE view state: `ibmcloud tke cryptounit-admins`,`ibmcloud tke cryptounit-compare`,`ibmcloud tke cryptounit-thrhlds`,`ibmcloud tke cryptounit-mk`. | | | | ![Checkmark icon](../icons/checkmark-icon.svg) | |
 | TKE set context: `ibmcloud tke-cryptounit-add`, `ibmcloud tke-cryptounit-rm`. | | | | ![Checkmark icon](../icons/checkmark-icon.svg) | |
 | TKE admin add or remove: `ibmcloud tke cryptounit-admin-add`, `ibmcloud tke cryptounit-admin-rm`.| | | | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) |
@@ -93,7 +93,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 {: class="comparison-tab-table"}
 
 | Action | Reader | ReaderPlus | Writer | Manager |
-|-----|-----|-----|-----|----|
+| ----- | ----- | ----- | ----- | ---- |
 | Create a key. | | | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Import a key. | | | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Retrieve a key. | | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) |
@@ -103,6 +103,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Wrap a key. | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Unwrap a key. | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Rewrap a key. | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) |
+| Patch a key. | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Rotate a key. | | | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Disable a key. | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Enable a key. | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
@@ -110,7 +111,6 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Cancel deletion for a key. | | | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Delete a key. | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Restore a key. | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
-| Patch a key. | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Set key policies. | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | List key policies. | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Set instance policies. | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
@@ -128,11 +128,13 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Delete a key ring. | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Create a key alias.| | | ![Checkmark icon](../icons/checkmark-icon.svg) | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Delete a key alias.| | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
-{: #table-4}
+{: #table-4-old}
 {: caption="Table 4. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} key resources" caption-side="bottom"}
 {: tab-title="Key management"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
+
+
 
 [^services-1]: This action is performed on your behalf by an [integrated service](/docs/hs-crypto?topic=hs-crypto-integrate-services) that enables support for key registration. [Learn more](/docs/hs-crypto?topic=hs-crypto-view-protected-resources).
 
