@@ -79,7 +79,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 * Trusted Key Entry (TKE) uses either smart cards or software CLI plug-in with IAM authentication. Commands that deals with managing keys locally on the smart card or CLI are not included. Those commands do not interact with the HSM domain.
 * The Key Management API is used for envelope encryption and deals with root keys that are used by {{site.data.keyword.cloud_notm}} services for encrypting data-at-rest.
 * HSM APIs (the PKCS #11 API and the GREP11 API) are used for application-level encryption.
-* Key Management Interoperability Protocol (KMIP) adapter are used to configure VMWare Solution Service KMIP for VMware with {{site.data.keyword.hscrypto}} to enable vSphere encryption or vSAN encryption by using your own root keys.
+* Key Management Interoperability Protocol (KMIP) adapter is used to configure VMWare Solution Service KMIP for VMware with {{site.data.keyword.hscrypto}} to enable vSphere encryption or vSAN encryption by using your own root keys.
 
 | Action | Reader | ReaderPlus | Writer | Manager | Crypto unit administrator|
 |--------|--------|------------|--------|---------|--------------------------|
