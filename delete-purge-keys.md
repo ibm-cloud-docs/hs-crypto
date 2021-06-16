@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-17"
+lastupdated: "2021-06-15"
 
 keywords: delete keys, purge, automatic purge, manual purge, delete, destroy
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # About deleting and purging keys
 {: #delete-purge-keys}
 
-You can use {{site.data.keyword.hscrypto}} to delete an encryption key and the key material if you are a [manager](/docs/hs-crypto?topic=hs-crypto-manage-access) for your {{site.data.keyword.hscrypto}} instance.
+You can delete an encryption key and the key material if you are a _[Manager](/docs/hs-crypto?topic=hs-crypto-manage-access)_ for your {{site.data.keyword.hscrypto}} instance.
 {: shortdesc}
 
 If a key is no longer needed, you can delete and ultimately purge keys. This action shreds the key material and makes any of the data encrypted with the keys inaccessible.
@@ -66,6 +66,7 @@ After a key is purged, you receive a 404 HTTP Not Found error when you call any 
 1. [Review the registered IBM resources](/docs/hs-crypto?topic=hs-crypto-view-protected-resources) that are associated with the key. If needed, you can [force deletion on a key](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-key-force) that protects a registered cloud resource. However, the action can't succeed if the associated resource is not erasable because of a [retention policy](/docs/cloud-object-storage?topic=cloud-object-storage-immutable#immutable-terminology-policy){: external}. The policy is a WORM (Write-Once-Read-Many) policy that is set on the customer's relevant cloud resource.
 2. Verify whether a key has a retention policy by checking the `preventKeyDeletion` field of the [registration details](/docs/hs-crypto?topic=hs-crypto-view-protected-resources#view-protected-resources-api) for the key. You must then contact an account owner to remove the retention policy on each resource that is associated with the key before you can delete the key.
 3. Verify the deletion authorization policy of the key. By default, keys in {{site.data.keyword.hscrypto}} require only a single deletion authorization by one user with the _Manager_ role. However, if a [dual authorization policy is set](/docs/hs-crypto?topic=hs-crypto-set-dual-auth-key-policy), two users with the _Manager_ role are needed to approve the deletion.
+4. Make sure that you are assigned the _KMS Key Purge_ role if you want to purge a key manually. For more information about service access roles, see [IAM service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
 
 ## What's next
 {: #delete-purge-keys-next}
