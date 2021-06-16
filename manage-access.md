@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-06-15"
+lastupdated: "2021-06-16"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -72,14 +72,14 @@ As a service administrator, use the service access roles to grant permissions of
 - As a **ReaderPlus**, you have the same permissions as a Reader, with the additional ability to retrieve a standard key's material.
 - As a **Writer**, you can create, modify, rotate, and use keys. Writers cannot delete or disable keys.
 - As a **Manager**, you can perform all actions that a Reader, ReaderPlus and Writer can perform, including the ability to delete keys and set policies for keys.
-- As a **VMware KMIP Manager**, you can configure KMIP with {{site.data.keyword.hscrypto}} to enable encryption with your own root keys.
+- As a **VMware KMIP Manager**, you can configure KMIP for VMware with {{site.data.keyword.hscrypto}} to enable encryption with your own root keys.
 
 The following table shows how service access roles map to {{site.data.keyword.hscrypto}} permissions. IAM roles are the default roles provided. Custom roles can be defined by the user.
 
 * Trusted Key Entry (TKE) uses either smart cards or software CLI plug-in with IAM authentication. Commands that deals with managing keys locally on the smart card or CLI are not included. Those commands do not interact with the HSM domain.
 * The Key Management API is used for envelope encryption and deals with root keys that are used by {{site.data.keyword.cloud_notm}} services for encrypting data-at-rest.
 * HSM APIs (the PKCS #11 API and the GREP11 API) are used for application-level encryption.
-* Key Management Interoperability Protocol (KMIP) adapter is used to configure VMWare Solution Service KMIP for VMware with {{site.data.keyword.hscrypto}} to enable vSphere encryption or vSAN encryption by using your own root keys.
+* Key Management Interoperability Protocol (KMIP) adapter is used to configure the KMIP for VMware service with {{site.data.keyword.hscrypto}} to enable vSphere encryption or vSAN encryption by using your own root keys.
 
 | Action | Reader | ReaderPlus | Writer | Manager | Crypto unit administrator|
 |--------|--------|------------|--------|---------|--------------------------|
@@ -175,9 +175,9 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 |-----|-----|-----|-----|----|-----|
 | Activate KMIP endpoint. | | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
 | Deactivate KMIP endpoint. | | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
-| Get Status of KMIP endpoint. | | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
-| Add Client Certificates to KMIP endpoint for usage of mutual TLS. | | | | | ![Checkmark icon](../icons/checkmark-icon.svg)|
-| Delete Client Certificates from KMIP endpoint for usage of mutual TLS. | | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
+| Get status of KMIP endpoint. | | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
+| Add client certificates to KMIP endpoint for usage of mutual TLS. | | | | | ![Checkmark icon](../icons/checkmark-icon.svg)|
+| Delete client certificates from KMIP endpoint for usage of mutual TLS. | | | | | ![Checkmark icon](../icons/checkmark-icon.svg) |
 {: #table-6}
 {: caption="Table 6. Lists service access roles as they apply to KMIP adapter" caption-side="bottom"}
 {: tab-title="KMIP adapter"}
