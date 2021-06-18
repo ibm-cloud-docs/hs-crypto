@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-27"
+lastupdated: "2021-06-18"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -114,12 +114,12 @@ To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.
     </table>
 
 4. Run the following command to create a {{site.data.keyword.hscrypto}} instance:
-
+    
     ```sh
-    ibmcloud resource service-instance-create <instance_name> hs-crypto standard <region_name> [-p '{"units": <number_of_crypto_units>, "allowed_network": "<network_access>"}']
+    ibmcloud resource service-instance-create <instance_name> hs-crypto standard <region_name> [-p '{"units": <number_of_operational_crypto_units>, "allowed_network": "<network_access>"}']
     ```
     {: pre}
-
+    
     Replace the variables in the example command according to the following table.
 
     <table>
@@ -137,7 +137,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.
         <p>Currently, the `us-south` and `us-east` regions are enabled with recovery crypto units by default, which means, when a service instance is provisioned in either regions, you are enabled with the option to back up your master keys in the recovery crypto units located in both regions. For details, see [Introducing service instance initialization modes](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit).</p></td>
       </tr>
       <tr>
-        <td>*number_of_crypto_units*</td>
+        <td>*number_of_operational_crypto_units*</td>
         <td><p>Optional. Multiple crypto units are distributed among different supported availability zones in the selected region to increase availability.</p>
         <p>At least two crypto units are to be enabled for high availability. If you do not specify the number of crypto units, two crypto units are assigned by default.</p></td>
       </tr>
@@ -148,6 +148,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.
         <p>If you set the value to **private-only**, you can access your service instance only through private network using CLI or API. The {{site.data.keyword.cloud_notm}} console is not available for the private-only network access.</p>
         <p>After you provision the service instance, you can still [update the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies).</p></td>
       </tr>
+      
       <caption>Table 2. Describes command variables to create a {{site.data.keyword.hscrypto}} service instance</caption>
     </table>
 
