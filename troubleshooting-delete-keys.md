@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-06-03"
+lastupdated: "2021-06-16"
 
 keywords: troubleshoot, problems, known issues, can't delete keys
 
@@ -69,4 +69,3 @@ The following instructions can help you solve the problems:
 - To resolve the error that is reported in error message 2, you need to assign two approvers to delete a key if you enable the dual authorization policy [for your instance](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth) or [for a key](/docs/hs-crypto?topic=hs-crypto-set-dual-auth-key-policy).
 
   The first approver must have a _Writer_ or _Manager_ role to first schedule the key deletion and the second approver must have a _Manager_ role to complete the deletion within 7 days. For more information, see [Deleting keys by using dual authorization](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys).
-
