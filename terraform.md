@@ -31,13 +31,13 @@ Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Tr
 
 Before you begin, make sure that you have the [required access](/docs/hs-crypto?topic=hs-crypto-manage-access) to create and work with {{site.data.keyword.hscrypto}} resources.
 
-## Example: Provisioning service instances by using Terraform
-{: #terraform-provisioning-instance-hpcs}
+## Example: Provisioning and initializing service instances by using Terraform
+{: #terraform-provision-initialize-instance-hpcs}
 
-Complete the following steps to create a {{site.data.keyword.hscrypto}} instance by using Terraform:
+Complete the following steps to create and initialize a {{site.data.keyword.hscrypto}} instance by using Terraform:
 
 1. Install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform by following the [Terraform on {{site.data.keyword.cloud_notm}} getting started tutorial](/docs/ibm-cloud-provider-for-terraform). The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to provision, update, or delete {{site.data.keyword.hscrypto}} service instances and resources.
-2. Create a Terraform configuration file that is named `main.tf`. In this file, you add the configurations to perform the corresponding actions. The following example configures the file to createa a {{site.data.keyword.hscrypto}} instance and to assign a user an access policy in Identity and Access Management (IAM) for that instance by using HashiCorp Configuration Language (HCL). For more information, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
+2. Create a Terraform configuration file that is named `main.tf`. In this file, you add the configurations to perform the corresponding actions. The following example configures the file to create a {{site.data.keyword.hscrypto}} instance and to assign a user an access policy in Identity and Access Management (IAM) for that instance by using HashiCorp Configuration Language (HCL). For more information, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
 
   The {{site.data.keyword.hscrypto}} instance in this example is named `hpcsservice` and is created with the standard pricing plan in the `us-south` region. The instance has two operational crypto units. The `user@ibm.com` is assigned the `Manager` role in the IAM access policy. For other supported regions, see [Regions and endpoints](/docs/hs-crypto?topic=hs-crypto-regions).
 
@@ -104,11 +104,9 @@ Complete the following steps to create a {{site.data.keyword.hscrypto}} instance
 
 6. From the [{{site.data.keyword.cloud_notm}} resource list](https://cloud.ibm.com/resources){: external}, select the {{site.data.keyword.hscrypto}} instance that you create and note the instance ID.
 7. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
-8. Initialize your service instance. Before you can manage your keys, you need to initialize your service instance first by using one of the following approaches:
+8. Initialize your service instance.
 
-  - [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
-  - [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
-  - [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
+  **Add initialization example code and steps here**
 
 ## What's next?
 {: #terraform-setup-hpcs-next}
