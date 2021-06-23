@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-02"
+lastupdated: "2021-06-23"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -76,7 +76,7 @@ Complete the following steps to create a {{site.data.keyword.hscrypto}} instance
       <td>The number of operational crypto units for your service instance. Valid values are 2 and 3. If you do not specify the number, 2 crypto units are assigned by default.</td>
     </tr>
     <tr>
-      <td>allowed_network</td>
+      <td>service_endpoints</td>
       <td>The network access to your service instance. Valid values are `public and private` and `private-only`. If you do not specify the value, the default setting is `public and private`.</td>
     </tr>
     <caption>Table 1. Supported parameters for provisioning a service instance with Terraform</caption>
