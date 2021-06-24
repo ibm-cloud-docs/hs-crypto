@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-06-18"
+lastupdated: "2021-06-24"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -55,7 +55,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
   - Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs.
 
     At least two crypto units are to be enabled for high availability. These crypto units are distributed among different supported availability zones in the selected region.
-    {: note}
+
   
   - Under **Allowed network**, choose the network access to your service instance:
 
@@ -65,8 +65,8 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
     A private instance accepts API requests through only the private endpoints. The private endpoints are only accessible when your {{site.data.keyword.cloud_notm}} account, along with all associated resources, is enabled with [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint). You cannot access your private only instance through the CLI or API if your server or machine is outside the {{site.data.keyword.cloud_notm}} network.
     {: important}
 
-  After you provision the service instance, you can still [update the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies).
-  {: tip}
+    After you provision the service instance, you can still [update the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies).
+    {: tip}
 
   
 
