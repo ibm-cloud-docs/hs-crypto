@@ -31,7 +31,7 @@ Failover crypto units back up the operational crypto units and keystores in anot
 ## Enabling or adding failover crypto units with the {{site.data.keyword.cloud_notm}} CLI
 {: #enable-add-failover-cli}
 
-If you have a service instance in the `us-south` or `us-east` region, you can enable or add failover crypto units with the {{site.data.keyword.cloud_notm}} Trused Key Entry (TKE) CLI plug-in.
+If you have a service instance in the `us-south` or `us-east` region, you can enable or add failover crypto units for your instance with the {{site.data.keyword.cloud_notm}} Trused Key Entry (TKE) CLI plug-in.
 
 1. Make sure that you install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli) and the latest TKE CLI plug-in with the following command:
 
@@ -73,7 +73,7 @@ If you have a service instance in the `us-south` or `us-east` region, you can en
     Would you like to continue? [y/n]:
     > y
     ```
-    {: sreen}
+    {: screen}
 
     If your instance already has a certain number of failover crypto units assigned, you can also use this command and follow the same procedure to add more failover crypto units.
     {: tip}
