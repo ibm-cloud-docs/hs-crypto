@@ -22,18 +22,21 @@ subcollection: hs-crypto
 {:external: target="_blank" .external}
 {:term: .term}
 
-# Enabling or adding failover crypto units
+# Enabling or adding failover crypto units after you provision a service instance
 {: #enable-add-failover}
 
-Failover crypto units back up the operational crypto units and keystores in another region. When a regional disaster occurs, you can use failover crypto units to automatically restore your data, thus reducing the downtime and data loss. This topic guides you through how to enable or add failover crypto units after you create a {{site.data.keyword.hscrypto}} instance.
+Failover crypto units back up the operational crypto units and keystores in another region. When a regional disaster occurs, you can use failover crypto units to automatically restore your data, which can reduce the downtime and data loss. You can either enable failover crypto unit [when you provision a service instance](/docs/hs-crypto?topic=hs-crypto-provision) or after you provision a service instance. This topic guides you through enabling or adding extra failover crypto units after you provision a service instance.
 {: shortdesc}
 
 ## Enabling or adding failover crypto units with the {{site.data.keyword.cloud_notm}} CLI
 {: #enable-add-failover-cli}
 
-If you have a service instance in the `us-south` or `us-east` region, you can enable or add failover crypto units for your instance with the {{site.data.keyword.cloud_notm}} Trused Key Entry (TKE) CLI plug-in.
+If you have a service instance in the `us-south` or `us-east` region, you can enable failover crypto units for your instance with the {{site.data.keyword.cloud_notm}} Trused Key Entry (TKE) CLI plug-in. If failover crypto units are already assigned to your service instance, you can still add extra ones.
 
-1. Make sure that you install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli) and the latest TKE CLI plug-in with the following command:
+You can specify a total number of failover crypto units that is equal to or less than the number of operational crypto units. However, to meet high availability, at least two failover crypto units need to be assigned. Failover crypto units are also charged. For the detailed pricing information, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
+{: tip}
+
+1. Check and make sure that you install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli) and the latest TKE CLI plug-in with the following command:
 
   ```
   ibmcloud plugin install tke
@@ -47,20 +50,18 @@ If you have a service instance in the `us-south` or `us-east` region, you can en
   ```
   {: pre}
 
-2. Run the following command:
+2. To enable or add extra failover crypto units, run the following command:
 
   ```
   ibmcloud tke failover-enable
   ```
   {: pre}
 
-  This command walks you through the procedure to enable or add failover crypto units. Follow the prompts to complete the following steps:
+  This command walks you through the procedure to enable or add extra failover crypto units. Follow the prompts to complete the following steps:
 
   1. Enter the total number of failover crypto units that you want to assign to your service instance.
 
-    You can specify the total number of failover crypto units that is equal to or less than the number of operational crypto units. However, to meet high availability, at least two failover crypto units need to be assigned. Failover crypto units are also charged. For the detailed pricing information, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
-
-    The following output is an example that is displayed:
+    The following output is a sample display:
 
     ```
     You currently have 0 failover crypto unit(s) for the selected instance 00000a09-0563-4e00-b259-06a4edfc4cba
@@ -82,7 +83,7 @@ If you have a service instance in the `us-south` or `us-east` region, you can en
 
     Failover crypto units are now available in `us-south` and `us-east`. The two regions are each other's target failover region. For example, if your instance is located in `us-south`, the failover region for your instance is `us-east`.
 
-    The following output is an example that is displayed:
+    The following output is a sample display:
 
     ```
     Instance 00000a09-0563-4e00-b259-06a4edfc4cba targetting backup region us-south
@@ -110,13 +111,14 @@ If you have a service instance in the `us-south` or `us-east` region, you can en
     ```
     {: screen}
 
-3. Initialize failover crypto units with the same master key that is used for the operational crypto units initialization.
+3. Initialize failover crypto units by using the same master key for the operational crypto units initialization and the same initialization approach:
 
-  You need to initialize failover crypto units before you can use them for a regional disaster recovery. Select one of the following ways to initialize failover crypto units and make sure to use the same master key that is for the operational crypto units initialization:
+- [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
+- [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+- [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
 
-  - [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
-  - [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
-  - [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
+  You need to initialize failover crypto units before you use them for a regional disaster recovery. It is suggested you initialize the failover crypto units right after you enable them in your service instance.
+  {: note}
 
 ## What's next
 {: #enable-add-failover-next}
