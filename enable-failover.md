@@ -110,7 +110,7 @@ If you have a service instance in the `us-south` or `us-east` region, you can en
     ```
     {: screen}
 
-3. Initialize failover crypto units by using the same master key as the operational crypto units initialization.
+3. Initialize failover crypto units with the same master key that is used for the operational crypto units initialization.
 
   You need to initialize failover crypto units before you can use them for a regional disaster recovery. Select one of the following ways to initialize failover crypto units and make sure to use the same master key that is for the operational crypto units initialization:
 
