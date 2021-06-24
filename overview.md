@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-06-24"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -76,6 +76,12 @@ For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service arc
 
   By integrating with other {{site.data.keyword.cloud_notm}} services, {{site.data.keyword.hscrypto}} offers the capability of bringing your own encryption to the cloud. The service provides double-layer protection for your cloud data by wrapping the encryption keys that are associated with your cloud services.
 
+* **Access management and auditing**
+
+  {{site.data.keyword.hscrypto}} integrates with {{site.data.keyword.iamshort}} (IAM) to enable your granular control over user access to service resources. For more information, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
+
+  You can also monitor and audit events and activities of {{site.data.keyword.hscrypto}} by using {{site.data.keyword.at_full_notm}}. For more information, see [Auditing events for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-at-events).
+
 ### Cloud hardware security module
 {: #cloud-hsm}
 
@@ -90,13 +96,6 @@ For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service arc
 * **Security certification**
 
   The service is built on FIPS 140-2 Level 4-certified hardware, the highest security level that is offered in the industry. The HSM is also certified to meet the Common Criteria Part 3 conformant EAL 4.
-
-### Integration with {{site.data.keyword.iamshort}} and {{site.data.keyword.at_full_notm}}
-{: #iam-activity-tracker}
-
-{{site.data.keyword.hscrypto}} integrates with {{site.data.keyword.iamshort}} (IAM) to enable your granular control over user access to service resources. For more information, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
-
-You can also monitor and audit events and activities of {{site.data.keyword.hscrypto}} by using {{site.data.keyword.at_full_notm}}. For more information, see [Auditing events for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-at-events) .
 
 
 
