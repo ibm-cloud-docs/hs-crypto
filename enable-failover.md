@@ -61,6 +61,8 @@ You can specify a total number of failover crypto units that is equal to or less
 
   1. Enter the total number of failover crypto units that you want to assign to your service instance.
 
+    For a service instance with 3 operational crypto units, specify 2 or 3 failover crypto units. For a service instance with 2 operational crypto units, specify 2 failover crypto units.
+
     The following output is a sample display:
 
     ```
@@ -113,11 +115,11 @@ You can specify a total number of failover crypto units that is equal to or less
 
 3. Initialize failover crypto units by using the same master key for the operational crypto units initialization and the same initialization approach:
 
-- [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
-- [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
-- [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
+  - [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
+  - [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+  - [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
 
-  You need to initialize failover crypto units before you use them for a regional disaster recovery. It is suggested you initialize the failover crypto units right after you enable them in your service instance.
+  You need to initialize failover crypto units before you use them for a regional disaster recovery. It is suggested you initialize the failover crypto units right after you enable them for your service instance.
   {: note}
 
 ## What's next
