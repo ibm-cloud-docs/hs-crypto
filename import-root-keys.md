@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-27"
+lastupdated: "2021-06-28"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -37,7 +37,7 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. To import a key, select the **Key management service keys** tab in the side menu.
+4. To import a key, select the **KMS keys** tab in the side menu.
 5. In the **Keys** table, click **Add key** and select **Import a key**.
 
     Specify the key's details:

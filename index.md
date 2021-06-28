@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-27"
+lastupdated: "2021-06-28"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -78,7 +78,7 @@ From the {{site.data.keyword.cloud_notm}} console, you can create new root keys 
 
 Complete the following steps to create your first cryptographic key.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click **Key management service keys** &gt; **Add key**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **KMS keys** &gt; **Add key**.
 2. To create a new key, select **Create a key**.
 
     Specify the key's details:
@@ -113,7 +113,7 @@ You can bring your existing keys to the service, so that you can still use the s
 
 Complete the following steps to add an existing key.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click **Key management service keys** &gt; **Add key**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **KMS keys** &gt; **Add key**.
 2. To upload an existing key, select **Import a key**.
 
     Specify the key's details:
@@ -379,7 +379,7 @@ From the {{site.data.keyword.cloud_notm}} console, you can create new root keys 
 
 Complete the following steps to create your first cryptographic key.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click **Key management service keys** &gt; **Add key**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **KMS keys** &gt; **Add key**.
 2. To create a new key, select **Create a key**.
 
     Specify the key's details:
@@ -416,7 +416,7 @@ You can bring your existing keys to the service, so that you can still use the s
 
 Complete the following steps to add an existing key.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click **Key management service keys** &gt; **Add key**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **KMS keys** &gt; **Add key**.
 2. To upload an existing key, select **Import a key**.
 
     Specify the key's details:

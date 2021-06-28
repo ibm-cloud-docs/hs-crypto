@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-29"
+lastupdated: "2021-06-28"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway
 
@@ -64,7 +64,6 @@ When connecting to a VPE through [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gat
 {: note}
 
 <table>
-  
   <tr>
     <th>{{site.data.keyword.hscrypto}} feature</th>
     <th>Supported endpoints</th>

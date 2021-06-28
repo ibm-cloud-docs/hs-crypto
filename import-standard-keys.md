@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-27"
+lastupdated: "2021-06-28"
 
 keywords: standard key, import key, key material, import key api, bring your own key, byok, encryption key, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key
 
@@ -31,7 +31,7 @@ You can add your existing encryption keys with the {{site.data.keyword.cloud_not
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. To import a key, select the **Key management service keys** tab in the side menu.
+4. To import a key, select the **KMS keys** tab in the side menu.
 5. In the **Keys** table, click **Add key** and select **Import a key**.
 
     Specify the key's details:
