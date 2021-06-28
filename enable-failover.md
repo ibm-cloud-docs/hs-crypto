@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-25"
+lastupdated: "2021-06-28"
 
 keywords: failover crypto unit, add failover crypto units, enable failover, enable cross-region recovery
 
@@ -50,12 +50,15 @@ You can specify a total number of failover crypto units that is equal to or less
   ```
   {: pre}
 
-2. To enable or failover crypto units, run the following command:
+2. To enable or add failover crypto units, run the following command:
 
   ```
   ibmcloud tke failover-enable
   ```
   {: pre}
+
+  Before you can run this command, make sure that you select all the crypto units for the target instance by using the `ibmcloud tke cryptounit-add` command.
+  {: note}
 
   This command walks you through the procedure to enable or add failover crypto units. Follow the prompts to complete the following steps:
 
