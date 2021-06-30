@@ -44,7 +44,7 @@ To initialize your service instance using recovery crypto units, complete the fo
   ```
   {: pre}
 
-  This command walks you through the procedure to initialize your service instance. Follow the prompts to complete the following steps:
+  Follow this procedure to initialize your service instance. Complete the steps by following the prompts:
 
   1. Select the instance that you want to initialize.
 
