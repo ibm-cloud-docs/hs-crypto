@@ -935,14 +935,15 @@ Find what you are looking for in the compilation of topics that are available in
 * [Code examples](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#code-example)
 
 
-## {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} Trusted Key Entry CLI
-{: #sitemap__{{site.data.keyword.hscrypto}}_trusted_key_entry_cli}
+## Trusted Key Entry CLI reference
+{: #sitemap_trusted_key_entry_cli_reference}
 
+
+[{{site.data.keyword.hscrypto}} TKE CLI change log](/docs/hs-crypto?topic=hs-crypto-tke-cli-change-log)
+* [Version 1.2.3](/docs/hs-crypto?topic=hs-crypto-tke-cli-change-log#tke-cli-123)
 
 [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} Trusted Key Entry CLI](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin)
-
 * [Installing the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin#install-tke-cli-plugin)
-
 * [{{site.data.keyword.cloud_notm}} TKE CLI plug-in commands](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin#commands_usage)
 
 
