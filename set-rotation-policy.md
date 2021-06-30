@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-06-28"
 
 keywords: rotate, rotate root key, automatic key rotation, set rotation policy, policy based key rotation
 
@@ -42,7 +42,7 @@ If you prefer to manage policies for your root keys by using a graphical interfa
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Key management service keys** page, use the **Keys** table to browse the keys in your service.
+4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
 5. Click the overflow (...) icon to open a list of options for a specific key.
 6. From the options menu, click **Edit key rotation policy** to manage the rotation policy for the key.
 7. Switch the **Key rotation** to **On** and move the slider to select a frequency of rotation in months.

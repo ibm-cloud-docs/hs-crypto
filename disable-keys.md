@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-17"
+lastupdated: "2021-06-28"
 
 keywords: disable key, enable key, suspend key, suspend operations on a key
 
@@ -65,7 +65,7 @@ complete the following steps to disable a key:
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your
 provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Key management service keys** page, use the **Keys** table to browse the keys in
+4. On the **KMS keys** page, use the **Keys** table to browse the keys in
 your service instance.
 5. Click the overflow (⋯) icon to open a list of options for the key that you want to
 disable.
@@ -86,7 +86,7 @@ You must wait 30 seconds after you disable a root key before you are able to ena
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your
 provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Key management service keys** page, use the **Keys** table to browse the keys in
+4. On the **KMS keys** page, use the **Keys** table to browse the keys in
 your service.
 5. Click the overflow (⋯) icon to open a list of options for the key that you want to
 enable.

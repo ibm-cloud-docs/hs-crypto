@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-21"
+lastupdated: "2021-06-30"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, smart card, trusted key entry application, tke application, management utilities
 
@@ -96,6 +96,11 @@ For more information about how to retrieve your service instance ID, see [Retrie
 When the operations are done, `true` is displayed in the SELECTED column for each crypto unit that is to be affected by later commands. If more than one crypto unit is assigned to a service instance, all crypto units in the service instance must be configured the same.
 
 
+If you enable cross-region high availability with [failover crypto units](/docs/hs-crypto?topic=hs-crypto-understand-concepts#crypto-unit-concept), make sure that you add all the failover crypto units to the selected list for instance initialization.
+
+If you don't initialize and configure failover crypto units the same as the operational crypto units, you are not able to use the failover crypto units for automatic data restoration when a regional disaster happens. For more information about cross-region disaster recovery, see [High availability and disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr).
+{: important}
+
 
 ### Step 3: Add administrators to the selected crypto units
 {: #step3-add-administrator-management-utilities}
@@ -174,6 +179,6 @@ The crypto units in the current master key register is now in `Valid` status, wh
 ## What's next
 {: #initialize-crypto-utilities-management-utilities-next}
 
-- Go to the **Key management service keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+- Go to the **KMS keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
 - To learn more about performing cryptographic operations with the cloud HSM, see [Introducing cloud HSM](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm).
 - Use {{site.data.keyword.hscrypto}} as the root key provider for other {{site.data.keyword.cloud_notm}} services. For more information about integrating {{site.data.keyword.hscrypto}}, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).

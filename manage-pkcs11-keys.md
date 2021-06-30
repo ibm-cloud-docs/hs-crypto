@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-06-28"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -51,7 +51,7 @@ For instructions on creating custom roles, see [Creating custom roles](/docs/acc
 
 On the {{site.data.keyword.hscrypto}} dashboard, do the following to view EP11 key details:
 
-1. To view a list of created EP11 keys, select the **Enterprise PKCS #11 keys** tab in the side menu.
+1. To view a list of created EP11 keys, select the **EP11 keys** tab in the side menu.
 
   An EP11 key table is displayed with the following details.
 
@@ -122,7 +122,7 @@ For instructions on creating custom roles, see [Creating custom roles](/docs/acc
 
 Complete the following steps to create an EP11 key:
 
-1. Select the **Enterprise PKCS #11 keys** tab in the side menu. You can see a list of existing EP11 keys with each having a unique ID.
+1. Select the **EP11 keys** tab in the side menu. You can see a list of existing EP11 keys with each having a unique ID.
 2. Click **Create key**. In the **Create EP11 key** panel that is displayed, complete the following steps:
 
   1. Specify the following key details on the **Identifier** page:
@@ -148,7 +148,7 @@ Complete the following steps to create an EP11 key:
       <td>Keystore</td>
       <td>
         <p>The unique identifier of the keystore with the keystore type appended. Choose one that you want the key to be stored in from the list. For an asymmetric key pair, you need to specify the keystore separately to store the public key and the private key.</p>
-        <p>You can find all available keystores by clicking the **Enterprise PKCS #11 keystores** tab in the side menu.</p>
+        <p>You can find all available keystores by clicking the **EP11 keystores** tab in the side menu.</p>
       </td>
     </tr>
         <caption>Table 2. Describes the Identifier page</caption>
@@ -198,7 +198,7 @@ If you want to delete an EP11 key, complete the following steps:
 After you delete an EP11 key, you are not able to access the data associated with the key. This action cannot be undone.
 {: important}
 
-1. Select the **Enterprise PKCS #11 keys** tab in the side menu, and find the key that you want to delete in the list.
+1. Select the **EP11 keys** tab in the side menu, and find the key that you want to delete in the list.
 2. Click the overflow icon (...) in the key row, and click **Delete key**.
 2. Verify the ID of the key to be deleted, and check the box to confirm the deletion.
 3. Click **Delete keystore**.

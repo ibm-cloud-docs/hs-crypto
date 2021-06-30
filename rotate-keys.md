@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-17"
+lastupdated: "2021-06-28"
 
 keywords: rotate, rotate key, rotate encryption key, rotate root key, rotate root key manually, key rotation, rotate key api
 
@@ -43,7 +43,7 @@ If you prefer to rotate your root keys by using a graphical interface, you can u
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **Key management service keys** page, use the **Keys** table to browse the keys in your service.
+4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
 5. Select the key that you want to rotate and click the overflow icon (⋯) to open a list of options for the key.
 6. From the options menu, click **Rotate key**.
 

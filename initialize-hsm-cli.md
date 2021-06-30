@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-28"
+lastupdated: "2021-06-30"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -87,14 +87,16 @@ The master key registers in all crypto units in a single service instance must b
   
   ```
   SERVICE INSTANCE: 482cf2ce-a06c-4265-9819-0b4acf54f2ba
-  CRYPTO UNIT NUM   SELECTED    LOCATION
-  1                 false       [us-south].[AZ3-CS3].[02].[03]
-  2                 false       [us-south].[AZ2-CS2].[02].[03]
+  CRYPTO UNIT NUM   SELECTED   TYPE           LOCATION
+  1                 false      OPERATIONAL    [us-south].[AZ3-CS3].[02].[03]
+  2                 false      OPERATIONAL    [us-south].[AZ2-CS2].[02].[03]
+  3                 false      FAILOVER       [us-east].[AZ2-CS2].[03].[04]
+  4                 false      FAILOVER       [us-east].[AZ3-CS3].[01].[07]
 
   SERVICE INSTANCE: 96fe3f8d-9792-45bc-a9fb-2594222deaf2
-  CRYPTO UNIT NUM   SELECTED    LOCATION
-  3                 false       [us-south].[AZ1-CS4].[00].[03]
-  4                 false       [us-south].[AZ2-CS5].[03].[03]
+  CRYPTO UNIT NUM   SELECTED   TYPE           LOCATION
+  5                 false      OPERATIONAL    [us-south].[AZ1-CS4].[00].[03]
+  6                 false      OPERATIONAL    [us-south].[AZ2-CS5].[03].[03]
   ```
   {: screen}
   
@@ -106,6 +108,11 @@ The master key registers in all crypto units in a single service instance must b
   {: pre}
 
   A list of the crypto units in the target resource group under the current user account is displayed. When prompted, enter a list of crypto unit numbers to be added to the selected crypto unit list.
+  
+  If you enable cross-region high availability with [failover crypto units](/docs/hs-crypto?topic=hs-crypto-understand-concepts#crypto-unit-concept), make sure that you add all the failover crypto units to the selected list for instance initialization.
+
+  If you don't initialize and configure failover crypto units the same as the operational crypto units, you are not able to use the failover crypto units for automatic data restoration when a regional disaster happens. For more information about cross-region disaster recovery, see [High availability and disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr).
+  {: important}
   
   If you are using a public network, crypto units that are associated with service instances with the network policy set to `private-only` are not to be listed. You can access private-only crypto units only through a private network. For more information about setting up a private-only connection, see [Target the private endpoint for the TKE plug-in](/docs/hs-crypto?topic=hs-crypto-secure-connection#target-tke-private-endpoint).
   {: note}
@@ -311,7 +318,7 @@ When prompted, enter the password for the signature key file to be used. For thi
   ibmcloud tke help
   ```
   {: pre}
-- Go to the **Key management service keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+- Go to the **KMS keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
 - To learn more about performing cryptographic operations with the cloud HSM, see [Introducing cloud HSM](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm).
 - Use {{site.data.keyword.hscrypto}} as the root key provider for other {{site.data.keyword.cloud_notm}} services. For more information about integrating {{site.data.keyword.hscrypto}}, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
 - For information on how to rotate the master key, see [Rotating master keys by using the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-key-parts).

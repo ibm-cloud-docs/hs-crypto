@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-24"
+lastupdated: "2021-06-30"
 
 keywords: site map, doc structure, information architecture
 
@@ -250,6 +250,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new)
+
+* [June 2021](/docs/hs-crypto?topic=hs-crypto-what-new#june-2021)
 
 * [April 2021](/docs/hs-crypto?topic=hs-crypto-what-new#april-2021)
 
@@ -759,6 +761,17 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-add-remove-crypto-units#add-remove-crypto-units-next)
 
 
+## Enabling or adding failover crypto units after you provision a service instance
+{: #sitemap_enabling_or_adding_failover_crypto_units_after_you_provision_a_service_instance}
+
+
+[Enabling or adding failover crypto units after you provision a service instance](/docs/hs-crypto?topic=hs-crypto-enable-add-failover)
+
+* [Enabling or adding failover crypto units with the {{site.data.keyword.cloud_notm}} CLI](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#enable-add-failover-cli)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#enable-add-failover-next)
+
+
 ## Deleting service instances
 {: #sitemap_deleting_service_instances}
 
@@ -883,6 +896,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [Cross-region disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr#cross-region-disaster-recovery)
 
 [Restoring your data from another region](/docs/hs-crypto?topic=hs-crypto-restore-data)
+* [Restoring your data by using failover crypto units](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-failover-crypto-units)
+* [Restoring your data by opening an IBM support ticket](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-open-support-ticket)
 * [What's next](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-next)
 
 
@@ -935,14 +950,15 @@ Find what you are looking for in the compilation of topics that are available in
 * [Code examples](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#code-example)
 
 
-## {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} Trusted Key Entry CLI
-{: #sitemap__{{site.data.keyword.hscrypto}}_trusted_key_entry_cli}
+## Trusted Key Entry CLI reference
+{: #sitemap_trusted_key_entry_cli_reference}
 
+
+[{{site.data.keyword.hscrypto}} TKE CLI change log](/docs/hs-crypto?topic=hs-crypto-tke-cli-change-log)
+* [Version 1.2.3](/docs/hs-crypto?topic=hs-crypto-tke-cli-change-log#tke-cli-123)
 
 [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} Trusted Key Entry CLI](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin)
-
 * [Installing the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin#install-tke-cli-plugin)
-
 * [{{site.data.keyword.cloud_notm}} TKE CLI plug-in commands](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin#commands_usage)
 
 

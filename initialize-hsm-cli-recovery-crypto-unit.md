@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-06-30"
 
 keywords: initialize service instance, load master key, key ceremony, recovery crypto unit
 
@@ -65,7 +65,7 @@ To initialize your service instance using recovery crypto units, complete the fo
     ```
     {: screen}
 
-    After you choose the service instance, all crypto units for the service instance become selected. These crypto units must be in the zeroized state, also referred to as _imprint mode_. If not, an error is reported and the command ends. If this happens, you can use the `ibmcloud tke cryptounit-compare` command to see how the crypto units are configured. If current master key registers are not set, you can zeroize the crypto units with the `ibmcloud tke cryptounit-zeroize` command and rerun the `ibmcloud tke auto-init` command.
+    After you choose the service instance, all crypto units, including failover crypto units if any, for the service instance become selected. These crypto units must be in the zeroized state, also referred to as _imprint mode_. If not, an error is reported and the command ends. If this happens, you can use the `ibmcloud tke cryptounit-compare` command to see how the crypto units are configured. If current master key registers are not set, you can zeroize the crypto units with the `ibmcloud tke cryptounit-zeroize` command and rerun the `ibmcloud tke auto-init` command.
 
     You must not zeroize the crypto units if key storage for the service instance contains data. Otherwise, all data in key storage will be lost and you will be not able to access any keys or data in your service instance.
     {: important}

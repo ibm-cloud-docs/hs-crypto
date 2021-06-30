@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-06-30"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -140,7 +140,7 @@ Operational crypto units are used to manage encryption keys and perform cryptogr
 ### Understanding recovery crypto units
 {: #understand-recovery-crypto-unit}
 
-Two recovery units are automatically assigned to your service instance without extra costs. One recovery unit is allocated in the same region as the operational crypto units, and the other is allocated in a backup region. When you run the `ibmcloud tke auto-init` or `ibmcloud tke auto-mk-rotate` command, a random master key value is generated in one of the recovery crypto units and then securely exported to the other crypto units for the service instance.
+Two recovery units are automatically assigned to your service instance without extra costs. One recovery unit is allocated in the same region as the operational crypto units, and the other is allocated in a backup region. When you run the `ibmcloud tke auto-init` or `ibmcloud tke auto-mk-rotate` command, a random master key value is generated in one of the recovery crypto units and then securely exported to the other crypto units (including failover crypto units if any) for the service instance.
 
 The sole purpose of the recovery crypto units is to save a backup copy of the master key value. The recovery crypto units are not used when running operational workloads. If the current master key value is lost or destroyed, you can recover the master key value from either of the recovery crypto units by using the `ibmcloud tke auto-mk-recover` command. This command copies the value in the current master key register of a recovery crypto unit to the current master key register of other crypto units.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-06-22"
+lastupdated: "2021-06-30"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -31,6 +31,25 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 
 
+## June 2021
+{: #june-2021}
+
+### Added: Authenticated PKCS #11 keystore
+{: #add-authenticated-pkcs11-keystore}
+
+The PKCS #11 database-backed keystores can now be encrypted and authenticated. For each service instance, a maximum of five authenticated PKCS #11 keystores are supported. You can enable the `sessionauth` parameter to encrypt the generated keys into the keystore or to decrypt the key before you use it. For more information, see [Set up the PKCS #11 configuration file](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file).
+
+### Added: Enabling cross-region recovery with failover crypto units
+{: #add-failover-crypto-units}
+
+Failover crypto units back up the operational crypto units and keystores in another region. When a regional disaster occurs, you can use failover crypto units instead to reduce the downtime and data loss. Failover crypto units [charge extra fees](/docs/hs-crypto?topic=hs-crypto-faq-pricing) and this option is now available only in regions of `us-south` and `us-east`. For more information, see [Enabling or adding failover crypto units](/docs/hs-crypto?topic=hs-crypto-enable-add-failover) and [Cross-region disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr#cross-region-disaster-recovery).
+
+
+
+### Added: {{site.data.keyword.hscrypto}} expands into the London region
+{: #add-london-region}
+
+You can now create {{site.data.keyword.hscrypto}} instances in the London (`eu-gb`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
 
 ## April 2021

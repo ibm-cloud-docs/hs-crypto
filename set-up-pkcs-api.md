@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-17"
+lastupdated: "2021-06-30"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -142,6 +142,9 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
             tokenspaceID: "<private_key_store_spaceid>"
             iamauth:
               <<: *defaultiamcredential
+            sessionauth:
+              enabled: false
+              tokenspaceIDPassword: # Authenticated keystore password; must be 6-8 characters in length   
           2: # The index of the anonymous user MUST be 2.
             # The name for the anonymous user. For example: "Anonymous".
             name: "<anonymous_user_name>"
@@ -155,6 +158,9 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
               # This API key for the Anonymous user must be provided.
               # It will overide the 'apikey' in the previous defaultcredentials.iamauth.apikey field
               apikey: "<apikey_for_anonymous_user>"
+            sessionauth:
+              enabled: false
+              tokenspaceIDPassword: # Authenticated keystore password; must be 6-8 characters in length
     logging:
       # Set the logging level.
       # The supported levels, in an increasing order of verboseness:
@@ -227,6 +233,11 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
       </tr>
       <caption>Table 1. Describes the variables that are needed to create the PKCS #11 configuration file.</caption>
     </table>
+
+    To encrypt and authenticate the keystore that is used by PKCS #11, enable the `sessionauth` parameter and configure the password for the keystore. For each service instance, a maximum of five authenticated keystores are supported. The password can be 6-8 characters.
+
+    The keystore passwords are not stored in the service instance. You, as the keystore administrator, are responsible for maintaining a local copy of the passwords. If a password is lost, you need to contact IBM Support to reset the keystore, which means all data in the keystore is cleared.
+    {: note}
 
 2. Move the configuration file into the same directory as the application (for example, pkcs11-tool) that uses the PKCS #11 library. Optionally, the PKCS #11 configuration file can be placed in the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not exist.
 
