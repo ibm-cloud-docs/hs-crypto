@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-06-30"
 
 keywords: disaster recovery, restore, recovery, cross region restore, support ticket, support center
 
@@ -26,8 +26,22 @@ subcollection: hs-crypto
 # Restoring your data from another region
 {: #restore-data}
 
-If a regional disaster that affects all available zones occurs, you're notified through the [IBM Cloud status](https://cloud.ibm.com/status?selected=status){: external} web page and an email. In this case, you need to open an IBM Support ticket. IBM can then provision a new service instance for you in another region by using the same instance ID, and restore all the key resources from the backup. And then, you need to load your [master key](#x2908413){: term} to the new service instance in the new region.
-{: shortdesc}
+If a regional disaster that affects all available zones occurs, you're notified through the [IBM Cloud status](https://cloud.ibm.com/status?selected=status){: external} web page and an email. In this case, depending on whether you enable failover crypto units, you can restore your data by using failover crypto units or opening an IBM support ticket.
+{:shortdesc}
+
+## Restoring your data by using failover crypto units
+{: #restore-data-failover-crypto-units}
+
+If you create your instance in Dallas (`us-south`) or Washington DC (`us-east`) and you enable failover crypto units, your data is restored automatically to reduce the downtime and data loss. In this case, you switch to use the failover crypto units in another region to manage your keys and perform cryptographic operations. The failover crypto units contains a backup of all the encryption keys and other resources in the operational crypto units.
+
+To use failover crypto units to restore data in a regional disaster, make sure that you initialize and configure all the failover crypto units the same as the operational crypto units before the disaster happens. For more information about initialization approaches, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
+{: important}
+
+## Restoring your data by opening an IBM support ticket
+{: #restore-data-open-support-ticket}
+
+If you don't enable failover crypto units, you need to open an IBM support ticket to restore your data. IBM can then provision a new service instance for you in another region by using the same instance ID, and restore all the key resources from the backup. And then, you need to load your [master key](#x2908413){: term} to the new service instance in the new region.
+
 
 In the process, you're the only person who owns the master key. IBM administrators or any third-party users cannot access your data or keys in the backup or the restored service instance.
 {: note}

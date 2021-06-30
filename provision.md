@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-06-24"
+lastupdated: "2021-06-30"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -52,7 +52,17 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
   - Under **Service name**, enter a name for your service instance.
   - Under **Select a resource group**, select the resource group where you want to organize and manage your service intance. You can select the initial resource group that is named `Default` or other groups that you create. For more information, see [Creating and managing resource groups](/docs/account?topic=account-rgs).
   - Under **Tags** (Optional), add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/account?topic=account-tag).
-  - Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs. At least two crypto units are to be enabled for high availability. These crypto units are distributed among different supported availability zones in the selected region.
+  - Under **Number of operational crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs. At least two crypto units are to be enabled for high availability. These crypto units are distributed among different supported availability zones in the selected region.
+  
+  - Under **Number of cross-region failover crypto units**, select whether to enable failover crypto units that are used for an automatic restoration in case of a regional disaster.
+
+    If you enable failover crypto units, set the number of failover crypto units equal to or less than the number of operational crypto units. However, to meet high availability, you need to specify at least two failover crypto units. Each failover crypto unit [is also charged](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Failover crypto units are now available in Dallas (`us-south`) and Washington DC (`us-east`), so if you create your instance in other regions such as Frankfurt (`eu-de`), this option is automatically disabled.
+
+    After you provision the service instance, you can still [enable or add failover crypto units by using the {{site.data.keyword.cloud_notm}} CLI](/docs/hs-crypto?topic=hs-crypto-enable-add-failover).
+    {: tip}
+  - **Failover region** shows the region where the failover crypto units are located.
+
+    Available failover regions now are Dallas (`us-south`) and Washington DC (`us-east`). If you create your instance in either of the two regions, the failover region is automatically set to the other region.
   
   - Under **Allowed network**, choose the network access to your service instance:
 
@@ -112,7 +122,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.
 4. Run the following command to create a {{site.data.keyword.hscrypto}} instance:
     
     ```sh
-    ibmcloud resource service-instance-create <instance_name> hs-crypto standard <region_name> [-p '{"units": <number_of_operational_crypto_units>, "allowed_network": "<network_access>"}']
+    ibmcloud resource service-instance-create <instance_name> hs-crypto standard <region_name> [-p '{"units": <number_of_operational_crypto_units>, "allowed_network": "<network_access>", "failover_units": <number_of_failover_crypto_units>}']
     ```
     {: pre}
     
@@ -143,6 +153,13 @@ To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.
         <p>The default setting is **public and private**, which means you can manage your instance through both public and private network using the {{site.data.keyword.cloud_notm}} console, CLI, or API.</p>
         <p>If you set the value to **private-only**, you can access your service instance only through private network using CLI or API. The {{site.data.keyword.cloud_notm}} console is not available for the private-only network access.</p>
         <p>After you provision the service instance, you can still [update the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies).</p></td>
+      </tr>
+      
+      <tr>
+        <td>*number_of_failover_crypto_units*</td>
+        <td><p>Optional. Use this parameter to specify the number of failover crypto units to enable automatic cross-region recovery.</p>
+        <p>Set the number of failover crypto units equal to or less than the number of operational crypto units. However, to meet high availability, you need to specify at least two failover crypto units. Each failover crypto unit [is also charged](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Failover crypto units are now available in Dallas (`us-south`) and Washington DC (`us-east`). If you do not specify the number of failover crypto units, this feature is disabled by default.</p>
+        <p>After you provision the service instance, you can still [enable or add failover crypto units by using the {{site.data.keyword.cloud_notm}} CLI](/docs/hs-crypto?topic=hs-crypto-enable-add-failover).</p></td>
       </tr>
       
       <caption>Table 2. Describes command variables to create a {{site.data.keyword.hscrypto}} service instance</caption>

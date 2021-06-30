@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-12"
+lastupdated: "2021-06-30"
 
 keywords: disaster recovery, high availability, ha, dr, recoverablity, availability, failover
 
@@ -46,4 +46,7 @@ Multiple [crypto units](#x9860404){: term} in a service instance are automatical
 ## Cross-region disaster recovery
 {: #cross-region-disaster-recovery}
 
-IBM also performs cross-region backup for your key resources. Your data is automatically backed up in another supported region daily. If a regional disaster that affects all available zones occurs, you need to open a support ticket so that IBM can restore your data in another supported [{{site.data.keyword.cloud_notm}} region](/docs/hs-crypto?topic=hs-crypto-regions) from the backup. And then, you need to manually load your [master key](#x2908413){: term} to your new service instance again. In this process, you're the only person who owns the master key. IBM administrators or any third-party users can't access your data or keys in the backup or the restored service instance. For more information about the recovery process, see [Restoring your data from another region](/docs/hs-crypto?topic=hs-crypto-restore-data).
+IBM also performs cross-region backup for your key resources. Your data is automatically backed up in another supported region daily. Depending on the region that you create your service instance in and whether you enable failover crypto units, you can restore your data in case of a regional disaster with the following options:
+
+- If you create your instance in Dallas (`us-south`) or Washington DC (`us-east`) and you enable failover crypto units, the failover crypto units back up the operational crypto units and keystores in another region. When a regional disaster occurs, your data is restored automatically with the failover crypto units to reduce the downtime and data loss. For more information about how to use failover crypto units to restore data, see [Restoring your data by using failover crypto units](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-failover-crypto-units).
+- If you don't enable failover crypto units, you can use the default daily backup to restore your data. In this case, you need to open a support ticket so that IBM can create a new service instance in another supported region to restore your data from the backup. Then, you need to manually load your master key to the new instance again to make it work. In this process, you're the only person who owns the master key. IBM administrators or any third-party users can't access your data or keys in the backup or the restored service instance. For more information about the recovery process, see [Restoring your data by opening an IBM support ticket](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-open-support-ticket).

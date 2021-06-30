@@ -161,6 +161,7 @@ Hyper Protect Crypto Services
 
     enable-mechanisms.md
     add-remove-crypto-units.md
+    enable-failover.md
     delete-instance.md
 
     {: .topicgroup}
