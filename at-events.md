@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-12"
+lastupdated: "2021-06-30"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -133,6 +133,7 @@ The following table lists the Trusted Key Entry (TKE) actions that generate an e
 {: caption="Table 5. Trusted Key Entry actions" caption-side="bottom"}
 
 
+
 ### KMIP for VMware events
 {: #at-events-kmip}
 
@@ -150,7 +151,7 @@ The initiator ID is derived from the TLS (Transport Layer Security) certificate 
 | `hs-crypto.kmip-key.activate` | A KMIP key is activated. |
 | `hs-crypto.kmip-key.revoke` | A KMIP key is revoked. |
 | `hs-crypto.kmip-key.destroy` | A KMIP key is destroyed. |
-{: caption="Table 6. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
+{: caption="Table 7. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
 
 ## Viewing events
 {: #at-ui}
@@ -166,9 +167,10 @@ see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic
 | ------------------------- | ----------------------------------------------- |
 | `au-syd`                  | `au-syd`                                        |
 | `eu-de`                   | `eu-de`                                         |
+| `eu-gb`                   | `eu-gb`                                         |
 | `us-east`                 | `us-east`                                       |
 | `us-south`                | `us-south`                                      |
-{: caption="Table 7. Activity Tracker regions" caption-side="bottom"}
+{: caption="Table 8. Activity Tracker regions" caption-side="bottom"}
 
 ## Analyzing successful events
 {: #at-events-analyze}
@@ -208,7 +210,7 @@ Some common fields are available for {{site.data.keyword.hscrypto}} to use outsi
       </td>
     </tr>
     
-    <caption>Table 8. Describes the common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service
+    <caption>Table 9. Describes the common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service
     actions.</caption>
   </table>
 
@@ -417,7 +419,7 @@ The following table lists the returned values that indicate a successful TKE eve
 |`outcome` | `success`  |
 | `reason.reasonCode`  | `200`  |
 | `reason.reasonType`  |`OK`  |
-{: caption="Table 9. Describes the returned values of a successful TKE event" caption-side="bottom"}
+{: caption="Table 10. Describes the returned values of a successful TKE event" caption-side="bottom"}
 
 The following common fields for TKE events include extra information:
 
@@ -469,6 +471,8 @@ For the following TKE events, some specific fields indicate more information.
 
 - The `requestData.verificationPattern` field includes the SHA-256 hash of the master key that is loaded and committed to the new master key register.
 - The `responseData.verificationPattern` field includes the SHA-256 hash of the master key that is activated.
+
+
 
 ## Analyzing failed events
 {: #at-events-analyze-failed}
@@ -559,6 +563,11 @@ The following table lists the actions that are associated with each severity lev
         <p><code>hs-crypto.tke-cryptounit-master-key-register.activate</code></p>
         <p><code>hs-crypto.tke-cryptounit-threshold.set</code></p>
         <p><code>hs-crypto.tke-cryptounit.reset</code></p>
+        <p><code>hs-crypto.mtlscert-admin-key.create</code></p>
+        
+        
+        
+        
       </td>
     </tr>
     <tr>
@@ -581,9 +590,10 @@ The following table lists the actions that are associated with each severity lev
         <p><code>hs-crypto.policies.read</code>, <code>hs-crypto.instancepolicies.read</code></p>
         <p><code>hs-crypto.importtoken.create</code>, <code>hs-crypto.importtoken.read</code></p>
         <p><code>hs-crypto.registrations.list</code></p>
+        
       </td>
     </tr>
-    <caption>Table 10. Describes the severity level for {{site.data.keyword.hscrypto}} service actions.</caption>
+    <caption>Table 12. Describes the severity level for {{site.data.keyword.hscrypto}} service actions.</caption>
   </table>
 
 The following table lists the status codes that are associated with each severity level:
@@ -592,6 +602,6 @@ The following table lists the status codes that are associated with each severit
 | -------- | ----------- |
 | Critical | `400`[^services-1], `401`, `403`, `500`, `503`, `507`  |
 | Warning  | `400`, `409`, `424`, `502`, `504`, `505`  |
-{: caption="Table 11. Describes the severity level for {{site.data.keyword.hscrypto}} response status codes." caption-side="bottom"}
+{: caption="Table 13. Describes the severity level for {{site.data.keyword.hscrypto}} response status codes." caption-side="bottom"}
 
 [^services-1]: For Trusted Key Entry events.
