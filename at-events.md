@@ -167,7 +167,6 @@ see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic
 | ------------------------- | ----------------------------------------------- |
 | `au-syd`                  | `au-syd`                                        |
 | `eu-de`                   | `eu-de`                                         |
-| `eu-gb`                   | `eu-gb`                                         |
 | `us-east`                 | `us-east`                                       |
 | `us-south`                | `us-south`                                      |
 {: caption="Table 8. Activity Tracker regions" caption-side="bottom"}
