@@ -309,7 +309,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
               <li>The key must be 128, 192, or 256 bits.</li>
               <li>The bytes of data, for example 32 bytes for 256 bits, must be encoded by using base64 encoding.</li>
             </ul>
-            To learn more, see <a href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypt-key" target="_blank">Tutorial: Creating and importing encryption keys</a>.
+            <p>To learn more, see <a href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypt-key" target="_blank">Tutorial: Creating and importing encryption keys</a>.</p>
           </p>
         </td>
       </tr>
