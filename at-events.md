@@ -41,16 +41,13 @@ To see which {{site.data.keyword.hscrypto}} key management requests or Trusted K
 
 The following table lists the key actions that generate an event:
 
-
-
-
 | Action                            | Description                                                  |
 | --------------------------------- | ------------------------------------------------------------ |
 | `hs-crypto.secrets.create`              | Create a key.                                                 |
 | `hs-crypto.secrets.delete`              | Delete a key.                                                 |
 | `hs-crypto.secrets.createalias`         | Create a key alias.                                           |
 | `hs-crypto.secrets.deletealias`         | Delete a key alias.                                           |
-| `hs-crypto.secrets.expire`              | Expire a key.                                                |
+| `hs-crypto.secrets.expire`              | Expire a key.                                                 |
 | `hs-crypto.secrets.read`                | Retrieve all key information.                                 |
 | `hs-crypto.secrets.readmetadata`        | Retrieve key metadata (excluding key payload, if applicable). |
 | `hs-crypto.secrets.head`                | Retrieve key total.                                           |
@@ -68,7 +65,6 @@ The following table lists the key actions that generate an event:
 | `hs-crypto.secrets.eventack`            | Acknowledge a lifecycle action on a key.                      |
 | `hs-crypto.secrets.default`             | Invalid key request event.                                    |
 {: caption="Table 1. Lifecycle Key Actions" caption-side="bottom"}
-
 
 ### Policy events
 {: #policy-actions}
@@ -144,7 +140,7 @@ The following table provides the actions that generate and send events for KMIP 
 The initiator ID is derived from the TLS (Transport Layer Security) certificate of the vCenter Server that is used to authenticate the connection to the KMIP server. The initiator ID is in the format `CertificateID-<value>`, where the value matches the fingerprint of the corresponding TLS certificate. Using the fingerprint, you can identify the vCenter Server that triggered the action.
 
 | Action                                      | Description                               |
-|:--------------------------------------------|:------------------------------------------|
+|--------------------------------------------|------------------------------------------|
 | `hs-crypto.kmip-key.create` | A KMIP key is created. |
 | `hs-crypto.kmip-key.read` | A KMIP key is retrieved. |
 | `hs-crypto.kmip-key-attributes.retrieve` | A KMIP key's attributes are retrieved. |
@@ -563,7 +559,7 @@ The following table lists the actions that are associated with each severity lev
         <p><code>hs-crypto.tke-cryptounit-master-key-register.activate</code></p>
         <p><code>hs-crypto.tke-cryptounit-threshold.set</code></p>
         <p><code>hs-crypto.tke-cryptounit.reset</code></p>
-        <p><code>hs-crypto.mtlscert-admin-key.create</code></p>
+        
         
         
         
@@ -573,23 +569,36 @@ The following table lists the actions that are associated with each severity lev
     <tr>
       <td><p><varname>Warning</varname></p></td>
       <td>
-        <p><code>hs-crypto.secrets.rotate</code>, <code>hs-crypto.secrets.restore</code></p>
-        <p><code>hs-crypto.secrets.enable</code>, <code>hs-crypto.secrets.disable</code></p>
-        <p><code>hs-crypto.secrets.setkeyfordeletion</code>, <code>hs-crypto.secrets.unsetkeyfordeletion</code></p>
-        <p><code>hs-crypto.policies.write</code>, <code>hs-crypto.instancepolicies.write</code></p>
+        <p><code>hs-crypto.secrets.rotate</code></p>
+        <p><code>hs-crypto.secrets.restore</code></p>
+        <p><code>hs-crypto.secrets.enable</code></p>
+        <p><code>hs-crypto.secrets.disable</code></p>
+        <p><code>hs-crypto.secrets.setkeyfordeletion</code></p>
+        <p><code>hs-crypto.secrets.unsetkeyfordeletion</code></p>
+        <p><code>hs-crypto.policies.write</code></p>
+        <p><code>hs-crypto.instancepolicies.write</code></p>
       </td>
     </tr>
      <tr>
       <td><p><varname>Normal</varname></p></td>
       <td>
-        <p><code>hs-crypto.secrets.create</code>, <code>hs-crypto.secrets.read</code></p>
-        <p><code>hs-crypto.secrets.readmetadata</code>, <code>hs-crypto.secrets.head</code></p>
-        <p><code>hs-crypto.secrets.list</code>, <code>hs-crypto.secrets.wrap</code></p>
-        <p><code>hs-crypto.secrets.unwrap</code>, <code>hs-crypto.secrets.rewrap</code></p>
-        <p><code>hs-crypto.secrets.listkeyversions</code>, <code>hs-crypto.secrets.eventack</code></p>
-        <p><code>hs-crypto.policies.read</code>, <code>hs-crypto.instancepolicies.read</code></p>
-        <p><code>hs-crypto.importtoken.create</code>, <code>hs-crypto.importtoken.read</code></p>
+        <p><code>hs-crypto.secrets.create</code></p>
+        <p><code>hs-crypto.secrets.read</code></p>
+        <p><code>hs-crypto.secrets.readmetadata</code></p>
+        <p><code>hs-crypto.secrets.head</code></p>
+        <p><code>hs-crypto.secrets.list</code></p>
+        <p><code>hs-crypto.secrets.wrap</code></p>
+        <p><code>hs-crypto.secrets.unwrap</code></p>
+        <p><code>hs-crypto.secrets.rewrap</code></p>
+        <p><code>hs-crypto.secrets.listkeyversions</code></p>
+        <p><code>hs-crypto.secrets.eventack</code></p>
+        <p><code>hs-crypto.policies.read</code></p>
+        <p><code>hs-crypto.instancepolicies.read</code></p>
+        <p><code>hs-crypto.importtoken.create</code></p>
+        <p><code>hs-crypto.importtoken.read</code></p>
         <p><code>hs-crypto.registrations.list</code></p>
+        
+        
         
       </td>
     </tr>
