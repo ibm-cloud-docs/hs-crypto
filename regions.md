@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-07-01"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -32,6 +32,7 @@ You can connect your applications with the {{site.data.keyword.cloud}} {{site.da
 
 - Dallas, US: `us-south`
 - Frankfurt, Germany: `eu-de`
+- London, UK: `eu-gb` - Based on the {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) infrastructure
 - Sydney, Australia: `au-syd`
 - Washington DC, US: `us-east`
 
@@ -67,6 +68,7 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 | ------------- | ---------------------------- |---------------------------- |
 | Dallas        | `api.us-south.hs-crypto.cloud.ibm.com` |`ep11.us-south.hs-crypto.cloud.ibm.com` |
 | Frankfurt     | `api.eu-de.hs-crypto.cloud.ibm.com`    |`ep11.eu-de.hs-crypto.cloud.ibm.com`    |
+| London        | `api.vpc.eu-gb.hs-crypto.cloud.ibm.com`  | `ep11.vpc.eu-gb.hs-crypto.cloud.ibm.com`  |
 | Sydney        | `api.au-syd.hs-crypto.cloud.ibm.com`   |`ep11.au-syd.hs-crypto.cloud.ibm.com`   |
 | Washington DC | `api.us-east.hs-crypto.cloud.ibm.com`  |`ep11.us-east.hs-crypto.cloud.ibm.com`  |
 {: caption="Table 1. Lists public endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's public network" caption-side="bottom"}
@@ -79,6 +81,7 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 | ------------- | ------------------------------------ |------------------------------------ |
 | Dallas        | `api.private.us-south.hs-crypto.cloud.ibm.com` | `ep11.private.us-south.hs-crypto.cloud.ibm.com` |
 | Frankfurt     | `api.private.eu-de.hs-crypto.cloud.ibm.com`    | `ep11.private.eu-de.hs-crypto.cloud.ibm.com`    |
+| London        | `api.vpc.private.eu-gb.hs-crypto.cloud.ibm.com`  | `ep11.vpc.private.eu-gb.hs-crypto.cloud.ibm.com`  |
 | Sydney        | `api.private.au-syd.hs-crypto.cloud.ibm.com`   | `ep11.private.au-syd.hs-crypto.cloud.ibm.com`   |
 | Washington DC | `api.private.us-east.hs-crypto.cloud.ibm.com`  | `ep11.private.us-east.hs-crypto.cloud.ibm.com`  |
 {: caption="Table 2. Lists private endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's private network" caption-side="bottom"}
