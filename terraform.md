@@ -49,22 +49,22 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
 
   ```terraform
   resource ibm_hpcs hpcs {
-    location             = "us-south"
-    name                 = "test-hpcs"
-    plan                 = "standard"
-    units                = 2
-    signature_threshold  = 1
-    revocation_threshold = 1
-    admins {
-      name  = "admin1"
-      key   = "/cloudTKE/1.sigkey"
-      token = "sensitive1234"
-    }
-    admins {
-      name  = "admin2"
-      key   = "/cloudTKE/2.sigkey"
-      token = "sensitive1234"
-    }
+     location             = "us-south"
+     name                 = "test-hpcs"
+     plan                 = "standard"
+     units                = 2
+     signature_threshold  = 1
+     revocation_threshold = 1
+     admins {
+       name  = "admin1"
+       key   = "/cloudTKE/1.sigkey"
+       token = "sensitive1234"
+     }
+     admins {
+       name  = "admin2"
+       key   = "/cloudTKE/2.sigkey"
+       token = "sensitive1234"
+     }
   }
   ```
   {: codeblock}
@@ -127,7 +127,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     </tr>
     <tr>
       <td>signature_server_url</td>
-      <td>**Optional**. The URL of the signing service.</td>
+      <td>**Optional**. The URL of the signing service. If you use a third-party signing service to provide administrator signature keys, you need to specify the URL.</td>
     </tr>
     <caption>Table 1. Supported parameters for provisioning a service instance with Terraform</caption>
   </table>
