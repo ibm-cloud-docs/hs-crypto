@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-01"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -31,7 +31,6 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 
 
-
 ## June 2021
 {: #june-2021}
 
@@ -44,6 +43,13 @@ The PKCS #11 database-backed keystores can now be encrypted and authenticated. F
 {: #add-failover-crypto-units}
 
 Failover crypto units back up the operational crypto units and keystores in another region. When a regional disaster occurs, you can use failover crypto units instead to reduce the downtime and data loss. Failover crypto units [charge extra fees](/docs/hs-crypto?topic=hs-crypto-faq-pricing) and this option is now available only in regions of `us-south` and `us-east`. For more information, see [Enabling or adding failover crypto units](/docs/hs-crypto?topic=hs-crypto-enable-add-failover) and [Cross-region disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr#cross-region-disaster-recovery).
+
+
+
+### Added: {{site.data.keyword.hscrypto}} expands into the London region
+{: #add-london-region}
+
+You can now create {{site.data.keyword.hscrypto}} instances in the London (`eu-gb`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
 
 ## April 2021
