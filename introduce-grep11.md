@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-07-05"
 
 keywords: hsm, cloud hsm, tke cli, trusted key entry plug-in, ep11, grep11, cryptographic operations, cryptographic functions
 
@@ -25,7 +25,7 @@ subcollection: hs-crypto
 
 Enterprise PKCS #11 (EP11) is designed for customers that are seeking support for open standards and enhanced security. The EP11 library provides a stateless interface, which is similar to the industry-standard [Public-Key Cryptography Standards (PKCS) #11 API](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}. PKCS #11 API defines a platform-independent API to cryptographic tokens, such as hardware security modules (HSM) and smart cards. Existing applications that use PKCS #11 can benefit from enhanced security with secure key cryptography as well as a stateless interface, which makes the cryptographic operations much more efficient.
 
-More information about the EP11 Library can be found in the [Enterprise PKCS #11 (EP11) Library structure document](http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf){: external}. For more information about EP11 capabilities and extensions, see [EP11 introduction](https://www.ibm.com/security/cryptocards/pciecc3/ep11){: external}.
+More information about the EP11 Library can be found in the [Enterprise PKCS #11 (EP11) Library structure document](https://www.ibm.com/security/cryptocards/pciecc4/library){: external}. For more information about EP11 capabilities and extensions, see [EP11 introduction](https://www.ibm.com/security/cryptocards/pciecc3/ep11){: external}.
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of EP11 over gRPC (GREP11) API calls, with which all the cryptographic functions are executed in the cloud HSM of {{site.data.keyword.hscrypto}}. The GREP11 API is a stateless interface for cryptographic operations on cloud.
 
