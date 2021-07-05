@@ -75,6 +75,16 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
        token = "sensitive1234"
      }
   }
+
+  resource "ibm_iam_user_policy" "policy" {
+     ibm_id = "user@ibm.com"
+     roles  = ["Manager"]
+
+     resources {
+       service              = "test-hpcs"
+       resource_instance_id = element(split(":", ibm_resource_instance.hpcs.id), 7)
+     }
+  }
   ```
   {: codeblock}
 
