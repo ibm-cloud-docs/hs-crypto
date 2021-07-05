@@ -44,7 +44,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
 
   - Using the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) CLI plug-in
 
-    After you install and configure the TKE CLI plug-in by following [the instruction](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite), you can use the command `ibmcloud tke sigkey-add` to create administrator sinature keys. The signature keys are stored in files that are protected by passwords on your local workstation. The file path is specified by the environments variable `CLOUDTKEFILES`.
+    After you install and configure the TKE CLI plug-in by following [the instruction](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite), you can use the command `ibmcloud tke sigkey-add` to create administrator sinature keys. The signature keys are stored in files that are protected by passwords on your local workstation. The file path is specified by the environment variable `CLOUDTKEFILES`.
   - Using the third-party signing service
 
     **Need further input**
