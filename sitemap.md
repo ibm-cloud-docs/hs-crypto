@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-02"
+lastupdated: "2021-07-05"
 
 keywords: site map, doc structure, information architecture
 
@@ -884,6 +884,17 @@ Find what you are looking for in the compilation of topics that are available in
 * [Default Dashboards](/docs/hs-crypto?topic=hs-crypto-operational-metrics#default-dashboards)
 
 * [Setting Alerts](/docs/hs-crypto?topic=hs-crypto-operational-metrics#set-monitor-alerts)
+
+
+## Managing security and compliance with {{site.data.keyword.hscrypto}}
+{: #sitemap_managing_security_and_compliance_with_}
+
+
+[Managing security and compliance with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance)
+
+* [Monitoring security and compliance posture with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#monitor-crypto)
+
+* [Governing {{site.data.keyword.hscrypto}} resource configuration with config rules](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#govern-crypto)
 
 
 ## High availability and disaster recovery
