@@ -45,11 +45,10 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
   - Using the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) CLI plug-in
 
     After you install and configure the TKE CLI plug-in by following [the instruction](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite), you can use the command `ibmcloud tke sigkey-add` to create administrator sinature keys. The signature keys are stored in files that are protected by passwords on your local workstation. The file path is specified by the environments variable `CLOUDTKEFILES`.
-
   - Using the third-party signing service
 
     **Need further input**
-    
+
 3. Create a Terraform configuration file `main.tf` in the same folder as `versions.tf`. In this file, you add the configurations to perform the corresponding actions.
 
   The following template is an example configuration file to provision a {{site.data.keyword.hscrypto}} instance with 2 operational crypto units in the `us-south` region. This instance is charged according to the standard pricing plan and is initialized with 2 administrators. The master key is automatically generated in recovery crypto units that are assigned to the instance.

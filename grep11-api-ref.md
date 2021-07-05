@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-01"
+lastupdated: "2021-07-05"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -71,7 +71,7 @@ message Grep11Error {
 ```
 {: codeblock}
 
-The `Code` field can be cast to the ***CK_RV*** value in PKCS #11. This field contains the error codes that are defined by the [PKCS #11 specification](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959729){: external} or the vendor extensions that are defined by EP11. EP11 uses only a subset of return values that PKCS #11 defines. For more information, see the **10.1.6 Return values** section in [Enterprise PKCS #11 Library structure](http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf).
+The `Code` field can be cast to the ***CK_RV*** value in PKCS #11. This field contains the error codes that are defined by the [PKCS #11 specification](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959729){: external} or the vendor extensions that are defined by EP11. EP11 uses only a subset of return values that PKCS #11 defines. For more information, see the **10.1.6 Return values** section in [Enterprise PKCS #11 Library structure](https://www.ibm.com/security/cryptocards/pciecc4/library).
 
 An [example](https://github.com/IBM-Cloud/hpcs-grep11-go/blob/master/examples/server_test.go#L863){: external} in Golang that deals with errors is available.
 
@@ -241,7 +241,7 @@ Mechanism `CKM_EC_KEY_PAIR_GEN` is supported when you call the `GenerateKeyPair`
 ## Performing cryptographic operations with GREP11 functions
 {: #grep11-functions}
 
-You can perform cryptographic operations by calling GREP11 functions that are defined based on the EP11 implementation of the PKCS #11 specification. The following function descriptions are created based on the [PKCS #11 specification](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}, with notes specific to EP11. All parameter definitions are in the original form of EP11. For more information about EP11, see [Enterprise PKCS #11 (EP11) Library structure](http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf){: external}.
+You can perform cryptographic operations by calling GREP11 functions that are defined based on the EP11 implementation of the PKCS #11 specification. The following function descriptions are created based on the [PKCS #11 specification](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}, with notes specific to EP11. All parameter definitions are in the original form of EP11. For more information about EP11, see [Enterprise PKCS #11 (EP11) Library structure](https://www.ibm.com/security/cryptocards/pciecc4/library){: external}.
 
 EP11 function parameters are mapped to the protocol buffer types that can be found in the following functions. You can learn more about protocol buffer types in [Google Developers](https://developers.google.com/protocol-buffers/docs/proto3#scalar){: external}.
 
@@ -309,7 +309,7 @@ CK_RV m_GetMechanismList (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_GetMechanismList` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_GetMechanismList` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #GetMechanismList_EP11}
@@ -434,7 +434,7 @@ CK_RV m_GetMechanismInfo (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_GetMechanismInfo` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_GetMechanismInfo` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #GetMechanismInfo_EP11}
@@ -572,7 +572,7 @@ CK_RV m_GenerateKey (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_GenerateKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_GenerateKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #GenerateKey_EP11}
@@ -742,7 +742,7 @@ CK_RV m_GenerateKeyPair (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_GenerateKeyPair` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_GenerateKeyPair` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #GenerateKeyPair_EP11}
@@ -920,7 +920,7 @@ CK_RV m_DeriveKey (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_DeriveKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_DeriveKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #DeriveKey_EP11}
@@ -1099,7 +1099,7 @@ CK_RV m_WrapKey (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_WrapKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_WrapKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #WrapKey_EP11}
@@ -1254,7 +1254,7 @@ CK_RV m_UnwrapKey (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_UnwrapKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_UnwrapKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #UnwrapKey_EP11}
@@ -1476,7 +1476,7 @@ CK_RV m_GetAttributeValue (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_GetAttributeValue` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_GetAttributeValue` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #GetAttributeValue_EP11}
@@ -1623,7 +1623,7 @@ CK_RV m_SetAttributeValue (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_SetAttributeValue` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_SetAttributeValue` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #SetAttributeValue_EP11}
@@ -1761,7 +1761,7 @@ CK_RV m_GenerateRandom (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_GenerateRandom` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_GenerateRandom` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #GenerateRandom_EP11}
@@ -1892,7 +1892,7 @@ CK_RV m_EncryptInit (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_EncryptInit` return values. For more information, see the <strong>Return values</strong> chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_EncryptInit` return values. For more information, see the <strong>Return values</strong> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #EncryptInit_EP11}
@@ -2031,7 +2031,7 @@ CK_RV m_Encrypt (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Encrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapterof the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structuredocument</a>.</td>
+    <td>A subset of `C_Encrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapterof the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structuredocument</a>.</td>
   </tr>
 </table>
 {: #Encrypt_EP11}
@@ -2165,7 +2165,7 @@ CK_RV m_EncryptUpdate (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_EncryptUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_EncryptUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #EncryptUpdate_EP11}
@@ -2308,7 +2308,7 @@ CK_RV m_EncryptFinal (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_EncryptFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_EncryptFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #EncryptFinal_EP11}
@@ -2435,7 +2435,7 @@ CK_RV m_EncryptSingle (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Encrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Encrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #EncryptSingle_EP11}
@@ -2550,7 +2550,7 @@ CK_RV m_ReencryptSingle (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Encrypt` and `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Encrypt` and `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #ReencryptSingle_EP11}
@@ -2662,7 +2662,7 @@ CK_RV m_DecryptInit (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_DecryptInit` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_DecryptInit` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #DecryptInit_EP11}
@@ -2799,7 +2799,7 @@ CK_RV m_Decrypt (const unsigned char *state, size_t slen,
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #decrypt_EP11}
@@ -2937,7 +2937,7 @@ CK_RV m_DecryptUpdate (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_DecryptUpdate` return values. For more information, see the <em><strong>Return values</strong></em>chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Librarystructure document</a>.</td>
+    <td>A subset of `C_DecryptUpdate` return values. For more information, see the <em><strong>Return values</strong></em>chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Librarystructure document</a>.</td>
   </tr>
 </table>
 {: #DecryptUpdate_EP11}
@@ -3075,7 +3075,7 @@ CK_RV m_DecryptFinal (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_DecryptFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_DecryptFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #DecryptFinal_EP11}
@@ -3203,7 +3203,7 @@ CK_RV m_DecryptSingle (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #DecryptSingle_EP11}
@@ -3314,7 +3314,7 @@ CK_RV m_SignInit (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #SignInit_EP11}
@@ -3441,7 +3441,7 @@ CK_RV m_Sign (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Sign` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Sign` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #Sign_EP11}
@@ -3569,7 +3569,7 @@ CK_RV m_SignUpdate (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_SignUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_SignUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #SignUpdate_EP11}
@@ -3700,7 +3700,7 @@ CK_RV m_SignFinal (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_SignFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_SignFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #SignFinal_EP11}
@@ -3826,7 +3826,7 @@ CK_RV m_SignSingle (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #SignSingle_EP11}
@@ -3927,7 +3927,7 @@ CK_RV m_VerifyInit (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_VerifyInit` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_VerifyInit` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #VerifyInit_EP11}
@@ -4056,7 +4056,7 @@ CK_RV m_Verify (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Verify` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Verify` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #Verify_EP11}
@@ -4185,7 +4185,7 @@ CK_RV m_VerifyUpdate (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_VerifyUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_VerifyUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #VerifyUpdate_EP11}
@@ -4316,7 +4316,7 @@ CK_RV m_VerifyFinal (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_VerifyFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_VerifyFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #VerifyFinal_EP11}
@@ -4444,7 +4444,7 @@ CK_RV m_VerifySingle (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_VerifySingle` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_VerifySingle` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #VerifySingle_EP11}
@@ -4545,7 +4545,7 @@ CK_RV m_DigestInit (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_DigestInit` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_DigestInit` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #DigestInit_EP11}
@@ -4671,7 +4671,7 @@ CK_RV m_Digest (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_Digest` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_Digest` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #Digest_EP11}
@@ -4805,7 +4805,7 @@ CK_RV m_DigestUpdate (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_DigestUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_DigestUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #DigestUpdate_EP11}
@@ -4938,7 +4938,7 @@ CK_RV m_DigestFinal (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_DigestFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_DigestFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #DigestFinal_EP11}
@@ -5061,7 +5061,7 @@ CK_RV m_DigestSingle (
   </tr>
   <tr>
     <th>Return values</th>
-    <td>A subset of `C_DigestSingle` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="http://public.dhe.ibm.com/security/cryptocards/pciecc4/EP11/docs/ep11-structure.pdf" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of `C_DigestSingle` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
 </table>
 {: #DigestSingle_EP11}
