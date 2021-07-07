@@ -1,0 +1,38 @@
+---
+
+copyright:
+  years:  2021
+lastupdated: "2021-07-07"
+
+keywords: change log for tke, updates to tke cli plugin, updates to cert manager cli plugin
+
+subcollection: hs-crypto
+
+---
+
+{:external: target="_blank" .external}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+
+
+# {{site.data.keyword.hscrypto}} CLI change log
+{: #cli-change-log}
+
+In this change log, you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} command-line interface (CLI) plug-ins.
+{: shortdesc}
+
+## {{site.data.keyword.cloud}} TKE CLI plug-in
+{: #tke-cli-change-log}
+
+### Version 1.2.3
+{: #tke-cli-123}
+
+Version 1.2.3 of the Trusted Key Entry (TKE) CLI was released on 30 June 2021.
+
+Added the `ibmcloud tke failover-enable` command to enable or add failover crypto units after provisioning a {{site.data.keyword.hscrypto}} instance.
+
+
