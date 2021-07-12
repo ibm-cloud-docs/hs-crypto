@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-07"
+lastupdated: "2021-07-08"
 
 keywords: site map, doc structure, information architecture
 
@@ -251,39 +251,39 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new)
 
-* [June 2021](/docs/hs-crypto?topic=hs-crypto-what-new#june-2021)
+* [30 June 2021](/docs/hs-crypto?topic=hs-crypto-what-new#june-2021)
 
-* [April 2021](/docs/hs-crypto?topic=hs-crypto-what-new#april-2021)
+* [30 April 2021](/docs/hs-crypto?topic=hs-crypto-what-new#april-2021)
 
-* [March 2021](/docs/hs-crypto?topic=hs-crypto-what-new#march-2021)
+* [31 March 2021](/docs/hs-crypto?topic=hs-crypto-what-new#march-2021)
 
-* [February 2021](/docs/hs-crypto?topic=hs-crypto-what-new#february-2021)
+* [28 February 2021](/docs/hs-crypto?topic=hs-crypto-what-new#february-2021)
 
-* [January 2021](/docs/hs-crypto?topic=hs-crypto-what-new#january-2021)
+* [31 January 2021](/docs/hs-crypto?topic=hs-crypto-what-new#january-2021)
 
-* [December 2020](/docs/hs-crypto?topic=hs-crypto-what-new#december-2020)
+* [31 December 2020](/docs/hs-crypto?topic=hs-crypto-what-new#december-2020)
 
-* [November 2020](/docs/hs-crypto?topic=hs-crypto-what-new#november-2020)
+* [30 November 2020](/docs/hs-crypto?topic=hs-crypto-what-new#november-2020)
 
-* [September 2020](/docs/hs-crypto?topic=hs-crypto-what-new#september-2020)
+* [30 September 2020](/docs/hs-crypto?topic=hs-crypto-what-new#september-2020)
 
-* [August 2020](/docs/hs-crypto?topic=hs-crypto-what-new#august-2020)
+* [31 August 2020](/docs/hs-crypto?topic=hs-crypto-what-new#august-2020)
 
-* [July 2020](/docs/hs-crypto?topic=hs-crypto-what-new#july-2020)
+* [31 July 2020](/docs/hs-crypto?topic=hs-crypto-what-new#july-2020)
 
-* [June 2020](/docs/hs-crypto?topic=hs-crypto-what-new#june-2020)
+* [30 June 2020](/docs/hs-crypto?topic=hs-crypto-what-new#june-2020)
 
-* [April 2020](/docs/hs-crypto?topic=hs-crypto-what-new#april-2020)
+* [30 April 2020](/docs/hs-crypto?topic=hs-crypto-what-new#april-2020)
 
-* [August 2019](/docs/hs-crypto?topic=hs-crypto-what-new#August-2019)
+* [31 August 2019](/docs/hs-crypto?topic=hs-crypto-what-new#August-2019)
 
-* [June 2019](/docs/hs-crypto?topic=hs-crypto-what-new#June-2019)
+* [30 June 2019](/docs/hs-crypto?topic=hs-crypto-what-new#June-2019)
 
-* [March 2019](/docs/hs-crypto?topic=hs-crypto-what-new#March-2019)
+* [31 March 2019](/docs/hs-crypto?topic=hs-crypto-what-new#March-2019)
 
-* [February 2019](/docs/hs-crypto?topic=hs-crypto-what-new#Feb-2019)
+* [28 February 2019](/docs/hs-crypto?topic=hs-crypto-what-new#Feb-2019)
 
-* [December 2018](/docs/hs-crypto?topic=hs-crypto-what-new#Dec-2018)
+* [31 December 2018](/docs/hs-crypto?topic=hs-crypto-what-new#Dec-2018)
 
 
 ## Tutorials on key management service
@@ -912,8 +912,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-next)
 
 
-## Key management service reference
-{: #sitemap_key_management_service_reference}
+## API reference
+{: #sitemap_api_reference}
 
 
 
@@ -925,52 +925,83 @@ Find what you are looking for in the compilation of topics that are available in
 * [API versioning](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-versioning)
 * [April 2021](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-april-2021)
 * [Key management API reference](https://{DomainName}/apidocs/hs-crypto){: external}
-[Key management CLI reference](https://{DomainName}/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference){: external}
 
 
-## Cloud hardware security module reference
-{: #sitemap_cloud_hardware_security_module_reference}
+## Cryptographic operations: PKCS #11 API
+{: #sitemap_cryptographic_operations:_pkcs_#11_api}
 
 
 [Cryptographic operations: PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref)
+
 * [Installing and configuring PKCS #11 library](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#setup-pkcs11-library)
+
 * [Error handling](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs11-error-handling)
+
 * [Verifying that keys are protected by crypto units](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs11-key-verify)
+
 * [PKCS #11 function list](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs11_function_list)
+
 * [Supported mechanisms](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-mechanism-list)
+
 * [Supported attributes and key types](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list)
+
 * [Supported curves](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#supported-pkcs11-curve-name)
+
 * [Standard PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs11-standard-api-ref)
 
+
+## Cryptographic operations: GREP11 API
+{: #sitemap_cryptographic_operations:_grep11_api}
+
+
 [Cryptographic operations: GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref)
+
 * [Accessing the API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#access-grep11-functions)
+
 * [Error handling](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-error-handling)
+
 * [GREP11 function list](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11_function_list)
+
 * [Supported mechanisms](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-mechanism-list)
+
 * [Supported attributes and key types](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-attribute-list)
+
 * [Supported curves](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#supported-grep11-curve-name)
+
 * [Performing cryptographic operations with GREP11 functions](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-functions)
+
 * [Retrieving supported crypto algorithms](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-operation-retrieve-mechanisms)
+
 * [Generating and deriving keys](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-operation-generate-keys)
+
 * [Protecting keys](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-operation-manage-keys)
+
 * [Retrieving and modifying attributes for keys](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-operation-attribute-value)
+
 * [Generating random data](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-operation-generate-random-data)
+
 * [Encrypting and decrypting data](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-operation-encrypt-decrypt-data)
+
 * [Signing and verifying data](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-operation-sign-verify-data)
+
 * [Protecting data integrity through message digests](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-operation-digest-data)
+
 * [Code examples](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#code-example)
+
+
+## CLI reference
+{: #sitemap_cli_reference}
+
+
+[Key management CLI reference](https://{DomainName}/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference){: external}
 
 
 ## Trusted Key Entry CLI reference
 {: #sitemap_trusted_key_entry_cli_reference}
 
 
-[{{site.data.keyword.hscrypto}} TKE CLI change log](/docs/hs-crypto?topic=hs-crypto-tke-cli-change-log)
-* [Version 1.2.3](/docs/hs-crypto?topic=hs-crypto-tke-cli-change-log#tke-cli-123)
-
-[{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} Trusted Key Entry CLI](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin)
-* [Installing the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin#install-tke-cli-plugin)
-* [{{site.data.keyword.cloud_notm}} TKE CLI plug-in commands](/docs/hs-crypto?topic=hs-crypto-cli-plugin-tke_cli_plugin#commands_usage)
+[{{site.data.keyword.hscrypto}} CLI change log](/docs/hs-crypto?topic=hs-crypto-cli-change-log)
+* [{{site.data.keyword.cloud}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#tke-cli-change-log)
 
 
 ## Terraform reference
