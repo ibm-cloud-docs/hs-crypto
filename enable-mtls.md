@@ -51,7 +51,7 @@ Before you can enable the second layer of authentication for GREP11 or PKCS #11 
 ## Step 1: Configure the administrator signature key
 {: #enable-authentication-ep11-step1-signature}
 
-To enable the second layer of authentication, you need to first configure the administrator signature key. The signature key is used to sign command actions towards your instance certificate manager server.
+To enable the second layer of authentication, you need to first configure the administrator signature key. The signature key is used for you to connect to your instance certificate manager server.
 
 1. Generate the signature key pair and upload the public key with the following command:
 
@@ -98,7 +98,7 @@ After you configure the administrator signature key, you need to upload the clie
     </tr>
     <tr>
       <td><varname>ADMIN_PRIV_KEY</varname></td>
-      <td>**Required.** The file path of your current private key that you generate in [Step 1](#enable-authentication-ep11-step1-signature). The private key is used to sign the certificate.</td>
+      <td>**Required.** The file path of your current private key that you generate in [Step 1](#enable-authentication-ep11-step1-signature). The private key is used to sign this command action towards your instance certificate manager server.</td>
     </tr>
     <tr>
       <td><varname>CERT_ID</varname></td>
@@ -122,7 +122,7 @@ After you configure the administrator signature key, you need to upload the clie
 
   This command lists all the available client certificates that are managed by you on the server. If the list contains the certificate that is previously uploaded, it means the action is successfully completed.
 
-## Step 3: Establish mutual TLS connections for applications using the GREP11 or PKCS #11 API
+## Step 3: Establish mutual TLS connections for EP11 applications
 {: #enable-authentication-ep11-step3-enable-tls}
 
 After you set up the administrator signature key and the client certificate, EP11 service users can establish mutual TLS connections for applications that use the GREP11 or PKCS #11 API. Before EP11 service users can do this, they need to configure the GREP11 or PKCS #11 applications with the client certificate.
@@ -159,11 +159,11 @@ If you no longer need the second layer of authentication, you can disable the fu
     </tr>
     <tr>
       <td><varname>ADMIN_PRIV_KEY</varname></td>
-      <td>**Required.** The file path of your current private key that is stored on your local workstation.</td>
+      <td>**Required.** The file path of your current private key that is stored on your local workstation. The private key is used to sign this command action towards your instance certificate manager server.</td>
     </tr>
     <tr>
       <td><varname>CERT_ID</varname></td>
-      <td>**Required.** The string ID of the client certificate that you want to delete. You can first use the `ibmcloud hpcs-cert-mgr cert list` command to list all the certificates including their IDs.</td>
+      <td>**Required.** The string ID of the client certificate that you want to delete. You can first use the `ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN` command to list all the certificates including their IDs.</td>
     </tr>
     <caption>Table 2. Describes the variables that are needed to delete client certificates</caption>
   </table>
