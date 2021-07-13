@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-17"
+lastupdated: "2021-07-13"
 
 keywords: root key, wrap key, encrypt data encryption key, protect data encryption key, key wrap api
 
@@ -77,6 +77,10 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
       <tr>
         <td><varname>region</varname></td>
         <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
+      </tr>
+      <tr>
+        <td><varname>port</varname></td>
+        <td><strong>Required.</strong> The port number of the API endpoint.</td>
       </tr>
       <tr>
         <td><varname>key_ID</varname></td>

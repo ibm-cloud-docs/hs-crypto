@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-06-28"
+lastupdated: "2021-07-13"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -154,6 +154,10 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
         <tr>
           <td><varname>region</varname></td>
           <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
+        </tr>
+        <tr>
+          <td><varname>port</varname></td>
+          <td><strong>Required.</strong> The port number of the API endpoint.</td>
         </tr>
         <tr>
           <td><varname>IAM_token</varname></td>

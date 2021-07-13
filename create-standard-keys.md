@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-06-28"
+lastupdated: "2021-07-13"
 
 keywords: standard key, encryption key, create standard key, create encryption key, add key, key material, key management, create secret, persist secret, create encryption key, encryption key api, api key
 
@@ -140,6 +140,10 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
       <tr>
         <td>region</td>
         <td>The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
+      </tr>
+      <tr>
+        <td><varname>port</varname></td>
+        <td><strong>Required.</strong> The port number of the API endpoint.</td>
       </tr>
       <tr>
         <td>IAM_token</td>

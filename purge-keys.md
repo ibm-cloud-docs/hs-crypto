@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-28"
+lastupdated: "2021-07-13"
 
 keywords: purge key, permanently delete key, remove key, destroy key
 
@@ -83,6 +83,10 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/purge
       <tr>
         <td><varname>region</varname></td>
         <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
+      </tr>
+      <tr>
+        <td><varname>port</varname></td>
+        <td><strong>Required.</strong> The port number of the API endpoint.</td>
       </tr>
       <tr>
         <td><varname>key_ID</varname></td>
