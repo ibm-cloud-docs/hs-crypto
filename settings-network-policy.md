@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-27"
+lastupdated: "2021-07-13"
 
 keywords: instance settings, service settings, network access policies
 
@@ -115,6 +115,10 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
             For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
           </p>
         </td>
+      </tr>
+      <tr>
+        <td><varname>port</varname></td>
+        <td><strong>Required.</strong> The port number of the API endpoint.</td>
       </tr>
       <tr>
         <td>
@@ -257,6 +261,11 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
         </td>
       </tr>
 
+      <tr>
+        <td><varname>port</varname></td>
+        <td><strong>Required.</strong> The port number of the API endpoint.</td>
+      </tr>
+      
       <tr>
         <td>
           <varname>IAM_token</varname>

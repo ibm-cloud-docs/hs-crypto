@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-06-28"
+lastupdated: "2021-07-13"
 
 keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 
@@ -121,6 +121,10 @@ at query time to delete the key.
       <tr>
         <td><varname>region</varname></td>
         <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
+      </tr>
+      <tr>
+        <td><varname>port</varname></td>
+        <td><strong>Required.</strong> The port number of the API endpoint.</td>
       </tr>
       <tr>
         <td><varname>key_ID</varname></td>
@@ -258,6 +262,11 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
       </td>
     </tr>
 
+    <tr>
+      <td><varname>port</varname></td>
+      <td><strong>Required.</strong> The port number of the API endpoint.</td>
+    </tr>
+    
     <tr>
       <td>
         <varname>key_ID</varname>

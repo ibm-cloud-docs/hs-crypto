@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-06-28"
+lastupdated: "2021-07-13"
 
 keywords: rotate, rotate root key, automatic key rotation, set rotation policy, policy based key rotation
 
@@ -87,12 +87,16 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
         <th>Description</th>
       </tr>
       <tr>
-        <td><varname>key_ID</varname></td>
-        <td><strong>Required.</strong> The unique identifier for the root key that has an existing rotation policy.</td>
-      </tr>
-      <tr>
         <td><varname>region</varname></td>
         <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
+      </tr>
+      <tr>
+        <td><varname>port</varname></td>
+        <td><strong>Required.</strong> The port number of the API endpoint.</td>
+      </tr>
+      <tr>
+        <td><varname>key_ID</varname></td>
+        <td><strong>Required.</strong> The unique identifier for the root key that has an existing rotation policy.</td>
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
@@ -180,12 +184,16 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
         <th>Description</th>
       </tr>
       <tr>
-        <td><varname>key_ID</varname></td>
-        <td><strong>Required.</strong> The unique identifier for the root key that you want to create a rotation policy for.</td>
-      </tr>
-      <tr>
         <td><varname>region</varname></td>
         <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
+      </tr>
+      <tr>
+        <td><varname>port</varname></td>
+        <td><strong>Required.</strong> The port number of the API endpoint.</td>
+      </tr>
+      <tr>
+        <td><varname>key_ID</varname></td>
+        <td><strong>Required.</strong> The unique identifier for the root key that you want to create a rotation policy for.</td>
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
@@ -276,12 +284,16 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
         <th>Description</th>
       </tr>
       <tr>
-        <td><varname>key_ID</varname></td>
-        <td><strong>Required.</strong> The unique identifier for the root key that you want to replace a rotation policy for.</td>
-      </tr>
-      <tr>
         <td><varname>region</varname></td>
         <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
+      </tr>
+      <tr>
+        <td><varname>port</varname></td>
+        <td><strong>Required.</strong> The port number of the API endpoint.</td>
+      </tr>
+      <tr>
+        <td><varname>key_ID</varname></td>
+        <td><strong>Required.</strong> The unique identifier for the root key that you want to replace a rotation policy for.</td>
       </tr>
       <tr>
         <td><varname>IAM_token</varname></td>
