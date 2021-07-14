@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-07-14"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -25,7 +25,7 @@ subcollection: hs-crypto
 # Enabling the second layer of authentication for EP11 connections
 {: #enable-authentication-ep11}
 
-To ensure the exclusive control on the execution of cryptographic operations, you can use the {{site.data.keyword.hscrypto}} certificate manager CLI to enable the second layer of authentication for EP11 connections (GREP11 or PKCS #11 API connections). After you enable this function, a mutual TLS connection is established to add another layer of validation beyond the identify and access management (IAM) access token.
+To ensure the exclusive control on the execution of cryptographic operations, you can use the {{site.data.keyword.hscrypto}} certificate manager CLI to enable the second layer of authentication for EP11 (GREP11 or PKCS #11 API) connections. After you enable this function, a mutual TLS connection is established to add another layer of validation beyond the identify and access management (IAM) access token.
 {: shortdesc}
 
 ## Before you begin
@@ -33,7 +33,7 @@ To ensure the exclusive control on the execution of cryptographic operations, yo
 
 Before you can enable the second layer of authentication for GREP11 or PKCS #11 API connections, make sure that you complete the following prerequisites:
 
-1. You are assigned the _Certificate Administrators_ IAM role to perform the corresponding actions. For more information about assigning IAM roles, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access) and [Managing access to resources](/docs/account?topic=account-assign-access-resources).
+1. You are assigned the _Certificate Administrator_ IAM role to perform the corresponding actions. For more information about assigning IAM roles, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access) and [Managing access to resources](/docs/account?topic=account-assign-access-resources).
 2. You have a client certificate prepared on your workstation that is used for the TLS authentication. It is suggested to use the [{{site.data.keyword.cloud_notm}} Certificate Manager](https://www.ibm.com/cloud/certificate-manager){: external} to order and manage SSL/TLS certificates for your applications and services.
 3. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external} and the latest certificate manager CLI plug-in with the following command:
 
@@ -63,6 +63,9 @@ To enable the second layer of authentication, you need to first configure the ad
   Replace the `HPCS_CRN` variable with the Cloud Resource Name (CRN) of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the CRN. The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
 
   After the execution of this command, a public and private key pair is generated and stored on your local workstation. The default file path is `/Users/<username>/hpcs-cert-mgr-cfg/`. Make sure that you store the signature key securely, for example with password protection. The public key is automatically uploaded to your instance certificate manager server.
+
+  If you want to refresh and update your signature key, you can use the `ibmcloud hpcs-cert-mgr adminkey update` command to perfrom the action. For more information about the CLI usage, see [{{site.data.keyword.hscrypto}} certificate manager CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#cert-manager-cli-plugin).
+  {: tip}
 
 2. (Optional) Check and confirm whether the public key is uploaded to the server with the following command:
 
@@ -98,7 +101,7 @@ After you configure the administrator signature key, you need to upload the clie
     </tr>
     <tr>
       <td><varname>ADMIN_PRIV_KEY</varname></td>
-      <td>**Required.** The file path of your current private key that you generate in [Step 1](#enable-authentication-ep11-step1-signature). The private key is used to sign this command action towards your instance certificate manager server.</td>
+      <td>**Required.** The file path of your current private key that you generate or update in [Step 1](#enable-authentication-ep11-step1-signature). The private key is used to sign this command action towards your instance certificate manager server.</td>
     </tr>
     <tr>
       <td><varname>CERT_ID</varname></td>
@@ -125,11 +128,11 @@ After you configure the administrator signature key, you need to upload the clie
 ## Step 3: Establish mutual TLS connections for EP11 applications
 {: #enable-authentication-ep11-step3-enable-tls}
 
-After you set up the administrator signature key and the client certificate, EP11 service users can establish mutual TLS connections for applications that use the GREP11 or PKCS #11 API. Before EP11 service users can do this, they need to configure the GREP11 or PKCS #11 applications with the client certificate.
+After you set up the administrator signature key and the client certificate, EP11 users can establish mutual TLS connections for applications that use the GREP11 or PKCS #11 API. Before EP11 users can do this, they need to configure the GREP11 or PKCS #11 applications with the client certificate.
 
 **Need further input**
 
-To use the GREP11 or PKCS #11 API, make sure that EP11 service users are assigned the proper IAM roles to perform EP11 operations. For more information, see the HSM APIs tab in [IAM service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
+To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the proper IAM roles to perform EP11 operations. For more information, see the HSM APIs tab in [IAM service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
 {: note}
 
 After the configuration, when the applications use the GREP11 or PKCS #11 API to perform cryptographic operations, a TLS connection is established and the client certificate is validated for the additional layer of authentication.
