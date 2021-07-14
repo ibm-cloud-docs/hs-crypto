@@ -35,6 +35,8 @@ Before you can enable the second layer of authentication for GREP11 or PKCS #11 
 
 1. You are assigned the _Certificate Administrator_ IAM role to perform the corresponding actions. For more information about assigning IAM roles, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access) and [Managing access to resources](/docs/account?topic=account-assign-access-resources).
 2. You have a client certificate prepared on your workstation that is used for the TLS authentication. It is suggested to use the [{{site.data.keyword.cloud_notm}} Certificate Manager](https://www.ibm.com/cloud/certificate-manager){: external} to order and manage SSL/TLS certificates for your applications and services.
+
+  **Need further input on how to use Certificate Manager to order certificates for our service**
 3. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external} and the latest certificate manager CLI plug-in with the following command:
 
   ```
@@ -64,7 +66,7 @@ To enable the second layer of authentication, you need to first configure the ad
 
   After the execution of this command, a public and private key pair is generated and stored on your local workstation. The default file path is `/Users/<username>/hpcs-cert-mgr-cfg/`. Make sure that you store the signature key securely, for example with password protection. The public key is automatically uploaded to your instance certificate manager server.
 
-  If you want to refresh and update your signature key, you can use the `ibmcloud hpcs-cert-mgr adminkey update` command to perfrom the action. For more information about the CLI usage, see [{{site.data.keyword.hscrypto}} certificate manager CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#cert-manager-cli-plugin).
+  If you want to refresh and update your signature key, you can use the `ibmcloud hpcs-cert-mgr adminkey update` command to perform the action. For more information about the CLI usage, see [{{site.data.keyword.hscrypto}} certificate manager CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#cert-manager-cli-plugin).
   {: tip}
 
 2. (Optional) Check and confirm whether the public key is uploaded to the server with the following command:
@@ -130,7 +132,7 @@ After you configure the administrator signature key, you need to upload the clie
 
 After you set up the administrator signature key and the client certificate, EP11 users can establish mutual TLS connections for applications that use the GREP11 or PKCS #11 API. Before EP11 users can do this, they need to configure the GREP11 or PKCS #11 applications with the client certificate.
 
-**Need further input**
+**Need further input on how to configure EP11 applications**
 
 To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the proper IAM roles to perform EP11 operations. For more information, see the HSM APIs tab in [IAM service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
 {: note}
