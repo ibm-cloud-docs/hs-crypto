@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-06-16"
+lastupdated: "2021-07-14"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -183,6 +183,8 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 {: tab-title="KMIP adapter"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
+
+
 
 ## Managing access to multiple instances
 {: #manage-multiple-instances}
