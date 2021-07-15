@@ -25,9 +25,7 @@ subcollection: hs-crypto
 # Enabling the second layer of authentication for EP11 connections
 {: #enable-authentication-ep11}
 
-To ensure the exclusive control on the execution of cryptographic operations, you can use the {{site.data.keyword.hscrypto}}:
-
-1.  certificate manager CLI to enable the second layer of authentication for EP11 (GREP11 or PKCS #11 API) connections. By enabling this function, you enable an extra layer of access control on top of the Identity and Access Management (IAM) token to the EP11 applications. A mutual TLS connection is established to ensure that only EP11 applications with a valid administrator client certificate can perform EP11 operations.
+To ensure the exclusive control on the execution of cryptographic operations, you can use the {{site.data.keyword.hscrypto}} certificate manager CLI to enable the second layer of authentication for EP11 (GREP11 or PKCS #11 API) connections. By enabling this function, you enable an extra layer of access control on top of the Identity and Access Management (IAM) token to the EP11 applications. A mutual TLS connection is established to ensure that only EP11 applications with a valid administrator client certificate can perform EP11 operations.
 {: shortdesc}
 
 ## Before you begin
