@@ -141,7 +141,7 @@ To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the pr
 
   - Golang example code snippet
 
-    ```
+    ```go
     var callOpts = []grpc.DialOption{
       grpc.WithTransportCredentials(credentials.NewTLS(&tls.Config{}))
     }
@@ -150,20 +150,20 @@ To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the pr
 
     The `tls.Config{}` needs to be properly defined based on the [`Config` type struct](https://pkg.go.dev/crypto/tls#Config){: external}. You need to set at least the `Certificates` field. For the complete Golang example code, see [The sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go/blob/master/examples/server_test.go){: external}.
 
-  - JavaScript example
+  - JavaScript example code snippet
 
-    ```
+    ```javascript
     credentials.push(grpc.credentials.createSsl());
     ```
     {: codeblock}
 
-    You can refer to the [Credentials module documentation](https://grpc.github.io/grpc/node/grpc.credentials.html) for detailed information on functions and parameters. You need to set the `private_key` and `cert_chain` parameters for `createSsl()` function. For the complete JavaScript example code, see [The sample GitHub repository for JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js/blob/master/examples/credentials.js){: external}.
+    You can refer to the [Credentials module documentation](https://grpc.github.io/grpc/node/grpc.credentials.html){: external} for detailed information on functions and parameters. You need to set the `private_key` and `cert_chain` parameters for `createSsl()` function. For the complete JavaScript example code, see [The sample GitHub repository for JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js/blob/master/examples/credentials.js){: external}.
 
 - Configure PKCS #11 applications
 
   PKCS #11 handles mutual TLS in its [configuration file](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file). Update the `tls` field according to the following example:
 
-  ```
+  ```yaml
   tls:
     enabled: true
     mutual: true
