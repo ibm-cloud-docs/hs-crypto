@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-14"
+lastupdated: "2021-07-15"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -132,12 +132,66 @@ After you configure the administrator signature key, you need to upload the clie
 
 After you set up the administrator signature key and the client certificate, EP11 users can establish mutual TLS connections for applications that use the GREP11 or PKCS #11 API. Before EP11 users can do this, they need to configure the GREP11 or PKCS #11 applications with the client certificate.
 
-**Need further input on how to configure EP11 applications**
-
 To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the proper IAM roles to perform EP11 operations. For more information, see the HSM APIs tab in [IAM service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
 {: note}
 
-After the configuration, when the applications use the GREP11 or PKCS #11 API to perform cryptographic operations, a TLS connection is established and the client certificate is validated for the additional layer of authentication.
+- Configure GREP11 applications
+
+  Depending on the programming language that you use for the GREP11 application, the configuration method varies based on the corresponding gRPC package. The following provides examples for Golang and JavaScript.
+
+  - Golang example code snippet
+
+    ```
+    var callOpts = []grpc.DialOption{
+      grpc.WithTransportCredentials(credentials.NewTLS(&tls.Config{}))
+    }
+    ```
+    {: codeblock}
+
+    The `tls.Config{}` needs to be properly defined based on the [`Config` type struct](https://pkg.go.dev/crypto/tls#Config){: external}. You need to set at least the `Certificates` field. For the complete Golang example code, see [The sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go/blob/master/examples/server_test.go){: external}.
+
+  - JavaScript example
+
+    ```
+    credentials.push(grpc.credentials.createSsl());
+    ```
+    {: codeblock}
+
+    You can refer to the [Credentials module documentation](https://grpc.github.io/grpc/node/grpc.credentials.html) for detailed information on functions and parameters. You need to set the `private_key` and `cert_chain` parameters for `createSsl()` function. For the complete JavaScript example code, see [The sample GitHub repository for JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js/blob/master/examples/credentials.js){: external}.
+
+- Configure PKCS #11 applications
+
+  PKCS #11 handles mutual TLS in its [configuration file](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file). Update the `tls` field according to the following example:
+
+  ```
+  tls:
+    enabled: true
+    mutual: true
+    cacert:
+    certfile: "<client_certificate>"
+    keyfile: "<client_certificate_private_key>"
+  ```
+  {: codeblock}
+
+  Replace the variables in the example based on the following table:
+
+  <table>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><varname>client_certificate</varname></td>
+      <td>**Required.** The client certificate that is uploaded to the server by the certificate administrator.</td>
+    </tr>
+    <tr>
+      <td><varname>client_certificate_private_key</varname></td>
+      <td>**Required.** The client certificate private key.</td>
+    </tr>
+    <caption>Table 3. Describes the variables that are needed to configure PKCS #11 applications</caption>
+  </table>
+
+After the configuration, when the applications use the GREP11 or PKCS #11 API to perform cryptographic operations, a mutual TLS connection is established and the client certificate is validated for the additional layer of authentication.
 
 ## (Optional) Disabling mutual TLS connections
 {: #enable-authentication-ep11-disable-tls}
