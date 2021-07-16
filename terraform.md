@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-05"
+lastupdated: "2021-07-16"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -45,13 +45,13 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
   - Using the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) CLI plug-in
 
     After you install and configure the TKE CLI plug-in by following [the instruction](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite), you can use the command `ibmcloud tke sigkey-add` to create administrator sinature keys. The signature keys are stored in files that are protected by passwords on your local workstation. The file path is specified by the environment variable `CLOUDTKEFILES`.
-  - Using the third-party signing service
+  - Using a third-party signing service
 
-    **Need further input**
+    To use a signing service for the instance initialization, you also need to first [install and configure the TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite). Depending on the specific signing service, the ways to create and store signature keys may vary. When you configure Terraform in step 3, you need to speficy the `signature_server_url` parameter to indicate that the signature keys are provided by the signing service.
 
 3. Create a Terraform configuration file `main.tf` in the same folder as `versions.tf`. In this file, you add the configurations to perform the corresponding actions.
 
-  The following template is an example configuration file to provision a {{site.data.keyword.hscrypto}} instance with 2 operational crypto units in the `us-south` region. This instance is charged according to the standard pricing plan and is initialized with 2 administrators. The master key is automatically generated in recovery crypto units that are assigned to the instance.
+  The following template is an example configuration file to provision a {{site.data.keyword.hscrypto}} instance with 2 operational crypto units in the `us-south` region. This instance is charged according to the standard pricing plan and is initialized with 2 administrators. The master key is automatically generated in recovery crypto units that are assigned to the instance. The signature keys are created by using the TKE CLI plug-in and stored in local protected files.
 
   As recovery crypto units are currently available only in the `us-south` and `us-east` regions, using Terraform to initialize {{site.data.keyword.hscrypto}} instances is supported only in these two regions. For more information about manual initialization, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
   {: note}
@@ -124,7 +124,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     </tr>
     <tr>
       <td>resource_group_id</td>
-      <td>**Optional**. The resource group where you want to organize and manage your service intance.</td>
+      <td>**Optional**. The resource group where you want to organize and manage your service intance. If you do not specify the value, the default resource group is `Default`.</td>
     </tr>
     <tr>
       <td>signature_threshold</td>
@@ -132,16 +132,29 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     </tr>
     <tr>
       <td>revocation_threshold</td>
-      <td>**Required**. The number of administrator signatures that is required to remove an administrator after you leave the imprint mode. The valid value is between 1 and 8.</td>
+      <td>**Required**. The number of administrator signatures that is required to remove an administrator after you leave imprint mode. The valid value is between 1 and 8.</td>
     </tr>
     <tr>
       <td>admins</td>
       <td>**Required**. The list of administrators for the instance crypto units. You can set up to 8 administrators and the number needs to be equal to or greater than the thresholds that you specify. The following values need to be set for each administrator:
-      <ul>
-      <li>name: The name of the administrator.</li>
-      <li>key: The path in your local workstation where you store the administrator signature file.</li>
-      <li>token: The administrator password to access the corresponding signature file.</li>
-      </ul>
+      <dl>
+        <dt>name:</dt>
+        <dd>The name of the administrator. It needs to be no more than 30 characters in length.</dd>
+        <dt>key:</dt>
+        <dd>
+          <ul>
+            <li>If you use the TKE CLI plug-in to create signature keys, specify the file path in your local workstation where you store the administrator signature key.</li>
+            <li>If you use a signing service to provide signature keys, specify the name of the signature key depending on the signing service definition. The character string for the key name is appended to a URI and must contain only unreserved characters as defined by section 2.3 of [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986).</li>
+          </ul>
+        </dd>
+        <dt>token:</dt>
+        <dd>
+          <ul>
+            <li>If you use the TKE CLI plug-in to create signature keys, specify the administrator password to access the corresponding signature file.</li>
+            <li>If you use a signing service to provide signature keys, specify the token that authorizes use of the signature key depending on the signing service definition.</li>
+          </ul>
+        </dd>
+      </dl>
       </td>
     </tr>
     <tr>
