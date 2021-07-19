@@ -115,6 +115,10 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
       <td>**Required**. The number of operational crypto units for your service instance. Valid values are 2 and 3.</td>
     </tr>
     <tr>
+      <td>failover_units</td>
+      <td>**Optional**. The number of failover crypto units for your service instance. Valid values are 2 and 3, but it must be less than or equal to the number of operational crypto units. Currently, this option is available only in the `us-south` and `us-east` region.</td>
+    </tr>
+    <tr>
       <td>service_endpoints</td>
       <td>**Optional**. The network access to your service instance. Valid values are `public and private` and `private-only`. If you do not specify the value, the default setting is `public and private`.</td>
     </tr>
