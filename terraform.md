@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-16"
+lastupdated: "2021-07-19"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -47,7 +47,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     After you install and configure the TKE CLI plug-in by following [the instruction](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite), you can use the command `ibmcloud tke sigkey-add` to create administrator sinature keys. The signature keys are stored in files that are protected by passwords on your local workstation. The file path is specified by the environment variable `CLOUDTKEFILES`.
   - Using a third-party signing service
 
-    To use a signing service for the instance initialization, you also need to first [install and configure the TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite). Depending on the specific signing service, the ways to create and store signature keys may vary. When you configure Terraform in step 3, you need to speficy the `signature_server_url` parameter to indicate that the signature keys are provided by the signing service.
+    A third-party signing service can be used to create, store, and access the signature keys used by both the TKE CLI plug-in and Terraform. To enable the signing service in the TKE CLI plug-in, you need to set the `TKE_SIGNSERV_URL` environment variable on the local workstation to the URL and port number where the signing service is running. To enable the signing service in Terraform, you need to set the `signature_server_url` parameter in the resource block to the same value.
 
 3. Create a Terraform configuration file `main.tf` in the same folder as `versions.tf`. In this file, you add the configurations to perform the corresponding actions.
 
@@ -143,15 +143,15 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
         <dt>key:</dt>
         <dd>
           <ul>
-            <li>If you use the TKE CLI plug-in to create signature keys, specify the file path in your local workstation where you store the administrator signature key.</li>
-            <li>If you use a signing service to provide signature keys, specify the name of the signature key depending on the signing service definition. The character string for the key name is appended to a URI and must contain only unreserved characters as defined by section 2.3 of [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986).</li>
+            <li>If you are using signature key files on the local workstation that are created by the TKE CLI plug-in and are not using a third-party signing service, specify the absolute path and file name of the signature key file that is to be used.</li>
+            <li>If you are using a signing service to provide signature keys, specify the name of the signature key depending on the signing service definition. The character string for the key name is appended to a URI and must contain only unreserved characters as defined by section 2.3 of [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986).</li>
           </ul>
         </dd>
         <dt>token:</dt>
         <dd>
           <ul>
-            <li>If you use the TKE CLI plug-in to create signature keys, specify the administrator password to access the corresponding signature file.</li>
-            <li>If you use a signing service to provide signature keys, specify the token that authorizes use of the signature key depending on the signing service definition.</li>
+            <li>If you are using signature key files on the local workstation that are created by the TKE CLI plug-in and are not using a third-party signing service, specify the administrator password to access the corresponding signature key file.</li>
+            <li>If you are using a signing service to provide signature keys, specify the token that authorizes use of the signature key depending on the signing service definition.</li>
           </ul>
         </dd>
       </dl>
@@ -159,7 +159,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     </tr>
     <tr>
       <td>signature_server_url</td>
-      <td>**Optional**. The URL of the signing service. If you use a third-party signing service to provide administrator signature keys, you need to specify the URL.</td>
+      <td>**Optional**. The URL and port number where the signing service is running. If you are using a third-party signing service to provide administrator signature keys, you need to specify this parameter.</td>
     </tr>
     <caption>Table 1. Supported parameters for provisioning a service instance with Terraform</caption>
   </table>
