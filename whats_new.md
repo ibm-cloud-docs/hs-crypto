@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-07"
+lastupdated: "2021-07-20"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -26,6 +26,9 @@ Stay up to date with the new features that are available for {{site.data.keyword
 {: shortdesc}
 
 
+## 30 July 2021
+{: #july-2021}
+
 
 
 
@@ -38,6 +41,8 @@ Stay up to date with the new features that are available for {{site.data.keyword
 {: #add-authenticated-pkcs11-keystore}
 
 The PKCS #11 database-backed keystores can now be encrypted and authenticated. For each service instance, a maximum of five authenticated PKCS #11 keystores are supported. You can enable the `sessionauth` parameter to encrypt the generated keys into the keystore or to decrypt the key before you use it. For more information, see [Set up the PKCS #11 configuration file](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file).
+
+
 
 ### Added: Enabling cross-region recovery with failover crypto units
 {: #add-failover-crypto-units}
