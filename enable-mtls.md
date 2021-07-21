@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-15"
+lastupdated: "2021-07-21"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -25,7 +25,7 @@ subcollection: hs-crypto
 # Enabling the second layer of authentication for EP11 connections
 {: #enable-authentication-ep11}
 
-To ensure the exclusive control on the execution of cryptographic operations, you can use the {{site.data.keyword.hscrypto}} certificate manager CLI to enable the second layer of authentication for EP11 (GREP11 or PKCS #11 API) connections. By enabling this function, you enable an extra layer of access control on top of the Identity and Access Management (IAM) token to the EP11 applications. A mutual TLS connection is established to ensure that only EP11 applications with a valid administrator client certificate can perform EP11 operations.
+To ensure the exclusive control on the execution of cryptographic operations, you can use the {{site.data.keyword.hscrypto}} certificate manager CLI to enable the second layer of authentication for EP11 (GREP11 or PKCS #11 API) connections. By enabling this function, you enable an extra layer of access control on top of the Identity and Access Management (IAM) token to the EP11 applications. A mutual TLS connection is established to ensure that only EP11 applications with a valid client certificate can perform EP11 operations.
 {: shortdesc}
 
 ## Before you begin
@@ -33,10 +33,8 @@ To ensure the exclusive control on the execution of cryptographic operations, yo
 
 Before you can enable the second layer of authentication for GREP11 or PKCS #11 API connections, make sure that you complete the following prerequisites:
 
-1. You are assigned the _Certificate Administrator_ IAM role to perform the corresponding actions. For more information about assigning IAM roles, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access) and [Managing access to resources](/docs/account?topic=account-assign-access-resources).
-2. You have a client certificate prepared on your workstation that is used for the TLS authentication. It is suggested to use the [{{site.data.keyword.cloud_notm}} Certificate Manager](https://www.ibm.com/cloud/certificate-manager){: external} to order and manage SSL/TLS certificates for your applications and services.
-
-  **Need further input on how to use Certificate Manager to order certificates for our service**
+1. You are assigned the _Certificate Manager_ IAM role to perform the corresponding actions. For more information about assigning IAM roles, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access) and [Managing access to resources](/docs/account?topic=account-assign-access-resources).
+2. You have a client certificate prepared on your workstation that is used for the TLS authentication. It is suggested to use the [{{site.data.keyword.cloud_notm}} Certificate Manager](https://www.ibm.com/cloud/certificate-manager){: external} to manage SSL/TLS certificates for your applications and services. It is free and provides persistent storage for your certificates. With the Certificate Manager, you can [order free certificates](/docs/certificate-manager?topic=certificate-manager-ordering-certificates), [import your certificates](/docs/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#importing-a-certificate), and [enable notifications for expiring certificates](/docs/certificate-manager?topic=certificate-manager-configuring-notifications).
 3. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external} and the latest certificate manager CLI plug-in with the following command:
 
   ```
@@ -182,11 +180,11 @@ To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the pr
     </tr>
     <tr>
       <td><varname>client_certificate</varname></td>
-      <td>**Required.** The client certificate that is uploaded to the server by the certificate administrator.</td>
+      <td>**Required.** The file path of the client certificate that is uploaded to the server by the certificate administrator.</td>
     </tr>
     <tr>
       <td><varname>client_certificate_private_key</varname></td>
-      <td>**Required.** The client certificate private key.</td>
+      <td>**Required.** The file path of the client certificate private key.</td>
     </tr>
     <caption>Table 3. Describes the variables that are needed to configure PKCS #11 applications</caption>
   </table>
@@ -229,9 +227,9 @@ If you no longer need the second layer of authentication, you can disable the fu
 
   The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
 
-  After you remove the client certificate, the EP11 applications that use this certificate is no longer able to establish successful GREP11 or PKCS #11 API connections. Repeat the step to remove all the available certificates on the server to disable the TLS connections from EP11 applications.
+  Repeat the step to remove all the available certificates on the server to disable the TLS connections from EP11 applications.
 
-  If multiple certificate administrators are set up for your service instance, make sure to remove all the client certificates under these administrators.
+  If multiple certificate administrators are set up for your service instance, make sure to remove all the client certificates under these administrators. After you remove all the certificates for your service instance, the mutual TLS is disabled for all new EP11 connections and the second layer of authentication is inactive.
   {: note}
 
 2. (Optional) Check and confirm whether all the client certificates are removed with the following command:
@@ -241,9 +239,9 @@ If you no longer need the second layer of authentication, you can disable the fu
   ```
   {: pre}
 
-  If no certificate is returned, it means all the certificates that are managed by you are removed.
+  If no certificate is returned, it means all the certificates of your service instance are removed.
 
-3. Update the GREP11 or PKCS #11 applications to remove the certificate configurations, so that the applications are no longer use the certificate for future API connections.
+3. (Optional) Update the GREP11 or PKCS #11 applications to remove the certificate configurations, so that the applications are no longer use the certificate for future API connections.
 
 ## What's next
 {: #enable-authentication-ep11-whats-next}

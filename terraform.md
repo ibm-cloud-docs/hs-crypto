@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-19"
+lastupdated: "2021-07-21"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -36,11 +36,11 @@ Before you begin, make sure that you have the [required access](/docs/hs-crypto?
 
 Complete the following steps to create and initialize a {{site.data.keyword.hscrypto}} instance by using Terraform:
 
-1. Install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform by following the [Terraform on {{site.data.keyword.cloud_notm}} getting started tutorial](/docs/ibm-cloud-provider-for-terraform).
+1. Install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform by following the [Terraform on {{site.data.keyword.cloud_notm}} getting started tutorial](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
 
   The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to provision, update, or delete {{site.data.keyword.hscrypto}} service instances and resources. The preferred Terraform versions are 0.13.x, 0.14.x, and 0.15.x. In the `versions.tf` file, you need to specify the `version` parameter to `1.26.3`.
 
-2. Set up the crypto unit administrators. You can select one of the following ways to create administrator signature keys:
+2. Set up crypto unit administrator signature keys. You can select one of the following ways to create administrator signature keys:
 
   - Using the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) CLI plug-in
 
