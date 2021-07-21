@@ -44,7 +44,7 @@ To enable a signing service for the TKE CLI plug-in, make sure that the signing 
 
   This method returns the base64 encoded public key. The following is an example of the reponse body:
 
-  ```
+  ```json
   {
     "publickey": "<base64 encoded string of public key (ASN.1 DER encoded struct containing integer X and integer Y)>"
   }
@@ -63,7 +63,7 @@ To enable a signing service for the TKE CLI plug-in, make sure that the signing 
 
   This method returns the base64 encoded signature. The following is an example of the response body:
 
-  ```
+  ```json
   {
     "signature": "<base64 encoded string of binary data (ASN.1 DER encoded struct of integers R and S)>"
   }
@@ -81,21 +81,33 @@ Instead of using signature key files that are stored on your workstation for sig
   {: note}
 2. Create a file named `SIGNSERVKEYS` in the subdirectory that is identified by the `CLOUDTKEFILES` environment variable.
 
-  This file is expected to be a JSON string representing an array that lists valid signature keys for signing commands. Each array entry must contain a `key` field and can optionally include a `token` field. The `key` field identifies a particular signature key. The `token` field authorizes use of the key. The signing service determines how the key identification and authentication token are defined. If you don't specify the `token` field in the `SIGNSERVKEYS` file, you are prompted to enter the token value when you run TKE CLI plug-in commands, which is more secure than directly providing it in the file.
+  This file is expected to be a JSON string representing an array that lists valid signature keys for signing commands. Each array entry must contain a `key` field and can optionally include a `token` field. The `key` field identifies a particular signature key. The `token` field authorizes use of the key. The signing service determines how the key identification and authentication token are defined. If you don't specify the `token` field in the `SIGNSERVKEYS` file, you will be prompted to enter the token value when you run TKE CLI plug-in commands, which is more secure than directly providing it in the file.
 
   The following lists some examples of the `SIGNSERVKEYS` file:
 
-  - [{"key":"first-key","token":"token-for-first-key"}]
+  - Example 1:
+
+    ```json
+    [{"key":"first-key","token":"token-for-first-key"}]
+    ```
 
     This example specifies a single valid signature key and its authentication token. Because the token is specified, you will not be prompted to enter it when the signature key is used.
-  - [{"key":"first-key"},{"key":"second-key"}]
+  - Example 2:
 
-    This specifies two valid signature keys that can be used. Because the token is not specified, you will be prompted for the token when you use either key.
-  - [{"key":"first-key"},{"key":"second-key","token":"token-for-second-key"},{"key":"third-key"}]
+    ```json
+    [{"key":"first-key"},{"key":"second-key"}]
+    ```
 
-    This specifies three valid signature keys that can be used. The token is specified for the second key but not for the first and third key. If you use the first or the third key, you will be prompted for the corresponding token.
+    This example specifies two valid signature keys that can be used. Because the token is not specified, you will be prompted for the token when you use either key.
+  - Example 3:
 
-  Make sure the `SIGNSERVKEYS file` contains enough signature keys for installed administrators to meet signature threshold requirements. Otherwise, you are not able to use the signing service to perform TKE actions.
+    ```json
+    [{"key":"first-key"},{"key":"second-key","token":"token-for-second-key"},{"key":"third-key"}]
+    ```
+
+    This example specifies three valid signature keys that can be used. The token is specified for the second key but not for the first and third key. If you use the first or the third key, you will be prompted for the corresponding token.
+
+  Make sure that the `SIGNSERVKEYS` file contains enough signature keys for installed administrators to meet signature threshold requirements. Otherwise, you are not able to use the signing service to perform TKE actions.
   {: note}
 3. Add cryto unit administrators by using the `ibmcloud tke cryptounit-admin-add` command.
 
