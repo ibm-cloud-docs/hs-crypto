@@ -38,7 +38,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
 
 1. Install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform by following the [Terraform on {{site.data.keyword.cloud_notm}} getting started tutorial](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
 
-  The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to provision, update, or delete {{site.data.keyword.hscrypto}} service instances and resources. The preferred Terraform versions are 0.13.x, 0.14.x, and 0.15.x. In the `versions.tf` file, you need to specify the `version` parameter to `1.26.3`.
+  The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to provision, update, or delete {{site.data.keyword.hscrypto}} service instances and resources. The preferred Terraform versions are 0.13.x, 0.14.x, and 0.15.x. In the `versions.tf` file, you need to specify the `version` parameter to `1.27.4`.
 
 2. Set up crypto unit administrator signature keys. You can select one of the following ways to create administrator signature keys:
 
@@ -47,7 +47,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     After you install and configure the TKE CLI plug-in by following [the instruction](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite), you can use the command `ibmcloud tke sigkey-add` to create administrator sinature keys. The signature keys are stored in files that are protected by passwords on your local workstation. The file path is specified by the environment variable `CLOUDTKEFILES`.
   - Using a third-party signing service
 
-    A third-party signing service can be used to create, store, and access the signature keys used by both the TKE CLI plug-in and Terraform. To enable the signing service in the TKE CLI plug-in, you need to set the `TKE_SIGNSERV_URL` environment variable on the local workstation to the URL and port number where the signing service is running. To enable the signing service in Terraform, you need to set the `signature_server_url` parameter in the resource block to the same value.
+    A third-party signing service can be used to create, store, and access the signature keys used by both the TKE CLI plug-in and Terraform. To [enable the signing service in the TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key), you need to set the `TKE_SIGNSERV_URL` environment variable on the local workstation to the URL and port number where the signing service is running. To enable the signing service in Terraform, you need to set the `signature_server_url` parameter in the resource block to the same value.
 
 3. Create a Terraform configuration file `main.tf` in the same folder as `versions.tf`. In this file, you add the configurations to perform the corresponding actions.
 
@@ -88,7 +88,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
   ```
   {: codeblock}
 
-  In production environments, it is suggested to provide the passwords for the signature key files or the tokens for the signing service during the process of applying Terraform instead of writing it in plaintext in the configuration file. After the instance intialization, the passwords are stored in a `.tfstate` file. For more information about securing sensitive data in Terraform, see [Sensitive Data in State](https://www.terraform.io/docs/language/state/sensitive-data.html){: external}.
+  In production environments, it is suggested to provide the passwords for the signature key files or the tokens for the signing service during the process of applying Terraform instead of writing it in plaintext in the configuration file. In this case, you are prompted to enter the authentication passwords or tokens when you run Terraform commands. After the instance intialization, the passwords are stored in a `.tfstate` file. For more information about securing sensitive data in Terraform, see [Sensitive Data in State](https://www.terraform.io/docs/language/state/sensitive-data.html){: external}.
   {: important}
 
   The following table lists supported parameters when you create and initialize a service instance with Terraform:
@@ -148,7 +148,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
         <dd>
           <ul>
             <li>If you are using signature key files on the local workstation that are created by the TKE CLI plug-in and are not using a third-party signing service, specify the absolute path and file name of the signature key file that is to be used.</li>
-            <li>If you are using a signing service to provide signature keys, specify the name of the signature key depending on the signing service definition. The character string for the key name is appended to a URI and must contain only unreserved characters as defined by section 2.3 of [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986).</li>
+            <li>If you are using a signing service to provide signature keys, specify the name of the signature key depending on the signing service definition. The character string for the key name is appended to a URI that is sent to the signing service and must contain only unreserved characters as defined by section 2.3 of [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986).</li>
           </ul>
         </dd>
         <dt>token:</dt>
