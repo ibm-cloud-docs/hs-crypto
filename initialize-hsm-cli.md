@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-21"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -176,6 +176,7 @@ For security considerations, the signature key owners can be different people fr
   A list of signature keys that are found on the workstation is displayed. When prompted, enter the key numbers of the signature key files to select for signing future administrative commands. When prompted, enter the passwords for the signature key files.
 
   This command determines what signature keys are allowed to sign future commands. There is no limit to the number of signature key files that you can select. If you select more signature keys than required to sign a command, the actual signature keys that are used will be determined at the time the command is executed.
+  
 
 ### Step 2: Add one or more administrators in the target crypto unit
 {: #step2-load-admin}

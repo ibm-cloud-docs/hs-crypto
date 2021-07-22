@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-09-17"
+  years: 2020, 2021
+lastupdated: "2021-07-21"
 
 keywords: shared responsibilities, shared responsibility model, disaster recovery, incident management, operation management
 
@@ -84,6 +84,6 @@ Disaster recovery includes tasks such as providing dependencies on disaster reco
 | Task | {{site.data.keyword.IBM_notm}} responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
 | Instance backups | Continuously perform in-region and cross-region backups of key resources and perform continuous testing of backups. |Back up your master key; validate the backups and restore data when needed. |
-| Disaster recovery |Automatically recover and restart service components after any in-region disaster event, restore your data in another supported region based on opened customer tickets.| If a regional disaster that affects all available zones occurs, open a support ticket for IBM to [restore your data from another region](/docs/hs-crypto?topic=hs-crypto-restore-data), and manually load your master key to the new service instance.|
+| Disaster recovery | When an in-region disaster occurs, automatically recover and restart service components. When a regional disaster that affects all available zones occurs, ensure that all data except the master key is replicated to another region. IBM will also make additional crypto units available in a different region and manage routing requests to the new crypto units. | When a regional disaster that affects all available zones occurs, load your master key to the new crypto units that IBM provisions in a different region for restoring data. You can also enable and initialize failover crypto units before a disaster occurs, which reduces the downtime.|
 | Availability | Provide high availability capabilities, such as IBM-owned infrastructure in multizone regions, to meet local access and low latency requirements for each supported region. | Use the list of [available regions](/docs/hs-crypto?topic=hs-crypto-regions) to plan for and create new instances of the service. |
 {: caption="Table 5. Responsibilities for disaster recovery" caption-side="bottom"}
