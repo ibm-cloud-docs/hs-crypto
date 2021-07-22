@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-21"
+lastupdated: "2021-07-22"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -26,8 +26,6 @@ Stay up to date with the new features that are available for {{site.data.keyword
 {: shortdesc}
 
 
-## 30 July 2021
-{: #july-2021}
 
 
 
