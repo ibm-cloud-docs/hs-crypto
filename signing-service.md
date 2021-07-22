@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-21"
+lastupdated: "2021-07-22"
 
 keywords: signing service, manage signature keys, customer-writtn signing service, third-party signing service
 
@@ -23,26 +23,23 @@ subcollection: hs-crypto
 # Using a signing service to manage signature keys for instance initialization
 {: #signing-service-signature-key}
 
-For {{site.data.keyword.hscrypto}} instance initialization, you can use a third-party signing service to create, store, and manage the administrator signature keys that are used by the Trusted Key Entry (TKE) CLI plug-in.
+For {{site.data.keyword.hscrypto}} instance initialization, you can use a third-party signing service to create, store, and manage the administrator signature keys that are used by Terraform or the Trusted Key Entry (TKE) CLI plug-in. With signature keys provided by the signing service, you no longer use the signature key files on the local workstation when you run Terraform and TKE CLI plug-in commands.
 {: shortdesc}
 
-Before you can use a signing service to manage sinature keys, make sure that you complete the [prerequisite steps](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite) for the instance intialization.
+Before you can use a signing service to manage signature keys, make sure that you complete the [prerequisite steps](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite) for the instance intialization.
 
 ## Requirements on the signing service
 {: #signing-service-requirements}
 
-To enable a signing service for the TKE CLI plug-in, make sure that the signing service implements the following two API methods:
+To enable a signing service for Terraform or the TKE CLI plug-in, the signing service must be implemented as an HTTP server that implements the following two requests. All signature keys that are accessed by using the signing service must be P521 EC keys.
 
 - GET `/keys/:name`
 
-  This method is used to retrieve the public key of a signature key pair that is used to create a cryto unit administrator. The `:name` parameter is the unique identifier of a signature key. The signing service determines how the `:name` parameter is defined and set specifically. As the `:name` parameter is appended to the URI that is sent to the signing service, it must contain only unreserved characters as defined by section 2.3 of [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986).
+  This request retrieves the public key of a signature key. The public key is needed when you add a crypto unit administrator. The `:name` parameter identifies the signature key that is to be accessed. The signing service determines how `:name` values are associated with signature keys. The `:name` parameter corresponds to a `key` parameter in a Terraform resource block.
 
-  To make a successful API request, make sure that the following inputs are provided:
+  The `:name` parameter is appended to the URL that accesses the signing service. It can contain only unreserved characters as defined by section 2.3 of [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986). The authentication token for the signature key is passed to a `GET /keys` request in the HTTP `Authorization` request header.
 
-  - In the request path: The host URL and port number where the signing service is running.
-  - In the request header: The authenticaion token for the key that you want to retrieve.
-
-  This method returns the base64 encoded public key. The following is an example of the reponse body:
+  This request returns the base64 encoded public key. The following is an example of the reponse body:
 
   ```json
   {
@@ -53,15 +50,18 @@ To enable a signing service for the TKE CLI plug-in, make sure that the signing 
 
 - POST `/sign/:name`
 
-  This method is used to sign arbitrary data by using the private key of a signature key pair. With the TKE CLI plug-in, it can be used to sign the TKE CLI administrative commands. The `:name` parameter is the unique identifier of a signature key. The signing service determines how the `:name` parameter is defined and set specifically. As the `:name` parameter is appended to the URI that is sent to the signing service, it must contain only unreserved characters as defined by section 2.3 of [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986).
+  This requests the signing service to sign the input data using the signature key identified by the `:name` parameter. The `:name` parameter is appended to the URL that accesses the signing service. It can contain only unreserved characters as defined by section 2.3 of [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986). The authentication token for the signature key is passed to a `POST /sign` request in the HTTP `Authorization` request header.
 
-  To make a successful API request, make sure that the following inputs are provided:
+  The request body contains the input data to be signed. Requests created by TKE CLI plug-in and Terraform commands also include a parameter that identifies SHA-512 as the hash algorithm to be used when generating the signature. The following is an example of the request body:
 
-  - In the request path: The host URL and port number where the signing service is running.
-  - In the request header: The authenticaion token for the key that you want to retrieve.
-  - In the request body: The `hash_algorithm` parameter needs to be set to `sha2-512`; the `inputs` parameter needs to be set to the base64 encoded string of an assembled TKE CLI administrator command with the ASN.1 encoded struct.
+  ```json
+  {
+    "hash_algorithm":"sha2-512",
+    "input":"<base64 encoded string of data to be signed>"
+  }
+  ```
 
-  This method returns the base64 encoded signature. The following is an example of the response body:
+  This request returns the signature that is generated over the input data using the specified signature key. The following is an example of the response body:
 
   ```json
   {
@@ -109,12 +109,12 @@ Instead of using signature key files that are stored on your workstation for sig
 
   Make sure that the `SIGNSERVKEYS` file contains enough signature keys for installed administrators to meet signature threshold requirements. Otherwise, you are not able to use the signing service to perform TKE actions.
   {: note}
-3. Add cryto unit administrators by using the `ibmcloud tke cryptounit-admin-add` command.
+3. Add crypto unit administrators by using the `ibmcloud tke cryptounit-admin-add` command.
 
-  After you set the `TKE_SIGNSERV_URL` environment variable, this command prompts you to enter a signature key identifier and its corresponding access token, as defined by the signing service, to add an administrator. The signature key identifier must be contained in the `SIGNSERVKEYS` file.
+  After you set the `TKE_SIGNSERV_URL` environment variable, this command prompts you to enter a signature key identifier and its corresponding access token, as defined by the signing service, to add an administrator.
 
 ## What's next
 {: #signing-service-whats-next}
 
-- For the information about the subsequent steps to complete the service instance initialization, see [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
-- You can also use a signing service for Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).
+- For the information about the subsequent steps to complete the service instance initialization using the TKE CLI plug-in, see [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
+- For how to configure Terraform to use a signing service, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).
