@@ -26,10 +26,10 @@ subcollection: hs-crypto
 For {{site.data.keyword.hscrypto}} instance initialization, you can use a third-party signing service to create, store, and manage the administrator signature keys that are used by Terraform or the Trusted Key Entry (TKE) CLI plug-in. With signature keys provided by the signing service, you no longer use the signature key files on the local workstation when you run Terraform and TKE CLI plug-in commands.
 {: shortdesc}
 
-Before you can use a signing service to manage signature keys, make sure that you complete the [prerequisite steps](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite) for the instance intialization.
-
 ## Signing service prerequisites
 {: #signing-service-requirements}
+
+Before you can use a signing service to manage signature keys, make sure that you complete the [prerequisite steps](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite) for the instance initialization.
 
 To enable a signing service for Terraform or the TKE CLI plug-in, the signing service must be implemented as an HTTP server that implements the following two requests. All signature keys that are accessed by using the signing service must be P521 EC keys.
 
