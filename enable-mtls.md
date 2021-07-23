@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-21"
+lastupdated: "2021-07-23"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -242,6 +242,14 @@ If you no longer need the second layer of authentication, you can disable the fu
   If no certificate is returned, it means all the certificates of your service instance are removed.
 
 3. (Optional) Update the GREP11 or PKCS #11 applications to remove the certificate configurations, so that the applications are no longer use the certificate for future API connections.
+
+## Security and availability considerations
+{: #enable-authentication-ep11-security-considerations}
+
+With mutual TLS as a second layer of authentication for accessing EP11, you need to be aware of the following security and availability considerations:
+
+- If you need to prevent some persons from accessing EP11, separate certificate administrators from service users. Control access by assigning the _Certficate Manager_ role only to the persons who manage the client certificates and assigning other service users the corresponding roles for operational usage. To manage user access, you need to be assigned the _Administrator_ role with account management access.
+- EP11 APIs become inaccessible if you use invalid client certificates or use unavailable private keys to sign client certificates. To ensure the availability, assign more than one person the _Certificate Manager_ role as a backup. Each certificate administrator needs to maintain his or her unique administrator private key securely. In addition, certificate administrators need to maintain a backup of all client certificates outside of the {{site.data.keyword.hscrypto}} instance, for example, by using [{{site.data.keyword.cloud_notm}} Certificate Manager](https://www.ibm.com/cloud/certificate-manager){: external}. It is also suggested to monitor the expiration of the certificates.
 
 ## What's next
 {: #enable-authentication-ep11-whats-next}
