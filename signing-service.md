@@ -39,7 +39,7 @@ To enable a signing service for Terraform or the TKE CLI plug-in, the signing se
 
   The `:name` parameter is appended to the URL that accesses the signing service. It can contain only unreserved characters as defined by section 2.3 of [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986). The authentication token for the signature key is passed to a `GET /keys` request in the HTTP `Authorization` request header.
 
-  This request returns the base64 encoded public key. The following is an example of the reponse body:
+  This request returns the base64 encoded public key. The following is an example of the response body:
 
   ```json
   {
