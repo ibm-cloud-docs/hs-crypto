@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-22"
+lastupdated: "2021-07-23"
 
 keywords: signing service, manage signature keys, customer-writtn signing service, third-party signing service
 
@@ -28,7 +28,7 @@ For {{site.data.keyword.hscrypto}} instance initialization, you can use a third-
 
 Before you can use a signing service to manage signature keys, make sure that you complete the [prerequisite steps](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite) for the instance intialization.
 
-## Requirements on the signing service
+## Signing service prerequisites
 {: #signing-service-requirements}
 
 To enable a signing service for Terraform or the TKE CLI plug-in, the signing service must be implemented as an HTTP server that implements the following two requests. All signature keys that are accessed by using the signing service must be P521 EC keys.
