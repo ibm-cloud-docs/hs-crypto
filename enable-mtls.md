@@ -184,7 +184,7 @@ To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the pr
     </tr>
     <tr>
       <td><varname>client_certificate_private_key</varname></td>
-      <td>**Required.** The file path of the client certificate private key.</td>
+      <td>**Required.** The file path of the client certificate private key that is used to sign the certificate.</td>
     </tr>
     <caption>Table 3. Describes the variables that are needed to configure PKCS #11 applications</caption>
   </table>

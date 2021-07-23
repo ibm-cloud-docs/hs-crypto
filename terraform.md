@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-22"
+lastupdated: "2021-07-23"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -88,7 +88,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
   ```
   {: codeblock}
 
-  In production environments, it is suggested to provide the passwords for the signature key files or the tokens for the signing service during the process of applying Terraform instead of writing it in plaintext in the configuration file. In that case, you are prompted to enter the authentication passwords or tokens when you run Terraform commands. After the instance intialization, the values that you enter for the passwords or tokens are stored in a `.tfstate` file. For more information about securing sensitive data in Terraform, see [Sensitive Data in State](https://www.terraform.io/docs/language/state/sensitive-data.html){: external}.
+  In production environments, it is suggested to provide the passwords for the signature key files or the tokens for the signing service during the process of applying Terraform instead of writing it in plaintext in the configuration file. In that case, you are prompted to enter the authentication passwords or tokens when you run Terraform commands. After the instance initialization, the values that you enter for the passwords or tokens are stored in a `.tfstate` file. For more information about securing sensitive data in Terraform, see [Sensitive Data in State](https://www.terraform.io/docs/language/state/sensitive-data.html){: external}.
   {: important}
 
   The following table lists supported parameters when you create and initialize a service instance with Terraform:
@@ -155,7 +155,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
         <dd>
           <ul>
             <li>If you are using signature key files on the local workstation that are created by the TKE CLI plug-in and are not using a third-party signing service, specify the administrator password to access the corresponding signature key file.</li>
-            <li>If you are using a signing service to provide signature keys, specify the token that authorizes use of the signature key depending on the signing service definition. <p><strong>Note:</strong> The token parameter is optional. If you don't specify the token, you are prompted to enter the token value when you run Terraform commands. After the instance intialization, the value that you enter for the token parameter is stored in a `.tfstate` file. For more information about securing sensitive data in Terraform, see [Sensitive Data in State](https://www.terraform.io/docs/language/state/sensitive-data.html){: external}.</p></li>
+            <li>If you are using a signing service to provide signature keys, specify the token that authorizes use of the signature key depending on the signing service definition. <p><strong>Note:</strong> The token parameter is optional. If you don't specify the token, you are prompted to enter the token value when you run Terraform commands. After the instance initialization, the value that you enter for the token parameter is stored in a `.tfstate` file. For more information about securing sensitive data in Terraform, see [Sensitive Data in State](https://www.terraform.io/docs/language/state/sensitive-data.html){: external}.</p></li>
           </ul>
         </dd>
       </dl>
