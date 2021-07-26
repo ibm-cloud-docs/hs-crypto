@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-23"
+lastupdated: "2021-07-26"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -80,6 +80,9 @@ To enable the second layer of authentication, you need to first configure the ad
 {: #enable-authentication-ep11-step2-certificate}
 
 After you configure the administrator signature key, you need to upload the client certificate to your instance certificate manager server for TLS client authentication.
+
+After you set up the client certificate, you are no longer able to access EP11 keystores and EP11 keys through the {{site.data.keyword.cloud_notm}} console.
+{: important}
 
 1. Upload the certificate to the server with the following command:
 
