@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-07-26"
 
 keywords: create key alias, key alias, delete key alias, add key alias, retrieve encryption key by alias, create alias API examples
 
@@ -65,7 +65,7 @@ Create a key alias with the console by completing the following steps:
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. Select the **KMS keys** tab in the side menu and find the key that you want to create key aliases for.
-5. Click the overflow icon (...) to open the list of options for the key and click **Edit key aliases**.
+5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg “Actions”)to open the list of options for the key and click **Edit key aliases**.
 6. Enter key aliases separated by a comma. You can add up to five aliases for a key.
 
   Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive).
@@ -238,7 +238,7 @@ Delete a key alias with the console by completing the following steps:
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. Select the **KMS keys** tab in the side menu and find the key that you want to create key aliases for.
-5. Click the overflow icon (...) to open the list of options for the key and click **Edit key aliases**.
+5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg “Actions”)to open the list of options for the key and click **Edit key aliases**.
 6. Delete the key alias that you want to remove and click **Save**.
 
 ### Deleting key aliases with the API

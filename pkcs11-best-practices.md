@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-17"
+lastupdated: "2021-07-26"
 
 keywords: pkcs11 access, pkcs 11 authentication, set up PKCS 11 API, best practice for setting up pkcs11 users
 
@@ -188,7 +188,7 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 To assign access to the keystores for the SO user, follow these steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
-2. Hover your mouse over the `SO user` service ID, and click the overflow (...) icon to open a list of options.
+2. Hover your mouse over the `SO user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg “Actions”)to open a list of options.
 3. From the options menu, click **Assign access**.
 4. Click **Assign service ID additional access**, and then click the **IAM services** button.
 5. Click **No service access** under **What type of access do you want to assign?** and select **Hyper Protect Crypto Services**.
@@ -206,7 +206,7 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 To assign access to the keystores for the normal user, follow these steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
-2. Hover your mouse over the `Normal user` service ID, and click the overflow (...) icon to open a list of options.
+2. Hover your mouse over the `Normal user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg “Actions”)to open a list of options.
 3. From the options menu, click **Assign access**.
 4. Click **Assign service ID additional access**, and then click the **IAM services** button.
 5. Click **No service access** under **What type of access do you want to assign?** and select **Hyper Protect Crypto Services**.
@@ -222,7 +222,7 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 To assign access to the keystore for the anonymous user, follow these steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
-2. Hover your mouse over the `Anonymous user` service ID, and click the overflow (...) icon to open a list of options.
+2. Hover your mouse over the `Anonymous user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg “Actions”)to open a list of options.
 3. From the options menu, click **Assign access**.
 4. Click **Assign service ID additional access**, and then click the **IAM services** button.
 5. Click **No service access** under **What type of access do you want to assign?** and select **Hyper Protect Crypto Services**.

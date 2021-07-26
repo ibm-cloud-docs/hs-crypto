@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-06-28"
+lastupdated: "2021-07-26"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -88,7 +88,7 @@ After you [enable dual authorization for an instance](/docs/hs-crypto?topic=hs-c
 provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in
 your service.
-5. Click the overflow (⋯) icon to open a list of options for the key that you want to
+5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg “Actions”) to open a list of options for the key that you want to
 delete.
 6. From the options menu, click **Schedule key deletion** and review the key's
 associated resources.
@@ -103,7 +103,7 @@ order to authorize the key for deletion.
 
 1. In the **Keys** table of the **KMS keys** page, you can find keys that are authorized for deletion with the following indicators:
   * The `Set for deletion` column has a value of `True`. The authorization expiration time is displayed in the `Deletion expiration` column.
-  * A trash can icon is displayed in the `State` column. Hover over the icon to view the deletion expiration date.
+  * A **Trash can** icon ![Trash can icon](../icons/icon_trash.svg “Trash can”) is displayed in the `State` column. Hover over the icon to view the deletion expiration date.
 
 2. To delete the key, follow the instructions in [Deleting keys with the console](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-keys-gui).
 
