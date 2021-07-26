@@ -103,7 +103,7 @@ Complete the following steps to create an EP11 keystore:
 
 3. Click **Create keystore**. You can see the new keystore listed at the first row.
 
-  To copy the keystore ID, click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg “Actions”)and then click **Copy ID to clipboard**.
+  To copy the keystore ID, click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")and then click **Copy ID to clipboard**.
   {: tip}
 
 ## Deleting EP11 keystores
@@ -122,7 +122,7 @@ After you delete a keystore, you are not able to access any EP11 keys that are s
 {: important}
 
 1. Select the **EP11 keystores** tab in the side menu, and find the keystore that you want to delete in the list.
-2. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg “Actions”), and then select **Delete keystore**.
+2. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions"), and then select **Delete keystore**.
 3. Verify the ID of the keystore to be deleted, and check the box to confirm the deletion.
 4. Click **Delete keystore**.
 

@@ -288,7 +288,7 @@ If you have an [{{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) ins
 
 If you are creating a VPE gateway using the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc-ext){: external}, perform the following steps:
 
-1. Select the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg “Menu”), and then click **VPC Infrastructure > Virtual private endpoint gateways** in the Network section, and then click **Create**. The **New virtual private endpoint gateway for VPC** page is displayed.
+1. Select the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg "Menu"), and then click **VPC Infrastructure > Virtual private endpoint gateways** in the Network section, and then click **Create**. The **New virtual private endpoint gateway for VPC** page is displayed.
 2. In the **Cloud service** section, enable your {{site.data.keyword.hscrypto}} instance:
 
   * Under **Cloud service offerings**, select **Hyper Protect Crypto Services**.

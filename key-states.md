@@ -51,7 +51,7 @@ Cryptographic keys, in their lifetime, transition through several states that ar
 
 Key states affect whether an action that is performed on a key succeeds or fails. For example, if a key is in the _Active_ state, you can't restore the key because the key wasn't previously deleted.
 
-The following table shows how {{site.data.keyword.hscrypto}} handles service actions based on the state of a key. The column headers represent the key states, and the row headers represent the actions that you can perform on a key. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg “Checkmark”) indicates that the action on a key is expected to succeed based on the key state.
+The following table shows how {{site.data.keyword.hscrypto}} handles service actions based on the state of a key. The column headers represent the key states, and the row headers represent the actions that you can perform on a key. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the action on a key is expected to succeed based on the key state.
 
 <table>
   <tr>
@@ -64,23 +64,23 @@ The following table shows how {{site.data.keyword.hscrypto}} handles service act
 
   <tr>
     <td>Get key.</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
   </tr>
 
   <tr>
     <td>List keys.</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
     <td></td>
   </tr>
 
   <tr>
     <td>Rotate key.</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
     <td></td>
     <td></td>
     <td></td>
@@ -88,7 +88,7 @@ The following table shows how {{site.data.keyword.hscrypto}} handles service act
 
   <tr>
     <td>Wrap key.</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
     <td></td>
     <td></td>
     <td></td>
@@ -96,23 +96,23 @@ The following table shows how {{site.data.keyword.hscrypto}} handles service act
 
   <tr>
     <td>Unwrap key.</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
     <td></td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
     <td></td>
   </tr>
 
   <tr>
     <td>Rewrap key.</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
     <td></td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
     <td></td>
   </tr>
 
   <tr>
     <td>Disable key.</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
     <td></td>
     <td></td>
     <td></td>
@@ -121,16 +121,16 @@ The following table shows how {{site.data.keyword.hscrypto}} handles service act
   <tr>
     <td>Enable key.</td>
     <td></td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
     <td></td>
     <td></td>
   </tr>
 
   <tr>
     <td>Delete key.</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
     <td></td>
   </tr>
 
@@ -139,7 +139,7 @@ The following table shows how {{site.data.keyword.hscrypto}} handles service act
     <td></td>
     <td></td>
     <td></td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg “Checkmark”)</td>
+    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
   </tr>
 </table>
 {: caption="Table 2. Describes how key states affect service actions." caption-side="bottom"}

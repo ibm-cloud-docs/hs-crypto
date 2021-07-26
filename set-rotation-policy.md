@@ -43,7 +43,7 @@ If you prefer to manage policies for your root keys by using a graphical interfa
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
-5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg “Actions”)to open a list of options for a specific key.
+5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")to open a list of options for a specific key.
 6. From the options menu, click **Edit key rotation policy** to manage the rotation policy for the key.
 7. Switch the **Key rotation** to **On** and move the slider to select a frequency of rotation in months.
 

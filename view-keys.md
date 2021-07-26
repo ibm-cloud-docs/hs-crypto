@@ -112,7 +112,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
     about roles, see
     [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).
 
-    You can also search for a specific key by using the search bar, or filter keys based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg “Filter”) in the **Keys** table.
+    You can also search for a specific key by using the search bar, or filter keys based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the **Keys** table.
     {: tip}
 
 ## Viewing root keys or standard keys with the key management API

@@ -42,7 +42,7 @@ You can renotify associated resources of your {{site.data.keyword.hscrypto}} roo
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
-5. To renotify the protected resources of a specific root key, click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg “Actions”) to open a list of options for the key and select **Synchronize associated resources**.
+5. To renotify the protected resources of a specific root key, click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key and select **Synchronize associated resources**.
 6. On the **View associated resources** page, click **Synchronize**.
 
 ## Syncing associated resources with the API

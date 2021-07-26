@@ -98,7 +98,7 @@ You can delete an instance of {{site.data.keyword.hscrypto}} from the {{site.dat
 
 1. From the {{site.data.keyword.cloud_notm}} console, click **Resource List** on the left navigation menu.
 2. Find the {{site.data.keyword.hscrypto}} service instance that you want to delete under the **Services** section.
-3. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg “Actions”) to open the actions menu.
+3. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open the actions menu.
 4. Click **Delete**.
 
 ### Deleting instances from the {{site.data.keyword.cloud_notm}} console instance details page
@@ -108,7 +108,7 @@ You can delete an instance of {{site.data.keyword.hscrypto}} from the {{site.dat
 
 1. From the {{site.data.keyword.cloud_notm}} console, click **Resource List** on the left navigation menu.
 2. Find the {{site.data.keyword.hscrypto}} service instance that you want to delete under the **Services** section and click the instance name to open the instance details page.
-3. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg “Actions”) to open the service instance actions menu.
+3. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open the service instance actions menu.
 4. Click **Delete service**.
 
 ### Deleting instances from the {{site.data.keyword.cloud_notm}} CLI

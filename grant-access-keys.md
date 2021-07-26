@@ -48,7 +48,7 @@ Review [roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to
 To assign access:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
-2. Select the user, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg “Actions”)to open a list of options for that user.
+2. Select the user, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")to open a list of options for that user.
 3. From the options menu, click **Assign access**.
 4. Click **Assign users additional access**.
 5. Click the **IAM services** button.
@@ -79,7 +79,7 @@ To get the ID for a specific key, you can:
 Use the retrieved key ID to create a access policy:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
-2. Select the user, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg “Actions”)to open a list of options for that user.
+2. Select the user, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")to open a list of options for that user.
 3. From the options menu, click **Assign access**.
 4. Click **Assign users additional access**.
 5. From the list of services, select **Hyper Protect Crypto Services**.
@@ -108,7 +108,7 @@ Review [roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to
 To assign access to a key ring with the console:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
-2. Select a table row, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg “Actions”)to open a list of options for that user.
+2. Select a table row, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")to open a list of options for that user.
 3. From the options menu, click **Assign access**.
 4. Click **Assign users additional access**.
 5. Click the **IAM services** button.
