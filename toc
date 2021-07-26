@@ -163,6 +163,7 @@ Hyper Protect Crypto Services
     add-remove-crypto-units.md
     enable-failover.md
     delete-instance.md
+    restore-data.md
 
     {: .topicgroup}
     Enhancing security
@@ -178,7 +179,6 @@ Hyper Protect Crypto Services
         at-events.md
         monitor-sysdig-metrics.md
         manage-security-compliance.md
-        restore-data.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
