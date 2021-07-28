@@ -163,6 +163,7 @@ Hyper Protect Crypto Services
     add-remove-crypto-units.md
     enable-failover.md
     delete-instance.md
+    restore-data.md
 
     {: .topicgroup}
     Enhancing security
@@ -178,11 +179,6 @@ Hyper Protect Crypto Services
         at-events.md
         monitor-sysdig-metrics.md
         manage-security-compliance.md
-
-    {: .topicgroup}
-    High availability and disaster recovery
-        ha-dr.md
-        restore-data.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -210,6 +206,7 @@ Hyper Protect Crypto Services
     regions.md
     smart-card-considerations.md
     shared-responsibilities.md
+    ha-dr.md
     open-source-licenses.md
     [IBM Cloud Hyper Protect Services resources](https://ibm-hyper-protect.github.io/)
     {: .navgroup-end}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-07-26"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -187,7 +187,7 @@ Review [roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to
 To assign access to a key ring with the console, complete the following steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
-2. Select the user that you want to assign access to in the table, and click the overflow icon (...) to open a list of options for that user.
+2. Select the user that you want to assign access to in the table, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")to open a list of options for that user.
 3. From the options menu, click **Assign access**.
 4. Click **Assign users additional access**.
 5. Click the **IAM services** button.
@@ -353,7 +353,7 @@ To delete a key ring with the console, complete the following steps:
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. Select the **KMS key rings** tab in the side menu to browse the key rings.
-5. Find the key ring that you want to delete and click the deletion icon at the end of the row.
+5. Find the key ring that you want to delete and click the **Deletion** icon ![Deletion icon](../icons/delete.svg "Deletion") at the end of the row.
 6. Confirm the deletion and click **Delete key ring**.
 
 ### Deleting key rings with the API

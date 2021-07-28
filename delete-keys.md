@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-07-26"
 
 keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 
@@ -72,7 +72,7 @@ console.
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
-5. Select the key that you want to delete and click the overflow (⋯) icon to open a list of options for the key.
+5. Select the key that you want to delete and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key.
 6. From the options menu, click **Delete key**, enter the key name to confirm the key to be deleted, and click **Delete key**.
 
 After you delete a key, the key moves to the _Destroyed_ state. You can [restore the deleted key](/docs/hs-crypto?topic=hs-crypto-restore-keys) within 30 days after its deletion. Metadata that is associated with the key, such as the key's deletion date, is kept in the {{site.data.keyword.hscrypto}} database.

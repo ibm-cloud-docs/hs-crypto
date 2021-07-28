@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-22"
+lastupdated: "2021-07-28"
 
 keywords: site map, doc structure, information architecture
 
@@ -785,6 +785,19 @@ Find what you are looking for in the compilation of topics that are available in
 * [Step 3: Delete your service instance](/docs/hs-crypto?topic=hs-crypto-delete-instance#delete-instance-step)
 
 
+## Restoring your data from another region
+{: #sitemap_restoring_your_data_from_another_region}
+
+
+[Restoring your data from another region](/docs/hs-crypto?topic=hs-crypto-restore-data)
+
+* [Restoring your data by using failover crypto units](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-failover-crypto-units)
+
+* [Restoring your data by opening an IBM support ticket](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-open-support-ticket)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-next)
+
+
 ## Enhancing security
 {: #sitemap_enhancing_security}
 
@@ -895,21 +908,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Monitoring security and compliance posture with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#monitor-crypto)
 
 * [Governing {{site.data.keyword.hscrypto}} resource configuration with config rules](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#govern-crypto)
-
-
-## High availability and disaster recovery
-{: #sitemap_high_availability_and_disaster_recovery}
-
-
-[High availability and disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr)
-* [Locations, tenancy, and availability](/docs/hs-crypto?topic=hs-crypto-ha-dr#availability)
-* [In-region data redundancy and failover](/docs/hs-crypto?topic=hs-crypto-ha-dr#data-failover)
-* [Cross-region disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr#cross-region-disaster-recovery)
-
-[Restoring your data from another region](/docs/hs-crypto?topic=hs-crypto-restore-data)
-* [Restoring your data by using failover crypto units](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-failover-crypto-units)
-* [Restoring your data by opening an IBM support ticket](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-open-support-ticket)
-* [What's next](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-next)
 
 
 ## API reference
@@ -1044,6 +1042,19 @@ Find what you are looking for in the compilation of topics that are available in
 * [Security and regulation compliance](/docs/hs-crypto?topic=hs-crypto-shared-responsibilities#security-compliance)
 
 * [Disaster recovery](/docs/hs-crypto?topic=hs-crypto-shared-responsibilities#disaster-recovery)
+
+
+## High availability and disaster recovery
+{: #sitemap_high_availability_and_disaster_recovery}
+
+
+[High availability and disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr)
+
+* [Locations, tenancy, and availability](/docs/hs-crypto?topic=hs-crypto-ha-dr#availability)
+
+* [In-region data redundancy and failover](/docs/hs-crypto?topic=hs-crypto-ha-dr#data-failover)
+
+* [Cross-region disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr#cross-region-disaster-recovery)
 
 
 ## Open-source licenses

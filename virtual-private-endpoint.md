@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-23"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway
 
@@ -158,6 +158,7 @@ When connecting to a VPE through [CLI](/docs/vpc?topic=vpc-ordering-endpoint-gat
     <td>kmip.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:eu-gb:::endpoint:kmip.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
   </tr>
+  
   
   <caption>Table 1. Private endpoints for connecting {{site.data.keyword.hscrypto}} over {{site.data.keyword.cloud_notm}} private network</caption>
 </table>

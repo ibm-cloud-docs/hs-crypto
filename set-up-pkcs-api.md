@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-07-16"
+lastupdated: "2021-07-23"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -96,43 +96,60 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
     iamcredentialtemplate: &defaultiamcredential
               enabled: true
               endpoint: "https://iam.cloud.ibm.com"
-              apikey: # Keep the 'apikey' empty. It will be overridden by the Anonymous user API key configured later.
-              instance: "<instance_id>" # The Universally Unique IDentifier (UUID) of your Hyper Protect Crypto Services instance.
+              # Keep the 'apikey' empty. It will be overridden by the Anonymous user API key configured later.
+              apikey:
+              # The Universally Unique IDentifier (UUID) of your Hyper Protect Crypto Services instance.
+              instance: "<instance_id>"
 
     tokens:
       0:
         grep11connection:
-          address: "<EP11_endpoint_URL>" # The EP11 endpoint address starting from 'ep11'. For example: "ep11.us-south.hs-crypto.cloud.ibm.com"
+          # The EP11 endpoint address starting from 'ep11'. For example: "ep11.us-south.hs-crypto.cloud.ibm.com"
+          address: "<EP11_endpoint_URL>"
           port: "<EP11_endpoint_port_number>" # The EP11 endpoint port number
           tls:
-            enabled: true # Grep11 requires TLS connection.
-            mutual: false # Grep11 requires server-only authentication, so 'mutual' needs to be set as 'false'.
-            cacert: # 'cacert' is a full-path certificate file. In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
-            certfile: # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' needs to be empty.
-            keyfile:
+            enabled: true # EP11 requires TLS connection.
+            # Set it 'true' if you want to enable mutual TLS connections.
+            # By default, set it 'false' because EP11 requires server-only authentication.
+            mutual: <enable_mtls>
+            # 'cacert' is a full-path certificate file. In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
+            cacert:
+            # Specify the file path of the client certificate if you enable mutual TLS. Otherwise, keep it empty.
+            certfile: <client_certificate>
+            # Specify the file path of the client certificate private key if you enable mutual TLS. Otherwise, keep it empty.
+            keyfile: <client_certificate_private_key>
         storage:
             # 'remotestore' needs to be enabled if you want to generate keys with the attribute CKA_TOKEN.
           remotestore:
             enabled: true
         users:
           0: # The index of the Security Officer (SO) user MUST be 0.
-            name: "<SO_user_name>" # The name for the Security Officer (SO) user. For example: "Administrator".
-            iamauth:
-              <<: *defaultiamcredential # NEVER put the API key under the SO user for security reasons.
-          1: # The index of the normal user MUST be 1.
-            name: "<normal_user_name>" # The name for the normal user. For example: "Normal user".
-            tokenspaceID: "<private_keystore_spaceid>" # The 128-bit UUID of the private keystore. For example: "f00db2f1-4421-4032-a505-465bedfa845b".
-            iamauth:
-              <<: *defaultiamcredential # NEVER put the API key under the normal user for security reasons.
-            sessionauth:
-              enabled: true # Enable this option to encrypt and authenticate the keystore.
-              tokenspaceIDPassword: "<private_keystore_password>" # Authenticated keystore password; must be 6-8 characters in length
-          2: # The index of the anonymous user MUST be 2.
-            name: "<anonymous_user_name>" # The name for the anonymous user. For example: "Anonymous".
-            tokenspaceID: "<public_keystore_spaceid>" # The 128-bit UUID of the public keystore. For example: "ca22be26-b798-4fdf-8c83-3e3a492dc215".
+            # The name for the Security Officer (SO) user. For example: "Administrator".
+            name: "<SO_user_name>"
+            # NEVER put the API key under the SO user for security reasons.
             iamauth:
               <<: *defaultiamcredential
-              apikey: "<apikey_for_anonymous_user>" # The API key for the Anonymous user must be provided. It will overide the 'apikey' in the previous defaultcredentials.iamauth.apikey field
+          1: # The index of the normal user MUST be 1.
+            # The name for the normal user. For example: "Normal user".
+            name: "<normal_user_name>"
+            # The 128-bit UUID of the private keystore. For example: "f00db2f1-4421-4032-a505-465bedfa845b".
+            tokenspaceID: "<private_keystore_spaceid>"
+            # NEVER put the API key under the normal user for security reasons.
+            iamauth:
+              <<: *defaultiamcredential
+            sessionauth:
+              enabled: true # Enable this option to encrypt and authenticate the keystore.
+              # Authenticated keystore password; must be 6-8 characters in length
+              tokenspaceIDPassword: "<private_keystore_password>"
+          2: # The index of the anonymous user MUST be 2.
+            # The name for the anonymous user. For example: "Anonymous".
+            name: "<anonymous_user_name>"
+            # The 128-bit UUID of the public keystore. For example: "ca22be26-b798-4fdf-8c83-3e3a492dc215".
+            tokenspaceID: "<public_keystore_spaceid>"
+            iamauth:
+              <<: *defaultiamcredential
+              # The API key for the anonymous user. It will overide the 'apikey' in the previous defaultcredentials.iamauth.apikey field
+              apikey: "<apikey_for_anonymous_user>"
             sessionauth:
               enabled: false
               tokenspaceIDPassword: # Authenticated keystore password; must be 6-8 characters in length
@@ -164,6 +181,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
         <td><em>EP11_endpoint_port_number</em></td>
         <td>The port number of the EP11 API endpoint. It is located after the colon in the endpoint URL.</td>
       </tr>
+      
       <tr>
         <td><em>SO_user_name</em></td>
         <td>The name for the Security Officer (SO) user type. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. For more information about the PKCS #11 user types, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984){: external}.</td>

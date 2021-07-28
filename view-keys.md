@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-07-26"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -103,7 +103,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
       <caption>Table 1. Describes the <strong>Keys</strong> table</caption>
     </table>
 
-    Not all key characteristics are displayed by default. To customize how the **Keys** table is to be presented, click the **Settings** icon and check the columns to be displayed.
+    Not all key characteristics are displayed by default. To customize how the **Keys** table is to be presented, click the **Settings icon** ![Settings icon](/images/settings.svg "Settings") and check the columns to be displayed.
     {: tip}
 
     Not seeing the full list of keys that are stored in your service instance?
@@ -112,7 +112,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
     about roles, see
     [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).
 
-    You can also search for a specific key by using the search bar, or filter keys based on your needs by clicking the **Filter** icon in the **Keys** table.
+    You can also search for a specific key by using the search bar, or filter keys based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the **Keys** table.
     {: tip}
 
 ## Viewing root keys or standard keys with the key management API

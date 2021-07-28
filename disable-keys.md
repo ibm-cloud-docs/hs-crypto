@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-07-26"
 
 keywords: disable key, enable key, suspend key, suspend operations on a key
 
@@ -67,7 +67,7 @@ complete the following steps to disable a key:
 provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in
 your service instance.
-5. Click the overflow (⋯) icon to open a list of options for the key that you want to
+5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key that you want to
 disable.
 6. From the options menu, click **Disable key**, enter the key name to confirm the key to be disabled, and click **Disable key**.
 
@@ -88,7 +88,7 @@ You must wait 30 seconds after you disable a root key before you are able to ena
 provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in
 your service.
-5. Click the overflow (⋯) icon to open a list of options for the key that you want to
+5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key that you want to
 enable.
 6. From the options menu, click **Enable key**.
 

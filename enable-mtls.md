@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-21"
+lastupdated: "2021-07-26"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -80,6 +80,9 @@ To enable the second layer of authentication, you need to first configure the ad
 {: #enable-authentication-ep11-step2-certificate}
 
 After you configure the administrator signature key, you need to upload the client certificate to your instance certificate manager server for TLS client authentication.
+
+After you set up the client certificate, you are no longer able to access EP11 keystores and EP11 keys through the {{site.data.keyword.cloud_notm}} console.
+{: important}
 
 1. Upload the certificate to the server with the following command:
 
@@ -184,7 +187,7 @@ To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the pr
     </tr>
     <tr>
       <td><varname>client_certificate_private_key</varname></td>
-      <td>**Required.** The file path of the client certificate private key.</td>
+      <td>**Required.** The file path of the client certificate private key that is used to sign the certificate.</td>
     </tr>
     <caption>Table 3. Describes the variables that are needed to configure PKCS #11 applications</caption>
   </table>
@@ -242,6 +245,14 @@ If you no longer need the second layer of authentication, you can disable the fu
   If no certificate is returned, it means all the certificates of your service instance are removed.
 
 3. (Optional) Update the GREP11 or PKCS #11 applications to remove the certificate configurations, so that the applications are no longer use the certificate for future API connections.
+
+## Security and availability best practices
+{: #enable-authentication-ep11-security-best-practices}
+
+With mutual TLS as a second layer of authentication for accessing EP11, you need to be aware of the following security and availability considerations:
+
+- If you need to prevent certain people from accessing EP11, separate certificate administrators from service users. Control access by assigning the _Certficate Manager_ role only to the people that manage the client certificates, and assigning other service users the corresponding roles for operational usage. To manage user access, you need to be assigned the _Administrator_ role with account management access.
+- EP11 APIs are not accessible if you use invalid client certificates or use unavailable private keys to sign client certificates. To ensure the availability, assign more than one person the _Certificate Manager_ role as a backup. Certificate administrators need to securely maintain their unique administrator private keys. Certificate administrators also need to maintain a backup of all client certificates outside of the {{site.data.keyword.hscrypto}} instance, for example, by using [{{site.data.keyword.cloud_notm}} Certificate Manager](https://www.ibm.com/cloud/certificate-manager){: external}. It is also suggested to monitor the expiration of the certificates.
 
 ## What's next
 {: #enable-authentication-ep11-whats-next}

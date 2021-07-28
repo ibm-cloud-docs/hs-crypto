@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-07-17"
+  years: 2020, 2021
+lastupdated: "2021-07-26"
 
 keywords: troubleshoot, problems, known issues, can't rotate root keys
 
@@ -32,7 +32,7 @@ subcollection: hs-crypto
 When you access the {{site.data.keyword.hscrypto}} user interface, you do not see the options to rotate root keys.
 {:shortdesc}
 
-From the {{site.data.keyword.cloud_notm}} dashboard, you see a list of keys in the **Keys** table. However, by selecting the key that you want to rotate and clicking the overflow icon, you don't see the **Rotate key** option on the list.
+From the {{site.data.keyword.cloud_notm}} dashboard, you see a list of keys in the **Keys** table. However, by selecting the key that you want to rotate and clicking the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions"), you don't see the **Rotate key** option on the list.
 {: tsSymptoms}
 
 You do not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions.
