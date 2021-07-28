@@ -168,6 +168,9 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     <caption>Table 1. Supported parameters for provisioning a service instance with Terraform</caption>
   </table>
 
+  If you manage multiple service instances in the `main.tf` file, make sure to set the same `signature_server_url` parameter for each instance. Otherwise, you will not be able to perform the actions successfully.
+  {: important}
+
 4. Initialize the Terraform CLI with the following command.
 
   ```
