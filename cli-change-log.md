@@ -2,7 +2,7 @@
 
 copyright:
   years:  2021
-lastupdated: "2021-07-07"
+lastupdated: "2021-07-29"
 
 keywords: change log for tke, updates to tke cli plugin, updates to cert manager cli plugin
 
@@ -25,7 +25,7 @@ subcollection: hs-crypto
 In this change log, you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} command-line interface (CLI) plug-ins.
 {: shortdesc}
 
-## {{site.data.keyword.cloud}} TKE CLI plug-in
+## {{site.data.keyword.cloud_notm}} TKE CLI plug-in
 {: #tke-cli-change-log}
 
 ### Version 1.2.3

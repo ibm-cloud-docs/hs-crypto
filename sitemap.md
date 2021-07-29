@@ -497,10 +497,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Generating a GREP11 API request](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#form-grep11-api-request)
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#set-up-grep11-api-next-steps)
 
-[Using a virtual private endpoint for VPC](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc)
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc#virtual-private-endpoints-for-vpc-prereqs)
-* [Virtual Private Service Endpoints](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc#virtual-private-endpoints-for-vpc-endpoints)
-
 
 ## Performing key management operations with the CLI
 {: #sitemap_performing_key_management_operations_with_the_cli}
@@ -830,30 +826,23 @@ Find what you are looking for in the compilation of topics that are available in
 * [ What's next](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#pkcs11-best-practices-next)
 
 
-## Securing connection to {{site.data.keyword.hscrypto}}
-{: #sitemap_securing_connection_to_}
+## Privately connecting to Hyper Protect Crypto Services
+{: #sitemap_privately_connecting_to_hyper_protect_crypto_services}
 
 
-[Securing connection to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-secure-connection)
+[Using virtual private endpoints for VPC to privately connect to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc)
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc#virtual-private-endpoints-for-vpc-prereqs)
+* [Setting up a VPE for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc#virtual-private-endpoints-for-vpc-setup)
 
+[Using service endpoints to privately connect to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-secure-connection)
 * [Understanding the network access policy](/docs/hs-crypto?topic=hs-crypto-secure-connection#understand-network-access-policies)
-
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-secure-connection#private-endpoint-prereqs)
-
 * [Step 1: Configure the private network of {{site.data.keyword.cloud_notm}} on your virtual server](/docs/hs-crypto?topic=hs-crypto-secure-connection#configure-network)
-
 * [Step 2: Provision a service instance and select the network access](/docs/hs-crypto?topic=hs-crypto-secure-connection#service-endpoint-private-endpoints)
-
 * [Step 3:  Target the {{site.data.keyword.hscrypto}} private endpoint for the TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-secure-connection#target-tke-private-endpoint)
-
 * [Step 4: Initialize the service instance](/docs/hs-crypto?topic=hs-crypto-secure-connection#secure-connection-key-ceremony)
-
 * [Step 5: Target the {{site.data.keyword.hscrypto}} private endpoint for key management service](/docs/hs-crypto?topic=hs-crypto-secure-connection#target-internal-endpoint)
-
 * [Step 6: Test your private network connection](/docs/hs-crypto?topic=hs-crypto-secure-connection#Test-private-connection)
-
-* [(Optional) Step 7: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC](/docs/hs-crypto?topic=hs-crypto-secure-connection#create-vpe-gateway)
-
 * [What's next](/docs/hs-crypto?topic=hs-crypto-secure-connection#secure-connection-next)
 
 
@@ -999,7 +988,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [{{site.data.keyword.hscrypto}} CLI change log](/docs/hs-crypto?topic=hs-crypto-cli-change-log)
-* [{{site.data.keyword.cloud}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#tke-cli-change-log)
+* [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#tke-cli-change-log)
 
 
 ## Terraform reference

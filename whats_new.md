@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-07-29"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -168,7 +168,7 @@ The GREP11 API now supports the `ReencryptSingle` function which enables you to 
 ### Added: Support for accessing service instances through the Virtual Private Endpoint
 {: #add-vpe}
 
-You can now connect your {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) instance to your {{site.data.keyword.hscrypto}} instance through a virtual private endpoint (VPE) gateway, so that you can manage your keys by using {{site.data.keyword.hscrypto}} through a private network. For more information, see [Securing connection to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-secure-connection) and [Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC](/docs/hs-crypto?topic=hs-crypto-secure-connection#create-vpe-gateway).
+You can now connect your {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) instance to your {{site.data.keyword.hscrypto}} instance through a virtual private endpoint (VPE) gateway, so that you can manage your keys by using {{site.data.keyword.hscrypto}} through a private network. For more information, see [Using virtual private endpoints for VPC to privately connect to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc).
 
 ### Added: Support for the SLIP10 mechanism and Edwards-curve algorithm
 {: #add-slip10-eddsa}
@@ -325,7 +325,7 @@ For more information, see [Integrating services](/docs/hs-crypto?topic=hs-crypto
 
 You can now connect to {{site.data.keyword.hscrypto}} over the {{site.data.keyword.cloud_notm}} private network by targeting a private endpoint for the service.
 
-To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your infrastructure account. For more information, see [Using private endpoints](/docs/hs-crypto?topic=hs-crypto-secure-connection).
+To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your infrastructure account. For more information, see [Using service endpoints to privately connect to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-secure-connection).
 
 ### Added: {{site.data.keyword.hscrypto}} Cloud HSM now supports EP11 cryptographic operations over gRPC
 {: #added-EP11}

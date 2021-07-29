@@ -93,7 +93,6 @@ Hyper Protect Crypto Services
         set-up-kms-api.md
         set-up-pkcs-api.md
         set-up-grep11-api.md
-        virtual-private-endpoint.md
 
     set-up-cli.md
 
@@ -175,7 +174,11 @@ Hyper Protect Crypto Services
             pkcs11-ui-best-practices.md
             pkcs11-best-practices.md
 
-        secure-connection.md
+        {: .topicgroup}
+        Privately connecting to Hyper Protect Crypto Services
+            virtual-private-endpoint.md
+            secure-connection.md
+
         at-events.md
         monitor-sysdig-metrics.md
         manage-security-compliance.md
