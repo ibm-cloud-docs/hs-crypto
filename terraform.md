@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-28"
+lastupdated: "2021-07-29"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -120,7 +120,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     </tr>
     <tr>
       <td>service_endpoints</td>
-      <td>**Optional**. The network access to your service instance. Valid values are `public and private` and `private-only`. If you do not specify the value, the default setting is `public and private`.</td>
+      <td>**Optional**. The network access to your service instance. Valid values are `public-and-private` and `private-only`. If you do not specify the value, the default setting is `public-and-private`.</td>
     </tr>
     <tr>
       <td>tags</td>
