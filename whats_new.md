@@ -28,8 +28,17 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 
 
+
 ## 30 July 2021
 {: #july-2021}
+
+### Added: Exclusive control on the execution of cryptographic operations
+{: #add-cert-manager}
+
+To ensure the exclusive control on the execution of cryptographic operations, you can use the {{site.data.keyword.hscrypto}} certificate manager CLI to enable the second layer of authentication for EP11 (GREP11 or PKCS #11 API) connections. By enabling this function, you enable an extra layer of access control on top of the Identity and Access Management (IAM) token to the EP11 applications. A mutual TLS connection is established to ensure that only EP11 applications with a valid client certificate can perform EP11 operations. For more information, see [Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11)
+
+
+
 
 ### Added: {{site.data.keyword.hscrypto}} expands into the Tokyo region
 {: #add-tokyo-region}
@@ -38,19 +47,11 @@ You can now create {{site.data.keyword.hscrypto}} instances in the Tokyo (`jp-to
 
 
 
+
 ### Added: Using Terraform to initialize the {{site.data.keyword.hscrypto}} instance
 {: #add-terraform-automation}
 
 With the integration with Terraform, now you can initialize your service instance using Terraform, and then automate actions using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).
-
-
-
-### Added: Exclusive control on the execution of cryptographic operations
-{: #add-cert-manager}
-
-To ensure the exclusive control on the execution of cryptographic operations, you can use the {{site.data.keyword.hscrypto}} certificate manager CLI to enable the second layer of authentication for EP11 (GREP11 or PKCS #11 API) connections. By enabling this function, you enable an extra layer of access control on top of the Identity and Access Management (IAM) token to the EP11 applications. A mutual TLS connection is established to ensure that only EP11 applications with a valid client certificate can perform EP11 operations. For more information, see [Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11)
-
-
 
 ### Added: Using a signing service to manage signature keys for instance initialization
 {: #add-signing-service}
