@@ -27,8 +27,6 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 
 
-
-
 ## 30 July 2021
 {: #july-2021}
 
@@ -37,16 +35,10 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 To ensure the exclusive control on the execution of cryptographic operations, you can use the {{site.data.keyword.hscrypto}} certificate manager CLI to enable the second layer of authentication for EP11 (GREP11 or PKCS #11 API) connections. By enabling this function, you enable an extra layer of access control on top of the Identity and Access Management (IAM) token to the EP11 applications. A mutual TLS connection is established to ensure that only EP11 applications with a valid client certificate can perform EP11 operations. For more information, see [Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11)
 
-
-
-
 ### Added: {{site.data.keyword.hscrypto}} expands into the Tokyo region
 {: #add-tokyo-region}
 
 You can now create {{site.data.keyword.hscrypto}} instances in the Tokyo (`jp-tok`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
-
-
-
 
 ### Added: Using Terraform to initialize the {{site.data.keyword.hscrypto}} instance
 {: #add-terraform-automation}
@@ -58,7 +50,6 @@ With the integration with Terraform, now you can initialize your service instanc
 
 If you are using Terraform or key part files to initialize a service instance, you can now choose to use a third-party signing service to create, store, and manage the administrator signature keys that are used by Terraform or the Trusted Key Entry (TKE) CLI plug-in. For more information, see [Using a signing service to manage signature keys for instance initialization](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key).
 
-
 ## 30 June 2021
 {: #june-2021}
 
@@ -67,20 +58,15 @@ If you are using Terraform or key part files to initialize a service instance, y
 
 The PKCS #11 database-backed keystores can now be encrypted and authenticated. For each service instance, a maximum of five authenticated PKCS #11 keystores are supported. You can enable the `sessionauth` parameter to encrypt the generated keys into the keystore or to decrypt the key before you use it. For more information, see [Set up the PKCS #11 configuration file](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file).
 
-
-
 ### Added: Enabling cross-region recovery with failover crypto units
 {: #add-failover-crypto-units}
 
 Failover crypto units back up the operational crypto units and keystores in another region. When a regional disaster occurs, you can use failover crypto units instead to reduce the downtime and data loss. Failover crypto units [charge extra fees](/docs/hs-crypto?topic=hs-crypto-faq-pricing) and this option is now available only in regions of `us-south` and `us-east`. For more information, see [Enabling or adding failover crypto units](/docs/hs-crypto?topic=hs-crypto-enable-add-failover) and [Cross-region disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr#cross-region-disaster-recovery).
 
-
-
 ### Added: {{site.data.keyword.hscrypto}} expands into the London region
 {: #add-london-region}
 
 You can now create {{site.data.keyword.hscrypto}} instances in the London (`eu-gb`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
-
 
 ## 30 April 2021
 {: #april-2021}

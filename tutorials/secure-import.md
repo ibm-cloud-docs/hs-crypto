@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-28"
+lastupdated: "2021-07-30"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -54,7 +54,7 @@ To get started, you need the {{site.data.keyword.cloud_notm}} CLI so that you ca
 
 1. Create an [{{site.data.keyword.cloud_notm}} account](https://{DomainName}){: external}.
 2. Download and install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started) for your operating system.
-3. Download and install the [{{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in](/docs/key-protect?topic=key-protect-set-up-cli) v0.4.0 or later, and [configure it to use in {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-set-up-cli). Make sure to update the `KP_PRIVATE_ADDR` variable to the current instance key management endpoint URL.
+3. Download and install the [{{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in](/docs/key-protect?topic=key-protect-set-up-cli) v0.6.3 or later, and [configure it to use in {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-set-up-cli). Make sure to update the `KP_PRIVATE_ADDR` variable to the current instance key management endpoint URL.
 
   To check your {{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in version:
   ```
@@ -421,12 +421,11 @@ To import the key:
     {: tip}
 
   * **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
-    
+
     ```
-    ibmcloud kp key create new-imported-key --key-material ${ENCRYPTED_KEY} --encrypted-nonce ${ENCRYPTED_NONCE} --iv ${IV} > createRootKeyResponse.json
+    ibmcloud kp key create new-imported-key --key-material "${ENCRYPTED_KEY}" --encrypted-nonce "${ENCRYPTED_NONCE}" --iv "${IV}" --sha1 > createRootKeyResponse.json
     ```
     {: pre}
-    
 
   Behind the scenes, {{site.data.keyword.hscrypto}} receives your encrypted packet over a TLS 1.2 connection. Within a hardware security module, the system uses the private key to decrypt the symmetric key. Finally, the system uses the symmetric key and the IV to decrypt the nonce and verify the request. Your key is now stored in a tamper-resistant, FIPS 140-2 Level 4 validated hardware security module.
 

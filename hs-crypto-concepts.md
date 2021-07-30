@@ -85,7 +85,6 @@ A crypto unit is a single unit that represents an HSM and the corresponding soft
 
   Failover crypto units back up the operational crypto units and keystores in another region. When a regional disaster occurs, you can use failover crypto units to ensure production workloads and avoid data loss. Failover crypto units [charge extra fees](/docs/hs-crypto?topic=hs-crypto-faq-pricing) and this option is now available only in regions of `us-south` and `us-east`, which means if you create your instance in either of the two regions, the failover crypto units are located in the other region. For more information about using failover crypto units in a regional disaster, see [Restoring your data by using failover crypto units](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-failover-crypto-units).
 
-
 ### Administrators
 {: #admin-concept}
 

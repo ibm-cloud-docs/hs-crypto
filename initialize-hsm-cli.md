@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-21"
+lastupdated: "2021-07-30"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -84,7 +84,7 @@ The master key registers in all crypto units in a single service instance must b
   {: pre}
 
   The following output is an example that is displayed. The SELECTED column in the output table identifies the crypto units that are targeted by later administrative commands that are issued by the TKE CLI plug-in.
-  
+
   ```
   SERVICE INSTANCE: 482cf2ce-a06c-4265-9819-0b4acf54f2ba
   CRYPTO UNIT NUM   SELECTED   TYPE           LOCATION
@@ -99,7 +99,7 @@ The master key registers in all crypto units in a single service instance must b
   6                 false      OPERATIONAL    [us-south].[AZ2-CS5].[03].[03]
   ```
   {: screen}
-  
+
 * To add extra crypto units to the selected crypto unit list, use the following command:
   {: #identify_crypto_units2}
   ```
@@ -108,12 +108,12 @@ The master key registers in all crypto units in a single service instance must b
   {: pre}
 
   A list of the crypto units in the target resource group under the current user account is displayed. When prompted, enter a list of crypto unit numbers to be added to the selected crypto unit list.
-  
+
   If you enable cross-region high availability with [failover crypto units](/docs/hs-crypto?topic=hs-crypto-understand-concepts#crypto-unit-concept), make sure that you add all the failover crypto units to the selected list for instance initialization.
 
   If you don't initialize and configure failover crypto units the same as the operational crypto units, you are not able to use the failover crypto units for automatic data restoration when a regional disaster happens. For more information about cross-region disaster recovery, see [High availability and disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr).
   {: important}
-  
+
   If you are using a public network, crypto units that are associated with service instances with the network policy set to `private-only` are not to be listed. You can access private-only crypto units only through a private network. For more information about setting up a private-only connection, see [Target the private endpoint for the TKE plug-in](/docs/hs-crypto?topic=hs-crypto-secure-connection#target-tke-private-endpoint).
   {: note}
 
@@ -176,7 +176,9 @@ For security considerations, the signature key owners can be different people fr
   A list of signature keys that are found on the workstation is displayed. When prompted, enter the key numbers of the signature key files to select for signing future administrative commands. When prompted, enter the passwords for the signature key files.
 
   This command determines what signature keys are allowed to sign future commands. There is no limit to the number of signature key files that you can select. If you select more signature keys than required to sign a command, the actual signature keys that are used will be determined at the time the command is executed.
-  
+
+  You can also use a third-party signing service to provide signature keys. For more information, see [Using a signing service to manage signature keys for instance initialization](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key).
+  {: tip}
 
 ### Step 2: Add one or more administrators in the target crypto unit
 {: #step2-load-admin}

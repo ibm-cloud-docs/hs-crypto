@@ -128,7 +128,6 @@ The following table lists the Trusted Key Entry (TKE) actions that generate an e
 | `hs-crypto.tke-cryptounit.reset`   | Zeroize and reset the selected crypto units |
 {: caption="Table 5. Trusted Key Entry actions" caption-side="bottom"}
 
-
 ### Certificate manager events
 {: #mtlscert-mgr-actions}
 
@@ -145,7 +144,6 @@ The following table lists the certificate manager actions that generate an event
 | `hs-crypto.mtlscert-cert.read` | Get certificates by the certificate administrator.|
 | `hs-crypto.mtlscert-cert.delete` | Delete certificates by the certificate administrator. |
 {: caption="Table 6. Certificate manager actions" caption-side="bottom"}
-
 
 ### KMIP for VMware events
 {: #at-events-kmip}
@@ -486,7 +484,6 @@ For the following TKE events, some specific fields indicate more information.
 - The `requestData.verificationPattern` field includes the SHA-256 hash of the master key that is loaded and committed to the new master key register.
 - The `responseData.verificationPattern` field includes the SHA-256 hash of the master key that is activated.
 
-
 ### Certificate manager events
 {: #mgr-events-success}
 
@@ -569,7 +566,6 @@ The following fields include extra information:
 
 - The `requestData.certificateId` field indicates the target mTLS certificate.
 - The `responseData.action` field indicates that the certificate is to be deleted.
-
 
 ## Analyzing failed events
 {: #at-events-analyze-failed}

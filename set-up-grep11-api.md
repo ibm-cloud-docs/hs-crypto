@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-07-30"
 
 keywords: set up api, api key, cryptographic operations, use ep11 api, access ep11 api, ep11 over grpc, using api
 
@@ -37,6 +37,8 @@ To work with the API, you need to generate your service and authentication crede
 {: #form-grep11-api-request}
 
 In order to remotely access cloud HSM on {{site.data.keyword.hscrypto}} to perform cryptographic operations, you need to generate a GREP11 API request, and pass the GREP11 API endpoint URL, service ID API key, IAM endpoint, and instance ID through the API call.
+
+You can also enable mutual TLS for GREP11 API to add another layer of authentication. For more information, see [Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11).
 
 ### Example: Generating random data using the `GenerateRandomRequest()` function
 {: #generate-random-request-example}

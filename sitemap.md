@@ -1017,6 +1017,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [{{site.data.keyword.hscrypto}} CLI change log](/docs/hs-crypto?topic=hs-crypto-cli-change-log)
 * [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#tke-cli-change-log)
+* [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#cert-manager-cli-change-log)
 
 [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} CLI](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin)
 * [{{site.data.keyword.hscrypto}} key management CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#kp-cli-plugin)

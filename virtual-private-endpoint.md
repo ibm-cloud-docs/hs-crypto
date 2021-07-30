@@ -76,12 +76,10 @@ When you create a VPE gateway by using the CLI or API, you must specify the [Clo
     <td>api.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:eu-gb:::endpoint:api.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
   </tr>
-  
   <tr>
     <td>api.vpc.private.jp-tok.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:jp-tok:::endpoint:api.vpc.private.jp-tok.hs-crypto.cloud.ibm.com</td>
   </tr>
-  
 
   <tr>
     <td rowspan="6">Enterprise PKCS #11</td>
@@ -104,12 +102,11 @@ When you create a VPE gateway by using the CLI or API, you must specify the [Clo
     <td>ep11.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:eu-gb:::endpoint:ep11.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
   </tr>
-  
   <tr>
     <td>ep11.vpc.private.jp-tok.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:jp-tok:::endpoint:ep11.vpc.private.jp-tok.hs-crypto.cloud.ibm.com</td>
   </tr>
-  
+
   <tr>
     <td rowspan="6">Trusted Key Entry (TKE)</td>
     <td>tke.private.au-syd.hs-crypto.cloud.ibm.com</td>
@@ -131,12 +128,11 @@ When you create a VPE gateway by using the CLI or API, you must specify the [Clo
     <td>tke.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:eu-gb:::endpoint:tke.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
   </tr>
-  
   <tr>
     <td>tke.vpc.private.jp-tok.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:jp-tok:::endpoint:tke.vpc.private.jp-tok.hs-crypto.cloud.ibm.com</td>
   </tr>
-  
+
   <tr>
     <td rowspan="6">Key Management Interoperability Protocol (KMIP) adapter</td>
     <td>kmip.private.au-syd.hs-crypto.cloud.ibm.com</td>
@@ -158,12 +154,10 @@ When you create a VPE gateway by using the CLI or API, you must specify the [Clo
     <td>kmip.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:eu-gb:::endpoint:kmip.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
   </tr>
-  
   <tr>
     <td>kmip.vpc.private.jp-tok.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:jp-tok:::endpoint:kmip.vpc.private.jp-tok.hs-crypto.cloud.ibm.com</td>
   </tr>
-  
   
   <caption>Table 1. Available region endpoints and CRNs for creating VPE gateways</caption>
 </table>
