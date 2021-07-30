@@ -77,6 +77,7 @@ Hyper Protect Crypto Services
 
         initialize-hsm-cli-recovery-crypto-unit.md
         initialize-hsm-cli.md
+        signing-service.md
 
     {: .topicgroup}
     Managing instance policies
@@ -93,8 +94,10 @@ Hyper Protect Crypto Services
         set-up-kms-api.md
         set-up-pkcs-api.md
         set-up-grep11-api.md
+        enable-mtls.md
 
     set-up-cli.md
+    terraform.md
 
     {: .topicgroup}
     Managing master keys
@@ -198,12 +201,8 @@ Hyper Protect Crypto Services
 
     {: .topicgroup}
     CLI reference
-        [Key management CLI reference](https://{DomainName}/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference)
-
-        {: .topicgroup}
-        Trusted Key Entry CLI reference
-            cli-change-log.md
-            /hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin
+        cli-change-log.md
+        /hs-crypto-cli-plugin/hs-crypto-cli-plugin-hpcs-cli-plugin
 
     [Terraform reference](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key)
     regions.md

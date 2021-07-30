@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-03-11"
+lastupdated: "2021-07-30"
 
 keywords: master key, restore master key, master key backup, recovery crypto unit, master key recover
 
@@ -66,4 +66,4 @@ To learn more about resource groups, see [Managing resource groups](/docs/accoun
 ## What's next
 {: #recover-master-key-next}
 
-For a complete TKE CLI plug-in command reference, see [{{site.data.keyword.cloud_notm}} TKE CLI](/docs/hs-crypto-cli-plugin?topic=hs-crypto-cli-plugin-tke_cli_plugin){: external}.
+For a complete TKE CLI plug-in command reference, see [{{site.data.keyword.cloud_notm}} TKE CLI](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin){: external}.

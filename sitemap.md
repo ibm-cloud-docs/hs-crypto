@@ -425,6 +425,19 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-cli-next)
 
 
+## Using a signing service to manage signature keys for instance initialization
+{: #sitemap_using_a_signing_service_to_manage_signature_keys_for_instance_initialization}
+
+
+[Using a signing service to manage signature keys for instance initialization](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key)
+
+* [Signing service prerequisites](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key#signing-service-requirements)
+
+* [Configuring the TKE CLI plug-in to use the signing service](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key#configure-tke-cli-for-signing-service)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key#signing-service-whats-next)
+
+
 ## Managing instance policies
 {: #sitemap_managing_instance_policies}
 
@@ -499,6 +512,15 @@ Find what you are looking for in the compilation of topics that are available in
 * [Generating a GREP11 API request](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#form-grep11-api-request)
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#set-up-grep11-api-next-steps)
 
+[Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11)
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-prerequisites)
+* [Step 1: Configure the administrator signature key](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-step1-signature)
+* [Step 2: Set up the client certificate for authentication](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-step2-certificate)
+* [Step 3: Establish mutual TLS connections for EP11 applications](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-step3-enable-tls)
+* [(Optional) Disabling mutual TLS connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-disable-tls)
+* [Security and availability best practices](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-security-best-practices)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-whats-next)
+
 
 ## Performing key management operations with the CLI
 {: #sitemap_performing_key_management_operations_with_the_cli}
@@ -507,6 +529,17 @@ Find what you are looking for in the compilation of topics that are available in
 [Performing key management operations with the CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-cli#cli-next-steps)
+
+
+## Setting up Terraform for {{site.data.keyword.hscrypto}}
+{: #sitemap_setting_up_terraform_for_}
+
+
+[Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs)
+
+* [Example: Provisioning and initializing service instances by using Terraform](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs#terraform-provision-initialize-instance-hpcs)
+
+* [What's next?](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs#terraform-setup-hpcs-next)
 
 
 ## Managing master keys
@@ -982,15 +1015,13 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_cli_reference}
 
 
-[Key management CLI reference](https://{DomainName}/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference){: external}
-
-
-## Trusted Key Entry CLI reference
-{: #sitemap_trusted_key_entry_cli_reference}
-
-
 [{{site.data.keyword.hscrypto}} CLI change log](/docs/hs-crypto?topic=hs-crypto-cli-change-log)
 * [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#tke-cli-change-log)
+
+[{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} CLI](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin)
+* [{{site.data.keyword.hscrypto}} key management CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#kp-cli-plugin)
+* [{{site.data.keyword.hscrypto}} Trusted Key Entry CLI Plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin)
+* [{{site.data.keyword.hscrypto}} certificate manager CLI Plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#cert-manager-cli-plugin)
 
 
 ## Terraform reference
