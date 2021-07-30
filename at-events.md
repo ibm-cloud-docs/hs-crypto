@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-01"
+lastupdated: "2021-07-30"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -129,6 +129,23 @@ The following table lists the Trusted Key Entry (TKE) actions that generate an e
 {: caption="Table 5. Trusted Key Entry actions" caption-side="bottom"}
 
 
+### Certificate manager events
+{: #mtlscert-mgr-actions}
+
+The following table lists the certificate manager actions that generate an event:
+
+| Action                         | Description                                  |
+| ------------------------------ | -------------------------------------------- |
+| `hs-crypto.mtlscert-admin-key.create` | Create the administrator signature key for the certificate administrator to connect to the certificate manager server.  |
+| `hs-crypto.mtlscert-admin-key.update`  | Refresh and update the administrator signature key for the certificate administrator. |
+| `hs-crypto.mtlscert-admin-key.read` | Get the administrator signature key of the certificate administrator. |
+| `hs-crypto.mtlscert-admin-key.delete` | Delete the administrator signature key of the certificate administrator.|
+| `hs-crypto.mtlscert-cert.set`   | Create or update certificates by the certificate administrator.  |
+| `hs-crypto.mtlscert-cert.list` | List all certificates that are managed by the certificate administrator.  |
+| `hs-crypto.mtlscert-cert.read` | Get certificates by the certificate administrator.|
+| `hs-crypto.mtlscert-cert.delete` | Delete certificates by the certificate administrator. |
+{: caption="Table 6. Certificate manager actions" caption-side="bottom"}
+
 
 ### KMIP for VMware events
 {: #at-events-kmip}
@@ -164,6 +181,7 @@ see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic
 | `au-syd`                  | `au-syd`                                        |
 | `eu-de`                   | `eu-de`                                         |
 | `eu-gb`                   | `eu-gb`                                         |
+| `jp-tok`                  | `jp-tok`                                        |
 | `us-east`                 | `us-east`                                       |
 | `us-south`                | `us-south`                                      |
 {: caption="Table 8. Activity Tracker regions" caption-side="bottom"}
@@ -469,6 +487,89 @@ For the following TKE events, some specific fields indicate more information.
 - The `responseData.verificationPattern` field includes the SHA-256 hash of the master key that is activated.
 
 
+### Certificate manager events
+{: #mgr-events-success}
+
+The following table lists the returned values that indicate a successful certificate manager event.
+
+| Field name | Returned value |
+| -------- | ----------- |
+|`outcome` | `success`  |
+| `reason.reasonCode`  | `200`  |
+| `reason.reasonType`  |`OK`  |
+{: caption="Table 11. Describes the returned values of a successful mTLS certificate manager event" caption-side="bottom"}
+
+The following common fields for certificate manager events include extra information:
+
+- The `target.id` field includes the [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) of the event.
+- The `target.name` field indicates the target name of the event, such as "mtlscert-admin-key" or "mtlscert-cert".
+- The `target.typeURI` field includes the URI of the object that the action is targeting at. For example, if you perform the `hs-crypto.mtlscert-admin-key.create` action, the value that is returned is `hs-crypto/mtlscert-admin-key`.
+
+The specified fields of the following certificate manager events can indicate more information.
+
+#### Create the administrator signature key for the certificate administrator
+{: #cert-mgr-create-adminkey-success}
+
+The following fields include extra information:
+
+- The `requestData.accountId` field includes the current user ID.
+- The `responseData.action` field includes the action details of the current user.
+
+#### Update the administrator signature key for the certificate administrator
+{: #cert-mgr-update-adminkey-success}
+
+The following fields include extra information:
+
+- The `requestData.accountId` field includes the current user ID.
+- The `responseData.action` field includes the action details of the current user.
+
+#### Remove the administrator signature key of the certificate administrator
+{: #cert-mgr-delete-adminkey-success}
+
+The following fields include extra information:
+
+- The `requestData.accountId` field includes the current user ID.
+- The `responseData.action` field includes the action details of the current user.
+
+#### Get the administrator signature key of the certificate administrator
+{: #cert-mgr-read-adminkey-success}
+
+The following fields include extra information:
+
+- The `requestData.accountId` field includes the current user ID.
+- The `responseData.action` field includes the action details of the current user.
+
+#### Create or updating certificates by the certificate administrator
+{: #cert-mgr-set-cert-success}
+
+The following fields include extra information:
+
+- The `requestData.certificateId` field indicates the target certificate.
+- The `responseData.action` field indicates that the certificate is to be created or updated.
+
+#### List certificates by the certificate administrator
+{: #cert-mgr-list-cert-success}
+
+The following field includes extra information:
+
+- The `responseData.action` field indicates all certificates that are managed by current administrator are to be listed.
+
+#### Get certificates by the certificate administrator
+{: #cert-mgr-read-cert-success}
+
+The following fields include extra information:
+
+- The `requestData.certificateId` field indicates the target certificate.
+- The `responseData.action` field indicates that the certificate is to be fetched and displayed.
+
+#### Remove certificates by the certificate administrator
+{: #cert-mgr-delete-cert-success}
+
+The following fields include extra information:
+
+- The `requestData.certificateId` field indicates the target mTLS certificate.
+- The `responseData.action` field indicates that the certificate is to be deleted.
+
 
 ## Analyzing failed events
 {: #at-events-analyze-failed}
@@ -559,11 +660,11 @@ The following table lists the actions that are associated with each severity lev
         <p><code>hs-crypto.tke-cryptounit-master-key-register.activate</code></p>
         <p><code>hs-crypto.tke-cryptounit-threshold.set</code></p>
         <p><code>hs-crypto.tke-cryptounit.reset</code></p>
-        
-        
-        
-        
-        
+        <p><code>hs-crypto.mtlscert-admin-key.create</code></p>
+        <p><code>hs-crypto.mtlscert-admin-key.update</code></p>
+        <p><code>hs-crypto.mtlscert-admin-key.delete</code></p>
+        <p><code>hs-crypto.mtlscert-cert.set</code></p>
+        <p><code>hs-crypto.mtlscert-cert.set</code></p>
       </td>
     </tr>
     <tr>
@@ -597,9 +698,9 @@ The following table lists the actions that are associated with each severity lev
         <p><code>hs-crypto.importtoken.create</code></p>
         <p><code>hs-crypto.importtoken.read</code></p>
         <p><code>hs-crypto.registrations.list</code></p>
-        
-        
-        
+        <p><code>hs-crypto.mtlscert-cert.read</code></p>
+        <p><code>hs-crypto.mtlscert-cert.list</code></p>
+        <p><code>hs-crypto.mtlscert-admin-key.read</code></p>
       </td>
     </tr>
     <caption>Table 12. Describes the severity level for {{site.data.keyword.hscrypto}} service actions.</caption>
