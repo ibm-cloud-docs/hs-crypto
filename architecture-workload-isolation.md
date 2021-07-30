@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-30"
 
 keywords: hyper protect crypto services architecture, service architecture, architecture diagram, workload isolation, crypto units, secure service container, ssc, public isolation for hyper protect crypto services, compute isolation for hyper protect crypto services
 
@@ -29,7 +29,6 @@ Review the service architecture, workload isolation characteristics, and service
 The following architecture diagram shows how you interact with {{site.data.keyword.hscrypto}} components to protect your sensitive data and keys.
 
 ![Service instance components](/images/hs-crypto-components-new.svg "Service instance components"){: caption="Figure 1. Interaction with {{site.data.keyword.hscrypto}} components" caption-side="bottom"}
-
 
 The following list explains each component in detail.
 
@@ -58,7 +57,6 @@ The following list explains each component in detail.
 <dt>Failover crypto unit</dt>
 <dd>Failover crypto units back up the operational crypto units in another region, which includes keystores that store encryption keys. When a regional disaster occurs, you can use failover crypto units to ensure production workloads and avoid data loss. <p class="note">Currently, failover crypto units are available only in the region of Dallas (`us-south`) and Washington DC (`us-east`). If you create your instance in either of the two regions, you can choose whether to enable the failover crypto units with [extra charges](/docs/hs-crypto?topic=hs-crypto-faq-pricing).</p></dd>
 </dl>
-
 
 For more information about the {{site.data.keyword.hscrypto}} components, see [Components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
 

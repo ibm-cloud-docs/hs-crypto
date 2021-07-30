@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-07-29"
 
 keywords: securing connection, disabling public service endpoint
 
@@ -41,7 +41,7 @@ subcollection: hs-crypto
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
 
-# Securing connection to {{site.data.keyword.hscrypto}}
+# Using service endpoints to privately connect to {{site.data.keyword.hscrypto}}
 {: #secure-connection}
 
 To ensure that you have enhanced control and security over your data when you use {{site.data.keyword.hscrypto}}, you have the option of using private routes to {{site.data.keyword.cloud}} service endpoints. Private routes are not accessible or reachable over the internet. By using the {{site.data.keyword.cloud_notm}} private service endpoints feature, you can protect your data from threats from the public network and logically extend your private network.
@@ -280,22 +280,6 @@ To test the private network connection for the key management service, use {{sit
   {: pre}
 
   Replace `<instance_ID>` with the {{site.data.keyword.cloud_notm}} instance ID that identifies your {{site.data.keyword.hscrypto}} service instance.
-
-## (Optional) Step 7: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC
-{: #create-vpe-gateway}
-
-If you have an [{{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) instance](/docs/vpc?topic=vpc-getting-started), you can connect the VPC instance to your {{site.data.keyword.hscrypto}} instance through [a virtual private endpoint (VPE) gateway](/docs/vpc?topic=vpc-about-vpe), so that you can manage your keys using {{site.data.keyword.hscrypto}} through a private network.
-
-If you are creating a VPE gateway using the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc-ext){: external}, perform the following steps:
-
-1. Select the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg "Menu"), and then click **VPC Infrastructure > Virtual private endpoint gateways** in the Network section, and then click **Create**. The **New virtual private endpoint gateway for VPC** page is displayed.
-2. In the **Cloud service** section, enable your {{site.data.keyword.hscrypto}} instance:
-
-  * Under **Cloud service offerings**, select **Hyper Protect Crypto Services**.
-  * Under **Cloud service regions**, verify the corresponding [region](/docs/hs-crypto?topic=hs-crypto-regions#available-regions) is pre-filled for your provisioned {{site.data.keyword.hscrypto}} instance.
-  * Select the [private endpoint](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints) you are going to use to connect with your VPC instance.
-
-For detailed instructions on how to create a VPE gateway, check out [Creating an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
 
 ## What's next
 {: #secure-connection-next}

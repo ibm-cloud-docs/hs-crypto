@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-07-30"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -33,12 +33,13 @@ The following table shows the roles that {{site.data.keyword.hscrypto}} supports
 | Service administrator | Manages [platform access](#platform-mgmt-roles) and [service access](#service-access-roles), [grants access to keys](/docs/hs-crypto?topic=hs-crypto-grant-access-keys), creates and deletes service instances, and manages keys. An {{site.data.keyword.cloud_notm}} account owner is automatically assigned the service administrator permission. |
 | Crypto unit administrator | Provides signature keys, and signs Trusted Key Entry (TKE) administrative commands such as for adding another crypto unit administrator. In some cases, a crypto unit administrator can also be a master key custodian. |
 | Master key custodian | Provides master key parts for initializing a service instance. In some cases, a master key custodian can also be a crypto unit administrator. |
+| Certificate administrator | Sets up and manages administrator signature keys and client certificates to enable the second layer of TLS authentication in GREP11 or PKCS #11 API connections. The administrator needs to be assigned the Certificate Manager IAM [service access role](#service-access-roles) to perform the corresponding actions. |
 | Service user | Manages root keys and standard keys through user interface and the API, and performs cryptographic operations through the PKCS #11 API or the Enterprise PKCS #11 over gRPC (GREP11) API. Based on the [platform access roles](#platform-mgmt-roles) and [service access roles](#service-access-roles), service users can be further categorized with various permissions. |
 {: caption="Table 1. Roles and permissions" caption-side="bottom"}
 
 The following diagram illustrates the roles and permissions.
 
-![{{site.data.keyword.hscrypto}} roles](/images/roles.svg "{{site.data.keyword.hscrypto}} roles and responsibilities"){: caption="Figure 1. {{site.data.keyword.hscrypto}} roles and responsibilities" caption-side="bottom"}
+![{{site.data.keyword.hscrypto}} roles](/images/roles-new.svg "{{site.data.keyword.hscrypto}} roles and responsibilities"){: caption="Figure 1. {{site.data.keyword.hscrypto}} roles and responsibilities" caption-side="bottom"}
 
 ### IAM platform access roles
 {: #platform-mgmt-roles}
@@ -73,6 +74,7 @@ As a service administrator, use the service access roles to grant permissions of
 - As a **Writer**, you can create, modify, rotate, and use keys. Writers cannot delete or disable keys.
 - As a **Manager**, you can perform all actions that a Reader, ReaderPlus and Writer can perform, including the ability to delete keys and set policies for keys.
 - As a **VMware KMIP Manager**, you can configure KMIP for VMware with {{site.data.keyword.hscrypto}} to enable encryption with your own root keys.
+- As a **Certificate Manager** role, you can manage administrator signature keys and client certificates for the second layer of authentication in GREP11 or PKCS #11 API connections.
 
 The following table shows how service access roles map to {{site.data.keyword.hscrypto}} permissions. IAM roles are the default roles provided. Custom roles can be defined by the user.
 
@@ -80,6 +82,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 * The Key Management API is used for envelope encryption and deals with root keys that are used by {{site.data.keyword.cloud_notm}} services for encrypting data-at-rest.
 * HSM APIs (the PKCS #11 API and the GREP11 API) are used for application-level encryption.
 * Key Management Interoperability Protocol (KMIP) adapter is used to configure the KMIP for VMware service with {{site.data.keyword.hscrypto}} to enable vSphere encryption or vSAN encryption by using your own root keys.
+* Certificate Manager Server receives and processes requests for setting up certificate administrator signature keys and client certificates to enable the second layer of authentication in GREP11 or PKCS #11 API connections.
 
 | Action | Reader | ReaderPlus | Writer | Manager | Crypto unit administrator|
 |--------|--------|------------|--------|---------|--------------------------|
@@ -184,7 +187,21 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
 
-
+| Action | Reader | ReaderPlus | Writer | Manager | Certificate Manager |
+|-----|-----|-----|-----|----|-----|
+| Create the administrator signature key. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
+| Refresh and update the administrator signature key. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
+| Retrieve the administrator signature key of the certificate administrator. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
+| Delete the administrator signature key of the certificate administrator. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
+| Create or update the client certificates. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
+| List all client certificates that are managed by the certificate administrator. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
+| Retrieve client certificates. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
+| Delete client certificates. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
+{: #table-7}
+{: caption="Table 7. Lists service access roles as they apply to Certificate Manager" caption-side="bottom"}
+{: tab-title="Certificate Manager Server"}
+{: tab-group="IAM-roles"}
+{: class="comparison-tab-table"}
 
 ## Managing access to multiple instances
 {: #manage-multiple-instances}

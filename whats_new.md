@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-07-30"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,10 +27,28 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 
 
+## 30 July 2021
+{: #july-2021}
 
+### Added: Exclusive control on the execution of cryptographic operations
+{: #add-cert-manager}
 
+To ensure the exclusive control on the execution of cryptographic operations, you can use the {{site.data.keyword.hscrypto}} certificate manager CLI to enable the second layer of authentication for EP11 (GREP11 or PKCS #11 API) connections. By enabling this function, you enable an extra layer of access control on top of the Identity and Access Management (IAM) token to the EP11 applications. A mutual TLS connection is established to ensure that only EP11 applications with a valid client certificate can perform EP11 operations. For more information, see [Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11)
 
+### Added: {{site.data.keyword.hscrypto}} expands into the Tokyo region
+{: #add-tokyo-region}
 
+You can now create {{site.data.keyword.hscrypto}} instances in the Tokyo (`jp-tok`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
+
+### Added: Using Terraform to initialize the {{site.data.keyword.hscrypto}} instance
+{: #add-terraform-automation}
+
+With the integration with Terraform, now you can initialize your service instance using Terraform, and then automate actions using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).
+
+### Added: Using a signing service to manage signature keys for instance initialization
+{: #add-signing-service}
+
+If you are using Terraform or key part files to initialize a service instance, you can now choose to use a third-party signing service to create, store, and manage the administrator signature keys that are used by Terraform or the Trusted Key Entry (TKE) CLI plug-in. For more information, see [Using a signing service to manage signature keys for instance initialization](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key).
 
 ## 30 June 2021
 {: #june-2021}
@@ -40,20 +58,15 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 The PKCS #11 database-backed keystores can now be encrypted and authenticated. For each service instance, a maximum of five authenticated PKCS #11 keystores are supported. You can enable the `sessionauth` parameter to encrypt the generated keys into the keystore or to decrypt the key before you use it. For more information, see [Set up the PKCS #11 configuration file](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file).
 
-
-
 ### Added: Enabling cross-region recovery with failover crypto units
 {: #add-failover-crypto-units}
 
 Failover crypto units back up the operational crypto units and keystores in another region. When a regional disaster occurs, you can use failover crypto units instead to reduce the downtime and data loss. Failover crypto units [charge extra fees](/docs/hs-crypto?topic=hs-crypto-faq-pricing) and this option is now available only in regions of `us-south` and `us-east`. For more information, see [Enabling or adding failover crypto units](/docs/hs-crypto?topic=hs-crypto-enable-add-failover) and [Cross-region disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr#cross-region-disaster-recovery).
 
-
-
 ### Added: {{site.data.keyword.hscrypto}} expands into the London region
 {: #add-london-region}
 
 You can now create {{site.data.keyword.hscrypto}} instances in the London (`eu-gb`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
-
 
 ## 30 April 2021
 {: #april-2021}
@@ -168,7 +181,7 @@ The GREP11 API now supports the `ReencryptSingle` function which enables you to 
 ### Added: Support for accessing service instances through the Virtual Private Endpoint
 {: #add-vpe}
 
-You can now connect your {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) instance to your {{site.data.keyword.hscrypto}} instance through a virtual private endpoint (VPE) gateway, so that you can manage your keys by using {{site.data.keyword.hscrypto}} through a private network. For more information, see [Securing connection to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-secure-connection) and [Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC](/docs/hs-crypto?topic=hs-crypto-secure-connection#create-vpe-gateway).
+You can now connect your {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) instance to your {{site.data.keyword.hscrypto}} instance through a virtual private endpoint (VPE) gateway, so that you can manage your keys by using {{site.data.keyword.hscrypto}} through a private network. For more information, see [Using virtual private endpoints for VPC to privately connect to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc).
 
 ### Added: Support for the SLIP10 mechanism and Edwards-curve algorithm
 {: #add-slip10-eddsa}
@@ -325,7 +338,7 @@ For more information, see [Integrating services](/docs/hs-crypto?topic=hs-crypto
 
 You can now connect to {{site.data.keyword.hscrypto}} over the {{site.data.keyword.cloud_notm}} private network by targeting a private endpoint for the service.
 
-To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your infrastructure account. For more information, see [Using private endpoints](/docs/hs-crypto?topic=hs-crypto-secure-connection).
+To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your infrastructure account. For more information, see [Using service endpoints to privately connect to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-secure-connection).
 
 ### Added: {{site.data.keyword.hscrypto}} Cloud HSM now supports EP11 cryptographic operations over gRPC
 {: #added-EP11}

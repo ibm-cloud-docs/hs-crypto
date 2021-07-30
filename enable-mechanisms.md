@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-07-30"
 
 keywords: enable mechanisms, BTC, bitcoin mechanism, BIP32, BIP 0032, Schnorr, enable deterministic wallets, Digital Asset Platforms
 
@@ -275,7 +275,7 @@ To enable the Schnorr algorithm for your service instance, follow these steps:
 
 You can now start using [the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) or [the GREP11 API](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api) to perform cryptographic operations and protect deterministic wallets.
 
-* For more information about the TKE CLI commands, check out the [TKE CLI reference](/docs/hs-crypto-cli-plugin?topic=hs-crypto-cli-plugin-tke_cli_plugin).
+* For more information about the TKE CLI commands, check out the [TKE CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin).
 * For more information about the PKCS #11 API, check out [Introducing PKCS #11](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro) and [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref).
 * For more information about the GREP11 API, check out [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11_intro) and [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 * To learn more about the differences and relationships between PKCS #11 and GREP11 API, see [Introducing cloud HSM](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm).

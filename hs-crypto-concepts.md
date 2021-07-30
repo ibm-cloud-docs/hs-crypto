@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-05"
+lastupdated: "2021-07-30"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -85,7 +85,6 @@ A crypto unit is a single unit that represents an HSM and the corresponding soft
 
   Failover crypto units back up the operational crypto units and keystores in another region. When a regional disaster occurs, you can use failover crypto units to ensure production workloads and avoid data loss. Failover crypto units [charge extra fees](/docs/hs-crypto?topic=hs-crypto-faq-pricing) and this option is now available only in regions of `us-south` and `us-east`, which means if you create your instance in either of the two regions, the failover crypto units are located in the other region. For more information about using failover crypto units in a regional disaster, see [Restoring your data by using failover crypto units](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-failover-crypto-units).
 
-
 ### Administrators
 {: #admin-concept}
 
@@ -128,7 +127,7 @@ If you initialize your service instance using key part files, or using smart car
 ### {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in
 {: #tke-concept}
 
-Trusted Key Entry (TKE) command-line interface (CLI) plug-in is a CLI plug-in working with {{site.data.keyword.cloud_notm}} CLI. The TKE plug-in provides a set of functions for managing crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user account. You can use the TKE plug-in to set up administrators and load the master key with the requirements of a medium level of security. The TKE CLI plug-in provides two approaches to initializing service instances: [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) and [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit). For the complete command reference, see [Trusted Key Entry CLI plug-in reference](/docs/hs-crypto-cli-plugin/hs-crypto-cli-plugin-tke_cli_plugin).
+Trusted Key Entry (TKE) command-line interface (CLI) plug-in is a CLI plug-in working with {{site.data.keyword.cloud_notm}} CLI. The TKE plug-in provides a set of functions for managing crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user account. You can use the TKE plug-in to set up administrators and load the master key with the requirements of a medium level of security. The TKE CLI plug-in provides two approaches to initializing service instances: [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) and [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit). For the complete command reference, see [Trusted Key Entry CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin).
 
 ### Management Utilities
 {: #management-utilities-concept}

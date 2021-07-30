@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-28"
+lastupdated: "2021-07-30"
 
 keywords: site map, doc structure, information architecture
 
@@ -251,6 +251,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new)
 
+* [30 July 2021](/docs/hs-crypto?topic=hs-crypto-what-new#july-2021)
+
 * [30 June 2021](/docs/hs-crypto?topic=hs-crypto-what-new#june-2021)
 
 * [30 April 2021](/docs/hs-crypto?topic=hs-crypto-what-new#april-2021)
@@ -423,6 +425,19 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-cli-next)
 
 
+## Using a signing service to manage signature keys for instance initialization
+{: #sitemap_using_a_signing_service_to_manage_signature_keys_for_instance_initialization}
+
+
+[Using a signing service to manage signature keys for instance initialization](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key)
+
+* [Signing service prerequisites](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key#signing-service-requirements)
+
+* [Configuring the TKE CLI plug-in to use the signing service](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key#configure-tke-cli-for-signing-service)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key#signing-service-whats-next)
+
+
 ## Managing instance policies
 {: #sitemap_managing_instance_policies}
 
@@ -497,9 +512,14 @@ Find what you are looking for in the compilation of topics that are available in
 * [Generating a GREP11 API request](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#form-grep11-api-request)
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#set-up-grep11-api-next-steps)
 
-[Using a virtual private endpoint for VPC](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc)
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc#virtual-private-endpoints-for-vpc-prereqs)
-* [Virtual Private Service Endpoints](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc#virtual-private-endpoints-for-vpc-endpoints)
+[Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11)
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-prerequisites)
+* [Step 1: Configure the administrator signature key](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-step1-signature)
+* [Step 2: Set up the client certificate for authentication](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-step2-certificate)
+* [Step 3: Establish mutual TLS connections for EP11 applications](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-step3-enable-tls)
+* [(Optional) Disabling mutual TLS connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-disable-tls)
+* [Security and availability best practices](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-security-best-practices)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-whats-next)
 
 
 ## Performing key management operations with the CLI
@@ -509,6 +529,17 @@ Find what you are looking for in the compilation of topics that are available in
 [Performing key management operations with the CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-cli#cli-next-steps)
+
+
+## Setting up Terraform for {{site.data.keyword.hscrypto}}
+{: #sitemap_setting_up_terraform_for_}
+
+
+[Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs)
+
+* [Example: Provisioning and initializing service instances by using Terraform](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs#terraform-provision-initialize-instance-hpcs)
+
+* [What's next?](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs#terraform-setup-hpcs-next)
 
 
 ## Managing master keys
@@ -830,30 +861,23 @@ Find what you are looking for in the compilation of topics that are available in
 * [ What's next](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#pkcs11-best-practices-next)
 
 
-## Securing connection to {{site.data.keyword.hscrypto}}
-{: #sitemap_securing_connection_to_}
+## Privately connecting to Hyper Protect Crypto Services
+{: #sitemap_privately_connecting_to_hyper_protect_crypto_services}
 
 
-[Securing connection to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-secure-connection)
+[Using virtual private endpoints for VPC to privately connect to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc)
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc#virtual-private-endpoints-for-vpc-prereqs)
+* [Setting up a VPE for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc#virtual-private-endpoints-for-vpc-setup)
 
+[Using service endpoints to privately connect to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-secure-connection)
 * [Understanding the network access policy](/docs/hs-crypto?topic=hs-crypto-secure-connection#understand-network-access-policies)
-
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-secure-connection#private-endpoint-prereqs)
-
 * [Step 1: Configure the private network of {{site.data.keyword.cloud_notm}} on your virtual server](/docs/hs-crypto?topic=hs-crypto-secure-connection#configure-network)
-
 * [Step 2: Provision a service instance and select the network access](/docs/hs-crypto?topic=hs-crypto-secure-connection#service-endpoint-private-endpoints)
-
 * [Step 3:  Target the {{site.data.keyword.hscrypto}} private endpoint for the TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-secure-connection#target-tke-private-endpoint)
-
 * [Step 4: Initialize the service instance](/docs/hs-crypto?topic=hs-crypto-secure-connection#secure-connection-key-ceremony)
-
 * [Step 5: Target the {{site.data.keyword.hscrypto}} private endpoint for key management service](/docs/hs-crypto?topic=hs-crypto-secure-connection#target-internal-endpoint)
-
 * [Step 6: Test your private network connection](/docs/hs-crypto?topic=hs-crypto-secure-connection#Test-private-connection)
-
-* [(Optional) Step 7: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC](/docs/hs-crypto?topic=hs-crypto-secure-connection#create-vpe-gateway)
-
 * [What's next](/docs/hs-crypto?topic=hs-crypto-secure-connection#secure-connection-next)
 
 
@@ -991,15 +1015,14 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_cli_reference}
 
 
-[Key management CLI reference](https://{DomainName}/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference){: external}
-
-
-## Trusted Key Entry CLI reference
-{: #sitemap_trusted_key_entry_cli_reference}
-
-
 [{{site.data.keyword.hscrypto}} CLI change log](/docs/hs-crypto?topic=hs-crypto-cli-change-log)
-* [{{site.data.keyword.cloud}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#tke-cli-change-log)
+* [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#tke-cli-change-log)
+* [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#cert-manager-cli-change-log)
+
+[{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} CLI](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin)
+* [{{site.data.keyword.hscrypto}} key management CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#kp-cli-plugin)
+* [{{site.data.keyword.hscrypto}} Trusted Key Entry CLI Plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin)
+* [{{site.data.keyword.hscrypto}} certificate manager CLI Plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#cert-manager-cli-plugin)
 
 
 ## Terraform reference

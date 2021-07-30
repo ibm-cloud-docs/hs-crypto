@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-07-23"
+lastupdated: "2021-07-30"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -181,7 +181,18 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
         <td><em>EP11_endpoint_port_number</em></td>
         <td>The port number of the EP11 API endpoint. It is located after the colon in the endpoint URL.</td>
       </tr>
-      
+      <tr>
+        <td><em>enable_mtls</em></td>
+        <td>Valid values are `true` or `false` to indicate whether you want to enable mutual TLS to add a second layer of authentication for PKCS #11 API access. By default, set it `false` as EP11 requires server-only authentication. For more information about the mutual TLS connections, see [Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11).</td>
+      </tr>
+      <tr>
+        <td><em>client_certificate</em></td>
+        <td>If you enable mutual TLS connections, specify the file path of the client certificate that is uploaded to your instance by the certificate administrator. Otherwise, keep this field empty.</td>
+      </tr>
+      <tr>
+        <td><em>client_certificate_private_key</em></td>
+        <td>If you enable mutual TLS connections, specify the file path of the client certificate private key that is used to sign the certificate. Otherwise, keep this field empty.</td>
+      </tr>
       <tr>
         <td><em>SO_user_name</em></td>
         <td>The name for the Security Officer (SO) user type. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. For more information about the PKCS #11 user types, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984){: external}.</td>
