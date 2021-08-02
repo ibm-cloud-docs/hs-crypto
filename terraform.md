@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-29"
+lastupdated: "2021-08-02"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -198,4 +198,5 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
 ## What's next?
 {: #terraform-setup-hpcs-next}
 
-For other task examples with Terraform such as creating keys and setting policies, see the [Terraform documentation - Key Management Service](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key). The documentation also lists the complete argument and attribute reference.
+- For more information about using Terraform to manage {{site.data.keyword.hscrypto}} instances, see the [Terraform documentation - Hyper Protect Crypto Services](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs){: external}.
+- For other key management examples with Terraform such as creating keys and setting key policies, see the [Terraform documentation - Key Management Service](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: external}. The documentation also lists the complete argument and attribute reference.
