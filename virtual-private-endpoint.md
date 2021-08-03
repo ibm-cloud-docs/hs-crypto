@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-30"
+lastupdated: "2021-08-03"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway
 
@@ -50,9 +50,9 @@ When you create a VPE gateway by using the CLI or API, you must specify the [Clo
 
 <table>
   <tr>
-    <th>{{site.data.keyword.hscrypto}} feature</th>
-    <th>Supported endpoints</th>
-    <th>CRN</th>
+    <th scope="col">{{site.data.keyword.hscrypto}} feature</th>
+    <th scope="col">Supported endpoints</th>
+    <th scope="col">CRN</th>
   </tr>
 
   <tr>
