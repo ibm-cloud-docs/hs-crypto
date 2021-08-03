@@ -204,7 +204,11 @@ Hyper Protect Crypto Services
         cli-change-log.md
         /hs-crypto-cli-plugin/hs-crypto-cli-plugin-hpcs-cli-plugin
 
-    [Terraform reference](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key)
+    {: .topicgroup}
+    Terraform reference
+        [Provisioning and initializing service instances with Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs)
+        [Managing key management service keys with Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key)
+
     regions.md
     smart-card-considerations.md
     shared-responsibilities.md

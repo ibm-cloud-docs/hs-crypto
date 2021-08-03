@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-29"
+lastupdated: "2021-08-03"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -38,7 +38,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
 
 1. Install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform by following the [Terraform on {{site.data.keyword.cloud_notm}} getting started tutorial](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
 
-  The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to provision, update, or delete {{site.data.keyword.hscrypto}} service instances and resources. The preferred Terraform versions are 0.13.x, 0.14.x, and 0.15.x. In the `versions.tf` file, you need to specify the `version` parameter to `1.27.4`.
+  The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to provision, update, or delete {{site.data.keyword.hscrypto}} service instances and resources. The preferred Terraform versions are 0.13.x, 0.14.x, and 0.15.x. In the `versions.tf` file, you need to specify the `version` parameter to `1.29.0`.
 
 2. Set up crypto unit administrator signature keys. You can select one of the following ways to create administrator signature keys:
 
@@ -198,4 +198,5 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
 ## What's next?
 {: #terraform-setup-hpcs-next}
 
-For other task examples with Terraform such as creating keys and setting policies, see the [Terraform documentation - Key Management Service](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key). The documentation also lists the complete argument and attribute reference.
+- For more information about using Terraform to manage {{site.data.keyword.hscrypto}} instances, see the [Terraform documentation - Hyper Protect Crypto Services](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs){: external}.
+- For other key management examples with Terraform such as creating keys and setting key policies, see the [Terraform documentation - Key Management Service](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: external}. The documentation also lists the complete argument and attribute reference.

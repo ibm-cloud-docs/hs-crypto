@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-30"
+lastupdated: "2021-08-02"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -43,7 +43,7 @@ You can now create {{site.data.keyword.hscrypto}} instances in the Tokyo (`jp-to
 ### Added: Using Terraform to initialize the {{site.data.keyword.hscrypto}} instance
 {: #add-terraform-automation}
 
-With the integration with Terraform, now you can initialize your service instance using Terraform, and then automate actions using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).
+With the integration with Terraform, now you can initialize your service instance using Terraform, and then automate actions using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs) and the [Terraform documentation - Hyper Protect Crypto Services](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs){: external}.
 
 ### Added: Using a signing service to manage signature keys for instance initialization
 {: #add-signing-service}
