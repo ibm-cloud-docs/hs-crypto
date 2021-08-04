@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-08-04"
 
 keywords: crypto unit, add crypto units, remove crypto units, change crypto units number, adjust crypto units number, new crypto units, support center, support ticket, support case
 
@@ -77,7 +77,7 @@ Before you can use the new crypto units, complete the following two steps to ini
 
 Depending on how you store your master key parts, you might initialize the new crypto units with the TKE CLI plug-in, or smart cards together with the Management Utilities. Make sure to configure the new crypto units the same as the existing crypto units by referring to the following instructions:
 
-- If you load the master key from your workstation, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+- If you load the master key from your workstation, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 - If you load the master key from smart cards, see [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
 Extra monthly costs apply for each new crypto unit. You can check the detailed charges on the [billing and usage](https://cloud.ibm.com/billing/){: external} page under your account.

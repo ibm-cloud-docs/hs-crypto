@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-27"
+lastupdated: "2021-08-04"
 
 keywords: error message, error code, error, kms error, key management error message, hpcs error messages, hyper protect crypto services error message
 
@@ -28,7 +28,7 @@ This is not a complete list of error messages. Some messages that are created by
 ## Table of contents
 {: #error-messages-kms-toc}
 
-The error messages are sorted by alphabetical order, by HTTP status code, and by reason code respectively.
+The error messages are sorted by alphabetical order, by HTTP status code, and by reason code.
 
 ### Sorted by alphabetical order of error messages
 {: #error-messages-kms-sorted-by-alphabetical-order}
@@ -470,8 +470,8 @@ using this format:
 {: screen}
 
 Depending on which platform (Linux, Mac, Windows) or shell (bash, sh, zsh) you
-are using, you need to be aware of using single versus double quotes. Some
-systems will **not** interpret variables inside single quotes. For example,
+are using, you need to be aware of using single versus double quotation marks. Some
+systems will **not** interpret variables inside single quotation mark. For example,
 ('Bearer $ACCESS_TOKEN') cannot replace `$ACCESS_TOKEN` with the value.
 {: note}
 
@@ -818,7 +818,7 @@ is not valid.
 Some actions to consider:
 
 - The key state must be active (state value is 1) to wrap, unwrap, rotate, set
-  key for deletion (dual auth), unset key for deleteion (dual auth), or disable
+  key for deletion (dual auth), unset key for deletion (dual auth), or disable
   the key
 
 - This error occurs when you try to enable an expired key (state value is 3) or
@@ -1662,7 +1662,7 @@ The client cannot repeat this request without modification.
 The `create instance policy` request fails because the same policy was
 specified more than once.
 
-You can specify multiple policies in the request as long as each policy is
+You can specify multiple policies in the request if each policy is
 unique. For example, you could create instance policies for `dualAuthDelete` and
 `allowedIP` in the same request.
 
@@ -2095,7 +2095,7 @@ The following steps will create this error.
 
 2. Create a root key using the key material and the expiration date
 
-3. Capture the key id
+3. Capture the key ID
 
 4. Allow the expiration date to pass
 
@@ -2554,7 +2554,7 @@ In most cases, a key with registrations can be deleted using the `--force`
 option.
 
 If the registered resource has `preventKeyDeletion` set to `true`, then a force
-delete will fail and this error mesage will be shown.
+delete will fail and this error message will be shown.
 
 In other words, all registrations must have `preventKeyDeletion` set to `false`.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-08-04"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning, operations
 
@@ -64,7 +64,7 @@ A backup certificate authority smart card can be created by using the Smart Card
 
 The contents of an EP11 smart card can be copied to another EP11 smart card that was created in the same smart card zone by using the Trusted Key Entry application. On the **Smart card** tab, click **Copy smart card**, and follow the prompts.
 
-For greater security, you can generate administrator signature keys on more EP11 smart cards and set the signature thresholds in your crypto units to a value greater than one. You can install up to 8 administrators in your crypto units and specify that up to 8 signatures are required for some administrative commands.
+For greater security, you can generate administrator signature keys on more EP11 smart cards and set the signature thresholds in your crypto units to a value greater than one. You can install up to eight administrators in your crypto units and specify that up to eight signatures are required for some administrative commands.
 
 To find out details on how to procure and set up smart cards and other Management Utilities components, see [Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities).
 
@@ -96,7 +96,7 @@ For procurement from other countries, contact IBM Part Sales through the followi
 {: #faq-crypto-units-number}
 {: faq}
 
-You need to set up at least 2 crypto units for high availability. {{site.data.keyword.hscrypto}} sets the upper limit of crypto unit to 3.
+You need to set up at least two crypto units for high availability. {{site.data.keyword.hscrypto}} sets the upper limit of crypto unit to 3.
 
 ## Can I use {{site.data.keyword.hscrypto}} along with other {{site.data.keyword.cloud_notm}} services?
 {: #faq-hpcs-with-cloud-services}
