@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-03"
+lastupdated: "2021-08-04"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway
 
@@ -82,7 +82,7 @@ When you create a VPE gateway by using the CLI or API, you must specify the [Clo
   </tr>
 
   <tr>
-    <td rowspan="6">Enterprise PKCS #11</td>
+    <td rowspan="6">Enterprise PKCS #11 (EP11)</td>
     <td>ep11.private.au-syd.hs-crypto.cloud.ibm.com</td>
     <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:ep11.private.au-syd.hs-crypto.cloud.ibm.com</td>
   </tr>
