@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-04"
+lastupdated: "2021-08-08"
 
 keywords: error message, error code, error, kms error, key management error message, hpcs error messages, hyper protect crypto services error message
 
@@ -33,7 +33,7 @@ The error messages are sorted by alphabetical order, by HTTP status code, and by
 ### Sorted by alphabetical order of error messages
 {: #error-messages-kms-sorted-by-alphabetical-order}
 
-These are the error messages sorted by the alphabetical order. Some error messages are the same but with different HTTP status code. In those cases, the HTTP status code is included at the end of the error message.
+These error messages that are sorted by the alphabetical order. Some error messages are the same but with different HTTP status code. In those cases, the HTTP status code is included at the end of the error message.
 
 1. Collection total does not match number...
   [details](#error-messages-collection-total-mismatch-err)
@@ -65,9 +65,9 @@ These are the error messages sorted by the alphabetical order. Some error messag
     [details](#error-messages-num-collection-resource-err)
 15. Only imported keys can be restored
     [details](#error-messages-key-impt-req-err)
-16. Requested action can only be completed with a root key (400)
+16. Requested action can be completed only with a root key (400)
     [details](#error-messages-key-root-req-err)
-17. Requested action can only be completed with a root key (422)
+17. Requested action can be completed only with a root key (422)
     [details](#error-messages-key-root-req-reg-err)
 18. Requested change is not compliant with configuration rules
     [details](#error-config_rule_conflict_err)
@@ -77,7 +77,7 @@ These are the error messages sorted by the alphabetical order. Some error messag
     [details](#error-messages-key-expired-err)
 21. The encrypted nonce given does not match...
     [details](#error-messages-incorrect-nonce-err)
-22. The import token has expired
+22. The import token is expired
     [details](#error-messages-import-token-expired-err)
 23. The key cannot be deleted because it's...
     [details](#error-messages-prev-key-del-err)
@@ -91,7 +91,7 @@ These are the error messages sorted by the alphabetical order. Some error messag
     [details](#error-messages-incorrect-nonce-iv-err)
 28. The resource(s) queried does not belong to the service.
     [details](#error-messages-resource-owner-err)
-29. This action can only be done by a service...
+29. This action can be done only by a service...
     [details](#error-messages-service-only-err)
 30. This action is not permitted on this...
     [details](#error-messages-feature-restricted-err)
@@ -107,7 +107,7 @@ These are the error messages sorted by the alphabetical order. Some error messag
 ### Sorted by HTTP status code
 {: #error-messages-kms-sorted-by-http-status-code}
 
-These are the error messages sorted by the HTTP status code.
+These are the error messages that are sorted by the HTTP status code.
 
 <table>
   <tr>
@@ -121,7 +121,7 @@ These are the error messages sorted by the HTTP status code.
         <li>Collection total does not match number of resources - [details](#error-messages-collection-total-mismatch-err)</li>
         <li>Data in body does not match data required by query parameter - [details](#error-messages-body-query-param-mismatch-err)</li>
         <li>Extracting the subject from the bearer token failed: Make sure the bearer token passed is the correct one (and correct format) and is allowed to perform requested actions - [details](#error-messages-bearer-sub-extraction-err)</li>
-        <li>Invalid body data was passed: Please ensure the data passed had valid formatting with no invalid characters - [details](#error-messages-bad-body-err)</li>
+        <li>Invalid body data was passed: Ensure that the data passed had valid formatting with no invalid characters - [details](#error-messages-bad-body-err)</li>
         <li>Key restoration has expired - [details](#error-messages-key-restore-expired)</li>
         <li>Missing body in request - [details](#error-messages-no-body-err)</li>
         <li>Only a single instance policy can be created per query parameter: Please pass single resource object - [details](#error-messages-num-collection-resource-err)</li>
@@ -278,7 +278,7 @@ Reason code: COLLECTION_TOTAL_MISMATCH_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -364,7 +364,7 @@ Reason code: BODY_QUERY_PARAM_MISMATCH_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -452,7 +452,7 @@ Reason code: BEARER_SUB_EXTRACTION_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -461,7 +461,7 @@ The client cannot repeat this request without modification.
 {: #error-messages-bearer-sub-extraction-err-context}
 
 The identify and access management (IAM) access token, or format, was invalid.
-If this is a **curl** request then the **authorization** header needs to be set
+If this is a **curl** request, then the **authorization** header needs to be set
 using this format:
 
 ```sh
@@ -469,7 +469,7 @@ using this format:
 ```
 {: screen}
 
-Depending on which platform (Linux, Mac, Windows) or shell (bash, sh, zsh) you
+Depending on which platform (Linux&Reg;, Mac, Windows&Reg;) or shell (bash, sh, zsh) you
 are using, you need to be aware of using single versus double quotation marks. Some
 systems will **not** interpret variables inside single quotation mark. For example,
 ('Bearer $ACCESS_TOKEN') cannot replace `$ACCESS_TOKEN` with the value.
@@ -519,7 +519,7 @@ Reason code: BAD_BODY_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -805,7 +805,7 @@ The HTTP `409 Conflict` response status code indicates a request conflict with
 current state of the server.
 
 Conflicts are most likely to occur in response to a `PUT` request. For example,
-you might get a `409` response when uploading a file which is older than the one
+you might get a `409` response when uploading a file, which is older than the one
 already on the server resulting in a version control conflict.
 
 ### Context
@@ -1056,7 +1056,7 @@ The HTTP `409 Conflict` response status code indicates a request conflict with
 current state of the server.
 
 Conflicts are most likely to occur in response to a `PUT` request. For example,
-you might get a `409` response when uploading a file which is older than the one
+you might get a `409` response when uploading a file, which is older than the one
 already on the server resulting in a version control conflict.
 
 ### Context
@@ -1125,7 +1125,7 @@ server encountered an unexpected condition that prevented it from fulfilling the
 request.
 
 This error response is a generic "catch-all" response. Usually, this indicates
-the server cannot find a better 5xx error code to response. Sometimes, server
+that the server cannot find a better 5xx error code to response. Sometimes, server
 administrators log error responses like the 500 status code with more details
 about the request to prevent the error from happening again in the future.
 
@@ -1134,7 +1134,7 @@ about the request to prevent the error from happening again in the future.
 
 This error is returned when there is an internal error.
 
-If you get this error please contact
+If you get this error, please contact
 [IBM support](/unifiedsupport/supportcenter){: external}
 
 ## 10 - Key restoration has expired
@@ -1154,7 +1154,7 @@ Reason code: KEY_RESTORE_EXPIRED
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -1408,7 +1408,7 @@ Reason code: NO_BODY_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -1651,7 +1651,7 @@ Reason code: NUM_COLLECTION_RESOURCE_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -1744,7 +1744,7 @@ Reason code: KEY_IMPT_REQ_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -1895,7 +1895,7 @@ Reason code: KEY_ROOT_REQ_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -2016,7 +2016,7 @@ Reason code: CONFIG_RULE_CONFLICT_ERR
 The HTTP `403 Forbidden` client error status response code indicates that the
 server understood the request but refuses to authorize it.
 
-This status is similar to `401`, but in this case, re-authenticating will make
+This status is similar to `401`, but in this case, reauthenticating will make
 no difference. The access is permanently forbidden and tied to the application
 logic, such as insufficient rights to a resource.
 
@@ -2054,7 +2054,7 @@ The client cannot repeat this request without modification.
 
 An error occurred when a key was rewrapped.
 
-If you get this error please contact
+If you get this error, please contact
 [IBM support](/unifiedsupport/supportcenter){: external}
 
 ## 20 - The action could not be performed on...
@@ -2074,7 +2074,7 @@ Reason code: KEY_EXPIRED_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -2087,7 +2087,7 @@ This error occurs when restoring a deleted key after the key has expired.
 #### Example
 {: #error-messages-key-expired-err-context-example}
 
-A `key restore` request fails because the key is delete and the key has expired.
+A `key restore` request fails because the key is deleted and the key has expired.
 
 The following steps will create this error.
 
@@ -2241,7 +2241,7 @@ Reason code: INCORRECT_NONCE_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -2256,7 +2256,7 @@ This example is based on the `restore` key command and it uses the
 because the output is easier to follow than the
 [API](/apidocs/key-protect){: external}.
 
-**Step 1** - setup the problem by creating a root key using an import token and
+**Step 1** - set up the problem by creating a root key using an import token and
 then delete the key
 
 ```sh
@@ -2868,7 +2868,7 @@ data because the input was invalid.
 
 This error is returned when there is an internal error.
 
-If you get this error please contact
+If you get this error, please contact
 [IBM support](/unifiedsupport/supportcenter){: external}
 
 ## 27 - The provided encrypted nonce was not...
@@ -2889,7 +2889,7 @@ Reason code: INCORRECT_NONCE_IV_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -2902,7 +2902,7 @@ data because the input was invalid.
 
 This error is returned when there is an internal error.
 
-If you get this error please contact
+If you get this error, please contact
 [IBM support](/unifiedsupport/supportcenter){: external}
 
 ## 28 - The resource(s) queried does not belong to the service
@@ -2975,7 +2975,7 @@ service need to create the registration.
 A service-to-service request is required to create, delete, replace, or update a
 registration.
 
-See this resources for more information about registrations.
+See this resource for more information about registrations.
 
 - [API documentation](/apidocs/key-protect#createregistration){: external}
 
@@ -3178,7 +3178,7 @@ Reason code: KEY_PAYLOAD_REQ_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -3272,7 +3272,7 @@ This status is similar to `403`, but in this case, authentication is possible.
 This error message is returned when the user does not have access to a resource.
 
 This example applies an instance policy that limits access to a range of IP
-addresses. When a request from outside the allowed range is received it returns
+addresses. When a request from outside the allowed range is received, it returns
 an error.
 
 ```sh

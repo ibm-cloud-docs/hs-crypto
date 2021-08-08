@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-05"
+lastupdated: "2021-08-08"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -102,7 +102,7 @@ PKCS #11 functions that are marked with an asterisk (*) in the table are impleme
 |C_GetSessionInfo|N/A|N/A|Obtains information about the session.|
 |C_GetOperationState|N/A|N/A|Obtains the cryptographic operations state of a session.|
 |C_SetOperationState|N/A|N/A|Sets the cryptographic operations state of a session.|
-|C_Login|N/A|N/A|Logs into a token.|
+|C_Login|N/A|N/A|Logs in to a token.|
 |C_Logout|N/A|N/A|Logs out from a token.|
 |C_CreateObject|N/A|N/A|Creates an object.|
 |C_CopyObject|N/A|N/A|Creates a copy of an object.|
@@ -710,7 +710,7 @@ message GenerateKeyPairResponse {
   <p>Implementation of PKCS #11 <code>C_GenerateKeyPair</code>.</p>
   <p>Keypair parameters are retrieved from <code>pmech</code>, <code>ppublic</code>, and <code>pprivate</code> parameters. For RSA keys, <code>ppublic</code> specifies the modulus size.</p>
   <p>In FIPS mode, only RSA moduluses of 1024+256<code>n</code> bits are supported (integer <code>n</code>). Non-FIPS mode can generate keys of any even number of bits between the limits in the mechanism parameter list.</p>
-  <p>Public key is formatted as a standard SPKI (subject publickey info), readable by most libraries. It is integrity-protected by a transport-key specific MAC, which is not part of the SPKI itself. DSA parameter generation returns a non-SPKI structure in the public key field.</p>
+  <p>Public key is formatted as a standard SPKI (subject publickey infomation), readable by most libraries. It is integrity-protected by a transport-key specific MAC, which is not part of the SPKI itself. DSA parameter generation returns a non-SPKI structure in the public key field.</p>
   <p>If you tie an object to a session, <code>(pin, plen)</code> must be returned by <code>Login</code> to that session. Leaving <code>pin</code> <code>NULL</code> creates a public object, one that survives the login session.</p>
   <p>Returns wrapped private key to <code>(key, klen)</code>, public key as a MACed ASN.1/DER structure in <code>(pubkey, pklen)</code>.</p>
   <p>The following supported parameter combinations with special notes are beyond what are documented by PKCS #11:</p>
@@ -1500,7 +1500,7 @@ CK_RV m_GetAttributeValue (
     </ol>
     </p>
     <p>If case 1 applies to any of the requested attributes, then the call needs to return the value `CKR_ATTRIBUTE_SENSITIVE`. If case 2 applies to any of the requested attributes, then the call needs to return the value `CKR_ATTRIBUTE_TYPE_INVALID`. If case 5 applies to any of the requested attributes, then the call needs to return the value `CKR_BUFFER_TOO_SMALL`. As usual, if more than one of these error codes is applicable, `Cryptoki` can return any of them. Only if none of them applies to any of the requested attributes, `CKR_OK` is returned.</p>
-    <p>In the special case of an attribute whose value is an array of attributes, for example` CKA_WRAP_TEMPLATE`, where it is passed in with `pValue` not NULL, then if the `pValue` of elements within the array is NULL_PTR then the `ulValueLen` of elements within the array is set to the required length. If the `pValue` of elements within the array is not NULL_PTR, then the `ulValueLen` element of attributes within the array must reflect the space that the corresponding `pValue` points to, and `pValue` is filled in if there is sufficient room. Therefore it is important to initialize the contents of a buffer before `C_GetAttributeValue` is called to get such an array value. If any `ulValueLen` within the array isn't large enough, it is set to `CK_UNAVAILABLE_INFORMATION` and the function returns `CKR_BUFFER_TOO_SMALL`, as it does if an attribute in the `pTemplate` argument has `ulValueLen` too small. Any attribute whose value is an array of attributes is identifiable by the `CKF_ARRAY_ATTRIBUTE` set of the attribute type.</p>
+    <p>In the special case of an attribute whose value is an array of attributes, for example` CKA_WRAP_TEMPLATE`, where it is passed in with `pValue` not NULL, then if the `pValue` of elements within the array is NULL_PTR then the `ulValueLen` of elements within the array is set to the required length. If the `pValue` of elements within the array is not NULL_PTR, then the `ulValueLen` element of attributes within the array must reflect the space that the corresponding `pValue` points to, and `pValue` is completed if there is sufficient room. Therefore it is important to initialize the contents of a buffer before `C_GetAttributeValue` is called to get such an array value. If any `ulValueLen` within the array isn't large enough, it is set to `CK_UNAVAILABLE_INFORMATION` and the function returns `CKR_BUFFER_TOO_SMALL`, as it does if an attribute in the `pTemplate` argument has `ulValueLen` too small. Any attribute whose value is an array of attributes is identifiable by the `CKF_ARRAY_ATTRIBUTE` set of the attribute type.</p>
     <p>The error codes `CKR_ATTRIBUTE_SENSITIVE`, `CKR_ATTRIBUTE_TYPE_INVALID`, and `CKR_BUFFER_TOO_SMALL` do not denote true errors for `C_GetAttributeValue`. If a call to `C_GetAttributeValue` returns any of these three values, then the call must nonetheless have processed every attribute in the template that is supplied to `C_GetAttributeValue`. Each attribute in the template whose value can be returned by the call to `C_GetAttributeValue` is returned by the call to `C_GetAttributeValue`.</p>
     </td>
   </tr>
