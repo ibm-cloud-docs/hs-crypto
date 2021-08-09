@@ -40,15 +40,16 @@ Before you can enable the second layer of authentication for GREP11 or PKCS #11 
 2. You have a client certificate prepared on your workstation that is used for the TLS authentication. It is suggested to use the [{{site.data.keyword.cloud_notm}} Certificate Manager](https://www.ibm.com/cloud/certificate-manager){: external} to manage SSL/TLS certificates for your applications and services. It is free and provides persistent storage for your certificates. With the Certificate Manager, you can [order free certificates](/docs/certificate-manager?topic=certificate-manager-ordering-certificates), [import your certificates](/docs/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#importing-a-certificate), and [enable notifications for expiring certificates](/docs/certificate-manager?topic=certificate-manager-configuring-notifications).
 3. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external} and the latest certificate manager CLI plug-in with the following command:
 
-  ```
-  ibmcloud plugin install hpcs-cert-mgr
-  ```
+    ```
+    ibmcloud plugin install hpcs-cert-mgr
+    ```
     {: pre}
+
 4. [Log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cli-getting-started#step3-configure-idt-env){: external}. If you have multiple accounts, select the account that your service instance is created with. Make sure that you log in to the correct region and resource group where the service instance is located with the following command:
 
-  ```
-  ibmcloud target -r <region> -g <resource_group>
-  ```
+    ```
+    ibmcloud target -r <region> -g <resource_group>
+    ```
     {: pre}
 
 ## Step 1: Configure the administrator signature key
@@ -58,9 +59,9 @@ To enable the second layer of authentication, you need to first configure the ad
 
 1. Generate the signature key pair and upload the public key with the following command:
 
-  ```
-  ibmcloud hpcs-cert-mgr adminkey set --crn HPCS_CRN [--private]
-  ```
+    ```
+    ibmcloud hpcs-cert-mgr adminkey set --crn HPCS_CRN [--private]
+    ```
     {: pre}
 
     Replace the `HPCS_CRN` variable with the Cloud Resource Name (CRN) of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the CRN. The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
@@ -72,9 +73,9 @@ To enable the second layer of authentication, you need to first configure the ad
 
 2. (Optional) Check and confirm whether the public key is uploaded to the server with the following command:
 
-  ```
-  ibmcloud hpcs-cert-mgr adminkey get --crn HPCS_CRN [--private]
-  ```
+    ```
+    ibmcloud hpcs-cert-mgr adminkey get --crn HPCS_CRN [--private]
+    ```
     {: pre}
 
     If this command returns the public key value, it means that you upload the public key successfully.
@@ -89,9 +90,9 @@ After you set up the client certificate, you are no longer able to access EP11 k
 
 1. Upload the certificate to the server with the following command:
 
-  ```
-  ibmcloud hpcs-cert-mgr cert set --crn HPCS_CRN --admin-priv-key ADMIN_PRIV_KEY --cert-id CERT_ID --cert CERT_FILE [--private]
-  ```
+    ```
+    ibmcloud hpcs-cert-mgr cert set --crn HPCS_CRN --admin-priv-key ADMIN_PRIV_KEY --cert-id CERT_ID --cert CERT_FILE [--private]
+    ```
     {: pre}
 
     Replace the variables in the example request according to the following table.
@@ -124,9 +125,9 @@ After you set up the client certificate, you are no longer able to access EP11 k
 
 2. (Optional) Check and confirm whether the client certificate is uploaded to the server with the following command:
 
-  ```
-  ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN [--private]
-  ```
+    ```
+    ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN [--private]
+    ```
     {: pre}
 
     This command lists all the available client certificates that are managed by you on the server. If the list contains the certificate that is previously uploaded, it means the action is successfully completed.
@@ -145,36 +146,36 @@ To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the pr
 
     - Golang example code snippet
 
-    ```go
-    var callOpts = []grpc.DialOption{
-      grpc.WithTransportCredentials(credentials.NewTLS(&tls.Config{}))
-    }
-    ```
-    {: codeblock}
+      ```go
+      var callOpts = []grpc.DialOption{
+        grpc.WithTransportCredentials(credentials.NewTLS(&tls.Config{}))
+      }
+      ```
+      {: codeblock}
 
-    The `tls.Config{}` needs to be properly defined based on the [`Config` type struct](https://pkg.go.dev/crypto/tls#Config){: external}. You need to set at least the `Certificates` field. For the complete Golang example code, see [The sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go/blob/master/examples/server_test.go){: external}.
+      The `tls.Config{}` needs to be properly defined based on the [`Config` type struct](https://pkg.go.dev/crypto/tls#Config){: external}. You need to set at least the `Certificates` field. For the complete Golang example code, see [The sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go/blob/master/examples/server_test.go){: external}.
 
     - JavaScript example code snippet
 
-    ```javascript
-    credentials.push(grpc.credentials.createSsl());
-    ```
-    {: codeblock}
+      ```javascript
+      credentials.push(grpc.credentials.createSsl());
+      ```
+      {: codeblock}
 
-    You can refer to the [Credentials module documentation](https://grpc.github.io/grpc/node/grpc.credentials.html){: external} for detailed information on functions and parameters. You need to set the `private_key` and `cert_chain` parameters for `createSsl()` function. For the complete JavaScript example code, see [The sample GitHub repository for JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js/blob/master/examples/credentials.js){: external}.
+      You can refer to the [Credentials module documentation](https://grpc.github.io/grpc/node/grpc.credentials.html){: external} for detailed information on functions and parameters. You need to set the `private_key` and `cert_chain` parameters for `createSsl()` function. For the complete JavaScript example code, see [The sample GitHub repository for JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js/blob/master/examples/credentials.js){: external}.
 
 - Configure PKCS #11 applications
 
     PKCS #11 handles mutual TLS in its [configuration file](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file). Update the `tls` field according to the following example:
 
-  ```yaml
-  tls:
-    enabled: true
-    mutual: true
-    cacert:
-    certfile: "<client_certificate>"
-    keyfile: "<client_certificate_private_key>"
-  ```
+    ```yaml
+    tls:
+      enabled: true
+      mutual: true
+      cacert:
+      certfile: "<client_certificate>"
+      keyfile: "<client_certificate_private_key>"
+    ```
     {: codeblock}
 
     Replace the variables in the example based on the following table:
@@ -204,9 +205,9 @@ If you no longer need the second layer of authentication, you can disable the fu
 
 1. Remove client certificates with the following command:
 
-  ```
-  ibmcloud hpcs-cert-mgr cert delete --crn HPCS_CRN --admin-priv-key ADMIN_PRIV_KEY --cert-id CERT_ID [--private]
-  ```
+    ```
+    ibmcloud hpcs-cert-mgr cert delete --crn HPCS_CRN --admin-priv-key ADMIN_PRIV_KEY --cert-id CERT_ID [--private]
+    ```
     {: pre}
 
     Replace the variables in the example request according to the following table.
@@ -240,9 +241,9 @@ If you no longer need the second layer of authentication, you can disable the fu
 
 2. (Optional) Check and confirm whether all the client certificates are removed with the following command:
 
-  ```
-  ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN [--private]
-  ```
+    ```
+    ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN [--private]
+    ```
     {: pre}
 
     If no certificate is returned, it means all the certificates of your service instance are removed.
