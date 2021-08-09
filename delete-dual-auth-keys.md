@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-08-09"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -102,8 +102,8 @@ To delete the key, the second approver must have _Manager_ access policy for the
 order to authorize the key for deletion.
 
 1. In the **Keys** table of the **KMS keys** page, you can find keys that are authorized for deletion with the following indicators:
-  * The `Set for deletion` column has a value of `True`. The authorization expiration time is displayed in the `Deletion expiration` column.
-  * A **Trash can** icon ![Trash can icon](../icons/icon_trash.svg "Trash can") is displayed in the `State` column. Hover over the icon to view the deletion expiration date.
+    * The `Set for deletion` column has a value of `True`. The authorization expiration time is displayed in the `Deletion expiration` column.
+    * A **Trash can** icon ![Trash can icon](../icons/icon_trash.svg "Trash can") is displayed in the `State` column. Hover over the icon to view the deletion expiration date.
 
 2. To delete the key, follow the instructions in [Deleting keys with the console](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-keys-gui).
 

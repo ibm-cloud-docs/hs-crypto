@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-08-09"
 
 keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 
@@ -98,7 +98,7 @@ at query time to delete the key.
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 2. Retrieve the ID of the key that you would like to delete.
 
-  You can find the ID for a key in your service instance by [retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys), or by accessing the {{site.data.keyword.cloud_notm}} console.
+    You can find the ID for a key in your service instance by [retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys), or by accessing the {{site.data.keyword.cloud_notm}} console.
 
 3. Run the following cURL command to permanently delete the key and the contents.
 
@@ -228,7 +228,7 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
 
 2. Retrieve the ID of the key that you want to force delete.
 
-  You can retrieve the ID for a specified key by making a `GET /v2/keys/`request, or by viewing your keys in the {{site.data.keyword.cloud_notm}} console.
+    You can retrieve the ID for a specified key by making a `GET /v2/keys/`request, or by viewing your keys in the {{site.data.keyword.cloud_notm}} console.
 
 3. Run the following cURL command to force-delete the key and the contents.
 
@@ -240,11 +240,11 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
   -H "x-kms-key-ring: <key_ring_ID>" \
   -H 'prefer: <return_preference>'
   ```
-  {: codeblock}
+    {: codeblock}
 
-  Replace the variables in the example request according to the following table.
+    Replace the variables in the example request according to the following table.
 
-  <table>
+    <table>
     <tr>
       <th>Variable</th>
       <th>Description</th>
@@ -266,7 +266,7 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
       <td><varname>port</varname></td>
       <td><strong>Required.</strong> The port number of the API endpoint.</td>
     </tr>
-    
+
     <tr>
       <td>
         <varname>key_ID</varname>
@@ -327,11 +327,11 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
     </tr>
 
     <caption>Table 1. Describes the variables that are needed to delete keys with the {{site.data.keyword.hscrypto}} key management API.</caption>
-  </table>
+    </table>
 
-  If the `return_preference` variable is set to `return=representation`, the details of the `DELETE` request are returned in the response entity-body.
+    If the `return_preference` variable is set to `return=representation`, the details of the `DELETE` request are returned in the response entity-body.
 
-  The following JSON object shows a sample returned value.
+    The following JSON object shows a sample returned value.
 
   ```json
   {
@@ -364,9 +364,9 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
       ]
   }
   ```
-  {: screen}
+    {: screen}
 
-  For a detailed description of the available parameters, see the {{site.data.keyword.hscrypto}} [key management API reference doc](/apidocs/hs-crypto){: external}.
+    For a detailed description of the available parameters, see the {{site.data.keyword.hscrypto}} [key management API reference doc](/apidocs/hs-crypto){: external}.
 
 ## What's next
 {: #delete-key-next}

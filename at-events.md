@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-30"
+lastupdated: "2021-08-09"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -197,7 +197,7 @@ Fields are not guaranteed to appear unless the request is successful.
 
 Some common fields are available for {{site.data.keyword.hscrypto}} to use outside of the CADF event model to provide more insight into your data.
 
-  <table>
+    <table>
     <tr>
       <th>Field</th>
       <th>Description</th>
@@ -224,7 +224,7 @@ Some common fields are available for {{site.data.keyword.hscrypto}} to use outsi
     
     <caption>Table 9. Describes the common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service
     actions.</caption>
-  </table>
+    </table>
 
 For more information about the event fields in the Cloud Auditing Data Federation (CADF) event model, see [Event Fields](/docs/activity-tracker?topic=activity-tracker-event){: external}.
 
@@ -437,9 +437,9 @@ The following common fields for TKE events include extra information:
 
 - The `requestData.location` field includes the specific location of the crypto unit. The location follows this format:
 
-  *\[region\].\[availability zone\].\[hardware security module (HSM) module index\].\[HSM domain index\]*.
+    *\[region\].\[availability zone\].\[hardware security module (HSM) module index\].\[HSM domain index\]*.
 
-  For example, if you provision your instance in the `us-east` region, the value that is returned is similar to `[us-east].[AZ2-CSSTAG2].[03].[22]`.
+    For example, if you provision your instance in the `us-east` region, the value that is returned is similar to `[us-east].[AZ2-CSSTAG2].[03].[22]`.
 - The `target.id` field includes the [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) of the crypto unit.
 - The `target.name` field also includes the location of the crypto unit.
 - The `target.typeURI` field includes the URI of the object that the action is targeting at. For example, if you perform the `hs-crypto.tke-cryptounit-master-key-register.add` action, the value that is returned is `hs-crypto/tke-cryptounit/master-key-register`.
@@ -700,7 +700,7 @@ The following table lists the actions that are associated with each severity lev
       </td>
     </tr>
     <caption>Table 12. Describes the severity level for {{site.data.keyword.hscrypto}} service actions.</caption>
-  </table>
+    </table>
 
 The following table lists the status codes that are associated with each severity level:
 

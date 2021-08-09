@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-07-30"
+lastupdated: "2021-08-09"
 
 keywords: enable mechanisms, BTC, bitcoin mechanism, BIP32, BIP 0032, Schnorr, enable deterministic wallets, Digital Asset Platforms
 
@@ -49,16 +49,16 @@ Before you perform the steps, make sure you have [provisioned a service instance
   ```
   ibmcloud plugin update tke
   ```
-  {: pre}
+    {: pre}
 
 2. To check whether the BIP32 feature is enabled, run the following command:
 
   ```
   ibmcloud tke cryptounit-compare
   ```
-  {: pre}
+    {: pre}
 
-  The following output is an example of what is to be displayed. If the BIP32 feature is enabled, the `XCP_CPB_BTC` column is specified as `Set` in the `CONTROL POINTS` section:
+    The following output is an example of what is to be displayed. If the BIP32 feature is enabled, the `XCP_CPB_BTC` column is specified as `Set` in the `CONTROL POINTS` section:
 
   ```
   CONTROL POINTS
@@ -67,9 +67,9 @@ Before you perform the steps, make sure you have [provisioned a service instance
   1                 Set
   2                 Set
   ```
-  {: screen}
+    {: screen}
 
-  If `Not Set` is displayed, perform the following steps to manually enable the BIP32 feature.
+    If `Not Set` is displayed, perform the following steps to manually enable the BIP32 feature.
 
 ### Step 2: Enable BIP32 manually
 {: #enable-bip32-manually}
@@ -81,9 +81,9 @@ To enable BIP32 for your service instance, follow these steps:
   ```
   ibmcloud tke cryptounits
   ```
-  {: pre}
+    {: pre}
 
-  The following output is an example of what is to be displayed. All selected crypto units are marked `true` in the `SELECTED` column:
+    The following output is an example of what is to be displayed. All selected crypto units are marked `true` in the `SELECTED` column:
 
   ```
   SERVICE INSTANCE: 482cf2ce-a06c-4265-9819-0b4acf54f2ba
@@ -91,21 +91,21 @@ To enable BIP32 for your service instance, follow these steps:
   1                 true       [us-south].[AZ3-CS3].[02].[03]
   2                 true       [us-south].[AZ2-CS2].[02].[03]
   ```
-  {: screen}
+    {: screen}
 
 2. If any of the crypto units are not selected, run the following command and follow the prompts to add the crypto units to the selected list:
 
   ```
   ibmcloud tke cryptounit-add
   ```
-  {: pre}
+    {: pre}
 
 3. To enable the BIP32 feature, run the following command:
 
   ```
   ibmcloud tke cryptounit-cp-btc
   ```
-  {: pre}
+    {: pre}
 
 4. (Optional) To confirm that the BIP32 feature is enabled, run the `ibmcloud tke cryptounit-compare` command again, and make sure that `XCP_CPB_BTC` is marked as `Set` for all crypto units in the output.
 
@@ -129,16 +129,16 @@ Before you perform the steps, make sure you have [provisioned a service instance
   ```
   ibmcloud plugin update tke
   ```
-  {: pre}
+    {: pre}
 
 2. To check whether the EdDSA feature is enabled, run the following command:
 
   ```
   ibmcloud tke cryptounit-compare
   ```
-  {: pre}
+    {: pre}
 
-  The following output is an example of what is to be displayed. If the EdDSA feature is enabled, the `XCP_CPB_ALG_EC_25519` column is specified as `Set` in the `CONTROL POINTS` section:
+    The following output is an example of what is to be displayed. If the EdDSA feature is enabled, the `XCP_CPB_ALG_EC_25519` column is specified as `Set` in the `CONTROL POINTS` section:
 
   ```
   CONTROL POINTS
@@ -148,9 +148,9 @@ Before you perform the steps, make sure you have [provisioned a service instance
   2                 Set
 
   ```
-  {: screen}
+    {: screen}
 
-  If `Not Set` is displayed, perform the following steps to manually enable the EdDSA feature.
+    If `Not Set` is displayed, perform the following steps to manually enable the EdDSA feature.
 
 ### Step 2: Enable EdDSA manually
 {: #enable-EdDSA-manually}
@@ -162,9 +162,9 @@ To enable EdDSA for your service instance, follow these steps:
   ```
   ibmcloud tke cryptounits
   ```
-  {: pre}
+    {: pre}
 
-  The following output is an example of what is to be displayed. All selected crypto units are marked `true` in the `SELECTED` column:
+    The following output is an example of what is to be displayed. All selected crypto units are marked `true` in the `SELECTED` column:
 
   ```
   SERVICE INSTANCE: 482cf2ce-a06c-4265-9819-0b4acf54f2ba
@@ -172,21 +172,21 @@ To enable EdDSA for your service instance, follow these steps:
   1                 true       [us-south].[AZ3-CS3].[02].[03]
   2                 true       [us-south].[AZ2-CS2].[02].[03]
   ```
-  {: screen}
+    {: screen}
 
 2. If any of the crypto units are not selected, run the following command and follow the prompts to add the crypto units to the selected list:
 
   ```
   ibmcloud tke cryptounit-add
   ```
-  {: pre}
+    {: pre}
 
 3. To enable the EdDSA feature, run the following command:
 
   ```
   ibmcloud tke cryptounit-cp-eddsa
   ```
-  {: pre}
+    {: pre}
 
 4. (Optional) To confirm that the EdDSA feature is enabled, run the `ibmcloud tke cryptounit-compare` command again, and make sure that `XCP_CPB_ALG_EC_25519` is marked as `Set` for all crypto units in the output.
 
@@ -210,16 +210,16 @@ Before you perform the steps, make sure you have [provisioned a service instance
   ```
   ibmcloud plugin update tke
   ```
-  {: pre}
+    {: pre}
 
 2. To check whether the Schnorr algorithm is enabled, run the following command:
 
   ```
   ibmcloud tke cryptounit-compare
   ```
-  {: pre}
+    {: pre}
 
-  The following output is an example of what is to be displayed. If the Schnorr algorithm is enabled, the `XCP_CPB_ECDSA_OTHER` column is specified as `Set` in the `CONTROL POINTS` section:
+    The following output is an example of what is to be displayed. If the Schnorr algorithm is enabled, the `XCP_CPB_ECDSA_OTHER` column is specified as `Set` in the `CONTROL POINTS` section:
 
   ```
   CONTROL POINTS
@@ -228,9 +228,9 @@ Before you perform the steps, make sure you have [provisioned a service instance
   1                 Set
   2                 Set
   ```
-  {: screen}
+    {: screen}
 
-  If `Not Set` is displayed, perform the following steps to manually enable the Schnorr algorithm.
+    If `Not Set` is displayed, perform the following steps to manually enable the Schnorr algorithm.
 
 ### Step 2: Enable the Schnorr algorithm manually
 {: #enable-schnorr-manually}
@@ -242,9 +242,9 @@ To enable the Schnorr algorithm for your service instance, follow these steps:
   ```
   ibmcloud tke cryptounits
   ```
-  {: pre}
+    {: pre}
 
-  The following output is an example of what is to be displayed. All selected crypto units are marked `true` in the `SELECTED` column:
+    The following output is an example of what is to be displayed. All selected crypto units are marked `true` in the `SELECTED` column:
 
   ```
   SERVICE INSTANCE: 482cf2ce-a06c-4265-9819-0b4acf54f2ba
@@ -252,21 +252,21 @@ To enable the Schnorr algorithm for your service instance, follow these steps:
   1                 true       [us-south].[AZ3-CS3].[02].[03]
   2                 true       [us-south].[AZ2-CS2].[02].[03]
   ```
-  {: screen}
+    {: screen}
 
 2. If any of the crypto units are not selected, run the following command and follow the prompts to add the crypto units to the selected list:
 
   ```
   ibmcloud tke cryptounit-add
   ```
-  {: pre}
+    {: pre}
 
 3. To enable the Schnorr algorithm, run the following command:
 
   ```
   ibmcloud tke cryptounit-cp-sig-other
   ```
-  {: pre}
+    {: pre}
 
 4. (Optional) To confirm that the Schnorr algorithm is enabled, run the `ibmcloud tke cryptounit-compare` command again, and make sure that `XCP_CPB_ECDSA_OTHER` is marked as `Set` for all crypto units in the output.
 

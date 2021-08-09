@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-08-09"
 
 keywords: failover crypto unit, add failover crypto units, enable failover, enable cross-region recovery
 
@@ -41,28 +41,28 @@ You can specify a total number of failover crypto units that is equal to or less
   ```
   ibmcloud plugin install tke
   ```
-  {: pre}
+    {: pre}
 
-  If you have installed the TKE CLI plug-in, make sure to update your plug-in to the latest version with the following command:
+    If you have installed the TKE CLI plug-in, make sure to update your plug-in to the latest version with the following command:
 
   ```
   ibmcloud plugin update tke
   ```
-  {: pre}
+    {: pre}
 
 2. To enable or add failover crypto units, run the following command:
 
   ```
   ibmcloud tke failover-enable
   ```
-  {: pre}
+    {: pre}
 
-  Before you can run this command, make sure that you select all the crypto units for the target instance by using the `ibmcloud tke cryptounit-add` command.
-  {: note}
+    Before you can run this command, make sure that you select all the crypto units for the target instance by using the `ibmcloud tke cryptounit-add` command.
+    {: note}
 
-  This command walks you through the procedure to enable or add failover crypto units. Follow the prompts to complete the following steps:
+    This command walks you through the procedure to enable or add failover crypto units. Follow the prompts to complete the following steps:
 
-  1. Enter the total number of failover crypto units that you want to assign to your service instance.
+    1. Enter the total number of failover crypto units that you want to assign to your service instance.
 
     For a service instance with 3 operational crypto units, specify 2 or 3 failover crypto units. For a service instance with 2 operational crypto units, specify 2 failover crypto units.
 
@@ -84,7 +84,7 @@ You can specify a total number of failover crypto units that is equal to or less
     If your instance already has a certain number of failover crypto units assigned, you can also use this command and follow the same procedure to add more failover crypto units.
     {: tip}
 
-  2. Type `y` to confirm the action. The failover crypto units are assigned in the target failover region.
+    2. Type `y` to confirm the action. The failover crypto units are assigned in the target failover region.
 
     Failover crypto units are now available in `us-south` and `us-east`. The two regions are the target failover regions of each other. For example, if your instance is located in `us-south`, the failover region for your instance is `us-east`.
 
@@ -118,12 +118,12 @@ You can specify a total number of failover crypto units that is equal to or less
 
 3. Initialize failover crypto units by using the same master key for the operational crypto units initialization and the same initialization approach:
 
-  - [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
-  - [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
-  - [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
+    - [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
+    - [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+    - [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
 
-  You need to initialize failover crypto units before you use them for a regional disaster recovery. It is suggested you initialize the failover crypto units right after you enable them for your service instance.
-  {: note}
+    You need to initialize failover crypto units before you use them for a regional disaster recovery. It is suggested you initialize the failover crypto units right after you enable them for your service instance.
+    {: note}
 
 ## What's next
 {: #enable-add-failover-next}

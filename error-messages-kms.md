@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-08"
+lastupdated: "2021-08-09"
 
 keywords: error message, error code, error, kms error, key management error message, hpcs error messages, hyper protect crypto services error message
 
@@ -36,21 +36,21 @@ The error messages are sorted by alphabetical order, by HTTP status code, and by
 These error messages that are sorted by the alphabetical order. Some error messages are the same but with different HTTP status code. In those cases, the HTTP status code is included at the end of the error message.
 
 1. Collection total does not match number...
-  [details](#error-messages-collection-total-mismatch-err)
+    [details](#error-messages-collection-total-mismatch-err)
 2. Data in body does not match data required...
-  [details](#error-messages-body-query-param-mismatch-err)
+    [details](#error-messages-body-query-param-mismatch-err)
 3. Extracting the subject from the bearer...
-  [details](#error-messages-bearer-sub-extraction-err)
+    [details](#error-messages-bearer-sub-extraction-err)
 4. Invalid body data was passed...
-  [details](#error-messages-bad-body-err)
+    [details](#error-messages-bad-body-err)
 5. Key has already been deleted...
-  [details](#error-messages-key-deleted-err)
+    [details](#error-messages-key-deleted-err)
 6. Key is not in a valid state (409)
-  [details](#error-messages-key-action-invalid-state-err)
+    [details](#error-messages-key-action-invalid-state-err)
 7. Key is not in a valid state (422)
-  [details](#error-messages-key-invalid-state-err)
+    [details](#error-messages-key-invalid-state-err)
 8. Key is protecting one or more cloud...
-  [details](#error-messages-protected-resource-err)
+    [details](#error-messages-protected-resource-err)
 9. Key metadata became corrupted...
    [details](#error-messages-incomplete-metadata-err)
 10. Key restoration has expired
@@ -110,11 +110,11 @@ These error messages that are sorted by the alphabetical order. Some error messa
 These are the error messages that are sorted by the HTTP status code.
 
 <table>
-  <tr>
+    <tr>
     <th>Status code</th>
     <th>Error message</th>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>HTTP 400 - Bad Request</td>
     <td>
       <ul>
@@ -133,12 +133,12 @@ These are the error messages that are sorted by the HTTP status code.
         <li>This root key was created with user-supplied key material: Key material is required to perform a 'rotate' action -[details](#error-messages-key-payload-req-err)</li>
       </ul>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>HTTP 401 - Unauthorized</td>
     <td>Unauthorized: The user does not have access to the specified resource - [details](#error-messages-unauthorized-err)</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>HTTP 403 - Forbidden</td>
     <td>
       <ul>
@@ -148,8 +148,8 @@ These are the error messages that are sorted by the HTTP status code.
         <li>This action is not permitted on this resource: Please contact IBM Hyper Protect Crypto Services or open a service ticket to enable this feature - [details](#error-messages-feature-restricted-err)</li>
       </ul>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>HTTP 409 - Conflict</td>
     <td>
       <ul>
@@ -164,12 +164,12 @@ These are the error messages that are sorted by the HTTP status code.
         <li>This root key has been rotated within the last hour: Only one 'rotate' action per hour is permitted - [details](#error-messages-key-rotation-not-permitted)</li>
       </ul>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>HTTP 410 - Gone</td>
     <td>Key has already been deleted: Please delete references to this key - [details](#error-messages-key-deleted-err)</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>HTTP 422 - Unprocessable Entity</td>
     <td>
       <ul>
@@ -180,11 +180,11 @@ These are the error messages that are sorted by the HTTP status code.
         <li>This request requires that the key version is later than current registration key version - [details](#error-messages-key-version-invalid)</li>
       </ul>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>HTTP 500 - Internal Server Error</td>
     <td>Key metadata became corrupted: Please delete this key - [details](#error-messages-incomplete-metadata-err)</td>
-  </tr>
+    </tr>
 </table>
 
 ### Sorted by reason code
@@ -193,73 +193,73 @@ These are the error messages that are sorted by the HTTP status code.
 These are the error messages sorted by the reason code.
 
 - AUTHORIZATIONS_NOT_MET -
-  [details](#error-messages-authorizations-not-met)
+    [details](#error-messages-authorizations-not-met)
 - BAD_BODY_ERR -
-  [details](#error-messages-bad-body-err)
+    [details](#error-messages-bad-body-err)
 - BEARER_SUB_EXTRACTION_ERR -
-  [details](#error-messages-bearer-sub-extraction-err)
+    [details](#error-messages-bearer-sub-extraction-err)
 - BODY_QUERY_PARAM_MISMATCH_ERR -
-  [details](#error-messages-body-query-param-mismatch-err)
+    [details](#error-messages-body-query-param-mismatch-err)
 - COLLECTION_TOTAL_MISMATCH_ERR -
-  [details](#error-messages-collection-total-mismatch-err)
+    [details](#error-messages-collection-total-mismatch-err)
 - CONFIG_RULE_CONFLICT_ERR
-  [details](#error-config_rule_conflict_err)
+    [details](#error-config_rule_conflict_err)
 - FEATURE_RESTRICTED_ERR -
-  [details](#error-messages-feature-restricted-err)
+    [details](#error-messages-feature-restricted-err)
 - IMPORT_TOKEN_EXPIRED_ERR -
-  [details](#error-messages-import-token-expired-err)
+    [details](#error-messages-import-token-expired-err)
 - INCOMPLETE_METADATA_ERR -
-  [details](#error-messages-incomplete-metadata-err)
+    [details](#error-messages-incomplete-metadata-err)
 - INCORRECT_NONCE_ERR -
-  [details](#error-messages-incorrect-nonce-err)
+    [details](#error-messages-incorrect-nonce-err)
 - INCORRECT_NONCE_IV_ERR -
-  [details](#error-messages-incorrect-nonce-iv-err)
+    [details](#error-messages-incorrect-nonce-iv-err)
 - INVALID_SIG_EXP_ERR
-  [details](#error-invalid_sig_exp_err)
+    [details](#error-invalid_sig_exp_err)
 - KEY_ACTION_INVALID_STATE_ERR -
-  [details](#error-messages-key-action-invalid-state-err)
+    [details](#error-messages-key-action-invalid-state-err)
 - KEY_CREATE_IMPORT_ACCESS_ERR -
-  [details](#error-messages-key-create-import-access-err)
+    [details](#error-messages-key-create-import-access-err)
 - KEY_DELETED_ERR -
-  [details](#error-messages-key-deleted-err)
+    [details](#error-messages-key-deleted-err)
 - KEY_EXPIRED_ERR -
-  [details](#error-messages-key-expired-err)
+    [details](#error-messages-key-expired-err)
 - KEY_IMPT_REQ_ERR -
-  [details](#error-messages-key-impt-req-err)
+    [details](#error-messages-key-impt-req-err)
 - KEY_INVALID_STATE_ERR -
-  [details](#error-messages-key-invalid-state-err)
+    [details](#error-messages-key-invalid-state-err)
 - KEY_PAYLOAD_REQ_ERR -
-  [details](#error-messages-key-payload-req-err-message)
+    [details](#error-messages-key-payload-req-err-message)
 - KEY_RESTORE_EXPIRED -
-  [details](#error-messages-key-restore-expired)
+    [details](#error-messages-key-restore-expired)
 - KEY_ROOT_REQ_ERR -
-  [details](#error-messages-key-root-req-err)
+    [details](#error-messages-key-root-req-err)
 - KEY_ROOT_REQ_REG_ERR -
-  [details](#error-messages-key-root-req-reg-err)
+    [details](#error-messages-key-root-req-reg-err)
 - KEY_ROTATION_NOT_PERMITTED -
-  [details](#error-messages-key-rotation-not-permitted)
+    [details](#error-messages-key-rotation-not-permitted)
 - KEY_VERSION_INVALID -
-  [details](#error-messages-key-version-invalid)
+    [details](#error-messages-key-version-invalid)
 - NO_BODY_ERR -
-  [details](#error-messages-no-body-err)
+    [details](#error-messages-no-body-err)
 - NOT_DUAL_AUTH_ERR -
-  [details](#error-messages-not-dual-auth-err)
+    [details](#error-messages-not-dual-auth-err)
 - NUM_COLLECTION_RESOURCE_ERR -
-  [details](#error-messages-num-collection-resource-err)
+    [details](#error-messages-num-collection-resource-err)
 - PREV_KEY_DEL_ERR -
-  [details](#error-messages-prev-key-del-err)
+    [details](#error-messages-prev-key-del-err)
 - PROTECTED_RESOURCE_ERR -
-  [details](#error-messages-protected-resource-err)
+    [details](#error-messages-protected-resource-err)
 - REQ_TOO_EARLY_ERR -
-  [details](#error-messages-req-too-early-err)
+    [details](#error-messages-req-too-early-err)
 - RESOURCE_OWNER_ERR -
-  [details](#error-messages-resource-owner-err)
+    [details](#error-messages-resource-owner-err)
 - SERVICE_ONLY_ERR -
-  [details](#error-messages-service-only-err)
+    [details](#error-messages-service-only-err)
 - UNAUTHORIZED_ERR -
-  [details](#error-messages-unauthorized-err)
+    [details](#error-messages-unauthorized-err)
 - UNPROCESSABLE_CIPHERTEXT_ERR -
-  [details](#error-messages-unprocessable-ciphertext-err)
+    [details](#error-messages-unprocessable-ciphertext-err)
 
 ## 1 - Collection total does not match number...
 {: #error-messages-collection-total-mismatch-err}
@@ -530,14 +530,14 @@ The client cannot repeat this request without modification.
 Some examples of this error are:
 
 - Create an instance policy
-  - Only one of each policy can be created
-  - No `resources` section was provided
-  - Extraneous fields in the `resources` section (see example 1)
+    - Only one of each policy can be created
+    - No `resources` section was provided
+    - Extraneous fields in the `resources` section (see example 1)
 
 - Create a key
-  - One resource is required (see example 2)
-  - Metadata is empty (see example 3)
-  - Key has zero value or it's empty
+    - One resource is required (see example 2)
+    - Metadata is empty (see example 3)
+    - Key has zero value or it's empty
 
 #### Example 1
 {: #error-messages-bad-body-err-context-example-1}
@@ -818,11 +818,11 @@ is not valid.
 Some actions to consider:
 
 - The key state must be active (state value is 1) to wrap, unwrap, rotate, set
-  key for deletion (dual auth), unset key for deletion (dual auth), or disable
-  the key
+    key for deletion (dual auth), unset key for deletion (dual auth), or disable
+    the key
 
 - This error occurs when you try to enable an expired key (state value is 3) or
-  restore a key that has been destroyed (state value is 5)
+    restore a key that has been destroyed (state value is 5)
 
 #### Example 1
 {: #error-messages-key-action-invalid-state-err-context-example-1}

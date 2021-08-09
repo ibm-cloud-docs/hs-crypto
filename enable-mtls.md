@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-02"
+lastupdated: "2021-08-09"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -43,13 +43,13 @@ Before you can enable the second layer of authentication for GREP11 or PKCS #11 
   ```
   ibmcloud plugin install hpcs-cert-mgr
   ```
-  {: pre}
+    {: pre}
 4. [Log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cli-getting-started#step3-configure-idt-env){: external}. If you have multiple accounts, select the account that your service instance is created with. Make sure that you log in to the correct region and resource group where the service instance is located with the following command:
 
   ```
   ibmcloud target -r <region> -g <resource_group>
   ```
-  {: pre}
+    {: pre}
 
 ## Step 1: Configure the administrator signature key
 {: #enable-authentication-ep11-step1-signature}
@@ -61,23 +61,23 @@ To enable the second layer of authentication, you need to first configure the ad
   ```
   ibmcloud hpcs-cert-mgr adminkey set --crn HPCS_CRN [--private]
   ```
-  {: pre}
+    {: pre}
 
-  Replace the `HPCS_CRN` variable with the Cloud Resource Name (CRN) of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the CRN. The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
+    Replace the `HPCS_CRN` variable with the Cloud Resource Name (CRN) of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the CRN. The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
 
-  After the execution of this command, a public and private key pair is generated and stored on your local workstation. The default file path is `/Users/<username>/hpcs-cert-mgr-cfg/`. Make sure that you store the signature key securely, for example with password protection. The public key is automatically uploaded to your instance certificate manager server.
+    After the execution of this command, a public and private key pair is generated and stored on your local workstation. The default file path is `/Users/<username>/hpcs-cert-mgr-cfg/`. Make sure that you store the signature key securely, for example with password protection. The public key is automatically uploaded to your instance certificate manager server.
 
-  If you want to refresh and update your signature key, you can use the `ibmcloud hpcs-cert-mgr adminkey update` command to perform the action. For more information about the CLI usage, see [{{site.data.keyword.hscrypto}} certificate manager CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#cert-manager-cli-plugin).
-  {: tip}
+    If you want to refresh and update your signature key, you can use the `ibmcloud hpcs-cert-mgr adminkey update` command to perform the action. For more information about the CLI usage, see [{{site.data.keyword.hscrypto}} certificate manager CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#cert-manager-cli-plugin).
+    {: tip}
 
 2. (Optional) Check and confirm whether the public key is uploaded to the server with the following command:
 
   ```
   ibmcloud hpcs-cert-mgr adminkey get --crn HPCS_CRN [--private]
   ```
-  {: pre}
+    {: pre}
 
-  If this command returns the public key value, it means that you upload the public key successfully.
+    If this command returns the public key value, it means that you upload the public key successfully.
 
 ## Step 2: Set up the client certificate for authentication
 {: #enable-authentication-ep11-step2-certificate}
@@ -92,11 +92,11 @@ After you set up the client certificate, you are no longer able to access EP11 k
   ```
   ibmcloud hpcs-cert-mgr cert set --crn HPCS_CRN --admin-priv-key ADMIN_PRIV_KEY --cert-id CERT_ID --cert CERT_FILE [--private]
   ```
-  {: pre}
+    {: pre}
 
-  Replace the variables in the example request according to the following table.
+    Replace the variables in the example request according to the following table.
 
-  <table>
+    <table>
     <tr>
       <th>Variable</th>
       <th>Description</th>
@@ -118,18 +118,18 @@ After you set up the client certificate, you are no longer able to access EP11 k
       <td>**Required.** The client certificate file that you store on your local workstation.</td>
     </tr>
     <caption>Table 1. Describes the variables that are needed to upload the TLS certificate</caption>
-  </table>
+    </table>
 
-  The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
+    The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
 
 2. (Optional) Check and confirm whether the client certificate is uploaded to the server with the following command:
 
   ```
   ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN [--private]
   ```
-  {: pre}
+    {: pre}
 
-  This command lists all the available client certificates that are managed by you on the server. If the list contains the certificate that is previously uploaded, it means the action is successfully completed.
+    This command lists all the available client certificates that are managed by you on the server. If the list contains the certificate that is previously uploaded, it means the action is successfully completed.
 
 ## Step 3: Establish mutual TLS connections for EP11 applications
 {: #enable-authentication-ep11-step3-enable-tls}
@@ -141,9 +141,9 @@ To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the pr
 
 - Configure GREP11 applications
 
-  Depending on the programming language that you use for the GREP11 application, the configuration method varies based on the corresponding gRPC package. The following provides examples for Golang and JavaScript.
+    Depending on the programming language that you use for the GREP11 application, the configuration method varies based on the corresponding gRPC package. The following provides examples for Golang and JavaScript.
 
-  - Golang example code snippet
+    - Golang example code snippet
 
     ```go
     var callOpts = []grpc.DialOption{
@@ -154,7 +154,7 @@ To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the pr
 
     The `tls.Config{}` needs to be properly defined based on the [`Config` type struct](https://pkg.go.dev/crypto/tls#Config){: external}. You need to set at least the `Certificates` field. For the complete Golang example code, see [The sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go/blob/master/examples/server_test.go){: external}.
 
-  - JavaScript example code snippet
+    - JavaScript example code snippet
 
     ```javascript
     credentials.push(grpc.credentials.createSsl());
@@ -165,7 +165,7 @@ To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the pr
 
 - Configure PKCS #11 applications
 
-  PKCS #11 handles mutual TLS in its [configuration file](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file). Update the `tls` field according to the following example:
+    PKCS #11 handles mutual TLS in its [configuration file](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file). Update the `tls` field according to the following example:
 
   ```yaml
   tls:
@@ -175,11 +175,11 @@ To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the pr
     certfile: "<client_certificate>"
     keyfile: "<client_certificate_private_key>"
   ```
-  {: codeblock}
+    {: codeblock}
 
-  Replace the variables in the example based on the following table:
+    Replace the variables in the example based on the following table:
 
-  <table>
+    <table>
     <tr>
       <th>Variable</th>
       <th>Description</th>
@@ -193,7 +193,7 @@ To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the pr
       <td>**Required.** The file path of the client certificate private key that is used to sign the certificate.</td>
     </tr>
     <caption>Table 3. Describes the variables that are needed to configure PKCS #11 applications</caption>
-  </table>
+    </table>
 
 After the configuration, when the applications use the GREP11 or PKCS #11 API to perform cryptographic operations, a mutual TLS connection is established and the client certificate is validated for the additional layer of authentication.
 
@@ -207,11 +207,11 @@ If you no longer need the second layer of authentication, you can disable the fu
   ```
   ibmcloud hpcs-cert-mgr cert delete --crn HPCS_CRN --admin-priv-key ADMIN_PRIV_KEY --cert-id CERT_ID [--private]
   ```
-  {: pre}
+    {: pre}
 
-  Replace the variables in the example request according to the following table.
+    Replace the variables in the example request according to the following table.
 
-  <table>
+    <table>
     <tr>
       <th>Variable</th>
       <th>Description</th>
@@ -229,23 +229,23 @@ If you no longer need the second layer of authentication, you can disable the fu
       <td>**Required.** The string ID of the client certificate that you want to delete. You can first use the `ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN` command to list all the certificates including their IDs.</td>
     </tr>
     <caption>Table 2. Describes the variables that are needed to delete client certificates</caption>
-  </table>
+    </table>
 
-  The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
+    The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
 
-  Repeat the step to remove all the available certificates on the server to disable the TLS connections from EP11 applications.
+    Repeat the step to remove all the available certificates on the server to disable the TLS connections from EP11 applications.
 
-  If multiple certificate administrators are set up for your service instance, make sure to remove all the client certificates under these administrators. After you remove all the certificates for your service instance, the mutual TLS is disabled for all new EP11 connections and the second layer of authentication is inactive.
-  {: note}
+    If multiple certificate administrators are set up for your service instance, make sure to remove all the client certificates under these administrators. After you remove all the certificates for your service instance, the mutual TLS is disabled for all new EP11 connections and the second layer of authentication is inactive.
+    {: note}
 
 2. (Optional) Check and confirm whether all the client certificates are removed with the following command:
 
   ```
   ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN [--private]
   ```
-  {: pre}
+    {: pre}
 
-  If no certificate is returned, it means all the certificates of your service instance are removed.
+    If no certificate is returned, it means all the certificates of your service instance are removed.
 
 3. (Optional) Update the GREP11 or PKCS #11 applications to remove the certificate configurations, so that the applications are no longer use the certificate for future API connections.
 
