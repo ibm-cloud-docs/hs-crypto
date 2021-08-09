@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-02"
+lastupdated: "2021-08-09"
 
 keywords: VMWare encryption, KMIP, Key management and distribution, Data appliance encryption, Netapp, vSphere, vSAN encryption
 
@@ -105,8 +105,8 @@ Let's start with the service authorization process.
 
 4. Select the **Initialize service instance** option and **Hyper Protect** as the key management type.
 
-  * Select the {{site.data.keyword.hscrypto}} instance ID that stores your root key and key encryption key. You can click the **Retrieve** button to get a list of {{site.data.keyword.hscrypto}} instances under your IBM Cloud account.
-  * Select the customer root key to wrap the key encryption key for your data encryption key. You can click the **Retrieve** button to get a list of root keys stored on the selected {{site.data.keyword.hscrypto}} instance.
+    - Select the {{site.data.keyword.hscrypto}} instance ID that stores your root key and key encryption key. You can click the **Retrieve** button to get a list of {{site.data.keyword.hscrypto}} instances under your IBM Cloud account.
+    - Select the customer root key to wrap the key encryption key for your data encryption key. You can click the **Retrieve** button to get a list of root keys stored on the selected {{site.data.keyword.hscrypto}} instance.
 
 5. Click **Configure** to complete the configuration. Optionally, you can add client certificates if you have an existing VMWare or vCenter environment that you like to reuse.
 
@@ -121,9 +121,9 @@ Let's start with the service authorization process.
 
 1. In your vSphere client console, complete the following steps:
 
-  a. Add the KMS to your vCenter Server by using the KMIP server address and port information from the previous step during the configuration.
+    a. Add the KMS to your vCenter Server by using the KMIP server address and port information from the previous step during the configuration.
 
-  b. Configure the appropriate trust method between the KMS instance and your vCenter Server, and download the generated certificate.
+    b. Configure the appropriate trust method between the KMS instance and your vCenter Server, and download the generated certificate.
 
 2. On the **KMIP for VMware instance** page, add the certificate from the vCenter Server.
 

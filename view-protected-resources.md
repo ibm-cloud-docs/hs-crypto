@@ -54,7 +54,7 @@ You can browse the registrations that are available between your {{site.data.key
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
 5. To view the protected resources of a specific root key, click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key, and select **View associated resources** to browse all resources protected by the key.
 
-  <table>
+    <table>
     <tr>
       <th>Column</th>
       <th>Description</th>
@@ -72,12 +72,12 @@ You can browse the registrations that are available between your {{site.data.key
       <td>Whether the cloud resource has a retention policy. If the value is `True`, a retention policy is enabled for the cloud resource, and the key that is associated with the cloud resource can't be deleted. If the value is `False`, the retention policy isn't enabled.</td>
     </tr>
     <caption>Table 2. Describes the <strong>View associated resources</strong> table</caption>
-  </table>
+    </table>
 
 6. To view details of each resource, expand the resource details by clicking the caret (^) icon under the `Resource name` column.
   The following table describes the registration details.
 
-  <table>
+    <table>
     <tr>
       <th>Field</th>
       <th>Description</th>
@@ -107,7 +107,7 @@ You can browse the registrations that are available between your {{site.data.key
       <td>Represents the cloud resource that is associated with the key, including the Cloud Resource Name (CRN), version, cname, ctype, etc. </td>
     </tr>
     <caption>Table 3. Describes the properties that are associated with a resource</caption>
-  </table>
+    </table>
 
 You can use the search field to search for any resources associated with the root key either with the resource name or the key version ID.
 {: tip}
@@ -120,7 +120,7 @@ You can use the search field to search for any resources associated with the roo
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS associated resources** page, use the **Key management service associated resources** table to browse the registrations in your service.
 
-  <table>
+    <table>
     <tr>
       <th>Column</th>
       <th>Description</th>
@@ -146,13 +146,13 @@ You can use the search field to search for any resources associated with the roo
       <td>Indicates whether the cloud resource can be erased. If the value is `Enabled`, the cloud resource can't be erased, and the key that is associated with the cloud resource can't be deleted. If the value is `Disabled`, the cloud resource can be erased. You can delete the key that is associated with the cloud resource if needed.</td>
     </tr>
     <caption>Table 4. Describes the <strong>Associated resources</strong> table</caption>
-  </table>
+    </table>
 
 5. Click the caret (^) icon under the `Resource name` column to view a list of details for a specific registration.
 
   The following table describes the registration details.
 
-  <table>
+    <table>
     <tr>
       <th>Field</th>
       <th>Description</th>
@@ -182,7 +182,7 @@ You can use the search field to search for any resources associated with the roo
       <td>Represents the cloud resource that is associated with the key, including the Cloud Resource Name (CRN), version, cname, ctype, etc.</td>
     </tr>
     <caption>Table 5. Describes the properties that are associated with a resource</caption>
-  </table>
+    </table>
 
 Besides searching for a resource, you can also for resources by Resource Name, key ID, and retention policy. To do so, click the `Filter` button, select the filter options from the list, and click **Apply**.
 {: tip}
@@ -406,17 +406,19 @@ When an integrated service calls the {{site.data.keyword.hscrypto}} key manageme
 
 - To search for a CRN segment that's prefixed by `<string>`, use a colon followed by `<string>*` on the last segment of the CRN query.
 
-  ```
-  crn:v1:bluemix:public:cloud-object-storage:global:a/e1bb63d6a20dc57c87501ac4c4c99dcb:*:bucket:prod*
-  ```
-  {: screen}
-  This query returns all Cloud Object Storage bucket registrations within account _e1bb63d6a20dc57c87501ac4c4c99dcb_ that are prefixed by `prod`.
+    ```
+    crn:v1:bluemix:public:cloud-object-storage:global:a/e1bb63d6a20dc57c87501ac4c4c99dcb:*:bucket:prod*
+    ```
+    {: screen}
 
-  ```
-  crn:v1:bluemix:public:databases-for-postgresql:us-south:a/e1bb63d6a20dc57c87501ac4c4c99dcb:76b98bfd-f730-47b8-b163-515187e070a7:*:<string>*
-  ```
-  {: screen}
-  This query returns all Cloud Databases registrations for deployment ID _76b98bfd-f730-47b8-b163-515187e070a7_ that are prefixed by `<string>`.
+    This query returns all Cloud Object Storage bucket registrations within account _e1bb63d6a20dc57c87501ac4c4c99dcb_ that are prefixed by `prod`.
+
+    ```
+    crn:v1:bluemix:public:databases-for-postgresql:us-south:a/e1bb63d6a20dc57c87501ac4c4c99dcb:76b98bfd-f730-47b8-b163-515187e070a7:*:<string>*
+    ```
+    {: screen}
+
+    This query returns all Cloud Databases registrations for deployment ID _76b98bfd-f730-47b8-b163-515187e070a7_ that are prefixed by `<string>`.
 
 The following tables provides a list of CRN query examples before and after URL encoding. To view the URL encoded values, click the **URL encoded** tab.
 

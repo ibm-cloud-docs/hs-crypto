@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-08-09"
 
 keywords: data encryption key, key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, unwrap api
 
@@ -145,14 +145,14 @@ When you unwrap a data encryption key, the key material is returned in base64 en
 1. Download and install [OpenSSL](https://github.com/openssl/openssl#for-production-use){: external}.
 2. Base64 encode your key material string by running the following command:
 
-  ```
-  $ openssl base64 -d -in <infile> -out <outfile>
-  ```
-  {: codeblock}
+    ```
+    $ openssl base64 -d -in <infile> -out <outfile>
+    ```
+    {: codeblock}
 
-  Replace the variables in the example request according to the following table.
+    Replace the variables in the example request according to the following table.
 
-  <table>
+    <table>
     <tr>
       <th>Variable</th>
       <th>Description</th>
@@ -182,6 +182,6 @@ When you unwrap a data encryption key, the key material is returned in base64 en
     <caption>
       Table 2. Describes the variables that are needed to decode your key material.
     </caption>
-  </table>
+    </table>
 
-  If you want to output the decoded material in the command line directly rather than a file, run command `openssl enc -base64 -d <<< '<key_material_string>'`, where key_material_string is the returned plaintext from your unwrap request.
+    If you want to output the decoded material in the command line directly rather than a file, run command `openssl enc -base64 -d <<< '<key_material_string>'`, where key_material_string is the returned plaintext from your unwrap request.

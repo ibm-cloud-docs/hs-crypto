@@ -64,8 +64,8 @@ KMS CRK rewrap successful, waiting on cryptounit-mk-setimm.
 
 * If the message is present, the reencryption of key storage is complete. The only remaining step in the command is to promote the values in the new master key registers to the current master key registers.
 
-  Check the state of the new and current master key registers. If all the new master key registers are in the `Full Committed` state with the same verification pattern and all the current master key registers are in the `Valid` state with a different same verification pattern, click the **Set immediate** button to finish the master key rotation.
+    Check the state of the new and current master key registers. If all the new master key registers are in the `Full Committed` state with the same verification pattern and all the current master key registers are in the `Valid` state with a different same verification pattern, click the **Set immediate** button to finish the master key rotation.
 
-  If for some crypto units the new master key value is moved to the current master key register, clear those crypto units by clicking the **Remove crypto units** button on the Crypto units tab. Then, click the **Set immediate** button on the **Master keys** tab to finish the master key rotation.
+    If for some crypto units the new master key value is moved to the current master key register, clear those crypto units by clicking the **Remove crypto units** button on the Crypto units tab. Then, click the **Set immediate** button on the **Master keys** tab to finish the master key rotation.
 
-  In both cases, it is safe to continue past the warning when you click the **Set immediate** button. Key storage is prepared to accept the new master key value.
+    In both cases, it is safe to continue past the warning when you click the **Set immediate** button. Key storage is prepared to accept the new master key value.

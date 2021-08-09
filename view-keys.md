@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-08-09"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -278,69 +278,66 @@ Replace the `limit` and `offset` variables in your request according to the
 following table.
 
 <table>
-  <tr>
-    <th>Variable</th>
-    <th>Description</th>
-  </tr>
-
-  <tr>
-    <td>
-      <varname>offset</varname>
-    </td>
-    <td>
-      <p>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>
+        <varname>offset</varname>
+      </td>
+      <td>
+        <p>
         The number of keys to skip.
-      </p>
-      <p>
+        </p>
+        <p>
         For example, if you have 50 keys in your instance, and you want to list keys 26 - 50, use <code>../keys?offset=25</code>. You can also pair <code>offset</code> with <code>limit</code> to page through your available resources.
-      </p>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <varname>limit</varname>
-    </td>
-    <td>
-      <p>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <varname>limit</varname>
+      </td>
+      <td>
+        <p>
         The number of keys to retrieve.
-      </p>
-      <p>
+        </p>
+        <p>
         For example, if you have 100 keys in your instance, and you want to list only 10 keys, use <code>../keys?limit=10</code>. The maximum value for <code>limit</code> is 5000.
-      </p>
-    </td>
-  </tr>
-
-  <caption>
+        </p>
+      </td>
+    </tr>
+    <caption>
     Table 2. Describes the <code>limit</code> and <code>offset</code> variables
-  </caption>
+    </caption>
 </table>
 
 
 For usage notes, check out the following examples for setting your `limit` and `offset` query parameters.
 
 <table>
-  <tr>
+    <tr>
     <th>URL</th>
     <th>Description</th>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td><code>.../keys</code></td>
     <td>Lists all of your available resources, up to the first 2000 keys.</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td><code>.../keys?limit=10</code></td>
     <td>Lists the first 10 keys.</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td><code>.../keys?offset=25&limit=50</code></td>
     <td>Lists keys 26 - 75.</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td><code>.../keys?offset=3000&limit=50</code></td>
     <td>Lists keys 3001 - 3050.</td>
-  </tr>
-  <caption>Table 3. Provides usage notes for the limit and offset query parameters</caption>
+    </tr>
+    <caption>Table 3. Provides usage notes for the limit and offset query parameters</caption>
 </table>
 
 Offset is the location of a particular key in a data set. The `offset` value is zero-based, which means that the 10th encryption key in a data set is at offset 9.
@@ -370,12 +367,11 @@ curl -X GET \
 Replace the `state` variable in your request according to the following table.
 
 <table>
-  <tr>
+    <tr>
     <th>Variable</th>
     <th>Description</th>
-  </tr>
-
-  <tr>
+    </tr>
+    <tr>
     <td>
       <varname>state</varname>
     </td>
@@ -392,50 +388,45 @@ Replace the `state` variable in your request according to the following table.
         page through your available resources.
       </p>
     </td>
-  </tr>
-
-  <caption>
+    </tr>
+    <caption>
     Table 4. Describes the <code>state</code> variable.
-  </caption>
+    </caption>
 </table>
 
 For usage notes, check out the following examples for setting your `state` query
 parameter.
 
 <table>
-  <tr>
+    <tr>
     <th>URL</th>
     <th>Description</th>
-  </tr>
-
-  <tr>
+    </tr>
+    <tr>
     <td>
       <code>.../keys</code>
     </td>
     <td>
       Lists all of your available resources, up to the first 200 keys.
     </td>
-  </tr>
-
-  <tr>
+    </tr>
+    <tr>
     <td>
       <code>.../keys?state=5</code>
     </td>
     <td>
       Lists keys in the deleted state.
     </td>
-  </tr>
-
-  <tr>
+    </tr>
+    <tr>
     <td>
       <code>.../keys?state=2,3</code>
     </td>
     <td>
       Lists keys in the suspended and deactivated state.
     </td>
-  </tr>
-
-  <caption>
+    </tr>
+    <caption>
     Table 5. Provides usage notes for the stage query parameter.
-  </caption>
+    </caption>
 </table>

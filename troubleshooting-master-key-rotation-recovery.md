@@ -57,17 +57,17 @@ If an error occurs when you run the `ibmcloud tke auto-mk-rotate` command to rot
 
 - The following message indicates that all new master key registers have been set with a randomly generated new master key value:
 
-  ```
-  Delaying 30 seconds to allow server to discover new master key values
-  ```
-  {: codeblock}
+    ```
+    Delaying 30 seconds to allow server to discover new master key values
+    ```
+    {: codeblock}
 
 - The following message indicates the reencryption of key storage is complete:
 
-  ```
-  KMS CRK rewrap successful, waiting on cryptounit-mk-setimm
-  ```
-  {: codeblock}
+    ```
+    KMS CRK rewrap successful, waiting on cryptounit-mk-setimm
+    ```
+    {: codeblock}
 
 Depending on the presence of the described messages, perform one of the following tasks:
 
@@ -75,11 +75,11 @@ Depending on the presence of the described messages, perform one of the followin
 
 * If the first message is present but the second message is not, reencryption of key storage has started. To recover, run the `ibmcloud tke cryptounit-mk-rotate` command. This command restarts the process with a request to reencrypt key storage and does not replace the master key value in the new master key registers.
 
-  Do not rerun the `ibmcloud tke auto-mk-rotate` command. If you do, the contents of key storage becomes unusable.
-  {: important}
+    Do not rerun the `ibmcloud tke auto-mk-rotate` command. If you do, the contents of key storage becomes unusable.
+    {: important}
 
 * If both messages are present, the reencryption of key storage is complete. The only remaining step is to promote the values in the new master key registers to the current master key registers. Run the `ibmcloud tke cryptounit-mks` command.  If all the new master key registers are in the `Valid` state with the same verification pattern and all the current master key registers are in the `Valid` state with a different same verification pattern, run the `ibmcloud tke cryptounit-mk-setimm` command to finish the master key rotation.
 
-  If for some crypto units the new master key value has already been moved to the current master key register, unselect those crypto units using the `ibmcloud tke cryptounit-rm` command. Then run the `ibmcloud tke cryptounit-mk-setimm` command to finish the master key rotation.
+    If for some crypto units the new master key value has already been moved to the current master key register, unselect those crypto units using the `ibmcloud tke cryptounit-rm` command. Then run the `ibmcloud tke cryptounit-mk-setimm` command to finish the master key rotation.
 
-  In both cases, it is safe to continue past the warning on the `ibmcloud tke cryptounit-mk-setimm` command. Key storage has been prepared to accept the new master key value.
+    In both cases, it is safe to continue past the warning on the `ibmcloud tke cryptounit-mk-setimm` command. Key storage has been prepared to accept the new master key value.

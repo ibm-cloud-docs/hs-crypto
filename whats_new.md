@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-02"
+lastupdated: "2021-08-09"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -199,23 +199,23 @@ Terraform is an open source software to configure and automate cloud resource pr
 The {{site.data.keyword.hscrypto}} key management API is updated with the following changes:
 
 - Updated: The API methods for the following key actions are now transferred to individual request paths. The generic path format (except the action of restoring a key) is `/api/v2/keys/<key_ID>/actions/<action>` where `key_ID` is the UUID of the key and `action` is the action name that you want to execute.
-  - [Wrap a key](/apidocs/hs-crypto#wrapkey).
-  - [Unwrap a key](/apidocs/hs-crypto#unwrapkey).
-  - [Rewrap a key](/apidocs/hs-crypto#rewrapkey).
-  - [Rotate a key](/apidocs/hs-crypto#rotatekey).
-  - [Authorize deletion for a key with a dual authorization policy](/apidocs/hs-crypto#setkeyfordeletion).
-  - [Remove an authorization for a key with a dual authorization policy](/apidocs/hs-crypto#unsetkeyfordeletion).
-  - [Enable operations for a key](/apidocs/hs-crypto#enablekey).
-  - [Disable operations for a key](/apidocs/hs-crypto#disablekey).
-  - [Restore a key](/apidocs/hs-crypto#restorekey).
+    - [Wrap a key](/apidocs/hs-crypto#wrapkey).
+    - [Unwrap a key](/apidocs/hs-crypto#unwrapkey).
+    - [Rewrap a key](/apidocs/hs-crypto#rewrapkey).
+    - [Rotate a key](/apidocs/hs-crypto#rotatekey).
+    - [Authorize deletion for a key with a dual authorization policy](/apidocs/hs-crypto#setkeyfordeletion).
+    - [Remove an authorization for a key with a dual authorization policy](/apidocs/hs-crypto#unsetkeyfordeletion).
+    - [Enable operations for a key](/apidocs/hs-crypto#enablekey).
+    - [Disable operations for a key](/apidocs/hs-crypto#disablekey).
+    - [Restore a key](/apidocs/hs-crypto#restorekey).
 
 - Updated: You can now use the following two methods to manage the allowed network policy and the key create and import access policy:
-  - [Set instance policies](/apidocs/hs-crypto#putinstancepolicy).
-  - [List instance policies](/apidocs/hs-crypto#getinstancepolicy).
+    - [Set instance policies](/apidocs/hs-crypto#putinstancepolicy).
+    - [List instance policies](/apidocs/hs-crypto#getinstancepolicy).
 
 - Deprecated: [Invoke an action on a key](/apidocs/hs-crypto#actiononkey).
 
-  This method is originally used for performing actions on a key, such as wrap, unwrap, and rotate. It is now replaced with individual request path for each action.
+    This method is originally used for performing actions on a key, such as wrap, unwrap, and rotate. It is now replaced with individual request path for each action.
 
 For more information about the API updates, see [{{site.data.keyword.hscrypto}} key management API reference](/apidocs/hs-crypto){: external}.
 

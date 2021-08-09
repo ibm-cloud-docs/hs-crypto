@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-08-09"
 
 keywords: encrypt IBM Db2 databases, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -74,14 +74,14 @@ To complete this solution, let's walk through the following steps:
 
 1. For this tutorial, you need to [initialize a {{site.data.keyword.hscrypto}} instance first](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
-  Note down the ID of your {{site.data.keyword.hscrypto}} instance and the EP11 endpoint address. You need this information for the subsequent steps.
+    Note down the ID of your {{site.data.keyword.hscrypto}} instance and the EP11 endpoint address. You need this information for the subsequent steps.
 
 2. Generate an API key for accessing your {{site.data.keyword.hscrypto}} instance. Run the following command to create an API key for your {{site.data.keyword.cloud_notm}} account:
 
-```
-ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
-```
-{: codeblock}
+    ```
+    ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
+    ```
+    {: codeblock}
 
 3. Save the value of the API key for subsequent steps.
 
@@ -94,17 +94,17 @@ ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscry
 
 1. Use the following command to run the Db2 Community Edition container:
 
-  ```
-  docker run -itd --name mydb --privileged=true -p 50000:50000 -e LICENSE=accept -e DB2INST1_PASSWORD=password -e DBNAME=testdb ibmcom/db2
-  ```
-  {: codeblock}
+    ```
+    docker run -itd --name mydb --privileged=true -p 50000:50000 -e LICENSE=accept -e DB2INST1_PASSWORD=password -e DBNAME=testdb ibmcom/db2
+    ```
+    {: codeblock}
 
 2. Run the following command from a command line on your host system:
 
-  ```
-  docker exec -it --user root --workdir / mydb bash
-  ```
-  {: codeblock}
+    ```
+    docker exec -it --user root --workdir / mydb bash
+    ```
+    {: codeblock}
 
 This shell is to be used to run the commands as `root` for the subsequent steps.
 
@@ -206,60 +206,60 @@ logging:
 
 3. Run the following commands as `root` to install the {{site.data.keyword.hscrypto}} PKCS #11 library in your Db2 setup.
 
-  ```linux
-  mkdir /etc/ep11client
-  chmod a+rx /etc/ep11client/
-  cp grep11client.yaml /etc/ep11client/grep11client.yaml
-  chmod a+r /etc/ep11client/grep11client.yaml
+    ```linux
+    mkdir /etc/ep11client
+    chmod a+rx /etc/ep11client/
+    cp grep11client.yaml /etc/ep11client/grep11client.yaml
+    chmod a+r /etc/ep11client/grep11client.yaml
 
-  mkdir -p /pkcs11
-  cp pkcs11-grep11.so /pkcs11/pkcs11-grep11.so
-  chmod -R a+rwx /pkcs11
+    mkdir -p /pkcs11
+    cp pkcs11-grep11.so /pkcs11/pkcs11-grep11.so
+    chmod -R a+rwx /pkcs11
 
-  touch /tmp/grep11client.log
-  chmod a+rw /tmp/grep11client.log
-  ```
-  {: codeblock}
+    touch /tmp/grep11client.log
+    chmod a+rw /tmp/grep11client.log
+    ```
+    {: codeblock}
 
 ### 4. Initialize the {{site.data.keyword.hscrypto}} PKCS #11 library
 {: #tutorial-db2-initialize-library}
 
 1. Install the command-line utility OpenSC (pkcs11-tool) with the following command:
 
-  ```
-  yum install opensc
-  ```
-  {: codeblock}
+    ```
+    yum install opensc
+    ```
+    {: codeblock}
 
 2. Run the following command as `root` to initialize the library setup.
 
-  ```
-  pkcs11-tool --module=/pkcs11/pkcs11-grep11.so -I
-  ```
-  {: codeblock}
+    ```
+    pkcs11-tool --module=/pkcs11/pkcs11-grep11.so -I
+    ```
+    {: codeblock}
 
-  This command prints information about the manufacturer and the library, for example:
+    This command prints information about the manufacturer and the library, for example:
 
-  ```
-  Cryptoki version 2.40
-  Library          GREP11 PKCS11 client ...
-  ```
-  {: screen}
+    ```
+    Cryptoki version 2.40
+    Library          GREP11 PKCS11 client ...
+    ```
+    {: screen}
 
 3. To initialize a token, run the following commands and replace `<your_api_key>` by the API key that you created.
 
-  ```
-  pkcs11-tool  --module /pkcs11/pkcs11-grep11.so --init-token --label dbtoken --so-pin <your api key>
-  ```
-  {: codeblock}
+    ```
+    pkcs11-tool  --module /pkcs11/pkcs11-grep11.so --init-token --label dbtoken --so-pin <your api key>
+    ```
+    {: codeblock}
 
-  This command prints the following status message, for example:
+    This command prints the following status message, for example:
 
-  ```
-  Using slot 0 with a present token (0x0)
-  Token successfully initialized
-  ```
-  {: screen}
+    ```
+    Using slot 0 with a present token (0x0)
+    Token successfully initialized
+    ```
+    {: screen}
 
 ## Set up Db2 native encryption
 {: #tutorial-db2-encrypt}
@@ -269,92 +269,92 @@ Now, let's set up Db2 native encryption. To do so, make sure that you have all d
 
 1. Create the file `/pkcs11/keystore.conf` with the following content:
 
-  ```
-  VERSION=1
-  PRODUCT_NAME=Other
-  ALLOW_KEY_INSERT_WITHOUT_KEYSTORE_BACKUP=true
-  LIBRARY=/pkcs11/pkcs11-grep11.so
-  SLOT_ID=0
-  NEW_OBJECT_TYPE=PRIVATE
-  KEYSTORE_STASH=/pkcs11/pkcs11_pw.sth
-  ```
-  {: codeblock}
+    ```
+    VERSION=1
+    PRODUCT_NAME=Other
+    ALLOW_KEY_INSERT_WITHOUT_KEYSTORE_BACKUP=true
+    LIBRARY=/pkcs11/pkcs11-grep11.so
+    SLOT_ID=0
+    NEW_OBJECT_TYPE=PRIVATE
+    KEYSTORE_STASH=/pkcs11/pkcs11_pw.sth
+    ```
+    {: codeblock}
 
 2. Run the following commands as `root` to update ownership and permissions of file `/pkcs11/keystore.conf`:
 
-  ```
-  chown -R db2inst1:db2iadm1 /pkcs11/keystore.conf
-  chmod ug+rw /pkcs11/keystore.conf
-  ```
-  {: codeblock}
+    ```
+    chown -R db2inst1:db2iadm1 /pkcs11/keystore.conf
+    chmod ug+rw /pkcs11/keystore.conf
+    ```
+    {: codeblock}
 
 3. To create a password stash file, run the following commands and replace <your_api_key> by the API key that you created.
 
-  ```
-  su - db2inst1
-  db2credman -stash -password <your api key> -to /pkcs11/pkcs11_pw.sth
-  ```
-  {: codeblock}
+    ```
+    su - db2inst1
+    db2credman -stash -password <your api key> -to /pkcs11/pkcs11_pw.sth
+    ```
+    {: codeblock}
 
 4. To update the Db2 configuration, run the following command as user `db2inst1`:
 
-  ```
-  db2 update dbm cfg using keystore_location /pkcs11/keystore.conf keystore_type pkcs11
-  ```
-  {: codeblock}
+    ```
+    db2 update dbm cfg using keystore_location /pkcs11/keystore.conf  keystore_type pkcs11
+    ```
+    {: codeblock}
 
 5. To set the environment variable `DB2_DEK_MAC_TYPE`, run the following commands as user `db2inst1` and restart DB2:
 
-  ```
-  db2 terminate
-  db2stop
-  export DB2_DEK_MAC_TYPE=HMAC
-  db2start
-  ```
-  {: codeblock}
+    ```
+    db2 terminate
+    db2stop
+    export DB2_DEK_MAC_TYPE=HMAC
+    db2start
+    ```
+    {: codeblock}
 
-  You need to specify the environment variable `DB2_DEK_MAC_TYPE=HMAC` before you start Db2. If you use Db2 on Windows, you need to set the Db2 profile variable by using the following command:
-  {: note}
+    You need to specify the environment variable `DB2_DEK_MAC_TYPE=HMAC` before you start Db2. If you use Db2 on Windows, you need to set the Db2 profile variable by using the following command:
+    {: note}
 
-  ```
-  db2set -g DB2_DEK_MAC_TYPE=HMAC
-  ```
-  {: codeblock}
+    ```
+    db2set -g DB2_DEK_MAC_TYPE=HMAC
+    ```
+    {: codeblock}
 
 6. To create an encrypted database, run the following commands:
 
-  ```
-  db2 create db cryptdb1 encrypt
-  ```
-  {: codeblock}
+    ```
+    db2 create db cryptdb1 encrypt
+    ```
+    {: codeblock}
 
-  This command prints the following information:
+    This command prints the following information:
 
-  ```
-  DB20000I  The CREATE DATABASE command completed successfully.
-  ```
-  {: screen}
+    ```
+    DB20000I  The CREATE DATABASE command completed successfully.
+    ```
+    {: screen}
 
 7. To test the encrypted database, run the following commands:
 
-  ```
-  db2 connect to cryptdb1
-  db2 "create table test (id int not null, data varchar(100))"
-  db2 "insert into test values (1, 'This is a secret text')"
-  db2 "select * from test"
-  ```
-  {: codeblock}
+    ```
+    db2 connect to cryptdb1
+    db2 "create table test (id int not null, data varchar(100))"
+    db2 "insert into test values (1, 'This is a secret text')"
+    db2 "select * from test"
+    ```
+    {: codeblock}
 
-  This command prints the following information:
+    This command prints the following information:
 
-  ```
-  ID          DATA
-  ----------- ----------------------------------------------------------------------------------------------------
+    ```
+    ID          DATA
+    ----------- ----------------------------------------------------------------------------------------------------
           1 This is a secret text
 
     1 record(s) selected.
-  ```
-  {: screen}
+    ```
+    {: screen}
 
 ## Next steps
 {: #tutorial-db2-summary}

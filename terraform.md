@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-03"
+lastupdated: "2021-08-09"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -38,62 +38,63 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
 
 1. Install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform by following the [Terraform on {{site.data.keyword.cloud_notm}} getting started tutorial](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
 
-  The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to provision, update, or delete {{site.data.keyword.hscrypto}} service instances and resources. The preferred Terraform versions are 0.13.x, 0.14.x, and 0.15.x. In the `versions.tf` file, you need to specify the `version` parameter to `1.29.0`.
+    The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to provision, update, or delete {{site.data.keyword.hscrypto}} service instances and resources. The preferred Terraform versions are 0.13.x, 0.14.x, and 0.15.x. In the `versions.tf` file, you need to specify the `version` parameter to `1.29.0`.
 
 2. Set up crypto unit administrator signature keys. You can select one of the following ways to create administrator signature keys:
 
-  - Using the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) CLI plug-in
+    - Using the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) CLI plug-in
 
-    After you install and configure the TKE CLI plug-in by following [these instructions](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite), you can use the command `ibmcloud tke sigkey-add` to create administrator signature keys. The signature keys are stored in files that are protected by passwords on your local workstation. The file path is specified by the environment variable `CLOUDTKEFILES`.
-  - Using a third-party signing service
+      After you install and configure the TKE CLI plug-in by following [these instructions](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite), you can use the command `ibmcloud tke sigkey-add` to create administrator signature keys. The signature keys are stored in files that are protected by passwords on your local workstation. The file path is specified by the environment variable `CLOUDTKEFILES`.
 
-    A third-party signing service can be used to create, store, and access the signature keys used by both the TKE CLI plug-in and Terraform. To [enable the signing service in the TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key), you need to set the `TKE_SIGNSERV_URL` environment variable on the local workstation to the URL and port number where the signing service is running. To enable the signing service in Terraform, you need to set the `signature_server_url` parameter in the resource block to the same value.
+    - Using a third-party signing service
+
+      A third-party signing service can be used to create, store, and access the signature keys used by both the TKE CLI plug-in and Terraform. To [enable the signing service in the TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key), you need to set the `TKE_SIGNSERV_URL` environment variable on the local workstation to the URL and port number where the signing service is running. To enable the signing service in Terraform, you need to set the `signature_server_url` parameter in the resource block to the same value.
 
 3. Create a Terraform configuration file `main.tf` in the same folder as `versions.tf`. In this file, you add the configurations to perform the corresponding actions.
 
-  The following template is an example configuration file to provision a {{site.data.keyword.hscrypto}} instance with 2 operational crypto units in the `us-south` region. This instance is charged according to the standard pricing plan and is initialized with 2 administrators. The master key is automatically generated in recovery crypto units that are assigned to the instance. The signature keys are created by using the TKE CLI plug-in and stored in local protected files.
+    The following template is an example configuration file to provision a {{site.data.keyword.hscrypto}} instance with 2 operational crypto units in the `us-south` region. This instance is charged according to the standard pricing plan and is initialized with 2 administrators. The master key is automatically generated in recovery crypto units that are assigned to the instance. The signature keys are created by using the TKE CLI plug-in and stored in local protected files.
 
-  As recovery crypto units are currently available only in the `us-south` and `us-east` regions, using Terraform to initialize {{site.data.keyword.hscrypto}} instances is supported only in these two regions. For more information about manual initialization, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
-  {: note}
+    As recovery crypto units are currently available only in the `us-south` and `us-east` regions, using Terraform to initialize {{site.data.keyword.hscrypto}} instances is supported only in these two regions. For more information about manual initialization, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
+    {: note}
 
-  ```terraform
-  resource ibm_hpcs hpcs {
-     location             = "us-south"
-     name                 = "test-hpcs"
-     plan                 = "standard"
-     units                = 2
-     signature_threshold  = 1
-     revocation_threshold = 1
-     admins {
-       name  = "admin1"
-       key   = "/cloudTKE/1.sigkey"
-       token = "sensitive1234"
-     }
-     admins {
-       name  = "admin2"
-       key   = "/cloudTKE/2.sigkey"
-       token = "sensitive1234"
-     }
-  }
+    ```terraform
+    resource ibm_hpcs hpcs {
+       location             = "us-south"
+       name                 = "test-hpcs"
+       plan                 = "standard"
+       units                = 2
+       signature_threshold  = 1
+       revocation_threshold = 1
+       admins {
+         name  = "admin1"
+         key   = "/cloudTKE/1.sigkey"
+         token = "sensitive1234"
+       }
+       admins {
+         name  = "admin2"
+         key   = "/cloudTKE/2.sigkey"
+         token = "sensitive1234"
+       }
+    }
 
-  resource "ibm_iam_user_policy" "policy" {
-     ibm_id = "user@ibm.com"
-     roles  = ["Manager"]
+    resource "ibm_iam_user_policy" "policy" {
+       ibm_id = "user@ibm.com"
+       roles  = ["Manager"]
 
-     resources {
-       service              = "test-hpcs"
-       resource_instance_id = element(split(":", ibm_resource_instance.hpcs.id), 7)
-     }
-  }
-  ```
-  {: codeblock}
+       resources {
+         service              = "test-hpcs"
+         resource_instance_id = element(split(":", ibm_resource_instance.hpcs.id), 7)
+       }
+    }
+    ```
+    {: codeblock}
 
-  In production environments, it is suggested to provide the passwords for the signature key files or the tokens for the signing service during the process of applying Terraform instead of writing it in plaintext in the configuration file. In that case, you are prompted to enter the authentication passwords or tokens when you run Terraform commands. After the instance initialization, the values that you enter for the passwords or tokens are stored in a `.tfstate` file. For more information about securing sensitive data in Terraform, see [Sensitive Data in State](https://www.terraform.io/docs/language/state/sensitive-data.html){: external}.
-  {: important}
+    In production environments, it is suggested to provide the passwords for the signature key files or the tokens for the signing service during the process of applying Terraform instead of writing it in plaintext in the configuration file. In that case, you are prompted to enter the authentication passwords or tokens when you run Terraform commands. After the instance initialization, the values that you enter for the passwords or tokens are stored in a `.tfstate` file. For more information about securing sensitive data in Terraform, see [Sensitive Data in State](https://www.terraform.io/docs/language/state/sensitive-data.html){: external}.
+    {: important}
 
-  The following table lists supported parameters when you create and initialize a service instance with Terraform:
+    The following table lists supported parameters when you create and initialize a service instance with Terraform:
 
-  <table>
+    <table>
     <tr>
       <th>Parameter</th>
       <th>Description</th>
@@ -166,31 +167,31 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
       <td>**Optional**. The URL and port number where the signing service is running. If you are using a third-party signing service to provide administrator signature keys, you need to specify this parameter.</td>
     </tr>
     <caption>Table 1. Supported parameters for provisioning a service instance with Terraform</caption>
-  </table>
+    </table>
 
-  If you manage multiple service instances in the `main.tf` file, make sure to set the same `signature_server_url` parameter for each instance. Otherwise, you will not be able to perform the actions successfully.
-  {: important}
+    If you manage multiple service instances in the `main.tf` file, make sure to set the same `signature_server_url` parameter for each instance. Otherwise, you will not be able to perform the actions successfully.
+    {: important}
 
 4. Initialize the Terraform CLI with the following command.
 
-  ```
-  terraform init
-  ```
-  {: pre}
+    ```
+    terraform init
+    ```
+    {: pre}
 
 5. Create a Terraform execution plan with the following command. The Terraform execution plan summarizes all the actions that need to be run to create the {{site.data.keyword.hscrypto}} instance in your account.
 
-  ```
-  terraform plan
-  ```
-  {: pre}
+    ```
+    terraform plan
+    ```
+    {: pre}
 
 6. Create and initialize the {{site.data.keyword.hscrypto}} instance by applying Terraform.
 
-  ```
-  terraform apply
-  ```
-  {: pre}
+    ```
+    terraform apply
+    ```
+    {: pre}
 
 7. Check whether the {{site.data.keyword.hscrypto}} instance is created and initialized from the [{{site.data.keyword.cloud_notm}} resource list](https://cloud.ibm.com/resources){: external}.
 8. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).

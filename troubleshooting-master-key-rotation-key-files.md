@@ -64,8 +64,8 @@ KMS CRK rewrap successful, waiting on cryptounit-mk-setimm.
 
 * If the message is present, the reencryption of key storage is complete. The only remaining step in the command is to promote the values in the new master key registers to the current master key registers.
 
-  Run the `ibmcloud tke cryptounit-mks` command. If all the new master key registers are in the `Valid` state with the same verification pattern and all the current master key registers are in the `Valid` state with a different same verification pattern, run the `ibmcloud tke cryptounit-mk-setimm` command to finish the master key rotation.
+    Run the `ibmcloud tke cryptounit-mks` command. If all the new master key registers are in the `Valid` state with the same verification pattern and all the current master key registers are in the `Valid` state with a different same verification pattern, run the `ibmcloud tke cryptounit-mk-setimm` command to finish the master key rotation.
 
-  If for some crypto units the new master key value is moved to the current master key register, clear those crypto units by using the `ibmcloud tke cryptounit-rm` command. And then, run the `ibmcloud tke cryptounit-mk-setimm` command to finish the master key rotation.
+    If for some crypto units the new master key value is moved to the current master key register, clear those crypto units by using the `ibmcloud tke cryptounit-rm` command. And then, run the `ibmcloud tke cryptounit-mk-setimm` command to finish the master key rotation.
 
-  In both cases, it is safe to continue past the warning on the `ibmcloud tke cryptounit-mk-setimm` command. Key storage is prepared to accept the new master key value.
+    In both cases, it is safe to continue past the warning on the `ibmcloud tke cryptounit-mk-setimm` command. Key storage is prepared to accept the new master key value.
