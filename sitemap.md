@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-08"
+lastupdated: "2021-08-09"
 
 keywords: site map, doc structure, information architecture
 
@@ -45,9 +45,8 @@ subcollection: hs-crypto
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
 {:new_window: target="_blank"}
-{:note .note}
 {:note: .note}
-{:objectc data-hd-programlang="objectc"}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
 {:php: data-hd-programlang="php"}
 {:pre: .pre}

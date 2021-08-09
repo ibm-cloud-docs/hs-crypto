@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-08"
+lastupdated: "2021-08-09"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 {:deprecated: .deprecated}
 {:preview: .preview}
 {:subsection: outputclass="subsection"}
-{:row-headers .row-headers}
+{:row-headers: .row-headers}
 {:external: target="_blank" .external}
 {:term: .term}
 
@@ -5101,7 +5101,7 @@ CK_RV m_DigestSingle (
 ## Code examples
 {: #code-example}
 
-GREP11 API supports programming languages with [gRPC libraries](https://www.grpc.io/docs/){:external}. Two sample GitHub repositories are provided for you to test the GREP11 API:
+GREP11 API supports programming languages with [gRPC libraries](https://www.grpc.io/docs/){: external}. Two sample GitHub repositories are provided for you to test the GREP11 API:
 
 - [The sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external}
 - [The sample GitHub repository for JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js){: external}

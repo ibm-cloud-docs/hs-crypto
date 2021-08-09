@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-07-30"
+lastupdated: "2021-08-09"
 
 keywords: disaster recovery, restore, recovery, cross region restore, support ticket, support center
 
@@ -27,7 +27,7 @@ subcollection: hs-crypto
 {: #restore-data}
 
 If a regional disaster that affects all available zones occurs, you're notified through the [IBM Cloud status](https://cloud.ibm.com/status?selected=status){: external} web page and an email. In this case, depending on whether you enable failover crypto units, you can restore your data by using failover crypto units or opening an IBM support ticket.
-{:shortdesc}
+{: shortdesc}
 
 ## Restoring your data by using failover crypto units
 {: #restore-data-failover-crypto-units}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-06-28"
+lastupdated: "2021-08-09"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -259,7 +259,7 @@ To perform cryptographic operations with the GREP11 API, you need to make sure y
 
 The following procedure uses Golang code as an example to test GREP11 functions.
 
-1. Install Golang by following [the instruction](https://golang.org/doc/install){:external}.
+1. Install Golang by following [the instruction](https://golang.org/doc/install){: external}.
 2. Clone the [sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external} into a local directory of your choice. Go modules are used for this repository, so you don't need to place the cloned repository in your `GOPATH`. Refer to the repository's README file for more information about the GREP11 Go code examples.
 3. Update the following code snippet in the `examples/server_test.go` file.
 
@@ -566,7 +566,7 @@ To perform cryptographic operations with the GREP11 API, you need to make sure y
 
 The following procedure uses Golang code as an example to test GREP11 functions.
 
-1. Install Golang by following [the instruction](https://golang.org/doc/install){:external}.
+1. Install Golang by following [the instruction](https://golang.org/doc/install){: external}.
 2. Clone the [sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external} into a local directory of your choice. Go modules are used for this repository, so you don't need to place the cloned repository in your `GOPATH`. Refer to the repository's README file for more information about the GREP11 Go code examples.
 3. Update the following code snippet in the `examples/server_test.go` file.
 

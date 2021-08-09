@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-08-09"
 
 keywords: create import token, secure import, key material, key wrapping key, import token api, bring your own key, byok
 
@@ -116,7 +116,7 @@ Complete the following steps to create an import token using the {{site.data.key
   ```
   ibmcloud kp import-token create
   ```
-  {:pre}
+  {: pre}
 
   You can find more parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference#kp-import-token-create).
 
@@ -198,7 +198,7 @@ Complete the following steps to retrieve an import token using the {{site.data.k
   ```
   ibmcloud kp import-token show
   ```
-  {:pre}
+  {: pre}
 
   You can find more parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference#kp-import-token-show).
 

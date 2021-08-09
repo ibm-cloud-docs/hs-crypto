@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-01-07"
+lastupdated: "2021-08-09"
 
 keywords: troubleshoot, problems, known issues, can't list crypto units
 
@@ -29,7 +29,7 @@ subcollection: hs-crypto
 {: troubleshoot}
 
 You get an error message when you list crypto units using command `ibmcloud tke cryptounits`.
-{:shortdesc}
+{: shortdesc}
 
 You might receive an error message similar to the following one:
 {: tsSymptoms}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-08-09"
 
 keywords: rotate, rotate root key, automatic key rotation, set rotation policy, policy based key rotation
 
@@ -135,7 +135,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
       ]
     }
     ```
-    {:screen}
+    {: screen}
 
     The `interval_month` value indicates the key rotation frequency in months.
 
@@ -237,7 +237,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
       ]
     }
     ```
-    {:screen}
+    {: screen}
 
 ### Updating a rotation policy
 {: #update-rotation-policy-api}
@@ -337,7 +337,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
       ]
     }
     ```
-    {:screen}
+    {: screen}
 
     The `interval_month` and `updatedat` values are updated in the policy details for the key. If a different user updates a policy for a key that you created initially, the `updatedby` value also changes to show the identifier for the person who sent the request.
   ## What's next

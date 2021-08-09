@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-07-29"
+lastupdated: "2021-08-09"
 
 keywords: securing connection, disabling public service endpoint
 
@@ -157,7 +157,7 @@ Prepare your VSI or test machine by configuring your routing table for the priva
 When you [provision a service instance](/docs/hs-crypto?topic=hs-crypto-provision), you can choose between the `private-only` and `public-and-private` options using either the {{site.data.keyword.cloud_notm}} console or CLI.
 
 You can always [manage and update the network settings](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies) after you provision and initialize the service instance. Use either the CLI or API to switch between a private-only network and a public-and-private network.
-{:tip}
+{: tip}
 
 ## Step 3:  Target the {{site.data.keyword.hscrypto}} private endpoint for the TKE CLI plug-in
 {: #target-tke-private-endpoint}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-03-12"
+lastupdated: "2021-08-09"
 
 keywords: troubleshoot, problems, known issues, failed to activate the new master key during the master key rotation process
 
@@ -30,7 +30,7 @@ subcollection: hs-crypto
 {: support}
 
 After you run the `cryptounit-mk-rotate` command in the TKE CLI, you fail to load the new master key to the Current Master Key Register.
-{:shortdesc}
+{: shortdesc}
 
 The new master key is not in `Valid` state in the current master key register after you run the `cryptounit-mk-rotate` command.
 {: tsSymptoms}

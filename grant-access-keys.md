@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-08"
+lastupdated: "2021-08-09"
 
 keywords: grant access, iam, iam access, assign access, access policy, key access
 
@@ -120,5 +120,5 @@ To assign access to a key ring with the console:
 9. Click **Add**.
 10. Continue to add platform and service access roles as needed. When you finish all the access assignment, click **Assign**.
 
-You can also create an access policy through IAM [API](/apidocs/iam-policy-management#create-policy){: external} or [CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create){:external}.
+You can also create an access policy through IAM [API](/apidocs/iam-policy-management#create-policy){: external} or [CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create){: external}.
 {: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-08-09"
 
 keywords: failed master key rotation, failed to use smart cards to rotate master keys, failed to use the Management Utilities to rotate master keys, master key rotation failure, troubleshoot master key rotation failure
 
@@ -30,7 +30,7 @@ subcollection: hs-crypto
 {: support}
 
 When you run smart cards and the Management Utilities to rotate master keys, you might be not able to complete the rotation.
-{:shortdesc}
+{: shortdesc}
 
 During master key rotation, the new master key registers are loaded with the new master key value to be used. The contents of key storage are reencrypted by using the current and new master key values. When the reencryption of key storage is complete, the new master key value is promoted to the current master key registers and the new master key registers are cleared.
 {: tsSymptoms}

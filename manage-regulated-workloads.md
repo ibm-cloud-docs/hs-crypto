@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-25"
+lastupdated: "2021-08-09"
 
 keywords: regulated workloads, FS Cloud, IBM Cloud for Financial Services, FS Cloud use cases
 
@@ -60,14 +60,14 @@ VMware vSphere® encryption is the tool the {{site.data.keyword.cloud_notm}} for
 
 For more information about how the encryption works, see [the VMware reference doc](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-encryption).
 
-A detailed tutorial on how to encrypt VMware regulated workloads by using {{site.data.keyword.hscrypto}}, see [Tutorial: Configuring KMIP in Hyper Protect Crypto Services for key management and distribution](/docs/hs-crypto?topic=hs-crypto-tutorial-kmip-vmware). A [demo video](https://mediacenter.ibm.com/media/1_e5gk6ktn){:external} is also available for your reference.
+A detailed tutorial on how to encrypt VMware regulated workloads by using {{site.data.keyword.hscrypto}}, see [Tutorial: Configuring KMIP in Hyper Protect Crypto Services for key management and distribution](/docs/hs-crypto?topic=hs-crypto-tutorial-kmip-vmware). A [demo video](https://mediacenter.ibm.com/media/1_e5gk6ktn){: external} is also available for your reference.
 
 ### Managing {{site.data.keyword.cos_full_notm}} regulated workloads with {{site.data.keyword.hscrypto}}
 {: #cos-regulated-workloads}
 
 {{site.data.keyword.cos_full_notm}} is an {{site.data.keyword.cloud_notm}} service for you to store unlimited amounts of data in the assigned bucket so that the data can be accessed anywhere from the cloud. {{site.data.keyword.hscrypto}} helps you protect encryption keys for data that is stored in {{site.data.keyword.cos_short}} with the highest security level in the industry and gives only you the access to these keys.
 
-For more information about the integration, see [the {{site.data.keyword.cos_short}} reference doc](/docs/cloud-object-storage?topic=cloud-object-storage-encryption). A [demo video](https://mediacenter.ibm.com/media/0_mgxwp16v){:external} is also available for your reference.
+For more information about the integration, see [the {{site.data.keyword.cos_short}} reference doc](/docs/cloud-object-storage?topic=cloud-object-storage-encryption). A [demo video](https://mediacenter.ibm.com/media/0_mgxwp16v){: external} is also available for your reference.
 
 ### Encrypting {{site.data.keyword.openshiftshort}} routes with keys stored in {{site.data.keyword.hscrypto}}
 {: #openshift-regulated-workloads}

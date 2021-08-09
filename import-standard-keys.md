@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-08-09"
 
 keywords: standard key, import key, key material, import key api, bring your own key, byok, encryption key, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key
 
@@ -252,7 +252,7 @@ When you import an existing standard key, it is required to include the encrypte
 ### Using OpenSSL to encode existing key material
 {: #open-ssl-encoding-standard-key}
 
-1. Download and install [OpenSSL](https://github.com/openssl/openssl#for-production-use){:external}.
+1. Download and install [OpenSSL](https://github.com/openssl/openssl#for-production-use){: external}.
 2. Base64 encode your key material string by running the following command:
 
     ```
@@ -298,7 +298,7 @@ When you import an existing standard key, it is required to include the encrypte
 ### Using OpenSSL to create and encode new key material
 {: #open-ssl-encoding-new-key-material-standard-key}
 
-1. Download and install [OpenSSL](https://github.com/openssl/openssl#for-production-use){:external}.
+1. Download and install [OpenSSL](https://github.com/openssl/openssl#for-production-use){: external}.
 2. Base64 encode your key material string by running the following command:
 
     ```

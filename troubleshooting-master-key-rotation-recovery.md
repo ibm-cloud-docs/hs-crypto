@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-12"
+lastupdated: "2021-08-09"
 
 keywords: failed master key rotation, failed to use recovery crypto unit to rotate master keys, tke auto-mk-rotate failure, troubleshoot master key rotation failure
 
@@ -30,7 +30,7 @@ subcollection: hs-crypto
 {: support}
 
 When you run the `ibmcloud tke auto-mk-rotate` command to rotate master keys using recovery crypto units, you might be not able to complete the rotation.
-{:shortdesc}
+{: shortdesc}
 
 During master key rotation, the new master key registers are loaded with the new master key value to be used. The contents of key storage are reencrypted using the current and new master key values. When the reencryption of key storage is complete, the new master key value is promoted to the current master key registers and the new master key registers are cleared.
 {: tsSymptoms}

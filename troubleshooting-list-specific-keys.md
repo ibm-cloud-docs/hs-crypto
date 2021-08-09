@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-07-17"
+  years: 2020, 2021
+lastupdated: "2021-08-09"
 
 keywords: troubleshoot, problems, known issues, can't view or list specific keys
 
@@ -29,7 +29,7 @@ subcollection: hs-crypto
 {: troubleshoot}
 
 When you call the {{site.data.keyword.hscrypto}} key management API, you're unable to list specific keys that you have access to.
-{:shortdesc}
+{: shortdesc}
 
 You call `GET api/v2/keys` to list the keys that are available in your service instance.
 {: tsSymptoms}

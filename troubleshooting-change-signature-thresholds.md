@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-07-17"
+  years: 2020, 2021
+lastupdated: "2021-08-09"
 
 keywords: troubleshoot, problems, known issues, unable to change signature thresholds
 
@@ -29,7 +29,7 @@ subcollection: hs-crypto
 {: troubleshoot}
 
 You get an error when you try to change the signature threshold or revocation signature threshold. The error can be reported by either the TKE plug-in or the Trusted Key Entry application.
-{:shortdesc}
+{: shortdesc}
 
 You receive an error message similar to the following one:
 {: tsSymptoms}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-05-17"
+lastupdated: "2021-08-09"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -86,14 +86,14 @@ Before you install the smart card reader driver on a Linux operating system, dow
     ```
     sudo yum install pcsc-lite
     ```
-    {:pre}
+    {: pre}
 
   2. Install the `libusb` package with the following command:
 
     ```
     sudo yum install libusb
     ```
-    {:pre}
+    {: pre}
 
   3. Check and make sure that the `opensc` and `esc` packages are not installed. These packages can cause unexpected errors to occur during the operations of the smart card readers.
 

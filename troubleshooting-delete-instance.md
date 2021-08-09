@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-06-08"
+lastupdated: "2021-08-09"
 
 keywords: troubleshoot, problems, known issues, can't delete an initialized service instance
 
@@ -30,7 +30,7 @@ subcollection: hs-crypto
 {: support}
 
 You get an error when you delete an initialized service instance.
-{:shortdesc}
+{: shortdesc}
 
 You might receive an error similar to the following one:
 {: tsSymptoms}

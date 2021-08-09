@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-30"
+lastupdated: "2021-08-09"
 
 keywords: set up api, api key, cryptographic operations, use ep11 api, access ep11 api, ep11 over grpc, using api
 
@@ -43,7 +43,7 @@ You can also enable mutual TLS for GREP11 API to add another layer of authentica
 ### Example: Generating random data using the `GenerateRandomRequest()` function
 {: #generate-random-request-example}
 
-GREP11 API supports programming languages with [gRPC libraries](https://grpc.io/docs/){:external}. Two sample GitHub repositories are provided for you to test the GREP11 API:
+GREP11 API supports programming languages with [gRPC libraries](https://grpc.io/docs/){: external}. Two sample GitHub repositories are provided for you to test the GREP11 API:
 
 - [The sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external}
 - [The sample GitHub repository for JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js){: external}

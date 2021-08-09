@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-07-01"
+lastupdated: "2021-08-09"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -21,7 +21,7 @@ subcollection: hs-crypto
 {:deprecated: .deprecated}
 {:preview: .preview}
 {:subsection: outputclass="subsection"}
-{:row-headers .row-headers}
+{:row-headers: .row-headers}
 {:external: target="_blank" .external}
 {:term: .term}
 

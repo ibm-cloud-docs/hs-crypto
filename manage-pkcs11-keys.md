@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-08-09"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -177,7 +177,7 @@ Complete the following steps to create an EP11 key:
     1. Verify the key details that are displayed, especially the key type, keystore, and key attributes.
 
       All the values cannot be modified through the console after the key is created.
-      {:important}
+      {: important}
     2. Click **Create key** to confirm the creation.
 
 You have successfully created a EP11 key. The created key is displayed as the first row in the **Enterprise PKCS #11 keys** table.

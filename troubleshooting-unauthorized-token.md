@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-07-17"
+  years: 2020, 2021
+lastupdated: "2021-08-09"
 
 keywords: troubleshoot, problems, known issues, unauthorized when running TKE CLI plug-in commands
 
@@ -30,7 +30,7 @@ subcollection: hs-crypto
 {: support}
 
 You receive an error message after you run a `tke` CLI command.
-{:shortdesc}
+{: shortdesc}
 
 The message might be similar to the following one:
 {: tsSymptoms}

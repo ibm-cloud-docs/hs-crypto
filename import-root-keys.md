@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-08-09"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -246,7 +246,7 @@ When importing an existing root key, it is required to include the encrypted key
 ### Using OpenSSL to encode existing key material
 {: #open-ssl-encoding-root-key}
 
-1. Download and install [OpenSSL](https://github.com/openssl/openssl#for-production-use){:external}.
+1. Download and install [OpenSSL](https://github.com/openssl/openssl#for-production-use){: external}.
 2. Base64 encode your key material string by running the following command:
 
     ```
@@ -295,7 +295,7 @@ When importing an existing root key, it is required to include the encrypted key
 ### Using OpenSSL to create and encode new key material
 {: #open-ssl-encoding-new-key-material-root-key}
 
-1. Download and install [OpenSSL](https://github.com/openssl/openssl#for-production-use){:external}.
+1. Download and install [OpenSSL](https://github.com/openssl/openssl#for-production-use){: external}.
 2. Base64 encode your key material string by running the following command:
 
     ```
