@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-08-09"
 
 keywords: monitoring, monitor metrics
 
@@ -36,11 +36,11 @@ Before you enable operational metrics for your {{site.data.keyword.hscrypto}} in
 
 - When you enable metrics for your {{site.data.keyword.hscrypto}}  instance, metrics are only reported after the time that the policy is enabled.
 
-  Once your metrics policy is enabled, you will see operational metrics for all API requests that occur in your instance after the policy is activated. You will not be able to view any metrics prior to the time that the policy is enabled.
+    Once your metrics policy is enabled, you will see operational metrics for all API requests that occur in your instance after the policy is activated. You will not be able to view any metrics prior to the time that the policy is enabled.
 
 - You need to provision a {{site.data.keyword.mon_short}} instance first in order to see the metrics.
 
-  You need to [provision a {{site.data.keyword.mon_short}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision){: external} that is located in the same region as the {{site.data.keyword.hscrypto}} instance that you want to receive operational metrics for. After you provision the {{site.data.keyword.mon_short}} instance, you need to [enable platform metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics#configure-monitoring).
+    You need to [provision a {{site.data.keyword.mon_short}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision){: external} that is located in the same region as the {{site.data.keyword.hscrypto}} instance that you want to receive operational metrics for. After you provision the {{site.data.keyword.mon_short}} instance, you need to [enable platform metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics#configure-monitoring).
 
 ### Enabling metrics for your {{site.data.keyword.hscrypto}} instance with the Console
 {: #enable-metrics-instance-policy-ui}

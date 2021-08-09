@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-08-09"
 
 keywords: instance settings, service settings, key creation/import, key create policy, key creation/import, key policy
 
@@ -56,19 +56,11 @@ following considerations:
 
 - KeyCreateImportAccess policies do not affect keys that existed prior to policy creation.
 
-  KeyCreateImportAccess policies only affect
-  {{site.data.keyword.hscrypto}} requests that are sent after
-  the policy is set. You still have access to all keys that existed in your
-  {{site.data.keyword.hscrypto}} instance before the policy is created.
+    KeyCreateImportAccess policies only affect {{site.data.keyword.hscrypto}} requests that are sent after the policy is set. You still have access to all keys that existed in your {{site.data.keyword.hscrypto}} instance before the policy is created.
 
 - KeyCreateImportAccess policies can affect your keys across various key actions.
 
-  The `enforce_token` attribute affect imported keys during creation,
-  rotation, and restoration. The `create_root_key`, `import_root_key`,
-  `create_standard_key`, and `import_standard_key` attributes only affect
-  keys at creation time. All other
-  {{site.data.keyword.hscrypto}} actions, such as wrap and unwrap,
-  are not affected and can be invoked on the key as usual.
+    The `enforce_token` attribute affect imported keys during creation, rotation, and restoration. The `create_root_key`, `import_root_key`, `create_standard_key`, and `import_standard_key` attributes only affect keys at creation time. All other {{site.data.keyword.hscrypto}} actions, such as wrap and unwrap, are not affected and can be invoked on the key as usual.
 
 ## Enabling or updating the key create and import access policy for your service instance with the console
 {: #enable-keyCreateImportAccess-policy-console}
@@ -84,11 +76,11 @@ complete the following steps to enable the key create and import access policy:
 4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
 5. In the **Create and import key access** section, check or clear the corresponding boxes to update the keyCreateImportAccess settings, and then click **Save policy**.
 
-  * `Allow creation of root keys`: Check the box to allow root keys to be created in your {{site.data.keyword.hscrypto}} instance.
-  * `Allow creation of standard keys`: Check the box to allow standard keys to be created in your {{site.data.keyword.hscrypto}} instance.
-  * `Allow import of root keys`: Check the box to allow root keys to be imported into your {{site.data.keyword.hscrypto}} instance.
-  * `Allow import of standard keys`: Check the box to allow standard keys to be imported into your {{site.data.keyword.hscrypto}} instance.
-  * `Enable secure import`: Check the box to prevent authorized users from importing key material into the your {{site.data.keyword.hscrypto}} instance without using an import token.
+    - `Allow creation of root keys`: Check the box to allow root keys to be created in your {{site.data.keyword.hscrypto}} instance.
+    - `Allow creation of standard keys`: Check the box to allow standard keys to be created in your {{site.data.keyword.hscrypto}} instance.
+    - `Allow import of root keys`: Check the box to allow root keys to be imported into your {{site.data.keyword.hscrypto}} instance.
+    - `Allow import of standard keys`: Check the box to allow standard keys to be imported into your {{site.data.keyword.hscrypto}} instance.
+    - `Enable secure import`: Check the box to prevent authorized users from importing key material into the your {{site.data.keyword.hscrypto}} instance without using an import token.
 
     After you check the box for `Enable secure import`, it is required that [secure import](/docs/hs-crypto?topic=hs-crypto-create-import-tokens) is enabled for all key import actions. Secure import is not available in the {{site.data.keyword.cloud_notm}} console, and you need to perform further actions through the CLI or API.
     {: note}

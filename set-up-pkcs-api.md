@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-07-30"
+lastupdated: "2021-08-09"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -50,38 +50,38 @@ For maximum security, verify the integrity and authenticity of the PKCS #11 libr
 
 1. Download the latest version of the following files from the [library repository](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} to the same directory where you store the PKCS #11 library:
 
-  - `pkcs11-grep11-<platform>.so.<version>.sig`: The signed cryptographic hash of the PKCS #11 library, where platform is either *amd64* or *s390x* and version is the *major.minor.build* of the signature file. Both **platform** and **version** must match the respective **platform** and **version** of the PKCS #11 library that you use.
+    - `pkcs11-grep11-<platform>.so.<version>.sig`: The signed cryptographic hash of the PKCS #11 library, where platform is either *amd64* or *s390x* and version is the *major.minor.build* of the signature file. Both **platform** and **version** must match the respective **platform** and **version** of the PKCS #11 library that you use.
 
-  - `signing_cert.pem`: The signing certificate of the {{site.data.keyword.hscrypto}} PKCS #11 client files.
+    - `signing_cert.pem`: The signing certificate of the {{site.data.keyword.hscrypto}} PKCS #11 client files.
 
-  - `digicert_cert.pem`: An intermediate code signing certificate to prove the signing certificate of the {{site.data.keyword.hscrypto}} PKCS #11 client files.
+    - `digicert_cert.pem`: An intermediate code signing certificate to prove the signing certificate of the {{site.data.keyword.hscrypto}} PKCS #11 client files.
 
 2. Extract the public key from the signing certificate `signing_cert.pem` to the `sigkey.pub` file with the following command:
 
-  ```
-  openssl x509 -pubkey -noout -in signing_cert.pem -out sigkey.pub
-  ```
-  {: pre}
+    ```
+    openssl x509 -pubkey -noout -in signing_cert.pem -out sigkey.pub
+    ```
+    {: pre}
 
 3. Verify the integrity of the PKCS #11 library file with the following command:
 
-  ```
-  openssl dgst -sha256 -verify sigkey.pub -signature pkcs11-grep11-<platform>.so.<version>.sig pkcs11-grep11-<platform>.so.<version>
-  ```
-  {: pre}
+    ```
+    openssl dgst -sha256 -verify sigkey.pub -signature pkcs11-grep11-<platform>.so.<version>.sig pkcs11-grep11-<platform>.so.<version>
+    ```
+    {: pre}
 
-  Replace **platform** with either *amd64* or *s390x* and replace **version** with the *major.minor.build* of the library.
+    Replace **platform** with either *amd64* or *s390x* and replace **version** with the *major.minor.build* of the library.
 
-  When the verification is successful, `Verified OK` is displayed.
+    When the verification is successful, `Verified OK` is displayed.
 
 4. Verify the authenticity and validity of the signing certificate with the following command:
 
-  ```
-  openssl ocsp -no_nonce -issuer digicert_cert.pem -cert signing_cert.pem -VAfile digicert_cert.pem -text -url http://ocsp.digicert.com -respout ocsptest
-  ```
-  {: pre}
+    ```
+    openssl ocsp -no_nonce -issuer digicert_cert.pem -cert signing_cert.pem -VAfile digicert_cert.pem -text -url http://ocsp.digicert.com -respout ocsptest
+    ```
+    {: pre}
 
-  When the verification is successful, `Response verify OK` and `signing_cert.pem: good` are displayed in the output.
+    When the verification is successful, `Response verify OK` and `signing_cert.pem: good` are displayed in the output.
 
 5. If the verification fails, cancel the installation and [contact IBM for support](/docs/hs-crypto?topic=hs-crypto-getting-help).
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018-2020
-lastupdated: "2020-09-22"
+  years: 2018, 2021
+lastupdated: "2021-08-09"
 
 keywords: set up api, kms api, key protect api, key management api, using api
 
@@ -51,20 +51,20 @@ curl -X GET \
 
 * Replace `<port>` with the port number of your API endpoint. You can get the `<port>` in your provisioned service instance dashboard through **Overview** &gt; **Connect** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external}. The returned value includes:
 
-  ```
-  {
-    "instance_id": "<instance_ID>",
-    "kms": {
-      "public": "api.<region>.hs-crypto.cloud.ibm.com:<port>",
-      "private":"api.private.<region>.hs-crypto.cloud.ibm.com:<port>"
-    },
-    "ep11": {
-      "public": "ep11.<region>.hs-crypto.cloud.ibm.com:<port>",
-      "private":"ep11.private.<region>.hs-crypto.cloud.ibm.com:<port>"
+    ```
+    {
+      "instance_id": "<instance_ID>",
+      "kms": {
+        "public": "api.<region>.hs-crypto.cloud.ibm.com:<port>",
+        "private":"api.private.<region>.hs-crypto.cloud.ibm.com:<port>"
+      },
+        "ep11": {
+        "public": "ep11.<region>.hs-crypto.cloud.ibm.com:<port>",
+        "private":"ep11.private.<region>.hs-crypto.cloud.ibm.com:<port>"
+      }
     }
-  }
-  ```
-  {: screen}
+    ```
+    {: screen}
 
 For the key management service, use the `<region>` and `<port>`  in the `kms` section.
 
