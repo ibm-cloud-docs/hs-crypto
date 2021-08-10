@@ -3004,7 +3004,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptUpdate)(
 
   plaintext = append(plaintext, DecryptUpdateResponse.Plain...)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -3016,7 +3016,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptUpdate)(
     cb(err, data.State, data.Plain);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### DecryptFinal
@@ -3025,11 +3025,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptUpdate)(
 The `DecryptFinal` function finishes a multiple-part decryption operation.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_DecryptFinal`, which is an implementation of PKCS #11 `C_DecryptFinal`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -3041,11 +3041,11 @@ message DecryptFinalResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DecryptFinal_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -3053,30 +3053,30 @@ message DecryptFinalResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td><p>Implementation of PKCS #11 <code>C_DecryptFinal</code>.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
-  <p>The <code>state</code> blob was output from: <code>DecryptInit</code>, <code>DecryptUpdate</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
+    <p>The <code>state</code> blob was output from: <code>DecryptInit</code>, <code>DecryptUpdate</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_DecryptFinal (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR plain, CK_ULONG_PTR plainlen,
-  target_t target
+    const unsigned char \*state, size_t statelen,
+    CK_BYTE_PTR plain, CK_ULONG_PTR plainlen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_DecryptFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DecryptFinal_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -3084,32 +3084,32 @@ CK_RV m_DecryptFinal (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>`C_DecryptFinal` finishes a multiple-part decryption operation. `hSession` is the session’s handle; `pLastPart` points to the location that receives the last recovered data part, if any; `pulLastPartLen` points to the location that holds the length of the last recovered data part.</p>
     <p>`C_DecryptFinal` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
     <p>The decryption operation must be initialized with `C_DecryptInit`.  A call to `C_DecryptFinal` always terminates the active decryption operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one that `returns CKR_OK`) to determine the length of the buffer that is needed to hold the plaintext.</p>
     <p>If the input ciphertext data cannot be decrypted because it has an inappropriate length, then either `CKR_ENCRYPTED_DATA_INVALID` or `CKR_ENCRYPTED_DATA_LEN_RANGE` can be returned.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_DecryptFinal)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pLastPart,
-  CK_ULONG_PTR pulLastPartLen
+    CK_SESSION_HANDLE hSession,
+    CK_BYTE_PTR pLastPart,
+    CK_ULONG_PTR pulLastPartLen
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_ENCRYPTED_DATA_INVALID, CKR_ENCRYPTED_DATA_LEN_RANGE, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #DecryptFinal_PKCS11}
 {: tab-title="PKCS #11"}
@@ -3127,7 +3127,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptFinal)(
 
   DecryptFinalResponse, err := cryptoClient.DecryptFinal(context.Background(), DecryptFinalRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -3138,7 +3138,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptFinal)(
     cb(err, Buffer.concat([plaintext, data.Plain]));
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### DecryptSingle
@@ -3147,11 +3147,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptFinal)(
 The `DecryptSingle` function processes data in one pass with one call. It does not return any state to host and returns only the decrypted data. This function is an IBM EP11 extension to the standard PKCS #11 specification and is a combination of the `DecryptInit` and `Decrypt` functions. It enables you to complete a decryption operation with a single call instead of a series of calls.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_DecryptSingle`<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -3165,11 +3165,11 @@ message DecryptSingleResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DecryptSingle_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -3177,34 +3177,34 @@ message DecryptSingleResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Non-standard variant of <code>Decrypt</code>. Processes data in one pass, with one call. Does not return any state to host, only decrypted data.</p>
-  <p>This is the preferred method of encrypting data in one pass for XCP-aware applications. Functionally it is equivalent to <code>DecryptInit</code> followed immediately by <code>Decrypt</code>, but it saves roundtrips, wrapping, and unwrapping.</p>
-  <p>If the backend supports resident keys, the key can be also a resident-key handle.</p>
-  <p>See also: <code>Decrypt</code>, <code>DecryptInit</code>, <code>EncryptSingle</code>.</p>
-  <p>The <code>key</code> blob was output from: <code>GenerateKey</code>, <code>UnwrapKey</code>.</p>
+    <p>Non-standard variant of <code>Decrypt</code>. Processes data in one pass, with one call. Does not return any state to host, only decrypted data.</p>
+    <p>This is the preferred method of encrypting data in one pass for XCP-aware applications. Functionally it is equivalent to <code>DecryptInit</code> followed immediately by <code>Decrypt</code>, but it saves roundtrips, wrapping, and unwrapping.</p>
+    <p>If the backend supports resident keys, the key can be also a resident-key handle.</p>
+    <p>See also: <code>Decrypt</code>, <code>DecryptInit</code>, <code>EncryptSingle</code>.</p>
+    <p>The <code>key</code> blob was output from: <code>GenerateKey</code>, <code>UnwrapKey</code>.</p>
 </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_DecryptSingle (
-  const unsigned char \*key, size_t keylen,
-  CK_MECHANISM_PTR mech,
-  CK_BYTE_PTR ciphered, CK_ULONG cipheredlen,
-  CK_BYTE_PTR plain, CK_ULONG_PTR plainlen,
-  target_t target
+    const unsigned char \*key, size_t keylen,
+    CK_MECHANISM_PTR mech,
+    CK_BYTE_PTR ciphered, CK_ULONG cipheredlen,
+    CK_BYTE_PTR plain, CK_ULONG_PTR plainlen,
+    target_t target
 );
       </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DecryptSingle_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -3235,7 +3235,7 @@ CK_RV m_DecryptSingle (
 
   DecryptSingleResponse, err := cryptoClient.DecryptSingle(context.Background(), DecryptSingleRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -3251,7 +3251,7 @@ CK_RV m_DecryptSingle (
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ## Signing and verifying data
@@ -3265,11 +3265,11 @@ GREP11 provides a set of functions to sign data and verify signatures or message
 The `SignInit` function initializes a signature operation. You need to call this function first to perform a signature operation.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_SignInit`, which is an implementation of PKCS #11 `C_SignInit`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -3282,11 +3282,11 @@ message SignInitResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #SignInit_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -3294,28 +3294,28 @@ message SignInitResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>Implementation of PKCS #11 <code>C_SignInit</code>.
-  </td>
-  </tr>
-  <tr>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_SignInit (
-  unsigned char \*state, size_t \*statelen,
-  CK_MECHANISM_PTR mech,
-  const unsigned char \*privKey, size_t privKeylen,
-  target_t target
+    unsigned char \*state, size_t \*statelen,
+    CK_MECHANISM_PTR mech,
+    const unsigned char \*privKey, size_t privKeylen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #SignInit_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -3323,30 +3323,30 @@ CK_RV m_SignInit (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>`C_SignInit` initializes a signature operation, where the signature is an appendix to the data. `hSession` is the session's handle; `pMechanism` points to the signature mechanism; `hKey` is the handle of the signature key.</p>
     <p>The `CKA_SIGN` attribute of the signature key, which indicates whether the key supports signatures with appendix, must be `CK_TRUE`.</p>
     <p>After the application calls `C_SignInit`, the application can either call `C_Sign` to sign in a single part; or call `C_SignUpdate` one or more times, followed by `C_SignFinal`, to sign data in multiple parts. The signature operation is active until the application uses a call to `C_Sign` or `C_SignFinal` to obtain the signature. To process extra data (in single or multiple parts), the application must call `C_SignInit` again.</p></td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_SignInit)(
-  CK_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism,
-  CK_OBJECT_HANDLE hKey
+    CK_SESSION_HANDLE hSession,
+    CK_MECHANISM_PTR pMechanism,
+    CK_OBJECT_HANDLE hKey
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_FUNCTION_NOT_PERMITTED,CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #SignInit_PKCS11}
 {: tab-title="PKCS #11"}
@@ -3365,7 +3365,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_SignInit)(
 
   SignInitResponse, err := cryptoClient.SignInit(context.Background(), SignInitRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -3379,7 +3379,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_SignInit)(
     cb(err, data.State);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### Sign
@@ -3388,11 +3388,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_SignInit)(
 The `Sign` function signs single-part data. You don't need to perform the `SignUpdate` and `SignFinal` suboperations for a single-part signature. Before you call this function, make sure to run `SignInit` first.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_Sign`, which is an implementation of PKCS #11 `C_Sign`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -3405,11 +3405,11 @@ message SignResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #Sign_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -3417,32 +3417,32 @@ message SignResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_Sign</code>.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
-  <p>The <code>state</code> blob was output from: <code>SignInit</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <p>Implementation of PKCS #11 <code>C_Sign</code>.</p>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
+    <p>The <code>state</code> blob was output from: <code>SignInit</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_Sign (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  CK_BYTE_PTR signature, CK_ULONG_PTR signaturelen,
-  target_t target
+    const unsigned char \*state, size_t statelen,
+    CK_BYTE_PTR data, CK_ULONG datalen,
+    CK_BYTE_PTR signature, CK_ULONG_PTR signaturelen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_Sign` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #Sign_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -3450,33 +3450,33 @@ CK_RV m_Sign (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>`C_Sign` signs data in a single part, where the signature is an appendix to the data. `hSession` is the session's handle; `pData` points to the data; `ulDataLen` is the length of the data; `pSignature` points to the location that receives the signature; `pulSignatureLen` points to the location that holds the length of the signature.</p>
     <p>`C_Sign` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
     <p>The signing operation must be initialized with `C_SignInit`. A call to `C_Sign` always terminates the active signing operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one that returns `CKR_OK`) to determine the length of the buffer that is needed to hold the signature.</p>
     <p>`C_Sign` cannot be used to terminate a multi-part operation, and must be called after `C_SignInit` without intervening `C_SignUpdate` calls.</p>
     <p>For most mechanisms, `C_Sign` is equivalent to a sequence of `C_SignUpdate` operations followed by `C_SignFinal`.</p></td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_Sign)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pData,
-  CK_ULONG ulDataLen,
-  CK_BYTE_PTR pSignature,
-  CK_ULONG_PTR pulSignatureLen
+    CK_SESSION_HANDLE hSession,
+    CK_BYTE_PTR pData,
+    CK_ULONG ulDataLen,
+    CK_BYTE_PTR pSignature,
+    CK_ULONG_PTR pulSignatureLen
 );
     </pre></td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_INVALID, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN, CKR_FUNCTION_REJECTED.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #Sign_PKCS11}
 {: tab-title="PKCS #11"}
@@ -3497,7 +3497,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_Sign)(
   // Sign the data
   SignResponse, err := cryptoClient.Sign(context.Background(), SignRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -3509,7 +3509,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_Sign)(
     cb(err, data.Signature);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### SignUpdate
@@ -3518,11 +3518,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_Sign)(
 The `SignUpdate` function continues a multiple-part signature operation. Before you call this function, make sure to run `SignInit` first.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_SignUpdate`, which is an implementation of PKCS #11 `C_SignUpdate`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -3535,11 +3535,11 @@ message SignUpdateResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #SignUpdate_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -3547,30 +3547,30 @@ message SignUpdateResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p></p>Implementation of PKCS #11 <code>C_SignUpdate</code>.
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
-  <p>The <code>state</code> blob was output from: <code>SignInit</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <p></p>Implementation of PKCS #11 <code>C_SignUpdate</code>.
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
+    <p>The <code>state</code> blob was output from: <code>SignInit</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_SignUpdate (
-  unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  target_t target
+    unsigned char \*state, size_t statelen,
+    CK_BYTE_PTR data, CK_ULONG datalen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_SignUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #SignUpdate_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -3578,29 +3578,29 @@ CK_RV m_SignUpdate (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>`C_SignUpdate` continues a multiple-part signature operation, processing another data part. `hSession` is the session's handle, pPart points to the data part; `ulPartLen` is the length of the data part.</p>
     <p>The signature operation must be initialized with `C_SignInit`. This function can be called any number of times in succession. A call to `C_SignUpdate` which results in an error terminates the current signature operation.</p></td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_SignUpdate)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pPart,
-  CK_ULONG ulPartLen
+    CK_SESSION_HANDLE hSession,
+    CK_BYTE_PTR pPart,
+    CK_ULONG ulPartLen
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #SignUpdate_PKCS11}
 {: tab-title="PKCS #11"}
@@ -3628,7 +3628,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_SignUpdate)(
 
   SignUpdateResponse, err := cryptoClient.SignUpdate(context.Background(), SignUpdateRequest2)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -3640,7 +3640,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_SignUpdate)(
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### SignFinal
@@ -3649,11 +3649,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_SignUpdate)(
 The `SignFinal` function finishes a multiple-part signature operation.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_SignFinal`, which is an implementation of PKCS #11 `C_SignFinal`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -3665,11 +3665,11 @@ message SignFinalResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #SignFinal_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -3677,31 +3677,31 @@ message SignFinalResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_SignFinal</code>.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
-  <p>The <code>state</code> blob was output from: <code>SignInit</code>, <code>SignUpdate</code>.</p>
-  </td>
-  </tr>
+    <p>Implementation of PKCS #11 <code>C_SignFinal</code>.</p>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
+    <p>The <code>state</code> blob was output from: <code>SignInit</code>, <code>SignUpdate</code>.</p>
+    </td>
+    </tr>
   <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_SignFinal (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR signature, CK_ULONG_PTR signaturelen,
-  target_t target
+    const unsigned char \*state, size_t statelen,
+    CK_BYTE_PTR signature, CK_ULONG_PTR signaturelen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_SignFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #SignFinal_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -3709,30 +3709,30 @@ CK_RV m_SignFinal (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>`C_SignFinal` finishes a multiple-part signature operation, returning the signature. `hSession` is the session's handle; `pSignature` points to the location that receives the signature; `pulSignatureLen` points to the location that holds the length of the signature.</p>
     <p>`C_SignFinal` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
     <p>The signing operation must be initialized with `C_SignInit`. A call to `C_SignFinal` always terminates the active signing operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one that returns `CKR_OK`) to determine the length of the buffer that is needed to hold the signature.</p></td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_SignFinal)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pSignature,
-  CK_ULONG_PTR pulSignatureLen
+    CK_SESSION_HANDLE hSession,
+    CK_BYTE_PTR pSignature,
+    CK_ULONG_PTR pulSignatureLen
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN, CKR_FUNCTION_REJECTED.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #SignFinal_PKCS11}
 {: tab-title="PKCS #11"}
@@ -3750,7 +3750,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_SignFinal)(
 
   SignFinalResponse, err := cryptoClient.SignFinal(context.Background(), SignFinalRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -3761,7 +3761,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_SignFinal)(
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### SignSingle
@@ -3770,11 +3770,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_SignFinal)(
 The `SignSingle` function signs or MACs data in one pass with one call and without constructing intermediate digest state. It doesn't return any state to host and returns only result. This function is an IBM EP11 extension to the standard PKCS #11 specification and is a combination of the `SignInit` and `Sign` functions. It enables you to complete a signing operation with a single call instead of a series of calls.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_SignSingle`<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -3788,11 +3788,11 @@ message SignSingleResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #SignSingle_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -3800,34 +3800,34 @@ message SignSingleResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Nonstandard extension, combination of <code>SignInit</code> and <code>Sign</code>. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host, only result.</p>
-  <p>This is the preferred way of signing, without an extra roundtrip, encryption, and decryption. Functionally, <code>SignSingle</code> is equivalent to <code>SignInit</code> followed immediately by <code>Sign</code>.</p>
-  <p>The <code>(key, klen)</code> blob and the <code>pmech</code> mechanism together must be passable to <code>SignInit</code>.</p>
-  <p>Multi-data requests for HMAC and CMAC signatures are supported (sub-variants 2 and 3).</p>
-  <p>See also: <code>SignInit</code>, <code>Sign</code>, <code>VerifySingle</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <p>Nonstandard extension, combination of <code>SignInit</code> and <code>Sign</code>. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host, only result.</p>
+    <p>This is the preferred way of signing, without an extra roundtrip, encryption, and decryption. Functionally, <code>SignSingle</code> is equivalent to <code>SignInit</code> followed immediately by <code>Sign</code>.</p>
+    <p>The <code>(key, klen)</code> blob and the <code>pmech</code> mechanism together must be passable to <code>SignInit</code>.</p>
+    <p>Multi-data requests for HMAC and CMAC signatures are supported (sub-variants 2 and 3).</p>
+    <p>See also: <code>SignInit</code>, <code>Sign</code>, <code>VerifySingle</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_SignSingle (
-  const unsigned char \*privKey, size_t privKeylen,
-  CK_MECHANISM_PTR mech,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  CK_BYTE_PTR signature, CK_ULONG_PTR signaturelen,
-  target_t target
+    const unsigned char \*privKey, size_t privKeylen,
+    CK_MECHANISM_PTR mech,
+    CK_BYTE_PTR data, CK_ULONG datalen,
+    CK_BYTE_PTR signature, CK_ULONG_PTR signaturelen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #SignSingle_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -3848,7 +3848,7 @@ CK_RV m_SignSingle (
 
   SignSingleResponse, err := cryptoClient.SignSingle(context.Background(), SignSingleRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -3863,7 +3863,7 @@ CK_RV m_SignSingle (
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### VerifyInit
@@ -3872,11 +3872,11 @@ CK_RV m_SignSingle (
 The `VerifyInit` function initializes a verification operation. You need to call this function first to verify a signature.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_VerifyInit`, which is an implementation of PKCS #11 `C_VerifyInit`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -3889,11 +3889,11 @@ message VerifyInitResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #VerifyInit_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -3901,34 +3901,34 @@ message VerifyInitResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_VerifyInit</code>. Given a key blob <code>(key, klen)</code>, initialize a verify session state in <code>(state, slen)</code>. The key blob can be a public key object, or HMAC key bytes. Key blob type must be consistent with <code>pmech</code>.</p>
-  <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI CKA_UNWRAP can be MACed (such as returned earlier by <code>GenerateKeyPair</code>) or just the SPKI itself (if obtained from an external source, such as a certificate).</p>
-  <p>If an HMAC operation is initialized, session restrictions of the <code>Verify</code> object are inherited from the HMAC key. Since SPKIs are not tied to sessions, public-key Verify states are session-free.</p>
-  <p>The <code>key</code>,<code>klen</code> blob must be mapped from the PKCS #11 <code>hKey</code> parameter.</p>
-  <p>**Note**: <code>SignInit</code> and <code>VerifyInit</code> are internally the
-  same for HMAC and other symmetric/MAC mechanisms.</p>
+    <p>Implementation of PKCS #11 <code>C_VerifyInit</code>. Given a key blob <code>(key, klen)</code>, initialize a verify session state in <code>(state, slen)</code>. The key blob can be a public key object, or HMAC key bytes. Key blob type must be consistent with <code>pmech</code>.</p>
+    <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI CKA_UNWRAP can be MACed (such as returned earlier by <code>GenerateKeyPair</code>) or just the SPKI itself (if obtained from an external source, such as a certificate).</p>
+    <p>If an HMAC operation is initialized, session restrictions of the <code>Verify</code> object are inherited from the HMAC key. Since SPKIs are not tied to sessions, public-key Verify states are session-free.</p>
+    <p>The <code>key</code>,<code>klen</code> blob must be mapped from the PKCS #11 <code>hKey</code> parameter.</p>
+    <p>**Note**: <code>SignInit</code> and <code>VerifyInit</code> are internally the
+    same for HMAC and other symmetric/MAC mechanisms.</p>
 </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_VerifyInit (
-  unsigned char \*state, size_t \*statelen,
-  CK_MECHANISM_PTR mech,
-  const unsigned char \*pubKey, size_t pubKeylen,
-  target_t target
+    unsigned char \*state, size_t \*statelen,
+    CK_MECHANISM_PTR mech,
+    const unsigned char \*pubKey, size_t pubKeylen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_VerifyInit` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #VerifyInit_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -3936,30 +3936,30 @@ CK_RV m_VerifyInit (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>`C_VerifyInit` initializes a verification operation, where the signature is an appendix to the data. `hSession` is the session's handle; `pMechanism` points to the structure that specifies the verification mechanism; `hKey` is the handle of the verification key.</p>
     <p>The `CKA_VERIFY` attribute of the verification key, which indicates whether the key supports verification where the signature is an appendix to the data, must be `CK_TRUE`.</p>
     <p>After the application calls `C_VerifyInit`, the application can either call `C_Verify` to verify a signature on data in a single part; or call `C_VerifyUpdate` one or more times, followed by `C_VerifyFinal`, to verify a signature on data in multiple parts. The verification operation is active until the application calls `C_Verify` or `C_VerifyFinal`. To process extra data (in single or multiple parts), the application must call `C_VerifyInit` again.</p></td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_VerifyInit)(
-  CK_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism,
-  CK_OBJECT_HANDLE hKey
+    CK_SESSION_HANDLE hSession,
+    CK_MECHANISM_PTR pMechanism,
+    CK_OBJECT_HANDLE hKey
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_FUNCTION_NOT_PERMITTED, CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #VerifyInit_PKCS11}
 {: tab-title="PKCS #11"}
