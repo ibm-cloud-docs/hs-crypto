@@ -211,7 +211,7 @@ GREP11 attributes define object characteristics that set up how an object can be
 | CKA_PUBLIC_EXPONENT  | Public exponent e.             |     RSA private keys      |
 | CKA_VALUE_LEN  |    Length in bytes of key value.     |         AES keys  |
 | CKA_EXTRACTABLE  | CK_TRUE if key is extractable and can be wrapped. | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
-| CKA_LOCAL  | CK_TRUE only if the key was generated locally (on the token) with a `C_GenerateKey` or `C_GenerateKeyPair` call or created with a `C_CopyObject` call as a copy of a key which had its CKA_LOCAL attribute set to CK_TRUE.   | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_LOCAL  | CK_TRUE only if the key was generated locally (on the token) with a `C_GenerateKey` or `C_GenerateKeyPair` call or created with a `C_CopyObject` call as a copy of a key, which had its CKA_LOCAL attribute set to CK_TRUE.   | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_EC_PARAMS (CKA_ECDSA_PARAMS) | DER-encoding of an ANSI X9.62 Parameters value. | EC private keys, EC public keys        |
 | CKA_WRAP_WITH_TRUSTED  | CK_TRUE if the key can be wrapped only with a wrapping key that has CKA_TRUSTED set to CK_TRUE. Default is CK_FALSE. | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
 | CKA_CHECK_VALUE | The checksum of the key | AES keys, DES keys |
@@ -394,10 +394,10 @@ The `GetMechanismInfo` Function obtains information about a particular mechanism
     <th>Parameters</th>
     <td>
     <pre>
-message GetMechanismInfoRequest {
+Message GetMechanismInfoRequest {
     uint64 Mech = 2;
 }
-message GetMechanismInfoResponse {
+Message GetMechanismInfoResponse {
     MechanismInfo MechInfo = 3;
 }
     </pre>
@@ -503,7 +503,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismInfo)(
 ## Generating and deriving keys
 {: #grep11-operation-generate-keys}
 
-GREP11 provides the following functions to generate symmetric and asymmetric cryptographic keys. Based on the mechanism and key length you specify, you can generate various types of keys for various usage. You can also derive a key from a base key to stretch keys into longer keys or to obtain keys of a required format.
+GREP11 provides the following functions to generate symmetric and asymmetric cryptographic keys. Based on the mechanism and key length you specify, you can generate various types of keys for various usages. You can also derive a key from a base key to stretch keys into longer keys or to obtain keys of a required format.
 
 ### GenerateKey
 {: #grep11-GenerateKey}
@@ -586,7 +586,7 @@ CK_RV m_GenerateKey (
     <td>
     <p>`C_GenerateKey` generates a secret key or set of domain parameters, creating a new object. `hSession` is the session's handle; `pMechanism` points to the generation mechanism; `pTemplate` points to the template for the new key or set of domain parameters; `ulCount` is the number of attributes in the template; `phKey` points to the location that receives the handle of the new key or set of domain parameters.</p>
     <p>If the generation mechanism is for domain parameter generation, the `CKA_CLASS` attribut has the value `CKO_DOMAIN_PARAMETERS`; otherwise, it has the value `CKO_SECRET_KEY`.</p>
-    <p>Since the type of key or domain parameters to be generated is implicit in the generation mechanism, the template does not need to supply a key type. If it does supply a key type that is inconsistent with the generation mechanism, `C_GenerateKey` fails and returns the error code `CKR_TEMPLATE_INCONSISTENT`. The `CKA_CLASS` attribute is treated similarly.</p>
+    <p>Since the type of key or domain parameters to be generated is implicit in the generation mechanism, the template does not need to supply a key type. If it does supply a key type that is inconsistent with the generation mechanism, `C_GenerateKey` fails and returns the error code `CKR_TEMPLATE_INCONSISTENT`. The `CKA_CLASS` attribute is treated in the same way.</p>
     <p>If a call to `C_GenerateKey` cannot support the precise template that is supplied to it, it fails and returns without creating an object.</p>
     <p>The object created by a successful call to `C_GenerateKey` has the `CKA_LOCAL` attribute set to `CK_TRUE`.</p>
     </td>
@@ -681,7 +681,7 @@ The `GenerateKeyPair` function generates a public key and private key pair.
     <th>Parameters</th>
     <td>
     <pre>
-message GenerateKeyPairRequest {
+Message GenerateKeyPairRequest {
     Mechanism Mech = 1;
     map&lt;uint64,AttributeValue&gt; PrivKeyTemplate = 7;
     map&lt;uint64,AttributeValue&gt; PubKeyTemplate = 8;
@@ -709,7 +709,7 @@ message GenerateKeyPairResponse {
 	<td>
     <p>Implementation of PKCS #11 <code>C_GenerateKeyPair</code>.</p>
     <p>Keypair parameters are retrieved from <code>pmech</code>, <code>ppublic</code>, and <code>pprivate</code> parameters. For RSA keys, <code>ppublic</code> specifies the modulus size.</p>
-    <p>In FIPS mode, only RSA moduluses of 1024+256<code>n</code> bits are supported (integer <code>n</code>). Non-FIPS mode can generate keys of any even number of bits between the limits in the mechanism parameter list.</p>
+    <p>In FIPS mode, only RSA moduluses of 1024+256 <code>n</code> bits are supported (integer <code>n</code>). Non-FIPS mode can generate keys of any even number of bits between the limits in the mechanism parameter list.</p>
     <p>Public key is formatted as a standard SPKI (subject publickey infomation), readable by most libraries. It is integrity-protected by a transport-key specific MAC, which is not part of the SPKI itself. DSA parameter generation returns a non-SPKI structure in the public key field.</p>
     <p>If you tie an object to a session, <code>(pin, plen)</code> must be returned by <code>Login</code> to that session. Leaving <code>pin</code> <code>NULL</code> creates a public object, one that survives the login session.</p>
     <p>Returns wrapped private key to <code>(key, klen)</code>, public key as a MACed ASN.1/DER structure in <code>(pubkey, pklen)</code>.</p>
@@ -758,8 +758,8 @@ CK_RV m_GenerateKeyPair (
     <p>Since the types of keys to be generated are implicit in the key pair generation mechanism, the templates do not need to supply key types. If one of the templates does supply a key type that is inconsistent with the key generation mechanism, `C_GenerateKeyPair` fails and returns the error code `CKR_TEMPLATE_INCONSISTENT`. The `CKA_CLASS` attribute is treated similarly.</p>
     <p>If a call to `C_GenerateKeyPair` cannot support the precise templates that are supplied to it, it fails and returns without creating any key objects.</p>
     <p>A call to `C_GenerateKeyPair` never creates just one key and returns. A call can fail, and create no keys; or it can succeed, and create a matching public and private key pair.</p>
-    <p>The key objects created by a successful call to `C_GenerateKeyPair` has the `CKA_LOCAL` attributes set to `CK_TRUE`.</p>
-    <p>Note carefully the order of the arguments to `C_GenerateKeyPair`. The last two arguments do not have the same order as they did in the original Cryptoki Version 1.0 document. The order of these two arguments has caused some unfortunate confusion.</p>
+    <p>The key objects created by a successful call to `C_GenerateKeyPair` have the `CKA_LOCAL` attributes set to `CK_TRUE`.</p>
+    <p>Note carefully the order of the arguments to `C_GenerateKeyPair`. The last two arguments do not have the same order as they did in the original Cryptoki Version 1.0 document. The order of these two arguments caused some unfortunate confusion.</p>
 </td>
     </tr>
     <tr>
@@ -1199,14 +1199,14 @@ The `UnwrapKey` function unwraps (decrypts) a key.
     <th>Parameters</th>
     <td>
     <pre>
-message UnwrapKeyRequest {
+Message UnwrapKeyRequest {
     bytes Wrapped = 1;
     bytes KeK = 2;
     bytes MacKey = 3;
     Mechanism Mech = 5;
     map&lt;uint64,AttributeValue&gt; Template = 9;
 }
-message UnwrapKeyResponse {
+Message UnwrapKeyResponse {
     bytes UnwrappedBytes = 7;
     bytes CheckSum = 8;
 }
@@ -1266,13 +1266,13 @@ CK_RV m_UnwrapKey (
     <tr>
     <th>Description</th>
     <td>
-    <p>`C_UnwrapKey` unwraps (i.e. decrypts) a wrapped key, creating a new private key or secret key object. `hSession` is the session's handle; `pMechanism` points to the unwrapping mechanism; `hUnwrappingKey` is the handle of the unwrapping key; `pWrappedKey` points to the wrapped key; `ulWrappedKeyLen` is the length of the wrapped key; `pTemplate` points to the template for the new key; `ulAttributeCount` is the number of attributes in the template; `phKey` points to the location that receives the handle of the recovered key.</p>
+    <p>`C_UnwrapKey` unwraps (that is, decrypts) a wrapped key, creating a new private key or secret key object. `hSession` is the session's handle; `pMechanism` points to the unwrapping mechanism; `hUnwrappingKey` is the handle of the unwrapping key; `pWrappedKey` points to the wrapped key; `ulWrappedKeyLen` is the length of the wrapped key; `pTemplate` points to the template for the new key; `ulAttributeCount` is the number of attributes in the template; `phKey` points to the location that receives the handle of the recovered key.</p>
     <p>The `CKA_UNWRAP` attribute of the unwrapping key, which indicates whether the key supports unwrapping, must be `CK_TRUE`.</p>
     <p>The new key has the `CKA_ALWAYS_SENSITIVE` attribute set to `CK_FALSE`, and the `CKA_NEVER_EXTRACTABLE` attribute set to `CK_FALSE`. The `CKA_EXTRACTABLE` attribute is by default set to `CK_TRUE`.</p>
-    <p>Some mechanisms can modify, or attempt to modify. the contents of the `pMechanism` structure at the same time that the key is unwrapped.</p>
+    <p>Some mechanisms can modify, or attempt to modify. The contents of the `pMechanism` structure at the same time that the key is unwrapped.</p>
     <p>If a call to `C_UnwrapKey` cannot support the precise template that is supplied to it, it fails and returns without creating any key object.</p>
     <p>The key object created by a successful call to `C_UnwrapKey` has its `CKA_LOCAL` attribute set to `CK_FALSE`.</p>
-    <p>To partition the unwrapping keys so they can unwrap only a subset of keys the attribute `CKA_UNWRAP_TEMPLATE` can be used on the unwrapping key to specify an attribute set that is added to attributes of the key to be unwrapped. If the attributes do not conflict with the user supplied attribute template, in `pTemplate`, the unwrap operation proceeds. The value of this attribute is an attribute template and the size is the number of items in the template times the size of `CK_ATTRIBUTE`. If this attribute is not present on the unwrapping key then no extra attributes is added. If any attribute conflict occurs on an attempt to unwrap a key then the function SHALL return `CKR_TEMPLATE_INCONSISTENT`.</p>
+    <p>To partition the unwrapping keys so they can unwrap only a subset of keys the attribute `CKA_UNWRAP_TEMPLATE` can be used on the unwrapping key to specify an attribute set that is added to attributes of the key to be unwrapped. If the attributes do not conflict with the user supplied attribute template, in `pTemplate`, the unwrap operation proceeds. The value of this attribute is an attribute template and the size is the number of items in the template times the size of `CK_ATTRIBUTE`. If this attribute is not present on the unwrapping key, then no extra attributes is added. If any attribute conflict occurs on an attempt to unwrap a key, then the function SHALL return `CKR_TEMPLATE_INCONSISTENT`.</p>
     </td>
     </tr>
     <tr>
@@ -1500,7 +1500,7 @@ CK_RV m_GetAttributeValue (
     </ol>
     </p>
     <p>If case 1 applies to any of the requested attributes, then the call needs to return the value `CKR_ATTRIBUTE_SENSITIVE`. If case 2 applies to any of the requested attributes, then the call needs to return the value `CKR_ATTRIBUTE_TYPE_INVALID`. If case 5 applies to any of the requested attributes, then the call needs to return the value `CKR_BUFFER_TOO_SMALL`. As usual, if more than one of these error codes is applicable, `Cryptoki` can return any of them. Only if none of them applies to any of the requested attributes, `CKR_OK` is returned.</p>
-    <p>In the special case of an attribute whose value is an array of attributes, for example` CKA_WRAP_TEMPLATE`, where it is passed in with `pValue` not NULL, then if the `pValue` of elements within the array is NULL_PTR then the `ulValueLen` of elements within the array is set to the required length. If the `pValue` of elements within the array is not NULL_PTR, then the `ulValueLen` element of attributes within the array must reflect the space that the corresponding `pValue` points to, and `pValue` is completed if there is sufficient room. Therefore it is important to initialize the contents of a buffer before `C_GetAttributeValue` is called to get such an array value. If any `ulValueLen` within the array isn't large enough, it is set to `CK_UNAVAILABLE_INFORMATION` and the function returns `CKR_BUFFER_TOO_SMALL`, as it does if an attribute in the `pTemplate` argument has `ulValueLen` too small. Any attribute whose value is an array of attributes is identifiable by the `CKF_ARRAY_ATTRIBUTE` set of the attribute type.</p>
+    <p>In the special case of an attribute whose value is an array of attributes, for example ` CKA_WRAP_TEMPLATE`, where it is passed in with `pValue` not NULL, then if the `pValue` of elements within the array is NULL_PTR then the `ulValueLen` of elements within the array is set to the required length. If the `pValue` of elements within the array is not NULL_PTR, then the `ulValueLen` element of attributes within the array must reflect the space that the corresponding `pValue` points to, and `pValue` is completed if there is sufficient room. Therefore it is important to initialize the contents of a buffer before `C_GetAttributeValue` is called to get such an array value. If any `ulValueLen` within the array isn't large enough, it is set to `CK_UNAVAILABLE_INFORMATION` and the function returns `CKR_BUFFER_TOO_SMALL`, as it does if an attribute in the `pTemplate` argument has `ulValueLen` too small. Any attribute whose value is an array of attributes is identifiable by the `CKF_ARRAY_ATTRIBUTE` set of the attribute type.</p>
     <p>The error codes `CKR_ATTRIBUTE_SENSITIVE`, `CKR_ATTRIBUTE_TYPE_INVALID`, and `CKR_BUFFER_TOO_SMALL` do not denote true errors for `C_GetAttributeValue`. If a call to `C_GetAttributeValue` returns any of these three values, then the call must nonetheless have processed every attribute in the template that is supplied to `C_GetAttributeValue`. Each attribute in the template whose value can be returned by the call to `C_GetAttributeValue` is returned by the call to `C_GetAttributeValue`.</p>
     </td>
     </tr>
@@ -1604,7 +1604,7 @@ message SetAttributeValueResponse {
     <th>Description</th>
 	<td>
     <p>Implementation of PKCS #11 <code>C_SetAttributeValue</code>.</p>
-    <p>attribute packing: see _GetAttrValue</p>
+    <p>Attribute packing: see _GetAttrValue</p>
     <p>Currently, Ep11 only sends Boolean attributes, all other attributes are handled by host (and EP11 does not modify arrays, such as WRAP_TEMPLATE).</p>
     <p>Does not represent or need sessions (part of blob), therefore does not use the PKCS #11 <code>hSession</code> parameter.</p>
     </td>
@@ -1639,7 +1639,7 @@ CK_RV m_SetAttributeValue (
     <p>Certain objects might not be modified. Calling `C_SetAttributeValue` on such objects results in the `CKR_ACTION_PROHIBITED` error code. An application can consult the object's `CKA_MODIFIABLE` attribute to determine whether an object can be modified.</p>
     <p>Only session objects can be modified during a read-only session.</p>
     <p>The template can specify new values for any attributes of the object that can be modified. If the template specifies a value of an attribute that is incompatible with other existing attributes of the object, the call fails with the return code `CKR_TEMPLATE_INCONSISTENT`.</p>
-    <p>Not all attributes can be modified; see Section 4.1.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749" target="_blank">PKCS #11 API specification</a> for more more information.</p>
+    <p>Not all attributes can be modified; see Section 4.1.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749" target="_blank">PKCS #11 API specification</a> for more information.</p>
     </td>
     </tr>
     <tr>
@@ -2042,11 +2042,11 @@ CK_RV m_Encrypt (
 <table>
     <tr>
     <th>Description</th>
-    <td><p>`C_Encrypt` encrypts single-part data. `hSession` is the session’s handle; `pData` points to the data; `ulDataLen`is the length in bytes of the data; `pEncryptedData` points to the location that receives the encrypted data;`pulEncryptedDataLen` points to the location that holds the length in bytes of the encrypted data.</p>
+    <td><p>`C_Encrypt` encrypts single-part data. `hSession` is the session’s handle; `pData` points to the data; `ulDataLen` is the length in bytes of the data; `pEncryptedData` points to the location that receives the encrypted data;`pulEncryptedDataLen` points to the location that holds the length in bytes of the encrypted data.</p>
     <p>`C_Encrypt` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producingoutput.</p>
-    <p>The encryption operation must be initialized with `C_EncryptInit`. A call to `C_Encrypt` always terminates theactive encryption operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one that returns`CKR_OK`) to determine the length of the buffer that is needed to hold the ciphertext.</p>
+    <p>The encryption operation must be initialized with `C_EncryptInit`. A call to `C_Encrypt` always terminates theactive encryption operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one that returns `CKR_OK`) to determine the length of the buffer that is needed to hold the ciphertext.</p>
     <p>`C_Encrypt` cannot be used to terminate a multi-part operation, and must be called after `C_EncryptInit` withoutintervening `C_EncryptUpdate` calls.</p>
-    <p>For some encryption mechanisms, the input plaintext data has certain length constraints (either because the mechanismcan encrypt only relatively short pieces of plaintext, or because the mechanism’s input data must consist of an integralnumber of blocks). If these constraints are not satisfied, then `C_Encrypt` fails with return code`CKR_DATA_LEN_RANGE`.</p>
+    <p>For some encryption mechanisms, the input plaintext data has certain length constraints (either because the mechanismcan encrypt only relatively short pieces of plaintext, or because the mechanism’s input data must consist of an integralnumber of blocks). If these constraints are not satisfied, then `C_Encrypt` fails with return code `CKR_DATA_LEN_RANGE`.</p>
     <p>The plaintext and ciphertext can be in the same place, that is, it is OK if `pData` and `pEncryptedData` point to thesame location.</p>
     <p>For most mechanisms, `C_Encrypt` is equivalent to a sequence of `C_EncryptUpdate` operations followed by `C_EncryptFinal`.</p>
     </td>
@@ -2068,7 +2068,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_Encrypt)(
     <tr>
     <th>Return values</th>
     <td>
-    CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_INVALID, CKR_DATA_LEN_RANGE,CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR,CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
+    CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_INVALID, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR,CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
     </tr>
 </table>
@@ -2120,7 +2120,7 @@ The `EncryptUpdate` function continues a multiple-part encryption operation. Bef
     <th>Parameters</th>
     <td>
     <pre>
-message EncryptUpdateRequest {
+Message EncryptUpdateRequest {
     bytes State = 1;
     bytes Plain = 2;
 }
@@ -2265,7 +2265,7 @@ The `EncryptFinal` function finishes a multiple-part encryption operation.
     <th>Parameters</th>
     <td>
     <pre>
-message EncryptFinalRequest {
+Message EncryptFinalRequest {
     bytes State = 1;
 }
 message EncryptFinalResponse {
@@ -2490,7 +2490,7 @@ CK_RV m_EncryptSingle (
 ### ReencryptSingle
 {: #grep11-ReencryptSingle}
 
-With the `ReencryptSingle` function, you can decrypt data with the original key and subsequently encrypt the raw data with a different key in a single call within the cloud HSM. The key types used for this operation can be the same or different. This function is an IBM EP11 extension to the standard PKCS #11 specification. This single call is a viable option where a large amount of data needs to be reencrypted with different keys, and bypasses the need to perform a combination of `DecryptSingle` and `EncryptSingle` functions for each data item that needs to be reencrypted. It does not return any state to host and returns only the reencrypted data.
+With the `ReencryptSingle` function, you can decrypt data with the original key and then encrypt the raw data with a different key in a single call within the cloud HSM. The key types that are used for this operation can be the same or different. This function is an IBM EP11 extension to the standard PKCS #11 specification. This single call is a viable option where a large amount of data needs to be reencrypted with different keys, and bypasses the need to perform a combination of `DecryptSingle` and `EncryptSingle` functions for each data item that needs to be reencrypted. It does not return any state to host and returns only the reencrypted data.
 
 <table>
     <tr>
@@ -2530,7 +2530,7 @@ message ReencryptSingleResponse {
     <th>Description</th>
 	<td>
     <p>Non-standard variant of <code>Encrypt</code>. Processes data in one pass, with one call. Does not return any state to host, only the reencrypted data.</p>
-    <p>Decrypts data with the original key and subsequently encrypts the raw data with a different key within the cloud HSM.</p>
+    <p>Decrypts data with the original key and then encrypts the raw data with a different key within the cloud HSM.</p>
     </td>
     </tr>
     <tr>
@@ -2892,7 +2892,7 @@ The `DecryptUpdate` function continues a multiple-part decryption operation. Bef
     <th>Parameters</th>
     <td>
     <pre>
-message DecryptUpdateRequest {
+Message DecryptUpdateRequest {
     bytes State = 1;
     bytes Ciphered = 2;
 }
@@ -2948,7 +2948,7 @@ CK_RV m_DecryptUpdate (
 <table>
     <tr>
     <th>Description</th>
-    <td><p>`C_DecryptUpdate` continues a multiple-part decryption operation, processing another encrypted data part.`hSession` is the session’s handle; `pEncryptedPart` points to the encrypted data part; `ulEncryptedPartLen` is thelength of the encrypted data part; `pPart` points to the location that receives the recovered data part; `pulPartLen`points to the location that holds the length of the recovered data part.</p>
+    <td><p>`C_DecryptUpdate` continues a multiple-part decryption operation, processing another encrypted data part.`hSession` is the session’s handle; `pEncryptedPart` points to the encrypted data part; `ulEncryptedPartLen` is thelength of the encrypted data part; `pPart` points to the location that receives the recovered data part; `pulPartLen` points to the location that holds the length of the recovered data part.</p>
     <p>`C_DecryptUpdate` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> onproducing output.</p>
     <p>The decryption operation must be initialized with `C_DecryptInit`.  This function can be called any number oftimes in succession.  A call to `C_DecryptUpdate` which results in an error other than CKR_BUFFER_TOO_SMALL terminatesthe current decryption operation.</p>
     <p>The ciphertext and plaintext can be in the same place, that is, it is OK if `pEncryptedPart` and `pPart` point to thesame location.</p></td>
@@ -3033,7 +3033,7 @@ The `DecryptFinal` function finishes a multiple-part decryption operation.
     <th>Parameters</th>
     <td>
     <pre>
-message DecryptFinalRequest {
+Message DecryptFinalRequest {
     bytes State = 1;
 }
 message DecryptFinalResponse {
@@ -3806,7 +3806,7 @@ message SignSingleResponse {
     <p>Nonstandard extension, combination of <code>SignInit</code> and <code>Sign</code>. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host, only result.</p>
     <p>This is the preferred way of signing, without an extra roundtrip, encryption, and decryption. Functionally, <code>SignSingle</code> is equivalent to <code>SignInit</code> followed immediately by <code>Sign</code>.</p>
     <p>The <code>(key, klen)</code> blob and the <code>pmech</code> mechanism together must be passable to <code>SignInit</code>.</p>
-    <p>Multi-data requests for HMAC and CMAC signatures are supported (sub-variants 2 and 3).</p>
+    <p>Multi-data requests for HMAC and CMAC signatures are supported (subvariants 2 and 3).</p>
     <p>See also: <code>SignInit</code>, <code>Sign</code>, <code>VerifySingle</code>.</p>
     </td>
     </tr>
@@ -4197,7 +4197,7 @@ CK_RV m_VerifyUpdate (
     <tr>
     <th>Description</th>
     <td><p>`C_VerifyUpdate` continues a multiple-part verification operation, processing another data part. `hSession` is the session's handle, `pPart` points to the data part; `ulPartLen` is the length of the data part.</p>
-    <p>The verification operation must be initialized with `C_VerifyInit`. This function can be called any number of times in succession. A call to `C_VerifyUpdate` which results in an error terminates the current verification operation.</p></td>
+    <p>The verification operation must be initialized with `C_VerifyInit`. This function can be called any number of times in succession. A call to `C_VerifyUpdate` that results in an error terminates the current verification operation.</p></td>
     </tr>
     <tr>
     <th>Parameters</th>
