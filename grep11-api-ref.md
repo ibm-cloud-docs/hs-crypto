@@ -1978,11 +1978,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptInit)(
 The `Encrypt` function encrypts single-part data. You don't need to perform the `EncryptUpdate` and `EncryptFinal` suboperations for a single-part encryption. Before you call this function, make sure to run `EncryptInit` first.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_Encrypt`, which is an implementation of PKCS #11 `C_Encrypt`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -1995,11 +1995,11 @@ message EncryptResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #Encrypt_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -2007,32 +2007,32 @@ message EncryptResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_Encrypt</code>.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
-  <p>The <code>state</code> blob was output from: <code>EncryptInit</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <p>Implementation of PKCS #11 <code>C_Encrypt</code>.</p>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
+    <p>The <code>state</code> blob was output from: <code>EncryptInit</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_Encrypt (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR plain, CK_ULONG plainlen,
-  CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
-  target_t target
+    const unsigned char \*state, size_t statelen,
+    CK_BYTE_PTR plain, CK_ULONG plainlen,
+    CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_Encrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapterof the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structuredocument</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #Encrypt_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -2040,7 +2040,7 @@ CK_RV m_Encrypt (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>`C_Encrypt` encrypts single-part data. `hSession` is the session’s handle; `pData` points to the data; `ulDataLen`is the length in bytes of the data; `pEncryptedData` points to the location that receives the encrypted data;`pulEncryptedDataLen` points to the location that holds the length in bytes of the encrypted data.</p>
     <p>`C_Encrypt` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producingoutput.</p>
@@ -2050,27 +2050,27 @@ CK_RV m_Encrypt (
     <p>The plaintext and ciphertext can be in the same place, that is, it is OK if `pData` and `pEncryptedData` point to thesame location.</p>
     <p>For most mechanisms, `C_Encrypt` is equivalent to a sequence of `C_EncryptUpdate` operations followed by `C_EncryptFinal`.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_Encrypt)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pData,
-  CK_ULONG ulDataLen,
-  CK_BYTE_PTR pEncryptedData,
-  CK_ULONG_PTR pulEncryptedDataLen
+    CK_SESSION_HANDLE hSession,
+    CK_BYTE_PTR pData,
+    CK_ULONG ulDataLen,
+    CK_BYTE_PTR pEncryptedData,
+    CK_ULONG_PTR pulEncryptedDataLen
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_INVALID, CKR_DATA_LEN_RANGE,CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR,CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #Encrypt_PKCS11}
 {: tab-title="PKCS #11"}
@@ -2091,7 +2091,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_Encrypt)(
 
   EncryptResponse, err := cryptoClient.Encrypt(context.Background(), EncryptRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -2103,7 +2103,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_Encrypt)(
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### EncryptUpdate
@@ -2112,11 +2112,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_Encrypt)(
 The `EncryptUpdate` function continues a multiple-part encryption operation. Before you call this function, make sure to run `EncryptInit` first.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_EncryptUpdate`, which is an implementation of PKCS #11 `C_EncryptUpdate`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -2130,11 +2130,11 @@ message EncryptUpdateResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #EncryptUpdate_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -2142,31 +2142,31 @@ message EncryptUpdateResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_EncryptUpdate</code>.</p>
-  <p>The <code>state</code>, <code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
-  <p>The <code>state</code> blob was output from: <code>EncryptInit</code>.</p>
+    <p>Implementation of PKCS #11 <code>C_EncryptUpdate</code>.</p>
+    <p>The <code>state</code>, <code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
+    <p>The <code>state</code> blob was output from: <code>EncryptInit</code>.</p>
 </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_EncryptUpdate (
-  unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR plain, CK_ULONG plainlen,
-  CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
-  target_t target
+    unsigned char \*state, size_t statelen,
+    CK_BYTE_PTR plain, CK_ULONG plainlen,
+    CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_EncryptUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #EncryptUpdate_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -2174,34 +2174,34 @@ CK_RV m_EncryptUpdate (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>`C_EncryptUpdate` continues a multiple-part encryption operation, processing another data part. `hSession` is the session’s handle; `pPart` points to the data part; `ulPartLen` is the length of the data part; `pEncryptedPart` points to the location that receives the encrypted data part; `pulEncryptedPartLen` points to the location that holds the length in bytes of the encrypted data part.</p>
     <p>`C_EncryptUpdate` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
     <p>The encryption operation must be initialized with `C_EncryptInit`.  This function can be called any number of times in succession. A call to `C_EncryptUpdate` which results in an error other than `CKR_BUFFER_TOO_SMALL` terminates the current encryption operation.</p>
     <p>The `plaintext` and `ciphertext` can be in the same place, that is, it is OK if `pPart` and `pEncryptedPart` point to the same location.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_EncryptUpdate)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pPart,
-  CK_ULONG ulPartLen,
-  CK_BYTE_PTR pEncryptedPart,
-  CK_ULONG_PTR pulEncryptedPartLen
+    CK_SESSION_HANDLE hSession,
+    CK_BYTE_PTR pPart,
+    CK_ULONG ulPartLen,
+    CK_BYTE_PTR pEncryptedPart,
+    CK_ULONG_PTR pulEncryptedPartLen
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #EncryptUpdate_PKCS11}
 {: tab-title="PKCS #11"}
@@ -2237,7 +2237,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptUpdate)(
 
   ciphertext = append(ciphertext, EncryptUpdateResponse.Ciphered...)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -2249,7 +2249,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptUpdate)(
     cb(err, data.State, Buffer.concat([ciphertext, data.Ciphered]));
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 ### EncryptFinal
 {: #grep11-EncryptFinal}
@@ -2257,11 +2257,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptUpdate)(
 The `EncryptFinal` function finishes a multiple-part encryption operation.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_EncryptFinal`, which is an implementation of PKCS #11 `C_EncryptFinal`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -2273,11 +2273,11 @@ message EncryptFinalResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #EncryptFinal_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -2285,31 +2285,31 @@ message EncryptFinalResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_EncryptFinal</code>.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
-  <p>The <code>state</code> blob was output from: <code>EncryptInit</code>, <code>EncryptUpdate</code>.</p>
+    <p>Implementation of PKCS #11 <code>C_EncryptFinal</code>.</p>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
+    <p>The <code>state</code> blob was output from: <code>EncryptInit</code>, <code>EncryptUpdate</code>.</p>
 </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_EncryptFinal (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
-  target_t target
+    const unsigned char \*state, size_t statelen,
+    CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_EncryptFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #EncryptFinal_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -2317,32 +2317,32 @@ CK_RV m_EncryptFinal (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>`C_EncryptFinal` finishes a multiple-part encryption operation. `hSession` is the session’s handle; `pLastEncryptedPart` points to the location that receives the last encrypted data part, if any; `pulLastEncryptedPartLen` points to the location that holds the length of the last encrypted data part.</p>
     <p>`C_EncryptFinal` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
     <p>The encryption operation must be initialized with `C_EncryptInit`. A call to `C_EncryptFinal` always terminates the active encryption operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one that returns `CKR_OK`) to determine the length of the buffer that is needed to hold the ciphertext.</p>
     <p>For some multi-part encryption mechanisms, the input plaintext data has certain length constraints, because the mechanism’s input data must consist of an integral number of blocks. If these constraints are not satisfied, then `C_EncryptFinal` fails with return code `CKR_DATA_LEN_RANGE`.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_EncryptFinal)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pLastEncryptedPart,
-  CK_ULONG_PTR pulLastEncryptedPartLen
+    CK_SESSION_HANDLE hSession,
+    CK_BYTE_PTR pLastEncryptedPart,
+    CK_ULONG_PTR pulLastEncryptedPartLen
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #EncryptFinal_PKCS11}
 {: tab-title="PKCS #11"}
@@ -2360,7 +2360,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptFinal)(
 
   EncryptFinalResponse, err := cryptoClient.EncryptFinal(context.Background(), EncryptFinalRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -2371,7 +2371,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptFinal)(
     cb(err, Buffer.concat([ciphertext, data.Ciphered]));
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 ### EncryptSingle
 {: #grep11-EncryptSingle}
@@ -2379,11 +2379,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptFinal)(
 The `EncryptSingle` function processes data in one pass with one call. It does not return any state to host and returns only the encrypted data. This function is an IBM EP11 extension to the standard PKCS #11 specification and is a combination of the `EncryptInit` and `Encrypt` functions. It enables you to complete an encryption operation with a single call instead of a series of calls.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_EncryptSingle`<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -2397,11 +2397,11 @@ message EncryptSingleResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #EncryptSingle_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -2409,34 +2409,34 @@ message EncryptSingleResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Non-standard variant of <code>Encrypt</code>. Processes data in one pass, with one call. Does not return any state to host, only encrypted data.</p>
-  <p>This is the preferred method of encrypting data in one pass for XCP-aware applications. Functionally it is equivalent to <code>EncryptInit</code> followed immediately by <code>Encrypt</code>, but it saves roundtrips, wrapping, and unwrapping.</p>
-  <p>If the backend supports resident keys, the key can be also a resident-key handle.</p>
-  <p>See also: <code>Encrypt</code>, <code>EncryptInit</code>, <code>DecryptSingle</code>.</p>
-  <p>The <code>key</code> blob was output from: <code>GenerateKey</code>, <code>UnwrapKey</code>.</p>
+    <p>Non-standard variant of <code>Encrypt</code>. Processes data in one pass, with one call. Does not return any state to host, only encrypted data.</p>
+    <p>This is the preferred method of encrypting data in one pass for XCP-aware applications. Functionally it is equivalent to <code>EncryptInit</code> followed immediately by <code>Encrypt</code>, but it saves roundtrips, wrapping, and unwrapping.</p>
+    <p>If the backend supports resident keys, the key can be also a resident-key handle.</p>
+    <p>See also: <code>Encrypt</code>, <code>EncryptInit</code>, <code>DecryptSingle</code>.</p>
+    <p>The <code>key</code> blob was output from: <code>GenerateKey</code>, <code>UnwrapKey</code>.</p>
 </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_EncryptSingle (
-  const unsigned char \*key, size_t keylen,
-  CK_MECHANISM_PTR mech,
-  CK_BYTE_PTR plain, CK_ULONG plainlen,
-  CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
-  target_t target
+    const unsigned char \*key, size_t keylen,
+    CK_MECHANISM_PTR mech,
+    CK_BYTE_PTR plain, CK_ULONG plainlen,
+    CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_Encrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #EncryptSingle_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -2469,7 +2469,7 @@ CK_RV m_EncryptSingle (
 
   EncryptSingleResponse, err := cryptoClient.EncryptSingle(context.Background(), EncryptSingleRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -2485,7 +2485,7 @@ CK_RV m_EncryptSingle (
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 ### ReencryptSingle
 {: #grep11-ReencryptSingle}
@@ -2493,11 +2493,11 @@ CK_RV m_EncryptSingle (
 With the `ReencryptSingle` function, you can decrypt data with the original key and subsequently encrypt the raw data with a different key in a single call within the cloud HSM. The key types used for this operation can be the same or different. This function is an IBM EP11 extension to the standard PKCS #11 specification. This single call is a viable option where a large amount of data needs to be reencrypted with different keys, and bypasses the need to perform a combination of `DecryptSingle` and `EncryptSingle` functions for each data item that needs to be reencrypted. It does not return any state to host and returns only the reencrypted data.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_ReencryptSingle`<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -2514,11 +2514,11 @@ message ReencryptSingleResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #ReencryptSingle_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -2526,32 +2526,32 @@ message ReencryptSingleResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
     <p>Non-standard variant of <code>Encrypt</code>. Processes data in one pass, with one call. Does not return any state to host, only the reencrypted data.</p>
     <p>Decrypts data with the original key and subsequently encrypts the raw data with a different key within the cloud HSM.</p>
-  </td>
-  </tr>
-  <tr>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_ReencryptSingle (
-  const unsigned char \*dkey, size_t dkeylen,
-  const unsigned char \*ekey, size_t ekeylen,
-  CK_MECHANISM_PTR decmech,
-  CK_MECHANISM_PTR encmech,
-  CK_BYTE_PTR in, CK_ULONG inlen,
-  CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
-  target_t target);
+    const unsigned char \*dkey, size_t dkeylen,
+    const unsigned char \*ekey, size_t ekeylen,
+    CK_MECHANISM_PTR decmech,
+    CK_MECHANISM_PTR encmech,
+    CK_BYTE_PTR in, CK_ULONG inlen,
+    CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
+    target_t target);
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_Encrypt` and `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #ReencryptSingle_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -2584,7 +2584,7 @@ CK_RV m_ReencryptSingle (
 
   ReencryptSingleResponse, err := cryptoClient.ReencryptSingle(context.Background(), ReencryptSingleRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -2605,7 +2605,7 @@ CK_RV m_ReencryptSingle (
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 ### DecryptInit
 {: #grep11-DecryptInit}
@@ -2613,11 +2613,11 @@ CK_RV m_ReencryptSingle (
 The `DecryptInit` function initializes a decryption operation. You need to call this function first to perform a decryption.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_DecryptInit`, which is an implementation of PKCS #11 `C_DecryptInit`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -2630,11 +2630,11 @@ message DecryptInitResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DecryptInit_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -2642,28 +2642,28 @@ message DecryptInitResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>Implementation of PKCS #11 <code>C_DecryptInit</code>.
 </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_DecryptInit (
-  unsigned char \*state, size_t \*statelen,
-  CK_MECHANISM_PTR mech,
-  const unsigned char \*key, size_t keylen,
-  target_t target
+    unsigned char \*state, size_t \*statelen,
+    CK_MECHANISM_PTR mech,
+    const unsigned char \*key, size_t keylen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_DecryptInit` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DecryptInit_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -2671,32 +2671,32 @@ CK_RV m_DecryptInit (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>
     <p>`C_DecryptInit` initializes a decryption operation. `hSession` is the session’s handle; `pMechanism` points to the decryption mechanism; `hKey` is the handle of the decryption key.</p>
     <p>The `CKA_DECRYPT` attribute of the decryption key, which indicates whether the key supports decryption, must be `CK_TRUE`.</p>
     <p>After the application calls `C_DecryptInit`, the application can either call C_Decrypt to decrypt data in a single part; or call C_DecryptUpdate zero or more times, followed by `C_DecryptFinal`, to decrypt data in multiple parts.  The decryption operation is active until the application uses a call to `C_Decrypt` or `C_DecryptFinal` to obtain the final piece of plaintext. To process extra data (in single or multiple parts), the application must call `C_DecryptInit` again.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_DecryptInit)(
-  K_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism,
-  CK_OBJECT_HANDLE hKey
+    K_SESSION_HANDLE hSession,
+    CK_MECHANISM_PTR pMechanism,
+    CK_OBJECT_HANDLE hKey
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_FUNCTION_NOT_PERMITTED, CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #DecryptInit_PKCS11}
 {: tab-title="PKCS #11"}
@@ -2726,7 +2726,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptInit)(
 
   DecryptInitResponse, err := cryptoClient.DecryptInit(context.Background(), DecryptInitRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -2741,7 +2741,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptInit)(
     cb(err, data.State);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### Decrypt
@@ -2750,11 +2750,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptInit)(
 The `Decrypt` function decrypts data in a single part. You don't need to perform the `DecryptUpdate` and `DecryptFinal` suboperations for a single-part decryption. Before you call this function, make sure to run `DecryptInit` first.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_Decrypt`, which is an implementation of PKCS #11 `C_Decrypt`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -2767,11 +2767,11 @@ message DecryptResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #decrypt_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -2779,28 +2779,28 @@ message DecryptResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>Implementation of PKCS #11 C_Decrypt. It does not update (state, slen).</p>
     <p>The state, slen binary large object (BLOB) must be mapped from the PKCS #11 `hSession` parameter. The state BLOB was output from `DecryptInit`.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_Decrypt (const unsigned char *state, size_t slen,
-  CK_BYTE_PTR cipher, CK_ULONG clen,
-  CK_BYTE_PTR plain, CK_ULONG_PTR plen,
-  target_t target
+    CK_BYTE_PTR cipher, CK_ULONG clen,
+    CK_BYTE_PTR plain, CK_ULONG_PTR plen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #decrypt_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -2808,7 +2808,7 @@ CK_RV m_Decrypt (const unsigned char *state, size_t slen,
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>
       <p>`C_Decrypt` decrypts encrypted data in a single part.
@@ -2825,27 +2825,27 @@ CK_RV m_Decrypt (const unsigned char *state, size_t slen,
     <p>`C_Decrypt` cannot be used to terminate a multi-part operation, and needs to be called after `C_DecryptInit` without intervening `C_DecryptUpdate` calls.</p>
     <p>The ciphertext and plaintext can be in the same place, which means it is acceptable if pEncryptedData and pData point to the same location.</p>
     <p>If the input ciphertext data cannot be decrypted because it has an inappropriate length, either `CKR_ENCRYPTED_DATA_INVALID` or `CKR_ENCRYPTED_DATA_LEN_RANGE` can be returned.</p></td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_Decrypt)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pEncryptedData,
-  CK_ULONG ulEncryptedDataLen,
-  CK_BYTE_PTR pData,
-  CK_ULONG_PTR pulDataLen
+    CK_SESSION_HANDLE hSession,
+    CK_BYTE_PTR pEncryptedData,
+    CK_ULONG ulEncryptedDataLen,
+    CK_BYTE_PTR pData,
+    CK_ULONG_PTR pulDataLen
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_ENCRYPTED_DATA_INVALID, CKR_ENCRYPTED_DATA_LEN_RANGE, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #Decrypt_PKCS11}
 {: tab-title="PKCS #11"}
@@ -2864,7 +2864,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_Decrypt)(
 
   DecryptResponse, err := cryptoClient.Decrypt(context.Background(), DecryptRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -2876,7 +2876,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_Decrypt)(
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 ### DecryptUpdate
 {: #grep11-DecryptUpdate}
@@ -2884,11 +2884,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_Decrypt)(
 The `DecryptUpdate` function continues a multiple-part decryption operation. Before you call this function, make sure to run `DecryptInit` first.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_DecryptUpdate`, which is an implementation of PKCS #11 `C_DecryptUpdate`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -2902,11 +2902,11 @@ message DecryptUpdateResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DecryptUpdate_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -2914,31 +2914,31 @@ message DecryptUpdateResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_DecryptUpdate</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
-  <p>The <code>state</code> blob was output from: <code>DecryptInit</code>.</p>
+    <p>Implementation of PKCS #11 <code>C_DecryptUpdate</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
+    <p>The <code>state</code> blob was output from: <code>DecryptInit</code>.</p>
 </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_DecryptUpdate (
-  unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR ciphered, CK_ULONG cipheredlen,
-  CK_BYTE_PTR plain, CK_ULONG_PTR plainlen,
-  target_t target
+    unsigned char \*state, size_t statelen,
+    CK_BYTE_PTR ciphered, CK_ULONG cipheredlen,
+    CK_BYTE_PTR plain, CK_ULONG_PTR plainlen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_DecryptUpdate` return values. For more information, see the <em><strong>Return values</strong></em>chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Librarystructure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DecryptUpdate_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -2946,33 +2946,33 @@ CK_RV m_DecryptUpdate (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>`C_DecryptUpdate` continues a multiple-part decryption operation, processing another encrypted data part.`hSession` is the session’s handle; `pEncryptedPart` points to the encrypted data part; `ulEncryptedPartLen` is thelength of the encrypted data part; `pPart` points to the location that receives the recovered data part; `pulPartLen`points to the location that holds the length of the recovered data part.</p>
     <p>`C_DecryptUpdate` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> onproducing output.</p>
     <p>The decryption operation must be initialized with `C_DecryptInit`.  This function can be called any number oftimes in succession.  A call to `C_DecryptUpdate` which results in an error other than CKR_BUFFER_TOO_SMALL terminatesthe current decryption operation.</p>
     <p>The ciphertext and plaintext can be in the same place, that is, it is OK if `pEncryptedPart` and `pPart` point to thesame location.</p></td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_DecryptUpdate)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pEncryptedPart,
-  CK_ULONG ulEncryptedPartLen,
-  CK_BYTE_PTR pPart,
-  CK_ULONG_PTR pulPartLen
+    CK_SESSION_HANDLE hSession,
+    CK_BYTE_PTR pEncryptedPart,
+    CK_ULONG ulEncryptedPartLen,
+    CK_BYTE_PTR pPart,
+    CK_ULONG_PTR pulPartLen
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED,CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_FUNCTION_NOT_PERMITTED,CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID,CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED,CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #DecryptUpdate_PKCS11}
 {: tab-title="PKCS #11"}
