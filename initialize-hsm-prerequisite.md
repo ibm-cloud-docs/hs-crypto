@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-10"
 
 keywords: initialize service, key ceremony, hsm, load master key, key ceremony preparation
 
@@ -32,17 +32,17 @@ Before you can initialize your service instance, make sure that you have done th
   ```
   ibmcloud plugin install tke
   ```
-  {: pre}
+    {: pre}
 
-  If you have installed the TKE CLI plug-in, make sure to update your plug-in to the latest version with the following command:
+    If you have installed the TKE CLI plug-in, make sure to update your plug-in to the latest version with the following command:
   ```
   ibmcloud plugin update tke
   ```
-  {: pre}
+    {: pre}
 
 3. Set the environment variable `CLOUDTKEFILES` on your workstation to specify the directory where you want to save the master key part files and signature key files. The signature keys are used to sign TKE administrative commands.
 
-  - On the Linux&reg; operating system or MacOS, add the following line to the `.bash_profile` file:
+    - On the Linux&reg; operating system or MacOS, add the following line to the `.bash_profile` file:
 
      ```
      export CLOUDTKEFILES=<path>
@@ -51,18 +51,18 @@ Before you can initialize your service instance, make sure that you have done th
 
      For example, you can specify the *path* to `/Users/tke-files`.
 
-  - On Windows&reg;, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a `CLOUDTKEFILES` environment variable, set the value to the path for storing key files (For example, `C:\users\tke-files`), and restart your computer.
+     - On Windows&reg;, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a `CLOUDTKEFILES` environment variable, set the value to the path for storing key files (For example, `C:\users\tke-files`), and restart your computer.
 
 4. [Log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cli-getting-started#step3-configure-idt-env){: external}.
 
-  If you have multiple accounts, select the account that your service instance is created with. Make sure that you're logged in to the correct region and resource group where the service instance locates with the following command:
+    If you have multiple accounts, select the account that your service instance is created with. Make sure that you're logged in to the correct region and resource group where the service instance locates with the following command:
 
   ```
   ibmcloud target -r <region> -g <resource_group>
   ```
-  {: pre}
+    {: pre}
 
-  To find out the regions that {{site.data.keyword.hscrypto}} supports, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
+    To find out the regions that {{site.data.keyword.hscrypto}} supports, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
 ## What's next
 {: #initialize-hsm-prerequisite-whats-next}

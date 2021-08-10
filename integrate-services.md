@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-02"
+lastupdated: "2021-08-10"
 
 keywords: integration, encryption at rest, cloud object storage, object storage, kmip, containers, vmware, database, compute
 
@@ -125,19 +125,19 @@ Behind the scenes, the {{site.data.keyword.hscrypto}} key management API drives 
 The following table lists the API methods that add or remove envelope encryption on a resource.
 
 <table>
-  <tr>
+    <tr>
     <th>Method</th>
     <th>Description</th>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td><code>POST /keys/{root_key_ID}?action=wrap</code></td>
     <td><a href="/docs/hs-crypto?topic=hs-crypto-wrap-keys">Wrap (encrypt) a data encryption key.</a></td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td><code>POST /keys/{root_key_ID}?action=unwrap</code></td>
     <td><a href="/docs/hs-crypto?topic=hs-crypto-unwrap-keys">Unwrap (decrypt) a data encryption key.</a></td>
-  </tr>
-  <caption>Table 5. Describes the {{site.data.keyword.hscrypto}} key management API methods</caption>
+    </tr>
+    <caption>Table 5. Describes the {{site.data.keyword.hscrypto}} key management API methods</caption>
 </table>
 
 To find out more about programmatically managing your keys in {{site.data.keyword.hscrypto}}, check out the [{{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.

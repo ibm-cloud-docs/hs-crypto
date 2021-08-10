@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-08-10"
 
 keywords: pkcs11 keystore, ep11 keystore, create pkcs11 keystore, generate pkcs11 keystore, view ep11 keystore, delete ep11 keystore, view pkcs11 keystore
 
@@ -56,28 +56,28 @@ An EP11 keystore table is displayed with the following details.
 
 <table>
 <tr>
-  <th>Setting</th>
-  <th>Description</th>
+    <th>Setting</th>
+    <th>Description</th>
 </tr>
 <tr>
-  <td>ID</td>
-  <td>
+    <td>ID</td>
+    <td>
     <p>The unique identifier that is assigned when the keystore is created.</p>
-  </td>
+    </td>
 </tr>
 <tr>
-  <td>Name</td>
-  <td>
+    <td>Name</td>
+    <td>
     <p>A human-readable alias for easy identification of your keystore.</p>
     <p>The keystore name might not be unique. You can assign multiple keystores with the same name. If there is no name associated with the keystore, it means the keystore is created using the PKCS #11 API.</p>
-  </td>
+    </td>
 </tr>
 <tr>
-  <td>Type</td>
-  <td>
+    <td>Type</td>
+    <td>
     <p>The type of the keystore. Possible values are **Public** and **Private**.</p>
     <p>The database-backed EP11 keystores are composed of two types of keystores: public keystores for storing less sensitive EP11 keys that can be accessed by any user types and private keystores for storing sensitive EP11 keys that can be accessed by normal users only. For more information about keystores, see [Introducing keystore](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-keystore-intro).</p>
-  </td>
+    </td>
 </tr>
     <caption>Table 1. Describes the EP11 keystores table</caption>
 </table>
@@ -99,12 +99,12 @@ Complete the following steps to create an EP11 keystore:
 1. Select the **EP11 keystores** tab in the side menu. You can see a list of existing EP11 keystores with each having a unique ID.
 2. Click **Create keystore**. In the **Create EP11 keystore** panel that is displayed, enter the **Keystore name** and select the **Keystore type** to be **Private** or **Public**.
 
-  The database-backed EP11 keystores are composed of two types of keystores: public keystores for storing less sensitive EP11 keys that can be accessed by any user types and private keystores for storing sensitive EP11 keys that can be accessed by normal users only. For more information about keystores, see [Introducing keystore](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-keystore-intro).
+    The database-backed EP11 keystores are composed of two types of keystores: public keystores for storing less sensitive EP11 keys that can be accessed by any user types and private keystores for storing sensitive EP11 keys that can be accessed by normal users only. For more information about keystores, see [Introducing keystore](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-keystore-intro).
 
 3. Click **Create keystore**. You can see the new keystore listed at the first row.
 
-  To copy the keystore ID, click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")and then click **Copy ID to clipboard**.
-  {: tip}
+    To copy the keystore ID, click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")and then click **Copy ID to clipboard**.
+    {: tip}
 
 ## Deleting EP11 keystores
 {: #delete-ep11-keystore-ui}

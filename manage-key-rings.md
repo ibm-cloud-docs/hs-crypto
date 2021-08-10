@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-08-10"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -39,15 +39,15 @@ Before you create a key ring for your {{site.data.keyword.hscrypto}} instance, k
 
 - Every {{site.data.keyword.hscrypto}} instance comes with a default key ring.
 
-  Each newly created {{site.data.keyword.hscrypto}} instance comes with a generated key ring with an ID of `default`. All keys that are not associated with a specified key ring exists within the default key ring.
+    Each newly created {{site.data.keyword.hscrypto}} instance comes with a generated key ring with an ID of `default`. All keys that are not associated with a specified key ring exists within the default key ring.
 
 - Key rings can hold root keys and standard keys, but not EP11 keys.
 
-  Key rings can contain both root and standard keys. There is no limit on how many keys can exist within a key ring. Key rings don't apply to Enterprise PKCS #11 (EP11) keys.
+    Key rings can contain both root and standard keys. There is no limit on how many keys can exist within a key ring. Key rings don't apply to Enterprise PKCS #11 (EP11) keys.
 
 - A key can only belong to one key ring at a time.
 
-  A key can only belong to one key ring. Key ring assignment happens upon key creation. If a key ring ID is not passed in upon creation, the key will belong to the default key ring. You can update the key ring after the key creation.
+    A key can only belong to one key ring. Key ring assignment happens upon key creation. If a key ring ID is not passed in upon creation, the key will belong to the default key ring. You can update the key ring after the key creation.
 
 
 ## Creating key rings
@@ -200,8 +200,8 @@ To assign access to a key ring with the console, complete the following steps:
 9. Click **Add**.
 10. Continue to add platform and service access roles as needed. When you finish all the access assignment, click **Assign**.
 
-  You must assign the user must at least _Reader_ access to the entire instance in order for them to list, create, and delete key rings within the instance.
-  {: note}
+    You must assign the user must at least _Reader_ access to the entire instance in order for them to list, create, and delete key rings within the instance.
+    {: note}
 
 ## Listing key rings
 {: #list-key-ring}
@@ -251,7 +251,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
 
     Replace the variables in the example request according to the following table.
 
-  <table>
+    <table>
     <tr>
       <th>Variable</th>
       <th>Description</th>
@@ -312,7 +312,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
     <caption>
     Table 4. Describes the variables that are needed to view key rings with the key management API.
     </caption>
-  </table>
+    </table>
 
     A successful `GET api/v2/key_rings` request returns a collection of key rings that are available in your {{site.data.keyword.hscrypto}} service instance.
 

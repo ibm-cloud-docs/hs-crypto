@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-08-10"
 
 keywords: create key alias, key alias, delete key alias, add key alias, retrieve encryption key by alias, create alias API examples
 
@@ -34,19 +34,19 @@ Before you manage key alias for keys in {{site.data.keyword.hscrypto}}, keep in 
 
 - An alias is independent from a key.
 
-  An alias is its own resource and any actions that are taken on it do not affect the associated key. For example, deleting an alias does not delete the associated key.
+    An alias is its own resource and any actions that are taken on it do not affect the associated key. For example, deleting an alias does not delete the associated key.
 
 - An alias can be associated with only one key at a time.
 
-  An alias can be associated with only one key that is located in the same instance and region. If you want to change the key that the alias is associated with, you need to perform the following steps:
+    An alias can be associated with only one key that is located in the same instance and region. If you want to change the key that the alias is associated with, you need to perform the following steps:
 
-  1. Delete the alias.
-  2. Wait up to 10 minutes.
-  3. Re-create the alias and map it to the key.
+    1. Delete the alias.
+    2. Wait up to 10 minutes.
+    3. Re-create the alias and map it to the key.
 
 - You can create an alias with the same name in a different instance or region.
 
-  Each alias is associated with a different key in each instance or region, with which, your service's application code can be reusable in different instances or regions. For example, if you name an alias `Application Key` in both the `us-south` and `us-east` regions, with each linked to a different key.
+    Each alias is associated with a different key in each instance or region, with which, your service's application code can be reusable in different instances or regions. For example, if you name an alias `Application Key` in both the `us-south` and `us-east` regions, with each linked to a different key.
 
 ## Creating key aliases
 {: #create-key-alias}
@@ -68,7 +68,7 @@ Create a key alias with the console by completing the following steps:
 5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")to open the list of options for the key and click **Edit key aliases**.
 6. Enter key aliases separated by a comma. You can add up to five aliases for a key.
 
-  Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive).
+    Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive).
 
 7. Click **Save**.
 
@@ -295,7 +295,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
         <td><varname>port</varname></td>
         <td><strong>Required.</strong> The port number of the API endpoint.</td>
       </tr>
-      
+
       <tr>
         <td>
           <varname>key_ID</varname>

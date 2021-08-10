@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-07-30"
+lastupdated: "2021-08-10"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -55,11 +55,11 @@ The following diagram illustrates the relationship between various components wh
 
 - The Smart Card Utility Program
 
-  One of the two applications that are installed as part of the Management Utilities. It sets up and manages the smart cards that are used by the Trusted Key Entry application.
+    One of the two applications that are installed as part of the Management Utilities. It sets up and manages the smart cards that are used by the Trusted Key Entry application.
 
 - The Trusted Key Entry application
 
-  One of the two applications that are installed as part of the Management Utilities. It uses smart cards to load master keys in service instances and perform other configuration tasks for service instances.
+    One of the two applications that are installed as part of the Management Utilities. It uses smart cards to load master keys in service instances and perform other configuration tasks for service instances.
 
 ### Understanding smart cards
 {: #understand-smart-card}
@@ -68,11 +68,11 @@ A smart card looks like a credit card with an embedded chip. The chip can perfo
 
 - Certificate authority smart cards
 
-  The Certificate authority smart cards establish a set of smart cards that can work together, called a smart card zone.
+    The Certificate authority smart cards establish a set of smart cards that can work together, called a smart card zone.
 
 - EP11 smart cards
 
-  Enterprise PKCS #11 (EP11) smart cards hold an administrator signature key and up to 85 master key parts. The custom software on an EP11 smart card includes functions for signing a command by using a private signature key that is stored on the smart card and for encrypting a master key part for delivery to a crypto unit.
+    Enterprise PKCS #11 (EP11) smart cards hold an administrator signature key and up to 85 master key parts. The custom software on an EP11 smart card includes functions for signing a command by using a private signature key that is stored on the smart card and for encrypting a master key part for delivery to a crypto unit.
 
 Smart cards are protected by a personal identification number (PIN) that must be entered on a smart card reader PIN pad before the smart card performs the operations. The EP11 smart card has a single PIN. The certificate authority smart card has two PINs and both must be entered to enable operations.
 
@@ -82,15 +82,15 @@ When you use smart cards, consider the following recommendations:
 
 - Order eight or 10 smart cards and configure them this way:
 
-  - Create a certificate authority smart card and a backup certificate authority smart card.
+    - Create a certificate authority smart card and a backup certificate authority smart card.
 
     A backup certificate authority smart card can be created by using the Smart Card Utility Program. Select **CA Smart Card** > **Backup CA smart card** from the menu, and follow the prompts.
 
-  - Create two EP11 smart cards to hold an administrator signature key. Generate the administrator signature key on one EP11 smart card and copy it to the other.
+    - Create two EP11 smart cards to hold an administrator signature key. Generate the administrator signature key on one EP11 smart card and copy it to the other.
 
     The contents of an EP11 smart card can be copied to another EP11 smart card that was created in the same smart card zone by using the Trusted Key Entry application. On the **Smart card** tab, click **Copy smart card**, and follow the prompts.
 
-  - Create four or six EP11 smart cards to hold master key parts. Generate an EP11 master key part on two or three of the smart cards, depending on whether you want to use two or three key parts when you load your master key. Copy each key part value to a backup EP11 smart card.
+    - Create four or six EP11 smart cards to hold master key parts. Generate an EP11 master key part on two or three of the smart cards, depending on whether you want to use two or three key parts when you load your master key. Copy each key part value to a backup EP11 smart card.
 
 - For greater security, generate administrator signature keys on more EP11 smart cards and set the signature thresholds in your crypto units to a value greater than one. You can install up to eight administrators in your crypto units and specify that up to eight signatures are required for some administrative commands.
 

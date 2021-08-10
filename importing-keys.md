@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-08-10"
 
 keywords: import encryption key, upload encryption key, bring your own key, byok, key material, secure import, import tokens
 
@@ -42,15 +42,15 @@ When you use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to creat
 Keep the following considerations in mind when you're ready to import root key material to the service.
 
 <dl>
-  <dt>Review your options for creating key material</dt>
+    <dt>Review your options for creating key material</dt>
     <dd>Explore your options for creating 256-bit symmetric encryption keys based on your security needs. For example, you can use your internal key management system, backed by a FIPS-validated, on-premises hardware security module (HSM), to generate key material before you bring keys to the cloud. If you're building a proof of concept, you can also use a cryptography toolkit such as <a href="https://www.openssl.org/" target="_blank" class="external">OpenSSL</a> to generate key material that you can import into {{site.data.keyword.hscrypto}} for your testing needs.</dd>
-  <dt>Choose an option for importing key material into {{site.data.keyword.hscrypto}}</dt>
+    <dt>Choose an option for importing key material into {{site.data.keyword.hscrypto}}</dt>
     <dd>Choose from two options for importing root keys based on the level of security that's required for your environment or workload. By default, {{site.data.keyword.hscrypto}} encrypts your key material while it's in transit by using the Transport Layer Security (TLS) 1.2 protocol. If you're building a proof of concept or trying out the service for the first time, you can import root key material into {{site.data.keyword.hscrypto}} by using this default option. If your workload requires a security mechanism beyond TLS, you can also <a href="#using-import-tokens">use an import token</a> to encrypt and import root key material into the service.</dd>
-  <dt>Plan ahead for encrypting your key material</dt>
+    <dt>Plan ahead for encrypting your key material</dt>
     <dd>If you choose to encrypt your key material by using an import token, determine a method for running RSA encryption on the key material. You must use the <code>RSAES_OAEP_SHA_1</code> encryption scheme as specified by the <a href="https://tools.ietf.org/html/rfc3447" target="_blank" class="external">PKCS #1 v2.1 standard for RSA encryption</a>. Review the capabilities of your internal key management system or on-premises HSM to determine your options.</dd>
-  <dt>Plan ahead for encrypting the nonce</dt>
+    <dt>Plan ahead for encrypting the nonce</dt>
     <dd>If you choose to encrypt your key material by using an import token, you must also determine a method for running AES-GCM encryption on the nonce that is distributed by {{site.data.keyword.hscrypto}}. The nonce serves as a session token that checks the originality of a request to protect against malicious attacks and unauthorized calls. Review the capabilities of your internal key management system or on-premises HSM to determine your options.</dd>
-  <dt>Manage the lifecycle of imported key material</dt>
+    <dt>Manage the lifecycle of imported key material</dt>
     <dd>After you import key material into the service, keep in mind that you are responsible for managing the complete lifecycle of your key. By using the {{site.data.keyword.hscrypto}} key management API, you can set an expiration date for the key when you decide to upload it into the service. However, if you want to <a href="/docs/hs-crypto?topic=hs-crypto-rotate-keys">rotate an imported root key</a>, you must generate and provide new key material to retire and replace the existing key. </dd>
 </dl>
 

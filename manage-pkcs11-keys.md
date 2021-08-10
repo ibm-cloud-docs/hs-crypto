@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-10"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -53,7 +53,7 @@ On the {{site.data.keyword.hscrypto}} dashboard, do the following to view EP11 k
 
 1. To view a list of created EP11 keys, select the **EP11 keys** tab in the side menu.
 
-  An EP11 key table is displayed with the following details.
+    An EP11 key table is displayed with the following details.
 
     <table>
     <tr>
@@ -102,8 +102,8 @@ On the {{site.data.keyword.hscrypto}} dashboard, do the following to view EP11 k
 
 2. To view details of the [key attributes](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list), click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")of the key row, and then select **Show more details**.
 
-  You can also identify the public key, the private key, and the symmetric key by checking the value of the CKA_CLASS attribute. `CKO_PUBLIC_KEY` indicates a public key; `CKO_PRIVATE_KEY` indicates a private key; `CKO_SECRET_KEY` indicates a symmetric key.
-  {: tip}
+    You can also identify the public key, the private key, and the symmetric key by checking the value of the CKA_CLASS attribute. `CKO_PUBLIC_KEY` indicates a public key; `CKO_PRIVATE_KEY` indicates a private key; `CKO_SECRET_KEY` indicates a symmetric key.
+    {: tip}
 
 ## Creating EP11 keys
 {: #create-ep11-key-ui}
@@ -125,7 +125,7 @@ Complete the following steps to create an EP11 key:
 1. Select the **EP11 keys** tab in the side menu. You can see a list of existing EP11 keys with each having a unique ID.
 2. Click **Create key**. In the **Create EP11 key** panel that is displayed, complete the following steps:
 
-  1. Specify the following key details on the **Identifier** page:
+    1. Specify the following key details on the **Identifier** page:
 
     <table>
     <tr>
@@ -156,7 +156,7 @@ Complete the following steps to create an EP11 key:
 
     By default, two key IDs are automatically generated. One is for the public key, the other is for the private key. However, if you select a symmetric key type, such as an AES key, a DES key, or a Generic key, only one key ID is shown on the page.
 
-  2. Specify key attributes by following these steps:
+    2. Specify key attributes by following these steps:
 
     * If you are creating an asymmetric key, specify key attributes on the **Public key attributes** and **Private key attributes** pages subsequently:
 
@@ -172,7 +172,7 @@ Complete the following steps to create an EP11 key:
         3. (Optional) You can delete more attributes by clicking the **Trash can** icon ![Trash can icon](../icons/icon_trash.svg "Trash can"). The required attributes cannot be deleted.
         4. Click **Next** to continue.
 
-  3. On the **Confirmation** page, verify the key details and click **Create key**.
+        3. On the **Confirmation** page, verify the key details and click **Create key**.
 
     1. Verify the key details that are displayed, especially the key type, keystore, and key attributes.
 

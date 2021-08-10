@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-06"
+lastupdated: "2021-08-10"
 
 keywords: initialize service instance, load master key, key ceremony, recovery crypto unit
 
@@ -45,11 +45,11 @@ To initialize your service instance using recovery crypto units, complete the fo
   ```
   ibmcloud tke auto-init
   ```
-  {: pre}
+    {: pre}
 
-  Follow this procedure to initialize your service instance. Complete the steps by following the prompts:
+    Follow this procedure to initialize your service instance. Complete the steps by following the prompts:
 
-  1. Select the instance that you want to initialize.
+    1. Select the instance that you want to initialize.
 
     If you have multiple service instances in the current resource group, this command lists all the available instances with a number associated to each instance. Enter the INSTANCE NUM to select the instance that you want to initialize and press enter to continue.
 
@@ -73,7 +73,7 @@ To initialize your service instance using recovery crypto units, complete the fo
     You must not zeroize the crypto units if key storage for the service instance contains data. Otherwise, all data in key storage will be lost and you will be not able to access any keys or data in your service instance.
     {: important}
 
-  2. Set the value of two [signature thresholds](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept): signature threshold and revocation signature thresholds.
+    2. Set the value of two [signature thresholds](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept): signature threshold and revocation signature thresholds.
 
     When prompted, enter the number for the signature threshold first and then for the revocation signature threshold. The numbers must be between one and eight. The two threshold numbers can be different. Setting the signature thresholds to a value greater than one is a way to enforce [quorum authentication](/docs/hs-crypto?topic=hs-crypto-understand-concepts#quorum-authenticaion-concept) for sensitive operations.
 
@@ -90,7 +90,7 @@ To initialize your service instance using recovery crypto units, complete the fo
     ```
     {: screen}
 
-  3. Add [crypto unit administrators](/docs/hs-crypto?topic=hs-crypto-understand-concepts#admin-concept).
+    3. Add [crypto unit administrators](/docs/hs-crypto?topic=hs-crypto-understand-concepts#admin-concept).
 
     When prompted, enter the number of administrators that you want to add to the crypto units. The number needs to be equal to or greater than the signature threshold values that you set in the previous step.
 
@@ -133,7 +133,7 @@ To initialize your service instance using recovery crypto units, complete the fo
     The signature key file is protected by password. You need to remember the passwords that you enter when creating new signature key files and make sure the files are not removed from your workstation. Otherwise, you are not able to perform future administrative actions that need to be signed, such as [rotating master keys](https://test.cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit).
     {: important}
 
-  4. Load the master key to crypto units.
+    4. Load the master key to crypto units.
 
     A random master key value is generated in a recovery crypto unit and is then transferred to all the other crypto units in the service instance.
 
@@ -160,9 +160,9 @@ To initialize your service instance using recovery crypto units, complete the fo
   ```
   ibmcloud tke cryptounit-compare
   ```
-  {: pre}
+    {: pre}
 
-  For the complete master key loading process, see [understanding the master key](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-key-ceremony).
+    For the complete master key loading process, see [understanding the master key](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-key-ceremony).
 
 
 ## What's next

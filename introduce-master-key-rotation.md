@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-08-10"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -47,8 +47,8 @@ The following flow shows how master key rotation works in this mode:
 1. Load the new master key register by using the `cryptounit-mk-load` command or by clicking on the **Load** button in the Trusted Key Entry application. The state of the new master key register is changed from `Empty` to `Full uncommitted`.
 2. Commit the new master key value by using the `cryptounit-mk-commit` command or by clicking on the **Commit** button in the Trusted Key Entry application. The new master key register state is changed to `Full committed`.
 3. Reencrypt key storage and activate the new master key by using the `cryptounit-mk-rotate` command or by clicking on the **Rotate** button in the Trusted Key Entry application:
-  1. Encryption keys in key storage are decrypted by using the value in the current master key register and then reencrypted by using the value in the new master key register. The rewrapping takes place inside the hardware security module (HSM), so it's secure.
-  2. The new master key is activated and loaded to the current master key register in `Valid` state, and the new master key register is cleared and back to `Empty` state.
+    1. Encryption keys in key storage are decrypted by using the value in the current master key register and then reencrypted by using the value in the new master key register. The rewrapping takes place inside the hardware security module (HSM), so it's secure.
+    2. The new master key is activated and loaded to the current master key register in `Valid` state, and the new master key register is cleared and back to `Empty` state.
 
 The following chart illustrates how the master key register state changes during the master key rotation. For detailed instructions, see [Rotating master keys using key parts](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-key-parts).
 

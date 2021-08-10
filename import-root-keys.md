@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-10"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -289,8 +289,8 @@ When importing an existing root key, it is required to include the encrypted key
       </caption>
     </table>
 
-  If you want to output the base64 material in the command line directly rather than a file, run the command `openssl enc -base6<<< '<key_material_string>'`, where *key_material_string* is the key material input for your imported key.
-  {: note}
+    If you want to output the base64 material in the command line directly rather than a file, run the command `openssl enc -base6<<< '<key_material_string>'`, where *key_material_string* is the key material input for your imported key.
+    {: note}
 
 ### Using OpenSSL to create and encode new key material
 {: #open-ssl-encoding-new-key-material-root-key}

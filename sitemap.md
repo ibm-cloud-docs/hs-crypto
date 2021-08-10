@@ -928,8 +928,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Managing security and compliance with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance)
 
-* [Monitoring security and compliance posture with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#monitor-crypto)
-
 * [Governing {{site.data.keyword.hscrypto}} resource configuration with config rules](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#govern-crypto)
 
 
