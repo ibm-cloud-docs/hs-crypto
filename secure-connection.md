@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-10"
 
 keywords: securing connection, disabling public service endpoint
 
@@ -105,7 +105,7 @@ There are several ways for you to update the network settings. However, before y
 * When you [provision a service instance](/docs/hs-crypto?topic=hs-crypto-provision), you can choose between the `private-only` and `public-and-private` options using either the {{site.data.keyword.cloud_notm}} console or CLI.
 * [Manage and update the network settings](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies) after you provision and initialize the service instance.
 
-  After you enable a private-only network, you are not able to perform further key management actions in the {{site.data.keyword.cloud_notm}} console. Use either the CLI or API to switch between a private-only network and a public-and-private network instead.
+    After you enable a private-only network, you are not able to perform further key management actions in the {{site.data.keyword.cloud_notm}} console. Use either the CLI or API to switch between a private-only network and a public-and-private network instead.
 
 The instance access policy, which controls access to the instance from either
 public or private IP addresses, is not enforced after the `ibmcloud resource service-instance-delete (NAME | ID)` command to
@@ -224,19 +224,19 @@ If you are using the GREP11 service, the service handles the private endpoint co
 
 2. Set the environment variable to target the {{site.data.keyword.hscrypto}} private endpoint.
 
-  Use the following commands on the Linux&reg; operating system or MacOS only. For how to set environment variables on the Windows&reg; operating system, see [Accessing {{site.data.keyword.keymanagementserviceshort}} CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli).
-  {: note}
+    Use the following commands on the Linux&reg; operating system or MacOS only. For how to set environment variables on the Windows&reg; operating system, see [Accessing {{site.data.keyword.keymanagementserviceshort}} CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli).
+    {: note}
 
-  Set the KP_PRIVATE_ADDR environment variable to target the private endpoint for the key management service:
+    Set the KP_PRIVATE_ADDR environment variable to target the private endpoint for the key management service:
 
   ```
   export KP_PRIVATE_ADDR=https://api.private.<region>.hs-crypto.cloud.ibm.com:<port>
   ```
-  {: pre}
+    {: pre}
 
-  You can find the Key management private endpoint URL listed in the service dashboard under **Overview** &gt; **Connect** &gt; **Key management private endpoint URL**.
+    You can find the Key management private endpoint URL listed in the service dashboard under **Overview** &gt; **Connect** &gt; **Key management private endpoint URL**.
 
-  Alternatively, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external}. The returned value includes the following:
+    Alternatively, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external}. The returned value includes the following:
 
   ```
 {
@@ -251,10 +251,10 @@ If you are using the GREP11 service, the service handles the private endpoint co
     }
   }
   ```
-  {: screen}
+    {: screen}
 
-  The private endpoint URL is returned in `private`. For key management endpoint, use the value that is returned in the `kms` section. The KP_PRIVATE_ADDR environment variable is used to set the API endpoint URL both for public endpoint and private endpoint. If you want to use the public endpoint, make sure to set the KP_PRIVATE_ADDR environment variable as the public endpoint URL that is returned in the `public` field in the `kms` section.
-  {: important}
+    The private endpoint URL is returned in `private`. For key management endpoint, use the value that is returned in the `kms` section. The KP_PRIVATE_ADDR environment variable is used to set the API endpoint URL both for public endpoint and private endpoint. If you want to use the public endpoint, make sure to set the KP_PRIVATE_ADDR environment variable as the public endpoint URL that is returned in the `public` field in the `kms` section.
+    {: important}
 
 ## Step 6: Test your private network connection
 {: #Test-private-connection}
@@ -268,18 +268,18 @@ To test the private network connection for the key management service, use {{sit
   ```sh
   ibmcloud kp create <key_name> -i <instance_ID>
   ```
-  {: pre}
+    {: pre}
 
-  Replace `<key_name>` with a human-readable alias for easy identification of your key. Replace `<instance_ID>` with [the {{site.data.keyword.cloud_notm}} instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID) that identifies your {{site.data.keyword.hscrypto}} service instance.
+    Replace `<key_name>` with a human-readable alias for easy identification of your key. Replace `<instance_ID>` with [the {{site.data.keyword.cloud_notm}} instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID) that identifies your {{site.data.keyword.hscrypto}} service instance.
 
 2. Optional: Verify that the key was created successfully by listing the keys that are available in your {{site.data.keyword.hscrypto}} service instance.
 
   ```sh
   ibmcloud kp list -i <instance_ID>
   ```
-  {: pre}
+    {: pre}
 
-  Replace `<instance_ID>` with the {{site.data.keyword.cloud_notm}} instance ID that identifies your {{site.data.keyword.hscrypto}} service instance.
+    Replace `<instance_ID>` with the {{site.data.keyword.cloud_notm}} instance ID that identifies your {{site.data.keyword.hscrypto}} service instance.
 
 ## What's next
 {: #secure-connection-next}

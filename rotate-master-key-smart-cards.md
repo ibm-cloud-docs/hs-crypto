@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-06-28"
+lastupdated: "2021-08-10"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -45,8 +45,8 @@ Before you start, make sure that you have done the following:
 1. The new master key parts are prepared for rotation. For information on how to create a new master key part, see [Generate the signature keys and master key parts](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step1-generate-keys-management-utilities).
 2. Open the Trusted Key Entry application on your workstation and click the *Crypto units* tab. Check and make sure that `true` is displayed as the value of the SELECTED column for all crypto units in the service instance where you want to rotate the master key. If any crypto units in the service instance are not selected, select the crypto units by clicking the *Add crypto units* button and following the prompts.
 
-  You can only work with one service instance at a time. If any crypto units in other service instances are selected, click the *Remove crypto units* button to unselect.
-  {: note}
+    You can only work with one service instance at a time. If any crypto units in other service instances are selected, click the *Remove crypto units* button to unselect.
+    {: note}
 
 ## Rotating master keys using smart cards and the Management Utilities
 {: #rotate-master-key-smart-cards-steps}
@@ -57,39 +57,39 @@ To rotate the master key, follow these steps:
 
 1. To load the new master key parts to the new master key register, follow these steps:
 
-  1. Select the **Master keys** tab and click **Load**.
-  2. If prompted, insert an EP11 smart card with an administrator signature key that is defined to the selected crypto units in smart card reader 1, and enter the smart card PIN on the smart card reader PIN pad.
-  3. When prompted, enter the number of master key parts to be loaded. Only 2 or 3 master key parts are accepted.
-  4. When prompted, insert the EP11 smart card that contains the first master key part in smart card reader 2 and enter the smart card PIN on the smart card reader PIN pad.
-  5. Select the master key part to be loaded from the list of master key parts on the smart card.
-  6. Repeat substep 4 and 5 for each master key part to be loaded.
+    1. Select the **Master keys** tab and click **Load**.
+    2. If prompted, insert an EP11 smart card with an administrator signature key that is defined to the selected crypto units in smart card reader 1, and enter the smart card PIN on the smart card reader PIN pad.
+    3. When prompted, enter the number of master key parts to be loaded. Only 2 or 3 master key parts are accepted.
+    4. When prompted, insert the EP11 smart card that contains the first master key part in smart card reader 2 and enter the smart card PIN on the smart card reader PIN pad.
+    5. Select the master key part to be loaded from the list of master key parts on the smart card.
+    6. Repeat substep 4 and 5 for each master key part to be loaded.
 
-  After all master key parts are loaded, the new master key register is in `Full uncommitted` state.
+    After all master key parts are loaded, the new master key register is in `Full uncommitted` state.
 
 2. Commit the new master key by following these steps:
 
-  1. Click **Commit** to move the master key to the `Full committed` state.
-  2. If prompted, in smart card reader 1, insert an EP11 smart card with an administrator signature key that is defined to the selected crypto units and enter the smart card PIN on the smart card reader PIN pad. Repeat this operation if prompted for more EP11 smart cards with signature keys.
+    1. Click **Commit** to move the master key to the `Full committed` state.
+    2. If prompted, in smart card reader 1, insert an EP11 smart card with an administrator signature key that is defined to the selected crypto units and enter the smart card PIN on the smart card reader PIN pad. Repeat this operation if prompted for more EP11 smart cards with signature keys.
 
-  After the process is complete, the new master key register is in `Full committed` state.
+    After the process is complete, the new master key register is in `Full committed` state.
 
 3. If you have any encryption keys that are encrypted with the current master key using the GREP11 API and are stored locally, call the [RewrapKeyBlob GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-rewrapKeyBlob) to reencrypt the keys with the new master key.
 
-  Make sure to perform this step before you rotate the master key. Otherwise, your keys that are encrypted with the current master key cannot be reencrypted and used.
-  {: important}
+    Make sure to perform this step before you rotate the master key. Otherwise, your keys that are encrypted with the current master key cannot be reencrypted and used.
+    {: important}
 
 4. To reencrypt root keys in the key management service keystore using the master key in the new master key register, click the **Rotate** button and click **Yes** on the message window.
 
-  It might take approximately 60 seconds to reencrypt 3000 root keys. When the master key is being rotated, you cannot perform any key-related actions except for deleting keys.
-  {: note}
+    It might take approximately 60 seconds to reencrypt 3000 root keys. When the master key is being rotated, you cannot perform any key-related actions except for deleting keys.
+    {: note}
 
-  When you receive the following messages for system operations, click **OK** to continue:
+    When you receive the following messages for system operations, click **OK** to continue:
 
-  1. `Master key rotation started.`
-  2. `MKS CRK rewrap successful, waiting on cryptounit-mk-setimm.`
-  3. `Master key rotation successful.`
+    1. `Master key rotation started.`
+    2. `MKS CRK rewrap successful, waiting on cryptounit-mk-setimm.`
+    3. `Master key rotation successful.`
 
-  The new master key is now in `Valid` state in the current master key register. Check out [Master key rotation](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro) for information on how the key states change.
+    The new master key is now in `Valid` state in the current master key register. Check out [Master key rotation](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro) for information on how the key states change.
 
 You have successfully rotated the current master key with the new master key. Your root keys and encryption keys are now well-protected by the new master key.
 

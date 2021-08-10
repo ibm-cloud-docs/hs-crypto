@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-10"
 
 keywords: key registration, register resources, service integration, protected resource, view crn, registraion api
 
@@ -37,18 +37,18 @@ When you register cloud resources with {{site.data.keyword.hscrypto}}, {{site.da
 {: #plan-for-registration}
 
 <dl>
-  <dt>
+    <dt>
     Registering new resources
-  </dt>
-  <dd>
+    </dt>
+    <dd>
     When your customers create a new resource, such as a {{site.data.keyword.cos_full_notm}} bucket, they can choose to encrypt the resource with an existing root key. At resource creation, your service must <a href="#create-registration">create a registration</a> between the new resource and the {{site.data.keyword.hscrypto}} key.
-  </dd>
-  <dt>
+    </dd>
+    <dt>
     Registering existing resources
-  </dt>
-  <dd>
+    </dt>
+    <dd>
     If your service is already integrated with {{site.data.keyword.hscrypto}} for enhanced security, your service must <a href="#register-existing-resources">register existing resources</a> retroactively. When your service registers all existing resources, customers can see a full view of the cloud resources that are already protected by {{site.data.keyword.hscrypto}} keys.
-  </dd>
+    </dd>
 </dl>
 
 ## Registering new resources
@@ -198,8 +198,8 @@ Your service might have a place that stores root key IDs in some metadata that a
 - The Cloud Resource Name (CRN) of the resource that is protected (for example, a Cloud Object Storage bucket, or a Kubernetes Service cluster).
 - The description of the protected resource using a string provided by the customer that is meaningful in the context of your service. Maybe that is the description, the name, or an ID, but provide that string so that when your customer sees it, they can quickly understand what it means.
 - Information about the root key, which can be found in the root key's CRN
-  - The {{site.data.keyword.hscrypto}} instance GUID that contains the root key
-  - The root key ID
+    - The {{site.data.keyword.hscrypto}} instance GUID that contains the root key
+    - The root key ID
 
 ### Creating a registration for each protected resource
 {: #create-registration-existing-resource}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-10"
 
 keywords: disaster recovery, restore, recovery, cross region restore, support ticket, support center
 
@@ -52,7 +52,7 @@ To restore a backup to an existing service instance, follow these steps:
 1. In the {{site.data.keyword.cloud_notm}} console, select **Support** to enter the Support Center. Click **View all** in the **Recent support cases** panel and click **Create new case**. Or, you can directly go to the [Manage cases page](https://cloud.ibm.com/unifiedsupport/cases){: external} and click **Create new case**.
 2. On the **Create a case** page displayed, select the offering {{site.data.keyword.hscrypto}}, and then specify the following values:
 
-  <table>
+    <table>
     <tr>
       <th>Field name</th>
       <th>Action</th>
@@ -70,16 +70,16 @@ To restore a backup to an existing service instance, follow these steps:
       <td>Select your {{site.data.keyword.hscrypto}} service instance.</td>
     </tr>
     <caption>Table 1. Describes the fields that are displayed on the <strong>Create a case</strong> page</caption>
-  </table>
+    </table>
 
 3. Check the **Email me updates about this issue** box, and click **Continue to review > Create case**.
 
-  When the restore completes successfully, you will get an email notification, which includes the new region information that your service instance resides in. Alternatively, you can check the state by clicking **Support**. For more information about {{site.data.keyword.IBM_notm}} Support, see [Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter){: external}.
+    When the restore completes successfully, you will get an email notification, which includes the new region information that your service instance resides in. Alternatively, you can check the state by clicking **Support**. For more information about {{site.data.keyword.IBM_notm}} Support, see [Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter){: external}.
 
 4. After you open the ticket, IBM provisions new crypto units for you in another region by using the same instance ID, and restores all the key resources from the backup. And then, you need to load your master key to the new service instance in the new region. Depending on how you store your master key parts, you can follow the instructions in [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
-  Make sure to load the same master key to the service instance in the new region so that your key resources can still be accessed.
-  {: important}
+    Make sure to load the same master key to the service instance in the new region so that your key resources can still be accessed.
+    {: important}
 
 ## What's next
 {: #restore-data-next}

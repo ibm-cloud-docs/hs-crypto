@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-06-28"
+lastupdated: "2021-08-10"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -49,7 +49,7 @@ Before you start, make sure to do the following steps:
   ```
   ibmcloud tke cryptounit-compare
   ```
-  {: pre}
+    {: pre}
 3. The new master key parts are prepared for rotation. For more information about how to create a new master key part, see [Create a set of master key parts to use](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step4-create-master-key).
 
 ## Rotating master keys by using key part files
@@ -64,47 +64,47 @@ To rotate the master key by using key part files on your workstation, follow the
   ```
   ibmcloud tke cryptounit-mk-load
   ```
-  {: pre}
+    {: pre}
 
-  To load a master key register, all master key part files and signature key files to be used must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The master key part file owners and signature key file owners need to enter the file passwords when the master key register is loaded on the common workstation.
+    To load a master key register, all master key part files and signature key files to be used must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The master key part file owners and signature key file owners need to enter the file passwords when the master key register is loaded on the common workstation.
 
-  A list of the master key parts that are found on the workstation is displayed.
+    A list of the master key parts that are found on the workstation is displayed.
 
-  When prompted, enter the master key parts to be loaded into the new master key register, the password for the signature key file to be used, and password for each selected key part file sequentially.
+    When prompted, enter the master key parts to be loaded into the new master key register, the password for the signature key file to be used, and password for each selected key part file sequentially.
 
-  The new master key is now in `Full uncommited` state in the new master key register.
+    The new master key is now in `Full uncommited` state in the new master key register.
 
-  To load a new master key, you need to enter at least two master key parts. Make sure that at least one master key part is not used for the current master key. Otherwise, the same master key is generated and you are not able to load it to the new master key register.
-  {: important}
+    To load a new master key, you need to enter at least two master key parts. Make sure that at least one master key part is not used for the current master key. Otherwise, the same master key is generated and you are not able to load it to the new master key register.
+    {: important}
 
 2. Commit the new master key with the following command:
 
   ```
   ibmcloud tke cryptounit-mk-commit
   ```
-  {: pre}
+    {: pre}
 
-  When prompted, enter the passwords for the signature key files to be used.
+    When prompted, enter the passwords for the signature key files to be used.
 
-  The new master key is now in `Full commited` state in the new master key register.
+    The new master key is now in `Full commited` state in the new master key register.
 
 3. If you have any encryption keys that are encrypted with the current master key using the GREP11 API and are not stored in the {{site.data.keyword.hscrypto}} keystore, call the [RewrapKeyBlob GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-rewrapKeyBlob) to reencrypt the keys with the new master key.
 
-  Make sure to perform this step before you rotate the master key. Otherwise, your keys that are encrypted with the current master key cannot be reencrypted and used.
-  {: important}
+    Make sure to perform this step before you rotate the master key. Otherwise, your keys that are encrypted with the current master key cannot be reencrypted and used.
+    {: important}
 
-  For an introduction to the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11_intro). You can also find code examples that are written in [Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external} and [JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js) on the GREP11 API usage.
+    For an introduction to the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11_intro). You can also find code examples that are written in [Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external} and [JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js) on the GREP11 API usage.
 
 4. Rotate the current master key with the new master key and reencrypt the root keys that are managed by performing the following steps:
 
-  1. Start master key rotation by running the following command:
+    1. Start master key rotation by running the following command:
 
     ```
     ibmcloud tke cryptounit-mk-rotate
     ```
     {: pre}
 
-  2. When prompted, type `y` to proceed with the pre-check.
+    2. When prompted, type `y` to proceed with the pre-check.
 
     The following settings are checked:
     * Only one service instance is selected and all crypto units from that service instance are select.
@@ -112,7 +112,7 @@ To rotate the master key by using key part files on your workstation, follow the
     * The selected administrators match the administrators that are installed in the crypto units.
     * All crypto units have the new and current key registers configured correctly.
 
-  3. To rotate the master key and activate the new master key, enter the password for the signature key file to be used when prompted.
+    3. To rotate the master key and activate the new master key, enter the password for the signature key file to be used when prompted.
 
     It might take approximately 60 seconds to reencrypt 3000 root keys. When the master key is being rotated, you cannot perform any key-related actions except for deleting keys.
     {: note}

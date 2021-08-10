@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-11-27"
+  years: 2018, 2021
+lastupdated: "2021-08-10"
 
 keywords: access token, api key, iam token, generate access token, generate iam token, get access token, iam token api, token cli
 
@@ -73,10 +73,10 @@ You can also retrieve your access token programmatically by using an [API key](/
   ```sh
   ibmcloud login
   ```
-  {: pre}
+    {: pre}
 
-  If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the CLI output to generate a one-time passcode.
-  {: note}
+    If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the CLI output to generate a one-time passcode.
+    {: note}
 
 2. Select the region and resource group that contain your provisioned {{site.data.keyword.hscrypto}} instance with the following command:
 
@@ -87,7 +87,7 @@ You can also retrieve your access token programmatically by using an [API key](/
 
 3. Create an API key.
 
-  - If you want to retrieve an access token for a user, create a user API key with the following command:
+    - If you want to retrieve an access token for a user, create a user API key with the following command:
 
     ```sh
     ibmcloud iam api-key-create <API_key_name>
@@ -98,7 +98,7 @@ You can also retrieve your access token programmatically by using an [API key](/
 
     Specify the API key a unique name with the `<API_key_name>` parameter. Make sure to save your API key for later use by either using the `<API_key_file_name>` parameter or copying the API key value from the command response.
 
-  - If you want to retrieve an access token for an application, create a service ID API key by completing the following steps:
+    - If you want to retrieve an access token for an application, create a service ID API key by completing the following steps:
 
     1. Create a [service ID](/docs/account?topic=account-serviceids#create_serviceid) for your application with the following command:
 
@@ -123,8 +123,8 @@ You can also retrieve your access token programmatically by using an [API key](/
 
 4. [Assign the user or the service ID the appropriate access](/docs/account?topic=account-assign-access-resources) to your {{site.data.keyword.hscrypto}} instance based on your access policy.
 
-  To learn how the IAM access roles map to specific {{site.data.keyword.hscrypto}} service actions, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).
-  {: tip}
+    To learn how the IAM access roles map to specific {{site.data.keyword.hscrypto}} service actions, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).
+    {: tip}
 
 5. Call the [IAM Identity Services API](https://{DomainName}/apidocs/iam-identity-token-api#gettoken-apikey) to retrieve your access token.
 
@@ -135,9 +135,9 @@ You can also retrieve your access token programmatically by using an [API key](/
     -H "Accept: application/json" \
     -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=<API_key>" > token.json
   ```
-  {: codeblock}
+    {: codeblock}
 
-  In the request, replace `<API_key>` with the user API key or the service ID API key that you created in the previous step. The following truncated example shows the contents of the `token.json` file:
+    In the request, replace `<API_key>` with the user API key or the service ID API key that you created in the previous step. The following truncated example shows the contents of the `token.json` file:
 
   ```
   {
@@ -148,6 +148,6 @@ You can also retrieve your access token programmatically by using an [API key](/
   "token_type": "Bearer"
   }
   ```
-  {: screen}
+    {: screen}
 
-  Use the full `access_token` value, prefixed by the **Bearer** token type, to programmatically manage keys for your service using the {{site.data.keyword.hscrypto}} key management API. To see an example {{site.data.keyword.hscrypto}} key management API request, check out [Forming your key management API request](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#form-kms-api-request).
+    Use the full `access_token` value, prefixed by the **Bearer** token type, to programmatically manage keys for your service using the {{site.data.keyword.hscrypto}} key management API. To see an example {{site.data.keyword.hscrypto}} key management API request, check out [Forming your key management API request](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#form-kms-api-request).
