@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-10"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -264,11 +264,11 @@ You can use the following functions to retrieve cryptographic algorithms or mech
 The `GetMechanismList` function obtains a list of mechanism types that are supported by a token.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_GetMechanismList`, which is an implementation of PKCS #11 `C_GetMechanismList`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -278,11 +278,11 @@ message GetMechanismListResponse {
     repeated uint64 Mechs = 2;
 }
     </pre>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #GetMechanismList_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -290,27 +290,27 @@ message GetMechanismListResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>Implementation of PKCS #11 <code>C_GetMechanismList</code>.
-  </td>
-  </tr>
-  <tr>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_GetMechanismList (
-  CK_SLOT_ID slot,
-  CK_MECHANISM_TYPE_PTR mechs, CK_ULONG_PTR mechslen,
-  target_t target
+    CK_SLOT_ID slot,
+    CK_MECHANISM_TYPE_PTR mechs, CK_ULONG_PTR mechslen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_GetMechanismList` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #GetMechanismList_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -318,7 +318,7 @@ CK_RV m_GetMechanismList (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>
     <p>`C_GetMechanismList` is used to obtain a list of mechanism types supported by a token. `SlotID` is the ID of the token's slot; `pulCount` points to the location that receives the number of mechanisms.</p>
@@ -331,25 +331,25 @@ CK_RV m_GetMechanismList (
     </p>
     <p>Because `C_GetMechanismList` does not allocate any space of its own, an application often calls `C_GetMechanismList` twice. However, this behavior is by no means required.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismList)(
-  CK_SLOT_ID slotID,
-  CK_MECHANISM_TYPE_PTR pMechanismList,
-  CK_ULONG_PTR pulCount
+    CK_SLOT_ID slotID,
+    CK_MECHANISM_TYPE_PTR pMechanismList,
+    CK_ULONG_PTR pulCount
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_SLOT_ID_INVALID, CKR_TOKEN_NOT_PRESENT, CKR_TOKEN_NOT_RECOGNIZED, CKR_ARGUMENTS_BAD.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #GetMechanismList_PKCS11}
 {: tab-title="PKCS #11"}
@@ -366,7 +366,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismList)(
 
   GetMechanismListResponse, err := cryptoClient.GetMechanismList(context.Background(), GetMechanismListRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -377,7 +377,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismList)(
   console.log('MECHANISMS:', data.Mechs);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### GetMechanismInfo
@@ -386,11 +386,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismList)(
 The `GetMechanismInfo` Function obtains information about a particular mechanism.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_GetMechanismInfo`, which is an implementation of PKCS #11 `C_GetMechanismInfo`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -402,11 +402,11 @@ message GetMechanismInfoResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #GetMechanismInfo_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -414,28 +414,28 @@ message GetMechanismInfoResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>Implementation of PKCS #11 <code>C_GetMechanismInfo</code>.
-  </td>
-  </tr>
-  <tr>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_GetMechanismInfo (
-  CK_SLOT_ID slot,
-  CK_MECHANISM_TYPE mech,
-  CK_MECHANISM_INFO_PTR mechInfo,
-  target_t target
+    CK_SLOT_ID slot,
+    CK_MECHANISM_TYPE mech,
+    CK_MECHANISM_INFO_PTR mechInfo,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_GetMechanismInfo` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #GetMechanismInfo_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -443,30 +443,30 @@ CK_RV m_GetMechanismInfo (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>
     <p>`C_GetMechanismInfo` obtains information about a particular mechanism that might be supported by a token. `slotID` is the ID of the token's slot; `type` is the type of mechanism; `pInfo` points to the location that receives the mechanism information.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismInfo)(
-  CK_SLOT_ID slotID,
-  CK_MECHANISM_TYPE type,
-  CK_MECHANISM_INFO_PTR pInfo
+    CK_SLOT_ID slotID,
+    CK_MECHANISM_TYPE type,
+    CK_MECHANISM_INFO_PTR pInfo
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_MECHANISM_INVALID, CKR_OK, CKR_SLOT_ID_INVALID, CKR_TOKEN_NOT_PRESENT, CKR_TOKEN_NOT_RECOGNIZED, CKR_ARGUMENTS_BAD.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #GetMechanismInfo_PKCS11}
 {: tab-title="PKCS #11"}
@@ -484,7 +484,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismInfo)(
 
   GetMechanismInfoResponse, err := cryptoClient.GetMechanismInfo(context.Background(), GetMechanismInfoRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -497,7 +497,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismInfo)(
     console.log('MECHANISM INFO:', data.MechInfo);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ## Generating and deriving keys
@@ -511,11 +511,11 @@ GREP11 provides the following functions to generate symmetric and asymmetric cry
 The `GenerateKey` function generates a secret key for symmetric encryption.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_GenerateKey`, which is an implementation of PKCS #11 `C_GenerateKey`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -529,11 +529,11 @@ message GenerateKeyResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #GenerateKey_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -541,21 +541,21 @@ message GenerateKeyResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_GenerateKey</code>.</p>
-  <p>TDES keys are generated with proper parity, which is not observable by the host. But it is needed for proper interoperability: other PKCS #11 implementations needs to reject DES keys with parity problems.</p>
-  <p>If an object is tied to a session, <code>(pin, plen)</code> must be return by <code>Login</code> to that session. Leaving <code>pin</code> <code>NULL</code> creates a public object, one not bound to a login session.</p>
-  <p><code>(key, klen)</code> returns the key blob. <code>(csum, clen)</code> contains the key's checksum, that is, the most significant bytes of an all-zero block encrypted by the key. NULL <code>clen</code> is possible, for example for symmetric-key mechanisms without <code>CKA_CHECK_VALUE</code> parameters (such as RC4).</p>
-  <p><code>ptempl</code> is used only if the key length (that is, the <code>CKA_VALUE_LEN</code> attribute) is needed by the mechanism. If the mechanism implicitly specifies key size, <code>ptempl</code> is not checked for size.</p>
-  <p>DSA and DH parameter generation ignores <code>(csum, clen)</code>, generating only parameter structures.</p>
-  <p>DSA, DH parameters (<code>CKM_DSA_PARAMETER_GEN</code>): pass modulus bitcount in <code>CKA_PRIME_BITS</code> of attributes. Writes P,Q,G structure as cleartext output (that is, not a blob).</p>
-  <p>The <code>pin</code> blob was output from: <code>Login</code>.</p>
-  <p>PKCS #11 <code>phKey</code> is not mapped to any EP11 parameter. (Host library must bind wrapped key to handle.)</p>
-  </td>
-  </tr>
-  <tr>
+    <p>Implementation of PKCS #11 <code>C_GenerateKey</code>.</p>
+    <p>TDES keys are generated with proper parity, which is not observable by the host. But it is needed for proper interoperability: other PKCS #11 implementations needs to reject DES keys with parity problems.</p>
+    <p>If an object is tied to a session, <code>(pin, plen)</code> must be return by <code>Login</code> to that session. Leaving <code>pin</code> <code>NULL</code> creates a public object, one not bound to a login session.</p>
+    <p><code>(key, klen)</code> returns the key blob. <code>(csum, clen)</code> contains the key's checksum, that is, the most significant bytes of an all-zero block encrypted by the key. NULL <code>clen</code> is possible, for example for symmetric-key mechanisms without <code>CKA_CHECK_VALUE</code> parameters (such as RC4).</p>
+    <p><code>ptempl</code> is used only if the key length (that is, the <code>CKA_VALUE_LEN</code> attribute) is needed by the mechanism. If the mechanism implicitly specifies key size, <code>ptempl</code> is not checked for size.</p>
+    <p>DSA and DH parameter generation ignores <code>(csum, clen)</code>, generating only parameter structures.</p>
+    <p>DSA, DH parameters (<code>CKM_DSA_PARAMETER_GEN</code>): pass modulus bitcount in <code>CKA_PRIME_BITS</code> of attributes. Writes P,Q,G structure as cleartext output (that is, not a blob).</p>
+    <p>The <code>pin</code> blob was output from: <code>Login</code>.</p>
+    <p>PKCS #11 <code>phKey</code> is not mapped to any EP11 parameter. (Host library must bind wrapped key to handle.)</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -569,11 +569,11 @@ CK_RV m_GenerateKey (
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_GenerateKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #GenerateKey_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -581,7 +581,7 @@ CK_RV m_GenerateKey (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>
     <p>`C_GenerateKey` generates a secret key or set of domain parameters, creating a new object. `hSession` is the session's handle; `pMechanism` points to the generation mechanism; `pTemplate` points to the template for the new key or set of domain parameters; `ulCount` is the number of attributes in the template; `phKey` points to the location that receives the handle of the new key or set of domain parameters.</p>
@@ -590,27 +590,27 @@ CK_RV m_GenerateKey (
     <p>If a call to `C_GenerateKey` cannot support the precise template that is supplied to it, it fails and returns without creating an object.</p>
     <p>The object created by a successful call to `C_GenerateKey` has the `CKA_LOCAL` attribute set to `CK_TRUE`.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_GenerateKey)(
-  CK_SESSION_HANDLE hSession
-  CK_MECHANISM_PTR pMechanism,
-  CK_ATTRIBUTE_PTR pTemplate,
-  CK_ULONG ulCount,
-  CK_OBJECT_HANDLE_PTR phKey
+    CK_SESSION_HANDLE hSession
+    CK_MECHANISM_PTR pMechanism,
+    CK_ATTRIBUTE_PTR pTemplate,
+    CK_ULONG ulCount,
+    CK_OBJECT_HANDLE_PTR phKey
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_ATTRIBUTE_READ_ONLY, CKR_ATTRIBUTE_TYPE_INVALID, CKR_ATTRIBUTE_VALUE_INVALID, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_CURVE_NOT_SUPPORTED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_SESSION_READ_ONLY, CKR_TEMPLATE_INCOMPLETE, CKR_TEMPLATE_INCONSISTENT, CKR_TOKEN_WRITE_PROTECTED, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #GenerateKey_PKCS11}
 {: tab-title="PKCS #11"}
@@ -639,7 +639,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateKey)(
 
   GenerateKeyResponse, err := cryptoClient.GenerateKey(context.Background(), GenerateKeyRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -664,7 +664,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateKey)(
   });
 
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### GenerateKeyPair
@@ -673,11 +673,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateKey)(
 The `GenerateKeyPair` function generates a public key and private key pair.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_GenerateKeyPair`, which is an implementation of PKCS #11 `C_GenerateKeyPair`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -692,11 +692,11 @@ message GenerateKeyPairResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #GenerateKeyPair_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -704,46 +704,46 @@ message GenerateKeyPairResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_GenerateKeyPair</code>.</p>
-  <p>Keypair parameters are retrieved from <code>pmech</code>, <code>ppublic</code>, and <code>pprivate</code> parameters. For RSA keys, <code>ppublic</code> specifies the modulus size.</p>
-  <p>In FIPS mode, only RSA moduluses of 1024+256<code>n</code> bits are supported (integer <code>n</code>). Non-FIPS mode can generate keys of any even number of bits between the limits in the mechanism parameter list.</p>
-  <p>Public key is formatted as a standard SPKI (subject publickey infomation), readable by most libraries. It is integrity-protected by a transport-key specific MAC, which is not part of the SPKI itself. DSA parameter generation returns a non-SPKI structure in the public key field.</p>
-  <p>If you tie an object to a session, <code>(pin, plen)</code> must be returned by <code>Login</code> to that session. Leaving <code>pin</code> <code>NULL</code> creates a public object, one that survives the login session.</p>
-  <p>Returns wrapped private key to <code>(key, klen)</code>, public key as a MACed ASN.1/DER structure in <code>(pubkey, pklen)</code>.</p>
-  <p>The following supported parameter combinations with special notes are beyond what are documented by PKCS #11:</p>
-  <p>RSA keys reject public exponents below 17 (0x11). Control points can further restrict the accepted minimum. The Fermat4 exponent, 0x10001, is controlled by a specific control point, matching public-exponent restrictions of FIPS 186-3 (section B.3.1).</p> <p>EC keys (<code>CKM_EC_KEY_PAIR_GEN</code>): curve parameters can be specified as OIDs or symbolic names (our namedCurve variant). Supported symbolic names are "<code>P-nnn</code>" for NIST curves (<code>nnn</code> is a supported prime bitcount, 192 - 521), "<code>BP-nnnR</code>" for regular BP curve. (Names must be supplied as ASCII strings, without zero-termination.)</p>
-  <p>DSA keys (<code>CKM_DSA_KEY_PAIR_GEN</code>): pass P,Q,G structure as the <code>CKA_IBM_STRUCT_PARAMS</code> attribute of public attributes. Individual P,Q,G parameters might not be passed through regular PKCS #11 parameters, they must be combined to a single structure.</p>
-  <p>DH keys (<code>CKM_DH_PKCS_KEY_PAIR_GEN</code>): pass P,G structure as the <code>CKA_IBM_STRUCT_PARAMS</code> attribute of public attributes. Individual P,G parameters might not be passed through regular PKCS #11 parameters, they must be combined to a single structure. When you select a private-key (X) bitcount, use the <code>XCP_U32_VALUE_BITS</code> attribute. If not present, or an explicit 0 is supplied, bitcount is selected based on P bitcount.</p>
-  <p>Use of session (Login) state replaces standard use of sessions. The mapping is outside library scope.</p>
-  <p>The <code>pin</code> blob was output from: <code>Login</code>.</p>
-  <p>PKCS #11 <code>hSession</code> is not mapped to any EP11 parameter. (The call is not directly associated with any session.)</p>
-  <p>PKCS #11 <code>phPublicKey</code> is not mapped to any EP11 parameter. (Host library must associate pubkey (SPKI) with handle.)</p>
-  <p>PKCS #11 <code>phPrivateKey</code> is not mapped to any EP11 parameter. (Host library must associate private key with handle.)</p>
-  </td>
-  </tr>
-  <tr>
+    <p>Implementation of PKCS #11 <code>C_GenerateKeyPair</code>.</p>
+    <p>Keypair parameters are retrieved from <code>pmech</code>, <code>ppublic</code>, and <code>pprivate</code> parameters. For RSA keys, <code>ppublic</code> specifies the modulus size.</p>
+    <p>In FIPS mode, only RSA moduluses of 1024+256<code>n</code> bits are supported (integer <code>n</code>). Non-FIPS mode can generate keys of any even number of bits between the limits in the mechanism parameter list.</p>
+    <p>Public key is formatted as a standard SPKI (subject publickey infomation), readable by most libraries. It is integrity-protected by a transport-key specific MAC, which is not part of the SPKI itself. DSA parameter generation returns a non-SPKI structure in the public key field.</p>
+    <p>If you tie an object to a session, <code>(pin, plen)</code> must be returned by <code>Login</code> to that session. Leaving <code>pin</code> <code>NULL</code> creates a public object, one that survives the login session.</p>
+    <p>Returns wrapped private key to <code>(key, klen)</code>, public key as a MACed ASN.1/DER structure in <code>(pubkey, pklen)</code>.</p>
+    <p>The following supported parameter combinations with special notes are beyond what are documented by PKCS #11:</p>
+    <p>RSA keys reject public exponents below 17 (0x11). Control points can further restrict the accepted minimum. The Fermat4 exponent, 0x10001, is controlled by a specific control point, matching public-exponent restrictions of FIPS 186-3 (section B.3.1).</p> <p>EC keys (<code>CKM_EC_KEY_PAIR_GEN</code>): curve parameters can be specified as OIDs or symbolic names (our namedCurve variant). Supported symbolic names are "<code>P-nnn</code>" for NIST curves (<code>nnn</code> is a supported prime bitcount, 192 - 521), "<code>BP-nnnR</code>" for regular BP curve. (Names must be supplied as ASCII strings, without zero-termination.)</p>
+    <p>DSA keys (<code>CKM_DSA_KEY_PAIR_GEN</code>): pass P,Q,G structure as the <code>CKA_IBM_STRUCT_PARAMS</code> attribute of public attributes. Individual P,Q,G parameters might not be passed through regular PKCS #11 parameters, they must be combined to a single structure.</p>
+    <p>DH keys (<code>CKM_DH_PKCS_KEY_PAIR_GEN</code>): pass P,G structure as the <code>CKA_IBM_STRUCT_PARAMS</code> attribute of public attributes. Individual P,G parameters might not be passed through regular PKCS #11 parameters, they must be combined to a single structure. When you select a private-key (X) bitcount, use the <code>XCP_U32_VALUE_BITS</code> attribute. If not present, or an explicit 0 is supplied, bitcount is selected based on P bitcount.</p>
+    <p>Use of session (Login) state replaces standard use of sessions. The mapping is outside library scope.</p>
+    <p>The <code>pin</code> blob was output from: <code>Login</code>.</p>
+    <p>PKCS #11 <code>hSession</code> is not mapped to any EP11 parameter. (The call is not directly associated with any session.)</p>
+    <p>PKCS #11 <code>phPublicKey</code> is not mapped to any EP11 parameter. (Host library must associate pubkey (SPKI) with handle.)</p>
+    <p>PKCS #11 <code>phPrivateKey</code> is not mapped to any EP11 parameter. (Host library must associate private key with handle.)</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_GenerateKeyPair (
-  CK_MECHANISM_PTR mech,
-  CK_ATTRIBUTE_PTR pubKeyTemplate, CK_ULONG pubKeyTemplatelen,
-  CK_ATTRIBUTE_PTR privKeyTemplate, CK_ULONG privKeyTemplatelen,
-  const unsigned char \*pin, size_t pinlen,
-  unsigned char \*privKey, size_t \*privKeylen,
-  unsigned char \*pubKey, size_t \*pubKeylen,
-  target_t target
+    CK_MECHANISM_PTR mech,
+    CK_ATTRIBUTE_PTR pubKeyTemplate, CK_ULONG pubKeyTemplatelen,
+    CK_ATTRIBUTE_PTR privKeyTemplate, CK_ULONG privKeyTemplatelen,
+    const unsigned char \*pin, size_t pinlen,
+    unsigned char \*privKey, size_t \*privKeylen,
+    unsigned char \*pubKey, size_t \*pubKeylen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_GenerateKeyPair` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #GenerateKeyPair_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -751,7 +751,7 @@ CK_RV m_GenerateKeyPair (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>
     <p>`C_GenerateKeyPair` generates a public and private key pair, creating new key objects. `hSession` is the session's handle; `pMechanism` points to the key generation mechanism; `pPublicKeyTemplate` points to the template for the public key; `ulPublicKeyAttributeCount` is the number of attributes in the public-key template; `pPrivateKeyTemplate` points to the template for the private key; `ulPrivateKeyAttributeCount` is the number of attributes in the private-key template; `phPublicKey` points to the location that receives the handle of the new public key; `phPrivateKey` points to the location that receives the handle of the new private key.</p>
@@ -761,30 +761,30 @@ CK_RV m_GenerateKeyPair (
     <p>The key objects created by a successful call to `C_GenerateKeyPair` has the `CKA_LOCAL` attributes set to `CK_TRUE`.</p>
     <p>Note carefully the order of the arguments to `C_GenerateKeyPair`. The last two arguments do not have the same order as they did in the original Cryptoki Version 1.0 document. The order of these two arguments has caused some unfortunate confusion.</p>
 </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_GenerateKeyPair)(
-  CK_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism,
-  CK_ATTRIBUTE_PTR pPublicKeyTemplate,
-  CK_ULONG ulPublicKeyAttributeCount,
-  CK_ATTRIBUTE_PTR pPrivateKeyTemplate,
-  CK_ULONG ulPrivateKeyAttributeCount,
-  CK_OBJECT_HANDLE_PTR phPublicKey,
-  CK_OBJECT_HANDLE_PTR phPrivateKey
+    CK_SESSION_HANDLE hSession,
+    CK_MECHANISM_PTR pMechanism,
+    CK_ATTRIBUTE_PTR pPublicKeyTemplate,
+    CK_ULONG ulPublicKeyAttributeCount,
+    CK_ATTRIBUTE_PTR pPrivateKeyTemplate,
+    CK_ULONG ulPrivateKeyAttributeCount,
+    CK_OBJECT_HANDLE_PTR phPublicKey,
+    CK_OBJECT_HANDLE_PTR phPrivateKey
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_ATTRIBUTE_READ_ONLY, CKR_ATTRIBUTE_TYPE_INVALID, CKR_ATTRIBUTE_VALUE_INVALID, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_CURVE_NOT_SUPPORTED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_DOMAIN_PARAMS_INVALID, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_SESSION_READ_ONLY, CKR_TEMPLATE_INCOMPLETE, CKR_TEMPLATE_INCONSISTENT, CKR_TOKEN_WRITE_PROTECTED, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #GenerateKeyPair_PKCS11}
 {: tab-title="PKCS #11"}
@@ -819,7 +819,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateKeyPair)(
   }
   GenerateKeyPairResponse, err := cryptoClient.GenerateKeyPair(context.Background(), GenerateKeypairRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -852,7 +852,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateKeyPair)(
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 ### DeriveKey
 {: #grep11-DeriveKey}
@@ -860,19 +860,19 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateKeyPair)(
 The `DeriveKey` function derives a key from a base key.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_DeriveKey`, which is an implementation of PKCS #11 `C_DeriveKey`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 message DeriveKeyRequest {
-  Mechanism Mech = 1;
-  bytes BaseKey = 3;
-  bytes Data = 4;
-  map&lt;uint64,AttributeValue&gt; Template = 8;
+    Mechanism Mech = 1;
+    bytes BaseKey = 3;
+    bytes Data = 4;
+    map&lt;uint64,AttributeValue&gt; Template = 8;
 }
 message DeriveKeyResponse {
     bytes NewKeyBytes = 6;
@@ -880,11 +880,11 @@ message DeriveKeyResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DeriveKey_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -892,36 +892,36 @@ message DeriveKeyResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_DeriveKey</code>.</p>
-  <p>The <code>basekey</code>,<code>bklen</code> blob must be mapped from the PKCS #11 <code>hBaseKey</code> parameter.</p>
-  <p>PKCS #11 <code>hSession</code> is not mapped to any EP11 parameter. (The call is not directly associated with any session.)</p>
-  <p>PKCS #11 <code>phKey</code> is not mapped to any EP11 parameter. (Host library must bind returned key to handle.)</p>
+    <p>Implementation of PKCS #11 <code>C_DeriveKey</code>.</p>
+    <p>The <code>basekey</code>,<code>bklen</code> blob must be mapped from the PKCS #11 <code>hBaseKey</code> parameter.</p>
+    <p>PKCS #11 <code>hSession</code> is not mapped to any EP11 parameter. (The call is not directly associated with any session.)</p>
+    <p>PKCS #11 <code>phKey</code> is not mapped to any EP11 parameter. (Host library must bind returned key to handle.)</p>
 </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_DeriveKey (
-  CK_MECHANISM_PTR mech,
-  CK_ATTRIBUTE_PTR template, CK_ULONG templatelen,
-  const unsigned char \*baseKey, size_t baseKeylen,
-  const unsigned char \*data, size_t datalen,
-  const unsigned char \*pin, size_t pinlen,
-  unsigned char \*newKey, size_t \*newKeylen,
-  unsigned char \*checkSum, size_t \*checkSumlen,
-  target_t target
+    CK_MECHANISM_PTR mech,
+    CK_ATTRIBUTE_PTR template, CK_ULONG templatelen,
+    const unsigned char \*baseKey, size_t baseKeylen,
+    const unsigned char \*data, size_t datalen,
+    const unsigned char \*pin, size_t pinlen,
+    unsigned char \*newKey, size_t \*newKeylen,
+    unsigned char \*checkSum, size_t \*checkSumlen,
+    target_t target
 ) ;
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_DeriveKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DeriveKey_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -929,7 +929,7 @@ CK_RV m_DeriveKey (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>
     <p>`C_DeriveKey` derives a key from a base key, creating a new key object. `hSession` is the session's handle; `pMechanism` points to a structure that specifies the key derivation chanism; `hBaseKey` is the handle of the base key; `pTemplate` points to the template for the new key; `ulAttributeCount` is the number of attributes in the template; and `phKey` points to the location that receives the handle of the derived key.</p>
@@ -937,28 +937,28 @@ CK_RV m_DeriveKey (
     <p>If a call to `C_DeriveKey` cannot support the precise template that is supplied to it, it fails and returns without creating any key object.</p>
     <p>The key object created by a successful call to `C_DeriveKey` has the `CKA_LOCAL` attribute set to `CK_FALSE`.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_DeriveKey)(
-  CK_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism,
-  CK_OBJECT_HANDLE hBaseKey,
-  CK_ATTRIBUTE_PTR pTemplate,
-  CK_ULONG ulAttributeCount,
-  CK_OBJECT_HANDLE_PTR phKey
+    CK_SESSION_HANDLE hSession,
+    CK_MECHANISM_PTR pMechanism,
+    CK_OBJECT_HANDLE hBaseKey,
+    CK_ATTRIBUTE_PTR pTemplate,
+    CK_ULONG ulAttributeCount,
+    CK_OBJECT_HANDLE_PTR phKey
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_ATTRIBUTE_READ_ONLY, CKR_ATTRIBUTE_TYPE_INVALID, CKR_ATTRIBUTE_VALUE_INVALID, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_CURVE_NOT_SUPPORTED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_DOMAIN_PARAMS_INVALID, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_SESSION_READ_ONLY, CKR_TEMPLATE_INCOMPLETE, CKR_TEMPLATE_INCONSISTENT, CKR_TOKEN_WRITE_PROTECTED, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #DeriveKey_PKCS11}
 {: tab-title="PKCS #11"}
