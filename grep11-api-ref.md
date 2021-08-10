@@ -993,7 +993,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DeriveKey)(
   // Derive AES key for Alice
   aliceDeriveKeyResponse, err := cryptoClient.DeriveKey(context.Background(),  aliceDeriveKeyRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -1033,7 +1033,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DeriveKey)(
     });
   }
   ```
-  {: codeblock}
+    {: codeblock}
 
 ## Protecting keys
 {: #grep11-operation-manage-keys}
@@ -1046,11 +1046,11 @@ You can protect a key by wrapping it and then decrypt the key by invoking the un
 The `WrapKey` function wraps (encrypts) a key.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_WrapKey`, which is an implementation of PKCS #11 `C_WrapKey`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -1065,11 +1065,11 @@ message WrapKeyResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #WrapKey_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -1077,30 +1077,30 @@ message WrapKeyResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>Implementation of PKCS #11 <code>C_WrapKey</code>.
-  </td>
-  </tr>
-  <tr>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_WrapKey (
-  const unsigned char \*key, size_t keylen,
-  const unsigned char \*keK, size_t keKlen,
-  const unsigned char \*macKey, size_t macKeylen,
-  const CK_MECHANISM_PTR mech,
-  CK_BYTE_PTR wrapped, CK_ULONG_PTR wrappedlen,
-  target_t target
+    const unsigned char \*key, size_t keylen,
+    const unsigned char \*keK, size_t keKlen,
+    const unsigned char \*macKey, size_t macKeylen,
+    const CK_MECHANISM_PTR mech,
+    CK_BYTE_PTR wrapped, CK_ULONG_PTR wrappedlen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_WrapKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #WrapKey_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -1108,7 +1108,7 @@ CK_RV m_WrapKey (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>
     <p>`C_WrapKey` wraps (that is, encrypts) a private or secret key. `hSession` is the session's handle; `pMechanism` points to the wrapping mechanism; `hWrappingKey` is the handle of the wrapping key; `hKey` is the handle of the key to be wrapped; `pWrappedKey` points to the location that receives the wrapped key; and `pulWrappedKeyLen` points to the location that receives the length of the wrapped key.</p>
@@ -1126,28 +1126,28 @@ CK_RV m_WrapKey (
     <p>Tokens vary in which types of keys can be wrapped with which mechanisms.</p>
     <p>To partition the wrapping keys so that they can wrap only a subset of extractable keys, the attribute `CKA_WRAP_TEMPLATE` can be used on the wrapping key to specify an attribute set that can be compared against the attributes of the key to be wrapped. If all attributes match according to the `C_FindObject` rules of attribute matching, the wrap operation proceeds. The value of this attribute is an attribute template and the size is the number of items in the template times the size of `CK_ATTRIBUTE`. If this attribute is not supplied, any template is acceptable. If an attribute is not present, it is not checked. If any attribute mismatch occurs on an attempt to wrap a key, the function returns `CKR_KEY_HANDLE_INVALID`.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_WrapKey)(
-  CK_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism,
-  CK_OBJECT_HANDLE hWrappingKey,
-  CK_OBJECT_HANDLE hKey,
-  CK_BYTE_PTR pWrappedKey,
-  CK_ULONG_PTR pulWrappedKeyLen
+    CK_SESSION_HANDLE hSession,
+    CK_MECHANISM_PTR pMechanism,
+    CK_OBJECT_HANDLE hWrappingKey,
+    CK_OBJECT_HANDLE hKey,
+    CK_BYTE_PTR pWrappedKey,
+    CK_ULONG_PTR pulWrappedKeyLen
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_HANDLE_INVALID, CKR_KEY_NOT_WRAPPABLE, CKR_KEY_SIZE_RANGE, CKR_KEY_UNEXTRACTABLE, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN, CKR_WRAPPING_KEY_HANDLE_INVALID, CKR_WRAPPING_KEY_SIZE_RANGE, CKR_WRAPPING_KEY_TYPE_INCONSISTENT.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #WrapKey_PKCS11}
 {: tab-title="PKCS #11"}
@@ -1167,7 +1167,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_WrapKey)(
 
   WrapKeyResponse, err := cryptoClient.WrapKey(context.Background(), WrapKeyRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -1182,7 +1182,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_WrapKey)(
     cb(err, data.Wrapped);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### UnwrapKey
@@ -1191,32 +1191,32 @@ CK_DEFINE_FUNCTION(CK_RV, C_WrapKey)(
 The `UnwrapKey` function unwraps (decrypts) a key.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_UnwrapKey`, which is an implementation of PKCS #11 `C_UnwrapKey`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 message UnwrapKeyRequest {
-  bytes Wrapped = 1;
-  bytes KeK = 2;
-  bytes MacKey = 3;
-  Mechanism Mech = 5;
-  map&lt;uint64,AttributeValue&gt; Template = 9;
+    bytes Wrapped = 1;
+    bytes KeK = 2;
+    bytes MacKey = 3;
+    Mechanism Mech = 5;
+    map&lt;uint64,AttributeValue&gt; Template = 9;
 }
 message UnwrapKeyResponse {
-  bytes UnwrappedBytes = 7;
-  bytes CheckSum = 8;
+    bytes UnwrappedBytes = 7;
+    bytes CheckSum = 8;
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #UnwrapKey_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -1224,38 +1224,38 @@ message UnwrapKeyResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_UnwrapKey</code>.</p>
-  <p><code>uwmech</code> specifies the encryption mechanism that is used to decrypt wrapped data. <code>ptempl</code> is a <em>key(pair)</em> parameter list, specifying how to transform the unwrapped data to a new key (must include <code>CKA_KEY_TYPE</code>).</p>
-  <p>The generated object is returned under <code>(unwrapped, uwlen)</code> as a blob. Symmetric keys return their key checksum (3 bytes) under <code>(csum, cslen)</code>; public-key objects return their public key as an SPKI in <code>(csum, cslen)</code>. Both forms are followed by a 4-byte big-endian value, encoding bitcount of the unwrapped key.</p>
-  <p>When an SPKI is being tranformed to a MACed SPKI, one must use CKM_IBM_TRANSPORTKEY as the unwrapping mechanism. This mode supplies the raw SPKI as wrapped data, and ignores the KEK.</p>
-  <p><code>UnwrapKey</code> produces parity-adjusted DES keys (within the blobs), but tolerates input with improper parity.</p>
-  </td>
-  </tr>
-  <tr>
+    <p>Implementation of PKCS #11 <code>C_UnwrapKey</code>.</p>
+    <p><code>uwmech</code> specifies the encryption mechanism that is used to decrypt wrapped data. <code>ptempl</code> is a <em>key(pair)</em> parameter list, specifying how to transform the unwrapped data to a new key (must include <code>CKA_KEY_TYPE</code>).</p>
+    <p>The generated object is returned under <code>(unwrapped, uwlen)</code> as a blob. Symmetric keys return their key checksum (3 bytes) under <code>(csum, cslen)</code>; public-key objects return their public key as an SPKI in <code>(csum, cslen)</code>. Both forms are followed by a 4-byte big-endian value, encoding bitcount of the unwrapped key.</p>
+    <p>When an SPKI is being tranformed to a MACed SPKI, one must use CKM_IBM_TRANSPORTKEY as the unwrapping mechanism. This mode supplies the raw SPKI as wrapped data, and ignores the KEK.</p>
+    <p><code>UnwrapKey</code> produces parity-adjusted DES keys (within the blobs), but tolerates input with improper parity.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_UnwrapKey (
-  const CK_BYTE_PTR wrapped, CK_ULONG wrappedlen,
-  const unsigned char \*keK, size_t keKlen,
-  const unsigned char \*macKey, size_t macKeylen,
-  const unsigned char \*pin, size_t pinlen,
-  const CK_MECHANISM_PTR mech,
-  const CK_ATTRIBUTE_PTR template, CK_ULONG templatelen,
-  unsigned char \*unwrapped, size_t \*unwrappedlen,
-  CK_BYTE_PTR checkSum, CK_ULONG \*checkSumlen,
-  target_t target
+    const CK_BYTE_PTR wrapped, CK_ULONG wrappedlen,
+    const unsigned char \*keK, size_t keKlen,
+    const unsigned char \*macKey, size_t macKeylen,
+    const unsigned char \*pin, size_t pinlen,
+    const CK_MECHANISM_PTR mech,
+    const CK_ATTRIBUTE_PTR template, CK_ULONG templatelen,
+    unsigned char \*unwrapped, size_t \*unwrappedlen,
+    CK_BYTE_PTR checkSum, CK_ULONG \*checkSumlen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_UnwrapKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #UnwrapKey_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -1263,7 +1263,7 @@ CK_RV m_UnwrapKey (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>
     <p>`C_UnwrapKey` unwraps (i.e. decrypts) a wrapped key, creating a new private key or secret key object. `hSession` is the session's handle; `pMechanism` points to the unwrapping mechanism; `hUnwrappingKey` is the handle of the unwrapping key; `pWrappedKey` points to the wrapped key; `ulWrappedKeyLen` is the length of the wrapped key; `pTemplate` points to the template for the new key; `ulAttributeCount` is the number of attributes in the template; `phKey` points to the location that receives the handle of the recovered key.</p>
@@ -1274,30 +1274,30 @@ CK_RV m_UnwrapKey (
     <p>The key object created by a successful call to `C_UnwrapKey` has its `CKA_LOCAL` attribute set to `CK_FALSE`.</p>
     <p>To partition the unwrapping keys so they can unwrap only a subset of keys the attribute `CKA_UNWRAP_TEMPLATE` can be used on the unwrapping key to specify an attribute set that is added to attributes of the key to be unwrapped. If the attributes do not conflict with the user supplied attribute template, in `pTemplate`, the unwrap operation proceeds. The value of this attribute is an attribute template and the size is the number of items in the template times the size of `CK_ATTRIBUTE`. If this attribute is not present on the unwrapping key then no extra attributes is added. If any attribute conflict occurs on an attempt to unwrap a key then the function SHALL return `CKR_TEMPLATE_INCONSISTENT`.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_UnwrapKey)(
-  CK_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism,
-  CK_OBJECT_HANDLE hUnwrappingKey,
-  CK_BYTE_PTR pWrappedKey,
-  CK_ULONG ulWrappedKeyLen,
-  CK_ATTRIBUTE_PTR pTemplate,
-  CK_ULONG ulAttributeCount,
-  CK_OBJECT_HANDLE_PTR phKey
+    CK_SESSION_HANDLE hSession,
+    CK_MECHANISM_PTR pMechanism,
+    CK_OBJECT_HANDLE hUnwrappingKey,
+    CK_BYTE_PTR pWrappedKey,
+    CK_ULONG ulWrappedKeyLen,
+    CK_ATTRIBUTE_PTR pTemplate,
+    CK_ULONG ulAttributeCount,
+    CK_OBJECT_HANDLE_PTR phKey
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_ATTRIBUTE_READ_ONLY, CKR_ATTRIBUTE_TYPE_INVALID, CKR_ATTRIBUTE_VALUE_INVALID, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_CURVE_NOT_SUPPORTED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_DOMAIN_PARAMS_INVALID, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_SESSION_READ_ONLY, CKR_TEMPLATE_INCOMPLETE, CKR_TEMPLATE_INCONSISTENT, CKR_TOKEN_WRITE_PROTECTED, CKR_UNWRAPPING_KEY_HANDLE_INVALID, CKR_UNWRAPPING_KEY_SIZE_RANGE, CKR_UNWRAPPING_KEY_TYPE_INCONSISTENT, CKR_USER_NOT_LOGGED_IN, CKR_WRAPPED_KEY_INVALID, CKR_WRAPPED_KEY_LEN_RANGE.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #UnwrapKey_PKCS11}
 {: tab-title="PKCS #11"}
@@ -1327,7 +1327,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_UnwrapKey)(
   // Unwrap the AES key
   UnwrapKeyResponse, err := cryptoClient.UnwrapKey(context.Background(), UnwrapKeyRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -1352,7 +1352,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_UnwrapKey)(
       cb(err, wrapped, data.UnwrappedBytes, data.CheckSum);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 ### RewrapKeyBlob
 {: #grep11-rewrapKeyBlob}
@@ -1363,11 +1363,11 @@ This function is a special administration command that is supported only by GREP
 {: note}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Transfers ownership of a BLOB that is controlled by the current master key to the new master key when the new master key is committed.  <td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -1379,11 +1379,11 @@ message RewrapKeyBlobResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #RewrapKeyBlob_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -1402,7 +1402,7 @@ message RewrapKeyBlobResponse {
   // Rewrap an existing key blob using the HSM's new wrapping key
   RewrapKeyBlobResponse, err := cryptoClient.RewrapKeyBlob(context.Background(),  RewrapKeyBlobRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -1413,7 +1413,7 @@ message RewrapKeyBlobResponse {
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 ## Retrieving and modifying attributes for keys 
 {: #grep11-operation-attribute-value}
@@ -1426,11 +1426,11 @@ When you generate keys or perform key operations, you define an attribute templa
 The `GetAttributeValue` function obtains an attribute value of an object.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_GetAttributeValue`, which is an implementation of PKCS #11 `C_GetAttributeValue`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -1443,11 +1443,11 @@ message GetAttributeValueResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #GetAttributeValue_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -1455,29 +1455,29 @@ message GetAttributeValueResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td><p>Implementation of PKCS #11 <code>C_GetAttributeValue</code>.</p>
-  <p>Does not represent or need sessions (part of blob), therefore does not use the <code>hSession</code> parameter.</p>
-  <p>EP11 uses more straightforward ways to decode, such as enumerating actual values instead of being more generic.</p>
-  </td>
-  </tr>
-  <tr>
+    <p>Does not represent or need sessions (part of blob), therefore does not use the <code>hSession</code> parameter.</p>
+    <p>EP11 uses more straightforward ways to decode, such as enumerating actual values instead of being more generic.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_GetAttributeValue (
-  const unsigned char \*object, size_t objectlen,
-  CK_ATTRIBUTE_PTR attributes, CK_ULONG attributeslen,
-  target_t target
+    const unsigned char \*object, size_t objectlen,
+    CK_ATTRIBUTE_PTR attributes, CK_ULONG attributeslen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_GetAttributeValue` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #GetAttributeValue_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -1485,7 +1485,7 @@ CK_RV m_GetAttributeValue (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>
     <p>`C_GetAttributeValue` obtains the value of one or more attributes of an object. `hSession` is the session's handle; `hObject` is the object's handle; `pTemplate` points to a template that specifies which attribute values are to be obtained, and receives the attribute values; `ulCount` is the number of attributes in the template.</p>
@@ -1503,26 +1503,26 @@ CK_RV m_GetAttributeValue (
     <p>In the special case of an attribute whose value is an array of attributes, for example` CKA_WRAP_TEMPLATE`, where it is passed in with `pValue` not NULL, then if the `pValue` of elements within the array is NULL_PTR then the `ulValueLen` of elements within the array is set to the required length. If the `pValue` of elements within the array is not NULL_PTR, then the `ulValueLen` element of attributes within the array must reflect the space that the corresponding `pValue` points to, and `pValue` is completed if there is sufficient room. Therefore it is important to initialize the contents of a buffer before `C_GetAttributeValue` is called to get such an array value. If any `ulValueLen` within the array isn't large enough, it is set to `CK_UNAVAILABLE_INFORMATION` and the function returns `CKR_BUFFER_TOO_SMALL`, as it does if an attribute in the `pTemplate` argument has `ulValueLen` too small. Any attribute whose value is an array of attributes is identifiable by the `CKF_ARRAY_ATTRIBUTE` set of the attribute type.</p>
     <p>The error codes `CKR_ATTRIBUTE_SENSITIVE`, `CKR_ATTRIBUTE_TYPE_INVALID`, and `CKR_BUFFER_TOO_SMALL` do not denote true errors for `C_GetAttributeValue`. If a call to `C_GetAttributeValue` returns any of these three values, then the call must nonetheless have processed every attribute in the template that is supplied to `C_GetAttributeValue`. Each attribute in the template whose value can be returned by the call to `C_GetAttributeValue` is returned by the call to `C_GetAttributeValue`.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_GetAttributeValue)(
-  CK_SESSION_HANDLE hSession,
-  CK_OBJECT_HANDLE hObject,
-  CK_ATTRIBUTE_PTR pTemplate,
-  CK_ULONG ulCount
+    CK_SESSION_HANDLE hSession,
+    CK_OBJECT_HANDLE hObject,
+    CK_ATTRIBUTE_PTR pTemplate,
+    CK_ULONG ulCount
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_ATTRIBUTE_SENSITIVE, CKR_ATTRIBUTE_TYPE_INVALID, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OBJECT_HANDLE_INVALID, CKR_OK, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #GetAttributeValue_PKCS11}
 {: tab-title="PKCS #11"}
@@ -1546,7 +1546,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetAttributeValue)(
 
   GetAttributeValueResponse, err := cryptoClient.GetAttributeValue(context.Background(), GetAttributeValueRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -1563,7 +1563,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetAttributeValue)(
     console.log('ATTRIBUTE:', response.Attributes);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 ### SetAttributeValue
 {: #grep11-SetAttributeValue}
@@ -1571,11 +1571,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetAttributeValue)(
 The `SetAttributeValue` function modifies an attribute value of an object.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_SetAttributeValue`, which is an implementation of PKCS #11 `C_SetAttributeValue`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -1588,11 +1588,11 @@ message SetAttributeValueResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #SetAttributeValue_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -1600,31 +1600,31 @@ message SetAttributeValueResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_SetAttributeValue</code>.</p>
-  <p>attribute packing: see _GetAttrValue</p>
-  <p>Currently, Ep11 only sends Boolean attributes, all other attributes are handled by host (and EP11 does not modify arrays, such as WRAP_TEMPLATE).</p>
-  <p>Does not represent or need sessions (part of blob), therefore does not use the PKCS #11 <code>hSession</code> parameter.</p>
-  </td>
-  </tr>
-  <tr>
+    <p>Implementation of PKCS #11 <code>C_SetAttributeValue</code>.</p>
+    <p>attribute packing: see _GetAttrValue</p>
+    <p>Currently, Ep11 only sends Boolean attributes, all other attributes are handled by host (and EP11 does not modify arrays, such as WRAP_TEMPLATE).</p>
+    <p>Does not represent or need sessions (part of blob), therefore does not use the PKCS #11 <code>hSession</code> parameter.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_SetAttributeValue (
-  unsigned char \*object, size_t objectlen,
-  CK_ATTRIBUTE_PTR attributes, CK_ULONG attributeslen,
-  target_t target
+    unsigned char \*object, size_t objectlen,
+    CK_ATTRIBUTE_PTR attributes, CK_ULONG attributeslen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_SetAttributeValue` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #SetAttributeValue_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -1632,7 +1632,7 @@ CK_RV m_SetAttributeValue (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>
     <p>`C_SetAttributeValue` modifies the value of one or more attributes of an object. `hSession` is the session's handle; `hObject` is the object's handle; `pTemplate` points to a template that specifies which attribute values are to be modified and their new values; `ulCount` is the number of attributes in the template.</p>
@@ -1641,26 +1641,26 @@ CK_RV m_SetAttributeValue (
     <p>The template can specify new values for any attributes of the object that can be modified. If the template specifies a value of an attribute that is incompatible with other existing attributes of the object, the call fails with the return code `CKR_TEMPLATE_INCONSISTENT`.</p>
     <p>Not all attributes can be modified; see Section 4.1.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749" target="_blank">PKCS #11 API specification</a> for more more information.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_SetAttributeValue)(
-  CK_SESSION_HANDLE hSession,
-  CK_OBJECT_HANDLE hObject,
-  CK_ATTRIBUTE_PTR pTemplate,
-  CK_ULONG ulCount
+    CK_SESSION_HANDLE hSession,
+    CK_OBJECT_HANDLE hObject,
+    CK_ATTRIBUTE_PTR pTemplate,
+    CK_ULONG ulCount
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ACTION_PROHIBITED, CKR_ARGUMENTS_BAD, CKR_ATTRIBUTE_READ_ONLY, CKR_ATTRIBUTE_TYPE_INVALID, CKR_ATTRIBUTE_VALUE_INVALID, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OBJECT_HANDLE_INVALID, CKR_OK, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_SESSION_READ_ONLY, CKR_TEMPLATE_INCONSISTENT, CKR_TOKEN_WRITE_PROTECTED, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #SetAttributeValue_PKCS11}
 {: tab-title="PKCS #11"}
@@ -1683,7 +1683,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_SetAttributeValue)(
   }
   SetAttributeValueResponse, err := cryptoClient.SetAttributeValue(context.Background(), SetAttributeValueRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -1699,7 +1699,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_SetAttributeValue)(
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ## Generating random data
@@ -1713,11 +1713,11 @@ You can generate high-quality random data, such as initialization values (IVs), 
 The `GenerateRandom` function generates random data. When you use this function, make sure not to set the length of the random data to be zero and the pointer that points to the random data location to be NULL.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_GenerateRandom`, which is an implementation of PKCS #11 `C_GenerateRandom`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -1729,11 +1729,11 @@ message GenerateRandomResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #GenerateRandom_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -1741,28 +1741,28 @@ message GenerateRandomResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>Implementation of PKCS #11 <code>C_GenerateRandom</code>.</p>
     <p><code>GenerateRandom</code> is equivalent to the original PKCS #11 function. Internally, hardware-seeded entropy is passed through a FIPS-compliant DRNG (ANSI X9.31/ISO 18031, depending on Clic version).</p>
     <p>The host library could generate random numbers without dispatching to the backend, if suitable functionality would be available on the host. This is not done in the current implementation.</p>
     <p>This function does not support a size query.</p></td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_GenerateRandom (
-  CK_BYTE_PTR rnd, CK_ULONG rndlen,
-  target_t target
+    CK_BYTE_PTR rnd, CK_ULONG rndlen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_GenerateRandom` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #GenerateRandom_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -1770,23 +1770,23 @@ CK_RV m_GenerateRandom (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>`C_GenerateRandom` generates random or pseudo-random data. `hSession` is the sessions handle; pRandomData points to the location that receives the random data; and `ulRandomLen` is the length in bytes of the random or pseudo-random data to be generated.</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_GenerateRandom)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pRandomData,
-  CK_ULONG ulRandomLen
+    CK_SESSION_HANDLE hSession,
+    CK_BYTE_PTR pRandomData,
+    CK_ULONG ulRandomLen
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD,
@@ -1795,7 +1795,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateRandom)(
     CKR_OK, CKR_OPERATION_ACTIVE, CKR_RANDOM_NO_RNG, CKR_SESSION_CLOSED,
     CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #GenerateRandom_PKCS11}
 {: tab-title="PKCS #11"}
@@ -1813,7 +1813,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateRandom)(
 
   GenerateRandomResponse, err := cryptoClient.GenerateRandom(context.Background(), GenerateRandomRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -1824,7 +1824,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateRandom)(
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 ## Encrypting and decrypting data
 {: #grep11-operation-encrypt-decrypt-data}
@@ -1837,11 +1837,11 @@ By specifying the cryptographic mechanism, you can perform symmetric or asymmetr
 The `EncryptInit` function initializes an encryption operation. You need to call this function first to perform an encryption.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_EncryptInit`, which is an implementation of PKCS #11 `C_EncryptInit`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -1854,11 +1854,11 @@ message EncryptInitResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #EncryptInit_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -1866,34 +1866,34 @@ message EncryptInitResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_EncryptInit</code>.</p>
-  <p>The <code>(key, klen)</code> blob can be a public-key object, or a secret-key blob. Key type must be consistent with <code>pmech</code>.</p>
-  <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI is integrity-protected with a MAC key, as returned by <code>GenerateKeyPair</code> or alternatively <code>UnwrapKey</code>. The Encrypt state is created without session restrictions.</p>
-  <p>For secret-key mechanisms, the Encrypt state inherits object session restrictions from <code>(key, klen)</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
-  <p><code>(key, klen)</code> must be a key blob.</p>
+    <p>Implementation of PKCS #11 <code>C_EncryptInit</code>.</p>
+    <p>The <code>(key, klen)</code> blob can be a public-key object, or a secret-key blob. Key type must be consistent with <code>pmech</code>.</p>
+    <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI is integrity-protected with a MAC key, as returned by <code>GenerateKeyPair</code> or alternatively <code>UnwrapKey</code>. The Encrypt state is created without session restrictions.</p>
+    <p>For secret-key mechanisms, the Encrypt state inherits object session restrictions from <code>(key, klen)</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
+    <p><code>(key, klen)</code> must be a key blob.</p>
 </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_EncryptInit (
-  unsigned char \*state, size_t \*statelen,
-  CK_MECHANISM_PTR mech,
-  const unsigned char \*key, size_t keylen,
-  target_t target
+    unsigned char \*state, size_t \*statelen,
+    CK_MECHANISM_PTR mech,
+    const unsigned char \*key, size_t keylen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_EncryptInit` return values. For more information, see the <strong>Return values</strong> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #EncryptInit_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -1901,31 +1901,31 @@ CK_RV m_EncryptInit (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>`C_EncryptInit` initializes an encryption operation. `hSession` is the session’s handle; `pMechanism` points to the encryption mechanism; `hKey` is the handle of the encryption key.</p>
     <p>The `CKA_ENCRYPT` attribute of the encryption key, which indicates whether the key supports encryption, must be `CK_TRUE`.</p>
     <p>After the application calls `C_EncryptInit`, the application can either call C_Encrypt to encrypt data in a single part; or call `C_EncryptUpdate` zero or more times, followed by `C_EncryptFinal`, to encrypt data in multiple parts.  The encryption operation is active until the application uses a call to `C_Encrypt` or `C_EncryptFinal` to obtain the final piece of ciphertext. To process extra data (in single or multiple parts), the application must call `C_EncryptInit` again.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_EncryptInit)(
-  CK_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism,
-  CK_OBJECT_HANDLE hKey
+    CK_SESSION_HANDLE hSession,
+    CK_MECHANISM_PTR pMechanism,
+    CK_OBJECT_HANDLE hKey
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_FUNCTION_NOT_PERMITTED, CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #EncryptInit_PKCS11}
 {: tab-title="PKCS #11"}
@@ -1955,7 +1955,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptInit)(
 
   EncryptInitResponse, err := cryptoClient.EncryptInit(context.Background(), EncryptInitRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -1970,7 +1970,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_EncryptInit)(
     cb(err, data.State);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 ### Encrypt
 {: #grep11-Encrypt}
