@@ -3978,7 +3978,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_VerifyInit)(
 
   VerifyInitResponse, err := cryptoClient.VerifyInit(context.Background(), VerifyInitRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -3992,7 +3992,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_VerifyInit)(
     cb(err, signature, data.State);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### Verify
@@ -4001,11 +4001,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_VerifyInit)(
 The `Verify` function verifies a signature on single-part data. You don't need to perform the `VerifyUpdate` and `VerifyFinal` suboperations for a single-part verification. Before you call this function, make sure to run `VerifyInit` first.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_Verify`, which is an implementation of PKCS #11 `C_Verify`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -4018,11 +4018,11 @@ message VerifyResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #Verify_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -4030,34 +4030,34 @@ message VerifyResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_Verify</code>.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>The relative order of data and signature are reversed relative
-  to <code>VerifySingle</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
-  <p>The <code>state</code> blob was output from: <code>VerifyInit</code>.</p>
+    <p>Implementation of PKCS #11 <code>C_Verify</code>.</p>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>The relative order of data and signature are reversed relative
+    to <code>VerifySingle</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
+    <p>The <code>state</code> blob was output from: <code>VerifyInit</code>.</p>
 </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_Verify (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  CK_BYTE_PTR signature, CK_ULONG signaturelen,
-  target_t target
+    const unsigned char \*state, size_t statelen,
+    CK_BYTE_PTR data, CK_ULONG datalen,
+    CK_BYTE_PTR signature, CK_ULONG signaturelen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_Verify` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #Verify_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -4065,34 +4065,34 @@ CK_RV m_Verify (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>`C_Verify` verifies a signature in a single-part operation, where the signature is an appendix to the data. `hSession` is the session's handle; `pData` points to the data; `ulDataLen` is the length of the data; `pSignature` points to the signature; `ulSignatureLen` is the length of the signature.</p>
     <p>The verification operation must be initialized with `C_VerifyInit`. A call to `C_Verify` always terminates the active verification operation.</p>
     <p>A successful call to `C_Verify` needs to return either the value `CKR_OK` (indicating that the supplied signature is valid) or `CKR_SIGNATURE_INVALID` (indicating that the supplied signature is invalid). If the signature is invalid purely based on its length, then `CKR_SIGNATURE_LEN_RANGE` needs to be returned. In any of these cases, the active signing operation is terminated.</p>
     <p>`C_Verify` cannot be used to terminate a multi-part operation, and must be called after `C_VerifyInit` without intervening `C_VerifyUpdate` calls.</p>
     <p>For most mechanisms, `C_Verify` is equivalent to a sequence of `C_VerifyUpdate` operations followed by `C_VerifyFinal`.</p></td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_Verify)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pData,
-  CK_ULONG ulDataLen,
-  CK_BYTE_PTR pSignature,
-  CK_ULONG ulSignatureLen
+    CK_SESSION_HANDLE hSession,
+    CK_BYTE_PTR pData,
+    CK_ULONG ulDataLen,
+    CK_BYTE_PTR pSignature,
+    CK_ULONG ulSignatureLen
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_INVALID, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_SIGNATURE_INVALID, CKR_SIGNATURE_LEN_RANGE.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #Verify_PKCS11}
 {: tab-title="PKCS #11"}
@@ -4112,7 +4112,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_Verify)(
 
   VerifyResponse, err := cryptoClient.Verify(context.Background(), VerifyRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -4125,7 +4125,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_Verify)(
     cb(err, signature);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### VerifyUpdate
@@ -4134,11 +4134,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_Verify)(
 The `VerifyUpdate` function continues a multiple-part verification operation. Before you call this function, make sure to run `VerifyInit` first.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_VerifyUpdate`, which is an implementation of PKCS #11 `C_VerifyUpdate`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -4151,11 +4151,11 @@ message VerifyUpdateResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #VerifyUpdate_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -4163,30 +4163,30 @@ message VerifyUpdateResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_VerifyUpdate</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
-  <p>The <code>state</code> blob was output from: <code>VerifyInit</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <p>Implementation of PKCS #11 <code>C_VerifyUpdate</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
+    <p>The <code>state</code> blob was output from: <code>VerifyInit</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_VerifyUpdate (
-  unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  target_t target
+    unsigned char \*state, size_t statelen,
+    CK_BYTE_PTR data, CK_ULONG datalen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_VerifyUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #VerifyUpdate_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -4194,29 +4194,29 @@ CK_RV m_VerifyUpdate (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>`C_VerifyUpdate` continues a multiple-part verification operation, processing another data part. `hSession` is the session's handle, `pPart` points to the data part; `ulPartLen` is the length of the data part.</p>
     <p>The verification operation must be initialized with `C_VerifyInit`. This function can be called any number of times in succession. A call to `C_VerifyUpdate` which results in an error terminates the current verification operation.</p></td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_VerifyUpdate)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pPart,
-  CK_ULONG ulPartLen
+    CK_SESSION_HANDLE hSession,
+    CK_BYTE_PTR pPart,
+    CK_ULONG ulPartLen
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #VerifyUpdate_PKCS11}
 {: tab-title="PKCS #11"}
@@ -4244,7 +4244,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_VerifyUpdate)(
 
   VerifyUpdateResponse, err := cryptoClient.VerifyUpdate(context.Background(), VerifyUpdateRequest2)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -4256,7 +4256,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_VerifyUpdate)(
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### VerifyFinal
@@ -4265,11 +4265,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_VerifyUpdate)(
 The `VerifyFinal` function finishes a multiple-part verification operation.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_VerifyFinal`, which is an implementation of PKCS #11 `C_VerifyFinal`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -4281,11 +4281,11 @@ message VerifyFinalResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #VerifyFinal_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -4293,31 +4293,31 @@ message VerifyFinalResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_VerifyFinal</code>.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
-  <p>The <code>state</code> blob was output from: <code>VerifyInit</code>, <code>VerifyUpdate</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <p>Implementation of PKCS #11 <code>C_VerifyFinal</code>.</p>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
+    <p>The <code>state</code> blob was output from: <code>VerifyInit</code>, <code>VerifyUpdate</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_VerifyFinal (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR signature, CK_ULONG signaturelen,
-  target_t target
+    const unsigned char \*state, size_t statelen,
+    CK_BYTE_PTR signature, CK_ULONG signaturelen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_VerifyFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #VerifyFinal_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -4325,30 +4325,30 @@ CK_RV m_VerifyFinal (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>`C_VerifyFinal` finishes a multiple-part verification operation, checking the signature. `hSession` is the session's handle; `pSignature` points to the signature; `ulSignatureLen` is the length of the signature.</p>
     <p>The verification operation must be initialized with `C_VerifyInit`. A call to `C_VerifyFinal` always terminates the active verification operation.</p>
     <p>A successful call to `C_VerifyFinal` needs to return either the value `CKR_OK` (indicating that the supplied signature is valid) or `CKR_SIGNATURE_INVALID` (indicating that the supplied signature is invalid). If the signature is invalid based on its length, then `CKR_SIGNATURE_LEN_RANGE` needs to be returned. In any of these cases, the active verifying operation is terminated.</p></td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_VerifyFinal)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pSignature,
-  CK_ULONG ulSignatureLen
+    CK_SESSION_HANDLE hSession,
+    CK_BYTE_PTR pSignature,
+    CK_ULONG ulSignatureLen
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_SIGNATURE_INVALID, CKR_SIGNATURE_LEN_RANGE.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #VerifyFinal_PKCS11}
 {: tab-title="PKCS #11"}
@@ -4367,7 +4367,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_VerifyFinal)(
 
   VerifyFinalResponse, err := cryptoClient.VerifyFinal(context.Background(), VerifyFinalRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -4379,7 +4379,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_VerifyFinal)(
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### VerifySingle
@@ -4388,11 +4388,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_VerifyFinal)(
 The `VerifySingle` function signs or MACs data in one pass with one call and without constructing intermediate digest state. It does not return any state to host and returns only the verification result. This function is an IBM EP11 extension to the standard PKCS #11 specification and is a combination of the `VerifyInit` and `Verify` functions. It enables you to complete a verification operation with a single call instead of a series of calls.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_VerifySingle`<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -4406,11 +4406,11 @@ message VerifySingleResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #VerifySingle_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -4418,34 +4418,34 @@ message VerifySingleResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Nonstandard extension, combination of <code>VerifyInit</code> and <code>Verify</code>. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host, only verification result. No size query is available because this function returns a Boolean.</p>
-  <p>This is the preferred way of verifying a signature, without an extra roundtrip, encryption, decryption. Functionally, <code>VerifySingle</code> is equivalent to <code>VerifyInit</code> followed immediately by a <code>Verify</code>.</p>
-  <p>The <code>(key, klen)</code> blob and the <code>pmech</code> mechanism together must be passable to <code>VerifyInit</code>.</p>
-  <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI can be MACed (such as returned as a public key from <code>GenerateKeyPair</code>) or just the SPKI itself (if obtained from an external source, such as a certificate).</p>
-  <p>See also: <code>VerifyInit</code>, <code>Verify</code>, <code>SignSingle</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <p>Nonstandard extension, combination of <code>VerifyInit</code> and <code>Verify</code>. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host, only verification result. No size query is available because this function returns a Boolean.</p>
+    <p>This is the preferred way of verifying a signature, without an extra roundtrip, encryption, decryption. Functionally, <code>VerifySingle</code> is equivalent to <code>VerifyInit</code> followed immediately by a <code>Verify</code>.</p>
+    <p>The <code>(key, klen)</code> blob and the <code>pmech</code> mechanism together must be passable to <code>VerifyInit</code>.</p>
+    <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI can be MACed (such as returned as a public key from <code>GenerateKeyPair</code>) or just the SPKI itself (if obtained from an external source, such as a certificate).</p>
+    <p>See also: <code>VerifyInit</code>, <code>Verify</code>, <code>SignSingle</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_VerifySingle (
-  const unsigned char \*pubKey, size_t pubKeylen,
-  CK_MECHANISM_PTR mech,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  CK_BYTE_PTR signature, CK_ULONG signaturelen,
-  target_t target
+    const unsigned char \*pubKey, size_t pubKeylen,
+    CK_MECHANISM_PTR mech,
+    CK_BYTE_PTR data, CK_ULONG datalen,
+    CK_BYTE_PTR signature, CK_ULONG signaturelen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_VerifySingle` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #VerifySingle_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -4466,7 +4466,7 @@ CK_RV m_VerifySingle (
 
   VerifySingleResponse, err := cryptoClient.VerifySingle(context.Background(), VerifySingleRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -4482,7 +4482,7 @@ CK_RV m_VerifySingle (
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 ## Protecting data integrity through message digests
 {: #grep11-operation-digest-data}
@@ -4495,11 +4495,11 @@ GREP11 provides a set of functions to create message digests that are designed t
 The `DigestInit` function initializes a message-digesting operation. You need to run this function first to perform a digesting operation.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_DigestInit`, which is an implementation of PKCS #11 `C_DigestInit`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -4511,11 +4511,11 @@ message DigestInitResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DigestInit_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -4523,30 +4523,30 @@ message DigestInitResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td><p>Implementation of PKCS #11 <code>C_DigestInit</code>.</p>
-  <p>Create wrapped digest state.</p>
-  <p>**Note**: size queries are supported, but the wrapped state is always returned by the backend, unlike most size queries (which return an output size, instead of actual output). <code>Digest</code> states are sufficiently small that they do not introduce noticeable transport overhead.</p>
-  <p>During size queries, the host just discards the returned state, and reports blob size (in <code>len</code>). When blob is being returned, <code>len</code> is checked against returned size.</p>
-  <p>The <code>state</code>,<code>len</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must tie blob to session.)</p></td>
-  </tr>
-  <tr>
+    <p>Create wrapped digest state.</p>
+    <p>**Note**: size queries are supported, but the wrapped state is always returned by the backend, unlike most size queries (which return an output size, instead of actual output). <code>Digest</code> states are sufficiently small that they do not introduce noticeable transport overhead.</p>
+    <p>During size queries, the host just discards the returned state, and reports blob size (in <code>len</code>). When blob is being returned, <code>len</code> is checked against returned size.</p>
+    <p>The <code>state</code>,<code>len</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must tie blob to session.)</p></td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_DigestInit (
-  unsigned char \*state, size_t \*len,
-  const CK_MECHANISM_PTR mech,
-  target_t target
+    unsigned char \*state, size_t \*len,
+    const CK_MECHANISM_PTR mech,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_DigestInit` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DigestInit_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -4554,29 +4554,29 @@ CK_RV m_DigestInit (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>`C_DigestInit` initializes a message-digesting operation. `hSession` is the session’s handle; pMechanism points to the digesting mechanism.</p>
     <p>After the application calls `C_DigestInit`, the application can either call `C_Digest` to digest data in a single part; or call `C_DigestUpdate` zero or more times, followed by `C_DigestFinal`, to digest data in multiple parts.  The message-digesting operation is active until the application uses a call to C_Digest or `C_DigestFinal` to obtain the message digest. To process extra data (in single or multiple parts), the application must call `1C_DigestInit1` again.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_DEFINE_FUNCTION(CK_RV, C_DigestInit)(
-  CK_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism
+    CK_SESSION_HANDLE hSession,
+    CK_MECHANISM_PTR pMechanism
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #DigestInit_PKCS11}
 {: tab-title="PKCS #11"}
@@ -4594,7 +4594,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestInit)(
 
   DigestInitResponse, err := cryptoClient.DigestInit(context.Background(), DigestInitRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -4607,7 +4607,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestInit)(
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### Digest
@@ -4616,11 +4616,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestInit)(
 The `Digest` function digests single-part data. You don't need to call the `DigestUpdate` and `DigestFinal` functions for digesting single-part data. Before you call this function, make sure to run `DigestInit` first. When you set parameters, note not to specify the length of the input data to be zero and the pointer that points to the input data location to be NULL.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_Digest`, which is an implementation of PKCS #11 `C_Digest`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -4633,11 +4633,11 @@ message DigestResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #Digest_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -4645,34 +4645,34 @@ message DigestResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
-  <td>
-  <p>Implementation of PKCS #11 <code>C_Digest</code>.</p>
-  <p>If a digest object has exactly 0 (zero) bytes that are appended to it after creation, in any combination of zero-byte transfers, it can still perform a one-pass Digest, even if it needs to be rejected by a strict implementation.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>Implementations might perform
-  <code>DigestUpdate</code>, <code>DigestFinal</code>, or <code>Digest</code> calls on cleartext digest objects in host code, bypassing HSM backends altogether. This choice might or might not be visible to host code, and it does not impact the security of the operation (as clear objects might not digest sensitive data). </p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. The <code>state</code> blob was output from: <code>DigestInit</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_Digest</code>.</p>
+    <p>If a digest object has exactly 0 (zero) bytes that are appended to it after creation, in any combination of zero-byte transfers, it can still perform a one-pass Digest, even if it needs to be rejected by a strict implementation.</p>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>Implementations might perform
+    <code>DigestUpdate</code>, <code>DigestFinal</code>, or <code>Digest</code> calls on cleartext digest objects in host code, bypassing HSM backends altogether. This choice might or might not be visible to host code, and it does not impact the security of the operation (as clear objects might not digest sensitive data). </p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. The <code>state</code> blob was output from: <code>DigestInit</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_Digest (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  CK_BYTE_PTR digest, CK_ULONG_PTR digestlen,
-  target_t target
+    const unsigned char \*state, size_t statelen,
+    CK_BYTE_PTR data, CK_ULONG datalen,
+    CK_BYTE_PTR digest, CK_ULONG_PTR digestlen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_Digest` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #Digest_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -4680,7 +4680,7 @@ CK_RV m_Digest (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>`C_Digest` digests data in a single part. `hSession` is the session’s handle, pData points to the data; `ulDataLen` is the length of the data; `pDigest` points to the location that receives the message digest; `pulDigestLen` points to the location that holds the length of the message digest.</p>
     <p>`C_Digest` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
@@ -4689,8 +4689,8 @@ CK_RV m_Digest (
     <p>The input data and digest output can be in the same place, that is, it is OK if pData and pDigest point to the same location.</p>
     <p>`C_Digest` is equivalent to a sequence of `C_DigestUpdate` operations followed by `C_DigestFinal`.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -4703,13 +4703,13 @@ CK_DEFINE_FUNCTION(CK_RV, C_Digest)(
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #Digest_PKCS11}
 {: tab-title="PKCS #11"}
@@ -4729,7 +4729,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_Digest)(
 
   DigestResponse, err := cryptoClient.Digest(context.Background(), DigestRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -4742,7 +4742,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_Digest)(
     });
   }
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### DigestUpdate
@@ -4751,11 +4751,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_Digest)(
 The `DigestUpdate` function continues a multiple-part digesting operation. Before you call this function, make sure to run `DigestInit` first. When you set parameters, note not to specify the length of the input data to be zero and the pointer that points to the input data location to be NULL.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_DigestUpdate`, which is an implementation of PKCS #11 `C_DigestUpdate`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -4768,11 +4768,11 @@ message DigestUpdateResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DigestUpdate_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -4780,30 +4780,30 @@ message DigestUpdateResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_DigestUpdate</code>.</p>
-  <p><code>DigestUpdate</code> is polymorphic,
-  accepting both wrapped or clear digest objects, updating state in the same format.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
-  <p>The <code>state</code> blob was output from: <code>DigestInit</code>, <code>DigestUpdate</code>, <code>DigestKey</code>.</p>
-  <p>See also: <code>DigestInit</code></p>
+    <p>Implementation of PKCS #11 <code>C_DigestUpdate</code>.</p>
+    <p><code>DigestUpdate</code> is polymorphic,
+    accepting both wrapped or clear digest objects, updating state in the same format.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
+    <p>The <code>state</code> blob was output from: <code>DigestInit</code>, <code>DigestUpdate</code>, <code>DigestKey</code>.</p>
+    <p>See also: <code>DigestInit</code></p>
 	</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_DigestUpdate (
-  unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  target_t target
+    unsigned char \*state, size_t statelen,
+    CK_BYTE_PTR data, CK_ULONG datalen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_DigestUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
   </tr>
@@ -4814,14 +4814,14 @@ CK_RV m_DigestUpdate (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>
     <p>`C_DigestUpdate` continues a multiple-part message-digesting operation, processing another data part. `hSession` is the session’s handle, `pPart` points to the data part; `ulPartLen` is the length of the data part.</p>
     <p>The message-digesting operation must be initialized with `C_DigestInit`. Calls to this function and `C_DigestKey` can be interspersed any number of times in any order. A call to `C_DigestUpdate` which results in an error terminates the current digest operation.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -4832,13 +4832,13 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestUpdate)(
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #DigestUpdate_PKCS11}
 {: tab-title="PKCS #11"}
@@ -4866,7 +4866,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestUpdate)(
 
   DigestUpdateResponse, err := cryptoClient.DigestUpdate(context.Background(), DigestUpdateRequest2)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -4878,7 +4878,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestUpdate)(
     cb(err, data.State);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 
 ### DigestFinal
@@ -4887,11 +4887,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestUpdate)(
 The `DigestFinal` function finishes a multiple-part digesting operation.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_DigestFinal`, which is an implementation of PKCS #11 `C_DigestFinal`.<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -4903,11 +4903,11 @@ message DigestFinalResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DigestFinal_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -4915,31 +4915,31 @@ message DigestFinalResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td><p>Implementation of PKCS #11 <code>C_DigestFinal</code>.</p>
-  <p><code>DigestFinal</code> is polymorphic, accepting both wrapped or clear digest objects.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
-  <p>The <code>state</code> blob was output from: <code>DigestInit</code>, <code>DigestUpdate</code>, <code>DigestKey</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <p><code>DigestFinal</code> is polymorphic, accepting both wrapped or clear digest objects.</p>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
+    <p>The <code>state</code> blob was output from: <code>DigestInit</code>, <code>DigestUpdate</code>, <code>DigestKey</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_DigestFinal (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR digest, CK_ULONG_PTR digestlen,
-  target_t target
+    const unsigned char \*state, size_t statelen,
+    CK_BYTE_PTR digest, CK_ULONG_PTR digestlen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_DigestFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DigestFinal_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -4947,14 +4947,14 @@ CK_RV m_DigestFinal (
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td><p>`C_DigestFinal` finishes a multiple-part message-digesting operation, returning the message digest. `hSession` is the session’s handle; `pDigest` points to the location that receives the message digest; `pulDigestLen` points to the location that holds the length of the message digest.</p>
     <p>`C_DigestFinal` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
     <p>The digest operation must be initialized with `C_DigestInit`.  A call to `C_DigestFinal` always terminates the active digest operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one that returns `CKR_OK`) to determine the length of the buffer that is needed to hold the message digest.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -4965,13 +4965,13 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestFinal)(
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
-  </tr>
+    </tr>
 </table>
 {: #DigestFinal_PKCS11}
 {: tab-title="PKCS #11"}
@@ -4989,7 +4989,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestFinal)(
 
   DigestFinalResponse, err := cryptoClient.DigestFinal(context.Background(), DigestFinalRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -5000,7 +5000,7 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestFinal)(
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 ### DigestSingle
 {: #grep11-DigestSingle}
@@ -5008,11 +5008,11 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestFinal)(
 The `DigestSingle` function digests data in one pass with one call and without constructing an intermediate digest state and unnecessary roundtrips. This function is an IBM EP11 extension to the standard PKCS #11 specification and is a combination of the `DigestInit` and `Digest` functions. It enables you to complete a digesting operation with a single call instead of a series of calls.
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_DigestSingle`<td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -5025,11 +5025,11 @@ message DigestSingleResponse {
 }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DigestSingle_GREP11}
 {: tab-title="Enterprise PKCS #11 over gRPC"}
@@ -5037,32 +5037,32 @@ message DigestSingleResponse {
 {: class="simple-tab-table"}
 
 <table>
-  <tr>
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Nonstandard extension, combination of <code>DigestInit</code> and <code>Digest</code>. Digests data in one pass, with one call, without constructing an intermediate digest state, and unnecessary roundtrips.</p>
-  <p>This is the preferred method of digesting cleartext for XCP-aware applications. Functionally, <code>DigestSingle</code> is equivalent to <code>DigestInit</code> followed immediately by <code>Digest</code>.</p>
-  <p>If a key needs to be digested, one <em>must</em> use <code>DigestInit</code> and <code>DigestKey</code>, since this function does not handle key blobs.</p>
-  <p>Does not return any state to host, only digest result. There are no non-PKCS #11 parameters, since everything is used directly from the PKCS #11 call.</p>
-  </td>
-  </tr>
-  <tr>
+    <p>Nonstandard extension, combination of <code>DigestInit</code> and <code>Digest</code>. Digests data in one pass, with one call, without constructing an intermediate digest state, and unnecessary roundtrips.</p>
+    <p>This is the preferred method of digesting cleartext for XCP-aware applications. Functionally, <code>DigestSingle</code> is equivalent to <code>DigestInit</code> followed immediately by <code>Digest</code>.</p>
+    <p>If a key needs to be digested, one <em>must</em> use <code>DigestInit</code> and <code>DigestKey</code>, since this function does not handle key blobs.</p>
+    <p>Does not return any state to host, only digest result. There are no non-PKCS #11 parameters, since everything is used directly from the PKCS #11 call.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
 CK_RV m_DigestSingle (
-  CK_MECHANISM_PTR mech,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  CK_BYTE_PTR digest, CK_ULONG_PTR digestlen,
-  target_t target
+    CK_MECHANISM_PTR mech,
+    CK_BYTE_PTR data, CK_ULONG datalen,
+    CK_BYTE_PTR digest, CK_ULONG_PTR digestlen,
+    target_t target
 );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>A subset of `C_DigestSingle` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DigestSingle_EP11}
 {: tab-title="Enterprise PKCS #11"}
@@ -5082,7 +5082,7 @@ CK_RV m_DigestSingle (
 
   DigestSingleResponse, err := cryptoClient.DigestSingle(context.Background(), DigestSingleRequest)
   ```
-  {: codeblock}
+    {: codeblock}
 
 - JavaScript code snippet
 
@@ -5096,7 +5096,7 @@ CK_RV m_DigestSingle (
     callback(err, response);
   });
   ```
-  {: codeblock}
+    {: codeblock}
 
 ## Code examples
 {: #code-example}
