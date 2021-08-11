@@ -48,8 +48,8 @@ After you create your z/OS instance and complete the prerequisites, complete the
 
 1. Attach a new block storage data volume to your z/OS virtual server instance. For more information, see [Attaching a block storage volume](/docs/vpc?topic=vpc-attaching-block-storage&interface=ui).
 
-  If your z/OS virtual server instance is created by using the standard z/OS stock image, the size of the new block storage volume must not exceed 55 GB because the storage volumes larger than 55 GB are considered to be Extended Address Volumes (EAV) and cannot be used as the SDUMP target.  To work around this restriction and use larger volumes for SDUMP, you must run the command `SETSMS USEEAVZ(YES)` on the z/OS instance before you attach a larger block storage device for SDUMP.
-  {: important}
+    If your z/OS virtual server instance is created by using the standard z/OS stock image, the size of the new block storage volume must not exceed 55 GB because the storage volumes larger than 55 GB are considered to be Extended Address Volumes (EAV) and cannot be used as the SDUMP target.  To work around this restriction and use larger volumes for SDUMP, you must run the command `SETSMS USEEAVZ(YES)` on the z/OS instance before you attach a larger block storage device for SDUMP.
+    {: important}
 
 2. Verify that the newly attached storage volume is ready to be used by the z/OS instance.
 
@@ -65,7 +65,7 @@ After you create your z/OS instance and complete the prerequisites, complete the
 
 3. Initialize the volume via an ICKDSF job and vary it online.
 
-  1. If your z/OS instance is not created by using the standard z/OS stock image, use ISPF (3.2) and create a new data set (for example, `IBMUSER.JCL`) to store the INITVOL JCL. For example, the data set can be created with the following settings:
+   1. If your z/OS instance is not created by using the standard z/OS stock image, use ISPF (3.2) and create a new data set (for example, `IBMUSER.JCL`) to store the INITVOL JCL. For example, the data set can be created with the following settings:
 
        ```
        Space units . . . . . . TRKS
