@@ -1,4 +1,4 @@
- <code> ---
+---
 
 copyright:
   years: 2018, 2021
@@ -315,7 +315,7 @@ The `GetMechanismList` function obtains a list of mechanism types that are suppo
     <td>
     <p><code>C_GetMechanismList</code>is used to obtain a list of mechanism types supported by a token.<code>SlotID</code>is the ID of the token's slot;<code>pulCount</code>points to the location that receives the number of mechanisms.</p>
     <p>
-    Two ways are available for an application to call<code>C_GetMechanismList`:
+    Two ways are available for an application to call<code>C_GetMechanismList</code>:
     <ol>
     <li>If<code>pMechanismList</code>is<code>NULL_PTR</code>, then all that <code>C_GetMechanismList</code> does is return (in <code>*pulCount</code>) the number of mechanisms, without returning a list of mechanisms. The contents of <code>*pulCount</code> on entry to <code>C_GetMechanismList</code> has no meaning in this case, and the call returns the value <code>CKR_OK</code>.</li>
     <li>If<code>pMechanismList</code>is not<code>NULL_PTR</code>, then <code>*pulCount</code> must contain the size (in terms of <code>CK_MECHANISM_TYPE</code> elements) of the buffer pointed to by pMechanismList. If that buffer is large enough to hold the list of mechanisms, then the list is returned in it, and <code>CKR_OK</code> is returned. If not, then the call to <code>C_GetMechanismList</code> returns the value <code>CKR_BUFFER_TOO_SMALL</code>. In either case, the value <code>*pulCount</code> is set to hold the number of mechanisms.</li>
@@ -1404,7 +1404,7 @@ The `GetAttributeValue` function obtains an attribute value of an object.
     </ol>
     </p>
     <p>If case 1 applies to any of the requested attributes, then the call needs to return the value <code>CKR_ATTRIBUTE_SENSITIVE</code>. If case 2 applies to any of the requested attributes, then the call needs to return the value <code>CKR_ATTRIBUTE_TYPE_INVALID</code>. If case 5 applies to any of the requested attributes, then the call needs to return the value <code>CKR_BUFFER_TOO_SMALL</code>. As usual, if more than one of these error codes is applicable, <code>Cryptoki</code> can return any of them. Only if none of them applies to any of the requested attributes, <code>CKR_OK</code> is returned.</p>
-    <p>In the special case of an attribute whose value is an array of attributes, for example <code> CKA_WRAP_TEMPLATE</code>, where it is passed in with <code>pValue</code> not NULL, then if the <code>pValue</code> of elements within the array is NULL_PTR then the <code>ulValueLen</code> of elements within the array is set to the required length. If the <code>pValue</code> of elements within the array is not NULL_PTR, then the <code>ulValueLen</code> element of attributes within the array must reflect the space that the corresponding <code>pValue</code> points to, and <code>pValue</code> is completed if there is sufficient room. Therefore it is important to initialize the contents of a buffer before <code>C_GetAttributeValue</code> is called to get such an array value. If any <code>ulValueLen</code> within the array isn't large enough, it is set to <code>CK_UNAVAILABLE_INFORMATION</code> and the function returns <code>CKR_BUFFER_TOO_SMALL</code>, as it does if an attribute in the <code>pTemplate</code> argument has <code>ulValueLen</code> too small. Any attribute whose value is an array of attributes is identifiable by the <code>CKF_ARRAY_ATTRIBUTE</code> set of the attribute type.</p>
+    <p>In the special case of an attribute whose value is an array of attributes, for example <code>CKA_WRAP_TEMPLATE</code>, where it is passed in with <code>pValue</code> not NULL, then if the <code>pValue</code> of elements within the array is NULL_PTR then the <code>ulValueLen</code> of elements within the array is set to the required length. If the <code>pValue</code> of elements within the array is not NULL_PTR, then the <code>ulValueLen</code> element of attributes within the array must reflect the space that the corresponding <code>pValue</code> points to, and <code>pValue</code> is completed if there is sufficient room. Therefore it is important to initialize the contents of a buffer before <code>C_GetAttributeValue</code> is called to get such an array value. If any <code>ulValueLen</code> within the array isn't large enough, it is set to <code>CK_UNAVAILABLE_INFORMATION</code> and the function returns <code>CKR_BUFFER_TOO_SMALL</code>, as it does if an attribute in the <code>pTemplate</code> argument has <code>ulValueLen</code> too small. Any attribute whose value is an array of attributes is identifiable by the <code>CKF_ARRAY_ATTRIBUTE</code> set of the attribute type.</p>
     <p>The error codes <code>CKR_ATTRIBUTE_SENSITIVE</code>, <code>CKR_ATTRIBUTE_TYPE_INVALID</code>, and <code>CKR_BUFFER_TOO_SMALL</code> do not denote true errors for <code>C_GetAttributeValue</code>. If a call to <code>C_GetAttributeValue</code> returns any of these three values, then the call must nonetheless have processed every attribute in the template that is supplied to <code>C_GetAttributeValue</code>. Each attribute in the template whose value can be returned by the call to <code>C_GetAttributeValue</code> is returned by the call to <code>C_GetAttributeValue</code>.</p>
     </td>
     </tr>
@@ -2728,7 +2728,7 @@ The `DecryptUpdate` function continues a multiple-part decryption operation. Bef
 <table id="DecryptUpdate_PKCS11" tab-title="PKCS #11" tab-group="DecryptUpdate" class="simple-tab-table">
     <tr>
     <th>Description</th>
-    <td><p><code>C_DecryptUpdate</code> continues a multiple-part decryption operation, processing another encrypted data part.`hSession</code> is the session’s handle; <code>pEncryptedPart</code> points to the encrypted data part; <code>ulEncryptedPartLen</code> is thelength of the encrypted data part; <code>pPart</code> points to the location that receives the recovered data part; <code>pulPartLen</code> points to the location that holds the length of the recovered data part.</p>
+    <td><p><code>C_DecryptUpdate</code> continues a multiple-part decryption operation, processing another encrypted data part. <code>hSession</code> is the session’s handle; <code>pEncryptedPart</code> points to the encrypted data part; <code>ulEncryptedPartLen</code> is thelength of the encrypted data part; <code>pPart</code> points to the location that receives the recovered data part; <code>pulPartLen</code> points to the location that holds the length of the recovered data part.</p>
     <p><code>C_DecryptUpdate</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> onproducing output.</p>
     <p>The decryption operation must be initialized with <code>C_DecryptInit</code>.  This function can be called any number oftimes in succession.  A call to <code>C_DecryptUpdate</code> which results in an error other than CKR_BUFFER_TOO_SMALL terminatesthe current decryption operation.</p>
     <p>The ciphertext and plaintext can be in the same place, that is, it is OK if <code>pEncryptedPart</code> and <code>pPart</code> point to thesame location.</p></td>
@@ -3304,7 +3304,7 @@ The `SignUpdate` function continues a multiple-part signature operation. Before 
 <table id="SignUpdate_PKCS11" tab-title="PKCS #11" tab-group="SignUpdate" class="simple-tab-table">
     <tr>
     <th>Description</th>
-    <td><p><code>C_SignUpdate</code> continues a multiple-part signature operation, processing another data part. <code>hSession</code> is the session's handle, pPart points to the data part; <code>ulPartLen</code> is the length of the data part.</p>
+    <td><p><code>C_SignUpdate</code> continues a multiple-part signature operation, processing another data part. <code>hSession</code> is the session's handle, <code>pPart</code> points to the data part; <code>ulPartLen</code> is the length of the data part.</p>
     <p>The signature operation must be initialized with <code>C_SignInit</code>. This function can be called any number of times in succession. A call to <code>C_SignUpdate</code> which results in an error terminates the current signature operation.</p></td>
     </tr>
     <tr>

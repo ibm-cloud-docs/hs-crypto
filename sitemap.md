@@ -512,12 +512,12 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#set-up-grep11-api-next-steps)
 
 [Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11)
+* [Security and availability best practices for enabling mutual TLS authentication](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-security-best-practices)
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-prerequisites)
 * [Step 1: Configure the administrator signature key](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-step1-signature)
 * [Step 2: Set up the client certificate for authentication](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-step2-certificate)
 * [Step 3: Establish mutual TLS connections for EP11 applications](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-step3-enable-tls)
 * [(Optional) Disabling mutual TLS connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-disable-tls)
-* [Security and availability best practices](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-security-best-practices)
 * [What's next](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-whats-next)
 
 
