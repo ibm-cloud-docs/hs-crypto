@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-08-11"
 
 keywords: instance settings, service settings, network access policies
 
@@ -27,7 +27,7 @@ subcollection: hs-crypto
 After you set up your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance, you manage network access policy by using the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
-Before you update the network access policy, you need to initialize the service instance first. See [Initializing service instances with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) for instructions.
+Before you update the network access policy, you need to initialize the service instance first. See [Initializing service instances with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [Initializing service instances by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) for instructions.
 {: important}
 
 For more information about how the network access differs, see [Understanding the network access policy](/docs/hs-crypto?topic=hs-crypto-secure-connection#understand-network-access-policies).
@@ -49,7 +49,7 @@ After you create a {{site.data.keyword.hscrypto}} instance, complete the followi
 4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
 5. In the **Allowed network** section, select the network that you want traffic to come through, and click **Save policy**. The default network policy is public and private, which allows access from both public and private networks.
 
-    If a private-only network is enabled, you are not able to view or manage keys through the UI. However, you can still adjust the network setting later using the API or CLI.
+    If a private-only network is enabled, you are not able to view or manage keys through the UI. However, you can still adjust the network setting later by using the API or CLI.
     {: note}
 
 ## Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management API
@@ -265,7 +265,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
         <td><varname>port</varname></td>
         <td><strong>Required.</strong> The port number of the API endpoint.</td>
       </tr>
-      
+
       <tr>
         <td>
           <varname>IAM_token</varname>

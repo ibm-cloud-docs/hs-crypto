@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-11"
 
 keywords: signing service, manage signature keys, customer-writtn signing service, third-party signing service
 
@@ -31,7 +31,7 @@ For {{site.data.keyword.hscrypto}} instance initialization, you can use a third-
 
 Before you can use a signing service to manage signature keys, make sure that you complete the [prerequisite steps](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite) for the instance initialization.
 
-To enable a signing service for Terraform or the TKE CLI plug-in, the signing service must be implemented as an HTTP server that implements the following two requests. All signature keys that are accessed by using the signing service must be P521 EC keys.
+To enable a signing service for Terraform or the TKE CLI plug-in, the signing service must be implemented as an HTTP Server that implements the following two requests. All signature keys that are accessed by using the signing service must be P521 EC keys.
 
 - GET `/keys/:name`
 
@@ -50,7 +50,7 @@ To enable a signing service for Terraform or the TKE CLI plug-in, the signing se
 
 - POST `/sign/:name`
 
-    This requests the signing service to sign the input data using the signature key identified by the `:name` parameter. The `:name` parameter is appended to the URL that accesses the signing service. It can contain only unreserved characters as defined by section 2.3 of [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986). The authentication token for the signature key is passed to a `POST /sign` request in the HTTP `Authorization` request header.
+    This requests the signing service to sign the input data by using the signature key identified by the `:name` parameter. The `:name` parameter is appended to the URL that accesses the signing service. It can contain only unreserved characters as defined by section 2.3 of [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986). The authentication token for the signature key is passed to a `POST /sign` request in the HTTP `Authorization` request header.
 
     The request body contains the input data to be signed. Requests created by TKE CLI plug-in and Terraform commands also include a parameter that identifies SHA-512 as the hash algorithm to be used when generating the signature. The following is an example of the request body:
 
@@ -73,7 +73,7 @@ To enable a signing service for Terraform or the TKE CLI plug-in, the signing se
 ## Configuring the TKE CLI plug-in to use the signing service
 {: #configure-tke-cli-for-signing-service}
 
-Instead of using signature key files that are stored on your workstation for signing commands, configure the TKE CLI plug-in to use signature keys provided by your signing service by completing the following steps:
+Instead of using signature key files that are stored on your workstation for signing commands, configure the TKE CLI plug-in to use signature keys that are provided by your signing service by completing the following steps:
 
 1. Set the `TKE_SIGNSERV_URL` environment variable on your workstation to the URL and port number where your signing service is running.
 
@@ -82,7 +82,7 @@ Instead of using signature key files that are stored on your workstation for sig
 
 2. Create a file named `SIGNSERVKEYS` in the subdirectory that is identified by the `CLOUDTKEFILES` environment variable.
 
-    This file is expected to be a JSON string representing an array that lists valid signature keys for signing commands. Each array entry must contain a `key` field and can optionally include a `token` field. The `key` field identifies a particular signature key. The `token` field authorizes use of the key. The signing service determines how the key identification and authentication token are defined. If you don't specify the `token` field in the `SIGNSERVKEYS` file, you will be prompted to enter the token value when you run TKE CLI plug-in commands, which is more secure than directly providing it in the file.
+    This file is expected to be a JSON string representing an array that lists valid signature keys for signing commands. Each array entry must contain a `key` field and can optionally include a `token` field. The `key` field identifies a particular signature key. The `token` field authorizes use of the key. The signing service determines how the key identification and authentication token are defined. If you don't specify the `token` field in the `SIGNSERVKEYS` file, you will be prompted to enter the token value when you run TKE CLI plug-in commands, which are more secure than directly providing it in the file.
 
     The following lists some examples of the `SIGNSERVKEYS` file:
 
@@ -120,5 +120,5 @@ Instead of using signature key files that are stored on your workstation for sig
 ## What's next
 {: #signing-service-whats-next}
 
-- For the information about the subsequent steps to complete the service instance initialization using the TKE CLI plug-in, see [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
+- For the information about the subsequent steps to complete the service instance initialization by using the TKE CLI plug-in, see <[Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)>.
 - For how to configure Terraform to use a signing service, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).

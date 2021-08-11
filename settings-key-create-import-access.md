@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-11"
 
 keywords: instance settings, service settings, key creation/import, key create policy, key creation/import, key policy
 
@@ -29,7 +29,7 @@ instance, you can manage the key create and import access policy by using the
 {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
-This policy only applies to key management service keys and related operations.
+This policy applies only to key management service keys and related operations.
 {: important}
 
 ## Understanding the key create and import access settings
@@ -43,7 +43,7 @@ how keys are created and imported into your
 When you enable this policy, {{site.data.keyword.hscrypto}}
 only permits the creation or importation of keys in your
 {{site.data.keyword.hscrypto}} instance that follow the key
-creation and importation settings listed on the key create and import access policy.
+creation and importation settings that are listed on the key create and import access policy.
 
 Setting and retrieving the key create and import access policy is supported through the
 API only. To find out more about accessing
@@ -54,13 +54,13 @@ Before you enable the key create and import access policy for your
 {{site.data.keyword.hscrypto}} instance, keep in mind the
 following considerations:
 
-- KeyCreateImportAccess policies do not affect keys that existed prior to policy creation.
+- KeyCreateImportAccess policies do not affect keys that existed before policy creation.
 
-    KeyCreateImportAccess policies only affect {{site.data.keyword.hscrypto}} requests that are sent after the policy is set. You still have access to all keys that existed in your {{site.data.keyword.hscrypto}} instance before the policy is created.
+    KeyCreateImportAccess policies affect only {{site.data.keyword.hscrypto}} requests that are sent after the policy is set. You still have access to all keys that existed in your {{site.data.keyword.hscrypto}} instance before the policy is created.
 
 - KeyCreateImportAccess policies can affect your keys across various key actions.
 
-    The `enforce_token` attribute affect imported keys during creation, rotation, and restoration. The `create_root_key`, `import_root_key`, `create_standard_key`, and `import_standard_key` attributes only affect keys at creation time. All other {{site.data.keyword.hscrypto}} actions, such as wrap and unwrap, are not affected and can be invoked on the key as usual.
+    The `enforce_token` attribute affects imported keys during creation, rotation, and restoration. The `create_root_key`, `import_root_key`, `create_standard_key`, and `import_standard_key` attributes affect only keys at creation time. All other {{site.data.keyword.hscrypto}} actions, such as wrap and unwrap, are not affected and can be invoked on the key as usual.
 
 ## Enabling or updating the key create and import access policy for your service instance with the console
 {: #enable-keyCreateImportAccess-policy-console}
@@ -80,7 +80,7 @@ complete the following steps to enable the key create and import access policy:
     - `Allow creation of standard keys`: Check the box to allow standard keys to be created in your {{site.data.keyword.hscrypto}} instance.
     - `Allow import of root keys`: Check the box to allow root keys to be imported into your {{site.data.keyword.hscrypto}} instance.
     - `Allow import of standard keys`: Check the box to allow standard keys to be imported into your {{site.data.keyword.hscrypto}} instance.
-    - `Enable secure import`: Check the box to prevent authorized users from importing key material into the your {{site.data.keyword.hscrypto}} instance without using an import token.
+    - `Enable secure import`: Check the box to prevent authorized users from importing key material into your {{site.data.keyword.hscrypto}} instance without using an import token.
 
     After you check the box for `Enable secure import`, it is required that [secure import](/docs/hs-crypto?topic=hs-crypto-create-import-tokens) is enabled for all key import actions. Secure import is not available in the {{site.data.keyword.cloud_notm}} console, and you need to perform further actions through the CLI or API.
     {: note}
@@ -291,7 +291,7 @@ existing value for the omitted field is overwritten by the default value.
         <td>
           <p>
             <strong>Required.</strong> Set to <code>true</code> to prevent
-            authorized users from importing key material into the your
+            authorized users from importing key material into  your
             {{site.data.keyword.hscrypto}} instance without
             using an import token. Set to <code>false</code> to allow authorized
             users to import key material into your instance without using an
@@ -315,12 +315,12 @@ existing value for the omitted field is overwritten by the default value.
 
     A successful request returns an HTTP `204 No Content` response, which
     indicates that your {{site.data.keyword.hscrypto}}
-    instance now has enabled .
+    instance now has enabled.
     Your {{site.data.keyword.hscrypto}} instance can now only
-    allow the creation or importation of keys from the methods specified in your
+    allow the creation or importation of keys from the methods that are specified in your
     request.
 
-3. Optional: Verify that the key create and import access policy is created/updated by
+3. Optional: Verify that the key create and import access policy is created or updated by
    retrieving the policy details for your
    {{site.data.keyword.hscrypto}} instance.
 

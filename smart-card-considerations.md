@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2020-09-07"
+  years: 2019, 2021
+lastupdated: "2021-08-11"
 
 keywords: smart card vulnerabilities, security policy, maintain workstation security, maintain smart card readers security
 
@@ -22,7 +22,7 @@ subcollection: hs-crypto
 # Smart card security considerations
 {: #define-smart-card-security-policy}
 
-If you are [initializing {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance using smart cards](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities), you need to define the security policy for the {{site.data.keyword.IBM_notm}} Management Utilities. Security officers need to document the security policy in a security plan and periodically review the corporate security policy and their current key management system.
+If you are [initializing {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance by using smart cards](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities), you need to define the security policy for the {{site.data.keyword.IBM_notm}} Management Utilities. Security officers need to document the security policy in a security plan and periodically review the corporate security policy and their current key management system.
 {: shortdesc}
 
 ## Smart card vulnerabilities
