@@ -48,8 +48,8 @@ After you create your z/OS instance and complete the prerequisites, complete the
 
 1. Attach a new block storage data volume to your z/OS virtual server instance. For more information, see [Attaching a block storage volume](/docs/vpc?topic=vpc-attaching-block-storage&interface=ui).
 
-    If your z/OS virtual server instance is created by using the standard z/OS stock image, the size of the new block storage volume must not exceed 55 GB because the storage volumes larger than 55 GB are considered to be Extended Address Volumes (EAV) and cannot be used as the SDUMP target.  To work around this restriction and use larger volumes for SDUMP, you must run the command `SETSMS USEEAVZ(YES)` on the z/OS instance before you attach a larger block storage device for SDUMP.
-    {: important}
+  If your z/OS virtual server instance is created by using the standard z/OS stock image, the size of the new block storage volume must not exceed 55 GB because the storage volumes larger than 55 GB are considered to be Extended Address Volumes (EAV) and cannot be used as the SDUMP target.  To work around this restriction and use larger volumes for SDUMP, you must run the command `SETSMS USEEAVZ(YES)` on the z/OS instance before you attach a larger block storage device for SDUMP.
+  {: important}
 
 2. Verify that the newly attached storage volume is ready to be used by the z/OS instance.
 
@@ -79,7 +79,7 @@ After you create your z/OS instance and complete the prerequisites, complete the
        {: pre}
 
        If your z/OS instance is created by using the standard z/OS stock image, skip this step and consider using the existing `IBMUSER.JCL` data set for the JCL member to be created in the next step.
-       {: note}
+       {: important}
 
    2. Using ISPF (2 or 3.4), create a new data set member (`INITVOL`) with the following JCL that references the address of the new disk (for example, `DD60`).
 
@@ -136,6 +136,6 @@ After you create your z/OS instance and complete the prerequisites, complete the
    {: pre}
 
    If your z/OS instance is created by using the standard z/OS stock image, you can skip this step because SDUMP is pre-configured to look for volumes with volume IDs: `SDUMP1`, `SDUMP2`, or `SDUMP3`.
-   {: note}
+   {: important}
 
    The `ADD` command does not persist the change. For this change to persist over future system IPLs, make the corresponding changes to the appropriate PARMLIB (for example, `SYS1.PARMLIB(COMMND00)`).
