@@ -61,41 +61,41 @@ After you create your z/OS instance and complete the prerequisites, complete the
     Attached block storage vde on address DD60           
    READY
    ```
-   {: screen}
+   {: pre}
 
 3. Initialize the volume via an ICKDSF job and vary it online.
 
     1. If your z/OS instance is not created by using the standard z/OS stock image, use ISPF (3.2) and create a new data set (for example, `IBMUSER.JCL`) to store the INITVOL JCL. For example, the data set can be created with the following settings:
 
-    ```
-    Space units . . . . . . TRKS
-    Primary quantity. . . . 10
-    Secondary quantity. . . 1
-    Directory blocks. . . . 5
-    Record format . . . . . FB
-    Record length . . . . . 80
-    Block size  . . . . . . 3120
-    ```
-    {: pre}
+       ```
+       Space units . . . . . . TRKS
+       Primary quantity. . . . 10
+       Secondary quantity. . . 1
+       Directory blocks. . . . 5
+       Record format . . . . . FB
+       Record length . . . . . 80
+       Block size  . . . . . . 3120
+       ```
+       {: pre}
 
-    If your z/OS instance is created by using the standard z/OS stock image, skip this step and consider using the existing `IBMUSER.JCL` data set for the JCL member to be created in the next step.
-    {: important}
+       If your z/OS instance is created by using the standard z/OS stock image, skip this step and consider using the existing `IBMUSER.JCL` data set for the JCL member to be created in the next step.
+       {: important}
 
     2. Using ISPF (2 or 3.4), create a new data set member (INITVOL) with the following JCL that references the address of the new disk (eg. DD60).
 
-      ```
-      //INITVOL  JOB CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1),NOTIFY=&SYSUID.,
-      //         REGION=0M                                                  
-      //STEP1    EXEC PGM=ICKDSF                         
-      //SYSPRINT DD SYSOUT=*                                      
-      //SYSIN    DD *                                             
-      INIT UNITADDRESS(DD60) VOLID(SDUMP1) VERIFY(*NONE*) +
+       ```
+       //INITVOL  JOB CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1),NOTIFY=&SYSUID.,
+       //         REGION=0M                                                  
+       //STEP1    EXEC PGM=ICKDSF                         
+       //SYSPRINT DD SYSOUT=*                                      
+       //SYSIN    DD *                                             
+       INIT UNITADDRESS(DD60) VOLID(SDUMP1) VERIFY(*NONE*) +
           VTOC(0,1,45) NODSEXIST
-      /*
-      ```
-      {: pre}
+       /*
+       ```
+       {: pre}
 
-      In this example, a `VOLID` of `SDUMP1` is used because `VOLID(SDUMP1)` is one of three volume IDs (SDUMP1, SDUMP2, and SDUMP3) that are pre-configured in the SDUMP settings on the standard z/OS stock image.
+       In this example, a `VOLID` of `SDUMP1` is used because `VOLID(SDUMP1)` is one of three volume IDs (SDUMP1, SDUMP2, and SDUMP3) that are pre-configured in the SDUMP settings on the standard z/OS stock image.
 
     3. To submit the job you are editing with the ISPF editor, first save any changes you made, then enter the `SUBMIT` command on the command line of the edit panel.
 
@@ -112,7 +112,7 @@ After you create your z/OS instance and complete the prerequisites, complete the
        ```
        {: pre}
 
-      The INITVOL job should complete and no longer be an active job. Check the job log again to confirm that the job completed successfully.
+       The INITVOL job should complete and no longer be an active job. Check the job log again to confirm that the job completed successfully.
 
     8. Using SDSF, vary online the new disk device based on the address. For example:
 
