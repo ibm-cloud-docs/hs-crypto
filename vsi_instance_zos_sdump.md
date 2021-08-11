@@ -53,7 +53,7 @@ After you create your z/OS instance and complete the prerequisites, complete the
 
 2. Verify that the newly attached storage volume is ready to be used by the z/OS instance.
 
-   Once the new storage volume is attached to the instance, a message is sent to the broadcast data set with the affected device address. For example:
+   Once the new storage volume is attached to the instance, a message is sent to the broadcast data set with the affected device address. See the following message as an example.
 
    ```
    IKJ56455I IBMUSER LOGON IN PROGRESS AT 15:19:05 ON JUL
@@ -81,7 +81,7 @@ After you create your z/OS instance and complete the prerequisites, complete the
        If your z/OS instance is created by using the standard z/OS stock image, skip this step and consider using the existing `IBMUSER.JCL` data set for the JCL member to be created in the next step.
        {: important}
 
-   2. Using ISPF (2 or 3.4), create a new data set member (INITVOL) with the following JCL that references the address of the new disk (eg. DD60).
+   2. Using ISPF (2 or 3.4), create a new data set member (`INITVOL`) with the following JCL that references the address of the new disk (for example, `DD60`).
 
        ```
        //INITVOL  JOB CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1),NOTIFY=&SYSUID.,
@@ -95,7 +95,7 @@ After you create your z/OS instance and complete the prerequisites, complete the
        ```
        {: pre}
 
-       In this example, a `VOLID` of `SDUMP1` is used because `VOLID(SDUMP1)` is one of three volume IDs (SDUMP1, SDUMP2, and SDUMP3) that are pre-configured in the SDUMP settings on the standard z/OS stock image.
+       In this example, a `VOLID` of `SDUMP1` is used because `VOLID(SDUMP1)` is one of three volume IDs (`SDUMP1`, `SDUMP2`, and `SDUMP3`) that are pre-configured in the SDUMP settings on the standard z/OS stock image.
 
     3. To submit the job you are editing with the ISPF editor, first save any changes you made, then enter the `SUBMIT` command on the command line of the edit panel.
 
