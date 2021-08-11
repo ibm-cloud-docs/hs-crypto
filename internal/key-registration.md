@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-11"
 
 keywords: key registration, register resources, service integration, protected resource, view crn, registraion api
 
@@ -30,7 +30,7 @@ When you register cloud resources with {{site.data.keyword.hscrypto}}, {{site.da
 
 - View how root keys map to resources across the cloud
 - Understand which cloud resources are protected by root keys
-- Determine the risk involved with destroying a root key
+- Determine the risk that is involved with destroying a root key
 - Evaluate the affected range if a key becomes compromised
 
 ## Planning for registration
@@ -109,7 +109,7 @@ Replace the variables in the example request according to the following table.
 | instance_ID | **Required.** The unique identifier that is assigned to customer's {{site.data.keyword.hscrypto}} service instance.
 | description | A meaningful description in the context of your cloud service that describes the resource that is being protected by the root key. This field is exposed to customers when they use {{site.data.keyword.hscrypto}} to review registered resources.|
 | registrationMetadata | A text field that cloud services can use to store internal metadata about the registration. This field is not exposed to customers and is visible only by using {{site.data.keyword.cloud_notm}} service to service calls. |
-| preventKeyDeletion | A boolean that determines whether {{site.data.keyword.hscrypto}} must prevent deletion of a root key due to a Write Once Read Many (WORM) policy set on the customer resource.<br><br>If set to `true`, {{site.data.keyword.hscrypto}} prevents deletion of the root key and the associated protected resources. The system prevents the deletion of any key that has at least one registration where `preventKeyDeletion` is `true`.|
+| preventKeyDeletion | A boolean that determines whether {{site.data.keyword.hscrypto}} must prevent deletion of a root key due to a Write Once Read Many (WORM) policies set on the customer resource.<br><br>If set to `true`, {{site.data.keyword.hscrypto}} prevents deletion of the root key and the associated protected resources. The system prevents the deletion of any key that has at least one registration where `preventKeyDeletion` is `true`.|
 {: caption="Table 2. Lists variables for the API method to create a registration" caption-side="bottom"}
 
 ### Updating the registration
@@ -163,7 +163,7 @@ Replace the variables in the example request according to the following table.
 ### Deleting the registration
 {: #delete-registration}
 
-After a resource is no longer within the cloud or protected by a root key, de-register the association with the key.
+After a resource is no longer within the cloud or protected by a root key, unregister the association with the key.
 
 **Example request**
 
@@ -222,7 +222,7 @@ The following table shows the API methods that are available for listing registr
 ### Viewing CRNs associated with a registration
 {: #view-protected-resource-crn}
 
-After your cloud resource is associated with one registration, you can view the resource CRNs by calling the API methods listed in Table 5. The following example shows the CRN format that uniquely identifies registrations:
+After your cloud resource is associated with one registration, you can view the resource CRNs by calling the API methods that are listed in Table 5. The following example shows the CRN format that uniquely identifies registrations:
 
 | Service | CRN Format | Example |
 |---------|------------|---------|

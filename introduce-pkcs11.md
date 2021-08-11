@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-11"
 
 keywords: hsm, cloud hsm, tke cli, pkcs11, PKCS11 library, cryptographic operations, cryptographic functions, PKCS 11
 
@@ -106,7 +106,7 @@ This implementation of PKCS #11 equates an API key with a user's PIN. For more i
 ### Crypto service
 {: #pkcs11-crypto-intro}
 
-As part of the PKCS #11 library initialization process, a gRPC connection is made from the PKCS #11 library to the {{site.data.keyword.cloud_notm}}. The gRPC connection facilitates the PKCS #11 library to call Cryptoki functions, such as `C_Encrypt`, `C_Decrypt`, `C_Sign`, and `C_Verify`, which require the use of a Hardware Security Module (HSM).
+As part of the PKCS #11 library initialization process, a gRPC connection is made from the PKCS #11 library to the {{site.data.keyword.cloud_notm}}. The gRPC connection facilitates the PKCS #11 library to call Cryptoki functions, such as `C_Encrypt`, `C_Decrypt`, `C_Sign`, and `C_Verify`, which requires the use of a Hardware Security Module (HSM).
 
 ### Keystore
 {: #pkcs11-keystore-intro}
@@ -114,7 +114,7 @@ As part of the PKCS #11 library initialization process, a gRPC connection is mad
 Two major types of keystores are available:
 
 * **In-memory keystores**: Stores key objects temporarily in memory. Key objects that are stored in the in-memory keystore are also known as *session objects*. Session objects in a specific session are destroyed when you call the `C_CloseSession` function for that session. Session objects in all sessions are destroyed after the `C_Finalize` function is called.
-* **Database-backed keystores**: Stores key objects in databases. Key objects that are stored in the database-backed keystore are also known as *token objects*. If the `sessionauth` parameter is enabled and a password for the keystore is configured, the database-backed keystore is encrypted and authenticated. For each service instance, a maximum of five authenticated keystores are supported. You can enable the `sessionauth`  parameter to encrypt the generated keys into the keystore or to decrypt the key before you use it. The password can be 6-8 characters.
+* **Database-backed keystores**: Stores key objects in databases. Key objects that are stored in the database-backed keystore are also known as *token objects*. If the `sessionauth` parameter is enabled and a password for the keystore is configured, the database-backed keystore is encrypted and authenticated. For each service instance, a maximum of five authenticated keystores are supported. You can enable the `sessionauth`  parameter to encrypt the generated keys into the keystore or to decrypt the key before you use it. The password can be 6 - 8 characters.
 
 Keystore passwords are not stored in the service instance. You, as the keystore administrator, are responsible for maintaining a local copy of the passwords. If a password is lost, you need to contact the Support team to reset the keystore, which means all data in the keystore is cleared.
 {: note}
