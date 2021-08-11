@@ -1224,7 +1224,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Why can't I rotate master keys by using smart cards?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-smart-cards)
 
-[Why can't I rotate master keys using recovery crypto units?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-recovery-crypto-units)
+[Why can't I rotate master keys by using recovery crypto units?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-recovery-crypto-units)
 
 
 ## Getting help and support

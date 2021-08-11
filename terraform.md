@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-11"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Setting up Terraform for {{site.data.keyword.hscrypto}}
 {: #terraform-setup-for-hpcs}
 
-Terraform on {{site.data.keyword.cloud}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multi-tier cloud environments following Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.hscrypto}} instances by using HashiCorp Configuration Language (HCL).
+Terraform on {{site.data.keyword.cloud}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multitierd cloud environments following Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.hscrypto}} instances by using HashiCorp Configuration Language (HCL).
 {: shortdesc}
 
 Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform templates that you can easily install from the {{site.data.keyword.cloud_notm}} catalog.
@@ -48,7 +48,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
 
     - Using a third-party signing service
 
-      A third-party signing service can be used to create, store, and access the signature keys used by both the TKE CLI plug-in and Terraform. To [enable the signing service in the TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key), you need to set the `TKE_SIGNSERV_URL` environment variable on the local workstation to the URL and port number where the signing service is running. To enable the signing service in Terraform, you need to set the `signature_server_url` parameter in the resource block to the same value.
+      A third-party signing service can be used to create, store, and access the signature keys that are used by both the TKE CLI plug-in and Terraform. To [enable the signing service in the TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key), you need to set the `TKE_SIGNSERV_URL` environment variable on the local workstation to the URL and port number where the signing service is running. To enable the signing service in Terraform, you need to set the `signature_server_url` parameter in the resource block to the same value.
 
 3. Create a Terraform configuration file `main.tf` in the same folder as `versions.tf`. In this file, you add the configurations to perform the corresponding actions.
 
@@ -109,7 +109,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     </tr>
     <tr>
       <td>plan</td>
-      <td>**Required**. The pricing plan for your service instance. Currently, only the `standard` plan is supportd. </td>
+      <td>**Required**. The pricing plan for your service instance. Currently, only the `standard` plan is supported. </td>
     </tr>
     <tr>
       <td>units</td>
@@ -129,19 +129,19 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     </tr>
     <tr>
       <td>resource_group_id</td>
-      <td>**Optional**. The resource group where you want to organize and manage your service intance. If you do not specify the value, the default resource group is `Default`.</td>
+      <td>**Optional**. The resource group where you want to organize and manage your service instance. If you do not specify the value, the default resource group is `Default`.</td>
     </tr>
     <tr>
       <td>signature_threshold</td>
-      <td>**Required**. The number of administrator signatures that is required to execute administrative commands. The valid value is between 1 and 8. You need to set it to at least 2 to enable quorum authentication.</td>
+      <td>**Required**. The number of administrator signatures that is required to execute administrative commands. The valid value is in the range 1 - 8. You need to set it to at least 2 to enable quorum authentication.</td>
     </tr>
     <tr>
       <td>revocation_threshold</td>
-      <td>**Required**. The number of administrator signatures that is required to remove an administrator after you leave imprint mode. The valid value is between 1 and 8.</td>
+      <td>**Required**. The number of administrator signatures that is required to remove an administrator after you leave imprint mode. The valid value is in the range 1 - 8.</td>
     </tr>
     <tr>
       <td>admins</td>
-      <td>**Required**. The list of administrators for the instance crypto units. You can set up to 8 administrators and the number needs to be equal to or greater than the thresholds that you specify. The following values need to be set for each administrator:
+      <td>**Required**. The list of administrators for the instance crypto units. You can set up to eight administrators and the number needs to be equal to or greater than the thresholds that you specify. The following values need to be set for each administrator:
       <dl>
         <dt>name:</dt>
         <dd>The name of the administrator. It needs to be no more than 30 characters in length.</dd>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-11"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -176,7 +176,7 @@ Before you [update the network access policy](/docs/hs-crypto?topic=hs-crypto-ma
 ### Added: `ReencryptSingle` function in GREP11 API
 {: #add-reencryptsingle-function-grep11}
 
-The GREP11 API now supports the `ReencryptSingle` function which enables you to decrypt data with the original key and subsequently encrypt the raw data with a different key in a single call within the cloud HSM. This single call is a viable option where a large amount of data needs to be reencrypted with different keys, and bypasses the need to perform a combination of `DecryptSingle` and `EncryptSingle` functions for each data item that needs to be reencrypted. For more information, see [GREP11 API reference - `ReencryptSingle` function](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-ReencryptSingle).
+The GREP11 API now supports the `ReencryptSingle` function, which enables you to decrypt data with the original key and then encrypt the raw data with a different key in a single call within the cloud HSM. This single call is a viable option where a large amount of data needs to be reencrypted with different keys, and bypasses the need to perform a combination of `DecryptSingle` and `EncryptSingle` functions for each data item that needs to be reencrypted. For more information, see [GREP11 API reference - `ReencryptSingle` function](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-ReencryptSingle).
 
 ### Added: Support for accessing service instances through the Virtual Private Endpoint
 {: #add-vpe}
@@ -269,7 +269,7 @@ To find out more about your options for importing keys, check out [Creating impo
 ### Added: {{site.data.keyword.hscrypto}} aligns the key management functions with {{site.data.keyword.keymanagementserviceshort}}
 {: #added-key-protect-concurrency}
 
-{{site.data.keyword.hscrypto}}, built on FIPS 140-2 Level 4-compliant HSM, now supports the same level of key management functions as {{site.data.keyword.keymanagementserviceshort}}. The added functions are as follow:
+{{site.data.keyword.hscrypto}}, built on FIPS 140-2 Level 4-compliant HSM, now supports the same level of key management functions as {{site.data.keyword.keymanagementserviceshort}}. The added functions are as follows:
 
 * [Policy-based key rotation](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy).
 * [Viewing root key versions](/docs/hs-crypto?topic=hs-crypto-view-key-versions).

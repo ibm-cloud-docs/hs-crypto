@@ -105,7 +105,7 @@ You can browse the registrations that are available between your {{site.data.key
     </tr>
     <tr>
       <td>`Cloud resource name`</td>
-      <td>Represents the cloud resource that is associated with the key, including the Cloud Resource Name (CRN), version, cname, ctype, etc. </td>
+      <td>Represents the cloud resource that is associated with the key, including the Cloud Resource Name (CRN), version, cname, ctype, and so on. </td>
     </tr>
     <caption>Table 3. Describes the properties that are associated with a resource</caption>
     </table>
@@ -180,7 +180,7 @@ You can use the search field to search for any resources associated with the roo
     </tr>
     <tr>
       <td>`Cloud resource name`</td>
-      <td>Represents the cloud resource that is associated with the key, including the Cloud Resource Name (CRN), version, cname, ctype, etc.</td>
+      <td>Represents the cloud resource that is associated with the key, including the Cloud Resource Name (CRN), version, cname, ctype, and so on.</td>
     </tr>
     <caption>Table 5. Describes the properties that are associated with a resource</caption>
     </table>
@@ -392,7 +392,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/registrations?ur
 
 Use URL encoded CRN queries that contain all CRN segments. To learn more about CRN segments and format, see [Cloud Resource Names](/docs/account?topic=account-crn).
 
-When an integrated service calls the {{site.data.keyword.hscrypto}} key management API, {{site.data.keyword.hscrypto}} replaces the given CRN query (up to the `service-instance` segment) with the CRN of the calling service. This means that the services that use {{site.data.keyword.hscrypto}} to associate keys with resources on your behalf can only view or query for CRNs that match the first 8 segments of their service CRN.
+When an integrated service calls the {{site.data.keyword.hscrypto}} key management API, {{site.data.keyword.hscrypto}} replaces the given CRN query (up to the `service-instance` segment) with the CRN of the calling service. This means that the services that use {{site.data.keyword.hscrypto}} to associate keys with resources on your behalf can only view or query for CRNs that match the first eight segments of their service CRN.
 {: note}
 
 - To search for the existence of a CRN segment, use a colon followed by an asterisk (`*`).
@@ -421,7 +421,7 @@ When an integrated service calls the {{site.data.keyword.hscrypto}} key manageme
 
     This query returns all Cloud Databases registrations for deployment ID _76b98bfd-f730-47b8-b163-515187e070a7_ that are prefixed by `<string>`.
 
-The following tables provides a list of CRN query examples before and after URL encoding. To view the URL encoded values, click the **URL encoded** tab.
+The following tables provide a list of CRN query examples before and after URL encoding. To view the URL encoded values, click the **URL encoded** tab.
 
 | Value|
 | ---- |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-11"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -61,7 +61,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
         <td>The human-readable aliases that you specify for easy recognition when you create the key.</td>
       </tr>
       <tr>
-        <td>Ker ring ID</td>
+        <td>Key ring ID</td>
         <td>The key ring that the key belongs to.</td>
       </tr>
       <tr>
@@ -94,7 +94,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
       </tr>
       <tr>
         <td>Set for deletion</td>
-        <td>Indicates if a delete authorization is issued for a key. <ul><li>`True`: An authorization to delete this key is issued by the first user. A second user with a Manager access policy can safely delete the key.</li> <li>`False`: The key is not set for deletion. No further action is needed. </li></ul> </td>
+        <td>Indicates whether a delete authorization is issued for a key. <ul><li>`True`: An authorization to delete this key is issued by the first user. A second user with a Manager access policy can safely delete the key.</li> <li>`False`: The key is not set for deletion. No further action is needed. </li></ul> </td>
       </tr>
       <tr>
         <td>Deletion expiration</td>
@@ -173,7 +173,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
         </td>
         <td>
           <p>
-            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore suggested to specify the key ring ID for a more optimized request.
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request.
           </p>
           <p>
             Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
@@ -350,7 +350,7 @@ By specifying the `state` parameter at query time, you can retrieve keys that ar
 
 For example, you might have keys in your service instance that are in the active, suspended, and destroyed states, but you only want to retrieve keys in the active state when you make a `GET /keys` request.
 
-The state query parameter takes in a list of integers from 0 to 5 delimited by commas with no whitespace or trailing commas. Valid states are based on NIST SP 800-57. For more information about key states, see [Key states and transitions](/docs/hs-crypto?topic=hs-crypto-key-states).
+The state query parameter takes in a list of integers 0 - 5 delimited by commas with no whitespace or trailing commas. Valid states are based on NIST SP 800-57. For more information about key states, see [Key states and transitions](/docs/hs-crypto?topic=hs-crypto-key-states).
 {: note}
 
 You can use the following example request to retrieve a different set of keys.
