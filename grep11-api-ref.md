@@ -305,7 +305,7 @@ The `GetMechanismList` function obtains a list of mechanism types that are suppo
     </tr>
     <tr>
     <th>Return values</th>
-    <td>A subset of<code>C_GetMechanismList</code>return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    <td>A subset of <code>C_GetMechanismList</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
     </tr>
 </table>
 
@@ -313,12 +313,12 @@ The `GetMechanismList` function obtains a list of mechanism types that are suppo
     <tr>
     <th>Description</th>
     <td>
-    <p><code>C_GetMechanismList</code>is used to obtain a list of mechanism types supported by a token.<code>SlotID</code>is the ID of the token's slot;<code>pulCount</code>points to the location that receives the number of mechanisms.</p>
+    <p><code>C_GetMechanismList</code> is used to obtain a list of mechanism types supported by a token. <code>SlotID</code> is the ID of the token's slot; <code>pulCount</code> points to the location that receives the number of mechanisms.</p>
     <p>
-    Two ways are available for an application to call<code>C_GetMechanismList</code>:
+    Two ways are available for an application to call <code>C_GetMechanismList</code>:
     <ol>
-    <li>If<code>pMechanismList</code>is<code>NULL_PTR</code>, then all that <code>C_GetMechanismList</code> does is return (in <code>*pulCount</code>) the number of mechanisms, without returning a list of mechanisms. The contents of <code>*pulCount</code> on entry to <code>C_GetMechanismList</code> has no meaning in this case, and the call returns the value <code>CKR_OK</code>.</li>
-    <li>If<code>pMechanismList</code>is not<code>NULL_PTR</code>, then <code>*pulCount</code> must contain the size (in terms of <code>CK_MECHANISM_TYPE</code> elements) of the buffer pointed to by pMechanismList. If that buffer is large enough to hold the list of mechanisms, then the list is returned in it, and <code>CKR_OK</code> is returned. If not, then the call to <code>C_GetMechanismList</code> returns the value <code>CKR_BUFFER_TOO_SMALL</code>. In either case, the value <code>*pulCount</code> is set to hold the number of mechanisms.</li>
+    <li>If <code>pMechanismList</code> is <code>NULL_PTR</code>, then all that <code>C_GetMechanismList</code> does is return (in <code>*pulCount</code>) the number of mechanisms, without returning a list of mechanisms. The contents of <code>*pulCount</code> on entry to <code>C_GetMechanismList</code> has no meaning in this case, and the call returns the value <code>CKR_OK</code>.</li>
+    <li>If <code>pMechanismList</code> is not <code>NULL_PTR</code>, then <code>*pulCount</code> must contain the size (in terms of <code>CK_MECHANISM_TYPE</code> elements) of the buffer pointed to by <code>pMechanismList</code>. If that buffer is large enough to hold the list of mechanisms, then the list is returned in it, and <code>CKR_OK</code> is returned. If not, then the call to <code>C_GetMechanismList</code> returns the value <code>CKR_BUFFER_TOO_SMALL</code>. In either case, the value <code>*pulCount</code> is set to hold the number of mechanisms.</li>
     </ol>
     </p>
     <p>Because <code>C_GetMechanismList</code> does not allocate any space of its own, an application often calls <code>C_GetMechanismList</code> twice. However, this behavior is by no means required.</p>
@@ -1898,7 +1898,7 @@ The `Encrypt` function encrypts single-part data. You don't need to perform the 
 <table id="Encrypt_PKCS11" tab-title="PKCS #11" tab-group="Encrypt" class="simple-tab-table">
     <tr>
     <th>Description</th>
-    <td><p><code>C_Encrypt</code> encrypts single-part data. <code>hSession</code> is the session’s handle; <code>pData</code> points to the data; <code>ulDataLen</code> is the length in bytes of the data; <code>pEncryptedData</code> points to the location that receives the encrypted data;`pulEncryptedDataLen</code> points to the location that holds the length in bytes of the encrypted data.</p>
+    <td><p><code>C_Encrypt</code> encrypts single-part data. <code>hSession</code> is the session’s handle; <code>pData</code> points to the data; <code>ulDataLen</code> is the length in bytes of the data; <code>pEncryptedData</code> points to the location that receives the encrypted data; <code>pulEncryptedDataLen</code> points to the location that holds the length in bytes of the encrypted data.</p>
     <p><code>C_Encrypt</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producingoutput.</p>
     <p>The encryption operation must be initialized with <code>C_EncryptInit</code>. A call to <code>C_Encrypt</code> always terminates theactive encryption operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call (that is, one that returns <code>CKR_OK</code>) to determine the length of the buffer that is needed to hold the ciphertext.</p>
     <p><code>C_Encrypt</code> cannot be used to terminate a multi-part operation, and must be called after <code>C_EncryptInit</code> withoutintervening <code>C_EncryptUpdate</code> calls.</p>
@@ -3023,7 +3023,7 @@ The `SignInit` function initializes a signature operation. You need to call this
 <table id="SignInit_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="SignInit" class="simple-tab-table">
     <tr>
     <th>Description</th>
-    <td>Binds to EP11 <code> m_SignInit</code> , which is an implementation of PKCS #11 <code> C_SignInit</code>.<td>
+    <td>Binds to EP11 <code>m_SignInit</code> , which is an implementation of PKCS #11 <code>C_SignInit</code>.<td>
     </tr>
     <tr>
     <th>Parameters</th>

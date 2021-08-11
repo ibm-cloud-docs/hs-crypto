@@ -236,16 +236,16 @@ After your cloud resource is associated with one registration, you can view the 
 
 Key states affect whether an action that is performed on a registration succeeds or fails. For example, if a key is in the Destroyed state, registrations cannot be created with the key because it is previously deleted.
 
-The following table shows how {{site.data.keyword.hscrypto}} handles service actions for registration based on the state of a key. The column headers represent the key states and the row headers represent the actions that you can perform on a registration. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the action on a registration is expected to succeed based on the key state.
+The following table shows how {{site.data.keyword.hscrypto}} handles service actions for registration based on the state of a key. The column headers represent the key states and the row headers represent the actions that you can perform on a registration. The **Checkmark** icon ![checkmark icon](../../icons/checkmark-icon.svg "Checkmark") indicates that the action on a registration is expected to succeed based on the key state.
 
 | Action | Active | Suspended | Deactivated | Destroyed |
 | --- | --- | --- | --- | --- |
-| Create Registration  | ![Checkmark icon](../icons/checkmark-icon.svg "Checkmark")  |   |   |   |
-| Replace Registration | ![Checkmark icon](../icons/checkmark-icon.svg "Checkmark")  |   |   |   |
-| Update Registration  | ![Checkmark icon](../icons/checkmark-icon.svg "Checkmark")  |   |   |   |
-| Delete Registration  | ![Checkmark icon](../icons/checkmark-icon.svg "Checkmark")  | ![Checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |   |
-| Get Registration  | ![Checkmark icon](../icons/checkmark-icon.svg "Checkmark")  | ![Checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |   |
-| List Registration | ![Checkmark icon](../icons/checkmark-icon.svg "Checkmark")  | ![Checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |   |
+| Create Registration  | ![Checkmark icon](../../icons/checkmark-icon.svg "Checkmark")  |   |   |   |
+| Replace Registration | ![Checkmark icon](../../icons/checkmark-icon.svg "Checkmark")  |   |   |   |
+| Update Registration  | ![Checkmark icon](../../icons/checkmark-icon.svg "Checkmark")  |   |   |   |
+| Delete Registration  | ![Checkmark icon](../../icons/checkmark-icon.svg "Checkmark")  | ![Checkmark icon](../../icons/checkmark-icon.svg "Checkmark") |   |   |
+| Get Registration  | ![Checkmark icon](../../icons/checkmark-icon.svg "Checkmark")  | ![Checkmark icon](../../icons/checkmark-icon.svg "Checkmark") |   |   |
+| List Registration | ![Checkmark icon](../../icons/checkmark-icon.svg "Checkmark")  | ![Checkmark icon](../../icons/checkmark-icon.svg "Checkmark") |   |   |
 {: caption="Table 7. Describes how key states affect service actions on registrations." caption-side="bottom"}
 
 ## Next steps

@@ -66,7 +66,7 @@ Before you can enable the second layer of authentication for GREP11 or PKCS #11 
 
 To enable the second layer of authentication, you need to first configure the administrator signature key. The signature key is used for you to connect to your instance certificate manager server that processes the certificate manager CLI commands.
 
-1. Generate the signature key pair and upload the public key with the following command:
+1. Generate the signature key pair with the following command:
 
     ```
     ibmcloud hpcs-cert-mgr adminkey set --crn HPCS_CRN [--private]

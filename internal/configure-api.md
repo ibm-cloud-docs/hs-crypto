@@ -111,7 +111,7 @@ Replace the variables in the example request according to the following table.
       <varname>IAM_token</varname>
     </td>
     <td>
-      <strong>Required.</strong> Your service to service access token. Include the full contents of the token, including the `Bearer` value, in the cURL request.
+      <strong>Required.</strong> Your service to service access token. Include the full contents of the token, including the <code>Bearer</code> value, in the cURL request.
     </td>
     </tr>
     <tr>
@@ -235,7 +235,7 @@ Replace the variables in the example request according to the following table.
       <varname>IAM_token</varname>
     </td>
     <td>
-      <strong>Required.</strong> Your service to service access token. Include the full contents of the token, including the `Bearer` value, in the cURL request.
+      <strong>Required.</strong> Your service to service access token. Include the full contents of the token, including the <code>Bearer</code> value, in the cURL request.
     </td>
     </tr>
     <tr>
@@ -348,7 +348,7 @@ Replace the variables in the example request according to the following table.
       <varname>IAM_token</varname>
     </td>
     <td>
-      <strong>Required.</strong> Your service to service access token. Include the full contents of the token, including the `Bearer` value, in the cURL request.
+      <strong>Required.</strong> Your service to service access token. Include the full contents of the token, including the <code>Bearer</code> value, in the cURL request.
     </td>
     </tr>
     <tr>

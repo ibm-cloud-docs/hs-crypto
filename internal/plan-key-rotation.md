@@ -57,7 +57,7 @@ When {{site.data.keyword.hscrypto}} receives a rotate key request from your clou
 Your service will only receive Hyperwarp events if the root key has registrations that are associated with it.
 {: note}
 
-## Step 3: Take action to rewrap data encryption keys
+### Step 3: Take action to rewrap data encryption keys
 {: #dek-rewrap-logic}
 
 You can check the state of the rotated key by [viewing the key's metadata](/docs/hs-crypto?topic=hs-crypto-view-key-details#view-key-details-api) and if the key is in the active state, rewrap the DEK.
@@ -67,7 +67,7 @@ Rewrap the wDEK by making a call to `POST /api/v2/keys/{id}?action=rewrap`. Stor
 Use the [adopters guide](https://github.ibm.com/kms/Adopter_services/blob/master/src/github.ibm.com/skms/hs-crypto/event_processor.go){: external} for more information on processing the Hyperwarp event.
 {: note}
 
-## Step 4: Notify {{site.data.keyword.hscrypto}} that DEK rewrap is completed
+### Step 4: Notify {{site.data.keyword.hscrypto}} that DEK rewrap is completed
 {: #dek-wrap-notify-hs-crypto}
 
 Services have a timeframe of 4 hours to confirm with {{site.data.keyword.hscrypto}} that all appropriate actions have been taken after receiving a hyperwarp notification.
@@ -107,7 +107,6 @@ Replace the variables in the example request according to the following table.
     <th>Variable</th>
     <th>Description</th>
     </tr>
-
     <tr>
     <td>
       <varname>region</varname>
@@ -121,12 +120,10 @@ Replace the variables in the example request according to the following table.
       </p>
     </td>
     </tr>
-
     <tr>
     <td><varname>port</varname></td>
     <td><strong>Required.</strong> The port number of the API endpoint.</td>
     </tr>
-
     <tr>
     <td>
       <varname>IAM_token</varname>
@@ -140,7 +137,6 @@ Replace the variables in the example request according to the following table.
       </p>
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>instance_ID</varname>
@@ -154,7 +150,6 @@ Replace the variables in the example request according to the following table.
       </p>
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>event_ID</varname>
@@ -163,7 +158,6 @@ Replace the variables in the example request according to the following table.
       <strong>Required.</strong> The identifier for the Hyperwarp event that you want to acknowledge.
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>key_state</varname>
@@ -172,7 +166,6 @@ Replace the variables in the example request according to the following table.
       <strong>Required.</strong> The adopter's reported state of the key at the time of processing the Hyperwarp event.
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>time_stamp</varname>
@@ -181,7 +174,6 @@ Replace the variables in the example request according to the following table.
       <strong>Required.</strong> The date that the Hyperwarp event was processed by the adopter service. The date format follows RFC 3339.
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>key_version</varname>
@@ -190,14 +182,13 @@ Replace the variables in the example request according to the following table.
       <strong>Required if the adopter state is "DEK_ENABLED".</strong> The ID of the key version that was used to rewrap the wrapped data encryption key (wDEK).
     </td>
     </tr>
-
     <caption>
     Table 1. Describes the variables that are needed to acknowledge a Heyperwarp
     event with the {{site.data.keyword.hscrypto}} API.
     </caption>
 </table>
 
-### Monitor logs for an end-to-end key rotation event in activity tracker
+## Monitor logs for an end-to-end key rotation event in activity tracker
 {: #dek-rewrap-monitor-logs}
 
 For audit purposes, you can monitor the activity trail of a rotated root key through Activity Tracker. The following example is a successful root key rotation event.
@@ -246,6 +237,7 @@ For audit purposes, you can monitor the activity trail of a rotated root key thr
   "logSourceCRN": "v1:bluemix:public:kms:us-south:a/b3e8ea4428c24cefa34454bd8acccc:dd24cdc0-2c77-40a7-8680-53ccd41d9888::"
 }
 ```
+{: codeblock}
 
 ## Next steps
 {: #dek-rewrap-next-steps}

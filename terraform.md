@@ -101,19 +101,19 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     </tr>
     <tr>
       <td>name</td>
-      <td>**Required**. The name of your {{site.data.keyword.hscrypto}} instance.</td>
+      <td><strong>Required</strong>. The name of your {{site.data.keyword.hscrypto}} instance.</td>
     </tr>
     <tr>
       <td>location</td>
-      <td>**Required**. The region abbreviation, such as `us-south`, that represents the geographic area where the operational crypto units of your service instance are located. For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). As recovery crypto units are available only in `us-south` and `us-east`, only these two regions are supported if you want to use Terraform for instance initialization.</td>
+      <td><strong>Required</strong>. The region abbreviation, such as `us-south`, that represents the geographic area where the operational crypto units of your service instance are located. For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). As recovery crypto units are available only in `us-south` and `us-east`, only these two regions are supported if you want to use Terraform for instance initialization.</td>
     </tr>
     <tr>
       <td>plan</td>
-      <td>**Required**. The pricing plan for your service instance. Currently, only the `standard` plan is supported. </td>
+      <td><strong>Required</strong>. The pricing plan for your service instance. Currently, only the `standard` plan is supported. </td>
     </tr>
     <tr>
       <td>units</td>
-      <td>**Required**. The number of operational crypto units for your service instance. Valid values are 2 or 3.</td>
+      <td><strong>Required</strong>. The number of operational crypto units for your service instance. Valid values are 2 or 3.</td>
     </tr>
     <tr>
       <td>failover_units</td>
@@ -133,15 +133,15 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     </tr>
     <tr>
       <td>signature_threshold</td>
-      <td>**Required**. The number of administrator signatures that is required to execute administrative commands. The valid value is in the range 1 - 8. You need to set it to at least 2 to enable quorum authentication.</td>
+      <td><strong>Required</strong>. The number of administrator signatures that is required to execute administrative commands. The valid value is in the range 1 - 8. You need to set it to at least 2 to enable quorum authentication.</td>
     </tr>
     <tr>
       <td>revocation_threshold</td>
-      <td>**Required**. The number of administrator signatures that is required to remove an administrator after you leave imprint mode. The valid value is in the range 1 - 8.</td>
+      <td><strong>Required</strong>. The number of administrator signatures that is required to remove an administrator after you leave imprint mode. The valid value is in the range 1 - 8.</td>
     </tr>
     <tr>
       <td>admins</td>
-      <td>**Required**. The list of administrators for the instance crypto units. You can set up to eight administrators and the number needs to be equal to or greater than the thresholds that you specify. The following values need to be set for each administrator:
+      <td><strong>Required</strong>. The list of administrators for the instance crypto units. You can set up to eight administrators and the number needs to be equal to or greater than the thresholds that you specify. The following values need to be set for each administrator:
       <dl>
         <dt>name:</dt>
         <dd>The name of the administrator. It needs to be no more than 30 characters in length.</dd>

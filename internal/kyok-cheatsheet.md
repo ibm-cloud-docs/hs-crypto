@@ -61,7 +61,6 @@ Use the [adopter's guide](https://github.ibm.com/kms/BYOK_Adopter_services){: ex
       <th>Steps</th>
     </tr>
     </thead>
-
     <tbody>
     <tr>
       <td>

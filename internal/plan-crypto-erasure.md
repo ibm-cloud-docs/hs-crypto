@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-11"
 
 keywords: crypto erasure, erase data, enable KYOK, onboard to hyper protect crypto services, hpcs onboarding, internal, key registration, KYOK
 
@@ -122,7 +122,6 @@ Replace the variables in the example request according to the following table.
     <th>Variable</th>
     <th>Description</th>
     </tr>
-
     <tr>
     <td>
       <varname>region</varname>
@@ -136,12 +135,10 @@ Replace the variables in the example request according to the following table.
       </p>
     </td>
     </tr>
-
     <tr>
     <td><varname>port</varname></td>
     <td><strong>Required.</strong> The port number of the API endpoint.</td>
     </tr>
-
     <tr>
     <td>
       <varname>IAM_token</varname>
@@ -155,7 +152,6 @@ Replace the variables in the example request according to the following table.
       </p>
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>instance_ID</varname>
@@ -169,7 +165,6 @@ Replace the variables in the example request according to the following table.
       </p>
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>event_ID</varname>
@@ -178,7 +173,6 @@ Replace the variables in the example request according to the following table.
       <strong>Required.</strong> The identifier for the Hyperwarp event that you want to acknowledge.
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>key_state</varname>
@@ -187,7 +181,6 @@ Replace the variables in the example request according to the following table.
       <strong>Required.</strong> The adopter's reported state of the key at the time of processing the Hyperwarp event.
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>time_stamp</varname>
@@ -196,7 +189,6 @@ Replace the variables in the example request according to the following table.
       <strong>Required.</strong> The date that the Hyperwarp event was processed by the adopter service. The date format follows RFC 3339.
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>key_version</varname>
@@ -205,14 +197,13 @@ Replace the variables in the example request according to the following table.
       <strong>Required if the adopter state is "DEK_ENABLED".</strong> The ID of the key version that was used to rewrap the wrapped data encryption key (wDEK).
     </td>
     </tr>
-
     <caption>
     Table 1. Describes the variables that are needed to acknowledge a Heyperwarp
     event with the {{site.data.keyword.hscrypto}} API.
     </caption>
 </table>
 
-### Monitor logs for an end-to-end key deletion event in activity tracker
+## Monitor logs for an end-to-end key deletion event in activity tracker
 {: #crypto-erasure-monitor-logs}
 
 For audit purposes, you can monitor the activity trail of a deleted root key through Activity Tracker. The following is an example of a successful root key deletion event.
