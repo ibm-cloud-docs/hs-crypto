@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-11"
 
 keywords: create test instance, configure api for test, test hpcs, test service onboarding hpcs, wrap key api, upwrap key api
 
@@ -88,7 +88,6 @@ Replace the variables in the example request according to the following table.
     <th>Variable</th>
     <th>Description</th>
     </tr>
-
     <tr>
     <td>
       <varname>region</varname>
@@ -103,12 +102,10 @@ Replace the variables in the example request according to the following table.
       </p>
     </td>
     </tr>
-
     <tr>
     <td><varname>port</varname></td>
     <td><strong>Required.</strong> The port number of the API endpoint.</td>
     </tr>
-
     <tr>
     <td>
       <varname>IAM_token</varname>
@@ -117,7 +114,6 @@ Replace the variables in the example request according to the following table.
       <strong>Required.</strong> Your service to service access token. Include the full contents of the token, including the `Bearer` value, in the cURL request.
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>instance_ID</varname>
@@ -131,7 +127,6 @@ Replace the variables in the example request according to the following table.
       </p>
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>correlation_ID</varname>
@@ -140,7 +135,6 @@ Replace the variables in the example request according to the following table.
       The unique identifier that is used to track and correlate transactions.
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>key_alias</varname>
@@ -149,7 +143,6 @@ Replace the variables in the example request according to the following table.
       <strong>Required.</strong> A unique, human-readable name for easy identification of your key.
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>key_description</varname>
@@ -158,7 +151,6 @@ Replace the variables in the example request according to the following table.
       An extended description of your key.
     </td>
     </tr>
-
     <caption>
     Table 1. Describes the variables needed to create a root key.
     </caption>
@@ -213,7 +205,6 @@ Replace the variables in the example request according to the following table.
     <th>Variable</th>
     <th>Description</th>
     </tr>
-
     <tr>
     <td>
       <varname>region</varname>
@@ -227,12 +218,10 @@ Replace the variables in the example request according to the following table.
       </p>
     </td>
     </tr>
-
     <tr>
     <td><varname>port</varname></td>
     <td><strong>Required.</strong> The port number of the API endpoint.</td>
     </tr>
-
     <tr>
     <td>
       <varname>key_ID</varname>
@@ -241,7 +230,6 @@ Replace the variables in the example request according to the following table.
       <strong>Required.</strong> The unique identifier for the root key that you want to use for wrapping.
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>IAM_token</varname>
@@ -250,7 +238,6 @@ Replace the variables in the example request according to the following table.
       <strong>Required.</strong> Your service to service access token. Include the full contents of the token, including the `Bearer` value, in the cURL request.
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>instance_ID</varname>
@@ -264,7 +251,6 @@ Replace the variables in the example request according to the following table.
       </p>
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>correlation_ID</varname>
@@ -273,7 +259,6 @@ Replace the variables in the example request according to the following table.
       The unique identifier that is used to track and correlate transactions.
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>data_key</varname>
@@ -282,7 +267,6 @@ Replace the variables in the example request according to the following table.
       The key material of the DEK that you want to manage and protect. The <code>plaintext</code> value must be base64 encoded. To generate a new DEK, omit the <code>plaintext</code> attribute. The service generates a random plaintext (32 bytes) and wraps that value. In the response, <code>plaintext</code> contains the unwrapped DEK and <code>ciphertext</code> contains the wrapped value.
     </td>
     </tr>
-
     <caption>
     Table 2. Describes the variables needed to wrap a specified key in
     {{site.data.keyword.hscrypto}}.
@@ -334,7 +318,6 @@ Replace the variables in the example request according to the following table.
     <th>Variable</th>
     <th>Description</th>
     </tr>
-
     <tr>
     <td>
       <varname>region</varname>
@@ -348,12 +331,10 @@ Replace the variables in the example request according to the following table.
       </p>
     </td>
     </tr>
-
-  <tr>
+    <tr>
     <td><varname>port</varname></td>
     <td><strong>Required.</strong> The port number of the API endpoint.</td>
     </tr>
-
     <tr>
     <td>
       <varname>key_ID</varname>
@@ -362,7 +343,6 @@ Replace the variables in the example request according to the following table.
       <strong>Required.</strong> The unique identifier for the root key that you used for wrapping.
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>IAM_token</varname>
@@ -371,7 +351,6 @@ Replace the variables in the example request according to the following table.
       <strong>Required.</strong> Your service to service access token. Include the full contents of the token, including the `Bearer` value, in the cURL request.
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>instance_ID</varname>
@@ -385,7 +364,6 @@ Replace the variables in the example request according to the following table.
       </p>
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>correlation_ID</varname>
@@ -394,7 +372,6 @@ Replace the variables in the example request according to the following table.
       The unique identifier that is used to track and correlate transactions.
     </td>
     </tr>
-
     <tr>
     <td>
       <varname>wrapped_data_key</varname>
@@ -403,7 +380,6 @@ Replace the variables in the example request according to the following table.
       <strong>Required.</strong> The <code>ciphertext</code> value returned during a wrap operation.
     </td>
     </tr>
-
     <caption>
     Table 3. Describes the variables needed to unwrap keys in
     {{site.data.keyword.hscrypto}}.

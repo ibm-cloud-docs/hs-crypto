@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-11"
 
 keywords: view resoure, root key encryption resources, protected resource, protected service, envelope encryption, key registration, view registration, list registrations
 
@@ -75,7 +75,8 @@ You can browse the registrations that are available between your {{site.data.key
     </table>
 
 6. To view details of each resource, expand the resource details by clicking the caret (^) icon under the `Resource name` column.
-  The following table describes the registration details.
+
+    The following table describes the registration details.
 
     <table>
     <tr>
@@ -150,7 +151,7 @@ You can use the search field to search for any resources associated with the roo
 
 5. Click the caret (^) icon under the `Resource name` column to view a list of details for a specific registration.
 
-  The following table describes the registration details.
+    The following table describes the registration details.
 
     <table>
     <tr>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-11"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -531,5 +531,3 @@ In this tutorial, you learned how to set up the {{site.data.keyword.hscrypto}} k
 - Learn more about [using your root key to protect data at rest](/docs/hs-crypto?topic=hs-crypto-envelope-encryption#envelope-encryption).
 - Deploy your root key across [supported cloud services](/docs/hs-crypto?topic=hs-crypto-integrate-services#integrate-services).
 - Learn more about the [key management API](https://{DomainName}/apidocs/hs-crypto).
-
-

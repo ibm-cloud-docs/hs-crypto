@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-11"
 
 keywords: pkcs11 access, pkcs 11 authentication, set up PKCS 11 API, best practice for setting up pkcs11 users
 
@@ -172,7 +172,7 @@ To create a service ID for the anonymous user and the corresponding API key, com
     5. Save your API key by copying or downloading it to secure location.
 
     The API key is to be used as the PIN for the anonymous user logins, and cannot be retrieved. Make sure to make a copy of it in this step.
-  {: important}
+    {: important}
 
 For more information about creating services IDs, see [Creating and working with service IDs](/docs/account?topic=account-serviceids). For detailed instructions on creating service ID API keys, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-11"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -263,7 +263,7 @@ You can use the following functions to retrieve cryptographic algorithms or mech
 
 The `GetMechanismList` function obtains a list of mechanism types that are supported by a token.
 
-<table>
+<table id="GetMechanismList_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="GetMechanismList" class="simple-tab-table">
     <tr>
     <th>Description</th>
     <td>Binds to EP11 `m_GetMechanismList`, which is an implementation of PKCS #11 `C_GetMechanismList`.<td>
@@ -272,11 +272,11 @@ The `GetMechanismList` function obtains a list of mechanism types that are suppo
     <th>Parameters</th>
     <td>
     <pre>
-message GetMechanismListRequest {
-}
-message GetMechanismListResponse {
-    repeated uint64 Mechs = 2;
-}
+    message GetMechanismListRequest {
+    }
+    message GetMechanismListResponse {
+      repeated uint64 Mechs = 2;
+    }
     </pre>
     </tr>
     <tr>
@@ -284,26 +284,22 @@ message GetMechanismListResponse {
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
     </tr>
 </table>
-{: #GetMechanismList_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="GetMechanismList"}
-{: class="simple-tab-table"}
 
-<table>
+<table id="GetMechanismList_EP11" tab-title="Enterprise PKCS #11" tab-group="GetMechanismList" class="simple-tab-table">
     <tr>
     <th>Description</th>
-	<td>Implementation of PKCS #11 <code>C_GetMechanismList</code>.
+    <td>Implementation of PKCS #11 <code>C_GetMechanismList</code>.
     </td>
     </tr>
     <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_GetMechanismList (
-    CK_SLOT_ID slot,
-    CK_MECHANISM_TYPE_PTR mechs, CK_ULONG_PTR mechslen,
-    target_t target
-);
+    CK_RV m_GetMechanismList (
+      CK_SLOT_ID slot,
+      CK_MECHANISM_TYPE_PTR mechs, CK_ULONG_PTR mechslen,
+      target_t target
+    );
     </pre>
     </td>
     </tr>
@@ -312,12 +308,8 @@ CK_RV m_GetMechanismList (
     <td>A subset of `C_GetMechanismList` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
     </tr>
 </table>
-{: #GetMechanismList_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="GetMechanismList"}
-{: class="simple-tab-table"}
 
-<table>
+<table id="GetMechanismList_PKCS11" tab-title="PKCS #11" tab-group="GetMechanismList" class="simple-tab-table">
     <tr>
     <th>Description</th>
     <td>
@@ -336,11 +328,11 @@ CK_RV m_GetMechanismList (
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismList)(
-    CK_SLOT_ID slotID,
-    CK_MECHANISM_TYPE_PTR pMechanismList,
-    CK_ULONG_PTR pulCount
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismList)(
+      CK_SLOT_ID slotID,
+      CK_MECHANISM_TYPE_PTR pMechanismList,
+      CK_ULONG_PTR pulCount
+    );
     </pre>
     </td>
     </tr>
@@ -351,10 +343,6 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismList)(
     </td>
     </tr>
 </table>
-{: #GetMechanismList_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="GetMechanismList"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
@@ -394,10 +382,10 @@ The `GetMechanismInfo` Function obtains information about a particular mechanism
     <th>Parameters</th>
     <td>
     <pre>
-Message GetMechanismInfoRequest {
+message GetMechanismInfoRequest {
     uint64 Mech = 2;
 }
-Message GetMechanismInfoResponse {
+message GetMechanismInfoResponse {
     MechanismInfo MechInfo = 3;
 }
     </pre>
@@ -543,7 +531,7 @@ message GenerateKeyResponse {
 <table>
     <tr>
     <th>Description</th>
-	<td>
+    <td>
     <p>Implementation of PKCS #11 <code>C_GenerateKey</code>.</p>
     <p>TDES keys are generated with proper parity, which is not observable by the host. But it is needed for proper interoperability: other PKCS #11 implementations needs to reject DES keys with parity problems.</p>
     <p>If an object is tied to a session, <code>(pin, plen)</code> must be return by <code>Login</code> to that session. Leaving <code>pin</code> <code>NULL</code> creates a public object, one not bound to a login session.</p>
@@ -560,12 +548,12 @@ message GenerateKeyResponse {
     <td>
     <pre>
 CK_RV m_GenerateKey (
-  CK_MECHANISM_PTR mech,
-  CK_ATTRIBUTE_PTR template, CK_ULONG templatelen,
-  const unsigned char \*pin, size_t pinlen,
-  unsigned char \*key, size_t \*keylen,
-  unsigned char \*checkSum, size_t \*checkSumlen,
-  target_t target
+    CK_MECHANISM_PTR mech,
+    CK_ATTRIBUTE_PTR template, CK_ULONG templatelen,
+    const unsigned char \*pin, size_t pinlen,
+    unsigned char \*key, size_t \*keylen,
+    unsigned char \*checkSum, size_t \*checkSumlen,
+    target_t target
 );
     </pre>
     </td>
@@ -681,7 +669,7 @@ The `GenerateKeyPair` function generates a public key and private key pair.
     <th>Parameters</th>
     <td>
     <pre>
-Message GenerateKeyPairRequest {
+message GenerateKeyPairRequest {
     Mechanism Mech = 1;
     map&lt;uint64,AttributeValue&gt; PrivKeyTemplate = 7;
     map&lt;uint64,AttributeValue&gt; PubKeyTemplate = 8;
@@ -1199,14 +1187,14 @@ The `UnwrapKey` function unwraps (decrypts) a key.
     <th>Parameters</th>
     <td>
     <pre>
-Message UnwrapKeyRequest {
+message UnwrapKeyRequest {
     bytes Wrapped = 1;
     bytes KeK = 2;
     bytes MacKey = 3;
     Mechanism Mech = 5;
     map&lt;uint64,AttributeValue&gt; Template = 9;
 }
-Message UnwrapKeyResponse {
+message UnwrapKeyResponse {
     bytes UnwrappedBytes = 7;
     bytes CheckSum = 8;
 }
@@ -2120,7 +2108,7 @@ The `EncryptUpdate` function continues a multiple-part encryption operation. Bef
     <th>Parameters</th>
     <td>
     <pre>
-Message EncryptUpdateRequest {
+message EncryptUpdateRequest {
     bytes State = 1;
     bytes Plain = 2;
 }
@@ -2265,7 +2253,7 @@ The `EncryptFinal` function finishes a multiple-part encryption operation.
     <th>Parameters</th>
     <td>
     <pre>
-Message EncryptFinalRequest {
+message EncryptFinalRequest {
     bytes State = 1;
 }
 message EncryptFinalResponse {
@@ -2892,7 +2880,7 @@ The `DecryptUpdate` function continues a multiple-part decryption operation. Bef
     <th>Parameters</th>
     <td>
     <pre>
-Message DecryptUpdateRequest {
+message DecryptUpdateRequest {
     bytes State = 1;
     bytes Ciphered = 2;
 }
@@ -3033,7 +3021,7 @@ The `DecryptFinal` function finishes a multiple-part decryption operation.
     <th>Parameters</th>
     <td>
     <pre>
-Message DecryptFinalRequest {
+message DecryptFinalRequest {
     bytes State = 1;
 }
 message DecryptFinalResponse {
@@ -3686,7 +3674,7 @@ message SignFinalResponse {
     <p>The <code>state</code> blob was output from: <code>SignInit</code>, <code>SignUpdate</code>.</p>
     </td>
     </tr>
-  <tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
@@ -4806,7 +4794,7 @@ CK_RV m_DigestUpdate (
     <tr>
     <th>Return values</th>
     <td>A subset of `C_DigestUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    </tr>
 </table>
 {: #DigestUpdate_EP11}
 {: tab-title="Enterprise PKCS #11"}
