@@ -94,7 +94,7 @@ You can connect to your z/OS instance with the following approaches:
 * Use any 3270 terminal emulator that's available on your platform. The z/OS TSO listener port is 23. Therefore, the command line on your Linux platform is like `x3270 <floating ip> 23`, or you can use the command line application `c3270` that runs in a terminal without X, such as `3270 <floating ip> 23`. The default user name is `IBMUSER` and the password is 'welcome0'.
 
    By default, the security profile for VPC blocks port 23. The recommendation is to utilize the VPN for VPC to establish a private network connection to the environment and then connect to port 23. The VPN for VPC part is still in the works.
-     {: note}
+   {: note}
 
 * Use the SSH utility and your private key.
 

@@ -166,5 +166,4 @@ Upload your image to {{site.data.keyword.cos_full_notm}}. On the **Objects** pag
 ## Next steps
 {: #next-steps-creating-zos-image}
 
-After your z/OS custom image is created, you can [import](/docs/vpc?topic=vpc-managing-images) it to VPC to provision images.
-Make sure that you have [Granted access to IBM Cloud Object Storage to import images](/docs/vpc?topic=vpc-object-storage-prereq).  
+After your z/OS custom image is created, you can [import](/docs/vpc?topic=vpc-managing-images) it to VPC to provision images. Make sure that you have [Granted access to IBM Cloud Object Storage to import images](/docs/vpc?topic=vpc-object-storage-prereq).  
