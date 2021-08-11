@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-11"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -25,14 +25,14 @@ subcollection: hs-crypto
 # Rotating master keys by using smart cards and the Management Utilities
 {: #rotate-master-key-smart-cards}
 
-You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance on a regular basis to meet industry standards and cryptographic best practices. This topic guides you through the steps to rotate the master key using smart cards and the Management Utilities.
+You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance regularly to meet industry standards and cryptographic best practices. This topic guides you through the steps to rotate the master key by using smart cards and the Management Utilities.
 {: shortdesc}
 
-Rotating the master key reencrypts the keys in key storage using the new master key value. After the keys in key storage are reencrypted, the value in the new master key register is promoted to the current master key register. Before you start rotating the master key, you need to:
+Rotating the master key reencrypts the keys in key storage by using the new master key value. After the keys in key storage are reencrypted, the value in the new master key register is promoted to the current master key register. Before you start rotating the master key, you need to:
 
 - Understand {{site.data.keyword.hscrypto}} concepts, such as [master keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-concept), [master key parts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-part-concept), and [signature keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-key-concept), and understand [how a master key is rotated](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
 - Assign the **Manager** or **Crypto unit administrator** service access role to perform the Management Utilities operations. For more information about the access management, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
-- Configure all crypto units in the service instance exactly the same.
+- Configure all crypto units in the service instance the same.
 
 You can rotate your master key only when PKCS #11 keystores are not enabled in your service instance.
 {: important}
@@ -42,10 +42,10 @@ You can rotate your master key only when PKCS #11 keystores are not enabled in y
 
 Before you start, make sure that you have done the following:
 
-1. The new master key parts are prepared for rotation. For information on how to create a new master key part, see [Generate the signature keys and master key parts](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step1-generate-keys-management-utilities).
+1. The new master key parts are prepared for rotation. For information on how to create a new master key part, see <[Generate the signature keys and master key parts](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step1-generate-keys-management-utilities)>.
 2. Open the Trusted Key Entry application on your workstation and click the *Crypto units* tab. Check and make sure that `true` is displayed as the value of the SELECTED column for all crypto units in the service instance where you want to rotate the master key. If any crypto units in the service instance are not selected, select the crypto units by clicking the *Add crypto units* button and following the prompts.
 
-    You can only work with one service instance at a time. If any crypto units in other service instances are selected, click the *Remove crypto units* button to unselect.
+    You can work with only one service instance at a time. If any crypto units in other service instances are selected, click the *Remove crypto units* button to unselect.
     {: note}
 
 ## Rotating master keys using smart cards and the Management Utilities
@@ -73,7 +73,7 @@ To rotate the master key, follow these steps:
 
     After the process is complete, the new master key register is in `Full committed` state.
 
-3. If you have any encryption keys that are encrypted with the current master key using the GREP11 API and are stored locally, call the [RewrapKeyBlob GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-rewrapKeyBlob) to reencrypt the keys with the new master key.
+3. If you have any encryption keys that are encrypted with the current master key by using the GREP11 API and are stored locally, call the [RewrapKeyBlob GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-rewrapKeyBlob) to reencrypt the keys with the new master key.
 
     Make sure to perform this step before you rotate the master key. Otherwise, your keys that are encrypted with the current master key cannot be reencrypted and used.
     {: important}
@@ -91,7 +91,7 @@ To rotate the master key, follow these steps:
 
     The new master key is now in `Valid` state in the current master key register. Check out [Master key rotation](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro) for information on how the key states change.
 
-You have successfully rotated the current master key with the new master key. Your root keys and encryption keys are now well-protected by the new master key.
+You have successfully rotated the current master key with the new master key. Your root keys and encryption keys are now well protected by the new master key.
 
 If an error occurs during master key rotation, see [Why can't I rotate master keys using smart cards](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-smart-cards).
 
