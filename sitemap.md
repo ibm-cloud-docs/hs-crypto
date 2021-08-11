@@ -1243,3 +1243,35 @@ Find what you are looking for in the compilation of topics that are available in
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-vsi_instance_zos_sdump#before_zos_sdump)
 
 * [Adding the additional SDUMP volume](/docs/hs-crypto?topic=hs-crypto-vsi_instance_zos_sdump#vsi_instance_zos_add_sdump)
+
+
+## Connecting to z/OS instances - DRAFT
+{: #sitemap_connecting_to_z/os_instances_-_draft}
+
+
+[Connecting to z/OS instances - DRAFT](/docs/hs-crypto?topic=hs-crypto-vsi_is_connecting_zos)
+
+* [Locating floating IP address](/docs/hs-crypto?topic=hs-crypto-vsi_is_connecting_zos#locating-floating-ip-address)
+
+* [Getting connected](/docs/hs-crypto?topic=hs-crypto-vsi_is_connecting_zos#getting-connected)
+
+
+## Creating a z/OS custom image - DRAFT
+{: #sitemap_creating_a_z/os_custom_image_-_draft}
+
+
+[Creating a z/OS custom image - DRAFT](/docs/hs-crypto?topic=hs-crypto-create-zos-custom-image)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-create-zos-custom-image#before-creating-zos-custom-image)
+
+* [Step 1 - Stop the guest z/OS system and zPDT](/docs/hs-crypto?topic=hs-crypto-create-zos-custom-image#stop-zos-guest)
+
+* [Step 2 -  Update the `devmap` file corresponding to the z/OS system disk volume images](/docs/hs-crypto?topic=hs-crypto-create-zos-custom-image#update-devmap)
+
+* [Step 3 - Create the compressed z/OS volume disk images and corresponding devmap](/docs/hs-crypto?topic=hs-crypto-create-zos-custom-image#create-zos-volume-images-tar)
+
+* [Step 4 - Create the custom z/OS image by using the `prepare-z-cloud-image.sh` script.](/docs/hs-crypto?topic=hs-crypto-create-zos-custom-image#create-zos-custom-image-with-script)
+
+* [Step 5 - Upload image to {{site.data.keyword.cos_full_notm}}](/docs/hs-crypto?topic=hs-crypto-create-zos-custom-image#upload-zos-image-icos)
+
+* [Next steps](/docs/hs-crypto?topic=hs-crypto-create-zos-custom-image#next-steps-creating-zos-image)
