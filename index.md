@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-11"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -90,7 +90,7 @@ Complete the following steps to create your first cryptographic key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select **Root key** or **Standard key**.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <strong>Root key</strong> or <strong>Standard key</strong>.</td>
       </tr>
       <tr>
         <td>Key name</td>
@@ -125,7 +125,7 @@ Complete the following steps to add an existing key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select **Root key** or **Standard key**.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <strong>Root key</strong> or <strong>Standard key</strong>.</td>
       </tr>
       <tr>
         <td>Key name</td>
@@ -157,9 +157,9 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
 
 1. Generate an API key for accessing your {{site.data.keyword.hscrypto}} instance. Run the following command to create an API key for your {{site.data.keyword.cloud_notm}} account, and save the value of the API key for subsequent steps:
 
-  ```
-  ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
-  ```
+    ```
+    ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
+    ```
     {: codeblock}
 
 2. Create a configuration file for the {{site.data.keyword.hscrypto}} PKCS #11 feature. The configuration file is named `grep11client.yaml`.
@@ -170,82 +170,82 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
     - Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance.
     - Replace `<your_api_key>` with the value of the API key that you created previously.
 
-  ```yaml
-  iamcredentialtemplate: &defaultiamcredential
-            enabled: true
-            endpoint: "https://iam.cloud.ibm.com"
-            # Keep the 'apikey' empty. It will be overridden by the Anonymous user API key configured later.
-            apikey:
-            # The Universally Unique IDentifier (UUID) of your {{site.data.keyword.hscrypto}} instance.
-            instance: "<instance_id>"
+    ```yaml
+    iamcredentialtemplate: &defaultiamcredential
+              enabled: true
+              endpoint: "https://iam.cloud.ibm.com"
+              # Keep the 'apikey' empty. It will be overridden by the Anonymous user API key configured later.
+              apikey:
+              # The Universally Unique IDentifier (UUID) of your {{site.data.keyword.hscrypto}} instance.
+              instance: "<instance_id>"
 
-  tokens:
-    0:
-      grep11connection:
-        # The EP11 endpoint address starting from 'ep11'.
-        # For example: "ep11.us-south.hs-crypto.cloud.ibm.com"
-        address: "<EP11_endpoint_URL>"
-        # The EP11 endpoint port number
-        port: "<EP11_endpoint_port_number>"
-        tls:
-          # Grep11 requires TLS connection.
-          enabled: true
-          # Grep11 requires server only authentication, so 'mutual' needs to be set as 'false'.
-          mutual: false
-          # 'cacert' is a full-path certificate file.
-          # In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
-          cacert:
-          # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' need to be empty.
-          certfile:
-          keyfile:
-      storage:
-        filestore:
-          enabled: false
-          storagepath:
-          # 'remotestore' needs to be enabled if you want to generate keys with the attribute CKA_TOKEN.
-        remotestore:
-          enabled: true
-      users:
-        0: # The index of the Security Officer (SO) user MUST be 0.
-          # The name for the Security Officer (SO) user. For example: "Administrator".
-          # NEVER put the API key under the SO user for security reasons.
-          name: "Administrator"
-          iamauth:
-            <<: *defaultiamcredential
-        1: # The index of the normal user MUST be 1.
-          # The name for the normal user. For example: "Normal user".
-          # NEVER put the API key under the normal user for security reasons.
-          name: "Normal user"
-           # The Space ID is a 128-bit UUID and can be chosen freely.
-           # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
-           # For example: "f00db2f1-4421-4032-a505-465bedfa845b".
-           # 'tokenspaceID' under the normal user is to identify the private keystore.
-          tokenspaceID: "f00db2f1-4421-4032-a505-465bedfa845b"
-          iamauth:
-            <<: *defaultiamcredential
-        2: # The index of the anonymous user MUST be 2.
-          # The name for the anonymous user. For example: "Anonymous".
-          name: "Anonymous"
-          # The Space ID is a 128-bit UUID and can be chosen freely.
-          # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
-          # For example: "ca22be26-b798-4fdf-8c83-3e3a492dc215".
-          # 'tokenspaceID' under the anonymous user is to identify the public keystore.
-          tokenspaceID: "ca22be26-b798-4fdf-8c83-3e3a492dc215"
-          iamauth:
-            <<: *defaultiamcredential
-            # This API key for the Anonymous user must be provided.
-            # It will overide the 'apikey' in the previous defaultcredentials.iamauth.apikey field
-            apikey: "<your_api_key>"
-  logging:
-    # Set the logging level.
-    # The supported levels, in an increasing order of verboseness, are:
-    # 'panic', 'fatal', 'error', 'warning'/'warn', 'info', 'debug', 'trace'.
-    # The Default value is 'debug'.
-    loglevel: debug
-    # The full path of your logging file.
-    # For example: /tmp/grep11client.log
-    logpath: /tmp/grep11client.log
-  ```
+    tokens:
+      0:
+        grep11connection:
+          # The EP11 endpoint address starting from 'ep11'.
+          # For example: "ep11.us-south.hs-crypto.cloud.ibm.com"
+          address: "<EP11_endpoint_URL>"
+          # The EP11 endpoint port number
+          port: "<EP11_endpoint_port_number>"
+          tls:
+            # Grep11 requires TLS connection.
+            enabled: true
+            # Grep11 requires server only authentication, so 'mutual' needs to be set as 'false'.
+            mutual: false
+            # 'cacert' is a full-path certificate file.
+            # In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
+            cacert:
+            # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' need to be empty.
+            certfile:
+            keyfile:
+        storage:
+          filestore:
+            enabled: false
+            storagepath:
+            # 'remotestore' needs to be enabled if you want to generate keys with the attribute CKA_TOKEN.
+          remotestore:
+            enabled: true
+        users:
+          0: # The index of the Security Officer (SO) user MUST be 0.
+            # The name for the Security Officer (SO) user. For example: "Administrator".
+            # NEVER put the API key under the SO user for security reasons.
+            name: "Administrator"
+            iamauth:
+              <<: *defaultiamcredential
+          1: # The index of the normal user MUST be 1.
+            # The name for the normal user. For example: "Normal user".
+            # NEVER put the API key under the normal user for security reasons.
+            name: "Normal user"
+             # The Space ID is a 128-bit UUID and can be chosen freely.
+             # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
+             # For example: "f00db2f1-4421-4032-a505-465bedfa845b".
+             # 'tokenspaceID' under the normal user is to identify the private keystore.
+            tokenspaceID: "f00db2f1-4421-4032-a505-465bedfa845b"
+            iamauth:
+              <<: *defaultiamcredential
+          2: # The index of the anonymous user MUST be 2.
+            # The name for the anonymous user. For example: "Anonymous".
+            name: "Anonymous"
+            # The Space ID is a 128-bit UUID and can be chosen freely.
+            # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
+            # For example: "ca22be26-b798-4fdf-8c83-3e3a492dc215".
+            # 'tokenspaceID' under the anonymous user is to identify the public keystore.
+            tokenspaceID: "ca22be26-b798-4fdf-8c83-3e3a492dc215"
+            iamauth:
+              <<: *defaultiamcredential
+              # This API key for the Anonymous user must be provided.
+              # It will overide the 'apikey' in the previous defaultcredentials.iamauth.apikey field
+              apikey: "<your_api_key>"
+    logging:
+      # Set the logging level.
+      # The supported levels, in an increasing order of verboseness, are:
+      # 'panic', 'fatal', 'error', 'warning'/'warn', 'info', 'debug', 'trace'.
+      # The Default value is 'debug'.
+      loglevel: debug
+      # The full path of your logging file.
+      # For example: /tmp/grep11client.log
+      logpath: /tmp/grep11client.log
+    ```
     {: codeblock}
 
 3. Download and install the latest PKCS #11 library through [the GitHub repository](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} and move it into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64` or `/usr/lib`.
@@ -263,13 +263,13 @@ The following procedure uses Golang code as an example to test GREP11 functions.
 2. Clone the [sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external} into a local directory of your choice. Go modules are used for this repository, so you don't need to place the cloned repository in your `GOPATH`. Refer to the repository's README file for more information about the GREP11 Go code examples.
 3. Update the following code snippet in the `examples/server_test.go` file.
 
-  ```Golang
-  var (
-      Address        = "<grep11_server_address>:<port>"
-      APIKey         = "<ibm_cloud_apikey>"
-      HPCSInstanceID = "<hpcs_instance_id>"
-  )
-  ```
+    ```Golang
+    var (
+        Address        = "<grep11_server_address>:<port>"
+        APIKey         = "<ibm_cloud_apikey>"
+        HPCSInstanceID = "<hpcs_instance_id>"
+    )
+    ```
     {: codeblock}
 
     In the code example,
@@ -281,34 +281,34 @@ The following procedure uses Golang code as an example to test GREP11 functions.
 
     The sample program produces output similar to the following:
 
-  ```
-  === RUN   Example_getMechanismInfo
-  --- PASS: Example_getMechanismInfo (0.11s)
+    ```
+    === RUN   Example_getMechanismInfo
+    --- PASS: Example_getMechanismInfo (0.11s)
     === RUN   Example_generateGenericKey
-  --- PASS: Example_generateGenericKey (0.09s)
-  === RUN   Example_encryptAndDecryptUsingAES
-  --- PASS: Example_encryptAndDecryptUsingAES (0.28s)
+    --- PASS: Example_generateGenericKey (0.09s)
+    === RUN   Example_encryptAndDecryptUsingAES
+    --- PASS: Example_encryptAndDecryptUsingAES (0.28s)
     === RUN   Example_digest
-  --- PASS: Example_digest (0.18s)
-  === RUN   Example_signAndVerifyUsingRSAKeyPair
-  --- PASS: Example_signAndVerifyUsingRSAKeyPair (0.21s)
+    --- PASS: Example_digest (0.18s)
+    === RUN   Example_signAndVerifyUsingRSAKeyPair
+    --- PASS: Example_signAndVerifyUsingRSAKeyPair (0.21s)
     === RUN   Example_signAndVerifyUsingDSAKeyPair
-  --- PASS: Example_signAndVerifyUsingDSAKeyPair (0.99s)
-  === RUN   Example_deriveKeyUsingDHKeyPair
-  --- PASS: Example_deriveKeyUsingDHKeyPair (0.64s)
+    --- PASS: Example_signAndVerifyUsingDSAKeyPair (0.99s)
+    === RUN   Example_deriveKeyUsingDHKeyPair
+    --- PASS: Example_deriveKeyUsingDHKeyPair (0.64s)
     === RUN   Example_signAndVerifyUsingECDSAKeyPair
-  --- PASS: Example_signAndVerifyUsingECDSAKeyPair (0.16s)
-  === RUN   Example_signAndVerifyToTestErrorHandling
-  --- PASS: Example_signAndVerifyToTestErrorHandling (0.16s)
+    --- PASS: Example_signAndVerifyUsingECDSAKeyPair (0.16s)
+    === RUN   Example_signAndVerifyToTestErrorHandling
+    --- PASS: Example_signAndVerifyToTestErrorHandling (0.16s)
     === RUN   Example_wrapAndUnwrapKey
-  --- PASS: Example_wrapAndUnwrapKey (0.20s)
-  === RUN   Example_deriveKey
-  --- PASS: Example_deriveKey (0.22s)
+    --- PASS: Example_wrapAndUnwrapKey (0.20s)
+    === RUN   Example_deriveKey
+    --- PASS: Example_deriveKey (0.22s)
     === RUN   Example_tls
-  --- PASS: Example_tls (0.14s)
-  PASS
-  ok      github.com/IBM-Cloud/hpcs-grep11-go/examples    13.106s
-  ```
+    --- PASS: Example_tls (0.14s)
+    PASS
+    ok      github.com/IBM-Cloud/hpcs-grep11-go/examples    13.106s
+    ```
     {: screen}
 
 ## (Optional) Step 3: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC
@@ -391,7 +391,7 @@ Complete the following steps to create your first cryptographic key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select **Root key** or **Standard key**.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <strong>Root key</strong> or <strong>Standard key</strong>.</td>
       </tr>
       <tr>
         <td>Key name</td>
@@ -428,7 +428,7 @@ Complete the following steps to add an existing key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select **Root key** or **Standard key**.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <strong>Root key</strong> or <strong>Standard key</strong>.</td>
       </tr>
       <tr>
         <td>Key name</td>
@@ -462,9 +462,9 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
 
 1. Generate an API key for accessing your {{site.data.keyword.hscrypto}} instance. Run the following command to create an API key for your {{site.data.keyword.cloud_notm}} account, and save the value of the API key for subsequent steps:
 
-  ```
-  ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
-  ```
+    ```
+    ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
+    ```
     {: codeblock}
 
 2. Create a configuration file for the {{site.data.keyword.hscrypto}} PKCS #11 feature. The configuration file is named `grep11client.yaml`.
@@ -475,82 +475,82 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
     - Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance.
     - Replace `<your_api_key>` with the value of the API key that you created previously.
 
-  ```yaml
-  iamcredentialtemplate: &defaultiamcredential
-            enabled: true
-            endpoint: "https://iam.cloud.ibm.com"
-            # Keep the 'apikey' empty. It will be overridden by the Anonymous user API key configured later.
-            apikey:
-            # The Universally Unique IDentifier (UUID) of your {{site.data.keyword.hscrypto}} instance.
-            instance: "<instance_id>"
+    ```yaml
+    iamcredentialtemplate: &defaultiamcredential
+              enabled: true
+              endpoint: "https://iam.cloud.ibm.com"
+              # Keep the 'apikey' empty. It will be overridden by the Anonymous user API key configured later.
+              apikey:
+              # The Universally Unique IDentifier (UUID) of your {{site.data.keyword.hscrypto}} instance.
+              instance: "<instance_id>"
 
-  tokens:
-    0:
-      grep11connection:
-        # The EP11 endpoint address starting from 'ep11'.
-        # For example: "ep11.us-south.hs-crypto.cloud.ibm.com"
-        address: "<EP11_endpoint_URL>"
-        # The EP11 endpoint port number
-        port: "<EP11_endpoint_port_number>"
-        tls:
-          # Grep11 requires TLS connection.
-          enabled: true
-          # Grep11 requires server only authentication, so 'mutual' needs to be set as 'false'.
-          mutual: false
-          # 'cacert' is a full-path certificate file.
-          # In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
-          cacert:
-          # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' need to be empty.
-          certfile:
-          keyfile:
-      storage:
-        filestore:
-          enabled: false
-          storagepath:
-          # 'remotestore' needs to be enabled if you want to generate keys with the attribute CKA_TOKEN.
-        remotestore:
-          enabled: true
-      users:
-        0: # The index of the Security Officer (SO) user MUST be 0.
-          # The name for the Security Officer (SO) user. For example: "Administrator".
-          # NEVER put the API key under the SO user for security reasons.
-          name: "Administrator"
-          iamauth:
-            <<: *defaultiamcredential
-        1: # The index of the normal user MUST be 1.
-          # The name for the normal user. For example: "Normal user".
-          # NEVER put the API key under the normal user for security reasons.
-          name: "Normal user"
-           # The Space ID is a 128-bit UUID and can be chosen freely.
-           # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
-           # For example: "f00db2f1-4421-4032-a505-465bedfa845b".
-           # 'tokenspaceID' under the normal user is to identify the private keystore.
-          tokenspaceID: "f00db2f1-4421-4032-a505-465bedfa845b"
-          iamauth:
-            <<: *defaultiamcredential
-        2: # The index of the anonymous user MUST be 2.
-          # The name for the anonymous user. For example: "Anonymous".
-          name: "Anonymous"
-          # The Space ID is a 128-bit UUID and can be chosen freely.
-          # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
-          # For example: "ca22be26-b798-4fdf-8c83-3e3a492dc215".
-          # 'tokenspaceID' under the anonymous user is to identify the public keystore.
-          tokenspaceID: "ca22be26-b798-4fdf-8c83-3e3a492dc215"
-          iamauth:
-            <<: *defaultiamcredential
-            # This API key for the Anonymous user must be provided.
-            # It will overide the 'apikey' in the previous defaultcredentials.iamauth.apikey field
-            apikey: "<your_api_key>"
-  logging:
-    # Set the logging level.
-    # The supported levels, in an increasing order of verboseness, are:
-    # 'panic', 'fatal', 'error', 'warning'/'warn', 'info', 'debug', 'trace'.
-    # The Default value is 'debug'.
-    loglevel: debug
-    # The full path of your logging file.
-    # For example: /tmp/grep11client.log
-    logpath: /tmp/grep11client.log
-  ```
+    tokens:
+      0:
+        grep11connection:
+          # The EP11 endpoint address starting from 'ep11'.
+          # For example: "ep11.us-south.hs-crypto.cloud.ibm.com"
+          address: "<EP11_endpoint_URL>"
+          # The EP11 endpoint port number
+          port: "<EP11_endpoint_port_number>"
+          tls:
+            # Grep11 requires TLS connection.
+            enabled: true
+            # Grep11 requires server only authentication, so 'mutual' needs to be set as 'false'.
+            mutual: false
+            # 'cacert' is a full-path certificate file.
+            # In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
+            cacert:
+            # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' need to be empty.
+            certfile:
+            keyfile:
+        storage:
+          filestore:
+            enabled: false
+            storagepath:
+            # 'remotestore' needs to be enabled if you want to generate keys with the attribute CKA_TOKEN.
+          remotestore:
+            enabled: true
+        users:
+          0: # The index of the Security Officer (SO) user MUST be 0.
+            # The name for the Security Officer (SO) user. For example: "Administrator".
+            # NEVER put the API key under the SO user for security reasons.
+            name: "Administrator"
+            iamauth:
+              <<: *defaultiamcredential
+          1: # The index of the normal user MUST be 1.
+            # The name for the normal user. For example: "Normal user".
+            # NEVER put the API key under the normal user for security reasons.
+            name: "Normal user"
+             # The Space ID is a 128-bit UUID and can be chosen freely.
+             # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
+             # For example: "f00db2f1-4421-4032-a505-465bedfa845b".
+             # 'tokenspaceID' under the normal user is to identify the private keystore.
+            tokenspaceID: "f00db2f1-4421-4032-a505-465bedfa845b"
+            iamauth:
+              <<: *defaultiamcredential
+          2: # The index of the anonymous user MUST be 2.
+            # The name for the anonymous user. For example: "Anonymous".
+            name: "Anonymous"
+            # The Space ID is a 128-bit UUID and can be chosen freely.
+            # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
+            # For example: "ca22be26-b798-4fdf-8c83-3e3a492dc215".
+            # 'tokenspaceID' under the anonymous user is to identify the public keystore.
+            tokenspaceID: "ca22be26-b798-4fdf-8c83-3e3a492dc215"
+            iamauth:
+              <<: *defaultiamcredential
+              # This API key for the Anonymous user must be provided.
+              # It will overide the 'apikey' in the previous defaultcredentials.iamauth.apikey field
+              apikey: "<your_api_key>"
+    logging:
+      # Set the logging level.
+      # The supported levels, in an increasing order of verboseness, are:
+      # 'panic', 'fatal', 'error', 'warning'/'warn', 'info', 'debug', 'trace'.
+      # The Default value is 'debug'.
+      loglevel: debug
+      # The full path of your logging file.
+      # For example: /tmp/grep11client.log
+      logpath: /tmp/grep11client.log
+    ```
     {: codeblock}
 
 3. Download and install the latest PKCS #11 library through [the GitHub repository](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} and move it into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64` or `/usr/lib`.
@@ -570,13 +570,13 @@ The following procedure uses Golang code as an example to test GREP11 functions.
 2. Clone the [sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external} into a local directory of your choice. Go modules are used for this repository, so you don't need to place the cloned repository in your `GOPATH`. Refer to the repository's README file for more information about the GREP11 Go code examples.
 3. Update the following code snippet in the `examples/server_test.go` file.
 
-  ```Golang
-  var (
-      Address        = "<grep11_server_address>:<port>"
-      APIKey         = "<ibm_cloud_apikey>"
-      HPCSInstanceID = "<hpcs_instance_id>"
-  )
-  ```
+    ```Golang
+    var (
+        Address        = "<grep11_server_address>:<port>"
+        APIKey         = "<ibm_cloud_apikey>"
+        HPCSInstanceID = "<hpcs_instance_id>"
+    )
+    ```
     {: codeblock}
 
     In the code example,
@@ -588,34 +588,34 @@ The following procedure uses Golang code as an example to test GREP11 functions.
 
     The sample program produces output similar to the following:
 
-  ```
-  === RUN   Example_getMechanismInfo
-  --- PASS: Example_getMechanismInfo (0.11s)
+    ```
+    === RUN   Example_getMechanismInfo
+    --- PASS: Example_getMechanismInfo (0.11s)
     === RUN   Example_generateGenericKey
-  --- PASS: Example_generateGenericKey (0.09s)
-  === RUN   Example_encryptAndDecryptUsingAES
-  --- PASS: Example_encryptAndDecryptUsingAES (0.28s)
+    --- PASS: Example_generateGenericKey (0.09s)
+    === RUN   Example_encryptAndDecryptUsingAES
+    --- PASS: Example_encryptAndDecryptUsingAES (0.28s)
     === RUN   Example_digest
-  --- PASS: Example_digest (0.18s)
-  === RUN   Example_signAndVerifyUsingRSAKeyPair
-  --- PASS: Example_signAndVerifyUsingRSAKeyPair (0.21s)
+    --- PASS: Example_digest (0.18s)
+    === RUN   Example_signAndVerifyUsingRSAKeyPair
+    --- PASS: Example_signAndVerifyUsingRSAKeyPair (0.21s)
     === RUN   Example_signAndVerifyUsingDSAKeyPair
-  --- PASS: Example_signAndVerifyUsingDSAKeyPair (0.99s)
-  === RUN   Example_deriveKeyUsingDHKeyPair
-  --- PASS: Example_deriveKeyUsingDHKeyPair (0.64s)
+    --- PASS: Example_signAndVerifyUsingDSAKeyPair (0.99s)
+    === RUN   Example_deriveKeyUsingDHKeyPair
+    --- PASS: Example_deriveKeyUsingDHKeyPair (0.64s)
     === RUN   Example_signAndVerifyUsingECDSAKeyPair
-  --- PASS: Example_signAndVerifyUsingECDSAKeyPair (0.16s)
-  === RUN   Example_signAndVerifyToTestErrorHandling
-  --- PASS: Example_signAndVerifyToTestErrorHandling (0.16s)
+    --- PASS: Example_signAndVerifyUsingECDSAKeyPair (0.16s)
+    === RUN   Example_signAndVerifyToTestErrorHandling
+    --- PASS: Example_signAndVerifyToTestErrorHandling (0.16s)
     === RUN   Example_wrapAndUnwrapKey
-  --- PASS: Example_wrapAndUnwrapKey (0.20s)
-  === RUN   Example_deriveKey
-  --- PASS: Example_deriveKey (0.22s)
+    --- PASS: Example_wrapAndUnwrapKey (0.20s)
+    === RUN   Example_deriveKey
+    --- PASS: Example_deriveKey (0.22s)
     === RUN   Example_tls
-  --- PASS: Example_tls (0.14s)
-  PASS
-  ok      github.com/IBM-Cloud/hpcs-grep11-go/examples    13.106s
-  ```
+    --- PASS: Example_tls (0.14s)
+    PASS
+    ok      github.com/IBM-Cloud/hpcs-grep11-go/examples    13.106s
+    ```
     {: screen}
 
 ## (Optional) Step 4: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC

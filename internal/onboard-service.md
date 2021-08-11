@@ -188,17 +188,12 @@ Hyperwarp is IBM cloud's unified publishing, subscribing, and processing event p
 [{{site.data.keyword.hscrypto}} GitHub repository](https://github.ibm.com/ZaaS/zcrypto-backlog/issues/new?template=hyperwarp-onboard-request.md) to enable Hyperwarp integration with {{site.data.keyword.hscrypto}}.
 
 In the issue, provide the following details:
-  - The `Hyperwarp subscriber ID` that you registered your service with Hyperwarp.
-  - The environment, staging, or production, where you need to onboard your
-  service. After you onboard in the staging environment, you must submit another
-  request to onboard in production.
-  - The `service_name` that uniquely identifies your service.
-  - The `regions` where you want to onboard your service with {{site.data.keyword.hscrypto}}; for example, `us-south`.
+- The `Hyperwarp subscriber ID` that you registered your service with Hyperwarp.
+- The environment, staging, or production, where you need to onboard your service. After you onboard in the staging environment, you must submit another request to onboard in production.
+- The `service_name` that uniquely identifies your service.
+- The `regions` where you want to onboard your service with {{site.data.keyword.hscrypto}}; for example, `us-south`.
 
-  After you submit a request, the {{site.data.keyword.hscrypto}}
-  team will enable your service's Hyperwarp integration with {{site.data.keyword.hscrypto}}.
-  Feel free to connect with us on the `#hp-crypto-kms` Slack channel if you need
-  help during this process.
+After you submit a request, the {{site.data.keyword.hscrypto}} team will enable your service's Hyperwarp integration with {{site.data.keyword.hscrypto}}. Feel free to connect with us on the `#hp-crypto-kms` Slack channel if you need help during this process.
 
 ## Next steps
 {: #onboard-next-steps}
