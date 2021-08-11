@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-11"
 
 keywords: error message, error code, error, kms error, key management error message, hpcs error messages, hyper protect crypto services error message
 
@@ -469,7 +469,7 @@ using this format:
 ```
 {: screen}
 
-Depending on which platform (Linux&Reg;, Mac, Windows&Reg;) or shell (bash, sh, zsh) you
+Depending on which platform (Linux&reg;, Mac, Windows&reg;) or shell (bash, sh, zsh) you
 are using, you need to be aware of using single versus double quotation marks. Some
 systems will **not** interpret variables inside single quotation mark. For example,
 ('Bearer $ACCESS_TOKEN') cannot replace `$ACCESS_TOKEN` with the value.

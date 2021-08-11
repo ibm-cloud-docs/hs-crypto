@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-11"
 
 keywords: enable kyok, hyper protect crypto service onboarding, internal, kyok, onboard service, crn token
 
@@ -59,7 +59,7 @@ the user's behalf. Review the
 [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles)
 to determine which roles match your use case. The **Reader** service role provides the necessary permissions for
 performing wrap, unwrap, and list key actions.
-- The environment, staging or production, where you need to onboard your
+- The environment, staging, or production, where you need to onboard your
 service. After you onboard in the staging environment, you must submit another
 request to onboard in production.
 
@@ -76,7 +76,7 @@ To grant access between your service (the "source" service) and
 recommend using a CRN token. This process requires a single extra request
 to IAM.
 
-Do not propagate the end user's token through the system because this not good
+Do not propagate the user's token through the system because this not good
 security hygiene. Instead, use a CRN token from IAM.
 {: important}
 
@@ -87,7 +87,7 @@ API call | Target | Token Type
 [List KMS instances](#discover-kms-instances) | GHoST | CRN Token
 [Get KMS endpoints](#discover-kms-instances) | GHoST | CRN Token
 [Register protected resources](/docs/hs-crypto?topic=hs-crypto-register-protected-resources) | {{site.data.keyword.hscrypto}} | CRN token
-Wrap / unwrap DEKs | {{site.data.keyword.hscrypto}} | CRN token
+Wrap or unwrap DEKs | {{site.data.keyword.hscrypto}} | CRN token
 
 See the
 [#iam-adopters Slack channel](https://ibm-cloudplatform.slack.com/archives/C0NLB2W3B/p1516206027000901){: external}
@@ -101,20 +101,20 @@ for official steps and guidance.
 Before you use the {{site.data.keyword.hscrypto}} API to protect customer data, you need to know how to perform two important actions:
 - Gather a list of all {{site.data.keyword.hscrypto}} instances
 that your customer has access to view, which is set by an IAM policy with
-Platform Viewer role
+Platform Viewer role.
 - Discover {{site.data.keyword.hscrypto}} regional endpoints
-for each instance
+for each instance.
 
 Listing {{site.data.keyword.hscrypto}} instances gives your
 customers the choice of which root keys protect your service's resource and
-which type of KMS provider. The instances that contain root keys may be in any
+which type of KMS provider. The instances that contain root keys might be in any
 MZR - even different from the resource's location. We allow this so that
 customers can centrally manage keys in a region that the customer desires, while
 data is protected and stored elsewhere. Customers choose and own the
 responsibility of the location of their keys.
 
-Both list and discover actions can be achieved through the use of the platform
-Tagging API (i.e GHoST) and a **CRN token** from earlier. Your team can search
+Both list and discover actions can be achieved by using the platform
+Tagging API (that is, GHoST) and a **CRN token** from earlier. Your team can search
 for all KMS instances that are associated with a given user by specifying
 `sub_type` instead of service name. This is done by querying Global Search and
 Tagging (GhoST).
@@ -163,7 +163,7 @@ adopting teams can see which endpoint hosts a particular KMS service instance.
 Adopting services must not use the public endpoint as a redundant path in the
 event the private endpoint has availability issues because of customer
 expectation for security in motion. If you believe this is needed, raise
-it during you CISO baseline review.
+it during your CISO baseline review.
 {: important}
 
 If your service receives both a public and private endpoint in the response,
@@ -189,7 +189,7 @@ Hyperwarp is IBM cloud's unified publishing, subscribing, and processing event p
 
 In the issue, provide the following details:
   - The `Hyperwarp subscriber ID` that you registered your service with Hyperwarp.
-  - The environment, staging or production, where you need to onboard your
+  - The environment, staging, or production, where you need to onboard your
   service. After you onboard in the staging environment, you must submit another
   request to onboard in production.
   - The `service_name` that uniquely identifies your service.
@@ -203,6 +203,6 @@ In the issue, provide the following details:
 ## Next steps
 {: #onboard-next-steps}
 
-Now that you have an instance and can discover it, you can [try the service out](/docs/hs-crypto?topic=hs-crypto-get-started) and then [start key registration](/docs/hs-crypto?topic=hs-crypto-register-protected-resources).
+Now that you have an instance and can discover it, you can [try out the service](/docs/hs-crypto?topic=hs-crypto-get-started) and then [start key registration](/docs/hs-crypto?topic=hs-crypto-register-protected-resources).
 
 If you want to onboard your service with other key management services, such as {{site.data.keyword.keymanagementserviceshort}}, see [Onboard your service with {{site.data.keyword.keymanagementserviceshort}}](/docs/key-protect?topic=key-protect-onboard-service).

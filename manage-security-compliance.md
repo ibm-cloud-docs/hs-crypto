@@ -2,7 +2,7 @@
 
 copyright:
 years: 2020, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-11"
 
 keywords: security for Hyper Protect Crypto Services, compliance for Hyper Protect Crypto Services, security and compliance for Hyper Protect Crypto Services, rules for Hyper Protect Crypto Services,
 
@@ -63,4 +63,4 @@ available properties that you can use to create a rule for
 {: caption="Table 1. Config rule properties and target attributes for {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 
 To learn more about config rule capabilities, see
-[What is a config rule?](/docs/security-compliance?topic=security-compliance-what-is-rule){: external}.
+<[What is a config rule?](/docs/security-compliance?topic=security-compliance-what-is-rule)>{: external}

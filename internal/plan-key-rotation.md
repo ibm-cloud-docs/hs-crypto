@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-11"
 
 keywords: enable kyok, onboarding hpcs, onboarding hyper protect crypto services, key rotation, key rewrap, dek rewrap
 
@@ -52,7 +52,7 @@ Once you find the key ID, rotate the key by making a call to `POST /api/v2/keys/
 ### Step 2: Check for a Hyperwarp rotation event from {{site.data.keyword.hscrypto}} 
 {: #dek-rewrap-receive-hyperwarp-event}
 
-When {{site.data.keyword.hscrypto}} receives a rotate key request from your cloud service, a new key version is created for the key. The new key version becomes available for wrap operations. A Hyperwarp notification is sent to all cloud services that have registrations associated with the key.
+When {{site.data.keyword.hscrypto}} receives a rotate key request from your cloud service, a new key version is created for the key. The new key version becomes available for wrap operations. A Hyperwarp notification is sent to all cloud services that have registrations that are associated with the key.
 
 Your service will only receive Hyperwarp events if the root key has registrations that are associated with it.
 {: note}
@@ -70,7 +70,7 @@ Use the [adopters guide](https://github.ibm.com/kms/Adopter_services/blob/master
 ## Step 4: Notify {{site.data.keyword.hscrypto}} that DEK rewrap is completed
 {: #dek-wrap-notify-hs-crypto}
 
-Services have a time frame of four hours to confirm with {{site.data.keyword.hscrypto}} that all appropriate actions have been taken after receiving a hyperwarp notification.
+Services have a timeframe of 4 hours to confirm with {{site.data.keyword.hscrypto}} that all appropriate actions have been taken after receiving a hyperwarp notification.
 {: important}
 
 Run the following cURL command to acknowledge the Hyperwarp rotation event:
@@ -200,7 +200,7 @@ Replace the variables in the example request according to the following table.
 ### Monitor logs for an end-to-end key rotation event in activity tracker
 {: #dek-rewrap-monitor-logs}
 
-For audit purposes, you can monitor the activity trail of a rotated root key through Activity Tracker. The following is an example of a successful root key rotation event.
+For audit purposes, you can monitor the activity trail of a rotated root key through Activity Tracker. The following example is a successful root key rotation event.
 
 ```json
 {

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-08-11"
 
 keywords: open source licenses
 
@@ -25,12 +25,12 @@ subcollection: hs-crypto
 The {{site.data.keyword.IBM}} license agreement and any applicable information on the web download page for {{site.data.keyword.IBM_notm}} products refers Licensee to this file for details that concern notices applicable to code included in {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
-Notwithstanding the terms and conditions of any other agreement Licensee may have with {{site.data.keyword.IBM_notm}} or any of the related or affiliated entities (collectively "{{site.data.keyword.IBM_notm}}"), the third-party code identified below is subject to the terms and conditions of the {{site.data.keyword.IBM_notm}} license agreement for the Program and not the license terms that may be contained in the notices below. The notices are provided for informational purposes.
+Notwithstanding the terms and conditions of any other agreement Licensee might have with {{site.data.keyword.IBM_notm}} or any of the related or affiliated entities (collectively "{{site.data.keyword.IBM_notm}}"), the third-party code that is identified below is subject to the terms and conditions of the {{site.data.keyword.IBM_notm}} license agreement for the Program and not the license terms that might be contained in the notices below. The notices are provided for informational purposes.
 
-This Notices file may identify information that is not used by, or that was not shipped with, the Program as Licensee installed it.
+This Notices file might identify information that is not used by, or that was not shipped with, the Program as Licensee installed it.
 {: note}
 
-{{site.data.keyword.IBM_notm}} doesn't represent or warrant that the information in this NOTICES file is accurate. Third-party websites are independent of {{site.data.keyword.IBM_notm}} and {{site.data.keyword.IBM_notm}} doesn't represent or warrant that the information on any third-party website referenced in this NOTICES file is accurate. {{site.data.keyword.IBM_notm}} disclaims any and all liability for errors and omissions or for any damages accruing from the use of this NOTICES file or the contents, including without limitation URLs or references to any third-party websites.
+{{site.data.keyword.IBM_notm}} doesn't represent or warrant that the information in this NOTICES file is accurate. Third-party websites are independent of {{site.data.keyword.IBM_notm}} and {{site.data.keyword.IBM_notm}} doesn't represent or warrant that the information on any third-party website referenced in this NOTICES file is accurate. {{site.data.keyword.IBM_notm}} disclaims any liability for errors and omissions or for any damages accruing from the use of this NOTICES file or the contents, including without limitation URLs or references to any third-party websites.
 {: important}
 
 ## {{site.data.keyword.hscrypto}} notices and information
