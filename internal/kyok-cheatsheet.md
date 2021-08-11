@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-11"
 
 keywords: enable KYOK, onboard to Hyper Protect Crypto Services, HPCS onboarding, service onboarding, internal registration, key registration, KYOK, kms onboarding
 
@@ -28,7 +28,7 @@ A consolidated list to help your service properly enable Keep Your Own Key (KYOK
 ## Core concepts
 {: #kyok-core-concepts}
 
-Although you don't necessarily need to understand the details of each topic, they are there for your awareness. The important thing to know is that if your service addresses each concept, you will have enabled key management service appropriately.
+Although you don't necessarily need to understand the details of each topic, they are there for your awareness. The important thing to know is that if your service addresses each concept, you will have enabled key management service.
 
 - You must have a basic understanding of IAM concepts, such as [granting service to service access](/docs/get-coding?topic=get-coding-servicetoservice){: external}.
 - You must have a basic understanding of the [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) process.
@@ -38,7 +38,7 @@ Although you don't necessarily need to understand the details of each topic, the
 ## Required actions
 {: #kyok-required-actions}
 
-If you complete all the following steps, your service will meet all the Keep Your Own Key (KYOK) requirements. When you plan to adopt key management service, follow the steps listed in order. You can also use these steps to estimate and group the effort required to become KYOK ready.
+If you complete all the following steps, your service will meet all the Keep Your Own Key (KYOK) requirements. When you plan to adopt key management service, follow the steps that are listed in order. You can also use these steps to estimate and group the effort that is required to become KYOK ready.
 
 | Actions | Steps   |
 | ---------- | ------- |
@@ -93,15 +93,15 @@ Use the [adopter's guide](https://github.ibm.com/kms/BYOK_Adopter_services){: ex
     </tr>
     <tr>
       <td>
-        [Enable/Disable a root key](/docs/hs-crypto?topic=hs-crypto-disable-keys)
+        [Enable or Disable a root key](/docs/hs-crypto?topic=hs-crypto-disable-keys)
       </td>
       <td>
         <ol>
-          <li>[Disable/Enable a root key](/apidocs/hs-crypto#actiononkey)</li>
+          <li>[Disable or Enable a root key](/apidocs/hs-crypto#actiononkey)</li>
           <li>[Check for a Hyperwarp event from {{site.data.keyword.hscrypto}}](https://github.ibm.com/kms/BYOK_Adopter_services/blob/master/How_to_subscribe_to_hyperwarp.md#event-structure)</li>
-          <li>[Process Hyperwarp enable/disable event](https://github.ibm.com/kms/Adopter_services/blob/master/src/github.ibm.com/skms/key-protect/event_processor.go)</li>
+          <li>[Process Hyperwarp enable or disable event](https://github.ibm.com/kms/Adopter_services/blob/master/src/github.ibm.com/skms/key-protect/event_processor.go)</li>
           <li>[Notify {{site.data.keyword.hscrypto}} that the event was processed](/apidocs/hs-crypto#eventacknowledge)</li>
-          <li>[Verify end to end enable/disable flow in {{site.data.keyword.cloudaccesstrailshort}} logs](/docs/observability?topic=observability-pattern1#pattern1_step4)</li>
+          <li>[Verify end to end enableor disable flow in {{site.data.keyword.cloudaccesstrailshort}} logs](/docs/observability?topic=observability-pattern1#pattern1_step4)</li>
         </ol>
       </td>
     </tr>

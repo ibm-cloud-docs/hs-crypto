@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-11"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -77,7 +77,7 @@ On the {{site.data.keyword.hscrypto}} dashboard, do the following to view EP11 k
       <td>Class</td>
       <td>
         <p>The class of the key. Possible values are **Public**, **Private**, and **Secret**. The value is determined by the CKA_CLASS key attribute.</p>
-        <p>**Public** indicates the key is the public key of an asymmetric key pair. **Private** indicates the key is the private key of an asymmetric key pair. **Secret** indicates the key is a symmetric key.</p>
+        <p>**Public** indicates that the key is the public key of an asymmetric key pair. **Private** indicates that the key is the private key of an asymmetric key pair. **Secret** indicates the key is a symmetric key.</p>
       </td>
     </tr>
     <tr>
@@ -100,7 +100,7 @@ On the {{site.data.keyword.hscrypto}} dashboard, do the following to view EP11 k
         <caption>Table 1. Describes the EP11 keys table</caption>
     </table>
 
-2. To view details of the [key attributes](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list), click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")of the key row, and then select **Show more details**.
+2. To view details of the [key attributes](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list), click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") of the key row, and then select **Show more details**.
 
     You can also identify the public key, the private key, and the symmetric key by checking the value of the CKA_CLASS attribute. `CKO_PUBLIC_KEY` indicates a public key; `CKO_PRIVATE_KEY` indicates a private key; `CKO_SECRET_KEY` indicates a symmetric key.
     {: tip}
@@ -136,7 +136,7 @@ Complete the following steps to create an EP11 key:
       <td>Key name</td>
       <td>
         <p>A human-readable alias for easy identification of your key.</p>
-        <p>The key name length can be 1 to 32 characters. To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
+        <p>The key name length can be 1 - 32 characters. To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
         <p>The key name might not be unique. You can assign multiple keys with the same name. However, it is suggested to assign a unique name to each key in the same keystore for easy identification.</p>
       </td>
     </tr>
@@ -154,11 +154,11 @@ Complete the following steps to create an EP11 key:
         <caption>Table 2. Describes the Identifier page</caption>
     </table>
 
-    By default, two key IDs are automatically generated. One is for the public key, the other is for the private key. However, if you select a symmetric key type, such as an AES key, a DES key, or a Generic key, only one key ID is shown on the page.
+    By default, two key IDs are automatically generated. One is for the public key, and the other is for the private key. However, if you select a symmetric key type, such as an AES key, a DES key, or a Generic key, only one key ID is shown on the page.
 
     2. Specify key attributes by following these steps:
 
-    * If you are creating an asymmetric key, specify key attributes on the **Public key attributes** and **Private key attributes** pages subsequently:
+    * If you are creating an asymmetric key, specify key attributes on the **Public key attributes** and **Private key attributes** pages then:
 
         1. The required attributes are listed with the default values. To modify the attribute values, click the **Edit** icon ![Edit icon](../icons/edit-tagging.svg "Edit").
         2. To add more attributes, click **Add public attribute** or **Add private attribute** depending on which page you are on. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list) and [supported curve names for Elliptic Curve keys](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#supported-pkcs11-ec-curve-name).
@@ -180,7 +180,7 @@ Complete the following steps to create an EP11 key:
       {: important}
     2. Click **Create key** to confirm the creation.
 
-You have successfully created a EP11 key. The created key is displayed as the first row in the **Enterprise PKCS #11 keys** table.
+You have successfully created an EP11 key. The created key is displayed as the first row in the **Enterprise PKCS #11 keys** table.
 
 ## Deleting EP11 keys
 {: #delete-ep11-key-ui}
@@ -199,7 +199,7 @@ After you delete an EP11 key, you are not able to access the data associated wit
 {: important}
 
 1. Select the **EP11 keys** tab in the side menu, and find the key that you want to delete in the list.
-2. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")in the key row, and click **Delete key**.
+2. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") in the key row, and click **Delete key**.
 2. Verify the ID of the key to be deleted, and check the box to confirm the deletion.
 3. Click **Delete keystore**.
 
