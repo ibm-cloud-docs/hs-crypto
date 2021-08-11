@@ -72,42 +72,42 @@ Complete the following steps to ensure that your own z/OS custom image can be su
 
 4. Update the `[system]` section in the `devmap` to include the IPL statement. The IPL statement must be available in order for the z/OS system to boot automatically in the {{site.data.keyword.vpc_short}} as shown in the following example:
 
-  ```
-  [system]
-  ...
-  ipl 0a80 0A82AU  # Guest system from a zPDT environment
-  ...
-  ```
-  {: pre}
+   ```
+   [system]
+   ...
+   ipl 0a80 0A82AU  # Guest system from a zPDT environment
+   ...
+   ```
+   {: pre}
 
 5. Modify the `[manager]` section in the `devmap` to contain `/volumes` as the root directory in which the CKD files reside as shown in the following example:
 
-  ```
-  [manager]
-  ...
-  name awsckd 28
-  device 0a80 3390 3990 /volumes/DMRES1
-  device 0a81 3390 3990 /volumes/DMSYS2
-  ...
-  ```
-  {: pre}
+   ```
+   [manager]
+   ...
+   name awsckd 28
+   device 0a80 3390 3990 /volumes/DMRES1
+   device 0a81 3390 3990 /volumes/DMSYS2
+   ...
+   ```
+   {: pre}
 
-  The file names of the CKD files within the `device` statements must be uppercase.
-  {: important}
+   The file names of the CKD files within the `device` statements must be uppercase.
+   {: important}
 
-5. Ensure the osa device entries in the `devmap` file have the same format as in the following example:
+6. Ensure the osa device entries in the `devmap` file have the same format as in the following example:
 
-  ```
-  device 400 osa osa --unitadd=0
-  ```
-  {: pre}
+   ```
+   device 400 osa osa --unitadd=0
+   ```
+   {: pre}
 
-6. Review the changes to the `devmap` file by using the zPDT `awsckmap` utility as shown in the following example:
+7. Review the changes to the `devmap` file by using the zPDT `awsckmap` utility as shown in the following example:
 
-  ```
-  awsckmap /home/ibmsys1/zdt/volumes/devmap
-  ```
-  {: pre}
+   ```
+   awsckmap /home/ibmsys1/zdt/volumes/devmap
+   ```
+   {: pre}
 
 ## Step 3 - Create the compressed z/OS volume disk images and corresponding devmap
 {: #create-zos-volume-images-tar}
@@ -144,7 +144,7 @@ Complete the following steps to ensure that your own z/OS custom image can be su
    mkdir z-volume-images        # For the compressed z/OS volume disk images, the .tar file
    mkdir z-cloud-vsi-images     # For the generated custom z/OS image
    ```
-  {: pre}
+   {: pre}
 
 2. Copy the z/OS Cloud base image into the `/base-cloud-images` directory. For example, `mv z-vsi-image-base.qcow2 ./base-cloud-images`.
 
@@ -152,10 +152,10 @@ Complete the following steps to ensure that your own z/OS custom image can be su
 
 4. Run the `prepare-z-cloud-image.sh` script to generate the z/OS custom image as shown in the following example:
 
-  ```
-  prepare-z-cloud-image.sh /base-cloud-images/z-vsi-image-base.qcow2 /z-volume-images /z-cloud-vsi-images/my-zos-vsi-image.qcow2
-  ```
-  {: pre}
+   ```
+   prepare-z-cloud-image.sh /base-cloud-images/z-vsi-image-base.qcow2 /z-volume-images /z-cloud-vsi-images/my-zos- vsi-image.qcow2
+   ```
+   {: pre}
 
 
 ## Step 5 - Upload image to {{site.data.keyword.cos_full_notm}}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-12"
+lastupdated: "2021-08-11"
 
 keywords: SDUMP, z/OS, storage, system dump, generation 2, gen 2
 
@@ -48,8 +48,8 @@ After you create your z/OS instance and complete the prerequisites, complete the
 
 1. Attach a new block storage data volume to your z/OS virtual server instance. For more information, see [Attaching a block storage volume](/docs/vpc?topic=vpc-attaching-block-storage&interface=ui).
 
-  If your z/OS virtual server instance is created by using the standard z/OS stock image, the size of the new block storage volume must not exceed 55 GB because the storage volumes larger than 55 GB are considered to be Extended Address Volumes (EAV) and cannot be used as the SDUMP target.  To work around this restriction and use larger volumes for SDUMP, you must run the command `SETSMS USEEAVZ(YES)` on the z/OS instance before you attach a larger block storage device for SDUMP.
-  {: important}
+   If your z/OS virtual server instance is created by using the standard z/OS stock image, the size of the new block storage volume must not exceed 55 GB because the storage volumes larger than 55 GB are considered to be Extended Address Volumes (EAV) and cannot be used as the SDUMP target.  To work around this restriction and use larger volumes for SDUMP, you must run the command `SETSMS USEEAVZ(YES)` on the z/OS instance before you attach a larger block storage device for SDUMP.
+   {: important}
 
 2. Verify that the newly attached storage volume is ready to be used by the z/OS instance.
 
