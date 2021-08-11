@@ -128,10 +128,10 @@ After you create your z/OS instance and complete the prerequisites, complete the
        ```
        {: pre}
 
-4. If your z/OS instance is not created by using the standard z/OS stock image, run the appropriate TSO command in the z/OS instance to add the volume ID of the newly formatted volume to the list of target volumes for SDUMP. For example:
+4. If your z/OS instance is not created by using the standard z/OS stock image, run the appropriate TSO command in the z/OS instance to add the volume ID of the newly formatted volume to the list of target volumes for SDUMP. For example, SDUMP1 is the volume ID of the newly formatted volume.
 
    ```
-   DD ADD,VOL=(SDUMP1) where SDUMP1 is the volume ID of the newly formatted volume
+   DD ADD,VOL=(SDUMP1)
    ```
    {: pre}
 
