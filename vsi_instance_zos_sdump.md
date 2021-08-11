@@ -79,7 +79,7 @@ After you create your z/OS instance and complete the prerequisites, complete the
        {: pre}
 
        If your z/OS instance is created by using the standard z/OS stock image, skip this step and consider using the existing `IBMUSER.JCL` data set for the JCL member to be created in the next step.
-       {: important}
+       {: note}
 
    2. Using ISPF (2 or 3.4), create a new data set member (`INITVOL`) with the following JCL that references the address of the new disk (for example, `DD60`).
 
@@ -135,8 +135,7 @@ After you create your z/OS instance and complete the prerequisites, complete the
    ```
    {: pre}
 
-   You can skip this step if your z/OS instance is created by using the standard z/OS stock image because SDUMP is preconfigured to look for volumes with volume IDs: `SDUMP1`, `SDUMP2`, `SDUMP3`.
-   {: important}
+   If your z/OS instance is created by using the standard z/OS stock image, you can skip this step because SDUMP is pre-configured to look for volumes with volume IDs: `SDUMP1`, `SDUMP2`, or `SDUMP3`.
+   {: note}
 
    The `ADD` command does not persist the change. For this change to persist over future system IPLs, make the corresponding changes to the appropriate PARMLIB (for example, `SYS1.PARMLIB(COMMND00)`).
-   {: note}
