@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: SDUMP, z/OS, storage, system dump, generation 2, gen 2
 
@@ -65,7 +65,7 @@ After you create your z/OS instance and complete the prerequisites, complete the
 
 3. Initialize the volume via an ICKDSF job and vary it online.
 
-    1. If your z/OS instance is not created by using the standard z/OS stock image, use ISPF (3.2) and create a new data set (for example, `IBMUSER.JCL`) to store the INITVOL JCL. For example, the data set can be created with the following settings:
+  1. If your z/OS instance is not created by using the standard z/OS stock image, use ISPF (3.2) and create a new data set (for example, `IBMUSER.JCL`) to store the INITVOL JCL. For example, the data set can be created with the following settings:
 
        ```
        Space units . . . . . . TRKS
@@ -81,7 +81,7 @@ After you create your z/OS instance and complete the prerequisites, complete the
        If your z/OS instance is created by using the standard z/OS stock image, skip this step and consider using the existing `IBMUSER.JCL` data set for the JCL member to be created in the next step.
        {: important}
 
-    2. Using ISPF (2 or 3.4), create a new data set member (INITVOL) with the following JCL that references the address of the new disk (eg. DD60).
+   2. Using ISPF (2 or 3.4), create a new data set member (INITVOL) with the following JCL that references the address of the new disk (eg. DD60).
 
        ```
        //INITVOL  JOB CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1),NOTIFY=&SYSUID.,
