@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-11"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -62,8 +62,8 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
         <td>Key alias</td>
         <td>
           <p>(Optional) One or more unique, human-readable aliases that you want to assign to your key for easy recognition.</p>
-          <p>Alias size can be 2 - 90 characters. You can set up to five key alias for the key, with each separated by a comma.</p>
-          <p>Note: Each alias must be alphanumeric, case sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`.
+          <p>Alias size can be 2 - 90 characters. You can set up to five key aliases for the key, with each separated by a comma.</p>
+          <p>Note: Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`.
           </p>
         </td>
       </tr>
@@ -82,7 +82,7 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
           <p>Ensure that the key material meets the following requirements:</p>
           <p>
             <ul>
-              <li>The key must be 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits in length.</li>
+              <li>The key must be 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits.</li>
               <li>The key must be base64-encoded.</li>
             </ul>
           </p>
@@ -117,7 +117,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
-2. Call the [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto){: external} with the following cURL command.:
+2. Call the [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto){: external} with the following cURL command:
 
     ```cURL
     curl -X POST \
@@ -153,7 +153,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
         </tr>
         <tr>
           <td><varname>region</varname></td>
-          <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
+          <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance is located. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
         </tr>
         <tr>
           <td><varname>port</varname></td>
@@ -190,7 +190,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
             <p>Ensure that the key material meets the following requirements:</p>
             <p>
               <ul>
-                <li>The key must be 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits in length.</li>
+                <li>The key must be 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits.</li>
                 <li>The key must be base64-encoded.</li>
               </ul>
             </p>
@@ -203,7 +203,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
             <p>When you set the <code>extractable</code> attribute to <code>false</code>, the service designates the key as a root key that you can use for <code>wrap</code> or <code>unwrap</code> operations.</p>
           </td>
         </tr>
-          <caption>Table 4. Describes the variables that are needed to add a root key with the {{site.data.keyword.hscrypto}} key management API</caption>
+          <caption>Table 4. Describes the variables that are needed to add a root key with the {{site.data.keyword.hscrypto}} key management API.</caption>
       </table>
 
       To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://www.nist.gov/publications/guide-protecting-confidentiality-personally-identifiable-information-pii){: external}.
@@ -225,7 +225,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ## Importing root keys with the CLI
 {: #import-root-key-cli}
 
-Complete the following steps to import root keys using the {{site.data.keyword.keymanagementserviceshort}} CLI, which is integrated in {{site.data.keyword.hscrypto}}:
+Complete the following steps to import root keys by using the {{site.data.keyword.keymanagementserviceshort}} CLI, which is integrated in {{site.data.keyword.hscrypto}}:
 
 1. [Set up the {{site.data.keyword.keymanagementserviceshort}} CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli).
 
@@ -263,24 +263,24 @@ When importing an existing root key, it is required to include the encrypted key
       </tr>
       <tr>
         <td>
-          <varname>infile</varname>
+          <varname>Infile</varname>
         </td>
         <td>
           <p>
-            The name of the file where your key material string resides.
+            The name of the file where your key material string is located.
           </p>
           <p>
-            Ensure that the key is 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits in length.
+            Ensure that the key is 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits.
           </p>
         </td>
       </tr>
       <tr>
         <td>
-          <varname>outfile</varname>
+          <varname>Outfile</varname>
         </td>
         <td>
           <p>
-            The name of the file where your base64-encoded key material will be created once the command has run.
+            The name of the file where your base64-encoded key material will be created when the command has run.
           </p>
         </td>
       </tr>
@@ -316,10 +316,10 @@ When importing an existing root key, it is required to include the encrypted key
         </td>
         <td>
           <p>
-            The length of the key, measured in bytes.
+            The length of the key, which is measured in bytes.
           </p>
           <p>
-            Acceptable byte lengths are 16, 24, or 32 bytes, corresponding to 128, 192, or 256 bits in length.
+            Acceptable byte lengths are 16, 24, or 32 bytes, corresponding to 128, 192, or 256 bits.
           </p>
         </td>
       </tr>
