@@ -263,4 +263,5 @@ Hyper Protect Crypto Services
 
     support.md
     sitemap.md
+    vsi_instance_zos_sdump.md
     {: .navgroup-end}

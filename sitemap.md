@@ -1232,3 +1232,14 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Getting help and support](/docs/hs-crypto?topic=hs-crypto-getting-help)
+
+
+## Configuring additional SDUMP volumes for z/OS virtual server instances - DRAFT
+{: #sitemap_configuring_additional_sdump_volumes_for_z/os_virtual_server_instances_-_draft}
+
+
+[Configuring additional SDUMP volumes for z/OS virtual server instances - DRAFT](/docs/hs-crypto?topic=hs-crypto-vsi_instance_zos_sdump)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-vsi_instance_zos_sdump#before_zos_sdump)
+
+* [Adding the additional SDUMP volume](/docs/hs-crypto?topic=hs-crypto-vsi_instance_zos_sdump#vsi_instance_zos_add_sdump)
