@@ -149,7 +149,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
         <dd>
           <ul>
             <li>If you are using signature key files on the local workstation that are created by the TKE CLI plug-in and are not using a third-party signing service, specify the absolute path and file name of the signature key file that is to be used.</li>
-            <li>If you are using a signing service to provide signature keys, specify the name of the signature key depending on the signing service definition. The character string for the key name is appended to a URI that is sent to the signing service and must contain only unreserved characters as defined by section 2.3 of [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986).</li>
+            <li>If you are using a signing service to provide signature keys, specify the name of the signature key depending on the signing service definition. The character string for the key name is appended to a URI that is sent to the signing service and must contain only unreserved characters as defined by section 2.3 of <a href="https://datatracker.ietf.org/doc/html/rfc3986" target="_blank">RFC3986</a>.</li>
           </ul>
         </dd>
         <dt>token:</dt>

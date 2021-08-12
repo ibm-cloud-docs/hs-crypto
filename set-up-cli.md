@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: ibmcloud cli, hpcs cli, ibmcloud commands, ibm cloud command-line interface, key protect cli, kms cli
 
@@ -38,7 +38,7 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
       ```
       {: pre}
 
-      In this command, the *URL* is the `Key management endpoint URL`. You can get the endpoint from your provisioned service instance dashboard through **Overview** &gt; **Connect** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external} with an API call. For example,:
+      In this command, the *URL* is the `Key management endpoint URL`. You can get the endpoint from your provisioned service instance dashboard through **Overview** &gt; **Connect** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/hs-crypto#getinstance){: external} with an API call. For example,:
 
       ```
       export KP_PRIVATE_ADDR="https://api.us-south.hs-crypto.cloud.ibm.com:<port>"
@@ -49,7 +49,7 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
 
     - On the Windows&reg; operating system, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a KP_PRIVATE_ADDR environment variable and set the value to the endpoint that is displayed on the **Manage** tab of your provisioned {{site.data.keyword.cloud_notm}} console. For example, `https://api.us-south.hs-crypto.cloud.ibm.com:<port>`.
 
-    You can also retrieve the endpoint URL through the API. For details, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+    You can also retrieve the endpoint URL through the API. For details, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](/apidocs/hs-crypto){: external}.
 
     Depending on whether you are using public or private endpoint, choose the corresponding endpoint URL to set the value of the KP_PRIVATE_ADDR environment variable.
     {: important}

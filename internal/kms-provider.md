@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: hyper protect crypto services integration, kms provider, set up kms provider
 
@@ -50,7 +50,7 @@ With this change, teams that want to integrate with a KMS provider can search fo
 ### Updating the catalog entry
 {: #update-catalog}
 
-You can use the [{{site.data.keyword.cloud_notm}} resource catalog API](https://{DomainName}/apidocs/globalcatalog) to update the catalog entry for your offering, and then designate your service as a KMS provider.
+You can use the [{{site.data.keyword.cloud_notm}} resource catalog API](/apidocs/globalcatalog) to update the catalog entry for your offering, and then designate your service as a KMS provider.
 
 To set up your service as a KMS provider:
 

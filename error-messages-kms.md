@@ -118,19 +118,19 @@ These are the error messages that are sorted by the HTTP status code.
     <td>HTTP 400 - Bad Request</td>
     <td>
       <ul>
-        <li>Collection total does not match number of resources - [details](#error-messages-collection-total-mismatch-err)</li>
-        <li>Data in body does not match data required by query parameter - [details](#error-messages-body-query-param-mismatch-err)</li>
-        <li>Extracting the subject from the bearer token failed: Make sure the bearer token passed is the correct one (and correct format) and is allowed to perform requested actions - [details](#error-messages-bearer-sub-extraction-err)</li>
-        <li>Invalid body data was passed: Ensure that the data passed had valid formatting with no invalid characters - [details](#error-messages-bad-body-err)</li>
-        <li>Key restoration has expired - [details](#error-messages-key-restore-expired)</li>
-        <li>Missing body in request - [details](#error-messages-no-body-err)</li>
-        <li>Only a single instance policy can be created per query parameter: Please pass single resource object - [details](#error-messages-num-collection-resource-err)</li>
-        <li>Only imported keys can be restored - [details](#error-messages-key-impt-req-err)</li>
-        <li>Requested action can only be completed with a root key - [details](#error-messages-key-root-req-err)</li>
-        <li>The action could not be performed on the key because the key is expired - [details](#error-messages-key-expired-err)</li>
-        <li>The encrypted nonce given does not match existing record: Please ensure the correct nonce was given in the request - [details](#error-messages-incorrect-nonce-err)</li>
-        <li>The provided encrypted nonce was not encrypted with the key material given OR the provided IV does not match the encrypted nonce - [details](#error-messages-incorrect-nonce-iv-err)</li>
-        <li>This root key was created with user-supplied key material: Key material is required to perform a 'rotate' action -[details](#error-messages-key-payload-req-err)</li>
+        <li>Collection total does not match number of resources - <a href="#error-messages-collection-total-mismatch-err">details</a></li>
+        <li>Data in body does not match data required by query parameter - <a href="#error-messages-body-query-param-mismatch-err">details</a></li>
+        <li>Extracting the subject from the bearer token failed: Make sure the bearer token passed is the correct one (and correct format) and is allowed to perform requested actions - <a href="#error-messages-bearer-sub-extraction-err">details</a></li>
+        <li>Invalid body data was passed: Ensure that the data passed had valid formatting with no invalid characters - <a href="#error-messages-bad-body-err">details</a></li>
+        <li>Key restoration has expired - <a href="#error-messages-key-restore-expired">details</a></li>
+        <li>Missing body in request - <a href="#error-messages-no-body-err">details</a></li>
+        <li>Only a single instance policy can be created per query parameter: Please pass single resource object - <a href="#error-messages-num-collection-resource-err">details</a></li>
+        <li>Only imported keys can be restored - <a href="#error-messages-key-impt-req-err">details</a></li>
+        <li>Requested action can only be completed with a root key - <a href="#error-messages-key-root-req-err">details</a></li>
+        <li>The action could not be performed on the key because the key is expired - <a href="#error-messages-key-expired-err">details</a></li>
+        <li>The encrypted nonce given does not match existing record: Please ensure the correct nonce was given in the request - <a href="#error-messages-incorrect-nonce-err">details</a></li>
+        <li>The provided encrypted nonce was not encrypted with the key material given OR the provided IV does not match the encrypted nonce - <a href="#error-messages-incorrect-nonce-iv-err">details</a></li>
+        <li>This root key was created with user-supplied key material: Key material is required to perform a 'rotate' action -<a href="#error-messages-key-payload-req-err">details</a></li>
       </ul>
     </td>
     </tr>
@@ -142,10 +142,10 @@ These are the error messages that are sorted by the HTTP status code.
     <td>HTTP 403 - Forbidden</td>
     <td>
       <ul>
-        <li>Requested change is not compliant with configuration rules - [details](#error-config_rule_conflict_err)</li>
-        <li>The resource(s) queried does not belong to the service - [details](#error-messages-resource-owner-err)</li>
-        <li>This action can only be done by a service (service to service) - [details](#error-messages-service-only-err)</li>
-        <li>This action is not permitted on this resource: Please contact IBM Hyper Protect Crypto Services or open a service ticket to enable this feature - [details](#error-messages-feature-restricted-err)</li>
+        <li>Requested change is not compliant with configuration rules - <a href="#error-config_rule_conflict_err">details</a></li>
+        <li>The resource(s) queried does not belong to the service - <a href="#error-messages-resource-owner-err">details</a></li>
+        <li>This action can only be done by a service (service to service) - <a href="#error-messages-service-only-err">details</a></li>
+        <li>This action is not permitted on this resource: Please contact IBM Hyper Protect Crypto Services or open a service ticket to enable this feature - <a href="#error-messages-feature-restricted-err">details</a></li>
       </ul>
     </td>
     </tr>
@@ -153,15 +153,15 @@ These are the error messages that are sorted by the HTTP status code.
     <td>HTTP 409 - Conflict</td>
     <td>
       <ul>
-        <li>Key is not in a valid state - [details](#error-messages-key-action-invalid-state-err)</li>
-        <li>Key is protecting one or more cloud resources -[details](#error-messages-protected-resource-err)</li>
-        <li>KeyCreateImportAccess instance policy does not allow this action - [details](#error-messages-key-create-import-access-err)</li>
-        <li>Number of authorizations required to delete is not met - [details](#error-messages-authorizations-not-met)</li>
-        <li>The import token has expired - [details](#error-messages-import-token-expired-err)</li>
-        <li>The key cannot be deleted because it's protecting a cloud resource that has a retention policy: Before you delete this key, contact an account owner to remove the retention policy on each resource that is associated with the key - [details](#error-messages-prev-key-del-err)</li>
-        <li>The key is not dual auth enabled and cannot be set for deletion - [details](#error-messages-not-dual-auth-err)</li>
-        <li>The key was updated recently: Please wait and try again - [details](#error-messages-req-too-early-err)</li>
-        <li>This root key has been rotated within the last hour: Only one 'rotate' action per hour is permitted - [details](#error-messages-key-rotation-not-permitted)</li>
+        <li>Key is not in a valid state - <a href="#error-messages-key-action-invalid-state-err">details</a></li>
+        <li>Key is protecting one or more cloud resources -<a href="#error-messages-protected-resource-err">details</a></li>
+        <li>KeyCreateImportAccess instance policy does not allow this action - <a href="#error-messages-key-create-import-access-err">details</a></li>
+        <li>Number of authorizations required to delete is not met - <a href="#error-messages-authorizations-not-met">details</a></li>
+        <li>The import token has expired - <a href="#error-messages-import-token-expired-err">details</a></li>
+        <li>The key cannot be deleted because it's protecting a cloud resource that has a retention policy: Before you delete this key, contact an account owner to remove the retention policy on each resource that is associated with the key - <a href="#error-messages-prev-key-del-err">details</a></li>
+        <li>The key is not dual auth enabled and cannot be set for deletion - <a href="#error-messages-not-dual-auth-err">details</a></li>
+        <li>The key was updated recently: Please wait and try again - <a href="#error-messages-req-too-early-err">details</a></li>
+        <li>This root key has been rotated within the last hour: Only one 'rotate' action per hour is permitted - <a href="#error-messages-key-rotation-not-permitted">details</a></li>
       </ul>
     </td>
     </tr>
@@ -173,11 +173,11 @@ These are the error messages that are sorted by the HTTP status code.
     <td>HTTP 422 - Unprocessable Entity</td>
     <td>
       <ul>
-        <li>Key is not in a valid state - [details](#error-messages-key-invalid-state-err)</li>
-        <li>Requested action can only be completed with a root key - [details](#error-messages-key-root-req-reg-err)</li>
-        <li>Signature is invalid - [details](#error-invalid-sig-exp-err-message)</li>
-        <li>The provided ciphertext is invalid or corrupted -[details](#error-messages-unprocessable-ciphertext-err)</li>
-        <li>This request requires that the key version is later than current registration key version - [details](#error-messages-key-version-invalid)</li>
+        <li>Key is not in a valid state - <a href="#error-messages-key-invalid-state-err">details</a></li>
+        <li>Requested action can only be completed with a root key - <a href="#error-messages-key-root-req-reg-err">details</a></li>
+        <li>Signature is invalid - <a href="#error-invalid-sig-exp-err-message">details</a></li>
+        <li>The provided ciphertext is invalid or corrupted -<a href="#error-messages-unprocessable-ciphertext-err">details</a></li>
+        <li>This request requires that the key version is later than current registration key version - <a href="#error-messages-key-version-invalid">details</a></li>
       </ul>
     </td>
     </tr>

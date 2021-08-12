@@ -127,58 +127,59 @@ Complete the following steps to create an EP11 key:
 
     1. Specify the following key details on the **Identifier** page:
 
-    <table>
-    <tr>
-      <th>Setting</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>Key name</td>
-      <td>
-        <p>A human-readable alias for easy identification of your key.</p>
-        <p>The key name length can be 1 - 32 characters. To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
-        <p>The key name might not be unique. You can assign multiple keys with the same name. However, it is suggested to assign a unique name to each key in the same keystore for easy identification.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>Key type</td>
-      <td><p>The type of the EP11 key that you want to manage in {{site.data.keyword.hscrypto}}.</p></td>
-    </tr>
-    <tr>
-      <td>Keystore</td>
-      <td>
-        <p>The unique identifier of the keystore with the keystore type appended. Choose one that you want the key to be stored in from the list. For an asymmetric key pair, you need to specify the keystore separately to store the public key and the private key.</p>
-        <p>You can find all available keystores by clicking the <strong>EP11 keystores</strong> tab in the side menu.</p>
-      </td>
-    </tr>
+        <table>
+        <tr>
+          <th>Setting</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Key name</td>
+          <td>
+            <p>A human-readable alias for easy identification of your key.</p>
+            <p>The key name length can be 1 - 32 characters. To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
+            <p>The key name might not be unique. You can assign multiple keys with the same name. However, it is suggested to assign a unique name to each key in the same keystore for easy identification.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Key type</td>
+          <td><p>The type of the EP11 key that you want to manage in {{site.data.keyword.hscrypto}}.</p></td>
+        </tr>
+        <tr>
+          <td>Keystore</td>
+          <td>
+          <p>The unique identifier of the keystore with the keystore type appended. Choose one that you want the key to be stored in from the list. For an asymmetric key pair, you need to specify the keystore separately to store the public key and the private key.</p>
+          <p>You can find all available keystores by clicking the <strong>EP11 keystores</strong> tab in the side menu.</p>
+          </td>
+        </tr>
         <caption>Table 2. Describes the Identifier page</caption>
-    </table>
+        </table>
 
-    By default, two key IDs are automatically generated. One is for the public key, and the other is for the private key. However, if you select a symmetric key type, such as an AES key, a DES key, or a Generic key, only one key ID is shown on the page.
+        By default, two key IDs are automatically generated. One is for the public key, and the other is for the private key. However, if you select a symmetric key type, such as an AES key, a DES key, or a Generic key, only one key ID is shown on the page.
 
     2. Specify key attributes by following these steps:
 
-    * If you are creating an asymmetric key, specify key attributes on the **Public key attributes** and **Private key attributes** pages then:
+        - If you are creating an asymmetric key, specify key attributes on the **Public key attributes** and **Private key attributes** pages then:
 
-        1. The required attributes are listed with the default values. To modify the attribute values, click the **Edit** icon ![Edit icon](../icons/edit-tagging.svg "Edit").
-        2. To add more attributes, click **Add public attribute** or **Add private attribute** depending on which page you are on. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list) and [supported curve names for Elliptic Curve keys](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#supported-pkcs11-ec-curve-name).
-        3. (Optional) You can delete more attributes by clicking the **Trash can** icon ![Trash can icon](../icons/icon_trash.svg "Trash can"). The required attributes cannot be deleted.
-        4. Click **Next** to continue.
+            1. The required attributes are listed with the default values. To modify the attribute values, click the **Edit** icon ![Edit icon](../icons/edit-tagging.svg "Edit").
+            2. To add more attributes, click **Add public attribute** or **Add private attribute** depending on which page you are on. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list) and [supported curve names for Elliptic Curve keys](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#supported-pkcs11-ec-curve-name).
+            3. (Optional) You can delete more attributes by clicking the **Trash can** icon ![Trash can icon](../icons/icon_trash.svg "Trash can"). The required attributes cannot be deleted.
+            4. Click **Next** to continue.
 
-    * If you are creating a symmetric key, such as an AES key, a DES key, and a Generic key, specify key attributes on the **Key attributes** page:
+        - If you are creating a symmetric key, such as an AES key, a DES key, and a Generic key, specify key attributes on the **Key attributes** page:
 
-        1. The required attributes are listed with the default values. To modify the attribute values, click the **Edit** icon ![Edit icon](../icons/edit-tagging.svg "Edit").
-        2. To add more attributes, click **Add attributes**. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list).
-        3. (Optional) You can delete more attributes by clicking the **Trash can** icon ![Trash can icon](../icons/icon_trash.svg "Trash can"). The required attributes cannot be deleted.
-        4. Click **Next** to continue.
+            1. The required attributes are listed with the default values. To modify the attribute values, click the **Edit** icon ![Edit icon](../icons/edit-tagging.svg "Edit").
+            2. To add more attributes, click **Add attributes**. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list).
+            3. (Optional) You can delete more attributes by clicking the **Trash can** icon ![Trash can icon](../icons/icon_trash.svg "Trash can"). The required attributes cannot be deleted.
+            4. Click **Next** to continue.
 
-        3. On the **Confirmation** page, verify the key details and click **Create key**.
+    3. On the **Confirmation** page, verify the key details and click **Create key**.
 
-    1. Verify the key details that are displayed, especially the key type, keystore, and key attributes.
+        1. Verify the key details that are displayed, especially the key type, keystore, and key attributes.
 
-      All the values cannot be modified through the console after the key is created.
-      {: important}
-    2. Click **Create key** to confirm the creation.
+            All the values cannot be modified through the console after the key is created.
+            {: important}
+
+        2. Click **Create key** to confirm the creation.
 
 You have successfully created an EP11 key. The created key is displayed as the first row in the **Enterprise PKCS #11 keys** table.
 

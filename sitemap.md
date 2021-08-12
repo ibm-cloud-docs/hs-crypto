@@ -138,6 +138,7 @@ Find what you are looking for in the compilation of topics that are available in
 [Service architecture](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation)
 * [{{site.data.keyword.hscrypto}} architecture](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation#architecture)
 * [{{site.data.keyword.hscrypto}} workload isolation](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation#workload-isolation)
+* [Service dependencies](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation#service_dependencies)
 
 [Use cases](/docs/hs-crypto?topic=hs-crypto-use-cases)
 * [Pervasively protecting data at rest in the cloud](/docs/hs-crypto?topic=hs-crypto-use-cases#data-at-rest-encryption)
@@ -867,6 +868,7 @@ Find what you are looking for in the compilation of topics that are available in
 [Using virtual private endpoints for VPC to privately connect to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc)
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc#virtual-private-endpoints-for-vpc-prereqs)
 * [Setting up a VPE for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc#virtual-private-endpoints-for-vpc-setup)
+* [Using your VPE for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc#use-vpe-for-hpcs)
 
 [Using service endpoints to privately connect to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-secure-connection)
 * [Understanding the network access policy](/docs/hs-crypto?topic=hs-crypto-secure-connection#understand-network-access-policies)
@@ -943,7 +945,7 @@ Find what you are looking for in the compilation of topics that are available in
 [{{site.data.keyword.hscrypto}} key management API change log](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log)
 * [API versioning](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-versioning)
 * [April 2021](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-april-2021)
-* [Key management API reference](https://{DomainName}/apidocs/hs-crypto){: external}
+* [Key management API reference](/apidocs/hs-crypto){: external}
 
 
 ## Cryptographic operations: PKCS #11 API
@@ -1047,8 +1049,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Smart card security considerations](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy)
-
-* [Smart card vulnerabilities](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy#smart-card-vulnerabilities)
 
 * [Considerations for defining the Management Utilities security policy](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy#smart-card-security-plan)
 

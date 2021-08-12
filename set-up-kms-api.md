@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-12"
 
 keywords: set up api, kms api, key protect api, key management api, using api
 
@@ -22,7 +22,7 @@ subcollection: hs-crypto
 # Managing your keys with the key management API
 {: #set-up-kms-api}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [key management API](https://{DomainName}/apidocs/hs-crypto){: external} to store, retrieve, and generate encryption keys.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [key management API](/apidocs/hs-crypto){: external} to store, retrieve, and generate encryption keys.
 {: shortdesc}
 
 ## Retrieving your IBM Cloud credentials
@@ -49,7 +49,7 @@ curl -X GET \
 ```
 {: codeblock}
 
-* Replace `<port>` with the port number of your API endpoint. You can get the `<port>` in your provisioned service instance dashboard through **Overview** &gt; **Connect** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external}. The returned value includes:
+* Replace `<port>` with the port number of your API endpoint. You can get the `<port>` in your provisioned service instance dashboard through **Overview** &gt; **Connect** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/hs-crypto#getinstance){: external}. The returned value includes:
 
     ```
     {
@@ -66,7 +66,7 @@ curl -X GET \
     ```
     {: screen}
 
-For the key management service, use the `<region>` and `<port>`  in the `kms` section.
+    For the key management service, use the `<region>` and `<port>`  in the `kms` section.
 
 * Replace `<access_token>` and `<instance_ID>` with your retrieved service and authentication credentials.
 
@@ -77,4 +77,4 @@ Want to track your API requests in case something goes wrong? When you include t
 ## What's next
 {: #set-up-kms-api-next-steps}
 
-You're all set to start managing your encryption keys and data. To find out more about programmatically managing your keys, [check out the key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+You're all set to start managing your encryption keys and data. To find out more about programmatically managing your keys, [check out the key management API reference doc](/apidocs/hs-crypto){: external}.

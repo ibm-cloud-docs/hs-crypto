@@ -67,14 +67,13 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
         <td>Key ring ID</td>
         <td>
           <p>Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key will be added to the <code>default</code> key ring.</p>
-          <p>For more information about key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
-          </p>
+          <p>For more information about key rings, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
         </td>
       </tr>
       <tr>
         <td>Expiration date</td>
         <td>
-          <p>(Optional) Set the date and time when the key gets expired. After the expiration date, the key moves into the _Deactivated_ state. For more information about key state, see <a href="/docs/hs-crypto?topic=hs-crypto-key-states">Monitoring the lifecycle of encryption keys</a>.</p>
+          <p>(Optional) Set the date and time when the key gets expired. After the expiration date, the key moves into the <em>Deactivated</em> state. For more information about key state, see <a href="/docs/hs-crypto?topic=hs-crypto-key-states">Monitoring the lifecycle of encryption keys</a>.</p>
         </td>
       </tr>
       <tr>
@@ -100,7 +99,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
-2. Call the [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto){: external} with the following cURL command.
+2. Call the [{{site.data.keyword.hscrypto}} key management API](/apidocs/hs-crypto){: external} with the following cURL command.
 
     ```sh
     curl -X POST \
@@ -157,13 +156,10 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
         <td>
           <p>
             <strong>Optional.</strong> The unique identifier of the target key ring that you want to assign the key to. If unspecified, the header is automatically
-            set to `default` and the key will belong to the default key ring in the specified
+            set to <code>default</code> and the key will belong to the default key ring in the specified
             {{site.data.keyword.hscrypto}} instance.
           </p>
-          <p>
-            For more information, see
-            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
         </td>
       </tr>
       <tr>
@@ -183,7 +179,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
         </td>
       </tr>
       <tr>
-        <td>alias\_list</td>
+        <td>alias_list</td>
         <td>
           <p><strong>Optional.</strong>
             One or more unique, human-readable aliases assigned to your key.
@@ -192,7 +188,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
             <strong>Important:</strong> To protect your privacy, do not store your
             personal data as metadata for your key.
           </p>
-          <p>Each alias must be alphanumeric, case sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (\_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive).
+          <p>Each alias must be alphanumeric, case sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: <code>allowed_ip</code>, <code>key</code>, <code>keys</code>, <code>metadata</code>, <code>policy</code>, <code>policies</code>, <code>registration</code>, <code>registrations</code>, <code>ring</code>, <code>rings</code>, <code>rotate</code>, <code>wrap</code>, <code>unwrap</code>, <code>rewrap</code>, <code>version</code>, <code>versions</code>. Alias size can be 2 - 90 characters (inclusive).
           </p>
         </td>
       </tr>
@@ -238,4 +234,4 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ## What's next
 {: #standard-key-next}
 
-To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](/apidocs/hs-crypto){: external}.

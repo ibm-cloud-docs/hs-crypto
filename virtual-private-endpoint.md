@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway
 
@@ -168,7 +168,7 @@ To configure a virtual private endpoint gateway, follow these steps:
     If you are creating a VPE gateway by using the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc-ext){: external}, perform the following steps:
 
     1. Select the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg "Menu"), and then click **VPC Infrastructure > Virtual private endpoint gateways** in the Network section, and then click **Create**. The **New virtual private endpoint gateway for VPC** page is displayed.
-    2.In the **Cloud service** section, enable your {{site.data.keyword.hscrypto}} instance:
+    2. In the **Cloud service** section, enable your {{site.data.keyword.hscrypto}} instance:
 
         - Under **Cloud service offerings**, select **Hyper Protect Crypto Services**.
         - Under **Cloud service regions**, verify the corresponding [region](/docs/hs-crypto?topic=hs-crypto-regions#available-regions) is pre-filled for your provisioned {{site.data.keyword.hscrypto}} instance.
@@ -179,4 +179,85 @@ To configure a virtual private endpoint gateway, follow these steps:
 
 Now your virtual server instances in the VPC can access your {{site.data.keyword.hscrypto}} instance privately through it.
 
+## Using your VPE for {{site.data.keyword.hscrypto}}
+{: #use-vpe-for-hpcs}
 
+After you create an endpoint gateway for your {{site.data.keyword.hscrypto}} instance, follow these steps to use private endpoints.
+
+### Using the VPE with the CLI
+{: #use-vpe-for-hpcs-cli}
+
+- Using the VPE for the [TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin)
+
+    1. Update the TKE CLI plug-in to the latest version with the following command:
+
+        ```
+        ibmcloud plugin update tke
+        ```
+        {: pre}
+
+    2. To initialize service instances with the TKE CLI plug-in, set the TKE_PRIVATE_ADDR environment variable to target the TKE private endpoint:
+
+        ```
+        export TKE_PRIVATE_ADDR=https://tke.private.<region>.hs-crypto.cloud.ibm.com
+        ```
+        {: pre}
+
+- Using the VPE for the [{{site.data.keyword.keymanagementserviceshort}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#kp-cli-plugin)
+
+    1. Update the {{site.data.keyword.keymanagementserviceshort}} CLI plug-in to the latest version with the following command:
+
+        ```
+        ibmcloud plugin update key-protect -r "IBM Cloud"
+        ```
+        {: pre}
+
+    2. To perform key management operations with the {{site.data.keyword.keymanagementserviceshort}} CLI plug-in, set the KP_PRIVATE_ADDR environment variable to target the key management service private endpoint:
+
+        ```
+        export KP_PRIVATE_ADDR=https://api.private.<region>.hs-crypto.cloud.ibm.com:<port>
+        ```
+        {: pre}
+
+### Using the VPE with the API
+{: #use-vpe-for-hpcs-api}
+
+- Using the VPE for the [key management API](/apidocs/hs-crypto)
+
+    To perform key management operations with the key management API, use the key management service private endpoints in the API request URL to access the service. For example:
+
+    ```
+    curl GET \
+      https://api.private.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys   \
+      -H 'authorization: Bearer <IAM_token>'   \
+      -H 'bluemix-instance: <instance_ID>'   \
+      -H 'accept: application/vnd.ibm.kms.key+json'
+    ```
+    {: codeblock}
+
+- Using the VPE for the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref)
+
+    To perform cryptographic operations with the PKCS #11 API, set the `address` field to the EP11 private endpoint in the configuration file. For more information, see [Set up the PKCS #11 configuration file](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file).
+
+- Using the VPE for the [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref)
+
+    To perform cryptographic operations with the GREP11 API, specify the server address with the EP11 private endpoint in the code. For more information, see [Generating a GREP11 API request](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#form-grep11-api-request).
+
+### Using the VPE with Terraform
+{: #use-vpe-for-hpcs-terraform}
+
+To use VPE with Terraform, set the `service_endpoints` parameter to `private-only` in the resource block. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).
+
+- If you plan to use private endpoints to initialize your service instance, make sure to set the `IBMCLOUD_HPCS_TKE_ENDPOINT` environment variable to target the TKE private endpoint. For example:
+
+    ```
+    export IBMCLOUD_HPCS_TKE_ENDPOINT=https://tke.private.<region>.hs-crypto.cloud.ibm.com
+    ```
+    {: pre}
+
+- If you plan to use private endpoints to manage your key management service keys, make sure to set the `IBMCLOUD_KP_API_ENDPOINT` environment variable to target the key management service private endpoint. For example:
+
+    ```
+    export IBMCLOUD_KP_API_ENDPOINT=https://api.private.<region>.hs-crypto.cloud.ibm.com:<port>
+    ```
+    {: pre}

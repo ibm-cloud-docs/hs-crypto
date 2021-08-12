@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: instance settings, service settings, key creation/import, key create policy, key creation/import, key policy
 
@@ -171,10 +171,7 @@ existing value for the omitted field is overwritten by the default value.
             {{site.data.keyword.hscrypto}} instance
             resides.
           </p>
-          <p>
-            For more information, see
-            [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
         </td>
       </tr>
 
@@ -188,10 +185,7 @@ existing value for the omitted field is overwritten by the default value.
             access token. Include the full contents of the <code>IAM</code>
             token, including the Bearer value, in the cURL request.
           </p>
-          <p>
-            For more information, see
-            [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
         </td>
       </tr>
 
@@ -205,10 +199,7 @@ existing value for the omitted field is overwritten by the default value.
             your {{site.data.keyword.hscrypto}} service
             instance.
           </p>
-          <p>
-            For more information, see
-            [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
         </td>
       </tr>
 
@@ -297,10 +288,7 @@ existing value for the omitted field is overwritten by the default value.
             users to import key material into your instance without using an
             import token.
           </p>
-          <p>
-            If `enforce_token` is enabled, it is required that [secure import](/docs/hs-crypto?topic=hs-crypto-create-import-tokens)
-            is enabled for all key import actions. Key import is not available through UI, and you need to perform further actions through the CLI or API.
-          </p>
+          <p>If <code>enforce_token</code> is enabled, it is required that <a href="/docs/hs-crypto?topic=hs-crypto-create-import-tokens">secure import</a> is enabled for all key import actions. Key import is not available through UI, and you need to perform further actions through the CLI or API.</p>
           <p>
             If this attribute is omitted, <code>false</code> is set as the default value.
           </p>
@@ -405,10 +393,7 @@ key create and import access policy.
             {{site.data.keyword.hscrypto}} instance
             resides.
           </p>
-          <p>
-            For more information, see
-            [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
         </td>
       </tr>
 
@@ -422,10 +407,7 @@ key create and import access policy.
             access token. Include the full contents of the <code>IAM</code>
             token, including the Bearer value, in the cURL request.
           </p>
-          <p>
-            For more information, see
-            [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
         </td>
       </tr>
 
@@ -439,10 +421,7 @@ key create and import access policy.
             your {{site.data.keyword.hscrypto}}
             instance.
           </p>
-          <p>
-            For more information, see
-            [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
         </td>
       </tr>
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-12"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -44,10 +44,8 @@ The following diagram gives you an overview of steps you need to take to initial
     <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Log in to IBM Cloud" title="Log in to IBM Cloud" shape="rect" coords="260, 32, 360, 82" />
     <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Install TKE CLI plug-in" title="Install TKE CLI plug-in" shape="rect" coords="394, 32, 494, 82" />
     <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Set up local directory for key files" title="Set up local directory for key files" shape="rect" coords="528, 32, 628, 82" />
-
     <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#identify_crypto_units" alt="Display assigned crypto units" title="Display assigned crypto units" shape="rect" coords="126, 123, 226, 173" />
     <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#identify_crypto_units2" alt="Add crypto units" title="Add crypto units" shape="rect" coords="260, 123, 360, 173" />
-
     <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step1-create-signature-keys" alt="Create one or more signature keys" title="Create signature keys" shape="rect" coords="126, 214, 226, 264" />
     <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Manage crypto unit administrators" title="Manage crypto unit administrators" shape="rect" coords="260, 214, 360, 264" />
     <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin" alt="Add one or more administrators in the target crypto unit" title="Add crypto unit administrators" shape="rect" coords="158, 290, 238, 340" />
@@ -78,33 +76,33 @@ The master key registers in all crypto units in a single service instance must b
 
 * To display the service instances and crypto units in the target resource group under the current user account, use the following command:
 
-  ```
-  ibmcloud tke cryptounits
-  ```
+    ```
+    ibmcloud tke cryptounits
+    ```
     {: pre}
 
     The following output is an example that is displayed. The SELECTED column in the output table identifies the crypto units that are targeted by later administrative commands that are issued by the TKE CLI plug-in.
 
-  ```
-  SERVICE INSTANCE: 482cf2ce-a06c-4265-9819-0b4acf54f2ba
-  CRYPTO UNIT NUM   SELECTED   TYPE           LOCATION
-  1                 false      OPERATIONAL    [us-south].[AZ3-CS3].[02].[03]
-  2                 false      OPERATIONAL    [us-south].[AZ2-CS2].[02].[03]
-  3                 false      FAILOVER       [us-east].[AZ2-CS2].[03].[04]
-  4                 false      FAILOVER       [us-east].[AZ3-CS3].[01].[07]
+    ```
+    SERVICE INSTANCE: 482cf2ce-a06c-4265-9819-0b4acf54f2ba
+    CRYPTO UNIT NUM   SELECTED   TYPE           LOCATION
+    1                 false      OPERATIONAL    [us-south].[AZ3-CS3].[02].[03]
+    2                 false      OPERATIONAL    [us-south].[AZ2-CS2].[02].[03]
+    3                 false      FAILOVER       [us-east].[AZ2-CS2].[03].[04]
+    4                 false      FAILOVER       [us-east].[AZ3-CS3].[01].[07]
 
-  SERVICE INSTANCE: 96fe3f8d-9792-45bc-a9fb-2594222deaf2
-  CRYPTO UNIT NUM   SELECTED   TYPE           LOCATION
-  5                 false      OPERATIONAL    [us-south].[AZ1-CS4].[00].[03]
-  6                 false      OPERATIONAL    [us-south].[AZ2-CS5].[03].[03]
-  ```
+    SERVICE INSTANCE: 96fe3f8d-9792-45bc-a9fb-2594222deaf2
+    CRYPTO UNIT NUM   SELECTED   TYPE           LOCATION
+    5                 false      OPERATIONAL    [us-south].[AZ1-CS4].[00].[03]
+    6                 false      OPERATIONAL    [us-south].[AZ2-CS5].[03].[03]
+    ```
     {: screen}
 
-* To add extra crypto units to the selected crypto unit list, use the following command:
-    {: #identify_crypto_units2}
-  ```
-  ibmcloud tke cryptounit-add
-  ```
+* To add extra crypto units to the selected crypto unit list, use the following command:{: #identify_crypto_units2}
+
+    ```
+    ibmcloud tke cryptounit-add
+    ```
     {: pre}
 
     A list of the crypto units in the target resource group under the current user account is displayed. When prompted, enter a list of crypto unit numbers to be added to the selected crypto unit list.
@@ -119,9 +117,9 @@ The master key registers in all crypto units in a single service instance must b
 
 * To remove crypto units from the selected crypto unit list, use the following command:
 
-  ```
-  ibmcloud tke cryptounit-rm
-  ```
+    ```
+    ibmcloud tke cryptounit-rm
+    ```
     {: pre}
 
     A list of the crypto units in the target resource group under the current user account is displayed. When prompted, enter a list of crypto unit numbers to be removed from the selected crypto unit list.
@@ -130,9 +128,10 @@ The master key registers in all crypto units in a single service instance must b
     {: tip}
 
     You can compare the configuration settings of the selected crypto units with the following command:
-  ```
-  ibmcloud tke cryptounit-compare
-  ```
+
+    ```
+    ibmcloud tke cryptounit-compare
+    ```
     {: pre}
 
 ## Loading master keys
@@ -151,15 +150,17 @@ For security considerations, the signature key owners can be different people fr
 {: important}
 
 * To display the existing signature keys on the workstation, use the following command:
-  ```
-  ibmcloud tke sigkeys
-  ```
+
+    ```
+    ibmcloud tke sigkeys
+    ```
     {: pre}
 
 * To create and save a new signature key on the workstation, use the following command:
-  ```
-  ibmcloud tke sigkey-add
-  ```
+
+    ```
+    ibmcloud tke sigkey-add
+    ```
     {: pre}
 
     When prompted, enter an administrator name and a password to protect the signature key file. You must remember the password. If the password is lost, the signature key can't be used.
@@ -168,9 +169,9 @@ For security considerations, the signature key owners can be different people fr
 
 * To select the administrators to sign future commands, use the command:
 
-  ```
-  ibmcloud tke sigkey-sel
-  ```
+    ```
+    ibmcloud tke sigkey-sel
+    ```
     {: pre}
 
     A list of signature keys that are found on the workstation is displayed. When prompted, enter the key numbers of the signature key files to select for signing future administrative commands. When prompted, enter the passwords for the signature key files.
@@ -186,15 +187,17 @@ For security considerations, the signature key owners can be different people fr
 
 
 * To display the existing administrators for a crypto unit, use the following command:
-  ```
-  ibmcloud tke cryptounit-admins
-  ```
+
+    ```
+    ibmcloud tke cryptounit-admins
+    ```
     {: pre}
 
 * To add an administrator, use the following command:
-  ```
-  ibmcloud tke cryptounit-admin-add
-  ```
+
+    ```
+    ibmcloud tke cryptounit-admin-add
+    ```
     {: pre}
 
     A list of the signature key files that are found on the workstation is displayed.
@@ -242,23 +245,26 @@ You must create at least two master key parts. For security considerations, thre
 {: important}
 
 * To display the existing master key parts on the workstation, use the following command:
-  ```
-  ibmcloud tke mks
-  ```
+
+    ```
+    ibmcloud tke mks
+    ```
     {: pre}
 
 * To create and save a random master key part on the workstation, use the command:
-  ```
-  ibmcloud tke mk-add --random
-  ```
+
+    ```
+    ibmcloud tke mk-add --random
+    ```
     {: pre}
 
     When prompted, enter a description for the key part and a password to protect the key part file. You must remember the password. If the password is lost, you can't use the key part.
 
 * To enter a known key part value and save it in a file on the workstation, use the following command:
-  ```
-  ibmcloud tke mk-add --value
-  ```
+
+    ```
+    ibmcloud tke mk-add --value
+    ```
     {: pre}
 
     When prompted, enter the key part value as a hexadecimal string for the 32-byte key part. And then enter a description for the key part and a password to protect the key part file.
@@ -272,6 +278,7 @@ To load a master key register, all master key part files and signature key files
 For information about how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-key-ceremony).
 
 To load the new master key register, use the following command:
+
 ```
 ibmcloud tke cryptounit-mk-load
 ```
@@ -287,6 +294,7 @@ When prompted, enter the key parts to be loaded into the new master key register
 Loading the new master key register places the new master key register in the full uncommitted state. Before you can use the new master key register to initialize or reencipher key storage, place the new master key register in the committed state. For information about how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-key-ceremony).
 
 To commit the new master key register, use the following command:
+
 ```
 ibmcloud tke cryptounit-mk-commit
 ```
@@ -317,11 +325,13 @@ When prompted, enter the password for the signature key file to be used. For thi
 {: #initialize-crypto-cli-next}
 
 - For more details on other options of the TKE CLI plug-in commands, run the following command in the CLI:
-  ```
-  ibmcloud tke help
-  ```
+
+    ```
+    ibmcloud tke help
+    ```
     {: pre}
-- Go to the **KMS keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+
+- Go to the **KMS keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](/apidocs/hs-crypto){: external}.
 - To learn more about performing cryptographic operations with the cloud HSM, see [Introducing cloud HSM](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm).
 - Use {{site.data.keyword.hscrypto}} as the root key provider for other {{site.data.keyword.cloud_notm}} services. For more information about integrating {{site.data.keyword.hscrypto}}, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
 - For information on how to rotate the master key, see [Rotating master keys by using the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-key-parts).

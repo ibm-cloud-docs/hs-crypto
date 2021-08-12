@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: restore key, restore a deleted key, recover a deleted key, re-import a key
 
@@ -70,7 +70,7 @@ Complete the following steps to restore the key:
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
-5. Select the key that you want to restore and click the **Actions** icon ![Actions icon] (../icons/action-menu-icon.svg "Actions")to open a list of options for the key.
+5. Select the key that you want to restore and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key.
 6. From the options menu, click **Restore key**.
 7. Click **Restore key** to confirm the action.
 
@@ -127,9 +127,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/restore
           <p>
             <strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides.
           </p>
-          <p>
-            For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
         </td>
       </tr>
 
@@ -155,9 +153,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/restore
           <p>
             <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request.
           </p>
-          <p>
-            For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
         </td>
       </tr>
 
@@ -169,9 +165,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/restore
           <p>
             <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance.
           </p>
-          <p>
-            For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
         </td>
       </tr>
       <tr>
@@ -183,12 +177,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/restore
             <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request.
           </p>
           <p>
-            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+            Note: The key ring ID of keys that are created without an <code>x-kms-key-ring</code> header is <code>default</code>.
           </p>
-          <p>
-            For more information, see
-            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
         </td>
       </tr>
 

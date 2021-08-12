@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -117,7 +117,7 @@ In the following step, you'll create a [import token](/docs/hs-crypto?topic=hs-c
 
     You'll use this directory to store the files that you'll create in later steps.
 
-2. You can create an import token for your {{site.data.keyword.hscrypto}} service instance by either using the [key management API](https://{DomainName}/apidocs/hs-crypto) or using the [CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli), and then save the response to a JSON file.
+2. You can create an import token for your {{site.data.keyword.hscrypto}} service instance by either using the [key management API](/apidocs/hs-crypto) or using the [CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli), and then save the response to a JSON file.
 
     - **Use the API**:
 
@@ -286,15 +286,15 @@ To encrypt the nonce value:
 
     1. [Download the sample `kms-encrypt-nonce` binary](https://github.com/IBM-Cloud/kms-samples/releases/tag/v1.1){: external} that is compatible with your operating system. Extract the file, and then move the binary to the `hs-crypto-test` directory.
 
-      The binary contains a script that you can use to run AES-CBC encryption on the nonce value by using the key that you generated in [step 2](#tutorial-import-retrieve-token). To learn more about the script, [check out the source file on GitHub](https://github.com/IBM-Cloud/kms-samples/blob/master/secure-import/encrypt.go){: external}.
-      {: note}
+        The binary contains a script that you can use to run AES-CBC encryption on the nonce value by using the key that you generated in [step 2](#tutorial-import-retrieve-token). To learn more about the script, [check out the source file on GitHub](https://github.com/IBM-Cloud/kms-samples/blob/master/secure-import/encrypt.go){: external}.
+        {: note}
 
     2. If you are using Linux&reg;, mark the file as executable by running the following  `chmod` command. You can skip this step if you are using Windows.
 
-      ```sh
-      chmod +x ./kms-encrypt-nonce
-      ```
-      {: pre}
+        ```sh
+        chmod +x ./kms-encrypt-nonce
+        ```
+        {: pre}
 
 4. Run the script to encrypt the nonce value with the encryption key that you generated in [step 2](#tutorial-import-retrieve-token). Then, save the response to a file called `EncryptedValues.json`.
 
@@ -530,4 +530,4 @@ In this tutorial, you learned how to set up the {{site.data.keyword.hscrypto}} k
 
 - Learn more about [using your root key to protect data at rest](/docs/hs-crypto?topic=hs-crypto-envelope-encryption#envelope-encryption).
 - Deploy your root key across [supported cloud services](/docs/hs-crypto?topic=hs-crypto-integrate-services#integrate-services).
-- Learn more about the [key management API](https://{DomainName}/apidocs/hs-crypto).
+- Learn more about the [key management API](/apidocs/hs-crypto).

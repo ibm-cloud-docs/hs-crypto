@@ -54,7 +54,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
       </tr>
       <tr>
         <td>ID</td>
-        <td>A unique key ID that was assigned to your key by the {{site.data.keyword.hscrypto}} service. You can use the ID value to make calls to the service with the <a href="https://{DomainName}/apidocs/hs-crypto">{{site.data.keyword.hscrypto}} key management API</a>.</td>
+        <td>A unique key ID that was assigned to your key by the {{site.data.keyword.hscrypto}} service. You can use the ID value to make calls to the service with the <a href="/apidocs/hs-crypto">{{site.data.keyword.hscrypto}} key management API</a>.</td>
       </tr>
       <tr>
         <td>Alias</td>
@@ -176,12 +176,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
             <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request.
           </p>
           <p>
-            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+            Note: The key ring ID of keys that are created without an <code>x-kms-key-ring</code> header is: default.
           </p>
-          <p>
-            For more information, see
-            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
         </td>
       </tr>
       <tr>

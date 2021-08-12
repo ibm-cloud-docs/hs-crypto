@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -70,7 +70,7 @@ The supported smart card reader type is SPR332 v2.0 Secure Class 2 PIN Pad Reade
 
 You need to install the Identiv SPR332 V2 smart card reader driver on your local workstation. Currently, only Red Hat Enterprise Linux&reg; 8.0.0 is supported.
 
-You need to take the [smart card considerations](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy) into account when you plan your security policy for your workstation and smart card readers. Otherwise, your smart cards might be exposed to [some vulnerabilities](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy#smart-card-vulnerabilities).
+You need to take the [smart card considerations](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy) into account when you plan your security policy for your workstation and smart card readers. Otherwise, your smart cards might be exposed to some vulnerabilities.
 {: note}
 
 
@@ -83,42 +83,42 @@ Before you install the smart card reader driver on a Linux operating system, dow
 
     1. Install the `pcsc-lite` package with the following command:
 
-    ```
-    sudo yum install pcsc-lite
-    ```
-    {: pre}
+        ```
+        sudo yum install pcsc-lite
+        ```
+        {: pre}
 
     2. Install the `libusb` package with the following command:
 
-    ```
-    sudo yum install libusb
-    ```
-    {: pre}
+        ```
+        sudo yum install libusb
+        ```
+        {: pre}
 
     3. Check and make sure that the `opensc` and `esc` packages are not installed. These packages can cause unexpected errors to occur during the operations of the smart card readers.
 
-    Run the following command to display all installed `opensc` or `esc` packages. Replace `<package_name>` with `opensc` or `esc`:
+        Run the following command to display all installed `opensc` or `esc` packages. Replace `<package_name>` with `opensc` or `esc`:
 
-    ```
-    sudo yum list installed <package_name>
-    ```
-    {: pre}
+        ```
+        sudo yum list installed <package_name>
+        ```
+        {: pre}
 
-    If any packages are listed, remove them using the following commands. Replace `<package_name>` with `opensc` or `esc`:
+        If any packages are listed, remove them using the following commands. Replace `<package_name>` with `opensc` or `esc`:
 
-    ```
-    sudo yum remove <package_name>
-    ```
-    {: pre}
+        ```
+        sudo yum remove <package_name>
+        ```
+        {: pre}
 
     4. Run the `install.sh` script, which is included in the downloaded driver package.
 
     5. Start the `pcsc` daemon with the following command:
 
-    ```
-    sudo pcscd
-    ```
-    {: pre}
+        ```
+        sudo pcscd
+        ```
+        {: pre}
 
 
 
@@ -137,32 +137,34 @@ To install the applications on Red Hat Enterprise Linux&reg; 8.0.0, complete the
     {{site.data.keyword.hscrypto}} Management Utilities enable [signed code verification](https://en.wikipedia.org/wiki/Code_signing){: external} to ensure that the signature matches the original code. If the downloaded installation file is altered or corrupted, a different signature is produced and the verification fails. To make sure that the applications are not tampered with or corrupted during the download process, complete the following steps by using the [OpenSSL command-line tool](https://wiki.openssl.org/index.php/Binaries){: external}:
 
     1. Download the latest version of following files from [GitHub](https://github.com/IBM-Cloud/hpcs-management-utilities/releases){: external} to the same directory where you store the `cloudtke.bin` file:
-    * `cloudtke.sig`: The signed cryptographic hash of `cloudtke.bin` (SHA-256).
-    * `digicert_cert.pem`: An intermediate code signing certificate to prove the Management Utilities signing certificate.
-    * `signing_cert.pem`: The signing certificate of the Management Utilities.
+        - `cloudtke.sig`: The signed cryptographic hash of `cloudtke.bin` (SHA-256).
+        - `digicert_cert.pem`: An intermediate code signing certificate to prove the Management Utilities signing certificate.
+        - `signing_cert.pem`: The signing certificate of the Management Utilities.
 
     2. Extract the public key from the signing certificate `signing_cert.pem` to the `sigkey.pub` file with the following command by using the OpenSSL command-line tool:
 
-    ```
-    openssl x509 -pubkey -noout -in signing_cert.pem -out sigkey.pub
-    ```
-    {: pre}
+        ```
+        openssl x509 -pubkey -noout -in signing_cert.pem -out sigkey.pub
+        ```
+        {: pre}
 
     3. Verify the integrity of the `cloudtke.bin` file with the following command:
 
-    ```
-    openssl dgst -sha256 -verify sigkey.pub -signature cloudtke.sig cloudtke.bin
-    ```
-    {: pre}
-    When the verification is successful, `Verified OK` is displayed.
+        ```
+        openssl dgst -sha256 -verify sigkey.pub -signature cloudtke.sig cloudtke.bin
+        ```
+        {: pre}
+
+        When the verification is successful, `Verified OK` is displayed.
 
     4. Verify the authenticity and validity of the signing certificate with the following command:
 
-    ```
-    openssl ocsp -no_nonce -issuer digicert_cert.pem -cert signing_cert.pem -VAfile digicert_cert.pem -text -url http://ocsp.digicert.com -respout ocsptest
-    ```
-    {: pre}
-    When the verification is successful, `Response verify OK` and `signing_cert.pem: good` are displayed in the output.
+        ```
+        openssl ocsp -no_nonce -issuer digicert_cert.pem -cert signing_cert.pem -VAfile digicert_cert.pem -text -url http://ocsp.digicert.com -respout ocsptest
+        ```
+        {: pre}
+
+        When the verification is successful, `Response verify OK` and `signing_cert.pem: good` are displayed in the output.
 
     5. If the verification fails, cancel the installation and [contact IBM for support](/docs/hs-crypto?topic=hs-crypto-getting-help). Otherwise, proceed with the following steps.
 
@@ -170,17 +172,17 @@ To install the applications on Red Hat Enterprise Linux&reg; 8.0.0, complete the
 
     1. Add the execute permission to the installation file by running the following command:
 
-    ```
-    chmod +x cloudtke.bin
-    ```
-    {: pre}
+        ```
+        chmod +x cloudtke.bin
+        ```
+        {: pre}
 
     2. Install the applications by running the following command:
 
-    ```
-    ./cloudtke.bin
-    ```
-    {: pre}
+        ```
+        ./cloudtke.bin
+        ```
+        {: pre}
 
     3. When prompted, choose the installation folder for the Management Utilities and then select the **Don't create links** option.
 
@@ -198,25 +200,29 @@ To create and initialize a certificate authority smart card, follow these steps:
 
 1. Plug the two smart card readers into the USB ports of your workstation.
 2. To start the Smart Card Utility Program, go to the subdirectory where you install the Management Utilities applications and run the following command:
-  ```
-  ./scup
-  ```
+
+    ```
+    ./scup
+    ```
     {: pre}
 
 3. After the Smart Card Utility Program is started, from the **CA Smart Card** menu,  select **Initialize and personalize CA smart card**.
 4. Insert the smart card to be initialized into a smart card reader 1, and click **OK**.
 
     If you receive a message similar to **No smart card inserted**, try the following solutions:
-    * Insert the smart card into another smart card reader. The smart card reader that you picked might not be smart card reader 1.
-    * Reinsert the smart card into the same smart card reader. The smart card reader might not be reading the smart card properly.
+    - Insert the smart card into another smart card reader. The smart card reader that you picked might not be smart card reader 1.
+    - Reinsert the smart card into the same smart card reader. The smart card reader might not be reading the smart card properly.
+
 5. Enter a six-digit personal identification number (PIN) twice on the smart card reader PIN pad as the first certificate authority card PIN.
 
     Enter the PIN twice in 20 seconds. Otherwise, the session is expired and you need to reenter the PIN.
     {: tip}
+
 6. Enter a six-digit PIN twice on the smart card reader PIN pad as the second certificate authority card PIN. You need to enter both PINs later when you use the certificate authority smart card.
 
     Enter the PIN twice in 20 seconds. Otherwise, the session is expired and you need to reenter the PIN.
     {: tip}
+
 7. Enter a description for the smart card zone that holds the EP11 smart cards.
 8. Enter a description for the certificate authority smart card.
 

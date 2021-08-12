@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: create test instance, configure api for test, test hpcs, test service onboarding hpcs, wrap key api, upwrap key api
 
@@ -97,8 +97,7 @@ Replace the variables in the example request according to the following table.
         <strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides.
       </p>
       <p>
-        For more information, see
-        [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
+        For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.
       </p>
     </td>
     </tr>
@@ -123,7 +122,7 @@ Replace the variables in the example request according to the following table.
         <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance.
       </p>
       <p>
-        For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+        For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.
       </p>
     </td>
     </tr>
@@ -214,7 +213,7 @@ Replace the variables in the example request according to the following table.
         <strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
       </p>
       <p>
-        For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
+        For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.
       </p>
     </td>
     </tr>
@@ -247,7 +246,7 @@ Replace the variables in the example request according to the following table.
         <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance.
       </p>
       <p>
-        For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+        For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.
       </p>
     </td>
     </tr>
@@ -327,7 +326,7 @@ Replace the variables in the example request according to the following table.
         <strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
       </p>
       <p>
-        For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
+        For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.
       </p>
     </td>
     </tr>
@@ -360,7 +359,7 @@ Replace the variables in the example request according to the following table.
         <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance.
       </p>
       <p>
-        For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+        For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.
       </p>
     </td>
     </tr>

@@ -371,7 +371,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/registrations?ur
       <tr>
         <td><varname>url_encoded_CRN_query</varname></td>
         <td>
-          <p>Filters for resources that are associated with a specified [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) by using URL encoded wildcard characters (<code>*</code>). The parameter needs to contain all CRN segments and must be URL encoded.</p>
+          <p>Filters for resources that are associated with a specified <a href="/docs/account?topic=account-crn">Cloud Resource Name (CRN)</a> by using URL encoded wildcard characters (<code>*</code>). The parameter needs to contain all CRN segments and must be URL encoded.</p>
           <p>To view examples, see <a href="#crn-query-examples">CRN query examples</a>.</p>
         </td>
       </tr>
@@ -429,16 +429,18 @@ The following tables provide a list of CRN query examples before and after URL e
 |`crn:v1:bluemix:public:cloudantnosqldb:us-south:a/f586c28d154d4c65a4a4a34cf75f55d0:94255ea3-af1c-41b7-9805-61f775e20702:*:prod*`. |
 {: caption="Table 9. CRN query examples" caption-side="bottom"}
 {: #table-9}
+{: tab-group="CRN-query"}
 {: tab-title="Original"}
 {: class="simple-tab-table"}
 
 | Value |
 | ---- |
 |`crn%3Av1%3Abluemix%3Apublic%3Adatabases-for-redis%3Aus-south%3Aa%2F274074dce64e9c423ffc238516c755e1%3A29caf0e7-120f-4da8-9551-3abf57ebcfc7%3A*%3A*` |
-| `crn%3Av1%3Abluemix%3Apublic%3Acloud-object-storage%3Aglobal%3Aa%2Fe1bb63d6a20dc57c87501ac4c4c99dcb%3A*%3Abucket%3Aprod*`  |
+|`crn%3Av1%3Abluemix%3Apublic%3Acloud-object-storage%3Aglobal%3Aa%2Fe1bb63d6a20dc57c87501ac4c4c99dcb%3A*%3Abucket%3Aprod*`  |
 |`crn%3Av1%3Abluemix%3Apublic%3Acloudantnosqldb%3Aus-south%3Aa%2Ff586c28d154d4c65a4a4a34cf75f55d0%3A94255ea3-af1c-41b7-9805-61f775e20702%3A%2A%3Aprod%2A` |
 {: caption="Table 9. CRN query examples" caption-side="bottom"}
 {: #table-10}
+{: tab-group="CRN-query"}
 {: tab-title="URL encoded"}
 {: class="simple-tab-table"}
 

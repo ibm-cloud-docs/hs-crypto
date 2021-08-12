@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -84,11 +84,11 @@ When you use smart cards, consider the following recommendations:
 
     - Create a certificate authority smart card and a backup certificate authority smart card.
 
-    A backup certificate authority smart card can be created by using the Smart Card Utility Program. Select **CA Smart Card** > **Backup CA smart card** from the menu, and follow the prompts.
+        A backup certificate authority smart card can be created by using the Smart Card Utility Program. Select **CA Smart Card** > **Backup CA smart card** from the menu, and follow the prompts.
 
     - Create two EP11 smart cards to hold an administrator signature key. Generate the administrator signature key on one EP11 smart card and copy it to the other.
 
-    The contents of an EP11 smart card can be copied to another EP11 smart card that was created in the same smart card zone by using the Trusted Key Entry application. On the **Smart card** tab, click **Copy smart card**, and follow the prompts.
+        The contents of an EP11 smart card can be copied to another EP11 smart card that was created in the same smart card zone by using the Trusted Key Entry application. On the **Smart card** tab, click **Copy smart card**, and follow the prompts.
 
     - Create four or six EP11 smart cards to hold master key parts. Generate an EP11 master key part on 2 or 3 of the smart cards, depending on whether you want to use two or three key parts when you load your master key. Copy each key part value to a backup EP11 smart card.
 
@@ -110,7 +110,7 @@ After a smart card that contains a valid signature key is inserted in smart card
 
 If one or more recovery crypto units are allocated for your service instance, you can choose this approach to initialize your service instance. In this case, a random master key value is automatically generated in a recovery crypto unit and copied to the other crypto units for the service instance. The master key value never appears in the clear outside of the HSMs. This approach is more streamlined and easier to use compared to the other two options.
 
-Currently, only the `us-south` and `us-east` regions are enabled with the recovery crypto units. Therefore, this option is only available in these two regions. For more information about supported regions, see <[Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions)>.
+Currently, only the `us-south` and `us-east` regions are enabled with the recovery crypto units. Therefore, this option is only available in these two regions. For more information about supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 {: note}
 
 The following diagram shows the components of an example service instance with two recovery crypto units:
@@ -124,11 +124,11 @@ The following sections explain each component in detail.
 
 The TKE CLI plug-in is an addition to the {{site.data.keyword.cloud_notm}} command-line interface (CLI). With the TKE CLI plug-in, you can send commands to the crypto units in your service instance to load the master key. The TKE CLI plug-in supports two approaches for loading the master key.
 
-If your service instance has recovery crypto units, you can load the master key by running the `ibmcloud tke auto-init` command. This command guides you through steps to add administrators and set the signature thresholds, and then generates a random master key value in one of the recovery crypto units in your service instance and copies the value to the other crypto units. For more information about this approach, see <[Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)>.
+If your service instance has recovery crypto units, you can load the master key by running the `ibmcloud tke auto-init` command. This command guides you through steps to add administrators and set the signature thresholds, and then generates a random master key value in one of the recovery crypto units in your service instance and copies the value to the other crypto units. For more information about this approach, see [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit).
 
 You can also use the TKE CLI plug-in to load the master key using key parts stored in key part files. This approach can be taken regardless of whether your service instance has any recovery crypto units. Using this approach, you run a series of commands to generate signature keys and master key parts, add administrators, set the signature thresholds, and load the master key registers. For more information, see [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
-You need to be assigned the appropriate role to perform TKE CLI plug-in operations. For more information about the available service access roles, see <[Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles)>.
+You need to be assigned the appropriate role to perform TKE CLI plug-in operations. For more information about the available service access roles, see [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
 
 For a complete list of commands available in the TKE CLI plug-in, see [{{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin).
 
@@ -146,7 +146,7 @@ The sole purpose of the recovery crypto units is to save a backup copy of the ma
 
 
 
-Currently, only the `us-south` and `us-east` regions are enabled with the recovery crypto units, which means, when a service instance is provisioned in either region, you are by default enabled with the option to back up your master keys in the recovery crypto units located in both regions. For more information about supported regions, see <[Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions)>.
+Currently, only the `us-south` and `us-east` regions are enabled with the recovery crypto units, which means, when a service instance is provisioned in either region, you are by default enabled with the option to back up your master keys in the recovery crypto units located in both regions. For more information about supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 {: note}
 
 For detailed instructions on recovering the master key, see [Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit).

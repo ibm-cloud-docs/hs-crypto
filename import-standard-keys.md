@@ -64,8 +64,7 @@ You can add your existing encryption keys with the {{site.data.keyword.cloud_not
         <td>Key ring ID</td>
         <td>
           <p>Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key is added to the <code>default</code> key ring.</p>
-          <p>For more information about key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
-          </p>
+          <p>For more information about key rings, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
         </td>
       </tr>
       <tr>
@@ -84,7 +83,7 @@ You can add your existing encryption keys with the {{site.data.keyword.cloud_not
       <tr>
         <td>Expiration date</td>
         <td>
-          <p>(Optional) Set the date and time when the key gets expired. After the expiration date, the key moves into the _Deactivated_ state. For more information about key state, see <a href="/docs/hs-crypto?topic=hs-crypto-key-states">Monitoring the lifecycle of encryption keys</a>.</p>
+          <p>(Optional) Set the date and time when the key gets expired. After the expiration date, the key moves into the <em>Deactivated</em> state. For more information about key state, see <a href="/docs/hs-crypto?topic=hs-crypto-key-states">Monitoring the lifecycle of encryption keys</a>.</p>
         </td>
       </tr>
       <tr>
@@ -110,7 +109,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
-1. Call the [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto){: external} with the following cURL command.
+1. Call the [{{site.data.keyword.hscrypto}} key management API](/apidocs/hs-crypto){: external} with the following cURL command.
 
     ```cURL
     curl -X POST \
@@ -331,4 +330,4 @@ When you import an existing standard key, it is required to include the encrypte
 ## What's next
 {: #import-standard-key-next}
 
-To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](/apidocs/hs-crypto){: external}.

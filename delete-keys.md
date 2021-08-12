@@ -113,6 +113,7 @@ at query time to delete the key.
     {: codeblock}
 
     Replace the variables in the example request according to the following table.
+
     <table>
       <tr>
         <th>Variable</th>
@@ -147,12 +148,9 @@ at query time to delete the key.
             <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request.
           </p>
           <p>
-            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is `default`.
+            Note: The key ring ID of keys that are created without an <code>x-kms-key-ring</code> header is <code>default</code>.
           </p>
-          <p>
-            For more information, see
-            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
         </td>
       </tr>
       <tr>
@@ -232,14 +230,14 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
 
 3. Run the following cURL command to force-delete the key and the contents.
 
-  ```sh
-  curl -X DELETE \
-  "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?force=true" \
-  -H 'authorization: Bearer <IAM_token>' \
-  -H 'bluemix-instance: <instance_ID>' \
-  -H "x-kms-key-ring: <key_ring_ID>" \
-  -H 'prefer: <return_preference>'
-  ```
+    ```sh
+    curl -X DELETE \
+    "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?force=true" \
+    -H 'authorization: Bearer <IAM_token>' \
+    -H 'bluemix-instance: <instance_ID>' \
+    -H "x-kms-key-ring: <key_ring_ID>" \
+    -H 'prefer: <return_preference>'
+    ```
     {: codeblock}
 
     Replace the variables in the example request according to the following table.
@@ -308,12 +306,9 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
           <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request.
         </p>
         <p>
-          Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is default.
+          Note: The key ring ID of keys that are created without an <code>x-kms-key-ring</code> header is <code>default</code>.
         </p>
-        <p>
-          For more information, see
-          [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
-        </p>
+        <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
       </td>
     </tr>
     <tr>
@@ -333,37 +328,37 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
 
     The following JSON object shows a sample returned value.
 
-  ```json
-  {
-      "metadata": {
-          "collectionType": "application/vnd.ibm.kms.key+json",
-          "collectionTotal": 1
-      },
-      "resources": [
-          {
-              "id": "2291e4ae-a14c-4af9-88f0-27c0cb2739e2",
-              "type": "application/vnd.ibm.kms.key+json",
-              "aliases": [
-                  "alias-1",
-                  "alias-2"
-              ],
-              "name": "test-root-key",
-              "description": "...",
-              "state": 5,
-              "expirationDate": "2020-03-15T20:41:27Z",
-              "crn": "crn:v1:bluemix:public:kms:us-south:a/f047b55a3362ac06afad8a3f2f5586ea:30372f20-d9f1-40b3-b486-a709e1932c9c:key:2291e4ae-a14c-4af9-88f0-27c0cb2739e2",
-              "deleted": true,
-              "algorithmType": "AES",
-              "createdBy": "...",
-              "deletedBy": "...",
-              "creationDate": "2020-03-10T20:41:27Z",
-              "deletionDate": "2020-03-16T21:46:53Z",
-              "lastUpdateDate": "2020-03-16T20:41:27Z",
-              "extractable": false
-          }
-      ]
-  }
-  ```
+    ```json
+    {
+        "metadata": {
+            "collectionType": "application/vnd.ibm.kms.key+json",
+            "collectionTotal": 1
+        },
+        "resources": [
+            {
+                "id": "2291e4ae-a14c-4af9-88f0-27c0cb2739e2",
+                "type": "application/vnd.ibm.kms.key+json",
+                "aliases": [
+                    "alias-1",
+                    "alias-2"
+                ],
+                "name": "test-root-key",
+                "description": "...",
+                "state": 5,
+                "expirationDate": "2020-03-15T20:41:27Z",
+                "crn": "crn:v1:bluemix:public:kms:us-south:a/f047b55a3362ac06afad8a3f2f5586ea:30372f20-d9f1-40b3-b486-a709e1932c9c:key:2291e4ae-a14c-4af9-88f0-27c0cb2739e2",
+                "deleted": true,
+                "algorithmType": "AES",
+                "createdBy": "...",
+                "deletedBy": "...",
+                "creationDate": "2020-03-10T20:41:27Z",
+                "deletionDate": "2020-03-16T21:46:53Z",
+                "lastUpdateDate": "2020-03-16T20:41:27Z",
+                "extractable": false
+            }
+        ]
+    }
+    ```
     {: screen}
 
     For a detailed description of the available parameters, see the {{site.data.keyword.hscrypto}} [key management API reference doc](/apidocs/hs-crypto){: external}.
@@ -374,4 +369,4 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
 - To restore a previously deleted key, check out [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys).
 - To create another root key, check out [Creating root keys](/docs/hs-crypto?topic=hs-crypto-create-root-keys).
 - To delete the service instance, check out [Deleting service instances](/docs/hs-crypto?topic=hs-crypto-delete-instance)
-- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](/apidocs/hs-crypto){: external}.

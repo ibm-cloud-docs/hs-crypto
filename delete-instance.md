@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: delete, delete service instance, crypto unit, ibm cloud cli, clear crypto unit, uninstall
 
@@ -72,24 +72,24 @@ If you initialize your service instance by loading master key parts from smart c
 
     1. From the command line, enter the directory where the Management Utilities are installed with the following command:
 
-    ```
-    cd <management_utilities_directory>
-    ```
-    {: pre}
+        ```
+        cd <management_utilities_directory>
+        ```
+        {: pre}
 
     2. Enter the `_installation` subdirectory with the following command:
 
-    ```
-    cd _installation
-    ```
-    {: pre}
+        ```
+        cd _installation
+        ```
+        {: pre}
 
     3. To uninstall the Management Utilities, run the following command:
 
-    ```
-    ./uninstall
-    ```
-    {: pre}
+        ```
+        ./uninstall
+        ```
+        {: pre}
 
 ## Step 3: Delete your service instance
 {: #delete-instance-step}

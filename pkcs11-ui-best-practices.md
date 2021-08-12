@@ -2,15 +2,15 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-12"
 
 keywords: pkcs11 ui access, pkcs 11 account authentication
 
 subcollection: hs-crypto
 
 ---
-{:shortdesc: .shortdesc}
 
+{:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:table: .aria-labeledby="caption"}
 {:pre: .pre}
@@ -50,7 +50,7 @@ To create a custom role, complete the following steps:
       <td>View EP11 keystores.</td>
       <td>
         <ul>
-          <li>`hs-crypto.keystore.listkeystoresbyids`</li>
+          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
         </ul>
       </td>
     </tr>
@@ -58,8 +58,8 @@ To create a custom role, complete the following steps:
       <td>Create EP11 keystores.</td>
       <td>
         <ul>
-          <li>`hs-crypto.keystore.listkeystoresbyids`</li>
-          <li>`hs-crypto.keystore.createkeystore`</li>
+          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
+          <li><code>hs-crypto.keystore.createkeystore</code></p>
         </ul>
       </td>
     </tr>
@@ -67,8 +67,8 @@ To create a custom role, complete the following steps:
       <td>Delete EP11 keystores.</td>
       <td>
         <ul>
-          <li>`hs-crypto.keystore.listkeystoresbyids`</li>
-          <li>`hs-crypto.keystore.deletekeystore`</li>
+          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
+          <li><code>hs-crypto.keystore.deletekeystore</code></p>
         </ul>
       </td>
     </tr>
@@ -76,8 +76,8 @@ To create a custom role, complete the following steps:
       <td>View EP11 keys.</td>
       <td>
         <ul>
-          <li>`hs-crypto.keystore.listkeystoresbyids`</li>
-          <li>`hs-crypto.keystore.listkeysbyids`</li>
+          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
+          <li><code>hs-crypto.keystore.listkeysbyids</code></p>
         </ul>
       </td>
     </tr>
@@ -85,11 +85,11 @@ To create a custom role, complete the following steps:
       <td>Create EP11 keys.</td>
       <td>
         <ul>
-          <li>`hs-crypto.keystore.listkeystoresbyids`</li>
-          <li>`hs-crypto.keystore.listkeysbyids`</li>
-          <li>`hs-crypto.crypto.generatekey`</li>
-          <li>`hs-crypto.crypto.generatekeypair`</li>
-          <li>`hs-crypto.keystore.storenewkey`</li>
+          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
+          <li><code>hs-crypto.keystore.listkeysbyids</code></p>
+          <li><code>hs-crypto.crypto.generatekey</code></p>
+          <li><code>hs-crypto.crypto.generatekeypair</code></p>
+          <li><code>hs-crypto.keystore.storenewkey</code></p>
         </ul>
       </td>
     </tr>
@@ -97,9 +97,9 @@ To create a custom role, complete the following steps:
       <td>View EP11 keys.</td>
       <td>
         <ul>
-          <li>`hs-crypto.keystore.listkeystoresbyids`</li>
-          <li>`hs-crypto.keystore.listkeysbyids`</li>
-          <li>`hs-crypto.keystore.deletekey`</li>
+          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
+          <li><code>hs-crypto.keystore.listkeysbyids</code></p>
+          <li><code>hs-crypto.keystore.deletekey</code></p>
         </ul>
       </td>
     </tr>

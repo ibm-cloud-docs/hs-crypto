@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: initialize service, key ceremony, hsm, load master key, key ceremony preparation
 
@@ -29,27 +29,28 @@ Before you can initialize your service instance, make sure that you have done th
 
 2. Install the latest Trusted Key Entry (TKE) CLI plug-in with the following command:
 
-  ```
-  ibmcloud plugin install tke
-  ```
+    ```
+    ibmcloud plugin install tke
+    ```
     {: pre}
 
     If you have installed the TKE CLI plug-in, make sure to update your plug-in to the latest version with the following command:
-  ```
-  ibmcloud plugin update tke
-  ```
+
+    ```
+    ibmcloud plugin update tke
+    ```
     {: pre}
 
 3. Set the environment variable `CLOUDTKEFILES` on your workstation to specify the directory where you want to save the master key part files and signature key files. The signature keys are used to sign TKE administrative commands.
 
     - On the Linux&reg; operating system or MacOS, add the following line to the `.bash_profile` file:
 
-     ```
-     export CLOUDTKEFILES=<path>
-     ```
-     {: pre}
+        ```
+        export CLOUDTKEFILES=<path>
+        ```
+        {: pre}
 
-     For example, you can specify the *path* to `/Users/tke-files`.
+        For example, you can specify the *path* to `/Users/tke-files`.
 
      - On Windows&reg;, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a `CLOUDTKEFILES` environment variable, set the value to the path for storing key files (For example, `C:\users\tke-files`), and restart your computer.
 
@@ -57,9 +58,9 @@ Before you can initialize your service instance, make sure that you have done th
 
     If you have multiple accounts, select the account that your service instance is created with. Make sure that you're logged in to the correct region and resource group where the service instance locates with the following command:
 
-  ```
-  ibmcloud target -r <region> -g <resource_group>
-  ```
+    ```
+    ibmcloud target -r <region> -g <resource_group>
+    ```
     {: pre}
 
     To find out the regions that {{site.data.keyword.hscrypto}} supports, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).

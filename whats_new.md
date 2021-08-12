@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -420,7 +420,7 @@ As of 5 February 2019, provisioning new Hyper Protect Crypto Services Experiment
 
 {{site.data.keyword.keymanagementserviceshort}} API is now integrated with Hyper Protect Crypto Services to generate and protect your keys. You can call the {{site.data.keyword.keymanagementserviceshort}} API directly through {{site.data.keyword.hscrypto}}.
 
-For more information, see [Setting up the key management API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api) and [{{site.data.keyword.hscrypto}} key management API reference](https://{DomainName}/apidocs/hs-crypto){: external}.
+For more information, see [Setting up the key management API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api) and [{{site.data.keyword.hscrypto}} key management API reference](/apidocs/hs-crypto){: external}.
 
 ### Added: Support for HSM management with Keep Your own Key
 {: #hsm-kyok}

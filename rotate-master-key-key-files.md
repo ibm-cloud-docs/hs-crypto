@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-12"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -46,10 +46,11 @@ Before you start, make sure to do the following steps:
 1. Complete the [steps to set up the IBM Cloud CLI with TKE plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite).
 2. Check and make sure that the current master key register is in `Valid` state with [the current master key loaded](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#load-master-keys), the new master key register is empty, and the crypto units of the service instance are not in [imprint mode](/docs/hs-crypto?topic=hs-crypto-understand-concepts#imprint-mode-concept) by running the following command:
 
-  ```
-  ibmcloud tke cryptounit-compare
-  ```
+    ```
+    ibmcloud tke cryptounit-compare
+    ```
     {: pre}
+
 3. The new master key parts are prepared for rotation. For more information about how to create a new master key part, see [Create a set of master key parts to use](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step4-create-master-key).
 
 ## Rotating master keys by using key part files
@@ -61,9 +62,9 @@ To rotate the master key by using key part files on your workstation, follow the
 
 1. Load the new master key parts to the new master key register with the following command:
 
-  ```
-  ibmcloud tke cryptounit-mk-load
-  ```
+    ```
+    ibmcloud tke cryptounit-mk-load
+    ```
     {: pre}
 
     To load a master key register, all master key part files and signature key files to be used must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The master key part file owners and signature key file owners need to enter the file passwords when the master key register is loaded on the common workstation.
@@ -79,9 +80,9 @@ To rotate the master key by using key part files on your workstation, follow the
 
 2. Commit the new master key with the following command:
 
-  ```
-  ibmcloud tke cryptounit-mk-commit
-  ```
+    ```
+    ibmcloud tke cryptounit-mk-commit
+    ```
     {: pre}
 
     When prompted, enter the passwords for the signature key files to be used.
@@ -99,18 +100,18 @@ To rotate the master key by using key part files on your workstation, follow the
 
     1. Start master key rotation by running the following command:
 
-    ```
-    ibmcloud tke cryptounit-mk-rotate
-    ```
-    {: pre}
+        ```
+        ibmcloud tke cryptounit-mk-rotate
+        ```
+        {: pre}
 
     2. When prompted, type `y` to proceed with the pre-check.
 
-    The following settings are checked:
-    * Only one service instance is selected and all crypto units from that service instance are select.
-    * All selected crypto units have left imprint mode and have the same signature threshold.
-    * The selected administrators match the administrators that are installed in the crypto units.
-    * All crypto units have the new and current key registers configured correctly.
+        The following settings are checked:
+        - Only one service instance is selected and all crypto units from that service instance are select.
+        - All selected crypto units have left imprint mode and have the same signature threshold.
+        - The selected administrators match the administrators that are installed in the crypto units.
+        - All crypto units have the new and current key registers configured correctly.
 
     3. To rotate the master key and activate the new master key, enter the password for the signature key file to be used when prompted.
 
@@ -129,5 +130,5 @@ If an error occurs during master key rotation, see [Why can't I rotate master ke
 {: #rotate-master-key-cli-key-part-next}
 
 - To learn more about master key rotation, check out [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
-- Go to the **KMS keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+- Go to the **KMS keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](/apidocs/hs-crypto){: external}.
 - To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).

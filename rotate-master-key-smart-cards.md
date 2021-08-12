@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -42,7 +42,7 @@ You can rotate your master key only when PKCS #11 keystores are not enabled in y
 
 Before you start, make sure that you have done the following:
 
-1. The new master key parts are prepared for rotation. For information on how to create a new master key part, see <[Generate the signature keys and master key parts](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step1-generate-keys-management-utilities)>.
+1. The new master key parts are prepared for rotation. For information on how to create a new master key part, see [Generate the signature keys and master key parts](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step1-generate-keys-management-utilities).
 2. Open the Trusted Key Entry application on your workstation and click the *Crypto units* tab. Check and make sure that `true` is displayed as the value of the SELECTED column for all crypto units in the service instance where you want to rotate the master key. If any crypto units in the service instance are not selected, select the crypto units by clicking the *Add crypto units* button and following the prompts.
 
     You can work with only one service instance at a time. If any crypto units in other service instances are selected, click the *Remove crypto units* button to unselect.
@@ -99,5 +99,5 @@ If an error occurs during master key rotation, see [Why can't I rotate master ke
 {: #rotate-master-key-smart-cards-next}
 
 - To learn more about master key rotation, check out [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
-- Go to the **KMS keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+- Go to the **KMS keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](/apidocs/hs-crypto){: external}.
 - To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).

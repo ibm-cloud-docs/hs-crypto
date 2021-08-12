@@ -103,7 +103,7 @@ Complete the following steps to create an EP11 keystore:
 
 3. Click **Create keystore**. You can see the new keystore listed at the first row.
 
-    To copy the keystore ID, click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")and then click **Copy ID to clipboard**.
+    To copy the keystore ID, click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and then click **Copy ID to clipboard**.
     {: tip}
 
 ## Deleting EP11 keystores

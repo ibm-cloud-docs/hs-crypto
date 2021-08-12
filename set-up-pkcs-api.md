@@ -175,7 +175,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
       </tr>
       <tr>
         <td><em>EP11_endpoint_URL</em></td>
-        <td>The {{site.data.keyword.hscrypto}} Enterprise PKCS #11 (EP11) API endpoint. You can get it through <strong>Overview</strong> &gt; <strong>Connect</strong> &gt; <strong>EP11 endpoint URL</strong> in the {{site.data.keyword.cloud_notm}} console, or you can dynamically <a href="https://{DomainName}/apidocs/hs-crypto#getinstance" target="_blank">retrieve the endpoint URL</a> with the API. Depending on whether you are using a public or <a href="/docs/hs-crypto?topic=hs-crypto-secure-connection">private network</a>, use the public or private EP11 endpoint URL. </td>
+        <td>The {{site.data.keyword.hscrypto}} Enterprise PKCS #11 (EP11) API endpoint. You can get it through <strong>Overview</strong> &gt; <strong>Connect</strong> &gt; <strong>EP11 endpoint URL</strong> in the {{site.data.keyword.cloud_notm}} console, or you can dynamically <a href="/apidocs/hs-crypto#getinstance" target="_blank">retrieve the endpoint URL</a> with the API. Depending on whether you are using a public or <a href="/docs/hs-crypto?topic=hs-crypto-secure-connection">private network</a>, use the public or private EP11 endpoint URL. </td>
       </tr>
       <tr>
         <td><em>EP11_endpoint_port_number</em></td>

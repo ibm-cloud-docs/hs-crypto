@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-12"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -70,7 +70,7 @@ Keep in mind the following considerations as you prepare to use {{site.data.keyw
     <dd>To enable these root key rotation options for your data service on {{site.data.keyword.cloud_notm}}, the data service must be integrated with {{site.data.keyword.hscrypto}}. Refer to the documentation for your {{site.data.keyword.cloud_notm}} data service, or <a href="/docs/hs-crypto?topic=hs-crypto-integrate-services">check out our list of integrated services to learn more</a>.</dd>
 </dl>
 
-When you rotate a root key in {{site.data.keyword.hscrypto}}, you're not charged extra fees. You can continue to unwrap your wrapped data encryption keys (WDEKs) with retired key material at no extra cost. For more information about our pricing options, see the [{{site.data.keyword.hscrypto}} catalog page](https://{DomainName}/catalog/services/hs-crypto).
+When you rotate a root key in {{site.data.keyword.hscrypto}}, you're not charged extra fees. You can continue to unwrap your wrapped data encryption keys (WDEKs) with retired key material at no extra cost. For more information about our pricing options, see the [{{site.data.keyword.hscrypto}} catalog page](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services).
 {: tip}
 
 ### Understanding the root key rotation process

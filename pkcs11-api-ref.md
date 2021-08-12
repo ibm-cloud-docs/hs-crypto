@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-12"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -160,17 +160,11 @@ A mechanism is referred to as a process to implement a cryptographic operation. 
 {: caption="Table 2. Describes the supported PKCS #11 mechanisms" caption-side="bottom"}
 
 [^services-1]: This mechanism supports only single-part operations that are not able to utilize any of the Update Cryptotoki functions, such as C_EncryptUpdate, C_DecryptUpdate, and C_DigestUpdate.
-
 [^services-2]: This mechanism supports only single-part operations that are not able to utilize any of the Update Cryptotoki functions, such as C_EncryptUpdate, C_DecryptUpdate, and C_DigestUpdate.
-
 [^services-3]: This mechanism supports only single-part operations that are not able to utilize any of the Update Cryptotoki functions, such as C_EncryptUpdate, C_DecryptUpdate, and C_DigestUpdate.
-
 [^services-4]: This mechanism supports only single-part operations that are not able to utilize any of the Update Cryptotoki functions, such as C_EncryptUpdate, C_DecryptUpdate, and C_DigestUpdate.
-
 [^services-5]: This mechanism supports only single-part operations that are not able to utilize any of the Update Cryptotoki functions, such as C_EncryptUpdate, C_DecryptUpdate, and C_DigestUpdate.
-
 [^services-6]: This mechanism supports only single-part operations that are not able to utilize any of the Update Cryptotoki functions, such as C_EncryptUpdate, C_DecryptUpdate, and C_DigestUpdate.
-
 [^services-7]: This mechanism supports only single-part operations that are not able to utilize any of the Update Cryptotoki functions, such as C_EncryptUpdate, C_DecryptUpdate, and C_DigestUpdate.
 
 ## Supported attributes and key types

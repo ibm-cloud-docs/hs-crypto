@@ -197,34 +197,12 @@ Fields are not guaranteed to appear unless the request is successful.
 
 Some common fields are available for {{site.data.keyword.hscrypto}} to use outside of the CADF event model to provide more insight into your data.
 
-    <table>
-    <tr>
-      <th>Field</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><p><varname><code>requestData.requestURI</code></varname></p></td>
-      <td>
-        <p>The URI of the API request that was made.</p>
-      </td>
-    </tr>
-    <tr>
-      <td><p><varname><code>requestData.instanceID</code></varname></p></td>
-      <td>
-        <p>The unique identifier of your {{site.data.keyword.hscrypto}} service instance.</p>
-      </td>
-    </tr>
-     <tr>
-      <td><p><varname><code>correlationId</code></varname></p></td>
-      <td>
-        <p>The unique identifier of the API request that generated the event.</p>
-        <p>Note: This field is not supported in TKE events.</p>
-      </td>
-    </tr>
-    
-    <caption>Table 9. Describes the common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service
-    actions.</caption>
-    </table>
+| Field | Description |
+| --- | --- |
+| `requestData.requestURI` | The URI of the API request that was made. |
+| `requestData.instanceID` | The unique identifier of your {{site.data.keyword.hscrypto}} service instance. |
+| `correlationId` | The unique identifier of the API request that generated the event. Note: This field is not supported in TKE events. |
+{: caption="Table 9. Describes the common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service actions." caption-side="bottom"}
 
 For more information about the event fields in the Cloud Auditing Data Federation (CADF) event model, see [Event Fields](/docs/activity-tracker?topic=activity-tracker-event){: external}.
 
@@ -295,7 +273,6 @@ The following field includes extra information:
 {: #rotate-key-success}
 
 Rotate key doesn't have any extra fields apart from the [Common Fields](#at-common-fields) section.
-{: note}
 
 #### Get key total
 {: #list-head-success}
@@ -706,8 +683,8 @@ The following table lists the status codes that are associated with each severit
 
 | Severity | Status code |
 | -------- | ----------- |
-| Critical | `400`[^services-1], `401`, `403`, `500`, `503`, `507`  |
+| Critical | `400`[^footnote-1], `401`, `403`, `500`, `503`, `507`  |
 | Warning  | `400`, `409`, `424`, `502`, `504`, `505`  |
 {: caption="Table 13. Describes the severity level for {{site.data.keyword.hscrypto}} response status codes." caption-side="bottom"}
 
-[^services-1]: For Trusted Key Entry events.
+[^footnote-1]: For Trusted Key Entry events.

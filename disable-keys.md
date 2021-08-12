@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-08-12"
 
 keywords: disable key, enable key, suspend key, suspend operations on a key
 
@@ -118,11 +118,11 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 
 2. Retrieve the key management API endpoint URL.
 
-    You can get the API endpoint from your provisioned service instance dashboard through **Overview** &gt; **Connect** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external} with an API call. Select the public or private key manage endpoint URL based on your needs.
+    You can get the API endpoint from your provisioned service instance dashboard through **Overview** &gt; **Connect** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/hs-crypto#getinstance){: external} with an API call. Select the public or private key manage endpoint URL based on your needs.
 
 3. Retrieve the ID of the root key that you want to disable.
 
-    You can retrieve the ID for a specified key by making a [list keys API request](https://{DomainName}/apidocs/hs-crypto#getkeys){: external}, or by viewing your keys in the {{site.data.keyword.cloud_notm}} console.
+    You can retrieve the ID for a specified key by making a [list keys API request](/apidocs/hs-crypto#getkeys){: external}, or by viewing your keys in the {{site.data.keyword.cloud_notm}} console.
 
 4. Disable the root key and suspend the encrypt and decrypt operations by making the following API call.
 
@@ -151,9 +151,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
           <p>
             <strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides.
           </p>
-          <p>
-            For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
         </td>
       </tr>
 
@@ -179,9 +177,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
           <p>
             <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request.
           </p>
-          <p>
-            For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
         </td>
       </tr>
 
@@ -193,9 +189,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
           <p>
             <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance.
           </p>
-          <p>
-            For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
         </td>
       </tr>
       <tr>
@@ -207,12 +201,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
             <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore suggested to specify the key ring ID for a more optimized request.
           </p>
           <p>
-            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+            Note: The key ring ID of keys that are created without an <code>x-kms-key-ring</code> header is: default.
           </p>
-          <p>
-            For more information, see
-            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
         </td>
       </tr>
       <caption>
@@ -302,11 +293,11 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 
 2. Retrieve the key management API endpoint URL.
 
-    You can get the API endpoint from your provisioned service instance dashboard by clicking **Manage** &gt; **Key management endpoint URL**, or you can dynamically [retrieve the API endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external} with an API call. Select the public or private key manage endpoint URL based on your needs.
+    You can get the API endpoint from your provisioned service instance dashboard by clicking **Manage** &gt; **Key management endpoint URL**, or you can dynamically [retrieve the API endpoint URL](/apidocs/hs-crypto#getinstance){: external} with an API call. Select the public or private key manage endpoint URL based on your needs.
 
 3. Retrieve the ID of the disabled root key that you want to enable.
 
-    You can retrieve the ID for a specified key by making a [list keys API request](https://{DomainName}/apidocs/hs-crypto#getkeys){: external}, or by viewing your keys in the {{site.data.keyword.hscrypto}} dashboard.
+    You can retrieve the ID for a specified key by making a [list keys API request](/apidocs/hs-crypto#getkeys){: external}, or by viewing your keys in the {{site.data.keyword.hscrypto}} dashboard.
 
 4. Enable the root key and restore the encrypt and decrypt operations by making the following API call.
 
@@ -338,9 +329,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
           <p>
             <strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides.
           </p>
-          <p>
-            For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
         </td>
       </tr>
 
@@ -348,7 +337,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
         <td><varname>port</varname></td>
         <td><strong>Required.</strong> The port number of the API endpoint.</td>
       </tr>
-      
+
       <tr>
         <td>
           <varname>key_ID</varname>
@@ -366,9 +355,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
           <p>
             <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request.
           </p>
-          <p>
-            For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
         </td>
       </tr>
 
@@ -380,9 +367,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
           <p>
             <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance.
           </p>
-          <p>
-            For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
         </td>
       </tr>
       <tr>
@@ -394,12 +379,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
             <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore suggested to specify the key ring ID for a more optimized request.
           </p>
           <p>
-            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+            Note: The key ring ID of keys that are created without an <code>x-kms-key-ring</code> header is: default.
           </p>
-          <p>
-            For more information, see
-            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
         </td>
       </tr>
       <caption>

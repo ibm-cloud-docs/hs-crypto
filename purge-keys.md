@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-12"
 
 keywords: purge key, permanently delete key, remove key, destroy key
 
@@ -109,11 +109,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/purge
             <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If it is not specified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request.
           </p>
           <p>
-          The key ring ID of keys that are created without an `x-kms-key-ring` header is `default`.
+          The key ring ID of keys that are created without an <code>x-kms-key-ring</code> header is <code>default</code>.
           </p>
-          <p>
-            For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
         </td>
       </tr>
       <tr>
