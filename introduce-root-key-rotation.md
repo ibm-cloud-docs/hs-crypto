@@ -42,12 +42,13 @@ Key rotation is treated in the NIST Special Publication 800-57, Recommendation f
 
 In {{site.data.keyword.hscrypto}}, you can [rotate a root key on demand](/docs/hs-crypto?topic=hs-crypto-rotate-keys) or [by setting a rotation policy](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy), without needing to keep track of your retired root key material.
 
-<dl>
-    <dt>Setting a rotation policy for a key</dt>
-    <dd>{{site.data.keyword.hscrypto}} helps you simplify rotation for encryption keys by enabling rotation policies for keys that you generate in the service. After you create a root key, you can manage a rotation policy for the key in the {{site.data.keyword.cloud_notm}} console or with the API. <a href="/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#rotation-frequency">Choose an automatic rotation interval between 1 - 12 months for your key</a> based on your on-going security needs. When it's time to rotate the key based on the rotation interval that you specify, {{site.data.keyword.hscrypto}} automatically replaces the key with new key material.</dd>
-    <dt>Rotating keys on demand</dt>
-    <dd>As a security admin, you might want to have more control over the frequency of rotation for your keys. If you don't want to set an automatic rotation policy for a key, you can manually create a new key to replace an existing key, and then update your applications so that they reference the new key. To simplify this process, you can use {{site.data.keyword.hscrypto}} to rotate the key on demand. In this scenario, {{site.data.keyword.hscrypto}} creates and replaces the key on your behalf with each rotation request. The key retains the same metadata and key ID.</dd>
-</dl>
+
+Setting a rotation policy for a key
+:   {{site.data.keyword.hscrypto}} helps you simplify rotation for encryption keys by enabling rotation policies for keys that you generate in the service. After you create a root key, you can manage a rotation policy for the key in the {{site.data.keyword.cloud_notm}} console or with the API. [Choose an automatic rotation interval](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#rotation-frequency) between 1 - 12 months for your key based on your on-going security needs. When it's time to rotate the key based on the rotation interval that you specify, {{site.data.keyword.hscrypto}} automatically replaces the key with new key material.
+
+Rotating keys on demand
+:   As a security admin, you might want to have more control over the frequency of rotation for your keys. If you don't want to set an automatic rotation policy for a key, you can manually create a new key to replace an existing key, and then update your applications so that they reference the new key. To simplify this process, you can use {{site.data.keyword.hscrypto}} to rotate the key on demand. In this scenario, {{site.data.keyword.hscrypto}} creates and replaces the key on your behalf with each rotation request. The key retains the same metadata and key ID.
+
 
 ## How root key rotation works
 {: #how-root-key-rotation-works}
@@ -59,16 +60,17 @@ Root key rotation works by securely transitioning key material from an *Active* 
 
 Keep in mind the following considerations as you prepare to use {{site.data.keyword.hscrypto}} for rotating root keys.
 
-<dl>
-    <dt>Rotating root keys that are generated in {{site.data.keyword.hscrypto}}</dt>
-    <dd>You can use {{site.data.keyword.hscrypto}} to rotate a root key that was generated in {{site.data.keyword.hscrypto}} by setting a rotation policy for the key, or by rotating the key on demand. The metadata for the root key, such as the key ID, does not change when you rotate the key.</dd>
-    <dt>Rotating root keys that you bring to the service</dt>
-    <dd>To rotate a root key that you initially imported to the service, you must generate and provide new key material for the key. You can use {{site.data.keyword.hscrypto}} to rotate imported root keys on demand by supplying new key material as part of the rotation request. The metadata for the root key, such as the key ID, does not change when you rotate the key. Because you must provide new key material to rotate an imported key, automatic rotation policies are not available for root keys that have imported key material.</dd>
-    <dt>Managing retired root key material</dt>
-    <dd>{{site.data.keyword.hscrypto}} creates new key material after you rotate a root key. The service retires the old key material and retains the retired versions until the root key is deleted. When you use the root key for envelope encryption, {{site.data.keyword.hscrypto}} uses only the latest key material that is associated with the key. The retired key material can no longer be used to protect keys, but it remains available for unwrap operations. If {{site.data.keyword.hscrypto}} detects that you're using retired key material to unwrap DEKs, the service provides a newly wrapped DEK that's based on the latest root key material.</dd>
- <dt>Enabling root key rotation for {{site.data.keyword.cloud_notm}} data services</dt>
-    <dd>To enable these root key rotation options for your data service on {{site.data.keyword.cloud_notm}}, the data service must be integrated with {{site.data.keyword.hscrypto}}. Refer to the documentation for your {{site.data.keyword.cloud_notm}} data service, or <a href="/docs/hs-crypto?topic=hs-crypto-integrate-services">check out our list of integrated services to learn more</a>.</dd>
-</dl>
+Rotating root keys that are generated in {{site.data.keyword.hscrypto}}
+:   You can use {{site.data.keyword.hscrypto}} to rotate a root key that was generated in {{site.data.keyword.hscrypto}} by setting a rotation policy for the key, or by rotating the key on demand. The metadata for the root key, such as the key ID, does not change when you rotate the key.
+
+Rotating root keys that you bring to the service
+:   To rotate a root key that you initially imported to the service, you must generate and provide new key material for the key. You can use {{site.data.keyword.hscrypto}} to rotate imported root keys on demand by supplying new key material as part of the rotation request. The metadata for the root key, such as the key ID, does not change when you rotate the key. Because you must provide new key material to rotate an imported key, automatic rotation policies are not available for root keys that have imported key material.
+
+Managing retired root key material
+:   {{site.data.keyword.hscrypto}} creates new key material after you rotate a root key. The service retires the old key material and retains the retired versions until the root key is deleted. When you use the root key for envelope encryption, {{site.data.keyword.hscrypto}} uses only the latest key material that is associated with the key. The retired key material can no longer be used to protect keys, but it remains available for unwrap operations. If {{site.data.keyword.hscrypto}} detects that you're using retired key material to unwrap DEKs, the service provides a newly wrapped DEK that's based on the latest root key material.
+
+Enabling root key rotation for {{site.data.keyword.cloud_notm}} data services
+:   To enable these root key rotation options for your data service on {{site.data.keyword.cloud_notm}}, the data service must be integrated with {{site.data.keyword.hscrypto}}. Refer to the documentation for your {{site.data.keyword.cloud_notm}} data service, or check out our list of [integrated services to learn more](/docs/hs-crypto?topic=hs-crypto-integrate-services).
 
 When you rotate a root key in {{site.data.keyword.hscrypto}}, you're not charged extra fees. You can continue to unwrap your wrapped data encryption keys (WDEKs) with retired key material at no extra cost. For more information about our pricing options, see the [{{site.data.keyword.hscrypto}} catalog page](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services).
 {: tip}

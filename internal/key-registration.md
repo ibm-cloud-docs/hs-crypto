@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: key registration, register resources, service integration, protected resource, view crn, registraion api
 
@@ -36,20 +36,12 @@ When you register cloud resources with {{site.data.keyword.hscrypto}}, {{site.da
 ## Planning for registration
 {: #plan-for-registration}
 
-<dl>
-    <dt>
-    Registering new resources
-    </dt>
-    <dd>
-    When your customers create a new resource, such as a {{site.data.keyword.cos_full_notm}} bucket, they can choose to encrypt the resource with an existing root key. At resource creation, your service must <a href="#create-registration">create a registration</a> between the new resource and the {{site.data.keyword.hscrypto}} key.
-    </dd>
-    <dt>
-    Registering existing resources
-    </dt>
-    <dd>
-    If your service is already integrated with {{site.data.keyword.hscrypto}} for enhanced security, your service must <a href="#register-existing-resources">register existing resources</a> retroactively. When your service registers all existing resources, customers can see a full view of the cloud resources that are already protected by {{site.data.keyword.hscrypto}} keys.
-    </dd>
-</dl>
+Registering new resources
+:   When your customers create a new resource, such as a {{site.data.keyword.cos_full_notm}} bucket, they can choose to encrypt the resource with an existing root key. At resource creation, your service must [create a registration](#create-registration) between the new resource and the {{site.data.keyword.hscrypto}} key.
+
+Registering existing resources
+:   If your service is already integrated with {{site.data.keyword.hscrypto}} for enhanced security, your service must [register existing resources](#register-existing-resources) retroactively. When your service registers all existing resources, customers can see a full view of the cloud resources that are already protected by {{site.data.keyword.hscrypto}} keys.
+
 
 ## Registering new resources
 {: #register-new-resources}

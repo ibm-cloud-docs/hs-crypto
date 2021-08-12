@@ -32,31 +32,35 @@ The following architecture diagram shows how you interact with {{site.data.keywo
 
 The following list explains each component in detail.
 
-<dl>
-<dt>Key management API</dt>
-<dd>The API that you use to interact with the key management service (KMS) module to manage root keys and standard keys.</dd>
+Key management API
+:   The API that you use to interact with the key management service (KMS) module to manage root keys and standard keys.
 
-<dt>PKCS #11 API</dt>
-<dd>The industry standard API to perform cryptographic operations. {{site.data.keyword.hscrypto}} implements API functions with the PKCS #11 library that interacts with the Enterprise PKCS #11 (EP11) module in the cloud HSM.</dd>
+PKCS #11 API
+:   The industry standard API to perform cryptographic operations. {{site.data.keyword.hscrypto}} implements API functions with the PKCS #11 library that interacts with the Enterprise PKCS #11 (EP11) module in the cloud HSM.
 
-<dt>GREP11 API</dt>
-<dd>The abbreviation of Enterprise PKCS #11 over gRPC API. It is a stateless interface for cryptographic operations, which also leverages the EP11 module in the cloud HSM.</dd>
+GREP11 API
+:   The abbreviation of Enterprise PKCS #11 over gRPC API. It is a stateless interface for cryptographic operations, which also leverages the EP11 module in the cloud HSM.
 
-<dt>Management Utilities</dt>
-<dd>The Management Utilities are composed of the Smart Card Utility Program and the Trusted Key Entry (TKE) application, which provide GUI for you to initialize service instances. With signature keys and master key parts that are stored on smart cards, the Management Utilities provide an approach to initializing service instances with the highest level of security.</dd>
+Management Utilities
+:   The Management Utilities are composed of the Smart Card Utility Program and the Trusted Key Entry (TKE) application, which provide GUI for you to initialize service instances. With signature keys and master key parts that are stored on smart cards, the Management Utilities provide an approach to initializing service instances with the highest level of security.
 
-<dt>TKE CLI plug-in</dt>
-<dd>A CLI plug-in working with {{site.data.keyword.cloud_notm}} CLI for you to initialize service instances. Depending on whether recovery crypto units are assigned to your instance, the plug-in provides two ways for instance initialization: by using recovery crypto units and by using key part files.</dd>
+TKE CLI plug-in
+:   A CLI plug-in working with {{site.data.keyword.cloud_notm}} CLI for you to initialize service instances. Depending on whether recovery crypto units are assigned to your instance, the plug-in provides two ways for instance initialization: by using recovery crypto units and by using key part files.
 
-<dt>Operational crypto unit</dt>
-<dd>Each service instance is composed of multiple operational crypto units. The operational crypto units are located in different availability zones of the same region for high availability. They are used to manage encryption keys and perform cryptographic operations. The number of crypto units that you specify when you create your instance is the number of operational crypto units.</dd>
+Operational crypto unit
+:   Each service instance is composed of multiple operational crypto units. The operational crypto units are located in different availability zones of the same region for high availability. They are used to manage encryption keys and perform cryptographic operations. The number of crypto units that you specify when you create your instance is the number of operational crypto units.
 
-<dt>Recovery crypto unit</dt>
-<dd>The purpose of recovery crypto units is to generate a random master key value and to save a backup copy of the master key value. You can use recovery crypto units to load the master key and restore the master key when it is destroyed or lost. <p class="note">Currently, recovery crypto units are enabled only in the region of Dallas (`us-south`) and Washington DC (`us-east`). If you create your instance in either of the two regions, two recovery crypto units are automatically assigned to your instance without extra costs: one is in the `us-south`; the other is in the `us-east`.</p></dd>
+Recovery crypto unit
+:   The purpose of recovery crypto units is to generate a random master key value and to save a backup copy of the master key value. You can use recovery crypto units to load the master key and restore the master key when it is destroyed or lost.
 
-<dt>Failover crypto unit</dt>
-<dd>Failover crypto units back up the operational crypto units in another region, which includes keystores that store encryption keys. When a regional disaster occurs, you can use failover crypto units to ensure production workloads and avoid data loss. <p class="note">Currently, failover crypto units are available only in the region of Dallas (`us-south`) and Washington DC (`us-east`). If you create your instance in either of the two regions, you can choose whether to enable the failover crypto units with [extra charges](/docs/hs-crypto?topic=hs-crypto-faq-pricing).</p></dd>
-</dl>
+    Currently, recovery crypto units are enabled only in the region of Dallas (`us-south`) and Washington DC (`us-east`). If you create your instance in either of the two regions, two recovery crypto units are automatically assigned to your instance without extra costs: one is in the `us-south`; the other is in the `us-east`.
+    {: note}
+
+Failover crypto unit
+:   Failover crypto units back up the operational crypto units in another region, which includes keystores that store encryption keys. When a regional disaster occurs, you can use failover crypto units to ensure production workloads and avoid data loss.
+
+    Currently, failover crypto units are available only in the region of Dallas (`us-south`) and Washington DC (`us-east`). If you create your instance in either of the two regions, you can choose whether to enable the failover crypto units with [extra charges](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
+    {: note}
 
 For more information about the {{site.data.keyword.hscrypto}} components, see [Components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
 

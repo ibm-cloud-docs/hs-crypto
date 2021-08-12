@@ -49,16 +49,13 @@ Currently, the `us-south` and `us-east` regions are enabled with recovery crypto
 
 {{site.data.keyword.hscrypto}} offers two connectivity options for interacting with the service APIs.
 
-<dl>
-    <dt>Public endpoints</dt>
-        <dd>By default, you can connect to resources in your account over the {{site.data.keyword.cloud_notm}} public network. Your data is encrypted in transit by using the Transport Security Layer (TLS) 1.2 protocol.
-        </dd>
-    <dt>Private endpoints</dt>
-        <dd>
-        <p>For added benefits, you can also enable <a href="/docs/account?topic=account-vrf-service-endpoint" target="_blank" class="external"> virtual routing and forwarding (VRF) and service endpoints</a> for your infrastructure account. When you enable VRF for your account, you can connect to {{site.data.keyword.hscrypto}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network.</p>
-        <p>To learn how to connect to {{site.data.keyword.hscrypto}} by using a private endpoint, see <a href="/docs/hs-crypto?topic=hs-crypto-secure-connection">Connecting to {{site.data.keyword.hscrypto}} on the {{site.data.keyword.cloud_notm}} private network</a>.</p>
-        </dd>
-</dl>
+Public endpoints
+:   By default, you can connect to resources in your account over the {{site.data.keyword.cloud_notm}} public network. Your data is encrypted in transit by using the Transport Security Layer (TLS) 1.2 protocol.
+
+Private endpoints
+:   For added benefits, you can also enable [virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) and service endpoints for your infrastructure account. When you enable VRF for your account, you can connect to {{site.data.keyword.hscrypto}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network.
+:   To learn how to connect to {{site.data.keyword.hscrypto}} by using a private endpoint, see [Connecting to {{site.data.keyword.hscrypto}} on the {{site.data.keyword.cloud_notm}} private network](/docs/hs-crypto?topic=hs-crypto-secure-connection).
+
 
 ## Service endpoints
 {: #service-endpoints}

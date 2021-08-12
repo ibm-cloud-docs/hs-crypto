@@ -55,15 +55,14 @@ With envelope encryption, {{site.data.keyword.hscrypto}} protects your at-rest d
 
 The following keys are used in envelope encryption for the advanced encryption and management of data.
 
-<dl>
-    <dt>Master keys</dt>
-    <dd>Master keys, also known as HSM master keys, are encryption keys used to protect the {{site.data.keyword.hscrypto}} instances. The master key provides full control of the hardware security module and ownership of the root of trust that encrypts the entire hierarchy of keys, including <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">root keys</a> and <a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept">standard keys</a>.</dd>
-    <dt>Root keys</dt>
-    <dd>Root keys, also known as customer root keys (CRKs), are primary resources in {{site.data.keyword.hscrypto}}. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other keys that are stored in a data service. With {{site.data.keyword.hscrypto}}, you can create, store, and manage the lifecycle of root keys to achieve full control of other keys stored in the cloud.</dd>
-    <dt>Data encryption keys</dt>
-    <dd>Data encryption keys (DEKs) are cryptographic keys that you use for data encryption. They are provided by user-owned applications and are used to encrypt data stored in applications. Root keys that are managed in {{site.data.keyword.hscrypto}} serve as wrapping keys to protect DEKs.</dd>
-    
-</dl>
+Master keys
+:   Master keys, also known as HSM master keys, are encryption keys used to protect the {{site.data.keyword.hscrypto}} instances. The master key provides full control of the hardware security module and ownership of the root of trust that encrypts the entire hierarchy of keys, including [root keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept) and [standard keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept).
+
+Root keys
+:   Root keys, also known as customer root keys (CRKs), are primary resources in {{site.data.keyword.hscrypto}}. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other keys that are stored in a data service. With {{site.data.keyword.hscrypto}}, you can create, store, and manage the lifecycle of root keys to achieve full control of other keys stored in the cloud.
+
+Data encryption keys
+:   Data encryption keys (DEKs) are cryptographic keys that you use for data encryption. They are provided by user-owned applications and are used to encrypt data stored in applications. Root keys that are managed in {{site.data.keyword.hscrypto}} serve as wrapping keys to protect DEKs.
 
 After you create a key in {{site.data.keyword.hscrypto}}, the system returns a key ID that is used to uniquely identify the key resource. You can use this ID value to make API calls to the service.
 
