@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-12"
 
 keywords: disaster recovery, restore, recovery, cross region restore, support ticket, support center
 
@@ -63,7 +63,7 @@ To restore a backup to an existing service instance, follow these steps:
     </tr>
     <tr>
       <td>Description</td>
-      <td>Enter your [service instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID) and the region that your service instance resides in.</td>
+      <td>Enter your <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">service instance ID</a> and the region that your service instance resides in.</td>
     </tr>
     <tr>
       <td>Selected resources (optional)</td>

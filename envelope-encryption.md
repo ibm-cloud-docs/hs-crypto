@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-12"
 
 keywords: encryption at rest, envelope encryption, root key, data encryption key, key encryption key, key protect, protect data encryption key, encrypt data encryption key, wrap data encryption key, unwrap data encryption key
 
@@ -33,7 +33,7 @@ With envelope encryption, {{site.data.keyword.hscrypto}} protects your at-rest d
     <th>Description</th>
     <tr>
     <td>Customer-managed encryption keys</td>
-    <td>With the service, you can provision root keys to protect the security of your encrypted data in the cloud. Root keys serve as key-wrapping keys, which help you manage and safeguard the data encryption keys (DEKs) provisioned in {{site.data.keyword.cloud_notm}} data services. You decide whether to [import your existing root keys](/docs/hs-crypto?topic=hs-crypto-import-root-keys), or have {{site.data.keyword.hscrypto}} [generate root keys on your behalf](/docs/hs-crypto?topic=hs-crypto-create-root-keys).</td>
+    <td>With the service, you can provision root keys to protect the security of your encrypted data in the cloud. Root keys serve as key-wrapping keys, which help you manage and safeguard the data encryption keys (DEKs) provisioned in {{site.data.keyword.cloud_notm}} data services. You decide whether to <a href="/docs/hs-crypto?topic=hs-crypto-import-root-keys">import your existing root keys</a>, or have {{site.data.keyword.hscrypto}} <a href="/docs/hs-crypto?topic=hs-crypto-create-root-keys">generate root keys on your behalf</a>.</td>
     </tr>
     <tr>
     <td>Confidentiality and integrity protection</td>
@@ -45,7 +45,7 @@ With envelope encryption, {{site.data.keyword.hscrypto}} protects your at-rest d
     </tr>
     <tr>
     <td>Delegated user access control</td>
-    <td>By assigning {{site.data.keyword.iamshort}} (IAM) roles, {{site.data.keyword.hscrypto}} supports a centralized access control system to enable granular access for your keys. You can see [Granting access to keys](/docs/hs-crypto?topic=hs-crypto-grant-access-keys) for detailed information.</td>
+    <td>By assigning {{site.data.keyword.iamshort}} (IAM) roles, {{site.data.keyword.hscrypto}} supports a centralized access control system to enable granular access for your keys. You can see <a href="/docs/hs-crypto?topic=hs-crypto-grant-access-keys">Granting access to keys</a> for detailed information.</td>
     </tr>
     <caption>Table 1. Describes the benefits of customer-managed encryption</caption>
 </table>

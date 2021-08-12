@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-12"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -203,19 +203,19 @@ Some common fields are available for {{site.data.keyword.hscrypto}} to use outsi
       <th>Description</th>
     </tr>
     <tr>
-      <td><p><varname>`requestData.requestURI`</varname></p></td>
+      <td><p><varname><code>requestData.requestURI</code></varname></p></td>
       <td>
         <p>The URI of the API request that was made.</p>
       </td>
     </tr>
     <tr>
-      <td><p><varname>`requestData.instanceID`</varname></p></td>
+      <td><p><varname><code>requestData.instanceID</code></varname></p></td>
       <td>
         <p>The unique identifier of your {{site.data.keyword.hscrypto}} service instance.</p>
       </td>
     </tr>
      <tr>
-      <td><p><varname>`correlationId`</varname></p></td>
+      <td><p><varname><code>correlationId</code></varname></p></td>
       <td>
         <p>The unique identifier of the API request that generated the event.</p>
         <p>Note: This field is not supported in TKE events.</p>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -76,15 +76,15 @@ On the {{site.data.keyword.hscrypto}} dashboard, do the following to view EP11 k
     <tr>
       <td>Class</td>
       <td>
-        <p>The class of the key. Possible values are **Public**, **Private**, and **Secret**. The value is determined by the CKA_CLASS key attribute.</p>
-        <p>**Public** indicates that the key is the public key of an asymmetric key pair. **Private** indicates that the key is the private key of an asymmetric key pair. **Secret** indicates the key is a symmetric key.</p>
+        <p>The class of the key. Possible values are <strong>Public</strong>, <strong>Private</strong>, and <strong>Secret</strong>. The value is determined by the CKA_CLASS key attribute.</p>
+        <p><strong>Public</strong> indicates that the key is the public key of an asymmetric key pair. <strong>Private</strong> indicates that the key is the private key of an asymmetric key pair. <strong>Secret</strong> indicates the key is a symmetric key.</p>
       </td>
     </tr>
     <tr>
       <td>Version</td>
       <td>
         <p>The version number of the key.</p>
-        <p>When the key is first created, version 0 is assigned. The version number is increased by 1 sequentially upon each update, such as using the `C_SetAttributeValue` function to update a key attribute value.</p>
+        <p>When the key is first created, version 0 is assigned. The version number is increased by 1 sequentially upon each update, such as using the <code>C_SetAttributeValue</code> function to update a key attribute value.</p>
       </td>
     </tr>
     <tr>
@@ -148,7 +148,7 @@ Complete the following steps to create an EP11 key:
       <td>Keystore</td>
       <td>
         <p>The unique identifier of the keystore with the keystore type appended. Choose one that you want the key to be stored in from the list. For an asymmetric key pair, you need to specify the keystore separately to store the public key and the private key.</p>
-        <p>You can find all available keystores by clicking the **EP11 keystores** tab in the side menu.</p>
+        <p>You can find all available keystores by clicking the <strong>EP11 keystores</strong> tab in the side menu.</p>
       </td>
     </tr>
         <caption>Table 2. Describes the Identifier page</caption>

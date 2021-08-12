@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: view resoure, root key encryption resources, protected resource, protected service, envelope encryption, key registration, view registration, list registrations
 
@@ -60,16 +60,16 @@ You can browse the registrations that are available between your {{site.data.key
       <th>Description</th>
     </tr>
     <tr>
-      <td>`Resource name`</td>
+      <td><code>Resource name</code></td>
       <td>The name of the cloud resource, such as a Cloud Object Storage bucket, that is associated with the key.</td>
     </tr>
     <tr>
-      <td>`Service name`</td>
+      <td><code>Service name</code></td>
       <td>The name of the {{site.data.keyword.cloud_notm}} service instance that the resource resides in.</td>
     </tr>
     <tr>
-      <td>`Retention policy`</td>
-      <td>Whether the cloud resource has a retention policy. If the value is `True`, a retention policy is enabled for the cloud resource, and the key that is associated with the cloud resource can't be deleted. If the value is `False`, the retention policy isn't enabled.</td>
+      <td><code>Retention policy</code></td>
+      <td>Whether the cloud resource has a retention policy. If the value is <code>True</code>, a retention policy is enabled for the cloud resource, and the key that is associated with the cloud resource can't be deleted. If the value is <code>False</code>, the retention policy isn't enabled.</td>
     </tr>
     <caption>Table 2. Describes the <strong>View associated resources</strong> table</caption>
     </table>
@@ -84,27 +84,27 @@ You can browse the registrations that are available between your {{site.data.key
       <th>Description</th>
     </tr>
     <tr>
-      <td>`Created`</td>
+      <td><code>Created</code></td>
       <td>The date and time that the resource was first associated with the key. </td>
     </tr>
     <tr>
-      <td>`Last updated`</td>
+      <td><code>Last updated</code></td>
       <td>The date and time that the registration was updated.</td>
     </tr>
     <tr>
-      <td>`Description`</td>
+      <td><code>Description</code></td>
       <td>The description of the registration.</td>
     </tr>
     <tr>
-      <td>`Key version ID`</td>
+      <td><code>Key version ID</code></td>
       <td>The version of the root key that's protecting the cloud resource.</td>
     </tr>
     <tr>
-      <td>`Key version date`</td>
+      <td><code>Key version date</code></td>
       <td>The date and time that the root key version was updated.</td>
     </tr>
     <tr>
-      <td>`Cloud resource name`</td>
+      <td><code>Cloud resource name</code></td>
       <td>Represents the cloud resource that is associated with the key, including the Cloud Resource Name (CRN), version, cname, ctype, and so on. </td>
     </tr>
     <caption>Table 3. Describes the properties that are associated with a resource</caption>
@@ -127,24 +127,24 @@ You can use the search field to search for any resources associated with the roo
       <th>Description</th>
     </tr>
     <tr>
-      <td>`Resource name`</td>
+      <td><code>Resource name</code></td>
       <td>The name of the cloud resource, such as a Cloud Object Storage bucket, that is associated with the key.</td>
     </tr>
     <tr>
-      <td>`Key name`</td>
+      <td><code>Key name</code></td>
       <td>The human-readable name that identifies the root key that is associated with the specified cloud resource.</td>
     </tr>
     <tr>
-      <td>`Key ID`</td>
+      <td><code>Key ID</code></td>
       <td>The ID that identifies the root key that is associated with the specified cloud resource.</td>
     </tr>
     <tr>
-      <td>`Service name`</td>
+      <td><code>Service name</code></td>
       <td>The name of the {{site.data.keyword.cloud_notm}} service instance that the resource resides in.</td>
     </tr>
     <tr>
-      <td>`Retention policy`</td>
-      <td>Indicates whether the cloud resource can be erased. If the value is `Enabled`, the cloud resource can't be erased, and the key that is associated with the cloud resource can't be deleted. If the value is `Disabled`, the cloud resource can be erased. You can delete the key that is associated with the cloud resource if needed.</td>
+      <td><code>Retention policy</code></td>
+      <td>Indicates whether the cloud resource can be erased. If the value is <code>Enabled</code>, the cloud resource can't be erased, and the key that is associated with the cloud resource can't be deleted. If the value is <code>Disabled</code>, the cloud resource can be erased. You can delete the key that is associated with the cloud resource if needed.</td>
     </tr>
     <caption>Table 4. Describes the <strong>Associated resources</strong> table</caption>
     </table>
@@ -159,27 +159,27 @@ You can use the search field to search for any resources associated with the roo
       <th>Description</th>
     </tr>
     <tr>
-      <td>`Created`</td>
+      <td><code>Created</code></td>
       <td>The date and time that the resource was first associated with the key. </td>
     </tr>
     <tr>
-      <td>`Last updated`</td>
+      <td><code>Last updated</code></td>
       <td>The date and time that the registration was updated.</td>
     </tr>
     <tr>
-      <td>`Description`</td>
+      <td><code>Description</code></td>
       <td>The description of the registration.</td>
     </tr>
     <tr>
-      <td>`Key version ID`</td>
+      <td><code>Key version ID</code></td>
       <td>The version of the root key that's protecting the cloud resource.</td>
     </tr>
     <tr>
-      <td>`Key version date`</td>
+      <td><code>Key version date</code></td>
       <td>The date and time that the root key version was updated.</td>
     </tr>
     <tr>
-      <td>`Cloud resource name`</td>
+      <td><code>Cloud resource name</code></td>
       <td>Represents the cloud resource that is associated with the key, including the Cloud Resource Name (CRN), version, cname, ctype, and so on.</td>
     </tr>
     <caption>Table 5. Describes the properties that are associated with a resource</caption>
@@ -371,9 +371,8 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/registrations?ur
       <tr>
         <td><varname>url_encoded_CRN_query</varname></td>
         <td>
-          <p>Filters for resources that are associated with a specified [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) by using URL encoded
-        wildcard characters (`*`). The parameter needs to contain all CRN segments and must be URL encoded.</p>
-          <p>To view examples, see [CRN query examples](#crn-query-examples).</p>
+          <p>Filters for resources that are associated with a specified [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) by using URL encoded wildcard characters (<code>*</code>). The parameter needs to contain all CRN segments and must be URL encoded.</p>
+          <p>To view examples, see <a href="#crn-query-examples">CRN query examples</a>.</p>
         </td>
       </tr>
       <tr>

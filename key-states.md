@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-12"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle
 
@@ -53,95 +53,18 @@ Key states affect whether an action that is performed on a key succeeds or fails
 
 The following table shows how {{site.data.keyword.hscrypto}} handles service actions based on the state of a key. The column headers represent the key states, and the row headers represent the actions that you can perform on a key. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the action on a key is expected to succeed based on the key state.
 
-<table>
-    <tr>
-    <th>Action</th>
-    <th>Active</th>
-    <th>Suspended</th>
-    <th>Deactivated</th>
-    <th>Destroyed</th>
-    </tr>
-
-    <tr>
-    <td>Get key.</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    </tr>
-
-    <tr>
-    <td>List keys.</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    <td></td>
-    </tr>
-
-    <tr>
-    <td>Rotate key.</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-
-    <tr>
-    <td>Wrap key.</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-
-    <tr>
-    <td>Unwrap key.</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    <td></td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    <td></td>
-    </tr>
-
-    <tr>
-    <td>Rewrap key.</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    <td></td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    <td></td>
-    </tr>
-
-    <tr>
-    <td>Disable key.</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-
-    <tr>
-    <td>Enable key.</td>
-    <td></td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    <td></td>
-    <td></td>
-    </tr>
-
-    <tr>
-    <td>Delete key.</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    <td></td>
-    </tr>
-
-    <tr>
-    <td>Restore key.</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>![checkmark icon](../icons/checkmark-icon.svg "Checkmark")</td>
-    </tr>
-</table>
+| Action | Active | Suspended | Deactivated | Destroyed |
+| --- | --- | --- | --- | --- |
+| Get key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
+| List keys. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |
+| Rotate key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |     |     |
+| Wrap key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |     |     |
+| Unwrap key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |
+| Rewrap key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |
+| Disable key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |     |     |
+| Enable key. |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |     |
+| Delete key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |
+| Restore key. |     |     |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 {: caption="Table 2. Describes how key states affect service actions." caption-side="bottom"}
 
 ## Monitoring for lifecycle changes

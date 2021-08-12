@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-12"
 
 keywords: error message, error code, error, tke error, tke error message, hpcs error messages, hyper protect crypto services error message
 
@@ -57,7 +57,7 @@ These are the error messages sorted by the HTTP status code.
     </tr>
     <tr>
     <td>HTTP 401 - Unauthorized</td>
-    <td>Unauthorized: Your access token is invalid, expired, or does not have the necessary permissions to access this instance. - [details](#error-messages-tke-unauthorized-t-err)</td>
+    <td>Unauthorized: Your access token is invalid, expired, or does not have the necessary permissions to access this instance. - <a href="#error-messages-tke-unauthorized-t-err">details</a></td>
     </tr>
     <tr>
     <td>HTTP 403 - Forbidden</td>

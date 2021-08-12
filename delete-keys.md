@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-12"
 
 keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 
@@ -258,7 +258,7 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
         <p>
           <strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
         </p>
-        <p>For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).</p>
+        <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
       </td>
     </tr>
 
@@ -284,7 +284,7 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
         <p>
           <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request.
         </p>
-        <p>For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).</p>
+        <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
       </td>
     </tr>
 
@@ -296,7 +296,7 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
         <p>
           <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance.
         </p>
-        <p>For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).</p>
+        <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
       </td>
     </tr>
     <tr>

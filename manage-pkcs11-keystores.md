@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-12"
 
 keywords: pkcs11 keystore, ep11 keystore, create pkcs11 keystore, generate pkcs11 keystore, view ep11 keystore, delete ep11 keystore, view pkcs11 keystore
 
@@ -75,8 +75,8 @@ An EP11 keystore table is displayed with the following details.
 <tr>
     <td>Type</td>
     <td>
-    <p>The type of the keystore. Possible values are **Public** and **Private**.</p>
-    <p>The database-backed EP11 keystores are composed of two types of keystores: public keystores for storing less sensitive EP11 keys that can be accessed by any user types and private keystores for storing sensitive EP11 keys that can be accessed by normal users only. For more information about keystores, see [Introducing keystore](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-keystore-intro).</p>
+    <p>The type of the keystore. Possible values are <strong>Public</strong> and <strong>Private</strong>.</p>
+    <p>The database-backed EP11 keystores are composed of two types of keystores: public keystores for storing less sensitive EP11 keys that can be accessed by any user types and private keystores for storing sensitive EP11 keys that can be accessed by normal users only. For more information about keystores, see <a href="/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-keystore-intro">Introducing keystore</a>.</p>
     </td>
 </tr>
     <caption>Table 1. Describes the EP11 keystores table</caption>

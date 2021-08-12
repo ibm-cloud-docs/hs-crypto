@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: error message, error code, error, kms error, key management error message, hpcs error messages, hyper protect crypto services error message
 
@@ -136,7 +136,7 @@ These are the error messages that are sorted by the HTTP status code.
     </tr>
     <tr>
     <td>HTTP 401 - Unauthorized</td>
-    <td>Unauthorized: The user does not have access to the specified resource - [details](#error-messages-unauthorized-err)</td>
+    <td>Unauthorized: The user does not have access to the specified resource - <a href="#error-messages-unauthorized-err">details</a></td>
     </tr>
     <tr>
     <td>HTTP 403 - Forbidden</td>
@@ -167,7 +167,7 @@ These are the error messages that are sorted by the HTTP status code.
     </tr>
     <tr>
     <td>HTTP 410 - Gone</td>
-    <td>Key has already been deleted: Please delete references to this key - [details](#error-messages-key-deleted-err)</td>
+    <td>Key has already been deleted: Please delete references to this key - <a href="#error-messages-key-deleted-err">details</a></td>
     </tr>
     <tr>
     <td>HTTP 422 - Unprocessable Entity</td>
@@ -183,7 +183,7 @@ These are the error messages that are sorted by the HTTP status code.
     </tr>
     <tr>
     <td>HTTP 500 - Internal Server Error</td>
-    <td>Key metadata became corrupted: Please delete this key - [details](#error-messages-incomplete-metadata-err)</td>
+    <td>Key metadata became corrupted: Please delete this key - <a href="#error-messages-incomplete-metadata-err">details</a></td>
     </tr>
 </table>
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -63,14 +63,13 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
         <td>
           <p>(Optional) One or more unique, human-readable aliases that you want to assign to your key for easy recognition.</p>
           <p>Alias size can be 2 - 90 characters. You can set up to five key aliases for the key, with each separated by a comma.</p>
-          <p>Note: Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`.
-          </p>
+          <p>Note: Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: <code>allowed_ip</code>, <code>key</code>, <code>keys</code>, <code>metadata</code>, <code>policy</code>, <code>policies</code>, <code>registration</code>, <code>registrations</code>, <code>ring</code>, <code>rings</code>, <code>rotate</code>, <code>wrap</code>, <code>unwrap</code>, <code>rewrap</code>, <code>version</code>, <code>versions</code>.</p>
         </td>
       </tr>
       <tr>
         <td>Key ring ID</td>
         <td>
-          <p>Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key will be added to the `default` key ring.</p>
+          <p>Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key will be added to the <code>default</code> key ring.</p>
           <p>For more information about key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
           </p>
         </td>
@@ -78,7 +77,7 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
       <tr>
         <td>Key material</td>
         <td>
-          <p>The base64 encoded key material, such as an existing key-wrapping key, that you want to store and manage in the service. For more information, see [Base64 encoding your key material](#encode-key-material-root-key).</p>
+          <p>The base64 encoded key material, such as an existing key-wrapping key, that you want to store and manage in the service. For more information, see <a href="#encode-key-material-root-key">Base64 encoding your key material</a>.</p>
           <p>Ensure that the key material meets the following requirements:</p>
           <p>
             <ul>
@@ -91,7 +90,7 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
       <tr>
         <td>Expiration date</td>
         <td>
-          <p>(Optional) Set the date and time when the key gets expired. After the expiration date, the key moves into the _Deactivated_ state. For more information about key state, see [Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-key-states).</p>
+          <p>(Optional) Set the date and time when the key gets expired. After the expiration date, the key moves into the _Deactivated_ state. For more information about key state, see <a href="/docs/hs-crypto?topic=hs-crypto-key-states">Monitoring the lifecycle of encryption keys</a>.</p>
         </td>
       </tr>
       <tr>
@@ -186,7 +185,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
         <tr>
           <td><varname>key_material</varname></td>
           <td>
-            <p>The base64 encoded key material, such as an existing key-wrapping key, that you want to store and manage in the service. For more information, see [Base64 encoding your key material](#encode-key-material-root-key).</p>
+            <p>The base64 encoded key material, such as an existing key-wrapping key, that you want to store and manage in the service. For more information, see <a href="#encode-key-material-root-key">Base64 encoding your key material</a>.</p>
             <p>Ensure that the key material meets the following requirements:</p>
             <p>
               <ul>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -54,7 +54,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
       </tr>
       <tr>
         <td>ID</td>
-        <td>A unique key ID that was assigned to your key by the {{site.data.keyword.hscrypto}} service. You can use the ID value to make calls to the service with the [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto).</td>
+        <td>A unique key ID that was assigned to your key by the {{site.data.keyword.hscrypto}} service. You can use the ID value to make calls to the service with the <a href="https://{DomainName}/apidocs/hs-crypto">{{site.data.keyword.hscrypto}} key management API</a>.</td>
       </tr>
       <tr>
         <td>Alias</td>
@@ -70,11 +70,11 @@ If you prefer to inspect the keys in your service by using a graphical interface
       </tr>
       <tr>
         <td>State</td>
-        <td>The [key state](/docs/hs-crypto?topic=hs-crypto-key-states) based on [NIST Special Publication 800-57, Recommendation for Key Management](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0). These states include <em>Pre-active</em>, <em>Active</em>, <em>Suspended</em>, <em>Deactivated</em>, and <em>Destroyed</em>.</td>
+        <td>The <a href="/docs/hs-crypto?topic=hs-crypto-key-states">key state</a> based on <a href="https://www.nist.gov/publications/recommendation-key-management-part-1-general-0" target="_blank">NIST Special Publication 800-57, Recommendation for Key Management</a>. These states include <em>Pre-active</em>, <em>Active</em>, <em>Suspended</em>, <em>Deactivated</em>, and <em>Destroyed</em>.</td>
       </tr>
       <tr>
         <td>Origin</td>
-        <td>Indicates whether the key is imported. `Created` indicates that the key is created by the service instance; `Imported` indicates that the key is imported by the user.</td>
+        <td>Indicates whether the key is imported. <code>Created</code> indicates that the key is created by the service instance; <code>Imported</code> indicates that the key is imported by the user.</td>
       </tr>
       <tr>
         <td>Last updated</td>
@@ -90,15 +90,15 @@ If you prefer to inspect the keys in your service by using a graphical interface
       </tr>
       <tr>
         <td>Dual authorization enabled</td>
-        <td>The status of a dual authorization policy on the key. <ul><li>`True`: Dual authorization is required to delete the key.</li> <li>`False`: No prior authorization is required to delete the key.</li></ul></td>
+        <td>The status of a dual authorization policy on the key. <ul><li><code>True</code>: Dual authorization is required to delete the key.</li> <li><code>False</code>: No prior authorization is required to delete the key.</li></ul></td>
       </tr>
       <tr>
         <td>Set for deletion</td>
-        <td>Indicates whether a delete authorization is issued for a key. <ul><li>`True`: An authorization to delete this key is issued by the first user. A second user with a Manager access policy can safely delete the key.</li> <li>`False`: The key is not set for deletion. No further action is needed. </li></ul> </td>
+        <td>Indicates whether a delete authorization is issued for a key. <ul><li><code>True</code>: An authorization to delete this key is issued by the first user. A second user with a Manager access policy can safely delete the key.</li> <li><code>False</code>: The key is not set for deletion. No further action is needed. </li></ul> </td>
       </tr>
       <tr>
         <td>Deletion expiration</td>
-        <td>The date that an authorization for deletion expires for the key. If this date passes, the authorization is no longer valid. If `False` is the value for the `Dual authorization enabled` or `Set for deletion` column of the key, the `Deletion expiration` column is left empty.</td>
+        <td>The date that an authorization for deletion expires for the key. If this date passes, the authorization is no longer valid. If <code>False</code> is the value for the <code>Dual authorization enabled</code> or <code>Set for deletion</code> column of the key, the <code>Deletion expiration</code> column is left empty.</td>
       </tr>
       <caption>Table 1. Describes the <strong>Keys</strong> table</caption>
     </table>

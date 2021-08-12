@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -113,11 +113,11 @@ After you set up the client certificate, you are no longer able to access EP11 k
     </tr>
     <tr>
       <td><varname>HPCS_CRN</varname></td>
-      <td><strong>Required.</strong> The Cloud Resource Name (CRN) of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the CRN.</td>
+      <td><strong>Required.</strong> The Cloud Resource Name (CRN) of your {{site.data.keyword.hscrypto}} instance. You can use the <code>ibmcloud resource service-instances --long</code> command to retrieve the CRN.</td>
     </tr>
     <tr>
       <td><varname>ADMIN_PRIV_KEY</varname></td>
-      <td><strong>Required.</strong> The file path of your current private key on your local workstation that you generate or update in [Step 1](#enable-authentication-ep11-step1-signature). The private key is used to sign this command action towards your instance certificate manager server.</td>
+      <td><strong>Required.</strong> The file path of your current private key on your local workstation that you generate or update in <a href="#enable-authentication-ep11-step1-signature">Step 1</a>. The private key is used to sign this command action towards your instance certificate manager server.</td>
     </tr>
     <tr>
       <td><varname>CERT_ID</varname></td>
@@ -228,7 +228,7 @@ If you no longer need the second layer of authentication, you can disable the fu
     </tr>
     <tr>
       <td><varname>HPCS_CRN</varname></td>
-      <td><strong>Required.</strong> The Cloud Resource Name (CRN) of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the CRN.</td>
+      <td><strong>Required.</strong> The Cloud Resource Name (CRN) of your {{site.data.keyword.hscrypto}} instance. You can use the <code>ibmcloud resource service-instances --long</code> command to retrieve the CRN.</td>
     </tr>
     <tr>
       <td><varname>ADMIN_PRIV_KEY</varname></td>
@@ -236,7 +236,7 @@ If you no longer need the second layer of authentication, you can disable the fu
     </tr>
     <tr>
       <td><varname>CERT_ID</varname></td>
-      <td><strong>Required.</strong> The string ID of the client certificate that you want to delete. You can first use the `ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN` command to list all the certificates including their IDs.</td>
+      <td><strong>Required.</strong> The string ID of the client certificate that you want to delete. You can first use the <code>ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN</code> command to list all the certificates including their IDs.</td>
     </tr>
     <caption>Table 2. Describes the variables that are needed to delete client certificates</caption>
     </table>

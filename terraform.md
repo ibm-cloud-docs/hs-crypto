@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-12"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -105,11 +105,11 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     </tr>
     <tr>
       <td>location</td>
-      <td><strong>Required</strong>. The region abbreviation, such as `us-south`, that represents the geographic area where the operational crypto units of your service instance are located. For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). As recovery crypto units are available only in `us-south` and `us-east`, only these two regions are supported if you want to use Terraform for instance initialization.</td>
+      <td><strong>Required</strong>. The region abbreviation, such as <code>us-south</code>, that represents the geographic area where the operational crypto units of your service instance are located. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions">Regions and locations</a>. As recovery crypto units are available only in <code>us-south</code> and <code>us-east</code>, only these two regions are supported if you want to use Terraform for instance initialization.</td>
     </tr>
     <tr>
       <td>plan</td>
-      <td><strong>Required</strong>. The pricing plan for your service instance. Currently, only the `standard` plan is supported. </td>
+      <td><strong>Required</strong>. The pricing plan for your service instance. Currently, only the <code>standard</code> plan is supported. </td>
     </tr>
     <tr>
       <td>units</td>
@@ -117,19 +117,19 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     </tr>
     <tr>
       <td>failover_units</td>
-      <td>**Optional**. The number of failover crypto units for your service instance. Valid values are 0, 2, or 3, and it must be less than or equal to the number of operational crypto units. If you set it 0, cross-region high availability will not be enabled. Currently, you can enable this option only in the `us-south` and `us-east` region. If you do not specify the value, the default value is 0. </td>
+      <td><strong>Optional</strong>. The number of failover crypto units for your service instance. Valid values are 0, 2, or 3, and it must be less than or equal to the number of operational crypto units. If you set it 0, cross-region high availability will not be enabled. Currently, you can enable this option only in the <code>us-south</code> and <code>us-east</code> region. If you do not specify the value, the default value is 0. </td>
     </tr>
     <tr>
       <td>service_endpoints</td>
-      <td>**Optional**. The network access to your service instance. Valid values are `public-and-private` and `private-only`. If you do not specify the value, the default setting is `public-and-private`.</td>
+      <td><strong>Optional</strong>. The network access to your service instance. Valid values are <code>public-and-private</code> and <code>private-only</code>. If you do not specify the value, the default setting is <code>public-and-private</code>.</td>
     </tr>
     <tr>
       <td>tags</td>
-      <td>**Optional**. Tags that are associated with your instance are used to organize your resources. For more information about tags, see [Working with tags](/docs/account?topic=account-tag).</td>
+      <td><strong>Optional</strong>. Tags that are associated with your instance are used to organize your resources. For more information about tags, see <a href="/docs/account?topic=account-tag">Working with tags</a>.</td>
     </tr>
     <tr>
       <td>resource_group_id</td>
-      <td>**Optional**. The resource group where you want to organize and manage your service instance. If you do not specify the value, the default resource group is `Default`.</td>
+      <td><strong>Optional</strong>. The resource group where you want to organize and manage your service instance. If you do not specify the value, the default resource group is <code>Default</code>.</td>
     </tr>
     <tr>
       <td>signature_threshold</td>
@@ -156,7 +156,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
         <dd>
           <ul>
             <li>If you are using signature key files on the local workstation that are created by the TKE CLI plug-in and are not using a third-party signing service, specify the administrator password to access the corresponding signature key file.</li>
-            <li>If you are using a signing service to provide signature keys, specify the token that authorizes use of the signature key depending on the signing service definition. <p><strong>Note:</strong> The token parameter is optional. If you don't specify the token, you are prompted to enter the token value when you run Terraform commands. After the instance initialization, the value that you enter for the token parameter is stored in a `.tfstate` file. For more information about securing sensitive data in Terraform, see [Sensitive Data in State](https://www.terraform.io/docs/language/state/sensitive-data.html){: external}.</p></li>
+            <li>If you are using a signing service to provide signature keys, specify the token that authorizes use of the signature key depending on the signing service definition. <p><strong>Note:</strong> The token parameter is optional. If you don't specify the token, you are prompted to enter the token value when you run Terraform commands. After the instance initialization, the value that you enter for the token parameter is stored in a <code>.tfstate</code> file. For more information about securing sensitive data in Terraform, see <a href="https://www.terraform.io/docs/language/state/sensitive-data.html" target="_blank">Sensitive Data in State</a>.</p></li>
           </ul>
         </dd>
       </dl>
@@ -164,7 +164,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     </tr>
     <tr>
       <td>signature_server_url</td>
-      <td>**Optional**. The URL and port number where the signing service is running. If you are using a third-party signing service to provide administrator signature keys, you need to specify this parameter.</td>
+      <td><strong>Optional</strong>. The URL and port number where the signing service is running. If you are using a third-party signing service to provide administrator signature keys, you need to specify this parameter.</td>
     </tr>
     <caption>Table 1. Supported parameters for provisioning a service instance with Terraform</caption>
     </table>
