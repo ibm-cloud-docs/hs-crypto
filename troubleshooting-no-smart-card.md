@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-08-09"
 
 keywords: troubleshoot, problems, known issues, can't delete service, no smart card readers found when you start application
 
@@ -30,7 +30,7 @@ subcollection: hs-crypto
 {: support}
 
 You get an error when you start the Smart Card Utility Program or the Trusted Key Entry application. The error can occur even when two Identiv SPR332 V2 smart card readers are attached to USB ports on your workstation.
-{:shortdesc}
+{: shortdesc}
 
 You might receive the following error message:
 {: tsSymptoms}

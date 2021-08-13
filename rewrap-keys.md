@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-08-12"
 
 keywords: rewrap key, reencrypt data encryption key, rewrap api, key id
 
@@ -102,12 +102,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
             <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore suggested to specify the key ring ID for a more optimized request.
           </p>
           <p>
-            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+            Note: The key ring ID of keys that are created without an <code>x-kms-key-ring</code> header is: default.
           </p>
-          <p>
-            For more information, see
-            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
         </td>
       </tr>
       <tr>

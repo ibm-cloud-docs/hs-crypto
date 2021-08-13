@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-07-30"
+lastupdated: "2021-08-12"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -50,38 +50,38 @@ For maximum security, verify the integrity and authenticity of the PKCS #11 libr
 
 1. Download the latest version of the following files from the [library repository](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} to the same directory where you store the PKCS #11 library:
 
-  - `pkcs11-grep11-<platform>.so.<version>.sig`: The signed cryptographic hash of the PKCS #11 library, where platform is either *amd64* or *s390x* and version is the *major.minor.build* of the signature file. Both **platform** and **version** must match the respective **platform** and **version** of the PKCS #11 library that you use.
+    - `pkcs11-grep11-<platform>.so.<version>.sig`: The signed cryptographic hash of the PKCS #11 library, where platform is either *amd64* or *s390x* and version is the *major.minor.build* of the signature file. Both **platform** and **version** must match the respective **platform** and **version** of the PKCS #11 library that you use.
 
-  - `signing_cert.pem`: The signing certificate of the {{site.data.keyword.hscrypto}} PKCS #11 client files.
+    - `signing_cert.pem`: The signing certificate of the {{site.data.keyword.hscrypto}} PKCS #11 client files.
 
-  - `digicert_cert.pem`: An intermediate code signing certificate to prove the signing certificate of the {{site.data.keyword.hscrypto}} PKCS #11 client files.
+    - `digicert_cert.pem`: An intermediate code signing certificate to prove the signing certificate of the {{site.data.keyword.hscrypto}} PKCS #11 client files.
 
 2. Extract the public key from the signing certificate `signing_cert.pem` to the `sigkey.pub` file with the following command:
 
-  ```
-  openssl x509 -pubkey -noout -in signing_cert.pem -out sigkey.pub
-  ```
-  {: pre}
+    ```
+    openssl x509 -pubkey -noout -in signing_cert.pem -out sigkey.pub
+    ```
+    {: pre}
 
 3. Verify the integrity of the PKCS #11 library file with the following command:
 
-  ```
-  openssl dgst -sha256 -verify sigkey.pub -signature pkcs11-grep11-<platform>.so.<version>.sig pkcs11-grep11-<platform>.so.<version>
-  ```
-  {: pre}
+    ```
+    openssl dgst -sha256 -verify sigkey.pub -signature pkcs11-grep11-<platform>.so.<version>.sig pkcs11-grep11-<platform>.so.<version>
+    ```
+    {: pre}
 
-  Replace **platform** with either *amd64* or *s390x* and replace **version** with the *major.minor.build* of the library.
+    Replace **platform** with either *amd64* or *s390x* and replace **version** with the *major.minor.build* of the library.
 
-  When the verification is successful, `Verified OK` is displayed.
+    When the verification is successful, `Verified OK` is displayed.
 
 4. Verify the authenticity and validity of the signing certificate with the following command:
 
-  ```
-  openssl ocsp -no_nonce -issuer digicert_cert.pem -cert signing_cert.pem -VAfile digicert_cert.pem -text -url http://ocsp.digicert.com -respout ocsptest
-  ```
-  {: pre}
+    ```
+    openssl ocsp -no_nonce -issuer digicert_cert.pem -cert signing_cert.pem -VAfile digicert_cert.pem -text -url http://ocsp.digicert.com -respout ocsptest
+    ```
+    {: pre}
 
-  When the verification is successful, `Response verify OK` and `signing_cert.pem: good` are displayed in the output.
+    When the verification is successful, `Response verify OK` and `signing_cert.pem: good` are displayed in the output.
 
 5. If the verification fails, cancel the installation and [contact IBM for support](/docs/hs-crypto?topic=hs-crypto-getting-help).
 
@@ -175,7 +175,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
       </tr>
       <tr>
         <td><em>EP11_endpoint_URL</em></td>
-        <td>The {{site.data.keyword.hscrypto}} Enterprise PKCS #11 (EP11) API endpoint. You can get it through <strong>Overview</strong> &gt; <strong>Connect</strong> &gt; <strong>EP11 endpoint URL</strong> in the {{site.data.keyword.cloud_notm}} console, or you can dynamically [retrieve the endpoint URL](https://{DomainName}/apidocs/hs-crypto#getinstance){: external} with the API. Depending on whether you are using a public or [private network](/docs/hs-crypto?topic=hs-crypto-secure-connection), use the public or private EP11 endpoint URL. </td>
+        <td>The {{site.data.keyword.hscrypto}} Enterprise PKCS #11 (EP11) API endpoint. You can get it through <strong>Overview</strong> &gt; <strong>Connect</strong> &gt; <strong>EP11 endpoint URL</strong> in the {{site.data.keyword.cloud_notm}} console, or you can dynamically <a href="/apidocs/hs-crypto#getinstance" target="_blank">retrieve the endpoint URL</a> with the API. Depending on whether you are using a public or <a href="/docs/hs-crypto?topic=hs-crypto-secure-connection">private network</a>, use the public or private EP11 endpoint URL. </td>
       </tr>
       <tr>
         <td><em>EP11_endpoint_port_number</em></td>
@@ -183,7 +183,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
       </tr>
       <tr>
         <td><em>enable_mtls</em></td>
-        <td>Valid values are `true` or `false` to indicate whether you want to enable mutual TLS to add a second layer of authentication for PKCS #11 API access. By default, set it `false` as EP11 requires server-only authentication. For more information about the mutual TLS connections, see [Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11).</td>
+        <td>Valid values are <code>true</code> or <code>false</code> to indicate whether you want to enable mutual TLS to add a second layer of authentication for PKCS #11 API access. By default, set it <code>false</code> as EP11 requires server-only authentication. For more information about the mutual TLS connections, see <a href="/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11">Enabling the second layer of authentication for EP11 connections</a>.</td>
       </tr>
       <tr>
         <td><em>client_certificate</em></td>
@@ -195,30 +195,30 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
       </tr>
       <tr>
         <td><em>SO_user_name</em></td>
-        <td>The name for the Security Officer (SO) user type. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. For more information about the PKCS #11 user types, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984){: external}.</td>
+        <td>The name for the Security Officer (SO) user type. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. For more information about the PKCS #11 user types, see <a href="http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984" target="_blank">PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users</a>.</td>
       </tr>
       <tr>
         <td><em>normal_user_name</em></td>
-        <td>The name for the normal user type. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. For more information about the PKCS #11 user types, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984){: external}.</td>
+        <td>The name for the normal user type. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. For more information about the PKCS #11 user types, see <a href="http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984" target="_blank">PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users</a>.</td>
       </tr>
       <tr>
         <td><em>private_keystore_spaceid</em></td>
         <td>
-        <p>The 128-bit [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html){: external} of the private keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/).</p> <p>{{site.data.keyword.hscrypto}} provides you with two database-backed EP11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access.</p>
+        <p>The 128-bit <a href="https://www.cryptosys.net/pki/uuid-rfc4122.html" target="_blank">Universally Unique IDentifier (UUID)</a> of the private keystore. You can generate the UUID with a third-party tool, such as <a href="https://www.uuidgenerator.net/" target="_blank">UUID generator</a>.</p> <p>{{site.data.keyword.hscrypto}} provides you with two database-backed EP11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access.</p>
         </td>
       </tr>
       <tr>
         <td><em>private_keystore_password</em></td>
-        <td>Authorized sessions can be used by enabling the `sessionauth` configuration option. If the `sessionauth` option is enabled, a text password that is 6-8 characters in length is required for the `tokenspaceIDPassword` field. Authorized sessions are specific to the HSM and are used in the PKCS #11 flow to login and logout, and they are required for authenticated key operations. All keys generated using authorized sessions are stored in an authenticated and encrypted keystore. The `tokenspaceIDPassword` field is used to protect the keys in an authenticated and encrypted keystore. For each service instance, a maximum of five authenticated keystores are supported.</td>
+        <td>Authorized sessions can be used by enabling the <code>sessionauth</code> configuration option. If the <code>sessionauth</code> option is enabled, a text password that is 6-8 characters in length is required for the <code>tokenspaceIDPassword</code> field. Authorized sessions are specific to the HSM and are used in the PKCS #11 flow to login and logout, and they are required for authenticated key operations. All keys generated using authorized sessions are stored in an authenticated and encrypted keystore. The <code>tokenspaceIDPassword</code> field is used to protect the keys in an authenticated and encrypted keystore. For each service instance, a maximum of five authenticated keystores are supported.</td>
       </tr>
       <tr>
         <td><em>anonymous_user_name</em></td>
-        <td>The name for the anonymous user. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. If a user does not log in by using the `C_Login` Cryptoki function, then the user is known as an anonymous user. For more information about the PKCS #11 user types, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984){: external}.</td>
+        <td>The name for the anonymous user. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. If a user does not log in by using the <code>C_Login</code> Cryptoki function, then the user is known as an anonymous user. For more information about the PKCS #11 user types, see <a href="http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984" target="_blank">PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users</a>.</td>
       </tr>
       <tr>
         <td><em>public_keystore_spaceid</em></td>
         <td>
-          <p>The 128-bit [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html){: external} of the public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/).</p> <p>{{site.data.keyword.hscrypto}} provides you with two database-backed EP11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access.</p>
+          <p>The 128-bit <a href="https://www.cryptosys.net/pki/uuid-rfc4122.html" target="_blank">Universally Unique IDentifier (UUID)</a> of the public keystore. You can generate the UUID with a third-party tool, such as <a href="https://www.uuidgenerator.net/" target="_blank">UUID generator</a>.</p> <p>{{site.data.keyword.hscrypto}} provides you with two database-backed EP11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access.</p>
         </td>
       </tr>
       <tr>
@@ -229,7 +229,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
       </tr>
       <tr>
         <td><em>logging_level</em></td>
-        <td>The supported logging levels, in an increasing order of verboseness: `panic`, `fatal`, `error`, `warning`/`warn`, `info`, `debug`, and `trace`. The Default value is `warning`. For more information about the logging levels, see [Logging levels](http://www.thejoyofcode.com/Logging_Levels_and_how_to_use_them.aspx){: external}.</td>
+        <td>The supported logging levels, in an increasing order of verboseness: <code>panic</code>, <code>fatal</code>, <code>error</code>, <code>warning</code>/<code>warn</code>, <code>info</code>, <code>debug</code>, and <code>trace</code>. The Default value is <code>warning</code>. For more information about the logging levels, see <a href="http://www.thejoyofcode.com/Logging_Levels_and_how_to_use_them.aspx" target="_blank">Logging levels</a>.</td>
       </tr>
       <tr>
         <td><em>log_file_path</em></td>

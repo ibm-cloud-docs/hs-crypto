@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-08-12"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -30,7 +30,7 @@ You can use {{site.data.keyword.hscrypto}} to create a group of keys for a targe
 
 As an account admin, you can bundle the keys in your {{site.data.keyword.hscrypto}} instance into groups called _key rings_. A key ring is a collection of keys in your service instance that require the same IAM access permissions. For example, if you have a group of team members who need a particular type of access to a specific group of keys, you can create a key ring for those keys and assign the appropriate IAM access policy to the target user group. The users that are assigned access to the key ring can create and manage the resources that exist within the key ring.
 
-Key rings are also useful in cases where it is important for one business unit to have access to a set of keys that another business unit cannot have. An account admin can create key rings for each business unit and [assign the appropriate level of access](#grant-access-key-ring) to the appropriate users. In the case where the account admin would like to delegate platform management of a specific key ring to someone else, they can assign a user a [platform administrator role at the key ring level](/docs/account?topic=account-userroles#platformroles). The sub administrator will then have the ability to manage the key ring and grant access to the appropriate users.
+Key rings are also useful in cases where it is important for one business unit to have access to a set of keys that another business unit cannot have. An account admin can create key rings for each business unit and [assign the appropriate level of access](#grant-access-key-ring) to the appropriate users. In the case where the account admin would like to delegate platform management of a specific key ring to someone else, they can assign a user a [platform administrator role at the key ring level](/docs/account?topic=account-userroles#platformroles). The sub administrator will then be able to manage the key ring and grant access to the appropriate users.
 
 You can grant access to key rings within a {{site.data.keyword.hscrypto}} instance by using the {{site.data.keyword.cloud_notm}} console, IAM API, or IAM CLI.
 {: note}
@@ -39,15 +39,15 @@ Before you create a key ring for your {{site.data.keyword.hscrypto}} instance, k
 
 - Every {{site.data.keyword.hscrypto}} instance comes with a default key ring.
 
-  Each newly created {{site.data.keyword.hscrypto}} instance comes with a generated key ring with an ID of `default`. All keys that are not associated with a specified key ring exists within the default key ring.
+    Each newly created {{site.data.keyword.hscrypto}} instance comes with a generated key ring with an ID of `default`. All keys that are not associated with a specified key ring exist within the default key ring.
 
 - Key rings can hold root keys and standard keys, but not EP11 keys.
 
-  Key rings can contain both root and standard keys. There is no limit on how many keys can exist within a key ring. Key rings don't apply to Enterprise PKCS #11 (EP11) keys.
+    Key rings can contain both root and standard keys. There is no limit on how many keys can exist within a key ring. Key rings don't apply to Enterprise PKCS #11 (EP11) keys.
 
-- A key can only belong to one key ring at a time.
+- A key only can belong to one key ring at a time.
 
-  A key can only belong to one key ring. Key ring assignment happens upon key creation. If a key ring ID is not passed in upon creation, the key will belong to the default key ring. You can update the key ring after the key creation.
+    A key can belong to only one key ring. Key ring assignment happens upon key creation. If a key ring ID is not passed in upon creation, the key will belong to the default key ring. You can update the key ring after the key creation.
 
 
 ## Creating key rings
@@ -107,9 +107,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
           <p>
             <strong>Required.</strong> The region abbreviation, such as <code>us-south</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
           </p>
-          <p>
-            For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
         </td>
       </tr>
 
@@ -137,9 +135,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
           <p>
             <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the <code>curl</code> request.
           </p>
-          <p>
-            For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
         </td>
       </tr>
 
@@ -151,9 +147,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
           <p>
             <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance.
           </p>
-          <p>
-            For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
         </td>
       </tr>
 
@@ -200,8 +194,8 @@ To assign access to a key ring with the console, complete the following steps:
 9. Click **Add**.
 10. Continue to add platform and service access roles as needed. When you finish all the access assignment, click **Assign**.
 
-  You must assign the user must at least _Reader_ access to the entire instance in order for them to list, create, and delete key rings within the instance.
-  {: note}
+    You must assign the user must at least _Reader_ access to the entire instance in order for them to list, create, and delete key rings within the instance.
+    {: note}
 
 ## Listing key rings
 {: #list-key-ring}
@@ -251,7 +245,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
 
     Replace the variables in the example request according to the following table.
 
-  <table>
+    <table>
     <tr>
       <th>Variable</th>
       <th>Description</th>
@@ -264,9 +258,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
         <p>
           <strong>Required.</strong> The region abbreviation, such as <code>us-south</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
         </p>
-        <p>
-        For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
-        </p>
+        <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
       </td>
     </tr>
     <tr>
@@ -281,9 +273,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
         <p>
         <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the <code>curl</code> request.
         </p>
-        <p>
-        For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-        </p>
+        <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
       </td>
     </tr>
     <tr>
@@ -294,9 +284,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
         <p>
         <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance.
         </p>
-        <p>
-        For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
-        </p>
+        <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
       </td>
     </tr>
     <tr>
@@ -312,7 +300,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
     <caption>
     Table 4. Describes the variables that are needed to view key rings with the key management API.
     </caption>
-  </table>
+    </table>
 
     A successful `GET api/v2/key_rings` request returns a collection of key rings that are available in your {{site.data.keyword.hscrypto}} service instance.
 
@@ -397,9 +385,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings/<key_ring_i
           <p>
             <strong>Required.</strong> The region abbreviation, such as <code>us-south</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
           </p>
-          <p>
-            For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
         </td>
       </tr>
 
@@ -427,9 +413,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings/<key_ring_i
           <p>
             <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the <code>curl</code> request.
           </p>
-          <p>
-            For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
         </td>
       </tr>
 
@@ -442,9 +426,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings/<key_ring_i
             <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service
             instance.
           </p>
-          <p>
-            For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
         </td>
       </tr>
 

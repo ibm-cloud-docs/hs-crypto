@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-08-12"
 
 keywords: rotate, rotate root key, automatic key rotation, set rotation policy, policy based key rotation
 
@@ -43,7 +43,7 @@ If you prefer to manage policies for your root keys by using a graphical interfa
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
-5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")to open a list of options for a specific key.
+5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for a specific key.
 6. From the options menu, click **Edit key rotation policy** to manage the rotation policy for the key.
 7. Switch the **Key rotation** to **On** and move the slider to select a frequency of rotation in months.
 
@@ -135,7 +135,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
       ]
     }
     ```
-    {:screen}
+    {: screen}
 
     The `interval_month` value indicates the key rotation frequency in months.
 
@@ -237,7 +237,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
       ]
     }
     ```
-    {:screen}
+    {: screen}
 
 ### Updating a rotation policy
 {: #update-rotation-policy-api}
@@ -337,12 +337,12 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
       ]
     }
     ```
-    {:screen}
+    {: screen}
 
     The `interval_month` and `updatedat` values are updated in the policy details for the key. If a different user updates a policy for a key that you created initially, the `updatedby` value also changes to show the identifier for the person who sent the request.
-  ## What's next
-  {: #set-rotation-policy-next}
+    ## What's next
+    {: #set-rotation-policy-next}
 
-  - After you set a rotation policy and you root key is rotated, new cryptographic key material becomes available for protecting the data encryption keys (DEKs) that are associated with the root key. Learn how to reencrypt or rewrap your DEKS without exposing the keys in their plaintext form, see [Rewrapping keys](/docs/hs-crypto?topic=hs-crypto-rewrap-keys).
-  - To learn how envelope encryption helps you control the security of at-rest data in the cloud, see [Protecting data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
-  - To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+    - After you set a rotation policy and you root key is rotated, new cryptographic key material becomes available for protecting the data encryption keys (DEKs) that are associated with the root key. Learn how to reencrypt or rewrap your DEKS without exposing the keys in their plaintext form, see [Rewrapping keys](/docs/hs-crypto?topic=hs-crypto-rewrap-keys).
+    - To learn how envelope encryption helps you control the security of at-rest data in the cloud, see [Protecting data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
+    - To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](/apidocs/hs-crypto){: external}.

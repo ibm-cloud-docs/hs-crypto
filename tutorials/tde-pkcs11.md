@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-08-09"
 
 keywords: encrypt Oracle Transparent Database, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -76,14 +76,14 @@ Let's start with the {{site.data.keyword.hscrypto}} instance initialization proc
 
 1. For this tutorial, you need to [initialize a {{site.data.keyword.hscrypto}} instance first](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
-  Note down the ID of your {{site.data.keyword.hscrypto}} instance and the EP11 endpoint address. You need this information for the subsequent steps.
+    Note down the ID of your {{site.data.keyword.hscrypto}} instance and the EP11 endpoint address. You need this information for the subsequent steps.
 
 2. Generate an API key for accessing your {{site.data.keyword.hscrypto}} instance. Run the following command to create an API key for your {{site.data.keyword.cloud_notm}} account:
 
-```
-ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
-```
-{: codeblock}
+    ```
+    ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
+    ```
+    {: codeblock}
 
 3. Save the value of the API key for subsequent steps.
 
@@ -98,20 +98,22 @@ You need an Oracle Database Enterprise Edition installation with Oracle Advanced
 This tutorial uses a single instance Oracle Database 19.3 Enterprise Edition Docker container. For more information about Oracle Database containers and instructions on building a respective container, see [Oracle Database on Docker](https://github.com/oracle/docker-images/tree/master/OracleDatabase){: external}.
 
 1. Start the Oracle Database container:
-  ```
-  docker run --name oradb -p 1521:1521 -p 5500:5500 -e ORACLE_PWD=password oracle/database:19.3.0-ee
-  ```
-  {: codeblock}
 
-  Wait until instance and database creation are completed.
+    ```
+    docker run --name oradb -p 1521:1521 -p 5500:5500 -e ORACLE_PWD=password oracle/database:19.3.0-ee
+    ```
+    {: codeblock}
+
+    Wait until instance and database creation are completed.
 
 2. Run the following command from a command line on your host system:
-  ```
-  docker exec -it --user root --workdir / oradb bash
-  ```
-  {: codeblock}
 
-  This shell can be used to run the commands as `root` for the subsequent steps.
+    ```
+    docker exec -it --user root --workdir / oradb bash
+    ```
+    {: codeblock}
+
+    This shell can be used to run the commands as `root` for the subsequent steps.
 
 ### 2. Configure the {{site.data.keyword.hscrypto}} PKCS #11 library
 {: #tutorial-tde-library-setup}
@@ -212,21 +214,21 @@ logging:
 
 3. Run the following commands as `root` to install the {{site.data.keyword.hscrypto}} PKCS #11 library in your Oracle Database setup.
 
-  ```linux
-  mkdir /etc/ep11client
-  chmod a+rx /etc/ep11client/
-  cp grep11client.yaml /etc/ep11client/grep11client.yaml
-  chmod a+r /etc/ep11client/grep11client.yaml
+    ```linux
+    mkdir /etc/ep11client
+    chmod a+rx /etc/ep11client/
+    cp grep11client.yaml /etc/ep11client/grep11client.yaml
+    chmod a+r /etc/ep11client/grep11client.yaml
 
-  mkdir -p /opt/oracle/extapi/64/hsm/ibm
-  cp pkcs11-grep11.so.1.1.3 /opt/oracle/extapi/64/hsm/ibm/pkcs11-grep11.so
-  chown -R oracle:oinstall /opt/oracle/extapi
+    mkdir -p /opt/oracle/extapi/64/hsm/ibm
+    cp pkcs11-grep11.so.1.1.3 /opt/oracle/extapi/64/hsm/ibm/pkcs11-grep11.so
+    chown -R oracle:oinstall /opt/oracle/extapi
 
-  touch /tmp/grep11client.log
-  chmod a+rw /tmp/grep11client.log
-  chown oracle:oinstall /tmp/grep11client.log
-  ```
-  {: codeblock}
+    touch /tmp/grep11client.log
+    chmod a+rw /tmp/grep11client.log
+    chown oracle:oinstall /tmp/grep11client.log
+    ```
+    {: codeblock}
 
 The directory `/opt/oracle/extapi/64/hsm` and the subdirectories can contain only one library file. Remove any other library files that exist in that directory and the subdirectories.
 {: note}
@@ -236,53 +238,53 @@ The directory `/opt/oracle/extapi/64/hsm` and the subdirectories can contain onl
 
 1. Install the command-line utility OpenSC (pkcs11-tool) with the following command:
 
-  ```linux
-  sudo yum install opensc
-  ```
-  {: codeblock}
+    ```linux
+    sudo yum install opensc
+    ```
+    {: codeblock}
 
 2. Run the following command as `root` to check the library setup:
 
-  ```linux
-  pkcs11-tool --module=/opt/oracle/extapi/64/hsm/ibm/pkcs11-grep11.so -I
-  ```
-  {: codeblock}
+    ```linux
+    pkcs11-tool --module=/opt/oracle/extapi/64/hsm/ibm/pkcs11-grep11.so -I
+    ```
+    {: codeblock}
 
-  This command prints information about the manufacturer and the library, for example:
+    This command prints information about the manufacturer and the library, for example:
 
-   ```
-  Cryptoki version 2.40
-  Manufacturer     IBM ...
-  Library          GREP11 PKCS11 client ...
-  ```
-  {: codeblock}
+    ```
+    Cryptoki version 2.40
+    Manufacturer     IBM ...
+    Library          GREP11 PKCS11 client ...
+    ```
+    {: codeblock}
 
 ### 5. Initialize the {{site.data.keyword.hscrypto}} PKCS #11 library
 {: #tutorial-tde-initialize-library}
 
 1. Run the following command from a command line on your host system:
 
-  ```
-  docker exec -it oradb bash
-  ```
-  {: codeblock}
+    ```
+    docker exec -it oradb bash
+    ```
+    {: codeblock}
 
-  This shell can be used to run the commands as user `oracle` for the subsequent steps.
+    This shell can be used to run the commands as user `oracle` for the subsequent steps.
 
 2. To initialize a token, run the following commands and replace `<your_api_key>` by the API key that you created.
 
-  ```
-  pkcs11-tool  --module /opt/oracle/extapi/64/hsm/ibm/pkcs11-grep11.so --init-token --label dbtoken --so-pin=<your_api_key>
-  ```
-  {: codeblock}
+    ```
+    pkcs11-tool  --module /opt/oracle/extapi/64/hsm/ibm/pkcs11-grep11.so --init-token --label dbtoken --so-pin=<your_api_key>
+    ```
+    {: codeblock}
 
-  This command prints the following status message, for example:
+    This command prints the following status message, for example:
 
-  ```
-  Using slot 0 with a present token (0x0)
-  Token successfully initialized
-  ```
-  {: codeblock}
+    ```
+    Using slot 0 with a present token (0x0)
+    Token successfully initialized
+    ```
+    {: codeblock}
 
 ## Set up Oracle Database TDE and encrypt your data
 {: #tutorial-dte-encrypt}
@@ -292,68 +294,69 @@ Now let's take on the role of the database administrator.
 
 1. Update file 'sqlnet.ora' in directory '$ORACLE_HOME/network/admin' by adding line:
 
-  ```
-  encryption_wallet_location=(source=(method=hsm))
-  ```
-  {: codeblock}
+    ```
+    encryption_wallet_location=(source=(method=hsm))
+    ```
+    {: codeblock}
 
-  To do so, you can for example run the following command:
-  ```
-  echo "encryption_wallet_location=(source=(method=hsm))" >> $ORACLE_HOME/network/admin/sqlnet.ora
-  ```
-  {: codeblock}
+    To do so, you can for example run the following command:
 
-  Make sure that file 'sqlnet.ora' does not contain another setting for `encryption_wallet_location`.
-  {: note}
+    ```
+    echo "encryption_wallet_location=(source=(method=hsm))" >> $ORACLE_HOME/network/admin/sqlnet.ora
+    ```
+    {: codeblock}
+
+    Make sure that file 'sqlnet.ora' does not contain another setting for `encryption_wallet_location`.
+    {: note}
 
 2. Open the keystore with the following command. Replace `<your_api_key>` by the API key you created:
 
-  ```sql
-  export ORACLE_SID=<your SID, e.g. ORCLCDB>
-  sqlplus / as sysdba
-  SQL> ADMINISTER KEY MANAGEMENT SET KEYSTORE OPEN IDENTIFIED BY "<your_api_key>" CONTAINER=ALL;
-  ```
-  {: codeblock}
+    ```sql
+    export ORACLE_SID=<your SID, e.g. ORCLCDB>
+    sqlplus / as sysdba
+    SQL> ADMINISTER KEY MANAGEMENT SET KEYSTORE OPEN IDENTIFIED BY "<your_api_key>" CONTAINER=ALL;
+    ```
+    {: codeblock}
 
 3. Create the master keys with the following command. Replace `<your_api_key>` by the API key you created:
 
-  ```sql
-  SQL> ADMINISTER KEY MANAGEMENT SET KEY IDENTIFIED BY "<your_api_key>" WITH BACKUP CONTAINER=ALL;
-  ```
-  {: codeblock}
+    ```sql
+    SQL> ADMINISTER KEY MANAGEMENT SET KEY IDENTIFIED BY "<your_api_key>" WITH BACKUP CONTAINER=ALL;
+    ```
+    {: codeblock}
 
 4. create an encrypted tablespace with the following command:
 
-  ```sql
-  SQL> CREATE TABLESPACE encrypted_ts DATAFILE 'tbs1_data.dbf' SIZE 128K AUTOEXTEND ON NEXT 64K ENCRYPTION USING 'AES256' DEFAULT STORAGE(ENCRYPT);
-  ```
-  {: codeblock}
+    ```sql
+    SQL> CREATE TABLESPACE encrypted_ts DATAFILE 'tbs1_data.dbf' SIZE 128K AUTOEXTEND ON NEXT 64K ENCRYPTION USING 'AES256' DEFAULT STORAGE(ENCRYPT);
+    ```
+    {: codeblock}
 
 5. To verify the setup, you can create a table in the encrypted tablespace and insert some test data:
 
-  ```sql
-  SQL> CREATE TABLE tde_ts_test (id    NUMBER(10), data  VARCHAR2(50)) TABLESPACE encrypted_ts;
-  SQL> INSERT INTO tde_ts_test VALUES (1, 'This is a secret!');
-  SQL> COMMIT;
-  SQL> SELECT * FROM TDE_TS_TEST;
-  ```
-  {: codeblock}
+    ```sql
+    SQL> CREATE TABLE tde_ts_test (id    NUMBER(10), data  VARCHAR2(50)) TABLESPACE encrypted_ts;
+    SQL> INSERT INTO tde_ts_test VALUES (1, 'This is a secret!');
+    SQL> COMMIT;
+    SQL> SELECT * FROM TDE_TS_TEST;
+    ```
+    {: codeblock}
 
 6. You can also create a table with an encrypted column and insert some test data:
 
-  ```sql
-  SQL> CREATE USER C##test IDENTIFIED BY test;
-  SQL> GRANT UNLIMITED TABLESPACE TO C##test;
-  SQL> CREATE TABLE C##test.tde_test (id NUMBER(10), data VARCHAR2(50) ENCRYPT);
-  SQL> INSERT INTO C##test.tde_test VALUES (1, 'This is also a secret!');
-  SQL> COMMIT;
-  SQL> SELECT * FROM C##test.tde_test;
+    ```sql
+    SQL> CREATE USER C##test IDENTIFIED BY test;
+    SQL> GRANT UNLIMITED TABLESPACE TO C##test;
+    SQL> CREATE TABLE C##test.tde_test (id NUMBER(10), data VARCHAR2(50) ENCRYPT);
+    SQL> INSERT INTO C##test.tde_test VALUES (1, 'This is also a secret!');
+    SQL> COMMIT;
+    SQL> SELECT * FROM C##test.tde_test;
 
-  # Verify encrypted tablespace and encrypted column
-  SQL> SELECT TABLESPACE_NAME, ENCRYPTED FROM DBA_TABLESPACES;
-  SQL> SELECT * FROM dba_encrypted_columns ;
-  ```
-  {: codeblock}
+    # Verify encrypted tablespace and encrypted column
+    SQL> SELECT TABLESPACE_NAME, ENCRYPTED FROM DBA_TABLESPACES;
+    SQL> SELECT * FROM dba_encrypted_columns ;
+    ```
+    {: codeblock}
 
 ## Next steps
 {: #tutorial-tde-summary}

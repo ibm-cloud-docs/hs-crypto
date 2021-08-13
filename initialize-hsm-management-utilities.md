@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-30"
+lastupdated: "2021-08-12"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, smart card, trusted key entry application, tke application, management utilities
 
@@ -46,10 +46,10 @@ You can also watch the following video to learn how to initialize {{site.data.ke
 3. Plug the two smart card readers into the USB ports of your workstation.
 4. Start the Trusted Key Entry application by changing to the subdirectory where you install the Management Utilities applications and running the following command:
 
-  ```
-  ./tke
-  ```
-  {: pre}
+    ```
+    ./tke
+    ```
+    {: pre}
 
 ## Loading the master key from the smart cards
 {: #load-master-key-management-utilities}
@@ -61,23 +61,23 @@ Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start
 
 1. To generate a signature key for an administrator, select the **Smart card** tab, and click **Generate signature key**.
 
-  When prompted, insert an [EP11 smart card](/docs/hs-crypto?topic=hs-crypto-understand-concepts#smart-card-concept) in smart card reader 2. Enter a name for the administrator, and enter the personal identification number (PIN) for the smart card on the smart card reader PIN pad.
+    When prompted, insert an [EP11 smart card](/docs/hs-crypto?topic=hs-crypto-understand-concepts#smart-card-concept) in smart card reader 2. Enter a name for the administrator, and enter the personal identification number (PIN) for the smart card on the smart card reader PIN pad.
 
-  An administrator signature key is generated and stored on the smart card. Repeat this step to create multiple signature keys if needed.
+    An administrator signature key is generated and stored on the smart card. Repeat this step to create multiple signature keys if needed.
 
-  Each smart card can contain only one signature key. If you want to set up multiple administrators, repeat this step by using different EP11 smart cards.
-  {: tip}
+    Each smart card can contain only one signature key. If you want to set up multiple administrators, repeat this step by using different EP11 smart cards.
+    {: tip}
 
 2. To generate the master key parts for service instance initialization, on the **Smart card** tab, click **Generate key part**.
 
-  If prompted, insert an EP11 smart card in smart card reader 2 and enter the smart card PIN. Enter a description for the key part.
+    If prompted, insert an EP11 smart card in smart card reader 2 and enter the smart card PIN. Enter a description for the key part.
 
-  A random master key part is generated and stored on the smart card.
+    A random master key part is generated and stored on the smart card.
 
-  To create more master key parts, repeat this step.
+    To create more master key parts, repeat this step.
 
-  You need to generate at least two master key parts to load a master key. For added security, it is suggested to generate three master key parts. To improve security, you can choose to generate signature keys and master key parts on separate smart cards and assign each smart card to a different person. For more information, see [Smart card setup recommendations](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup).
-  {: important}
+    You need to generate at least two master key parts to load a master key. For added security, it is suggested to generate three master key parts. To improve security, you can choose to generate signature keys and master key parts on separate smart cards and assign each smart card to a different person. For more information, see [Smart card setup recommendations](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup).
+    {: important}
 
 3. (Optional) If you want to create a backup copy of an EP11 smart card, click **Copy smart card** on the **Smart card** tab and follow the prompts.
 4. (Optional) The signature keys and master key parts that are created with the TKE CLI plug-in and saved in a workstation file can be copied to a smart card. To do so, on the **Smart card** tab, click **Copy signature key file** or **Copy key part file** and follow the instructions. To copy the signature key or key part to a smart card, you need to provide the password for the file.
@@ -128,7 +128,7 @@ When crypto units in service instances are assigned to a user, they begin in a c
 
 1. To set the signature thresholds, select the **Signature thresholds** tab and click **Change signature thresholds**.
 2. When prompted, enter the new signature threshold value and the new revocation signature threshold value. 
-  The values must be numbers between one and eight and do not need to be the same. The signature threshold controls how many signatures are needed to run most administrative commands. The revocation signature threshold controls how many signatures are needed to remove an administrator after you leave imprint mode. Some commands need only one signature, regardless of how the signature threshold is set.
+    The values must be numbers between one and eight and do not need to be the same. The signature threshold controls how many signatures are needed to run most administrative commands. The revocation signature threshold controls how many signatures are needed to remove an administrator after you leave imprint mode. Some commands need only one signature, regardless of how the signature threshold is set.
 3. If prompted, insert an EP11 smart card with an administrator signature key that is defined to the selected crypto units in smart card reader 1. And then, enter the smart card PIN on the smart card reader PIN pad. Repeat this operation if prompted for more EP11 smart cards with signature keys. When the crypto unit exits imprint mode, the number of signatures that are needed for this command is the new signature threshold value. 
 
 After the signature threshold values are set, the new values are displayed on the **Signature thresholds** page. Setting the signature thresholds to a value greater than one enables [quorum authentication](/docs/hs-crypto?topic=hs-crypto-understand-concepts#quorum-authenticaion-concept) from multiple administrators for sensitive operations.
@@ -177,6 +177,6 @@ The crypto units in the current master key register is now in `Valid` status, wh
 ## What's next
 {: #initialize-crypto-utilities-management-utilities-next}
 
-- Go to the **KMS keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](https://{DomainName}/apidocs/hs-crypto){: external}.
+- Go to the **KMS keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management API reference doc](/apidocs/hs-crypto){: external}.
 - To learn more about performing cryptographic operations with the cloud HSM, see [Introducing cloud HSM](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm).
 - Use {{site.data.keyword.hscrypto}} as the root key provider for other {{site.data.keyword.cloud_notm}} services. For more information about integrating {{site.data.keyword.hscrypto}}, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-17"
+lastupdated: "2021-08-12"
 
 keywords: key versions, get key versions, list key versions
 
@@ -92,10 +92,7 @@ following cURL command.
             {{site.data.keyword.hscrypto}} instance
             resides.
           </p>
-          <p>
-            For more information, see
-            [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
         </td>
       </tr>
 
@@ -133,12 +130,9 @@ following cURL command.
             <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore suggested to specify the key ring ID for a more optimized request.
           </p>
           <p>
-            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+            Note: The key ring ID of keys that are created without an <code>x-kms-key-ring</code> header is: default.
           </p>
-          <p>
-            For more information, see
-            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
         </td>
       </tr>
       <tr>
@@ -151,10 +145,7 @@ following cURL command.
             your {{site.data.keyword.hscrypto}}
             instance.
           </p>
-          <p>
-            For more information, see
-            [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
         </td>
       </tr>
 

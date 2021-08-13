@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-08-09"
 
 keywords: failed master key rotation, failed to use key part files to rotate master keys, tke cryptounit-mk-rotate failure, troubleshoot master key rotation failure
 
@@ -30,7 +30,7 @@ subcollection: hs-crypto
 {: support}
 
 When you run the `ibmcloud tke cryptounit-mk-rotate` command to rotate master keys by using key part files, you might be not able to complete the rotation.
-{:shortdesc}
+{: shortdesc}
 
 During master key rotation, the new master key registers are loaded with the new master key value to be used. The contents of key storage are reencrypted by using the current and new master key values. When the reencryption of key storage is complete, the new master key value is promoted to the current master key registers and the new master key registers are cleared.
 {: tsSymptoms}
@@ -64,8 +64,8 @@ KMS CRK rewrap successful, waiting on cryptounit-mk-setimm.
 
 * If the message is present, the reencryption of key storage is complete. The only remaining step in the command is to promote the values in the new master key registers to the current master key registers.
 
-  Run the `ibmcloud tke cryptounit-mks` command. If all the new master key registers are in the `Valid` state with the same verification pattern and all the current master key registers are in the `Valid` state with a different same verification pattern, run the `ibmcloud tke cryptounit-mk-setimm` command to finish the master key rotation.
+    Run the `ibmcloud tke cryptounit-mks` command. If all the new master key registers are in the `Valid` state with the same verification pattern and all the current master key registers are in the `Valid` state with a different same verification pattern, run the `ibmcloud tke cryptounit-mk-setimm` command to finish the master key rotation.
 
-  If for some crypto units the new master key value is moved to the current master key register, clear those crypto units by using the `ibmcloud tke cryptounit-rm` command. And then, run the `ibmcloud tke cryptounit-mk-setimm` command to finish the master key rotation.
+    If for some crypto units the new master key value is moved to the current master key register, clear those crypto units by using the `ibmcloud tke cryptounit-rm` command. And then, run the `ibmcloud tke cryptounit-mk-setimm` command to finish the master key rotation.
 
-  In both cases, it is safe to continue past the warning on the `ibmcloud tke cryptounit-mk-setimm` command. Key storage is prepared to accept the new master key value.
+    In both cases, it is safe to continue past the warning on the `ibmcloud tke cryptounit-mk-setimm` command. Key storage is prepared to accept the new master key value.

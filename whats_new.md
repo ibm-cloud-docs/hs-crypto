@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-02"
+lastupdated: "2021-08-13"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -24,8 +24,6 @@ subcollection: hs-crypto
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
-
-
 
 ## 30 July 2021
 {: #july-2021}
@@ -49,6 +47,9 @@ With the integration with Terraform, now you can initialize your service instanc
 {: #add-signing-service}
 
 If you are using Terraform or key part files to initialize a service instance, you can now choose to use a third-party signing service to create, store, and manage the administrator signature keys that are used by Terraform or the Trusted Key Entry (TKE) CLI plug-in. For more information, see [Using a signing service to manage signature keys for instance initialization](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key).
+
+
+
 
 ## 30 June 2021
 {: #june-2021}
@@ -176,7 +177,7 @@ Before you [update the network access policy](/docs/hs-crypto?topic=hs-crypto-ma
 ### Added: `ReencryptSingle` function in GREP11 API
 {: #add-reencryptsingle-function-grep11}
 
-The GREP11 API now supports the `ReencryptSingle` function which enables you to decrypt data with the original key and subsequently encrypt the raw data with a different key in a single call within the cloud HSM. This single call is a viable option where a large amount of data needs to be reencrypted with different keys, and bypasses the need to perform a combination of `DecryptSingle` and `EncryptSingle` functions for each data item that needs to be reencrypted. For more information, see [GREP11 API reference - `ReencryptSingle` function](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-ReencryptSingle).
+The GREP11 API now supports the `ReencryptSingle` function, which enables you to decrypt data with the original key and then encrypt the raw data with a different key in a single call within the cloud HSM. This single call is a viable option where a large amount of data needs to be reencrypted with different keys, and bypasses the need to perform a combination of `DecryptSingle` and `EncryptSingle` functions for each data item that needs to be reencrypted. For more information, see [GREP11 API reference - `ReencryptSingle` function](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-ReencryptSingle).
 
 ### Added: Support for accessing service instances through the Virtual Private Endpoint
 {: #add-vpe}
@@ -199,23 +200,23 @@ Terraform is an open source software to configure and automate cloud resource pr
 The {{site.data.keyword.hscrypto}} key management API is updated with the following changes:
 
 - Updated: The API methods for the following key actions are now transferred to individual request paths. The generic path format (except the action of restoring a key) is `/api/v2/keys/<key_ID>/actions/<action>` where `key_ID` is the UUID of the key and `action` is the action name that you want to execute.
-  - [Wrap a key](/apidocs/hs-crypto#wrapkey).
-  - [Unwrap a key](/apidocs/hs-crypto#unwrapkey).
-  - [Rewrap a key](/apidocs/hs-crypto#rewrapkey).
-  - [Rotate a key](/apidocs/hs-crypto#rotatekey).
-  - [Authorize deletion for a key with a dual authorization policy](/apidocs/hs-crypto#setkeyfordeletion).
-  - [Remove an authorization for a key with a dual authorization policy](/apidocs/hs-crypto#unsetkeyfordeletion).
-  - [Enable operations for a key](/apidocs/hs-crypto#enablekey).
-  - [Disable operations for a key](/apidocs/hs-crypto#disablekey).
-  - [Restore a key](/apidocs/hs-crypto#restorekey).
+    - [Wrap a key](/apidocs/hs-crypto#wrapkey).
+    - [Unwrap a key](/apidocs/hs-crypto#unwrapkey).
+    - [Rewrap a key](/apidocs/hs-crypto#rewrapkey).
+    - [Rotate a key](/apidocs/hs-crypto#rotatekey).
+    - [Authorize deletion for a key with a dual authorization policy](/apidocs/hs-crypto#setkeyfordeletion).
+    - [Remove an authorization for a key with a dual authorization policy](/apidocs/hs-crypto#unsetkeyfordeletion).
+    - [Enable operations for a key](/apidocs/hs-crypto#enablekey).
+    - [Disable operations for a key](/apidocs/hs-crypto#disablekey).
+    - [Restore a key](/apidocs/hs-crypto#restorekey).
 
 - Updated: You can now use the following two methods to manage the allowed network policy and the key create and import access policy:
-  - [Set instance policies](/apidocs/hs-crypto#putinstancepolicy).
-  - [List instance policies](/apidocs/hs-crypto#getinstancepolicy).
+    - [Set instance policies](/apidocs/hs-crypto#putinstancepolicy).
+    - [List instance policies](/apidocs/hs-crypto#getinstancepolicy).
 
 - Deprecated: [Invoke an action on a key](/apidocs/hs-crypto#actiononkey).
 
-  This method is originally used for performing actions on a key, such as wrap, unwrap, and rotate. It is now replaced with individual request path for each action.
+    This method is originally used for performing actions on a key, such as wrap, unwrap, and rotate. It is now replaced with individual request path for each action.
 
 For more information about the API updates, see [{{site.data.keyword.hscrypto}} key management API reference](/apidocs/hs-crypto){: external}.
 
@@ -269,7 +270,7 @@ To find out more about your options for importing keys, check out [Creating impo
 ### Added: {{site.data.keyword.hscrypto}} aligns the key management functions with {{site.data.keyword.keymanagementserviceshort}}
 {: #added-key-protect-concurrency}
 
-{{site.data.keyword.hscrypto}}, built on FIPS 140-2 Level 4-compliant HSM, now supports the same level of key management functions as {{site.data.keyword.keymanagementserviceshort}}. The added functions are as follow:
+{{site.data.keyword.hscrypto}}, built on FIPS 140-2 Level 4-compliant HSM, now supports the same level of key management functions as {{site.data.keyword.keymanagementserviceshort}}. The added functions are as follows:
 
 * [Policy-based key rotation](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy).
 * [Viewing root key versions](/docs/hs-crypto?topic=hs-crypto-view-key-versions).
@@ -420,7 +421,7 @@ As of 5 February 2019, provisioning new Hyper Protect Crypto Services Experiment
 
 {{site.data.keyword.keymanagementserviceshort}} API is now integrated with Hyper Protect Crypto Services to generate and protect your keys. You can call the {{site.data.keyword.keymanagementserviceshort}} API directly through {{site.data.keyword.hscrypto}}.
 
-For more information, see [Setting up the key management API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api) and [{{site.data.keyword.hscrypto}} key management API reference](https://{DomainName}/apidocs/hs-crypto){: external}.
+For more information, see [Setting up the key management API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api) and [{{site.data.keyword.hscrypto}} key management API reference](/apidocs/hs-crypto){: external}.
 
 ### Added: Support for HSM management with Keep Your own Key
 {: #hsm-kyok}

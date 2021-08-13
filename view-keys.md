@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-08-12"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -54,14 +54,14 @@ If you prefer to inspect the keys in your service by using a graphical interface
       </tr>
       <tr>
         <td>ID</td>
-        <td>A unique key ID that was assigned to your key by the {{site.data.keyword.hscrypto}} service. You can use the ID value to make calls to the service with the [{{site.data.keyword.hscrypto}} key management API](https://{DomainName}/apidocs/hs-crypto).</td>
+        <td>A unique key ID that was assigned to your key by the {{site.data.keyword.hscrypto}} service. You can use the ID value to make calls to the service with the <a href="/apidocs/hs-crypto">{{site.data.keyword.hscrypto}} key management API</a>.</td>
       </tr>
       <tr>
         <td>Alias</td>
         <td>The human-readable aliases that you specify for easy recognition when you create the key.</td>
       </tr>
       <tr>
-        <td>Ker ring ID</td>
+        <td>Key ring ID</td>
         <td>The key ring that the key belongs to.</td>
       </tr>
       <tr>
@@ -70,11 +70,11 @@ If you prefer to inspect the keys in your service by using a graphical interface
       </tr>
       <tr>
         <td>State</td>
-        <td>The [key state](/docs/hs-crypto?topic=hs-crypto-key-states) based on [NIST Special Publication 800-57, Recommendation for Key Management](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0). These states include <em>Pre-active</em>, <em>Active</em>, <em>Suspended</em>, <em>Deactivated</em>, and <em>Destroyed</em>.</td>
+        <td>The <a href="/docs/hs-crypto?topic=hs-crypto-key-states">key state</a> based on <a href="https://www.nist.gov/publications/recommendation-key-management-part-1-general-0" target="_blank">NIST Special Publication 800-57, Recommendation for Key Management</a>. These states include <em>Pre-active</em>, <em>Active</em>, <em>Suspended</em>, <em>Deactivated</em>, and <em>Destroyed</em>.</td>
       </tr>
       <tr>
         <td>Origin</td>
-        <td>Indicates whether the key is imported. `Created` indicates that the key is created by the service instance; `Imported` indicates that the key is imported by the user.</td>
+        <td>Indicates whether the key is imported. <code>Created</code> indicates that the key is created by the service instance; <code>Imported</code> indicates that the key is imported by the user.</td>
       </tr>
       <tr>
         <td>Last updated</td>
@@ -90,15 +90,15 @@ If you prefer to inspect the keys in your service by using a graphical interface
       </tr>
       <tr>
         <td>Dual authorization enabled</td>
-        <td>The status of a dual authorization policy on the key. <ul><li>`True`: Dual authorization is required to delete the key.</li> <li>`False`: No prior authorization is required to delete the key.</li></ul></td>
+        <td>The status of a dual authorization policy on the key. <ul><li><code>True</code>: Dual authorization is required to delete the key.</li> <li><code>False</code>: No prior authorization is required to delete the key.</li></ul></td>
       </tr>
       <tr>
         <td>Set for deletion</td>
-        <td>Indicates if a delete authorization is issued for a key. <ul><li>`True`: An authorization to delete this key is issued by the first user. A second user with a Manager access policy can safely delete the key.</li> <li>`False`: The key is not set for deletion. No further action is needed. </li></ul> </td>
+        <td>Indicates whether a delete authorization is issued for a key. <ul><li><code>True</code>: An authorization to delete this key is issued by the first user. A second user with a Manager access policy can safely delete the key.</li> <li><code>False</code>: The key is not set for deletion. No further action is needed. </li></ul> </td>
       </tr>
       <tr>
         <td>Deletion expiration</td>
-        <td>The date that an authorization for deletion expires for the key. If this date passes, the authorization is no longer valid. If `False` is the value for the `Dual authorization enabled` or `Set for deletion` column of the key, the `Deletion expiration` column is left empty.</td>
+        <td>The date that an authorization for deletion expires for the key. If this date passes, the authorization is no longer valid. If <code>False</code> is the value for the <code>Dual authorization enabled</code> or <code>Set for deletion</code> column of the key, the <code>Deletion expiration</code> column is left empty.</td>
       </tr>
       <caption>Table 1. Describes the <strong>Keys</strong> table</caption>
     </table>
@@ -173,15 +173,12 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
         </td>
         <td>
           <p>
-            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore suggested to specify the key ring ID for a more optimized request.
+            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request.
           </p>
           <p>
-            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+            Note: The key ring ID of keys that are created without an <code>x-kms-key-ring</code> header is: default.
           </p>
-          <p>
-            For more information, see
-            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
         </td>
       </tr>
       <tr>
@@ -278,69 +275,66 @@ Replace the `limit` and `offset` variables in your request according to the
 following table.
 
 <table>
-  <tr>
-    <th>Variable</th>
-    <th>Description</th>
-  </tr>
-
-  <tr>
-    <td>
-      <varname>offset</varname>
-    </td>
-    <td>
-      <p>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>
+        <varname>offset</varname>
+      </td>
+      <td>
+        <p>
         The number of keys to skip.
-      </p>
-      <p>
+        </p>
+        <p>
         For example, if you have 50 keys in your instance, and you want to list keys 26 - 50, use <code>../keys?offset=25</code>. You can also pair <code>offset</code> with <code>limit</code> to page through your available resources.
-      </p>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <varname>limit</varname>
-    </td>
-    <td>
-      <p>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <varname>limit</varname>
+      </td>
+      <td>
+        <p>
         The number of keys to retrieve.
-      </p>
-      <p>
+        </p>
+        <p>
         For example, if you have 100 keys in your instance, and you want to list only 10 keys, use <code>../keys?limit=10</code>. The maximum value for <code>limit</code> is 5000.
-      </p>
-    </td>
-  </tr>
-
-  <caption>
+        </p>
+      </td>
+    </tr>
+    <caption>
     Table 2. Describes the <code>limit</code> and <code>offset</code> variables
-  </caption>
+    </caption>
 </table>
 
 
 For usage notes, check out the following examples for setting your `limit` and `offset` query parameters.
 
 <table>
-  <tr>
+    <tr>
     <th>URL</th>
     <th>Description</th>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td><code>.../keys</code></td>
     <td>Lists all of your available resources, up to the first 2000 keys.</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td><code>.../keys?limit=10</code></td>
     <td>Lists the first 10 keys.</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td><code>.../keys?offset=25&limit=50</code></td>
     <td>Lists keys 26 - 75.</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td><code>.../keys?offset=3000&limit=50</code></td>
     <td>Lists keys 3001 - 3050.</td>
-  </tr>
-  <caption>Table 3. Provides usage notes for the limit and offset query parameters</caption>
+    </tr>
+    <caption>Table 3. Provides usage notes for the limit and offset query parameters</caption>
 </table>
 
 Offset is the location of a particular key in a data set. The `offset` value is zero-based, which means that the 10th encryption key in a data set is at offset 9.
@@ -353,7 +347,7 @@ By specifying the `state` parameter at query time, you can retrieve keys that ar
 
 For example, you might have keys in your service instance that are in the active, suspended, and destroyed states, but you only want to retrieve keys in the active state when you make a `GET /keys` request.
 
-The state query parameter takes in a list of integers from 0 to 5 delimited by commas with no whitespace or trailing commas. Valid states are based on NIST SP 800-57. For more information about key states, see [Key states and transitions](/docs/hs-crypto?topic=hs-crypto-key-states).
+The state query parameter takes in a list of integers 0 - 5 delimited by commas with no whitespace or trailing commas. Valid states are based on NIST SP 800-57. For more information about key states, see [Key states and transitions](/docs/hs-crypto?topic=hs-crypto-key-states).
 {: note}
 
 You can use the following example request to retrieve a different set of keys.
@@ -370,12 +364,11 @@ curl -X GET \
 Replace the `state` variable in your request according to the following table.
 
 <table>
-  <tr>
+    <tr>
     <th>Variable</th>
     <th>Description</th>
-  </tr>
-
-  <tr>
+    </tr>
+    <tr>
     <td>
       <varname>state</varname>
     </td>
@@ -392,50 +385,45 @@ Replace the `state` variable in your request according to the following table.
         page through your available resources.
       </p>
     </td>
-  </tr>
-
-  <caption>
+    </tr>
+    <caption>
     Table 4. Describes the <code>state</code> variable.
-  </caption>
+    </caption>
 </table>
 
 For usage notes, check out the following examples for setting your `state` query
 parameter.
 
 <table>
-  <tr>
+    <tr>
     <th>URL</th>
     <th>Description</th>
-  </tr>
-
-  <tr>
+    </tr>
+    <tr>
     <td>
       <code>.../keys</code>
     </td>
     <td>
       Lists all of your available resources, up to the first 200 keys.
     </td>
-  </tr>
-
-  <tr>
+    </tr>
+    <tr>
     <td>
       <code>.../keys?state=5</code>
     </td>
     <td>
       Lists keys in the deleted state.
     </td>
-  </tr>
-
-  <tr>
+    </tr>
+    <tr>
     <td>
       <code>.../keys?state=2,3</code>
     </td>
     <td>
       Lists keys in the suspended and deactivated state.
     </td>
-  </tr>
-
-  <caption>
+    </tr>
+    <caption>
     Table 5. Provides usage notes for the stage query parameter.
-  </caption>
+    </caption>
 </table>

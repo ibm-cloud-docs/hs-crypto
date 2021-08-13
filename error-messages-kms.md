@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-27"
+lastupdated: "2021-08-13"
 
 keywords: error message, error code, error, kms error, key management error message, hpcs error messages, hyper protect crypto services error message
 
@@ -28,29 +28,29 @@ This is not a complete list of error messages. Some messages that are created by
 ## Table of contents
 {: #error-messages-kms-toc}
 
-The error messages are sorted by alphabetical order, by HTTP status code, and by reason code respectively.
+The error messages are sorted by alphabetical order, by HTTP status code, and by reason code.
 
 ### Sorted by alphabetical order of error messages
 {: #error-messages-kms-sorted-by-alphabetical-order}
 
-These are the error messages sorted by the alphabetical order. Some error messages are the same but with different HTTP status code. In those cases, the HTTP status code is included at the end of the error message.
+These error messages that are sorted by the alphabetical order. Some error messages are the same but with different HTTP status code. In those cases, the HTTP status code is included at the end of the error message.
 
 1. Collection total does not match number...
-  [details](#error-messages-collection-total-mismatch-err)
+    [details](#error-messages-collection-total-mismatch-err)
 2. Data in body does not match data required...
-  [details](#error-messages-body-query-param-mismatch-err)
+    [details](#error-messages-body-query-param-mismatch-err)
 3. Extracting the subject from the bearer...
-  [details](#error-messages-bearer-sub-extraction-err)
+    [details](#error-messages-bearer-sub-extraction-err)
 4. Invalid body data was passed...
-  [details](#error-messages-bad-body-err)
+    [details](#error-messages-bad-body-err)
 5. Key has already been deleted...
-  [details](#error-messages-key-deleted-err)
+    [details](#error-messages-key-deleted-err)
 6. Key is not in a valid state (409)
-  [details](#error-messages-key-action-invalid-state-err)
+    [details](#error-messages-key-action-invalid-state-err)
 7. Key is not in a valid state (422)
-  [details](#error-messages-key-invalid-state-err)
+    [details](#error-messages-key-invalid-state-err)
 8. Key is protecting one or more cloud...
-  [details](#error-messages-protected-resource-err)
+    [details](#error-messages-protected-resource-err)
 9. Key metadata became corrupted...
    [details](#error-messages-incomplete-metadata-err)
 10. Key restoration has expired
@@ -65,9 +65,9 @@ These are the error messages sorted by the alphabetical order. Some error messag
     [details](#error-messages-num-collection-resource-err)
 15. Only imported keys can be restored
     [details](#error-messages-key-impt-req-err)
-16. Requested action can only be completed with a root key (400)
+16. Requested action can be completed only with a root key (400)
     [details](#error-messages-key-root-req-err)
-17. Requested action can only be completed with a root key (422)
+17. Requested action can be completed only with a root key (422)
     [details](#error-messages-key-root-req-reg-err)
 18. Requested change is not compliant with configuration rules
     [details](#error-config_rule_conflict_err)
@@ -77,7 +77,7 @@ These are the error messages sorted by the alphabetical order. Some error messag
     [details](#error-messages-key-expired-err)
 21. The encrypted nonce given does not match...
     [details](#error-messages-incorrect-nonce-err)
-22. The import token has expired
+22. The import token is expired
     [details](#error-messages-import-token-expired-err)
 23. The key cannot be deleted because it's...
     [details](#error-messages-prev-key-del-err)
@@ -91,7 +91,7 @@ These are the error messages sorted by the alphabetical order. Some error messag
     [details](#error-messages-incorrect-nonce-iv-err)
 28. The resource(s) queried does not belong to the service.
     [details](#error-messages-resource-owner-err)
-29. This action can only be done by a service...
+29. This action can be done only by a service...
     [details](#error-messages-service-only-err)
 30. This action is not permitted on this...
     [details](#error-messages-feature-restricted-err)
@@ -107,84 +107,84 @@ These are the error messages sorted by the alphabetical order. Some error messag
 ### Sorted by HTTP status code
 {: #error-messages-kms-sorted-by-http-status-code}
 
-These are the error messages sorted by the HTTP status code.
+These are the error messages that are sorted by the HTTP status code.
 
 <table>
-  <tr>
+    <tr>
     <th>Status code</th>
     <th>Error message</th>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>HTTP 400 - Bad Request</td>
     <td>
       <ul>
-        <li>Collection total does not match number of resources - [details](#error-messages-collection-total-mismatch-err)</li>
-        <li>Data in body does not match data required by query parameter - [details](#error-messages-body-query-param-mismatch-err)</li>
-        <li>Extracting the subject from the bearer token failed: Make sure the bearer token passed is the correct one (and correct format) and is allowed to perform requested actions - [details](#error-messages-bearer-sub-extraction-err)</li>
-        <li>Invalid body data was passed: Please ensure the data passed had valid formatting with no invalid characters - [details](#error-messages-bad-body-err)</li>
-        <li>Key restoration has expired - [details](#error-messages-key-restore-expired)</li>
-        <li>Missing body in request - [details](#error-messages-no-body-err)</li>
-        <li>Only a single instance policy can be created per query parameter: Please pass single resource object - [details](#error-messages-num-collection-resource-err)</li>
-        <li>Only imported keys can be restored - [details](#error-messages-key-impt-req-err)</li>
-        <li>Requested action can only be completed with a root key - [details](#error-messages-key-root-req-err)</li>
-        <li>The action could not be performed on the key because the key is expired - [details](#error-messages-key-expired-err)</li>
-        <li>The encrypted nonce given does not match existing record: Please ensure the correct nonce was given in the request - [details](#error-messages-incorrect-nonce-err)</li>
-        <li>The provided encrypted nonce was not encrypted with the key material given OR the provided IV does not match the encrypted nonce - [details](#error-messages-incorrect-nonce-iv-err)</li>
-        <li>This root key was created with user-supplied key material: Key material is required to perform a 'rotate' action -[details](#error-messages-key-payload-req-err)</li>
+        <li>Collection total does not match number of resources - <a href="#error-messages-collection-total-mismatch-err">details</a></li>
+        <li>Data in body does not match data required by query parameter - <a href="#error-messages-body-query-param-mismatch-err">details</a></li>
+        <li>Extracting the subject from the bearer token failed: Make sure the bearer token passed is the correct one (and correct format) and is allowed to perform requested actions - <a href="#error-messages-bearer-sub-extraction-err">details</a></li>
+        <li>Invalid body data was passed: Ensure that the data passed had valid formatting with no invalid characters - <a href="#error-messages-bad-body-err">details</a></li>
+        <li>Key restoration has expired - <a href="#error-messages-key-restore-expired">details</a></li>
+        <li>Missing body in request - <a href="#error-messages-no-body-err">details</a></li>
+        <li>Only a single instance policy can be created per query parameter: Please pass single resource object - <a href="#error-messages-num-collection-resource-err">details</a></li>
+        <li>Only imported keys can be restored - <a href="#error-messages-key-impt-req-err">details</a></li>
+        <li>Requested action can only be completed with a root key - <a href="#error-messages-key-root-req-err">details</a></li>
+        <li>The action could not be performed on the key because the key is expired - <a href="#error-messages-key-expired-err">details</a></li>
+        <li>The encrypted nonce given does not match existing record: Please ensure the correct nonce was given in the request - <a href="#error-messages-incorrect-nonce-err">details</a></li>
+        <li>The provided encrypted nonce was not encrypted with the key material given OR the provided IV does not match the encrypted nonce - <a href="#error-messages-incorrect-nonce-iv-err">details</a></li>
+        <li>This root key was created with user-supplied key material: Key material is required to perform a 'rotate' action -<a href="#error-messages-key-payload-req-err">details</a></li>
       </ul>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>HTTP 401 - Unauthorized</td>
-    <td>Unauthorized: The user does not have access to the specified resource - [details](#error-messages-unauthorized-err)</td>
-  </tr>
-  <tr>
+    <td>Unauthorized: The user does not have access to the specified resource - <a href="#error-messages-unauthorized-err">details</a></td>
+    </tr>
+    <tr>
     <td>HTTP 403 - Forbidden</td>
     <td>
       <ul>
-        <li>Requested change is not compliant with configuration rules - [details](#error-config_rule_conflict_err)</li>
-        <li>The resource(s) queried does not belong to the service - [details](#error-messages-resource-owner-err)</li>
-        <li>This action can only be done by a service (service to service) - [details](#error-messages-service-only-err)</li>
-        <li>This action is not permitted on this resource: Please contact IBM Hyper Protect Crypto Services or open a service ticket to enable this feature - [details](#error-messages-feature-restricted-err)</li>
+        <li>Requested change is not compliant with configuration rules - <a href="#error-config_rule_conflict_err">details</a></li>
+        <li>The resource(s) queried does not belong to the service - <a href="#error-messages-resource-owner-err">details</a></li>
+        <li>This action can only be done by a service (service to service) - <a href="#error-messages-service-only-err">details</a></li>
+        <li>This action is not permitted on this resource: Please contact IBM Hyper Protect Crypto Services or open a service ticket to enable this feature - <a href="#error-messages-feature-restricted-err">details</a></li>
       </ul>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>HTTP 409 - Conflict</td>
     <td>
       <ul>
-        <li>Key is not in a valid state - [details](#error-messages-key-action-invalid-state-err)</li>
-        <li>Key is protecting one or more cloud resources -[details](#error-messages-protected-resource-err)</li>
-        <li>KeyCreateImportAccess instance policy does not allow this action - [details](#error-messages-key-create-import-access-err)</li>
-        <li>Number of authorizations required to delete is not met - [details](#error-messages-authorizations-not-met)</li>
-        <li>The import token has expired - [details](#error-messages-import-token-expired-err)</li>
-        <li>The key cannot be deleted because it's protecting a cloud resource that has a retention policy: Before you delete this key, contact an account owner to remove the retention policy on each resource that is associated with the key - [details](#error-messages-prev-key-del-err)</li>
-        <li>The key is not dual auth enabled and cannot be set for deletion - [details](#error-messages-not-dual-auth-err)</li>
-        <li>The key was updated recently: Please wait and try again - [details](#error-messages-req-too-early-err)</li>
-        <li>This root key has been rotated within the last hour: Only one 'rotate' action per hour is permitted - [details](#error-messages-key-rotation-not-permitted)</li>
+        <li>Key is not in a valid state - <a href="#error-messages-key-action-invalid-state-err">details</a></li>
+        <li>Key is protecting one or more cloud resources -<a href="#error-messages-protected-resource-err">details</a></li>
+        <li>KeyCreateImportAccess instance policy does not allow this action - <a href="#error-messages-key-create-import-access-err">details</a></li>
+        <li>Number of authorizations required to delete is not met - <a href="#error-messages-authorizations-not-met">details</a></li>
+        <li>The import token has expired - <a href="#error-messages-import-token-expired-err">details</a></li>
+        <li>The key cannot be deleted because it's protecting a cloud resource that has a retention policy: Before you delete this key, contact an account owner to remove the retention policy on each resource that is associated with the key - <a href="#error-messages-prev-key-del-err">details</a></li>
+        <li>The key is not dual auth enabled and cannot be set for deletion - <a href="#error-messages-not-dual-auth-err">details</a></li>
+        <li>The key was updated recently: Please wait and try again - <a href="#error-messages-req-too-early-err">details</a></li>
+        <li>This root key has been rotated within the last hour: Only one 'rotate' action per hour is permitted - <a href="#error-messages-key-rotation-not-permitted">details</a></li>
       </ul>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>HTTP 410 - Gone</td>
-    <td>Key has already been deleted: Please delete references to this key - [details](#error-messages-key-deleted-err)</td>
-  </tr>
-  <tr>
+    <td>Key has already been deleted: Please delete references to this key - <a href="#error-messages-key-deleted-err">details</a></td>
+    </tr>
+    <tr>
     <td>HTTP 422 - Unprocessable Entity</td>
     <td>
       <ul>
-        <li>Key is not in a valid state - [details](#error-messages-key-invalid-state-err)</li>
-        <li>Requested action can only be completed with a root key - [details](#error-messages-key-root-req-reg-err)</li>
-        <li>Signature is invalid - [details](#error-invalid-sig-exp-err-message)</li>
-        <li>The provided ciphertext is invalid or corrupted -[details](#error-messages-unprocessable-ciphertext-err)</li>
-        <li>This request requires that the key version is later than current registration key version - [details](#error-messages-key-version-invalid)</li>
+        <li>Key is not in a valid state - <a href="#error-messages-key-invalid-state-err">details</a></li>
+        <li>Requested action can only be completed with a root key - <a href="#error-messages-key-root-req-reg-err">details</a></li>
+        <li>Signature is invalid - <a href="#error-invalid-sig-exp-err-message">details</a></li>
+        <li>The provided ciphertext is invalid or corrupted -<a href="#error-messages-unprocessable-ciphertext-err">details</a></li>
+        <li>This request requires that the key version is later than current registration key version - <a href="#error-messages-key-version-invalid">details</a></li>
       </ul>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td>HTTP 500 - Internal Server Error</td>
-    <td>Key metadata became corrupted: Please delete this key - [details](#error-messages-incomplete-metadata-err)</td>
-  </tr>
+    <td>Key metadata became corrupted: Please delete this key - <a href="#error-messages-incomplete-metadata-err">details</a></td>
+    </tr>
 </table>
 
 ### Sorted by reason code
@@ -193,73 +193,73 @@ These are the error messages sorted by the HTTP status code.
 These are the error messages sorted by the reason code.
 
 - AUTHORIZATIONS_NOT_MET -
-  [details](#error-messages-authorizations-not-met)
+    [details](#error-messages-authorizations-not-met)
 - BAD_BODY_ERR -
-  [details](#error-messages-bad-body-err)
+    [details](#error-messages-bad-body-err)
 - BEARER_SUB_EXTRACTION_ERR -
-  [details](#error-messages-bearer-sub-extraction-err)
+    [details](#error-messages-bearer-sub-extraction-err)
 - BODY_QUERY_PARAM_MISMATCH_ERR -
-  [details](#error-messages-body-query-param-mismatch-err)
+    [details](#error-messages-body-query-param-mismatch-err)
 - COLLECTION_TOTAL_MISMATCH_ERR -
-  [details](#error-messages-collection-total-mismatch-err)
+    [details](#error-messages-collection-total-mismatch-err)
 - CONFIG_RULE_CONFLICT_ERR
-  [details](#error-config_rule_conflict_err)
+    [details](#error-config_rule_conflict_err)
 - FEATURE_RESTRICTED_ERR -
-  [details](#error-messages-feature-restricted-err)
+    [details](#error-messages-feature-restricted-err)
 - IMPORT_TOKEN_EXPIRED_ERR -
-  [details](#error-messages-import-token-expired-err)
+    [details](#error-messages-import-token-expired-err)
 - INCOMPLETE_METADATA_ERR -
-  [details](#error-messages-incomplete-metadata-err)
+    [details](#error-messages-incomplete-metadata-err)
 - INCORRECT_NONCE_ERR -
-  [details](#error-messages-incorrect-nonce-err)
+    [details](#error-messages-incorrect-nonce-err)
 - INCORRECT_NONCE_IV_ERR -
-  [details](#error-messages-incorrect-nonce-iv-err)
+    [details](#error-messages-incorrect-nonce-iv-err)
 - INVALID_SIG_EXP_ERR
-  [details](#error-invalid_sig_exp_err)
+    [details](#error-invalid_sig_exp_err)
 - KEY_ACTION_INVALID_STATE_ERR -
-  [details](#error-messages-key-action-invalid-state-err)
+    [details](#error-messages-key-action-invalid-state-err)
 - KEY_CREATE_IMPORT_ACCESS_ERR -
-  [details](#error-messages-key-create-import-access-err)
+    [details](#error-messages-key-create-import-access-err)
 - KEY_DELETED_ERR -
-  [details](#error-messages-key-deleted-err)
+    [details](#error-messages-key-deleted-err)
 - KEY_EXPIRED_ERR -
-  [details](#error-messages-key-expired-err)
+    [details](#error-messages-key-expired-err)
 - KEY_IMPT_REQ_ERR -
-  [details](#error-messages-key-impt-req-err)
+    [details](#error-messages-key-impt-req-err)
 - KEY_INVALID_STATE_ERR -
-  [details](#error-messages-key-invalid-state-err)
+    [details](#error-messages-key-invalid-state-err)
 - KEY_PAYLOAD_REQ_ERR -
-  [details](#error-messages-key-payload-req-err-message)
+    [details](#error-messages-key-payload-req-err-message)
 - KEY_RESTORE_EXPIRED -
-  [details](#error-messages-key-restore-expired)
+    [details](#error-messages-key-restore-expired)
 - KEY_ROOT_REQ_ERR -
-  [details](#error-messages-key-root-req-err)
+    [details](#error-messages-key-root-req-err)
 - KEY_ROOT_REQ_REG_ERR -
-  [details](#error-messages-key-root-req-reg-err)
+    [details](#error-messages-key-root-req-reg-err)
 - KEY_ROTATION_NOT_PERMITTED -
-  [details](#error-messages-key-rotation-not-permitted)
+    [details](#error-messages-key-rotation-not-permitted)
 - KEY_VERSION_INVALID -
-  [details](#error-messages-key-version-invalid)
+    [details](#error-messages-key-version-invalid)
 - NO_BODY_ERR -
-  [details](#error-messages-no-body-err)
+    [details](#error-messages-no-body-err)
 - NOT_DUAL_AUTH_ERR -
-  [details](#error-messages-not-dual-auth-err)
+    [details](#error-messages-not-dual-auth-err)
 - NUM_COLLECTION_RESOURCE_ERR -
-  [details](#error-messages-num-collection-resource-err)
+    [details](#error-messages-num-collection-resource-err)
 - PREV_KEY_DEL_ERR -
-  [details](#error-messages-prev-key-del-err)
+    [details](#error-messages-prev-key-del-err)
 - PROTECTED_RESOURCE_ERR -
-  [details](#error-messages-protected-resource-err)
+    [details](#error-messages-protected-resource-err)
 - REQ_TOO_EARLY_ERR -
-  [details](#error-messages-req-too-early-err)
+    [details](#error-messages-req-too-early-err)
 - RESOURCE_OWNER_ERR -
-  [details](#error-messages-resource-owner-err)
+    [details](#error-messages-resource-owner-err)
 - SERVICE_ONLY_ERR -
-  [details](#error-messages-service-only-err)
+    [details](#error-messages-service-only-err)
 - UNAUTHORIZED_ERR -
-  [details](#error-messages-unauthorized-err)
+    [details](#error-messages-unauthorized-err)
 - UNPROCESSABLE_CIPHERTEXT_ERR -
-  [details](#error-messages-unprocessable-ciphertext-err)
+    [details](#error-messages-unprocessable-ciphertext-err)
 
 ## 1 - Collection total does not match number...
 {: #error-messages-collection-total-mismatch-err}
@@ -278,7 +278,7 @@ Reason code: COLLECTION_TOTAL_MISMATCH_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -364,7 +364,7 @@ Reason code: BODY_QUERY_PARAM_MISMATCH_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -452,7 +452,7 @@ Reason code: BEARER_SUB_EXTRACTION_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -461,7 +461,7 @@ The client cannot repeat this request without modification.
 {: #error-messages-bearer-sub-extraction-err-context}
 
 The identify and access management (IAM) access token, or format, was invalid.
-If this is a **curl** request then the **authorization** header needs to be set
+If this is a **curl** request, then the **authorization** header needs to be set
 using this format:
 
 ```sh
@@ -469,9 +469,9 @@ using this format:
 ```
 {: screen}
 
-Depending on which platform (Linux, Mac, Windows) or shell (bash, sh, zsh) you
-are using, you need to be aware of using single versus double quotes. Some
-systems will **not** interpret variables inside single quotes. For example,
+Depending on which platform (Linux&reg;, Mac, Windows&reg;) or shell (bash, sh, zsh) you
+are using, you need to be aware of using single versus double quotation marks. Some
+systems will **not** interpret variables inside single quotation mark. For example,
 ('Bearer $ACCESS_TOKEN') cannot replace `$ACCESS_TOKEN` with the value.
 {: note}
 
@@ -519,7 +519,7 @@ Reason code: BAD_BODY_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -530,14 +530,14 @@ The client cannot repeat this request without modification.
 Some examples of this error are:
 
 - Create an instance policy
-  - Only one of each policy can be created
-  - No `resources` section was provided
-  - Extraneous fields in the `resources` section (see example 1)
+    - Only one of each policy can be created
+    - No `resources` section was provided
+    - Extraneous fields in the `resources` section (see example 1)
 
 - Create a key
-  - One resource is required (see example 2)
-  - Metadata is empty (see example 3)
-  - Key has zero value or it's empty
+    - One resource is required (see example 2)
+    - Metadata is empty (see example 3)
+    - Key has zero value or it's empty
 
 #### Example 1
 {: #error-messages-bad-body-err-context-example-1}
@@ -805,7 +805,7 @@ The HTTP `409 Conflict` response status code indicates a request conflict with
 current state of the server.
 
 Conflicts are most likely to occur in response to a `PUT` request. For example,
-you might get a `409` response when uploading a file which is older than the one
+you might get a `409` response when uploading a file, which is older than the one
 already on the server resulting in a version control conflict.
 
 ### Context
@@ -818,11 +818,11 @@ is not valid.
 Some actions to consider:
 
 - The key state must be active (state value is 1) to wrap, unwrap, rotate, set
-  key for deletion (dual auth), unset key for deleteion (dual auth), or disable
-  the key
+    key for deletion (dual auth), unset key for deletion (dual auth), or disable
+    the key
 
 - This error occurs when you try to enable an expired key (state value is 3) or
-  restore a key that has been destroyed (state value is 5)
+    restore a key that has been destroyed (state value is 5)
 
 #### Example 1
 {: #error-messages-key-action-invalid-state-err-context-example-1}
@@ -1056,7 +1056,7 @@ The HTTP `409 Conflict` response status code indicates a request conflict with
 current state of the server.
 
 Conflicts are most likely to occur in response to a `PUT` request. For example,
-you might get a `409` response when uploading a file which is older than the one
+you might get a `409` response when uploading a file, which is older than the one
 already on the server resulting in a version control conflict.
 
 ### Context
@@ -1125,7 +1125,7 @@ server encountered an unexpected condition that prevented it from fulfilling the
 request.
 
 This error response is a generic "catch-all" response. Usually, this indicates
-the server cannot find a better 5xx error code to response. Sometimes, server
+that the server cannot find a better 5xx error code to response. Sometimes, server
 administrators log error responses like the 500 status code with more details
 about the request to prevent the error from happening again in the future.
 
@@ -1134,7 +1134,7 @@ about the request to prevent the error from happening again in the future.
 
 This error is returned when there is an internal error.
 
-If you get this error please contact
+If you get this error, please contact
 [IBM support](/unifiedsupport/supportcenter){: external}
 
 ## 10 - Key restoration has expired
@@ -1154,7 +1154,7 @@ Reason code: KEY_RESTORE_EXPIRED
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -1408,7 +1408,7 @@ Reason code: NO_BODY_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -1651,7 +1651,7 @@ Reason code: NUM_COLLECTION_RESOURCE_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -1662,7 +1662,7 @@ The client cannot repeat this request without modification.
 The `create instance policy` request fails because the same policy was
 specified more than once.
 
-You can specify multiple policies in the request as long as each policy is
+You can specify multiple policies in the request if each policy is
 unique. For example, you could create instance policies for `dualAuthDelete` and
 `allowedIP` in the same request.
 
@@ -1744,7 +1744,7 @@ Reason code: KEY_IMPT_REQ_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -1895,7 +1895,7 @@ Reason code: KEY_ROOT_REQ_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -2016,7 +2016,7 @@ Reason code: CONFIG_RULE_CONFLICT_ERR
 The HTTP `403 Forbidden` client error status response code indicates that the
 server understood the request but refuses to authorize it.
 
-This status is similar to `401`, but in this case, re-authenticating will make
+This status is similar to `401`, but in this case, reauthenticating will make
 no difference. The access is permanently forbidden and tied to the application
 logic, such as insufficient rights to a resource.
 
@@ -2054,7 +2054,7 @@ The client cannot repeat this request without modification.
 
 An error occurred when a key was rewrapped.
 
-If you get this error please contact
+If you get this error, please contact
 [IBM support](/unifiedsupport/supportcenter){: external}
 
 ## 20 - The action could not be performed on...
@@ -2074,7 +2074,7 @@ Reason code: KEY_EXPIRED_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -2087,7 +2087,7 @@ This error occurs when restoring a deleted key after the key has expired.
 #### Example
 {: #error-messages-key-expired-err-context-example}
 
-A `key restore` request fails because the key is delete and the key has expired.
+A `key restore` request fails because the key is deleted and the key has expired.
 
 The following steps will create this error.
 
@@ -2095,7 +2095,7 @@ The following steps will create this error.
 
 2. Create a root key using the key material and the expiration date
 
-3. Capture the key id
+3. Capture the key ID
 
 4. Allow the expiration date to pass
 
@@ -2241,7 +2241,7 @@ Reason code: INCORRECT_NONCE_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -2256,7 +2256,7 @@ This example is based on the `restore` key command and it uses the
 because the output is easier to follow than the
 [API](/apidocs/key-protect){: external}.
 
-**Step 1** - setup the problem by creating a root key using an import token and
+**Step 1** - set up the problem by creating a root key using an import token and
 then delete the key
 
 ```sh
@@ -2554,7 +2554,7 @@ In most cases, a key with registrations can be deleted using the `--force`
 option.
 
 If the registered resource has `preventKeyDeletion` set to `true`, then a force
-delete will fail and this error mesage will be shown.
+delete will fail and this error message will be shown.
 
 In other words, all registrations must have `preventKeyDeletion` set to `false`.
 
@@ -2868,7 +2868,7 @@ data because the input was invalid.
 
 This error is returned when there is an internal error.
 
-If you get this error please contact
+If you get this error, please contact
 [IBM support](/unifiedsupport/supportcenter){: external}
 
 ## 27 - The provided encrypted nonce was not...
@@ -2889,7 +2889,7 @@ Reason code: INCORRECT_NONCE_IV_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -2902,7 +2902,7 @@ data because the input was invalid.
 
 This error is returned when there is an internal error.
 
-If you get this error please contact
+If you get this error, please contact
 [IBM support](/unifiedsupport/supportcenter){: external}
 
 ## 28 - The resource(s) queried does not belong to the service
@@ -2975,7 +2975,7 @@ service need to create the registration.
 A service-to-service request is required to create, delete, replace, or update a
 registration.
 
-See this resources for more information about registrations.
+See this resource for more information about registrations.
 
 - [API documentation](/apidocs/key-protect#createregistration){: external}
 
@@ -3178,7 +3178,7 @@ Reason code: KEY_PAYLOAD_REQ_ERR
 
 The HTTP `400 Bad Request` response status code indicates that the server cannot
 or will not process the request due to something that is perceived to be a
-client error (e.g., malformed request syntax, invalid request message framing,
+client error (for example, malformed request syntax, invalid request message framing,
 or deceptive request routing).
 
 The client cannot repeat this request without modification.
@@ -3272,7 +3272,7 @@ This status is similar to `403`, but in this case, authentication is possible.
 This error message is returned when the user does not have access to a resource.
 
 This example applies an instance policy that limits access to a range of IP
-addresses. When a request from outside the allowed range is received it returns
+addresses. When a request from outside the allowed range is received, it returns
 an error.
 
 ```sh
@@ -3315,7 +3315,7 @@ $ curl -X GET \
 ```
 {: codeblock}
 
-##### JSON response
+#### JSON response
 {: #error-messages-unauthorized-err-context-json}
 
 ```json

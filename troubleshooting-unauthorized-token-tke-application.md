@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-08-09"
 
 keywords: troubleshoot, problems, known issues, unauthorized when starting the Trusted Key Entry application
 
@@ -30,7 +30,7 @@ subcollection: hs-crypto
 {: support}
 
 You receive an error message when you start the Trusted Key Entry application.
-{:shortdesc}
+{: shortdesc}
 
 You might receive the following error message:
 {: tsSymptoms}

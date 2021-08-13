@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-08-12"
 
 keywords: crypto unit, add crypto units, remove crypto units, change crypto units number, adjust crypto units number, new crypto units, support center, support ticket, support case
 
@@ -41,7 +41,7 @@ To add or remove crypto units, you need to first raise a support ticket.
 1. In your {{site.data.keyword.cloud_notm}} dashboard, select **Support** to enter the Support Center. Click **View all** in the **Recent support cases** panel and click **Create new case**. Or, you can directly go to the [Manage cases page](https://cloud.ibm.com/unifiedsupport/cases){: external} and click **Create new case**.
 2. On the **Create a case** page displayed, select the offering {{site.data.keyword.hscrypto}}, and then specify the following values:
 
-  <table>
+    <table>
     <tr>
       <th>Field name</th>
       <th>Action</th>
@@ -52,18 +52,18 @@ To add or remove crypto units, you need to first raise a support ticket.
     </tr>
     <tr>
       <td>Description</td>
-      <td>Enter your [service instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID), the region that your service instance resides in, and the number of crypto units you want to add. You can have no more than three crypto units for a service instance.</td>
+      <td>Enter your <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">service instance ID</a>, the region that your service instance resides in, and the number of crypto units you want to add. You can have no more than three crypto units for a service instance.</td>
     </tr>
     <tr>
       <td>Selected resources</td>
       <td>Select your {{site.data.keyword.hscrypto}} service instance.</td>
     </tr>
     <caption>Table 1. Describes the fields that are required to add crypto units</caption>
-  </table>
+    </table>
 
 3. Check the **Email me updates about this issue** box, and click **Continue to review > Create case**.
 
-  After the operation is completed successfully, you will get an email notification. You can also check the state in the Support Center by clicking **Support**.
+    After the operation is completed successfully, you will get an email notification. You can also check the state in the Support Center by clicking **Support**.
 
 4. To view the number of crypto units in the current service instance, run the `ibm tke cryptounits` command in the CLI. Or you can select the **Crypto units** tab in the Trusted Key Entry application, depending on how you store your master key parts.
 
@@ -77,7 +77,7 @@ Before you can use the new crypto units, complete the following two steps to ini
 
 Depending on how you store your master key parts, you might initialize the new crypto units with the TKE CLI plug-in, or smart cards together with the Management Utilities. Make sure to configure the new crypto units the same as the existing crypto units by referring to the following instructions:
 
-- If you load the master key from your workstation, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+- If you load the master key from your workstation, see [Initializing service instances with the {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 - If you load the master key from smart cards, see [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
 Extra monthly costs apply for each new crypto unit. You can check the detailed charges on the [billing and usage](https://cloud.ibm.com/billing/){: external} page under your account.
@@ -91,7 +91,7 @@ After you initialize the new crypto units, you need to raise another support tic
 1. In your {{site.data.keyword.cloud_notm}} dashboard, select **Support** to enter the Support Center. Click **View all** in the **Recent support cases** panel and click **Create new case**. Or, you can directly go to the [Manage cases page](https://cloud.ibm.com/unifiedsupport/cases){: external} and click **Create new case**.
 2. On the **Create a case** page displayed, select the offering {{site.data.keyword.hscrypto}}, and then specify the following values:
 
-  <table>
+    <table>
     <tr>
       <th>Field name</th>
       <th>Action</th>
@@ -102,18 +102,18 @@ After you initialize the new crypto units, you need to raise another support tic
     </tr>
     <tr>
       <td>Description</td>
-      <td>Enter your [service instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID), the region that your service instance resides in, the number of new crypto units, and the case number of the support ticket that is previously raised in [step 1](#step1-support-ticket-change-number).</td>
+      <td>Enter your <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">service instance ID</a>, the region that your service instance resides in, the number of new crypto units, and the case number of the support ticket that is previously raised in <a href="#step1-support-ticket-change-number">step 1</a>.</td>
     </tr>
     <tr>
       <td>Selected resources</td>
       <td>Select your {{site.data.keyword.hscrypto}} service instance.</td>
     </tr>
     <caption>Table 2. Describes the fields that are required to activate new crypto units</caption>
-  </table>
+    </table>
 
 3. Check the **Email me updates about this issue** box, and click **Continue to review > Create case**.
 
-  After the activation is completed successfully, you will get an email notification. You can also check the state in the Support Center by clicking **Support**.
+    After the activation is completed successfully, you will get an email notification. You can also check the state in the Support Center by clicking **Support**.
 
 ## Removing crypto units from an existing service instance
 {: #remove-crypto-units}

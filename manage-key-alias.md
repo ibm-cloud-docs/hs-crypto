@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-08-12"
 
 keywords: create key alias, key alias, delete key alias, add key alias, retrieve encryption key by alias, create alias API examples
 
@@ -34,19 +34,19 @@ Before you manage key alias for keys in {{site.data.keyword.hscrypto}}, keep in 
 
 - An alias is independent from a key.
 
-  An alias is its own resource and any actions that are taken on it do not affect the associated key. For example, deleting an alias does not delete the associated key.
+    An alias is its own resource and any actions that are taken on it do not affect the associated key. For example, deleting an alias does not delete the associated key.
 
 - An alias can be associated with only one key at a time.
 
-  An alias can be associated with only one key that is located in the same instance and region. If you want to change the key that the alias is associated with, you need to perform the following steps:
+    An alias can be associated with only one key that is located in the same instance and region. If you want to change the key that the alias is associated with, you need to perform the following steps:
 
-  1. Delete the alias.
-  2. Wait up to 10 minutes.
-  3. Re-create the alias and map it to the key.
+    1. Delete the alias.
+    2. Wait up to 10 minutes.
+    3. Re-create the alias and map it to the key.
 
 - You can create an alias with the same name in a different instance or region.
 
-  Each alias is associated with a different key in each instance or region, with which, your service's application code can be reusable in different instances or regions. For example, if you name an alias `Application Key` in both the `us-south` and `us-east` regions, with each linked to a different key.
+    Each alias is associated with a different key in each instance or region, with which, your service's application code can be reusable in different instances or regions. For example, if you name an alias `Application Key` in both the `us-south` and `us-east` regions, with each linked to a different key.
 
 ## Creating key aliases
 {: #create-key-alias}
@@ -65,10 +65,10 @@ Create a key alias with the console by completing the following steps:
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. Select the **KMS keys** tab in the side menu and find the key that you want to create key aliases for.
-5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")to open the list of options for the key and click **Edit key aliases**.
+5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open the list of options for the key and click **Edit key aliases**.
 6. Enter key aliases separated by a comma. You can add up to five aliases for a key.
 
-  Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive).
+    Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive).
 
 7. Click **Save**.
 
@@ -117,9 +117,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
             <strong>Required.</strong> The region abbreviation, such as <code>us-south</code>, that represents the
             geographic area where your {{site.data.keyword.hscrypto}} instance resides.
           </p>
-          <p>
-            For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
         </td>
       </tr>
 
@@ -133,20 +131,20 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
           <varname>key_ID</varname>
         </td>
         <td>
-          <strong>Required.</strong> The identifier for the key that you would like to associate with an alias. To retrieve a key ID, see the [list keys API](/docs/hs-crypto?topic=hs-crypto-view-keys#retrieve-keys-api).
+          <strong>Required.</strong> The identifier for the key that you would like to associate with an alias. To retrieve a key ID, see the <a href="/docs/hs-crypto?topic=hs-crypto-view-keys#retrieve-keys-api">list keys API</a>.
         </td>
       </tr>
 
       <tr>
         <td>
-          <varname>key\_alias</varname>
+          <varname>key_alias</varname>
         </td>
         <td>
           <p>
             <strong>Required.</strong> A unique, human-readable name for easy identification of your key.
           </p>
           <p>
-          Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (\_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive).
+          Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: <code>allowed_ip</code>, <code>key</code>, <code>keys</code>, <code>metadata</code>, <code>policy</code>, <code>policies</code>, <code>registration</code>, <code>registrations</code>, <code>ring</code>, <code>rings</code>, <code>rotate</code>, <code>wrap</code>, <code>unwrap</code>, <code>rewrap</code>, <code>version</code>, <code>versions</code>. Alias size can be 2 - 90 characters (inclusive).
           </p>
           <p>
             <strong>Note</strong> You cannot have duplicate alias names in your {{site.data.keyword.hscrypto}} instance.
@@ -162,9 +160,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
           <p>
             <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the <code>curl</code> request.
           </p>
-          <p>
-            For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
         </td>
       </tr>
 
@@ -177,9 +173,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
             <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service
             instance.
           </p>
-          <p>
-            For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
         </td>
       </tr>
 
@@ -238,7 +232,7 @@ Delete a key alias with the console by completing the following steps:
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. Select the **KMS keys** tab in the side menu and find the key that you want to create key aliases for.
-5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")to open the list of options for the key and click **Edit key aliases**.
+5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open the list of options for the key and click **Edit key aliases**.
 6. Delete the key alias that you want to remove and click **Save**.
 
 ### Deleting key aliases with the API
@@ -284,10 +278,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
             {{site.data.keyword.hscrypto}} instance
             resides.
           </p>
-          <p>
-            For more information, see
-            [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
         </td>
       </tr>
 
@@ -295,7 +286,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
         <td><varname>port</varname></td>
         <td><strong>Required.</strong> The port number of the API endpoint.</td>
       </tr>
-      
+
       <tr>
         <td>
           <varname>key_ID</varname>
@@ -326,10 +317,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
             access token. Include the full contents of the <code>IAM</code>
             token, including the Bearer value, in the <code>curl</code> request.
           </p>
-          <p>
-            For more information, see
-            [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
         </td>
       </tr>
 
@@ -343,10 +331,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
             your {{site.data.keyword.hscrypto}} service
             instance.
           </p>
-          <p>
-            For more information, see
-            [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
         </td>
       </tr>
 

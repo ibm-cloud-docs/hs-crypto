@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-07"
+lastupdated: "2021-08-09"
 
 keywords: troubleshoot, problems, known issues, got a an error when I use CLI or API
 
@@ -30,7 +30,7 @@ subcollection: hs-crypto
 {: support}
 
 When you use CLI or API, you receive a `CKR_IBM_WK_NOT_INITIALIZED` error message.
-{:shortdesc}
+{: shortdesc}
 
 You might got an error message similar to the following message:
 {: tsSymptoms}

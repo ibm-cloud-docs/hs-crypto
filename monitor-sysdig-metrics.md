@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-08-12"
 
 keywords: measure interactions, metrics, monitoring, operational metrics
 
@@ -86,52 +86,13 @@ You can use the metrics in your Monitoring dashboard to measure the types of req
 
 The type and number of API requests that are made to your {{site.data.keyword.hscrypto}} instance. For example, you can track how many API requests that are made by an authorized user by setting an [alert](#set-monitor-alerts). The alert triggers when your Monitoring instance notices a frequent number of `401` status codes that are returned from your {{site.data.keyword.hscrypto}} instance.
 
-<table>
-  <tr>
-    <th>Metadata</th>
-    <th>Description</th>
-  </tr>
-
-  <tr>
-    <td>
-      Metric Name
-    </td>
-    <td>
-      <code>ibm_kms_api_request_gauge</code>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      Metric Type
-    </td>
-    <td>
-      Gauge
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      Value Type
-    </td>
-    <td>
-      none
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      Segment By
-    </td>
-    <td>
-      [Attributes for Segmentation](#attributes-for-segmentation)
-    </td>
-  </tr>
-
-  <caption>
-    Table 1. Describes the API Hits metrics.
-  </caption>
-</table>
+| Metadata | Description |
+| --- | --- |
+| Metric Name | `ibm_kms_api_request_gauge` |
+| Metric Type | Gauge |
+| Value Type | none |
+| Segment By | [Attributes for Segmentation](#attributes-for-segmentation) |
+{: caption="Table 1. Describes the API Hits metrics."}
 
 ## Latency
 {: #latency}
@@ -141,227 +102,46 @@ The number of time it takes {{site.data.keyword.hscrypto}} to receive an API req
 The latency is calculated by getting the average of all requests of the same type that occur within 60 seconds.
 {: note}
 
-<table>
-  <tr>
-    <th>Metadata</th>
-    <th>Description</th>
-  </tr>
-
-  <tr>
-    <td>
-      Metric Name
-    </td>
-    <td>
-      <code>ibm_kms_api_latency_gauge</code>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      Metric Type
-    </td>
-    <td>
-      Gauge
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      Value Type
-    </td>
-    <td>
-      Milliseconds
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      Segment By
-    </td>
-    <td>
-      [Attributes for Segmentation](#attributes-for-segmentation)
-    </td>
-  </tr>
-
-  <caption>
-    Table 2. Describes the Latency metrics.
-  </caption>
-</table>
+| Metadata | Description |
+| --- | --- |
+| Metric Name | `ibm_kms_api_latency_gauge` |
+| Metric Type | Gauge |
+| Value Type | Milliseconds |
+| Segment By | [Attributes for Segmentation](#attributes-for-segmentation) |
+{: caption="Table 2. Describes the Latency metrics."}
 
 ## Attributes for Segmentation
 {: #attributes-for-segmentation}
 
 You can filter your metrics by using the following attributes.
 
-<table>
-  <tr>
-    <th>Attribute Name</th>
-    <th>Description</th>
-  </tr>
-
-  <tr>
-    <td>
-      <code>ibm_resource_type</code>
-    </td>
-    <td>
-      Supported resource type is <code>instance</code>.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <code>ibm_kms_response_code</code>
-    </td>
-    <td>
-      Response code for the {{site.data.keyword.hscrypto}}
-      service API request.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <code>ibm_scope</code>
-    </td>
-    <td>
-      The account, organization, or space GUID associated with the metric.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <code>ibm_ctype</code>
-    </td>
-    <td>
-      Public, dedicated, or local.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <code>ibm_location</code>
-    </td>
-    <td>
-      Location of the {{site.data.keyword.hscrypto}} service
-      instance.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <code>ibm_service_name</code>
-    </td>
-    <td>
-      kms.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <code>ibm_resource</code>
-    </td>
-    <td>
-      {{site.data.keyword.hscrypto}} service instance ID.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <code>ibm_kms_api</code>
-    </td>
-    <td>
-      {{site.data.keyword.hscrypto}} service API name.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <code>ibm_resource_group_name</code>
-    </td>
-    <td>
-      Resource group name associated with the
-      {{site.data.keyword.hscrypto}} service instance.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <code>ibm_service_instance_name</code>
-    </td>
-    <td>
-      {{site.data.keyword.hscrypto}} service instance name.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <code>ibm_service_instance</code>
-    </td>
-    <td>
-      {{site.data.keyword.hscrypto}} service instance ID.
-    </td>
-  </tr>
-
-  <caption>
-    Table 3. Describes the attributes use for segmenting metrics.
-  </caption>
-</table>
+| Attribute Name | Description |
+| --- | --- |
+| `ibm_resource_type` | Supported resource type is `instance`. |
+| `ibm_kms_response_code` | Response code for the {{site.data.keyword.hscrypto}} service API request. |
+| `ibm_scope` | The account, organization, or space GUID associated with the metric. |
+| `ibm_ctype` | Public, dedicated, or local. |
+| `ibm_location` | Location of the {{site.data.keyword.hscrypto}} service instance. |
+| `ibm_service_name` | kms. |
+| `ibm_resource` | {{site.data.keyword.hscrypto}} service instance ID. |
+| `ibm_kms_api` | {{site.data.keyword.hscrypto}} service API name. |
+| `ibm_resource_group_name` | Resource group name associated with the {{site.data.keyword.hscrypto}} service instance. |
+| `ibm_service_instance_name` | {{site.data.keyword.hscrypto}} service instance name. |
+| `ibm_service_instance` | {{site.data.keyword.hscrypto}} service instance ID. |
+{: caption="Table 3. Describes the attributes use for segmenting metrics."}
 
 ## Metrics Filter Attributes
 {: #metrics-filter-attributes}
 
 You can scope down your metrics by using the following scope filters. These filters are more granular than the segmentation filters.
 
-<table>
-  <tr>
-    <th>Attribute Name</th>
-    <th>Description</th>
-  </tr>
-
-  <tr>
-    <td>
-      <code>ibmResourceGroupName</code>
-    </td>
-    <td>
-      The name of the resource group associated with the
-      {{site.data.keyword.hscrypto}} service instance.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <code>ibmScope</code>
-    </td>
-    <td>
-      The account, organization, or space GUID associated with the metric.
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <code>ibmServiceInstanceName</code>
-    </td>
-    <td>
-      <p>
-        The service instance associated with the metric.
-      </p>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <code>ibmKmsApi</code>
-    </td>
-    <td>
-      The {{site.data.keyword.hscrypto}} API calls associated
-      with the metric.
-    </td>
-  </tr>
-
-  <caption>
-    Table 3. Describes the scope filters for
-    {{site.data.keyword.hscrypto}} metrics.
-  </caption>
-</table>
+| Attribute Name | Description |
+| --- | --- |
+| `ibmResourceGroupName` | The name of the resource group associated with the {{site.data.keyword.hscrypto}} service instance. |
+| `ibmScope` | The account, organization, or space GUID associated with the metric. |
+| `ibmServiceInstanceName` | The service instance associated with the metric. |
+| `ibmKmsApi` | The {{site.data.keyword.hscrypto}} API calls associated with the metric. |
+{: caption="Table 4. Describes the scope filters for {{site.data.keyword.hscrypto}} metrics."}
 
 Because of {{site.data.keyword.mon_short}} limitations, you are able to see the values in the filters for up to 6 hours at a time. You can manually type in value into scope variables to use scope filters for given time periods.
 {: note}

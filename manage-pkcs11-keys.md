@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-07-26"
+lastupdated: "2021-08-12"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -53,7 +53,7 @@ On the {{site.data.keyword.hscrypto}} dashboard, do the following to view EP11 k
 
 1. To view a list of created EP11 keys, select the **EP11 keys** tab in the side menu.
 
-  An EP11 key table is displayed with the following details.
+    An EP11 key table is displayed with the following details.
 
     <table>
     <tr>
@@ -76,15 +76,15 @@ On the {{site.data.keyword.hscrypto}} dashboard, do the following to view EP11 k
     <tr>
       <td>Class</td>
       <td>
-        <p>The class of the key. Possible values are **Public**, **Private**, and **Secret**. The value is determined by the CKA_CLASS key attribute.</p>
-        <p>**Public** indicates the key is the public key of an asymmetric key pair. **Private** indicates the key is the private key of an asymmetric key pair. **Secret** indicates the key is a symmetric key.</p>
+        <p>The class of the key. Possible values are <strong>Public</strong>, <strong>Private</strong>, and <strong>Secret</strong>. The value is determined by the CKA_CLASS key attribute.</p>
+        <p><strong>Public</strong> indicates that the key is the public key of an asymmetric key pair. <strong>Private</strong> indicates that the key is the private key of an asymmetric key pair. <strong>Secret</strong> indicates the key is a symmetric key.</p>
       </td>
     </tr>
     <tr>
       <td>Version</td>
       <td>
         <p>The version number of the key.</p>
-        <p>When the key is first created, version 0 is assigned. The version number is increased by 1 sequentially upon each update, such as using the `C_SetAttributeValue` function to update a key attribute value.</p>
+        <p>When the key is first created, version 0 is assigned. The version number is increased by 1 sequentially upon each update, such as using the <code>C_SetAttributeValue</code> function to update a key attribute value.</p>
       </td>
     </tr>
     <tr>
@@ -100,10 +100,10 @@ On the {{site.data.keyword.hscrypto}} dashboard, do the following to view EP11 k
         <caption>Table 1. Describes the EP11 keys table</caption>
     </table>
 
-2. To view details of the [key attributes](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list), click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")of the key row, and then select **Show more details**.
+2. To view details of the [key attributes](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list), click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") of the key row, and then select **Show more details**.
 
-  You can also identify the public key, the private key, and the symmetric key by checking the value of the CKA_CLASS attribute. `CKO_PUBLIC_KEY` indicates a public key; `CKO_PRIVATE_KEY` indicates a private key; `CKO_SECRET_KEY` indicates a symmetric key.
-  {: tip}
+    You can also identify the public key, the private key, and the symmetric key by checking the value of the CKA_CLASS attribute. `CKO_PUBLIC_KEY` indicates a public key; `CKO_PRIVATE_KEY` indicates a private key; `CKO_SECRET_KEY` indicates a symmetric key.
+    {: tip}
 
 ## Creating EP11 keys
 {: #create-ep11-key-ui}
@@ -125,62 +125,63 @@ Complete the following steps to create an EP11 key:
 1. Select the **EP11 keys** tab in the side menu. You can see a list of existing EP11 keys with each having a unique ID.
 2. Click **Create key**. In the **Create EP11 key** panel that is displayed, complete the following steps:
 
-  1. Specify the following key details on the **Identifier** page:
+    1. Specify the following key details on the **Identifier** page:
 
-    <table>
-    <tr>
-      <th>Setting</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>Key name</td>
-      <td>
-        <p>A human-readable alias for easy identification of your key.</p>
-        <p>The key name length can be 1 to 32 characters. To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
-        <p>The key name might not be unique. You can assign multiple keys with the same name. However, it is suggested to assign a unique name to each key in the same keystore for easy identification.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>Key type</td>
-      <td><p>The type of the EP11 key that you want to manage in {{site.data.keyword.hscrypto}}.</p></td>
-    </tr>
-    <tr>
-      <td>Keystore</td>
-      <td>
-        <p>The unique identifier of the keystore with the keystore type appended. Choose one that you want the key to be stored in from the list. For an asymmetric key pair, you need to specify the keystore separately to store the public key and the private key.</p>
-        <p>You can find all available keystores by clicking the **EP11 keystores** tab in the side menu.</p>
-      </td>
-    </tr>
+        <table>
+        <tr>
+          <th>Setting</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Key name</td>
+          <td>
+            <p>A human-readable alias for easy identification of your key.</p>
+            <p>The key name length can be 1 - 32 characters. To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
+            <p>The key name might not be unique. You can assign multiple keys with the same name. However, it is suggested to assign a unique name to each key in the same keystore for easy identification.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Key type</td>
+          <td><p>The type of the EP11 key that you want to manage in {{site.data.keyword.hscrypto}}.</p></td>
+        </tr>
+        <tr>
+          <td>Keystore</td>
+          <td>
+          <p>The unique identifier of the keystore with the keystore type appended. Choose one that you want the key to be stored in from the list. For an asymmetric key pair, you need to specify the keystore separately to store the public key and the private key.</p>
+          <p>You can find all available keystores by clicking the <strong>EP11 keystores</strong> tab in the side menu.</p>
+          </td>
+        </tr>
         <caption>Table 2. Describes the Identifier page</caption>
-    </table>
+        </table>
 
-    By default, two key IDs are automatically generated. One is for the public key, the other is for the private key. However, if you select a symmetric key type, such as an AES key, a DES key, or a Generic key, only one key ID is shown on the page.
+        By default, two key IDs are automatically generated. One is for the public key, and the other is for the private key. However, if you select a symmetric key type, such as an AES key, a DES key, or a Generic key, only one key ID is shown on the page.
 
-  2. Specify key attributes by following these steps:
+    2. Specify key attributes by following these steps:
 
-    * If you are creating an asymmetric key, specify key attributes on the **Public key attributes** and **Private key attributes** pages subsequently:
+        - If you are creating an asymmetric key, specify key attributes on the **Public key attributes** and **Private key attributes** pages then:
 
-        1. The required attributes are listed with the default values. To modify the attribute values, click the **Edit** icon ![Edit icon](../icons/edit-tagging.svg "Edit").
-        2. To add more attributes, click **Add public attribute** or **Add private attribute** depending on which page you are on. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list) and [supported curve names for Elliptic Curve keys](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#supported-pkcs11-ec-curve-name).
-        3. (Optional) You can delete more attributes by clicking the **Trash can** icon ![Trash can icon](../icons/icon_trash.svg "Trash can"). The required attributes cannot be deleted.
-        4. Click **Next** to continue.
+            1. The required attributes are listed with the default values. To modify the attribute values, click the **Edit** icon ![Edit icon](../icons/edit-tagging.svg "Edit").
+            2. To add more attributes, click **Add public attribute** or **Add private attribute** depending on which page you are on. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list) and [supported curve names for Elliptic Curve keys](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#supported-pkcs11-ec-curve-name).
+            3. (Optional) You can delete more attributes by clicking the **Trash can** icon ![Trash can icon](../icons/icon_trash.svg "Trash can"). The required attributes cannot be deleted.
+            4. Click **Next** to continue.
 
-    * If you are creating a symmetric key, such as an AES key, a DES key, and a Generic key, specify key attributes on the **Key attributes** page:
+        - If you are creating a symmetric key, such as an AES key, a DES key, and a Generic key, specify key attributes on the **Key attributes** page:
 
-        1. The required attributes are listed with the default values. To modify the attribute values, click the **Edit** icon ![Edit icon](../icons/edit-tagging.svg "Edit").
-        2. To add more attributes, click **Add attributes**. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list).
-        3. (Optional) You can delete more attributes by clicking the **Trash can** icon ![Trash can icon](../icons/icon_trash.svg "Trash can"). The required attributes cannot be deleted.
-        4. Click **Next** to continue.
+            1. The required attributes are listed with the default values. To modify the attribute values, click the **Edit** icon ![Edit icon](../icons/edit-tagging.svg "Edit").
+            2. To add more attributes, click **Add attributes**. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list).
+            3. (Optional) You can delete more attributes by clicking the **Trash can** icon ![Trash can icon](../icons/icon_trash.svg "Trash can"). The required attributes cannot be deleted.
+            4. Click **Next** to continue.
 
-  3. On the **Confirmation** page, verify the key details and click **Create key**.
+    3. On the **Confirmation** page, verify the key details and click **Create key**.
 
-    1. Verify the key details that are displayed, especially the key type, keystore, and key attributes.
+        1. Verify the key details that are displayed, especially the key type, keystore, and key attributes.
 
-      All the values cannot be modified through the console after the key is created.
-      {:important}
-    2. Click **Create key** to confirm the creation.
+            All the values cannot be modified through the console after the key is created.
+            {: important}
 
-You have successfully created a EP11 key. The created key is displayed as the first row in the **Enterprise PKCS #11 keys** table.
+        2. Click **Create key** to confirm the creation.
+
+You have successfully created an EP11 key. The created key is displayed as the first row in the **Enterprise PKCS #11 keys** table.
 
 ## Deleting EP11 keys
 {: #delete-ep11-key-ui}
@@ -199,7 +200,7 @@ After you delete an EP11 key, you are not able to access the data associated wit
 {: important}
 
 1. Select the **EP11 keys** tab in the side menu, and find the key that you want to delete in the list.
-2. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")in the key row, and click **Delete key**.
+2. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") in the key row, and click **Delete key**.
 2. Verify the ID of the key to be deleted, and check the box to confirm the deletion.
 3. Click **Delete keystore**.
 

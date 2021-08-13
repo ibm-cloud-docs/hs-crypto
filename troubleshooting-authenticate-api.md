@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-07-17"
+  years: 2020, 2021
+lastupdated: "2021-08-09"
 
 keywords: troubleshoot, problems, known issues, can't authenticate through the key management API
 
@@ -29,7 +29,7 @@ subcollection: hs-crypto
 {: troubleshoot}
 
 When you call the {{site.data.keyword.hscrypto}} key management API, the system returns a `401 Unauthorized` error, and you're unable to make the API request.
-{:shortdesc}
+{: shortdesc}
 
 You call any {{site.data.keyword.hscrypto}} key management API method. You see an error response similar to the following JSON object:
 {: tsSymptoms}

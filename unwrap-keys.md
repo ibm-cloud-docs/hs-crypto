@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-08-12"
 
 keywords: data encryption key, key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, unwrap api
 
@@ -99,12 +99,9 @@ Root keys that contain the same key material can unwrap the same data encryption
             <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. It is suggested to specify the key ring ID for a more optimized request.
           </p>
           <p>
-            Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default.
+            Note: The key ring ID of keys that are created without an <code>x-kms-key-ring</code> header is: default.
           </p>
-          <p>
-            For more information, see
-            [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
-          </p>
+          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
         </td>
       </tr>
       <tr>
@@ -118,7 +115,7 @@ Root keys that contain the same key material can unwrap the same data encryption
       <caption>Table 1. Describes the variables that are needed to unwrap keys in {{site.data.keyword.hscrypto}}.</caption>
     </table>
 
-    The original key material is returned in the response entity-body. The response body also contains the ID of the key version that was used to unwrap the supplied ciphertext. The following JSON object shows a sample returned value.
+    The original key material is returned in the response entity-body. The response body also contains the ID of the key version that was used to unwrap the supplied ciphertext. The following JSON object shows that a sample returned value.
 
     ```json
     {
@@ -145,14 +142,14 @@ When you unwrap a data encryption key, the key material is returned in base64 en
 1. Download and install [OpenSSL](https://github.com/openssl/openssl#for-production-use){: external}.
 2. Base64 encode your key material string by running the following command:
 
-  ```
-  $ openssl base64 -d -in <infile> -out <outfile>
-  ```
-  {: codeblock}
+    ```
+    $ openssl base64 -d -in <infile> -out <outfile>
+    ```
+    {: codeblock}
 
-  Replace the variables in the example request according to the following table.
+    Replace the variables in the example request according to the following table.
 
-  <table>
+    <table>
     <tr>
       <th>Variable</th>
       <th>Description</th>
@@ -182,6 +179,6 @@ When you unwrap a data encryption key, the key material is returned in base64 en
     <caption>
       Table 2. Describes the variables that are needed to decode your key material.
     </caption>
-  </table>
+    </table>
 
-  If you want to output the decoded material in the command line directly rather than a file, run command `openssl enc -base64 -d <<< '<key_material_string>'`, where key_material_string is the returned plaintext from your unwrap request.
+    If you want to output the decoded material in the command line directly rather than a file, run command `openssl enc -base64 -d <<< '<key_material_string>'`, where key_material_string is the returned plaintext from your unwrap request.

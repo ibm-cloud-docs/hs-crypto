@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-30"
+lastupdated: "2021-08-09"
 
 keywords: set up api, api key, cryptographic operations, use ep11 api, access ep11 api, ep11 over grpc, using api
 
@@ -43,7 +43,7 @@ You can also enable mutual TLS for GREP11 API to add another layer of authentica
 ### Example: Generating random data using the `GenerateRandomRequest()` function
 {: #generate-random-request-example}
 
-GREP11 API supports programming languages with [gRPC libraries](https://grpc.io/docs/){:external}. Two sample GitHub repositories are provided for you to test the GREP11 API:
+GREP11 API supports programming languages with [gRPC libraries](https://grpc.io/docs/){: external}. Two sample GitHub repositories are provided for you to test the GREP11 API:
 
 - [The sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external}
 - [The sample GitHub repository for JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js){: external}
@@ -177,20 +177,20 @@ In the example, update the following variables:
 
 * Replace `<grep11_server_address>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance console, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**. Alternatively, you can dynamically [retrieve the API endpoint URL](/apidocs/hs-crypto#getinstance){: external}. The returned value includes the following. Depending on whether you are using public or [private network](/docs/hs-crypto?topic=hs-crypto-secure-connection), use the public or private service endpoint value that is returned in the `ep11` section.
 
-   ```
-   {
-     "instance_id": "<instance_ID>",
-     "kms": {
-       "public": "api.<region>.hs-crypto.cloud.ibm.com:<port>",
-       "private":"api.private.<region>.hs-crypto.cloud.ibm.com:<port>"
-     },
-     "ep11": {
-       "public": "ep11.<region>.hs-crypto.cloud.ibm.com:<port>",
-       "private":"ep11.private.<region>.hs-crypto.cloud.ibm.com:<port>"
-     }
-   }
-  ```
-  {: screen}
+    ```
+    {
+      "instance_id": "<instance_ID>",
+      "kms": {
+        "public": "api.<region>.hs-crypto.cloud.ibm.com:<port>",
+        "private":"api.private.<region>.hs-crypto.cloud.ibm.com:<port>"
+      },
+      "ep11": {
+        "public": "ep11.<region>.hs-crypto.cloud.ibm.com:<port>",
+        "private":"ep11.private.<region>.hs-crypto.cloud.ibm.com:<port>"
+      }
+    }
+    ```
+    {: screen}
 
 * Replace `<ibm_cloud_apikey>` with the service ID API key that you created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
 

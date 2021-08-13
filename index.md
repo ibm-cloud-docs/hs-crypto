@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-06-28"
+lastupdated: "2021-08-11"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -53,15 +53,15 @@ To manage your keys, you need to initialize your service instance first. Dependi
 
 - [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
 
-  This approach gives you the highest security, which enables you to store and manage master key parts using smart cards.
+    This approach gives you the highest security, which enables you to store and manage master key parts using smart cards.
 
 - [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
 
-  If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`) where the recovery crypto units are enabled, you can choose this approach where the master key is randomly generated within a recovery crypto unit and then exported to other crypto units.
+    If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`) where the recovery crypto units are enabled, you can choose this approach where the master key is randomly generated within a recovery crypto unit and then exported to other crypto units.
 
 - [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
 
-  You can also initialize your service instance using master key parts that are stored in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. 
+    You can also initialize your service instance using master key parts that are stored in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. 
 
 ## Step 2: Using the key management service and cloud hardware security module
 {: #manage-data-key-dashboard}
@@ -90,7 +90,7 @@ Complete the following steps to create your first cryptographic key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select **Root key** or **Standard key**.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <strong>Root key</strong> or <strong>Standard key</strong>.</td>
       </tr>
       <tr>
         <td>Key name</td>
@@ -125,7 +125,7 @@ Complete the following steps to add an existing key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select **Root key** or **Standard key**.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <strong>Root key</strong> or <strong>Standard key</strong>.</td>
       </tr>
       <tr>
         <td>Key name</td>
@@ -157,96 +157,88 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
 
 1. Generate an API key for accessing your {{site.data.keyword.hscrypto}} instance. Run the following command to create an API key for your {{site.data.keyword.cloud_notm}} account, and save the value of the API key for subsequent steps:
 
-  ```
-  ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
-  ```
-  {: codeblock}
+    ```
+    ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
+    ```
+    {: codeblock}
 
 2. Create a configuration file for the {{site.data.keyword.hscrypto}} PKCS #11 feature. The configuration file is named `grep11client.yaml`.
 
-  Adapt the following file template and name the file `grep11client.yaml`:
+    Adapt the following file template and name the file `grep11client.yaml`:
 
-  - Replace `<instance_id>` with the ID of your {{site.data.keyword.hscrypto}} instance.
-  - Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance.
-  - Replace `<your_api_key>` with the value of the API key that you created previously.
+    - Replace `<instance_id>` with the ID of your {{site.data.keyword.hscrypto}} instance.
+    - Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance.
+    - Replace `<your_api_key>` with the value of the API key that you created previously.
 
-  ```yaml
-  iamcredentialtemplate: &defaultiamcredential
+    ```yaml
+    iamcredentialtemplate: &defaultiamcredential
+              enabled: true
+              endpoint: "https://iam.cloud.ibm.com"
+              # Keep the 'apikey' empty. It will be overridden by the Anonymous user API key configured later.
+              apikey:
+              # The Universally Unique IDentifier (UUID) of your Hyper Protect Crypto Services instance.
+              instance: "<instance_id>"
+
+    tokens:
+      0:
+        grep11connection:
+          # The EP11 endpoint address starting from 'ep11'. For example: "ep11.us-south.hs-crypto.cloud.ibm.com"
+          address: "<EP11_endpoint_URL>"
+          port: "<EP11_endpoint_port_number>" # The EP11 endpoint port number
+          tls:
+            enabled: true # EP11 requires TLS connection.
+            # Set it 'true' if you want to enable mutual TLS connections.
+            # By default, set it 'false' because EP11 requires server-only authentication.
+            mutual: <enable_mtls>
+            # 'cacert' is a full-path certificate file. In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
+            cacert:
+            # Specify the file path of the client certificate if you enable mutual TLS. Otherwise, keep it empty.
+            certfile: <client_certificate>
+            # Specify the file path of the client certificate private key if you enable mutual TLS. Otherwise, keep it empty.
+            keyfile: <client_certificate_private_key>
+        storage:
+            # 'remotestore' needs to be enabled if you want to generate keys with the attribute CKA_TOKEN.
+          remotestore:
             enabled: true
-            endpoint: "https://iam.cloud.ibm.com"
-            # Keep the 'apikey' empty. It will be overridden by the Anonymous user API key configured later.
-            apikey:
-            # The Universally Unique IDentifier (UUID) of your {{site.data.keyword.hscrypto}} instance.
-            instance: "<instance_id>"
+        users:
+          0: # The index of the Security Officer (SO) user MUST be 0.
+            # The name for the Security Officer (SO) user. For example: "Administrator".
+            name: "<SO_user_name>"
+            # NEVER put the API key under the SO user for security reasons.
+            iamauth:
+              <<: *defaultiamcredential
+          1: # The index of the normal user MUST be 1.
+            # The name for the normal user. For example: "Normal user".
+            name: "<normal_user_name>"
+            # The 128-bit UUID of the private keystore. For example: "f00db2f1-4421-4032-a505-465bedfa845b".
+            tokenspaceID: "<private_keystore_spaceid>"
+            # NEVER put the API key under the normal user for security reasons.
+            iamauth:
+              <<: *defaultiamcredential
+            sessionauth:
+              enabled: true # Enable this option to encrypt and authenticate the keystore.
+              # Authenticated keystore password; must be 6-8 characters in length
+              tokenspaceIDPassword: "<private_keystore_password>"
+          2: # The index of the anonymous user MUST be 2.
+            # The name for the anonymous user. For example: "Anonymous".
+            name: "<anonymous_user_name>"
+            # The 128-bit UUID of the public keystore. For example: "ca22be26-b798-4fdf-8c83-3e3a492dc215".
+            tokenspaceID: "<public_keystore_spaceid>"
+            iamauth:
+              <<: *defaultiamcredential
+              # The API key for the anonymous user. It will overide the 'apikey' in the previous defaultcredentials.iamauth.apikey field
+              apikey: "<apikey_for_anonymous_user>"
+            sessionauth:
+              enabled: false
+              tokenspaceIDPassword: # Authenticated keystore password; must be 6-8 characters in length
+    logging:
+      # Set the logging level.
+      # The supported levels, in an increasing order of verboseness: 'panic', 'fatal', 'error', 'warning'/'warn', 'info', 'debug', 'trace'. The Default value is 'warning'.
+      loglevel: "<logging_level>"
+      logpath: "<log_file_path>" # The full path of your logging file.
 
-  tokens:
-    0:
-      grep11connection:
-        # The EP11 endpoint address starting from 'ep11'.
-        # For example: "ep11.us-south.hs-crypto.cloud.ibm.com"
-        address: "<EP11_endpoint_URL>"
-        # The EP11 endpoint port number
-        port: "<EP11_endpoint_port_number>"
-        tls:
-          # Grep11 requires TLS connection.
-          enabled: true
-          # Grep11 requires server only authentication, so 'mutual' needs to be set as 'false'.
-          mutual: false
-          # 'cacert' is a full-path certificate file.
-          # In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
-          cacert:
-          # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' need to be empty.
-          certfile:
-          keyfile:
-      storage:
-        filestore:
-          enabled: false
-          storagepath:
-          # 'remotestore' needs to be enabled if you want to generate keys with the attribute CKA_TOKEN.
-        remotestore:
-          enabled: true
-      users:
-        0: # The index of the Security Officer (SO) user MUST be 0.
-          # The name for the Security Officer (SO) user. For example: "Administrator".
-          # NEVER put the API key under the SO user for security reasons.
-          name: "Administrator"
-          iamauth:
-            <<: *defaultiamcredential
-        1: # The index of the normal user MUST be 1.
-          # The name for the normal user. For example: "Normal user".
-          # NEVER put the API key under the normal user for security reasons.
-          name: "Normal user"
-           # The Space ID is a 128-bit UUID and can be chosen freely.
-           # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
-           # For example: "f00db2f1-4421-4032-a505-465bedfa845b".
-           # 'tokenspaceID' under the normal user is to identify the private keystore.
-          tokenspaceID: "f00db2f1-4421-4032-a505-465bedfa845b"
-          iamauth:
-            <<: *defaultiamcredential
-        2: # The index of the anonymous user MUST be 2.
-          # The name for the anonymous user. For example: "Anonymous".
-          name: "Anonymous"
-          # The Space ID is a 128-bit UUID and can be chosen freely.
-          # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
-          # For example: "ca22be26-b798-4fdf-8c83-3e3a492dc215".
-          # 'tokenspaceID' under the anonymous user is to identify the public keystore.
-          tokenspaceID: "ca22be26-b798-4fdf-8c83-3e3a492dc215"
-          iamauth:
-            <<: *defaultiamcredential
-            # This API key for the Anonymous user must be provided.
-            # It will overide the 'apikey' in the previous defaultcredentials.iamauth.apikey field
-            apikey: "<your_api_key>"
-  logging:
-    # Set the logging level.
-    # The supported levels, in an increasing order of verboseness, are:
-    # 'panic', 'fatal', 'error', 'warning'/'warn', 'info', 'debug', 'trace'.
-    # The Default value is 'debug'.
-    loglevel: debug
-    # The full path of your logging file.
-    # For example: /tmp/grep11client.log
-    logpath: /tmp/grep11client.log
-  ```
-  {: codeblock}
+    ```
+    {: codeblock}
 
 3. Download and install the latest PKCS #11 library through [the GitHub repository](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} and move it into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64` or `/usr/lib`.
 
@@ -259,57 +251,57 @@ To perform cryptographic operations with the GREP11 API, you need to make sure y
 
 The following procedure uses Golang code as an example to test GREP11 functions.
 
-1. Install Golang by following [the instruction](https://golang.org/doc/install){:external}.
+1. Install Golang by following [the instruction](https://golang.org/doc/install){: external}.
 2. Clone the [sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external} into a local directory of your choice. Go modules are used for this repository, so you don't need to place the cloned repository in your `GOPATH`. Refer to the repository's README file for more information about the GREP11 Go code examples.
 3. Update the following code snippet in the `examples/server_test.go` file.
 
-  ```Golang
-  var (
-      Address        = "<grep11_server_address>:<port>"
-      APIKey         = "<ibm_cloud_apikey>"
-      HPCSInstanceID = "<hpcs_instance_id>"
-  )
-  ```
-  {: codeblock}
+    ```Golang
+    var (
+        Address        = "<grep11_server_address>:<port>"
+        APIKey         = "<ibm_cloud_apikey>"
+        HPCSInstanceID = "<hpcs_instance_id>"
+    )
+    ```
+    {: codeblock}
 
-  In the code example,
-  - Replace `<grep11_server_address>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance console, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**.
-  - Replace `<ibm_cloud_apikey>` with the service ID API key that you created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
-  - Replace `<instance_ID>` with the instance ID that uniquely identifies your service instance. Retrieve the instance ID by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+    In the code example,
+    - Replace `<grep11_server_address>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance console, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**.
+    - Replace `<ibm_cloud_apikey>` with the service ID API key that you created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
+    - Replace `<instance_ID>` with the instance ID that uniquely identifies your service instance. Retrieve the instance ID by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 
 4. From the `<your_repository_path>/hpcs-grep11-go/examples` directory, execute the examples by running the `go test -v -run Example` command.
 
-  The sample program produces output similar to the following:
+    The sample program produces output similar to the following:
 
-  ```
-  === RUN   Example_getMechanismInfo
-  --- PASS: Example_getMechanismInfo (0.11s)
-  === RUN   Example_generateGenericKey
-  --- PASS: Example_generateGenericKey (0.09s)
-  === RUN   Example_encryptAndDecryptUsingAES
-  --- PASS: Example_encryptAndDecryptUsingAES (0.28s)
-  === RUN   Example_digest
-  --- PASS: Example_digest (0.18s)
-  === RUN   Example_signAndVerifyUsingRSAKeyPair
-  --- PASS: Example_signAndVerifyUsingRSAKeyPair (0.21s)
-  === RUN   Example_signAndVerifyUsingDSAKeyPair
-  --- PASS: Example_signAndVerifyUsingDSAKeyPair (0.99s)
-  === RUN   Example_deriveKeyUsingDHKeyPair
-  --- PASS: Example_deriveKeyUsingDHKeyPair (0.64s)
-  === RUN   Example_signAndVerifyUsingECDSAKeyPair
-  --- PASS: Example_signAndVerifyUsingECDSAKeyPair (0.16s)
-  === RUN   Example_signAndVerifyToTestErrorHandling
-  --- PASS: Example_signAndVerifyToTestErrorHandling (0.16s)
-  === RUN   Example_wrapAndUnwrapKey
-  --- PASS: Example_wrapAndUnwrapKey (0.20s)
-  === RUN   Example_deriveKey
-  --- PASS: Example_deriveKey (0.22s)
-  === RUN   Example_tls
-  --- PASS: Example_tls (0.14s)
-  PASS
-  ok      github.com/IBM-Cloud/hpcs-grep11-go/examples    13.106s
-  ```
-  {: screen}
+    ```
+    === RUN   Example_getMechanismInfo
+    --- PASS: Example_getMechanismInfo (0.11s)
+    === RUN   Example_generateGenericKey
+    --- PASS: Example_generateGenericKey (0.09s)
+    === RUN   Example_encryptAndDecryptUsingAES
+    --- PASS: Example_encryptAndDecryptUsingAES (0.28s)
+    === RUN   Example_digest
+    --- PASS: Example_digest (0.18s)
+    === RUN   Example_signAndVerifyUsingRSAKeyPair
+    --- PASS: Example_signAndVerifyUsingRSAKeyPair (0.21s)
+    === RUN   Example_signAndVerifyUsingDSAKeyPair
+    --- PASS: Example_signAndVerifyUsingDSAKeyPair (0.99s)
+    === RUN   Example_deriveKeyUsingDHKeyPair
+    --- PASS: Example_deriveKeyUsingDHKeyPair (0.64s)
+    === RUN   Example_signAndVerifyUsingECDSAKeyPair
+    --- PASS: Example_signAndVerifyUsingECDSAKeyPair (0.16s)
+    === RUN   Example_signAndVerifyToTestErrorHandling
+    --- PASS: Example_signAndVerifyToTestErrorHandling (0.16s)
+    === RUN   Example_wrapAndUnwrapKey
+    --- PASS: Example_wrapAndUnwrapKey (0.20s)
+    === RUN   Example_deriveKey
+    --- PASS: Example_deriveKey (0.22s)
+    === RUN   Example_tls
+    --- PASS: Example_tls (0.14s)
+    PASS
+    ok      github.com/IBM-Cloud/hpcs-grep11-go/examples    13.106s
+    ```
+    {: screen}
 
 ## (Optional) Step 3: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC
 {: #get-started-vpe-gateway-dashboard}
@@ -335,7 +327,7 @@ In order to use {{site.data.keyword.hscrypto}}, make sure that you have a Pay-As
 1. To check your account type, go to [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/login){: external} and click **Management** > **Account** > **Account settings**.
 2. If you have a Lite account and want to use {{site.data.keyword.hscrypto}}, upgrade your account to a Pay-As-You-Go or Subscription account. You can also apply your promo code if you have one.
 
-  For detailed instructions, see [Upgrading your account](/docs/account?topic=account-upgrading-account) and [Applying promo codes](/docs/billing-usage?topic=billing-usage-applying-promo-codes).
+    For detailed instructions, see [Upgrading your account](/docs/account?topic=account-upgrading-account) and [Applying promo codes](/docs/billing-usage?topic=billing-usage-applying-promo-codes).
 
 ## Step 1: Provision the service
 {: #provision-service}
@@ -353,15 +345,15 @@ To manage your keys, you need to initialize your service instance first. Dependi
 
 - [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
 
-  This approach gives you the highest security, which enables you to store and manage master key parts using smart cards.
+    This approach gives you the highest security, which enables you to store and manage master key parts using smart cards.
 
 - [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
 
-  If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`) where the recovery crypto units are enabled, you can choose this approach where the master key is randomly generated within a recovery crypto unit and then exported to other crypto units.
+    If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`) where the recovery crypto units are enabled, you can choose this approach where the master key is randomly generated within a recovery crypto unit and then exported to other crypto units.
 
 - [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
 
-  You can also initialize your service instance using master key parts that are stored in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. 
+    You can also initialize your service instance using master key parts that are stored in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. 
 
 ## Step 3: Using the key management service and cloud hardware security module
 {: #manage-data-key}
@@ -391,7 +383,7 @@ Complete the following steps to create your first cryptographic key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select **Root key** or **Standard key**.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <strong>Root key</strong> or <strong>Standard key</strong>.</td>
       </tr>
       <tr>
         <td>Key name</td>
@@ -428,7 +420,7 @@ Complete the following steps to add an existing key.
       </tr>
       <tr>
         <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select **Root key** or **Standard key**.</td>
+        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <strong>Root key</strong> or <strong>Standard key</strong>.</td>
       </tr>
       <tr>
         <td>Key name</td>
@@ -462,96 +454,88 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
 
 1. Generate an API key for accessing your {{site.data.keyword.hscrypto}} instance. Run the following command to create an API key for your {{site.data.keyword.cloud_notm}} account, and save the value of the API key for subsequent steps:
 
-  ```
-  ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
-  ```
-  {: codeblock}
+    ```
+    ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
+    ```
+    {: codeblock}
 
 2. Create a configuration file for the {{site.data.keyword.hscrypto}} PKCS #11 feature. The configuration file is named `grep11client.yaml`.
 
-  Adapt the following file template and name the file `grep11client.yaml`:
+    Adapt the following file template and name the file `grep11client.yaml`:
 
-  - Replace `<instance_id>` with the ID of your {{site.data.keyword.hscrypto}} instance.
-  - Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance.
-  - Replace `<your_api_key>` with the value of the API key that you created previously.
+    - Replace `<instance_id>` with the ID of your {{site.data.keyword.hscrypto}} instance.
+    - Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance.
+    - Replace `<your_api_key>` with the value of the API key that you created previously.
 
-  ```yaml
-  iamcredentialtemplate: &defaultiamcredential
+    ```yaml
+    iamcredentialtemplate: &defaultiamcredential
+              enabled: true
+              endpoint: "https://iam.cloud.ibm.com"
+              # Keep the 'apikey' empty. It will be overridden by the Anonymous user API key configured later.
+              apikey:
+              # The Universally Unique IDentifier (UUID) of your Hyper Protect Crypto Services instance.
+              instance: "<instance_id>"
+
+    tokens:
+      0:
+        grep11connection:
+          # The EP11 endpoint address starting from 'ep11'. For example: "ep11.us-south.hs-crypto.cloud.ibm.com"
+          address: "<EP11_endpoint_URL>"
+          port: "<EP11_endpoint_port_number>" # The EP11 endpoint port number
+          tls:
+            enabled: true # EP11 requires TLS connection.
+            # Set it 'true' if you want to enable mutual TLS connections.
+            # By default, set it 'false' because EP11 requires server-only authentication.
+            mutual: <enable_mtls>
+            # 'cacert' is a full-path certificate file. In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
+            cacert:
+            # Specify the file path of the client certificate if you enable mutual TLS. Otherwise, keep it empty.
+            certfile: <client_certificate>
+            # Specify the file path of the client certificate private key if you enable mutual TLS. Otherwise, keep it empty.
+            keyfile: <client_certificate_private_key>
+        storage:
+            # 'remotestore' needs to be enabled if you want to generate keys with the attribute CKA_TOKEN.
+          remotestore:
             enabled: true
-            endpoint: "https://iam.cloud.ibm.com"
-            # Keep the 'apikey' empty. It will be overridden by the Anonymous user API key configured later.
-            apikey:
-            # The Universally Unique IDentifier (UUID) of your {{site.data.keyword.hscrypto}} instance.
-            instance: "<instance_id>"
+        users:
+          0: # The index of the Security Officer (SO) user MUST be 0.
+            # The name for the Security Officer (SO) user. For example: "Administrator".
+            name: "<SO_user_name>"
+            # NEVER put the API key under the SO user for security reasons.
+            iamauth:
+              <<: *defaultiamcredential
+          1: # The index of the normal user MUST be 1.
+            # The name for the normal user. For example: "Normal user".
+            name: "<normal_user_name>"
+            # The 128-bit UUID of the private keystore. For example: "f00db2f1-4421-4032-a505-465bedfa845b".
+            tokenspaceID: "<private_keystore_spaceid>"
+            # NEVER put the API key under the normal user for security reasons.
+            iamauth:
+              <<: *defaultiamcredential
+            sessionauth:
+              enabled: true # Enable this option to encrypt and authenticate the keystore.
+              # Authenticated keystore password; must be 6-8 characters in length
+              tokenspaceIDPassword: "<private_keystore_password>"
+          2: # The index of the anonymous user MUST be 2.
+            # The name for the anonymous user. For example: "Anonymous".
+            name: "<anonymous_user_name>"
+            # The 128-bit UUID of the public keystore. For example: "ca22be26-b798-4fdf-8c83-3e3a492dc215".
+            tokenspaceID: "<public_keystore_spaceid>"
+            iamauth:
+              <<: *defaultiamcredential
+              # The API key for the anonymous user. It will overide the 'apikey' in the previous defaultcredentials.iamauth.apikey field
+              apikey: "<apikey_for_anonymous_user>"
+            sessionauth:
+              enabled: false
+              tokenspaceIDPassword: # Authenticated keystore password; must be 6-8 characters in length
+    logging:
+      # Set the logging level.
+      # The supported levels, in an increasing order of verboseness: 'panic', 'fatal', 'error', 'warning'/'warn', 'info', 'debug', 'trace'. The Default value is 'warning'.
+      loglevel: "<logging_level>"
+      logpath: "<log_file_path>" # The full path of your logging file.
 
-  tokens:
-    0:
-      grep11connection:
-        # The EP11 endpoint address starting from 'ep11'.
-        # For example: "ep11.us-south.hs-crypto.cloud.ibm.com"
-        address: "<EP11_endpoint_URL>"
-        # The EP11 endpoint port number
-        port: "<EP11_endpoint_port_number>"
-        tls:
-          # Grep11 requires TLS connection.
-          enabled: true
-          # Grep11 requires server only authentication, so 'mutual' needs to be set as 'false'.
-          mutual: false
-          # 'cacert' is a full-path certificate file.
-          # In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
-          cacert:
-          # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' need to be empty.
-          certfile:
-          keyfile:
-      storage:
-        filestore:
-          enabled: false
-          storagepath:
-          # 'remotestore' needs to be enabled if you want to generate keys with the attribute CKA_TOKEN.
-        remotestore:
-          enabled: true
-      users:
-        0: # The index of the Security Officer (SO) user MUST be 0.
-          # The name for the Security Officer (SO) user. For example: "Administrator".
-          # NEVER put the API key under the SO user for security reasons.
-          name: "Administrator"
-          iamauth:
-            <<: *defaultiamcredential
-        1: # The index of the normal user MUST be 1.
-          # The name for the normal user. For example: "Normal user".
-          # NEVER put the API key under the normal user for security reasons.
-          name: "Normal user"
-           # The Space ID is a 128-bit UUID and can be chosen freely.
-           # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
-           # For example: "f00db2f1-4421-4032-a505-465bedfa845b".
-           # 'tokenspaceID' under the normal user is to identify the private keystore.
-          tokenspaceID: "f00db2f1-4421-4032-a505-465bedfa845b"
-          iamauth:
-            <<: *defaultiamcredential
-        2: # The index of the anonymous user MUST be 2.
-          # The name for the anonymous user. For example: "Anonymous".
-          name: "Anonymous"
-          # The Space ID is a 128-bit UUID and can be chosen freely.
-          # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
-          # For example: "ca22be26-b798-4fdf-8c83-3e3a492dc215".
-          # 'tokenspaceID' under the anonymous user is to identify the public keystore.
-          tokenspaceID: "ca22be26-b798-4fdf-8c83-3e3a492dc215"
-          iamauth:
-            <<: *defaultiamcredential
-            # This API key for the Anonymous user must be provided.
-            # It will overide the 'apikey' in the previous defaultcredentials.iamauth.apikey field
-            apikey: "<your_api_key>"
-  logging:
-    # Set the logging level.
-    # The supported levels, in an increasing order of verboseness, are:
-    # 'panic', 'fatal', 'error', 'warning'/'warn', 'info', 'debug', 'trace'.
-    # The Default value is 'debug'.
-    loglevel: debug
-    # The full path of your logging file.
-    # For example: /tmp/grep11client.log
-    logpath: /tmp/grep11client.log
-  ```
-  {: codeblock}
+    ```
+    {: codeblock}
 
 3. Download and install the latest PKCS #11 library through [the GitHub repository](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} and move it into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64` or `/usr/lib`.
 
@@ -566,57 +550,57 @@ To perform cryptographic operations with the GREP11 API, you need to make sure y
 
 The following procedure uses Golang code as an example to test GREP11 functions.
 
-1. Install Golang by following [the instruction](https://golang.org/doc/install){:external}.
+1. Install Golang by following [the instruction](https://golang.org/doc/install){: external}.
 2. Clone the [sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external} into a local directory of your choice. Go modules are used for this repository, so you don't need to place the cloned repository in your `GOPATH`. Refer to the repository's README file for more information about the GREP11 Go code examples.
 3. Update the following code snippet in the `examples/server_test.go` file.
 
-  ```Golang
-  var (
-      Address        = "<grep11_server_address>:<port>"
-      APIKey         = "<ibm_cloud_apikey>"
-      HPCSInstanceID = "<hpcs_instance_id>"
-  )
-  ```
-  {: codeblock}
+    ```Golang
+    var (
+        Address        = "<grep11_server_address>:<port>"
+        APIKey         = "<ibm_cloud_apikey>"
+        HPCSInstanceID = "<hpcs_instance_id>"
+    )
+    ```
+    {: codeblock}
 
-  In the code example,
-  - Replace `<grep11_server_address>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance console, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**.
-  - Replace `<ibm_cloud_apikey>` with the service ID API key that you created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
-  - Replace `<instance_ID>` with the instance ID that uniquely identifies your service instance. Retrieve the instance ID by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+    In the code example,
+    - Replace `<grep11_server_address>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance console, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**.
+    - Replace `<ibm_cloud_apikey>` with the service ID API key that you created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
+    - Replace `<instance_ID>` with the instance ID that uniquely identifies your service instance. Retrieve the instance ID by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 
 4. From the `<your_repository_path>/hpcs-grep11-go/examples` directory, execute the examples by running the `go test -v -run Example` command.
 
-  The sample program produces output similar to the following:
+    The sample program produces output similar to the following:
 
-  ```
-  === RUN   Example_getMechanismInfo
-  --- PASS: Example_getMechanismInfo (0.11s)
-  === RUN   Example_generateGenericKey
-  --- PASS: Example_generateGenericKey (0.09s)
-  === RUN   Example_encryptAndDecryptUsingAES
-  --- PASS: Example_encryptAndDecryptUsingAES (0.28s)
-  === RUN   Example_digest
-  --- PASS: Example_digest (0.18s)
-  === RUN   Example_signAndVerifyUsingRSAKeyPair
-  --- PASS: Example_signAndVerifyUsingRSAKeyPair (0.21s)
-  === RUN   Example_signAndVerifyUsingDSAKeyPair
-  --- PASS: Example_signAndVerifyUsingDSAKeyPair (0.99s)
-  === RUN   Example_deriveKeyUsingDHKeyPair
-  --- PASS: Example_deriveKeyUsingDHKeyPair (0.64s)
-  === RUN   Example_signAndVerifyUsingECDSAKeyPair
-  --- PASS: Example_signAndVerifyUsingECDSAKeyPair (0.16s)
-  === RUN   Example_signAndVerifyToTestErrorHandling
-  --- PASS: Example_signAndVerifyToTestErrorHandling (0.16s)
-  === RUN   Example_wrapAndUnwrapKey
-  --- PASS: Example_wrapAndUnwrapKey (0.20s)
-  === RUN   Example_deriveKey
-  --- PASS: Example_deriveKey (0.22s)
-  === RUN   Example_tls
-  --- PASS: Example_tls (0.14s)
-  PASS
-  ok      github.com/IBM-Cloud/hpcs-grep11-go/examples    13.106s
-  ```
-  {: screen}
+    ```
+    === RUN   Example_getMechanismInfo
+    --- PASS: Example_getMechanismInfo (0.11s)
+    === RUN   Example_generateGenericKey
+    --- PASS: Example_generateGenericKey (0.09s)
+    === RUN   Example_encryptAndDecryptUsingAES
+    --- PASS: Example_encryptAndDecryptUsingAES (0.28s)
+    === RUN   Example_digest
+    --- PASS: Example_digest (0.18s)
+    === RUN   Example_signAndVerifyUsingRSAKeyPair
+    --- PASS: Example_signAndVerifyUsingRSAKeyPair (0.21s)
+    === RUN   Example_signAndVerifyUsingDSAKeyPair
+    --- PASS: Example_signAndVerifyUsingDSAKeyPair (0.99s)
+    === RUN   Example_deriveKeyUsingDHKeyPair
+    --- PASS: Example_deriveKeyUsingDHKeyPair (0.64s)
+    === RUN   Example_signAndVerifyUsingECDSAKeyPair
+    --- PASS: Example_signAndVerifyUsingECDSAKeyPair (0.16s)
+    === RUN   Example_signAndVerifyToTestErrorHandling
+    --- PASS: Example_signAndVerifyToTestErrorHandling (0.16s)
+    === RUN   Example_wrapAndUnwrapKey
+    --- PASS: Example_wrapAndUnwrapKey (0.20s)
+    === RUN   Example_deriveKey
+    --- PASS: Example_deriveKey (0.22s)
+    === RUN   Example_tls
+    --- PASS: Example_tls (0.14s)
+    PASS
+    ok      github.com/IBM-Cloud/hpcs-grep11-go/examples    13.106s
+    ```
+    {: screen}
 
 ## (Optional) Step 4: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC
 {: #get-started-vpe-gateway}

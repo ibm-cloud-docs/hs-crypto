@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-08-12"
 
 keywords: create import token, secure import, key material, key wrapping key, import token api, bring your own key, byok
 
@@ -40,7 +40,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/import_token
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
-2. Set a policy for your import token by calling the [Key management API](https://{DomainName}/apidocs/hs-crypto){: external}.
+2. Set a policy for your import token by calling the [Key management API](/apidocs/hs-crypto){: external}.
 
     ```cURL
     curl -X POST \
@@ -113,12 +113,12 @@ Complete the following steps to create an import token using the {{site.data.key
 
 2. Create an import token with the following command:
 
-  ```
-  ibmcloud kp import-token create
-  ```
-  {:pre}
+    ```
+    ibmcloud kp import-token create
+    ```
+    {: pre}
 
-  You can find more parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference#kp-import-token-create).
+    You can find more parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference#kp-import-token-create).
 
 ## Retrieving an import token with the API
 {: #retrieve-import-token-api}
@@ -132,7 +132,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/import_token
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
-2. Retrieve the import token that is associated with your service instance by calling the [Key management API](https://{DomainName}/apidocs/hs-crypto){: external}.
+2. Retrieve the import token that is associated with your service instance by calling the [Key management API](/apidocs/hs-crypto){: external}.
 
     ```cURL
     curl -X GET \
@@ -195,12 +195,12 @@ Complete the following steps to retrieve an import token using the {{site.data.k
 
 2. Retrieve an import token with the following command:
 
-  ```
-  ibmcloud kp import-token show
-  ```
-  {:pre}
+    ```
+    ibmcloud kp import-token show
+    ```
+    {: pre}
 
-  You can find more parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference#kp-import-token-show).
+    You can find more parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference#kp-import-token-show).
 
 ## What's next
 {: #create-import-token-next-steps}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-07-17"
+  years: 2020, 2021
+lastupdated: "2021-08-09"
 
 keywords: troubleshoot, problems, known issues, blocked PIN on EP11 smart card
 
@@ -30,7 +30,7 @@ subcollection: hs-crypto
 {: support}
 
 You try to use an EP11 smart card for an operation that requires personal identification number (PIN) entry and get an error.
-{:shortdesc}
+{: shortdesc}
 
 You might receive an error message similar to the following one:
 {: tsSymptoms}

@@ -2,15 +2,15 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-11"
+lastupdated: "2021-08-12"
 
 keywords: pkcs11 ui access, pkcs 11 account authentication
 
 subcollection: hs-crypto
 
 ---
-{:shortdesc: .shortdesc}
 
+{:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:table: .aria-labeledby="caption"}
 {:pre: .pre}
@@ -41,7 +41,7 @@ To create a custom role, complete the following steps:
 6. From the list of services, select **Hyper Protect Crypto Services**.
 7. Select **Add** to add actions for the role. The following table lists the actions that correspond to the EP11 keystore or key operations with the console:
 
-  <table>
+    <table>
     <tr>
       <th>Operations</th>
       <th>Actions</th>
@@ -50,7 +50,7 @@ To create a custom role, complete the following steps:
       <td>View EP11 keystores.</td>
       <td>
         <ul>
-          <li>`hs-crypto.keystore.listkeystoresbyids`</li>
+          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
         </ul>
       </td>
     </tr>
@@ -58,8 +58,8 @@ To create a custom role, complete the following steps:
       <td>Create EP11 keystores.</td>
       <td>
         <ul>
-          <li>`hs-crypto.keystore.listkeystoresbyids`</li>
-          <li>`hs-crypto.keystore.createkeystore`</li>
+          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
+          <li><code>hs-crypto.keystore.createkeystore</code></p>
         </ul>
       </td>
     </tr>
@@ -67,8 +67,8 @@ To create a custom role, complete the following steps:
       <td>Delete EP11 keystores.</td>
       <td>
         <ul>
-          <li>`hs-crypto.keystore.listkeystoresbyids`</li>
-          <li>`hs-crypto.keystore.deletekeystore`</li>
+          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
+          <li><code>hs-crypto.keystore.deletekeystore</code></p>
         </ul>
       </td>
     </tr>
@@ -76,8 +76,8 @@ To create a custom role, complete the following steps:
       <td>View EP11 keys.</td>
       <td>
         <ul>
-          <li>`hs-crypto.keystore.listkeystoresbyids`</li>
-          <li>`hs-crypto.keystore.listkeysbyids`</li>
+          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
+          <li><code>hs-crypto.keystore.listkeysbyids</code></p>
         </ul>
       </td>
     </tr>
@@ -85,11 +85,11 @@ To create a custom role, complete the following steps:
       <td>Create EP11 keys.</td>
       <td>
         <ul>
-          <li>`hs-crypto.keystore.listkeystoresbyids`</li>
-          <li>`hs-crypto.keystore.listkeysbyids`</li>
-          <li>`hs-crypto.crypto.generatekey`</li>
-          <li>`hs-crypto.crypto.generatekeypair`</li>
-          <li>`hs-crypto.keystore.storenewkey`</li>
+          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
+          <li><code>hs-crypto.keystore.listkeysbyids</code></p>
+          <li><code>hs-crypto.crypto.generatekey</code></p>
+          <li><code>hs-crypto.crypto.generatekeypair</code></p>
+          <li><code>hs-crypto.keystore.storenewkey</code></p>
         </ul>
       </td>
     </tr>
@@ -97,14 +97,14 @@ To create a custom role, complete the following steps:
       <td>View EP11 keys.</td>
       <td>
         <ul>
-          <li>`hs-crypto.keystore.listkeystoresbyids`</li>
-          <li>`hs-crypto.keystore.listkeysbyids`</li>
-          <li>`hs-crypto.keystore.deletekey`</li>
+          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
+          <li><code>hs-crypto.keystore.listkeysbyids</code></p>
+          <li><code>hs-crypto.keystore.deletekey</code></p>
         </ul>
       </td>
     </tr>
     <caption>Table 1. Actions corresponding to the EP11 keystore or key operations with the console</caption>
-  </table>
+    </table>
 
 8. Click **Create** after you select the appropriate actions for your custom role.
 
@@ -116,21 +116,21 @@ Before users can access EP11 keystores or keys with the {{site.data.keyword.clou
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
 2. Click the **User** name and select the **Access policies** tab.
 
-  Click **Invite users** to add a user to your account if the user is not in the table. For more information, see [Inviting users to an account](/docs/account?topic=account-iamuserinv){: external}.
-  {: tip}
+    Click **Invite users** to add a user to your account if the user is not in the table. For more information, see [Inviting users to an account](/docs/account?topic=account-iamuserinv){: external}.
+    {: tip}
 
 3. Click **Assign access**.
 4. Select **Hyper Protect Crypto Services** from the list under **What type of access do you want to assign?**.
 5. Select services that you want to assign access to:
 
-  - If you want to assign the user access to all the {{site.data.keyword.hscrypto}} instances under your account, select **All services**.
-  - If you want to assign the user access to part of the {{site.data.keyword.hscrypto}} resources under you account, select **Services based on attributes** and check the corresponding conditions based on your needs. For example, check the **Service Instance ID** and specify the instance from the list.
+    - If you want to assign the user access to all the {{site.data.keyword.hscrypto}} instances under your account, select **All services**.
+    - If you want to assign the user access to part of the {{site.data.keyword.hscrypto}} resources under you account, select **Services based on attributes** and check the corresponding conditions based on your needs. For example, check the **Service Instance ID** and specify the instance from the list.
 
 6. Check the box for at least the **Viewer** role under **Platform access**. For more information about the IAM platform roles, see [Platform access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#platform-mgmt-roles).
 7. Check the box for the corresponding custom role that you set up in [Step 1](#step1-create-custom-roles-pkcs11-ui) based on your needs.
 
-  If you don't have any custom roles, you can select the existing IAM roles that cover the actions that you want to assign to the user. You can view the specific actions that correspond to the role by clicking the number.
-  {: tip}
+    If you don't have any custom roles, you can select the existing IAM roles that cover the actions that you want to assign to the user. You can view the specific actions that correspond to the role by clicking the number.
+    {: tip}
 
 8. Click **Add**, and then click **Assign** after confirmation.
 

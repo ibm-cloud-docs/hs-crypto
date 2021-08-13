@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-08-11"
 
 keywords: hsm, cloud hsm, tke cli, pkcs11, PKCS11 library, cryptographic operations, cryptographic functions, PKCS 11
 
@@ -86,9 +86,9 @@ As shown in the following diagram, a PKCS #11 key object is an example of a PKCS
 * **Data**: A data object is defined by an application. 
 * **Certificates**: A certificate object stores a certificate. 
 * **Keys**: A key object stores a cryptographic key. The key can be a public key, a private key, or a secret key. Each type of these keys has subtypes for use in specific mechanisms.
-  * Public key: The public component of a key pair that is used by anyone to encrypt messages intended for a particular recipient that has access to the private key of the key pair. The public key is also used to verify signatures created by the private key.
-  * Private key: The private component of a key pair that is used to decrypt messages. The private key is also used to create signatures.
-  * Secret key: A secret key is a generated stream of bits that is used to encrypt and decrypt messages symmetrically.
+    * Public key: The public component of a key pair that is used by anyone to encrypt messages intended for a particular recipient that has access to the private key of the key pair. The public key is also used to verify signatures created by the private key.
+    * Private key: The private component of a key pair that is used to decrypt messages. The private key is also used to create signatures.
+    * Secret key: A secret key is a generated stream of bits that is used to encrypt and decrypt messages symmetrically.
 
 ![PKCS #11 object classes](/images/object-class.svg "PKCS #11 object classes"){: caption="Figure 2. PKCS #11 object classes" caption-side="bottom"}
 
@@ -106,7 +106,7 @@ This implementation of PKCS #11 equates an API key with a user's PIN. For more i
 ### Crypto service
 {: #pkcs11-crypto-intro}
 
-As part of the PKCS #11 library initialization process, a gRPC connection is made from the PKCS #11 library to the {{site.data.keyword.cloud_notm}}. The gRPC connection facilitates the PKCS #11 library to call Cryptoki functions, such as `C_Encrypt`, `C_Decrypt`, `C_Sign`, and `C_Verify`, which require the use of a Hardware Security Module (HSM).
+As part of the PKCS #11 library initialization process, a gRPC connection is made from the PKCS #11 library to the {{site.data.keyword.cloud_notm}}. The gRPC connection facilitates the PKCS #11 library to call Cryptoki functions, such as `C_Encrypt`, `C_Decrypt`, `C_Sign`, and `C_Verify`, which requires the use of a Hardware Security Module (HSM).
 
 ### Keystore
 {: #pkcs11-keystore-intro}
@@ -114,7 +114,7 @@ As part of the PKCS #11 library initialization process, a gRPC connection is mad
 Two major types of keystores are available:
 
 * **In-memory keystores**: Stores key objects temporarily in memory. Key objects that are stored in the in-memory keystore are also known as *session objects*. Session objects in a specific session are destroyed when you call the `C_CloseSession` function for that session. Session objects in all sessions are destroyed after the `C_Finalize` function is called.
-* **Database-backed keystores**: Stores key objects in databases. Key objects that are stored in the database-backed keystore are also known as *token objects*. If the `sessionauth` parameter is enabled and a password for the keystore is configured, the database-backed keystore is encrypted and authenticated. For each service instance, a maximum of five authenticated keystores are supported. You can enable the `sessionauth`  parameter to encrypt the generated keys into the keystore or to decrypt the key before you use it. The password can be 6-8 characters.
+* **Database-backed keystores**: Stores key objects in databases. Key objects that are stored in the database-backed keystore are also known as *token objects*. If the `sessionauth` parameter is enabled and a password for the keystore is configured, the database-backed keystore is encrypted and authenticated. For each service instance, a maximum of five authenticated keystores are supported. You can enable the `sessionauth`  parameter to encrypt the generated keys into the keystore or to decrypt the key before you use it. The password can be 6 - 8 characters.
 
 Keystore passwords are not stored in the service instance. You, as the keystore administrator, are responsible for maintaining a local copy of the passwords. If a password is lost, you need to contact the Support team to reset the keystore, which means all data in the keystore is cleared.
 {: note}
@@ -128,13 +128,13 @@ Depending on the [user types](#pkcs11-user-intro) and key attributes settings, t
 
 * The CKA_TOKEN attribute value decides whether the generated key is stored in an in-memory keystore or in a database-backed keystore.
 
-  If you want to store the key in the database-backed keystore, set CKA_TOKEN to `TRUE` in key or key pair generation templates. The PKCS #11 library initialization process establishes a gRPC connection with the {{site.data.keyword.cloud_notm}}, which facilitates the storing and retrieval of key objects to or from the database-backed keystore. By default, CKA_TOKEN is set to `FALSE`, which means the key object is stored in an in-memory keystore within the process address space of the PKCS #11 application.
+    If you want to store the key in the database-backed keystore, set CKA_TOKEN to `TRUE` in key or key pair generation templates. The PKCS #11 library initialization process establishes a gRPC connection with the {{site.data.keyword.cloud_notm}}, which facilitates the storing and retrieval of key objects to or from the database-backed keystore. By default, CKA_TOKEN is set to `FALSE`, which means the key object is stored in an in-memory keystore within the process address space of the PKCS #11 application.
 
 * The CKA_PRIVATE attribute value decides whether a key that is generated by normal users is to be stored in a public or private keystore.
 
-  By default, if a user is logged in as a normal user, generated keys are stored in the private keystores, except for the case where CKA_PRIVATE is set to `FALSE`. If a user is logged in as an SO user or is not logged in (known as an anonymous user), then generated keys are always stored in the public keystores. If an SO user or an anonymous user specifies CKA_PRIVATE to `TRUE` in the key generation templates, an error is returned from the server.
+    By default, if a user is logged in as a normal user, generated keys are stored in the private keystores, except for the case where CKA_PRIVATE is set to `FALSE`. If a user is logged in as an SO user or is not logged in (known as an anonymous user), then generated keys are always stored in the public keystores. If an SO user or an anonymous user specifies CKA_PRIVATE to `TRUE` in the key generation templates, an error is returned from the server.
 
-  For an asymmetric key pair, you need to set the CKA_PRIVATE attribute separately for both the public and private keys, which means the key pairs can be stored in different keystores.
+    For an asymmetric key pair, you need to set the CKA_PRIVATE attribute separately for both the public and private keys, which means the key pairs can be stored in different keystores.
 
 Refer to the following table for detailed explanations of the relationship between user types, key attributes, and keystores, and how keys are stored.
 

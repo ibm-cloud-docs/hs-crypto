@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-07-05"
+lastupdated: "2021-08-13"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 {:deprecated: .deprecated}
 {:preview: .preview}
 {:subsection: outputclass="subsection"}
-{:row-headers .row-headers}
+{:row-headers: .row-headers}
 {:external: target="_blank" .external}
 {:term: .term}
 
@@ -102,7 +102,7 @@ PKCS #11 functions that are marked with an asterisk (*) in the table are impleme
 |C_GetSessionInfo|N/A|N/A|Obtains information about the session.|
 |C_GetOperationState|N/A|N/A|Obtains the cryptographic operations state of a session.|
 |C_SetOperationState|N/A|N/A|Sets the cryptographic operations state of a session.|
-|C_Login|N/A|N/A|Logs into a token.|
+|C_Login|N/A|N/A|Logs in to a token.|
 |C_Logout|N/A|N/A|Logs out from a token.|
 |C_CreateObject|N/A|N/A|Creates an object.|
 |C_CopyObject|N/A|N/A|Creates a copy of an object.|
@@ -167,29 +167,17 @@ A mechanism is referred to as a process to implement a cryptographic operation. 
 
 | Function group | Supported mechanisms |
 |--------------|-----------------------|
-|Encrypt and decrypt | CKM_RSA_PKCS[^services-1], CKM_RSA_PKCS_OAEP[^services-2], CKM_AES_ECB, CKM_AES_CBC, CKM_AES_CBC_PAD, CKM_DES3_ECB, CKM_DES3_CBC, CKM_DES3_CBC_PAD|
-|Sign and verify  | CKM_RSA_PKCS[^services-3], CKM_RSA_PKCS_PSS[^services-4], CKM_RSA_X9_31[^services-5], CKM_SHA1_RSA_PKCS, CKM_SHA256_RSA_PKCS, CKM_SHA224_RSA_PKCS, CKM_SHA384_RSA_PKCS, CKM_SHA512_RSA_PKCS, CKM_SHA1_RSA_PKCS_PSS, CKM_SHA224_RSA_PKCS_PSS, CKM_SHA256_RSA_PKCS_PSS, CKM_SHA384_RSA_PKCS_PSS, CKM_SHA512_RSA_PKCS_PSS, CKM_SHA1_RSA_X9_31, CKM_DSA[^services-6], CKM_DSA_SHA1, CKM_ECDSA[^services-7], CKM_ECDSA_SHA1, CKM_ECDSA_SHA224, CKM_ECDSA_SHA256, CKM_ECDSA_SHA384, CKM_ECDSA_SHA512, CKM_SHA1_HMAC, CKM_SHA256_HMAC, CKM_SHA384_HMAC, CKM_SHA512_HMAC, CKM_SHA512_224_HMAC, CKM_SHA512_256_HMAC, CKM_IBM_ED25519_SHA512, CKM_IBM_ECDSA_OTHER[^services-8]|
+|Encrypt and decrypt | CKM_RSA_PKCS<sup>1</sup>, CKM_RSA_PKCS_OAEP<sup>1</sup>, CKM_AES_ECB, CKM_AES_CBC, CKM_AES_CBC_PAD, CKM_DES3_ECB, CKM_DES3_CBC, CKM_DES3_CBC_PAD|
+|Sign and verify  | CKM_RSA_PKCS<sup>1</sup>, CKM_RSA_PKCS_PSS<sup>1</sup>, CKM_RSA_X9_31<sup>1</sup>, CKM_SHA1_RSA_PKCS, CKM_SHA256_RSA_PKCS, CKM_SHA224_RSA_PKCS, CKM_SHA384_RSA_PKCS, CKM_SHA512_RSA_PKCS, CKM_SHA1_RSA_PKCS_PSS, CKM_SHA224_RSA_PKCS_PSS, CKM_SHA256_RSA_PKCS_PSS, CKM_SHA384_RSA_PKCS_PSS, CKM_SHA512_RSA_PKCS_PSS, CKM_SHA1_RSA_X9_31, CKM_DSA<sup>1</sup>, CKM_DSA_SHA1, CKM_ECDSA<sup>1</sup>, CKM_ECDSA_SHA1, CKM_ECDSA_SHA224, CKM_ECDSA_SHA256, CKM_ECDSA_SHA384, CKM_ECDSA_SHA512, CKM_SHA1_HMAC, CKM_SHA256_HMAC, CKM_SHA384_HMAC, CKM_SHA512_HMAC, CKM_SHA512_224_HMAC, CKM_SHA512_256_HMAC, CKM_IBM_ED25519_SHA512, CKM_IBM_ECDSA_OTHER<sup>2</sup>|
 |Digest |CKM_SHA_1, CKM_SHA224, CKM_SHA256, CKM_SHA384, CKM_SHA512, CKM_SHA512_224, CKM_SHA512_256|
 |Generate key or generate key pair 	 |CKM_RSA_PKCS_KEY_PAIR_GEN, CKM_RSA_X9_31_KEY_PAIR_GEN, CKM_DSA_KEY_PAIR_GEN, CKM_DSA_PARAMETER_GEN, CKM_EC_KEY_PAIR_GEN (CKM_ECDSA_KEY_PAIR_GEN), CKM_DH_PKCS_KEY_PAIR_GEN, CKM_DH_PKCS_PARAMETER_GEN, CKM_GENERIC_SECRET_KEY_GEN, CKM_AES_KEY_GEN, CKM_DES2_KEY_GEN, CKM_DES3_KEY_GEN|
 |Wrap and unwrap | CKM_RSA_PKCS, CKM_RSA_PKCS_OAEP, CKM_AES_ECB, CKM_AES_CBC, CKM_AES_CBC_PAD, CKM_DES3_ECB, CKM_DES3_CBC, CKM_DES3_CBC_PAD|
 |Derive | CKM_ECDH1_DERIVE, CKM_DH_PKCS_DERIVE, CKM_DES3_ECB_ENCRYPT_DATA, CKM_SHA1_KEY_DERIVATION, CKM_SHA224_KEY_DERIVATION, CKM_SHA256_KEY_DERIVATION, CKM_SHA384_KEY_DERIVATION, CKM_SHA512_KEY_DERIVATION|
 {: caption="Table 2. Describes the supported GREP11 mechanisms" caption-side="bottom"}
 
-[^services-1]: This mechanism supports only single-part operations that are not able to utilize any of the Update GREP11 functions, such as EncryptUpdate, DecryptUpdate, and DigestUpdate.
+1: This mechanism supports only single-part operations that are not able to utilize any of the Update GREP11 functions, such as `EncryptUpdate`, `DecryptUpdate`, and `DigestUpdate`.
 
-[^services-2]: This mechanism supports only single-part operations that are not able to utilize any of the Update GREP11 functions, such as EncryptUpdate, DecryptUpdate, and DigestUpdate.
-
-[^services-3]: This mechanism supports only single-part operations that are not able to utilize any of the Update GREP11 functions, such as EncryptUpdate, DecryptUpdate, and DigestUpdate.
-
-[^services-4]: This mechanism supports only single-part operations that are not able to utilize any of the Update GREP11 functions, such as EncryptUpdate, DecryptUpdate, and DigestUpdate.
-
-[^services-5]: This mechanism supports only single-part operations that are not able to utilize any of the Update GREP11 functions, such as EncryptUpdate, DecryptUpdate, and DigestUpdate.
-
-[^services-6]: This mechanism supports only single-part operations that are not able to utilize any of the Update GREP11 functions, such as EncryptUpdate, DecryptUpdate, and DigestUpdate.
-
-[^services-7]: This mechanism supports only single-part operations that are not able to utilize any of the Update GREP11 functions, such as EncryptUpdate, DecryptUpdate, and DigestUpdate.
-
-[^services-8]: This mechanism is only available for GREP11 SignSingle and VerifySingle operations.
+2: This mechanism is only available for GREP11 `SignSingle` and `VerifySingle` operations.
 
 ## Supported attributes and key types
 {: #grep11-attribute-list}
@@ -211,7 +199,7 @@ GREP11 attributes define object characteristics that set up how an object can be
 | CKA_PUBLIC_EXPONENT  | Public exponent e.             |     RSA private keys      |
 | CKA_VALUE_LEN  |    Length in bytes of key value.     |         AES keys  |
 | CKA_EXTRACTABLE  | CK_TRUE if key is extractable and can be wrapped. | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
-| CKA_LOCAL  | CK_TRUE only if the key was generated locally (on the token) with a `C_GenerateKey` or `C_GenerateKeyPair` call or created with a `C_CopyObject` call as a copy of a key which had its CKA_LOCAL attribute set to CK_TRUE.   | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_LOCAL  | CK_TRUE only if the key was generated locally (on the token) with a `C_GenerateKey` or `C_GenerateKeyPair` call or created with a `C_CopyObject` call as a copy of a key, which had its CKA_LOCAL attribute set to CK_TRUE.   | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_EC_PARAMS (CKA_ECDSA_PARAMS) | DER-encoding of an ANSI X9.62 Parameters value. | EC private keys, EC public keys        |
 | CKA_WRAP_WITH_TRUSTED  | CK_TRUE if the key can be wrapped only with a wrapping key that has CKA_TRUSTED set to CK_TRUE. Default is CK_FALSE. | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
 | CKA_CHECK_VALUE | The checksum of the key | AES keys, DES keys |
@@ -263,121 +251,109 @@ You can use the following functions to retrieve cryptographic algorithms or mech
 
 The `GetMechanismList` function obtains a list of mechanism types that are supported by a token.
 
-<table>
-  <tr>
+<table id="GetMechanismList_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="GetMechanismList" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_GetMechanismList`, which is an implementation of PKCS #11 `C_GetMechanismList`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_GetMechanismList</code>, which is an implementation of PKCS #11 <code>C_GetMechanismList</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message GetMechanismListRequest {
-}
-message GetMechanismListResponse {
-    repeated uint64 Mechs = 2;
-}
+    message GetMechanismListRequest {
+    }
+    message GetMechanismListResponse {
+      repeated uint64 Mechs = 2;
+    }
     </pre>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #GetMechanismList_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="GetMechanismList"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="GetMechanismList_EP11" tab-title="Enterprise PKCS #11" tab-group="GetMechanismList" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>Implementation of PKCS #11 <code>C_GetMechanismList</code>.
-  </td>
-  </tr>
-  <tr>
+    <td>Implementation of PKCS #11 <code>C_GetMechanismList</code>.
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_GetMechanismList (
-  CK_SLOT_ID slot,
-  CK_MECHANISM_TYPE_PTR mechs, CK_ULONG_PTR mechslen,
-  target_t target
-);
+    CK_RV m_GetMechanismList (
+      CK_SLOT_ID slot,
+      CK_MECHANISM_TYPE_PTR mechs, CK_ULONG_PTR mechslen,
+      target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_GetMechanismList` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_GetMechanismList</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #GetMechanismList_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="GetMechanismList"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="GetMechanismList_PKCS11" tab-title="PKCS #11" tab-group="GetMechanismList" class="simple-tab-table">
+    <tr>
     <th>Description</th>
     <td>
-    <p>`C_GetMechanismList` is used to obtain a list of mechanism types supported by a token. `SlotID` is the ID of the token's slot; `pulCount` points to the location that receives the number of mechanisms.</p>
+    <p><code>C_GetMechanismList</code> is used to obtain a list of mechanism types supported by a token. <code>SlotID</code> is the ID of the token's slot; <code>pulCount</code> points to the location that receives the number of mechanisms.</p>
     <p>
-    Two ways are available for an application to call `C_GetMechanismList`:
+    Two ways are available for an application to call <code>C_GetMechanismList</code>:
     <ol>
-    <li>If `pMechanismList` is `NULL_PTR`, then all that `C_GetMechanismList` does is return (in `*pulCount`) the number of mechanisms, without returning a list of mechanisms. The contents of `*pulCount` on entry to `C_GetMechanismList` has no meaning in this case, and the call returns the value `CKR_OK`.</li>
-    <li>If `pMechanismList` is not `NULL_PTR`, then `*pulCount` must contain the size (in terms of `CK_MECHANISM_TYPE` elements) of the buffer pointed to by pMechanismList. If that buffer is large enough to hold the list of mechanisms, then the list is returned in it, and `CKR_OK` is returned. If not, then the call to `C_GetMechanismList` returns the value `CKR_BUFFER_TOO_SMALL`. In either case, the value `*pulCount` is set to hold the number of mechanisms.</li>
+    <li>If <code>pMechanismList</code> is <code>NULL_PTR</code>, then all that <code>C_GetMechanismList</code> does is return (in <code>*pulCount</code>) the number of mechanisms, without returning a list of mechanisms. The contents of <code>*pulCount</code> on entry to <code>C_GetMechanismList</code> has no meaning in this case, and the call returns the value <code>CKR_OK</code>.</li>
+    <li>If <code>pMechanismList</code> is not <code>NULL_PTR</code>, then <code>*pulCount</code> must contain the size (in terms of <code>CK_MECHANISM_TYPE</code> elements) of the buffer pointed to by <code>pMechanismList</code>. If that buffer is large enough to hold the list of mechanisms, then the list is returned in it, and <code>CKR_OK</code> is returned. If not, then the call to <code>C_GetMechanismList</code> returns the value <code>CKR_BUFFER_TOO_SMALL</code>. In either case, the value <code>*pulCount</code> is set to hold the number of mechanisms.</li>
     </ol>
     </p>
-    <p>Because `C_GetMechanismList` does not allocate any space of its own, an application often calls `C_GetMechanismList` twice. However, this behavior is by no means required.</p>
+    <p>Because <code>C_GetMechanismList</code> does not allocate any space of its own, an application often calls <code>C_GetMechanismList</code> twice. However, this behavior is by no means required.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismList)(
-  CK_SLOT_ID slotID,
-  CK_MECHANISM_TYPE_PTR pMechanismList,
-  CK_ULONG_PTR pulCount
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismList)(
+      CK_SLOT_ID slotID,
+      CK_MECHANISM_TYPE_PTR pMechanismList,
+      CK_ULONG_PTR pulCount
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_SLOT_ID_INVALID, CKR_TOKEN_NOT_PRESENT, CKR_TOKEN_NOT_RECOGNIZED, CKR_ARGUMENTS_BAD.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #GetMechanismList_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="GetMechanismList"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  GetMechanismListRequest := &pb.GetMechanismListRequest {
-  }
+    ```Golang
+    GetMechanismListRequest := &pb.GetMechanismListRequest {
+    }
 
-  GetMechanismListResponse, err := cryptoClient.GetMechanismList(context.Background(), GetMechanismListRequest)
-  ```
-  {: codeblock}
+    GetMechanismListResponse, err := cryptoClient.GetMechanismList(context.Background(), GetMechanismListRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.GetMechanismList({}, (err, data) => {
-  if (err) throw err;
+    ```JavaScript
+    client.GetMechanismList({}, (err, data) => {
+      if (err) throw err;
 
-  console.log('MECHANISMS:', data.Mechs);
-  });
-  ```
-  {: codeblock}
+      console.log('MECHANISMS:', data.Mechs);
+    });
+    ```
+    {: codeblock}
 
 
 ### GetMechanismInfo
@@ -385,286 +361,262 @@ CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismList)(
 
 The `GetMechanismInfo` Function obtains information about a particular mechanism.
 
-<table>
-  <tr>
+<table id="GetMechanismInfo_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="GetMechanismInfo" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_GetMechanismInfo`, which is an implementation of PKCS #11 `C_GetMechanismInfo`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_GetMechanismInfo</code>, which is an implementation of PKCS #11 <code>C_GetMechanismInfo</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message GetMechanismInfoRequest {
-    uint64 Mech = 2;
-}
-message GetMechanismInfoResponse {
-    MechanismInfo MechInfo = 3;
-}
+    message GetMechanismInfoRequest {
+      uint64 Mech = 2;
+    }
+    message GetMechanismInfoResponse {
+      MechanismInfo MechInfo = 3;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #GetMechanismInfo_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="GetMechanismInfo"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="GetMechanismInfo_EP11" tab-title="Enterprise PKCS #11" tab-group="GetMechanismInfo" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>Implementation of PKCS #11 <code>C_GetMechanismInfo</code>.
-  </td>
-  </tr>
-  <tr>
+    <td>Implementation of PKCS #11 <code>C_GetMechanismInfo</code>.
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_GetMechanismInfo (
-  CK_SLOT_ID slot,
-  CK_MECHANISM_TYPE mech,
-  CK_MECHANISM_INFO_PTR mechInfo,
-  target_t target
-);
+    CK_RV m_GetMechanismInfo (
+      CK_SLOT_ID slot,
+      CK_MECHANISM_TYPE mech,
+      CK_MECHANISM_INFO_PTR mechInfo,
+      target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_GetMechanismInfo` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_GetMechanismInfo</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #GetMechanismInfo_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="GetMechanismInfo"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="GetMechanismInfo_PKCS11" tab-title="PKCS #11" tab-group="GetMechanismInfo" class="simple-tab-table">
+    <tr>
     <th>Description</th>
     <td>
-    <p>`C_GetMechanismInfo` obtains information about a particular mechanism that might be supported by a token. `slotID` is the ID of the token's slot; `type` is the type of mechanism; `pInfo` points to the location that receives the mechanism information.</p>
+    <p><code>C_GetMechanismInfo</code> obtains information about a particular mechanism that might be supported by a token. <code>slotID</code> is the ID of the token's slot; <code>type</code> is the type of mechanism; <code>pInfo</code> points to the location that receives the mechanism information.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismInfo)(
-  CK_SLOT_ID slotID,
-  CK_MECHANISM_TYPE type,
-  CK_MECHANISM_INFO_PTR pInfo
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_GetMechanismInfo)(
+      CK_SLOT_ID slotID,
+      CK_MECHANISM_TYPE type,
+      CK_MECHANISM_INFO_PTR pInfo
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_MECHANISM_INVALID, CKR_OK, CKR_SLOT_ID_INVALID, CKR_TOKEN_NOT_PRESENT, CKR_TOKEN_NOT_RECOGNIZED, CKR_ARGUMENTS_BAD.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #GetMechanismInfo_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="GetMechanismInfo"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  GetMechanismInfoRequest := &pb.GetMechanismInfoRequest {
-      Mech: ep11.CKM_RSA_PKCS,
-  }
+    ```Golang
+    GetMechanismInfoRequest := &pb.GetMechanismInfoRequest {
+        Mech: ep11.CKM_RSA_PKCS,
+    }
 
-  GetMechanismInfoResponse, err := cryptoClient.GetMechanismInfo(context.Background(), GetMechanismInfoRequest)
-  ```
-  {: codeblock}
+    GetMechanismInfoResponse, err := cryptoClient.GetMechanismInfo(context.Background(), GetMechanismInfoRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.GetMechanismInfo({
-    Mech: ep11.CKM_AES_KEY_GEN
-  }, (err, data) => {
-    if (err) throw err;
+    ```JavaScript
+    client.GetMechanismInfo({
+      Mech: ep11.CKM_AES_KEY_GEN
+      }, (err, data) => {
+        if (err) throw err;
 
-    console.log('MECHANISM INFO:', data.MechInfo);
-  });
-  ```
-  {: codeblock}
+        console.log('MECHANISM INFO:', data.MechInfo);
+    });
+    ```
+    {: codeblock}
 
 
 ## Generating and deriving keys
 {: #grep11-operation-generate-keys}
 
-GREP11 provides the following functions to generate symmetric and asymmetric cryptographic keys. Based on the mechanism and key length you specify, you can generate various types of keys for various usage. You can also derive a key from a base key to stretch keys into longer keys or to obtain keys of a required format.
+GREP11 provides the following functions to generate symmetric and asymmetric cryptographic keys. Based on the mechanism and key length you specify, you can generate various types of keys for various usages. You can also derive a key from a base key to stretch keys into longer keys or to obtain keys of a required format.
 
 ### GenerateKey
 {: #grep11-GenerateKey}
 
 The `GenerateKey` function generates a secret key for symmetric encryption.
 
-<table>
-  <tr>
+<table id="GenerateKey_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="GenerateKey" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_GenerateKey`, which is an implementation of PKCS #11 `C_GenerateKey`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_GenerateKey</code>, which is an implementation of PKCS #11 <code>C_GenerateKey</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message GenerateKeyRequest {
-    Mechanism Mech = 1;
-    map&lt;uint64,AttributeValue&gt; Template = 6;
-}
-message GenerateKeyResponse {
-    bytes KeyBytes = 4;
-    bytes CheckSum = 5;
-}
+    message GenerateKeyRequest {
+      Mechanism Mech = 1;
+      map&lt;uint64,AttributeValue&gt; Template = 6;
+    }
+    message GenerateKeyResponse {
+      bytes KeyBytes = 4;
+      bytes CheckSum = 5;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #GenerateKey_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="GenerateKey"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="GenerateKey_EP11" tab-title="Enterprise PKCS #11" tab-group="GenerateKey" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Implementation of PKCS #11 <code>C_GenerateKey</code>.</p>
-  <p>TDES keys are generated with proper parity, which is not observable by the host. But it is needed for proper interoperability: other PKCS #11 implementations needs to reject DES keys with parity problems.</p>
-  <p>If an object is tied to a session, <code>(pin, plen)</code> must be return by <code>Login</code> to that session. Leaving <code>pin</code> <code>NULL</code> creates a public object, one not bound to a login session.</p>
-  <p><code>(key, klen)</code> returns the key blob. <code>(csum, clen)</code> contains the key's checksum, that is, the most significant bytes of an all-zero block encrypted by the key. NULL <code>clen</code> is possible, for example for symmetric-key mechanisms without <code>CKA_CHECK_VALUE</code> parameters (such as RC4).</p>
-  <p><code>ptempl</code> is used only if the key length (that is, the <code>CKA_VALUE_LEN</code> attribute) is needed by the mechanism. If the mechanism implicitly specifies key size, <code>ptempl</code> is not checked for size.</p>
-  <p>DSA and DH parameter generation ignores <code>(csum, clen)</code>, generating only parameter structures.</p>
-  <p>DSA, DH parameters (<code>CKM_DSA_PARAMETER_GEN</code>): pass modulus bitcount in <code>CKA_PRIME_BITS</code> of attributes. Writes P,Q,G structure as cleartext output (that is, not a blob).</p>
-  <p>The <code>pin</code> blob was output from: <code>Login</code>.</p>
-  <p>PKCS #11 <code>phKey</code> is not mapped to any EP11 parameter. (Host library must bind wrapped key to handle.)</p>
-  </td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_GenerateKey</code>.</p>
+    <p>TDES keys are generated with proper parity, which is not observable by the host. But it is needed for proper interoperability: other PKCS #11 implementations needs to reject DES keys with parity problems.</p>
+    <p>If an object is tied to a session, <code>(pin, plen)</code> must be return by <code>Login</code> to that session. Leaving <code>pin</code> <code>NULL</code> creates a public object, one not bound to a login session.</p>
+    <p><code>(key, klen)</code> returns the key blob. <code>(csum, clen)</code> contains the key's checksum, that is, the most significant bytes of an all-zero block encrypted by the key. NULL <code>clen</code> is possible, for example for symmetric-key mechanisms without <code>CKA_CHECK_VALUE</code> parameters (such as RC4).</p>
+    <p><code>ptempl</code> is used only if the key length (that is, the <code>CKA_VALUE_LEN</code> attribute) is needed by the mechanism. If the mechanism implicitly specifies key size, <code>ptempl</code> is not checked for size.</p>
+    <p>DSA and DH parameter generation ignores <code>(csum, clen)</code>, generating only parameter structures.</p>
+    <p>DSA, DH parameters (<code>CKM_DSA_PARAMETER_GEN</code>): pass modulus bitcount in <code>CKA_PRIME_BITS</code> of attributes. Writes P,Q,G structure as cleartext output (that is, not a blob).</p>
+    <p>The <code>pin</code> blob was output from: <code>Login</code>.</p>
+    <p>PKCS #11 <code>phKey</code> is not mapped to any EP11 parameter. (Host library must bind wrapped key to handle.)</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_GenerateKey (
-  CK_MECHANISM_PTR mech,
-  CK_ATTRIBUTE_PTR template, CK_ULONG templatelen,
-  const unsigned char \*pin, size_t pinlen,
-  unsigned char \*key, size_t \*keylen,
-  unsigned char \*checkSum, size_t \*checkSumlen,
-  target_t target
-);
+    CK_RV m_GenerateKey (
+      CK_MECHANISM_PTR mech,
+      CK_ATTRIBUTE_PTR template, CK_ULONG templatelen,
+      const unsigned char *pin, size_t pinlen,
+      unsigned char *key, size_t *keylen,
+      unsigned char *checkSum, size_t *checkSumlen,
+      target_t target
+      );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_GenerateKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_GenerateKey</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #GenerateKey_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="GenerateKey"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="GenerateKey_PKCS11" tab-title="PKCS #11" tab-group="GenerateKey" class="simple-tab-table">
+    <tr>
     <th>Description</th>
     <td>
-    <p>`C_GenerateKey` generates a secret key or set of domain parameters, creating a new object. `hSession` is the session's handle; `pMechanism` points to the generation mechanism; `pTemplate` points to the template for the new key or set of domain parameters; `ulCount` is the number of attributes in the template; `phKey` points to the location that receives the handle of the new key or set of domain parameters.</p>
-    <p>If the generation mechanism is for domain parameter generation, the `CKA_CLASS` attribut has the value `CKO_DOMAIN_PARAMETERS`; otherwise, it has the value `CKO_SECRET_KEY`.</p>
-    <p>Since the type of key or domain parameters to be generated is implicit in the generation mechanism, the template does not need to supply a key type. If it does supply a key type that is inconsistent with the generation mechanism, `C_GenerateKey` fails and returns the error code `CKR_TEMPLATE_INCONSISTENT`. The `CKA_CLASS` attribute is treated similarly.</p>
-    <p>If a call to `C_GenerateKey` cannot support the precise template that is supplied to it, it fails and returns without creating an object.</p>
-    <p>The object created by a successful call to `C_GenerateKey` has the `CKA_LOCAL` attribute set to `CK_TRUE`.</p>
+    <p><code>C_GenerateKey</code> generates a secret key or set of domain parameters, creating a new object. <code>hSession</code> is the session's handle; <code>pMechanism</code> points to the generation mechanism; <code>pTemplate</code> points to the template for the new key or set of domain parameters; <code>ulCount</code> is the number of attributes in the template; <code>phKey</code> points to the location that receives the handle of the new key or set of domain parameters.</p>
+    <p>If the generation mechanism is for domain parameter generation, the <code>CKA_CLASS</code> attribute has the value <code>CKO_DOMAIN_PARAMETERS</code>; otherwise, it has the value <code>CKO_SECRET_KEY</code>.</p>
+    <p>Since the type of key or domain parameters to be generated is implicit in the generation mechanism, the template does not need to supply a key type. If it does supply a key type that is inconsistent with the generation mechanism, <code>C_GenerateKey</code> fails and returns the error code <code>CKR_TEMPLATE_INCONSISTENT</code>. The <code>CKA_CLASS</code> attribute is treated in the same way.</p>
+    <p>If a call to <code>C_GenerateKey</code> cannot support the precise template that is supplied to it, it fails and returns without creating an object.</p>
+    <p>The object created by a successful call to <code>C_GenerateKey</code> has the <code>CKA_LOCAL</code> attribute set to <code>CK_TRUE</code>.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_GenerateKey)(
-  CK_SESSION_HANDLE hSession
-  CK_MECHANISM_PTR pMechanism,
-  CK_ATTRIBUTE_PTR pTemplate,
-  CK_ULONG ulCount,
-  CK_OBJECT_HANDLE_PTR phKey
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_GenerateKey)(
+      CK_SESSION_HANDLE hSession
+      CK_MECHANISM_PTR pMechanism,
+      CK_ATTRIBUTE_PTR pTemplate,
+      CK_ULONG ulCount,
+      CK_OBJECT_HANDLE_PTR phKey
+      );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_ATTRIBUTE_READ_ONLY, CKR_ATTRIBUTE_TYPE_INVALID, CKR_ATTRIBUTE_VALUE_INVALID, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_CURVE_NOT_SUPPORTED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_SESSION_READ_ONLY, CKR_TEMPLATE_INCOMPLETE, CKR_TEMPLATE_INCONSISTENT, CKR_TOKEN_WRITE_PROTECTED, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #GenerateKey_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="GenerateKey"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  // Setup the AES key's attributes
-  keyTemplate := ep11.EP11Attributes{
-      ep11.CKA_VALUE_LEN:   keyLen / 8,
-      ep11.CKA_WRAP:        false,
-      ep11.CKA_UNWRAP:      false,
-      ep11.CKA_ENCRYPT:     true,
-      ep11.CKA_DECRYPT:     true,
-      ep11.CKA_EXTRACTABLE: false,
-  }
+    ```Golang
+    // Setup the AES key's attributes
+    keyTemplate := ep11.EP11Attributes{
+        ep11.CKA_VALUE_LEN:   keyLen / 8,
+        ep11.CKA_WRAP:        false,
+        ep11.CKA_UNWRAP:      false,
+        ep11.CKA_ENCRYPT:     true,
+        ep11.CKA_DECRYPT:     true,
+        ep11.CKA_EXTRACTABLE: false,
+    }
 
-  GenerateKeyRequest := &pb.GenerateKeyRequest{
-      Mech:     &pb.Mechanism{Mechanism: ep11.CKM_AES_KEY_GEN},
-      Template: util.AttributeMap(keyTemplate),
-  }
+    GenerateKeyRequest := &pb.GenerateKeyRequest{
+        Mech:     &pb.Mechanism{Mechanism: ep11.CKM_AES_KEY_GEN},
+        Template: util.AttributeMap(keyTemplate),
+    }
 
-  GenerateKeyResponse, err := cryptoClient.GenerateKey(context.Background(), GenerateKeyRequest)
-  ```
-  {: codeblock}
+    GenerateKeyResponse, err := cryptoClient.GenerateKey(context.Background(), GenerateKeyRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  let keyLen = 128;
+    ```JavaScript
+    let keyLen = 128;
 
-  let keyTemplate = new util.AttributeMap(
-    new util.Attribute(ep11.CKA_VALUE_LEN, keyLen / 8),
-    new util.Attribute(ep11.CKA_WRAP, false),
-    new util.Attribute(ep11.CKA_UNWRAP, false),
-    new util.Attribute(ep11.CKA_ENCRYPT, true),
-    new util.Attribute(ep11.CKA_DECRYPT, true),
-    new util.Attribute(ep11.CKA_EXTRACTABLE, false),
-    new util.Attribute(ep11.CKA_TOKEN, true)
-  );
-  client.GenerateKey({
-    Mech: { Mechanism: ep11.CKM_AES_KEY_GEN },
-    Template: keyTemplate,
-    KeyId: uuidv4()
-  }, (err, data={}) => {
-    cb(err, data.KeyBytes, data.CheckSum);
-  });
+    let keyTemplate = new util.AttributeMap(
+      new util.Attribute(ep11.CKA_VALUE_LEN, keyLen / 8),
+      new util.Attribute(ep11.CKA_WRAP, false),
+      new util.Attribute(ep11.CKA_UNWRAP, false),
+      new util.Attribute(ep11.CKA_ENCRYPT, true),
+      new util.Attribute(ep11.CKA_DECRYPT, true),
+      new util.Attribute(ep11.CKA_EXTRACTABLE, false),
+      new util.Attribute(ep11.CKA_TOKEN, true)
+      );
+    client.GenerateKey({
+      Mech: { Mechanism: ep11.CKM_AES_KEY_GEN },
+      Template: keyTemplate,
+      KeyId: uuidv4()
+    }, (err, data={}) => {
+      cb(err, data.KeyBytes, data.CheckSum);
+    });
 
-  ```
-  {: codeblock}
+    ```
+    {: codeblock}
 
 
 ### GenerateKeyPair
@@ -672,349 +624,325 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateKey)(
 
 The `GenerateKeyPair` function generates a public key and private key pair.
 
-<table>
-  <tr>
+<table id="GenerateKeyPair_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="GenerateKeyPair" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_GenerateKeyPair`, which is an implementation of PKCS #11 `C_GenerateKeyPair`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_GenerateKeyPair</code>, which is an implementation of PKCS #11 <code>C_GenerateKeyPair</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message GenerateKeyPairRequest {
-    Mechanism Mech = 1;
-    map&lt;uint64,AttributeValue&gt; PrivKeyTemplate = 7;
-    map&lt;uint64,AttributeValue&gt; PubKeyTemplate = 8;
-}
-message GenerateKeyPairResponse {
-    bytes PrivKeyBytes = 5;
-    bytes PubKeyBytes = 6;
-}
+    message GenerateKeyPairRequest {
+      Mechanism Mech = 1;
+      map&lt;uint64,AttributeValue&gt; PrivKeyTemplate = 7;
+      map&lt;uint64,AttributeValue&gt; PubKeyTemplate = 8;
+      }
+    message GenerateKeyPairResponse {
+      bytes PrivKeyBytes = 5;
+      bytes PubKeyBytes = 6;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #GenerateKeyPair_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="GenerateKeyPair"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="GenerateKeyPair_EP11" tab-title="Enterprise PKCS #11" tab-group="GenerateKeyPair" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Implementation of PKCS #11 <code>C_GenerateKeyPair</code>.</p>
-  <p>Keypair parameters are retrieved from <code>pmech</code>, <code>ppublic</code>, and <code>pprivate</code> parameters. For RSA keys, <code>ppublic</code> specifies the modulus size.</p>
-  <p>In FIPS mode, only RSA moduluses of 1024+256<code>n</code> bits are supported (integer <code>n</code>). Non-FIPS mode can generate keys of any even number of bits between the limits in the mechanism parameter list.</p>
-  <p>Public key is formatted as a standard SPKI (subject publickey info), readable by most libraries. It is integrity-protected by a transport-key specific MAC, which is not part of the SPKI itself. DSA parameter generation returns a non-SPKI structure in the public key field.</p>
-  <p>If you tie an object to a session, <code>(pin, plen)</code> must be returned by <code>Login</code> to that session. Leaving <code>pin</code> <code>NULL</code> creates a public object, one that survives the login session.</p>
-  <p>Returns wrapped private key to <code>(key, klen)</code>, public key as a MACed ASN.1/DER structure in <code>(pubkey, pklen)</code>.</p>
-  <p>The following supported parameter combinations with special notes are beyond what are documented by PKCS #11:</p>
-  <p>RSA keys reject public exponents below 17 (0x11). Control points can further restrict the accepted minimum. The Fermat4 exponent, 0x10001, is controlled by a specific control point, matching public-exponent restrictions of FIPS 186-3 (section B.3.1).</p> <p>EC keys (<code>CKM_EC_KEY_PAIR_GEN</code>): curve parameters can be specified as OIDs or symbolic names (our namedCurve variant). Supported symbolic names are "<code>P-nnn</code>" for NIST curves (<code>nnn</code> is a supported prime bitcount, 192 - 521), "<code>BP-nnnR</code>" for regular BP curve. (Names must be supplied as ASCII strings, without zero-termination.)</p>
-  <p>DSA keys (<code>CKM_DSA_KEY_PAIR_GEN</code>): pass P,Q,G structure as the <code>CKA_IBM_STRUCT_PARAMS</code> attribute of public attributes. Individual P,Q,G parameters might not be passed through regular PKCS #11 parameters, they must be combined to a single structure.</p>
-  <p>DH keys (<code>CKM_DH_PKCS_KEY_PAIR_GEN</code>): pass P,G structure as the <code>CKA_IBM_STRUCT_PARAMS</code> attribute of public attributes. Individual P,G parameters might not be passed through regular PKCS #11 parameters, they must be combined to a single structure. When you select a private-key (X) bitcount, use the <code>XCP_U32_VALUE_BITS</code> attribute. If not present, or an explicit 0 is supplied, bitcount is selected based on P bitcount.</p>
-  <p>Use of session (Login) state replaces standard use of sessions. The mapping is outside library scope.</p>
-  <p>The <code>pin</code> blob was output from: <code>Login</code>.</p>
-  <p>PKCS #11 <code>hSession</code> is not mapped to any EP11 parameter. (The call is not directly associated with any session.)</p>
-  <p>PKCS #11 <code>phPublicKey</code> is not mapped to any EP11 parameter. (Host library must associate pubkey (SPKI) with handle.)</p>
-  <p>PKCS #11 <code>phPrivateKey</code> is not mapped to any EP11 parameter. (Host library must associate private key with handle.)</p>
-  </td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_GenerateKeyPair</code>.</p>
+    <p>Keypair parameters are retrieved from <code>pmech</code>, <code>ppublic</code>, and <code>pprivate</code> parameters. For RSA keys, <code>ppublic</code> specifies the modulus size.</p>
+    <p>In FIPS mode, only RSA moduluses of 1024+256 <code>n</code> bits are supported (integer <code>n</code>). Non-FIPS mode can generate keys of any even number of bits between the limits in the mechanism parameter list.</p>
+    <p>Public key is formatted as a standard SPKI (subject publickey infomation), readable by most libraries. It is integrity-protected by a transport-key specific MAC, which is not part of the SPKI itself. DSA parameter generation returns a non-SPKI structure in the public key field.</p>
+    <p>If you tie an object to a session, <code>(pin, plen)</code> must be returned by <code>Login</code> to that session. Leaving <code>pin</code> <code>NULL</code> creates a public object, one that survives the login session.</p>
+    <p>Returns wrapped private key to <code>(key, klen)</code>, public key as a MACed ASN.1/DER structure in <code>(pubkey, pklen)</code>.</p>
+    <p>The following supported parameter combinations with special notes are beyond what are documented by PKCS #11:</p>
+    <p>RSA keys reject public exponents below 17 (0x11). Control points can further restrict the accepted minimum. The Fermat4 exponent, 0x10001, is controlled by a specific control point, matching public-exponent restrictions of FIPS 186-3 (section B.3.1).</p> <p>EC keys (<code>CKM_EC_KEY_PAIR_GEN</code>): curve parameters can be specified as OIDs or symbolic names (our namedCurve variant). Supported symbolic names are "<code>P-nnn</code>" for NIST curves (<code>nnn</code> is a supported prime bitcount, 192 - 521), "<code>BP-nnnR</code>" for regular BP curve. (Names must be supplied as ASCII strings, without zero-termination.)</p>
+    <p>DSA keys (<code>CKM_DSA_KEY_PAIR_GEN</code>): pass P,Q,G structure as the <code>CKA_IBM_STRUCT_PARAMS</code> attribute of public attributes. Individual P,Q,G parameters might not be passed through regular PKCS #11 parameters, they must be combined to a single structure.</p>
+    <p>DH keys (<code>CKM_DH_PKCS_KEY_PAIR_GEN</code>): pass P,G structure as the <code>CKA_IBM_STRUCT_PARAMS</code> attribute of public attributes. Individual P,G parameters might not be passed through regular PKCS #11 parameters, they must be combined to a single structure. When you select a private-key (X) bitcount, use the <code>XCP_U32_VALUE_BITS</code> attribute. If not present, or an explicit 0 is supplied, bitcount is selected based on P bitcount.</p>
+    <p>Use of session (Login) state replaces standard use of sessions. The mapping is outside library scope.</p>
+    <p>The <code>pin</code> blob was output from: <code>Login</code>.</p>
+    <p>PKCS #11 <code>hSession</code> is not mapped to any EP11 parameter. (The call is not directly associated with any session.)</p>
+    <p>PKCS #11 <code>phPublicKey</code> is not mapped to any EP11 parameter. (Host library must associate pubkey (SPKI) with handle.)</p>
+    <p>PKCS #11 <code>phPrivateKey</code> is not mapped to any EP11 parameter. (Host library must associate private key with handle.)</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_GenerateKeyPair (
-  CK_MECHANISM_PTR mech,
-  CK_ATTRIBUTE_PTR pubKeyTemplate, CK_ULONG pubKeyTemplatelen,
-  CK_ATTRIBUTE_PTR privKeyTemplate, CK_ULONG privKeyTemplatelen,
-  const unsigned char \*pin, size_t pinlen,
-  unsigned char \*privKey, size_t \*privKeylen,
-  unsigned char \*pubKey, size_t \*pubKeylen,
-  target_t target
-);
+    CK_RV m_GenerateKeyPair (
+      CK_MECHANISM_PTR mech,
+      CK_ATTRIBUTE_PTR pubKeyTemplate, CK_ULONG pubKeyTemplatelen,
+      CK_ATTRIBUTE_PTR privKeyTemplate, CK_ULONG privKeyTemplatelen,
+      const unsigned char *pin, size_t pinlen,
+      unsigned char *privKey, size_t *privKeylen,
+      unsigned char *pubKey, size_t *pubKeylen,
+      target_t target
+      );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_GenerateKeyPair` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_GenerateKeyPair</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #GenerateKeyPair_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="GenerateKeyPair"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="GenerateKeyPair_PKCS11" tab-title="PKCS #11" tab-group="GenerateKeyPair" class="simple-tab-table">
+    <tr>
     <th>Description</th>
     <td>
-    <p>`C_GenerateKeyPair` generates a public and private key pair, creating new key objects. `hSession` is the session's handle; `pMechanism` points to the key generation mechanism; `pPublicKeyTemplate` points to the template for the public key; `ulPublicKeyAttributeCount` is the number of attributes in the public-key template; `pPrivateKeyTemplate` points to the template for the private key; `ulPrivateKeyAttributeCount` is the number of attributes in the private-key template; `phPublicKey` points to the location that receives the handle of the new public key; `phPrivateKey` points to the location that receives the handle of the new private key.</p>
-    <p>Since the types of keys to be generated are implicit in the key pair generation mechanism, the templates do not need to supply key types. If one of the templates does supply a key type that is inconsistent with the key generation mechanism, `C_GenerateKeyPair` fails and returns the error code `CKR_TEMPLATE_INCONSISTENT`. The `CKA_CLASS` attribute is treated similarly.</p>
-    <p>If a call to `C_GenerateKeyPair` cannot support the precise templates that are supplied to it, it fails and returns without creating any key objects.</p>
-    <p>A call to `C_GenerateKeyPair` never creates just one key and returns. A call can fail, and create no keys; or it can succeed, and create a matching public and private key pair.</p>
-    <p>The key objects created by a successful call to `C_GenerateKeyPair` has the `CKA_LOCAL` attributes set to `CK_TRUE`.</p>
-    <p>Note carefully the order of the arguments to `C_GenerateKeyPair`. The last two arguments do not have the same order as they did in the original Cryptoki Version 1.0 document. The order of these two arguments has caused some unfortunate confusion.</p>
-</td>
-  </tr>
-  <tr>
+    <p><code>C_GenerateKeyPair</code> generates a public and private key pair, creating new key objects. <code>hSession</code> is the session's handle; <code>pMechanism</code> points to the key generation mechanism; <code>pPublicKeyTemplate</code> points to the template for the public key; <code>ulPublicKeyAttributeCount</code> is the number of attributes in the public-key template; <code>pPrivateKeyTemplate</code> points to the template for the private key; <code>ulPrivateKeyAttributeCount</code> is the number of attributes in the private-key template; <code>phPublicKey</code> points to the location that receives the handle of the new public key; <code>phPrivateKey</code> points to the location that receives the handle of the new private key.</p>
+    <p>Since the types of keys to be generated are implicit in the key pair generation mechanism, the templates do not need to supply key types. If one of the templates does supply a key type that is inconsistent with the key generation mechanism, <code>C_GenerateKeyPair</code> fails and returns the error code <code>CKR_TEMPLATE_INCONSISTENT</code>. The <code>CKA_CLASS</code> attribute is treated similarly.</p>
+    <p>If a call to <code>C_GenerateKeyPair</code> cannot support the precise templates that are supplied to it, it fails and returns without creating any key objects.</p>
+    <p>A call to <code>C_GenerateKeyPair</code> never creates just one key and returns. A call can fail, and create no keys; or it can succeed, and create a matching public and private key pair.</p>
+    <p>The key objects created by a successful call to <code>C_GenerateKeyPair</code> have the <code>CKA_LOCAL</code> attributes set to <code>CK_TRUE</code>.</p>
+    <p>Note carefully the order of the arguments to <code>C_GenerateKeyPair</code>. The last two arguments do not have the same order as they did in the original Cryptoki Version 1.0 document. The order of these two arguments caused some unfortunate confusion.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_GenerateKeyPair)(
-  CK_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism,
-  CK_ATTRIBUTE_PTR pPublicKeyTemplate,
-  CK_ULONG ulPublicKeyAttributeCount,
-  CK_ATTRIBUTE_PTR pPrivateKeyTemplate,
-  CK_ULONG ulPrivateKeyAttributeCount,
-  CK_OBJECT_HANDLE_PTR phPublicKey,
-  CK_OBJECT_HANDLE_PTR phPrivateKey
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_GenerateKeyPair)(
+      CK_SESSION_HANDLE hSession,
+      CK_MECHANISM_PTR pMechanism,
+      CK_ATTRIBUTE_PTR pPublicKeyTemplate,
+      CK_ULONG ulPublicKeyAttributeCount,
+      CK_ATTRIBUTE_PTR pPrivateKeyTemplate,
+      CK_ULONG ulPrivateKeyAttributeCount,
+      CK_OBJECT_HANDLE_PTR phPublicKey,
+      CK_OBJECT_HANDLE_PTR phPrivateKey
+      );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_ATTRIBUTE_READ_ONLY, CKR_ATTRIBUTE_TYPE_INVALID, CKR_ATTRIBUTE_VALUE_INVALID, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_CURVE_NOT_SUPPORTED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_DOMAIN_PARAMS_INVALID, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_SESSION_READ_ONLY, CKR_TEMPLATE_INCOMPLETE, CKR_TEMPLATE_INCONSISTENT, CKR_TOKEN_WRITE_PROTECTED, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #GenerateKeyPair_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="GenerateKeyPair"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  // Generate RSA key pair
-  publicExponent := []byte{0x11}
-  publicKeyTemplate := ep11.EP11Attributes{
-      ep11.CKA_ENCRYPT:         true,
-      ep11.CKA_VERIFY:          true,
-      ep11.CKA_MODULUS_BITS:    2048,
-      ep11.CKA_PUBLIC_EXPONENT: publicExponent,
-      ep11.CKA_EXTRACTABLE:     false,
-  }
-  privateKeyTemplate := ep11.EP11Attributes{
-      ep11.CKA_PRIVATE:     true,
-      ep11.CKA_SENSITIVE:   true,
-      ep11.CKA_DECRYPT:     true,
-      ep11.CKA_SIGN:        true,
-      ep11.CKA_EXTRACTABLE: false,
-  }
-  GenerateKeypairRequest := &pb.GenerateKeyPairRequest{
-      Mech:            &pb.Mechanism{Mechanism: ep11.CKM_RSA_PKCS_KEY_PAIR_GEN},
-      PubKeyTemplate:  util.AttributeMap(publicKeyTemplate),
-      PrivKeyTemplate: util.AttributeMap(privateKeyTemplate),
-  }
-  GenerateKeyPairResponse, err := cryptoClient.GenerateKeyPair(context.Background(), GenerateKeypairRequest)
-  ```
-  {: codeblock}
+    ```Golang
+    // Generate RSA key pair
+    publicExponent := []byte{0x11}
+    publicKeyTemplate := ep11.EP11Attributes{
+        ep11.CKA_ENCRYPT:         true,
+        ep11.CKA_VERIFY:          true,
+        ep11.CKA_MODULUS_BITS:    2048,
+        ep11.CKA_PUBLIC_EXPONENT: publicExponent,
+        ep11.CKA_EXTRACTABLE:     false,
+    }
+    privateKeyTemplate := ep11.EP11Attributes{
+        ep11.CKA_PRIVATE:     true,
+        ep11.CKA_SENSITIVE:   true,
+        ep11.CKA_DECRYPT:     true,
+        ep11.CKA_SIGN:        true,
+        ep11.CKA_EXTRACTABLE: false,
+    }
+    GenerateKeypairRequest := &pb.GenerateKeyPairRequest{
+        Mech:            &pb.Mechanism{Mechanism: ep11.CKM_RSA_PKCS_KEY_PAIR_GEN},
+        PubKeyTemplate:  util.AttributeMap(publicKeyTemplate),
+        PrivKeyTemplate: util.AttributeMap(privateKeyTemplate),
+    }
+    GenerateKeyPairResponse, err := cryptoClient.GenerateKeyPair(context.Background(), GenerateKeypairRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  const publicKeyTemplate = new util.AttributeMap(
-    new util.Attribute(ep11.CKA_ENCRYPT, true),
-    new util.Attribute(ep11.CKA_VERIFY, true),
-    new util.Attribute(ep11.CKA_MODULUS_BITS, 2048),
-    new util.Attribute(ep11.CKA_PUBLIC_EXPONENT, publicExponent),
-    new util.Attribute(ep11.CKA_EXTRACTABLE, false)
-  );
+    ```JavaScript
+    const publicKeyTemplate = new util.AttributeMap(
+      new util.Attribute(ep11.CKA_ENCRYPT, true),
+      new util.Attribute(ep11.CKA_VERIFY, true),
+      new util.Attribute(ep11.CKA_MODULUS_BITS, 2048),
+      new util.Attribute(ep11.CKA_PUBLIC_EXPONENT, publicExponent),
+      new util.Attribute(ep11.CKA_EXTRACTABLE, false)
+    );
 
-  const privateKeyTemplate = new util.AttributeMap(
-    new util.Attribute(ep11.CKA_PRIVATE, true),
-    new util.Attribute(ep11.CKA_SENSITIVE, true),
-    new util.Attribute(ep11.CKA_DECRYPT, true),
-    new util.Attribute(ep11.CKA_SIGN, true),
-    new util.Attribute(ep11.CKA_EXTRACTABLE, false),
-  );
+    const privateKeyTemplate = new util.AttributeMap(
+      new util.Attribute(ep11.CKA_PRIVATE, true),
+      new util.Attribute(ep11.CKA_SENSITIVE, true),
+      new util.Attribute(ep11.CKA_DECRYPT, true),
+      new util.Attribute(ep11.CKA_SIGN, true),
+      new util.Attribute(ep11.CKA_EXTRACTABLE, false),
+    );
 
-  client.GenerateKeyPair({
-    Mech: {
-      Mechanism: ep11.CKM_RSA_PKCS_KEY_PAIR_GEN
-    },
-    PubKeyTemplate: publicKeyTemplate,
-    PrivKeyTemplate: privateKeyTemplate,
-    PubKeyId: uuidv4(),
-    PrivKeyId: uuidv4()
-  }, (err, response) => {
-    callback(err, response);
-  });
-  ```
-  {: codeblock}
+    client.GenerateKeyPair({
+      Mech: {
+        Mechanism: ep11.CKM_RSA_PKCS_KEY_PAIR_GEN
+      },
+      PubKeyTemplate: publicKeyTemplate,
+      PrivKeyTemplate: privateKeyTemplate,
+      PubKeyId: uuidv4(),
+      PrivKeyId: uuidv4()
+    }, (err, response) => {
+      callback(err, response);
+    });
+    ```
+    {: codeblock}
 
 ### DeriveKey
 {: #grep11-DeriveKey}
 
 The `DeriveKey` function derives a key from a base key.
 
-<table>
-  <tr>
+<table id="DeriveKey_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="DeriveKey" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_DeriveKey`, which is an implementation of PKCS #11 `C_DeriveKey`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_DeriveKey</code>, which is an implementation of PKCS #11 <code>C_DeriveKey</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message DeriveKeyRequest {
-  Mechanism Mech = 1;
-  bytes BaseKey = 3;
-  bytes Data = 4;
-  map&lt;uint64,AttributeValue&gt; Template = 8;
-}
-message DeriveKeyResponse {
-    bytes NewKeyBytes = 6;
-    bytes CheckSum = 7;
-}
+    message DeriveKeyRequest {
+        Mechanism Mech = 1;
+        bytes BaseKey = 3;
+        bytes Data = 4;
+        map&lt;uint64,AttributeValue&gt; Template = 8;
+    }
+    message DeriveKeyResponse {
+        bytes NewKeyBytes = 6;
+        bytes CheckSum = 7;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #DeriveKey_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="DeriveKey"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="DeriveKey_EP11" tab-title="Enterprise PKCS #11" tab-group="DeriveKey" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Implementation of PKCS #11 <code>C_DeriveKey</code>.</p>
-  <p>The <code>basekey</code>,<code>bklen</code> blob must be mapped from the PKCS #11 <code>hBaseKey</code> parameter.</p>
-  <p>PKCS #11 <code>hSession</code> is not mapped to any EP11 parameter. (The call is not directly associated with any session.)</p>
-  <p>PKCS #11 <code>phKey</code> is not mapped to any EP11 parameter. (Host library must bind returned key to handle.)</p>
-</td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_DeriveKey</code>.</p>
+    <p>The <code>basekey</code>,<code>bklen</code> blob must be mapped from the PKCS #11 <code>hBaseKey</code> parameter.</p>
+    <p>PKCS #11 <code>hSession</code> is not mapped to any EP11 parameter. (The call is not directly associated with any session.)</p>
+    <p>PKCS #11 <code>phKey</code> is not mapped to any EP11 parameter. (Host library must bind returned key to handle.)</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_DeriveKey (
-  CK_MECHANISM_PTR mech,
-  CK_ATTRIBUTE_PTR template, CK_ULONG templatelen,
-  const unsigned char \*baseKey, size_t baseKeylen,
-  const unsigned char \*data, size_t datalen,
-  const unsigned char \*pin, size_t pinlen,
-  unsigned char \*newKey, size_t \*newKeylen,
-  unsigned char \*checkSum, size_t \*checkSumlen,
-  target_t target
-) ;
+    CK_RV m_DeriveKey (
+        CK_MECHANISM_PTR mech,
+        CK_ATTRIBUTE_PTR template, CK_ULONG templatelen,
+        const unsigned char *baseKey, size_t baseKeylen,
+        const unsigned char *data, size_t datalen,
+        const unsigned char *pin, size_t pinlen,
+        unsigned char *newKey, size_t *newKeylen,
+        unsigned char *checkSum, size_t *checkSumlen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_DeriveKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_DeriveKey</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #DeriveKey_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="DeriveKey"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="DeriveKey_PKCS11" tab-title="PKCS #11" tab-group="DeriveKey" class="simple-tab-table">
+    <tr>
     <th>Description</th>
     <td>
-    <p>`C_DeriveKey` derives a key from a base key, creating a new key object. `hSession` is the session's handle; `pMechanism` points to a structure that specifies the key derivation chanism; `hBaseKey` is the handle of the base key; `pTemplate` points to the template for the new key; `ulAttributeCount` is the number of attributes in the template; and `phKey` points to the location that receives the handle of the derived key.</p>
-    <p>The values of the `CKA_SENSITIVE`, `CKA_ALWAYS_SENSITIVE`, `CKA_EXTRACTABLE`, and `KA_NEVER_EXTRACTABLE` attributes for the base key affect the values that these attributes can hold for the newly derived key. See the description of each particular key-derivation mechanism in Section 5.16.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749" target="_blank">PKCS #11 API specification</a> for any constraints of this type.</p>
-    <p>If a call to `C_DeriveKey` cannot support the precise template that is supplied to it, it fails and returns without creating any key object.</p>
-    <p>The key object created by a successful call to `C_DeriveKey` has the `CKA_LOCAL` attribute set to `CK_FALSE`.</p>
+    <p><code>C_DeriveKey</code> derives a key from a base key, creating a new key object. <code>hSession</code> is the session's handle; <code>pMechanism</code> points to a structure that specifies the key derivation chanism; <code>hBaseKey</code> is the handle of the base key; <code>pTemplate</code> points to the template for the new key; <code>ulAttributeCount</code> is the number of attributes in the template; and <code>phKey</code> points to the location that receives the handle of the derived key.</p>
+    <p>The values of the <code>CKA_SENSITIVE</code>, <code>CKA_ALWAYS_SENSITIVE</code>, <code>CKA_EXTRACTABLE</code>, and <code>KA_NEVER_EXTRACTABLE</code> attributes for the base key affect the values that these attributes can hold for the newly derived key. See the description of each particular key-derivation mechanism in Section 5.16.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749" target="_blank">PKCS #11 API specification</a> for any constraints of this type.</p>
+    <p>If a call to <code>C_DeriveKey</code> cannot support the precise template that is supplied to it, it fails and returns without creating any key object.</p>
+    <p>The key object created by a successful call to <code>C_DeriveKey</code> has the <code>CKA_LOCAL</code> attribute set to <code>CK_FALSE</code>.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_DeriveKey)(
-  CK_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism,
-  CK_OBJECT_HANDLE hBaseKey,
-  CK_ATTRIBUTE_PTR pTemplate,
-  CK_ULONG ulAttributeCount,
-  CK_OBJECT_HANDLE_PTR phKey
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_DeriveKey)(
+        CK_SESSION_HANDLE hSession,
+        CK_MECHANISM_PTR pMechanism,
+        CK_OBJECT_HANDLE hBaseKey,
+        CK_ATTRIBUTE_PTR pTemplate,
+        CK_ULONG ulAttributeCount,
+        CK_OBJECT_HANDLE_PTR phKey
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_ATTRIBUTE_READ_ONLY, CKR_ATTRIBUTE_TYPE_INVALID, CKR_ATTRIBUTE_VALUE_INVALID, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_CURVE_NOT_SUPPORTED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_DOMAIN_PARAMS_INVALID, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_SESSION_READ_ONLY, CKR_TEMPLATE_INCOMPLETE, CKR_TEMPLATE_INCONSISTENT, CKR_TOKEN_WRITE_PROTECTED, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #DeriveKey_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="DeriveKey"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  // Derive AES key for Alice
-  deriveKeyTemplate := ep11.EP11Attributes{
-      ep11.CKA_CLASS:     ep11.CKO_SECRET_KEY,
-      ep11.CKA_KEY_TYPE:  ep11.CKK_AES,
-      ep11.CKA_VALUE_LEN: 128 / 8,
-      ep11.CKA_ENCRYPT:   true,
-      ep11.CKA_DECRYPT:   true,
-  }
-  // Extract Bob's EC coordinates
-  combinedCoordinates, err := util.GetPubkeyBytesFromSPKI(bobECKeypairResponse.PubKeyBytes)
-  if err != nil {
-      return nil, fmt.Errorf("Bob's EC public key cannot obtain coordinates: %s", err)
-  }
+    ```Golang
+    // Derive AES key for Alice
+    deriveKeyTemplate := ep11.EP11Attributes{
+        ep11.CKA_CLASS:     ep11.CKO_SECRET_KEY,
+        ep11.CKA_KEY_TYPE:  ep11.CKK_AES,
+        ep11.CKA_VALUE_LEN: 128 / 8,
+        ep11.CKA_ENCRYPT:   true,
+        ep11.CKA_DECRYPT:   true,
+    }
+    // Extract Bob's EC coordinates
+    combinedCoordinates, err := util.GetPubkeyBytesFromSPKI(bobECKeypairResponse.PubKeyBytes)
+    if err != nil {
+        return nil, fmt.Errorf("Bob's EC public key cannot obtain coordinates: %s", err)
+    }
 
-  aliceDeriveKeyRequest := &pb.DeriveKeyRequest{
-      Mech:     &pb.Mechanism{Mechanism: ep11.CKM_ECDH1_DERIVE, Parameter: util.SetMechParm(combinedCoordinates)},
-      Template: util.AttributeMap(deriveKeyTemplate),
-      BaseKey:  aliceECKeypairResponse.PrivKeyBytes,
-  }
+    aliceDeriveKeyRequest := &pb.DeriveKeyRequest{
+        Mech:     &pb.Mechanism{Mechanism: ep11.CKM_ECDH1_DERIVE, Parameter: util.SetMechParm(combinedCoordinates)},
+        Template: util.AttributeMap(deriveKeyTemplate),
+        BaseKey:  aliceECKeypairResponse.PrivKeyBytes,
+    }
 
-  // Derive AES key for Alice
-  aliceDeriveKeyResponse, err := cryptoClient.DeriveKey(context.Background(),  aliceDeriveKeyRequest)
-  ```
-  {: codeblock}
+    // Derive AES key for Alice
+    aliceDeriveKeyResponse, err := cryptoClient.DeriveKey(context.Background(),  aliceDeriveKeyRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  //results are created through GenerateKeyPair
-  const [alice, bob] = results;
+    ```JavaScript
+    //results are created through GenerateKeyPair
+    const [alice, bob] = results;
 
-  const deriveKeyTemplate = new util.AttributeMap(
+    const deriveKeyTemplate = new util.AttributeMap(
     new util.Attribute(ep11.CKA_CLASS, ep11.CKO_SECRET_KEY),
     new util.Attribute(ep11.CKA_KEY_TYPE, ep11.CKK_AES),
     new util.Attribute(ep11.CKA_VALUE_LEN, 128/8),
     new util.Attribute(ep11.CKA_ENCRYPT, true),
     new util.Attribute(ep11.CKA_DECRYPT, true),
-  );
+    );
 
-  const derived = [];
+    const derived = [];
 
-  async.eachSeries([
+    async.eachSeries([
     { PubKey: bob.PubKeyBytes, PrivKey: alice.PrivKeyBytes },
     { PubKey: alice.PubKeyBytes, PrivKey: bob.PrivKeyBytes }
-  ], (data, cb) => {
+    ], (data, cb) => {
     const combinedCoordinates = util.getPubKeyBytesFromSPKI(data.PubKey);
 
     client.DeriveKey({
@@ -1031,9 +959,9 @@ CK_DEFINE_FUNCTION(CK_RV, C_DeriveKey)(
 
       cb(err);
     });
-  }
-  ```
-  {: codeblock}
+    }
+    ```
+    {: codeblock}
 
 ## Protecting keys
 {: #grep11-operation-manage-keys}
@@ -1045,78 +973,70 @@ You can protect a key by wrapping it and then decrypt the key by invoking the un
 
 The `WrapKey` function wraps (encrypts) a key.
 
-<table>
-  <tr>
+<table id="WrapKey_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="WrapKey" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_WrapKey`, which is an implementation of PKCS #11 `C_WrapKey`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_WrapKey</code>, which is an implementation of PKCS #11 <code>C_WrapKey</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message WrapKeyRequest {
-    bytes Key = 1;
-    bytes KeK = 2;
-    bytes MacKey = 3;
-    Mechanism Mech = 4;
-}
-message WrapKeyResponse {
-    bytes Wrapped = 5;
-}
+    message WrapKeyRequest {
+        bytes Key = 1;
+        bytes KeK = 2;
+        bytes MacKey = 3;
+        Mechanism Mech = 4;
+    }
+    message WrapKeyResponse {
+        bytes Wrapped = 5;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #WrapKey_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="WrapKey"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="WrapKey_EP11" tab-title="Enterprise PKCS #11" tab-group="WrapKey" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>Implementation of PKCS #11 <code>C_WrapKey</code>.
-  </td>
-  </tr>
-  <tr>
+    <td>Implementation of PKCS #11 <code>C_WrapKey</code>.
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_WrapKey (
-  const unsigned char \*key, size_t keylen,
-  const unsigned char \*keK, size_t keKlen,
-  const unsigned char \*macKey, size_t macKeylen,
-  const CK_MECHANISM_PTR mech,
-  CK_BYTE_PTR wrapped, CK_ULONG_PTR wrappedlen,
-  target_t target
-);
+    CK_RV m_WrapKey (
+        const unsigned char *key, size_t keylen,
+        const unsigned char *keK, size_t keKlen,
+        const unsigned char *macKey, size_t macKeylen,
+        const CK_MECHANISM_PTR mech,
+        CK_BYTE_PTR wrapped, CK_ULONG_PTR wrappedlen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_WrapKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_WrapKey</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #WrapKey_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="WrapKey"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="WrapKey_PKCS11" tab-title="PKCS #11" tab-group="WrapKey" class="simple-tab-table">
+    <tr>
     <th>Description</th>
     <td>
-    <p>`C_WrapKey` wraps (that is, encrypts) a private or secret key. `hSession` is the session's handle; `pMechanism` points to the wrapping mechanism; `hWrappingKey` is the handle of the wrapping key; `hKey` is the handle of the key to be wrapped; `pWrappedKey` points to the location that receives the wrapped key; and `pulWrappedKeyLen` points to the location that receives the length of the wrapped key.</p>
-    <p>`C_WrapKey` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The `CKA_WRAP` attribute of the wrapping key, which indicates whether the key supports wrapping, must be `CK_TRUE`. The `CKA_EXTRACTABLE` attribute of the key to be wrapped must also be `CK_TRUE`.</p>
-    <p>If the key to be wrapped cannot be wrapped for some token-specific reason, despite its having its `CKA_EXTRACTABLE` attribute set to `CK_TRUE`, then `C_WrapKey` fails with error code `CKR_KEY_NOT_WRAPPABLE`. If it cannot be wrapped with the specified wrapping key and mechanism solely because of its length, then `C_WrapKey` fails with error code `CKR_KEY_SIZE_RANGE`.</p>
+    <p><code>C_WrapKey</code> wraps (that is, encrypts) a private or secret key. <code>hSession</code> is the session's handle; <code>pMechanism</code> points to the wrapping mechanism; <code>hWrappingKey</code> is the handle of the wrapping key; <code>hKey</code> is the handle of the key to be wrapped; <code>pWrappedKey</code> points to the location that receives the wrapped key; and <code>pulWrappedKeyLen</code> points to the location that receives the length of the wrapped key.</p>
+    <p><code>C_WrapKey</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The <code>CKA_WRAP</code> attribute of the wrapping key, which indicates whether the key supports wrapping, must be <code>CK_TRUE</code>. The <code>CKA_EXTRACTABLE</code> attribute of the key to be wrapped must also be <code>CK_TRUE</code>.</p>
+    <p>If the key to be wrapped cannot be wrapped for some token-specific reason, despite its having its <code>CKA_EXTRACTABLE</code> attribute set to <code>CK_TRUE</code>, then <code>C_WrapKey</code> fails with error code <code>CKR_KEY_NOT_WRAPPABLE</code>. If it cannot be wrapped with the specified wrapping key and mechanism solely because of its length, then <code>C_WrapKey</code> fails with error code <code>CKR_KEY_SIZE_RANGE</code>.</p>
     <p>
-    `C_WrapKey` can be used in the following situations:
+    <code>C_WrapKey</code> can be used in the following situations:
     <ul>
     <li>To wrap any secret key with a public key that supports encryption and decryption.</li>
     <li>To wrap any secret key with any other secret key. Consideration must be given to key size and mechanism strength or the token might not allow the operation.</li>
@@ -1124,65 +1044,61 @@ CK_RV m_WrapKey (
     </ul>
     </p>
     <p>Tokens vary in which types of keys can be wrapped with which mechanisms.</p>
-    <p>To partition the wrapping keys so that they can wrap only a subset of extractable keys, the attribute `CKA_WRAP_TEMPLATE` can be used on the wrapping key to specify an attribute set that can be compared against the attributes of the key to be wrapped. If all attributes match according to the `C_FindObject` rules of attribute matching, the wrap operation proceeds. The value of this attribute is an attribute template and the size is the number of items in the template times the size of `CK_ATTRIBUTE`. If this attribute is not supplied, any template is acceptable. If an attribute is not present, it is not checked. If any attribute mismatch occurs on an attempt to wrap a key, the function returns `CKR_KEY_HANDLE_INVALID`.</p>
+    <p>To partition the wrapping keys so that they can wrap only a subset of extractable keys, the attribute <code>CKA_WRAP_TEMPLATE</code> can be used on the wrapping key to specify an attribute set that can be compared against the attributes of the key to be wrapped. If all attributes match according to the <code>C_FindObject</code> rules of attribute matching, the wrap operation proceeds. The value of this attribute is an attribute template and the size is the number of items in the template times the size of <code>CK_ATTRIBUTE</code>. If this attribute is not supplied, any template is acceptable. If an attribute is not present, it is not checked. If any attribute mismatch occurs on an attempt to wrap a key, the function returns <code>CKR_KEY_HANDLE_INVALID</code>.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_WrapKey)(
-  CK_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism,
-  CK_OBJECT_HANDLE hWrappingKey,
-  CK_OBJECT_HANDLE hKey,
-  CK_BYTE_PTR pWrappedKey,
-  CK_ULONG_PTR pulWrappedKeyLen
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_WrapKey)(
+        CK_SESSION_HANDLE hSession,
+        CK_MECHANISM_PTR pMechanism,
+        CK_OBJECT_HANDLE hWrappingKey,
+        CK_OBJECT_HANDLE hKey,
+        CK_BYTE_PTR pWrappedKey,
+        CK_ULONG_PTR pulWrappedKeyLen
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_HANDLE_INVALID, CKR_KEY_NOT_WRAPPABLE, CKR_KEY_SIZE_RANGE, CKR_KEY_UNEXTRACTABLE, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN, CKR_WRAPPING_KEY_HANDLE_INVALID, CKR_WRAPPING_KEY_SIZE_RANGE, CKR_WRAPPING_KEY_TYPE_INCONSISTENT.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #WrapKey_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="WrapKey"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  WrapKeyRequest := &pb.WrapKeyRequest {
-      Mech: &pb.Mechanism{Mechanism: ep11.CKM_RSA_PKCS},
-      KeK:  GenerateKeyPairResponse.PubKeyBytes,
-      Key:  GenerateKeyResponse.KeyBytes,
-  }
+    ```Golang
+    WrapKeyRequest := &pb.WrapKeyRequest {
+        Mech: &pb.Mechanism{Mechanism: ep11.CKM_RSA_PKCS},
+        KeK:  GenerateKeyPairResponse.PubKeyBytes,
+        Key:  GenerateKeyResponse.KeyBytes,
+    }
 
-  WrapKeyResponse, err := cryptoClient.WrapKey(context.Background(), WrapKeyRequest)
-  ```
-  {: codeblock}
+    WrapKeyResponse, err := cryptoClient.WrapKey(context.Background(), WrapKeyRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.WrapKey({
-    Mech: {
-      Mechanism: ep11.CKM_RSA_PKCS
-    },
-    KeK: rsa.PubKeyBytes,
-    Key: aes.KeyBytes
-  }, (err, data={}) => {
-    cb(err, data.Wrapped);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.WrapKey({
+      Mech: {
+        Mechanism: ep11.CKM_RSA_PKCS
+      },
+      KeK: rsa.PubKeyBytes,
+      Key: aes.KeyBytes
+    }, (err, data={}) => {
+      cb(err, data.Wrapped);
+    });
+    ```
+    {: codeblock}
 
 
 ### UnwrapKey
@@ -1190,169 +1106,157 @@ CK_DEFINE_FUNCTION(CK_RV, C_WrapKey)(
 
 The `UnwrapKey` function unwraps (decrypts) a key.
 
-<table>
-  <tr>
+<table id="UnwrapKey_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="UnwrapKey" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_UnwrapKey`, which is an implementation of PKCS #11 `C_UnwrapKey`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_UnwrapKey</code>, which is an implementation of PKCS #11 <code>C_UnwrapKey</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message UnwrapKeyRequest {
-  bytes Wrapped = 1;
-  bytes KeK = 2;
-  bytes MacKey = 3;
-  Mechanism Mech = 5;
-  map&lt;uint64,AttributeValue&gt; Template = 9;
-}
-message UnwrapKeyResponse {
-  bytes UnwrappedBytes = 7;
-  bytes CheckSum = 8;
-}
+    message UnwrapKeyRequest {
+        bytes Wrapped = 1;
+        bytes KeK = 2;
+        bytes MacKey = 3;
+        Mechanism Mech = 5;
+        map&lt;uint64,AttributeValue&gt; Template = 9;
+    }
+    message UnwrapKeyResponse {
+        bytes UnwrappedBytes = 7;
+        bytes CheckSum = 8;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #UnwrapKey_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="UnwrapKey"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="UnwrapKey_EP11" tab-title="Enterprise PKCS #11" tab-group="UnwrapKey" class="simple-tab-table">
+    <tr>
     <th>Description</th>
 	<td>
-  <p>Implementation of PKCS #11 <code>C_UnwrapKey</code>.</p>
-  <p><code>uwmech</code> specifies the encryption mechanism that is used to decrypt wrapped data. <code>ptempl</code> is a <em>key(pair)</em> parameter list, specifying how to transform the unwrapped data to a new key (must include <code>CKA_KEY_TYPE</code>).</p>
-  <p>The generated object is returned under <code>(unwrapped, uwlen)</code> as a blob. Symmetric keys return their key checksum (3 bytes) under <code>(csum, cslen)</code>; public-key objects return their public key as an SPKI in <code>(csum, cslen)</code>. Both forms are followed by a 4-byte big-endian value, encoding bitcount of the unwrapped key.</p>
-  <p>When an SPKI is being tranformed to a MACed SPKI, one must use CKM_IBM_TRANSPORTKEY as the unwrapping mechanism. This mode supplies the raw SPKI as wrapped data, and ignores the KEK.</p>
-  <p><code>UnwrapKey</code> produces parity-adjusted DES keys (within the blobs), but tolerates input with improper parity.</p>
-  </td>
-  </tr>
-  <tr>
+    <p>Implementation of PKCS #11 <code>C_UnwrapKey</code>.</p>
+    <p><code>uwmech</code> specifies the encryption mechanism that is used to decrypt wrapped data. <code>ptempl</code> is a <em>key(pair)</em> parameter list, specifying how to transform the unwrapped data to a new key (must include <code>CKA_KEY_TYPE</code>).</p>
+    <p>The generated object is returned under <code>(unwrapped, uwlen)</code> as a blob. Symmetric keys return their key checksum (3 bytes) under <code>(csum, cslen)</code>; public-key objects return their public key as an SPKI in <code>(csum, cslen)</code>. Both forms are followed by a 4-byte big-endian value, encoding bitcount of the unwrapped key.</p>
+    <p>When an SPKI is being tranformed to a MACed SPKI, one must use CKM_IBM_TRANSPORTKEY as the unwrapping mechanism. This mode supplies the raw SPKI as wrapped data, and ignores the KEK.</p>
+    <p><code>UnwrapKey</code> produces parity-adjusted DES keys (within the blobs), but tolerates input with improper parity.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_UnwrapKey (
-  const CK_BYTE_PTR wrapped, CK_ULONG wrappedlen,
-  const unsigned char \*keK, size_t keKlen,
-  const unsigned char \*macKey, size_t macKeylen,
-  const unsigned char \*pin, size_t pinlen,
-  const CK_MECHANISM_PTR mech,
-  const CK_ATTRIBUTE_PTR template, CK_ULONG templatelen,
-  unsigned char \*unwrapped, size_t \*unwrappedlen,
-  CK_BYTE_PTR checkSum, CK_ULONG \*checkSumlen,
-  target_t target
-);
+    CK_RV m_UnwrapKey (
+        const CK_BYTE_PTR wrapped, CK_ULONG wrappedlen,
+        const unsigned char *keK, size_t keKlen,
+        const unsigned char *macKey, size_t macKeylen,
+        const unsigned char *pin, size_t pinlen,
+        const CK_MECHANISM_PTR mech,
+        const CK_ATTRIBUTE_PTR template, CK_ULONG templatelen,
+        unsigned char *unwrapped, size_t *unwrappedlen,
+        CK_BYTE_PTR checkSum, CK_ULONG *checkSumlen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_UnwrapKey` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_UnwrapKey</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #UnwrapKey_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="UnwrapKey"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="UnwrapKey_PKCS11" tab-title="PKCS #11" tab-group="UnwrapKey" class="simple-tab-table">
+    <tr>
     <th>Description</th>
     <td>
-    <p>`C_UnwrapKey` unwraps (i.e. decrypts) a wrapped key, creating a new private key or secret key object. `hSession` is the session's handle; `pMechanism` points to the unwrapping mechanism; `hUnwrappingKey` is the handle of the unwrapping key; `pWrappedKey` points to the wrapped key; `ulWrappedKeyLen` is the length of the wrapped key; `pTemplate` points to the template for the new key; `ulAttributeCount` is the number of attributes in the template; `phKey` points to the location that receives the handle of the recovered key.</p>
-    <p>The `CKA_UNWRAP` attribute of the unwrapping key, which indicates whether the key supports unwrapping, must be `CK_TRUE`.</p>
-    <p>The new key has the `CKA_ALWAYS_SENSITIVE` attribute set to `CK_FALSE`, and the `CKA_NEVER_EXTRACTABLE` attribute set to `CK_FALSE`. The `CKA_EXTRACTABLE` attribute is by default set to `CK_TRUE`.</p>
-    <p>Some mechanisms can modify, or attempt to modify. the contents of the `pMechanism` structure at the same time that the key is unwrapped.</p>
-    <p>If a call to `C_UnwrapKey` cannot support the precise template that is supplied to it, it fails and returns without creating any key object.</p>
-    <p>The key object created by a successful call to `C_UnwrapKey` has its `CKA_LOCAL` attribute set to `CK_FALSE`.</p>
-    <p>To partition the unwrapping keys so they can unwrap only a subset of keys the attribute `CKA_UNWRAP_TEMPLATE` can be used on the unwrapping key to specify an attribute set that is added to attributes of the key to be unwrapped. If the attributes do not conflict with the user supplied attribute template, in `pTemplate`, the unwrap operation proceeds. The value of this attribute is an attribute template and the size is the number of items in the template times the size of `CK_ATTRIBUTE`. If this attribute is not present on the unwrapping key then no extra attributes is added. If any attribute conflict occurs on an attempt to unwrap a key then the function SHALL return `CKR_TEMPLATE_INCONSISTENT`.</p>
+    <p><code>C_UnwrapKey</code> unwraps (that is, decrypts) a wrapped key, creating a new private key or secret key object. <code>hSession</code> is the session's handle; <code>pMechanism</code> points to the unwrapping mechanism; <code>hUnwrappingKey</code> is the handle of the unwrapping key; <code>pWrappedKey</code> points to the wrapped key; <code>ulWrappedKeyLen</code> is the length of the wrapped key; <code>pTemplate</code> points to the template for the new key; <code>ulAttributeCount</code> is the number of attributes in the template; <code>phKey</code> points to the location that receives the handle of the recovered key.</p>
+    <p>The <code>CKA_UNWRAP</code> attribute of the unwrapping key, which indicates whether the key supports unwrapping, must be <code>CK_TRUE</code>.</p>
+    <p>The new key has the <code>CKA_ALWAYS_SENSITIVE</code> attribute set to <code>CK_FALSE</code>, and the <code>CKA_NEVER_EXTRACTABLE</code> attribute set to <code>CK_FALSE</code>. The <code>CKA_EXTRACTABLE</code> attribute is by default set to <code>CK_TRUE</code>.</p>
+    <p>Some mechanisms can modify, or attempt to modify. The contents of the <code>pMechanism</code> structure at the same time that the key is unwrapped.</p>
+    <p>If a call to <code>C_UnwrapKey</code> cannot support the precise template that is supplied to it, it fails and returns without creating any key object.</p>
+    <p>The key object created by a successful call to <code>C_UnwrapKey</code> has its <code>CKA_LOCAL</code> attribute set to <code>CK_FALSE</code>.</p>
+    <p>To partition the unwrapping keys so they can unwrap only a subset of keys the attribute <code>CKA_UNWRAP_TEMPLATE</code> can be used on the unwrapping key to specify an attribute set that is added to attributes of the key to be unwrapped. If the attributes do not conflict with the user supplied attribute template, in <code>pTemplate</code>, the unwrap operation proceeds. The value of this attribute is an attribute template and the size is the number of items in the template times the size of <code>CK_ATTRIBUTE</code>. If this attribute is not present on the unwrapping key, then no extra attributes is added. If any attribute conflict occurs on an attempt to unwrap a key, then the function SHALL return <code>CKR_TEMPLATE_INCONSISTENT</code>.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_UnwrapKey)(
-  CK_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism,
-  CK_OBJECT_HANDLE hUnwrappingKey,
-  CK_BYTE_PTR pWrappedKey,
-  CK_ULONG ulWrappedKeyLen,
-  CK_ATTRIBUTE_PTR pTemplate,
-  CK_ULONG ulAttributeCount,
-  CK_OBJECT_HANDLE_PTR phKey
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_UnwrapKey)(
+        CK_SESSION_HANDLE hSession,
+        CK_MECHANISM_PTR pMechanism,
+        CK_OBJECT_HANDLE hUnwrappingKey,
+        CK_BYTE_PTR pWrappedKey,
+        CK_ULONG ulWrappedKeyLen,
+        CK_ATTRIBUTE_PTR pTemplate,
+        CK_ULONG ulAttributeCount,
+        CK_OBJECT_HANDLE_PTR phKey
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_ATTRIBUTE_READ_ONLY, CKR_ATTRIBUTE_TYPE_INVALID, CKR_ATTRIBUTE_VALUE_INVALID, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_CURVE_NOT_SUPPORTED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_DOMAIN_PARAMS_INVALID, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_SESSION_READ_ONLY, CKR_TEMPLATE_INCOMPLETE, CKR_TEMPLATE_INCONSISTENT, CKR_TOKEN_WRITE_PROTECTED, CKR_UNWRAPPING_KEY_HANDLE_INVALID, CKR_UNWRAPPING_KEY_SIZE_RANGE, CKR_UNWRAPPING_KEY_TYPE_INCONSISTENT, CKR_USER_NOT_LOGGED_IN, CKR_WRAPPED_KEY_INVALID, CKR_WRAPPED_KEY_LEN_RANGE.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #UnwrapKey_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="UnwrapKey"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  aesUnwrapKeyTemplate := ep11.EP11Attributes{
-      ep11.CKA_CLASS:       ep11.CKO_SECRET_KEY,
-      ep11.CKA_KEY_TYPE:    ep11.CKK_AES,
-      ep11.CKA_VALUE_LEN:   128 / 8,
-      ep11.CKA_ENCRYPT:     true,
-      ep11.CKA_DECRYPT:     true,
-      ep11.CKA_EXTRACTABLE: true, // must be true to be wrapped
-  }
-  UnwrapKeyRequest := &pb.UnwrapKeyRequest{
-      Mech:     &pb.Mechanism{Mechanism: ep11.CKM_RSA_PKCS},
-      KeK:      GenerateKeyPairResponse.PrivKeyBytes,
-      Wrapped:  WrapKeyResponse.Wrapped,
-      Template: util.AttributeMap(aesUnwrapKeyTemplate),
-  }
+    ```Golang
+    aesUnwrapKeyTemplate := ep11.EP11Attributes{
+        ep11.CKA_CLASS:       ep11.CKO_SECRET_KEY,
+        ep11.CKA_KEY_TYPE:    ep11.CKK_AES,
+        ep11.CKA_VALUE_LEN:   128 / 8,
+        ep11.CKA_ENCRYPT:     true,
+        ep11.CKA_DECRYPT:     true,
+        ep11.CKA_EXTRACTABLE: true, // must be true to be wrapped
+    }
+    UnwrapKeyRequest := &pb.UnwrapKeyRequest{
+        Mech:     &pb.Mechanism{Mechanism: ep11.CKM_RSA_PKCS},
+        KeK:      GenerateKeyPairResponse.PrivKeyBytes,
+        Wrapped:  WrapKeyResponse.Wrapped,
+        Template: util.AttributeMap(aesUnwrapKeyTemplate),
+    }
 
-  // Unwrap the AES key
-  UnwrapKeyResponse, err := cryptoClient.UnwrapKey(context.Background(), UnwrapKeyRequest)
-  ```
-  {: codeblock}
+    // Unwrap the AES key
+    UnwrapKeyResponse, err := cryptoClient.UnwrapKey(context.Background(), UnwrapKeyRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  const aesUnwrapKeyTemplate = new util.AttributeMap(
-  new util.Attribute(ep11.CKA_CLASS, ep11.CKO_SECRET_KEY),
-  new util.Attribute(ep11.CKA_KEY_TYPE, ep11.CKK_AES),
-  new util.Attribute(ep11.CKA_VALUE_LEN, 128/8),
-  new util.Attribute(ep11.CKA_ENCRYPT, true),
-  new util.Attribute(ep11.CKA_DECRYPT, true),
-  new util.Attribute(ep11.CKA_EXTRACTABLE, true)
-  );
+    ```JavaScript
+    const aesUnwrapKeyTemplate = new util.AttributeMap(
+    new util.Attribute(ep11.CKA_CLASS, ep11.CKO_SECRET_KEY),
+    new util.Attribute(ep11.CKA_KEY_TYPE, ep11.CKK_AES),
+    new util.Attribute(ep11.CKA_VALUE_LEN, 128/8),
+    new util.Attribute(ep11.CKA_ENCRYPT, true),
+    new util.Attribute(ep11.CKA_DECRYPT, true),
+    new util.Attribute(ep11.CKA_EXTRACTABLE, true)
+    );
 
-  client.UnwrapKey({
-      Mech: {
-          Mechanism: ep11.CKM_RSA_PKCS
-      },
-      KeK: rsa.PrivKeyBytes,
-      Wrapped: wrapped,
-      Template: aesUnwrapKeyTemplate
-  }, (err, data={}) => {
-      cb(err, wrapped, data.UnwrappedBytes, data.CheckSum);
-  });
-  ```
-  {: codeblock}
+    client.UnwrapKey({
+        Mech: {
+            Mechanism: ep11.CKM_RSA_PKCS
+        },
+        KeK: rsa.PrivKeyBytes,
+        Wrapped: wrapped,
+        Template: aesUnwrapKeyTemplate
+    }, (err, data={}) => {
+        cb(err, wrapped, data.UnwrappedBytes, data.CheckSum);
+    });
+    ```
+    {: codeblock}
 
 ### RewrapKeyBlob
 {: #grep11-rewrapKeyBlob}
@@ -1362,58 +1266,54 @@ The `RewrapKeyBlob` function reencrypts generated key binary large objects (BLOB
 This function is a special administration command that is supported only by GREP11. There is no corresponding EP11 function or PKCS #11 function for `RewrapKeyBlob`.
 {: note}
 
-<table>
-  <tr>
+<table id="RewrapKeyBlob_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="RewrapKeyBlob" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Transfers ownership of a BLOB that is controlled by the current master key to the new master key when the new master key is committed.  <td>
-  </tr>
-  <tr>
+    <td>Transfers ownership of a BLOB that is controlled by the current master key to the new master key when the new master key is committed.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message RewrapKeyBlobRequest {
-	bytes WrappedKey = 1;
-}
-message RewrapKeyBlobResponse {
-	bytes RewrappedKey = 1;
-}
+    message RewrapKeyBlobRequest {
+    	bytes WrappedKey = 1;
+    }
+    message RewrapKeyBlobResponse {
+    	bytes RewrappedKey = 1;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #RewrapKeyBlob_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="RewrapKeyBlob"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  RewrapKeyBlobRequest := &pb.RewrapKeyBlobRequest {
-      WrappedKey: GenerateKeyResponse.KeyBytes,
-  }
+    ```Golang
+    RewrapKeyBlobRequest := &pb.RewrapKeyBlobRequest {
+        WrappedKey: GenerateKeyResponse.KeyBytes,
+    }
 
-  // Rewrap an existing key blob using the HSM's new wrapping key
-  RewrapKeyBlobResponse, err := cryptoClient.RewrapKeyBlob(context.Background(),  RewrapKeyBlobRequest)
-  ```
-  {: codeblock}
+    // Rewrap an existing key blob using the HSM's new wrapping key
+    RewrapKeyBlobResponse, err := cryptoClient.RewrapKeyBlob(context.Background(),  RewrapKeyBlobRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.RewrapKeyBlob({
-    WrappedKey: wrappedKey
-  }, (err, response) => {
-    callback(err, response);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.RewrapKeyBlob({
+      WrappedKey: wrappedKey
+    }, (err, response) => {
+      callback(err, response);
+    });
+    ```
+    {: codeblock}
 
 ## Retrieving and modifying attributes for keys 
 {: #grep11-operation-attribute-value}
@@ -1425,281 +1325,257 @@ When you generate keys or perform key operations, you define an attribute templa
 
 The `GetAttributeValue` function obtains an attribute value of an object.
 
-<table>
-  <tr>
+<table id="GetAttributeValue_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="GetAttributeValue" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_GetAttributeValue`, which is an implementation of PKCS #11 `C_GetAttributeValue`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_GetAttributeValue</code>, which is an implementation of PKCS #11 <code>C_GetAttributeValue</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message GetAttributeValueRequest {
-    bytes Object = 1;
-    map&lt;uint64,AttributeValue&gt; Attributes = 3;
-}
-message GetAttributeValueResponse {
-    map&lt;uint64,AttributeValue&gt; Attributes = 4;
-}
+    message GetAttributeValueRequest {
+        bytes Object = 1;
+        map&lt;uint64,AttributeValue&gt; Attributes = 3;
+    }
+    message GetAttributeValueResponse {
+        map&lt;uint64,AttributeValue&gt; Attributes = 4;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #GetAttributeValue_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="GetAttributeValue"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="GetAttributeValue_EP11" tab-title="Enterprise PKCS #11" tab-group="GetAttributeValue" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td><p>Implementation of PKCS #11 <code>C_GetAttributeValue</code>.</p>
-  <p>Does not represent or need sessions (part of blob), therefore does not use the <code>hSession</code> parameter.</p>
-  <p>EP11 uses more straightforward ways to decode, such as enumerating actual values instead of being more generic.</p>
-  </td>
-  </tr>
-  <tr>
+    <td><p>Implementation of PKCS #11 <code>C_GetAttributeValue</code>.</p>
+    <p>Does not represent or need sessions (part of blob), therefore does not use the <code>hSession</code> parameter.</p>
+    <p>EP11 uses more straightforward ways to decode, such as enumerating actual values instead of being more generic.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_GetAttributeValue (
-  const unsigned char \*object, size_t objectlen,
-  CK_ATTRIBUTE_PTR attributes, CK_ULONG attributeslen,
-  target_t target
-);
+    CK_RV m_GetAttributeValue (
+        const unsigned char *object, size_t objectlen,
+        CK_ATTRIBUTE_PTR attributes, CK_ULONG attributeslen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_GetAttributeValue` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_GetAttributeValue</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #GetAttributeValue_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="GetAttributeValue"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="GetAttributeValue_PKCS11" tab-title="PKCS #11" tab-group="GetAttributeValue" class="simple-tab-table">
+    <tr>
     <th>Description</th>
     <td>
-    <p>`C_GetAttributeValue` obtains the value of one or more attributes of an object. `hSession` is the session's handle; `hObject` is the object's handle; `pTemplate` points to a template that specifies which attribute values are to be obtained, and receives the attribute values; `ulCount` is the number of attributes in the template.</p>
+    <p><code>C_GetAttributeValue</code> obtains the value of one or more attributes of an object. <code>hSession</code> is the session's handle; <code>hObject</code> is the object's handle; <code>pTemplate</code> points to a template that specifies which attribute values are to be obtained, and receives the attribute values; <code>ulCount</code> is the number of attributes in the template.</p>
     <p>
-    For each (`type`, `pValue`, `ulValueLen`) triple in the template, `C_GetAttributeValue` performs the following algorithm:
+    For each (<code>type</code>, <code>pValue</code>, <code>ulValueLen</code>) triple in the template, <code>C_GetAttributeValue</code> performs the following algorithm:
     <ol>
-    <li>If the specified attribute (that is, the attribute that is specified by the type field) for the object cannot be revealed because the object is sensitive or unextractable, then the `ulValueLen` field in that triple is modified to hold the value `CK_UNAVAILABLE_INFORMATION`.</li>
-    <li>Otherwise, if the specified value for the object is invalid (the object does not possess such an attribute), then the `ulValueLen` field in that triple is modified to hold the value `CK_UNAVAILABLE_INFORMATION`.</li>
-    <li>Otherwise, if the `pValue` field has the value `NULL_PTR`, then the `ulValueLen` field is modified to hold the exact length of the specified attribute for the object.</li>
-    <li>Otherwise, if the length specified in `ulValueLen` is large enough to hold the value of the specified attribute for the object, then that attribute is copied into the buffer that is at `pValue`, and the `ulValueLen` field is modified to hold the exact length of the attribute.</li>
-    <li>Otherwise, the `ulValueLen` field is modified to hold the value `CK_UNAVAILABLE_INFORMATION`.</li>
+    <li>If the specified attribute (that is, the attribute that is specified by the type field) for the object cannot be revealed because the object is sensitive or unextractable, then the <code>ulValueLen</code> field in that triple is modified to hold the value <code>CK_UNAVAILABLE_INFORMATION</code>.</li>
+    <li>Otherwise, if the specified value for the object is invalid (the object does not possess such an attribute), then the <code>ulValueLen</code> field in that triple is modified to hold the value <code>CK_UNAVAILABLE_INFORMATION</code>.</li>
+    <li>Otherwise, if the <code>pValue</code> field has the value <code>NULL_PTR</code>, then the <code>ulValueLen</code> field is modified to hold the exact length of the specified attribute for the object.</li>
+    <li>Otherwise, if the length specified in <code>ulValueLen</code> is large enough to hold the value of the specified attribute for the object, then that attribute is copied into the buffer that is at <code>pValue</code>, and the <code>ulValueLen</code> field is modified to hold the exact length of the attribute.</li>
+    <li>Otherwise, the <code>ulValueLen</code> field is modified to hold the value <code>CK_UNAVAILABLE_INFORMATION</code>.</li>
     </ol>
     </p>
-    <p>If case 1 applies to any of the requested attributes, then the call needs to return the value `CKR_ATTRIBUTE_SENSITIVE`. If case 2 applies to any of the requested attributes, then the call needs to return the value `CKR_ATTRIBUTE_TYPE_INVALID`. If case 5 applies to any of the requested attributes, then the call needs to return the value `CKR_BUFFER_TOO_SMALL`. As usual, if more than one of these error codes is applicable, `Cryptoki` can return any of them. Only if none of them applies to any of the requested attributes, `CKR_OK` is returned.</p>
-    <p>In the special case of an attribute whose value is an array of attributes, for example` CKA_WRAP_TEMPLATE`, where it is passed in with `pValue` not NULL, then if the `pValue` of elements within the array is NULL_PTR then the `ulValueLen` of elements within the array is set to the required length. If the `pValue` of elements within the array is not NULL_PTR, then the `ulValueLen` element of attributes within the array must reflect the space that the corresponding `pValue` points to, and `pValue` is filled in if there is sufficient room. Therefore it is important to initialize the contents of a buffer before `C_GetAttributeValue` is called to get such an array value. If any `ulValueLen` within the array isn't large enough, it is set to `CK_UNAVAILABLE_INFORMATION` and the function returns `CKR_BUFFER_TOO_SMALL`, as it does if an attribute in the `pTemplate` argument has `ulValueLen` too small. Any attribute whose value is an array of attributes is identifiable by the `CKF_ARRAY_ATTRIBUTE` set of the attribute type.</p>
-    <p>The error codes `CKR_ATTRIBUTE_SENSITIVE`, `CKR_ATTRIBUTE_TYPE_INVALID`, and `CKR_BUFFER_TOO_SMALL` do not denote true errors for `C_GetAttributeValue`. If a call to `C_GetAttributeValue` returns any of these three values, then the call must nonetheless have processed every attribute in the template that is supplied to `C_GetAttributeValue`. Each attribute in the template whose value can be returned by the call to `C_GetAttributeValue` is returned by the call to `C_GetAttributeValue`.</p>
+    <p>If case 1 applies to any of the requested attributes, then the call needs to return the value <code>CKR_ATTRIBUTE_SENSITIVE</code>. If case 2 applies to any of the requested attributes, then the call needs to return the value <code>CKR_ATTRIBUTE_TYPE_INVALID</code>. If case 5 applies to any of the requested attributes, then the call needs to return the value <code>CKR_BUFFER_TOO_SMALL</code>. As usual, if more than one of these error codes is applicable, <code>Cryptoki</code> can return any of them. Only if none of them applies to any of the requested attributes, <code>CKR_OK</code> is returned.</p>
+    <p>In the special case of an attribute whose value is an array of attributes, for example <code>CKA_WRAP_TEMPLATE</code>, where it is passed in with <code>pValue</code> not NULL, then if the <code>pValue</code> of elements within the array is NULL_PTR then the <code>ulValueLen</code> of elements within the array is set to the required length. If the <code>pValue</code> of elements within the array is not NULL_PTR, then the <code>ulValueLen</code> element of attributes within the array must reflect the space that the corresponding <code>pValue</code> points to, and <code>pValue</code> is completed if there is sufficient room. Therefore it is important to initialize the contents of a buffer before <code>C_GetAttributeValue</code> is called to get such an array value. If any <code>ulValueLen</code> within the array isn't large enough, it is set to <code>CK_UNAVAILABLE_INFORMATION</code> and the function returns <code>CKR_BUFFER_TOO_SMALL</code>, as it does if an attribute in the <code>pTemplate</code> argument has <code>ulValueLen</code> too small. Any attribute whose value is an array of attributes is identifiable by the <code>CKF_ARRAY_ATTRIBUTE</code> set of the attribute type.</p>
+    <p>The error codes <code>CKR_ATTRIBUTE_SENSITIVE</code>, <code>CKR_ATTRIBUTE_TYPE_INVALID</code>, and <code>CKR_BUFFER_TOO_SMALL</code> do not denote true errors for <code>C_GetAttributeValue</code>. If a call to <code>C_GetAttributeValue</code> returns any of these three values, then the call must nonetheless have processed every attribute in the template that is supplied to <code>C_GetAttributeValue</code>. Each attribute in the template whose value can be returned by the call to <code>C_GetAttributeValue</code> is returned by the call to <code>C_GetAttributeValue</code>.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_GetAttributeValue)(
-  CK_SESSION_HANDLE hSession,
-  CK_OBJECT_HANDLE hObject,
-  CK_ATTRIBUTE_PTR pTemplate,
-  CK_ULONG ulCount
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_GetAttributeValue)(
+        CK_SESSION_HANDLE hSession,
+        CK_OBJECT_HANDLE hObject,
+        CK_ATTRIBUTE_PTR pTemplate,
+        CK_ULONG ulCount
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_ATTRIBUTE_SENSITIVE, CKR_ATTRIBUTE_TYPE_INVALID, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OBJECT_HANDLE_INVALID, CKR_OK, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #GetAttributeValue_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="GetAttributeValue"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  // Only retrieve supported EP11 attributes
-  attributeList := ep11.EP11Attributes{
-      ep11.CKA_DECRYPT: false, // attribute where you would like to retrieve its current value
-  }
+    ```Golang
+    // Only retrieve supported EP11 attributes
+    attributeList := ep11.EP11Attributes{
+        ep11.CKA_DECRYPT: false, // attribute where you would like to retrieve its current value
+    }
 
-  GetAttributeValueRequest := &pb.GetAttributeValueRequest{
-      Object:     GenerateKeyPairResponse.PrivKeyBytes,
-      Attributes: util.AttributeMap(attributeList),
-  }
+    GetAttributeValueRequest := &pb.GetAttributeValueRequest{
+        Object:     GenerateKeyPairResponse.PrivKeyBytes,
+        Attributes: util.AttributeMap(attributeList),
+    }
 
-  GetAttributeValueResponse, err := cryptoClient.GetAttributeValue(context.Background(), GetAttributeValueRequest)
-  ```
-  {: codeblock}
+    GetAttributeValueResponse, err := cryptoClient.GetAttributeValue(context.Background(), GetAttributeValueRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  const attributeTemplate = new util.AttributeMap(
-  new util.Attribute(ep11.CKA_SIGN, 0)
-  );
+    ```JavaScript
+    const attributeTemplate = new util.AttributeMap(
+    new util.Attribute(ep11.CKA_SIGN, 0)
+    );
 
-  client.GetAttributeValue({
-    Object: keys.PrivKey,
-    Attributes: attributeTemplate
-  }, (err, response) => {
-    callback(err, response);
-    console.log('ATTRIBUTE:', response.Attributes);
-  });
-  ```
-  {: codeblock}
+    client.GetAttributeValue({
+      Object: keys.PrivKey,
+      Attributes: attributeTemplate
+    }, (err, response) => {
+      callback(err, response);
+      console.log('ATTRIBUTE:', response.Attributes);
+    });
+    ```
+    {: codeblock}
 
 ### SetAttributeValue
 {: #grep11-SetAttributeValue}
 
 The `SetAttributeValue` function modifies an attribute value of an object.
 
-<table>
-  <tr>
+<table id="SetAttributeValue_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="SetAttributeValue" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_SetAttributeValue`, which is an implementation of PKCS #11 `C_SetAttributeValue`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_SetAttributeValue</code>, which is an implementation of PKCS #11 <code>C_SetAttributeValue</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message SetAttributeValueRequest {
-    bytes Object = 1;
-    map&lt;uint64,AttributeValue&gt; Attributes = 3;
-}
-message SetAttributeValueResponse {
-    bytes Object = 1;
-}
+    message SetAttributeValueRequest {
+        bytes Object = 1;
+        map&lt;uint64,AttributeValue&gt; Attributes = 3;
+    }
+    message SetAttributeValueResponse {
+        bytes Object = 1;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #SetAttributeValue_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="SetAttributeValue"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="SetAttributeValue_EP11" tab-title="Enterprise PKCS #11" tab-group="SetAttributeValue" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Implementation of PKCS #11 <code>C_SetAttributeValue</code>.</p>
-  <p>attribute packing: see _GetAttrValue</p>
-  <p>Currently, Ep11 only sends Boolean attributes, all other attributes are handled by host (and EP11 does not modify arrays, such as WRAP_TEMPLATE).</p>
-  <p>Does not represent or need sessions (part of blob), therefore does not use the PKCS #11 <code>hSession</code> parameter.</p>
-  </td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_SetAttributeValue</code>.</p>
+    <p>Attribute packing: see _GetAttrValue</p>
+    <p>Currently, Ep11 only sends Boolean attributes, all other attributes are handled by host (and EP11 does not modify arrays, such as WRAP_TEMPLATE).</p>
+    <p>Does not represent or need sessions (part of blob), therefore does not use the PKCS #11 <code>hSession</code> parameter.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_SetAttributeValue (
-  unsigned char \*object, size_t objectlen,
-  CK_ATTRIBUTE_PTR attributes, CK_ULONG attributeslen,
-  target_t target
-);
+    CK_RV m_SetAttributeValue (
+        unsigned char *object, size_t objectlen,
+        CK_ATTRIBUTE_PTR attributes, CK_ULONG attributeslen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_SetAttributeValue` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_SetAttributeValue</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #SetAttributeValue_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="SetAttributeValue"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="SetAttributeValue_PKCS11" tab-title="PKCS #11" tab-group="SetAttributeValue" class="simple-tab-table">
+    <tr>
     <th>Description</th>
     <td>
-    <p>`C_SetAttributeValue` modifies the value of one or more attributes of an object. `hSession` is the session's handle; `hObject` is the object's handle; `pTemplate` points to a template that specifies which attribute values are to be modified and their new values; `ulCount` is the number of attributes in the template.</p>
-    <p>Certain objects might not be modified. Calling `C_SetAttributeValue` on such objects results in the `CKR_ACTION_PROHIBITED` error code. An application can consult the object's `CKA_MODIFIABLE` attribute to determine whether an object can be modified.</p>
+    <p><code>C_SetAttributeValue</code> modifies the value of one or more attributes of an object. <code>hSession</code> is the session's handle; <code>hObject</code> is the object's handle; <code>pTemplate</code> points to a template that specifies which attribute values are to be modified and their new values; <code>ulCount</code> is the number of attributes in the template.</p>
+    <p>Certain objects might not be modified. Calling <code>C_SetAttributeValue</code> on such objects results in the <code>CKR_ACTION_PROHIBITED</code> error code. An application can consult the object's <code>CKA_MODIFIABLE</code> attribute to determine whether an object can be modified.</p>
     <p>Only session objects can be modified during a read-only session.</p>
-    <p>The template can specify new values for any attributes of the object that can be modified. If the template specifies a value of an attribute that is incompatible with other existing attributes of the object, the call fails with the return code `CKR_TEMPLATE_INCONSISTENT`.</p>
-    <p>Not all attributes can be modified; see Section 4.1.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749" target="_blank">PKCS #11 API specification</a> for more more information.</p>
+    <p>The template can specify new values for any attributes of the object that can be modified. If the template specifies a value of an attribute that is incompatible with other existing attributes of the object, the call fails with the return code <code>CKR_TEMPLATE_INCONSISTENT</code>.</p>
+    <p>Not all attributes can be modified; see Section 4.1.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749" target="_blank">PKCS #11 API specification</a> for more information.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_SetAttributeValue)(
-  CK_SESSION_HANDLE hSession,
-  CK_OBJECT_HANDLE hObject,
-  CK_ATTRIBUTE_PTR pTemplate,
-  CK_ULONG ulCount
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_SetAttributeValue)(
+        CK_SESSION_HANDLE hSession,
+        CK_OBJECT_HANDLE hObject,
+        CK_ATTRIBUTE_PTR pTemplate,
+        CK_ULONG ulCount
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ACTION_PROHIBITED, CKR_ARGUMENTS_BAD, CKR_ATTRIBUTE_READ_ONLY, CKR_ATTRIBUTE_TYPE_INVALID, CKR_ATTRIBUTE_VALUE_INVALID, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OBJECT_HANDLE_INVALID, CKR_OK, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_SESSION_READ_ONLY, CKR_TEMPLATE_INCONSISTENT, CKR_TOKEN_WRITE_PROTECTED, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #SetAttributeValue_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="SetAttributeValue"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  // Only set supported R/W EP11 attributes
-  attributeList := ep11.EP11AttributeP{
-      CKA_DECRYPT: true,
-  }
+    ```Golang
+    // Only set supported R/W EP11 attributes
+    attributeList := ep11.EP11AttributeP{
+        CKA_DECRYPT: true,
+    }
 
-  SetAttributeValueRequest := &pb.SetAttributeValueRequest{
-      Object:     GenerateKeyPair.PrivKeyBytes,
-      Attributes: util.AttributeMap(attributeList),
-  }
-  SetAttributeValueResponse, err := cryptoClient.SetAttributeValue(context.Background(), SetAttributeValueRequest)
-  ```
-  {: codeblock}
+    SetAttributeValueRequest := &pb.SetAttributeValueRequest{
+        Object:     GenerateKeyPair.PrivKeyBytes,
+        Attributes: util.AttributeMap(attributeList),
+    }
+    SetAttributeValueResponse, err := cryptoClient.SetAttributeValue(context.Background(), SetAttributeValueRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  const attributeTemplate = new util.AttributeMap(
-  new util.Attribute(ep11.CKA_SIGN, true)
-  );
+    ```JavaScript
+    const attributeTemplate = new util.AttributeMap(
+    new util.Attribute(ep11.CKA_SIGN, true)
+    );
 
-  client.SetAttributeValue({
-    Object: keys.PrivKey,
-    Attributes: attributeTemplate
-  }, (err, response) => {
-    callback(err, response);
-  });
-  ```
-  {: codeblock}
+    client.SetAttributeValue({
+      Object: keys.PrivKey,
+      Attributes: attributeTemplate
+    }, (err, response) => {
+      callback(err, response);
+    });
+    ```
+    {: codeblock}
 
 
 ## Generating random data
@@ -1712,81 +1588,73 @@ You can generate high-quality random data, such as initialization values (IVs), 
 
 The `GenerateRandom` function generates random data. When you use this function, make sure not to set the length of the random data to be zero and the pointer that points to the random data location to be NULL.
 
-<table>
-  <tr>
+<table id="GenerateRandom_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="GenerateRandom" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_GenerateRandom`, which is an implementation of PKCS #11 `C_GenerateRandom`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_GenerateRandom</code>, which is an implementation of PKCS #11 <code>C_GenerateRandom</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message GenerateRandomRequest {
-    uint64 Len = 1;
-}
-message GenerateRandomResponse {
-    bytes Rnd = 1;
-}
+    message GenerateRandomRequest {
+        uint64 Len = 1;
+    }
+    message GenerateRandomResponse {
+        bytes Rnd = 1;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #GenerateRandom_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="GenerateRandom"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="GenerateRandom_EP11" tab-title="Enterprise PKCS #11" tab-group="GenerateRandom" class="simple-tab-table">
+    <tr>
     <th>Description</th>
     <td><p>Implementation of PKCS #11 <code>C_GenerateRandom</code>.</p>
     <p><code>GenerateRandom</code> is equivalent to the original PKCS #11 function. Internally, hardware-seeded entropy is passed through a FIPS-compliant DRNG (ANSI X9.31/ISO 18031, depending on Clic version).</p>
     <p>The host library could generate random numbers without dispatching to the backend, if suitable functionality would be available on the host. This is not done in the current implementation.</p>
     <p>This function does not support a size query.</p></td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_GenerateRandom (
-  CK_BYTE_PTR rnd, CK_ULONG rndlen,
-  target_t target
-);
+    CK_RV m_GenerateRandom (
+        CK_BYTE_PTR rnd, CK_ULONG rndlen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_GenerateRandom` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_GenerateRandom</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #GenerateRandom_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="GenerateRandom"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="GenerateRandom_PKCS11" tab-title="PKCS #11" tab-group="GenerateRandom" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>`C_GenerateRandom` generates random or pseudo-random data. `hSession` is the sessions handle; pRandomData points to the location that receives the random data; and `ulRandomLen` is the length in bytes of the random or pseudo-random data to be generated.</td>
-  </tr>
-  <tr>
+    <td><code>C_GenerateRandom</code> generates random or pseudo-random data. <code>hSession</code> is the sessions handle; <code>pRandomData</code> points to the location that receives the random data; and <code>ulRandomLen</code> is the length in bytes of the random or pseudo-random data to be generated.</td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_GenerateRandom)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pRandomData,
-  CK_ULONG ulRandomLen
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_GenerateRandom)(
+        CK_SESSION_HANDLE hSession,
+        CK_BYTE_PTR pRandomData,
+        CK_ULONG ulRandomLen
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD,
@@ -1795,36 +1663,32 @@ CK_DEFINE_FUNCTION(CK_RV, C_GenerateRandom)(
     CKR_OK, CKR_OPERATION_ACTIVE, CKR_RANDOM_NO_RNG, CKR_SESSION_CLOSED,
     CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #GenerateRandom_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="GenerateRandom"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  GenerateRandomRequest := &pb.GenerateRandomRequest {
+    ```Golang
+    GenerateRandomRequest := &pb.GenerateRandomRequest {
       Len: 1024,
-  }
+    }
 
-  GenerateRandomResponse, err := cryptoClient.GenerateRandom(context.Background(), GenerateRandomRequest)
-  ```
-  {: codeblock}
+    GenerateRandomResponse, err := cryptoClient.GenerateRandom(context.Background(), GenerateRandomRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.GenerateRandom({
-    Len: ep11.AES_BLOCK_SIZE
-  }, (err, response) => {
-    callback(err, response);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.GenerateRandom({
+      Len: ep11.AES_BLOCK_SIZE
+    }, (err, response) => {
+      callback(err, response);
+    });
+    ```
+    {: codeblock}
 
 ## Encrypting and decrypting data
 {: #grep11-operation-encrypt-decrypt-data}
@@ -1836,274 +1700,250 @@ By specifying the cryptographic mechanism, you can perform symmetric or asymmetr
 
 The `EncryptInit` function initializes an encryption operation. You need to call this function first to perform an encryption.
 
-<table>
-  <tr>
+<table id="EncryptInit_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="EncryptInit" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_EncryptInit`, which is an implementation of PKCS #11 `C_EncryptInit`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_EncryptInit</code>, which is an implementation of PKCS #11 <code>C_EncryptInit</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message EncryptInitRequest {
-    Mechanism Mech = 2;
-    bytes Key = 3;
-}
-message EncryptInitResponse {
-    bytes State = 1;
-}
+    message EncryptInitRequest {
+        Mechanism Mech = 2;
+        bytes Key = 3;
+    }
+    message EncryptInitResponse {
+        bytes State = 1;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #EncryptInit_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="EncryptInit"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="EncryptInit_EP11" tab-title="Enterprise PKCS #11" tab-group="EncryptInit" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Implementation of PKCS #11 <code>C_EncryptInit</code>.</p>
-  <p>The <code>(key, klen)</code> blob can be a public-key object, or a secret-key blob. Key type must be consistent with <code>pmech</code>.</p>
-  <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI is integrity-protected with a MAC key, as returned by <code>GenerateKeyPair</code> or alternatively <code>UnwrapKey</code>. The Encrypt state is created without session restrictions.</p>
-  <p>For secret-key mechanisms, the Encrypt state inherits object session restrictions from <code>(key, klen)</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
-  <p><code>(key, klen)</code> must be a key blob.</p>
-</td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_EncryptInit</code>.</p>
+    <p>The <code>(key, klen)</code> blob can be a public-key object, or a secret-key blob. Key type must be consistent with <code>pmech</code>.</p>
+    <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI is integrity-protected with a MAC key, as returned by <code>GenerateKeyPair</code> or alternatively <code>UnwrapKey</code>. The Encrypt state is created without session restrictions.</p>
+    <p>For secret-key mechanisms, the Encrypt state inherits object session restrictions from <code>(key, klen)</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
+    <p><code>(key, klen)</code> must be a key blob.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_EncryptInit (
-  unsigned char \*state, size_t \*statelen,
-  CK_MECHANISM_PTR mech,
-  const unsigned char \*key, size_t keylen,
-  target_t target
-);
+    CK_RV m_EncryptInit (
+        unsigned char *state, size_t *statelen,
+        CK_MECHANISM_PTR mech,
+        const unsigned char *key, size_t keylen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_EncryptInit` return values. For more information, see the <strong>Return values</strong> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_EncryptInit</code> return values. For more information, see the <strong>Return values</strong> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #EncryptInit_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="EncryptInit"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="EncryptInit_PKCS11" tab-title="PKCS #11" tab-group="EncryptInit" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>`C_EncryptInit` initializes an encryption operation. `hSession` is the session’s handle; `pMechanism` points to the encryption mechanism; `hKey` is the handle of the encryption key.</p>
-    <p>The `CKA_ENCRYPT` attribute of the encryption key, which indicates whether the key supports encryption, must be `CK_TRUE`.</p>
-    <p>After the application calls `C_EncryptInit`, the application can either call C_Encrypt to encrypt data in a single part; or call `C_EncryptUpdate` zero or more times, followed by `C_EncryptFinal`, to encrypt data in multiple parts.  The encryption operation is active until the application uses a call to `C_Encrypt` or `C_EncryptFinal` to obtain the final piece of ciphertext. To process extra data (in single or multiple parts), the application must call `C_EncryptInit` again.</p>
+    <td><p><code>C_EncryptInit</code> initializes an encryption operation. <code>hSession</code> is the session’s handle; <code>pMechanism</code> points to the encryption mechanism; <code>hKey</code> is the handle of the encryption key.</p>
+    <p>The <code>CKA_ENCRYPT</code> attribute of the encryption key, which indicates whether the key supports encryption, must be <code>CK_TRUE</code>.</p>
+    <p>After the application calls <code>C_EncryptInit</code>, the application can either call C_Encrypt to encrypt data in a single part; or call <code>C_EncryptUpdate</code> zero or more times, followed by <code>C_EncryptFinal</code>, to encrypt data in multiple parts.  The encryption operation is active until the application uses a call to <code>C_Encrypt</code> or <code>C_EncryptFinal</code> to obtain the final piece of ciphertext. To process extra data (in single or multiple parts), the application must call <code>C_EncryptInit</code> again.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_EncryptInit)(
-  CK_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism,
-  CK_OBJECT_HANDLE hKey
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_EncryptInit)(
+        CK_SESSION_HANDLE hSession,
+        CK_MECHANISM_PTR pMechanism,
+        CK_OBJECT_HANDLE hKey
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_FUNCTION_NOT_PERMITTED, CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #EncryptInit_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="EncryptInit"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  // Generate 16 bytes of random data for the initialization vector
-  GenerateRandomRequest := &pb.GenerateRandomRequest{
-      Len: (uint64)(ep11.AES_BLOCK_SIZE),
-  }
-  GenerateRandomResponse, err := cryptoClient.GenerateRandom(context.Background(), GenerateRandomRequest)
-  if err != nil {
-      return nil, fmt.Errorf("GenerateRandom error: %s", err)
-  }
-  iv := GenerateRandomResponse.Rnd[:ep11.AES_BLOCK_SIZE]
-  fmt.Println("Generated IV")
+    ```Golang
+    // Generate 16 bytes of random data for the initialization vector
+    GenerateRandomRequest := &pb.GenerateRandomRequest{
+        Len: (uint64)(ep11.AES_BLOCK_SIZE),
+    }
+    GenerateRandomResponse, err := cryptoClient.GenerateRandom(context.Background(), GenerateRandomRequest)
+    if err != nil {
+        return nil, fmt.Errorf("GenerateRandom error: %s", err)
+    }
+    iv := GenerateRandomResponse.Rnd[:ep11.AES_BLOCK_SIZE]
+    fmt.Println("Generated IV")
 
-  EncryptInitRequest := &pb.EncryptInitRequest{
-      Mech: &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
-      Key:  GenerateKeyResponse.KeyBytes,
-  }
+    EncryptInitRequest := &pb.EncryptInitRequest{
+        Mech: &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
+        Key:  GenerateKeyResponse.KeyBytes,
+    }
 
-  EncryptInitResponse, err := cryptoClient.EncryptInit(context.Background(), EncryptInitRequest)
-  ```
-  {: codeblock}
+    EncryptInitResponse, err := cryptoClient.EncryptInit(context.Background(), EncryptInitRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.EncryptInit({
-  	Mech: {
-      Mechanism: ep11.CKM_AES_CBC_PAD,
-      ParameterB: iv
-    },
-    Key: key
-  }, (err, data={}) => {
-    cb(err, data.State);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.EncryptInit({
+    	Mech: {
+        Mechanism: ep11.CKM_AES_CBC_PAD,
+        ParameterB: iv
+      },
+      Key: key
+    }, (err, data={}) => {
+      cb(err, data.State);
+    });
+    ```
+    {: codeblock}
 
 ### Encrypt
 {: #grep11-Encrypt}
 
 The `Encrypt` function encrypts single-part data. You don't need to perform the `EncryptUpdate` and `EncryptFinal` suboperations for a single-part encryption. Before you call this function, make sure to run `EncryptInit` first.
 
-<table>
-  <tr>
+<table id="Encrypt_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="Encrypt" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_Encrypt`, which is an implementation of PKCS #11 `C_Encrypt`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_Encrypt</code>, which is an implementation of PKCS #11 <code>C_Encrypt</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message EncryptRequest {
-    bytes State = 1;
-    bytes Plain = 2;
-}
-message EncryptResponse {
-    bytes Ciphered = 3;
-}
+    message EncryptRequest {
+        bytes State = 1;
+        bytes Plain = 2;
+    }
+    message EncryptResponse {
+        bytes Ciphered = 3;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #Encrypt_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="Encrypt"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="Encrypt_EP11" tab-title="Enterprise PKCS #11" tab-group="Encrypt" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Implementation of PKCS #11 <code>C_Encrypt</code>.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
-  <p>The <code>state</code> blob was output from: <code>EncryptInit</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_Encrypt</code>.</p>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
+    <p>The <code>state</code> blob was output from: <code>EncryptInit</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_Encrypt (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR plain, CK_ULONG plainlen,
-  CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
-  target_t target
-);
+    CK_RV m_Encrypt (
+        const unsigned char *state, size_t statelen,
+        CK_BYTE_PTR plain, CK_ULONG plainlen,
+        CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_Encrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapterof the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structuredocument</a>.</td>
-  </tr>
+    <td>A subset of <code>C_Encrypt</code> return values. For more information, see the <em><strong>Return values</strong></em> chapterof the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structuredocument</a>.</td>
+    </tr>
 </table>
-{: #Encrypt_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="Encrypt"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="Encrypt_PKCS11" tab-title="PKCS #11" tab-group="Encrypt" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>`C_Encrypt` encrypts single-part data. `hSession` is the session’s handle; `pData` points to the data; `ulDataLen`is the length in bytes of the data; `pEncryptedData` points to the location that receives the encrypted data;`pulEncryptedDataLen` points to the location that holds the length in bytes of the encrypted data.</p>
-    <p>`C_Encrypt` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producingoutput.</p>
-    <p>The encryption operation must be initialized with `C_EncryptInit`. A call to `C_Encrypt` always terminates theactive encryption operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one that returns`CKR_OK`) to determine the length of the buffer that is needed to hold the ciphertext.</p>
-    <p>`C_Encrypt` cannot be used to terminate a multi-part operation, and must be called after `C_EncryptInit` withoutintervening `C_EncryptUpdate` calls.</p>
-    <p>For some encryption mechanisms, the input plaintext data has certain length constraints (either because the mechanismcan encrypt only relatively short pieces of plaintext, or because the mechanism’s input data must consist of an integralnumber of blocks). If these constraints are not satisfied, then `C_Encrypt` fails with return code`CKR_DATA_LEN_RANGE`.</p>
-    <p>The plaintext and ciphertext can be in the same place, that is, it is OK if `pData` and `pEncryptedData` point to thesame location.</p>
-    <p>For most mechanisms, `C_Encrypt` is equivalent to a sequence of `C_EncryptUpdate` operations followed by `C_EncryptFinal`.</p>
+    <td><p><code>C_Encrypt</code> encrypts single-part data. <code>hSession</code> is the session’s handle; <code>pData</code> points to the data; <code>ulDataLen</code> is the length in bytes of the data; <code>pEncryptedData</code> points to the location that receives the encrypted data; <code>pulEncryptedDataLen</code> points to the location that holds the length in bytes of the encrypted data.</p>
+    <p><code>C_Encrypt</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producingoutput.</p>
+    <p>The encryption operation must be initialized with <code>C_EncryptInit</code>. A call to <code>C_Encrypt</code> always terminates theactive encryption operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call (that is, one that returns <code>CKR_OK</code>) to determine the length of the buffer that is needed to hold the ciphertext.</p>
+    <p><code>C_Encrypt</code> cannot be used to terminate a multi-part operation, and must be called after <code>C_EncryptInit</code> withoutintervening <code>C_EncryptUpdate</code> calls.</p>
+    <p>For some encryption mechanisms, the input plaintext data has certain length constraints (either because the mechanismcan encrypt only relatively short pieces of plaintext, or because the mechanism’s input data must consist of an integralnumber of blocks). If these constraints are not satisfied, then <code>C_Encrypt</code> fails with return code <code>CKR_DATA_LEN_RANGE</code>.</p>
+    <p>The plaintext and ciphertext can be in the same place, that is, it is OK if <code>pData</code> and <code>pEncryptedData</code> point to thesame location.</p>
+    <p>For most mechanisms, <code>C_Encrypt</code> is equivalent to a sequence of <code>C_EncryptUpdate</code> operations followed by <code>C_EncryptFinal</code>.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_Encrypt)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pData,
-  CK_ULONG ulDataLen,
-  CK_BYTE_PTR pEncryptedData,
-  CK_ULONG_PTR pulEncryptedDataLen
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_Encrypt)(
+        CK_SESSION_HANDLE hSession,
+        CK_BYTE_PTR pData,
+        CK_ULONG ulDataLen,
+        CK_BYTE_PTR pEncryptedData,
+        CK_ULONG_PTR pulEncryptedDataLen
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
-    CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_INVALID, CKR_DATA_LEN_RANGE,CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR,CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
+    CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_INVALID, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR,CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #Encrypt_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="Encrypt"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  plainText := "Encrypt this message"
+    ```Golang
+    plainText := "Encrypt this message"
 
-  EncryptRequest := &pb.EncryptRequest {
-      State: EncryptInitResponse.State,
-      Plain: plainText,
-  }
+    EncryptRequest := &pb.EncryptRequest {
+        State: EncryptInitResponse.State,
+        Plain: plainText,
+    }
 
-  EncryptResponse, err := cryptoClient.Encrypt(context.Background(), EncryptRequest)
-  ```
-  {: codeblock}
+    EncryptResponse, err := cryptoClient.Encrypt(context.Background(), EncryptRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.Encrypt({
-    State: state,
-    Plain: Buffer.from(message)
-  }, (err, response) => {
-    callback(err, response);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.Encrypt({
+      State: state,
+      Plain: Buffer.from(message)
+    }, (err, response) => {
+      callback(err, response);
+    });
+    ```
+    {: codeblock}
 
 
 ### EncryptUpdate
@@ -2111,485 +1951,445 @@ CK_DEFINE_FUNCTION(CK_RV, C_Encrypt)(
 
 The `EncryptUpdate` function continues a multiple-part encryption operation. Before you call this function, make sure to run `EncryptInit` first.
 
-<table>
-  <tr>
+<table id="EncryptUpdate_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="EncryptUpdate" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_EncryptUpdate`, which is an implementation of PKCS #11 `C_EncryptUpdate`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_EncryptUpdate</code>, which is an implementation of PKCS #11 <code>C_EncryptUpdate</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message EncryptUpdateRequest {
-    bytes State = 1;
-    bytes Plain = 2;
-}
-message EncryptUpdateResponse {
-    bytes State = 1;
-    bytes Ciphered = 3;
-}
+    message EncryptUpdateRequest {
+        bytes State = 1;
+        bytes Plain = 2;
+    }
+    message EncryptUpdateResponse {
+        bytes State = 1;
+        bytes Ciphered = 3;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #EncryptUpdate_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="EncryptUpdate"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="EncryptUpdate_EP11" tab-title="Enterprise PKCS #11" tab-group="EncryptUpdate" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Implementation of PKCS #11 <code>C_EncryptUpdate</code>.</p>
-  <p>The <code>state</code>, <code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
-  <p>The <code>state</code> blob was output from: <code>EncryptInit</code>.</p>
-</td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_EncryptUpdate</code>.</p>
+    <p>The <code>state</code>, <code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
+    <p>The <code>state</code> blob was output from: <code>EncryptInit</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_EncryptUpdate (
-  unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR plain, CK_ULONG plainlen,
-  CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
-  target_t target
-);
+    CK_RV m_EncryptUpdate (
+        unsigned char *state, size_t statelen,
+        CK_BYTE_PTR plain, CK_ULONG plainlen,
+        CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_EncryptUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_EncryptUpdate</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #EncryptUpdate_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="EncryptUpdate"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="EncryptUpdate_PKCS11" tab-title="PKCS #11" tab-group="EncryptUpdate" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>`C_EncryptUpdate` continues a multiple-part encryption operation, processing another data part. `hSession` is the session’s handle; `pPart` points to the data part; `ulPartLen` is the length of the data part; `pEncryptedPart` points to the location that receives the encrypted data part; `pulEncryptedPartLen` points to the location that holds the length in bytes of the encrypted data part.</p>
-    <p>`C_EncryptUpdate` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The encryption operation must be initialized with `C_EncryptInit`.  This function can be called any number of times in succession. A call to `C_EncryptUpdate` which results in an error other than `CKR_BUFFER_TOO_SMALL` terminates the current encryption operation.</p>
-    <p>The `plaintext` and `ciphertext` can be in the same place, that is, it is OK if `pPart` and `pEncryptedPart` point to the same location.</p>
+    <td><p><code>C_EncryptUpdate</code> continues a multiple-part encryption operation, processing another data part. <code>hSession</code> is the session’s handle; <code>pPart</code> points to the data part; <code>ulPartLen</code> is the length of the data part; <code>pEncryptedPart</code> points to the location that receives the encrypted data part; <code>pulEncryptedPartLen</code> points to the location that holds the length in bytes of the encrypted data part.</p>
+    <p><code>C_EncryptUpdate</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The encryption operation must be initialized with <code>C_EncryptInit</code>.  This function can be called any number of times in succession. A call to <code>C_EncryptUpdate</code> which results in an error other than <code>CKR_BUFFER_TOO_SMALL</code> terminates the current encryption operation.</p>
+    <p>The <code>plaintext</code> and <code>ciphertext</code> can be in the same place, that is, it is OK if <code>pPart</code> and <code>pEncryptedPart</code> point to the same location.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_EncryptUpdate)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pPart,
-  CK_ULONG ulPartLen,
-  CK_BYTE_PTR pEncryptedPart,
-  CK_ULONG_PTR pulEncryptedPartLen
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_EncryptUpdate)(
+        CK_SESSION_HANDLE hSession,
+        CK_BYTE_PTR pPart,
+        CK_ULONG ulPartLen,
+        CK_BYTE_PTR pEncryptedPart,
+        CK_ULONG_PTR pulEncryptedPartLen
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #EncryptUpdate_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="EncryptUpdate"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  plainText := `
-  This is a very long message that needs to be encrypted by performing
-  multiple EncrypytUpdate functions`
+    ```Golang
+    plainText := `
+    This is a very long message that needs to be encrypted by performing
+    multiple EncrypytUpdate functions`
 
-  // Use EncryptUpdate if you would like to breakup
-  // the encrypt operation into multiple suboperations
-  EncryptUpdateRequest1 := &pb.EncryptUpdateRequest {
-      State: EncryptInitResponse.State,
-      Plain: plainText[:20],
-  }
+    // Use EncryptUpdate if you would like to breakup
+    // the encrypt operation into multiple suboperations
+    EncryptUpdateRequest1 := &pb.EncryptUpdateRequest {
+        State: EncryptInitResponse.State,
+        Plain: plainText[:20],
+    }
 
-  EncryptUpdateResponse, err := cryptoClient.EncryptUpdate(context.Background(), EncryptUpdateRequest1)
+    EncryptUpdateResponse, err := cryptoClient.EncryptUpdate(context.Background(), EncryptUpdateRequest1)
 
-  ciphertext := EncryptUpdateResponse.Ciphered[:]
+    ciphertext := EncryptUpdateResponse.Ciphered[:]
 
-  EncryptUpdateRequest2 := &pb.EncryptUpdateRequest {
-      State: EncryptUpdateResponse.State,
-      Plain: plainText[20:],
-  }
+    EncryptUpdateRequest2 := &pb.EncryptUpdateRequest {
+        State: EncryptUpdateResponse.State,
+        Plain: plainText[20:],
+    }
 
-  EncryptUpdateResponse, err := cryptoClient.EncryptUpdate(context.Background(), EncryptUpdateRequest2)
+    EncryptUpdateResponse, err := cryptoClient.EncryptUpdate(context.Background(), EncryptUpdateRequest2)
 
-  ciphertext = append(ciphertext, EncryptUpdateResponse.Ciphered...)
-  ```
-  {: codeblock}
+    ciphertext = append(ciphertext, EncryptUpdateResponse.Ciphered...)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.EncryptUpdate({
-    State: state,
-    Plain: Buffer.from(message.substr(20))
-  }, (err, data={}) => {
-    cb(err, data.State, Buffer.concat([ciphertext, data.Ciphered]));
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.EncryptUpdate({
+      State: state,
+      Plain: Buffer.from(message.substr(20))
+    }, (err, data={}) => {
+      cb(err, data.State, Buffer.concat([ciphertext, data.Ciphered]));
+    });
+    ```
+    {: codeblock}
 
 ### EncryptFinal
 {: #grep11-EncryptFinal}
 
 The `EncryptFinal` function finishes a multiple-part encryption operation.
 
-<table>
-  <tr>
+<table id="EncryptFinal_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="EncryptFinal" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_EncryptFinal`, which is an implementation of PKCS #11 `C_EncryptFinal`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_EncryptFinal</code>, which is an implementation of PKCS #11 <code>C_EncryptFinal</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message EncryptFinalRequest {
-    bytes State = 1;
-}
-message EncryptFinalResponse {
-    bytes Ciphered = 2;
-}
+    message EncryptFinalRequest {
+        bytes State = 1;
+    }
+    message EncryptFinalResponse {
+        bytes Ciphered = 2;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #EncryptFinal_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="EncryptFinal"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="EncryptFinal_EP11" tab-title="Enterprise PKCS #11" tab-group="EncryptFinal" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Implementation of PKCS #11 <code>C_EncryptFinal</code>.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
-  <p>The <code>state</code> blob was output from: <code>EncryptInit</code>, <code>EncryptUpdate</code>.</p>
-</td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_EncryptFinal</code>.</p>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
+    <p>The <code>state</code> blob was output from: <code>EncryptInit</code>, <code>EncryptUpdate</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_EncryptFinal (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
-  target_t target
-);
+    CK_RV m_EncryptFinal (
+        const unsigned char *state, size_t statelen,
+        CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_EncryptFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_EncryptFinal</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #EncryptFinal_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="EncryptFinal"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="EncryptFinal_PKCS11" tab-title="PKCS #11" tab-group="EncryptFinal" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>`C_EncryptFinal` finishes a multiple-part encryption operation. `hSession` is the session’s handle; `pLastEncryptedPart` points to the location that receives the last encrypted data part, if any; `pulLastEncryptedPartLen` points to the location that holds the length of the last encrypted data part.</p>
-    <p>`C_EncryptFinal` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The encryption operation must be initialized with `C_EncryptInit`. A call to `C_EncryptFinal` always terminates the active encryption operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one that returns `CKR_OK`) to determine the length of the buffer that is needed to hold the ciphertext.</p>
-    <p>For some multi-part encryption mechanisms, the input plaintext data has certain length constraints, because the mechanism’s input data must consist of an integral number of blocks. If these constraints are not satisfied, then `C_EncryptFinal` fails with return code `CKR_DATA_LEN_RANGE`.</p>
+    <td><p><code>C_EncryptFinal</code> finishes a multiple-part encryption operation. <code>hSession</code> is the session’s handle; <code>pLastEncryptedPart</code> points to the location that receives the last encrypted data part, if any; <code>pulLastEncryptedPartLen</code> points to the location that holds the length of the last encrypted data part.</p>
+    <p><code>C_EncryptFinal</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The encryption operation must be initialized with <code>C_EncryptInit</code>. A call to <code>C_EncryptFinal</code> always terminates the active encryption operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call (that is, one that returns <code>CKR_OK</code>) to determine the length of the buffer that is needed to hold the ciphertext.</p>
+    <p>For some multi-part encryption mechanisms, the input plaintext data has certain length constraints, because the mechanism’s input data must consist of an integral number of blocks. If these constraints are not satisfied, then <code>C_EncryptFinal</code> fails with return code <code>CKR_DATA_LEN_RANGE</code>.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_EncryptFinal)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pLastEncryptedPart,
-  CK_ULONG_PTR pulLastEncryptedPartLen
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_EncryptFinal)(
+        CK_SESSION_HANDLE hSession,
+        CK_BYTE_PTR pLastEncryptedPart,
+        CK_ULONG_PTR pulLastEncryptedPartLen
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #EncryptFinal_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="EncryptFinal"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  EncryptFinalRequest := &pb.EncryptFinalRequest {
-      State: EncryptUpdateResponse.State,
-  }
+    ```Golang
+    EncryptFinalRequest := &pb.EncryptFinalRequest {
+        State: EncryptUpdateResponse.State,
+    }
 
-  EncryptFinalResponse, err := cryptoClient.EncryptFinal(context.Background(), EncryptFinalRequest)
-  ```
-  {: codeblock}
+    EncryptFinalResponse, err := cryptoClient.EncryptFinal(context.Background(), EncryptFinalRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.EncryptFinal({
-    State: state
-  }, (err, data={}) => {
-    cb(err, Buffer.concat([ciphertext, data.Ciphered]));
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.EncryptFinal({
+      State: state
+    }, (err, data={}) => {
+      cb(err, Buffer.concat([ciphertext, data.Ciphered]));
+    });
+    ```
+    {: codeblock}
 
 ### EncryptSingle
 {: #grep11-EncryptSingle}
 
 The `EncryptSingle` function processes data in one pass with one call. It does not return any state to host and returns only the encrypted data. This function is an IBM EP11 extension to the standard PKCS #11 specification and is a combination of the `EncryptInit` and `Encrypt` functions. It enables you to complete an encryption operation with a single call instead of a series of calls.
 
-<table>
-  <tr>
+<table id="EncryptSingle_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="EncryptSingle" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_EncryptSingle`<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_EncryptSingle</code><td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message EncryptSingleRequest {
-    bytes Key = 1;
-    Mechanism Mech = 2;
-    bytes Plain = 3;
-}
-message EncryptSingleResponse {
-    bytes Ciphered = 4;
-}
+    message EncryptSingleRequest {
+        bytes Key = 1;
+        Mechanism Mech = 2;
+        bytes Plain = 3;
+    }
+    message EncryptSingleResponse {
+        bytes Ciphered = 4;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #EncryptSingle_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="EncryptSingle"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="EncryptSingle_EP11" tab-title="Enterprise PKCS #11" tab-group="EncryptSingle" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Non-standard variant of <code>Encrypt</code>. Processes data in one pass, with one call. Does not return any state to host, only encrypted data.</p>
-  <p>This is the preferred method of encrypting data in one pass for XCP-aware applications. Functionally it is equivalent to <code>EncryptInit</code> followed immediately by <code>Encrypt</code>, but it saves roundtrips, wrapping, and unwrapping.</p>
-  <p>If the backend supports resident keys, the key can be also a resident-key handle.</p>
-  <p>See also: <code>Encrypt</code>, <code>EncryptInit</code>, <code>DecryptSingle</code>.</p>
-  <p>The <code>key</code> blob was output from: <code>GenerateKey</code>, <code>UnwrapKey</code>.</p>
-</td>
-  </tr>
-  <tr>
+    <td>
+    <p>Non-standard variant of <code>Encrypt</code>. Processes data in one pass, with one call. Does not return any state to host, only encrypted data.</p>
+    <p>This is the preferred method of encrypting data in one pass for XCP-aware applications. Functionally it is equivalent to <code>EncryptInit</code> followed immediately by <code>Encrypt</code>, but it saves roundtrips, wrapping, and unwrapping.</p>
+    <p>If the backend supports resident keys, the key can be also a resident-key handle.</p>
+    <p>See also: <code>Encrypt</code>, <code>EncryptInit</code>, <code>DecryptSingle</code>.</p>
+    <p>The <code>key</code> blob was output from: <code>GenerateKey</code>, <code>UnwrapKey</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_EncryptSingle (
-  const unsigned char \*key, size_t keylen,
-  CK_MECHANISM_PTR mech,
-  CK_BYTE_PTR plain, CK_ULONG plainlen,
-  CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
-  target_t target
-);
+    CK_RV m_EncryptSingle (
+        const unsigned char *key, size_t keylen,
+        CK_MECHANISM_PTR mech,
+        CK_BYTE_PTR plain, CK_ULONG plainlen,
+        CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_Encrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_Encrypt</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #EncryptSingle_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="EncryptSingle"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  // Generate 16 bytes of random data for the initialization vector
-  GenerateRandomRequest := &pb.GenerateRandomRequest{
-      Len: (uint64)(ep11.AES_BLOCK_SIZE),
-  }
-  GenerateRandomResponse, err := cryptoClient.GenerateRandom(context.Background(),  GenerateRandomRequest)
-  if err != nil {
-      return nil, fmt.Errorf("GenerateRandom error: %s", err)
-  }
+    ```Golang
+    // Generate 16 bytes of random data for the initialization vector
+    GenerateRandomRequest := &pb.GenerateRandomRequest{
+        Len: (uint64)(ep11.AES_BLOCK_SIZE),
+    }
+    GenerateRandomResponse, err := cryptoClient.GenerateRandom(context.Background(),  GenerateRandomRequest)
+    if err != nil {
+        return nil, fmt.Errorf("GenerateRandom error: %s", err)
+    }
 
-  iv := GenerateRandomResponse.Rnd[:ep11.AES_BLOCK_SIZE]
-  fmt.Println("Generated IV")
+    iv := GenerateRandomResponse.Rnd[:ep11.AES_BLOCK_SIZE]
+    fmt.Println("Generated IV")
 
-  plainText := "Encrypt this message"
-  EncryptSingleRequest := &pb.EncryptSingleRequest{
-      Mech: &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
-      Key:  GenerateKeyResponse.KeyBytes,
-      Plain: plainText,
-  }
+    plainText := "Encrypt this message"
+    EncryptSingleRequest := &pb.EncryptSingleRequest{
+        Mech: &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
+        Key:  GenerateKeyResponse.KeyBytes,
+        Plain: plainText,
+    }
 
-  EncryptSingleResponse, err := cryptoClient.EncryptSingle(context.Background(), EncryptSingleRequest)
-  ```
-  {: codeblock}
+    EncryptSingleResponse, err := cryptoClient.EncryptSingle(context.Background(), EncryptSingleRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.EncryptSingle({
-    Mech: {
-      Mechanism: ep11.CKM_AES_CBC_PAD,
-      ParameterB: iv
-    },
-    Key: aliceDerived.NewKey,
-    Plain: Buffer.from(message)
-  }, (err, response) => {
-    callback(err, response);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.EncryptSingle({
+      Mech: {
+        Mechanism: ep11.CKM_AES_CBC_PAD,
+        ParameterB: iv
+      },
+      Key: aliceDerived.NewKey,
+      Plain: Buffer.from(message)
+    }, (err, response) => {
+      callback(err, response);
+    });
+    ```
+    {: codeblock}
 
 ### ReencryptSingle
 {: #grep11-ReencryptSingle}
 
-With the `ReencryptSingle` function, you can decrypt data with the original key and subsequently encrypt the raw data with a different key in a single call within the cloud HSM. The key types used for this operation can be the same or different. This function is an IBM EP11 extension to the standard PKCS #11 specification. This single call is a viable option where a large amount of data needs to be reencrypted with different keys, and bypasses the need to perform a combination of `DecryptSingle` and `EncryptSingle` functions for each data item that needs to be reencrypted. It does not return any state to host and returns only the reencrypted data.
+With the `ReencryptSingle` function, you can decrypt data with the original key and then encrypt the raw data with a different key in a single call within the cloud HSM. The key types that are used for this operation can be the same or different. This function is an IBM EP11 extension to the standard PKCS #11 specification. This single call is a viable option where a large amount of data needs to be reencrypted with different keys, and bypasses the need to perform a combination of `DecryptSingle` and `EncryptSingle` functions for each data item that needs to be reencrypted. It does not return any state to host and returns only the reencrypted data.
 
-<table>
-  <tr>
+<table id="ReencryptSingle_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="ReencryptSingle" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_ReencryptSingle`<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_ReencryptSingle</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message ReencryptSingleRequest {
-    bytes DecKey = 1;
-    bytes EncKey = 2;
-    Mechanism DecMech = 3;
-    Mechanism EncMech = 4;
-    bytes Ciphered = 5;
-}
-
-message ReencryptSingleResponse {
-    bytes Reciphered = 6;
-}
+    message ReencryptSingleRequest {
+        bytes DecKey = 1;
+        bytes EncKey = 2;
+        Mechanism DecMech = 3;
+        Mechanism EncMech = 4;
+        bytes Ciphered = 5;
+    }
+    message ReencryptSingleResponse {
+        bytes Reciphered = 6;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #ReencryptSingle_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="ReencryptSingle"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="ReencryptSingle_EP11" tab-title="Enterprise PKCS #11" tab-group="ReencryptSingle" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
+    <td>
     <p>Non-standard variant of <code>Encrypt</code>. Processes data in one pass, with one call. Does not return any state to host, only the reencrypted data.</p>
-    <p>Decrypts data with the original key and subsequently encrypts the raw data with a different key within the cloud HSM.</p>
-  </td>
-  </tr>
-  <tr>
+    <p>Decrypts data with the original key and then encrypts the raw data with a different key within the cloud HSM.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_ReencryptSingle (
-  const unsigned char \*dkey, size_t dkeylen,
-  const unsigned char \*ekey, size_t ekeylen,
-  CK_MECHANISM_PTR decmech,
-  CK_MECHANISM_PTR encmech,
-  CK_BYTE_PTR in, CK_ULONG inlen,
-  CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
-  target_t target);
+    CK_RV m_ReencryptSingle (
+        const unsigned char *dkey, size_t dkeylen,
+        const unsigned char *ekey, size_t ekeylen,
+        CK_MECHANISM_PTR decmech,
+        CK_MECHANISM_PTR encmech,
+        CK_BYTE_PTR in, CK_ULONG inlen,
+        CK_BYTE_PTR ciphered, CK_ULONG_PTR cipheredlen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_Encrypt` and `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_Encrypt</code> and <code>C_Decrypt</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #ReencryptSingle_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="ReencryptSingle"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  var msg = []byte("Data to encrypt")
-  EncryptKey1Request := &pb.EncryptSingleRequest{
-      Key:   GenerateKey1Response.KeyBytes,
-      Mech:  &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
-      Plain: msg,
-  }
-  EncryptKey1Response, err := cryptoClient.EncryptSingle(context.Background(), EncryptKey1Request)
-  if err != nil {
-      return nil, fmt.Errorf("Encrypt error: %s", err)
-  }
+    ```Golang
+    var msg = []byte("Data to encrypt")
+    EncryptKey1Request := &pb.EncryptSingleRequest{
+        Key:   GenerateKey1Response.KeyBytes,
+        Mech:  &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
+        Plain: msg,
+    }
+    EncryptKey1Response, err := cryptoClient.EncryptSingle(context.Background(), EncryptKey1Request)
+    if err != nil {
+        return nil, fmt.Errorf("Encrypt error: %s", err)
+    }
 
-  ReencryptSingleRequest := &pb.ReencryptSingleRequest{
-      DecKey:   GenerateKey1Response.KeyBytes, // original key
-      EncKey:   GenerateKey2Response.KeyBytes, // new key
-      DecMech:  &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
-      EncMech:  &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
-      Ciphered: RencryptKey1Response.Ciphered,
-  }
+    ReencryptSingleRequest := &pb.ReencryptSingleRequest{
+        DecKey:   GenerateKey1Response.KeyBytes, // original key
+        EncKey:   GenerateKey2Response.KeyBytes, // new key
+        DecMech:  &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
+        EncMech:  &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
+        Ciphered: RencryptKey1Response.Ciphered,
+    }
 
-  ReencryptSingleResponse, err := cryptoClient.ReencryptSingle(context.Background(), ReencryptSingleRequest)
-  ```
-  {: codeblock}
+    ReencryptSingleResponse, err := cryptoClient.ReencryptSingle(context.Background(), ReencryptSingleRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.ReencryptSingle({
+    ```JavaScript
+    client.ReencryptSingle({
     Decmech: {
       Mechanism: mech1,
       ParameterB: iv
@@ -2601,147 +2401,135 @@ CK_RV m_ReencryptSingle (
     In: encipherState.Ciphered,
     DKey: keyBlob1,
     Ekey: keyBlob2,
-  }, (err, response) => {
+    }, (err, response) => {
     callback(err, response);
-  });
-  ```
-  {: codeblock}
+    });
+    ```
+    {: codeblock}
 
 ### DecryptInit
 {: #grep11-DecryptInit}
 
 The `DecryptInit` function initializes a decryption operation. You need to call this function first to perform a decryption.
 
-<table>
-  <tr>
+<table id="DecryptInit_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="DecryptInit" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_DecryptInit`, which is an implementation of PKCS #11 `C_DecryptInit`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_DecryptInit</code>, which is an implementation of PKCS #11 <code>C_DecryptInit</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message DecryptInitRequest {
-    Mechanism Mech = 2;
-    bytes Key = 3;
-}
-message DecryptInitResponse {
-    bytes State = 1;
-}
+    message DecryptInitRequest {
+        Mechanism Mech = 2;
+        bytes Key = 3;
+    }
+    message DecryptInitResponse {
+        bytes State = 1;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #DecryptInit_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="DecryptInit"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="DecryptInit_EP11" tab-title="Enterprise PKCS #11" tab-group="DecryptInit" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>Implementation of PKCS #11 <code>C_DecryptInit</code>.
-</td>
-  </tr>
-  <tr>
+    <td>Implementation of PKCS #11 <code>C_DecryptInit</code>.
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_DecryptInit (
-  unsigned char \*state, size_t \*statelen,
-  CK_MECHANISM_PTR mech,
-  const unsigned char \*key, size_t keylen,
-  target_t target
-);
+    CK_RV m_DecryptInit (
+        unsigned char *state, size_t *statelen,
+        CK_MECHANISM_PTR mech,
+        const unsigned char *key, size_t keylen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_DecryptInit` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_DecryptInit</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #DecryptInit_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="DecryptInit"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="DecryptInit_PKCS11" tab-title="PKCS #11" tab-group="DecryptInit" class="simple-tab-table">
+    <tr>
     <th>Description</th>
     <td>
-    <p>`C_DecryptInit` initializes a decryption operation. `hSession` is the session’s handle; `pMechanism` points to the decryption mechanism; `hKey` is the handle of the decryption key.</p>
-    <p>The `CKA_DECRYPT` attribute of the decryption key, which indicates whether the key supports decryption, must be `CK_TRUE`.</p>
-    <p>After the application calls `C_DecryptInit`, the application can either call C_Decrypt to decrypt data in a single part; or call C_DecryptUpdate zero or more times, followed by `C_DecryptFinal`, to decrypt data in multiple parts.  The decryption operation is active until the application uses a call to `C_Decrypt` or `C_DecryptFinal` to obtain the final piece of plaintext. To process extra data (in single or multiple parts), the application must call `C_DecryptInit` again.</p>
+    <p><code>C_DecryptInit</code> initializes a decryption operation. <code>hSession</code> is the session’s handle; <code>pMechanism</code> points to the decryption mechanism; <code>hKey</code> is the handle of the decryption key.</p>
+    <p>The <code>CKA_DECRYPT</code> attribute of the decryption key, which indicates whether the key supports decryption, must be <code>CK_TRUE</code>.</p>
+    <p>After the application calls <code>C_DecryptInit</code>, the application can either call <code>C_Decrypt</code> to decrypt data in a single part; or call <code>C_DecryptUpdate</code> zero or more times, followed by <code>C_DecryptFinal</code>, to decrypt data in multiple parts. The decryption operation is active until the application uses a call to <code>C_Decrypt</code> or <code>C_DecryptFinal</code> to obtain the final piece of plaintext. To process extra data (in single or multiple parts), the application must call <code>C_DecryptInit</code> again.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_DecryptInit)(
-  K_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism,
-  CK_OBJECT_HANDLE hKey
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_DecryptInit)(
+        K_SESSION_HANDLE hSession,
+        CK_MECHANISM_PTR pMechanism,
+        CK_OBJECT_HANDLE hKey
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_FUNCTION_NOT_PERMITTED, CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #DecryptInit_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="DecryptInit"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  // Generate 16 bytes of random data for the initialization vector
-  GenerateRandomRequest := &pb.GenerateRandomRequest{
-      Len: (uint64)(ep11.AES_BLOCK_SIZE),
-  }
-  GenerateRandomResponse, err := cryptoClient.GenerateRandom(context.Background(), GenerateRandomRequest)
-  if err != nil {
-      return nil, fmt.Errorf("GenerateRandom error: %s", err)
-  }
-  iv := GenerateRandomResponse.Rnd[:ep11.AES_BLOCK_SIZE]
-  fmt.Println("Generated IV")
+    ```Golang
+    // Generate 16 bytes of random data for the initialization vector
+    GenerateRandomRequest := &pb.GenerateRandomRequest{
+        Len: (uint64)(ep11.AES_BLOCK_SIZE),
+    }
+    GenerateRandomResponse, err := cryptoClient.GenerateRandom(context.Background(), GenerateRandomRequest)
+    if err != nil {
+        return nil, fmt.Errorf("GenerateRandom error: %s", err)
+    }
+    iv := GenerateRandomResponse.Rnd[:ep11.AES_BLOCK_SIZE]
+    fmt.Println("Generated IV")
 
-  DecryptInitRequest := &pb.DecryptInitRequest{
-      Mech: &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
-      Key:  GenerateKeyResponse.KeyBytes,
-  }
+    DecryptInitRequest := &pb.DecryptInitRequest{
+        Mech: &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
+        Key:  GenerateKeyResponse.KeyBytes,
+    }
 
-  DecryptInitResponse, err := cryptoClient.DecryptInit(context.Background(), DecryptInitRequest)
-  ```
-  {: codeblock}
+    DecryptInitResponse, err := cryptoClient.DecryptInit(context.Background(), DecryptInitRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.DecryptInit({
-    Mech: {
-      Mechanism: ep11.CKM_AES_CBC_PAD,
-      ParameterB: iv
-    },
-    Key: key
-  }, (err, data={}) => {
-    cb(err, data.State);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.DecryptInit({
+      Mech: {
+        Mechanism: ep11.CKM_AES_CBC_PAD,
+        ParameterB: iv
+      },
+      Key: key
+    }, (err, data={}) => {
+      cb(err, data.State);
+    });
+    ```
+    {: codeblock}
 
 
 ### Decrypt
@@ -2749,274 +2537,250 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptInit)(
 
 The `Decrypt` function decrypts data in a single part. You don't need to perform the `DecryptUpdate` and `DecryptFinal` suboperations for a single-part decryption. Before you call this function, make sure to run `DecryptInit` first.
 
-<table>
-  <tr>
+<table id="Decrypt_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="Decrypt" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_Decrypt`, which is an implementation of PKCS #11 `C_Decrypt`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_Decrypt</code>, which is an implementation of PKCS #11 <code>C_Decrypt</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message DecryptRequest {
-    bytes State = 1;
-    bytes Ciphered = 2;
-}
-message DecryptResponse {
-   bytes Plain = 3;
-}
+    message DecryptRequest {
+        bytes State = 1;
+        bytes Ciphered = 2;
+    }
+    message DecryptResponse {
+       bytes Plain = 3;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #decrypt_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="decrypt"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="Decrypt_EP11" tab-title="Enterprise PKCS #11" tab-group="Decrypt" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>Implementation of PKCS #11 C_Decrypt. It does not update (state, slen).</p>
-    <p>The state, slen binary large object (BLOB) must be mapped from the PKCS #11 `hSession` parameter. The state BLOB was output from `DecryptInit`.</p>
+    <td><p>Implementation of PKCS #11 <code>C_Decrypt</code>. It does not update <code>(state, slen)</code>.</p>
+    <p>The state, slen binary large object (BLOB) must be mapped from the PKCS #11 <code>hSession</code> parameter. The state BLOB was output from <code>DecryptInit</code>.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_Decrypt (const unsigned char *state, size_t slen,
-  CK_BYTE_PTR cipher, CK_ULONG clen,
-  CK_BYTE_PTR plain, CK_ULONG_PTR plen,
-  target_t target
-);
+    CK_RV m_Decrypt (const unsigned char *state, size_t slen,
+        CK_BYTE_PTR cipher, CK_ULONG clen,
+        CK_BYTE_PTR plain, CK_ULONG_PTR plen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_Decrypt</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #decrypt_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="decrypt"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="Decrypt_PKCS11" tab-title="PKCS #11" tab-group="Decrypt" class="simple-tab-table">
+    <tr>
     <th>Description</th>
     <td>
-      <p>`C_Decrypt` decrypts encrypted data in a single part.
+      <p><code>C_Decrypt</code> decrypts encrypted data in a single part.
         <ul>
-          <li>`hSession` is the session handle.</li>
-          <li>`pEncryptedData` points to the encrypted data.</li>
-          <li>`ulEncryptedDataLen` is the length of the encrypted data.</li>
-          <li>`pData` points to the location that receives the recovered data.</li>
-          <li>`pulDataLen` points to the location that holds the length of the recovered data.</li>
+          <li><code>hSession</code> is the session handle.</li>
+          <li><code>pEncryptedData</code> points to the encrypted data.</li>
+          <li><code>ulEncryptedDataLen</code> is the length of the encrypted data.</li>
+          <li><code>pData</code> points to the location that receives the recovered data.</li>
+          <li><code>pulDataLen</code> points to the location that holds the length of the recovered data.</li>
         </ul>
       </p>
-    <p>`C_Decrypt` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The decryption operation needs to be initialized with `C_DecryptInit`. A call to `C_Decrypt` always terminates the active decryption operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call with `CKR_OK` returned to determine the length of the buffer that is needed to hold the plaintext.</p>
-    <p>`C_Decrypt` cannot be used to terminate a multi-part operation, and needs to be called after `C_DecryptInit` without intervening `C_DecryptUpdate` calls.</p>
+    <p><code>C_Decrypt</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The decryption operation needs to be initialized with <code>C_DecryptInit</code>. A call to <code>C_Decrypt</code> always terminates the active decryption operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call with <code>CKR_OK</code> returned to determine the length of the buffer that is needed to hold the plaintext.</p>
+    <p><code>C_Decrypt</code> cannot be used to terminate a multi-part operation, and needs to be called after <code>C_DecryptInit</code> without intervening <code>C_DecryptUpdate</code> calls.</p>
     <p>The ciphertext and plaintext can be in the same place, which means it is acceptable if pEncryptedData and pData point to the same location.</p>
-    <p>If the input ciphertext data cannot be decrypted because it has an inappropriate length, either `CKR_ENCRYPTED_DATA_INVALID` or `CKR_ENCRYPTED_DATA_LEN_RANGE` can be returned.</p></td>
-  </tr>
-  <tr>
+    <p>If the input ciphertext data cannot be decrypted because it has an inappropriate length, either <code>CKR_ENCRYPTED_DATA_INVALID</code> or <code>CKR_ENCRYPTED_DATA_LEN_RANGE</code> can be returned.</p></td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_Decrypt)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pEncryptedData,
-  CK_ULONG ulEncryptedDataLen,
-  CK_BYTE_PTR pData,
-  CK_ULONG_PTR pulDataLen
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_Decrypt)(
+        CK_SESSION_HANDLE hSession,
+        CK_BYTE_PTR pEncryptedData,
+        CK_ULONG ulEncryptedDataLen,
+        CK_BYTE_PTR pData,
+        CK_ULONG_PTR pulDataLen
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_ENCRYPTED_DATA_INVALID, CKR_ENCRYPTED_DATA_LEN_RANGE, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #Decrypt_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="decrypt"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  DecryptRequest := &pb.DecryptRequest{
-      State:    DecryptInitResponse.State,
-      Ciphered: ciphertext, // encrypted data from a previous encrypt operation
-  }
+    ```Golang
+    DecryptRequest := &pb.DecryptRequest{
+        State:    DecryptInitResponse.State,
+        Ciphered: ciphertext, // encrypted data from a previous encrypt operation
+    }
 
-  DecryptResponse, err := cryptoClient.Decrypt(context.Background(), DecryptRequest)
-  ```
-  {: codeblock}
+    DecryptResponse, err := cryptoClient.Decrypt(context.Background(), DecryptRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.Decrypt({
-    State: state,
-    Ciphered: ciphertext
-  }, (err, response) => {
-    callback(err, response);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.Decrypt({
+      State: state,
+      Ciphered: ciphertext
+    }, (err, response) => {
+      callback(err, response);
+    });
+    ```
+    {: codeblock}
 
 ### DecryptUpdate
 {: #grep11-DecryptUpdate}
 
 The `DecryptUpdate` function continues a multiple-part decryption operation. Before you call this function, make sure to run `DecryptInit` first.
 
-<table>
-  <tr>
+<table id="DecryptUpdate_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="DecryptUpdate" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_DecryptUpdate`, which is an implementation of PKCS #11 `C_DecryptUpdate`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_DecryptUpdate</code>, which is an implementation of PKCS #11 <code>C_DecryptUpdate</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message DecryptUpdateRequest {
-    bytes State = 1;
-    bytes Ciphered = 2;
-}
-message DecryptUpdateResponse {
-    bytes State = 1;
-    bytes Plain = 3;
-}
+    message DecryptUpdateRequest {
+        bytes State = 1;
+        bytes Ciphered = 2;
+    }
+    message DecryptUpdateResponse {
+        bytes State = 1;
+        bytes Plain = 3;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #DecryptUpdate_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="DecryptUpdate"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="DecryptUpdate_EP11" tab-title="Enterprise PKCS #11" tab-group="DecryptUpdate" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Implementation of PKCS #11 <code>C_DecryptUpdate</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
-  <p>The <code>state</code> blob was output from: <code>DecryptInit</code>.</p>
-</td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_DecryptUpdate</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
+    <p>The <code>state</code> blob was output from: <code>DecryptInit</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_DecryptUpdate (
-  unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR ciphered, CK_ULONG cipheredlen,
-  CK_BYTE_PTR plain, CK_ULONG_PTR plainlen,
-  target_t target
-);
+    CK_RV m_DecryptUpdate (
+        unsigned char *state, size_t statelen,
+        CK_BYTE_PTR ciphered, CK_ULONG cipheredlen,
+        CK_BYTE_PTR plain, CK_ULONG_PTR plainlen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_DecryptUpdate` return values. For more information, see the <em><strong>Return values</strong></em>chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Librarystructure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_DecryptUpdate</code> return values. For more information, see the <em><strong>Return values</strong></em>chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Librarystructure document</a>.</td>
+    </tr>
 </table>
-{: #DecryptUpdate_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="DecryptUpdate"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="DecryptUpdate_PKCS11" tab-title="PKCS #11" tab-group="DecryptUpdate" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>`C_DecryptUpdate` continues a multiple-part decryption operation, processing another encrypted data part.`hSession` is the session’s handle; `pEncryptedPart` points to the encrypted data part; `ulEncryptedPartLen` is thelength of the encrypted data part; `pPart` points to the location that receives the recovered data part; `pulPartLen`points to the location that holds the length of the recovered data part.</p>
-    <p>`C_DecryptUpdate` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> onproducing output.</p>
-    <p>The decryption operation must be initialized with `C_DecryptInit`.  This function can be called any number oftimes in succession.  A call to `C_DecryptUpdate` which results in an error other than CKR_BUFFER_TOO_SMALL terminatesthe current decryption operation.</p>
-    <p>The ciphertext and plaintext can be in the same place, that is, it is OK if `pEncryptedPart` and `pPart` point to thesame location.</p></td>
-  </tr>
-  <tr>
+    <td><p><code>C_DecryptUpdate</code> continues a multiple-part decryption operation, processing another encrypted data part. <code>hSession</code> is the session’s handle; <code>pEncryptedPart</code> points to the encrypted data part; <code>ulEncryptedPartLen</code> is thelength of the encrypted data part; <code>pPart</code> points to the location that receives the recovered data part; <code>pulPartLen</code> points to the location that holds the length of the recovered data part.</p>
+    <p><code>C_DecryptUpdate</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> onproducing output.</p>
+    <p>The decryption operation must be initialized with <code>C_DecryptInit</code>.  This function can be called any number oftimes in succession.  A call to <code>C_DecryptUpdate</code> which results in an error other than CKR_BUFFER_TOO_SMALL terminatesthe current decryption operation.</p>
+    <p>The ciphertext and plaintext can be in the same place, that is, it is OK if <code>pEncryptedPart</code> and <code>pPart</code> point to thesame location.</p></td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_DecryptUpdate)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pEncryptedPart,
-  CK_ULONG ulEncryptedPartLen,
-  CK_BYTE_PTR pPart,
-  CK_ULONG_PTR pulPartLen
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_DecryptUpdate)(
+        CK_SESSION_HANDLE hSession,
+        CK_BYTE_PTR pEncryptedPart,
+        CK_ULONG ulEncryptedPartLen,
+        CK_BYTE_PTR pPart,
+        CK_ULONG_PTR pulPartLen
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED,CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_FUNCTION_NOT_PERMITTED,CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID,CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED,CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #DecryptUpdate_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="DecryptUpdate"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  // Use DecryptUpdate if you would like to breakup
-  // the decrypt operation into multiple suboperations
-  DecryptUpdateRequest1 := &pb.DecryptUpdateRequest{
-      State:    DecryptInitResponse.State,
-      Ciphered: ciphertext[:16], // encrypted data from a previous encrypt operation
-  }
+     ```Golang
+     // Use DecryptUpdate if you would like to breakup
+     // the decrypt operation into multiple suboperations
+     DecryptUpdateRequest1 := &pb.DecryptUpdateRequest{
+         State:    DecryptInitResponse.State,
+         Ciphered: ciphertext[:16], // encrypted data from a previous encrypt operation
+     }
 
-  DecryptUpdateResponse, err := cryptoClient.DecryptUpdate(context.Background(), DecryptUpdateRequest1)
+     DecryptUpdateResponse, err := cryptoClient.DecryptUpdate(context.Background(), DecryptUpdateRequest1)
 
-  plaintext := DecryptUpdateResponse.Plain[:]
+     plaintext := DecryptUpdateResponse.Plain[:]
 
-  DecryptUpdateRequest2 := &pb.DecryptUpdateRequest{
-      State:    DecryptUpdateResponse.State,
-      Ciphered: ciphertext[16:], // encrypted data from a previous encrypt operation
-  }
+     DecryptUpdateRequest2 := &pb.DecryptUpdateRequest{
+         State:    DecryptUpdateResponse.State,
+         Ciphered: ciphertext[16:], // encrypted data from a previous encrypt operation
+     }
 
-  DecryptUpdateResponse, err := cryptoClient.DecryptUpdate(context.Background(), DecryptUpdateRequest2)
+     DecryptUpdateResponse, err := cryptoClient.DecryptUpdate(context.Background(), DecryptUpdateRequest2)
 
-  plaintext = append(plaintext, DecryptUpdateResponse.Plain...)
-  ```
-  {: codeblock}
+     plaintext = append(plaintext, DecryptUpdateResponse.Plain...)
+     ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.DecryptUpdate({
+    ```JavaScript
+    client.DecryptUpdate({
     State: state,
     Ciphered: ciphertext.slice(0, 16)
-  }, (err, data={}) => {
+    }, (err, data={}) => {
     cb(err, data.State, data.Plain);
-  });
-  ```
-  {: codeblock}
+    });
+    ```
+    {: codeblock}
 
 
 ### DecryptFinal
@@ -3024,121 +2788,109 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptUpdate)(
 
 The `DecryptFinal` function finishes a multiple-part decryption operation.
 
-<table>
-  <tr>
+<table id="DecryptFinal_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="DecryptFinal" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_DecryptFinal`, which is an implementation of PKCS #11 `C_DecryptFinal`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_DecryptFinal</code>, which is an implementation of PKCS #11 <code>C_DecryptFinal</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message DecryptFinalRequest {
-    bytes State = 1;
-}
-message DecryptFinalResponse {
-    bytes Plain = 2;
-}
+    message DecryptFinalRequest {
+        bytes State = 1;
+    }
+    message DecryptFinalResponse {
+        bytes Plain = 2;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #DecryptFinal_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="DecryptFinal"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="DecryptFinal_EP11" tab-title="Enterprise PKCS #11" tab-group="DecryptFinal" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td><p>Implementation of PKCS #11 <code>C_DecryptFinal</code>.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
-  <p>The <code>state</code> blob was output from: <code>DecryptInit</code>, <code>DecryptUpdate</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <td><p>Implementation of PKCS #11 <code>C_DecryptFinal</code>.</p>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
+    <p>The <code>state</code> blob was output from: <code>DecryptInit</code>, <code>DecryptUpdate</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_DecryptFinal (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR plain, CK_ULONG_PTR plainlen,
-  target_t target
-);
+    CK_RV m_DecryptFinal (
+        const unsigned char *state, size_t statelen,
+        CK_BYTE_PTR plain, CK_ULONG_PTR plainlen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_DecryptFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_DecryptFinal</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #DecryptFinal_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="DecryptFinal"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="DecryptFinal_PKCS11" tab-title="PKCS #11" tab-group="DecryptFinal" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>`C_DecryptFinal` finishes a multiple-part decryption operation. `hSession` is the session’s handle; `pLastPart` points to the location that receives the last recovered data part, if any; `pulLastPartLen` points to the location that holds the length of the last recovered data part.</p>
-    <p>`C_DecryptFinal` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The decryption operation must be initialized with `C_DecryptInit`.  A call to `C_DecryptFinal` always terminates the active decryption operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one that `returns CKR_OK`) to determine the length of the buffer that is needed to hold the plaintext.</p>
-    <p>If the input ciphertext data cannot be decrypted because it has an inappropriate length, then either `CKR_ENCRYPTED_DATA_INVALID` or `CKR_ENCRYPTED_DATA_LEN_RANGE` can be returned.</p>
+    <td><p><code>C_DecryptFinal</code> finishes a multiple-part decryption operation. <code>hSession</code> is the session’s handle; <code>pLastPart</code> points to the location that receives the last recovered data part, if any; <code>pulLastPartLen</code> points to the location that holds the length of the last recovered data part.</p>
+    <p><code>C_DecryptFinal</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The decryption operation must be initialized with <code>C_DecryptInit</code>.  A call to <code>C_DecryptFinal</code> always terminates the active decryption operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call (that is, one that <code>returns CKR_OK</code>) to determine the length of the buffer that is needed to hold the plaintext.</p>
+    <p>If the input ciphertext data cannot be decrypted because it has an inappropriate length, then either <code>CKR_ENCRYPTED_DATA_INVALID</code> or <code>CKR_ENCRYPTED_DATA_LEN_RANGE</code> can be returned.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_DecryptFinal)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pLastPart,
-  CK_ULONG_PTR pulLastPartLen
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_DecryptFinal)(
+        CK_SESSION_HANDLE hSession,
+        CK_BYTE_PTR pLastPart,
+        CK_ULONG_PTR pulLastPartLen
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_ENCRYPTED_DATA_INVALID, CKR_ENCRYPTED_DATA_LEN_RANGE, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #DecryptFinal_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="DecryptFinal"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  DecryptFinalRequest := &pb.DecryptFinalRequest {
+    ```Golang
+    DecryptFinalRequest := &pb.DecryptFinalRequest {
       State: DecrypUpdateResponse.State,
-  }
+    }
 
-  DecryptFinalResponse, err := cryptoClient.DecryptFinal(context.Background(), DecryptFinalRequest)
-  ```
-  {: codeblock}
+    DecryptFinalResponse, err := cryptoClient.DecryptFinal(context.Background(), DecryptFinalRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.DecryptFinal({
-    State: state
-  }, (err, data={}) => {
-    cb(err, Buffer.concat([plaintext, data.Plain]));
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.DecryptFinal({
+      State: state
+    }, (err, data={}) => {
+      cb(err, Buffer.concat([plaintext, data.Plain]));
+    });
+    ```
+    {: codeblock}
 
 
 ### DecryptSingle
@@ -3146,112 +2898,104 @@ CK_DEFINE_FUNCTION(CK_RV, C_DecryptFinal)(
 
 The `DecryptSingle` function processes data in one pass with one call. It does not return any state to host and returns only the decrypted data. This function is an IBM EP11 extension to the standard PKCS #11 specification and is a combination of the `DecryptInit` and `Decrypt` functions. It enables you to complete a decryption operation with a single call instead of a series of calls.
 
-<table>
-  <tr>
+<table id="DecryptSingle_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="DecryptSingle" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_DecryptSingle`<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_DecryptSingle</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message DecryptSingleRequest {
-    bytes Key = 1;
-    Mechanism Mech = 2;
-    bytes Ciphered = 3;
-}
-message DecryptSingleResponse {
-    bytes Plain = 4;
-}
+    message DecryptSingleRequest {
+        bytes Key = 1;
+        Mechanism Mech = 2;
+        bytes Ciphered = 3;
+    }
+    message DecryptSingleResponse {
+        bytes Plain = 4;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #DecryptSingle_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="DecryptSingle"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="DecryptSingle_EP11" tab-title="Enterprise PKCS #11" tab-group="DecryptSingle" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Non-standard variant of <code>Decrypt</code>. Processes data in one pass, with one call. Does not return any state to host, only decrypted data.</p>
-  <p>This is the preferred method of encrypting data in one pass for XCP-aware applications. Functionally it is equivalent to <code>DecryptInit</code> followed immediately by <code>Decrypt</code>, but it saves roundtrips, wrapping, and unwrapping.</p>
-  <p>If the backend supports resident keys, the key can be also a resident-key handle.</p>
-  <p>See also: <code>Decrypt</code>, <code>DecryptInit</code>, <code>EncryptSingle</code>.</p>
-  <p>The <code>key</code> blob was output from: <code>GenerateKey</code>, <code>UnwrapKey</code>.</p>
-</td>
-  </tr>
-  <tr>
+    <td>
+    <p>Non-standard variant of <code>Decrypt</code>. Processes data in one pass, with one call. Does not return any state to host, only decrypted data.</p>
+    <p>This is the preferred method of encrypting data in one pass for XCP-aware applications. Functionally it is equivalent to <code>DecryptInit</code> followed immediately by <code>Decrypt</code>, but it saves roundtrips, wrapping, and unwrapping.</p>
+    <p>If the backend supports resident keys, the key can be also a resident-key handle.</p>
+    <p>See also: <code>Decrypt</code>, <code>DecryptInit</code>, <code>EncryptSingle</code>.</p>
+    <p>The <code>key</code> blob was output from: <code>GenerateKey</code>, <code>UnwrapKey</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_DecryptSingle (
-  const unsigned char \*key, size_t keylen,
-  CK_MECHANISM_PTR mech,
-  CK_BYTE_PTR ciphered, CK_ULONG cipheredlen,
-  CK_BYTE_PTR plain, CK_ULONG_PTR plainlen,
-  target_t target
-);
-      </pre>
+    CK_RV m_DecryptSingle (
+        const unsigned char *key, size_t keylen,
+        CK_MECHANISM_PTR mech,
+        CK_BYTE_PTR ciphered, CK_ULONG cipheredlen,
+        CK_BYTE_PTR plain, CK_ULONG_PTR plainlen,
+        target_t target
+    );
+    </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_Decrypt</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #DecryptSingle_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="DecryptSingle"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  // Generate 16 bytes of random data for the initialization vector
-  GenerateRandomRequest := &pb.GenerateRandomRequest{
-      Len: (uint64)(ep11.AES_BLOCK_SIZE),
-  }
-  GenerateRandomResponse, err := cryptoClient.GenerateRandom(context.Background(),  GenerateRandomRequest)
-  if err != nil {
-      return nil, fmt.Errorf("GenerateRandom error: %s", err)
-  }
-  iv := GenerateRandomResponse.Rnd[:ep11.AES_BLOCK_SIZE]
-  fmt.Println("Generated IV")
+    ```Golang
+    // Generate 16 bytes of random data for the initialization vector
+    GenerateRandomRequest := &pb.GenerateRandomRequest{
+        Len: (uint64)(ep11.AES_BLOCK_SIZE),
+    }
+    GenerateRandomResponse, err := cryptoClient.GenerateRandom(context.Background(),  GenerateRandomRequest)
+    if err != nil {
+        return nil, fmt.Errorf("GenerateRandom error: %s", err)
+    }
+    iv := GenerateRandomResponse.Rnd[:ep11.AES_BLOCK_SIZE]
+    fmt.Println("Generated IV")
 
-  DecryptSingleRequest := &pb.DecryptSingleRequest {
-      Key:      GenerateKeyResponse.KeyBytes,
-      Mech:     &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
-      Ciphered: EncryptSingleResponse.Ciphered, // encrypted data from a previous encrypt operation
-  }
+    DecryptSingleRequest := &pb.DecryptSingleRequest {
+        Key:      GenerateKeyResponse.KeyBytes,
+        Mech:     &pb.Mechanism{Mechanism: ep11.CKM_AES_CBC_PAD, Parameter: util.SetMechParm(iv)},
+        Ciphered: EncryptSingleResponse.Ciphered, // encrypted data from a previous encrypt operation
+    }
 
-  DecryptSingleResponse, err := cryptoClient.DecryptSingle(context.Background(), DecryptSingleRequest)
-  ```
-  {: codeblock}
+    DecryptSingleResponse, err := cryptoClient.DecryptSingle(context.Background(), DecryptSingleRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.DecryptSingle({
-    Mech: {
-      Mechanism: ep11.CKM_AES_CBC_PAD,
-      ParameterB: iv
-    },
-    Key: bobDerived.NewKey,
-    Ciphered: ciphertext
-  }, (err, response) => {
-    callback(err, response);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.DecryptSingle({
+      Mech: {
+        Mechanism: ep11.CKM_AES_CBC_PAD,
+        ParameterB: iv
+      },
+      Key: bobDerived.NewKey,
+      Ciphered: ciphertext
+    }, (err, response) => {
+      callback(err, response);
+    });
+    ```
+    {: codeblock}
 
 
 ## Signing and verifying data
@@ -3264,122 +3008,110 @@ GREP11 provides a set of functions to sign data and verify signatures or message
 
 The `SignInit` function initializes a signature operation. You need to call this function first to perform a signature operation.
 
-<table>
-  <tr>
+<table id="SignInit_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="SignInit" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_SignInit`, which is an implementation of PKCS #11 `C_SignInit`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_SignInit</code> , which is an implementation of PKCS #11 <code>C_SignInit</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message SignInitRequest {
-    Mechanism Mech = 2;
-    bytes PrivKey = 3;
-}
-message SignInitResponse {
-    bytes State = 1;
-}
+    message SignInitRequest {
+        Mechanism Mech = 2;
+        bytes PrivKey = 3;
+    }
+    message SignInitResponse {
+        bytes State = 1;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #SignInit_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="SignInit"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="SignInit_EP11" tab-title="Enterprise PKCS #11" tab-group="SignInit" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>Implementation of PKCS #11 <code>C_SignInit</code>.
-  </td>
-  </tr>
-  <tr>
+    <td>Implementation of PKCS #11 <code>C_SignInit</code>.
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_SignInit (
-  unsigned char \*state, size_t \*statelen,
-  CK_MECHANISM_PTR mech,
-  const unsigned char \*privKey, size_t privKeylen,
-  target_t target
-);
+    CK_RV m_SignInit (
+        unsigned char *state, size_t *statelen,
+        CK_MECHANISM_PTR mech,
+        const unsigned char *privKey, size_t privKeylen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code> C_Decrypt</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #SignInit_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="SignInit"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="SignInit_PKCS11" tab-title="PKCS #11" tab-group="SignInit" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>`C_SignInit` initializes a signature operation, where the signature is an appendix to the data. `hSession` is the session's handle; `pMechanism` points to the signature mechanism; `hKey` is the handle of the signature key.</p>
-    <p>The `CKA_SIGN` attribute of the signature key, which indicates whether the key supports signatures with appendix, must be `CK_TRUE`.</p>
-    <p>After the application calls `C_SignInit`, the application can either call `C_Sign` to sign in a single part; or call `C_SignUpdate` one or more times, followed by `C_SignFinal`, to sign data in multiple parts. The signature operation is active until the application uses a call to `C_Sign` or `C_SignFinal` to obtain the signature. To process extra data (in single or multiple parts), the application must call `C_SignInit` again.</p></td>
-  </tr>
-  <tr>
+    <td><p><code>C_SignInit</code> initializes a signature operation, where the signature is an appendix to the data. <code>hSession</code> is the session's handle; <code>pMechanism</code> points to the signature mechanism; <code>hKey</code> is the handle of the signature key.</p>
+    <p>The <code>CKA_SIGN</code> attribute of the signature key, which indicates whether the key supports signatures with appendix, must be <code>CK_TRUE</code>.</p>
+    <p>After the application calls <code>C_SignInit</code>, the application can either call <code>C_Sign</code> to sign in a single part; or call <code>C_SignUpdate</code> one or more times, followed by <code>C_SignFinal</code>, to sign data in multiple parts. The signature operation is active until the application uses a call to <code>C_Sign</code> or <code>C_SignFinal</code> to obtain the signature. To process extra data (in single or multiple parts), the application must call <code>C_SignInit</code> again.</p></td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_SignInit)(
-  CK_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism,
-  CK_OBJECT_HANDLE hKey
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_SignInit)(
+        CK_SESSION_HANDLE hSession,
+        CK_MECHANISM_PTR pMechanism,
+        CK_OBJECT_HANDLE hKey
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_FUNCTION_NOT_PERMITTED,CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #SignInit_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="SignInit"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  SignInitRequest := &pb.SignInitRequest {
-      Mech:    &pb.Mechanism{Mechanism: ep11.CKM_SHA1_RSA_PKCS},
-      PrivKey: GenerateKeyPairResponse.PrivKeyBytes,
-  }
+    ```Golang
+    SignInitRequest := &pb.SignInitRequest {
+        Mech:    &pb.Mechanism{Mechanism: ep11.CKM_SHA1_RSA_PKCS},
+        PrivKey: GenerateKeyPairResponse.PrivKeyBytes,
+    }
 
-  SignInitResponse, err := cryptoClient.SignInit(context.Background(), SignInitRequest)
-  ```
-  {: codeblock}
+    SignInitResponse, err := cryptoClient.SignInit(context.Background(), SignInitRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.SignInit({
-    Mech: {
-      Mechanism: ep11.CKM_SHA1_RSA_PKCS
-    },
-    PrivKey: keys.PrivKeyBytes
-  }, (err, data={}) => {
-    cb(err, data.State);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.SignInit({
+      Mech: {
+        Mechanism: ep11.CKM_SHA1_RSA_PKCS
+      },
+      PrivKey: keys.PrivKeyBytes
+    }, (err, data={}) => {
+      cb(err, data.State);
+    });
+    ```
+    {: codeblock}
 
 
 ### Sign
@@ -3387,129 +3119,117 @@ CK_DEFINE_FUNCTION(CK_RV, C_SignInit)(
 
 The `Sign` function signs single-part data. You don't need to perform the `SignUpdate` and `SignFinal` suboperations for a single-part signature. Before you call this function, make sure to run `SignInit` first.
 
-<table>
-  <tr>
+<table id="Sign_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="Sign" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_Sign`, which is an implementation of PKCS #11 `C_Sign`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_Sign</code>, which is an implementation of PKCS #11 <code>C_Sign</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message SignRequest {
-    bytes State = 1;
-    bytes Data = 2;
-}
-message SignResponse {
-    bytes Signature = 3;
-}
+    message SignRequest {
+        bytes State = 1;
+        bytes Data = 2;
+    }
+    message SignResponse {
+        bytes Signature = 3;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #Sign_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="Sign"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="Sign_EP11" tab-title="Enterprise PKCS #11" tab-group="Sign" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Implementation of PKCS #11 <code>C_Sign</code>.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
-  <p>The <code>state</code> blob was output from: <code>SignInit</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_Sign</code>.</p>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
+    <p>The <code>state</code> blob was output from: <code>SignInit</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_Sign (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  CK_BYTE_PTR signature, CK_ULONG_PTR signaturelen,
-  target_t target
-);
+    CK_RV m_Sign (
+        const unsigned char *state, size_t statelen,
+        CK_BYTE_PTR data, CK_ULONG datalen,
+        CK_BYTE_PTR signature, CK_ULONG_PTR signaturelen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_Sign` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_Sign</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #Sign_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="Sign"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="Sign_PKCS11" tab-title="PKCS #11" tab-group="Sign" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>`C_Sign` signs data in a single part, where the signature is an appendix to the data. `hSession` is the session's handle; `pData` points to the data; `ulDataLen` is the length of the data; `pSignature` points to the location that receives the signature; `pulSignatureLen` points to the location that holds the length of the signature.</p>
-    <p>`C_Sign` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The signing operation must be initialized with `C_SignInit`. A call to `C_Sign` always terminates the active signing operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one that returns `CKR_OK`) to determine the length of the buffer that is needed to hold the signature.</p>
-    <p>`C_Sign` cannot be used to terminate a multi-part operation, and must be called after `C_SignInit` without intervening `C_SignUpdate` calls.</p>
-    <p>For most mechanisms, `C_Sign` is equivalent to a sequence of `C_SignUpdate` operations followed by `C_SignFinal`.</p></td>
-  </tr>
-  <tr>
+    <td><p><code>C_Sign</code> signs data in a single part, where the signature is an appendix to the data. <code>hSession</code> is the session's handle; <code>pData</code> points to the data; <code>ulDataLen</code> is the length of the data; <code>pSignature</code> points to the location that receives the signature; <code>pulSignatureLen</code> points to the location that holds the length of the signature.</p>
+    <p><code>C_Sign</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The signing operation must be initialized with <code>C_SignInit</code>. A call to <code>C_Sign</code> always terminates the active signing operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call (that is, one that returns <code>CKR_OK</code>) to determine the length of the buffer that is needed to hold the signature.</p>
+    <p><code>C_Sign</code> cannot be used to terminate a multi-part operation, and must be called after <code>C_SignInit</code> without intervening <code>C_SignUpdate</code> calls.</p>
+    <p>For most mechanisms, <code>C_Sign</code> is equivalent to a sequence of <code>C_SignUpdate</code> operations followed by <code>C_SignFinal</code>.</p></td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_Sign)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pData,
-  CK_ULONG ulDataLen,
-  CK_BYTE_PTR pSignature,
-  CK_ULONG_PTR pulSignatureLen
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_Sign)(
+        CK_SESSION_HANDLE hSession,
+        CK_BYTE_PTR pData,
+        CK_ULONG ulDataLen,
+        CK_BYTE_PTR pSignature,
+        CK_ULONG_PTR pulSignatureLen
+    );
     </pre></td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_INVALID, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN, CKR_FUNCTION_REJECTED.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #Sign_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="Sign"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  msgHash := sha256.Sum256([]byte("This data needs to be signed"))
-  SignRequest := &pb.SignRequest{
-      State: SignInitResponse.State,
-      Data:  msgHash[:],
-  }
+    ```Golang
+    msgHash := sha256.Sum256([]byte("This data needs to be signed"))
+    SignRequest := &pb.SignRequest{
+        State: SignInitResponse.State,
+        Data:  msgHash[:],
+    }
 
-  // Sign the data
-  SignResponse, err := cryptoClient.Sign(context.Background(), SignRequest)
-  ```
-  {: codeblock}
+    // Sign the data
+    SignResponse, err := cryptoClient.Sign(context.Background(), SignRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.Sign({
-    State: state,
-    Data: dataToSign
-  }, (err, data={}) => {
-    cb(err, data.Signature);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.Sign({
+      State: state,
+      Data: dataToSign
+    }, (err, data={}) => {
+      cb(err, data.Signature);
+    });
+    ```
+    {: codeblock}
 
 
 ### SignUpdate
@@ -3517,130 +3237,118 @@ CK_DEFINE_FUNCTION(CK_RV, C_Sign)(
 
 The `SignUpdate` function continues a multiple-part signature operation. Before you call this function, make sure to run `SignInit` first.
 
-<table>
-  <tr>
+<table id="SignUpdate_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="SignUpdate" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_SignUpdate`, which is an implementation of PKCS #11 `C_SignUpdate`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_SignUpdate</code>, which is an implementation of PKCS #11 <code>C_SignUpdate</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message SignUpdateRequest {
-    bytes State = 1;
-    bytes Data = 2;
-}
-message SignUpdateResponse {
-    bytes State = 1;
-}
+    message SignUpdateRequest {
+        bytes State = 1;
+        bytes Data = 2;
+    }
+    message SignUpdateResponse {
+        bytes State = 1;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #SignUpdate_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="SignUpdate"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="SignUpdate_EP11" tab-title="Enterprise PKCS #11" tab-group="SignUpdate" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p></p>Implementation of PKCS #11 <code>C_SignUpdate</code>.
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
-  <p>The <code>state</code> blob was output from: <code>SignInit</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <td>
+    <p></p>Implementation of PKCS #11 <code>C_SignUpdate</code>.
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
+    <p>The <code>state</code> blob was output from: <code>SignInit</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_SignUpdate (
-  unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  target_t target
-);
+    CK_RV m_SignUpdate (
+        unsigned char *state, size_t statelen,
+        CK_BYTE_PTR data, CK_ULONG datalen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_SignUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_SignUpdate</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #SignUpdate_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="SignUpdate"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="SignUpdate_PKCS11" tab-title="PKCS #11" tab-group="SignUpdate" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>`C_SignUpdate` continues a multiple-part signature operation, processing another data part. `hSession` is the session's handle, pPart points to the data part; `ulPartLen` is the length of the data part.</p>
-    <p>The signature operation must be initialized with `C_SignInit`. This function can be called any number of times in succession. A call to `C_SignUpdate` which results in an error terminates the current signature operation.</p></td>
-  </tr>
-  <tr>
+    <td><p><code>C_SignUpdate</code> continues a multiple-part signature operation, processing another data part. <code>hSession</code> is the session's handle, <code>pPart</code> points to the data part; <code>ulPartLen</code> is the length of the data part.</p>
+    <p>The signature operation must be initialized with <code>C_SignInit</code>. This function can be called any number of times in succession. A call to <code>C_SignUpdate</code> which results in an error terminates the current signature operation.</p></td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_SignUpdate)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pPart,
-  CK_ULONG ulPartLen
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_SignUpdate)(
+        CK_SESSION_HANDLE hSession,
+        CK_BYTE_PTR pPart,
+        CK_ULONG ulPartLen
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #SignUpdate_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="SignUpdate"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  // Use SignUpdate if you would like to breakup
-  // the sign operation into multiple suboperations
-  SignUpdateRequest1 := &pb.SignUpdateRequest {
-      State: SignInitResponse.State,
-      Data:  msgHash[:16],
-  }
+    ```Golang
+    // Use SignUpdate if you would like to breakup
+    // the sign operation into multiple suboperations
+    SignUpdateRequest1 := &pb.SignUpdateRequest {
+        State: SignInitResponse.State,
+        Data:  msgHash[:16],
+    }
 
-  SignUpdateResponse, err := cryptoClient.SignUpdate(context.Background(), SignUpdateRequest1)
+    SignUpdateResponse, err := cryptoClient.SignUpdate(context.Background(), SignUpdateRequest1)
 
-  SignUpdateRequest2 := &pb.SignUpdateRequest {
-      State: SignUpdateResponse.State,
-      Data:  msgHash[16:],
-  }
+    SignUpdateRequest2 := &pb.SignUpdateRequest {
+        State: SignUpdateResponse.State,
+        Data:  msgHash[16:],
+    }
 
-  SignUpdateResponse, err := cryptoClient.SignUpdate(context.Background(), SignUpdateRequest2)
-  ```
-  {: codeblock}
+    SignUpdateResponse, err := cryptoClient.SignUpdate(context.Background(), SignUpdateRequest2)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.SignUpdate({
-    State: state,
-    Data: digest
-  }, (err, response) => {
-    callback(err, response);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.SignUpdate({
+      State: state,
+      Data: digest
+    }, (err, response) => {
+      callback(err, response);
+    });
+    ```
+    {: codeblock}
 
 
 ### SignFinal
@@ -3648,120 +3356,108 @@ CK_DEFINE_FUNCTION(CK_RV, C_SignUpdate)(
 
 The `SignFinal` function finishes a multiple-part signature operation.
 
-<table>
-  <tr>
+<table id="SignFinal_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="SignFinal" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_SignFinal`, which is an implementation of PKCS #11 `C_SignFinal`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_SignFinal</code>, which is an implementation of PKCS #11 <code>C_SignFinal</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message SignFinalRequest {
-    bytes State = 1;
-}
-message SignFinalResponse {
-    bytes Signature = 2;
-}
+    message SignFinalRequest {
+        bytes State = 1;
+    }
+    message SignFinalResponse {
+        bytes Signature = 2;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #SignFinal_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="SignFinal"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="SignFinal_EP11" tab-title="Enterprise PKCS #11" tab-group="SignFinal" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Implementation of PKCS #11 <code>C_SignFinal</code>.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
-  <p>The <code>state</code> blob was output from: <code>SignInit</code>, <code>SignUpdate</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_SignFinal</code>.</p>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
+    <p>The <code>state</code> blob was output from: <code>SignInit</code>, <code>SignUpdate</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_SignFinal (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR signature, CK_ULONG_PTR signaturelen,
-  target_t target
-);
+    CK_RV m_SignFinal (
+        const unsigned char *state, size_t statelen,
+        CK_BYTE_PTR signature, CK_ULONG_PTR signaturelen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_SignFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_SignFinal</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #SignFinal_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="SignFinal"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="SignFinal_PKCS11" tab-title="PKCS #11" tab-group="SignFinal" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>`C_SignFinal` finishes a multiple-part signature operation, returning the signature. `hSession` is the session's handle; `pSignature` points to the location that receives the signature; `pulSignatureLen` points to the location that holds the length of the signature.</p>
-    <p>`C_SignFinal` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The signing operation must be initialized with `C_SignInit`. A call to `C_SignFinal` always terminates the active signing operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one that returns `CKR_OK`) to determine the length of the buffer that is needed to hold the signature.</p></td>
-  </tr>
-  <tr>
+    <td><p><code>C_SignFinal</code> finishes a multiple-part signature operation, returning the signature. <code>hSession</code> is the session's handle; <code>pSignature</code> points to the location that receives the signature; <code>pulSignatureLen</code> points to the location that holds the length of the signature.</p>
+    <p><code>C_SignFinal</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The signing operation must be initialized with <code>C_SignInit</code>. A call to <code>C_SignFinal</code> always terminates the active signing operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call (that is, one that returns <code>CKR_OK</code>) to determine the length of the buffer that is needed to hold the signature.</p></td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_SignFinal)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pSignature,
-  CK_ULONG_PTR pulSignatureLen
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_SignFinal)(
+        CK_SESSION_HANDLE hSession,
+        CK_BYTE_PTR pSignature,
+        CK_ULONG_PTR pulSignatureLen
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN, CKR_FUNCTION_REJECTED.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #SignFinal_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="SignFinal"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  SignFinalRequest := &pb.SignFinalRequest {
-      State: SignUpdateResponse.State,
-  }
+    ```Golang
+    SignFinalRequest := &pb.SignFinalRequest {
+        State: SignUpdateResponse.State,
+    }
 
-  SignFinalResponse, err := cryptoClient.SignFinal(context.Background(), SignFinalRequest)
-  ```
-  {: codeblock}
+    SignFinalResponse, err := cryptoClient.SignFinal(context.Background(), SignFinalRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.SignFinal({
-    State: state
-  }, (err, response) => {
-    callback(err, response);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.SignFinal({
+      State: state
+    }, (err, response) => {
+      callback(err, response);
+    });
+    ```
+    {: codeblock}
 
 
 ### SignSingle
@@ -3769,101 +3465,93 @@ CK_DEFINE_FUNCTION(CK_RV, C_SignFinal)(
 
 The `SignSingle` function signs or MACs data in one pass with one call and without constructing intermediate digest state. It doesn't return any state to host and returns only result. This function is an IBM EP11 extension to the standard PKCS #11 specification and is a combination of the `SignInit` and `Sign` functions. It enables you to complete a signing operation with a single call instead of a series of calls.
 
-<table>
-  <tr>
+<table id="SignSingle_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="SignSingle" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_SignSingle`<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_SignSingle</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message SignSingleRequest {
-    bytes PrivKey = 1;
-    Mechanism Mech = 2;
-    bytes Data = 3;
-}
-message SignSingleResponse {
-    bytes Signature = 4;
-}
+    message SignSingleRequest {
+        bytes PrivKey = 1;
+        Mechanism Mech = 2;
+        bytes Data = 3;
+    }
+    message SignSingleResponse {
+        bytes Signature = 4;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #SignSingle_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="SignSingle"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="SignSingle_EP11" tab-title="Enterprise PKCS #11" tab-group="SignSingle" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Nonstandard extension, combination of <code>SignInit</code> and <code>Sign</code>. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host, only result.</p>
-  <p>This is the preferred way of signing, without an extra roundtrip, encryption, and decryption. Functionally, <code>SignSingle</code> is equivalent to <code>SignInit</code> followed immediately by <code>Sign</code>.</p>
-  <p>The <code>(key, klen)</code> blob and the <code>pmech</code> mechanism together must be passable to <code>SignInit</code>.</p>
-  <p>Multi-data requests for HMAC and CMAC signatures are supported (sub-variants 2 and 3).</p>
-  <p>See also: <code>SignInit</code>, <code>Sign</code>, <code>VerifySingle</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <td>
+    <p>Nonstandard extension, combination of <code>SignInit</code> and <code>Sign</code>. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host, only result.</p>
+    <p>This is the preferred way of signing, without an extra roundtrip, encryption, and decryption. Functionally, <code>SignSingle</code> is equivalent to <code>SignInit</code> followed immediately by <code>Sign</code>.</p>
+    <p>The <code>(key, klen)</code> blob and the <code>pmech</code> mechanism together must be passable to <code>SignInit</code>.</p>
+    <p>Multi-data requests for HMAC and CMAC signatures are supported (subvariants 2 and 3).</p>
+    <p>See also: <code>SignInit</code>, <code>Sign</code>, <code>VerifySingle</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_SignSingle (
-  const unsigned char \*privKey, size_t privKeylen,
-  CK_MECHANISM_PTR mech,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  CK_BYTE_PTR signature, CK_ULONG_PTR signaturelen,
-  target_t target
-);
+    CK_RV m_SignSingle (
+        const unsigned char *privKey, size_t privKeylen,
+        CK_MECHANISM_PTR mech,
+        CK_BYTE_PTR data, CK_ULONG datalen,
+        CK_BYTE_PTR signature, CK_ULONG_PTR signaturelen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_Decrypt` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_Decrypt</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #SignSingle_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="SignSingle"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  msgHash := sha256.Sum256([]byte("This data needs to be signed"))
-  SignSingleRequest := &pb.SignSingleRequest {
-      PrivKey: GenerateKeyPairResponse.PrivKeyBytes,
-      Mech:    &pb.Mechanism{Mechanism: ep11.CKM_SHA256_RSA_PKCS},
-      Data:    msgHash[:],
-  }
+    ```Golang
+    msgHash := sha256.Sum256([]byte("This data needs to be signed"))
+    SignSingleRequest := &pb.SignSingleRequest {
+        PrivKey: GenerateKeyPairResponse.PrivKeyBytes,
+        Mech:    &pb.Mechanism{Mechanism: ep11.CKM_SHA256_RSA_PKCS},
+        Data:    msgHash[:],
+    }
 
-  SignSingleResponse, err := cryptoClient.SignSingle(context.Background(), SignSingleRequest)
-  ```
-  {: codeblock}
+    SignSingleResponse, err := cryptoClient.SignSingle(context.Background(), SignSingleRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.SignSingle({
-    Mech: {
-      Mechanism: ep11.CKM_ECDSA
-    },
-    PrivKey: key,
-    Data: digest
-  }, (err, response) => {
-    callback(err, response);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.SignSingle({
+      Mech: {
+        Mechanism: ep11.CKM_ECDSA
+      },
+      PrivKey: key,
+      Data: digest
+    }, (err, response) => {
+      callback(err, response);
+    });
+    ```
+    {: codeblock}
 
 
 ### VerifyInit
@@ -3871,128 +3559,116 @@ CK_RV m_SignSingle (
 
 The `VerifyInit` function initializes a verification operation. You need to call this function first to verify a signature.
 
-<table>
-  <tr>
+<table id="VerifyInit_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="VerifyInit" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_VerifyInit`, which is an implementation of PKCS #11 `C_VerifyInit`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_VerifyInit</code>, which is an implementation of PKCS #11 <code>C_VerifyInit</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message VerifyInitRequest {
-    Mechanism Mech = 2;
-    bytes PubKey = 3;
-}
-message VerifyInitResponse {
-    bytes State = 1;
-}
+    message VerifyInitRequest {
+        Mechanism Mech = 2;
+        bytes PubKey = 3;
+    }
+    message VerifyInitResponse {
+        bytes State = 1;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #VerifyInit_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="VerifyInit"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="VerifyInit_EP11" tab-title="Enterprise PKCS #11" tab-group="VerifyInit" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Implementation of PKCS #11 <code>C_VerifyInit</code>. Given a key blob <code>(key, klen)</code>, initialize a verify session state in <code>(state, slen)</code>. The key blob can be a public key object, or HMAC key bytes. Key blob type must be consistent with <code>pmech</code>.</p>
-  <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI CKA_UNWRAP can be MACed (such as returned earlier by <code>GenerateKeyPair</code>) or just the SPKI itself (if obtained from an external source, such as a certificate).</p>
-  <p>If an HMAC operation is initialized, session restrictions of the <code>Verify</code> object are inherited from the HMAC key. Since SPKIs are not tied to sessions, public-key Verify states are session-free.</p>
-  <p>The <code>key</code>,<code>klen</code> blob must be mapped from the PKCS #11 <code>hKey</code> parameter.</p>
-  <p>**Note**: <code>SignInit</code> and <code>VerifyInit</code> are internally the
-  same for HMAC and other symmetric/MAC mechanisms.</p>
-</td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_VerifyInit</code>. Given a key blob <code>(key, klen)</code>, initialize a verify session state in <code>(state, slen)</code>. The key blob can be a public key object, or HMAC key bytes. Key blob type must be consistent with <code>pmech</code>.</p>
+    <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI CKA_UNWRAP can be MACed (such as returned earlier by <code>GenerateKeyPair</code>) or just the SPKI itself (if obtained from an external source, such as a certificate).</p>
+    <p>If an HMAC operation is initialized, session restrictions of the <code>Verify</code> object are inherited from the HMAC key. Since SPKIs are not tied to sessions, public-key Verify states are session-free.</p>
+    <p>The <code>key</code>,<code>klen</code> blob must be mapped from the PKCS #11 <code>hKey</code> parameter.</p>
+    <p><strong>Note</strong>: <code>SignInit</code> and <code>VerifyInit</code> are internally the
+    same for HMAC and other symmetric/MAC mechanisms.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_VerifyInit (
-  unsigned char \*state, size_t \*statelen,
-  CK_MECHANISM_PTR mech,
-  const unsigned char \*pubKey, size_t pubKeylen,
-  target_t target
-);
+    CK_RV m_VerifyInit (
+        unsigned char *state, size_t *statelen,
+        CK_MECHANISM_PTR mech,
+        const unsigned char *pubKey, size_t pubKeylen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_VerifyInit` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_VerifyInit</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #VerifyInit_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="VerifyInit"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="VerifyInit_PKCS11" tab-title="PKCS #11" tab-group="VerifyInit" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>`C_VerifyInit` initializes a verification operation, where the signature is an appendix to the data. `hSession` is the session's handle; `pMechanism` points to the structure that specifies the verification mechanism; `hKey` is the handle of the verification key.</p>
-    <p>The `CKA_VERIFY` attribute of the verification key, which indicates whether the key supports verification where the signature is an appendix to the data, must be `CK_TRUE`.</p>
-    <p>After the application calls `C_VerifyInit`, the application can either call `C_Verify` to verify a signature on data in a single part; or call `C_VerifyUpdate` one or more times, followed by `C_VerifyFinal`, to verify a signature on data in multiple parts. The verification operation is active until the application calls `C_Verify` or `C_VerifyFinal`. To process extra data (in single or multiple parts), the application must call `C_VerifyInit` again.</p></td>
-  </tr>
-  <tr>
+    <td><p><code>C_VerifyInit</code> initializes a verification operation, where the signature is an appendix to the data. <code>hSession</code> is the session's handle; <code>pMechanism</code> points to the structure that specifies the verification mechanism; <code>hKey</code> is the handle of the verification key.</p>
+    <p>The <code>CKA_VERIFY</code> attribute of the verification key, which indicates whether the key supports verification where the signature is an appendix to the data, must be <code>CK_TRUE</code>.</p>
+    <p>After the application calls <code>C_VerifyInit</code>, the application can either call <code>C_Verify</code> to verify a signature on data in a single part; or call <code>C_VerifyUpdate</code> one or more times, followed by <code>C_VerifyFinal</code>, to verify a signature on data in multiple parts. The verification operation is active until the application calls <code>C_Verify</code> or <code>C_VerifyFinal</code>. To process extra data (in single or multiple parts), the application must call <code>C_VerifyInit</code> again.</p></td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_VerifyInit)(
-  CK_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism,
-  CK_OBJECT_HANDLE hKey
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_VerifyInit)(
+        CK_SESSION_HANDLE hSession,
+        CK_MECHANISM_PTR pMechanism,
+        CK_OBJECT_HANDLE hKey
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_FUNCTION_NOT_PERMITTED, CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #VerifyInit_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="VerifyInit"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  VerifyInitRequest := &pb.VerifyInitRequest {
+    ```Golang
+    VerifyInitRequest := &pb.VerifyInitRequest {
       Mech:   &pb.Mechanism{Mechanism: ep11.CKM_SHA1_RSA_PKCS},
       PubKey: GenerateKeyPairResponse.PubKeyBytes,
-  }
+    }
 
-  VerifyInitResponse, err := cryptoClient.VerifyInit(context.Background(), VerifyInitRequest)
-  ```
-  {: codeblock}
+    VerifyInitResponse, err := cryptoClient.VerifyInit(context.Background(), VerifyInitRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.VerifyInit({
-    Mech: {
-      Mechanism: ep11.CKM_SHA1_RSA_PKCS
-    },
-    PubKey: keys.PubKeyBytes
-  }, (err, data={}) => {
-    cb(err, signature, data.State);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.VerifyInit({
+      Mech: {
+        Mechanism: ep11.CKM_SHA1_RSA_PKCS
+      },
+      PubKey: keys.PubKeyBytes
+    }, (err, data={}) => {
+      cb(err, signature, data.State);
+    });
+    ```
+    {: codeblock}
 
 
 ### Verify
@@ -4000,132 +3676,120 @@ CK_DEFINE_FUNCTION(CK_RV, C_VerifyInit)(
 
 The `Verify` function verifies a signature on single-part data. You don't need to perform the `VerifyUpdate` and `VerifyFinal` suboperations for a single-part verification. Before you call this function, make sure to run `VerifyInit` first.
 
-<table>
-  <tr>
+<table id="Verify_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="Verify" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_Verify`, which is an implementation of PKCS #11 `C_Verify`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_Verify</code>, which is an implementation of PKCS #11 <code>C_Verify</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message VerifyRequest {
-    bytes State = 1;
-    bytes Data = 2;
-    bytes Signature = 3;
-}
-message VerifyResponse {
-}
+    message VerifyRequest {
+        bytes State = 1;
+        bytes Data = 2;
+        bytes Signature = 3;
+    }
+    message VerifyResponse {
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #Verify_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="Verify"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="Verify_EP11" tab-title="Enterprise PKCS #11" tab-group="Verify" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Implementation of PKCS #11 <code>C_Verify</code>.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>The relative order of data and signature are reversed relative
-  to <code>VerifySingle</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
-  <p>The <code>state</code> blob was output from: <code>VerifyInit</code>.</p>
-</td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_Verify</code>.</p>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>The relative order of data and signature are reversed relative
+    to <code>VerifySingle</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
+    <p>The <code>state</code> blob was output from: <code>VerifyInit</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_Verify (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  CK_BYTE_PTR signature, CK_ULONG signaturelen,
-  target_t target
-);
+    CK_RV m_Verify (
+        const unsigned char *state, size_t statelen,
+        CK_BYTE_PTR data, CK_ULONG datalen,
+        CK_BYTE_PTR signature, CK_ULONG signaturelen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_Verify` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_Verify</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #Verify_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="Verify"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="Verify_PKCS11" tab-title="PKCS #11" tab-group="Verify" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>`C_Verify` verifies a signature in a single-part operation, where the signature is an appendix to the data. `hSession` is the session's handle; `pData` points to the data; `ulDataLen` is the length of the data; `pSignature` points to the signature; `ulSignatureLen` is the length of the signature.</p>
-    <p>The verification operation must be initialized with `C_VerifyInit`. A call to `C_Verify` always terminates the active verification operation.</p>
-    <p>A successful call to `C_Verify` needs to return either the value `CKR_OK` (indicating that the supplied signature is valid) or `CKR_SIGNATURE_INVALID` (indicating that the supplied signature is invalid). If the signature is invalid purely based on its length, then `CKR_SIGNATURE_LEN_RANGE` needs to be returned. In any of these cases, the active signing operation is terminated.</p>
-    <p>`C_Verify` cannot be used to terminate a multi-part operation, and must be called after `C_VerifyInit` without intervening `C_VerifyUpdate` calls.</p>
-    <p>For most mechanisms, `C_Verify` is equivalent to a sequence of `C_VerifyUpdate` operations followed by `C_VerifyFinal`.</p></td>
-  </tr>
-  <tr>
+    <td><p><code>C_Verify</code> verifies a signature in a single-part operation, where the signature is an appendix to the data. <code>hSession</code> is the session's handle; <code>pData</code> points to the data; <code>ulDataLen</code> is the length of the data; <code>pSignature</code> points to the signature; <code>ulSignatureLen</code> is the length of the signature.</p>
+    <p>The verification operation must be initialized with <code>C_VerifyInit</code>. A call to <code>C_Verify</code> always terminates the active verification operation.</p>
+    <p>A successful call to <code>C_Verify</code> needs to return either the value <code>CKR_OK</code> (indicating that the supplied signature is valid) or <code>CKR_SIGNATURE_INVALID</code> (indicating that the supplied signature is invalid). If the signature is invalid purely based on its length, then <code>CKR_SIGNATURE_LEN_RANGE</code> needs to be returned. In any of these cases, the active signing operation is terminated.</p>
+    <p><code>C_Verify</code> cannot be used to terminate a multi-part operation, and must be called after <code>C_VerifyInit</code> without intervening <code>C_VerifyUpdate</code> calls.</p>
+    <p>For most mechanisms, <code>C_Verify</code> is equivalent to a sequence of <code>C_VerifyUpdate</code> operations followed by <code>C_VerifyFinal</code>.</p></td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_Verify)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pData,
-  CK_ULONG ulDataLen,
-  CK_BYTE_PTR pSignature,
-  CK_ULONG ulSignatureLen
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_Verify)(
+        CK_SESSION_HANDLE hSession,
+        CK_BYTE_PTR pData,
+        CK_ULONG ulDataLen,
+        CK_BYTE_PTR pSignature,
+        CK_ULONG ulSignatureLen
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_INVALID, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_SIGNATURE_INVALID, CKR_SIGNATURE_LEN_RANGE.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #Verify_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="Verify"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  VerifyRequest := &pb.VerifyRequest {
-      State:     VerifyInitResponse.State,
-      Data:      msgHash[:],
-      Signature: SignResponse.Signature,
-  }
+    ```Golang
+    VerifyRequest := &pb.VerifyRequest {
+        State:     VerifyInitResponse.State,
+        Data:      msgHash[:],
+        Signature: SignResponse.Signature,
+    }
 
-  VerifyResponse, err := cryptoClient.Verify(context.Background(), VerifyRequest)
-  ```
-  {: codeblock}
+    VerifyResponse, err := cryptoClient.Verify(context.Background(), VerifyRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.Verify({
-    State: state,
-    Data: dataToSign,
-    Signature: signature
-  }, (err, data={}) => {
-    cb(err, signature);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.Verify({
+      State: state,
+      Data: dataToSign,
+      Signature: signature
+    }, (err, data={}) => {
+      cb(err, signature);
+    });
+    ```
+    {: codeblock}
 
 
 ### VerifyUpdate
@@ -4133,130 +3797,118 @@ CK_DEFINE_FUNCTION(CK_RV, C_Verify)(
 
 The `VerifyUpdate` function continues a multiple-part verification operation. Before you call this function, make sure to run `VerifyInit` first.
 
-<table>
-  <tr>
+<table id="VerifyUpdate_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="VerifyUpdate" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_VerifyUpdate`, which is an implementation of PKCS #11 `C_VerifyUpdate`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_VerifyUpdate</code>, which is an implementation of PKCS #11 <code>C_VerifyUpdate</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message VerifyUpdateRequest {
-    bytes State = 1;
-    bytes Data = 2;
-}
-message VerifyUpdateResponse {
-    bytes State = 1;
-}
+    message VerifyUpdateRequest {
+        bytes State = 1;
+        bytes Data = 2;
+    }
+    message VerifyUpdateResponse {
+        bytes State = 1;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #VerifyUpdate_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="VerifyUpdate"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="VerifyUpdate_EP11" tab-title="Enterprise PKCS #11" tab-group="VerifyUpdate" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Implementation of PKCS #11 <code>C_VerifyUpdate</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
-  <p>The <code>state</code> blob was output from: <code>VerifyInit</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_VerifyUpdate</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
+    <p>The <code>state</code> blob was output from: <code>VerifyInit</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_VerifyUpdate (
-  unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  target_t target
-);
+    CK_RV m_VerifyUpdate (
+        unsigned char *state, size_t statelen,
+        CK_BYTE_PTR data, CK_ULONG datalen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_VerifyUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_VerifyUpdate</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #VerifyUpdate_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="VerifyUpdate"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="VerifyUpdate_PKCS11" tab-title="PKCS #11" tab-group="VerifyUpdate" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>`C_VerifyUpdate` continues a multiple-part verification operation, processing another data part. `hSession` is the session's handle, `pPart` points to the data part; `ulPartLen` is the length of the data part.</p>
-    <p>The verification operation must be initialized with `C_VerifyInit`. This function can be called any number of times in succession. A call to `C_VerifyUpdate` which results in an error terminates the current verification operation.</p></td>
-  </tr>
-  <tr>
+    <td><p><code>C_VerifyUpdate</code> continues a multiple-part verification operation, processing another data part. <code>hSession</code> is the session's handle, <code>pPart</code> points to the data part; <code>ulPartLen</code> is the length of the data part.</p>
+    <p>The verification operation must be initialized with <code>C_VerifyInit</code>. This function can be called any number of times in succession. A call to <code>C_VerifyUpdate</code> that results in an error terminates the current verification operation.</p></td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_VerifyUpdate)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pPart,
-  CK_ULONG ulPartLen
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_VerifyUpdate)(
+        CK_SESSION_HANDLE hSession,
+        CK_BYTE_PTR pPart,
+        CK_ULONG ulPartLen
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #VerifyUpdate_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="VerifyUpdate"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  // Use VerifyUpdate if you would like to breakup
-  // the verify operation into multiple suboperations
-  VerifyUpdateRequest1 := &pb.VerifyUpdateRequest {
+    ```Golang
+    // Use VerifyUpdate if you would like to breakup
+    // the verify operation into multiple suboperations
+    VerifyUpdateRequest1 := &pb.VerifyUpdateRequest {
       State: VerifyInitResponse.State,
       Data:  msgHash[:16],
-  }
+    }
 
-  VerifyUpdateResponse, err := cryptoClient.VerifyUpdate(context.Background(), VerifyUpdateRequest1)
+    VerifyUpdateResponse, err := cryptoClient.VerifyUpdate(context.Background(), VerifyUpdateRequest1)
 
-  VerifyUpdateRequest2 := &pb.VerifyUpdateRequest {
+    VerifyUpdateRequest2 := &pb.VerifyUpdateRequest {
       State: VerifyUpdateResponse.State,
       Data:  msgHash[16:],
-  }
+    }
 
-  VerifyUpdateResponse, err := cryptoClient.VerifyUpdate(context.Background(), VerifyUpdateRequest2)
-  ```
-  {: codeblock}
+    VerifyUpdateResponse, err := cryptoClient.VerifyUpdate(context.Background(), VerifyUpdateRequest2)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.VerifyUpdate({
-    State: state,
-    Data: digest
-  }, (err, response) => {
-    callback(err, response);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.VerifyUpdate({
+      State: state,
+      Data: digest
+    }, (err, response) => {
+      callback(err, response);
+    });
+    ```
+    {: codeblock}
 
 
 ### VerifyFinal
@@ -4264,122 +3916,110 @@ CK_DEFINE_FUNCTION(CK_RV, C_VerifyUpdate)(
 
 The `VerifyFinal` function finishes a multiple-part verification operation.
 
-<table>
-  <tr>
+<table id="VerifyFinal_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="VerifyFinal" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_VerifyFinal`, which is an implementation of PKCS #11 `C_VerifyFinal`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_VerifyFinal</code>, which is an implementation of PKCS #11 <code>C_VerifyFinal</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message VerifyFinalRequest {
-    bytes State = 1;
-    bytes Signature = 2;
-}
-message VerifyFinalResponse {
-}
+    message VerifyFinalRequest {
+        bytes State = 1;
+        bytes Signature = 2;
+    }
+    message VerifyFinalResponse {
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #VerifyFinal_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="VerifyFinal"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="VerifyFinal_EP11" tab-title="Enterprise PKCS #11" tab-group="VerifyFinal" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Implementation of PKCS #11 <code>C_VerifyFinal</code>.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
-  <p>The <code>state</code> blob was output from: <code>VerifyInit</code>, <code>VerifyUpdate</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_VerifyFinal</code>.</p>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
+    <p>The <code>state</code> blob was output from: <code>VerifyInit</code>, <code>VerifyUpdate</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_VerifyFinal (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR signature, CK_ULONG signaturelen,
-  target_t target
-);
+    CK_RV m_VerifyFinal (
+        const unsigned char *state, size_t statelen,
+        CK_BYTE_PTR signature, CK_ULONG signaturelen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_VerifyFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_VerifyFinal</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #VerifyFinal_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="VerifyFinal"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="VerifyFinal_PKCS11" tab-title="PKCS #11" tab-group="VerifyFinal" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>`C_VerifyFinal` finishes a multiple-part verification operation, checking the signature. `hSession` is the session's handle; `pSignature` points to the signature; `ulSignatureLen` is the length of the signature.</p>
-    <p>The verification operation must be initialized with `C_VerifyInit`. A call to `C_VerifyFinal` always terminates the active verification operation.</p>
-    <p>A successful call to `C_VerifyFinal` needs to return either the value `CKR_OK` (indicating that the supplied signature is valid) or `CKR_SIGNATURE_INVALID` (indicating that the supplied signature is invalid). If the signature is invalid based on its length, then `CKR_SIGNATURE_LEN_RANGE` needs to be returned. In any of these cases, the active verifying operation is terminated.</p></td>
-  </tr>
-  <tr>
+    <td><p><code>C_VerifyFinal</code> finishes a multiple-part verification operation, checking the signature. <code>hSession</code> is the session's handle; <code>pSignature</code> points to the signature; <code>ulSignatureLen</code> is the length of the signature.</p>
+    <p>The verification operation must be initialized with <code>C_VerifyInit</code>. A call to <code>C_VerifyFinal</code> always terminates the active verification operation.</p>
+    <p>A successful call to <code>C_VerifyFinal</code> needs to return either the value <code>CKR_OK</code> (indicating that the supplied signature is valid) or <code>CKR_SIGNATURE_INVALID</code> (indicating that the supplied signature is invalid). If the signature is invalid based on its length, then <code>CKR_SIGNATURE_LEN_RANGE</code> needs to be returned. In any of these cases, the active verifying operation is terminated.</p></td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_VerifyFinal)(
-  CK_SESSION_HANDLE hSession,
-  CK_BYTE_PTR pSignature,
-  CK_ULONG ulSignatureLen
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_VerifyFinal)(
+        CK_SESSION_HANDLE hSession,
+        CK_BYTE_PTR pSignature,
+        CK_ULONG ulSignatureLen
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_SIGNATURE_INVALID, CKR_SIGNATURE_LEN_RANGE.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #VerifyFinal_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="VerifyFinal"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  VerifyFinalRequest := &pb.VerifyFinalRequest {
-      State:     VerifyUpdateResponse.State,
-      Signature: SignResponse.Signature,
-  }
+    ```Golang
+    VerifyFinalRequest := &pb.VerifyFinalRequest {
+        State:     VerifyUpdateResponse.State,
+        Signature: SignResponse.Signature,
+    }
 
-  VerifyFinalResponse, err := cryptoClient.VerifyFinal(context.Background(), VerifyFinalRequest)
-  ```
-  {: codeblock}
+    VerifyFinalResponse, err := cryptoClient.VerifyFinal(context.Background(), VerifyFinalRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.VerifyFinal({
-    State: state,
-    Signature: signature
-  }, (err, response) => {
-    callback(err, response);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.VerifyFinal({
+      State: state,
+      Signature: signature
+    }, (err, response) => {
+      callback(err, response);
+    });
+    ```
+    {: codeblock}
 
 
 ### VerifySingle
@@ -4387,102 +4027,94 @@ CK_DEFINE_FUNCTION(CK_RV, C_VerifyFinal)(
 
 The `VerifySingle` function signs or MACs data in one pass with one call and without constructing intermediate digest state. It does not return any state to host and returns only the verification result. This function is an IBM EP11 extension to the standard PKCS #11 specification and is a combination of the `VerifyInit` and `Verify` functions. It enables you to complete a verification operation with a single call instead of a series of calls.
 
-<table>
-  <tr>
+<table id="VerifySingle_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="VerifySingle" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_VerifySingle`<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_VerifySingle</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message VerifySingleRequest {
-    bytes PubKey = 1;
-    Mechanism Mech = 2;
-    bytes Data = 3;
-    bytes Signature = 4;
-}
-message VerifySingleResponse {
-}
+    message VerifySingleRequest {
+        bytes PubKey = 1;
+        Mechanism Mech = 2;
+        bytes Data = 3;
+        bytes Signature = 4;
+    }
+    message VerifySingleResponse {
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #VerifySingle_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="VerifySingle"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="VerifySingle_EP11" tab-title="Enterprise PKCS #11" tab-group="VerifySingle" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Nonstandard extension, combination of <code>VerifyInit</code> and <code>Verify</code>. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host, only verification result. No size query is available because this function returns a Boolean.</p>
-  <p>This is the preferred way of verifying a signature, without an extra roundtrip, encryption, decryption. Functionally, <code>VerifySingle</code> is equivalent to <code>VerifyInit</code> followed immediately by a <code>Verify</code>.</p>
-  <p>The <code>(key, klen)</code> blob and the <code>pmech</code> mechanism together must be passable to <code>VerifyInit</code>.</p>
-  <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI can be MACed (such as returned as a public key from <code>GenerateKeyPair</code>) or just the SPKI itself (if obtained from an external source, such as a certificate).</p>
-  <p>See also: <code>VerifyInit</code>, <code>Verify</code>, <code>SignSingle</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <td>
+    <p>Nonstandard extension, combination of <code>VerifyInit</code> and <code>Verify</code>. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host, only verification result. No size query is available because this function returns a Boolean.</p>
+    <p>This is the preferred way of verifying a signature, without an extra roundtrip, encryption, decryption. Functionally, <code>VerifySingle</code> is equivalent to <code>VerifyInit</code> followed immediately by a <code>Verify</code>.</p>
+    <p>The <code>(key, klen)</code> blob and the <code>pmech</code> mechanism together must be passable to <code>VerifyInit</code>.</p>
+    <p>For public-key mechanisms, <code>(key, klen)</code> must contain an SPKI. This SPKI can be MACed (such as returned as a public key from <code>GenerateKeyPair</code>) or just the SPKI itself (if obtained from an external source, such as a certificate).</p>
+    <p>See also: <code>VerifyInit</code>, <code>Verify</code>, <code>SignSingle</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_VerifySingle (
-  const unsigned char \*pubKey, size_t pubKeylen,
-  CK_MECHANISM_PTR mech,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  CK_BYTE_PTR signature, CK_ULONG signaturelen,
-  target_t target
-);
+    CK_RV m_VerifySingle (
+        const unsigned char *pubKey, size_t pubKeylen,
+        CK_MECHANISM_PTR mech,
+        CK_BYTE_PTR data, CK_ULONG datalen,
+        CK_BYTE_PTR signature, CK_ULONG signaturelen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_VerifySingle` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_VerifySingle</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #VerifySingle_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="VerifySingle"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  VerifySingleRequest := &pb.VerifySingleRequest {
-      PubKey:    GenerateKeyPairResponse.PubKeyByytes,
-      Mech:      &pb.Mechanism{Mechanism: ep11.CKM_SHA256_RSA_PKCS},
-      Data:      msgHash[:],
-      Signature: SignSingleResponse.Signature,
-  }
+    ```Golang
+    VerifySingleRequest := &pb.VerifySingleRequest {
+        PubKey:    GenerateKeyPairResponse.PubKeyByytes,
+        Mech:      &pb.Mechanism{Mechanism: ep11.CKM_SHA256_RSA_PKCS},
+        Data:      msgHash[:],
+        Signature: SignSingleResponse.Signature,
+    }
 
-  VerifySingleResponse, err := cryptoClient.VerifySingle(context.Background(), VerifySingleRequest)
-  ```
-  {: codeblock}
+    VerifySingleResponse, err := cryptoClient.VerifySingle(context.Background(), VerifySingleRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.VerifySingle({
-    Mech: {
-      Mechanism: ep11.CKM_SHA256_RSA_PKCS
-    },
-    PubKey: keys.PubKey,
-    Data: digest,
-    Signature: signature
-  }, (err, response) => {
-    callback(err, response);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.VerifySingle({
+      Mech: {
+        Mechanism: ep11.CKM_SHA256_RSA_PKCS
+      },
+      PubKey: keys.PubKey,
+      Data: digest,
+      Signature: signature
+    }, (err, response) => {
+      callback(err, response);
+    });
+    ```
+    {: codeblock}
 
 ## Protecting data integrity through message digests
 {: #grep11-operation-digest-data}
@@ -4494,120 +4126,108 @@ GREP11 provides a set of functions to create message digests that are designed t
 
 The `DigestInit` function initializes a message-digesting operation. You need to run this function first to perform a digesting operation.
 
-<table>
-  <tr>
+<table id="DigestInit_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="DigestInit" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_DigestInit`, which is an implementation of PKCS #11 `C_DigestInit`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_DigestInit</code>, which is an implementation of PKCS #11 <code>C_DigestInit</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message DigestInitRequest {
-    Mechanism Mech = 2;
-}
-message DigestInitResponse {
-    bytes State = 1;
-}
+    message DigestInitRequest {
+        Mechanism Mech = 2;
+    }
+    message DigestInitResponse {
+        bytes State = 1;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #DigestInit_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="DigestInit"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="DigestInit_EP11" tab-title="Enterprise PKCS #11" tab-group="DigestInit" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td><p>Implementation of PKCS #11 <code>C_DigestInit</code>.</p>
-  <p>Create wrapped digest state.</p>
-  <p>**Note**: size queries are supported, but the wrapped state is always returned by the backend, unlike most size queries (which return an output size, instead of actual output). <code>Digest</code> states are sufficiently small that they do not introduce noticeable transport overhead.</p>
-  <p>During size queries, the host just discards the returned state, and reports blob size (in <code>len</code>). When blob is being returned, <code>len</code> is checked against returned size.</p>
-  <p>The <code>state</code>,<code>len</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must tie blob to session.)</p></td>
-  </tr>
-  <tr>
+    <td><p>Implementation of PKCS #11 <code>C_DigestInit</code>.</p>
+    <p>Create wrapped digest state.</p>
+    <p><strong>Note</strong>: size queries are supported, but the wrapped state is always returned by the backend, unlike most size queries (which return an output size, instead of actual output). <code>Digest</code> states are sufficiently small that they do not introduce noticeable transport overhead.</p>
+    <p>During size queries, the host just discards the returned state, and reports blob size (in <code>len</code>). When blob is being returned, <code>len</code> is checked against returned size.</p>
+    <p>The <code>state</code>,<code>len</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must tie blob to session.)</p></td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_DigestInit (
-  unsigned char \*state, size_t \*len,
-  const CK_MECHANISM_PTR mech,
-  target_t target
-);
+    CK_RV m_DigestInit (
+        unsigned char *state, size_t *len,
+        const CK_MECHANISM_PTR mech,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_DigestInit` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_DigestInit</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #DigestInit_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="DigestInit"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="DigestInit_PKCS11" tab-title="PKCS #11" tab-group="DigestInit" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>`C_DigestInit` initializes a message-digesting operation. `hSession` is the session’s handle; pMechanism points to the digesting mechanism.</p>
-    <p>After the application calls `C_DigestInit`, the application can either call `C_Digest` to digest data in a single part; or call `C_DigestUpdate` zero or more times, followed by `C_DigestFinal`, to digest data in multiple parts.  The message-digesting operation is active until the application uses a call to C_Digest or `C_DigestFinal` to obtain the message digest. To process extra data (in single or multiple parts), the application must call `1C_DigestInit1` again.</p>
+    <td><p><code>C_DigestInit</code> initializes a message-digesting operation. <code>hSession</code> is the session’s handle; <code>pMechanism</code> points to the digesting mechanism.</p>
+    <p>After the application calls <code>C_DigestInit</code>, the application can either call <code>C_Digest</code> to digest data in a single part; or call <code>C_DigestUpdate</code> zero or more times, followed by <code>C_DigestFinal</code>, to digest data in multiple parts.  The message-digesting operation is active until the application uses a call to <code>C_Digest</code> or <code>C_DigestFinal</code> to obtain the message digest. To process extra data (in single or multiple parts), the application must call <code>1C_DigestInit1</code> again.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_DigestInit)(
-  CK_SESSION_HANDLE hSession,
-  CK_MECHANISM_PTR pMechanism
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_DigestInit)(
+        CK_SESSION_HANDLE hSession,
+        CK_MECHANISM_PTR pMechanism
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #DigestInit_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="DigestInit"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  DigestInitRequest := &pb.DigestInitRequest {
-      Mech: &pb.Mechanism{Mechanism: ep11.CKM_SHA256},
-  }
+    ```Golang
+    DigestInitRequest := &pb.DigestInitRequest {
+        Mech: &pb.Mechanism{Mechanism: ep11.CKM_SHA256},
+    }
 
-  DigestInitResponse, err := cryptoClient.DigestInit(context.Background(), DigestInitRequest)
-  ```
-  {: codeblock}
+    DigestInitResponse, err := cryptoClient.DigestInit(context.Background(), DigestInitRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.DigestInit({
-    Mech: {
-      Mechanism: ep11.CKM_SHA256
-    }
-  }, (err, response) => {
-    callback(err, response);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.DigestInit({
+      Mech: {
+        Mechanism: ep11.CKM_SHA256
+      }
+    }, (err, response) => {
+      callback(err, response);
+    });
+    ```
+    {: codeblock}
 
 
 ### Digest
@@ -4615,134 +4235,122 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestInit)(
 
 The `Digest` function digests single-part data. You don't need to call the `DigestUpdate` and `DigestFinal` functions for digesting single-part data. Before you call this function, make sure to run `DigestInit` first. When you set parameters, note not to specify the length of the input data to be zero and the pointer that points to the input data location to be NULL.
 
-<table>
-  <tr>
+<table id="Digest_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="Digest" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_Digest`, which is an implementation of PKCS #11 `C_Digest`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_Digest</code>, which is an implementation of PKCS #11 <code>C_Digest</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message DigestRequest {
-    bytes State = 1;
-    bytes Data = 2;
-}
-message DigestResponse {
-    bytes Digest = 3;
-}
+    message DigestRequest {
+        bytes State = 1;
+        bytes Data = 2;
+    }
+    message DigestResponse {
+        bytes Digest = 3;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #Digest_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="Digest"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="Digest_EP11" tab-title="Enterprise PKCS #11" tab-group="Digest" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-  <td>
-  <p>Implementation of PKCS #11 <code>C_Digest</code>.</p>
-  <p>If a digest object has exactly 0 (zero) bytes that are appended to it after creation, in any combination of zero-byte transfers, it can still perform a one-pass Digest, even if it needs to be rejected by a strict implementation.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>Implementations might perform
-  <code>DigestUpdate</code>, <code>DigestFinal</code>, or <code>Digest</code> calls on cleartext digest objects in host code, bypassing HSM backends altogether. This choice might or might not be visible to host code, and it does not impact the security of the operation (as clear objects might not digest sensitive data). </p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. The <code>state</code> blob was output from: <code>DigestInit</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_Digest</code>.</p>
+    <p>If a digest object has exactly 0 (zero) bytes that are appended to it after creation, in any combination of zero-byte transfers, it can still perform a one-pass Digest, even if it needs to be rejected by a strict implementation.</p>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>Implementations might perform
+    <code>DigestUpdate</code>, <code>DigestFinal</code>, or <code>Digest</code> calls on cleartext digest objects in host code, bypassing HSM backends altogether. This choice might or might not be visible to host code, and it does not impact the security of the operation (as clear objects might not digest sensitive data). </p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. The <code>state</code> blob was output from: <code>DigestInit</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_Digest (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  CK_BYTE_PTR digest, CK_ULONG_PTR digestlen,
-  target_t target
-);
+    CK_RV m_Digest (
+        const unsigned char *state, size_t statelen,
+        CK_BYTE_PTR data, CK_ULONG datalen,
+        CK_BYTE_PTR digest, CK_ULONG_PTR digestlen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_Digest` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_Digest</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #Digest_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="Digest"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="Digest_PKCS11" tab-title="PKCS #11" tab-group="Digest" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>`C_Digest` digests data in a single part. `hSession` is the session’s handle, pData points to the data; `ulDataLen` is the length of the data; `pDigest` points to the location that receives the message digest; `pulDigestLen` points to the location that holds the length of the message digest.</p>
-    <p>`C_Digest` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The digest operation must be initialized with `C_DigestInit`.  A call to `C_Digest` always terminates the active digest operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one that returns `CKR_OK`) to determine the length of the buffer that is needed to hold the message digest.</p>
-    <p>`C_Digest` cannot be used to terminate a multi-part operation, and must be called after `C_DigestInit` without intervening `C_DigestUpdate` calls.</p>
+    <td><p><code>C_Digest</code> digests data in a single part. <code>hSession</code> is the session’s handle, pData points to the data; <code>ulDataLen</code> is the length of the data; <code>pDigest</code> points to the location that receives the message digest; <code>pulDigestLen</code> points to the location that holds the length of the message digest.</p>
+    <p><code>C_Digest</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The digest operation must be initialized with <code>C_DigestInit</code>.  A call to <code>C_Digest</code> always terminates the active digest operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call (that is, one that returns <code>CKR_OK</code>) to determine the length of the buffer that is needed to hold the message digest.</p>
+    <p><code>C_Digest</code> cannot be used to terminate a multi-part operation, and must be called after <code>C_DigestInit</code> without intervening <code>C_DigestUpdate</code> calls.</p>
     <p>The input data and digest output can be in the same place, that is, it is OK if pData and pDigest point to the same location.</p>
-    <p>`C_Digest` is equivalent to a sequence of `C_DigestUpdate` operations followed by `C_DigestFinal`.</p>
+    <p><code>C_Digest</code> is equivalent to a sequence of <code>C_DigestUpdate</code> operations followed by <code>C_DigestFinal</code>.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_Digest)(
-    CK_SESSION_HANDLE hSession,
-    CK_BYTE_PTR pData,
-    CK_ULONG ulDataLen,
-    CK_BYTE_PTR pDigest,
-    CK_ULONG_PTR pulDigestLen
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_Digest)(
+        CK_SESSION_HANDLE hSession,
+        CK_BYTE_PTR pData,
+        CK_ULONG ulDataLen,
+        CK_BYTE_PTR pDigest,
+        CK_ULONG_PTR pulDigestLen
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #Digest_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="Digest"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  digestData := []byte("Create a digest for this string")
-  DigestRequest := &pb.DigestRequest {
-      State: DigestInitResponse.State,
-      Data:  digestData,
-  }
+    ```Golang
+    digestData := []byte("Create a digest for this string")
+    DigestRequest := &pb.DigestRequest {
+        State: DigestInitResponse.State,
+        Data:  digestData,
+    }
 
-  DigestResponse, err := cryptoClient.Digest(context.Background(), DigestRequest)
-  ```
-  {: codeblock}
+    DigestResponse, err := cryptoClient.Digest(context.Background(), DigestRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.Digest({
-      State: state,
-      Data: Buffer.from(digestData)
-    }, (err, data={}) => {
-      cb(err, data.Digest);
-    });
-  }
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.Digest({
+        State: state,
+        Data: Buffer.from(digestData)
+      }, (err, data={}) => {
+        cb(err, data.Digest);
+      });
+    }
+    ```
+    {: codeblock}
 
 
 ### DigestUpdate
@@ -4750,135 +4358,123 @@ CK_DEFINE_FUNCTION(CK_RV, C_Digest)(
 
 The `DigestUpdate` function continues a multiple-part digesting operation. Before you call this function, make sure to run `DigestInit` first. When you set parameters, note not to specify the length of the input data to be zero and the pointer that points to the input data location to be NULL.
 
-<table>
-  <tr>
+<table id="DigestUpdate_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="DigestUpdate" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_DigestUpdate`, which is an implementation of PKCS #11 `C_DigestUpdate`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_DigestUpdate</code>, which is an implementation of PKCS #11 <code>C_DigestUpdate</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message DigestUpdateRequest {
-    bytes State = 1;
-    bytes Data = 2;
-}
-message DigestUpdateResponse {
-    bytes State = 1;
-}
+    message DigestUpdateRequest {
+        bytes State = 1;
+        bytes Data = 2;
+    }
+    message DigestUpdateResponse {
+        bytes State = 1;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #DigestUpdate_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="DigestUpdate"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="DigestUpdate_EP11" tab-title="Enterprise PKCS #11" tab-group="DigestUpdate" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Implementation of PKCS #11 <code>C_DigestUpdate</code>.</p>
-  <p><code>DigestUpdate</code> is polymorphic,
-  accepting both wrapped or clear digest objects, updating state in the same format.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
-  <p>The <code>state</code> blob was output from: <code>DigestInit</code>, <code>DigestUpdate</code>, <code>DigestKey</code>.</p>
-  <p>See also: <code>DigestInit</code></p>
-	</td>
-  </tr>
-  <tr>
+    <td>
+    <p>Implementation of PKCS #11 <code>C_DigestUpdate</code>.</p>
+    <p><code>DigestUpdate</code> is polymorphic,
+    accepting both wrapped or clear digest objects, updating state in the same format.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter. (Host library must map session to stored state.)</p>
+    <p>The <code>state</code> blob was output from: <code>DigestInit</code>, <code>DigestUpdate</code>, <code>DigestKey</code>.</p>
+    <p>See also: <code>DigestInit</code></p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_DigestUpdate (
-  unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  target_t target
-);
+    CK_RV m_DigestUpdate (
+        unsigned char *state, size_t statelen,
+        CK_BYTE_PTR data, CK_ULONG datalen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_DigestUpdate` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_DigestUpdate</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #DigestUpdate_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="DigestUpdate"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="DigestUpdate_PKCS11" tab-title="PKCS #11" tab-group="DigestUpdate" class="simple-tab-table">
+    <tr>
     <th>Description</th>
     <td>
-    <p>`C_DigestUpdate` continues a multiple-part message-digesting operation, processing another data part. `hSession` is the session’s handle, `pPart` points to the data part; `ulPartLen` is the length of the data part.</p>
-    <p>The message-digesting operation must be initialized with `C_DigestInit`. Calls to this function and `C_DigestKey` can be interspersed any number of times in any order. A call to `C_DigestUpdate` which results in an error terminates the current digest operation.</p>
+    <p><code>C_DigestUpdate</code> continues a multiple-part message-digesting operation, processing another data part. <code>hSession</code> is the session’s handle, <code>pPart</code> points to the data part; <code>ulPartLen</code> is the length of the data part.</p>
+    <p>The message-digesting operation must be initialized with <code>C_DigestInit</code>. Calls to this function and <code>C_DigestKey</code> can be interspersed any number of times in any order. A call to <code>C_DigestUpdate</code> which results in an error terminates the current digest operation.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_DigestUpdate)(
-    CK_SESSION_HANDLE hSession,
-    CK_BYTE_PTR pPart,
-    CK_ULONG ulPartLen
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_DigestUpdate)(
+        CK_SESSION_HANDLE hSession,
+        CK_BYTE_PTR pPart,
+        CK_ULONG ulPartLen
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #DigestUpdate_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="DigestUpdate"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  // Use DigestUpdate if you would like to breakup
-  // the digest operation into multiple suboperations
-  DigestUpdateRequest1 := &pb.DigestUpdateRequest {
-      State: DigestInitResponse.State,
-      Data:  digestData[:16],
-  }
+    ```Golang
+    // Use DigestUpdate if you would like to breakup
+    // the digest operation into multiple suboperations
+    DigestUpdateRequest1 := &pb.DigestUpdateRequest {
+        State: DigestInitResponse.State,
+        Data:  digestData[:16],
+    }
 
-  DigestUpdateResponse, err := cryptoClient.DigestUpdate(context.Background(), DigestUpdateRequest1)
+    DigestUpdateResponse, err := cryptoClient.DigestUpdate(context.Background(), DigestUpdateRequest1)
 
-  DigestUpdateRequest2 := &pb.DigestUpdateRequest {
-      State: DigestUpdateResponse.State,
-      Data:  digestData[16:],
-  }
+    DigestUpdateRequest2 := &pb.DigestUpdateRequest {
+        State: DigestUpdateResponse.State,
+        Data:  digestData[16:],
+    }
 
-  DigestUpdateResponse, err := cryptoClient.DigestUpdate(context.Background(), DigestUpdateRequest2)
-  ```
-  {: codeblock}
+    DigestUpdateResponse, err := cryptoClient.DigestUpdate(context.Background(), DigestUpdateRequest2)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.DigestUpdate({
-    State: state,
-    Data: Buffer.from(digestData.substr(0, 64))
-  }, (err, data={}) => {
-    cb(err, data.State);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.DigestUpdate({
+      State: state,
+      Data: Buffer.from(digestData.substr(0, 64))
+    }, (err, data={}) => {
+      cb(err, data.State);
+    });
+    ```
+    {: codeblock}
 
 
 ### DigestFinal
@@ -4886,222 +4482,202 @@ CK_DEFINE_FUNCTION(CK_RV, C_DigestUpdate)(
 
 The `DigestFinal` function finishes a multiple-part digesting operation.
 
-<table>
-  <tr>
+<table id="DigestFinal_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="DigestFinal" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_DigestFinal`, which is an implementation of PKCS #11 `C_DigestFinal`.<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_DigestFinal</code>, which is an implementation of PKCS #11 <code>C_DigestFinal</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message DigestFinalRequest {
-    bytes State = 1;
-}
-message DigestFinalResponse {
-    bytes Digest = 2;
-}
+    message DigestFinalRequest {
+        bytes State = 1;
+    }
+    message DigestFinalResponse {
+        bytes Digest = 2;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #DigestFinal_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="DigestFinal"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="DigestFinal_EP11" tab-title="Enterprise PKCS #11" tab-group="DigestFinal" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td><p>Implementation of PKCS #11 <code>C_DigestFinal</code>.</p>
-  <p><code>DigestFinal</code> is polymorphic, accepting both wrapped or clear digest objects.</p>
-  <p>Does not update <code>(state, slen)</code>.</p>
-  <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
-  <p>The <code>state</code> blob was output from: <code>DigestInit</code>, <code>DigestUpdate</code>, <code>DigestKey</code>.</p>
-  </td>
-  </tr>
-  <tr>
+    <td><p>Implementation of PKCS #11 <code>C_DigestFinal</code>.</p>
+    <p><code>DigestFinal</code> is polymorphic, accepting both wrapped or clear digest objects.</p>
+    <p>Does not update <code>(state, slen)</code>.</p>
+    <p>The <code>state</code>,<code>slen</code> blob must be mapped from the PKCS #11 <code>hSession</code> parameter.</p>
+    <p>The <code>state</code> blob was output from: <code>DigestInit</code>, <code>DigestUpdate</code>, <code>DigestKey</code>.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_DigestFinal (
-  const unsigned char \*state, size_t statelen,
-  CK_BYTE_PTR digest, CK_ULONG_PTR digestlen,
-  target_t target
-);
+    CK_RV m_DigestFinal (
+        const unsigned char *state, size_t statelen,
+        CK_BYTE_PTR digest, CK_ULONG_PTR digestlen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_DigestFinal` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_DigestFinal</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #DigestFinal_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="DigestFinal"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="DigestFinal_PKCS11" tab-title="PKCS #11" tab-group="DigestFinal" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td><p>`C_DigestFinal` finishes a multiple-part message-digesting operation, returning the message digest. `hSession` is the session’s handle; `pDigest` points to the location that receives the message digest; `pulDigestLen` points to the location that holds the length of the message digest.</p>
-    <p>`C_DigestFinal` uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The digest operation must be initialized with `C_DigestInit`.  A call to `C_DigestFinal` always terminates the active digest operation unless it returns `CKR_BUFFER_TOO_SMALL` or is a successful call (that is, one that returns `CKR_OK`) to determine the length of the buffer that is needed to hold the message digest.</p>
+    <td><p><code>C_DigestFinal</code> finishes a multiple-part message-digesting operation, returning the message digest. <code>hSession</code> is the session’s handle; <code>pDigest</code> points to the location that receives the message digest; <code>pulDigestLen</code> points to the location that holds the length of the message digest.</p>
+    <p><code>C_DigestFinal</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The digest operation must be initialized with <code>C_DigestInit</code>. A call to <code>C_DigestFinal</code> always terminates the active digest operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call (that is, one that returns <code>CKR_OK</code>) to determine the length of the buffer that is needed to hold the message digest.</p>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_DEFINE_FUNCTION(CK_RV, C_DigestFinal)(
-    CK_SESSION_HANDLE hSession,
-    CK_BYTE_PTR pDigest,
-    CK_ULONG_PTR pulDigestLen
-);
+    CK_DEFINE_FUNCTION(CK_RV, C_DigestFinal)(
+        CK_SESSION_HANDLE hSession,
+        CK_BYTE_PTR pDigest,
+        CK_ULONG_PTR pulDigestLen
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>
     CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
-  </tr>
+    </tr>
 </table>
-{: #DigestFinal_PKCS11}
-{: tab-title="PKCS #11"}
-{: tab-group="DigestFinal"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  DigestFinalRequest := &pb.DigestFinalRequest {
-      State: DigestUpdateResponse.State,
-  }
+    ```Golang
+    DigestFinalRequest := &pb.DigestFinalRequest {
+        State: DigestUpdateResponse.State,
+    }
 
-  DigestFinalResponse, err := cryptoClient.DigestFinal(context.Background(), DigestFinalRequest)
-  ```
-  {: codeblock}
+    DigestFinalResponse, err := cryptoClient.DigestFinal(context.Background(), DigestFinalRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.DigestFinal({
-    State: state
-  }, (err, response) => {
-    callback(err, response);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.DigestFinal({
+      State: state
+    }, (err, response) => {
+      callback(err, response);
+    });
+    ```
+    {: codeblock}
 
 ### DigestSingle
 {: #grep11-DigestSingle}
 
 The `DigestSingle` function digests data in one pass with one call and without constructing an intermediate digest state and unnecessary roundtrips. This function is an IBM EP11 extension to the standard PKCS #11 specification and is a combination of the `DigestInit` and `Digest` functions. It enables you to complete a digesting operation with a single call instead of a series of calls.
 
-<table>
-  <tr>
+<table id="DigestSingle_GREP11" tab-title="Enterprise PKCS #11 over gRPC" tab-group="DigestSingle" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-    <td>Binds to EP11 `m_DigestSingle`<td>
-  </tr>
-  <tr>
+    <td>Binds to EP11 <code>m_DigestSingle</code>.<td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-message DigestSingleRequest {
-    Mechanism Mech = 1;
-    bytes Data = 2;
-}
-message DigestSingleResponse {
-    bytes Digest = 3;
-}
+    message DigestSingleRequest {
+        Mechanism Mech = 1;
+        bytes Data = 2;
+    }
+    message DigestSingleResponse {
+        bytes Digest = 3;
+    }
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
     <td>Wraps EP11 error into message <code>Grep11Error</code>.</td>
-  </tr>
+    </tr>
 </table>
-{: #DigestSingle_GREP11}
-{: tab-title="Enterprise PKCS #11 over gRPC"}
-{: tab-group="DigestSingle"}
-{: class="simple-tab-table"}
 
-<table>
-  <tr>
+<table id="DigestSingle_EP11" tab-title="Enterprise PKCS #11" tab-group="DigestSingle" class="simple-tab-table">
+    <tr>
     <th>Description</th>
-	<td>
-  <p>Nonstandard extension, combination of <code>DigestInit</code> and <code>Digest</code>. Digests data in one pass, with one call, without constructing an intermediate digest state, and unnecessary roundtrips.</p>
-  <p>This is the preferred method of digesting cleartext for XCP-aware applications. Functionally, <code>DigestSingle</code> is equivalent to <code>DigestInit</code> followed immediately by <code>Digest</code>.</p>
-  <p>If a key needs to be digested, one <em>must</em> use <code>DigestInit</code> and <code>DigestKey</code>, since this function does not handle key blobs.</p>
-  <p>Does not return any state to host, only digest result. There are no non-PKCS #11 parameters, since everything is used directly from the PKCS #11 call.</p>
-  </td>
-  </tr>
-  <tr>
+    <td>
+    <p>Nonstandard extension, combination of <code>DigestInit</code> and <code>Digest</code>. Digests data in one pass, with one call, without constructing an intermediate digest state, and unnecessary roundtrips.</p>
+    <p>This is the preferred method of digesting cleartext for XCP-aware applications. Functionally, <code>DigestSingle</code> is equivalent to <code>DigestInit</code> followed immediately by <code>Digest</code>.</p>
+    <p>If a key needs to be digested, one <em>must</em> use <code>DigestInit</code> and <code>DigestKey</code>, since this function does not handle key blobs.</p>
+    <p>Does not return any state to host, only digest result. There are no non-PKCS #11 parameters, since everything is used directly from the PKCS #11 call.</p>
+    </td>
+    </tr>
+    <tr>
     <th>Parameters</th>
     <td>
     <pre>
-CK_RV m_DigestSingle (
-  CK_MECHANISM_PTR mech,
-  CK_BYTE_PTR data, CK_ULONG datalen,
-  CK_BYTE_PTR digest, CK_ULONG_PTR digestlen,
-  target_t target
-);
+    CK_RV m_DigestSingle (
+        CK_MECHANISM_PTR mech,
+        CK_BYTE_PTR data, CK_ULONG datalen,
+        CK_BYTE_PTR digest, CK_ULONG_PTR digestlen,
+        target_t target
+    );
     </pre>
     </td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <th>Return values</th>
-    <td>A subset of `C_DigestSingle` return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
-  </tr>
+    <td>A subset of <code>C_DigestSingle</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
+    </tr>
 </table>
-{: #DigestSingle_EP11}
-{: tab-title="Enterprise PKCS #11"}
-{: tab-group="DigestSingle"}
-{: class="simple-tab-table"}
 
 **Code snippets**
 
 - Golang code snippet
 
-  ```Golang
-  digestData := []byte("Create a digest for this string")
-  DigestSingleRequest := &pb.DigestSingleRequest {
-      Mech: &pb.Mechanism{Mechanism: ep11.CKM_SHA256},
-      Data: digestData,
-  }
+    ```Golang
+    digestData := []byte("Create a digest for this string")
+    DigestSingleRequest := &pb.DigestSingleRequest {
+        Mech: &pb.Mechanism{Mechanism: ep11.CKM_SHA256},
+        Data: digestData,
+    }
 
-  DigestSingleResponse, err := cryptoClient.DigestSingle(context.Background(), DigestSingleRequest)
-  ```
-  {: codeblock}
+    DigestSingleResponse, err := cryptoClient.DigestSingle(context.Background(), DigestSingleRequest)
+    ```
+    {: codeblock}
 
 - JavaScript code snippet
 
-  ```JavaScript
-  client.DigestSingle({
-    Mech: {
-      Mechanism: ep11.CKM_SHA256
-    },
-    Data: Buffer.from(digestData)
-  }, (err, response) => {
-    callback(err, response);
-  });
-  ```
-  {: codeblock}
+    ```JavaScript
+    client.DigestSingle({
+      Mech: {
+        Mechanism: ep11.CKM_SHA256
+      },
+      Data: Buffer.from(digestData)
+    }, (err, response) => {
+      callback(err, response);
+    });
+    ```
+    {: codeblock}
 
 ## Code examples
 {: #code-example}
 
-GREP11 API supports programming languages with [gRPC libraries](https://www.grpc.io/docs/){:external}. Two sample GitHub repositories are provided for you to test the GREP11 API:
+GREP11 API supports programming languages with [gRPC libraries](https://www.grpc.io/docs/){: external}. Two sample GitHub repositories are provided for you to test the GREP11 API:
 
 - [The sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external}
 - [The sample GitHub repository for JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js){: external}
