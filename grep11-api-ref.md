@@ -175,9 +175,9 @@ A mechanism is referred to as a process to implement a cryptographic operation. 
 |Derive | CKM_ECDH1_DERIVE, CKM_DH_PKCS_DERIVE, CKM_DES3_ECB_ENCRYPT_DATA, CKM_SHA1_KEY_DERIVATION, CKM_SHA224_KEY_DERIVATION, CKM_SHA256_KEY_DERIVATION, CKM_SHA384_KEY_DERIVATION, CKM_SHA512_KEY_DERIVATION|
 {: caption="Table 2. Describes the supported GREP11 mechanisms" caption-side="bottom"}
 
-1: This mechanism supports only single-part operations that are not able to utilize any of the Update GREP11 functions, such as EncryptUpdate, DecryptUpdate, and DigestUpdate.
+1: This mechanism supports only single-part operations that are not able to utilize any of the Update GREP11 functions, such as `EncryptUpdate`, `DecryptUpdate`, and `DigestUpdate`.
 
-2: This mechanism is only available for GREP11 SignSingle and VerifySingle operations.
+2: This mechanism is only available for GREP11 `SignSingle` and `VerifySingle` operations.
 
 ## Supported attributes and key types
 {: #grep11-attribute-list}
