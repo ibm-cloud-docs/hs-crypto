@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-12"
+lastupdated: "2021-08-13"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -24,8 +24,6 @@ subcollection: hs-crypto
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
-
-
 
 ## 30 July 2021
 {: #july-2021}
@@ -49,6 +47,9 @@ With the integration with Terraform, now you can initialize your service instanc
 {: #add-signing-service}
 
 If you are using Terraform or key part files to initialize a service instance, you can now choose to use a third-party signing service to create, store, and manage the administrator signature keys that are used by Terraform or the Trusted Key Entry (TKE) CLI plug-in. For more information, see [Using a signing service to manage signature keys for instance initialization](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key).
+
+
+
 
 ## 30 June 2021
 {: #june-2021}

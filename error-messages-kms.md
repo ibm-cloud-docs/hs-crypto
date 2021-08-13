@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-12"
+lastupdated: "2021-08-13"
 
 keywords: error message, error code, error, kms error, key management error message, hpcs error messages, hyper protect crypto services error message
 
@@ -3315,7 +3315,7 @@ $ curl -X GET \
 ```
 {: codeblock}
 
-##### JSON response
+#### JSON response
 {: #error-messages-unauthorized-err-context-json}
 
 ```json
