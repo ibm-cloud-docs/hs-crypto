@@ -1,0 +1,311 @@
+toc:
+  properties:
+    subcollection: hs-crypto
+    category: security
+    audience: service
+    href: /docs/hs-crypto
+    console-page: /catalog/services/hyper-protect-crypto-services
+    product-page: https://www.ibm.com/cloud/hyper-protect-crypto
+    path: hs-crypto
+    label: Hyper Protect Crypto Services
+
+entries:
+    - navgroup:
+      id: learn
+      topics:
+      - topicgroup:
+        label: Getting started
+        topics:
+        - index.md
+        - link:
+          label: "Video: Initializing Hyper Protect Crypto Services with IBM Cloud TKE CLI"
+          href: https://mediacenter.ibm.com/media/0_z5c589ou
+        - link:
+          label: "Video: Initializing Hyper Protect Crypto Services with smart cards"
+          href: https://mediacenter.ibm.com/media/1_lo2fmwbb
+      - topicgroup:
+        label: Internal adopters
+        topics:
+        - internal/kyok-cheatsheet.md
+        - internal/onboard-service.md
+        - internal/configure-api.md
+        - internal/key-registration.md
+        - internal/plan-key-rotation.md
+        - internal/plan-crypto-erasure.md
+        - internal/kms-provider.md
+      - topicgroup:
+        label: Understanding Hyper Protect Crypto Services
+        topics:
+        - link:
+          label: "Video: IBM Cloud Hyper Protect Crypto Services overview"
+          href: https://mediacenter.ibm.com/media/1_zxwh6ixm
+        - overview.md
+        - architecture-workload-isolation.md
+        - use_case.md
+        - data-security.md
+        - hs-crypto-concepts.md
+        - topicgroup:
+          label: About service instance initialization
+          topics:
+          - instance-initialization-overview.md
+          - instance-initialization-mode.md
+        - topicgroup:
+          label: About key management service
+          topics:
+          - importing-keys.md
+          - envelope-encryption.md
+          - key-states.md
+        - topicgroup:
+          label: About cloud hardware security module
+          topics:
+          - introduce-hsm.md
+          - introduce-pkcs11.md
+          - introduce-grep11.md
+        - topicgroup:
+          label: About key rotation
+          topics:
+          - introduce-master-key-rotation.md
+          - introduce-root-key-rotation.md
+      - manage-regulated-workloads.md
+      - integrate-services.md
+      - whats_new.md
+
+    - navgroup:
+      id: tutorial
+      topics:
+      - topicgroup:
+        label: Tutorials on key management service
+        topics:
+        - tutorials/secure-import.md
+        - link:
+          label: "Tutorial: Applying end to end security to a cloud application"
+          href: https://{DomainName}/docs/tutorials?topic=solution-tutorials-cloud-e2e-security
+        - link:
+          label: "Tutorial: Creating secure microservices writing to a consolidated database"
+          href: https://developer.ibm.com/patterns/create-a-secured-microservices-and-deploy-it-to-a-consolidated-database/
+        - link:
+          label: "Tutorial: Encrypting Kubernetes secrets with IBM Cloud Hyper Protect Crypto Services"
+          href: https://developer.ibm.com/tutorials/encrypt-kubernetes-secrets-with-hyper-protect-crypto-services/
+        - link:
+          label: "Tutorial: Enhancing security of your deployed application"
+          href: https://{DomainName}/docs/tutorials?topic=solution-tutorials-extended-app-security
+        - tutorials/kmip-vmware.md
+      - topicgroup:
+        label: Tutorials on cloud hardware security module
+        topics:
+        - tutorials/tde-pkcs11.md
+        - tutorials/db2-pkcs11.md
+        - link:
+          label: "Tutorial: Using IBM Cloud Hyper Protect Crypto Services to offload NGINX TLS"
+          href: https://developer.ibm.com/components/ibmz/tutorials/use-hyper-protect-crypto-services-to-offload-nginx-tls/
+
+    - navgroup:
+      id: howto
+      topics:
+      - provision.md
+      - topicgroup:
+        label: Initializing service instances
+        topics:
+        - initialize-hsm-prerequisite.md
+        - topicgroup:
+          label: Initializing service instances using smart cards and the Management Utilities
+          topics:
+          - prepare-management-utilities.md
+          - initialize-hsm-management-utilities.md
+        - initialize-hsm-cli-recovery-crypto-unit.md
+        - initialize-hsm-cli.md
+        - signing-service.md
+      - topicgroup:
+        label: Managing instance policies
+        topics:
+        - settings-network-policy.md
+        - settings-dual-auth.md
+        - settings-key-create-import-access.md
+        - settings-sysdig-metrics.md
+      - retrieve-access-token.md
+      - retrieve-instance-id.md
+      - topicgroup:
+        label: Setting up API calls
+        topics:
+        - set-up-kms-api.md
+        - set-up-pkcs-api.md
+        - set-up-grep11-api.md
+        - enable-mtls.md
+      - set-up-cli.md
+      - terraform.md
+      - topicgroup:
+        label: Managing master keys
+        topics:
+        - rotate-master-key-smart-cards.md
+        - rotate-master-key-recovery-crypto-unit.md
+        - rotate-master-key-key-files.md
+        - recover-master-key.md
+      - topicgroup:
+        label: Managing key management service keys
+        topics:
+        - topicgroup:
+          label: Creating keys
+          topics:
+          - create-root-keys.md
+          - create-standard-keys.md
+        - manage-key-rings.md
+        - manage-key-alias.md
+        - topicgroup:
+          label: Importing keys
+          topics:
+          - import-root-keys.md
+          - import-standard-keys.md
+          - create-import-tokens.md
+        - topicgroup:
+          label: Viewing keys
+          topics:
+          - view-keys.md
+          - view-key-details.md
+          - retrieve-key.md
+        - topicgroup:
+          label: Protecting keys
+          topics:
+          - wrap-keys.md
+          - unwrap-keys.md
+          - rewrap-keys.md
+        - topicgroup:
+          label: Rotating keys
+          topics:
+          - set-rotation-policy.md
+          - rotate-keys.md
+          - view-key-versions.md
+        - disable-keys.md
+        - topicgroup:
+          label: Deleting keys
+          topics:
+          - delete-purge-keys.md
+          - delete-keys.md
+          - delete-dual-auth-keys.md
+          - set-dual-auth-policy.md
+          - purge-keys.md
+        - restore-keys.md
+      - topicgroup:
+        label: Managing protected resources associated with root keys
+        topics:
+        - view-protected-resources.md
+        - sync-resources.md
+      - topicgroup:
+        label: "Managing Enterprise PKCS #11 keystores and keys"
+        topics:
+        - manage-pkcs11-keystores.md
+        - manage-pkcs11-keys.md
+      - enable-mechanisms.md
+      - add-remove-crypto-units.md
+      - enable-failover.md
+      - delete-instance.md
+      - restore-data.md
+      - topicgroup:
+        label: Enhancing security
+        topics:
+        - manage-access.md
+        - grant-access-keys.md
+        - topicgroup:
+          label: Granting users access to manage EP11 keystores and keys
+          topics:
+          - pkcs11-ui-best-practices.md
+          - pkcs11-best-practices.md
+        - topicgroup:
+          label: Privately connecting to Hyper Protect Crypto Services
+          topics:
+          - virtual-private-endpoint.md
+          - secure-connection.md
+        - at-events.md
+        - monitor-sysdig-metrics.md
+        - manage-security-compliance.md
+
+    - navgroup:
+      id: reference
+      topics:
+      - topicgroup:
+        label: API reference
+        topics:
+        - topicgroup:
+          label: Key management API
+          topics:
+          - kms-api-change-log.md
+          - link:
+            label: Key management API reference
+            href: https://{DomainName}/apidocs/hs-crypto
+        - pkcs11-api-ref.md
+        - grep11-api-ref.md
+      - topicgroup:
+        label: CLI reference
+        topics:
+        - cli-change-log.md
+        - /hs-crypto-cli-plugin/hs-crypto-cli-plugin-hpcs-cli-plugin
+      - topicgroup:
+        label: Terraform reference
+        topics:
+        - link:
+          label: Provisioning and initializing service instances with Terraform
+          href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs
+        - link:
+          label: Managing key management service keys with Terraform
+          href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key
+      - regions.md
+      - smart-card-considerations.md
+      - shared-responsibilities.md
+      - ha-dr.md
+      - open-source-licenses.md
+      - link:
+        label: IBM Cloud Hyper Protect Services resources
+        href: https://ibm-hyper-protect.github.io/
+
+    - navgroup:
+      id: help
+      topics:
+      - topicgroup:
+        label: FAQs
+        topics:
+        - FAQs-general.md
+        - FAQs-pricing.md
+        - FAQs-operations.md
+        - FAQs-performance.md
+        - FAQs-security.md
+        - FAQs-ha-dr.md
+        - FAQs-maintenance.md
+      - topicgroup:
+        label: Troubleshooting key management API or CLI
+        topics:
+        - troubleshooting-authenticate-api.md
+        - troubleshooting-list-keys-api.md
+        - troubleshooting-list-specific-keys.md
+        - troubleshooting-error-CLI-API.md
+      - topicgroup:
+        label: Troubleshooting IBM Cloud console
+        topics:
+        - troubleshooting-create-keys.md
+        - troubleshooting-delete-keys.md
+        - troubleshooting-rotate-root-keys.md
+        - troubleshooting-delete-instance.md
+      - topicgroup:
+        label: Troubleshooting Trusted Key Entry
+        topics:
+        - troubleshooting-unauthorized-token.md
+        - troubleshooting-list-crypto-units.md
+        - troubleshooting-change-signature-thresholds.md
+      - topicgroup:
+        label: Troubleshooting smart cards and the Management Utilities
+        topics:
+        - troubleshooting-unauthorized-token-tke-application.md
+        - troubleshooting-block-smart-card.md
+        - troubleshooting-no-smart-card.md
+      - topicgroup:
+        label: Troubleshooting master key rotation
+        topics:
+        - troubleshooting-master-key-rotation.md
+        - troubleshooting-master-key-rotation-key-files.md
+        - troubleshooting-master-key-rotation-smart-cards.md
+        - troubleshooting-master-key-rotation-recovery.md
+      - topicgroup:
+        label: Error messages
+        topics:
+        - error-messages-kms.md
+        - error-messages-tke.md
+      - support.md
+      - sitemap.md
