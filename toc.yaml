@@ -1,6 +1,7 @@
 toc:
   properties:
     subcollection: hs-crypto
+    version: 2
     category: security
     audience: service
     href: /docs/hs-crypto
@@ -56,7 +57,6 @@ toc:
             topics:
             - introduce-master-key-rotation.md
             - introduce-root-key-rotation.md
-        - manage-regulated-workloads.md
         - integrate-services.md
         - whats_new.md
 
@@ -167,12 +167,10 @@ toc:
           - disable-keys.md
           - topicgroup:
             label: Deleting keys
-            topics:
-            - delete-purge-keys.md
+            topics: 
             - delete-keys.md
             - delete-dual-auth-keys.md
             - set-dual-auth-policy.md
-            - purge-keys.md
           - restore-keys.md
         - topicgroup:
           label: Managing protected resources associated with root keys
@@ -292,10 +290,4 @@ toc:
           - troubleshooting-master-key-rotation-key-files.md
           - troubleshooting-master-key-rotation-smart-cards.md
           - troubleshooting-master-key-rotation-recovery.md
-        - topicgroup:
-          label: Error messages
-          topics:
-          - error-messages-kms.md
-          - error-messages-tke.md
         - support.md
-        - sitemap.md
