@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-12"
+lastupdated: "2021-08-13"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -683,8 +683,6 @@ The following table lists the status codes that are associated with each severit
 
 | Severity | Status code |
 | -------- | ----------- |
-| Critical | `400`[^footnote-1], `401`, `403`, `500`, `503`, `507`  |
+| Critical | `400` (For TKE events only), `401`, `403`, `500`, `503`, `507`  |
 | Warning  | `400`, `409`, `424`, `502`, `504`, `505`  |
 {: caption="Table 13. Describes the severity level for {{site.data.keyword.hscrypto}} response status codes." caption-side="bottom"}
-
-[^footnote-1]: For Trusted Key Entry events.
