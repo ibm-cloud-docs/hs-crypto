@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-12"
+lastupdated: "2021-08-13"
 
 keywords: smart card vulnerabilities, security policy, maintain workstation security, maintain smart card readers security
 
@@ -44,5 +44,15 @@ Taking the following general questions into account when you define the security
 * Who has access to the secure computer facility?
 * What are the policies for working with service representatives?
 * Will you be using smart card support?
+
+### Workstation consideration
+{: #smart-card-workstation-considerations}
+
+Taking the following workstation-related questions into account when you define the security policy for using the Management Utilities:
+
+* Who will use the TKE workstation?
+* Where will your workstation be located?
+* Is it only accessible to the security administrators or security officers?
+* How many workstations will there be?
 
 
