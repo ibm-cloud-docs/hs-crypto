@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-12"
+lastupdated: "2021-08-16"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -43,7 +43,7 @@ Complete the following steps to order smart cards:
 
 1. On the [{{site.data.keyword.IBM_notm}} Maintenance Parts Retail shop web page](https://www-store.shop.ibm.com/shop/en-US/partsusretail){: external}, enter Field Replaceable Unit (FRU) part number **00RY790** in the search box.
 
-    Online smart card ordering is only available in the United States. For procurement from other countries, see [FAQ: How can I procure smart cards and smart card readers?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-procure-smart-card)
+    Online smart card ordering is only available in the United States. For procurement from other countries, see [FAQ: How can I procure smart cards and smart card readers?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-procure-smart-card).
     {: note}
 
 2. Enter the quantity of packages. Each package contains a set of two smart cards.

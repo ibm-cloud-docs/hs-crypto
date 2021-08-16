@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-04"
+lastupdated: "2021-08-16"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning and operations
 
@@ -37,7 +37,7 @@ Each provisioned operational crypto unit is charged $1560 USD per calendar month
 {{site.data.keyword.cloud_notm}} account billing cycles are based on Universal Time Coordinated (UTC). The billing cycle begins at 00:00:00 UTC on the first day of the month and ends at 23:59:59 UTC on the last calendar day of the month. For example, if you create a service instance on 15 August and delete it on 15 September, it is counted as two calendar months and you are charged $3120 per crypto unit.
 {: note}
 
-The following example is for your reference. If you want to crypto-process 5000 keys by using two operational crypto units and two failover crypto units for cross-region high availability, the amount is $6240 ($1560 per crypto unit) per calendar month. The first 1,000,000 API calls per service instance are free of charge. However, if you perform 3,000,000 API calls per month, you are charged extra $2 ($0.01 per 10,000 API calls over 1,000,000 API calls). In total, there is a monthly charge of $6242 ($3120 for the 2 operational crypto units, $3120 for the two failover crypto units, and $2 for the extra 2,000,000 API calls) for your service instance. The following table contains the pricing details.
+The following example is for your reference. If you want to crypto-process 5000 keys by using two operational crypto units and two failover crypto units for cross-region high availability, the amount is $6240 ($1560 per crypto unit) per calendar month. The first 1,000,000 API calls per service instance are free of charge. However, if you perform 3,000,000 API calls per month, you are charged extra $2 ($0.01 per 10,000 API calls over 1,000,000 API calls). In total, there is a monthly charge of $6242 ($3120 for the two operational crypto units, $3120 for the two failover crypto units, and $2 for the extra 2,000,000 API calls) for your service instance. The following table contains the pricing details.
 
 | Pricing components | Cost per month |
 |-----|----------------|
@@ -48,7 +48,7 @@ The following example is for your reference. If you want to crypto-process 5000 
 | First 1,000,000 API calls | $0 |
 | 2,000,000 extra API calls| $2 ($0.01 x 200) |
 | End of month charge | $6242  |
-{: caption="Table 1. A billing example of 2 operational and two failover crypto units with monthly API calls of 3,000,000 in total" caption-side="bottom"}
+{: caption="Table 1. A billing example of two operational and two failover crypto units with monthly API calls of 3,000,000 in total" caption-side="bottom"}
 
 ## Is there a free trial for {{site.data.keyword.hscrypto}}?
 {: #faq-free-trial}
