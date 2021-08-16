@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-16"
 
 keywords: failed master key rotation, failed to use recovery crypto unit to rotate master keys, tke auto-mk-rotate failure, troubleshoot master key rotation failure
 
@@ -62,7 +62,7 @@ If an error occurs when you run the `ibmcloud tke auto-mk-rotate` command to rot
     ```
     {: codeblock}
 
-- The following message indicates that the reencryption of key storage is complete:
+- The following message indicates that the reencryption of key storage is completed:
 
     ```
     KMS CRK rewrap successful, waiting on cryptounit-mk-setimm

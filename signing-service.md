@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-12"
+lastupdated: "2021-08-16"
 
 keywords: signing service, manage signature keys, customer-writtn signing service, third-party signing service
 
@@ -31,7 +31,7 @@ For {{site.data.keyword.hscrypto}} instance initialization, you can use a third-
 
 Before you can use a signing service to manage signature keys, make sure that you complete the [prerequisite steps](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite) for the instance initialization.
 
-To enable a signing service for Terraform or the TKE CLI plug-in, the signing service must be implemented as an HTTP Server that implements the following two requests. All signature keys that are accessed by using the signing service must be P521 EC keys.
+To enable a signing service for Terraform or the TKE CLI plug-in, the signing service must be implemented as an HTTP server that implements the following two requests. All signature keys that are accessed by using the signing service must be P521 EC keys.
 
 - GET `/keys/:name`
 
@@ -82,7 +82,7 @@ Instead of using signature key files that are stored on your workstation for sig
 
 2. Create a file named `SIGNSERVKEYS` in the subdirectory that is identified by the `CLOUDTKEFILES` environment variable.
 
-    This file is expected to be a JSON string representing an array that lists valid signature keys for signing commands. Each array entry must contain a `key` field and can optionally include a `token` field. The `key` field identifies a particular signature key. The `token` field authorizes use of the key. The signing service determines how the key identification and authentication token are defined. If you don't specify the `token` field in the `SIGNSERVKEYS` file, you will be prompted to enter the token value when you run TKE CLI plug-in commands, which are more secure than directly providing it in the file.
+    This file is expected to be a JSON string representing an array that lists valid signature keys for signing commands. Each array entry must contain a `key` field and can optionally include a `token` field. The `key` field identifies a particular signature key. The `token` field authorizes use of the key. The signing service determines how the key identification and authentication token are defined. If you don't specify the `token` field in the `SIGNSERVKEYS` file, you will be prompted to enter the token value when you run TKE CLI plug-in commands, which is more secure than directly providing it in the file.
 
     The following lists some examples of the `SIGNSERVKEYS` file:
 

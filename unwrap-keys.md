@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-12"
+lastupdated: "2021-08-16"
 
 keywords: data encryption key, key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, unwrap api
 
@@ -115,7 +115,7 @@ Root keys that contain the same key material can unwrap the same data encryption
       <caption>Table 1. Describes the variables that are needed to unwrap keys in {{site.data.keyword.hscrypto}}.</caption>
     </table>
 
-    The original key material is returned in the response entity-body. The response body also contains the ID of the key version that was used to unwrap the supplied ciphertext. The following JSON object shows that a sample returned value.
+    The original key material is returned in the response entity-body. The response body also contains the ID of the key version that was used to unwrap the supplied ciphertext. The following JSON object shows a sample returned value.
 
     ```json
     {
