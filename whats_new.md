@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-08-20"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -24,6 +24,10 @@ subcollection: hs-crypto
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+
+
+
 
 ## 30 July 2021
 {: #july-2021}
@@ -47,9 +51,6 @@ With the integration with Terraform, now you can initialize your service instanc
 {: #add-signing-service}
 
 If you are using Terraform or key part files to initialize a service instance, you can now choose to use a third-party signing service to create, store, and manage the administrator signature keys that are used by Terraform or the Trusted Key Entry (TKE) CLI plug-in. For more information, see [Using a signing service to manage signature keys for instance initialization](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key).
-
-
-
 
 ## 30 June 2021
 {: #june-2021}
@@ -119,11 +120,6 @@ Key aliases are unique human-readable names that can be used to identify a key. 
 {: #add-sync-resources}
 
 When the state of a root key changes, the protected resources that are associated with the root key are notified of the key lifecycle event and are encouraged to respond accordingly. In the case where the resources do not respond to the key lifecycle notification, you can now manually initiate a renotification to those associated cloud services. For more information, see [Synchronizing associated resources](/docs/hs-crypto?topic=hs-crypto-sync-associated-resources).
-
-### Added: Using {{site.data.keyword.mon_full_notm}} to measure {{site.data.keyword.hscrypto}} metrics
-{: #add-monitoring-metrics}
-
-By enabling metrics instance policy, you can now use {{site.data.keyword.mon_full_notm}} to measure how users and applications interact with {{site.data.keyword.hscrypto}}. For more information, see [Managing metrics](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics) and [Monitoring operational metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics).
 
 ### Added: Using Virtual Private Endpoints for VPC
 {: #add-vpe-for-vpc}
