@@ -97,7 +97,7 @@ When the operations are done, `true` is displayed in the SELECTED column for eac
 
 If you enable cross-region high availability with [failover crypto units](/docs/hs-crypto?topic=hs-crypto-understand-concepts#crypto-unit-concept), make sure that you add all the failover crypto units to the selected list for instance initialization.
 
-If you don't initialize and configure failover crypto units the same as the operational crypto units, you are not able to use the failover crypto units for automatic data restoration when a regional disaster happens. If you want to remove administrator, click `Remove Administrator` state. For more information about cross-region disaster recovery, see [High availability and disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr).
+If you don't initialize and configure failover crypto units the same as the operational crypto units, you are not able to use the failover crypto units for automatic data restoration when a regional disaster happens. For more information about cross-region disaster recovery, see [High availability and disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr).
 {: important}
 
 ### Step 3: Add administrators to the selected crypto units
@@ -118,7 +118,7 @@ Repeat this step if you want to add multiple administrators. The number of admin
 * The [signature threshold](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept) value. The signature threshold controls how many signatures are needed to run most administrative commands.
 * The revocation signature threshold value that you intend to set in Step 4. The revocation signature threshold controls how many signatures are needed to remove an administrator.
 
-Do not remove the administrator signature keys from your smart cards. Otherwise, you are not able to perform TKE actions that need to be signed, such as zeroizing crypto units and rotating master keys.
+Do not remove the administrator signature keys from your smart cards. Otherwise, you are not able to perform TKE actions that need to be signed, such as zeroizing crypto units and rotating master keys. If you want to remove administrator, click `Remove Administrator` state. 
 {: important}
 
 ### Step 4: Set the signature thresholds to exit imprint mode in the selected crypto units
