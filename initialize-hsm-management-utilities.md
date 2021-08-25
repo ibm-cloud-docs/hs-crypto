@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-12"
+lastupdated: "2021-08-25"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, smart card, trusted key entry application, tke application, management utilities
 
@@ -97,7 +97,7 @@ When the operations are done, `true` is displayed in the SELECTED column for eac
 
 If you enable cross-region high availability with [failover crypto units](/docs/hs-crypto?topic=hs-crypto-understand-concepts#crypto-unit-concept), make sure that you add all the failover crypto units to the selected list for instance initialization.
 
-If you don't initialize and configure failover crypto units the same as the operational crypto units, you are not able to use the failover crypto units for automatic data restoration when a regional disaster happens. For more information about cross-region disaster recovery, see [High availability and disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr).
+If you don't initialize and configure failover crypto units the same as the operational crypto units, you are not able to use the failover crypto units for automatic data restoration when a regional disaster happens. If you want to remove administrator, click `Remove Administrator` state. For more information about cross-region disaster recovery, see [High availability and disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr).
 {: important}
 
 ### Step 3: Add administrators to the selected crypto units
@@ -173,6 +173,8 @@ Perform this step only when you are setting up a service instance for the first 
 3. If prompted, insert an EP11 smart card with an administrator signature key that is defined to the selected crypto units in smart card reader 1. And then, enter the smart card PIN on the smart card reader PIN pad.
 
 The crypto units in the current master key register is now in `Valid` status, which indicates that your master key is loaded to your service instance.
+
+If you want to clear your current master key, click the `clear current` state.
 
 ## What's next
 {: #initialize-crypto-utilities-management-utilities-next}
