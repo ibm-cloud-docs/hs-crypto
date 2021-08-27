@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-12"
+lastupdated: "2021-08-26"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, smart card, trusted key entry application, tke application, management utilities
 
@@ -118,8 +118,10 @@ Repeat this step if you want to add multiple administrators. The number of admin
 * The [signature threshold](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept) value. The signature threshold controls how many signatures are needed to run most administrative commands.
 * The revocation signature threshold value that you intend to set in Step 4. The revocation signature threshold controls how many signatures are needed to remove an administrator.
 
-Do not remove the administrator signature keys from your smart cards. Otherwise, you are not able to perform TKE actions that need to be signed, such as zeroizing crypto units and rotating master keys.
+Do not remove the administrator signature keys from your smart cards. Otherwise, you are not able to perform TKE actions that need to be signed, such as zeroizing crypto units and rotating master keys.  
 {: important}
+
+If you want to remove the administrator in a later phase, click **Remove Administrator**.
 
 ### Step 4: Set the signature thresholds to exit imprint mode in the selected crypto units
 {: #step4-exit-imprint-mode-management-utilities}
@@ -173,6 +175,8 @@ Perform this step only when you are setting up a service instance for the first 
 3. If prompted, insert an EP11 smart card with an administrator signature key that is defined to the selected crypto units in smart card reader 1. And then, enter the smart card PIN on the smart card reader PIN pad.
 
 The crypto units in the current master key register is now in `Valid` status, which indicates that your master key is loaded to your service instance.
+
+If you want to clear your current master key in a later phase, click  **Clear current**.
 
 ## What's next
 {: #initialize-crypto-utilities-management-utilities-next}

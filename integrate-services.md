@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-16"
+lastupdated: "2021-08-27"
 
 keywords: integration, encryption at rest, cloud object storage, object storage, kmip, containers, vmware, database, compute
 
@@ -90,7 +90,6 @@ You can integrate {{site.data.keyword.hscrypto}} with the following ingestion se
 
 | Service | Description | Integration instruction |
 | ------- | ----------- | ----------------------- |
-| [{{site.data.keyword.mon_full_notm}}](/docs/monitoring){: external} | {{site.data.keyword.mon_full_notm}} is a cloud-native, and container-intelligence management system. You can use it to gain operational visibility into the performance and health of your {{site.data.keyword.hscrypto}} instance. | [Getting started tutorial](/docs/monitoring?topic=monitoring-getting-started) |
 | [{{site.data.keyword.bpfull_notm}}](/docs/schematics){: external} | {{site.data.keyword.bpfull_notm}} provides powerful tools to automate your cloud infrastructure provisioning and management process, the configuration and operation of your cloud resources, and the deployment of your application workloads. All data, user inputs and the data that is generated at runtime during execution of automation code, are stored in {{site.data.keyword.cos_full_notm}}. This data is encrypted by default by using encryption keys from Schematics. If you need to control the encryption keys, you can integrate with your {{site.data.keyword.hscrypto}} instance to use your own root keys. | [Enabling customer-managed keys for Schematics](/docs/schematics?topic=schematics-secure-data#using-byok) |
 | [{{site.data.keyword.messagehub}}](/docs/EventStreams){: external} | The {{site.data.keyword.messagehub}} service is a high-throughput message bus that is built with Apache Kafka. You can use it for event ingestion into {{site.data.keyword.cloud_notm}} and event stream distribution between your services and applications. By default, message payload data in {{site.data.keyword.messagehub}} is encrypted at rest by using a randomly generated key. If you need to control the encryption keys, you can integrate with your {{site.data.keyword.hscrypto}} instance to use your own root keys. | [Enabling a customer-managed key for Event Streams](/docs/EventStreams?topic=EventStreams-managing_encryption#enabling_encryption) |
 {: caption="Table 5. Supported ingestion services." caption-side="bottom"}
