@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-09-06"
 
 keywords: error message, error code, error, kms error, key management error message, hpcs error messages, hyper protect crypto services error message
 
@@ -1906,12 +1906,12 @@ The client cannot repeat this request without modification.
 Many key "actions" can only be performed on "root" keys. This is a list of
 commands that can only be performed on root keys.
 
-- disable key
-- enable key
-- restore key
-- rotate key
-- unwrap key
-- wrap key
+- `disable key`
+- `enable key`
+- `restore key`
+- `rotate key`
+- `unwrap key`
+- `wrap key`
 
 #### Example
 {: #error-messages-key-root-req-err-context-example}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-04"
+lastupdated: "2021-09-07"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning, operations
 
@@ -32,7 +32,7 @@ Read to get answers for questions about provisioning an {{site.data.keyword.clou
 
 To use {{site.data.keyword.hscrypto}}, you need to have a Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account.
 
-If you don't have an {{site.data.keyword.cloud_notm}} account, create a Lite account first by going to [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/login){: external} and clicking **Create an {{site.data.keyword.Bluemix_notm}} account**. And then [upgrade it to a Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-upgrading-account). You can also [apply your promo code](/docs/billing-usage?topic=billing-usage-applying-promo-codes) if you have one. For more information about {{site.data.keyword.cloud_notm}} accounts, see [FAQs for accounts](/docs/account?topic=account-accountfaqs).
+If you don't have an {{site.data.keyword.cloud_notm}} account, create an account first by going to [{{site.data.keyword.Bluemix_notm}} registration](https://cloud.ibm.com/registration){: external}. To check your account type, go to [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/login){: external} and click **Management** > **Account** > **Account settings**. You can also [apply your promo code](/docs/billing-usage?topic=billing-usage-applying-promo-codes) if you have one. For more information about {{site.data.keyword.cloud_notm}} accounts, see [FAQs for accounts](/docs/account?topic=account-accountfaqs).
 
 The service can be provisioned quickly by following instructions in [Provisioning service instances](/docs/hs-crypto?topic=hs-crypto-provision). However, in order to perform key management and cryptographic operations, you need to [initialize service instances](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode) first by using {{site.data.keyword.cloud_notm}} TKE CLI plug-in or the Management Utilities.
 
