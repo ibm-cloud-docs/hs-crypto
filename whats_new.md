@@ -296,8 +296,6 @@ Added: {{site.data.keyword.hscrypto}} expands into Sydney region {: #added-sydne
 {{site.data.keyword.hscrypto}} is generally available {: #ga-201903}
 :   As of 29 March 2019, provisioning new Hyper Protect Crypto Services Beta instances will no longer be possible. Existing instances will have support until the End of Beta Support Date (30 April 2019).
 
-
-
     For more information about the {{site.data.keyword.hscrypto}} offering, see the [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} home page](https://www.ibm.com/cloud/hyper-protect-crypto){: external}.
 
 High availability and disaster recovery {: #ha-dr-new}
