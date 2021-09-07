@@ -60,7 +60,8 @@ toc:
               - introduce-master-key-rotation.md
               - introduce-root-key-rotation.md
       - integrate-services.md
-      - whats_new.md
+      - topic: whats_new.md
+        navtitle: Release notes
 
   - navgroup:
       id: tutorial
@@ -82,6 +83,9 @@ toc:
           - link:
               label: "Tutorial: Enhancing security of your deployed application"
               href: https://{DomainName}/docs/tutorials?topic=solution-tutorials-extended-app-security
+          - link:
+              label: "Tutorial: Secure a digital wallet in the public cloud"
+              href: https://developer.ibm.com/patterns/secure-bitcoin-wallet-with-ibm-cloud-hyper-protect-virtual-servers/
           - tutorials/kmip-vmware.md
       - topicgroup:
           label: Tutorials on cloud hardware security module
@@ -90,9 +94,12 @@ toc:
           - tutorials/db2-pkcs11.md
           links:
           - link:
+              label: "Tutorial: Integrate Enterprise HashiCorp Vault with IBM Cloud Hyper Protect Crypto Services"
+              href: https://developer.ibm.com/tutorials/integrate-enterprise-vault-ibm-cloud-hyper-protect-crypto-services/
+          - link:
               label: "Tutorial: Using IBM Cloud Hyper Protect Crypto Services to offload NGINX TLS"
               href: https://developer.ibm.com/components/ibmz/tutorials/use-hyper-protect-crypto-services-to-offload-nginx-tls/
-
+              
   - navgroup:
       id: howto
       topics:
