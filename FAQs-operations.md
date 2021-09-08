@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-09-07"
+lastupdated: "2021-09-08"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning, operations
 
@@ -131,8 +131,8 @@ Yes. {{site.data.keyword.hscrypto}} can be used with {{site.data.keyword.keymana
 
 
 
-## Can I use {{site.data.keyword.hscrypto}} along with other cloud provider services such as AWS and Azure?
+## Can I use {{site.data.keyword.hscrypto}} for applications hosted in other cloud service providers such as AWS, Azure, and GCP?
 {: #faq-hpcs-other-cloud-vendor}
 {: faq}
 
-Yes. Any application can connect to {{site.data.keyword.hscrypto}} and use our APIs from anywhere on the internet.
+Yes. An application hosted in other cloud service providers can call the public APIs for Keep You Own Key (KYOK) or PKCS #11 with an appropriate network connection.
