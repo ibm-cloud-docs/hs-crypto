@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-09-07"
+lastupdated: "2021-09-08"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -34,6 +34,7 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 ## 30 July 2021
 {: #july-2021}
+{: release-note}
 
 Added: Exclusive control on the execution of cryptographic operations {: #add-cert-manager}
 :   To ensure the exclusive control on the execution of cryptographic operations, you can use the {{site.data.keyword.hscrypto}} certificate manager CLI to enable the second layer of authentication for EP11 (GREP11 or PKCS #11 API) connections. By enabling this function, you enable an extra layer of access control on top of the Identity and Access Management (IAM) token to the EP11 applications. A mutual TLS connection is established to ensure that only EP11 applications with a valid client certificate can perform EP11 operations. For more information, see [Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11)
@@ -49,6 +50,7 @@ Added: Using a signing service to manage signature keys for instance initializat
 
 ## 30 June 2021
 {: #june-2021}
+{: release-note}
 
 Added: Authenticated PKCS #11 keystore {: #add-authenticated-pkcs11-keystore}
 :   The PKCS #11 database-backed keystores can now be encrypted and authenticated. For each service instance, a maximum of five authenticated PKCS #11 keystores are supported. You can enable the `sessionauth` parameter to encrypt the generated keys into the keystore or to decrypt the key before you use it. For more information, see [Set up the PKCS #11 configuration file](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file).
@@ -61,6 +63,7 @@ Added: {{site.data.keyword.hscrypto}} expands into the London region {: #add-lon
 
 ## 30 April 2021
 {: #april-2021}
+{: release-note}
 
 Added: Rotating your master key by using smart cards and the Management Utilities {: #add-master-key-rotation-smart-cards}
 :   Besides rotating your master key [using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part) and [using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit), you can now also rotate the master key if you are using smart cards and the Management Utilities.
@@ -72,6 +75,7 @@ Updated: Restore key API and UI {: #update-restore-key-api-ui}
 
 ## 31 March 2021
 {: #march-2021}
+{: release-note}
 
 Added: Grouping keys by using key rings {: #add-key-ring}
 :   You can now group the keys in your {{site.data.keyword.hscrypto}} instance by creating a key ring. In this case, you can manage keys and control access at the key ring level. For how to use key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
@@ -104,6 +108,7 @@ Updated: The cryptography algorithm that is used to generate signature keys {: #
 
 ## 28 February 2021
 {: #february-2021}
+{: release-note}
 
 Added: Key verification by using the PKCS #11 API {: #add-key-verification}
 :   To ensure that no tampering has occurred to the keys that are stored in the {{site.data.keyword.hscrypto}} instance by using the PKCS #11 API, a key verification mechanism is now provided for you to check the key objects that are stored in {{site.data.keyword.hscrypto}}. For instructions on how to verify key objects, see [Verifying that keys are protected by crypto units](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs11-key-verify).
@@ -115,6 +120,7 @@ Added: Support for the Schnorr algorithm {: #add-schnorr}
 
 ## 31 January 2021
 {: #january-2021}
+{: release-note}
 
 Added: Support for a single-tenant KMIP adapter {: #add-support-kmip-adapter}
 :   {{site.data.keyword.hscrypto}} now provides a single tenant KMIP adapter to manage the key distribution in the vSphere or vSAN environment. For more information, see [Configuring KMIP in {{site.data.keyword.hscrypto}} for key management and distribution](/docs/hs-crypto?topic=hs-crypto-tutorial-kmip-vmware).
