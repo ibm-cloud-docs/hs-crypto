@@ -65,7 +65,7 @@ The name of the partition data set must be unique.
 
    ```
    1. Cloud connector settings
-   2. cloud server status
+   2. Cloud server status
    3. Cloud datasets
    4. Backup History datasets
    5. Acruve Tasks
@@ -94,14 +94,15 @@ The name of the partition data set must be unique.
    ```
    000023 TERSE EXEC PGH*TRSMAIN
    ```
+   {: Screen}
    6. SYSUT2 command
    ```
    000031 //STSUT2 XX DSN*YOURDATASETNAME.JCL.TERSE
    ```
    {: Screen}
-   And on the command `RES` and then `SUBMIT`
+   Enter `RES` command and then `SUBMIT` command on the bottom command line.
 
-   Verify the sequential data has been created via the ISPF. If you enter `YOURDATASETNAME.JCL` next to the Dsname Level, you should also find the corresponding sequential data set named: `YOURDATASETNAME.JCL.TERSE`
+   7. Verify the sequential data has been created via the ISPF. If you enter `YOURDATASETNAME.JCL` next to the Dsname Level, you should also find the corresponding sequential data set named: `YOURDATASETNAME.JCL.TERSE`
 
 4. Verify the data set in the cloud object storage. Now If you enter the `%CUZVP11` command and verify the cloud tape connector via `3. Cloud Datasets`, the data set is backed up in the cloud tape connector. The cloud data set name is the same as in the Cloud object storage. For exmple, you can check here.
 ```
@@ -118,7 +119,7 @@ Each Cloud tape connector also has its own CTC repository and use it to keep tra
 ## Verifing data set in the cloud object storage bucket
 
 Now, in your cloud object storage bucket, you should find 2 automatic object data sets. one is `CUZSTAGE.DUMPTRS.JOBXXXX.SYSUT2.XXXXXX` and the other is `CUZSTAGE.DUMPTRS.JOBXXXX.SYSUT2.XXXXXXXX.1INFOCTC`
-The first one is the meta data set and it is the identifier for the Rebuild Job to discover data sets between the Cloud object storage and z/OS Virtual server instance.
+The first one is the meta data set (不确定) and it is the identifier for the Rebuild Job to discover data sets between the cloud object storage and z/OS Virtual server instance.
 
 ---这里kevin说了多的这个meta data, client have to run on the target side and need to check (How?)
 
@@ -127,19 +128,20 @@ The first one is the meta data set and it is the identifier for the Rebuild Job 
 
 After you back up data to the cloud object storage, complete the following steps to restore data set on z/OS virtual server instance side.
 
-1. Enter cloud tape connector parameter `%CUZVP11` command and click `2 cloud server status` to check the repository name and verify the name, if you currently would like to find the JCL data in the  virtual server instance, it would show `No data names found` on the top right corner.
+1. Enter cloud tape connector parameter `%CUZVP11` command on top command line and click `2 cloud server status` to check the repository name. If you currently would like to find the `YOURDATASETNAME.JCL` data set in the  virtual server instance, it would show `No data names found` on the top right corner.
 ---这里CUZDATA 的话，之前有出现z/OS repository的方面嘛，这里就要确认是在CUZDATA （same repositroy)?
 
 2. Restore the data set via cloud tape connector.
 
-   1. On the Dsname level and use `IBMUSER.JCL` to discover the data sets and enter `b` to browse the `CUZJRBLR` rebuild job, and then enter `SUBMIT` on the bottom.  
+   1. Input `IBMUSER.JCL` on the Dsname level line to discover the data sets and enter `b` command to browse the `CUZJRBLR` rebuild job. To submit the job, then enter `SUBMIT` command on the bottom command line.  
 
-   2. Check the `3. Cloud datasets` and find the sequential data set `YOURDATASETNAME.JCL.TERSE`, Enter`R` command to restore the data sets.
+   2. Check the `3. Cloud datasets` and find the sequential data set `YOURDATASETNAME.JCL.TERSE`. Then enter `R` command to restore the data sets.
 
-   3. Delete the bucket on the `Restore to Alias` and change `Restore Dataset` to be `Y`
+   3. Delete the bucket name on the `Restore to Alias` line and change `Restore Dataset` to be `Y`
 
-   4. You need to browse the `IBMUSER.JCL` by input `b` on `Restor` and find the example below:
+   4. You need to browse the `IBMUSER.JCL` by enter `b` command on `Restor` and find the example below:
    ```
+   //UNTERSE EXEC PGM = TRSMAIN>PARM=UNPACK
    //INFILE DD DISP=SHR,DSN=YOURDATASETNAME.JCL.TERSE
    //OUTFILE DD DISP=SHR,DSN=&&TEMP1
    *
@@ -147,12 +149,11 @@ After you back up data to the cloud object storage, complete the following steps
    ```
    {: Screen}
 
-   To submit the restoring job, then enter `SUBMIT` command on the bottom command line
+   To submit the restoring job, then enter `SUBMIT` command on the bottom command line.
 
-3. Verify data set on virtual server instance and back to the Dsname level, input `YOURDATASETNAME.JCL` and you could find `YOURDATASETNAME.JCL.TERSE` sequential data set on the virtual server instance side.
+3. Verify partiion data set on virtual server instance. You should back to the cloud tape connector page and enter `YOURDATASETNAME.JCL` command on Dsname level, you can find both sequential data set (`YOURDATASETNAME.JCL.TERSE`) and partition data set (`YOURDATASETNAME.JCL`) together on the virtual server instance side.
 
-
-Can create a report before touching the repository ----这个需要问一下
+Can create a report before touching the repository --Parameter ----这个需要问一下
 
 
 ![BYOD using cloud tape connector](images/vpc-byod-ctc.svg "Figure showing BYOD using cloud tape connector"){: caption="Figure 1. BYOD using cloud tape connector" caption-side="top"}
