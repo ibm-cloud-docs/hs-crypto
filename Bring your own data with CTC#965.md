@@ -83,13 +83,13 @@ The name of the partition data set must be unique.
    {: Screen}
    4. Enter `v` command next to DUMPTRS, you would get interface like:
 
-```
-000001 // DUMPTRS
-000002 //
-000003 //DUMP
-000004 //DASD
-```
-{: Screen}
+   ```
+   000001 // DUMPTRS
+   000002 //
+   000003 //DUMP
+   000004 //DASD
+   ```
+   {: Screen}
    5. TERSE command
    ```
    000023 TERSE EXEC PGH*TRSMAIN
