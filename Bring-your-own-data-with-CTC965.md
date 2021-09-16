@@ -48,25 +48,27 @@ Complete the following prerequisites:
 5. Make sure that you have obtained the IP address of the cloud object storage public endpoint via ping. For more information, see [Allowing public access](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-iam-public-access).
 --这个IP address 还是不大确认
 
---Which cloud server type to use and need confirmation
+--Which cloud server type to use and need confirmation (optional for now)
 (Cloud server? https://www.ibm.com/docs/en/cloud-tape-connector/2.1?topic=options-create-cloud-server-definition)
 
 
 ## Backing up data to cloud object storage:
 
- Complete the following steps to back up data set from the zos to the bucket of the cloud object storage.
+ Complete the following steps to back up data set from the z/OS to the bucket of the cloud object storage.
 
 1. Install the Cloud tape connector on the On-prem z/OS instance. For more information, see [Configuration Cloud tape connector](https://www.ibm.com/docs/en/cloud-tape-connector/2.1?topic=connector-configuration-summary).
----这里有没有需要和dev确认的 Cloud specific --Scerario specific？(cloud 配置，每个字段的例子，每个cloud的信息配置)
+---这里有没有需要和dev确认的 Cloud specific --Scenario specific？(cloud 配置，每个字段的值，每个cloud的信息配置)
 
-2. Create the partitioned data set and give the name for the partition data set. For more information, see[Creating partition data set](https://www.ibm.com/docs/en/zos/2.4.0?topic=ispfpdf-creating-partitioned-data-set). （Prepare data set that you want to back, for example, IBMTEST.JCL)
+2. Prepare the partiton data set that you want to back up. For example, the partition data set name is `IBMCTCTEST.JCL`.
 
 
-3. Dump the partition data set into sequential data set via the JCL job.
+3.
+
+Back up partition data set to cloud tape connector and back up to remote cloud object storage.
 
    1. Back up data  to cloud tape connector:  Enter the `%CUZVP11` command to bring up the cloud tape connector interface.
 
-   2. Select panel once you have installed the cloud tape connector. you need to click `3. Cloud datasets` and find the partition data set that you want to back up. You can also Enter the `b` command to browse the data set and find multiple data sets within the partition data set.
+   2. Select panel once you have installed the cloud tape connector. you need to click `3. Cloud datasets` and find the partition data set that you want to back up. You can also enter `b` command to browse the data set and find multiple data sets within the partition data set.
 
    3. Enter `l dump` command to dump the partition data set into sequential data sets. For example, you can find
 
@@ -83,21 +85,21 @@ Complete the following prerequisites:
    000002 //
    000003 //DUMP
    000004 //DASD
-   ```
-   {: Screen}
-   5. TERSE command
-   ```
+   ...
    000023 TERSE EXEC PGH*TRSMAIN
+   ...
+   000031 //STSUT2 XX DSN*IBMCTCTEST.JCL.TERSE
    ```
    {: Screen}
-   6. SYSUT2 command
-   ```
-   000031 //STSUT2 XX DSN*YOURDATASETNAME.JCL.TERSE
-   ```
-   {: Screen}
-   Enter `RES` command and then `SUBMIT` command on the bottom command line.
+
+   `DUMPTRS` command means dump data from partition data set to sequential data sets.
+   `TERSE` command means compress sequential data set
+   `SYSUT2` statement is for output and authenticate SYSUT2 data set allocated with
+    the destination to the cloud object storage.
+
+   Enter `RES` command and then enter `SUBMIT` command on the bottom command line.
 ISPF (3.4)
-   7. Verify the sequential data has been created via the ISPF. If you enter `YOURDATASETNAME.JCL` next to the Dsname Level, you should also find the corresponding sequential data set named: `YOURDATASETNAME.JCL.TERSE`
+   7. Verify the sequential data has been created via the ISPF. If you enter `IBMCTCTEST.JCL` next to the Dsname Level, you should also find the corresponding sequential data set named: `IBMCTCTEST.JCL.TERSE`
 
 4. Verify the data set in the cloud object storage. Now If you enter the `%CUZVP11` command and verify the cloud tape connector via `3. Cloud Datasets`, the data set is backed up in the cloud tape connector. The cloud data set name is the same as in the Cloud object storage. For exmple, you can check here.
 ```
