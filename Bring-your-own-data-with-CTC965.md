@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021，2021
-lastupdated: "2021-09-16"
+lastupdated: "2021-09-17"
 
 keywords: CTC，cloud tape connector, cloud object storage
 
@@ -62,56 +62,42 @@ Complete the following prerequisites:
 2. Prepare the partiton data set that you want to back up. For example, the partition data set name is `IBMCTCTEST.JCL`.
 
 
-3.
+3. Back up z/OS on prem data sets to cloud object storage via cloud tape connector interface.
+   1. Enter the `%CUZVP11` command to bring up the cloud tape connector ISPF interface.
 
-Back up partition data set to cloud tape connector and back up to remote cloud object storage.
+   2. Select `3. Cloud datasets` and find the partition data set that you want to back up. You can also enter `b` command to browse your current data set.
 
-   1. Back up data  to cloud tape connector:  Enter the `%CUZVP11` command to bring up the cloud tape connector interface.
-
-   2. Select panel once you have installed the cloud tape connector. you need to click `3. Cloud datasets` and find the partition data set that you want to back up. You can also enter `b` command to browse the data set and find multiple data sets within the partition data set.
-
-   3. Enter `l dump` command to dump the partition data set into sequential data sets. For example, you can find
-
-
-3ge statement
-   ```
-   000010 DUMP DATASER(INCLUDE(YOURDATASETNAME.JCL))
-   ```
-   {: Screen}
-   4. Enter `v` command next to DUMPTRS, you would get interface like:
+   3. Enter `l dump` command to dump the partition data set into sequential data sets, enter `v` command next to `DUMPTRS` and enter `RES` command. For example, you can find the screen
 
    ```
-   000001 // DUMPTRS
-   000002 //
-   000003 //DUMP
-   000004 //DASD
+   // DUMP DATASET(INCLUDE(IBMCTCTEST.JCL))
    ...
-   000023 TERSE EXEC PGH*TRSMAIN
+   // TERSE EXEC PGM=TRSMAIN.PARM='PACK',COND = (0.NE)
    ...
-   000031 //STSUT2 XX DSN*IBMCTCTEST.JCL.TERSE
+   // STSUT2 DO DSN=IBMCTCTEST.JCL.TERSE,
+   ...
    ```
    {: Screen}
 
-   `DUMPTRS` command means dump data from partition data set to sequential data sets.
-   `TERSE` command means compress sequential data set
-   `SYSUT2` statement is for output and authenticate SYSUT2 data set allocated with
-    the destination to the cloud object storage.
+   `DUMP` command means dump the data set and back up data set to the cloud object storage.
+   `TERSE` command means compress sequential data set.
+   `SYSUT2` statement is for output and shows the destination data set name to the cloud object storage.
 
-   Enter `RES` command and then enter `SUBMIT` command on the bottom command line.
-ISPF (3.4)
-   7. Verify the sequential data has been created via the ISPF. If you enter `IBMCTCTEST.JCL` next to the Dsname Level, you should also find the corresponding sequential data set named: `IBMCTCTEST.JCL.TERSE`
+   4. To submit the back up job, enter `SUBMIT` command on the command line.
 
-4. Verify the data set in the cloud object storage. Now If you enter the `%CUZVP11` command and verify the cloud tape connector via `3. Cloud Datasets`, the data set is backed up in the cloud tape connector. The cloud data set name is the same as in the Cloud object storage. For exmple, you can check here.
+   5. Verify the sequential data has been created via the ISPF (3.4). If you enter `IBMCTCTEST.JCL` next to the Dsname Level, you should also find the new sequential data set name: `IBMCTCTEST.JCL.TERSE`
+
+4. You can verify the data set in the cloud object storage via 2 ways:
+   1. Verify data sets in cloud object storage via cloud tape command interface. Enter the `%CUZVP11` command to bring up the cloud tape connector interface and select `3. Cloud Datasets`, the data set is backed up in the cloud tape connector. The cloud data set name is the same as in the Cloud object storage. For example, you can check here.
 ```
 Dataset Name                 Backup Timestamp        Cloud Dataset name
 YOURDATASETNAME.JCL.TERSE         XXXXX              CUZSTAGE.DUMPTRS.JOBXXXX.SYSUT2.XXXXXXXX
 ```
 {: Screen}
 
+   2. Verify data sets in Cloud object storage via buckets,
+   you should find 2 automatic object data sets. one is `CUZSTAGE.DUMPTRS.JOBXXXX.SYSUT2.XXXXXX` and the other is `CUZSTAGE.DUMPTRS.JOBXXXX.SYSUT2.XXXXXXXX.1INFOCTC`. One is the meta data set and it is the identifier for the Rebuild Job (CUZJRBLR) to discover data sets between the cloud object storage and z/OS Virtual server instance.
 
-Because the Cloud tape connector configure with Back up filter criteria with certain file name/type, and once it filters the certain files, it would write to the Cloud object storage instance. 
-Each Cloud tape connector also has its own CTC repository and use it to keep track of what has been back up on the COS.  (这两段不知道放在哪里比较合适)
-  下面的放上来
 
 ## Synchronize CTC repository
 
@@ -123,10 +109,7 @@ CTC备份过去，repository meta data， repository
 1. Cloud z/OS
 2. JCL 找到
 
-Now, in your cloud object storage bucket, you should find 2 automatic object data sets. one is `CUZSTAGE.DUMPTRS.JOBXXXX.SYSUT2.XXXXXX` and the other is `CUZSTAGE.DUMPTRS.JOBXXXX.SYSUT2.XXXXXXXX.1INFOCTC`
-The first one is the meta data set (不确定) and it is the identifier for the Rebuild Job to discover data sets between the cloud object storage and z/OS Virtual server instance.
 
----这里kevin说了多的这个meta data, client have to run on the target side and need to check (How?)
 
 
 ## Restoring data on virtual server instance side:
