@@ -132,7 +132,6 @@ Complete the following steps to restore data set on z/OS virtual server instance
    `UNTERSE` command means transmit sequential data set to partition data set.
    `INFILE` command shows sequential data set destination name.
    `RESTORE` command means restore data set to the virtual server instance side.
-
    To submit the restoring job, then enter `SUBMIT` command on the bottom command line.
 
 5. Verify partition data set on z/OS virtual server instance. You should open the cloud tape connector interface and enter `IBMCTCTEST.JCL` command on Dsname level, you can find both sequential data set (`IBMCTCTEST.JCL.TERSE`) and partition data set (`IBMCTCTEST.JCL`) together on the virtual server instance side.
