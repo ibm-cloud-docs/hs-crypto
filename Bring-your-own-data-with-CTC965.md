@@ -111,13 +111,12 @@ You need to run Rebuild job (CUZJRBLR) on the z/OS VSI, so that the cloud tape c
 ## Restoring data to the z/OS virtual server instance
 
 Complete the following steps to restore data set on z/OS virtual server instance.
-1.  Input `IBMUSER.JCL` on the Dsname level line to discover the data sets and enter `b` command to browse the `CUZJRBLR` rebuild job. To submit the job, then enter `SUBMIT` command.
 
-2.  Check the `3. Cloud datasets` and find the sequential data set `IBMCTCTEST.JCL.TERSE`. Then enter `R` command to restore the data sets.
+1.  Click the ISPF `3. Cloud datasets` and find the sequential data set `IBMCTCTEST.JCL.TERSE`. Then enter `R` command to restore the data sets.
 
-3.  Delete the bucket name on the `Restore to Alias` line and change `Restore Dataset` to be `Y`.
+2.  Delete the bucket name on the `Restore to Alias` line and change `Restore Dataset` to be `Y`.
 
-4.  You can now update the data set you want to restore in the `IBMUSER.JCL`. This process will  unpack the sequential data set and restore it to the z/OS virtual server instance.
+3.  You can now update the data set you want to restore in the `IBMUSER.JCL`. This process will  unpack the sequential data set and restore it to the z/OS virtual server instance.
     ```
     ...
     //UNTERSE EXEC PGM = TRSMAIN,PARM='UNPACK'
@@ -129,6 +128,6 @@ Complete the following steps to restore data set on z/OS virtual server instance
 
     where `IBMCTCTEST.JCL.TERSE` is the destination data set name to the z/OS virtual server instances.
 
-5. To submit the restoring job, then enter `SUBMIT` command.
+4. To submit the restoring job, then enter `SUBMIT` command.
 
-6. Verify partition data set on z/OS virtual server instance. You should open the cloud tape connector interface and enter `IBMCTCTEST.JCL` command on Dsname level, you can find both sequential data set (`IBMCTCTEST.JCL.TERSE`) and partition data set (`IBMCTCTEST.JCL`) together on the virtual server instance side.
+5. Verify partition data set on z/OS virtual server instance. You should open the cloud tape connector interface and enter `IBMCTCTEST.JCL` command on Dsname level, you can find both sequential data set (`IBMCTCTEST.JCL.TERSE`) and partition data set (`IBMCTCTEST.JCL`) together on the virtual server instance side.
