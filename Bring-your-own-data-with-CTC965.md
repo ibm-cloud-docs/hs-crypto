@@ -29,7 +29,7 @@ subcollection: hs-crypto
 # Bringing your own data to z/OS virtual server instance  - Draft
 {: #vsi-is-ctc}
 
-You can backup data sets from on prem z/OS operating system via using cloud tape connector and then restore it to z/OS virtual server instance in the cloud.
+You can backup data sets from on-prem z/OS operating system via using cloud tape connector and then restore it to z/OS virtual server instance in the cloud.
 {: shortdesc}
 
 ![BYOD using cloud tape connector](images/vpc-byod-ctc.svg "Figure showing BYOD using cloud tape connector"){: caption="Figure 1. BYOD using cloud tape connector"}
