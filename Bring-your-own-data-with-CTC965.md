@@ -67,7 +67,7 @@ Complete the following prerequisites:
 
    2. Select `3. Cloud datasets` and find the partition data set that you want to back up. You can also enter `b` command to browse your current data set.
 
-   3. Update your JCL to include the following statements. This process will dump the partition data sets into sequential data sets and pack the data sets to the z/OS cloud tape connector with specified destination name.
+   3. Update your JCL to include the following statements. This process will dump the partition data sets into sequential data sets and pack the data sets to the z/OS cloud tape connector with specified destination name. [To do: Not sure whether the DUMPTRS.JCL is the only solution https://www.ibm.com/docs/en/cloud-tape-connector/2.1?topic=interface-staging-options Here is the link for CTC menu ]
 
     ```
     // DUMP DATASET(INCLUDE(IBMCTCTEST.JCL))
