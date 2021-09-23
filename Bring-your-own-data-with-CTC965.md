@@ -32,6 +32,9 @@ subcollection: hs-crypto
 You can back up data sets from on-prem z/OS operating system via using cloud tape connector and then restore it to the z/OS virtual server instance in the cloud. The following diagram gives you an overview of steps you need to take to bring the data set from z/OS on-prem to z/OS virtual server instance.
 {: shortdesc}
 
+Working with z/OS virtual server instances on VPC is an experimental feature that requires special approval. Contact your IBM Sales representative if you're interested in getting access.
+{: experimental}
+
 ![BYOD to z/OS virtual server instance](images/vpc-byod-ctc.svg "Figure showing BYOD to z/OS virtual server instance"){: caption="Figure 1. BYOD to z/OS virtual server instance" caption-side="bottom"}
 
  The whole process is divided into 3 main parts. Firstly, you can back up partition data set to the cloud tape connector on the on-prem z/OS . Then you can synchronize cloud tape connector repositories via the Rebuild Job (CUZJRBLR). This rebuild job will discover the meta data on the cloud object storage and then rebuild the data set to the z/OS virtual server instance repository. Lastly, you can restore data set on the z/OS virtual server instance. You can now perform following steps.
