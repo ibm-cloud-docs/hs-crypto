@@ -29,12 +29,12 @@ subcollection: hs-crypto
 # Bringing your own data to z/OS virtual server instance  - Draft
 {: #vsi-is-ctc}
 
-You can backup data sets from on-prem z/OS operating system via using cloud tape connector and then restore it to the z/OS virtual server instance in the cloud. The following diagram gives you an overview of steps you need to take to bring the data set from z/OS on-prem to z/OS virtual server instance.
+You can back up data sets from on-prem z/OS operating system via using cloud tape connector and then restore it to the z/OS virtual server instance in the cloud. The following diagram gives you an overview of steps you need to take to bring the data set from z/OS on-prem to z/OS virtual server instance.
 {: shortdesc}
 
 ![BYOD to z/OS virtual server instance](images/vpc-byod-ctc.svg "Figure showing BYOD to z/OS virtual server instance"){: caption="Figure 1. BYOD to z/OS virtual server instance" caption-side="bottom"}
 
- The whole process is divided into 3 parts, backing up data set to the cloud object storage, synchronizing cloud tape connector repositories and restoring data set to the z/OS virtual server instance. Two cloud tape connector repositories in the diagram cannot synchronize without the Rebuild job (CUZJRBLR). It will discover the meta data on the cloud object storage and then restore the data set you backed up to the z/OS virtual server instance cloud tape connector repository. You can follow steps to complete the whole process.
+ The whole process is divided into 3 main parts. Firstly, you can back up partition data set to the cloud tape connector. Then you can synchronize cloud tape connector repositories via the Rebuild Job(CUZJRBLR). This rebuild job will discover the meta data on the cloud object storage and then restore the data set you backed up to the z/OS virtual server instance cloud tape connector repository. Lastly, you can restore the data set to the z/OS virtual server instance.
 
 ## Before you begin
 
@@ -42,7 +42,7 @@ Complete the following prerequisites:
 
 1. Make sure that you have created a z/OS virtual server instance in the Virtual Private Cloud (VPC) environment and the instance is accessible via 3270 connection. For more information, see [Creating virtual server instances](docs/vpc?topic=vpc-creating-virtual-servers) and [Connecting to z/OS instances](/docs/vpc?topic=vpc-vsi_is_connecting_zos).
 
-2. Make sure that you have created the Cloud Object storage. For more information, see [creating cloud object storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
+2. Make sure that you have created the Cloud Object storage. For more information, see [Creating cloud object storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
 
 3. Make sure that you have created the bucket to store your data sets. For more information, see [Creating buckets in Cloud object storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets).
 
@@ -104,6 +104,7 @@ Complete the following prerequisites:
 
 You need to run Rebuild job (CUZJRBLR) on the z/OS VSI, so that the cloud tape connector on the z/OS VSI can discover data sets in cloud object storage backed up from the previous step.
 1. Connect the cloud object storage to the z/OS virtual server instance. Check the cloud server status on ISPF (2) and confirm in the same repository.
+
 2. Discover Rebuild Job via ISPF. On the ISPF Enter `IBMUSER.JCL` on the Dsname level line to discover the data sets and enter `b` command to browse the `CUZJRBLR` rebuild job. To submit the job, enter `SUBMIT` command on the bottom command line.
 
 
@@ -111,8 +112,11 @@ You need to run Rebuild job (CUZJRBLR) on the z/OS VSI, so that the cloud tape c
 
 Complete the following steps to restore data set on z/OS virtual server instance.
 1.  Input `IBMUSER.JCL` on the Dsname level line to discover the data sets and enter `b` command to browse the `CUZJRBLR` rebuild job. To submit the job, then enter `SUBMIT` command.
+
 2.  Check the `3. Cloud datasets` and find the sequential data set `IBMCTCTEST.JCL.TERSE`. Then enter `R` command to restore the data sets.
+
 3.  Delete the bucket name on the `Restore to Alias` line and change `Restore Dataset` to be `Y`.
+
 4.  You can now update the data set you want to restore in the `IBMUSER.JCL`. This process will transmit the the data set and restore it to the z/OS virtual server instance.
     ```
     ...
@@ -124,5 +128,7 @@ Complete the following steps to restore data set on z/OS virtual server instance
     {: screen}
 
     where `IBMCTCTEST.JCL.TERSE` is the sequential data set name to the z/OS virtual server instances.
+
 5. To submit the restoring job, then enter `SUBMIT` command.
+
 6. Verify partition data set on z/OS virtual server instance. You should open the cloud tape connector interface and enter `IBMCTCTEST.JCL` command on Dsname level, you can find both sequential data set (`IBMCTCTEST.JCL.TERSE`) and partition data set (`IBMCTCTEST.JCL`) together on the virtual server instance side.
