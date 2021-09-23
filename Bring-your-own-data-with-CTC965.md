@@ -20,7 +20,7 @@ subcollection: hs-crypto
 {:important: .important}
 {:deprecated: .deprecated}
 {:external: target="_blank" .external}
-{:beta: .beta}
+{:experimental: .experimental}
 {:table: .aria-labeledby="caption"}
 {:ui: .ph data-hd-interface='ui'}
 {:cli: .ph data-hd-interface='cli'}
