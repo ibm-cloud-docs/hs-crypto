@@ -32,7 +32,7 @@ subcollection: hs-crypto
 You can backup data sets from on-prem z/OS operating system via using cloud tape connector and then restore it to z/OS virtual server instance in the cloud. The following diagram displays the process of bringing the data set from z/OS on-prem to z/OS virtual server instance.
 {: shortdesc}
 
-![BYOD using cloud tape connector](images/vpc-byod-ctc.svg "Figure showing BYOD using cloud tape connector"){: caption="Figure 1. BYOD using cloud tape connector"}
+![BYOD to z/OS virtual server instance](images/vpc-byod-ctc.svg "Figure showing BYOD to z/OS virtual server instance"){: caption="Figure 1. BYOD to z/OS virtual server instance" caption-side="bottom"}
 
 From the workflow, it is mainly divided into 3 parts, backing up data set to the cloud object storage, synchronizing cloud tape connector repositories and restoring data set to the z/OS virtual server instance. Two cloud tape connector repositories cannot synchronize without the Rebuild job (CUZJRBLR). It will discover the meta data on the cloud object storage and restore the data set you backed up to the z/OS virtual server instance.  
 
