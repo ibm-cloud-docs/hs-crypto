@@ -29,27 +29,31 @@ subcollection: hs-crypto
 # Bringing your own data to z/OS virtual server instance  - Draft
 {: #vsi-is-ctc}
 
-You can backup data sets from on-prem z/OS operating system via using cloud tape connector and then restore it to z/OS virtual server instance in the cloud. The following diagram displays the process of bringing the data set from z/OS on-prem to z/OS virtual server instance.
+You can backup data sets from on-prem z/OS operating system via using cloud tape connector and then restore it to the z/OS virtual server instance in the cloud. The following diagram gives you an overview of steps you need to take to bring the data set from z/OS on-prem to z/OS virtual server instance.
 {: shortdesc}
 
 ![BYOD to z/OS virtual server instance](images/vpc-byod-ctc.svg "Figure showing BYOD to z/OS virtual server instance"){: caption="Figure 1. BYOD to z/OS virtual server instance" caption-side="bottom"}
 
-From the workflow, it is mainly divided into 3 parts, backing up data set to the cloud object storage, synchronizing cloud tape connector repositories and restoring data set to the z/OS virtual server instance. Two cloud tape connector repositories cannot synchronize without the Rebuild job (CUZJRBLR). It will discover the meta data on the cloud object storage and restore the data set you backed up to the z/OS virtual server instance.  
+ The whole process is divided into 3 parts, backing up data set to the cloud object storage, synchronizing cloud tape connector repositories and restoring data set to the z/OS virtual server instance. Two cloud tape connector repositories in the diagram cannot synchronize without the Rebuild job (CUZJRBLR). It will discover the meta data on the cloud object storage and then restore the data set you backed up to the z/OS virtual server instance cloud tape connector repository. You can follow steps to complete the whole process.
 
 ## Before you begin
 
 Complete the following prerequisites:
 
 1. Make sure that you have created a z/OS virtual server instance in the Virtual Private Cloud (VPC) environment and the instance is accessible via 3270 connection. For more information, see [Creating virtual server instances](docs/vpc?topic=vpc-creating-virtual-servers) and [Connecting to z/OS instances](/docs/vpc?topic=vpc-vsi_is_connecting_zos).
+
 2. Make sure that you have created the Cloud Object storage. For more information, see [creating cloud object storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
+
 3. Make sure that you have created the bucket to store your data sets. For more information, see [Creating buckets in Cloud object storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets).
+
 4. Make sure that you have access to the bucket level and service credential. For more information, see [Manage access](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-administrators#administrators-manage-access).
+
 5. Make sure that you have obtained the IP address of the cloud object storage public endpoint via ping. For more information, see [Allowing public access](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-iam-public-access).
 [To do: What would be the correct IP address access reference]
-[To do: which cloud server type to use and need confirmation]Which cloud server type to use and need confirmation https://www.ibm.com/docs/en/cloud-tape-connector/2.1?topic=options-create-cloud-server-definition]
+[To do: which cloud server type to use and need confirmation: Which cloud server type to use and need confirmation https://www.ibm.com/docs/en/cloud-tape-connector/2.1?topic=options-create-cloud-server-definition]
 
 
-## Backing up data to cloud object storage
+## Backing up data set to cloud object storage
 
  Complete the following steps to back up data set from the z/OS to the bucket of the cloud object storage.
 
@@ -58,7 +62,7 @@ Complete the following prerequisites:
 2. Prepare the partiton data set that you want to back up. For example, the partition data set name is `IBMCTCTEST.JCL`.
 
 
-3. Back up z/OS on prem data sets to cloud object storage via cloud tape connector interface.
+3. Back up z/OS on-prem data sets to cloud object storage via cloud tape connector interface.
    1. Enter the `%CUZVP11` command to bring up the cloud tape connector ISPF interface.
 
    2. Select `3. Cloud datasets` and find the partition data set that you want to back up. You can also enter `b` command to browse your current data set.
@@ -119,7 +123,6 @@ Complete the following steps to restore data set on z/OS virtual server instance
     ```
     {: screen}
 
-    where:
-    `IBMCTCTEST.JCL.TERSE` is the sequential data set name to the z/OS virtual server instances.
+    where `IBMCTCTEST.JCL.TERSE` is the sequential data set name to the z/OS virtual server instances.
 5. To submit the restoring job, then enter `SUBMIT` command.
 6. Verify partition data set on z/OS virtual server instance. You should open the cloud tape connector interface and enter `IBMCTCTEST.JCL` command on Dsname level, you can find both sequential data set (`IBMCTCTEST.JCL.TERSE`) and partition data set (`IBMCTCTEST.JCL`) together on the virtual server instance side.
