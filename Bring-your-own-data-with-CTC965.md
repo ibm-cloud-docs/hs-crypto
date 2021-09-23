@@ -34,7 +34,7 @@ You can back up data sets from on-prem z/OS operating system via using cloud tap
 
 ![BYOD to z/OS virtual server instance](images/vpc-byod-ctc.svg "Figure showing BYOD to z/OS virtual server instance"){: caption="Figure 1. BYOD to z/OS virtual server instance" caption-side="bottom"}
 
- The whole process is divided into 3 main parts. Firstly, you can back up partition data set to the cloud tape connector. Then you can synchronize cloud tape connector repositories via the Rebuild Job(CUZJRBLR). This rebuild job will discover the meta data on the cloud object storage and then rebuild the data set you backed up to the z/OS virtual server intance side. Lastly, you can restore data set on the z/OS virtual server instance.
+ The whole process is divided into 3 main parts. Firstly, you can back up partition data set to the cloud tape connector on the on-prem z/OS . Then you can synchronize cloud tape connector repositories via the Rebuild Job (CUZJRBLR). This rebuild job will discover the meta data on the cloud object storage and then rebuild the data set to the z/OS virtual server instance repository. Lastly, you can restore data set on the z/OS virtual server instance. You can now perform following steps.
 
 ## Before you begin
 
@@ -86,7 +86,7 @@ Complete the following prerequisites:
 
    4. To submit the back up job, enter the `SUBMIT` command.
 
-   5. Verify the sequential data set has been created via the ISPF (3.4). If you enter `IBMCTCTEST.JCL` next to the Dsname Level, the target data set is also available `IBMCTCTEST.JCL.TERSE`.
+   5. Verify the sequential data set has been created via the ISPF (3.4). If you enter `IBMCTCTEST.JCL` next to the Dsname Level, the target data set `IBMCTCTEST.JCL.TERSE` is also available.
 
 4. You can verify the data set in the cloud object storage in either of the following approaches:
 
@@ -97,15 +97,15 @@ Complete the following prerequisites:
     ```
     {: screen}
 
-   * On the object storage resource instance: enter the bucket and you will find repository records of the data set. For more information, see [Repository records](https://www.ibm.com/docs/en/cloud-tape-connector/2.1?topic=repository-records).
+   * On the object storage resource instance: Enter the bucket and you will find repository records of the data set. For more information, see [Repository records](https://www.ibm.com/docs/en/cloud-tape-connector/2.1?topic=repository-records).
 
 
 ## Synchronizing cloud tape connector repositories
 
 You need to run Rebuild job (CUZJRBLR) on the z/OS VSI, so that the cloud tape connector on the z/OS VSI can discover data sets in cloud object storage backed up from the previous step.
-1. Connect the cloud object storage to the z/OS virtual server instance. Check the cloud server status on ISPF (2) and confirm in the same repository.
+1. Connect the cloud object storage to the z/OS virtual server instance. Check the cloud server status on ISPF (2) and confirm the same repository.
 
-2. Discover Rebuild Job via ISPF. On the ISPF Enter `IBMUSER.JCL` on the Dsname level line to discover the data sets and enter `b` command to browse the `CUZJRBLR` rebuild job. To submit the job, enter `SUBMIT` command on the bottom command line.
+2. Discover Rebuild Job via ISPF. On the ISPF, enter `IBMUSER.JCL` on the Dsname level line to discover the data sets and enter `b` command to browse the `CUZJRBLR` rebuild job. To submit the job, enter `SUBMIT` command on the bottom command line.
 
 
 ## Restoring data to the z/OS virtual server instance
@@ -127,7 +127,7 @@ Complete the following steps to restore data set on z/OS virtual server instance
     ```
     {: screen}
 
-    where `IBMCTCTEST.JCL.TERSE` is the sequential data set to the z/OS virtual server instances.
+    where `IBMCTCTEST.JCL.TERSE` is the destination data set name to the z/OS virtual server instances.
 
 5. To submit the restoring job, then enter `SUBMIT` command.
 
