@@ -34,7 +34,7 @@ You can back up data sets from on-prem z/OS operating system via using cloud tap
 
 ![BYOD to z/OS virtual server instance](images/vpc-byod-ctc.svg "Figure showing BYOD to z/OS virtual server instance"){: caption="Figure 1. BYOD to z/OS virtual server instance" caption-side="bottom"}
 
- The whole process is divided into 3 main parts. Firstly, you can back up partition data set to the cloud tape connector. Then you can synchronize cloud tape connector repositories via the Rebuild Job(CUZJRBLR). This rebuild job will discover the meta data on the cloud object storage and then restore the data set you backed up to the z/OS virtual server instance cloud tape connector repository. Lastly, you can restore the data set to the z/OS virtual server instance.
+ The whole process is divided into 3 main parts. Firstly, you can back up partition data set to the cloud tape connector. Then you can synchronize cloud tape connector repositories via the Rebuild Job(CUZJRBLR). This rebuild job will discover the meta data on the cloud object storage and then rebuild the data set you backed up to the z/OS virtual server intance side. Lastly, you can restore data set on the z/OS virtual server instance.
 
 ## Before you begin
 
@@ -55,9 +55,9 @@ Complete the following prerequisites:
 
 ## Backing up data set to cloud object storage
 
- Complete the following steps to back up data set from the z/OS to the bucket of the cloud object storage.
+ Complete the following steps to back up data set from z/OS to the bucket of the cloud object storage.
 
-1. Install the Cloud tape connector on the on-prem z/OS instance. For more information, see [Configuration Cloud tape connector](https://www.ibm.com/docs/en/cloud-tape-connector/2.1?topic=connector-configuration-summary). [To do: Whether there is any z/OS on-prem specific configurations need to notice]
+1. Install the Cloud tape connector on the on-prem z/OS instance. For more information, see [Configuration Cloud tape connector](https://www.ibm.com/docs/en/cloud-tape-connector/2.1?topic=connector-configuration-summary). [To do: Whether there is any z/OS on-prem specific configurations need to notice here]
 
 2. Prepare the partiton data set that you want to back up. For example, the partition data set name is `IBMCTCTEST.JCL`.
 
@@ -67,7 +67,7 @@ Complete the following prerequisites:
 
    2. Select `3. Cloud datasets` and find the partition data set that you want to back up. You can also enter `b` command to browse your current data set.
 
-   3. Update your JCL to include the following statements. This process will dump the partition data sets into sequential data sets and pack the data sets to the z/OS cloud tape connector with destination name.
+   3. Update your JCL to include the following statements. This process will dump the partition data sets into sequential data sets and pack the data sets to the z/OS cloud tape connector with specified destination name.
 
     ```
     // DUMP DATASET(INCLUDE(IBMCTCTEST.JCL))
@@ -86,7 +86,7 @@ Complete the following prerequisites:
 
    4. To submit the back up job, enter the `SUBMIT` command.
 
-   5. Verify the sequential data has been created via the ISPF (3.4). If you enter `IBMCTCTEST.JCL` next to the Dsname Level, the target data set is also available `IBMCTCTEST.JCL.TERSE`.
+   5. Verify the sequential data set has been created via the ISPF (3.4). If you enter `IBMCTCTEST.JCL` next to the Dsname Level, the target data set is also available `IBMCTCTEST.JCL.TERSE`.
 
 4. You can verify the data set in the cloud object storage in either of the following approaches:
 
@@ -117,7 +117,7 @@ Complete the following steps to restore data set on z/OS virtual server instance
 
 3.  Delete the bucket name on the `Restore to Alias` line and change `Restore Dataset` to be `Y`.
 
-4.  You can now update the data set you want to restore in the `IBMUSER.JCL`. This process will transmit the the data set and restore it to the z/OS virtual server instance.
+4.  You can now update the data set you want to restore in the `IBMUSER.JCL`. This process will  unpack the sequential data set and restore it to the z/OS virtual server instance.
     ```
     ...
     //UNTERSE EXEC PGM = TRSMAIN,PARM='UNPACK'
@@ -127,7 +127,7 @@ Complete the following steps to restore data set on z/OS virtual server instance
     ```
     {: screen}
 
-    where `IBMCTCTEST.JCL.TERSE` is the sequential data set name to the z/OS virtual server instances.
+    where `IBMCTCTEST.JCL.TERSE` is the sequential data set to the z/OS virtual server instances.
 
 5. To submit the restoring job, then enter `SUBMIT` command.
 
