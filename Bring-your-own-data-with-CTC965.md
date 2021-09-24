@@ -2,9 +2,9 @@
 
 copyright:
   years: 2021，2021
-lastupdated: "2021-09-23"
+lastupdated: "2021-09-24"
 
-keywords: CTC，cloud tape connector, cloud object storage
+keywords: CTC，cloud tape connector, Cloud Object Storage
 
 subcollection: hs-crypto
 
@@ -37,7 +37,7 @@ Working with z/OS virtual server instances on VPC is an experimental feature tha
 
 ![BYOD to z/OS virtual server instance](images/vpc-byod-ctc.svg "Figure showing BYOD to z/OS virtual server instance"){: caption="Figure 1. BYOD to z/OS virtual server instance" caption-side="bottom"}
 
- The whole process is divided into 3 main parts. Firstly, you can back up partition data set to the cloud tape connector on the on-prem z/OS . Then you can synchronize cloud tape connector repositories via the Rebuild Job (CUZJRBLR). This rebuild job will discover the meta data on the cloud object storage and then rebuild the data set to the z/OS virtual server instance repository. Lastly, you can restore data set on the z/OS virtual server instance. You can now perform following steps.
+ The whole process is divided into 3 main parts. Firstly, you can back up partition data set to the cloud tape connector on the on-prem z/OS . Then you can synchronize cloud tape connector repositories via the Rebuild Job (CUZJRBLR). This rebuild job will discover the metadata on the Cloud Object Storage and then rebuild the data set to the z/OS virtual server instance repository. Lastly, you can restore data set on the z/OS virtual server instance. You can now perform following steps.
 
 ## Before you begin
 
@@ -45,28 +45,28 @@ Complete the following prerequisites:
 
 1. Make sure that you have created a z/OS virtual server instance in the Virtual Private Cloud (VPC) environment and the instance is accessible via 3270 connection. For more information, see [Creating virtual server instances](docs/vpc?topic=vpc-creating-virtual-servers) and [Connecting to z/OS instances](/docs/vpc?topic=vpc-vsi_is_connecting_zos).
 
-2. Make sure that you have created the Cloud Object storage. For more information, see [Creating cloud object storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
+2. Make sure that you have created the Cloud Object Storage. For more information, see [Creating Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage).
 
-3. Make sure that you have created the bucket to store your data sets. For more information, see [Creating buckets in Cloud object storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets).
+3. Make sure that you have created the bucket to store your data sets. For more information, see [Creating buckets in Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets).
 
 4. Make sure that you have access to the bucket level and service credential. For more information, see [Manage access](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-administrators#administrators-manage-access).
 
-5. Make sure that you have obtained the IP address of the cloud object storage public endpoint via ping. For more information, see [Allowing public access](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-iam-public-access).
+5. Make sure that you have obtained the IP address of the Cloud Object Storage public endpoint via ping. For more information, see [Allowing public access](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-iam-public-access).
 [To do: What would be the correct IP address access reference]
 [To do: which cloud server type to use and need confirmation: Which cloud server type to use and need confirmation https://www.ibm.com/docs/en/cloud-tape-connector/2.1?topic=options-create-cloud-server-definition]
 
 
-## Backing up data set to cloud object storage
+## Backing up data set to Cloud Object Storage
 
- Complete the following steps to back up data set from z/OS to the bucket of the cloud object storage.
+ Complete the following steps to back up data set from z/OS to the bucket of the Cloud Object Storage.
 
 1. Install the Cloud tape connector on the on-prem z/OS instance. For more information, see [Configuration Cloud tape connector](https://www.ibm.com/docs/en/cloud-tape-connector/2.1?topic=connector-configuration-summary). [To do: Whether there is any z/OS on-prem specific configurations need to notice here]
 
 2. Prepare the partiton data set that you want to back up. For example, the partition data set name is `IBMCTCTEST.JCL`.
 
 
-3. Back up z/OS on-prem data sets to cloud object storage via cloud tape connector interface.
-   1. Enter the `%CUZVP11` command to bring up the cloud tape connector ISPF interface.
+3. Back up z/OS on-prem data sets to Cloud Object Storage via cloud tape connector interface.
+   1. Enter the `%CUZVP11` command to open the cloud tape connector ISPF interface.
 
    2. Select `3. Cloud datasets` and find the partition data set that you want to back up. You can also enter `b` command to browse your current data set.
 
@@ -84,16 +84,16 @@ Complete the following prerequisites:
 
     where:
     * `IBMCTCTEST.JCL`is the partition data set you selected to dump.
-    * `IBMCTCTEST.JCL.TERSE` is the destination data set name to the cloud object storage.
+    * `IBMCTCTEST.JCL.TERSE` is the destination data set name to the Cloud Object Storage.
 
 
    4. To submit the back up job, enter the `SUBMIT` command.
 
    5. Verify the sequential data set has been created via the ISPF (3.4). If you enter `IBMCTCTEST.JCL` next to the Dsname Level, the target data set `IBMCTCTEST.JCL.TERSE` is also available.
 
-4. You can verify the data set in the cloud object storage in either of the following approaches:
+4. You can verify the data set in the Cloud Object Storage in either of the following approaches:
 
-   * On ISPF: Enter the `%CUZVP11` command to bring up the cloud tape connector interface and select `3. Cloud Datasets`, the data set is backed up in the cloud tape connector. The cloud data set name is the same as in the Cloud object storage. For example, you can see the similar results on your screen. The data set `IBMCTCTEST.JCL.TERSE` is copied to the cloud object storage with the staging alias `CUZSTAGE.DUMPTRS.JOBXXXX.SYSUT2.XXXXXXXX`.
+   * On ISPF: Enter the `%CUZVP11` command to open the cloud tape connector interface and select `3. Cloud Datasets`, the data set is backed up in the cloud tape connector. The cloud data set name is the same as in the Cloud Object Storage. For example, you can see the similar results on your screen. The data set `IBMCTCTEST.JCL.TERSE` is copied to the Cloud Object Storage with the staging alias `CUZSTAGE.DUMPTRS.JOBXXXX.SYSUT2.XXXXXXXX`.
     ```
     Dataset Name                 Backup Timestamp        Cloud Dataset name
     IBMCTCTEST.JCL.TERSE         XXXXX              CUZSTAGE.DUMPTRS.JOBXXXX.SYSUT2.XXXXXXXX
@@ -105,8 +105,8 @@ Complete the following prerequisites:
 
 ## Synchronizing cloud tape connector repositories
 
-You need to run Rebuild job (CUZJRBLR) on the z/OS VSI, so that the cloud tape connector on the z/OS VSI can discover data sets in cloud object storage backed up from the previous step.
-1. Connect the cloud object storage to the z/OS virtual server instance. Check the cloud server status on ISPF (2) and confirm the same repository.
+You need to run Rebuild job (CUZJRBLR) on the z/OS VSI, so that the cloud tape connector on the z/OS VSI can discover data sets in Cloud Object Storage backed up from the previous step.
+1. Connect the Cloud Object Storage to the z/OS virtual server instance. Check the cloud server status on ISPF (2) and confirm the same repository.
 
 2. Discover Rebuild Job via ISPF. On the ISPF, enter `IBMUSER.JCL` on the Dsname level line to discover the data sets and enter `b` command to browse the `CUZJRBLR` rebuild job. To submit the job, enter `SUBMIT` command on the bottom command line.
 
