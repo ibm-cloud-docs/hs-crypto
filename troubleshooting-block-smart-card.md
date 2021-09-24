@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-09-24"
 
 keywords: troubleshoot, problems, known issues, blocked PIN on EP11 smart card
 
@@ -42,6 +42,7 @@ If an incorrect PIN is entered on an EP11 smart card 3 times, the smart card bec
 
 Take the following steps to unblock the EP11 smart card:
 {: tsResolve}
+
 1. Start the Smart Card Utility Program.
 2. Select **EP11 Smart Card** &gt; **Unblock EP11 smart card** from the pull-down menu.
 3. When prompted, insert the certificate authority smart card for the smart card zone of the EP11 smart card in smart card reader 1 and click **OK**.
