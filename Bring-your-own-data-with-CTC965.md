@@ -89,7 +89,7 @@ Complete the following prerequisites:
 
    4. To submit the back up job, enter the `SUBMIT` command.
 
-   5. Verify the sequential data set has been created via the ISPF (3.4). If you enter `IBMCTCTEST.JCL` next to the Dsname Level, the target data set `IBMCTCTEST.JCL.TERSE` is also available.
+   5. Verify that the sequential data set has been created via the ISPF (3.4). If you enter `IBMCTCTEST.JCL` next to the Dsname Level, the target data set `IBMCTCTEST.JCL.TERSE` is also available.
 
 4. You can verify the data set in the Cloud Object Storage in either of the following approaches:
 
@@ -108,14 +108,14 @@ Complete the following prerequisites:
 You need to run Rebuild job (CUZJRBLR) on the z/OS VSI, so that the cloud tape connector on the z/OS VSI can discover data sets in Cloud Object Storage backed up from the previous step.
 1. Connect the Cloud Object Storage to the z/OS virtual server instance. Check the cloud server status on ISPF (2) and confirm the same repository.
 
-2. Discover Rebuild Job via ISPF. On the ISPF, enter `IBMUSER.JCL` on the Dsname level line to discover the data sets and enter `b` command to browse the `CUZJRBLR` rebuild job. To submit the job, enter `SUBMIT` command on the bottom command line.
+2. Discover Rebuild Job via ISPF. On the ISPF, enter `IBMUSER.JCL` on the Dsname level line to discover the data sets and enter `b` command to browse the `CUZJRBLR` rebuild job. To submit the job, enter `SUBMIT` command on the command line.
 
 
 ## Restoring data to the z/OS virtual server instance
 
 Complete the following steps to restore data set on z/OS virtual server instance.
 
-1.  Click the ISPF `3. Cloud datasets` and find the sequential data set `IBMCTCTEST.JCL.TERSE`. Then enter `R` command to restore the data sets.
+1.  Click the ISPF `3. Cloud datasets` and find the sequential data set `IBMCTCTEST.JCL.TERSE`. Then, enter `R` command to restore the data sets.
 
 2.  Delete the bucket name on the `Restore to Alias` line and change `Restore Dataset` to be `Y`.
 
