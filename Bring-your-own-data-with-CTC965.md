@@ -73,7 +73,7 @@ Before you back up your data set, make sure to complete the following steps:
 
 
 3. Back up z/OS on-prem data sets to Cloud Object Storage through the cloud tape connector interface by following these steps:
-   1. Enter the `%CUZVP11` command to open the cloud tape connector ISPF interface.
+   1. Enter the `%CUZVP11` command to open the cloud tape connector Interactive System Productivity Facility (ISPF) interface.
 
    2. Select `3. Cloud datasets` and find the partition data set that you want to back up. You can also enter `b` command to browse your current data set.
 
@@ -90,8 +90,8 @@ Before you back up your data set, make sure to complete the following steps:
     {: screen}
 
     where:
-    * `IBMCTCTEST.JCL`is the partition data set you selected to dump.
-    * `IBMCTCTEST.JCL.TERSE` is the destination data set name to the Cloud Object Storage.
+    * `IBMCTCTEST.JCL`: The partition data set you selected to dump.
+    * `IBMCTCTEST.JCL.TERSE` The destination data set name of the Cloud Object Storage.
 
 
    4. To submit the back up job, enter the `SUBMIT` command.
@@ -100,14 +100,15 @@ Before you back up your data set, make sure to complete the following steps:
 
 4. Verify the data set in the Cloud Object Storage in either of the following approaches:
 
-   * On ISPF: enter the `%CUZVP11` command to open the cloud tape connector interface and select `3. Cloud Datasets`, the data set is backed up in the cloud tape connector. The cloud data set name is the same as in the Cloud Object Storage. For example, you can see the similar results on your screen. The data set `IBMCTCTEST.JCL.TERSE` is copied to the Cloud Object Storage with the staging alias `CUZSTAGE.DUMPTRS.JOBXXXX.SYSUT2.XXXXXXXX`.
+   * On ISPF: enter the `%CUZVP11` command to open the cloud tape connector interface and select `3. Cloud Datasets`, the data set is backed up in the cloud tape connector. The cloud data set name is the same as in the Cloud Object Storage.
+   The following example shows the display on the screen. The data set `IBMCTCTEST.JCL.TERSE` is copied to the Cloud Object Storage with the staging alias `CUZSTAGE.DUMPTRS.JOBXXXX.SYSUT2.XXXXXXXX`.
     ```
     Dataset Name                 Backup Timestamp        Cloud Dataset name
     IBMCTCTEST.JCL.TERSE         XXXXX              CUZSTAGE.DUMPTRS.JOBXXXX.SYSUT2.XXXXXXXX
     ```
     {: screen}
 
-   * On the object storage resource instance: Enter the bucket and you will find repository records of the data set. For more information, see [Repository records](https://www.ibm.com/docs/en/cloud-tape-connector/2.1?topic=repository-records).
+   * On the object storage resource instance, enter the bucket and you will find repository records of the data set. For more information, see [Repository records](https://www.ibm.com/docs/en/cloud-tape-connector/2.1?topic=repository-records).
 
 
 ## Step2: Synchronize cloud tape connector repositories
