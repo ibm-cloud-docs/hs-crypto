@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-09-24"
+lastupdated: "2021-09-27"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -66,7 +66,8 @@ Create a key ring with the console by completing the following steps:
 2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. To create a new key ring, select the **KMS key rings** tab in the side menu.
-5. In the **Key management service key rings** table, click **Add key ring**.6. Enter the **Key ring ID** and click **Add key ring**.
+5. In the **Key management service key rings** table, click **Add key ring**.
+6. Enter the **Key ring ID** and click **Add key ring**.
 
 ### Creating key rings with the API
 {: #create-key-ring-api}
