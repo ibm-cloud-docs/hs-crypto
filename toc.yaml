@@ -99,7 +99,7 @@ toc:
           - link:
               label: "Tutorial: Using IBM Cloud Hyper Protect Crypto Services to offload NGINX TLS"
               href: https://developer.ibm.com/components/ibmz/tutorials/use-hyper-protect-crypto-services-to-offload-nginx-tls/
-              
+
   - navgroup:
       id: howto
       topics:

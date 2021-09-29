@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-09-24"
 
 keywords: shared responsibilities, shared responsibility model, disaster recovery, incident management, operation management
 
@@ -42,7 +42,7 @@ Incident and operations management includes tasks such as high availability, mon
 |Firmware updates| Provide firmware updates for multiple crypto units in a sequential manner with no impact to running workloads. | Perform tasks as usual. |
 {: caption="Table 1. Responsibilities for incident and operations" caption-side="bottom"}
 
- ## Change management
+## Change management
 {: #change-management}
 
 Change management includes tasks such as deployment, configuration, upgrades, patching, configuration changes, and deletion. You and IBM share responsibilities for keeping {{site.data.keyword.hscrypto}} service components at the latest version. You are responsible for change management of your application data.

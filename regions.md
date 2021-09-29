@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-16"
+lastupdated: "2021-09-24"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -25,7 +25,7 @@ subcollection: hs-crypto
 You can connect your applications with the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} by specifying a regional service endpoint.
 {: shortdesc}
 
- ## Available regions
+## Available regions
 {: #available-regions}
 
 {{site.data.keyword.hscrypto}} is available in the following regions and locations:
