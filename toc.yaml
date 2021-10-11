@@ -59,6 +59,10 @@ toc:
               topics:
               - introduce-master-key-rotation.md
               - introduce-root-key-rotation.md
+          - topicgroup:
+              label: About Multicloud Key Orchestration
+              topics:
+              - introduce-mcko.md
       - integrate-services.md
       - topic: whats_new.md
         navtitle: Release notes
