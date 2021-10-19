@@ -4,7 +4,7 @@ copyright:
   years: 2021
 lastupdated: "2021-10-19"
 
-keywords: multi cloud, key management, hyper protect, ekmf-web
+keywords: multicloud, key management, hyper protect, ekmf-web
 
 subcollection: hs-crypto
 
@@ -58,14 +58,13 @@ With MCKO, you can integrate all your key management use cases into one consiste
 - Distribute with a fingertip
 - Restful API interface
 
-
 2. Backup all keys of the enterprise centrally
 - All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}
 - Redistibute keys to quickly recover from fatal cloud errors
 - Own your Keys
 
 
-1. Orchestrate keys through one user experience across multiple clouds
+3. Orchestrate keys through one user experience across multiple clouds
 - No dealing with different UIs any more
 - Efficient and full audited key lifecycle management
 
@@ -81,25 +80,25 @@ With MCKO, you can integrate all your key management use cases into one consiste
 {: #key-features}
 
 
-### KMS keystore
+- **KMS keystore**
 
-The Keyprotect component within HPCS provides the BYOK KMS feature for {{site.data.keyword.cloud_notm}} services. The KP-API will be used to export/sync CRKs to the KMS keystore (internal to HPCS instance).
+    The Keyprotect component within HPCS provides the BYOK KMS feature for {{site.data.keyword.cloud_notm}} services. The KP-API will be used to export/sync CRKs to the KMS keystore (internal to HPCS instance).
 
-The connection to KP-API passes your IAM token to do authorization checks on KP. You can have access to a specific keystore only, and not others.
+    The connection to KP-API passes your IAM token to do authorization checks on KP. You can have access to a specific keystore only, and not others.
 
-### EP11 keystore
+- **EP11 keystore**
 
-The backing store for EP11 keys (provided via GREP11 API) has two purposes:
-- as an internal keystore (to store MCKO internal keys)
-- as a user keystore (to store user keys, to be exposed/used by grep11 or pkcs11 applications)
+    The backing store for EP11 keys (provided via GREP11 API) has two purposes:
+    - as an internal keystore (to store MCKO internal keys)
+    - as a user keystore (to store user keys, to be exposed/used by grep11 or pkcs11 applications)
 
-The keys for the MCKO internal keystore is a separate DB schema and will not be accessibile by users via GREP11 API.
+    The keys for the MCKO internal keystore is a separate DB schema and will not be accessibile by users via GREP11 API.
 
-### Vault
+- **Vault**
 
-The Vault is the central key repository in MCKO and backed by a separate datastore. All the keys you created or provided are persisted in there, and are encrypted with customers own HSM Master Key.
+    The Vault is the central key repository in MCKO and backed by a separate datastore. All the keys you created or provided are persisted in there, and are encrypted with customers own HSM Master Key.
 
-All users cryptographic keys are generated within the HSM via GREP11. As GREP11 provides a gRPC API for external users to provide Cloud HSM functionality, for MCKO internal usage an extra port is provided to be configured for the MCKO path only (mutual TLS).
+    All users cryptographic keys are generated within the HSM via GREP11. As GREP11 provides a gRPC API for external users to provide Cloud HSM functionality, for MCKO internal usage an extra port is provided to be configured for the MCKO path only (mutual TLS).
 
 
 
