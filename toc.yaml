@@ -27,11 +27,11 @@ toc:
               href: https://mediacenter.ibm.com/media/1_lo2fmwbb
       - topicgroup:
           label: Understanding Hyper Protect Crypto Services
-          topics:
           links:
           - link:
               label: "Video: IBM Cloud Hyper Protect Crypto Services overview"
               href: https://mediacenter.ibm.com/media/1_zxwh6ixm
+          topics:
           - overview.md
           - architecture-workload-isolation.md
           - use_case.md
@@ -70,6 +70,7 @@ toc:
           label: Tutorials on key management service
           topics:
           - tutorials/secure-import.md
+          - tutorials/kmip-vmware.md
           links:
           - link:
               label: "Tutorial: Applying end to end security to a cloud application"
@@ -86,7 +87,6 @@ toc:
           - link:
               label: "Tutorial: Secure a digital wallet in the public cloud"
               href: https://developer.ibm.com/patterns/secure-bitcoin-wallet-with-ibm-cloud-hyper-protect-virtual-servers/
-          - tutorials/kmip-vmware.md
       - topicgroup:
           label: Tutorials on cloud hardware security module
           topics:
@@ -238,7 +238,6 @@ toc:
           - /hs-crypto-cli-plugin/hs-crypto-cli-plugin-hpcs-cli-plugin
       - topicgroup:
           label: Terraform reference
-          topics:
           links:
           - link:
               label: Provisioning and initializing service instances with Terraform
