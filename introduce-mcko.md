@@ -20,7 +20,7 @@ subcollection: hs-crypto
 {:term: .term}
 
 
-# Introducing Multicloud Key Orchestration
+# Introducing Multicloud Key Orchestrator
 {: #introduce-mcko}
 
 The Multicloud Key Orchestrator (MCKO) is a feature based on IBM Enterprise Key Management Foundation - Web Edition (EKMF Web), a flexible and highly secure key management system for the enterprise.
