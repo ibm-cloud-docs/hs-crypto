@@ -54,25 +54,25 @@ With MCKO, you can integrate all your key management use cases into one consiste
 
 
 1. Push keys to external key store (e.g. Azure Key Vault or Key Protect) 
-- Bring your own keys to Azure Key Vault (Office365®)
-- Distribute with a fingertip
-- Restful API interface
+    - Bring your own keys to Azure Key Vault (Office365®)
+    - Distribute with a fingertip
+    - Restful API interface
 
 2. Backup all keys of the enterprise centrally
-- All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}
-- Redistibute keys to quickly recover from fatal cloud errors
-- Own your Keys
+    - All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}
+    - Redistibute keys to quickly recover from fatal cloud errors
+    - Own your Keys
 
 
 3. Orchestrate keys through one user experience across multiple clouds
-- No dealing with different UIs any more
-- Efficient and full audited key lifecycle management
+    - No dealing with different UIs any more
+    - Efficient and full audited key lifecycle management
 
 
 4. Automate key orchestration across your enterprise
-- Use of a certified device for Key Creation
-- Keys are generated in the customer exclusively owned service
-- Automate operations (e.g. Azure Key Rotation) 
+    - Use of a certified device for Key Creation
+    - Keys are generated in the customer exclusively owned service
+    - Automate operations (e.g. Azure Key Rotation) 
 
 
 
