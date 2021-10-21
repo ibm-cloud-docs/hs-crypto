@@ -17,7 +17,11 @@ subcollection: hs-crypto
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
-
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
+{:faq: data-hd-content-type='faq'}
+{:support: data-reuse='support'}
 
 # {{site.data.keyword.hscrypto}} CLI change log
 {: #cli-change-log}
