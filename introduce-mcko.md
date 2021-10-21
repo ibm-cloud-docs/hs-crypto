@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-20"
+lastupdated: "2021-10-21"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, mcko, Multicloud Key Orchestrator
 
@@ -23,9 +23,9 @@ subcollection: hs-crypto
 # Introducing Multicloud Key Orchestrator
 {: #introduce-mcko}
 
-Multicloud Key Orchestrator is a function based on IBM&reg Enterprise Key Management Foundation - Web Edition (EKMF Web), a flexible and highly secure key management system for the enterprise.
+Multicloud Key Orchestrator is a function based on IBM&reg; Enterprise Key Management Foundation - Web Edition (EKMF Web), a flexible and highly secure key management system for the enterprise.
 
-As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, Multicloud Key Orchestrator is the first public cloud control plane for multicloud and hybrid cloud key orchestration. It provides NIST-defined states for cryptographic keys and secure transfer of keys to {{site.data.keyword.cloud_notm}}, and external keystores such as Microsoft&reg Azure, Amazon AWS, and Google Cloud.
+As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, Multicloud Key Orchestrator is the first public cloud control plane for multicloud and hybrid cloud key orchestration. It provides NIST-defined states for cryptographic keys and secure transfer of keys to {{site.data.keyword.cloud_notm}}, and external keystores such as Microsoft Azure, Amazon Web Services, and Google Cloud.
 
 
 
@@ -75,34 +75,29 @@ With Multicloud Key Orchestrator, you can integrate all your key management use 
 ## Use cases
 {: #use-cases}
 
-(To be updated)
 
-
-### Push keys to external key store
+### Push keys to external keystores
 {: #push-keys}
-  - Bring your own keys to Microsoft Azure Key Vault (Office365®)
-  - Distribute with a fingertip
-  - REST API interface
 
-### Back up all keys of the enterprise centrally
+You can bring your own keys to external keystores, such as Microsoft Azure Key Vault. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} connects to external keystores through REST APIs and retrieves all keys into the vault. You can assign, deactivate, or delete the keys, and distribute the keys back to the keystores. 
+
+
+### Back up all keys of your enterprise centrally
 {: #back-up-keys}
-  - All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}
-  - Redistibute keys to quickly recover from fatal cloud errors
-  - Own your keys
+
+All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}. When a fatal error occurs in the cloud, you can redistibute keys to quickly recover from the error.
 
 
 ### Orchestrate keys through one user experience across multiple clouds
 {: #orchestrate-keys}
-  - No need to deal with different user interfaces
-  - Efficient and full audited key lifecycle management
+
+You can create and manage your keys from one point of control on {{site.data.keyword.cloud_notm}} without dealing with different user interfaces. This ensures an efficient and fully audited key lifecycle management.
 
 
 ### Automate key orchestration across your enterprise
 {: #automate-orchestration}
-  - Use of a certified device for key creation
-  - Keys are generated in the customer-owned service
-  - Automated operations, for example, Microsoft Azure key rotation 
 
+Keys are created in the customer-owned service through a certified device. You can automate your key operations, for example, through the key rotation function in Azure Key Vault.
 
 
 
