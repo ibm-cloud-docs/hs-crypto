@@ -42,16 +42,16 @@ Dealing with multiple clouds means dealing with keys in multiple key management 
 
 As a key management service from a third-party encryption provider, {{site.data.keyword.hscrypto}} alleviates the complexity of maintaining encryption across hybrid environments. 
 
-With Multicloud Key Orchestrator, you can integrate all your key management use cases into one consistent approach, and orchestrate your keys from one point of control, backed by a trusted IBM Z HSM. It provides you with the following features:
+With Multicloud Key Orchestrator, you can integrate all your key management use cases into one consistent approach, backed by a trusted IBM Z HSM. It provides you with the following features:
 - Simple and consistent user experience
 - Seamless integration into the existing cloud framework
-- One point of control for all keys in all clouds 
+- One point of control for multiple keys in multiple clouds 
 - Secure backup of all keys and easy restoration across multiple clouds
 
 
-![Multicloud Key Orchestrator](/images/multicloud-key-orchestrator.svg "Multicloud Key Orchestrator"){: caption="Figure 1. Multicloud Key Orchestrator"}
+![Multicloud Key Orchestrator](/images/multicloud-key-orchestrator.svg "Multicloud Key Orchestrator"){: caption="Figure 1. Multicloud Key Orchestrator"  caption-side="bottom"}
 
-![Multicloud Key Orchestrator](/images/multicloud-key-orchestrator-with-logo.svg "Multicloud Key Orchestrator"){: caption="Figure 2. Multicloud Key Orchestrator with logo"}
+![Multicloud Key Orchestrator with logo](/images/multicloud-key-orchestrator-with-logo.svg "Multicloud Key Orchestrator with logo"){: caption="Figure 2. Multicloud Key Orchestrator with logo"  caption-side="bottom"}
 
 
 ## Key components
@@ -67,29 +67,30 @@ Multicloud Key Orchestrator has the following components:
   
     - **KMS keystore**
 
-        The key management service component within {{site.data.keyword.hscrypto}} provides the Keep Your Own Key KMS feature for {{site.data.keyword.cloud_notm}} services to make sure that you have access to only authorized keystores. 
-        
-        The service is built on FIPS 140-2 Level 4-certified hardware, the highest security level that is offered in the industry.
+        The {{site.data.keyword.keymanagementservicelong_notm}} key management service component within {{site.data.keyword.hscrypto}} provides the Keep Your Own Key (KYOK) feature for {{site.data.keyword.cloud_notm}} services to ensure that you have access to only the authorized keystores. 
 
     - **EP11 keystore**
 
         The backing store for EP11 keys that are provided by the GREP11 API. The EP11 keystore has two purposes:
-        - To serve as an internal keystore to store KMS internal keys
+        - To serve as an internal keystore to store internal keys
         - To serve as a user keystore to store user keys that are to be exposed and used by GREP11 or PKCS #11 applications
 
-        The KMS internal keystore is a separate database schema and cannot be accessed by users through the GREP11 API.
+    The KMS internal keystore is a separate database schema and cannot be accessed by users through the GREP11 API.
+
+- **Keystore groups**
+
+    You can create a keystore group to grant accesss to or manage multiple keystores at once.
 
 - **Key templates**
 
-(To be updated)
-
+    Key templates are attached to a keystore or a keystore group. You can create a key template to streamline or limit key creation and usage for all users. 
 
 
 
 ## Use cases
 {: #use-cases}
 
-
+You can use Multicloud Key Orchestrator to securely create and manage your keys and keystores across multiple clouds.
 
 ### Manage your keys through one user experience
 {: #manage-keys}
@@ -98,9 +99,9 @@ You can create, manage, and delete your cryptographic keys from one point of con
 
 
 ### Connect to external keystores
-{: #connect-keystores}
+{: #connect-to-keystores}
 
-You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS Key Management Service. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} connects to external keystores through REST APIs and retrieves all keys into the vault. You can create, edit, deactivate, or delete the keys in the vault, and distribute the keys back to the external keystores. 
+You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS Key Management Service. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} connects to external keystores through REST APIs and retrieves all keys into the vault. You can create, edit, or delete the keys in the vault, and distribute the keys back to the external keystores. 
 
 
 ### Back up all keys of your enterprise centrally
@@ -109,9 +110,10 @@ You can connect to external keystores to manage keys in other service instances,
 All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}. When a fatal error occurs in the cloud, you can redistibute keys to quickly recover from the error.
 
 
-### IAM
+### Identity and Access Management (IAM)
 {: #iam}
 
+You can grant and control access to keystores or keystore groups, so that only a distinct set of users can manage the keys and keystores.
 
 
 
