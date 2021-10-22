@@ -51,8 +51,6 @@ With Multicloud Key Orchestrator, you can integrate all your key management use 
 
 ![Multicloud Key Orchestrator](/images/multicloud-key-orchestrator.svg "Multicloud Key Orchestrator"){: caption="Figure 1. Multicloud Key Orchestrator"  caption-side="bottom"}
 
-![Multicloud Key Orchestrator with logo](/images/multicloud-key-orchestrator-with-logo.svg "Multicloud Key Orchestrator with logo"){: caption="Figure 2. Multicloud Key Orchestrator with logo"  caption-side="bottom"}
-
 
 ## Key components
 {: #key-components}
