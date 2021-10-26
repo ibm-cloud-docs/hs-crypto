@@ -33,8 +33,10 @@ If you have a service instance in the `us-south` or `us-east` region, you can en
 You can specify a total number of failover crypto units that is equal to or less than the number of operational crypto units. However, to meet high availability, at least two failover crypto units need to be assigned. Failover crypto units are also charged. For the detailed pricing information, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
 {: tip}
 
-## Enabling or adding failover crypto units with the {{site.data.keyword.cloud_notm}} CLI
+## Using the {{site.data.keyword.cloud_notm}} CLI
 {: #enable-add-failover-cli}
+
+To enable or add failover crypto units by using the {{site.data.keyword.cloud_notm}} CLI, follow these steps:
 
 1. Check and make sure that you install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli) and the latest TKE CLI plug-in with the following command:
 
