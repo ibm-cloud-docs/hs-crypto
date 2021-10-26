@@ -134,66 +134,6 @@ You can specify a total number of failover crypto units that is equal to or less
     You need to initialize failover crypto units before you use them for a regional disaster recovery. It is suggested you initialize the failover crypto units right after you enable them for your service instance.
     {: note}
 
-## Enabling or adding failover crypto units with the Management Utilities
-{: #enable-add-failover-cli}
-
-1. Check and make sure that you [set up the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities), and plug the two smart card readers into the USB ports of your workstation.
-
-1. Check and make sure that you install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli) and the latest TKE CLI plug-in with the following command:
-
-    ```
-    ibmcloud plugin install tke
-    ```
-    {: pre}
-
-    If you have installed the TKE CLI plug-in, make sure to update your plug-in to the latest version with the following command:
-
-    ```
-    ibmcloud plugin update tke
-    ```
-    {: pre}
-
-1. [Log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cli-getting-started#step3-configure-idt-env){: external}.
-
-    If you have multiple accounts, select the account that your service instance is created with. Make sure that you're logged in to the correct region and resource group where the service instance locates with the following command:
-
-    ```
-    ibmcloud target -r <region> -g <resource_group>
-    ```
-    {: pre}
-
-1. Start the Trusted Key Entry application by changing to the subdirectory where you install the Management Utilities applications and running the following command:
-
-    ```
-    ./tke
-    ```
-    {: pre}
-
-    When the Trusted Key Entry application is started, the account and resource group that you selected when you logged into IBM Cloud are displayed.
-
-1. To enable or add failover crypto units, on the **Crypto units** tab, perform the following steps:
-
-    1. Click **Add crypto units**. In the dialog box that is displayed, enter the numbers of all crypto units in the service instance separated by a space.
-
-    1. Click **Failover enable**, and click **Yes** to continue. 
-
-    1. In the dialog box that displayed, enter the total number of failover crypto units that you want to assign to your service instance.
-
-        For a service instance with 3 operational crypto units, specify 2 or 3 failover crypto units. For a service instance with 2 operational crypto units, specify 2 failover crypto units.
-
-    1. Click **Yes** to confirm the action. The failover crypto units are assigned in the target failover region.
-
-        Failover crypto units are now available in `us-south` and `us-east`. The two regions are the target failover regions of each other. For example, if your instance is located in `us-south`, the failover region for your instance is `us-east`.
-
-1. Initialize failover crypto units by using the same master key for the operational crypto units initialization and the same initialization approach:
-
-    - [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
-    - [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
-    - [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
-
-    You need to initialize failover crypto units before you use them for a regional disaster recovery. It is suggested you initialize the failover crypto units right after you enable them for your service instance.
-    {: note}
-
 ## What's next
 {: #enable-add-failover-next}
 
