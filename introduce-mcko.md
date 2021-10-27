@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-22"
+lastupdated: "2021-10-27"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, mcko, Multicloud Key Orchestrator
 
@@ -99,13 +99,13 @@ You can create, manage, and delete your cryptographic keys from one point of con
 ### Connect to external keystores
 {: #connect-to-keystores}
 
-You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS Key Management Service. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} connects to external keystores through REST APIs and retrieves all keys into the vault. You can create, edit, or delete the keys in the vault, and distribute the keys back to the external keystores. 
+You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS Key Management Service. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} connects to external keystores through REST APIs and retrieves all keys into the vault. You can create, edit, or delete the keys in the vault, and install the keys back in the external keystores. 
 
 
 ### Back up all keys of your enterprise centrally
 {: #back-up-keys}
 
-All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}. When a fatal error occurs in the cloud, you can redistibute keys to quickly recover from the error.
+All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}. When a fatal error occurs in the cloud, you can reinstall keys to quickly recover from the error.
 
 
 ### Identity and Access Management (IAM)
