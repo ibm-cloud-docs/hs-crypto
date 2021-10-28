@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-27"
+lastupdated: "2021-10-28"
 
 keywords: failover crypto unit, add failover crypto units, enable failover, enable cross-region recovery
 
@@ -131,7 +131,12 @@ To enable or add failover crypto units by using the {{site.data.keyword.cloud_no
 
     - [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
     - [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
-    - To initialize your service instances using recovery crypto units, you need to install administrators, set the signature thresholds, and load the current master key register. Select the failover crypto units to be initialized, and refer to the [CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin) to complete the steps.
+    
+    To initialize your service instances using recovery crypto units, you need to install administrators, set the signature thresholds, and load the current master key register. Select the failover crypto units to be initialized, and use the following TKE plug-in commands:
+
+    - Add administrators: `ibmcloud tke cryptounit-admin-add`.
+    - Set the signature thresholds: `ibmcloud tke cryptounit-thrhld-set`.
+    - Transfer the master key value in a recovery crypto unit to the failover crypto units: `ibmcloud tke auto-mk-recover`. 
 
     You need to initialize failover crypto units before you use them for a regional disaster recovery. It is suggested you initialize the failover crypto units right after you enable them for your service instance.
     {: note}
