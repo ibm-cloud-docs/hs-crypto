@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-27"
+lastupdated: "2021-10-29"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, mcko, Multicloud Key Orchestrator
 
@@ -75,14 +75,6 @@ Multicloud Key Orchestrator has the following components:
 
     The KMS internal keystore is a separate database schema and cannot be accessed by users through the GREP11 API.
 
-- **Keystore groups**
-
-    You can create a keystore group to grant accesss to or manage multiple keystores at once.
-
-- **Key templates**
-
-    Key templates are attached to a keystore or a keystore group. You can create a key template to streamline or limit key creation and usage for all users. 
-
 
 
 ## Use cases
@@ -111,7 +103,7 @@ All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}. When
 ### Identity and Access Management (IAM)
 {: #iam}
 
-You can grant and control access to keystores or keystore groups, so that only a distinct set of users can manage the keys and keystores.
+You can grant and control access to keystores, so that only a distinct set of users can manage the keys.
 
 
 
