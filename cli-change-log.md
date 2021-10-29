@@ -2,7 +2,7 @@
 
 copyright:
   years:  2021
-lastupdated: "2021-07-30"
+lastupdated: "2021-10-21"
 
 keywords: change log for tke, updates to tke cli plugin, updates to cert manager cli plugin
 
@@ -17,7 +17,6 @@ subcollection: hs-crypto
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
-
 
 # {{site.data.keyword.hscrypto}} CLI change log
 {: #cli-change-log}

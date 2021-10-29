@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-10-14"
+lastupdated: "2021-10-26"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -60,7 +60,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
 
       If you enable failover crypto units, set the number of failover crypto units equal to or less than the number of operational crypto units. However, to meet high availability, you need to specify at least two failover crypto units. Each failover crypto unit [is also charged](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Failover crypto units are now available in Dallas (`us-south`) and Washington DC (`us-east`), so if you create your instance in other regions such as Frankfurt (`eu-de`), this option is automatically disabled.
 
-      After you provision the service instance, you can still [enable or add failover crypto units by using the {{site.data.keyword.cloud_notm}} CLI](/docs/hs-crypto?topic=hs-crypto-enable-add-failover).
+      After you provision the service instance, you can still [enable or add failover crypto units](/docs/hs-crypto?topic=hs-crypto-enable-add-failover).
       {: tip}
 
     - **Failover region** shows the region where the failover crypto units are located.
@@ -160,7 +160,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.
         <td>number_of_failover_crypto_units</td>
         <td><p>Optional. Use this parameter to specify the number of failover crypto units to enable automatic cross-region recovery.</p>
         <p>Set the number of failover crypto units equal to or less than the number of operational crypto units. However, to meet high availability, you need to specify at least two failover crypto units. Each failover crypto unit <a href="/docs/hs-crypto?topic=hs-crypto-faq-pricing">is also charged</a>. Failover crypto units are now available in Dallas (<code>us-south</code>) and Washington DC (<code>us-east</code>). If you do not specify the number of failover crypto units, this feature is disabled by default.</p>
-        <p>After you provision the service instance, you can still <a href="/docs/hs-crypto?topic=hs-crypto-enable-add-failover">enable or add failover crypto units by using the {{site.data.keyword.cloud_notm}} CLI</a>.</p></td>
+        <p>After you provision the service instance, you can still <a href="/docs/hs-crypto?topic=hs-crypto-enable-add-failover">enable or add failover crypto units</a>.</p></td>
       </tr>
       <caption>Table 2. Describes command variables to create a {{site.data.keyword.hscrypto}} service instance</caption>
     </table>

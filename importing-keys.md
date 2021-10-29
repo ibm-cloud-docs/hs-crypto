@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-12"
+lastupdated: "2021-10-20"
 
 keywords: import encryption key, upload encryption key, bring your own key, byok, key material, secure import, import tokens
 
@@ -48,7 +48,7 @@ Choose an option for importing key material into {{site.data.keyword.hscrypto}}
 :   Choose from two options for importing root keys based on the level of security that's required for your environment or workload. By default, {{site.data.keyword.hscrypto}} encrypts your key material while it's in transit by using the Transport Layer Security (TLS) 1.2 protocol. If you're building a proof of concept or trying out the service for the first time, you can import root key material into {{site.data.keyword.hscrypto}} by using this default option. If your workload requires a security mechanism beyond TLS, you can also [use an import token](#using-import-tokens) to encrypt and import root key material into the service.
 
 Plan ahead for encrypting your key material
-:   If you choose to encrypt your key material by using an import token, determine a method for running RSA encryption on the key material. You must use the <code>RSAES_OAEP_SHA_1</code> encryption scheme as specified by the [PKCS #1 v2.1 standard for RSA encryption](https://tools.ietf.org/html/rfc3447){: external}. Review the capabilities of your internal key management system or on-premises HSM to determine your options.
+:   If you choose to encrypt your key material by using an import token, determine a method for running RSA encryption on the key material. You must use the RSAES_OAEP_SHA_1 encryption scheme as specified by the [PKCS #1 v2.1 standard for RSA encryption](https://tools.ietf.org/html/rfc3447){: external}. Review the capabilities of your internal key management system or on-premises HSM to determine your options.
 
 Plan ahead for encrypting the nonce
 :   If you choose to encrypt your key material by using an import token, you must also determine a method for running AES-GCM encryption on the nonce that is distributed by {{site.data.keyword.hscrypto}}. The nonce serves as a session token that checks the originality of a request to protect against malicious attacks and unauthorized calls. Review the capabilities of your internal key management system or on-premises HSM to determine your options.
