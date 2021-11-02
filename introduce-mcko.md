@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-29"
+lastupdated: "2021-11-02"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, mcko, Multicloud Key Orchestrator
 
@@ -74,6 +74,7 @@ Multicloud Key Orchestrator has the following components:
         - To serve as a user keystore to store user keys that are to be exposed and used by GREP11 or PKCS #11 applications
 
     The KMS internal keystore is a separate database schema and cannot be accessed by users through the GREP11 API.
+
 
 
 
