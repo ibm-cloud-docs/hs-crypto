@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-12"
+lastupdated: "2021-11-05"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -375,7 +375,7 @@ Replace the `state` variable in your request according to the following table.
     <td>
       <p>
         The states of the keys to be retrieved. States are integers and
-        correspond to the Pre-activation = 0, Active = 1, Suspended = 2,
+        correspond to the Pre-active = 0, Active = 1, Suspended = 2,
         Deactivated = 3, and Destroyed = 5 values.
       </p>
       <p>
