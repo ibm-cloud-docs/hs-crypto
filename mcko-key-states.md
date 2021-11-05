@@ -37,8 +37,7 @@ Cryptographic keys, in their lifetime, transition through several states that ar
 
 The following diagram shows how a key is created in the vault, passes through states, and gets removed from the vault.
 
-![Key states and transitions in the vault](/images/mcko-key-states.svg "Key states and transitions in the vault")
-{: caption="Figure 1. Key states and transitions in the vault." caption-side="bottom"}
+![Key states and transitions in the vault](/images/mcko-key-states.svg "Key states and transitions in the vault"){: caption="Figure 1. Key states and transitions in the vault." caption-side="bottom"}
 
 
 
