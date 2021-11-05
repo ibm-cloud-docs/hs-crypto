@@ -34,7 +34,7 @@ Cryptographic keys, in their lifetime, transition through several states that ar
 
 {{site.data.keyword.hscrypto}} provides a graphical user interface and a REST API for tracking keys as they move through several states in their lifecycle. The following diagram shows how a key passes through states between the generation and the destruction.
 
-![Encryption key states and transitions](/images/key-states.svg "Encryption key states and transitions"){: caption="Figure 1. Key states and transitions." caption-side="bottom"}
+![Encryption key states and transitions](/images/key-states.svg "Encryption key states and transitions"){: caption="Figure 1. Key states and transitions" caption-side="bottom"}
 
 | State       | Integer Mapping | Description |
 |-------------|-----------------|-------------|
