@@ -69,7 +69,6 @@ The following table shows how Multicloud Key Orchestrator handles service action
 | Deactivate key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |     |   |
 | Reactivate key. |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
 | Destroy key. |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |
-| Restore key. |     |     |  |   |
 | Remove key from vault. |     |     |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 {: caption="Table 2. Describes how key states affect service actions." caption-side="bottom"}
 
