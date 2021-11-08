@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-11-08"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, MCKO, multicloud key orchestrator
 
@@ -41,16 +41,14 @@ The following diagram shows how a key passes through states in the vault between
 
 
 
-(To be updated)
-
 
 | State       | Integer Mapping | Description |
 |-------------|-----------------|-------------|
 | Pre-active  |        0        | Keys are initially created in the _Pre-active_ state. A pre-active key cannot be used to cryptographically protect data. |
-| Active      |        1        | Keys move immediately into the _Active_ state on the activation date. You can also manually activate a key. This transition marks the beginning of a key's cryptoperiod. Keys with no activation date become active immediately and remain active until they expire or are destroyed. |
-| Deactivated |        3        | A key moves into the _Deactivated_ state on the expiration date, if one is assigned. You can also manually deactivate a key. In this state, the key is unable to cryptographically protect data and can be moved only to the _Destroyed_ state. |
-| Compromised |        4        | You should mark a key as being _Compromised_ when the key's information is disclosed to an unauthorised person. Data in the _Compromised_ keys can still be decrypted, but you should not use the key to encrypt new data. |
-| Destroyed   |        5        | Destoryed keys are in the _Destroyed_ state. Keys in this state are not recoverable. Metadata that is associated with a key remains in the vault until you manually remove it from the vault. |
+| Active      |        1        | Keys move immediately into the _Active_ state on the activation date or when you manually activate them. This transition marks the beginning of a key's cryptoperiod. Keys with no activation date become active immediately and remain active until they expire or are destroyed. |
+| Deactivated |        3        | A key moves into the _Deactivated_ state on the expiration date, if one is assigned. You can also manually deactivate or reactivate a key. In this state, the key is unable to cryptographically protect data. A key should be deactivated first before it can be moved to the _Destroyed_ state. |
+| Compromised |        4        | You should mark a key as being _Compromised_ when the key's information is disclosed to an unauthorised third party. Data in the _Compromised_ keys can still be decrypted, but you should not use the key to encrypt new data. |
+| Destroyed   |        5        | Destroyed keys are in the _Destroyed_ state. Keys in this state are not recoverable. Metadata that is associated with a key remains in the vault until you manually remove the key from the vault. |
 {: caption="Table 1. Describes key states and transitions." caption-side="bottom"}
 
 
@@ -68,14 +66,9 @@ The following table shows how Multicloud Key Orchestrator handles service action
 | --- | --- | --- | --- | --- |
 | Get key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |  |![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
 | List keys. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
-| Rotate key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |     |   |
-| Wrap key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |     |   |
-| Unwrap key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
-| Rewrap key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
-| Disable key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |     |   |
-| Enable key. |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
+| Deactivate key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |     |   |
+| Reactivate key. |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
 | Destroy key. |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |
-| Restore key. |     |     |  |   |
 | Remove key from vault. |     |     |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 {: caption="Table 2. Describes how key states affect service actions." caption-side="bottom"}
 
@@ -83,6 +76,12 @@ The following table shows how Multicloud Key Orchestrator handles service action
 
 ## Monitoring for lifecycle changes
 {: #mcko-monitor-lifecycle-changes}
+
+(To be updated)
+
+After you add a root key to the service, use the {{site.data.keyword.cloud_notm}} console or the {{site.data.keyword.hscrypto}} key management REST API to view your key's transition history and configuration.
+
+For audit purposes, you can also monitor the activity trail for a root key by integrating {{site.data.keyword.hscrypto}} with the [{{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started){: external}. After both services are provisioned and running, activity events are generated and automatically collected in a {{site.data.keyword.at_full_notm}} log when you perform actions on keys in {{site.data.keyword.hscrypto}}.
 
 
 
