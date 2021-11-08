@@ -246,6 +246,7 @@ toc:
               label: Managing key management service keys with Terraform
               href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key
       - regions.md
+      - tke-paper.md
       - smart-card-considerations.md
       - shared-responsibilities.md
       - ha-dr.md

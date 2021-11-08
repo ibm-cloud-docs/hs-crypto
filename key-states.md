@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-12"
+lastupdated: "2021-11-05"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle
 
@@ -34,12 +34,11 @@ Cryptographic keys, in their lifetime, transition through several states that ar
 
 {{site.data.keyword.hscrypto}} provides a graphical user interface and a REST API for tracking keys as they move through several states in their lifecycle. The following diagram shows how a key passes through states between the generation and the destruction.
 
-![Encryption key states and transitions](/images/key-states.svg "Encryption key states and transitions")
-{: caption="Figure 1. Key states and transitions." caption-side="bottom"}
+![Encryption key states and transitions](/images/key-states.svg "Encryption key states and transitions"){: caption="Figure 1. Key states and transitions" caption-side="bottom"}
 
 | State       | Integer Mapping | Description |
 |-------------|-----------------|-------------|
-| Pre-active  |       0        | Keys are initially created in the _Pre-activation_ state. A pre-active key cannot be used to cryptographically protect data. |
+| Pre-active  |       0        | Keys are initially created in the _Pre-active_ state. A pre-active key cannot be used to cryptographically protect data. |
 | Active      |       1        | Keys move immediately into the _Active_ state on the activation date. This transition marks the beginning of a key's cryptoperiod. Keys with no activation date become active immediately and remain active until they expire or are destroyed. |
 | Suspended   |       2        | A key moves into the _Suspended_ state when it is [disabled for encrypt and decrypt operations](/docs/hs-crypto?topic=hs-crypto-disable-keys). In this state, the key is unable to cryptographically protect data and can be moved only to the _Active_ or _Destroyed_ states. |
 | Deactivated |       3        | A key moves into the _Deactivated_ state on the expiration date, if one is assigned. In this state, the key is unable to cryptographically protect data and can be moved only to the _Destroyed_ state. |
