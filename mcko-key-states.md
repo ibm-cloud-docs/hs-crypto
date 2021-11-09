@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-08"
+lastupdated: "2021-11-09"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, MCKO, multicloud key orchestrator
 
@@ -44,18 +44,18 @@ The following diagram shows how a key passes through states in the vault between
 
 | State       | Integer Mapping | Description |
 |-------------|-----------------|-------------|
-| Pre-active  |        0        | Keys are initially created in the _Pre-active_ state. A pre-active key cannot be used to cryptographically protect data. |
-| Active      |        1        | Keys move immediately into the _Active_ state on the activation date or when you manually activate them. This transition marks the beginning of a key's cryptoperiod. Keys with no activation date become active immediately and remain active until they expire or are destroyed. |
-| Deactivated |        3        | A key moves into the _Deactivated_ state on the expiration date, if one is assigned. You can also manually deactivate or reactivate a key. In this state, the key is unable to cryptographically protect data. A key should be deactivated first before it can be moved to the _Destroyed_ state. |
-| Compromised |        4        | You should mark a key as being _Compromised_ when the key's information is disclosed to an unauthorised third party. Data in the _Compromised_ keys can still be decrypted, but you should not use the key to encrypt new data. |
-| Destroyed   |        5        | Destroyed keys are in the _Destroyed_ state. Keys in this state are not recoverable. Metadata that is associated with a key remains in the vault until you manually remove the key from the vault. |
-{: caption="Table 1. Describes key states and transitions." caption-side="bottom"}
+| Pre-active  |        0        | Keys are initially created in the _Pre-active_ state. A _Pre-active_ key cannot be used to cryptographically protect data. |
+| Active      |        1        | Keys move immediately into the _Active_ state on the activation date. You can also manually activate the keys. This transition marks the beginning of the cryptoperiod of the keys. Keys with no activation date become active immediately and remain active until they expire or are destroyed. |
+| Deactivated |        3        | Keys move into the _Deactivated_ state on the scheduled expiration date. You can also manually deactivate or reactivate the keys. In this state, a key is unable to cryptographically protect data. Deactivate a key first before you move the key to the _Destroyed_ state. |
+| Compromised |        4        | Mark a key as _Compromised_ when the information of the key is disclosed to an unauthorized third party. You can still decrypt the data in the _Compromised_ keys, but you cannot use the key to encrypt new data. |
+| Destroyed   |        5        | Destroyed keys are in the _Destroyed_ state. Keys in this state cannot be restored. Metadata that is associated with a key remains in the vault until you manually remove the key from the vault. |
+{: caption="Table 1. Key states and transitions" caption-side="bottom"}
 
 
 ## Key states and service actions
 {: #mcko-key-states-service-actions}
 
-Key states affect whether an action that is performed on a key succeeds or fails. For example, if a key is in the _Active_ state, you can't restore the key because the key wasn't previously deleted.
+Key states affect whether an action that is performed on a key succeeds or fails. For example, if a key is in the _Active_ state, you cannot restore the key because the key wasn't previously deleted.
 
 The following table shows how Multicloud Key Orchestrator handles service actions based on the state of a key. The column headers represent the key states, and the row headers represent the actions that you can perform on a key. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the action on a key is expected to succeed based on the key state.
 
@@ -63,14 +63,14 @@ The following table shows how Multicloud Key Orchestrator handles service action
 (To be updated)
 
 | Action | Active | Deactivated | Compromised | Destroyed |
-| --- | --- | --- | --- | --- |
-| Get key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |  |![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
+| ------ | ------ | ----------- | ----------- | --------- |
+| Get a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |  |![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
 | List keys. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
-| Deactivate key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |     |   |
-| Reactivate key. |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
-| Destroy key. |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |
-| Remove key from vault. |     |     |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-{: caption="Table 2. Describes how key states affect service actions." caption-side="bottom"}
+| Deactivate a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |     |   |
+| Reactivate a key. |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
+| Destroy a key. |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |
+| Remove a key from vault. |     |     |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
+{: caption="Table 2. How key states affect service actions" caption-side="bottom"}
 
 
 
