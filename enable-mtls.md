@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-14"
+lastupdated: "2021-11-10"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -89,12 +89,52 @@ To enable the second layer of authentication, you need to first configure the ad
 ## Step 2: Set up the client certificate for authentication
 {: #enable-authentication-ep11-step2-certificate}
 
-After you configure the administrator signature key, you need to upload the client certificate to your instance certificate manager server for TLS client authentication.
+After you configure the administrator signature key, you need to upload the certificate to your instance certificate manager server for TLS client authentication. 
+
+- If your client certificate is signed by an intermediate certificate in a certificate chain, you need to upload that intermediate certificate. 
+
+- If your client certificate is signed by a root certificate authority (CA), you need to upload the root CA certificate.
 
 After you set up the client certificate, you are no longer able to access EP11 keystores and EP11 keys through the {{site.data.keyword.cloud_notm}} console.
 {: important}
 
-1. Upload the certificate to the server with the following command:
+1. Prepare CA and client certificates
+
+   You can generate CA certificates for the GREP11 infrastructure by using the OpenSSL utility. 
+   
+   Make sure that you install the OpenSSL on a workstation that you can use to generate the certificates. Complete the following steps on your workstation with root user authority:
+
+   1. Generate the CA key by running the following command:
+      ```
+      openssl genrsa -out ca.key 2048
+      ```
+      {: pre}
+
+   2. Create the CA certificate by running the following command:
+      ```
+      openssl req -new -x509 -key ca.key -days 730 -out ca.pem
+      ```
+      {: pre}
+
+   3. Create the client key by running the following command:
+      ```
+      openssl genrsa -out client-key.pem 2048
+      ```
+      {: pre}
+
+   4. Create the client certificate signing request by running the following command:
+      ```
+      openssl req -new -key client-key.pem -out client.csr
+      ```
+      {: pre}
+
+   5. Create the client certificate by running the following command:
+      ```
+      openssl x509 -req -days 730 -in client.csr -CA ca.pem -CAcreateserial -CAkey ca.key -out client.pem
+      ```
+      {: pre}
+
+2. Upload the CA certificate to the server with the following command:
 
     ```
     ibmcloud hpcs-cert-mgr cert set --crn HPCS_CRN --admin-priv-key ADMIN_PRIV_KEY --cert-id CERT_ID --cert CERT_FILE [--private]
@@ -129,14 +169,14 @@ After you set up the client certificate, you are no longer able to access EP11 k
 
     The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
 
-2. (Optional) Check and confirm whether the client certificate is uploaded to the server with the following command:
+3. (Optional) Check and confirm whether the CA certificate is uploaded to the server with the following command:
 
     ```
     ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN [--private]
     ```
     {: pre}
 
-    This command lists all the available client certificates that are managed by you on the server. If the list contains the certificate that is previously uploaded, it means the action is successfully completed.
+    This command lists all the available CA certificates that are managed by you on the server. If the list contains the certificate that is previously uploaded, it means the action is successfully completed.
 
 ## Step 3: Establish mutual TLS connections for EP11 applications
 {: #enable-authentication-ep11-step3-enable-tls}
@@ -153,14 +193,14 @@ To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the pr
     - Golang example code snippet
 
       ```go
+      cert, _ := tls.LoadX509KeyPair("client.pem", "client.key")
       var callOpts = []grpc.DialOption{
-        grpc.WithTransportCredentials(credentials.NewTLS(&tls.Config{}))
+        grpc.WithTransportCredentials(credentials.NewTLS(&tls.Config      {Certificates: []tls.Certificate{cert}}))
       }
       ```
       {: codeblock}
 
-      The `tls.Config{}` needs to be properly defined based on the [`Config` type struct](https://pkg.go.dev/crypto/tls#Config){: external}. You need to set at least the `Certificates` field. For the complete Golang example code, see [The sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go/blob/master/examples/server_test.go){: external}.
-
+      The `tls.Config{}` needs to be properly defined based on the [`Config` type struct](https://pkg.go.dev/crypto/tls#Config){: external}. You need to set at least the `Certificates` field. Make sure to use your client key and client certificate. For the complete Golang example code, see [The sample GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go/blob/master/examples/server_test.go){: external}.
     - JavaScript example code snippet
 
       ```javascript
@@ -207,9 +247,9 @@ After the configuration, when the applications use the GREP11 or PKCS #11 API to
 ## (Optional) Disabling mutual TLS connections
 {: #enable-authentication-ep11-disable-tls}
 
-If you no longer need the second layer of authentication, you can disable the function by removing all the client certificates on the server.
+If you no longer need the second layer of authentication, you can disable the function by removing all the CA certificates on the server.
 
-1. Remove a client certificate with the following command. Repeat this step to remove all the available certificates on the server to disable the TLS connections from EP11 applications.
+1. Remove a CA certificate with the following command. Repeat this step to remove all the available certificates on the server to disable the TLS connections from EP11 applications.
 
     ```
     ibmcloud hpcs-cert-mgr cert delete --crn HPCS_CRN --admin-priv-key ADMIN_PRIV_KEY --cert-id CERT_ID [--private]
@@ -233,17 +273,17 @@ If you no longer need the second layer of authentication, you can disable the fu
     </tr>
     <tr>
       <td><varname>CERT_ID</varname></td>
-      <td><strong>Required.</strong> The string ID of the client certificate that you want to delete. You can first use the <code>ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN</code> command to list all the certificates including their IDs.</td>
+      <td><strong>Required.</strong> The string ID of the CA certificate that you want to delete. You can first use the <code>ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN</code> command to list all the certificates including their IDs.</td>
     </tr>
-    <caption>Table 2. Describes the variables that are needed to delete client certificates</caption>
+    <caption>Table 2. Describes the variables that are needed to delete CA certificates</caption>
     </table>
 
     The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
 
-    If multiple certificate administrators are set up for your service instance, make sure to remove all the client certificates under these administrators. After you remove all the certificates for your service instance, the mutual TLS is disabled for all new EP11 connections and the second layer of authentication is inactive.
+    If multiple certificate administrators are set up for your service instance, make sure to remove all the CA certificates under these administrators.If you delete a CA certificate from the certificate manager server, all applications using client certificates that are issued by this CA are not able to access this instance of GREP11 API through mutual TLS connection. After you remove all the certificates from the certificate manager server, the mutual TLS authentication for this instance of GREP11 API is disabled and applications do not need mutual TLS connection to connect to this instance of GREP11 API.
     {: note}
 
-2. (Optional) Check and confirm whether all the client certificates are removed with the following command:
+2. (Optional) Check and confirm whether all the CA certificates are removed with the following command:
 
     ```
     ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN [--private]
