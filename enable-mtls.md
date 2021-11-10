@@ -91,9 +91,9 @@ To enable the second layer of authentication, you need to first configure the ad
 
 After you configure the administrator signature key, you need to upload the certificate to your instance certificate manager server for TLS client authentication. 
 
-- If your client certificate is signed by an intermediate certificate in a certificate chain, you need to upload that intermediate certificate. 
+- If your client certificate is signed by an [intermediate certificate](x3753781){: term} in a certificate chain, you need to upload that intermediate certificate. 
 
-- If your client certificate is signed by a root certificate authority (CA), you need to upload the root CA certificate.
+- If your client certificate is signed by a root [certificate authority (CA)](#x2016383){: term}, you need to upload the root CA certificate.
 
 After you set up the client certificate, you are no longer able to access EP11 keystores and EP11 keys through the {{site.data.keyword.cloud_notm}} console.
 {: important}
