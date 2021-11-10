@@ -280,7 +280,7 @@ If you no longer need the second layer of authentication, you can disable the fu
 
     The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
 
-    If multiple certificate administrators are set up for your service instance, make sure to remove all the CA certificates under these administrators.If you delete a CA certificate from the certificate manager server, all applications using client certificates that are issued by this CA are not able to access this instance of GREP11 API through mutual TLS connection. After you remove all the certificates from the certificate manager server, the mutual TLS authentication for this instance of GREP11 API is disabled and applications do not need mutual TLS connection to connect to this instance of GREP11 API.
+    If multiple certificate administrators are set up for your service instance, make sure to remove all the CA certificates under these administrators. If you remove a CA certificate from the certificate manager server, all applications using client certificates that are issued by this CA are not able to access this instance of GREP11 API through mutual TLS connection. After you remove all the certificates from the certificate manager server, the mutual TLS authentication for this instance of GREP11 API is disabled and applications do not need mutual TLS connection to connect to this instance of GREP11 API.
     {: note}
 
 2. (Optional) Check and confirm whether all the CA certificates are removed with the following command:
