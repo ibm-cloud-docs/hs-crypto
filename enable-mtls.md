@@ -247,9 +247,9 @@ After the configuration, when the applications use the GREP11 or PKCS #11 API to
 ## (Optional) Disabling mutual TLS connections
 {: #enable-authentication-ep11-disable-tls}
 
-If you no longer need the second layer of authentication, you can disable the function by removing all the CA certificates on the server.
+If you no longer need the second layer of authentication, you can disable the function by deleting all the CA certificates on the server.
 
-1. Remove a CA certificate with the following command. Repeat this step to remove all the available certificates on the server to disable the TLS connections from EP11 applications.
+1. Delete a CA certificate with the following command. Repeat this step to delete all the available certificates on the server to disable the TLS connections from EP11 applications.
 
     ```
     ibmcloud hpcs-cert-mgr cert delete --crn HPCS_CRN --admin-priv-key ADMIN_PRIV_KEY --cert-id CERT_ID [--private]
@@ -280,19 +280,22 @@ If you no longer need the second layer of authentication, you can disable the fu
 
     The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
 
-    If multiple certificate administrators are set up for your service instance, make sure to remove all the CA certificates under these administrators. If you remove a CA certificate from the certificate manager server, all applications using client certificates that are issued by this CA are not able to access this instance of GREP11 API through mutual TLS connection. After you remove all the certificates from the certificate manager server, the mutual TLS authentication for this instance of GREP11 API is disabled and applications do not need mutual TLS connection to connect to this instance of GREP11 API.
-    {: note}
+    If multiple certificate administrators are set up for your service instance, make sure to delete all the CA certificates under these administrators.
 
-2. (Optional) Check and confirm whether all the CA certificates are removed with the following command:
+    If you delete a CA certificate from the certificate manager server, all applications using client certificates that are issued by this CA are not able to access this instance of GREP11 API through mutual TLS connection.
+
+    After you delete all the certificates from the certificate manager server, the mutual TLS authentication for this instance of GREP11 API is disabled and applications do not need mutual TLS connection to connect to this instance of GREP11 API.
+
+2. (Optional) Check and confirm whether all the CA certificates are deleted with the following command:
 
     ```
     ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN [--private]
     ```
     {: pre}
 
-    If no certificate is returned, it means all the certificates of your service instance are removed.
+    If no certificate is returned, it means all the certificates of your service instance are deleted.
 
-3. (Optional) Update the GREP11 or PKCS #11 applications to remove the certificate configurations, so that the applications are no longer use the certificate for future API connections.
+3. (Optional) Update the GREP11 or PKCS #11 applications to delete the certificate configurations, so that the applications no longer use the certificate for future API connections.
 
 ## What's next
 {: #enable-authentication-ep11-whats-next}
