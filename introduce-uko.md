@@ -2,9 +2,9 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-02"
+lastupdated: "2021-11-10"
 
-keywords: multicloud, key management, hyper protect, ekmf-web, mcko, Multicloud Key Orchestrator
+keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
 subcollection: hs-crypto
 
@@ -20,17 +20,17 @@ subcollection: hs-crypto
 {:term: .term}
 
 
-# Introducing Multicloud Key Orchestrator
-{: #introduce-mcko}
+# Introducing Unified Key Orchestrator
+{: #introduce-uko}
 
-Multicloud Key Orchestrator is a function based on IBM&reg; Enterprise Key Management Foundation - Web Edition (EKMF Web), a flexible and highly secure key management system for the enterprise.
+Unified Key Orchestrator is a function based on IBM&reg; Enterprise Key Management Foundation - Web Edition (EKMF Web), a flexible and highly secure key management system for the enterprise.
 
-As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, Multicloud Key Orchestrator is the first public cloud control plane for multicloud and hybrid cloud key orchestration. It provides NIST-defined states for cryptographic keys and secure transfer of keys to internal keystores on {{site.data.keyword.cloud_notm}}, and external keystores such as Microsoft Azure and Amazon Web Services (AWS).
+As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, Unified Key Orchestrator is the first public cloud control plane for multicloud and hybrid cloud key orchestration. It provides NIST-defined states for cryptographic keys and secure transfer of keys to internal keystores on {{site.data.keyword.cloud_notm}}, and external keystores such as Microsoft Azure and Amazon Web Services (AWS).
 
 
 
-## Why Multicloud Key Orchestrator?
-{: #why-mcko}
+## Why Unified Key Orchestrator?
+{: #why-uko}
 
 Many enterprises have the legal obligation to bring their own keys when they move sensitive workloads to the cloud. Enterprises are adopting native encryption and key management offerings from cloud providers.
 
@@ -42,24 +42,24 @@ Dealing with multiple clouds means dealing with keys in multiple key management 
 
 As a key management service from a third-party encryption provider, {{site.data.keyword.hscrypto}} alleviates the complexity of maintaining encryption across hybrid environments. 
 
-With Multicloud Key Orchestrator, you can integrate all your key management use cases into one consistent approach, backed by a trusted IBM Z HSM. It provides you with the following features:
+With Unified Key Orchestrator, you can integrate all your key management use cases into one consistent approach, backed by a trusted IBM Z HSM. It provides you with the following features:
 - Simple and consistent user experience
 - Seamless integration into the existing cloud framework
 - One point of control for multiple keys in multiple clouds 
 - Secure backup of all keys and easy restoration across multiple clouds
 
 
-![Multicloud Key Orchestrator](/images/multicloud-key-orchestrator.svg "Multicloud Key Orchestrator"){: caption="Figure 1. Multicloud Key Orchestrator"  caption-side="bottom"}
+![Unified Key Orchestrator](/images/unified-key-orchestrator.svg "Unified Key Orchestrator"){: caption="Unified Key Orchestrator"  caption-side="bottom"}
 
 
 ## Key components
 {: #key-components}
 
-Multicloud Key Orchestrator has the following components:
+Unified Key Orchestrator has the following components:
 
 - **Vault**
 
-    The vault is a centralized key repository in Multicloud Key Orchestrator and backed by a separate datastore. All the keys you created or provided are listed in the vault, and are encrypted with customer-owned HSM master keys.
+    The vault is a centralized key repository in Unified Key Orchestrator and backed by a separate datastore. All the keys you created or provided are listed in the vault, and are encrypted with customer-owned HSM master keys.
 
 - **Keystores**
   
@@ -81,7 +81,7 @@ Multicloud Key Orchestrator has the following components:
 ## Use cases
 {: #use-cases}
 
-You can use Multicloud Key Orchestrator to securely create and manage your keys and keystores across multiple clouds.
+You can use Unified Key Orchestrator to securely create and manage your keys and keystores across multiple clouds.
 
 ### Manage your keys through one user experience
 {: #manage-keys}
@@ -109,7 +109,7 @@ You can grant and control access to keystores, so that only a distinct set of us
 
 
 ## What's next
-{: #mcko-next}
+{: #uko-next}
 
 
 

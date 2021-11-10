@@ -2,9 +2,9 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-09"
+lastupdated: "2021-11-10"
 
-keywords: encryption key states, encryption key lifecycle, manage key lifecycle, MCKO, multicloud key orchestrator
+keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator
 
 subcollection: hs-crypto
 
@@ -23,21 +23,20 @@ subcollection: hs-crypto
 {:term: .term}
 
 
-# Monitoring the lifecycle of encryption keys in Multicloud Key Orchestrator
-{: #mcko-key-states}
+# Monitoring the lifecycle of encryption keys in Unified Key Orchestrator
+{: #uko-key-states}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} follows the security guidelines by [NIST SP 800-57 for key states](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0){: external}.
 {: shortdesc}
 
 ## Key states and transitions
-
-{: #mcko-key-transitions}
+{: #uko-key-transitions}
 
 Cryptographic keys, in their lifetime, transition through several states that are a function of how long the keys are in existence and whether data is protected.
 
 The following diagram shows how a key passes through states in the vault between the generation and the destruction.
 
-![Key states and transitions in the vault](/images/mcko-key-states.svg "Key states and transitions in the vault"){: caption="Figure 1. Key states and transitions in the vault" caption-side="bottom"}
+![Key states and transitions in the vault](/images/uko-key-states.svg "Key states and transitions in the vault"){: caption="Figure 1. Key states and transitions in the vault" caption-side="bottom"}
 
 
 
@@ -53,11 +52,11 @@ The following diagram shows how a key passes through states in the vault between
 
 
 ## Key states and service actions
-{: #mcko-key-states-service-actions}
+{: #uko-key-states-service-actions}
 
 Key states affect whether an action that is performed on a key succeeds or fails. For example, if a key is in the _Active_ state, you cannot restore the key because the key wasn't previously deleted.
 
-The following table shows how Multicloud Key Orchestrator handles service actions based on the state of a key. The column headers represent the key states, and the row headers represent the actions that you can perform on a key. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the action on a key is expected to succeed based on the key state.
+The following table shows how Unified Key Orchestrator handles service actions based on the state of a key. The column headers represent the key states, and the row headers represent the actions that you can perform on a key. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the action on a key is expected to succeed based on the key state.
 
 
 (To be updated)
@@ -75,7 +74,7 @@ The following table shows how Multicloud Key Orchestrator handles service action
 
 
 ## Monitoring for lifecycle changes
-{: #mcko-monitor-lifecycle-changes}
+{: #uko-monitor-lifecycle-changes}
 
 (To be updated)
 
