@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-11-11"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -281,12 +281,14 @@ The following field includes extra information:
 
 - The `responseData.totalResources` field includes the total number of keys within the service instance.
 
+
 #### List keys
 {: #list-keys-success}
 
 The following field includes extra information:
 
 - The `responseData.totalResources` field includes the total number of keys that are returned in the response.
+
 
 #### Get key or key metadata
 {: #get-key-success}
@@ -300,12 +302,15 @@ The following fields include extra information:
 
 
 
+
+
 #### List key versions
 {: #list-key-versions-success}
 
 The following field includes extra information:
 
 - The `responseData.totalResources` field includes the total number of key versions returned in the response.
+
 
 #### Set or unset key for deletion
 {: #dual-auth-set-success}
@@ -328,6 +333,7 @@ new initiatorID of the person who set the dual authorization policy.
 ### Policy events
 {: #policy-at-events}
 
+
 #### Allowed network policies
 {: #allowed-network-event}
 
@@ -338,6 +344,7 @@ The following fields include extra information:
 - The `requestData.newValue.policyAllowedNetworkEnabled` field includes if your allowed network policy is enabled or disabled.
 - The `requestData.newValue.policyAllowedNetworkAttribute` field includes if your allowed network policy is only for public networks or both public and private networks.
 
+
 #### Dual auth delete policies
 {: #dual-auth-event}
 
@@ -345,6 +352,7 @@ The following fields include extra information:
 
 - The `requestData.initialValue.policyDualAuthDeleteEnabled` field includes if your dual auth delete policy was previously enabled or disabled.
 - The `requestData.newValue.policyDualAuthDeleteEnabled` field includes if your dual auth delete policy is enabled or disabled.
+
 
 #### Key creation and importation access policies
 {: #allowed-key-creation-policy}
@@ -376,6 +384,7 @@ The following fields include extra information:
 - The `responseData.maxAllowedRetrievals` field includes the maximum number of times the import token can be retrieved within the expiration time before it is no
 longer accessible.
 
+
 #### Retrieve import token
 {: #retrieve-import-token-success}
 
@@ -388,6 +397,8 @@ accessible.
 
 
 
+
+
 ### Registration events
 {: #registration-events}
 
@@ -397,6 +408,7 @@ accessible.
 The following field includes extra information:
 
 - The `responseData.totalResources` field includes the total number of registrations that are returned in the response.
+
 
 ### Trusted Key Entry events
 {: #tke-events-success}
@@ -429,11 +441,13 @@ For the following TKE events, some specific fields indicate more information.
 - The `requestData.adminId` field includes the SHA-256 hash of the signature key file that is associated with the administrator to be added.
 - The `responseData.adminIds` field lists the SHA-256 hashes of the signature key files associated with all the administrators that are added to the crypto unit.
 
+
 #### Remove a crypto unit administrator
 {: #tke-remove-admin-success}
 
 - The `requestData.adminId` field includes the SHA-256 hash of the signature key file that is associated with the administrator to be removed.
 - The `responseData.adminIds` field lists the SHA-256 hashes of the signature key files associated with all the administrators that are   added to the crypto unit.
+
 
 #### Set the signature thresholds
 {: #tke-set-threshold-success}
@@ -449,17 +463,20 @@ For the following TKE events, some specific fields indicate more information.
 - The `requestData.masterKeyIds` field lists the SHA-256 hashes of all the master key parts files that you select to load to the crypto unit.
 - The `responseData.verificationPattern` field includes the SHA-256 hash of the master key that is composed of the selected master key parts and is loaded to the new master key register.
 
+
 #### Commit the new master key register
 {: #tke-commit-new-master-success}
 
 - The `requestData.verificationPattern` field includes the SHA-256 hash of the master key that is loaded to the new master key register.
 - The `responseData.masterKeyIds` field lists the SHA-256 hashes of all the master key parts files that compose the master key.
 
+
 #### Activate the current master key register
 {: #tke-activate-current-master-success}
 
 - The `requestData.verificationPattern` field includes the SHA-256 hash of the master key that is loaded and committed to the new master key register.
 - The `responseData.verificationPattern` field includes the SHA-256 hash of the master key that is activated.
+
 
 ### Certificate manager events
 {: #mgr-events-success}
@@ -489,6 +506,7 @@ The following fields include extra information:
 - The `requestData.accountId` field includes the current user ID.
 - The `responseData.action` field includes the action details of the current user.
 
+
 #### Update the administrator signature key for the certificate administrator
 {: #cert-mgr-update-adminkey-success}
 
@@ -496,6 +514,7 @@ The following fields include extra information:
 
 - The `requestData.accountId` field includes the current user ID.
 - The `responseData.action` field includes the action details of the current user.
+
 
 #### Remove the administrator signature key of the certificate administrator
 {: #cert-mgr-delete-adminkey-success}
@@ -505,6 +524,7 @@ The following fields include extra information:
 - The `requestData.accountId` field includes the current user ID.
 - The `responseData.action` field includes the action details of the current user.
 
+
 #### Get the administrator signature key of the certificate administrator
 {: #cert-mgr-read-adminkey-success}
 
@@ -512,6 +532,7 @@ The following fields include extra information:
 
 - The `requestData.accountId` field includes the current user ID.
 - The `responseData.action` field includes the action details of the current user.
+
 
 #### Create or updating certificates by the certificate administrator
 {: #cert-mgr-set-cert-success}
@@ -521,12 +542,14 @@ The following fields include extra information:
 - The `requestData.certificateId` field indicates the target certificate.
 - The `responseData.action` field indicates that the certificate is to be created or updated.
 
+
 #### List certificates by the certificate administrator
 {: #cert-mgr-list-cert-success}
 
 The following field includes extra information:
 
 - The `responseData.action` field indicates all certificates that are managed by current administrator are to be listed.
+
 
 #### Get certificates by the certificate administrator
 {: #cert-mgr-read-cert-success}
@@ -536,6 +559,7 @@ The following fields include extra information:
 - The `requestData.certificateId` field indicates the target certificate.
 - The `responseData.action` field indicates that the certificate is to be fetched and displayed.
 
+
 #### Remove certificates by the certificate administrator
 {: #cert-mgr-delete-cert-success}
 
@@ -543,6 +567,7 @@ The following fields include extra information:
 
 - The `requestData.certificateId` field indicates the target mTLS certificate.
 - The `responseData.action` field indicates that the certificate is to be deleted.
+
 
 ## Analyzing failed events
 {: #at-events-analyze-failed}
