@@ -1126,6 +1126,14 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#cert-manager-cli-change-log)
 
+[{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} CLI](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#hpcs-cli-plugin)
+
+* [{{site.data.keyword.hscrypto}} key management CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#kp-cli-plugin)
+
+* [{{site.data.keyword.hscrypto}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin)
+
+* [{{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#cert-manager-cli-plugin)
+
 
 ## Terraform reference
 {: #sitemap_terraform_reference}

@@ -625,7 +625,7 @@ If the event has a `reason.reasonCode` of `401` or `403`, the action cannot be c
 If the event has a `reason.reasonCode` of `500`, check out the value of `reason.reasonForFailure` to identify the reasons of failure and the corresponding actions that you need to take.
 
 ## Event severity
-{: event-severity}
+{: #event-severity}
 
 The severity for all Activity Tracker events with
 {{site.data.keyword.hscrypto}} is based on the type of request
