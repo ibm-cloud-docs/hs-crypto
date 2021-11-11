@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-10"
+lastupdated: "2021-11-11"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -86,19 +86,15 @@ To enable the second layer of authentication, you need to first configure the ad
 
     If this command returns the public key value, it means that you upload the public key successfully.
 
-## Step 2: Set up the client certificate for authentication
+## Step 2: Set up the client CA certificate for authentication
 {: #enable-authentication-ep11-step2-certificate}
 
-After you configure the administrator signature key, you need to upload the certificate to your instance certificate manager server for TLS client authentication. 
+After you configure the administrator signature key, you need to upload the client [certificate authority (CA)](#x2016383){: term} certificate to your instance certificate manager server for TLS client authentication. 
 
-- If your client certificate is signed by an [intermediate certificate](x3753781){: term} in a certificate chain, you need to upload that intermediate certificate. 
-
-- If your client certificate is signed by a root [certificate authority (CA)](#x2016383){: term}, you need to upload the root CA certificate.
-
-After you set up the client certificate, you are no longer able to access EP11 keystores and EP11 keys through the {{site.data.keyword.cloud_notm}} console.
+After you set up the client CA certificate, you are no longer able to access EP11 keystores and EP11 keys through the {{site.data.keyword.cloud_notm}} console.
 {: important}
 
-1. Prepare CA and client certificates
+1. (Optional) Prepare CA and client certificates
 
    You can generate CA certificates for the GREP11 infrastructure by using the OpenSSL utility. 
    
@@ -134,7 +130,9 @@ After you set up the client certificate, you are no longer able to access EP11 k
       ```
       {: pre}
 
-2. Upload the CA certificate to the server with the following command:
+2. Upload the client CA certificate to the server with the following command:
+    If your client certificate is signed by an [intermediate certificate](x3753781){: term} in a certificate chain, you need to upload that intermediate certificate. 
+    {: note}
 
     ```
     ibmcloud hpcs-cert-mgr cert set --crn HPCS_CRN --admin-priv-key ADMIN_PRIV_KEY --cert-id CERT_ID --cert CERT_FILE [--private]
@@ -169,19 +167,19 @@ After you set up the client certificate, you are no longer able to access EP11 k
 
     The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
 
-3. (Optional) Check and confirm whether the CA certificate is uploaded to the server with the following command:
+3. (Optional) Check and confirm whether the client CA certificate is uploaded to the server with the following command:
 
     ```
     ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN [--private]
     ```
     {: pre}
 
-    This command lists all the available CA certificates that are managed by you on the server. If the list contains the certificate that is previously uploaded, it means the action is successfully completed.
+    This command lists all the available client CA certificates that are managed by you on the server. If the list contains the certificate that is previously uploaded, it means the action is successfully completed.
 
 ## Step 3: Establish mutual TLS connections for EP11 applications
 {: #enable-authentication-ep11-step3-enable-tls}
 
-After you set up the administrator signature key and the client certificate, EP11 users can establish mutual TLS connections for applications that use the GREP11 or PKCS #11 API. Before EP11 users can do this, they need to configure the GREP11 or PKCS #11 applications with the client certificate.
+After you set up the administrator signature key and the client CA certificate, EP11 users can establish mutual TLS connections for applications that use the GREP11 or PKCS #11 API. Before EP11 users can do this, they need to configure the GREP11 or PKCS #11 applications with the client certificate.
 
 To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the proper IAM roles to perform EP11 operations. For more information, see the HSM APIs tab in [IAM service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
 {: note}
@@ -193,9 +191,9 @@ To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the pr
     - Golang example code snippet
 
       ```go
-      cert, _ := tls.LoadX509KeyPair("client.pem", "client.key")
+      cert, _ := tls.LoadX509KeyPair("client.pem", "client-key.pem")
       var callOpts = []grpc.DialOption{
-        grpc.WithTransportCredentials(credentials.NewTLS(&tls.Config      {Certificates: []tls.Certificate{cert}}))
+        grpc.WithTransportCredentials(credentials.NewTLS(&tls.Config{Certificates: []tls.Certificate{cert}}))
       }
       ```
       {: codeblock}
@@ -247,7 +245,7 @@ After the configuration, when the applications use the GREP11 or PKCS #11 API to
 ## (Optional) Disabling mutual TLS connections
 {: #enable-authentication-ep11-disable-tls}
 
-If you no longer need the second layer of authentication, you can disable the function by deleting all the CA certificates on the server.
+If you no longer need the second layer of authentication, you can disable the function by deleting all the client CA certificates on the server.
 
 1. Delete a CA certificate with the following command. Repeat this step to delete all the available certificates on the server to disable the TLS connections from EP11 applications.
 
