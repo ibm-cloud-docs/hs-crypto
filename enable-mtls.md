@@ -131,6 +131,7 @@ After you set up the client CA certificate, you are no longer able to access EP1
       {: pre}
 
 2. Upload the client CA certificate to the server with the following command:
+   
     If your client certificate is signed by an [intermediate certificate](x3753781){: term} in a certificate chain, you need to upload that intermediate certificate. 
     {: note}
 
