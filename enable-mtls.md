@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-11"
+lastupdated: "2021-11-12"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -157,11 +157,11 @@ After you set up the client CA certificate, you are no longer able to access EP1
     </tr>
     <tr>
       <td><varname>CERT_ID</varname></td>
-      <td><strong>Required.</strong> The string ID that you want to assign to the client certificate for easy identification.</td>
+      <td><strong>Required.</strong> The string ID that you want to assign to the client CA certificate for easy identification.</td>
     </tr>
     <tr>
       <td><varname>CERT_FILE</varname></td>
-      <td><strong>Required.</strong> The file path of the client certificate on your local workstation.</td>
+      <td><strong>Required.</strong> The file path of the client CA certificate on your local workstation.</td>
     </tr>
     <caption>Table 1. Describes the variables that are needed to upload the TLS certificate</caption>
     </table>
