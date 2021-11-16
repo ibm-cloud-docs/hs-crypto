@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-12"
+lastupdated: "2021-11-16"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -281,9 +281,10 @@ If you no longer need the second layer of authentication, you can disable the fu
 
     If multiple certificate administrators are set up for your service instance, make sure to delete all the CA certificates under these administrators.
 
-    If you delete a CA certificate from the certificate manager server, all applications using client certificates that are issued by this CA are not able to access this instance of GREP11 API through mutual TLS connection.
+    If you delete a CA certificate from the certificate manager server, all applications using the client certificates that are issued by this CA certificate do not have access to the GREP11 instance through mutual TLS connection.
 
-    After you delete all the certificates from the certificate manager server, the mutual TLS authentication for this instance of GREP11 API is disabled and applications do not need mutual TLS connection to connect to this instance of GREP11 API.
+    After you delete all CA certificates from the certificate manager server, the mutual TLS authentication for the GREP11 instance is disabled. Applications then do not need mutual TLS connection to connect to the GREP11 instance.
+
 
 2. (Optional) Check and confirm whether all the CA certificates are deleted with the following command:
 
