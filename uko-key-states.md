@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-10"
+lastupdated: "2021-11-17"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator
 
@@ -41,11 +41,11 @@ The following diagram shows how a key passes through states in the vault between
 
 
 
-| State       | Integer Mapping | Description |
+| State       | Integer mapping | Description |
 |-------------|-----------------|-------------|
 | Pre-active  |        0        | Keys are initially created in the _Pre-active_ state. A _Pre-active_ key cannot be used to cryptographically protect data. |
-| Active      |        1        | Keys move immediately into the _Active_ state on the activation date. You can also manually activate the keys. This transition marks the beginning of the cryptoperiod of the keys. Keys with no activation date become active immediately and remain active until they expire or are destroyed. |
-| Deactivated |        3        | Keys move into the _Deactivated_ state on the scheduled expiration date. You can also manually deactivate or reactivate the keys. In this state, a key is unable to cryptographically protect data. Deactivate a key first before you move the key to the _Destroyed_ state. |
+| Active      |        1        | Keys move immediately into the _Active_ state on the activation date. You can also manually activate the keys. This transition marks the beginning of the crypto period of the keys. Keys with no activation date become active immediately and remain active until they expire or are destroyed. |
+| Deactivated |        3        | Keys move into the _Deactivated_ state on the scheduled expiration date. You can also manually deactivate or reactivate the keys. In this state, a key is not able to cryptographically protect data. Deactivate a key first before you move the key to the _Destroyed_ state. |
 | Compromised |        4        | Mark a key as _Compromised_ when the information of the key is disclosed to an unauthorized third party. You can still decrypt the data in the _Compromised_ keys, but you cannot use the key to encrypt new data. |
 | Destroyed   |        5        | Destroyed keys are in the _Destroyed_ state. Keys in this state cannot be restored. Metadata that is associated with a key remains in the vault until you manually remove the key from the vault. |
 {: caption="Table 1. Key states and transitions" caption-side="bottom"}
@@ -54,7 +54,7 @@ The following diagram shows how a key passes through states in the vault between
 ## Key states and service actions
 {: #uko-key-states-service-actions}
 
-Key states affect whether an action that is performed on a key succeeds or fails. For example, if a key is in the _Active_ state, you cannot restore the key because the key wasn't previously deleted.
+Key states affect whether an action that you perform on a key succeeds or fails. For example, if a key is in the _Active_ state, you cannot restore the key because the key wasn't deleted.
 
 The following table shows how Unified Key Orchestrator handles service actions based on the state of a key. The column headers represent the key states, and the row headers represent the actions that you can perform on a key. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the action on a key is expected to succeed based on the key state.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-11"
+lastupdated: "2021-11-17"
 
 keywords: site map, doc structure, information architecture
 
@@ -1139,9 +1139,9 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_terraform_reference}
 
 
-[Provisioning and initializing service instances with Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs){: new_window}{: external}
+[Provisioning and initializing service instances with Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs){: external}
 
-[Managing key management service keys with Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: new_window}{: external}
+[Managing key management service keys with Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: external}
 
 
 ## Regions and locations
