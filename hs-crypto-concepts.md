@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-11-18"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -219,3 +219,5 @@ gRPC is a modern open source high performance remote procedure call (RPC) framew
 {: #grep11-concept}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of the Enterprise PKCS #11 (EP11) over [gRPC](https://grpc.io){: external} API calls (also referred to as GREP11), with which all the Crypto functions are executed in a cloud HSM. EP11 over gRPC is a stateless interface for cryptographic operations on cloud. For more information about the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11_intro) and [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+
+

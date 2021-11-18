@@ -67,6 +67,8 @@ With {{site.data.keyword.uko_full_notm}}, you can integrate all your key managem
 
         The {{site.data.keyword.keymanagementservicelong_notm}} key management service component within {{site.data.keyword.hscrypto}} provides the Keep Your Own Key (KYOK) feature for {{site.data.keyword.cloud_notm}} services to ensure that you have access to only the authorized keystores. 
 
+        You can create up to five KMS keystores free of charge. If the number reaches the limit, an additional keystore is charged $60 per calendar month.
+
     - **EP11 keystore**
 
         The backing store for EP11 keys that are provided by the GREP11 API. The EP11 keystore has two purposes:
@@ -74,7 +76,6 @@ With {{site.data.keyword.uko_full_notm}}, you can integrate all your key managem
         - To serve as a user keystore to store user keys that are to be exposed and used by GREP11 or PKCS #11 applications
 
     The KMS internal keystore is a separate database schema and cannot be accessed by users through the GREP11 API.
-
 
 
 
