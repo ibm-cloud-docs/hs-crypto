@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-17"
+lastupdated: "2021-11-18"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 {:term: .term}
 
 
-# Monitoring the lifecycle of encryption keys in Unified Key Orchestrator
+# Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}
 {: #uko-key-states}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} follows the security guidelines by [NIST SP 800-57 for key states](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0){: external}.
@@ -56,7 +56,7 @@ The following diagram shows how a key passes through states in the vault between
 
 Key states affect whether an action that you perform on a key succeeds or fails. For example, if a key is in the _Active_ state, you cannot restore the key because the key wasn't deleted.
 
-The following table shows how Unified Key Orchestrator handles service actions based on the state of a key. The column headers represent the key states, and the row headers represent the actions that you can perform on a key. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the action on a key is expected to succeed based on the key state.
+The following table shows how {{site.data.keyword.uko_full_notm}} handles service actions based on the state of a key. The column headers represent the key states, and the row headers represent the actions that you can perform on a key. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the action on a key is expected to succeed based on the key state.
 
 
 (To be updated)

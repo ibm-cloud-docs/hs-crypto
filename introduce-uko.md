@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-10"
+lastupdated: "2021-11-18"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -20,16 +20,16 @@ subcollection: hs-crypto
 {:term: .term}
 
 
-# Introducing Unified Key Orchestrator
+# Introducing {{site.data.keyword.uko_full_notm}}
 {: #introduce-uko}
 
-Unified Key Orchestrator is a function based on IBM&reg; Enterprise Key Management Foundation - Web Edition (EKMF Web), a flexible and highly secure key management system for the enterprise.
+{{site.data.keyword.uko_full_notm}} is a function based on IBM&reg; Enterprise Key Management Foundation - Web Edition (EKMF Web), a flexible and highly secure key management system for the enterprise.
 
-As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, Unified Key Orchestrator is the first public cloud control plane for multicloud and hybrid cloud key orchestration. It provides NIST-defined states for cryptographic keys and secure transfer of keys to internal keystores on {{site.data.keyword.cloud_notm}}, and external keystores such as Microsoft Azure and Amazon Web Services (AWS).
+As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, {{site.data.keyword.uko_full_notm}} is the first public cloud control plane for multicloud and hybrid cloud key orchestration. It provides NIST-defined states for cryptographic keys and secure transfer of keys to internal keystores on {{site.data.keyword.cloud_notm}}, and external keystores such as Microsoft Azure and Amazon Web Services (AWS).
 
 
 
-## Why Unified Key Orchestrator?
+## Why {{site.data.keyword.uko_full_notm}}?
 {: #why-uko}
 
 Many enterprises have the legal obligation to bring their own keys when they move sensitive workloads to the cloud. Enterprises are adopting native encryption and key management offerings from cloud providers.
@@ -42,7 +42,7 @@ Dealing with multiple clouds means dealing with keys in multiple key management 
 
 As a key management service from a third-party encryption provider, {{site.data.keyword.hscrypto}} alleviates the complexity of maintaining encryption across hybrid environments. 
 
-With Unified Key Orchestrator, you can integrate all your key management use cases into one consistent approach, backed by a trusted IBM Z HSM. It provides you with the following features:
+With {{site.data.keyword.uko_full_notm}}, you can integrate all your key management use cases into one consistent approach, backed by a trusted IBM Z HSM. It provides you with the following features:
 - Simple and consistent user experience
 - Seamless integration into the existing cloud framework
 - One point of control for multiple keys in multiple clouds 
@@ -55,11 +55,11 @@ With Unified Key Orchestrator, you can integrate all your key management use cas
 ## Key components
 {: #key-components}
 
-Unified Key Orchestrator has the following components:
+{{site.data.keyword.uko_full_notm}} has the following components:
 
 - **Vault**
 
-    The vault is a centralized key repository in Unified Key Orchestrator and backed by a separate datastore. All the keys you created or provided are listed in the vault, and are encrypted with customer-owned HSM master keys.
+    The vault is a centralized key repository in {{site.data.keyword.uko_full_notm}} and backed by a separate datastore. All the keys you created or provided are listed in the vault, and are encrypted with customer-owned HSM master keys.
 
 - **Keystores**
   
@@ -81,7 +81,7 @@ Unified Key Orchestrator has the following components:
 ## Use cases
 {: #use-cases}
 
-You can use Unified Key Orchestrator to securely create and manage your keys and keystores across multiple clouds.
+You can use {{site.data.keyword.uko_full_notm}} to securely create and manage your keys and keystores across multiple clouds.
 
 ### Manage your keys through one user experience
 {: #manage-keys}
