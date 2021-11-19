@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-18"
+lastupdated: "2021-11-19"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -57,9 +57,9 @@ With {{site.data.keyword.uko_full_notm}}, you can integrate all your key managem
 
 {{site.data.keyword.uko_full_notm}} has the following components:
 
-- **Vault**
+- **Vaults**
 
-    The vault is a centralized key repository in {{site.data.keyword.uko_full_notm}} and backed by a separate datastore. All the keys you created or provided are listed in the vault, and are encrypted with customer-owned HSM master keys.
+    Vaults are used to assign access control with IAM. A vault contains keys, keystores, and key templates. You need to assign a managed key to a vault when you create the key. All the keys you created or provided are encrypted with customer-owned HSM master keys.
 
 - **Keystores**
   
@@ -84,10 +84,17 @@ With {{site.data.keyword.uko_full_notm}}, you can integrate all your key managem
 
 You can use {{site.data.keyword.uko_full_notm}} to securely create and manage your keys and keystores across multiple clouds.
 
+
+### Identity and Access Management (IAM)
+{: #uko-iam}
+
+You can grant and control access to keys and keystores, so that only a distinct set of users can manage the keys.
+
+
 ### Manage your keys through one user experience
 {: #manage-keys}
 
-You can create, manage, and delete your cryptographic keys from one point of control in the vault, without dealing with different user interfaces. When you install a managed key in multiple keystores, the vault keeps the installations in sync. This ensures an efficient and fully audited key lifecycle management.
+You can create, manage, and delete your cryptographic keys from one point of control, without dealing with different user interfaces. When you install a managed key in multiple keystores, the vault keeps the installations in sync. This ensures an efficient and fully audited key lifecycle management.
 
 
 ### Connect to external keystores
@@ -99,13 +106,7 @@ You can connect to external keystores to manage keys in other service instances,
 ### Back up all keys of your enterprise centrally
 {: #back-up-keys}
 
-All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}. When a fatal error occurs in the cloud, you can reinstall keys to quickly recover from the error.
-
-
-### Identity and Access Management (IAM)
-{: #iam}
-
-You can grant and control access to keystores, so that only a distinct set of users can manage the keys.
+All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}. When a fatal error occurs in the cloud, you can reinstall the keys to quickly recover from the error.
 
 
 
