@@ -59,7 +59,7 @@ With {{site.data.keyword.uko_full_notm}}, you can integrate all your key managem
 
 - **Vaults**
 
-    Vaults are used to assign access control with IAM. A vault contains keys, keystores, and key templates. You need to assign a managed key to a vault when you create the key. All the keys you created or provided are encrypted with customer-owned HSM master keys.
+    Vaults are used to assign access control with Identity and Access Management (IAM). A vault contains managed keys, keystores, and key templates. You need to assign a managed key to a vault when you create the key. All the keys you created or provided are encrypted with customer-owned HSM master keys.
 
 - **Keystores**
   
@@ -100,7 +100,7 @@ You can create, manage, and delete your cryptographic keys from one point of con
 ### Connect to external keystores
 {: #connect-to-keystores}
 
-You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS Key Management Service. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} connects to external keystores through REST APIs and retrieves all keys into the vault. You can create, edit, or delete the keys in the vault, and install the keys back in the external keystores. 
+You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS Key Management Service. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} connects to external keystores through REST APIs and retrieves all keys into the vault. You can create, edit, or delete the keys in vaults, and install the keys back in the external keystores. 
 
 
 ### Back up all keys of your enterprise centrally
