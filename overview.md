@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-08-12"
+lastupdated: "2021-11-08"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -52,7 +52,7 @@ With the built-in encryption of {{site.data.keyword.hscrypto}}, you can easily b
 ## How does {{site.data.keyword.hscrypto}} work?
 {: #how-hpcs-work}
 
-The following are a few highlights of the {{site.data.keyword.hscrypto}} architecture:
+The following items are a few highlights of the {{site.data.keyword.hscrypto}} architecture:
 - Applications connect to {{site.data.keyword.hscrypto}} through the PKCS #11 API or the GREP11 API.
 - Dedicated keystore in {{site.data.keyword.hscrypto}} is provided to ensure data isolation and security. Privileged users are locked out for protection against abusive use of system administrator credentials or root user credentials.
 - Secure Service Container (SSC) provides the enterprise level of security and impregnability that enterprise customers expect from [IBM LinuxONE](https://www.ibm.com/it-infrastructure/linuxone){: external} technology.

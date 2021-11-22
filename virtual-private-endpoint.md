@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-11-19"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway
 
@@ -173,6 +173,8 @@ To configure a virtual private endpoint gateway, follow these steps:
         - Under **Cloud service offerings**, select **Hyper Protect Crypto Services**.
         - Under **Cloud service regions**, verify the corresponding [region](/docs/hs-crypto?topic=hs-crypto-regions#available-regions) is pre-filled for your provisioned {{site.data.keyword.hscrypto}} instance.
         - Select the [private endpoint](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints) that you are going to use to connect with your VPC instance.
+            If you are connecting to an EP11 private endpoint, make sure that you select all EP11 private endpoints for all available zones.
+            {: important} 
 
 3. [Bind a reserved IP address](/docs/vpc?topic=vpc-bind-unbind-reserved-ip) to the endpoint gateway.
 4. View the created VPE gateways associated with the {{site.data.keyword.hscrypto}} instance. For more information, see [Viewing details of an endpoint gateway](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway).
