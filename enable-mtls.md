@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-16"
+lastupdated: "2021-11-22"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -98,7 +98,7 @@ After you set up the client CA certificate, you are no longer able to access EP1
 
    You can generate CA certificates for the GREP11 infrastructure by using the OpenSSL utility. 
    
-   Make sure that you install the OpenSSL on a workstation that you can use to generate the certificates. Complete the following steps on your workstation with root user authority:
+   Make sure that you install the OpenSSL on a workstation that you can use to generate the certificates. Complete the following steps on your workstation:
 
    1. Generate the CA key by running the following command:
       ```
@@ -132,7 +132,7 @@ After you set up the client CA certificate, you are no longer able to access EP1
 
 2. Upload the client CA certificate to the server with the following command:
    
-    If your client certificate is signed by an [intermediate certificate](x3753781){: term} in a certificate chain, you need to upload that intermediate certificate. 
+    If your client certificate is signed by an intermediate CA certificate in a certificate chain, you need to upload that intermediate CA certificate. 
     {: note}
 
     ```
