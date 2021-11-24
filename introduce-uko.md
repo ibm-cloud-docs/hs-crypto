@@ -64,7 +64,7 @@ You can integrate all your key management use cases into one consistent approach
 
         The {{site.data.keyword.keymanagementservicelong_notm}} key management service component within {{site.data.keyword.hscrypto}} provides the Keep Your Own Key (KYOK) feature for {{site.data.keyword.cloud_notm}} services to ensure that you have access to only the authorized keystores. 
 
-        You can create up to five free KMS keystores to manage your keys. If additional keystores are needed, you are charged $60 per calendar month for any additional keystore. 
+        You can create up to five free KMS keystores to manage your keys. If you need additional keystores for cross-region key distribution or specified access permissions, you are charged $60 per calendar month for any additional keystore. 
 
     - **EP11 keystore**
 
