@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-19"
+lastupdated: "2021-11-24"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -23,10 +23,7 @@ subcollection: hs-crypto
 # Introducing {{site.data.keyword.uko_full_notm}}
 {: #introduce-uko}
 
-{{site.data.keyword.uko_full_notm}} is a function based on IBM&reg; Enterprise Key Management Foundation - Web Edition (EKMF Web), a flexible and highly secure key management system for the enterprise.
-
-As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, {{site.data.keyword.uko_full_notm}} is the first public cloud control plane for multicloud and hybrid cloud key orchestration. It provides NIST-defined states for cryptographic keys and secure transfer of keys to internal keystores on {{site.data.keyword.cloud_notm}}, and external keystores such as Microsoft Azure and Amazon Web Services (AWS).
-
+{{site.data.keyword.uko_full_notm}} is the first public cloud control plane for multicloud and hybrid cloud key orchestration. As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, it provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores on {{site.data.keyword.cloud_notm}}, and external keystores in Microsoft Azure and Amazon Web Services (AWS).
 
 
 ## Why {{site.data.keyword.uko_full_notm}}?
@@ -40,9 +37,9 @@ Dealing with multiple clouds means dealing with keys in multiple key management 
 - Shortage of data centers and skilled staff to operate [hardware security module (HSM)](#x6704988){: term}
 
 
-As a key management service from a third-party encryption provider, {{site.data.keyword.hscrypto}} alleviates the complexity of maintaining encryption across hybrid environments. 
+{{site.data.keyword.uko_full_notm}} alleviates the complexity of maintaining encryption across hybrid environments. 
 
-With {{site.data.keyword.uko_full_notm}}, you can integrate all your key management use cases into one consistent approach, backed by a trusted IBM Z HSM. It provides you with the following features:
+You can integrate all your key management use cases into one consistent approach, backed by a trusted IBM Z HSM. It provides you with the following features:
 - Simple and consistent user experience
 - Seamless integration into the existing cloud framework
 - One point of control for multiple keys in multiple clouds 
@@ -59,7 +56,7 @@ With {{site.data.keyword.uko_full_notm}}, you can integrate all your key managem
 
 - **Vaults**
 
-    Vaults are used to assign access control with Identity and Access Management (IAM). A vault contains managed keys, keystores, and key templates. You need to assign a managed key to a vault when you create the key. All the keys you created or provided are encrypted with customer-owned HSM master keys.
+    A vault is a single unit that controls a user's or an access group's access to keys, keystores, and key templates through Identity and Access Management (IAM). A managed key or internal keystore can only be created in a vault. When you connect to an external keystore, you need to assign it to a vault. You can install a managed key in one or more keystores of the same vault for encryption and/or decryption. The system keeps all the installed keys in sync.
 
 - **Keystores**
   
@@ -67,7 +64,7 @@ With {{site.data.keyword.uko_full_notm}}, you can integrate all your key managem
 
         The {{site.data.keyword.keymanagementservicelong_notm}} key management service component within {{site.data.keyword.hscrypto}} provides the Keep Your Own Key (KYOK) feature for {{site.data.keyword.cloud_notm}} services to ensure that you have access to only the authorized keystores. 
 
-        You can create up to five KMS keystores free of charge. If the number reaches the limit, an additional keystore is charged $60 per calendar month.
+        You can create up to five free KMS keystores to manage your keys. If additional keystores are needed, you are charged $60 per calendar month for any additional keystore. 
 
     - **EP11 keystore**
 
@@ -88,19 +85,19 @@ You can use {{site.data.keyword.uko_full_notm}} to securely create and manage yo
 ### Identity and Access Management (IAM)
 {: #uko-iam}
 
-You can grant and control access to keys and keystores, so that only a distinct set of users can manage the keys.
+You can grant and control access to keys, keystores, and key templates in a vault, so that only distinct users or access groups can manage the keys.
 
 
 ### Manage your keys through one user experience
 {: #manage-keys}
 
-You can create, manage, and delete your cryptographic keys from one point of control, without dealing with different user interfaces. When you install a managed key in multiple keystores, the vault keeps the installations in sync. This ensures an efficient and fully audited key lifecycle management.
+You can create, manage, and delete your cryptographic keys from one point of control, without dealing with different user interfaces. When you install a managed key in multiple keystores in a vault, the system keeps the installations in sync. This ensures an efficient and fully audited key lifecycle management.
 
 
 ### Connect to external keystores
 {: #connect-to-keystores}
 
-You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS Key Management Service. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} connects to external keystores through REST APIs and retrieves all keys into the vault. You can create, edit, or delete the keys in vaults, and install the keys back in the external keystores. 
+You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS Key Management Service. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} connects to external keystores through REST APIs.
 
 
 ### Back up all keys of your enterprise centrally
@@ -113,6 +110,9 @@ All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}. When
 ## What's next
 {: #uko-next}
 
+- To find out instruction on managing keystores, check out [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Managing external keystores](/docs/hs-crypto?topic=hs-crypto-manage-external-keystores).
+- To find out more about managing keys in vaults, check out [Viewing managed resources in a vault](/docs/hs-crypto?topic=hs-crypto-view-resources-vault).
+- To find out more about the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11_intro) and [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
 
 (To be updated)
