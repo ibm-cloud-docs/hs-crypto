@@ -56,7 +56,7 @@ You can integrate all your key management use cases into one consistent approach
 
 - **Vaults**
 
-    A vault is a single unit that controls a user's or an access group's access to keys, keystores, and key templates through Identity and Access Management (IAM). A managed key or internal keystore can only be created in a vault. When you connect to an external keystore, you need to assign it to a vault. You can install a managed key in one or more keystores of the same vault for encryption or decryption. The system keeps all the installed keys in sync.
+    A vault is a single unit that controls a user's or an access group's access to keys, keystores, and key templates through Identity and Access Management (IAM). A managed key or internal keystore can be created only in a vault. When you connect to an external keystore, you need to assign it to a vault. You can install a managed key in one or more keystores in the same vault for encryption and decryption. The vault keeps all the managed keys in sync.
 
 - **Keystores**
 
