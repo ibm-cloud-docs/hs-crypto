@@ -110,9 +110,6 @@ All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}. When
 ## What's next
 {: #uko-next}
 
-- To find out instruction on managing keystores, check out [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Managing external keystores](/docs/hs-crypto?topic=hs-crypto-manage-external-keystores).
-- To find out more about managing keys in vaults, check out [Viewing managed resources in a vault](/docs/hs-crypto?topic=hs-crypto-view-resources-vault).
-- To find out more about the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11_intro) and [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
 
 (To be updated)
