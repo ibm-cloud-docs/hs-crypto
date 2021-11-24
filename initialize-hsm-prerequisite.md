@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-12"
+lastupdated: "2021-11-24"
 
 keywords: initialize service, key ceremony, hsm, load master key, key ceremony preparation
 
@@ -70,5 +70,5 @@ Before you can initialize your service instance, make sure that you have done th
 
 Depending on your business needs and security requirements, {{site.data.keyword.hscrypto}} provides you with three options to initialize your service instance. For detailed operation steps, see:
 - [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
-- [Initializing service instances by using key part files](https://test.cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
-- [Initializing service instances by using smart cards and the Management Utilities](https://test.cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
+- [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+- [Initializing service instances by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
