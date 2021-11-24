@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Introducing {{site.data.keyword.uko_full_notm}}
 {: #introduce-uko}
 
-{{site.data.keyword.uko_full_notm}} is the first public cloud control plane for multicloud and hybrid cloud key orchestration. As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, it provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores on {{site.data.keyword.cloud_notm}}, and external keystores in Microsoft Azure and Amazon Web Services (AWS).
+{{site.data.keyword.uko_full_notm}} is the first public cloud control plane for multicloud and hybrid cloud key orchestration. As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, it provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores in {{site.data.keyword.cloud_notm}}, and external keystores in Microsoft Azure and Amazon Web Services (AWS).
 
 
 ## Why {{site.data.keyword.uko_full_notm}}?
