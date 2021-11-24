@@ -56,23 +56,24 @@ You can integrate all your key management use cases into one consistent approach
 
 - **Vaults**
 
-    A vault is a single unit that controls a user's or an access group's access to keys, keystores, and key templates through Identity and Access Management (IAM). A managed key or internal keystore can only be created in a vault. When you connect to an external keystore, you need to assign it to a vault. You can install a managed key in one or more keystores of the same vault for encryption and/or decryption. The system keeps all the installed keys in sync.
+    A vault is a single unit that controls a user's or an access group's access to keys, keystores, and key templates through Identity and Access Management (IAM). A managed key or internal keystore can only be created in a vault. When you connect to an external keystore, you need to assign it to a vault. You can install a managed key in one or more keystores of the same vault for encryption or decryption. The system keeps all the installed keys in sync.
 
 - **Keystores**
-  
+
+    {{site.data.keyword.uko_full_notm}} can manage both internal keystores, such as KMS keystores or EP11 keystores, and external keystores from an external cloud provider, such as Microsoft Azure Key Vault and AWS Key Management Service. You need to install a key to a keystore before you can encrypt or decrypt data by using the key.
+    
     - **KMS keystore**
 
         The {{site.data.keyword.keymanagementservicelong_notm}} key management service component within {{site.data.keyword.hscrypto}} provides the Keep Your Own Key (KYOK) feature for {{site.data.keyword.cloud_notm}} services to ensure that you have access to only the authorized keystores. 
 
-        You can create up to five free KMS keystores to manage your keys. If you need additional keystores for cross-region key distribution or specified access permissions, you are charged $60 per calendar month for any additional keystore. 
+        You can create up to five free KMS keystores to manage your keys. If you need additional keystores for cross-region key distribution or specified access permissions, you are charged $60 per calendar month for an additional keystore. 
 
     - **EP11 keystore**
 
-        The backing store for EP11 keys that are provided by the GREP11 API. The EP11 keystore has two purposes:
-        - To serve as an internal keystore to store internal keys
-        - To serve as a user keystore to store user keys that are to be exposed and used by GREP11 or PKCS #11 applications
+        The backing store for EP11 keys that are provided by the GREP11 API. The EP11 keystore has the following purposes:
+        - To serve as an internal keystore to store internal keys.
+        - To serve as a user keystore to store user keys that are to be exposed and used by GREP11 or PKCS #11 applications.
 
-    The KMS internal keystore is a separate database schema and cannot be accessed by users through the GREP11 API.
 
 
 
