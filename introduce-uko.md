@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-24"
+lastupdated: "2021-11-25"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -33,8 +33,8 @@ Many enterprises have the legal obligation to bring their own keys when they mov
 
 Dealing with multiple clouds means dealing with keys in multiple key management services. This presents the following challenges:
 - High manual effort and susceptibility to errors when enterprises operate different key management systems
-- No control over the [master key](#x2908413){: term} in cloud key management
-- Shortage of data centers and skilled staff to operate [hardware security module (HSM)](#x6704988){: term}
+- No control over the [master key](#x2908413){: term} in external cloud key management systems
+- Shortage of data centers and skilled staff to operate on-premise [hardware security module (HSM)](#x6704988){: term} for BYOK
 
 
 {{site.data.keyword.uko_full_notm}} alleviates the complexity of maintaining encryption across hybrid environments. 
@@ -56,7 +56,7 @@ You can integrate all your key management use cases into one consistent approach
 
 - **Vaults**
 
-    A vault is a single unit that controls a user's or an access group's access to keys, keystores, and key templates through Identity and Access Management (IAM). A managed key or internal keystore can be created only in a vault. When you connect to an external keystore, you need to assign it to a vault. You can install a managed key in one or more keystores in the same vault for encryption and decryption. The vault keeps all the managed keys in sync.
+    A vault is a single unit that controls a user's or an access group's access to keys and keystores through Identity and Access Management (IAM). A managed key or internal keystore can be created only in a vault. When you connect to an external keystore, you need to assign it to a vault. You can install a managed key in one or more keystores in the same vault for encryption and decryption. The vault keeps all the managed keys in sync.
 
 - **Keystores**
 
@@ -80,13 +80,13 @@ You can integrate all your key management use cases into one consistent approach
 ## Use cases
 {: #use-cases}
 
-You can use {{site.data.keyword.uko_full_notm}} to securely create and manage your keys and keystores across multiple clouds.
+You can use {{site.data.keyword.uko_full_notm}} to securely create and manage your keys and internal keystores across multiple clouds.
 
 
 ### Identity and Access Management (IAM)
 {: #uko-iam}
 
-You can grant and control access to keys, keystores, and key templates in a vault, so that only distinct users or access groups can manage the keys.
+You can grant and control access to keys and keystores in a vault, so that only distinct users or access groups can manage the keys.
 
 
 ### Manage your keys through one user experience
@@ -98,7 +98,7 @@ You can create, manage, and delete your cryptographic keys from one point of con
 ### Connect to external keystores
 {: #connect-to-keystores}
 
-You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS Key Management Service. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} connects to external keystores through REST APIs.
+You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS Key Management Service.
 
 
 ### Back up all keys of your enterprise centrally
