@@ -77,7 +77,7 @@ You can integrate all your key management use cases into one consistent approach
 
     - **External keystore**
        
-        {{site.data.keyword.uko_full_notm}} supports connecting to external keystores, such as Microsoft Azure Key Vault and Amazon Web Services Key Management Service (KMS), and creating and installing keys into these keystores.
+        {{site.data.keyword.uko_full_notm}} supports connecting to external keystores, such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS), and creating and installing keys into these keystores.
 
 
 ## Use cases
@@ -101,7 +101,7 @@ You can create, manage, and delete your cryptographic keys from one point of con
 ### Connect to external keystores
 {: #connect-to-keystores}
 
-You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS Key Management Service.
+You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS KMS.
 
 
 ### Back up all keys of your enterprise centrally
