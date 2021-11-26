@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-25"
+lastupdated: "2021-11-26"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -34,7 +34,7 @@ Many enterprises have the legal obligation to bring their own keys when they mov
 Dealing with multiple clouds means dealing with keys in multiple key management services. This presents the following challenges:
 - High manual effort and susceptibility to errors when enterprises operate different key management systems
 - No control over the [master key](#x2908413){: term} in external cloud key management systems
-- Shortage of data centers and skilled staff to operate on-premise [hardware security module (HSM)](#x6704988){: term} for BYOK
+- Shortage of data centers and skilled staff to operate [hardware security module (HSM)](#x6704988){: term} for KYOK or BYOK
 
 
 {{site.data.keyword.uko_full_notm}} alleviates the complexity of maintaining encryption across hybrid environments. 
@@ -75,6 +75,13 @@ You can integrate all your key management use cases into one consistent approach
         - To serve as a user keystore to store user keys that are to be exposed and used by GREP11 or PKCS #11 applications.
 
 
+    - **Azure Key Vault**
+       
+        Microsoft Azure Key Vault is a cloud service for you to create and manage cryptographic keys and other sensitive information.
+
+
+    - **AWS Key Management Service**
+        Amazon Web Services Key Management Service (KMS) is a managed service for you to create and manage cryptographic keys across a wide range of AWS services.
 
 
 ## Use cases
