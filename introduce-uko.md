@@ -75,13 +75,9 @@ You can integrate all your key management use cases into one consistent approach
         - To serve as a user keystore to store user keys that are to be exposed and used by GREP11 or PKCS #11 applications.
 
 
-    - **Azure Key Vault**
+    - **External keystore**
        
-        Microsoft Azure Key Vault is a cloud service for you to create and manage cryptographic keys and other sensitive information.
-
-
-    - **AWS Key Management Service**
-        Amazon Web Services Key Management Service (KMS) is a managed service for you to create and manage cryptographic keys across a wide range of AWS services.
+        {{site.data.keyword.uko_full_notm}} supports connecting to external keystores, such as Microsoft Azure Key Vault and Amazon Web Services Key Management Service (KMS), and creating and installing keys into these keystores.
 
 
 ## Use cases
