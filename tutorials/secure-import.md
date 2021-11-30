@@ -140,7 +140,7 @@ In the following step, you'll create a [import token](/docs/hs-crypto?topic=hs-c
     - **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
 
       ```
-      ibmcloud kp import-token create --instance-id $INSTANCE_ID --max-retrievals=1 --expiration=1200 > createImportTokenResponse.json
+      ibmcloud kp import-token create --instance-id $INSTANCE_ID --max-retrievals=1 --expiration=1200 -o json > createImportTokenResponse.json
       ```
       {: pre}
 
@@ -188,7 +188,7 @@ To retrieve the import token contents:
     - **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
 
       ```
-      ibmcloud kp import-token show > getImportTokenResponse.json
+      ibmcloud kp import-token show -o json > getImportTokenResponse.json
       ```
       {: pre}
 
@@ -308,7 +308,7 @@ To encrypt the nonce value:
     - **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
 
       ```
-      ibmcloud kp import-token nonce-encrypt --key "$KEY_MATERIAL" --nonce "$NONCE" --cbc | awk 'END{print "{\"encryptedNonce\": \""$1"\", \"iv\": \""$2"\"}";}' > EncryptedValues.json
+      ibmcloud kp import-token nonce-encrypt --key "$KEY_MATERIAL" --nonce "$NONCE" --cbc | awk 'END{print "{\"encryptedNonce\": \""$1"\", \"iv\": \""$2"\"}";}' -o json > EncryptedValues.json
       ```
       {: pre}
 
@@ -427,7 +427,7 @@ To import the key:
     - **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
 
       ```
-      ibmcloud kp key create new-imported-key --key-material "${ENCRYPTED_KEY}" --encrypted-nonce "${ENCRYPTED_NONCE}" --iv "${IV}" --sha1 > createRootKeyResponse.json
+      ibmcloud kp key create new-imported-key --key-material "${ENCRYPTED_KEY}" --encrypted-nonce "${ENCRYPTED_NONCE}" --iv "${IV}" --sha1 -o json > createRootKeyResponse.json
       ```
       {: pre}
 
