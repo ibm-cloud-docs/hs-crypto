@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-25"
+lastupdated: "2021-11-30"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator
 
@@ -59,16 +59,14 @@ Key states affect whether an action that you perform on a key succeeds or fails.
 The following table shows how {{site.data.keyword.uko_full_notm}} handles service actions based on the state of a key. The column headers represent the key states, and the row headers represent the actions that you can perform on a key. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the action on a key is expected to succeed based on the key state.
 
 
-(To be updated)
-
-| Action | Active | Deactivated | Compromised | Destroyed |
-| ------ | ------ | ----------- | ----------- | --------- |
-| Get a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |  |![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
-| List keys. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
-| Deactivate a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |     |   |
-| Reactivate a key. |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
-| Destroy a key. |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |
-| Remove a key from vault. |     |     |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
+| Action | Pre-active | Active | Deactivated | Compromised | Destroyed |
+| ------ | ------ | ----------- | ----------- | --------- | --------- |
+| Get a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |  |![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
+| List keys. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
+| Deactivate a key. |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |     |   |
+| Reactivate a key. |     |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
+| Destroy a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |
+| Remove a key from vault. |     |     |     |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 {: caption="Table 2. How key states affect service actions" caption-side="bottom"}
 
 
