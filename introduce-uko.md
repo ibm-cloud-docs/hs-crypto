@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-26"
+lastupdated: "2021-11-30"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Introducing {{site.data.keyword.uko_full_notm}}
 {: #introduce-uko}
 
-{{site.data.keyword.uko_full_notm}} is the first public cloud control plane for multicloud and hybrid cloud key orchestration. As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, it provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores in {{site.data.keyword.cloud_notm}}, and external keystores in Microsoft Azure and Amazon Web Services (AWS).
+{{site.data.keyword.uko_full_notm}} is the first public cloud control plane for multicloud and hybrid cloud key orchestration. As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, it provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores in the service instance or an external keystores.
 
 
 ## Why {{site.data.keyword.uko_full_notm}}?
@@ -64,7 +64,7 @@ You can integrate all your key management use cases into one consistent approach
     
     - **Internal keystore**
 
-        {{site.data.keyword.uko_full_notm}} supports two types of internal keystores, KMS keystores and EP11 keystore.
+        An internal keystore is a keystore that is integrated with in your {{site.data.keyword.hscrypto}} instance. {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} supports two types of internal keystores, KMS keystores and EP11 keystore.
 
         - **KMS keystore**
 
@@ -81,7 +81,7 @@ You can integrate all your key management use cases into one consistent approach
 
     - **External keystore**  
 
-        {{site.data.keyword.uko_full_notm}} supports connecting to external keystores, such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS), and creating and installing keys into these keystores.
+        {{site.data.keyword.uko_full_notm}} supports connecting to a keystore that is not in the service instance. Currently, third-party keystores such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS) are supported. You can create keys from your {{site.data.keyword.hscrypto}} instance and install keys into those keystores.
 
         - **Azure Key Vault**   
 
