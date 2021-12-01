@@ -55,44 +55,56 @@ You can integrate all your key management use cases into one consistent approach
 {{site.data.keyword.uko_full_notm}} has the following components:
 
 - **Vaults**
+    
     A vault is a single unit that controls a user's or an access group's access to keys and keystores through Identity and Access Management (IAM). A managed key or internal keystore can be created only in a vault. When you connect to an external keystore, you need to assign it to a vault. To use a managed key for encryption and decryption, you need to install in one or more keystores within the same vault. A vault keeps all installations of a managed key in sync.
 
     - **Managed keys**
+        
         A managed key is a key that is created in and assigned to a vault. You can manage the lifecycle of a managed key and install it to multiple keystores in the same vault. You can use a managed key for encryption and decryption only when it is installed in at least one target keystore. Installing a managed key in multiple keystores in the same vault enables key redundancy.  
 
     - **Target keystores**
+        
         A target keystore is keystore that is assigned to a vault. If it is an internal keystore, it can be created only in a vault. If it is an external keystore, you need to assign the external keystore to a vault when you connect your service instance to it. 
 
 - **Keystores**
+    
     You need to install a key to a keystore before you can encrypt or decrypt data by using the key.
     
     - **Internal keystores**
+        
         An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance. {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} supports two types of internal keystores, KMS keystores and EP11 keystore.
 
         - **KMS keystores**
+            
             The {{site.data.keyword.keymanagementservicelong_notm}} key management service component within {{site.data.keyword.hscrypto}} provides the Keep Your Own Key (KYOK) feature for {{site.data.keyword.cloud_notm}} services to ensure that you have access to only the authorized keystores. 
 
             You can create up to five free KMS keystores to manage your keys. If you need additional keystores for cross-region key distribution or specified access permissions, you are charged $60 per calendar month for an additional keystore. 
 
         - **EP11 keystores**
+            
             The backing store for EP11 keys that are provided by the GREP11 API. The EP11 keystore has the following purposes:
 
             - To serve as an internal keystore to store internal keys.
             - To serve as a user keystore to store user keys that are to be exposed and used by GREP11 or PKCS #11 applications.
 
     - **External keystores**  
+        
         External keystores are keystores that are not in your service instance. You can connect to keystores that are external to your service instance, such as another {{site.data.keyword.hscrypto}} or {{site.data.keyword.keymanagementserviceshort}} instance, potentially in another region. Or, you can connect to external keystores from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS). 
 
         - **{{site.data.keyword.hscrypto}}** 
+            
             You can connect your {{site.data.keyword.hscrypto}} instance to the keystores of another {{site.data.keyword.hscrypto}} instance, and manage KMS keys and EP11 keys of another service instance using the current service instance.
  
         - **{{site.data.keyword.keymanagementserviceshort}}** 
+            
             {{site.data.keyword.keymanagementserviceshort}} is a service encryption solution that allows data to be secured and stored in {{site.data.keyword.cloud}} using the envelope encryption techniques that leverage FIPS 140-2 Level 3 certified cloud-based hardware security modules.           
             
         - **Azure Key Vault**   
+            
             Microsoft Azure Key Vault is a cloud service for you to create and manage cryptographic keys and other sensitive information.
 
         - **AWS KMS**        
+            
             AWS KMS is a managed service for you to create and manage cryptographic keys across a wide range of AWS services.
         
 
