@@ -56,7 +56,7 @@ You can integrate all your key management use cases into one consistent approach
 
 - **Vaults**
     
-    A vault is a single unit that controls a user's or an access group's access to keys and keystores through Identity and Access Management (IAM). A managed key or internal keystore can be created only in a vault. When you connect to an external keystore, you need to assign it to a vault. To use a managed key for encryption and decryption, you need to install in one or more keystores within the same vault. A vault keeps all installations of a managed key in sync.
+    A vault is a single unit that controls a user's or an access group's access to keys and keystores through Identity and Access Management (IAM). A managed key or internal keystore can be created only in a vault. When you connect to an external keystore, you need to assign it to a vault. To use a managed key for encryption and decryption, you need to install in one or more keystores within the same vault. The vault keeps all installations of a managed key in sync.
 
     - **Managed keys**
         
@@ -72,7 +72,7 @@ You can integrate all your key management use cases into one consistent approach
     
     - **Internal keystores**
         
-        An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance. {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} supports two types of internal keystores, KMS keystores and EP11 keystore.
+        An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance. {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} supports two types of internal keystores, KMS keystores and EP11 keystores.
 
         - **KMS keystores**
             
