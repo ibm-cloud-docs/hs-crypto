@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-08-12"
+lastupdated: "2021-12-01"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -96,8 +96,6 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
     iamcredentialtemplate: &defaultiamcredential
               enabled: true
               endpoint: "https://iam.cloud.ibm.com"
-              # Keep the 'apikey' empty. It will be overridden by the Anonymous user API key configured later.
-              apikey:
               # The Universally Unique IDentifier (UUID) of your Hyper Protect Crypto Services instance.
               instance: "<instance_id>"
 
@@ -126,17 +124,13 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
           0: # The index of the Security Officer (SO) user MUST be 0.
             # The name for the Security Officer (SO) user. For example: "Administrator".
             name: "<SO_user_name>"
-            # NEVER put the API key under the SO user for security reasons.
-            iamauth:
-              <<: *defaultiamcredential
+            iamauth: *defaultiamcredential
           1: # The index of the normal user MUST be 1.
             # The name for the normal user. For example: "Normal user".
             name: "<normal_user_name>"
             # The 128-bit UUID of the private keystore. For example: "f00db2f1-4421-4032-a505-465bedfa845b".
             tokenspaceID: "<private_keystore_spaceid>"
-            # NEVER put the API key under the normal user for security reasons.
-            iamauth:
-              <<: *defaultiamcredential
+            iamauth: *defaultiamcredential
             sessionauth:
               enabled: true # Enable this option to encrypt and authenticate the keystore.
               # Authenticated keystore password; must be 6-8 characters in length
@@ -148,7 +142,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
             tokenspaceID: "<public_keystore_spaceid>"
             iamauth:
               <<: *defaultiamcredential
-              # The API key for the anonymous user. It will overide the 'apikey' in the previous defaultcredentials.iamauth.apikey field
+              # The API key for the anonymous user. All other users can specify API key using the C_Login command.
               apikey: "<apikey_for_anonymous_user>"
             sessionauth:
               enabled: false
