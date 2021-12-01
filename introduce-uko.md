@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-19"
+lastupdated: "2021-12-01"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -23,10 +23,7 @@ subcollection: hs-crypto
 # Introducing {{site.data.keyword.uko_full_notm}}
 {: #introduce-uko}
 
-{{site.data.keyword.uko_full_notm}} is a function based on IBM&reg; Enterprise Key Management Foundation - Web Edition (EKMF Web), a flexible and highly secure key management system for the enterprise.
-
-As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, {{site.data.keyword.uko_full_notm}} is the first public cloud control plane for multicloud and hybrid cloud key orchestration. It provides NIST-defined states for cryptographic keys and secure transfer of keys to internal keystores on {{site.data.keyword.cloud_notm}}, and external keystores such as Microsoft Azure and Amazon Web Services (AWS).
-
+{{site.data.keyword.uko_full_notm}} is a public cloud control plane for multicloud and hybrid cloud key orchestration. As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, it provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores in the service instance or external keystores.
 
 
 ## Why {{site.data.keyword.uko_full_notm}}?
@@ -36,14 +33,14 @@ Many enterprises have the legal obligation to bring their own keys when they mov
 
 Dealing with multiple clouds means dealing with keys in multiple key management services. This presents the following challenges:
 - High manual effort and susceptibility to errors when enterprises operate different key management systems
-- No control over the [master key](#x2908413){: term} in cloud key management
-- Shortage of data centers and skilled staff to operate [hardware security module (HSM)](#x6704988){: term}
+- No control over the [master key](#x2908413){: term} in external cloud key management systems
+- Shortage of data centers and skilled staff to operate [hardware security modules (HSMs)](#x6704988){: term} for KYOK or BYOK
 
 
-As a key management service from a third-party encryption provider, {{site.data.keyword.hscrypto}} alleviates the complexity of maintaining encryption across hybrid environments. 
+{{site.data.keyword.uko_full_notm}} alleviates the complexity of maintaining encryption across hybrid environments. 
 
-With {{site.data.keyword.uko_full_notm}}, you can integrate all your key management use cases into one consistent approach, backed by a trusted IBM Z HSM. It provides you with the following features:
-- Simple and consistent user experience
+You can integrate all your key management use cases into one consistent approach, backed by a trusted IBM Z HSM. It provides you with the following features:
+- Consistent user experience
 - Seamless integration into the existing cloud framework
 - One point of control for multiple keys in multiple clouds 
 - Secure backup of all keys and easy restoration across multiple clouds
@@ -58,49 +55,69 @@ With {{site.data.keyword.uko_full_notm}}, you can integrate all your key managem
 {{site.data.keyword.uko_full_notm}} has the following components:
 
 - **Vaults**
+    A vault is a single unit that controls a user's or an access group's access to keys and keystores through Identity and Access Management (IAM). A managed key or internal keystore can be created only in a vault. When you connect to an external keystore, you need to assign it to a vault. To use a managed key for encryption and decryption, you need to install in one or more keystores within the same vault. A vault keeps all installations of a managed key in sync.
 
-    Vaults are used to assign access control with Identity and Access Management (IAM). A vault contains managed keys, keystores, and key templates. You need to assign a managed key to a vault when you create the key. All the keys you created or provided are encrypted with customer-owned HSM master keys.
+    - **Managed keys**
+        A managed key is a key that is created in and assigned to a vault. You can manage the lifecycle of a managed key and install it to multiple keystores in the same vault. You can use a managed key for encryption and decryption only when it is installed in at least one target keystore. Installing a managed key in multiple keystores in the same vault enables key redundancy.  
+
+    - **Target keystores**
+        A target keystore is keystore that is assigned to a vault. If it is an internal keystore, it can be created only in a vault. If it is an external keystore, you need to assign the external keystore to a vault when you connect your service instance to it. 
 
 - **Keystores**
-  
-    - **KMS keystore**
+    You need to install a key to a keystore before you can encrypt or decrypt data by using the key.
+    
+    - **Internal keystores**
+        An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance. {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} supports two types of internal keystores, KMS keystores and EP11 keystore.
 
-        The {{site.data.keyword.keymanagementservicelong_notm}} key management service component within {{site.data.keyword.hscrypto}} provides the Keep Your Own Key (KYOK) feature for {{site.data.keyword.cloud_notm}} services to ensure that you have access to only the authorized keystores. 
+        - **KMS keystores**
+            The {{site.data.keyword.keymanagementservicelong_notm}} key management service component within {{site.data.keyword.hscrypto}} provides the Keep Your Own Key (KYOK) feature for {{site.data.keyword.cloud_notm}} services to ensure that you have access to only the authorized keystores. 
 
-        You can create up to five KMS keystores free of charge. If the number reaches the limit, an additional keystore is charged $60 per calendar month.
+            You can create up to five free KMS keystores to manage your keys. If you need additional keystores for cross-region key distribution or specified access permissions, you are charged $60 per calendar month for an additional keystore. 
 
-    - **EP11 keystore**
+        - **EP11 keystores**
+            The backing store for EP11 keys that are provided by the GREP11 API. The EP11 keystore has the following purposes:
 
-        The backing store for EP11 keys that are provided by the GREP11 API. The EP11 keystore has two purposes:
-        - To serve as an internal keystore to store internal keys
-        - To serve as a user keystore to store user keys that are to be exposed and used by GREP11 or PKCS #11 applications
+            - To serve as an internal keystore to store internal keys.
+            - To serve as a user keystore to store user keys that are to be exposed and used by GREP11 or PKCS #11 applications.
 
-    The KMS internal keystore is a separate database schema and cannot be accessed by users through the GREP11 API.
+    - **External keystores**  
+        External keystores are keystores that are not in your service instance. You can connect to keystores that are external to your service instance, such as another {{site.data.keyword.hscrypto}} or {{site.data.keyword.keymanagementserviceshort}} instance, potentially in another region. Or, you can connect to external keystores from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS). 
 
+        - **{{site.data.keyword.hscrypto}}** 
+            You can connect your {{site.data.keyword.hscrypto}} instance to the keystores of another {{site.data.keyword.hscrypto}} instance, and manage KMS keys and EP11 keys of another service instance using the current service instance.
+ 
+        - **{{site.data.keyword.keymanagementserviceshort}}** 
+            {{site.data.keyword.keymanagementserviceshort}} is a service encryption solution that allows data to be secured and stored in {{site.data.keyword.cloud}} using the envelope encryption techniques that leverage FIPS 140-2 Level 3 certified cloud-based hardware security modules.           
+            
+        - **Azure Key Vault**   
+            Microsoft Azure Key Vault is a cloud service for you to create and manage cryptographic keys and other sensitive information.
 
+        - **AWS KMS**        
+            AWS KMS is a managed service for you to create and manage cryptographic keys across a wide range of AWS services.
+        
 
 ## Use cases
 {: #use-cases}
 
-You can use {{site.data.keyword.uko_full_notm}} to securely create and manage your keys and keystores across multiple clouds.
+You can use {{site.data.keyword.uko_full_notm}} to securely create and manage your keys and internal keystores across multiple clouds. The following is a few use cases on how you can use {{site.data.keyword.uko_full_notm}} to manage your keys.
 
 
 ### Identity and Access Management (IAM)
 {: #uko-iam}
 
-You can grant and control access to keys and keystores, so that only a distinct set of users can manage the keys.
+With IAM, you can grant and control access to the vault, and therefore the keys and keystores that are assigned to the vault.
 
 
 ### Manage your keys through one user experience
 {: #manage-keys}
 
-You can create, manage, and delete your cryptographic keys from one point of control, without dealing with different user interfaces. When you install a managed key in multiple keystores, the vault keeps the installations in sync. This ensures an efficient and fully audited key lifecycle management.
+You can create, manage, and delete your cryptographic keys from one point of control, without dealing with different user interfaces. When you install a managed key in multiple keystores in a vault, the system keeps the installations in sync. This ensures an efficient and fully audited key lifecycle management.
 
 
 ### Connect to external keystores
 {: #connect-to-keystores}
 
-You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS Key Management Service. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} connects to external keystores through REST APIs and retrieves all keys into the vault. You can create, edit, or delete the keys in vaults, and install the keys back in the external keystores. 
+You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS KMS.
 
 
 ### Back up all keys of your enterprise centrally

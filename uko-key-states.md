@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-18"
+lastupdated: "2021-11-30"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator
 
@@ -43,11 +43,11 @@ The following diagram shows how a key passes through states in the vault between
 
 | State       | Integer mapping | Description |
 |-------------|-----------------|-------------|
-| Pre-active  |        0        | Keys are initially created in the _Pre-active_ state. A _Pre-active_ key cannot be used to cryptographically protect data. |
-| Active      |        1        | Keys move immediately into the _Active_ state on the activation date. You can also manually activate the keys. This transition marks the beginning of the crypto period of the keys. Keys with no activation date become active immediately and remain active until they expire or are destroyed. |
-| Deactivated |        3        | Keys move into the _Deactivated_ state on the scheduled expiration date. You can also manually deactivate or reactivate the keys. In this state, a key is not able to cryptographically protect data. Deactivate a key first before you move the key to the _Destroyed_ state. |
-| Compromised |        4        | Mark a key as _Compromised_ when the information of the key is disclosed to an unauthorized third party. You can still decrypt the data in the _Compromised_ keys, but you cannot use the key to encrypt new data. |
-| Destroyed   |        5        | Destroyed keys are in the _Destroyed_ state. Keys in this state cannot be restored. Metadata that is associated with a key remains in the vault until you manually remove the key from the vault. |
+| Pre-active  |        0        | A _Pre-active_ key is a created key that is not yet installed into keystores and is therefore not available for use by applications. New keys are initially created in the _Pre-active_ state. |
+| Active      |        1        | An _Active_ key is installed in keystores and is available for use by applications. _Pre-Active_ keys are automatically moved to the _Active_ state upon the activation date or if they are manually activated. Keys that are created without an activation date become active immediately. |
+| Deactivated |        3        | A _Deactivated_ key is no longer allowed for operations that generate new cryptographic data, such as encryption or signing, but can still be used for operations on existing data to do decryption or signature verification. _Active_ keys are automatically moved to the _Deactivated_ state upon the expiration date or if they are manually deactivated. |
+| Compromised |        4        | A _Compromised_ key is suspected of having been made available to an unauthorized third party. In this state, the key is no longer allowed for operations that generate new cryptographic data, such as encryption or signing, but may still be used for operations on existing data to do decryption or signature verification. You can manually mark any key as _Compromised._ |
+| Destroyed   |        5        | A _Destroyed_ key is a key record for which the actual key material has been permanently erased. The record of the key is retained to be available for later queries or audits until you manually remove the key from the vault. Keys in the _Destroyed_ state cannot be restored. |
 {: caption="Table 1. Key states and transitions" caption-side="bottom"}
 
 
@@ -59,16 +59,14 @@ Key states affect whether an action that you perform on a key succeeds or fails.
 The following table shows how {{site.data.keyword.uko_full_notm}} handles service actions based on the state of a key. The column headers represent the key states, and the row headers represent the actions that you can perform on a key. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the action on a key is expected to succeed based on the key state.
 
 
-(To be updated)
-
-| Action | Active | Deactivated | Compromised | Destroyed |
-| ------ | ------ | ----------- | ----------- | --------- |
-| Get a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |  |![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
-| List keys. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
-| Deactivate a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |     |   |
-| Reactivate a key. |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
-| Destroy a key. |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |
-| Remove a key from vault. |     |     |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
+| Action | Pre-active | Active | Deactivated | Compromised | Destroyed |
+| ------ | ------ | ----------- | ----------- | --------- | --------- |
+| Get a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |  |![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
+| List keys. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
+| Deactivate a key. |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |     |   |
+| Reactivate a key. |     |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
+| Destroy a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |
+| Remove a key from vault. |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")    |     |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 {: caption="Table 2. How key states affect service actions" caption-side="bottom"}
 
 
