@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-12-01"
+lastupdated: 2021-12-01
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -215,7 +215,7 @@ To retrieve the import token contents:
 
     The `payload` value represents the public key that is associated with the import token. This value is base64 encoded. For extra security, {{site.data.keyword.hscrypto}} provides a `nonce` value that is used to verify the originality of a request to the service. You'll need to encrypt and provide this value when you import your encryption key.
 
-3. Decode and save the public key to a file called `PublicKey.pem`.
+3. Decode and save the public key to a file called `PublicKey.pem`, and extract values into variables to be used later.
 
     ```sh
     jq -r '.payload' getImportTokenResponse.json | openssl enc -base64 -A -d -out PublicKey.pem
@@ -223,6 +223,7 @@ To retrieve the import token contents:
     {: pre}
 
     ```sh
+    HPCS_PUBKEY="$(jq -r '.payload' getImportTokenResponse.json)"
     NONCE="$(jq -r '.nonce' getImportTokenResponse.json)"
     ```
     {: pre}
@@ -272,14 +273,7 @@ To encrypt the nonce value:
     You can skip this step if you use your own key in this tutorial.
     {: tip}
 
-2. Gather the nonce value that you retrieved in [step 2](#tutorial-import-retrieve-token).
-
-    ```sh
-    NONCE=$(jq -r '.nonce' getImportTokenResponse.json)
-    ```
-    {: pre}
-
-3. If you are going to use the API to perform the subsequent steps, do the following:
+2. If you are going to use the API to perform the subsequent steps, do the following:
 
     You don't need to perform this step if you are going to use the {{site.data.keyword.keymanagementservicelong_notm}} CLI.
     {: tip}
@@ -295,8 +289,10 @@ To encrypt the nonce value:
         chmod +x ./kms-encrypt-nonce
         ```
         {: pre}
-
-4. Run the script to encrypt the nonce value with the encryption key that you generated in [step 2](#tutorial-import-retrieve-token). Then, save the response to a file called `EncryptedValues.json`.
+        
+    3. Run the script to encrypt the nonce value with the encryption key that you generated in [step 2](#tutorial-import-retrieve-token).
+    
+3. Save the encrypted nonce to a file called `EncryptedValues.json`.
 
     - **Use the API**:
 
@@ -308,11 +304,11 @@ To encrypt the nonce value:
     - **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
 
       ```
-      ibmcloud kp import-token nonce-encrypt --key "$KEY_MATERIAL" --nonce "$NONCE" --cbc | awk 'END{print "{\"encryptedNonce\": \""$1"\", \"iv\": \""$2"\"}";}' -o json > EncryptedValues.json
+      ibmcloud kp import-token nonce-encrypt --key "$KEY_MATERIAL" --nonce "$NONCE" --cbc -o json > EncryptedValues.json
       ```
       {: pre}
 
-5. Optional: Inspect the contents of the JSON file.
+4. Optional: Inspect the contents of the JSON file.
 
     ```sh
     jq '.' EncryptedValues.json
@@ -363,7 +359,8 @@ Next, use the public key that was distributed by {{site.data.keyword.hscrypto}} 
 * Encrypt the generated key with the {{site.data.keyword.keymanagementservicelong_notm}} CLI:
 
     ```
-    ENCRYPTED_KEY=$(ibmcloud kp import-token key-encrypt --key $KEY_MATERIAL --pubkey "$(jq -r '.payload' getImportTokenResponse.json)" --hash SHA1  | awk 'END{print $1}')
+    ibmcloud kp import-token key-encrypt -k "$KEY_MATERIAL" -p "$HPCS_PUBKEY" --hash SHA1 -o json > EncryptedKey.json
+    ENCRYPTED_KEY=$(jq -r '.encryptedKey' EncryptedKey.json)
     ```
     {: pre}
 
@@ -427,7 +424,7 @@ To import the key:
     - **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
 
       ```
-      ibmcloud kp key create new-imported-key --key-material "${ENCRYPTED_KEY}" --encrypted-nonce "${ENCRYPTED_NONCE}" --iv "${IV}" --sha1 -o json > createRootKeyResponse.json
+      ibmcloud kp key create new-imported-key --key-material "$ENCRYPTED_KEY" --encrypted-nonce "$ENCRYPTED_NONCE" --iv "$IV" --sha1 -o json > createRootKeyResponse.json
       ```
       {: pre}
 
