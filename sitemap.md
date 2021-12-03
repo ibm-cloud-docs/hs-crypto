@@ -343,13 +343,15 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Retrieve the import token](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-retrieve-token)
 
-* [Create an encryption key](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-create-key)
+* [Create a encryption key](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-create-key)
 
-* [Encrypt the nonce](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypt-nonce)
+* [Set the encryption key as an environment variable](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-env-variable)
 
-* [Encrypt the key](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypt-key)
+* [Encrypt the nonce with the encryption key](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypt-nonce)
 
-* [Import the key](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypted-key)
+* [Encrypt the created encryption key](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypt-key)
+
+* [Import the encrypted key](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypted-key)
 
 * [Clean up](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-clean-up)
 

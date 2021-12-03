@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: 2021-12-01
+lastupdated: “2021-12-03”
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -72,7 +72,7 @@ To get started, you need the {{site.data.keyword.cloud_notm}} CLI so that you ca
 
 4. Download and install the [OpenSSL cryptography library](https://www.openssl.org/source/){: external}.
 
-    You can use `openssl` commands to generate encryption keys on your local workstation if you're trying out {{site.data.keyword.hscrypto}} for the first time. This tutorial requires OpenSSL version `1.0.2r` or above.
+    You can use `openssl` commands to create encryption keys on your local workstation if you're trying out {{site.data.keyword.hscrypto}} for the first time. This tutorial requires OpenSSL version `1.0.2r` or above.
 
     If you're using a Mac, you can quickly get up and running with OpenSSL by using [Homebrew](https://brew.sh/){: external}. Run `brew install openssl` if you're installing the package for the first time, or run `brew upgrade openssl` to upgrade your existing package to the latest version.
     {: tip}
@@ -169,7 +169,7 @@ In the following step, you'll create a [import token](/docs/hs-crypto?topic=hs-c
 
 In the previous step, you created an import token and you viewed the metadata that is associated with the token.
 
-In this step, you'll retrieve the public encryption key and nonce value that are associated with the import token. You'll need the public key to encrypt data in a later step, and the nonce to verify your secure import request to the {{site.data.keyword.hscrypto}} service.
+In this step, you'll retrieve the public key and nonce value that are associated with the import token. You'll need the public key to encrypt data in a later step, and the nonce to verify your secure import request to the {{site.data.keyword.hscrypto}} service.
 
 To retrieve the import token contents:
 
@@ -230,18 +230,18 @@ To retrieve the import token contents:
 
     The public key is now downloaded to your workstation in PEM format. Continue to the next step.
 
-## Create an encryption key
+## Create a encryption key
 {: #tutorial-import-create-key}
 {: step}
 
-With {{site.data.keyword.hscrypto}}, you can enable the security benefits of Keep Your Own Key (KYOK) by creating and uploading your own keys for use on {{site.data.keyword.cloud_notm}}.
+With {{site.data.keyword.hscrypto}}, you can enable the security benefits of Keep Your Own Key (KYOK) by creating and uploading your own encryption keys for use on {{site.data.keyword.cloud_notm}}.
 
 In the following step, you'll create a 256-bit AES symmetric key on your local workstation.
 
 This tutorial uses the OpenSSL cryptography toolkit to generate a pseudo-random key, but you might want to [explore different options](/docs/hs-crypto?topic=hs-crypto-importing-keys#plan-ahead) for generating stronger keys based on your security needs. For example, you might want to use your organization's internal key management system, backed by an on-premises hardware security module (HSM), to create and export keys.
 {: note}
 
-If you want to create a 256-bit encryption key, from the command line, run the following `openssl` command:
+If you want to create a 256-bit AES symmetric key, from the command line, run the following `openssl` command:
 
 ```sh
 openssl rand 32 > PlainTextKey.bin
@@ -253,27 +253,29 @@ You can skip this step if you use your own key in this tutorial.
 
 Success! Your encryption key is now saved in a file called `PlainTextKey.bin`. Continue to the next step.
 
-## Encrypt the nonce
-{: #tutorial-import-encrypt-nonce}
+
+## Set the encryption key as an environment variable 
+{: #tutorial-env-variable}
 {: step}
 
-For extra security, {{site.data.keyword.hscrypto}} requires nonce verification when you import a key to the service.
-
-In cryptography, a nonce serves as a session token that checks the originality of a request to protect against malicious attacks and unauthorized calls. By using the same nonce that was distributed by {{site.data.keyword.hscrypto}}, you help to ensure that your request to upload a key is valid. The nonce value must be encrypted by using the same key that you want to import into the service.
-
-To encrypt the nonce value:
-
-1. If you generate the key by following [step 3](#tutorial-import-create-key), to encode the key and set the encoded value as an environment variable, perform the following command:
+If you create thekey by following [step 3](#tutorial-import-create-key), to encode the key and set the encoded value as an environment variable, perform the following command. You can skip this step if you use your own key in this tutorial:
 
     ```sh
     KEY_MATERIAL=$(openssl enc -base64 -A -in PlainTextKey.bin)
     ```
     {: pre}
 
-    You can skip this step if you use your own key in this tutorial.
-    {: tip}
+## Encrypt the nonce with the encryption key
+{: #tutorial-import-encrypt-nonce}
+{: step}
 
-2. If you are going to use the API to perform the subsequent steps, do the following:
+For extra security, {{site.data.keyword.hscrypto}} requires nonce verification when you import a encryption key to the service.
+
+In cryptography, a nonce serves as a session token that checks the originality of a request to protect against malicious attacks and unauthorized calls. By using the same nonce that was distributed by {{site.data.keyword.hscrypto}}, you help to ensure that your request to upload a key is valid. The nonce value must be encrypted by using the same key that you want to import into the service.
+
+To encrypt the nonce value:
+
+1. If you are going to use the API to perform the subsequent steps, do the following:
 
     You don't need to perform this step if you are going to use the {{site.data.keyword.keymanagementservicelong_notm}} CLI.
     {: tip}
@@ -290,9 +292,9 @@ To encrypt the nonce value:
         ```
         {: pre}
         
-    3. Run the script to encrypt the nonce value with the encryption key that you generated in [step 2](#tutorial-import-retrieve-token).
+    3. Run the script to encrypt the nonce value with the key that you generated in [step 2](#tutorial-import-retrieve-token).
     
-3. Save the encrypted nonce to a file called `EncryptedValues.json`.
+2. Save the encrypted nonce to a file called `EncryptedValues.json`.
 
     - **Use the API**:
 
@@ -307,6 +309,7 @@ To encrypt the nonce value:
       ibmcloud kp import-token nonce-encrypt --key "$KEY_MATERIAL" --nonce "$NONCE" --cbc -o json > EncryptedValues.json
       ```
       {: pre}
+
 
 4. Optional: Inspect the contents of the JSON file.
 
@@ -325,15 +328,16 @@ To encrypt the nonce value:
     ```
     {: screen}
 
-    The `encryptedNonce` value represents the original nonce that is wrapped (or encrypted) by the encryption key that you generated using OpenSSL. The `iv` value is the initialization vector (IV) that is created by the AES-CBC algorithm, and it's required later so that {{site.data.keyword.hscrypto}}can successfully decrypt the nonce.
 
-## Encrypt the key
+    The `encryptedNonce` value represents the original nonce that is wrapped (or encrypted) by th key that you generated using OpenSSL. The `iv` value is the initialization vector (IV) that is created by the AES-CBC algorithm, and it's required later so that {{site.data.keyword.hscrypto}}can successfully decrypt the nonce.
+
+## Encrypt the created encryption key
 {: #tutorial-import-encrypt-key}
 {: step}
 
-Next, use the public key that was distributed by {{site.data.keyword.hscrypto}} in [step 2](#tutorial-import-retrieve-token) to encrypt the symmetric key that you generated using OpenSSL.
+Next, use the public key that was distributed by {{site.data.keyword.hscrypto}} in [step 2](#tutorial-import-retrieve-token) to encrypt the encryption key that you created using OpenSSL.
 
-* Encrypt the generated key with the API, and assign the key to the environment variable:
+* Encrypt the created encryption key with the API, and assign the key to the environment variable:
 
     ```sh
     openssl pkeyutl \
@@ -356,7 +360,7 @@ Next, use the public key that was distributed by {{site.data.keyword.hscrypto}} 
     If you run into a parameter settings error when you run the `openssl` command on Mac OSX, you might need to ensure that OpenSSL is properly configured for your environment. If you installed OpenSSL by using Homebrew, run `brew update` and then `brew install openssl` to get the latest version. Then, run `export PATH="/usr/local/opt/openssl/bin:$PATH"' >> ~/.bash_profile` to symlink the package. From the command line, run `which openssl && openssl version` to verify that the latest version of OpenSSL is available under the `/usr/local/` location. If you continue to encounter errors, be sure to use only the parameters that are listed in this example.
     {: tip}
 
-* Encrypt the generated key with the {{site.data.keyword.keymanagementservicelong_notm}} CLI:
+* Encrypt the created encryption key with the {{site.data.keyword.keymanagementservicelong_notm}} CLI:
 
     ```
     ibmcloud kp import-token key-encrypt -k "$KEY_MATERIAL" -p "$HPCS_PUBKEY" --hash SHA1 -o json > EncryptedKey.json
@@ -366,13 +370,13 @@ Next, use the public key that was distributed by {{site.data.keyword.hscrypto}} 
 
     Success! You're all set to upload your encrypted key into {{site.data.keyword.hscrypto}}. Continue to the next step.
 
-## Import the key
+## Import the encrypted key
 {: #tutorial-import-encrypted-key}
 {: step}
 
-You can now import the encrypted key using the key management API.
+You can now import the encrypted key using the key management service API.
 
-To import the key:
+To import the encrypted key:
 
 1. Gather the encrypted nonce and the initialization vector (IV) values.
 
@@ -386,7 +390,7 @@ To import the key:
     ```
     {: pre}
 
-2. Store the encrypted key in your {{site.data.keyword.hscrypto}} service instance.
+2. Store the encrypted skey in your {{site.data.keyword.hscrypto}} service instance.
 
     - **Use the API**:
 
@@ -416,7 +420,7 @@ To import the key:
       ```
       {: pre}
 
-      In the request body, you provide the encryption key that you prepared in the previous step. You also supply the encrypted nonce and the IV values that are required to verify the request. Finally, the `extractable` value set to `false` designates your new key as a root key in the service that you can use for envelope encryption.
+      In the request body, you provide the encryptoin key that you prepared in the previous step. You also supply the encrypted nonce and the IV values that are required to verify the request. Finally, the `extractable` value set to `false` designates your new key as a root key in the service that you can use for envelope encryption.
 
       If the API request fails with an import token expired error, [return to step 1](#tutorial-import-create-token) to create a new import token. Remember that import tokens and their associated public keys expire based on the policy that you specify at creation time.
       {: tip}
@@ -430,7 +434,7 @@ To import the key:
 
       Behind the scenes, {{site.data.keyword.hscrypto}} receives your encrypted packet over a TLS 1.2 connection. Within a hardware security module, the system uses the private key to decrypt the symmetric key. Finally, the system uses the symmetric key and the IV to decrypt the nonce and verify the request. Your key is now stored in a tamper-resistant, FIPS 140-2 Level 4 validated hardware security module.
 
-3. View details for the encryption key.
+3. View details for the key.
 
     ```
     jq '.' createRootKeyResponse.json
@@ -460,9 +464,9 @@ To import the key:
     ```
     {: screen}
 
-    The `id` value is a unique identifier that is assigned to your key and is used for subsequent calls to the key management API. The `state` value set to 1 indicates that your encryption key is now in the [_Active_ key state](/docs/hs-crypto?topic=hs-crypto-key-states). The `crn` value provides the full scoped path to the key that specifies where the resource resides within {{site.data.keyword.cloud_notm}}. Finally, the `extractable` and `imported` values describe this resource as a root key that you imported to the service.
+    The `id` value is a unique identifier that is assigned to your key and is used for subsequent calls to the key management API. The `state` value set to 1 indicates that your key is now in the [_Active_ key state](/docs/hs-crypto?topic=hs-crypto-key-states). The `crn` value provides the full scoped path to the key that specifies where the resource resides within {{site.data.keyword.cloud_notm}}. Finally, the `extractable` and `imported` values describe this resource as a root key that you imported to the service.
 
-4. Optional: Navigate to the {{site.data.keyword.hscrypto}} dashboard to view and manage your encryption key.
+4. Optional: Navigate to the {{site.data.keyword.hscrypto}} dashboard to view and manage your key.
 
     You can browse the general characteristics of your keys from the application details page. Choose from a list of options for managing your key, such as [rotating the key](/docs/hs-crypto?topic=hs-crypto-rotate-keys#rotate-root-key-gui) or [deleting the key](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-keys-gui).
 
