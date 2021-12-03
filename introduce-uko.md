@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-12-01"
+lastupdated: "2021-12-03"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -29,9 +29,9 @@ subcollection: hs-crypto
 ## Why {{site.data.keyword.uko_full_notm}}?
 {: #why-uko}
 
-Many enterprises have the legal obligation to bring their own keys when they move sensitive workloads to the cloud. Enterprises are adopting native encryption and key management offerings from cloud providers.
+Many enterprises have the legal obligation to bring their own cryptographic keys when they move sensitive workloads to the cloud. Enterprises are adopting native encryption and key management offerings from cloud providers.
 
-Dealing with multiple clouds means dealing with keys in multiple key management services. This presents the following challenges:
+Dealing with multiple clouds means dealing with cryptographic keys in multiple key management services. This presents the following challenges:
 - High manual effort and susceptibility to errors when enterprises operate different key management systems
 - No control over the [master key](#x2908413){: term} in external cloud key management systems
 - Shortage of data centers and skilled staff to operate [hardware security modules (HSMs)](#x6704988){: term} for KYOK or BYOK
@@ -49,14 +49,14 @@ You can integrate all your key management use cases into one consistent approach
 ![Unified Key Orchestrator](/images/unified-key-orchestrator.svg "Unified Key Orchestrator"){: caption="Unified Key Orchestrator"  caption-side="bottom"}
 
 
-## Key components
-{: #key-components}
+## Components
+{: #Components}
 
 {{site.data.keyword.uko_full_notm}} has the following components:
 
 - **Vaults**
     
-    A vault is a single unit that controls a user's or an access group's access to keys and keystores through Identity and Access Management (IAM). A managed key or internal keystore can be created only in a vault. When you connect to an external keystore, you need to assign it to a vault. To use a managed key for encryption and decryption, you need to install in one or more keystores within the same vault. A vault keeps all installations of a managed key in sync.
+    A vault is a single unit that controls a user's or an access group's access to keys and keystores through Identity and Access Management (IAM). A managed key or internal keystore can be created only in a vault. When you connect to an external keystore, you need to assign it to a vault. To use a managed key for encryption and decryption, you need to install in one or more keystores within the same vault. The vault keeps all installations of a managed key in sync.
 
     - **Managed keys**
         
@@ -72,7 +72,7 @@ You can integrate all your key management use cases into one consistent approach
     
     - **Internal keystores**
         
-        An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance. {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} supports two types of internal keystores, KMS keystores and EP11 keystore.
+        An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance. {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} supports two types of internal keystores, KMS keystores and EP11 keystores.
 
         - **KMS keystores**
             
