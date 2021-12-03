@@ -420,7 +420,7 @@ To import the encrypted key:
       ```
       {: pre}
 
-      In the request body, you provide the encryptoin key that you prepared in the previous step. You also supply the encrypted nonce and the IV values that are required to verify the request. Finally, the `extractable` value set to `false` designates your new key as a root key in the service that you can use for envelope encryption.
+      In the request body, you provide the encryption key that you prepared in the previous step. You also supply the encrypted nonce and the IV values that are required to verify the request. Finally, the `extractable` value set to `false` designates your new key as a root key in the service that you can use for envelope encryption.
 
       If the API request fails with an import token expired error, [return to step 1](#tutorial-import-create-token) to create a new import token. Remember that import tokens and their associated public keys expire based on the policy that you specify at creation time.
       {: tip}
