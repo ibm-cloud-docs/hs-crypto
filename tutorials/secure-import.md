@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: “2021-12-03”
+lastupdated: "2021-12-06"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -88,15 +88,9 @@ To get started, you need the {{site.data.keyword.cloud_notm}} CLI so that you ca
 ## Task flow
 {: #tutorial-flow}
 
-The following high-level steps give you an overview on how to create and import encryption keys:
+The following flow chart gives you an overview on how to create and import encryption keys.
 
-1. [Create an import token](#tutorial-import-create-token).
-2. [Retrieve the import token](#tutorial-import-retrieve-token).
-3. [Create an encryption key](#tutorial-import-create-key).
-4. [Encrypt the nonce](#tutorial-import-encrypt-nonce).
-5. [Encrypt the key](#tutorial-import-encrypt-key).
-6. [Import the key](#tutorial-import-encrypted-key).
-7. [Clean up](#tutorial-import-encrypted-key).
+![Creating and importing an encryption key](../images/create-import-keys.svg "Creating and importing an encryption key"){: caption="Creating and importing an encryption key"  caption-side="bottom"}
 
 For detailed instructions, complete the following steps:
 
