@@ -343,7 +343,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Retrieve the import token](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-retrieve-token)
 
-* [Create a encryption key](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-create-key)
+* [Create an encryption key](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-create-key)
 
 * [Set the encryption key as an environment variable](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-env-variable)
 
