@@ -335,9 +335,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Objectives](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-objectives)
 
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-prereqs)
-
 * [Task flow](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-flow)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-prereqs)
 
 * [Create an import token](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-create-token)
 

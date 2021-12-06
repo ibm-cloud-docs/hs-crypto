@@ -47,6 +47,14 @@ This tutorial walks you through creating and securely importing encryption keys 
 
 This tutorial won't incur any charges to your {{site.data.keyword.cloud_notm}} account.
 
+## Task flow
+{: #tutorial-flow}
+
+The following flow chart gives you an overview on how to create and import encryption keys.
+
+![Creating and importing an encryption key](../images/create-import-keys.svg "Creating and importing an encryption key"){: caption="Creating and importing an encryption key"  caption-side="bottom"}
+
+
 ## Before you begin
 {: #tutorial-import-prereqs}
 
@@ -84,15 +92,6 @@ To get started, you need the {{site.data.keyword.cloud_notm}} CLI so that you ca
 6. [Create a {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-provision).
 7. [Initialize the {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 8. [Set up the {{site.data.keyword.hscrypto}} key management API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
-
-## Task flow
-{: #tutorial-flow}
-
-The following flow chart gives you an overview on how to create and import encryption keys.
-
-![Creating and importing an encryption key](../images/create-import-keys.svg "Creating and importing an encryption key"){: caption="Creating and importing an encryption key"  caption-side="bottom"}
-
-For detailed instructions, complete the following steps:
 
 ## Create an import token
 {: #tutorial-import-create-token}
