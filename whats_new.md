@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-09-08"
+lastupdated: "2021-12-07"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,6 +27,7 @@ content-type: release-note
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
 
 
 
