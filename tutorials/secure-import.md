@@ -68,6 +68,19 @@ The following flow chart gives you an overview on how to create and import encry
     <area href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-clean-up" alt="8. Clean up" title="8. Clean up" shape="rect" coords="897, 637, 1009, 707" />
 </map>
 
+<figure>
+    <svg viewBox="0 0 1056 750" preserveAspectRatio="xMinYMin meet"><image width="1056" height="750" href="create-import-keys.svg"></image>
+        <a href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-create-token"><rect x="36" y="74" width="112" height="70" opacity="0"/></a>
+        <a href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-retrieve-token"><rect x="207" y="74" width="185" height="70" opacity="0"/></a>
+        <a href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-create-key"><rect x="244" y="383" width="112" height="70" opacity="0"/></a>
+        <a href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-env-variable"><rect x="413" y="383" width="185" height="70" opacity="0"/></a>        
+        <a href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypt-nonce"><rect x="655" y="383" width="185" height="70" opacity="0"/></a>
+        <a href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypt-key"><rect x="655" y="510" width="185" height="70" opacity="0"/></a>
+        <a href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypted-key"><rect x="897" y="510" width="112" height="70" opacity="0"/></a> 
+        <a href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-clean-up"><rect x="897" y="637" width="112" height="70" opacity="0"/></a>
+    </svg>
+<figcaption>Creating and importing an encryption key</figcaption>
+</figure>
 
 ## Before you begin
 {: #tutorial-import-prereqs}
