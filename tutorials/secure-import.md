@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-12-07"
+lastupdated: "2021-12-08"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -53,19 +53,19 @@ This tutorial won't incur any charges to your {{site.data.keyword.cloud_notm}} a
 The following flow chart gives you an overview on how to create and import encryption keys.
 
 <figure>
-    <img usemap="#home_map2" border="0" class="image" id="image_ztx_crb_f1b2" src="../images/create-import-keys.svg" width="1056" alt="Click each step to get more details on the flow" />
-    <figcaption>Creating and importing an encryption key</figcaption>
+    <img usemap="#home_map2" border="0" class="image" src="../images/create-import-keys.svg" width="750" alt="Click each step to get more details on the flow" />
+    <figcaption>Task flow of creating and importing an encryption key</figcaption>
 </figure>
 
 <map name="home_map2" id="home_map2">
-    <area href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-create-token" alt="1. Create an import token" title="1. Create an import token" shape="rect" coords="36, 74, 149, 145" />
-    <area href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-retrieve-token" alt="2. Retrieve the import token" title="2. Retrieve the import token" shape="rect" coords="207, 74, 393, 145" />
-    <area href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-create-key" alt="3. Create an encryption key" title="3. Create an encryption key" shape="rect" coords="244, 383, 356, 453" />
-    <area href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-env-variable" alt="4. Set the encryption key as an environment variable" title="4. Set the encryption key as an environment variable" shape="rect" coords="413, 383, 598, 453" />
-    <area href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypt-nonce" alt="5. Encrypt the nonce with the encryption key" title="5. Encrypt the nonce with the encryption key" shape="rect" coords="655, 383, 840, 453" />
-    <area href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypt-key" alt="6. Encrypt the created encryption key" title="6. Encrypt the created encryption key" shape="rect" coords="655, 510, 840, 580" />
-    <area href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypted-key" alt="7. Import the encrypted key" title="7. Import the encrypted key" shape="rect" coords="897, 510, 1009, 580" />
-    <area href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-clean-up" alt="8. Clean up" title="8. Clean up" shape="rect" coords="897, 637, 1009, 707" />
+    <area href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-create-token" alt="1. Create an import token" title="1. Create an import token" shape="rect" coords="28, 55, 109, 105" />
+    <area href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-retrieve-token" alt="2. Retrieve the import token" title="2. Retrieve the import token" shape="rect" coords="149, 55, 281, 105" />
+    <area href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-create-key" alt="3. Create an encryption key" title="3. Create an encryption key" shape="rect" coords="175, 273, 255, 324" />
+    <area href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-env-variable" alt="4. Set the encryption key as an environment variable" title="4. Set the encryption key as an environment variable" shape="rect" coords="294, 273, 427, 324" />
+    <area href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypt-nonce" alt="5. Encrypt the nonce with the encryption key" title="5. Encrypt the nonce with the encryption key" shape="rect" coords="467, 273, 600, 324" />
+    <area href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypt-key" alt="6. Encrypt the created encryption key" title="6. Encrypt the created encryption key" shape="rect" coords="467, 364, 600, 415" />
+    <area href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypted-key" alt="7. Import the encrypted key" title="7. Import the encrypted key" shape="rect" coords="641, 364, 721, 415" />
+    <area href="/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-clean-up" alt="8. Clean up" title="8. Clean up" shape="rect" coords="641, 455, 721, 506" />
 </map>
 
 ## Before you begin
