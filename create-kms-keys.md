@@ -23,16 +23,16 @@ subcollection: hs-crypto
 # Creating internal KMS keys
 {: #create-kms-keys}
 
-You can use {{site.data.keyword.uko_full_notm}} to create internal KMS keys in the UI or with the API.
+You can use {{site.data.keyword.uko_full_notm}} to create internal KMS keys through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
 
-## Creating internal KMS keys in the UI
+## Creating internal KMS keys through the UI
 {: #create-kms-keys-ui}
 
-Complete the following steps to create an internal KMS key in the UI.
+To create an internal KMS key through the UI, complete the following steps.
 
-1. [Log in to the {{site.data.keyword.uko_full_notm}} service instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. In the left navigation panel, go to **Vaults** &gt; **Managed keys** to view all the available keys.
 3. To create a new key, click **Add key**.
 4. Under **Vault,** assign the key to a vault for access control. You can also click **Create vault** to create a new vault.
