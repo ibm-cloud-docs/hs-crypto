@@ -27,13 +27,13 @@ You can use {{site.data.keyword.uko_full_notm}} to manage external keystores tha
 {: shortdesc}
 
 
-## Connect to an external keystore
+## Connecting to external keystores
 {: #connect-external-keystores}
 
 Complete the following steps to connect to an external keystore in the UI.
 
 
-### Connect to an Azure Key Vault
+### Connecting to Azure Key Vaults
 {: #connect-azure-key-vault}
 
 1. [Log in to the {{site.data.keyword.uko_full_notm}} service instance](https://cloud.ibm.com/login){: external}.
@@ -61,20 +61,20 @@ Complete the following steps to connect to an external keystore in the UI.
 
 
 
-### Connect to an AWS Key Management Service
+### Connecting to AWS Key Management Services
 {: #connect-aws-kms}
 
 
 
 
 
-### Grant access
+### Granting access to external keystores
 {: #access-external-keystores}
 
 
 
 
-## Disconnect from an external keystore
+## Disconnecting from external keystores
 {: #disconnect-external-keystores}
 
 

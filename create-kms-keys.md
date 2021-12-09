@@ -57,7 +57,7 @@ Complete the following steps to create an internal KMS key in the UI.
 
 
 
-## Creating an internal KMS key with the API
+## Creating internal KMS keys with the API
 {: #create-kms-keys-api}
 
 

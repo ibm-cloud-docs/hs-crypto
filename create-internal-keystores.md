@@ -30,11 +30,11 @@ You can use {{site.data.keyword.uko_full_notm}} to create internal keystores in 
 ## Creating internal keystores in the UI
 {: #create-internal-keystores-ui}
 
-Complete the following steps to create an internal keystore in the UI.
 
-
-### Creating an internal KMS keystore
+### Creating internal KMS keystores
 {: #create-internal-kms}
+
+Complete the following steps to create an internal KMS keystore in the UI.
 
 1. [Log in to the {{site.data.keyword.uko_full_notm}} service instance](https://cloud.ibm.com/login){: external}.
 2. In the left navigation panel, go to **Vaults** &gt; **Target keystores** to view all the available keystores.
@@ -50,7 +50,7 @@ An internal keystore is a repository that stores the cryptographic keys within y
 
 
 
-### Creating an EP11 keystore
+### Creating EP11 keystores
 {: #create-ep11}
 
 
@@ -68,7 +68,6 @@ An internal keystore is a repository that stores the cryptographic keys within y
 ## What's next
 {: #create-internal-keystores-next}
 
-- To find out how to manage external keystores, check out [Managing external keystores](/docs/hs-crypto?topic=hs-crypto-manage-external-keystore).
   
 
 
