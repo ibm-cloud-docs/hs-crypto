@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-11-30"
+lastupdated: "2021-12-09"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator
 
@@ -66,7 +66,7 @@ The following table shows how {{site.data.keyword.uko_full_notm}} handles servic
 | Deactivate a key. |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |     |   |
 | Reactivate a key. |     |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
 | Destroy a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |
-| Remove a key from vault. |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")    |     |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
+| Remove a key from vault. |     |     |     |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 {: caption="Table 2. How key states affect service actions" caption-side="bottom"}
 
 
