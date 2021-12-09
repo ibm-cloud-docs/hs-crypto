@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Managing external keystores
 {: #manage-external-keystores}
 
-You can use {{site.data.keyword.uko_full_notm}} to manage external keystores that are external to your service instance on{{site.data.keyword.cloud}}. Or, you can connect to external keystores from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS).
+You can use {{site.data.keyword.uko_full_notm}} to manage external keystores that are external to your service instance on {{site.data.keyword.cloud}}. Or, you can connect to external keystores from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS).
 {: shortdesc}
 
 
