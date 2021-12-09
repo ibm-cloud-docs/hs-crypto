@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-12-03"
+lastupdated: "2021-12-09"
 
 keywords: site map, doc structure, information architecture
 
@@ -335,9 +335,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Objectives](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-objectives)
 
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-prereqs)
-
 * [Task flow](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-flow)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-prereqs)
 
 * [Create an import token](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-create-token)
 
@@ -345,11 +345,13 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Create an encryption key](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-create-key)
 
-* [Encrypt the nonce](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypt-nonce)
+* [Set the encryption key as an environment variable](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-env-variable)
 
-* [Encrypt the key](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypt-key)
+* [Encrypt the nonce with the encryption key](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypt-nonce)
 
-* [Import the key](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypted-key)
+* [Encrypt the created encryption key](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypt-key)
+
+* [Import the encrypted key](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-encrypted-key)
 
 * [Clean up](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-clean-up)
 
