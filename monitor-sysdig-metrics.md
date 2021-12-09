@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-12-06"
+lastupdated: "2021-12-09"
 
 keywords: measure interactions, metrics, monitoring, operational metrics
 
@@ -130,21 +130,6 @@ You can filter your metrics by using the following attributes.
 | `ibm_service_instance` | {{site.data.keyword.hscrypto}} service instance ID. |
 {: caption="Table 3. Describes the attributes use for segmenting metrics."}
 
-## Metrics Filter Attributes
-{: #metrics-filter-attributes}
-
-You can scope down your metrics by using the following scope filters. These filters are more granular than the segmentation filters.
-
-| Attribute Name | Description |
-| --- | --- |
-| `ibmResourceGroupName` | The name of the resource group associated with the {{site.data.keyword.hscrypto}} service instance. |
-| `ibmScope` | The account, organization, or space GUID associated with the metric. |
-| `ibmServiceInstanceName` | The service instance associated with the metric. |
-| `ibmHpcsApi` | The {{site.data.keyword.hscrypto}} API calls associated with the metric. |
-{: caption="Table 4. Describes the scope filters for {{site.data.keyword.hscrypto}} metrics."}
-
-Because of {{site.data.keyword.mon_short}} limitations, you are able to see the values in the filters for up to 6 hours at a time. You can manually type in value into scope variables to use scope filters for given time periods.
-{: note}
 
 ## Default Dashboards
 {: #default-dashboards}
@@ -158,7 +143,9 @@ on your service instance in order to view your {{site.data.keyword.hscrypto}} op
 After you configure your {{site.data.keyword.mon_short}} instance to receive platform metrics, complete the following steps:
 
 1. [Provision your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-provision#provision-gui).
-2. Click **Actions** and select **Monitoring**.
+2. Click **Actions** > **Monitoring**. You are now on the {{site.data.keyword.hscrypto}} dashboard.
+
+You are now on the {{site.data.keyword.hscrypto}} dashboard, and can start monitoring metrics of the service instance.
 
 ### How to find the {{site.data.keyword.mon_short}} dashboard for your {{site.data.keyword.hscrypto}} service instance by using observability page
 {: #monitor-dashboard-observability}
@@ -172,6 +159,22 @@ After you configure your {{site.data.keyword.mon_short}} instance to receive pla
 5. Select **{{site.data.keyword.hscrypto}} - Overview** to view the dashboard for your {{site.data.keyword.hscrypto}} instance.
 
 You are able to see any metrics in your {{site.data.keyword.mon_short}} instance until you enable a metrics policy for your {{site.data.keyword.hscrypto}} instance and make API requests to your {{site.data.keyword.hscrypto}} instance.
+{: note}
+
+### How to scope down your metrics by using Metrics Filter Attributes
+{: #metrics-filter-attributes}
+
+You can scope down your metrics by using the following scope filters.
+
+| Attribute Name | Description |
+| --- | --- |
+| `ibmResourceGroupName` | The name of the resource group associated with the {{site.data.keyword.hscrypto}} service instance. |
+| `ibmScope` | The account, organization, or space GUID associated with the metric. |
+| `ibmServiceInstanceName` | The service instance associated with the metric. |
+| `ibmHpcsApi` | The {{site.data.keyword.hscrypto}} API calls associated with the metric. |
+{: caption="Table 4. Describes the scope filters for {{site.data.keyword.hscrypto}} metrics."}
+
+Because of {{site.data.keyword.mon_short}} limitations, you are able to see the values in the filters for up to 6 hours at a time. You can manually type in value into scope variables to use scope filters for given time periods.
 {: note}
 
 ## Setting Alerts
