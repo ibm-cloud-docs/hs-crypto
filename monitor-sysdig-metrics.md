@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-12-09"
+lastupdated: "2021-12-13"
 
 keywords: measure interactions, metrics, monitoring, operational metrics
 
@@ -143,7 +143,11 @@ on your service instance in order to view your {{site.data.keyword.hscrypto}} op
 After you configure your {{site.data.keyword.mon_short}} instance to receive platform metrics, complete the following steps:
 
 1. [Provision your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-provision#provision-gui).
-2. Click **Actions** > **Monitoring**. You are now on the {{site.data.keyword.hscrypto}} dashboard.
+2. On your {{site.data.keyword.hscrypto}} instance page, click **Actions** > **Monitoring**. 
+       On your first usage, you might see a welcome wizard. To advance to the dashboard selection menu, select **Next** and then **Skip** at the bottom of the **Choosing an installation method** page.  Accept the prompts that follow. You can then select the **IBM Event Streams** or **IBM Event Streams (Enterprise)** dashboard, depending on the plan you're using.
+
+   The metrics dashboards are available only after metrics have started to be recorded. This might take a few minutes to initialize.
+   {: note}
 
 You are now on the {{site.data.keyword.hscrypto}} dashboard, and can start monitoring metrics of the service instance.
 
