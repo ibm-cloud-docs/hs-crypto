@@ -35,7 +35,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                 <tr>
                     <th>Name</th>
                     <th>Symbol</th>
-                    <th>Signing Algorithm</th>
+                    <th>Signing algorithm</th>
                     <th>Curve</th>
                     <th>Supported by {{site.data.keyword.hscrypto}}?</th>
                 </tr>
