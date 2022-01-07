@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-08-13"
+  years: 2020, 2022
+lastupdated: "2022-01-07"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 

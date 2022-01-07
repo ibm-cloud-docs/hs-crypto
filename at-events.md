@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-11-11"
+  years: 2018, 2022
+lastupdated: "2022-01-07"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-08-12"
+  years: 2018, 2022
+lastupdated: "2022-01-07"
 
 keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 

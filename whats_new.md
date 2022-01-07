@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-12-07"
+  years: 2018, 2022
+lastupdated: "2022-01-07"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 

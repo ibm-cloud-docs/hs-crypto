@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-08-12"
+  years: 2022
+lastupdated: "2022-01-07"
 
 keywords: restore key, restore a deleted key, recover a deleted key, re-import a key
 

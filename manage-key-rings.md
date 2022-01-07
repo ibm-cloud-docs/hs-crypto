@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-09-27"
+  years: 2022
+lastupdated: "2022-01-07"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
