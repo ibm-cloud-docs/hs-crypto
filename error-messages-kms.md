@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-09-06"
+  years: 2021, 2022
+lastupdated: "2022-01-07"
 
 keywords: error message, error code, error, kms error, key management error message, hpcs error messages, hyper protect crypto services error message
 

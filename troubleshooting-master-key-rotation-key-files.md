@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-08-09"
+  years: 2021, 2022
+lastupdated: "2022-01-07"
 
 keywords: failed master key rotation, failed to use key part files to rotate master keys, tke cryptounit-mk-rotate failure, troubleshoot master key rotation failure
 

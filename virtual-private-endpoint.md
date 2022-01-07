@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2022
+  years: 2021, 2022
 lastupdated: "2022-01-07"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway

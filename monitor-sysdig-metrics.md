@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-12-13"
+  years: 2021, 2022
+lastupdated: "2022-01-07"
 
 keywords: measure interactions, metrics, monitoring, operational metrics
 

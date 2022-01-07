@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-08-23"
+  years: 2021, 2022
+lastupdated: "2022-01-07"
 
 keywords: pkcs11 ui access, pkcs 11 account authentication
 
