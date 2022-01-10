@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-07"
+lastupdated: "2022-01-10"
 
 keywords: troubleshoot, problems, known issues, support,help
 
@@ -57,7 +57,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>Tether</b></td>
                     <td>USDT</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Polkadot</b></td>
@@ -98,7 +98,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>Chainlink</b></td>
                     <td>LINK</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Stellar</b></td>
@@ -118,13 +118,13 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>USD Coin</b></td>
                     <td>USDC</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Wrapped Bitcoin</b></td>
                     <td>WBTC</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Bitcoin SV</b></td>
@@ -151,7 +151,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>Aave</b></td>
                     <td>AAVE</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Tron</b></td>
@@ -178,7 +178,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>Synthetix</b></td>
                     <td>SNX</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Cosmos</b></td>
@@ -198,7 +198,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>Uniswap</b></td>
                     <td>UNI</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>NEO</b></td>
@@ -218,37 +218,37 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>OKB</b></td>
                     <td>OKB</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Celsius Network</b></td>
                     <td>CEL</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>cUSDC</b></td>
                     <td>CUSDC</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>cETH</b></td>
                     <td>CETH</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Dai</b></td>
                     <td>DAI</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>LEO Token</b></td>
                     <td>LEO</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>IOTA</b></td>
@@ -275,13 +275,13 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>Maker</b></td>
                     <td>MKR</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Binance USD</b></td>
                     <td>BUSD</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Dogecoin</b></td>
@@ -301,7 +301,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>Huobi Token</b></td>
                     <td>HT</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Filecoin</b></td>
@@ -328,7 +328,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>Yearn Finance</b></td>
                     <td>YFI</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Kusama</b></td>
@@ -355,31 +355,31 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>cDAI</b></td>
                     <td>CDAI</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>FTX Token</b></td>
                     <td>FTT</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Sushi</b></td>
                     <td>SUSHI</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Compound</b></td>
                     <td>COMP</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Huobi BTC</b></td>
                     <td>HBTC</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Zilliqa</b></td>
@@ -399,7 +399,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>UMA</b></td>
                     <td>UMA</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Decred</b></td>
@@ -426,37 +426,37 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>The Graph</b></td>
                     <td>GRT</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>REN</b></td>
                     <td>REN</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Paxos Standard</b></td>
                     <td>PAX</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Loopring</b></td>
                     <td>LRC</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>OMG Network</b></td>
                     <td>OMG</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>renBTC</b></td>
                     <td>RENBTC</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Ontology</b></td>
@@ -489,7 +489,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>TrueUSD</b></td>
                     <td>TUSD</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Nano</b></td>
@@ -509,7 +509,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>NEXO</b></td>
                     <td>NEXO</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Algorand</b></td>
@@ -522,13 +522,13 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>Basic Attention Token</b></td>
                     <td>BAT</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>0x</b></td>
                     <td>ZRX</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>DigiByte</b></td>
@@ -541,31 +541,31 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>Reserve Rights Token</b></td>
                     <td>RSR</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Curve DAO Token</b></td>
                     <td>CRV</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Enjin Coin</b></td>
                     <td>OMG</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Aave Link</b></td>
                     <td>ALINK</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Nexus Mutual</b></td>
                     <td>NXM</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Horizen</b></td>
@@ -578,7 +578,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>HUSD</b></td>
                     <td>HUSD</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>IOST</b></td>
@@ -598,7 +598,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>Kyber Network</b></td>
                     <td>KNC</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Bitcoin Cash ABC</b></td>
@@ -618,13 +618,13 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>SwissBorg</b></td>
                     <td>CHSB</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Ampleforth</b></td>
                     <td>AMPL</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>BitTorrent</b></td>
@@ -636,13 +636,13 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>Quant</b></td>
                     <td>QNT</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Balancer</b></td>
                     <td>BAL</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Siacoin</b></td>
@@ -655,13 +655,13 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>Ocean Protocol</b></td>
                     <td>OCEAN</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Aave ETH</b></td>
                     <td>AETH</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>TerraUSD</b></td>
@@ -674,7 +674,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>Voyager Token</b></td>
                     <td>VGX</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
                     <td><b>Arweave</b></td>
@@ -687,7 +687,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>Status</b></td>
                     <td>SNT</td>
                     <td colspan="2">Ethereum ERC20 token</td>
-                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
             </tbody>
         </table>
