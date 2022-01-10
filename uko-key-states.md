@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-12-09"
+  years: 2022
+lastupdated: "2022-01-10"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator
 
@@ -34,9 +34,9 @@ subcollection: hs-crypto
 
 Cryptographic keys, in their lifetime, transition through several states that are a function of how long the keys are in existence and whether data is protected.
 
-The following diagram shows how a key passes through states in the vault between the generation and the destruction.
+The following diagram shows how a key passes through states between the generation and the destruction.
 
-![Key states and transitions in the vault](/images/uko-key-states.svg "Key states and transitions in the vault"){: caption="Figure 1. Key states and transitions in the vault" caption-side="bottom"}
+![Key states and transitions](/images/uko-key-states.svg "Key states and transitions"){: caption="Figure 1. Key states and transitions" caption-side="bottom"}
 
 
 
