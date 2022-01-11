@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-10"
+lastupdated: "2022-01-11"
 
 keywords: Unified Key Orchestrator, keystore, connect to keystore, key management, external keystore
 
@@ -31,7 +31,7 @@ To disconnect an external keystore, make sure that all the installed keys in thi
 ## Disconnecting external keystores through the UI
 {: #disconnect-external-keystores-ui}
 
-To disconnect an external keystore through the UI, complete the following steps.
+To disconnect an external keystore through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. In the left navigation panel, go to **Vaults** &gt; **Target keystores** to view all the available keystores.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-12-09"
+  years: 2022
+lastupdated: "2022-01-11"
 
 keywords: Unified Key Orchestrator, keystore, connect to keystore, key management, external keystore
 
@@ -34,7 +34,7 @@ You can connect to external keystores that are external to your service instance
 ### Connecting to Azure Key Vaults
 {: #connect-azure-key-vault}
 
-To connect to an Azure Key Vault through the UI, complete the following steps.
+To connect to an Azure Key Vault through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. In the left navigation panel, go to **Vaults** &gt; **Target keystores** to view all the available keystores.
