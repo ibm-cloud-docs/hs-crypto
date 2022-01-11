@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-12-09"
+  years: 2022
+lastupdated: "2022-01-11"
 
 keywords: Unified Key Orchestrator, keystore, create keystore, key management, internal keystore
 
@@ -34,7 +34,7 @@ You can create both internal KMS keystores and EP11 keystores through the UI.
 ### Creating internal KMS keystores
 {: #create-internal-kms}
 
-To create an internal KMS keystore through the UI, complete the following steps.
+To create an internal KMS keystore through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. In the left navigation panel, go to **Vaults** &gt; **Target keystores** to view all the available keystores.
