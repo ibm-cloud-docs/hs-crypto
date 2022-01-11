@@ -4,7 +4,7 @@ copyright:
   years: 2022
 lastupdated: "2022-01-11"
 
-keywords: Unified Key Orchestrator, create keys, key management, kms keys
+keywords: Unified Key Orchestrator, create key, key management, kms key
 
 subcollection: hs-crypto
 

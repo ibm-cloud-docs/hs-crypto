@@ -4,7 +4,7 @@ copyright:
   years: 2022
 lastupdated: "2022-01-11"
 
-keywords: Unified Key Orchestrator, keystore, create keystore, key management, internal keystore
+keywords: Unified Key Orchestrator, keystore, create keystore, internal keystore
 
 subcollection: hs-crypto
 

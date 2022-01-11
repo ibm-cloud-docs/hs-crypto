@@ -4,7 +4,7 @@ copyright:
   years: 2022
 lastupdated: "2022-01-11"
 
-keywords: Unified Key Orchestrator, keystore, connect to keystore, key management, external keystore
+keywords: Unified Key Orchestrator, keystore, disconnect keystore, external keystore
 
 subcollection: hs-crypto
 

@@ -4,7 +4,7 @@ copyright:
   years: 2022
 lastupdated: "2022-01-11"
 
-keywords: Unified Key Orchestrator, delete keys, key management, kms keys
+keywords: Unified Key Orchestrator, delete key, key management, kms key
 
 subcollection: hs-crypto
 
