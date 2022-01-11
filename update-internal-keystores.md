@@ -39,15 +39,10 @@ To update the details of an internal KMS keystore through the UI, complete the f
 
 
 
-### Creating EP11 keystores
-{: #create-ep11}
 
 
-
-
-
-## Creating internal keystores with the API
-{: #create-internal-keystores-api}
+## Updating internal keystores with the API
+{: #update-internal-keystores-api}
 
 
 
@@ -55,7 +50,7 @@ To update the details of an internal KMS keystore through the UI, complete the f
 
 
 ## What's next
-{: #create-internal-keystores-next}
+{: #update-internal-keystores-next}
 
   
 
