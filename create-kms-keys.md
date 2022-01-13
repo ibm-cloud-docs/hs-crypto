@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-11"
+lastupdated: "2022-01-13"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key
 
@@ -37,12 +37,12 @@ To create an internal KMS key through the UI, complete the following steps:
 3. To create a new key, click **Add key**.
 4. Under **Vault,** assign the key to a vault for access control. You can also click **Create vault** to create a new vault.
 5. Under **Keystore type,** select **Internal KMS.**
-6. In the **Key properties** table, specify the details of the key:
+6. Under **Key properties,** specify the details of the key:
 
     |       Property	     |                         Description                       |
     |----------------------|-----------------------------------------------------------|
-    | Name                 |                                                           |
-    | Description          | (Optional)                                                |
+    | Name                 | A unique, human-readable name for easy identification of your key, with 2 - 100 characters in length. |
+    | Description          | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | Key algorithm        |                                                           |
     | Key length           |                                                           |
     | State                |                                                           |
@@ -51,8 +51,7 @@ To create an internal KMS key through the UI, complete the following steps:
     | Key tags             | (Optional)                                                |
 
 7. Optionally, you can select one or multiple **Target keystores** to install the key in.
-8. View the summary of your key.
-9. Click **Create key** to confirm.
+8. View the summary of your key, then click **Create key** to confirm.
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-11"
+lastupdated: "2022-01-13"
 
 keywords: Unified Key Orchestrator, keystore, delete keystore, internal keystore
 
@@ -24,9 +24,11 @@ subcollection: hs-crypto
 {: #delete-uko-keystores}
 
 You can delete internal keystores in {{site.data.keyword.uko_full_notm}}  through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
+{: shortdesc}
 
 To delete an internal keystore, make sure that all the installed keys in this keystore are in _pre-active_ or _destroyed_ state.
-{: shortdesc}
+{: note}
+
 
 ## Deleting internal keystores through the UI
 {: #delete-internal-keystores-ui}

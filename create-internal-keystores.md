@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-11"
+lastupdated: "2022-01-13"
 
 keywords: Unified Key Orchestrator, keystore, create keystore, internal keystore
 
@@ -41,9 +41,8 @@ To create an internal KMS keystore through the UI, complete the following steps:
 3. To create a new keystore, click **Add keystore.**
 4. Under **Vault,** assign the keystore to a vault for access control. You can also click **Create vault** to create a new vault.
 5. Under **Keystore type,** select **Internal KMS**.
-6. Under **Keystore properties,** enter the **Keystore name**. Optionally, you can add an extended description to your keystore in the **Keystore description** section.
-7. View the summary of your KMS keystore.
-8. Click **Create keystore** to confirm.
+6. Under **Keystore properties,** enter a  **Keystore name** of 2 to 100 characters. Optionally, you can add an extended description to your keystore in the **Keystore description** section.
+7. View the summary of your KMS keystore, then click **Create keystore** to confirm.
 
 An internal keystore is a repository that stores the cryptographic keys within your service instance. You can create up to five free KMS keystores to manage your keys with the Keep Your Own Key (KYOK) support. If additional keystores are needed, you are charged $60 per calendar month for any additional keystore. 
 {: note}
