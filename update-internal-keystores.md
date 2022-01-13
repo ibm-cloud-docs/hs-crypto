@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-11"
+lastupdated: "2022-01-13"
 
 keywords: Unified Key Orchestrator, keystore, update keystore, key management, internal keystore
 
@@ -34,7 +34,7 @@ To update the details of an internal KMS keystore through the UI, complete the f
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. In the left navigation panel, go to **Vaults** &gt; **Target keystores** to view all the available keystores.
 3. Click on the keystore that you want to update to open the sidepanel.
-4. Click **Edit** to edit the **Keystore name** and **Keystore description.**
+4. Click **Edit** to update the **Keystore name** and **Keystore description.**
 5. Click **Save** to save the changes.
 
 

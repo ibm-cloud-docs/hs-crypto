@@ -36,7 +36,7 @@ To update connection to an external keystore through the UI, complete the follow
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. In the left navigation panel, go to **Vaults** &gt; **Target keystores** to view all the available keystores.
 3. Click on the keystore that you want to update to open the sidepanel.
-4. Click **Edit** to edit the Keystore properties.
+4. Click **Edit** to update keystore properties.
 5. Click **Test connection** to check the availability of the current keystore.
 6. Click **Save** to save the changes.
 
