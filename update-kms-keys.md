@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Updating internal KMS keys
 {: #update-kms-keys}
 
-You can manage internal KMS keys in {{site.data.keyword.uko_full_notm}} 
+You can update your internal KMS keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
 
@@ -36,7 +36,7 @@ To update the details of an internal KMS key through the UI, complete the follow
 2. In the left navigation panel, go to **Vaults** &gt; **Managed keys** to view all the available keys.
 3. Click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Show details.**
 4. Click **Edit** to update key properties.
-5. Close the panel after you finish editing.
+5. Click **Save** to save the changes.
 
 
 

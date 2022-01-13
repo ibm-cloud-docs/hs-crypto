@@ -26,7 +26,7 @@ subcollection: hs-crypto
 You can disconnect from keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS).
 {: shortdesc}
 
-To disconnect from an external keystore, make sure that all the installed keys in this keystore are in _pre-active_ or _destroyed_ state.
+To disconnect from an external keystore, make sure that all the installed keys in this keystore are in _Pre-active_ or _Destroyed_ state.
 {: note}
 
 
