@@ -41,7 +41,7 @@ To edit the connection to an Azure Key Vault through the UI, complete the follow
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Target keystores** on the left navigation pane to view all the available keystores.
-3. Click on the Azure Key Vault that you want to edit to open the sidepanel.
+3. Click on the Azure Key Vault that you want to edit to open the side panel.
 4. Click **Edit** to update keystore properties:
    
     |           Property	        |                         Description                       |
@@ -68,7 +68,7 @@ To edit the connection to an AWS keystore through the UI, complete the following
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Target keystores** on the left navigation pane to view all the available keystores.
-3. Click on the AWS keystore that you want to edit to open the sidepanel.
+3. Click on the AWS keystore that you want to edit to open the side panel.
 4. Click **Edit** to update keystore properties:
    
     |           Property	        |                         Description                       |

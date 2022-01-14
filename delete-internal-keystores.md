@@ -37,7 +37,7 @@ To delete an internal keystore through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Target keystores** on the left navigation pane to view all the available keystores.
-3. Click the keystore that you want to delete to view details.
+3. Click on the keystore that you want to delete to open the side panel.
 4. Click **Delete** to delete the keystore and all the metadata. All the installed keys are to be uninstalled and associated resources are to be detached.
 5. Click **Delete keystore** to confirm.
 
