@@ -20,16 +20,20 @@ subcollection: hs-crypto
 {:term: .term}
 
 
-# Deleting internal KMS keys
+# Deleting internal keys
 {: #delete-internal-keys}
 
 You can delete your internal KMS keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
-## Deleting internal KMS keys through the UI
+If you enable [dual authorization](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth) settings for your {{site.data.keyword.hscrypto}} instance, keep in mind that any keys that you add to the service require an authorization from two users to delete keys.
+{: note}
+
+
+## Deleting internal keys through the UI
 {: #delete-internal-keys-ui}
 
-To delete an internal KMS key through the UI, complete the following steps:
+You can only remove _Destroyed_ keys from vaults. To delete an internal KMS key through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** on the left navigation pane to view all the available keys.
@@ -37,6 +41,13 @@ To delete an internal KMS key through the UI, complete the following steps:
 4. To destroy a _pre-active_ or _deactivated_ key, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Destroyed.**
 5. Click **Destroy key** to confirm.
 6. To remove the key and its metadata, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault.**
+
+
+
+## Deleting internal keys with the API
+{: #delete-internal-keys-api}
+
+
 
 
 ## What's next

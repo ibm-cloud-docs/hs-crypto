@@ -56,7 +56,7 @@ To connect to an Azure Key Vault through the UI, complete the following steps:
     | Subscription ID on Azure    |                                                           |
 
 7. Click **Test connection** to check the availability of the current keystore.
-8. View the summary of your Azure Key Vault keystore, then **Connect to keystore** to confirm.
+8. View the summary of your Azure Key Vault, then **Connect to keystore** to confirm.
 
 
 

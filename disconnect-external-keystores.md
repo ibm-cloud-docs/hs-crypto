@@ -23,8 +23,10 @@ subcollection: hs-crypto
 # Disconnecting from external keystores
 {: #disconnect-external-keystores}
 
-You can disconnect from keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS).
+You can disconnect from keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS). 
 {: shortdesc}
+
+You can reconnect to the keystores at any time. For more instructions, see [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores){: external}.
 
 To disconnect from an external keystore, make sure that all the installed keys in this keystore are in _Pre-active_ or _Destroyed_ state.
 {: note}
@@ -39,7 +41,7 @@ To disconnect from an external keystore through the UI, complete the following s
 2. Click **Target keystores** on the left navigation pane to view all the available keystores.
 3. Click the keystore that you want to disconnect to view details.
 4. Click **Disconnect** to disconnect the keystore and remove it from the keystore list. All the installed keys are to be uninstalled and be inaccessible to their resources.
-5.  Click **Disconnect keystore** to confirm.
+5. Click **Disconnect keystore** to confirm.
 
 
 

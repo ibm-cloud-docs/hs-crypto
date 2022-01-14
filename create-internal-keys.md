@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
+{:important: .important}
 {:external: target="_blank" .external}
 {:term: .term}
 
@@ -26,6 +27,8 @@ subcollection: hs-crypto
 You can use {{site.data.keyword.uko_full_notm}} to create internal KMS keys through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
+To protect your privacy, do not store your personal data as metadata for your key.
+{:important: .important}
 
 ## Creating internal KMS keys through the UI
 {: #create-internal-keys-ui}
