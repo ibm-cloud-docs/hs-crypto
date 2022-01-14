@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-13"
+lastupdated: "2022-01-14"
 
 keywords: Unified Key Orchestrator, keystore, edit keystore, key management, internal keystore
 
@@ -32,7 +32,7 @@ You can edit your internal keystores in {{site.data.keyword.uko_full_notm}} thro
 To edit the details of an internal KMS keystore through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. In the left navigation panel, go to **Vaults** &gt; **Target keystores** to view all the available keystores.
+2. Click **Target keystores** on the left navigation pane to view all the available keystores.
 3. Click on the keystore that you want to edit to open the sidepanel.
 4. Click **Edit** to update the **Keystore name** and **Keystore description.**
 5. Click **Save** to save the changes.

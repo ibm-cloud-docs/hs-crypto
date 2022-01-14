@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-13"
+lastupdated: "2022-01-14"
 
 keywords: Unified Key Orchestrator, keystore, delete keystore, internal keystore
 
@@ -36,7 +36,7 @@ To delete an internal keystore, make sure that all the installed keys in this ke
 To delete an internal keystore through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. In the left navigation panel, go to **Vaults** &gt; **Target keystores** to view all the available keystores.
+2. Click **Target keystores** on the left navigation pane to view all the available keystores.
 3. Click the keystore that you want to delete to view details.
 4. Click **Delete** to delete the keystore and all the metadata. All the installed keys are to be uninstalled and associated resources are to be detached.
 5. Click **Delete keystore** to confirm.

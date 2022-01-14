@@ -33,7 +33,7 @@ You can edit your keys in {{site.data.keyword.uko_full_notm}} through the user i
 To edit the details of an internal KMS key through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. In the left navigation panel, go to **Vaults** &gt; **Managed keys** to view all the available keys.
+2. Click **Managed keys** on the left navigation pane to view all the available keys.
 3. Click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Show details.**
 4. Click **Edit** to update key properties.
 5. Click **Save** to save the changes.

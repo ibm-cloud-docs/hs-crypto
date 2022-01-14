@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-13"
+lastupdated: "2022-01-14"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key
 
@@ -33,7 +33,7 @@ You can use {{site.data.keyword.uko_full_notm}} to create internal KMS keys thro
 To create an internal KMS key through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. In the left navigation panel, go to **Vaults** &gt; **Managed keys** to view all the available keys.
+2. Click **Managed keys** on the left navigation pane to view all the available keys.
 3. To create a new key, click **Add key.**
 4. Under **Vault,** assign the key to a vault for access control. You can also click **Create vault** to create a new vault.
 5. Under **Keystore type,** select **Internal KMS.**

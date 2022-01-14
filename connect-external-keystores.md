@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-13"
+lastupdated: "2022-01-14"
 
 keywords: Unified Key Orchestrator, keystore, connect keystore, external keystore
 
@@ -37,7 +37,7 @@ You can connect to keystores that are external to your service instance on {{sit
 To connect to an Azure Key Vault through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. In the left navigation panel, go to **Vaults** &gt; **Target keystores** to view all the available keystores.
+2. Click **Target keystores** on the left navigation pane to view all the available keystores.
 3. To connect to a new Azure Key Vault, click **Add keystore.**
 4. Under **Vault,** assign the keystore to a vault for access control. You can also click **Create vault** to create a new vault.
 5. Under **Keystore type,** select **Azure Key Vault (Premium).**
@@ -67,7 +67,7 @@ To connect to an Azure Key Vault through the UI, complete the following steps:
 To connect to an AWS keystore through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. In the left navigation panel, go to **Vaults** &gt; **Target keystores** to view all the available keystores.
+2. Click **Target keystores** on the left navigation pane to view all the available keystores.
 3. To connect to a new AWS keystore, click **Add keystore.**
 4. Under **Vault,** assign the keystore to a vault for access control. You can also click **Create vault** to create a new vault.
 5. Under **Keystore type,** select **AWS keystore.**
@@ -87,8 +87,16 @@ To connect to an AWS keystore through the UI, complete the following steps:
 
 
 
-### Granting access to external keystores
-{: #access-external-keystores}
+### Connecting to {{site.data.keyword.eymanagementservicelong_notm}} 
+{: #connect-key-protect}
+
+
+
+
+
+
+### Connecting to another {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} instance
+{: #connect-hp-crypto}
 
 
 

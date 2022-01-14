@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-13"
+lastupdated: "2022-01-14"
 
 keywords: Unified Key Orchestrator, key management, keystore, edit keystore, external keystore
 
@@ -34,7 +34,7 @@ You can edit connection to keystores that are external to your service instance 
 To edit the connection to an external keystore through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. In the left navigation panel, go to **Vaults** &gt; **Target keystores** to view all the available keystores.
+2. Click **Target keystores** on the left navigation pane to view all the available keystores.
 3. Click on the keystore that you want to edit to open the sidepanel.
 4. Click **Edit** to update keystore properties.
 5. Click **Test connection** to check the availability of the current keystore.
