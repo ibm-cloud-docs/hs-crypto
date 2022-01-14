@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-07"
+lastupdated: "2022-01-14"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 
-# {{site.data.keyword.hscrypto}} key management API change log
+# {{site.data.keyword.hscrypto}} key management service API change log
 {: #kms-api-change-log}
 
 In this change log you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.hscrypto}} key management API. The change log lists changes that have been made, ordered by the date they were released. Changes to existing API versions are designed to be compatible with existing client applications.
@@ -33,3 +33,4 @@ The latest released version is `2.76`.
 {: #kms-api-april-2021}
 
 The method of restoring keys is updated. Now all root keys and standard keys can be restored within 30 days of the deletion and no key material is required.
+
