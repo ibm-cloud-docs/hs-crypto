@@ -56,8 +56,7 @@ To connect to an Azure Key Vault through the UI, complete the following steps:
     | Subscription ID on Azure    |                                                           |
 
 7. Click **Test connection** to check the availability of the current keystore.
-8. View the summary of your Azure Key Vault keystore and the total estimated cost.
-9. Click **Connect to keystore** to confirm.
+8. View the summary of your Azure Key Vault keystore, then **Connect to keystore** to confirm.
 
 
 
@@ -82,12 +81,11 @@ To connect to an AWS keystore through the UI, complete the following steps:
     | Secret access key on AWS    |                                                           |
 
 7. Click **Test connection** to check the availability of the current keystore.
-8. View the summary of your AWS keystore and the total estimated cost.
-9. Click **Connect to keystore** to confirm.
+8. View the summary of your AWS keystore, then **Connect to keystore** to confirm.
 
 
 
-### Connecting to {{site.data.keyword.eymanagementservicelong_notm}} 
+### Connecting to {{site.data.keyword.keymanagementservicelong_notm}} 
 {: #connect-key-protect}
 
 
