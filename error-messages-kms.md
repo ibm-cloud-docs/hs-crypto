@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-07"
+lastupdated: "2022-01-14"
 
 keywords: error message, error code, error, kms error, key management error message, hpcs error messages, hyper protect crypto services error message
 
@@ -16,7 +16,7 @@ subcollection: hs-crypto
 {:note: .note}
 {:screen: .screen}
 
-# Error messages for key management
+# Error messages for key management service
 {: #error-messages-kms}
 
 This topic lists error messages that you might encounter when you manage root keys and standard keys with {{site.data.keyword.hscrypto}}. Most error messages have one or more examples, usually `curl`, that shows the request and response.
@@ -3331,3 +3331,4 @@ $ curl -X GET \
     ]
 }
 ```
+
