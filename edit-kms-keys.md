@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-13"
+lastupdated: "2022-01-14"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys
 
@@ -20,10 +20,10 @@ subcollection: hs-crypto
 {:term: .term}
 
 
-# Editing internal KMS keys
+# Editing key details
 {: #edit-kms-keys}
 
-You can edit your internal KMS keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
+You can edit your keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
 
