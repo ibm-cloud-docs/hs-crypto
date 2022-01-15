@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-12-01"
+  years: 2020, 2022
+lastupdated: "2022-01-15"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -38,7 +38,7 @@ You need to set up the PKCS #11 library on your workstation to make it available
 The PKCS #11 library, for both the amd64 and s390x platforms, is supported only on Linux&reg;.
 {: note}
 
-1. [Download the latest PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external}. The library file names use the naming convention: pkcs11-grep11-<**platform**>.so.<**version**>. The platform is either *amd64* or *s390x* and the version is the standard *major.minor.build* syntax.
+1. [Download the latest PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external}. The library file names use the naming convention: `pkcs11-grep11-<**platform**>.so.<**version**>`. The platform is either *amd64* or *s390x* and the version is the standard *major.minor.build* syntax.
 2. Move the library into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64`, or `/usr/lib`.
 
 ## Step 2: (Optional) Verify the integrity and authenticity of the PKCS #11 library
