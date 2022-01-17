@@ -32,7 +32,7 @@ To disconnect from an external keystore, make sure that all the installed keys i
 {: note}
 
 
-## Disconnecting external keystores through the UI
+## Disconnecting from external keystores through the UI
 {: #disconnect-external-keystores-ui}
 
 To disconnect from an external keystore through the UI, complete the following steps:

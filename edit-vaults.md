@@ -20,14 +20,14 @@ subcollection: hs-crypto
 {:term: .term}
 
 
-# Editing vaults
+# Editing vault details
 {: #edit-vaults}
 
 You can edit your vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
 
-## Editing vaults through the UI
+## Editing vault details through the UI
 {: #edit-vaults-ui}
 
 To edit vault details through the UI, complete the following steps:
