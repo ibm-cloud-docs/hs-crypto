@@ -23,8 +23,10 @@ subcollection: hs-crypto
 # Creating vaults
 {: #create-vaults}
 
-You can create vaults to manage access in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
+You can create vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
+
+A vault is a single unit that controls a user's or an access group's access to keys and keystores through Identity and Access Management (IAM). For more instructions, see [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults).
 
 
 ## Creating vaults through the UI
