@@ -37,7 +37,7 @@ To create a vault through the UI, complete the following steps:
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Vaults** on the left navigation pane to view all the available vaults.
 3. To create a new vault, click **Create vault.**
-4. Enter a **Vault name** of 1 to 100 characters in length. Optionally, you can add an extended description to your vault.
+4. Enter a **Vault name** of 1 to 100 characters in length. Optionally, you can add an extended description to your vault in the **Description** section.
 6. Click **Create vault** to confirm.
 
 

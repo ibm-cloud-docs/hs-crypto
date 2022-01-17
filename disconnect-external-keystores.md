@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-14"
+lastupdated: "2022-01-17"
 
 keywords: Unified Key Orchestrator, keystore, disconnect keystore, external keystore
 
@@ -40,7 +40,7 @@ To disconnect from an external keystore through the UI, complete the following s
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Target keystores** on the left navigation pane to view all the available keystores.
 3. Click on the keystore that you want to disconnect to open the side panel.
-4. Click **Disconnect** to disconnect the keystore and remove it from the keystore list. All the installed keys are to be uninstalled and be inaccessible to their resources.
+4. Click **Disconnect** to disconnect the keystore and remove it from the keystore list. All the installed keys are to be uninstalled and inaccessible to their resources.
 5. Click **Disconnect keystore** to confirm.
 
 

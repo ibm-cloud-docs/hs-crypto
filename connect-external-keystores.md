@@ -47,13 +47,13 @@ To connect to an Azure Key Vault through the UI, complete the following steps:
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 2 - 100 characters in length. |
     | Keystore description        | (Optional) An extended description for your keystore, with up to 200 characters in length. |
-    | Service name on Azure       |                                                           |
-    | Resource group on Azure     |                                                           |
-    | Location on Azure           |                                                           |
-    | Environment on Azure        |                                                           |
-    | Service principal password on Azure |                                                   |
-    | Tenant ID on Azure          |                                                           |
-    | Subscription ID on Azure    |                                                           |
+    | Service name on Azure       | The name must match the name of the Key Vault in Azure.   |
+    | Resource group on Azure     | A logical construct that groups multiple resources together. Obtain it from the Azure portal. |
+    | Location on Azure           | Geographical location where the Key Vault is located in.   |
+    | Environment on Azure        | The Azure environment to authenticate with.               |
+    | Service principal password on Azure | Only password based authentication is supported for service principals.       |
+    | Tenant ID on Azure          |  A tenant is the organization that owns and manages a specific instance of Microsoft cloud services. Use Azure Active Directory tenant ID for authenticating requests to the key vault.     |
+    | Subscription ID on Azure    |   A GUID that uniquely identifies your subscription to use Azure services.    |
 
 7. Click **Test connection** to check the availability of the current keystore.
 8. View the summary of your Azure Key Vault, then **Connect to keystore** to confirm.
@@ -75,10 +75,10 @@ To connect to an AWS keystore through the UI, complete the following steps:
     |           Property	        |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 2 - 100 characters in length. |
-    | Keystore description        | (Optional) An extended description for your keystore, with up to 200 characters in length. |
-    | Region on AWS               |                                                           |
-    | Access key ID on AWS        |                                                           |
-    | Secret access key on AWS    |                                                           |
+    | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
+    | Region on AWS               | Geographical location where the AWS KMS is located in.    |
+    | Access key ID on AWS        | Part of your access key for AWS.                          |
+    | Secret access key on AWS    | Part of your access key for AWS. The secret access key is available for download only when you create it.     |
 
 7. Click **Test connection** to check the availability of the current keystore.
 8. View the summary of your AWS keystore, then **Connect to keystore** to confirm.
