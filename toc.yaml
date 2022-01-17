@@ -146,53 +146,29 @@ toc:
           - topicgroup:
               label: Managing key management service keys
               topics:
-              - topicgroup:
-                  label: Creating keys
-                  topics:
-                  - create-root-keys.md
-                  - create-standard-keys.md
+              - create-root-keys.md
+               - create-standard-keys.md
               - manage-key-rings.md
               - manage-key-alias.md
-              - topicgroup:
-                  label: Importing keys
-                  topics:
-                  - import-root-keys.md
-                  - import-standard-keys.md
-                  - create-import-tokens.md
-              - topicgroup:
-                  label: Viewing keys
-                  topics:
-                  - view-keys.md
-                  - view-key-details.md
-                  - retrieve-key.md
-              - topicgroup:
-                  label: Protecting keys
-                  topics:
-                  - wrap-keys.md
-                  - unwrap-keys.md
-                  - rewrap-keys.md
-              - topicgroup:
-                  label: Rotating keys
-                  topics:
-                  - set-rotation-policy.md
-                  - rotate-keys.md
-                  - view-key-versions.md
+              - import-root-keys.md
+              - import-standard-keys.md
+              - create-import-tokens.md
+              - view-keys.md
+              - view-key-details.md
+              - retrieve-key.md
+              - wrap-keys.md
+              - unwrap-keys.md
+              - rewrap-keys.md
+              - set-rotation-policy.md
+              - rotate-keys.md
+              - view-key-versions.md
               - disable-keys.md
-              - topicgroup:
-                  label: Deleting keys
-                  topics: 
-                  - delete-keys.md
-                  - delete-dual-auth-keys.md
-                  - set-dual-auth-policy.md
+              - delete-keys.md
+              - delete-dual-auth-keys.md
+              - set-dual-auth-policy.md
               - restore-keys.md
-          - topicgroup:
-              label: Managing protected resources associated with root keys
-              topics:
               - view-protected-resources.md
               - sync-resources.md
-          - topicgroup:
-              label: "Managing Enterprise PKCS #11 keystores and keys"
-              topics:
               - manage-pkcs11-keystores.md
               - manage-pkcs11-keys.md
       - enable-mechanisms.md

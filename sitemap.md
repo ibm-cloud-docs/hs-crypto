@@ -656,11 +656,119 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [APIs that use key alias](/docs/hs-crypto?topic=hs-crypto-manage-key-alias#key-alias-apis)
 
+[Importing root keys](/docs/hs-crypto?topic=hs-crypto-import-root-keys#import-root-keys)
+
+* [Importing root keys with the console](/docs/hs-crypto?topic=hs-crypto-import-root-keys#import-root-key-gui)
+
+* [Importing root keys with the API](/docs/hs-crypto?topic=hs-crypto-import-root-keys#import-root-key-api)
+
+* [Importing root keys with the CLI](/docs/hs-crypto?topic=hs-crypto-import-root-keys#import-root-key-cli)
+
+* [Base64 encoding your key material](/docs/hs-crypto?topic=hs-crypto-import-root-keys#encode-key-material-root-key)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-import-root-keys#import-root-key-next)
+
+[Importing standard keys](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#import-standard-keys)
+
+* [Importing standard keys with the console](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#import-standard-key-gui)
+
+* [Importing standard keys with the API](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#import-standard-key-api)
+
+* [Importing stardard keys with the CLI](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#import-standard-key-cli)
+
+* [Base64 encoding your key material](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#encode-key-material-standard-key)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#import-standard-key-next)
+
+[Creating import tokens](/docs/hs-crypto?topic=hs-crypto-create-import-tokens#create-import-tokens)
+
+* [Creating an import token with the API](/docs/hs-crypto?topic=hs-crypto-create-import-tokens#create-import-token-api)
+
+* [Creating an import token with the CLI](/docs/hs-crypto?topic=hs-crypto-create-import-tokens#create-import-token-cli)
+
+* [Retrieving an import token with the API](/docs/hs-crypto?topic=hs-crypto-create-import-tokens#retrieve-import-token-api)
+
+* [Retrieving an import token with the CLI](/docs/hs-crypto?topic=hs-crypto-create-import-tokens#retrieve-import-token-cli)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-create-import-tokens#create-import-token-next-steps)
+
+[Viewing a list of root keys or standard keys](/docs/hs-crypto?topic=hs-crypto-view-keys#view-keys)
+
+* [Viewing root keys or standard keys with the console](/docs/hs-crypto?topic=hs-crypto-view-keys#view-key-gui)
+
+* [Viewing root keys or standard keys with the key management API](/docs/hs-crypto?topic=hs-crypto-view-keys#view-key-api)
+
+[Viewing details about a root key or a standard key](/docs/hs-crypto?topic=hs-crypto-view-key-details#view-key-details)
+
+* [Viewing key details with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-view-key-details#view-key-details-ui)
+
+* [Viewing key details with the key management API](/docs/hs-crypto?topic=hs-crypto-view-key-details#view-key-details-api)
+
+[Retrieving a root key or a standard key](/docs/hs-crypto?topic=hs-crypto-retrieve-key#retrieve-key)
+
+* [Retrieving a key with the key management API](/docs/hs-crypto?topic=hs-crypto-retrieve-key#get-key-api)
+
+[Wrapping data encryption keys with root keys](/docs/hs-crypto?topic=hs-crypto-wrap-keys#wrap-keys)
+
+* [Wrapping keys by using the API](/docs/hs-crypto?topic=hs-crypto-wrap-keys#wrap-keys-api)
+
+[Unwrapping data encryption keys with root keys](/docs/hs-crypto?topic=hs-crypto-unwrap-keys#unwrap-keys)
+
+* [Unwrapping keys by using the API](/docs/hs-crypto?topic=hs-crypto-unwrap-keys#unwrap-key-api)
+
+* [Decoding your key material](/docs/hs-crypto?topic=hs-crypto-unwrap-keys#how-to-decode-key-material)
+
+[Rewrapping data encryption keys with root keys](/docs/hs-crypto?topic=hs-crypto-rewrap-keys#rewrap-keys)
+
+* [Rewrapping keys by using the API](/docs/hs-crypto?topic=hs-crypto-rewrap-keys#rewrap-key-api)
+
+[Rotating root keys based on the rotation policy](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy#set-rotation-policy)
+
+* [Managing rotation polices in the console](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy#manage-policies-gui)
+
+* [Managing rotation policies with the API](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy#manage-rotation-policies-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy#set-rotation-policy-next)
+
+[Rotating root keys manually](/docs/hs-crypto?topic=hs-crypto-rotate-keys#rotate-keys)
+
+* [Rotating root keys in the console](/docs/hs-crypto?topic=hs-crypto-rotate-keys#rotate-root-key-gui)
+
+* [Rotating root keys with the API](/docs/hs-crypto?topic=hs-crypto-rotate-keys#rotate-root-key-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-rotate-keys#rotate-key-next)
+
+[Viewing root key versions](/docs/hs-crypto?topic=hs-crypto-view-key-versions#view-key-versions)
+
+* [Viewing root key versions with the key management API](/docs/hs-crypto?topic=hs-crypto-view-key-versions#view-key-versions-api)
+
 [Disabling root keys](/docs/hs-crypto?topic=hs-crypto-disable-keys#disable-keys)
 
 * [Disabling and enabling root keys with the console](/docs/hs-crypto?topic=hs-crypto-disable-keys#disable-enable-ui)
 
 * [Disabling and enabling root keys with the API](/docs/hs-crypto?topic=hs-crypto-disable-keys#disable-enable-api)
+
+[Deleting keys by using a single authorization](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-keys)
+
+* [Deleting keys with the console](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-keys-gui)
+
+* [Deleting keys with the API](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-keys-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-key-next)
+
+[Deleting keys by using dual authorization](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#delete-dual-auth-keys)
+
+* [Considerations for deleting a key using dual authorization](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#dual-auth-deletion-considerations)
+
+* [Authorize deletion for a key with the console](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#set-key-deletion-console)
+
+* [Authorize deletion for a key with the API](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#set-key-deletion-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#delete-daul-auth-keys-next)
+
+[Setting dual authorization policies for keys](/docs/hs-crypto?topic=hs-crypto-set-dual-auth-key-policy#set-dual-auth-key-policy)
+
+* [Managing dual authorization policies with the key management API](/docs/hs-crypto?topic=hs-crypto-set-dual-auth-key-policy#manage-dual-auth-key-policies-api)
 
 [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys)
 
@@ -669,11 +777,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Restoring a deleted key with the console](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-ui)
 
 * [Restoring a deleted key with the API](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys-api)
-
-
-### Managing protected resources associated with root keys
-{: #sitemap_managing_protected_resources_associated_with_root_keys}
-
 
 [Viewing associations between root keys and encrypted {{site.data.keyword.cloud_notm}} resources](/docs/hs-crypto?topic=hs-crypto-view-protected-resources#view-protected-resources)
 
@@ -688,11 +791,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Syncing associated resources with the console](/docs/hs-crypto?topic=hs-crypto-sync-associated-resources#sync-associated-resources-ui)
 
 * [Syncing associated resources with the API](/docs/hs-crypto?topic=hs-crypto-sync-associated-resources#sync-associated-resources-api)
-
-
-### Managing Enterprise PKCS #11 keystores and keys
-{: #sitemap_managing_enterprise_pkcs_11_keystores_and_keys}
-
 
 [Managing EP11 keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui#manage-ep11-keystores-ui)
 
