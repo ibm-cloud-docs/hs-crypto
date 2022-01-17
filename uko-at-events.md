@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-14"
+lastupdated: "2022-01-17"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -188,10 +188,16 @@ see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic
 ## Analyzing successful events
 {: #at-events-analyze}
 
-Most successful requests have unique `requestData` and `responseData` associated with each related event. The following sections describe the data of each {{site.data.keyword.hscrypto}} service action event.
+Most successful requests have unique `requestData and `responseData associated with each related event. In `requestData` and `responseData` properties there are available full payloads from requests and responses except sensitive data. The list of field,endpoints, and payloads is available in API docs.
 
 Fields are not guaranteed to appear unless the request is successful.
 {: note}
+
+The list of sensitive field values that are hidden using the `[redacted]` placeholder:
+* servicePrincipalPassword
+* secretAccessKey
+* accessKeyId
+* apiKey
 
 ### Common fields
 {: #uko-at-common fields}
@@ -202,7 +208,6 @@ Some common fields are available for {{site.data.keyword.hscrypto}} to use outsi
 | --- | --- |
 | `requestData.requestURI` | The URI of the API request that was made. |
 | `requestData.instanceID` | The unique identifier of your {{site.data.keyword.hscrypto}} service instance. |
-| `correlationId` | The unique identifier of the API request that generated the event. Note: This field is not supported in TKE events. |
 {: caption="Table 9. Describes the common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service actions." caption-side="bottom"}
 
 For more information about the event fields in the Cloud Auditing Data Federation (CADF) event model, see [Event Fields](/docs/activity-tracker?topic=activity-tracker-event){: external}.
@@ -218,17 +223,6 @@ Because of the sensitivity of the information about an encryption key, the event
 The `responseData.keyState` field is an integer and corresponds to the Pre-activation = 0, Active = 1, Deactivated = 3, and Destroyed = 5 values.
 For more information about key states, see [Key states and transitions](/docs/hs-crypto?topic=hs-crypto-uko-key-states#uko-key-transitions).
 {: note}
-
-#### Create key
-{: #uko-create-key-success}
-
-The following fields include extra information:
-
-- The `requestData.keyType` field includes the type of key that was created.
-- The `responseData.keyId` field includes the unique identifier that is associated with the key.
-- The `responseData.keyVersionId` field includes the unique identifier of the current key version that is used to wrap input ciphertext on wrap requests.
-- The `responseData.keyVersionCreationDate` field includes the date that the current version of the key was created.
-- The `responseData.keyState` field includes the integer that correlates to the state of the key.
 
 ### Registration events
 {: #uko-registration-events}
@@ -403,25 +397,7 @@ The following fields include extra information:
 ## Analyzing failed events
 {: #uko-at-events-analyze-failed}
 
-### Unable to delete a key
-{: #uko-delete-key-failure}
-
-If the delete key event has a `reason.reasonCode`of `409`, the key cannot be deleted because it is possibly protecting one or more cloud resources that have a retention
-policy. Make a GET request to `/keys/{id}/registrations` to learn which resources this key is associated with. A registration with `"preventKeyDeletion": true`
-indicates that the associated resource has a retention policy. To enable deletion, contact an account owner to remove the retention policy on each resource
-that is associated with this key.
-
-A delete key event might also receive a `reason.reasonCode` of `409` due to a dual auth deletion policy on the key. Make a GET request to `/api/v2/keys/{id}/policies` to see whether a dual authorization policy is associated with your key. If there is a policy set, contact the other authorized user to delete the key.
-
-### Unable to authenticate while making a request
-{: #uko-authenticate-failure}
-
-If the event has a `reason.reasonCode` of `401`, you might not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions in the specified service instance. Verify with an
-administrator that you are assigned the correct platform and service access roles in the applicable service instance. For more
-information about roles, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access).
-
-Check that you are using a valid token that is associated with an account that is authorized to perform the service action.
-{: note}
+All failed events contain the `message` field with detailed description of the problem.
 
 ### Lifecycle action on a key with registrations did not complete
 {: #uko-protected-resource-key-failure}
