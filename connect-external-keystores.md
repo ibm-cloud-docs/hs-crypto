@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-14"
+lastupdated: "2022-01-17"
 
 keywords: Unified Key Orchestrator, keystore, connect keystore, external keystore
 
@@ -69,7 +69,7 @@ To connect to an AWS keystore through the UI, complete the following steps:
 2. Click **Target keystores** on the left navigation pane to view all the available keystores.
 3. To connect to a new AWS keystore, click **Add keystore.**
 4. Under **Vault,** assign the keystore to a vault for access control. You can also click **Create vault** to create a new vault.
-5. Under **Keystore type,** select **AWS keystore.**
+5. Under **Keystore type,** select **AWS Key Management Service.**
 6. Under **Keystore properties,** specify the details of the keystore:
    
     |           Property	        |                         Description                       |
