@@ -147,7 +147,7 @@ toc:
               label: Managing key management service keys
               topics:
               - create-root-keys.md
-               - create-standard-keys.md
+              - create-standard-keys.md
               - manage-key-rings.md
               - manage-key-alias.md
               - import-root-keys.md

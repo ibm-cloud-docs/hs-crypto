@@ -638,6 +638,22 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_managing_key_management_service_keys}
 
 
+[Creating root keys](/docs/hs-crypto?topic=hs-crypto-create-root-keys#create-root-keys)
+
+* [Creating root keys with the console](/docs/hs-crypto?topic=hs-crypto-create-root-keys#root-key-gui)
+
+* [Creating root keys with the API](/docs/hs-crypto?topic=hs-crypto-create-root-keys#root-key-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-create-root-keys#root-key-next)
+
+[Creating standard keys](/docs/hs-crypto?topic=hs-crypto-create-standard-keys#create-standard-keys)
+
+* [Creating standard keys with the console](/docs/hs-crypto?topic=hs-crypto-create-standard-keys#standard-key-gui)
+
+* [Creating standard keys with the API](/docs/hs-crypto?topic=hs-crypto-create-standard-keys#create-standard-key-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-create-standard-keys#standard-key-next)
+
 [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#managing-key-rings)
 
 * [Creating key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#create-key-ring)
