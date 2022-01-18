@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-17"
+lastupdated: "2022-01-18"
 
 keywords: Unified Key Orchestrator, keystore, create keystore, internal keystore
 
@@ -26,6 +26,9 @@ subcollection: hs-crypto
 You can use {{site.data.keyword.uko_full_notm}} to create internal keystores through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
+An internal keystore is a repository that stores the cryptographic keys within your service instance. You can create up to five free internal keystores to manage your keys with the Keep Your Own Key (KYOK) support. If additional keystores are needed, you are charged $225 per calendar month for any additional keystore. 
+{: note}
+
 ## Creating internal keystores through the UI
 {: #create-internal-keystores-ui}
 
@@ -43,9 +46,6 @@ To create an internal KMS keystore through the UI, complete the following steps:
 5. Under **Keystore type,** select **Internal KMS**.
 6. Under **Keystore properties,** enter a **Keystore name** of 2 to 100 characters. Optionally, you can add an extended description to your keystore in the **Description** section.
 7. View the summary of your KMS keystore, then click **Create keystore** to confirm.
-
-An internal keystore is a repository that stores the cryptographic keys within your service instance. You can create up to five free KMS keystores to manage your keys with the Keep Your Own Key (KYOK) support. If additional keystores are needed, you are charged $60 per calendar month for any additional keystore. 
-{: note}
 
 
 
@@ -67,6 +67,10 @@ An internal keystore is a repository that stores the cryptographic keys within y
 ## What's next
 {: #create-internal-keystores-next}
 
-  
+- To find out how to install an existing key to a keystore, check out [Installing existing keys to keystores](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
+
+- To find out instructions on editing an internal keystore, check out [Editing internal keystores](/docs/hs-crypto?topic=hs-crypto-edit-internal-keystores).
+
+- To find out how to delete an internal keystore, check out [Deleting internal keystores](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores).
 
 

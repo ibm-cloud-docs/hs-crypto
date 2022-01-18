@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-17"
+lastupdated: "2022-01-18"
 
 keywords: Unified Key Orchestrator, keystore, connect keystore, external keystore
 
@@ -25,6 +25,9 @@ subcollection: hs-crypto
 
 You can use {{site.data.keyword.uko_full_notm}} to connect to external keystores through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
+
+For each external keystore, you are charged $6.25 per hour as base price for {{site.data.keyword.uko_full_notm}}. You can connect to one external keystore at no initial cost, regardless of the type. If additional keystores are needed, you are charged $225 per calendar month for any additional keystore. 
+{: note}
 
 ## Connecting to external keystores through the UI
 {: #connect-external-keystores-ui}
@@ -105,7 +108,11 @@ To connect to an AWS keystore through the UI, complete the following steps:
 ## What's next
 {: #connect-external-keystores-next}
 
+- To find out how to install an existing key to a keystore, check out [Installing existing keys to keystores](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
 
+- To find out how to update the connection to an external keystore, check out [Editing connection to external keystores](/docs/hs-crypto?topic=hs-crypto-edit-external-keystore-connection).
+
+- To find out how to disconnect from an external keystore, check out [Disconnecting from external keystores](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores).
   
 
 

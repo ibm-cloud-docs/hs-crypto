@@ -21,25 +21,25 @@ subcollection: hs-crypto
 {:term: .term}
 
 
-# Creating internal keys
-{: #create-internal-keys}
+# Creating and storing external keys
+{: #create-external-keys}
 
-You can use {{site.data.keyword.uko_full_notm}} to create internal KMS keys through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
+You can use {{site.data.keyword.uko_full_notm}} to create keys for external keystores through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
 To protect your privacy, do not store your personal data as metadata for your key.
 {: important}
 
-## Creating internal keys through the UI
-{: #create-internal-keys-ui}
+## Creating external keys through the UI
+{: #create-external-keys-ui}
 
-To create an internal KMS key through the UI, complete the following steps:
+To create external key through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** on the left navigation pane to view all the available keys.
 3. To create a new key, click **Create key.**
 4. Under **Vault,** assign the key to a vault for access control. You can also click **Create vault** to create a new vault.
-5. Under **Keystore type,** select **Internal KMS.**
+5. Under **Keystore type,** select **AWS Key Management Service, Azure Key Vault** or **IBM Key Protect,** depending on which type of external keystore you want to install the key in.
 6. Under **Key properties,** specify the details of the key:
 
     |       Property	     |                         Description                       |
@@ -50,17 +50,17 @@ To create an internal KMS key through the UI, complete the following steps:
     | Length               |                                                           |
     | State                | _Pre-active_ keys are not to be installed in target keystores until they are activated. _Active_ keys are to be automatically installed in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external} |
     | Activation date      | (Optional) Set the date when the _Pre-active_ key gets activated. You can also manually activate the key later. |
-    | Deactivation date    | (Optional) Set the date when the key gets expired. After the expiration date, the key moves into the _Deactivated_ state. |
+    | Deactivation date    | (Optional) Set the date when the key gets expired. After the expiration date, the key moves into the _Deactivated_ state.  |
     | Key tags             | (Optional) Add pairs of names and values to mark your key.  |
 
-7. Optionally, you can select one or multiple **Target keystores** to install the key in. 
+7. Optionally, you can select one or multiple **Target keystores** to install the key in.
 8. View the summary of your key, then click **Create key** to confirm.
 
 
 
 
-## Creating internal keys with the API
-{: #create-internal-keys-api}
+## Creating external keys with the API
+{: #create-external-keys-api}
 
 
 
@@ -68,13 +68,15 @@ To create an internal KMS key through the UI, complete the following steps:
 
 
 ## What's next
-{: #create-internal-keys-next}
+{: #create-external-keys-next}
 
-- To find out how to create a key for external keystores, check out [Creating external keys](/docs/hs-crypto?topic=hs-crypto-create-external-keys).
+- To find out how to create a key for internal keystores, check out [Creating internal keys](/docs/hs-crypto?topic=hs-crypto-create-internal-keys).
   
 - To find out instructions on editing your key, check out [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
   
 - To find out more about managing your key list, check out [Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list) or [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
   
-- To find out how to delete a key, check out [Deleting internal keys](/docs/hs-crypto?topic=hs-crypto-delete-internal-keys).
+- To find out how to delete a key, check out [Deleting external keys](/docs/hs-crypto?topic=hs-crypto-delete-external-keys).
+  
+
 
