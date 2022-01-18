@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-14"
+lastupdated: "2022-01-18"
 
 keywords: Unified Key Orchestrator, search keys, key management, kms keys
 
@@ -29,6 +29,12 @@ You can filter and search your internal keys and external keys in {{site.data.ke
 
 ## Filtering and searching keys through the UI
 {: #search-key-list-ui}
+
+To search a key through the UI, complete the following steps:
+
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
+2. Click **Managed keys** on the left navigation pane to view all the available keys.
+3. Click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key that you 
 
 
 

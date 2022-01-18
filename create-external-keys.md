@@ -46,12 +46,13 @@ To create external key through the UI, complete the following steps:
     |----------------------|-----------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key, with 2 - 100 characters in length. |
     | Description          | (Optional) An extended description for your keystore, with up to 200 characters in length. |
-    | Algorithm            |                                                           |
-    | Length               |                                                           |
+    | Algorithm            | The encryption algorithm to encrypt data for the key.     |
+    | Length               | The number of bits that represents the encryption strength of the key.   |
     | State                | _Pre-active_ keys are not to be installed in target keystores until they are activated. _Active_ keys are to be automatically installed in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external} |
     | Activation date      | (Optional) Set the date when the _Pre-active_ key gets activated. You can also manually activate the key later. |
     | Deactivation date    | (Optional) Set the date when the key gets expired. After the expiration date, the key moves into the _Deactivated_ state.  |
     | Key tags             | (Optional) Add pairs of names and values to mark your key.  |
+    {: caption="Table 1. Key properties" caption-side="bottom"}
 
 7. Optionally, you can select one or multiple **Target keystores** to install the key in.
 8. View the summary of your key, then click **Create key** to confirm.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-17"
+lastupdated: "2022-01-18"
 
 keywords: Unified Key Orchestrator, key management, keystore, edit keystore, external keystore
 
@@ -55,6 +55,7 @@ To edit the connection to an Azure Key Vault through the UI, complete the follow
     | Service principal password on Azure | Only password based authentication is supported for service principals.       |
     | Tenant ID on Azure          |  A tenant is the organization that owns and manages a specific instance of Microsoft cloud services. Use Azure Active Directory tenant ID for authenticating requests to the key vault.     |
     | Subscription ID on Azure    |   A GUID that uniquely identifies your subscription to use Azure services.    |
+    {: caption="Table 1. Azure Key Vault properties" caption-side="bottom"}    
 
 5. Click **Test connection** to check the availability of the current keystore.
 6. Click **Save** to save the changes.
@@ -78,7 +79,8 @@ To edit the connection to an AWS keystore through the UI, complete the following
     | Region on AWS               | Geographical location where the AWS KMS is located in.    |
     | Access key ID on AWS        | Part of your access key for AWS.                          |
     | Secret access key on AWS    | Part of your access key for AWS. The secret access key is available for download only when you create it.     |
-
+    {: caption="Table 2. AWS Key Management Services properties" caption-side="bottom"}
+    
 5. Click **Test connection** to check the availability of the current keystore.
 6. Click **Save** to save the changes.
 

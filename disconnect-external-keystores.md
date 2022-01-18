@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-17"
+lastupdated: "2022-01-18"
 
 keywords: Unified Key Orchestrator, keystore, disconnect keystore, external keystore
 
@@ -28,7 +28,7 @@ You can disconnect from keystores that are external to your service instance on 
 
 You can reconnect to the keystores at any time. For more instructions, see [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores){: external}.
 
-To disconnect from an external keystore, make sure that all the installed keys in this keystore are in _Pre-active_ or _Destroyed_ state.
+To disconnect from an external keystore, make sure that all keys with this keystore as a target are in _Pre-active_ or _Destroyed_ state.
 {: note}
 
 
