@@ -4,7 +4,7 @@ copyright:
   years: 2022
 lastupdated: "2022-01-18"
 
-keywords: Unified Key Orchestrator, key management, keystore, edit keystore, external keystore
+keywords: Unified Key Orchestrator, key management, UKO keystore, edit keystore, external keystore, KMS keystore
 
 subcollection: hs-crypto
 
@@ -26,10 +26,10 @@ subcollection: hs-crypto
 You can use {{site.data.keyword.uko_full_notm}} to edit connection to external keystores through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
+You can edit the connection to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS).
+
 ## Editing connection to external keystores through the UI
 {: #edit-external-keystore-connection-ui}
-
-You can edit the connection to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS).
 
 You cannot change Keystore name and Connection properties at the same time.
 {: note}
@@ -40,9 +40,9 @@ You cannot change Keystore name and Connection properties at the same time.
 To edit the connection to an Azure Key Vault through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. Click **Target keystores** on the left navigation pane to view all the available keystores.
-3. Click on the Azure Key Vault that you want to edit to open the side panel.
-4. Click **Edit** to update keystore properties:
+2. Click **Target keystores** from the navigation to view all the available keystores.
+3. Click the Azure Key Vault that you want to edit to open the side panel.
+4. Click **Edit** to update keystore properties.
    
     |           Property	        |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
@@ -57,7 +57,7 @@ To edit the connection to an Azure Key Vault through the UI, complete the follow
     | Subscription ID on Azure    |   A GUID that uniquely identifies your subscription to use Azure services.    |
     {: caption="Table 1. Azure Key Vault properties" caption-side="bottom"}    
 
-5. Click **Test connection** to check the availability of the current keystore.
+5. Click **Test connection** to check the availability of the current keystore, and click **Next**.
 6. Click **Save** to save the changes.
 
 
@@ -68,9 +68,9 @@ To edit the connection to an Azure Key Vault through the UI, complete the follow
 To edit the connection to an AWS keystore through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. Click **Target keystores** on the left navigation pane to view all the available keystores.
+2. Click **Target keystores** from the navigation to view all the available keystores.
 3. Click on the AWS keystore that you want to edit to open the side panel.
-4. Click **Edit** to update keystore properties:
+4. Click **Edit** to update keystore properties.
    
     |           Property	        |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
@@ -81,7 +81,7 @@ To edit the connection to an AWS keystore through the UI, complete the following
     | Secret access key on AWS    | Part of your access key for AWS. The secret access key is available for download only when you create it.     |
     {: caption="Table 2. AWS Key Management Services properties" caption-side="bottom"}
     
-5. Click **Test connection** to check the availability of the current keystore.
+5. Click **Test connection** to check the availability of the current keystore, and click **Next**.
 6. Click **Save** to save the changes.
 
 

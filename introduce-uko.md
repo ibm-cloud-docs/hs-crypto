@@ -72,7 +72,7 @@ You can integrate all your key management use cases into one consistent approach
     
     - **Internal keystores**
         
-        An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance. {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} supports two types of internal keystores, KMS keystores and EP11 keystores.
+        An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance. 
 
         - **KMS keystores**
             
@@ -80,12 +80,7 @@ You can integrate all your key management use cases into one consistent approach
 
             You can create up to five free KMS keystores to manage your keys. If you need additional keystores for cross-region key distribution or specified access permissions, you are charged $225 per calendar month for an additional keystore. 
 
-        - **EP11 keystores**
-            
-            The backing store for EP11 keys that are provided by the GREP11 API. The EP11 keystore has the following purposes:
 
-            - To serve as an internal keystore to store internal keys.
-            - To serve as a user keystore to store user keys that are to be exposed and used by GREP11 or PKCS #11 applications.
 
     - **External keystores**  
         
