@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-18"
+lastupdated: "2022-01-19"
 
 keywords: Unified Key Orchestrator, key management, UKO keystore, edit keystore, external keystore, KMS keystore
 
@@ -69,7 +69,7 @@ To edit the connection to an AWS keystore through the UI, complete the following
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Target keystores** from the navigation to view all the available keystores.
-3. Click on the AWS keystore that you want to edit to open the side panel.
+3. Click the AWS keystore that you want to edit to open the side panel.
 4. Click **Edit** to update keystore properties.
    
     |           Property	        |                         Description                       |
