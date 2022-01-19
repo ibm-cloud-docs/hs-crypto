@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2018, 2022
+  years: 2022
 lastupdated: "2022-01-19"
 
-keywords: set up api, kms api, key protect api, key management api, using api
+keywords: set up api, uko api, Unified Key Ochestrator api, 
 
 subcollection: hs-crypto
 
@@ -20,21 +20,21 @@ subcollection: hs-crypto
 {:external: target="_blank" .external}
 
 # Managing your keys with the key management API
-{: #uko-set-up-kms-api}
+{: #set-up-uko-api}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [key management API](/apidocs/hs-crypto){: external} to store, retrieve, and generate encryption keys.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [Unified Key Ochestrator API](/apidocs/uko){: external} to store, retrieve, and generate encryption keys.
 {: shortdesc}
 
 ## Retrieving your IBM Cloud credentials
-{: #uko-retrieve-kms-credentials}
+{: #retrieve-uko-credentials}
 
 To work with the API, you need to generate your service and authentication credentials. To gather your credentials:
 
-1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-2. [Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token).
+2. [Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID).
 
 ## Forming your key management API request
-{: #uko-form-kms-api-request}
+{: #form-uko-api-request}
 
 When you make an API call to the service, structure your API request according to how you initially provisioned your instance of {{site.data.keyword.hscrypto}}.
 
@@ -75,6 +75,6 @@ Want to track your API requests in case something goes wrong? When you include t
 
 
 ## What's next
-{: #uko-set-up-kms-api-next-steps}
+{: #set-up-uko-api-next-steps}
 
-You're all set to start managing your encryption keys and data. To find out more about programmatically managing your keys, [check out the key management API reference doc](/apidocs/hs-crypto){: external}.
+You're all set to start managing your encryption keys and data. To find out more about programmatically managing your keys, [check out the Unified Key Ochestrator API reference doc](/apidocs/uko){: external}.
