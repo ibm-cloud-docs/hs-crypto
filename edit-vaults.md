@@ -4,7 +4,7 @@ copyright:
   years: 2022
 lastupdated: "2022-01-19"
 
-keywords: Unified Key Orchestrator, vaults, keys, keystore, key management
+keywords: Unified Key Orchestrator, vaults, keys, keystores, key management
 
 subcollection: hs-crypto
 
