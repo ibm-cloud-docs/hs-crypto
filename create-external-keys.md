@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-18"
+lastupdated: "2022-01-19"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key
 
@@ -33,14 +33,17 @@ To protect your privacy, do not store your personal data as metadata for your ke
 ## Creating external keys through the UI
 {: #create-external-keys-ui}
 
-To create external key through the UI, complete the following steps:
+To create an external key through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. Click **Managed keys** on the left navigation pane to view all the available keys.
-3. To create a new key, click **Create key.**
-4. Under **Vault,** assign the key to a vault for access control. You can also click **Create vault** to create a new vault.
-5. Under **Keystore type,** select **AWS Key Management Service, Azure Key Vault** or **IBM Key Protect,** depending on which type of external keystore you want to install the key in.
-6. Under **Key properties,** specify the details of the key:
+2. Click **Managed keys** from the navigation to view all the available keys.
+3. To create a key, click **Create key**.
+4. Under **Vault**, select a vault for the key for access control, and click **Next**. 
+
+  If you want to assign the key to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
+  
+5. Under **Keystore type**, select **AWS Key Management Service**, **Azure Key Vault** or **IBM Key Protect**, depending on which type of external keystore you want to install the key in. And then, click **Next**. 
+6. Under **Key properties**, specify the details of the key, and click **Next**.
 
     |       Property	     |                         Description                       |
     |----------------------|-----------------------------------------------------------|
@@ -55,7 +58,7 @@ To create external key through the UI, complete the following steps:
     {: caption="Table 1. Key properties" caption-side="bottom"}
 
 7. Optionally, you can select one or multiple **Target keystores** to install the key in.
-8. View the summary of your key, then click **Create key** to confirm.
+8. View the summary of your key, and then click **Create key** to confirm.
 
 
 

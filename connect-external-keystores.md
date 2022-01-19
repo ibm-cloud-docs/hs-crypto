@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-18"
+lastupdated: "2022-01-19"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -45,7 +45,7 @@ To connect to an Azure Key Vault through the UI, complete the following steps:
 4. Under **Vault**, select a vault for the keystore for access control, and click **Next**. 
 
   If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults){: external}
-5. Under **Keystore type,** select **Azure Key Vault (Premium)** and click **Next**.
+5. Under **Keystore type**, select **Azure Key Vault (Premium)** and click **Next**.
 6. Under **Keystore properties**, specify the details of the keystore.
    
     |           Property	        |                         Description                       |

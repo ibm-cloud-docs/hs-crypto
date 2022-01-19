@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-18"
+lastupdated: "2022-01-19"
 
 keywords: Unified Key Orchestrator, view keys, key management, kms keys
 
@@ -33,8 +33,8 @@ You can view a list of your internal keys and external keys in {{site.data.keywo
 To view a list of your keys through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. Click **Managed keys** on the left navigation pane to view all the available keys.
-3. Browse the general characteristics of your keys in the table:
+2. Click **Managed keys** from the navigation to view all the available keys.
+3. Browse the general characteristics of your keys in the table.
 
     |       Property	     |                         Description                       |
     |----------------------|-----------------------------------------------------------|
@@ -62,7 +62,7 @@ To view a list of your keys through the UI, complete the following steps:
 ## What's next
 {: ##view-key-list-next}
 
-- To find out how to create a new key, check out [Creating internal keys](/docs/hs-crypto?topic=hs-crypto-create-internal-keys) or [Creating external keys](/docs/hs-crypto?topic=hs-crypto-create-external-keys).
+- To find out how to create a key, check out [Creating internal keys](/docs/hs-crypto?topic=hs-crypto-create-internal-keys) or [Creating and storing external keys](/docs/hs-crypto?topic=hs-crypto-create-external-keys).
 
 - To find out more about managing your keys, check out [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list) or [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
 

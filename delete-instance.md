@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-08-12"
+  years: 2018, 2022
+lastupdated: "2022-01-19"
 
 keywords: delete, delete service instance, crypto unit, ibm cloud cli, clear crypto unit, uninstall
 
@@ -101,7 +101,7 @@ After you set the crypto units to imprint mode, you can choose to delete your se
 
 You can delete an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console resources page by completing the following steps:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click **Resource List** on the left navigation menu.
+1. From the {{site.data.keyword.cloud_notm}} console, click **Resource List** from the navigation.
 2. Find the {{site.data.keyword.hscrypto}} service instance that you want to delete under the **Services** section.
 3. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open the actions menu.
 4. Click **Delete**.
@@ -111,7 +111,7 @@ You can delete an instance of {{site.data.keyword.hscrypto}} from the {{site.dat
 
 You can delete an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console instance details page by completing the following steps:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click **Resource List** on the left navigation menu.
+1. From the {{site.data.keyword.cloud_notm}} console, click **Resource List** from the navigation.
 2. Find the {{site.data.keyword.hscrypto}} service instance that you want to delete under the **Services** section and click the instance name to open the instance details page.
 3. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open the service instance actions menu.
 4. Click **Delete service**.

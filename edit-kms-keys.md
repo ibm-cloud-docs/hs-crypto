@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-14"
+lastupdated: "2022-01-19"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys
 
@@ -38,10 +38,10 @@ You can edit both internal and external keys through the UI.
 To edit the details of an internal KMS key through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. Click **Managed keys** on the left navigation pane to view all the available keys.
-3. Click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key that you want to edit, and choose **Show details.**
-4. Under **Key properties,** click **Edit** to update the general properties, lifecyle properties, or active period of the key.
-5. Under **Advanced properties,** click **Edit** to update or add new key tags to the key.
+2. Click **Managed keys** from the navigation to view all the available keys.
+3. Click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key that you want to edit, and choose **Show details**.
+4. Under **Key properties**, click **Edit** to update the general properties, lifecyle properties, or active period of the key. 
+5. Under **Advanced properties**, click **Edit** to update or add new key tags to the key.
 6. Click **Save** to save the changes.
 
 
