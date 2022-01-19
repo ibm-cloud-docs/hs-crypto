@@ -23,18 +23,29 @@ subcollection: hs-crypto
 # Filtering and searching keys
 {: #search-key-list}
 
-You can filter and search your internal keys and external keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
+You can filter and search for your internal keys and external keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
 
-## Filtering and searching keys through the UI
-{: #search-key-list-ui}
+## Filtering keys through the UI
+{: #filter-key-list-ui}
 
-To search a key through the UI, complete the following steps:
+To filter keys through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
-3. 
+3. Click the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the table.
+4. Specify the filter criteria as you need, and click **Apply**.
+
+
+##  Searching for keys through the UI
+{: #search-key-list-ui}
+
+To search for a key through the UI, complete the following steps:
+
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
+2. Click **Managed keys** from the navigation to view all the available keys.
+3. To search for key name or description, type a word in the search bar.
 
 
 

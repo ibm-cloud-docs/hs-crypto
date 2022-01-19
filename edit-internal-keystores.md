@@ -36,7 +36,7 @@ To edit the details of an internal KMS keystore through the UI, complete the fol
 3. Click the internal keystore that you want to edit to open the side panel.
 4. Click **Edit** to update the **Keystore name** and **Description**. 
    
-   You can filter and search the keys that are assigned to this keystore, but you cannot edit details or change key states from the side panel. To edit the details of the keys, see [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys){: external}.
+   You can filter and search the keys that are assigned to this keystore, but you cannot edit details or change key states from the side panel. To edit the details of the keys, see [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
    {: tip}
 
 5. Click **Save** to save the changes.

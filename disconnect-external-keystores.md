@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-18"
+lastupdated: "2022-01-19"
 
 keywords: Unified Key Orchestrator, UKO keystore, disconnect keystore, external keystore, KMS keystore
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
+{:important: .important}
 {:external: target="_blank" .external}
 {:term: .term}
 
@@ -26,7 +27,7 @@ subcollection: hs-crypto
 You can disconnect from keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS). After you disconnect from an external keystore, all the installed keys are uninstalled and resources that are managed are not accessible.
 {: shortdesc}
 
-If you want to disconnect from an external keystore, delete any installed keys first. In other words, all keys with this keystore as a target are in _Pre-active_ or _Destroyed_ state. For more information about deleting keys, see [Deleting internal keys](/docs/hs-crypto?topic=hs-crypto-delete-internal-keys).
+If you want to disconnect from an external keystore, delete all installed keys first. In other words, all keys with this keystore as a target are in _Pre-active_ or _Destroyed_ state. For more information about deleting keys, see [Deleting internal keys](/docs/hs-crypto?topic=hs-crypto-delete-internal-keys).
 {: important}
 
 
@@ -43,7 +44,7 @@ To disconnect from an external keystore through the UI, complete the following s
 
 The external keystore has been disconnected with all the installed keys uninstalled and resources that are managed inaccessible.
 
-After you disconnect from an external keystore, you can reconnect to the keystores at any time. For more instructions, see [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores){: external}.
+After you disconnect from an external keystore, you can reconnect to the keystores at any time. For more instructions, see [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
 {: tip}
 
 ## What's next

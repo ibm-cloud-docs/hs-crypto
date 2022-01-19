@@ -36,8 +36,9 @@ To delete an external key through the UI, complete the following steps:
 3. If the key that you want to delete is in _active_ state, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Deactivated** to deactivate the key first.
 4. To destroy a _pre-active_ or _deactivated_ key, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Destroyed**.
 5. Click **Destroy key** to confirm.
-6. To remove the key and its metadata, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**.
+6. To remove the key and the metadata, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**.
 
+You have successfully deleted the key. 
 
 ## What's next
 {: #delete-external-keys-next}

@@ -50,6 +50,8 @@ To view a list of your keys through the UI, complete the following steps:
     | Length               | The number of bits that represents the encryption strength of the key.   |
     {: caption="Table 1. Managed keys table" caption-side="bottom"}
 
+You can search for a specific key by using the search bar, or filter keys based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the **Managed keys** table. For more information, see [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
+{: tip}
 
 
 ## Viewing a list of keys with the API

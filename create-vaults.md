@@ -40,9 +40,10 @@ To create a vault through the UI, complete the following steps:
 4. Enter a name in **Vault name**. The vault name can be of 2 to 100 characters. Optionally, you can add an extended description to your vault in the **Description** section.
 5. Click **Create vault** to confirm.
 
+You have successfully created a vault. 
 
 You can also create a vault when you [create a key](/docs/hs-crypto?topic=hs-crypto-create-internal-keys) or [add a keystore](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores).
-{: note}
+{: tip}
 
 
 ## What's next

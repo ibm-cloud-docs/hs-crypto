@@ -44,6 +44,8 @@ To edit the details of an internal KMS key through the UI, complete the followin
 5. Under **Advanced properties**, click **Edit** to update or add new key tags to the key.
 6. Click **Save** to save the changes.
 
+You can search for a specific key by using the search bar, or filter keys based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the **Managed keys** table. For more information, see [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
+{: tip}
 
 
 ### Editing external key details through the UI

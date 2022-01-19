@@ -60,7 +60,7 @@ To create an internal KMS key through the UI, complete the following steps:
 7. Optionally, you can select one or multiple **Target keystores** to install the key in. 
 8. View the summary of your key, and then click **Create key** to confirm.
 
-
+You have successfully created an internal KMS key. 
 
 
 ## Creating internal keys with the API
