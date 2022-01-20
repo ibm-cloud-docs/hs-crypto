@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-18"
+lastupdated: "2022-01-20"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -78,9 +78,8 @@ You can integrate all your key management use cases into one consistent approach
             
             The {{site.data.keyword.keymanagementservicelong_notm}} key management service component within {{site.data.keyword.hscrypto}} provides the Keep Your Own Key (KYOK) feature for {{site.data.keyword.cloud_notm}} services to ensure that you have access to only the authorized keystores. 
 
-            You can create up to five free KMS keystores to manage your keys. If you need additional keystores for cross-region key distribution or specified access permissions, you are charged $225 per calendar month for an additional keystore. 
-
-
+            You can create up to five free KMS keystores to manage your keys. If you need additional keystores for cross-region key distribution or specified access permissions, you are charged $225 per calendar month for an additional keystore.  
+            
 
     - **External keystores**  
         
@@ -89,7 +88,7 @@ You can integrate all your key management use cases into one consistent approach
         - **{{site.data.keyword.hscrypto}}** 
             
             You can connect your {{site.data.keyword.hscrypto}} instance to the keystores of another {{site.data.keyword.hscrypto}} instance, and manage KMS keys and EP11 keys of another service instance using the current service instance.
- 
+            
         - **{{site.data.keyword.keymanagementserviceshort}}** 
             
             {{site.data.keyword.keymanagementserviceshort}} is a service encryption solution that allows data to be secured and stored in {{site.data.keyword.cloud}} using the envelope encryption techniques that leverage FIPS 140-2 Level 3 certified cloud-based hardware security modules.           

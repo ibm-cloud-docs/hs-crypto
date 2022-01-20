@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-01-20"
 
-keywords: Unified Key Orchestrator, create key, key management, kms key
+keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
 subcollection: hs-crypto
 
@@ -37,13 +37,13 @@ To create an internal KMS key through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
-3. To create a key, click **Create key**.
+3. To create a key, click **Add key**.
 4. Under **Vault**, select a vault for the key for access control, and click **Next**. 
 
   If you want to assign the key to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults){: external}.
   
-5. Under **Keystore type**, select **Internal KMS**, and click **Next**. 
-6. Under **Key properties**, specify the details of the key, and click **Next**.
+5. Under **General**, select **Internal KMS**, and click **Next**. 
+6. Under **Key properties**, specify the following details of the key. Click **Next** to continue when you are done.
 
     |       Property	     |                         Description                       |
     |----------------------|-----------------------------------------------------------|
@@ -57,8 +57,14 @@ To create an internal KMS key through the UI, complete the following steps:
     | Key tags             | (Optional) Add pairs of names and values to mark your key.  |
     {: caption="Table 1. Key properties" caption-side="bottom"}
 
-7. Optionally, you can select one or multiple **Target keystores** to install the key in. 
-8. View the summary of your key, and then click **Create key** to confirm.
+7. Under **Target keystores**, you can select one or multiple target keystores to install the key in. You can also install the key later by following instructions in [Installing existing keys to keystores](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
+
+    You can use the key for encryption or decryption only after it is installed in at least one keystore.
+    {: important}
+
+    Installing a key in multiple keystores enables redundancy. You can install a key in one internal keystore and at least one external keystore as a backup.
+    {: tip}
+8. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.
 
 You have successfully created an internal KMS key. 
 

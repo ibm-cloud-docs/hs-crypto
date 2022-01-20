@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-01-20"
 
-keywords: Unified Key Orchestrator, view keys, key management, kms keys
+keywords: Unified Key Orchestrator, view keys, key management, kms keys， UKO
 
 subcollection: hs-crypto
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-01-20"
 
-keywords: Unified Key Orchestrator, edit keys, key management, kms keys
+keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
 subcollection: hs-crypto
 
@@ -41,8 +41,10 @@ To edit the details of an internal KMS key through the UI, complete the followin
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. Click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key that you want to edit, and choose **Show details**.
 4. Under **Key properties**, click **Edit** to update the general properties, lifecyle properties, or active period of the key. 
-5. Under **Advanced properties**, click **Edit** to update or add new key tags to the key.
-6. Click **Save** to save the changes.
+    You can edit one section at a time. To make changes to another section, save your changes first.
+    {: note}
+5. Under **Advanced properties**, click **Edit** to update or add new key tags to the key. Key tags are used as identifications of a key.
+6. When you finish making changes, click **Save** to save the changes.
 
 You can search for a specific key by using the search bar, or filter keys based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the **Managed keys** table. For more information, see [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
 {: tip}
