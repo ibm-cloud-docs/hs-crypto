@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-20"
+lastupdated: "2022-01-21"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -39,10 +39,10 @@ To create an internal KMS key through the UI, complete the following steps:
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. To create a key, click **Add key**.
 4. Under **Vault**, select a vault for the key for access control, and click **Next**. 
-
-  If you want to assign the key to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults){: external}.
-  
-5. Under **General**, select **Internal KMS**, and click **Next**. 
+    If you want to assign the key to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults){: external}. 
+5. Under **Keystore type**, select **Internal KMS**, and click **Next**.
+    After a keystore type is selected, you can install the key to keystores of this type only.
+    {: note} 
 6. Under **Key properties**, specify the following details of the key. Click **Next** to continue when you are done.
 
     |       Property	     |                         Description                       |
@@ -54,7 +54,7 @@ To create an internal KMS key through the UI, complete the following steps:
     | State                | _Pre-active_ keys are not to be installed in target keystores until they are activated. _Active_ keys are to be automatically installed in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external} |
     | Activation date      | (Optional) Set the date when the _Pre-active_ key gets activated. You can also manually activate the key later. |
     | Deactivation date    | (Optional) Set the date when the key gets expired. After the expiration date, the key moves into the _Deactivated_ state. |
-    | Key tags             | (Optional) Add pairs of names and values to mark your key.  |
+    | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
     {: caption="Table 1. Key properties" caption-side="bottom"}
 
 7. Under **Target keystores**, you can select one or multiple target keystores to install the key in. You can also install the key later by following instructions in [Installing existing keys to keystores](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).

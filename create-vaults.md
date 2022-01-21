@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-20"
+lastupdated: "2022-01-21"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -36,8 +36,6 @@ To create a vault through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Vaults** from the navigation to view all the available vaults.
-
-
     Optionally, you can create a vault when you [create a key](/docs/hs-crypto?topic=hs-crypto-create-internal-keys) or [add a keystore](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores).
 3. To create a vault, click **Create vault**.
 4. Enter a name in **Vault name**. The vault name can be of 2 to 100 characters. Optionally, you can add an extended description to your vault in the **Description** section.
