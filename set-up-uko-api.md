@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-01-21"
 
-keywords: set up api, uko api, Unified Key Ochestrator api, 
+keywords: set up api, uko api, Unified Key Orchestrator api, 
 
 subcollection: hs-crypto
 
@@ -22,7 +22,7 @@ subcollection: hs-crypto
 # Managing your keys with the key management API
 {: #set-up-uko-api}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [Unified Key Ochestrator API](/apidocs/uko){: external} to store, retrieve, and generate encryption keys.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [Unified Key Orchestrator API](/apidocs/uko){: external} to store, retrieve, and generate encryption keys.
 {: shortdesc}
 
 ## Retrieving your IBM Cloud credentials
@@ -77,4 +77,4 @@ Want to track your API requests in case something goes wrong? When you include t
 ## What's next
 {: #set-up-uko-api-next-steps}
 
-You're all set to start managing your encryption keys and data. To find out more about programmatically managing your keys, [check out the Unified Key Ochestrator API reference doc](/apidocs/uko){: external}.
+You're all set to start managing your encryption keys and data. To find out more about programmatically managing your keys, [check out the Unified Key Orchestrator API reference doc](/apidocs/uko){: external}.

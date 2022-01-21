@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-18"
+lastupdated: "2022-01-21"
 
-keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
+keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 
 subcollection: hs-crypto
 
@@ -195,10 +195,10 @@ Fields are not guaranteed to appear unless the request is successful.
 {: note}
 
 The list of sensitive field values that are hidden using the `[redacted]` placeholder:
-* servicePrincipalPassword
-* secretAccessKey
-* accessKeyId
-* apiKey
+* service_principal_password
+* secret_access_key
+* access_key_id
+* api_key
 
 ### Common fields
 {: #uko-at-common fields}
@@ -215,15 +215,6 @@ For more information about the event fields in the Cloud Auditing Data Federatio
 
 While `initiator.host.address` is a field that is part of the Cloud Auditing Data Federation model, the host address field is not shown for requests made through private networks.
 {: important}
-
-### Key action events
-{: #uko-key-action-events}
-
-Because of the sensitivity of the information about an encryption key, the event that is generated does not include detailed information about the key, such as the payload and encrypted nonce.
-
-The `responseData.keyState` field is an integer and corresponds to the Pre-activation = 0, Active = 1, Deactivated = 3, and Destroyed = 5 values.
-For more information about key states, see [Key states and transitions](/docs/hs-crypto?topic=hs-crypto-uko-key-states#uko-key-transitions).
-{: note}
 
 ### Registration events
 {: #uko-registration-events}
