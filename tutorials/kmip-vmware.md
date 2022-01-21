@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years:  2021, 
- 2022
-lastupdated: "2022-01-07"
+  years:  2021, 2022
+lastupdated: "2022-01-21"
 
 keywords: VMWare encryption, KMIP, Key management and distribution, Data appliance encryption, Netapp, vSphere, vSAN encryption
 

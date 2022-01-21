@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2020, 2022
-lastupdated: "2022-01-17"
+  years: 2021, 2022
+lastupdated: "2022-01-21"
 
 keywords: security for Hyper Protect Crypto Services, compliance for Hyper Protect Crypto Services, security and compliance for Hyper Protect Crypto Services, rules for Hyper Protect Crypto Services,
 

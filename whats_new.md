@@ -42,9 +42,9 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 Updated: {{site.data.keyword.hscrypto}} key management functions {: #update-kms-api-v282}
 :   The {{site.data.keyword.hscrypto}} key management service API is updated to version `2.82`. The following functions are added:
-    1. Purge a deleted key
+    1. **Purge a deleted key**: 
         By default, a deleted key becomes purged automatically after 90 days of the deletion. Now you can manually purge a key to permanently remove the key from your instance before 90 days. After a key is deleted, there is a wait period of up to 4 hours before you can perform the action. Make sure that you are assigned the _KMS Key Purge_ role before you purge a key.For more information, see [Purging keys manually](/docs/hs-crypto?topic=hs-crypto-purge-keys).
-    2. Update the key ring of a key
+    2. **Update the key ring of a key**: 
         After you create a key, you can move the key to a different key ring. For more information, see [Transferring a key to a different key ring](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#transfer-key-key-ring).
 
 
