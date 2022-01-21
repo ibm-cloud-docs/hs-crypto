@@ -75,7 +75,7 @@
       {
         "date": "January 2022",
         "title": "Hyper Protect Crypto Services key management service API is updated to version `2.82`. ",
-        "description": "You can now purge a deleted key and transfer a key to another keyring manually using either UI or API."
+        "description": "You can now purge a deleted key manually and transfer a key to another keyring using either UI or API."
       }
     ]
   }
