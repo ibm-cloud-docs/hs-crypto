@@ -71,6 +71,11 @@
         "date": "July 2021",
         "title": "Hyper Protect Crypto Services expands into the Tokyo region",
         "description": "You can now create Hyper Protect Crypto Services instances in the Tokyo (jp-tok) region where the infrastructure is based on IBM Cloud Virtual Private Cloud (VPC)."
+      },
+      {
+        "date": "January 2022",
+        "title": "Hyper Protect Crypto Services key management service API is updated to version `2.82`. ",
+        "description": "You can now purge a deleted key and transfer a key to another keyring manually using either UI or API."
       }
     ]
   }
