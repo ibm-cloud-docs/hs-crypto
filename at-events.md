@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-18"
+lastupdated: "2022-01-21"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -45,6 +45,7 @@ The following table lists the key actions that generate an event:
 | --------------------------------- | ------------------------------------------------------------ |
 | `hs-crypto.secrets.create`              | Create a key.                                                 |
 | `hs-crypto.secrets.delete`              | Delete a key.                                                 |
+| `hs-crypto.secrets.patch`               | Patch a key.                                                  |
 | `hs-crypto.secrets.createalias`         | Create a key alias.                                           |
 | `hs-crypto.secrets.deletealias`         | Delete a key alias.                                           |
 | `hs-crypto.secrets.expire`              | Expire a key.                                                 |
@@ -59,6 +60,7 @@ The following table lists the key actions that generate an event:
 | `hs-crypto.secrets.setkeyfordeletion`   | Authorize deletion for a key with Dual Authorization policy.  |
 | `hs-crypto.secrets.unsetkeyfordeletion` | Cancel deletion for a key with Dual Authorization policy.     |
 | `hs-crypto.secrets.restore`             | Restore a key.                                                |
+| `hs-crypto.secrets.purge`               | Purge a deleted key.                                          |
 | `hs-crypto.secrets.listkeyversions`     | List all the versions of a key.                               |
 | `hs-crypto.secrets.enable`              | Enable operations for a key.                                  |
 | `hs-crypto.secrets.disable`             | Disable operations for a key.                                 |
@@ -302,6 +304,14 @@ The following fields include extra information:
 - The `responseData.keyVersionCreationDate` field includes the date that the current version of the key was created.
 
 
+
+#### Patch key
+{: #patch-key-success}
+
+The following fields include extra information:
+
+- The `requestData.initialValue.keyRingId` field includes the ID of the key ring that the key previously belonged to.
+- The `requestData.newValue.keyRingId` field includes the ID of the key ring that the key  belongs to.
 
 
 

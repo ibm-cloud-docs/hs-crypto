@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-01-21"
 
 keywords: restore key, restore a deleted key, recover a deleted key, re-import a key
 
@@ -55,7 +55,7 @@ To see whether a destroyed key can be restored:
 1. Navigate to your {{site.data.keyword.hscrypto}} instance in the {{site.data.keyword.cloud_notm}} console.
 2. In the navigation, make sure you are on the **KMS keys** page.
 3. Find the key that you want to restore and make sure that the key is in a **Destroyed** state.
-4. Check whether the **Last updated** date is within 30 days. If the key was deleted within the last 30 days, it can be restored. If you attempt to restore a key that is no longer eligible to be restored, you will receive an error.
+4. Check whether an **Undo** icon ![Undo icon](../icons/undo.svg "Undo") is displayed next to the **Destroyed** state. The icon indicates that the key is eligible to be restored. You can restore a key within 30 days after the deletion. The restoration expiration date is displayed when you hover over the icon.
 
 ## Restoring a deleted key with the console
 {: #restore-keys-ui}

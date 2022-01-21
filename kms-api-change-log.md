@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-14"
+lastupdated: "2022-01-21"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,7 +27,15 @@ In this change log you can learn about the latest changes, improvements, and upd
 ## API versioning
 {: #kms-api-versioning}
 
-The latest released version is `2.76`.
+The latest released version is `2.82`.
+
+## June 2021
+{: #kms-api-june-2021}
+
+The following methods are added:
+
+- Update the key ring of a key. After you create a key, you can transfer the key to a different key ring by sending a `PATCH /api/v2/keys/{id}` request and specifying the new key ring ID.
+- Purge key to permanently delete a key. After you purge a key, you are no longer able to access the key and its associated resources. This action is performed in a `DELETE /api/v2/keys/{id}/purge` request.
 
 ## April 2021
 {: #kms-api-april-2021}
