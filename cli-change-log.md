@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2021，2022
-lastupdated: "2022-01-07"
+  years:  2021, 2022
+lastupdated: "2022-01-21"
 
 keywords: change log for tke, updates to tke cli plugin, updates to cert manager cli plugin
 
