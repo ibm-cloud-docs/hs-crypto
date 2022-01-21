@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-08-12"
+  years: 2018, 2022
+lastupdated: "2022-01-21"
 
 keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 
@@ -30,30 +30,9 @@ subcollection: hs-crypto
 If you are a manager for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance, you can use {{site.data.keyword.hscrypto}} to delete root keys or standard keys and the contents.
 
 
-When you delete a key, you shred the contents and associated data. Any data that
-is encrypted by the key becomes inaccessible. Only imported root keys can be restored after deletion.
-[Destroying resources](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#data-deletion)
-is not suggested for production environments, but might be useful for
-temporary environments such as testing or QA.
-{: important}
-
-Keep in mind the following considerations before you delete a key:
-
-- {{site.data.keyword.hscrypto}} blocks the deletion of any key
-that's actively protecting a cloud resource. Before you delete a key,
-[review the resources](/docs/hs-crypto?topic=hs-crypto-view-protected-resources)
-that are associated with the key.
-- You can
-[force deletion on a key](#delete-key-force)
-that's protecting a cloud resource. However, the action can't succeed if the
-key's associated resource is non-erasable due to a retention policy. You can
-verify whether a key is associated with a non-erasable resource by
-[checking the registration details](/docs/hs-crypto?topic=hs-crypto-view-protected-resources#view-protected-resources-api)
-for the key. Then, you must contact an account owner to remove the retention
-policy on each resource that is associated with the key before you can delete
-the key.
 
 
+Before you delete keys, make sure you understand [the concept of deleting and purging keys](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys) and review the [considerations](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys#delete-purge-keys-considerations).
 
 
 ## Deleting keys with the console

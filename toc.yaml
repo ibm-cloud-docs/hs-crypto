@@ -117,81 +117,62 @@ toc:
           - initialize-hsm-cli.md
           - signing-service.md
       - topicgroup:
-          label: Managing instance policies
-          topics:
-          - settings-network-policy.md
-          - settings-dual-auth.md
-          - settings-key-create-import-access.md
-      - retrieve-access-token.md
-      - retrieve-instance-id.md
-      - topicgroup:
-          label: Setting up API calls
-          topics:
-          - set-up-kms-api.md
-          - set-up-pkcs-api.md
-          - set-up-grep11-api.md
-          - enable-mtls.md
-      - set-up-cli.md
-      - terraform.md
-      - topicgroup:
-          label: Managing master keys
-          topics:
-          - rotate-master-key-smart-cards.md
-          - rotate-master-key-recovery-crypto-unit.md
-          - rotate-master-key-key-files.md
-          - recover-master-key.md
-      - topicgroup:
-          label: Managing key management service keys
+          label: Managing keys
           topics:
           - topicgroup:
-              label: Creating keys
+            label: Managing instance policies
+            topics:
+            - settings-network-policy.md
+            - settings-dual-auth.md
+            - settings-key-create-import-access.md
+          - retrieve-access-token.md
+          - retrieve-instance-id.md
+          - topicgroup:
+              label: Setting up API calls
+              topics:
+              - set-up-kms-api.md
+              - set-up-pkcs-api.md
+              - set-up-grep11-api.md
+              - enable-mtls.md
+          - set-up-cli.md
+          - terraform.md
+          - topicgroup:
+              label: Managing master keys
+              topics:
+              - rotate-master-key-smart-cards.md
+              - rotate-master-key-recovery-crypto-unit.md
+              - rotate-master-key-key-files.md
+              - recover-master-key.md
+          - topicgroup:
+              label: Managing key management service keys
               topics:
               - create-root-keys.md
               - create-standard-keys.md
-          - manage-key-rings.md
-          - manage-key-alias.md
-          - topicgroup:
-              label: Importing keys
-              topics:
+              - manage-key-rings.md
+              - manage-key-alias.md
               - import-root-keys.md
               - import-standard-keys.md
               - create-import-tokens.md
-          - topicgroup:
-              label: Viewing keys
-              topics:
               - view-keys.md
               - view-key-details.md
               - retrieve-key.md
-          - topicgroup:
-              label: Protecting keys
-              topics:
               - wrap-keys.md
               - unwrap-keys.md
               - rewrap-keys.md
-          - topicgroup:
-              label: Rotating keys
-              topics:
               - set-rotation-policy.md
               - rotate-keys.md
               - view-key-versions.md
-          - disable-keys.md
-          - topicgroup:
-              label: Deleting keys
-              topics: 
+              - disable-keys.md 
+              - delete-purge-keys.md
               - delete-keys.md
               - delete-dual-auth-keys.md
               - set-dual-auth-policy.md
-          - restore-keys.md
-      - topicgroup:
-          label: Managing protected resources associated with root keys
-          topics:
-          - view-protected-resources.md
-          - sync-resources.md
-      - topicgroup:
-          label: "Managing Enterprise PKCS #11 keystores and keys"
-          topics:
-          - manage-pkcs11-keystores.md
-          - manage-pkcs11-keys.md
+              - purge-keys.md
+              - restore-keys.md
+              - view-protected-resources.md
+              - sync-resources.md
+              - manage-pkcs11-keystores.md
+              - manage-pkcs11-keys.md
       - enable-mechanisms.md
       - add-remove-crypto-units.md
       - enable-failover.md
@@ -222,12 +203,12 @@ toc:
           label: API reference
           topics:
           - topicgroup:
-              label: Key management API
+              label: Key management service API
               topics:
               - kms-api-change-log.md
               links:
               - link:
-                  label: Key management API reference
+                  label: Key management service API reference
                   href: https://{DomainName}/apidocs/hs-crypto
           - pkcs11-api-ref.md
           - grep11-api-ref.md
@@ -270,15 +251,12 @@ toc:
           - FAQs-ha-dr.md
           - FAQs-maintenance.md
       - topicgroup:
-          label: Troubleshooting key management API or CLI
+          label: Troubleshooting key management service
           topics:
           - troubleshooting-authenticate-api.md
           - troubleshooting-list-keys-api.md
           - troubleshooting-list-specific-keys.md
           - troubleshooting-error-CLI-API.md
-      - topicgroup:
-          label: Troubleshooting IBM Cloud console
-          topics:
           - troubleshooting-create-keys.md
           - troubleshooting-delete-keys.md
           - troubleshooting-rotate-root-keys.md
@@ -304,3 +282,6 @@ toc:
           - troubleshooting-master-key-rotation-recovery.md
       - support.md
       - sitemap.md
+
+
+

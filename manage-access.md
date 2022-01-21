@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-08-13"
+  years: 2018, 2022
+lastupdated: "2022-01-21"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -72,8 +72,9 @@ As a service administrator, use the service access roles to grant permissions of
 - As a **Reader**, you can browse a high-level view of keys and use keys to perform wrap and unwrap actions. Readers cannot create, modify, or delete keys.
 - As a **ReaderPlus**, you have the same permissions as a Reader, with the additional ability to retrieve a standard key's material.
 - As a **Writer**, you can create, modify, rotate, and use keys. Writers cannot delete or disable keys.
-- As a **Manager**, you can perform all actions that a Reader, ReaderPlus and Writer can perform, including the ability to delete keys and set policies for keys.
+- As a **Manager**, you can perform all actions that a Reader, ReaderPlus and Writer can perform, including the ability to delete keys and set policies for keys. Managers cannot purge keys.
 - As a **VMware KMIP Manager**, you can configure KMIP for VMware with {{site.data.keyword.hscrypto}} to enable encryption with your own root keys.
+- As a **KMS Key Purge** role, you can purge a deleted key to permanently remove a key from your instance.
 - As a **Certificate Manager** role, you can manage administrator signature keys and client certificates for the second layer of authentication in GREP11 or PKCS #11 API connections.
 
 The following table shows how service access roles map to {{site.data.keyword.hscrypto}} permissions. IAM roles are the default roles provided. Custom roles can be defined by the user.
@@ -108,12 +109,14 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Wrap a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | Unwrap a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | Rewrap a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
+| Patch a key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | Rotate a key. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | Disable a key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | Enable a key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | Schedule deletion for a key. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | Cancel deletion for a key. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | Delete a key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
+| Purge a key.   |   |   |   |   |  ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 | Restore a key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | Set key policies. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | List key policies. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |

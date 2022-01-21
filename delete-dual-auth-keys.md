@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-08-12"
+  years: 2020, 2022
+lastupdated: "2022-01-21"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -29,20 +29,9 @@ You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to safely
 {: shortdesc}
 
 
-When you delete an encryption key, you shred the contents and associated data. Any data that is encrypted by the key becomes inaccessible. Only imported root keys can be restored after deletion.
-[Destroying resources](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#data-deletion) is not suggested for production environments, but might be useful for temporary environments such as testing or QA.
-{: important}
-
-Keep in mind the following considerations before you delete a key:
-
-- {{site.data.keyword.hscrypto}} blocks the deletion of any key
-that's actively protecting a cloud resource. Before you delete a key,
-[review the resources](/docs/hs-crypto?topic=hs-crypto-view-protected-resources)
-that are associated with the key.
-- You can [force deletion on a key](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-key-force)
-that's protecting a cloud resource. However, the action won't succeed if the key's associated resource is non-erasable due to a retention policy. You can verify whether a key is associated with a non-erasable resource by [checking the registration details](/docs/hs-crypto?topic=hs-crypto-view-protected-resources#view-protected-resources-api) for the key.
 
 
+Before you delete keys, make sure you understand [the concept of deleting and purging keys](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys) and review the [considerations](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys#delete-purge-keys-considerations).
 
 
 ## Considerations for deleting a key using dual authorization

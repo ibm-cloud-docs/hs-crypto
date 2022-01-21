@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-12-03"
+  years: 2022
+lastupdated: "2022-01-20"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -72,20 +72,14 @@ You can integrate all your key management use cases into one consistent approach
     
     - **Internal keystores**
         
-        An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance. {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} supports two types of internal keystores, KMS keystores and EP11 keystores.
+        An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance. 
 
         - **KMS keystores**
             
             The {{site.data.keyword.keymanagementservicelong_notm}} key management service component within {{site.data.keyword.hscrypto}} provides the Keep Your Own Key (KYOK) feature for {{site.data.keyword.cloud_notm}} services to ensure that you have access to only the authorized keystores. 
 
-            You can create up to five free KMS keystores to manage your keys. If you need additional keystores for cross-region key distribution or specified access permissions, you are charged $60 per calendar month for an additional keystore. 
-
-        - **EP11 keystores**
+            You can create up to five free KMS keystores to manage your keys. If you need additional keystores for cross-region key distribution or specified access permissions, you are charged $225 per calendar month for an additional keystore.  
             
-            The backing store for EP11 keys that are provided by the GREP11 API. The EP11 keystore has the following purposes:
-
-            - To serve as an internal keystore to store internal keys.
-            - To serve as a user keystore to store user keys that are to be exposed and used by GREP11 or PKCS #11 applications.
 
     - **External keystores**  
         
@@ -94,7 +88,7 @@ You can integrate all your key management use cases into one consistent approach
         - **{{site.data.keyword.hscrypto}}** 
             
             You can connect your {{site.data.keyword.hscrypto}} instance to the keystores of another {{site.data.keyword.hscrypto}} instance, and manage KMS keys and EP11 keys of another service instance using the current service instance.
- 
+            
         - **{{site.data.keyword.keymanagementserviceshort}}** 
             
             {{site.data.keyword.keymanagementserviceshort}} is a service encryption solution that allows data to be secured and stored in {{site.data.keyword.cloud}} using the envelope encryption techniques that leverage FIPS 140-2 Level 3 certified cloud-based hardware security modules.           
