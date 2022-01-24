@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-21"
+lastupdated: "2022-01-24"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -82,7 +82,7 @@ You have successfully created an internal KMS key.
 
 - To find out how to create a key for external keystores, check out [Creating and storing external keys](/docs/hs-crypto?topic=hs-crypto-create-external-keys).
   
-- To find out instructions on editing your key, check out [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
+- To find out instructions on editing a key, check out [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
   
 - To find out more about managing your key list, check out [Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list) or [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
   

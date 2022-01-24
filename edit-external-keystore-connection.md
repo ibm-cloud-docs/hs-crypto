@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-01-24"
 
 keywords: Unified Key Orchestrator, key management, UKO keystore, edit keystore, external keystore, KMS keystore
 
@@ -106,7 +106,8 @@ To edit the connection to an AWS keystore through the UI, complete the following
 ## What's next
 {: #edit-external-keystore-connection-next}
 
+- To find out how to connect to an external keystore, check out [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
 
-  
+- To find out how to disconnect from an external keystore, check out [Disconnecting from external keystores](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores).
 
-
+- To find out how to install an existing key to a keystore, check out [Installing existing keys to keystores](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).

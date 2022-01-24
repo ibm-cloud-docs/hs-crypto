@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-20"
+lastupdated: "2022-01-24"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -67,7 +67,8 @@ The internal key has been deleted and uninstalled from all target keystores. All
 ## What's next
 {: #delete-internal-keys-next}
 
-
+- To find out instructions on creating a key, check out [Creating internal keys](/docs/hs-crypto?topic=hs-crypto-create-internal-keys) or [Creating and storing external keys](/docs/hs-crypto?topic=hs-crypto-create-external-keys).
   
+- To find out how to delete an internal keystore, check out [Deleting internal keystores](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores).
 
-
+- To find out how to delete a vault, check out [Deleting vaults](/docs/hs-crypto?topic=hs-crypto-delete-vaults).

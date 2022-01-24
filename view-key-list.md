@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-20"
+lastupdated: "2022-01-24"
 
 keywords: Unified Key Orchestrator, view keys, key management, kms keys， UKO
 
@@ -68,4 +68,4 @@ You can search for a specific key by using the search bar, or filter keys based 
 
 - To find out more about managing your keys, check out [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list) or [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
 
-
+- To find out instructions on deleting a key, check out [Deleting internal keys](/docs/hs-crypto?topic=hs-crypto-delete-internal-keys) or [Deleting external keys](/docs/hs-crypto?topic=hs-crypto-delete-external-keys).

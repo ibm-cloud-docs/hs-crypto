@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-20"
+lastupdated: "2022-01-24"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -44,7 +44,9 @@ To edit vault details through the UI, complete the following steps:
 ## What's next
 {: #edit-vaults-next}
 
+- To find out how to create a vault, check out [Creating vaults](/docs/hs-crypto?topic=hs-crypto-creat-vaults).
 
+- To find out how to delete a vault, check out [Deleting vaults](/docs/hs-crypto?topic=hs-crypto-delete-vaults).
   
-
+- To find out how to grant access to vaults, see [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults).
 

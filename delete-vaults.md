@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-20"
+lastupdated: "2022-01-24"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -46,7 +46,9 @@ The vault has been deleted and removed from the vault list.
 ## What's next
 {: #delete-vaults-next}
 
-
+- To find out how to create a vault, check out [Creating vaults](/docs/hs-crypto?topic=hs-crypto-creat-vaults).
   
-
+- To find out instructions on editing a vault, check out [Editing vault details](/docs/hs-crypto?topic=hs-crypto-edit-vaults).
+  
+- To find out how to grant access to vaults, see [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults).
 

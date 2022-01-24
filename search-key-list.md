@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-01-24"
 
 keywords: Unified Key Orchestrator, search keys, key management, kms keys
 
@@ -60,7 +60,10 @@ To search for a key through the UI, complete the following steps:
 ## What's next
 {: ##search-key-list-next}
 
-
+- To find out more about managing your key list, check out [Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list).
   
+- To find out instructions on editing a key, check out [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
 
+- To find out how to install an existing key to a keystore, check out [Installing existing keys to keystores](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
 
+- To find out instructions on deleting a key, check out [Deleting internal keys](/docs/hs-crypto?topic=hs-crypto-delete-internal-keys) or [Deleting external keys](/docs/hs-crypto?topic=hs-crypto-delete-external-keys).

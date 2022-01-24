@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-01-24"
 
 keywords: Unified Key Orchestrator, UKO keystore, disconnect keystore, external keystore, KMS keystore
 
@@ -50,7 +50,8 @@ After you disconnect from an external keystore, you can reconnect to the keystor
 ## What's next
 {: #disconnect-external-keystores-next}
 
-
+- To find out how to update the connection to an external keystore, check out [Editing connection to external keystores](/docs/hs-crypto?topic=hs-crypto-edit-external-keystore-connection).
   
+- To find out instructions on adding a keystore, check out [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
 
-
+- To find out how to delete a vault, check out [Deleting vaults](/docs/hs-crypto?topic=hs-crypto-delete-vaults).

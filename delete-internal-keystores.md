@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-01-24"
 
 keywords: Unified Key Orchestrator, UKO keystore, delete keystore, internal keystore, KMS keystore
 
@@ -46,7 +46,8 @@ The internal keystore has been deleted with all the installed keys uninstalled a
 ## What's next
 {: #delete-internal-keystores-next}
 
-
+- To find out instructions on adding a keystore, check out [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
   
+- To find out instructions on editing an internal keystore, check out [Editing internal keystores](/docs/hs-crypto?topic=hs-crypto-edit-internal-keystores).
 
-
+- To find out how to delete a vault, check out [Deleting vaults](/docs/hs-crypto?topic=hs-crypto-delete-vaults).

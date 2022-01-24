@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-21"
+lastupdated: "2022-01-24"
 
 keywords: site map, doc structure, information architecture
 
@@ -289,6 +289,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [21 January 2022](/docs/hs-crypto?topic=hs-crypto-what-new#jan-2022)
 
 * [30 July 2021](/docs/hs-crypto?topic=hs-crypto-what-new#july-2021)
 
@@ -658,6 +660,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Creating key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#create-key-ring)
 
+* [Transferring a key to a different key ring](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#transfer-key-key-ring)
+
 * [Granting access to a key ring](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#grant-access-key-ring)
 
 * [Listing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#list-key-ring)
@@ -764,6 +768,12 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Disabling and enabling root keys with the API](/docs/hs-crypto?topic=hs-crypto-disable-keys#disable-enable-api)
 
+[About deleting and purging keys](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys#delete-purge-keys)
+
+* [Considerations before you delete and purge a key](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys#delete-purge-keys-considerations)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys#delete-purge-keys-next)
+
 [Deleting keys by using a single authorization](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-keys)
 
 * [Deleting keys with the console](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-keys-gui)
@@ -785,6 +795,14 @@ Find what you are looking for in the compilation of topics that are available in
 [Setting dual authorization policies for keys](/docs/hs-crypto?topic=hs-crypto-set-dual-auth-key-policy#set-dual-auth-key-policy)
 
 * [Managing dual authorization policies with the key management API](/docs/hs-crypto?topic=hs-crypto-set-dual-auth-key-policy#manage-dual-auth-key-policies-api)
+
+[Purging keys manually](/docs/hs-crypto?topic=hs-crypto-purge-keys#purge-keys)
+
+* [Purging keys in the console](/docs/hs-crypto?topic=hs-crypto-purge-keys#purge-keys-gui)
+
+* [Purging keys with the API](/docs/hs-crypto?topic=hs-crypto-purge-keys#purge-keys-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-purge-keys#purge-keys-next)
 
 [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys#restore-keys)
 
@@ -1007,6 +1025,8 @@ Find what you are looking for in the compilation of topics that are available in
 [{{site.data.keyword.hscrypto}} key management service API change log](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-change-log)
 
 * [API versioning](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-versioning)
+
+* [June 2021](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-june-2021)
 
 * [April 2021](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-april-2021)
 
