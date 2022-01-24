@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-12-09"
+  years: 2018, 2022
+lastupdated: "2022-01-24"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -52,8 +52,8 @@ This tutorial won't incur any charges to your {{site.data.keyword.cloud_notm}} a
 
 The following flow chart gives you an overview on how to create and import encryption keys. You can click each step on the chart to view details of the step. 
 
-<figure>
-    <img usemap="#home_map2" border="0" class="image" src="../images/create-import-keys.svg" width="750" alt="Click each step to get more details on the flow" />
+<figure style="overflow-x: scroll">
+    <img usemap="#home_map2" border="0" class="image" src="../images/create-import-keys.svg" style="min-width: 750px; max-width:750px" alt="Click each step to get more details on the flow" />
     <figcaption>Task flow of creating and importing an encryption key</figcaption>
 </figure>
 
