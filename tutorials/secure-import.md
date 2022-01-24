@@ -52,8 +52,8 @@ This tutorial won't incur any charges to your {{site.data.keyword.cloud_notm}} a
 
 The following flow chart gives you an overview on how to create and import encryption keys. You can click each step on the chart to view details of the step. 
 
-<figure style="overflow-x: scroll">
-    <img usemap="#home_map2" border="0" class="image" src="../images/create-import-keys.svg" style="min-width: 750px; max-width:750px" alt="Click each step to get more details on the flow" />
+<figure>
+    <img usemap="#home_map2" border="0" class="image" src="../images/create-import-keys.svg" width="750" alt="Click each step to get more details on the flow" />
     <figcaption>Task flow of creating and importing an encryption key</figcaption>
 </figure>
 
