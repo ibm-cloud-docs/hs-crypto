@@ -27,7 +27,7 @@ subcollection: hs-crypto
 You can delete your vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
-If you want to delete a vault, you need to [delete all managed keys](/docs/hs-crypto?topic=hs-crypto-delete-internal-keys), and [delete or disconnect from all target keystores that are managed](/docs/hs-crypto?topic=hs-crypto-delete-uko-keystores) in the vault first. The Delete action is enabled only for empty vaults.
+If you want to delete a vault, you need to [delete all managed keys](/docs/hs-crypto?topic=hs-crypto-delete-internal-keys), and [delete or disconnect from all target keystores that are managed](/docs/hs-crypto?topic=hs-crypto-delete-uko-keystores) in the vault first. The Delete function is available for empty vaults only.
 {: note}
 
 ## Deleting vaults through the UI
