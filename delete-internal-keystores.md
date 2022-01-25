@@ -21,7 +21,7 @@ subcollection: hs-crypto
 {:term: .term}
 
 # Deleting internal keystores
-{: #delete-uko-keystores}
+{: #delete-internal-keystores}
 
 You can delete internal keystores in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API. After you delete an internal keystore, all the installed keys are uninstalled and associated resources are detached.
 {: shortdesc}
