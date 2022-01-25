@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-24"
+lastupdated: "2022-01-25"
 
 keywords: Unified Key Orchestrator, UKO keystore, delete keystore, internal keystore, KMS keystore
 
@@ -27,11 +27,13 @@ You can delete internal keystores in {{site.data.keyword.uko_full_notm}} through
 {: shortdesc}
 
 If you want to delete an internal keystore, delete all installed keys first. In other words, all keys with this keystore as a target are in _Pre-active_ or _Destroyed_ state. For more information about deleting keys, see [Deleting internal keys](/docs/hs-crypto?topic=hs-crypto-delete-internal-keys).
-{: important}
-
+{: note}
 
 ## Deleting internal keystores through the UI
 {: #delete-internal-keystores-ui}
+
+When you delete an internal keystore, all keys are to be uninstalled from the keystore and inaccessible to the {{site.data.keyword.cloud_notm}} associated resources. The deletion is permanent and cannot be undone.
+{: important}
 
 To delete an internal keystore through the UI, complete the following steps:
 

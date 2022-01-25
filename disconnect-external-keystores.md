@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-24"
+lastupdated: "2022-01-25"
 
 keywords: Unified Key Orchestrator, UKO keystore, disconnect keystore, external keystore, KMS keystore
 
@@ -28,11 +28,14 @@ You can disconnect from keystores that are external to your service instance on 
 {: shortdesc}
 
 If you want to disconnect from an external keystore, delete all installed keys first. In other words, all keys with this keystore as a target are in _Pre-active_ or _Destroyed_ state. For more information about deleting keys, see [Deleting internal keys](/docs/hs-crypto?topic=hs-crypto-delete-internal-keys).
-{: important}
+{: note}
 
 
 ## Disconnecting from external keystores through the UI
 {: #disconnect-external-keystores-ui}
+
+When you disconnect from an external keystore, all keys are to be uninstalled from the keystore and inaccessible to the {{site.data.keyword.cloud_notm}} associated resources. This action is permanent and cannot be undone.
+{: important}
 
 To disconnect from an external keystore through the UI, complete the following steps:
 

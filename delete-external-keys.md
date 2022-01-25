@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-24"
+lastupdated: "2022-01-25"
 
 keywords: Unified Key Orchestrator, delete key, key management, external key, UKO
 
@@ -26,7 +26,7 @@ subcollection: hs-crypto
 You can delete external keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
-By deleting an external key, the key is uninstalled from all target keystores and all key materials and its metadata are destroyed permenantly.
+When you delete an external key, the key is to be uninstalled from all target keystores and all key materials and its metadata are destroyed permenantly.
 
 Currently, if dual authorization is enabled for key, the key can't be deleted.
 {: note}
