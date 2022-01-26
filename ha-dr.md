@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-06-30"
+  years: 2018, 2022
+lastupdated: "2022-01-26"
 
 keywords: disaster recovery, high availability, ha, dr, recoverablity, availability, failover
 
@@ -45,6 +45,9 @@ Multiple [crypto units](#x9860404){: term} in a service instance are automatical
 
 ## Cross-region disaster recovery
 {: #cross-region-disaster-recovery}
+
+Currently, cross-region recovery for {{site.data.keyword.uko_full_notm}} managed keys and keystores is not yet supported.
+{: note}
 
 IBM also performs cross-region backup for your key resources. Your data is automatically backed up in another supported region daily. Depending on the region that you create your service instance in and whether you enable failover crypto units, you can restore your data in case of a regional disaster with the following options:
 
