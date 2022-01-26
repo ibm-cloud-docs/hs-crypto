@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-01-26"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -44,8 +44,8 @@ To connect to an Azure Key Vault through the UI, complete the following steps:
 3. To connect to an Azure Key Vault, click **Add keystore**.
 4. Under **Vault**, select a vault for the keystore for access control, and click **Next**. 
 
-  If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults){: external}
-5. Under **Keystore type**, select **Azure Key Vault (Premium)** and click **Next**.
+  If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
+5. Under **Keystore type**, select **Azure Key Vault (Premium)**, and click **Next**.
 6. Under **Keystore properties**, specify the details of the keystore.
    
     |           Property	        |                         Description                       |
@@ -77,8 +77,8 @@ To connect to an AWS keystore through the UI, complete the following steps:
 3. To connect to a AWS keystore, click **Add keystore**.
 4. Under **Vault**, select a vault for the keystore for access control, and click **Next**. 
 
-  If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults){: external}
-5. Under **Keystore type**, select **AWS Key Management Service**.
+  If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
+5. Under **Keystore type**, select **AWS Key Management Service**, and click **Next**.
 6. Under **Keystore properties**, specify the details of the keystore.
    
     |           Property	        |                         Description                       |
@@ -99,15 +99,63 @@ You have successfully connected to the AWS Key Management Servinces keystore.
 ### Connecting to {{site.data.keyword.keymanagementservicelong_notm}} 
 {: #connect-key-protect}
 
+To connect to an {{site.data.keyword.keymanagementservicelong_notm}} keystore through the UI, complete the following steps:
 
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
+2. Click **Target keystores** from the navigation to view all the available keystores.
+3. To connect to a AWS keystore, click **Add keystore**.
+4. Under **Vault**, select a vault for the keystore for access control, and click **Next**. 
 
+  If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
+5. Under **Keystore type**, select **{{site.data.keyword.keymanagementserviceshort}}**, and click **Next**.
+6. Under **Keystore properties**, specify the details of the keystore.
+   
+    |           Property	        |                         Description                       |
+    |-----------------------------|-----------------------------------------------------------|
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 2 - 100 characters in length. |
+    | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
+    | {{site.data.keyword.keymanagementserviceshort}} API endpoint  | A digital location where the API handles requests.  |
+    | {{site.data.keyword.cloud_notm}} Identity Management endpoint   |    |
+    | Instance ID                 | A string to identify your service instance.  |
+    | API key                     | A unique code that is passed to an API to identify the calling application or user. |
+    {: caption="Table 3. {{site.data.keyword.keymanagementservicelong_notm}} keystore properties" caption-side="bottom"}
 
+7. Click **Test connection** to check the availability of the current keystore, and click **Next**.
+8. Under **Summary**, view the summary of your {{site.data.keyword.keymanagementservicelong_notm}} keystore and the total estimated cost.
+9. After you confirm the keystore details, click **Connect to keystore** to connect to the keystore.
+
+You have successfully connected to the {{site.data.keyword.keymanagementservicelong_notm}} keystore. 
 
 
 ### Connecting to another {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} instance
 {: #connect-hp-crypto}
 
+To connect to a {{site.data.keyword.hscrypto}} keystore through the UI, complete the following steps:
 
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
+2. Click **Target keystores** from the navigation to view all the available keystores.
+3. To connect to a AWS keystore, click **Add keystore**.
+4. Under **Vault**, select a vault for the keystore for access control, and click **Next**. 
+
+  If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
+5. Under **Keystore type**, select **KMS keystore in another instance**, and click **Next**.
+6. Under **Keystore properties**, specify the details of the keystore.
+   
+    |           Property	        |                         Description                       |
+    |-----------------------------|-----------------------------------------------------------|
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 2 - 100 characters in length. |
+    | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
+    | Region on IBM Cloud         | The region where your service instance is located in.   |
+    | Resource group on IBM Cloud | A group that you use to organize resources across regions and manage access to the resources.  |
+    | Service instance ID on IBM Cloud  | A string to identify your service instance.   |
+    | API key on IBM Cloud        | A unique code that is passed to an API to identify the calling application or user.  |
+    {: caption="Table 4. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keystore properties" caption-side="bottom"}
+
+7. Click **Test connection** to check the availability of the current keystore, and click **Next**.
+8. Under **Summary**, view the summary of your {{site.data.keyword.keymanagementservicelong_notm}} keystore and the total estimated cost.
+9. After you confirm the keystore details, click **Connect to keystore** to connect to the keystore.
+
+You have successfully connected to the {{site.data.keyword.hscrypto}} keystore. 
 
 
 
