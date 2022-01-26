@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-24"
+lastupdated: "2022-01-26"
 
-keywords: Unified Key Orchestrator, vaults, keys, keystore, key management
+keywords: Unified Key Orchestrator, vaults, keys, keystore, key management, access control
 
 subcollection: hs-crypto
 
@@ -29,20 +29,41 @@ You can enable different levels of access to {{site.data.keyword.cloud}} {{site.
 
 Access control in {{site.data.keyword.uko_full_notm}} are managed in vaults. Vaults are secure repositories for your cryptographic keys and keystores. A managed key or internal keystore can be created only in a vault.
 
-As a service administrator or an account owner, determine an [access policy type](/docs/account?topic=account-userroles#policytypes) for users, service IDs, and access groups based on your internal access control requirements. For example, if you want to grant user access to {{site.data.keyword.hscrypto}} at the smallest scope available, you can [assign access to a single key](#grant-access-key-level) in an instance.
+As a service administrator or an account owner, determine an [access policy type](/docs/account?topic=account-userroles#policytypes) for users, service IDs, and access groups based on your internal access control requirements. 
 
-A good practice is to grant access permissions as you invite new users to your account or service. For example, consider the following guidelines:
+Review [roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to learn how {{site.data.keyword.cloud_notm}} IAM roles map to {{site.data.keyword.hscrypto}} actions.
+{: tip}
 
-- **Enable user access to the resources in your account by assigning {{site.data.keyword.iamshort}} (IAM) roles.**
-    Rather than sharing your admin credentials, create new policies for users who need access to the encryption keys in your account. If you are the admin for your account, you are automatically assigned a *Manager* policy with access to all resources under the account.
-- **Grant roles and permissions at the smallest scope needed.**
-    For example, if a user needs to access only a high-level view of keys within a specified space, grant the *Reader* role to the user for that space.
-- **Regularly audit who can manage access control and delete key resources.**
-    Remember that granting a *Manager* role to a user means that the user can modify service policies for other users, in addition to destroying resources.
+### Step 1. Retrieve the vault ID
+{: #access-vault-retrieve-ID}
 
+Retrieve the unique identifier that is associated with the vault that you want to grant someone access to.
 
-(To be updated)
+To get the ID for a specific vault, you can:
 
+- [Access the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-view-keys#view-key-gui) to browse the vaults in your service instance.
+- [Use the {{site.data.keyword.uko_full_notm}} API](/apidocs/uko#get-vaults-v3){: external}  to retrieve a list of your vaults, along with metadata about the vaults.
+
+### Step 2. Grant access to vaults with the console
+{: #grant-access-vault-console}
+
+To assign access to a vault with the console:
+
+1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
+2. Select a table row, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for that user.
+3. From the options menu, click **Assign access**.
+4. Click **Assign users additional access**.
+5. Click the **IAM services** button.
+6. From the list of services, select **{{site.data.keyword.hscrypto}}**.
+7. Select **Services based on attributes**.
+8. Select the **Instance ID** attribute and select the instance where the vault is located.
+9. Select the **vault ID** attribute and enter the ID associated with the vault.
+8. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
+9. Click **Add**.
+10. Continue to add platform and service access roles as needed. When you finish all the access assignment, click **Assign**.
+
+You can also create an access policy through IAM [API](/apidocs/iam-policy-management#create-policy){: external} or [CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create){: external}.
+{: note}
 
 ## What's next
 {: #grant-access-vaults-next}
