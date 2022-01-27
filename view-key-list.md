@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-24"
+lastupdated: "2022-01-27"
 
 keywords: Unified Key Orchestrator, view keys, key management, kms keys， UKO
 
@@ -40,10 +40,10 @@ To view a list of your keys through the UI, complete the following steps:
     |----------------------|-----------------------------------------------------------|
     | Name                 | The unique, human-readable name that is assigned to your key. |
     | Vault                | The vault that controls the access to the key.           |
-    | State                | Key states include _Pre-active, Active, Deactivated,_ and _Destroyed._ For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external} |
+    | State                | Key states include _Pre-active, Active, Deactivated,_ and _Destroyed._ For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
     | Activation date      | The date when the key gets activated. A _Pre-active_ key is to be activated on the activation date. |
-    | Deactivation date    | The date when the key gets expired. After the expiration date, the key automatically moves into the _Deactivated_ state. |
-    | Last updated         | The date and time that the key was last updated. This field gets updated when the key is created, rotated, or any part of the key metadata is modified.        |
+    | Expiration date      | The date when the key gets expired. After the expiration date, the key automatically moves into the _Deactivated_ state.  |
+    | Last updated         | The date and time that the key was last updated. This field gets updated when the key is created, rotated, or any part of the key metadata is modified.   |
     | Keystore type        | The type of keystore that the key can be assigned to.     |
     | Target keystores     | The keystores that the key is installed in.               |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |

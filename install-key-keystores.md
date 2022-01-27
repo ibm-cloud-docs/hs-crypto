@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-24"
+lastupdated: "2022-01-27"
 
 keywords: Unified Key Orchestrator, install keys, key management, kms keys
 
@@ -36,12 +36,10 @@ To install an existing key to target keystores through the UI, complete the foll
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. Click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key that you want to edit, and choose **Show details**.
 4. Click **Set target keystores**.
-5. Select one or multiple target keystores that you want to install the key in. 
+5. Select one or multiple target keystores that you want to install the key in. Installing a key in multiple keystores enables redundancy.
    
-    If you want to install the key to a new keystore, click **Add keystore**. For more instructions, see [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores)
+   If you want to install the key to a new keystore, click **Add keystore**. For more instructions, see [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
    
-    Installing a key in multiple keystores enables redundancy. You can install a key in one internal keystore and at least one external keystore as a backup.
-    {: tip}
 6. Click **Save** to save the changes.
 
 

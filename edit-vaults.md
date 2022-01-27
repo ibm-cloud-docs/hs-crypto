@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-24"
+lastupdated: "2022-01-27"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -37,7 +37,7 @@ To edit vault details through the UI, complete the following steps:
 3. Click the vault that you want to edit. The side panel is displayed.
 4. Click **Edit** to update the **Vault name** and **Description**.
 5. Click **Save** to save the property changes.
-6. Optionally, you can add keystores to the vault by clicking **Add keystores** under **Target keystores**.
+6. The keys and keystores that are assigned to this vault are displayed in tables. Optionally, you can add a key by clicking **Add key** under **Keys**, or add a keystore by clicking **Add keystores** under **Target keystores**.
 
 
 

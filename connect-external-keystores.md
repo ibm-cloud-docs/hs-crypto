@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-26"
+lastupdated: "2022-01-27"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -44,7 +44,8 @@ To connect to an Azure Key Vault through the UI, complete the following steps:
 3. To connect to an Azure Key Vault, click **Add keystore**.
 4. Under **Vault**, select a vault for the keystore for access control, and click **Next**. 
 
-  If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
+   If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
+
 5. Under **Keystore type**, select **Azure Key Vault (Premium)**, and click **Next**.
 6. Under **Keystore properties**, specify the details of the keystore.
    
@@ -67,7 +68,7 @@ To connect to an Azure Key Vault through the UI, complete the following steps:
 
 You have successfully connected to the Azure Key Vault keystore. 
 
-### Connecting to AWS Key Management Services
+### Connecting to AWS Key Management Service
 {: #connect-aws-kms}
 
 To connect to an AWS keystore through the UI, complete the following steps:
@@ -78,6 +79,7 @@ To connect to an AWS keystore through the UI, complete the following steps:
 4. Under **Vault**, select a vault for the keystore for access control, and click **Next**. 
 
   If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
+
 5. Under **Keystore type**, select **AWS Key Management Service**, and click **Next**.
 6. Under **Keystore properties**, specify the details of the keystore.
    
@@ -88,7 +90,7 @@ To connect to an AWS keystore through the UI, complete the following steps:
     | Region on AWS               | Geographical location where the AWS KMS is located in.    |
     | Access key ID on AWS        | Part of your access key for AWS.                          |
     | Secret access key on AWS    | Part of your access key for AWS. The secret access key is available for download only when you create it.     |
-    {: caption="Table 2. AWS Key Management Services properties" caption-side="bottom"}
+    {: caption="Table 2. AWS Key Management Service properties" caption-side="bottom"}
 
 7. Click **Test connection** to check the availability of the current keystore, and click **Next**.
 8. Under **Summary**, view the summary of your AWS keystore and the total estimated cost.
@@ -107,6 +109,7 @@ To connect to an {{site.data.keyword.keymanagementservicelong_notm}} keystore th
 4. Under **Vault**, select a vault for the keystore for access control, and click **Next**. 
 
   If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
+
 5. Under **Keystore type**, select **{{site.data.keyword.keymanagementserviceshort}}**, and click **Next**.
 6. Under **Keystore properties**, specify the details of the keystore.
    
@@ -138,6 +141,7 @@ To connect to a {{site.data.keyword.hscrypto}} keystore through the UI, complete
 4. Under **Vault**, select a vault for the keystore for access control, and click **Next**. 
 
   If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
+  
 5. Under **Keystore type**, select **KMS keystore in another instance**, and click **Next**.
 6. Under **Keystore properties**, specify the details of the keystore.
    

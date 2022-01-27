@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-01-07"
+lastupdated: "2022-01-27"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -33,7 +33,11 @@ Read to get answers for questions about {{site.data.keyword.cloud}} {{site.data.
 A {{site.data.keyword.hscrypto}} service instance can hold a maximum of 5000 keys.
 
 
+## How many key rings can be created for a {{site.data.keyword.hscrypto}} service instance?
+{: #faq-keyrings-number}
+{: faq}
 
+You can create up to five key rings for a service instance. If the number reaches the limit, you are no longer able to creat a key ring. For more information about managing key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
 ## Can I add or remove crypto units after I provision a service instance?
 {: #faq-add-remove-crypto-unit}
 {: faq}
