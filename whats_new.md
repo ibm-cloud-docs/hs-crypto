@@ -48,10 +48,8 @@ Updated: {{site.data.keyword.hscrypto}} key management functions {: #update-kms-
         After you create a key, you can move the key to a different key ring. For more information, see [Transferring a key to a different key ring](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#transfer-key-key-ring).
 
 
-
 Added: The key ring limit for a service instance {: #add-key-ring-limit}
 :   The maximum number of key rings for a {{site.data.keyword.hscrypto}} instance is five. If the number reaches the limit, you are no longer able to create a key ring. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
-
 
 ## 30 July 2021
 {: #july-2021}
