@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-26"
+lastupdated: "2022-01-27"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -58,18 +58,18 @@ The following items are a few highlights of the {{site.data.keyword.hscrypto}} a
 - Secure Service Container (SSC) provides the enterprise level of security and impregnability that enterprise customers expect from [IBM LinuxONE](https://www.ibm.com/it-infrastructure/linuxone){: external} technology.
 - FIPS 140-2 Level 4 compliant cloud HSM is enabled for highest physical protection of secrets.
 
-For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service architecture, workload isolation, and dependencies](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation).
+For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service architecture, workload isolation, and dependencies](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation).
 
 ## Key features
 {: #uko-key-features}
 
 {{site.data.keyword.hscrypto}} provides the following features:
 
-### Unified key orchesastration
+### {{site.data.keyword.uko_full_notm}}
 
 * **Connection to external keystores**
 
-    {{site.data.keyword.uko_full_notm}}, as part of {{site.data.keyword.hscrypto}}, provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores in the service instance or external keystores. with{{site.data.keyword.uko_full_notm}}, you can push your keys to third-party cloud keystores, such as Azure Key Vault or {{site.data.keyword.keymanagementservicefull}}, distribute and install keys across keystores, and manage keys and keystores through both the UI and REST API. 
+    {{site.data.keyword.uko_full_notm}}, as part of {{site.data.keyword.hscrypto}}, provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores in the service instance or external keystores. with {{site.data.keyword.uko_full_notm}}, you can push your keys to third-party cloud keystores, such as Azure Key Vault, AWS Key Management Service (KMS), or {{site.data.keyword.keymanagementservicefull}}, distribute and install keys across keystores, and manage keys and keystores through both the UI and REST API. 
 
 * **Unified key backup and management system**
 
@@ -77,7 +77,7 @@ For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service arc
 
 * **Key orchestration across multiple clouds**
 
-    You can orchestrate keys through a single and unified user experience across multiple clouds, both on and off the premise. An auditable key lifecycle orchestration mechanism is provided. For more information, see [Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-uko-key-states) and [Auditing events for Hyper Protect Crypto Services - New Experience](/docs/hs-crypto?topic=hs-crypto-uko-at-events-uko).
+    You can orchestrate keys through a single and unified user experience across multiple clouds with an auditable key lifecycle orchestration mechanism. For more information, see [Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-uko-key-states) and [Auditing events for Hyper Protect Crypto Services - New Experience](/docs/hs-crypto?topic=hs-crypto-uko-at-events-uko).
 
 ### Key management service
 {: #uko-key-management}
