@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-24"
+lastupdated: "2022-01-27"
 
 keywords: Unified Key Orchestrator, search keys, key management, kms keys
 
@@ -36,6 +36,21 @@ To filter keys through the UI, complete the following steps:
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. Click the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the table.
 4. Specify the filter criteria as you need, and click **Apply**.
+   
+   You can set the following filter criteria.
+
+    |       Property	     |                         Description                       |
+    |----------------------|-----------------------------------------------------------|
+    | Vault                | The vault that controls the access to the key.            |
+    | Activation           | Set a date range of when the key gets activated. A _Pre-active_ key is to be activated on the activation date. |
+    | Expiration           | Set a date range of when the key gets expired. After the expiration date, the key automatically moves into the _Deactivated_ state.  |
+    | Creation             | Set a date range of when the key was created.             |
+    | Last updated         | The date and time that the key was last updated. This field gets updated when the key is created, rotated, or any part of the key metadata is modified.   |
+    | Algorithm            | The encryption algorithm to encrypt data for the key.     |
+    | Minimum key length   | The minimum number of bits that represents the encryption strength of the key.   |
+    | Maximum key length   | The maximum number of bits that represents the encryption strength of the key.   |
+    | State                | Key states include _Pre-active, Active, Deactivated,_ and _Destroyed._ For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
+    {: caption="Table 1. Filter managed keys" caption-side="bottom"}
 
 
 ##  Searching for keys through the UI
