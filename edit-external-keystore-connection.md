@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-01-26"
 
 keywords: Unified Key Orchestrator, key management, UKO keystore, edit keystore, external keystore, KMS keystore
 
@@ -89,24 +89,58 @@ To edit the connection to an AWS keystore through the UI, complete the following
 ### Editing connection to {{site.data.keyword.keymanagementservicelong_notm}} 
 {: #edit-key-protect-connection}
 
+To edit the connection to an {{site.data.keyword.keymanagementservicelong_notm}} keystore through the UI, complete the following steps:
 
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
+2. Click **Target keystores** from the navigation to view all the available keystores.
+3. Click the {{site.data.keyword.keymanagementserviceshort}} keystore that you want to edit to open the side panel.
+4. Click **Edit** to update keystore properties.
 
+    |           Property	        |                         Description                       |
+    |-----------------------------|-----------------------------------------------------------|
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 2 - 100 characters in length. |
+    | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
+    | {{site.data.keyword.keymanagementserviceshort}} API endpoint  | A digital location where the API handles requests.  |
+    | {{site.data.keyword.cloud_notm}} Identity Management endpoint   |    |
+    | Instance ID                 | A string to identify your service instance.  |
+    | API key                     | A unique code that is passed to an API to identify the calling application or user. |
+    {: caption="Table 3. {{site.data.keyword.keymanagementservicelong_notm}} keystore properties" caption-side="bottom"}
+
+5. Click **Test connection** to check the availability of the current keystore, and click **Next**.
+6. Click **Save** to save the changes.
 
 
 
 ### Editing connection to another {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} instance
 {: #edit-hp-crypto-connection}
 
+To edit the connection to a {{site.data.keyword.hscrypto}} keystore through the UI, complete the following steps:
 
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
+2. Click **Target keystores** from the navigation to view all the available keystores.
+3. Click the Azure Key Vault that you want to edit to open the side panel.
+4. Click **Edit** to update keystore properties.
 
+    |           Property	        |                         Description                       |
+    |-----------------------------|-----------------------------------------------------------|
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 2 - 100 characters in length. |
+    | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
+    | Region on IBM Cloud         | Geographical location where the service instance is located in.   |
+    | Resource group on IBM Cloud | A group that you use to organize resources across regions and manage access to the resources.  |
+    | Service instance ID on IBM Cloud  | A string to identify your service instance.   |
+    | API key on IBM Cloud        | A unique code that is passed to an API to identify the calling application or user.  |
+    {: caption="Table 4. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keystore properties" caption-side="bottom"}
 
+5. Click **Test connection** to check the availability of the current keystore, and click **Next**.
+6. Click **Save** to save the changes.
 
 
 
 ## What's next
 {: #edit-external-keystore-connection-next}
 
+- To find out how to connect to an external keystore, check out [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
 
-  
+- To find out how to disconnect from an external keystore, check out [Disconnecting from external keystores](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores).
 
-
+- To find out how to install an existing key to a keystore, check out [Installing existing keys to keystores](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).

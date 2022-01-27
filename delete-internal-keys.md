@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-20"
+lastupdated: "2022-01-25"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -26,7 +26,7 @@ subcollection: hs-crypto
 You can delete your internal KMS keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API. 
 {: shortdesc}
 
-By deleting an internal key, the key is uninstalled from all target keystores and all key materials and its metadata are destroyed permenantly.
+When you delete an internal key, the key is to be uninstalled from all target keystores and all key materials and its metadata are destroyed permenantly.
 
 Currently, if dual authorization is enabled for key, the key can't be deleted.
 {: note}
@@ -67,7 +67,8 @@ The internal key has been deleted and uninstalled from all target keystores. All
 ## What's next
 {: #delete-internal-keys-next}
 
-
+- To find out instructions on creating a key, check out [Creating internal keys](/docs/hs-crypto?topic=hs-crypto-create-internal-keys) or [Creating and storing external keys](/docs/hs-crypto?topic=hs-crypto-create-external-keys).
   
+- To find out how to delete an internal keystore, check out [Deleting internal keystores](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores).
 
-
+- To find out how to delete a vault, check out [Deleting vaults](/docs/hs-crypto?topic=hs-crypto-delete-vaults).

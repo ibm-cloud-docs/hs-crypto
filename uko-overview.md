@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-17"
+lastupdated: "2022-01-27"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -58,12 +58,26 @@ The following items are a few highlights of the {{site.data.keyword.hscrypto}} a
 - Secure Service Container (SSC) provides the enterprise level of security and impregnability that enterprise customers expect from [IBM LinuxONE](https://www.ibm.com/it-infrastructure/linuxone){: external} technology.
 - FIPS 140-2 Level 4 compliant cloud HSM is enabled for highest physical protection of secrets.
 
-For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service architecture, workload isolation, and dependencies](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation).
+For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service architecture, workload isolation, and dependencies](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation).
 
 ## Key features
 {: #uko-key-features}
 
-{{site.data.keyword.hscrypto}} provides both key management and cloud HSM functions:
+{{site.data.keyword.hscrypto}} provides the following features:
+
+### {{site.data.keyword.uko_full_notm}}
+
+* **Connection to external keystores**
+
+    {{site.data.keyword.uko_full_notm}}, as part of {{site.data.keyword.hscrypto}}, provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores in the service instance or external keystores. with {{site.data.keyword.uko_full_notm}}, you can push your keys to third-party cloud keystores, such as Azure Key Vault, AWS Key Management Service (KMS), or {{site.data.keyword.keymanagementservicefull}}, distribute and install keys across keystores, and manage keys and keystores through both the UI and REST API. 
+
+* **Unified key backup and management system**
+
+   {{site.data.keyword.uko_full_notm}} enables you to back up all keys in IBM Cloud with your {{site.data.keyword.hscrypto}} instance. You can redistribute keys through your {{site.data.keyword.hscrypto}} instance to quickly recover from fatal cloud errors. And at the same time, you own the root trust of your key hierarchy.
+
+* **Key orchestration across multiple clouds**
+
+    You can orchestrate keys through a single and unified user experience across multiple clouds with an auditable key lifecycle orchestration mechanism. For more information, see [Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-uko-key-states) and [Auditing events for Hyper Protect Crypto Services - New Experience](/docs/hs-crypto?topic=hs-crypto-uko-at-events-uko).
 
 ### Key management service
 {: #uko-key-management}
@@ -103,7 +117,8 @@ For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service arc
 {: #uko-overview-next}
 
 - To get an overall tutorial about using {{site.data.keyword.hscrypto}}, check out [Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-get-started).
-- To find out more about programmatically managing your keys, check out the [{{site.data.keyword.hscrypto}} key management API reference doc](/apidocs/hs-crypto){: external}.
+- To find out more about managing your {{site.data.keyword.uko_full_notm}} keys and keystores, check out the [{{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external}.
+- To find out more about programmatically managing your KMS keys, check out the [Key management service API reference doc](/apidocs/hs-crypto){: external}.
 - To find out more about the PKCS #11 API, see [Introducing PKCS #11](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro) and [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref).
 - To find out more about the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11_intro) and [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 - For more information about the compliance certificates that {{site.data.keyword.hscrypto}} receives, see [Security and compliance](/docs/hs-crypto?topic=hs-crypto-security-and-compliance).

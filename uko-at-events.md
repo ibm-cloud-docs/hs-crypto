@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-21"
+lastupdated: "2022-01-24"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 
@@ -44,7 +44,6 @@ The following table lists the key actions that generate an event:
 | Action                            | Description                                                  |
 | --------------------------------- | ------------------------------------------------------------ |
 | `hs-crypto.build-info.get`              | Get build information.                          |
-| `hs-crypto.integrity.update`              | Update integrity information in the system.   | 
 | `hs-crypto.managed-keys.create`                | Create a managed key.                                                    |
 | `hs-crypto.managed-keys.list`                |List all managed keys.                                                   |
 | `hs-crypto.managed-keys.read`              | Retrieve managed key information.                                              |
@@ -70,7 +69,6 @@ The following table lists the key actions that generate an event:
 | `hs-crypto.keystores.update`              | Update a keystore.                                                 |
 | `hs-crypto.keystores.delete`                | Delete a keystore.                                 |
 | `hs-crypto.keystore-statuses.get`        | Get a keystore status. |
-| `hs-crypto.keystore-types.list`                | List all eystore types.                                           |
 | `hs-crypto.keystore-keys.list`             | List all keys from the keystore.                                    |
 | `hs-crypto.keystore-tags.read`             | List all keystore tags.                                    |
 | `hs-crypto.key-instances-status-in-keystores.get` | Get key instance status in keystores.     |
@@ -428,77 +426,10 @@ the event is evaluated as a `401` bad request call with a severity of
 The severity level for all TKE events is `critical` due to the sensitivity of the actions.
 {: important}
 
-The following table lists the actions that are associated with each severity level:
-
-<table>
-    <tr>
-      <th>Severity</th>
-      <th>Actions</th>
-    </tr>
-    <tr>
-      <td><p><varname>Critical</varname></p></td>
-      <td>
-        <p><code>hs-crypto.secrets.delete</code></p>
-        <p><code>hs-crypto.registrations.delete</code></p>
-        <p><code>hs-crypto.tke-cryptounit-admin.add</code></p>
-        <p><code>hs-crypto.tke-cryptounit-admin.remove</code></p>
-        <p><code>hs-crypto.tke-cryptounit-current-master-key-register.clear</code></p>
-        <p><code>hs-crypto.tke-cryptounit-new-master-key-register.clear</code></p>
-        <p><code>hs-crypto.tke-cryptounit-master-key-register.add</code></p>
-        <p><code>hs-crypto.tke-cryptounit-master-key-register.commit</code></p>
-        <p><code>hs-crypto.tke-cryptounit-master-key-register.activate</code></p>
-        <p><code>hs-crypto.tke-cryptounit-threshold.set</code></p>
-        <p><code>hs-crypto.tke-cryptounit.reset</code></p>
-        <p><code>hs-crypto.mtlscert-admin-key.create</code></p>
-        <p><code>hs-crypto.mtlscert-admin-key.update</code></p>
-        <p><code>hs-crypto.mtlscert-admin-key.delete</code></p>
-        <p><code>hs-crypto.mtlscert-cert.set</code></p>
-        <p><code>hs-crypto.mtlscert-cert.set</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td><p><varname>Warning</varname></p></td>
-      <td>
-        <p><code>hs-crypto.secrets.rotate</code></p>
-        <p><code>hs-crypto.secrets.restore</code></p>
-        <p><code>hs-crypto.secrets.enable</code></p>
-        <p><code>hs-crypto.secrets.disable</code></p>
-        <p><code>hs-crypto.secrets.setkeyfordeletion</code></p>
-        <p><code>hs-crypto.secrets.unsetkeyfordeletion</code></p>
-        <p><code>hs-crypto.policies.write</code></p>
-        <p><code>hs-crypto.instancepolicies.write</code></p>
-      </td>
-    </tr>
-     <tr>
-      <td><p><varname>Normal</varname></p></td>
-      <td>
-        <p><code>hs-crypto.secrets.create</code></p>
-        <p><code>hs-crypto.secrets.read</code></p>
-        <p><code>hs-crypto.secrets.readmetadata</code></p>
-        <p><code>hs-crypto.secrets.head</code></p>
-        <p><code>hs-crypto.secrets.list</code></p>
-        <p><code>hs-crypto.secrets.wrap</code></p>
-        <p><code>hs-crypto.secrets.unwrap</code></p>
-        <p><code>hs-crypto.secrets.rewrap</code></p>
-        <p><code>hs-crypto.secrets.listkeyversions</code></p>
-        <p><code>hs-crypto.secrets.eventack</code></p>
-        <p><code>hs-crypto.policies.read</code></p>
-        <p><code>hs-crypto.instancepolicies.read</code></p>
-        <p><code>hs-crypto.importtoken.create</code></p>
-        <p><code>hs-crypto.importtoken.read</code></p>
-        <p><code>hs-crypto.registrations.list</code></p>
-        <p><code>hs-crypto.mtlscert-cert.read</code></p>
-        <p><code>hs-crypto.mtlscert-cert.list</code></p>
-        <p><code>hs-crypto.mtlscert-admin-key.read</code></p>
-      </td>
-    </tr>
-    <caption>Table 12. Describes the severity level for {{site.data.keyword.hscrypto}} service actions.</caption>
-    </table>
-
 The following table lists the status codes that are associated with each severity level:
 
 | Severity | Status code |
 | -------- | ----------- |
 | Critical | `400` (For TKE events only), `401`, `403`, `500`, `503`, `507`  |
 | Warning  | `400`, `409`, `424`, `502`, `504`, `505`  |
-{: caption="Table 13. Describes the severity level for {{site.data.keyword.hscrypto}} response status codes." caption-side="bottom"}
+{: caption="Table 12. Describes the severity level for {{site.data.keyword.hscrypto}} response status codes." caption-side="bottom"}

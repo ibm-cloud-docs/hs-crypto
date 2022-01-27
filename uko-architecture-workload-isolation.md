@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-26"
+lastupdated: "2022-01-27"
 
 keywords: hyper protect crypto services architecture, service architecture, architecture diagram, workload isolation, crypto units, secure service container, ssc, public isolation for hyper protect crypto services, compute isolation for hyper protect crypto services
 
@@ -18,19 +18,25 @@ keywords: hyper protect crypto services architecture, service architecture, arch
 
 
 # Service architecture
-{: #architecture-workload-isolation}
+{: #uko-architecture-workload-isolation}
 
 Review the service architecture, workload isolation characteristics, and service dependencies for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
 ## {{site.data.keyword.hscrypto}} architecture
-{: #architecture}
+{: #uko-architecture}
 
 The following architecture diagram shows how you interact with {{site.data.keyword.hscrypto}} components to protect your sensitive data and keys.
 
-![Service instance components](/images/hs-crypto-components-new.svg "Service instance components"){: caption="Figure 1. Interaction with {{site.data.keyword.hscrypto}} components" caption-side="bottom"}
+![Service instance components](/images/hs-crypto-components-uko.svg "Service instance components"){: caption="Figure 1. Interaction with {{site.data.keyword.hscrypto}} components" caption-side="bottom"}
 
 The following list explains each component in detail.
+
+{{site.data.keyword.uko_full_notm}} API
+:   The API that you use to interact with the {{site.data.keyword.uko_full_notm}} module to manage keys and keystores for multiple clouds. You can interact with {{site.data.keyword.uko_full_notm}} either through the UI or with the API.
+
+    Currently, cross-region recovery for {{site.data.keyword.uko_full_notm}} managed keys and keystores is not supported.
+    {: note}
 
 Key management API
 :   The API that you use to interact with the key management service (KMS) module to manage root keys and standard keys.
@@ -67,7 +73,7 @@ Failover crypto unit
 For more information about the {{site.data.keyword.hscrypto}} components, see [Components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
 
 ## {{site.data.keyword.hscrypto}} workload isolation
-{: #workload-isolation}
+{: #uko-workload-isolation}
 
 {{site.data.keyword.hscrypto}} is a single-tenant, regional service that supports complete tenant-based workload isolation with the following characteristics:
 
@@ -80,7 +86,7 @@ The following diagram illustrates how {{site.data.keyword.hscrypto}} workload of
 ![{{site.data.keyword.hscrypto}} workload isolation](/images/workload-isolation.svg "{{site.data.keyword.hscrypto}} workload isolation"){: caption="Figure 2. {{site.data.keyword.hscrypto}} workload isolation" caption-side="bottom"}
 
 ## Service dependencies
-{: #service_dependencies}
+{: #uko-service_dependencies}
 
 {{site.data.keyword.hscrypto}} has dependencies on the following {{site.data.keyword.cloud_notm}} services:
 
