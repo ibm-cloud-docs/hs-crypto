@@ -1251,6 +1251,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [How many keys can be stored in a {{site.data.keyword.hscrypto}} service instance?](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-keys-number)
 
+* [How many key rings can be created for a {{site.data.keyword.hscrypto}} service instance?](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-keyrings-number)
+
 * [Can I add or remove crypto units after I provision a service instance?](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-add-remove-crypto-unit)
 
 * [Is there a Service Level Agreement (SLA) specifically for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-hpcs-sla)
