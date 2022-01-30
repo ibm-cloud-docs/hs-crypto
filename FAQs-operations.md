@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-09-08"
+  years: 2020, 2022
+lastupdated: "2022-01-30"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning, operations
 
@@ -78,12 +78,14 @@ For procurement from other countries, contact IBM Part Sales through the followi
 
 |Country| Email address |
 |--------------|-----------------------|
+|Australia  | spareparts@au1.ibm.com|
 |Belgium  | parts@be.ibm.com|
 |Denmark  | reservedele@dk.ibm.com|
 |Germany | partsale@de.ibm.com|
 |France | vtepce@fr.ibm.com|
 |Ireland | emeapart@ie.ibm.com|
 |Israel | psale@il.ibm.com|
+|New Zealand | spareparts@au1.ibm.com|
 |Poland | parts@pl.ibm.com|
 |Portugal | ptsales@pt.ibm.com|
 |South Africa    |autoship@za.ibm.com |
@@ -91,6 +93,8 @@ For procurement from other countries, contact IBM Part Sales through the followi
 |Switzerland | pasa@ch.ibm.com|
 |UK | parts_sales@uk.ibm.com|
 {: caption="Table 2. IBM Part Sales contacts" caption-side="bottom"}
+
+For countries that are not listed in the table, contact `ppricing@de.ibm.com` or `parts_sales@uk.ibm.com` to ask for the IBM Parts Sales contact information of your country.
 
 ## How many crypto units shall I set up in my service instance?
 {: #faq-crypto-units-number}
