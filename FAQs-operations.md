@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-01-30"
+lastupdated: "2022-02-07"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning, operations
 
@@ -48,6 +48,12 @@ To initialize the service instance, you need to create administrator signature k
 - Using the {{site.data.keyword.cloud_notm}} TKE CLI plug-in for a solution that does not require the procurement of smart card readers and smart cards. This solution supports two approaches to initializing service instances: [by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit) and [by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm). When you use recovery crypto units, the master key is automatically generated within crypto units and you don't need to create multiple master key parts. When you use key part files, file contents are decrypted and appear temporarily in the clear in workstation memory.
 
 For more information, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
+
+## Can I initialize my service instance through the TKE CLI plug-in work by using a proxy?
+{: #faq-tke-proxy}
+{: faq}
+
+Yes, if the proxy is configured for HTTPS port 443. You can add an entry to the local hostname mapping of your workstation with the TKE CLI, for example, in `/etc/hosts`. In this host mapping entry, map the TKE API endpoint `tke.<region>.hs-crypto.cloud.ibm.com` to your proxy. For example, for an instance in Frankfurt the URL is `tke.eu-de.hs-crypto.cloud.ibm.com`.
 
 ## Are there any recommendations on how to set up smart cards?
 {: #faq-smart-card-setup}
