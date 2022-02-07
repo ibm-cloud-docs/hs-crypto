@@ -49,7 +49,7 @@ To initialize the service instance, you need to create administrator signature k
 
 For more information, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
 
-## Can I initialize my service instance through the TKE CLI plug-in work by using a proxy?
+## Can I initialize my service instance through the TKE CLI plug-in by using a proxy?
 {: #faq-tke-proxy}
 {: faq}
 
