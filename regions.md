@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-18"
+lastupdated: "2022-02-07"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -35,7 +35,7 @@ You can connect your applications with the {{site.data.keyword.cloud}} {{site.da
 - London, UK: `eu-gb` - Based on the {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) infrastructure
 - Sydney, Australia: `au-syd`
 - Tokyo, Japan: `jp-tok` - Based on the {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) infrastructure
-- Washington DC, US: `us-east` - Based on the {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) infrastructure
+- Washington DC, US: `us-east`
 
 You can create {{site.data.keyword.hscrypto}} resources in one of the supported {{site.data.keyword.cloud_notm}} regions, which represent the
 geographic area where your {{site.data.keyword.hscrypto}} requests are handled and processed. To learn more, see

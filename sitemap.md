@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-30"
+lastupdated: "2022-02-07"
 
 keywords: site map, doc structure, information architecture
 
@@ -1228,6 +1228,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [Are there any prerequisites for using {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-hpcs-prerequisites)
 
 * [How to initialize {{site.data.keyword.hscrypto}} service instances?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-how-to-initialize)
+
+* [Can I initialize my service instance through the TKE CLI plug-in by using a proxy?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-tke-proxy)
 
 * [Are there any recommendations on how to set up smart cards?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup)
 
