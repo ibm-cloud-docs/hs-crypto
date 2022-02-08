@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-26"
+lastupdated: "2022-02-08"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystore, key management, access control
 
@@ -68,7 +68,7 @@ You can also create an access policy through IAM [API](/apidocs/iam-policy-manag
 ## What's next
 {: #grant-access-vaults-next}
 
-- To find out how to create a vault, check out [Creating vaults](/docs/hs-crypto?topic=hs-crypto-creat-vaults).
+- To find out how to create a vault, check out [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
   
 - To find out instructions on editing a vault, check out [Editing vault details](/docs/hs-crypto?topic=hs-crypto-edit-vaults).
 

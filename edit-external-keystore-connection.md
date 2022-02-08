@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-27"
+lastupdated: "2022-02-08"
 
 keywords: Unified Key Orchestrator, key management, UKO keystore, edit keystore, external keystore, KMS keystore
 
@@ -41,8 +41,8 @@ To edit the connection to an Azure Key Vault through the UI, complete the follow
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Target keystores** from the navigation to view all the available keystores.
-3. Click the Azure Key Vault that you want to edit. The side panel is displayed.
-4. Click **Edit** to update keystore properties.
+3. Click the Azure Key Vault that you want to edit. The Details side panel is displayed.
+4. Click **Edit** in each property card to update keystore properties.
    
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
@@ -69,8 +69,8 @@ To edit the connection to an AWS keystore through the UI, complete the following
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Target keystores** from the navigation to view all the available keystores.
-3. Click the AWS keystore that you want to edit. The side panel is displayed.
-4. Click **Edit** to update keystore properties.
+3. Click the AWS keystore that you want to edit. The Details side panel is displayed.
+4. Click **Edit** in each property card to update keystore properties.
    
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
@@ -93,8 +93,8 @@ To edit the connection to an {{site.data.keyword.keymanagementservicelong_notm}}
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Target keystores** from the navigation to view all the available keystores.
-3. Click the {{site.data.keyword.keymanagementserviceshort}} keystore that you want to edit. The side panel is displayed.
-4. Click **Edit** to update keystore properties.
+3. Click the {{site.data.keyword.keymanagementserviceshort}} keystore that you want to edit. The Details side panel is displayed.
+4. Click **Edit** in each property card to update keystore properties.
 
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
@@ -118,8 +118,8 @@ To edit the connection to a {{site.data.keyword.hscrypto}} keystore through the 
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Target keystores** from the navigation to view all the available keystores.
-3. Click the {{site.data.keyword.hscrypto}} keystore that you want to edit. The side panel is displayed.
-4. Click **Edit** to update keystore properties.
+3. Click the {{site.data.keyword.hscrypto}} keystore that you want to edit. The Details side panel is displayed.
+4. Click **Edit** in each property card to update keystore properties.
 
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|

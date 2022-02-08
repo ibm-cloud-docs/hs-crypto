@@ -35,7 +35,7 @@ To edit the details of a managed key through the UI, complete the following step
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. Click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key that you want to edit, and choose **Show details**.
-4. Under each property card of **Key properties**, click **Edit** to update the key properties. 
+4. In each property card under **Key properties**, click **Edit** to update the key properties. 
 
     You can update the general properties, lifecyle properties, or active period of the key. Or, you can also view the key material properties, including algorithm, length, and key check value. The following are a few properties that you can edit.
     
