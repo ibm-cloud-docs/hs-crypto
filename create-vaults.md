@@ -55,7 +55,7 @@ To create a vault through the API, follow these steps:
     ```
     {: codeblock}
 
-    For detailed instructions and code samples about using the API method, [check out the {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-vault-v3){: external}.
+    For detailed instructions and code examples about using the API method, [check out the {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-vault-v3){: external}.
 
 ## What's next
 {: #create-vaults-next}
@@ -66,5 +66,5 @@ To create a vault through the API, follow these steps:
   
 - To find out how to grant access to vaults, see [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults).
 
-- For detailed instructions and code samples about using the API method, [check out the {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-vault-v3){: external}.
+- To find out more about programmatically managing your keys and keystores, [check out the {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external}.
 
