@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-02-08"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -56,7 +56,7 @@ You can integrate all your key management use cases into one consistent approach
 
 - **Vaults**
     
-    A vault is a single unit that controls a user's or an access group's access to keys and keystores through Identity and Access Management (IAM). A managed key or internal keystore can be created only in a vault. When you connect to an external keystore, you need to assign it to a vault. To use a managed key for encryption and decryption, you need to install in one or more keystores within the same vault. The vault keeps all installations of a managed key in sync.
+    A vault is a single repository that controls a user's or an access group's access to managed keys and target keystores through Identity and Access Management (IAM). A managed key or internal target keystore can be created only in a vault. When you connect to an external keystore, you need to assign it to a vault. To use a managed key for encryption and decryption, you need to install in one or more keystores within the same vault. The vault keeps all installations of a managed key in sync.
 
     - **Managed keys**
         
@@ -66,7 +66,7 @@ You can integrate all your key management use cases into one consistent approach
         
         A target keystore is keystore that is assigned to a vault. If it is an internal keystore, it can be created only in a vault. If it is an external keystore, you need to assign the external keystore to a vault when you connect your service instance to it. 
 
-- **Keystores**
+- **Target keystores**
     
     You need to install a key to a keystore before you can encrypt or decrypt data by using the key.
     
@@ -78,11 +78,13 @@ You can integrate all your key management use cases into one consistent approach
             
             The {{site.data.keyword.keymanagementservicelong_notm}} key management service component within {{site.data.keyword.hscrypto}} provides the Keep Your Own Key (KYOK) feature for {{site.data.keyword.cloud_notm}} services to ensure that you have access to only the authorized keystores. 
 
-            You can create up to five free KMS keystores to manage your keys. If you need additional keystores for cross-region key distribution or specified access permissions, you are charged $225 per calendar month for an additional keystore.  
+            You can create up to five free KMS keystores to manage your keys. If you need additional keystores for cross-region key distribution or specified access permissions, you are charged. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
 
     - **External keystores**  
         
         External keystores are keystores that are not in your service instance. You can connect to keystores that are external to your service instance, such as another {{site.data.keyword.hscrypto}} or {{site.data.keyword.keymanagementserviceshort}} instance, potentially in another region. Or, you can connect to external keystores from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS). 
+
+        You can connect to one external keystore at no initial cost, regardless of the type. You are charged for additional external keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
 
         - **{{site.data.keyword.hscrypto}}** 
             
