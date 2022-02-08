@@ -61,10 +61,10 @@ The following example shows a total bill of 30 days (720 hours). The user enable
 |-----|----------------|
 | Operational crypto unit 1 | $1533.6 (30x24x2.13) |
 | Operational crypto unit 2 | $1533.6 (30x24x2.13) |
-| 15 internal keystores | $225 |
-| 15 external keystores | $225 |
+| 22 internal keystores | $3795 (5x0+15x225+2x210) |
+| 15 external keystores | $3150 (1x0+14x225) |
 | {{site.data.keyword.uko_full_notm}} connection | $4500 (30x24x6.25) |
-| End of month charge | $8017.2  |
+| End of month charge | $14512.2  |
 {: caption="Table 2. A billing example of 30 days" caption-side="bottom"}
 
 ## Is there a free trial for {{site.data.keyword.hscrypto}}?
