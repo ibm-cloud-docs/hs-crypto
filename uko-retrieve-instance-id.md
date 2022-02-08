@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-02-08"
 
 keywords: service id, service ids, instance id, get instance id, get instance guid, instance id api, instance id cli
 
@@ -25,7 +25,7 @@ subcollection: hs-crypto
 You can target an individual {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance for operations by including the unique identifier, or instance ID, in API requests to the service.
 {: shortdesc}
 
-## Viewing your instance ID with the console
+## Viewing your instance ID with the UI
 {: #uko-view-instance-ID}
 
 You can view the instance ID that is associated with your {{site.data.keyword.hscrypto}} service instance by navigating to your {{site.data.keyword.cloud_notm}} resource list.

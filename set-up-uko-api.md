@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-21"
+lastupdated: "2022-02-08"
 
 keywords: set up api, uko api, Unified Key Orchestrator api, 
 
@@ -19,10 +19,10 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 
-# Managing your keys with the key management API
+# Managing your keys with the {{site.data.keyword.uko_full_notm}} API
 {: #set-up-uko-api}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [Unified Key Orchestrator API](/apidocs/uko){: external} to store, retrieve, and generate encryption keys.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [{{site.data.keyword.uko_full_notm}} API](/apidocs/uko){: external} to store, retrieve, and generate encryption keys and keystores.
 {: shortdesc}
 
 ## Retrieving your IBM Cloud credentials
@@ -33,7 +33,7 @@ To work with the API, you need to generate your service and authentication crede
 1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token).
 2. [Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID).
 
-## Forming your key management API request
+## Forming your {{site.data.keyword.uko_full_notm}} API request
 {: #form-uko-api-request}
 
 When you make an API call to the service, structure your API request according to how you initially provisioned your instance of {{site.data.keyword.hscrypto}}.
@@ -43,7 +43,7 @@ To build your request, pair a [regional service endpoint](/docs/hs-crypto?topic=
 ```cURL
 curl -X GET \
     https://api.us-south.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
-    -H 'accept: application/vnd.ibm.collection+json' \
+    -H 'accept: application/json' \
     -H 'authorization: Bearer <access_token>' \
     -H 'bluemix-instance: <instance_ID>'
 ```
