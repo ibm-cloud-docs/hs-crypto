@@ -86,7 +86,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=met
                  {
                      "policy_type": "metrics",
                      "policy_data": {
-                         "enabled": true
+                         "enabled": false
                      }
                  }
              ]
