@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-10"
+lastupdated: "2022-02-08"
 
 keywords: troubleshoot, problems, known issues, support,help
 
@@ -41,6 +41,13 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                 </tr>
                 <tr>
                     <td><b>Bitcoin</b></td>
+                    <td>FIL</td>
+                    <td>ECDSA</td>
+                    <td>secp256k1</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td><b>Filecoin</b></td>
                     <td>BTC</td>
                     <td>ECDSA</td>
                     <td>secp256k1</td>

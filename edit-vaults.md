@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-27"
+lastupdated: "2022-02-08"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Editing vault details
 {: #edit-vaults}
 
-You can edit your vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
+You can edit your vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API. With a vault, you can not only create managed keys or target keystores, but also manage resources that are contained in the vault.
 {: shortdesc}
 
 
@@ -34,17 +34,18 @@ To edit vault details through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Vaults** from the navigation to view all the available vaults.
-3. Click the vault that you want to edit. The side panel is displayed.
+3. Click the vault that you want to edit. The Details side panel is displayed.
 4. Click **Edit** to update the **Vault name** and **Description**.
 5. Click **Save** to save the property changes.
-6. The keys and keystores that are assigned to this vault are displayed in tables. Optionally, you can add a key by clicking **Add key** under **Keys**, or add a keystore by clicking **Add keystores** under **Target keystores**.
+6. The keys and keystores that are assigned to this vault are displayed in tables. 
+7. Optionally, you can add additional keys to the vault by clicking **Add key** under **Keys**, or add a keystore by clicking **Add keystores** under **Target keystores**.
 
 
 
 ## What's next
 {: #edit-vaults-next}
 
-- To find out how to create a vault, check out [Creating vaults](/docs/hs-crypto?topic=hs-crypto-creat-vaults).
+- To find out how to create a vault, check out [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
 
 - To find out how to delete a vault, check out [Deleting vaults](/docs/hs-crypto?topic=hs-crypto-delete-vaults).
   

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-02-08"
 
 keywords: site map, doc structure, information architecture
 
@@ -1219,7 +1219,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-pricing)
 
-* [How am I charged for my use of {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs)
+* [How am I charged for my use of {{site.data.keyword.hscrypto}} standard plan?](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs)
+
+* [How am I charged for my use of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}?](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs-uko)
 
 * [Is there a free trial for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-free-trial)
 

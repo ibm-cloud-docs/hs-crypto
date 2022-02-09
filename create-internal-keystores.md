@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-27"
+lastupdated: "2022-02-08"
 
 keywords: Unified Key Orchestrator, UKO keystore, create keystore, internal keystore， KMS keystore
 
@@ -26,7 +26,7 @@ subcollection: hs-crypto
 An internal keystore is a repository that stores the cryptographic keys within your service instance. You can use {{site.data.keyword.uko_full_notm}} to create internal keystores through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
 {: shortdesc}
 
-To manage your keys, you can create up to five KMS keystores without charge. If you need to create additional keystores, you are charged $225 per calendar month for each keystore.
+You can create up to five free internal keystores to manage your keys. If you need additional keystores for cross-region key distribution or specified access permissions, you are charged. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Other currencies are applied based on the region the service instance is provisioned in.
 {: note}
 
 ## Creating internal keystores through the UI

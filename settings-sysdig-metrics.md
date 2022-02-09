@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-07"
+lastupdated: "2022-02-09"
 
 keywords: monitoring, monitor metrics
 
@@ -196,8 +196,8 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=met
                 },
                 "resources": [
                     {
-                        "type": "application/vnd.ibm.kms.policy+json",
-                        "metrics": {
+                        "policy_type": "metrics",
+                        "policy_data": {
                             "enabled": false
                         }
                     }
