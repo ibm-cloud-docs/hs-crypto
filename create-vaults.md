@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-10"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -51,7 +51,7 @@ To create a vault through the API, follow these steps:
 2. Create a vault by making a `POST` call to the following endpoint.
 
     ```
-    https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v3/vaults
+    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v3/vaults
     ```
     {: codeblock}
 
