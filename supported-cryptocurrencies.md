@@ -490,7 +490,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>THORChain</b></td>
                     <td>RUNE</td>
                     <td colspan="2">Binance BEP2 token</td>
-                    <td>No</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><b>TrueUSD</b></td>
@@ -637,7 +637,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td><b>BitTorrent</b></td>
                     <td>BTT</td>
                     <td colspan="2">Tron TRC20 token</td>
-                    <td>No</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><b>Quant</b></td>
@@ -688,7 +688,7 @@ Find the top cryptocurrencies that are supported by {{site.data.keyword.hscrypto
                     <td>AR</td>
                     <td>RSA*</td>
                     <td>4096 bit RSA</td>
-                    <td>No</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td><b>Status</b></td>
