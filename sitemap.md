@@ -1251,7 +1251,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Can I use {{site.data.keyword.hscrypto}} for applications hosted in other cloud service providers such as AWS, Azure, and GCP?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-hpcs-other-cloud-vendor)
 
-[FAQs: Performance and capacity](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-performance-capacity)
+[FAQs: {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-performance-capacity)
 
 * [How many keys can be stored in a {{site.data.keyword.hscrypto}} service instance?](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-keys-number)
 

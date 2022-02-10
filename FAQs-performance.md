@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-01-27"
+lastupdated: "2022-02-10"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -20,10 +20,10 @@ subcollection: hs-crypto
 {:support: data-reuse='support'}
 {:term: .term}
 
-# FAQs: Performance and capacity
+# FAQs: {{site.data.keyword.hscrypto}} Standard Plan
 {: #faq-performance-capacity}
 
-Read to get answers for questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} performance and capacity.
+Read to get answers for questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} Standard Plan.
 {: shortdesc}
 
 ## How many keys can be stored in a {{site.data.keyword.hscrypto}} service instance?
