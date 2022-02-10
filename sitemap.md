@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-09"
+lastupdated: "2022-02-10"
 
 keywords: site map, doc structure, information architecture
 
@@ -421,7 +421,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-provision#provision-prerequisites)
 
-* [Provisioning from the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-provision#provision-gui)
+* [Provisioning an instance of {{site.data.keyword.hscrypto}} Standard Plan from the {{site.data.keyword.cloud_notm}} UI](/docs/hs-crypto?topic=hs-crypto-provision#provision-gui)
+
+* [Provisioning an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from the {{site.data.keyword.cloud_notm}} UI](/docs/hs-crypto?topic=hs-crypto-provision#provision-gui)
 
 * [Provisioning from the {{site.data.keyword.cloud_notm}} CLI](/docs/hs-crypto?topic=hs-crypto-provision#provision-cli)
 

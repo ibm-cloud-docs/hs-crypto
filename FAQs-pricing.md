@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-09"
+lastupdated: "2022-02-10"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning and operations
 
@@ -57,7 +57,7 @@ The following example is for your reference. If you want to crypto-process 5000 
 
 Each provisioned operational crypto unit is charged $2.13 USD per hour. After you connect to an external keystore of any type, the {{site.data.keyword.uko_full_notm}} base price of $6.25 USD/hour is charged. The first five internal keystores and the very first external keystore are free of charge. Each additional connected internal or external keystore is charged with a tiered pricing starting at $225 USD per month. The cost for the connected internal and external keystores is prorated.
 
-The detailed [pricing plan](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){: external} is available for your reference.
+The detailed [pricing plan](/catalog/services/hyper-protect-crypto-services){: external} is available for your reference.
 
 The following example shows a total charge of 30 days (720 hours). The user enables two operational crypto units in the service instance, and creates 22 internal keystores and 15 external keystores. The first five internal keystores and the first exteral keystore are free of charge.
 

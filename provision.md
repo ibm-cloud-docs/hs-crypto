@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-10-26"
+  years: 2018, 2022
+lastupdated: "2022-02-10"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -29,6 +29,13 @@ You can create an instance of {{site.data.keyword.cloud_notm}} {{site.data.keywo
 You can automate the instance creation by using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).
 {: tip}
 
+{{site.data.keyword.hscrypto}} offers the following pricing plans. You can find the detailed pricing plans on the [service creation page](/catalog/services/hyper-protect-crypto-services){: external}. 
+
+* [A standard plan with the Keep Your Own Keys capability](/docs/hs-crypto?topic=hs-crypto-overview)
+* [A extended plan with both the Keep Your Own Keys and {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-overview)
+
+[Pricing samples](https://test.cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-faq-pricing) for these two plans are also available for your reference. 
+
 ## Before you begin
 {: #provision-prerequisites}
 
@@ -37,15 +44,16 @@ In order to provision a {{site.data.keyword.hscrypto}} instance, make sure that 
 1. To check your account type, go to [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/login){: external} and click **Management** > **Account** > **Account settings**.
 2. If you have a Lite account and want to use {{site.data.keyword.hscrypto}}, [upgrade your account](/docs/account?topic=account-upgrading-account) to a Pay-As-You-Go or Subscription account. You can also [apply your promo code](/docs/billing-usage?topic=billing-usage-applying-promo-codes) if you have one.
 
-## Provisioning from the {{site.data.keyword.cloud_notm}} console
+## Provisioning an instance of {{site.data.keyword.hscrypto}} Standard Plan from the {{site.data.keyword.cloud_notm}} UI
 {: #provision-gui}
 
-To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console, complete the following steps:
+To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 2. Click **Catalog** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
 3. From the Catalog navigation pane, click **Services**. And then, under **Category**, select **Security**.
 4. From the list of services displayed, click the **{{site.data.keyword.hscrypto}}** tile.
+5. On the service page, select the **Standard** pricing plan.  
 5. Fill in the form with the details that are required.
 
     - Under **Region**, select a [region](/docs/hs-crypto?topic=hs-crypto-regions) that you want to create your {{site.data.keyword.hscrypto}} resources in.
@@ -55,7 +63,8 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
     - Under **Service name**, enter a name for your service instance.
     - Under **Select a resource group**, select the resource group where you want to organize and manage your service intance. You can select the initial resource group that is named `Default` or other groups that you create. For more information, see [Creating and managing resource groups](/docs/account?topic=account-rgs).
     - Under **Tags** (Optional), add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/account?topic=account-tag).
-    - Under **Number of operational crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs. At least two crypto units are to be enabled for high availability. These crypto units are distributed among different supported availability zones in the selected region.
+    - Under **Access management tags** (Optional), add tags to resources to help organize access control relationships in the `project:analysis` format. For more information, see [Controlling access to resources by using tags](/docs/account?topic=account-access-tags-tutorial).
+    - Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs. At least two crypto units are to be enabled for high availability. These crypto units are distributed among different supported availability zones in the selected region.
     - Under **Number of cross-region failover crypto units**, select whether to enable failover crypto units that are used for an automatic restoration in case of a regional disaster.
 
       If you enable failover crypto units, set the number of failover crypto units equal to or less than the number of operational crypto units. However, to meet high availability, you need to specify at least two failover crypto units. Each failover crypto unit [is also charged](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Failover crypto units are now available in Dallas (`us-south`) and Washington DC (`us-east`), so if you create your instance in other regions such as Frankfurt (`eu-de`), this option is automatically disabled.
@@ -78,6 +87,30 @@ To provision an instance of {{site.data.keyword.hscrypto}} from the {{site.data.
     After you provision the service instance, you can still [update the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies).
     {: tip}
 
+6. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
+
+## Provisioning an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from the {{site.data.keyword.cloud_notm}} UI
+{: #provision-gui}
+
+To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
+
+1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
+2. Click **Catalog** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
+3. From the Catalog navigation pane, click **Services**. And then, under **Category**, select **Security**.
+4. From the list of services displayed, click the **{{site.data.keyword.hscrypto}}** tile.
+5. On the service page, select the **With {{site.data.keyword.uko_full_notm}}** pricing plan.  
+5. Fill in the form with the details that are required.
+
+    - Under **Region**, select a [region](/docs/hs-crypto?topic=hs-crypto-regions) that you want to create your {{site.data.keyword.hscrypto}} resources in.
+
+      Currently, the `us-south` and `us-east` regions are enabled with recovery crypto units by default, which means, when a service instance is provisioned in either regions, you are enabled with the option to back up your master keys in the recovery crypto units located in both regions. For details, see [Introducing service instance initialization modes](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit).
+
+    - Under **Service name**, enter a name for your service instance.
+    - Under **Select a resource group**, select the resource group where you want to organize and manage your service intance. You can select the initial resource group that is named `Default` or other groups that you create. For more information, see [Creating and managing resource groups](/docs/account?topic=account-rgs).
+    - Under **Tags** (Optional), add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/account?topic=account-tag).
+    - Under **Access management tags** (Optional), add tags to resources to help organize access control relationships in the `project:analysis` format. For more information, see [Controlling access to resources by using tags](/docs/account?topic=account-access-tags-tutorial).
+    - Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs. At least two crypto units are to be enabled for high availability. These crypto units are distributed among different supported availability zones in the selected region.
+ 
 6. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 
 ## Provisioning from the {{site.data.keyword.cloud_notm}} CLI
