@@ -44,7 +44,12 @@ In order to provision a {{site.data.keyword.hscrypto}} instance, make sure that 
 1. To check your account type, go to [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/login){: external} and click **Management** > **Account** > **Account settings**.
 2. If you have a Lite account and want to use {{site.data.keyword.hscrypto}}, [upgrade your account](/docs/account?topic=account-upgrading-account) to a Pay-As-You-Go or Subscription account. You can also [apply your promo code](/docs/billing-usage?topic=billing-usage-applying-promo-codes) if you have one.
 
-## Provisioning an instance of {{site.data.keyword.hscrypto}} Standard Plan from the {{site.data.keyword.cloud_notm}} UI
+## Provisioning an instance of {{site.data.keyword.hscrypto}} Standard Plan
+{: #provision-standard}
+
+You can provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from either the {{site.data.keyword.cloud_notm}} UI or CLI.
+
+### From the {{site.data.keyword.cloud_notm}} UI
 {: #provision-gui}
 
 To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
@@ -89,34 +94,10 @@ To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from th
 
 6. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 
-## Provisioning an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from the {{site.data.keyword.cloud_notm}} UI
-{: #provision-gui}
-
-To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
-
-1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
-2. Click **Catalog** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
-3. From the Catalog navigation pane, click **Services**. And then, under **Category**, select **Security**.
-4. From the list of services displayed, click the **{{site.data.keyword.hscrypto}}** tile.
-5. On the service page, select the **With {{site.data.keyword.uko_full_notm}}** pricing plan.  
-5. Fill in the form with the details that are required.
-
-    - Under **Region**, select a [region](/docs/hs-crypto?topic=hs-crypto-regions) that you want to create your {{site.data.keyword.hscrypto}} resources in.
-
-      Currently, the `us-south` and `us-east` regions are enabled with recovery crypto units by default, which means, when a service instance is provisioned in either regions, you are enabled with the option to back up your master keys in the recovery crypto units located in both regions. For details, see [Introducing service instance initialization modes](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit).
-
-    - Under **Service name**, enter a name for your service instance.
-    - Under **Select a resource group**, select the resource group where you want to organize and manage your service intance. You can select the initial resource group that is named `Default` or other groups that you create. For more information, see [Creating and managing resource groups](/docs/account?topic=account-rgs).
-    - Under **Tags** (Optional), add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/account?topic=account-tag).
-    - Under **Access management tags** (Optional), add tags to resources to help organize access control relationships in the `project:analysis` format. For more information, see [Controlling access to resources by using tags](/docs/account?topic=account-access-tags-tutorial).
-    - Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs. At least two crypto units are to be enabled for high availability. These crypto units are distributed among different supported availability zones in the selected region.
- 
-6. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
-
-## Provisioning from the {{site.data.keyword.cloud_notm}} CLI
+### From the {{site.data.keyword.cloud_notm}} CLI
 {: #provision-cli}
 
-To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.keyword.cloud_notm}} CLI, complete the following steps:
+To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan with the {{site.data.keyword.cloud_notm}} CLI, complete the following steps:
 
 1. Download and install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external}.
 2. Log in to {{site.data.keyword.cloud_notm}} through the {{site.data.keyword.cloud_notm}} CLI with the following command:
@@ -207,6 +188,35 @@ To provision an instance of {{site.data.keyword.hscrypto}} with the {{site.data.
     ibmcloud resource service-instances
     ```
     {: pre}
+
+## Provisioning an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} 
+{: #provision-uko}
+
+You can provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from either the {{site.data.keyword.cloud_notm}} UI or CLI.
+
+### From the {{site.data.keyword.cloud_notm}} UI
+{: #provision-uko-gui}
+
+To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
+
+1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
+2. Click **Catalog** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
+3. From the Catalog navigation pane, click **Services**. And then, under **Category**, select **Security**.
+4. From the list of services displayed, click the **{{site.data.keyword.hscrypto}}** tile.
+5. On the service page, select the **With {{site.data.keyword.uko_full_notm}}** pricing plan.  
+5. Fill in the form with the details that are required.
+
+    - Under **Region**, select a [region](/docs/hs-crypto?topic=hs-crypto-regions) that you want to create your {{site.data.keyword.hscrypto}} resources in.
+
+      Currently, the `us-south` and `us-east` regions are enabled with recovery crypto units by default, which means, when a service instance is provisioned in either regions, you are enabled with the option to back up your master keys in the recovery crypto units located in both regions. For details, see [Introducing service instance initialization modes](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit).
+
+    - Under **Service name**, enter a name for your service instance.
+    - Under **Select a resource group**, select the resource group where you want to organize and manage your service intance. You can select the initial resource group that is named `Default` or other groups that you create. For more information, see [Creating and managing resource groups](/docs/account?topic=account-rgs).
+    - Under **Tags** (Optional), add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/account?topic=account-tag).
+    - Under **Access management tags** (Optional), add tags to resources to help organize access control relationships in the `project:analysis` format. For more information, see [Controlling access to resources by using tags](/docs/account?topic=account-access-tags-tutorial).
+    - Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs. At least two crypto units are to be enabled for high availability. These crypto units are distributed among different supported availability zones in the selected region.
+ 
+6. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 
 ## What's next
 {: #provision-next}
