@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Editing vault details
 {: #edit-vaults}
 
-You can edit your vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API. With a vault, you can not only create managed keys or target keystores, but also manage resources that are contained in the vault.
+You can edit your vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API. With a vault, you can not only create managed keys or target keystores, but also manage resources that are contained in the vault.
 {: shortdesc}
 
 

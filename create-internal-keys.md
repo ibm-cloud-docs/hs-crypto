@@ -24,7 +24,7 @@ subcollection: hs-crypto
 # Creating managed keys
 {: #create-internal-keys}
 
-You can use {{site.data.keyword.uko_full_notm}} to create KMS keys through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
+You can use {{site.data.keyword.uko_full_notm}} to create KMS keys through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 To protect your privacy, do not store your personal data as metadata for your key.

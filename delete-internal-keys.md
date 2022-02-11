@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Deleting managed keys
 {: #delete-internal-keys}
 
-You can delete your managed keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API. 
+You can delete your managed keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 When you delete a managed key, the key is to be uninstalled from all target keystores and all key materials and the metadata are destroyed permenantly.

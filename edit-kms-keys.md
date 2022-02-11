@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Editing key details
 {: #edit-kms-keys}
 
-You can edit your keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
+You can edit your keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 
