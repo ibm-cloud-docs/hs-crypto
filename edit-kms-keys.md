@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-11"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -44,8 +44,8 @@ To edit the details of a managed key through the UI, complete the following step
     | Key name             | A unique, human-readable name for easy identification of your key, with 2 - 100 characters in length. |
     | Description          | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | State                | _Pre-active_ keys are not to be installed in target keystores until they are activated. _Active_ keys are to be automatically installed in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states) |
-    | Activation date      | (For _Pre-active_ keys) Set the date when the _Pre-active_ key gets activated. You can also manually activate the key later. |
-    | Deactivation date    | (Optional) Set the date when the key gets expired. After the expiration date, the key moves into the _Deactivated_ state. |
+    | Activation date      | (For _Pre-active_ keys) Plan a date to activate the _pre-active_ key. No automatic state change is triggered. |
+    | Expiration date      | Plan a date to deactivate the key. No automatic state change is triggered. |
     {: caption="Table 1. Key properties" caption-side="bottom"}
 
     You can edit one property card at a time. To make changes to another property card, save your changes first.
@@ -65,9 +65,9 @@ You can search for a specific key by using the search bar, or filter keys based 
 ## What's next
 {: #edit-kms-keys-next}
 
-- To find out instructions on creating a key, check out [Creating internal keys](/docs/hs-crypto?topic=hs-crypto-create-internal-keys) or [Creating and storing external keys](/docs/hs-crypto?topic=hs-crypto-create-external-keys).
+- To find out instructions on creating a managed key, check out [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-internal-keys).
   
-- To find out instructions on deleting a key, check out [Deleting internal keys](/docs/hs-crypto?topic=hs-crypto-delete-internal-keys) or [Deleting external keys](/docs/hs-crypto?topic=hs-crypto-delete-external-keys).
+- To find out instructions on deleting a managed key, check out [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-internal-keys).
   
 - To find out how to install an existing key to a keystore, check out [Installing existing keys to keystores](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
 

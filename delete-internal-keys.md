@@ -29,7 +29,6 @@ You can delete your managed keys in {{site.data.keyword.uko_full_notm}} through 
 When you delete a managed key, the key is to be uninstalled from all target keystores and all key materials and the metadata are destroyed permenantly.
 
 
-
 ## Deleting managed keys through the UI
 {: #delete-internal-keys-ui}
 
@@ -43,7 +42,7 @@ Follow these steps to complete the process:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
-3. If the key that you want to delete is in _active_ state, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Deactivated** to deactivate the key first.
+3. If the managed key that you want to delete is in _active_ state, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Deactivated** to deactivate the key first.
 
    When you change the _active_ key to _deactivated_ state, the key is uninstalled from all the target keystores, and all associated {{site.data.keyword.cloud_notm}} resources are not accessible.
     {: important}
@@ -56,7 +55,7 @@ Follow these steps to complete the process:
 5. Click **Destroy key** to confirm.
 6. To remove the key and the metadata from the vault, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**.
    
-   When you remove the key from the vault that the key is assigned to, the remaining key metadata is removed permenantly. 
+   When you remove the managed key from the vault that the key is assigned to, the remaining key metadata is removed permenantly. 
     {: important}
 
 The managed key has been deleted and uninstalled from all target keystores. All key materials and metadata have been destroyed. 
@@ -71,7 +70,7 @@ The managed key has been deleted and uninstalled from all target keystores. All 
 ## What's next
 {: #delete-internal-keys-next}
 
-- To find out instructions on creating a key, check out [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-internal-keys) or [Creating and storing external keys](/docs/hs-crypto?topic=hs-crypto-create-external-keys).
+- To find out instructions on creating a managed key, check out [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-internal-keys).
   
 - To find out how to delete an internal keystore, check out [Deleting internal keystores](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores).
 

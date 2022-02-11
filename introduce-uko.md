@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-11"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -137,9 +137,13 @@ All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}. When
 ## What's next
 {: #uko-next}
 
-- To find out instruction on managing keystores, check out [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Managing external keystores](/docs/hs-crypto?topic=hs-crypto-manage-external-keystores).
-- To find out more about managing keys in vaults, check out [Viewing managed resources in a vault](/docs/hs-crypto?topic=hs-crypto-view-resources-vault).
-- To find out more about the UKO API, see [UKO API reference](/apidocs/uko) {: external}.
+- To find out instructions on creating a managed key, check out [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-internal-keys).
+
+- To find out instructions on adding a keystore, check out [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
+
+- To find out how to grant access to vaults, see [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults).
+
+- To find out more about the UKO API, see [{{site.data.keyword.uko_full_notm}} API reference](/apidocs/uko){: external}.
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-27"
+lastupdated: "2022-02-11"
 
 keywords: Unified Key Orchestrator, install keys, key management, kms keys
 
@@ -53,9 +53,9 @@ To install an existing key to target keystores through the UI, complete the foll
 ## What's next
 {: #install-key-keystores-next}
 
-- To find out instructions on creating a key, check out [Creating internal keys](/docs/hs-crypto?topic=hs-crypto-create-internal-keys) or [Creating and storing external keys](/docs/hs-crypto?topic=hs-crypto-create-external-keys).
+- To find out instructions on creating a managed key, check out [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-internal-keys).
   
-- To find out instructions on editing a key, check out [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
+- To find out instructions on editing a managed key, check out [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
   
 - To find out more about managing your key list, check out [Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list) or [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
 
