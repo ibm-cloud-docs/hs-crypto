@@ -142,8 +142,8 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 {: class="comparison-tab-table"}
 
 | Action | Vault Key Custodian | Vault Key Approver | Vault Key Admin | Vault Key Auditor |
-|-----|-----|-----|-----|----|-----|
-| Create a key. | | | | |
+|-----|-----|-----|-----|----|
+| Create a key. | | | | | 
 | Retrieve a key. | | | | |
 | Retrieve key metadata. | | | | |
 | Retrieve key total. | | | | |
