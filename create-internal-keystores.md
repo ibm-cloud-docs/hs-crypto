@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-11"
 
 keywords: Unified Key Orchestrator, UKO keystore, create keystore, internal keystore， KMS keystore
 
@@ -47,7 +47,7 @@ To create an internal KMS keystore through the UI, complete the following steps:
 
    If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
 
-5. Under **Keystore type**, select **Internal KMS** and click **Next**.
+5. Under **Keystore type**, select **KMS Keystore** and click **Next**.
 6. Under **Keystore properties**, enter a name in **Keystore name**. The keystore name can be of 2 to 100 characters. Optionally, you can add an extended description to your keystore in the **Description** section. And then, click **Next**.
 7. Under **Summary**, you can view the summary of the keystore that you create, including the keystore type, the assigned vault, and general properties. 
 8. After you confirm the keystore details, click **Create keystore** to create the keystore.

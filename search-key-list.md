@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-27"
+lastupdated: "2022-02-11"
 
 keywords: Unified Key Orchestrator, search keys, key management, kms keys
 
@@ -45,7 +45,7 @@ To filter keys through the UI, complete the following steps:
     | Activation           | Set a date range of when the key gets activated. A _Pre-active_ key is to be activated on the activation date. |
     | Expiration           | Set a date range of when the key gets expired. After the expiration date, the key automatically moves into the _Deactivated_ state.  |
     | Creation             | Set a date range of when the key was created.             |
-    | Last updated         | The date and time that the key was last updated. This field gets updated when the key is created, rotated, or any part of the key metadata is modified.   |
+    | Keystores            | The keystores that the key is installed in.               |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Minimum key length   | The minimum number of bits that represents the encryption strength of the key.   |
     | Maximum key length   | The maximum number of bits that represents the encryption strength of the key.   |

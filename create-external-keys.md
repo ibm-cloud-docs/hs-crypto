@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-27"
+lastupdated: "2022-02-11"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -37,12 +37,12 @@ To create an external key through the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
-3. To create a key, click **Add key**.
+3. To create a key, click **Create key**.
 4. Under **Vault**, select a vault for the key for access control, and click **Next**. 
 
    If you want to assign the key to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
 
-5. Under **Keystore type**, select **AWS Key Management Service**, **Azure Key Vault**, or **IBM Key Protect**, depending on which type of external keystore you want to install the key in. And then, click **Next**.
+5. Under **Keystore type**, select **AWS Key Management Service**, **Azure Key Vault**, **IBM Key Protect**, or **IBM KMS**, depending on which type of external keystore you want to install the key in. And then, click **Next**.
 
    After a keystore type is selected, you can install the key to keystores of this type only.
    {: note}
