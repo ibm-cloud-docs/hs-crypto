@@ -22,7 +22,7 @@ subcollection: hs-crypto
 
 
 # Creating managed keys
-{: #create-internal-keys}
+{: #create-managed-keys}
 
 You can use {{site.data.keyword.uko_full_notm}} to create KMS keys through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
@@ -31,7 +31,7 @@ To protect your privacy, do not store your personal data as metadata for your ke
 {: important}
 
 ## Creating managed keys through the UI
-{: #create-internal-keys-ui}
+{: #create-managed-keys-ui}
 
 To create a managed key through the UI, complete the following steps:
 
@@ -72,7 +72,7 @@ You have successfully created a managed key.
 
 
 ## Creating managed keys with the API
-{: #create-internal-keys-api}
+{: #create-managed-keys-api}
 
 
 
@@ -80,11 +80,11 @@ You have successfully created a managed key.
 
 
 ## What's next
-{: #create-internal-keys-next}
+{: #create-managed-keys-next}
 
 - To find out instructions on editing a managed key, check out [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
   
 - To find out more about managing your key list, check out [Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list) or [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
   
-- To find out instructions on deleting a managed key, check out [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-internal-keys).
+- To find out instructions on deleting a managed key, check out [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys).
 

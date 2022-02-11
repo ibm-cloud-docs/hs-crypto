@@ -53,7 +53,7 @@ To install an existing key to target keystores through the UI, complete the foll
 ## What's next
 {: #install-key-keystores-next}
 
-- To find out instructions on creating a managed key, check out [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-internal-keys).
+- To find out instructions on creating a managed key, check out [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys).
   
 - To find out instructions on editing a managed key, check out [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
   

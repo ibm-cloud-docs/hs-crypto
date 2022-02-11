@@ -32,7 +32,7 @@ For more information about granting access, see [Granting access to vaults](/doc
 ## Creating vaults through the UI
 {: #create-vaults-ui}
 
-To create a vault through the UI, complete the following steps through the **Vaults** page. Optionally, you can create a vault when you [create a key](/docs/hs-crypto?topic=hs-crypto-create-internal-keys) or [add a keystore](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores).
+To create a vault through the UI, complete the following steps through the **Vaults** page. Optionally, you can create a vault when you [create a managed key](/docs/hs-crypto?topic=hs-crypto-create-managed-keys) or [add a keystore](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores).
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Vaults** from the navigation to view all the available vaults.

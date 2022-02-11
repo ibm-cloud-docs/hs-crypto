@@ -21,7 +21,7 @@ subcollection: hs-crypto
 
 
 # Deleting managed keys
-{: #delete-internal-keys}
+{: #delete-managed-keys}
 
 You can delete your managed keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
@@ -30,7 +30,7 @@ When you delete a managed key, the key is to be uninstalled from all target keys
 
 
 ## Deleting managed keys through the UI
-{: #delete-internal-keys-ui}
+{: #delete-managed-keys-ui}
 
 To delete a key in _active_ state, you need to first deactivate the key, and then destroy the key and remove it from the vault. 
 
@@ -62,15 +62,15 @@ The managed key has been deleted and uninstalled from all target keystores. All 
 
 
 ## Deleting managed keys with the API
-{: #delete-internal-keys-api}
+{: #delete-managed-keys-api}
 
 
 
 
 ## What's next
-{: #delete-internal-keys-next}
+{: #delete-managed-keys-next}
 
-- To find out instructions on creating a managed key, check out [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-internal-keys).
+- To find out instructions on creating a managed key, check out [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys).
   
 - To find out how to delete an internal keystore, check out [Deleting internal keystores](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores).
 
