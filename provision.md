@@ -33,6 +33,7 @@ You can automate the instance creation by using Terraform. For more information,
 
 * [A standard plan with the Keep Your Own Key capability](/docs/hs-crypto?topic=hs-crypto-overview)
 * [A extended plan with both the Keep Your Own Key and {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-overview)
+    For the pricing plan with {{site.data.keyword.uko_full_notm}}, recovering your service instance through failover crypto units from another region is not currently supported.
 
 [Pricing samples](https://test.cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-faq-pricing) for these two plans are also available for your reference. 
 
@@ -49,7 +50,7 @@ In order to provision a {{site.data.keyword.hscrypto}} instance, make sure that 
 
 You can provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from either the {{site.data.keyword.cloud_notm}} UI or CLI.
 
-### From the {{site.data.keyword.cloud_notm}} UI
+### Using the {{site.data.keyword.cloud_notm}} UI
 {: #provision-gui}
 
 To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
@@ -94,7 +95,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from th
 
 6. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 
-### From the {{site.data.keyword.cloud_notm}} CLI
+### Using the {{site.data.keyword.cloud_notm}} CLI
 {: #provision-cli}
 
 To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan with the {{site.data.keyword.cloud_notm}} CLI, complete the following steps:
@@ -194,7 +195,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan with th
 
 You can provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from either the {{site.data.keyword.cloud_notm}} UI or CLI.
 
-### From the {{site.data.keyword.cloud_notm}} UI
+### Using the {{site.data.keyword.cloud_notm}} UI
 {: #provision-uko-gui}
 
 To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
@@ -218,10 +219,89 @@ To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyw
  
 6. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 
+### Using the {{site.data.keyword.cloud_notm}} CLI
+{: #provision-uko-cli}
+
+To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from the {{site.data.keyword.cloud_notm}} CLI, complete the following steps:
+
+1. Download and install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external}.
+2. Log in to {{site.data.keyword.cloud_notm}} through the {{site.data.keyword.cloud_notm}} CLI with the following command:
+
+    ```sh
+    ibmcloud login
+    ```
+    {: pre}
+
+    If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the CLI output to generate a one-time passcode.
+    {: tip}
+
+3. Select the region and resource group where you want to create a {{site.data.keyword.hscrypto}} service instance. You can use the following command to set your target region and resource group.
+
+    ```sh
+    ibmcloud target -r <region_name> -g <resource_group_name>
+    ```
+    {: pre}
+
+    Replace the variables in the sample command according to the following table.
+
+    <table>
+      <tr>
+        <th>Variables</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>region_name</td>
+        <td>The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions">Regional service endpoints</a>.</td>
+      </tr>
+      <tr>
+        <td>resource_group_name</td>
+        <td>The resource group where you organize and manage the instance. You can select the initial resource group that is named <code>Default</code> or other groups that you create. For more information, see <a href="/docs/account?topic=account-rgs">Creating and managing resource groups</a>.</td>
+      </tr>
+      <caption>Table 3. Describes command variables to set the target region and resource group for a {{site.data.keyword.hscrypto}} instance with {{site.data.keyword.uko_full_notm}}</caption>
+    </table>
+
+4. Run the following command to create a {{site.data.keyword.hscrypto}} instance:
+
+    ```sh
+    ibmcloud resource service-instance-create <instance_name> hs-crypto standard <region_name> [-p '{"units": <number_of_operational_crypto_units>']
+    ```
+    {: pre}
+
+    Replace the variables in the example command according to the following table.
+
+    <table>
+      <tr>
+        <th>Variables</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>instance_name</td>
+        <td>Mandatory. The name of your {{site.data.keyword.hscrypto}} service instance.</td>
+      </tr>
+      <tr>
+        <td>region_name</td>
+        <td><p>Mandatory. The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions">Regional service endpoints</a>.</p>
+        <p>Currently, the <code>us-south</code> and <code>us-east</code> regions are enabled with recovery crypto units by default, which means, when a service instance is provisioned in either regions, you are enabled with the option to back up your master keys in the recovery crypto units located in both regions. For details, see <a href="/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit">Introducing service instance initialization modes</a>.</p></td>
+      </tr>
+      <tr>
+        <td>number_of_operational_crypto_units</td>
+        <td><p>Optional. Multiple crypto units are distributed among different supported availability zones in the selected region to increase availability.</p>
+        <p>At least two crypto units are to be enabled for high availability. If you do not specify the number of crypto units, two crypto units are assigned by default.</p></td>
+      </tr>
+      <caption>Table 4. Describes command variables to create a {{site.data.keyword.hscrypto}} instance with {{site.data.keyword.uko_full_notm}}</caption>
+    </table>
+
+5. Verify that the service instance is created successfully. Run the following command to get all the service instances that you create. Check whether the {{site.data.keyword.hscrypto}} service instance is among the list.
+
+    ```sh
+    ibmcloud resource service-instances
+    ```
+    {: pre}
+
 ## What's next
 {: #provision-next}
 
 * Initialize your service instance with the [{{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) or the [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) so that {{site.data.keyword.hscrypto}} can provide key management and data management functions.
-* To find out more about programmatically managing your keys, check out the [{{site.data.keyword.hscrypto}} key management API reference doc](/apidocs/hs-crypto){: external}.
+* To find out more about programmatically managing your keys, check out the [{{site.data.keyword.hscrypto}} key management API reference doc](/apidocs/hs-crypto){: external} or [{{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external}.
 * To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 * If you need to delete your service instance, see [Deleting service instances](/docs/hs-crypto?topic=hs-crypto-delete-instance) for instructions.
