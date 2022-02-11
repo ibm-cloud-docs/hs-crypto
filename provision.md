@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-10"
+lastupdated: "2022-02-11"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -31,8 +31,8 @@ You can automate the instance creation by using Terraform. For more information,
 
 {{site.data.keyword.hscrypto}} offers the following pricing plans. You can find the detailed pricing plans on the [service creation page](/catalog/services/hyper-protect-crypto-services){: external}. 
 
-* [A standard plan with the Keep Your Own Keys capability](/docs/hs-crypto?topic=hs-crypto-overview)
-* [A extended plan with both the Keep Your Own Keys and {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-overview)
+* [A standard plan with the Keep Your Own Key capability](/docs/hs-crypto?topic=hs-crypto-overview)
+* [A extended plan with both the Keep Your Own Key and {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-overview)
 
 [Pricing samples](https://test.cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-faq-pricing) for these two plans are also available for your reference. 
 
