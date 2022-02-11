@@ -78,7 +78,7 @@ To connect to an external keystore through the UI, complete the following steps:
     | Secret access key on AWS    | Part of your access key for AWS. The secret access key is available for download only when you create it.     |
     {: #table-2}
     {: caption="Table 2. AWS Key Management Service properties" caption-side="bottom"}
-    {: tab-title="AWS Key Management Service properties"}
+    {: tab-title="AWS KMS properties"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
 

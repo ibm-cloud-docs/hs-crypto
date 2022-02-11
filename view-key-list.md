@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Viewing a list of keys
 {: #view-key-list}
 
-You can view a list of your internal keys and external keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can view a list of your managed keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 

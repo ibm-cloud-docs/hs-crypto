@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Filtering and searching keys
 {: #search-key-list}
 
-You can filter and search for your internal keys and external keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can filter and search for your managed keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 

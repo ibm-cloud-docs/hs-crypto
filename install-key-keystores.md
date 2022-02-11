@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Installing existing keys to keystores
 {: #install-key-keystores}
 
-You can use a key for encryption and decryption only after it is installed in at least one keystore. You can install existing keys in {{site.data.keyword.uko_full_notm}} to target keystores through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
+You can use a managed key for encryption and decryption only after it is installed in at least one keystore. You can install existing keys in {{site.data.keyword.uko_full_notm}} to target keystores through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 
