@@ -423,8 +423,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Provisioning an instance of {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-provision#provision-standard)
 
-* [Provisioning an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-provision#provision-uko)
-
 * [What's next](/docs/hs-crypto?topic=hs-crypto-provision#provision-next)
 
 
