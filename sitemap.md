@@ -1221,8 +1221,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [How am I charged for my use of {{site.data.keyword.hscrypto}} standard plan?](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs)
 
-* [How am I charged for my use of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}?](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs-uko)
-
 * [Is there a free trial for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-free-trial)
 
 [FAQs: Provisioning and operations](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-provisioning-operations)
