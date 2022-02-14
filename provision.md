@@ -188,8 +188,6 @@ To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan with th
     ```
     {: pre}
 
-
-
 ## What's next
 {: #provision-next}
 
