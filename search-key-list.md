@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-27"
+lastupdated: "2022-02-14"
 
 keywords: Unified Key Orchestrator, search keys, key management, kms keys
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Filtering and searching keys
 {: #search-key-list}
 
-You can filter and search for your internal keys and external keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.hscrypto}} key management API.
+You can filter and search for your managed keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 
@@ -41,15 +41,15 @@ To filter keys through the UI, complete the following steps:
 
     |       Property	     |                         Description                       |
     |----------------------|-----------------------------------------------------------|
-    | Vault                | The vault that controls the access to the key.            |
-    | Activation           | Set a date range of when the key gets activated. A _Pre-active_ key is to be activated on the activation date. |
-    | Expiration           | Set a date range of when the key gets expired. After the expiration date, the key automatically moves into the _Deactivated_ state.  |
+    | Vault                | The vault that controls access to the key.            |
+    | Activation           | Set a date range of when you activate the key.  |
+    | Expiration           | Set a date range of when you deactivate the key.  |
     | Creation             | Set a date range of when the key was created.             |
-    | Last updated         | The date and time that the key was last updated. This field gets updated when the key is created, rotated, or any part of the key metadata is modified.   |
+    | Keystores            | The keystores that the key is installed in.               |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Minimum key length   | The minimum number of bits that represents the encryption strength of the key.   |
     | Maximum key length   | The maximum number of bits that represents the encryption strength of the key.   |
-    | State                | Key states include _Pre-active, Active, Deactivated,_ and _Destroyed._ For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
+    | State                | Key states include _Pre-active_, _Active_, _Deactivated_, and _Destroyed_. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
     {: caption="Table 1. Filter managed keys" caption-side="bottom"}
 
 
@@ -77,8 +77,8 @@ To search for a key through the UI, complete the following steps:
 
 - To find out more about managing your key list, check out [Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list).
   
-- To find out instructions on editing a key, check out [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
+- To find out instructions on editing a managed key, check out [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
 
 - To find out how to install an existing key to a keystore, check out [Installing existing keys to keystores](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
 
-- To find out instructions on deleting a key, check out [Deleting internal keys](/docs/hs-crypto?topic=hs-crypto-delete-internal-keys) or [Deleting external keys](/docs/hs-crypto?topic=hs-crypto-delete-external-keys).
+- To find out instructions on deleting a managed key, check out [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys).

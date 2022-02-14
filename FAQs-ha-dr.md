@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-05-17"
+  years: 2020, 2022
+lastupdated: "2022-02-10"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, HA, DR, high availability, disaster recovery
 
@@ -51,7 +51,9 @@ You need to back up only your master key parts and signature keys for service in
 {: faq}
 {: support}
 
-For cross-region data restores, you need to open an IBM support ticket so that IBM can restore the service instance for you. For more information, see [Restoring your data from another region](/docs/hs-crypto?topic=hs-crypto-restore-data).
+For cross-region data restores of Standard Plan instances, you can restore your data by using failover crypto units or open an IBM support ticket so that IBM can restore the service instance for you. For more information, see [Restoring your data from another region](/docs/hs-crypto?topic=hs-crypto-restore-data). 
+
+For the plan with {{site.data.keyword.uko_full_notm}}, currently you can only open an IBM support ticket so that IBM can restore the service instance.
 
 ## What happens if I delete my service instances?
 {: #faq-delete-instance}

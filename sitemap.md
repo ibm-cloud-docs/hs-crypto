@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-09"
+lastupdated: "2022-02-14"
 
 keywords: site map, doc structure, information architecture
 
@@ -122,11 +122,11 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-next)
 
 
-## Understanding Hyper Protect Crypto Services
-{: #sitemap_understanding_hyper_protect_crypto_services}
+## Understanding Hyper Protect Crypto Services Standard Plan
+{: #sitemap_understanding_hyper_protect_crypto_services_standard_plan}
 
 
-[Overview](/docs/hs-crypto?topic=hs-crypto-overview#overview)
+[Overview - {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-overview#overview)
 
 * [Why {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-overview#why_hpcs)
 
@@ -136,7 +136,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-overview#overview-next)
 
-[Service architecture](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation#architecture-workload-isolation)
+[Service architecture - {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation#architecture-workload-isolation)
 
 * [{{site.data.keyword.hscrypto}} architecture](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation#architecture)
 
@@ -144,7 +144,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Service dependencies](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation#service_dependencies)
 
-[Use cases](/docs/hs-crypto?topic=hs-crypto-use-cases#use-cases)
+[Use cases - {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-use-cases#use-cases)
 
 * [Pervasively protecting data at rest in the cloud](/docs/hs-crypto?topic=hs-crypto-use-cases#data-at-rest-encryption)
 
@@ -421,9 +421,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-provision#provision-prerequisites)
 
-* [Provisioning from the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-provision#provision-gui)
+* [Provisioning an instance of {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-provision#provision-standard)
 
-* [Provisioning from the {{site.data.keyword.cloud_notm}} CLI](/docs/hs-crypto?topic=hs-crypto-provision#provision-cli)
+* [Provisioning an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-provision#provision-uko)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-provision#provision-next)
 
@@ -484,8 +484,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key#signing-service-whats-next)
 
 
-## Managing keys
-{: #sitemap_managing_keys}
+## Managing keys - Standard Plan
+{: #sitemap_managing_keys_-_standard_plan}
 
 
 
@@ -918,8 +918,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-next)
 
 
-## Enhancing security
-{: #sitemap_enhancing_security}
+## Enhancing security - Standard Plan
+{: #sitemap_enhancing_security_-_standard_plan}
 
 
 [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access#manage-access)
@@ -1108,7 +1108,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Provisioning and initializing service instances with Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs){: external}
 
-[Managing key management service keys with Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: external}
+[Managing key management service keys with Terraform - Standard Plan only](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: external}
 
 
 ## Regions and locations
@@ -1221,8 +1221,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [How am I charged for my use of {{site.data.keyword.hscrypto}} standard plan?](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs)
 
-* [How am I charged for my use of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}?](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs-uko)
-
 * [Is there a free trial for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-free-trial)
 
 [FAQs: Provisioning and operations](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-provisioning-operations)
@@ -1251,7 +1249,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Can I use {{site.data.keyword.hscrypto}} for applications hosted in other cloud service providers such as AWS, Azure, and GCP?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-hpcs-other-cloud-vendor)
 
-[FAQs: Performance and capacity](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-performance-capacity)
+[FAQs: {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-performance-capacity)
 
 * [How many keys can be stored in a {{site.data.keyword.hscrypto}} service instance?](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-keys-number)
 

@@ -26,7 +26,7 @@ toc:
               label: "Video: Initializing Hyper Protect Crypto Services with smart cards"
               href: https://mediacenter.ibm.com/media/1_lo2fmwbb
       - topicgroup:
-          label: Understanding Hyper Protect Crypto Services
+          label: Understanding Hyper Protect Crypto Services Standard Plan
           links:
           - link:
               label: "Video: IBM Cloud Hyper Protect Crypto Services overview"
@@ -34,7 +34,7 @@ toc:
           topics:
           - overview.md
           - architecture-workload-isolation.md
-          - use_case.md
+          - use-case.md
           - data-security.md
           - hs-crypto-concepts.md
           - topicgroup:
@@ -117,7 +117,7 @@ toc:
           - initialize-hsm-cli.md
           - signing-service.md
       - topicgroup:
-          label: Managing keys
+          label: Managing keys - Standard Plan
           topics:
           - topicgroup:
             label: Managing instance policies
@@ -179,7 +179,7 @@ toc:
       - delete-instance.md
       - restore-data.md
       - topicgroup:
-          label: Enhancing security
+          label: Enhancing security - Standard Plan
           topics:
           - manage-access.md
           - grant-access-keys.md
@@ -224,7 +224,7 @@ toc:
               label: Provisioning and initializing service instances with Terraform
               href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs
           - link:
-              label: Managing key management service keys with Terraform
+              label: Managing key management service keys with Terraform - Standard Plan only
               href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key
       - regions.md
       - tke-paper.md

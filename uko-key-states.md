@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-01-10"
+lastupdated: "2022-02-14"
 
-keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator
+keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator, UKO keys
 
 subcollection: hs-crypto
 
@@ -32,34 +32,32 @@ subcollection: hs-crypto
 ## Key states and transitions
 {: #uko-key-transitions}
 
-Cryptographic keys, in their lifetime, transition through several states that are a function of how long the keys are in existence and whether data is protected.
+Managed keys in {{site.data.keyword.uko_full_notm}} transition through several states that indicate how long the keys are in existence and whether data is protected.
 
-The following diagram shows how a key passes through states between the generation and the destruction.
+The following diagram shows how a managed key passes through states between the generation and the destruction.
 
 ![Key states and transitions](/images/uko-key-states.svg "Key states and transitions"){: caption="Figure 1. Key states and transitions" caption-side="bottom"}
 
-
-
+The following table shows the details of each key state.
 
 | State       | Integer mapping | Description |
 |-------------|-----------------|-------------|
-| Pre-active  |        0        | A _Pre-active_ key is a created key that is not yet installed into keystores and is therefore not available for use by applications. New keys are initially created in the _Pre-active_ state. |
-| Active      |        1        | An _Active_ key is installed in keystores and is available for use by applications. _Pre-Active_ keys are automatically moved to the _Active_ state upon the activation date or if they are manually activated. Keys that are created without an activation date become active immediately. |
-| Deactivated |        3        | A _Deactivated_ key is no longer allowed for operations that generate new cryptographic data, such as encryption or signing, but can still be used for operations on existing data to do decryption or signature verification. _Active_ keys are automatically moved to the _Deactivated_ state upon the expiration date or if they are manually deactivated. |
-| Destroyed   |        5        | A _Destroyed_ key is a key record for which the actual key material has been permanently erased. The record of the key is retained to be available for later queries or audits until you manually remove the key from the vault. Keys in the _Destroyed_ state cannot be restored. |
+| Pre-active  |        0        | A _pre-active_ key is not yet installed into target keystores and is therefore not available for use by applications. New keys are initially created in the _Pre-active_ state. |
+| Active      |        1        | An _active_ key is installed in target keystores and is available for use by applications. You can set a key to the _Active_ state when you create the key, or manually activate a _pre-active_ key later. |
+| Deactivated |        3        | A _deactivated_ key is no longer allowed for operations that generate new cryptographic data, such as encryption or signing, but can still be used for operations on existing data to do decryption or signature verification. When you deactivate a key, the key is uninstalled from all the target keystores, and all associated {{site.data.keyword.cloud_notm}} resources are not accessible. |
+| Destroyed   |        5        | A _destroyed_ key is a key record for which the actual key material has been permanently erased. The record of the key is retained to be available for later queries or audits until you manually remove the key from the vault. Keys in the _destroyed_ state cannot be restored. |
 {: caption="Table 1. Key states and transitions" caption-side="bottom"}
 
 
 ## Key states and service actions
 {: #uko-key-states-service-actions}
 
-Key states affect whether an action that you perform on a key succeeds or fails. For example, if a key is in the _Active_ state, you cannot restore the key because the key wasn't deleted.
+Key states affect whether an action that you perform on a key succeeds or fails. For example, if a managed key is in the _active_ state, you cannot destroy the key before you deactivate it first.
 
 The following table shows how {{site.data.keyword.uko_full_notm}} handles service actions based on the state of a key. The column headers represent the key states, and the row headers represent the actions that you can perform on a key. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the action on a key is expected to succeed based on the key state.
 
-
 | Action | Pre-active | Active | Deactivated | Destroyed |
-| ------ | ------ | ----------- | ----------- | --------- |
+| ------ | ------ | ---------- | ----------- | --------- |
 | Get a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
 | List keys. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |
 | Deactivate a key. |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
@@ -80,7 +78,18 @@ After you add a root key to the service, use the {{site.data.keyword.cloud_notm}
 For audit purposes, you can also monitor the activity trail for a root key by integrating {{site.data.keyword.hscrypto}} with the [{{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started){: external}. After both services are provisioned and running, activity events are generated and automatically collected in a {{site.data.keyword.at_full_notm}} log when you perform actions on keys in {{site.data.keyword.hscrypto}}.
 
 
+## What's next
+{: #uko-key-states-next}
 
+- To find out instructions on creating a managed key, check out [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys).
+
+- To find out instructions on editing a managed key, check out [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
+  
+- To find out more about managing your key list, check out [Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list) or [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
+
+- To find out instructions on deleting a managed key, check out [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys).
+  
+- To find out more about the UKO API, see [{{site.data.keyword.uko_full_notm}} API reference](/apidocs/uko){: external}.
 
 
 

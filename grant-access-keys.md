@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-08-16"
+  years: 2018, 2022
+lastupdated: "2022-02-11"
 
 keywords: grant access, iam, iam access, assign access, access policy, key access
 
@@ -50,7 +50,7 @@ To assign access:
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
 2. Select the user, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for that user.
 3. From the options menu, click **Assign access**.
-4. Click **Assign users additional access**.
+4. Click **Assign access to the users**.
 5. Click the **IAM services** button.
 6. From the list of services, select **Hyper Protect Crypto Services**.
 7. From the list of service instances, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
@@ -110,10 +110,10 @@ To assign access to a key ring with the console:
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
 2. Select a table row, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for that user.
 3. From the options menu, click **Assign access**.
-4. Click **Assign users additional access**.
+4. Click **Assign access to the users**.
 5. Click the **IAM services** button.
 6. From the list of services, select **{{site.data.keyword.hscrypto}}**.
-7. Select **Services based on attributes**.
+7. Select **Resources based on selected attributes**.
 8. Select the **Instance ID** attribute and select the instance where the key ring is located.
 9. Select the **Key Ring ID** attribute and enter the ID associated with the key ring.
 8. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.

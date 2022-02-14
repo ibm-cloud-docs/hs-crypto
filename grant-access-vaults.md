@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-11"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystore, key management, access control
 
@@ -41,26 +41,29 @@ Retrieve the unique identifier that is associated with the vault that you want t
 
 To get the ID for a specific vault, you can:
 
-- [Access the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-view-keys#view-key-gui) to browse the vaults in your service instance.
+- Access the {{site.data.keyword.cloud_notm}} UI to browse the keys that are stored in your service instance by following these steps:
+
+    1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
+    2. Click **Vaults** from the navigation to view all the available vaults.
+    3. Click the vault that you want to edit. The Details side panel is displayed.
+    4. In the **General properties** card, Copy the vault ID by clicking the copy icon.
+
 - [Use the {{site.data.keyword.uko_full_notm}} API](/apidocs/uko#get-vaults-v3){: external}  to retrieve a list of your vaults, along with metadata about the vaults.
 
-### Step 2. Grant access to vaults with the console
+### Step 2. Grant access to vaults from the {{site.data.keyword.cloud_notm}} UI
 {: #grant-access-vault-console}
 
-To assign access to a vault with the console:
+To assign access to a vault for a user from the UI:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
-2. Select a table row, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for that user.
-3. From the options menu, click **Assign access**.
-4. Click **Assign users additional access**.
-5. Click the **IAM services** button.
-6. From the list of services, select **{{site.data.keyword.hscrypto}}**.
-7. Select **Services based on attributes**.
-8. Select the **Instance ID** attribute and select the instance where the vault is located.
-9. Select the **vault ID** attribute and enter the ID associated with the vault.
-8. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
-9. Click **Add**.
-10. Continue to add platform and service access roles as needed. When you finish all the access assignment, click **Assign**.
+2. Select the user from the table, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions"), and then select **Assign access**.
+3. Select **Assign access to the users**, and then **IAM services**.
+4. From the list of services, select **{{site.data.keyword.hscrypto}}**.
+5. Select **Resources based on selected attributes**.
+6. Select the **Instance ID** attribute, and select the instance where the vault is located.
+7. Select the **Vault ID** attribute and enter the vault ID that is retrieved in Step 1.
+8. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user, and click **Add**.
+9. Continue to add platform and service access roles as needed. When you finish all the access assignment, click **Assign** from the side pane.
 
 You can also create an access policy through IAM [API](/apidocs/iam-policy-management#create-policy){: external} or [CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create){: external}.
 {: note}

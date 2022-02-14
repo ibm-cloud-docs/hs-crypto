@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-21"
+lastupdated: "2022-02-11"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -137,7 +137,41 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Delete a key alias.| | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 {: #table-4}
 {: caption="Table 4. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} key resources" caption-side="bottom"}
-{: tab-title="Key management"}
+{: tab-title="Key management service"}
+{: tab-group="IAM-roles"}
+{: class="comparison-tab-table"}
+
+| Action | Vault Key Custodian | Vault Key Approver | Vault Key Admin | Vault Key Auditor |
+|-----|-----|-----|-----|----|
+| Create a key. | | | | | 
+| Retrieve a key. | | | | |
+| Retrieve key metadata. | | | | |
+| Retrieve key total. | | | | |
+| List keys.| | | | |
+| Disable a key. | | | | |
+| Enable a key. | | | | |
+| Delete a key. | | | | |
+| Restore a key. | | | | |
+| Create an import token. | | | | |
+| Retrieve an import token. | | | | |
+| Create a registration.<sup>1</sup> | | | | |
+| List registrations for a key. | | | | |
+| List registrations for any key. | | | | |
+| Update a registration.<sup>1</sup> | | | | |
+| Replace a registration.<sup>1</sup> | | | | |
+| Delete a registration.<sup>1</sup> | | | | |
+| Create a keystore. | | | | |
+| List keystores. | | | | |
+| Delete a keystore. | | | | |
+| Create a vault. | | | | |
+| List vaults. | | | | |
+| Delete a vault. | | | | |
+| Create a template. | | | | |
+| List templates. | | | | |
+| Delete a template. | | | | |
+{: #table-5}
+{: caption="Table 5. Lists service access roles as they apply to Unified Key Orchestrator" caption-side="bottom"}
+{: tab-title="Unified Key Orchestrator"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
 
@@ -163,8 +197,8 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Sign | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 | Verify | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 | Digest | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-{: #table-5}
-{: caption="Table 5. Lists service access roles as they apply to HSM APIs" caption-side="bottom"}
+{: #table-6}
+{: caption="Table 6. Lists service access roles as they apply to HSM APIs" caption-side="bottom"}
 {: tab-title="HSM APIs"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
@@ -176,8 +210,8 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Get status of KMIP endpoint. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 | Add client certificates to KMIP endpoint for usage of mutual TLS. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
 | Delete client certificates from KMIP endpoint for usage of mutual TLS. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-{: #table-6}
-{: caption="Table 6. Lists service access roles as they apply to KMIP adapter" caption-side="bottom"}
+{: #table-7}
+{: caption="Table 7. Lists service access roles as they apply to KMIP adapter" caption-side="bottom"}
 {: tab-title="KMIP adapter"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
@@ -192,8 +226,8 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | List all client certificates that are managed by the certificate administrator. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 | Retrieve client certificates. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 | Delete client certificates. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-{: #table-7}
-{: caption="Table 7. Lists service access roles as they apply to Certificate Manager" caption-side="bottom"}
+{: #table-8}
+{: caption="Table 8. Lists service access roles as they apply to Certificate Manager" caption-side="bottom"}
 {: tab-title="Certificate Manager Server"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}

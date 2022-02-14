@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-08-12"
+  years: 2018, 2022
+lastupdated: "2022-02-14"
 
 keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 {:external: target="_blank" .external}
 {:term: .term}
 
-# Use cases
+# Use cases - {{site.data.keyword.hscrypto}} Standard Plan
 {: #use-cases}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} can be used as a key management service to pervasively protect data at rest in the {{site.data.keyword.cloud_notm}} as well as a cloud HSM for general-purpose cryptographic operations.
