@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-26"
+lastupdated: "2022-02-14"
 
 keywords: hyper protect crypto services architecture, service architecture, architecture diagram, workload isolation, crypto units, secure service container, ssc, public isolation for hyper protect crypto services, compute isolation for hyper protect crypto services
 
@@ -17,7 +17,7 @@ keywords: hyper protect crypto services architecture, service architecture, arch
 {:term: .term}
 
 
-# Service architecture
+# Service architecture - {{site.data.keyword.hscrypto}} Standard Plan
 {: #architecture-workload-isolation}
 
 Review the service architecture, workload isolation characteristics, and service dependencies for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.

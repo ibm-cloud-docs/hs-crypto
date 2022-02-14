@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-27"
+lastupdated: "2022-02-14"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -20,7 +20,7 @@ subcollection: hs-crypto
 {:term: .term}
 {:video: .video}
 
-# Overview
+# Overview - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}
 {: #uko-overview}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is a dedicated key management service and [Hardware Security Module (HSM)](#x6704988){: term} that provides you with the Keep Your Own Key capability for cloud data encryption. Built on FIPS 140-2 Level 4 certified hardware, {{site.data.keyword.hscrypto}} provides you with exclusive control of your encryption keys.
@@ -77,7 +77,9 @@ For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service arc
 
 * **Key orchestration across multiple clouds**
 
-    You can orchestrate keys through a single and unified user experience across multiple clouds with an auditable key lifecycle orchestration mechanism. For more information, see [Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-uko-key-states) and [Auditing events for Hyper Protect Crypto Services - New Experience](/docs/hs-crypto?topic=hs-crypto-uko-at-events-uko).
+    You can orchestrate keys through a single and unified user experience across multiple clouds with an auditable key lifecycle orchestration mechanism. For more information, see [Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-uko-key-states) and [Auditing events for Hyper Protect Crypto Services {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-at-events).
+
+For more information about {{site.data.keyword.uko_full_notm}}, see [Introducing {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-introduce-uko).
 
 ### Key management service
 {: #uko-key-management}

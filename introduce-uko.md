@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-11"
+lastupdated: "2022-02-14"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -101,36 +101,6 @@ You can integrate all your key management use cases into one consistent approach
         - **AWS KMS**        
             
             AWS KMS is a managed service for you to create and manage cryptographic keys across a wide range of AWS services.
-        
-
-## Use cases
-{: #use-cases}
-
-You can use {{site.data.keyword.uko_full_notm}} to securely create and manage your keys and internal keystores across multiple clouds. The following is a few use cases on how you can use {{site.data.keyword.uko_full_notm}} to manage your keys.
-
-
-### Identity and Access Management (IAM)
-{: #uko-iam}
-
-With IAM, you can grant and control access to the vault, and therefore the keys and keystores that are assigned to the vault.
-
-
-### Manage your keys through one user experience
-{: #manage-keys}
-
-You can create, manage, and delete your cryptographic keys from one point of control, without dealing with different user interfaces. When you install a managed key in multiple keystores in a vault, the system keeps the installations in sync. This ensures an efficient and fully audited key lifecycle management.
-
-
-### Connect to external keystores
-{: #connect-to-keystores}
-
-You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS KMS.
-
-
-### Back up all keys of your enterprise centrally
-{: #back-up-keys}
-
-All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}. When a fatal error occurs in the cloud, you can reinstall the keys to quickly recover from the error.
 
 
 

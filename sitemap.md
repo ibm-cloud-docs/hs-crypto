@@ -122,11 +122,11 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-next)
 
 
-## Understanding Hyper Protect Crypto Services
-{: #sitemap_understanding_hyper_protect_crypto_services}
+## Understanding Hyper Protect Crypto Services Standard Plan
+{: #sitemap_understanding_hyper_protect_crypto_services_standard_plan}
 
 
-[Overview](/docs/hs-crypto?topic=hs-crypto-overview#overview)
+[Overview - {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-overview#overview)
 
 * [Why {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-overview#why_hpcs)
 
@@ -136,7 +136,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-overview#overview-next)
 
-[Service architecture](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation#architecture-workload-isolation)
+[Service architecture - {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation#architecture-workload-isolation)
 
 * [{{site.data.keyword.hscrypto}} architecture](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation#architecture)
 
@@ -144,7 +144,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Service dependencies](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation#service_dependencies)
 
-[Use cases](/docs/hs-crypto?topic=hs-crypto-use-cases#use-cases)
+[Use cases - {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-use-cases#use-cases)
 
 * [Pervasively protecting data at rest in the cloud](/docs/hs-crypto?topic=hs-crypto-use-cases#data-at-rest-encryption)
 
@@ -484,8 +484,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key#signing-service-whats-next)
 
 
-## Managing keys
-{: #sitemap_managing_keys}
+## Managing keys - Standard Plan
+{: #sitemap_managing_keys_-_standard_plan}
 
 
 
@@ -918,8 +918,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-next)
 
 
-## Enhancing security
-{: #sitemap_enhancing_security}
+## Enhancing security - Standard Plan
+{: #sitemap_enhancing_security_-_standard_plan}
 
 
 [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access#manage-access)
