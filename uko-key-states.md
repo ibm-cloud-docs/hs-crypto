@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-11"
+lastupdated: "2022-02-14"
 
-keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator
+keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator, UKO keys
 
 subcollection: hs-crypto
 
@@ -32,21 +32,20 @@ subcollection: hs-crypto
 ## Key states and transitions
 {: #uko-key-transitions}
 
-Cryptographic keys, in their lifetime, transition through several states that are a function of how long the keys are in existence and whether data is protected.
+Managed keys in {{site.data.keyword.uko_full_notm}} transition through several states that indicate how long the keys are in existence and whether data is protected.
 
-The following diagram shows how a key passes through states between the generation and the destruction.
+The following diagram shows how a managed key passes through states between the generation and the destruction.
 
 ![Key states and transitions](/images/uko-key-states.svg "Key states and transitions"){: caption="Figure 1. Key states and transitions" caption-side="bottom"}
 
-
-
+The following table shows the details of each key state.
 
 | State       | Integer mapping | Description |
 |-------------|-----------------|-------------|
 | Pre-active  |        0        | A _pre-active_ key is not yet installed into target keystores and is therefore not available for use by applications. New keys are initially created in the _Pre-active_ state. |
 | Active      |        1        | An _active_ key is installed in target keystores and is available for use by applications. You can set a key to the _Active_ state when you create the key, or manually activate a _pre-active_ key later. |
-| Deactivated |        3        | A _deactivated_ key is no longer allowed for operations that generate new cryptographic data, such as encryption or signing, but can still be used for operations on existing data to do decryption or signature verification. When you deactivate a managed key, the key is uninstalled from all the target keystores, and all associated {{site.data.keyword.cloud_notm}} resources are not accessible. |
-| Destroyed   |        5        | A _destroyed_ key is a key record for which the actual key material has been permanently erased. The record of the key is retained to be available for later queries or audits until you manually remove the key from the vault. Keys in the _Destroyed_ state cannot be restored. |
+| Deactivated |        3        | A _deactivated_ key is no longer allowed for operations that generate new cryptographic data, such as encryption or signing, but can still be used for operations on existing data to do decryption or signature verification. When you deactivate a key, the key is uninstalled from all the target keystores, and all associated {{site.data.keyword.cloud_notm}} resources are not accessible. |
+| Destroyed   |        5        | A _destroyed_ key is a key record for which the actual key material has been permanently erased. The record of the key is retained to be available for later queries or audits until you manually remove the key from the vault. Keys in the _destroyed_ state cannot be restored. |
 {: caption="Table 1. Key states and transitions" caption-side="bottom"}
 
 
@@ -56,7 +55,6 @@ The following diagram shows how a key passes through states between the generati
 Key states affect whether an action that you perform on a key succeeds or fails. For example, if a managed key is in the _active_ state, you cannot destroy the key before you deactivate it first.
 
 The following table shows how {{site.data.keyword.uko_full_notm}} handles service actions based on the state of a key. The column headers represent the key states, and the row headers represent the actions that you can perform on a key. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the action on a key is expected to succeed based on the key state.
-
 
 | Action | Pre-active | Active | Deactivated | Destroyed |
 | ------ | ------ | ---------- | ----------- | --------- |

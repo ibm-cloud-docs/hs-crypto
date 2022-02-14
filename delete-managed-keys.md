@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-11"
+lastupdated: "2022-02-14"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
