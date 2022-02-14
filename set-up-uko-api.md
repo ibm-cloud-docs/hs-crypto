@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-14"
 
 keywords: set up api, uko api, Unified Key Orchestrator api, 
 
@@ -42,32 +42,14 @@ To build your request, pair a [regional service endpoint](/docs/hs-crypto?topic=
 
 ```cURL
 curl -X GET \
-    https://api.us-south.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
+    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
     -H 'accept: application/json' \
     -H 'authorization: Bearer <access_token>' \
     -H 'bluemix-instance: <instance_ID>'
 ```
 {: codeblock}
 
-* Replace `<port>` with the port number of your API endpoint. You can get the `<port>` in your provisioned service instance dashboard through **Overview** &gt; **Connect** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/hs-crypto#getinstance){: external}. The returned value includes:
-
-    ```
-    {
-      "instance_id": "<instance_ID>",
-      "kms": {
-        "public": "api.<region>.hs-crypto.cloud.ibm.com:<port>",
-        "private":"api.private.<region>.hs-crypto.cloud.ibm.com:<port>"
-      },
-        "ep11": {
-        "public": "ep11.<region>.hs-crypto.cloud.ibm.com:<port>",
-        "private":"ep11.private.<region>.hs-crypto.cloud.ibm.com:<port>"
-      }
-    }
-    ```
-    {: screen}
-
-    For the key management service, use the `<region>` and `<port>`  in the `kms` section.
-
+* Replace `<region>` and `<port>` with the region and port number of your API endpoint. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **Connect**. 
 * Replace `<access_token>` and `<instance_ID>` with your retrieved service and authentication credentials.
 
 Want to track your API requests in case something goes wrong? When you include the `-v` flag as part of cURL request, you get a `correlation-id` value in the response headers. You can use this value to correlate and track the request for debugging purposes.

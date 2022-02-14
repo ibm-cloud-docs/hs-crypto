@@ -1108,7 +1108,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Provisioning and initializing service instances with Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs){: external}
 
-[Managing key management service keys with Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: external}
+[Managing key management service keys with Terraform - Standard Plan only](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: external}
 
 
 ## Regions and locations
