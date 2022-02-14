@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-11"
+lastupdated: "2022-02-14"
 
 keywords: Unified Key Orchestrator, search keys, key management, kms keys
 
@@ -41,15 +41,15 @@ To filter keys through the UI, complete the following steps:
 
     |       Property	     |                         Description                       |
     |----------------------|-----------------------------------------------------------|
-    | Vault                | The vault that controls the access to the key.            |
-    | Activation           | Set a date range of when the key gets activated. A _Pre-active_ key is to be activated on the activation date. |
-    | Expiration           | Set a date range of when the key gets expired. After the expiration date, the key automatically moves into the _Deactivated_ state.  |
+    | Vault                | The vault that controls access to the key.            |
+    | Activation           | Set a date range of when you activate the key.  |
+    | Expiration           | Set a date range of when you deactivate the key.  |
     | Creation             | Set a date range of when the key was created.             |
     | Keystores            | The keystores that the key is installed in.               |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Minimum key length   | The minimum number of bits that represents the encryption strength of the key.   |
     | Maximum key length   | The maximum number of bits that represents the encryption strength of the key.   |
-    | State                | Key states include _Pre-active, Active, Deactivated,_ and _Destroyed._ For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
+    | State                | Key states include _Pre-active_, _Active_, _Deactivated_, and _Destroyed_. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
     {: caption="Table 1. Filter managed keys" caption-side="bottom"}
 
 

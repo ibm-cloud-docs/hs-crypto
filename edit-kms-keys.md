@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-11"
+lastupdated: "2022-02-14"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -43,8 +43,8 @@ To edit the details of a managed key through the UI, complete the following step
     |----------------------|-----------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key, with 2 - 100 characters in length. |
     | Description          | (Optional) An extended description for your keystore, with up to 200 characters in length. |
-    | State                | _Pre-active_ keys are not to be installed in target keystores until they are activated. _Active_ keys are to be automatically installed in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states) |
-    | Activation date      | (For _Pre-active_ keys) Plan a date to activate the _pre-active_ key. No automatic state change is triggered. |
+    | State                | Key states include _Pre-active_, _Active_, _Deactivated_, and _Destroyed_. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states) |
+    | Activation date      | Plan a date to activate the key. No automatic state change is triggered. |
     | Expiration date      | Plan a date to deactivate the key. No automatic state change is triggered. |
     {: caption="Table 1. Key properties" caption-side="bottom"}
 
