@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-02-15"
 
 keywords: site map, doc structure, information architecture
 
@@ -289,6 +289,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#feb-2022)
 
 * [21 January 2022](/docs/hs-crypto?topic=hs-crypto-what-new#jan-2022)
 

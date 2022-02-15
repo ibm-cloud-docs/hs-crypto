@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-27"
+lastupdated: "2022-02-15"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -30,7 +30,12 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 
 
+## February 2022
+{: #feb-2022}
+{: release-note}
 
+Added: {{site.data.keyword.hscrypto}} expands into the S&atilde;o-Paulo region {: #add-sao-region}
+:   You can now create {{site.data.keyword.hscrypto}} instances in the S&atilde;o-Paulo (`br-sao`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
 
 

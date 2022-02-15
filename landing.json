@@ -63,19 +63,19 @@
     "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
     "tiles": [
       {
+        "date": "February 2022",
+        "title": "Hyper Protect Crypto Services expands into the Sao-Paulo region",
+        "description": "You can now create Hyper Protect Crypto Services instances in the Sao-Paulo (`br-sao`) region where the infrastructure is based on IBM Cloud Virtual Private Cloud (VPC)."
+      },
+      {
         "date": "January 2022",
-        "title": "Hyper Protect Crypto Services key management service API is updated to version `2.82`. ",
+        "title": "Hyper Protect Crypto Services key management service API is updated to version `2.82` ",
         "description": "You can now purge a deleted key manually and transfer a key to another keyring using either UI or API."
       },
       {
         "date": "July 2021",
         "title": "Exclusive control on the execution of cryptographic operations",
         "description": "To ensure the exclusive control on the execution of cryptographic operations, you can use the Hyper Protect Crypto Services certificate manager CLI to enable the second layer of authentication for EP11 (GREP11 or PKCS #11 API) connections."
-      },
-      {
-        "date": "July 2021",
-        "title": "Hyper Protect Crypto Services expands into the Tokyo region",
-        "description": "You can now create Hyper Protect Crypto Services instances in the Tokyo (jp-tok) region where the infrastructure is based on IBM Cloud Virtual Private Cloud (VPC)."
       }
     ]
   }
