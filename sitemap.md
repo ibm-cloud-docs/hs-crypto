@@ -290,7 +290,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
 
-* [February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#feb-2022)
+* [15 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#feb-2022)
 
 * [21 January 2022](/docs/hs-crypto?topic=hs-crypto-what-new#jan-2022)
 

@@ -30,7 +30,7 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 
 
-## February 2022
+## 15 February 2022
 {: #feb-2022}
 {: release-note}
 
