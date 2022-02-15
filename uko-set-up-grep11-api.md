@@ -1,8 +1,8 @@
----
+<uko>---
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-19"
+lastupdated: "2022-02-15"
 
 keywords: set up api, api key, cryptographic operations, use ep11 api, access ep11 api, ep11 over grpc, using api
 
@@ -206,3 +206,5 @@ The previous authentication example as well as more Golang code examples can be 
 {: #uko-set-up-grep11-api-next-steps}
 
 You're all set to start managing your encryption keys and data. To find out more about managing your data using the cloud HSM function of {{site.data.keyword.hscrypto}}, [check out the GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+
+</ko>
