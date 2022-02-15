@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-21"
+lastupdated: "2022-02-15"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -184,7 +184,7 @@ see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic
 | `jp-tok`                  | `jp-tok`                                        |
 | `us-east`                 | `us-east`                                       |
 | `us-south`                | `us-south`                                      |
-
+| `br-sao`                  | `br-sao`                                      |
 {: caption="Table 8. Activity Tracker regions" caption-side="bottom"}
 
 ## Analyzing successful events
