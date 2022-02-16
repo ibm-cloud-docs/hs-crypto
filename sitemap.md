@@ -123,7 +123,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Step 3: Manage your encryption keys with the key management service](/docs/hs-crypto?topic=hs-crypto-get-started#manage-data-key)
 
-* [Step 4: Encrypte your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm-dashboard)
+* [Step 4: Encrypte your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-next)
 

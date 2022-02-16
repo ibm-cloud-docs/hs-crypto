@@ -434,13 +434,15 @@ Complete the following steps to add an existing key.
 From the {{site.data.keyword.cloud_notm}} console, you can inspect the general characteristics of your new keys.
 
 ## Step 4: Encrypte your data with cloud HSM
-{: #encrypt-data-hsm-dashboard}
+{: #encrypt-data-hsm}
 {: hide-dashboard}
 
 You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations with the PKCS #11 API or with the GREP11 API.
 
 ### Performing cryptographic operations with the PKCS #11 API
 {: #cryptographic-operations-with-pkcs11-dashboard}
+{: help}
+{: support}
 
 To perform cryptographic operations with the PKCS #11 API, complete the following steps:
 
@@ -535,6 +537,8 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
 
 ### Performing cryptographic operations with the GREP11 API
 {: #cryptographic-operations-with-grep11-dashboard}
+{: help}
+{: support}
 
 To perform cryptographic operations with the GREP11 API, you need to make sure your applications are developed with programming languages supported by gRPC.
 
