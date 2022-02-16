@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-02-16"
 
 keywords: set up api, uko api, Unified Key Orchestrator api, 
 
@@ -59,4 +59,4 @@ Want to track your API requests in case something goes wrong? When you include t
 ## What's next
 {: #set-up-uko-api-next-steps}
 
-You're all set to start managing your encryption keys and data. To find out more about programmatically managing your keys, [check out the Unified Key Orchestrator API reference doc](/apidocs/uko){: external}.
+You're all set to start managing your encryption keys and data. To find out more about programmatically managing your keys, check out the [Unified Key Orchestrator API reference doc](/apidocs/uko){: external}.
