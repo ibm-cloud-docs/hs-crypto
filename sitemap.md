@@ -111,9 +111,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Step 1: Initialize your service instance](/docs/hs-crypto?topic=hs-crypto-get-started#initialize-crypto-dashboard)
 
-* [Step 2: Using the key management service and cloud hardware security module](/docs/hs-crypto?topic=hs-crypto-get-started#manage-data-key-dashboard)
+* [Step 2: Standard Plan only - Manage your encryption keys with the key management service](/docs/hs-crypto?topic=hs-crypto-get-started#manage-data-key-dashboard)
 
-* [(Optional) Step 3: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-vpe-gateway-dashboard)
+* [Step 3: Encrypte your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm-dashboard)
 
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-prerequisites)
 
@@ -121,9 +121,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Step 2: Initialize your service instance](/docs/hs-crypto?topic=hs-crypto-get-started#initialize-crypto)
 
-* [Step 3: Using the key management service and cloud hardware security module](/docs/hs-crypto?topic=hs-crypto-get-started#manage-data-key)
+* [Step 3: Manage your encryption keys with the key management service](/docs/hs-crypto?topic=hs-crypto-get-started#manage-data-key)
 
-* [(Optional) Step 4: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-vpe-gateway)
+* [Step 4: Encrypte your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm-dashboard)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-next)
 
