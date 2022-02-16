@@ -162,7 +162,7 @@ toc:
               - set-rotation-policy.md
               - rotate-keys.md
               - view-key-versions.md
-              - disable-keys.md 
+              - disable-keys.md
               - delete-purge-keys.md
               - delete-keys.md
               - delete-dual-auth-keys.md
@@ -282,6 +282,3 @@ toc:
           - troubleshooting-master-key-rotation-recovery.md
       - support.md
       - sitemap.md
-
-
-

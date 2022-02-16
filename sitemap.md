@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-15"
+lastupdated: "2022-02-16"
 
 keywords: site map, doc structure, information architecture
 
@@ -108,6 +108,12 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-get-started#get-started)
+
+* [Step 1: Initialize your service instance](/docs/hs-crypto?topic=hs-crypto-get-started#initialize-crypto-dashboard)
+
+* [Step 2: Using the key management service and cloud hardware security module](/docs/hs-crypto?topic=hs-crypto-get-started#manage-data-key-dashboard)
+
+* [(Optional) Step 3: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-vpe-gateway-dashboard)
 
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-prerequisites)
 
