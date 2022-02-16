@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-08-09"
+  years: 2020, 2022
+lastupdated: "2022-02-16"
 
 keywords: troubleshoot, problems, known issues, got a an error when I use CLI or API
 

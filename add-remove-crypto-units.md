@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-08-12"
+  years: 2020, 2022
+lastupdated: "2022-02-16"
 
 keywords: crypto unit, add crypto units, remove crypto units, change crypto units number, adjust crypto units number, new crypto units, support center, support ticket, support case
 

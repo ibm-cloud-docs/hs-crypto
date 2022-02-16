@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-09-24"
+  years: 2018, 2022
+lastupdated: "2022-02-16"
 
 keywords: rotate, rotate root key, automatic key rotation, set rotation policy, policy based key rotation
 

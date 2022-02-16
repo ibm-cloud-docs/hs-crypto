@@ -111,7 +111,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Step 1: Initialize your service instance](/docs/hs-crypto?topic=hs-crypto-get-started#initialize-crypto-dashboard)
 
-* [Step 2: Standard Plan only - Manage your encryption keys with the key management service](/docs/hs-crypto?topic=hs-crypto-get-started#manage-data-key-dashboard)
+* [Step 2: Manage your encryption keys with the key management service](/docs/hs-crypto?topic=hs-crypto-get-started#manage-data-key-dashboard)
 
 * [Step 3: Encrypte your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm-dashboard)
 

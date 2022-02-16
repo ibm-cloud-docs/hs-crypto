@@ -67,7 +67,7 @@ To manage your keys, you need to initialize your service instance first. Dependi
 
     You can also initialize your service instance using master key parts that are stored in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. 
 
-## Step 2: Standard Plan only - Manage your encryption keys with the key management service 
+## Step 2: Manage your encryption keys with the key management service 
 {: #manage-data-key-dashboard}
 {: hide-in-docs}
 {: notoc}

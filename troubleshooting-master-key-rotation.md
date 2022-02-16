@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-08-09"
+  years: 2020, 2022
+lastupdated: "2022-02-16"
 
 keywords: troubleshoot, problems, known issues, failed to activate the new master key during the master key rotation process
 

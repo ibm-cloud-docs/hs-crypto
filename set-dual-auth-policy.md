@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-05-11"
+  years: 2017, 2022
+lastupdated: "2022-02-16"
 
 keywords: set deletion policy, dual authorization, policy-based, key deletion
 

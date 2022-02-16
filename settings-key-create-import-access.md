@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-08-16"
+  years: 2020, 2022
+lastupdated: "2022-02-16"
 
 keywords: instance settings, service settings, key creation/import, key create policy, key creation/import, key policy
 
