@@ -18,6 +18,7 @@ toc:
           label: Getting started
           topics:
           - index.md
+          - index-uko.md
           links:
           - link:
               label: "Video: Initializing Hyper Protect Crypto Services with IBM Cloud TKE CLI"

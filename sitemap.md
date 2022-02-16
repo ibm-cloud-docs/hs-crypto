@@ -127,6 +127,26 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-next)
 
+[Getting started with {{site.data.keyword.cloud_notm}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-get-started-uko#get-started-uko)
+
+* [Step 1: Initialize your service instance](/docs/hs-crypto?topic=hs-crypto-get-started-uko#initialize-crypto-dashboard-uko)
+
+* [Step 2: Manage your encryption keys with the key management service](/docs/hs-crypto?topic=hs-crypto-get-started-uko#manage-data-key-dashboard-uko)
+
+* [Step 3: Encrypte your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started-uko#encrypt-data-hsm-dashboard-uko)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-get-started-uko#get-started-prerequisites-uko)
+
+* [Step 1: Provision the service](/docs/hs-crypto?topic=hs-crypto-get-started-uko#provision-service-uko)
+
+* [Step 2: Initialize your service instance](/docs/hs-crypto?topic=hs-crypto-get-started-uko#initialize-crypto-uko)
+
+* [Step 3: Manage your encryption keys with the key management service](/docs/hs-crypto?topic=hs-crypto-get-started-uko#manage-data-key-uko)
+
+* [Step 4: Encrypte your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started-uko#encrypt-data-hsm-uko)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-get-started-uko#get-started-next-uko)
+
 
 ## Understanding Hyper Protect Crypto Services Standard Plan
 {: #sitemap_understanding_hyper_protect_crypto_services_standard_plan}
