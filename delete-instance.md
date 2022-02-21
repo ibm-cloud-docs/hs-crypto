@@ -25,8 +25,7 @@ subcollection: hs-crypto
 You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance with the {{site.data.keyword.cloud_notm}} UI console or the {{site.data.keyword.cloud_notm}} CLI. To do so, you need to set all the [crypto units](#x9860404){: term} of the service instance back to the [imprint mode](#x9860399){: term} by zeroizing the crypto units.
 {: shortdesc}
 
-Make sure to delete all keys in the service instance before you delete the service instance.
-{: note}
+
 
 ## Step 1: Zeroize crypto units
 {: #zeroize-crypto-unit-step}

@@ -40,7 +40,7 @@ Incident and operations management includes tasks such as high availability, mon
 | Monitoring | Provide integration with select third-party partnership technologies, such as {{site.data.keyword.at_full}}. | Use the provided tools to [review instance logs and activities](/docs/hs-crypto?topic=hs-crypto-at-events). |
 | Incidents | Provide notifications for planned maintenance, security bulletins, or unplanned outages.  | Set preferences to [receive emails about platform notifications](/docs/overview?topic=overview-ui#email-prefsl), and monitor the [IBM Cloud status page](https://{DomainName}/status?selected=announcement) for general announcements.|
 |Firmware updates| Provide firmware updates for multiple crypto units in a sequential manner with no impact to running workloads. | Perform tasks as usual. |
-|Connecting to third-party cloud | Provide error messages when access to the third-party keystores does not work. | Contact affected third-party cloud service provider to resolve access or connection issues. |
+
 {: caption="Table 1. Responsibilities for incident and operations" caption-side="bottom"}
 
 ## Change management
@@ -63,7 +63,7 @@ Identity and access management includes tasks such as authentication, authorizat
 |----------|-----------------------|--------|
 | User management| IBM does not have access to your resources but provides you with the ability to restrict user access to resources.   | Depending on your needs, restrict access to resources and service functionality by using Cloud IAM access policies. For more information, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).|
 | Service and key policies| IBM does not have access to your resources but provides you with the ability to set service and key policies.   | Manage your [service instance policies](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth) and [key policies](/docs/hs-crypto?topic=hs-crypto-set-dual-auth-key-policy).|
-|Connecting to third-party cloud | Provide error messages when access to the third-party keystores does not work. | Make sure the connection information and access credentials for the third-party cloud service provider are always up to date in your {{site.data.keyword.hscrypto}} instance. |
+
 {: caption="Table 3. Responsibilities for identity and access management" caption-side="bottom"}
 
 ## Security and regulation compliance
