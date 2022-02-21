@@ -252,7 +252,7 @@ toc:
           - FAQs-ha-dr.md
           - FAQs-maintenance.md
       - topicgroup:
-          label: Troubleshooting key management service
+          label: Troubleshooting key management service in the Standard Plan
           topics:
           - troubleshooting-authenticate-api.md
           - troubleshooting-list-keys-api.md

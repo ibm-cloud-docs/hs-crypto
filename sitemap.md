@@ -1330,8 +1330,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [How do I get support for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-hpcs-support)
 
 
-## Troubleshooting key management service
-{: #sitemap_troubleshooting_key_management_service}
+## Troubleshooting key management service in the Standard Plan
+{: #sitemap_troubleshooting_key_management_service_in_the_standard_plan}
 
 
 [Why am I not authorized to make key management API request?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-authenticate-api#troubleshoot-unable-to-authenticate-api)
