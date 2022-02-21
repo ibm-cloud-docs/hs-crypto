@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-15"
+lastupdated: "2022-02-21"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -63,6 +63,7 @@ Private endpoints
 
 If you are managing your {{site.data.keyword.hscrypto}} resources programmatically, see the following table to determine the API endpoints to use when you connect to the [Key management API](/apidocs/hs-crypto), [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref), and  [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
+
 | Region        | Public key management service endpoints             |Public GREP11 service endpoints|
 | ------------- | ---------------------------- |---------------------------- |
 | Dallas        | `api.us-south.hs-crypto.cloud.ibm.com` |`ep11.us-south.hs-crypto.cloud.ibm.com` |
@@ -93,8 +94,12 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 {: tab-group="region-endpoint"}
 {: class="comparison-tab-table"}
 
+
+
+
 For more information about authenticating with {{site.data.keyword.hscrypto}}, see the following topics:
 
 * [Setting up the key management API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api)
+* [Managing your keys with the {{site.data.keyword.uko_full_notm}} API](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api)
 * [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api)
-* [Performing cryptographic operations with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api).
+* [Performing cryptographic operations with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api)
