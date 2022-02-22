@@ -24,11 +24,11 @@ subcollection: hs-crypto
 {:support: data-reuse='support'}
 {:term: .term}
 
-# Why can't I encrypt the resources using the managed key?
+# Why can't I encrypt resources using the managed key?
 {: #troubleshoot-use-managed-key}
 {: troubleshoot}
 
-You are not able to associate the cloud resources with the managed key that you create for data encryption and decryption.
+You are not able to associate cloud resources with the managed key that you create for data encryption and decryption.
 {: shortdesc}
 
 You receive the following error message when you try to associate the cloud resources with your managed key:
@@ -37,6 +37,7 @@ You receive the following error message when you try to associate the cloud reso
 ```
 message placeholder
 ```
+{: screen}
 
 You can use a managed key only when it is installed in at least one keystore.
 {: tsCauses}

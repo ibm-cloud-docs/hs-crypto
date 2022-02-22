@@ -35,8 +35,9 @@ You try to delete a vault, but it fails with the following message:
 {: tsSymptoms}
 
 ```
-The service was not able to delete vault `*vault_name*` because it still contains some keys or keystores.
+The service was not able to delete vault `<vault_name>` because it still contains some keys or keystores.
 ```
+{: screen}
 
 If you want to delete a vault, you need to delete all managed keys, and delete or disconnect from all target keystores that are managed in the vault first. The Delete function is available for empty vaults only. 
 {: tsCauses}

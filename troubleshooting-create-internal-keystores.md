@@ -37,6 +37,7 @@ You receive the following error message when you try to add additional internal 
 ```
 message placeholder
 ```
+{: screen}
 
 For a single service instance, you can create a maximum of 50 internal KMS keystores. You have reached the limits.
 {: tsCauses}
