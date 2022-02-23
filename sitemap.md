@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-15"
+lastupdated: "2022-02-23"
 
 keywords: site map, doc structure, information architecture
 
@@ -109,15 +109,21 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-get-started#get-started)
 
+* [Step 1: Initialize your service instance](/docs/hs-crypto?topic=hs-crypto-get-started#initialize-crypto-dashboard)
+
+* [Step 2: Manage your encryption keys with the key management service](/docs/hs-crypto?topic=hs-crypto-get-started#manage-data-key-dashboard)
+
+* [Step 3: Encrypte your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm-dashboard)
+
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-prerequisites)
 
 * [Step 1: Provision the service](/docs/hs-crypto?topic=hs-crypto-get-started#provision-service)
 
 * [Step 2: Initialize your service instance](/docs/hs-crypto?topic=hs-crypto-get-started#initialize-crypto)
 
-* [Step 3: Using the key management service and cloud hardware security module](/docs/hs-crypto?topic=hs-crypto-get-started#manage-data-key)
+* [Step 3: Manage your encryption keys with the key management service](/docs/hs-crypto?topic=hs-crypto-get-started#manage-data-key)
 
-* [(Optional) Step 4: Create a {{site.data.keyword.hscrypto}} VPE gateway for VPC](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-vpe-gateway)
+* [Step 4: Encrypte your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-next)
 
@@ -290,7 +296,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
 
-* [15 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#feb-2022)
+* [23 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#23-feb-2022)
+
+* [15 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#15-feb-2022)
 
 * [21 January 2022](/docs/hs-crypto?topic=hs-crypto-what-new#jan-2022)
 
@@ -524,6 +532,12 @@ Find what you are looking for in the compilation of topics that are available in
 * [Enabling and updating the key create and import access policy for your service instance with the API](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#enable-keyCreateImportAccess-policy-api)
 
 * [Disabling the key create and import access policy for your service instance with the key management API](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#disable-key-create-import-policy-api)
+
+[Managing metrics](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics#manage-monitoring-metrics)
+
+* [Managing metrics settings](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics#manage-metrics-policy)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics#monitor-metrics-next-steps)
 
 [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token#retrieve-access-token)
 
@@ -1008,6 +1022,24 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Event severity](/docs/hs-crypto?topic=hs-crypto-at-events#event-severity)
 
+[{{site.data.keyword.mon_short}} operational metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics#operational-metrics)
+
+* [What metrics are available for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-operational-metrics#hpcs-metrics-available)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-operational-metrics#operational-metrics-considerations)
+
+* [Connecting {{site.data.keyword.mon_short}} with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-operational-metrics#connect-monitoring-hpcs)
+
+* [{{site.data.keyword.hscrypto}} Metrics Details](/docs/hs-crypto?topic=hs-crypto-operational-metrics#hpcs-metrics)
+
+* [Latency](/docs/hs-crypto?topic=hs-crypto-operational-metrics#latency)
+
+* [Attributes for Segmentation](/docs/hs-crypto?topic=hs-crypto-operational-metrics#attributes-for-segmentation)
+
+* [Default Dashboards](/docs/hs-crypto?topic=hs-crypto-operational-metrics#default-dashboards)
+
+* [Setting Alerts](/docs/hs-crypto?topic=hs-crypto-operational-metrics#set-monitor-alerts)
+
 [Managing security and compliance with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#manage-security-compliance)
 
 * [Governing {{site.data.keyword.hscrypto}} resource configuration with config rules](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#govern-crypto)
@@ -1304,8 +1336,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [How do I get support for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-hpcs-support)
 
 
-## Troubleshooting key management service
-{: #sitemap_troubleshooting_key_management_service}
+## Troubleshooting key management service in the Standard Plan
+{: #sitemap_troubleshooting_key_management_service_in_the_standard_plan}
 
 
 [Why am I not authorized to make key management API request?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-authenticate-api#troubleshoot-unable-to-authenticate-api)

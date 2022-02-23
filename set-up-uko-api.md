@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-02-21"
 
 keywords: set up api, uko api, Unified Key Orchestrator api, 
 
@@ -41,16 +41,17 @@ When you make an API call to the service, structure your API request according t
 To build your request, pair a [regional service endpoint](/docs/hs-crypto?topic=hs-crypto-regions) with the appropriate authentication credentials. For example, if you created a service instance for the `us-south` region, use the following endpoint and API headers to browse keys in your service:
 
 ```cURL
-curl -X GET \
-    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
-    -H 'accept: application/json' \
-    -H 'authorization: Bearer <access_token>' \
-    -H 'bluemix-instance: <instance_ID>'
+curl --location --request GET 'https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v3/managed_keys' \
+    --header 'Authorization: Bearer <access_token>' \ 
+    --header 'Content-Type: application/json' \
+    --header 'Accept: application/json' \ 
+    --header 'UKO-Vault: <vault_ID>'
 ```
 {: codeblock}
 
-* Replace `<region>` and `<port>` with the region and port number of your API endpoint. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **Connect**. 
-* Replace `<access_token>` and `<instance_ID>` with your retrieved service and authentication credentials.
+* Replace `<region>` and `<port>` with the region and port number of your API endpoint. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **Connect** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/hs-crypto#getinstance){: external}. 
+* Replace `<access_token>` with your retrieved service and authentication credentials.
+* Replace `<vault_ID>` with the ID of the vault that your keys are assigned to.
 
 Want to track your API requests in case something goes wrong? When you include the `-v` flag as part of cURL request, you get a `correlation-id` value in the response headers. You can use this value to correlate and track the request for debugging purposes.
 {: tip}
@@ -59,4 +60,4 @@ Want to track your API requests in case something goes wrong? When you include t
 ## What's next
 {: #set-up-uko-api-next-steps}
 
-You're all set to start managing your encryption keys and data. To find out more about programmatically managing your keys, [check out the Unified Key Orchestrator API reference doc](/apidocs/uko){: external}.
+You're all set to start managing your encryption keys and data. To find out more about programmatically managing your keys, check out the [Unified Key Orchestrator API reference doc](/apidocs/uko){: external}.

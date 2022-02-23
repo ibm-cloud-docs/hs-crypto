@@ -125,6 +125,7 @@ toc:
             - settings-network-policy.md
             - settings-dual-auth.md
             - settings-key-create-import-access.md
+            - settings-sysdig-metrics.md
           - retrieve-access-token.md
           - retrieve-instance-id.md
           - topicgroup:
@@ -162,7 +163,7 @@ toc:
               - set-rotation-policy.md
               - rotate-keys.md
               - view-key-versions.md
-              - disable-keys.md 
+              - disable-keys.md
               - delete-purge-keys.md
               - delete-keys.md
               - delete-dual-auth-keys.md
@@ -194,6 +195,7 @@ toc:
               - virtual-private-endpoint.md
               - secure-connection.md
           - at-events.md
+          - monitor-sysdig-metrics.md
           - manage-security-compliance.md
 
   - navgroup:
@@ -251,7 +253,7 @@ toc:
           - FAQs-ha-dr.md
           - FAQs-maintenance.md
       - topicgroup:
-          label: Troubleshooting key management service
+          label: Troubleshooting key management service in the Standard Plan
           topics:
           - troubleshooting-authenticate-api.md
           - troubleshooting-list-keys-api.md
@@ -282,6 +284,3 @@ toc:
           - troubleshooting-master-key-rotation-recovery.md
       - support.md
       - sitemap.md
-
-
-

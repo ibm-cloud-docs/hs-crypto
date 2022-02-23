@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-09-24"
+  years: 2020, 2022
+lastupdated: "2022-02-21"
 
 keywords: shared responsibilities, shared responsibility model, disaster recovery, incident management, operation management
 
@@ -40,6 +40,7 @@ Incident and operations management includes tasks such as high availability, mon
 | Monitoring | Provide integration with select third-party partnership technologies, such as {{site.data.keyword.at_full}}. | Use the provided tools to [review instance logs and activities](/docs/hs-crypto?topic=hs-crypto-at-events). |
 | Incidents | Provide notifications for planned maintenance, security bulletins, or unplanned outages.  | Set preferences to [receive emails about platform notifications](/docs/overview?topic=overview-ui#email-prefsl), and monitor the [IBM Cloud status page](https://{DomainName}/status?selected=announcement) for general announcements.|
 |Firmware updates| Provide firmware updates for multiple crypto units in a sequential manner with no impact to running workloads. | Perform tasks as usual. |
+
 {: caption="Table 1. Responsibilities for incident and operations" caption-side="bottom"}
 
 ## Change management
@@ -62,6 +63,7 @@ Identity and access management includes tasks such as authentication, authorizat
 |----------|-----------------------|--------|
 | User management| IBM does not have access to your resources but provides you with the ability to restrict user access to resources.   | Depending on your needs, restrict access to resources and service functionality by using Cloud IAM access policies. For more information, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).|
 | Service and key policies| IBM does not have access to your resources but provides you with the ability to set service and key policies.   | Manage your [service instance policies](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth) and [key policies](/docs/hs-crypto?topic=hs-crypto-set-dual-auth-key-policy).|
+
 {: caption="Table 3. Responsibilities for identity and access management" caption-side="bottom"}
 
 ## Security and regulation compliance

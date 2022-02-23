@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-09-24"
+  years: 2020, 2022
+lastupdated: "2022-02-16"
 
 keywords: troubleshoot, problems, known issues, blocked PIN on EP11 smart card
 

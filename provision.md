@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-02-16"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -28,8 +28,6 @@ You can create an instance of {{site.data.keyword.cloud_notm}} {{site.data.keywo
 
 You can automate the instance creation by using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).
 {: tip}
-
-You can find the detailed pricing plans on the [service creation page](/catalog/services/hyper-protect-crypto-services){: external}. 
 
 ## Before you begin
 {: #provision-prerequisites}
