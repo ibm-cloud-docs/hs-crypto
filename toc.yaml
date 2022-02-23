@@ -126,6 +126,7 @@ toc:
             - settings-network-policy.md
             - settings-dual-auth.md
             - settings-key-create-import-access.md
+            - settings-sysdig-metrics.md
           - retrieve-access-token.md
           - retrieve-instance-id.md
           - topicgroup:
@@ -195,6 +196,7 @@ toc:
               - virtual-private-endpoint.md
               - secure-connection.md
           - at-events.md
+          - monitor-sysdig-metrics.md
           - manage-security-compliance.md
 
   - navgroup:

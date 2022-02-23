@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-15"
+lastupdated: "2022-02-23"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -29,14 +29,22 @@ Stay up to date with the new features that are available for {{site.data.keyword
 {: shortdesc}
 
 
+## 23 February 2022
+{: #23-feb-2022}
+{: release-note}
+
+Added: Using {{site.data.keyword.mon_full_notm}} to measure {{site.data.keyword.hscrypto}} metrics {: #add-monitoring-metrics}
+:   By enabling metrics instance policy, you can now use {{site.data.keyword.mon_full_notm}} to measure how users and applications interact with {{site.data.keyword.hscrypto}}. For more information, see [Managing metrics](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics) and [Monitoring operational metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics).
+
+
+
 
 ## 15 February 2022
-{: #feb-2022}
+{: #15-feb-2022}
 {: release-note}
 
 Added: {{site.data.keyword.hscrypto}} expands into the S&atilde;o-Paulo region {: #add-sao-region}
 :   You can now create {{site.data.keyword.hscrypto}} instances in the S&atilde;o-Paulo (`br-sao`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
-
 
 
 
