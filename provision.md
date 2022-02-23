@@ -28,7 +28,6 @@ You can create an instance of {{site.data.keyword.cloud_notm}} {{site.data.keywo
 
 You can automate the instance creation by using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).
 {: tip}
- 
 
 ## Before you begin
 {: #provision-prerequisites}
@@ -182,8 +181,6 @@ To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan with th
     ibmcloud resource service-instances
     ```
     {: pre}
-
-
 
 ## What's next
 {: #provision-next}
