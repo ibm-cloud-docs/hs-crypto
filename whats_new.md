@@ -29,6 +29,7 @@ Stay up to date with the new features that are available for {{site.data.keyword
 {: shortdesc}
 
 
+
 ## 23 February 2022
 {: #23-feb-2022}
 {: release-note}
