@@ -26,6 +26,7 @@ completion-time: 2h
 {:important: .important}
 {:step: data-tutorial-type='step'}
 {:video: .video}
+{:note: .note}
 
 # Tutorial: Configuring KMIP in {{site.data.keyword.hscrypto}} for key management and distribution
 {: #tutorial-kmip-vmware}
