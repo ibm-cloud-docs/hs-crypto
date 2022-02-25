@@ -107,7 +107,7 @@ Let's start with the service authorization process.
 4. Select the **Initialize service instance** option and **Hyper Protect** as the key management type.
 
     - Select the {{site.data.keyword.hscrypto}} instance ID that stores your root key and key encryption key. You can click the **Retrieve** button to get a list of {{site.data.keyword.hscrypto}} instances under your IBM Cloud account.
-        Only IDs of {{site.data.keyword.hscrypto}} instances that contain at least one root key are to be listed. Make sure to [create a root key]((/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys)) first.
+        Only IDs of {{site.data.keyword.hscrypto}} instances that contain at least one root key are to be listed. Make sure to [create a root key](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys) first.
         {: note}
     - Select the customer root key to wrap the key encryption key for your data encryption key. You can click the **Retrieve** button to get a list of root keys stored on the selected {{site.data.keyword.hscrypto}} instance.
 
