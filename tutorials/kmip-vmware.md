@@ -2,7 +2,7 @@
 
 copyright:
   years:  2021, 2022
-lastupdated: "2022-01-21"
+lastupdated: "2022-02-25"
 
 keywords: VMWare encryption, KMIP, Key management and distribution, Data appliance encryption, Netapp, vSphere, vSAN encryption
 
@@ -106,6 +106,9 @@ Let's start with the service authorization process.
 4. Select the **Initialize service instance** option and **Hyper Protect** as the key management type.
 
     - Select the {{site.data.keyword.hscrypto}} instance ID that stores your root key and key encryption key. You can click the **Retrieve** button to get a list of {{site.data.keyword.hscrypto}} instances under your IBM Cloud account.
+    
+        Only IDs of {{site.data.keyword.hscrypto}} instances that contain at least one root key are to be listed. Make sure to [create a root key](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys) first.
+        {: note}
     - Select the customer root key to wrap the key encryption key for your data encryption key. You can click the **Retrieve** button to get a list of root keys stored on the selected {{site.data.keyword.hscrypto}} instance.
 
 5. Click **Configure** to complete the configuration. Optionally, you can add client certificates if you have an existing VMWare or vCenter environment that you like to reuse.

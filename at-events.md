@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-15"
+lastupdated: "2022-02-24"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -205,7 +205,7 @@ Some common fields are available for {{site.data.keyword.hscrypto}} to use outsi
 | `requestData.requestURI` | The URI of the API request that was made. |
 | `requestData.instanceID` | The unique identifier of your {{site.data.keyword.hscrypto}} service instance. |
 | `correlationId` | The unique identifier of the API request that generated the event. Note: This field is not supported in TKE events. |
-{: caption="Table 9. Describes the common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service actions." caption-side="bottom"}
+{: caption="Table 9. Common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
 
 For more information about the event fields in the Cloud Auditing Data Federation (CADF) event model, see [Event Fields](/docs/activity-tracker?topic=activity-tracker-event){: external}.
 
@@ -431,7 +431,7 @@ The following table lists the returned values that indicate a successful TKE eve
 |`outcome` | `success`  |
 | `reason.reasonCode`  | `200`  |
 | `reason.reasonType`  |`OK`  |
-{: caption="Table 10. Describes the returned values of a successful TKE event" caption-side="bottom"}
+{: caption="Table 10. Returned values of a successful TKE event" caption-side="bottom"}
 
 The following common fields for TKE events include extra information:
 
@@ -499,7 +499,7 @@ The following table lists the returned values that indicate a successful certifi
 |`outcome` | `success`  |
 | `reason.reasonCode`  | `200`  |
 | `reason.reasonType`  |`OK`  |
-{: caption="Table 11. Describes the returned values of a successful mTLS certificate manager event" caption-side="bottom"}
+{: caption="Table 11. Returned values of a successful mTLS certificate manager event" caption-side="bottom"}
 
 The following common fields for certificate manager events include extra information:
 
@@ -712,7 +712,7 @@ The following table lists the actions that are associated with each severity lev
         <p><code>hs-crypto.mtlscert-admin-key.read</code></p>
       </td>
     </tr>
-    <caption>Table 12. Describes the severity level for {{site.data.keyword.hscrypto}} service actions.</caption>
+    <caption>Table 12. Severity level for {{site.data.keyword.hscrypto}} service actions</caption>
     </table>
 
 The following table lists the status codes that are associated with each severity level:
@@ -721,4 +721,4 @@ The following table lists the status codes that are associated with each severit
 | -------- | ----------- |
 | Critical | `400` (For TKE events only), `401`, `403`, `500`, `503`, `507`  |
 | Warning  | `400`, `409`, `424`, `502`, `504`, `505`  |
-{: caption="Table 13. Describes the severity level for {{site.data.keyword.hscrypto}} response status codes." caption-side="bottom"}
+{: caption="Table 13. Severity level for {{site.data.keyword.hscrypto}} response status codes" caption-side="bottom"}

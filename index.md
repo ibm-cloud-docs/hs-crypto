@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-02-24"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -45,7 +45,7 @@ This tutorial shows you the high-level steps on how to set up your service insta
 With {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} that is built on FIPS 140-2 Level 4-certified hardware, you can take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. 
 {: hide-in-docs}
 
-This tutorial guides you how to initialize your service instance by loading your master key, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the Enterprise PKCS #11 over gRPC (GREP11) API.
+This tutorial guides you on how to initialize your service instance by loading your master key, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the Enterprise PKCS #11 over gRPC (GREP11) API.
 {: hide-in-docs}
 
 ## Step 1: Initialize your service instance
