@@ -220,6 +220,6 @@ Before users can access {{site.data.keyword.uko_full_notm}} vaults, keystores, o
 8. Click **Add**, and then click **Assign** after confirmation.
 
 ##  What's next
-{: #pkcs11-ui-best-practices-next}
+{: #uko-role-best-practices-next}
 
 To find out more about managing your {{site.data.keyword.uko_full_notm}} keys and keystores, check out the [{{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external}.
