@@ -24,7 +24,7 @@ subcollection: hs-crypto
 {:support: data-reuse='support'}
 {:term: .term}
 
-# Why can't I delete an internal keystore?
+# Why can't I delete internal keystores?
 {: #troubleshooting-delete-keystore}
 {: troubleshoot}
 

@@ -1773,7 +1773,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Why can't I delete vaults?](/docs/hs-crypto?topic=hs-crypto-troubleshooting-delete-vault#troubleshooting-delete-vault)
 
-[Why can't I delete an internal keystore?](/docs/hs-crypto?topic=hs-crypto-troubleshooting-delete-keystore#troubleshooting-delete-keystore)
+[Why can't I delete internal keystores?](/docs/hs-crypto?topic=hs-crypto-troubleshooting-delete-keystore#troubleshooting-delete-keystore)
 
 [Why do I fail to see the changes to my key in Azure Key Vault?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-azure-delay#troubleshoot-azure-delay)
 
