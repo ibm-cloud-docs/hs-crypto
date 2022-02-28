@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-02-28"
 
 keywords: encrypt IBM Db2 databases, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -29,6 +29,7 @@ completion-time: 2h
 # Tutorial: Using {{site.data.keyword.hscrypto}} PKCS #11 for IBM Db2 native encryption
 {: #tutorial-db2-pkcs11}
 {: toc-content-type="tutorial"}
+{: toc-services="hs-crypto"}
 {: toc-completion-time="2h"}
 
 IBM Db2® native encryption protects key database files and database backup images from inappropriate access while they are stored on external storage media. The database system automatically encrypts and decrypts data when it is used by authorized users and applications. Typically, database users do not need to be aware of native encryption and database client applications do not need to be adapted specifically.

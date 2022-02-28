@@ -1394,6 +1394,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults#grant-access-vaults)
 
+* [Step 1. Retrieve the vault ID](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults#access-vault-retrieve-ID)
+
+* [Step 2. Grant access to vaults from the {{site.data.keyword.cloud_notm}} UI](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults#grant-access-vault-console)
+
 * [What's next](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults#grant-access-vaults-next)
 
 [Setting up custom roles for {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-role-best-practices#uko-role-best-practices)

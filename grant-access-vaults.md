@@ -34,7 +34,7 @@ As a service administrator or an account owner, you can determine an [access pol
 Review [roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to learn how {{site.data.keyword.cloud_notm}} IAM roles map to {{site.data.keyword.hscrypto}} actions.
 {: tip}
 
-### Step 1. Retrieve the vault ID
+## Step 1. Retrieve the vault ID
 {: #access-vault-retrieve-ID}
 
 Retrieve the unique identifier that is associated with the vault that you want to grant someone access to.
@@ -48,7 +48,7 @@ Access the {{site.data.keyword.cloud_notm}} UI to browse the keys that are store
 
 
 
-### Step 2. Grant access to vaults from the {{site.data.keyword.cloud_notm}} UI
+## Step 2. Grant access to vaults from the {{site.data.keyword.cloud_notm}} UI
 {: #grant-access-vault-console}
 
 To assign access to a vault for a user from the UI, complete the following steps:
