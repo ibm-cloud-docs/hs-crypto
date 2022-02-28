@@ -161,6 +161,6 @@ Some code samples for [using GREP11 with Golang](https://github.com/IBM-Cloud/hp
 {: #uko-use-case-next}
 
 - You can use {{site.data.keyword.hscrypto}} as the root key provider for other {{site.data.keyword.cloud_notm}} services. For more information about integrating {{site.data.keyword.hscrypto}}, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
-<uko-api>- Use {{site.data.keyword.hscrypto}} to provide multicloud key orchestration capability for your encryption keys. To find out more about programmatically managing your keys, check out the [{{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external}.<uko-api>
+
 - To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 

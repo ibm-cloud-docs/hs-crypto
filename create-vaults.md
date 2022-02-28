@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Creating vaults
 {: #create-vaults}
 
-A vault is a single repository that controls a user's or an access group's access to managed keys and target keystores through {{site.data.keyword.iamshort}} (IAM). You can create vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+A vault is a single repository that controls a user's or an access group's access to managed keys and target keystores through {{site.data.keyword.iamshort}} (IAM). You can create vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI).
 {: shortdesc}
 
 

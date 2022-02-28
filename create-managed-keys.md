@@ -66,7 +66,7 @@ To create a managed key through the UI, complete the following steps:
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
     {: caption="Table 1. Key properties" caption-side="bottom"}
 
-7. Under **Target keystores**, you can select one or multiple target keystores to install the managed key in. Installing a key in multiple keystores enables redundancy. You can also install the key later by following instructions in [Installing existing keys to keystores](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
+7. Under **Target keystores**, you can select one or multiple target keystores to install the managed key in. Installing a key in multiple keystores enables redundancy. You can also install the key later by following instructions in [Setting target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
 
    You can use the key for encryption or decryption only after it is installed in at least one keystore.
    {: important}

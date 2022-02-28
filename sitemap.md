@@ -1027,6 +1027,14 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_setting_up_api_calls1}
 
 
+[Managing your keys with the key management API](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#set-up-uko-kms-api)
+
+* [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#retrieve-uko-kms-credentials)
+
+* [Forming your key management API request](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#form-uko-kms-api-request)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#set-up-uko-kms-api-next-steps)
+
 [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-set-up-pkcs-api)
 
 * [Prerequisites](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-prerequisite-pkcs-api)
@@ -1597,6 +1605,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-basics#faq-what-is-hpcs)
 
+* [What is {{site.data.keyword.uko_full_notm}}?](/docs/hs-crypto?topic=hs-crypto-faq-basics#faq-what-is-uko)
+
 * [What is a key management service?](/docs/hs-crypto?topic=hs-crypto-faq-basics#faq-what-key-management)
 
 * [What is Hardware Security Module?](/docs/hs-crypto?topic=hs-crypto-faq-basics#faq-what-is-hsm)
@@ -1670,8 +1680,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Is there a Service Level Agreement (SLA) specifically for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-hpcs-sla)
 
 [FAQs: {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko)
-
-* [What is {{site.data.keyword.uko_full_notm}}?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-what-is-uko)
 
 * [What is the difference between key management, key orchestration, and key governance?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-differences)
 
@@ -1765,7 +1773,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Why can't I delete vaults?](/docs/hs-crypto?topic=hs-crypto-troubleshooting-delete-vault#troubleshooting-delete-vault)
 
-[Why can't I delete an internal keystore?](/docs/hs-crypto?topic=hs-crypto-troubleshooting-delete-keystore#troubleshooting-delete-keystore)
+[Why can't I delete internal keystores?](/docs/hs-crypto?topic=hs-crypto-troubleshooting-delete-keystore#troubleshooting-delete-keystore)
 
 [Why do I fail to see the changes to my key in Azure Key Vault?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-azure-delay#troubleshoot-azure-delay)
 

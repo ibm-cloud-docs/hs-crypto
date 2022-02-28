@@ -41,10 +41,13 @@ Retrieve the unique identifier that is associated with the vault that you want t
 
 Access the {{site.data.keyword.cloud_notm}} UI to browse the keys that are stored in your service instance by following these steps:
 
-  1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-  2. Click **Vaults** from the navigation to view all the available vaults.
-  3. Click the vault that you want to edit. The Details side panel is displayed.
-  4. In the **General properties** card, copy the vault ID by clicking the copy icon.
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
+
+2. Click **Vaults** from the navigation to view all the available vaults.
+
+3. Click the vault that you want to edit. The Details side panel is displayed.
+
+4. In the **General properties** card, copy the vault ID by clicking the copy icon.
 
 
 
