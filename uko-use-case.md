@@ -17,6 +17,7 @@ subcollection: hs-crypto
 {:pre: .pre}
 {:external: target="_blank" .external}
 {:term: .term}
+{:note: .note}
 
 # Use cases - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}
 {: #uko-use-cases}

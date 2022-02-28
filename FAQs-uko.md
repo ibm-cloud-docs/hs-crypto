@@ -19,12 +19,18 @@ subcollection: hs-crypto
 {:external: target="_blank" .external}
 {:support: data-reuse='support'}
 {:term: .term}
+{:note: .note}
 
 # FAQs: {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}
 {: #faq-uko}
 
 Read to get answers for questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
 {: shortdesc}
+
+
+{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
+{: note}
+
 
 ## What is {{site.data.keyword.uko_full_notm}}?
 {: #faq-what-is-uko}
