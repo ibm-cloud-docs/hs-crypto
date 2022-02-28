@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-02-28"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -602,8 +602,15 @@ The following procedure uses Golang code as an example to test GREP11 functions.
 {: #get-started-next}
 
 - {{site.data.keyword.hscrypto}} helps you meet compliance requirements and ensures the security of your data. Check out the [compliance standards and criteria](/docs/hs-crypto?topic=hs-crypto-security-and-compliance) {{site.data.keyword.hscrypto}} has been certified.
+
 - {{site.data.keyword.hscrypto}} provides advanced encryption to your at-rest data with envelope encryption, check out [Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) to see how it works.
+
 - You can use {{site.data.keyword.hscrypto}} as the encryption key provider for other services such as {{site.data.keyword.cos_full_notm}} to bring your own encryption to your applications or data. Check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services) for the full list of supported services.
+
 - To learn more about {{site.data.keyword.hscrypto}} concepts and terminologies, check out [Components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
+
 - If you are using the Standard Plan, manage your keys with [{{site.data.keyword.hscrypto}} key management service API](/apidocs/hs-crypto){: external} and [{{site.data.keyword.keymanagementserviceshort}} CLI](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference){: external}.
+
+
+
 - Encrypt your data and perform cryptographic operations with the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) or the [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
