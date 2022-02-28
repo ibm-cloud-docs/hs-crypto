@@ -69,7 +69,7 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 
 
 
-| Region        | Public service endpoints for the key management service endpoints | Public service endpoint for the {{site.data.keyword.uko_full_notm}} endpoints |Public GREP11 service endpoints|
+| Region        | Public key management service endpoints | Public {{site.data.keyword.uko_full_notm}} service endpoints |Public GREP11 service endpoints |
 | ------------- | ---------------------------- |---------------------------- |---------------------------- |
 | Dallas        | `api.us-south.hs-crypto.cloud.ibm.com` | `uko.us-south.hs-crypto.cloud.ibm.com`| `ep11.us-south.hs-crypto.cloud.ibm.com` |
 | Frankfurt     | `api.eu-de.hs-crypto.cloud.ibm.com`    | `uko.eu-de.hs-crypto.cloud.ibm.com`| `ep11.eu-de.hs-crypto.cloud.ibm.com`    |
