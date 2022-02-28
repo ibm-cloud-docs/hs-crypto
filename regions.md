@@ -64,6 +64,11 @@ Private endpoints
 If you are managing your {{site.data.keyword.hscrypto}} resources programmatically, see the following table to determine the API endpoints to use when you connect to the [Key management API](/apidocs/hs-crypto), {{site.data.keyword.uko_full_notm}}, [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref), and  [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
 
+{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
+{: note}
+
+
+
 | Region        | Public service endpoints for the key management service endpoints | Public service endpoint for the {{site.data.keyword.uko_full_notm}} endpoints |Public GREP11 service endpoints|
 | ------------- | ---------------------------- |---------------------------- |---------------------------- |
 | Dallas        | `api.us-south.hs-crypto.cloud.ibm.com` | `uko.us-south.hs-crypto.cloud.ibm.com`| `ep11.us-south.hs-crypto.cloud.ibm.com` |
