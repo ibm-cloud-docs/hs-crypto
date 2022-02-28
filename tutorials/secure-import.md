@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-24"
+lastupdated: "2022-02-28"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -30,6 +30,7 @@ completion-time: 30m
 # Tutorial: Creating and importing encryption keys
 {: #tutorial-import-keys}
 {: toc-content-type="tutorial"}
+{: toc-services="hs-crypto"}
 {: toc-completion-time="30m"}
 
 Learn how to create, encrypt, and bring your encryption keys to the cloud by using {{site.data.keyword.hscrypto}}.

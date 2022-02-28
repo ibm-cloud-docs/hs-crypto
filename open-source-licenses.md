@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-02-28"
 
 keywords: open source licenses
 
@@ -241,6 +241,7 @@ END OF NON-IBM-LICENSE INFORMATION
 END OF NON-IBM-LICENSE INFORMATION FILE
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ```
+
 ## Hosting appliance notices and information
 {: #hosting-appliance-notice}
 
