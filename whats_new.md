@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-23"
+lastupdated: "2022-02-28"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,6 +27,31 @@ content-type: release-note
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+
+## 28 February 2022
+{: #28-feb-2022}
+{: release-note}
+
+Limited availability: Using {{site.data.keyword.uko_full_notm}} to manage and orchestrate keys in a multicloud environment {: #add-uko} 
+:   {{site.data.keyword.uko_full_notm}} is a public cloud control plane for multicloud and hybrid cloud key orchestration. As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, it provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores in the service instance or external keystores.
+
+    With {{site.data.keyword.uko_full_notm}}, you can connect your service instance to keystores in third-party cloud providers, back up and manage keys using the unified system, and orchestrate keys across multiple clouds.
+    
+    
+    {{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
+    
+
+    The following topics can help you get started with {{site.data.keyword.uko_full_notm}}:
+
+    * [Introducing {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-introduce-uko)
+    * [FAQs: {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-faq-uko)
+    * [Getting started with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-get-started)
+    * [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states)
+    * [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults)
+    * [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores)
+    * [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores)
+    * [Creating and installing managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys)
 
 
 

@@ -111,7 +111,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Step 1: Initialize your service instance](/docs/hs-crypto?topic=hs-crypto-get-started#initialize-crypto-dashboard)
 
-* [Step 2: Manage your encryption keys with the key management service](/docs/hs-crypto?topic=hs-crypto-get-started#manage-data-key-dashboard)
+* [Step 2 (Standard Plan only): Manage your encryption keys with the key management service](/docs/hs-crypto?topic=hs-crypto-get-started#manage-data-key-dashboard)
+
+* [Step 2 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys in a multicloud environment using {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-get-started#manage-uko-key-dashboard)
 
 * [Step 3: Encrypte your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm-dashboard)
 
@@ -121,7 +123,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Step 2: Initialize your service instance](/docs/hs-crypto?topic=hs-crypto-get-started#initialize-crypto)
 
-* [Step 3: Manage your encryption keys with the key management service](/docs/hs-crypto?topic=hs-crypto-get-started#manage-data-key)
+* [Step 3 (Standard Plan only): Manage your encryption keys with the key management service](/docs/hs-crypto?topic=hs-crypto-get-started#manage-data-key)
+
+* [Step 3 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys in a multicloud environment with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-get-started#manage-uko-key)
 
 * [Step 4: Encrypte your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm)
 
@@ -171,6 +175,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [Key management service](/docs/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts)
 
 * [Cloud hardware security module](/docs/hs-crypto?topic=hs-crypto-understand-concepts#cloud-hsm-concepts)
+
+* [{{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-understand-concepts#unified-key-orchestrator-concepts)
 
 
 ### About service instance initialization
@@ -267,6 +273,135 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#root-key-rotation-next)
 
 
+## Understanding Hyper Protect Crypto Services with Unified Key Orchestrator
+{: #sitemap_understanding_hyper_protect_crypto_services_with_unified_key_orchestrator}
+
+
+[Overview - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-overview)
+
+* [Why {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-why_hpcs)
+
+* [How does {{site.data.keyword.hscrypto}} work?](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-how-hpcs-work)
+
+* [Key features](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-key-features)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-overview-next)
+
+[Service architecture - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation#uko-architecture-workload-isolation)
+
+* [{{site.data.keyword.hscrypto}} architecture](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation#uko-architecture)
+
+* [{{site.data.keyword.hscrypto}} workload isolation](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation#uko-workload-isolation)
+
+* [Service dependencies](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation#uko-service_dependencies)
+
+[Use cases - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-cases)
+
+* [Pervasively protecting data at rest in the cloud](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-data-at-rest-encryption)
+
+* [Using {{site.data.keyword.uko_full_notm}} for multicloud key orchestration](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-case)
+
+* [Using {{site.data.keyword.hscrypto}} as PKCS #11 HSMs](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-pkcs11_hsm)
+
+* [Using {{site.data.keyword.hscrypto}} as Enterprise PKCS #11 HSMs](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-ep11-hsm)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-case-next)
+
+[Security and compliance](/docs/hs-crypto?topic=hs-crypto-uko-security-and-compliance#uko-security-and-compliance)
+
+* [Security readiness](/docs/hs-crypto?topic=hs-crypto-uko-security-and-compliance#uko-security-ready)
+
+* [Compliance readiness](/docs/hs-crypto?topic=hs-crypto-uko-security-and-compliance#uko-compliance-ready)
+
+[Components and concepts](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-understand-concepts)
+
+* [Key management service](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-key-management-concepts)
+
+* [Cloud hardware security module](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-cloud-hsm-concepts)
+
+* [{{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-unified-key-orchestrator-concepts)
+
+
+### About service instance initialization
+{: #sitemap_about_service_instance_initialization1}
+
+
+[Initializing your service instance](/docs/hs-crypto?topic=hs-crypto-uko-introduce-service#uko-introduce-service)
+
+* [Understanding administrators and signature keys](/docs/hs-crypto?topic=hs-crypto-uko-introduce-service#uko-understand-crypto-unit-admin)
+
+* [Understanding imprint mode and signature thresholds](/docs/hs-crypto?topic=hs-crypto-uko-introduce-service#uko-understand-imprint-mode)
+
+* [Understanding the master key](/docs/hs-crypto?topic=hs-crypto-uko-introduce-service#uko-understand-key-ceremony)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-introduce-service#uko-introduce-instance-initialization-next)
+
+[Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-initialize-instance-mode)
+
+* [Initializing service instances by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-instance-initialization-management-utilities)
+
+* [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-instance-initialization-recovery-crypto-unit)
+
+* [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-instance-initialization-key-files)
+
+
+### About Unified Key Orchestrator
+{: #sitemap_about_unified_key_orchestrator}
+
+
+[Introducing {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-introduce-uko#introduce-uko)
+
+* [Why {{site.data.keyword.uko_full_notm}}?](/docs/hs-crypto?topic=hs-crypto-introduce-uko#why-uko)
+
+* [Components](/docs/hs-crypto?topic=hs-crypto-introduce-uko#Components)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-introduce-uko#uko-next)
+
+[Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states#uko-key-states)
+
+* [Key states and transitions](/docs/hs-crypto?topic=hs-crypto-uko-key-states#uko-key-transitions)
+
+* [Key states and service actions](/docs/hs-crypto?topic=hs-crypto-uko-key-states#uko-key-states-service-actions)
+
+* [Monitoring for lifecycle changes](/docs/hs-crypto?topic=hs-crypto-uko-key-states#uko-monitor-lifecycle-changes)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-key-states#uko-key-states-next)
+
+
+### About internal key management service
+{: #sitemap_about_internal_key_management_service}
+
+
+[Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-uko-envelope-encryption#uko-envelope-encryption)
+
+* [Keys in envelope encryption](/docs/hs-crypto?topic=hs-crypto-uko-envelope-encryption#uko-key-types)
+
+* [How it works](/docs/hs-crypto?topic=hs-crypto-uko-envelope-encryption#uko-envelope-encryption-overview)
+
+* [Wrapping keys](/docs/hs-crypto?topic=hs-crypto-uko-envelope-encryption#uko-wrapping)
+
+* [Unwrapping keys](/docs/hs-crypto?topic=hs-crypto-uko-envelope-encryption#uko-unwrapping)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-envelope-encryption#uko-envelope-encryption-next)
+
+
+### About cloud hardware security module
+{: #sitemap_about_cloud_hardware_security_module1}
+
+
+[Introducing cloud HSM](/docs/hs-crypto?topic=hs-crypto-uko-introduce-cloud-hsm#uko-introduce-cloud-hsm)
+
+* [What is cloud HSM?](/docs/hs-crypto?topic=hs-crypto-uko-introduce-cloud-hsm#uko-what-is-cloud-hsm)
+
+* [Performing cryptographic operations by accessing the cloud HSM](/docs/hs-crypto?topic=hs-crypto-uko-introduce-cloud-hsm#uko-cryptography-cloud-hsm)
+
+[Introducing PKCS #11](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-intro)
+
+* [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-components)
+
+[Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-uko-grep11_intro#uko-grep11_intro)
+
+
 ## Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}
 {: #sitemap_integrating__services_with_{{sitedatakeywordhscrypto}}}
 
@@ -295,6 +430,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [28 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#28-feb-2022)
 
 * [23 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#23-feb-2022)
 
@@ -432,6 +569,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-provision#provision-prerequisites)
 
 * [Provisioning an instance of {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-provision#provision-standard)
+
+* [Provisioning an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-provision#provision-uko)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-provision#provision-next)
 
@@ -865,6 +1004,202 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui#manage-ep11-key-ui-next)
 
 
+## Managing keys - With Unified Key Orchestrator
+{: #sitemap_managing_keys_-_with_unified_key_orchestrator}
+
+
+[Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token#uko-retrieve-access-token)
+
+* [Retrieving an access token with the CLI](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token#uko-retrieve-token-cli)
+
+* [Retrieving an access token with the API](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token#uko-retrieve-token-api)
+
+[Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID#uko-retrieve-instance-ID)
+
+* [Viewing your instance ID with the UI](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID#uko-view-instance-ID)
+
+* [Retrieving an instance ID with the CLI](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID#uko-retrieve-instance-ID-cli)
+
+* [Retrieving an instance ID with the API](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID#uko-retrieve-instance-ID-api)
+
+
+### Setting up API calls
+{: #sitemap_setting_up_api_calls1}
+
+
+[Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-set-up-pkcs-api)
+
+* [Prerequisites](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-prerequisite-pkcs-api)
+
+* [Step 1: Set up the PKCS #11 library](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-step1-setup-pkcs-library)
+
+* [Step 2: (Optional) Verify the integrity and authenticity of the PKCS #11 library](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-step2-verify-pkcs-library)
+
+* [Step 3: Set up the PKCS #11 configuration file](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-step3-setup-configuration-file)
+
+* [Step 4: Use the PKCS #11 library to make PKCS #11 API calls](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-step4-use-pkcs-library)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-set-up-pkcs-api-next-steps)
+
+[Performing cryptographic operations with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-uko-set-up-grep11-api#uko-set-up-grep11-api)
+
+* [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-uko-set-up-grep11-api#uko-retrieve-grep11-credentials)
+
+* [Generating a GREP11 API request](/docs/hs-crypto?topic=hs-crypto-uko-set-up-grep11-api#uko-form-grep11-api-request)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-set-up-grep11-api#uko-set-up-grep11-api-next-steps)
+
+[Setting up Terraform for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs#uko-terraform-setup-for-hpcs)
+
+* [Example: Provisioning and initializing service instances by using Terraform](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs#uko-terraform-provision-initialize-instance-hpcs)
+
+* [What's next?](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs#uko-terraform-setup-hpcs-next)
+
+
+### Managing master keys
+{: #sitemap_managing_master_keys1}
+
+
+[Rotating master keys by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-smart-cards#uko-rotate-master-key-smart-cards)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-smart-cards#uko-rotate-master-key-smart-cards-prerequisites)
+
+* [Rotating master keys using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-smart-cards#uko-rotate-master-key-smart-cards-steps)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-smart-cards#uko-rotate-master-key-smart-cards-next)
+
+[Rotating master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-recovery-crypto-unit#uko-rotate-master-key-cli-recovery-crypto-unit)
+
+* [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-recovery-crypto-unit#uko-rotate-master-key-cli-recovery-crypto-unit-steps)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-recovery-crypto-unit#uko-rotate-master-key-cli-recovery-crypto-unit-next)
+
+[Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-key-part#uko-rotate-master-key-cli-key-part)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-key-part#uko-rotate-master-key-cli-key-part-prerequisites)
+
+* [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-key-part#uko-rotate-master-key-cli-key-part-steps)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-key-part#uko-rotate-master-key-cli-key-part-next)
+
+[Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-uko-recover-master-key-recovery-crypto-unit#uko-recover-master-key-recovery-crypto-unit)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-uko-recover-master-key-recovery-crypto-unit#uko-recover-master-key-prerequisites)
+
+* [Recovering master keys](/docs/hs-crypto?topic=hs-crypto-uko-recover-master-key-recovery-crypto-unit#uko-recover-master-key-step)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-recover-master-key-recovery-crypto-unit#uko-recover-master-key-next)
+
+
+### Managing vaults
+{: #sitemap_managing_vaults}
+
+
+[Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults#create-vaults)
+
+* [Creating vaults through the UI](/docs/hs-crypto?topic=hs-crypto-create-vaults#create-vaults-ui)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-create-vaults#create-vaults-next)
+
+[Editing vault details](/docs/hs-crypto?topic=hs-crypto-edit-vaults#edit-vaults)
+
+* [Editing vault details through the UI](/docs/hs-crypto?topic=hs-crypto-edit-vaults#edit-vaults-ui)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-edit-vaults#edit-vaults-next)
+
+[Deleting vaults](/docs/hs-crypto?topic=hs-crypto-delete-vaults#delete-vaults)
+
+* [Deleting vaults through the UI](/docs/hs-crypto?topic=hs-crypto-delete-vaults#delete-vaults-ui)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-delete-vaults#delete-vaults-next)
+
+
+### Managing KMS keys
+{: #sitemap_managing_kms_keys}
+
+
+[Creating and installing managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys)
+
+* [Creating and installing managed keys through the UI](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-ui)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-next)
+
+[Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list)
+
+* [Viewing a list of keys through the UI](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list-ui)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list-next)
+
+[Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list#search-key-list)
+
+* [Filtering keys through the UI](/docs/hs-crypto?topic=hs-crypto-search-key-list#filter-key-list-ui)
+
+* [ Searching for keys through the UI](/docs/hs-crypto?topic=hs-crypto-search-key-list#search-key-list-ui)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-search-key-list#search-key-list-next)
+
+[Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys)
+
+* [Editing key details through the UI](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys-ui)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys-next)
+
+[Setting target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores#install-key-keystores)
+
+* [Setting target keystores for existing keys through the UI](/docs/hs-crypto?topic=hs-crypto-install-key-keystores#install-key-keystores-ui)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-install-key-keystores#install-key-keystores-next)
+
+[Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys#delete-managed-keys)
+
+* [Deleting managed keys through the UI](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys#delete-managed-keys-ui)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys#delete-managed-keys-next)
+
+
+### Managing keystores
+{: #sitemap_managing_keystores}
+
+
+[Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores)
+
+* [Creating internal keystores through the UI](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-ui)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-next)
+
+[Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores)
+
+* [Setting up required user access in external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores-access)
+
+* [Connecting to external keystores through the UI](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores-ui)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores-next)
+
+[Editing internal keystores](/docs/hs-crypto?topic=hs-crypto-edit-internal-keystores#edit-internal-keystores)
+
+* [Editing internal keystores through the UI](/docs/hs-crypto?topic=hs-crypto-edit-internal-keystores#edit-internal-keystores-ui)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-edit-internal-keystores#edit-internal-keystores-next)
+
+[Editing connection to external keystores](/docs/hs-crypto?topic=hs-crypto-edit-external-keystore-connection#edit-external-keystore-connection)
+
+* [Editing connection to external keystores through the UI](/docs/hs-crypto?topic=hs-crypto-edit-external-keystore-connection#edit-external-keystore-connection-ui)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-edit-external-keystore-connection#edit-external-keystore-connection-next)
+
+[Deleting internal keystores](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores#delete-internal-keystores)
+
+* [Deleting internal keystores through the UI](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores#delete-internal-keystores-ui)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores#delete-internal-keystores-next)
+
+[Disconnecting from external keystores](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores#disconnect-external-keystores)
+
+* [Disconnecting from external keystores through the UI](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores#disconnect-external-keystores-ui)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores#disconnect-external-keystores-next)
+
+
 ## Enabling crypto mechanisms
 {: #sitemap_enabling_crypto_mechanisms}
 
@@ -1043,6 +1378,43 @@ Find what you are looking for in the compilation of topics that are available in
 [Managing security and compliance with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#manage-security-compliance)
 
 * [Governing {{site.data.keyword.hscrypto}} resource configuration with config rules](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#govern-crypto)
+
+
+## Enhancing security - With Unified Key Orchestrator
+{: #sitemap_enhancing_security_-_with_unified_key_orchestrator}
+
+
+[Managing user access](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-manage-access)
+
+* [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-roles)
+
+* [Managing access to multiple instances](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-manage-multiple-instances)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-manage-access-next)
+
+[Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults#grant-access-vaults)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults#grant-access-vaults-next)
+
+[Setting up custom roles for {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-role-best-practices#uko-role-best-practices)
+
+* [Step 1: Create custom IAM roles](/docs/hs-crypto?topic=hs-crypto-uko-role-best-practices#step1-create-custom-roles-uko)
+
+* [Step 2: Assign IAM roles to users](/docs/hs-crypto?topic=hs-crypto-uko-role-best-practices#step2-assign-iam-roles-uko)
+
+* [ What's next](/docs/hs-crypto?topic=hs-crypto-uko-role-best-practices#uko-role-best-practices-next)
+
+[Auditing events for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-at-events)
+
+* [Supported events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-at-supported-events)
+
+* [Viewing events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-at-ui)
+
+* [Analyzing successful events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-at-events-analyze)
+
+* [Analyzing failed events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-at-events-analyze-failed)
+
+* [Event severity](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-event-severity)
 
 
 ## API reference
@@ -1253,6 +1625,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [How am I charged for my use of {{site.data.keyword.hscrypto}} standard plan?](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs)
 
+* [How am I charged for my use of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}?](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs-uko)
+
 * [Is there a free trial for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-free-trial)
 
 [FAQs: Provisioning and operations](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-provisioning-operations)
@@ -1290,6 +1664,28 @@ Find what you are looking for in the compilation of topics that are available in
 * [Can I add or remove crypto units after I provision a service instance?](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-add-remove-crypto-unit)
 
 * [Is there a Service Level Agreement (SLA) specifically for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-hpcs-sla)
+
+[FAQs: {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko)
+
+* [What is {{site.data.keyword.uko_full_notm}}?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-what-is-uko)
+
+* [What is the difference between key management, key orchestration, and key governance?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-differences)
+
+* [Does {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} provide key management, governance, and orchestration at the sametime?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-functions)
+
+* [Is {{site.data.keyword.uko_full_notm}} a separate offering?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-offering)
+
+* [How is {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} different from the {{site.data.keyword.hscrypto}} Standard Plan?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-hpcs)
+
+* [What type of HSM is used for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-fips)
+
+* [Which cloud vendors or providers are supported by {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} as connected external keystores?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-vendor-cloud)
+
+* [How is {{site.data.keyword.uko_full_notm}} different from EKMF Web?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-ekmf)
+
+* [What multizone regions is {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} available in?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-mzr)
+
+* [Can I still use {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} for key management even if {{site.data.keyword.hscrypto}} is not available in the {{site.data.keyword.cloud_notm}} region that my service resides in?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-region)
 
 [FAQs: Security and compliance](/docs/hs-crypto?topic=hs-crypto-faq-security-compliance#faq-security-compliance)
 
@@ -1355,6 +1751,21 @@ Find what you are looking for in the compilation of topics that are available in
 [Why can't I rotate root keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-rotate-root-keys#troubleshoot-unable-to-rotate-root-keys)
 
 [Why can't I delete an initialized service instance?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-delete-instance#troubleshoot-delete-instance)
+
+
+## Troubleshooting Unified Key Orchestrator
+{: #sitemap_troubleshooting_unified_key_orchestrator}
+
+
+[Why can't I create internal keystores?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-create-internal-keystores#troubleshoot-create-internal-keystores)
+
+[Why can't I delete vaults?](/docs/hs-crypto?topic=hs-crypto-troubleshooting-delete-vault#troubleshooting-delete-vault)
+
+[Why can't I delete an internal keystore?](/docs/hs-crypto?topic=hs-crypto-troubleshooting-delete-keystore#troubleshooting-delete-keystore)
+
+[Why do I fail to see the changes to my key in Azure Key Vault?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-azure-delay#troubleshoot-azure-delay)
+
+[Why can't I rotate the master key when using the {{site.data.keyword.uko_full_notm}} Plan?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-uko#troubleshoot-master-key-rotation-uko)
 
 
 ## Troubleshooting Trusted Key Entry
