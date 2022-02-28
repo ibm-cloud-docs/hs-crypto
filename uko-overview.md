@@ -24,7 +24,7 @@ subcollection: hs-crypto
 # Overview - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}
 {: #uko-overview}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is a dedicated key management service and [Hardware Security Module (HSM)](#x6704988){: term} that provides you with the Keep Your Own Key capability for cloud data encryption. Built on FIPS 140-2 Level 4 certified hardware, {{site.data.keyword.hscrypto}} provides you with exclusive control of your encryption keys. With {{site.data.keyword.uko_full_notm}}, you can manage and orchestrate your keys in IBM Cloud as well as in third-party cloud providers with your {{site.data.keyword.hscrypto}} instance.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is a dedicated key management service and [Hardware Security Module (HSM)](#x6704988){: term} that provides you with the Keep Your Own Key capability for cloud data encryption. Built on FIPS 140-2 Level 4 certified hardware, {{site.data.keyword.hscrypto}} provides you with exclusive control of your encryption keys. With {{site.data.keyword.uko_full_notm}}, you can connect your service instance to keystores in IBM Cloud and third-party cloud providers, back up and manage keys using a unified system, and orchestrate keys across multiple clouds.
 {: shortdesc}
 
 
