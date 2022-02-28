@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-02-28"
 
 keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases
 
@@ -45,7 +45,7 @@ Refer to [Apply end to end security to a cloud application](/docs/solution-tutor
 ###  VMware image protection with KYOK
 {: #vmware-encryption-kyok}
 
-Organizations that use the VMware&reg; environment in {{site.data.keyword.cloud_notm}} to process and store personal information demands the highest level of security. As a user of {{site.data.keyword.hscrypto}}, you get your own dedicated slot that you set up on your own to ensure that no body else can access. Because {{site.data.keyword.hscrypto}} and VMware do not talk to the same interfaces, the Key Management Interoperability Protocol for VMware component acts as an intermediary to allow the VMware environment to store and use keys from {{site.data.keyword.hscrypto}}.
+Organizations that use the VMware&reg; environment in {{site.data.keyword.cloud_notm}} to process and store personal information demands the highest level of security. As a user of {{site.data.keyword.hscrypto}}, you get your own dedicated slot that you set up on your own to ensure that no body else can access. Because {{site.data.keyword.hscrypto}} and VMware do not contact the same interfaces, the Key Management Interoperability Protocol for VMware component acts as an intermediary to allow the VMware environment to store and use keys from {{site.data.keyword.hscrypto}}.
 
 As a single-tenant service, {{site.data.keyword.hscrypto}} offers dedicated control of the Hardware Security Module for VMware images for each customer. {{site.data.keyword.hscrypto}} extends the family of key management services in the {{site.data.keyword.cloud_notm}} toward single-tenant instances with dedicated hardware secret control.
 
