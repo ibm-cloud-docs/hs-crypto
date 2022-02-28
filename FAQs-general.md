@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-02-28"
 
 keywords: general frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips
 
@@ -36,6 +36,15 @@ Read to get answers for general questions about {{site.data.keyword.cloud}} {{si
 - Single-tenant key management system to create, import, rotate, and manage keys with the standardized API.
 - Data-at-rest encryption with customer-owned keys with seamless [integration with other {{site.data.keyword.cloud_notm}} data and storage services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
 - PKCS #11 library and Enterprise PKCS #11 (EP11) library for cryptographic operations, which is enabled by the {{site.data.keyword.hscrypto}} HSMs with the highest security level in the cloud.
+
+## What is {{site.data.keyword.uko_full_notm}}?
+{: #faq-what-is-uko}
+{: faq}
+
+{{site.data.keyword.uko_full_notm}} provides the only cloud native single-point-of-control of encryption keys across hybrid multicloud environments of your enterprise. 
+
+* {{site.data.keyword.uko_full_notm}} enables you with both Keep Your Own Key and Bring Your Own Key capabilities from across hybrid multicloud environments that includes on-premises environments.  
+* {{site.data.keyword.uko_full_notm}} manages and orchestrates all keys from the multicloud environments on {{site.data.keyword.cloud_notm}}.
 
 ## What is a key management service?
 {: #faq-what-key-management}

@@ -32,15 +32,6 @@ Read to get answers for questions about {{site.data.keyword.cloud}} {{site.data.
 {: note}
 
 
-## What is {{site.data.keyword.uko_full_notm}}?
-{: #faq-what-is-uko}
-{: faq}
-
-{{site.data.keyword.uko_full_notm}} provides the only cloud native single-point-of-control of encryption keys across hybrid multicloud environments of your enterprise. 
-
-* {{site.data.keyword.uko_full_notm}} enables you with both Keep Your Own Key and Bring Your Own Key capabilities from across hybrid multicloud environments that includes on-premises environments.  
-* {{site.data.keyword.uko_full_notm}} manages and orchestrates all keys from the multicloud environments on {{site.data.keyword.cloud_notm}}.
-
 ## What is the difference between key management, key orchestration, and key governance?
 {: #faq-uko-differences}
 {: faq}

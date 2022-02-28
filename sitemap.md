@@ -1605,6 +1605,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-basics#faq-what-is-hpcs)
 
+* [What is {{site.data.keyword.uko_full_notm}}?](/docs/hs-crypto?topic=hs-crypto-faq-basics#faq-what-is-uko)
+
 * [What is a key management service?](/docs/hs-crypto?topic=hs-crypto-faq-basics#faq-what-key-management)
 
 * [What is Hardware Security Module?](/docs/hs-crypto?topic=hs-crypto-faq-basics#faq-what-is-hsm)
@@ -1678,8 +1680,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Is there a Service Level Agreement (SLA) specifically for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-hpcs-sla)
 
 [FAQs: {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko)
-
-* [What is {{site.data.keyword.uko_full_notm}}?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-what-is-uko)
 
 * [What is the difference between key management, key orchestration, and key governance?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-differences)
 
