@@ -40,6 +40,7 @@ Limited availability: Using {{site.data.keyword.uko_full_notm}} to manage and or
     
     
     {{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
+    {: note}
     
 
     The following topics can help you get started with {{site.data.keyword.uko_full_notm}}:
