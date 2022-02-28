@@ -84,15 +84,15 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 {: tab-group="region-endpoint"}
 {: class="comparison-tab-table"}
 
-| Region        | Private key management service endpoints       |Private service endpoint for the {{site.data.keyword.uko_full_notm}} endpoints | Private GREP11 service endpoints|
+| Region        | Private key management service endpoints       | Private GREP11 service endpoints|
 | ------------- | ------------------------------------ |------------------------------------ |---------------------------- |
-| Dallas        | `api.private.us-south.hs-crypto.cloud.ibm.com` | `uko.private.us-south.hs-crypto.cloud.ibm.com` | `ep11.private.us-south.hs-crypto.cloud.ibm.com` |
-| Frankfurt     | `api.private.eu-de.hs-crypto.cloud.ibm.com`    |  `uko.private.eu-de.hs-crypto.cloud.ibm.com` | `ep11.private.eu-de.hs-crypto.cloud.ibm.com`    |
-| London        | `api.private.eu-gb.hs-crypto.cloud.ibm.com`  | `uko.private.eu-gb.hs-crypto.cloud.ibm.com`  | `ep11.private.eu-gb.hs-crypto.cloud.ibm.com`  |
-| Sydney        | `api.private.au-syd.hs-crypto.cloud.ibm.com`   | `uko.private.au-syd.hs-crypto.cloud.ibm.com`  | `ep11.private.au-syd.hs-crypto.cloud.ibm.com`   |
-| Tokyo         | `api.private.jp-tok.hs-crypto.cloud.ibm.com`   | `uko.private.jp-tok.hs-crypto.cloud.ibm.com` | `ep11.private.jp-tok.hs-crypto.cloud.ibm.com`  |
-| Washington DC | `api.private.us-east.hs-crypto.cloud.ibm.com`  | `uko.private.us-east.hs-crypto.cloud.ibm.com` | `ep11.private.us-east.hs-crypto.cloud.ibm.com`  |
-| S&atilde;o-Paulo | `api.private.br-sao.hs-crypto.cloud.ibm.com`   | `uko.private.br-sao.hs-crypto.cloud.ibm.com` | `ep11.private.br-sao.hs-crypto.cloud.ibm.com`   |
+| Dallas        | `api.private.us-south.hs-crypto.cloud.ibm.com` | `ep11.private.us-south.hs-crypto.cloud.ibm.com` |
+| Frankfurt     | `api.private.eu-de.hs-crypto.cloud.ibm.com`    |  `ep11.private.eu-de.hs-crypto.cloud.ibm.com`    |
+| London        | `api.private.eu-gb.hs-crypto.cloud.ibm.com`  | `ep11.private.eu-gb.hs-crypto.cloud.ibm.com`  |
+| Sydney        | `api.private.au-syd.hs-crypto.cloud.ibm.com`   | `ep11.private.au-syd.hs-crypto.cloud.ibm.com`   |
+| Tokyo         | `api.private.jp-tok.hs-crypto.cloud.ibm.com`   | `ep11.private.jp-tok.hs-crypto.cloud.ibm.com`  |
+| Washington DC | `api.private.us-east.hs-crypto.cloud.ibm.com`  | `ep11.private.us-east.hs-crypto.cloud.ibm.com`  |
+| S&atilde;o-Paulo | `api.private.br-sao.hs-crypto.cloud.ibm.com`  | `ep11.private.br-sao.hs-crypto.cloud.ibm.com`   |
 {: caption="Table 2. Lists private endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's private network" caption-side="bottom"}
 {: #table-2}
 {: tab-title="Private"}
