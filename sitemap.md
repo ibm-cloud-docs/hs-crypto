@@ -1027,6 +1027,14 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_setting_up_api_calls1}
 
 
+[Managing your keys with the key management API](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#set-up-uko-kms-api)
+
+* [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#retrieve-uko-kms-credentials)
+
+* [Forming your key management API request](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#form-uko-kms-api-request)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#set-up-uko-kms-api-next-steps)
+
 [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-set-up-pkcs-api)
 
 * [Prerequisites](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-prerequisite-pkcs-api)
