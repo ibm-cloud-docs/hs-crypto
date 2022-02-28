@@ -64,6 +64,11 @@
     "tiles": [
       {
         "date": "February 2022",
+        "title": "Limited availability: Using Unified Key Orchestration to manage and orchestrate keys in a multicloud environment",
+        "description": "With Unified Key Orchestration, you can connect your service instance to keystores in third-party cloud providers, back up and manage keys using the unified system, and orchestrate keys across multiple clouds."
+      },      
+      {
+        "date": "February 2022",
         "title": "Hyper Protect Crypto Services expands into the Sao-Paulo region",
         "description": "You can now create Hyper Protect Crypto Services instances in the Sao-Paulo (`br-sao`) region where the infrastructure is based on IBM Cloud Virtual Private Cloud (VPC)."
       },

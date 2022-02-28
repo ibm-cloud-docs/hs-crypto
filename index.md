@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-02-28"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -37,12 +37,21 @@ subcollection: hs-crypto
 {: hide-dashboard}
 
 
+With the {{site.data.keyword.uko_full_notm}} function, you can manage and orchestrate all keys from a multicloud environment with {{site.data.keyword.hscrypto}}. {{site.data.keyword.uko_full_notm}} provides the only cloud native single-point-of-control of encryption keys across hybrid multicloud environments of your enterprise.
+{: hide-dashboard}
+
+
+{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
+{: note}
+
+
+
 This tutorial shows you the high-level steps on how to set up your service instance by loading your [master keys](#x2908413){: term}, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the GREP11 API.
 {: hide-dashboard}
 
 
 
-With {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} that is built on FIPS 140-2 Level 4-certified hardware, you can take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. 
+With {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} that is built on FIPS 140-2 Level 4-certified hardware, you can take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. The {{site.data.keyword.uko_full_notm}} function provides the only cloud native single-point-of-control of encryption keys across hybrid multicloud environments of your enterprise.
 {: hide-in-docs}
 
 This tutorial guides you on how to initialize your service instance by loading your master key, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the Enterprise PKCS #11 over gRPC (GREP11) API.
@@ -67,7 +76,7 @@ To manage your keys, you need to initialize your service instance first. Dependi
 
     You can also initialize your service instance using master key parts that are stored in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. 
 
-## Step 2: Manage your encryption keys with the key management service 
+## Step 2 (Standard Plan only): Manage your encryption keys with the key management service 
 {: #manage-data-key-dashboard}
 {: hide-in-docs}
 {: notoc}
@@ -147,6 +156,75 @@ Complete the following steps to add an existing key.
 3. When you finish filling out the key's details, click **Import key** to confirm.
 
 From the {{site.data.keyword.cloud_notm}} console, you can inspect the general characteristics of your new keys.
+
+
+## Step 2 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys in a multicloud environment using {{site.data.keyword.uko_full_notm}}
+{: #manage-uko-key-dashboard}
+{: hide-in-docs}
+{: notoc}
+
+Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
+
+
+{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
+{: note}
+
+
+### Creating vaults
+{: #create-vault}
+
+A vault is a single repository that controls a user's or an access group's access to managed keys and target keystores through {{site.data.keyword.iamshort}} (IAM). 
+
+Complete the following steps to create your first vault:
+
+1. From your service instance UI, click **Vaults** from the navigation to view all the available vaults.
+2. To create a vault, click **Create vault**.
+3. Enter a name in **Vault name**. The vault name can be of 1 to 100 characters. Optionally, you can add an extended description to your vault in the **Description** section.
+4. Click **Create vault** to confirm.
+
+### Creating target keystores
+{: #create-keystore}
+
+A target keystore is a repository that stores the cryptographic keys. You can create an internal target keystore within the service instance or connect to an external target keystore in another service instance or even in another cloud provider, such as Microsoft Azure Key Vault and Amazon Web Services Key Management Service. 
+
+Complete the following steps to create your first internal target keystore:
+
+1. From your service instance UI, click **Target keystores** from the navigation to view all the available keystores.
+2. To create a keystore, click **Add keystore**.
+3. Under **Vault**, select the vault that you create, and click **Next**. 
+
+   If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
+
+4. Under **Keystore type**, select **KMS Keystore** and click **Next**.
+5. Under **Keystore properties**, enter a name in **Keystore name**. The keystore name can be of 1 to 100 characters. And then, click **Next**.
+6. Under **Summary**, you can view the summary of the keystore that you create, including the keystore type, the assigned vault, and general properties. 
+7. After you confirm the keystore details, click **Create keystore** to create the keystore.
+
+### Creating and installing managed keys
+{: #create-managed-key}
+
+You can use a managed key for encryption or decryption only after it is created and installed in at least one keystore. Complete the following steps to create your first managed key and install the key to the keystore that you create:
+
+1. From your service instance UI, click **Managed keys** from the navigation to view all the available keys.
+2. To create a managed key, click **Create key**.
+3. Under **Vault**, select the vault that you create, and click **Next**. 
+4. Under **General**, select **IBM KMS** as the keystore type, and click **Next**.
+5. Under **Key properties**, specify the following details of the key. Click **Next** to continue when you are done.
+
+    |       Property	      |                         Description                       |
+    |----------------------|-----------------------------------------------------------|
+    | Key name             | A unique, human-readable name for easy identification of your key. |
+    | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
+    | Algorithm            | The encryption algorithm to encrypt data for the key.     |
+    | Length               | The number of bits that represents the encryption strength of the key.   |
+    | State                | _Pre-active_ keys are not to be installed in target keystores until you manually activate them. _Active_ keys are to be automatically installed in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external} |
+    | Activation date      | Plan a date to activate the _Pre-active_ key. No automatic state change is triggered. |
+    | Expiration date      | Plan a date to deactivate the key. No automatic state change is triggered. |
+    | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
+    {: caption="Table 3. Managed key properties" caption-side="bottom"}
+
+6. Under **Target keystores**, select the keystore that you create. 
+7. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.
 
 ## Step 3: Encrypte your data with cloud HSM
 {: #encrypt-data-hsm-dashboard}
@@ -327,7 +405,10 @@ In order to use {{site.data.keyword.hscrypto}}, make sure that you have a Pay-As
 
 You must first create an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console. 
 
+{{site.data.keyword.hscrypto}} offers the following pricing plans. You can find the detailed pricing plans on the [service creation page](/catalog/services/hyper-protect-crypto-services){: external}. 
 
+* [A standard plan with the Keep Your Own Key capability](/docs/hs-crypto?topic=hs-crypto-overview)
+* [An extended plan with both the Keep Your Own Key and {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-overview)
 
 For detailed steps, see [Provisioning the service](/docs/hs-crypto?topic=hs-crypto-provision).
 
@@ -351,7 +432,7 @@ To manage your keys, you need to initialize your service instance first. Dependi
 
     You can also initialize your service instance using master key parts that are stored in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. 
 
-## Step 3: Manage your encryption keys with the key management service
+## Step 3 (Standard Plan only): Manage your encryption keys with the key management service
 {: #manage-data-key}
 {: hide-dashboard}
 
@@ -432,6 +513,79 @@ Complete the following steps to add an existing key.
 3. When you finish filling out the key's details, click **Import key** to confirm.
 
 From the {{site.data.keyword.cloud_notm}} console, you can inspect the general characteristics of your new keys.
+
+## Step 3 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys in a multicloud environment with {{site.data.keyword.uko_full_notm}}
+{: #manage-uko-key}
+{: hide-dashboard}
+
+Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
+
+
+{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
+{: note}
+
+
+### Creating vaults
+{: #create-vault}
+{: help}
+{: support}
+
+A vault is a single repository that controls a user's or an access group's access to managed keys and target keystores through {{site.data.keyword.iamshort}} (IAM). 
+
+Complete the following steps to create your first vault:
+
+1. From your service instance UI, click **Vaults** from the navigation to view all the available vaults.
+2. To create a vault, click **Create vault**.
+3. Enter a name in **Vault name**. The vault name can be of 1 to 100 characters. Optionally, you can add an extended description to your vault in the **Description** section.
+4. Click **Create vault** to confirm.
+
+### Creating target keystores
+{: #create-keystore}
+{: help}
+{: support}
+
+A target keystore is a repository that stores the cryptographic keys. You can create an internal target keystore within the service instance or connect to an external target keystore in another service instance or even in another cloud provider, such as Microsoft Azure Key Vault and Amazon Web Services Key Management Service. 
+
+Complete the following steps to create your first internal target keystore:
+
+1. From your service instance UI, click **Target keystores** from the navigation to view all the available keystores.
+2. To create a keystore, click **Add keystore**.
+3. Under **Vault**, select the vault that you create, and click **Next**. 
+
+   If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
+
+4. Under **Keystore type**, select **KMS Keystore** and click **Next**.
+5. Under **Keystore properties**, enter a name in **Keystore name**. And then, click **Next**.
+6. Under **Summary**, you can view the summary of the keystore that you create, including the keystore type, the assigned vault, and general properties. 
+7. After you confirm the keystore details, click **Create keystore** to create the keystore.
+
+### Creating and installing managed keys
+{: #create-managed-key}
+{: help}
+{: support}
+
+You can use a managed key for encryption or decryption only after it is created and installed in at least one keystore. Complete the following steps to create your first managed key and install the key to the keystore that you create:
+
+1. From your service instance UI, click **Managed keys** from the navigation to view all the available keys.
+2. To create a managed key, click **Create key**.
+3. Under **Vault**, select the vault that you create, and click **Next**. 
+4. Under **General**, select **IBM KMS** as the keystore type, and click **Next**.
+5. Under **Key properties**, specify the following details of the key. Click **Next** to continue when you are done.
+
+    |       Property	      |                         Description                       |
+    |----------------------|-----------------------------------------------------------|
+    | Key name             | A unique, human-readable name for easy identification of your key. |
+    | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
+    | Algorithm            | The encryption algorithm to encrypt data for the key.     |
+    | Length               | The number of bits that represents the encryption strength of the key.   |
+    | State                | _Pre-active_ keys are not to be installed in target keystores until you manually activate them. _Active_ keys are to be automatically installed in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external} |
+    | Activation date      | Plan a date to activate the _Pre-active_ key. No automatic state change is triggered. |
+    | Expiration date      | Plan a date to deactivate the key. No automatic state change is triggered. |
+    | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
+    {: caption="Table 3. Managed key properties" caption-side="bottom"}
+
+6. Under **Target keystores**, select the keystore that you create. 
+7. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.
 
 ## Step 4: Encrypte your data with cloud HSM
 {: #encrypt-data-hsm}
@@ -602,8 +756,15 @@ The following procedure uses Golang code as an example to test GREP11 functions.
 {: #get-started-next}
 
 - {{site.data.keyword.hscrypto}} helps you meet compliance requirements and ensures the security of your data. Check out the [compliance standards and criteria](/docs/hs-crypto?topic=hs-crypto-security-and-compliance) {{site.data.keyword.hscrypto}} has been certified.
+
 - {{site.data.keyword.hscrypto}} provides advanced encryption to your at-rest data with envelope encryption, check out [Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) to see how it works.
+
 - You can use {{site.data.keyword.hscrypto}} as the encryption key provider for other services such as {{site.data.keyword.cos_full_notm}} to bring your own encryption to your applications or data. Check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services) for the full list of supported services.
+
 - To learn more about {{site.data.keyword.hscrypto}} concepts and terminologies, check out [Components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
+
 - If you are using the Standard Plan, manage your keys with [{{site.data.keyword.hscrypto}} key management service API](/apidocs/hs-crypto){: external} and [{{site.data.keyword.keymanagementserviceshort}} CLI](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference){: external}.
+
+
+
 - Encrypt your data and perform cryptographic operations with the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) or the [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).

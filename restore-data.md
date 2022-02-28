@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-02-28"
 
 keywords: disaster recovery, restore, recovery, cross region restore, support ticket, support center
 
@@ -42,7 +42,7 @@ To use failover crypto units to restore data in a regional disaster, make sure t
 ## Restoring your data by opening an IBM support ticket
 {: #restore-data-open-support-ticket}
 
-If you don't enable failover crypto units, you need to open an IBM support ticket to restore your data. IBM can then provision a new service instance for you in another region by using the same instance ID, and restore all the key resources from the backup. And then, you need to load your [master key](#x2908413){: term} to the new service instance in the new region.
+If you don't enable failover crypto units or you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}, you need to open an IBM support ticket to restore your data. IBM can then provision a new service instance for you in another region by using the same instance ID, and restore all the key resources from the backup. And then, you need to load your [master key](#x2908413){: term} to the new service instance in the new region.
 
 In the process, you're the only person who owns the master key. IBM administrators or any third-party users cannot access your data or keys in the backup or the restored service instance.
 {: note}

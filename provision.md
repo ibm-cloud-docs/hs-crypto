@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-02-28"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -28,6 +28,20 @@ You can create an instance of {{site.data.keyword.cloud_notm}} {{site.data.keywo
 
 You can automate the instance creation by using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).
 {: tip}
+
+
+{{site.data.keyword.hscrypto}} offers the following pricing plans. You can find the detailed pricing plans on the [service creation page](/catalog/services/hyper-protect-crypto-services){: external}. 
+
+* [A standard plan with the Keep Your Own Key capability](/docs/hs-crypto?topic=hs-crypto-overview)
+* [A extended plan with both the Keep Your Own Key and {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-overview)
+    For the pricing plan with {{site.data.keyword.uko_full_notm}}, recovering your service instance through failover crypto units from another region is not currently supported.
+
+[Pricing samples](/docs/hs-crypto?topic=hs-crypto-faq-pricing) for these two plans are also available for your reference.
+
+
+{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
+{: note}
+
  
 
 ## Before you begin
@@ -175,6 +189,115 @@ To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan with th
 
     A private instance accepts API requests through only the private endpoints. The private endpoints are only accessible when your {{site.data.keyword.cloud_notm}} account, along with all associated resources, is enabled with [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint). You cannot access your private only instance through the CLI or API if your server or machine is outside the {{site.data.keyword.cloud_notm}} network.
     {: important}
+
+5. Verify that the service instance is created successfully. Run the following command to get all the service instances that you create. Check whether the {{site.data.keyword.hscrypto}} service instance is among the list.
+
+    ```sh
+    ibmcloud resource service-instances
+    ```
+    {: pre}
+
+
+## Provisioning an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} 
+{: #provision-uko}
+
+You can provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from either the {{site.data.keyword.cloud_notm}} UI or CLI.
+
+### Using the {{site.data.keyword.cloud_notm}} UI
+{: #provision-uko-gui}
+
+To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
+
+1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
+2. Click **Catalog** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
+3. From the Catalog navigation pane, click **Services**. And then, under **Category**, select **Security**.
+4. From the list of services displayed, click the **{{site.data.keyword.hscrypto}}** tile.
+5. On the service page, select the **With {{site.data.keyword.uko_full_notm}}** pricing plan.  
+5. Fill in the form with the details that are required.
+
+    - Under **Region**, select a [region](/docs/hs-crypto?topic=hs-crypto-regions) that you want to create your {{site.data.keyword.hscrypto}} resources in.
+
+      Currently, the `us-south` and `us-east` regions are enabled with recovery crypto units by default, which means, when a service instance is provisioned in either regions, you are enabled with the option to back up your master keys in the recovery crypto units located in both regions. For details, see [Introducing service instance initialization modes](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit).
+
+    - Under **Service name**, enter a name for your service instance.
+    - Under **Select a resource group**, select the resource group where you want to organize and manage your service intance. You can select the initial resource group that is named `Default` or other groups that you create. For more information, see [Creating and managing resource groups](/docs/account?topic=account-rgs).
+    - Under **Tags** (Optional), add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/account?topic=account-tag).
+    - Under **Access management tags** (Optional), add tags to resources to help organize access control relationships in the `project:analysis` format. For more information, see [Controlling access to resources by using tags](/docs/account?topic=account-access-tags-tutorial).
+    - Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs. At least two crypto units are to be enabled for high availability. These crypto units are distributed among different supported availability zones in the selected region.
+ 
+6. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
+
+### Using the {{site.data.keyword.cloud_notm}} CLI
+{: #provision-uko-cli}
+
+To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from the {{site.data.keyword.cloud_notm}} CLI, complete the following steps:
+
+1. Download and install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external}.
+2. Log in to {{site.data.keyword.cloud_notm}} through the {{site.data.keyword.cloud_notm}} CLI with the following command:
+
+    ```sh
+    ibmcloud login
+    ```
+    {: pre}
+
+    If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the CLI output to generate a one-time passcode.
+    {: tip}
+
+3. Select the region and resource group where you want to create a {{site.data.keyword.hscrypto}} service instance. You can use the following command to set your target region and resource group.
+
+    ```sh
+    ibmcloud target -r <region_name> -g <resource_group_name>
+    ```
+    {: pre}
+
+    Replace the variables in the sample command according to the following table.
+
+    <table>
+      <tr>
+        <th>Variables</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>region_name</td>
+        <td>The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions">Regional service endpoints</a>.</td>
+      </tr>
+      <tr>
+        <td>resource_group_name</td>
+        <td>The resource group where you organize and manage the instance. You can select the initial resource group that is named <code>Default</code> or other groups that you create. For more information, see <a href="/docs/account?topic=account-rgs">Creating and managing resource groups</a>.</td>
+      </tr>
+      <caption>Table 3. Describes command variables to set the target region and resource group for a {{site.data.keyword.hscrypto}} instance with {{site.data.keyword.uko_full_notm}}</caption>
+    </table>
+
+4. Run the following command to create a {{site.data.keyword.hscrypto}} instance:
+
+    ```sh
+    ibmcloud resource service-instance-create <instance_name> hs-crypto standard <region_name> [-p '{"units": <number_of_operational_crypto_units>']
+    ```
+    {: pre}
+
+    Replace the variables in the example command according to the following table.
+
+    <table>
+      <tr>
+        <th>Variables</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>instance_name</td>
+        <td>Mandatory. The name of your {{site.data.keyword.hscrypto}} service instance.</td>
+      </tr>
+      <tr>
+        <td>region_name</td>
+        <td><p>Mandatory. The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions">Regional service endpoints</a>.</p>
+        <p>Currently, the <code>us-south</code> and <code>us-east</code> regions are enabled with recovery crypto units by default, which means, when a service instance is provisioned in either regions, you are enabled with the option to back up your master keys in the recovery crypto units located in both regions. For details, see <a href="/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit">Introducing service instance initialization modes</a>.</p></td>
+      </tr>
+      <tr>
+        <td>number_of_operational_crypto_units</td>
+        <td><p>Optional. Multiple crypto units are distributed among different supported availability zones in the selected region to increase availability.</p>
+        <p>At least two crypto units are to be enabled for high availability. If you do not specify the number of crypto units, two crypto units are assigned by default.</p></td>
+      </tr>
+      <caption>Table 4. Describes command variables to create a {{site.data.keyword.hscrypto}} instance with {{site.data.keyword.uko_full_notm}}</caption>
+    </table>
 
 5. Verify that the service instance is created successfully. Run the following command to get all the service instances that you create. Check whether the {{site.data.keyword.hscrypto}} service instance is among the list.
 

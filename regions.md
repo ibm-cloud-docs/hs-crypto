@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-21"
+lastupdated: "2022-02-28"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -95,6 +95,36 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 {: class="comparison-tab-table"}
 
 
+
+| Region        | Public service endpoints for the Standard Plan | Public service endpoint for the {{site.data.keyword.uko_full_notm}} Plan |Public GREP11 service endpoints|
+| ------------- | ---------------------------- |---------------------------- |---------------------------- |
+| Dallas        | `api.us-south.hs-crypto.cloud.ibm.com` | `uko.us-south.hs-crypto.cloud.ibm.com`| `ep11.us-south.hs-crypto.cloud.ibm.com` |
+| Frankfurt     | `api.eu-de.hs-crypto.cloud.ibm.com`    | `uko.eu-de.hs-crypto.cloud.ibm.com`| `ep11.eu-de.hs-crypto.cloud.ibm.com`    |
+| London        | `api.eu-gb.hs-crypto.cloud.ibm.com`  | `uko.eu-gb.hs-crypto.cloud.ibm.com`| `ep11.eu-gb.hs-crypto.cloud.ibm.com`  |
+| Sydney        | `api.au-syd.hs-crypto.cloud.ibm.com`   | `uko.au-syd.hs-crypto.cloud.ibm.com`| `ep11.au-syd.hs-crypto.cloud.ibm.com`   |
+| Tokyo         | `api.jp-tok.hs-crypto.cloud.ibm.com`   | `uko.jp-tok.hs-crypto.cloud.ibm.com`| `ep11.jp-tok.hs-crypto.cloud.ibm.com`  |
+| Washington DC | `api.us-east.hs-crypto.cloud.ibm.com`  | `uko.us-east.hs-crypto.cloud.ibm.com`| `ep11.us-east.hs-crypto.cloud.ibm.com`  |
+| S&atilde;o-Paulo | `api.br-sao.hs-crypto.cloud.ibm.com`   | `uko.br-sao.hs-crypto.cloud.ibm.com` |`ep11.br-sao.hs-crypto.cloud.ibm.com`   |
+{: caption="Table 1. Lists public endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's public network" caption-side="bottom"}
+{: #table-1}
+{: tab-title="Public"}
+{: tab-group="region-endpoint"}
+{: class="comparison-tab-table"}
+
+| Region        | Private key management service endpoints       |Private service endpoint for the {{site.data.keyword.uko_full_notm}} Plan | Private GREP11 service endpoints|
+| ------------- | ------------------------------------ |------------------------------------ |---------------------------- |
+| Dallas        | `api.private.us-south.hs-crypto.cloud.ibm.com` | `uko.private.us-south.hs-crypto.cloud.ibm.com` | `ep11.private.us-south.hs-crypto.cloud.ibm.com` |
+| Frankfurt     | `api.private.eu-de.hs-crypto.cloud.ibm.com`    |  `uko.private.eu-de.hs-crypto.cloud.ibm.com` | `ep11.private.eu-de.hs-crypto.cloud.ibm.com`    |
+| London        | `api.private.eu-gb.hs-crypto.cloud.ibm.com`  | `uko.private.eu-gb.hs-crypto.cloud.ibm.com`  | `ep11.private.eu-gb.hs-crypto.cloud.ibm.com`  |
+| Sydney        | `api.private.au-syd.hs-crypto.cloud.ibm.com`   | `uko.private.au-syd.hs-crypto.cloud.ibm.com`  | `ep11.private.au-syd.hs-crypto.cloud.ibm.com`   |
+| Tokyo         | `api.private.jp-tok.hs-crypto.cloud.ibm.com`   | `uko.private.jp-tok.hs-crypto.cloud.ibm.com` | `ep11.private.jp-tok.hs-crypto.cloud.ibm.com`  |
+| Washington DC | `api.private.us-east.hs-crypto.cloud.ibm.com`  | `uko.private.us-east.hs-crypto.cloud.ibm.com` | `ep11.private.us-east.hs-crypto.cloud.ibm.com`  |
+| S&atilde;o-Paulo | `api.private.br-sao.hs-crypto.cloud.ibm.com`   | `uko.private.br-sao.hs-crypto.cloud.ibm.com` | `ep11.private.br-sao.hs-crypto.cloud.ibm.com`   |
+{: caption="Table 2. Lists private endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's private network" caption-side="bottom"}
+{: #table-2}
+{: tab-title="Private"}
+{: tab-group="region-endpoint"}
+{: class="comparison-tab-table"}
 
 
 For more information about authenticating with {{site.data.keyword.hscrypto}}, see the following topics:

@@ -18,14 +18,14 @@ subcollection: hs-crypto
 {:external: target="_blank" .external}
 {:term: .term}
 
-# Use cases - {{site.data.keyword.hscrypto}} Standard Plan
-{: #use-cases}
+# Use cases - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}
+{: #uko-use-cases}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} can be used as a key management service to pervasively protect data at rest in the {{site.data.keyword.cloud_notm}} as well as a cloud HSM for general-purpose cryptographic operations.
 {: shortdesc}
 
 ## Pervasively protecting data at rest in the cloud
-{: #data-at-rest-encryption}
+{: #uko-data-at-rest-encryption}
 
 With the integration in the {{site.data.keyword.cloud_notm}} Security Architecture, you can use {{site.data.keyword.hscrypto}} encrypt your data at rest for cloud data and storage services in the highest security level with your own keys. The service uses the same key-provider API as {{site.data.keyword.keymanagementserviceshort}} to provide a consistent envelope encryption and file system encryption approach to adopting {{site.data.keyword.cloud_notm}} services.
 
@@ -34,7 +34,7 @@ With the integration in the {{site.data.keyword.cloud_notm}} Security Architectu
 Encryption keys that are generated and protected by {{site.data.keyword.hscrypto}} can be used to provide application record-level or field-level encryption to protect data from other insider threats such as from database administrators.
 
 ###  Data at rest encryption with KYOK
-{: #data-at-rest-encryption-kyok}
+{: #uko-data-at-rest-encryption-kyok}
 
 Keys are protected by customer-managed dedicated HSMs, which means, only you have access to your data. The cryptographic capabilities of  {{site.data.keyword.hscrypto}} are built on top of a FIPS 140-2 Level 4 Certified Hardware Security Module. You can benefit from the cryptographic capabilities of {{site.data.keyword.hscrypto}} for both your new and existing workloads. The {{site.data.keyword.keymanagementservicefull_notm}} API is integrated for generating and protecting encryption keys.
 
@@ -43,7 +43,7 @@ Refer to [Apply end to end security to a cloud application](/docs/solution-tutor
 ![data at rest encryption with KYOK](/images/byok.svg "Data at rest encryption with KYOK"){: caption="Figure 1. Data at rest encryption with KYOK" caption-side="bottom"}
 
 ###  VMware image protection with KYOK
-{: #vmware-encryption-kyok}
+{: #uko-vmware-encryption-kyok}
 
 Organizations that use the VMware&reg; environment in {{site.data.keyword.cloud_notm}} to process and store personal information demands the highest level of security. As a user of {{site.data.keyword.hscrypto}}, you get your own dedicated slot that you set up on your own to ensure that no body else can access. Because {{site.data.keyword.hscrypto}} and VMware do not contact the same interfaces, the Key Management Interoperability Protocol for VMware component acts as an intermediary to allow the VMware environment to store and use keys from {{site.data.keyword.hscrypto}}.
 
@@ -53,13 +53,48 @@ Check out the [overview video on {{site.data.keyword.cloud_notm}} {{site.data.ke
 
 ![VMware image protection and vSAN encryption with KYOK](/images/byok_vm.svg "VMware image protection with KYOK"){: caption="Figure 2. VMware image protection with KYOK" caption-side="bottom"}
 
+
+## Using {{site.data.keyword.uko_full_notm}} for multicloud key orchestration
+{: #uko-use-case}
+
+You can use {{site.data.keyword.uko_full_notm}} to securely create and manage your keys and internal keystores across multiple clouds. The following is a few use cases on how you can use {{site.data.keyword.uko_full_notm}} to manage your keys.
+
+
+{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
+{: note}
+
+
+
+### Identity and Access Management (IAM)
+{: #uko-iam}
+
+With IAM, you can grant and control access to the vault, and therefore the keys and keystores that are assigned to the vault.
+
+
+### Manage your keys through one user experience
+{: #manage-keys}
+
+You can create, manage, and delete your cryptographic keys from one point of control, without dealing with different user interfaces. When you install a managed key in multiple keystores in a vault, the system keeps the installations in sync. This ensures an efficient and fully audited key lifecycle management.
+
+
+### Connect to external keystores
+{: #connect-to-keystores}
+
+You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS KMS.
+
+
+### Back up all keys of your enterprise centrally
+{: #back-up-keys}
+
+All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}. When a fatal error occurs in the cloud, you can reinstall the keys to quickly recover from the error.
+
 ## Using {{site.data.keyword.hscrypto}} as PKCS #11 HSMs
-{: #pkcs11_hsm}
+{: #uko-pkcs11_hsm}
 
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} provides the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref). PKCS #11 is defined as one of the Public-Key Cryptography Standards. Cryptographic operations are executed inside the HSMs at the cloud side. This allows for schemes where a cryptographic key is never in the clear outside the HSM, and all corresponding sensitive cryptographic operations are handled inside the HSM boundary as well.
 
 ### Application-level encryption using the PKCS #11 API
-{: #app-encryption-pkcs11}
+{: #uko-app-encryption-pkcs11}
 
 {{site.data.keyword.hscrypto}} allows application programmers to design and develop applications with a standard PKCS #11 API to request encryption or to sign the application data. It means that you can invoke security without having programmers to become encryption experts. Now you can enable and improve data integrity through digital signing and confidentiality through data encryption. Applications can use the {{site.data.keyword.hscrypto}} PKCS #11 library to perform cryptographic operations. This capability helps you to modernize business processes through building applications that have a digital workflow with private data and digital reviews, approvals, and signatures that are secure and trustworthy.
 
@@ -70,7 +105,7 @@ You can use the PKCS #11 API to encrypt applications between clouds. With the su
 ![Application encryption by using PKCS #11](/images/application-encryption-pkcs11.svg "Application encryption by using PKCS #11"){: caption="Figure 3. Application encryption by using PKCS #11" caption-side="bottom"}
 
 ### Databases encryption by using the PKCS #11 API
-{: #database_encryption_pkcs11}
+{: #uko-database_encryption_pkcs11}
 
 With {{site.data.keyword.hscrypto}}, you can encrypt Oracle® Database by using Transparent Data Encryption (TDE) and encrypt IBM Db2® Database by using Db2 default encryption.
 
@@ -92,7 +127,7 @@ With the PKCS #11 library integration, {{site.data.keyword.hscrypto}} supports t
 * For a tutorial on how to use Db2 default encryption with {{site.data.keyword.hscrypto}}, see [Using IBM Db2 default encryption with {{site.data.keyword.hscrypto}} PKCS #11](/docs/hs-crypto?topic=hs-crypto-tutorial-db2-pkcs11).
 
 ### Protecting data in transit with TLS/SSL offloading
-{: #ssl-offloading}
+{: #uko-ssl-offloading}
 
 Transport Layer Security (TLS) and Secure Sockets Layer (SSL) are cryptographic protocols that are designed to provide communication security over a computer network. The TLS/SSL protocol aims primarily to provide privacy and data integrity between two or more communicating computer applications.
 
@@ -107,7 +142,7 @@ For a tutorial on how to offload the SSL workload to a load balancer such as NGI
 ![Protecting data in transit with TLS/SSL offloading](/images/ssl-offloading.svg "Protecting data in transit with TLS/SSL offloading"){: caption="Figure 6. Protecting data in transit with TLS/SSL offloading" caption-side="bottom"}
 
 ## Using {{site.data.keyword.hscrypto}} as Enterprise PKCS #11 HSMs
-{: #ep11_hsm}
+{: #uko-ep11-hsm}
 
 {{site.data.keyword.hscrypto}} provides the [Enterprise PKCS #11 (EP11) API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref). Cloud application can use this function through [gRPC](https://grpc.io){: external}.
 
@@ -122,8 +157,9 @@ Some code samples for [using GREP11 with Golang](https://github.com/IBM-Cloud/hp
 ![EP11 HSM](/images/PKCS11.svg "Cryptographic operations with Enterprise PKCS #11"){: caption="Figure 7. Cryptographic operations with Enterprise PKCS #11" caption-side="bottom"}
 
 ## What's next
-{: #use-case-next}
+{: #uko-use-case-next}
 
 - You can use {{site.data.keyword.hscrypto}} as the root key provider for other {{site.data.keyword.cloud_notm}} services. For more information about integrating {{site.data.keyword.hscrypto}}, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
-- Use {{site.data.keyword.hscrypto}} to provide highly secured key management capability for your encryption keys. To find out more about programmatically managing your keys, check out the [{{site.data.keyword.hscrypto}} key management API reference doc](/apidocs/hs-crypto){: external}.
+<uko-api>- Use {{site.data.keyword.hscrypto}} to provide multicloud key orchestration capability for your encryption keys. To find out more about programmatically managing your keys, check out the [{{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external}.<uko-api>
 - To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+
