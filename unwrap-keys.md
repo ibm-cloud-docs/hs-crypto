@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: data encryption key, key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, unwrap api
 
@@ -21,7 +21,7 @@ subcollection: hs-crypto
 # Unwrapping data encryption keys with root keys
 {: #unwrap-keys}
 
-You can unwrap a [data encryption key (DEK)](#x4791827){: term} to access the contents by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management API, if you are a privileged user. Unwrapping a DEK decrypts and checks the integrity of the contents, returning the original key material to your {{site.data.keyword.cloud_notm}} data service.
+You can unwrap a [data encryption key (DEK)](#x4791827){: term} to access the contents by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management service API, if you are a privileged user. Unwrapping a DEK decrypts and checks the integrity of the contents, returning the original key material to your {{site.data.keyword.cloud_notm}} data service.
 {: shortdesc}
 
 To learn how key wrapping helps you control the security of at-rest data in the cloud, see [Envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-01"
 
 keywords: site map, doc structure, information architecture
 
@@ -644,11 +644,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the console](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies#update-network-access-policy-ui)
 
-* [Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management API](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies#update-network-access-policy-api)
+* [Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management service API](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies#update-network-access-policy-api)
 
 * [Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the CLI](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies#update-network-access-policy-cli)
 
-* [Disabling the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management API](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies#disable-network-access-policy-api)
+* [Disabling the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management service API](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies#disable-network-access-policy-api)
 
 [Managing dual authorization of your service instance](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth#manage-dual-auth)
 
@@ -660,7 +660,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Disabling dual authorization for your service instance with the console](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth#disable-dual-auth-instance-policy-ui)
 
-* [Disabling dual authorization for your service instance with the key management API](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth#disable-dual-auth-instance-policy-api)
+* [Disabling dual authorization for your service instance with the key management service API](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth#disable-dual-auth-instance-policy-api)
 
 [Managing the key create and import access policy](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#manage-keyCreateImportAccess)
 
@@ -670,7 +670,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Enabling and updating the key create and import access policy for your service instance with the API](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#enable-keyCreateImportAccess-policy-api)
 
-* [Disabling the key create and import access policy for your service instance with the key management API](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#disable-key-create-import-policy-api)
+* [Disabling the key create and import access policy for your service instance with the key management service API](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#disable-key-create-import-policy-api)
 
 [Managing metrics](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics#manage-monitoring-metrics)
 
@@ -697,11 +697,11 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_setting_up_api_calls}
 
 
-[Managing your keys with the key management API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#set-up-kms-api)
+[Managing your keys with the key management service API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#set-up-kms-api)
 
 * [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#retrieve-kms-credentials)
 
-* [Forming your key management API request](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#form-kms-api-request)
+* [Forming your key management service API request](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#form-kms-api-request)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#set-up-kms-api-next-steps)
 
@@ -869,17 +869,17 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Viewing root keys or standard keys with the console](/docs/hs-crypto?topic=hs-crypto-view-keys#view-key-gui)
 
-* [Viewing root keys or standard keys with the key management API](/docs/hs-crypto?topic=hs-crypto-view-keys#view-key-api)
+* [Viewing root keys or standard keys with the key management service API](/docs/hs-crypto?topic=hs-crypto-view-keys#view-key-api)
 
 [Viewing details about a root key or a standard key](/docs/hs-crypto?topic=hs-crypto-view-key-details#view-key-details)
 
 * [Viewing key details with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-view-key-details#view-key-details-ui)
 
-* [Viewing key details with the key management API](/docs/hs-crypto?topic=hs-crypto-view-key-details#view-key-details-api)
+* [Viewing key details with the key management service API](/docs/hs-crypto?topic=hs-crypto-view-key-details#view-key-details-api)
 
 [Retrieving a root key or a standard key](/docs/hs-crypto?topic=hs-crypto-retrieve-key#retrieve-key)
 
-* [Retrieving a key with the key management API](/docs/hs-crypto?topic=hs-crypto-retrieve-key#get-key-api)
+* [Retrieving a key with the key management service API](/docs/hs-crypto?topic=hs-crypto-retrieve-key#get-key-api)
 
 [Wrapping data encryption keys with root keys](/docs/hs-crypto?topic=hs-crypto-wrap-keys#wrap-keys)
 
@@ -913,7 +913,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Viewing root key versions](/docs/hs-crypto?topic=hs-crypto-view-key-versions#view-key-versions)
 
-* [Viewing root key versions with the key management API](/docs/hs-crypto?topic=hs-crypto-view-key-versions#view-key-versions-api)
+* [Viewing root key versions with the key management service API](/docs/hs-crypto?topic=hs-crypto-view-key-versions#view-key-versions-api)
 
 [Disabling root keys](/docs/hs-crypto?topic=hs-crypto-disable-keys#disable-keys)
 
@@ -947,7 +947,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Setting dual authorization policies for keys](/docs/hs-crypto?topic=hs-crypto-set-dual-auth-key-policy#set-dual-auth-key-policy)
 
-* [Managing dual authorization policies with the key management API](/docs/hs-crypto?topic=hs-crypto-set-dual-auth-key-policy#manage-dual-auth-key-policies-api)
+* [Managing dual authorization policies with the key management service API](/docs/hs-crypto?topic=hs-crypto-set-dual-auth-key-policy#manage-dual-auth-key-policies-api)
 
 [Purging keys manually](/docs/hs-crypto?topic=hs-crypto-purge-keys#purge-keys)
 
@@ -1004,8 +1004,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui#manage-ep11-key-ui-next)
 
 
-## Managing keys - With Unified Key Orchestrator
-{: #sitemap_managing_keys_-_with_unified_key_orchestrator}
+## Managing keys, keystores, and vaults - Unified Key Orchestrator Plan
+{: #sitemap_managing_keys,_keystores,_and_vaults_-_unified_key_orchestrator_plan}
 
 
 [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token#uko-retrieve-access-token)
@@ -1027,11 +1027,11 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_setting_up_api_calls1}
 
 
-[Managing your keys with the key management API](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#set-up-uko-kms-api)
+[Managing your keys with the key management service API](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#set-up-uko-kms-api)
 
 * [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#retrieve-uko-kms-credentials)
 
-* [Forming your key management API request](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#form-uko-kms-api-request)
+* [Forming your key management service API request](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#form-uko-kms-api-request)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#set-up-uko-kms-api-next-steps)
 
@@ -1388,8 +1388,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [Governing {{site.data.keyword.hscrypto}} resource configuration with config rules](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#govern-crypto)
 
 
-## Enhancing security - With Unified Key Orchestrator
-{: #sitemap_enhancing_security_-_with_unified_key_orchestrator}
+## Enhancing security - Unified Key Orchestrator Plan
+{: #sitemap_enhancing_security_-_unified_key_orchestrator_plan}
 
 
 [Managing user access](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-manage-access)
@@ -1442,7 +1442,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [API versioning](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-versioning)
 
-* [June 2021](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-june-2021)
+* [January 2022](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-jan-2022)
 
 * [April 2021](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-april-2021)
 
@@ -1524,7 +1524,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Provisioning and initializing service instances with Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs){: external}
 
-[Managing key management service keys with Terraform - Standard Plan only](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: external}
+[(Standard Plan only) Managing key management service keys with Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: external}
 
 
 ## Regions and locations
@@ -1744,11 +1744,11 @@ Find what you are looking for in the compilation of topics that are available in
 * [How do I get support for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-hpcs-support)
 
 
-## Troubleshooting key management service in the Standard Plan
-{: #sitemap_troubleshooting_key_management_service_in_the_standard_plan}
+## Troubleshooting key management service
+{: #sitemap_troubleshooting_key_management_service}
 
 
-[Why am I not authorized to make key management API request?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-authenticate-api#troubleshoot-unable-to-authenticate-api)
+[Why am I not authorized to make key management service API request?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-authenticate-api#troubleshoot-unable-to-authenticate-api)
 
 [Why can't I view or list keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-list-keys-api#troubleshoot-unable-to-list-keys-api)
 

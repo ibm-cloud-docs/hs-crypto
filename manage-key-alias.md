@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-07"
+lastupdated: "2022-03-01"
 
 keywords: create key alias, key alias, delete key alias, add key alias, retrieve encryption key by alias, create alias API examples
 
@@ -51,7 +51,7 @@ Before you manage key alias for keys in {{site.data.keyword.hscrypto}}, keep in 
 ## Creating key aliases
 {: #create-key-alias}
 
-To create a key alias for a key, you can use either the console or the key management API.
+To create a key alias for a key, you can use either the console or the key management service API.
 
 Each key can have up to five aliases. It is limited to 1,000 aliases per instance.
 {: note}
@@ -221,7 +221,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
 ## Deleting key aliases
 {: #delete-key-alias}
 
-To remove a key alias for a key, you can use either the console or the key management API.
+To remove a key alias for a key, you can use either the console or the key management service API.
 
 ### Deleting key aliases with the console
 {: #delete-key-alias-ui}

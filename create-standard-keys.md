@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: standard key, encryption key, create standard key, create encryption key, add key, key material, key management, create secret, persist secret, create encryption key, encryption key api, api key
 
@@ -20,7 +20,7 @@ subcollection: hs-crypto
 # Creating standard keys
 {: #create-standard-keys}
 
-You can create a standard encryption key with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.hscrypto}} key management API.
+You can create a standard encryption key with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.hscrypto}} key management service API.
 {: shortdesc}
 
 ## Creating standard keys with the console
@@ -99,7 +99,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
-2. Call the [{{site.data.keyword.hscrypto}} key management API](/apidocs/hs-crypto){: external} with the following cURL command.
+2. Call the [{{site.data.keyword.hscrypto}} key management service API](/apidocs/hs-crypto){: external} with the following cURL command.
 
     ```sh
     curl -X POST \
@@ -210,13 +210,13 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
           <p>When you set the <code>extractable</code> attribute to <code>true</code>, the service creates a standard key that you can store in your apps or services.</p>
         </td>
       </tr>
-        <caption>Table 2. Describes the variables that are needed to add a standard key with the {{site.data.keyword.hscrypto}} key management API</caption>
+        <caption>Table 2. Describes the variables that are needed to add a standard key with the {{site.data.keyword.hscrypto}} key management service API</caption>
     </table>
 
     To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-122.pdf){: external}.
     {: tip}
 
-    A successful `POST /v2/keys` response returns the ID value for your key, along with other metadata. The ID is a unique identifier that is assigned to your key and is used for subsequent calls to the {{site.data.keyword.hscrypto}} key management API.
+    A successful `POST /v2/keys` response returns the ID value for your key, along with other metadata. The ID is a unique identifier that is assigned to your key and is used for subsequent calls to the {{site.data.keyword.hscrypto}} key management service API.
 
 3. Optional: Verify that the key was created by running the following call to get the keys in your {{site.data.keyword.hscrypto}} service instance.
 
@@ -234,4 +234,4 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 ## What's next
 {: #standard-key-next}
 
-To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](/apidocs/hs-crypto){: external}.
+To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external}.

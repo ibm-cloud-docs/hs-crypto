@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: enable kyok, hyper protect crypto service onboarding, internal, kyok, onboard service, crn token
 
@@ -177,7 +177,7 @@ encryption keys.
 {: tip}
 
 Because your instances are known, you can use the
-[{{site.data.keyword.hscrypto}} key management API](https://cloud.ibm.com/apidocs/hs-cryptot#list-keys){: external} to reveal
+[{{site.data.keyword.hscrypto}} key management service API](https://cloud.ibm.com/apidocs/hs-cryptot#list-keys){: external} to reveal
 which keys can be used to secure your DEKs. Before you can do that, a root key
 needs to be created.
 

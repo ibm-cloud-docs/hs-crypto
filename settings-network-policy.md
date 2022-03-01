@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: instance settings, service settings, network access policies
 
@@ -24,7 +24,7 @@ subcollection: hs-crypto
 # Managing the network access policy
 {: #managing-network-access-policies}
 
-After you set up your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance, you manage network access policy by using the {{site.data.keyword.hscrypto}} key management API.
+After you set up your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance, you manage network access policy by using the {{site.data.keyword.hscrypto}} key management service API.
 {: shortdesc}
 
 Before you update the network access policy, you need to initialize the service instance first. See [Initializing service instances with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [Initializing service instances by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) for instructions.
@@ -52,7 +52,7 @@ After you create a {{site.data.keyword.hscrypto}} instance, complete the followi
     If a private-only network is enabled, you are not able to view or manage keys through the UI. However, you can still adjust the network setting later by using the API or CLI.
     {: note}
 
-## Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management API
+## Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management service API
 {: #update-network-access-policy-api}
 
 As a security administrator, update the network access policy for your {{site.data.keyword.hscrypto}} instance by making a `PUT` call to the following endpoint. See these API references to [set](/apidocs/hs-crypto#putinstancepolicy){: external} and [list](/apidocs/hs-crypto#getinstancepolicy){: external} instance policies.
@@ -195,7 +195,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
 
 You can also update the network access policy for your {{site.data.keyword.hscrypto}} instance using the CLI. For more information, see [the CLI reference](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference#kp-instance-policy-update-allowed){: external}.
 
-## Disabling the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management API
+## Disabling the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management service API
 {: #disable-network-access-policy-api}
 
 As a security administrator, disable a network access policy for a {{site.data.keyword.hscrypto}} instance by making a `PUT` call to the following endpoint. See these API references to [set](/apidocs/hs-crypto#putinstancepolicy){: external} and [list](/apidocs/hs-crypto#getinstancepolicy){: external} instance policies.

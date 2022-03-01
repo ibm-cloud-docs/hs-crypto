@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: set deletion policy, dual authorization, policy-based, key deletion
 
@@ -45,7 +45,7 @@ To enable dual authorization settings at the instance level, check out
 [Managing service settings](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth).
 {: tip}
 
-## Managing dual authorization policies with the key management API
+## Managing dual authorization policies with the key management service API
 {: #manage-dual-auth-key-policies-api}
 
 Consider the following items before you enable dual authorization for a key:
@@ -171,7 +171,7 @@ following cURL command.
       <caption>
         Table 1. Describes the variables that are needed to view a dual
         authorization policy for a key with the
-        {{site.data.keyword.hscrypto}} key management API.
+        {{site.data.keyword.hscrypto}} key management service API.
       </caption>
     </table>
 
@@ -338,7 +338,7 @@ command.
       <caption>
         Table 2. Describes the variables that are needed to update a dual
         authorization policy with the
-        {{site.data.keyword.hscrypto}} key management API.
+        {{site.data.keyword.hscrypto}} key management service API.
       </caption>
     </table>
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-01"
 
 keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases
 
@@ -39,7 +39,7 @@ Encryption keys that are generated and protected by {{site.data.keyword.hscrypto
 
 Keys are protected by customer-managed dedicated HSMs, which means, only you have access to your data. The cryptographic capabilities of  {{site.data.keyword.hscrypto}} are built on top of a FIPS 140-2 Level 4 Certified Hardware Security Module. You can benefit from the cryptographic capabilities of {{site.data.keyword.hscrypto}} for both your new and existing workloads. The {{site.data.keyword.keymanagementservicefull_notm}} API is integrated for generating and protecting encryption keys.
 
-Refer to [Apply end to end security to a cloud application](/docs/solution-tutorials?topic=solution-tutorials-cloud-e2e-security) and [Create secure microservices that write to a consolidated database](https://developer.ibm.com/patterns/create-a-secured-microservices-and-deploy-it-to-a-consolidated-database/){: external} for tutorials on how to encrypt cloud applications by using the key management API of {{site.data.keyword.hscrypto}}.
+Refer to [Apply end to end security to a cloud application](/docs/solution-tutorials?topic=solution-tutorials-cloud-e2e-security) and [Create secure microservices that write to a consolidated database](https://developer.ibm.com/patterns/create-a-secured-microservices-and-deploy-it-to-a-consolidated-database/){: external} for tutorials on how to encrypt cloud applications by using the key management service API of {{site.data.keyword.hscrypto}}.
 
 ![data at rest encryption with KYOK](/images/byok.svg "Data at rest encryption with KYOK"){: caption="Figure 1. Data at rest encryption with KYOK" caption-side="bottom"}
 
@@ -162,5 +162,6 @@ Some code samples for [using GREP11 with Golang](https://github.com/IBM-Cloud/hp
 
 - You can use {{site.data.keyword.hscrypto}} as the root key provider for other {{site.data.keyword.cloud_notm}} services. For more information about integrating {{site.data.keyword.hscrypto}}, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
 
+- To find out more about programmatically managing your KMS keys, check out the [{{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external}.
 - To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 

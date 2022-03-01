@@ -204,7 +204,7 @@ toc:
               - manage-pkcs11-keystores.md
               - manage-pkcs11-keys.md
       - topicgroup:
-          label: Managing keys - With Unified Key Orchestrator
+          label: Managing keys, keystores, and vaults - Unified Key Orchestrator Plan
           topics:
           - uko-retrieve-access-token.md
           - uko-retrieve-instance-id.md
@@ -270,7 +270,7 @@ toc:
           - monitor-sysdig-metrics.md
           - manage-security-compliance.md
       - topicgroup:
-          label: Enhancing security - With Unified Key Orchestrator
+          label: Enhancing security - Unified Key Orchestrator Plan
           topics:
           - uko-manage-access.md
           - grant-access-vaults.md
@@ -305,7 +305,7 @@ toc:
               label: Provisioning and initializing service instances with Terraform
               href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs
           - link:
-              label: Managing key management service keys with Terraform - Standard Plan only
+              label: (Standard Plan only) Managing key management service keys with Terraform
               href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key
       - regions.md
       - tke-paper.md
@@ -333,7 +333,7 @@ toc:
           - FAQs-ha-dr.md
           - FAQs-maintenance.md
       - topicgroup:
-          label: Troubleshooting key management service in the Standard Plan
+          label: Troubleshooting key management service
           topics:
           - troubleshooting-authenticate-api.md
           - troubleshooting-list-keys-api.md

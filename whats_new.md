@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-01"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -208,8 +208,8 @@ Added: Support for the SLIP10 mechanism and Edwards-curve algorithm {: #add-slip
 Added: Using Terraform to manage {{site.data.keyword.hscrypto}} instances and resources {: #add-terraform}
 :   Terraform is an open source software to configure and automate cloud resource provisioning and management. Now you can provision and initialize {{site.data.keyword.hscrypto}} instances, as well as managing root keys and standard keys with the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in. For more information, see [Managing key management service resources with Terraform](/docs/terraform?topic=terraform-kms-resources), [Retrieving key management service data with Terraform](/docs/terraform?topic=terraform-kms-data-sources), and the [sample Terraform template for {{site.data.keyword.hscrypto}}](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-hpcs-crypto){: external}.
 
-Updated: Key management API {: #update-kms-api-december}
-:   The {{site.data.keyword.hscrypto}} key management API is updated with the following changes:
+Updated: key management service API {: #update-kms-api-december}
+:   The {{site.data.keyword.hscrypto}} key management service API is updated with the following changes:
 
     - Updated: The API methods for the following key actions are now transferred to individual request paths. The generic path format (except the action of restoring a key) is `/api/v2/keys/<key_ID>/actions/<action>` where `key_ID` is the UUID of the key and `action` is the action name that you want to execute.
         - [Wrap a key](/apidocs/hs-crypto#wrapkey).
@@ -230,7 +230,7 @@ Updated: Key management API {: #update-kms-api-december}
 
         This method is originally used for performing actions on a key, such as wrap, unwrap, and rotate. It is now replaced with individual request path for each action.
 
-    For more information about the API updates, see [{{site.data.keyword.hscrypto}} key management API reference](/apidocs/hs-crypto){: external}.
+    For more information about the API updates, see [{{site.data.keyword.hscrypto}} key management service API reference](/apidocs/hs-crypto){: external}.
 
 ## 30 November 2020
 {: #november-2020}
@@ -389,7 +389,7 @@ Scalability {: #scalability-new}
 Added: Integration of {{site.data.keyword.keymanagementserviceshort}} API {: #kp-api}
 :   {{site.data.keyword.keymanagementserviceshort}} API is now integrated with Hyper Protect Crypto Services to generate and protect your keys. You can call the {{site.data.keyword.keymanagementserviceshort}} API directly through {{site.data.keyword.hscrypto}}.
 
-    For more information, see [Setting up the key management API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api) and [{{site.data.keyword.hscrypto}} key management API reference](/apidocs/hs-crypto){: external}.
+    For more information, see [Setting up the key management service API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api) and [{{site.data.keyword.hscrypto}} key management service API reference](/apidocs/hs-crypto){: external}.
 
 Added: Support for HSM management with Keep Your own Key {: #hsm-kyok}
 :   {{site.data.keyword.hscrypto}} now supports Keep Your Own Key (KYOK) so that you have more control and authority over your data with encryption keys that you can keep, control, and manage. You can initialize and manage your service instance with {{site.data.keyword.cloud}} command-line interface (CLI).

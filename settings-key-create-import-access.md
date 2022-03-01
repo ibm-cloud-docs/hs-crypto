@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: instance settings, service settings, key creation/import, key create policy, key creation/import, key policy
 
@@ -26,7 +26,7 @@ subcollection: hs-crypto
 
 After you set up your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}
 instance, you can manage the key create and import access policy by using the
-{{site.data.keyword.hscrypto}} key management API.
+{{site.data.keyword.hscrypto}} key management service API.
 {: shortdesc}
 
 This policy applies only to key management service keys and related operations.
@@ -47,7 +47,7 @@ creation and importation settings that are listed on the key create and import a
 
 Setting and retrieving the key create and import access policy is supported through the
 API only. To find out more about accessing
-the {{site.data.keyword.hscrypto}} key management API, check out
+the {{site.data.keyword.hscrypto}} key management service API, check out
 [Setting up the API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
 Before you enable the key create and import access policy for your
@@ -321,10 +321,10 @@ existing value for the omitted field is overwritten by the default value.
     ```
     {: codeblock}
 
-## Disabling the key create and import access policy for your service instance with the key management API
+## Disabling the key create and import access policy for your service instance with the key management service API
 {: #disable-key-create-import-policy-api}
 
-As a manager of a {{site.data.keyword.hscrypto}} instance, to disable the key create and import access policy with the key management API, make a `PUT` call to the following endpoint.
+As a manager of a {{site.data.keyword.hscrypto}} instance, to disable the key create and import access policy with the key management service API, make a `PUT` call to the following endpoint.
 
 ```
 https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=keyCreateImportAccess

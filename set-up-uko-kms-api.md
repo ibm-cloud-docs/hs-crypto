@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-01"
 
-keywords: set up api, kms api, key protect api, key management api, using api
+keywords: set up api, kms api, key protect api, key management service API, using api
 
 subcollection: hs-crypto
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 
-# Managing your keys with the key management API
+# Managing your keys with the key management service API
 {: #set-up-uko-kms-api}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [key management service API](/apidocs/hs-crypto){: external} to store, retrieve, and generate encryption keys.
@@ -33,7 +33,7 @@ To work with the API, you need to generate your service and authentication crede
 1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token).
 2. [Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID).
 
-## Forming your key management API request
+## Forming your key management service API request
 {: #form-uko-kms-api-request}
 
 When you make an API call to the service, structure your API request according to how you initially provisioned your instance of {{site.data.keyword.hscrypto}}.

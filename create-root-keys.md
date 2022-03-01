@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: root key, create root key, add key, root key api, api key, symmetric key, key material, key management, create key-wrapping key, create crk, create customer key, key-wrapping key
 
@@ -22,7 +22,7 @@ subcollection: hs-crypto
 # Creating root keys
 {: #create-root-keys}
 
-You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to create [root keys](#x6946961){: term} by using the {{site.data.keyword.hscrypto}} console, or programmatically with the {{site.data.keyword.hscrypto}} key management API.
+You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to create [root keys](#x6946961){: term} by using the {{site.data.keyword.hscrypto}} console, or programmatically with the {{site.data.keyword.hscrypto}} key management service API.
 {: shortdesc}
 
 Root keys are symmetric key-wrapping keys that are used to protect the security of encrypted data in the cloud. For more information about root keys, see [Envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
@@ -106,7 +106,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
-2. Call the [{{site.data.keyword.hscrypto}} key management API](/apidocs/hs-crypto){: external} with the following `curl` command.
+2. Call the [{{site.data.keyword.hscrypto}} key management service API](/apidocs/hs-crypto){: external} with the following `curl` command.
 
     ```sh
     curl -X POST \
@@ -211,7 +211,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
           <p>When you set the <code>extractable</code> attribute to <code>false</code>, the service creates a root key that you can use for <code>wrap</code> or <code>unwrap</code> operations.</p>
         </td>
       </tr>
-        <caption>Table 2. Describes the variables that are needed to add a root key with the {{site.data.keyword.hscrypto}} key management API</caption>
+        <caption>Table 2. Describes the variables that are needed to add a root key with the {{site.data.keyword.hscrypto}} key management service API</caption>
     </table>
 
     To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-122.pdf){: external}.
@@ -220,7 +220,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     If you set the `expirationDate` in your request, the key is moved to the deactivated state within 1 hour past the key's expiration date.
     {: note}
 
-    A successful `POST /v2/keys` response returns the ID value for your key, along with other metadata. The ID is a unique identifier that is assigned to your key and is used for subsequent calls to the {{site.data.keyword.hscrypto}} key management API.
+    A successful `POST /v2/keys` response returns the ID value for your key, along with other metadata. The ID is a unique identifier that is assigned to your key and is used for subsequent calls to the {{site.data.keyword.hscrypto}} key management service API.
 
     ```json
     {
@@ -289,4 +289,4 @@ After you create a root key with the service, the key stays within the bounds of
 
 - To find out more about protecting keys with envelope encryption, check out [Wrapping keys](/docs/hs-crypto?topic=hs-crypto-wrap-keys).
 - To find out instruction on importing your own key, check out [Importing root keys](/docs/hs-crypto?topic=hs-crypto-import-root-keys) or [Importing standard keys](/docs/hs-crypto?topic=hs-crypto-import-standard-keys).
-- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](/apidocs/hs-crypto){: external}.
+- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external}.

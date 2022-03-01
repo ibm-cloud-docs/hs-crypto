@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: root key, wrap key, encrypt data encryption key, protect data encryption key, key wrap api
 
@@ -21,7 +21,7 @@ subcollection: hs-crypto
 # Wrapping data encryption keys with root keys
 {: #wrap-keys}
 
-You can manage and protect your encryption keys with a [root key](#x6946961){: term} by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management API, if you are a privileged user.
+You can manage and protect your encryption keys with a [root key](#x6946961){: term} by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management service API, if you are a privileged user.
 {: shortdesc}
 
 When you wrap a [data encryption key (DEK)](#x4791827){: term} with a root key, {{site.data.keyword.hscrypto}} combines the strength of multiple algorithms to protect the privacy and the integrity of your encrypted data.

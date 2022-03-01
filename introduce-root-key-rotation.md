@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -78,7 +78,7 @@ When you rotate a root key in {{site.data.keyword.hscrypto}}, you're not charged
 ### Understanding the root key rotation process
 {: #understand-key-rotation-process}
 
-Behind the scenes, the {{site.data.keyword.hscrypto}} key management API drives the key rotation process.
+Behind the scenes, the {{site.data.keyword.hscrypto}} key management service API drives the key rotation process.
 
 The following diagram shows a contextual view of the key rotation functionality.
 ![The diagram shows a contextual view of key rotation.](/images/key_rotation_min.svg "Key rotation"){: caption="Figure 1. Key rotation" caption-side="bottom"}
@@ -87,7 +87,7 @@ With each rotation request, {{site.data.keyword.hscrypto}} associates new key ma
 
 ![The diagram shows a micro view the root key stack.](/images/root_key_stack_min.svg "Root key stack"){: caption="Figure 2. Root key stack" caption-side="bottom"}
 
-To learn how to use the {{site.data.keyword.hscrypto}} key management API to rotate your root keys, see [Rotating keys](/docs/hs-crypto?topic=hs-crypto-rotate-keys).
+To learn how to use the {{site.data.keyword.hscrypto}} key management service API to rotate your root keys, see [Rotating keys](/docs/hs-crypto?topic=hs-crypto-rotate-keys).
 {: tip}
 
 ### Rewrapping data after rotating a root key
@@ -97,7 +97,7 @@ After a root key rotation completes, new root key material becomes available for
 
 To secure your envelope encryption workflow, [rewrap your DEKs](/docs/hs-crypto?topic=hs-crypto-rewrap-keys) after you rotate a root key so that your at-rest data is protected by the newest root key. Alternatively if {{site.data.keyword.hscrypto}} detects that you're using retired root key material to unwrap a DEK, the service automatically reencrypts the DEK and returns a wrapped data encryption key (WDEK) that's based on the latest root key. Store and use the new WDEK for future unwrap operations that the DEKs are protected with the newest root key material.
 
-To learn how to use the {{site.data.keyword.hscrypto}} key management API to rewrap data encryption keys, see [Rewrapping keys](/docs/hs-crypto?topic=hs-crypto-rewrap-keys).
+To learn how to use the {{site.data.keyword.hscrypto}} key management service API to rewrap data encryption keys, see [Rewrapping keys](/docs/hs-crypto?topic=hs-crypto-rewrap-keys).
 {: tip}
 
 ## Frequency of root key rotation

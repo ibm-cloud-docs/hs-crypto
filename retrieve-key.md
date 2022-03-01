@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: get key, get encryption key, view encryption key, retrieve encryption key, API examples
 
@@ -35,7 +35,7 @@ of a standard key, such as the key material and policy details.
 module. The key material for a root key cannot be retrieved.
 {: note}
 
-## Retrieving a key with the key management API
+## Retrieving a key with the key management service API
 {: #get-key-api}
 
 To view detailed information about a specific key, you can make a `GET` call to
@@ -153,7 +153,7 @@ material.
       </tr>
       <caption>
         Table 4. Describes the variables that are needed to view a specified key
-        with the {{site.data.keyword.hscrypto}} key management API
+        with the {{site.data.keyword.hscrypto}} key management service API
       </caption>
     </table>
 

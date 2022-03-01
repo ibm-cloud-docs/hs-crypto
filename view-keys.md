@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -54,7 +54,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
       </tr>
       <tr>
         <td>ID</td>
-        <td>A unique key ID that was assigned to your key by the {{site.data.keyword.hscrypto}} service. You can use the ID value to make calls to the service with the <a href="/apidocs/hs-crypto">{{site.data.keyword.hscrypto}} key management API</a>.</td>
+        <td>A unique key ID that was assigned to your key by the {{site.data.keyword.hscrypto}} service. You can use the ID value to make calls to the service with the <a href="/apidocs/hs-crypto">{{site.data.keyword.hscrypto}} key management service API</a>.</td>
       </tr>
       <tr>
         <td>Alias</td>
@@ -115,10 +115,10 @@ If you prefer to inspect the keys in your service by using a graphical interface
     You can also search for a specific key by using the search bar, or filter keys based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the **Keys** table.
     {: tip}
 
-## Viewing root keys or standard keys with the key management API
+## Viewing root keys or standard keys with the key management service API
 {: #view-key-api}
 
-You can retrieve the contents of your keys by using the {{site.data.keyword.hscrypto}} key management API.
+You can retrieve the contents of your keys by using the {{site.data.keyword.hscrypto}} key management service API.
 
 ### Retrieving a list of your root keys or standard keys
 {: #retrieve-keys-api}
@@ -185,7 +185,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
         <td><varname>correlation_ID</varname></td>
         <td>Optional: The unique identifier that is used to track and correlate transactions.</td>
       </tr>
-      <caption>Table 2. Describes the variables that are needed to view keys with the {{site.data.keyword.hscrypto}} key management API</caption>
+      <caption>Table 2. Describes the variables that are needed to view keys with the {{site.data.keyword.hscrypto}} key management service API</caption>
     </table>
 
     A successful `GET /v2/keys` request returns a collection of keys that are available in your {{site.data.keyword.hscrypto}} instance.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: enable KYOK, onboard to Hyper Protect Crypto Services, HPCS onboarding, service onboarding, internal registration, key registration, KYOK, kms onboarding
 
@@ -43,7 +43,7 @@ If you complete all the following steps, your service will meet all the Keep You
 | Actions | Steps   |
 | ---------- | ------- |
 | [Onboard your service to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-onboard-service) | <ol><li>[Submit a request to onboard your service](/docs/hs-crypto?topic=hs-crypto-onboard-service#submit-request)</li><li>[Create a CRN token](/docs/hs-crypto?topic=hs-crypto-onboard-service#submit-request)</li><li>[Discover KMS instances](/docs/hs-crypto?topic=hs-crypto-onboard-service#discover-kms-instances)</li><li>[Submit a request to integrate with Hyperwarp](/docs/hs-crypto?topic=hs-crypto-onboard-service#integrate-hyperwarp)</li></ol> |
-| [Set up the {{site.data.keyword.hscrypto}} key management API](/docs/hs-crypto?topic=hs-crypto-configure-api-test) | <ol><li>[Create a test instance](/docs/hs-crypto?topic=hs-crypto-configure-api-test#provision-instance-test)</li><li>[Create a root key](/docs/hs-crypto?topic=hs-crypto-configure-api-test#create-root-key-test)</li><li>[Wrap a data encryption key](/docs/hs-crypto?topic=hs-crypto-configure-api-test#wrap-key-test)</li><li>[Unwrap the data encryption key](/docs/hs-crypto?topic=hs-crypto-configure-api-test#unwrap-key-test)</li></ol> |
+| [Set up the {{site.data.keyword.hscrypto}} key management service API](/docs/hs-crypto?topic=hs-crypto-configure-api-test) | <ol><li>[Create a test instance](/docs/hs-crypto?topic=hs-crypto-configure-api-test#provision-instance-test)</li><li>[Create a root key](/docs/hs-crypto?topic=hs-crypto-configure-api-test#create-root-key-test)</li><li>[Wrap a data encryption key](/docs/hs-crypto?topic=hs-crypto-configure-api-test#wrap-key-test)</li><li>[Unwrap the data encryption key](/docs/hs-crypto?topic=hs-crypto-configure-api-test#unwrap-key-test)</li></ol> |
 | [Map cloud resources to a root key](/docs/hs-crypto?topic=hs-crypto-register-protected-resources)  | <ol><li>[Register cloud resources](/docs/hs-crypto?topic=hs-crypto-register-protected-resources#create-registration)</li><li>[De-register cloud resources](/docs/hs-crypto?topic=hs-crypto-register-protected-resources#delete-registration)</li></ol> |
 
 ## Features

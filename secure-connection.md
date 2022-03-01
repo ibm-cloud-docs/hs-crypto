@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: securing connection, disabling public service endpoint
 
@@ -111,7 +111,7 @@ The instance access policy, which controls access to the instance from either
 public or private IP addresses, is not enforced after the `ibmcloud resource service-instance-delete (NAME | ID)` command to
 delete the instance is issued.
 
-After you enable the following network settings, both the key management operations using key management API and the cryptographic operations using GREP11 and PKCS #11 APIs are affected.
+After you enable the following network settings, both the key management operations using key management service API and the cryptographic operations using GREP11 and PKCS #11 APIs are affected.
 {: important}
 
 ## Before you begin
@@ -287,7 +287,7 @@ To test the private network connection for the key management service, use {{sit
 
 To perform key management operations, see:
 
-* [The key management API](/apidocs/hs-crypto){: external}
+* [The key management service API](/apidocs/hs-crypto){: external}
 * [{{site.data.keyword.keymanagementserviceshort}} CLI](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference)
 
 To perform cryptographic operations, see:

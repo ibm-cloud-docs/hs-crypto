@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-01"
 
 keywords: access token, api key, iam token, generate access token, generate iam token, get access token, iam token api, token cli
 
@@ -21,7 +21,7 @@ subcollection: hs-crypto
 # Retrieving an access token
 {: #uko-retrieve-access-token}
 
-Get started with the {{site.data.keyword.hscrypto}} key management API by authenticating your requests to the service with an {{site.data.keyword.iamlong}} (IAM) access token.
+Get started with the {{site.data.keyword.hscrypto}} key management service API by authenticating your requests to the service with an {{site.data.keyword.iamlong}} (IAM) access token.
 {: shortdesc}
 
 An access token is a temporary credential that expires after 1 hour. After the acquired token expires, you must generate a new token to continue calling {{site.data.keyword.cloud_notm}} or service APIs. To maintain access to the service, regenerate the access token for your API key on a regular basis.
@@ -150,5 +150,5 @@ You can also retrieve your access token programmatically by using an [API key](/
     ```
     {: screen}
 
-    Use the full `access_token` value, prefixed by the **Bearer** token type, to programmatically manage keys for your service using the {{site.data.keyword.hscrypto}} key management API. To see an example {{site.data.keyword.hscrypto}} key management API request, check out [Forming your key management API request](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#form-kms-api-request).
+    Use the full `access_token` value, prefixed by the **Bearer** token type, to programmatically manage keys for your service using the {{site.data.keyword.hscrypto}} key management service API. To see an example {{site.data.keyword.hscrypto}} key management service API request, check out [Forming your key management service API request](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#form-kms-api-request).
 
