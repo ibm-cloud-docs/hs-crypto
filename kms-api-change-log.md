@@ -27,7 +27,7 @@ In this change log you can learn about the latest changes, improvements, and upd
 ## API versioning
 {: #kms-api-versioning}
 
-The latest released version is `2.82`.
+The latest released version is `2.93`.
 
 ## June 2021
 {: #kms-api-june-2021}
