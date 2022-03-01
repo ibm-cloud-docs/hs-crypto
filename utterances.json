@@ -174,10 +174,10 @@
     "how to start the smart card applications in HPCS"
   ],
   "troubleshoot-unable-to-authenticate-api":[
-    "unable to authenticate through the key management API",
+    "unable to authenticate through the key management service API",
     "troubleshoot 401 unauthorized error in hyper protect crypto services",
-    "unable to make the key management API request for HPCS",
-    "not able to call the key management API within hyper protect crypto services",
+    "unable to make the key management service API request for HPCS",
+    "not able to call the key management service API within hyper protect crypto services",
     "unauthorized error in API request in HPCS",
     "not unauthorized to perform API calls in hyper protect crypto services"
   ],

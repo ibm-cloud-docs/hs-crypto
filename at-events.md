@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-03-01"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -31,7 +31,7 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 
 To enable {{site.data.keyword.at_full_notm}} for your {{site.data.keyword.hscrypto}} instance, you need to provision an instance of the {{site.data.keyword.at_full_notm}} service in the same region where your {{site.data.keyword.hscrypto}} instance is located. For more information, see the [getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
 
-To see which {{site.data.keyword.hscrypto}} key management requests or Trusted Key Entry (TKE) requests correlate to the following actions, check out the [key management API reference doc](/apidocs/hs-crypto){: external} and [TKE CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin){: external}.
+To see which {{site.data.keyword.hscrypto}} key management requests or Trusted Key Entry (TKE) requests correlate to the following actions, check out the [key management service API reference doc](/apidocs/hs-crypto){: external} and [TKE CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin){: external}.
 
 ## Supported events
 {: #at-supported-events}

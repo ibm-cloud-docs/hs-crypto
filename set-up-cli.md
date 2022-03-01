@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: ibmcloud cli, hpcs cli, ibmcloud commands, ibm cloud command-line interface, key protect cli, kms cli
 
@@ -49,7 +49,7 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
 
     - On the Windows&reg; operating system, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a KP_PRIVATE_ADDR environment variable and set the value to the endpoint that is displayed on the **Manage** tab of your provisioned {{site.data.keyword.cloud_notm}} console. For example, `https://api.us-south.hs-crypto.cloud.ibm.com:<port>`.
 
-    You can also retrieve the endpoint URL through the API. For details, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](/apidocs/hs-crypto){: external}.
+    You can also retrieve the endpoint URL through the API. For details, [check out the {{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external}.
 
     Depending on whether you are using public or private endpoint, choose the corresponding endpoint URL to set the value of the KP_PRIVATE_ADDR environment variable.
     {: important}
@@ -78,5 +78,5 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
 ## What's next
 {: #cli-next-steps}
 
-- You can also perform key management operations with API calls, check out [Managing your keys with the key management API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
+- You can also perform key management operations with API calls, check out [Managing your keys with the key management service API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 - To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).

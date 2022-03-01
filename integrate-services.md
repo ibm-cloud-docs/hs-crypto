@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-23"
+lastupdated: "2022-03-01"
 
 keywords: integration, encryption at rest, cloud object storage, object storage, kmip, containers, vmware, database, compute
 
@@ -121,7 +121,7 @@ The following diagram illustrates the scene of integrating {{site.data.keyword.h
 
 ![The diagram shows a contextual view of your {{site.data.keyword.hscrypto}} integration.](/images/hpcs-integrations.svg "Cloud services integrates with Hyper Protect Crypto Services"){: caption="Figure 1. Integrating {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 
-Behind the scenes, the {{site.data.keyword.hscrypto}} key management API drives the envelope encryption process.
+Behind the scenes, the {{site.data.keyword.hscrypto}} key management service API drives the envelope encryption process.
 
 The following table lists the API methods that add or remove envelope encryption on a resource.
 
@@ -138,10 +138,10 @@ The following table lists the API methods that add or remove envelope encryption
     <td><code>POST /keys/{root_key_ID}?action=unwrap</code></td>
     <td><a href="/docs/hs-crypto?topic=hs-crypto-unwrap-keys">Unwrap (decrypt) a data encryption key.</a></td>
     </tr>
-    <caption>Table 5. Describes the {{site.data.keyword.hscrypto}} key management API methods</caption>
+    <caption>Table 5. Describes the {{site.data.keyword.hscrypto}} key management service API methods</caption>
 </table>
 
-To find out more about programmatically managing your keys in {{site.data.keyword.hscrypto}}, check out the [{{site.data.keyword.hscrypto}} key management API reference doc](/apidocs/hs-crypto){: external}.
+To find out more about programmatically managing your keys in {{site.data.keyword.hscrypto}}, check out the [{{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external}.
 {: tip}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-27"
+lastupdated: "2022-03-01"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -55,7 +55,7 @@ Before you create a key ring for your {{site.data.keyword.hscrypto}} instance, k
 ## Creating key rings
 {: #create-key-ring}
 
-Before you can group keys into a key ring, you need to create a key ring first. You can use either the console or the key management API to create a key ring.
+Before you can group keys into a key ring, you need to create a key ring first. You can use either the console or the key management service API to create a key ring.
 
 You can have up to five key rings for a service instance.
 {: note}
@@ -167,7 +167,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
       </tr>
 
       <caption>
-        Table 1. Describes the variables that are needed to create a key ring with the key management API
+        Table 1. Describes the variables that are needed to create a key ring with the key management service API
       </caption>
     </table>
 
@@ -312,7 +312,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
       </tr>
 
       <caption>
-        Table 2. Describes the variables that are needed to update a key's key ring with the key management API
+        Table 2. Describes the variables that are needed to update a key's key ring with the key management service API
       </caption>
     </table>
 
@@ -493,7 +493,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
       </td>
     </tr>
     <caption>
-    Table 4. Describes the variables that are needed to view key rings with the key management API.
+    Table 4. Describes the variables that are needed to view key rings with the key management service API.
     </caption>
     </table>
 
@@ -522,7 +522,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
 ## Deleting key rings
 {: #delete-key-ring}
 
-You can delete a key ring with the console or with the key management API.
+You can delete a key ring with the console or with the key management service API.
 
 The `default` key ring cannot be deleted. You are also not able to delete a key ring if the key ring contains at least one key, regardless of the key state (including keys in the _Destroyed_ state).
 {: important}
@@ -626,7 +626,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings/<key_ring_i
       </tr>
 
       <caption>
-        Table 5. Describes the variables that are needed to delete keys with the key management API.
+        Table 5. Describes the variables that are needed to delete keys with the key management service API.
       </caption>
     </table>
 

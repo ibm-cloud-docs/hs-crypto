@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-07"
+lastupdated: "2022-03-01"
 
 keywords: sync resources, sync registrations, key registration, notify key state to resources
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Synchronizing associated resources
 {: #sync-associated-resources}
 
-You can initiate a manual data synchronization request between root keys and the associated cloud resources, such as {{site.data.keyword.cos_full_notm}} buckets or Cloud Databases deployments, by using the {{site.data.keyword.hscrypto}} key management API.
+You can initiate a manual data synchronization request between root keys and the associated cloud resources, such as {{site.data.keyword.cos_full_notm}} buckets or Cloud Databases deployments, by using the {{site.data.keyword.hscrypto}} key management service API.
 {: shortdesc}
 
 When you perform a key lifecycle action on a root key that is associated with other IBM cloud services, those IBM cloud services are notified of the key lifecycle event and are encouraged to respond. However, if the cloud services do not respond to the key lifecycle notification, use the sync API to initiate a renotification of the key lifecycle event to those associated cloud services.

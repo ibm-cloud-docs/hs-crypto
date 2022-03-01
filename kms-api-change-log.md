@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-21"
+lastupdated: "2022-03-01"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -22,7 +22,7 @@ subcollection: hs-crypto
 # {{site.data.keyword.hscrypto}} key management service API change log
 {: #kms-api-change-log}
 
-In this change log you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.hscrypto}} key management API. The change log lists changes that have been made, ordered by the date they were released. Changes to existing API versions are designed to be compatible with existing client applications.
+In this change log you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.hscrypto}} key management service API. The change log lists changes that have been made, ordered by the date they were released. Changes to existing API versions are designed to be compatible with existing client applications.
 
 ## API versioning
 {: #kms-api-versioning}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: instance settings, service settings, dual authorization
 
@@ -25,7 +25,7 @@ subcollection: hs-crypto
 {: #manage-dual-auth}
 
 After you set up your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}
-instance, you can manage dual authorization by using the key management API.
+instance, you can manage dual authorization by using the key management service API.
 {: shortdesc}
 
 This policy only applies to key management service keys and related operations.
@@ -225,7 +225,7 @@ After creating a service instance, complete the following steps to create a dual
 4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
 5. In the **Dual authorization deletion** section, clear the box for `Require two users to approve key deletions`, and click **Save policy**.
 
-## Disabling dual authorization for your service instance with the key management API
+## Disabling dual authorization for your service instance with the key management service API
 {: #disable-dual-auth-instance-policy-api}
 
 As an instance manager, disable an existing dual authorization policy for a

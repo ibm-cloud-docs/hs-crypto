@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-07"
+lastupdated: "2022-03-01"
 
 keywords: purge key, permanently delete key, remove key, destroy key
 
@@ -118,7 +118,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/purge
         <td><varname>return_preference</varname></td>
         <td><p>A header that alters server behavior for <code>POST</code> and <code>DELETE</code> operations.</p><p>When you set the <em>return_preference</em> variable to <code>return=minimal</code>, the service returns a successful deletion response. When you set the variable to <code>return=representation</code>, the service returns both the key material and the key metadata.</p></td>
       </tr>
-      <caption>Table 1. Describes the variables that are needed to purge keys with the {{site.data.keyword.hscrypto}} key management API.</caption>
+      <caption>Table 1. Describes the variables that are needed to purge keys with the {{site.data.keyword.hscrypto}} key management service API.</caption>
     </table>
 
     If the `return_preference` variable is set to `return=representation`, the details of the `DELETE` request are returned in the response entity-body.
@@ -170,7 +170,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/purge
     ```
     {: screen}
 
-    For a detailed description of the available parameters, see the {{site.data.keyword.hscrypto}} [key management API reference doc](/apidocs/hs-crypto){: external}.
+    For a detailed description of the available parameters, see the {{site.data.keyword.hscrypto}} [key management service API reference doc](/apidocs/hs-crypto){: external}.
 
 ## What's next
 {: #purge-keys-next}

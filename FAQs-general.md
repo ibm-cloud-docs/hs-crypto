@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-01"
 
 keywords: general frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips
 
@@ -50,7 +50,7 @@ Read to get answers for general questions about {{site.data.keyword.cloud}} {{si
 {: #faq-what-key-management}
 {: faq}
 
-{{site.data.keyword.hscrypto}} provides a single-tenant key management service to create, import, rotate, and manage keys. Once the encryption keys are deleted, you can be assured that your data that is protected by these keys is no longer retrievable. The service is built on FIPS 140-2 Level 4 certified HSM, which offers the highest level of protection in the cloud industry. {{site.data.keyword.hscrypto}} provides the same [key management API](/apidocs/hs-crypto) as {{site.data.keyword.keymanagementservicefull_notm}} for you to build your applications or leverage {{site.data.keyword.cloud_notm}} data and infrastructure services.
+{{site.data.keyword.hscrypto}} provides a single-tenant key management service to create, import, rotate, and manage keys. Once the encryption keys are deleted, you can be assured that your data that is protected by these keys is no longer retrievable. The service is built on FIPS 140-2 Level 4 certified HSM, which offers the highest level of protection in the cloud industry. {{site.data.keyword.hscrypto}} provides the same [key management service API](/apidocs/hs-crypto) as {{site.data.keyword.keymanagementservicefull_notm}} for you to build your applications or leverage {{site.data.keyword.cloud_notm}} data and infrastructure services.
 
 ## What is Hardware Security Module?
 {: #faq-what-is-hsm}

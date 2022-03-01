@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-01"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -41,7 +41,7 @@ Learn how to create, encrypt, and bring your encryption keys to the cloud by usi
 
 This tutorial walks you through creating and securely importing encryption keys into the {{site.data.keyword.hscrypto}} service. It's intended for users who are new to the key management function of {{site.data.keyword.hscrypto}}, but who might have some familiarity with key management systems. The following steps need to take about 20 minutes to complete.
 
-- Setting up the key management API
+- Setting up the key management service API
 - Preparing your {{site.data.keyword.hscrypto}} service instance to begin importing keys
 - Creating and encrypting keys using the OpenSSL cryptography toolkit
 - Importing an encrypted key to your {{site.data.keyword.hscrypto}} service instance
@@ -101,17 +101,17 @@ To get started, you need the {{site.data.keyword.cloud_notm}} CLI so that you ca
 
 5. Download and install [jq](https://stedolan.github.io/jq/){: external}.
 
-    `jq` helps you slice up JSON data. You'll use `jq` in this tutorial to grab and use specific data that's returned when you call the {{site.data.keyword.hscrypto}} key management API.
+    `jq` helps you slice up JSON data. You'll use `jq` in this tutorial to grab and use specific data that's returned when you call the {{site.data.keyword.hscrypto}} key management service API.
 
 6. [Create a {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-provision).
 7. [Initialize the {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
-8. [Set up the {{site.data.keyword.hscrypto}} key management API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
+8. [Set up the {{site.data.keyword.hscrypto}} key management service API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
 ## Create an import token
 {: #tutorial-import-create-token}
 {: step}
 
-With your service credentials, you can start interacting with the key management API to create and bring your encryption keys to the service.
+With your service credentials, you can start interacting with the key management service API to create and bring your encryption keys to the service.
 
 In the following step, you'll create an [import token](/docs/hs-crypto?topic=hs-crypto-importing-keys#using-import-tokens) for your {{site.data.keyword.hscrypto}} service instance. By creating an import token based on a policy that you specify, you enable extra security for your encryption key while it's in flight to the service.
 
@@ -124,7 +124,7 @@ In the following step, you'll create an [import token](/docs/hs-crypto?topic=hs-
 
     You'll use this directory to store the files that you'll create in later steps.
 
-2. You can create an import token for your {{site.data.keyword.hscrypto}} service instance by either using the [key management API](/apidocs/hs-crypto) or using the [CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli), and then save the response to a JSON file.
+2. You can create an import token for your {{site.data.keyword.hscrypto}} service instance by either using the [key management service API](/apidocs/hs-crypto) or using the [CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli), and then save the response to a JSON file.
 
     - **Use the API**:
 
@@ -471,7 +471,7 @@ To import the encrypted key:
     ```
     {: screen}
 
-    The `id` value is a unique identifier that is assigned to your key and is used for subsequent calls to the key management API. The `state` value set to 1 indicates that your key is now in the [_Active_ key state](/docs/hs-crypto?topic=hs-crypto-key-states). The `crn` value provides the full scoped path to the key that specifies where the resource resides within {{site.data.keyword.cloud_notm}}. Finally, the `extractable` and `imported` values describe this resource as a root key that you imported to the service.
+    The `id` value is a unique identifier that is assigned to your key and is used for subsequent calls to the key management service API. The `state` value set to 1 indicates that your key is now in the [_Active_ key state](/docs/hs-crypto?topic=hs-crypto-key-states). The `crn` value provides the full scoped path to the key that specifies where the resource resides within {{site.data.keyword.cloud_notm}}. Finally, the `extractable` and `imported` values describe this resource as a root key that you imported to the service.
 
 4. Optional: Navigate to the {{site.data.keyword.hscrypto}} dashboard to view and manage your key.
 
@@ -534,8 +534,8 @@ To import the encrypted key:
 ## Next steps
 {: #tutorial-import-next-steps}
 
-In this tutorial, you learned how to set up the {{site.data.keyword.hscrypto}} key management API, create an encryption key, and securely import an encrypted key into your {{site.data.keyword.hscrypto}} service instance.
+In this tutorial, you learned how to set up the {{site.data.keyword.hscrypto}} key management service API, create an encryption key, and securely import an encrypted key into your {{site.data.keyword.hscrypto}} service instance.
 
 - Learn more about [using your root key to protect data at rest](/docs/hs-crypto?topic=hs-crypto-envelope-encryption#envelope-encryption).
 - Deploy your root key across [supported cloud services](/docs/hs-crypto?topic=hs-crypto-integrate-services#integrate-services).
-- Learn more about the [key management API](/apidocs/hs-crypto).
+- Learn more about the [key management service API](/apidocs/hs-crypto).

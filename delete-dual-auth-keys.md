@@ -37,11 +37,11 @@ Before you delete keys, make sure you understand [the concept of deleting and pu
 Deleting a key that has a
 [dual authorization policy](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth)
 requires an authorization from two users. With the
-{{site.data.keyword.hscrypto}} key management API, you can provide the
+{{site.data.keyword.hscrypto}} key management service API, you can provide the
 first authorization by
 [setting the key for deletion](#set-key-deletion-api).
 Then, a different user provides a second authorization by using the
-{{site.data.keyword.cloud_notm}} console or key management API to delete the key.
+{{site.data.keyword.cloud_notm}} console or key management service API to delete the key.
 
 Before you delete a key by using dual authorization:
 
@@ -212,7 +212,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
     indicates that your key was authorized for deletion. Another user with a
     _Manager_ access policy can now
     [delete the key](/docs/hs-crypto?topic=hs-crypto-delete-keys)
-    by using the {{site.data.keyword.cloud_notm}} console or key management API.
+    by using the {{site.data.keyword.cloud_notm}} console or key management service API.
 
     If you need to prevent the deletion of a key that's already authorized for
     deletion, you can remove the existing authorization by calling
@@ -354,4 +354,4 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 - To restore a previously deleted key, check out [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys).
 - To create another root key, check out [Creating root keys](/docs/hs-crypto?topic=hs-crypto-create-root-keys).
 - To delete the service instance, check out [Deleting service instances](/docs/hs-crypto?topic=hs-crypto-delete-instance)
-- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](/apidocs/hs-crypto){: external}.
+- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external}.

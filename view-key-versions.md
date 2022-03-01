@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: key versions, get key versions, list key versions
 
@@ -38,7 +38,7 @@ rotation works in {{site.data.keyword.hscrypto}}, check out
 [Comparing your key rotation options](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#compare-key-rotation-options).
 {: note}
 
-## Viewing root key versions with the key management API
+## Viewing root key versions with the key management service API
 {: #view-key-versions-api}
 
 For a high-level view, you can list the versions that are associated with a root
@@ -151,7 +151,7 @@ following cURL command.
 
       <caption>
         Table 1. Describes the variables that are needed to list key versions
-        with the {{site.data.keyword.hscrypto}} key management API
+        with the {{site.data.keyword.hscrypto}} key management service API
       </caption>
     </table>
 

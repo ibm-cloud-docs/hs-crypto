@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: get details for a key, get key configuration, get details, view encryption key details, view encryption key, retrieve encryption key details, API examples
 
@@ -46,7 +46,7 @@ You can view details about a specific key with the {{site.data.keyword.cloud_not
 5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for a specific key.
 6. From the options menu, click **View key details** to view the details of the key.
 
-## Viewing key details with the key management API
+## Viewing key details with the key management service API
 {: #view-key-details-api}
 
 To view detailed information about a specific root key or a standard key, you can make a `GET` call to
@@ -165,7 +165,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID_or_alias
 
       <caption>
         Table 1. Describes the variables that are needed to view details about
-        a key with the {{site.data.keyword.hscrypto}} key management API
+        a key with the {{site.data.keyword.hscrypto}} key management service API
       </caption>
     </table>
 

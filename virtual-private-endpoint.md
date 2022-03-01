@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-07"
+lastupdated: "2022-03-01"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway
 
@@ -224,9 +224,9 @@ After you create an endpoint gateway for your {{site.data.keyword.hscrypto}} ins
 ### Using the VPE with the API
 {: #use-vpe-for-hpcs-api}
 
-- Using the VPE for the [key management API](/apidocs/hs-crypto)
+- Using the VPE for the [key management service API](/apidocs/hs-crypto)
 
-    To perform key management operations with the key management API, use the key management service private endpoints in the API request URL to access the service. For example:
+    To perform key management operations with the key management service API, use the key management service private endpoints in the API request URL to access the service. For example:
 
     ```
     curl GET \

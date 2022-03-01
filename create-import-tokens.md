@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: create import token, secure import, key material, key wrapping key, import token api, bring your own key, byok
 
@@ -40,7 +40,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/import_token
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
-2. Set a policy for your import token by calling the [Key management API](/apidocs/hs-crypto){: external}.
+2. Set a policy for your import token by calling the [key management service API](/apidocs/hs-crypto){: external}.
 
     ```cURL
     curl -X POST \
@@ -89,7 +89,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/import_token
           <td><varname>use_count</varname></td>
           <td>The number of times that an import token can be retrieved within the expiration time before it is no longer accessible. The default value is 1.</td>
         </tr>
-          <caption>Table 1. Describes the variables that are needed to create an import token with the Key management API</caption>
+          <caption>Table 1. Describes the variables that are needed to create an import token with the key management service API</caption>
       </table>
 
     A successful `POST api/v2/import_token` request creates an import token for your service instance. The response body contains the metadata that is associated with your import token, such as the creation date and policy details. The following snippet shows example output.
@@ -132,7 +132,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/import_token
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
-2. Retrieve the import token that is associated with your service instance by calling the [Key management API](/apidocs/hs-crypto){: external}.
+2. Retrieve the import token that is associated with your service instance by calling the [key management service API](/apidocs/hs-crypto){: external}.
 
     ```cURL
     curl -X GET \
@@ -165,7 +165,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/import_token
           <td><varname>instance_ID</varname></td>
           <td><strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
         </tr>
-        <caption>Table 1. Describes the variables that are needed to retrieve an import token with the key management API</caption>
+        <caption>Table 1. Describes the variables that are needed to retrieve an import token with the key management service API</caption>
       </table>
 
     A successful `GET api/v2/import_token` request retrieves the import token for your service instance. The response body contains the metadata that is associated with your import token, such as the creation date and policy details. The following snippet shows example output with truncated values.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: view resoure, root key encryption resources, protected resource, protected service, envelope encryption, key registration, view registration, list registrations
 
@@ -25,7 +25,7 @@ subcollection: hs-crypto
 # Viewing associations between root keys and encrypted {{site.data.keyword.cloud_notm}} resources
 {: #view-protected-resources}
 
-You can view associations between root keys and other cloud resources, such as {{site.data.keyword.cos_full_notm}} buckets, by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management API.
+You can view associations between root keys and other cloud resources, such as {{site.data.keyword.cos_full_notm}} buckets, by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management service API.
 {: shortdesc}
 
 When you use a root key to protect at-rest data with envelope encryption, the cloud services that use the key can create a registration between the key and the resource that it protects. Registrations are associations between keys and cloud resources that help you get a full view of which encryption keys protect what data on {{site.data.keyword.cloud_notm}}.
@@ -191,7 +191,7 @@ Besides searching for a resource, you can also for resources by Resource Name, k
 ## Viewing protected resources with the API
 {: #view-protected-resources-api}
 
-You can also browse the registrations that are available between your {{site.data.keyword.hscrypto}} keys and cloud resources by using the {{site.data.keyword.hscrypto}} key management API.
+You can also browse the registrations that are available between your {{site.data.keyword.hscrypto}} keys and cloud resources by using the {{site.data.keyword.hscrypto}} key management service API.
 
 For example, when you call `GET api/v2/keys/{id}/registrations`, {{site.data.keyword.hscrypto}} returns details about the key registration. The following JSON output represents a registration between a key and a cloud resource.
 
@@ -391,7 +391,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/registrations?ur
 
 Use URL encoded CRN queries that contain all CRN segments. To learn more about CRN segments and format, see [Cloud Resource Names](/docs/account?topic=account-crn).
 
-When an integrated service calls the {{site.data.keyword.hscrypto}} key management API, {{site.data.keyword.hscrypto}} replaces the given CRN query (up to the `service-instance` segment) with the CRN of the calling service. This means that the services that use {{site.data.keyword.hscrypto}} to associate keys with resources on your behalf can only view or query for CRNs that match the first eight segments of their service CRN.
+When an integrated service calls the {{site.data.keyword.hscrypto}} key management service API, {{site.data.keyword.hscrypto}} replaces the given CRN query (up to the `service-instance` segment) with the CRN of the calling service. This means that the services that use {{site.data.keyword.hscrypto}} to associate keys with resources on your behalf can only view or query for CRNs that match the first eight segments of their service CRN.
 {: note}
 
 - To search for the existence of a CRN segment, use a colon followed by an asterisk (`*`).
@@ -447,4 +447,4 @@ The following tables provide a list of CRN query examples before and after URL e
 ## What's next
 {: #view-protected-resources-next-steps}
 
-To find out more about viewing registrations, [check out the {{site.data.keyword.hscrypto}} key management API reference doc](/apidocs/hs-crypto){: external}.
+To find out more about viewing registrations, [check out the {{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-01"
 
 keywords: encryption at rest, envelope encryption, root key, data encryption key, key encryption key, key protect, protect data encryption key, encrypt data encryption key, wrap data encryption key, unwrap data encryption key
 
@@ -84,7 +84,7 @@ Envelope encryption is treated briefly in the NIST Special Publication 800-57, R
 
 Root keys help you group, manage, and protect data encryption keys (DEKs) stored in the cloud. You can wrap one or more DEKs with advanced encryption by designating a root key in {{site.data.keyword.hscrypto}} that you can fully manage.
 
-After you designate a root key in {{site.data.keyword.hscrypto}}, you can send a key wrap request to the service by using the [{{site.data.keyword.hscrypto}} key management API](/apidocs/hs-crypto#actiononkey){: external}.
+After you designate a root key in {{site.data.keyword.hscrypto}}, you can send a key wrap request to the service by using the [{{site.data.keyword.hscrypto}} key management service API](/apidocs/hs-crypto#actiononkey){: external}.
 The key wrap operation provides both confidentiality and integrity protection for a DEK.
 
 The following diagram shows the key wrapping process in action.
@@ -98,7 +98,7 @@ The following diagram shows the key wrapping process in action.
 
 Unwrapping a data encryption key (DEK) decrypts and authenticates the contents within the key, returning the original key material to your data service.
 
-If your business application needs to access the contents of your wrapped DEKs, you can use the [{{site.data.keyword.hscrypto}} key management API](/apidocs/hs-crypto#actiononkey){: external} to send an
+If your business application needs to access the contents of your wrapped DEKs, you can use the [{{site.data.keyword.hscrypto}} key management service API](/apidocs/hs-crypto#actiononkey){: external} to send an
 unwrap request to the service. To unwrap a DEK, you specify the ID value of the root key and the `ciphertext` value returned during the initial wrap request.
 
 The following diagram shows key unwrapping in action.

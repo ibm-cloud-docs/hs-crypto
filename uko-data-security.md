@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-01"
 
 keywords: security and compliance, ibmcloud security compliance, compliant, data security, data encryption, data delete, common criteria, fips, iso, gdpr
 
@@ -51,7 +51,7 @@ Within 30 days after you delete a key, you can restore the key to reverse the de
 
 Note that even if the key is not restored, your data remains in those services in the encrypted form. Metadata that is associated with a key, such as the key's transition history and name, is kept in the {{site.data.keyword.hscrypto}} database.
 
-To help you determine what data is protected by a key, you can use the key management API to [view associations between a key and your cloud resources](/docs/hs-crypto?topic=hs-crypto-view-protected-resources).
+To help you determine what data is protected by a key, you can use the key management service API to [view associations between a key and your cloud resources](/docs/hs-crypto?topic=hs-crypto-view-protected-resources).
 {: note}
 
 ## Compliance readiness

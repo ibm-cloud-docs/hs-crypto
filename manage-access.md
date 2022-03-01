@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-21"
+lastupdated: "2022-03-01"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -80,7 +80,7 @@ As a service administrator, use the service access roles to grant permissions of
 The following table shows how service access roles map to {{site.data.keyword.hscrypto}} permissions. IAM roles are the default roles provided. Custom roles can be defined by the user.
 
 * Trusted Key Entry (TKE) uses either smart cards or software CLI plug-in with IAM authentication. Commands that deals with managing keys locally on the smart card or CLI are not included. Those commands do not interact with the HSM domain.
-* The Key Management API is used for envelope encryption and deals with root keys that are used by {{site.data.keyword.cloud_notm}} services for encrypting data-at-rest.
+* The key management service API is used for envelope encryption and deals with root keys that are used by {{site.data.keyword.cloud_notm}} services for encrypting data-at-rest.
 * HSM APIs (the PKCS #11 API and the GREP11 API) are used for application-level encryption.
 * Key Management Interoperability Protocol (KMIP) adapter is used to configure the KMIP for VMware service with {{site.data.keyword.hscrypto}} to enable vSphere encryption or vSAN encryption by using your own root keys.
 * Certificate Manager Server receives and processes requests for setting up certificate administrator signature keys and client certificates to enable the second layer of authentication in GREP11 or PKCS #11 API connections.
