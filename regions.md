@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-01"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -85,7 +85,7 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 {: class="comparison-tab-table"}
 
 | Region        | Private key management service endpoints       | Private GREP11 service endpoints|
-| ------------- | ------------------------------------ |------------------------------------ |---------------------------- |
+| ------------- | ------------------------------------ |------------------------------------ |
 | Dallas        | `api.private.us-south.hs-crypto.cloud.ibm.com` | `ep11.private.us-south.hs-crypto.cloud.ibm.com` |
 | Frankfurt     | `api.private.eu-de.hs-crypto.cloud.ibm.com`    |  `ep11.private.eu-de.hs-crypto.cloud.ibm.com`    |
 | London        | `api.private.eu-gb.hs-crypto.cloud.ibm.com`  | `ep11.private.eu-gb.hs-crypto.cloud.ibm.com`  |

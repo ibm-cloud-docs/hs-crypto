@@ -1004,8 +1004,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui#manage-ep11-key-ui-next)
 
 
-## Managing keys - With Unified Key Orchestrator
-{: #sitemap_managing_keys_-_with_unified_key_orchestrator}
+## Managing keys, keystores, and vaults - Unified Key Orchestrator Plan
+{: #sitemap_managing_keys,_keystores,_and_vaults_-_unified_key_orchestrator_plan}
 
 
 [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token#uko-retrieve-access-token)
@@ -1388,8 +1388,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [Governing {{site.data.keyword.hscrypto}} resource configuration with config rules](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#govern-crypto)
 
 
-## Enhancing security - With Unified Key Orchestrator
-{: #sitemap_enhancing_security_-_with_unified_key_orchestrator}
+## Enhancing security - Unified Key Orchestrator Plan
+{: #sitemap_enhancing_security_-_unified_key_orchestrator_plan}
 
 
 [Managing user access](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-manage-access)
@@ -1524,7 +1524,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Provisioning and initializing service instances with Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs){: external}
 
-[Managing key management service keys with Terraform - Standard Plan only](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: external}
+[(Standard Plan only) Managing key management service keys with Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: external}
 
 
 ## Regions and locations
@@ -1744,8 +1744,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [How do I get support for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-hpcs-support)
 
 
-## Troubleshooting key management service in the Standard Plan
-{: #sitemap_troubleshooting_key_management_service_in_the_standard_plan}
+## Troubleshooting key management service
+{: #sitemap_troubleshooting_key_management_service}
 
 
 [Why am I not authorized to make key management API request?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-authenticate-api#troubleshoot-unable-to-authenticate-api)

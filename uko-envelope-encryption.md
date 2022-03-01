@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-01"
 
 keywords: encryption at rest, envelope encryption, root key, data encryption key, key encryption key, key protect, protect data encryption key, encrypt data encryption key, wrap data encryption key, unwrap data encryption key
 
@@ -113,4 +113,5 @@ After you send the unwrap request, the system reverses the key wrapping process 
 {{site.data.keyword.hscrypto}} supports the integration with other services. With envelope encryption, {{site.data.keyword.hscrypto}} provides advanced protection to your data stored in the integrated services.
 
 - For the full list of supported services for integration, see [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
+- To find out more about programmatically managing your KMS keys, check out the [{{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external}.
 
