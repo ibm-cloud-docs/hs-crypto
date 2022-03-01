@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-21"
+lastupdated: "2022-03-01"
 
 keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 
@@ -28,9 +28,6 @@ subcollection: hs-crypto
 {: #delete-keys}
 
 If you are a manager for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance, you can use {{site.data.keyword.hscrypto}} to delete root keys or standard keys and the contents.
-
-
-
 
 Before you delete keys, make sure you understand [the concept of deleting and purging keys](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys) and review the [considerations](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys#delete-purge-keys-considerations).
 
