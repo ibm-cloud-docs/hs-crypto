@@ -1442,7 +1442,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [API versioning](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-versioning)
 
-* [June 2021](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-june-2021)
+* [January 2022](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-jan-2022)
 
 * [April 2021](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-april-2021)
 
