@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-03"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -62,11 +62,13 @@ You can integrate all your key management use cases into one consistent approach
 
 - **Vaults**
     
-    A vault is a single repository that controls a user's or an access group's access to managed keys and target keystores through Identity and Access Management (IAM). A managed key or internal target keystore can be created only in a vault. When you connect to an external keystore, you need to assign it to a vault. To use a managed key for encryption and decryption, you need to install in one or more keystores within the same vault. The vault keeps all installations of a managed key in sync.
+    A vault is a repository that controls a user's or an access group's access to managed keys and target keystores through Identity and Access Management (IAM). A vault keeps all installations of a managed key in sync. You can assign a managed key or internal target keystore only in one vault. When you connect to an external keystore, you also need to assign it to a vault first. 
+
+    You can create different vaults based on your organizational or security needs. For example, you can create a vault for each business unit. In this way, you set access control policies at a vault level, and key administrators of each business unit have access only to the keys and keystores that are assigned to the vault of their business unit.
 
 - **Managed keys**
         
-    A managed key is a key that is created in and assigned to a vault. You can manage the lifecycle of a managed key and install it to multiple keystores in the same vault. You can use a managed key for encryption and decryption only when it is installed in at least one target keystore. Installing a managed key in multiple keystores in the same vault enables key redundancy.  
+    A managed key is a key that is created in and assigned to a vault. You can manage the lifecycle of a managed key and install it to multiple keystores in the same vault. You can use a managed key for encryption and decryption only when it is installed in at least one target keystore. Installing a managed key in multiple keystores in the same vault enables key redundancy. To use a managed key for encryption and decryption, install in one or more keystores within the same vault first. 
 
 - **Target keystores**
         
