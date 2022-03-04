@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-03-04"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -265,7 +265,7 @@ Success! Your encryption key is now saved in a file called `PlainTextKey.bin`. C
 {: #tutorial-env-variable}
 {: step}
 
-If you create thekey by following [step 3](#tutorial-import-create-key), to encode the key and set the encoded value as an environment variable, perform the following command. You can skip this step if you use your own key in this tutorial:
+If you create the key by following [step 3](#tutorial-import-create-key), to encode the key and set the encoded value as an environment variable, perform the following command. You can skip this step if you use your own key in this tutorial:
 
     ```sh
     KEY_MATERIAL=$(openssl enc -base64 -A -in PlainTextKey.bin)

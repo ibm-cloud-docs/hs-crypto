@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-03-04"
 
 keywords: disable key, enable key, suspend key, suspend operations on a key
 
@@ -92,7 +92,7 @@ your service.
 enable.
 6. From the options menu, click **Enable key**.
 
- After the key is enabled, the **State** of the key is transferredto `Active` in the **Keys** table.
+ After the key is enabled, the **State** of the key is transferred to `Active` in the **Keys** table.
 
 ## Disabling and enabling root keys with the API
 {: #disable-enable-api}
