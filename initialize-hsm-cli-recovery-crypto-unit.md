@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-01-26"
+lastupdated: "2022-03-04"
 
 keywords: initialize service instance, load master key, key ceremony, recovery crypto unit
 
@@ -96,7 +96,7 @@ To initialize your service instance using recovery crypto units, complete the fo
 
         When prompted, enter the number of administrators that you want to add to the crypto units. The number needs to be equal to or greater than the signature threshold values that you set in the previous step.
 
-        The command then lists existing signature key files available on your worstation. You can create administrators by selecting the existing signature key files, or by generating new signature keys. The new signature key files are also saved in the directory that you specify with the `CLOUDTKEFILES` environment variable on your local workstation.
+        The command then lists existing signature key files available on your workstation. You can create administrators by selecting the existing signature key files, or by generating new signature keys. The new signature key files are also saved in the directory that you specify with the `CLOUDTKEFILES` environment variable on your local workstation.
 
         The following output is an example that is displayed:
 

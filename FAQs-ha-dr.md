@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-04"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, HA, DR, high availability, disaster recovery
 
@@ -30,7 +30,7 @@ Read to get answers for high-availability and disaster-recovery related question
 {: #faq-ha-configuration}
 {: faq}
 
-It is suggested that you provision at least two crypto units for high availability. In this way, there is always at least one extra crypto unit operating in a crypto unit failure. {{site.data.keyword.hscrypto}} is built to provide hight availability by default.
+It is suggested that you provision at least two crypto units for high availability. In this way, there is always at least one extra crypto unit operating in a crypto unit failure. {{site.data.keyword.hscrypto}} is built to provide high availability by default.
 
 For more information, see [High availability and disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr).
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-04"
 
 keywords: troubleshoot, problems, known issues, can't destroy managed keys
 
@@ -39,9 +39,9 @@ The service was not able to destroy key `<key_ID>`. The requested key has been d
 ```
 {: screen}
 
-The managed key has been deactivated in 4 hours. A managed key can be destroyed only after it is deactivated for more than 4 hours.
+The managed key was deactivated less than 4 hours ago. A managed key can be destroyed only after it is deactivated for more than 4 hours.
 {: tsCauses}
 
-Wait till it reaches 4 hours and try destroying the managed key again by following the same procedure.
+Wait until it reaches 4 hours, and then try destroying the managed key again by following the same procedure.
 {: tsResolve}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-01-07"
+lastupdated: "2022-03-04"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -658,7 +658,7 @@ The `GenerateKeyPair` function generates a public key and private key pair.
     <p>Implementation of PKCS #11 <code>C_GenerateKeyPair</code>.</p>
     <p>Keypair parameters are retrieved from <code>pmech</code>, <code>ppublic</code>, and <code>pprivate</code> parameters. For RSA keys, <code>ppublic</code> specifies the modulus size.</p>
     <p>In FIPS mode, only RSA moduluses of 1024+256 <code>n</code> bits are supported (integer <code>n</code>). Non-FIPS mode can generate keys of any even number of bits between the limits in the mechanism parameter list.</p>
-    <p>Public key is formatted as a standard SPKI (subject publickey infomation), readable by most libraries. It is integrity-protected by a transport-key specific MAC, which is not part of the SPKI itself. DSA parameter generation returns a non-SPKI structure in the public key field.</p>
+    <p>Public key is formatted as a standard SPKI (subject public key information), readable by most libraries. It is integrity-protected by a transport-key specific MAC, which is not part of the SPKI itself. DSA parameter generation returns a non-SPKI structure in the public key field.</p>
     <p>If you tie an object to a session, <code>(pin, plen)</code> must be returned by <code>Login</code> to that session. Leaving <code>pin</code> <code>NULL</code> creates a public object, one that survives the login session.</p>
     <p>Returns wrapped private key to <code>(key, klen)</code>, public key as a MACed ASN.1/DER structure in <code>(pubkey, pklen)</code>.</p>
     <p>The following supported parameter combinations with special notes are beyond what are documented by PKCS #11:</p>
@@ -1142,7 +1142,7 @@ The `UnwrapKey` function unwraps (decrypts) a key.
     <p>Implementation of PKCS #11 <code>C_UnwrapKey</code>.</p>
     <p><code>uwmech</code> specifies the encryption mechanism that is used to decrypt wrapped data. <code>ptempl</code> is a <em>key(pair)</em> parameter list, specifying how to transform the unwrapped data to a new key (must include <code>CKA_KEY_TYPE</code>).</p>
     <p>The generated object is returned under <code>(unwrapped, uwlen)</code> as a blob. Symmetric keys return their key checksum (3 bytes) under <code>(csum, cslen)</code>; public-key objects return their public key as an SPKI in <code>(csum, cslen)</code>. Both forms are followed by a 4-byte big-endian value, encoding bitcount of the unwrapped key.</p>
-    <p>When an SPKI is being tranformed to a MACed SPKI, one must use CKM_IBM_TRANSPORTKEY as the unwrapping mechanism. This mode supplies the raw SPKI as wrapped data, and ignores the KEK.</p>
+    <p>When an SPKI is being transformed to a MACed SPKI, one must use CKM_IBM_TRANSPORTKEY as the unwrapping mechanism. This mode supplies the raw SPKI as wrapped data, and ignores the KEK.</p>
     <p><code>UnwrapKey</code> produces parity-adjusted DES keys (within the blobs), but tolerates input with improper parity.</p>
     </td>
     </tr>
@@ -1879,7 +1879,7 @@ The `Encrypt` function encrypts single-part data. You don't need to perform the 
     </tr>
     <tr>
     <th>Return values</th>
-    <td>A subset of <code>C_Encrypt</code> return values. For more information, see the <em><strong>Return values</strong></em> chapterof the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structuredocument</a>.</td>
+    <td>A subset of <code>C_Encrypt</code> return values. For more information, see the <em><strong>Return values</strong></em> chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
     </tr>
 </table>
 
@@ -1888,9 +1888,9 @@ The `Encrypt` function encrypts single-part data. You don't need to perform the 
     <th>Description</th>
     <td><p><code>C_Encrypt</code> encrypts single-part data. <code>hSession</code> is the session’s handle; <code>pData</code> points to the data; <code>ulDataLen</code> is the length in bytes of the data; <code>pEncryptedData</code> points to the location that receives the encrypted data; <code>pulEncryptedDataLen</code> points to the location that holds the length in bytes of the encrypted data.</p>
     <p><code>C_Encrypt</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producingoutput.</p>
-    <p>The encryption operation must be initialized with <code>C_EncryptInit</code>. A call to <code>C_Encrypt</code> always terminates theactive encryption operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call (that is, one that returns <code>CKR_OK</code>) to determine the length of the buffer that is needed to hold the ciphertext.</p>
-    <p><code>C_Encrypt</code> cannot be used to terminate a multi-part operation, and must be called after <code>C_EncryptInit</code> withoutintervening <code>C_EncryptUpdate</code> calls.</p>
-    <p>For some encryption mechanisms, the input plaintext data has certain length constraints (either because the mechanismcan encrypt only relatively short pieces of plaintext, or because the mechanism’s input data must consist of an integralnumber of blocks). If these constraints are not satisfied, then <code>C_Encrypt</code> fails with return code <code>CKR_DATA_LEN_RANGE</code>.</p>
+    <p>The encryption operation must be initialized with <code>C_EncryptInit</code>. A call to <code>C_Encrypt</code> always terminates the active encryption operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call (that is, one that returns <code>CKR_OK</code>) to determine the length of the buffer that is needed to hold the ciphertext.</p>
+    <p><code>C_Encrypt</code> cannot be used to terminate a multi-part operation, and must be called after <code>C_EncryptInit</code> without intervening <code>C_EncryptUpdate</code> calls.</p>
+    <p>For some encryption mechanisms, the input plaintext data has certain length constraints (either because the mechanism can encrypt only relatively short pieces of plaintext, or because the mechanism’s input data must consist of an integral number of blocks). If these constraints are not satisfied, then <code>C_Encrypt</code> fails with return code <code>CKR_DATA_LEN_RANGE</code>.</p>
     <p>The plaintext and ciphertext can be in the same place, that is, it is OK if <code>pData</code> and <code>pEncryptedData</code> point to thesame location.</p>
     <p>For most mechanisms, <code>C_Encrypt</code> is equivalent to a sequence of <code>C_EncryptUpdate</code> operations followed by <code>C_EncryptFinal</code>.</p>
     </td>
@@ -2709,16 +2709,16 @@ The `DecryptUpdate` function continues a multiple-part decryption operation. Bef
     </tr>
     <tr>
     <th>Return values</th>
-    <td>A subset of <code>C_DecryptUpdate</code> return values. For more information, see the <em><strong>Return values</strong></em>chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Librarystructure document</a>.</td>
+    <td>A subset of <code>C_DecryptUpdate</code> return values. For more information, see the <em><strong>Return values</strong></em>chapter of the  <a href="https://www.ibm.com/security/cryptocards/pciecc4/library" target="_blank">Enterprise PKCS #11 (EP11) Library structure document</a>.</td>
     </tr>
 </table>
 
 <table id="DecryptUpdate_PKCS11" tab-title="PKCS #11" tab-group="DecryptUpdate" class="simple-tab-table">
     <tr>
     <th>Description</th>
-    <td><p><code>C_DecryptUpdate</code> continues a multiple-part decryption operation, processing another encrypted data part. <code>hSession</code> is the session’s handle; <code>pEncryptedPart</code> points to the encrypted data part; <code>ulEncryptedPartLen</code> is thelength of the encrypted data part; <code>pPart</code> points to the location that receives the recovered data part; <code>pulPartLen</code> points to the location that holds the length of the recovered data part.</p>
-    <p><code>C_DecryptUpdate</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> onproducing output.</p>
-    <p>The decryption operation must be initialized with <code>C_DecryptInit</code>.  This function can be called any number oftimes in succession.  A call to <code>C_DecryptUpdate</code> which results in an error other than CKR_BUFFER_TOO_SMALL terminatesthe current decryption operation.</p>
+    <td><p><code>C_DecryptUpdate</code> continues a multiple-part decryption operation, processing another encrypted data part. <code>hSession</code> is the session’s handle; <code>pEncryptedPart</code> points to the encrypted data part; <code>ulEncryptedPartLen</code> is the length of the encrypted data part; <code>pPart</code> points to the location that receives the recovered data part; <code>pulPartLen</code> points to the location that holds the length of the recovered data part.</p>
+    <p><code>C_DecryptUpdate</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
+    <p>The decryption operation must be initialized with <code>C_DecryptInit</code>.  This function can be called any number of times in succession.  A call to <code>C_DecryptUpdate</code> which results in an error other than CKR_BUFFER_TOO_SMALL terminates the current decryption operation.</p>
     <p>The ciphertext and plaintext can be in the same place, that is, it is OK if <code>pEncryptedPart</code> and <code>pPart</code> point to thesame location.</p></td>
     </tr>
     <tr>

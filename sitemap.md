@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-03-04"
 
 keywords: site map, doc structure, information architecture
 
@@ -1683,7 +1683,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What is the difference between key management, key orchestration, and key governance?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-differences)
 
-* [Does {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} provide key management, governance, and orchestration at the sametime?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-functions)
+* [Does {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} provide key management, governance, and orchestration at the same time?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-functions)
 
 * [Is {{site.data.keyword.uko_full_notm}} a separate offering?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-offering)
 

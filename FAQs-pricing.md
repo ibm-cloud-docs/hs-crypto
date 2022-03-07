@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-04"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning and operations
 
@@ -60,7 +60,7 @@ Each provisioned operational crypto unit is charged $2.13 USD per hour. After yo
 
 The detailed [pricing plan](/catalog/services/hyper-protect-crypto-services){: external} is available for your reference.
 
-The following example shows a total charge of 30 days (720 hours). The user enables two operational crypto units in the service instance, and creates 22 internal keystores and 15 external keystores. The first five internal keystores and the first exteral keystore are free of charge.
+The following example shows a total charge of 30 days (720 hours). The user enables two operational crypto units in the service instance, and creates 22 internal keystores and 15 external keystores. The first five internal keystores and the first external keystore are free of charge.
 
 | Pricing components | Cost for 30 days (720 hours) |
 |-----|----------------|

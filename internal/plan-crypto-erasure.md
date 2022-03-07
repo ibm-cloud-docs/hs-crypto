@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-04"
 
 keywords: crypto erasure, erase data, enable KYOK, onboard to hyper protect crypto services, hpcs onboarding, internal, key registration, KYOK
 
@@ -85,7 +85,7 @@ Use the [adopters guide](https://github.ibm.com/kms/Adopter_services/blob/master
 
 After checking the key state and taking necessary steps, your service can acknowledge the deletion of the root key and key state through the [event API](/apidocs/hs-crypto#eventacknowledge){: external}.
 
-Services have a time frame of four hours to confirm with {{site.data.keyword.hscrypto}} that all appropriate actions have been taken.
+Services have a timeframe of four hours to confirm with {{site.data.keyword.hscrypto}} that all appropriate actions have been taken.
 {: important}
 
 Run the following cURL command to acknowledge the Hyperwarp deletion event:
@@ -198,7 +198,7 @@ Replace the variables in the example request according to the following table.
     </td>
     </tr>
     <caption>
-    Table 1. Describes the variables that are needed to acknowledge a Heyperwarp
+    Table 1. Describes the variables that are needed to acknowledge a Hyperwarp
     event with the {{site.data.keyword.hscrypto}} API.
     </caption>
 </table>
@@ -213,6 +213,6 @@ For audit purposes, you can monitor the activity trail of a deleted root key thr
 ## Next steps
 {: #crypto-erasure-next-steps}
 
-Congratulations! Your service is crypto erasure ready! 
+Your service is crypto erasure ready! 
 
 - Validate that your service is [KYOK ready](/docs/hs-crypto?topic=hs-crypto-kyok-cheatsheet#kyok-required-actions).

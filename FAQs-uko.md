@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-04"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -36,16 +36,16 @@ Read to get answers for questions about {{site.data.keyword.cloud}} {{site.data.
 {: #faq-uko-differences}
 {: faq}
 
-Key orchestration brings both key management and key governance capabilties into operations within an enterprise: 
+Key orchestration brings both key management and key governance capabilities into operations within an enterprise: 
 
 * *Key management* is the people, processes, and technology that define how encryption keys exist and operate within an enterprise, including key lifecycle stages, and roles and duties definitions. 
-* *Key governance* is the business controls that is defined by the security and risk management practices of an enterprise. Key governance ensures encryption key risks are identified, assessed, and addressed by risk mitigation policies and controls, including applicable regulations and compliance requirements.
+* *Key governance* is the business control that is defined by the security and risk management practices of an enterprise. Key governance ensures encryption key risks are identified, assessed, and addressed by risk mitigation policies and controls, including applicable regulations and compliance requirements.
 * *Key orchestration* is the activities and means that initiate and manage encryption keys through their lifecycle within an enterprise, including automation and integration into reporting and monitoring. 
 
 For more information about key management, see [NIST SP 800-57 Part 2 Rev 1 "Recommendation for Key Management: Part 2 – Best Practices for Key Management Organizations"](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt2r1.pdf){: external}.
 
 
-## Does {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} provide key management, governance, and orchestration at the sametime?
+## Does {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} provide key management, governance, and orchestration at the same time?
 {: #faq-uko-functions}
 {: faq}
 
@@ -92,7 +92,7 @@ The following list contains a few cloud providers:
 
 IBM&reg; Enterprise Key Management Foundation - Web Edition (EKMF Web) and {{site.data.keyword.uko_full_notm}} share the same code base. 
 
-EKMF Web is an on-premises product for IBM Z14 or Z15 environments, running z/OS V2.3 or z/OS V2.4 and IBM DB2. {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} is a cloud native service in IBM Cloud, which offers key management and orchestration in a hybrid multicloud environment.
+EKMF Web is an on-premises product for IBM Z14 or Z15 environments, running z/OS V2.3 or z/OS V2.4 and IBM Db2. {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} is a cloud native service in IBM Cloud, which offers key management and orchestration in a hybrid multicloud environment.
 
 
 ## What multizone regions is {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} available in? 

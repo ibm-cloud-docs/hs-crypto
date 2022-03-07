@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-07"
+lastupdated: "2022-03-04"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -33,7 +33,7 @@ To ensure the exclusive control on the execution of cryptographic operations, yo
 
 With mutual TLS as a second layer of authentication for accessing EP11, you need to be aware of the following security and availability considerations:
 
-- If you need to prevent certain people from accessing EP11, separate certificate administrators from service users. Control access by assigning the _Certficate Manager_ role only to the people that manage the client certificates, and assigning other service users the corresponding roles for operational usage. To manage user access, you need to be assigned the _Administrator_ role with account management access.
+- If you need to prevent certain people from accessing EP11, separate certificate administrators from service users. Control access by assigning the _Certificate Manager_ role only to the people that manage the client certificates, and assigning other service users the corresponding roles for operational usage. To manage user access, you need to be assigned the _Administrator_ role with account management access.
 - EP11 APIs are not accessible if you use invalid client certificates or use unavailable private keys to sign client certificates. To ensure the availability, assign more than one person the _Certificate Manager_ role as a backup. Certificate administrators need to securely maintain their unique administrator private keys. Certificate administrators also need to maintain a backup of all client certificates outside of the {{site.data.keyword.hscrypto}} instance, for example, by using [{{site.data.keyword.cloud_notm}} Certificate Manager](https://www.ibm.com/cloud/certificate-manager){: external}. It is also suggested to monitor the expiration of the certificates.
 
 ## Before you begin
