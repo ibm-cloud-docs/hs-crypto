@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-04"
+lastupdated: "2022-03-09"
 
 keywords: site map, doc structure, information architecture
 
@@ -433,47 +433,155 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [28 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#28-feb-2022)
 
+    * [Limited availability: Using {{site.data.keyword.uko_full_notm}} to manage and orchestrate keys in a multicloud environment](/docs/hs-crypto?topic=hs-crypto-what-new#add-uko})
+
 * [23 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#23-feb-2022)
+
+    * [Added: Using {{site.data.keyword.mon_full_notm}} to measure {{site.data.keyword.hscrypto}} metrics](/docs/hs-crypto?topic=hs-crypto-what-new#add-monitoring-metrics)
 
 * [15 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#15-feb-2022)
 
+    * [Added: {{site.data.keyword.hscrypto}} expands into the S&atilde;o-Paulo region](/docs/hs-crypto?topic=hs-crypto-what-new#add-sao-region)
+
 * [21 January 2022](/docs/hs-crypto?topic=hs-crypto-what-new#jan-2022)
+
+    * [Updated: {{site.data.keyword.hscrypto}} key management functions](/docs/hs-crypto?topic=hs-crypto-what-new#update-kms-api-v282)
+
+    * [Added: The key ring limit for a service instance](/docs/hs-crypto?topic=hs-crypto-what-new#add-key-ring-limit)
 
 * [30 July 2021](/docs/hs-crypto?topic=hs-crypto-what-new#july-2021)
 
+    * [Added: Exclusive control on the execution of cryptographic operations](/docs/hs-crypto?topic=hs-crypto-what-new#add-cert-manager)
+
+    * [Added: {{site.data.keyword.hscrypto}} expands into the Tokyo region](/docs/hs-crypto?topic=hs-crypto-what-new#add-tokyo-region)
+
+    * [Added: Using Terraform to initialize the {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-what-new#add-terraform-automation)
+
+    * [Added: Using a signing service to manage signature keys for instance initialization](/docs/hs-crypto?topic=hs-crypto-what-new#add-signing-service)
+
 * [30 June 2021](/docs/hs-crypto?topic=hs-crypto-what-new#june-2021)
+
+    * [Added: Authenticated PKCS #11 keystore](/docs/hs-crypto?topic=hs-crypto-what-new#add-authenticated-pkcs11-keystore)
+
+    * [Added: Enabling cross-region recovery with failover crypto units](/docs/hs-crypto?topic=hs-crypto-what-new#add-failover-crypto-units)
+
+    * [Added: {{site.data.keyword.hscrypto}} expands into the London region](/docs/hs-crypto?topic=hs-crypto-what-new#add-london-region)
 
 * [30 April 2021](/docs/hs-crypto?topic=hs-crypto-what-new#april-2021)
 
+    * [Added: Rotating your master key by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-what-new#add-master-key-rotation-smart-cards)
+
+    * [Updated: Restore key API and UI](/docs/hs-crypto?topic=hs-crypto-what-new#update-restore-key-api-ui)
+
 * [31 March 2021](/docs/hs-crypto?topic=hs-crypto-what-new#march-2021)
+
+    * [Added: Grouping keys by using key rings](/docs/hs-crypto?topic=hs-crypto-what-new#add-key-ring)
+
+    * [Added: Initializing the service instance by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-what-new#add-recovery-crypto-units)
+
+    * [Added: Managing EP11 keystores and keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-what-new#add-ep11-keystores-keys-console)
+
+    * [Added: Managing key aliases for a key](/docs/hs-crypto?topic=hs-crypto-what-new#add-key-alias)
+
+    * [Added: Synchronizing protected resources associated with root keys](/docs/hs-crypto?topic=hs-crypto-what-new#add-sync-resources)
+
+    * [Added: Using Virtual Private Endpoints for VPC](/docs/hs-crypto?topic=hs-crypto-what-new#add-vpe-for-vpc)
+
+    * [Updated: The cryptography algorithm that is used to generate signature keys](/docs/hs-crypto?topic=hs-crypto-what-new#update-signature-key-algorithm)
 
 * [28 February 2021](/docs/hs-crypto?topic=hs-crypto-what-new#february-2021)
 
+    * [Added: Key verification by using the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-what-new#add-key-verification)
+
+    * [Added: Support for the Schnorr algorithm](/docs/hs-crypto?topic=hs-crypto-what-new#add-schnorr)
+
 * [31 January 2021](/docs/hs-crypto?topic=hs-crypto-what-new#january-2021)
+
+    * [Added: Support for a single-tenant KMIP adapter](/docs/hs-crypto?topic=hs-crypto-what-new#add-support-kmip-adapter)
 
 * [31 December 2020](/docs/hs-crypto?topic=hs-crypto-what-new#december-2020)
 
+    * [Added: Managing the key create and import access policy](/docs/hs-crypto?topic=hs-crypto-what-new#add-key-create-import-access)
+
+    * [Added: Provisioning and managing service instances with the private-only network](/docs/hs-crypto?topic=hs-crypto-what-new#add-private-only-network)
+
+    * [Added: `ReencryptSingle` function in GREP11 API](/docs/hs-crypto?topic=hs-crypto-what-new#add-reencryptsingle-function-grep11)
+
+    * [Added: Support for accessing service instances through the Virtual Private Endpoint](/docs/hs-crypto?topic=hs-crypto-what-new#add-vpe)
+
+    * [Added: Support for the SLIP10 mechanism and Edwards-curve algorithm](/docs/hs-crypto?topic=hs-crypto-what-new#add-slip10-eddsa)
+
+    * [Added: Using Terraform to manage {{site.data.keyword.hscrypto}} instances and resources](/docs/hs-crypto?topic=hs-crypto-what-new#add-terraform)
+
+    * [Updated: key management service API](/docs/hs-crypto?topic=hs-crypto-what-new#update-kms-api-december)
+
 * [30 November 2020](/docs/hs-crypto?topic=hs-crypto-what-new#november-2020)
+
+    * [Added: Support for the BIP32 mechanism](/docs/hs-crypto?topic=hs-crypto-what-new#add-bip32-mechanism)
+
+    * [Added: TKE activity tracker events](/docs/hs-crypto?topic=hs-crypto-what-new#add-tke-at-events)
 
 * [30 September 2020](/docs/hs-crypto?topic=hs-crypto-what-new#september-2020)
 
+    * [Added: Master key rotation](/docs/hs-crypto?topic=hs-crypto-what-new#added-master-key-rotation)
+
+    * [Added: Support for performing cryptographic operations with the standard PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-what-new#added-pkcs11)
+
 * [31 August 2020](/docs/hs-crypto?topic=hs-crypto-what-new#august-2020)
+
+    * [Added: Support for import tokens to securely upload encryption keys](/docs/hs-crypto?topic=hs-crypto-what-new#added-import-tokens)
 
 * [31 July 2020](/docs/hs-crypto?topic=hs-crypto-what-new#july-2020)
 
+    * [Added: {{site.data.keyword.hscrypto}} aligns the key management functions with {{site.data.keyword.keymanagementserviceshort}}](/docs/hs-crypto?topic=hs-crypto-what-new#added-key-protect-concurrency)
+
+    * [Added: {{site.data.keyword.hscrypto}} expands into the Washington DC region](/docs/hs-crypto?topic=hs-crypto-what-new#added-wdc-region)
+
 * [30 June 2020](/docs/hs-crypto?topic=hs-crypto-what-new#june-2020)
+
+    * [Added: Support for quorum authentication](/docs/hs-crypto?topic=hs-crypto-what-new#added-quorum-authentication-202006)
 
 * [30 April 2020](/docs/hs-crypto?topic=hs-crypto-what-new#april-2020)
 
+    * [Added: {{site.data.keyword.hscrypto}} adds support for EP11 private endpoints](/docs/hs-crypto?topic=hs-crypto-what-new#added-private-endpoints-202004)
+
+    * [Added: {{site.data.keyword.hscrypto}} adds support for the Management Utilities](/docs/hs-crypto?topic=hs-crypto-what-new#added-management-utilities-202004)
+
+    * [Updated: {{site.data.keyword.cloud_notm}} service integration](/docs/hs-crypto?topic=hs-crypto-what-new#added-service-integration-202004)
+
 * [31 August 2019](/docs/hs-crypto?topic=hs-crypto-what-new#August-2019)
+
+    * [Added: {{site.data.keyword.hscrypto}} adds support for private endpoints](/docs/hs-crypto?topic=hs-crypto-what-new#added-private-endpoints)
+
+    * [Added: {{site.data.keyword.hscrypto}} Cloud HSM now supports EP11 cryptographic operations over gRPC](/docs/hs-crypto?topic=hs-crypto-what-new#added-EP11)
+
+    * [Added: {{site.data.keyword.hscrypto}} expands into the Frankfurt region](/docs/hs-crypto?topic=hs-crypto-what-new#added-frankfurt-region)
+
+    * [Added: {{site.data.keyword.cloud_notm}} service integration](/docs/hs-crypto?topic=hs-crypto-what-new#added-service-integration)
 
 * [30 June 2019](/docs/hs-crypto?topic=hs-crypto-what-new#June-2019)
 
+    * [Added: {{site.data.keyword.hscrypto}} expands into Sydney region](/docs/hs-crypto?topic=hs-crypto-what-new#added-sydney-region)
+
 * [31 March 2019](/docs/hs-crypto?topic=hs-crypto-what-new#March-2019)
+
+    * [{{site.data.keyword.hscrypto}} is generally available](/docs/hs-crypto?topic=hs-crypto-what-new#ga-201903)
+
+    * [High availability and disaster recovery](/docs/hs-crypto?topic=hs-crypto-what-new#ha-dr-new)
+
+    * [Scalability](/docs/hs-crypto?topic=hs-crypto-what-new#scalability-new)
 
 * [28 February 2019](/docs/hs-crypto?topic=hs-crypto-what-new#Feb-2019)
 
+    * [{{site.data.keyword.hscrypto}} Beta is available](/docs/hs-crypto?topic=hs-crypto-what-new#beta-201902)
+
 * [31 December 2018](/docs/hs-crypto?topic=hs-crypto-what-new#Dec-2018)
+
+    * [Added: Integration of {{site.data.keyword.keymanagementserviceshort}} API](/docs/hs-crypto?topic=hs-crypto-what-new#kp-api)
+
+    * [Added: Support for HSM management with Keep Your own Key](/docs/hs-crypto?topic=hs-crypto-what-new#hsm-kyok)
+
+    * [Deprecated: Function of accessing {{site.data.keyword.hscrypto}} through Advanced Cryptography Service Provider](/docs/hs-crypto?topic=hs-crypto-what-new#deprecated-acsp)
 
 
 ## Tutorials on key management service
@@ -1771,9 +1879,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Why can't I create internal keystores?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-create-internal-keystores#troubleshoot-create-internal-keystores)
 
-[Why can't I delete vaults?](/docs/hs-crypto?topic=hs-crypto-troubleshooting-delete-vault#troubleshooting-delete-vault)
+[Why can't I delete vaults?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-delete-vault#troubleshoot-delete-vault)
 
-[Why can't I delete internal keystores?](/docs/hs-crypto?topic=hs-crypto-troubleshooting-delete-keystore#troubleshooting-delete-keystore)
+[Why can't I delete internal keystores?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-delete-keystore#troubleshoot-delete-keystore)
 
 [Why do I fail to see the changes to my key in Azure Key Vault?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-azure-delay#troubleshoot-azure-delay)
 
