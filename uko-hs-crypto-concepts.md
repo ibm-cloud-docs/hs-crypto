@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-10"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -125,7 +125,7 @@ The master key, also known as HSM master key, is used to encrypt the service ins
 ### Master key part
 {: #uko-master-key-part-concept}
 
-If you initialize your service instance using key part files, or using smart cards together with the Management Utilities, a master key is composed of several master key parts. Master key parts that are created in {{site.data.keyword.hscrypto}} are symmetric 256-bit AES keys. For security considerations, each key part can be owned by a different person. Key parts are stored in workstation key part files when the [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](#tke-concept) is used to load the master key. Key parts are stored on [smart cards](#smart-card-concept) when the [{{site.data.keyword.hscrypto}} Management Utilities](#management-utilities-concept) are used to load the master key. The key part owner needs to be the only person who knows the file password or the smart card personal identification number (PIN) for the key part.
+If you initialize your service instance using key part files, or using smart cards together with the Management Utilities, a master key is composed of two or three master key parts. Master key parts that are created in {{site.data.keyword.hscrypto}} are symmetric 256-bit AES keys. For security considerations, each key part can be owned by a different person. Key parts are stored in workstation key part files when the [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](#tke-concept) is used to load the master key. Key parts are stored on [smart cards](#smart-card-concept) when the [{{site.data.keyword.hscrypto}} Management Utilities](#management-utilities-concept) are used to load the master key. The key part owner needs to be the only person who knows the file password or the smart card personal identification number (PIN) for the key part.
 
 ### {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in
 {: #uko-tke-concept}
