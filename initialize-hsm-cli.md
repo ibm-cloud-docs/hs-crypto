@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-03-10"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -241,7 +241,7 @@ The command to exit imprint mode must be signed by as many administrators as spe
 
 Each master key part is saved in a password-protected file on the workstation.
 
-You must create at least two master key parts. For security considerations, three master key parts can be used and each key part can be owned by a different person. The key part owner needs to be the only person who knows the password that is associated with the key part file.
+You must create at least two master key parts. For security considerations, a maximum of three master key parts can be used and each key part can be owned by a different person. The key part owner needs to be the only person who knows the password that is associated with the key part file.
 {: important}
 
 * To display the existing master key parts on the workstation, use the following command:

@@ -254,5 +254,46 @@
     "got the 401 authorized error when using the Trusted Key Entry application",
     "access token invalid when using the Trusted Key Entry application in HPCS",
     "access token expired when using the Trusted Key Entry application"
+  ],
+  "troubleshoot-create-internal-keystores":[
+    "not able to create internal keystore",
+    "fail to create internal keystore",
+    "error when creating internal keystore",
+    "adding keystore failed",
+    "not able to add internal keystore",
+    "not able to add KMS keystore",
+    "error occurs when you add internal keystore"
+  ],
+  "troubleshoot-delete-vault":[
+    "not able to delete vault",
+    "fail to delete vault",
+    "deleting vault failed",
+    "delete vault function disabled",
+    "error when deleting vault",
+    "vault still contains some keys or keystores"
+  ],
+  "troubleshoot-delete-keystore":[
+    "not able to delete internal keystore",
+    "can't delete internal keystore",
+    "fail to delete internal keystore",
+    "error when deleting internal keystore",
+    "deleting internal keystore failed",
+    "internal keystore still contains some keys"
+  ],
+  "troubleshoot-azure-delay":[
+    "fail to see changes to my key in Azure Key Vault",
+    "Azure key not updated",
+    "key state not changed in Azure UI",
+    "managed key not installed in Azure Key Vault",
+    "Azure key installation status not changed",
+    "installed key changes not reflected in Azure UI"
+  ],
+  "troubleshoot-master-key-rotation-uko":[
+    "can't rotate master key when using the Unified Key Orchestrator Plan",
+    "not able to rotate master key by using the TKE CLI commands",
+    "fail to rotate master key with the TKE CLI commands",
+    "master key rotation with TKE CLI commands fails",
+    "master key not rotated when using the Unified Key Orchestrator Plan",
+    "error sending start key rotate request to target service instance"
   ]
 }

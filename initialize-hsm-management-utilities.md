@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-03-10"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, smart card, trusted key entry application, tke application, management utilities
 
@@ -76,7 +76,7 @@ Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start
 
     To create more master key parts, repeat this step.
 
-    You need to generate at least two master key parts to load a master key. For added security, it is suggested to generate three master key parts. To improve security, you can choose to generate signature keys and master key parts on separate smart cards and assign each smart card to a different person. For more information, see [Smart card setup recommendations](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup).
+    You need to generate at least two master key parts to load a master key. For added security, you can generate a maximum of three master key parts. To improve security, you can choose to generate signature keys and master key parts on separate smart cards and assign each smart card to a different person. For more information, see [Smart card setup recommendations](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup).
     {: important}
 
 3. (Optional) If you want to create a backup copy of an EP11 smart card, click **Copy smart card** on the **Smart card** tab and follow the prompts.
