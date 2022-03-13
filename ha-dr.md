@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-13"
 
 keywords: disaster recovery, high availability, ha, dr, recoverablity, availability, failover
 
@@ -47,7 +47,7 @@ Multiple [crypto units](#x9860404){: term} in a service instance are automatical
 {: #cross-region-disaster-recovery}
 
 
-Currently, cross-region recovery for {{site.data.keyword.uko_full_notm}} managed keys and keystores is not yet supported.
+Currently, the option for cross-region recovery through failover crypto units for {{site.data.keyword.uko_full_notm}} managed keys and keystores is not available yet.
 {: note}
 
 
