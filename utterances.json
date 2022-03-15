@@ -307,7 +307,7 @@
   "faq-uko-functions":[
     "what does Unified Key Orchestrator provide",
     "does Unified Key Orchestrator provide key management",
-    "key orchestration with Unified Key Orchestrator",
+    "key orchestration with UKO",
     "what are the functions of Unified Key Orchestrator",
     "use Unified Key Orchestrator for key governance"
   ],
@@ -315,46 +315,46 @@
     "is Unified Key Orchestrator a separate offering",
     "how to use Unified Key Orchestrator",
     "how to implement Unified Key Orchestrator",
-    "use Unified Key Orchestrator in Hyper Protect Crypto Services instance",
+    "use Unified Key Orchestrator in HPCS instance",
     "using the Unified Key Orchestrator Plan",
     "can I use Hyper Protect Crypto Services with Unified Key Orchestrator"
   ],
   "faq-uko-hpcs":[
-    "how is Unified Key Orchestrator Plan different from Standard Plan",
+    "how is UKO Plan different from Standard Plan",
     "Unified Key Orchestrator Plan and Standard Plan difference",
     "why use Unified Key Orchestrator Plan",
-    "new features in Hyper Protect Crypto Services with Unified Key Orchestrator",
+    "new features in HPCS with Unified Key Orchestrator",
     "what's new with Unified Key Orchestrator Plan",
-    "Hyper Protect Crypto Services with Unified Key Orchestrator updates"
+    "HPCS with UKO updates"
   ],
   "faq-uko-vendor-cloud":[
     "Unified Key Orchestrator supported cloud vendors",
-    "what external keystores can I connect to with Unified Key Orchestrator",
+    "what external keystores can I connect to with UKO",
     "what cloud providers does Unified Key Orchestrator support",
     "which are the supported external keystores",
     "external keystore connection using Unified Key Orchestrator",
-    "connect to third party cloud providers in Unified Key Orchestrator"
+    "connect to third party cloud providers in UKO"
   ],
   "faq-uko-ekmf":[
     "how is Unified Key Orchestrator different from EKMF Web",
     "Unified Key Orchestrator and EKMF Web difference",
     "difference between Unified Key Orchestrator and EKMF Web",
     "UKO and EKMF Web comparison",
-    "Enterprise Key Management Foundation and Hyper Protect Crypto Services"
+    "HPCS UKO compared with EKMF Web"
   ],
   "faq-uko-mzr":[
     "multizone regions that have Unified Key Orchestrator",
-    "which regions is Unified Key Orchestrator available in",
-    "available regions of Hyper Protect Crypto Services with Unified Key Orchestrator",
+    "which regions is UKO available in",
+    "available regions of HPCS with UKO",
     "in which regions can I use Unified Key Orchestrator",
     "regions and locations for Unified Key Orchestrator",
-    "which multizone regions support Unified Key Orchestrator"
+    "which multizone regions support UKO"
   ],
   "faq-uko-region":[
-    "Hyper Protect Crypto Services is not available in my service region",
+    "HPCS is not available in my service region",
     "Hyper Protect Crypto Services supported regions and locations",
-    "my service region does not have Hyper Protect Crypto Services",
-    "use Unified Key Orchestrator for key management in my service region",
+    "my service region does not have HPCS",
+    "use UKO for key management in my service region",
     "data residency region for Unified Key Orchestrator"
   ]
 }
