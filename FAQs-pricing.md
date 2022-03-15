@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-04"
+lastupdated: "2022-03-15"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning and operations
 
@@ -26,6 +26,7 @@ subcollection: hs-crypto
 
 Read to get answers for questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} pricing.
 {: shortdesc}
+
 
 ## How am I charged for my use of {{site.data.keyword.hscrypto}} standard plan?
 {: #faq-how-charge-hpcs}
@@ -51,12 +52,16 @@ The following example is for your reference. If you want to crypto-process 5000 
 {: caption="Table 1. A standard plan billing example of two operational and two failover crypto units" caption-side="bottom"}
 
 
+
+
 ## How am I charged for my use of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}?
 {: #faq-how-charge-hpcs-uko}
 {: faq}
 {: support}
 
-Each provisioned operational crypto unit is charged $2.13 USD per hour. After you connect to an external keystore of any type, the {{site.data.keyword.uko_full_notm}} base price of $6.25 USD/hour is charged. The first five internal keystores and the very first external keystore are free of charge. Each additional connected internal or external keystore is charged with a tiered pricing starting at $225 USD per month. The cost for the connected internal and external keystores is prorated.
+Each provisioned operational crypto unit is charged $2.13 USD per hour. After you connect to an external keystore of any type, the {{site.data.keyword.uko_full_notm}} base price of $6.25 USD/hour is charged. 
+
+The first five internal keystores and the very first external keystore are free of charge. Each additional internal or external keystore is charged with a tiered pricing starting at $225 USD per month. The cost of the keystores is prorated per day.
 
 The detailed [pricing plan](/catalog/services/hyper-protect-crypto-services){: external} is available for your reference.
 
