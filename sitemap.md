@@ -1866,6 +1866,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Why can't I create or import keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-create-keys#troubleshoot-unable-to-create-keys)
 
+[Why can't I create a standard key after I load another master key?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-create-standard-keys#troubleshoot-unable-to-create-standard-keys)
+
 [Why can't I delete keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-delete-keys#troubleshoot-unable-to-delete-keys)
 
 [Why can't I rotate root keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-rotate-root-keys#troubleshoot-unable-to-rotate-root-keys)
