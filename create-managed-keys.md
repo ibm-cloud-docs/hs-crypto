@@ -37,7 +37,7 @@ Before you create a managed key, keep in mind the following considerations:
 - For access management, you need to assign a managed key to a vault upon creation.
 - A managed key can be assigned to only one vault.
 - A managed key can be used for encryption and decryption only after you install it in at least one keystore. 
-- You need to select the keystore type when you create a managed key. The keystore type that you select determines where the managed key is to be stored and cannot be changed.
+- You need to select the keystore type when you create a managed key. The keystore type that you select determines where the managed key is to be stored. The keystore type cannot be changed later.
 - Installing a managed key in multiple keystores enables redundancy.
 - To protect your privacy, do not store your personal data as metadata for your managed key.
 
