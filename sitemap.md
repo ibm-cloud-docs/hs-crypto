@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-15"
+lastupdated: "2022-03-16"
 
 keywords: site map, doc structure, information architecture
 
@@ -1229,6 +1229,14 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-delete-vaults#delete-vaults-next)
 
+[Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults#grant-access-vaults)
+
+* [Step 1. Retrieve the vault ID](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults#access-vault-retrieve-ID)
+
+* [Step 2. Grant access to vaults from the {{site.data.keyword.cloud_notm}} UI](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults#grant-access-vault-console)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults#grant-access-vaults-next)
+
 
 ### Managing KMS keys
 {: #sitemap_managing_kms_keys}
@@ -1507,14 +1515,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Managing access to multiple instances](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-manage-multiple-instances)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-manage-access-next)
-
-[Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults#grant-access-vaults)
-
-* [Step 1. Retrieve the vault ID](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults#access-vault-retrieve-ID)
-
-* [Step 2. Grant access to vaults from the {{site.data.keyword.cloud_notm}} UI](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults#grant-access-vault-console)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults#grant-access-vaults-next)
 
 [Setting up custom roles for {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-role-best-practices#uko-role-best-practices)
 

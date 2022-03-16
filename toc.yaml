@@ -229,6 +229,7 @@ toc:
               - create-vaults.md
               - edit-vaults.md
               - delete-vaults.md
+              - grant-access-vaults.md
           - topicgroup:
               label: Managing KMS keys
               topics:
@@ -274,7 +275,6 @@ toc:
           label: Enhancing security - Unified Key Orchestrator Plan
           topics:
           - uko-manage-access.md
-          - grant-access-vaults.md
           - uko-role-best-practices.md
           - uko-at-events.md
 

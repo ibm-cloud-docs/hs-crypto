@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-16"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -23,12 +23,27 @@ subcollection: hs-crypto
 # Creating vaults
 {: #create-vaults}
 
-A vault is a single repository that controls a user's or an access group's access to managed keys and target keystores through {{site.data.keyword.iamshort}} (IAM). You can create vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI).
+You can use {{site.data.keyword.hscrypto}} to create a group of keys and keystores for a target group of users that require the same {{site.data.keyword.iamshort}} (IAM) access permissions in a vault. You can create vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI).
 {: shortdesc}
 
 
 {{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
 {: note}
+
+
+As an account administrator, you can bundle the keys and keystores in your {{site.data.keyword.hscrypto}} instance into groups called _vault_. A vault is a collection of keys and keystores in your service instance that require the same IAM access permissions. For example, if you have a group of team members who need a particular type of access to a specific group of keys and keystores, you can create a vault and assign the appropriate IAM access policy to the target user group. The users that are assigned access to the vault can create and manage the resources that exist within the vault.
+
+Vaults are also useful in cases where it is important for one business unit to have access to a set of keys and keystores that another business unit cannot have. An account administrator can create vaults for each business unit and [assign the appropriate level of access](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults) to the appropriate users. In the case where the account administrator wants to delegate platform management of a specific vault to someone else, they can assign a user a [platform administrator role at the vault level](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-platform-mgmt-roles). The sub-administrator is then able to manage the vault and grant access to the appropriate users.
+
+Before you create a vault for your {{site.data.keyword.hscrypto}} instance, keep in mind the following considerations:
+
+- Vaults can hold KMS keys and keystores, but not EP11 keys and keystores.
+
+    Vaults can contain both KMS keys and keystores. There is no limit on how many keys can exist within a vault. Vaults don't apply to Enterprise PKCS #11 (EP11) keys and keystores.
+
+- A key or a keystore only can belong to one vault at a time.
+
+    A managed key or a target keystore can belong to only one vault. You need to assign a vault to a managed key or a target keystore upon creation.
 
 
 For more information about granting access, see [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults).

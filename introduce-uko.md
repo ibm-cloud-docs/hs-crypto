@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-03"
+lastupdated: "2022-03-16"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -66,9 +66,13 @@ You can integrate all your key management use cases into one consistent approach
 
     You can create different vaults based on your organizational or security needs. For example, you can create a vault for each business unit. In this way, you set access control policies at a vault level, and key administrators of each business unit have access only to the keys and keystores that are assigned to the vault of their business unit.
 
+    For more information about creating and managing access to vaults, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults) and [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults).
+
 - **Managed keys**
         
     A managed key is a key that is created in and assigned to a vault. You can manage the lifecycle of a managed key and install it to multiple keystores in the same vault. You can use a managed key for encryption and decryption only when it is installed in at least one target keystore. Installing a managed key in multiple keystores in the same vault enables key redundancy. To use a managed key for encryption and decryption, install in one or more keystores within the same vault first. 
+
+    For more information about creating managed keys, see [Creating and installing managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys).
 
 - **Target keystores**
         
@@ -79,6 +83,8 @@ You can integrate all your key management use cases into one consistent approach
     - **Internal keystores**
         
         An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance. 
+
+        For more information about creating internal keystores, see [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores).
 
         - **KMS keystores**
             
@@ -91,6 +97,8 @@ You can integrate all your key management use cases into one consistent approach
         External keystores are keystores that are not in your service instance. You can connect to keystores that are external to your service instance, such as another {{site.data.keyword.hscrypto}} or {{site.data.keyword.keymanagementserviceshort}} instance, potentially in another region. Or, you can connect to external keystores from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS). 
 
         You can connect to one external keystore at no initial cost, regardless of the type. You are charged for additional external keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
+
+        For more information about connecting to keystores, see [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
 
         - **{{site.data.keyword.hscrypto}}** 
             
