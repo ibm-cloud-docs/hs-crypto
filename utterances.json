@@ -272,6 +272,15 @@
     "not able to add KMS keystore",
     "error occurs when you add internal keystore"
   ],
+  "troubleshoot-create-vault":[
+    "not able to create vault",
+    "fail to create vault",
+    "creating vault failed",
+    "creating vault function disabled",
+    "error when creating vault",
+    "not authorized to create vault"
+    "unauthorized to create vault"
+  ],
   "troubleshoot-delete-vault":[
     "not able to delete vault",
     "fail to delete vault",
