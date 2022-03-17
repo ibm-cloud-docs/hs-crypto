@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-03-17"
 
 keywords: site map, doc structure, information architecture
 
@@ -1086,6 +1086,11 @@ Find what you are looking for in the compilation of topics that are available in
 * [Syncing associated resources with the console](/docs/hs-crypto?topic=hs-crypto-sync-associated-resources#sync-associated-resources-ui)
 
 * [Syncing associated resources with the API](/docs/hs-crypto?topic=hs-crypto-sync-associated-resources#sync-associated-resources-api)
+
+
+### Managing EP11 keys and keystores
+{: #sitemap_managing_ep11_keys_and_keystores}
+
 
 [Managing EP11 keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui#manage-ep11-keystores-ui)
 
