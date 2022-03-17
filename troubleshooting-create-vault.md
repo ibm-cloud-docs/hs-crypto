@@ -24,7 +24,7 @@ subcollection: hs-crypto
 {:support: data-reuse='support'}
 {:term: .term}
 
-# Why can't I create or import keys?
+# Why can't I create vaults?
 {: #troubleshoot-create-vault}
 {: troubleshoot}
 {: support}

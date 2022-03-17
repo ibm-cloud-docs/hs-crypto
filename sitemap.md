@@ -1886,7 +1886,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Why can't I create internal keystores?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-create-internal-keystores#troubleshoot-create-internal-keystores)
 
-[Why can't I create or import keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-create-vault#troubleshoot-create-vault)
+[Why can't I create vaults?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-create-vault#troubleshoot-create-vault)
 
 [Why can't I delete vaults?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-delete-vault#troubleshoot-delete-vault)
 
