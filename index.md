@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-18"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -226,7 +226,7 @@ You can use a managed key for encryption or decryption only after it is created 
 6. Under **Target keystores**, select the keystore that you create. 
 7. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.
 
-## Step 3: Encrypte your data with cloud HSM
+## Step 3: Encrypt your data with cloud HSM
 {: #encrypt-data-hsm-dashboard}
 {: hide-in-docs}
 {: notoc}
@@ -238,27 +238,23 @@ You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryp
 
 To perform cryptographic operations with the PKCS #11 API, complete the following steps:
 
-1. Generate an API key for accessing your {{site.data.keyword.hscrypto}} instance. Run the following command to create an API key for your {{site.data.keyword.cloud_notm}} account, and save the value of the API key for subsequent steps:
+1. [Download the latest PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external}. The library file names use the naming convention: `pkcs11-grep11-<**platform**>.so.<**version**>`. The platform is either *amd64* or *s390x* and the version is the standard *major.minor.build* syntax.
+
+2. Move the library into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64`, or `/usr/lib`.
+
+3. Generate an API key for accessing your {{site.data.keyword.hscrypto}} instance. Run the following command to create an API key for your {{site.data.keyword.cloud_notm}} account, and save the value of the API key for subsequent steps:
 
     ```
-    ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
+    ibmcloud iam api-key-create apikeyhpcs -d "API key for Hyper Protect Crypto Services PKCS11"
     ```
     {: codeblock}
 
-2. Create a configuration file for the {{site.data.keyword.hscrypto}} PKCS #11 feature. The configuration file is named `grep11client.yaml`.
-
-    Adapt the following file template and name the file `grep11client.yaml`:
-
-    - Replace `<instance_id>` with the ID of your {{site.data.keyword.hscrypto}} instance.
-    - Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance.
-    - Replace `<your_api_key>` with the value of the API key that you created previously.
+4. Create a configuration file named `grep11client.yaml` based on the following example. The [library repository](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} also provides a template for you to adapt. You can refer to the comments in the code to understand each field.
 
     ```yaml
     iamcredentialtemplate: &defaultiamcredential
               enabled: true
               endpoint: "https://iam.cloud.ibm.com"
-              # Keep the 'apikey' empty. It will be overridden by the Anonymous user API key configured later.
-              apikey:
               # The Universally Unique IDentifier (UUID) of your Hyper Protect Crypto Services instance.
               instance: "<instance_id>"
 
@@ -287,17 +283,13 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
           0: # The index of the Security Officer (SO) user MUST be 0.
             # The name for the Security Officer (SO) user. For example: "Administrator".
             name: "<SO_user_name>"
-            # NEVER put the API key under the SO user for security reasons.
-            iamauth:
-              <<: *defaultiamcredential
+            iamauth: *defaultiamcredential
           1: # The index of the normal user MUST be 1.
             # The name for the normal user. For example: "Normal user".
             name: "<normal_user_name>"
             # The 128-bit UUID of the private keystore. For example: "f00db2f1-4421-4032-a505-465bedfa845b".
             tokenspaceID: "<private_keystore_spaceid>"
-            # NEVER put the API key under the normal user for security reasons.
-            iamauth:
-              <<: *defaultiamcredential
+            iamauth: *defaultiamcredential
             sessionauth:
               enabled: true # Enable this option to encrypt and authenticate the keystore.
               # Authenticated keystore password; must be 6-8 characters in length
@@ -309,7 +301,7 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
             tokenspaceID: "<public_keystore_spaceid>"
             iamauth:
               <<: *defaultiamcredential
-              # The API key for the anonymous user. It will overide the 'apikey' in the previous defaultcredentials.iamauth.apikey field
+              # The API key for the anonymous user. All other users can specify API key using the C_Login command.
               apikey: "<apikey_for_anonymous_user>"
             sessionauth:
               enabled: false
@@ -319,13 +311,13 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
       # The supported levels, in an increasing order of verboseness: 'panic', 'fatal', 'error', 'warning'/'warn', 'info', 'debug', 'trace'. The Default value is 'warning'.
       loglevel: "<logging_level>"
       logpath: "<log_file_path>" # The full path of your logging file.
-
+      
     ```
     {: codeblock}
 
-3. Download and install the latest PKCS #11 library through [the GitHub repository](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} and move it into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64` or `/usr/lib`.
+5. Move the configuration file into the same directory as the application (for example, pkcs11-tool) that uses the PKCS #11 library. Optionally, the PKCS #11 configuration file can be placed in the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not exist.
 
-4. Pass the API key that you previously create to allow your applications to perform the cryptographic operations.
+6. Pass the API key that you create to allow your applications to perform the cryptographic operations.
 
 ### Performing cryptographic operations with the GREP11 API
 {: #cryptographic-operations-with-grep11-dashboard}
@@ -587,7 +579,7 @@ You can use a managed key for encryption or decryption only after it is created 
 6. Under **Target keystores**, select the keystore that you create. 
 7. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.
 
-## Step 4: Encrypte your data with cloud HSM
+## Step 4: Encrypt your data with cloud HSM
 {: #encrypt-data-hsm}
 {: hide-dashboard}
 
@@ -600,27 +592,23 @@ You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryp
 
 To perform cryptographic operations with the PKCS #11 API, complete the following steps:
 
-1. Generate an API key for accessing your {{site.data.keyword.hscrypto}} instance. Run the following command to create an API key for your {{site.data.keyword.cloud_notm}} account, and save the value of the API key for subsequent steps:
+1. [Download the latest PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external}. The library file names use the naming convention: `pkcs11-grep11-<**platform**>.so.<**version**>`. The platform is either *amd64* or *s390x* and the version is the standard *major.minor.build* syntax.
+
+2. Move the library into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64`, or `/usr/lib`.
+
+3. Generate an API key for accessing your {{site.data.keyword.hscrypto}} instance. Run the following command to create an API key for your {{site.data.keyword.cloud_notm}} account, and save the value of the API key for subsequent steps:
 
     ```
-    ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
+    ibmcloud iam api-key-create apikeyhpcs -d "API key for Hyper Protect Crypto Services PKCS11"
     ```
     {: codeblock}
 
-2. Create a configuration file for the {{site.data.keyword.hscrypto}} PKCS #11 feature. The configuration file is named `grep11client.yaml`.
-
-    Adapt the following file template and name the file `grep11client.yaml`:
-
-    - Replace `<instance_id>` with the ID of your {{site.data.keyword.hscrypto}} instance.
-    - Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance.
-    - Replace `<your_api_key>` with the value of the API key that you created previously.
+4. Create a configuration file named `grep11client.yaml` based on the following example. The [library repository](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} also provides a template for you to adapt. You can refer to the comments in the code to understand each field.
 
     ```yaml
     iamcredentialtemplate: &defaultiamcredential
               enabled: true
               endpoint: "https://iam.cloud.ibm.com"
-              # Keep the 'apikey' empty. It will be overridden by the Anonymous user API key configured later.
-              apikey:
               # The Universally Unique IDentifier (UUID) of your Hyper Protect Crypto Services instance.
               instance: "<instance_id>"
 
@@ -649,17 +637,13 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
           0: # The index of the Security Officer (SO) user MUST be 0.
             # The name for the Security Officer (SO) user. For example: "Administrator".
             name: "<SO_user_name>"
-            # NEVER put the API key under the SO user for security reasons.
-            iamauth:
-              <<: *defaultiamcredential
+            iamauth: *defaultiamcredential
           1: # The index of the normal user MUST be 1.
             # The name for the normal user. For example: "Normal user".
             name: "<normal_user_name>"
             # The 128-bit UUID of the private keystore. For example: "f00db2f1-4421-4032-a505-465bedfa845b".
             tokenspaceID: "<private_keystore_spaceid>"
-            # NEVER put the API key under the normal user for security reasons.
-            iamauth:
-              <<: *defaultiamcredential
+            iamauth: *defaultiamcredential
             sessionauth:
               enabled: true # Enable this option to encrypt and authenticate the keystore.
               # Authenticated keystore password; must be 6-8 characters in length
@@ -671,7 +655,7 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
             tokenspaceID: "<public_keystore_spaceid>"
             iamauth:
               <<: *defaultiamcredential
-              # The API key for the anonymous user. It will overide the 'apikey' in the previous defaultcredentials.iamauth.apikey field
+              # The API key for the anonymous user. All other users can specify API key using the C_Login command.
               apikey: "<apikey_for_anonymous_user>"
             sessionauth:
               enabled: false
@@ -681,13 +665,13 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
       # The supported levels, in an increasing order of verboseness: 'panic', 'fatal', 'error', 'warning'/'warn', 'info', 'debug', 'trace'. The Default value is 'warning'.
       loglevel: "<logging_level>"
       logpath: "<log_file_path>" # The full path of your logging file.
-
+      
     ```
     {: codeblock}
 
-3. Download and install the latest PKCS #11 library through [the GitHub repository](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} and move it into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64` or `/usr/lib`.
+5. Move the configuration file into the same directory as the application (for example, pkcs11-tool) that uses the PKCS #11 library. Optionally, the PKCS #11 configuration file can be placed in the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not exist.
 
-4. Pass the API key that you previously create to allow your applications to perform the cryptographic operations.
+6. Pass the API key that you create to allow your applications to perform the cryptographic operations.
 
 ### Performing cryptographic operations with the GREP11 API
 {: #cryptographic-operations-with-grep11-dashboard}

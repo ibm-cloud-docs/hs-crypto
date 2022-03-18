@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-17"
+lastupdated: "2022-03-18"
 
 keywords: site map, doc structure, information architecture
 
@@ -115,7 +115,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Step 2 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys in a multicloud environment using {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-get-started#manage-uko-key-dashboard)
 
-* [Step 3: Encrypte your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm-dashboard)
+* [Step 3: Encrypt your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm-dashboard)
 
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-prerequisites)
 
@@ -127,7 +127,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Step 3 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys in a multicloud environment with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-get-started#manage-uko-key)
 
-* [Step 4: Encrypte your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm)
+* [Step 4: Encrypt your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-next)
 
