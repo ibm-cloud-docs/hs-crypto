@@ -185,7 +185,7 @@ Complete the following steps to create an EP11 key:
 
         2. Click **Create key** to confirm the creation.
 
-    4. To enable the key, log out and log in the EP11 interface again using the `C_Logout()` and `C_Login()` commands.
+3. To enable the key, log out and log in the EP11 interface again using the `C_Logout()` and `C_Login()` commands.
 
 You have successfully created an EP11 key. The created key is displayed as the first row in the **Enterprise PKCS #11 keys** table.
 
