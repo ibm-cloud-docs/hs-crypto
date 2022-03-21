@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-01-15"
+lastupdated: "2022-03-21"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -166,7 +166,6 @@ A mechanism is referred to as a process to implement a cryptographic operation. 
 
 PKCS #11 attributes define object characteristics that set up how an object can be used and accessed. The following table shows the supported attributes and their relationship to the various supported key types.
 
-
 | Attribute | Description | Supported key types |
 |--------------|-----------------------|--------|
 | CKA_CLASS   | Object class (type) and is common for all objects. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys  |
@@ -197,6 +196,7 @@ PKCS #11 attributes define object characteristics that set up how an object can 
 | CKA_EC_POINT | DER-encoding of ANSI X9.62 ECPoint value Q. |      EC public keys  |
 | CKA_WRAP_WITH_TRUSTED  | CK_TRUE if the key can only be wrapped with a wrapping key that has CKA_TRUSTED set to CK_TRUE. Default is CK_FALSE.  | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
 | CKA_CHECK_VALUE | The checksum of the key | AES keys, DES keys |
+| CKA_MODIFIABLE | Set to `CK_TRUE` if the object can be modified.| EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys |
 {: caption="Table 3. Describes the supported attributes" caption-side="bottom"}
 
 ## Supported curves

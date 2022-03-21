@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-04"
+lastupdated: "2022-03-21"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -203,6 +203,7 @@ GREP11 attributes define object characteristics that set up how an object can be
 | CKA_EC_PARAMS (CKA_ECDSA_PARAMS) | DER-encoding of an ANSI X9.62 Parameters value. | EC private keys, EC public keys        |
 | CKA_WRAP_WITH_TRUSTED  | CK_TRUE if the key can be wrapped only with a wrapping key that has CKA_TRUSTED set to CK_TRUE. Default is CK_FALSE. | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
 | CKA_CHECK_VALUE | The checksum of the key | AES keys, DES keys |
+| CKA_MODIFIABLE | Set to `CK_TRUE` if the object can be modified.| EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys |
 {: caption="Table 3. Describes the supported attributes" caption-side="bottom"}
 
 ## Supported curves
