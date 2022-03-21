@@ -162,8 +162,10 @@ Complete the following steps to create an EP11 key:
 
             1. The required attributes are listed with the default values. To modify the attribute values, click the **Edit** icon ![Edit icon](../icons/edit-tagging.svg "Edit").
             2. To add more attributes, click **Add public attribute** or **Add private attribute** depending on which page you are on. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list) and [supported curve names for Elliptic Curve keys](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#supported-pkcs11-ec-curve-name).
+
                 Add and set the `CKA_MODIFIABLE` attribute to `true` if you want to modify the added key later.
-                [: tip]
+                {: tip}
+                
             3. (Optional) You can delete more attributes by clicking the **Trash can** icon ![Trash can icon](../icons/icon_trash.svg "Trash can"). The required attributes cannot be deleted.
             4. Click **Next** to continue.
 
