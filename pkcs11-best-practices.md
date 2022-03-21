@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-21"
 
 keywords: pkcs11 access, pkcs 11 authentication, set up PKCS 11 API, best practice for setting up pkcs11 users
 
@@ -191,12 +191,13 @@ To assign access to the keystores for the SO user, follow these steps:
 2. Hover your mouse over the `SO user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options.
 3. From the options menu, click **Assign access**.
 4. Click **Assign service ID additional access**, and then click the **IAM services** button.
-5. Click **No service access** under **What type of access do you want to assign?** and select **Hyper Protect Crypto Services**.
-6. Under **Service Instance ID**, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
-7. Under **Custom access**, check the boxes for the following roles:
+5. Under **Which service do you want to assign access to?**, select **Hyper Protect Crypto Services**.
+6. Under **How do you want to scope the access?**, select **Resources based on selected attributes**.
+7. Under **Service Instance ID**, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
+8. Under **Custom access**, check the boxes for the following roles:
     * `Keystore operator`
     * `Key operator`
-8. Click **Add**, and then click **Assign** after confirmation.
+9. Click **Add**, and then click **Assign** after confirmation.
 
 
 
@@ -210,10 +211,11 @@ To assign access to the keystores for the normal user, follow these steps:
 2. Hover your mouse over the `Normal user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options.
 3. From the options menu, click **Assign access**.
 4. Click **Assign service ID additional access**, and then click the **IAM services** button.
-5. Click **No service access** under **What type of access do you want to assign?** and select **Hyper Protect Crypto Services**.
-6. Under **Service Instance ID**, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
-7. Under **Custom access**, check the box for `Key operator`.
-8. Click **Add**, and then click **Assign** after confirmation.
+5. Under **Which service do you want to assign access to?**, select **Hyper Protect Crypto Services**.
+6. Under **How do you want to scope the access?**, select **Resources based on selected attributes**.
+7. Under **Service Instance ID**, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
+8. Under **Custom access**, check the box for `Key operator`.
+9. Click **Add**, and then click **Assign** after confirmation.
 
 
 
@@ -227,10 +229,11 @@ To assign access to the keystore for the anonymous user, follow these steps:
 2. Hover your mouse over the `Anonymous user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options.
 3. From the options menu, click **Assign access**.
 4. Click **Assign service ID additional access**, and then click the **IAM services** button.
-5. Click **No service access** under **What type of access do you want to assign?** and select **Hyper Protect Crypto Services**.
-6. Under **Service Instance ID**, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
-7. Under **Custom access**, check the box for `Key operator`.
-8. Click **Add**, and then click **Assign** after confirmation.
+5. Under **Which service do you want to assign access to?**, select **Hyper Protect Crypto Services**.
+6. Under **How do you want to scope the access?**, select **Resources based on selected attributes**.
+7. Under **Service Instance ID**, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
+8. Under **Custom access**, check the box for `Key operator`.
+9. Click **Add**, and then click **Assign** after confirmation.
 
 
      
