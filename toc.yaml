@@ -295,6 +295,14 @@ toc:
               - link:
                   label: Key management service API reference
                   href: https://{DomainName}/apidocs/hs-crypto
+          - topicgroup:
+              label: Unified Key Orchestrator API
+              topics:
+              - uko-api-change-log.md
+              links:
+              - link:
+                  label: Unified Key Orchestrator API reference
+                  href: https://{DomainName}/apidocs/uko
           - pkcs11-api-ref.md
           - grep11-api-ref.md
       - topicgroup:

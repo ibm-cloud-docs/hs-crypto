@@ -1563,6 +1563,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [April 2021](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-april-2021)
 
+
+### Unified Key Orchestrator API
+{: #sitemap_unified_key_orchestrator_api}
+
+
 [Cryptographic operations: PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs11-api-ref)
 
 * [Installing and configuring PKCS #11 library](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#setup-pkcs11-library)
