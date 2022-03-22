@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-22"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -89,10 +89,6 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 
 
 * {{site.data.keyword.uko_full_notm}} is used for multicloud key management and orchestration. Apart from setting default IAM roles, you can also [create custom {{site.data.keyword.uko_full_notm}} roles](/docs/hs-crypto?topic=hs-crypto-uko-role-best-practices) according to your needs.
-
-
-{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
-{: note}
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-15"
+lastupdated: "2022-03-22"
 
 keywords: site map, doc structure, information architecture
 
@@ -115,7 +115,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Step 2 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys in a multicloud environment using {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-get-started#manage-uko-key-dashboard)
 
-* [Step 3: Encrypte your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm-dashboard)
+* [Step 3: Encrypt your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm-dashboard)
 
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-prerequisites)
 
@@ -127,7 +127,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Step 3 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys in a multicloud environment with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-get-started#manage-uko-key)
 
-* [Step 4: Encrypte your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm)
+* [Step 4: Encrypt your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-next)
 
@@ -430,6 +430,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [22 March 2022](/docs/hs-crypto?topic=hs-crypto-what-new#march-2022)
+
+    * [General availability: Using {{site.data.keyword.uko_full_notm}} to manage and orchestrate keys in a multicloud environment](/docs/hs-crypto?topic=hs-crypto-what-new#add-uko})
 
 * [28 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#28-feb-2022)
 
@@ -1087,6 +1091,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Syncing associated resources with the API](/docs/hs-crypto?topic=hs-crypto-sync-associated-resources#sync-associated-resources-api)
 
+
+### Managing EP11 keys and keystores
+{: #sitemap_managing_ep11_keys_and_keystores}
+
+
 [Managing EP11 keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui#manage-ep11-keystores-ui)
 
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui#manage-ep11-keystores-ui-before)
@@ -1554,6 +1563,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [April 2021](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-april-2021)
 
+
+### Unified Key Orchestrator API
+{: #sitemap_unified_key_orchestrator_api}
+
+
 [Cryptographic operations: PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs11-api-ref)
 
 * [Installing and configuring PKCS #11 library](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#setup-pkcs11-library)
@@ -1866,6 +1880,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Why can't I create or import keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-create-keys#troubleshoot-unable-to-create-keys)
 
+[Why can't I create a standard key after I load another master key?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-create-standard-keys#troubleshoot-unable-to-create-standard-keys)
+
 [Why can't I delete keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-delete-keys#troubleshoot-unable-to-delete-keys)
 
 [Why can't I rotate root keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-rotate-root-keys#troubleshoot-unable-to-rotate-root-keys)
@@ -1878,6 +1894,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Why can't I create internal keystores?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-create-internal-keystores#troubleshoot-create-internal-keystores)
+
+[Why can't I create vaults?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-create-vault#troubleshoot-create-vault)
 
 [Why can't I delete vaults?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-delete-vault#troubleshoot-delete-vault)
 

@@ -219,6 +219,14 @@
     "not able to rotate root keys in hyper protect crypto services",
     "hyper protect crypto services roles and permissions for rotating keys"
   ],
+  "troubleshoot-unable-to-create-standard-keys":[
+    "unable to delete standard keys in hyper protect crypto services",
+    "not able to delete standard keys within HPCS",
+    "in hyper protect crypto services not able to delete a standard key",
+    "failed to delete standard key for hyper protect crypto services",
+    "to delete a standard key in hyper protect crypto services",
+    "delete a hyper protect crypto services standard key"
+  ],
   "troubleshoot-unable-to-list-keys-api":[
     "unable to view keys for hyper protect crypto services",
     "unable to list keys in hyper protect crypto services",
@@ -263,6 +271,15 @@
     "not able to add internal keystore",
     "not able to add KMS keystore",
     "error occurs when you add internal keystore"
+  ],
+  "troubleshoot-create-vault":[
+    "not able to create vault",
+    "fail to create vault",
+    "creating vault failed",
+    "creating vault function disabled",
+    "error when creating vault",
+    "not authorized to create vault"
+    "unauthorized to create vault"
   ],
   "troubleshoot-delete-vault":[
     "not able to delete vault",
@@ -356,5 +373,5 @@
     "my service region does not have HPCS",
     "use UKO for key management in my service region",
     "data residency region for Unified Key Orchestrator"
-  ]
+  ]  
 }

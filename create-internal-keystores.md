@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-22"
 
 keywords: Unified Key Orchestrator, UKO keystore, create keystore, internal keystore， KMS keystore
 
@@ -27,12 +27,12 @@ An internal keystore is a repository that stores the cryptographic keys within y
 {: shortdesc}
 
 
-{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
-{: note}
+Before you create an internal keystore, keep in mind the following considerations:
 
-
-You can create up to five free internal keystores to manage your keys. If you need additional keystores for cross-region key distribution or specified access permissions, you are charged. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Other currencies are applied based on the region the service instance is provisioned in.
-{: note}
+- You can create up to five internal keystores to manage your keys for free. 
+- To enable cross-region key distribution or specified access permissions, you might want to create additional keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Other currencies are applied based on the region the service instance is provisioned in.
+- A managed key can be used for encryption and decryption only after you install it in at least one target keystore. 
+- A target keystore can be assigned to only one vault.
 
 ## Creating internal keystores through the UI
 {: #create-internal-keystores-ui}

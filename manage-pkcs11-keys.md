@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-22"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -162,6 +162,9 @@ Complete the following steps to create an EP11 key:
 
             1. The required attributes are listed with the default values. To modify the attribute values, click the **Edit** icon ![Edit icon](../icons/edit-tagging.svg "Edit").
             2. To add more attributes, click **Add public attribute** or **Add private attribute** depending on which page you are on. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list) and [supported curve names for Elliptic Curve keys](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#supported-pkcs11-ec-curve-name).
+
+                
+                
             3. (Optional) You can delete more attributes by clicking the **Trash can** icon ![Trash can icon](../icons/icon_trash.svg "Trash can"). The required attributes cannot be deleted.
             4. Click **Next** to continue.
 
@@ -180,6 +183,9 @@ Complete the following steps to create an EP11 key:
             {: important}
 
         2. Click **Create key** to confirm the creation.
+
+If you are performing cryptographic operations using the PKCS #11 API, to enable the key, you need to log out and log in the API again using the `C_Logout()` and `C_Login()` commands.
+{: tip}
 
 You have successfully created an EP11 key. The created key is displayed as the first row in the **Enterprise PKCS #11 keys** table.
 

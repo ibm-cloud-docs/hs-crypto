@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-03-22"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -64,10 +64,6 @@ Private endpoints
 If you are managing your {{site.data.keyword.hscrypto}} resources programmatically, see the following table to determine the API endpoints to use when you connect to the [key management service API](/apidocs/hs-crypto), {{site.data.keyword.uko_full_notm}}, [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref), and  [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
 
-{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
-{: note}
-
-
 
 | Region        | Public key management service endpoints | Public {{site.data.keyword.uko_full_notm}} service endpoints |Public GREP11 service endpoints |
 | ------------- | ---------------------------- |---------------------------- |---------------------------- |
@@ -78,6 +74,7 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 | Tokyo         | `api.jp-tok.hs-crypto.cloud.ibm.com`   | `uko.jp-tok.hs-crypto.cloud.ibm.com`| `ep11.jp-tok.hs-crypto.cloud.ibm.com`  |
 | Washington DC | `api.us-east.hs-crypto.cloud.ibm.com`  | `uko.us-east.hs-crypto.cloud.ibm.com`| `ep11.us-east.hs-crypto.cloud.ibm.com`  |
 | S&atilde;o-Paulo | `api.br-sao.hs-crypto.cloud.ibm.com`   | `uko.br-sao.hs-crypto.cloud.ibm.com` |`ep11.br-sao.hs-crypto.cloud.ibm.com`   |
+
 {: caption="Table 1. Lists public endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's public network" caption-side="bottom"}
 {: #table-1}
 {: tab-title="Public"}
@@ -93,6 +90,7 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 | Tokyo         | `api.private.jp-tok.hs-crypto.cloud.ibm.com`   | `ep11.private.jp-tok.hs-crypto.cloud.ibm.com`  |
 | Washington DC | `api.private.us-east.hs-crypto.cloud.ibm.com`  | `ep11.private.us-east.hs-crypto.cloud.ibm.com`  |
 | S&atilde;o-Paulo | `api.private.br-sao.hs-crypto.cloud.ibm.com`  | `ep11.private.br-sao.hs-crypto.cloud.ibm.com`   |
+
 {: caption="Table 2. Lists private endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's private network" caption-side="bottom"}
 {: #table-2}
 {: tab-title="Private"}

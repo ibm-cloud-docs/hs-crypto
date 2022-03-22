@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-17"
 
 keywords: pkcs11 keystore, ep11 keystore, create pkcs11 keystore, generate pkcs11 keystore, view ep11 keystore, delete ep11 keystore, view pkcs11 keystore
 
@@ -31,6 +31,8 @@ Enterprise PKCS #11 (EP11) keystores are used to store EP11 keys. Before you cre
 
 EP11 keystores are composed of in-memory keystores and database-backed keystores. The in-memory EP11 keystores are not displayed in the {{site.data.keyword.cloud_notm}} console. You can manage only database-backed EP11 keystores through the console. For more information about the keystores, see [Introducing keystore](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-keystore-intro).
 {: important}
+
+
 
 ## Before you begin
 {: #manage-ep11-keystores-ui-before}

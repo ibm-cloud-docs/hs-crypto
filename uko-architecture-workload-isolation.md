@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-13"
+lastupdated: "2022-03-22"
 
 keywords: hyper protect crypto services architecture, service architecture, architecture diagram, workload isolation, crypto units, secure service container, ssc, public isolation for hyper protect crypto services, compute isolation for hyper protect crypto services
 
@@ -35,9 +35,6 @@ The following list explains each component in detail.
 {{site.data.keyword.uko_full_notm}} API
 :   The API that you use to interact with the {{site.data.keyword.uko_full_notm}} module to manage keys and keystores for multiple clouds. 
 
-    
-
-    {{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
     
 
     Currently, the option for cross-region recovery through failover crypto units for {{site.data.keyword.uko_full_notm}} managed keys and keystores is not available yet.

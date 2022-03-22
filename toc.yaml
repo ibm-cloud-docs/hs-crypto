@@ -202,6 +202,9 @@ toc:
               - restore-keys.md
               - view-protected-resources.md
               - sync-resources.md
+          - topicgroup:
+              label: Managing EP11 keys and keystores
+              topics:
               - manage-pkcs11-keystores.md
               - manage-pkcs11-keys.md
       - topicgroup:
@@ -292,6 +295,14 @@ toc:
               - link:
                   label: Key management service API reference
                   href: https://{DomainName}/apidocs/hs-crypto
+          - topicgroup:
+              label: Unified Key Orchestrator API
+              topics:
+              - uko-api-change-log.md
+              links:
+              - link:
+                  label: Unified Key Orchestrator API reference
+                  href: https://{DomainName}/apidocs/uko
           - pkcs11-api-ref.md
           - grep11-api-ref.md
       - topicgroup:
@@ -341,6 +352,7 @@ toc:
           - troubleshooting-list-specific-keys.md
           - troubleshooting-error-CLI-API.md
           - troubleshooting-create-keys.md
+          - troubleshooting-create-standard-keys.md
           - troubleshooting-delete-keys.md
           - troubleshooting-rotate-root-keys.md
           - troubleshooting-delete-instance.md
@@ -348,6 +360,7 @@ toc:
           label: Troubleshooting Unified Key Orchestrator
           topics:
           - troubleshooting-create-internal-keystores.md
+          - troubleshooting-create-vault.md
           - troubleshooting-delete-vault.md
           - troubleshooting-delete-keystore.md
           - troubleshooting-azure-delay.md
