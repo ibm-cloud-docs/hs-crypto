@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-22"
 
 keywords: Unified Key Orchestrator, key management, UKO keystore, edit keystore, external keystore, KMS keystore
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Editing connection to external keystores
 {: #edit-external-keystore-connection}
 
-You can use {{site.data.keyword.uko_full_notm}} to edit connection to external keystores through the user interface (UI).
+You can use {{site.data.keyword.uko_full_notm}} to edit connection to external keystores through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 You can edit the connection to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS).
@@ -106,6 +106,26 @@ To edit the connection to an external keystore through the UI, complete the foll
 
 You can search for a specific keystore by using the search bar, or filter keystores based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the **Target keystores** table.
 {: tip}
+
+
+
+## Editing connection to external keystores with the API
+{: #edit-external-keystore-connection-api}
+
+To edit the connection to an external keystore through the API, follow these steps:
+
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
+   
+2. Edit the connection to an external keystore by making a `PATCH` call to the following endpoint.
+
+    ```
+    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/keystores/<id>
+    ```
+    {: codeblock}
+
+    Replace `<id>` with the ID of your keystore.
+
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#update-keystore){: external}.
 
 
 

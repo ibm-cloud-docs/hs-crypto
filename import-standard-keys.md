@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-03-22"
 
 keywords: standard key, import key, key material, import key api, bring your own key, byok, encryption key, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key
 
@@ -226,7 +226,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     ```
     {: codeblock}
 
-## Importing stardard keys with the CLI
+## Importing standard keys with the CLI
 {: #import-standard-key-cli}
 
 Complete the following steps to import standard keys that uses the {{site.data.keyword.keymanagementserviceshort}} CLI, which is integrated in {{site.data.keyword.hscrypto}}:

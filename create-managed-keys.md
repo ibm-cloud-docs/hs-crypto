@@ -24,7 +24,7 @@ subcollection: hs-crypto
 # Creating and installing managed keys
 {: #create-managed-keys}
 
-You can use {{site.data.keyword.uko_full_notm}} to create managed keys through the user interface (UI).
+You can use {{site.data.keyword.uko_full_notm}} to create managed keys through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 
@@ -76,6 +76,33 @@ To create a managed key through the UI, complete the following steps:
 8. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.
 
 You have successfully created a managed key. 
+
+
+
+## Creating and installing managed keys with the API
+{: #create-managed-keys-api}
+
+To create a managed key through the API, follow these steps:
+
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
+   
+2. Create a key template by making a `POST` call to the following endpoint.
+    
+    ```
+    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/templates
+    ```
+    {: codeblock}
+
+3. Create a managed key based on the supplied template by making a `POST` call to the following endpoint.
+
+    ```
+    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys
+    ```
+    {: codeblock}
+
+    The managed key is to be installed in all keystores in the keystore group that is defined in the key template.
+
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-managed-key){: external}.
 
 
 

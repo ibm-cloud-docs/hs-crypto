@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-22"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -24,7 +24,7 @@ subcollection: hs-crypto
 # Deleting vaults
 {: #delete-vaults}
 
-You can delete your vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI).
+You can delete your vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 If you want to delete a vault, you need to delete all managed keys, and delete or disconnect from all target keystores that are managed in the vault first. The Delete function is available for empty vaults only. For detailed instructions, see [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-keys), [Deleting internal keystores](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores), and [Disconnecting from external keystores](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores).
@@ -45,6 +45,26 @@ To delete a vault through the UI, complete the following steps:
 5. Click **Delete vault** to confirm the deletion.
 
 The vault has been deleted and removed from the vault list. Access groups that are assigned to this vault no longer have access to the vault.
+
+
+
+## Deleting vaults with the API
+{: #delete-vaults-api}
+
+To delete a vault through the API, follow these steps:
+
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
+   
+2. Delete a vault by making a `DELETE` call to the following endpoint.
+
+    ```
+    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/vaults/<vault_id>
+    ```
+    {: codeblock}
+
+    Replace `<vault_id>` with the ID of your vault.
+
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#delete-vault){: external}.
 
 
 

@@ -737,6 +737,6 @@ The following procedure uses Golang code as an example to test GREP11 functions.
 
 - If you are using the Standard Plan, manage your keys with [{{site.data.keyword.hscrypto}} key management service API](/apidocs/hs-crypto){: external} and [{{site.data.keyword.keymanagementserviceshort}} CLI](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference){: external}.
 
-
+ - If you are using the {{site.data.keyword.uko_full_notm}} Plan, manage your keys and keystores with [manage your keys with {{site.data.keyword.uko_full_notm}} API](/apidocs/uko){: external}. 
 
 - Encrypt your data and perform cryptographic operations with the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) or the [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).

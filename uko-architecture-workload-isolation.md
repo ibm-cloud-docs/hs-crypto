@@ -33,7 +33,7 @@ The following architecture diagram shows how you interact with {{site.data.keywo
 The following list explains each component in detail.
 
 {{site.data.keyword.uko_full_notm}} API
-:   The API that you use to interact with the {{site.data.keyword.uko_full_notm}} module to manage keys and keystores for multiple clouds. 
+:   The API that you use to interact with the {{site.data.keyword.uko_full_notm}} module to manage keys and keystores for multiple clouds. You can interact with {{site.data.keyword.uko_full_notm}} either through the UI or with the API.
 
     
 

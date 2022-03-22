@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-22"
 
 keywords: Unified Key Orchestrator, install keys, key management, kms keys
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Setting target keystores for existing keys
 {: #install-key-keystores}
 
-You can use a managed key in {{site.data.keyword.uko_full_notm}} for encryption and decryption only after it is installed in at least one keystore. You can install and uninstall existing keys in target keystores through the user interface (UI).
+You can use a managed key in {{site.data.keyword.uko_full_notm}} for encryption and decryption only after it is installed in at least one keystore. You can install and uninstall existing keys in target keystores through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 
@@ -41,6 +41,35 @@ To install or uninstall a managed key in target keystores through the UI, comple
    Installing a key in multiple keystores enables redundancy. If you want to install the key to a new keystore, click **Add keystore**. For more instructions, see [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
    
 6. Click **Save** to save the changes.
+
+
+
+## Setting target keystores for existing keys with the API
+{: #install-key-keystores-api}
+
+To install or uninstall a managed key in target keystores through the API, follow these steps:
+
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
+   
+2. Add a keystore to or remove a keystore from a keystore group by making a `PATCH` call to the following endpoint. The keystore group should match the key template that is associated with the managed key.
+
+    ```
+    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/keystores/<id>
+    ```
+    {: codeblock}
+
+    Replace `<id>` with the ID of your keystore.
+
+3. Update the managed key to match the latest version of the associated key template by making a `POST` call to the following endpoint.
+
+    ```
+    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys/<id>/update_from_template
+    ```
+    {: codeblock}
+
+    Replace `<id>` with the ID of your managed key.
+
+    For detailed instructions and code examples about using the API method, check out how to [Update an internal keystore or a keystore connection](/apidocs/uko#update-keystore){: external} and [Update a managed key to match the key template](/apidocs/uko#update-managed-key-from-template){: external} in the {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc.
 
 
 

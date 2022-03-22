@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Connecting to external keystores
 {: #connect-external-keystores}
 
-You can use {{site.data.keyword.uko_full_notm}} to connect to external keystores through the user interface (UI).
+You can use {{site.data.keyword.uko_full_notm}} to connect to external keystores through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 
@@ -172,6 +172,24 @@ To connect to an external keystore through the UI, complete the following steps:
 8. After you confirm the keystore details, click  **Connect to keystore** to connect to the keystore.
 
 You have successfully connected to the external keystore that you select. 
+
+
+
+## Connecting to external keystores with the API
+{: #connect-external-keystores-api}
+
+To connect to an external keystore through the API, follow these steps:
+
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
+   
+2. Connect to an external keystore by making a `POST` call to the following endpoint.
+
+    ```
+    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/keystores
+    ```
+    {: codeblock}
+
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-keystore){: external}.
 
 
 

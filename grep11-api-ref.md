@@ -1888,11 +1888,11 @@ The `Encrypt` function encrypts single-part data. You don't need to perform the 
     <tr>
     <th>Description</th>
     <td><p><code>C_Encrypt</code> encrypts single-part data. <code>hSession</code> is the session’s handle; <code>pData</code> points to the data; <code>ulDataLen</code> is the length in bytes of the data; <code>pEncryptedData</code> points to the location that receives the encrypted data; <code>pulEncryptedDataLen</code> points to the location that holds the length in bytes of the encrypted data.</p>
-    <p><code>C_Encrypt</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producingoutput.</p>
+    <p><code>C_Encrypt</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
     <p>The encryption operation must be initialized with <code>C_EncryptInit</code>. A call to <code>C_Encrypt</code> always terminates the active encryption operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call (that is, one that returns <code>CKR_OK</code>) to determine the length of the buffer that is needed to hold the ciphertext.</p>
     <p><code>C_Encrypt</code> cannot be used to terminate a multi-part operation, and must be called after <code>C_EncryptInit</code> without intervening <code>C_EncryptUpdate</code> calls.</p>
     <p>For some encryption mechanisms, the input plaintext data has certain length constraints (either because the mechanism can encrypt only relatively short pieces of plaintext, or because the mechanism’s input data must consist of an integral number of blocks). If these constraints are not satisfied, then <code>C_Encrypt</code> fails with return code <code>CKR_DATA_LEN_RANGE</code>.</p>
-    <p>The plaintext and ciphertext can be in the same place, that is, it is OK if <code>pData</code> and <code>pEncryptedData</code> point to thesame location.</p>
+    <p>The plaintext and ciphertext can be in the same place, that is, it is OK if <code>pData</code> and <code>pEncryptedData</code> point to the same location.</p>
     <p>For most mechanisms, <code>C_Encrypt</code> is equivalent to a sequence of <code>C_EncryptUpdate</code> operations followed by <code>C_EncryptFinal</code>.</p>
     </td>
     </tr>
@@ -2720,7 +2720,7 @@ The `DecryptUpdate` function continues a multiple-part decryption operation. Bef
     <td><p><code>C_DecryptUpdate</code> continues a multiple-part decryption operation, processing another encrypted data part. <code>hSession</code> is the session’s handle; <code>pEncryptedPart</code> points to the encrypted data part; <code>ulEncryptedPartLen</code> is the length of the encrypted data part; <code>pPart</code> points to the location that receives the recovered data part; <code>pulPartLen</code> points to the location that holds the length of the recovered data part.</p>
     <p><code>C_DecryptUpdate</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
     <p>The decryption operation must be initialized with <code>C_DecryptInit</code>.  This function can be called any number of times in succession.  A call to <code>C_DecryptUpdate</code> which results in an error other than CKR_BUFFER_TOO_SMALL terminates the current decryption operation.</p>
-    <p>The ciphertext and plaintext can be in the same place, that is, it is OK if <code>pEncryptedPart</code> and <code>pPart</code> point to thesame location.</p></td>
+    <p>The ciphertext and plaintext can be in the same place, that is, it is OK if <code>pEncryptedPart</code> and <code>pPart</code> point to the same location.</p></td>
     </tr>
     <tr>
     <th>Parameters</th>

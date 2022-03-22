@@ -959,7 +959,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Importing standard keys with the API](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#import-standard-key-api)
 
-* [Importing stardard keys with the CLI](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#import-standard-key-cli)
+* [Importing standard keys with the CLI](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#import-standard-key-cli)
 
 * [Base64 encoding your key material](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#encode-key-material-standard-key)
 

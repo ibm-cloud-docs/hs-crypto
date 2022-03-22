@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-22"
 
 keywords: UKO access, UKO account authentication, UKO custom roles, Unified Key Orchestrator
 
@@ -118,7 +118,7 @@ To create a custom role, complete the following steps:
     </tr>
     <tr>
       <td>My key custodian - creator</td>
-      <td>Manages and creates keys. For a complete key lifecycle, both Creator and Deployer roles are needed. To implement separaton of duties, assign Creator and Deployer role to different people. </td>
+      <td>Manages and creates keys. For a complete key lifecycle, both Creator and Deployer roles are needed. To implement separation of duties, assign Creator and Deployer role to different people. </td>
       <td>
         <ul>
           <li><code>hs-crypto.managed-keys.preactivation-destroy</code></li>
@@ -145,7 +145,7 @@ To create a custom role, complete the following steps:
     </tr>
     <tr>
       <td>My key custodian - deployer</td>
-      <td>Manages and deploys keys. For a complete key lifecycle, both Creator and Deployer roles are needed. To implement separaton of duties, assign Creator and Deployer role to different people. </td>
+      <td>Manages and deploys keys. For a complete key lifecycle, both Creator and Deployer roles are needed. To implement separation of duties, assign Creator and Deployer role to different people. </td>
       <td>
         <ul>
           <li><code>hs-crypto.managed-keys.preactivation-activate</code></li>

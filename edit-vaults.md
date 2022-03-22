@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-22"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Editing vault details
 {: #edit-vaults}
 
-You can edit your vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI). With a vault, you can not only create managed keys or add target keystores, but also manage resources that are contained in the vault.
+You can edit your vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API. With a vault, you can not only create managed keys or add target keystores, but also manage resources that are contained in the vault.
 {: shortdesc}
 
 
@@ -39,6 +39,26 @@ To edit vault details through the UI, complete the following steps:
 5. Click **Save** to save the property changes.
 6. The keys and keystores that are assigned to this vault are displayed in tables. 
 7. Optionally, you can add additional keys to the vault by clicking **Create key** under **Keys**, or add a keystore by clicking **Add keystores** under **Target keystores**.
+
+
+
+## Editing vault details with the API
+{: #edit-vaults-api}
+
+To edit a vault through the API, follow these steps:
+
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
+   
+2. Edit a vault by making a `PATCH` call to the following endpoint.
+
+    ```
+    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/vaults/<vault_id>
+    ```
+    {: codeblock}
+
+    Replace `<vault_id>` with the ID of your vault.
+
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#update-vault){: external}.
 
 
 
