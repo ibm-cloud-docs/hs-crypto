@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-22"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -37,7 +37,7 @@ To edit the details of a managed key through the UI, complete the following step
 3. Click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key that you want to edit, and choose **Show details**.
 4. In each property card under **Key properties**, click **Edit** to update the key properties. 
 
-    You can update the general properties, lifecyle properties, or active period of the key. Or, you can also view the key material properties, including algorithm, length, and key check value. The following are a few properties that you can edit.
+    You can update the general properties, lifecycle properties, or active period of the key. Or, you can also view the key material properties, including algorithm, length, and key check value. The following are a few properties that you can edit.
     
     |       Property	     |                         Description                       |
     |----------------------|-----------------------------------------------------------|

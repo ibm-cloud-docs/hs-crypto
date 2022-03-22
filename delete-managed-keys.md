@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-22"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -27,7 +27,7 @@ subcollection: hs-crypto
 You can delete your managed keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI).
 {: shortdesc}
 
-When you delete a managed key, the key is to be uninstalled from all target keystores and all key materials and the metadata are destroyed permenantly.
+When you delete a managed key, the key is to be uninstalled from all target keystores and all key materials and the metadata are destroyed permanantly.
 
 
 ## Deleting managed keys through the UI
@@ -56,7 +56,7 @@ Follow these steps to complete the process:
 5. Click **Destroy key** to confirm.
 6. To remove the key and the metadata from the vault, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**.
    
-   When you remove the managed key from the vault that the key is assigned to, the remaining key metadata is removed permenantly. 
+   When you remove the managed key from the vault that the key is assigned to, the remaining key metadata is removed permanantly. 
     {: important}
 
 The managed key has been deleted and uninstalled from all target keystores. All key materials and metadata have been destroyed. 
