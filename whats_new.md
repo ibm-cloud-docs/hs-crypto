@@ -28,6 +28,8 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+
+
 ## 22 March 2022
 {: #march-2022}
 {: release-note}
@@ -69,7 +71,6 @@ Limited availability: Using {{site.data.keyword.uko_full_notm}} to manage and or
     * [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores)
     * [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores)
     * [Creating and installing managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys)
-
 
 
 ## 23 February 2022
