@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-22"
 
 keywords: Unified Key Orchestrator, view keys, key management, kms keys, UKO
 
@@ -43,7 +43,7 @@ To view a list of your keys through the UI, complete the following steps:
     |----------------------|-----------------------------------------------------------|
     | Name                 | The unique, human-readable name that is assigned to your key. |
     | ID                   | A string that uniquely identifies the key. |    
-    | Vault                | The vault that controls the access to the key.           |
+    | Vault                | The vault that controls access to the managed key.           |
     | State                | Key states include _Pre-active_, _Active_, _Deactivated_, and _Destroyed_. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
     | Activation date      | The date when the key gets activated, or the date on which you plan to activate the key. |
     | Expiration date      | The date when the key gets deactivated, or the date on which you plan to deactivate the key. |

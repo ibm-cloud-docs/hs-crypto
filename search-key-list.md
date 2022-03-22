@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-22"
 
 keywords: Unified Key Orchestrator, search keys, key management, kms keys
 
@@ -41,7 +41,7 @@ To filter keys through the UI, complete the following steps:
 
     |       Property	     |                         Description                       |
     |----------------------|-----------------------------------------------------------|
-    | Vault                | The vault that controls access to the key.            |
+    | Vault                | The vault that controls access to the managed key.        |
     | Activation           | Set a date range of when you activate the key.  |
     | Expiration           | Set a date range of when you deactivate the key.  |
     | Creation             | Set a date range of when the key was created.             |
