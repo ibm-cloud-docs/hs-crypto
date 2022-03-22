@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-18"
+lastupdated: "2022-03-22"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -39,10 +39,6 @@ subcollection: hs-crypto
 
 With the {{site.data.keyword.uko_full_notm}} function, you can manage and orchestrate all keys from a multicloud environment with {{site.data.keyword.hscrypto}}. {{site.data.keyword.uko_full_notm}} provides the only cloud native single-point-of-control of encryption keys across hybrid multicloud environments of your enterprise.
 {: hide-dashboard}
-
-
-{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
-{: note}
 
 
 
@@ -164,10 +160,6 @@ From the {{site.data.keyword.cloud_notm}} console, you can inspect the general c
 {: notoc}
 
 Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
-
-
-{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
-{: note}
 
 
 ### Creating vaults
@@ -511,10 +503,6 @@ From the {{site.data.keyword.cloud_notm}} console, you can inspect the general c
 {: hide-dashboard}
 
 Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
-
-
-{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
-{: note}
 
 
 ### Creating vaults

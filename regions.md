@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-03-22"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -62,10 +62,6 @@ Private endpoints
 {: #service-endpoints}
 
 If you are managing your {{site.data.keyword.hscrypto}} resources programmatically, see the following table to determine the API endpoints to use when you connect to the [key management service API](/apidocs/hs-crypto), {{site.data.keyword.uko_full_notm}}, [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref), and  [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
-
-
-{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
-{: note}
 
 
 

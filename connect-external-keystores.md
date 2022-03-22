@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-03-22"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -25,10 +25,6 @@ subcollection: hs-crypto
 
 You can use {{site.data.keyword.uko_full_notm}} to connect to external keystores through the user interface (UI).
 {: shortdesc}
-
-
-{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
-{: note}
 
 
 Before you connect to an external keystore, keep in mind the following considerations:

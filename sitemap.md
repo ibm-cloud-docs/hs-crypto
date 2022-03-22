@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-21"
+lastupdated: "2022-03-22"
 
 keywords: site map, doc structure, information architecture
 
@@ -430,6 +430,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [22 March 2022](/docs/hs-crypto?topic=hs-crypto-what-new#march-2022)
+
+    * [General availability: Using {{site.data.keyword.uko_full_notm}} to manage and orchestrate keys in a multicloud environment](/docs/hs-crypto?topic=hs-crypto-what-new#add-uko})
 
 * [28 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#28-feb-2022)
 

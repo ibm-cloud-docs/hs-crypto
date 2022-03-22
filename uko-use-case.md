@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-03-22"
 
 keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases
 
@@ -59,10 +59,6 @@ Check out the [overview video on {{site.data.keyword.cloud_notm}} {{site.data.ke
 {: #uko-use-case}
 
 You can use {{site.data.keyword.uko_full_notm}} to securely create and manage your keys and internal keystores across multiple clouds. The following is a few use cases on how you can use {{site.data.keyword.uko_full_notm}} to manage your keys.
-
-
-{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
-{: note}
 
 
 

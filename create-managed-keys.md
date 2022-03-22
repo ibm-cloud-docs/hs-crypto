@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-03-22"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -26,10 +26,6 @@ subcollection: hs-crypto
 
 You can use {{site.data.keyword.uko_full_notm}} to create managed keys through the user interface (UI).
 {: shortdesc}
-
-
-{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
-{: note}
 
 
 Before you create a managed key, keep in mind the following considerations:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-04"
+lastupdated: "2022-03-22"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -37,10 +37,6 @@ You can automate the instance creation by using Terraform. For more information,
     For the pricing plan with {{site.data.keyword.uko_full_notm}}, recovering your service instance through failover crypto units from another region is not currently supported.
 
 [Pricing samples](/docs/hs-crypto?topic=hs-crypto-faq-pricing) for these two plans are also available for your reference.
-
-
-{{site.data.keyword.uko_full_notm}} is a limited available feature for customer accounts with special approvals. If you can’t find the {{site.data.keyword.uko_full_notm}} pricing plan when you provision a service instance, it means the plan is not currently available to you. To find more information, contact the {{site.data.keyword.cloud_notm}} Sales team.
-{: note}
 
  
 
