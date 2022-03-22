@@ -24,7 +24,7 @@ subcollection: hs-crypto
 # Deleting managed keys
 {: #delete-managed-keys}
 
-You can delete your managed keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI).
+You can delete your managed keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 When you delete a managed key, the key is to be uninstalled from all target keystores and all key materials and the metadata are destroyed permanantly.
@@ -60,6 +60,26 @@ Follow these steps to complete the process:
     {: important}
 
 The managed key has been deleted and uninstalled from all target keystores. All key materials and metadata have been destroyed. 
+
+
+
+## Deleting managed keys with the API
+{: #delete-managed-keys-api}
+
+To delete a managed key through the API, follow these steps:
+
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
+   
+2. Delete a managed key by making a `DELETE` call to the following endpoint.
+
+    ```
+    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys/<id>
+    ```
+    {: codeblock}
+
+    Replace `<id>` with the ID of your managed key.
+
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#delete-managed-key){: external}.
 
 
 

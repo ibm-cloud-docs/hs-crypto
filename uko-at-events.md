@@ -32,7 +32,7 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 
 To enable {{site.data.keyword.at_full_notm}} for your {{site.data.keyword.hscrypto}} instance, you need to provision an instance of the {{site.data.keyword.at_full_notm}} service in the same region where your {{site.data.keyword.hscrypto}} instance is located. For more information, see the [getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
 
-To see which requests correlate to the following actions, check out the [TKE CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin){: external}.
+To see which requests correlate to the following actions, check out the [{{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external} and [TKE CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin){: external}.
 
 ## Supported events
 {: #uko-at-supported-events}

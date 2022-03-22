@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-22"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -64,6 +64,6 @@ If an error occurs during master key rotation, see [Why can't I rotate master ke
 {: #uko-rotate-master-key-cli-recovery-crypto-unit-next}
 
 - To learn more about master key rotation, check out [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
-
+- To find out more about managing your {{site.data.keyword.uko_full_notm}} keys and keystores, check out the [{{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external}.
 - To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 

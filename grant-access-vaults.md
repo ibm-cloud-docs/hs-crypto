@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-17"
+lastupdated: "2022-03-22"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystore, key management, access control
 
@@ -48,6 +48,10 @@ Access the {{site.data.keyword.cloud_notm}} UI to browse the keys that are store
 3. Click the vault that you want to edit. The Details side panel is displayed.
 
 4. In the **General properties** card, copy the vault ID by clicking the copy icon.
+
+
+
+- [Use the {{site.data.keyword.uko_full_notm}} API](/apidocs/uko#get-vault){: external} to retrieve a list of your vaults, along with the metadata of the vaults.
 
 
 

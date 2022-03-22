@@ -308,6 +308,6 @@ To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyw
 {: #provision-next}
 
 * Initialize your service instance with the [{{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) or the [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) so that {{site.data.keyword.hscrypto}} can provide key management and data management functions.
-
+ * To find out more about programmatically managing your keys, check out the [{{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external} or [{{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external}.
 * To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 * If you need to delete your service instance, see [Deleting service instances](/docs/hs-crypto?topic=hs-crypto-delete-instance) for instructions.

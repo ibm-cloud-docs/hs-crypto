@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-22"
 
 keywords: Unified Key Orchestrator, UKO keystore, disconnect keystore, external keystore, KMS keystore
 
@@ -49,6 +49,26 @@ The external keystore has been disconnected with all the installed keys uninstal
 
 After you disconnect from an external keystore, you can reconnect to the keystores at any time. For more instructions, see [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
 {: tip}
+
+
+
+## Disconnecting from external keystores with the API
+{: #disconnect-external-keystores-api}
+
+To disconnect from an external keystore through the API, follow these steps:
+
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
+   
+2. Disconnect from an external keystore by making a `DELETE` call to the following endpoint.
+
+    ```
+    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/keystores/<id>
+    ```
+    {: codeblock}
+
+    Replace `<id>` with the ID of your keystore.
+
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#delete-keystore){: external}.
 
 
 

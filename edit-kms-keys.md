@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Editing key details
 {: #edit-kms-keys}
 
-You can edit your keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI).
+You can edit your keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 
@@ -57,6 +57,26 @@ To edit the details of a managed key through the UI, complete the following step
 
 You can search for a specific key by using the search bar, or filter keys based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the **Managed keys** table. For more information, see [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
 {: tip}
+
+
+
+## Editing key details with the API
+{: #edit-kms-keys-api}
+
+To edit key details through the API, follow these steps:
+
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
+   
+2. Update the details of a managed key by making a `PATCH` call to the following endpoint.
+
+    ```
+    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys/<id>
+    ```
+    {: codeblock}
+
+    Replace `<id>` with the ID of your managed key.
+
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#update-managed-key){: external}.
 
 
 

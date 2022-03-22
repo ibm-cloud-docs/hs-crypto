@@ -72,7 +72,7 @@ The following table shows how {{site.data.keyword.uko_full_notm}} handles servic
 ## Monitoring for lifecycle changes
 {: #uko-monitor-lifecycle-changes}
 
-After you add a managed key to the service, use the {{site.data.keyword.cloud_notm}} UI  to view your key's transition history and configuration.
+After you add a managed key to the service, use the {{site.data.keyword.cloud_notm}} UI  or the {{site.data.keyword.uko_full_notm}} API  to view your key's transition history and configuration.
 
 For audit purposes, you can also monitor the activity trail for a managed key by integrating {{site.data.keyword.hscrypto}} with the [{{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started){: external}. After both services are provisioned and running, activity events are generated and automatically collected in a {{site.data.keyword.at_full_notm}} log when you perform actions on keys in {{site.data.keyword.hscrypto}}.
 
@@ -88,6 +88,8 @@ For audit purposes, you can also monitor the activity trail for a managed key by
 
 - To find out instructions on deleting a managed key, check out [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys).
 
+ 
+- To find out more about the UKO API, see [{{site.data.keyword.uko_full_notm}} API reference](/apidocs/uko){: external}. 
 
 
 

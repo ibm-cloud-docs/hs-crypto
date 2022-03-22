@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Creating internal keystores
 {: #create-internal-keystores}
 
-An internal keystore is a repository that stores the cryptographic keys within your service instance. You can use {{site.data.keyword.uko_full_notm}} to create internal keystores through the user interface (UI).
+An internal keystore is a repository that stores the cryptographic keys within your service instance. You can use {{site.data.keyword.uko_full_notm}} to create internal keystores through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 
@@ -62,6 +62,24 @@ You have successfully created an internal KMS keystore.
 
 
 
+
+
+
+## Creating internal keystores with the API
+{: #create-internal-keystores-api}
+
+To create an internal keystore through the API, follow these steps:
+
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
+   
+2. Create an internal keystore by making a `POST` call to the following endpoint.
+
+    ```
+    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/keystores
+    ```
+    {: codeblock}
+
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-keystore){: external}.
 
 
 

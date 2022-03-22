@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Creating vaults
 {: #create-vaults}
 
-You can use {{site.data.keyword.hscrypto}} to create a group of keys and keystores for a target group of users that require the same {{site.data.keyword.iamshort}} (IAM) access permissions in a vault. You can create vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI).
+You can use {{site.data.keyword.hscrypto}} to create a group of keys and keystores for a target group of users that require the same {{site.data.keyword.iamshort}} (IAM) access permissions in a vault. You can create vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 
@@ -57,6 +57,23 @@ To create a vault through the UI, complete the following steps through the **Vau
 5. Click **Create vault** to confirm.
 
 You have successfully created a vault. 
+
+
+
+## Creating vaults through the API
+{: #create-vaults-api}
+
+To create a vault through the API, follow these steps:
+
+1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
+2. Create a vault by making a `POST` call to the following endpoint.
+
+    ```
+    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/vaults
+    ```
+    {: codeblock}
+
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-vault){: external}.
 
 
 
