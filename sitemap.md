@@ -431,7 +431,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
 
-* [1 April 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-april2022)
+* [25 March 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-25mar2022)
 
     * [Added: {{site.data.keyword.hscrypto}} expands into the Toronto region](/docs/hs-crypto?topic=hs-crypto-what-new#add-toronto-region)
 
