@@ -30,8 +30,8 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 
 
-## 1 April 2022
-{: #hs-crypto-april2022}
+## 25 March 2022
+{: #hs-crypto-25mar2022}
 {: release-note}
 
 Added: {{site.data.keyword.hscrypto}} expands into the Toronto region {: #add-toronto-region}
