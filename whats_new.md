@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-03-25"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -28,6 +28,14 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+
+
+## 1 April 2022
+{: #april-2022}
+{: release-note}
+
+Added: {{site.data.keyword.hscrypto}} expands into the Toronto region {: #add-toronto-region}
+:   You can now create {{site.data.keyword.hscrypto}} instances in the Toronto (`ca-tor`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
 
 ## 22 March 2022
