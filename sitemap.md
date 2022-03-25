@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-03-25"
 
 keywords: site map, doc structure, information architecture
 
@@ -431,29 +431,33 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
 
-* [22 March 2022](/docs/hs-crypto?topic=hs-crypto-what-new#march-2022)
+* [1 April 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-april2022)
+
+    * [Added: {{site.data.keyword.hscrypto}} expands into the Toronto region](/docs/hs-crypto?topic=hs-crypto-what-new#add-toronto-region)
+
+* [22 March 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-march2022)
 
     * [General availability: Using {{site.data.keyword.uko_full_notm}} to manage and orchestrate keys in a multicloud environment](/docs/hs-crypto?topic=hs-crypto-what-new#add-uko})
 
-* [28 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#28-feb-2022)
+* [28 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-28feb2022)
 
     * [Limited availability: Using {{site.data.keyword.uko_full_notm}} to manage and orchestrate keys in a multicloud environment](/docs/hs-crypto?topic=hs-crypto-what-new#add-uko})
 
-* [23 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#23-feb-2022)
+* [23 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-23feb2022)
 
     * [Added: Using {{site.data.keyword.mon_full_notm}} to measure {{site.data.keyword.hscrypto}} metrics](/docs/hs-crypto?topic=hs-crypto-what-new#add-monitoring-metrics)
 
-* [15 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#15-feb-2022)
+* [15 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-15feb2022)
 
     * [Added: {{site.data.keyword.hscrypto}} expands into the S&atilde;o-Paulo region](/docs/hs-crypto?topic=hs-crypto-what-new#add-sao-region)
 
-* [21 January 2022](/docs/hs-crypto?topic=hs-crypto-what-new#jan-2022)
+* [21 January 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-jan2022)
 
     * [Updated: {{site.data.keyword.hscrypto}} key management functions](/docs/hs-crypto?topic=hs-crypto-what-new#update-kms-api-v282)
 
     * [Added: The key ring limit for a service instance](/docs/hs-crypto?topic=hs-crypto-what-new#add-key-ring-limit)
 
-* [30 July 2021](/docs/hs-crypto?topic=hs-crypto-what-new#july-2021)
+* [30 July 2021](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-july2021)
 
     * [Added: Exclusive control on the execution of cryptographic operations](/docs/hs-crypto?topic=hs-crypto-what-new#add-cert-manager)
 
@@ -463,7 +467,7 @@ Find what you are looking for in the compilation of topics that are available in
 
     * [Added: Using a signing service to manage signature keys for instance initialization](/docs/hs-crypto?topic=hs-crypto-what-new#add-signing-service)
 
-* [30 June 2021](/docs/hs-crypto?topic=hs-crypto-what-new#june-2021)
+* [30 June 2021](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-june2021)
 
     * [Added: Authenticated PKCS #11 keystore](/docs/hs-crypto?topic=hs-crypto-what-new#add-authenticated-pkcs11-keystore)
 
@@ -471,13 +475,13 @@ Find what you are looking for in the compilation of topics that are available in
 
     * [Added: {{site.data.keyword.hscrypto}} expands into the London region](/docs/hs-crypto?topic=hs-crypto-what-new#add-london-region)
 
-* [30 April 2021](/docs/hs-crypto?topic=hs-crypto-what-new#april-2021)
+* [30 April 2021](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-april2021)
 
     * [Added: Rotating your master key by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-what-new#add-master-key-rotation-smart-cards)
 
     * [Updated: Restore key API and UI](/docs/hs-crypto?topic=hs-crypto-what-new#update-restore-key-api-ui)
 
-* [31 March 2021](/docs/hs-crypto?topic=hs-crypto-what-new#march-2021)
+* [31 March 2021](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-march2021)
 
     * [Added: Grouping keys by using key rings](/docs/hs-crypto?topic=hs-crypto-what-new#add-key-ring)
 
@@ -493,17 +497,17 @@ Find what you are looking for in the compilation of topics that are available in
 
     * [Updated: The cryptography algorithm that is used to generate signature keys](/docs/hs-crypto?topic=hs-crypto-what-new#update-signature-key-algorithm)
 
-* [28 February 2021](/docs/hs-crypto?topic=hs-crypto-what-new#february-2021)
+* [28 February 2021](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-february2021)
 
     * [Added: Key verification by using the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-what-new#add-key-verification)
 
     * [Added: Support for the Schnorr algorithm](/docs/hs-crypto?topic=hs-crypto-what-new#add-schnorr)
 
-* [31 January 2021](/docs/hs-crypto?topic=hs-crypto-what-new#january-2021)
+* [31 January 2021](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-january2021)
 
     * [Added: Support for a single-tenant KMIP adapter](/docs/hs-crypto?topic=hs-crypto-what-new#add-support-kmip-adapter)
 
-* [31 December 2020](/docs/hs-crypto?topic=hs-crypto-what-new#december-2020)
+* [31 December 2020](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-december2020)
 
     * [Added: Managing the key create and import access policy](/docs/hs-crypto?topic=hs-crypto-what-new#add-key-create-import-access)
 
@@ -519,33 +523,33 @@ Find what you are looking for in the compilation of topics that are available in
 
     * [Updated: key management service API](/docs/hs-crypto?topic=hs-crypto-what-new#update-kms-api-december)
 
-* [30 November 2020](/docs/hs-crypto?topic=hs-crypto-what-new#november-2020)
+* [30 November 2020](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-november2020)
 
     * [Added: Support for the BIP32 mechanism](/docs/hs-crypto?topic=hs-crypto-what-new#add-bip32-mechanism)
 
     * [Added: TKE activity tracker events](/docs/hs-crypto?topic=hs-crypto-what-new#add-tke-at-events)
 
-* [30 September 2020](/docs/hs-crypto?topic=hs-crypto-what-new#september-2020)
+* [30 September 2020](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-september2020)
 
     * [Added: Master key rotation](/docs/hs-crypto?topic=hs-crypto-what-new#added-master-key-rotation)
 
     * [Added: Support for performing cryptographic operations with the standard PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-what-new#added-pkcs11)
 
-* [31 August 2020](/docs/hs-crypto?topic=hs-crypto-what-new#august-2020)
+* [31 August 2020](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-august2020)
 
     * [Added: Support for import tokens to securely upload encryption keys](/docs/hs-crypto?topic=hs-crypto-what-new#added-import-tokens)
 
-* [31 July 2020](/docs/hs-crypto?topic=hs-crypto-what-new#july-2020)
+* [31 July 2020](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-july2020)
 
     * [Added: {{site.data.keyword.hscrypto}} aligns the key management functions with {{site.data.keyword.keymanagementserviceshort}}](/docs/hs-crypto?topic=hs-crypto-what-new#added-key-protect-concurrency)
 
     * [Added: {{site.data.keyword.hscrypto}} expands into the Washington DC region](/docs/hs-crypto?topic=hs-crypto-what-new#added-wdc-region)
 
-* [30 June 2020](/docs/hs-crypto?topic=hs-crypto-what-new#june-2020)
+* [30 June 2020](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-june2020)
 
     * [Added: Support for quorum authentication](/docs/hs-crypto?topic=hs-crypto-what-new#added-quorum-authentication-202006)
 
-* [30 April 2020](/docs/hs-crypto?topic=hs-crypto-what-new#april-2020)
+* [30 April 2020](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-april2020)
 
     * [Added: {{site.data.keyword.hscrypto}} adds support for EP11 private endpoints](/docs/hs-crypto?topic=hs-crypto-what-new#added-private-endpoints-202004)
 
@@ -553,7 +557,7 @@ Find what you are looking for in the compilation of topics that are available in
 
     * [Updated: {{site.data.keyword.cloud_notm}} service integration](/docs/hs-crypto?topic=hs-crypto-what-new#added-service-integration-202004)
 
-* [31 August 2019](/docs/hs-crypto?topic=hs-crypto-what-new#August-2019)
+* [31 August 2019](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-August2019)
 
     * [Added: {{site.data.keyword.hscrypto}} adds support for private endpoints](/docs/hs-crypto?topic=hs-crypto-what-new#added-private-endpoints)
 
@@ -563,11 +567,11 @@ Find what you are looking for in the compilation of topics that are available in
 
     * [Added: {{site.data.keyword.cloud_notm}} service integration](/docs/hs-crypto?topic=hs-crypto-what-new#added-service-integration)
 
-* [30 June 2019](/docs/hs-crypto?topic=hs-crypto-what-new#June-2019)
+* [30 June 2019](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-June2019)
 
     * [Added: {{site.data.keyword.hscrypto}} expands into Sydney region](/docs/hs-crypto?topic=hs-crypto-what-new#added-sydney-region)
 
-* [31 March 2019](/docs/hs-crypto?topic=hs-crypto-what-new#March-2019)
+* [31 March 2019](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-March2019)
 
     * [{{site.data.keyword.hscrypto}} is generally available](/docs/hs-crypto?topic=hs-crypto-what-new#ga-201903)
 
@@ -575,11 +579,11 @@ Find what you are looking for in the compilation of topics that are available in
 
     * [Scalability](/docs/hs-crypto?topic=hs-crypto-what-new#scalability-new)
 
-* [28 February 2019](/docs/hs-crypto?topic=hs-crypto-what-new#Feb-2019)
+* [28 February 2019](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-Feb2019)
 
     * [{{site.data.keyword.hscrypto}} Beta is available](/docs/hs-crypto?topic=hs-crypto-what-new#beta-201902)
 
-* [31 December 2018](/docs/hs-crypto?topic=hs-crypto-what-new#Dec-2018)
+* [31 December 2018](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-Dec2018)
 
     * [Added: Integration of {{site.data.keyword.keymanagementserviceshort}} API](/docs/hs-crypto?topic=hs-crypto-what-new#kp-api)
 
@@ -1144,6 +1148,14 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_setting_up_api_calls1}
 
 
+[Managing your keys with the {{site.data.keyword.uko_full_notm}} API](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#set-up-uko-api)
+
+* [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#retrieve-uko-credentials)
+
+* [Forming your {{site.data.keyword.uko_full_notm}} API request](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#form-uko-api-request)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#set-up-uko-api-next-steps)
+
 [Managing your keys with the key management service API](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#set-up-uko-kms-api)
 
 * [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#retrieve-uko-kms-credentials)
@@ -1224,17 +1236,23 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Creating vaults through the UI](/docs/hs-crypto?topic=hs-crypto-create-vaults#create-vaults-ui)
 
+* [Creating vaults through the API](/docs/hs-crypto?topic=hs-crypto-create-vaults#create-vaults-api)
+
 * [What's next](/docs/hs-crypto?topic=hs-crypto-create-vaults#create-vaults-next)
 
 [Editing vault details](/docs/hs-crypto?topic=hs-crypto-edit-vaults#edit-vaults)
 
 * [Editing vault details through the UI](/docs/hs-crypto?topic=hs-crypto-edit-vaults#edit-vaults-ui)
 
+* [Editing vault details with the API](/docs/hs-crypto?topic=hs-crypto-edit-vaults#edit-vaults-api)
+
 * [What's next](/docs/hs-crypto?topic=hs-crypto-edit-vaults#edit-vaults-next)
 
 [Deleting vaults](/docs/hs-crypto?topic=hs-crypto-delete-vaults#delete-vaults)
 
 * [Deleting vaults through the UI](/docs/hs-crypto?topic=hs-crypto-delete-vaults#delete-vaults-ui)
+
+* [Deleting vaults with the API](/docs/hs-crypto?topic=hs-crypto-delete-vaults#delete-vaults-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-delete-vaults#delete-vaults-next)
 
@@ -1247,11 +1265,15 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Creating and installing managed keys through the UI](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-ui)
 
+* [Creating and installing managed keys with the API](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-api)
+
 * [What's next](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-next)
 
 [Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list)
 
 * [Viewing a list of keys through the UI](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list-ui)
+
+* [Viewing a list of keys with the API](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list-next)
 
@@ -1261,11 +1283,15 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [ Searching for keys through the UI](/docs/hs-crypto?topic=hs-crypto-search-key-list#search-key-list-ui)
 
+* [Searching keys with the API](/docs/hs-crypto?topic=hs-crypto-search-key-list#search-key-list-api)
+
 * [What's next](/docs/hs-crypto?topic=hs-crypto-search-key-list#search-key-list-next)
 
 [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys)
 
 * [Editing key details through the UI](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys-ui)
+
+* [Editing key details with the API](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys-next)
 
@@ -1273,11 +1299,15 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Setting target keystores for existing keys through the UI](/docs/hs-crypto?topic=hs-crypto-install-key-keystores#install-key-keystores-ui)
 
+* [Setting target keystores for existing keys with the API](/docs/hs-crypto?topic=hs-crypto-install-key-keystores#install-key-keystores-api)
+
 * [What's next](/docs/hs-crypto?topic=hs-crypto-install-key-keystores#install-key-keystores-next)
 
 [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys#delete-managed-keys)
 
 * [Deleting managed keys through the UI](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys#delete-managed-keys-ui)
+
+* [Deleting managed keys with the API](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys#delete-managed-keys-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys#delete-managed-keys-next)
 
@@ -1290,6 +1320,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Creating internal keystores through the UI](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-ui)
 
+* [Creating internal keystores with the API](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-api)
+
 * [What's next](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-next)
 
 [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores)
@@ -1298,11 +1330,15 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Connecting to external keystores through the UI](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores-ui)
 
+* [Connecting to external keystores with the API](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores-api)
+
 * [What's next](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores-next)
 
 [Editing internal keystores](/docs/hs-crypto?topic=hs-crypto-edit-internal-keystores#edit-internal-keystores)
 
 * [Editing internal keystores through the UI](/docs/hs-crypto?topic=hs-crypto-edit-internal-keystores#edit-internal-keystores-ui)
+
+* [Editing internal keystores with the API](/docs/hs-crypto?topic=hs-crypto-edit-internal-keystores#edit-internal-keystores-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-edit-internal-keystores#edit-internal-keystores-next)
 
@@ -1310,17 +1346,23 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Editing connection to external keystores through the UI](/docs/hs-crypto?topic=hs-crypto-edit-external-keystore-connection#edit-external-keystore-connection-ui)
 
+* [Editing connection to external keystores with the API](/docs/hs-crypto?topic=hs-crypto-edit-external-keystore-connection#edit-external-keystore-connection-api)
+
 * [What's next](/docs/hs-crypto?topic=hs-crypto-edit-external-keystore-connection#edit-external-keystore-connection-next)
 
 [Deleting internal keystores](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores#delete-internal-keystores)
 
 * [Deleting internal keystores through the UI](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores#delete-internal-keystores-ui)
 
+* [Deleting internal keystores with the API](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores#delete-internal-keystores-api)
+
 * [What's next](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores#delete-internal-keystores-next)
 
 [Disconnecting from external keystores](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores#disconnect-external-keystores)
 
 * [Disconnecting from external keystores through the UI](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores#disconnect-external-keystores-ui)
+
+* [Disconnecting from external keystores with the API](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores#disconnect-external-keystores-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores#disconnect-external-keystores-next)
 
@@ -1562,6 +1604,17 @@ Find what you are looking for in the compilation of topics that are available in
 * [January 2022](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-jan-2022)
 
 * [April 2021](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-april-2021)
+
+
+### Unified Key Orchestrator API
+{: #sitemap_unified_key_orchestrator_api}
+
+
+[{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API change log](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-change-log)
+
+* [API versioning](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-versioning)
+
+* [March 2022](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-march-2022)
 
 [Cryptographic operations: PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs11-api-ref)
 
