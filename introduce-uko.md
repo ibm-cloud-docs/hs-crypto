@@ -47,7 +47,7 @@ You install or distribute a key to multiple internal or external keystores in th
 ## Components
 {: #Components}
 
-{{site.data.keyword.uko_full_notm}} has the following components:
+The following list includes the key components of {{site.data.keyword.uko_full_notm}}. For an architectural diagram that includes key {{site.data.keyword.hscrypto}} components, see [Service architecture](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation).
 
 - **Vaults**
     
