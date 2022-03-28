@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-03-28"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -25,31 +25,24 @@ subcollection: hs-crypto
 {: #introduce-uko}
 
 {{site.data.keyword.uko_full_notm}} is a public cloud control plane for multicloud and hybrid cloud key orchestration. As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, it provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores in the service instance or external keystores.
+With {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}, you can to manage keys not only for your internal keystores, but across multiple cloud providers, including Microsoft Azure and Amazon Web Services (AWS). All your keys in all those places are protected by your own master key, which is stored in a FIPS 140-2 Level 4-certified hardware security module (HSM) for the highest security. You can manage the lifecycles of your keys from a single point of control, while the system keeps keys that are distributed or installed in sync.
 
+With {{site.data.keyword.uko_full_notm}}, you can organize everything in vaults. *Vaults* are secure repositories that bundle your managed keys and the target keystores to distribute managed keys to. You can use vaults to grant access to different Identity and Access Management (IAM) user groups.
 
+![Connecting to {{site.data.keyword.uko_full_notm}}](/images/unified-key-orchestrator.svg "External keystores connecting to {{site.data.keyword.uko_full_notm}}"){: caption="Connecting to {{site.data.keyword.uko_full_notm}}"  caption-side="bottom"}
 
-## Why {{site.data.keyword.uko_full_notm}}?
-{: #why-uko}
+## Use case example
+{: #uko-use-case-example}
 
-Many enterprises have the legal obligation to bring their own cryptographic keys when they move sensitive workloads to the cloud. Enterprises are adopting native encryption and key management offerings from cloud providers.
+In the following example, your retail banking business unit, reflected as one user group, uses a vault called `Retail Banking BU`. Another business unit, reflected as another user group, uses their own vault to keep their managed keys and target keystores separate.
 
-Dealing with multiple clouds means dealing with cryptographic keys in multiple key management services. This presents the following challenges:
-- High manual effort and susceptibility to errors when enterprises operate different key management systems
-- No control over the [master key](#x2908413){: term} in external cloud key management systems
-- Shortage of data centers and skilled staff to operate [hardware security modules (HSMs)](#x6704988){: term} for KYOK or BYOK
+You connect vault `Retail Banking BU` to three external keystores in different locations, in this example, three Azure Key Vaults. You can also connect your vault to other external keystore types if needed, such as AWS Key Management Service, {{site.data.keyword.keymanagementservicelong}}, or other {{site.data.keyword.hscrypto}} instances. Then, you create managed keys in vault `Retail Banking BU` and distribute the keys to those three external keystores in Azure.
 
+For development and test purposes, you create a few more keys in the same vault and an internal KMS keystore to distribute the keys to.
 
-{{site.data.keyword.uko_full_notm}} alleviates the complexity of maintaining encryption across hybrid environments. 
+You install or distribute a key to multiple internal or external keystores in the same vault. When you make changes to the key, for example, changing the key state from Active to Deactivated, the change is applied to all keystores that the key is installed in.
 
-You can integrate all your key management use cases into one consistent approach, backed by a trusted IBM Z HSM. It provides you with the following features:
-- Consistent user experience
-- Seamless integration into the existing cloud framework
-- One point of control for multiple keys in multiple clouds 
-- Secure backup of all keys and easy restoration across multiple clouds
-
-
-![Unified Key Orchestrator](/images/unified-key-orchestrator.svg "Unified Key Orchestrator"){: caption="Unified Key Orchestrator"  caption-side="bottom"}
-
+![{{site.data.keyword.uko_full_notm}} use case example](/images/uko-example.png "Illustration that explains how to use vault to manage access while connecting to exteranl Azure Key Vaults"){: caption="{{site.data.keyword.uko_full_notm}} use case example"  caption-side="bottom"}
 
 ## Components
 {: #Components}
@@ -58,7 +51,7 @@ You can integrate all your key management use cases into one consistent approach
 
 - **Vaults**
     
-    A vault is a repository that controls a user's or an access group's access to managed keys and target keystores through Identity and Access Management (IAM). A vault keeps all installations of a managed key in sync. You can assign a managed key or internal target keystore only in one vault. When you connect to an external keystore, you also need to assign it to a vault first. 
+    A vault is a repository that controls a user's or an access group's access to managed keys and target keystores through IAM. A vault keeps all installations of a managed key in sync. You can assign a managed key or internal target keystore only in one vault. When you connect to an external keystore, you also need to assign it to a vault first. 
 
     You can create different vaults based on your organizational or security needs. For example, you can create a vault for each business unit. In this way, you set access control policies at a vault level, and key administrators of each business unit have access only to the keys and keystores that are assigned to the vault of their business unit.
 
@@ -90,7 +83,7 @@ You can integrate all your key management use cases into one consistent approach
 
     - **External keystores**  
         
-        External keystores are keystores that are not in your service instance. You can connect to keystores that are external to your service instance, such as another {{site.data.keyword.hscrypto}} or {{site.data.keyword.keymanagementserviceshort}} instance, potentially in another region. Or, you can connect to external keystores from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS). 
+        External keystores are keystores that are not in your service instance. You can connect to keystores that are external to your service instance, such as another {{site.data.keyword.hscrypto}} or {{site.data.keyword.keymanagementserviceshort}} instance, potentially in another region. Or, you can connect to external keystores from other cloud providers such as Microsoft Azure Key Vault and AWS Key Management Service (KMS). 
 
         You can connect to one external keystore at no initial cost, regardless of the type. You are charged for additional external keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
 
@@ -111,8 +104,6 @@ You can integrate all your key management use cases into one consistent approach
         - **AWS KMS**        
             
             AWS KMS is a managed service for you to create and manage cryptographic keys across a wide range of AWS services.
-
-
 
 ## What's next
 {: #uko-next}

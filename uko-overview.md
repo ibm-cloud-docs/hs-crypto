@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-03-28"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -28,13 +28,14 @@ subcollection: hs-crypto
 {: shortdesc}
 
 
-
 ## Why {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?
 {: #uko-why_hpcs}
 
-Data and information security is crucial and essential for IT environments. As more data moves to the cloud, keeping data protected becomes a non-trivial challenge. Built on IBM LinuxONE technology, {{site.data.keyword.hscrypto}} helps ensure that only you have access to your keys and data. A single-tenant key management service with key vaulting that is provided by dedicated customer-controlled HSMs helps you easily create and manage your encryption keys. Alternatively, you can bring your own encryption keys to the cloud. The service uses the same key-provider API as {{site.data.keyword.keymanagementserviceshort}}, a multi-tenant key management service, to provide a consistent approach to adopting {{site.data.keyword.cloud_notm}} services.
+Data and information security is crucial and essential for IT environments. As more data moves to the cloud, keeping data protected becomes a non-trivial challenge. Built on IBM LinuxONE technology, {{site.data.keyword.hscrypto}} helps ensure that only you have access to your keys and data. 
 
-{{site.data.keyword.hscrypto}} is a dedicated HSM that is controlled by you. {{site.data.keyword.cloud_notm}} administrators have no access. The service is built on FIPS 140-2 Level 4-certified hardware, the highest offered by any cloud provider in the industry. IBM is the first to provide cloud command-line interface (CLI) for HSM [master key](#x2908413){: term} initialization to help enable you to take ownership of the cloud HSM. You can also load the master key with the {{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities. The Management Utilities create and store your master key parts on smart cards and never exposes your secrets to the workstation and cloud, thus ensuring the highest level of protection to your secrets.
+A single-tenant key management service with key vaulting that is provided by dedicated customer-controlled HSMs helps you easily create and manage your encryption keys. Alternatively, you can bring your own encryption keys to the cloud. The service uses the same key-provider API as {{site.data.keyword.keymanagementserviceshort}}, a multi-tenant key management service, to provide a consistent approach to adopting {{site.data.keyword.cloud_notm}} services.
+
+{{site.data.keyword.hscrypto}} offers a dedicated HSM that is controlled by you. {{site.data.keyword.cloud_notm}} administrators have no access. The service is built on FIPS 140-2 Level 4-certified hardware, the highest offered by any cloud provider in the industry. IBM is the first to provide cloud command-line interface (CLI) for HSM [master key](#x2908413){: term} initialization to help enable you to take ownership of the cloud HSM. You can also load the master key with the {{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities. The Management Utilities create and store your master key parts on smart cards and never exposes your secrets to the workstation and cloud, thus ensuring the highest level of protection to your secrets.
 
 {{site.data.keyword.hscrypto}} can integrate with {{site.data.keyword.cloud_notm}} data and storage services as well as VMware&reg; vSphere&reg; and VSAN, for providing data-at-rest encryption.
 
@@ -47,15 +48,21 @@ With the built-in encryption of {{site.data.keyword.hscrypto}}, you can easily b
 
 
 
+## Why {{site.data.keyword.uko_full_notm}}?
+{: #why-uko}
 
-## How does {{site.data.keyword.hscrypto}} work?
-{: #uko-how-hpcs-work}
+Many enterprises have the legal obligation to bring their own cryptographic keys when they move sensitive workloads to the cloud. Enterprises are adopting native encryption and key management offerings from cloud providers.
 
-The following items are a few highlights of the {{site.data.keyword.hscrypto}} architecture:
-- Applications connect to {{site.data.keyword.hscrypto}} through the PKCS #11 API or the GREP11 API.
-- Dedicated keystore in {{site.data.keyword.hscrypto}} is provided to ensure data isolation and security. Privileged users are locked out for protection against abusive use of system administrator credentials or root user credentials.
-- Secure Service Container (SSC) provides the enterprise level of security and impregnability that enterprise customers expect from [IBM LinuxONE](https://www.ibm.com/it-infrastructure/linuxone){: external} technology.
-- FIPS 140-2 Level 4 compliant cloud HSM is enabled for highest physical protection of secrets.
+Dealing with multiple clouds means dealing with cryptographic keys in multiple key management services. This presents the following challenges:
+- High manual effort and susceptibility to errors when enterprises operate different key management systems
+- No control over the [master key](#x2908413){: term} in external cloud key management systems
+- Shortage of data centers and skilled staff to operate [hardware security modules (HSMs)](#x6704988){: term} for KYOK or BYOK
+
+{{site.data.keyword.uko_full_notm}} alleviates the complexity of maintaining encryption across hybrid environments. You can integrate all your key management use cases into one consistent approach, backed by a trusted IBM Z HSM. It provides you with the following features:
+- Consistent user experience
+- Seamless integration into the existing cloud framework
+- One point of control for multiple keys in multiple clouds 
+- Secure backup of all keys and easy restoration across multiple clouds
 
 For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service architecture](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation).
 
@@ -65,7 +72,6 @@ For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service arc
 {{site.data.keyword.hscrypto}} provides the following features:
 
 ### {{site.data.keyword.uko_full_notm}}
-
 
 * **Connection to external keystores**
 
