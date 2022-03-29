@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-03-29"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning, operations
 
@@ -78,29 +78,7 @@ To find out details on how to procure and set up smart cards and other Managemen
 {: #faq-procure-smart-card}
 {: faq}
 
-If you are in the United States, you can order smart cards and smart card readers online. For more information, see [Order smart cards and smart card readers](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader).
-
-For procurement from other countries, contact IBM Part Sales through the following email addresses. For countries that are not listed, contact `ppricing@de.ibm.com`. In the email, provide the Field Replaceable Unit (FRU) number, 00RY790, for the smart card.
-
-|Country| Email address |
-|--------------|-----------------------|
-|Australia  | spareparts@au1.ibm.com|
-|Belgium  | parts@be.ibm.com|
-|Denmark  | reservedele@dk.ibm.com|
-|Germany | partsale@de.ibm.com|
-|France | vtepce@fr.ibm.com|
-|Ireland | emeapart@ie.ibm.com|
-|Israel | psale@il.ibm.com|
-|New Zealand | spareparts@au1.ibm.com|
-|Poland | parts@pl.ibm.com|
-|Portugal | ptsales@pt.ibm.com|
-|South Africa    |autoship@za.ibm.com |
-|Spain    | ventadepiezas@es.ibm.com|
-|Switzerland | pasa@ch.ibm.com|
-|UK | parts_sales@uk.ibm.com|
-{: caption="Table 2. IBM Part Sales contacts" caption-side="bottom"}
-
-For countries that are not listed in the table, contact `ppricing@de.ibm.com` or `parts_sales@uk.ibm.com` to ask for the IBM Parts Sales contact information of your country.
+To rocure smart cards and smart card readers, follow the procedure in [Order smart cards and smart card readers](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader).
 
 ## How many crypto units shall I set up in my service instance?
 {: #faq-crypto-units-number}

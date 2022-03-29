@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-29"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -41,20 +41,25 @@ Before you can configure smart cards, you need to first order [smart cards](/doc
 
 Complete the following steps to order smart cards:
 
-1. On the [{{site.data.keyword.IBM_notm}} Maintenance Parts Retail shop web page](https://www-store.shop.ibm.com/shop/en-US/partsusretail){: external}, enter Field Replaceable Unit (FRU) part number **00RY790** in the search box.
+1. Determine the quantity of smart cards that are required. 
 
-    Online smart card ordering is only available in the United States. For procurement from other countries, see [FAQ: How can I procure smart cards and smart card readers?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-procure-smart-card).
-    {: note}
+    A minimum of two smart cards are needed to use the Management Utilities:
+    * A certificate authority smart card to define a smart card zone, which is a set of smart cards that can work together.
+    * An Enterprise PKCS #11 (EP11) smart card to hold a signature key and one or more master key parts that are used to configure service instances. Currently, the Management Utilities support two or three master key parts to be loaded.
 
-2. Enter the quantity of packages. Each package contains a set of two smart cards.
+    For added security, the two or three master key parts that are used to configure a service instance can be generated on separate EP11 smart cards that are assigned to different people. The signature key that is used to sign commands to the crypto module can be generated on a separate EP11 smart card. Three or four EP11 smart cards are then needed to configure a service instance.
+    {: tip}
 
-    A minimum of two smart cards is needed to use the Management Utilities: a certificate authority smart card and an Enterprise PKCS #11 (EP11) smart card. The certificate authority smart card defines a set of smart cards that can work together. This set of smart cards is called a smart card zone. EP11 smart cards hold a signature key and one or more master key parts that are used to configure service instances. Currently, the Management Utilities support 2 or 3 master key parts to be loaded.
+    It is also suggested to [create backup copies of all used smart cards](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup) and to save the backup smart cards in a secure place. For maximum security, 10 smart cards are needed, which includes backup smart cards:
 
-    For added security, the 2 or 3 master key parts that are used to configure a service instance can be generated on separate EP11 smart cards that are assigned to different people. The signature key used to sign commands to the crypto module can be generated on a separate EP11 smart card. Three or four EP11 smart cards would then be needed to configure a service instance.
+    * Two certificate authority smart cards
+    * Eight EP11 smart cards
 
-    It is also suggested to [create backup copies of all used smart cards](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup) and to save the backup smart cards in a secure place. For maximum security, 10 smart cards would be needed, including backup smart cards (two certificate authority smart cards and eight EP11 smart cards).
+2.  Email IBM at `ZaaS.Customer.Success@ibm.com` and provide the following information:
 
-3. Click **Add to Current Order** and continue to check out.
+    * The total number of smart cards needed; minimum of two.
+    * Billing contact information, which includes the name, billing address, phone number, email address, and time zone.
+    * Shipping contact information, which includes the name, shipping address, phone number, email address, and time zone.
 
 ### Ordering smart card readers
 
