@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-28"
+lastupdated: "2022-03-29"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -24,12 +24,9 @@ subcollection: hs-crypto
 # Introducing {{site.data.keyword.uko_full_notm}}
 {: #introduce-uko}
 
-{{site.data.keyword.uko_full_notm}} is a public cloud control plane for multicloud and hybrid cloud key orchestration. As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, it provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores in the service instance or external keystores.
-With {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}, you can to manage keys not only for your internal keystores, but across multiple cloud providers, including Microsoft Azure and Amazon Web Services (AWS). All your keys in all those places are protected by your own master key, which is stored in a FIPS 140-2 Level 4-certified hardware security module (HSM) for the highest security. You can manage the lifecycles of your keys from a single point of control, while the system keeps keys that are distributed or installed in sync.
+With {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}, you can manage keys not only for your internal keystores, but across multiple cloud providers, including Microsoft Azure and Amazon Web Services (AWS). All your keys in all those places are protected by your own master key, which is stored in a FIPS 140-2 Level 4-certified hardware security module (HSM) for the highest security. You can manage the lifecycles of your keys from a single point of control, while the system keeps keys that are distributed or installed in sync.
 
 With {{site.data.keyword.uko_full_notm}}, you can organize everything in vaults. *Vaults* are secure repositories that bundle your managed keys and the target keystores to distribute managed keys to. You can use vaults to grant access to different Identity and Access Management (IAM) user groups.
-
-![Connecting to {{site.data.keyword.uko_full_notm}}](/images/unified-key-orchestrator.svg "External keystores connecting to {{site.data.keyword.uko_full_notm}}"){: caption="Connecting to {{site.data.keyword.uko_full_notm}}"  caption-side="bottom"}
 
 ## Use case example
 {: #uko-use-case-example}
