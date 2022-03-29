@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-21"
+lastupdated: "2022-03-29"
 
 keywords: pkcs11 access, pkcs 11 authentication, set up PKCS 11 API, best practice for setting up pkcs11 users
 
@@ -89,6 +89,7 @@ This role is used to generate and manage keys in the Enterprise PKCS #11 (EP11) 
     * hs-crypto.keystore.listkeysbyids
     * hs-crypto.keystore.storenewkey
     * hs-crypto.keystore.updatekey
+    * hs-crypto.discovery.listservers
 8. Click **Create** when you're done adding actions.
 
 ### 2. Create a custom role for operating keystores
@@ -190,7 +191,7 @@ To assign access to the keystores for the SO user, follow these steps:
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
 2. Hover your mouse over the `SO user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options.
 3. From the options menu, click **Assign access**.
-4. Click **Assign service ID additional access**, and then click the **IAM services** button.
+4. Click **Assign access to the service ID**, and then click the **IAM services** button.
 5. Under **Which service do you want to assign access to?**, select **Hyper Protect Crypto Services**.
 6. Under **How do you want to scope the access?**, select **Resources based on selected attributes**.
 7. Under **Service Instance ID**, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
@@ -210,7 +211,7 @@ To assign access to the keystores for the normal user, follow these steps:
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
 2. Hover your mouse over the `Normal user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options.
 3. From the options menu, click **Assign access**.
-4. Click **Assign service ID additional access**, and then click the **IAM services** button.
+4. Click **Assign access to the service ID**, and then click the **IAM services** button.
 5. Under **Which service do you want to assign access to?**, select **Hyper Protect Crypto Services**.
 6. Under **How do you want to scope the access?**, select **Resources based on selected attributes**.
 7. Under **Service Instance ID**, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
@@ -228,7 +229,7 @@ To assign access to the keystore for the anonymous user, follow these steps:
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
 2. Hover your mouse over the `Anonymous user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options.
 3. From the options menu, click **Assign access**.
-4. Click **Assign service ID additional access**, and then click the **IAM services** button.
+4. Click **Assign access to the service ID**, and then click the **IAM services** button.
 5. Under **Which service do you want to assign access to?**, select **Hyper Protect Crypto Services**.
 6. Under **How do you want to scope the access?**, select **Resources based on selected attributes**.
 7. Under **Service Instance ID**, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
