@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-25"
+lastupdated: "2022-03-30"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -28,6 +28,12 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+## 31 March 2022
+{: #hs-crypto-31mar2022}
+{: release-note}
+
+Updated: Process of ordering smart cards and smart card readers {: #update-smartcard-procurement}
+:   To order smart cards and smart card readers, you can now email IBM at `ZaaS.Customer.Success@ibm.com` and provide necessary information. For detailed steps, see [Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader).
 
 
 ## 25 March 2022

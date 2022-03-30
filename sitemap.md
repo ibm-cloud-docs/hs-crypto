@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-29"
+lastupdated: "2022-03-30"
 
 keywords: site map, doc structure, information architecture
 
@@ -430,6 +430,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [31 March 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-31mar2022)
+
+    * [Updated: Process of ordering smart cards and smart card readers](/docs/hs-crypto?topic=hs-crypto-what-new#update-smartcard-procurement)
 
 * [25 March 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-25mar2022)
 

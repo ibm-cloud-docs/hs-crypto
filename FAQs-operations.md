@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-29"
+lastupdated: "2022-03-30"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning, operations
 
@@ -78,7 +78,7 @@ To find out details on how to procure and set up smart cards and other Managemen
 {: #faq-procure-smart-card}
 {: faq}
 
-To rocure smart cards and smart card readers, follow the procedure in [Order smart cards and smart card readers](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader).
+To procure smart cards and smart card readers, follow the procedure in [Order smart cards and smart card readers](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader).
 
 ## How many crypto units shall I set up in my service instance?
 {: #faq-crypto-units-number}
