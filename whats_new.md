@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-30"
+lastupdated: "2022-03-31"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -28,9 +28,16 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
-## 31 March 2022
-{: #hs-crypto-31mar2022}
+## 1 April 2022
+{: #hs-crypto-1april2022}
 {: release-note}
+
+Updated: Pricing model of the {{site.data.keyword.hscrypto}} standard plan {: #update-pricing-model}
+:   The pricing model of the {{site.data.keyword.hscrypto}} standard plan is now changed from monthly billing to hourly billing with each crypto unit charged $2.13 USD per hour. 
+
+    The first five keystores, including KMS key rings and EP11 keystores, are free of charge. Each additional key ring or EP11 keystore is charged with a tiered pricing starting at $225 USD per month. For keystores that are created or connected less than a month, the cost is prorated based on actual days within the month.
+
+    For more information, see the [pricing plan](/catalog/services/hyper-protect-crypto-services){: external}. A [billing example](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs) is also available for your reference.
 
 Updated: Process of ordering smart cards and smart card readers {: #update-smartcard-procurement}
 :   To order smart cards and smart card readers, you can now email IBM at `ZaaS.Customer.Success@ibm.com` and provide necessary information. For detailed steps, see [Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader).
