@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-17"
+lastupdated: "2022-04-01"
 
 keywords: pkcs11 keystore, ep11 keystore, create pkcs11 keystore, generate pkcs11 keystore, view ep11 keystore, delete ep11 keystore, view pkcs11 keystore
 
@@ -32,6 +32,8 @@ Enterprise PKCS #11 (EP11) keystores are used to store EP11 keys. Before you cre
 EP11 keystores are composed of in-memory keystores and database-backed keystores. The in-memory EP11 keystores are not displayed in the {{site.data.keyword.cloud_notm}} console. You can manage only database-backed EP11 keystores through the console. For more information about the keystores, see [Introducing keystore](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-keystore-intro).
 {: important}
 
+
+You can create up to five keystores in a service instance for free, including KMS key rings and EP11 keystores. Each additional key ring or EP11 keystore is charged with a tiered pricing starting at $225 USD per month. For more information about pricing, see [the pricing sample](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs).
 
 
 ## Before you begin

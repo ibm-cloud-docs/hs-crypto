@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-15"
+lastupdated: "2022-04-01"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -49,11 +49,11 @@ Before you create a key ring for your {{site.data.keyword.hscrypto}} instance, k
 
     A key can belong to only one key ring. Key ring assignment happens upon key creation. If a key ring ID is not passed in upon creation, the key will belong to the default key ring. You can update the key ring after the key creation.
 
-   
-- You can create up to five key rings for a service instance.
 
-    The maximum number of key rings for a service instance is five. If the number reaches the limit, you are no longer able to create a key ring.
 
+- You can create up to five keystores in a service instance for free, including key rings and EP11 keystores. 
+    
+    Each additional key ring or EP11 keystore is charged with a tiered pricing starting at $225 USD per month. For more information about pricing, see [the pricing sample](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs).
 
 
 ## Creating key rings
@@ -62,9 +62,9 @@ Before you create a key ring for your {{site.data.keyword.hscrypto}} instance, k
 Before you can group keys into a key ring, you need to create a key ring first. You can use either the console or the key management service API to create a key ring.
 
 
-You can have up to five key rings for a service instance.
-{: note}
 
+You can create up to five keystores in a service instance for free, including key rings and EP11 keystores. Each additional key ring or EP11 keystore is charged with a tiered pricing starting at $225 USD per month. 
+{: note}
 
 
 ### Creating key rings with the console
@@ -79,9 +79,9 @@ Create a key ring with the console by completing the following steps:
 5. In the **Key management service key rings** table, click **Add key ring**.
 
 
-    If the number of key rings reaches the limit of five, the **Add key ring** button is disabled.
-    {: note}
 
+    You can create up to five keystores in a service instance for free, including key rings and EP11 keystores. Each additional key ring or EP11 keystore is charged with a tiered pricing starting at $225 USD per month. 
+    {: note}
 
 
 6. Enter the **Key ring ID** and click **Add key ring**.
