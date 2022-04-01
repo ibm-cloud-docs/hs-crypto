@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-25"
+lastupdated: "2022-04-01"
 
 keywords: site map, doc structure, information architecture
 
@@ -281,7 +281,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Why {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-why_hpcs)
 
-* [How does {{site.data.keyword.hscrypto}} work?](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-how-hpcs-work)
+* [Why {{site.data.keyword.uko_full_notm}}?](/docs/hs-crypto?topic=hs-crypto-uko-overview#why-uko)
 
 * [Key features](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-key-features)
 
@@ -351,7 +351,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Introducing {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-introduce-uko#introduce-uko)
 
-* [Why {{site.data.keyword.uko_full_notm}}?](/docs/hs-crypto?topic=hs-crypto-introduce-uko#why-uko)
+* [Use case example](/docs/hs-crypto?topic=hs-crypto-introduce-uko#uko-use-case-example)
 
 * [Components](/docs/hs-crypto?topic=hs-crypto-introduce-uko#Components)
 
@@ -430,6 +430,12 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [1 April 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-1april2022)
+
+    * [Updated: Pricing model of the {{site.data.keyword.hscrypto}} standard plan](/docs/hs-crypto?topic=hs-crypto-what-new#update-pricing-model)
+
+    * [Updated: Process of ordering smart cards and smart card readers](/docs/hs-crypto?topic=hs-crypto-what-new#update-smartcard-procurement)
 
 * [25 March 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-25mar2022)
 
@@ -1257,8 +1263,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-delete-vaults#delete-vaults-next)
 
 
-### Managing KMS keys
-{: #sitemap_managing_kms_keys}
+### Managing keys
+{: #sitemap_managing_keys}
 
 
 [Creating and installing managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys)
