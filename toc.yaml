@@ -353,6 +353,7 @@ toc:
           - troubleshooting-list-specific-keys.md
           - troubleshooting-error-CLI-API.md
           - troubleshooting-create-keys.md
+          - troubleshooting-create-standard-keys.md
           - troubleshooting-delete-keys.md
           - troubleshooting-rotate-root-keys.md
           - troubleshooting-delete-instance.md
