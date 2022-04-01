@@ -90,6 +90,9 @@ For more information about {{site.data.keyword.uko_full_notm}}, see [Introducing
 ### Key management service
 {: #uko-key-management}
 
+In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} plan, currently you can manage key management service (KMS) root keys and standard keys only through the API. For more information about the KMS API, see the [KMS API reference](/apidocs/hs-crypto){: external}. 
+{: note}
+
 * **Key lifecycle management**
 
     {{site.data.keyword.hscrypto}} provides a single-tenant key management service to create, import, rotate, and manage keys with the standardized API. After the encryption keys are deleted, you can be assured that your data is no longer retrievable.
@@ -114,6 +117,9 @@ For more information about {{site.data.keyword.uko_full_notm}}, see [Introducing
 * **Cryptographic operations**
 
     {{site.data.keyword.hscrypto}} supports the standard PKCS #11 API and the Enterprise PKCS #11 over gRPC (GREP11) API for cryptographic operations. The operations include generating keys, encrypting and decrypting data, signing data, and verifying signatures. The cryptographic functions are executed in HSMs and can be accessed through APIs to provide hardware-based protection for your applications.
+
+    In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} plan, currently you can perform the cryptographic operations only through the APIs. For more information about the APIs, see the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and the [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+    {: note}
 
 * **Security certification**
 

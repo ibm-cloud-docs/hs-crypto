@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-31"
+lastupdated: "2022-04-01"
 
 keywords: site map, doc structure, information architecture
 
@@ -1263,8 +1263,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-delete-vaults#delete-vaults-next)
 
 
-### Managing KMS keys
-{: #sitemap_managing_kms_keys}
+### Managing keys
+{: #sitemap_managing_keys}
 
 
 [Creating and installing managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys)

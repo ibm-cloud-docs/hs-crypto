@@ -25,6 +25,9 @@ subcollection: hs-crypto
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides the standard PKCS #11 API to access the {{site.data.keyword.hscrypto}} cloud HSM for cryptographic operations.
 {: shortdesc}
 
+In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} plan, currently you can perform the cryptographic operations only through the API. For more information about the API, see the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref).
+{: note}
+
 ## Prerequisites
 {: #uko-prerequisite-pkcs-api}
 

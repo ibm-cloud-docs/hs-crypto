@@ -234,7 +234,7 @@ toc:
               - edit-vaults.md
               - delete-vaults.md
           - topicgroup:
-              label: Managing KMS keys
+              label: Managing keys
               topics:
               - create-managed-keys.md
               - view-key-list.md

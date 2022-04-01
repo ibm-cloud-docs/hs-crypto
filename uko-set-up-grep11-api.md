@@ -25,6 +25,9 @@ subcollection: hs-crypto
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides an Enterprise PKCS #11 (EP11) API over gRPC (also referred to as *GREP11 API*) to remotely access the {{site.data.keyword.hscrypto}} service instance for data encryption and management.
 {: shortdesc}
 
+In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} plan, currently you can perform the cryptographic operations only through the API. For more information about the API, see the [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+{: note}
+
 ## Retrieving your IBM Cloud credentials
 {: #uko-retrieve-grep11-credentials}
 
