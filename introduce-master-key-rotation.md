@@ -50,9 +50,9 @@ The following flow shows how master key rotation works in this mode:
     1. Encryption keys in key storage are decrypted by using the value in the current master key register and then reencrypted by using the value in the new master key register. The rewrapping takes place inside the hardware security module (HSM), so it's secure.
     2. The new master key is activated and loaded to the current master key register in `Valid` state, and the new master key register is cleared and back to `Empty` state.
 
-The following chart illustrates how the master key register state changes during the master key rotation. For detailed instructions, see [Rotating master keys by using key parts](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
+The following chart illustrates how the master key register state changes during the master key rotation. For detailed instructions, see [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
 
-![Rotating master keys by using key part](/images/rotate_master_key.svg "How to rotate a master key by using key part files"){: caption="Figure 1. Rotating master keys by using key parts" caption-side="bottom"}
+![Rotating master keys by using key parts](/images/rotate_master_key.svg "How to rotate a master key by using key part files"){: caption="Figure 1. Rotating master keys by using key parts" caption-side="bottom"}
 
 ### Rotating master keys by using recovery crypto units
 {: #how-master-key-rotation-works-recovery-crypto-unit}
