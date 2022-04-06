@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-04-06"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -50,7 +50,7 @@ The following flow shows how master key rotation works in this mode:
     1. Encryption keys in key storage are decrypted by using the value in the current master key register and then reencrypted by using the value in the new master key register. The rewrapping takes place inside the hardware security module (HSM), so it's secure.
     2. The new master key is activated and loaded to the current master key register in `Valid` state, and the new master key register is cleared and back to `Empty` state.
 
-The following chart illustrates how the master key register state changes during the master key rotation. For detailed instructions, see [Rotating master keys by using key parts](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-key-parts).
+The following chart illustrates how the master key register state changes during the master key rotation. For detailed instructions, see [Rotating master keys by using key parts](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
 
 ![Rotating master keys by using key part](/images/rotate_master_key.svg "How to rotate a master key by using key part files"){: caption="Figure 1. Rotating master keys by using key parts" caption-side="bottom"}
 
@@ -80,5 +80,5 @@ For detailed instructions on how to rotate master keys by using recovery crypto 
 {: #master-key-rotation-next}
 
 For more detailed instructions on options to rotate master keys, see:
-- [Rotating master keys by using key parts](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-key-parts).
+- [Rotating master keys by using key parts](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
 - [Rotating master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit).
