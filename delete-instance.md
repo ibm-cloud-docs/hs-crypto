@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-04-06"
 
 keywords: delete, delete service instance, crypto unit, ibm cloud cli, clear crypto unit, uninstall
 
@@ -46,7 +46,7 @@ If you initialize your service instance and load the [master key](#x2908413){: t
 
 To zeroize the crypto units, enter the password for the administrator signature key to be used when prompted. Make sure that your signature key files are properly saved either on your workstation or on your smart cards. Otherwise, you are not able to perform this action.
 
-After you zeroize the crypto unit, the administrator [signature keys](#x8250375){: term} and the master key are cleared from the crypto unit, which means you are not able to access any data that is protected by the master key, such as the [root keys](#x6946961){: term} and standard keys.
+After you zeroize the crypto unit, the administrator [signature keys](#x8250375){: term} and the master key are cleared from the crypto unit, which means you are not able to access any [root keys](#x6946961){: term} or standard keys that is protected by the master key. Any resources that are associated with the root keys, such as the [Immutable Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-immutable), cannot be accessed. 
 {: important}
 
 ## Step 2: Optional - Uninstall the {{site.data.keyword.hscrypto}} utilities
