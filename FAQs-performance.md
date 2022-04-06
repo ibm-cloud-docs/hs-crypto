@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-06"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -37,10 +37,7 @@ A {{site.data.keyword.hscrypto}} service instance can hold a maximum of 5000 key
 {: #faq-keyrings-number}
 {: faq}
 
-
-
-There is no limit to the number of key rings. However, you can create as many as five keystores, including KMS key rings and EP11 keystores, free of charge. Each additional key ring or EP11 keystore is charged with a tiered pricing starting at $225 USD per month. For more information about pricing, see [the pricing sample](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs).
-
+There is a KMS key ring limit of 50, but there is no GREP11 keystore limit. However, you can create as many as five keystores, including KMS key rings and EP11 keystores, free of charge. Each additional key ring or EP11 keystore is charged with a tiered pricing starting at $225 USD per month. For more information about pricing, see [the pricing sample](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs).
 
 ## Can I add or remove crypto units after I provision a service instance?
 {: #faq-add-remove-crypto-unit}
