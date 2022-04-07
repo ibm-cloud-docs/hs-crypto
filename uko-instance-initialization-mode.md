@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-10"
+lastupdated: "2022-04-07"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -25,9 +25,9 @@ subcollection: hs-crypto
 Depending on your business needs and security requirements, {{site.data.keyword.hscrypto}} provides you with the following three approaches to initializing your service instance.
 {: shortdesc}
 
-- [Initializing service instances by using smart cards and the {{site.data.keyword.hscrypto}} Management Utilities](#instance-initialization-management-utilities)
-- [Initializing service instances by using recovery crypto units](#instance-initialization-recovery-crypto-unit)
-- [Initializing service instances by using key part files](#instance-initialization-key-files)
+- [Initializing service instances by using smart cards and the {{site.data.keyword.hscrypto}} Management Utilities](#uko-instance-initialization-management-utilities)
+- [Initializing service instances by using recovery crypto units](#uko-instance-initialization-recovery-crypto-unit)
+- [Initializing service instances by using key part files](#uko-instance-initialization-key-files)
 
 
 The following table compares the three approaches:

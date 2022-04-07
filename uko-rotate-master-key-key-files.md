@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-07"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -31,7 +31,7 @@ You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.da
 
 Rotating the master key reencrypts the keys in key storage using the new master key value. After the keys in key storage are reencrypted, the value in the new master key register is promoted to the current master key register. Before you start rotating the master key, you need to do the following steps:
 
-- Understand {{site.data.keyword.hscrypto}} concepts, such as [master keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-concept), [master key parts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-part-concept), and [signature keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-key-concept), and understand [how a master key is rotated](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
+- Understand {{site.data.keyword.hscrypto}} concepts, such as [master keys](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-master-key-concept), [master key parts](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-master-key-part-concept), and [signature keys](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-signature-key-concept), and understand [how a master key is rotated](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
 - Assign the **Manager** or **Crypto unit administrator** service access role to perform TKE CLI operations. For more information about the access management, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
 - Configure all crypto units in the service instance the same.
 
@@ -44,7 +44,7 @@ You can rotate your master key only when PKCS #11 keystores are not enabled in y
 Before you start, make sure to do the following steps:
 
 1. Complete the [steps to set up the IBM Cloud CLI with TKE plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite).
-2. Check and make sure that the current master key register is in `Valid` state with [the current master key loaded](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#load-master-keys), the new master key register is empty, and the crypto units of the service instance are not in [imprint mode](/docs/hs-crypto?topic=hs-crypto-understand-concepts#imprint-mode-concept) by running the following command:
+2. Check and make sure that the current master key register is in `Valid` state with [the current master key loaded](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#load-master-keys), the new master key register is empty, and the crypto units of the service instance are not in [imprint mode](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-imprint-mode-concept) by running the following command:
 
     ```
     ibmcloud tke cryptounit-compare

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-07"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -56,7 +56,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
 
     The following template is an example configuration file to provision a {{site.data.keyword.hscrypto}} instance with 2 operational crypto units in the `us-south` region. This instance is charged according to the standard pricing plan and is initialized with 2 administrators. The master key is automatically generated in recovery crypto units that are assigned to the instance. The signature keys are created by using the TKE CLI plug-in and stored in local protected files.
 
-    As recovery crypto units are currently available only in the `us-south` and `us-east` regions, using Terraform to initialize {{site.data.keyword.hscrypto}} instances is supported only in these two regions. For more information about manual initialization, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
+    As recovery crypto units are currently available only in the `us-south` and `us-east` regions, using Terraform to initialize {{site.data.keyword.hscrypto}} instances is supported only in these two regions. For more information about manual initialization, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode).
     {: note}
 
     ```terraform
