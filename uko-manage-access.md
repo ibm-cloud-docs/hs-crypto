@@ -253,7 +253,12 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
 
-## Assigning access to {{site.data.keyword.hscrypto}} in the console
+### Assigning access to {{site.data.keyword.hscrypto}}
+{: #assign-access-iam}
+
+You can assign access to {{site.data.keyword.hscrypto}} through the console, CLI, or API.
+
+### Assigning access to {{site.data.keyword.hscrypto}} in the console
 {: #assign-access-console}
 
 There are two common ways to assign access in the console:
@@ -262,7 +267,7 @@ There are two common ways to assign access in the console:
 * Access groups. Access groups are used to streamline access management by assigning access to a group once, then you can add or remove users as needed from the group to control their access. You manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/account?topic=account-groups&interface=ui#access_ag).
 
 
-## Assigning access to {{site.data.keyword.hscrypto}} in the CLI
+### Assigning access to {{site.data.keyword.hscrypto}} in the CLI
 {: #assign-access-cli}
 
 For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access ro resources by using the CLI](/docs/account?topic=account-assign-access-resources&interface=cli#access-resources-cli). The following example shows a command for assigning the `Writer` role for the service instance:
@@ -275,7 +280,7 @@ ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name hs-crypto --role
 ```
 {: pre}
 
-## Assigning access to {{site.data.keyword.hscrypto}} by using the API
+### Assigning access to {{site.data.keyword.hscrypto}} by using the API
 {: #assign-access-api}
 
 For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the API](/docs/account?topic=account-assign-access-resources&interface=api) or the [Create a policy API docs](/apidocs/iam-policy-management#create-policy). Role cloud resource names (CRN) in the following table are used to assign access with the API.
@@ -505,9 +510,8 @@ fmt.Println(string(b))
 {: go}
 {: codeblock}
 
-## Assigning access to <service_name> by using Terraform
+### Assigning access to {{site.data.keyword.hscrypto}} by using Terraform
 {: #assign-access-terraform}
-{: terraform}
 
 The following example is for assigning the `Writer` role for your service instance:
 
