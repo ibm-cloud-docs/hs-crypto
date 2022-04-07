@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-04-07"
 
 keywords: enable kyok, onboarding hpcs, onboarding hyper protect crypto services, key rotation, key rewrap, dek rewrap
 
@@ -208,7 +208,7 @@ For audit purposes, you can monitor the activity trail of a rotated root key thr
     }
   },
   "target": {
-    "id": "crn:v1:bluemix:public:kms:us-south:a/b3e8ea4428c24cefa34454bd8acccc:dd24cdc0-2c77-40a7-8680-53ccd41d9888:key:d68bf025-e21d-4569-92c0-47bc22aadddd",
+    "id": "crn:v1:bluemix:public:hs-crypto:us-south:a/b3e8ea4428c24cefa34454bd8acccc:dd24cdc0-2c77-40a7-8680-53ccd41d9888:key:d68bf025-e21d-4569-92c0-47bc22aadddd",
     "typeURI": "kms/secrets"
   },
   "observer": {
