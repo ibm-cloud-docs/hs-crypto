@@ -1561,6 +1561,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-roles)
 
+* [Assigning access to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#assign-access-iam)
+
 * [Managing access to multiple instances](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-manage-multiple-instances)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-manage-access-next)

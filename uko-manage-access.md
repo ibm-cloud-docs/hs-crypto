@@ -253,7 +253,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
 
-### Assigning access to {{site.data.keyword.hscrypto}}
+## Assigning access to {{site.data.keyword.hscrypto}}
 {: #assign-access-iam}
 
 You can assign access to {{site.data.keyword.hscrypto}} through the console, CLI, or API.
