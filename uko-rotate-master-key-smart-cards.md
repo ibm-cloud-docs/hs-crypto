@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-07"
+lastupdated: "2022-04-08"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -31,7 +31,7 @@ You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.da
 Rotating the master key reencrypts the keys in key storage by using the new master key value. After the keys in key storage are reencrypted, the value in the new master key register is promoted to the current master key register. Before you start rotating the master key, you need to:
 
 - Understand {{site.data.keyword.hscrypto}} concepts, such as [master keys](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-master-key-concept), [master key parts](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-master-key-part-concept), and [signature keys](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-signature-key-concept), and understand [how a master key is rotated](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
-- Assign the **Manager** or **Crypto unit administrator** service access role to perform the Management Utilities operations. For more information about the access management, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
+- Assign the **Manager** or **Crypto unit administrator** service access role to perform the Management Utilities operations. For more information about the access management, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-uko-manage-access).
 - Configure all crypto units in the service instance the same.
 
 You can rotate your master key only when PKCS #11 keystores are not enabled in your service instance.

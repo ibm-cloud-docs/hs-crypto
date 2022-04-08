@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-06"
+lastupdated: "2022-04-08"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -165,7 +165,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
       </tr>
       <tr>
         <td><em>instance_id</em></td>
-        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. You can get the identifier through <strong>Overview</strong> &gt; <strong>Instance</strong> in the {{site.data.keyword.cloud_notm}} console, or you can retrieve it with the {{site.data.keyword.cloud_notm}} Resource Controller API. For detailed instructions, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
+        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. You can get the identifier through <strong>Overview</strong> &gt; <strong>Instance</strong> in the {{site.data.keyword.cloud_notm}} console, or you can retrieve it with the {{site.data.keyword.cloud_notm}} Resource Controller API. For detailed instructions, see <a href="/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
       </tr>
       <tr>
         <td><em>EP11_endpoint_URL</em></td>
@@ -218,7 +218,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
       <tr>
         <td><em>apikey_for_anonymous_user</em></td>
         <td>
-          The service ID API key that you create for the anonymous user type in the [previous prerequisites step](#prerequisite-pkcs-api).
+          The service ID API key that you create for the anonymous user type in the [previous prerequisites step](#uko-prerequisite-pkcs-api).
         </td>
       </tr>
       <tr>
@@ -245,7 +245,7 @@ After you set up the library and the configuration file, the keystores must be i
 
 After the keystores are initialized, use the PKCS #11 library to call the standard PKCS #11 functions to generate, store, and list keys. For the detailed list of supported PKCS #11 functions, see [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref).
 
-Depending on features and security requirements of your application, pass different service ID API keys that you created in the [previous prerequisites step](#prerequisite-pkcs-api) so that your applications can perform the corresponding operations. For example, if your application needs to delete a keystore, provide the SO user API key. If your application needs to access the private keystore to store new keys, you need to provide the normal user API key. For more information about user access management for the PKCS #11 API, see [Best practices for setting up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access).
+Depending on features and security requirements of your application, pass different service ID API keys that you created in the [previous prerequisites step](#uko-prerequisite-pkcs-api) so that your applications can perform the corresponding operations. For example, if your application needs to delete a keystore, provide the SO user API key. If your application needs to access the private keystore to store new keys, you need to provide the normal user API key. For more information about user access management for the PKCS #11 API, see [Best practices for setting up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access).
 
 If you are running a Java PKCS #11 application on the IBM zSystems (s390x) platform, it is suggested to use the OpenJ9 JVM. You can [download the JVM here](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.8%2B10_openj9-0.21.0/OpenJDK11U-jdk_s390x_linux_openj9_linuxXL_11.0.8_10_openj9-0.21.0.tar.gz){: external}.
 {: note}

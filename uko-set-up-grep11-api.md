@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-04-08"
 
 keywords: set up api, api key, cryptographic operations, use ep11 api, access ep11 api, ep11 over grpc, using api
 
@@ -33,8 +33,8 @@ In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} p
 
 To work with the API, you need to generate your service and authentication credentials. To gather your credentials:
 
-1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-2. [Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token).
+2. [Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID).
 
 ## Generating a GREP11 API request
 {: #uko-form-grep11-api-request}
@@ -197,7 +197,7 @@ In the example, update the following variables:
 
 * Replace `<ibm_cloud_apikey>` with the service ID API key that you created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
 
-* Replace `<instance_ID>` with the instance ID that uniquely identifies your service instance. Retrieve the instance ID by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+* Replace `<instance_ID>` with the instance ID that uniquely identifies your service instance. Retrieve the instance ID by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID).
 
 If the sample request is processed successfully, random data with a length of 16 bytes will be returned, as specified in `ep11.AES_BLOCKSIZE`.
 

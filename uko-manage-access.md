@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-07"
+lastupdated: "2022-04-08"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -31,11 +31,11 @@ The following table shows the roles that {{site.data.keyword.hscrypto}} supports
 
 | Roles | Permissions |
 | ----- | --------------- |
-| Service administrator | Manages [platform access](#platform-mgmt-roles) and [service access](#service-access-roles), [grants access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults), creates and deletes service instances, and manages keys. An {{site.data.keyword.cloud_notm}} account owner is automatically assigned the service administrator permission. |
+| Service administrator | Manages [platform access](#uko-platform-mgmt-roles) and [service access](#uko-service-access-roles), [grants access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults), creates and deletes service instances, and manages keys. An {{site.data.keyword.cloud_notm}} account owner is automatically assigned the service administrator permission. |
 | Crypto unit administrator | Provides signature keys, and signs Trusted Key Entry (TKE) administrative commands such as for adding another crypto unit administrator. In some cases, a crypto unit administrator can also be a master key custodian. |
 | Master key custodian | Provides master key parts for initializing a service instance. In some cases, a master key custodian can also be a crypto unit administrator. |
-| Certificate administrator | Sets up and manages administrator signature keys and client certificates to enable the second layer of TLS authentication in GREP11 or PKCS #11 API connections. The administrator needs to be assigned the Certificate Manager IAM [service access role](#service-access-roles) to perform the corresponding actions. |
-| Service user | Manages root keys and standard keys through user interface and the API, and performs cryptographic operations through the PKCS #11 API or the Enterprise PKCS #11 over gRPC (GREP11) API. Based on the [platform access roles](#platform-mgmt-roles) and [service access roles](#service-access-roles), service users can be further categorized with various permissions. |
+| Certificate administrator | Sets up and manages administrator signature keys and client certificates to enable the second layer of TLS authentication in GREP11 or PKCS #11 API connections. The administrator needs to be assigned the Certificate Manager IAM [service access role](#uko-service-access-roles) to perform the corresponding actions. |
+| Service user | Manages root keys and standard keys through user interface and the API, and performs cryptographic operations through the PKCS #11 API or the Enterprise PKCS #11 over gRPC (GREP11) API. Based on the [platform access roles](#uko-platform-mgmt-roles) and [service access roles](#uko-service-access-roles), service users can be further categorized with various permissions. |
 {: caption="Table 1. Roles and permissions" caption-side="bottom"}
 
 
@@ -547,7 +547,7 @@ If you have multiple {{site.data.keyword.hscrypto}} instances in different accou
 
 3. **Assign access to manage the enterprise and resources**
 
-    Based on the {{site.data.keyword.hscrypto}} IAM [platform roles](#platform-mgmt-roles) and [service roles](#service-access-roles) that are listed, you can assign users respective access to each tier of the enterprise hierarchy. You can also group users or [service IDs](/docs/account?topic=account-serviceids) by defining access groups to streamline the process of assigning access. For more information about assigning access, see [User management for enterprises](/docs/account?topic=account-enterprise-access) and [Managing access to resources](/docs/account?topic=account-assign-access-resources).
+    Based on the {{site.data.keyword.hscrypto}} IAM [platform roles](#uko-platform-mgmt-roles) and [service roles](#uko-service-access-roles) that are listed, you can assign users respective access to each tier of the enterprise hierarchy. You can also group users or [service IDs](/docs/account?topic=account-serviceids) by defining access groups to streamline the process of assigning access. For more information about assigning access, see [User management for enterprises](/docs/account?topic=account-enterprise-access) and [Managing access to resources](/docs/account?topic=account-assign-access-resources).
 
 4. **Use {{site.data.keyword.cloud_notm}} API keys**
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-07"
+lastupdated: "2022-04-08"
 
 keywords: site map, doc structure, information architecture
 
@@ -249,7 +249,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-components)
 
-[Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11_intro#grep11_intro)
+[Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11-intro#grep11-intro)
 
 
 ### About key rotation
@@ -399,7 +399,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-components)
 
-[Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-uko-grep11_intro#uko-grep11_intro)
+[Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro#uko-grep11-intro)
 
 
 ## Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}

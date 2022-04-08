@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-07"
+lastupdated: "2022-04-08"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -31,7 +31,7 @@ With {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}, yo
 
 Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform templates that you can easily install from the {{site.data.keyword.cloud_notm}} catalog.
 
-Before you begin, make sure that you have the [required access](/docs/hs-crypto?topic=hs-crypto-manage-access) to create and work with {{site.data.keyword.hscrypto}} resources.
+Before you begin, make sure that you have the [required access](/docs/hs-crypto?topic=hs-crypto-uko-manage-access) to create and work with {{site.data.keyword.hscrypto}} resources.
 
 ## Example: Provisioning and initializing service instances by using Terraform
 {: #uko-terraform-provision-initialize-instance-hpcs}
