@@ -260,6 +260,7 @@ You can assign access to {{site.data.keyword.hscrypto}} through the console, CLI
 
 ### Assigning access to {{site.data.keyword.hscrypto}} in the console
 {: #assign-access-console}
+{: ui}
 
 There are two common ways to assign access in the console:
 
@@ -269,6 +270,7 @@ There are two common ways to assign access in the console:
 
 ### Assigning access to {{site.data.keyword.hscrypto}} in the CLI
 {: #assign-access-cli}
+{: cli}
 
 For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access ro resources by using the CLI](/docs/account?topic=account-assign-access-resources&interface=cli#access-resources-cli). The following example shows a command for assigning the `Writer` role for the service instance:
 
@@ -276,12 +278,13 @@ Use `<hs-crypto>` for the service name. Also, use quotations around role names t
 {: tip}
 
 ```bash
-ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name hs-crypto --roles "Writer"
+ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name hs-crypto --service-instance <instance-id> --roles "Writer"
 ```
 {: pre}
 
 ### Assigning access to {{site.data.keyword.hscrypto}} by using the API
 {: #assign-access-api}
+{: api}
 
 For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the API](/docs/account?topic=account-assign-access-resources&interface=api) or the [Create a policy API docs](/apidocs/iam-policy-management#create-policy). Role cloud resource names (CRN) in the following table are used to assign access with the API.
 
@@ -512,6 +515,7 @@ fmt.Println(string(b))
 
 ### Assigning access to {{site.data.keyword.hscrypto}} by using Terraform
 {: #assign-access-terraform}
+{: terraform}
 
 The following example is for assigning the `Writer` role for your service instance:
 
