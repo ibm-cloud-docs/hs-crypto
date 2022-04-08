@@ -253,9 +253,12 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
 
+## Assigning access to {{site.data.keyword.hscrypto}}
+{: #assign-access-iam}
 
+You can assign access to {{site.data.keyword.hscrypto}} through the console, CLI, or API.
 
-## Assigning access to {{site.data.keyword.hscrypto}} in the console
+### Assigning access to {{site.data.keyword.hscrypto}} in the console
 {: #assign-access-console}
 {: ui}
 
@@ -265,7 +268,7 @@ There are two common ways to assign access in the console:
 * Access groups. Access groups are used to streamline access management by assigning access to a group once, then you can add or remove users as needed from the group to control their access. You manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/account?topic=account-groups&interface=ui#access_ag).
 
 
-## Assigning access to {{site.data.keyword.hscrypto}} in the CLI
+### Assigning access to {{site.data.keyword.hscrypto}} in the CLI
 {: #assign-access-cli}
 {: cli}
 
@@ -279,7 +282,7 @@ ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name hs-crypto --serv
 ```
 {: pre}
 
-## Assigning access to {{site.data.keyword.hscrypto}} by using the API
+### Assigning access to {{site.data.keyword.hscrypto}} by using the API
 {: #assign-access-api}
 {: api}
 
@@ -510,7 +513,7 @@ fmt.Println(string(b))
 {: go}
 {: codeblock}
 
-## Assigning access to {{site.data.keyword.hscrypto}} by using Terraform
+### Assigning access to {{site.data.keyword.hscrypto}} by using Terraform
 {: #assign-access-terraform}
 {: terraform}
 
