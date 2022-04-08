@@ -1561,7 +1561,13 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-roles)
 
-* [Assigning access to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#assign-access-iam)
+* [Assigning access to {{site.data.keyword.hscrypto}} in the console](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#assign-access-console)
+
+* [Assigning access to {{site.data.keyword.hscrypto}} in the CLI](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#assign-access-cli)
+
+* [Assigning access to {{site.data.keyword.hscrypto}} by using the API](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#assign-access-api)
+
+* [Assigning access to {{site.data.keyword.hscrypto}} by using Terraform](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#assign-access-terraform)
 
 * [Managing access to multiple instances](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-manage-multiple-instances)
 
