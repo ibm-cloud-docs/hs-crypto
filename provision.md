@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-08"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -267,7 +267,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyw
 4. Run the following command to create a {{site.data.keyword.hscrypto}} instance:
 
     ```sh
-    ibmcloud resource service-instance-create <instance_name> hs-crypto standard <region_name> [-p '{"units": <number_of_operational_crypto_units>']
+    ibmcloud resource service-instance-create <instance_name> hs-crypto hpcs-hourly-uko <region_name> [-p '{"units": <number_of_operational_crypto_units>']
     ```
     {: pre}
 
