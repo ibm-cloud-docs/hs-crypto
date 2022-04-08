@@ -58,7 +58,7 @@ Dealing with multiple clouds means dealing with cryptographic keys in multiple k
 - No control over the [master key](#x2908413){: term} in external cloud key management systems
 - Shortage of data centers and skilled staff to operate [hardware security modules (HSMs)](#x6704988){: term} for KYOK or BYOK
 
-{{site.data.keyword.uko_full_notm}} alleviates the complexity of maintaining encryption across hybrid environments. You can integrate all your key management use cases into one consistent approach, backed by a trusted IBM Z HSM. It provides you with the following features:
+{{site.data.keyword.uko_full_notm}} alleviates the complexity of maintaining encryption across hybrid environments. You can integrate all your key management use cases into one consistent approach, backed by a trusted IBM zSystems HSM. It provides you with the following features:
 - Consistent user experience
 - Seamless integration into the existing cloud framework
 - One point of control for multiple keys in multiple clouds 
