@@ -17,6 +17,15 @@ subcollection: hs-crypto
 {:tip: .tip}
 {:note: .note}
 {:external: target="_blank" .external}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
+{:java: .ph data-hd-programlang="java"}
+{:python: .ph data-hd-programlang="python"}
+{:javascript: .ph data-hd-programlang="javascript"}
+{:curl: .ph data-hd-programlang="curl"}
+{:go: .ph data-hd-programlang="go"}
 
 # Managing user access
 {: #uko-manage-access}
