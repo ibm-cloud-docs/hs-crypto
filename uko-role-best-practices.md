@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-08"
 
 keywords: UKO access, UKO account authentication, UKO custom roles, Unified Key Orchestrator
 
@@ -213,9 +213,9 @@ Before users can access {{site.data.keyword.uko_full_notm}} vaults, keystores, o
     - If you want to assign the user access to all the {{site.data.keyword.hscrypto}} instances under your account, select **All resources**.
     - If you want to assign the user access to part of the {{site.data.keyword.hscrypto}} resources under you account, select **Resources based on selected attributes**, and check the corresponding conditions based on your needs. For example, check the **Service Instance ID** and specify the instance from the list.
 
-6. Check the box for at least the **Viewer** role under **Platform access**. For more information about the IAM platform roles, see [Platform access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#platform-mgmt-roles).
+6. Check the box for at least the **Viewer** role under **Platform access**. For more information about the IAM platform roles, see [Platform access roles](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-platform-mgmt-roles).
 
-7. Check the box for the corresponding custom role that you set up in [Step 1](#step1-create-custom-roles-uko) based on your needs.
+7. Check the box for the corresponding custom role that you set up in [Step 1](#uko-step1-create-custom-roles-uko) based on your needs.
 
 8. Click **Add**, and then click **Assign** after confirmation.
 

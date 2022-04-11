@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-08"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -31,7 +31,7 @@ With {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}, yo
 
 Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform templates that you can easily install from the {{site.data.keyword.cloud_notm}} catalog.
 
-Before you begin, make sure that you have the [required access](/docs/hs-crypto?topic=hs-crypto-manage-access) to create and work with {{site.data.keyword.hscrypto}} resources.
+Before you begin, make sure that you have the [required access](/docs/hs-crypto?topic=hs-crypto-uko-manage-access) to create and work with {{site.data.keyword.hscrypto}} resources.
 
 ## Example: Provisioning and initializing service instances by using Terraform
 {: #uko-terraform-provision-initialize-instance-hpcs}
@@ -56,7 +56,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
 
     The following template is an example configuration file to provision a {{site.data.keyword.hscrypto}} instance with 2 operational crypto units in the `us-south` region. This instance is charged according to the standard pricing plan and is initialized with 2 administrators. The master key is automatically generated in recovery crypto units that are assigned to the instance. The signature keys are created by using the TKE CLI plug-in and stored in local protected files.
 
-    As recovery crypto units are currently available only in the `us-south` and `us-east` regions, using Terraform to initialize {{site.data.keyword.hscrypto}} instances is supported only in these two regions. For more information about manual initialization, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
+    As recovery crypto units are currently available only in the `us-south` and `us-east` regions, using Terraform to initialize {{site.data.keyword.hscrypto}} instances is supported only in these two regions. For more information about manual initialization, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode).
     {: note}
 
     ```terraform

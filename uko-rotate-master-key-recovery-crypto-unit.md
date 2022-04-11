@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-06"
+lastupdated: "2022-04-08"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -29,7 +29,7 @@ To rotate the master key by using recovery crypto units, follow these steps. In 
 
 When master key rotation is taking place, you are temporarily not able to access your keystore. To learn how master key rotation works, see [the introduction to the master key rotation](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
 
-Make sure that you are assigned the **Manager** or **Crypto unit administrator** service access role to perform TKE CLI operations. For more information about the access management, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
+Make sure that you are assigned the **Manager** or **Crypto unit administrator** service access role to perform TKE CLI operations. For more information about the access management, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-uko-manage-access).
 
 Use the `ibmcloud tke auto-mk-rotate` command to rotate your master key only when you have recovery crypto units set up and PKCS #11 keystores are not enabled in your service instance. Otherwise, see [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-key-part) for instructions. For the recovery crypto unit supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 {: important}

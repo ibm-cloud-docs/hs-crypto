@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-08"
 
 keywords: site map, doc structure, information architecture
 
@@ -249,7 +249,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-components)
 
-[Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11_intro#grep11_intro)
+[Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11-intro#grep11-intro)
 
 
 ### About key rotation
@@ -399,7 +399,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-components)
 
-[Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-uko-grep11_intro#uko-grep11_intro)
+[Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro#uko-grep11-intro)
 
 
 ## Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}
@@ -1560,6 +1560,14 @@ Find what you are looking for in the compilation of topics that are available in
 [Managing user access](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-manage-access)
 
 * [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-roles)
+
+* [Assigning access to {{site.data.keyword.hscrypto}} in the console](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#assign-access-console)
+
+* [Assigning access to {{site.data.keyword.hscrypto}} in the CLI](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#assign-access-cli)
+
+* [Assigning access to {{site.data.keyword.hscrypto}} by using the API](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#assign-access-api)
+
+* [Assigning access to {{site.data.keyword.hscrypto}} by using Terraform](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#assign-access-terraform)
 
 * [Managing access to multiple instances](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-manage-multiple-instances)
 

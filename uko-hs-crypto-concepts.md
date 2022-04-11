@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-10"
+lastupdated: "2022-04-08"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -29,12 +29,12 @@ Before you can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to
 ## Key management service
 {: #uko-key-management-concepts}
 
-Learn concepts that are related to the {{site.data.keyword.hscrypto}} [key management feature](/docs/hs-crypto?topic=hs-crypto-overview#key-management) to manage encryption keys. The list starts with the most fundamental concepts.
+Learn concepts that are related to the {{site.data.keyword.hscrypto}} [key management feature](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-key-management) to manage encryption keys. The list starts with the most fundamental concepts.
 
 ### Root keys
 {: #uko-root-key-concept}
 
-Root keys, also known as customer root keys (CRKs), are primary resources in {{site.data.keyword.hscrypto}}. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other data encryption keys (DEKs) that are stored in a data service. With {{site.data.keyword.hscrypto}}, you can create, store, and manage the lifecycle of root keys. Root keys that are created in {{site.data.keyword.hscrypto}} are symmetric 256-bit AES keys. Unlike a standard key, a root key can never leave the bounds of the {{site.data.keyword.hscrypto}} service. To learn more, see [Introduction to envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) and [Manage your keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys).
+Root keys, also known as customer root keys (CRKs), are primary resources in {{site.data.keyword.hscrypto}}. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other data encryption keys (DEKs) that are stored in a data service. With {{site.data.keyword.hscrypto}}, you can create, store, and manage the lifecycle of root keys. Root keys that are created in {{site.data.keyword.hscrypto}} are symmetric 256-bit AES keys. Unlike a standard key, a root key can never leave the bounds of the {{site.data.keyword.hscrypto}} service. To learn more, see [Introduction to envelope encryption](/docs/hs-crypto?topic=hs-crypto-uko-envelope-encryption) and [Manage your keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys).
 
 ### Standard keys
 {: #uko-standard-key-concept}
@@ -44,12 +44,12 @@ Standard keys are another resources in {{site.data.keyword.hscrypto}} to directl
 ### Data encryption keys
 {: #uko-dek-concept}
 
-Data encryption keys (DEKs) are cryptographic keys that you use for data encryption. They are provided by user-owned applications and are used to encrypt data stored in applications. Root keys that you manage in {{site.data.keyword.hscrypto}} serve as wrapping keys to protect DEKs. To learn more, see [Introduction to envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
+Data encryption keys (DEKs) are cryptographic keys that you use for data encryption. They are provided by user-owned applications and are used to encrypt data stored in applications. Root keys that you manage in {{site.data.keyword.hscrypto}} serve as wrapping keys to protect DEKs. To learn more, see [Introduction to envelope encryption](/docs/hs-crypto?topic=hs-crypto-uko-envelope-encryption).
 
 ### Envelope encryption
 {: #uko-envelope-encryption-concept}
 
-Envelope encryption is the practice of encrypting data with a DEK and then encrypting the DEK with a root key that you can fully manage. To learn more, see [Introduction to envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
+Envelope encryption is the practice of encrypting data with a DEK and then encrypting the DEK with a root key that you can fully manage. To learn more, see [Introduction to envelope encryption](/docs/hs-crypto?topic=hs-crypto-uko-envelope-encryption).
 
 
 
@@ -59,7 +59,7 @@ Envelope encryption is the practice of encrypting data with a DEK and then encry
 ## Cloud hardware security module
 {: #uko-cloud-hsm-concepts}
 
-This section covers concepts that are related to {{site.data.keyword.hscrypto}} [Cloud Hardware Security Module (HSM) feature](/docs/hs-crypto?topic=hs-crypto-overview#cloud-hsm). The list starts with the most fundamental concepts.
+This section covers concepts that are related to {{site.data.keyword.hscrypto}} [Cloud Hardware Security Module (HSM) feature](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-cloud-hsm). The list starts with the most fundamental concepts.
 
 ### Hardware security module
 {: #uko-hsm-concept}
@@ -79,7 +79,7 @@ A crypto unit is a single unit that represents an HSM and the corresponding soft
 
     If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`), two recovery crypto units are automatically assigned to your service instance without extra costs. A recovery crypto unit is used to generate the random master key which is then securely exported to operational crypto units and the other recovery crypto unit to [initialize the service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit).
 
-    Recovery crypto units can also be used as backup crypto units that save a copy of the master key value used by the operational crypto units. If the master key is lost or destroyed, you can [recover the master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit) using signed TKE administrative commands.
+    Recovery crypto units can also be used as backup crypto units that save a copy of the master key value used by the operational crypto units. If the master key is lost or destroyed, you can [recover the master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-uko-recover-master-key-recovery-crypto-unit) using signed TKE administrative commands.
 
     If smart cards are used to load the master key, the recovery crypto units are not applicable and can be ignored. The backup of the master key relies on the backup of the smart cards in that case.
     {: note}
@@ -91,17 +91,17 @@ A crypto unit is a single unit that represents an HSM and the corresponding soft
 ### Administrators
 {: #uko-admin-concept}
 
-Administrators can be added to the target crypto units for issuing commands to the crypto units. You can add up to eight administrators to one crypto unit to increase security. Each administrator owns one private [signature key](#signature-key-concept) for identity authentication.
+Administrators can be added to the target crypto units for issuing commands to the crypto units. You can add up to eight administrators to one crypto unit to increase security. Each administrator owns one private [signature key](#uko-signature-key-concept) for identity authentication.
 
 ### Signature keys
 {: #uko-signature-key-concept}
 
-An administrator must sign any commands that are issued to the crypto unit with a signature key. The signature keys that are created in {{site.data.keyword.hscrypto}} are P521 Elliptic Curve (EC) keys. The private part of the signature key is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. Commands issued in [imprint mode](#imprint-mode-concept) do not need to be signed with any signature keys.
+An administrator must sign any commands that are issued to the crypto unit with a signature key. The signature keys that are created in {{site.data.keyword.hscrypto}} are P521 Elliptic Curve (EC) keys. The private part of the signature key is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. Commands issued in [imprint mode](#uko-imprint-mode-concept) do not need to be signed with any signature keys.
 
 ### Imprint mode
 {: #uko-imprint-mode-concept}
 
-Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start in a cleared state that is known as *imprint mode*. Most crypto unit operations are disabled in imprint mode, and a crypto unit in imprint mode is not secure. You can add administrators in imprint mode and exit imprint mode by using a signed command. After the crypto unit exits imprint mode, all commands to configure a crypto unit must be signed. You must exit imprint mode before you can load [master keys](#master-key-concept).
+Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start in a cleared state that is known as *imprint mode*. Most crypto unit operations are disabled in imprint mode, and a crypto unit in imprint mode is not secure. You can add administrators in imprint mode and exit imprint mode by using a signed command. After the crypto unit exits imprint mode, all commands to configure a crypto unit must be signed. You must exit imprint mode before you can load [master keys](#uko-master-key-concept).
 
 ### Quorum authentication
 {: #uko-quorum-authenticaion-concept}
@@ -125,7 +125,7 @@ The master key, also known as HSM master key, is used to encrypt the service ins
 ### Master key part
 {: #uko-master-key-part-concept}
 
-If you initialize your service instance using key part files, or using smart cards together with the Management Utilities, a master key is composed of two or three master key parts. Master key parts that are created in {{site.data.keyword.hscrypto}} are symmetric 256-bit AES keys. For security considerations, each key part can be owned by a different person. Key parts are stored in workstation key part files when the [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](#tke-concept) is used to load the master key. Key parts are stored on [smart cards](#smart-card-concept) when the [{{site.data.keyword.hscrypto}} Management Utilities](#management-utilities-concept) are used to load the master key. The key part owner needs to be the only person who knows the file password or the smart card personal identification number (PIN) for the key part.
+If you initialize your service instance using key part files, or using smart cards together with the Management Utilities, a master key is composed of two or three master key parts. Master key parts that are created in {{site.data.keyword.hscrypto}} are symmetric 256-bit AES keys. For security considerations, each key part can be owned by a different person. Key parts are stored in workstation key part files when the [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](#uko-tke-concept) is used to load the master key. Key parts are stored on [smart cards](#uko-smart-card-concept) when the [{{site.data.keyword.hscrypto}} Management Utilities](#uko-management-utilities-concept) are used to load the master key. The key part owner needs to be the only person who knows the file password or the smart card personal identification number (PIN) for the key part.
 
 ### {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in
 {: #uko-tke-concept}
@@ -186,7 +186,7 @@ The Cryptographic Token Interface defined in the PKCS #11 standard. Cryptoki fol
 ### PKCS #11 library
 {: #uko-pkcs11-library-concept}
 
-A PKCS #11 library that implements the Cryptoki API functions that are specified in the PKCS #11 standard. With the PKCS #11 library, your applications can use the PKCS #11 API to access the {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations. To learn more about how to set up the library, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
+A PKCS #11 library that implements the Cryptoki API functions that are specified in the PKCS #11 standard. With the PKCS #11 library, your applications can use the PKCS #11 API to access the {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations. To learn more about how to set up the library, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api).
 
 ### Cryptoki token
 {: #uko-cryptoki-token-concept}
@@ -196,12 +196,12 @@ The logical view of a cryptographic device that is defined by Cryptoki. For more
 ### Cryptoki session
 {: #uko-cryptoki-session-concept}
 
-A logical connection between an application and a token. Cryptoki requires that an application open one or more sessions with a token to gain access to the objects and functions of the token. A session can be a read/write (R/W) session or a read-only (R/O) session. For more information, see [Introducing PKCS #11 - Session](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-session-intro).
+A logical connection between an application and a token. Cryptoki requires that an application open one or more sessions with a token to gain access to the objects and functions of the token. A session can be a read/write (R/W) session or a read-only (R/O) session. For more information, see [Introducing PKCS #11 - Session](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-session-intro).
 
 ### Cryptoki object
 {: #uko-cryptoki-object-concept}
 
-An item that is stored on a token. An object can be data, a certificate, or a key. A data object is defined by an application. A certificate object stores a certificate. A key object stores a cryptographic key. Each characteristic of the object is defined in an *attribute*. For more information, see [Introducing PKCS #11 - Key object](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-object-intro).
+An item that is stored on a token. An object can be data, a certificate, or a key. A data object is defined by an application. A certificate object stores a certificate. A key object stores a cryptographic key. Each characteristic of the object is defined in an *attribute*. For more information, see [Introducing PKCS #11 - Key object](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-object-intro).
 
 ### Mechanism
 {: #uko-mechanism-concept}
@@ -211,7 +211,7 @@ A process for implementing a cryptographic operation.
 ### Enterprise PKCS #11
 {: #uko-ep11-concept}
 
-Enterprise PKCS #11 (EP11) is designed for customers that are seeking support for open standards and enhanced security. The EP11 library provides a stateless interface, which is similar to the industry-standard PKCS #11 API. The HSM that crypto units run on supports EP11 library, so users can call EP11 API through [gRPC](#grpc-concept) for their own key management and data encryption. For more information, see [Enterprise PKCS #11 (EP11) Library structure document](https://www.ibm.com/security/cryptocards/pciecc4/library){: external}.
+Enterprise PKCS #11 (EP11) is designed for customers that are seeking support for open standards and enhanced security. The EP11 library provides a stateless interface, which is similar to the industry-standard PKCS #11 API. The HSM that crypto units run on supports EP11 library, so users can call EP11 API through [gRPC](#uko-grpc-concept) for their own key management and data encryption. For more information, see [Enterprise PKCS #11 (EP11) Library structure document](https://www.ibm.com/security/cryptocards/pciecc4/library){: external}.
 
 ### gRPC
 {: #uko-grpc-concept}
@@ -221,7 +221,7 @@ gRPC is a modern open source high performance remote procedure call (RPC) framew
 ### Enterprise PKCS #11 over gRPC
 {: #uko-grep11-concept}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of the Enterprise PKCS #11 (EP11) over [gRPC](https://grpc.io){: external} API calls (also referred to as GREP11), with which all the Crypto functions are executed in a cloud HSM. EP11 over gRPC is a stateless interface for cryptographic operations on cloud. For more information about the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11_intro) and [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of the Enterprise PKCS #11 (EP11) over [gRPC](https://grpc.io){: external} API calls (also referred to as GREP11), with which all the Crypto functions are executed in a cloud HSM. EP11 over gRPC is a stateless interface for cryptographic operations on cloud. For more information about the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro) and [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
 
 ## {{site.data.keyword.uko_full_notm}}

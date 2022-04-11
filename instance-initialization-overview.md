@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-04-07"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -42,7 +42,7 @@ To issue commands for crypto units to perform actions, you need to assign admini
 
 Signature keys are created and assigned by following this procedure:
 
-1. The administrator creates the signature key pairs. The private and public key parts are stored on your local workstation or smart card depending on [how you initialize your service instance](#how-to-initialize-instance).
+1. The administrator creates the signature key pairs. The private and public key parts are stored on your local workstation or smart card depending on how you initialize your service instance.
 2. The administrator is added by assigning the public signature key part to the crypto unit. The public key part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator.
 
 ## Understanding imprint mode and signature thresholds

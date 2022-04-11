@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-10"
+lastupdated: "2022-04-08"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -25,9 +25,9 @@ subcollection: hs-crypto
 Depending on your business needs and security requirements, {{site.data.keyword.hscrypto}} provides you with the following three approaches to initializing your service instance.
 {: shortdesc}
 
-- [Initializing service instances by using smart cards and the {{site.data.keyword.hscrypto}} Management Utilities](#instance-initialization-management-utilities)
-- [Initializing service instances by using recovery crypto units](#instance-initialization-recovery-crypto-unit)
-- [Initializing service instances by using key part files](#instance-initialization-key-files)
+- [Initializing service instances by using smart cards and the {{site.data.keyword.hscrypto}} Management Utilities](#uko-instance-initialization-management-utilities)
+- [Initializing service instances by using recovery crypto units](#uko-instance-initialization-recovery-crypto-unit)
+- [Initializing service instances by using key part files](#uko-instance-initialization-key-files)
 
 
 The following table compares the three approaches:
@@ -131,7 +131,7 @@ If your service instance has recovery crypto units, you can load the master key 
 
 You can also use the TKE CLI plug-in to load the master key using key parts stored in key part files. This approach can be taken regardless of whether your service instance has any recovery crypto units. Using this approach, you run a series of commands to generate signature keys and master key parts, add administrators, set the signature thresholds, and load the master key registers. For more information, see [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
-You need to be assigned the appropriate role to perform TKE CLI plug-in operations. For more information about the available service access roles, see [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
+You need to be assigned the appropriate role to perform TKE CLI plug-in operations. For more information about the available service access roles, see [Service access roles](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles).
 
 For a complete list of commands available in the TKE CLI plug-in, see [{{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin).
 
@@ -152,7 +152,7 @@ The sole purpose of the recovery crypto units is to save a backup copy of the ma
 Currently, only the `us-south` and `us-east` regions are enabled with the recovery crypto units, which means, when a service instance is provisioned in either region, you are by default enabled with the option to back up your master keys in the recovery crypto units located in both regions. For more information about supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 {: note}
 
-For detailed instructions on recovering the master key, see [Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit).
+For detailed instructions on recovering the master key, see [Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-uko-recover-master-key-recovery-crypto-unit).
 
 ## Initializing service instances by using key part files
 {: #uko-instance-initialization-key-files}
@@ -162,7 +162,7 @@ You can also initialize your service instance by using master key parts that you
 ### Understanding master key parts
 {: #uko-understand-master-key-parts}
 
-In this approach, the master key is composed of several master key parts that you need to use the TKE CLI plug-in to create. For security considerations, each key part can be owned by a different person called [master key custodian](/docs/hs-crypto?topic=hs-crypto-manage-access#roles). Key parts are stored in workstation files and are protected by password. The master key custodian needs to make sure that the key files are properly saved and no one else knows the password.
+In this approach, the master key is composed of several master key parts that you need to use the TKE CLI plug-in to create. For security considerations, each key part can be owned by a different person called [master key custodian](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-roles). Key parts are stored in workstation files and are protected by password. The master key custodian needs to make sure that the key files are properly saved and no one else knows the password.
 
 The TKE CLI plug-in provides a series of commands to complete the initialization, including creating signature keys and master key parts, adding administrators, and loading the master key. For detailed steps, see [Initializing service instances by using key part files](https://test.cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 

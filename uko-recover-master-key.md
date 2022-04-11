@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-04-07"
 
 keywords: master key, restore master key, master key backup, recovery crypto unit, master key recover
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 # Recovering a master key from a recovery crypto unit
 {: #uko-recover-master-key-recovery-crypto-unit}
 
-If your service instance includes [recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-recovery-crypto-unit), the current master key value in a recovery crypto unit can be used as a backup value for your operational crypto units. If you initialize service instances by using recovery crypto units (with the `ibmcloud tke auto-init` command) or rotate master keys using recovery crypto units (with the `ibmcloud tke auto-mk-rotate` command), this is the only backup value of the master key that exists for your service instance.
+If your service instance includes [recovery crypto units](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-understand-recovery-crypto-unit), the current master key value in a recovery crypto unit can be used as a backup value for your operational crypto units. If you initialize service instances by using recovery crypto units (with the `ibmcloud tke auto-init` command) or rotate master keys using recovery crypto units (with the `ibmcloud tke auto-mk-rotate` command), this is the only backup value of the master key that exists for your service instance.
 {: shortdesc}
 
 The value in the current master key register of a recovery crypto unit can be securely transferred to other current master key registers in service instances that are assigned to the current resource group by using the `ibmcloud tke auto-mk-recover` command.

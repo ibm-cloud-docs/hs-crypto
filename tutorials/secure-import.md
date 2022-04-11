@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-04"
+lastupdated: "2022-04-08"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -397,7 +397,7 @@ To import the encrypted key:
     ```
     {: pre}
 
-2. Store the encrypted skey in your {{site.data.keyword.hscrypto}} service instance.
+2. Store the encrypted key in your {{site.data.keyword.hscrypto}} service instance.
 
     - **Use the API**:
 
@@ -471,7 +471,14 @@ To import the encrypted key:
     ```
     {: screen}
 
-    The `id` value is a unique identifier that is assigned to your key and is used for subsequent calls to the key management service API. The `state` value set to 1 indicates that your key is now in the [_Active_ key state](/docs/hs-crypto?topic=hs-crypto-key-states). The `crn` value provides the full scoped path to the key that specifies where the resource resides within {{site.data.keyword.cloud_notm}}. Finally, the `extractable` and `imported` values describe this resource as a root key that you imported to the service.
+    - The `id` value is a unique identifier that is assigned to your key and is used for subsequent calls to the key management service API. 
+    
+    - The `state` value set to 1 indicates that your key is now in the [_Active_ key state](/docs/hs-crypto?topic=hs-crypto-key-states). 
+    
+    - The `crn` value provides the full scoped path to the key that specifies where the resource resides within {{site.data.keyword.cloud_notm}}. 
+    
+    - Finally, the `extractable` and `imported` values describe this resource as a root key that you imported to the service. When you set the `extractable` attribute to `true`, the service designates the key as a standard key that you can store in your apps or services. Otherwise, when you set the `extractable` attribute to `false`, the service designates the key as a root key.
+
 
 4. Optional: Navigate to the {{site.data.keyword.hscrypto}} dashboard to view and manage your key.
 

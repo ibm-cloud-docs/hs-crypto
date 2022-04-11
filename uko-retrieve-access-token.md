@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-08"
 
 keywords: access token, api key, iam token, generate access token, generate iam token, get access token, iam token api, token cli
 
@@ -123,7 +123,7 @@ You can also retrieve your access token programmatically by using an [API key](/
 
 4. [Assign the user or the service ID the appropriate access](/docs/account?topic=account-assign-access-resources) to your {{site.data.keyword.hscrypto}} instance based on your access policy.
 
-    To learn how the IAM access roles map to specific {{site.data.keyword.hscrypto}} service actions, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).
+    To learn how the IAM access roles map to specific {{site.data.keyword.hscrypto}} service actions, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-roles).
     {: tip}
 
 5. Call the [IAM Identity Services API](/apidocs/iam-identity-token-api#gettoken-apikey) to retrieve your access token.

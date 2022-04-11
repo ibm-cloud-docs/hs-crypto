@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-07"
 
 keywords: get key, get encryption key, view encryption key, retrieve encryption key, API examples
 
@@ -179,7 +179,7 @@ material.
                 "state": 1,
                 "expirationDate": "2020-03-15T03:50:12Z",
                 "extractable": true,
-                "crn": "crn:v1:bluemix:public:kms:us-south:a/f047b55a3362ac06afad8a3f2f5586ea:12e8c9c2-a162-472d-b7d6-8b9a86b815a6:key:02fd6835-6001-4482-a892-13bd2085f75d",
+                "crn": "crn:v1:bluemix:public:hs-crypto:us-south:a/f047b55a3362ac06afad8a3f2f5586ea:12e8c9c2-a162-472d-b7d6-8b9a86b815a6:key:02fd6835-6001-4482-a892-13bd2085f75d",
                 "imported": false,
                 "creationDate": "2020-03-12T03:50:12Z",
                 "createdBy": "...",
@@ -221,7 +221,7 @@ material.
                 "name": "test-root-key",
                 "state": 1,
                 "extractable": false,
-                "crn": "crn:v1:bluemix:public:kms:us-south:a/f047b55a3362ac06afad8a3f2f5586ea:30372f20-d9f1-40b3-b486-a709e1932c9c:key:2291e4ae-a14c-4af9-88f0-27c0cb2739e2",
+                "crn": "crn:v1:bluemix:public:hs-crypto:us-south:a/f047b55a3362ac06afad8a3f2f5586ea:30372f20-d9f1-40b3-b486-a709e1932c9c:key:2291e4ae-a14c-4af9-88f0-27c0cb2739e2",
                 "imported": false,
                 "creationDate": "2020-03-05T16:28:38Z",
                 "createdBy": "...",

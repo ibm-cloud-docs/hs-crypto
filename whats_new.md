@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-06"
+lastupdated: "2022-04-08"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -372,7 +372,7 @@ Added: {{site.data.keyword.hscrypto}} Cloud HSM now supports EP11 cryptographic 
 
     {{site.data.keyword.hscrypto}} provides a set of Enterprise PKCS #11 (EP11) over gRPC API calls (also referred to as *GREP11*), with which, all the Crypto functions are executed in HSM on cloud. GREP11 is a stateless interface for cloud programs.
 
-    For more information about the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11_intro) and [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+    For more information about the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11-intro) and [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
 Added: {{site.data.keyword.hscrypto}} expands into the Frankfurt region {: #added-frankfurt-region}
 :   You can now create {{site.data.keyword.hscrypto}} resources in the Frankfurt region. For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-07"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 
@@ -264,10 +264,10 @@ For the following TKE events, some specific fields indicate more information.
 #### Set the signature thresholds
 {: #uko-tke-set-threshold-success}
 
-- The `requestData.signatureThreshold` field includes the [main signature threshold](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept) that you set on the crypto unit.
-- The `requestData.revocationSignatureThreshold` field includes the [revocation signature threshold](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept) that you set on the crypto unit.
-- The `responseData.signatureThreshold` field includes the [main signature threshold](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept) that is successfully set on the crypto unit.
-- The `responseData.revocationSignatureThreshold` field includes the [revocation signature threshold](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept) that is successfully set on the crypto unit.
+- The `requestData.signatureThreshold` field includes the [main signature threshold](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-signature-thresholds-concept) that you set on the crypto unit.
+- The `requestData.revocationSignatureThreshold` field includes the [revocation signature threshold](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-signature-thresholds-concept) that you set on the crypto unit.
+- The `responseData.signatureThreshold` field includes the [main signature threshold](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-signature-thresholds-concept) that is successfully set on the crypto unit.
+- The `responseData.revocationSignatureThreshold` field includes the [revocation signature threshold](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-signature-thresholds-concept) that is successfully set on the crypto unit.
 
 #### Load the new master key register
 {: #uko-tke-load-new-master-success}
@@ -406,7 +406,7 @@ Failed TKE events have an `outcome` of `failure`. The `reason.reasonType` and `r
 
 If the event has a `reason.reasonCode` of `400`, the action cannot be completed because the operation to the crypto units is not supported or is not valid. Check whether the TKE command that you use is valid by referring to the [TKE CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin){: external}.
 
-If the event has a `reason.reasonCode` of `401` or `403`, the action cannot be completed because your access token is not valid or does not have the necessary permissions to access this instance. [Refresh your access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token) and check whether you have [appropriate permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to perform the corresponding actions.
+If the event has a `reason.reasonCode` of `401` or `403`, the action cannot be completed because your access token is not valid or does not have the necessary permissions to access this instance. [Refresh your access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token) and check whether you have [appropriate permissions](/docs/hs-crypto?topic=hs-crypto-uko-manage-access) to perform the corresponding actions.
 
 If the event has a `reason.reasonCode` of `500`, check out the value of `reason.reasonForFailure` to identify the reasons of failure and the corresponding actions that you need to take.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-07"
 
 keywords: hyper protect crypto services architecture, service architecture, architecture diagram, workload isolation, crypto units, secure service container, ssc, public isolation for hyper protect crypto services, compute isolation for hyper protect crypto services
 
@@ -72,7 +72,7 @@ Failover crypto unit
     Currently, failover crypto units are available only in the region of Dallas (`us-south`) and Washington DC (`us-east`). If you create your instance in either of the two regions, you can choose whether to enable the failover crypto units with [extra charges](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
     {: note}
 
-For more information about the {{site.data.keyword.hscrypto}} components, see [Components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).
+For more information about the {{site.data.keyword.hscrypto}} components, see [Components and concepts](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts).
 
 ## {{site.data.keyword.hscrypto}} workload isolation
 {: #uko-workload-isolation}
