@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-12"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -103,4 +103,10 @@ EKMF Web is an on-premises product for IBM Z14 or Z15 environments, running z/OS
 {: faq}
 
 Yes. You can choose a data center within your required data residency region and use {{site.data.keyword.uko_full_notm}} in any regions where {{site.data.keyword.hscrypto}} is available. Note that your encryption keys is managed in the regions where your {{site.data.keyword.hscrypto}} instances are available.
+
+## How many keystores can be created for an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}?
+{: #faq-uko-keystore-number}
+{: faq}
+
+There is an internal KMS keystore limit of 50, but there is no external keystore limit. The first five internal keystores and the very first external keystore are free of charge. Each additional internal or external keystore is charged with a tiered pricing starting at $225 USD per month. For keystores that are created or connected less than a month, the cost is prorated based on actual days within the month. For more information about pricing, see [the pricing sample](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs-uko).
 

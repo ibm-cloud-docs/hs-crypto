@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-12"
 
 keywords: site map, doc structure, information architecture
 
@@ -1322,11 +1322,11 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_managing_keystores}
 
 
-[Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores)
+[Creating internal KMS keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores)
 
-* [Creating internal keystores through the UI](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-ui)
+* [Creating internal KMS keystores through the UI](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-ui)
 
-* [Creating internal keystores with the API](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-api)
+* [Creating internal KMS keystores with the API](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-next)
 
@@ -1882,6 +1882,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What multizone regions is {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} available in?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-mzr)
 
 * [Can I still use {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} for key management even if {{site.data.keyword.hscrypto}} is not available in the {{site.data.keyword.cloud_notm}} region that my service resides in?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-region)
+
+* [How many keystores can be created for an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-keystore-number)
 
 [FAQs: Security and compliance](/docs/hs-crypto?topic=hs-crypto-faq-security-compliance#faq-security-compliance)
 
