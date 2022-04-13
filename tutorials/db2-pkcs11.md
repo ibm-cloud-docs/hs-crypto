@@ -166,9 +166,8 @@ tokens:
         # The name for the anonymous user. For example: "Anonymous":
         name: "Anonymous"
         # The public keystore will not be used with this setup.
-        # As this property is syntactically required specify an arbitrary 128-bit UUID here
-        # (it will not be used during runtime), e.g.:
-        tokenspaceID: "ac5f8f38-1a26-468f-9a0b-7d6189012d0b"
+        # Specify an arbitrary 128-bit UUID here (it will not be used during runtime), e.g.:
+        tokenspaceID: "00000000-0000-0000-0000-000000000000"
         iamauth:
           <<: *defaultiamcredential
           # Provide the API key for the Anonymous user.
