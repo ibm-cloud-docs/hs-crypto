@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-29"
+lastupdated: "2022-04-13"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -63,7 +63,7 @@ Complete the following steps to order smart cards:
 
 ### Ordering smart card readers
 
-The supported smart card reader type is SPR332 v2.0 Secure Class 2 PIN Pad Reader (part number 905127-1). The following are a few third-party online shops where you can order a smart card reader. The deliver policy might vary depending on your geographical locations:
+You need to order two smart card readers `Identiv SPR332 v2.0 Secure Class 2 PIN Pad Reader` (part number 905127-1), from third-party online shops. For example, the following list contains a few online shopping sites where the required smart card readers are available. The deliver policy might vary depending on your geographical locations:
 
 * [Identiv](https://shop.identiv.com/products/spr332-v2-0-secure-class-2-pin-pad-reader){: external}
 * [Digifeat](https://digifeat.com/product/spr332-v2-0/){: external}
