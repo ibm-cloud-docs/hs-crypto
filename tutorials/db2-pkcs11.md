@@ -77,9 +77,22 @@ To complete this solution, let's walk through the following steps:
 
     Note down the ID of your {{site.data.keyword.hscrypto}} instance and the EP11 endpoint address. You need this information for the subsequent steps.
 
-2. [Setup the required PKCS #11 user types](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access): Follow the instructions to setup the service IDs for the SO user and the normal user and create API keys for these service IDs. Note that the Anonymous user type which is mentioned in the instructions is not required for the subsequent steps.
+2. Create a custom IAM role `List Server`. This role provides a very limited basic permission to discover your {{site.data.keyword.hscrypto}} instance. This role does not have permissions to use, create or manage keys or EP11 keystores.
+    - In the IBM Cloud console, go to Manage > Access (IAM), and select Roles.
+    - Click Create.
+    - Enter the name `List Server` for your role.
+    - Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `ListServer`
+    - Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the console when a user assigns access to the service.
+    - From the list of services, select Hyper Protect Crypto Services.
+    - Select Add for the following action:
+        - hs-crypto.discovery.listservers
+    - Click Create when you're done adding actions.
 
-3. Save the value of the API keys for the SO user and the normal user for subsequent steps.
+3. [Setup the PKCS #11 Normal user](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access): Follow the instructions to setup the service IDs and API keys for the normal user and anonymous user. Do not setup the SO user type mentioned in the instructions. In contrast to the [instructions for assigning an IAM Role to the anonymous user service ID](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#3-assign-the-custom-roles-to-the-anonymous-user-service-id), do not assign the anonymous user service ID the `Key operator` custom role, but assign the `List Server` custom role instead. With this setup, the anonymous user has only very limited permissions on your {{site.data.keyword.hscrypto}} instance.
+
+4. Save the value of the API keys for the normal user and the anonymous user for subsequent steps.
+
+5. Follow the [instructions](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui#create-ep11-keystore-ui) to create a private EP11 keystore and note the keystore ID for subsequent steps.
 
 ## Set up the {{site.data.keyword.hscrypto}} PKCS #11 library
 {: #tutorial-db2-pkcs11-setup}
@@ -113,6 +126,8 @@ Adapt the following file template and name the file `grep11client.yaml`:
 
 - Replace `<instance_id>` with the ID of your {{site.data.keyword.hscrypto}} instance
 - Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance
+- Replace `<private_keystore_id>` with the ID of the private keystore you created previously
+- Replace `<anonymous_user_api_key>` with the respective API key of the anonymous user
 
 ```yaml
 iamcredentialtemplate: &defaultiamcredential
@@ -129,17 +144,8 @@ tokens:
       port: "<EP11_endpoint_port_number>" # The EP11 endpoint port number
       tls:
         enabled: true # EP11 requires TLS connection.
-        # Set it 'true' if you want to enable mutual TLS connections.
-        # By default, set it 'false' because EP11 requires server-only authentication.
         mutual: false
-        # 'cacert' is a full-path certificate file. In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
-        cacert:
-        # Specify the file path of the client certificate if you enable mutual TLS. Otherwise, keep it empty.
-        certfile: 
-        # Specify the file path of the client certificate private key if you enable mutual TLS. Otherwise, keep it empty.
-        keyfile: 
     storage:
-        # 'remotestore' needs to be enabled if you want to generate keys with the attribute CKA_TOKEN.
       remotestore:
         enabled: true
     users:
@@ -152,17 +158,21 @@ tokens:
       1: # The index of the normal user MUST be 1.
         # The name for the normal user. For example: "Normal user":
         name: "Normal user"
-        # The 128-bit UUID of the private keystore:
-        tokenspaceID: "63b83625-8830-4223-86e8-0e7c58012daa"
+        # The 128-bit UUID of the private keystore which you created previously
+        tokenspaceID: "<private_keystore_id>"
         iamauth: *defaultiamcredential
       # The anonymous user
-      # This example will not use the anonymous user, but includes the following section for illustration and for syntactical completeness.
       2: # The index of the anonymous user MUST be 2.
         # The name for the anonymous user. For example: "Anonymous":
         name: "Anonymous"
-        # The 128-bit UUID of the public keystore:
+        # The public keystore will not be used with this setup.
+        # As this property is syntactically required specify an arbitrary 128-bit UUID here
+        # (it will not be used during runtime), e.g.:
         tokenspaceID: "ac5f8f38-1a26-468f-9a0b-7d6189012d0b"
-        iamauth: *defaultiamcredential
+        iamauth:
+          <<: *defaultiamcredential
+          # Provide the API key for the Anonymous user.
+          apikey: "<anonymous_user_api_key>"
 logging:
   # Set the logging level.
   # The supported levels, in an increasing order of verboseness: 'panic', 'fatal', 'error', 'warning'/'warn', 'info', 'debug', 'trace'. The Default value is 'warning'.
@@ -194,46 +204,6 @@ logging:
     chmod a+rw /tmp/grep11client.log
     ```
     {: codeblock}
-
-### 4. Initialize the {{site.data.keyword.hscrypto}} PKCS #11 library
-{: #tutorial-db2-initialize-library}
-
-1. Install the command-line utility OpenSC (pkcs11-tool) with the following command:
-
-    ```
-    yum install opensc
-    ```
-    {: codeblock}
-
-2. Run the following command as `root` to initialize the library setup.
-
-    ```
-    pkcs11-tool --module=/pkcs11/pkcs11-grep11.so -I
-    ```
-    {: codeblock}
-
-    This command prints information about the manufacturer and the library, for example:
-
-    ```
-    Cryptoki version 2.40
-    Library          GREP11 PKCS11 client ...
-    ```
-    {: screen}
-
-3. To initialize a token, run the following commands and replace `<so_user_api_key>` by the API key of the SO user that you created.
-
-    ```
-    pkcs11-tool  --module /pkcs11/pkcs11-grep11.so --init-token --label dbtoken --so-pin "<so_user_api_key>"
-    ```
-    {: codeblock}
-
-    This command prints the following status message, for example:
-
-    ```
-    Using slot 0 with a present token (0x0)
-    Token successfully initialized
-    ```
-    {: screen}
 
 ## Set up Db2 native encryption
 {: #tutorial-db2-encrypt}
