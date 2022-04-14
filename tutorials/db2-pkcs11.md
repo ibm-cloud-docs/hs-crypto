@@ -77,18 +77,18 @@ To complete this solution, let's walk through the following steps:
 
     Note down the ID of your {{site.data.keyword.hscrypto}} instance and the EP11 endpoint address. You need this information for the subsequent steps.
 
-2. Create a custom IAM role `List Server`. This role provides a very limited basic permission to discover your {{site.data.keyword.hscrypto}} instance. This role does not have permissions to use, create or manage keys or EP11 keystores.
+2. Create a custom IAM role `Discover HPCS`. This role provides a very limited basic permission for discovering your {{site.data.keyword.hscrypto}} instance, which is required by the PKCS #11 library. This role does not have permissions to use, create or manage keys or EP11 keystores.
     - In the IBM Cloud console, go to Manage > Access (IAM), and select Roles.
     - Click Create.
-    - Enter the name `List Server` for your role.
-    - Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `ListServer`
+    - Enter the name `Discover HPCS` for your role.
+    - Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `DiscoverHPCS`
     - Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the console when a user assigns access to the service.
     - From the list of services, select Hyper Protect Crypto Services.
     - Select Add for the following action:
         - hs-crypto.discovery.listservers
     - Click Create when you're done adding actions.
 
-3. [Setup the PKCS #11 Normal user](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access): Follow the instructions to setup the service IDs and API keys for the normal user and anonymous user. Do not setup the SO user type mentioned in the instructions. In contrast to the [instructions for assigning an IAM Role to the anonymous user service ID](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#3-assign-the-custom-roles-to-the-anonymous-user-service-id), do not assign the anonymous user service ID the `Key operator` custom role, but assign the `List Server` custom role instead. With this setup, the anonymous user has only very limited permissions on your {{site.data.keyword.hscrypto}} instance.
+3. [Setup the PKCS #11 Normal user](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access): Follow the instructions to setup the service IDs and API keys for the normal user and anonymous user. Do not setup the SO user type mentioned in the instructions. Also, in contrast to the instructions, do not assign the anonymous user service ID the `Key operator` custom role, but assign the `Discover HPCS` custom role instead. With this setup, the anonymous user has only very limited permissions on your {{site.data.keyword.hscrypto}} instance and cannot use, create or manage keys or EP11 keystores.
 
 4. Save the value of the API keys for the normal user and the anonymous user for subsequent steps.
 
