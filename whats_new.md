@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-14"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -40,7 +40,7 @@ Updated: Pricing model of the {{site.data.keyword.hscrypto}} standard plan {: #u
     For more information, see the [pricing plan](/catalog/services/hyper-protect-crypto-services){: external}. A [billing example](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs) is also available for your reference.
 
 Updated: Process of ordering smart cards and smart card readers {: #update-smartcard-procurement}
-:   To order smart cards and smart card readers, you can now email IBM at `ZaaS.Customer.Success@ibm.com` and provide necessary information. For detailed steps, see [Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader).
+:   To order smart cards and smart card readers, you can now email IBM at `ZaaS.Client.Acceleration@ibm.com` and provide necessary information. For detailed steps, see [Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader).
 
 
 ## 25 March 2022

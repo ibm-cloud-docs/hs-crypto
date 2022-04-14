@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-13"
+lastupdated: "2022-04-14"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -55,7 +55,7 @@ Complete the following steps to order smart cards:
     * Two certificate authority smart cards
     * Eight EP11 smart cards
 
-2.  Email IBM at `ZaaS.Customer.Success@ibm.com` and provide the following information:
+2.  Email IBM at `ZaaS.Client.Acceleration@ibm.com` and provide the following information:
 
     * The total number of smart cards needed; minimum of two.
     * Billing contact information, which includes the name, billing address, phone number, email address, and time zone.
