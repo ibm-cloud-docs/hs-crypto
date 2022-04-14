@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-21"
+lastupdated: "2022-04-14"
 
 keywords: security for Hyper Protect Crypto Services, compliance for Hyper Protect Crypto Services, security and compliance for Hyper Protect Crypto Services, rules for Hyper Protect Crypto Services,
 
@@ -39,7 +39,7 @@ With the {{site.data.keyword.compliance_short}}, you can:
 
 As a security or compliance focal, you can use the
 {{site.data.keyword.compliance_short}} to
-[define configuration rules](/docs/security-compliance?topic=security-compliance-rules){: external}
+[define configuration rules](/docs/security-compliance?topic=security-compliance-what-is-governance){: external}
 for the {{site.data.keyword.hscrypto}} instances that you
 create.
 
