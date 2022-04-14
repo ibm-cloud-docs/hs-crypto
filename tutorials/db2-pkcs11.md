@@ -88,7 +88,7 @@ To complete this solution, let's walk through the following steps:
         - hs-crypto.discovery.listservers
     - Click Create when you're done adding actions.
 
-3. [Setup the PKCS #11 Normal user](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access): Follow the instructions to setup the service IDs and API keys for the normal user and anonymous user. Do not setup the SO user type mentioned in the instructions. Also, in contrast to the instructions, do not assign the anonymous user service ID the `Key operator` custom role, but assign the `Discover HPCS` custom role instead. With this setup, the anonymous user has only very limited permissions on your {{site.data.keyword.hscrypto}} instance and cannot use, create or manage keys or EP11 keystores.
+3. [Setup the PKCS #11 normal user and the anonymous user](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access): Follow the instructions to setup the service IDs and API keys for the normal user and anonymous user. Do not setup the SO user type mentioned in the instructions. Also, in contrast to the instructions, do not assign the anonymous user service ID the `Key operator` custom role, but assign the `Discover HPCS` custom role instead. With this setup, the anonymous user has only very limited permissions on your {{site.data.keyword.hscrypto}} instance and cannot use, create or manage keys or EP11 keystores.
 
 4. Save the value of the API keys for the normal user and the anonymous user for subsequent steps.
 
@@ -166,8 +166,8 @@ tokens:
         # The name for the anonymous user. For example: "Anonymous":
         name: "Anonymous"
         # The public keystore will not be used with this setup.
-        # Specify an arbitrary 128-bit UUID here (it will not be used during runtime), e.g.:
-        tokenspaceID: "00000000-0000-0000-0000-000000000000"
+        # Specify an arbitrary 128-bit UUID below, e.g.:
+        tokenspaceID: "12345678-1234-1234-1234-1234567890AB"
         iamauth:
           <<: *defaultiamcredential
           # Provide the API key for the Anonymous user.
