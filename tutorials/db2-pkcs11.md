@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-04-15"
 
 keywords: encrypt IBM Db2 databases, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -77,14 +77,24 @@ To complete this solution, let's walk through the following steps:
 
     Note down the ID of your {{site.data.keyword.hscrypto}} instance and the EP11 endpoint address. You need this information for the subsequent steps.
 
-2. Generate an API key for accessing your {{site.data.keyword.hscrypto}} instance. Run the following command to create an API key for your {{site.data.keyword.cloud_notm}} account:
+2. Create a custom IAM role `Discover HPCS`. This role provides a very limited permission for discovering your {{site.data.keyword.hscrypto}} instance, which is required by the PKCS #11 library. This role does not have permissions to use, create, or manage keys or EP11 keystores.
+    1. From the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)**, and select **Roles**, and then click **Create**.
+    2. Enter the name `Discover HPCS` for your role.
+    3. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `DiscoverHPCS`.
+    4. Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access that the role assignment gives a user. This description also shows in the console when a user assigns access to the service.
+    5. From the list of services, select **Hyper Protect Crypto Services**
+    6. Select **Add** for the `hs-crypto.discovery.listservers` action, and then click **Create**.
 
-    ```
-    ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
-    ```
-    {: codeblock}
+3. Follow the instructions in [Setting up PKCS #11 API user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access) to set up the service IDs and API keys for the normal user and anonymous user. 
 
-3. Save the value of the API key for subsequent steps.
+    Do not set up the SO user type that is mentioned in the instructions. Also, in contrast to the instructions, do not assign the anonymous user service ID the `Key operator` custom role, but assign the `Discover HPCS` custom role instead.
+    {: note} 
+    
+    With this setup, the anonymous user has only very limited permissions on your {{site.data.keyword.hscrypto}} instance and cannot use, create, or manage keys or EP11 keystores.
+
+4. Save the value of the API keys for the normal user and the anonymous user for subsequent steps.
+
+5. Follow the [instructions](/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui#create-ep11-keystore-ui) to create a private EP11 keystore and note the keystore ID for subsequent steps.
 
 ## Set up the {{site.data.keyword.hscrypto}} PKCS #11 library
 {: #tutorial-db2-pkcs11-setup}
@@ -118,83 +128,57 @@ Adapt the following file template and name the file `grep11client.yaml`:
 
 - Replace `<instance_id>` with the ID of your {{site.data.keyword.hscrypto}} instance
 - Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance
-- Replace `<your_api_key>` with the value of the API key that you created previously
+- Replace `<private_keystore_id>` with the ID of the private keystore you created previously
+- Replace `<anonymous_user_api_key>` with the respective API key of the anonymous user
 
 ```yaml
 iamcredentialtemplate: &defaultiamcredential
           enabled: true
           endpoint: "https://iam.cloud.ibm.com"
-          # Keep the 'apikey' empty. It will be overridden by the Anonymous user API key configured later.
-          apikey:
-          # The Universally Unique IDentifier (UUID) of your {{site.data.keyword.hscrypto}} instance.
+          # The Universally Unique IDentifier (UUID) of your Hyper Protect Crypto Services instance.
           instance: "<instance_id>"
 
 tokens:
   0:
     grep11connection:
-      # The EP11 endpoint address starting from 'ep11'.
-      # For example: "ep11.us-south.hs-crypto.cloud.ibm.com"
+      # The EP11 endpoint address starting from 'ep11'. For example: "ep11.us-south.hs-crypto.cloud.ibm.com"
       address: "<EP11_endpoint_URL>"
-      # The EP11 endpoint port number
-      port: "<EP11_endpoint_port_number>"
+      port: "<EP11_endpoint_port_number>" # The EP11 endpoint port number
       tls:
-        # Grep11 requires TLS connection.
-        enabled: true
-        # Grep11 requires server only authentication, so 'mutual' needs to be set as 'false'.
+        enabled: true # EP11 requires TLS connection.
         mutual: false
-        # 'cacert' is a full-path certificate file.
-        # In Linux with the 'ca-ca-certificates' package installed, this is normally not needed.
-        cacert:
-        # Grep11 requires the server-only authentication, so 'certfile' and 'keyfile' need to be empty.
-        certfile:
-        keyfile:
     storage:
-      filestore:
-        enabled: false
-        storagepath:
-        # 'remotestore' needs to be enabled if you want to generate keys with the attribute CKA_TOKEN.
       remotestore:
         enabled: true
     users:
+       # The Security Officer (SO) user
       0: # The index of the Security Officer (SO) user MUST be 0.
-        # The name for the Security Officer (SO) user. For example: "Administrator".
-        # NEVER put the API key under the SO user for security reasons.
+        # The name for the Security Officer (SO) user. For example: "Administrator":
         name: "Administrator"
-        iamauth:
-          <<: *defaultiamcredential
+        iamauth: *defaultiamcredential
+      # The normal user
       1: # The index of the normal user MUST be 1.
-        # The name for the normal user. For example: "Normal user".
-        # NEVER put the API key under the normal user for security reasons.
+        # The name for the normal user. For example: "Normal user":
         name: "Normal user"
-         # The Space ID is a 128-bit UUID and can be chosen freely.
-         # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
-         # For example: "f00db2f1-4421-4032-a505-465bedfa845b".
-         # 'tokenspaceID' under the normal user is to identify the private keystore.
-        tokenspaceID: "f00db2f1-4421-4032-a505-465bedfa845b"
-        iamauth:
-          <<: *defaultiamcredential
+        # The 128-bit UUID of the private keystore which you created previously
+        tokenspaceID: "<private_keystore_id>"
+        iamauth: *defaultiamcredential
+      # The anonymous user
       2: # The index of the anonymous user MUST be 2.
-        # The name for the anonymous user. For example: "Anonymous".
+        # The name for the anonymous user. For example: "Anonymous":
         name: "Anonymous"
-        # The Space ID is a 128-bit UUID and can be chosen freely.
-        # The UUID can be generated by third-party tools, such as 'https://www.uuidgenerator.net/'.
-        # For example: "ca22be26-b798-4fdf-8c83-3e3a492dc215".
-        # 'tokenspaceID' under the anonymous user is to identify the public keystore.
-        tokenspaceID: "ca22be26-b798-4fdf-8c83-3e3a492dc215"
+        # The public keystore will not be used with this setup.
+        # Specify an arbitrary 128-bit UUID below, e.g.:
+        tokenspaceID: "12345678-1234-1234-1234-1234567890AB"
         iamauth:
           <<: *defaultiamcredential
-          # This API key for the Anonymous user must be provided.
-          # It will overide the 'apikey' in the previous defaultcredentials.iamauth.apikey field
-          apikey: "<your_api_key>"
+          # Provide the API key for the Anonymous user.
+          apikey: "<anonymous_user_api_key>"
 logging:
   # Set the logging level.
-  # The supported levels, in an increasing order of verboseness, are:
-  # 'panic', 'fatal', 'error', 'warning'/'warn', 'info', 'debug', 'trace'.
-  # The Default value is 'debug'.
-  loglevel: debug
-  # The full path of your logging file.
-  # For example: /tmp/grep11client.log
-  logpath: /tmp/grep11client.log
+  # The supported levels, in an increasing order of verboseness: 'panic', 'fatal', 'error', 'warning'/'warn', 'info', 'debug', 'trace'. The Default value is 'warning'.
+  loglevel: "info"
+  logpath: "/tmp/grep11client.log" # The full path of your logging file.
 ```
 {: codeblock}
 
@@ -214,53 +198,13 @@ logging:
     chmod a+r /etc/ep11client/grep11client.yaml
 
     mkdir -p /pkcs11
-    cp pkcs11-grep11.so /pkcs11/pkcs11-grep11.so
+    cp pkcs11-grep11-<platform>.so.<version> /pkcs11/pkcs11-grep11.so
     chmod -R a+rwx /pkcs11
 
     touch /tmp/grep11client.log
     chmod a+rw /tmp/grep11client.log
     ```
     {: codeblock}
-
-### 4. Initialize the {{site.data.keyword.hscrypto}} PKCS #11 library
-{: #tutorial-db2-initialize-library}
-
-1. Install the command-line utility OpenSC (pkcs11-tool) with the following command:
-
-    ```
-    yum install opensc
-    ```
-    {: codeblock}
-
-2. Run the following command as `root` to initialize the library setup.
-
-    ```
-    pkcs11-tool --module=/pkcs11/pkcs11-grep11.so -I
-    ```
-    {: codeblock}
-
-    This command prints information about the manufacturer and the library, for example:
-
-    ```
-    Cryptoki version 2.40
-    Library          GREP11 PKCS11 client ...
-    ```
-    {: screen}
-
-3. To initialize a token, run the following commands and replace `<your_api_key>` by the API key that you created.
-
-    ```
-    pkcs11-tool  --module /pkcs11/pkcs11-grep11.so --init-token --label dbtoken --so-pin <your api key>
-    ```
-    {: codeblock}
-
-    This command prints the following status message, for example:
-
-    ```
-    Using slot 0 with a present token (0x0)
-    Token successfully initialized
-    ```
-    {: screen}
 
 ## Set up Db2 native encryption
 {: #tutorial-db2-encrypt}
@@ -289,11 +233,11 @@ Now, let's set up Db2 native encryption. To do so, make sure that you have all d
     ```
     {: codeblock}
 
-3. To create a password stash file, run the following commands and replace <your_api_key> by the API key that you created.
+3. To create a password stash file, run the following commands and replace <normal_user_api_key> by the API key of the normal user that you created.
 
     ```
     su - db2inst1
-    db2credman -stash -password <your api key> -to /pkcs11/pkcs11_pw.sth
+    db2credman -stash -password "<normal_user_api_key>" -to /pkcs11/pkcs11_pw.sth
     ```
     {: codeblock}
 
