@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-14"
+lastupdated: "2022-04-15"
 
 keywords: security for Hyper Protect Crypto Services, compliance for Hyper Protect Crypto Services, security and compliance for Hyper Protect Crypto Services, rules for Hyper Protect Crypto Services,
 
@@ -39,9 +39,7 @@ With the {{site.data.keyword.compliance_short}}, you can:
 
 As a security or compliance focal, you can use the
 {{site.data.keyword.compliance_short}} to
-[define configuration rules](/docs/security-compliance?topic=security-compliance-what-is-governance){: external}
-for the {{site.data.keyword.hscrypto}} instances that you
-create.
+define configuration rules for the {{site.data.keyword.hscrypto}} instances that you create.
 
 
 This service only supports the ability to view the results of your configuration scans in the Security and Compliance Center. It is not necessary to set up a collector to use configuration rules.
@@ -60,4 +58,4 @@ available properties that you can use to create a rule for
 
 {: caption="Table 1. Config rule properties and target attributes for {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 
-To learn more about config rule capabilities, see [What is a config rule?](/docs/security-compliance?topic=security-compliance-what-is-rule){: external}.
+To learn more about config rule capabilities, see [What is a config rule?](/docs/security-compliance?topic=security-compliance-what-is-governance){: external}.
