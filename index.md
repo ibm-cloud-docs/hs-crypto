@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-18"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -39,7 +39,6 @@ subcollection: hs-crypto
 
 With the {{site.data.keyword.uko_full_notm}} function, you can manage and orchestrate all keys from a multicloud environment with {{site.data.keyword.hscrypto}}. {{site.data.keyword.uko_full_notm}} provides the only cloud native single-point-of-control of encryption keys across hybrid multicloud environments of your enterprise.
 {: hide-dashboard}
-
 
 
 This tutorial shows you the high-level steps on how to set up your service instance by loading your [master keys](#x2908413){: term}, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the GREP11 API.
@@ -160,7 +159,6 @@ From the {{site.data.keyword.cloud_notm}} console, you can inspect the general c
 {: notoc}
 
 Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
-
 
 ### Creating vaults
 {: #create-vault}
@@ -503,7 +501,6 @@ From the {{site.data.keyword.cloud_notm}} console, you can inspect the general c
 {: hide-dashboard}
 
 Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
-
 
 ### Creating vaults
 {: #create-vault}

@@ -27,7 +27,6 @@ subcollection: hs-crypto
 As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full}} service to monitor how users and applications interact with {{site.data.keyword.cloud_notm}} with {{site.data.keyword.uko_full_notm}}.
 {: shortdesc}
 
-
 {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard.
 
 To enable {{site.data.keyword.at_full_notm}} for your {{site.data.keyword.hscrypto}} instance, you need to provision an instance of the {{site.data.keyword.at_full_notm}} service in the same region where your {{site.data.keyword.hscrypto}} instance is located. For more information, see the [getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started).

@@ -42,14 +42,12 @@ Updated: Pricing model of the {{site.data.keyword.hscrypto}} standard plan {: #u
 Updated: Process of ordering smart cards and smart card readers {: #update-smartcard-procurement}
 :   To order smart cards and smart card readers, you can now email IBM at `ZaaS.Client.Acceleration@ibm.com` and provide necessary information. For detailed steps, see [Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader).
 
-
 ## 25 March 2022
 {: #hs-crypto-25mar2022}
 {: release-note}
 
 Added: {{site.data.keyword.hscrypto}} expands into the Toronto region {: #add-toronto-region}
 :   You can now create {{site.data.keyword.hscrypto}} instances in the Toronto (`ca-tor`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
-
 
 ## 22 March 2022
 {: #hs-crypto-march2022}
@@ -80,7 +78,6 @@ Limited availability: Using {{site.data.keyword.uko_full_notm}} to manage and or
 :   {{site.data.keyword.uko_full_notm}} is a public cloud control plane for multicloud and hybrid cloud key orchestration. As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, it provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores in the service instance or external keystores.
 
     With {{site.data.keyword.uko_full_notm}}, you can connect your service instance to keystores in IBM Cloud and third-party cloud providers, back up and manage keys by using a unified system, and orchestrate keys across multiple clouds.
-    
 
     The following topics can help you get started with {{site.data.keyword.uko_full_notm}}:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-18"
 
 keywords: set up api, uko api, Unified Key Orchestrator api, 
 
@@ -24,7 +24,6 @@ subcollection: hs-crypto
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [{{site.data.keyword.uko_full_notm}} API](/apidocs/uko){: external} to store, retrieve, and generate encryption keys and keystores.
 {: shortdesc}
-
 
 ## Retrieving your IBM Cloud credentials
 {: #retrieve-uko-credentials}

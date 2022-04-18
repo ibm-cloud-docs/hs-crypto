@@ -99,8 +99,6 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 
 * {{site.data.keyword.uko_full_notm}} is used for multicloud key management and orchestration. Apart from setting default IAM roles, you can also [create custom {{site.data.keyword.uko_full_notm}} roles](/docs/hs-crypto?topic=hs-crypto-uko-role-best-practices) according to your needs.
 
-
-
 * HSM APIs (the PKCS #11 API and the GREP11 API) are used for application-level encryption.
 
 * Key Management Interoperability Protocol (KMIP) adapter is used to configure the KMIP for VMware service with {{site.data.keyword.hscrypto}} to enable vSphere encryption or vSAN encryption by using your own root keys.

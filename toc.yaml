@@ -133,7 +133,6 @@ toc:
       id: howto
       topics:
       - provision.md
-      - provision-uko.md
       - topicgroup:
           label: Initializing service instances
           topics:

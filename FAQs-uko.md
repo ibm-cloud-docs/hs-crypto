@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-12"
+lastupdated: "2022-04-18"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -26,7 +26,6 @@ subcollection: hs-crypto
 
 Read to get answers for questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
 {: shortdesc}
-
 
 ## What is the difference between key management, key orchestration, and key governance?
 {: #faq-uko-differences}

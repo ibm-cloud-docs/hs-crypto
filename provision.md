@@ -38,8 +38,6 @@ You can automate the instance creation by using Terraform. For more information,
 
 [Pricing samples](/docs/hs-crypto?topic=hs-crypto-faq-pricing) for these two plans are also available for your reference.
 
- 
-
 ## Before you begin
 {: #provision-prerequisites}
 

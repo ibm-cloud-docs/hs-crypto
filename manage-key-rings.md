@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-12"
+lastupdated: "2022-04-18"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -58,11 +58,8 @@ Before you create a key ring for your {{site.data.keyword.hscrypto}} instance, k
 
 Before you can group keys into a key ring, you need to create a key ring first. You can use either the console or the key management service API to create a key ring.
 
-
-
 You can create up to five keystores in a service instance for free, including key rings and EP11 keystores. Each additional key ring or EP11 keystore is charged with a tiered pricing starting at $225 USD per month. 
 {: note}
-
 
 ### Creating key rings with the console
 {: #create-key-ring-ui}
@@ -75,11 +72,8 @@ Create a key ring with the console by completing the following steps:
 4. To create a new key ring, select the **KMS key rings** tab in the side menu.
 5. In the **Key management service key rings** table, click **Add key ring**.
 
-
-
     You can create up to five keystores in a service instance for free, including key rings and EP11 keystores. Each additional key ring or EP11 keystore is charged with a tiered pricing starting at $225 USD per month. 
     {: note}
-
 
 6. Enter the **Key ring ID** and click **Add key ring**.
 

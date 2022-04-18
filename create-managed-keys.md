@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-18"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -26,7 +26,6 @@ subcollection: hs-crypto
 
 You can use {{site.data.keyword.uko_full_notm}} to create managed keys through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
-
 
 Before you create a managed key, keep in mind the following considerations:
 
