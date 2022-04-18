@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-18"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -257,7 +257,7 @@ A target keystore is keystore that is assigned to a vault. If it is an internal 
 ### Internal keystore
 {: #uko-internal-keystore-concept}
 
-An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance to store the cryptographic keys in your service instance. Both KMS and EP11 keystores are supported internal keystore types. You can create up to five free KMS keystores to manage your keys. 
+An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance to store the cryptographic keys in your service instance. You can create up to five free KMS keystores to manage your keys. 
 
 ### External keystore
 {: #uko-external-keystore-concept}

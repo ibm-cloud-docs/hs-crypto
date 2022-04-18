@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-14"
+lastupdated: "2022-04-18"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -124,10 +124,6 @@ Updated: {{site.data.keyword.hscrypto}} key management functions {: #update-kms-
         By default, a deleted key becomes purged automatically after 90 days of the deletion. Now you can manually purge a key to permanently remove the key from your instance before 90 days. After a key is deleted, there is a wait period of up to 4 hours before you can perform the action. Make sure that you are assigned the _KMS Key Purge_ role before you purge a key. For more information, see [Purging keys manually](/docs/hs-crypto?topic=hs-crypto-purge-keys).
     2. **Update the key ring of a key**: 
         After you create a key, you can move the key to a different key ring. For more information, see [Transferring a key to a different key ring](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#transfer-key-key-ring).
-
-
-Added: The key ring limit for a service instance {: #add-key-ring-limit}
-:   The maximum number of key rings for a {{site.data.keyword.hscrypto}} instance is five. If the number reaches the limit, you are no longer able to create a key ring. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
 
 ## 30 July 2021
 {: #hs-crypto-july2021}

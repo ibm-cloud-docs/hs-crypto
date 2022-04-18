@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-12"
+lastupdated: "2022-04-18"
 
 keywords: site map, doc structure, information architecture
 
@@ -460,8 +460,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [21 January 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-jan2022)
 
     * [Updated: {{site.data.keyword.hscrypto}} key management functions](/docs/hs-crypto?topic=hs-crypto-what-new#update-kms-api-v282)
-
-    * [Added: The key ring limit for a service instance](/docs/hs-crypto?topic=hs-crypto-what-new#add-key-ring-limit)
 
 * [30 July 2021](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-july2021)
 
