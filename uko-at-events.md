@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-07"
+lastupdated: "2022-04-18"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 
@@ -458,7 +458,7 @@ The following table lists the actions that are associated with each severity lev
       <td><p><varname>Warning</varname></p></td>
       <td>
         <p><code>hs-crypto.managed-keys.write </code></p>
-        <p>Note that when this event is triggered to change the key state to `destroyed`, the severity level is `Critical` instead of `Warning`.</p>
+        <p>Note that when this event is triggered to change the key state to <code>destroyed</code>, the severity level is <code>Critical</code> instead of <code>Warning</code>.</p>
       </td>
     </tr>
      <tr>
