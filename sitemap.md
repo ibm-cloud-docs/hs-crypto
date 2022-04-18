@@ -1201,28 +1201,6 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_managing_master_keys1}
 
 
-[Rotating master keys by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-smart-cards#uko-rotate-master-key-smart-cards)
-
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-smart-cards#uko-rotate-master-key-smart-cards-prerequisites)
-
-* [Rotating master keys using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-smart-cards#uko-rotate-master-key-smart-cards-steps)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-smart-cards#uko-rotate-master-key-smart-cards-next)
-
-[Rotating master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-recovery-crypto-unit#uko-rotate-master-key-cli-recovery-crypto-unit)
-
-* [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-recovery-crypto-unit#uko-rotate-master-key-cli-recovery-crypto-unit-steps)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-recovery-crypto-unit#uko-rotate-master-key-cli-recovery-crypto-unit-next)
-
-[Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-key-part#uko-rotate-master-key-cli-key-part)
-
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-key-part#uko-rotate-master-key-cli-key-part-prerequisites)
-
-* [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-key-part#uko-rotate-master-key-cli-key-part-steps)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-key-part#uko-rotate-master-key-cli-key-part-next)
-
 [Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-uko-recover-master-key-recovery-crypto-unit#uko-recover-master-key-recovery-crypto-unit)
 
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-uko-recover-master-key-recovery-crypto-unit#uko-recover-master-key-prerequisites)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-18"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -33,9 +33,6 @@ Before you connect to an external keystore, keep in mind the following considera
 - You can connect to one external keystore at no initial cost, regardless of the type. You are charged for additional external keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Other currencies are applied based on the region the service instance is provisioned in.
 - A managed key can be used for encryption and decryption only after you install it in at least one target keystore. 
 - A target keystore can be assigned to only one vault.
-
-You can connect to one external keystore at no initial cost, regardless of the type. You are charged for additional external keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Other currencies are applied based on the region the service instance is provisioned in.
-{: note}
 
 ## Setting up required user access in external keystores
 {: #connect-external-keystores-access}

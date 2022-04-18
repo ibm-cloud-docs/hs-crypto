@@ -237,7 +237,7 @@ This section covers concepts that are related to [{{site.data.keyword.uko_full_n
 ### Vault
 {: #uko-vault-concept}
 
-A vault is a single repository that controls a user's or an access group's access to keys and keystores through Identity and Access Management (IAM). A managed key or internal keystore can be created only in a vault. When you connect to an external keystore, you need to assign it to a vault. To use a managed key for encryption and decryption, you need to install in one or more keystores within the same vault. The vault keeps all installations of a managed key in sync.
+A vault is a single repository that controls a user's or an access group's access to keys and keystores through Identity and Access Management (IAM). A managed key or internal keystore can be created only in a vault. When you connect to an external keystore, you need to assign it to a vault. To use a managed key for encryption and decryption, you need to install it in one or more keystores within the same vault. The vault keeps all installations of a managed key in sync.
 
 ### Managed key
 {: #uko-managed-key-conncept}

@@ -66,12 +66,6 @@ Recovery crypto unit
     If smart cards are used to load the master key, the recovery crypto units are not applicable and can be ignored. The backup of the master key relies on the backup of the smart cards in that case.
     {: note}
 
-Failover crypto unit
-:   Failover crypto units back up the operational crypto units in another region, which includes keystores that store encryption keys. When a regional disaster occurs, you can use failover crypto units to ensure production workloads and avoid data loss.
-
-    Currently, failover crypto units are available only in the region of Dallas (`us-south`) and Washington DC (`us-east`). If you create your instance in either of the two regions, you can choose whether to enable the failover crypto units with [extra charges](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
-    {: note}
-
 For more information about the {{site.data.keyword.hscrypto}} components, see [Components and concepts](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts).
 
 ## {{site.data.keyword.hscrypto}} workload isolation
