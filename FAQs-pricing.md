@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-06"
+lastupdated: "2022-04-18"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning and operations
 
@@ -38,7 +38,7 @@ The first five keystores, including KMS key rings and EP11 keystores, are free o
 
 The detailed [pricing plan](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){: external} is available for your reference.
 
-The following example shows a total charge of 30 days (720 hours). The user enables two operational crypto units and two failover crypto units for cross-region high availability. The user also creates 10 KMS keystores and 12 GREP11 keystores. The first five keystores, including both KMS keystores and GREP11 keystores, are free of charge.
+The following example shows a total charge of 30 days (720 hours). The user enables two operational crypto units and two failover crypto units for cross-region high availability. The user also creates 10 KMS keystores and 12 GREP11 keystores. The first five keystores, including both KMS key rings and GREP11 keystores, are free of charge.
 
 | Pricing components | Cost for 30 days (720 hours) |
 |-----|----------------|
@@ -46,7 +46,7 @@ The following example shows a total charge of 30 days (720 hours). The user enab
 | Operational crypto unit 2 | $1533.6 (30x24x2.13) |
 | Failover crypto unit 1 | $1533.6 (30x24x2.13) |
 | Failover crypto unit 2 | $1533.6 (30x24x2.13) |
-| 10 KMS keystores and 12 GREP11 keystroes | $3795 (5x0+15x225+2x210) |
+| 10 KMS key rings and 12 GREP11 keystores | $3795 (5x0+15x225+2x210) |
 | Total charge| $9929.4  |
 {: caption="Table 1. A standard plan billing example of 30 days" caption-side="bottom"}
 

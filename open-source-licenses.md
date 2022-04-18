@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-04-14"
 
 keywords: open source licenses
 
@@ -110,7 +110,7 @@ GNU GENERAL PUBLIC LICENSE, VERSION 2
 
 The Program includes some or all of the following licensed to you as
 Separately Licensed Code under the GNU General Public License. For copies
-of the source code for this software, send an email to <Eshrak.H.Assaf@ibm.com>
+of the source code for this software, send an email to <agupta@ca.ibm.com>
 identifying the IBM product and the GPL-licensed program for which you
 are requesting the source code
 
@@ -124,7 +124,7 @@ GNU GENERAL PUBLIC LICENSE, VERSION 3
 
 The Program includes some or all of the following licensed to you as
 Separately Licensed Code under the GNU General Public License. For copies
-of the source code for this software, send an email to <Eshrak.H.Assaf@ibm.com>
+of the source code for this software, send an email to <agupta@ca.ibm.com>
 identifying the IBM product and the GPL-licensed program for which you
 are requesting the source code
 

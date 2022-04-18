@@ -278,7 +278,7 @@
     "creating vault failed",
     "creating vault function disabled",
     "error when creating vault",
-    "not authorized to create vault"
+    "not authorized to create vault",
     "unauthorized to create vault"
   ],
   "troubleshoot-delete-vault":[

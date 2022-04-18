@@ -29,7 +29,6 @@ subcollection: hs-crypto
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} follows the security guidelines by [NIST SP 800-57 for key states](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0){: external}.
 {: shortdesc}
 
-
 ## Key states and transitions
 {: #uko-key-transitions}
 

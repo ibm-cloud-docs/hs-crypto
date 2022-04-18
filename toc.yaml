@@ -133,7 +133,6 @@ toc:
       id: howto
       topics:
       - provision.md
-      - provision-uko.md
       - topicgroup:
           label: Initializing service instances
           topics:
@@ -223,9 +222,6 @@ toc:
           - topicgroup:
               label: Managing master keys
               topics:
-              - uko-rotate-master-key-smart-cards.md
-              - uko-rotate-master-key-recovery-crypto-unit.md
-              - uko-rotate-master-key-key-files.md
               - uko-recover-master-key.md
           - topicgroup:
               label: Managing vaults

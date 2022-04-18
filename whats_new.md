@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-18"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -40,8 +40,7 @@ Updated: Pricing model of the {{site.data.keyword.hscrypto}} standard plan {: #u
     For more information, see the [pricing plan](/catalog/services/hyper-protect-crypto-services){: external}. A [billing example](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs) is also available for your reference.
 
 Updated: Process of ordering smart cards and smart card readers {: #update-smartcard-procurement}
-:   To order smart cards and smart card readers, you can now email IBM at `ZaaS.Customer.Success@ibm.com` and provide necessary information. For detailed steps, see [Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader).
-
+:   To order smart cards and smart card readers, you can now email IBM at `ZaaS.Client.Acceleration@ibm.com` and provide necessary information. For detailed steps, see [Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader).
 
 ## 25 March 2022
 {: #hs-crypto-25mar2022}
@@ -49,7 +48,6 @@ Updated: Process of ordering smart cards and smart card readers {: #update-smart
 
 Added: {{site.data.keyword.hscrypto}} expands into the Toronto region {: #add-toronto-region}
 :   You can now create {{site.data.keyword.hscrypto}} instances in the Toronto (`ca-tor`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
-
 
 ## 22 March 2022
 {: #hs-crypto-march2022}
@@ -80,7 +78,6 @@ Limited availability: Using {{site.data.keyword.uko_full_notm}} to manage and or
 :   {{site.data.keyword.uko_full_notm}} is a public cloud control plane for multicloud and hybrid cloud key orchestration. As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, it provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores in the service instance or external keystores.
 
     With {{site.data.keyword.uko_full_notm}}, you can connect your service instance to keystores in IBM Cloud and third-party cloud providers, back up and manage keys by using a unified system, and orchestrate keys across multiple clouds.
-    
 
     The following topics can help you get started with {{site.data.keyword.uko_full_notm}}:
 
@@ -124,10 +121,6 @@ Updated: {{site.data.keyword.hscrypto}} key management functions {: #update-kms-
         By default, a deleted key becomes purged automatically after 90 days of the deletion. Now you can manually purge a key to permanently remove the key from your instance before 90 days. After a key is deleted, there is a wait period of up to 4 hours before you can perform the action. Make sure that you are assigned the _KMS Key Purge_ role before you purge a key. For more information, see [Purging keys manually](/docs/hs-crypto?topic=hs-crypto-purge-keys).
     2. **Update the key ring of a key**: 
         After you create a key, you can move the key to a different key ring. For more information, see [Transferring a key to a different key ring](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#transfer-key-key-ring).
-
-
-Added: The key ring limit for a service instance {: #add-key-ring-limit}
-:   The maximum number of key rings for a {{site.data.keyword.hscrypto}} instance is five. If the number reaches the limit, you are no longer able to create a key ring. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
 
 ## 30 July 2021
 {: #hs-crypto-july2021}

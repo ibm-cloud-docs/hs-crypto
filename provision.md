@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-18"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -38,8 +38,6 @@ You can automate the instance creation by using Terraform. For more information,
 
 [Pricing samples](/docs/hs-crypto?topic=hs-crypto-faq-pricing) for these two plans are also available for your reference.
 
- 
-
 ## Before you begin
 {: #provision-prerequisites}
 
@@ -59,8 +57,8 @@ You can provision an instance of {{site.data.keyword.hscrypto}} Standard Plan fr
 To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
-2. Click **Catalog** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
-3. From the Catalog navigation pane, click **Services**. And then, under **Category**, select **Security**.
+2. Click **Create resource** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
+3. Under **Category**, select **Security**.
 4. From the list of services displayed, click the **{{site.data.keyword.hscrypto}}** tile.
 5. On the service page, select the **Standard** pricing plan.  
 5. Fill in the form with the details that are required.
@@ -205,8 +203,8 @@ You can provision an instance of {{site.data.keyword.hscrypto}} with {{site.data
 To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
-2. Click **Catalog** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
-3. From the Catalog navigation pane, click **Services**. And then, under **Category**, select **Security**.
+2. Click **Create resource** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
+3. Under **Category**, select **Security**.
 4. From the list of services displayed, click the **{{site.data.keyword.hscrypto}}** tile.
 5. On the service page, select the **With {{site.data.keyword.uko_full_notm}}** pricing plan.  
 5. Fill in the form with the details that are required.

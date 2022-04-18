@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-18"
 
 keywords: site map, doc structure, information architecture
 
@@ -460,8 +460,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [21 January 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-jan2022)
 
     * [Updated: {{site.data.keyword.hscrypto}} key management functions](/docs/hs-crypto?topic=hs-crypto-what-new#update-kms-api-v282)
-
-    * [Added: The key ring limit for a service instance](/docs/hs-crypto?topic=hs-crypto-what-new#add-key-ring-limit)
 
 * [30 July 2021](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-july2021)
 
@@ -1203,28 +1201,6 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_managing_master_keys1}
 
 
-[Rotating master keys by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-smart-cards#uko-rotate-master-key-smart-cards)
-
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-smart-cards#uko-rotate-master-key-smart-cards-prerequisites)
-
-* [Rotating master keys using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-smart-cards#uko-rotate-master-key-smart-cards-steps)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-smart-cards#uko-rotate-master-key-smart-cards-next)
-
-[Rotating master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-recovery-crypto-unit#uko-rotate-master-key-cli-recovery-crypto-unit)
-
-* [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-recovery-crypto-unit#uko-rotate-master-key-cli-recovery-crypto-unit-steps)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-recovery-crypto-unit#uko-rotate-master-key-cli-recovery-crypto-unit-next)
-
-[Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-key-part#uko-rotate-master-key-cli-key-part)
-
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-key-part#uko-rotate-master-key-cli-key-part-prerequisites)
-
-* [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-key-part#uko-rotate-master-key-cli-key-part-steps)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-key-part#uko-rotate-master-key-cli-key-part-next)
-
 [Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-uko-recover-master-key-recovery-crypto-unit#uko-recover-master-key-recovery-crypto-unit)
 
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-uko-recover-master-key-recovery-crypto-unit#uko-recover-master-key-prerequisites)
@@ -1322,11 +1298,11 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_managing_keystores}
 
 
-[Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores)
+[Creating internal KMS keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores)
 
-* [Creating internal keystores through the UI](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-ui)
+* [Creating internal KMS keystores through the UI](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-ui)
 
-* [Creating internal keystores with the API](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-api)
+* [Creating internal KMS keystores with the API](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-next)
 
@@ -1882,6 +1858,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What multizone regions is {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} available in?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-mzr)
 
 * [Can I still use {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} for key management even if {{site.data.keyword.hscrypto}} is not available in the {{site.data.keyword.cloud_notm}} region that my service resides in?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-region)
+
+* [How many keystores can be created for an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-keystore-number)
 
 [FAQs: Security and compliance](/docs/hs-crypto?topic=hs-crypto-faq-security-compliance#faq-security-compliance)
 
