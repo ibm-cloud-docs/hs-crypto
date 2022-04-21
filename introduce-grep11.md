@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-21"
 
 keywords: hsm, cloud hsm, tke cli, trusted key entry plug-in, ep11, grep11, cryptographic operations, cryptographic functions
 
@@ -19,6 +19,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:external: target="_blank" .external}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Introducing EP11 over gRPC
 {: #grep11-intro}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-21"
 
 keywords: security for Hyper Protect Crypto Services, compliance for Hyper Protect Crypto Services, security and compliance for Hyper Protect Crypto Services, rules for Hyper Protect Crypto Services,
 
@@ -15,6 +15,10 @@ subcollection: hs-crypto
 {:shortdesc: .shortdesc}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Managing security and compliance with {{site.data.keyword.hscrypto}}
 {: #manage-security-compliance}

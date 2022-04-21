@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-04"
+lastupdated: "2022-04-21"
 
 keywords: integration, encryption at rest, cloud object storage, object storage, kmip, containers, vmware, database, compute
 
@@ -20,6 +20,10 @@ subcollection: hs-crypto
 {:external: target="_blank" .external}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}
 {: #integrate-services}

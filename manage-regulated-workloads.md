@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-07"
+lastupdated: "2022-04-21"
 
 keywords: regulated workloads, FS Cloud, IBM Cloud for Financial Services, FS Cloud use cases
 
@@ -21,6 +21,10 @@ subcollection: hs-crypto
 {:important: .important}
 {:preview: .preview}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Managing regulated workloads with {{site.data.keyword.hscrypto}}
 {: #manage-regulated-workloads}

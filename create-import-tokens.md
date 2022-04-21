@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: create import token, secure import, key material, key wrapping key, import token api, bring your own key, byok
 
@@ -19,6 +19,10 @@ subcollection: hs-crypto
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Creating import tokens
 {: #create-import-tokens}
@@ -30,6 +34,7 @@ Import tokens are used to encrypt and securely bring root key material into {{si
 
 ## Creating an import token with the API
 {: #create-import-token-api}
+{: api}
 
 Create an import token that's associated with your {{site.data.keyword.hscrypto}} service instance by making a `POST` call to the following endpoint.
 
@@ -106,6 +111,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/import_token
 
 ## Creating an import token with the CLI
 {: #create-import-token-cli}
+{: cli}
 
 Complete the following steps to create an import token using the {{site.data.keyword.keymanagementserviceshort}} CLI, which is integrated in {{site.data.keyword.hscrypto}}:
 
@@ -122,6 +128,7 @@ Complete the following steps to create an import token using the {{site.data.key
 
 ## Retrieving an import token with the API
 {: #retrieve-import-token-api}
+{: api}
 
 Retrieve the import token that's associated with your {{site.data.keyword.hscrypto}} service instance by making a `GET` call to the following endpoint.
 
@@ -188,6 +195,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/import_token
 
 ## Retrieving an import token with the CLI
 {: #retrieve-import-token-cli}
+{: cli}
 
 Complete the following steps to retrieve an import token using the {{site.data.keyword.keymanagementserviceshort}} CLI, which is integrated in {{site.data.keyword.hscrypto}}:
 

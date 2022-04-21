@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: troubleshoot, problems, known issues, can't authenticate through the key management service API
 
@@ -23,6 +23,10 @@ subcollection: hs-crypto
 {:external: target="_blank" .external}
 {:support: data-reuse='support'}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Why am I not authorized to make key management service API request?
 {: #troubleshoot-unable-to-authenticate-api}

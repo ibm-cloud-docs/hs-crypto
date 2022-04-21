@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: disaster recovery, restore, recovery, cross region restore, support ticket, support center
 
@@ -19,6 +19,10 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: sync resources, sync registrations, key registration, notify key state to resources
 
@@ -35,6 +35,7 @@ The sync API initiates only a request for synchronization. The IBM services that
 
 ## Syncing associated resources with the console
 {: #sync-associated-resources-ui}
+{: ui}
 
 You can renotify associated resources of your {{site.data.keyword.hscrypto}} root key's lifecycle event by using the console.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-04-21"
 
 keywords: Unified Key Orchestrator, UKO keystore, create keystore, internal keystore， KMS keystore
 
@@ -18,12 +18,16 @@ subcollection: hs-crypto
 {:note: .note}
 {:external: target="_blank" .external}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 
 # Creating internal KMS keystores
 {: #create-internal-keystores}
 
-An internal keystore is a repository that stores the cryptographic keys within your service instance. You can use {{site.data.keyword.uko_full_notm}} to create internal KMS keystores through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+An internal keystore is a repository that stores the cryptographic keys within your service instance. You can use {{site.data.keyword.uko_full_notm}} to create internal KMS keystores with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 Before you create an internal KMS keystore, keep in mind the following considerations:
@@ -33,12 +37,13 @@ Before you create an internal KMS keystore, keep in mind the following considera
 - A managed key can be used for encryption and decryption only after you install it in at least one target keystore. 
 - A target keystore can be assigned to only one vault.
 
-## Creating internal KMS keystores through the UI
+## Creating internal KMS keystores with the {{site.data.keyword.cloud_notm}} console
 {: #create-internal-keystores-ui}
+{: ui}
 
 
 
-To create an internal KMS keystore through the UI, complete the following steps:
+To create an internal KMS keystore by using the console, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Target keystores** from the navigation to view all the available keystores.
@@ -58,10 +63,9 @@ You have successfully created an internal KMS keystore.
 
 
 
-
-
 ## Creating internal KMS keystores with the API
 {: #create-internal-keystores-api}
+{: api}
 
 To create an internal keystore through the API, follow these steps:
 

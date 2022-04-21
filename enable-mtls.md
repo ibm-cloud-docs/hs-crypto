@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-04"
+lastupdated: "2022-04-21"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -21,6 +21,10 @@ subcollection: hs-crypto
 {:hide-dashboard: .hide-dashboard}
 {:external: target="_blank" .external}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Enabling the second layer of authentication for EP11 connections
 {: #enable-authentication-ep11}

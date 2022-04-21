@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: instance settings, service settings, network access policies
 
@@ -34,6 +34,7 @@ For more information about how the network access differs, see [Understanding th
 
 ## Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the console
 {: #update-network-access-policy-ui}
+{: ui}
 
 As a security administrator, if you prefer to update the network access policy for your instance by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 
@@ -49,7 +50,7 @@ After you create a {{site.data.keyword.hscrypto}} instance, complete the followi
 4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
 5. In the **Allowed network** section, select the network that you want traffic to come through, and click **Save policy**. The default network policy is public and private, which allows access from both public and private networks.
 
-    If a private-only network is enabled, you are not able to view or manage keys through the UI. However, you can still adjust the network setting later by using the API or CLI.
+    If a private-only network is enabled, you are not able to view or manage keys with the {{site.data.keyword.cloud_notm}} console. However, you can still adjust the network setting later by using the API or CLI.
     {: note}
 
 ## Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management service API
@@ -164,7 +165,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
             <strong>Required.</strong> The network access policy to apply to your {{site.data.keyword.hscrypto}} instance. Acceptable values are <code>public-and-private</code> or <code>private-only</code>.
           </p>
           <p>
-            After the network access policy is set to <code>private-only</code>, you cannot access your instance from the public network and cannot view or manage keys through the UI. However, you can still adjust the network setting later using the API or CLI.
+            After the network access policy is set to <code>private-only</code>, you cannot access your instance from the public network and cannot view or manage keys with the {{site.data.keyword.cloud_notm}} console. However, you can still adjust the network setting later using the API or CLI.
           </p>
         </td>
       </tr>

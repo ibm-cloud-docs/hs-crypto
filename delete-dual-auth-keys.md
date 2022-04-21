@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -21,6 +21,10 @@ subcollection: hs-crypto
 {:important: .important}
 {:preview: .preview}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Deleting keys by using dual authorization
 {: #delete-dual-auth-keys}

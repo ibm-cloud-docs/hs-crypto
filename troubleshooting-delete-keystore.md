@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-09"
+lastupdated: "2022-04-21"
 
 keywords: troubleshoot, problems, known issues, can't delete keystores
 
@@ -23,6 +23,10 @@ subcollection: hs-crypto
 {:external: target="_blank" .external}
 {:support: data-reuse='support'}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Why can't I delete internal keystores?
 {: #troubleshoot-delete-keystore}

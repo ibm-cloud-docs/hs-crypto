@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-10"
+lastupdated: "2022-04-21"
 
 keywords: troubleshoot, problems, known issues, support,help
 
@@ -23,6 +23,10 @@ subcollection: hs-crypto
 {:external: target="_blank" .external}
 {:support: data-reuse='support'}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Supported cryptocurrencies
 {: #supported-cryptocurrencies}

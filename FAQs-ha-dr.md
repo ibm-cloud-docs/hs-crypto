@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-04"
+lastupdated: "2022-04-21"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, HA, DR, high availability, disaster recovery
 
@@ -19,6 +19,10 @@ subcollection: hs-crypto
 {:external: target="_blank" .external}
 {:support: data-reuse='support'}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # FAQs: High availability and disaster recovery
 {: #faq-ha-dr}

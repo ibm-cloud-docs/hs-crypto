@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-06"
+lastupdated: "2022-04-21"
 
 keywords: troubleshoot, problems, known issues, can't delete an initialized service instance
 
@@ -23,6 +23,10 @@ subcollection: hs-crypto
 {:external: target="_blank" .external}
 {:support: data-reuse='support'}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Why can't I delete an initialized service instance?
 {: #troubleshoot-delete-instance}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-04-21"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -18,12 +18,16 @@ subcollection: hs-crypto
 {:note: .note}
 {:external: target="_blank" .external}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 
 # Creating vaults
 {: #create-vaults}
 
-You can use {{site.data.keyword.hscrypto}} to create a group of keys and keystores for a target group of users that require the same {{site.data.keyword.iamshort}} (IAM) access permissions in a vault. You can create vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can use {{site.data.keyword.hscrypto}} to create a group of keys and keystores for a target group of users that require the same {{site.data.keyword.iamshort}} (IAM) access permissions in a vault. You can create vaults in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 As a _Vault Administrator_, you can bundle the keys and keystores in your {{site.data.keyword.hscrypto}} instance into groups called _vault_. A vault is a collection of keys, internal keystores, and external keystores that require the same IAM access permissions. For example, if you have a group of team members who need a particular type of access to a specific group of keys and keystores, you can create a vault and assign the appropriate IAM access policy to the target user group. The users that are assigned access to the vault can create and manage the resources that exist within the vault.
@@ -44,10 +48,11 @@ Before you create a vault for your {{site.data.keyword.hscrypto}} instance, keep
 For more information about granting access, see [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults).
 
 
-## Creating vaults through the UI
+## Creating vaults with the {{site.data.keyword.cloud_notm}} console
 {: #create-vaults-ui}
+{: ui}
 
-To create a vault through the UI, complete the following steps through the **Vaults** page. Optionally, you can create a vault when you [create a managed key](/docs/hs-crypto?topic=hs-crypto-create-managed-keys) or [add a keystore](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores).
+To create a vault by using the console, complete the following steps through the **Vaults** page. Optionally, you can create a vault when you [create a managed key](/docs/hs-crypto?topic=hs-crypto-create-managed-keys) or [add a keystore](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores).
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Vaults** from the navigation to view all the available vaults.

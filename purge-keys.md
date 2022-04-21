@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: purge key, permanently delete key, remove key, destroy key
 
@@ -20,6 +20,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Purging keys manually
 {: #purge-keys}

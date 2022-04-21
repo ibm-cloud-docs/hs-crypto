@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-09"
+lastupdated: "2022-04-21"
 
 keywords: monitoring, monitor metrics
 
@@ -44,6 +44,7 @@ Before you enable operational metrics for your {{site.data.keyword.hscrypto}} in
 
 ### Enabling metrics for your {{site.data.keyword.hscrypto}} instance with the Console
 {: #enable-metrics-instance-policy-ui}
+{: ui}
 
 After you create a {{site.data.keyword.hscrypto}} instance, provision a {{site.data.keyword.mon_short}} instance, and enable platform metrics, complete the following steps to enable a metrics policy:
 

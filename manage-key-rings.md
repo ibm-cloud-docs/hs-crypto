@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-04-21"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -21,6 +21,10 @@ subcollection: hs-crypto
 {:important: .important}
 {:preview: .preview}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Managing key rings
 {: #managing-key-rings}
@@ -63,6 +67,7 @@ You can create up to five keystores in a service instance for free, including ke
 
 ### Creating key rings with the console
 {: #create-key-ring-ui}
+{: ui}
 
 Create a key ring with the console by completing the following steps:
 
@@ -187,6 +192,7 @@ After transferring a key to a different key ring, it can take up to ten minutes 
 
 ### Transferring a key to a different key ring with the console
 {: #transfer-key-ring-ui}
+{: ui}
 
 You can transfer a key to a different key ring with the console by completing the following steps:
 
@@ -400,6 +406,7 @@ You can browse the key rings that are managed in your provisioned instance of {{
 
 ### Listing key rings with the console
 {: #list-key-ring-ui}
+{: ui}
 
 To browse the key rings with the console, complete the following steps:
 
@@ -531,6 +538,7 @@ The `default` key ring cannot be deleted. You are also not able to delete a key 
 
 ### Deleting key rings with the console
 {: #delete-key-ring-ui}
+{: ui}
 
 To delete a key ring with the console, complete the following steps:
 

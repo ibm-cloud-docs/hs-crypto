@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-07"
+lastupdated: "2022-04-21"
 
 keywords: get key, get encryption key, view encryption key, retrieve encryption key, API examples
 
@@ -20,6 +20,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Retrieving a root key or a standard key
 {: #retrieve-key}

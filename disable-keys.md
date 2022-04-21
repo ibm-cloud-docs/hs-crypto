@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-07"
+lastupdated: "2022-04-21"
 
 keywords: disable key, enable key, suspend key, suspend operations on a key
 
@@ -21,6 +21,10 @@ subcollection: hs-crypto
 {:important: .important}
 {:preview: .preview}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Disabling root keys
 {: #disable-keys}
@@ -52,11 +56,13 @@ Tracker web UI.
 
 ## Disabling and enabling root keys with the console
 {: #disable-enable-ui}
+{: ui}
 
 If you prefer to enable or disable your root keys by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 
 ### Disabling a root key
 {: #disable-ui}
+{: ui}
 
 [After you create or import your existing keys into the service](/docs/hs-crypto?topic=hs-crypto-create-root-keys),
 complete the following steps to disable a key:
@@ -75,6 +81,7 @@ After the key is disabled, the **State** of the key is moved to `Suspended` in t
 
 ### Enabling a root key
 {: #enable-ui}
+{: ui}
 
 If you want to reenable a root key that is [disabled](#disable-ui),
 complete the following steps:

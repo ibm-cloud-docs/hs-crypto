@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: instance settings, service settings, dual authorization
 
@@ -58,6 +58,7 @@ authorization policy, the policy cannot be reverted.
 
 ## Enabling dual authorization for your service instance with the console
 {: #enable-dual-auth-instance-policy-ui}
+{: ui}
 
 As an instance manager, if you prefer to enable a dual authorization policy on your instance by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 
@@ -214,6 +215,7 @@ the policies that are available for your
 
 ## Disabling dual authorization for your service instance with the console
 {: #disable-dual-auth-instance-policy-ui}
+{: ui}
 
 As an instance manager, if you prefer to disable a dual authorization policy on your instance by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 

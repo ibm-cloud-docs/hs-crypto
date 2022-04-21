@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: import encryption key, upload encryption key, bring your own key, byok, key material, secure import, import tokens
 
@@ -21,6 +21,10 @@ subcollection: hs-crypto
 {:important: .important}
 {:preview: .preview}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Bringing your encryption keys to the cloud
 {: #importing-keys}

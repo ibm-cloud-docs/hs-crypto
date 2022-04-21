@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-04-21"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -19,12 +19,16 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 
 # Creating and installing managed keys
 {: #create-managed-keys}
 
-You can use {{site.data.keyword.uko_full_notm}} to create managed keys through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can use {{site.data.keyword.uko_full_notm}} to create managed keys with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 Before you create a managed key, keep in mind the following considerations:
@@ -36,10 +40,11 @@ Before you create a managed key, keep in mind the following considerations:
 - Installing a managed key in multiple keystores enables redundancy.
 - To protect your privacy, do not store your personal data as metadata for your managed key.
 
-## Creating and installing managed keys through the UI
+## Creating and installing managed keys with the {{site.data.keyword.cloud_notm}} console
 {: #create-managed-keys-ui}
+{: ui}
 
-To create a managed key through the UI, complete the following steps:
+To create a managed key by using the console, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
@@ -80,6 +85,7 @@ You have successfully created a managed key.
 
 ## Creating and installing managed keys with the API
 {: #create-managed-keys-api}
+{: api}
 
 To create a managed key through the API, follow these steps:
 
