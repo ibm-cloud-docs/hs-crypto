@@ -18,6 +18,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 {:external: target="_blank" .external}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Retrieving your instance ID
 {: #retrieve-instance-ID}

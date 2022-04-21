@@ -366,6 +366,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
 
 ## APIs that use key alias
 {: #key-alias-apis}
+{: api}
 
 The following table lists the APIs where you can use key alias.
 

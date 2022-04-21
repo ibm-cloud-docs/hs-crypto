@@ -375,6 +375,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 
 ## Granting access to a key ring
 {: #grant-access-key-ring}
+{: ui}
 
 You can grant access to a key ring within a {{site.data.keyword.hscrypto}} instance by using the
 {{site.data.keyword.cloud_notm}} console, [IAM API](/apidocs/iam-policy-management#create-policy){: external}, or [CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create){: external}.
