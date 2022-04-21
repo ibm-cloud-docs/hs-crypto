@@ -81,6 +81,7 @@ Complete the following steps to restore the key:
 
 ## Restoring a deleted key with the API
 {: #restore-keys-api}
+{: api}
 
 Restore a key by making a `POST` call to the following endpoint.
 

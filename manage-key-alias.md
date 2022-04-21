@@ -79,6 +79,7 @@ Create a key alias with the console by completing the following steps:
 
 ### Creating key aliases with the API
 {: #create-key-alias-api}
+{: api}
 
 Create a key alias by making a `POST` call to the following endpoint.
 
@@ -243,6 +244,7 @@ Delete a key alias with the console by completing the following steps:
 
 ### Deleting key aliases with the API
 {: #delete-key-alias-api}
+{: api}
 
 Delete a key alias by making a `DELETE` call to the following endpoint.
 

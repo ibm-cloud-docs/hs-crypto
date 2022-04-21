@@ -46,6 +46,7 @@ Key registration is an extra feature that's available only if the cloud service 
 
 ## Viewing protected resources with the console
 {: #view-protected-resources-gui}
+{: ui}
 
 You can browse the registrations that are available between your {{site.data.keyword.hscrypto}} keys and cloud resources by using the {{site.data.keyword.hscrypto}} GUI.
 
@@ -194,6 +195,7 @@ Besides searching for a resource, you can also for resources by Resource Name, k
 
 ## Viewing protected resources with the API
 {: #view-protected-resources-api}
+{: api}
 
 You can also browse the registrations that are available between your {{site.data.keyword.hscrypto}} keys and cloud resources by using the {{site.data.keyword.hscrypto}} key management service API.
 

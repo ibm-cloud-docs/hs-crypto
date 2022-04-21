@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: instance settings, service settings, key creation/import, key create policy, key creation/import, key policy
 
@@ -20,6 +20,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 {:preview: .preview}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Managing the key create and import access policy
 {: #manage-keyCreateImportAccess}
@@ -64,6 +68,7 @@ following considerations:
 
 ## Enabling or updating the key create and import access policy for your service instance with the console
 {: #enable-keyCreateImportAccess-policy-console}
+{: ui}
 
 As a security administrator, if you prefer to manage the key create and import access policy settings by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 
@@ -90,6 +95,7 @@ Any disabled key actions are not available in the **Add key** panel. After you c
 
 ## Enabling and updating the key create and import access policy for your service instance with the API
 {: #enable-keyCreateImportAccess-policy-api}
+{: api}
 
 As a security administrator, you can enable or update the key create and import access policy for
 a {{site.data.keyword.hscrypto}} instance by making a `PUT`
@@ -323,6 +329,7 @@ existing value for the omitted field is overwritten by the default value.
 
 ## Disabling the key create and import access policy for your service instance with the key management service API
 {: #disable-key-create-import-policy-api}
+{: api}
 
 As a manager of a {{site.data.keyword.hscrypto}} instance, to disable the key create and import access policy with the key management service API, make a `PUT` call to the following endpoint.
 

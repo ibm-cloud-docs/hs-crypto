@@ -62,7 +62,6 @@ If you prefer to enable or disable your root keys by using a graphical interface
 
 ### Disabling a root key
 {: #disable-ui}
-{: ui}
 
 [After you create or import your existing keys into the service](/docs/hs-crypto?topic=hs-crypto-create-root-keys),
 complete the following steps to disable a key:
@@ -81,7 +80,6 @@ After the key is disabled, the **State** of the key is moved to `Suspended` in t
 
 ### Enabling a root key
 {: #enable-ui}
-{: ui}
 
 If you want to reenable a root key that is [disabled](#disable-ui),
 complete the following steps:
@@ -103,6 +101,7 @@ enable.
 
 ## Disabling and enabling root keys with the API
 {: #disable-enable-api}
+{: api}
 
 ### Disabling a root key
 {: #disable-api}

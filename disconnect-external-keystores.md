@@ -55,10 +55,9 @@ The external keystore has been disconnected with all the installed keys uninstal
 After you disconnect from an external keystore, you can reconnect to the keystores at any time. For more instructions, see [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
 {: tip}
 
-
-
 ## Disconnecting from external keystores with the API
 {: #disconnect-external-keystores-api}
+{: api}
 
 To disconnect from an external keystore through the API, follow these steps:
 

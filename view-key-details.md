@@ -53,6 +53,7 @@ You can view details about a specific key with the {{site.data.keyword.cloud_not
 
 ## Viewing key details with the key management service API
 {: #view-key-details-api}
+{: api}
 
 To view detailed information about a specific root key or a standard key, you can make a `GET` call to
 the following endpoint.

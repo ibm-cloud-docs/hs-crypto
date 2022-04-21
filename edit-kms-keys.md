@@ -67,6 +67,7 @@ You can search for a specific key by using the search bar, or filter keys based 
 
 ## Editing key details with the API
 {: #edit-kms-keys-api}
+{: api}
 
 To edit key details through the API, follow these steps:
 

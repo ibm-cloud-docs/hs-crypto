@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-21"
 
 keywords: service id, service ids, instance id, get instance id, get instance guid, instance id api, instance id cli
 
@@ -18,6 +18,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 {:external: target="_blank" .external}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Retrieving your instance ID
 {: #uko-retrieve-instance-ID}
@@ -25,8 +29,9 @@ subcollection: hs-crypto
 You can target an individual {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance for operations by including the unique identifier, or instance ID, in API requests to the service.
 {: shortdesc}
 
-## Viewing your instance ID with the UI
+## Viewing your instance ID with the {{site.data.keyword.cloud_notm}} console
 {: #uko-view-instance-ID}
+{: ui}
 
 You can view the instance ID that is associated with your {{site.data.keyword.hscrypto}} service instance by navigating to your {{site.data.keyword.cloud_notm}} resource list.
 
@@ -39,6 +44,7 @@ You can view the instance ID that is associated with your {{site.data.keyword.hs
 
 ## Retrieving an instance ID with the CLI
 {: #uko-retrieve-instance-ID-cli}
+{: cli}
 
 You can also retrieve the instance ID for your service instance by using the {{site.data.keyword.cloud_notm}} CLI.
 
@@ -79,6 +85,7 @@ You can also retrieve the instance ID for your service instance by using the {{s
 
 ## Retrieving an instance ID with the API
 {: #uko-retrieve-instance-ID-api}
+{: api}
 
 You might want to retrieve the instance ID programmatically to help you build and connect your application. You can call the [{{site.data.keyword.cloud_notm}} Resource Controller API](/apidocs/resource-controller){: external}, and then pipe the JSON output to `jq` to extract this value.
 

@@ -49,6 +49,7 @@ To edit vault details by using the console, complete the following steps:
 
 ## Editing vault details with the API
 {: #edit-vaults-api}
+{: api}
 
 To edit a vault through the API, follow these steps:
 

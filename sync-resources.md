@@ -19,6 +19,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 {:preview: .preview}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Synchronizing associated resources
 {: #sync-associated-resources}
@@ -48,6 +52,7 @@ You can renotify associated resources of your {{site.data.keyword.hscrypto}} roo
 
 ## Syncing associated resources with the API
 {: #sync-associated-resources-api}
+{: api}
 
 You can renotify associated IBM cloud services of your {{site.data.keyword.hscrypto}} root key's lifecycle event by using the {{site.data.keyword.hscrypto}} API.
 

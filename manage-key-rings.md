@@ -84,6 +84,7 @@ Create a key ring with the console by completing the following steps:
 
 ### Creating key rings with the API
 {: #create-key-ring-api}
+{: api}
 
 Create a key ring by making a `POST` call to the following endpoint.
 
@@ -206,6 +207,7 @@ You can transfer a key to a different key ring with the console by completing th
 
 ### Transferring a key to a different key ring with the API
 {: #transfer-key-ring-api}
+{: api}
 
 Transfer a key to a different key ring by making a `PATCH` call to the following endpoint.
 
@@ -426,6 +428,7 @@ The key rings table contains the following information:
 
 ### Listing key rings with the API
 {: #list-key-ring-api}
+{: api}
 
 You can browse the key rings by making a GET call to the following endpoint.
 
@@ -551,6 +554,7 @@ To delete a key ring with the console, complete the following steps:
 
 ### Deleting key rings with the API
 {: #delete-key-ring-api}
+{: api}
 
 You can delete a key ring by making a `DELETE` call to the following endpoint.
 

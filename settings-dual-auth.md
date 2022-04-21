@@ -20,6 +20,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 {:preview: .preview}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Managing dual authorization of your service instance
 {: #manage-dual-auth}
@@ -72,6 +76,7 @@ After creating a service instance, complete the following steps to create a dual
 
 ## Enabling dual authorization for your service instance with the API
 {: #enable-dual-auth-instance-policy-api}
+{: api}
 
 As an instance manager, enable a dual authorization policy for a
 {{site.data.keyword.hscrypto}} instance by making a
@@ -229,6 +234,7 @@ After creating a service instance, complete the following steps to create a dual
 
 ## Disabling dual authorization for your service instance with the key management service API
 {: #disable-dual-auth-instance-policy-api}
+{: api}
 
 As an instance manager, disable an existing dual authorization policy for a
 {{site.data.keyword.hscrypto}} instance by making a

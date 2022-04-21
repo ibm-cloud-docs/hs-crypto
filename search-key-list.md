@@ -72,6 +72,7 @@ To search for a key by using the console, complete the following steps:
 
 ## Searching keys with the API
 {: #search-key-list-api}
+{: api}
 
 To search for a managed key by ID through the API, follow these steps:
 

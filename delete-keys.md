@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-07"
+lastupdated: "2022-04-21"
 
 keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 
@@ -23,6 +23,11 @@ subcollection: hs-crypto
 {:external: target="_blank" .external}
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
+
 
 # Deleting keys by using a single authorization
 {: #delete-keys}
@@ -36,6 +41,7 @@ Before you delete keys, make sure you understand [the concept of deleting and pu
 {: #delete-keys-gui}
 {: help}
 {: support}
+{: ui}
 
 By default, {{site.data.keyword.hscrypto}} requires one
 authorization to delete a key. If you prefer to delete your encryption keys by
@@ -55,6 +61,7 @@ After you delete a key, the key moves to the _Destroyed_ state. You can [restore
 
 ## Deleting keys with the API
 {: #delete-keys-api}
+{: api}
 
 By default, {{site.data.keyword.hscrypto}} requires one authorization to delete a key. You can delete a key and the contents by making a
 `DELETE` call to the following endpoint.

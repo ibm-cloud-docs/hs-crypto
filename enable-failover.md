@@ -56,7 +56,7 @@ To enable or add failover crypto units by using the {{site.data.keyword.cloud_no
     ```
     {: pre}
 
-1. [Log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cli-getting-started#step3-configure-idt-env){: external}.
+2. [Log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cli-getting-started#step3-configure-idt-env){: external}.
 
     If you have multiple accounts, select the account that your service instance is created with. Make sure that you're logged in to the correct region and resource group where the service instance locates with the following command:
 
@@ -65,7 +65,7 @@ To enable or add failover crypto units by using the {{site.data.keyword.cloud_no
     ```
     {: pre}
 
-1. To enable or add failover crypto units, run the following command:
+3. To enable or add failover crypto units, run the following command:
 
     ```
     ibmcloud tke failover-enable
@@ -99,7 +99,7 @@ To enable or add failover crypto units by using the {{site.data.keyword.cloud_no
         If your instance already has a certain number of failover crypto units assigned, you can also use this command and follow the same procedure to add more failover crypto units.
         {: tip}
 
-    1. Type `y` to confirm the action. The failover crypto units are assigned in the target failover region.
+    2. Type `y` to confirm the action. The failover crypto units are assigned in the target failover region.
 
         Failover crypto units are now available in `us-south` and `us-east`. The two regions are the target failover regions of each other. For example, if your instance is located in `us-south`, the failover region for your instance is `us-east`.
 
@@ -131,7 +131,7 @@ To enable or add failover crypto units by using the {{site.data.keyword.cloud_no
         ```
         {: screen}
 
-1. Initialize failover crypto units by using the same master key for the operational crypto units initialization and the same initialization approach:
+4. Initialize failover crypto units by using the same master key for the operational crypto units initialization and the same initialization approach:
 
     - [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
     - [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
@@ -154,7 +154,7 @@ To enable or add failover crypto units by using the Management Utilities, follow
 
     1. [Set up the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities), and plug the two smart card readers into the USB ports of your workstation.
     
-    1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli) and the latest TKE CLI plug-in with the following command:
+    2. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli) and the latest TKE CLI plug-in with the following command:
 
         ```
         ibmcloud plugin install tke
@@ -168,7 +168,7 @@ To enable or add failover crypto units by using the Management Utilities, follow
         ```
          {: pre}
 
-    1. [Log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cli-getting-started#step3-configure-idt-env){: external}.
+    3. [Log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cli-getting-started#step3-configure-idt-env){: external}.
 
         If you have multiple accounts, select the account that your service instance is created with. Make sure that you're logged in to the correct region and resource group where the service instance locates with the following command:
 
@@ -177,7 +177,7 @@ To enable or add failover crypto units by using the Management Utilities, follow
         ```
         {: pre}
 
-1. Start the Trusted Key Entry application by changing to the subdirectory where you install the Management Utilities applications and running the following command:
+2. Start the Trusted Key Entry application by changing to the subdirectory where you install the Management Utilities applications and running the following command:
 
     ```
     ./tke
@@ -186,21 +186,21 @@ To enable or add failover crypto units by using the Management Utilities, follow
 
     When the Trusted Key Entry application is started, the account and resource group that you selected when you logged into IBM Cloud are displayed.
 
-1. To enable or add failover crypto units, on the **Crypto units** tab, perform the following steps:
+3. To enable or add failover crypto units, on the **Crypto units** tab, perform the following steps:
 
     1. Click **Add crypto units**. In the dialog box that is displayed, enter the numbers of all crypto units in the service instance separated by a space.
 
-    1. Click **Failover enable**, and click **Yes** to continue. 
+    2. Click **Failover enable**, and click **Yes** to continue. 
 
-    1. If the service instance has three operational crypto units, you are prompted to enter the number of failover crypto units based on your need. Either `2` or `3` failover crypto units are supported. 
+    3. If the service instance has three operational crypto units, you are prompted to enter the number of failover crypto units based on your need. Either `2` or `3` failover crypto units are supported. 
 
         For a service instance with only two operational crypto units, two failover crypto units are assigned automatically. You don't need to take any actions in this case.
         
-    1. Click **Yes** to confirm the action. The failover crypto units are assigned in the target failover region.
+    4. Click **Yes** to confirm the action. The failover crypto units are assigned in the target failover region.
 
         Failover crypto units are now available in `us-south` and `us-east`. The two regions are the target failover regions of each other. For example, if your instance is located in `us-south`, the failover region for your instance is `us-east`.
 
-1. Initialize failover crypto units by using the same master key for the operational crypto units initialization and the same initialization approach:
+4. Initialize failover crypto units by using the same master key for the operational crypto units initialization and the same initialization approach:
 
     - [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
     - [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)

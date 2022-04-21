@@ -66,6 +66,7 @@ To view a list of your keys by using the console, complete the following steps:
 
 ## Viewing a list of keys with the API
 {: #view-key-list-api}
+{: api}
 
 To view a list of managed keys through the API, follow these steps:
 

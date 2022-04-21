@@ -66,10 +66,9 @@ Follow these steps to complete the process:
 
 The managed key has been deleted and uninstalled from all target keystores. All key materials and metadata have been destroyed. 
 
-
-
 ## Deleting managed keys with the API
 {: #delete-managed-keys-api}
+{: api}
 
 To delete a managed key through the API, follow these steps:
 

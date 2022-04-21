@@ -810,7 +810,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID#retrieve-instance-ID)
 
-* [Viewing your instance ID with the console](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID#view-instance-ID)
+* [Viewing your instance ID with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID#view-instance-ID)
 
 * [Retrieving an instance ID with the CLI](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID#retrieve-instance-ID-cli)
 
@@ -955,7 +955,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Importing root keys](/docs/hs-crypto?topic=hs-crypto-import-root-keys#import-root-keys)
 
-* [Importing root keys with the console](/docs/hs-crypto?topic=hs-crypto-import-root-keys#import-root-key-gui)
+* [Importing root keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-import-root-keys#import-root-key-gui)
 
 * [Importing root keys with the API](/docs/hs-crypto?topic=hs-crypto-import-root-keys#import-root-key-api)
 
@@ -967,7 +967,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Importing standard keys](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#import-standard-keys)
 
-* [Importing standard keys with the console](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#import-standard-key-gui)
+* [Importing standard keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#import-standard-key-gui)
 
 * [Importing standard keys with the API](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#import-standard-key-api)
 
@@ -1063,7 +1063,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Considerations for deleting a key using dual authorization](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#dual-auth-deletion-considerations)
 
-* [Authorize deletion for a key with the console](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#set-key-deletion-console)
+* [Authorize deletion for a key with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#set-key-deletion-console)
 
 * [Authorize deletion for a key with the API](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#set-key-deletion-api)
 
@@ -1145,7 +1145,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID#uko-retrieve-instance-ID)
 
-* [Viewing your instance ID with the UI](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID#uko-view-instance-ID)
+* [Viewing your instance ID with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID#uko-view-instance-ID)
 
 * [Retrieving an instance ID with the CLI](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID#uko-retrieve-instance-ID-cli)
 

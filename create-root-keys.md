@@ -33,6 +33,7 @@ Root keys are symmetric key-wrapping keys that are used to protect the security 
 
 ## Creating root keys with the console
 {: #root-key-gui}
+{: ui}
 
 [After you create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision), complete the following steps to create a root key with the {{site.data.keyword.cloud_notm}} console.
 
@@ -100,6 +101,7 @@ Keys that are created in the service are symmetric 256-bit keys, supported by th
 
 ## Creating root keys with the API
 {: #root-key-api}
+{: api}
 
 Create a root key by making a `POST` call to the following endpoint.
 

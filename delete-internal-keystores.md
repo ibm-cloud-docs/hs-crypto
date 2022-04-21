@@ -50,10 +50,9 @@ To delete an internal keystore by using the console, complete the following step
 
 The internal keystore has been deleted with all the installed keys uninstalled and associated resources detached.
 
-
-
 ## Deleting internal keystores with the API
 {: #delete-internal-keystores-api}
+{: api}
 
 To delete an internal keystore through the API, follow these steps:
 

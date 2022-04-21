@@ -62,10 +62,9 @@ To create a vault by using the console, complete the following steps through the
 
 You have successfully created a vault. 
 
-
-
 ## Creating vaults through the API
 {: #create-vaults-api}
+{: api}
 
 To create a vault through the API, follow these steps:
 

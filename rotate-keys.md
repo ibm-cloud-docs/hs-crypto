@@ -39,6 +39,7 @@ To learn how key rotation helps you meet industry standards and cryptographic be
 {: #rotate-root-key-gui}
 {: help}
 {: support}
+{: ui}
 
 If you prefer to rotate your root keys by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 
@@ -78,6 +79,7 @@ If you prefer to rotate your root keys by using a graphical interface, you can u
 
 ## Rotating root keys with the API
 {: #rotate-root-key-api}
+{: api}
 
 You can rotate a root key by making a `POST` call to the following endpoint.
 

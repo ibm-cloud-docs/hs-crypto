@@ -51,6 +51,7 @@ To install or uninstall a managed key in target keystores by using the console, 
 
 ## Setting target keystores for existing keys with the API
 {: #install-key-keystores-api}
+{: api}
 
 To install or uninstall a managed key in target keystores through the API, follow these steps:
 

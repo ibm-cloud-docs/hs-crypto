@@ -42,7 +42,7 @@ Before you enable operational metrics for your {{site.data.keyword.hscrypto}} in
 
     You need to [provision a {{site.data.keyword.mon_short}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision){: external} that is located in the same region as the {{site.data.keyword.hscrypto}} instance that you want to receive operational metrics for. After you provision the {{site.data.keyword.mon_short}} instance, you need to [enable platform metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics#configure-monitoring).
 
-### Enabling metrics for your {{site.data.keyword.hscrypto}} instance with the Console
+### Enabling metrics for your {{site.data.keyword.hscrypto}} instance with the console
 {: #enable-metrics-instance-policy-ui}
 {: ui}
 
@@ -56,6 +56,7 @@ After you create a {{site.data.keyword.hscrypto}} instance, provision a {{site.d
 
 ### Enabling metrics for your {{site.data.keyword.hscrypto}} instance with the API
 {: #enable-metrics-instance-policy-api}
+{: api}
 
 As an instance manager, enable a metrics policy for a {{site.data.keyword.hscrypto}} instance by making a `PUT` call to the following endpoint.
 
@@ -168,6 +169,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=met
 
 ### Disabling metrics for your {{site.data.keyword.hscrypto}} instance with the API
 {: #disable-metrics-api}
+{: api}
 
 As an instance manager, disable an existing metrics policy for a {{site.data.keyword.hscrypto}} instance by making a `PUT` call to the following endpoint.
 

@@ -53,6 +53,7 @@ You can search for a specific keystore by using the search bar, or filter keysto
 
 ## Editing internal keystores with the API
 {: #edit-internal-keystores-api}
+{: api}
 
 To edit the details of an internal keystore through the API, follow these steps:
 

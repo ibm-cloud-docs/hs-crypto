@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: standard key, encryption key, create standard key, create encryption key, add key, key material, key management, create secret, persist secret, create encryption key, encryption key api, api key
 
@@ -16,6 +16,10 @@ subcollection: hs-crypto
 {:pre: .pre}
 {:tip: .tip}
 {:external: target="_blank" .external}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Creating standard keys
 {: #create-standard-keys}
@@ -25,8 +29,9 @@ You can create a standard encryption key with the {{site.data.keyword.cloud}} co
 
 ## Creating standard keys with the console
 {: #standard-key-gui}
+{: ui}
 
-[After you create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision), complete the following steps to create a standard key with the {{site.data.keyword.hscrypto}} GUI.
+[After you create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision), complete the following steps to create a standard key with the {{site.data.keyword.hscrypto}} console.
 
 If you enable [dual authorization settings for your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth), keep in mind that any keys that you add to the service require an authorization from two users to delete keys.
 {: note}
@@ -89,6 +94,7 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
 
 ## Creating standard keys with the API
 {: #create-standard-key-api}
+{: api}
 
 Create a standard key by making a `POST` call to the following endpoint.
 

@@ -116,6 +116,7 @@ You can search for a specific keystore by using the search bar, or filter keysto
 
 ## Editing connection to external keystores with the API
 {: #edit-external-keystore-connection-api}
+{: api}
 
 To edit the connection to an external keystore through the API, follow these steps:
 

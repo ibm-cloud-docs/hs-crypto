@@ -20,6 +20,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 {:preview: .preview}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Managing the network access policy
 {: #managing-network-access-policies}
@@ -55,6 +59,7 @@ After you create a {{site.data.keyword.hscrypto}} instance, complete the followi
 
 ## Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management service API
 {: #update-network-access-policy-api}
+{: api}
 
 As a security administrator, update the network access policy for your {{site.data.keyword.hscrypto}} instance by making a `PUT` call to the following endpoint. See these API references to [set](/apidocs/hs-crypto#putinstancepolicy){: external} and [list](/apidocs/hs-crypto#getinstancepolicy){: external} instance policies.
 
@@ -193,11 +198,13 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
 
 ## Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the CLI
 {: #update-network-access-policy-cli}
+{: cli}
 
 You can also update the network access policy for your {{site.data.keyword.hscrypto}} instance using the CLI. For more information, see [the CLI reference](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference#kp-instance-policy-update-allowed){: external}.
 
 ## Disabling the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management service API
 {: #disable-network-access-policy-api}
+{: api}
 
 As a security administrator, disable a network access policy for a {{site.data.keyword.hscrypto}} instance by making a `PUT` call to the following endpoint. See these API references to [set](/apidocs/hs-crypto#putinstancepolicy){: external} and [list](/apidocs/hs-crypto#getinstancepolicy){: external} instance policies.
 

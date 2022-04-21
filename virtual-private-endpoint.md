@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway
 
@@ -19,6 +19,11 @@ subcollection: hs-crypto
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
+
 
 
 # Using virtual private endpoints for VPC to privately connect to {{site.data.keyword.hscrypto}}
@@ -188,6 +193,7 @@ After you create an endpoint gateway for your {{site.data.keyword.hscrypto}} ins
 
 ### Using the VPE with the CLI
 {: #use-vpe-for-hpcs-cli}
+{: cli}
 
 - Using the VPE for the [TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin)
 
@@ -223,6 +229,7 @@ After you create an endpoint gateway for your {{site.data.keyword.hscrypto}} ins
 
 ### Using the VPE with the API
 {: #use-vpe-for-hpcs-api}
+{: api}
 
 - Using the VPE for the [key management service API](/apidocs/hs-crypto)
 
@@ -247,6 +254,7 @@ After you create an endpoint gateway for your {{site.data.keyword.hscrypto}} ins
 
 ### Using the VPE with Terraform
 {: #use-vpe-for-hpcs-terraform}
+{: terraform}
 
 To use VPE with Terraform, set the `service_endpoints` parameter to `private-only` in the resource block. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).
 
