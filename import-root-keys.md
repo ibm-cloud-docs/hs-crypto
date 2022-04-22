@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -17,6 +17,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 {:external: target="_blank" .external}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Importing root keys
 {: #import-root-keys}
@@ -29,8 +33,9 @@ Root keys are symmetric key-wrapping keys that are used to protect the security 
 Plan ahead for importing keys by [reviewing your options for creating and encrypting key material](/docs/hs-crypto?topic=hs-crypto-importing-keys#plan-ahead). For added security, you can enable the secure import of the key material by using an [import token](/docs/hs-crypto?topic=hs-crypto-importing-keys#using-import-tokens) to encrypt your key material before you bring it to the cloud.
 {: note}
 
-## Importing root keys with the console
+## Importing root keys with the {{site.data.keyword.cloud_notm}} console
 {: #import-root-key-gui}
+{: ui}
 
 After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision), complete the following steps to add your existing root key with the {{site.data.keyword.hscrypto}} GUI.
 
@@ -105,6 +110,7 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
 
 ## Importing root keys with the API
 {: #import-root-key-api}
+{: api}
 
 Import symmetric keys to {{site.data.keyword.hscrypto}} by making a `POST` call to the following endpoint.
 
@@ -222,6 +228,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 ## Importing root keys with the CLI
 {: #import-root-key-cli}
+{: cli}
 
 Complete the following steps to import root keys by using the {{site.data.keyword.keymanagementserviceshort}} CLI, which is integrated in {{site.data.keyword.hscrypto}}:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -21,6 +21,10 @@ subcollection: hs-crypto
 {:important: .important}
 {:preview: .preview}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Deleting keys by using dual authorization
 {: #delete-dual-auth-keys}
@@ -60,8 +64,9 @@ second user with a _Manager_ access policy can use the
 {{site.data.keyword.cloud_notm}} console or API to delete the key.
 - **The key and its associated data become inaccessible 90 days after the key is deleted.** When you delete a key, the key can be restored within 30 days after the deletion. You are able to retrieve associated data such as key metadata, registrations, and policies for up to 90 days. After 90 days, the key becomes eligible to be automatically purged and its associated data will be permanently removed from the your instance.
 
-## Authorize deletion for a key with the console
+## Authorize deletion for a key with the {{site.data.keyword.cloud_notm}} console
 {: #set-key-deletion-console}
+{: ui}
 
 ### Step 1. Authorize deletion for a key
 {: #set-dual-auth-key-gui}
@@ -105,6 +110,7 @@ second user and the 7-day period expires, you must
 
 ## Authorize deletion for a key with the API
 {: #set-key-deletion-api}
+{: api}
 
 ### Step 1. Authorize deletion for a key
 {: #set-dual-auth-key-api}

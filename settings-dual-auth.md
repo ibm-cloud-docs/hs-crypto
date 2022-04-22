@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: instance settings, service settings, dual authorization
 
@@ -20,6 +20,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 {:preview: .preview}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Managing dual authorization of your service instance
 {: #manage-dual-auth}
@@ -58,6 +62,7 @@ authorization policy, the policy cannot be reverted.
 
 ## Enabling dual authorization for your service instance with the console
 {: #enable-dual-auth-instance-policy-ui}
+{: ui}
 
 As an instance manager, if you prefer to enable a dual authorization policy on your instance by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 
@@ -71,6 +76,7 @@ After creating a service instance, complete the following steps to create a dual
 
 ## Enabling dual authorization for your service instance with the API
 {: #enable-dual-auth-instance-policy-api}
+{: api}
 
 As an instance manager, enable a dual authorization policy for a
 {{site.data.keyword.hscrypto}} instance by making a
@@ -214,6 +220,7 @@ the policies that are available for your
 
 ## Disabling dual authorization for your service instance with the console
 {: #disable-dual-auth-instance-policy-ui}
+{: ui}
 
 As an instance manager, if you prefer to disable a dual authorization policy on your instance by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 
@@ -227,6 +234,7 @@ After creating a service instance, complete the following steps to create a dual
 
 ## Disabling dual authorization for your service instance with the key management service API
 {: #disable-dual-auth-instance-policy-api}
+{: api}
 
 As an instance manager, disable an existing dual authorization policy for a
 {{site.data.keyword.hscrypto}} instance by making a

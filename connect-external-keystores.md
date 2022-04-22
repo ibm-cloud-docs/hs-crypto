@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-04-21"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -18,12 +18,16 @@ subcollection: hs-crypto
 {:note: .note}
 {:external: target="_blank" .external}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 
 # Connecting to external keystores
 {: #connect-external-keystores}
 
-You can use {{site.data.keyword.uko_full_notm}} to connect to external keystores through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can use {{site.data.keyword.uko_full_notm}} to connect to external keystores with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 Before you connect to an external keystore, keep in mind the following considerations:
@@ -84,10 +88,11 @@ For more information, check out [Assign a Key Vault access policy](https://docs.
 
 For more information, check out [AWS KMS permissions](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html){: external}.
 
-## Connecting to external keystores through the UI
+## Connecting to external keystores with the {{site.data.keyword.cloud_notm}} console
 {: #connect-external-keystores-ui}
+{: ui}
 
-To connect to an external keystore through the UI, complete the following steps:
+To connect to an external keystore by using the console, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Target keystores** from the navigation to view all the available keystores.
@@ -169,10 +174,9 @@ To connect to an external keystore through the UI, complete the following steps:
 
 You have successfully connected to the external keystore that you select. 
 
-
-
 ## Connecting to external keystores with the API
 {: #connect-external-keystores-api}
+{: api}
 
 To connect to an external keystore through the API, follow these steps:
 
@@ -186,8 +190,6 @@ To connect to an external keystore through the API, follow these steps:
     {: codeblock}
 
     For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-keystore){: external}.
-
-
 
 ## What's next
 {: #connect-external-keystores-next}

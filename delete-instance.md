@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-07"
+lastupdated: "2022-04-21"
 
 keywords: delete, delete service instance, crypto unit, ibm cloud cli, clear crypto unit, uninstall
 
@@ -18,11 +18,15 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Deleting service instances
 {: #delete-instance}
 
-You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance with the {{site.data.keyword.cloud_notm}} UI console or the {{site.data.keyword.cloud_notm}} CLI. To do so, you need to set all the [crypto units](#x9860404){: term} of the service instance back to the [imprint mode](#x9860399){: term} by zeroizing the crypto units.
+You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance with the {{site.data.keyword.cloud_notm}} console or the {{site.data.keyword.cloud_notm}} CLI. To do so, you need to set all the [crypto units](#x9860404){: term} of the service instance back to the [imprint mode](#x9860399){: term} by zeroizing the crypto units.
 {: shortdesc}
 
 
@@ -103,6 +107,7 @@ After you set the crypto units to imprint mode, you can choose to delete your se
 
 ### Deleting instances from the {{site.data.keyword.cloud_notm}} console resources page
 {: #delete-gui-resource}
+{: ui}
 
 You can delete an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console resources page by completing the following steps:
 
@@ -113,6 +118,7 @@ You can delete an instance of {{site.data.keyword.hscrypto}} from the {{site.dat
 
 ### Deleting instances from the {{site.data.keyword.cloud_notm}} console instance details page
 {: #delete-gui-detail}
+{: ui}
 
 You can delete an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console instance details page by completing the following steps:
 
@@ -123,6 +129,7 @@ You can delete an instance of {{site.data.keyword.hscrypto}} from the {{site.dat
 
 ### Deleting instances from the {{site.data.keyword.cloud_notm}} CLI
 {: #delete-cli}
+{: cli}
 
 You can delete an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} CLI by running the following command:
 

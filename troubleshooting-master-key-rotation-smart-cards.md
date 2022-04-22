@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-06"
+lastupdated: "2022-04-21"
 
 keywords: failed master key rotation, failed to use smart cards to rotate master keys, failed to use the Management Utilities to rotate master keys, master key rotation failure, troubleshoot master key rotation failure
 
@@ -23,6 +23,10 @@ subcollection: hs-crypto
 {:external: target="_blank" .external}
 {:support: data-reuse='support'}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Why can't I rotate master keys by using smart cards?
 {: #troubleshoot-master-key-rotation-key-smart-cards}

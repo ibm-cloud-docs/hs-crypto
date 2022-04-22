@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: rotate, rotate root key, automatic key rotation, set rotation policy, policy based key rotation
 
@@ -19,6 +19,10 @@ subcollection: hs-crypto
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Rotating root keys based on the rotation policy
 {: #set-rotation-policy}
@@ -36,6 +40,7 @@ Want to learn more about your key rotation options in {{site.data.keyword.hscryp
 
 ## Managing rotation polices in the console
 {: #manage-policies-gui}
+{: ui}
 
 If you prefer to manage policies for your root keys by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 
@@ -55,6 +60,7 @@ When it's time to rotate the key based on the rotation interval that you specify
 
 ## Managing rotation policies with the API
 {: #manage-rotation-policies-api}
+{: api}
 
 ### Viewing a rotation policy
 {: #view-rotation-policy-api}

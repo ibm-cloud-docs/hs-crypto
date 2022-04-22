@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-21"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -19,24 +19,29 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 
 # Deleting vaults
 {: #delete-vaults}
 
-You can delete your vaults in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can delete your vaults in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 If you want to delete a vault, you need to delete all managed keys, and delete or disconnect from all target keystores that are managed in the vault first. The Delete function is available for empty vaults only. For detailed instructions, see [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-keys), [Deleting internal keystores](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores), and [Disconnecting from external keystores](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores).
 {: note}
 
-## Deleting vaults through the UI
+## Deleting vaults with the {{site.data.keyword.cloud_notm}} console
 {: #delete-vaults-ui}
+{: ui}
 
 By deleting a vault, access groups that are assigned to this vault can no longer access the vault.
 {: important}
 
-To delete a vault through the UI, complete the following steps:
+To delete a vault by using the console, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Vaults** from the navigation to view all the available vaults.
@@ -47,9 +52,9 @@ To delete a vault through the UI, complete the following steps:
 The vault has been deleted and removed from the vault list. Access groups that are assigned to this vault no longer have access to the vault.
 
 
-
 ## Deleting vaults with the API
 {: #delete-vaults-api}
+{: api}
 
 To delete a vault through the API, follow these steps:
 

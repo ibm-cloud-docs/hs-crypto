@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-21"
 
 keywords: enable mechanisms, BTC, bitcoin mechanism, BIP32, BIP 0032, Schnorr, enable deterministic wallets, Digital Asset Platforms
 
@@ -21,6 +21,10 @@ subcollection: hs-crypto
 {:important: .important}
 {:preview: .preview}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Enabling crypto mechanisms
 {: #enable-mechanisms}

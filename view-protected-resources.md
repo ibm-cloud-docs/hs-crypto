@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: view resoure, root key encryption resources, protected resource, protected service, envelope encryption, key registration, view registration, list registrations
 
@@ -21,6 +21,10 @@ subcollection: hs-crypto
 {:important: .important}
 {:preview: .preview}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Viewing associations between root keys and encrypted {{site.data.keyword.cloud_notm}} resources
 {: #view-protected-resources}
@@ -42,6 +46,7 @@ Key registration is an extra feature that's available only if the cloud service 
 
 ## Viewing protected resources with the console
 {: #view-protected-resources-gui}
+{: ui}
 
 You can browse the registrations that are available between your {{site.data.keyword.hscrypto}} keys and cloud resources by using the {{site.data.keyword.hscrypto}} GUI.
 
@@ -190,6 +195,7 @@ Besides searching for a resource, you can also for resources by Resource Name, k
 
 ## Viewing protected resources with the API
 {: #view-protected-resources-api}
+{: api}
 
 You can also browse the registrations that are available between your {{site.data.keyword.hscrypto}} keys and cloud resources by using the {{site.data.keyword.hscrypto}} key management service API.
 

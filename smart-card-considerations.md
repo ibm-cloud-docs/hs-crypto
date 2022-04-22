@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-04-21"
 
 keywords: smart card vulnerabilities, security policy, maintain workstation security, maintain smart card readers security
 
@@ -18,6 +18,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:external: target="_blank" .external}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Smart card security considerations
 {: #define-smart-card-security-policy}

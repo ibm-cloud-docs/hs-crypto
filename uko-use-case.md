@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-29"
+lastupdated: "2022-04-21"
 
 keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases
 
@@ -17,6 +17,10 @@ subcollection: hs-crypto
 {:pre: .pre}
 {:external: target="_blank" .external}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 {:note: .note}
 
 # Use cases - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}

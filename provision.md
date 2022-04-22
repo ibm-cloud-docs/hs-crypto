@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-04-21"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -19,6 +19,10 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Provisioning service instances
 {: #provision}
@@ -49,12 +53,13 @@ In order to provision a {{site.data.keyword.hscrypto}} instance, make sure that 
 ## Provisioning an instance of {{site.data.keyword.hscrypto}} Standard Plan
 {: #provision-standard}
 
-You can provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from either the {{site.data.keyword.cloud_notm}} UI or CLI.
+You can provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from either the {{site.data.keyword.cloud_notm}} console or CLI.
 
-### Using the {{site.data.keyword.cloud_notm}} UI
+### Using the {{site.data.keyword.cloud_notm}} console
 {: #provision-gui}
+{: ui}
 
-To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
+To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from the {{site.data.keyword.cloud_notm}} console, complete the following steps:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 2. Click **Create resource** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
@@ -98,6 +103,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from th
 
 ### Using the {{site.data.keyword.cloud_notm}} CLI
 {: #provision-cli}
+{: cli}
 
 To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan with the {{site.data.keyword.cloud_notm}} CLI, complete the following steps:
 
@@ -195,12 +201,13 @@ To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan with th
 ## Provisioning an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} 
 {: #provision-uko}
 
-You can provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from either the {{site.data.keyword.cloud_notm}} UI or CLI.
+You can provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from either the {{site.data.keyword.cloud_notm}} console or CLI.
 
-### Using the {{site.data.keyword.cloud_notm}} UI
+### Using the {{site.data.keyword.cloud_notm}} console
 {: #provision-uko-gui}
+{: ui}
 
-To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
+To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from the {{site.data.keyword.cloud_notm}} console, complete the following steps:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 2. Click **Create resource** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
@@ -223,6 +230,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyw
 
 ### Using the {{site.data.keyword.cloud_notm}} CLI
 {: #provision-uko-cli}
+{: cli}
 
 To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from the {{site.data.keyword.cloud_notm}} CLI, complete the following steps:
 

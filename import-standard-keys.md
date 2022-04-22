@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-21"
 
 keywords: standard key, import key, key material, import key api, bring your own key, byok, encryption key, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key
 
@@ -17,14 +17,19 @@ subcollection: hs-crypto
 {:tip: .tip}
 {:note: .note}
 {:external: target="_blank" .external}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Importing standard keys
 {: #import-standard-keys}
 
 You can add your existing encryption keys with the {{site.data.keyword.cloud_notm}} console, or programmatically with the {{site.data.keyword.hscrypto}} key management service API.
 
-## Importing standard keys with the console
+## Importing standard keys with the {{site.data.keyword.cloud_notm}} console
 {: #import-standard-key-gui}
+{: ui}
 
 [After you create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision), complete the following steps to enter your existing standard key with the {{site.data.keyword.hscrypto}} GUI.
 
@@ -99,6 +104,7 @@ You can add your existing encryption keys with the {{site.data.keyword.cloud_not
 
 ## Importing standard keys with the API
 {: #import-standard-key-api}
+{: api}
 
 Import a standard key by making a `POST` call to the following endpoint:
 
@@ -109,7 +115,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
-1. Call the [{{site.data.keyword.hscrypto}} key management service API](/apidocs/hs-crypto){: external} with the following cURL command.
+2. Call the [{{site.data.keyword.hscrypto}} key management service API](/apidocs/hs-crypto){: external} with the following cURL command.
 
     ```cURL
     curl -X POST \
@@ -214,7 +220,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
     A successful `POST /v2/keys` response returns the ID value for your key, along with other metadata. The ID is a unique identifier that is assigned to your key and is used for subsequent calls to the {{site.data.keyword.hscrypto}} key management service API.
 
-2. Optional: Verify that the key was added by running the following call to get the keys in your {{site.data.keyword.hscrypto}} service instance.
+3. Optional: Verify that the key was added by running the following call to get the keys in your {{site.data.keyword.hscrypto}} service instance.
 
     ```cURL
     curl -X GET \
@@ -228,6 +234,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
 ## Importing standard keys with the CLI
 {: #import-standard-key-cli}
+{: cli}
 
 Complete the following steps to import standard keys that uses the {{site.data.keyword.keymanagementserviceshort}} CLI, which is integrated in {{site.data.keyword.hscrypto}}:
 

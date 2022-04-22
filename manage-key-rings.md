@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-04-21"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -21,6 +21,10 @@ subcollection: hs-crypto
 {:important: .important}
 {:preview: .preview}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Managing key rings
 {: #managing-key-rings}
@@ -63,6 +67,7 @@ You can create up to five keystores in a service instance for free, including ke
 
 ### Creating key rings with the console
 {: #create-key-ring-ui}
+{: ui}
 
 Create a key ring with the console by completing the following steps:
 
@@ -79,6 +84,7 @@ Create a key ring with the console by completing the following steps:
 
 ### Creating key rings with the API
 {: #create-key-ring-api}
+{: api}
 
 Create a key ring by making a `POST` call to the following endpoint.
 
@@ -187,6 +193,7 @@ After transferring a key to a different key ring, it can take up to ten minutes 
 
 ### Transferring a key to a different key ring with the console
 {: #transfer-key-ring-ui}
+{: ui}
 
 You can transfer a key to a different key ring with the console by completing the following steps:
 
@@ -200,6 +207,7 @@ You can transfer a key to a different key ring with the console by completing th
 
 ### Transferring a key to a different key ring with the API
 {: #transfer-key-ring-api}
+{: api}
 
 Transfer a key to a different key ring by making a `PATCH` call to the following endpoint.
 
@@ -367,6 +375,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 
 ## Granting access to a key ring
 {: #grant-access-key-ring}
+{: ui}
 
 You can grant access to a key ring within a {{site.data.keyword.hscrypto}} instance by using the
 {{site.data.keyword.cloud_notm}} console, [IAM API](/apidocs/iam-policy-management#create-policy){: external}, or [CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create){: external}.
@@ -400,6 +409,7 @@ You can browse the key rings that are managed in your provisioned instance of {{
 
 ### Listing key rings with the console
 {: #list-key-ring-ui}
+{: ui}
 
 To browse the key rings with the console, complete the following steps:
 
@@ -419,6 +429,7 @@ The key rings table contains the following information:
 
 ### Listing key rings with the API
 {: #list-key-ring-api}
+{: api}
 
 You can browse the key rings by making a GET call to the following endpoint.
 
@@ -531,6 +542,7 @@ The `default` key ring cannot be deleted. You are also not able to delete a key 
 
 ### Deleting key rings with the console
 {: #delete-key-ring-ui}
+{: ui}
 
 To delete a key ring with the console, complete the following steps:
 
@@ -543,6 +555,7 @@ To delete a key ring with the console, complete the following steps:
 
 ### Deleting key rings with the API
 {: #delete-key-ring-api}
+{: api}
 
 You can delete a key ring by making a `DELETE` call to the following endpoint.
 

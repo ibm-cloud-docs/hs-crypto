@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: sync resources, sync registrations, key registration, notify key state to resources
 
@@ -19,6 +19,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 {:preview: .preview}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Synchronizing associated resources
 {: #sync-associated-resources}
@@ -35,6 +39,7 @@ The sync API initiates only a request for synchronization. The IBM services that
 
 ## Syncing associated resources with the console
 {: #sync-associated-resources-ui}
+{: ui}
 
 You can renotify associated resources of your {{site.data.keyword.hscrypto}} root key's lifecycle event by using the console.
 
@@ -47,6 +52,7 @@ You can renotify associated resources of your {{site.data.keyword.hscrypto}} roo
 
 ## Syncing associated resources with the API
 {: #sync-associated-resources-api}
+{: api}
 
 You can renotify associated IBM cloud services of your {{site.data.keyword.hscrypto}} root key's lifecycle event by using the {{site.data.keyword.hscrypto}} API.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-21"
 
 keywords: Unified Key Orchestrator, view keys, key management, kms keys, UKO
 
@@ -18,19 +18,24 @@ subcollection: hs-crypto
 {:note: .note}
 {:external: target="_blank" .external}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 
 # Viewing a list of keys
 {: #view-key-list}
 
-You can view a list of your managed keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can view a list of your managed keys in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 
-## Viewing a list of keys through the UI
+## Viewing a list of keys with the {{site.data.keyword.cloud_notm}} console
 {: #view-key-list-ui}
+{: ui}
 
-To view a list of your keys through the UI, complete the following steps:
+To view a list of your keys by using the console, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
@@ -61,6 +66,7 @@ To view a list of your keys through the UI, complete the following steps:
 
 ## Viewing a list of keys with the API
 {: #view-key-list-api}
+{: api}
 
 To view a list of managed keys through the API, follow these steps:
 

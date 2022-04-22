@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: create key alias, key alias, delete key alias, add key alias, retrieve encryption key by alias, create alias API examples
 
@@ -20,6 +20,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Managing key aliases
 {: #manage-key-alias}
@@ -58,6 +62,7 @@ Each key can have up to five aliases. It is limited to 1,000 aliases per instanc
 
 ### Creating key alias with the console
 {: #create-key-alias-ui}
+{: ui}
 
 Create a key alias with the console by completing the following steps:
 
@@ -74,6 +79,7 @@ Create a key alias with the console by completing the following steps:
 
 ### Creating key aliases with the API
 {: #create-key-alias-api}
+{: api}
 
 Create a key alias by making a `POST` call to the following endpoint.
 
@@ -225,6 +231,7 @@ To remove a key alias for a key, you can use either the console or the key manag
 
 ### Deleting key aliases with the console
 {: #delete-key-alias-ui}
+{: ui}
 
 Delete a key alias with the console by completing the following steps:
 
@@ -237,6 +244,7 @@ Delete a key alias with the console by completing the following steps:
 
 ### Deleting key aliases with the API
 {: #delete-key-alias-api}
+{: api}
 
 Delete a key alias by making a `DELETE` call to the following endpoint.
 
@@ -358,6 +366,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
 
 ## APIs that use key alias
 {: #key-alias-apis}
+{: api}
 
 The following table lists the APIs where you can use key alias.
 

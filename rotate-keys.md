@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-21"
 
 keywords: rotate, rotate key, rotate encryption key, rotate root key, rotate root key manually, key rotation, rotate key api
 
@@ -18,6 +18,10 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
@@ -35,6 +39,7 @@ To learn how key rotation helps you meet industry standards and cryptographic be
 {: #rotate-root-key-gui}
 {: help}
 {: support}
+{: ui}
 
 If you prefer to rotate your root keys by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 
@@ -74,6 +79,7 @@ If you prefer to rotate your root keys by using a graphical interface, you can u
 
 ## Rotating root keys with the API
 {: #rotate-root-key-api}
+{: api}
 
 You can rotate a root key by making a `POST` call to the following endpoint.
 

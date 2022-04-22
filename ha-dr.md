@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-13"
+lastupdated: "2022-04-21"
 
 keywords: disaster recovery, high availability, ha, dr, recoverablity, availability, failover
 
@@ -19,6 +19,10 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # High availability and disaster recovery
 {: #ha-dr}

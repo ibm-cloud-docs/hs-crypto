@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: get details for a key, get key configuration, get details, view encryption key details, view encryption key, retrieve encryption key details, API examples
 
@@ -20,6 +20,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Viewing details about a root key or a standard key
 {: #view-key-details}
@@ -36,6 +40,7 @@ API to retrieve only metadata about a root key or a standard key.
 
 ## Viewing key details with the {{site.data.keyword.cloud_notm}} console
 {: #view-key-details-ui}
+{: ui}
 
 You can view details about a specific key with the {{site.data.keyword.cloud_notm}} console by completing the following steps:
 
@@ -48,6 +53,7 @@ You can view details about a specific key with the {{site.data.keyword.cloud_not
 
 ## Viewing key details with the key management service API
 {: #view-key-details-api}
+{: api}
 
 To view detailed information about a specific root key or a standard key, you can make a `GET` call to
 the following endpoint.

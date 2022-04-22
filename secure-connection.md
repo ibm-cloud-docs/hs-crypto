@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: securing connection, disabling public service endpoint
 
@@ -24,6 +24,10 @@ subcollection: hs-crypto
 {:deprecated: .deprecated}
 {:beta: .beta}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 {:shortdesc: .shortdesc}
 {:script: data-hd-video='script'}
 {:support: data-reuse='support'}

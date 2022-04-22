@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-21"
 
 keywords: Unified Key Orchestrator, install keys, key management, kms keys
 
@@ -18,19 +18,24 @@ subcollection: hs-crypto
 {:note: .note}
 {:external: target="_blank" .external}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 
 # Setting target keystores for existing keys
 {: #install-key-keystores}
 
-You can use a managed key in {{site.data.keyword.uko_full_notm}} for encryption and decryption only after it is installed in at least one keystore. You can install and uninstall existing keys in target keystores through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can use a managed key in {{site.data.keyword.uko_full_notm}} for encryption and decryption only after it is installed in at least one keystore. You can install and uninstall existing keys in target keystores with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 
-## Setting target keystores for existing keys through the UI
+## Setting target keystores for existing keys with the {{site.data.keyword.cloud_notm}} console
 {: #install-key-keystores-ui}
+{: ui}
 
-To install or uninstall a managed key in target keystores through the UI, complete the following steps:
+To install or uninstall a managed key in target keystores by using the console, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
@@ -46,6 +51,7 @@ To install or uninstall a managed key in target keystores through the UI, comple
 
 ## Setting target keystores for existing keys with the API
 {: #install-key-keystores-api}
+{: api}
 
 To install or uninstall a managed key in target keystores through the API, follow these steps:
 

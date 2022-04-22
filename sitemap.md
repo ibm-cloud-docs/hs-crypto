@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-04-21"
 
 keywords: site map, doc structure, information architecture
 
@@ -76,6 +76,10 @@ subcollection: hs-crypto
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
@@ -806,7 +810,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID#retrieve-instance-ID)
 
-* [Viewing your instance ID with the console](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID#view-instance-ID)
+* [Viewing your instance ID with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID#view-instance-ID)
 
 * [Retrieving an instance ID with the CLI](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID#retrieve-instance-ID-cli)
 
@@ -951,7 +955,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Importing root keys](/docs/hs-crypto?topic=hs-crypto-import-root-keys#import-root-keys)
 
-* [Importing root keys with the console](/docs/hs-crypto?topic=hs-crypto-import-root-keys#import-root-key-gui)
+* [Importing root keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-import-root-keys#import-root-key-gui)
 
 * [Importing root keys with the API](/docs/hs-crypto?topic=hs-crypto-import-root-keys#import-root-key-api)
 
@@ -963,7 +967,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Importing standard keys](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#import-standard-keys)
 
-* [Importing standard keys with the console](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#import-standard-key-gui)
+* [Importing standard keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#import-standard-key-gui)
 
 * [Importing standard keys with the API](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#import-standard-key-api)
 
@@ -1059,7 +1063,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Considerations for deleting a key using dual authorization](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#dual-auth-deletion-considerations)
 
-* [Authorize deletion for a key with the console](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#set-key-deletion-console)
+* [Authorize deletion for a key with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#set-key-deletion-console)
 
 * [Authorize deletion for a key with the API](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#set-key-deletion-api)
 
@@ -1141,7 +1145,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID#uko-retrieve-instance-ID)
 
-* [Viewing your instance ID with the UI](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID#uko-view-instance-ID)
+* [Viewing your instance ID with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID#uko-view-instance-ID)
 
 * [Retrieving an instance ID with the CLI](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID#uko-retrieve-instance-ID-cli)
 
@@ -1216,7 +1220,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults#create-vaults)
 
-* [Creating vaults through the UI](/docs/hs-crypto?topic=hs-crypto-create-vaults#create-vaults-ui)
+* [Creating vaults with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-create-vaults#create-vaults-ui)
 
 * [Creating vaults through the API](/docs/hs-crypto?topic=hs-crypto-create-vaults#create-vaults-api)
 
@@ -1224,7 +1228,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Editing vault details](/docs/hs-crypto?topic=hs-crypto-edit-vaults#edit-vaults)
 
-* [Editing vault details through the UI](/docs/hs-crypto?topic=hs-crypto-edit-vaults#edit-vaults-ui)
+* [Editing vault details with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-edit-vaults#edit-vaults-ui)
 
 * [Editing vault details with the API](/docs/hs-crypto?topic=hs-crypto-edit-vaults#edit-vaults-api)
 
@@ -1232,7 +1236,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Deleting vaults](/docs/hs-crypto?topic=hs-crypto-delete-vaults#delete-vaults)
 
-* [Deleting vaults through the UI](/docs/hs-crypto?topic=hs-crypto-delete-vaults#delete-vaults-ui)
+* [Deleting vaults with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-delete-vaults#delete-vaults-ui)
 
 * [Deleting vaults with the API](/docs/hs-crypto?topic=hs-crypto-delete-vaults#delete-vaults-api)
 
@@ -1245,7 +1249,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Creating and installing managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys)
 
-* [Creating and installing managed keys through the UI](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-ui)
+* [Creating and installing managed keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-ui)
 
 * [Creating and installing managed keys with the API](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-api)
 
@@ -1253,7 +1257,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list)
 
-* [Viewing a list of keys through the UI](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list-ui)
+* [Viewing a list of keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list-ui)
 
 * [Viewing a list of keys with the API](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list-api)
 
@@ -1261,9 +1265,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list#search-key-list)
 
-* [Filtering keys through the UI](/docs/hs-crypto?topic=hs-crypto-search-key-list#filter-key-list-ui)
+* [Filtering keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-search-key-list#filter-key-list-ui)
 
-* [ Searching for keys through the UI](/docs/hs-crypto?topic=hs-crypto-search-key-list#search-key-list-ui)
+* [ Searching for keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-search-key-list#search-key-list-ui)
 
 * [Searching keys with the API](/docs/hs-crypto?topic=hs-crypto-search-key-list#search-key-list-api)
 
@@ -1271,7 +1275,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys)
 
-* [Editing key details through the UI](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys-ui)
+* [Editing key details with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys-ui)
 
 * [Editing key details with the API](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys-api)
 
@@ -1279,7 +1283,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Setting target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores#install-key-keystores)
 
-* [Setting target keystores for existing keys through the UI](/docs/hs-crypto?topic=hs-crypto-install-key-keystores#install-key-keystores-ui)
+* [Setting target keystores for existing keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-install-key-keystores#install-key-keystores-ui)
 
 * [Setting target keystores for existing keys with the API](/docs/hs-crypto?topic=hs-crypto-install-key-keystores#install-key-keystores-api)
 
@@ -1287,7 +1291,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys#delete-managed-keys)
 
-* [Deleting managed keys through the UI](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys#delete-managed-keys-ui)
+* [Deleting managed keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys#delete-managed-keys-ui)
 
 * [Deleting managed keys with the API](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys#delete-managed-keys-api)
 
@@ -1300,7 +1304,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Creating internal KMS keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores)
 
-* [Creating internal KMS keystores through the UI](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-ui)
+* [Creating internal KMS keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-ui)
 
 * [Creating internal KMS keystores with the API](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores-api)
 
@@ -1310,7 +1314,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Setting up required user access in external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores-access)
 
-* [Connecting to external keystores through the UI](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores-ui)
+* [Connecting to external keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores-ui)
 
 * [Connecting to external keystores with the API](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores-api)
 
@@ -1318,7 +1322,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Editing internal keystores](/docs/hs-crypto?topic=hs-crypto-edit-internal-keystores#edit-internal-keystores)
 
-* [Editing internal keystores through the UI](/docs/hs-crypto?topic=hs-crypto-edit-internal-keystores#edit-internal-keystores-ui)
+* [Editing internal keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-edit-internal-keystores#edit-internal-keystores-ui)
 
 * [Editing internal keystores with the API](/docs/hs-crypto?topic=hs-crypto-edit-internal-keystores#edit-internal-keystores-api)
 
@@ -1326,7 +1330,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Editing connection to external keystores](/docs/hs-crypto?topic=hs-crypto-edit-external-keystore-connection#edit-external-keystore-connection)
 
-* [Editing connection to external keystores through the UI](/docs/hs-crypto?topic=hs-crypto-edit-external-keystore-connection#edit-external-keystore-connection-ui)
+* [Editing connection to external keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-edit-external-keystore-connection#edit-external-keystore-connection-ui)
 
 * [Editing connection to external keystores with the API](/docs/hs-crypto?topic=hs-crypto-edit-external-keystore-connection#edit-external-keystore-connection-api)
 
@@ -1334,7 +1338,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Deleting internal keystores](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores#delete-internal-keystores)
 
-* [Deleting internal keystores through the UI](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores#delete-internal-keystores-ui)
+* [Deleting internal keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores#delete-internal-keystores-ui)
 
 * [Deleting internal keystores with the API](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores#delete-internal-keystores-api)
 
@@ -1342,7 +1346,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Disconnecting from external keystores](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores#disconnect-external-keystores)
 
-* [Disconnecting from external keystores through the UI](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores#disconnect-external-keystores-ui)
+* [Disconnecting from external keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores#disconnect-external-keystores-ui)
 
 * [Disconnecting from external keystores with the API](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores#disconnect-external-keystores-api)
 

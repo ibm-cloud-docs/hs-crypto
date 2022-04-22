@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-04-21"
 
 keywords: encrypt Oracle Transparent Database, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -82,7 +82,7 @@ Let's start with the {{site.data.keyword.hscrypto}} instance initialization proc
 2. Generate an API key for accessing your {{site.data.keyword.hscrypto}} instance. Run the following command to create an API key for your {{site.data.keyword.cloud_notm}} account:
 
     ```
-    ibmcloud iam api-key-create apikeyhpcs -d "API key for {{site.data.keyword.hscrypto}} PKCS11"
+    ibmcloud iam api-key-create apikeyhpcs -d "API key for Hyper Protect Crypto Services PKCS11"
     ```
     {: codeblock}
 

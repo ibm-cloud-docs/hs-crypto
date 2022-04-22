@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: instance settings, service settings, network access policies
 
@@ -20,6 +20,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 {:preview: .preview}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Managing the network access policy
 {: #managing-network-access-policies}
@@ -34,6 +38,7 @@ For more information about how the network access differs, see [Understanding th
 
 ## Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the console
 {: #update-network-access-policy-ui}
+{: ui}
 
 As a security administrator, if you prefer to update the network access policy for your instance by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 
@@ -49,11 +54,12 @@ After you create a {{site.data.keyword.hscrypto}} instance, complete the followi
 4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
 5. In the **Allowed network** section, select the network that you want traffic to come through, and click **Save policy**. The default network policy is public and private, which allows access from both public and private networks.
 
-    If a private-only network is enabled, you are not able to view or manage keys through the UI. However, you can still adjust the network setting later by using the API or CLI.
+    If a private-only network is enabled, you are not able to view or manage keys with the {{site.data.keyword.cloud_notm}} console. However, you can still adjust the network setting later by using the API or CLI.
     {: note}
 
 ## Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management service API
 {: #update-network-access-policy-api}
+{: api}
 
 As a security administrator, update the network access policy for your {{site.data.keyword.hscrypto}} instance by making a `PUT` call to the following endpoint. See these API references to [set](/apidocs/hs-crypto#putinstancepolicy){: external} and [list](/apidocs/hs-crypto#getinstancepolicy){: external} instance policies.
 
@@ -164,7 +170,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
             <strong>Required.</strong> The network access policy to apply to your {{site.data.keyword.hscrypto}} instance. Acceptable values are <code>public-and-private</code> or <code>private-only</code>.
           </p>
           <p>
-            After the network access policy is set to <code>private-only</code>, you cannot access your instance from the public network and cannot view or manage keys through the UI. However, you can still adjust the network setting later using the API or CLI.
+            After the network access policy is set to <code>private-only</code>, you cannot access your instance from the public network and cannot view or manage keys with the {{site.data.keyword.cloud_notm}} console. However, you can still adjust the network setting later using the API or CLI.
           </p>
         </td>
       </tr>
@@ -192,11 +198,13 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
 
 ## Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the CLI
 {: #update-network-access-policy-cli}
+{: cli}
 
 You can also update the network access policy for your {{site.data.keyword.hscrypto}} instance using the CLI. For more information, see [the CLI reference](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference#kp-instance-policy-update-allowed){: external}.
 
 ## Disabling the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management service API
 {: #disable-network-access-policy-api}
+{: api}
 
 As a security administrator, disable a network access policy for a {{site.data.keyword.hscrypto}} instance by making a `PUT` call to the following endpoint. See these API references to [set](/apidocs/hs-crypto#putinstancepolicy){: external} and [list](/apidocs/hs-crypto#getinstancepolicy){: external} instance policies.
 

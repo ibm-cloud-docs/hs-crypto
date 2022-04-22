@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -16,6 +16,10 @@ subcollection: hs-crypto
 {:pre: .pre}
 {:tip: .tip}
 {:external: target="_blank" .external}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Viewing a list of root keys or standard keys
 {: #view-keys}
@@ -33,6 +37,7 @@ For more information about auditing access to your resources, see [Managing user
 
 ## Viewing root keys or standard keys with the console
 {: #view-key-gui}
+{: ui}
 
 If you prefer to inspect the keys in your service by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 
@@ -117,6 +122,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
 
 ## Viewing root keys or standard keys with the key management service API
 {: #view-key-api}
+{: api}
 
 You can retrieve the contents of your keys by using the {{site.data.keyword.hscrypto}} key management service API.
 

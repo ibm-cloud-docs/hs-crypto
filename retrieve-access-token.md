@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: access token, api key, iam token, generate access token, generate iam token, get access token, iam token api, token cli
 
@@ -17,6 +17,10 @@ subcollection: hs-crypto
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Retrieving an access token
 {: #retrieve-access-token}
@@ -29,6 +33,7 @@ An access token is a temporary credential that expires after 1 hour. After the a
 
 ## Retrieving an access token with the CLI
 {: #retrieve-token-cli}
+{: cli}
 
 You can use the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started) to quickly generate your personal Cloud IAM access token.
 
@@ -65,6 +70,7 @@ You can use the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getti
 
 ## Retrieving an access token with the API
 {: #retrieve-token-api}
+{: api}
 
 You can also retrieve your access token programmatically by using an [API key](/docs/account?topic=account-manapikey), and then exchanging your API key for an {{site.data.keyword.cloud_notm}} IAM token. Depending on whether you create the access token for a user or an application, use your [{{site.data.keyword.cloud_notm}} user API key](/docs/account?topic=account-userapikey) or a [service ID API key](/docs/account?topic=account-serviceidapikeys) accordingly.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-04-21"
 
 keywords: purge key, permanently delete key, remove key, destroy key
 
@@ -20,6 +20,10 @@ subcollection: hs-crypto
 {:note: .note}
 {:important: .important}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 # Purging keys manually
 {: #purge-keys}
@@ -34,6 +38,7 @@ To manually purge a key, you need to be assigned the _KMS Key Purge_ role. Even 
 
 ## Purging keys in the console
 {: #purge-keys-gui}
+{: ui}
 
 If you prefer to purging a key by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console by completing the following steps:
 
@@ -50,6 +55,7 @@ You are not able to purge a key if you perform the purging action in 4 hours aft
 
 ## Purging keys with the API
 {: #purge-keys-api}
+{: api}
 
 You can purge a deleted key by making a `DELETE` call to the following endpoint:
 

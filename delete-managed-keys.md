@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-21"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -19,19 +19,24 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 {:term: .term}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
+{:terraform: .ph data-hd-interface="terraform"}
 
 
 # Deleting managed keys
 {: #delete-managed-keys}
 
-You can delete your managed keys in {{site.data.keyword.uko_full_notm}} through the user interface (UI), or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can delete your managed keys in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 When you delete a managed key, the key is to be uninstalled from all target keystores and all key materials and the metadata are destroyed permanantly.
 
 
-## Deleting managed keys through the UI
+## Deleting managed keys with the {{site.data.keyword.cloud_notm}} console
 {: #delete-managed-keys-ui}
+{: ui}
 
 To delete a key in _Active_ state, you need to first deactivate the key, and then destroy the key and remove it from the vault. 
 
@@ -61,10 +66,9 @@ Follow these steps to complete the process:
 
 The managed key has been deleted and uninstalled from all target keystores. All key materials and metadata have been destroyed. 
 
-
-
 ## Deleting managed keys with the API
 {: #delete-managed-keys-api}
+{: api}
 
 To delete a managed key through the API, follow these steps:
 
