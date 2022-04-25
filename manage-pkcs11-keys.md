@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-04-25"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -188,7 +188,7 @@ Complete the following steps to create an EP11 key:
 
         2. Click **Create key** to confirm the creation.
 
-If you are performing cryptographic operations using the PKCS #11 API, to enable the key, you need to log out and log in the API again using the `C_Logout()` and `C_Login()` commands.
+If you are performing cryptographic operations using the PKCS #11 API, to load the created key from UI to your PKCS #11 application, reinitialize the PKCS #11 API by using the `C_Finalize()` and `C_Initialize()` functions.
 {: tip}
 
 You have successfully created an EP11 key. The created key is displayed as the first row in the **Enterprise PKCS #11 keys** table.
@@ -213,6 +213,9 @@ After you delete an EP11 key, you are not able to access the data associated wit
 2. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") in the key row, and click **Delete key**.
 2. Verify the ID of the key to be deleted, and check the box to confirm the deletion.
 3. Click **Delete keystore**.
+
+If you are performing cryptographic operations using the PKCS #11 API, to delete the key in your PKCS #11 application, reinitialize the PKCS #11 API by using the `C_Finalize()` and `C_Initialize()` functions.
+{: tip}
 
 ## What's next
 {: #manage-ep11-key-ui-next}
