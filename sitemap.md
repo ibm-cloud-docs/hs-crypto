@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-04-26"
 
 keywords: site map, doc structure, information architecture
 
@@ -376,17 +376,33 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_about_internal_key_management_service}
 
 
-[Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-uko-envelope-encryption#uko-envelope-encryption)
+[Bringing your encryption keys to the cloud](/docs/hs-crypto?topic=hs-crypto-kms-importing-keys#kms-importing-keys)
 
-* [Keys in envelope encryption](/docs/hs-crypto?topic=hs-crypto-uko-envelope-encryption#uko-key-types)
+* [Planning ahead for importing key material](/docs/hs-crypto?topic=hs-crypto-kms-importing-keys#kms-plan-ahead)
 
-* [How it works](/docs/hs-crypto?topic=hs-crypto-uko-envelope-encryption#uko-envelope-encryption-overview)
+* [Using import tokens](/docs/hs-crypto?topic=hs-crypto-kms-importing-keys#kms-using-import-tokens)
 
-* [Wrapping keys](/docs/hs-crypto?topic=hs-crypto-uko-envelope-encryption#uko-wrapping)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-kms-importing-keys#kms-importing-keys-next)
 
-* [Unwrapping keys](/docs/hs-crypto?topic=hs-crypto-uko-envelope-encryption#uko-unwrapping)
+[Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-envelope-encryption)
 
-* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-envelope-encryption#uko-envelope-encryption-next)
+* [Keys in envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-key-types)
+
+* [How it works](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-envelope-encryption-overview)
+
+* [Wrapping keys](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-wrapping)
+
+* [Unwrapping keys](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-unwrapping)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-envelope-encryption-next)
+
+[Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-kms-key-states#kms-key-states)
+
+* [Key states and transitions](/docs/hs-crypto?topic=hs-crypto-kms-key-states#kms-key-transitions)
+
+* [Key states and service actions](/docs/hs-crypto?topic=hs-crypto-kms-key-states#kms-key-states-service-actions)
+
+* [Monitoring for lifecycle changes](/docs/hs-crypto?topic=hs-crypto-kms-key-states#kms-monitor-lifecycle-changes)
 
 
 ### About cloud hardware security module
