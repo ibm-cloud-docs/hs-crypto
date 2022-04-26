@@ -400,7 +400,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Key states and transitions](/docs/hs-crypto?topic=hs-crypto-kms-key-states#kms-key-transitions)
 
-* [Key states and service actions](/docs/hs-crypto?topic=hs-crypto-kms-key-states#kms-key-states-service-actions)
+* [KMS key states and service actions](/docs/hs-crypto?topic=hs-crypto-kms-key-states#kms-key-states-service-actions)
 
 * [Monitoring for lifecycle changes](/docs/hs-crypto?topic=hs-crypto-kms-key-states#kms-monitor-lifecycle-changes)
 
