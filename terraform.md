@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-04-29"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -109,7 +109,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     </tr>
     <tr>
       <td>plan</td>
-      <td><strong>Required</strong>. The pricing plan for your service instance. Currently, only the <code>standard</code> plan is supported. </td>
+      <td><strong>Required</strong>. The pricing plan for your service instance. </td>
     </tr>
     <tr>
       <td>units</td>
