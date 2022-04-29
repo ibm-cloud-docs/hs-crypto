@@ -109,7 +109,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     </tr>
     <tr>
       <td>plan</td>
-      <td><strong>Required</strong>. The pricing plan for your service instance. Currently, only the <code>standard</code> plan is supported. </td>
+      <td><strong>Required</strong>. The pricing plan for your service instance. </td>
     </tr>
     <tr>
       <td>units</td>

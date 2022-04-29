@@ -111,7 +111,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     </tr>
     <tr>
       <td>plan</td>
-      <td><strong>Required</strong>. The pricing plan for your service instance. Currently, only the <code>standard</code> plan is supported. </td>
+      <td><strong>Required</strong>. The pricing plan for your service instance. </td>
     </tr>
     <tr>
       <td>units</td>
@@ -119,11 +119,11 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     </tr>
     <tr>
       <td>failover_units</td>
-      <td><strong>Not application</strong>. Cross-region high availability is not currently supported for {{site.data.keyword.uko_full_notm}}.</td>
+      <td><strong>Not applicable</strong>. Cross-region high availability is not currently supported for {{site.data.keyword.uko_full_notm}}.</td>
     </tr>
     <tr>
       <td>service_endpoints</td>
-      <td><strong>Not application</strong>. The default setting is <code>public-and-private</code>.</td>
+      <td><strong>Not applicable</strong>. The default setting is <code>public-and-private</code>.</td>
     </tr>
     <tr>
       <td>tags</td>
