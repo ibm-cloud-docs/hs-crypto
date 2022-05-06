@@ -28,11 +28,11 @@ subcollection: hs-crypto
 {:api: .ph data-hd-interface="api"}
 {:terraform: .ph data-hd-interface="terraform"}
 
-# Why can't I continue performing actions by using the {{site.data.keyword.cloud_notm}} console?
+# Why can't I perform any actions by using the {{site.data.keyword.cloud_notm}} console?
 {: #troubleshoot-ui-session-timeout}
 {: troubleshoot}
 
-When you access your {{site.data.keyword.hscrypto}} instance by using the {{site.data.keyword.cloud_notm}} console, you can't continue performing actions.
+When you access your {{site.data.keyword.hscrypto}} instance by using the {{site.data.keyword.cloud_notm}} console, you can't perform any actions.
 {: shortdesc}
 
 You might receive an error message similar to one of the following messages:
@@ -56,5 +56,5 @@ The service was not able to retrieve the encryption unit.
 You have left the console open without performing any actions with it for an extended period of time, which causes your session timeout.
 {: tsCauses}
 
-Refresh the page to start a new session, then you can continue operations with the console.
+Refresh the page to start a new session, and then you can continue operations with the console.
 {: tsResolve}

@@ -1932,23 +1932,56 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Why am I not authorized to make key management service API request?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-authenticate-api#troubleshoot-unable-to-authenticate-api)
 
-[Why can't I view or list keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-list-keys-api#troubleshoot-unable-to-list-keys-api)
-
-[Why can't I view or list specific keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-list-specific-keys#troubleshoot-unable-to-list-specific-keys)
-
 [Why am I receiving a `CKR_IBM_WK_NOT_INITIALIZED` error when I use CLI or API?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-error-CLI-API#troubleshoot-error-CLI-API)
+
+[Why can't I create a standard key after I load another master key?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-create-standard-keys#troubleshoot-unable-to-create-standard-keys)
 
 [Why can't I create or import keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-create-keys#troubleshoot-unable-to-create-keys)
 
-[Why can't I create a standard key after I load another master key?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-create-standard-keys#troubleshoot-unable-to-create-standard-keys)
+[Why can't I delete an initialized service instance?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-delete-instance#troubleshoot-delete-instance)
 
 [Why can't I delete keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-delete-keys#troubleshoot-unable-to-delete-keys)
 
 [Why can't I rotate root keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-rotate-root-keys#troubleshoot-unable-to-rotate-root-keys)
 
-[Why can't I delete an initialized service instance?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-delete-instance#troubleshoot-delete-instance)
+[Why can't I view or list keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-list-keys-api#troubleshoot-unable-to-list-keys-api)
 
-[Why can't I continue performing actions by using the {{site.data.keyword.cloud_notm}} console?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-ui-session-timeout#troubleshoot-ui-session-timeout)
+[Why can't I view or list specific keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-list-specific-keys#troubleshoot-unable-to-list-specific-keys)
+
+
+## Troubleshooting master key rotation
+{: #sitemap_troubleshooting_master_key_rotation}
+
+
+[Why can't I rotate master keys by using key part files?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-part-files#troubleshoot-master-key-rotation-key-part-files)
+
+[Why can't I rotate master keys by using recovery crypto units?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-recovery-crypto-units#troubleshoot-master-key-rotation-recovery-crypto-units)
+
+[Why can't I rotate master keys by using smart cards?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-smart-cards#troubleshoot-master-key-rotation-key-smart-cards)
+
+[Why do I fail to load the new master key during the master key rotation process?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation#troubleshoot-master-key-rotation)
+
+
+## Troubleshooting smart cards and the Management Utilities
+{: #sitemap_troubleshooting_smart_cards_and_the_management_utilities}
+
+
+[Why am I not authorized when I start the Trusted Key Entry application?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unauthorized-token-tke-application#troubleshoot-unauthorized-token-tke-application)
+
+[Why am I receiving a blocked PIN on EP11 smart card error?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-block-smart-card#troubleshoot-block-smart-card)
+
+[Why am I receiving a no smart card readers found error when I use the Management Utilities?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-no-smart-card#troubleshoot-no-smart-card)
+
+
+## Troubleshooting Trusted Key Entry
+{: #sitemap_troubleshooting_trusted_key_entry}
+
+
+[Why am I not authorized when running TKE CLI plug-in commands?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unauthorized-token#troubleshoot-unauthorized-token)
+
+[Why can't I change signature thresholds?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-change-signature-thresholds#troubleshoot-unable-to-change-signature-thresholds)
+
+[Why can't I list crypto units?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-list-crypto-units#troubleshoot-list-crypto-units)
 
 
 ## Troubleshooting Unified Key Orchestrator
@@ -1963,44 +1996,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Why can't I delete internal keystores?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-delete-keystore#troubleshoot-delete-keystore)
 
-[Why do I fail to see the changes to my key in Azure Key Vault?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-azure-delay#troubleshoot-azure-delay)
+[Why can't I perform any actions by using the {{site.data.keyword.cloud_notm}} console?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-ui-session-timeout#troubleshoot-ui-session-timeout)
 
 [Why can't I rotate the master key when using the {{site.data.keyword.uko_full_notm}} Plan?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-uko#troubleshoot-master-key-rotation-uko)
 
-
-## Troubleshooting Trusted Key Entry
-{: #sitemap_troubleshooting_trusted_key_entry}
-
-
-[Why am I not authorized when running TKE CLI plug-in commands?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unauthorized-token#troubleshoot-unauthorized-token)
-
-[Why can't I list crypto units?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-list-crypto-units#troubleshoot-list-crypto-units)
-
-[Why can't I change signature thresholds?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-change-signature-thresholds#troubleshoot-unable-to-change-signature-thresholds)
-
-
-## Troubleshooting smart cards and the Management Utilities
-{: #sitemap_troubleshooting_smart_cards_and_the_management_utilities}
-
-
-[Why am I not authorized when I start the Trusted Key Entry application?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unauthorized-token-tke-application#troubleshoot-unauthorized-token-tke-application)
-
-[Why am I receiving a blocked PIN on EP11 smart card error?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-block-smart-card#troubleshoot-block-smart-card)
-
-[Why am I receiving a no smart card readers found error when I use the Management Utilities?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-no-smart-card#troubleshoot-no-smart-card)
-
-
-## Troubleshooting master key rotation
-{: #sitemap_troubleshooting_master_key_rotation}
-
-
-[Why do I fail to load the new master key during the master key rotation process?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation#troubleshoot-master-key-rotation)
-
-[Why can't I rotate master keys by using key part files?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-part-files#troubleshoot-master-key-rotation-key-part-files)
-
-[Why can't I rotate master keys by using smart cards?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-smart-cards#troubleshoot-master-key-rotation-key-smart-cards)
-
-[Why can't I rotate master keys by using recovery crypto units?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-recovery-crypto-units#troubleshoot-master-key-rotation-recovery-crypto-units)
+[Why do I fail to see the changes to my key in Azure Key Vault?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-azure-delay#troubleshoot-azure-delay)
 
 
 ## Getting help and support

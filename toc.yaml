@@ -347,30 +347,21 @@ toc:
           label: Troubleshooting key management service
           topics:
           - troubleshooting-authenticate-api.md
-          - troubleshooting-list-keys-api.md
-          - troubleshooting-list-specific-keys.md
           - troubleshooting-error-CLI-API.md
-          - troubleshooting-create-keys.md
           - troubleshooting-create-standard-keys.md
+          - troubleshooting-create-keys.md
+          - troubleshooting-delete-instance.md
           - troubleshooting-delete-keys.md
           - troubleshooting-rotate-root-keys.md
-          - troubleshooting-delete-instance.md
-          - troubleshooting-ui-session-timeout.md
+          - troubleshooting-list-keys-api.md
+          - troubleshooting-list-specific-keys.md   
       - topicgroup:
-          label: Troubleshooting Unified Key Orchestrator
+          label: Troubleshooting master key rotation
           topics:
-          - troubleshooting-create-internal-keystores.md
-          - troubleshooting-create-vault.md
-          - troubleshooting-delete-vault.md
-          - troubleshooting-delete-keystore.md
-          - troubleshooting-azure-delay.md
-          - troubleshooting-master-key-rotation-uko.md
-      - topicgroup:
-          label: Troubleshooting Trusted Key Entry
-          topics:
-          - troubleshooting-unauthorized-token.md
-          - troubleshooting-list-crypto-units.md
-          - troubleshooting-change-signature-thresholds.md
+          - troubleshooting-master-key-rotation-key-files.md
+          - troubleshooting-master-key-rotation-recovery.md
+          - troubleshooting-master-key-rotation-smart-cards.md
+          - troubleshooting-master-key-rotation.md
       - topicgroup:
           label: Troubleshooting smart cards and the Management Utilities
           topics:
@@ -378,11 +369,20 @@ toc:
           - troubleshooting-block-smart-card.md
           - troubleshooting-no-smart-card.md
       - topicgroup:
-          label: Troubleshooting master key rotation
+          label: Troubleshooting Trusted Key Entry
           topics:
-          - troubleshooting-master-key-rotation.md
-          - troubleshooting-master-key-rotation-key-files.md
-          - troubleshooting-master-key-rotation-smart-cards.md
-          - troubleshooting-master-key-rotation-recovery.md
+          - troubleshooting-unauthorized-token.md
+          - troubleshooting-change-signature-thresholds.md
+          - troubleshooting-list-crypto-units.md
+      - topicgroup:
+          label: Troubleshooting Unified Key Orchestrator
+          topics:
+          - troubleshooting-create-internal-keystores.md
+          - troubleshooting-create-vault.md
+          - troubleshooting-delete-vault.md
+          - troubleshooting-delete-keystore.md
+          - troubleshooting-ui-session-timeout.md
+          - troubleshooting-master-key-rotation-uko.md
+          - troubleshooting-azure-delay.md
       - support.md
       - sitemap.md
