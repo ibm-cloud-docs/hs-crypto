@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-26"
+lastupdated: "2022-05-06"
 
 keywords: site map, doc structure, information architecture
 
@@ -1947,6 +1947,8 @@ Find what you are looking for in the compilation of topics that are available in
 [Why can't I rotate root keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-rotate-root-keys#troubleshoot-unable-to-rotate-root-keys)
 
 [Why can't I delete an initialized service instance?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-delete-instance#troubleshoot-delete-instance)
+
+[Why can't I continue performing actions by using the {{site.data.keyword.cloud_notm}} console?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-ui-session-timeout#troubleshoot-ui-session-timeout)
 
 
 ## Troubleshooting Unified Key Orchestrator

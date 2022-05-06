@@ -355,6 +355,7 @@ toc:
           - troubleshooting-delete-keys.md
           - troubleshooting-rotate-root-keys.md
           - troubleshooting-delete-instance.md
+          - troubleshooting-ui-session-timeout.md
       - topicgroup:
           label: Troubleshooting Unified Key Orchestrator
           topics:
