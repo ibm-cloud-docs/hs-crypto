@@ -41,14 +41,17 @@ You might receive an error message similar to one of the following messages:
 ```
 The service was not able to retrieve the keystores data.
 ```
+{: screen}
 
 ```
 The service was not able to retrieve the key data.
 ```
+{: screen}
 
 ```
 The service was not able to retrieve the encryption unit.
 ```
+{: screen}
 
 You have left the console open without performing any actions with it for an extended period of time, which causes your session timeout.
 {: tsCauses}
