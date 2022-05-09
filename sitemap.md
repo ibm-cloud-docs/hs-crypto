@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-06"
+lastupdated: "2022-05-09"
 
 keywords: site map, doc structure, information architecture
 
@@ -376,14 +376,6 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_about_internal_key_management_service}
 
 
-[Bringing your encryption keys to the cloud](/docs/hs-crypto?topic=hs-crypto-kms-importing-keys#kms-importing-keys)
-
-* [Planning ahead for importing key material](/docs/hs-crypto?topic=hs-crypto-kms-importing-keys#kms-plan-ahead)
-
-* [Using import tokens](/docs/hs-crypto?topic=hs-crypto-kms-importing-keys#kms-using-import-tokens)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-kms-importing-keys#kms-importing-keys-next)
-
 [Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-envelope-encryption)
 
 * [Keys in envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-key-types)
@@ -395,14 +387,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Unwrapping keys](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-unwrapping)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-envelope-encryption-next)
-
-[Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-kms-key-states#kms-key-states)
-
-* [Key states and transitions](/docs/hs-crypto?topic=hs-crypto-kms-key-states#kms-key-transitions)
-
-* [KMS key states and service actions](/docs/hs-crypto?topic=hs-crypto-kms-key-states#kms-key-states-service-actions)
-
-* [Monitoring for lifecycle changes](/docs/hs-crypto?topic=hs-crypto-kms-key-states#kms-monitor-lifecycle-changes)
 
 
 ### About cloud hardware security module

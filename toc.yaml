@@ -81,9 +81,7 @@ toc:
           - topicgroup:
               label: About internal key management service
               topics:
-              - kms-importing-keys.md
               - kms-envelope-encryption.md
-              - kms-key-states.md
           - topicgroup:
               label: About cloud hardware security module
               topics:

@@ -54,7 +54,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
 
 3. Create a Terraform configuration file `main.tf` in the same folder as `versions.tf`. In this file, you add the configurations to perform the corresponding actions.
 
-    The following template is an example configuration file to provision a {{site.data.keyword.hscrypto}} instance with 2 operational crypto units in the `us-south` region. This instance is charged according to the standard pricing plan and is initialized with 2 administrators. The master key is automatically generated in recovery crypto units that are assigned to the instance. The signature keys are created by using the TKE CLI plug-in and stored in local protected files.
+    The following template is an example configuration file to provision a {{site.data.keyword.hscrypto}} instance with 2 operational crypto units in the `us-south` region. This instance is charged according to the {{site.data.keyword.uko_full_notm}} pricing plan and is initialized with 2 administrators. The master key is automatically generated in recovery crypto units that are assigned to the instance. The signature keys are created by using the TKE CLI plug-in and stored in local protected files.
 
     As recovery crypto units are currently available only in the `us-south` and `us-east` regions, using Terraform to initialize {{site.data.keyword.hscrypto}} instances is supported only in these two regions. For more information about manual initialization, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode).
     {: note}
@@ -63,7 +63,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     resource ibm_hpcs hpcs {
        location             = "us-south"
        name                 = "test-hpcs"
-       plan                 = "standard"
+       plan                 = "hpcs-hourly-uko"
        units                = 2
        signature_threshold  = 1
        revocation_threshold = 1
