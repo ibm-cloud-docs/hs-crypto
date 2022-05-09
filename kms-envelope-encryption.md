@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-04-26"
 
 keywords: encryption at rest, envelope encryption, root key, data encryption key, key encryption key, key protect, protect data encryption key, encrypt data encryption key, wrap data encryption key, unwrap data encryption key
 
@@ -25,7 +25,7 @@ subcollection: hs-crypto
 {:terraform: .ph data-hd-interface="terraform"}
 
 # Protecting your data with envelope encryption
-{: #uko-envelope-encryption}
+{: #kms-envelope-encryption}
 
 Envelope encryption is the practice of encrypting data with a [data encryption key (DEK)](#x4791827){: term} and then wrapping the DEK with a [root key](#x6946961){: term} that you can fully manage. The root keys in {{site.data.keyword.hscrypto}} service instance are also wrapped and protected by the hardware security module (HSM) [master key](#x2908413){: term}.
 {: shortdesc}
@@ -55,7 +55,7 @@ With envelope encryption, {{site.data.keyword.hscrypto}} protects your at-rest d
 </table>
 
 ## Keys in envelope encryption
-{: #uko-key-types}
+{: #kms-key-types}
 
 The following keys are used in envelope encryption for the advanced encryption and management of data.
 
@@ -71,7 +71,7 @@ Data encryption keys
 After you create a key in {{site.data.keyword.hscrypto}}, the system returns a key ID that is used to uniquely identify the key resource. You can use this ID value to make API calls to the service.
 
 ## How it works
-{: #uko-envelope-encryption-overview}
+{: #kms-envelope-encryption-overview}
 
 Envelope encryption combines the strength of multiple encryption algorithms to protect your sensitive data in the cloud. It works by wrapping one or more data encryption keys (DEKs) with advanced encryption by using a root key that you can fully manage. This key wrapping process creates wrapped DEKs that protect your stored data from unauthorized access or exposure. Unwrapping a DEK reverses the envelope encryption process by using the same root key, resulting in decrypted and authenticated data.
 
@@ -84,7 +84,7 @@ The following diagram shows a contextual view of envelope encryption.
 Envelope encryption is treated briefly in the NIST Special Publication 800-57, Recommendation for Key Management. To learn more, see [NIST SP 800-57 Pt. 1 Rev. 4](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0){: external}
 
 ## Wrapping keys
-{: #uko-wrapping}
+{: #kms-wrapping}
 
 Root keys help you group, manage, and protect data encryption keys (DEKs) stored in the cloud. You can wrap one or more DEKs with advanced encryption by designating a root key in {{site.data.keyword.hscrypto}} that you can fully manage.
 
@@ -98,7 +98,7 @@ The following diagram shows the key wrapping process in action.
 
 
 ## Unwrapping keys
-{: #uko-unwrapping}
+{: #kms-unwrapping}
 
 Unwrapping a data encryption key (DEK) decrypts and authenticates the contents within the key, returning the original key material to your data service.
 
@@ -112,7 +112,7 @@ The following diagram shows key unwrapping in action.
 After you send the unwrap request, the system reverses the key wrapping process by using the same AES algorithms. A successful unwrap operation returns the base64 encoded `plaintext` value to your {{site.data.keyword.cloud_notm}} data at rest service.
 
 ## What's next
-{: #uko-envelope-encryption-next}
+{: #kms-envelope-encryption-next}
 
 {{site.data.keyword.hscrypto}} supports the integration with other services. With envelope encryption, {{site.data.keyword.hscrypto}} provides advanced protection to your data stored in the integrated services.
 
