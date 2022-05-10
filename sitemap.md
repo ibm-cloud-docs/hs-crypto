@@ -1156,7 +1156,7 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_setting_up_api_calls1}
 
 
-[Managing your keys and keystores with the {{site.data.keyword.uko_full_notm}} API](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#set-up-uko-api)
+[Setting up {{site.data.keyword.uko_full_notm}} API calls](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#set-up-uko-api)
 
 * [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#retrieve-uko-credentials)
 
@@ -1164,7 +1164,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#set-up-uko-api-next-steps)
 
-[Perform actions towards your internal KMS keys with the key management service API](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#set-up-uko-kms-api)
+[Setting up key management service API calls](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#set-up-uko-kms-api)
 
 * [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#retrieve-uko-kms-credentials)
 
@@ -1172,7 +1172,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#set-up-uko-kms-api-next-steps)
 
-[Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-set-up-pkcs-api)
+[Setting up PKCS #11 API calls](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-set-up-pkcs-api)
 
 * [Prerequisites](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-prerequisite-pkcs-api)
 
@@ -1186,7 +1186,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-set-up-pkcs-api-next-steps)
 
-[Performing cryptographic operations with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-uko-set-up-grep11-api#uko-set-up-grep11-api)
+[Setting up GREP11 API calls](/docs/hs-crypto?topic=hs-crypto-uko-set-up-grep11-api#uko-set-up-grep11-api)
 
 * [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-uko-set-up-grep11-api#uko-retrieve-grep11-credentials)
 

@@ -19,10 +19,10 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 
-# Perform actions towards your internal KMS keys with the key management service API
+# Setting up key management service API calls
 {: #set-up-uko-kms-api}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [key management service (KMS) API](/apidocs/hs-crypto){: external} to perform actions towards your IBM KMS keys that are installed in internal keystores.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [key management service (KMS) API](/apidocs/hs-crypto){: external} to manage your IBM KMS keys that are installed in internal keystores.
 {: shortdesc}
 
 In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} plan, you can perform key actions such as wrap and rotate internal KMS keys only through the KMS API. You can also use the KMS API to create internal keys, including root keys and standard keys. However, these keys are not displayed in the **Managed keys** table in the console. You can only use the KMS API to retrieve these keys. For more information about the KMS API, see the [KMS API reference](/apidocs/hs-crypto){: external}.

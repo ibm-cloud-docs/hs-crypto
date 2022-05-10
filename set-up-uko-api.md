@@ -19,16 +19,13 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 
-# Managing your keys and keystores with the {{site.data.keyword.uko_full_notm}} API
+# Setting up {{site.data.keyword.uko_full_notm}} API calls
 {: #set-up-uko-api}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [{{site.data.keyword.uko_full_notm}} API](/apidocs/uko){: external} to create, retrieve, and destroy keys and keystores.
 {: shortdesc}
 
-When you use the {{site.data.keyword.uko_full_notm}} API to create IBM KMS keys that are installed in internal KMS keystores, these keys are root keys that can be used for [envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption). Creating standard keys with the {{site.data.keyword.uko_full_notm}} API currently is not supported. You can also use the [key management service API](/apidocs/hs-crypto){: external} to create internal IBM KMS keys and perform more actions towards keys. 
-
-If you use the key management service API to create internal keys, these keys are not displayed in the **Managed keys** table in the console. You can only use the key management service API to retrieve these keys.
-{: note}
+When you use the {{site.data.keyword.uko_full_notm}} API to create IBM KMS keys that are installed in internal KMS keystores, these keys are root keys and can be used for [envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption). You can also use the [key management service API](/apidocs/hs-crypto){: external} to create internal IBM KMS keys and perform actions towards keys.
 
 ## Retrieving your IBM Cloud credentials
 {: #retrieve-uko-credentials}
