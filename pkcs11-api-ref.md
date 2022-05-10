@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-05-10"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -151,8 +151,6 @@ Not all PKCS #11 functions are implemented by {{site.data.keyword.hscrypto}}. Fu
 
 A mechanism is referred to as a process to implement a cryptographic operation. It can vary depending on the level of firmware in the IBM 4768 crypto card (also referred to as Crypto Express 6S). The following table shows the mechanisms that are  supported and how they relate to common *Cryptoki* function categories.
 
-
-
 | Function group | Supported mechanisms |
 |--------------|-----------------------|
 |Encrypt and decrypt. | CKM_RSA_PKCS<sup>1</sup>, CKM_RSA_PKCS_OAEP<sup>1</sup>, CKM_AES_ECB, CKM_AES_CBC, CKM_AES_CBC_PAD, CKM_DES3_ECB, CKM_DES3_CBC, CKM_DES3_CBC_PAD|
@@ -200,6 +198,7 @@ PKCS #11 attributes define object characteristics that set up how an object can 
 | CKA_EC_POINT | DER-encoding of ANSI X9.62 ECPoint value Q. |      EC public keys  |
 | CKA_WRAP_WITH_TRUSTED  | CK_TRUE if the key can only be wrapped with a wrapping key that has CKA_TRUSTED set to CK_TRUE. Default is CK_FALSE.  | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
 | CKA_CHECK_VALUE | The checksum of the key | AES keys, DES keys |
+
 
 {: caption="Table 3. Describes the supported attributes" caption-side="bottom"}
 
