@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-05-11"
 
 keywords: initialize service, key ceremony, hsm, load master key, key ceremony preparation
 
@@ -45,7 +45,7 @@ Before you can initialize your service instance, make sure that you have done th
     ```
     {: pre}
 
-3. Set the environment variable `CLOUDTKEFILES` on your workstation to specify the directory where you want to save the master key part files and signature key files. The signature keys are used to sign TKE administrative commands.
+3. Set the environment variable `CLOUDTKEFILES` on your workstation to specify the directory where you want to save the master key part files and signature key files. The signature keys are used to sign TKE administrative commands. Make sure that the directory exists before you set the environment variable.
 
     - On the Linux&reg; operating system or MacOS, add the following line to the `.bash_profile` file:
 
