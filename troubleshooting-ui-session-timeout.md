@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-05-06"
+lastupdated: "2022-05-12"
 
 keywords: troubleshoot, problems, known issues, timeout, intermittent issue, session timeout
 
@@ -53,7 +53,7 @@ The service was not able to retrieve the encryption unit.
 ```
 {: screen}
 
-You have left the console open without performing any actions with it for an extended period of time, which causes your session timeout.
+You have left the console open without performing any actions with it for an extended period of time (for example, 60 minutes), which causes your session timeout.
 {: tsCauses}
 
 Refresh the page to start a new session, and then you can continue operations with the console.
