@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-05-16"
 
 keywords: security and compliance, ibmcloud security compliance, compliant, data security, data encryption, data delete, common criteria, fips, iso, gdpr
 
@@ -69,7 +69,7 @@ For a complete listing of {{site.data.keyword.cloud_notm}} compliance certificat
 ### Common Criteria EAL4 certified
 {: #uko-common-criteria-certified}
 
-As the Hardware Security Module (HSM) used by {{site.data.keyword.hscrypto}}, the {{site.data.keyword.IBM_notm}} PCIe Cryptographic Coprocessor Version 3 (PCIeCC3), also referred to as the IBM 4768 crypto card or the Crypto Express6S (CEX6S), is Common Criteria EAL4 certified to meet the security requirements defined by the Common Criteria for Information Technology Security Evaluation.
+The Hardware Security Module (HSM) used by {{site.data.keyword.hscrypto}} is the {{site.data.keyword.IBM_notm}} PCIe Cryptographic Coprocessor Version 3 (PCIeCC3) or Version 4 (PCIeCC4). PCIeCC3 is also referred to as the {{site.data.keyword.IBM_notm}} 4768 crypto card or the Crypto Express 6S (CEX6S). PCIeCC4 is also referred to as the {{site.data.keyword.IBM_notm}} 4769 crypto card or the Crypto Express 7S (CEX7S). Both CEX6S and CEX7S are Common Criteria EAL4 certified to meet the security requirements defined by the Common Criteria for Information Technology Security Evaluation.
 
 Common Criteria is an international standard (ISO/IEC 15408) to assess the security of computer security products. Common Criteria provides assurance that the process of specification, implementation, and evaluation of a computer security product is complied with the standards and requirements defined.
 
