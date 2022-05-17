@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-05-17"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -52,7 +52,7 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
 
 - **Vaults**
     
-    A vault is a repository that controls a user's or an access group's access to managed keys and target keystores through IAM. A vault keeps all installations of a managed key in sync. You can assign a managed key or internal target keystore only in one vault. When you connect to an external keystore, you also need to assign it to a vault first. 
+    A vault is a repository that controls a user's or an access group's access to managed keys and target keystores through IAM. A vault keeps all installations of a managed key in sync. You can assign a managed key or target keystore only in one vault. When you connect to an external keystore, you also need to assign it to a vault first. 
 
     You can create different vaults based on your organizational or security needs. For example, you can create a vault for each business unit. In this way, you set access control policies at a vault level, and key administrators of each business unit have access only to the keys and keystores that are assigned to the vault of their business unit.
 
@@ -66,7 +66,7 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
 
 - **Target keystores**
         
-    A target keystore is keystore that is assigned to a vault. If it is an internal keystore, it can be created only in a vault. If it is an external keystore, you need to assign the external keystore to a vault when you connect your service instance to it. 
+    A target keystore is keystore that is assigned to a vault. You need to create an internal keystore in or assign an external keystore to only one vault when you connect your service instance to it. 
 
     You need to install a key to a keystore before you can encrypt or decrypt data by using the key.       
     
