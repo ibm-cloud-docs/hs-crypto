@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-05-16"
+lastupdated: "2022-05-17"
 
 keywords: general frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips
 
@@ -164,7 +164,7 @@ A crypto unit is a single unit that represents a hardware security module and th
 {: faq}
 {: support}
 
-If you create your instance in [regions](/docs/hs-crypto?topic=hs-crypto-regions) that are based on Virtual Private Cloud (VPC) infrastructure, {{site.data.keyword.hscrypto}} uses the [IBM 4769 crypto card](https://www.ibm.com/security/cryptocards/pciecc4/overview){: external}, also referred to as Crypto Express 7S (CEX7S). If you create your instance in other non-VPC regions, {{site.data.keyword.hscrypto}} uses the [IBM 4768 crypto card](https://www.ibm.com/security/cryptocards/pciecc3/overview){: external}, also referred to as Crypto Express 6S (CEX6S). Both IBM CEX6S and IBM CEX7S are certified at FIPS 140-2 Level 4, the highest level of certification achievable for commercial cryptographic devices. You can check the certificates at the following NIST sites:
+If you create your instance in [regions](/docs/hs-crypto?topic=hs-crypto-regions) that are based on Virtual Private Cloud (VPC) infrastructure, {{site.data.keyword.hscrypto}} uses the [IBM 4769 crypto card](https://www.ibm.com/security/cryptocards/pciecc4/overview){: external}, also referred to as Crypto Express 7S (CEX7S). If you create your instance in other non-VPC regions, {{site.data.keyword.hscrypto}} uses the [IBM 4768 crypto card](https://www.ibm.com/security/cryptocards/pciecc3/overview){: external}, also referred to as Crypto Express 6S (CEX6S). Both IBM CEX6S and IBM CEX7S are certified at FIPS 140-2 Level 4, the highest level of certification achievable for commercial cryptographic devices. You can check the certificates at the following sites:
 
 - [IBM 4769-001 Cryptographic Coprocessor Security Module](https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4079){: external}
 - [IBM 4768 Cryptographic Coprocessor Security Module](https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/3410){: external}
