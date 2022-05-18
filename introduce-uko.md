@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-05-18"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -66,7 +66,7 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
 
 - **Target keystores**
         
-    A target keystore is keystore that is assigned to a vault. You need to create an internal keystore in or assign an external keystore to only one vault when you connect your service instance to it. 
+    A target keystore is keystore that is assigned to a vault. You need to create an internal keystore in only one vault, or assign an external keystore to a vault when you connect your service instance to it. 
 
     You need to install a key to a keystore before you can encrypt or decrypt data by using the key.       
     
