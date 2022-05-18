@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-05-18"
 
 keywords: security and compliance, ibmcloud security compliance, compliant, data security, data encryption, data delete, common criteria, fips, iso, gdpr
 
@@ -69,7 +69,7 @@ For a complete listing of {{site.data.keyword.cloud_notm}} compliance certificat
 ### Common Criteria EAL4 certified
 {: #common-criteria-certified}
 
-As the Hardware Security Module (HSM) used by {{site.data.keyword.hscrypto}}, the {{site.data.keyword.IBM_notm}} PCIe Cryptographic Coprocessor Version 3 (PCIeCC3), also referred to as the IBM 4768 crypto card or the Crypto Express6S (CEX6S), is Common Criteria EAL4 certified to meet the security requirements defined by the Common Criteria for Information Technology Security Evaluation.
+The Hardware Security Module (HSM) used by {{site.data.keyword.hscrypto}} is the {{site.data.keyword.IBM_notm}} PCIe Cryptographic Coprocessor Version 3 (PCIeCC3) or Version 4 (PCIeCC4). PCIeCC3 is also referred to as the {{site.data.keyword.IBM_notm}} 4768 crypto card or the Crypto Express 6S (CEX6S). PCIeCC4 is also referred to as the {{site.data.keyword.IBM_notm}} 4769 crypto card or the Crypto Express 7S (CEX7S). Both CEX6S and CEX7S are Common Criteria EAL4 certified to meet the security requirements defined by the Common Criteria for Information Technology Security Evaluation.
 
 Common Criteria is an international standard (ISO/IEC 15408) to assess the security of computer security products. Common Criteria provides assurance that the process of specification, implementation, and evaluation of a computer security product is complied with the standards and requirements defined.
 
@@ -82,9 +82,9 @@ The Federal Information Processing Standard (FIPS) Publication 140-2 is a US gov
 
 FIPS 140-2 defines four levels of security, including FIPS 140-2 Level 1, 2, 3, and 4. FIPS 140-2 Level 4 is the highest level of security. At this security level, the physical security mechanisms provide a complete envelope of protection around the cryptographic module with the intent of detecting and responding to all unauthorized attempts at physical access. Penetration of the cryptographic module enclosure from any direction has a high probability of being detected, resulting in the immediate zeroization of all plaintext critical security parameters (CSPs).
 
-{{site.data.keyword.hscrypto}} uses the IBM 4768 crypto card, which is certified at FIPS 140-2 Level 4, the highest level of certification achievable for commercial cryptographic devices. {{site.data.keyword.hscrypto}} is the only cloud HSM in the public cloud market that is built on an HSM designed to meet FIPS 140-2 Level 4 certification requirements.
-
-The following certificate is for [IBM 4768 Cryptographic Coprocessor Security Module](https://csrc.nist.gov/projects/cryptographic-module-validation-program/Certificate/3410){: external}.
+{{site.data.keyword.hscrypto}} uses the IBM 4768 or IBM 4769 crypto card, which is certified at FIPS 140-2 Level 4, the highest level of certification achievable for commercial cryptographic devices. {{site.data.keyword.hscrypto}} is the only cloud HSM in the public cloud market that is built on an HSM designed to meet FIPS 140-2 Level 4 certification requirements. You can check the certificates at the following sites:
+- [IBM 4769-001 Cryptographic Coprocessor Security Module](https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4079){: external}
+- [IBM 4768 Cryptographic Coprocessor Security Module](https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/3410){: external}
 
 ### General Data Protection Regulation
 {: #gdpr}

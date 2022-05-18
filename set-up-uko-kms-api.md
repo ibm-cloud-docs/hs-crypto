@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-05-10"
 
 keywords: set up api, kms api, key protect api, key management service API, using api
 
@@ -19,13 +19,13 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 
-# Managing your keys with the key management service API
+# Setting up key management service API calls
 {: #set-up-uko-kms-api}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [key management service API](/apidocs/hs-crypto){: external} to store, retrieve, and generate encryption keys.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [key management service (KMS) API](/apidocs/hs-crypto){: external} to manage your IBM KMS keys that are installed in internal keystores.
 {: shortdesc}
 
-In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} plan, currently you can manage KMS root keys and standard keys only through the API. For more information about the KMS API, see the [KMS API reference](/apidocs/hs-crypto){: external}. 
+In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} plan, you can perform key actions such as wrap and rotate internal KMS keys only through the KMS API. You can also use the KMS API to create internal keys, including root keys and standard keys. However, these keys are not displayed in the **Managed keys** table in the console. You can only use the KMS API to retrieve these keys. For more information about the KMS API, see the [KMS API reference](/apidocs/hs-crypto){: external}.
 {: note}
 
 ## Retrieving your IBM Cloud credentials

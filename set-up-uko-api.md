@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-05-10"
 
 keywords: set up api, uko api, Unified Key Orchestrator api, 
 
@@ -19,11 +19,13 @@ subcollection: hs-crypto
 {:important: .important}
 {:external: target="_blank" .external}
 
-# Managing your keys with the {{site.data.keyword.uko_full_notm}} API
+# Setting up {{site.data.keyword.uko_full_notm}} API calls
 {: #set-up-uko-api}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [{{site.data.keyword.uko_full_notm}} API](/apidocs/uko){: external} to store, retrieve, and generate encryption keys and keystores.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [{{site.data.keyword.uko_full_notm}} API](/apidocs/uko){: external} to create, retrieve, and destroy keys and keystores.
 {: shortdesc}
+
+When you use the {{site.data.keyword.uko_full_notm}} API to create IBM KMS keys that are installed in internal KMS keystores, these keys are root keys and can be used for [envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption). You can also use the [key management service API](/apidocs/hs-crypto){: external} to create internal IBM KMS keys and perform actions towards keys.
 
 ## Retrieving your IBM Cloud credentials
 {: #retrieve-uko-credentials}
@@ -50,7 +52,7 @@ curl --location --request GET 'https://uko.<region>.hs-crypto.cloud.ibm.com:<por
 ```
 {: codeblock}
 
-* Replace `<region>` and `<port>` with the region and port number of your API endpoint. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **Connect** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/hs-crypto#getinstance){: external}. 
+* Replace `<region>` and `<port>` with the region and port number of your API endpoint. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **Connect** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/uko#endpoint-urls){: external}. 
 * Replace `<access_token>` with your retrieved service and authentication credentials.
 * Replace `<vault_id>` with the ID of the vault that your keys are assigned to.
 

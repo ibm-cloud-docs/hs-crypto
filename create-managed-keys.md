@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-05-10"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -55,7 +55,7 @@ To create a managed key by using the console, complete the following steps:
 
 5. Under **General**, select **IBM KMS**, **IBM Key Protect**, **AWS Key Management Service**, or **Azure Key Vault**, depending on which type of keystore you want to install the key in. And then, click **Next**.
    
-   After a keystore type is selected, you can install the key to keystores of this type only.
+   After a keystore type is selected, you can install the key to keystores of this type only. If you select **IBM KMS**, the created key is a root key that can be used for [envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption).
    {: note}
 
 6. Under **Key properties**, specify the following details of the key. Click **Next** to continue when you are done.

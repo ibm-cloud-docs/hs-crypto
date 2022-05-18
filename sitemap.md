@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-09"
+lastupdated: "2022-05-11"
 
 keywords: site map, doc structure, information architecture
 
@@ -1156,7 +1156,7 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_setting_up_api_calls1}
 
 
-[Managing your keys with the {{site.data.keyword.uko_full_notm}} API](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#set-up-uko-api)
+[Setting up {{site.data.keyword.uko_full_notm}} API calls](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#set-up-uko-api)
 
 * [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#retrieve-uko-credentials)
 
@@ -1164,7 +1164,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#set-up-uko-api-next-steps)
 
-[Managing your keys with the key management service API](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#set-up-uko-kms-api)
+[Setting up key management service API calls](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#set-up-uko-kms-api)
 
 * [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#retrieve-uko-kms-credentials)
 
@@ -1172,7 +1172,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#set-up-uko-kms-api-next-steps)
 
-[Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-set-up-pkcs-api)
+[Setting up PKCS #11 API calls](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-set-up-pkcs-api)
 
 * [Prerequisites](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-prerequisite-pkcs-api)
 
@@ -1186,7 +1186,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-set-up-pkcs-api-next-steps)
 
-[Performing cryptographic operations with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-uko-set-up-grep11-api#uko-set-up-grep11-api)
+[Setting up GREP11 API calls](/docs/hs-crypto?topic=hs-crypto-uko-set-up-grep11-api#uko-set-up-grep11-api)
 
 * [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-uko-set-up-grep11-api#uko-retrieve-grep11-credentials)
 
@@ -1926,6 +1926,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Why can't I delete keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-delete-keys#troubleshoot-unable-to-delete-keys)
 
+[Why can't I perform any actions by using the {{site.data.keyword.cloud_notm}} console?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-ui-session-timeout#troubleshoot-ui-session-timeout)
+
 [Why can't I rotate root keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-rotate-root-keys#troubleshoot-unable-to-rotate-root-keys)
 
 [Why can't I view or list keys?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-unable-to-list-keys-api#troubleshoot-unable-to-list-keys-api)
@@ -1979,8 +1981,6 @@ Find what you are looking for in the compilation of topics that are available in
 [Why can't I delete vaults?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-delete-vault#troubleshoot-delete-vault)
 
 [Why can't I delete internal keystores?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-delete-keystore#troubleshoot-delete-keystore)
-
-[Why can't I perform any actions by using the {{site.data.keyword.cloud_notm}} console?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-ui-session-timeout#troubleshoot-ui-session-timeout)
 
 [Why can't I rotate the master key when using the {{site.data.keyword.uko_full_notm}} Plan?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-uko#troubleshoot-master-key-rotation-uko)
 

@@ -350,6 +350,7 @@ toc:
           - troubleshooting-create-keys.md
           - troubleshooting-delete-instance.md
           - troubleshooting-delete-keys.md
+          - troubleshooting-ui-session-timeout.md
           - troubleshooting-rotate-root-keys.md
           - troubleshooting-list-keys-api.md
           - troubleshooting-list-specific-keys.md   
@@ -379,7 +380,6 @@ toc:
           - troubleshooting-create-vault.md
           - troubleshooting-delete-vault.md
           - troubleshooting-delete-keystore.md
-          - troubleshooting-ui-session-timeout.md
           - troubleshooting-master-key-rotation-uko.md
           - troubleshooting-azure-delay.md
       - support.md
