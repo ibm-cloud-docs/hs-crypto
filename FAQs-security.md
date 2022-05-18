@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-05-18"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, data security, compliance
 
@@ -110,15 +110,13 @@ For more information, see [Comparing the PKCS #11 API with the GREP11 API](/docs
 {: #faq-EP11-mechanisms}
 {: faq}
 
-Mechanisms can vary depending on the level of firmware in the IBM 4768 crypto card (also referred to as Crypto Express 6S). For mechanisms that are   supported, see [Supported mechanisms](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-mechanism-list).
-
-For more information about the EP11 mechanisms, see the [Enterprise PKCS #11 (EP11) Library structure guide](https://www.ibm.com/security/cryptocards/pciecc4/library){: external}.
+Mechanisms can vary depending on the level of firmware in the crypto card, see [Supported mechanisms](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-mechanism-list). For more information about the EP11 mechanisms, see the [IBM 4768 Enterprise PKCS #11 (EP11) Library structure guide](https://www.ibm.com/security/cryptocards/pciecc3/library) and [IBM 4769 Enterprise PKCS #11 (EP11) Library structure guide](https://www.ibm.com/security/cryptocards/pciecc4/library){: external}.
 
 ## What compliance standards does {{site.data.keyword.hscrypto}} meet?
 {: #faq-compliance-standards}
 {: faq}
 
-{{site.data.keyword.hscrypto}} meets controls for global, industry, and regional compliance standards, such as GDPR, HIPAA, and ISO. As the HSM used by {{site.data.keyword.hscrypto}}, the IBM 4768 crypto card is also certified with Common Criteria EAL4 and FIPS 140-2 Level 4. For more information, see [Security and compliance](/docs/hs-crypto?topic=hs-crypto-security-and-compliance).
+{{site.data.keyword.hscrypto}} meets controls for global, industry, and regional compliance standards, such as GDPR, HIPAA, and ISO. As the HSM used by {{site.data.keyword.hscrypto}}, the IBM 4768 or IBM 4769 crypto card is also certified with Common Criteria EAL4 and FIPS 140-2 Level 4. For more information, see [Security and compliance](/docs/hs-crypto?topic=hs-crypto-security-and-compliance).
 
 ## Can I monitor my service instance?
 {: #faq-monitor-instance}

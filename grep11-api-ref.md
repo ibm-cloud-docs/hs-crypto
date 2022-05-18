@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-05-11"
+lastupdated: "2022-05-18"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -167,7 +167,7 @@ PKCS #11 functions that are marked with an asterisk (*) in the table are impleme
 ## Supported mechanisms
 {: #grep11-mechanism-list}
 
-A mechanism is referred to as a process to implement a cryptographic operation. It can vary depending on the level of firmware in the IBM 4768 crypto card (also referred to as Crypto Express 6S). The following table shows the mechanisms that are currently supported and how they relate to common GREP11 function categories.
+A mechanism is referred to as a process to implement a cryptographic operation. It can vary depending on the level of firmware in the crypto card. The following table shows the mechanisms that are currently supported and how they relate to common GREP11 function categories.
 
 | Function group | Supported mechanisms |
 |--------------|-----------------------|

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-05-11"
+lastupdated: "2022-05-18"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -149,7 +149,7 @@ Not all PKCS #11 functions are implemented by {{site.data.keyword.hscrypto}}. Fu
 ## Supported mechanisms
 {: #pkcs-mechanism-list}
 
-A mechanism is referred to as a process to implement a cryptographic operation. It can vary depending on the level of firmware in the IBM 4768 crypto card (also referred to as Crypto Express 6S). The following table shows the mechanisms that are  supported and how they relate to common *Cryptoki* function categories.
+A mechanism is referred to as a process to implement a cryptographic operation. It can vary depending on the level of firmware in the crypto card. The following table shows the mechanisms that are  supported and how they relate to common *Cryptoki* function categories.
 
 | Function group | Supported mechanisms |
 |--------------|-----------------------|
