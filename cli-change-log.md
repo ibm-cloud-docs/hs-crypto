@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 22022
-lastupdated: "2022-04-21"
+  years: 2021, 2022
+lastupdated: "2022-05-24"
 
 keywords: change log for tke, updates to tke cli plugin, updates to cert manager cli plugin
 
@@ -43,3 +43,5 @@ Added the `ibmcloud tke failover-enable` command to enable or add failover crypt
 Version 1.0.0 of the certificate manager CLI plug-in was released on July 2021.
 
 This is the first release of the certificate manager CLI plug-in. You can use it to manage certificates and administrator signature keys for the second layer of authentication in GREP11 or PKCS #11 API connections.
+
+
