@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-11"
+lastupdated: "2022-05-30"
 
 keywords: site map, doc structure, information architecture
 
@@ -404,6 +404,21 @@ Find what you are looking for in the compilation of topics that are available in
 * [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-components)
 
 [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro#uko-grep11-intro)
+
+
+## Managing regulated workloads with {{site.data.keyword.hscrypto}}
+{: #sitemap_managing_regulated_workloads_with_}
+
+
+[Managing regulated workloads with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-regulated-workloads#manage-regulated-workloads)
+
+* [Encrypting your regulated workloads with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-regulated-workloads#encrypt-regulated-workloads)
+
+* [Regulated workloads use cases](/docs/hs-crypto?topic=hs-crypto-manage-regulated-workloads#regulated-workloads-use-cases)
+
+* [Getting started to manage your regulated workloads with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-regulated-workloads#get-started-regulated-workloads)
+
+* [Reference](/docs/hs-crypto?topic=hs-crypto-manage-regulated-workloads#reference-regulated-workloads)
 
 
 ## Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}
