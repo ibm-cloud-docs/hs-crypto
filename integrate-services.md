@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-05-30"
 
 keywords: integration, encryption at rest, cloud object storage, object storage, kmip, containers, vmware, database, compute
 
@@ -61,6 +61,7 @@ The data that you store in {{site.data.keyword.cloud_notm}} database services is
 | [{{site.data.keyword.cloud_notm}} {{site.data.keyword.databases-for-postgresql}}](/docs/databases-for-postgresql){: external} | {{site.data.keyword.cloud_notm}} {{site.data.keyword.databases-for-postgresql}} is an enterprise-ready and fully managed PostgreSQL service that is built with native integration into the {{site.data.keyword.cloud_notm}}. | [{{site.data.keyword.hscrypto}} integration](/docs/databases-for-postgresql?topic=cloud-databases-hpcs) |
 | [{{site.data.keyword.cloud_notm}} {{site.data.keyword.databases-for-redis}}](/docs/databases-for-redis){: external} | {{site.data.keyword.cloud_notm}} {{site.data.keyword.databases-for-redis}} is an open source, in-memory key value store designed for the modern application stack. With {{site.data.keyword.databases-for-redis}}, you can use counters, queues, lists, and HyperLogLogs to handle complex data issues simply. | [{{site.data.keyword.hscrypto}} integration](/docs/databases-for-redis?topic=cloud-databases-hpcs) |
 | [{{site.data.keyword.cloud_notm}} {{site.data.keyword.messages-for-rabbitmq}}](/docs/messages-for-rabbitmq){: external} | {{site.data.keyword.cloud_notm}} {{site.data.keyword.messages-for-rabbitmq}} is an enterprise-ready and fully managed RabbitMQ service with native integration into the {{site.data.keyword.cloud_notm}}. It supports multiple messaging protocols as a broker. | [{{site.data.keyword.hscrypto}} integration](/docs/messages-for-rabbitmq?topic=cloud-databases-hpcs) |
+| [{{site.data.keyword.Db2_on_Cloud_long_notm}}](/docs/Db2onCloud){: external} | {{site.data.keyword.Db2_on_Cloud_long_notm}} is an SQL database that is provisioned for you in the cloud. You can use {{site.data.keyword.Db2_on_Cloud_short}} just as you use any database software, but without the time and expense of hardware setup or software installation and maintenance. | [View docs](/docs/Db2onCloud?topic=Db2onCloud-key-protect-v2){: external}  |
 {: caption="Table 2. Supported database services" caption-side="bottom"}
 
 
