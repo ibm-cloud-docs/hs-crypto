@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-05-31"
 
 keywords: disaster recovery, restore, recovery, cross region restore, support ticket, support center
 
@@ -30,13 +30,15 @@ subcollection: hs-crypto
 # Restoring your data from another region
 {: #restore-data}
 
-If a regional disaster that affects all available zones occurs, you're notified through the [IBM Cloud status](https://cloud.ibm.com/status?selected=status){: external} web page and an email. In this case, depending on your [pricing plan](/docs/hs-crypto?topic=hs-crypto-provision)and whether you enable failover crypto units, you can restore your data by using failover crypto units or opening an IBM support ticket.
+If a regional disaster that affects all available zones occurs, you're notified through the [IBM Cloud status](https://cloud.ibm.com/status?selected=status){: external} web page and an email. In this case, depending on your [pricing plan](/docs/hs-crypto?topic=hs-crypto-provision), whether you enable failover crypto units, and your requirements for recovery time, you can restore your data with different options.
 {: shortdesc}
+
+
 
 ## Restoring your data by using failover crypto units
 {: #restore-data-failover-crypto-units}
 
-If you are using the Standard plan, and create your instance in Dallas (`us-south`) or Washington DC (`us-east`) and you enable failover crypto units, your data is restored automatically to reduce the downtime and data loss. In this case, you switch to use the failover crypto units in another region to manage your keys and perform cryptographic operations. The failover crypto units contains a backup of all the encryption keys and other resources in the operational crypto units.
+If you are using the standard plan, and create your instance in Dallas (`us-south`) or Washington DC (`us-east`) and you enable failover crypto units, your data is restored automatically to reduce the downtime and data loss. In this case, you switch to use the failover crypto units in another region to manage your keys and perform cryptographic operations. The failover crypto units contains a backup of all the encryption keys and other resources in the operational crypto units.
 
 At the same time, IBM repairs your service instance in the original region. If new operational crypto units are required to complete the repair, you will be notified by IBM and you need to load the master key to the new operational crypto units by [using recovery crypto units or master key parts](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode). After your original service instance is recovered, IBM automatically redirects traffic back to the original region.
 
