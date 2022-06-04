@@ -63,6 +63,11 @@
     "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
     "tiles": [
       {
+        "date": "June 2022",
+        "title": "Hyper Protect Crypto Services Unified Key Orchestrator CLI plug-in",
+        "description": "With the command-line interface (CLI) support for Hyper Protect Crypto Services with the Unified Key Orchestrator plan, you can now manage vaults, keystores, and keys by using CLI commands."
+      }, 
+      {
         "date": "February 2022",
         "title": "Limited availability: Using Unified Key Orchestration to manage and orchestrate keys in a multicloud environment",
         "description": "With Unified Key Orchestration, you can connect your service instance to keystores in third-party cloud providers, back up and manage keys using the unified system, and orchestrate keys across multiple clouds."
@@ -76,11 +81,6 @@
         "date": "January 2022",
         "title": "Hyper Protect Crypto Services key management service API is updated to version `2.82` ",
         "description": "You can now purge a deleted key manually and transfer a key to another keyring using either UI or API."
-      },
-      {
-        "date": "July 2021",
-        "title": "Exclusive control on the execution of cryptographic operations",
-        "description": "To ensure the exclusive control on the execution of cryptographic operations, you can use the Hyper Protect Crypto Services certificate manager CLI to enable the second layer of authentication for EP11 (GREP11 or PKCS #11 API) connections."
       }
     ]
   }

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-06-04"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,6 +27,17 @@ content-type: release-note
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+
+
+## 3 June 2022
+{: #hs-crypto-3june2022}
+{: release-note}
+
+Added: {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in {: #add-uko-cli}
+:   With the command-line interface (CLI) support for {{site.data.keyword.hscrypto}} with the {{site.data.keyword.uko_full_notm}} plan, you can now manage vaults, keystores, and keys by using CLI commands. For more information about these commands, see [{{site.data.keyword.uko_full_notm}} CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#uko-cli-plugin).
+
+
 
 ## 1 April 2022
 {: #hs-crypto-1april2022}
@@ -98,18 +109,12 @@ Limited availability: Using {{site.data.keyword.uko_full_notm}} to manage and or
 Added: Using {{site.data.keyword.mon_full_notm}} to measure {{site.data.keyword.hscrypto}} metrics {: #add-monitoring-metrics}
 :   By enabling metrics instance policy, you can now use {{site.data.keyword.mon_full_notm}} to measure how users and applications interact with {{site.data.keyword.hscrypto}}. For more information, see [Managing metrics](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics) and [Monitoring operational metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics).
 
-
-
-
 ## 15 February 2022
 {: #hs-crypto-15feb2022}
 {: release-note}
 
 Added: {{site.data.keyword.hscrypto}} expands into the S&atilde;o-Paulo region {: #add-sao-region}
 :   You can now create {{site.data.keyword.hscrypto}} instances in the S&atilde;o-Paulo (`br-sao`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
-
-
-
 
 ## 21 January 2022
 {: #hs-crypto-jan2022}
