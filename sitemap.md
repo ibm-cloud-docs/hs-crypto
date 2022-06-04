@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-30"
+lastupdated: "2022-06-04"
 
 keywords: site map, doc structure, information architecture
 
@@ -449,6 +449,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [3 June 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-3june2022)
+
+    * [Added: {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-what-new#add-uko-cli)
 
 * [1 April 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-1april2022)
 
@@ -1687,6 +1691,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#tke-cli-change-log)
 
 * [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#cert-manager-cli-change-log)
+
+* [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#uko-cli-change-log)
 
 [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} CLI](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#hpcs-cli-plugin)
 

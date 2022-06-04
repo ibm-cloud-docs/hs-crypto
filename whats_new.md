@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-05-30"
+lastupdated: "2022-06-04"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,6 +27,15 @@ content-type: release-note
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+
+
+## 3 June 2022
+{: #hs-crypto-3june2022}
+{: release-note}
+
+Added: {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in {: #add-uko-cli}
+:   With the command-line interface (CLI) support for {{site.data.keyword.hscrypto}} with the {{site.data.keyword.uko_full_notm}} plan, you can now manage vaults, keystores, and keys by using CLI commands. For more information about these commands, see [{{site.data.keyword.uko_full_notm}} CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#uko-cli-plugin).
 
 
 
