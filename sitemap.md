@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-04"
+lastupdated: "2022-06-06"
 
 keywords: site map, doc structure, information architecture
 
@@ -815,12 +815,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Disabling the key create and import access policy for your service instance with the key management service API](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#disable-key-create-import-policy-api)
 
-[Managing metrics](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics#manage-monitoring-metrics)
-
-* [Managing metrics settings](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics#manage-metrics-policy)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics#monitor-metrics-next-steps)
-
 [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token#retrieve-access-token)
 
 * [Retrieving an access token with the CLI](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token#retrieve-token-cli)
@@ -1529,24 +1523,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Event severity](/docs/hs-crypto?topic=hs-crypto-at-events#event-severity)
 
-[{{site.data.keyword.mon_short}} operational metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics#operational-metrics)
-
-* [What metrics are available for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-operational-metrics#hpcs-metrics-available)
-
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-operational-metrics#operational-metrics-considerations)
-
-* [Connecting {{site.data.keyword.mon_short}} with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-operational-metrics#connect-monitoring-hpcs)
-
-* [{{site.data.keyword.hscrypto}} Metrics Details](/docs/hs-crypto?topic=hs-crypto-operational-metrics#hpcs-metrics)
-
-* [Latency](/docs/hs-crypto?topic=hs-crypto-operational-metrics#latency)
-
-* [Attributes for Segmentation](/docs/hs-crypto?topic=hs-crypto-operational-metrics#attributes-for-segmentation)
-
-* [Default Dashboards](/docs/hs-crypto?topic=hs-crypto-operational-metrics#default-dashboards)
-
-* [Setting Alerts](/docs/hs-crypto?topic=hs-crypto-operational-metrics#set-monitor-alerts)
-
 [Managing security and compliance with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#manage-security-compliance)
 
 * [Governing {{site.data.keyword.hscrypto}} resource configuration with config rules](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#govern-crypto)
@@ -1599,6 +1575,35 @@ Find what you are looking for in the compilation of topics that are available in
 * [Analyzing failed events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-at-events-analyze-failed)
 
 * [Event severity](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-event-severity)
+
+
+## Logging and monitoring
+{: #sitemap_logging_and_monitoring}
+
+
+[Managing metrics](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics#manage-monitoring-metrics)
+
+* [Managing metrics settings](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics#manage-metrics-policy)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics#monitor-metrics-next-steps)
+
+[{{site.data.keyword.mon_short}} operational metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics#operational-metrics)
+
+* [What metrics are available for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-operational-metrics#hpcs-metrics-available)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-operational-metrics#operational-metrics-considerations)
+
+* [Connecting {{site.data.keyword.mon_short}} with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-operational-metrics#connect-monitoring-hpcs)
+
+* [{{site.data.keyword.hscrypto}} Metrics Details](/docs/hs-crypto?topic=hs-crypto-operational-metrics#hpcs-metrics)
+
+* [Latency](/docs/hs-crypto?topic=hs-crypto-operational-metrics#latency)
+
+* [Attributes for Segmentation](/docs/hs-crypto?topic=hs-crypto-operational-metrics#attributes-for-segmentation)
+
+* [Default Dashboards](/docs/hs-crypto?topic=hs-crypto-operational-metrics#default-dashboards)
+
+* [Setting Alerts](/docs/hs-crypto?topic=hs-crypto-operational-metrics#set-monitor-alerts)
 
 
 ## API reference
@@ -1701,6 +1706,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [{{site.data.keyword.hscrypto}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin)
 
 * [{{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#cert-manager-cli-plugin)
+
+* [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#uko-cli-plugin)
 
 
 ## Terraform reference
