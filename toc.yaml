@@ -155,7 +155,6 @@ toc:
             - settings-network-policy.md
             - settings-dual-auth.md
             - settings-key-create-import-access.md
-            - settings-sysdig-metrics.md
           - retrieve-access-token.md
           - retrieve-instance-id.md
           - topicgroup:
@@ -269,7 +268,6 @@ toc:
               - virtual-private-endpoint.md
               - secure-connection.md
           - at-events.md
-          - monitor-sysdig-metrics.md
           - manage-security-compliance.md
       - topicgroup:
           label: Enhancing security - Unified Key Orchestrator Plan
@@ -278,7 +276,11 @@ toc:
           - grant-access-vaults.md
           - uko-role-best-practices.md
           - uko-at-events.md
-
+      - topicgroup:
+          label: Logging and monitoring
+          topics:
+          - settings-sysdig-metrics.md
+          - monitor-sysdig-metrics.md
   - navgroup:
       id: reference
       topics:
