@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-06-04"
+lastupdated: "2022-06-08"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,6 +27,16 @@ content-type: release-note
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+
+
+## 8 June 2022
+{: #hs-crypto-8june2022}
+{: release-note}
+
+Added: Post-quantum cryptography support {: #add-pqc}
+:   With the GREP11 API and the PKCS #11 API, you can now perform [post-quantum cryptographic](https://en.wikipedia.org/wiki/Post-quantum_cryptography){: external} operations to protect your data against attacks from quantum computers. Currently, we support the Dilithium algorithm. For more information, see [Post-quantum cryptography support in GREP11](/docs/hs-crypto?topic=hs-crypto-grep11-intro#grep11-support-post-quantum) and [Post-quantum cryptography support in PKCS #11](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#grep11-support-post-quantum).
+
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-05-13"
+lastupdated: "2022-06-08"
 
 keywords: hsm, cloud hsm, tke cli, pkcs11, PKCS11 library, cryptographic operations, cryptographic functions, PKCS 11
 
@@ -154,4 +154,17 @@ Refer to the following table for detailed explanations of the relationship betwe
 | Normal user   | `TRUE` |`TRUE`  | Database-backed keystore  |Private |
 {: caption="Table 1. Cases of storing EP11 keys in different keystores" caption-side="bottom"}
 
+
+
+## Post-quantum cryptography support
+{: #grep11-support-post-quantum}
+
+With the PKCS #11 API, you can also perform [post-quantum cryptographic](https://en.wikipedia.org/wiki/Post-quantum_cryptography){: external} operations. Traditional cryptography relies on complicated mathematical problems that are difficult for classical computers to solve. However, with the computing capabilities, quantum computers can solve these problems. Post-quantum cryptography is considered to be resistant to cryptanalytic attacks from quantum computers. It usually uses asymmetric algorithms and has multiple approaches.
+
+The PKCS #11 API provides the [Dilithium algorithm](https://pq-crystals.org/dilithium/){: external} for post-quantum cryptography. It is a lattice-based digital signature scheme and can be used for signature generation and verification. Currently, only the [high-security version of round 2 Dilithium](http://oid-info.com/get/1.3.6.1.4.1.2.267.1.6.5){: external} is supported and it is not available for `C_SignUpdate` and `C_VerifyUpdate` operations. 
+
+The Dilithium algorithm is supported only by the {{site.data.keyword.IBM_notm}} 4769 crypto card, also referred to as Crypto Express 7S (CEX7S). If you create your instances in Virtual Private Cloud (VPC) based regions, where the CEX7S crypto cards are used, you can use the Dilithium algorithm for post-quantum cryptography with the PKCS #11 API. For a list of VPC-based regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
+{: note}
+
+For more information about Dilithium algorithm support in PKCS #11, see [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref). You can also find Dilithium algorithm code examples in the [GitHub sample repository](https://github.com/IBM-Cloud/hpcs-pkcs11){: external}.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-06"
+lastupdated: "2022-06-08"
 
 keywords: site map, doc structure, information architecture
 
@@ -253,7 +253,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-components)
 
+* [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#grep11-support-post-quantum)
+
 [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11-intro#grep11-intro)
+
+* [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-grep11-intro#grep11-support-post-quantum)
 
 
 ### About key rotation
@@ -403,7 +407,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-components)
 
+* [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#grep11-support-post-quantum)
+
 [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro#uko-grep11-intro)
+
+* [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro#grep11-support-post-quantum)
 
 
 ## Managing regulated workloads with {{site.data.keyword.hscrypto}}
@@ -449,6 +457,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [8 June 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-8june2022)
+
+    * [Added: Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-what-new#add-pqc)
 
 * [3 June 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-3june2022)
 
