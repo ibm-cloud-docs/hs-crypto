@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-06-10"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -40,7 +40,10 @@ To edit vault details by using the console, complete the following steps:
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Vaults** from the navigation to view all the available vaults.
 3. Click the vault that you want to edit. The Details side panel is displayed.
-4. Click **Edit** to update the **Vault name** and **Description**.
+4. Click **Edit** to update the **Vault name** and **Description**. 
+  
+  The vault name must be of 1 to 100 characters in length. The characters can be letters (case-sensitive), digits (0-9), or symbols (#@!$%\’_-).
+  
 5. Click **Save** to save the property changes.
 6. The keys and keystores that are assigned to this vault are displayed in tables. 
 7. Optionally, you can add additional keys to the vault by clicking **Create key** under **Keys**, or add a keystore by clicking **Add keystores** under **Target keystores**.

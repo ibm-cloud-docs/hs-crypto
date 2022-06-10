@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-05-10"
+lastupdated: "2022-06-10"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -53,7 +53,7 @@ To create a managed key by using the console, complete the following steps:
    
    If you want to assign the key to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults). 
 
-5. Under **General**, select **IBM KMS**, **IBM Key Protect**, **AWS Key Management Service**, or **Azure Key Vault**, depending on which type of keystore you want to install the key in. And then, click **Next**.
+5. Under **General**, select **IBM KMS**, **IBM {{site.data.keyword.keymanagementserviceshort}}**, **AWS Key Management Service**, or **Azure Key Vault**, depending on which type of keystore you want to install the key in. And then, click **Next**.
    
    After a keystore type is selected, you can install the key to keystores of this type only. If you select **IBM KMS**, the created key is a root key that can be used for [envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption).
    {: note}
@@ -62,7 +62,7 @@ To create a managed key by using the console, complete the following steps:
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
-    | Key name             | A unique, human-readable name for easy identification of your key. |
+    | Key name             | A unique, human-readable name for easy identification of your key. Depending on the keystore type, name your key with the following rules:  \n - IBM KMS: 2-50 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. \n - IBM {{site.data.keyword.keymanagementserviceshort}}: 2-50 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. \n - AWS Key Management Service: 1-255 characters in length. The characters can be letters (case-sensitive), digits (0-9), or symbols (/_-). However, do not start the name with `AWS/`. \n - Azure Key Vault: 1-24 characters in length. The characters can be letters (case-sensitive), digits (0-9), or hyphens (-). |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Length               | The number of bits that represents the encryption strength of the key.   |
