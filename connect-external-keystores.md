@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-10"
+lastupdated: "2022-06-15"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -108,7 +108,7 @@ To connect to an external keystore by using the console, complete the following 
     - **{{site.data.keyword.keymanagementserviceshort}}**
     - **KMS keystore in another instance**
 
-6. Under **Keystore properties**, specify the details of based on the keystore type that you want to connect to, and click **Next** to continue when you are done.
+6. Under **Keystore properties**, specify the details of based on the keystore type that you want to connect to.
    
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
@@ -169,8 +169,12 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
 
-7. Under **Summary**, view the summary of your Azure Key Vault and the total estimated cost.
-8. After you confirm the keystore details, click  **Connect to keystore** to connect to the keystore.
+7. Optionally, click **Test connection** to test the connection to the external keystore that you configure. When completed, click **Next** to continue.
+
+    **Test connection** is an optional step. You can complete the subsequent steps even if the test fails. To adjust the connection settings in case of a connection failure, check and adjust the connection properties.
+    {: tip}
+8. Under **Summary**, view the summary of your Azure Key Vault and the total estimated cost.
+9. After you confirm the keystore details, click  **Connect to keystore** to connect to the keystore.
 
 You have successfully connected to the external keystore that you select. 
 
