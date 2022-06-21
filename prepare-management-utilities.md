@@ -33,7 +33,7 @@ With smart cards and the [{{site.data.keyword.IBM}} {{site.data.keyword.hscrypto
 
 The following diagram gives you an overview of steps you need to take to initialize service instances with smart cards and the Management Utilities. This topic covers the steps to set up the Management Utilities. For the detailed instructions on initialize the service instance, see [Initializing service instances by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
-![The task flow of service instance initialization with smart cards and the Management Utilities](/images/hsm_initialization_flow_smartcard.svg "The task flow of service instance initialization with smart cards and the Management Utilities"){: caption="Figure 1. Task flow of service instance initialization with smart cards and the Management Utilities" caption-side="bottom"}
+![The task flow of service instance initialization with smart cards and the Management Utilities](/images/hsm-initialization-flow-smartcard.svg "The task flow of service instance initialization with smart cards and the Management Utilities"){: caption="Figure 1. Task flow of service instance initialization with smart cards and the Management Utilities" caption-side="bottom"}
 
 ## Step 1: Order smart cards and smart card readers
 {: #order-smart-card-and-reader}
