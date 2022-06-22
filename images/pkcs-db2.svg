@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1056" height="345" viewBox="0 0 1056 345">
+    <defs>
+        <style>.cls-1{fill:#e3f6ff;}.cls-1,.cls-10,.cls-11,.cls-12,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-9{stroke:#000;}.cls-1,.cls-2,.cls-6{stroke-miterlimit:10;}.cls-14,.cls-2,.cls-5{fill:none;}.cls-3{fill:#fff;}.cls-10,.cls-11,.cls-12,.cls-14,.cls-3,.cls-4,.cls-5,.cls-7,.cls-9{stroke-linejoin:round;}.cls-4{fill:#f2f4f8;}.cls-10,.cls-11,.cls-14,.cls-5,.cls-9{stroke-linecap:round;}.cls-10,.cls-6,.cls-7{fill:#b3e6ff;}.cls-8,.cls-9{fill:#e6d6ff;}.cls-11,.cls-12{fill:#87eded;}.cls-13{opacity:0.99;}.cls-14{stroke:#50565b;stroke-width:2px;}.cls-15{fill:#50565b;}.cls-16{font-size:18px;font-family:IBMPlexSans-SemiBold, IBM Plex Sans;font-weight:600;}.cls-17{font-size:16px;font-family:IBMPlexSans, IBM Plex Sans;}</style>
+    </defs>
+    <g id="Figure">
+        <g id="Database">
+            <path class="cls-1" d="M159.248,135.5168H82.7405c-5.2817,0-9.5634,3.67-9.5634,8.1972v90.17c0,4.5272,4.2817,8.1972,9.5634,8.1972H159.248c5.2818,0,9.5635-3.67,9.5635-8.1972v-90.17C168.8115,139.1868,164.53,135.5168,159.248,135.5168Z" />
+            <line class="cls-2" x1="72.8185" y1="170.5941" x2="169.1701" y2="170.5941" />
+            <line class="cls-2" x1="74.3725" y1="207.0035" x2="169.1701" y2="207.0035" />
+            <circle cx="94.3533" cy="152.8334" r="4.8176" />
+            <circle cx="94.3533" cy="188.7988" r="4.8176" />
+            <circle cx="94.3533" cy="223.4321" r="4.8176" />
+        </g>
+        <rect class="cls-3" x="512.5949" y="147.5052" width="502.4051" height="151.4097" />
+        <rect class="cls-4" x="489.8835" y="124.1055" width="502.4051" height="151.4097" />
+        <rect class="cls-4" x="240.0574" y="146.6061" width="183.0681" height="64.6933" />
+        <g id="HP_icon" data-name="HP icon">
+            <line class="cls-5" x1="551.9221" y1="216.0329" x2="583.3839" y2="216.0329" />
+            <polyline class="cls-5" points="583.384 216.033 583.384 195.386 551.922 195.386 551.922 208.413" />
+            <path class="cls-5" d="M577.4834,195.3861v-7.8668a9.83,9.83,0,1,0-19.6608,0v7.8668" />
+            <path class="cls-5" d="M567.6477,230.7806s-28.0153-16.424-28.0153-48.6674" />
+            <path class="cls-5" d="M595.6737,182.1132c0,32.2434-28.026,48.6674-28.026,48.6674" />
+            <polyline class="cls-5" points="539.632 182.113 567.653 165.891 595.674 182.113" />
+            <circle class="cls-6" cx="595.6737" cy="182.1132" r="2.9495" />
+            <circle class="cls-6" cx="539.6324" cy="182.1132" r="2.9495" />
+            <circle class="cls-6" cx="567.653" cy="230.7806" r="2.9495" />
+        </g>
+        <path id="Cloud" class="cls-1" d="M744.5565,184.3817a34.4447,34.4447,0,0,0-33.8592,27.9691,25.8335,25.8335,0,0,0,4.5467,51.2537H773.8a25.8335,25.8335,0,0,0,4.5467-51.2537,34.4446,34.4446,0,0,0-27.3491-27.3491A35.3717,35.3717,0,0,0,744.5565,184.3817Z" />
+        <g id="Hardware">
+            <rect class="cls-7" x="716.9908" y="234.5186" width="55.0581" height="14.5742" />
+            <polygon class="cls-7" points="772.049 233.979 716.991 233.979 726.707 212.927 762.333 212.927 772.049 233.979" />
+            <rect x="751.8069" y="238.567" width="6.4774" height="6.4774" />
+            <rect x="760.7134" y="238.567" width="6.4774" height="6.4774" />
+        </g>
+        <g id="lock">
+            <g id="lock-2" data-name="lock">
+                <rect class="cls-8" x="710.6664" y="232.57" width="9.9105" height="3.3035" />
+                <path class="cls-9" d="M715.6216,248.5368v-3.854m-5.5058-8.9855v-6.9814a5.5059,5.5059,0,0,1,11.0117,0v6.9814m2.2023,1.6737a11.2888,11.2888,0,0,0-2.2023-1.6738,11.01,11.01,0,0,0-11.0117,0,11.2888,11.2888,0,0,0-2.2023,1.6738,11.0117,11.0117,0,1,0,15.4163,0Z" />
+                <circle cx="715.6216" cy="244.6828" r="2.0647" />
+            </g>
+        </g>
+        <g id="key">
+            <path class="cls-10" d="M165.7462,243.0275a16.0771,16.0771,0,1,1-.7636-10.9226" />
+            <circle cx="145.074" cy="238.6009" r="3.4411" />
+            <polyline class="cls-7" points="164.983 232.105 197.087 232.105 203.096 238.114 197.917 243.293 177.731 243.293 174.112 239.708 170.793 243.028 165.746 243.028" />
+        </g>
+        <g id="key-2" data-name="key">
+            <path class="cls-11" d="M893.8894,204.4868a16.0771,16.0771,0,1,1-.7636-10.9226" />
+            <circle cx="873.2172" cy="200.0602" r="3.4411" />
+            <polyline class="cls-12" points="893.126 193.564 925.23 193.564 931.239 199.573 926.06 204.752 905.874 204.752 902.256 201.167 898.936 204.487 893.889 204.487" />
+        </g>
+    </g>
+    <g id="Line">
+        <g class="cls-13">
+            <line class="cls-14" x1="178.8053" y1="174.5175" x2="228.1224" y2="174.5175" />
+            <polygon class="cls-15" points="226.955 178.507 233.863 174.517 226.955 170.528 226.955 178.507" />
+        </g>
+        <line class="cls-14" x1="184.5463" y1="187.5173" x2="233.8634" y2="187.5173" />
+        <polygon class="cls-15" points="185.713 191.506 178.805 187.517 185.713 183.528 185.713 191.506" />
+        <g class="cls-13">
+            <line class="cls-14" x1="428.8338" y1="172.908" x2="478.1509" y2="172.908" />
+            <polygon class="cls-15" points="476.984 176.897 483.892 172.908 476.984 168.919 476.984 176.897" />
+        </g>
+        <line class="cls-14" x1="434.5748" y1="185.9078" x2="483.8919" y2="185.9078" />
+        <polygon class="cls-15" points="435.742 189.897 428.834 185.908 435.742 181.919 435.742 189.897" />
+    </g>
+    <g id="Text">
+        <text class="cls-16" transform="translate(655.0576 161.2696)">Hyper Protect Crypto Services</text>
+        <text class="cls-16" transform="translate(33.7837 40.1416)">IBM Db2 native encryption using the standard PKCS #11 API</text>
+        <text class="cls-16" transform="translate(256.5005 185.4356)">PKCS #11 library</text>
+        <text class="cls-17" transform="translate(99.9814 277.2481)">Data encryption key</text>
+        <text class="cls-17" transform="translate(32.9272 117.2315)">IBM Db2 database system</text>
+        <text class="cls-17" transform="translate(858.6035 241.1123)">Master key</text>
+    </g>
+</svg>

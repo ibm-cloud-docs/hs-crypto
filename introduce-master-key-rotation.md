@@ -52,7 +52,7 @@ The following flow shows how master key rotation works in this mode:
 
 The following chart illustrates how the master key register state changes during the master key rotation. For detailed instructions, see [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
 
-![Rotating master keys by using key parts](/images/rotate_master_key.svg "How to rotate a master key by using key part files"){: caption="Figure 1. Rotating master keys by using key parts" caption-side="bottom"}
+![Rotating master keys by using key parts](/images/rotate-master-key.svg "How to rotate a master key by using key part files"){: caption="Figure 1. Rotating master keys by using key parts" caption-side="bottom"}
 
 ### Rotating master keys by using recovery crypto units
 {: #how-master-key-rotation-works-recovery-crypto-unit}

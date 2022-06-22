@@ -39,15 +39,15 @@ For an introduction to the approaches of service instance initialization and the
 The following diagram gives you an overview of steps you need to take to initialize the service instance using master key parts stored in files. Click each step on the diagram for detailed instructions.
 
 <figure>
-    <img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="/images/hsm_initialization_flow.svg" width="750" alt="Click each step to get more details on the flow." />
+    <img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="/images/hsm-initialization-flow.svg" width="750" alt="Click each step to get more details on the flow." />
     <figcaption>Figure 1. Task flow of service instance initialization with the TKE CLI plug-in</figcaption>
 </figure>
 
 <map name="home_map1" id="home_map1">
-    <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Install IBM Cloud CLI" title="Install IBM Cloud CLI" shape="rect" coords="126, 32, 226, 82" />
-    <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Log in to IBM Cloud" title="Log in to IBM Cloud" shape="rect" coords="260, 32, 360, 82" />
-    <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Install TKE CLI plug-in" title="Install TKE CLI plug-in" shape="rect" coords="394, 32, 494, 82" />
-    <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-prerequisites" alt="Set up local directory for key files" title="Set up local directory for key files" shape="rect" coords="528, 32, 628, 82" />
+    <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite" alt="Install IBM Cloud CLI" title="Install IBM Cloud CLI" shape="rect" coords="126, 32, 226, 82" />
+    <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite" alt="Log in to IBM Cloud" title="Log in to IBM Cloud" shape="rect" coords="260, 32, 360, 82" />
+    <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite" alt="Install TKE CLI plug-in" title="Install TKE CLI plug-in" shape="rect" coords="394, 32, 494, 82" />
+    <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite" alt="Set up local directory for key files" title="Set up local directory for key files" shape="rect" coords="528, 32, 628, 82" />
     <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#identify_crypto_units" alt="Display assigned crypto units" title="Display assigned crypto units" shape="rect" coords="126, 123, 226, 173" />
     <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#identify_crypto_units2" alt="Add crypto units" title="Add crypto units" shape="rect" coords="260, 123, 360, 173" />
     <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step1-create-signature-keys" alt="Create one or more signature keys" title="Create signature keys" shape="rect" coords="126, 214, 226, 264" />
