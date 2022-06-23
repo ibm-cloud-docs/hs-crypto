@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-06-23"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,7 +27,12 @@ In this change log you can learn about the latest changes, improvements, and upd
 ## API versioning
 {: #uko-api-versioning}
 
-The latest released version is `4.0.1`. The {{site.data.keyword.uko_full_notm}} API version is aligned with the IBM Enterprise Key Management Foundation - Web Edition (EKMF Web) API version.  
+The latest released version is `4.3.0`. The {{site.data.keyword.uko_full_notm}} API version is aligned with the IBM Enterprise Key Management Foundation - Web Edition (EKMF Web) API version.  
+
+## June 2022
+{: #uko-api-june-2022}
+
+A software development kit (SDK) for Golang is provided along with API method examples.
 
 ## March 2022
 {: #uko-api-march-2022}
