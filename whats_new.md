@@ -33,9 +33,9 @@ Stay up to date with the new features that are available for {{site.data.keyword
 {: release-note}
 
 Added: Go SDK and Terraform support for {{site.data.keyword.uko_full_notm}}
-:   With the software development kit (SDK) for Golang, you can now call {{site.data.keyword.uko_full_notm}} API methods by using Go to manage your instances. For more information, see [{{site.data.keyword.uko_full_notm}} API reference](/apidocs/uko?code=go).
+:  You can now manage your keys by using the {{site.data.keyword.uko_full_notm}} API with the Go software development kit (SDK) enabled. For more code examples in Go, see [{{site.data.keyword.uko_full_notm}} API reference](/apidocs/uko?code=go).
 
-    With the Terraform support for {{site.data.keyword.uko_full_notm}}, you can now automate actions, such as manage vaults, keystores, key templates, and keys, by using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs).
+    With the Terraform support for {{site.data.keyword.uko_full_notm}}, you can now automate actions, such as managing vaults, keystores, key templates, and keys, by using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs).
 
 
 
