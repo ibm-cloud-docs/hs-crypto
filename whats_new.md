@@ -28,6 +28,15 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+## 24 June 2022
+{: #hs-crypto-24june2022}
+{: release-note}
+
+Added: Go SDK and Terraform support for {{site.data.keyword.uko_full_notm}}
+:  You can now manage your keys by using the {{site.data.keyword.uko_full_notm}} API with the Go software development kit (SDK) enabled. For more code examples in Go, see [{{site.data.keyword.uko_full_notm}} API reference](/apidocs/uko?code=go).
+
+    With the Terraform support for {{site.data.keyword.uko_full_notm}}, you can now automate actions, such as managing vaults, keystores, key templates, and keys, by using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs).
+
 
 
 ## 8 June 2022

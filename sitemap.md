@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-06-24"
 
 keywords: site map, doc structure, information architecture
 
@@ -457,6 +457,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [24 June 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-24june2022)
+
+    * Added: Go SDK and Terraform support for {{site.data.keyword.uko_full_notm}}
 
 * [8 June 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-8june2022)
 
@@ -1730,7 +1734,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Provisioning and initializing service instances with Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs){: external}
 
-[(Standard Plan only) Managing key management service keys with Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: external}
+[Managing keys with Terraform - Key management service](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: external}
+
+[Managing keys with Terraform - Unified Key Orchestrator](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/key_template){: external}
 
 
 ## Regions and locations

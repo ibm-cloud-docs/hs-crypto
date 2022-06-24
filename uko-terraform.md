@@ -26,9 +26,6 @@ subcollection: hs-crypto
 Terraform on {{site.data.keyword.cloud}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multitiered cloud environments following Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.hscrypto}} instances by using HashiCorp Configuration Language (HCL).
 {: shortdesc}
 
-With {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}, you can use Terraform to only provision and initialize a service instance. Managing keys using Terraform is currently not supported.
-{: note}
-
 Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform templates that you can easily install from the {{site.data.keyword.cloud_notm}} catalog.
 
 Before you begin, make sure that you have the [required access](/docs/hs-crypto?topic=hs-crypto-uko-manage-access) to create and work with {{site.data.keyword.hscrypto}} resources.
@@ -201,5 +198,11 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
 ## What's next?
 {: #uko-terraform-setup-hpcs-next}
 
-- For more information about using Terraform to manage {{site.data.keyword.hscrypto}} instances, see the [Terraform documentation - Hyper Protect Crypto Services](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs){: external}.
+For more information about using Terraform to manage {{site.data.keyword.hscrypto}} instances with {{site.data.keyword.uko_full_notm}}, see the following Terraform documentation:
+
+- [Managing vaults](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/vault){: external}
+- [Managing keystores](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/keystore){: external}
+- [Managing key templates](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/key_template){: external}
+- [Managing keys](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/managed_key){: external}
+
 

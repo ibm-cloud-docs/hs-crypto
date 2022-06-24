@@ -1,6 +1,8 @@
+---
+
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-30"
+lastupdated: "2022-06-24"
 
 keywords: regulated workloads, FS Cloud, IBM Cloud for Financial Services, FS Cloud use cases
 
