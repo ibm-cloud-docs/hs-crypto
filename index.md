@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-06-07"
+lastupdated: "2022-06-28"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -211,7 +211,7 @@ You can use a managed key for encryption or decryption only after it is created 
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Length               | The number of bits that represents the encryption strength of the key.   |
-    | State                | _Pre-active_ keys are not to be installed in target keystores until you manually activate them. _Active_ keys are to be automatically installed in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external} |
+    | State                | _Pre-active_ keys are not to be installed in target keystores until you manually activate them. _Active_ keys are to be automatically installed in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activation date      | Plan a date to activate the _Pre-active_ key. No automatic state change is triggered. |
     | Expiration date      | Plan a date to deactivate the key. No automatic state change is triggered. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
@@ -559,7 +559,7 @@ You can use a managed key for encryption or decryption only after it is created 
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Length               | The number of bits that represents the encryption strength of the key.   |
-    | State                | _Pre-active_ keys are not to be installed in target keystores until you manually activate them. _Active_ keys are to be automatically installed in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external} |
+    | State                | _Pre-active_ keys are not to be installed in target keystores until you manually activate them. _Active_ keys are to be automatically installed in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activation date      | Plan a date to activate the _Pre-active_ key. No automatic state change is triggered. |
     | Expiration date      | Plan a date to deactivate the key. No automatic state change is triggered. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
