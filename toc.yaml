@@ -103,19 +103,19 @@ toc:
           - tutorials/kmip-vmware.md
           links:
           - link:
-              label: "Tutorial: Applying end to end security to a cloud application"
+              label: "Applying end to end security to a cloud application"
               href: https://{DomainName}/docs/tutorials?topic=solution-tutorials-cloud-e2e-security
           - link:
-              label: "Tutorial: Creating secure microservices writing to a consolidated database"
+              label: "Creating secure microservices writing to a consolidated database"
               href: https://developer.ibm.com/patterns/create-a-secured-microservices-and-deploy-it-to-a-consolidated-database/
           - link:
-              label: "Tutorial: Encrypting Kubernetes secrets with IBM Cloud Hyper Protect Crypto Services"
+              label: "Encrypting Kubernetes secrets with IBM Cloud Hyper Protect Crypto Services"
               href: https://developer.ibm.com/tutorials/encrypt-kubernetes-secrets-with-hyper-protect-crypto-services/
           - link:
-              label: "Tutorial: Enhancing security of your deployed application"
+              label: "Enhancing security of your deployed application"
               href: https://{DomainName}/docs/tutorials?topic=solution-tutorials-extended-app-security
           - link:
-              label: "Tutorial: Secure a digital wallet in the public cloud"
+              label: "Secure a digital wallet in the public cloud"
               href: https://developer.ibm.com/patterns/secure-bitcoin-wallet-with-ibm-cloud-hyper-protect-virtual-servers/
       - topicgroup:
           label: Tutorials on cloud hardware security module
@@ -124,11 +124,15 @@ toc:
           - tutorials/db2-pkcs11.md
           links:
           - link:
-              label: "Tutorial: Integrate Enterprise HashiCorp Vault with IBM Cloud Hyper Protect Crypto Services"
+              label: "Integrate Enterprise HashiCorp Vault with IBM Cloud Hyper Protect Crypto Services"
               href: https://developer.ibm.com/tutorials/integrate-enterprise-vault-ibm-cloud-hyper-protect-crypto-services/
           - link:
-              label: "Tutorial: Using IBM Cloud Hyper Protect Crypto Services to offload NGINX TLS"
+              label: "Using IBM Cloud Hyper Protect Crypto Services to offload NGINX TLS"
               href: https://developer.ibm.com/components/ibmz/tutorials/use-hyper-protect-crypto-services-to-offload-nginx-tls/
+      - topicgroup:
+          label: Tutorials on Unified Key Orchestrator
+          topics:
+          - tutorials/uko-kp-satellite.md
 
   - navgroup:
       id: howto
@@ -281,6 +285,7 @@ toc:
           topics:
           - settings-sysdig-metrics.md
           - monitor-sysdig-metrics.md
+          
   - navgroup:
       id: reference
       topics:

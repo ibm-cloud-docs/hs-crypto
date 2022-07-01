@@ -27,7 +27,7 @@ completion-time: 30m
 {:step: data-tutorial-type='step'}
 
 
-# Tutorial: Creating and importing encryption keys
+# Creating and importing encryption keys
 {: #tutorial-import-keys}
 {: toc-content-type="tutorial"}
 {: toc-services="hs-crypto"}
