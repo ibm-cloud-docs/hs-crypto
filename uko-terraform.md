@@ -200,9 +200,10 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
 
 For more information about using Terraform to manage {{site.data.keyword.hscrypto}} instances with {{site.data.keyword.uko_full_notm}}, see the following Terraform documentation:
 
-- [Managing vaults](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/vault){: external}
-- [Managing keystores](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/keystore){: external}
-- [Managing key templates](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/key_template){: external}
-- [Managing keys](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/managed_key){: external}
+- [Managing keys](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs_managed_key){: external}
+- [Managing keystores](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs_keystore){: external}
+- [Managing key templates](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs_key_template){: external}
+- [Managing vaults](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs_vault){: external}
+
 
 

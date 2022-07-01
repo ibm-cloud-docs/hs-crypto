@@ -129,10 +129,6 @@ toc:
           - link:
               label: "Using IBM Cloud Hyper Protect Crypto Services to offload NGINX TLS"
               href: https://developer.ibm.com/components/ibmz/tutorials/use-hyper-protect-crypto-services-to-offload-nginx-tls/
-      - topicgroup:
-          label: Tutorials on Unified Key Orchestrator
-          topics:
-          - tutorials/uko-kp-satellite.md
 
   - navgroup:
       id: howto
@@ -285,7 +281,7 @@ toc:
           topics:
           - settings-sysdig-metrics.md
           - monitor-sysdig-metrics.md
-          
+
   - navgroup:
       id: reference
       topics:
@@ -326,7 +322,7 @@ toc:
               href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key
           - link:
               label: Managing keys with Terraform - Unified Key Orchestrator
-              href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/key_template
+              href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs_managed_key
       - regions.md
       - tke-paper.md
       - smart-card-considerations.md

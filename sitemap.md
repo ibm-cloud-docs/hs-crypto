@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-07-01"
 
 keywords: site map, doc structure, information architecture
 
@@ -717,27 +717,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Set up Db2 native encryption](/docs/hs-crypto?topic=hs-crypto-tutorial-db2-pkcs11#tutorial-db2-encrypt)
 
 * [Next steps](/docs/hs-crypto?topic=hs-crypto-tutorial-db2-pkcs11#tutorial-db2-summary)
-
-
-## Tutorials on Unified Key Orchestrator
-{: #sitemap_tutorials_on_unified_key_orchestrator}
-
-
-[Using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} to manage keys in {{site.data.keyword.keymanagementserviceshort}} on Satellite](/docs/hs-crypto?topic=hs-crypto-tutorial-uko-satellite#tutorial-uko-satellite)
-
-* [Objectives](/docs/hs-crypto?topic=hs-crypto-tutorial-uko-satellite#tutorial-uko-satellite-objectives)
-
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-tutorial-uko-satellite#tutorial-uko-satellite-prerequisites)
-
-* [Task flow](/docs/hs-crypto?topic=hs-crypto-tutorial-uko-satellite#tutorial-uko-satellite-steps)
-
-* [Deploy {{site.data.keyword.keymanagementserviceshort}} on Satellite](/docs/hs-crypto?topic=hs-crypto-tutorial-uko-satellite#tutorial-uko-satellite-deploy-kp)
-
-* [Connect {{site.data.keyword.uko_full_notm}} to {{site.data.keyword.keymanagementserviceshort}} on Satellite](/docs/hs-crypto?topic=hs-crypto-tutorial-uko-satellite#tutorial-uko-satellite-connect-uko-kp)
-
-* [Manage {{site.data.keyword.keymanagementserviceshort}} keys through {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-tutorial-uko-satellite#tutorial-uko-satellite-manage-kp-keys)
-
-* [Next steps](/docs/hs-crypto?topic=hs-crypto-tutorial-uko-satellite#tutorial-uko-satellite-next-step)
 
 
 ## Provisioning service instances
@@ -1757,7 +1736,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Managing keys with Terraform - Key management service](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: external}
 
-[Managing keys with Terraform - Unified Key Orchestrator](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/key_template){: external}
+[Managing keys with Terraform - Unified Key Orchestrator](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs_managed_key){: external}
 
 
 ## Regions and locations
