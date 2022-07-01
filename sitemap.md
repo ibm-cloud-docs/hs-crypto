@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-07-01"
 
 keywords: site map, doc structure, information architecture
 
@@ -639,7 +639,7 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_tutorials_on_key_management_service}
 
 
-[Tutorial: Creating and importing encryption keys](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-keys)
+[Creating and importing encryption keys](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-keys)
 
 * [Objectives](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-objectives)
 
@@ -665,7 +665,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Next steps](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-next-steps)
 
-[Tutorial: Configuring KMIP in {{site.data.keyword.hscrypto}} for key management and distribution](/docs/hs-crypto?topic=hs-crypto-tutorial-kmip-vmware#tutorial-kmip-vmware)
+[Configuring KMIP in {{site.data.keyword.hscrypto}} for key management and distribution](/docs/hs-crypto?topic=hs-crypto-tutorial-kmip-vmware#tutorial-kmip-vmware)
 
 * [Objectives](/docs/hs-crypto?topic=hs-crypto-tutorial-kmip-vmware#tutorial-kmip-objectives)
 
@@ -686,7 +686,7 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_tutorials_on_cloud_hardware_security_module}
 
 
-[Tutorial: Using {{site.data.keyword.hscrypto}} PKCS #11 for Oracle Transparent Database Encryption](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11#tutorial-tde-pkcs11)
+[Using {{site.data.keyword.hscrypto}} PKCS #11 for Oracle Transparent Database Encryption](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11#tutorial-tde-pkcs11)
 
 * [Objectives](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11#tutorial-tde-objectives)
 
@@ -702,7 +702,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Next steps](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11#tutorial-tde-summary)
 
-[Tutorial: Using {{site.data.keyword.hscrypto}} PKCS #11 for IBM Db2 native encryption](/docs/hs-crypto?topic=hs-crypto-tutorial-db2-pkcs11#tutorial-db2-pkcs11)
+[Using {{site.data.keyword.hscrypto}} PKCS #11 for IBM Db2 native encryption](/docs/hs-crypto?topic=hs-crypto-tutorial-db2-pkcs11#tutorial-db2-pkcs11)
 
 * [Objectives](/docs/hs-crypto?topic=hs-crypto-tutorial-db2-pkcs11#tutorial-db2-objectives)
 
@@ -1736,7 +1736,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Managing keys with Terraform - Key management service](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: external}
 
-[Managing keys with Terraform - Unified Key Orchestrator](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/key_template){: external}
+[Managing keys with Terraform - Unified Key Orchestrator](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs_managed_key){: external}
 
 
 ## Regions and locations

@@ -26,7 +26,7 @@ completion-time: 2h
 {:important: .important}
 {:step: data-tutorial-type='step'}
 
-# Tutorial: Using {{site.data.keyword.hscrypto}} PKCS #11 for IBM Db2 native encryption
+# Using {{site.data.keyword.hscrypto}} PKCS #11 for IBM Db2 native encryption
 {: #tutorial-db2-pkcs11}
 {: toc-content-type="tutorial"}
 {: toc-services="hs-crypto"}
