@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-07-04"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, maintenance
 
@@ -40,6 +40,6 @@ If one available zone that contains your provisioned service instance goes down,
 {: #faq-hpcs-support}
 {: faq}
 
-If you have technical questions about {{site.data.keyword.hscrypto}}, post your question on [Stack Overflow](https://stackoverflow.com/questions/tagged/hyper-protect-crypto){: external} and tag your question with `ibm-cloud` and `hyper-protect-crypto`. For questions about the service and getting started instructions, use the [IBM Developer Answers](https://developer.ibm.com/answers/topics/hyper-protect-crypto/){: external}. Include the `ibm-cloud` and `hyper-protect-crypto` tags.
+If you have technical questions about {{site.data.keyword.hscrypto}}, post your question on [Stack Overflow](https://stackoverflow.com/questions/tagged/hyper-protect-crypto){: external} and tag your question with `ibm-cloud` and `hyper-protect-crypto`.
 
 For more information about opening an IBM support ticket, or about support levels and ticket severities, see [Using the Support Center](/docs/get-support?topic=get-support-using-avatar).
