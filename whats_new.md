@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-06-08"
+lastupdated: "2022-07-15"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,6 +27,13 @@ content-type: release-note
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+## 15 July 2022
+{: #hs-crypto-15july2022}
+{: release-note}
+
+Added: Viewing associated resources with managed keys
+:  You can now view other {{site.data.keyword.cloud_notm}} resources that are protected by managed keys in your {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance. For more information, see [Viewing resources associated with managed keys](/docs/hs-crypto?topic=hs-crypto-uko-view-associated-resource).
 
 ## 24 June 2022
 {: #hs-crypto-24june2022}
