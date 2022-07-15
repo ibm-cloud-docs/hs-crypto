@@ -1322,6 +1322,14 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-install-key-keystores#install-key-keystores-next)
 
+[Viewing resources associated with managed keys](/docs/hs-crypto?topic=hs-crypto-uko-view-associated-resource#uko-view-associated-resource)
+
+* [Viewing associated resources with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-uko-view-associated-resource#uko-view-associated-resource-ui)
+
+* [Viewing associated resources with the API](/docs/hs-crypto?topic=hs-crypto-uko-view-associated-resource#uko-view-associated-resource-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-view-associated-resource#uko-view-associated-resource-next)
+
 [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys#delete-managed-keys)
 
 * [Deleting managed keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys#delete-managed-keys-ui)

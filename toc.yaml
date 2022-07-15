@@ -237,6 +237,7 @@ toc:
               - search-key-list.md
               - edit-kms-keys.md
               - install-key-keystores.md
+              - uko-view-associate-resource.md
               - delete-managed-keys.md
           - topicgroup:
               label: Managing keystores
