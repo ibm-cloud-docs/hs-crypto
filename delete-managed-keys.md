@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-07-15"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -50,7 +50,7 @@ Follow these steps to complete the process:
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. If the managed key that you want to delete is in _Active_ state, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Deactivated** to deactivate the key first.
 
-   When you change the _Active_ key to _Deactivated_ state, the key is uninstalled from all the target keystores, and not accessible to all associated resources and their data. However, you can still reactivate the key so that it is accessible to the resources again.
+   When you change the _Active_ key to _Deactivated_ state, the key is uninstalled from all the target keystores, and not accessible to all associated resources and their data. Make sure that you open the confirmation tile to check all the associated resources before you continue. However, you can still reactivate the key so that it is accessible to the resources again.
     {: note}
 
 4. To destroy a _Pre-active_ or _Deactivated_ key, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Destroyed**.
