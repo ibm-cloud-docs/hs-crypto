@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-07-15"
+lastupdated: "2022-07-18"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,7 +27,7 @@ In this change log you can learn about the latest changes, improvements, and upd
 ## API versioning
 {: #uko-api-versioning}
 
-The latest released version is `4.3.0`. The {{site.data.keyword.uko_full_notm}} API version is aligned with the IBM Enterprise Key Management Foundation - Web Edition (EKMF Web) API version.  
+The latest released version is `4.4.2`. The {{site.data.keyword.uko_full_notm}} API version is aligned with the IBM Enterprise Key Management Foundation - Web Edition (EKMF Web) API version.  
 
 ## July 2022
 {: #uko-api-july-2022}
