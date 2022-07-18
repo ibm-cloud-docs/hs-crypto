@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-07-15"
+lastupdated: "2022-07-18"
 
 keywords: associate resource, key associated resource
 
@@ -46,7 +46,7 @@ To view the associated resources by using the console, complete the following st
     |       Column	     |                         Description                       |
     |--------------------|-----------------------------------------------------------|
     | Resource name      | The name of the cloud resource that is associated with the key.|
-    | Service name       | The name of the cloud service, such as {{site.data.keyword.cos_full_notm}}. |
+    | Service name       | The name of the cloud service, such as `cloud-object-storage` for {{site.data.keyword.cos_full_notm}}. |
     | Retention policy   | Indicates whether the cloud resource can be erased. If the value is `Enabled`, the cloud resource cannot be erased, and the key that is associated with the cloud resource cannot be deleted. If the value is `Disabled`, the cloud resource can be erased. You can delete the key that is associated with the cloud resource if needed. |
     {: caption="Table 1. Associated resources properties" caption-side="bottom"}
 
