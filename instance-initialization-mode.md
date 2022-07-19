@@ -93,11 +93,11 @@ When you use smart cards, consider the following recommendations:
 
         A backup certificate authority smart card can be created by using the Smart Card Utility Program. Select **CA Smart Card** > **Backup CA smart card** from the menu, and follow the prompts.
 
-    - Create four EP11 smart cards to store administrator signature keys. Generate administrator signature keys separately on two EP11 smart cards and copy them to other two backup smart cards.
+    - Create two EP11 smart cards and two backup EP11 smart cards to store two administrator signature keys. Generate administrator signature keys separately on two EP11 smart cards and copy them to other two backup smart cards.
 
         The contents of an EP11 smart card can be copied to another EP11 smart card that was created in the same smart card zone by using the Trusted Key Entry application. On the **Smart card** tab, click **Copy smart card**, and follow the prompts.
 
-    - Create four or six EP11 smart cards to store master key parts. Generate EP11 master key parts separately on two or three smart cards, depending on the number of key parts when you load your master key. Copy each key part value to a backup EP11 smart card.
+    - Create two EP11 smart cards and two backup EP11 smart cards to store two master key parts, or create three EP11 smart cards and three backup EP11 smart cards to store three master key parts. Generate EP11 master key parts separately on two or three smart cards, depending on the number of key parts when you load your master key. Copy each key part value to a backup EP11 smart card.
 
     For how to calculate the number of smart cards needed, see [FAQ: Are there any recommendations on how to set up smart cards?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup).
 
