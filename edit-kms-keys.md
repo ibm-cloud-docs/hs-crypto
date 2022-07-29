@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-10"
+lastupdated: "2022-07-29"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -46,7 +46,7 @@ To edit the details of a managed key by using the console, complete the followin
     
     |       Property	     |                         Description                       |
     |----------------------|-----------------------------------------------------------|
-    | Key name             | A unique, human-readable name for easy identification of your key. Note that when you change the name of a managed key, the key is to be renamed in all target keystores that it is installed in.  \n  \n Depending on the keystore type, name your key with the following rules:  \n - IBM KMS: 2-50 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. \n - IBM {{site.data.keyword.keymanagementserviceshort}}: 2-50 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. \n - AWS Key Management Service: 1-255 characters in length. The characters can be letters (case-sensitive), digits (0-9), or symbols (/_-). However, do not start the name with `AWS/`. \n - Azure Key Vault: 1-24 characters in length. The characters can be letters (case-sensitive), digits (0-9), or hyphens (-).|
+    | Key name             | A unique, human-readable name for easy identification of your key. Note that when you change the name of a managed key, the key is to be renamed in all target keystores where it is installed.  \n  \n Depending on the keystore type, name your key with the following rules:  \n - IBM KMS: 2-50 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. \n - IBM {{site.data.keyword.keymanagementserviceshort}}: 2-50 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. \n - AWS Key Management Service: 1-255 characters in length. The characters can be letters (case-sensitive), digits (0-9), or symbols (/_-). However, do not start the name with `AWS/`. \n - Azure Key Vault: 1-24 characters in length. The characters can be letters (case-sensitive), digits (0-9), or hyphens (-).|
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | State                | Key states include _Pre-active_, _Active_, _Deactivated_, and _Destroyed_. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states) |
     | Activation date      | Plan a date to activate the key. No automatic state change is triggered. |
@@ -56,7 +56,8 @@ To edit the details of a managed key by using the console, complete the followin
     You can edit one property card at a time. To make changes to another property card, save your changes first.
     {: note}
 
-5. In the **Target keystores** card, you can also add or remove the target keystores that the key is installed in by clicking **Set target keystores**. You can only use a key for encryption for decryption after it is installed in at least one target keystore.
+5. In the **Target keystores** card, you can add or remove the target keystores where the key is installed by clicking **Set target keystores**. You can only use a key for encryption for decryption after it is installed in at least one target keystore.
+    
 6. Under **Advanced properties**, click **Edit** to update or add new key tags to the key. Key tags are used as identifications of a key.
 7. When you finish making changes, click **Save** to save the changes.
 
