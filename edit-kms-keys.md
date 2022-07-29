@@ -56,7 +56,7 @@ To edit the details of a managed key by using the console, complete the followin
     You can edit one property card at a time. To make changes to another property card, save your changes first.
     {: note}
 
-5. In the **Target keystores** card, you can add or remove the target keystores where the key is installed by clicking **Set target keystores**. You can only use a key for encryption for decryption after it is installed in at least one target keystore.
+5. In the **Target keystores** card, you can add or remove the target keystores where the key is installed by clicking **Set target keystores**. You can use a key only for encryption and decryption after it is installed in at least one target keystore.
     
 6. Under **Advanced properties**, click **Edit** to update or add new key tags to the key. Key tags are used as identifications of a key.
 7. When you finish making changes, click **Save** to save the changes.
