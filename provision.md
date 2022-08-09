@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-09"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -38,7 +38,7 @@ You can automate the instance creation by using Terraform. For more information,
 
 * [A standard plan with the Keep Your Own Key capability](/docs/hs-crypto?topic=hs-crypto-overview)
 * [A extended plan with both the Keep Your Own Key and {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-overview)
-    For the pricing plan with {{site.data.keyword.uko_full_notm}}, recovering your service instance through failover crypto units from another region is not currently supported.
+
 
 [Pricing samples](/docs/hs-crypto?topic=hs-crypto-faq-pricing) for these two plans are also available for your reference.
 
@@ -225,6 +225,16 @@ To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyw
     - Under **Tags** (Optional), add tags to organize your resources. If your tags are billing related, consider writing tags as `key: value` pairs to help group-related tags, such as `costctr:124`. For more information about tags, see [Working with tags](/docs/account?topic=account-tag).
     - Under **Access management tags** (Optional), add tags to resources to help organize access control relationships in the `project:analysis` format. For more information, see [Controlling access to resources by using tags](/docs/account?topic=account-access-tags-tutorial).
     - Under **Number of crypto units**, select the number of [crypto units](#x9860404){: term} that meets your performance needs. At least two crypto units are to be enabled for high availability. These crypto units are distributed among different supported availability zones in the selected region.
+    - Under **Number of cross-region failover crypto units**, select whether to enable failover crypto units that are used for an automatic restoration in case of a regional disaster.
+
+      If you enable failover crypto units, set the number of failover crypto units equal to or less than the number of operational crypto units. However, to meet high availability, you need to specify at least two failover crypto units. Each failover crypto unit [is also charged](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Failover crypto units are now available in Dallas (`us-south`) and Washington DC (`us-east`), so if you create your instance in other regions such as Frankfurt (`eu-de`), this option is automatically disabled.
+
+      After you provision the service instance, you can still [enable or add failover crypto units](/docs/hs-crypto?topic=hs-crypto-enable-add-failover).
+      {: tip}
+
+    - **Failover region** shows the region where the failover crypto units are located.
+
+      Available failover regions now are Dallas (`us-south`) and Washington DC (`us-east`). If you create your instance in either of the two regions, the failover region is automatically set to the other region.
  
 6. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 

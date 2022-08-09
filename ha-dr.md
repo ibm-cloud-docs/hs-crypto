@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-05-31"
+lastupdated: "2022-08-09"
 
 keywords: disaster recovery, high availability, ha, dr, recoverablity, availability, failover
 
@@ -49,9 +49,6 @@ Multiple [crypto units](#x9860404){: term} in a service instance are automatical
 
 ## Cross-region disaster recovery
 {: #cross-region-disaster-recovery}
-
-Currently, the option for cross-region recovery through failover crypto units for {{site.data.keyword.uko_full_notm}} managed keys and keystores is not available yet.
-{: note}
 
 IBM also performs cross-region backup for your key resources. Your data is automatically backed up in another supported region daily. Depending on where you create your instance and your requirements for recovery time, you can restore your data in case of a regional disaster with the following options:
 - If you create your instance in Dallas (`us-south`) or Washington DC (`us-east`) and you enable failover crypto units, the failover crypto units back up the operational crypto units and keystores in another region. When a regional disaster occurs, your data is restored automatically with the failover crypto units to reduce the downtime and data loss. For more information about how to use failover crypto units to restore data, see [Restoring your data by using failover crypto units](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-failover-crypto-units).
