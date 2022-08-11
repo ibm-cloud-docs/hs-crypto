@@ -123,7 +123,7 @@ As IBM is starting to provide a new set of capabilities to support your workload
 
 Some code samples for [using GREP11 with Golang](https://github.com/IBM-Cloud/hpcs-grep11-go) and [JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js){: external} are available for you to try out.
 
-![EP11 HSM](/images/pkcs11.svg "Cryptographic operations with Enterprise PKCS #11"){: caption="Figure 7. Cryptographic operations with Enterprise PKCS #11" caption-side="bottom"}
+![EP11 HSM](/images/PKCS11.svg "Cryptographic operations with Enterprise PKCS #11"){: caption="Figure 7. Cryptographic operations with Enterprise PKCS #11" caption-side="bottom"}
 
 ## What's next
 {: #use-case-next}
