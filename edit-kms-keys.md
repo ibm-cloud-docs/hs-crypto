@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-01"
+lastupdated: "2022-08-16"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -39,7 +39,7 @@ To edit the details of a managed key by using the console, complete the followin
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
-3. Click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key that you want to edit, and choose **Show details**.
+3. Click the Actions icon  ![Actions icon](../icons/action-menu-icon.svg "Actions")  on the key that you want to edit, and choose **Show details**.
 4. In each property card under **Key properties**, click **Edit** to update the key properties. 
 
     You can update the general properties, lifecycle properties, or active period of the key. Or, you can also view the key material properties, including algorithm, length, and key check value. The following are a few properties that you can edit.

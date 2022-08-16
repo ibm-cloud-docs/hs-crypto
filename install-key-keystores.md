@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-01"
+lastupdated: "2022-08-16"
 
 keywords: Unified Key Orchestrator, install keys, activate key, key management, kms keys
 
@@ -39,7 +39,7 @@ To install or uninstall a managed key in target keystores by using the console, 
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
-3. Click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key that you want to edit, and choose **Show details**.
+3. Click the Actions icon  ![Actions icon](../icons/action-menu-icon.svg "Actions")  on the key that you want to edit, and choose **Show details**.
 4. In the **Target keystores** card, click **Set target keystores** to see all possible keystores that you can select for the key.
 5. Select one or multiple target keystores that you want to install the key in. Or, you can clear the checkbox to uninstall the key from a keystore.
    
