@@ -128,7 +128,7 @@ toc:
               href: https://developer.ibm.com/tutorials/integrate-enterprise-vault-ibm-cloud-hyper-protect-crypto-services/
           - link:
               label: "Using IBM Cloud Hyper Protect Crypto Services to offload NGINX TLS"
-              href: https://developer.ibm.com/components/ibmz/tutorials/use-hyper-protect-crypto-services-to-offload-nginx-tls/
+              href: https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-offload-nginx-tls/
 
   - navgroup:
       id: howto
