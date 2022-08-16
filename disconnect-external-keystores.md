@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-16"
 
 keywords: Unified Key Orchestrator, UKO keystore, disconnect keystore, external keystore, KMS keystore
 
@@ -38,9 +38,6 @@ If you want to disconnect from an external keystore, delete all installed keys f
 ## Disconnecting from external keystores with the {{site.data.keyword.cloud_notm}} console
 {: #disconnect-external-keystores-ui}
 {: ui}
-
-When you disconnect from an external keystore, all keys are to be uninstalled from the keystore and inaccessible to the {{site.data.keyword.cloud_notm}} associated resources. This action is permanent and cannot be undone.
-{: important}
 
 To disconnect from an external keystore by using the console, complete the following steps:
 
