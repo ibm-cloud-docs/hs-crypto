@@ -39,9 +39,6 @@ If you want to disconnect from an external keystore, delete all installed keys f
 {: #disconnect-external-keystores-ui}
 {: ui}
 
-When you disconnect from an external keystore, all keys are to be uninstalled from the keystore and inaccessible to the {{site.data.keyword.cloud_notm}} associated resources. This action is permanent and cannot be undone.
-{: important}
-
 To disconnect from an external keystore by using the console, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.

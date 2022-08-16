@@ -37,9 +37,6 @@ To delete an internal keystore, [delete all installed keys](/docs/hs-crypto?topi
 {: #delete-internal-keystores-ui}
 {: ui}
 
-When you delete an internal keystore, all keys are to be uninstalled from the keystore and inaccessible to the {{site.data.keyword.cloud_notm}} associated resources. The deletion is permanent and cannot be undone.
-{: important}
-
 To delete an internal keystore by using the console, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
