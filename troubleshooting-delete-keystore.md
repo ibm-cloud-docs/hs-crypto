@@ -44,28 +44,7 @@ The service was not able to delete keystore `<keystore_name>` because it still c
 {: screen}
 
 ```
-{
-    "metadata":
-    {
-        "collectionType":"application/vnd.ibm.kms.error+json",
-        "collectionTotal":1
-    },
-    "resources":
-    [
-        {
-            "errorMsg":"Conflict: Key ring could not be deleted: Please see reasons for more details (KEY_RING_NOT_EMPTY_ERR)",
-            "reasons":
-            [
-                {
-                    "code":"KEY_RING_NOT_EMPTY_ERR",
-                    "message":"The specified key ring contains at least one key (in any state)",
-                    "status":409,
-                    "moreInfo":"https://cloud.ibm.com/apidocs/key-protect"
-                }
-            ]
-        }
-    ]
-}
+Conflict: Key ring could not be deleted: Please see reasons for more details.
 ```
 {: screen}
 
