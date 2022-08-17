@@ -1895,7 +1895,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Can I use {{site.data.keyword.hscrypto}} for applications hosted in other cloud service providers such as AWS, Azure, and GCP?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-hpcs-other-cloud-vendor)
 
-* [How can I know whether the {{site.data.keyword.cloud_notm}} services that I adopt can integrate with {{site.data.keyword.hscrypto}} for key encryption? How can I perform service-to-service authorization?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#how-can-i-know-whether-the--services-that-i-adopt-can-integrate-with-{{sitedatakeywordhscrypto}}-for-key-encryption?-how-can-i-perform-service-to-service-authorization?)
+* [How can I know whether the {{site.data.keyword.cloud_notm}} services that I adopt can integrate with {{site.data.keyword.hscrypto}} for key encryption?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#how-can-i-know-whether-the--services-that-i-adopt-can-integrate-with-{{sitedatakeywordhscrypto}}-for-key-encryption?)
 
 [FAQs: {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-performance-capacity)
 
