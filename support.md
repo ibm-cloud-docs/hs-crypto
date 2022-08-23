@@ -36,5 +36,4 @@ If you have problems or questions when you're using {{site.data.keyword.hscrypto
 {: shortdesc}
 
 - You can check whether {{site.data.keyword.cloud_notm}} is available by going to the [status page](https://cloud.ibm.com/status?selected=status){: external}.
-- You can review the [Stack Overflow](https://stackoverflow.com/questions){: external} forum to see whether other users ran into the same problem. When you're using Stack Overflow to ask a question, tag your question with **ibm-cloud** and **hyper-protect-crypto**, so that it can be easily seen by the {{site.data.keyword.cloud_notm}} development teams.
 - You can also open a support ticket on the IBM Support Center. For more information about support tickets, support levels, and ticket severities, see [Using the Support Center](/docs/get-support?topic=get-support-using-avatar){: external}.
