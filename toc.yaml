@@ -383,8 +383,7 @@ toc:
           - troubleshooting-list-crypto-units.md
       - topicgroup:
           label: Troubleshooting Unified Key Orchestrator
-          topics:<azure-key>
-          - troubleshooting-import-azure-key.md</azure-key>
+          topics:
           - troubleshooting-create-internal-keystores.md
           - troubleshooting-create-vault.md
           - troubleshooting-delete-vault.md
