@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-07-19"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -54,10 +54,12 @@ Complete the following steps to order smart cards:
     For added security, the two or three master key parts that are used to configure a service instance can be generated on separate EP11 smart cards that are assigned to different people. The signature key that is used to sign commands to the crypto module can be generated on a separate EP11 smart card. Three or four EP11 smart cards are then needed to configure a service instance.
     {: tip}
 
-    It is also suggested to [create backup copies of all used smart cards](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup) and to save the backup smart cards in a secure place. For maximum security, 10 smart cards are needed, which includes backup smart cards:
+    It is also suggested to [create backup copies of all used smart cards](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup) and to save the backup smart cards in a secure place. For maximum security, 12 smart cards are needed, which includes backup smart cards:
 
     * Two certificate authority smart cards
-    * Eight EP11 smart cards
+    * Ten EP11 smart cards
+
+    For how to calculate the number of smart cards needed, see [FAQ: Are there any recommendations on how to set up smart cards?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup).
 
 2.  Email IBM at `ZaaS.Client.Acceleration@ibm.com` and provide the following information:
 

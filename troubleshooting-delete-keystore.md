@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-17"
 
 keywords: troubleshoot, problems, known issues, can't delete keystores
 
@@ -35,11 +35,16 @@ subcollection: hs-crypto
 You are not able to delete the internal KMS keystore through either UI or API.
 {: shortdesc}
 
-You have destroyed all keys in the KMS keystore. However, when you try to delete the keystore, you still receive the following error message: 
+You have destroyed all keys in the KMS keystore. However, when you try to delete the keystore, you still receive an error similar to one of the following: 
 {: tsSymptoms}
 
 ```
 The service was not able to delete keystore `<keystore_name>` because it still contains some keys.
+```
+{: screen}
+
+```
+Conflict: Key ring could not be deleted: Please see reasons for more details.
 ```
 {: screen}
 

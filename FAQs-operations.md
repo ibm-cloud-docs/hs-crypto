@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-17"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning, operations
 
@@ -64,11 +64,19 @@ Yes, if the proxy is configured for HTTPS port 443. You can add an entry to the 
 {: faq}
 {: support}
 
-It is suggested that each master key part is created on a separate EP11 smart card and is assigned to a different person. Backup copies of all smart cards need to be created and stored in a safe place. It is suggested that you order 8 or 10 smart cards and initialize them this way:
+It is suggested that each master key part is created on a separate EP11 smart card and is assigned to a different person. Backup copies of all smart cards need to be created and stored in a safe place. It is suggested that you order 10 or 12 smart cards and initialize them this way:
 
-- Create a certificate authority smart card and a backup certificate authority smart card.
-- Create two EP11 smart cards to hold an administrator signature key. Generate the administrator signature key on one EP11 smart card and copy it to the other.
-- Create four or six EP11 smart cards to hold master key parts. Generate an EP11 master key part on 2 or 3 of the smart cards, depending on whether you want to use 2 or 3 key parts when you load your master key. Copy each key part value to a backup EP11 smart card.
+- Create a certificate authority (CA) smart card and a backup certificate authority smart card.
+- Create two EP11 smart cards and two backup EP11 smart cards to store two administrator signature keys. Generate administrator signature keys separately on two EP11 smart cards and copy them to other two backup smart cards.
+- Create two EP11 smart cards and two backup EP11 smart cards to store two master key parts, or create three EP11 smart cards and three backup EP11 smart cards to store three master key parts. Generate EP11 master key parts separately on two or three smart cards, depending on the number of key parts when you load your master key. Copy each key part value to a backup EP11 smart card.
+
+For calculating the number of smart cards needed, you can refer to the following formulas:
+
+| Assumptions | Formula       |
+| ----------- | ------------- |
+| - The number of backups per smart card: x \n - The number of administrators (1 to 8): y \n - The number of master key parts (2 or 3): z \n - Store administrator signature keys separately from master key parts | 1 (CA card) + x (CA card backups) + y (administrator signature key EP11 cards)+ y * x (administrator signature key EP11 card backups) + z (master key part EP11 cards)+ z * x (master key part EP11 card backups) = (1+x) * (1+y+z) |
+| - The number of backups per smart card: x \n - The number of administrators (1 to 8): y \n - The number of master key parts (2 or 3): z \n - Store an administrator signature key and a master key part on the same EP11 smart card \n - The number of master key parts equals to the number of administrators (y = z)  | 1 (CA card) + x (CA card backups) + z (administrator signature key and master key part EP11 cards)+ z * x (administrator signature key and master key part EP11 card backups) = (1+x) * (1+z) |
+{: caption="Table 1. Formulas for calculating smart cards number" caption-side="bottom"}
 
 A backup certificate authority smart card can be created by using the Smart Card Utility Program. Select **CA Smart Card** > **Backup CA smart card** from the menu, and follow the prompts.
 
@@ -127,4 +135,10 @@ Yes. {{site.data.keyword.hscrypto}} can be used with {{site.data.keyword.keymana
 {: #faq-hpcs-other-cloud-vendor}
 {: faq}
 
-Yes. An application hosted in other cloud service providers can call the public APIs for Keep You Own Key (KYOK) or PKCS #11 with an appropriate network connection.
+Yes. {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} provides multicloud key management capabilities. See [Introducing {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-introduce-uko) for details.
+
+## How can I know whether the {{site.data.keyword.cloud_notm}} services that I adopt can integrate with {{site.data.keyword.hscrypto}} for key encryption? 
+
+You can find a list of {{site.data.keyword.cloud_notm}} services that can integrate with {{site.data.keyword.hscrypto}} in [Integrating IBM Cloud services with Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
+
+You can also find the detailed instructions on how to perform service-level arthorization in the **Integration instruction** links that are included in the topic.

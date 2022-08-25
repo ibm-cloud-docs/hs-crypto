@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-16"
 
-keywords: Unified Key Orchestrator, install keys, key management, kms keys
+keywords: Unified Key Orchestrator, install keys, activate key, key management, kms keys
 
 subcollection: hs-crypto
 
@@ -39,14 +39,13 @@ To install or uninstall a managed key in target keystores by using the console, 
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
-3. Click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key that you want to edit, and choose **Show details**.
-4. Click **Set target keystores** to see all possible keystores that you can select for the key.
+3. Click the Actions icon  ![Actions icon](../icons/action-menu-icon.svg "Actions")  on the key that you want to edit, and choose **Show details**.
+4. In the **Target keystores** card, click **Set target keystores** to see all possible keystores that you can select for the key.
 5. Select one or multiple target keystores that you want to install the key in. Or, you can clear the checkbox to uninstall the key from a keystore.
    
-   Installing a key in multiple keystores enables redundancy. If you want to install the key to a new keystore, click **Add keystore**. For more instructions, see [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
+    Installing a key in multiple keystores enables redundancy. If you want to install the key in a new keystore, click **Add keystore**. For more instructions, see [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
    
 6. Click **Save** to save the changes.
-
 
 
 ## Setting target keystores for existing keys with the API

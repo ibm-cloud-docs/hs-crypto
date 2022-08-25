@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-08"
 
 keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases
 
@@ -31,7 +31,7 @@ subcollection: hs-crypto
 ## Pervasively protecting data at rest in the cloud
 {: #data-at-rest-encryption}
 
-With the integration in the {{site.data.keyword.cloud_notm}} Security Architecture, you can use {{site.data.keyword.hscrypto}} encrypt your data at rest for cloud data and storage services in the highest security level with your own keys. The service uses the same key-provider API as {{site.data.keyword.keymanagementserviceshort}} to provide a consistent envelope encryption and file system encryption approach to adopting {{site.data.keyword.cloud_notm}} services.
+With the integration in the {{site.data.keyword.cloud_notm}} Security Architecture, you can use {{site.data.keyword.hscrypto}} to encrypt your data at rest for cloud data and storage services in the highest security level with your own keys. The service uses the same key-provider API as {{site.data.keyword.keymanagementserviceshort}} to provide a consistent envelope encryption and file system encryption approach to adopting {{site.data.keyword.cloud_notm}} services.
 
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} supports Keep Your Own Key (KYOK) so that you have more control and authority over your data with encryption keys that you can bring, control, and manage. At the same time, you still maintain the control over the HSM that the encryption key is located in. With {{site.data.keyword.hscrypto}}, you fully leverage the proven technology that is co-developed and operated by large enterprises for managing their most sensitive data.
 
@@ -123,7 +123,7 @@ As IBM is starting to provide a new set of capabilities to support your workload
 
 Some code samples for [using GREP11 with Golang](https://github.com/IBM-Cloud/hpcs-grep11-go) and [JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js){: external} are available for you to try out.
 
-![EP11 HSM](/images/pkcs11.svg "Cryptographic operations with Enterprise PKCS #11"){: caption="Figure 7. Cryptographic operations with Enterprise PKCS #11" caption-side="bottom"}
+![EP11 HSM](/images/PKCS11.svg "Cryptographic operations with Enterprise PKCS #11"){: caption="Figure 7. Cryptographic operations with Enterprise PKCS #11" caption-side="bottom"}
 
 ## What's next
 {: #use-case-next}

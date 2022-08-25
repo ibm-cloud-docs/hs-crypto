@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-28"
+lastupdated: "2022-08-25"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -25,7 +25,7 @@ subcollection: hs-crypto
 {:terraform: .ph data-hd-interface="terraform"}
 
 
-# Creating and installing managed keys
+# Creating managed keys
 {: #create-managed-keys}
 
 You can use {{site.data.keyword.uko_full_notm}} to create managed keys with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
@@ -40,7 +40,7 @@ Before you create a managed key, keep in mind the following considerations:
 - Installing a managed key in multiple keystores enables redundancy.
 - To protect your privacy, do not store your personal data as metadata for your managed key.
 
-## Creating and installing managed keys with the {{site.data.keyword.cloud_notm}} console
+## Creating managed keys with the {{site.data.keyword.cloud_notm}} console
 {: #create-managed-keys-ui}
 {: ui}
 
@@ -53,7 +53,12 @@ To create a managed key by using the console, complete the following steps:
    
    If you want to assign the key to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults). 
 
-5. Under **General**, select **IBM KMS**, **IBM {{site.data.keyword.keymanagementserviceshort}}**, **AWS Key Management Service**, or **Azure Key Vault**, depending on which type of keystore you want to install the key in. And then, click **Next**.
+5. Under **General**, select one of the following keystore types depending on which type of keystore you want to create the key in. And then, click **Next**. 
+
+    - **AWS Key Management Service**: Create a key to be used and stored in an AWS Key Management Service instance.
+    - **IBM Cloud KMS**: Create a key to be used and stored in an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keystore.
+    - **IBM {{site.data.keyword.keymanagementserviceshort}}**: Create a key to be used and stored in an IBM {{site.data.keyword.keymanagementserviceshort}} key ring.
+    - **Azure Key Vault**: Create a key to be used and stored in an Azure Key Vault.
    
    After a keystore type is selected, you can install the key to keystores of this type only. If you select **IBM KMS**, the created key is a root key that can be used for [envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption).
    {: note}
@@ -83,7 +88,7 @@ You have successfully created a managed key.
 
 
 
-## Creating and installing managed keys with the API
+## Creating managed keys with the API
 {: #create-managed-keys-api}
 {: api}
 
