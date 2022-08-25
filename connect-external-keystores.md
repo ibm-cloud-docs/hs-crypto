@@ -103,10 +103,10 @@ To connect to an external keystore by using the console, complete the following 
 
 5. Under **Keystore type**, select one of the following types and click **Next**:
 
-    - **AWS keystore**
-    - **Azure Key Vault (Premium)**
-    - **{{site.data.keyword.keymanagementserviceshort}}**
-    - **{{site.data.keyword.cloud_notm}} KMS keystore in another instance**
+    - **AWS keystore**: Create a keystore that can store AWS KMS keys.
+    - **Azure Key Vault (Premium)**: Create a keystore that can store Azure Key Vault keys.
+    - **{{site.data.keyword.keymanagementserviceshort}}**: Create a keystore that can store {{site.data.keyword.keymanagementserviceshort}} keys.
+    - **{{site.data.keyword.cloud_notm}} KMS keystore in another instance**: Create a keystore that can store KMS keys in another {{site.data.keyword.hscrypto}} instance.
 
 6. Under **Keystore properties**, specify the details of based on the keystore type that you want to connect to.
 
