@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-10"
+lastupdated: "2022-08-25"
 
 keywords: Unified Key Orchestrator, key management, UKO keystore, edit keystore, external keystore, KMS keystore
 
@@ -45,6 +45,19 @@ To edit the connection to an external keystore by using the console, complete th
 2. Click **Target keystores** from the navigation to view all the available keystores.
 3. Click the external keystore that you want to edit. The Details side panel is displayed.
 4. Click **Edit** in each property card to update keystore properties.
+
+    |           Property	        |                         Description                       |
+    |-----------------------------|-----------------------------------------------------------|
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0-9). The rest can also be symbols (.-_) or spaces. |
+    | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
+    | Region on AWS               | The geographical location where the AWS keystore is located in.    |
+    | Access key ID on AWS        | All requests to AWS KMS must be signed by using an access key ID and a secret access key. For more information, see [Understanding and getting your AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).   |
+    | Secret access key on AWS    | All requests to AWS KMS must be signed by using an access key ID and a secret access key. The secret access key is available for download only when you create it.    |
+    {: #table-1}
+    {: caption="Table 1. AWS Key Management Service properties" caption-side="bottom"}
+    {: tab-title="AWS keystore"}
+    {: tab-group="External keystore properties"}
+    {: class="comparison-tab-table"}
    
     |           Property	        |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
@@ -58,23 +71,9 @@ To edit the connection to an external keystore by using the console, complete th
     | Service principal password on Azure | Only password based authentication is supported for service principals.       |
     | Tenant ID on Azure          |  A tenant is the organization that owns and manages a specific instance of Microsoft cloud services. Use Azure Active Directory tenant ID for authenticating requests to the key vault.     |
     | Subscription ID on Azure    |  A GUID that uniquely identifies your subscription to use Azure services.    |
-    {: #table-1}
-    {: caption="Table 1. Azure Key Vault properties" caption-side="bottom"}
-    {: tab-title="Azure Key Vault"}
-    {: tab-group="External keystore properties"}
-    {: class="comparison-tab-table"}
-    {: caption="Table 1. Azure Key Vault properties" caption-side="bottom"}    
-
-    |           Property	        |                         Description                       |
-    |-----------------------------|-----------------------------------------------------------|
-    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0-9). The rest can also be symbols (.-_) or spaces. |
-    | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
-    | Region on AWS               | The geographical location where the AWS keystore is located in.    |
-    | Access key ID on AWS        | All requests to AWS KMS must be signed by using an access key ID and a secret access key. For more information, see [Understanding and getting your AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).   |
-    | Secret access key on AWS    | All requests to AWS KMS must be signed by using an access key ID and a secret access key. The secret access key is available for download only when you create it.    |
     {: #table-2}
-    {: caption="Table 2. AWS Key Management Service properties" caption-side="bottom"}
-    {: tab-title="AWS keystore"}
+    {: caption="Table 2. Azure Key Vault properties" caption-side="bottom"}
+    {: tab-title="Azure Key Vault"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
 
@@ -87,8 +86,8 @@ To edit the connection to an external keystore by using the console, complete th
     | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your {{site.data.keyword.keymanagementserviceshort}} service instance. For more information, see [Retrieving your instance ID and cloud resource name](/docs/key-protect?topic=key-protect-retrieve-instance-ID).  |
     | Service ID API key          | A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys). |
     {: #table-3}
-    {: caption="Table 3. {{site.data.keyword.keymanagementserviceshort}} keystore properties" caption-side="bottom"}
-    {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keystore"}
+    {: caption="Table 3. IBM {{site.data.keyword.keymanagementserviceshort}} keystore properties" caption-side="bottom"}
+    {: tab-title="IBM {{site.data.keyword.keymanagementserviceshort}} keystore"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
 
@@ -101,8 +100,8 @@ To edit the connection to an external keystore by using the console, complete th
     | Service instance ID on {{site.data.keyword.cloud_notm}}  | The unique identifier that is assigned to your service instance. For more information, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).  |
     | Service ID API key          | A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).  |
     {: #table-4}
-    {: caption="Table 4. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} KMS keystore properties" caption-side="bottom"}
-    {: tab-title="KMS keystore in another instance"}
+    {: caption="Table 4. {{site.data.keyword.cloud_notm}} KMS keystore properties" caption-side="bottom"}
+    {: tab-title="{{site.data.keyword.cloud_notm}} KMS keystore in another instance"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
 

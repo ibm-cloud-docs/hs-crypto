@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-24"
+lastupdated: "2022-08-25"
 
 keywords: site map, doc structure, information architecture
 
@@ -1280,11 +1280,11 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_managing_keys}
 
 
-[Creating and installing managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys)
+[Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys)
 
-* [Creating and installing managed keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-ui)
+* [Creating managed keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-ui)
 
-* [Creating and installing managed keys with the API](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-api)
+* [Creating managed keys with the API](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-next)
 

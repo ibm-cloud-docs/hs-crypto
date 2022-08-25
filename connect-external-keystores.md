@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-15"
+lastupdated: "2022-08-25"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -103,12 +103,25 @@ To connect to an external keystore by using the console, complete the following 
 
 5. Under **Keystore type**, select one of the following types and click **Next**:
 
-    - **Azure Key Vault (Premium)**
     - **AWS keystore**
+    - **Azure Key Vault (Premium)**
     - **{{site.data.keyword.keymanagementserviceshort}}**
-    - **KMS keystore in another instance**
+    - **{{site.data.keyword.cloud_notm}} KMS keystore in another instance**
 
 6. Under **Keystore properties**, specify the details of based on the keystore type that you want to connect to.
+
+    |           Property	      |                         Description                       |
+    |-----------------------------|-----------------------------------------------------------|
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0-9). The rest can also be symbols (.-_) or spaces. |
+    | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
+    | Region on AWS               | The geographical location where the AWS keystore is located in.    |
+    | Access key ID on AWS        | All requests to AWS KMS must be signed by using an access key ID and a secret access key. For more information, see [Understanding and getting your AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).    |
+    | Secret access key on AWS    | All requests to AWS KMS must be signed by using an access key ID and a secret access key. The secret access key is available for download only when you create it.     |
+    {: #table-1}
+    {: caption="Table 1. AWS Key Management Service properties" caption-side="bottom"}
+    {: tab-title="AWS keystore"}
+    {: tab-group="External keystore properties"}
+    {: class="comparison-tab-table"}
    
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
@@ -122,22 +135,9 @@ To connect to an external keystore by using the console, complete the following 
     | Service principal password on Azure | Only password based authentication is supported for service principals.       |
     | Tenant ID on Azure          |  A tenant is the organization that owns and manages a specific instance of Microsoft cloud services. Use Azure Active Directory tenant ID for authenticating requests to the Key Vault.     |
     | Subscription ID on Azure    |  A GUID that uniquely identifies your subscription to use Azure services.    |
-    {: #table-1}
-    {: caption="Table 1. Azure Key Vault properties" caption-side="bottom"}
-    {: tab-title="Azure Key Vault"}
-    {: tab-group="External keystore properties"}
-    {: class="comparison-tab-table"}
-
-    |           Property	      |                         Description                       |
-    |-----------------------------|-----------------------------------------------------------|
-    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0-9). The rest can also be symbols (.-_) or spaces. |
-    | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
-    | Region on AWS               | The geographical location where the AWS keystore is located in.    |
-    | Access key ID on AWS        | All requests to AWS KMS must be signed by using an access key ID and a secret access key. For more information, see [Understanding and getting your AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).    |
-    | Secret access key on AWS    | All requests to AWS KMS must be signed by using an access key ID and a secret access key. The secret access key is available for download only when you create it.     |
     {: #table-2}
-    {: caption="Table 2. AWS Key Management Service properties" caption-side="bottom"}
-    {: tab-title="AWS keystore"}
+    {: caption="Table 2. Azure Key Vault properties" caption-side="bottom"}
+    {: tab-title="Azure Key Vault"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-08-25"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -40,26 +40,26 @@ To edit the details of a managed key by using the console, complete the followin
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. Click the Actions icon  ![Actions icon](../icons/action-menu-icon.svg "Actions")  on the key that you want to edit, and choose **Show details**.
-4. In each property card under **Key properties**, click **Edit** to update the key properties. 
+4. Under **Key properties**, click **Edit** on each card to update the key properties. 
 
-    You can update the general properties, lifecycle properties, or active period of the key. Or, you can also view the key material properties, including algorithm, length, and key check value. The following are a few properties that you can edit.
+    1. You can update the general properties, lifecycle properties, or active period of the key. Or, you can also view the key material properties, including algorithm, length, and key check value. The following are a few properties that you can edit.
     
-    |       Property	     |                         Description                       |
-    |----------------------|-----------------------------------------------------------|
-    | Key name             | A unique, human-readable name for easy identification of your key. When you change the name of a managed key, the key is to be renamed in all target keystores where it is installed.  \n  \n Depending on the keystore type, name your key with the following rules:  \n - IBM KMS: 2 - 50 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or spaces. \n - IBM {{site.data.keyword.keymanagementserviceshort}}: 2 - 50 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or spaces. \n - AWS Key Management Service: 1 - 255 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or symbols (/_-). However, do not start the name with `AWS/`. \n - Azure Key Vault: 1 - 24 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or hyphens (-).|
-    | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
-    | State                | Key states include _Pre-active_, _Active_, _Deactivated_, and _Destroyed_. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states) |
-    | Activation date      | Plan a date to activate the key. No automatic state change is triggered. |
-    | Expiration date      | Plan a date to deactivate the key. No automatic state change is triggered. |
-    {: caption="Table 1. Key properties" caption-side="bottom"}
+        |       Property	     |                         Description                       |
+        |----------------------|-----------------------------------------------------------|
+        | Key name             | A unique, human-readable name for easy identification of your key. When you change the name of a managed key, the key is to be renamed in all target keystores where it is installed.  \n  \n Depending on the keystore type, name your key with the following rules:  \n - IBM KMS: 2 - 50 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or spaces. \n - IBM {{site.data.keyword.keymanagementserviceshort}}: 2 - 50 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or spaces. \n - AWS Key Management Service: 1 - 255 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or symbols (/_-). However, do not start the name with `AWS/`. \n - Azure Key Vault: 1 - 24 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or hyphens (-).|
+        | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
+        | State                | Key states include _Pre-active_, _Active_, _Deactivated_, and _Destroyed_. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states) |
+        | Activation date      | Plan a date to activate the key. No automatic state change is triggered. |
+        | Expiration date      | Plan a date to deactivate the key. No automatic state change is triggered. |
+        {: caption="Table 1. Key properties" caption-side="bottom"}
 
-    You can edit one property card at a time. To make changes to another property card, save your changes first.
-    {: note}
+        You can edit one property card at a time. To make changes to another property card, save your changes first.
+       {: note}
 
-5. In the **Target keystores** card, you can add or remove the target keystores where the key is installed by clicking **Set target keystores**. You can use a key only for encryption and decryption after it is installed in at least one target keystore.
-    
-6. Under **Advanced properties**, click **Edit** to update or add new key tags to the key. Key tags are used as identifications of a key.
-7. When you finish making changes, click **Save** to save the changes.
+    2. In the **Target keystores** card, click **Edit** to add or remove the target keystores where the key is installed. You can use a key only for encryption and decryption after it is installed in at least one target keystore.
+        
+5. Under **Advanced properties**, click **Edit** to update or add new key tags to the key. Key tags are used as identifications of a key.
+6. When you finish making changes, click **Save** to save the changes.
 
 You can search for a specific key by using the search bar, or filter keys based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the **Managed keys** table. For more information, see [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
 {: tip}
