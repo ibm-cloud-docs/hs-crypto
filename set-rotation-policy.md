@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-25"
 
 keywords: rotate, rotate root key, automatic key rotation, set rotation policy, policy based key rotation
 
@@ -87,37 +87,16 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
     {: codeblock}
 
     Replace the variables in the example request according to the following table.
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><varname>region</varname></td>
-        <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>port</varname></td>
-        <td><strong>Required.</strong> The port number of the API endpoint.</td>
-      </tr>
-      <tr>
-        <td><varname>key_ID</varname></td>
-        <td><strong>Required.</strong> The unique identifier for the root key that has an existing rotation policy.</td>
-      </tr>
-      <tr>
-        <td><varname>IAM_token</varname></td>
-        <td><strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>instance_ID</varname></td>
-        <td><strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>correlation_ID</varname></td>
-        <td>The unique identifier that is used to track and correlate transactions.</td>
-      </tr>
-        <caption>Table 1. Describes the variables that are needed to create a rotation policy with the {{site.data.keyword.hscrypto}} key management service API</caption>
-    </table>
+
+    | Variable | Description |
+    | --- | --- |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `port` | **Required.** The port number of the API endpoint. |
+    | `key_ID` | **Required.** The unique identifier for the root key that has an existing rotation policy. |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
+    {: caption="Table 1. Describes the variables that are needed to create a rotation policy with the {{site.data.keyword.hscrypto}} key management service API" caption-side="bottom"}
 
     A successful `GET api/v2/keys/{id}/policies` response returns policy details that are associated with your key. The following JSON object shows an example response for a root key that has an existing rotation policy.
 
@@ -184,42 +163,17 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
     {: codeblock}
 
     Replace the variables in the example request according to the following table.
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><varname>region</varname></td>
-        <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>port</varname></td>
-        <td><strong>Required.</strong> The port number of the API endpoint.</td>
-      </tr>
-      <tr>
-        <td><varname>key_ID</varname></td>
-        <td><strong>Required.</strong> The unique identifier for the root key that you want to create a rotation policy for.</td>
-      </tr>
-      <tr>
-        <td><varname>IAM_token</varname></td>
-        <td><strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>instance_ID</varname></td>
-        <td><strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>correlation_ID</varname></td>
-        <td>The unique identifier that is used to track and correlate transactions.</td>
-      </tr>
-      <tr>
-        <td><varname>rotation_interval</varname></td>
-        <td><strong>Required.</strong> An integer value that determines the key rotation interval time in months. The minimum is <code>1</code> and the maximum is <code>12</code>.
-        </td>
-      </tr>
-        <caption>Table 2. Describes the variables that are needed to create a rotation policy with the {{site.data.keyword.hscrypto}} key management service API</caption>
-    </table>
+    
+    | Variable | Description |
+    | --- | --- |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `port` | **Required.** The port number of the API endpoint. |
+    | `key_ID` | **Required.** The unique identifier for the root key that you want to create a rotation policy for. |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
+    | `rotation_interval` | **Required.** An integer value that determines the key rotation interval time in months. The minimum is `1` and the maximum is `12`. |
+    {: caption="Table 2. Describes the variables that are needed to create a rotation policy with the {{site.data.keyword.hscrypto}} key management service API" caption-side="bottom"}
 
     A successful `PUT api/v2/keys/{id}/policies` response returns policy details that are associated with your key. The following JSON object shows an example response for a root key that has an existing rotation policy.
 
@@ -284,42 +238,17 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
     {: codeblock}
 
     Replace the variables in the example request according to the following table.
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><varname>region</varname></td>
-        <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>port</varname></td>
-        <td><strong>Required.</strong> The port number of the API endpoint.</td>
-      </tr>
-      <tr>
-        <td><varname>key_ID</varname></td>
-        <td><strong>Required.</strong> The unique identifier for the root key that you want to replace a rotation policy for.</td>
-      </tr>
-      <tr>
-        <td><varname>IAM_token</varname></td>
-        <td><strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>instance_ID</varname></td>
-        <td><strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>correlation_ID</varname></td>
-        <td>The unique identifier that is used to track and correlate transactions.</td>
-      </tr>
-      <tr>
-        <td><varname>new_rotation_interval</varname></td>
-        <td><strong>Required.</strong> An integer value that determines the key rotation interval time in months. The minimum is <code>1</code> and the maximum is <code>12</code>.
-        </td>
-      </tr>
-        <caption>Table 3. Describes the variables that are needed to create a rotation policy with the {{site.data.keyword.hscrypto}} key management service API</caption>
-    </table>
+
+    | Variable | Description |
+    | --- | --- |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `port` | **Required.** The port number of the API endpoint. |
+    | `key_ID` | **Required.** The unique identifier for the root key that you want to replace a rotation policy for. |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
+    | `new_rotation_interval` | **Required.** An integer value that determines the key rotation interval time in months. The minimum is `1` and the maximum is `12`. |
+    {: caption="Table 3. Describes the variables that are needed to create a rotation policy with the {{site.data.keyword.hscrypto}} key management service API" caption-side="bottom"}
 
     A successful `PUT api/v2/keys/{id}/policies` response returns updated policy details that are associated with your key. The following JSON object shows an example response for a root key with an updated rotation policy.
 

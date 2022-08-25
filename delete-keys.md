@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-25"
 
 keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 
@@ -97,51 +97,16 @@ at query time to delete the key.
 
     Replace the variables in the example request according to the following table.
 
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><varname>region</varname></td>
-        <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>port</varname></td>
-        <td><strong>Required.</strong> The port number of the API endpoint.</td>
-      </tr>
-      <tr>
-        <td><varname>key_ID</varname></td>
-        <td><strong>Required.</strong> The unique identifier for the key that you would like to delete.</td>
-      </tr>
-      <tr>
-        <td><varname>IAM_token</varname></td>
-        <td><strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>instance_ID</varname></td>
-        <td><strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
-      </tr>
-      <tr>
-        <td>
-          <varname>key_ring_ID</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request.
-          </p>
-          <p>
-            Note: The key ring ID of keys that are created without an <code>x-kms-key-ring</code> header is <code>default</code>.
-          </p>
-          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
-        </td>
-      </tr>
-      <tr>
-        <td><varname>return_preference</varname></td>
-        <td><p>A header that alters server behavior for <code>POST</code> and <code>DELETE</code> operations.</p><p>When you set the <em>return_preference</em> variable to <code>return=minimal</code>, the service returns a successful deletion response. When you set the variable to <code>return=representation</code>, the service returns both the key material and the key metadata.</p></td>
-      </tr>
-      <caption>Table 1. Describes the variables that are needed to delete keys with the {{site.data.keyword.hscrypto}} key management service API.</caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `port` | **Required.** The port number of the API endpoint. |
+    | `key_ID` | **Required.** The unique identifier for the key that you would like to delete. |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is `default`. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
+    | `return_preference` | A header that alters server behavior for `POST` and `DELETE` operations. When you set the `return_preference` variable to `return=minimal`, the service returns a successful deletion response. When you set the variable to `return=representation`, the service returns both the key material and the key metadata. |
+    {: caption="Table 1. Describes the variables that are needed to delete keys with the {{site.data.keyword.hscrypto}} key management service API" caption-side="bottom"}
 
     If the `return_preference` variable is set to `return=representation`, the details of the `DELETE` request are returned in the response entity-body.
 
@@ -225,87 +190,16 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
 
     Replace the variables in the example request according to the following table.
 
-    <table>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-
-    <tr>
-      <td>
-        <varname>region</varname>
-      </td>
-      <td>
-        <p>
-          <strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
-        </p>
-        <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
-      </td>
-    </tr>
-
-    <tr>
-      <td><varname>port</varname></td>
-      <td><strong>Required.</strong> The port number of the API endpoint.</td>
-    </tr>
-
-    <tr>
-      <td>
-        <varname>key_ID</varname>
-      </td>
-      <td>
-        <strong>Required.</strong> The unique identifier for the key that you would like to delete.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <varname>IAM_token</varname>
-      </td>
-      <td>
-        <p>
-          <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request.
-        </p>
-        <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        <varname>instance_ID</varname>
-      </td>
-      <td>
-        <p>
-          <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance.
-        </p>
-        <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <varname>key_ring_ID</varname>
-      </td>
-      <td>
-        <p>
-          <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request.
-        </p>
-        <p>
-          Note: The key ring ID of keys that are created without an <code>x-kms-key-ring</code> header is <code>default</code>.
-        </p>
-        <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <varname>return_preference</varname>
-      </td>
-      <td>
-        <p>A header that alters server behavior for <code>POST</code> and <code>DELETE</code> operations.</p>
-        <p>When you set the <em>return_preference</em> variable to <code>return=minimal</code>, the service returns a successful deletion response. When you set the variable to <code>return=representation</code>, the service returns both the key material and the key metadata.</p>
-      </td>
-    </tr>
-
-    <caption>Table 1. Describes the variables that are needed to delete keys with the {{site.data.keyword.hscrypto}} key management service API.</caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `port` | **Required.** The port number of the API endpoint. |
+    | `key_ID` | **Required.** The unique identifier for the key that you would like to delete. |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is `default`. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
+    | `return_preference` | A header that alters server behavior for `POST` and `DELETE` operations. When you set the `return_preference` variable to `return=minimal`, the service returns a successful deletion response. When you set the variable to `return=representation`, the service returns both the key material and the key metadata. |
+    {: caption="Table 1. Describes the variables that are needed to delete keys with the {{site.data.keyword.hscrypto}} key management service API" caption-side="bottom"}
 
     If the `return_preference` variable is set to `return=representation`, the details of the `DELETE` request are returned in the response entity-body.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-25"
 
 keywords: crypto unit, add crypto units, remove crypto units, change crypto units number, adjust crypto units number, new crypto units, support center, support ticket, support case
 
@@ -45,25 +45,12 @@ To add or remove crypto units, you need to first raise a support ticket.
 1. In your {{site.data.keyword.cloud_notm}} dashboard, select **Support** to enter the Support Center. Click **View all** in the **Recent support cases** panel and click **Create new case**. Or, you can directly go to the [Manage cases page](https://cloud.ibm.com/unifiedsupport/cases){: external} and click **Create new case**.
 2. On the **Create a case** page displayed, select the offering {{site.data.keyword.hscrypto}}, and then specify the following values:
 
-    <table>
-    <tr>
-      <th>Field name</th>
-      <th>Action</th>
-    </tr>
-    <tr>
-      <td>Subject</td>
-      <td>Enter <strong>Add crypto units</strong>.</td>
-    </tr>
-    <tr>
-      <td>Description</td>
-      <td>Enter your <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">service instance ID</a>, the region that your service instance resides in, and the number of crypto units you want to add. You can have no more than three crypto units for a service instance.</td>
-    </tr>
-    <tr>
-      <td>Selected resources</td>
-      <td>Select your {{site.data.keyword.hscrypto}} service instance.</td>
-    </tr>
-    <caption>Table 1. Describes the fields that are required to add crypto units</caption>
-    </table>
+    | Field name | Action |
+    | --- | --- |
+    | Subject | Enter **Add crypto units**. |
+    | Description | Enter your [service instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID), the region that your service instance resides in, and the number of crypto units you want to add. You can have no more than three crypto units for a service instance. |
+    | Selected resources | Select your {{site.data.keyword.hscrypto}} service instance. |
+    {: caption="Table 1. Describes the fields that are required to add crypto units" caption-side="bottom"}
 
 3. Check the **Email me updates about this issue** box, and click **Continue to review > Create case**.
 
@@ -95,25 +82,12 @@ After you initialize the new crypto units, you need to raise another support tic
 1. In your {{site.data.keyword.cloud_notm}} dashboard, select **Support** to enter the Support Center. Click **View all** in the **Recent support cases** panel and click **Create new case**. Or, you can directly go to the [Manage cases page](https://cloud.ibm.com/unifiedsupport/cases){: external} and click **Create new case**.
 2. On the **Create a case** page displayed, select the offering {{site.data.keyword.hscrypto}}, and then specify the following values:
 
-    <table>
-    <tr>
-      <th>Field name</th>
-      <th>Action</th>
-    </tr>
-    <tr>
-      <td>Subject</td>
-      <td>Enter <strong>Activate new crypto units</strong>.</td>
-    </tr>
-    <tr>
-      <td>Description</td>
-      <td>Enter your <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">service instance ID</a>, the region that your service instance resides in, the number of new crypto units, and the case number of the support ticket that is previously raised in <a href="#step1-support-ticket-change-number">step 1</a>.</td>
-    </tr>
-    <tr>
-      <td>Selected resources</td>
-      <td>Select your {{site.data.keyword.hscrypto}} service instance.</td>
-    </tr>
-    <caption>Table 2. Describes the fields that are required to activate new crypto units</caption>
-    </table>
+    | Field name | Action |
+    | --- | --- |
+    | Subject | Enter **Activate new crypto units**. |
+    | Description | Enter your [service instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID), the region that your service instance resides in, the number of new crypto units, and the case number of the support ticket that is previously raised in [step 1](#step1-support-ticket-change-number). |
+    | Selected resources | Select your {{site.data.keyword.hscrypto}} service instance. |
+    {: caption="Table 2. Describes the fields that are required to activate new crypto units" caption-side="bottom"}
 
 3. Check the **Email me updates about this issue** box, and click **Continue to review > Create case**.
 

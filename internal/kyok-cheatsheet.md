@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-04"
+lastupdated: "2022-08-25"
 
 keywords: enable KYOK, onboard to Hyper Protect Crypto Services, HPCS onboarding, service onboarding, internal registration, key registration, KYOK, kms onboarding
 
@@ -54,70 +54,10 @@ The following features are available for KYOK enabled services. For up-to-date i
 Use the [adopter's guide](https://github.ibm.com/kms/BYOK_Adopter_services){: external} for more information on KYOK requirements, features, and use cases.
 {: note}
 
-<table>
-    <thead>
-    <tr>
-      <th>Actions</th>
-      <th>Steps</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td><a href="/docs/hs-crypto?topic=hs-crypto-key-erasure">Plan for crypto erasure</a></td>
-      <td>
-        <ol>
-          <li><a href="/docs/hs-crypto?topic=hs-crypto-delete-keys">Delete a root key</a></li>
-          <li><a href="https://github.ibm.com/kms/BYOK_Adopter_services/blob/master/How_to_subscribe_to_hyperwarp.md#event-structure">Check for a Hyperwarp deletion event from {{site.data.keyword.hscrypto}}</a></li>
-          <li><a href="https://github.ibm.com/kms/Adopter_services/blob/master/src/github.ibm.com/skms/key-protect/event_processor.go">Process Hyperwarp deletion event</a></li>
-          <li><a href="/apidocs/hs-crypto#eventacknowledge">Notify {{site.data.keyword.hscrypto}} that the event was processed</a></li>
-          <li><a href="/docs/observability?topic=observability-pattern1#pattern1_step4">Verify end to end deletion flow in {{site.data.keyword.cloudaccesstrailshort}} logs</a></li>
-        </ol>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="/docs/hs-crypto?topic=hs-crypto-dek-rewrap">Plan for key rotation</a></td>
-      <td>
-        <ol>
-          <li><a href="/docs/hs-crypto?topic=hs-crypto-rotate-keys">Rotate a root key</a></li>
-          <li><a href="https://github.ibm.com/kms/BYOK_Adopter_services/blob/master/How_to_subscribe_to_hyperwarp.md#event-structure">Check for a Hyperwarp rotation event from {{site.data.keyword.hscrypto}}</a></li>
-          <li><a href="https://github.ibm.com/kms/Adopter_services/blob/master/src/github.ibm.com/skms/key-protect/event_processor.go">Process Hyperwarp rotation event</a></li>
-          <li><a href="/apidocs/hs-crypto#eventacknowledge">Notify {{site.data.keyword.hscrypto}} that the event was processed</a></li>
-          <li><a href="/docs/observability?topic=observability-pattern1#pattern1_step4">Verify end to end rotation flow in {{site.data.keyword.cloudaccesstrailshort}} logs</a></li>
-        </ol>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="/docs/hs-crypto?topic=hs-crypto-disable-keys">Enable or Disable a root key</a></td>
-      <td>
-        <ol>
-          <li><a href="/apidocs/hs-crypto#actiononkey">Disable or Enable a root key</a></li>
-          <li><a href="https://github.ibm.com/kms/BYOK_Adopter_services/blob/master/How_to_subscribe_to_hyperwarp.md#event-structure">Check for a Hyperwarp event from {{site.data.keyword.hscrypto}}</a></li>
-          <li><a href="https://github.ibm.com/kms/Adopter_services/blob/master/src/github.ibm.com/skms/key-protect/event_processor.go">Process Hyperwarp enable or disable event</a></li>
-          <li><a href="/apidocs/hs-crypto#eventacknowledge">Notify {{site.data.keyword.hscrypto}} that the event was processed</a></li>
-          <li><a href="/docs/observability?topic=observability-pattern1#pattern1_step4">Verify end to end enable or disable flow in {{site.data.keyword.cloudaccesstrailshort}} logs</a></li>
-        </ol>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="/docs/hs-crypto?topic=hs-crypto-restore-keys">Restore a root key</a></td>
-      <td>
-        <ol>
-          <li><a href="/apidocs/hs-crypto#actiononkey">Restore a root key</a></li>
-          <li><a href="https://github.ibm.com/kms/BYOK_Adopter_services/blob/master/How_to_subscribe_to_hyperwarp.md#event-structure">Check for a Hyperwarp restoration event from {{site.data.keyword.hscrypto}}</a></li>
-          <li><a href="https://github.ibm.com/kms/Adopter_services/blob/master/src/github.ibm.com/skms/key-protect/event_processor.go">Process Hyperwarp restoration event</a></li>
-          <li><a href="/apidocs/hs-crypto#eventacknowledge">Notify {{site.data.keyword.hscrypto}} that the event was processed</a></li>
-          <li><a href="/docs/observability?topic=observability-pattern1#pattern1_step4">Verify end to end restoration flow in {{site.data.keyword.cloudaccesstrailshort}} logs</a></li>
-        </ol>
-      </td>
-    </tr>
-    <tr>
-      <td>Encryption Key Location</td>
-      <td>
-        <ol>
-          <li>Your service needs to allow keys from any region to protect resources in the region where service is deployed.</li>
-          <li>Your service needs to not enforce that the key needs to be allocated in the same region where the resource is located.</li>
-        </ol>
-      </td>
-    </tr>
-    </tbody>
-</table>
+| Actions | Steps |
+| --- | --- |
+| [Plan for crypto erasure](/docs/hs-crypto?topic=hs-crypto-key-erasure) | 1.  [Delete a root key](/docs/hs-crypto?topic=hs-crypto-delete-keys) \n 2.  [Check for a Hyperwarp deletion event from {{site.data.keyword.hscrypto}}](https://github.ibm.com/kms/BYOK_Adopter_services/blob/master/How_to_subscribe_to_hyperwarp.md#event-structure) \n 3.  [Process Hyperwarp deletion event](https://github.ibm.com/kms/Adopter_services/blob/master/src/github.ibm.com/skms/key-protect/event_processor.go) \n 4.  [Notify {{site.data.keyword.hscrypto}} that the event was processed](/apidocs/hs-crypto#eventacknowledge) \n 5.  [Verify end to end deletion flow in {{site.data.keyword.cloudaccesstrailshort}} logs](/docs/observability?topic=observability-pattern1#pattern1_step4) |
+| [Plan for key rotation](/docs/hs-crypto?topic=hs-crypto-dek-rewrap) | 1.  [Rotate a root key](/docs/hs-crypto?topic=hs-crypto-rotate-keys) \n 2.  [Check for a Hyperwarp rotation event from {{site.data.keyword.hscrypto}}](https://github.ibm.com/kms/BYOK_Adopter_services/blob/master/How_to_subscribe_to_hyperwarp.md#event-structure) \n 3.  [Process Hyperwarp rotation event](https://github.ibm.com/kms/Adopter_services/blob/master/src/github.ibm.com/skms/key-protect/event_processor.go) \n 4.  [Notify {{site.data.keyword.hscrypto}} that the event was processed](/apidocs/hs-crypto#eventacknowledge) \n 5.  [Verify end to end rotation flow in {{site.data.keyword.cloudaccesstrailshort}} logs](/docs/observability?topic=observability-pattern1#pattern1_step4) |
+| [Enable or Disable a root key](/docs/hs-crypto?topic=hs-crypto-disable-keys) | 1.  [Disable or Enable a root key](/apidocs/hs-crypto#actiononkey) \n 2.  [Check for a Hyperwarp event from {{site.data.keyword.hscrypto}}](https://github.ibm.com/kms/BYOK_Adopter_services/blob/master/How_to_subscribe_to_hyperwarp.md#event-structure) \n 3.  [Process Hyperwarp enable or disable event](https://github.ibm.com/kms/Adopter_services/blob/master/src/github.ibm.com/skms/key-protect/event_processor.go) \n 4.  [Notify {{site.data.keyword.hscrypto}} that the event was processed](/apidocs/hs-crypto#eventacknowledge) \n 5.  [Verify end to end enable or disable flow in {{site.data.keyword.cloudaccesstrailshort}} logs](/docs/observability?topic=observability-pattern1#pattern1_step4) |
+| [Restore a root key](/docs/hs-crypto?topic=hs-crypto-restore-keys) | 1.  [Restore a root key](/apidocs/hs-crypto#actiononkey) \n 2.  [Check for a Hyperwarp restoration event from {{site.data.keyword.hscrypto}}](https://github.ibm.com/kms/BYOK_Adopter_services/blob/master/How_to_subscribe_to_hyperwarp.md#event-structure) \n 3.  [Process Hyperwarp restoration event](https://github.ibm.com/kms/Adopter_services/blob/master/src/github.ibm.com/skms/key-protect/event_processor.go) \n 4.  [Notify {{site.data.keyword.hscrypto}} that the event was processed](/apidocs/hs-crypto#eventacknowledge) \n 5.  [Verify end to end restoration flow in {{site.data.keyword.cloudaccesstrailshort}} logs](/docs/observability?topic=observability-pattern1#pattern1_step4) |
+| Encryption Key Location | 1.  Your service needs to allow keys from any region to protect resources in the region where service is deployed. \n 2.  Your service needs to not enforce that the key needs to be allocated in the same region where the resource is located. |

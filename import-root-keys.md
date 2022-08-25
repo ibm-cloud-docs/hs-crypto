@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-25"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -47,66 +47,18 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
 
     Specify the key's details:
 
-    <table>
-      <tr>
-        <th>Setting</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select <strong><a href="/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept">Root key</a></strong>.</td>
-      </tr>
-      <tr>
-        <td>Key name</td>
-        <td>
-          <p>A unique, human-readable alias for easy identification of your key.</p>
-          <p>To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location.</p>
-        </td>
-      </tr>
-      <tr>
-        <td>Key alias</td>
-        <td>
-          <p>(Optional) One or more unique, human-readable aliases that you want to assign to your key for easy recognition.</p>
-          <p>Alias size can be 2 - 90 characters. You can set up to five key aliases for the key, with each separated by a comma.</p>
-          <p>Note: Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: <code>allowed_ip</code>, <code>key</code>, <code>keys</code>, <code>metadata</code>, <code>policy</code>, <code>policies</code>, <code>registration</code>, <code>registrations</code>, <code>ring</code>, <code>rings</code>, <code>rotate</code>, <code>wrap</code>, <code>unwrap</code>, <code>rewrap</code>, <code>version</code>, <code>versions</code>.</p>
-        </td>
-      </tr>
-      <tr>
-        <td>Key ring ID</td>
-        <td>
-          <p>Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key will be added to the <code>default</code> key ring.</p>
-          <p>For more information about key rings, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
-        </td>
-      </tr>
-      <tr>
-        <td>Key material</td>
-        <td>
-          <p>The base64 encoded key material, such as an existing key-wrapping key, that you want to store and manage in the service. For more information, see <a href="#encode-key-material-root-key">Base64 encoding your key material</a>.</p>
-          <p>Ensure that the key material meets the following requirements:</p>
-          <p>
-            <ul>
-              <li>The key must be 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits.</li>
-              <li>The key must be base64-encoded.</li>
-            </ul>
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td>Expiration date</td>
-        <td>
-          <p>(Optional) Set the date and time when the key gets expired. After the expiration date, the key moves into the <em>Deactivated</em> state. For more information about key state, see <a href="/docs/hs-crypto?topic=hs-crypto-key-states">Monitoring the lifecycle of encryption keys</a>.</p>
-        </td>
-      </tr>
-      <tr>
-        <td>Description</td>
-        <td>
-          <p>(Optional) Add an extended description for your key. It needs to be two to 240 characters in length.</p>
-        </td>
-      </tr>
-      <caption>Table 1. Describes the <strong>Import a key</strong> settings</caption>
-    </table>
+    | Setting | Description |
+    | --- | --- |
+    | Key type | The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select **[Root key](/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept)**. |
+    | Key name | A unique, human-readable alias for easy identification of your key.<br><br>To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location. |
+    | Key alias | (Optional) One or more unique, human-readable aliases that you want to assign to your key for easy recognition. Alias size can be 2 - 90 characters. You can set up to five key aliases for the key, with each separated by a comma. \n Note: Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. |
+    | Key ring ID | Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key will be added to the `default` key ring. For more information about key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
+    | Key material | The base64 encoded key material, such as an existing key-wrapping key, that you want to store and manage in the service. For more information, see [Base64 encoding your key material](#encode-key-material-root-key). Ensure that the key material meets the following requirements: \n * The key must be 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits. \n * The key must be base64-encoded. |
+    | Expiration date | (Optional) Set the date and time when the key gets expired. After the expiration date, the key moves into the _Deactivated_ state. For more information about key state, see [Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-key-states). |
+    | Description | (Optional) Add an extended description for your key. It needs to be two to 240 characters in length. |
+    {: caption="Table 1. Describes the **Import a key** settings" caption-side="bottom"}
 
-5. When you finish filling out the key's details, click **Import key** to confirm.
+6. When you finish filling out the key's details, click **Import key** to confirm.
 
 ## Importing root keys with the API
 {: #import-root-key-api}
@@ -150,70 +102,24 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
     Replace the variables in the example request according to the following table.
 
-      <table>
-        <tr>
-          <th>Variable</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td><varname>region</varname></td>
-          <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance is located. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
-        </tr>
-        <tr>
-          <td><varname>port</varname></td>
-          <td><strong>Required.</strong> The port number of the API endpoint.</td>
-        </tr>
-        <tr>
-          <td><varname>IAM_token</varname></td>
-          <td><strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
-        </tr>
-        <tr>
-          <td><varname>instance_ID</varname></td>
-          <td><strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving your instance ID</a>.</td>
-        </tr>
-        <tr>
-          <td><varname>correlation_ID</varname></td>
-          <td>The unique identifier that is used to track and correlate transactions.</td>
-        </tr>
-        <tr>
-          <td><varname>key_alias</varname></td>
-          <td><strong>Required.</strong> A unique, human-readable name for easy identification of your key. To protect your privacy, do not store your personal data as metadata for your key.</td>
-        </tr>
-        <tr>
-          <td><varname>key_description</varname></td>
-          <td>An extended description of your key. To protect your privacy, do not store your personal data as metadata for your key.</td>
-        </tr>
-        <tr>
-          <td><varname>YYYY-MM-DD</varname><br><varname>HH:MM:SS.SS</varname></td>
-          <td>The date and time that the key expires in the system, in RFC 3339 format. If the <code>expirationDate</code> attribute is omitted, the key does not expire.</td>
-        </tr>
-        <tr>
-          <td><varname>key_material</varname></td>
-          <td>
-            <p>The base64 encoded key material, such as an existing key-wrapping key, that you want to store and manage in the service. For more information, see <a href="#encode-key-material-root-key">Base64 encoding your key material</a>.</p>
-            <p>Ensure that the key material meets the following requirements:</p>
-            <p>
-              <ul>
-                <li>The key must be 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits.</li>
-                <li>The key must be base64-encoded.</li>
-              </ul>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><varname>key_type</varname></td>
-          <td>
-            <p>A boolean value that determines whether the key material can leave the service.</p>
-            <p>When you set the <code>extractable</code> attribute to <code>false</code>, the service designates the key as a root key that you can use for <code>wrap</code> or <code>unwrap</code> operations.</p>
-          </td>
-        </tr>
-          <caption>Table 4. Describes the variables that are needed to add a root key with the {{site.data.keyword.hscrypto}} key management service API.</caption>
-      </table>
+    | Variable | Description |
+    | --- | --- |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance is located. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `port` | **Required.** The port number of the API endpoint. |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
+    | `key_alias` | **Required.** A unique, human-readable name for easy identification of your key. To protect your privacy, do not store your personal data as metadata for your key. |
+    | `key_description` | An extended description of your key. To protect your privacy, do not store your personal data as metadata for your key. |
+    | `YYYY-MM-DD` \n `HH:MM:SS.SS` | The date and time that the key expires in the system, in RFC 3339 format. If the `expirationDate` attribute is omitted, the key does not expire. |
+    | `key_material` | The base64 encoded key material, such as an existing key-wrapping key, that you want to store and manage in the service. For more information, see [Base64 encoding your key material](#encode-key-material-root-key). Ensure that the key material meets the following requirements: \n * The key must be 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits. \n * The key must be base64-encoded. |
+    | `key_type` | A boolean value that determines whether the key material can leave the service. When you set the `extractable` attribute to `false`, the service designates the key as a root key that you can use for `wrap` or `unwrap` operations. |
+    {: caption="Table 4. Describes the variables that are needed to add a root key with the {{site.data.keyword.hscrypto}} key management service API" caption-side="bottom"}
 
-      To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://www.nist.gov/publications/guide-protecting-confidentiality-personally-identifiable-information-pii){: external}.
-      {: important}
+    To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://www.nist.gov/publications/guide-protecting-confidentiality-personally-identifiable-information-pii){: external}.
+    {: important}
 
-      A successful `POST api/v2/keys` response returns the ID value for your key, along with other metadata. The ID is a unique identifier that is assigned to your key and is used for subsequent calls to the {{site.data.keyword.hscrypto}} key management service API.
+    A successful `POST api/v2/keys` response returns the ID value for your key, along with other metadata. The ID is a unique identifier that is assigned to your key and is used for subsequent calls to the {{site.data.keyword.hscrypto}} key management service API.
 
 3. Optional: Verify that the key was added by running the following call to browse the keys in your {{site.data.keyword.hscrypto}} service instance.
 
@@ -261,38 +167,11 @@ When importing an existing root key, it is required to include the encrypted key
 
     Replace the variables in the example request according to the following table.
 
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>
-          <varname>infile</varname>
-        </td>
-        <td>
-          <p>
-            The name of the file where your key material string is located.
-          </p>
-          <p>
-            Ensure that the key is 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits.
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <varname>outfile</varname>
-        </td>
-        <td>
-          <p>
-            The name of the file where your base64-encoded key material will be created when the command has run.
-          </p>
-        </td>
-      </tr>
-      <caption>
-        Table 3. Describes the variables that are needed to base64 encode your key material.
-      </caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `infile` | The name of the file where your key material string is located. Ensure that the key is 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits. |
+    | `outfile` | The name of the file where your base64-encoded key material will be created when the command has run. |
+    {: caption="Table 3. Describes the variables that are needed to base64 encode your key material" caption-side="bottom"}
 
     If you want to output the base64 material in the command line directly rather than a file, run the command `openssl enc -base6<<< '<key_material_string>'`, where *key_material_string* is the key material input for your imported key.
     {: note}
@@ -308,30 +187,7 @@ When importing an existing root key, it is required to include the encrypted key
     ```
     {: codeblock}
 
-    Replace the variable in the example request according to the following table.
-
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>
-          <varname>byte_length</varname>
-        </td>
-        <td>
-          <p>
-            The length of the key, which is measured in bytes.
-          </p>
-          <p>
-            Acceptable byte lengths are 16, 24, or 32 bytes, corresponding to 128, 192, or 256 bits.
-          </p>
-        </td>
-      </tr>
-      <caption>
-        Table 4. Describes the variable that is needed to create and encode new key material.
-      </caption>
-    </table>
+    Replace the `byte_length` variable in the example request with the length of your key, which is measured in bytes. Acceptable byte lengths are 16, 24, or 32 bytes, corresponding to 128, 192, or 256 bits.
 
 ## What's next
 {: #import-root-key-next}

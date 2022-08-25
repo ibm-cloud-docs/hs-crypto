@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-29"
+lastupdated: "2022-08-25"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -94,80 +94,21 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
 
     The following table lists supported parameters when you create and initialize a service instance with Terraform:
 
-    <table>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td><strong>Required</strong>. The name of your {{site.data.keyword.hscrypto}} instance.</td>
-    </tr>
-    <tr>
-      <td>location</td>
-      <td><strong>Required</strong>. The region abbreviation, such as <code>us-south</code>, that represents the geographic area where the operational crypto units of your service instance are located. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions">Regions and locations</a>. As recovery crypto units are available only in <code>us-south</code> and <code>us-east</code>, only these two regions are supported if you want to use Terraform for instance initialization.</td>
-    </tr>
-    <tr>
-      <td>plan</td>
-      <td><strong>Required</strong>. The pricing plan for your service instance. </td>
-    </tr>
-    <tr>
-      <td>units</td>
-      <td><strong>Required</strong>. The number of operational crypto units for your service instance. Valid values are 2 or 3.</td>
-    </tr>
-    <tr>
-      <td>failover_units</td>
-      <td><strong>Optional</strong>. The number of failover crypto units for your service instance. Valid values are 0, 2, or 3, and it must be less than or equal to the number of operational crypto units. If you set it 0, cross-region high availability will not be enabled. Currently, you can enable this option only in the <code>us-south</code> and <code>us-east</code> region. If you do not specify the value, the default value is 0. </td>
-    </tr>
-    <tr>
-      <td>service_endpoints</td>
-      <td><strong>Optional</strong>. The network access to your service instance. Valid values are <code>public-and-private</code> and <code>private-only</code>. If you do not specify the value, the default setting is <code>public-and-private</code>.</td>
-    </tr>
-    <tr>
-      <td>tags</td>
-      <td><strong>Optional</strong>. Tags that are associated with your instance are used to organize your resources. For more information about tags, see <a href="/docs/account?topic=account-tag">Working with tags</a>.</td>
-    </tr>
-    <tr>
-      <td>resource_group_id</td>
-      <td><strong>Optional</strong>. The resource group where you want to organize and manage your service instance. If you do not specify the value, the default resource group is <code>Default</code>.</td>
-    </tr>
-    <tr>
-      <td>signature_threshold</td>
-      <td><strong>Required</strong>. The number of administrator signatures that is required to execute administrative commands. The valid value is in the range 1 - 8. You need to set it to at least 2 to enable quorum authentication.</td>
-    </tr>
-    <tr>
-      <td>revocation_threshold</td>
-      <td><strong>Required</strong>. The number of administrator signatures that is required to remove an administrator after you leave imprint mode. The valid value is in the range 1 - 8.</td>
-    </tr>
-    <tr>
-      <td>admins</td>
-      <td><strong>Required</strong>. The list of administrators for the instance crypto units. You can set up to eight administrators and the number needs to be equal to or greater than the thresholds that you specify. The following values need to be set for each administrator:
-      <dl>
-        <dt>name:</dt>
-        <dd>The name of the administrator. It needs to be no more than 30 characters in length.</dd>
-        <dt>key:</dt>
-        <dd>
-          <ul>
-            <li>If you are using signature key files on the local workstation that are created by the TKE CLI plug-in and are not using a third-party signing service, specify the absolute path and file name of the signature key file that is to be used.</li>
-            <li>If you are using a signing service to provide signature keys, specify the name of the signature key depending on the signing service definition. The character string for the key name is appended to a URI that is sent to the signing service and must contain only unreserved characters as defined by section 2.3 of <a href="https://datatracker.ietf.org/doc/html/rfc3986" target="_blank">RFC3986</a>.</li>
-          </ul>
-        </dd>
-        <dt>token:</dt>
-        <dd>
-          <ul>
-            <li>If you are using signature key files on the local workstation that are created by the TKE CLI plug-in and are not using a third-party signing service, specify the administrator password to access the corresponding signature key file.</li>
-            <li>If you are using a signing service to provide signature keys, specify the token that authorizes use of the signature key depending on the signing service definition. <p><strong>Note:</strong> The token parameter is optional. If you don't specify the token, you are prompted to enter the token value when you run Terraform commands. After the instance initialization, the value that you enter for the token parameter is stored in a <code>.tfstate</code> file. For more information about securing sensitive data in Terraform, see <a href="https://www.terraform.io/docs/language/state/sensitive-data.html" target="_blank">Sensitive Data in State</a>.</p></li>
-          </ul>
-        </dd>
-      </dl>
-      </td>
-    </tr>
-    <tr>
-      <td>signature_server_url</td>
-      <td><strong>Optional</strong>. The URL and port number where the signing service is running. If you are using a third-party signing service to provide administrator signature keys, you need to specify this parameter.</td>
-    </tr>
-    <caption>Table 1. Supported parameters for provisioning a service instance with Terraform</caption>
-    </table>
+    | Parameter | Description |
+    | --- | --- |
+    | `name` | **Required**. The name of your {{site.data.keyword.hscrypto}} instance. |
+    | location | **Required**. The region abbreviation, such as `us-south`, that represents the geographic area where the operational crypto units of your service instance are located. For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). As recovery crypto units are available only in `us-south` and `us-east`, only these two regions are supported if you want to use Terraform for instance initialization. |
+    | `plan` | **Required**. The pricing plan for your service instance. |
+    | `units` | **Required**. The number of operational crypto units for your service instance. Valid values are 2 or 3. |
+    | `failover_units` | **Optional**. The number of failover crypto units for your service instance. Valid values are 0, 2, or 3, and it must be less than or equal to the number of operational crypto units. If you set it 0, cross-region high availability will not be enabled. Currently, you can enable this option only in the `us-south` and `us-east` region. If you do not specify the value, the default value is 0. |
+    | `service_endpoints` | **Optional**. The network access to your service instance. Valid values are `public-and-private` and `private-only`. If you do not specify the value, the default setting is `public-and-private`. |
+    | `tags` | **Optional**. Tags that are associated with your instance are used to organize your resources. For more information about tags, see [Working with tags](/docs/account?topic=account-tag). |
+    | `resource_group_id` | **Optional**. The resource group where you want to organize and manage your service instance. If you do not specify the value, the default resource group is `Default`. |
+    | `signature_threshold` | **Required**. The number of administrator signatures that is required to execute administrative commands. The valid value is in the range 1 - 8. You need to set it to at least 2 to enable quorum authentication. |
+    | `revocation_threshold` | **Required**. The number of administrator signatures that is required to remove an administrator after you leave imprint mode. The valid value is in the range 1 - 8. |
+    | `admins` | **Required**. The list of administrators for the instance crypto units. You can set up to eight administrators and the number needs to be equal to or greater than the thresholds that you specify. The following values need to be set for each administrator: \n name: \n The name of the administrator. It needs to be no more than 30 characters in length. \n key: \n * If you are using signature key files on the local workstation that are created by the TKE CLI plug-in and are not using a third-party signing service, specify the absolute path and file name of the signature key file that is to be used. \n * If you are using a signing service to provide signature keys, specify the name of the signature key depending on the signing service definition. The character string for the key name is appended to a URI that is sent to the signing service and must contain only unreserved characters as defined by section 2.3 of [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986). \n token: \n * If you are using signature key files on the local workstation that are created by the TKE CLI plug-in and are not using a third-party signing service, specify the administrator password to access the corresponding signature key file. \n * If you are using a signing service to provide signature keys, specify the token that authorizes use of the signature key depending on the signing service definition. \n \n **Note:** The token parameter is optional. If you don't specify the token, you are prompted to enter the token value when you run Terraform commands. After the instance initialization, the value that you enter for the token parameter is stored in a `.tfstate` file. For more information about securing sensitive data in Terraform, see [Sensitive Data in State](https://www.terraform.io/docs/language/state/sensitive-data.html). |
+    | `signature_server_url` | **Optional**. The URL and port number where the signing service is running. If you are using a third-party signing service to provide administrator signature keys, you need to specify this parameter. |
+    {: caption="Table 1. Supported parameters for provisioning a service instance with Terraform" caption-side="bottom"
 
     If you manage multiple service instances in the `main.tf` file, make sure to set the same `signature_server_url` parameter for each instance. Otherwise, you will not be able to perform the actions successfully.
     {: important}

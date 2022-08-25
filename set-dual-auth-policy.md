@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-25"
 
 keywords: set deletion policy, dual authorization, policy-based, key deletion
 
@@ -88,8 +88,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
     [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
     {: note}
 
-2. Retrieve the dual authorization policy for a specified key by running the
-following cURL command.
+2. Retrieve the dual authorization policy for a specified key by running the following cURL command.
 
     ```cURL
     curl -X GET \
@@ -100,88 +99,17 @@ following cURL command.
     ```
     {: codeblock}
 
-    Replace the variables in the example request according to the following
-    table.
+    Replace the variables in the example request according to the following table.
 
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
+    | Variable | Description |
+    | --- | --- |
+    | `key_ID` | **Required.** The unique identifier for the key that has an existing rotation policy. |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    {: caption="Table 1. Describes the variables that are needed to view a dual authorization policy for a key with the {{site.data.keyword.hscrypto}} key management service API" caption-side="bottom"}
 
-      <tr>
-        <td>
-          <varname>key_ID</varname>
-        </td>
-        <td>
-          <strong>Required.</strong> The unique identifier for the key that has
-          an existing rotation policy.
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>region</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The region abbreviation, such as
-            <code>us-south</code> or <code>eu-de</code>, that represents the
-            geographic area where your
-            {{site.data.keyword.hscrypto}} instance
-            resides.
-          </p>
-          <p>
-            For more information, see
-            [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
-          </p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>IAM_token</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}}
-            access token. Include the full contents of the <code>IAM</code>
-            token, including the Bearer value, in the cURL request.
-          </p>
-          <p>
-            For more information, see
-            [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-          </p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>instance_ID</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The unique identifier that is assigned to
-            your {{site.data.keyword.hscrypto}}
-            instance.
-          </p>
-          <p>
-            For more information, see
-            [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
-          </p>
-        </td>
-      </tr>
-
-      <caption>
-        Table 1. Describes the variables that are needed to view a dual
-        authorization policy for a key with the
-        {{site.data.keyword.hscrypto}} key management service API.
-      </caption>
-    </table>
-
-    A successful request returns dual authorization policy details that are
-    associated with your key. The following JSON object shows an example
-    response for a key that has an existing dual authorization policy.
+    A successful request returns dual authorization policy details that are associated with your key. The following JSON object shows an example response for a key that has an existing dual authorization policy.
 
     ```json
     {
@@ -242,8 +170,7 @@ be reverted.
     [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
     {: note}
 
-2. Enable dual authorization for a specified key by running the following cURL
-command.
+2. Enable dual authorization for a specified key by running the following cURL command.
 
     ```cURL
     curl -X PUT \
@@ -268,83 +195,15 @@ command.
     ```
     {: codeblock}
 
-    Replace the variables in the example request according to the following
-    table.
+    Replace the variables in the example request according to the following table.
 
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>key_ID</varname>
-        </td>
-        <td>
-          <strong>Required.</strong> The unique identifier for the key that you
-          want to create a dual authorization policy for.
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>region</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The region abbreviation, such as
-            <code>us-south</code> or <code>eu-de</code>, that represents the
-            geographic area where your
-            {{site.data.keyword.hscrypto}} instance resides.
-          </p>
-          <p>
-            For more information, see
-            [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints).
-          </p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-        <varname>IAM_token</varname>
-        </td>
-        <td>
-        <p>
-          <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}}
-          access token. Include the full contents of the <code>IAM</code> token,
-          including the Bearer value, in the cURL request.
-        </p>
-        <p>
-          For more information, see
-          [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-        </p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>instance_ID</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The unique identifier that is assigned to
-            your {{site.data.keyword.hscrypto}}
-            instance.
-          </p>
-          <p>
-            For more information, see
-            [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
-          </p>
-        </td>
-      </tr>
-
-      <caption>
-        Table 2. Describes the variables that are needed to update a dual
-        authorization policy with the
-        {{site.data.keyword.hscrypto}} key management service API.
-      </caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `key_ID` | **Required.** The unique identifier for the key that you want to create a dual authorization policy for. |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    {: caption="Table 2. Describes the variables that are needed to update a dual authorization policy with the {{site.data.keyword.hscrypto}} key management service API" caption-side="bottom"}
 
     A successful request returns a `200 OK` response with dual authorization
     policy details for your key. The following JSON object shows an example

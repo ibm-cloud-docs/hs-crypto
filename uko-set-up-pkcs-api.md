@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-05-10"
+lastupdated: "2022-08-25"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -158,79 +158,24 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
 
     Replace the variables in the example according to the following table:
 
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><em>instance_id</em></td>
-        <td>The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. You can get the identifier through <strong>Overview</strong> &gt; <strong>Instance</strong> in the {{site.data.keyword.cloud_notm}} console, or you can retrieve it with the {{site.data.keyword.cloud_notm}} Resource Controller API. For detailed instructions, see <a href="/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
-      </tr>
-      <tr>
-        <td><em>EP11_endpoint_URL</em></td>
-        <td>The {{site.data.keyword.hscrypto}} Enterprise PKCS #11 (EP11) API endpoint. You can get it through <strong>Overview</strong> &gt; <strong>Connect</strong> &gt; <strong>EP11 endpoint URL</strong> in the {{site.data.keyword.cloud_notm}} console, or you can dynamically <a href="/apidocs/hs-crypto#getinstance" target="_blank">retrieve the endpoint URL</a> with the API. Depending on whether you are using a public or <a href="/docs/hs-crypto?topic=hs-crypto-secure-connection">private network</a>, use the public or private EP11 endpoint URL. </td>
-      </tr>
-      <tr>
-        <td><em>EP11_endpoint_port_number</em></td>
-        <td>The port number of the EP11 API endpoint. It is located after the colon in the endpoint URL.</td>
-      </tr>
-      <tr>
-        <td><em>enable_mtls</em></td>
-        <td>Valid values are <code>true</code> or <code>false</code> to indicate whether you want to enable mutual TLS to add a second layer of authentication for PKCS #11 API access. By default, set it <code>false</code> as EP11 requires server-only authentication. For more information about the mutual TLS connections, see <a href="/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11">Enabling the second layer of authentication for EP11 connections</a>.</td>
-      </tr>
-      <tr>
-        <td><em>client_certificate</em></td>
-        <td>If you enable mutual TLS connections, specify the file path of the client certificate that is uploaded to your instance by the certificate administrator. Otherwise, keep this field empty.</td>
-      </tr>
-      <tr>
-        <td><em>client_certificate_private_key</em></td>
-        <td>If you enable mutual TLS connections, specify the file path of the client certificate private key that is used to sign the certificate. Otherwise, keep this field empty.</td>
-      </tr>
-      <tr>
-        <td><em>SO_user_name</em></td>
-        <td>The name for the Security Officer (SO) user type. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. For more information about the PKCS #11 user types, see <a href="http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984" target="_blank">PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users</a>.</td>
-      </tr>
-      <tr>
-        <td><em>normal_user_name</em></td>
-        <td>The name for the normal user type. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. For more information about the PKCS #11 user types, see <a href="http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984" target="_blank">PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users</a>.</td>
-      </tr>
-      <tr>
-        <td><em>private_keystore_spaceid</em></td>
-        <td>
-        <p>The 128-bit <a href="https://www.cryptosys.net/pki/uuid-rfc4122.html" target="_blank">Universally Unique IDentifier (UUID)</a> of the private keystore. You can generate the UUID with a third-party tool, such as <a href="https://www.uuidgenerator.net/" target="_blank">UUID generator</a>.</p> <p>{{site.data.keyword.hscrypto}} provides you with two database-backed EP11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access.</p>
-        </td>
-      </tr>
-      <tr>
-        <td><em>private_keystore_password</em></td>
-        <td>Authorized sessions can be used by enabling the <code>sessionauth</code> configuration option. If the <code>sessionauth</code> option is enabled, a text password that is 6-8 characters in length is required for the <code>tokenspaceIDPassword</code> field. Authorized sessions are specific to the HSM and are used in the PKCS #11 flow to login and logout, and they are required for authenticated key operations. All keys generated using authorized sessions are stored in an authenticated and encrypted keystore. The <code>tokenspaceIDPassword</code> field is used to protect the keys in an authenticated and encrypted keystore. For each service instance, a maximum of five authenticated keystores are supported.</td>
-      </tr>
-      <tr>
-        <td><em>anonymous_user_name</em></td>
-        <td>The name for the anonymous user. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. If a user does not log in by using the <code>C_Login</code> Cryptoki function, then the user is known as an anonymous user. For more information about the PKCS #11 user types, see <a href="http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984" target="_blank">PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users</a>.</td>
-      </tr>
-      <tr>
-        <td><em>public_keystore_spaceid</em></td>
-        <td>
-          <p>The 128-bit <a href="https://www.cryptosys.net/pki/uuid-rfc4122.html" target="_blank">Universally Unique IDentifier (UUID)</a> of the public keystore. You can generate the UUID with a third-party tool, such as <a href="https://www.uuidgenerator.net/" target="_blank">UUID generator</a>.</p> <p>{{site.data.keyword.hscrypto}} provides you with two database-backed EP11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access.</p>
-        </td>
-      </tr>
-      <tr>
-        <td><em>apikey_for_anonymous_user</em></td>
-        <td>
-          The service ID API key that you create for the anonymous user type in the [previous prerequisites step](#uko-prerequisite-pkcs-api).
-        </td>
-      </tr>
-      <tr>
-        <td><em>logging_level</em></td>
-        <td>The supported logging levels, in an increasing order of verboseness: <code>panic</code>, <code>fatal</code>, <code>error</code>, <code>warning</code>/<code>warn</code>, <code>info</code>, <code>debug</code>, and <code>trace</code>. The Default value is <code>warning</code>. For more information about the logging levels, see <a href="http://www.thejoyofcode.com/Logging_Levels_and_how_to_use_them.aspx" target="_blank">Logging levels</a>.</td>
-      </tr>
-      <tr>
-        <td><em>log_file_path</em></td>
-        <td>The full path of your logging file. It saves all the logs that are generated when your applications interact with the {{site.data.keyword.hscrypto}} cloud HSM to execute PKCS #11 functions.</td>
-      </tr>
-      <caption>Table 1. Describes the variables that are needed to create the PKCS #11 configuration file.</caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `instance_id` | The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. You can get the identifier through **Overview** &gt; **Instance** in the {{site.data.keyword.cloud_notm}} console, or you can retrieve it with the {{site.data.keyword.cloud_notm}} Resource Controller API. For detailed instructions, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID). |
+    | `EP11_endpoint_URL` | The {{site.data.keyword.hscrypto}} Enterprise PKCS #11 (EP11) API endpoint. You can get it through **Overview** &gt; **Connect** &gt; **EP11 endpoint URL** in the {{site.data.keyword.cloud_notm}} console, or you can dynamically [retrieve the endpoint URL](/apidocs/hs-crypto#getinstance) with the API. Depending on whether you are using a public or [private network](/docs/hs-crypto?topic=hs-crypto-secure-connection), use the public or private EP11 endpoint URL. |
+    | `EP11_endpoint_port_number` | The port number of the EP11 API endpoint. It is located after the colon in the endpoint URL. |
+    | `enable_mtls` | Valid values are `true` or `false` to indicate whether you want to enable mutual TLS to add a second layer of authentication for PKCS #11 API access. By default, set it `false` as EP11 requires server-only authentication. For more information about the mutual TLS connections, see [Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11). |
+    | `client_certificate` | If you enable mutual TLS connections, specify the file path of the client certificate that is uploaded to your instance by the certificate administrator. Otherwise, keep this field empty. |
+    | `client_certificate_private_key` | If you enable mutual TLS connections, specify the file path of the client certificate private key that is used to sign the certificate. Otherwise, keep this field empty. |
+    | `SO_user_name` | The name for the Security Officer (SO) user type. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. For more information about the PKCS #11 user types, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984). |
+    | `normal_user_name` | The name for the normal user type. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. For more information about the PKCS #11 user types, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984). |
+    | `private_keystore_spaceid` | The 128-bit [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html) of the private keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/). \n {{site.data.keyword.hscrypto}} provides you with two database-backed EP11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access. |
+    | `private_keystore_password` | Authorized sessions can be used by enabling the `sessionauth` configuration option. If the `sessionauth` option is enabled, a text password that is 6-8 characters in length is required for the `tokenspaceIDPassword` field. Authorized sessions are specific to the HSM and are used in the PKCS #11 flow to login and logout, and they are required for authenticated key operations. All keys generated using authorized sessions are stored in an authenticated and encrypted keystore. The `tokenspaceIDPassword` field is used to protect the keys in an authenticated and encrypted keystore. For each service instance, a maximum of five authenticated keystores are supported. |
+    | `anonymous_user_name` | The name for the anonymous user. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. If a user does not log in by using the `C_Login` Cryptoki function, then the user is known as an anonymous user. For more information about the PKCS #11 user types, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984). |
+    | `public_keystore_spaceid` | The 128-bit [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html) of the public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/). \n {{site.data.keyword.hscrypto}} provides you with two database-backed EP11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access. |
+    | `apikey_for_anonymous_user` | The service ID API key that you create for the anonymous user type in the [previous prerequisites step](#uko-prerequisite-pkcs-api). |
+    | `logging_level` | The supported logging levels, in an increasing order of verboseness: `panic`, `fatal`, `error`, `warning`/`warn`, `info`, `debug`, and `trace`. The Default value is `warning`. For more information about the logging levels, see [Logging levels](http://www.thejoyofcode.com/Logging_Levels_and_how_to_use_them.aspx). |
+    | `log_file_path` | The full path of your logging file. It saves all the logs that are generated when your applications interact with the {{site.data.keyword.hscrypto}} cloud HSM to execute PKCS #11 functions. |
+    {: caption="Table 1. Describes the variables that are needed to create the PKCS #11 configuration file" caption-side="bottom"}
 
     To encrypt and authenticate the keystore that is used by PKCS #11, enable the `sessionauth` parameter and configure the password for the keystore. For each service instance, a maximum of five authenticated keystores are supported. The password can be 6-8 characters. The keystore passwords are not stored in the service instance. You, as the keystore administrator, are responsible for maintaining a local copy of the passwords. If a password is lost, you need to contact IBM Support to reset the keystore, which means all data in the keystore is cleared.
     {: note}

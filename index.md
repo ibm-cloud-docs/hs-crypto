@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-06-28"
+lastupdated: "2022-08-25"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -94,24 +94,11 @@ Complete the following steps to create your first cryptographic key.
 
     Specify the key's details:
 
-    <table>
-      <tr>
-        <th>Setting</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <strong>Root key</strong> or <strong>Standard key</strong>.</td>
-      </tr>
-      <tr>
-        <td>Key name</td>
-        <td>
-          <p>A unique, human-readable alias for easy identification of your key.</p>
-          <p>To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location.</p>
-        </td>
-      </tr>
-      <caption>Table 1. Description of the settings to create a key.</caption>
-    </table>
+    | Setting | Description |
+    | --- | --- |
+    | Key type | The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select **Root key** or **Standard key**. |
+    | Key name | A unique, human-readable alias for easy identification of your key. To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location. |
+    {: caption="Table 1. Description of the settings to create a key" caption-side="bottom"}
 
 3. When you finish filling out the key's details, click **Add key** to confirm.
 
@@ -129,28 +116,12 @@ Complete the following steps to add an existing key.
 
     Specify the key's details:
 
-    <table>
-      <tr>
-        <th>Setting</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <strong>Root key</strong> or <strong>Standard key</strong>.</td>
-      </tr>
-      <tr>
-        <td>Key name</td>
-        <td>
-          <p>A unique, human-readable alias for easy identification of your key.</p>
-          <p>To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location.</p>
-        </td>
-      </tr>
-      <tr>
-        <td>Key material</td>
-        <td>The key material, such as a symmetric key, that you want to store in the {{site.data.keyword.hscrypto}} service. The key that you provide must be base64 encoded.</td>
-      </tr>
-      <caption>Table 2. Description of the settings to import your own key.</caption>
-    </table>
+    | Setting | Description |
+    | --- | --- |
+    | Key type | The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select **Root key** or **Standard key**. |
+    | Key name | A unique, human-readable alias for easy identification of your key. To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location. |
+    | Key material | The key material, such as a symmetric key, that you want to store in the {{site.data.keyword.hscrypto}} service. The key that you provide must be base64 encoded. |
+    {: caption="Table 2. Description of the settings to import your own key" caption-side="bottom"}
 
 3. When you finish filling out the key's details, click **Import key** to confirm.
 
@@ -436,24 +407,11 @@ Complete the following steps to create your first cryptographic key.
 
     Specify the key's details:
 
-    <table>
-      <tr>
-        <th>Setting</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <strong>Root key</strong> or <strong>Standard key</strong>.</td>
-      </tr>
-      <tr>
-        <td>Key name</td>
-        <td>
-          <p>A unique, human-readable alias for easy identification of your key.</p>
-          <p>To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location.</p>
-        </td>
-      </tr>
-      <caption>Table 1. Description of the settings to create a key.</caption>
-    </table>
+    | Setting | Description |
+    | --- | --- |
+    | Key type | The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select **Root key** or **Standard key**. |
+    | Key name | A unique, human-readable alias for easy identification of your key. To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location. |
+    {: caption="Table 1. Description of the settings to create a key" caption-side="bottom"}
 
 3. When you finish filling out the key's details, click **Add key** to confirm.
 
@@ -473,28 +431,12 @@ Complete the following steps to add an existing key.
 
     Specify the key's details:
 
-    <table>
-      <tr>
-        <th>Setting</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Key type</td>
-        <td>The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select <strong>Root key</strong> or <strong>Standard key</strong>.</td>
-      </tr>
-      <tr>
-        <td>Key name</td>
-        <td>
-          <p>A unique, human-readable alias for easy identification of your key.</p>
-          <p>To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location.</p>
-        </td>
-      </tr>
-      <tr>
-        <td>Key material</td>
-        <td>The key material, such as a symmetric key, that you want to store in the {{site.data.keyword.hscrypto}} service. The key that you provide must be base64 encoded.</td>
-      </tr>
-      <caption>Table 2. Description of the settings to import your own key.</caption>
-    </table>
+    | Setting | Description |
+    | --- | --- |
+    | Key type | The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. You can select **Root key** or **Standard key**. |
+    | Key name | A unique, human-readable alias for easy identification of your key. To protect your privacy, ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location. |
+    | Key material | The key material, such as a symmetric key, that you want to store in the {{site.data.keyword.hscrypto}} service. The key that you provide must be base64 encoded. |
+    {: caption="Table 2. Description of the settings to import your own key" caption-side="bottom"}
 
 3. When you finish filling out the key's details, click **Import key** to confirm.
 

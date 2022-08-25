@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-25"
 
 keywords: create import token, secure import, key material, key wrapping key, import token api, bring your own key, byok
 
@@ -62,40 +62,15 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/import_token
 
     Replace the variables in the example request according to the following table.
 
-      <table>
-        <tr>
-          <th>Variable</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td><varname>region</varname></td>
-          <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
-        </tr>
-        <tr>
-          <td><varname>port</varname></td>
-          <td><strong>Required.</strong> The port number of the API endpoint.</td>
-        </tr>
-        <tr>
-          <td><varname>IAM_token</varname></td>
-          <td><strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
-        </tr>
-        <tr>
-          <td><varname>instance_ID</varname></td>
-          <td><strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an instance ID</a>.</td>
-        </tr>
-        <tr>
-          <td><varname>expiration_time</varname></td>
-          <td>
-            <p>The time in seconds from the creation of an import token that determines how long it remains valid.</p>
-            <p>The minimum value is 300 seconds (5 minutes), and the maximum value is 86400 (24 hours). The default value is 600 (10 minutes).</p>
-          </td>
-        </tr>
-        <tr>
-          <td><varname>use_count</varname></td>
-          <td>The number of times that an import token can be retrieved within the expiration time before it is no longer accessible. The default value is 1.</td>
-        </tr>
-          <caption>Table 1. Describes the variables that are needed to create an import token with the key management service API</caption>
-      </table>
+    | Variable | Description |
+    | --- | --- |
+    | region | **Required.** The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | port | **Required.** The port number of the API endpoint. |
+    | IAM_token | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | instance_ID | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | expiration_time | The time in seconds from the creation of an import token that determines how long it remains valid. The minimum value is 300 seconds (5 minutes), and the maximum value is 86400 (24 hours). The default value is 600 (10 minutes). |
+    | use_count | The number of times that an import token can be retrieved within the expiration time before it is no longer accessible. The default value is 1. |
+    {: caption="Table 1. Describes the variables that are needed to create an import token with the key management service API" caption-side="bottom"}
 
     A successful `POST api/v2/import_token` request creates an import token for your service instance. The response body contains the metadata that is associated with your import token, such as the creation date and policy details. The following snippet shows example output.
 
@@ -151,29 +126,13 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/import_token
 
     Replace the variables in the example request according to the following table.
 
-      <table>
-        <tr>
-          <th>Variable</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td><varname>region</varname></td>
-          <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
-        </tr>
-        <tr>
-          <td><varname>port</varname></td>
-          <td><strong>Required.</strong> The port number of the API endpoint.</td>
-        </tr>
-        <tr>
-          <td><varname>IAM_token</varname></td>
-          <td><strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
-        </tr>
-        <tr>
-          <td><varname>instance_ID</varname></td>
-          <td><strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
-        </tr>
-        <caption>Table 1. Describes the variables that are needed to retrieve an import token with the key management service API</caption>
-      </table>
+    | Variable | Description |
+    | --- | --- |
+    | region | **Required.** The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | port | **Required.** The port number of the API endpoint. |
+    | IAM_token | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | instance_ID | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    {: caption="Table 1. Describes the variables that are needed to retrieve an import token with the key management service API" caption-side="bottom"}
 
     A successful `GET api/v2/import_token` request retrieves the import token for your service instance. The response body contains the metadata that is associated with your import token, such as the creation date and policy details. The following snippet shows example output with truncated values.
 

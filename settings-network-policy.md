@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-25"
 
 keywords: instance settings, service settings, network access policies
 
@@ -104,81 +104,15 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
 
     Replace the variables in the example request according to the following table.
 
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>
-          <varname>region</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
-          </p>
-          <p>
-            For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td><varname>port</varname></td>
-        <td><strong>Required.</strong> The port number of the API endpoint.</td>
-      </tr>
-      <tr>
-        <td>
-          <varname>IAM_token</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request.
-          </p>
-          <p>
-            For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <varname>instance_ID</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service
-            instance.
-          </p>
-          <p>
-            For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <varname>enabled</varname>
-        </td>
-        <td>
-          <strong>Required.</strong> Set to <code>true</code> to enable a network access policy.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <varname>access_type</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The network access policy to apply to your {{site.data.keyword.hscrypto}} instance. Acceptable values are <code>public-and-private</code> or <code>private-only</code>.
-          </p>
-          <p>
-            After the network access policy is set to <code>private-only</code>, you cannot access your instance from the public network and cannot view or manage keys with the {{site.data.keyword.cloud_notm}} console. However, you can still adjust the network setting later using the API or CLI.
-          </p>
-        </td>
-      </tr>
-
-      <caption>
-        Table 1. Describes the variables that are needed to set a network access policy at the instance level.
-      </caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `port` | **Required.** The port number of the API endpoint. |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `enabled` | **Required.** Set to `true` to enable a network access policy. |
+    | `access_type` | **Required.** The network access policy to apply to your {{site.data.keyword.hscrypto}} instance. Acceptable values are `public-and-private` or `private-only`. After the network access policy is set to `private-only`, you cannot access your instance from the public network and cannot view or manage keys with the {{site.data.keyword.cloud_notm}} console. However, you can still adjust the network setting later using the API or CLI. |
+    {: caption="Table 1. Describes the variables that are needed to set a network access policy at the instance level" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which indicates that your {{site.data.keyword.hscrypto}} instance
     now enforces a network access policy. API requests to the service are restricted to the policy you set.
@@ -249,72 +183,14 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
 
     Replace the variables in the example request according to the following table.
 
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>region</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
-          </p>
-          <p>
-            For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.
-          </p>
-        </td>
-      </tr>
-
-      <tr>
-        <td><varname>port</varname></td>
-        <td><strong>Required.</strong> The port number of the API endpoint.</td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>IAM_token</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request.
-          </p>
-          <p>
-            For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.
-          </p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>instance_ID</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance.
-          </p>
-          <p>
-            For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.
-          </p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>enabled</varname>
-        </td>
-        <td>
-          <strong>Required.</strong> Set to <code>false</code> to remove the network access policy, that is, the policy is not enforced and your service instance is back to the default state where both the public and private network access are allowed.
-        </td>
-      </tr>
-
-      <caption>
-        Table 2. Describes the variables that are needed to disable a network access policy at the instance level.
-      </caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `port` | **Required.** The port number of the API endpoint. |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `enabled` | **Required.** Set to `false` to remove the network access policy, that is, the policy is not enforced and your service instance is back to the default state where both the public and private network access are allowed. |
+    {: caption="Table 2. Describes the variables that are needed to disable a network access policy at the instance level" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which indicates that the network access policy of your {{site.data.keyword.hscrypto}} instance is updated.
 

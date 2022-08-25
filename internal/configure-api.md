@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-08-25"
 
 keywords: create test instance, configure api for test, test hpcs, test service onboarding hpcs, wrap key api, upwrap key api
 
@@ -83,77 +83,16 @@ curl -X POST \
 
 Replace the variables in the example request according to the following table.
 
-<table>
-    <tr>
-    <th>Variable</th>
-    <th>Description</th>
-    </tr>
-    <tr>
-    <td>
-      <varname>region</varname>
-    </td>
-    <td>
-      <p>
-        <strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides.
-      </p>
-      <p>
-        For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.
-      </p>
-    </td>
-    </tr>
-    <tr>
-    <td><varname>port</varname></td>
-    <td><strong>Required.</strong> The port number of the API endpoint.</td>
-    </tr>
-    <tr>
-    <td>
-      <varname>IAM_token</varname>
-    </td>
-    <td>
-      <strong>Required.</strong> Your service to service access token. Include the full contents of the token, including the <code>Bearer</code> value, in the cURL request.
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <varname>instance_ID</varname>
-    </td>
-    <td>
-      <p>
-        <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance.
-      </p>
-      <p>
-        For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.
-      </p>
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <varname>correlation_ID</varname>
-    </td>
-    <td>
-      The unique identifier that is used to track and correlate transactions.
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <varname>key_alias</varname>
-    </td>
-    <td>
-      <strong>Required.</strong> A unique, human-readable name for easy identification of your key.
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <varname>key_description</varname>
-    </td>
-    <td>
-      An extended description of your key.
-    </td>
-    </tr>
-    <caption>
-    Table 1. Describes the variables needed to create a root key.
-    </caption>
-</table>
+| Variable | Description |
+| --- | --- |
+| `region` | **Required.** The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+| `port` | **Required.** The port number of the API endpoint. |
+| `IAM_token` | **Required.** Your service to service access token. Include the full contents of the token, including the `Bearer` value, in the cURL request. |
+| `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+| `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
+| `key_alias` | **Required.** A unique, human-readable name for easy identification of your key. |
+| `key_description` | An extended description of your key. |
+{: caption="Table 1. Describes the variables needed to create a root key" caption-side="bottom"}
 
 Verify that the key was created by running the following call to browse the keys in your {{site.data.keyword.hscrypto}} instance.
 
@@ -199,78 +138,16 @@ curl -X POST \
 
 Replace the variables in the example request according to the following table.
 
-<table>
-    <tr>
-    <th>Variable</th>
-    <th>Description</th>
-    </tr>
-    <tr>
-    <td>
-      <varname>region</varname>
-    </td>
-    <td>
-      <p>
-        <strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
-      </p>
-      <p>
-        For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.
-      </p>
-    </td>
-    </tr>
-    <tr>
-    <td><varname>port</varname></td>
-    <td><strong>Required.</strong> The port number of the API endpoint.</td>
-    </tr>
-    <tr>
-    <td>
-      <varname>key_ID</varname>
-    </td>
-    <td>
-      <strong>Required.</strong> The unique identifier for the root key that you want to use for wrapping.
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <varname>IAM_token</varname>
-    </td>
-    <td>
-      <strong>Required.</strong> Your service to service access token. Include the full contents of the token, including the <code>Bearer</code> value, in the cURL request.
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <varname>instance_ID</varname>
-    </td>
-    <td>
-      <p>
-        <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance.
-      </p>
-      <p>
-        For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.
-      </p>
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <varname>correlation_ID</varname>
-    </td>
-    <td>
-      The unique identifier that is used to track and correlate transactions.
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <varname>data_key</varname>
-    </td>
-    <td>
-      The key material of the DEK that you want to manage and protect. The <code>plaintext</code> value must be base64 encoded. To generate a new DEK, omit the <code>plaintext</code> attribute. The service generates a random plaintext (32 bytes) and wraps that value. In the response, <code>plaintext</code> contains the unwrapped DEK and <code>ciphertext</code> contains the wrapped value.
-    </td>
-    </tr>
-    <caption>
-    Table 2. Describes the variables needed to wrap a specified key in
-    {{site.data.keyword.hscrypto}}.
-    </caption>
-</table>
+| Variable | Description |
+| --- | --- |
+| `region` | **Required.** The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+| `port` | **Required.** The port number of the API endpoint. |
+| `key_ID` | **Required.** The unique identifier for the root key that you want to use for wrapping. |
+| `IAM_token` | **Required.** Your service to service access token. Include the full contents of the token, including the `Bearer` value, in the cURL request. |
+| `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+| `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
+| `data_key` | The key material of the DEK that you want to manage and protect. The `plaintext` value must be base64 encoded. To generate a new DEK, omit the `plaintext` attribute. The service generates a random plaintext (32 bytes) and wraps that value. In the response, `plaintext` contains the unwrapped DEK and `ciphertext` contains the wrapped value. |
+{: caption="Table 2. Describes the variables needed to wrap a specified key in {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 
 The wrapped data encryption key (wDEK), containing the base64 encoded key material, is returned in the response entity-body. The following JSON object shows an example returned value.
 
@@ -312,78 +189,16 @@ curl -X POST \
 
 Replace the variables in the example request according to the following table.
 
-<table>
-    <tr>
-    <th>Variable</th>
-    <th>Description</th>
-    </tr>
-    <tr>
-    <td>
-      <varname>region</varname>
-    </td>
-    <td>
-      <p>
-        <strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
-      </p>
-      <p>
-        For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.
-      </p>
-    </td>
-    </tr>
-    <tr>
-    <td><varname>port</varname></td>
-    <td><strong>Required.</strong> The port number of the API endpoint.</td>
-    </tr>
-    <tr>
-    <td>
-      <varname>key_ID</varname>
-    </td>
-    <td>
-      <strong>Required.</strong> The unique identifier for the root key that you used for wrapping.
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <varname>IAM_token</varname>
-    </td>
-    <td>
-      <strong>Required.</strong> Your service to service access token. Include the full contents of the token, including the <code>Bearer</code> value, in the cURL request.
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <varname>instance_ID</varname>
-    </td>
-    <td>
-      <p>
-        <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance.
-      </p>
-      <p>
-        For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.
-      </p>
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <varname>correlation_ID</varname>
-    </td>
-    <td>
-      The unique identifier that is used to track and correlate transactions.
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <varname>wrapped_data_key</varname>
-    </td>
-    <td>
-      <strong>Required.</strong> The <code>ciphertext</code> value returned during a wrap operation.
-    </td>
-    </tr>
-    <caption>
-    Table 3. Describes the variables needed to unwrap keys in
-    {{site.data.keyword.hscrypto}}.
-    </caption>
-</table>
+| Variable | Description |
+| --- | --- |
+| `region` | **Required.** The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+| `port` | **Required.** The port number of the API endpoint. |
+| `key_ID` | **Required.** The unique identifier for the root key that you used for wrapping. |
+| `IAM_token` | **Required.** Your service to service access token. Include the full contents of the token, including the `Bearer` value, in the cURL request. |
+| `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+| `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
+| `wrapped_data_key` | **Required.** The `ciphertext` value returned during a wrap operation. |
+{: caption="Table 3. Describes the variables needed to unwrap keys in {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 
 The original base64 encoded key material is returned in the response entity-body. The following JSON object shows an example returned value.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-25"
 
 keywords: view resoure, root key encryption resources, protected resource, protected service, envelope encryption, key registration, view registration, list registrations
 
@@ -59,61 +59,26 @@ You can browse the registrations that are available between your {{site.data.key
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
 5. To view the protected resources of a specific root key, click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key, and select **View associated resources** to browse all resources protected by the key.
 
-    <table>
-    <tr>
-      <th>Column</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>Resource name</code></td>
-      <td>The name of the cloud resource, such as a Cloud Object Storage bucket, that is associated with the key.</td>
-    </tr>
-    <tr>
-      <td><code>Service name</code></td>
-      <td>The name of the {{site.data.keyword.cloud_notm}} service instance that the resource resides in.</td>
-    </tr>
-    <tr>
-      <td><code>Retention policy</code></td>
-      <td>Whether the cloud resource has a retention policy. If the value is <code>True</code>, a retention policy is enabled for the cloud resource, and the key that is associated with the cloud resource can't be deleted. If the value is <code>False</code>, the retention policy isn't enabled.</td>
-    </tr>
-    <caption>Table 2. Describes the <strong>View associated resources</strong> table</caption>
-    </table>
+    | Column | Description |
+    | --- | --- |
+    | `Resource name` | The name of the cloud resource, such as a Cloud Object Storage bucket, that is associated with the key. |
+    | `Service name` | The name of the {{site.data.keyword.cloud_notm}} service instance that the resource resides in. |
+    | `Retention policy` | Whether the cloud resource has a retention policy. If the value is `True`, a retention policy is enabled for the cloud resource, and the key that is associated with the cloud resource can't be deleted. If the value is `False`, the retention policy isn't enabled. |
+    {: caption="Table 2. Describes the table of viewing associated resources" caption-side="bottom"}
 
 6. To view details of each resource, expand the resource details by clicking the caret (^) icon under the `Resource name` column.
 
     The following table describes the registration details.
 
-    <table>
-    <tr>
-      <th>Field</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>Created</code></td>
-      <td>The date and time that the resource was first associated with the key. </td>
-    </tr>
-    <tr>
-      <td><code>Last updated</code></td>
-      <td>The date and time that the registration was updated.</td>
-    </tr>
-    <tr>
-      <td><code>Description</code></td>
-      <td>The description of the registration.</td>
-    </tr>
-    <tr>
-      <td><code>Key version ID</code></td>
-      <td>The version of the root key that's protecting the cloud resource.</td>
-    </tr>
-    <tr>
-      <td><code>Key version date</code></td>
-      <td>The date and time that the root key version was updated.</td>
-    </tr>
-    <tr>
-      <td><code>Cloud resource name</code></td>
-      <td>Represents the cloud resource that is associated with the key, including the Cloud Resource Name (CRN), version, cname, ctype, and so on. </td>
-    </tr>
-    <caption>Table 3. Describes the properties that are associated with a resource</caption>
-    </table>
+    | Field | Description |
+    | --- | --- |
+    | `Created` | The date and time that the resource was first associated with the key. |
+    | `Last updated` | The date and time that the registration was updated. |
+    | `Description` | The description of the registration. |
+    | `Key version ID` | The version of the root key that's protecting the cloud resource. |
+    | `Key version date` | The date and time that the root key version was updated. |
+    | `Cloud resource name` | Represents the cloud resource that is associated with the key, including the Cloud Resource Name (CRN), `version`, `cname`, `ctype`, and so on. |
+    {: caption="Table 3. Describes the properties that are associated with a resource" caption-side="bottom"}
 
 You can use the search field to search for any resources associated with the root key either with the resource name or the key version ID.
 {: tip}
@@ -126,69 +91,28 @@ You can use the search field to search for any resources associated with the roo
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS associated resources** page, use the **Key management service associated resources** table to browse the registrations in your service.
 
-    <table>
-    <tr>
-      <th>Column</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>Resource name</code></td>
-      <td>The name of the cloud resource, such as a Cloud Object Storage bucket, that is associated with the key.</td>
-    </tr>
-    <tr>
-      <td><code>Key name</code></td>
-      <td>The human-readable name that identifies the root key that is associated with the specified cloud resource.</td>
-    </tr>
-    <tr>
-      <td><code>Key ID</code></td>
-      <td>The ID that identifies the root key that is associated with the specified cloud resource.</td>
-    </tr>
-    <tr>
-      <td><code>Service name</code></td>
-      <td>The name of the {{site.data.keyword.cloud_notm}} service instance that the resource resides in.</td>
-    </tr>
-    <tr>
-      <td><code>Retention policy</code></td>
-      <td>Indicates whether the cloud resource can be erased. If the value is <code>Enabled</code>, the cloud resource can't be erased, and the key that is associated with the cloud resource can't be deleted. If the value is <code>Disabled</code>, the cloud resource can be erased. You can delete the key that is associated with the cloud resource if needed.</td>
-    </tr>
-    <caption>Table 4. Describes the <strong>Associated resources</strong> table</caption>
-    </table>
+    | Column | Description |
+    | --- | --- |
+    | `Resource name` | The name of the cloud resource, such as a Cloud Object Storage bucket, that is associated with the key. |
+    | `Key name` | The human-readable name that identifies the root key that is associated with the specified cloud resource. |
+    | `Key ID` | The ID that identifies the root key that is associated with the specified cloud resource. |
+    | `Service name` | The name of the {{site.data.keyword.cloud_notm}} service instance that the resource resides in. |
+    | `Retention policy` | Indicates whether the cloud resource can be erased. If the value is `Enabled`, the cloud resource can't be erased, and the key that is associated with the cloud resource can't be deleted. If the value is `Disabled`, the cloud resource can be erased. You can delete the key that is associated with the cloud resource if needed. | 
+    {: caption="Table 4. Describes the table of associated resources" caption-side="bottom"}
 
 5. Click the caret (^) icon under the `Resource name` column to view a list of details for a specific registration.
 
     The following table describes the registration details.
 
-    <table>
-    <tr>
-      <th>Field</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>Created</code></td>
-      <td>The date and time that the resource was first associated with the key. </td>
-    </tr>
-    <tr>
-      <td><code>Last updated</code></td>
-      <td>The date and time that the registration was updated.</td>
-    </tr>
-    <tr>
-      <td><code>Description</code></td>
-      <td>The description of the registration.</td>
-    </tr>
-    <tr>
-      <td><code>Key version ID</code></td>
-      <td>The version of the root key that's protecting the cloud resource.</td>
-    </tr>
-    <tr>
-      <td><code>Key version date</code></td>
-      <td>The date and time that the root key version was updated.</td>
-    </tr>
-    <tr>
-      <td><code>Cloud resource name</code></td>
-      <td>Represents the cloud resource that is associated with the key, including the Cloud Resource Name (CRN), version, cname, ctype, and so on.</td>
-    </tr>
-    <caption>Table 5. Describes the properties that are associated with a resource</caption>
-    </table>
+    | Field | Description |
+    | --- | --- |
+    | `Created` | The date and time that the resource was first associated with the key. |
+    | `Last updated` | The date and time that the registration was updated. |
+    | `Description` | The description of the registration. |
+    | `Key version ID` | The version of the root key that's protecting the cloud resource. |
+    | `Key version date` | The date and time that the root key version was updated. |
+    | `Cloud resource name` | Represents the cloud resource that is associated with the key, including the Cloud Resource Name (CRN), `version`, `cname`, `ctype`, and so on. |
+    {: caption="Table 5. Describes the properties that are associated with a resource" caption-side="bottom"}
 
 Besides searching for a resource, you can also for resources by Resource Name, key ID, and retention policy. To do so, click the `Filter` button, select the filter options from the list, and click **Apply**.
 {: tip}
@@ -266,29 +190,13 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/registr
 
     Replace the variables in the example request according to the following table.
 
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><varname>region</varname></td>
-        <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>port</varname></td>
-        <td><strong>Required.</strong> The port number of the API endpoint.</td>
-      </tr>
-      <tr>
-        <td><varname>IAM_token</varname></td>
-        <td><strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>instance_ID</varname></td>
-        <td><strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
-      </tr>
-      <caption>Table 7. Describes the variables that are needed to list all registrations that are associated with a root key.</caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `port` | **Required.** The port number of the API endpoint. |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    {: caption="Table 7. Describes the variables that are needed to list all registrations that are associated with a root key" caption-side="bottom"}
 
     A successful `GET api/v2/keys/<key_ID>/registrations` request returns a collection of registrations that are mapped to the specified key ID.
 
@@ -361,37 +269,15 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/registrations?ur
 
     Replace the variables in the example request according to the following table.
 
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><varname>region</varname></td>
-        <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>eu-de</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>port</varname></td>
-        <td><strong>Required.</strong> The port number of the API endpoint.</td>
-      </tr>
-      <tr>
-        <td><varname>url_encoded_CRN_query</varname></td>
-        <td>
-          <p>Filters for resources that are associated with a specified <a href="/docs/account?topic=account-crn">Cloud Resource Name (CRN)</a> by using URL encoded wildcard characters (<code>*</code>). The parameter needs to contain all CRN segments and must be URL encoded.</p>
-          <p>To view examples, see <a href="#crn-query-examples">CRN query examples</a>.</p>
-        </td>
-      </tr>
-      <tr>
-        <td><varname>IAM_token</varname></td>
-        <td><strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>instance_ID</varname></td>
-        <td><strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
-      </tr>
-      <caption>Table 8. Describes the variables that are needed to list registrations by CRN query.</caption>
-    </table>
-
+    | Variable | Description |
+    | --- | --- |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `port` | **Required.** The port number of the API endpoint. |
+    | `url_encoded_CRN_query` | Filters for resources that are associated with a specified [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) by using URL encoded wildcard characters (`*`). The parameter needs to contain all CRN segments and must be URL encoded. To view examples, see [CRN query examples](#crn-query-examples). |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    {: caption="Table 8. Describes the variables that are needed to list registrations by CRN query." caption-side="bottom"}
+    
 #### CRN query examples
 {: #crn-query-examples}
 

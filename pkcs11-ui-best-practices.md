@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-01-07"
+lastupdated: "2022-08-25"
 
 keywords: pkcs11 ui access, pkcs 11 account authentication
 
@@ -41,70 +41,15 @@ To create a custom role, complete the following steps:
 6. From the list of services, select **Hyper Protect Crypto Services**.
 7. Select **Add** to add actions for the role. The following table lists the actions that correspond to the EP11 keystore or key operations with the console:
 
-    <table>
-    <tr>
-      <th>Operations</th>
-      <th>Actions</th>
-    </tr>
-    <tr>
-      <td>View EP11 keystores.</td>
-      <td>
-        <ul>
-          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>Create EP11 keystores.</td>
-      <td>
-        <ul>
-          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
-          <li><code>hs-crypto.keystore.createkeystore</code></p>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>Delete EP11 keystores.</td>
-      <td>
-        <ul>
-          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
-          <li><code>hs-crypto.keystore.deletekeystore</code></p>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>View EP11 keys.</td>
-      <td>
-        <ul>
-          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
-          <li><code>hs-crypto.keystore.listkeysbyids</code></p>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>Create EP11 keys.</td>
-      <td>
-        <ul>
-          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
-          <li><code>hs-crypto.keystore.listkeysbyids</code></p>
-          <li><code>hs-crypto.crypto.generatekey</code></p>
-          <li><code>hs-crypto.crypto.generatekeypair</code></p>
-          <li><code>hs-crypto.keystore.storenewkey</code></p>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>View EP11 keys.</td>
-      <td>
-        <ul>
-          <li><code>hs-crypto.keystore.listkeystoresbyids</code></p>
-          <li><code>hs-crypto.keystore.listkeysbyids</code></p>
-          <li><code>hs-crypto.keystore.deletekey</code></p>
-        </ul>
-      </td>
-    </tr>
-    <caption>Table 1. Actions corresponding to the EP11 keystore or key operations with the console</caption>
-    </table>
+    | Operations | Actions |
+    | --- | --- |
+    | View EP11 keystores. | * `hs-crypto.keystore.listkeystoresbyids` |
+    | Create EP11 keystores. | * `hs-crypto.keystore.listkeystoresbyids` \n * `hs-crypto.keystore.createkeystore` |
+    | Delete EP11 keystores. | * `hs-crypto.keystore.listkeystoresbyids` \n * `hs-crypto.keystore.deletekeystore` |
+    | View EP11 keys. | * `hs-crypto.keystore.listkeystoresbyids` \n * `hs-crypto.keystore.listkeysbyids` |
+    | Create EP11 keys. | * `hs-crypto.keystore.listkeystoresbyids` \n * `hs-crypto.keystore.listkeysbyids` \n * `hs-crypto.crypto.generatekey` \n * `hs-crypto.crypto.generatekeypair` \n * `hs-crypto.keystore.storenewkey` |
+    | View EP11 keys. | * `hs-crypto.keystore.listkeystoresbyids` \n * `hs-crypto.keystore.listkeysbyids` \n * `hs-crypto.keystore.deletekey` |
+    {: caption="Table 1. Actions corresponding to the EP11 keystore or key operations with the console" caption-side="bottom"}
 
 8. Click **Create** after you select the appropriate actions for your custom role.
 

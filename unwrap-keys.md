@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-25"
 
 keywords: data encryption key, key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, unwrap api
 
@@ -69,55 +69,18 @@ Root keys that contain the same key material can unwrap the same data encryption
     {: codeblock}
 
     Replace the variables in the example request according to the following table.
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><varname>region</varname></td>
-        <td><strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>port</varname></td>
-        <td><strong>Required.</strong> The port number of the API endpoint.</td>
-      </tr>
-      <tr>
-        <td><varname>key_ID</varname></td>
-        <td><strong>Required.</strong> The unique identifier for the root key that you used for the initial wrap request.</td>
-      </tr>
-      <tr>
-        <td><varname>IAM_token</varname></td>
-        <td><strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the cURL request. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</td>
-      </tr>
-      <tr>
-        <td><varname>instance_ID</varname></td>
-        <td><strong>Required.</strong> The unique identifier that is assigned to your{{site.data.keyword.hscrypto}} service instance. For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</td>
-      </tr>
-      <tr>
-        <td>
-          <varname>key_ring_ID</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. It is suggested to specify the key ring ID for a more optimized request.
-          </p>
-          <p>
-            Note: The key ring ID of keys that are created without an <code>x-kms-key-ring</code> header is: default.
-          </p>
-          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-managing-key-rings">Managing key rings</a>.</p>
-        </td>
-      </tr>
-      <tr>
-        <td><varname>correlation_ID</varname></td>
-        <td>Optional: The unique identifier that is used to track and correlate transactions.</td>
-      </tr>
-      <tr>
-        <td><varname>encrypted_data_key</varname></td>
-        <td>The <code>ciphertext</code> value that was returned during a wrap operation.</td>
-      </tr>
-      <caption>Table 1. Describes the variables that are needed to unwrap keys in {{site.data.keyword.hscrypto}}.</caption>
-    </table>
+    
+    | Variable | Description |
+    | --- | --- |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `port` | **Required.** The port number of the API endpoint. |
+    | `key_ID` | **Required.** The unique identifier for the root key that you used for the initial wrap request. |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your{{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. It is suggested to specify the key ring ID for a more optimized request. \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
+    | `correlation_ID` | Optional: The unique identifier that is used to track and correlate transactions. |
+    | `encrypted_data_key` | The `ciphertext` value that was returned during a wrap operation. |
+    {: caption="Table 1. Describes the variables that are needed to unwrap keys in {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 
     The original key material is returned in the response entity-body. The response body also contains the ID of the key version that was used to unwrap the supplied ciphertext. The following JSON object shows a sample returned value.
 
@@ -153,36 +116,10 @@ When you unwrap a data encryption key, the key material is returned in base64 en
 
     Replace the variables in the example request according to the following table.
 
-    <table>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>
-        <varname>infile</varname>
-      </td>
-      <td>
-        <p>
-          The name of the file where your base64 encoded key material string resides.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <varname>outfile</varname>
-      </td>
-      <td>
-        <p>
-          The name of the file where your decoded key material is
-          outputted after the command is run.
-        </p>
-      </td>
-    </tr>
-
-    <caption>
-      Table 2. Describes the variables that are needed to decode your key material.
-    </caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `infile` | The name of the file where your base64 encoded key material string resides. |
+    | `outfile` | The name of the file where your decoded key material is outputted after the command is run. |
+    {: caption="Table 2. Describes the variables that are needed to decode your key material" caption-side="bottom"}
 
     If you want to output the decoded material in the command line directly rather than a file, run command `openssl enc -base64 -d <<< '<key_material_string>'`, where key_material_string is the returned plaintext from your unwrap request.
