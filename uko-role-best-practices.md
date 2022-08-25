@@ -47,7 +47,6 @@ To create a custom role, complete the following steps:
 7. Select **Add** to add actions for the role. 
 
     The following table lists the suggested custom roles and corresponding actions for your reference:
-    
 
     | Role | Description | Actions |
     | --- | --- | --- |
