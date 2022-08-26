@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-08-26"
 
 keywords: create test instance, configure api for test, test hpcs, test service onboarding hpcs, wrap key api, upwrap key api
 
@@ -147,7 +147,7 @@ Replace the variables in the example request according to the following table.
 | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
 | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
 | `data_key` | The key material of the DEK that you want to manage and protect. The `plaintext` value must be base64 encoded. To generate a new DEK, omit the `plaintext` attribute. The service generates a random plaintext (32 bytes) and wraps that value. In the response, `plaintext` contains the unwrapped DEK and `ciphertext` contains the wrapped value. |
-{: caption="Table 2. Describes the variables needed to wrap a specified key in {{site.data.keyword.hscrypto}}" caption-side="bottom"}
+{: caption="Table 2. Describes the variables needed to wrap a specified key" caption-side="bottom"}
 
 The wrapped data encryption key (wDEK), containing the base64 encoded key material, is returned in the response entity-body. The following JSON object shows an example returned value.
 
@@ -198,7 +198,7 @@ Replace the variables in the example request according to the following table.
 | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
 | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
 | `wrapped_data_key` | **Required.** The `ciphertext` value returned during a wrap operation. |
-{: caption="Table 3. Describes the variables needed to unwrap keys in {{site.data.keyword.hscrypto}}" caption-side="bottom"}
+{: caption="Table 3. Describes the variables needed to unwrap keys" caption-side="bottom"}
 
 The original base64 encoded key material is returned in the response entity-body. The following JSON object shows an example returned value.
 

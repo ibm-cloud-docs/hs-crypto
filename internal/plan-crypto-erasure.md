@@ -127,7 +127,7 @@ Replace the variables in the example request according to the following table.
 | `key_state` | **Required.** The adopter's reported state of the key at the time of processing the Hyperwarp event. |
 | `time_stamp` | **Required.** The date that the Hyperwarp event was processed by the adopter service. The date format follows RFC 3339. |
 | `key_version` | **Required if the adopter state is "DEK_ENABLED".** The ID of the key version that was used to rewrap the wrapped data encryption key (wDEK). |
-{: caption="Table 1. Describes the variables needed to acknowledge a Hyperwarp event with the {{site.data.keyword.hscrypto}} API" caption-side="bottom"}
+{: caption="Table 1. Describes the variables needed to acknowledge a Hyperwarp event with the API" caption-side="bottom"}
 
 ## Monitor logs for an end-to-end key deletion event in activity tracker
 {: #crypto-erasure-monitor-logs}

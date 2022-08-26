@@ -210,7 +210,7 @@ following table.
 | --- | --- |
 | offset | The number of keys to skip. For example, if you have 50 keys in your instance, and you want to list keys 26 - 50, use `../keys?offset=25`. You can also pair `offset` with `limit` to page through your available resources. |
 | limit | The number of keys to retrieve. For example, if you have 100 keys in your instance, and you want to list only 10 keys, use `../keys?limit=10`. The maximum value for `limit` is 5000. |
-{: caption="Table 2. Describes the `limit` and `offset` variables" caption-side="bottom"}
+{: caption="Table 2. Describes the limit and offset variables" caption-side="bottom"}
 
 For usage notes, check out the following examples for setting your `limit` and `offset` query parameters.
 
@@ -251,7 +251,7 @@ Replace the `state` variable in your request according to the following table.
 | Variable | Description |
 | --- | --- |
 | `state` | The states of the keys to be retrieved. States are integers and correspond to the Pre-active = 0, Active = 1, Suspended = 2, Deactivated = 3, and Destroyed = 5 values. For example, if you want to only list keys in the active state in your service instance, use `../keys?state=1`. You can also pair `state` with`offset` with `limit` to page through your available resources. |
-{: caption="Table 4. Describes the `state` variable" caption-side="bottom"}
+{: caption="Table 4. Describes the state variable" caption-side="bottom"}
 
 For usage notes, check out the following examples for setting your `state` query
 parameter.
