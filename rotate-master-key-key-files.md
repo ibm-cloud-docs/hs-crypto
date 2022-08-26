@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-26"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -32,6 +32,9 @@ subcollection: hs-crypto
 
 You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance regularly to meet industry standards and cryptographic best practices. To rotate the master key using master key part files on your local workstation, follow these steps.
 {: shortdesc}
+
+Master key rotation is currently supported only by the {{site.data.keyword.hscrypto}} Standard Plan.
+{: note}
 
 Rotating the master key reencrypts the keys in key storage using the new master key value. After the keys in key storage are reencrypted, the value in the new master key register is promoted to the current master key register. Before you start rotating the master key, you need to do the following steps:
 

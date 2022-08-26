@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-26"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -30,6 +30,9 @@ subcollection: hs-crypto
 
 To rotate the master key by using recovery crypto units, follow these steps. In this case, a random master key value is generated in a recovery crypto unit, securely transferred to other crypto units, and rotated automatically with the `ibmcloud tke auto-mk-rotate` command.
 {: shortdesc}
+
+Master key rotation is currently supported only by the {{site.data.keyword.hscrypto}} Standard Plan.
+{: note}
 
 When master key rotation is taking place, you are temporarily not able to access your keystore. To learn how master key rotation works, see [the introduction to the master key rotation](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
 
