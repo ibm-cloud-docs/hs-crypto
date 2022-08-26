@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-26"
 
 keywords: create key alias, key alias, delete key alias, add key alias, retrieve encryption key by alias, create alias API examples
 
@@ -108,95 +108,16 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
 
     Replace the variables in the example request according to the following table.
 
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>region</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The region abbreviation, such as <code>us-south</code>, that represents the
-            geographic area where your {{site.data.keyword.hscrypto}} instance resides.
-          </p>
-          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td><varname>port</varname></td>
-        <td><strong>Required.</strong> The port number of the API endpoint.</td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>key_ID</varname>
-        </td>
-        <td>
-          <strong>Required.</strong> The identifier for the key that you would like to associate with an alias. To retrieve a key ID, see the <a href="/docs/hs-crypto?topic=hs-crypto-view-keys#retrieve-keys-api">list keys API</a>.
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>key_alias</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> A unique, human-readable name for easy identification of your key.
-          </p>
-          <p>
-          Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: <code>allowed_ip</code>, <code>key</code>, <code>keys</code>, <code>metadata</code>, <code>policy</code>, <code>policies</code>, <code>registration</code>, <code>registrations</code>, <code>ring</code>, <code>rings</code>, <code>rotate</code>, <code>wrap</code>, <code>unwrap</code>, <code>rewrap</code>, <code>version</code>, <code>versions</code>. Alias size can be 2 - 90 characters (inclusive).
-          </p>
-          <p>
-            <strong>Note</strong> You cannot have duplicate alias names in your {{site.data.keyword.hscrypto}} instance.
-          </p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>IAM_token</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the <code>curl</code> request.
-          </p>
-          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>instance_ID</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service
-            instance.
-          </p>
-          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>correlation_ID</varname>
-        </td>
-        <td>
-          The unique identifier that is used to track and correlate transactions.
-        </td>
-      </tr>
-
-      <caption>
-        Table 1. Describes the variables that are needed to create a key alias
-        with the {{site.data.keyword.hscrypto}} API.
-      </caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `port` | **Required.** The port number of the API endpoint. |
+    | `key_ID` | **Required.** The identifier for the key that you would like to associate with an alias. To retrieve a key ID, see the [list keys API](/docs/hs-crypto?topic=hs-crypto-view-keys#retrieve-keys-api). |
+    | `key_alias` | **Required.** A unique, human-readable name for easy identification of your key. Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive). \n \n **Note:** You cannot have duplicate alias names in your {{site.data.keyword.hscrypto}} instance. |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
+    {: caption="Table 1. Describes the variables needed to create a key alias with the {{site.data.keyword.hscrypto}} API" caption-side="bottom"}
 
     To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you create a key alias. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://www.nist.gov/publications/guide-protecting-confidentiality-personally-identifiable-information-pii){: external}.
     {: important}
@@ -268,96 +189,16 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
 
     Replace the variables in the example request according to the following table.
 
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>region</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The region abbreviation, such as
-            <code>us-south</code>, that represents the
-            geographic area where your
-            {{site.data.keyword.hscrypto}} instance
-            resides.
-          </p>
-          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td><varname>port</varname></td>
-        <td><strong>Required.</strong> The port number of the API endpoint.</td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>key_ID</varname>
-        </td>
-        <td>
-          <strong>Required.</strong> The unique identifier for the key.
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>key_alias</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The unique, human-readable name that
-            identifies your key.
-          </p>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>IAM_token</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}}
-            access token. Include the full contents of the <code>IAM</code>
-            token, including the Bearer value, in the <code>curl</code> request.
-          </p>
-          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>instance_ID</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The unique identifier that is assigned to
-            your {{site.data.keyword.hscrypto}} service
-            instance.
-          </p>
-          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>correlation_ID</varname>
-        </td>
-        <td>
-          The unique identifier that is used to track and correlate
-          transactions.
-        </td>
-      </tr>
-
-      <caption>
-        Table 2. Describes the variables that are needed to delete a key alias
-        with the {{site.data.keyword.hscrypto}} API.
-      </caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `port` | **Required.** The port number of the API endpoint. |
+    | `key_ID` | **Required.** The unique identifier for the key. |
+    | `key_alias` | **Required.** The unique, human-readable name that identifies your key. |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
+    {: caption="Table 2. Describes the variables needed to delete a key alias with the {{site.data.keyword.hscrypto}} API" caption-side="bottom"}
 
     A successful `DELETE api/v2/keys/<key_ID>/aliases/<key_alias>` request returns an HTTP `204 No Content` response, which indicates that the alias associated with your key was deleted.
 

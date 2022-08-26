@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-08-25"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -650,70 +650,12 @@ The severity level for all TKE events is `critical` due to the sensitivity of th
 
 The following table lists the actions that are associated with each severity level:
 
-<table>
-    <tr>
-      <th>Severity</th>
-      <th>Actions</th>
-    </tr>
-    <tr>
-      <td><p><varname>Critical</varname></p></td>
-      <td>
-        <p><code>hs-crypto.secrets.delete</code></p>
-        <p><code>hs-crypto.registrations.delete</code></p>
-        <p><code>hs-crypto.tke-cryptounit-admin.add</code></p>
-        <p><code>hs-crypto.tke-cryptounit-admin.remove</code></p>
-        <p><code>hs-crypto.tke-cryptounit-current-master-key-register.clear</code></p>
-        <p><code>hs-crypto.tke-cryptounit-new-master-key-register.clear</code></p>
-        <p><code>hs-crypto.tke-cryptounit-master-key-register.add</code></p>
-        <p><code>hs-crypto.tke-cryptounit-master-key-register.commit</code></p>
-        <p><code>hs-crypto.tke-cryptounit-master-key-register.activate</code></p>
-        <p><code>hs-crypto.tke-cryptounit-threshold.set</code></p>
-        <p><code>hs-crypto.tke-cryptounit.reset</code></p>
-        <p><code>hs-crypto.mtlscert-admin-key.create</code></p>
-        <p><code>hs-crypto.mtlscert-admin-key.update</code></p>
-        <p><code>hs-crypto.mtlscert-admin-key.delete</code></p>
-        <p><code>hs-crypto.mtlscert-cert.set</code></p>
-        <p><code>hs-crypto.mtlscert-cert.set</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td><p><varname>Warning</varname></p></td>
-      <td>
-        <p><code>hs-crypto.secrets.rotate</code></p>
-        <p><code>hs-crypto.secrets.restore</code></p>
-        <p><code>hs-crypto.secrets.enable</code></p>
-        <p><code>hs-crypto.secrets.disable</code></p>
-        <p><code>hs-crypto.secrets.setkeyfordeletion</code></p>
-        <p><code>hs-crypto.secrets.unsetkeyfordeletion</code></p>
-        <p><code>hs-crypto.policies.write</code></p>
-        <p><code>hs-crypto.instancepolicies.write</code></p>
-      </td>
-    </tr>
-     <tr>
-      <td><p><varname>Normal</varname></p></td>
-      <td>
-        <p><code>hs-crypto.secrets.create</code></p>
-        <p><code>hs-crypto.secrets.read</code></p>
-        <p><code>hs-crypto.secrets.readmetadata</code></p>
-        <p><code>hs-crypto.secrets.head</code></p>
-        <p><code>hs-crypto.secrets.list</code></p>
-        <p><code>hs-crypto.secrets.wrap</code></p>
-        <p><code>hs-crypto.secrets.unwrap</code></p>
-        <p><code>hs-crypto.secrets.rewrap</code></p>
-        <p><code>hs-crypto.secrets.listkeyversions</code></p>
-        <p><code>hs-crypto.secrets.eventack</code></p>
-        <p><code>hs-crypto.policies.read</code></p>
-        <p><code>hs-crypto.instancepolicies.read</code></p>
-        <p><code>hs-crypto.importtoken.create</code></p>
-        <p><code>hs-crypto.importtoken.read</code></p>
-        <p><code>hs-crypto.registrations.list</code></p>
-        <p><code>hs-crypto.mtlscert-cert.read</code></p>
-        <p><code>hs-crypto.mtlscert-cert.list</code></p>
-        <p><code>hs-crypto.mtlscert-admin-key.read</code></p>
-      </td>
-    </tr>
-    <caption>Table 12. Severity level for {{site.data.keyword.hscrypto}} service actions</caption>
-    </table>
+| Severity | Actions |
+| --- | --- |
+| `Critical` | `hs-crypto.secrets.delete` \n \n `hs-crypto.registrations.delete` \n \n `hs-crypto.tke-cryptounit-admin.add` \n \n `hs-crypto.tke-cryptounit-admin.remove` \n \n `hs-crypto.tke-cryptounit-current-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-new-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-master-key-register.add` \n \n `hs-crypto.tke-cryptounit-master-key-register.commit` \n \n `hs-crypto.tke-cryptounit-master-key-register.activate` \n \n `hs-crypto.tke-cryptounit-threshold.set` \n \n `hs-crypto.tke-cryptounit.reset` \n \n `hs-crypto.mtlscert-admin-key.create` \n \n `hs-crypto.mtlscert-admin-key.update` \n \n `hs-crypto.mtlscert-admin-key.delete` \n \n `hs-crypto.mtlscert-cert.set` \n \n `hs-crypto.mtlscert-cert.set` |
+| `Warning` | `hs-crypto.secrets.rotate` \n \n `hs-crypto.secrets.restore` \n \n `hs-crypto.secrets.enable` \n \n `hs-crypto.secrets.disable` \n \n `hs-crypto.secrets.setkeyfordeletion` \n \n `hs-crypto.secrets.unsetkeyfordeletion` \n \n `hs-crypto.policies.write` \n \n `hs-crypto.instancepolicies.write` |
+| `Normal` | `hs-crypto.secrets.create` \n \n `hs-crypto.secrets.read` \n \n `hs-crypto.secrets.readmetadata` \n \n `hs-crypto.secrets.head` \n \n `hs-crypto.secrets.list` \n \n `hs-crypto.secrets.wrap` \n \n `hs-crypto.secrets.unwrap` \n \n `hs-crypto.secrets.rewrap` \n \n `hs-crypto.secrets.listkeyversions` \n \n `hs-crypto.secrets.eventack` \n \n `hs-crypto.policies.read` \n \n `hs-crypto.instancepolicies.read` \n \n `hs-crypto.importtoken.create` \n \n `hs-crypto.importtoken.read` \n \n `hs-crypto.registrations.list` \n \n `hs-crypto.mtlscert-cert.read` \n \n `hs-crypto.mtlscert-cert.list` \n \n `hs-crypto.mtlscert-admin-key.read` |
+{: caption="Table 12. Severity level for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
 
 The following table lists the status codes that are associated with each severity level:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-26"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -146,29 +146,13 @@ After you set up the client CA certificate, you are no longer able to access EP1
 
     Replace the variables in the example request according to the following table.
 
-    <table>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><varname>HPCS_CRN</varname></td>
-      <td><strong>Required.</strong> The Cloud Resource Name (CRN) of your {{site.data.keyword.hscrypto}} instance. You can use the <code>ibmcloud resource service-instances --long</code> command to retrieve the CRN.</td>
-    </tr>
-    <tr>
-      <td><varname>ADMIN_PRIV_KEY</varname></td>
-      <td><strong>Required.</strong> The file path of your current private key on your local workstation that you generate or update in <a href="#enable-authentication-ep11-step1-signature">Step 1</a>. The private key is used to sign this command action towards your instance certificate manager server.</td>
-    </tr>
-    <tr>
-      <td><varname>CERT_ID</varname></td>
-      <td><strong>Required.</strong> The string ID that you want to assign to the client CA certificate for easy identification.</td>
-    </tr>
-    <tr>
-      <td><varname>CERT_FILE</varname></td>
-      <td><strong>Required.</strong> The file path of the client CA certificate on your local workstation.</td>
-    </tr>
-    <caption>Table 1. Describes the variables that are needed to upload the TLS certificate</caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `HPCS_CRN` | **Required.** The Cloud Resource Name (CRN) of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the CRN. |
+    | `ADMIN_PRIV_KEY` | **Required.** The file path of your current private key on your local workstation that you generate or update in [Step 1](#enable-authentication-ep11-step1-signature). The private key is used to sign this command action towards your instance certificate manager server. |
+    | `CERT_ID` | **Required.** The string ID that you want to assign to the client CA certificate for easy identification. |
+    | `CERT_FILE` | **Required.** The file path of the client CA certificate on your local workstation. |
+    {: caption="Table 1. Describes the variables needed to upload the TLS certificate" caption-side="bottom"}
 
     The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
 
@@ -229,21 +213,11 @@ To use the GREP11 or PKCS #11 API, make sure that EP11 users are assigned the pr
 
     Replace the variables in the example based on the following table:
 
-    <table>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><varname>client_certificate</varname></td>
-      <td><strong>Required.</strong> The file path of the client certificate that is uploaded to the server by the certificate administrator.</td>
-    </tr>
-    <tr>
-      <td><varname>client_certificate_private_key</varname></td>
-      <td><strong>Required.</strong> The file path of the client certificate private key that is used to sign the certificate.</td>
-    </tr>
-    <caption>Table 3. Describes the variables that are needed to configure PKCS #11 applications</caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `client_certificate` | **Required.** The file path of the client certificate that is uploaded to the server by the certificate administrator. |
+    | `client_certificate_private_key` | **Required.** The file path of the client certificate private key that is used to sign the certificate. |
+    {: caption="Table 3. Describes the variables needed to configure PKCS #11 applications" caption-side="bottom"}
 
 After the configuration, when the applications use the GREP11 or PKCS #11 API to perform cryptographic operations, a mutual TLS connection is established and the client certificate is validated for the additional layer of authentication.
 
@@ -261,25 +235,12 @@ If you no longer need the second layer of authentication, you can disable the fu
 
     Replace the variables in the example request according to the following table.
 
-    <table>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><varname>HPCS_CRN</varname></td>
-      <td><strong>Required.</strong> The Cloud Resource Name (CRN) of your {{site.data.keyword.hscrypto}} instance. You can use the <code>ibmcloud resource service-instances --long</code> command to retrieve the CRN.</td>
-    </tr>
-    <tr>
-      <td><varname>ADMIN_PRIV_KEY</varname></td>
-      <td><strong>Required.</strong> The file path of your current private key that is stored on your local workstation. The private key is used to sign this command action towards your instance certificate manager server.</td>
-    </tr>
-    <tr>
-      <td><varname>CERT_ID</varname></td>
-      <td><strong>Required.</strong> The string ID of the CA certificate that you want to delete. You can first use the <code>ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN</code> command to list all the certificates including their IDs.</td>
-    </tr>
-    <caption>Table 2. Describes the variables that are needed to delete CA certificates</caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `HPCS_CRN` | **Required.** The Cloud Resource Name (CRN) of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the CRN. |
+    | `ADMIN_PRIV_KEY` | **Required.** The file path of your current private key that is stored on your local workstation. The private key is used to sign this command action towards your instance certificate manager server. |
+    | `CERT_ID` | **Required.** The string ID of the CA certificate that you want to delete. You can first use the `ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN` command to list all the certificates including their IDs. |
+    {: caption="Table 2. Describes the variables needed to delete CA certificates" caption-side="bottom"}
 
     The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
 

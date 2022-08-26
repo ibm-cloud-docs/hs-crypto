@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-03-04"
+lastupdated: "2022-08-26"
 
 keywords: crypto erasure, erase data, enable KYOK, onboard to hyper protect crypto services, hpcs onboarding, internal, key registration, KYOK
 
@@ -117,91 +117,17 @@ curl -X POST \
 
 Replace the variables in the example request according to the following table.
 
-<table>
-    <tr>
-    <th>Variable</th>
-    <th>Description</th>
-    </tr>
-    <tr>
-    <td>
-      <varname>region</varname>
-    </td>
-    <td>
-      <p>
-        <strong>Required.</strong> The region abbreviation, such as <code>us-south</code> or <code>au-syd</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
-      </p>
-      <p>
-        For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.
-      </p>
-    </td>
-    </tr>
-    <tr>
-    <td><varname>port</varname></td>
-    <td><strong>Required.</strong> The port number of the API endpoint.</td>
-    </tr>
-    <tr>
-    <td>
-      <varname>IAM_token</varname>
-    </td>
-    <td>
-      <p>
-        <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the <code>Bearer</code> value, in the cURL request.
-      </p>
-      <p>
-        For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.
-      </p>
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <varname>instance_ID</varname>
-    </td>
-    <td>
-      <p>
-        <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance.
-      </p>
-      <p>
-        For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.
-      </p>
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <varname>event_ID</varname>
-    </td>
-    <td>
-      <strong>Required.</strong> The identifier for the Hyperwarp event that you want to acknowledge.
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <varname>key_state</varname>
-    </td>
-    <td>
-      <strong>Required.</strong> The adopter's reported state of the key at the time of processing the Hyperwarp event.
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <varname>time_stamp</varname>
-    </td>
-    <td>
-      <strong>Required.</strong> The date that the Hyperwarp event was processed by the adopter service. The date format follows RFC 3339.
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <varname>key_version</varname>
-    </td>
-    <td>
-      <strong>Required if the adopter state is "DEK_ENABLED".</strong> The ID of the key version that was used to rewrap the wrapped data encryption key (wDEK).
-    </td>
-    </tr>
-    <caption>
-    Table 1. Describes the variables that are needed to acknowledge a Hyperwarp
-    event with the {{site.data.keyword.hscrypto}} API.
-    </caption>
-</table>
+| Variable | Description |
+| --- | --- |
+| `region` | **Required.** The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+| `port` | **Required.** The port number of the API endpoint. |
+| `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the `Bearer` value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+| `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+| `event_ID` | **Required.** The identifier for the Hyperwarp event that you want to acknowledge. |
+| `key_state` | **Required.** The adopter's reported state of the key at the time of processing the Hyperwarp event. |
+| `time_stamp` | **Required.** The date that the Hyperwarp event was processed by the adopter service. The date format follows RFC 3339. |
+| `key_version` | **Required if the adopter state is "DEK_ENABLED".** The ID of the key version that was used to rewrap the wrapped data encryption key (wDEK). |
+{: caption="Table 1. Describes the variables needed to acknowledge a Hyperwarp event with the API" caption-side="bottom"}
 
 ## Monitor logs for an end-to-end key deletion event in activity tracker
 {: #crypto-erasure-monitor-logs}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-08-25"
 
 keywords: UKO access, UKO account authentication, UKO custom roles, Unified Key Orchestrator
 
@@ -47,148 +47,16 @@ To create a custom role, complete the following steps:
 7. Select **Add** to add actions for the role. 
 
     The following table lists the suggested custom roles and corresponding actions for your reference:
-    
 
-    <table>
-    <tr>
-      <th>Role</th>
-      <th>Description</th>
-      <th>Actions</th>
-    </tr>
-    <tr>
-      <td>My vault administrator</td>
-      <td>Manages vaults.</td>
-      <td>
-        <ul>
-          <li><code>hs-crypto.managed-keys.read</code></li>
-          <li><code>hs-crypto.managed-keys.list</code></li>
-          <li><code>hs-crypto.target-keystores.read</code></li>
-          <li><code>hs-crypto.target-keystores.list</code></li>
-          <li><code>hs-crypto.key-templates.read</code></li>
-          <li><code>hs-crypto.key-templates.list</code></li>
-          <li><code>hs-crypto.vaults.read</code></li>
-          <li><code>hs-crypto.vaults.list</code></li>
-          <li><code>hs-crypto.vaults.write</code></li>
-          <li><code>hs-crypto.vaults.delete</code></li>
-          <li><code>hs-crypto.uko.initiate-paid-upgrade</code></li>
-          <li><code>hs-crypto.uko.add-paid-keystore</code></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>My keystore administrator</td>
-      <td>Manages keystores.</td>
-      <td>
-        <ul>
-          <li><code>hs-crypto.managed-keys.read</code></li>
-          <li><code>hs-crypto.managed-keys.list</code></li>
-          <li><code>hs-crypto.target-keystores.read</code></li>
-          <li><code>hs-crypto.target-keystores.list</code></li>
-          <li><code>hs-crypto.target-keystores.write</code></li>
-          <li><code>hs-crypto.target-keystores.delete</code></li>
-          <li><code>hs-crypto.key-templates.read</code></li>
-          <li><code>hs-crypto.key-templates.list</code></li>
-          <li><code>hs-crypto.vaults.read</code></li>
-          <li><code>hs-crypto.vaults.list</code></li>
-          <li><code>hs-crypto.uko.initiate-paid-upgrade</code></li>
-          <li><code>hs-crypto.uko.add-paid-keystore</code></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>My key administrator</td>
-      <td>Manages special permissions for administrative tasks, such as destructive actions.</td>
-      <td>
-        <ul>
-          <li><code>hs-crypto.managed-keys.deactivated-destroy</code></li>
-          <li><code>hs-crypto.managed-keys.destroyed-remove</code></li>
-          <li><code>hs-crypto.managed-keys.read</code></li>
-          <li><code>hs-crypto.managed-keys.list</code></li>
-          <li><code>hs-crypto.managed-keys.delete</code></li>
-          <li><code>hs-crypto.target-keystores.read</code></li>
-          <li><code>hs-crypto.target-keystores.list</code></li>
-          <li><code>hs-crypto.key-templates.read</code></li>
-          <li><code>hs-crypto.key-templates.list</code></li>
-          <li><code>hs-crypto.key-templates.write</code></li>
-          <li><code>hs-crypto.key-templates.delete</code></li>
-          <li><code>hs-crypto.vaults.read</code></li>
-          <li><code>hs-crypto.vaults.list</code></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>My key custodian - creator</td>
-      <td>Manages and creates keys. For a complete key lifecycle, both Creator and Deployer roles are needed. To implement separation of duties, assign Creator and Deployer role to different people. </td>
-      <td>
-        <ul>
-          <li><code>hs-crypto.managed-keys.preactivation-destroy</code></li>
-          <li><code>hs-crypto.managed-keys.active-install</code></li>
-          <li><code>hs-crypto.managed-keys.active-uninstall</code></li>
-          <li><code>hs-crypto.managed-keys.deactivated-install</code></li>
-          <li><code>hs-crypto.managed-keys.deactivated-uninstall</code></li>
-          <li><code>hs-crypto.managed-keys.read</code></li>
-          <li><code>hs-crypto.managed-keys.list</code></li>
-          <li><code>hs-crypto.managed-keys.write</code></li>
-          <li><code>hs-crypto.managed-keys.generate</code></li>
-          <li><code>hs-crypto.managed-keys.distribute</code></li>
-          <li><code>hs-crypto.managed-keys.write-dates</code></li>
-          <li><code>hs-crypto.managed-keys.write-tags</code></li>
-          <li><code>hs-crypto.target-keystores.read</code></li>
-          <li><code>hs-crypto.target-keystores.list</code></li>
-          <li><code>hs-crypto.key-templates.read</code></li>
-          <li><code>hs-crypto.key-templates.list</code></li>
-          <li><code>hs-crypto.key-templates.write</code></li>
-          <li><code>hs-crypto.vaults.read</code></li>
-          <li><code>hs-crypto.vaults.list</code></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>My key custodian - deployer</td>
-      <td>Manages and deploys keys. For a complete key lifecycle, both Creator and Deployer roles are needed. To implement separation of duties, assign Creator and Deployer role to different people. </td>
-      <td>
-        <ul>
-          <li><code>hs-crypto.managed-keys.preactivation-activate</code></li>
-          <li><code>hs-crypto.managed-keys.preactivation-destroy</code></li>
-          <li><code>hs-crypto.managed-keys.active-deactivate</code></li>
-          <li><code>hs-crypto.managed-keys.active-install</code></li>
-          <li><code>hs-crypto.managed-keys.active-uninstall</code></li>
-          <li><code>hs-crypto.managed-keys.deactivated-install</code></li>
-          <li><code>hs-crypto.managed-keys.deactivated-reactivate</code></li>
-          <li><code>hs-crypto.managed-keys.deactivated-uninstall</code></li>
-          <li><code>hs-crypto.managed-keys.read</code></li>
-          <li><code>hs-crypto.managed-keys.list</code></li>
-          <li><code>hs-crypto.managed-keys.write</code></li>
-          <li><code>hs-crypto.managed-keys.distribute</code></li>
-          <li><code>hs-crypto.managed-keys.write-dates</code></li>
-          <li><code>hs-crypto.managed-keys.write-tags</code></li>
-          <li><code>hs-crypto.target-keystores.read</code></li>
-          <li><code>hs-crypto.target-keystores.list</code></li>
-          <li><code>hs-crypto.key-templates.read</code></li>
-          <li><code>hs-crypto.key-templates.list</code></li>
-          <li><code>hs-crypto.vaults.read</code></li>
-          <li><code>hs-crypto.vaults.list</code></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>My reader</td>
-      <td>Performs read-only actions for auditing purposes.</td>
-      <td>
-        <ul>
-          <li><code>hs-crypto.managed-keys.read</code></li>
-          <li><code>hs-crypto.managed-keys.list</code></li>
-          <li><code>hs-crypto.target-keystores.read</code></li>
-          <li><code>hs-crypto.target-keystores.list</code></li>
-          <li><code>hs-crypto.key-templates.read</code></li>
-          <li><code>hs-crypto.key-templates.list</code></li>
-          <li><code>hs-crypto.vaults.read</code></li>
-          <li><code>hs-crypto.vaults.list</code></li>
-        </ul>
-      </td>
-    </tr>
-    <caption>Table 1. Custom roles and actions corresponding to the {{site.data.keyword.uko_full_notm}} operations</caption>
-    </table>
+    | Role | Description | Actions |
+    | --- | --- | --- |
+    | My vault administrator | Manages vaults. | * `hs-crypto.managed-keys.read` \n * `hs-crypto.managed-keys.list` \n * `hs-crypto.target-keystores.read` \n * `hs-crypto.target-keystores.list` \n * `hs-crypto.key-templates.read` \n * `hs-crypto.key-templates.list` \n * `hs-crypto.vaults.read` \n * `hs-crypto.vaults.list` \n * `hs-crypto.vaults.write` \n * `hs-crypto.vaults.delete` \n * `hs-crypto.uko.initiate-paid-upgrade` \n * `hs-crypto.uko.add-paid-keystore` |
+    | My keystore administrator | Manages keystores. | * `hs-crypto.managed-keys.read` \n * `hs-crypto.managed-keys.list` \n * `hs-crypto.target-keystores.read` \n * `hs-crypto.target-keystores.list` \n * `hs-crypto.target-keystores.write` \n * `hs-crypto.target-keystores.delete` \n * `hs-crypto.key-templates.read` \n * `hs-crypto.key-templates.list` \n * `hs-crypto.vaults.read` \n * `hs-crypto.vaults.list` \n * `hs-crypto.uko.initiate-paid-upgrade` \n * `hs-crypto.uko.add-paid-keystore` |
+    | My key administrator | Manages special permissions for administrative tasks, such as destructive actions. | * `hs-crypto.managed-keys.deactivated-destroy` \n * `hs-crypto.managed-keys.destroyed-remove` \n * `hs-crypto.managed-keys.read` \n * `hs-crypto.managed-keys.list` \n * `hs-crypto.managed-keys.delete` \n * `hs-crypto.target-keystores.read` \n * `hs-crypto.target-keystores.list` \n * `hs-crypto.key-templates.read` \n * `hs-crypto.key-templates.list` \n * `hs-crypto.key-templates.write` \n * `hs-crypto.key-templates.delete` \n * `hs-crypto.vaults.read` \n * `hs-crypto.vaults.list` |
+    | My key custodian - creator | Manages and creates keys. For a complete key lifecycle, both Creator and Deployer roles are needed. To implement separation of duties, assign Creator and Deployer role to different people. | * `hs-crypto.managed-keys.preactivation-destroy` \n * `hs-crypto.managed-keys.active-install` \n * `hs-crypto.managed-keys.active-uninstall` \n * `hs-crypto.managed-keys.deactivated-install` \n * `hs-crypto.managed-keys.deactivated-uninstall` \n * `hs-crypto.managed-keys.read` \n * `hs-crypto.managed-keys.list` \n * `hs-crypto.managed-keys.write` \n * `hs-crypto.managed-keys.generate` \n * `hs-crypto.managed-keys.distribute` \n * `hs-crypto.managed-keys.write-dates` \n * `hs-crypto.managed-keys.write-tags` \n * `hs-crypto.target-keystores.read` \n * `hs-crypto.target-keystores.list` \n * `hs-crypto.key-templates.read` \n * `hs-crypto.key-templates.list` \n * `hs-crypto.key-templates.write` \n * `hs-crypto.vaults.read` \n * `hs-crypto.vaults.list` |
+    | My key custodian - deployer | Manages and deploys keys. For a complete key lifecycle, both Creator and Deployer roles are needed. To implement separation of duties, assign Creator and Deployer role to different people. | * `hs-crypto.managed-keys.preactivation-activate` \n * `hs-crypto.managed-keys.preactivation-destroy` \n * `hs-crypto.managed-keys.active-deactivate` \n * `hs-crypto.managed-keys.active-install` \n * `hs-crypto.managed-keys.active-uninstall` \n * `hs-crypto.managed-keys.deactivated-install` \n * `hs-crypto.managed-keys.deactivated-reactivate` \n * `hs-crypto.managed-keys.deactivated-uninstall` \n * `hs-crypto.managed-keys.read` \n * `hs-crypto.managed-keys.list` \n * `hs-crypto.managed-keys.write` \n * `hs-crypto.managed-keys.distribute` \n * `hs-crypto.managed-keys.write-dates` \n * `hs-crypto.managed-keys.write-tags` \n * `hs-crypto.target-keystores.read` \n * `hs-crypto.target-keystores.list` \n * `hs-crypto.key-templates.read` \n * `hs-crypto.key-templates.list` \n * `hs-crypto.vaults.read` \n * `hs-crypto.vaults.list` |
+    | My reader | Performs read-only actions for auditing purposes. | * `hs-crypto.managed-keys.read` \n * `hs-crypto.managed-keys.list` \n * `hs-crypto.target-keystores.read` \n * `hs-crypto.target-keystores.list` \n * `hs-crypto.key-templates.read` \n * `hs-crypto.key-templates.list` \n * `hs-crypto.vaults.read` \n * `hs-crypto.vaults.list` |
+    {: caption="Table 1. Custom roles and actions corresponding to the {{site.data.keyword.uko_full_notm}} operations" caption-side="bottom"}
 
 8. Click **Create** after you select the appropriate actions for your custom role.
 

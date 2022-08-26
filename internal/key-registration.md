@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-08-25"
 
 keywords: key registration, register resources, service integration, protected resource, view crn, registraion api
 
@@ -93,15 +93,15 @@ Replace the variables in the example request according to the following table.
 
 | Variable | Description |
 | -------- | ----------- |
-| region | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where the {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Service regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). |
-| port   | **Required.** The port number of the API endpoint.  |
-| key_ID | **Required.** The unique identifier for the customer's root key that protects the cloud resource. |
-| url_encoded_CRN | **Required.** The URL encoded [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) that uniquely identifies the cloud resource. At minimum, provide a CRN that includes up to the `service-instance` segment. |
-| CRN_token | **Required.** Your [service's CRN token](/docs/get-coding?topic=get-coding-servicetoservice#create_crn_token). Include the full contents of the token, including the Bearer value, in the cURL request. |
-| instance_ID | **Required.** The unique identifier that is assigned to customer's {{site.data.keyword.hscrypto}} service instance.
-| description | A meaningful description in the context of your cloud service that describes the resource that is being protected by the root key. This field is exposed to customers when they use {{site.data.keyword.hscrypto}} to review registered resources.|
-| registrationMetadata | A text field that cloud services can use to store internal metadata about the registration. This field is not exposed to customers and is visible only by using {{site.data.keyword.cloud_notm}} service to service calls. |
-| preventKeyDeletion | A boolean that determines whether {{site.data.keyword.hscrypto}} must prevent deletion of a root key due to a Write Once Read Many (WORM) policy set on the customer resource.<br><br>If set to `true`, {{site.data.keyword.hscrypto}} prevents deletion of the root key and the associated protected resources. The system prevents the deletion of any key that has at least one registration where `preventKeyDeletion` is `true`.|
+| `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where the {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Service regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). |
+| `port`   | **Required.** The port number of the API endpoint.  |
+| `key_ID` | **Required.** The unique identifier for the customer's root key that protects the cloud resource. |
+| `url_encoded_CRN` | **Required.** The URL encoded [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) that uniquely identifies the cloud resource. At minimum, provide a CRN that includes up to the `service-instance` segment. |
+| `CRN_token` | **Required.** Your [service's CRN token](/docs/get-coding?topic=get-coding-servicetoservice#create_crn_token). Include the full contents of the token, including the Bearer value, in the cURL request. |
+| `instance_ID` | **Required.** The unique identifier that is assigned to customer's {{site.data.keyword.hscrypto}} service instance.
+| `description` | A meaningful description in the context of your cloud service that describes the resource that is being protected by the root key. This field is exposed to customers when they use {{site.data.keyword.hscrypto}} to review registered resources.|
+| `registrationMetadata` | A text field that cloud services can use to store internal metadata about the registration. This field is not exposed to customers and is visible only by using {{site.data.keyword.cloud_notm}} service to service calls. |
+| `preventKeyDeletion` | A boolean that determines whether {{site.data.keyword.hscrypto}} must prevent deletion of a root key due to a Write Once Read Many (WORM) policy set on the customer resource. \n \n If set to `true`, {{site.data.keyword.hscrypto}} prevents deletion of the root key and the associated protected resources. The system prevents the deletion of any key that has at least one registration where `preventKeyDeletion` is `true`.|
 {: caption="Table 2. Lists variables for the API method to create a registration" caption-side="bottom"}
 
 ### Updating the registration
@@ -141,15 +141,15 @@ Replace the variables in the example request according to the following table.
 
 | Variable | Description |
 | -------- | ----------- |
-| region | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where the {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Service regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). |
-| port   | **Required.** The port number of the API endpoint.  |
-| key_ID | **Required.** The unique identifier for the customer's root key that protects the cloud resource. |
-| url_encoded_CRN | **Required.** The URL encoded [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) that uniquely identifies the cloud resource. At minimum, provide a CRN that includes up to the `service-instance` segment. |
-| CRN_token | **Required.** Your [service's CRN token](/docs/get-coding?topic=get-coding-servicetoservice#create_crn_token). Include the full contents of the token, including the Bearer value, in the cURL request. |
-| instance_ID | **Required.** The unique identifier that is assigned to customer's {{site.data.keyword.hscrypto}} service instance.
-| description | A meaningful description in the context of your cloud service that describes the resource that is being protected by the root key. This field is exposed to customers when they use {{site.data.keyword.hscrypto}} to review registered resources.|
-| registrationMetadata | A text field that cloud services can use to store internal metadata about the registration. This field is not exposed to customers and is visible only by using {{site.data.keyword.cloud_notm}} service to service calls. |
-| preventKeyDeletion | A boolean that determines whether {{site.data.keyword.hscrypto}} must prevent deletion of a root key due to a Write Once Read Many (WORM) policy set on the customer resource.<br><br>If set to `true`, {{site.data.keyword.hscrypto}} prevents deletion of the root key and the associated protected resources. The system prevents the deletion of any key that has at least one registration where `preventKeyDeletion` is `true`.|
+| `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where the {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Service regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). |
+| `port`   | **Required.** The port number of the API endpoint.  |
+| `key_ID` | **Required.** The unique identifier for the customer's root key that protects the cloud resource. |
+| `url_encoded_CRN` | **Required.** The URL encoded [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) that uniquely identifies the cloud resource. At minimum, provide a CRN that includes up to the `service-instance` segment. |
+| `CRN_token` | **Required.** Your [service's CRN token](/docs/get-coding?topic=get-coding-servicetoservice#create_crn_token). Include the full contents of the token, including the Bearer value, in the cURL request. |
+| `instance_ID` | **Required.** The unique identifier that is assigned to customer's {{site.data.keyword.hscrypto}} service instance.
+| `description` | A meaningful description in the context of your cloud service that describes the resource that is being protected by the root key. This field is exposed to customers when they use {{site.data.keyword.hscrypto}} to review registered resources.|
+| `registrationMetadata` | A text field that cloud services can use to store internal metadata about the registration. This field is not exposed to customers and is visible only by using {{site.data.keyword.cloud_notm}} service to service calls. |
+| `preventKeyDeletion` | A boolean that determines whether {{site.data.keyword.hscrypto}} must prevent deletion of a root key due to a Write Once Read Many (WORM) policy set on the customer resource. \n \n If set to `true`, {{site.data.keyword.hscrypto}} prevents deletion of the root key and the associated protected resources. The system prevents the deletion of any key that has at least one registration where `preventKeyDeletion` is `true`.|
 {: caption="Table 3. Lists variables for the API method to update a registration" caption-side="bottom"}
 
 ### Deleting the registration
@@ -171,10 +171,10 @@ Replace the variables in the example request according to the following table.
 
 | Variable | Description |
 | -------- | ----------- |
-| region | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where the {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Service regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). |
-| port   | **Required.** The port number of the API endpoint.  |
-| key_ID | **Required.** The unique identifier for the customer's root key that protects the cloud resource. |
-| url_encoded_CRN | **Required.** The URL encoded [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) that uniquely identifies the cloud resource. At minimum, provide a CRN that includes the `service-instance` segment. |
+| `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where the {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Service regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). |
+| `port`   | **Required.** The port number of the API endpoint.  |
+| `key_ID` | **Required.** The unique identifier for the customer's root key that protects the cloud resource. |
+| `url_encoded_CRN` | **Required.** The URL encoded [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) that uniquely identifies the cloud resource. At minimum, provide a CRN that includes the `service-instance` segment. |
 {: caption="Table 4. Lists variables for the API method to delete a registration" caption-side="bottom"}
 
 ## Registering existing resources

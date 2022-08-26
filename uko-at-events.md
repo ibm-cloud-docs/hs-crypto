@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-08-25"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 
@@ -425,56 +425,12 @@ The severity level for all TKE events is `critical` due to the sensitivity of th
 
 The following table lists the actions that are associated with each severity level.
 
-<table>
-    <tr>
-      <th>Severity</th>
-      <th>Actions</th>
-    </tr>
-    <tr>
-      <td><p><varname>Critical</varname></p></td>
-      <td>
-        <p><code>hs-crypto.target-keystores.delete</code></p>
-        <p><code>hs-crypto.managed-keys.delete</code></p>
-        <p><code>hs-crypto.vaults.delete</code></p>
-        <p><code>hs-crypto.registrations.delete</code></p>
-        <p><code>hs-crypto.tke-cryptounit-admin.add</code></p>
-        <p><code>hs-crypto.tke-cryptounit-admin.remove</code></p>
-        <p><code>hs-crypto.tke-cryptounit-current-master-key-register.clear</code></p>
-        <p><code>hs-crypto.tke-cryptounit-new-master-key-register.clear</code></p>
-        <p><code>hs-crypto.tke-cryptounit-master-key-register.add</code></p>
-        <p><code>hs-crypto.tke-cryptounit-master-key-register.commit</code></p>
-        <p><code>hs-crypto.tke-cryptounit-master-key-register.activate</code></p>
-        <p><code>hs-crypto.tke-cryptounit-threshold.set</code></p>
-        <p><code>hs-crypto.tke-cryptounit.reset</code></p>
-        <p><code>hs-crypto.mtlscert-admin-key.create</code></p>
-        <p><code>hs-crypto.mtlscert-admin-key.update</code></p>
-        <p><code>hs-crypto.mtlscert-admin-key.delete</code></p>
-        <p><code>hs-crypto.mtlscert-cert.set</code></p>
-        <p><code>hs-crypto.mtlscert-cert.set</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td><p><varname>Warning</varname></p></td>
-      <td>
-        <p><code>hs-crypto.managed-keys.write </code></p>
-        <p>Note that when this event is triggered to change the key state to <code>destroyed</code>, the severity level is <code>Critical</code> instead of <code>Warning</code>.</p>
-      </td>
-    </tr>
-     <tr>
-      <td><p><varname>Normal</varname></p></td>
-      <td>
-        <p><code>hs-crypto.managed-keys.list </code></p>
-        <p><code>hs-crypto.managed-keys.read</code></p>
-        <p><code>hs-crypto.target-keystores.write</code></p>
-        <p><code>hs-crypto.target-keystores.list</code></p>
-        <p><code>hs-crypto.target-keystores.read </code></p>
-        <p><code>hs-crypto.vaults.list</code></p>
-        <p><code>hs-crypto.vaults.write</code></p>
-        <p><code>hs-crypto.vaults.read</code></p>
-      </td>
-    </tr>
-    <caption>Table 12. Severity level for {{site.data.keyword.hscrypto}} service actions</caption>
-    </table>
+| Severity | Actions |
+| --- | --- |
+| Critical | `hs-crypto.target-keystores.delete` \n \n `hs-crypto.managed-keys.delete` \n \n `hs-crypto.vaults.delete` \n \n `hs-crypto.registrations.delete` \n \n `hs-crypto.tke-cryptounit-admin.add` \n \n `hs-crypto.tke-cryptounit-admin.remove` \n \n `hs-crypto.tke-cryptounit-current-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-new-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-master-key-register.add` \n \n `hs-crypto.tke-cryptounit-master-key-register.commit` \n \n `hs-crypto.tke-cryptounit-master-key-register.activate` \n \n `hs-crypto.tke-cryptounit-threshold.set` \n \n `hs-crypto.tke-cryptounit.reset` \n \n `hs-crypto.mtlscert-admin-key.create` \n \n `hs-crypto.mtlscert-admin-key.update` \n \n `hs-crypto.mtlscert-admin-key.delete` \n \n `hs-crypto.mtlscert-cert.set` \n \n `hs-crypto.mtlscert-cert.set` |
+| Warning | `hs-crypto.managed-keys.write` \n \n Note that when this event is triggered to change the key state to `destroyed`, the severity level is `Critical` instead of `Warning`. |
+| Normal | `hs-crypto.managed-keys.list` \n \n `hs-crypto.managed-keys.read` \n \n `hs-crypto.target-keystores.write` \n \n `hs-crypto.target-keystores.list` \n \n `hs-crypto.target-keystores.read` \n \n `hs-crypto.vaults.list` \n \n `hs-crypto.vaults.write` \n \n `hs-crypto.vaults.read` |
+{: caption="Table 12. Severity level for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
 
 The following table lists the status codes that are associated with each severity level.
 

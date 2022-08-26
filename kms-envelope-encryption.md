@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-05-10"
+lastupdated: "2022-08-25"
 
 keywords: encryption at rest, envelope encryption, root key, data encryption key, key encryption key, key protect, protect data encryption key, encrypt data encryption key, wrap data encryption key, unwrap data encryption key
 
@@ -32,27 +32,13 @@ Envelope encryption is the practice of encrypting data with a [data encryption k
 
 With envelope encryption, {{site.data.keyword.hscrypto}} protects your at-rest data with advanced encryption and offers the following benefits:
 
-<table>
-    <th>Benefit</th>
-    <th>Description</th>
-    <tr>
-    <td>Customer-managed encryption keys</td>
-    <td>With the service, you can provision root keys to protect the security of your encrypted data in the cloud. Root keys serve as key-wrapping keys, which help you manage and safeguard the data encryption keys (DEKs) provisioned in {{site.data.keyword.cloud_notm}} data services. You decide whether to <a href="/docs/hs-crypto?topic=hs-crypto-import-root-keys">import your existing root keys</a>, or have {{site.data.keyword.hscrypto}} <a href="/docs/hs-crypto?topic=hs-crypto-create-root-keys">generate root keys on your behalf</a>.</td>
-    </tr>
-    <tr>
-    <td>Confidentiality and integrity protection</td>
-    <td>{{site.data.keyword.hscrypto}} uses the Advanced Encryption Standard (AES) algorithm in Cipher Blocker Chaining (CBC) mode to create and protect keys. When you create keys in the service, {{site.data.keyword.hscrypto}} generates them in the {{site.data.keyword.hscrypto}} instance and the master key encrypts the keys to ensure only you have the access.</td>
-    </tr>
-    <tr>
-    <td>Cryptographic shredding of data</td>
-    <td>If your organization detects a security issue, or your application no longer needs a set of data, you can choose to shred the data permanently from the cloud. When you delete a root key that protects other DEKs, you ensure that the keys' associated data can no longer be accessed or decrypted.</td>
-    </tr>
-    <tr>
-    <td>Delegated user access control</td>
-    <td>By assigning {{site.data.keyword.iamshort}} (IAM) roles, {{site.data.keyword.hscrypto}} supports a centralized access control system to enable granular access for your keys. You can see <a href="/docs/hs-crypto?topic=hs-crypto-grant-access-keys">Granting access to keys</a> for detailed information.</td>
-    </tr>
-    <caption>Table 1. Describes the benefits of customer-managed encryption</caption>
-</table>
+| Benefit | Description |
+| --- | --- |
+| Customer-managed encryption keys | With the service, you can provision root keys to protect the security of your encrypted data in the cloud. Root keys serve as key-wrapping keys, which help you manage and safeguard the data encryption keys (DEKs) provisioned in {{site.data.keyword.cloud_notm}} data services. You decide whether to [import your existing root keys](/docs/hs-crypto?topic=hs-crypto-import-root-keys), or have {{site.data.keyword.hscrypto}} [generate root keys on your behalf](/docs/hs-crypto?topic=hs-crypto-create-root-keys). |
+| Confidentiality and integrity protection | {{site.data.keyword.hscrypto}} uses the Advanced Encryption Standard (AES) algorithm in Cipher Blocker Chaining (CBC) mode to create and protect keys. When you create keys in the service, {{site.data.keyword.hscrypto}} generates them in the {{site.data.keyword.hscrypto}} instance and the master key encrypts the keys to ensure only you have the access. |
+| Cryptographic shredding of data | If your organization detects a security issue, or your application no longer needs a set of data, you can choose to shred the data permanently from the cloud. When you delete a root key that protects other DEKs, you ensure that the keys' associated data can no longer be accessed or decrypted. |
+| Delegated user access control | By assigning {{site.data.keyword.iamshort}} (IAM) roles, {{site.data.keyword.hscrypto}} supports a centralized access control system to enable granular access for your keys. You can see [Granting access to keys](/docs/hs-crypto?topic=hs-crypto-grant-access-keys) for detailed information. |
+{: caption="Table 1. Describes the benefits of customer-managed encryption" caption-side="bottom"}
 
 ## Keys in envelope encryption
 {: #kms-key-types}
@@ -94,8 +80,6 @@ The key wrap operation provides both confidentiality and integrity protection fo
 The following diagram shows the key wrapping process in action.
 
 ![Wrapping data](/images/wrapping-keys.svg "The diagram shows key wrapping in action."){: caption="Figure 2. Wrapping data" caption-side="bottom"}
-
-
 
 ## Unwrapping keys
 {: #kms-unwrapping}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-08-26"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -107,77 +107,15 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
 
     Replace the variables in the example request according to the following table.
 
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>region</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The region abbreviation, such as <code>us-south</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
-          </p>
-          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td><varname>port</varname></td>
-        <td><strong>Required.</strong> The port number of the API endpoint.</td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>key_ring_id</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The unique identifier for the key ring that you would like to create.
-          </p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>IAM_token</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the <code>curl</code> request.
-          </p>
-          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>instance_ID</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance.
-          </p>
-          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>correlation_ID</varname>
-        </td>
-        <td>
-          The unique identifier that is used to track and correlate transactions.
-        </td>
-      </tr>
-
-      <caption>
-        Table 1. Describes the variables that are needed to create a key ring with the key management service API
-      </caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `port` | **Required.** The port number of the API endpoint. |
+    | `key_ring_id` | **Required.** The unique identifier for the key ring that you would like to create. |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
+    {: caption="Table 1. Describes the variables needed to create a key ring with the key management service API" caption-side="bottom"}
 
     A successful `POST api/v2/key_rings` request returns an HTTP `201 Created` response, which indicates that the key ring is created and is now available for holding standard and root keys.
 
@@ -240,91 +178,16 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 
     Replace the variables in the example request according to the following table.
 
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>region</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The region abbreviation, such as <code>us-south</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
-          </p>
-          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td><varname>port</varname></td>
-        <td><strong>Required.</strong> The port number of the API endpoint.</td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>IAM_token</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the <code>curl</code> request.
-          </p>
-          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>instance_ID</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance.
-          </p>
-          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>original_key_ring_ID</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Optional.</strong> The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request.
-          </p>
-          <p>
-            Note: If you create a key without an <code>x-kms-key-ring</code> header, the key ring for the key is: <code>default</code>.
-          </p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>correlation_ID</varname>
-        </td>
-        <td>
-          The unique identifier that is used to track and correlate transactions.
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>new_key_ring_ID</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The unique identifier for the target key ring that you want to move the key to.
-          </p>
-        </td>
-      </tr>
-
-      <caption>
-        Table 2. Describes the variables that are needed to update a key's key ring with the key management service API
-      </caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `port` | **Required.** The port number of the API endpoint. |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `original_key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: If you create a key without an `x-kms-key-ring` header, the key ring for the key is: `default`. |
+    | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
+    | `new_key_ring_ID` | **Required.** The unique identifier for the target key ring that you want to move the key to. |
+    {: caption="Table 2. Describes the variables needed to update a key's key ring with the key management service API" caption-side="bottom"}
 
     A successful `PATCH api/v2/keys/key_ID` request returns the key's metadata, including the ID of the key ring that the key now belongs to.
 
@@ -453,62 +316,14 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
 
     Replace the variables in the example request according to the following table.
 
-    <table>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>
-        <varname>region</varname>
-      </td>
-      <td>
-        <p>
-          <strong>Required.</strong> The region abbreviation, such as <code>us-south</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
-        </p>
-        <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
-      </td>
-    </tr>
-    <tr>
-      <td><varname>port</varname></td>
-      <td><strong>Required.</strong> The port number of the API endpoint.</td>
-    </tr>
-    <tr>
-      <td>
-        <varname>IAM_token</varname>
-      </td>
-      <td>
-        <p>
-        <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the <code>curl</code> request.
-        </p>
-        <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <varname>instance_ID</varname>
-      </td>
-      <td>
-        <p>
-        <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance.
-        </p>
-        <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <varname>correlation_ID</varname>
-      </td>
-      <td>
-        <p>
-          The unique identifier that is used to track and correlate transactions.
-        </p>
-      </td>
-    </tr>
-    <caption>
-    Table 4. Describes the variables that are needed to view key rings with the key management service API.
-    </caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `port` | **Required.** The port number of the API endpoint. |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
+    {: caption="Table 4. Describes the variables needed to view key rings with the key management service API" caption-side="bottom"}
 
     A successful `GET api/v2/key_rings` request returns a collection of key rings that are available in your {{site.data.keyword.hscrypto}} service instance.
 
@@ -581,68 +396,13 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings/<key_ring_i
 
     Replace the variables in the example request according to the following table.
 
-    <table>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>region</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The region abbreviation, such as <code>us-south</code>, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides.
-          </p>
-          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints">Regional service endpoints</a>.</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td><varname>port</varname></td>
-        <td><strong>Required.</strong> The port number of the API endpoint.</td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>key_ring_id</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The unique identifier for the key ring that you would like to delete.
-          </p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>IAM_token</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the <code>IAM</code> token, including the Bearer value, in the <code>curl</code> request.
-          </p>
-          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-access-token">Retrieving an access token</a>.</p>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <varname>instance_ID</varname>
-        </td>
-        <td>
-          <p>
-            <strong>Required.</strong> The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service
-            instance.
-          </p>
-          <p>For more information, see <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">Retrieving an instance ID</a>.</p>
-        </td>
-      </tr>
-
-      <caption>
-        Table 5. Describes the variables that are needed to delete keys with the key management service API.
-      </caption>
-    </table>
+    | Variable | Description |
+    | --- | --- |
+    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `port` | **Required.** The port number of the API endpoint. |
+    | `key_ring_id` | **Required.** The unique identifier for the key ring that you would like to delete. |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    {: caption="Table 5. Describes the variables needed to delete keys with the key management service API" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which indicates that the key ring is successfully deleted.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-05-31"
+lastupdated: "2022-08-25"
 
 keywords: disaster recovery, restore, recovery, cross region restore, support ticket, support center
 
@@ -58,25 +58,12 @@ To restore a backup to an existing service instance, follow these steps:
 1. In the {{site.data.keyword.cloud_notm}} console, select **Support** to enter the Support Center. Click **View all** in the **Recent support cases** panel and click **Create new case**. Or, you can directly go to the [Manage cases page](https://cloud.ibm.com/unifiedsupport/cases){: external} and click **Create new case**.
 2. On the **Create a case** page displayed, select the offering {{site.data.keyword.hscrypto}}, and then specify the following values:
 
-    <table>
-    <tr>
-      <th>Field name</th>
-      <th>Action</th>
-    </tr>
-    <tr>
-      <td>Subject</td>
-      <td>Enter <strong>Disaster recovery</strong>.</td>
-    </tr>
-    <tr>
-      <td>Description</td>
-      <td>Enter your <a href="/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID">service instance ID</a> and the region that your service instance resides in.</td>
-    </tr>
-    <tr>
-      <td>Selected resources (optional)</td>
-      <td>Select your {{site.data.keyword.hscrypto}} service instance.</td>
-    </tr>
-    <caption>Table 1. Describes the fields that are displayed on the <strong>Create a case</strong> page</caption>
-    </table>
+    | Field name | Action |
+    | --- | --- |
+    | Subject | Enter **Disaster recovery**. |
+    | Description | Enter your [service instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID) and the region that your service instance resides in. |
+    | Selected resources | Optional. Select your {{site.data.keyword.hscrypto}} service instance. |
+    {: caption="Table 1. Describes the fields required for creating a case" caption-side="bottom"}
 
 3. Check the **Email me updates about this issue** box, and click **Continue to review > Create case**.
 
