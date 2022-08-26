@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-08-26"
 
 keywords: instance settings, service settings, network access policies
 
@@ -112,7 +112,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `enabled` | **Required.** Set to `true` to enable a network access policy. |
     | `access_type` | **Required.** The network access policy to apply to your {{site.data.keyword.hscrypto}} instance. Acceptable values are `public-and-private` or `private-only`. After the network access policy is set to `private-only`, you cannot access your instance from the public network and cannot view or manage keys with the {{site.data.keyword.cloud_notm}} console. However, you can still adjust the network setting later using the API or CLI. |
-    {: caption="Table 1. Describes the variables that are needed to set a network access policy at the instance level" caption-side="bottom"}
+    {: caption="Table 1. Describes the variables needed to set a network access policy at the instance level" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which indicates that your {{site.data.keyword.hscrypto}} instance
     now enforces a network access policy. API requests to the service are restricted to the policy you set.
@@ -190,7 +190,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `enabled` | **Required.** Set to `false` to remove the network access policy, that is, the policy is not enforced and your service instance is back to the default state where both the public and private network access are allowed. |
-    {: caption="Table 2. Describes the variables that are needed to disable a network access policy at the instance level" caption-side="bottom"}
+    {: caption="Table 2. Describes the variables needed to disable a network access policy at the instance level" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which indicates that the network access policy of your {{site.data.keyword.hscrypto}} instance is updated.
 

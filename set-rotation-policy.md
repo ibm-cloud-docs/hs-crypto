@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-08-26"
 
 keywords: rotate, rotate root key, automatic key rotation, set rotation policy, policy based key rotation
 
@@ -96,7 +96,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
-    {: caption="Table 1. Describes the variables that are needed to create a rotation policy with the {{site.data.keyword.hscrypto}} key management service API" caption-side="bottom"}
+    {: caption="Table 1. Describes the variables needed to create a rotation policy with the API" caption-side="bottom"}
 
     A successful `GET api/v2/keys/{id}/policies` response returns policy details that are associated with your key. The following JSON object shows an example response for a root key that has an existing rotation policy.
 
@@ -173,7 +173,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
     | `rotation_interval` | **Required.** An integer value that determines the key rotation interval time in months. The minimum is `1` and the maximum is `12`. |
-    {: caption="Table 2. Describes the variables that are needed to create a rotation policy with the {{site.data.keyword.hscrypto}} key management service API" caption-side="bottom"}
+    {: caption="Table 2. Describes the variables needed to create a rotation policy with the API" caption-side="bottom"}
 
     A successful `PUT api/v2/keys/{id}/policies` response returns policy details that are associated with your key. The following JSON object shows an example response for a root key that has an existing rotation policy.
 
@@ -248,7 +248,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
     | `new_rotation_interval` | **Required.** An integer value that determines the key rotation interval time in months. The minimum is `1` and the maximum is `12`. |
-    {: caption="Table 3. Describes the variables that are needed to create a rotation policy with the {{site.data.keyword.hscrypto}} key management service API" caption-side="bottom"}
+    {: caption="Table 3. Describes the variables needed to create a rotation policy with the API" caption-side="bottom"}
 
     A successful `PUT api/v2/keys/{id}/policies` response returns updated policy details that are associated with your key. The following JSON object shows an example response for a root key with an updated rotation policy.
 

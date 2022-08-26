@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-08-26"
 
 keywords: view resoure, root key encryption resources, protected resource, protected service, envelope encryption, key registration, view registration, list registrations
 
@@ -196,7 +196,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/registr
     | `port` | **Required.** The port number of the API endpoint. |
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    {: caption="Table 7. Describes the variables that are needed to list all registrations that are associated with a root key" caption-side="bottom"}
+    {: caption="Table 7. Describes the variables needed to list all registrations that are associated with a root key" caption-side="bottom"}
 
     A successful `GET api/v2/keys/<key_ID>/registrations` request returns a collection of registrations that are mapped to the specified key ID.
 
@@ -276,8 +276,8 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/registrations?ur
     | `url_encoded_CRN_query` | Filters for resources that are associated with a specified [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) by using URL encoded wildcard characters (`*`). The parameter needs to contain all CRN segments and must be URL encoded. To view examples, see [CRN query examples](#crn-query-examples). |
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    {: caption="Table 8. Describes the variables that are needed to list registrations by CRN query." caption-side="bottom"}
-    
+    {: caption="Table 8. Describes the variables needed to list registrations by CRN query." caption-side="bottom"}
+
 #### CRN query examples
 {: #crn-query-examples}
 

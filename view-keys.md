@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-08-26"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -117,8 +117,8 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
     | `IAM_token` | Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
-    | `correlation_ID` | Optional: The unique identifier that is used to track and correlate transactions. |
-    {: caption="Table 2. Describes the variables that are needed to view keys with the {{site.data.keyword.hscrypto}} key management service API" caption-side="bottom"}
+    | `correlation_ID` | **Optional.** The unique identifier that is used to track and correlate transactions. |
+    {: caption="Table 2. Describes the variables needed to view keys with the API" caption-side="bottom"}
 
     A successful `GET /v2/keys` request returns a collection of keys that are available in your {{site.data.keyword.hscrypto}} instance.
 

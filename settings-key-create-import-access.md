@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-08-26"
 
 keywords: instance settings, service settings, key creation/import, key create policy, key creation/import, key policy
 
@@ -169,7 +169,7 @@ existing value for the omitted field is overwritten by the default value.
     | `import_root_key` | **Required.** Set to `true` to allow root keys to be imported into your {{site.data.keyword.hscrypto}} instance. Set to `false` to prevent root keys from being imported into your instance. If this attribute is omitted, `true` is set as the default value. |
     | `import_standard_key` | **Required.** Set to `true` to allow standard keys to be imported into your {{site.data.keyword.hscrypto}} instance. Set to `false` to prevent standard keys from being imported into your instance. If this attribute is omitted, `true` is set as the default value. |
     | `enforce_token` | **Required.** Set to `true` to prevent authorized users from importing key material into your {{site.data.keyword.hscrypto}} instance without using an import token. Set to `false` to allow authorized users to import key material into your instance without using an import token. If `enforce_token` is enabled, it is required that [secure import](/docs/hs-crypto?topic=hs-crypto-create-import-tokens) is enabled for all key import actions. Key import is not available through UI, and you need to perform further actions through the CLI or API. If this attribute is omitted, `false` is set as the default value. |
-    {: caption="Table 1. Describes the variables that are needed to enable the key create and import access policy" caption-side="bottom"}
+    {: caption="Table 1. Describes the variables needed to enable the key create and import access policy" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which
     indicates that your {{site.data.keyword.hscrypto}}
@@ -251,7 +251,7 @@ key create and import access policy.
     | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    {: caption="Table 2. Describes the variables that are needed to disable the key create and import access policy" caption-side="bottom"}
+    {: caption="Table 2. Describes the variables needed to disable the key create and import access policy" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which
     indicates that the key create and import access policy is updated for your service

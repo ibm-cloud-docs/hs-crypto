@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-08-26"
 
 keywords: root key, wrap key, encrypt data encryption key, protect data encryption key, key wrap api
 
@@ -81,9 +81,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
-    | `correlation_ID` | Optional: The unique identifier that is used to track and correlate transactions. |
+    | `correlation_ID` | **Optional.** The unique identifier that is used to track and correlate transactions. |
     | `data_key` | The key material of the DEK that you want to manage and protect. The `plaintext` value must be base64 encoded. For more information about encoding your key material, see [Encoding your key material](/docs/key-protect?topic=key-protect-import-root-keys#open-ssl-encoding-root-new-key-material). To generate a new DEK, omit the `plaintext` attribute. The service generates a random plaintext (32 bytes), wraps that value, and then returns both the generated and wrapped values in the response. The generated and wrapped values are base64 encoded and you will need to decode them in order to decrypt the keys. |
-    {: caption="Table 1. Describes the variables that are needed to wrap a specified key in {{site.data.keyword.hscrypto}}." caption-side="bottom"}
+    {: caption="Table 1. Describes the variables needed to wrap a specified key in {{site.data.keyword.hscrypto}}." caption-side="bottom"}
 
     Your wrapped data encryption key, containing the base64 encoded key material, is returned in the response entity-body. The response body also contains the ID of the key version that was used to wrap the supplied plaintext. The following JSON object shows an example returned value.
 

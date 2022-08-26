@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-08-26"
 
 keywords: rewrap key, reencrypt data encryption key, rewrap api, key id
 
@@ -79,7 +79,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
     | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
     | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
     | `encrypted_data_key` | **Required.** The `ciphertext` value that was returned by the original wrap operation. |
-    {: caption="Table 1. Describes the variables that are needed to rewrap keys in {{site.data.keyword.hscrypto}}." caption-side="bottom"}
+    {: caption="Table 1. Describes the variables needed to rewrap keys in {{site.data.keyword.hscrypto}}." caption-side="bottom"}
 
     The newly wrapped data encryption key, original key version (`keyVersion`) that is associated with the supplied ciphertext and latest key version (`rewrappedKeyVersion`) associated with the new ciphertext is returned in the response entity-body. The following JSON object shows an example returned value.
 

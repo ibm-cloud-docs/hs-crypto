@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-08-26"
 
 keywords: data encryption key, key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, unwrap api
 
@@ -78,9 +78,9 @@ Root keys that contain the same key material can unwrap the same data encryption
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your{{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. It is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
-    | `correlation_ID` | Optional: The unique identifier that is used to track and correlate transactions. |
+    | `correlation_ID` | **Optional.** The unique identifier that is used to track and correlate transactions. |
     | `encrypted_data_key` | The `ciphertext` value that was returned during a wrap operation. |
-    {: caption="Table 1. Describes the variables that are needed to unwrap keys in {{site.data.keyword.hscrypto}}" caption-side="bottom"}
+    {: caption="Table 1. Describes the variables needed to unwrap keys in {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 
     The original key material is returned in the response entity-body. The response body also contains the ID of the key version that was used to unwrap the supplied ciphertext. The following JSON object shows a sample returned value.
 
@@ -120,6 +120,6 @@ When you unwrap a data encryption key, the key material is returned in base64 en
     | --- | --- |
     | `infile` | The name of the file where your base64 encoded key material string resides. |
     | `outfile` | The name of the file where your decoded key material is outputted after the command is run. |
-    {: caption="Table 2. Describes the variables that are needed to decode your key material" caption-side="bottom"}
+    {: caption="Table 2. Describes the variables needed to decode your key material" caption-side="bottom"}
 
     If you want to output the decoded material in the command line directly rather than a file, run command `openssl enc -base64 -d <<< '<key_material_string>'`, where key_material_string is the returned plaintext from your unwrap request.

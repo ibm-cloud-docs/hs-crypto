@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-08-26"
 
 keywords: instance settings, service settings, dual authorization
 
@@ -131,7 +131,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/instance/policies?pol
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
-    {: caption="Table 1. Describes the variables that are needed to enable dual authorization at the instance level" caption-side="bottom"}
+    {: caption="Table 1. Describes the variables needed to enable dual authorization at the instance level" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which
     indicates that your service instance is now enabled for dual authorization.
@@ -228,7 +228,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/instance/policies?pol
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
-    {: caption="Table 1. Describes the variables that are needed to enable dual authorization at the instance level" caption-side="bottom"}
+    {: caption="Table 1. Describes the variables needed to enable dual authorization at the instance level" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which
     indicates that the dual authorization policy was updated for your service
