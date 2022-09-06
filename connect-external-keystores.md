@@ -198,6 +198,8 @@ To connect to an external keystore through the API, follow these steps:
 
     For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-keystore){: external}.
 
+
+
 ## What's next
 {: #connect-external-keystores-next}
 
