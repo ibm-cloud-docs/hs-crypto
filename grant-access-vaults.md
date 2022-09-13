@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-09-13"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystore, key management, access control
 
@@ -53,10 +53,7 @@ Access the {{site.data.keyword.cloud_notm}} UI to browse the keys that are store
 
 4. In the **General properties** card, copy the vault ID by clicking the copy icon.
 
-
-
-- [Use the {{site.data.keyword.uko_full_notm}} API](/apidocs/uko#get-vault){: external} to retrieve a list of your vaults, along with the metadata of the vaults.
-
+You can also [use the {{site.data.keyword.uko_full_notm}} API](/apidocs/uko#get-vault){: external} to retrieve a list of your vaults, along with the metadata of the vaults.
 
 
 ## Step 2. Grant access to vaults from the {{site.data.keyword.cloud_notm}} UI
