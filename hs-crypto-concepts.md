@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-09-05"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -227,47 +227,4 @@ gRPC is a modern open source high performance remote procedure call (RPC) framew
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of the Enterprise PKCS #11 (EP11) over [gRPC](https://grpc.io){: external} API calls (also referred to as GREP11), with which all the Crypto functions are executed in a cloud HSM. EP11 over gRPC is a stateless interface for cryptographic operations on cloud. For more information about the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11-intro) and [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
-
-
-
-## {{site.data.keyword.uko_full_notm}}
-{: #unified-key-orchestrator-concepts}
-
-This section covers concepts that are related to [{{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-introduce-uko).
-
-### {{site.data.keyword.uko_full_notm}}
-{: #unified-key-orchestrator-concept}
-
-{{site.data.keyword.uko_full_notm}} is a public cloud control plane for multicloud and hybrid cloud key orchestration. As part of the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, it provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores and external keystores.
-
-### Vault
-{: #vault-concept}
-
-A vault is a single repository that controls a user's or an access group's access to keys and keystores through Identity and Access Management (IAM). A managed key or internal keystore can be created only in a vault. When you connect to an external keystore, you need to assign it to a vault. To use a managed key for encryption and decryption, you need to install in one or more keystores within the same vault. The vault keeps all installations of a managed key in sync.
-
-### Managed key
-{: #managed-key-conncept}
-        
-A managed key is a key that is created in and assigned to a vault. You can use a managed key for encryption and decryption only when it is installed in at least one target keystore.
-
-### Installed key
-{: #installed-key-conncept}
-
-An installed key is a key that is installed in a keystore. When you install a managed key in keystores, the key is assigned different installed key IDs in different keystores.
-
-### Target keystore
-{: #target-keystore-concept}
-
-A target keystore is keystore that is assigned to a vault. If it is an internal keystore, it can be created only in a vault. 
-
-### Internal keystore
-{: #internal-keystore-concept}
-
-An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance to store the cryptographic keys in your service instance. Both KMS and EP11 keystores are supported internal keystore types. You can create up to five free KMS keystores to manage your keys. 
-
-
-### External keystore
-{: #external-keystore-concept}
-
-An external keystore is a keystore that is not in your {{site.data.keyword.hscrypto}} instance. You can connect your service instance to another {{site.data.keyword.hscrypto}} or {{site.data.keyword.keymanagementserviceshort}} instance, potentially in another region. Or, you can connect your service instance to external keystores from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS).
 

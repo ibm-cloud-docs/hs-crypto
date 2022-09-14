@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-09-05"
 
 keywords: site map, doc structure, information architecture
 
@@ -106,7 +106,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 
-
 ## Getting started
 {: #sitemap_getting_started}
 
@@ -179,8 +178,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Key management service](/docs/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts)
 
 * [Cloud hardware security module](/docs/hs-crypto?topic=hs-crypto-understand-concepts#cloud-hsm-concepts)
-
-* [{{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-understand-concepts#unified-key-orchestrator-concepts)
 
 
 ### About service instance initialization

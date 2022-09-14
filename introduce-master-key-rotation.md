@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-06"
+lastupdated: "2022-09-06"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -33,26 +33,26 @@ A master key is used to wrap encryption keys that are managed in the service ins
 
 Master key rotation works by securely transferring the value between two types of master key registers in crypto units: new master key register and current master key register. Depending on [the approach that you use to initialize your service instance](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode), the rotation process is slightly different.
 
-### Rotating master keys by using key parts
-{: #how-master-key-rotation-works-use-key-parts}
+### Rotating master keys by using smart cards and Management Utilities
+{: #how-master-key-rotation-works-smard-cards}
 
-Master keys that are created from key parts can be rotated by using either TKE CLI plug-in or the Management Utilities. When master keys are rotated by using the TKE CLI plug-in, master key parts are stored in files on the local workstation. When master keys are rotated by using the Management Utilities master key parts are stored on smart cards. Before you rotate the master key, you need to create the key parts that you are going to use.
+Master keys that are created with the Management Utilities can be rotated by using the smart cards, where master key parts are stored. Before you rotate the master key, you need to create the key parts that you are going to use.
 
 You can create a new master key value using either 2 or 3 key parts. To be able to rotate the master key, the current master key registers must be in `Valid` state with the same verification pattern and the new master key registers must be `Empty`.
 
-You can rotate the master key using TKE CLI plug-in or the Management Utilities regardless of whether your service instance has recovery crypto units assigned to it or not.
+You can rotate the master key using the Management Utilities regardless of whether your service instance has recovery crypto units assigned to it or not.
 
 The following flow shows how master key rotation works in this mode:
 
-1. Load the new master key register by using the `cryptounit-mk-load` command or by clicking the **Load** button in the Trusted Key Entry application. The state of the new master key register is changed from `Empty` to `Full uncommitted`.
-2. Commit the new master key value by using the `cryptounit-mk-commit` command or by clicking the **Commit** button in the Trusted Key Entry application. The new master key register state is changed to `Full committed`.
-3. Reencrypt key storage and activate the new master key by using the `cryptounit-mk-rotate` command or by clicking on the **Rotate** button in the Trusted Key Entry application:
+1. Load the new master key register by clicking the **Load** button in the Trusted Key Entry application. The state of the new master key register is changed from `Empty` to `Full uncommitted`.
+2. Commit the new master key value by clicking the **Commit** button in the Trusted Key Entry application. The new master key register state is changed to `Full committed`.
+3. Reencrypt key storage and activate the new master key by clicking on the **Rotate** button in the Trusted Key Entry application:
     1. Encryption keys in key storage are decrypted by using the value in the current master key register and then reencrypted by using the value in the new master key register. The rewrapping takes place inside the hardware security module (HSM), so it's secure.
     2. The new master key is activated and loaded to the current master key register in `Valid` state, and the new master key register is cleared and back to `Empty` state.
 
-The following chart illustrates how the master key register state changes during the master key rotation. For detailed instructions, see [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
+The following chart illustrates how the master key register state changes during the master key rotation. For detailed instructions, see [Rotating master keys by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards).
 
-![Rotating master keys by using key parts](/images/rotate-master-key.svg "How to rotate a master key by using key part files"){: caption="Figure 1. Rotating master keys by using key parts" caption-side="bottom"}
+![How master key register state changes during master key rotation](/images/rotate-master-key.svg "How master key register state changes during master key rotation"){: caption="Figure 1. How master key register state changes during master key rotation" caption-side="bottom"}
 
 ### Rotating master keys by using recovery crypto units
 {: #how-master-key-rotation-works-recovery-crypto-unit}
@@ -76,9 +76,30 @@ The following flow shows how master key rotation works in this mode:
 
 For detailed instructions on how to rotate master keys by using recovery crypto units, see [Rotating master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit).
 
+### Rotating master keys by using key part files
+{: #how-master-key-rotation-works-use-key-part-files}
+
+Master keys that are created from key part files can be rotated by using TKE CLI plug-in. When master keys are rotated, master key parts are stored in files on the local workstation. 
+
+Similar to using the Management Utilities, you need to first create the 2 or 3 key parts that you are going to use. To be able to rotate the master key, the current master key registers must be in `Valid` state with the same verification pattern and the new master key registers must be `Empty`.
+
+You can rotate the master key using TKE CLI plug-in regardless of whether your service instance has recovery crypto units assigned to it or not.
+
+The following flow shows how master key rotation works in this mode:
+
+1. Load the new master key register by using the `cryptounit-mk-load` command. The state of the new master key register is changed from `Empty` to `Full uncommitted`.
+2. Commit the new master key value by using the `cryptounit-mk-commit` command. The new master key register state is changed to `Full committed`.
+3. Reencrypt key storage and activate the new master key by using the `cryptounit-mk-rotate` command:
+    1. Encryption keys in key storage are decrypted by using the value in the current master key register and then reencrypted by using the value in the new master key register. The rewrapping takes place inside the HSM, so it's secure.
+    2. The new master key is activated and loaded to the current master key register in `Valid` state, and the new master key register is cleared and back to `Empty` state.
+
+For detailed instructions, see [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
+
 ## What's next
 {: #master-key-rotation-next}
 
 For more detailed instructions on options to rotate master keys, see:
-- [Rotating master keys by using key parts](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
+- [Rotating master keys by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards).
 - [Rotating master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit).
+- [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
+

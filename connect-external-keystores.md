@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-09-06"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -16,6 +16,7 @@ subcollection: hs-crypto
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
+{:important: .important}
 {:external: target="_blank" .external}
 {:term: .term}
 {:ui: .ph data-hd-interface="ui"}
@@ -176,6 +177,8 @@ To connect to an external keystore by using the console, complete the following 
 8. Under **Summary**, view the summary of your Azure Key Vault and the total estimated cost.
 9. After you confirm the keystore details, click  **Connect to keystore** to connect to the keystore.
 
+
+
 You have successfully connected to the external keystore that you select. 
 
 ## Connecting to external keystores with the API
@@ -195,10 +198,12 @@ To connect to an external keystore through the API, follow these steps:
 
     For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-keystore){: external}.
 
+
+
 ## What's next
 {: #connect-external-keystores-next}
 
-- To find out how to install an existing key to a keystore, check out [Setting target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
+- To find out how to install an existing key in a keystore, check out [Setting target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
 
 - To find out how to update the connection to an external keystore, check out [Editing connection to external keystores](/docs/hs-crypto?topic=hs-crypto-edit-external-keystore-connection).
 
