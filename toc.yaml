@@ -384,6 +384,7 @@ toc:
       - topicgroup:
           label: Troubleshooting Unified Key Orchestrator
           topics:
+          - troubleshooting-import-azure-key.md
           - troubleshooting-create-internal-keystores.md
           - troubleshooting-create-vault.md
           - troubleshooting-delete-vault.md
