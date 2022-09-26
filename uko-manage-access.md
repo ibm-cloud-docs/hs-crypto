@@ -125,15 +125,11 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Destroy a preactive key. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | |
 | Deactivate an active key. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | | |
 | Install an active key. | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-
 | Uninstall an active key.| | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | |
-
 | Destroy a deactivated key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| |
 | Install a deactivated key. | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | |
-<out-of-sync>| Assign a deactivated key. | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | |<out-of-sync>
 | Reactivate a deactivated key. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | | |
 | Uninstall a deactivated key. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-<out-of-sync>| Detach a deactivated key. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |<out-of-sync>
 | Remove a destroyed key from Vault. | | | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | Read managed key details. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
 | List managed keys. | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
@@ -162,6 +158,9 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 {: tab-title="{{site.data.keyword.uko_full_notm}}"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
+
+
+
 
 
 | Action | Reader | ReaderPlus | Writer | Manager | KMS Key Purge |
