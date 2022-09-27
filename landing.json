@@ -27,7 +27,7 @@
   "section_videos": [
     {
       "title": "IBM Cloud Hyper Protect Crypto Services overview",
-      "href": "https://mediacenter.ibm.com/media/1_zxwh6ixm",
+      "href": "https://mediacenter.ibm.com/media//1_1ipwq52p",
       "thumbnail": "/images/thumbnail_overview_video.png"
     },
     {
@@ -44,6 +44,11 @@
       "title": "Hyper Protect Crypto Services and KMIP for VMware on IBM Cloud",
       "href": "https://mediacenter.ibm.com/media/0_4wm4bq4s",
       "thumbnail": "/images/thumbnail_vmware_intro.png"
+    },
+    {
+      "title": "Securely managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator",
+      "href": "https://mediacenter.ibm.com/media/1_1a6c6vub",
+      "thumbnail": "/images/thumbnail_o365_aws.png"
     },
     {
       "title": "Configuring KMIP in Hyper Protect Crypto Services for key management and distribution",
