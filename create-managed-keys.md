@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-09-27"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -79,8 +79,10 @@ To create a managed key by using the console, complete the following steps:
 
 7. Under **Target keystores**, you can select one or multiple target keystores to install the managed key in. Installing a key in multiple keystores enables redundancy. You can also install the key later by following instructions in [Setting target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
 
-   You can use the key for encryption or decryption only after it is installed in at least one keystore.
-   {: important}
+    If there are no existing keystores, you can click **Add keystore** to [create internal KMS keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [connect to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores). The corresponding keystore type is selected for you.
+
+    You can use the key for encryption or decryption only after it is installed in at least one keystore.
+    {: important}
 
 8. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.
 

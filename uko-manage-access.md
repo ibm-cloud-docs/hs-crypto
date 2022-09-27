@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-09-26"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -158,6 +158,9 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 {: tab-title="{{site.data.keyword.uko_full_notm}}"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
+
+
+
 
 
 | Action | Reader | ReaderPlus | Writer | Manager | KMS Key Purge |
