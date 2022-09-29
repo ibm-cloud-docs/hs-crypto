@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-09-29"
 
 keywords: Unified Key Orchestrator, install keys, activate key, key management, kms keys
 
@@ -44,6 +44,7 @@ To install or uninstall a managed key in target keystores by using the console, 
 5. Select one or multiple target keystores that you want to install the key in. Or, you can clear the checkbox to uninstall the key from a keystore.
    
     Installing a key in multiple keystores enables redundancy. If you want to install the key in a new keystore, click **Add keystore**. For more instructions, see [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
+
    
 6. Click **Save** to save the changes.
 
