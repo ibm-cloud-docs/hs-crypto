@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-10-10"
 
 keywords: crypto unit, add crypto units, remove crypto units, change crypto units number, adjust crypto units number, new crypto units, support center, support ticket, support case
 
@@ -29,7 +29,7 @@ subcollection: hs-crypto
 # Adding or removing crypto units
 {: #add-remove-crypto-units}
 
-After you provision a {{site.data.keyword.hscrypto}} instance, you can request to add or remove crypto units by raising support tickets in the IBM Support Center.
+After you provision a {{site.data.keyword.hscrypto}} instance, you can request to add or remove crypto units by raising support tickets in the {{site.data.keyword.cloud}} Support Center.
 {: shortdesc}
 
 To adjust the number of crypto units, complete the following steps.
@@ -42,7 +42,7 @@ To adjust the number of crypto units, complete the following steps.
 
 To add or remove crypto units, you need to first raise a support ticket.
 
-1. In your {{site.data.keyword.cloud_notm}} dashboard, select **Support** to enter the Support Center. Click **View all** in the **Recent support cases** panel and click **Create new case**. Or, you can directly go to the [Manage cases page](https://cloud.ibm.com/unifiedsupport/cases){: external} and click **Create new case**.
+1. In your {{site.data.keyword.cloud_notm}} dashboard, click the **Help** icon ![Help icon](../icons/help.svg "Help") > **Support center** from the {{site.data.keyword.cloud_notm}} console menu bar to enter the Support Center. Click **View all** in the **Recent support cases** panel and click **Create new case**. Or, you can directly go to the [Manage cases page](https://cloud.ibm.com/unifiedsupport/cases){: external} and click **Create new case**.
 2. On the **Create a case** page displayed, select the offering {{site.data.keyword.hscrypto}}, and then specify the following values:
 
     | Field name | Action |
@@ -54,7 +54,7 @@ To add or remove crypto units, you need to first raise a support ticket.
 
 3. Check the **Email me updates about this issue** box, and click **Continue to review > Create case**.
 
-    After the operation is completed successfully, you will get an email notification. You can also check the state in the Support Center by clicking **Support**.
+    After the operation is completed successfully, you will get an email notification. You can also check the state in the Support Center by clicking the **Help** icon ![Help icon](../icons/help.svg "Help") > **Support center** from the {{site.data.keyword.cloud_notm}} console menu bar.
 
 4. To view the number of crypto units in the current service instance, run the `ibm tke cryptounits` command in the CLI. Or you can select the **Crypto units** tab in the Trusted Key Entry application, depending on how you store your master key parts.
 
@@ -79,7 +79,7 @@ Extra monthly costs apply for each new crypto unit. You can check the detailed c
 
 After you initialize the new crypto units, you need to raise another support ticket to activate them.
 
-1. In your {{site.data.keyword.cloud_notm}} dashboard, select **Support** to enter the Support Center. Click **View all** in the **Recent support cases** panel and click **Create new case**. Or, you can directly go to the [Manage cases page](https://cloud.ibm.com/unifiedsupport/cases){: external} and click **Create new case**.
+1. In your {{site.data.keyword.cloud_notm}} dashboard, click the **Help** icon ![Help icon](../icons/help.svg "Help") > **Support center** from the {{site.data.keyword.cloud_notm}} console menu bar to enter the Support Center. Click **View all** in the **Recent support cases** panel and click **Create new case**. Or, you can directly go to the [Manage cases page](https://cloud.ibm.com/unifiedsupport/cases){: external} and click **Create new case**.
 2. On the **Create a case** page displayed, select the offering {{site.data.keyword.hscrypto}}, and then specify the following values:
 
     | Field name | Action |
@@ -91,7 +91,7 @@ After you initialize the new crypto units, you need to raise another support tic
 
 3. Check the **Email me updates about this issue** box, and click **Continue to review > Create case**.
 
-    After the activation is completed successfully, you will get an email notification. You can also check the state in the Support Center by clicking **Support**.
+    After the activation is completed successfully, you will get an email notification. You can also check the state in the Support Center by clicking the **Help** icon ![Help icon](../icons/help.svg "Help") > **Support center** from the {{site.data.keyword.cloud_notm}} console menu bar.
 
 ## Removing crypto units from an existing service instance
 {: #remove-crypto-units}

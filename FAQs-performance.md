@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-10-10"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -47,7 +47,7 @@ There is a KMS key ring limit of 50, but there is no GREP11 keystore limit. Howe
 {: #faq-add-remove-crypto-unit}
 {: faq}
 
-Yes, you can request to add or remove crypto units by raising support tickets in the IBM Support Center. For detailed instructions, see [Adding or removing crypto units](/docs/hs-crypto?topic=hs-crypto-add-remove-crypto-units).
+Yes, you can request to add or remove crypto units by raising support tickets in the {{site.data.keyword.cloud}} Support Center. For detailed instructions, see [Adding or removing crypto units](/docs/hs-crypto?topic=hs-crypto-add-remove-crypto-units).
 
 ## Is there a Service Level Agreement (SLA) specifically for {{site.data.keyword.hscrypto}}?
 {: #faq-hpcs-sla}
