@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-09-22"
+lastupdated: "2022-10-10"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -109,6 +109,9 @@ To connect to an external keystore by using the console, complete the following 
     - **{{site.data.keyword.keymanagementserviceshort}}**: Create a keystore that can store {{site.data.keyword.keymanagementserviceshort}} keys.
     - **{{site.data.keyword.cloud_notm}} KMS keystore in another instance**: Create a keystore that can store KMS keys in another {{site.data.keyword.hscrypto}} instance.
 
+    You can change the currency displayed by selecting your country or location.
+    {: tip}
+
 6. Under **Keystore properties**, specify the details of based on the keystore type that you want to connect to.
 
     |           Property	      |                         Description                       |
@@ -169,6 +172,9 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-title="KMS keystore in another instance"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
+
+    You cannot make further changes to fields that are marked with a Lock icon after the keystore is connected.
+    {: note}
 
 7. Optionally, click **Test connection** to test the connection to the external keystore that you configure. When completed, click **Next** to continue.
 
