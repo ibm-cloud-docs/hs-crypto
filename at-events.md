@@ -166,6 +166,8 @@ The initiator ID is derived from the TLS (Transport Layer Security) certificate 
 | `hs-crypto.kmip-key.destroy` | A KMIP key is destroyed. |
 {: caption="Table 7. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
 
+
+
 ## Viewing events
 {: #at-ui}
 
@@ -580,6 +582,7 @@ The following fields include extra information:
 - The `responseData.action` field indicates that the certificate is to be deleted.
 
 
+
 ## Analyzing failed events
 {: #at-events-analyze-failed}
 
@@ -650,12 +653,17 @@ The severity level for all TKE events is `critical` due to the sensitivity of th
 
 The following table lists the actions that are associated with each severity level:
 
+
 | Severity | Actions |
 | --- | --- |
 | `Critical` | `hs-crypto.secrets.delete` \n \n `hs-crypto.registrations.delete` \n \n `hs-crypto.tke-cryptounit-admin.add` \n \n `hs-crypto.tke-cryptounit-admin.remove` \n \n `hs-crypto.tke-cryptounit-current-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-new-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-master-key-register.add` \n \n `hs-crypto.tke-cryptounit-master-key-register.commit` \n \n `hs-crypto.tke-cryptounit-master-key-register.activate` \n \n `hs-crypto.tke-cryptounit-threshold.set` \n \n `hs-crypto.tke-cryptounit.reset` \n \n `hs-crypto.mtlscert-admin-key.create` \n \n `hs-crypto.mtlscert-admin-key.update` \n \n `hs-crypto.mtlscert-admin-key.delete` \n \n `hs-crypto.mtlscert-cert.set` \n \n `hs-crypto.mtlscert-cert.set` |
 | `Warning` | `hs-crypto.secrets.rotate` \n \n `hs-crypto.secrets.restore` \n \n `hs-crypto.secrets.enable` \n \n `hs-crypto.secrets.disable` \n \n `hs-crypto.secrets.setkeyfordeletion` \n \n `hs-crypto.secrets.unsetkeyfordeletion` \n \n `hs-crypto.policies.write` \n \n `hs-crypto.instancepolicies.write` |
 | `Normal` | `hs-crypto.secrets.create` \n \n `hs-crypto.secrets.read` \n \n `hs-crypto.secrets.readmetadata` \n \n `hs-crypto.secrets.head` \n \n `hs-crypto.secrets.list` \n \n `hs-crypto.secrets.wrap` \n \n `hs-crypto.secrets.unwrap` \n \n `hs-crypto.secrets.rewrap` \n \n `hs-crypto.secrets.listkeyversions` \n \n `hs-crypto.secrets.eventack` \n \n `hs-crypto.policies.read` \n \n `hs-crypto.instancepolicies.read` \n \n `hs-crypto.importtoken.create` \n \n `hs-crypto.importtoken.read` \n \n `hs-crypto.registrations.list` \n \n `hs-crypto.mtlscert-cert.read` \n \n `hs-crypto.mtlscert-cert.list` \n \n `hs-crypto.mtlscert-admin-key.read` |
-{: caption="Table 12. Severity level for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
+{: caption="Table 14. Severity level for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
+
+
+
+
 
 The following table lists the status codes that are associated with each severity level:
 
@@ -663,4 +671,4 @@ The following table lists the status codes that are associated with each severit
 | -------- | ----------- |
 | Critical | `400` (For TKE events only), `401`, `403`, `500`, `503`, `507`  |
 | Warning  | `400`, `409`, `424`, `502`, `504`, `505`  |
-{: caption="Table 13. Severity level for {{site.data.keyword.hscrypto}} response status codes" caption-side="bottom"}
+{: caption="Table 15. Severity level for {{site.data.keyword.hscrypto}} response status codes" caption-side="bottom"}
