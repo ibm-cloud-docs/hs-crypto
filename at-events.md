@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-10-11"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -196,7 +196,7 @@ Fields are not guaranteed to appear unless the request is successful.
 {: note}
 
 ### Common fields
-{: #at-common fields}
+{: #at-common-fields}
 
 Some common fields are available for {{site.data.keyword.hscrypto}} to use outside of the CADF event model to provide more insight into your data.
 
