@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-09-05"
+lastupdated: "2022-10-10"
 
 keywords: site map, doc structure, information architecture
 
@@ -2034,6 +2034,8 @@ Find what you are looking for in the compilation of topics that are available in
 ## Troubleshooting Unified Key Orchestrator
 {: #sitemap_troubleshooting_unified_key_orchestrator}
 
+
+[Why can't I assign keys to Azure Key Vault?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-import-azure-key#troubleshoot-import-azure-key)
 
 [Why can't I create internal keystores?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-create-internal-keystores#troubleshoot-create-internal-keystores)
 

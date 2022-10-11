@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-07-19"
+lastupdated: "2022-10-11"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -61,7 +61,7 @@ Complete the following steps to order smart cards:
 
     For how to calculate the number of smart cards needed, see [FAQ: Are there any recommendations on how to set up smart cards?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup).
 
-2.  Email IBM at `ZaaS.Client.Acceleration@ibm.com` and provide the following information:
+2.  Email IBM at `zcat@ibm.com@ibm.com` and provide the following information:
 
     * The total number of smart cards needed; minimum of two.
     * Billing contact information, which includes the name, billing address, phone number, email address, and time zone.

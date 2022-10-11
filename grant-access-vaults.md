@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-10-10"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystore, key management, access control
 
@@ -63,13 +63,13 @@ To assign access to a vault for a user from the UI, complete the following steps
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
 2. Select the user from the table, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions"), and then select **Assign access**.
-3. Select **Assign access to the users**, and then select **IAM services**.
-4. From the list of services, select **{{site.data.keyword.hscrypto}}**.
-5. Select **Resources based on selected attributes**.
-6. Select the **Instance ID** attribute, and select the instance where the vault is located.
-7. Select the **Vault ID** attribute and enter the vault ID that is retrieved in Step 1.
-8. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user, and click **Add**.
-9. Continue to add platform and service access roles as needed. When you finish all the access assignment, click **Assign**.
+4. Click **Access policy**.
+5. Under **Service**, select **Hyper Protect Crypto Services**.
+6. Under **Resources**, select **Specific resources**. 
+7. Select **Service Instance ID** and enter the [instance ID that is retreived](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). 
+8. Click **Add a condition**, and select the **Vault ID** attribute to enter the vault ID that is retrieved in [Step 1](#access-vault-retrieve-ID).
+9. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
+10. Click **Add** > **Assign**.
 
 You can also create an access policy through IAM [API](/apidocs/iam-policy-management#create-policy){: external} or [CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create){: external}.
 {: note}
