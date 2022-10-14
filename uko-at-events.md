@@ -100,7 +100,7 @@ The following table lists the registration actions that generate an event.
 | --------------------------------------- | -------------------------------------------------------- |
 | `hs-crypto.registrations.list`          | List registrations for any key.                           |
 | `hs-crypto.registrations.default`       | Invalid registration request event.                       |
-{: caption="Table 4. Registration actions" caption-side="bottom"}
+{: caption="Table 5. Registration actions" caption-side="bottom"}
 
 
 
@@ -121,7 +121,7 @@ The following table lists the Trusted Key Entry (TKE) actions that generate an e
 | `hs-crypto.tke-cryptounit-new-master-key-register.clear` | Clear the new master key register. |
 | `hs-crypto.tke-cryptounit-current-master-key-register.clear` | Clear the current master key register. |
 | `hs-crypto.tke-cryptounit.reset`   | Zeroize and reset the selected crypto units |
-{: caption="Table 5. Trusted Key Entry actions" caption-side="bottom"}
+{: caption="Table 6. Trusted Key Entry actions" caption-side="bottom"}
 
 ### Certificate manager events
 {: #uko-mtlscert-mgr-actions}
@@ -138,7 +138,7 @@ The following table lists the certificate manager actions that generate an event
 | `hs-crypto.mtlscert-cert.list` | List all certificates that are managed by the certificate administrator.  |
 | `hs-crypto.mtlscert-cert.read` | Get certificates by the certificate administrator.|
 | `hs-crypto.mtlscert-cert.delete` | Delete certificates by the certificate administrator. |
-{: caption="Table 6. Certificate manager actions" caption-side="bottom"}
+{: caption="Table 7. Certificate manager actions" caption-side="bottom"}
 
 ### KMIP for VMware events
 {: #uko-at-events-kmip}
@@ -157,7 +157,7 @@ The initiator ID is derived from the TLS (Transport Layer Security) certificate 
 | `hs-crypto.kmip-key.activate` | A KMIP key is activated. |
 | `hs-crypto.kmip-key.revoke` | A KMIP key is revoked. |
 | `hs-crypto.kmip-key.destroy` | A KMIP key is destroyed. |
-{: caption="Table 7. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
+{: caption="Table 8. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
 
 
 
@@ -181,7 +181,7 @@ see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic
 | `us-east`                 | `us-east`                                       |
 | `us-south`                | `us-south`                                      |
 | `br-sao`                  | `br-sao`                                      |
-{: caption="Table 8. Activity Tracker regions" caption-side="bottom"}
+{: caption="Table 9. Activity Tracker regions" caption-side="bottom"}
 
 ## Analyzing successful events
 {: #uko-at-events-analyze}
@@ -206,7 +206,7 @@ Some common fields are available for {{site.data.keyword.hscrypto}} to use outsi
 | --- | --- |
 | `requestData.requestURI` | The URI of the API request that was made. |
 | `requestData.instanceID` | The unique identifier of your {{site.data.keyword.hscrypto}} service instance. |
-{: caption="Table 9. Common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
+{: caption="Table 10. Common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
 
 For more information about the event fields in the Cloud Auditing Data Federation (CADF) event model, see [Event Fields](/docs/activity-tracker?topic=activity-tracker-event){: external}.
 
@@ -234,7 +234,7 @@ The following table lists the returned values that indicate a successful TKE eve
 |`outcome` | `success`  |
 | `reason.reasonCode`  | `200`  |
 | `reason.reasonType`  |`OK`  |
-{: caption="Table 10. Returned values of a successful TKE event" caption-side="bottom"}
+{: caption="Table 11. Returned values of a successful TKE event" caption-side="bottom"}
 
 The following common fields for TKE events include extra information:
 
@@ -302,7 +302,7 @@ The following table lists the returned values that indicate a successful certifi
 |`outcome` | `success`  |
 | `reason.reasonCode`  | `200`  |
 | `reason.reasonType`  |`OK`  |
-{: caption="Table 11. Returned values of a successful mTLS certificate manager event" caption-side="bottom"}
+{: caption="Table 12. Returned values of a successful mTLS certificate manager event" caption-side="bottom"}
 
 The following common fields for certificate manager events include extra information:
 
@@ -436,7 +436,7 @@ The following table lists the actions that are associated with each severity lev
 | Critical | `hs-crypto.target-keystores.delete` \n \n `hs-crypto.managed-keys.delete` \n \n `hs-crypto.vaults.delete` \n \n `hs-crypto.registrations.delete` \n \n `hs-crypto.tke-cryptounit-admin.add` \n \n `hs-crypto.tke-cryptounit-admin.remove` \n \n `hs-crypto.tke-cryptounit-current-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-new-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-master-key-register.add` \n \n `hs-crypto.tke-cryptounit-master-key-register.commit` \n \n `hs-crypto.tke-cryptounit-master-key-register.activate` \n \n `hs-crypto.tke-cryptounit-threshold.set` \n \n `hs-crypto.tke-cryptounit.reset` \n \n `hs-crypto.mtlscert-admin-key.create` \n \n `hs-crypto.mtlscert-admin-key.update` \n \n `hs-crypto.mtlscert-admin-key.delete` \n \n `hs-crypto.mtlscert-cert.set` \n \n `hs-crypto.mtlscert-cert.set` |
 | Warning | `hs-crypto.managed-keys.write` \n \n Note that when this event is triggered to change the key state to `destroyed`, the severity level is `Critical` instead of `Warning`. |
 | Normal | `hs-crypto.managed-keys.list` \n \n `hs-crypto.managed-keys.read` \n \n `hs-crypto.target-keystores.write` \n \n `hs-crypto.target-keystores.list` \n \n `hs-crypto.target-keystores.read` \n \n `hs-crypto.vaults.list` \n \n `hs-crypto.vaults.write` \n \n `hs-crypto.vaults.read` |
-{: caption="Table 14. Severity level for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
+{: caption="Table 13. Severity level for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
 
 
 
@@ -447,5 +447,5 @@ The following table lists the status codes that are associated with each severit
 | -------- | ----------- |
 | Critical | `400` (For TKE events only), `401`, `403`, `500`, `503`, `507`  |
 | Warning  | `400`, `409`, `424`, `502`, `504`, `505`  |
-{: caption="Table 15. Severity level for {{site.data.keyword.hscrypto}} response status codes" caption-side="bottom"}
+{: caption="Table 14. Severity level for {{site.data.keyword.hscrypto}} response status codes" caption-side="bottom"}
 
