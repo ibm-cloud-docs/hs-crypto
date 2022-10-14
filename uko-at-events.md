@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-10-14"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 
@@ -158,6 +158,9 @@ The initiator ID is derived from the TLS (Transport Layer Security) certificate 
 | `hs-crypto.kmip-key.revoke` | A KMIP key is revoked. |
 | `hs-crypto.kmip-key.destroy` | A KMIP key is destroyed. |
 {: caption="Table 7. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
+
+
+
 
 ## Viewing events
 {: #uko-at-ui}
@@ -380,6 +383,8 @@ The following fields include extra information:
 - The `responseData.action` field indicates that the certificate is to be deleted.
 
 
+
+
 ## Analyzing failed events
 {: #uko-at-events-analyze-failed}
 
@@ -425,12 +430,16 @@ The severity level for all TKE events is `critical` due to the sensitivity of th
 
 The following table lists the actions that are associated with each severity level.
 
+
 | Severity | Actions |
 | --- | --- |
 | Critical | `hs-crypto.target-keystores.delete` \n \n `hs-crypto.managed-keys.delete` \n \n `hs-crypto.vaults.delete` \n \n `hs-crypto.registrations.delete` \n \n `hs-crypto.tke-cryptounit-admin.add` \n \n `hs-crypto.tke-cryptounit-admin.remove` \n \n `hs-crypto.tke-cryptounit-current-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-new-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-master-key-register.add` \n \n `hs-crypto.tke-cryptounit-master-key-register.commit` \n \n `hs-crypto.tke-cryptounit-master-key-register.activate` \n \n `hs-crypto.tke-cryptounit-threshold.set` \n \n `hs-crypto.tke-cryptounit.reset` \n \n `hs-crypto.mtlscert-admin-key.create` \n \n `hs-crypto.mtlscert-admin-key.update` \n \n `hs-crypto.mtlscert-admin-key.delete` \n \n `hs-crypto.mtlscert-cert.set` \n \n `hs-crypto.mtlscert-cert.set` |
 | Warning | `hs-crypto.managed-keys.write` \n \n Note that when this event is triggered to change the key state to `destroyed`, the severity level is `Critical` instead of `Warning`. |
 | Normal | `hs-crypto.managed-keys.list` \n \n `hs-crypto.managed-keys.read` \n \n `hs-crypto.target-keystores.write` \n \n `hs-crypto.target-keystores.list` \n \n `hs-crypto.target-keystores.read` \n \n `hs-crypto.vaults.list` \n \n `hs-crypto.vaults.write` \n \n `hs-crypto.vaults.read` |
-{: caption="Table 12. Severity level for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
+{: caption="Table 14. Severity level for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
+
+
+
 
 The following table lists the status codes that are associated with each severity level.
 
@@ -438,5 +447,5 @@ The following table lists the status codes that are associated with each severit
 | -------- | ----------- |
 | Critical | `400` (For TKE events only), `401`, `403`, `500`, `503`, `507`  |
 | Warning  | `400`, `409`, `424`, `502`, `504`, `505`  |
-{: caption="Table 13. Severity level for {{site.data.keyword.hscrypto}} response status codes" caption-side="bottom"}
+{: caption="Table 15. Severity level for {{site.data.keyword.hscrypto}} response status codes" caption-side="bottom"}
 
