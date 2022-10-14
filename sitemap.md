@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-14"
 
 keywords: site map, doc structure, information architecture
 
@@ -775,6 +775,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit#initialize-hsm-recovery-crypto-unit-whats-next)
 
 [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm-cli-prerequisite)
 
 * [Adding or removing crypto units that are assigned to service instances](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#identify_crypto_units)
 
