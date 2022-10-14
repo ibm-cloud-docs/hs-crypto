@@ -83,7 +83,11 @@ You can create, manage, and delete your cryptographic keys from one point of con
 ### Connect to external keystores
 {: #connect-to-keystores}
 
-You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS KMS.
+You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS Key Management Service.
+
+- To watch a use case video on using {{site.data.keyword.uko_full_notm}} to manage Azure Key Vault, see [Managing compliance of a Microsoft Office 365 environment using Hyper Protect Crypto Services with Unified Key Orchestrator](https://mediacenter.ibm.com/media/1_1pzzhrb8){: external}.
+
+- To watch a use case video on using {{site.data.keyword.uko_full_notm}} to manage AWS Key Management Service, see [Securely managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator](https://mediacenter.ibm.com/media/1_1a6c6vub){: external}.
 
 
 ### Back up all keys of your enterprise centrally

@@ -41,19 +41,24 @@
       "thumbnail": "/images/thumbnail_initialize_smart_card.png"
     },
     {
-      "title": "Hyper Protect Crypto Services and KMIP for VMware on IBM Cloud",
-      "href": "https://mediacenter.ibm.com/media/0_4wm4bq4s",
-      "thumbnail": "/images/thumbnail_vmware_intro.png"
+      "title": "Managing compliance of a Microsoft Office 365 environment using Hyper Protect Crypto Services with Unified Key Orchestrator",
+      "href": "https://mediacenter.ibm.com/media/1_1pzzhrb8",
+      "thumbnail": "/images/thumbnail_uko_o365.png"
     },
     {
       "title": "Securely managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator",
       "href": "https://mediacenter.ibm.com/media/1_1a6c6vub",
-      "thumbnail": "/images/thumbnail_o365_aws.png"
+      "thumbnail": "/images/thumbnail_uko_aws.png"
     },
     {
       "title": "Configuring KMIP in Hyper Protect Crypto Services for key management and distribution",
       "href": "https://mediacenter.ibm.com/media/1_e5gk6ktn",
       "thumbnail": "/images/thumbnail_vmware_integration.png"
+    },
+    {
+      "title": "Hyper Protect Crypto Services and KMIP for VMware on IBM Cloud",
+      "href": "https://mediacenter.ibm.com/media/0_4wm4bq4s",
+      "thumbnail": "/images/thumbnail_vmware_intro.png"
     },
     {
       "title": "Integrating Cloud Object Storage with Hyper Protect Crypto Services",
