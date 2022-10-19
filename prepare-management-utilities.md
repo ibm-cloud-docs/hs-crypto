@@ -79,7 +79,7 @@ You need to order two smart card readers `Identiv SPR332 v2.0 Secure Class 2 PIN
 ## Step 2: Install the smart card reader driver
 {: #install-smart-card-reader-driver}
 
-You need to install the Identiv SPR332 V2 smart card reader driver on your local workstation. Currently, Red Hat Enterprise Linux&reg; 8.0.0 supported.
+You need to install the Identiv SPR332 V2 smart card reader driver on your local workstation. Currently, Red Hat Enterprise Linux&reg; 8.0 supported.
 
 You need to take the [smart card considerations](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy) into account when you plan your security policy for your workstation and smart card readers. Otherwise, your smart cards might be exposed to some vulnerabilities.
 {: note}
@@ -90,7 +90,7 @@ Before you install the smart card reader driver on a Linux operating system, dow
 
 
 
-- Red Hat Enterprise Linux&reg; 8.0.0
+- Red Hat Enterprise Linux&reg; 8.0
 
     1. Install the `pcsc-lite` package with the following command:
 
