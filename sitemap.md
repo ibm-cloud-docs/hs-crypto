@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-14"
+lastupdated: "2022-10-19"
 
 keywords: site map, doc structure, information architecture
 
@@ -201,6 +201,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit)
 
 * [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-key-files)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#initialize-instance-mode-next)
 
 
 ### About key management service
@@ -1772,13 +1774,17 @@ Find what you are looking for in the compilation of topics that are available in
 [{{site.data.keyword.hscrypto}} cloud TKE procedures](/docs/hs-crypto?topic=hs-crypto-tke-procedures#tke-procedures)
 
 
-## Smart card security considerations
-{: #sitemap_smart_card_security_considerations}
+## Security considerations for initalizing a service instance
+{: #sitemap_security_considerations_for_initalizing_a_service_instance}
 
 
-[Smart card security considerations](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy#define-smart-card-security-policy)
+[Security considerations for initalizing a service instance](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy#initialization-security-policy)
 
-* [Considerations for defining the Management Utilities security policy](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy#smart-card-security-plan)
+* [Considerations for storing signature keys and master key parts](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy#consideration-key-parts)
+
+* [Considerations for defining the Management Utilities security policy](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy#smart-card-security-plan)
+
+* [Considerations for defining the key part file security policy](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy#file-security-plan)
 
 
 ## Understanding your responsibilities when using {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
