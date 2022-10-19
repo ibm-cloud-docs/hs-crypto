@@ -351,6 +351,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-instance-initialization-key-files)
 
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-initialize-instance-mode-next)
+
 
 ### About Unified Key Orchestrator
 {: #sitemap_about_unified_key_orchestrator}

@@ -90,7 +90,7 @@ Before you install the smart card reader driver on a Linux operating system, dow
 
 
 
-- Red Hat Enterprise Linux&reg; 8.0
+- Red Hat Enterprise Linux 8.0
 
     1. Install the `pcsc-lite` package with the following command:
 
@@ -139,7 +139,7 @@ Two applications are provided as part of the Management Utilities: the [Smart Ca
 
 
 
-To install the applications on Red Hat Enterprise Linux&reg; 8.0, complete the following steps:
+To install the applications on Red Hat Enterprise Linux 8.0, complete the following steps:
 
 1. Download the latest installation file, `cloudtke.bin`, from [GitHub](https://github.com/IBM-Cloud/hpcs-management-utilities/releases){: external} to your workstation.
 2. (Optional) For maximum security, verify the integrity and authenticity of the Management Utilities installation file `cloudtke.bin` before you install or update the applications.

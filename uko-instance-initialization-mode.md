@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-07-19"
+lastupdated: "2022-10-19"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -172,3 +172,7 @@ In this approach, the master key is composed of several master key parts that yo
 
 The TKE CLI plug-in provides a series of commands to complete the initialization, including creating signature keys and master key parts, adding administrators, and loading the master key. For detailed steps, see [Initializing service instances by using key part files](https://test.cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
+## What's next
+{: #uko-initialize-instance-mode-next}
+
+When you plan your security policy for storing your signature keys and master key parts, take the [Security considerations for initalizing a service instance](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy) into account.
