@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-05-10"
+lastupdated: "2022-10-19"
 
 keywords: set up api, uko api, Unified Key Orchestrator api, 
 
@@ -52,7 +52,8 @@ curl --location --request GET 'https://uko.<region>.hs-crypto.cloud.ibm.com:<por
 ```
 {: codeblock}
 
-* Replace `<region>` and `<port>` with the region and port number of your API endpoint. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **Connect** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/uko#endpoint-urls){: external}. 
+* Replace `<region>` and `<port>` with the region and port number of your API endpoint. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/uko#endpoint-urls){: external}. 
+    Note that the port range of a {{site.data.keyword.hscrypto}} instance is between `8000` - `19999`.
 * Replace `<access_token>` with your retrieved service and authentication credentials.
 * Replace `<vault_id>` with the ID of the vault that your keys are assigned to.
 
