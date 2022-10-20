@@ -213,7 +213,7 @@ see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic
 | `us-east`                 | `us-east`                                       |
 | `us-south`                | `us-south`                                      |
 | `br-sao`                  | `br-sao`                                      |
-{: caption="Table 8. Activity Tracker regions" caption-side="bottom"}
+{: caption="Table 10. Activity Tracker regions" caption-side="bottom"}
 
 ## Analyzing successful events
 {: #at-events-analyze}
@@ -233,7 +233,7 @@ Some common fields are available for {{site.data.keyword.hscrypto}} to use outsi
 | `requestData.requestURI` | The URI of the API request that was made. |
 | `requestData.instanceID` | The unique identifier of your {{site.data.keyword.hscrypto}} service instance. |
 | `correlationId` | The unique identifier of the API request that generated the event. Note: This field is not supported in TKE events. |
-{: caption="Table 9. Common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
+{: caption="Table 11. Common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
 
 For more information about the event fields in the Cloud Auditing Data Federation (CADF) event model, see [Event Fields](/docs/activity-tracker?topic=activity-tracker-event){: external}.
 
@@ -459,7 +459,7 @@ The following table lists the returned values that indicate a successful TKE eve
 |`outcome` | `success`  |
 | `reason.reasonCode`  | `200`  |
 | `reason.reasonType`  |`OK`  |
-{: caption="Table 10. Returned values of a successful TKE event" caption-side="bottom"}
+{: caption="Table 12. Returned values of a successful TKE event" caption-side="bottom"}
 
 The following common fields for TKE events include extra information:
 
@@ -527,7 +527,7 @@ The following table lists the returned values that indicate a successful certifi
 |`outcome` | `success`  |
 | `reason.reasonCode`  | `200`  |
 | `reason.reasonType`  |`OK`  |
-{: caption="Table 11. Returned values of a successful mTLS certificate manager event" caption-side="bottom"}
+{: caption="Table 13. Returned values of a successful mTLS certificate manager event" caption-side="bottom"}
 
 The following common fields for certificate manager events include extra information:
 
@@ -619,7 +619,7 @@ The following table lists the returned values that indicate a successful EP11 ke
 | reason.reasonCode	| 200 |
 | reason.reasonType	| OK |
 
-{: caption="Table 12. Returned values of a successful EP11 keystore event" caption-side="bottom"}
+{: caption="Table 14. Returned values of a successful EP11 keystore event" caption-side="bottom"}
 
 The following common fields for EP11 keystore events include extra information:
 - The `target.name` field includes the IDs of the keystore or key.
@@ -634,7 +634,7 @@ The following table lists the returned values that indicate a successful EP11 cr
 | outcome | success |
 | reason.reasonCode	| 200 |
 | reason.reasonType	| OK |
-{: caption="Table 13. Returned values of a successful EP11 crypto event" caption-side="bottom"}
+{: caption="Table 15. Returned values of a successful EP11 crypto event" caption-side="bottom"}
 
 
 ## Analyzing failed events
@@ -716,7 +716,7 @@ The following table lists the actions that are associated with each severity lev
 | `Critical` | `hs-crypto.secrets.delete` \n \n `hs-crypto.registrations.delete` \n \n `hs-crypto.tke-cryptounit-admin.add` \n \n `hs-crypto.tke-cryptounit-admin.remove` \n \n `hs-crypto.tke-cryptounit-current-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-new-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-master-key-register.add` \n \n `hs-crypto.tke-cryptounit-master-key-register.commit` \n \n `hs-crypto.tke-cryptounit-master-key-register.activate` \n \n `hs-crypto.tke-cryptounit-threshold.set` \n \n `hs-crypto.tke-cryptounit.reset` \n \n `hs-crypto.mtlscert-admin-key.create` \n \n `hs-crypto.mtlscert-admin-key.update` \n \n `hs-crypto.mtlscert-admin-key.delete` \n \n `hs-crypto.mtlscert-cert.set` \n \n `hs-crypto.mtlscert-cert.set` \n \n `hs-crypto.keystore.deletekey` \n \n `hs-crypto.keystore.deletekeystore` \n \n `hs-crypto.keystore.updatekey` |
 | `Warning` | `hs-crypto.secrets.rotate` \n \n `hs-crypto.secrets.restore` \n \n `hs-crypto.secrets.enable` \n \n `hs-crypto.secrets.disable` \n \n `hs-crypto.secrets.setkeyfordeletion` \n \n `hs-crypto.secrets.unsetkeyfordeletion` \n \n `hs-crypto.policies.write` \n \n `hs-crypto.instancepolicies.write` |
 | `Normal` | `hs-crypto.secrets.create` \n \n `hs-crypto.secrets.read` \n \n `hs-crypto.secrets.readmetadata` \n \n `hs-crypto.secrets.head` \n \n `hs-crypto.secrets.list` \n \n `hs-crypto.secrets.wrap` \n \n `hs-crypto.secrets.unwrap` \n \n `hs-crypto.secrets.rewrap` \n \n `hs-crypto.secrets.listkeyversions` \n \n `hs-crypto.secrets.eventack` \n \n `hs-crypto.policies.read` \n \n `hs-crypto.instancepolicies.read` \n \n `hs-crypto.importtoken.create` \n \n `hs-crypto.importtoken.read` \n \n `hs-crypto.registrations.list` \n \n `hs-crypto.mtlscert-cert.read` \n \n `hs-crypto.mtlscert-cert.list` \n \n `hs-crypto.mtlscert-admin-key.read` \n \n `hs-crypto.keystore.createkeystore` \n \n `hs-crypto.keystore.listkeysbyattributes` \n \n `hs-crypto.keystore.listkeysbyids` \n \n `hs-crypto.keystore.listkeystoresbyattributes` \n \n `hs-crypto.keystore.listkeystoresbyids` \n \n `hs-crypto.keystore.storenewkey` \n \n `hs-crypto.ep11.use`|
-{: caption="Table 14. Severity level for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
+{: caption="Table 16. Severity level for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
 
 
 The following table lists the status codes that are associated with each severity level:
@@ -725,4 +725,4 @@ The following table lists the status codes that are associated with each severit
 | -------- | ----------- |
 | Critical | `400` (For TKE events only), `401`, `403`, `500`, `503`, `507`  |
 | Warning  | `400`, `409`, `424`, `502`, `504`, `505`  |
-{: caption="Table 15. Severity level for {{site.data.keyword.hscrypto}} response status codes" caption-side="bottom"}
+{: caption="Table 17. Severity level for {{site.data.keyword.hscrypto}} response status codes" caption-side="bottom"}
