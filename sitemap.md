@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-19"
+lastupdated: "2022-10-20"
 
 keywords: site map, doc structure, information architecture
 
@@ -1776,17 +1776,17 @@ Find what you are looking for in the compilation of topics that are available in
 [{{site.data.keyword.hscrypto}} cloud TKE procedures](/docs/hs-crypto?topic=hs-crypto-tke-procedures#tke-procedures)
 
 
-## Security considerations for initalizing a service instance
-{: #sitemap_security_considerations_for_initalizing_a_service_instance}
+## Security considerations for initializing a service instance
+{: #sitemap_security_considerations_for_initializing_a_service_instance}
 
 
-[Security considerations for initalizing a service instance](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy#initialization-security-policy)
+[Security considerations for initializing a service instance](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy#initialization-security-policy)
 
 * [Considerations for storing signature keys and master key parts](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy#consideration-key-parts)
 
 * [Considerations for defining the Management Utilities security policy](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy#smart-card-security-plan)
 
-* [Considerations for defining the key part file security policy](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy#file-security-plan)
+* [Considerations for defining the file security policy](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy#file-security-plan)
 
 
 ## Understanding your responsibilities when using {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
