@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-10-19"
 
 keywords: set up api, kms api, key protect api, key management service API, using api
 
@@ -49,8 +49,12 @@ curl -X GET \
 ```
 {: codeblock}
 
-* Replace `<port>` with the port number of your API endpoint. You can get the `<port>` in your provisioned service instance dashboard through **Overview** &gt; **Connect** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/hs-crypto#getinstance){: external}. The returned value includes:
-
+* Replace `<port>` with the port number of your API endpoint. You can get the `<port>` in your provisioned service instance dashboard through **Overview** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/hs-crypto#getinstance){: external}. 
+    
+    Note that the port range of a {{site.data.keyword.hscrypto}} instance is between `8000` - `19999`.
+    
+    The returned value includes:
+    
     ```
     {
       "instance_id": "<instance_ID>",

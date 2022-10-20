@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-10-12"
+lastupdated: "2022-10-19"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -79,18 +79,18 @@ You need to order two smart card readers `Identiv SPR332 v2.0 Secure Class 2 PIN
 ## Step 2: Install the smart card reader driver
 {: #install-smart-card-reader-driver}
 
-You need to install the Identiv SPR332 V2 smart card reader driver on your local workstation. Currently, only Red Hat Enterprise Linux&reg; 8.0.0 is supported.
+You need to install the Identiv SPR332 V2 smart card reader driver on your local workstation. Currently, Red Hat Enterprise Linux&reg; 8.0 supported.
 
-You need to take the [smart card considerations](/docs/hs-crypto?topic=hs-crypto-define-smart-card-security-policy) into account when you plan your security policy for your workstation and smart card readers. Otherwise, your smart cards might be exposed to some vulnerabilities.
+You need to take the [Security considerations for initalizing a service instance](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy) into account when you plan your security policy for your smart cards and smart card readers. Otherwise, your smart cards might be exposed to some vulnerabilities.
 {: note}
 
 
 
-Before you install the smart card reader driver on a Linux operating system, download and extract the driver package from the [Identiv SPR332 v2.0 Support website](https://support.identiv.com/spr332/){: external}. And then, install the smart card reader driver by completing the following steps:
+Before you install the smart card reader driver on a Linux operating system, download and extract the driver package from the [Identiv SPR332 v2.0 Support website](https://support.identiv.com/spr332/){: external}. And then, install the smart card reader driver by completing the following steps depending on your Linux&reg; distributions:
 
 
 
-- Red Hat Enterprise Linux&reg; 8.0.0
+- Red Hat Enterprise Linux 8.0
 
     1. Install the `pcsc-lite` package with the following command:
 
@@ -132,7 +132,6 @@ Before you install the smart card reader driver on a Linux operating system, dow
         {: pre}
 
 
-
 ## Step 3: Install the Management Utilities
 {: #install-management-utility-application}
 
@@ -140,7 +139,7 @@ Two applications are provided as part of the Management Utilities: the [Smart Ca
 
 
 
-To install the applications on Red Hat Enterprise Linux&reg; 8.0.0, complete the following steps:
+To install the applications on Red Hat Enterprise Linux 8.0, complete the following steps:
 
 1. Download the latest installation file, `cloudtke.bin`, from [GitHub](https://github.com/IBM-Cloud/hpcs-management-utilities/releases){: external} to your workstation.
 2. (Optional) For maximum security, verify the integrity and authenticity of the Management Utilities installation file `cloudtke.bin` before you install or update the applications.

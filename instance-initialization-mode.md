@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-07-19"
+lastupdated: "2022-10-19"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -171,3 +171,8 @@ You can also initialize your service instance by using master key parts that you
 In this approach, the master key is composed of several master key parts that you need to use the TKE CLI plug-in to create. For security considerations, each key part can be owned by a different person called [master key custodian](/docs/hs-crypto?topic=hs-crypto-manage-access#roles). Key parts are stored in workstation files and are protected by password. The master key custodian needs to make sure that the key files are properly saved and no one else knows the password.
 
 The TKE CLI plug-in provides a series of commands to complete the initialization, including creating signature keys and master key parts, adding administrators, and loading the master key. For detailed steps, see [Initializing service instances by using key part files](https://test.cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
+
+## What's next
+{: #initialize-instance-mode-next}
+
+When you plan your security policy for storing your signature keys and master key parts, take the [Security considerations for initalizing a service instance](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy) into account.

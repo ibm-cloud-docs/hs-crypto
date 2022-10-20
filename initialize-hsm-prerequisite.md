@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-11"
+lastupdated: "2022-10-14"
 
 keywords: initialize service, key ceremony, hsm, load master key, key ceremony preparation
 
@@ -58,7 +58,12 @@ Before you can initialize your service instance, make sure that you have done th
 
      - On Windows&reg;, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a `CLOUDTKEFILES` environment variable, set the value to the path for storing key files (For example, `C:\users\tke-files`), and restart your computer.
 
-4. [Log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cli-getting-started#step3-configure-idt-env){: external}.
+4. Log in to {{site.data.keyword.cloud_notm}} with the CLI with the following command:
+    
+    ```
+    ibmcloud login
+    ```
+    {: pre}
 
     If you have multiple accounts, select the account that your service instance is created with. Make sure that you're logged in to the correct region and resource group where the service instance locates with the following command:
 
