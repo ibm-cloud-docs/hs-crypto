@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-14"
+lastupdated: "2022-10-21"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -33,7 +33,7 @@ You can use {{site.data.keyword.uko_full_notm}} to connect to external keystores
 
 Before you connect to an external keystore, keep in mind the following considerations:
 
-- You can connect to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS). 
+- You can connect to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS).
 - You can connect to one external keystore at no initial cost, regardless of the type. You are charged for additional external keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Other currencies are applied based on the region the service instance is provisioned in.
 - A managed key can be used for encryption and decryption only after you install it in at least one target keystore. 
 - A target keystore can be assigned to only one vault.
@@ -41,7 +41,7 @@ Before you connect to an external keystore, keep in mind the following considera
 ## Setting up required user access in external keystores
 {: #connect-external-keystores-access}
 
-You need to set up user access before you use {{site.data.keyword.uko_full_notm}} to access keystores in third-party cloud.
+You need to set up user access before you use {{site.data.keyword.uko_full_notm}} to access keystores in third-party clouds.
 
 ### Setting up required user access in Azure Key Vault
 {: #connect-external-keystores-access-azure}
@@ -88,6 +88,8 @@ For more information, check out [Assign a Key Vault access policy](https://docs.
 - `ScheduleKeyDeletion`
 
 For more information, check out [AWS KMS permissions](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html){: external}.
+
+
 
 ## Connecting to external keystores with the {{site.data.keyword.cloud_notm}} console
 {: #connect-external-keystores-ui}
@@ -144,6 +146,8 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-title="Azure Key Vault"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
+
+    
 
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|

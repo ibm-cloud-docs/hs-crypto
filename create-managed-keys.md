@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-09-27"
+lastupdated: "2022-10-21"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -53,12 +53,13 @@ To create a managed key by using the console, complete the following steps:
    
    If you want to assign the key to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults). 
 
-5. Under **General**, select one of the following keystore types depending on which type of keystore you want to create the key in. And then, click **Next**. 
+5. Under **Keystore type**, select one of the following keystore types depending on which type of keystore you want to create the key in. And then, click **Next**. 
 
     - **AWS Key Management Service**: Create a key to be used and stored in an AWS Key Management Service instance.
+    - **Azure Key Vault**: Create a key to be used and stored in an Azure Key Vault.
     - **IBM Cloud KMS**: Create a key to be used and stored in an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keystore.
     - **IBM {{site.data.keyword.keymanagementserviceshort}}**: Create a key to be used and stored in an IBM {{site.data.keyword.keymanagementserviceshort}} key ring.
-    - **Azure Key Vault**: Create a key to be used and stored in an Azure Key Vault.
+    
    
    After a keystore type is selected, you can install the key to keystores of this type only. If you select **IBM KMS**, the created key is a root key that can be used for [envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption).
    {: note}
@@ -67,7 +68,7 @@ To create a managed key by using the console, complete the following steps:
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
-    | Key name             | A unique, human-readable name for easy identification of your key. Depending on the keystore type, name your key with the following rules:  \n - IBM KMS: 2-50 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. \n - IBM {{site.data.keyword.keymanagementserviceshort}}: 2-50 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. \n - AWS Key Management Service: 1-255 characters in length. The characters can be letters (case-sensitive), digits (0-9), or symbols (/_-). However, do not start the name with `AWS/`. \n - Azure Key Vault: 1-24 characters in length. The characters can be letters (case-sensitive), digits (0-9), or hyphens (-). |
+    | Key name             | A unique, human-readable name for easy identification of your key. It must be 1 - 255 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or symbols (/_-). However, do not start the name with `AWS/`. |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Length               | The number of bits that represents the encryption strength of the key.   |
@@ -75,7 +76,61 @@ To create a managed key by using the console, complete the following steps:
     | Activation date      | Plan a date to activate the _Pre-active_ key. No automatic state change is triggered. |
     | Expiration date      | Plan a date to deactivate the key. No automatic state change is triggered. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
-    {: caption="Table 1. Key properties" caption-side="bottom"}
+    {: #table-1}
+    {: caption="Table 1. AWS Key Management Service keys properties" caption-side="bottom"}
+    {: tab-title="AWS Key Management Service keys"}
+    {: tab-group="Managed key properties"}
+    {: class="comparison-tab-table"}
+
+    |       Property	      |                         Description                       |
+    |----------------------|-----------------------------------------------------------|
+    | Key name             | A unique, human-readable name for easy identification of your key. It must be 1 - 24 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or hyphens (-). |
+    | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
+    | Algorithm            | The encryption algorithm to encrypt data for the key.     |
+    | Length               | The number of bits that represents the encryption strength of the key.   |
+    | State                | _Pre-active_ keys are not to be installed in target keystores until you manually activate them. _Active_ keys are to be automatically installed in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | Activation date      | Plan a date to activate the _Pre-active_ key. No automatic state change is triggered. |
+    | Expiration date      | Plan a date to deactivate the key. No automatic state change is triggered. |
+    | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
+    {: #table-2}
+    {: caption="Table 2. Azure Key Vault keys properties" caption-side="bottom"}
+    {: tab-title="Azure Key Vault keys"}
+    {: tab-group="Managed key properties"}
+    {: class="comparison-tab-table"}
+
+    
+
+    |       Property	      |                         Description                       |
+    |----------------------|-----------------------------------------------------------|
+    | Key name             | A unique, human-readable name for easy identification of your key. It must 2 - 50 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or spaces.|
+    | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
+    | Algorithm            | The encryption algorithm to encrypt data for the key.     |
+    | Length               | The number of bits that represents the encryption strength of the key.   |
+    | State                | _Pre-active_ keys are not to be installed in target keystores until you manually activate them. _Active_ keys are to be automatically installed in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | Activation date      | Plan a date to activate the _Pre-active_ key. No automatic state change is triggered. |
+    | Expiration date      | Plan a date to deactivate the key. No automatic state change is triggered. |
+    | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
+    {: #table-3}
+    {: caption="Table 3. IBM Cloud KMS keys properties" caption-side="bottom"}
+    {: tab-title="IBM Cloud KMS keys"}
+    {: tab-group="Managed key properties"}
+    {: class="comparison-tab-table"}
+
+    |       Property	      |                         Description                       |
+    |----------------------|-----------------------------------------------------------|
+    | Key name             | A unique, human-readable name for easy identification of your key. It must be 2 - 50 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or spaces. |
+    | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
+    | Algorithm            | The encryption algorithm to encrypt data for the key.     |
+    | Length               | The number of bits that represents the encryption strength of the key.   |
+    | State                | _Pre-active_ keys are not to be installed in target keystores until you manually activate them. _Active_ keys are to be automatically installed in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | Activation date      | Plan a date to activate the _Pre-active_ key. No automatic state change is triggered. |
+    | Expiration date      | Plan a date to deactivate the key. No automatic state change is triggered. |
+    | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
+    {: #table-4}
+    {: caption="Table 4. {{site.data.keyword.keymanagementserviceshort}} keys properties" caption-side="bottom"}
+    {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keys"}
+    {: tab-group="Managed key properties"}
+    {: class="comparison-tab-table"}
 
 7. Under **Target keystores**, you can select one or multiple target keystores to install the managed key in. Installing a key in multiple keystores enables redundancy. You can also install the key later by following instructions in [Setting target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
 

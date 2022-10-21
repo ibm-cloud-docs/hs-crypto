@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-21"
 
 keywords: Unified Key Orchestrator, key management, UKO keystore, edit keystore, external keystore, KMS keystore
 
@@ -79,6 +79,8 @@ To edit the connection to an external keystore by using the console, complete th
     {: tab-title="Azure Key Vault"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
+
+    
 
     |           Property	        |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
