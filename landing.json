@@ -73,6 +73,11 @@
     "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
     "tiles": [
       {
+        "date": "October 2022",
+        "title": "EP11 events auditing are now supported by both Hyper Protect Crypto Services Standard Plan and Hyper Protect Crypto Services with Unified Key Orchestrator",
+        "description": "With Hyper Protect Crypto Services Standard Plan and Hyper Protect Crypto Services with Unified Key Orchstrator, you can now monitor Enterprise PKCS #11 (EP11) activities and analyze successful actions. "
+      }, 
+      {
         "date": "June 2022",
         "title": "Hyper Protect Crypto Services Unified Key Orchestrator CLI plug-in",
         "description": "With the command-line interface (CLI) support for Hyper Protect Crypto Services with the Unified Key Orchestrator plan, you can now manage vaults, keystores, and keys by using CLI commands."
@@ -86,11 +91,6 @@
         "date": "February 2022",
         "title": "Hyper Protect Crypto Services expands into the Sao-Paulo region",
         "description": "You can now create Hyper Protect Crypto Services instances in the Sao-Paulo (`br-sao`) region where the infrastructure is based on IBM Cloud Virtual Private Cloud (VPC)."
-      },
-      {
-        "date": "January 2022",
-        "title": "Hyper Protect Crypto Services key management service API is updated to version 2.82 ",
-        "description": "You can now purge a deleted key manually and transfer a key to another keyring using either UI or API."
       }
     ]
   }

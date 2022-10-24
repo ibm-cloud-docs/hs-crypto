@@ -269,5 +269,5 @@ An internal keystore is a keystore that is created in your {{site.data.keyword.h
 ### External keystore
 {: #uko-external-keystore-concept}
 
-An external keystore is a keystore that is not in your {{site.data.keyword.hscrypto}} instance. You can connect your service instance to another {{site.data.keyword.hscrypto}} or {{site.data.keyword.keymanagementserviceshort}} instance, potentially in another region. Or, you can connect your service instance to external keystores from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS). 
+An external keystore is a keystore that is not in your {{site.data.keyword.hscrypto}} instance. You can connect your service instance to another {{site.data.keyword.hscrypto}} or {{site.data.keyword.keymanagementserviceshort}} instance, potentially in another region. Or, you can connect your service instance to external keystores from other cloud providers such as Microsoft Azure Key Vault and AWS Key Management Service (KMS). 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-14"
+lastupdated: "2022-10-24"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -33,7 +33,7 @@ You can use {{site.data.keyword.uko_full_notm}} to connect to external keystores
 
 Before you connect to an external keystore, keep in mind the following considerations:
 
-- You can connect to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS). 
+- You can connect to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS).
 - You can connect to one external keystore at no initial cost, regardless of the type. You are charged for additional external keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Other currencies are applied based on the region the service instance is provisioned in.
 - A managed key can be used for encryption and decryption only after you install it in at least one target keystore. 
 - A target keystore can be assigned to only one vault.
@@ -41,7 +41,7 @@ Before you connect to an external keystore, keep in mind the following considera
 ## Setting up required user access in external keystores
 {: #connect-external-keystores-access}
 
-You need to set up user access before you use {{site.data.keyword.uko_full_notm}} to access keystores in third-party cloud.
+You need to set up user access before you use {{site.data.keyword.uko_full_notm}} to access keystores in third-party clouds.
 
 ### Setting up required user access in Azure Key Vault
 {: #connect-external-keystores-access-azure}
@@ -89,6 +89,8 @@ For more information, check out [Assign a Key Vault access policy](https://docs.
 
 For more information, check out [AWS KMS permissions](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html){: external}.
 
+
+
 ## Connecting to external keystores with the {{site.data.keyword.cloud_notm}} console
 {: #connect-external-keystores-ui}
 {: ui}
@@ -116,7 +118,7 @@ To connect to an external keystore by using the console, complete the following 
 
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
-    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0-9). The rest can also be symbols (.-_) or spaces. |
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | Region on AWS               | The geographical location where the AWS keystore is located in.    |
     | Access key ID on AWS        | All requests to AWS KMS must be signed by using an access key ID and a secret access key. For more information, see [Understanding and getting your AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).    |
@@ -129,7 +131,7 @@ To connect to an external keystore by using the console, complete the following 
    
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
-    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0-9). The rest can also be symbols (.-_) or spaces. |
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | Service name on Azure       | The name must match the name of the Key Vault in Azure.   |
     | Resource group name on Azure     | A logical construct that groups multiple resources. Obtain it from the Azure portal. |
@@ -145,9 +147,11 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
 
+    
+
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
-    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0-9). The rest can also be symbols (.-_) or spaces. |
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | {{site.data.keyword.keymanagementserviceshort}} API endpoint  | The service endpoint of your {{site.data.keyword.keymanagementserviceshort}} instance in the format of `https://<region>.kms.cloud.ibm.com`. For more information, see [Regions and endpoints](/docs/key-protect?topic=key-protect-regions). |
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
@@ -161,7 +165,7 @@ To connect to an external keystore by using the console, complete the following 
 
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
-    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0-9). The rest can also be symbols (.-_) or spaces. |
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | {{site.data.keyword.hscrypto}} API endpoint  | The service endpoint of your {{site.data.keyword.hscrypto}} instance in the format of `https://uko.<region>.hs-crypto.cloud.ibm.com:<port>`. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **Connect** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**.   |
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
@@ -173,7 +177,7 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
 
-    You cannot make further changes to fields that are marked with a Lock icon after the keystore is connected.
+    You cannot make further changes to identifying properties that are marked with a Lock icon after the keystore is connected.
     {: note}
 
 7. Optionally, click **Test connection** to test the connection to the external keystore that you configure. When completed, click **Next** to continue.

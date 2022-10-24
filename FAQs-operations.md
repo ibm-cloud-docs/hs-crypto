@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-08-17"
+lastupdated: "2022-10-21"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning, operations
 
@@ -131,7 +131,7 @@ Yes. {{site.data.keyword.hscrypto}} can be used with {{site.data.keyword.keymana
 
 
 
-## Can I use {{site.data.keyword.hscrypto}} for applications hosted in other cloud service providers such as AWS, Azure, and GCP?
+## Can I use {{site.data.keyword.hscrypto}} for applications hosted in other cloud service providers such as AWS and Azure?
 {: #faq-hpcs-other-cloud-vendor}
 {: faq}
 

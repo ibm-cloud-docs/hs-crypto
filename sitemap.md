@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-20"
+lastupdated: "2022-10-24"
 
 keywords: site map, doc structure, information architecture
 
@@ -448,6 +448,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Security service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#security-service-integrations)
 
+* [Developer tools service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#devtools-integrations)
+
 * [Understanding your integration](/docs/hs-crypto?topic=hs-crypto-integrate-services#understand-integration)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-integrate-services#integration-next-steps)
@@ -458,6 +460,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [20 Oct 2022](/docs/hs-crypto?topic=hs-crypto-what-new#20-oct-2022)
+
+    * Added: EP11 activity tracker events
 
 * [15 July 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-15july2022)
 
@@ -1900,7 +1906,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Can I use {{site.data.keyword.hscrypto}} only for cryptographic operations, but use other {{site.data.keyword.cloud_notm}} services such as {{site.data.keyword.keymanagementserviceshort}} for key management?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-hpcs-with-key-protect)
 
-* [Can I use {{site.data.keyword.hscrypto}} for applications hosted in other cloud service providers such as AWS, Azure, and GCP?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-hpcs-other-cloud-vendor)
+* [Can I use {{site.data.keyword.hscrypto}} for applications hosted in other cloud service providers such as AWS and Azure?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-hpcs-other-cloud-vendor)
 
 * [How can I know whether the {{site.data.keyword.cloud_notm}} services that I adopt can integrate with {{site.data.keyword.hscrypto}} for key encryption?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#how-can-i-know-whether-the--services-that-i-adopt-can-integrate-with-{{sitedatakeywordhscrypto}}-for-key-encryption?)
 

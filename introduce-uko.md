@@ -105,6 +105,8 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
         - **AWS KMS**        
             
             AWS KMS is a managed service for you to create and manage cryptographic keys across a wide range of AWS services.
+        
+        
 
 ## What's next
 {: #uko-next}
