@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-21"
+lastupdated: "2022-10-24"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -177,7 +177,7 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
 
-    You cannot make further changes to fields that are marked with a Lock icon after the keystore is connected.
+    You cannot make further changes to identifying properties that are marked with a Lock icon after the keystore is connected.
     {: note}
 
 7. Optionally, click **Test connection** to test the connection to the external keystore that you configure. When completed, click **Next** to continue.

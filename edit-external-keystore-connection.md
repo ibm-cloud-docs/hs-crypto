@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-21"
+lastupdated: "2022-10-24"
 
 keywords: Unified Key Orchestrator, key management, UKO keystore, edit keystore, external keystore, KMS keystore
 
@@ -46,14 +46,14 @@ To edit the connection to an external keystore by using the console, complete th
 3. Click the external keystore that you want to edit. The Details side panel is displayed.
 4. Click **Edit** in each property card to update keystore properties.
 
-    Because the keystore connection is already established, you cannot make changes to fields that are marked with a Lock icon.
+    Because the keystore connection is already established, you cannot make changes to identifying properties that are marked with a Lock icon.
     {: note}
 
     |           Property	        |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
-    | Region on AWS               | Read only. The geographical location where the AWS keystore is located in.    |
+    | Region on AWS               | Read only. The geographical location where the AWS keystore is located in. You cannot edit this property after the keystore is connected.    |
     | Access key ID on AWS        | All requests to AWS KMS must be signed by using an access key ID and a secret access key. For more information, see [Understanding and getting your AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).   |
     | Secret access key on AWS    | All requests to AWS KMS must be signed by using an access key ID and a secret access key. The secret access key is available for download only when you create it.    |
     {: #table-1}
@@ -66,14 +66,14 @@ To edit the connection to an external keystore by using the console, complete th
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
-    | Service name on Azure       | Read only. The name must match the name of the Key Vault in Azure.   |
-    | Resource group name on Azure     | Read only. A logical construct that groups multiple resources together. Obtain it from the Azure portal. |
+    | Service name on Azure       | Read only. The name must match the name of the Key Vault in Azure. You cannot edit this property after the keystore is connected.   |
+    | Resource group name on Azure     | Read only. A logical construct that groups multiple resources together. Obtain it from the Azure portal. You cannot edit this property after the keystore is connected. |
     | Location on Azure           | The geographical location where the Key Vault is located in.   |
     | Environment on Azure        | The Azure environment to authenticate with.      |
     | Service principal client ID on Azure | Application ID that identifies the application of service principal. |    
     | Service principal password on Azure | Only password based authentication is supported for service principals.       |
-    | Tenant ID on Azure          |  Read only. A tenant is the organization that owns and manages a specific instance of Microsoft cloud services. Use Azure Active Directory tenant ID for authenticating requests to the key vault.     |
-    | Subscription ID on Azure    |  Read only. A GUID that uniquely identifies your subscription to use Azure services.    |
+    | Tenant ID on Azure          |  Read only. A tenant is the organization that owns and manages a specific instance of Microsoft cloud services. Use Azure Active Directory tenant ID for authenticating requests to the key vault. You cannot edit this property after the keystore is connected.    |
+    | Subscription ID on Azure    |  Read only. A GUID that uniquely identifies your subscription to use Azure services. You cannot edit this property after the keystore is connected.    |
     {: #table-2}
     {: caption="Table 2. Azure Key Vault properties" caption-side="bottom"}
     {: tab-title="Azure Key Vault"}
@@ -86,9 +86,9 @@ To edit the connection to an external keystore by using the console, complete th
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
-    | {{site.data.keyword.keymanagementserviceshort}} API endpoint  | Read only. The service endpoint of your {{site.data.keyword.keymanagementserviceshort}} instance in the format of `https://<region>.kms.cloud.ibm.com`. For more information, see [Regions and endpoints](/docs/key-protect?topic=key-protect-regions).  |
-    | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  Read only. The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
-    | Service instance ID on {{site.data.keyword.cloud_notm}}   | Read only. The unique identifier that is assigned to your {{site.data.keyword.keymanagementserviceshort}} service instance. For more information, see [Retrieving your instance ID and cloud resource name](/docs/key-protect?topic=key-protect-retrieve-instance-ID).  |
+    | {{site.data.keyword.keymanagementserviceshort}} API endpoint  | Read only. The service endpoint of your {{site.data.keyword.keymanagementserviceshort}} instance in the format of `https://<region>.kms.cloud.ibm.com`. You cannot edit this property after the keystore is connected. For more information, see [Regions and endpoints](/docs/key-protect?topic=key-protect-regions).  |
+    | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  Read only. The endpoint of IAM, which is `https://iam.cloud.ibm.com`. You cannot edit this property after the keystore is connected.   |
+    | Service instance ID on {{site.data.keyword.cloud_notm}}   | Read only. The unique identifier that is assigned to your {{site.data.keyword.keymanagementserviceshort}} service instance. You cannot edit this property after the keystore is connected. For more information, see [Retrieving your instance ID and cloud resource name](/docs/key-protect?topic=key-protect-retrieve-instance-ID).  |
     | Service ID API key          | A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys). |
     {: #table-3}
     {: caption="Table 3. IBM {{site.data.keyword.keymanagementserviceshort}} keystore properties" caption-side="bottom"}
@@ -100,9 +100,9 @@ To edit the connection to an external keystore by using the console, complete th
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
-    | {{site.data.keyword.hscrypto}} API endpoint  | Read only. The service endpoint of your {{site.data.keyword.hscrypto}} instance in the format of `https://uko.<region>.hs-crypto.cloud.ibm.com:<port>`. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **Connect** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**.  |
-    | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  Read only. The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
-    | Service instance ID on {{site.data.keyword.cloud_notm}}  | Read only. The unique identifier that is assigned to your service instance. For more information, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).  |
+    | {{site.data.keyword.hscrypto}} API endpoint  | Read only. The service endpoint of your {{site.data.keyword.hscrypto}} instance in the format of `https://uko.<region>.hs-crypto.cloud.ibm.com:<port>`. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **Connect** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**. You cannot edit this property after the keystore is connected.  |
+    | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  Read only. The endpoint of IAM, which is `https://iam.cloud.ibm.com`. You cannot edit this property after the keystore is connected.  |
+    | Service instance ID on {{site.data.keyword.cloud_notm}}  | Read only. The unique identifier that is assigned to your service instance. You cannot edit this property after the keystore is connected. For more information, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).  |
     | Service ID API key          | A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).  |
     {: #table-4}
     {: caption="Table 4. {{site.data.keyword.cloud_notm}} KMS keystore properties" caption-side="bottom"}
