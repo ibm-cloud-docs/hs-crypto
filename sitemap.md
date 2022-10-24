@@ -461,6 +461,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
 
+* [20 Oct 2022](/docs/hs-crypto?topic=hs-crypto-what-new#20-oct-2022)
+
+    * Added: EP11 activity tracker events
+
 * [15 July 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-15july2022)
 
     * Added: Viewing associated resources with managed keys
