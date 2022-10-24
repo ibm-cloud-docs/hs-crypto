@@ -233,15 +233,6 @@
     "why am I not able to view HPCS root keys with API",
     "why can't I list root keys with API in HPCS"
   ],
-  "troubleshoot-unable-to-list-specific-keys":[
-    "unable to view specific keys in hyper protect crypto services",
-    "unable to list specific keys for hyper protect crypto services",
-    "not able to view specific hyper protect crypto services root keys",
-    "in hyper protect crypto services not able to list specific root keys",
-    "I can't view a HPCS root key",
-    "not able to list a specific root key for hyper protect crypto services",
-    "unable to view keys in HPCS that I have access to"
-  ],
   "troubleshoot-unauthorized-token":[
     "unauthorized when you run TKE CLI plug-in commands",
     "HPCS gives 401 unauthorized using TKE CLI",
