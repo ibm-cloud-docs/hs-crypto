@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-10-24"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -33,7 +33,7 @@ Stay up to date with the new features that are available for {{site.data.keyword
 {: release-note}
 
 Added: EP11 activity tracker events
-: {{site.data.keyword.hscrypto}} Standard Plan and {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} now support Enterprise PKCS #11 (EP11) events tracking. You can now use IBM Cloud Activity Tracker to monitor EP11 activities and analyze successful events. For more information, see [Auditing events for {{site.data.keyword.hscrypto}} - Standard Plan](/docs/hs-crypto?topic=hs-crypto-at-events) and [Auditing events for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-at-events).
+: Both {{site.data.keyword.hscrypto}} Standard Plan and {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} now support Enterprise PKCS #11 (EP11) events tracking. You can use IBM Cloud Activity Tracker to monitor EP11 activities and analyze successful events. For more information, see [Auditing events for {{site.data.keyword.hscrypto}} - Standard Plan](/docs/hs-crypto?topic=hs-crypto-at-events) and [Auditing events for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-at-events).
 
 ## 15 July 2022
 {: #hs-crypto-15july2022}
