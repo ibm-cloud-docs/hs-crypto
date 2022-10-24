@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-10-24"
 
 keywords: integration, encryption at rest, cloud object storage, object storage, kmip, containers, vmware, database, compute
 
@@ -97,8 +97,8 @@ You can integrate {{site.data.keyword.hscrypto}} with the following ingestion se
 | Service | Description | Integration instruction |
 | ------- | ----------- | ----------------------- |
 | [{{site.data.keyword.mon_full_notm}}](/docs/monitoring){: external} | {{site.data.keyword.mon_full_notm}} is a cloud-native, and container-intelligence management system. You can use it to gain operational visibility into the performance and health of your {{site.data.keyword.hscrypto}} instance. | [Getting started tutorial](/docs/monitoring?topic=monitoring-getting-started) |
-| [{{site.data.keyword.bpfull_notm}}](/docs/schematics){: external} | {{site.data.keyword.bpfull_notm}} provides powerful tools to automate your cloud infrastructure provisioning and management process, the configuration and operation of your cloud resources, and the deployment of your application workloads. All data, user inputs and the data that is generated at runtime during execution of automation code, are stored in {{site.data.keyword.cos_full_notm}}. This data is encrypted by default by using encryption keys from Schematics. If you need to control the encryption keys, you can integrate with your {{site.data.keyword.hscrypto}} instance to use your own root keys. | [Enabling customer-managed keys for Schematics](/docs/schematics?topic=schematics-secure-data#using-byok) |
-| [{{site.data.keyword.messagehub}}](/docs/EventStreams){: external} | The {{site.data.keyword.messagehub}} service is a high-throughput message bus that is built with Apache Kafka. You can use it for event ingestion into {{site.data.keyword.cloud_notm}} and event stream distribution between your services and applications. By default, message payload data in {{site.data.keyword.messagehub}} is encrypted at rest by using a randomly generated key. If you need to control the encryption keys, you can integrate with your {{site.data.keyword.hscrypto}} instance to use your own root keys. | [Enabling a customer-managed key for Event Streams](/docs/EventStreams?topic=EventStreams-managing_encryption#enabling_encryption) |
+| [{{site.data.keyword.bpfull_notm}}](/docs/schematics){: external} | {{site.data.keyword.bpfull_notm}} provides powerful tools to automate your cloud infrastructure provisioning and management process, the configuration and operation of your cloud resources, and the deployment of your application workloads. All data, user inputs and the data that is generated at runtime during execution of automation code, are stored in {{site.data.keyword.cos_full_notm}}. This data is encrypted by default by using encryption keys from Schematics. If you need to control the encryption keys, you can integrate with your {{site.data.keyword.hscrypto}} instance to use your own root keys. | [Enabling customer-managed keys for Schematics](/docs/schematics?topic=schematics-secure-data#using-byok){: external} |
+| [{{site.data.keyword.messagehub}}](/docs/EventStreams){: external} | The {{site.data.keyword.messagehub}} service is a high-throughput message bus that is built with Apache Kafka. You can use it for event ingestion into {{site.data.keyword.cloud_notm}} and event stream distribution between your services and applications. By default, message payload data in {{site.data.keyword.messagehub}} is encrypted at rest by using a randomly generated key. If you need to control the encryption keys, you can integrate with your {{site.data.keyword.hscrypto}} instance to use your own root keys. | [Enabling a customer-managed key for Event Streams](/docs/EventStreams?topic=EventStreams-managing_encryption#enabling_encryption){: external} |
 {: caption="Table 5. Supported ingestion services." caption-side="bottom"}
 
 ## Security service integrations
@@ -112,7 +112,17 @@ You can integrate {{site.data.keyword.hscrypto}} with the following security-rel
 | [{{site.data.keyword.secrets-manager_short}}](/docs/secrets-manager){: external} | With {{site.data.keyword.secrets-manager_short}}, you can centrally manage your secrets in a single-tenant, dedicated instance. | [Protecting your sensitive data in {{site.data.keyword.secrets-manager_short}}](/docs/secrets-manager?topic=secrets-manager-mng-data#data-encryption) |
 | [{{site.data.keyword.cloudcerts_short}}](/docs/certificate-manager){: external} | You can use {{site.data.keyword.cloudcerts_short}} to order and manage SSL/TLS certificates for your applications and services. | [Protecting your sensitive data in {{site.data.keyword.cloudcerts_short}}](/docs/certificate-manager?topic=certificate-manager-mng-data#data-encryption) |
 | [{{site.data.keyword.compliance_short}}](/docs/security-compliance){: external} | With {{site.data.keyword.compliance_short}}, you can govern cloud resource configurations and centrally manage your compliance with organization and regulatory guidelines. When you work with the {{site.data.keyword.compliance_short}}, data is generated by the service as you interact with it. | [Protecting your sensitive data in {{site.data.keyword.compliance_short}}](/docs/security-compliance?topic=security-compliance-mng-data#data-encryption) |
-{: caption="Table 5. Supported security services." caption-side="bottom"}
+{: caption="Table 6. Supported security services." caption-side="bottom"}
+
+## Developer tools service integrations
+{: #devtools-integrations}
+
+You can integrate {{site.data.keyword.hscrypto}} with the following developer tools services.
+
+| Service | Description | Integration instruction |
+| ------- | ----------- | ----------------------- |
+| [{{site.data.keyword.contdelivery_full}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started){: external} | The {{site.data.keyword.contdelivery_short}} service provides a suite of tools that support DevOps best practices. You can use the service to manage toolchains, operate delivery pipelines, gain insights into code quality and vulnerabilities, integrate third party tools, and more. | [Creating a Continuous Delivery service instance](/docs/ContinuousDelivery?topic=ContinuousDelivery-create_cd_service){: external} [Protecting your personal data when you use the Professional plan](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_professional_plan){: external} |
+{: caption="Table 7. Supported developer tools services." caption-side="bottom"}
 
 
 ## Understanding your integration
@@ -134,7 +144,7 @@ The following table lists the API methods that add or remove envelope encryption
 | --- | --- |
 | `POST /keys/{root_key_ID}?action=wrap` | [Wrap (encrypt) a data encryption key.](/docs/hs-crypto?topic=hs-crypto-wrap-keys) |
 | `POST /keys/{root_key_ID}?action=unwrap` | [Unwrap (decrypt) a data encryption key.](/docs/hs-crypto?topic=hs-crypto-unwrap-keys) |
-{: caption="Table 5. Describes the {{site.data.keyword.hscrypto}} key management service API methods" caption-side="bottom"}
+{: caption="Table 8. Describes the {{site.data.keyword.hscrypto}} key management service API methods" caption-side="bottom"}
 
 To find out more about programmatically managing your keys in {{site.data.keyword.hscrypto}}, check out the [{{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external}.
 {: tip}

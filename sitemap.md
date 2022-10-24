@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-20"
+lastupdated: "2022-10-24"
 
 keywords: site map, doc structure, information architecture
 
@@ -447,6 +447,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [Ingestion service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#Ingestion-integrations)
 
 * [Security service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#security-service-integrations)
+
+* [Developer tools service integrations](/docs/hs-crypto?topic=hs-crypto-integrate-services#devtools-integrations)
 
 * [Understanding your integration](/docs/hs-crypto?topic=hs-crypto-integrate-services#understand-integration)
 
