@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-09-05"
+lastupdated: "2022-10-25"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -60,7 +60,7 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
 
 - **Managed keys**
         
-    A managed key is a key that is created in and assigned to a vault. You can manage the lifecycle of a managed key and install it in multiple keystores in the same vault. You can use a managed key for encryption and decryption only when it is installed in at least one target keystore. IInstalling a managed key in multiple keystores in the same vault enables key redundancy. To use a managed key for encryption and decryption, install it in one or more keystores within the same vault first. 
+    A managed key is a key that is created in and assigned to a vault. You can manage the lifecycle of a managed key and install it in multiple keystores in the same vault. You can use a managed key for encryption and decryption only when it is installed in at least one target keystore. Installing a managed key in multiple keystores in the same vault enables key redundancy. To use a managed key for encryption and decryption, install it in one or more keystores within the same vault first. 
 
     For more information about creating managed keys, see [Creating and installing managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys).
 
