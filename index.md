@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-10-26"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -71,7 +71,7 @@ To manage your keys, you need to initialize your service instance first. Dependi
 
     If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`) where the recovery crypto units are enabled, you can choose this approach where the master key is randomly generated within a recovery crypto unit and then exported to other crypto units.
 
-- [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+- [Initializing service instances using workstation files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
 
     You can also initialize your service instance using master key parts that are stored in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. 
 
@@ -385,7 +385,7 @@ To manage your keys, you need to initialize your service instance first. Dependi
 
     If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`) where the recovery crypto units are enabled, you can choose this approach where the master key is randomly generated within a recovery crypto unit and then exported to other crypto units.
 
-- [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+- [Initializing service instances using workstation files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
 
     You can also initialize your service instance using master key parts that are stored in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. 
 

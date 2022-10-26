@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-14"
+lastupdated: "2022-10-26"
 
 keywords: initialize service, key ceremony, hsm, load master key, key ceremony preparation
 
@@ -45,7 +45,7 @@ Before you can initialize your service instance, make sure that you have done th
     ```
     {: pre}
 
-3. Set the environment variable `CLOUDTKEFILES` on your workstation to specify the directory where you want to save the master key part files and signature key files. The signature keys are used to sign TKE administrative commands. Make sure that the directory exists before you set the environment variable.
+3. Set the environment variable `CLOUDTKEFILES` on your workstation to specify the directory where you want to save the master workstation files and signature key files. The signature keys are used to sign TKE administrative commands. Make sure that the directory exists before you set the environment variable.
 
     - On the Linux&reg; operating system or MacOS, add the following line to the `.bash_profile` file:
 
@@ -79,5 +79,5 @@ Before you can initialize your service instance, make sure that you have done th
 
 Depending on your business needs and security requirements, {{site.data.keyword.hscrypto}} provides you with three options to initialize your service instance. For detailed operation steps, see:
 - [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
-- [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+- [Initializing service instances by using workstation files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
 - [Initializing service instances by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)

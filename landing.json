@@ -19,7 +19,7 @@
       "href": "/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit"
     },
     {
-      "title": "Initialize service instances using key part files",
+      "title": "Initialize service instances using workstation files",
       "description": "You can also initialize your service instance using master key parts that are stored in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. ",
       "href": "/docs/hs-crypto?topic=hs-crypto-initialize-hsm"
     }
