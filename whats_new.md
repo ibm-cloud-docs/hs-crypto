@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2022-10-27"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -28,19 +28,21 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+
+
 ## 20 Oct 2022
 {: hs-crypto-20oct2022}
 {: release-note}
 
 Added: EP11 activity tracker events
-: Both {{site.data.keyword.hscrypto}} Standard Plan and {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} now support Enterprise PKCS #11 (EP11) events tracking. You can use IBM Cloud Activity Tracker to monitor EP11 activities and analyze successful events. For more information, see [Auditing events for {{site.data.keyword.hscrypto}} - Standard Plan](/docs/hs-crypto?topic=hs-crypto-at-events) and [Auditing events for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-at-events).
+:   Both {{site.data.keyword.hscrypto}} Standard Plan and {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} now support Enterprise PKCS #11 (EP11) events tracking. You can use IBM Cloud Activity Tracker to monitor EP11 activities and analyze successful events. For more information, see [Auditing events for {{site.data.keyword.hscrypto}} - Standard Plan](/docs/hs-crypto?topic=hs-crypto-at-events) and [Auditing events for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-at-events).
 
 ## 15 July 2022
 {: #hs-crypto-15july2022}
 {: release-note}
 
 Added: Viewing associated resources with managed keys
-:  You can now view other {{site.data.keyword.cloud_notm}} resources that are protected by managed keys in your {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance. For more information, see [Viewing resources associated with managed keys](/docs/hs-crypto?topic=hs-crypto-uko-view-associated-resource).
+:   You can now view other {{site.data.keyword.cloud_notm}} resources that are protected by managed keys in your {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance. For more information, see [Viewing resources associated with managed keys](/docs/hs-crypto?topic=hs-crypto-uko-view-associated-resource).
 
 ## 24 June 2022
 {: #hs-crypto-24june2022}
