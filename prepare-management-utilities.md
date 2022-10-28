@@ -67,7 +67,7 @@ Complete the following steps to order smart cards:
     * Billing contact information, which includes the name, billing address, phone number, email address, and time zone.
     * Shipping contact information, which includes the name, shipping address, phone number, email address, and time zone.
 
-    For information about ordering from IBM sales representatives and Business Partners, see [{{site.data.keyword.IBM}} {{site.data.keyword.hscrypto}} hardware annoucement](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/6/897/ENUS122-116/index.html){: external}.
+    For information about ordering smart cards from IBM sales representatives or Business Partners, see [{{site.data.keyword.IBM}} {{site.data.keyword.hscrypto}} hardware annoucement](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/6/897/ENUS122-116/index.html){: external}.
 
 ### Ordering smart card readers
 
