@@ -61,20 +61,20 @@ Complete the following steps to order smart cards:
 
     For how to calculate the number of smart cards needed, see [FAQ: Are there any recommendations on how to set up smart cards?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup).
 
-2.  Contact your IBM Sales representative, your IBM Business Partner, or email IBM team at `zcat@ibm.com` to provide the following information:
+2.  Contact your IBM Sales representative, your IBM Business Partner, or send an email to `zcat@ibm.com` and provide the following information:
 
     * The total number of smart cards needed; minimum of two.
     * Billing contact information, which includes the name, billing address, phone number, email address, and time zone.
     * Shipping contact information, which includes the name, shipping address, phone number, email address, and time zone.
 
-    For more information about ordering smart cards from IBM sales representatives or Business Partners, see [{{site.data.keyword.IBM}} {{site.data.keyword.hscrypto}} hardware announcement](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/6/897/ENUS122-116/index.html){: external}.
+    For more information about ordering smart cards through your IBM sales representatives or Business Partners, see [{{site.data.keyword.IBM}} {{site.data.keyword.hscrypto}} hardware announcement](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/6/897/ENUS122-116/index.html){: external}.
 
 ### Ordering smart card readers
 
-To order smart card readers, you can choose one of the following methods: 
+To order smart card readers, you have the followig options: 
 
-* You need to contact your IBM Sales representative or your IBM Business Partner to order smart card readers. For more information, see [{{site.data.keyword.IBM}} {{site.data.keyword.hscrypto}} hardware announcement](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/6/897/ENUS122-116/index.html){: external}.
-* You need to order two smart card readers `Identiv SPR332 v2.0 Secure Class 2 PIN Pad Reader` (part number 905127-1), from third-party online shops. The following list contains a few example online shopping sites where the required smart card readers are available. The deliver policy might vary depending on your geographical locations:
+* Contact your IBM Sales representative or your IBM Business Partner to order smart card readers. For more information, see [{{site.data.keyword.IBM}} {{site.data.keyword.hscrypto}} hardware announcement](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/6/897/ENUS122-116/index.html){: external}.
+* Order two smart card readers `Identiv SPR332 v2.0 Secure Class 2 PIN Pad Reader` (part number 905127-1), from third-party online shops. The following list contains a few example online shopping sites where the required smart card readers are available. The deliver policy might vary depending on your geographical locations:
 
     * [Identiv](https://shop.identiv.com/products/spr332-v2-0-secure-class-2-pin-pad-reader){: external}
     * [Digifeat](https://digifeat.com/product/spr332-v2-0/){: external}
