@@ -131,7 +131,7 @@ Yes. {{site.data.keyword.hscrypto}} can be used with {{site.data.keyword.keymana
 
 
 
-## Can I use {{site.data.keyword.hscrypto}} for applications hosted in other cloud service providers such as AWS and Azure?
+## Can I use {{site.data.keyword.hscrypto}} for applications hosted in other cloud service providers such as AWS, Azure, and GCP?
 {: #faq-hpcs-other-cloud-vendor}
 {: faq}
 

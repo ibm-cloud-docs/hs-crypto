@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-24"
+lastupdated: "2022-10-31"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -33,9 +33,9 @@ You can use {{site.data.keyword.uko_full_notm}} to connect to external keystores
 
 Before you connect to an external keystore, keep in mind the following considerations:
 
-- You can connect to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS).
+- You can connect to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), and Google Cloud Key Management Service (KMS).
 - You can connect to one external keystore at no initial cost, regardless of the type. You are charged for additional external keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Other currencies are applied based on the region the service instance is provisioned in.
-- A managed key can be used for encryption and decryption only after you install it in at least one target keystore. 
+- A managed key can be used for encryption and decryption only after you activate it in at least one target keystore. 
 - A target keystore can be assigned to only one vault.
 
 ## Setting up required user access in external keystores
@@ -91,6 +91,21 @@ For more information, check out [AWS KMS permissions](https://docs.aws.amazon.co
 
 
 
+### Setting up required user access in Google Cloud KMS
+{: #connect-external-keystores-access-google-cloud}
+
+To set up user access to Google Cloud KMS, complete the following steps:
+
+1. [Create a service account](https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating){: external} in your Google Cloud project.
+
+2. [Create a service account key](https://cloud.google.com/iam/docs/creating-managing-service-account-keys#creating){: external} to establish the identity of the service account. Select `JSON` for the key type. The private JSON key file will be downloaded directly on your workstation. You need to provide the JSON key file when you use the {{site.data.keyword.uko_full_notm}} to connect to your Google Cloud KMS keystore.
+   
+3. Create a [principal](https://cloud.google.com/iam/docs/overview#concepts_related_identity){: external} and associate it with the service account, and [assign the required IAM roles to the principal](https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role){: external}. {{site.data.keyword.uko_full_notm}} requires the following IAM roles to be able to manage keys in Google Cloud KMS:
+
+    - `Cloud KMS Admin`
+    - `Cloud KMS Crypto Operator`
+
+
 ## Connecting to external keystores with the {{site.data.keyword.cloud_notm}} console
 {: #connect-external-keystores-ui}
 {: ui}
@@ -108,6 +123,7 @@ To connect to an external keystore by using the console, complete the following 
 
     - **AWS keystore**: Create a keystore that can store AWS KMS keys.
     - **Azure Key Vault (Premium)**: Create a keystore that can store Azure Key Vault keys.
+    - **Google Cloud KMS keystore**: Create a keystore that can store Google Cloud KMS keys.
     - **{{site.data.keyword.keymanagementserviceshort}}**: Create a keystore that can store {{site.data.keyword.keymanagementserviceshort}} keys.
     - **{{site.data.keyword.cloud_notm}} KMS keystore in another instance**: Create a keystore that can store KMS keys in another {{site.data.keyword.hscrypto}} instance.
 
@@ -148,6 +164,21 @@ To connect to an external keystore by using the console, complete the following 
     {: class="comparison-tab-table"}
 
     
+    |           Property	      |                         Description                       |
+    |-----------------------------|-----------------------------------------------------------|
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
+    | Keystore description        | (Optional) An extended description for your keystore, with up to 200 characters in length. |
+    | Upload JSON key file        | The private key file that is downloaded from your service account on Google Cloud in step 2 of [Setting up required user access in Google Cloud KMS](#connect-external-keystores-access-google-cloud). The file type must be `.json` and the maximum file size is 4 KB. |
+    | Project on Google Cloud     | Read only. The name of your Google Cloud project. It is automatically extracted from the JSON key file that you upload.  |
+    | Location on Google Cloud    | The geographical region where you want to store your Google Cloud KMS resources. For more details about the location, see [Google Cloud KMS locations](https://cloud.google.com/kms/docs/locations){: external}.     |
+    | Key ring on Google Cloud | A human-readable name of the key ring that organizes your keys. The name must be unique within a location. For more information about key rings, see [Key rings](https://cloud.google.com/kms/docs/resource-hierarchy#key_rings){: external}.  |
+    | Private key ID on Google Cloud | Read only. The ID of the public/private RSA key pair in Google. It is used for establishing a secure connection to Google Cloud Platform. It is automatically extracted from the JSON key file that you upload. |
+    {: #table-3}
+    {: caption="Table 3. Google Cloud KMS keystore properties" caption-side="bottom"}
+    {: tab-title="Google Cloud KMS keystore"}
+    {: tab-group="External keystore properties"}
+    {: class="comparison-tab-table"}
+    
 
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
@@ -157,8 +188,8 @@ To connect to an external keystore by using the console, complete the following 
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
     | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your {{site.data.keyword.keymanagementserviceshort}} service instance. For more information, see [Retrieving your instance ID and cloud resource name](/docs/key-protect?topic=key-protect-retrieve-instance-ID).  |
     | Service ID API key          | A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys). |
-    {: #table-3}
-    {: caption="Table 3. {{site.data.keyword.keymanagementserviceshort}} keystore properties" caption-side="bottom"}
+    {: #table-4}
+    {: caption="Table 4. {{site.data.keyword.keymanagementserviceshort}} keystore properties" caption-side="bottom"}
     {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keystore"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
@@ -171,8 +202,8 @@ To connect to an external keystore by using the console, complete the following 
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
     | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your service instance. For more information, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).   |
     | Service ID API key          |  A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys). |
-    {: #table-4}
-    {: caption="Table 4. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} KMS keystore properties" caption-side="bottom"}
+    {: #table-5}
+    {: caption="Table 5. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} KMS keystore properties" caption-side="bottom"}
     {: tab-title="KMS keystore in another instance"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
@@ -226,7 +257,7 @@ If you connect to an external keystore of type Azure Key Vault, a key named `EKM
 
 - To watch a use case video on using {{site.data.keyword.uko_full_notm}} to manage AWS Key Management Service, see [Securely managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator](https://mediacenter.ibm.com/media/1_1a6c6vub){: external}.
 
-- To find out how to install an existing key in a keystore, check out [Setting target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
+- To find out how to activate an existing key in a keystore, check out [Setting target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
 
 - To find out how to update the connection to an external keystore, check out [Editing connection to external keystores](/docs/hs-crypto?topic=hs-crypto-edit-external-keystore-connection).
 

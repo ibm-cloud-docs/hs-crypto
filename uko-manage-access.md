@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-10-18"
+lastupdated: "2022-10-31"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -119,17 +119,19 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 {: class="comparison-tab-table"}
 
 
+
+
 | Action | Reader | Key custodian - Deployer | Key custodian - Creator | Vault administrator | Manager |
 |-----|-----|----|----|-----|-----|
 | Activate a preactive key. | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |  |
 | Destroy a preactive key. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | |
 | Deactivate an active key. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | | |
-| Install an active key. | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Uninstall an active key.| | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | |
+| Assign an active key. | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
+| Detach an active key.| | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | |
 | Destroy a deactivated key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| |
-| Install a deactivated key. | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | |
+| Assign a deactivated key. | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | |
 | Reactivate a deactivated key. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | | |
-| Uninstall a deactivated key. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
+| Detach a deactivated key. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
 | Remove a destroyed key from Vault. | | | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | Read managed key details. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
 | List managed keys. | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
@@ -153,13 +155,11 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Delete a vault. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| |
 | Start billing of UKO base price by using external keystores. | | | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | Create a paid keystore beyond the free amount. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| |
-{: #table-4}
-{: caption="Table 4. Lists service access roles as they apply to {{site.data.keyword.uko_full_notm}}" caption-side="bottom"}
+{: #table-5}
+{: caption="Table 5. Lists service access roles as they apply to {{site.data.keyword.uko_full_notm}}" caption-side="bottom"}
 {: tab-title="{{site.data.keyword.uko_full_notm}}"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
-
-
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2022-10-31"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -246,14 +246,8 @@ A vault is a single repository that controls a user's or an access group's acces
 ### Managed key
 {: #uko-managed-key-conncept}
 
-A managed key is a key that is created in and assigned to a vault. You can use a managed key for encryption and decryption only when it is installed in at least one target keystore.
+A managed key is a key that is created in and assigned to a vault. You can use a managed key for encryption and decryption only when it is activated in at least one target keystore.
 
-
-
-### Installed key
-{: #uko-installed-key-conncept}
-
-An installed key is a key that is installed in a keystore. When you install a managed key in keystores, the key is assigned different installed key IDs in different keystores.
 
 
 ### Target keystore
@@ -269,5 +263,5 @@ An internal keystore is a keystore that is created in your {{site.data.keyword.h
 ### External keystore
 {: #uko-external-keystore-concept}
 
-An external keystore is a keystore that is not in your {{site.data.keyword.hscrypto}} instance. You can connect your service instance to another {{site.data.keyword.hscrypto}} or {{site.data.keyword.keymanagementserviceshort}} instance, potentially in another region. Or, you can connect your service instance to external keystores from other cloud providers such as Microsoft Azure Key Vault and AWS Key Management Service (KMS). 
+An external keystore is a keystore that is not in your {{site.data.keyword.hscrypto}} instance. You can connect your service instance to another {{site.data.keyword.hscrypto}} or {{site.data.keyword.keymanagementserviceshort}} instance, potentially in another region. Or, you can connect your service instance to external keystores from other cloud providers such as Microsoft Azure Key Vault, AWS Key Management Service (KMS), and Google Cloud KMS. 
 

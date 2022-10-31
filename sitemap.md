@@ -461,6 +461,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
 
+* [31 Oct 2022](/docs/hs-crypto?topic=hs-crypto-what-new#31-oct-2022)
+
+    * Added: Google Cloud KMS support
+
 * [20 Oct 2022](/docs/hs-crypto?topic=hs-crypto-what-new#20-oct-2022)
 
     * Added: EP11 activity tracker events
@@ -1669,6 +1673,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [API versioning](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-versioning)
 
+* [October 2022](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-october-2022)
+
 * [July 2022](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-july-2022)
 
 * [June 2022](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-june-2022)
@@ -1906,7 +1912,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Can I use {{site.data.keyword.hscrypto}} only for cryptographic operations, but use other {{site.data.keyword.cloud_notm}} services such as {{site.data.keyword.keymanagementserviceshort}} for key management?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-hpcs-with-key-protect)
 
-* [Can I use {{site.data.keyword.hscrypto}} for applications hosted in other cloud service providers such as AWS and Azure?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-hpcs-other-cloud-vendor)
+* [Can I use {{site.data.keyword.hscrypto}} for applications hosted in other cloud service providers such as AWS, Azure, and GCP?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-hpcs-other-cloud-vendor)
 
 * [How can I know whether the {{site.data.keyword.cloud_notm}} services that I adopt can integrate with {{site.data.keyword.hscrypto}} for key encryption?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-hpcs-service-integration)
 

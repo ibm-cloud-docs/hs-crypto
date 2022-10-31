@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-10-31"
 
 keywords: encryption at rest, envelope encryption, root key, data encryption key, key encryption key, key protect, protect data encryption key, encrypt data encryption key, wrap data encryption key, unwrap data encryption key
 
@@ -49,7 +49,7 @@ Master keys
 :   Master keys, also known as HSM master keys, are encryption keys used to protect the {{site.data.keyword.hscrypto}} instances. The master key provides full control of the hardware security module and ownership of the root of trust that encrypts the entire hierarchy of keys, including [root keys](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-root-key-concept) and [standard keys](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-standard-key-concept).
 
 Root keys
-:   Root keys, also known as customer root keys (CRKs), are primary resources in {{site.data.keyword.hscrypto}}. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other keys that are stored in a data service. In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} plan, when you create IBM KMS keys that are installed in internal keystores, these keys are root keys. You can also manage the lifecycle of root keys to achieve full control of other keys stored in the cloud with {{site.data.keyword.hscrypto}}.
+:   Root keys, also known as customer root keys (CRKs), are primary resources in {{site.data.keyword.hscrypto}}. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other keys that are stored in a data service. In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} plan, when you create IBM KMS keys that are activated in internal keystores, these keys are root keys. You can also manage the lifecycle of root keys to achieve full control of other keys stored in the cloud with {{site.data.keyword.hscrypto}}.
 
 Data encryption keys
 :   Data encryption keys (DEKs) are cryptographic keys that you use for data encryption. They are provided by user-owned applications and are used to encrypt data stored in applications. Root keys that are managed in {{site.data.keyword.hscrypto}} serve as wrapping keys to protect DEKs.

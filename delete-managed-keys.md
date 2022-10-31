@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-09-05"
+lastupdated: "2022-10-31"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -31,7 +31,7 @@ subcollection: hs-crypto
 You can delete your managed keys in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
-When you delete a managed key, the key is to be uninstalled from all target keystores and all key materials and the metadata are destroyed permanently.
+When you delete a managed key, the key is to be detached from all target keystores and all key materials and the metadata are destroyed permanently.
 
 
 ## Deleting managed keys with the {{site.data.keyword.cloud_notm}} console
@@ -50,7 +50,7 @@ Follow these steps to complete the process:
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. If the managed key that you want to delete is in _Active_ state, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Deactivated** to deactivate the key first.
 
-   When you change the _Active_ key to _Deactivated_ state, the key is uninstalled from all the target keystores, and not accessible to all associated resources and their data. Make sure that you open the confirmation tile to check all the associated resources before you continue. However, you can still reactivate the key so that it is accessible to the resources again.
+   When you change the _Active_ key to _Deactivated_ state, the key is detached from all the target keystores, and not accessible to all associated resources and their data. Make sure that you open the confirmation tile to check all the associated resources before you continue. However, you can still reactivate the key so that it is accessible to the resources again.
     {: note}
 
 4. To destroy a _Pre-active_ or _Deactivated_ key, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Destroyed**.
@@ -64,7 +64,7 @@ Follow these steps to complete the process:
    When you remove the managed key from the vault that the key is assigned to, the remaining key metadata is removed permanantly. 
     {: important}
 
-The managed key has been deleted and uninstalled from all target keystores. All key materials and metadata have been destroyed. 
+The managed key has been deleted and detached from all target keystores. All key materials and metadata have been destroyed. 
 
 ## Deleting managed keys with the API
 {: #delete-managed-keys-api}

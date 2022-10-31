@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-09-05"
+lastupdated: "2022-10-31"
 
 keywords: Unified Key Orchestrator, search keys, key management, kms keys
 
@@ -50,7 +50,7 @@ To filter keys by using the console, complete the following steps:
     | Activation           | Set a date range of when you activate the key.  |
     | Expiration           | Set a date range of when you deactivate the key.  |
     | Creation             | Set a date range of when the key was created.             |
-    | Keystores            | The keystores that the key is installed in.               |
+    | Keystores            | The keystores that the key is activated in.               |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Minimum key length   | The minimum number of bits that represents the encryption strength of the key.   |
     | Maximum key length   | The maximum number of bits that represents the encryption strength of the key.   |
@@ -98,7 +98,7 @@ To search for a managed key by ID through the API, follow these steps:
   
 - To find out instructions on editing a managed key, check out [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
 
-- To find out how to install an existing key in a keystore, check out [Setting target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
+- To find out how to activate an existing key in a keystore, check out [Setting target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
 
 - To find out instructions on deleting a managed key, check out [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys).
 
