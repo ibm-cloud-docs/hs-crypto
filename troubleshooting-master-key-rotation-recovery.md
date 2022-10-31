@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-10-26"
 
 keywords: failed master key rotation, failed to use recovery crypto unit to rotate master keys, tke auto-mk-rotate failure, troubleshoot master key rotation failure
 
@@ -47,12 +47,12 @@ Some errors are detected before the command starts to work with key storage or t
 
 The following initial conditions can be reported as an error by the `ibmcloud tke auto-mk-rotate` command:
 
-* When you rotate your master key by using key part files, an invalid set of crypto units is selected.
+* When you rotate your master key by using workstation files, an invalid set of crypto units is selected.
 * One or more crypto units are in imprint mode.
 * Signature thresholds on the crypto units are not set the same.
 * A common set of administrators is not selected and installed in all crypto units large enough to meet the signature threshold value.
 * The current master key registers are not all in the `Valid` state with the same verification pattern.
-*  When you rotate your master key using key part files, the new master key registers are not all in the `Valid` state with the same verification pattern.
+*  When you rotate your master key using workstation files, the new master key registers are not all in the `Valid` state with the same verification pattern.
 
 Operational workloads cannot be run until master key rotation has completed.
 

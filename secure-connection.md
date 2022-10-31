@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-10-26"
 
 keywords: securing connection, disabling public service endpoint
 
@@ -192,7 +192,7 @@ To perform key management and cryptographic operations thought a private endpoin
 ## Step 4: Initialize the service instance
 {: #secure-connection-key-ceremony}
 
-If you select the `private-only` option when you provision the service instance, all subsequent actions are performed in a private network, including [initializing a service instance](/docs/hs-crypto?topic=hs-crypto-introduce-service). You can use either [the key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) to initialize the service instance. If you select the `public-and-private` option, you can initialize the service instance in a public network.
+If you select the `private-only` option when you provision the service instance, all subsequent actions are performed in a private network, including [initializing a service instance](/docs/hs-crypto?topic=hs-crypto-introduce-service). You can use either [the workstation files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) to initialize the service instance. If you select the `public-and-private` option, you can initialize the service instance in a public network.
 
 After the service initialization is done, you can still update your network settings by following Managing the network settings.
 
