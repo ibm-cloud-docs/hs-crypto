@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2022-10-31"
 
 keywords: smart card vulnerabilities, security policy, maintain workstation security, maintain smart card readers security
 
@@ -60,7 +60,7 @@ Some organizations store their smart cards in a safe, and keep a log of when the
 ## Considerations for defining the workstation file security policy
 {: #file-security-plan}
 
-If you decide to use workstation files, you also need to consider the following aspects::
+If you decide to use workstation files, you also need to consider the following aspects:
 
 - Where are you going to save backup copies of the workstation file?
 - Who need to know the workstation file passwords?
