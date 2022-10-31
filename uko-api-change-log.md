@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-07-18"
+lastupdated: "2022-10-31"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,7 +27,20 @@ In this change log you can learn about the latest changes, improvements, and upd
 ## API versioning
 {: #uko-api-versioning}
 
-The latest released version is `4.4.2`. The {{site.data.keyword.uko_full_notm}} API version is aligned with the IBM Enterprise Key Management Foundation - Web Edition (EKMF Web) API version.  
+The latest released version is `4.7.0`. The {{site.data.keyword.uko_full_notm}} API version is aligned with the IBM Enterprise Key Management Foundation - Web Edition (EKMF Web) API version.  
+
+
+
+## October 2022
+{: #uko-api-october-2022}
+
+The following methods are added or updated:
+
+- (Added) Sync a managed key in keystores
+- (Updated) Create an internal keystore or a keystore connection - Add Google Cloud KMS keystore support
+- (Updated) Create a key template - Add Google Cloud KMS key template support
+
+
 
 ## July 2022
 {: #uko-api-july-2022}
