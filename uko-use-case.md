@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-09-05"
+lastupdated: "2022-10-31"
 
 keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases
 
@@ -66,8 +66,8 @@ You can use {{site.data.keyword.uko_full_notm}} to securely create and manage yo
 
 
 
-![Connecting to {{site.data.keyword.uko_full_notm}}](/images/unified-key-orchestrator.svg "External keystores connecting to {{site.data.keyword.uko_full_notm}}"){: caption="Figure 3. Connecting to {{site.data.keyword.uko_full_notm}}" caption-side="bottom"}
 
+![Connecting to {{site.data.keyword.uko_full_notm}}](/images/unified-key-orchestrator-v2.svg "External keystores connecting to {{site.data.keyword.uko_full_notm}}"){: caption="Figure 3. Connecting to {{site.data.keyword.uko_full_notm}}" caption-side="bottom"}
 
 
 The following is a few use cases on how you can use {{site.data.keyword.uko_full_notm}} to manage your keys.
@@ -81,13 +81,13 @@ With IAM, you can grant and control access to the vault, and therefore the keys 
 ### Manage your keys through one user experience
 {: #manage-keys}
 
-You can create, manage, and delete your cryptographic keys from one point of control, without dealing with different user interfaces. When you install a managed key in multiple keystores in a vault, the system keeps the installations in sync. This ensures an efficient and fully audited key lifecycle management.
+You can create, manage, and delete your cryptographic keys from one point of control, without dealing with different user interfaces. When you activate a managed key in multiple keystores in a vault, the system keeps the activations in sync. This ensures an efficient and fully audited key lifecycle management.
 
 
 ### Connect to external keystores
 {: #connect-to-keystores}
 
-You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault or AWS Key Management Service.
+You can connect to external keystores to manage keys in other service instances, such as Microsoft Azure Key Vault, AWS Key Management Service, or Google Cloud Key Management Service.
 
 - To watch a use case video on using {{site.data.keyword.uko_full_notm}} to manage Azure Key Vault, see [Managing compliance of a Microsoft Office 365 environment using Hyper Protect Crypto Services with Unified Key Orchestrator](https://mediacenter.ibm.com/media/1_1pzzhrb8){: external}.
 
@@ -97,7 +97,7 @@ You can connect to external keystores to manage keys in other service instances,
 ### Back up all keys of your enterprise centrally
 {: #back-up-keys}
 
-All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}. When a fatal error occurs in the cloud, you can reinstall the keys to quickly recover from the error.
+All keys are accessible and manageable on {{site.data.keyword.cloud_notm}}. When a fatal error occurs in the cloud, you can reactivate the keys to quickly recover from the error.
 
 ## Using {{site.data.keyword.hscrypto}} as PKCS #11 HSMs
 {: #uko-pkcs11_hsm}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2022-10-31"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -168,7 +168,7 @@ Complete the following steps to create your first internal target keystore:
 ### Creating and installing managed keys
 {: #create-managed-key}
 
-You can use a managed key for encryption or decryption only after it is created and installed in at least one keystore. Complete the following steps to create your first managed key and install the key to the keystore that you create:
+You can use a managed key for encryption or decryption only after it is created and activated in at least one keystore. Complete the following steps to create your first managed key and activate the key in the keystore that you create:
 
 1. From your service instance UI, click **Managed keys** from the navigation to view all the available keys.
 2. To create a managed key, click **Create key**.
@@ -487,7 +487,7 @@ Complete the following steps to create your first internal target keystore:
 {: help}
 {: support}
 
-You can use a managed key for encryption or decryption only after it is created and installed in at least one keystore. Complete the following steps to create your first managed key and install the key to the keystore that you create:
+You can use a managed key for encryption or decryption only after it is created and installed in at least one keystore. Complete the following steps to create your first managed key and activate the key in the keystore that you create:
 
 1. From your service instance UI, click **Managed keys** from the navigation to view all the available keys.
 2. To create a managed key, click **Create key**.

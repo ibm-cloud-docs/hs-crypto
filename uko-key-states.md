@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-10-31"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator, UKO keys
 
@@ -46,9 +46,9 @@ The following table shows the details of each key state.
 
 | State       | Integer mapping | Description |
 |-------------|-----------------|-------------|
-| Pre-active  |        0        | A _Pre-active_ key is not yet installed into target keystores and is therefore not available for use by applications. New keys are initially created in the _Pre-active_ state. |
-| Active      |        1        | An _Active_ key is installed in target keystores and is available for use by applications. If the key is used to protect associated resources, the key will be accessible to its associated resources and can be used for data protection. You can set a key to the _Active_ state when you create the key, or manually activate a _Pre-active_ key later. |
-| Deactivated |        3        | A _Deactivated_ key is no longer allowed for operations that generate new cryptographic data, such as encryption or signing, but can still be used for operations on existing data to do decryption or signature verification. When you deactivate a key, the key is uninstalled from all the target keystores, and not accessible to all associated resources and their data. However, you can still reactivate the key so that it is accessible to the resources again. |
+| Pre-active  |        0        | A _Pre-active_ key is not yet activated into target keystores and is therefore not available for use by applications. New keys are initially created in the _Pre-active_ state. |
+| Active      |        1        | An _Active_ key is activated in target keystores and is available for use by applications. If the key is used to protect associated resources, the key will be accessible to its associated resources and can be used for data protection. You can set a key to the _Active_ state when you create the key, or manually activate a _Pre-active_ key later. |
+| Deactivated |        3        | A _Deactivated_ key is no longer allowed for operations that generate new cryptographic data, such as encryption or signing, but can still be used for operations on existing data to do decryption or signature verification. When you deactivate a key, the key is detached from all the target keystores, and not accessible to all associated resources and their data. However, you can still reactivate the key so that it is accessible to the resources again. |
 | Destroyed   |        5        | A _Destroyed_ key is a key record for which the actual key material has been permanently erased. The record of the key is retained to be available for later queries or audits until you manually remove the key from the vault. Keys in the _Destroyed_ state cannot be restored in {{site.data.keyword.uko_full_notm}}. However, you can still restore your keys in external keystores depending on the settings of the cloud providers. |
 {: caption="Table 1. Key states and transitions" caption-side="bottom"}
 

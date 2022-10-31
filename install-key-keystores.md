@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-09-29"
+lastupdated: "2022-10-31"
 
 keywords: Unified Key Orchestrator, install keys, activate key, key management, kms keys
 
@@ -27,7 +27,7 @@ subcollection: hs-crypto
 # Setting target keystores for existing keys
 {: #install-key-keystores}
 
-You can use a managed key in {{site.data.keyword.uko_full_notm}} for encryption and decryption only after it is installed in at least one keystore. You can install and uninstall existing keys in target keystores with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can use a managed key in {{site.data.keyword.uko_full_notm}} for encryption and decryption only after it is activated in at least one keystore. You can activate and deactivate existing keys in target keystores with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 
@@ -35,15 +35,30 @@ You can use a managed key in {{site.data.keyword.uko_full_notm}} for encryption 
 {: #install-key-keystores-ui}
 {: ui}
 
-To install or uninstall a managed key in target keystores by using the console, complete the following steps:
+To activate or deactivate a managed key in target keystores by using the console, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. Click the Actions icon  ![Actions icon](../icons/action-menu-icon.svg "Actions")  on the key that you want to edit, and choose **Show details**.
-4. In the **Target keystores** card, click **Set target keystores** to see all possible keystores that you can select for the key.
-5. Select one or multiple target keystores that you want to install the key in. Or, you can clear the checkbox to uninstall the key from a keystore.
+4. In the **Target keystores** card, click **Edit** to see all possible keystores that you can select for the key.
+5. Activate or deactivate the key in keystores by adding or removing target keystores. You can use a key only for encryption and decryption after it is activated in at least one target keystore.
+
+    - Add target keystores
+    
+        If you want to activate the key in more target keystores, check the corresponding target keystore cards. The _Active_ key state is synced across all target keystores.
+
+    - Remove target keystores
+
+        If you want to deactivate the key in some target keystores, clear the checkbox in the corresponding target keystore cards. After the removal, the key material remains unless you destroy the key. The key state in the removed target keystores becomes _deactivated_ and cannot be synced with the managed key state in the future. However, you can reactivate the key by reassigning the key to these keystores so that the key state is synced again.
+        
+        A managed keys is cynced across multiple target keystores that it is assigned to. You can fully remove a key from a target keystore only after the key is destroyed. However, you can deactivate the key or remove the target keystores at any time.
+
+    - Sync keys
+
+        If the key state in some target keystores is different from the managed key state, you receive a **Key out of sync** warning message. An **Out of sync** flag is also displayed in the corresponding keystore card. There can be multiple reasons why the key state is out of sync. For example, you have deactivated the key in this target keystore before, or you activate the key through the CLI and the console doesn't reflect the state timely. When you hover over this flag, you can see the specific reason. You can sync the key state by clicking **Sync keys**. 
+    
    
-    Installing a key in multiple keystores enables redundancy. If you want to install the key in a new keystore, click **Add keystore**. For more instructions, see [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
+    Activating a key in multiple keystores enables redundancy. If you want to activate the key in a new keystore, click **Add keystore**. For more instructions, see [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
 
    
 6. Click **Save** to save the changes.
@@ -53,7 +68,7 @@ To install or uninstall a managed key in target keystores by using the console, 
 {: #install-key-keystores-api}
 {: api}
 
-To install or uninstall a managed key in target keystores through the API, follow these steps:
+To activate or deactivate a managed key in target keystores through the API, follow these steps:
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
    

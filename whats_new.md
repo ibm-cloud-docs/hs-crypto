@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-10-31"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -28,6 +28,14 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+
+
+## 31 Oct 2022
+{: hs-crypto-31oct2022}
+{: release-note}
+
+Added: Google Cloud KMS support
+:   You can now use {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} to create and manage Google Cloud KMS keys. For more information, see [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores) and [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys).
 
 
 ## 20 Oct 2022

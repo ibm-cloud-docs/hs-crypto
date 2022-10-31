@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-09-05"
+lastupdated: "2022-10-31"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -82,7 +82,7 @@ For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service arc
 
 * **Connection to external keystores**
 
-    {{site.data.keyword.uko_full_notm}}, as part of {{site.data.keyword.hscrypto}}, provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores in the service instance or external keystores. With {{site.data.keyword.uko_full_notm}}, you can push your keys to third-party cloud keystores, such as Azure Key Vault, AWS Key Management Service (KMS), or {{site.data.keyword.keymanagementservicefull_notm}}, distribute keys across keystores, and manage keys and keystores through both the UI and REST API. 
+    {{site.data.keyword.uko_full_notm}}, as part of {{site.data.keyword.hscrypto}}, provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores in the service instance or external keystores. With {{site.data.keyword.uko_full_notm}}, you can push your keys to third-party cloud keystores, such as Azure Key Vault, AWS Key Management Service (KMS), Google Cloud KMS, or {{site.data.keyword.keymanagementservicefull_notm}}, distribute keys across keystores, and manage keys and keystores through both the UI and REST API. 
 
 * **Unified key backup and management system**
 

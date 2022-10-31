@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-31"
 
 keywords: Unified Key Orchestrator, UKO keystore, create keystore, internal keystore， KMS keystore
 
@@ -34,7 +34,7 @@ Before you create an internal KMS keystore, keep in mind the following considera
 
 - You can create up to five internal KMS keystores to manage your keys for free. The maximum number of internal KMS keystores for a service instance is 50. 
 - To enable cross-region key distribution or specified access permissions, you might want to create additional keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Other currencies are applied based on the region the service instance is provisioned in.
-- A managed key can be used for encryption and decryption only after you install it in at least one target keystore. 
+- A managed key can be used for encryption and decryption only after you activate it in at least one target keystore. 
 - A target keystore can be assigned to only one vault.
 
 ## Creating internal KMS keystores with the {{site.data.keyword.cloud_notm}} console
@@ -91,7 +91,7 @@ To create an internal keystore through the API, follow these steps:
 ## What's next
 {: #create-internal-keystores-next}
 
-- To find out how to install an existing key in a keystore, check out [Setting target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
+- To find out how to activate an existing key in a keystore, check out [Setting target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
 
 - To find out instructions on editing an internal keystore, check out [Editing internal keystores](/docs/hs-crypto?topic=hs-crypto-edit-internal-keystores).
 

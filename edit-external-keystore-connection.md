@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-24"
+lastupdated: "2022-10-31"
 
 keywords: Unified Key Orchestrator, key management, UKO keystore, edit keystore, external keystore, KMS keystore
 
@@ -30,7 +30,7 @@ subcollection: hs-crypto
 You can use {{site.data.keyword.uko_full_notm}} to edit connection to external keystores with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
-You can edit the connection to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault and Amazon Web Services (AWS) Key Management Service (KMS).
+You can edit the connection to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), and Google Cloud KMS.
 
 ## Editing connection to external keystores with the {{site.data.keyword.cloud_notm}} console
 {: #edit-external-keystore-connection-ui}
@@ -81,6 +81,21 @@ To edit the connection to an external keystore by using the console, complete th
     {: class="comparison-tab-table"}
 
     
+    |           Property	      |                         Description                       |
+    |-----------------------------|-----------------------------------------------------------|
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
+    | Keystore description        | (Optional) An extended description for your keystore, with up to 200 characters in length. |
+    | Upload JSON key file        | The private key file that is downloaded from your service account on Google Cloud in step 2 of [Setting up required user access in Google Cloud KMS](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores-access-google-cloud). The file type must be `.json` and the maximum file size is 4 KB. |
+    | Project on Google Cloud     | Read only. The name of your Google Cloud project. It is automatically extracted from the JSON key file that you upload. You cannot edit this property after the keystore is connected.    |
+    | Location on Google Cloud    | The geographical region where you want to store your Google Cloud KMS resources. You cannot edit this property after the keystore is connected.  For more details about the location, see [Google Cloud KMS locations](https://cloud.google.com/kms/docs/locations){: external}.     |
+    | Key ring on Google Cloud | A human-readable name of the key ring that organizes your keys. The name must be unique within a location. You cannot edit this property after the keystore is connected.  For more information about key rings, see [Key rings](https://cloud.google.com/kms/docs/resource-hierarchy#key_rings){: external}.  |
+    | Private key ID on Google Cloud | Read only. The ID of the public/private RSA key pair in Google. It is used for establishing a secure connection to Google Cloud Platform. It is automatically extracted from the JSON key file that you upload. You cannot edit this property after the keystore is connected. |
+    {: #table-3}
+    {: caption="Table 3. Google Cloud KMS keystore properties" caption-side="bottom"}
+    {: tab-title="Google Cloud KMS keystore"}
+    {: tab-group="External keystore properties"}
+    {: class="comparison-tab-table"}
+    
 
     |           Property	        |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
@@ -90,8 +105,8 @@ To edit the connection to an external keystore by using the console, complete th
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  Read only. The endpoint of IAM, which is `https://iam.cloud.ibm.com`. You cannot edit this property after the keystore is connected.   |
     | Service instance ID on {{site.data.keyword.cloud_notm}}   | Read only. The unique identifier that is assigned to your {{site.data.keyword.keymanagementserviceshort}} service instance. You cannot edit this property after the keystore is connected. For more information, see [Retrieving your instance ID and cloud resource name](/docs/key-protect?topic=key-protect-retrieve-instance-ID).  |
     | Service ID API key          | A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys). |
-    {: #table-3}
-    {: caption="Table 3. IBM {{site.data.keyword.keymanagementserviceshort}} keystore properties" caption-side="bottom"}
+    {: #table-4}
+    {: caption="Table 4. IBM {{site.data.keyword.keymanagementserviceshort}} keystore properties" caption-side="bottom"}
     {: tab-title="IBM {{site.data.keyword.keymanagementserviceshort}} keystore"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
@@ -104,8 +119,8 @@ To edit the connection to an external keystore by using the console, complete th
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  Read only. The endpoint of IAM, which is `https://iam.cloud.ibm.com`. You cannot edit this property after the keystore is connected.  |
     | Service instance ID on {{site.data.keyword.cloud_notm}}  | Read only. The unique identifier that is assigned to your service instance. You cannot edit this property after the keystore is connected. For more information, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).  |
     | Service ID API key          | A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).  |
-    {: #table-4}
-    {: caption="Table 4. {{site.data.keyword.cloud_notm}} KMS keystore properties" caption-side="bottom"}
+    {: #table-5}
+    {: caption="Table 5. {{site.data.keyword.cloud_notm}} KMS keystore properties" caption-side="bottom"}
     {: tab-title="{{site.data.keyword.cloud_notm}} KMS keystore in another instance"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
@@ -145,5 +160,5 @@ To edit the connection to an external keystore through the API, follow these ste
 
 - To find out how to disconnect from an external keystore, check out [Disconnecting from external keystores](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores).
 
-- To find out how to install an existing key in a keystore, check out [Setting target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
+- To find out how to activate an existing key in a keystore, check out [Setting target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
 
