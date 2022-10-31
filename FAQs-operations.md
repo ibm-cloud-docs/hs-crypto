@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2022-10-31"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning, operations
 
@@ -138,6 +138,8 @@ Yes. {{site.data.keyword.hscrypto}} can be used with {{site.data.keyword.keymana
 Yes. {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} provides multicloud key management capabilities. See [Introducing {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-introduce-uko) for details.
 
 ## How can I know whether the {{site.data.keyword.cloud_notm}} services that I adopt can integrate with {{site.data.keyword.hscrypto}} for key encryption? 
+{: #faq-hpcs-service-integration}
+{: faq}
 
 You can find a list of {{site.data.keyword.cloud_notm}} services that can integrate with {{site.data.keyword.hscrypto}} in [Integrating IBM Cloud services with Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
 
