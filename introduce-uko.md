@@ -68,7 +68,7 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
         
     A target keystore is keystore that is assigned to a vault. You need to create an internal keystore in only one vault, or assign an external keystore to a vault when you connect your service instance to it. 
 
-    You need to activate a key to a keystore before you can encrypt or decrypt data by using the key.       
+    You need to activate a key in a keystore before you can encrypt or decrypt data by using the key.       
     
     - **Internal keystores**
         
