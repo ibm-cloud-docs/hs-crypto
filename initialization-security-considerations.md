@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-10-31"
+lastupdated: "2022-11-01"
 
 keywords: smart card vulnerabilities, security policy, maintain workstation security, maintain smart card readers security
 
@@ -53,7 +53,7 @@ If you decide to use smart cards, you need to consider the following aspects:
 
 - How many backup copies of your smart cards are you going to make? You should make at least one backup copy of all smart cards and store them in a secure place.
 - Where are you going to store smart cards when they are not in use?
-- Who need to know the smart card PINs?
+- Who needs to know the smart card PINs?
 
 Some organizations store their smart cards in a safe, and keep a log of when the smart cards are used for administrative actions and who used them.
 
@@ -62,7 +62,7 @@ Some organizations store their smart cards in a safe, and keep a log of when the
 
 If you decide to use workstation files, you also need to consider the following aspects:
 
-- Where are you going to save backup copies of the workstation file?
-- Who need to know the workstation file passwords?
+- Where are you going to save backup copies of the workstation files?
+- Who needs to know the workstation file passwords?
 
 Many security standards require dual control for administrative actions. Dual control means that more than one person must cooperate in order to perform the action. Dual control can be accomplished by setting the signature threshold to 2 or more, and having different people own each smart card and PIN or having different people know the workstation file passwords. Dual control when loading the master key register from smart cards can be accomplished by placing the master key parts on different smart cards and having different people own each smart card and PIN.
