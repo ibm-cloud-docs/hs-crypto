@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2022-11-02"
 
 keywords: hyper protect crypto services architecture, service architecture, architecture diagram, workload isolation, crypto units, secure service container, ssc, public isolation for hyper protect crypto services, compute isolation for hyper protect crypto services
 
@@ -78,7 +78,7 @@ For more information about the {{site.data.keyword.hscrypto}} components, see [C
 
 The following diagram illustrates how {{site.data.keyword.hscrypto}} workload of each tenant is isolated.
 
-![{{site.data.keyword.hscrypto}} workload isolation](/images/workload-isolation.svg "{{site.data.keyword.hscrypto}} workload isolation"){: caption="Figure 2. {{site.data.keyword.hscrypto}} workload isolation" caption-side="bottom"}
+![{{site.data.keyword.hscrypto}} workload isolation](/images/architecture-workload-isolation.svg "{{site.data.keyword.hscrypto}} workload isolation"){: caption="Figure 2. {{site.data.keyword.hscrypto}} workload isolation" caption-side="bottom"}
 
 ## Service dependencies
 {: #uko-service_dependencies}
