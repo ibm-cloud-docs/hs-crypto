@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-10-31"
+lastupdated: "2022-11-07"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -263,5 +263,5 @@ An internal keystore is a keystore that is created in your {{site.data.keyword.h
 ### External keystore
 {: #uko-external-keystore-concept}
 
-An external keystore is a keystore that is not in your {{site.data.keyword.hscrypto}} instance. You can connect your service instance to another {{site.data.keyword.hscrypto}} or {{site.data.keyword.keymanagementserviceshort}} instance, potentially in another region. Or, you can connect your service instance to external keystores from other cloud providers such as Microsoft Azure Key Vault, AWS Key Management Service (KMS), and Google Cloud KMS. 
+An external keystore is a keystore that is not in your {{site.data.keyword.hscrypto}} instance. You can connect your service instance to another key management instance on {{site.data.keyword.cloud_notm}} such as {{site.data.keyword.hscrypto}}, {{site.data.keyword.keymanagementserviceshort}}, or {{site.data.keyword.keymanagementserviceshort}} on Satellite, potentially in another region. Or, you can connect your service instance to external keystores from other cloud providers such as Microsoft Azure Key Vault, AWS Key Management Service (KMS), and Google Cloud KMS. 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-31"
+lastupdated: "2022-11-07"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -78,6 +78,7 @@ The following list contains a few cloud providers:
 
 - Keystores of another {{site.data.keyword.hscrypto}} instance
 - Keystores of {{site.data.keyword.keymanagementservicefull}}
+- Keystores of {{site.data.keyword.keymanagementservicefull}} on Satellite
 - Microsoft Azure Key Vault
 - AWS Key Management Service
 - Google Cloud Key Management Service
