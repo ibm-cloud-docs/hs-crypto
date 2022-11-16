@@ -180,6 +180,7 @@ To connect to an external keystore by using the console, complete the following 
     {: class="comparison-tab-table"}
 
     <king-ring-field-old>
+    
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
@@ -193,9 +194,11 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keystore"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
+   
     </king-ring-field-old>
 
     <king-ring-field>
+
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
@@ -210,9 +213,11 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keystore"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
+    
     </king-ring-field>
     
     <king-ring-field-old>
+
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
@@ -226,9 +231,11 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-title="KMS keystore in another instance"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
+    
     </king-ring-field-old>
     
     <king-ring-field>
+
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
@@ -243,6 +250,7 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-title="KMS keystore in another instance"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
+    
     </king-ring-field>
 
     You cannot make further changes to identifying properties that are marked with a Lock icon after the keystore is connected.
@@ -280,11 +288,8 @@ To connect to an external keystore through the API, follow these steps:
 
     For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-keystore){: external}.
 
-
-
 If you connect to an external keystore of type Azure Key Vault, a key named `EKMF-BYOK-KEK-FOR-IMPORT` is automatically created in the Azure Azure Key Vault instance that you connect to. You can view the key from the Azure Key Vault instance UI. Don't delete this key. Otherwise, you will not be able to create and assign managed keys to the Azure Key Vault instance. For more information, see [Why can't I assign keys in Azure Key Vault](/docs/hs-crypto?topic=hs-crypto-troubleshoot-import-azure-key).
 {: important}
-
 
 
 ## What's next
