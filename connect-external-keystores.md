@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-31"
+lastupdated: "2022-11-16"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -163,7 +163,7 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
 
-    
+
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
@@ -178,35 +178,72 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-title="Google Cloud KMS keystore"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
-    
 
+    <king-ring-field-old>
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
+    | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your {{site.data.keyword.keymanagementserviceshort}} service instance. For more information, see [Retrieving your instance ID and cloud resource name](/docs/key-protect?topic=key-protect-retrieve-instance-ID).  |
     | {{site.data.keyword.keymanagementserviceshort}} API endpoint  | The service endpoint of your {{site.data.keyword.keymanagementserviceshort}} instance in the format of `https://<region>.kms.cloud.ibm.com`. For more information, see [Regions and endpoints](/docs/key-protect?topic=key-protect-regions). |
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
-    | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your {{site.data.keyword.keymanagementserviceshort}} service instance. For more information, see [Retrieving your instance ID and cloud resource name](/docs/key-protect?topic=key-protect-retrieve-instance-ID).  |
     | Service ID API key          | A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys). |
     {: #table-4}
     {: caption="Table 4. {{site.data.keyword.keymanagementserviceshort}} keystore properties" caption-side="bottom"}
     {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keystore"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
+    </king-ring-field-old>
 
+    <king-ring-field>
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
+    | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your {{site.data.keyword.keymanagementserviceshort}} service instance. For more information, see [Retrieving your instance ID and cloud resource name](/docs/key-protect?topic=key-protect-retrieve-instance-ID).  |
+    | Key ring ID on {{site.data.keyword.cloud_notm}}   | The unique identifier of the key ring that you want to connect to in the {{site.data.keyword.keymanagementserviceshort}} instance. For more information, see [Managing key rings](docs/key-protect?topic=key-protect-managing-key-rings). If you are not sure which key ring to connect to, specify `default` to connect to the default key ring. |
+    | {{site.data.keyword.keymanagementserviceshort}} API endpoint  | The service endpoint of your {{site.data.keyword.keymanagementserviceshort}} instance in the format of `https://<region>.kms.cloud.ibm.com`. For more information, see [Regions and endpoints](/docs/key-protect?topic=key-protect-regions). |
+    | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
+    | Service ID API key          | A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys). |
+    {: #table-4}
+    {: caption="Table 4. {{site.data.keyword.keymanagementserviceshort}} keystore properties" caption-side="bottom"}
+    {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keystore"}
+    {: tab-group="External keystore properties"}
+    {: class="comparison-tab-table"}
+    </king-ring-field>
+    
+    <king-ring-field-old>
+    |           Property	      |                         Description                       |
+    |-----------------------------|-----------------------------------------------------------|
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
+    | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
+    | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your service instance. For more information, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).   |
     | {{site.data.keyword.hscrypto}} API endpoint  | The service endpoint of your {{site.data.keyword.hscrypto}} instance in the format of `https://uko.<region>.hs-crypto.cloud.ibm.com:<port>`. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **Connect** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**.   |
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
-    | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your service instance. For more information, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).   |
     | Service ID API key          |  A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys). |
     {: #table-5}
     {: caption="Table 5. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} KMS keystore properties" caption-side="bottom"}
     {: tab-title="KMS keystore in another instance"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
+    </king-ring-field-old>
+    
+    <king-ring-field>
+    |           Property	      |                         Description                       |
+    |-----------------------------|-----------------------------------------------------------|
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
+    | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
+    | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your service instance. For more information, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).   |
+    | Key ring ID on {{site.data.keyword.cloud_notm}}   | The unique identifier of the key ring that you want to connect to in the {{site.data.keyword.hscrypto}} instance Standard Plan. For more information, see [Managing key rings](docs/hs-crypto?topic=hs-crypto-managing-key-rings). If you are not sure which key ring to connect to, specify `default` to connect to the default key ring. |
+    | {{site.data.keyword.hscrypto}} API endpoint  | The service endpoint of your {{site.data.keyword.hscrypto}} instance in the format of `https://uko.<region>.hs-crypto.cloud.ibm.com:<port>`. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **Connect** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**.   |
+    | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
+    | Service ID API key          |  A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys). |
+    {: #table-5}
+    {: caption="Table 5. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} KMS keystore properties" caption-side="bottom"}
+    {: tab-title="KMS keystore in another instance"}
+    {: tab-group="External keystore properties"}
+    {: class="comparison-tab-table"}
+    </king-ring-field>
 
     You cannot make further changes to identifying properties that are marked with a Lock icon after the keystore is connected.
     {: note}
