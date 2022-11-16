@@ -257,7 +257,6 @@ To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyw
     {: pre}
 
 
-
 ## What's next
 {: #provision-next}
 
