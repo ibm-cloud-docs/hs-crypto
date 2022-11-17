@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-16"
+lastupdated: "2022-11-17"
 
 keywords: site map, doc structure, information architecture
 
@@ -1555,6 +1555,8 @@ Find what you are looking for in the compilation of topics that are available in
 [Auditing events for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-at-events#at-events)
 
 * [Supported events](/docs/hs-crypto?topic=hs-crypto-at-events#at-supported-events)
+
+* [Key Ring events](/docs/hs-crypto?topic=hs-crypto-at-events#keyring-actions)
 
 * [Viewing events](/docs/hs-crypto?topic=hs-crypto-at-events#at-ui)
 
