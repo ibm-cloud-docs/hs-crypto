@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-10-31"
+lastupdated: "2022-11-21"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,6 +27,15 @@ content-type: release-note
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+## 21 Nov 2022
+{: hs-crypto-nov2022}
+{: release-note}
+
+Added: Managementy Utilities support for Red Hat Enterprise Linux 9.0 and Ubuntu 22.04.1 LTS
+:    To manage your master keys by using smart cards, you can now install the smart card reader driver Identiv SPR332 V2 on Red Hat Enterprise Linux 9.0 and Ubuntu 22.04.1 LTS besides the already supported Red Hat Enterprise Linux 8.0 operating system. For more detailed steps, see [Installing the smart card reader driver](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-smart-card-reader-driver).
+
+    You can also find the latest Management Utilities installation files in [Github](https://github.com/IBM-Cloud/hpcs-management-utilities/releases/tag/v1.0.3.8){: external}.
 
 
 
