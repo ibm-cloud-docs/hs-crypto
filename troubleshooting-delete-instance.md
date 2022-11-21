@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-11-21"
 
 keywords: troubleshoot, problems, known issues, can't delete an initialized service instance
 
@@ -39,12 +39,10 @@ You get an error when you delete an initialized service instance.
 You might receive an error similar to the following one:
 {: tsSymptoms}
 
-```
-FAILED
-Error Code: RC-ServiceBrokerErrorResponse
-Message: Service Broker returned error status code 409
-```
-{: screen}
+
+> FAILED
+> Error Code: RC-ServiceBrokerErrorResponse
+> Message: Service Broker returned error status code 409
 
 You haven't cleared (zeroized) the initialized service instance before you delete the instance.
 {: tsCauses}
