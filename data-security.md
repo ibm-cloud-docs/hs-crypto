@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-05-18"
+lastupdated: "2022-11-21"
 
 keywords: security and compliance, ibmcloud security compliance, compliant, data security, data encryption, data delete, common criteria, fips, iso, gdpr
 
@@ -104,6 +104,11 @@ To ensure GDPR compliance for your {{site.data.keyword.hscrypto}} resources, [en
 {{site.data.keyword.hscrypto}} meets controls for the US Health Insurance Portability and Accountability Act (HIPAA) to ensure safeguarding of protected health information (PHI).
 
 If you or your company is a covered entity as defined by HIPAA, you can enable the HIPAA Supported setting for your {{site.data.keyword.cloud_notm}} account. To find out more, see [Enabling the HIPAA Supported setting](/docs/account?topic=account-eu-hipaa-supported#enabling-hipaa).
+
+#### {{site.data.keyword.cloud_notm}} for Financial Services
+{: #fscloud-support}
+
+{{site.data.keyword.hscrypto}} is {{site.data.keyword.cloud_notm}} for Financial Services certified. For information about requesting an {{site.data.keyword.cloud_notm}} for Financial Services report, see [Compliance on the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/compliance){: external}.
 
 ### IRAP support
 {: #IRAP-support}
