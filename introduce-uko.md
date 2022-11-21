@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-31"
+lastupdated: "2022-11-21"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -84,7 +84,7 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
 
     - **External keystores**  
         
-        External keystores are keystores that are not in your service instance. You can connect to keystores that are external to your service instance, such as another {{site.data.keyword.hscrypto}} or {{site.data.keyword.keymanagementserviceshort}} instance, potentially in another region. Or, you can connect to external keystores from other cloud providers such as Microsoft Azure Key Vault, AWS Key Management Service (KMS), and Google Cloud KMS. 
+        External keystores are keystores that are not in your service instance. You can connect to keystores that are external to your service instance, such as another {{site.data.keyword.hscrypto}} or {{site.data.keyword.keymanagementserviceshort}} instance, potentially in another region. Or, you can connect to external keystores from other cloud providers such as  Key Vault, AWS Key Management Service (KMS), and Google Cloud KMS. 
 
         You can connect to one external keystore at no initial cost, regardless of the type. You are charged for additional external keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
 

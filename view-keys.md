@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-11-17"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -262,3 +262,43 @@ parameter.
 | `.../keys?state=5` | Lists keys in the deleted state. |
 | `.../keys?state=2,3` | Lists keys in the suspended and deactivated state. |
 {: caption="Table 5. Provides usage notes for the stage query parameter" caption-side="bottom"}
+
+### Retrieving keys by Extractable value
+{: #filter-keys-extractable-state-api}
+{: api}
+
+By specifying the `extractable` parameter at query time, you can retrieve keys whose material can leave the service.
+
+For example, you might have both standard and root keys in your {{site.data.keyword.hscrypto}} instance, but you only want to retrieve keys with extractable key material when you make a `GET /keys` request.
+
+The extractable query parameter takes in a boolean.
+{: note}
+
+You can use the following example request to retrieve a different set of keys.
+
+```sh
+$ curl -X GET \
+    "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys?extractable=<extractable>" \
+    -H "accept: application/vnd.ibm.collection+json" \
+    -H "authorization: Bearer <IAM_token>" \
+    -H "bluemix-instance: <instance_ID>"
+```
+{: codeblock}
+
+Replace the `extractable` variable in your request according to the following table.
+
+|Variable|Description|
+|--- |--- |
+|extractable|The type of keys to be retrieved. Filters keys based on the extractable property. You can use this query parameter to search for keys whose material can leave the service. If you set the parameter to true, standard keys are retrieved. If you set the parameter to false, root keys are retrieved. If the parameter is omitted, both root and standard keys are retrieved. For example, if you want to only list keys with extractable material in your service instance, use `../keys?extractable=true`. You can also pair extractable with `offset`, `limit`, and `state` to page through your available resources.|
+{: caption="Table 5. Describes the extractable variable" caption-side="top"}
+
+For usage notes, check out the following examples for setting your `extractable` query parameter.
+
+|URL|Description|
+|--- |--- |
+|`../keys`|Lists all of your available resources, up to the first 200 keys.|
+|`../keys?extractable=true`|Lists standard keys.|
+|`../keys?extractable=false`|Lists root keys.|
+{: caption="Table 6. Provides usage notes for the extractable query parameter" caption-side="top"}
+
+

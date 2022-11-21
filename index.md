@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-11-01"
+lastupdated: "2022-11-21"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -150,7 +150,7 @@ Complete the following steps to create your first vault:
 ### Creating target keystores
 {: #create-keystore}
 
-A target keystore is a repository that stores the cryptographic keys. You can create an internal target keystore within the service instance or connect to an external target keystore in another service instance or even in another cloud provider, such as Microsoft Azure Key Vault and Amazon Web Services Key Management Service. 
+A target keystore is a repository that stores the cryptographic keys. You can create an internal target keystore within the service instance or connect to an external target keystore in another service instance or even in another cloud provider, such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), and Google Cloud KMS.
 
 Complete the following steps to create your first internal target keystore:
 
@@ -467,7 +467,7 @@ Complete the following steps to create your first vault:
 {: help}
 {: support}
 
-A target keystore is a repository that stores the cryptographic keys. You can create an internal target keystore within the service instance or connect to an external target keystore in another service instance or even in another cloud provider, such as Microsoft Azure Key Vault and Amazon Web Services Key Management Service. 
+A target keystore is a repository that stores the cryptographic keys. You can create an internal target keystore within the service instance or connect to an external target keystore in another service instance or even in another cloud provider, such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), and Google Cloud KMS.
 
 Complete the following steps to create your first internal target keystore:
 

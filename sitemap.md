@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-31"
+lastupdated: "2022-11-21"
 
 keywords: site map, doc structure, information architecture
 
@@ -460,6 +460,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [21 Nov 2022](/docs/hs-crypto?topic=hs-crypto-what-new#21-nov-2022)
+
+    * Added: Managementy Utilities support for Red Hat Enterprise Linux 9.0 and Ubuntu 22.04.1 LTS
 
 * [31 Oct 2022](/docs/hs-crypto?topic=hs-crypto-what-new#31-oct-2022)
 
@@ -1555,6 +1559,8 @@ Find what you are looking for in the compilation of topics that are available in
 [Auditing events for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-at-events#at-events)
 
 * [Supported events](/docs/hs-crypto?topic=hs-crypto-at-events#at-supported-events)
+
+* [Key Ring events](/docs/hs-crypto?topic=hs-crypto-at-events#keyring-actions)
 
 * [Viewing events](/docs/hs-crypto?topic=hs-crypto-at-events#at-ui)
 

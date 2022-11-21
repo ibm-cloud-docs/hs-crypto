@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-31"
+lastupdated: "2022-11-21"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -33,7 +33,7 @@ You can use {{site.data.keyword.uko_full_notm}} to connect to external keystores
 
 Before you connect to an external keystore, keep in mind the following considerations:
 
-- You can connect to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), and Google Cloud Key Management Service (KMS).
+- You can connect to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault, Amazon Web Services (AWS) KMS, and Google Cloud KMS.
 - You can connect to one external keystore at no initial cost, regardless of the type. You are charged for additional external keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Other currencies are applied based on the region the service instance is provisioned in.
 - A managed key can be used for encryption and decryption only after you activate it in at least one target keystore. 
 - A target keystore can be assigned to only one vault.
@@ -163,7 +163,7 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
 
-    
+
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
@@ -178,35 +178,46 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-title="Google Cloud KMS keystore"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
-    
 
+    
+    
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
+    | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your {{site.data.keyword.keymanagementserviceshort}} service instance. For more information, see [Retrieving your instance ID and cloud resource name](/docs/key-protect?topic=key-protect-retrieve-instance-ID).  |
     | {{site.data.keyword.keymanagementserviceshort}} API endpoint  | The service endpoint of your {{site.data.keyword.keymanagementserviceshort}} instance in the format of `https://<region>.kms.cloud.ibm.com`. For more information, see [Regions and endpoints](/docs/key-protect?topic=key-protect-regions). |
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
-    | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your {{site.data.keyword.keymanagementserviceshort}} service instance. For more information, see [Retrieving your instance ID and cloud resource name](/docs/key-protect?topic=key-protect-retrieve-instance-ID).  |
     | Service ID API key          | A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys). |
     {: #table-4}
     {: caption="Table 4. {{site.data.keyword.keymanagementserviceshort}} keystore properties" caption-side="bottom"}
     {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keystore"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
+   
+    
+
+    
+    
+    
 
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
+    | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your service instance. For more information, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).   |
     | {{site.data.keyword.hscrypto}} API endpoint  | The service endpoint of your {{site.data.keyword.hscrypto}} instance in the format of `https://uko.<region>.hs-crypto.cloud.ibm.com:<port>`. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **Connect** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**.   |
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
-    | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your service instance. For more information, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).   |
     | Service ID API key          |  A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys). |
     {: #table-5}
     {: caption="Table 5. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} KMS keystore properties" caption-side="bottom"}
     {: tab-title="KMS keystore in another instance"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
+    
+    
+    
+    
 
     You cannot make further changes to identifying properties that are marked with a Lock icon after the keystore is connected.
     {: note}
@@ -243,11 +254,8 @@ To connect to an external keystore through the API, follow these steps:
 
     For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-keystore){: external}.
 
-
-
 If you connect to an external keystore of type Azure Key Vault, a key named `EKMF-BYOK-KEK-FOR-IMPORT` is automatically created in the Azure Azure Key Vault instance that you connect to. You can view the key from the Azure Key Vault instance UI. Don't delete this key. Otherwise, you will not be able to create and assign managed keys to the Azure Key Vault instance. For more information, see [Why can't I assign keys in Azure Key Vault](/docs/hs-crypto?topic=hs-crypto-troubleshoot-import-azure-key).
 {: important}
-
 
 
 ## What's next

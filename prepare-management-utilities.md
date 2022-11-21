@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-10-28"
+lastupdated: "2022-11-08"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -111,7 +111,7 @@ Before you install the smart card reader driver on a Linux operating system, dow
         ```
         {: pre}
 
-    3. Check and make sure that the `opensc` and `esc` packages are not installed. These packages can cause unexpected errors to occur during the operations of the smart card readers.
+    3. Check and make sure that the `opensc` and `esc` packages are not installed. These packages can cause unexpected errors during the operations of the smart card readers.
 
         Run the following command to display all installed `opensc` or `esc` packages. Replace `<package_name>` with `opensc` or `esc`:
 
@@ -129,7 +129,7 @@ Before you install the smart card reader driver on a Linux operating system, dow
 
     4. Run the `install.sh` script, which is included in the downloaded driver package.
 
-    5. Start the `pcsc` daemon with the following command:
+    5. Start the PC/SC daemon with the following command:
 
         ```
         sudo pcscd

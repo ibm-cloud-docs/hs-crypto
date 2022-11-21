@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-20"
+lastupdated: "2022-11-17"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 
@@ -201,12 +201,13 @@ see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic
 | Deployment region         | Activity Tracker region                         |
 | ------------------------- | ----------------------------------------------- |
 | `au-syd`                  | `au-syd`                                        |
+| `br-sao`                  | `br-sao`                                        |
+| `ca-tor`                  | `ca-tor`                                        |
 | `eu-de`                   | `eu-de`                                         |
 | `eu-gb`                   | `eu-gb`                                         |
 | `jp-tok`                  | `jp-tok`                                        |
 | `us-east`                 | `us-east`                                       |
 | `us-south`                | `us-south`                                      |
-| `br-sao`                  | `br-sao`                                      |
 {: caption="Table 11. Activity Tracker regions" caption-side="bottom"}
 
 ## Analyzing successful events
