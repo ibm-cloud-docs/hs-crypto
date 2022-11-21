@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-11-21"
 
 keywords: troubleshoot, problems, known issues, can't delete keys
 
@@ -42,17 +42,11 @@ You're assigned a _Manager_ access policy for the service instance. You try to d
 
 - Error message 1:
 
-    ```
-    The service was not able to delete key "<key_name>". The key cannot be deleted because it is protecting one or more cloud resources that have a retention policy.
-    ```
-    {: screen}
+    > The service was not able to delete key "<key_name>". The key cannot be deleted because it is protecting one or more cloud resources that have a retention policy.
 
 - Error message 2:
 
-    ```
-    The service was not able to delete key "<key_name>". Because the key is enabled with the dual authorization policy and you set the key for deletion, a second approver needs to continue with the key deletion operation.
-    ```
-    {: screen}
+    > The service was not able to delete key "<key_name>". Because the key is enabled with the dual authorization policy and you set the key for deletion, a second approver needs to continue with the key deletion operation.
 
 The following reasons might cause the errors:
 {: tsCauses}

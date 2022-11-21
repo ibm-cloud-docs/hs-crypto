@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2022-11-21"
 
 keywords: failed master key rotation, failed to use recovery crypto unit to rotate master keys, tke auto-mk-rotate failure, troubleshoot master key rotation failure
 
@@ -61,17 +61,11 @@ If an error occurs when you run the `ibmcloud tke auto-mk-rotate` command to rot
 
 - The following message indicates that all new master key registers have been set with a randomly generated new master key value:
 
-    ```
-    Delaying 30 seconds to allow server to discover new master key values
-    ```
-    {: codeblock}
+    > Delaying 30 seconds to allow server to discover new master key values
 
 - The following message indicates that the reencryption of key storage is completed:
 
-    ```
-    KMS CRK rewrap successful, waiting on cryptounit-mk-setimm
-    ```
-    {: codeblock}
+    > KMS CRK rewrap successful, waiting on cryptounit-mk-setimm
 
 Depending on the presence of the described messages, perform one of the following tasks:
 

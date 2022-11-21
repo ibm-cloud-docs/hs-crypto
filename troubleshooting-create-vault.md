@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-11-21"
 
 keywords: troubleshoot, problems, known issues, can't create vaults
 
@@ -39,10 +39,7 @@ You are not able to create a vault through either the {{site.data.keyword.hscryp
 You receive the following message when you try to create a vault:
 {: tsSymptoms}
 
-```
-The service was not able to create vault "<vault-name>".
-```
-{: screen}
+>  The service was not able to create vault "<vault-name>".
 
 You do not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions.
 {: tsCauses}

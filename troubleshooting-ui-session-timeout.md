@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-05-12"
+lastupdated: "2022-11-21"
 
 keywords: troubleshoot, problems, known issues, timeout, intermittent issue, session timeout
 
@@ -38,20 +38,11 @@ When you access your {{site.data.keyword.hscrypto}} instance by using the {{site
 You might receive an error message similar to one of the following messages:
 {: tsSymptoms}
 
-```
-The service was not able to retrieve the keystores data.
-```
-{: screen}
+> The service was not able to retrieve the keystores data.
 
-```
-The service was not able to retrieve the key data.
-```
-{: screen}
+> The service was not able to retrieve the key data.
 
-```
-The service was not able to retrieve the encryption unit.
-```
-{: screen}
+> The service was not able to retrieve the encryption unit.
 
 You have left the console open without performing any actions with it for an extended period of time (for example, 60 minutes), which causes your session timeout.
 {: tsCauses}

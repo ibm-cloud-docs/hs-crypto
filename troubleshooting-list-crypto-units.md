@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-11-21"
 
 keywords: troubleshoot, problems, known issues, can't list crypto units
 
@@ -38,17 +38,13 @@ You get an error message when you list crypto units using command `ibmcloud tke 
 You might receive an error message similar to the following one:
 {: tsSymptoms}
 
-```
-ibmcloud tke cryptounits
-API endpoint:     https://cloud.ibm.com
-Region:           XX-XX
-User:             john.doe@abc.com
-Account:          myaccount (GUID)
-Resource group:   Default
-
-No service instances were found for the current resource group.
-```
-{: screen}
+> ibmcloud tke cryptounits
+> API endpoint:     https://cloud.ibm.com
+> Region:           XX-XX
+> User:             john.doe@abc.com
+> Account:          myaccount (GUID)
+> Resource group:   Default
+> No service instances were found for the current resource group.
 
 It might be caused by one of the following reasons:
 {: tsCauses}

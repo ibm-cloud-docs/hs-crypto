@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-11-21"
 
 keywords: troubleshoot, problems, known issues, can't rotate master key 
 
@@ -38,13 +38,10 @@ You are not able to rotate the master key successfully by using the TKE CLI comm
 When you are using a {{site.data.keyword.uko_full_notm}} service plan, master key rotation using the TKE CLI commands fails with the following messages: 
 {: tsSymptoms}
 
-```
-FAILED
-Error sending start key rotate request to target service instance.
-Status code: 400
-Message: Bad Request
-```
-{: screen}
+> FAILED
+> Error sending start key rotate request to target service instance.
+> Status code: 400
+> Message: Bad Request
 
 Master key rotation is not currently supported by the {{site.data.keyword.uko_full_notm}} Plan.
 {: tsCauses}

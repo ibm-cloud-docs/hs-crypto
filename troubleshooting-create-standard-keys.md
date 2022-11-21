@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-11-21"
 
 keywords: troubleshoot, problems, known issues, can't create standard keys
 
@@ -39,10 +39,7 @@ You are not able to create a standard key through either the {{site.data.keyword
 You see the following error message when you try to create a standard key:
 {: tsSymptoms}
 
-```
-The service was not able to add key "<key_ID>". The HTTP status is 500.
-```
-{: screen}
+> The service was not able to add key "<key_ID>". The HTTP status is 500.
 
 You load another master key to your service instance after you create the root key. Because of this, the root key fails to wrap the standard key and the standard key creation fails. 
 {: tsCauses}

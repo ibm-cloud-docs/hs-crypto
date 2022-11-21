@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-11-21"
 
 keywords: troubleshoot, problems, known issues, can't delete vaults
 
@@ -38,10 +38,7 @@ You are not able to delete vaults using either UI or API.
 You try to delete a vault, but it fails with the following message:
 {: tsSymptoms}
 
-```
-The service was not able to delete vault `<vault_name>` because it still contains some keys or keystores.
-```
-{: screen}
+> The service was not able to delete vault `<vault_name>` because it still contains some keys or keystores.
 
 If you want to delete a vault, you need to delete all managed keys, and delete or disconnect from all target keystores that are managed in the vault first. The Delete function is available for empty vaults only. 
 {: tsCauses}

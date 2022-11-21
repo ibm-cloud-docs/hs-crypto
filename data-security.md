@@ -105,7 +105,7 @@ To ensure GDPR compliance for your {{site.data.keyword.hscrypto}} resources, [en
 
 If you or your company is a covered entity as defined by HIPAA, you can enable the HIPAA Supported setting for your {{site.data.keyword.cloud_notm}} account. To find out more, see [Enabling the HIPAA Supported setting](/docs/account?topic=account-eu-hipaa-supported#enabling-hipaa).
 
-#### {{site.data.keyword.cloud_notm}} for Financial Services
+### {{site.data.keyword.cloud_notm}} for Financial Services
 {: #fscloud-support}
 
 {{site.data.keyword.hscrypto}} is {{site.data.keyword.cloud_notm}} for Financial Services certified. For information about requesting an {{site.data.keyword.cloud_notm}} for Financial Services report, see [Compliance on the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/compliance){: external}.
