@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-11-08"
+lastupdated: "2022-11-21"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -84,7 +84,7 @@ To order smart card readers, you have the followig options:
 ## Step 2: Install the smart card reader driver
 {: #install-smart-card-reader-driver}
 
-You need to install the Identiv SPR332 V2 smart card reader driver on your local workstation. Currently, Red Hat Enterprise Linux&reg; 8.0 supported.
+You need to install the Identiv SPR332 V2 smart card reader driver on your local workstation. Currently, Red Hat Enterprise Linux&reg; 8.0, Red Hat Enterprise Linux 9.0, and Ubuntu 22.04.1 LTS are supported.
 
 You need to take the [Security considerations for initalizing a service instance](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy) into account when you plan your security policy for your smart cards and smart card readers. Otherwise, your smart cards might be exposed to some vulnerabilities.
 {: note}
@@ -95,7 +95,7 @@ Before you install the smart card reader driver on a Linux operating system, dow
 
 
 
-- Red Hat Enterprise Linux 8.0
+- Red Hat Enterprise Linux 8.0 and 9.0
 
     1. Install the `pcsc-lite` package with the following command:
 
@@ -136,6 +136,25 @@ Before you install the smart card reader driver on a Linux operating system, dow
         ```
         {: pre}
 
+- Ubuntu 22.04.1 LTS
+
+    1. Install the `pcscd` and `libccid` packages with the following command:
+
+        ```
+        sudo apt install pcscd
+        ```
+        {: pre}
+
+    2. Run the `install.sh` script, which is included in the downloaded package of the smart card reader driver.
+    3. On some Ubuntu configurations, the PC/SC daemon does not start automatically on the first PC/SC call.  To avoid this problem, run the following command:
+        
+        ```
+        sudo systemctl enable pcscd.socket
+        ```
+        {: pre}
+    
+    4. Restart the workstation.
+
 
 ## Step 3: Install the Management Utilities
 {: #install-management-utility-application}
@@ -144,7 +163,7 @@ Two applications are provided as part of the Management Utilities: the [Smart Ca
 
 
 
-To install the applications on Red Hat Enterprise Linux 8.0, complete the following steps:
+To install the applications on Red Hat Enterprise Linux 8.0, Red Hat Enterprise Linux 9.0, or Ubuntu 22.04.1 LTS, complete the following steps:
 
 1. Download the latest installation file, `cloudtke.bin`, from [GitHub](https://github.com/IBM-Cloud/hpcs-management-utilities/releases){: external} to your workstation.
 2. (Optional) For maximum security, verify the integrity and authenticity of the Management Utilities installation file `cloudtke.bin` before you install or update the applications.
