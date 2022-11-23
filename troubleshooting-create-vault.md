@@ -47,7 +47,7 @@ You do not have the correct authorization to perform {{site.data.keyword.hscrypt
 {: tsCauses}
 
 Verify with your administrator that you're assigned the _Vault Administrator_ role in the applicable resource group or service instance. For more information about roles, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles).
-{: tsResolve
+{: tsResolve}
 
 
 
