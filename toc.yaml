@@ -88,6 +88,10 @@ toc:
               - uko-introduce-hsm.md
               - uko-introduce-pkcs11.md
               - uko-introduce-grep11.md
+          - topicgroup:
+              label: About key rotation
+              topics:
+              - uko-introduce-master-key-rotation.md
       - manage-regulated-workloads.md
       - integrate-services.md
       - topic: whats_new.md
