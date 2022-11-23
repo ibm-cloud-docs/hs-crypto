@@ -150,11 +150,11 @@ toc:
           label: Managing keys - Standard Plan
           topics:
           - topicgroup:
-            label: Managing instance policies
-            topics:
-            - settings-network-policy.md
-            - settings-dual-auth.md
-            - settings-key-create-import-access.md
+              label: Managing instance policies
+              topics:
+              - settings-network-policy.md
+              - settings-dual-auth.md
+              - settings-key-create-import-access.md
           - retrieve-access-token.md
           - retrieve-instance-id.md
           - topicgroup:
