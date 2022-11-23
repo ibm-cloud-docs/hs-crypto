@@ -147,7 +147,7 @@ toc:
           - initialize-hsm-cli.md
           - signing-service.md
       - topicgroup:
-          label: Managing keys - Standard Plan
+          label: Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan
           topics:
           - topicgroup:
               label: Managing instance policies
@@ -207,7 +207,7 @@ toc:
               - manage-pkcs11-keystores.md
               - manage-pkcs11-keys.md
       - topicgroup:
-          label: Managing keys, keystores, and vaults - Unified Key Orchestrator Plan
+          label: Managing KMS keys, keystores, and vaults - Unified Key Orchestrator Plan
           topics:
           - uko-retrieve-access-token.md
           - uko-retrieve-instance-id.md
