@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-11-23"
 
 keywords: troubleshoot, problems, known issues, can't delete keystores
 
@@ -39,7 +39,6 @@ You have destroyed all keys in the KMS keystore. However, when you try to delete
 {: tsSymptoms}
 
 > The service was not able to delete keystore `<keystore_name>` because it still contains some keys.
-
 > Conflict: Key ring could not be deleted: Please see reasons for more details.
 
 The KMS key metadata is to be automatically removed in 90 days. Before that, the key metadata still remains in the keystore and you cannot delete the keystore.

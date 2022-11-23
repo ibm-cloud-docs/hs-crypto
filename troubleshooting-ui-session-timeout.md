@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-11-23"
 
 keywords: troubleshoot, problems, known issues, timeout, intermittent issue, session timeout
 
@@ -39,9 +39,7 @@ You might receive an error message similar to one of the following messages:
 {: tsSymptoms}
 
 > The service was not able to retrieve the keystores data.
-
 > The service was not able to retrieve the key data.
-
 > The service was not able to retrieve the encryption unit.
 
 You have left the console open without performing any actions with it for an extended period of time (for example, 60 minutes), which causes your session timeout.
