@@ -87,7 +87,7 @@ toc:
               topics:
               - uko-introduce-hsm.md
               - uko-introduce-pkcs11.md
-              - uko-introduce-grep11.md 
+              - uko-introduce-grep11.md
       - manage-regulated-workloads.md
       - integrate-services.md
       - topic: whats_new.md
