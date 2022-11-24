@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-11-24"
 
 keywords: delete, delete service instance, crypto unit, ibm cloud cli, clear crypto unit, uninstall
 
@@ -29,10 +29,27 @@ subcollection: hs-crypto
 You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance with the {{site.data.keyword.cloud_notm}} console or the {{site.data.keyword.cloud_notm}} CLI. To do so, you need to set all the [crypto units](#x9860404){: term} of the service instance back to the [imprint mode](#x9860399){: term} by zeroizing the crypto units.
 {: shortdesc}
 
+## Before you begin
+{: #delete-instance-prerequisite}
 
-Make sure to delete all keys in the service instance before you delete the service instance.
-{: important}
+1. Delete all keys managed in the service instance. 
+2. Configure the Trusted Key Entry (TKE) by completing [these steps](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite).
+3. To add crypto units to the to-be deleted crypto unit list, use the following command:
 
+    ```
+    ibmcloud tke cryptounit-add
+    ```
+    {: pre}
+
+    A list of the crypto units in the target resource group under the current user account is displayed. When prompted, enter a list of crypto unit numbers to be added to the selected crypto unit list.
+4. To select the administrators to sign TKE commands, use the following command:
+
+    ```
+    ibmcloud tke sigkey-sel
+    ```
+    {: pre}
+
+    A list of signature keys that are found on the workstation is displayed. When prompted, enter the key numbers of the signature key files to select for signing future administrative commands. When prompted, enter the passwords for the signature key files.
 
 ## Step 1: Zeroize crypto units
 {: #zeroize-crypto-unit-step}
