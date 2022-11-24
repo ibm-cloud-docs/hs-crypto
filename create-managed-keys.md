@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-31"
+lastupdated: "2022-11-24"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -160,7 +160,6 @@ To create a managed key by using the console, complete the following steps:
 8. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.
 
 You have successfully created a managed key. 
-
 
 
 ## Creating managed keys with the API

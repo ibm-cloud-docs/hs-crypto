@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-10"
+lastupdated: "2022-11-24"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -62,6 +62,7 @@ To create a vault by using the console, complete the following steps through the
   The vault name must be of 1 to 100 characters in length. The characters can be letters (case-sensitive), digits (0-9), or symbols (#@!$%\’_-).
   
 5. Click **Create vault** to confirm.
+
 
 You have successfully created a vault. 
 
