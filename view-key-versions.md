@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-11-24"
 
 keywords: key versions, get key versions, list key versions
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
-{: preview: .preview}
+{:preview: .preview}
 {:term: .term}
 {:ui: .ph data-hd-interface="ui"}
 {:cli: .ph data-hd-interface="cli"}

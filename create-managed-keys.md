@@ -162,6 +162,7 @@ To create a managed key by using the console, complete the following steps:
 You have successfully created a managed key. 
 
 
+
 ## Creating managed keys with the API
 {: #create-managed-keys-api}
 {: api}
@@ -187,8 +188,6 @@ To create a managed key through the API, follow these steps:
     The managed key is to be activated in all keystores in the keystore group that is defined in the key template.
 
     For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-managed-key){: external}.
-
-
 
 ## What's next
 {: #create-managed-keys-next}
