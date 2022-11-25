@@ -1437,9 +1437,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Step 1: Zeroize crypto units](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step)
 
-* [Step 2: Optional - Uninstall the {{site.data.keyword.hscrypto}} utilities](/docs/hs-crypto?topic=hs-crypto-delete-instance#uninstall-utilities-step)
+* [Step 2: Select the crypto units to be deleted](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step)
 
-* [Step 3: Delete your service instance](/docs/hs-crypto?topic=hs-crypto-delete-instance#delete-instance-step)
+* [Step 3: Optional - Uninstall the {{site.data.keyword.hscrypto}} utilities](/docs/hs-crypto?topic=hs-crypto-delete-instance#uninstall-utilities-step)
+
+* [Step 4: Delete your service instance](/docs/hs-crypto?topic=hs-crypto-delete-instance#delete-instance-step)
 
 
 ## Restoring your data from another region
