@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-24"
+lastupdated: "2022-11-25"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 

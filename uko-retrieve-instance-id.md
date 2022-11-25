@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-04-21"
+  years: 2022
+lastupdated: "2022-11-25"
 
 keywords: service id, service ids, instance id, get instance id, get instance guid, instance id api, instance id cli
 

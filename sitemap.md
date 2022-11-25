@@ -377,23 +377,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-key-states#uko-key-states-next)
 
 
-### About internal key management service
-{: #sitemap_about_internal_key_management_service}
-
-
-[Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-envelope-encryption)
-
-* [Keys in envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-key-types)
-
-* [How it works](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-envelope-encryption-overview)
-
-* [Wrapping keys](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-wrapping)
-
-* [Unwrapping keys](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-unwrapping)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-envelope-encryption-next)
-
-
 ### About cloud hardware security module
 {: #sitemap_about_cloud_hardware_security_module1}
 
@@ -1305,14 +1288,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-next)
 
-[Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list)
-
-* [Viewing a list of keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list-ui)
-
-* [Viewing a list of keys with the API](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list-api)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list-next)
-
 [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list#search-key-list)
 
 * [Filtering keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-search-key-list#filter-key-list-ui)
@@ -2074,8 +2049,6 @@ Find what you are looking for in the compilation of topics that are available in
 [Why can't I delete vaults?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-delete-vault#troubleshoot-delete-vault)
 
 [Why can't I delete internal keystores?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-delete-keystore#troubleshoot-delete-keystore)
-
-[Why can't I rotate the master key when using the {{site.data.keyword.uko_full_notm}} Plan?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-uko#troubleshoot-master-key-rotation-uko)
 
 [Why do I fail to see the changes to my key in Azure Key Vault?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-azure-delay#troubleshoot-azure-delay)
 

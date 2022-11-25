@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-23"
+lastupdated: "2022-11-25"
 
 keywords: import azure key failure, can't import azure key
 

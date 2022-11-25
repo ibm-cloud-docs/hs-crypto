@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-31"
+lastupdated: "2022-11-25"
 
 keywords: Unified Key Orchestrator, install keys, activate key, key management, kms keys
 

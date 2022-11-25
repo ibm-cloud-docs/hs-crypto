@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-11-25"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -173,7 +173,7 @@ You can use a managed key for encryption or decryption only after it is created 
 1. From your service instance UI, click **Managed keys** from the navigation to view all the available keys.
 2. To create a managed key, click **Create key**.
 3. Under **Vault**, select the vault that you create, and click **Next**. 
-4. Under **General**, select **IBM KMS** as the keystore type, and click **Next**.
+4. Under **General**, select **IBM Cloud KMS** as the keystore type, and click **Next**.
 5. Under **Key properties**, specify the following details of the key. Click **Next** to continue when you are done.
 
     |       Property	      |                         Description                       |
@@ -492,7 +492,7 @@ You can use a managed key for encryption or decryption only after it is created 
 1. From your service instance UI, click **Managed keys** from the navigation to view all the available keys.
 2. To create a managed key, click **Create key**.
 3. Under **Vault**, select the vault that you create, and click **Next**. 
-4. Under **General**, select **IBM KMS** as the keystore type, and click **Next**.
+4. Under **General**, select **IBM Cloud KMS** as the keystore type, and click **Next**.
 5. Under **Key properties**, specify the following details of the key. Click **Next** to continue when you are done.
 
     |       Property	      |                         Description                       |

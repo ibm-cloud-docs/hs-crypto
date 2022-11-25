@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-04-21"
+  years: 2022
+lastupdated: "2022-11-25"
 
 keywords: master key, restore master key, master key backup, recovery crypto unit, master key recover
 
