@@ -1288,6 +1288,14 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-next)
 
+[Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list)
+
+* [Viewing a list of keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list-ui)
+
+* [Viewing a list of keys with the API](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list-next)
+
 [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list#search-key-list)
 
 * [Filtering keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-search-key-list#filter-key-list-ui)
