@@ -44,8 +44,6 @@ Before you create a vault for your {{site.data.keyword.hscrypto}} instance, keep
 
     A managed key or a target keystore can belong to only one vault. You need to assign a vault to a managed key or a target keystore upon creation.
 
-- 
-
 
 For more information about granting access, see [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults).
 
