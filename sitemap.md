@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-25"
+lastupdated: "2022-11-28"
 
 keywords: site map, doc structure, information architecture
 
@@ -1445,7 +1445,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Step 1: Zeroize crypto units](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step)
 
-* [Step 2: Select the crypto units to be deleted](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step)
+* [Step 2: Select the crypto units to be deleted](/docs/hs-crypto?topic=hs-crypto-delete-instance#select-crypto-unit-step)
 
 * [Step 3: Optional - Uninstall the {{site.data.keyword.hscrypto}} utilities](/docs/hs-crypto?topic=hs-crypto-delete-instance#uninstall-utilities-step)
 

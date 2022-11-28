@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-11-25"
+lastupdated: "2022-11-28"
 
 keywords: delete, delete service instance, crypto unit, ibm cloud cli, clear crypto unit, uninstall
 
@@ -66,7 +66,7 @@ After you zeroize the crypto unit, the administrator [signature keys](#x8250375)
 {: important}
 
 ## Step 2: Select the crypto units to be deleted 
-{: #zeroize-crypto-unit-step}
+{: #select-crypto-unit-step}
 
 1. To list the numbers of crypto units in the target resource group under the current user account, run the following command:
 
