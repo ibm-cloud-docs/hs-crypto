@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2022-12-02"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -110,7 +110,7 @@ Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start
 ### Quorum authentication
 {: #quorum-authenticaion-concept}
 
-Quorum authentication is the way to approve an operation by a set number of crypto unit administrators. Some sensitive operations require a sufficient number of crypto unit administrators to enter their credentials. Quorum authentication assures that no single person can make a critical change on the crypto unit. Instead, a minimum number of crypto unit administrators (at least two) must cooperate to do these operations. Quorum authentication requires more than one crypto unit administrator to approve an operation, which enables an extra layer of protection on the crypto unit.
+Quorum authentication is the way to approve an operation by a set number of crypto unit administrators. Some sensitive operations, such as committing a master key register, changing the signature thresholds, and adding or removing administrators after the crypto unit exits imprint mode, require a sufficient number of crypto unit administrators to enter their credentials. Quorum authentication assures that no single person can make a critical change on the crypto unit. Instead, a minimum number of crypto unit administrators (at least two) must cooperate to do these operations. Quorum authentication requires more than one crypto unit administrator to approve an operation, which enables an extra layer of protection on the crypto unit.
 
 ### Signature thresholds
 {: #signature-thresholds-concept}

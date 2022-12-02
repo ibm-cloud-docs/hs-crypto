@@ -238,7 +238,7 @@ ibmcloud tke cryptounit-thrhld-set
 
 When prompted, enter values for the signature threshold and revocation signature threshold. The signature threshold controls how many signatures are required to execute most administrative commands. The revocation signature threshold controls how many signatures are required to remove an administrator after you have left imprint mode. Some commands require only one signature, regardless of how the signature threshold is set.
 
-The signature threshold values must be numbers between one and eight. The signature threshold and revocation signature threshold can be different. Setting the signature thresholds to a value greater than one is a way to enforce [quorum authentication](/docs/hs-crypto?topic=hs-crypto-understand-concepts#quorum-authenticaion-concept) for sensitive operations.
+The signature threshold values must be numbers between one and eight. The signature threshold and revocation signature threshold can be different. Setting the signature thresholds to a value greater than one is a way to enforce [quorum authentication](/docs/hs-crypto?topic=hs-crypto-understand-concepts#quorum-authenticaion-concept) for sensitive operations, including committing a master key register, changing the signature thresholds, and adding or removing administrators after the crypto unit exits imprint mode. 
 
 The command to exit imprint mode must be signed by as many administrators as specified by the new signature threshold value. After crypto units leave imprint mode, all commands to the crypto unit must be signed. After the crypto unit exits imprint mode, you can still change the signature thresholds on the crypto unit by using the `cryptounit-thrhld-set` command. To display the current signature threshold values, run the `ibmcloud tke cryptounit-thrhlds` command.
 {: important}
@@ -307,7 +307,7 @@ ibmcloud tke cryptounit-mk-commit
 ```
 {: pre}
 
-When prompted, enter the passwords for the signature key files to be used. A full set of signatures is required to commit the master key register. 
+When prompted, enter the passwords for the signature key files to be used. A full set of signatures is required to enforce quorum authentication. 
 
 ### Step 7: Activate the master key
 {: #step7-activate-master-key}
@@ -326,7 +326,7 @@ Consider the following before you take actions:
 * If you have started managing keys with the service instance and want to reload the same master key that was used before, ensure that no key management actions are in progress and type `y` to continue.
 * If you have started managing keys with the service instance and want to load a new master key, type `N` to cancel. For more information about rotating the master key, see [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
 
-When prompted, enter the password for the signature key file to be used. For this command, only one signature key is needed.
+When prompted, enter the password for the signature key file to be used. For this command, only one signature key is needed because the key is already made available in step 6. The master key can become active wthout an administrator signature.
 
 ## What's next
 {: #initialize-crypto-cli-next}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2022-12-02"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -92,7 +92,7 @@ To rotate the master key by using workstation files on your workstation, follow 
     ```
     {: pre}
 
-    When prompted, enter the passwords for the signature key files to be used.
+    When prompted, enter the passwords for the signature key files to be used. A full set of signatures is required to enforce quorum authentication. 
 
     The new master key is now in `Full commited` state in the new master key register.
 
