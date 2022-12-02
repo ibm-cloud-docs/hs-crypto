@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2022-12-02"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -307,7 +307,7 @@ ibmcloud tke cryptounit-mk-commit
 ```
 {: pre}
 
-When prompted, enter the passwords for the signature key files to be used.
+When prompted, enter the passwords for the signature key files to be used. A full set of signatures is required to commit the master key register. 
 
 ### Step 7: Activate the master key
 {: #step7-activate-master-key}
