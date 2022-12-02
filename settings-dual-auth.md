@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-12-02"
 
 keywords: instance settings, service settings, dual authorization
 
@@ -69,7 +69,7 @@ As an instance manager, if you prefer to enable a dual authorization policy on y
 After creating a service instance, complete the following steps to create a dual authorization policy:
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
-2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
 5. In the **Dual authorization deletion** section, check the box for `Require two users to approve key deletions`, and click **Save policy**.
@@ -166,7 +166,7 @@ As an instance manager, if you prefer to disable a dual authorization policy on 
 After creating a service instance, complete the following steps to create a dual authorization policy:
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
-2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
 5. In the **Dual authorization deletion** section, clear the box for `Require two users to approve key deletions`, and click **Save policy**.

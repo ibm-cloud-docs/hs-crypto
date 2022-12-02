@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-12-02"
 
 keywords: sync resources, sync registrations, key registration, notify key state to resources
 
@@ -44,7 +44,7 @@ The sync API initiates only a request for synchronization. The IBM services that
 You can renotify associated resources of your {{site.data.keyword.hscrypto}} root key's lifecycle event by using the console.
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
-2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
 5. To renotify the protected resources of a specific root key, click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key and select **Synchronize associated resources**.

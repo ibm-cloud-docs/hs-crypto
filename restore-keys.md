@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-12-02"
 
 keywords: restore key, restore a deleted key, recover a deleted key, re-import a key
 
@@ -72,7 +72,7 @@ If you prefer to restore your key by using a graphical interface, you can use th
 Complete the following steps to restore the key:
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
-2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
 5. Select the key that you want to restore and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key.

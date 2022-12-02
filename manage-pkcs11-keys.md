@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-12-02"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -39,7 +39,7 @@ Apart from using the {{site.data.keyword.hscrypto}} [PKCS #11 API](/docs/hs-cryp
 Before you can manage EP11 keystores and keys with the console, complete the following steps to open your {{site.data.keyword.hscrypto}} dashboard:
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
-2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}} and click the instance name.
 4. Create an EP11 keystore to store the key. The keystore can be created [through the console UI](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui#create-ep11-keystore-ui) or [through the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-12-02"
 
 keywords: monitoring, monitor metrics
 
@@ -53,7 +53,7 @@ Before you enable operational metrics for your {{site.data.keyword.hscrypto}} in
 After you create a {{site.data.keyword.hscrypto}} instance, provision a {{site.data.keyword.mon_short}} instance, and enable platform metrics, complete the following steps to enable a metrics policy:
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
-2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
 5. In the **Metrics** section, check **Send metrics to IBM Cloud Monitoring** and click **Save policy**.
