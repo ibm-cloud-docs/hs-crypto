@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-05"
 
 keywords: delete, delete service instance, crypto unit, ibm cloud cli, clear crypto unit, uninstall
 
@@ -35,10 +35,8 @@ You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} i
 1. Delete all keys managed in the service instance. 
 2. Set the environment variable `CLOUDTKEFILES` on your workstation to specify the directory where you have saved the master workstation files and signature key files when you initialized your service instance. For more information, refer to [these steps](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite).
 
-## Step 1: Zeroize crypto units
-{: #zeroize-crypto-unit-step}
-
-If you initialize your service instance and load the [master key](#x2908413){: term} to the service instance, you need to set the crypto units back to imprint mode with the following steps:
+## Step 1: Select the crypto units to be deleted 
+{: #select-crypto-unit-step}
 
 1. To select the administrators to sign TKE commands, use the following command:
 
@@ -49,7 +47,28 @@ If you initialize your service instance and load the [master key](#x2908413){: t
 
     A list of signature keys that are found on the workstation is displayed. When prompted, enter the key numbers of the signature key files to select for signing future administrative commands. When prompted, enter the passwords for the signature key files.
 
-2. Clear all crypto unit administrators and the master key registers with one of the following options:
+2. To list the numbers of crypto units in the target resource group under the current user account, run the following command:
+
+    ```
+    ibmcloud tke cryptounits
+    ```
+    {: pre}
+
+3. Check whether the crypto units that you want to delete are marked as `true`. If not, add the crypto units by running the following command:
+    
+    ```
+    ibmcloud tke cryptounit-add
+    ```
+    {: pre}
+
+    A list of the crypto units in the target resource group under the current user account is displayed. When prompted, enter crypto unit numbers to be deleted to the selected crypto unit list.
+
+## Step 2: Zeroize crypto units
+{: #zeroize-crypto-unit-step}
+
+If you initialize your service instance and load the [master key](#x2908413){: term} to the service instance, you need to set the crypto units back to imprint mode with the following steps:
+
+1. Clear all crypto unit administrators and the master key registers with one of the following options:
 
     -  If you initialize your service instance through {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) command-line interface (CLI) plug-in, run the following command to zeroize the crypto units in the TKE CLI plug-in:
 
@@ -60,29 +79,10 @@ If you initialize your service instance and load the [master key](#x2908413){: t
 
     -  If you initialize your service instance through the Management Utilities, in the user interface of the TKE application, select **Imprint mode** &gt; **Zeroize crypto unit**.
 
-3. To zeroize the crypto units, enter the password for the administrator signature key to be used when prompted. Make sure that your signature key files are properly saved either on your workstation or on your smart cards. Otherwise, you are not able to perform this action.
+2. To zeroize the crypto units, enter the password for the administrator signature key to be used when prompted. Make sure that your signature key files are properly saved either on your workstation or on your smart cards. Otherwise, you are not able to perform this action.
 
 After you zeroize the crypto unit, the administrator [signature keys](#x8250375){: term} and the master key are cleared from the crypto unit, which means you are not able to access keys that is protected by the master key. Any resources that are associated with the root keys cannot be accessed. However, you might still be charged for the resources, such as the [Immutable Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-immutable), as long as the policy is enforced. 
 {: important}
-
-## Step 2: Select the crypto units to be deleted 
-{: #select-crypto-unit-step}
-
-1. To list the numbers of crypto units in the target resource group under the current user account, run the following command:
-
-    ```
-    ibmcloud tke cryptounits
-    ```
-    {: pre}
-
-2. Select the crypto units to be deleted in the service instance, run the following command:
-    
-    ```
-    ibmcloud tke cryptounit-add
-    ```
-    {: pre}
-
-    A list of the crypto units in the target resource group under the current user account is displayed. When prompted, enter crypto unit numbers to be added to the selected crypto unit list.
 
 ## Step 3: Optional - Uninstall the {{site.data.keyword.hscrypto}} utilities
 {: #uninstall-utilities-step}

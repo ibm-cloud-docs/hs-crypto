@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-05"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -72,7 +72,7 @@ You can also watch the following video to learn how to initialize {{site.data.ke
 Before you start the instance initialization, make sure that you complete [the prerequisite steps](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite).
 {: #initialize-crypto-prerequisites}
 
-## Adding or removing crypto units that are assigned to service instances
+## Selecting target crypto units for service initialization
 {: #identify_crypto_units}
 
 Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user account are in groups that are known as service instances. A service instance can have up to six [operational crypto units](/docs/hs-crypto?topic=hs-crypto-understand-concepts#crypto-unit-concept). All crypto units in a service instance need to be configured the same. If one availability zone in the region where your instance is located can't be accessed, the operational crypto units can be used interchangeably for load balancing or for high availability.

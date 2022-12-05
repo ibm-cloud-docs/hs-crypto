@@ -779,7 +779,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm-cli-prerequisite)
 
-* [Adding or removing crypto units that are assigned to service instances](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#identify_crypto_units)
+* [Selecting target crypto units for service initialization](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#identify_crypto_units)
 
 * [Loading master keys](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#load-master-keys)
 
@@ -1443,9 +1443,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-delete-instance#delete-instance-prerequisite)
 
-* [Step 1: Zeroize crypto units](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step)
+* [Step 1: Select the crypto units to be deleted](/docs/hs-crypto?topic=hs-crypto-delete-instance#select-crypto-unit-step)
 
-* [Step 2: Select the crypto units to be deleted](/docs/hs-crypto?topic=hs-crypto-delete-instance#select-crypto-unit-step)
+* [Step 2: Zeroize crypto units](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step)
 
 * [Step 3: Optional - Uninstall the {{site.data.keyword.hscrypto}} utilities](/docs/hs-crypto?topic=hs-crypto-delete-instance#uninstall-utilities-step)
 
