@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2022-12-05"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -26,7 +26,7 @@ subcollection: hs-crypto
 After you load a master key to your {{site.data.keyword.hscrypto}} instance, you can rotate the master key on demand to meet industry standards and cryptographic best practices.
 {: shortdesc}
 
-A master key is used to wrap encryption keys that are managed in the service instance. After the master key rotation, you retire the original master key and load a new master key that reencrypts the entire key storage.
+A master key is used to wrap encryption keys that are managed in the service instance. With the master key rotation, you retire the original master key and load a new master key that reencrypts the entire key storage.
 
 ## How master key rotation works
 {: #how-master-key-rotation-works}
