@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-12-06"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -154,7 +154,6 @@ Before you install the smart card reader driver on a Linux operating system, dow
         {: pre}
     
     4. Restart the workstation.
-
 
 ## Step 3: Install the Management Utilities
 {: #install-management-utility-application}

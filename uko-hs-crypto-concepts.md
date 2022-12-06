@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-25"
+lastupdated: "2022-12-06"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -247,8 +247,6 @@ A vault is a single repository that controls a user's or an access group's acces
 {: #uko-managed-key-conncept}
 
 A managed key is a key that is created in and assigned to a vault. You can use a managed key for encryption and decryption only when it is activated in at least one target keystore.
-
-
 
 ### Target keystore
 {: #uko-target-keystore-concept}

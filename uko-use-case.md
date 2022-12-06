@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-25"
+lastupdated: "2022-12-06"
 
 keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases
 

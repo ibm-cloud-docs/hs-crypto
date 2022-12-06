@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-12-06"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -70,8 +70,6 @@ Added: Go SDK and Terraform support for {{site.data.keyword.uko_full_notm}}
 
     With the Terraform support for {{site.data.keyword.uko_full_notm}}, you can now automate actions, such as managing vaults, keystores, key templates, and keys, by using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs).
 
-
-
 ## 8 June 2022
 {: #hs-crypto-8june2022}
 {: release-note}
@@ -79,16 +77,12 @@ Added: Go SDK and Terraform support for {{site.data.keyword.uko_full_notm}}
 Added: Post-quantum cryptography support {: #add-pqc}
 :   With the GREP11 API and the PKCS #11 API, you can now perform [post-quantum cryptographic](https://en.wikipedia.org/wiki/Post-quantum_cryptography){: external} operations to protect your data against attacks from quantum computers. Currently, we support the Dilithium algorithm. For more information, see [Post-quantum cryptography support in GREP11](/docs/hs-crypto?topic=hs-crypto-grep11-intro#grep11-support-post-quantum) and [Post-quantum cryptography support in PKCS #11](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#grep11-support-post-quantum).
 
-
-
-
 ## 3 June 2022
 {: #hs-crypto-3june2022}
 {: release-note}
 
 Added: {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in {: #add-uko-cli}
 :   With the command-line interface (CLI) support for {{site.data.keyword.hscrypto}} with the {{site.data.keyword.uko_full_notm}} plan, you can now manage vaults, keystores, and keys by using CLI commands. For more information about these commands, see [{{site.data.keyword.uko_full_notm}} CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#uko-cli-plugin).
-
 
 
 ## 1 April 2022

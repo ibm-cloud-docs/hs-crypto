@@ -118,8 +118,6 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 {: class="comparison-tab-table"}
 
 
-
-
 | Action | Reader | Key custodian - Deployer | Key custodian - Creator | Vault administrator | Manager |
 |-----|-----|----|----|-----|-----|
 | Activate a preactive key. | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |  |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-07"
+lastupdated: "2022-12-06"
 
 keywords: change log for tke, updates to tke cli plugin, updates to cert manager cli plugin
 
@@ -44,8 +44,6 @@ Version 1.0.0 of the certificate manager CLI plug-in was released on July 2021.
 
 This is the first release of the certificate manager CLI plug-in. You can use it to manage certificates and administrator signature keys for the second layer of authentication in GREP11 or PKCS #11 API connections.
 
-
-
 ## {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in
 {: #uko-cli-change-log}
 
@@ -55,4 +53,3 @@ This is the first release of the certificate manager CLI plug-in. You can use it
 Version 1.0.0 of the {{site.data.keyword.uko_full_notm}} CLI plug-in was released on June 3 2022.
 
 This is the first release of the {{site.data.keyword.uko_full_notm}} CLI. You can use it to manage vaults, keystores, and keys for {{site.data.keyword.hscrypto}} instances with the {{site.data.keyword.uko_full_notm}} plan.
-
