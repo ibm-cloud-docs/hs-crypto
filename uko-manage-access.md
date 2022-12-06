@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-25"
+lastupdated: "2022-12-06"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -82,7 +82,6 @@ As a service administrator, you can use the service access roles to grant permis
 - As a **Writer**, you can create, modify, rotate, and use keys. Writers cannot delete or disable keys.
 - As a **Manager**, you can perform all actions that a Reader, ReaderPlus and Writer can perform, including the ability to delete keys and set policies for keys. 
 - As a **VMware KMIP Manager**, you can configure KMIP for VMware with {{site.data.keyword.hscrypto}} to enable encryption with your own root keys.
-
 - As a **Certificate Manager**, you can manage administrator signature keys and client certificates for the second layer of authentication in GREP11 or PKCS #11 API connections.
 - As a **Vault Administrator**, you can manage vaults, keystores, and templates, and perform destructive lifecycle actions on managed keys in {{site.data.keyword.uko_full_notm}}. Different vaults can be used to separate teams, lines of business, or customers. You can also add paid keystores if you already exceed the limit of free keystores.
 - As a **Key Custodian - Creator**, you can create and manage keys in {{site.data.keyword.uko_full_notm}}. For a complete key lifecycle, both the Key Custodian - Creator and Key Custodian - Deployer roles are needed.
