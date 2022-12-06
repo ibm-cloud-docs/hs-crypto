@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-12-06"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -55,6 +55,22 @@ The crypto units start in a clear state that is known as Imprint Mode. A crypto 
 There are two types of signature thresholds on a crypto unit. The main signature threshold controls how many signatures are needed to run most administrative commands. The revocation signature threshold controls how many signatures are needed to remove an administrator. Some commands need only one signature, regardless of how the signature threshold is set.
 
 Setting the signature thresholds to a value greater than one enables quorum authentication from multiple administrators for sensitive operations. The maximum value that you can set the signature threshold and revocation signature threshold is eight, which is also the maximum number of administrators that can be added to a crypto unit.
+
+When you configure crypto units, you are automatically prompted for the required number of signatures based on the operation type and whether the crypto units are in imprint mode.  For reference, the following table includes the required number of signatures of each operation.
+
+| Operation | Commands | Required signatures in imprint mode |Required signatures after leaving imprint mode |
+| ------- | ----------- | ----------------------- |----------------------- |
+|Add administrator  | 	`tke cryptounit-admin-add`  | No signature needed. | The current signature threshold value.  |
+|Remove administrator |`tke cryptounit-admin-rm`   | No signature needed. | The current revocation threshold value.  |
+|Set signature threshold  | `tke cryptounit-thrhld-set`  | When leaving imprint mode, the new signature threshold value. | The current signature threshold value.  |
+|Clear new master key register  | `tke cryptounit-mk-clrnew`  | N/A |  One signature. |
+|Clear current master key register  | `tke cryptounit-mk-clrcur`  | N/A | One signature.  |
+|Load new master key register  | `tke cryptounit-mk-load`  | N/A | One signature per key part. This command generates an importer key, which also requires one signature. The same administrator can be used for all signatures.  |
+|Commit new master key register  | `tke cryptounit-mk-commit`  | N/A | The current signature threshold value.  |
+|Set immediate (finalize master key register)  | `tke cryptounit-mk-setimm`  | N/A |  	One signature. |
+|Set control point  | `tke cryptounit-cp-btc` `tke cryptounit-cp-eddsa` `tke cryptounit-cp-sig-other`  | N/A |  The current signature threshold value. |
+|Zeroize crypto unit  | tke cryptounit-zeroize  | No signature needed. | 	One signature.   |
+{: caption="Table 1. Required number of signatures for TKE operations" caption-side="bottom"}
 
 ## Understanding the master key
 {: #understand-key-ceremony}
