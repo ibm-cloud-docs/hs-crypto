@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-12-05"
+lastupdated: "2022-12-07"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -279,7 +279,7 @@ You must create at least two master key parts. For security considerations, a ma
 ### Step 5: Load the new master key register
 {: #step5-load-master-key}
 
-To load a master key register, all master workstation files and signature key files to be used must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The master workstation file owners and the signature key file owners need to enter the file passwords when the master key register is loaded on the common workstation.
+To load a master key register, all workstation files and signature key files to be used must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The workstation file owners and the signature key file owners need to enter the file passwords when the master key register is loaded on the common workstation.
 {: important}
 
 For information about how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-key-ceremony).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -30,7 +30,7 @@ subcollection: hs-crypto
 # Rotating master keys by using workstation files
 {: #rotate-master-key-cli-key-part}
 
-You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance regularly to meet industry standards and cryptographic best practices. To rotate the master key using master workstation files on your local workstation, follow these steps.
+You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance regularly to meet industry standards and cryptographic best practices. To rotate the master key using workstation files on your local workstation, follow these steps.
 {: shortdesc}
 
 Master key rotation is currently supported only by the {{site.data.keyword.hscrypto}} Standard Plan.
@@ -74,7 +74,7 @@ To rotate the master key by using workstation files on your workstation, follow 
     ```
     {: pre}
 
-    To load a master key register, all master workstation files and signature key files to be used must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The master workstation file owners and signature key file owners need to enter the file passwords when the master key register is loaded on the common workstation.
+    To load a master key register, all workstation files and signature key files to be used must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The workstation file owners and signature key file owners need to enter the file passwords when the master key register is loaded on the common workstation.
 
     A list of the master key parts that are found on the workstation is displayed.
 
