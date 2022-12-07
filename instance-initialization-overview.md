@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-12-06"
+lastupdated: "2022-12-07"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -63,12 +63,12 @@ When you configure crypto units, you are automatically prompted for the required
 |Add administrator  | 	`tke cryptounit-admin-add`  | No signature needed. | The current signature threshold value.  |
 |Remove administrator |`tke cryptounit-admin-rm`   | No signature needed. | The current revocation threshold value.  |
 |Set signature threshold  | `tke cryptounit-thrhld-set`  | When leaving imprint mode, the new signature threshold value. | The current signature threshold value.  |
-|Clear new master key register  | `tke cryptounit-mk-clrnew`  | N/A |  One signature. |
-|Clear current master key register  | `tke cryptounit-mk-clrcur`  | N/A | One signature.  |
-|Load new master key register  | `tke cryptounit-mk-load`  | N/A | One signature per key part. This command generates an importer key, which also requires one signature. The same administrator can be used for all signatures.  |
-|Commit new master key register  | `tke cryptounit-mk-commit`  | N/A | The current signature threshold value.  |
-|Set immediate (finalize master key register)  | `tke cryptounit-mk-setimm`  | N/A |  	One signature. |
-|Set control point  | `tke cryptounit-cp-btc` `tke cryptounit-cp-eddsa` `tke cryptounit-cp-sig-other`  | N/A |  The current signature threshold value. |
+|Clear new master key register  | `tke cryptounit-mk-clrnew`  | Not allowed. |  One signature. |
+|Clear current master key register  | `tke cryptounit-mk-clrcur`  | Not allowed. | One signature.  |
+|Load new master key register  | `tke cryptounit-mk-load`  | Not allowed. | One signature per key part. This command generates an importer key, which also requires one signature. The same administrator can be used for all signatures.  |
+|Commit new master key register  | `tke cryptounit-mk-commit`  | Not allowed. | The current signature threshold value.  |
+|Set immediate (finalize master key register)  | `tke cryptounit-mk-setimm`  | Not allowed.|  	One signature. |
+|Set control point  | `tke cryptounit-cp-btc` `tke cryptounit-cp-eddsa` `tke cryptounit-cp-sig-other`  | Not allowed. |  The current signature threshold value. |
 |Zeroize crypto unit  | tke cryptounit-zeroize  | No signature needed. | 	One signature.   |
 {: caption="Table 1. Required number of signatures for TKE operations" caption-side="bottom"}
 
