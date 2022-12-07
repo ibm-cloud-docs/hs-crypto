@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-12-05"
+lastupdated: "2022-12-07"
 
 keywords: delete, delete service instance, crypto unit, ibm cloud cli, clear crypto unit, uninstall
 
@@ -55,14 +55,14 @@ You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} i
     ```
     {: pre}
 
-3. Check whether the crypto units that you want to delete are marked as `true`. If not, add the crypto units by running the following command:
+3. Check whether the crypto units that you want to zeroize are marked as `true`. If not, add the crypto units by running the following command:
     
     ```
     ibmcloud tke cryptounit-add
     ```
     {: pre}
 
-    A list of the crypto units in the target resource group under the current user account is displayed. When prompted, enter crypto unit numbers to be deleted to the selected crypto unit list.
+    A list of the crypto units in the target resource group under the current user account is displayed. When prompted, enter crypto unit numbers to be zeroized to the selected crypto unit list.
 
 ## Step 2: Zeroize crypto units
 {: #zeroize-crypto-unit-step}
