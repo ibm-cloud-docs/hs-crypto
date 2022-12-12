@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-12"
 
 keywords: delete, delete service instance, crypto unit, ibm cloud cli, clear crypto unit, uninstall
 
@@ -33,8 +33,8 @@ You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} i
 {: #delete-instance-prerequisite}
 
 1. Delete all keys managed in the service instance. 
-2. Follow [this instruction](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite) to set the environment variable `CLOUDTKEFILES` on your workstation to specify the directory where you have saved the workstation files and signature key files when you initialized your service instance. 
-3. Log in to {{site.data.keyword.cloud_notm}} also by following [this instruction](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite). 
+2. Follow [these instructions](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite) to set the environment variable `CLOUDTKEFILES` on your workstation to specify the directory where you saved the master key part files and signature key files you created when you initialized your service instance.
+3. Log in to {{site.data.keyword.cloud_notm}} also by following [these instructions](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite). 
 
 ## Step 1: Select the crypto units to be deleted 
 {: #select-crypto-unit-step}

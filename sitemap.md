@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-12-09"
+lastupdated: "2022-12-12"
 
 keywords: site map, doc structure, information architecture
 
@@ -200,7 +200,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit)
 
-* [Initializing service instances by using workstation files](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-key-files)
+* [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-key-files)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#initialize-instance-mode-next)
 
@@ -349,7 +349,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-instance-initialization-recovery-crypto-unit)
 
-* [Initializing service instances by using workstation files](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-instance-initialization-key-files)
+* [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-instance-initialization-key-files)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-initialize-instance-mode-next)
 
@@ -775,7 +775,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit#initialize-hsm-recovery-crypto-unit-whats-next)
 
-[Initializing service instances using workstation files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm)
+[Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm)
 
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm-cli-prerequisite)
 
@@ -929,11 +929,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit#rotate-master-key-cli-recovery-crypto-unit-next)
 
-[Rotating master keys by using workstation files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part)
+[Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part)
 
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-prerequisites)
 
-* [Rotating master keys by using workstation files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-steps)
+* [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-steps)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-next)
 
@@ -1791,7 +1791,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Considerations for defining the Management Utilities security policy](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy#smart-card-security-plan)
 
-* [Considerations for defining the workstation file security policy](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy#file-security-plan)
+* [Considerations for defining the file security policy](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy#file-security-plan)
 
 
 ## Understanding your responsibilities when using {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
@@ -2015,7 +2015,7 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_troubleshooting_master_key_rotation}
 
 
-[Why can't I rotate master keys by using workstation files?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-part-files#troubleshoot-master-key-rotation-key-part-files)
+[Why can't I rotate master keys by using key part files?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-part-files#troubleshoot-master-key-rotation-key-part-files)
 
 [Why can't I rotate master keys by using recovery crypto units?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-recovery-crypto-units#troubleshoot-master-key-rotation-recovery-crypto-units)
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2022-12-12"
 
-keywords: failed master key rotation, failed to use workstation files to rotate master keys, tke cryptounit-mk-rotate failure, troubleshoot master key rotation failure
+keywords: failed master key rotation, failed to use key part files to rotate master keys, tke cryptounit-mk-rotate failure, troubleshoot master key rotation failure
 
 subcollection: hs-crypto
 
@@ -28,18 +28,18 @@ subcollection: hs-crypto
 {:api: .ph data-hd-interface="api"}
 {:terraform: .ph data-hd-interface="terraform"}
 
-# Why can't I rotate master keys by using workstation files?
+# Why can't I rotate master keys by using key part files?
 {: #troubleshoot-master-key-rotation-key-part-files}
 {: troubleshoot}
 {: support}
 
-When you run the `ibmcloud tke cryptounit-mk-rotate` command to rotate master keys by using workstation files, you might be not able to complete the rotation.
+When you run the `ibmcloud tke cryptounit-mk-rotate` command to rotate master keys by using key part files, you might be not able to complete the rotation.
 {: shortdesc}
 
 During master key rotation, the new master key registers are loaded with the new master key value to be used. The contents of key storage are reencrypted by using the current and new master key values. When the reencryption of key storage is complete, the new master key value is promoted to the current master key registers and the new master key registers are cleared.
 {: tsSymptoms}
 
-For detailed instructions on how to rotate the master key, see [Rotating master keys by using workstation files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
+For detailed instructions on how to rotate the master key, see [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
 
 If an error occurs during master key rotation, the action you take to recover depends on how much of the process is completed. An incorrect recovery action can cause the master key value for key storage to be lost and contents of key storage to become unusable. You need to carefully check the command output before the error occurred to determine what recovery action to take.
 
@@ -47,12 +47,12 @@ Some errors are detected before the command starts to work with key storage or t
 
 The following initial conditions can be reported as an error by the `ibmcloud tke cryptounit-mk-rotate` command:
 
-* When you rotate your master key by using workstation files, an invalid set of crypto units is selected.
+* When you rotate your master key by using key part files, an invalid set of crypto units is selected.
 * One or more crypto units are in imprint mode.
 * Signature thresholds on the crypto units are not set the same.
 * A common set of administrators is not selected and installed in all crypto units large enough to meet the signature threshold value.
 * The current master key registers are not all in the `Valid` state with the same verification pattern.
-*  When you rotate your master key by using workstation files, the new master key registers are not all in the `Valid` state with the same verification pattern.
+*  When you rotate your master key by using key part files, the new master key registers are not all in the `Valid` state with the same verification pattern.
 
 Operational workloads cannot be run until master key rotation is completed.
 

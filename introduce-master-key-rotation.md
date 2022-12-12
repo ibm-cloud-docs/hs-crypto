@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-12-05"
+lastupdated: "2022-12-12"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -57,7 +57,7 @@ The following chart illustrates how the master key register state changes during
 ### Rotating master keys by using recovery crypto units
 {: #how-master-key-rotation-works-recovery-crypto-unit}
 
-If your service instance has recovery crypto units assigned to it, apart from using workstation files, you can also rotate the master keys using the `ibmcloud tke auto-mk-rotate` command. With this command, a random new master key value is generated in one of the recovery crypto units for the service instance and securely moved to the other crypto units in the service instance.
+If your service instance has recovery crypto units assigned to it, apart from using key part files, you can also rotate the master keys using the `ibmcloud tke auto-mk-rotate` command. With this command, a random new master key value is generated in one of the recovery crypto units for the service instance and securely moved to the other crypto units in the service instance.
 
 Use the `ibmcloud tke auto-mk-rotate` command to rotate the master key only when your service instance has recovery crypto units assigned and PKCS #11 keystores are not enabled in your service instance. Currently, only the `us-south` and `us-east` regions are enabled with the recovery crypto units. For more information about the supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 {: important}
@@ -76,10 +76,10 @@ The following flow shows how master key rotation works in this mode:
 
 For detailed instructions on how to rotate master keys by using recovery crypto units, see [Rotating master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit).
 
-### Rotating master keys by using workstation files
+### Rotating master keys by using key part files
 {: #how-master-key-rotation-works-use-key-part-files}
 
-Master keys that are created from workstation files can be rotated by using TKE CLI plug-in. When master keys are rotated, master key parts are stored in files on the local workstation. 
+Master keys that are created from key part files can be rotated by using TKE CLI plug-in. When master keys are rotated, master key parts are stored in files on the local workstation. 
 
 Similar to using the Management Utilities, you need to first create the 2 or 3 key parts that you are going to use. To be able to rotate the master key, the current master key registers must be in `Valid` state with the same verification pattern and the new master key registers must be `Empty`.
 
@@ -93,7 +93,7 @@ The following flow shows how master key rotation works in this mode:
     1. Encryption keys in key storage are decrypted by using the value in the current master key register and then reencrypted by using the value in the new master key register. The rewrapping takes place inside the HSM, so it's secure.
     2. The new master key is activated and loaded to the current master key register in `Valid` state, and the new master key register is cleared and back to `Empty` state.
 
-For detailed instructions, see [Rotating master keys by using workstation files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
+For detailed instructions, see [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
 
 ## What's next
 {: #master-key-rotation-next}
@@ -101,5 +101,5 @@ For detailed instructions, see [Rotating master keys by using workstation files]
 For more detailed instructions on options to rotate master keys, see:
 - [Rotating master keys by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards).
 - [Rotating master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit).
-- [Rotating master keys by using workstation files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
+- [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
 

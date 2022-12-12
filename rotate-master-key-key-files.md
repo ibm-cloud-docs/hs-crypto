@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-12"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -27,10 +27,10 @@ subcollection: hs-crypto
 {:support: data-reuse='support'}
 
 
-# Rotating master keys by using workstation files
+# Rotating master keys by using key part files
 {: #rotate-master-key-cli-key-part}
 
-You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance regularly to meet industry standards and cryptographic best practices. To rotate the master key using workstation files on your local workstation, follow these steps.
+You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance regularly to meet industry standards and cryptographic best practices. To rotate the master key using master key part files on your local workstation, follow these steps.
 {: shortdesc}
 
 Master key rotation is currently supported only by the {{site.data.keyword.hscrypto}} Standard Plan.
@@ -60,12 +60,12 @@ Before you start, make sure to do the following steps:
 
 3. The new master key parts are prepared for rotation. For more information about how to create a new master key part, see [Create a set of master key parts to use](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step4-create-master-key).
 
-## Rotating master keys by using workstation files
+## Rotating master keys by using key part files
 {: #rotate-master-key-cli-key-part-steps}
 {: help}
 {: support}
 
-To rotate the master key by using workstation files on your workstation, follow these steps:
+To rotate the master key by using key part files on your workstation, follow these steps:
 
 1. Load the new master key parts to the new master key register with the following command:
 
@@ -74,11 +74,11 @@ To rotate the master key by using workstation files on your workstation, follow 
     ```
     {: pre}
 
-    To load a master key register, all workstation files and signature key files to be used must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The workstation file owners and signature key file owners need to enter the file passwords when the master key register is loaded on the common workstation.
+    To load a master key register, all master key part files and signature key files to be used must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The master key part file owners and signature key file owners need to enter the file passwords when the master key register is loaded on the common workstation.
 
     A list of the master key parts that are found on the workstation is displayed.
 
-    When prompted, enter the master key parts to be loaded into the new master key register, the password for the signature key file to be used, and password for each selected workstation file sequentially.
+    When prompted, enter the master key parts to be loaded into the new master key register, the password for the signature key file to be used, and password for each selected key part file sequentially.
 
     The new master key is now in `Full uncommited` state in the new master key register.
 
@@ -131,7 +131,7 @@ To rotate the master key by using workstation files on your workstation, follow 
 
 Your root keys and encryption keys are now protected by the new master key.
 
-If an error occurs during master key rotation, see [Why can't I rotate master keys by using workstation files](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-part-files).
+If an error occurs during master key rotation, see [Why can't I rotate master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-part-files).
 
 ## What's next
 {: #rotate-master-key-cli-key-part-next}

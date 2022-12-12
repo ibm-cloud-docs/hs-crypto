@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-12"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -28,10 +28,10 @@ subcollection: hs-crypto
 {:video: .video}
 
 
-# Initializing service instances using workstation files
+# Initializing service instances using key part files
 {: #initialize-hsm}
 
-Before you can use your {{site.data.keyword.hscrypto}} instance, you need to first initialize your service instance by loading the master key. This topic guides you through the steps to initialize your service instance by using workstation files through {{site.data.keyword.cloud_notm}} TKE CLI plug-in.
+Before you can use your {{site.data.keyword.hscrypto}} instance, you need to first initialize your service instance by loading the master key. This topic guides you through the steps to initialize your service instance by using key part files through {{site.data.keyword.cloud_notm}} TKE CLI plug-in.
 {: shortdesc}
 
 For an introduction to the approaches of service instance initialization and the related fundamental concepts, see [Initializing service instances](/docs/hs-crypto?topic=hs-crypto-introduce-service) and [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
@@ -248,7 +248,7 @@ The command to exit imprint mode must be signed by as many administrators as spe
 
 Each master key part is saved in a password-protected file on the workstation.
 
-You must create at least two master key parts. For security considerations, a maximum of three master key parts can be used and each key part can be owned by a different person. The key part owner needs to be the only person who knows the password that is associated with the workstation file.
+You must create at least two master key parts. For security considerations, a maximum of three master key parts can be used and each key part can be owned by a different person. The key part owner needs to be the only person who knows the password that is associated with the key part file.
 {: important}
 
 * To display the existing master key parts on the workstation, use the following command:
@@ -265,7 +265,7 @@ You must create at least two master key parts. For security considerations, a ma
     ```
     {: pre}
 
-    When prompted, enter a description for the key part and a password to protect the workstation file. You must remember the password. If the password is lost, you can't use the key part.
+    When prompted, enter a description for the key part and a password to protect the key part file. You must remember the password. If the password is lost, you can't use the key part.
 
 * To enter a known key part value and save it in a file on the workstation, use the following command:
 
@@ -274,12 +274,12 @@ You must create at least two master key parts. For security considerations, a ma
     ```
     {: pre}
 
-    When prompted, enter the key part value as a hexadecimal string for the 32-byte key part. And then enter a description for the key part and a password to protect the workstation file.
+    When prompted, enter the key part value as a hexadecimal string for the 32-byte key part. And then enter a description for the key part and a password to protect the key part file.
 
 ### Step 5: Load the new master key register
 {: #step5-load-master-key}
 
-To load a master key register, all workstation files and signature key files to be used must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The workstation file owners and the signature key file owners need to enter the file passwords when the master key register is loaded on the common workstation.
+To load a master key register, all master key part files and signature key files to be used must be present on a common workstation. If the files were created on separate workstations, make sure that the file names are different to avoid collision. The master key part file owners and the signature key file owners need to enter the file passwords when the master key register is loaded on the common workstation.
 {: important}
 
 For information about how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-key-ceremony).
@@ -293,7 +293,7 @@ ibmcloud tke cryptounit-mk-load
 
 A list of the master key parts that are found on the workstation is displayed.
 
-When prompted, enter the key parts to be loaded into the new master key register, the password for the signature key file to be used, and password for each selected workstation file. For this command, only one signature key is needed.
+When prompted, enter the key parts to be loaded into the new master key register, the password for the signature key file to be used, and password for each selected key part file. For this command, only one signature key is needed.
 
 ### Step 6: Commit the new master key register
 {: #step6-commit-master-key}
@@ -341,4 +341,4 @@ When prompted, enter the password for the signature key file to be used. For thi
 - Go to the **KMS keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management service API reference doc](/apidocs/hs-crypto){: external}.
 - To learn more about performing cryptographic operations with the cloud HSM, see [Introducing cloud HSM](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm).
 - Use {{site.data.keyword.hscrypto}} as the root key provider for other {{site.data.keyword.cloud_notm}} services. For more information about integrating {{site.data.keyword.hscrypto}}, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
-- For information on how to rotate the master key, see [Rotating master keys by using workstation files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
+- For information on how to rotate the master key, see [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).

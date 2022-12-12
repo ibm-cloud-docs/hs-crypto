@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-02"
+lastupdated: "2022-12-12"
 
 keywords: hyper protect crypto services architecture, service architecture, architecture diagram, workload isolation, crypto units, secure service container, ssc, public isolation for hyper protect crypto services, compute isolation for hyper protect crypto services
 
@@ -49,7 +49,7 @@ Management Utilities
 :   The Management Utilities are composed of the Smart Card Utility Program and the Trusted Key Entry (TKE) application, which provide GUI for you to initialize service instances. With signature keys and master key parts that are stored on smart cards, the Management Utilities provide an approach to initializing service instances with the highest level of security.
 
 TKE CLI plug-in
-:   A CLI plug-in working with {{site.data.keyword.cloud_notm}} CLI for you to initialize service instances. Depending on whether recovery crypto units are assigned to your instance, the plug-in provides two ways for instance initialization: by using recovery crypto units and by using workstation files.
+:   A CLI plug-in working with {{site.data.keyword.cloud_notm}} CLI for you to initialize service instances. Depending on whether recovery crypto units are assigned to your instance, the plug-in provides two ways for instance initialization: by using recovery crypto units and by using key part files.
 
 Operational crypto unit
 :   Each service instance is composed of multiple operational crypto units. The operational crypto units are located in different availability zones of the same region for high availability. They are used to manage encryption keys and perform cryptographic operations. The number of crypto units that you specify when you create your instance is the number of operational crypto units.
