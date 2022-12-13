@@ -125,6 +125,7 @@ toc:
           - link:
               label: "Using IBM Cloud Hyper Protect Crypto Services to offload NGINX TLS"
               href: https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-offload-nginx-tls/
+          links:
           - links:
               label: "Securely Managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator"
               href: https://developer.ibm.com/tutorials/securely-manage-aws-s3-encryption-keys-with-ibm-cloud-hyper-protect-crypto-services-with-unified-key-orchestrator/
