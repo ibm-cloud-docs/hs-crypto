@@ -28,8 +28,6 @@ subcollection: hs-crypto
 {:api: .ph data-hd-interface="api"}
 {:terraform: .ph data-hd-interface="terraform"}
 
-
-
 # Why can't I create vaults?
 {: #troubleshoot-create-vault}
 {: troubleshoot}
