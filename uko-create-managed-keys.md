@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-12-05"
+lastupdated: "2022-12-15"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -161,6 +161,9 @@ To create a managed key by using the console, complete the following steps:
 
 You have successfully created a managed key. 
 
+
+If you are creating internal KMS keys during the master key rotation, internal KMS keys can still be created successfully. However, an **Out of sync** flag is displayed next to the key state. For each of these keys, you can sync keys by selecting **Show details** on the Actions  ![Actions icon](../icons/action-menu-icon.svg "Actions")  menu and clicking **Sync keys** after the master key rotation is completed. 
+{: note}
 
 
 ## Creating managed keys with the API
