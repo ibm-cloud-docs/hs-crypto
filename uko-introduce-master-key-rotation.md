@@ -145,5 +145,3 @@ For more detailed instructions on options to rotate master keys, see:
 - [Rotating master keys by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards).
 - [Rotating master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit).
 - [Rotating master keys by using workstation files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
-
-
