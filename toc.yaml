@@ -219,8 +219,6 @@ toc:
               - uko-set-up-pkcs-api.md
               - uko-set-up-grep11-api.md
           - uko-terraform.md
-              topics:
-              - uko-recover-master-key.md
           - topicgroup:
               label: Managing vaults
               topics:
