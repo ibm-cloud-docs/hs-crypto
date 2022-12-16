@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-12-15"
+lastupdated: "2022-12-16"
 
 keywords: uko, rotate, rotate master key, rotate encryption key, rotate keys automatically, key rotation, rewrap data
 
@@ -27,6 +27,9 @@ After you load a master key to your {{site.data.keyword.hscrypto}} with {{site.d
 {: shortdesc}
 
 A master key is used to wrap encryption keys that are managed in the service instance. With the master key rotation, you retire the original master key and load a new master key that reencrypts the entire key storage.
+
+You can rotate your master key only when PKCS #11 keystores are not enabled in your service instance.
+{: important}
 
 ## How master key rotation works
 {: #uko-how-master-key-rotation-works}
@@ -123,9 +126,7 @@ The following flow shows how master key rotation progress is displayed in the {{
 
     * **System internal keys**: Displays the rewrapping progress of any system internal keys that are not accessible by the user, such as the key-encryption keys.
     * **{{site.data.keyword.cloud_notm}} KMS keys**: Displays the rewrapping progress of KMS keys that are stored in the internal KMS keystores.
-    * **EP11 keys**: Displays the rewrapping progress of EP11 keys stored in the EP11 keystores.
-
-    System internal keys usually finish rewrapping first while EP11 keys might take up to weeks to finish the rewrapping process.
+    
 
     If the only rewrapped keys are System internal keys, you can view the progress in the form of a percentage indicator under **Crypto units**. If multiple types of keys that need to be rewrapped, you can view the latest key-rewrapping progress by clicking the refresh button next to **Crypto units** or reloading the web page.
     {: tip}
