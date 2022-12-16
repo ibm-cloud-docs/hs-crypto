@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-12-15"
+lastupdated: "2022-12-16"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -30,7 +30,7 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 
 
-## 15 Dec 2022
+## 19 Dec 2022
 {: hs-crypto-dec2022}
 {: release-note}
 

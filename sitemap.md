@@ -459,7 +459,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
 
-* [15 Dec 2022](/docs/hs-crypto?topic=hs-crypto-what-new#15-dec-2022)
+* [19 Dec 2022](/docs/hs-crypto?topic=hs-crypto-what-new#19-dec-2022)
 
     * Added: Master key rotation support for {{site.data.keyword.uko_full_notm}}
 
