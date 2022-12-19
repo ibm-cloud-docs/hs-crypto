@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-25"
+lastupdated: "2022-12-19"
 
 keywords: Unified Key Orchestrator, view keys, key management, kms keys, UKO
 
@@ -47,12 +47,14 @@ To view a list of your keys by using the console, complete the following steps:
     |       Property	     |                         Description                       |
     |----------------------|-----------------------------------------------------------|
     | Name                 | The unique, human-readable name that is assigned to your key. |
+    | Version              | The version of the managed key. It is in the format of `V` plus the version number. For example, `V2` means that [the key was rotated](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys) once and this is the second version of the key material. |
     | ID                   | A string that uniquely identifies the key. |
     | Vault                | The vault that controls access to the managed key.           |
     | State                | Key states include _Pre-active_, _Active_, _Deactivated_, and _Destroyed_. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). \n \n If your key state is different from the key state in its target keystores, an **Out of sync** flag is displayed beside the state. There can be multiple reasons why the key state is out of sync. For example, you have deactivated the key in this target keystore before, or you activate the key through the CLI and the console doesn't reflect the state timely. When you hover over this flag, you can see the specific reason. You can sync keys by selecting **Show details** on the Actions  ![Actions icon](../icons/action-menu-icon.svg "Actions")  menu and clicking **Sync keys**. |
     | Activation date      | The date when the key gets activated, or the date on which you plan to activate the key. |
     | Expiration date      | The date when the key gets deactivated, or the date on which you plan to deactivate the key. |
     | Last updated         | The date and time when the key was last updated. This field gets updated when the key is created, edited, or any part of the key metadata is modified.   |
+    | Last rotated         | The date and time when the key was last rotated. If the key was not rotated before, it shows `Never`. |
     | Creation date        | Set a date range of when the key was created.             |
     | Keystores            | The target keystores where the key is activated.               |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
