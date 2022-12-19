@@ -402,6 +402,12 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_about_key_rotation1}
 
 
+[Managed key rotation](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#managed-key-rotation-intro)
+
+* [How managed key rotation works](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#how-managed-key-rotation-works)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#managed-key-rotation-next)
+
 
 ## Managing regulated workloads with {{site.data.keyword.hscrypto}}
 {: #sitemap_managing_regulated_workloads_with_}
@@ -728,6 +734,11 @@ Find what you are looking for in the compilation of topics that are available in
 * [Set up Db2 native encryption](/docs/hs-crypto?topic=hs-crypto-tutorial-db2-pkcs11#tutorial-db2-encrypt)
 
 * [Next steps](/docs/hs-crypto?topic=hs-crypto-tutorial-db2-pkcs11#tutorial-db2-summary)
+
+
+## Tutorials on Unified Key Orchestrator
+{: #sitemap_tutorials_on_unified_key_orchestrator}
+
 
 
 ## Provisioning service instances
@@ -1291,6 +1302,22 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-view-associated-resource#uko-view-associated-resource-next)
 
+[Rotating managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys#uko-rotate-keys)
+
+* [Rotating managed keys with the console](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys#uko-rotate-managed-key-gui)
+
+* [Rotating managed keys with the API](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys#uko-rotate-managed-key-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys#uko-rotate-keys-next)
+
+[Viewing managed key versions](/docs/hs-crypto?topic=hs-crypto-uko-view-key-versions#uko-view-key-versions)
+
+* [Viewing manage key versions with the console](/docs/hs-crypto?topic=hs-crypto-uko-view-key-versions#uko-view-key-versions-gui)
+
+* [Viewing managed key versions with the API](/docs/hs-crypto?topic=hs-crypto-uko-view-key-versions#uko-view-key-versions-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-view-key-versions#uko-view-key-versions-next)
+
 [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys#delete-managed-keys)
 
 * [Deleting managed keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys#delete-managed-keys-ui)
@@ -1661,6 +1688,8 @@ Find what you are looking for in the compilation of topics that are available in
 [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API change log](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-change-log)
 
 * [API versioning](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-versioning)
+
+* [December 2022](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-december-2022)
 
 * [October 2022](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-october-2022)
 
