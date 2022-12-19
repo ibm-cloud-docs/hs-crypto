@@ -91,11 +91,6 @@
         "date": "June 2022",
         "title": "Hyper Protect Crypto Services Unified Key Orchestrator CLI plug-in",
         "description": "With the command-line interface (CLI) support for Hyper Protect Crypto Services with the Unified Key Orchestrator plan, you can now manage vaults, keystores, and keys by using CLI commands."
-      }, 
-      {
-        "date": "February 2022",
-        "title": "Limited availability: Using Unified Key Orchestration to manage and orchestrate keys in a multicloud environment",
-        "description": "With Unified Key Orchestration, you can connect your service instance to keystores in third-party cloud providers, back up and manage keys using the unified system, and orchestrate keys across multiple clouds."
       }
     ]
   }

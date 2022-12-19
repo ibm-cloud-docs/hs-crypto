@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-12-06"
+lastupdated: "2022-12-19"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -133,6 +133,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Read managed key details. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
 | List managed keys. | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 | Write or edit managed key details. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
+| Rotate a managed key. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | |
 | Delete a managed key. | | | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | Generate key materials for a key. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | |
 | Distribute a key into assigned keystores. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
