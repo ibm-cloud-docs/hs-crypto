@@ -73,6 +73,11 @@
     "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
     "tiles": [
       {
+        "date": "December 2022",
+        "title": "Managed key rotation support for Unified Key Orchestrator",
+        "description": "You can now manually rotate a managed key in your Hyper Protect Crypto Services with Unified Key Orchestrator instance. Managed key rotation shortens the cryptoperiod of the keys and reduces the probability for a security breach."
+      },
+      {
         "date": "October 2022",
         "title": "Google Cloud Key Management Service (KMS) is now supported by Hyper Protect Crypto Services with Unified Key Orchestrator",
         "description": "With Hyper Protect Crypto Services with Unified Key Orchestrator, you can now create and manage Google Cloud KMS keys."
