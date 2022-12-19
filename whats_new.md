@@ -28,6 +28,14 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+## 19 Dec 2022
+{: hs-crypto-dec2022}
+{: release-note}
+
+
+
+Added: Managed key rotation support for {{site.data.keyword.uko_full_notm}}
+:   You can now manually rotate a managed key in your {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance. Managed key rotation shortens the cryptoperiod of the keys and reduces the probability for a security breach. For more information about how managed key rotation works, see [Managed key rotation](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro). For more information about the detailed instructions, see [Rotating managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys).
 
 
 ## 21 Nov 2022

@@ -449,6 +449,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
 
+* [19 Dec 2022](/docs/hs-crypto?topic=hs-crypto-what-new#19-dec-2022)
+
+    * Added: Managed key rotation support for {{site.data.keyword.uko_full_notm}}
+
 * [21 Nov 2022](/docs/hs-crypto?topic=hs-crypto-what-new#21-nov-2022)
 
     * Added: Managementy Utilities support for Red Hat Enterprise Linux 9.0 and Ubuntu 22.04.1 LTS
