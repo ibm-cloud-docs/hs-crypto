@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-12-16"
+lastupdated: "2022-12-19"
 
 keywords: site map, doc structure, information architecture
 
@@ -402,16 +402,6 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_about_key_rotation1}
 
 
-[Master key rotation](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-master-key-rotation-intro)
-
-* [How master key rotation works](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-how-master-key-rotation-works)
-
-* [How keys are protected during master key rotation](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-how-master-key-protect-rotation)
-
-* [How the {{site.data.keyword.cloud_notm}} console reflects master key rotation](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-how-console-display-progress)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-master-key-rotation-next)
-
 
 ## Managing regulated workloads with {{site.data.keyword.hscrypto}}
 {: #sitemap_managing_regulated_workloads_with_}
@@ -458,12 +448,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
-
-* [19 Dec 2022](/docs/hs-crypto?topic=hs-crypto-what-new#19-dec-2022)
-
-    * Added: Master key rotation support for {{site.data.keyword.uko_full_notm}}
-
-    * Added: Managed key rotation support for {{site.data.keyword.uko_full_notm}}
 
 * [21 Nov 2022](/docs/hs-crypto?topic=hs-crypto-what-new#21-nov-2022)
 

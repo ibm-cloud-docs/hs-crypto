@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-12-15"
+lastupdated: "2022-12-19"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -32,6 +32,9 @@ subcollection: hs-crypto
 
 You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance regularly to meet industry standards and cryptographic best practices. To rotate the master key using master key part files on your local workstation, follow these steps.
 {: shortdesc}
+
+Master key rotation is currently supported only by the {{site.data.keyword.hscrypto}} Standard Plan.
+{: note}
 
 Rotating the master key reencrypts the keys in key storage using the new master key value. After the keys in key storage are reencrypted, the value in the new master key register is promoted to the current master key register. Before you start rotating the master key, you need to do the following steps:
 
@@ -77,7 +80,7 @@ To rotate the master key by using key part files on your workstation, follow the
 
     When prompted, enter the master key parts to be loaded into the new master key register, the password for the signature key file to be used, and password for each selected key part file sequentially.
 
-    The new master key is now in `Full uncommited` state in the new master key register.
+    The new master key is now in `Full uncommitted` state in the new master key register.
 
     To load a new master key, you need to enter at least two master key parts. Make sure that at least one master key part is not used for the current master key. Otherwise, the same master key is generated and you are not able to load it to the new master key register.
     {: important}
@@ -91,7 +94,7 @@ To rotate the master key by using key part files on your workstation, follow the
 
     When prompted, enter the passwords for the signature key files to be used. A full set of signatures is required to enforce quorum authentication. 
 
-    The new master key is now in `Full commited` state in the new master key register.
+    The new master key is now in `Full committed` state in the new master key register.
 
 3. If you have any encryption keys that are encrypted with the current master key using the GREP11 API and are not stored in the {{site.data.keyword.hscrypto}} keystore, call the [RewrapKeyBlob GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-rewrapKeyBlob) to reencrypt the keys with the new master key.
 

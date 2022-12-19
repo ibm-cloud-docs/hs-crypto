@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-12-15"
+lastupdated: "2022-12-19"
 
 keywords: troubleshoot, problems, known issues, can't create vaults
 
@@ -28,6 +28,8 @@ subcollection: hs-crypto
 {:api: .ph data-hd-interface="api"}
 {:terraform: .ph data-hd-interface="terraform"}
 
+
+
 # Why can't I create vaults?
 {: #troubleshoot-create-vault}
 {: troubleshoot}
@@ -36,18 +38,16 @@ subcollection: hs-crypto
 You are not able to create a vault through either the {{site.data.keyword.hscrypto}} user interface or the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
-You might receive an error message similar to one of the following messages when you create a vault:
+You receive the following message when you try to create a vault:
 {: tsSymptoms}
 
->  The service was not able to create vault "vault-name" or the vault "vault-name" is not created.
+>  The service was not able to create vault "vault-name".
 
-It might be caused by one of the following reasons:
+You do not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions.
 {: tsCauses}
-* You do not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions.
-* The master key rotation is in progress. 
 
-Try the following solutions: 
+Verify with your administrator that you're assigned the _Vault Administrator_ role in the applicable resource group or service instance. For more information about roles, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles).
 {: tsResolve}
-* Verify with your administrator that you're assigned the _Vault Administrator_ role in the applicable resource group or service instance. For more information about roles, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles).
-* Try to create the vault again after the master key rotation is complete. For more information, see [Master key rotation](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro).
+
+
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-19"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -85,7 +85,7 @@ The following flow chart illustrates how the master key register state changes, 
 
 In the chart, each crypto unit loads the master key with the following steps:
 
-1. Load the new master key register with the master key. After the master key is loaded, the new master key register is in `Full uncommited` state.
+1. Load the new master key register with the master key. After the master key is loaded, the new master key register is in `Full uncommitted` state.
 2. Commit the new master key register. After it is committed, the new master key register is in `Full committed` state.
 3. Activate the current master key register. By doing so, the new master key register value is copied into the current master key register, and the new master key register is cleared.
 

@@ -86,8 +86,7 @@ toc:
               - uko-introduce-grep11.md
           - topicgroup:
               label: About key rotation
-              topics:
-              - uko-introduce-master-key-rotation.md
+              topics:   
               - uko-introduce-key-rotation.md
       - manage-regulated-workloads.md
       - integrate-services.md
