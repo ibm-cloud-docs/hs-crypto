@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-06-08"
+  years: 2022
+lastupdated: "2022-12-06"
 
 keywords: hsm, cloud hsm, tke cli, pkcs11, PKCS11 library, cryptographic operations, cryptographic functions, PKCS 11
 
@@ -154,8 +154,6 @@ Refer to the following table for detailed explanations of the relationship betwe
 | Normal user   | `TRUE` |`TRUE`  | Database-backed keystore  |Private |
 {: caption="Table 1. Cases of storing EP11 keys in different keystores" caption-side="bottom"}
 
-
-
 ## Post-quantum cryptography support
 {: #grep11-support-post-quantum}
 
@@ -167,4 +165,3 @@ The Dilithium algorithm is supported only by the {{site.data.keyword.IBM_notm}} 
 {: note}
 
 For more information about Dilithium algorithm support in PKCS #11, see [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref). You can also find Dilithium algorithm code examples in the [GitHub sample repository](https://github.com/IBM-Cloud/hpcs-pkcs11){: external}.
-

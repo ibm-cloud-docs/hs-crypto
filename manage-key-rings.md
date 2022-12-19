@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-12-02"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -72,7 +72,7 @@ You can create up to five keystores in a service instance for free, including ke
 Create a key ring with the console by completing the following steps:
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
-2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. To create a new key ring, select the **KMS key rings** tab in the side menu.
 5. In the **Key management service key rings** table, click **Add key ring**.
@@ -136,7 +136,7 @@ After transferring a key to a different key ring, it can take up to ten minutes 
 You can transfer a key to a different key ring with the console by completing the following steps:
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
-2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. Select the **KMS keys** tab in the side menu to open the **Keys** table.
 5. Find the key that you want to transfer from the list and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open the option list.
@@ -277,7 +277,7 @@ You can browse the key rings that are managed in your provisioned instance of {{
 To browse the key rings with the console, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
-2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. To browse the key rings, select the **KMS key rings** tab in the side menu.
 
@@ -362,7 +362,7 @@ The `default` key ring cannot be deleted. You are also not able to delete a key 
 To delete a key ring with the console, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
-2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. Select the **KMS key rings** tab in the side menu to browse the key rings.
 5. Find the key ring that you want to delete and click the **Deletion** icon ![Deletion icon](../icons/delete.svg "Deletion") at the end of the row.

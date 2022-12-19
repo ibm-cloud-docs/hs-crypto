@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-06-08"
+  years: 2022
+lastupdated: "2022-12-06"
 
 keywords: hsm, cloud hsm, tke cli, trusted key entry plug-in, ep11, grep11, cryptographic operations, cryptographic functions
 
@@ -56,8 +56,6 @@ The following diagram shows the three calling sequence flows of GREP11 functions
 
 ![GREP11 functions calling flow for encryption](/images/grep11-encryption-flow.svg "GREP11 functions calling flow for encryption"){: caption="Figure 1. Three calling flows of GREP11 functions for encryption" caption-side="bottom"}
 
-
-
 ## Post-quantum cryptography support
 {: #grep11-support-post-quantum}
 
@@ -71,4 +69,3 @@ The Dilithium algorithm is supported only by the {{site.data.keyword.IBM_notm}} 
 For more information about Dilithium algorithm support in GREP11, see [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref). You can also find Dilithium algorithm code examples in the following repositories:
 - [The sample GREP11 GitHub repository for Golang](https://github.com/IBM-Cloud/hpcs-grep11-go){: external}
 - [The sample GREP11 GitHub repository for JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js){: external}
-

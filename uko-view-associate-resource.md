@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-07-18"
+lastupdated: "2022-11-25"
 
 keywords: associate resource, key associated resource
 
@@ -29,7 +29,7 @@ subcollection: hs-crypto
 You can view other {{site.data.keyword.cloud}} resources that are protected by managed keys with [envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption) by using the {{site.data.keyword.cloud_notm}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
-Currently, envelope encryption applies to IBM KMS keys and IBM Key Protect keys. Therefore, you can view resources that are associated with these keys only.
+Currently, envelope encryption applies to IBM Cloud KMS keys and IBM Key Protect keys. Therefore, you can view resources that are associated with these keys only.
 {: note}
 
 ## Viewing associated resources with the {{site.data.keyword.cloud_notm}} console

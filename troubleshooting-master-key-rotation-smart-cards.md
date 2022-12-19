@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2022-12-12"
 
 keywords: failed master key rotation, failed to use smart cards to rotate master keys, failed to use the Management Utilities to rotate master keys, master key rotation failure, troubleshoot master key rotation failure
 
@@ -39,7 +39,7 @@ When you run smart cards and the Management Utilities to rotate master keys, you
 During master key rotation, the new master key registers are loaded with the new master key value to be used. The contents of key storage are reencrypted by using the current and new master key values. When the reencryption of key storage is complete, the new master key value is promoted to the current master key registers and the new master key registers are cleared.
 {: tsSymptoms}
 
-For detailed instructions on how to rotate the master key, see [Rotating master keys by using workstation files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
+For detailed instructions on how to rotate the master key, see [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
 
 If an error occurs during master key rotation, the action you take to recover depends on how much of the process is completed. An incorrect recovery action can cause the master key value for key storage to be lost and contents of key storage to become unusable. You need to carefully check the command output before the error occurred to determine what recovery action to take.
 
@@ -52,7 +52,7 @@ The following initial conditions can be reported as an error when you click the 
 * Signature thresholds on the crypto units are not set the same.
 * A common set of administrators is not selected and installed in all crypto units large enough to meet the signature threshold value.
 * The current master key registers are not all in the `Valid` state with the same verification pattern.
-* When you rotate your master key by using workstation files, the new master key registers are not all in the `Valid` state with the same verification pattern.
+* When you rotate your master key by using key part files, the new master key registers are not all in the `Valid` state with the same verification pattern.
 
 Operational workloads cannot be run until master key rotation has completed.
 

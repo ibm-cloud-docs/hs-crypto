@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-12-19"
 
 keywords: troubleshoot, problems, known issues, can't create vaults
 
@@ -28,6 +28,8 @@ subcollection: hs-crypto
 {:api: .ph data-hd-interface="api"}
 {:terraform: .ph data-hd-interface="terraform"}
 
+
+
 # Why can't I create vaults?
 {: #troubleshoot-create-vault}
 {: troubleshoot}
@@ -39,10 +41,13 @@ You are not able to create a vault through either the {{site.data.keyword.hscryp
 You receive the following message when you try to create a vault:
 {: tsSymptoms}
 
->  The service was not able to create vault "<vault-name>".
+>  The service was not able to create vault "vault-name".
 
 You do not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions.
 {: tsCauses}
 
 Verify with your administrator that you're assigned the _Vault Administrator_ role in the applicable resource group or service instance. For more information about roles, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles).
 {: tsResolve}
+
+
+

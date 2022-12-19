@@ -19,7 +19,7 @@
       "href": "/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit"
     },
     {
-      "title": "Initialize service instances using workstation files",
+      "title": "Initialize service instances using key part files",
       "description": "You can also initialize your service instance using master key parts that are stored in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. ",
       "href": "/docs/hs-crypto?topic=hs-crypto-initialize-hsm"
     }
@@ -72,6 +72,11 @@
   "section_updates": {
     "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
     "tiles": [
+      {
+        "date": "December 2022",
+        "title": "Managed key rotation support for Unified Key Orchestrator",
+        "description": "You can now manually rotate a managed key in your Hyper Protect Crypto Services with Unified Key Orchestrator instance. Managed key rotation shortens the cryptoperiod of the keys and reduces the probability for a security breach."
+      },
       {
         "date": "October 2022",
         "title": "Google Cloud Key Management Service (KMS) is now supported by Hyper Protect Crypto Services with Unified Key Orchestrator",

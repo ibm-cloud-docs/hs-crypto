@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-11-25"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystore, key management, access control
 

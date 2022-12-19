@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-17"
+lastupdated: "2022-12-06"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 
@@ -159,7 +159,6 @@ The initiator ID is derived from the TLS (Transport Layer Security) certificate 
 | `hs-crypto.kmip-key.destroy` | A KMIP key is destroyed. |
 {: caption="Table 8. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
 
-
 ### EP11 keystore events
 {: uko-ep11-keystore-events}
 
@@ -185,7 +184,6 @@ The following table lists the EP11 crypto actions that generate an event:
 |--------------------------------------------|------------------------------------------|
 | `hs-crypto.ep11.use` |	Cryptographic operation |
 {: caption="Table 10. EP11 crypto actions" caption-side="top"} 
-
 
 
 ## Viewing events
@@ -409,7 +407,6 @@ The following fields include extra information:
 - The `requestData.certificateId` field indicates the target mTLS certificate.
 - The `responseData.action` field indicates that the certificate is to be deleted.
 
-
 ### EP11 keystore events
 {: uko-ep11-keystore}
 
@@ -437,7 +434,6 @@ The following table lists the returned values that indicate a successful EP11 cr
 | reason.reasonCode	| 200 |
 | reason.reasonType	| OK |
 {: caption="Table 16. Returned values of a successful EP11 crypto event" caption-side="bottom"}
-
 
 
 ## Analyzing failed events
@@ -485,16 +481,12 @@ The severity level for all TKE events is `critical` due to the sensitivity of th
 
 The following table lists the actions that are associated with each severity level.
 
-
-
-
 | Severity | Actions |
 | --- | --- |
 | Critical | `hs-crypto.target-keystores.delete` \n \n `hs-crypto.managed-keys.delete` \n \n `hs-crypto.vaults.delete` \n \n `hs-crypto.registrations.delete` \n \n `hs-crypto.tke-cryptounit-admin.add` \n \n `hs-crypto.tke-cryptounit-admin.remove` \n \n `hs-crypto.tke-cryptounit-current-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-new-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-master-key-register.add` \n \n `hs-crypto.tke-cryptounit-master-key-register.commit` \n \n `hs-crypto.tke-cryptounit-master-key-register.activate` \n \n `hs-crypto.tke-cryptounit-threshold.set` \n \n `hs-crypto.tke-cryptounit.reset` \n \n `hs-crypto.mtlscert-admin-key.create` \n \n `hs-crypto.mtlscert-admin-key.update` \n \n `hs-crypto.mtlscert-admin-key.delete` \n \n `hs-crypto.mtlscert-cert.set` \n \n `hs-crypto.mtlscert-cert.set` \n \n `hs-crypto.keystore.deletekey` \n \n `hs-crypto.keystore.deletekeystore` \n \n `hs-crypto.keystore.updatekey` |
 | Warning | `hs-crypto.managed-keys.write` \n \n Note that when this event is triggered to change the key state to `destroyed`, the severity level is `Critical` instead of `Warning`. |
 | Normal | `hs-crypto.managed-keys.list` \n \n `hs-crypto.managed-keys.read` \n \n `hs-crypto.target-keystores.write` \n \n `hs-crypto.target-keystores.list` \n \n `hs-crypto.target-keystores.read` \n \n `hs-crypto.vaults.list` \n \n `hs-crypto.vaults.write` \n \n `hs-crypto.vaults.read` \n \n `hs-crypto.keystore.createkeystore` \n \n `hs-crypto.keystore.listkeysbyattributes` \n \n `hs-crypto.keystore.listkeysbyids` \n \n `hs-crypto.keystore.listkeystoresbyattributes` \n \n `hs-crypto.keystore.listkeystoresbyids` \n \n `hs-crypto.keystore.storenewkey` \n \n `hs-crypto.ep11.use` |
 {: caption="Table 17. Severity level for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
-
 
 The following table lists the status codes that are associated with each severity level.
 

@@ -76,18 +76,18 @@ toc:
           - topicgroup:
               label: About Unified Key Orchestrator
               topics:
-              - introduce-uko.md
+              - uko-introduction.md
               - uko-key-states.md
-          - topicgroup:
-              label: About internal key management service
-              topics:
-              - kms-envelope-encryption.md
           - topicgroup:
               label: About cloud hardware security module
               topics:
               - uko-introduce-hsm.md
               - uko-introduce-pkcs11.md
               - uko-introduce-grep11.md
+          - topicgroup:
+              label: About key rotation
+              topics:   
+              - uko-introduce-key-rotation.md
       - manage-regulated-workloads.md
       - integrate-services.md
       - topic: whats_new.md
@@ -129,6 +129,13 @@ toc:
           - link:
               label: "Using IBM Cloud Hyper Protect Crypto Services to offload NGINX TLS"
               href: https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-offload-nginx-tls/
+          links:
+          - link:
+              label: "Securely Managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator"
+              href: https://developer.ibm.com/tutorials/securely-manage-aws-s3-encryption-keys-with-ibm-cloud-hyper-protect-crypto-services-with-unified-key-orchestrator/
+          - link:
+              label: "Manage regulatory compliance of company data in Microsoft 365 with Hyper Protect Unified Key Orchestrator"
+              href: https://developer.ibm.com/tutorials/manage-regulatory-compliance-of-company-data-in-microsoft-office-365-in-azure/
 
   - navgroup:
       id: howto
@@ -147,14 +154,14 @@ toc:
           - initialize-hsm-cli.md
           - signing-service.md
       - topicgroup:
-          label: Managing keys - Standard Plan
+          label: Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan
           topics:
           - topicgroup:
-            label: Managing instance policies
-            topics:
-            - settings-network-policy.md
-            - settings-dual-auth.md
-            - settings-key-create-import-access.md
+              label: Managing instance policies
+              topics:
+              - settings-network-policy.md
+              - settings-dual-auth.md
+              - settings-key-create-import-access.md
           - retrieve-access-token.md
           - retrieve-instance-id.md
           - topicgroup:
@@ -166,13 +173,6 @@ toc:
               - enable-mtls.md
           - set-up-cli.md
           - terraform.md
-          - topicgroup:
-              label: Managing master keys
-              topics:
-              - rotate-master-key-smart-cards.md
-              - rotate-master-key-recovery-crypto-unit.md
-              - rotate-master-key-key-files.md
-              - recover-master-key.md
           - topicgroup:
               label: Managing key management service keys
               topics:
@@ -207,47 +207,50 @@ toc:
               - manage-pkcs11-keystores.md
               - manage-pkcs11-keys.md
       - topicgroup:
-          label: Managing keys, keystores, and vaults - Unified Key Orchestrator Plan
+          label: Managing KMS keys, keystores, and vaults - Unified Key Orchestrator Plan
           topics:
           - uko-retrieve-access-token.md
           - uko-retrieve-instance-id.md
           - topicgroup:
               label: Setting up API calls
               topics:
-              - set-up-uko-api.md
-              - set-up-uko-kms-api.md
+              - uko-set-up-api.md
+              - uko-set-up-kms-api.md
               - uko-set-up-pkcs-api.md
               - uko-set-up-grep11-api.md
           - uko-terraform.md
           - topicgroup:
-              label: Managing master keys
-              topics:
-              - uko-recover-master-key.md
-          - topicgroup:
               label: Managing vaults
               topics:
-              - create-vaults.md
-              - edit-vaults.md
-              - delete-vaults.md
+              - uko-create-vaults.md
+              - uko-edit-vaults.md
+              - uko-delete-vaults.md
           - topicgroup:
               label: Managing keys
               topics:
-              - create-managed-keys.md
-              - view-key-list.md
-              - search-key-list.md
-              - edit-kms-keys.md
-              - install-key-keystores.md
+              - uko-create-managed-keys.md
+              - uko-view-key-list.md
+              - uko-search-key-list.md
+              - uko-edit-kms-keys.md
+              - uko-install-key-keystores.md
               - uko-view-associate-resource.md
-              - delete-managed-keys.md
+              - uko-delete-managed-keys.md
           - topicgroup:
               label: Managing keystores
               topics:
-              - create-internal-keystores.md
-              - connect-external-keystores.md
-              - edit-internal-keystores.md
-              - edit-external-keystore-connection.md
-              - delete-internal-keystores.md
-              - disconnect-external-keystores.md
+              - uko-create-internal-keystores.md
+              - uko-connect-external-keystores.md
+              - uko-edit-internal-keystores.md
+              - uko-edit-external-keystore-connection.md
+              - uko-delete-internal-keystores.md
+              - uko-disconnect-external-keystores.md
+      - topicgroup:
+          label: Managing master keys
+          topics:
+          - rotate-master-key-smart-cards.md
+          - rotate-master-key-recovery-crypto-unit.md
+          - rotate-master-key-key-files.md
+          - recover-master-key.md
       - enable-mechanisms.md
       - add-remove-crypto-units.md
       - enable-failover.md
@@ -274,7 +277,7 @@ toc:
           label: Enhancing security - Unified Key Orchestrator Plan
           topics:
           - uko-manage-access.md
-          - grant-access-vaults.md
+          - uko-grant-access-vaults.md
           - uko-role-best-practices.md
           - uko-at-events.md
       - topicgroup:
@@ -384,12 +387,11 @@ toc:
       - topicgroup:
           label: Troubleshooting Unified Key Orchestrator
           topics:
-          - troubleshooting-import-azure-key.md
-          - troubleshooting-create-internal-keystores.md
-          - troubleshooting-create-vault.md
-          - troubleshooting-delete-vault.md
-          - troubleshooting-delete-keystore.md
-          - troubleshooting-master-key-rotation-uko.md
-          - troubleshooting-azure-delay.md
+          - uko-troubleshooting-import-azure-key.md
+          - uko-troubleshooting-create-internal-keystores.md
+          - uko-troubleshooting-create-vault.md
+          - uko-troubleshooting-delete-vault.md
+          - uko-troubleshooting-delete-keystore.md
+          - uko-troubleshooting-azure-delay.md
       - support.md
       - sitemap.md

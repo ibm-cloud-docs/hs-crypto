@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-12-19"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,6 +27,16 @@ content-type: release-note
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+## 19 Dec 2022
+{: hs-crypto-dec2022}
+{: release-note}
+
+
+
+Added: Managed key rotation support for {{site.data.keyword.uko_full_notm}}
+:   You can now manually rotate a managed key in your {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance. Managed key rotation shortens the cryptoperiod of the keys and reduces the probability for a security breach. For more information about how managed key rotation works, see [Managed key rotation](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro). For more information about the detailed instructions, see [Rotating managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys).
+
 
 ## 21 Nov 2022
 {: hs-crypto-nov2022}
@@ -70,8 +80,6 @@ Added: Go SDK and Terraform support for {{site.data.keyword.uko_full_notm}}
 
     With the Terraform support for {{site.data.keyword.uko_full_notm}}, you can now automate actions, such as managing vaults, keystores, key templates, and keys, by using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs).
 
-
-
 ## 8 June 2022
 {: #hs-crypto-8june2022}
 {: release-note}
@@ -79,16 +87,12 @@ Added: Go SDK and Terraform support for {{site.data.keyword.uko_full_notm}}
 Added: Post-quantum cryptography support {: #add-pqc}
 :   With the GREP11 API and the PKCS #11 API, you can now perform [post-quantum cryptographic](https://en.wikipedia.org/wiki/Post-quantum_cryptography){: external} operations to protect your data against attacks from quantum computers. Currently, we support the Dilithium algorithm. For more information, see [Post-quantum cryptography support in GREP11](/docs/hs-crypto?topic=hs-crypto-grep11-intro#grep11-support-post-quantum) and [Post-quantum cryptography support in PKCS #11](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#grep11-support-post-quantum).
 
-
-
-
 ## 3 June 2022
 {: #hs-crypto-3june2022}
 {: release-note}
 
 Added: {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in {: #add-uko-cli}
 :   With the command-line interface (CLI) support for {{site.data.keyword.hscrypto}} with the {{site.data.keyword.uko_full_notm}} plan, you can now manage vaults, keystores, and keys by using CLI commands. For more information about these commands, see [{{site.data.keyword.uko_full_notm}} CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#uko-cli-plugin).
-
 
 
 ## 1 April 2022
@@ -193,7 +197,7 @@ Added: Using Terraform to initialize the {{site.data.keyword.hscrypto}} instance
 :   With the integration with Terraform, now you can initialize your service instance using Terraform, and then automate actions using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs) and the [Terraform documentation - Hyper Protect Crypto Services](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs){: external}.
 
 Added: Using a signing service to manage signature keys for instance initialization {: #add-signing-service}
-:   If you are using Terraform or workstation files to initialize a service instance, you can now choose to use a third-party signing service to create, store, and manage the administrator signature keys that are used by Terraform or the Trusted Key Entry (TKE) CLI plug-in. For more information, see [Using a signing service to manage signature keys for instance initialization](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key).
+:   If you are using Terraform or key part files to initialize a service instance, you can now choose to use a third-party signing service to create, store, and manage the administrator signature keys that are used by Terraform or the Trusted Key Entry (TKE) CLI plug-in. For more information, see [Using a signing service to manage signature keys for instance initialization](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key).
 
 ## 30 June 2021
 {: #hs-crypto-june2021}
@@ -213,9 +217,9 @@ Added: {{site.data.keyword.hscrypto}} expands into the London region {: #add-lon
 {: release-note}
 
 Added: Rotating your master key by using smart cards and the Management Utilities {: #add-master-key-rotation-smart-cards}
-:   Besides rotating your master key [using workstation files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part) and [using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit), you can now also rotate the master key if you are using smart cards and the Management Utilities.
+:   Besides rotating your master key [using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part) and [using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit), you can now also rotate the master key if you are using smart cards and the Management Utilities.
 
-    For detailed instructions, see [Rotating master keys by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards). For more information about how master key rotation works, see [Rotating master keys by using workstation files](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#how-master-key-rotation-works-use-key-parts).
+    For detailed instructions, see [Rotating master keys by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards). For more information about how master key rotation works, see [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#how-master-key-rotation-works-use-key-parts).
 
 Updated: Restore key API and UI {: #update-restore-key-api-ui}
 :   Now you can restore keys that were deleted within 30 days without providing any key materials. All root keys and standard keys, whether generated by {{site.data.keyword.hscrypto}} or imported by you, can be restored. For more information, see [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys).
@@ -228,7 +232,7 @@ Added: Grouping keys by using key rings {: #add-key-ring}
 :   You can now group the keys in your {{site.data.keyword.hscrypto}} instance by creating a key ring. In this case, you can manage keys and control access at the key ring level. For how to use key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
 
 Added: Initializing the service instance by using recovery crypto units {: #add-recovery-crypto-units}
-:   Besides using smart cards and the Hyper Protect Crypto Services Management Utilities and using workstation files, you can now also initialize your service instance by using recover crypto units in the Dallas (`us-south`) and Washington DC (`us-east`) regions.
+:   Besides using smart cards and the Hyper Protect Crypto Services Management Utilities and using key part files, you can now also initialize your service instance by using recover crypto units in the Dallas (`us-south`) and Washington DC (`us-east`) regions.
 
     When you provision a service instance in either of the Dallas or Washington DC region, two recovery units are automatically assigned without extra costs. A random master key value is automatically generated in a recovery crypto unit and copied to the other crypto units for the service instance. The master key value never appears in the clear outside of the HSMs.
 

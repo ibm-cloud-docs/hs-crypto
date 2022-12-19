@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-06-10"
+lastupdated: "2022-12-19"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -34,7 +34,7 @@ As a _Vault Administrator_, you can bundle the keys and keystores in your {{site
 
 Vaults are also useful in cases where it is important for one business unit to have access to a set of keys and keystores that another business unit cannot have. An account administrator can create vaults for each business unit and [assign the appropriate level of access](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults) to the appropriate users. In the case where the account administrator wants to delegate platform management of a specific vault to someone else, they can assign a user a [Vault Administrator role](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles). The sub-administrator is then able to manage the vault and grant access to the appropriate users.
 
-Before you create a vault for your {{site.data.keyword.hscrypto}} instance, keep in mind the following considerations:
+Before you create a vault for your {{site.data.keyword.hscrypto}} instance, keep in mind of the following considerations:
 
 - Vaults can hold KMS keys and keystores, but not EP11 keys and keystores.
 

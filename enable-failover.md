@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2022-12-12"
 
 keywords: failover crypto unit, add failover crypto units, enable failover, enable cross-region recovery
 
@@ -134,7 +134,7 @@ To enable or add failover crypto units by using the {{site.data.keyword.cloud_no
 4. Initialize failover crypto units by using the same master key for the operational crypto units initialization and the same initialization approach:
 
     - [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
-    - [Initializing service instances by using workstation files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+    - [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
     
     To initialize your service instances using recovery crypto units, you need to install administrators, set the signature thresholds, and load the current master key register. Select the failover crypto units to be initialized, and use the following TKE plug-in commands:
 
@@ -203,7 +203,7 @@ To enable or add failover crypto units by using the Management Utilities, follow
 4. Initialize failover crypto units by using the same master key for the operational crypto units initialization and the same initialization approach:
 
     - [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
-    - [Initializing service instances by using workstation files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+    - [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
 
     You need to initialize failover crypto units before you use them for a regional disaster recovery. It is suggested you initialize the failover crypto units right after you enable them for your service instance.
     {: note}

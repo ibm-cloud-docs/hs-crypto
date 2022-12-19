@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-12-02"
 
 keywords: create key alias, key alias, delete key alias, add key alias, retrieve encryption key by alias, create alias API examples
 
@@ -67,7 +67,7 @@ Each key can have up to five aliases. It is limited to 1,000 aliases per instanc
 Create a key alias with the console by completing the following steps:
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
-2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. Select the **KMS keys** tab in the side menu and find the key that you want to create key aliases for.
 5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open the list of options for the key and click **Edit key aliases**.
@@ -157,7 +157,7 @@ To remove a key alias for a key, you can use either the console or the key manag
 Delete a key alias with the console by completing the following steps:
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
-2. Go to **Menu** &gt; **Resource List** to view a list of your resources.
+2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. Select the **KMS keys** tab in the side menu and find the key that you want to create key aliases for.
 5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open the list of options for the key and click **Edit key aliases**.

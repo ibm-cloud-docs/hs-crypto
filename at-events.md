@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-11-17"
+lastupdated: "2022-12-06"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -181,7 +181,6 @@ The initiator ID is derived from the TLS (Transport Layer Security) certificate 
 | `hs-crypto.kmip-key.destroy` | A KMIP key is destroyed. |
 {: caption="Table 9. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
 
-
 ### EP11 keystore events
 {: ep11-keystore-events}
 
@@ -207,7 +206,6 @@ The following table lists the EP11 crypto actions that generate an event:
 |--------------------------------------------|------------------------------------------|
 | `hs-crypto.ep11.use` |	Cryptographic operation |
 {: caption="Table 11. EP11 crypto actions" caption-side="top"} 
-
 
 ## Viewing events
 {: #at-ui}
@@ -623,7 +621,6 @@ The following fields include extra information:
 - The `requestData.certificateId` field indicates the target mTLS certificate.
 - The `responseData.action` field indicates that the certificate is to be deleted.
 
-
 ### EP11 keystore events
 {: ep11-keystore}
 
@@ -651,7 +648,6 @@ The following table lists the returned values that indicate a successful EP11 cr
 | reason.reasonCode	| 200 |
 | reason.reasonType	| OK |
 {: caption="Table 19. Returned values of a successful EP11 crypto event" caption-side="bottom"}
-
 
 ## Analyzing failed events
 {: #at-events-analyze-failed}
@@ -722,10 +718,6 @@ The severity level for all TKE events is `critical` due to the sensitivity of th
 {: important}
 
 The following table lists the actions that are associated with each severity level:
-
-
-
-
 
 | Severity | Actions |
 | --- | --- |

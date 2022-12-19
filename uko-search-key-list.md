@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-31"
+lastupdated: "2022-11-25"
 
 keywords: Unified Key Orchestrator, search keys, key management, kms keys
 
@@ -50,7 +50,8 @@ To filter keys by using the console, complete the following steps:
     | Activation           | Set a date range of when you activate the key.  |
     | Expiration           | Set a date range of when you deactivate the key.  |
     | Creation             | Set a date range of when the key was created.             |
-    | Keystores            | The keystores that the key is activated in.               |
+    | Keystore types       | The type of keystore where the key is stored. |
+    | Keystores            | The keystores that the key is activated in.        |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Minimum key length   | The minimum number of bits that represents the encryption strength of the key.   |
     | Maximum key length   | The maximum number of bits that represents the encryption strength of the key.   |

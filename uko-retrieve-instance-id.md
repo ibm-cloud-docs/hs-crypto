@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-04-21"
+  years: 2022
+lastupdated: "2022-12-02"
 
 keywords: service id, service ids, instance id, get instance id, get instance guid, instance id api, instance id cli
 
@@ -36,7 +36,7 @@ You can target an individual {{site.data.keyword.cloud}} {{site.data.keyword.hsc
 You can view the instance ID that is associated with your {{site.data.keyword.hscrypto}} service instance by navigating to your {{site.data.keyword.cloud_notm}} resource list.
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external}.
-2. Go to **Menu** &gt; **Resource List**, and then click **Services** to browse a list of your cloud services.
+2. Go to **Menu** &gt; **Resource list**, and then click **Services** to browse a list of your cloud services.
 3. Click the table row that describes your {{site.data.keyword.hscrypto}} service instance.
 4. Go to **Overview** &gt; **Instance**, and copy the **Instance ID** value.
 

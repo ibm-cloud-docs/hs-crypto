@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-12-19"
 
 keywords: site map, doc structure, information architecture
 
@@ -200,7 +200,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit)
 
-* [Initializing service instances by using workstation files](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-key-files)
+* [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-key-files)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#initialize-instance-mode-next)
 
@@ -349,7 +349,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-instance-initialization-recovery-crypto-unit)
 
-* [Initializing service instances by using workstation files](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-instance-initialization-key-files)
+* [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-instance-initialization-key-files)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-initialize-instance-mode-next)
 
@@ -377,23 +377,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-key-states#uko-key-states-next)
 
 
-### About internal key management service
-{: #sitemap_about_internal_key_management_service}
-
-
-[Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-envelope-encryption)
-
-* [Keys in envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-key-types)
-
-* [How it works](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-envelope-encryption-overview)
-
-* [Wrapping keys](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-wrapping)
-
-* [Unwrapping keys](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-unwrapping)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption#kms-envelope-encryption-next)
-
-
 ### About cloud hardware security module
 {: #sitemap_about_cloud_hardware_security_module1}
 
@@ -413,6 +396,11 @@ Find what you are looking for in the compilation of topics that are available in
 [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro#uko-grep11-intro)
 
 * [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro#grep11-support-post-quantum)
+
+
+### About key rotation
+{: #sitemap_about_key_rotation1}
+
 
 
 ## Managing regulated workloads with {{site.data.keyword.hscrypto}}
@@ -460,6 +448,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [19 Dec 2022](/docs/hs-crypto?topic=hs-crypto-what-new#19-dec-2022)
+
+    * Added: Managed key rotation support for {{site.data.keyword.uko_full_notm}}
 
 * [21 Nov 2022](/docs/hs-crypto?topic=hs-crypto-what-new#21-nov-2022)
 
@@ -792,11 +784,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit#initialize-hsm-recovery-crypto-unit-whats-next)
 
-[Initializing service instances using workstation files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm)
+[Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm)
 
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm-cli-prerequisite)
 
-* [Adding or removing crypto units that are assigned to service instances](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#identify_crypto_units)
+* [Selecting target crypto units for service initialization](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#identify_crypto_units)
 
 * [Loading master keys](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#load-master-keys)
 
@@ -811,8 +803,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key#signing-service-whats-next)
 
 
-## Managing keys - Standard Plan
-{: #sitemap_managing_keys_-_standard_plan}
+## Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan
+{: #sitemap_managing_root_keys,_standard_keys,_and_ep11_keys_and_keystores_-_standard_plan}
 
 
 
@@ -926,41 +918,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Example: Provisioning and initializing service instances by using Terraform](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs#terraform-provision-initialize-instance-hpcs)
 
 * [What's next?](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs#terraform-setup-hpcs-next)
-
-
-### Managing master keys
-{: #sitemap_managing_master_keys}
-
-
-[Rotating master keys by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards#rotate-master-key-smart-cards)
-
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards#rotate-master-key-smart-cards-prerequisites)
-
-* [Rotating master keys using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards#rotate-master-key-smart-cards-steps)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards#rotate-master-key-smart-cards-next)
-
-[Rotating master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit#rotate-master-key-cli-recovery-crypto-unit)
-
-* [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit#rotate-master-key-cli-recovery-crypto-unit-steps)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit#rotate-master-key-cli-recovery-crypto-unit-next)
-
-[Rotating master keys by using workstation files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part)
-
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-prerequisites)
-
-* [Rotating master keys by using workstation files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-steps)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-next)
-
-[Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit#recover-master-key-recovery-crypto-unit)
-
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit#recover-master-key-prerequisites)
-
-* [Recovering master keys](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit#recover-master-key-step)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit#recover-master-key-next)
 
 
 ### Managing key management service keys
@@ -1183,8 +1140,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui#manage-ep11-key-ui-next)
 
 
-## Managing keys, keystores, and vaults - Unified Key Orchestrator Plan
-{: #sitemap_managing_keys,_keystores,_and_vaults_-_unified_key_orchestrator_plan}
+## Managing KMS keys, keystores, and vaults - Unified Key Orchestrator Plan
+{: #sitemap_managing_kms_keys,_keystores,_and_vaults_-_unified_key_orchestrator_plan}
 
 
 [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token#uko-retrieve-access-token)
@@ -1249,19 +1206,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Example: Provisioning and initializing service instances by using Terraform](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs#uko-terraform-provision-initialize-instance-hpcs)
 
 * [What's next?](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs#uko-terraform-setup-hpcs-next)
-
-
-### Managing master keys
-{: #sitemap_managing_master_keys1}
-
-
-[Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-uko-recover-master-key-recovery-crypto-unit#uko-recover-master-key-recovery-crypto-unit)
-
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-uko-recover-master-key-recovery-crypto-unit#uko-recover-master-key-prerequisites)
-
-* [Recovering master keys](/docs/hs-crypto?topic=hs-crypto-uko-recover-master-key-recovery-crypto-unit#uko-recover-master-key-step)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-recover-master-key-recovery-crypto-unit#uko-recover-master-key-next)
 
 
 ### Managing vaults
@@ -1411,6 +1355,41 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores#disconnect-external-keystores-next)
 
 
+## Managing master keys
+{: #sitemap_managing_master_keys}
+
+
+[Rotating master keys by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards#rotate-master-key-smart-cards)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards#rotate-master-key-smart-cards-prerequisites)
+
+* [Rotating master keys using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards#rotate-master-key-smart-cards-steps)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards#rotate-master-key-smart-cards-next)
+
+[Rotating master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit#rotate-master-key-cli-recovery-crypto-unit)
+
+* [Rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit#rotate-master-key-cli-recovery-crypto-unit-steps)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit#rotate-master-key-cli-recovery-crypto-unit-next)
+
+[Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-prerequisites)
+
+* [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-steps)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part#rotate-master-key-cli-key-part-next)
+
+[Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit#recover-master-key-recovery-crypto-unit)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit#recover-master-key-prerequisites)
+
+* [Recovering master keys](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit#recover-master-key-step)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit#recover-master-key-next)
+
+
 ## Enabling crypto mechanisms
 {: #sitemap_enabling_crypto_mechanisms}
 
@@ -1458,11 +1437,15 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Deleting service instances](/docs/hs-crypto?topic=hs-crypto-delete-instance#delete-instance)
 
-* [Step 1: Zeroize crypto units](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step)
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-delete-instance#delete-instance-prerequisite)
 
-* [Step 2: Optional - Uninstall the {{site.data.keyword.hscrypto}} utilities](/docs/hs-crypto?topic=hs-crypto-delete-instance#uninstall-utilities-step)
+* [Step 1: Select the crypto units to be deleted](/docs/hs-crypto?topic=hs-crypto-delete-instance#select-crypto-unit-step)
 
-* [Step 3: Delete your service instance](/docs/hs-crypto?topic=hs-crypto-delete-instance#delete-instance-step)
+* [Step 2: Zeroize crypto units](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step)
+
+* [Step 3: Optional - Uninstall the {{site.data.keyword.hscrypto}} utilities](/docs/hs-crypto?topic=hs-crypto-delete-instance#uninstall-utilities-step)
+
+* [Step 4: Delete your service instance](/docs/hs-crypto?topic=hs-crypto-delete-instance#delete-instance-step)
 
 
 ## Restoring your data from another region
@@ -1804,7 +1787,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Considerations for defining the Management Utilities security policy](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy#smart-card-security-plan)
 
-* [Considerations for defining the workstation file security policy](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy#file-security-plan)
+* [Considerations for defining the file security policy](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy#file-security-plan)
 
 
 ## Understanding your responsibilities when using {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
@@ -2028,7 +2011,7 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_troubleshooting_master_key_rotation}
 
 
-[Why can't I rotate master keys by using workstation files?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-part-files#troubleshoot-master-key-rotation-key-part-files)
+[Why can't I rotate master keys by using key part files?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-key-part-files#troubleshoot-master-key-rotation-key-part-files)
 
 [Why can't I rotate master keys by using recovery crypto units?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-recovery-crypto-units#troubleshoot-master-key-rotation-recovery-crypto-units)
 
@@ -2072,8 +2055,6 @@ Find what you are looking for in the compilation of topics that are available in
 [Why can't I delete vaults?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-delete-vault#troubleshoot-delete-vault)
 
 [Why can't I delete internal keystores?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-delete-keystore#troubleshoot-delete-keystore)
-
-[Why can't I rotate the master key when using the {{site.data.keyword.uko_full_notm}} Plan?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-uko#troubleshoot-master-key-rotation-uko)
 
 [Why do I fail to see the changes to my key in Azure Key Vault?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-azure-delay#troubleshoot-azure-delay)
 
