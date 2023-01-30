@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-06"
+  years: 2022, 2023
+lastupdated: "2023-01-30"
 
 keywords: hsm, cloud hsm, tke cli, pkcs11, PKCS11 library, cryptographic operations, cryptographic functions, PKCS 11
 
@@ -96,7 +96,7 @@ As shown in the following diagram, a PKCS #11 key object is an example of a PKCS
 
 ![PKCS #11 object classes](/images/object-class.svg "PKCS #11 object classes"){: caption="Figure 2. PKCS #11 object classes" caption-side="bottom"}
 
-The data and certificate object classes are not supported in this implementation.
+Currently, the data object class is not supported and only X.509 Public Key Certificate objects are supported in this implementation.
 {: note}
 
 ### {{site.data.keyword.iamshort}}

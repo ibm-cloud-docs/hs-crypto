@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-06-08"
+  years: 2020, 2023
+lastupdated: "2023-01-30"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -46,6 +46,9 @@ To perform a PKCS #11 API call, you need to first [install the PKCS #11 library]
 The library file names use the naming convention: `pkcs11-grep11-<**platform**>.so.<**version**>`. The platform is either *amd64* or *s390x* and the version is the standard *major.minor.build* syntax. After you download the library, move the library into a folder that is accessible by your applications. For example, if you are running your application on Linux&reg;, you can move the library to `/usr/local/lib`, `/usr/local/lib64`, or `/usr/lib`.
 
 To access the PKCS #11 API, configure the PKCS #11 library by setting the API endpoint, service instance ID, and API key in the `grep11client.yaml` configuration file. And then, initialize the library. For detailed instructions, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
+
+If you are running a Java PKCS #11 application using the SunPKCS11 provider on the IBM Z (s390x) platform, make sure that you use the latest IBM Semeru JVM and specify the `-Xjit:noResumableTrapHandler` Java option when starting your application. You can download the latest s390x version of the IBM Semeru JVM by changing the **Architecture** filter field to **s390x** on the [IBM Semeru Runtime Downloads page](https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM){: external}.
+{: note}
 
 ## Error handling
 {: #pkcs11-error-handling}
@@ -97,7 +100,7 @@ Not all PKCS #11 functions are implemented by {{site.data.keyword.hscrypto}}. Fu
 |[Session management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959742){: external} |C_SetOperationState|No|Sets the cryptographic operations state of a session.|
 |[Session management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959742){: external} |C_Login|Yes|Logs into a token.|
 |[Session management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959742){: external} |C_Logout|Yes|Logs out from a token.|
-|[Object management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} |C_CreateObject|No|Creates an object.|
+|[Object management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} |C_CreateObject|Yes<sup>1</sup>|Creates an object.|
 |[Object management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} |C_CopyObject|No|Creates a copy of an object.|
 |[Object management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} |C_DestroyObject|Yes|Destroys an object.|
 |[Object management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} |C_GetObjectSize|Yes|Obtains the size of an object in bytes.|
@@ -145,6 +148,8 @@ Not all PKCS #11 functions are implemented by {{site.data.keyword.hscrypto}}. Fu
 |[Parallel function management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959751){: external} |C_GetFunctionStatus|No|Legacy function that always returns `CKR_FUNCTION_NOT_PARALLEL`.|
 |[Parallel function management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959751){: external} |C_CancelFunction|No|Legacy function that always returns `CKR_FUNCTION_NOT_PARALLEL`.|
 {: caption="Table 1. Describes the implemented PKCS #11 functions by service backend" caption-side="bottom"}
+
+1: The current implementation of the C_CreateObject function only supports X.509 Public Key Certificate objects.
 
 ## Supported mechanisms
 {: #pkcs-mechanism-list}

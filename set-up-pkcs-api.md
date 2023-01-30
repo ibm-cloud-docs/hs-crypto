@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-08-26"
+  years: 2020, 2023
+lastupdated: "2023-01-30"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -192,7 +192,7 @@ After the keystores are initialized, use the PKCS #11 library to call the standa
 
 Depending on features and security requirements of your application, pass different service ID API keys that you created in the [previous prerequisites step](#prerequisite-pkcs-api) so that your applications can perform the corresponding operations. For example, if your application needs to delete a keystore, provide the SO user API key. If your application needs to access the private keystore to store new keys, you need to provide the normal user API key. For more information about user access management for the PKCS #11 API, see [Best practices for setting up PKCS #11 user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access).
 
-If you are running a Java PKCS #11 application on the IBM zSystems (s390x) platform, it is suggested to use the OpenJ9 JVM. You can [download the JVM here](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.8%2B10_openj9-0.21.0/OpenJDK11U-jdk_s390x_linux_openj9_linuxXL_11.0.8_10_openj9-0.21.0.tar.gz){: external}.
+If you are running a Java PKCS #11 application using the SunPKCS11 provider on the IBM Z (s390x) platform, make sure that you use the latest IBM Semeru JVM and specify the `-Xjit:noResumableTrapHandler` Java option when starting your application. You can download the latest s390x version of the IBM Semeru JVM by changing the **Architecture** filter field to **s390x** on the [IBM Semeru Runtime Downloads page](https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM){: external}.
 {: note}
 
 ## What's next
