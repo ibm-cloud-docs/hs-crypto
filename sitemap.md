@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-12-20"
+  years: 2021, 2023
+lastupdated: "2023-01-30"
 
 keywords: site map, doc structure, information architecture
 
@@ -2109,3 +2109,4 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Getting help and support](/docs/hs-crypto?topic=hs-crypto-getting-help#getting-help)
+
