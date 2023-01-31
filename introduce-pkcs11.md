@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-12-06"
+  years: 2019, 2023
+lastupdated: "2023-01-30"
 
 keywords: hsm, cloud hsm, tke cli, pkcs11, PKCS11 library, cryptographic operations, cryptographic functions, PKCS 11
 
@@ -68,6 +68,9 @@ The following sections explain each PKCS #11 component in detail.
 
 An application runs within a single address space. All threads of control are running in the application. An application becomes a Cryptoki application by calling the Cryptoki function `C_Initialize` from one of the threads. After this call is made, the application can call other Cryptoki functions. When the application finishes using Cryptoki, it calls the Cryptoki function `C_Finalize` and ceases to be a Cryptoki application.
 
+If you are running a Java PKCS #11 application using the SunPKCS11 provider on the IBM Z (s390x) platform, make sure that you use the latest IBM Semeru JVM and specify the `-Xjit:noResumableTrapHandler` Java option when starting your application. You can download the latest s390x version of the IBM Semeru JVM by changing the **Architecture** filter field to **s390x** on the [IBM Semeru Runtime Downloads page](https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM){: external}.
+{: note}
+
 ### User
 {: #pkcs11-user-intro}
 
@@ -96,7 +99,7 @@ As shown in the following diagram, a PKCS #11 key object is an example of a PKCS
 
 ![PKCS #11 object classes](/images/object-class.svg "PKCS #11 object classes"){: caption="Figure 2. PKCS #11 object classes" caption-side="bottom"}
 
-The data and certificate object classes are not supported in this implementation.
+Currently, the data object class is not supported and only X.509 Public Key Certificate objects are supported in this implementation.
 {: note}
 
 ### {{site.data.keyword.iamshort}}
