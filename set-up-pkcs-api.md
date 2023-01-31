@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-01-30"
+lastupdated: "2023-01-31"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -36,6 +36,9 @@ Before you can set up and use the PKCS #11 API, first follow the [Best practices
 You need to set up the PKCS #11 library on your workstation to make it available for your applications to call the standard PKCS #11 functions.
 
 The PKCS #11 library, for both the amd64 and s390x platforms, is supported only on Linux&reg;.
+{: note}
+
+If you are running a Java PKCS #11 application using the SunPKCS11 provider on the IBM Z (s390x) platform, make sure that you use the latest IBM Semeru JVM and specify the `-Xjit:noResumableTrapHandler` Java option when starting your application. You can download the latest s390x version of the IBM Semeru JVM by changing the **Architecture** filter field to **s390x** on the [IBM Semeru Runtime Downloads page](https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM){: external}.
 {: note}
 
 1. [Download the latest PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external}. The library file names use the naming convention: `pkcs11-grep11-<**platform**>.so.<**version**>`. The platform is either *amd64* or *s390x* and the version is the standard *major.minor.build* syntax.
