@@ -33,7 +33,6 @@ To enable {{site.data.keyword.at_full_notm}} for your {{site.data.keyword.hscryp
 
 To see which action requests correlate to the following actions, check out the [key management service API reference doc](/apidocs/hs-crypto){: external} and [TKE CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin){: external}.
 
-
 ## Historical information regarding events
 {: #historical-mapping-events}
 
@@ -59,7 +58,6 @@ To see which action requests correlate to the following actions, check out the [
 | `hs-crypto.secrets.listkeyversions`      | `hs-crypto.secrets-key-versions.list`       |
 | `hs-crypto.secrets.readmetadata`         | `hs-crypto.secrets-metadata.read`           |
 {: caption="Table 1. Historical reference mapping of event names" caption-side="bottom"}
-
 
 ## Supported events
 {: #at-supported-events}

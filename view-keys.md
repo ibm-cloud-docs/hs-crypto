@@ -301,7 +301,6 @@ For usage notes, check out the following examples for setting your `extractable`
 |`../keys?extractable=false`|Lists root keys.|
 {: caption="Table 6. Provides usage notes for the extractable query parameter" caption-side="top"}
 
-
 ### Sorting a list of keys
 {: #filter-keys-sort-api}
 {: api}

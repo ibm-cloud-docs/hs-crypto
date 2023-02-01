@@ -64,14 +64,12 @@ Added: Managementy Utilities support for Red Hat Enterprise Linux 9.0 and Ubuntu
     You can also find the latest Management Utilities installation files in [Github](https://github.com/IBM-Cloud/hpcs-management-utilities/releases/tag/v1.0.3.8){: external}.
 
 
-
 ## 31 Oct 2022
 {: hs-crypto-31oct2022}
 {: release-note}
 
 Added: Google Cloud KMS support
 :   You can now use {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} to create and manage Google Cloud KMS keys. For more information, see [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores) and [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys).
-
 
 ## 20 Oct 2022
 {: hs-crypto-20oct2022}

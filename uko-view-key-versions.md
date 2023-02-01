@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-19"
+  years: 2022, 2023
+lastupdated: "2023-02-01"
 
 keywords: managed key versions, get key versions, list key versions
 
@@ -86,5 +86,3 @@ To view manage key versions through the API, follow these steps:
 {: #uko-view-key-versions-next}
 
 To find out more about programmatically managing your keys, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external}.
-
-

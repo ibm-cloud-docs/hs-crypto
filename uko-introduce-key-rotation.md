@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-19"
+  years: 2022, 2023
+lastupdated: "2023-02-01"
 
 keywords: rotate managed key, rotate key, managed key rotation, key rotation, key rewrap
 
@@ -103,5 +103,4 @@ After a managed key rotation is complete, new key material becomes available for
 
 - For more information about how to manually rotate a managed key, see [Rotating managed keys](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys).
 - For more information about how to edit managed keys, see [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
-
 
