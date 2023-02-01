@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-01-30"
+lastupdated: "2023-02-01"
 
 keywords: site map, doc structure, information architecture
 
@@ -454,6 +454,12 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [01 Feb 2023](/docs/hs-crypto?topic=hs-crypto-what-new#01-feb-2023)
+
+    * Updated: {{site.data.keyword.hscrypto}} key management functions 
+
+    * Updated: Activity Tracker event names
 
 * [19 Dec 2022](/docs/hs-crypto?topic=hs-crypto-what-new#19-dec-2022)
 
@@ -1584,6 +1590,8 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Auditing events for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-at-events#at-events)
 
+* [Historical information regarding events](/docs/hs-crypto?topic=hs-crypto-at-events#historical-mapping-events)
+
 * [Supported events](/docs/hs-crypto?topic=hs-crypto-at-events#at-supported-events)
 
 * [Key Ring events](/docs/hs-crypto?topic=hs-crypto-at-events#keyring-actions)
@@ -1691,6 +1699,8 @@ Find what you are looking for in the compilation of topics that are available in
 [{{site.data.keyword.hscrypto}} key management service API change log](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-change-log)
 
 * [API versioning](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-versioning)
+
+* [February 2023](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-Feb-2023)
 
 * [January 2022](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-jan-2022)
 

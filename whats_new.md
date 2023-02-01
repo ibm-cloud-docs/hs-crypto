@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-12-19"
+  years: 2018, 2023
+lastupdated: "2023-02-01"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,6 +27,22 @@ content-type: release-note
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+## 01 Feb 2023
+{: hs-crypto-feb2023}
+{: release-note}
+
+Updated: {{site.data.keyword.hscrypto}} key management functions 
+:   The {{site.data.keyword.hscrypto}} key management service API is updated to version `22.11`. The following functions are added:
+
+    - [List Keys with sorting](/apidocs/hs-crypto#:~:text=values%3A%20length%20≤%20256-,sort,-string){: external} to include lastRotateDate sorting.
+    - [List Keys with advanced filtering](/apidocs/hs-crypto#:~:text=Default%3A%20id-,filter,-string){: external} to including lastRotateDate filtering.
+    - [Create key with policy overrides](https://cloud.ibm.com/apidocs/hs-crypto#createkeywithpoliciesoverrides){: external} to enable users with Manager role to create keys with policies in a single call, overriding instance level policies.
+    - [Disable a key rotation policy](/apidocs/hs-crypto#:~:text=policy%2Bjson"%2C%0A%20%20%20%20%20%20%20%20"rotation"%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20"-,enabled,-"%3A%20<true%7Cfalse>%2C%0A%20%20%20%20%20%20%20%20%20%20"interval_month){: external} to allow an automatic key rotation policy to be paused temporarily.
+
+Updated: Activity Tracker event names
+:    Find the latest event names and mapping in [Historical information regarding events](/docs/hs-crypto?topic=hs-crypto-at-events&interface=ui#historical-mapping-events).
+
 
 ## 19 Dec 2022
 {: hs-crypto-dec2022}

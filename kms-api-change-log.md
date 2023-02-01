@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-03-01"
+  years: 2021, 2023
+lastupdated: "2023-02-01"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -27,7 +27,17 @@ In this change log you can learn about the latest changes, improvements, and upd
 ## API versioning
 {: #kms-api-versioning}
 
-The latest released version is `2.93`.
+The latest released version is `22.11`.
+
+## February 2023
+{: #kms-api-Feb-2023}
+
+The following functions are added:
+
+    - [List Keys with sorting](/apidocs/hs-crypto#:~:text=values%3A%20length%20≤%20256-,sort,-string){: external} to include lastRotateDate sorting.
+    - [List Keys with advanced filtering](/apidocs/hs-crypto#:~:text=Default%3A%20id-,filter,-string){: external} to including lastRotateDate filtering.
+    - [Create key with policy overrides](https://cloud.ibm.com/apidocs/hs-crypto#createkeywithpoliciesoverrides){: external} to enable users with Manager role to create keys with policies in a single call, overriding instance level policies.
+    - [Disable a key rotation policy](/apidocs/hs-crypto#:~:text=policy%2Bjson"%2C%0A%20%20%20%20%20%20%20%20"rotation"%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20"-,enabled,-"%3A%20<true%7Cfalse>%2C%0A%20%20%20%20%20%20%20%20%20%20"interval_month){: external} to allow an automatic key rotation policy to be paused temporarily.
 
 ## January 2022
 {: #kms-api-jan-2022}
