@@ -34,10 +34,10 @@ The latest released version is `22.11`.
 
 The following functions are added:
 
-    - [List Keys with sorting](/apidocs/hs-crypto#:~:text=values%3A%20length%20≤%20256-,sort,-string){: external} to include lastRotateDate sorting.
-    - [List Keys with advanced filtering](/apidocs/hs-crypto#:~:text=Default%3A%20id-,filter,-string){: external} to including lastRotateDate filtering.
-    - [Create key with policy overrides](https://cloud.ibm.com/apidocs/hs-crypto#createkeywithpoliciesoverrides){: external} to enable users with Manager role to create keys with policies in a single call, overriding instance level policies.
-    - [Disable a key rotation policy](/apidocs/hs-crypto#:~:text=policy%2Bjson"%2C%0A%20%20%20%20%20%20%20%20"rotation"%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20"-,enabled,-"%3A%20<true%7Cfalse>%2C%0A%20%20%20%20%20%20%20%20%20%20"interval_month){: external} to allow an automatic key rotation policy to be paused temporarily.
+- [List Keys with sorting](/apidocs/hs-crypto#:~:text=values%3A%20length%20≤%20256-,sort,-string){: external} to include lastRotateDate sorting.
+- [List Keys with advanced filtering](/apidocs/hs-crypto#:~:text=Default%3A%20id-,filter,-string){: external} to including lastRotateDate filtering.
+- [Create key with policy overrides](https://cloud.ibm.com/apidocs/hs-crypto#createkeywithpoliciesoverrides){: external} to enable users with Manager role to create keys with policies in a single call, overriding instance level policies.
+- [Disable a key rotation policy](/apidocs/hs-crypto#:~:text=policy%2Bjson"%2C%0A%20%20%20%20%20%20%20%20"rotation"%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20"-,enabled,-"%3A%20<true%7Cfalse>%2C%0A%20%20%20%20%20%20%20%20%20%20"interval_month){: external} to allow an automatic key rotation policy to be paused temporarily.
 
 ## January 2022
 {: #kms-api-jan-2022}
