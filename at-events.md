@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-12-06"
+  years: 2018, 2023
+lastupdated: "2023-02-01"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -33,6 +33,32 @@ To enable {{site.data.keyword.at_full_notm}} for your {{site.data.keyword.hscryp
 
 To see which action requests correlate to the following actions, check out the [key management service API reference doc](/apidocs/hs-crypto){: external} and [TKE CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin){: external}.
 
+
+## Historical information regarding events
+{: #historical-mapping-events}
+
+| Reference                          | Current event names                   |
+| ---------------------------------- | ------------------------------------- |
+| `hs-crypto.governance.configread`        | `hs-crypto.governance-config.read`          |
+| `hs-crypto.importtoken.create`           | `hs-crypto.import-token.create`             |
+| `hs-crypto.importtoken.read`             | `hs-crypto.import-token.read`               |
+| `hs-crypto.importtoken.default`          | `hs-crypto.import-token.request`            |
+| `hs-crypto.instance.readallowedipport`   | `hs-crypto.instance-allowed-ip-port.read`   |
+| `hs-crypto.instance.readipwhitelistport` | `hs-crypto.instance-ip-allowlist-port.read` |
+| `hs-crypto.instancepolicies.write`       | `hs-crypto.instance-policies.write`         |
+| `hs-crypto.instancepolicies.read`        | `hs-crypto.instance-policies.read`          |
+| `hs-crypto.instancepolicies.default`     | `hs-crypto.instance-policies.request`       |
+| `hs-crypto.keyrings.create`              | `hs-crypto.key-rings.create`                |
+| `hs-crypto.keyrings.delete`              | `hs-crypto.key-rings.delete`                |
+| `hs-crypto.keyrings.list`                | `hs-crypto.key-rings.list`                  |
+| `hs-crypto.keyrings.default`             | `hs-crypto.key-rings.request`               |
+| `hs-crypto.secrets.defaultalias`         | `hs-crypto.secrets-alias.request`           |
+| `hs-crypto.secrets.createalias`          | `hs-crypto.secrets-alias.create`            |
+| `hs-crypto.secrets.deletealias`          | `hs-crypto.secrets-alias.delete`            |
+| `hs-crypto.secrets.eventack`             | `hs-crypto.secrets-event.ack`               |
+| `hs-crypto.secrets.listkeyversions`      | `hs-crypto.secrets-key-versions.list`       |
+| `hs-crypto.secrets.readmetadata`         | `hs-crypto.secrets-metadata.read`           |
+{: caption="Table 1. Historical reference mapping of event names" caption-side="bottom"}
 
 
 ## Supported events
