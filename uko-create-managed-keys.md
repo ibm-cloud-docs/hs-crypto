@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-19"
+  years: 2022, 2023
+lastupdated: "2023-02-01"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -99,7 +99,6 @@ To create a managed key by using the console, complete the following steps:
     {: tab-group="Managed key properties"}
     {: class="comparison-tab-table"}
 
-    
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key. It must be 1 - 63 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or symbols (_-). |
@@ -116,7 +115,6 @@ To create a managed key by using the console, complete the following steps:
     {: tab-title="Google Cloud KMS keys"}
     {: tab-group="Managed key properties"}
     {: class="comparison-tab-table"}
-    
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-06"
+  years: 2022, 2023
+lastupdated: "2023-02-01"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -105,11 +105,11 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
         - **AWS KMS**        
             
             AWS KMS is a managed service for you to create and manage cryptographic keys across a wide range of AWS services.
-        
+
         - **Google Cloud KMS**
 
             Google Cloud KMS is a centralized cloud service for you to create and manage cryptographic keys. You can perform cryptographic operations by using keys in Google Cloud KMS, or by integrating with other Google Cloud services such as Cloud HSM.
-        
+    
         
 
 ## What's next

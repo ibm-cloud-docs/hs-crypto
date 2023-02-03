@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-19"
+  years: 2022, 2023
+lastupdated: "2023-02-01"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -90,7 +90,6 @@ For more information, check out [Assign a Key Vault access policy](https://docs.
 For more information, check out [AWS KMS permissions](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html){: external}.
 
 
-
 ### Setting up required user access in Google Cloud KMS
 {: #connect-external-keystores-access-google-cloud}
 
@@ -104,7 +103,6 @@ To set up user access to Google Cloud KMS, complete the following steps:
 
     - `Cloud KMS Admin`
     - `Cloud KMS Crypto Operator`
-
 
 ## Connecting to external keystores with the {{site.data.keyword.cloud_notm}} console
 {: #connect-external-keystores-ui}
@@ -179,10 +177,6 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
 
-    
-
-    
-
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
@@ -197,11 +191,6 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keystore"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
-    
-    
-    
-    
-    
     
 
     |           Property	      |                         Description                       |
@@ -218,8 +207,6 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-title="KMS keystore in another instance"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
-    
-    
 
     You cannot make further changes to identifying properties that are marked with a Lock icon after the keystore is connected.
     {: note}
