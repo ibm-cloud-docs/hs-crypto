@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-01-30"
+lastupdated: "2023-02-07"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -206,6 +206,7 @@ PKCS #11 attributes define object characteristics that set up how an object can 
 | CKA_EC_POINT | DER-encoding of ANSI X9.62 ECPoint value Q. |      EC public keys  |
 | CKA_WRAP_WITH_TRUSTED  | CK_TRUE if the key can only be wrapped with a wrapping key that has CKA_TRUSTED set to CK_TRUE. Default is CK_FALSE.  | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
 | CKA_CHECK_VALUE | The checksum of the key | AES keys, DES keys |
+| CKA_MODIFIABLE | Set to CK_TRUE if the object can be modified.| EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys |
 | CKA_IBM_PQC_PARAMS  | Supporting parameters for post-quantum cryptography mechanisms. In the case of the Dilithium mechanism `CKM_IBM_DILITHIUM`, it provides a marshaled object identifier (OID) that represents the strength of Dilithium algorithm to use. Currently, only the strength of [Dilithium 4 round 2](http://oid-info.com/get/1.3.6.1.4.1.2.267.1.6.5){: external} is supported. |  Dilithium keys        |
 {: caption="Table 3. Describes the supported attributes" caption-side="bottom"}
 
