@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-02-16"
+  years: 2018, 2023
+lastupdated: "2023-02-06"
 
 keywords: hyper protect crypto services integration, kms provider, set up kms provider
 
@@ -106,7 +106,7 @@ If your offering wants to integrate with an existing KMS provider service, your 
 
 ```cURL
 curl -X POST
-    'https://api.global-search-tagging.cloud.ibm.com/v2/resources/search?limit=50&account_id=<account_ID>'
+    'https://api.global-search-tagging.cloud.ibm.com/v3/resources/search?limit=50&account_id=<account_ID>'
     -H 'Authorization: Bearer <token>'
     -H 'Content-Type: application/json'
     -d '{
@@ -125,7 +125,7 @@ The following JSON output shows an example service instance. From the response, 
     ...,
     "doc": {
         ...,
-        "id": "crn:v1:public:hscrypto:us-south:a/80e35ac1582a2b1a7b633e6107f9295a:67be47c6-cac0-415d-b298-0e6d45d6cb51::",
+        "id": "crn:v1:public:hs-crypto:us-south:a/80e35ac1582a2b1a7b633e6107f9295a:67be47c6-cac0-415d-b298-0e6d45d6cb51::",
         "sub_type": "kms",
         "extensions": {
             ...,
