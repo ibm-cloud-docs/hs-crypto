@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-02-07"
 
 keywords: Unified Key Orchestrator, key management, UKO keystore, edit keystore, external keystore, KMS keystore
 
@@ -51,7 +51,7 @@ To edit the connection to an external keystore by using the console, complete th
 
     |           Property	        |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
-    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1–100 characters in length. The first character must be a letter (case-sensitive) or digit (0–9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | Region on AWS               | Read only. The geographical location where the AWS keystore is located in. You cannot edit this property after the keystore is connected.    |
     | Access key ID on AWS        | All requests to AWS KMS must be signed by using an access key ID and a secret access key. For more information, see [Understanding and getting your AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).   |
@@ -64,7 +64,7 @@ To edit the connection to an external keystore by using the console, complete th
    
     |           Property	        |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
-    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1–100 characters in length. The first character must be a letter (case-sensitive) or digit (0–9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | Service name on Azure       | Read only. The name must match the name of the Key Vault in Azure. You cannot edit this property after the keystore is connected.   |
     | Resource group name on Azure     | Read only. A logical construct that groups multiple resources together. Obtain it from the Azure portal. You cannot edit this property after the keystore is connected. |
@@ -82,7 +82,7 @@ To edit the connection to an external keystore by using the console, complete th
 
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
-    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1–100 characters in length. The first character must be a letter (case-sensitive) or digit (0–9). The rest can also be symbols (.-_) or spaces. |
     | Keystore description        | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | Upload JSON key file        | The private key file that is downloaded from your service account on Google Cloud in step 2 of [Setting up required user access in Google Cloud KMS](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores-access-google-cloud). The file type must be `.json` and the maximum file size is 4 KB. |
     | Project on Google Cloud     | Read only. The name of your Google Cloud project. It is automatically extracted from the JSON key file that you upload. You cannot edit this property after the keystore is connected.    |
@@ -97,7 +97,7 @@ To edit the connection to an external keystore by using the console, complete th
 
     |           Property	        |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
-    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1–100 characters in length. The first character must be a letter (case-sensitive) or digit (0–9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | {{site.data.keyword.keymanagementserviceshort}} API endpoint  | Read only. The service endpoint of your {{site.data.keyword.keymanagementserviceshort}} instance in the format of `https://<region>.kms.cloud.ibm.com`. You cannot edit this property after the keystore is connected. For more information, see [Regions and endpoints](/docs/key-protect?topic=key-protect-regions).  |
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  Read only. The endpoint of IAM, which is `https://iam.cloud.ibm.com`. You cannot edit this property after the keystore is connected.   |
@@ -111,7 +111,7 @@ To edit the connection to an external keystore by using the console, complete th
 
     |           Property	        |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
-    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1–100 characters in length. The first character must be a letter (case-sensitive) or digit (0–9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | {{site.data.keyword.hscrypto}} API endpoint  | Read only. The service endpoint of your {{site.data.keyword.hscrypto}} instance in the format of `https://uko.<region>.hs-crypto.cloud.ibm.com:<port>`. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **Connect** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**. You cannot edit this property after the keystore is connected.  |
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  Read only. The endpoint of IAM, which is `https://iam.cloud.ibm.com`. You cannot edit this property after the keystore is connected.  |

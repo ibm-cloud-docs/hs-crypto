@@ -98,7 +98,7 @@ Complete the following steps to create an EP11 key:
 
         | Setting | Description |
         | --- | --- |
-        | Key name | A human-readable alias for easy identification of your key. The key name length can be 1 - 32 characters. To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location. The key name might not be unique. You can assign multiple keys with the same name. However, it is suggested to assign a unique name to each key in the same keystore for easy identification. |
+        | Key name | A human-readable alias for easy identification of your key. The key name length can be 1-32 characters. To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location. The key name might not be unique. You can assign multiple keys with the same name. However, it is suggested to assign a unique name to each key in the same keystore for easy identification. |
         | Key type | The type of the EP11 key that you want to manage in {{site.data.keyword.hscrypto}}. |
         | Keystore | The unique identifier of the keystore with the keystore type appended. Choose one that you want the key to be stored in from the list. For an asymmetric key pair, you need to specify the keystore separately to store the public key and the private key. You can find all available keystores by clicking the **EP11 keystores** tab in the side menu. |
         {: caption="Table 2. Describes the Identifier page" caption-side="bottom"}

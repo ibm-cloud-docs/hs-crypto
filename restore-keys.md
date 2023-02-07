@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-12-02"
+  years: 2021, 2023
+lastupdated: "2023-02-07"
 
 keywords: restore key, restore a deleted key, recover a deleted key, re-import a key
 
@@ -40,8 +40,8 @@ This soft deletion period, in which a key has been deleted but can still be rest
 
 | Time from key deletion | Name of key state | Can view or access key data? | Can restore? |
 |------------------------|-------------------|---------------------------|--------------|
-| 1 - 30 days            | Destroyed         | Yes                       | Yes          |
-| 30 - 90 days             | Destroyed         | Yes                       | No           |
+| 1–30 days            | Destroyed         | Yes                       | Yes          |
+| 30–90 days             | Destroyed         | Yes                       | No           |
 | After 90 days          | Purged (not a key state technically)        | No                        | No           |
 {: caption="Table 1. Ties key states to the time from a key's deletion to what actions are possible with the key." caption-side="top"}
 

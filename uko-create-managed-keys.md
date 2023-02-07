@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-02-07"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -69,7 +69,7 @@ To create a managed key by using the console, complete the following steps:
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
-    | Key name             | A unique, human-readable name for easy identification of your key. It must be 1 - 255 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or symbols (/_-). However, do not start the name with `AWS/`. |
+    | Key name             | A unique, human-readable name for easy identification of your key. It must be 1–255 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (/_-). However, do not start the name with `AWS/`. |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Length               | The number of bits that represents the encryption strength of the key.   |
@@ -85,7 +85,7 @@ To create a managed key by using the console, complete the following steps:
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
-    | Key name             | A unique, human-readable name for easy identification of your key. It must be 1 - 24 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or hyphens (-). |
+    | Key name             | A unique, human-readable name for easy identification of your key. It must be 1–24 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Length               | The number of bits that represents the encryption strength of the key.   |
@@ -101,7 +101,7 @@ To create a managed key by using the console, complete the following steps:
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
-    | Key name             | A unique, human-readable name for easy identification of your key. It must be 1 - 63 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or symbols (_-). |
+    | Key name             | A unique, human-readable name for easy identification of your key. It must be 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (_-). |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Protection level     | **HSM-protected key** protection level applies to keys that are protected by FIPS 140-2 Level 3 Hardware Security Modules (HSMs) in Google Cloud. This type of keys ensures the highest security. **Software-protected key** protection level applies to keys that are protected by software. You can choose this level to [reduce cost](https://cloud.google.com/kms/pricing){: external}. For more information, see [Cloud KMS software backend: SOFTWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#software-protection-level){: external} and [Cloud KMS HSM backend: HARDWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#hardware-protection-level){: external}. \n \n **Note:** Software-protected keys don't support the Elliptic curve `secp256k1` algorithm.  |
     | Purpose               | The cryptographic capabilities of the key, which is what you are going to do with this key. The purpose also determines the available key algorithms. The supported key purposes are **Symmetric encrypt/decrypt**, **Asymmetric sign**, **Asymmetric decrypt**, and **MAC signing/verification**. For more information, see [Key purpose](https://cloud.google.com/kms/docs/algorithms#key_purposes){: external}.   |
@@ -118,7 +118,7 @@ To create a managed key by using the console, complete the following steps:
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
-    | Key name             | A unique, human-readable name for easy identification of your key. It must 2 - 50 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or spaces.|
+    | Key name             | A unique, human-readable name for easy identification of your key. It must 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces.|
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Length               | The number of bits that represents the encryption strength of the key.   |
@@ -134,7 +134,7 @@ To create a managed key by using the console, complete the following steps:
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
-    | Key name             | A unique, human-readable name for easy identification of your key. It must be 2 - 50 characters in length. The characters can be letters (case-sensitive), digits (0 - 9), or spaces. |
+    | Key name             | A unique, human-readable name for easy identification of your key. It must be 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Length               | The number of bits that represents the encryption strength of the key.   |

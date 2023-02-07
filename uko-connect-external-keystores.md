@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-02-07"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -132,7 +132,7 @@ To connect to an external keystore by using the console, complete the following 
 
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
-    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1–100 characters in length. The first character must be a letter (case-sensitive) or digit (0–9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | Region on AWS               | The geographical location where the AWS keystore is located in.    |
     | Access key ID on AWS        | All requests to AWS KMS must be signed by using an access key ID and a secret access key. For more information, see [Understanding and getting your AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).    |
@@ -145,7 +145,7 @@ To connect to an external keystore by using the console, complete the following 
    
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
-    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1–100 characters in length. The first character must be a letter (case-sensitive) or digit (0–9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | Service name on Azure       | The name must match the name of the Key Vault in Azure.   |
     | Resource group name on Azure     | A logical construct that groups multiple resources. Obtain it from the Azure portal. |
@@ -164,7 +164,7 @@ To connect to an external keystore by using the console, complete the following 
 
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
-    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1–100 characters in length. The first character must be a letter (case-sensitive) or digit (0–9). The rest can also be symbols (.-_) or spaces. |
     | Keystore description        | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | Upload JSON key file        | The private key file that is downloaded from your service account on Google Cloud in step 2 of [Setting up required user access in Google Cloud KMS](#connect-external-keystores-access-google-cloud). The file type must be `.json` and the maximum file size is 4 KB. |
     | Project on Google Cloud     | Read only. The name of your Google Cloud project. It is automatically extracted from the JSON key file that you upload.  |
@@ -179,7 +179,7 @@ To connect to an external keystore by using the console, complete the following 
 
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
-    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1–100 characters in length. The first character must be a letter (case-sensitive) or digit (0–9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your {{site.data.keyword.keymanagementserviceshort}} service instance. For more information, see [Retrieving your instance ID and cloud resource name](/docs/key-protect?topic=key-protect-retrieve-instance-ID).  |
     | Key ring ID on {{site.data.keyword.cloud_notm}}   | The unique identifier of the key ring in the {{site.data.keyword.keymanagementserviceshort}} instance that you want to connect to. For more information, see [Grouping keys together using key rings](/docs/key-protect?topic=key-protect-grouping-keys). If you are not sure which key ring to connect to, specify `default` to connect to the default key ring. |
@@ -195,7 +195,7 @@ To connect to an external keystore by using the console, complete the following 
 
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
-    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0 - 9). The rest can also be symbols (.-_) or spaces. |
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1–100 characters in length. The first character must be a letter (case-sensitive) or digit (0–9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your service instance. For more information, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).   |
     | Key ring ID on {{site.data.keyword.cloud_notm}}   | The unique identifier of the key ring in the {{site.data.keyword.hscrypto}} instance Standard Plan that you want to connect to. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). If you are not sure which key ring to connect to, specify `default` to connect to the default key ring. |
