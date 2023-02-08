@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-12-12"
+  years: 2021, 2023
+lastupdated: "2023-02-08"
 
 keywords: initialize service, key ceremony, hsm, load master key, key ceremony preparation
 
@@ -47,7 +47,7 @@ Before you can initialize your service instance, make sure that you have done th
 
 3. Set the environment variable `CLOUDTKEFILES` on your workstation to specify the directory where you want to save master key part files and signature key files. The signature keys are used to sign TKE administrative commands. Make sure that the directory exists before you set the environment variable.
 
-    - On the Linux&reg; operating system or MacOS, add the following line to the `.bash_profile` file:
+    - On the [Linux&reg]{: tag-linux} operating system or [MacOS]{: tag-macos}, add the following line to the `.bash_profile` file:
 
         ```
         export CLOUDTKEFILES=<path>
@@ -56,7 +56,7 @@ Before you can initialize your service instance, make sure that you have done th
 
         For example, you can specify the *path* to `/Users/tke-files`.
 
-     - On Windows&reg;, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a `CLOUDTKEFILES` environment variable, set the value to the path for storing key files (For example, `C:\users\tke-files`), and restart your computer.
+     - On [Windows&reg]{: tag-windows}, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a `CLOUDTKEFILES` environment variable, set the value to the path for storing key files (For example, `C:\users\tke-files`), and restart your computer.
 
 4. Log in to {{site.data.keyword.cloud_notm}} with the CLI with the following command:
     
