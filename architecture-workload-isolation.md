@@ -21,11 +21,11 @@ Review the service architecture, workload isolation characteristics, and service
 
 The following architecture diagram shows how you interact with {{site.data.keyword.hscrypto}} components to protect your sensitive data and keys.
 
-![Service instance components](/images/hs-crypto-components-new.svg "Service instance components"){: caption="Figure 1. Interaction with {{site.data.keyword.hscrypto}} components" caption-side="bottom"}{: #component-diagram}
+![Service instance components](/images/hs-crypto-components-new.svg "Service instance components"){: caption="Figure 1. Interaction with {{site.data.keyword.hscrypto}} components" caption-side="bottom"}
 
 The following list explains each component in detail.
 
-[key management service API](#component-diagram){: tag-devops}
+key management service API
 :   The API that you use to interact with the key management service (KMS) module to manage root keys and standard keys.
 
 PKCS #11 API
