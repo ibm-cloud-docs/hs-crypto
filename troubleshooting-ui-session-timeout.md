@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-11-23"
+  years: 2022, 2023
+lastupdated: "2023-02-08"
 
 keywords: troubleshoot, problems, known issues, timeout, intermittent issue, session timeout
 
@@ -10,23 +10,9 @@ subcollection: hs-crypto
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:pre: .pre}
-{:tip: .tip}
-{:codeblock: .codeblock}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:external: target="_blank" .external}
-{:support: data-reuse='support'}
-{:term: .term}
-{:ui: .ph data-hd-interface="ui"}
-{:cli: .ph data-hd-interface="cli"}
-{:api: .ph data-hd-interface="api"}
-{:terraform: .ph data-hd-interface="terraform"}
+{{site.data.keyword.attribute-definition-list}}
+
+
 
 # Why can't I perform any actions by using the {{site.data.keyword.cloud_notm}} console?
 {: #troubleshoot-ui-session-timeout}

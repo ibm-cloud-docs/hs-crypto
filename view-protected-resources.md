@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-12-02"
+  years: 2020, 2023
+lastupdated: "2023-02-08"
 
 keywords: view resoure, root key encryption resources, protected resource, protected service, envelope encryption, key registration, view registration, list registrations
 
@@ -10,21 +10,9 @@ subcollection: hs-crypto
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:preview: .preview}
-{:term: .term}
-{:ui: .ph data-hd-interface="ui"}
-{:cli: .ph data-hd-interface="cli"}
-{:api: .ph data-hd-interface="api"}
-{:terraform: .ph data-hd-interface="terraform"}
+{{site.data.keyword.attribute-definition-list}}
+
+
 
 # Viewing associations between root keys and encrypted {{site.data.keyword.cloud_notm}} resources
 {: #view-protected-resources}

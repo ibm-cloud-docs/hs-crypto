@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-04-14"
+  years: 2020, 2023
+lastupdated: "2023-02-08"
 
 keywords: open source licenses
 
@@ -10,14 +10,9 @@ subcollection: hs-crypto
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
+
+
 
 # Open-source licenses
 {: #open-source-licenses}

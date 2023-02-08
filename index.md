@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-12-12"
+  years: 2018, 2023
+lastupdated: "2023-02-08"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -11,23 +11,9 @@ subcollection: hs-crypto
 ---
 
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:important: .important}
-{:tip: .tip}
-{:external: target="_blank" .external}
-{:term: .term}
-{:ui: .ph data-hd-interface="ui"}
-{:cli: .ph data-hd-interface="cli"}
-{:api: .ph data-hd-interface="api"}
-{:terraform: .ph data-hd-interface="terraform"}
-{:note: .note}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
-{:hide-in-docs: .hide-in-docs}
-{:hide-dashboard: .hide-dashboard}
+{{site.data.keyword.attribute-definition-list}}
+
+
 
 
 # Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}

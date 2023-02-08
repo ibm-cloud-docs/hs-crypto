@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-07"
+lastupdated: "2023-02-08"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -10,26 +10,7 @@ subcollection: hs-crypto
 
 ---
 
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:download: .download}
-{:hide-in-docs: .hide-in-docs}
-{:authenticated-content: .authenticated-content}
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:preview: .preview}
-{:subsection: outputclass="subsection"}
-{:row-headers: .row-headers}
-{:external: target="_blank" .external}
-{:term: .term}
-{:ui: .ph data-hd-interface="ui"}
-{:cli: .ph data-hd-interface="cli"}
-{:api: .ph data-hd-interface="api"}
-{:terraform: .ph data-hd-interface="terraform"}
+{{site.data.keyword.attribute-definition-list}}
 
 # Cryptographic operations: GREP11 API
 {: #grep11-api-ref}

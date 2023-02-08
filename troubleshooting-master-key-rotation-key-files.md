@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-12-12"
+  years: 2021, 2023
+lastupdated: "2023-02-08"
 
 keywords: failed master key rotation, failed to use key part files to rotate master keys, tke cryptounit-mk-rotate failure, troubleshoot master key rotation failure
 
@@ -10,23 +10,9 @@ subcollection: hs-crypto
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:pre: .pre}
-{:tip: .tip}
-{:codeblock: .codeblock}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:external: target="_blank" .external}
-{:support: data-reuse='support'}
-{:term: .term}
-{:ui: .ph data-hd-interface="ui"}
-{:cli: .ph data-hd-interface="cli"}
-{:api: .ph data-hd-interface="api"}
-{:terraform: .ph data-hd-interface="terraform"}
+{{site.data.keyword.attribute-definition-list}}
+
+
 
 # Why can't I rotate master keys by using key part files?
 {: #troubleshoot-master-key-rotation-key-part-files}

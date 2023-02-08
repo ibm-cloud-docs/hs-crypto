@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-03-01"
+  years: 2018, 2023
+lastupdated: "2023-02-08"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -10,12 +10,9 @@ subcollection: hs-crypto
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:pre: .pre}
-{:tip: .tip}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
+
+
 
 # Managing user access
 {: #manage-access}

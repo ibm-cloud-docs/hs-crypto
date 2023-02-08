@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-02-08"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -13,14 +13,8 @@ content-type: release-note
 ---
 
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:note: .note}
-{:pre: .pre}
-{:important: .important}
-{:external: target="_blank" .external}
-{:release-note: data-hd-content-type='release-note'}
+{{site.data.keyword.attribute-definition-list}}
+
 
 # Release notes for {{site.data.keyword.hscrypto}}
 {: #what-new}

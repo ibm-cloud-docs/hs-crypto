@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-07"
+lastupdated: "2023-02-08"
 
 keywords: delete keys, purge, automatic purge, manual purge, delete, destroy
 
@@ -10,15 +10,9 @@ subcollection: hs-crypto
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
+
+
 
 # About deleting and purging keys
 {: #delete-purge-keys}

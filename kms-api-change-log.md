@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-02-08"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -11,13 +11,9 @@ subcollection: hs-crypto
 ---
 
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:note: .note}
-{:pre: .pre}
-{:important: .important}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
+
+
 
 # {{site.data.keyword.hscrypto}} key management service API change log
 {: #kms-api-change-log}

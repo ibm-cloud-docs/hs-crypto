@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-12-12"
+  years: 2021, 2023
+lastupdated: "2023-02-08"
 
 keywords: signing service, manage signature keys, customer-writtn signing service, third-party signing service
 
@@ -10,15 +10,9 @@ subcollection: hs-crypto
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
+
+
 
 # Using a signing service to manage signature keys for instance initialization
 {: #signing-service-signature-key}

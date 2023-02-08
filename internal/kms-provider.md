@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-06"
+lastupdated: "2023-02-08"
 
 keywords: hyper protect crypto services integration, kms provider, set up kms provider
 
@@ -10,14 +10,8 @@ subcollection: hs-crypto
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
+
 
 # Working with {{site.data.keyword.cloud_notm}} KMS provider services
 {: #kms-providers}

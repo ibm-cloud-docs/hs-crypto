@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-08-25"
+  years: 2021, 2023
+lastupdated: "2023-02-08"
 
 keywords: pkcs11 ui access, pkcs 11 account authentication
 
@@ -10,15 +10,9 @@ subcollection: hs-crypto
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:table: .aria-labeledby="caption"}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
+
+
 
 # Granting users access to manage EP11 keystores and keys through UI
 {: #grant-pkcs11-ui-access}

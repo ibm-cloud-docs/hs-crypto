@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-08-25"
+  years: 2020, 2023
+lastupdated: "2023-02-08"
 
 keywords: enable KYOK, onboard to Hyper Protect Crypto Services, HPCS onboarding, service onboarding, internal registration, key registration, KYOK, kms onboarding
 
@@ -10,14 +10,8 @@ subcollection: hs-crypto
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:external: target="_blank" .external}
-{:screen: .screen}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
+
 
 # Keep Your Own Key cheat sheet
 {: #kyok-cheatsheet}

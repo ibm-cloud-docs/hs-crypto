@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-08-26"
+  years: 2020, 2023
+lastupdated: "2023-02-08"
 
 keywords: create test instance, configure api for test, test hpcs, test service onboarding hpcs, wrap key api, upwrap key api
 
@@ -10,15 +10,8 @@ subcollection: hs-crypto
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
+
 
 # Setting up the {{site.data.keyword.hscrypto}} API
 {: #configure-api-test}
