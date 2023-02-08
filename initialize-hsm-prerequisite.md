@@ -10,18 +10,6 @@ subcollection: hs-crypto
 
 ---
 
-
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:important: .important}
-{:external: target="_blank" .external}
-{:term: .term}
-{:ui: .ph data-hd-interface="ui"}
-{:cli: .ph data-hd-interface="cli"}
-{:api: .ph data-hd-interface="api"}
-{:terraform: .ph data-hd-interface="terraform"}
 {{site.data.keyword.attribute-definition-list}}
 
 # Before you begin
@@ -48,7 +36,7 @@ Before you can initialize your service instance, make sure that you have done th
 
 3. Set the environment variable `CLOUDTKEFILES` on your workstation to specify the directory where you want to save master key part files and signature key files. The signature keys are used to sign TKE administrative commands. Make sure that the directory exists before you set the environment variable.
 
-    - On the [Linux]{: tag-linux} operating system or [MacOS]{: tag-macos}, add the following line to the `.bash_profile` file:
+    - On the [Linux]{: tag-linux} operating system or [macOS]{: tag-macos}, add the following line to the `.bash_profile` file:
 
         ```
         export CLOUDTKEFILES=<path>

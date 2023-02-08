@@ -15,19 +15,8 @@ completion-time: 30m
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:step: data-tutorial-type='step'}
-{:ui: .ph data-hd-interface="ui"}
-{:cli: .ph data-hd-interface="cli"}
-{:api: .ph data-hd-interface="api"}
+{{site.data.keyword.attribute-definition-list}}
+
 
 
 # Creating and importing encryption keys
@@ -297,7 +286,7 @@ To encrypt the nonce value:
         The binary contains a script that you can use to run AES-CBC encryption on the nonce value by using the key that you generated in [step 2](#tutorial-import-retrieve-token). To learn more about the script, [check out the source file on GitHub](https://github.com/IBM-Cloud/kms-samples/blob/master/secure-import/encrypt.go){: external}.
         {: note}
 
-    2. If you are using Linux&reg;, mark the file as executable by running the following  `chmod` command. You can skip this step if you are using Windows.
+    2. If you are using [Linux]{: tag-linux}, mark the file as executable by running the following  `chmod` command. You can skip this step if you are using Windows.
 
         ```sh
         chmod +x ./kms-encrypt-nonce
