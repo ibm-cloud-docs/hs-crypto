@@ -1,6 +1,6 @@
 {
   "title": "IBM Cloud Hyper Protect Crypto Services docs",
-  "lastupdated": "2022-04-11",
+  "lastupdated": "2023-02-01",
   "introduction": "Find useful information about Hyper Protect Crypto Services.",
   "section_devtools": {
     "api": "/docs?tab=api-docs&category=security&subCategory=hs-crypto",
@@ -72,6 +72,11 @@
   "section_updates": {
     "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
     "tiles": [
+      {
+        "date": "February 2023",
+        "title": "Updated: Hyper Protect Crypto Services key management functions",
+        "description": "The Hyper Protect Crypto Services key management service API is updated to version 22.11. "
+      },
       {
         "date": "December 2022",
         "title": "Managed key rotation support for Unified Key Orchestrator",
