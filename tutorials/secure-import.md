@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-04-08"
+  years: 2018, 2023
+lastupdated: "2023-02-08"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -25,6 +25,9 @@ completion-time: 30m
 {:note: .note}
 {:important: .important}
 {:step: data-tutorial-type='step'}
+{:ui: .ph data-hd-interface="ui"}
+{:cli: .ph data-hd-interface="cli"}
+{:api: .ph data-hd-interface="api"}
 
 
 # Creating and importing encryption keys
@@ -182,7 +185,7 @@ To retrieve the import token contents:
 
 1. Retrieve the import token that you generated the previous step, and then save the response to a JSON file.
 
-    - **Use the API**:
+    - **Use the API**:{: api}
 
       ```sh
       curl -X GET $HPCS_API_URL/api/v2/import_token \
@@ -191,13 +194,15 @@ To retrieve the import token contents:
           -H "Bluemix-Instance: $INSTANCE_ID" > getImportTokenResponse.json
       ```
       {: pre}
+      {: api}
 
-    - **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
+    - **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:{: cli}
 
       ```
       ibmcloud kp import-token show -o json > getImportTokenResponse.json
       ```
       {: pre}
+      {: cli}
 
 2. Optional: Inspect the contents of the import token.
 
@@ -267,10 +272,10 @@ Success! Your encryption key is now saved in a file called `PlainTextKey.bin`. C
 
 If you create the key by following [step 3](#tutorial-import-create-key), to encode the key and set the encoded value as an environment variable, perform the following command. You can skip this step if you use your own key in this tutorial:
 
-    ```sh
-    KEY_MATERIAL=$(openssl enc -base64 -A -in PlainTextKey.bin)
-    ```
-    {: pre}
+```sh
+KEY_MATERIAL=$(openssl enc -base64 -A -in PlainTextKey.bin)
+```
+{: pre}
 
 ## Encrypt the nonce with the encryption key
 {: #tutorial-import-encrypt-nonce}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-02-08"
 
 keywords: site map, doc structure, information architecture
 
@@ -1790,15 +1790,15 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#uko-cli-change-log)
 
-[{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} CLI](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#hpcs-cli-plugin)
+[{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} CLI](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#hpcs-cli-plugin)
 
-* [{{site.data.keyword.hscrypto}} key management CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#kp-cli-plugin)
+* [{{site.data.keyword.hscrypto}} key management CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#kp-cli-plugin)
 
-* [{{site.data.keyword.hscrypto}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin)
+* [{{site.data.keyword.hscrypto}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin)
 
-* [{{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#cert-manager-cli-plugin)
+* [{{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#cert-manager-cli-plugin)
 
-* [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#uko-cli-plugin)
+* [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#uko-cli-plugin)
 
 
 ## Terraform reference
