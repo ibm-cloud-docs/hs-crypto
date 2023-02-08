@@ -17,8 +17,6 @@ completion-time: 30m
 
 {{site.data.keyword.attribute-definition-list}}
 
-
-
 # Creating and importing encryption keys
 {: #tutorial-import-keys}
 {: toc-content-type="tutorial"}
@@ -174,7 +172,7 @@ To retrieve the import token contents:
 
 1. Retrieve the import token that you generated the previous step, and then save the response to a JSON file.
 
-    - **Use the API**:{: api}
+    - [**Use the API**]{: tag-red}
 
       ```sh
       curl -X GET $HPCS_API_URL/api/v2/import_token \
@@ -183,15 +181,13 @@ To retrieve the import token contents:
           -H "Bluemix-Instance: $INSTANCE_ID" > getImportTokenResponse.json
       ```
       {: pre}
-      {: api}
 
-    - **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:{: cli}
+    - [**Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**]{: tag-blue}
 
       ```
       ibmcloud kp import-token show -o json > getImportTokenResponse.json
       ```
       {: pre}
-      {: cli}
 
 2. Optional: Inspect the contents of the import token.
 
