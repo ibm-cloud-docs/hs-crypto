@@ -18,8 +18,7 @@ subcollection: hs-crypto
 # Overview - {{site.data.keyword.hscrypto}} Standard Plan 
 {: #overview}
 
-[Standard plan only]{: tag-standard}
-
+[Standard plan only]{: tag-blue}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is a dedicated key management service and [Hardware Security Module (HSM)](#x6704988){: term} that provides you with the Keep Your Own Key capability for cloud data encryption. Built on FIPS 140-2 Level 4 certified hardware, {{site.data.keyword.hscrypto}} provides you with exclusive control of your encryption keys.
 {: shortdesc}
