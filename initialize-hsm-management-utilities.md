@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-02-17"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, smart card, trusted key entry application, tke application, management utilities
 
@@ -34,7 +34,7 @@ You can also watch the following video to learn how to initialize {{site.data.ke
 
 1. Make sure that you [set up the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities).
 2. Complete [the prerequisite steps](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite) before you initialize your service instance.
-3. Plug the two smart card readers into the USB ports of your workstation.
+3. Plug the two [smart card readers](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader) into the USB ports of your workstation.
 4. Start the Trusted Key Entry application by changing to the subdirectory where you install the Management Utilities applications and running the following command:
 
     ```

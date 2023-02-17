@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-02-17"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -71,7 +71,7 @@ To order smart card readers, you have the followig options:
     * [SCM PC-Card GmbH](https://www.scm-pc-card.de/all-products/101/spr332-v2){: external}
     * [Amazon](https://www.amazon.de/SPR332-Speed-Secure-Kartenleser-Online-Abrechnung/dp/B0092NGGWW){: external}
 
-## Step 2: Install the smart card reader driver
+## Step 2: Install the smart card reader driver on your local workstation
 {: #install-smart-card-reader-driver}
 
 You need to install the Identiv SPR332 V2 smart card reader driver on your local workstation. Currently, Red Hat Enterprise Linux&reg; 8.0, Red Hat Enterprise Linux 9.0, and Ubuntu 22.04.1 LTS are supported.
@@ -145,7 +145,7 @@ Before you install the smart card reader driver on a Linux operating system, dow
     
     4. Restart the workstation.
 
-## Step 3: Install the Management Utilities
+## Step 3: Install the Management Utilities on your local workstation
 {: #install-management-utility-application}
 
 Two applications are provided as part of the Management Utilities: the [Smart Card Utility Program](/docs/hs-crypto?topic=hs-crypto-understand-concepts#smart-card-utility-concept) and the [Trusted Key Entry (TKE) application](/docs/hs-crypto?topic=hs-crypto-understand-concepts#tke-client-concept). With the Smart Card Utility Program, you can initialize the smart cards to use. The TKE application uses the smart cards to load master keys in service instances.

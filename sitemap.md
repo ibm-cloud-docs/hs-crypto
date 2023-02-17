@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-14"
+lastupdated: "2023-02-17"
 
 keywords: site map, doc structure, information architecture
 
@@ -713,9 +713,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Step 1: Order smart cards and smart card readers](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader)
 
-* [Step 2: Install the smart card reader driver](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-smart-card-reader-driver)
+* [Step 2: Install the smart card reader driver on your local workstation](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-smart-card-reader-driver)
 
-* [Step 3: Install the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-management-utility-application)
+* [Step 3: Install the Management Utilities on your local workstation](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-management-utility-application)
 
 * [Step 4: Configure smart cards with the Smart Card Utility Program](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#configure-smart-card-utility)
 
