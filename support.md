@@ -12,8 +12,6 @@ subcollection: hs-crypto
 
 {{site.data.keyword.attribute-definition-list}}
 
-
-
 # Getting help and support
 {: #getting-help}
 {: troubleshoot}
