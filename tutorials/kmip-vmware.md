@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-04-21"
+  years: 2021, 2023
+lastupdated: "2023-02-08"
 
 keywords: VMWare encryption, KMIP, Key management and distribution, Data appliance encryption, Netapp, vSphere, vSAN encryption
 
@@ -15,17 +15,9 @@ completion-time: 2h
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:step: data-tutorial-type='step'}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
+
+
 
 # Configuring KMIP in {{site.data.keyword.hscrypto}} for key management and distribution
 {: #tutorial-kmip-vmware}

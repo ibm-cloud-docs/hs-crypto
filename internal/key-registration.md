@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-08-25"
+  years: 2020, 2023
+lastupdated: "2023-02-08"
 
 keywords: key registration, register resources, service integration, protected resource, view crn, registraion api
 
@@ -10,15 +10,8 @@ subcollection: hs-crypto
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:external: target="_blank" .external}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:preview: .preview}
+{{site.data.keyword.attribute-definition-list}}
+
 
 # Registering protected resources
 {: #register-protected-resources}

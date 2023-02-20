@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-04-08"
+  years: 2018, 2023
+lastupdated: "2023-02-08"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -15,17 +15,7 @@ completion-time: 30m
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:step: data-tutorial-type='step'}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Creating and importing encryption keys
 {: #tutorial-import-keys}
@@ -126,7 +116,7 @@ In the following step, you'll create an [import token](/docs/hs-crypto?topic=hs-
 
 2. You can create an import token for your {{site.data.keyword.hscrypto}} service instance by either using the [key management service API](/apidocs/hs-crypto) or using the [CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli), and then save the response to a JSON file.
 
-    - **Use the API**:
+    - [Use the API]{: tag-red}
 
       ```sh
       curl -X POST $HPCS_API_URL/api/v2/import_token \
@@ -144,7 +134,7 @@ In the following step, you'll create an [import token](/docs/hs-crypto?topic=hs-
       In the request body, you can specify a policy on the import token that limits the use based on time and usage count. In this example, you set the expiration time for the import token to 1200 seconds (20 minutes), and you also allow only one retrieval of that token within the expiration time.
       {: tip}
 
-    - **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
+    - [Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI]{: tag-blue}
 
       ```
       ibmcloud kp import-token create --instance-id $INSTANCE_ID --max-retrievals=1 --expiration=1200 -o json > createImportTokenResponse.json
@@ -182,7 +172,7 @@ To retrieve the import token contents:
 
 1. Retrieve the import token that you generated the previous step, and then save the response to a JSON file.
 
-    - **Use the API**:
+    - [Use the API]{: tag-red}
 
       ```sh
       curl -X GET $HPCS_API_URL/api/v2/import_token \
@@ -192,7 +182,7 @@ To retrieve the import token contents:
       ```
       {: pre}
 
-    - **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
+    - [Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI]{: tag-blue}
 
       ```
       ibmcloud kp import-token show -o json > getImportTokenResponse.json
@@ -267,10 +257,10 @@ Success! Your encryption key is now saved in a file called `PlainTextKey.bin`. C
 
 If you create the key by following [step 3](#tutorial-import-create-key), to encode the key and set the encoded value as an environment variable, perform the following command. You can skip this step if you use your own key in this tutorial:
 
-    ```sh
-    KEY_MATERIAL=$(openssl enc -base64 -A -in PlainTextKey.bin)
-    ```
-    {: pre}
+```sh
+KEY_MATERIAL=$(openssl enc -base64 -A -in PlainTextKey.bin)
+```
+{: pre}
 
 ## Encrypt the nonce with the encryption key
 {: #tutorial-import-encrypt-nonce}
@@ -292,7 +282,7 @@ To encrypt the nonce value:
         The binary contains a script that you can use to run AES-CBC encryption on the nonce value by using the key that you generated in [step 2](#tutorial-import-retrieve-token). To learn more about the script, [check out the source file on GitHub](https://github.com/IBM-Cloud/kms-samples/blob/master/secure-import/encrypt.go){: external}.
         {: note}
 
-    2. If you are using Linux&reg;, mark the file as executable by running the following  `chmod` command. You can skip this step if you are using Windows.
+    2. If you are using [Linux]{: tag-linux}, mark the file as executable by running the following  `chmod` command. You can skip this step if you are using Windows.
 
         ```sh
         chmod +x ./kms-encrypt-nonce
@@ -303,14 +293,14 @@ To encrypt the nonce value:
     
 2. Save the encrypted nonce to a file called `EncryptedValues.json`.
 
-    - **Use the API**:
+    - [Use the API]{: tag-red}
 
       ```sh
       ./kms-encrypt-nonce -key $KEY_MATERIAL -nonce $NONCE -alg "CBC" > EncryptedValues.json
       ```
       {: pre}
 
-    - **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
+    - [Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI]{: tag-blue}
 
       ```
       ibmcloud kp import-token nonce-encrypt --key "$KEY_MATERIAL" --nonce "$NONCE" --cbc -o json > EncryptedValues.json
@@ -399,7 +389,7 @@ To import the encrypted key:
 
 2. Store the encrypted key in your {{site.data.keyword.hscrypto}} service instance.
 
-    - **Use the API**:
+    - [Use the API]{: tag-red}
 
       ```sh
       curl -X POST  $HPCS_API_URL/api/v2/keys \
@@ -432,7 +422,7 @@ To import the encrypted key:
       If the API request fails with an import token expired error, [return to step 1](#tutorial-import-create-token) to create a new import token. Remember that import tokens and their associated public keys expire based on the policy that you specify at creation time.
       {: tip}
 
-    - **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
+    - [Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI]{: tag-blue}
 
       ```
       ibmcloud kp key create new-imported-key --key-material "$ENCRYPTED_KEY" --encrypted-nonce "$ENCRYPTED_NONCE" --iv "$IV" --sha1 -o json > createRootKeyResponse.json
@@ -497,7 +487,7 @@ To import the encrypted key:
 
 2. Remove the encryption key from your {{site.data.keyword.hscrypto}} service instance.
 
-    - **Use the API**:
+    - [Use the API]{: tag-red}
 
       ```sh
       curl -X DELETE $HPCS_API_URL/api/v2/keys/$ROOT_KEY_ID \
@@ -507,7 +497,7 @@ To import the encrypted key:
       ```
       {: pre}
 
-    - **Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI**:
+    - [Use the {{site.data.keyword.keymanagementservicelong_notm}} CLI]{: tag-blue}
 
       ```
       ibmcloud kp key delete {ROOT_KEY_ID}

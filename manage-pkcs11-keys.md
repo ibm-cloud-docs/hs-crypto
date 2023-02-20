@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-07"
+lastupdated: "2023-02-08"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -11,21 +11,9 @@ subcollection: hs-crypto
 ---
 
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:external: target="_blank" .external}
-{:term: .term}
-{:ui: .ph data-hd-interface="ui"}
-{:cli: .ph data-hd-interface="cli"}
-{:api: .ph data-hd-interface="api"}
-{:terraform: .ph data-hd-interface="terraform"}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
+
+
 
 # Managing EP11 keys with the {{site.data.keyword.cloud_notm}} console
 {: #manage-ep11-key-ui}
@@ -98,7 +86,7 @@ Complete the following steps to create an EP11 key:
 
         | Setting | Description |
         | --- | --- |
-        | Key name | A human-readable alias for easy identification of your key. The key name length can be 1 - 32 characters. To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location. The key name might not be unique. You can assign multiple keys with the same name. However, it is suggested to assign a unique name to each key in the same keystore for easy identification. |
+        | Key name | A human-readable alias for easy identification of your key. The key name length can be 1-32 characters. To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location. The key name might not be unique. You can assign multiple keys with the same name. However, it is suggested to assign a unique name to each key in the same keystore for easy identification. |
         | Key type | The type of the EP11 key that you want to manage in {{site.data.keyword.hscrypto}}. |
         | Keystore | The unique identifier of the keystore with the keystore type appended. Choose one that you want the key to be stored in from the list. For an asymmetric key pair, you need to specify the keystore separately to store the public key and the private key. You can find all available keystores by clicking the **EP11 keystores** tab in the side menu. |
         {: caption="Table 2. Describes the Identifier page" caption-side="bottom"}
@@ -112,10 +100,8 @@ Complete the following steps to create an EP11 key:
             1. The required attributes are listed with the default values. To modify the attribute values, click the **Edit** icon ![Edit icon](../icons/edit-tagging.svg "Edit").
             2. To add more attributes, click **Add public attribute** or **Add private attribute** depending on which page you are on. For a list of supported attributes, see [supported attributes table](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list) and [supported curve names for Elliptic Curve keys](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#supported-pkcs11-ec-curve-name).
 
-                
                 Add and set the `CKA_MODIFIABLE` attribute to `true` if you want to modify the added key later.
                 {: tip}
-                
                 
             3. (Optional) You can delete more attributes by clicking the **Trash can** icon ![Trash can icon](../icons/icon_trash.svg "Trash can"). The required attributes cannot be deleted.
             4. Click **Next** to continue.

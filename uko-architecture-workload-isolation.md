@@ -1,24 +1,17 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-12"
+  years: 2022, 2023
+lastupdated: "2023-02-08"
 
 keywords: hyper protect crypto services architecture, service architecture, architecture diagram, workload isolation, crypto units, secure service container, ssc, public isolation for hyper protect crypto services, compute isolation for hyper protect crypto services
 
+subcollection: hs-crypto
+
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:table: .aria-labeledby="caption"}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:term: .term}
-{:ui: .ph data-hd-interface="ui"}
-{:cli: .ph data-hd-interface="cli"}
-{:api: .ph data-hd-interface="api"}
-{:terraform: .ph data-hd-interface="terraform"}
+{{site.data.keyword.attribute-definition-list}}
+
 
 
 # Service architecture - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}

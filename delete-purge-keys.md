@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-01-07"
+  years: 2021, 2023
+lastupdated: "2023-02-08"
 
 keywords: delete keys, purge, automatic purge, manual purge, delete, destroy
 
@@ -10,15 +10,9 @@ subcollection: hs-crypto
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
+
+
 
 # About deleting and purging keys
 {: #delete-purge-keys}
@@ -37,9 +31,9 @@ The following table lists the timeframes in which you can view, restore, and pur
 
 | Time from key deletion  | Name of key state | Can view or access key data? | Can restore? | Can user initiate purge? |
 |-------------------------|-------------------|---------------------------|--------------|--------------------------|
-| 1 second - 4 hours | Destroyed         | Yes                       | Yes          | No                       |
-| 4 hours - 30 days       | Destroyed         | Yes                       | Yes          | Yes                      |
-| 30 - 90 days              | Destroyed         | Yes                       | No           | Yes                      |
+| 1 second–4 hours | Destroyed         | Yes                       | Yes          | No                       |
+| 4 hours–30 days       | Destroyed         | Yes                       | Yes          | Yes                      |
+| 30–90 days              | Destroyed         | Yes                       | No           | Yes                      |
 | After 90 days           | Purged (not a key state technically)        | No                        | No           | Yes                      |
 {: caption="Table 1. Lists how users can interact with keys during certain time intervals after a key is deleted." caption-side="bottom"}
 

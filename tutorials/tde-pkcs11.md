@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-04-21"
+  years: 2020, 2023
+lastupdated: "2023-02-08"
 
 keywords: encrypt Oracle Transparent Database, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -15,16 +15,9 @@ completion-time: 2h
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:step: data-tutorial-type='step'}
+{{site.data.keyword.attribute-definition-list}}
+
+
 
 # Using {{site.data.keyword.hscrypto}} PKCS #11 for Oracle Transparent Database Encryption
 {: #tutorial-tde-pkcs11}

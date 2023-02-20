@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-20"
+  years: 2022, 2023
+lastupdated: "2023-02-08"
 
 keywords: key management with satellite, uko satellite, hpcs satellite, kp satellite
 
@@ -15,16 +15,9 @@ completion-time: 2h
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:step: data-tutorial-type='step'}
+{{site.data.keyword.attribute-definition-list}}
+
+
 
 # Using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} to manage keys in {{site.data.keyword.keymanagementserviceshort}} on Satellite
 {: #tutorial-uko-satellite}
@@ -96,7 +89,7 @@ After you deploy {{site.data.keyword.keymanagementserviceshort}} on Satellite, y
 
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
-    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1 - 100 characters in length. The first character must be a letter (case-sensitive) or digit (0-9). The rest can also be symbols (.-_) or spaces. For example, `kp-satellite-tiger` |
+    | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1–100 characters in length. The first character must be a letter (case-sensitive) or digit (0–9). The rest can also be symbols (.-_) or spaces. For example, `kp-satellite-tiger` |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. For example, `KP on satellite for project Tiger DB encryption.` |
     | {{site.data.keyword.keymanagementserviceshort}} API endpoint  | The service endpoint of your {{site.data.keyword.keymanagementserviceshort}} on Satellite in the format of `https://<your-satellite-location>.kms.cloud.ibm.com`. For more information, see [Obtaining the {{site.data.keyword.keymanagementserviceshort}} endpoint](/docs/key-protect?topic=key-protect-satellite-about#satellite-about-before-begin-endpoint). |
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
@@ -129,7 +122,7 @@ Now you can use {{site.data.keyword.uko_full_notm}} to create and activate keys 
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
-    | Key name             | A unique, human-readable name for easy identification of your key. For {{site.data.keyword.keymanagementserviceshort}} keys, it must be 2-50 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. For example, `kp satellite tiger key`. |
+    | Key name             | A unique, human-readable name for easy identification of your key. For {{site.data.keyword.keymanagementserviceshort}} keys, it must be 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. For example, `kp satellite tiger key`. |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. For example, `KP on satellite keys for project Tiger DB encryption`|
     | Algorithm            | The encryption algorithm to encrypt data for the key. For example, `AES`.   |
     | Length               | The number of bits that represents the encryption strength of the key. For example, `256`.  |

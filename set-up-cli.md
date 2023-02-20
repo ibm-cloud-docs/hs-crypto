@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-04-21"
+  years: 2018, 2023
+lastupdated: "2023-02-08"
 
 keywords: ibmcloud cli, hpcs cli, ibmcloud commands, ibm cloud command-line interface, key protect cli, kms cli
 
@@ -10,18 +10,7 @@ subcollection: hs-crypto
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:pre: .pre}
-{:tip: .tip}
-{:important: .important}
-{:external: target="_blank" .external}
-{:term: .term}
-{:ui: .ph data-hd-interface="ui"}
-{:cli: .ph data-hd-interface="cli"}
-{:api: .ph data-hd-interface="api"}
-{:terraform: .ph data-hd-interface="terraform"}
+{{site.data.keyword.attribute-definition-list}}
 
 # Performing key management operations with the CLI
 {: #set-up-cli}
@@ -35,7 +24,7 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
 
 2. Set the KP_PRIVATE_ADDR environment variable on your workstation:
 
-    - On the Linux&reg; operating system or MacOS, run the following command:
+    - On the [Linux]{: tag-linux} operating system or [macOS]{: tag-macos}, run the following command:
 
       ```
       export KP_PRIVATE_ADDR=<URL>
@@ -51,7 +40,7 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
 
       To find out the regions that {{site.data.keyword.hscrypto}} supports, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
-    - On the Windows&reg; operating system, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a KP_PRIVATE_ADDR environment variable and set the value to the endpoint that is displayed on the **Manage** tab of your provisioned {{site.data.keyword.cloud_notm}} console. For example, `https://api.us-south.hs-crypto.cloud.ibm.com:<port>`.
+    - On the [Windows]{: tag-windows} operating system, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a KP_PRIVATE_ADDR environment variable and set the value to the endpoint that is displayed on the **Manage** tab of your provisioned {{site.data.keyword.cloud_notm}} console. For example, `https://api.us-south.hs-crypto.cloud.ibm.com:<port>`.
 
     You can also retrieve the endpoint URL through the API. For details, [check out the {{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external}.
 
@@ -60,7 +49,7 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
 
 3. Set the KP_INSTANCE_ID environment variable on your workstation:
 
-    - On the Linux&reg; operating system or MacOS, run the following command:
+    - On the [Linux]{: tag-linux} operating system or [macOS]{: tag-macos}, run the following command:
 
       ```
       export KP_INSTANCE_ID=<instance_ID>
@@ -69,7 +58,7 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
 
       In this command, the *instance_ID* is displayed on the **Manage** tab of your provisioned {{site.data.keyword.cloud_notm}} console. *instance_ID* is in a Universally Unique Identifier (UUID) format.
 
-    - On Windows&reg;, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a KP_INSTANCE_ID environment variable and set the value to the instance ID value that is displayed on the **Manage** tab of your provisioned {{site.data.keyword.hscrypto}} dashboard.
+    - On [Windows]{: tag-windows}, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a KP_INSTANCE_ID environment variable and set the value to the instance ID value that is displayed on the **Manage** tab of your provisioned {{site.data.keyword.hscrypto}} dashboard.
 
     Alternatively, you can use the `-i <instance_ID>` option on the `ibmcloud kp` command to set the instance ID.
 

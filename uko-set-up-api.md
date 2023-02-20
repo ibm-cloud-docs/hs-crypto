@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-11-25"
+  years: 2022, 2023
+lastupdated: "2023-02-08"
 
 keywords: set up api, uko api, Unified Key Orchestrator api, 
 
@@ -10,14 +10,9 @@ subcollection: hs-crypto
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
+
+
 
 # Setting up {{site.data.keyword.uko_full_notm}} API calls
 {: #set-up-uko-api}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-01-07"
+  years: 2021, 2023
+lastupdated: "2023-02-08"
 
 keywords: trusted key entry plugin, key ceremony, cloud TKE procedure
 
@@ -11,15 +11,9 @@ subcollection: hs-crypto
 ---
 
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:table: .aria-labeledby="caption"}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
+
+
 
 # {{site.data.keyword.hscrypto}} cloud TKE procedures
 {: #tke-procedures}

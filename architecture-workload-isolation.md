@@ -1,25 +1,14 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-12-12"
+  years: 2021, 2023
+lastupdated: "2023-02-14"
 
 keywords: hyper protect crypto services architecture, service architecture, architecture diagram, workload isolation, crypto units, secure service container, ssc, public isolation for hyper protect crypto services, compute isolation for hyper protect crypto services
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:table: .aria-labeledby="caption"}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:term: .term}
-{:ui: .ph data-hd-interface="ui"}
-{:cli: .ph data-hd-interface="cli"}
-{:api: .ph data-hd-interface="api"}
-{:terraform: .ph data-hd-interface="terraform"}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Service architecture - {{site.data.keyword.hscrypto}} Standard Plan
 {: #architecture-workload-isolation}
@@ -36,7 +25,7 @@ The following architecture diagram shows how you interact with {{site.data.keywo
 
 The following list explains each component in detail.
 
-key management service API
+Key management service API
 :   The API that you use to interact with the key management service (KMS) module to manage root keys and standard keys.
 
 PKCS #11 API

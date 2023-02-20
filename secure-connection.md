@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-12-12"
+  years: 2020, 2023
+lastupdated: "2023-02-08"
 
 keywords: securing connection, disabling public service endpoint
 
@@ -10,40 +10,7 @@ subcollection: hs-crypto
 
 ---
 
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:download: .download}
-{:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:gif: data-image-type='gif'}
-{:important: .important}
-{:note: .note}
-{:pre: .pre}
-{:tip: .tip}
-{:preview: .preview}
-{:deprecated: .deprecated}
-{:beta: .beta}
-{:term: .term}
-{:ui: .ph data-hd-interface="ui"}
-{:cli: .ph data-hd-interface="cli"}
-{:api: .ph data-hd-interface="api"}
-{:terraform: .ph data-hd-interface="terraform"}
-{:shortdesc: .shortdesc}
-{:script: data-hd-video='script'}
-{:support: data-reuse='support'}
-{:table: .aria-labeledby="caption"}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:help: data-hd-content-type='help'}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:tsSymptoms: .tsSymptoms}
-{:java: .ph data-hd-programlang='java'}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:swift: .ph data-hd-programlang='swift'}
-{:curl: .ph data-hd-programlang='curl'}
-{:video: .video}
-{:step: data-tutorial-type='step'}
-{:tutorial: data-hd-content-type='tutorial'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Using service endpoints to privately connect to {{site.data.keyword.hscrypto}}
 {: #secure-connection}
@@ -229,7 +196,7 @@ If you are using the GREP11 service, the service handles the private endpoint co
 
 2. Set the environment variable to target the {{site.data.keyword.hscrypto}} private endpoint.
 
-    Use the following commands on the Linux&reg; operating system or MacOS only. For how to set environment variables on the Windows&reg; operating system, see [Accessing {{site.data.keyword.keymanagementserviceshort}} CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli).
+    Use the following commands on the [Linux]{: tag-linux} operating system or [macOS]{: tag-macos} only. For how to set environment variables on the [Windows]{: tag-windows} operating system, see [Accessing {{site.data.keyword.keymanagementserviceshort}} CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli).
     {: note}
 
     Set the KP_PRIVATE_ADDR environment variable to target the private endpoint for the key management service:
