@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-02-22"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -239,19 +239,18 @@ To assign access to a key ring with the console, complete the following steps:
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
 2. Select the user that you want to assign access to in the table, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")to open a list of options for that user.
 3. From the options menu, click **Assign access**.
-4. Click **Assign users additional access**.
-5. Click the **IAM services** button.
-6. From the list of services, select **{{site.data.keyword.hscrypto}}**.
-7. Select **Services based on attributes**.
-8. Select the **Instance ID** attribute and select the instance where the key ring resides.
-9. Select the **Key Ring ID** attribute and enter the ID associated with the key ring.
-8. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles)
-   to assign access for the user.
-9. Click **Add**.
-10. Continue to add platform and service access roles as needed. When you finish all the access assignment, click **Assign**.
+4. Click **Access policy**.
+5. Under **Service**, select **Hyper Protect Crypto Services**.
+6. Under **Resources**, select **Specific resources**. 
+7. Select the **Service Instance ID** attribute type and enter the ID of the instance where the key ring resides.
+8. Click **Add a condition** and select the **Key Ring ID** attribute to enter the ID associated with the key ring.
+9. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
+10. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
+11. After confirmation, click **Add** &gt; **Assign**.
 
     You must assign the user must at least _Reader_ access to the entire instance in order for them to list, create, and delete key rings within the instance.
     {: note}
+
 
 ## Listing key rings
 {: #list-key-ring}

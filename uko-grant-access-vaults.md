@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-02-22"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystore, key management, access control
 
@@ -53,13 +53,14 @@ To assign access to a vault for a user from the UI, complete the following steps
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
 2. Select the user from the table, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions"), and then select **Assign access**.
-4. Click **Access policy**.
-5. Under **Service**, select **Hyper Protect Crypto Services**.
-6. Under **Resources**, select **Specific resources**. 
-7. Select **Service Instance ID** and enter the [instance ID that is retreived](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). 
-8. Click **Add a condition**, and select the **Vault ID** attribute to enter the vault ID that is retrieved in [Step 1](#access-vault-retrieve-ID).
-9. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
-10. Click **Add** > **Assign**.
+3. Click **Access policy**.
+4. Under **Service**, select **Hyper Protect Crypto Services**.
+5. Under **Resources**, select **Specific resources**. 
+6. Select **Service Instance ID** and enter the [instance ID that is retreived](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). 
+7. Click **Add a condition**, and select the **Vault ID** attribute to enter the vault ID that is retrieved in [Step 1](#access-vault-retrieve-ID).
+8. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
+9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
+10. After confirmation, click **Add** &gt; **Assign**.
 
 You can also create an access policy through IAM [API](/apidocs/iam-policy-management#create-policy){: external} or [CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create){: external}.
 {: note}

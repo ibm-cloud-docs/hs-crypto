@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-02-22"
 
 keywords: grant access, iam, iam access, assign access, access policy, key access
 
@@ -47,9 +47,10 @@ To assign access:
 4. Click **Access policy**.
 5. Under **Service**, select **Hyper Protect Crypto Services**.
 6. Under **Resources**, select **Specific resources**. 
-7. Select **Service Instance ID** and enter the [instance ID that is retreived](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). 
-8. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
-9. Click **Add** > **Assign**.
+7. Select the **Service Instance ID** attribute type, enter the [instance ID that is retrieved](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+8. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
+9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
+10. After confirmation, click **Add** &gt; **Assign**.
 
 ## Granting access to a single key in an instance
 {: #grant-access-key-level}
@@ -77,12 +78,13 @@ Use the retrieved key ID to create an access policy:
 4. Click **Access policy**.
 5. Under **Service**, select **Hyper Protect Crypto Services**.
 6. Under **Resources**, select **Specific resources**. 
-7. Select **Service Instance ID** and enter the [instance ID that is retreived](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). 
-8. Click **Add a condition** and enter identifying information about the key:
-   1. Select **Resource Type**, and enter `key`.
-   2. Select **Resource ID**, and enter the ID that is assigned to your key by the {{site.data.keyword.hscrypto}} service.
-9. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
-10. Click **Add** > **Assign**.
+7. Select the **Service Instance ID** attribute type and enter the [instance ID that is retrieved](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+8. Click **Add a condition** and enter the following identifying information about the key:
+    1. Select **Resource Type**, and enter `key`.
+    2. Select **Resource ID**, and enter the ID that is assigned to your key by the {{site.data.keyword.hscrypto}} service.
+9. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
+10. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
+11. After confirmation, click **Add** &gt; **Assign**.
 
 ## Granting access to key rings in an instance
 {: #grant-access-key-ring-level}
@@ -106,10 +108,12 @@ To assign access to a key ring with the console:
 4. Click **Access policy**.
 5. Under **Service**, select **Hyper Protect Crypto Services**.
 6. Under **Resources**, select **Specific resources**. 
-7. Select **Service Instance ID** and enter the [instance ID that is retreived](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). 
-8. Click **Add a condition**, and select the **Key Ring ID** attribute to enter the ID associated with the key ring.
-9. Choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
-10. Click **Add** > **Assign**.
+7. Select the **Service Instance ID** attribute type and enter the [instance ID that is retrieved](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+8. Click **Add a condition** and select the **Key Ring ID** attribute to enter the ID associated with the key ring.
+9. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
+10. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
+11. After confirmation, click **Add** &gt; **Assign**.
+
 
 You can also create an access policy through IAM [API](/apidocs/iam-policy-management#create-policy){: external} or [CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create){: external}.
 {: note}

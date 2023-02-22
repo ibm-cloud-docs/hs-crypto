@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-02-22"
 
 keywords: pkcs11 ui access, pkcs 11 account authentication
 
@@ -53,25 +53,29 @@ To create a custom role, complete the following steps:
 Before users can access EP11 keystores or keys with the {{site.data.keyword.cloud_notm}} console, you need to grant users the appropriate IAM roles by completing the following steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
-2. Click the **User** name and select the **Access policies** tab.
+2. Select the user, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for that user.
 
     Click **Invite users** to add a user to your account if the user is not in the table. For more information, see [Inviting users to an account](/docs/account?topic=account-iamuserinv){: external}.
     {: tip}
 
-3. Click **Assign access**.
-4. Select **Hyper Protect Crypto Services** from the list under **Which service do you want to assign access to?**.
-5. Select services that you want to assign access to:
+3. From the options menu, click **Assign access**.
+4. Click **Access policy**.
+5. Under **Service**, select **Hyper Protect Crypto Services**.
+6. Under **Resources**, select resources that you want to assign access to:
 
     - If you want to assign the user access to all the {{site.data.keyword.hscrypto}} instances under your account, select **All resources**.
-    - If you want to assign the user access to part of the {{site.data.keyword.hscrypto}} resources under you account, select **Resources based on selected attributes** and check the corresponding conditions based on your needs. For example, check the **Service Instance ID** and specify the instance from the list.
+    - If you want to assign the user access to part of the {{site.data.keyword.hscrypto}} resources under you account, select **Specific resources** and add the corresponding conditions based on your needs. For example, select the **Service Instance ID** and specify the instance from the list.
 
-6. Check the box for at least the **Viewer** role under **Platform access**. For more information about the IAM platform roles, see [Platform access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#platform-mgmt-roles).
-7. Check the box for the corresponding custom role that you set up in [Step 1](#step1-create-custom-roles-pkcs11-ui) based on your needs.
+7. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user. 
+
+    - Check the box for at least the **Viewer** role under **Platform access**.
+    - Check the box for the corresponding custom role that you set up in [Step 1](#step1-create-custom-roles-pkcs11-ui) based on your needs.
 
     If you don't have any custom roles, you can select the existing IAM roles that cover the actions that you want to assign to the user. You can view the specific actions that correspond to the role by clicking the number.
     {: tip}
 
-8. Click **Add**, and then click **Assign** after confirmation.
+8. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
+9. After confirmation, click **Add** &gt; **Assign**.
 
 ##  What's next
 {: #pkcs11-ui-best-practices-next}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-02-22"
 
 keywords: pkcs11 access, pkcs 11 authentication, set up PKCS 11 API, best practice for setting up pkcs11 users
 
@@ -185,15 +185,15 @@ To assign access to the keystores for the SO user, follow these steps:
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
 2. Hover your mouse over the `SO user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options.
 3. From the options menu, click **Assign access**.
-4. Click **Assign access to the service ID**, and then click the **IAM services** button.
-5. Under **Which service do you want to assign access to?**, select **Hyper Protect Crypto Services**.
-6. Under **How do you want to scope the access?**, select **Resources based on selected attributes**.
-7. Under **Service Instance ID**, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
-8. Under **Custom access**, check the boxes for the following roles:
+4. Click **Access policy**.
+5. Under **Service**, select **Hyper Protect Crypto Services**.
+6. Under **Resources**, select **Specific resources**.
+7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to.
+8. Under **Roles and actions**, check the boxes for the following roles:
     * `Keystore operator`
     * `Key operator`
-9. Click **Add**, and then click **Assign** after confirmation.
-
+9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
+10. After confirmation, click **Add** &gt; **Assign**.
 
 
 ### 2. Assign the custom roles to the normal user service ID
@@ -205,13 +205,13 @@ To assign access to the keystores for the normal user, follow these steps:
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
 2. Hover your mouse over the `Normal user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options.
 3. From the options menu, click **Assign access**.
-4. Click **Assign access to the service ID**, and then click the **IAM services** button.
-5. Under **Which service do you want to assign access to?**, select **Hyper Protect Crypto Services**.
-6. Under **How do you want to scope the access?**, select **Resources based on selected attributes**.
-7. Under **Service Instance ID**, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
-8. Under **Custom access**, check the box for `Key operator`.
-9. Click **Add**, and then click **Assign** after confirmation.
-
+4. Click **Access policy**.
+5. Under **Service**, select **Hyper Protect Crypto Services**.
+6. Under **Resources**, select **Specific resources**.
+7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to.
+8. Under **Roles and actions**, check the boxes for `Key operator`.
+9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
+10. After confirmation, click **Add** &gt; **Assign**.
 
 
 ### 3. Assign the custom roles to the anonymous user service ID
@@ -223,13 +223,13 @@ To assign access to the keystore for the anonymous user, follow these steps:
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
 2. Hover your mouse over the `Anonymous user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options.
 3. From the options menu, click **Assign access**.
-4. Click **Assign access to the service ID**, and then click the **IAM services** button.
-5. Under **Which service do you want to assign access to?**, select **Hyper Protect Crypto Services**.
-6. Under **How do you want to scope the access?**, select **Resources based on selected attributes**.
-7. Under **Service Instance ID**, select the {{site.data.keyword.hscrypto}} service instance that you want to grant access to.
-8. Under **Custom access**, check the box for `Key operator`.
-9. Click **Add**, and then click **Assign** after confirmation.
-
+4. Click **Access policy**.
+5. Under **Service**, select **Hyper Protect Crypto Services**.
+6. Under **Resources**, select **Specific resources**.
+7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to.
+8. Under **Roles and actions**, check the boxes for `Key operator`.
+9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
+10. After confirmation, click **Add** &gt; **Assign**.
 
      
 ##  What's next
