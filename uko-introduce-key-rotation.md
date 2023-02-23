@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-02-23"
 
 keywords: rotate managed key, rotate key, managed key rotation, key rotation, key rewrap
 
@@ -28,7 +28,7 @@ Rotating keys on a regular basis helps you meet industry standards and cryptogra
 | Incident mitigation | If your organization detects a security issue, you can immediately rotate the key to mitigate or reduce costs that are associated with key compromise. |
 {: caption="Table 1. Describes the benefits of key rotation" caption-side="bottom"}
 
-Key rotation is treated in the NIST Special Publication 800-57, Recommendation for Key Management. To learn more, see [NIST SP 800-57 Pt. 1 Rev. 5](https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-5/finalntr){: external}
+Key rotation is treated in the NIST Special Publication 800-57, Recommendation for Key Management. To learn more, see [NIST SP 800-57 Pt. 1 Rev. 5](https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-5/final){: external}
 {: tip}
 
 Note that key rotation might charge extra fees depending on the type of your managed key. For the pricing details, refer to the following links:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-02-23"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -26,7 +26,7 @@ To ensure the exclusive control on the execution of cryptographic operations, yo
 With mutual TLS as a second layer of authentication for accessing EP11, you need to be aware of the following security and availability considerations:
 
 - If you need to prevent certain people from accessing EP11, separate certificate administrators from service users. Control access by assigning the _Certificate Manager_ role only to the people that manage the client certificates, and assigning other service users the corresponding roles for operational usage. To manage user access, you need to be assigned the _Administrator_ role with account management access.
-- EP11 APIs are not accessible if you use invalid client certificates or use unavailable private keys to sign client certificates. To ensure the availability, assign more than one person the _Certificate Manager_ role as a backup. Certificate administrators need to securely maintain their unique administrator private keys. Certificate administrators also need to maintain a backup of all client certificates outside of the {{site.data.keyword.hscrypto}} instance, for example, by using [{{site.data.keyword.cloud_notm}} Certificate Manager](https://www.ibm.com/cloud/certificate-manager){: external}. It is also suggested to monitor the expiration of the certificates.
+- EP11 APIs are not accessible if you use invalid client certificates or use unavailable private keys to sign client certificates. To ensure the availability, assign more than one person the _Certificate Manager_ role as a backup. Certificate administrators need to securely maintain their unique administrator private keys. Certificate administrators also need to maintain a backup of all client certificates outside of the {{site.data.keyword.hscrypto}} instance, for example, by using [{{site.data.keyword.cloud_notm}} Secrets Manager](https://www.ibm.com/cloud/secrets-manager){: external}. It is also suggested to monitor the expiration of the certificates.
 
 ## Before you begin
 {: #enable-authentication-ep11-prerequisites}
@@ -34,7 +34,7 @@ With mutual TLS as a second layer of authentication for accessing EP11, you need
 Before you can enable the second layer of authentication for GREP11 or PKCS #11 API connections, make sure that you complete the following prerequisites:
 
 1. You are assigned the _Certificate Manager_ IAM role to perform the corresponding actions. For more information about assigning IAM roles, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access) and [Managing access to resources](/docs/account?topic=account-assign-access-resources).
-2. You have a client certificate prepared on your workstation that is used for the TLS authentication. It is suggested to use the [{{site.data.keyword.cloud_notm}} Certificate Manager](https://www.ibm.com/cloud/certificate-manager){: external} to manage SSL/TLS certificates for your applications and services. It is free and provides persistent storage for your certificates. With the {{site.data.keyword.cloud_notm}} Certificate Manager service, you can [order free certificates](/docs/certificate-manager?topic=certificate-manager-ordering-certificates), [import your certificates](/docs/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#importing-a-certificate), and [enable notifications for expiring certificates](/docs/certificate-manager?topic=certificate-manager-configuring-notifications).
+2. You have a client certificate prepared on your workstation that is used for the TLS authentication. It is suggested to use the [{{site.data.keyword.cloud_notm}} Secrets Manager](https://www.ibm.com/cloud/secrets-manager){: external} to manage SSL/TLS certificates for your applications and services. It is free and provides persistent storage for your certificates. With the {{site.data.keyword.cloud_notm}} Certificate Manager service, you can [order free certificates](/docs/certificate-manager?topic=certificate-manager-ordering-certificates), [import your certificates](/docs/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#importing-a-certificate), and [enable notifications for expiring certificates](/docs/certificate-manager?topic=certificate-manager-configuring-notifications).
 3. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external}.
 4. Install the latest certificate manager CLI plug-in with the following command:
 
