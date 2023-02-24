@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-22"
+lastupdated: "2023-02-24"
 
 keywords: pkcs11 ui access, pkcs 11 account authentication
 
@@ -60,13 +60,13 @@ Before users can access EP11 keystores or keys with the {{site.data.keyword.clou
 
 3. From the options menu, click **Assign access**.
 4. Click **Access policy**.
-5. Under **Service**, select **Hyper Protect Crypto Services**.
-6. Under **Resources**, select resources that you want to assign access to:
+5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
+6. Under **Resources**, select resources that you want to assign access to and click **Next**:
 
     - If you want to assign the user access to all the {{site.data.keyword.hscrypto}} instances under your account, select **All resources**.
     - If you want to assign the user access to part of the {{site.data.keyword.hscrypto}} resources under you account, select **Specific resources** and add the corresponding conditions based on your needs. For example, select the **Service Instance ID** and specify the instance from the list.
 
-7. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user. 
+7. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user and click **Next**. 
 
     - Check the box for at least the **Viewer** role under **Platform access**.
     - Check the box for the corresponding custom role that you set up in [Step 1](#step1-create-custom-roles-pkcs11-ui) based on your needs.

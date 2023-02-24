@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-22"
+lastupdated: "2023-02-24"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -240,11 +240,11 @@ To assign access to a key ring with the console, complete the following steps:
 2. Select the user that you want to assign access to in the table, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")to open a list of options for that user.
 3. From the options menu, click **Assign access**.
 4. Click **Access policy**.
-5. Under **Service**, select **Hyper Protect Crypto Services**.
+5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
 6. Under **Resources**, select **Specific resources**. 
 7. Select the **Service Instance ID** attribute type and enter the ID of the instance where the key ring resides.
-8. Click **Add a condition** and select the **Key Ring ID** attribute to enter the ID associated with the key ring.
-9. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
+8. Click **Add a condition**, select the **Key Ring ID** attribute to enter the ID associated with the key ring, and click **Next**.
+9. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user and click **Next**.
 10. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
 11. After confirmation, click **Add** &gt; **Assign**.
 

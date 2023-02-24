@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-22"
+lastupdated: "2023-02-24"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystore, key management, access control
 
@@ -54,11 +54,11 @@ To assign access to a vault for a user from the UI, complete the following steps
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
 2. Select the user from the table, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions"), and then select **Assign access**.
 3. Click **Access policy**.
-4. Under **Service**, select **Hyper Protect Crypto Services**.
+4. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
 5. Under **Resources**, select **Specific resources**. 
 6. Select **Service Instance ID** and enter the [instance ID that is retreived](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). 
-7. Click **Add a condition**, and select the **Vault ID** attribute to enter the vault ID that is retrieved in [Step 1](#access-vault-retrieve-ID).
-8. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
+7. Click **Add a condition**, select the **Vault ID** attribute to enter the vault ID that is retrieved in [Step 1](#access-vault-retrieve-ID), and click **Next**
+8. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user and click **Next**.
 9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
 10. After confirmation, click **Add** &gt; **Assign**.
 

@@ -187,10 +187,10 @@ To assign access to the keystores for the SO user, follow these steps:
 2. Hover your mouse over the `SO user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options.
 3. From the options menu, click **Assign access**.
 4. Click **Access policy**.
-5. Under **Service**, select **Hyper Protect Crypto Services**.
+5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
 6. Under **Resources**, select **Specific resources**.
-7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to.
-8. Under **Roles and actions**, check the boxes for the following roles:
+7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Next**.
+8. Under **Roles and actions**, check the boxes for the following roles and click **Next**:
     * `Keystore operator`
     * `Key operator`
 9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
@@ -207,10 +207,10 @@ To assign access to the keystores for the normal user, follow these steps:
 2. Hover your mouse over the `Normal user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options.
 3. From the options menu, click **Assign access**.
 4. Click **Access policy**.
-5. Under **Service**, select **Hyper Protect Crypto Services**.
+5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
 6. Under **Resources**, select **Specific resources**.
-7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to.
-8. Under **Roles and actions**, check the boxes for `Key operator`.
+7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Next**.
+8. Under **Roles and actions**, check the boxes for `Key operator` and click **Next**.
 9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
 10. After confirmation, click **Add** &gt; **Assign**.
 
@@ -225,10 +225,10 @@ To assign access to the keystore for the anonymous user, follow these steps:
 2. Hover your mouse over the `Anonymous user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options.
 3. From the options menu, click **Assign access**.
 4. Click **Access policy**.
-5. Under **Service**, select **Hyper Protect Crypto Services**.
+5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
 6. Under **Resources**, select **Specific resources**.
-7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to.
-8. Under **Roles and actions**, check the boxes for `Key operator`.
+7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Next**.
+8. Under **Roles and actions**, check the boxes for `Key operator` and click **Next**.
 9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
 10. After confirmation, click **Add** &gt; **Assign**.
 

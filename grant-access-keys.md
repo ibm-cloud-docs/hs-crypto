@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-22"
+lastupdated: "2023-02-24"
 
 keywords: grant access, iam, iam access, assign access, access policy, key access
 
@@ -45,10 +45,10 @@ To assign access:
 2. Select the user, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for that user.
 3. From the options menu, click **Assign access**.
 4. Click **Access policy**.
-5. Under **Service**, select **Hyper Protect Crypto Services**.
+5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
 6. Under **Resources**, select **Specific resources**. 
-7. Select the **Service Instance ID** attribute type, enter the [instance ID that is retrieved](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
-8. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
+7. Select the **Service Instance ID** attribute type, enter the [instance ID that is retrieved](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID) and click **Next**.
+8. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user and click **Next**.
 9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
 10. After confirmation, click **Add** &gt; **Assign**.
 
@@ -76,13 +76,13 @@ Use the retrieved key ID to create an access policy:
 2. Select the user, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for that user.
 3. From the options menu, click **Assign access**.
 4. Click **Access policy**.
-5. Under **Service**, select **Hyper Protect Crypto Services**.
+5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
 6. Under **Resources**, select **Specific resources**. 
 7. Select the **Service Instance ID** attribute type and enter the [instance ID that is retrieved](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
-8. Click **Add a condition** and enter the following identifying information about the key:
+8. Click **Add a condition**, enter the following identifying information about the key, and click **Next**:
     1. Select **Resource Type**, and enter `key`.
     2. Select **Resource ID**, and enter the ID that is assigned to your key by the {{site.data.keyword.hscrypto}} service.
-9. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
+9. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user and click **Next**.
 10. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
 11. After confirmation, click **Add** &gt; **Assign**.
 
@@ -106,11 +106,11 @@ To assign access to a key ring with the console:
 2. Select a table row, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for that user.
 3. From the options menu, click **Assign access**.
 4. Click **Access policy**.
-5. Under **Service**, select **Hyper Protect Crypto Services**.
+5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
 6. Under **Resources**, select **Specific resources**. 
 7. Select the **Service Instance ID** attribute type and enter the [instance ID that is retrieved](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
-8. Click **Add a condition** and select the **Key Ring ID** attribute to enter the ID associated with the key ring.
-9. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user.
+8. Click **Add a condition**, select the **Key Ring ID** attribute to enter the ID associated with the key ring, and click **Next**.
+9. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user and click **Next**.
 10. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
 11. After confirmation, click **Add** &gt; **Assign**.
 
