@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-02-24"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -242,7 +242,7 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
             tokenspaceID: "<private_keystore_spaceid>"
             iamauth: *defaultiamcredential
             sessionauth:
-              enabled: true # Enable this option to encrypt and authenticate the keystore.
+              enabled: false # Enable this option to encrypt and authenticate the keystore.
               # Authenticated keystore password; must be 6-8 characters in length
               tokenspaceIDPassword: "<private_keystore_password>"
           2: # The index of the anonymous user MUST be 2.
@@ -562,7 +562,7 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
             tokenspaceID: "<private_keystore_spaceid>"
             iamauth: *defaultiamcredential
             sessionauth:
-              enabled: true # Enable this option to encrypt and authenticate the keystore.
+              enabled: false # Enable this option to encrypt and authenticate the keystore.
               # Authenticated keystore password; must be 6-8 characters in length
               tokenspaceIDPassword: "<private_keystore_password>"
           2: # The index of the anonymous user MUST be 2.
