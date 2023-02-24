@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-02-24"
 
 keywords: UKO access, UKO account authentication, UKO custom roles, Unified Key Orchestrator
 
@@ -27,17 +27,11 @@ To manage users and access to {{site.data.keyword.uko_full_notm}} keys, keystore
 To create a custom role, complete the following steps:
 
 1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** &gt; **Access (IAM)**, and select **Roles**.
-
 2. Click **Create**.
-
 3. Enter a name for your role. This name must be unique within the account. You can see this role name in the console when you assign access to the service.
-
 4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `MyVaultAdministrator`.
-
 5. Optionally, you can enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description is also displayed in the console when you assign access to the service.
-
 6. From the list of services, select **{{site.data.keyword.hscrypto}}**.
-
 7. Select **Add** to add actions for the role. 
 
     The following table lists the suggested custom roles and corresponding actions for your reference:
@@ -60,26 +54,30 @@ To create a custom role, complete the following steps:
 Before users can access {{site.data.keyword.uko_full_notm}} vaults, keystores, or keys, you need to grant users the appropriate IAM roles by completing the following steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
-   
-2. Click the **User** name and select the **Access policies** tab.
+2. Select the user, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for that user.
 
     Click **Invite users** to add a user to your account if the user is not in the table. For more information, see [Inviting users to an account](/docs/account?topic=account-iamuserinv){: external}.
     {: tip}
 
-3. Click **Assign access**.
-
-4. Select **{{site.data.keyword.hscrypto}}** from the list under **Which service do you want to assign access to?**.
-
-5. Select services that you want to assign access to:
+3. From the options menu, click **Assign access**.
+4. Click **Access policy**.
+5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
+6. Under **Resources**, select resources that you want to assign access to and click **Next**.
 
     - If you want to assign the user access to all the {{site.data.keyword.hscrypto}} instances under your account, select **All resources**.
-    - If you want to assign the user access to part of the {{site.data.keyword.hscrypto}} resources under you account, select **Resources based on selected attributes**, and check the corresponding conditions based on your needs. For example, check the **Service Instance ID** and specify the instance from the list.
+    - If you want to assign the user access to part of the {{site.data.keyword.hscrypto}} resources under you account, select **Specific resources** and add the corresponding conditions based on your needs. For example, select the **Service Instance ID** and specify the instance from the list.
 
-6. Check the box for at least the **Viewer** role under **Platform access**. For more information about the IAM platform roles, see [Platform access roles](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-platform-mgmt-roles).
+7. Under **Roles and actions**, choose a combination of platform and service access roles to assign access for the user and click **Next**. 
 
-7. Check the box for the corresponding custom role that you set up in [Step 1](#uko-step1-create-custom-roles-uko) based on your needs.
+    - Check the box for at least the **Viewer** role under **Platform access**. For more information about the IAM platform roles, see [Platform access roles](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-platform-mgmt-roles).
+    - Check the box for the corresponding custom role that you set up in [Step 1](#uko-step1-create-custom-roles-uko) based on your needs.
 
-8. Click **Add**, and then click **Assign** after confirmation.
+    If you don't have any custom roles, you can select the existing IAM roles that cover the actions that you want to assign to the user. You can view the specific actions that correspond to the role by clicking the number.
+    {: tip}
+
+8. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
+9. After confirmation, click **Add** &gt; **Assign**.
+
 
 ##  What's next
 {: #uko-role-best-practices-next}

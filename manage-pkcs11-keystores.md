@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-02-23"
 
 keywords: pkcs11 keystore, ep11 keystore, create pkcs11 keystore, generate pkcs11 keystore, view ep11 keystore, delete ep11 keystore, view pkcs11 keystore
 
@@ -102,4 +102,4 @@ After you delete a keystore, you are not able to access any EP11 keys that are s
 ## What's next
 {: #manage-ep11-keystore-ui-next}
 
-Start to create an EP11 key [through the console UI](/docs/hs-crypto?topic=hs-crypto-create-ep11-key-ui) or [through the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
+Start to create an EP11 key [through the console UI](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui#create-ep11-key-ui) or [through the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).

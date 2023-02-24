@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-02-22"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -61,7 +61,7 @@ Complete the following steps to order smart cards:
 
 ### Ordering smart card readers
 
-To order smart card readers, you have the followig options: 
+To order smart card readers, you have the following options: 
 
 * Contact your IBM Sales representative or your IBM Business Partner to order smart card readers. For more information, see [{{site.data.keyword.IBM}} {{site.data.keyword.hscrypto}} hardware announcement](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/6/897/ENUS122-116/index.html){: external}.
 * Order two smart card readers `Identiv SPR332 v2.0 Secure Class 2 PIN Pad Reader` (part number 905127-1), from third-party online shops. The following list contains a few example online shopping sites where the required smart card readers are available. The deliver policy might vary depending on your geographical locations:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-02-24"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -128,7 +128,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
             tokenspaceID: "<private_keystore_spaceid>"
             iamauth: *defaultiamcredential
             sessionauth:
-              enabled: true # Enable this option to encrypt and authenticate the keystore.
+              enabled: false # Enable this option to encrypt and authenticate the keystore.
               # Authenticated keystore password; must be 6-8 characters in length
               tokenspaceIDPassword: "<private_keystore_password>"
           2: # The index of the anonymous user MUST be 2.
@@ -169,7 +169,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
     | `anonymous_user_name` | The name for the anonymous user. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. If a user does not log in by using the `C_Login` Cryptoki function, then the user is known as an anonymous user. For more information about the PKCS #11 user types, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984). |
     | `public_keystore_spaceid` | The 128-bit [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html) of the public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/).  \n \n {{site.data.keyword.hscrypto}} provides you with two database-backed EP11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access. |
     | `apikey_for_anonymous_user` | The service ID API key that you create for the anonymous user type in the [previous prerequisites step](#uko-prerequisite-pkcs-api). |
-    | `logging_level` | The supported logging levels, in an increasing order of verboseness: `panic`, `fatal`, `error`, `warning`/`warn`, `info`, `debug`, and `trace`. The Default value is `warning`. For more information about the logging levels, see [Logging levels](http://www.thejoyofcode.com/Logging_Levels_and_how_to_use_them.aspx). |
+    | `logging_level` | The supported logging levels, in an increasing order of verboseness: `panic`, `fatal`, `error`, `warning`/`warn`, `info`, `debug`, and `trace`. The Default value is `warning`. |
     | `log_file_path` | The full path of your logging file. It saves all the logs that are generated when your applications interact with the {{site.data.keyword.hscrypto}} cloud HSM to execute PKCS #11 functions. |
     {: caption="Table 1. Describes the variables needed to create the PKCS #11 configuration file" caption-side="bottom"}
 
