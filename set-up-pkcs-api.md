@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-23"
+lastupdated: "2023-02-24"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -129,7 +129,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
             tokenspaceID: "<private_keystore_spaceid>"
             iamauth: *defaultiamcredential
             sessionauth:
-              enabled: true # Enable this option to encrypt and authenticate the keystore.
+              enabled: false # Enable this option to encrypt and authenticate the keystore.
               # Authenticated keystore password; must be 6-8 characters in length
               tokenspaceIDPassword: "<private_keystore_password>"
           2: # The index of the anonymous user MUST be 2.

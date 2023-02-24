@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-22"
+lastupdated: "2023-02-24"
 
 keywords: pkcs11 access, pkcs 11 authentication, set up PKCS 11 API, best practice for setting up pkcs11 users
 
@@ -81,6 +81,7 @@ This role is used to generate and manage keys in the Enterprise PKCS #11 (EP11) 
     * hs-crypto.keystore.deletekey
     * hs-crypto.keystore.listkeysbyattributes
     * hs-crypto.keystore.listkeysbyids
+    * hs-crypto.keystore.listkeystoresbyids
     * hs-crypto.keystore.storenewkey
     * hs-crypto.keystore.updatekey
     * hs-crypto.discovery.listservers
