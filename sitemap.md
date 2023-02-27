@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-02-27"
 
 keywords: site map, doc structure, information architecture
 
@@ -2032,9 +2032,9 @@ Find what you are looking for in the compilation of topics that are available in
 [Why do I fail to see the changes to my key in Azure Key Vault?](/docs/hs-crypto?topic=hs-crypto-troubleshoot-azure-delay#troubleshoot-azure-delay)
 
 
-## Getting help and support
-{: #sitemap_getting_help_and_support}
+## Getting help and support for {{site.data.keyword.hscrypto}}
+{: #sitemap_getting_help_and_support_for_}
 
 
-[Getting help and support](/docs/hs-crypto?topic=hs-crypto-getting-help#getting-help)
+[Getting help and support for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-getting-help#getting-help)
 
