@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-03-02"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -21,8 +21,10 @@ subcollection: hs-crypto
 You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance regularly to meet industry standards and cryptographic best practices. To rotate the master key using master key part files on your local workstation, follow these steps.
 {: shortdesc}
 
+
 Master key rotation is currently supported only by the {{site.data.keyword.hscrypto}} Standard Plan.
 {: note}
+
 
 Rotating the master key reencrypts the keys in key storage using the new master key value. After the keys in key storage are reencrypted, the value in the new master key register is promoted to the current master key register. Before you start rotating the master key, you need to do the following steps:
 
@@ -30,8 +32,10 @@ Rotating the master key reencrypts the keys in key storage using the new master 
 - Assign the **Manager** or **Crypto unit administrator** service access role to perform TKE CLI operations. For more information about the access management, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
 - Configure all crypto units in the service instance the same.
 
+
 You can rotate your master key only when PKCS #11 keystores are not enabled in your service instance.
 {: important}
+
 
 ## Before you begin
 {: #rotate-master-key-cli-key-part-prerequisites}
@@ -110,10 +114,10 @@ To rotate the master key by using key part files on your workstation, follow the
 
     3. To rotate the master key and activate the new master key, enter the password for the signature key file to be used when prompted.
 
-    It might take approximately 60 seconds to reencrypt 3000 root keys. When the master key is being rotated, you cannot perform any key-related actions except for deleting keys.
+    When the master key is being rotated, you cannot perform any key-related actions except for deleting keys.
     {: note}
 
-    A success message is displayed when the master key rotation is completed.
+    A success message is displayed when the master key rotation is completed. It might take approximately 60 seconds to reencrypt 3000 keys. 
 
     The new master key is now in `Valid` state in the current master key register. Check out [Master key rotation](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro) for more information about how the key states change.
 
