@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-03-07"
 
 keywords: site map, doc structure, information architecture
 
@@ -2037,4 +2037,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Getting help and support for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-getting-help#getting-help)
+
+
+## Providing support case details
+{: #sitemap_providing_support_case_details}
+
+
+[Providing support case details](/docs/hs-crypto?topic=hs-crypto-getting-help#support-case-details)
 

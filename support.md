@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-28"
+lastupdated: "2023-03-07"
 
 keywords: troubleshoot, problems, known issues, support,help
 
@@ -29,4 +29,12 @@ If you experience an issue or have questions when using {{site.data.keyword.hscr
 If you still can't resolve the problem, you can open a support case. For more information, see [Creating support cases](/docs/get-support?topic=get-support-open-case). And, if you're looking to provide feedback, see [Submitting feedback](/docs/overview?topic=overview-feedback).
 
 
+# Providing support case details
+{: #support-case-details}
 
+To ensure that the support team can start investigating your case to provide a timely resolution, you must include detailed information along with steps to re-create the issue, if applicable. Review the following types of information to include in your support case for issues with `serviceName`.
+
+* Provide correlation ID.
+* Provide your {{site.data.keyword.hscrypto}} instance Cloud Resource Name (CRN). 
+* Provide your {{site.data.keyword.hscrypto}} ID and region. 
+* Provide your {{site.data.keyword.hscrypto}} endpoint. 
