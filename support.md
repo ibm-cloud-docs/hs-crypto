@@ -34,7 +34,7 @@ If you still can't resolve the problem, you can open a support case. For more in
 
 To ensure that the support team can start investigating your case to provide a timely resolution, you must include detailed information along with steps to re-create the issue, if applicable. Review the following types of information to include in your support case for issues with `serviceName`.
 
-* Provide correlation ID.
+* Provide the correlation ID.
 * Provide your {{site.data.keyword.hscrypto}} instance Cloud Resource Name (CRN). 
 * Provide your {{site.data.keyword.hscrypto}} ID and region. 
 * Provide your {{site.data.keyword.hscrypto}} endpoint. 
