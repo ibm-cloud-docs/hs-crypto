@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-03-13"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -28,7 +28,7 @@ Master key rotation is currently supported only by the {{site.data.keyword.hscry
 
 When master key rotation is taking place, you are temporarily not able to access your keystore. To learn how master key rotation works, see [the introduction to the master key rotation](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
 
-Make sure that you are assigned the **Manager** or **Crypto unit administrator** service access role to perform TKE CLI operations. For more information about the access management, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
+Make sure that you are assigned the **Manager** service access role or the **Crypto unit administrator** role to perform TKE CLI operations. For more information about the access management, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
 
 Use the `ibmcloud tke auto-mk-rotate` command to rotate your master key only when you have recovery crypto units set up and PKCS #11 keystores are not enabled in your service instance. Otherwise, see [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part) for instructions. For the recovery crypto unit supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 {: important}
@@ -62,6 +62,6 @@ If an error occurs during master key rotation, see [Why can't I rotate master ke
 ## What's next
 {: #rotate-master-key-cli-recovery-crypto-unit-next}
 
-- To learn more about master key rotation, check out [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
+
 - Go to the **KMS keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management service API reference doc](/apidocs/hs-crypto){: external}.
 - To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
