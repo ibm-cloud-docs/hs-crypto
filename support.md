@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-07"
+lastupdated: "2023-03-13"
 
 keywords: troubleshoot, problems, known issues, support,help
 
@@ -31,9 +31,8 @@ If you still can't resolve the problem, you can open a support case. For more in
 ## Providing support case details
 {: #support-case-details}
 
-To ensure that the support team can start investigating your case to provide a timely resolution, you must include detailed information along with steps to re-create the issue, if applicable. Review the following types of information to include in your support case for issues with `serviceName`.
+To ensure that the support team can start investigating your case to provide a timely resolution, you must include your correlation ID and one of the following types of information.
 
-* Provide the correlation ID.
 * Provide your {{site.data.keyword.hscrypto}} instance Cloud Resource Name (CRN). 
 * Provide your {{site.data.keyword.hscrypto}} ID and region. 
 * Provide your {{site.data.keyword.hscrypto}} endpoint. 
