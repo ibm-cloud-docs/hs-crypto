@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-03-13"
 
 keywords: associate resource, key associated resource
 
@@ -17,7 +17,7 @@ subcollection: hs-crypto
 # Viewing resources associated with managed keys
 {: #uko-view-associated-resource}
 
-You can view other {{site.data.keyword.cloud}} resources that are protected by managed keys with [envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption) by using the {{site.data.keyword.cloud_notm}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can view other {{site.data.keyword.cloud}} resources that are protected by managed keys with [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) by using the {{site.data.keyword.cloud_notm}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 Currently, envelope encryption applies to IBM Cloud KMS keys and IBM Key Protect keys. Therefore, you can view resources that are associated with these keys only.
@@ -72,5 +72,5 @@ For detailed instructions and code examples about using the API method, check ou
 ## What's next
 {: #uko-view-associated-resource-next}
 
-- For more information about envelope encryption, see [Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption).
+- For more information about envelope encryption, see [Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
 - For a list of cloud services that supports envelope encryption, see [Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-integrate-services).

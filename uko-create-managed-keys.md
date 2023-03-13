@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-03-09"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -52,7 +52,7 @@ To create a managed key by using the console, complete the following steps:
     - **IBM {{site.data.keyword.keymanagementserviceshort}}**: Create a key to be used and stored in an IBM {{site.data.keyword.keymanagementserviceshort}} key ring.
     
    
-   After a keystore type is selected, you can activate the key in keystores of this type only. If you select **IBM Cloud KMS**, the created key is a root key that can be used for [envelope encryption](/docs/hs-crypto?topic=hs-crypto-kms-envelope-encryption).
+   After a keystore type is selected, you can activate the key in keystores of this type only. If you select **IBM Cloud KMS**, the created key is a root key that can be used for [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
    {: note}
 
 6. Under **Key properties**, specify the following details of the key. Click **Next** to continue when you are done.

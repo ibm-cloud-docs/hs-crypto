@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-03-13"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -21,17 +21,22 @@ subcollection: hs-crypto
 You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance regularly to meet industry standards and cryptographic best practices. To rotate the master key using master key part files on your local workstation, follow these steps.
 {: shortdesc}
 
+
 Master key rotation is currently supported only by the {{site.data.keyword.hscrypto}} Standard Plan.
 {: note}
 
+
 Rotating the master key reencrypts the keys in key storage using the new master key value. After the keys in key storage are reencrypted, the value in the new master key register is promoted to the current master key register. Before you start rotating the master key, you need to do the following steps:
 
+
 - Understand {{site.data.keyword.hscrypto}} concepts, such as [master keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-concept), [master key parts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-part-concept), and [signature keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-key-concept), and understand [how a master key is rotated](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
-- Assign the **Manager** or **Crypto unit administrator** service access role to perform TKE CLI operations. For more information about the access management, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
+- Assign the **Manager** service access role or the **Crypto unit administrator** role to perform TKE CLI operations. For more information about the access management, see [Managing user access for the standard plan](/docs/hs-crypto?topic=hs-crypto-manage-access).
 - Configure all crypto units in the service instance the same.
+
 
 You can rotate your master key only when PKCS #11 keystores are not enabled in your service instance.
 {: important}
+
 
 ## Before you begin
 {: #rotate-master-key-cli-key-part-prerequisites}
@@ -39,7 +44,7 @@ You can rotate your master key only when PKCS #11 keystores are not enabled in y
 Before you start, make sure to do the following steps:
 
 1. Complete the [steps to set up the IBM Cloud CLI with TKE plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite).
-2. Check and make sure that the current master key register is in `Valid` state with [the current master key loaded](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#load-master-keys), the new master key register is empty, and the crypto units of the service instance are not in [imprint mode](/docs/hs-crypto?topic=hs-crypto-understand-concepts#imprint-mode-concept) by running the following command:
+2. Check and make sure that the current master key register is in `Valid` state with [the current master key loaded](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#load-master-keys), the new master key register is empty, and the crypto units of the service instance are not in imprint mode by running the following command:
 
     ```
     ibmcloud tke cryptounit-compare
@@ -110,10 +115,10 @@ To rotate the master key by using key part files on your workstation, follow the
 
     3. To rotate the master key and activate the new master key, enter the password for the signature key file to be used when prompted.
 
-    It might take approximately 60 seconds to reencrypt 3000 root keys. When the master key is being rotated, you cannot perform any key-related actions except for deleting keys.
+    When the master key is being rotated, you cannot perform any key-related actions except for deleting keys.
     {: note}
 
-    A success message is displayed when the master key rotation is completed.
+    A success message is displayed when the master key rotation is completed. It might take approximately 60 seconds to reencrypt 3000 root keys. 
 
     The new master key is now in `Valid` state in the current master key register. Check out [Master key rotation](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro) for more information about how the key states change.
 
@@ -124,6 +129,6 @@ If an error occurs during master key rotation, see [Why can't I rotate master ke
 ## What's next
 {: #rotate-master-key-cli-key-part-next}
 
-- To learn more about master key rotation, check out [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
+
 - Go to the **KMS keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management service API reference doc](/apidocs/hs-crypto){: external}.
 - To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
