@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-13"
+lastupdated: "2023-03-14"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -25,6 +25,9 @@ To rotate the master key by using recovery crypto units, follow these steps. In 
 Master key rotation is currently supported only by the {{site.data.keyword.hscrypto}} Standard Plan.
 {: note}
 
+
+When the master key is being rotated, you cannot perform any key-related actions except for deleting keys.
+{: note}
 
 When master key rotation is taking place, you are temporarily not able to access your keystore. To learn how master key rotation works, see [the introduction to the master key rotation](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro).
 
@@ -54,8 +57,7 @@ After you select a service instance, all crypto units in the service instance be
 
 When key storage is completely reencrypted, the value in the new master key register is promoted to the current master key register in all crypto units and the new master key registers are cleared. A success message is displayed when the master key rotation is completed. It might take approximately 60 seconds to reencrypt 3000 keys.
 
-When the master key is being rotated, you cannot perform any key-related actions except for deleting keys.
-{: note}
+
 
 If an error occurs during master key rotation, see [Why can't I rotate master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-troubleshoot-master-key-rotation-recovery-crypto-units).
 

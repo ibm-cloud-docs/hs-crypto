@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-03-14"
 
 keywords: hsm, cloud hsm, tke cli, pkcs11, PKCS11 library, cryptographic operations, cryptographic functions, PKCS 11
 
@@ -42,6 +42,8 @@ To review the PKCS #11 standard documentation, see:
 * [Cryptographic Token Interface Usage Guide Version 2.40](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/pkcs11-ug-v2.40.html){: external}
 * [Cryptographic Token Interface Base Specification Version 2.40 Plus Errata 01](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/pkcs11-base-v2.40.html){: external}
 * [Cryptographic Token Interface Current Mechanisms Specification Version 2.40 Plus Errata 01](http://docs.oasis-open.org/pkcs11/pkcs11-curr/v2.40/pkcs11-curr-v2.40.html){: external}
+
+
 
 ## PKCS #11 implementation components
 {: #pkcs11-components}

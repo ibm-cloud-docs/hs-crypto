@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-02"
+lastupdated: "2023-03-14"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -28,6 +28,8 @@ A master key is used to wrap encryption keys that are managed in the service ins
 {: #how-master-key-rotation-works}
 
 Master key rotation works by securely transferring the value between two types of master key registers in crypto units: new master key register and current master key register. Depending on [the approach that you use to initialize your service instance](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode), the rotation process is slightly different.
+
+
 
 ### Rotating master keys by using smart cards and Management Utilities
 {: #how-master-key-rotation-works-smard-cards}

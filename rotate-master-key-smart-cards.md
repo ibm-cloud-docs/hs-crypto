@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-13"
+lastupdated: "2023-03-14"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -35,6 +35,11 @@ Rotating the master key reencrypts the keys in key storage by using the new mast
 
 You can rotate your master key only when PKCS #11 keystores are not enabled in your service instance.
 {: important}
+
+
+When the master key is being rotated, you cannot perform any key-related actions except for deleting keys.
+{: note}
+
 
 
 ## Before you begin
@@ -79,9 +84,6 @@ To rotate the master key, follow these steps:
     {: important}
 
 4. To reencrypt root keys in the key management service keystore using the master key in the new master key register, click the **Rotate** button and click **Yes** on the message window. It might take approximately 60 seconds to reencrypt 3000 keys.
-
-     When the master key is being rotated, you cannot perform any key-related actions except for deleting keys.
-    {: note}
 
     When you receive the following messages for system operations, click **OK** to continue:
 
