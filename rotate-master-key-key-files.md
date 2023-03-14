@@ -26,9 +26,6 @@ Master key rotation is currently supported only by the {{site.data.keyword.hscry
 {: note}
 
 
- When the master key is being rotated, you cannot perform any key-related actions except for deleting keys.
-{: note}
-
 Rotating the master key reencrypts the keys in key storage using the new master key value. After the keys in key storage are reencrypted, the value in the new master key register is promoted to the current master key register. Before you start rotating the master key, you need to do the following steps:
 
 
@@ -42,6 +39,9 @@ You can rotate your master key only when PKCS #11 keystores are not enabled in y
 
 
 
+
+ When the master key is being rotated, you cannot perform any key-related actions except for deleting keys.
+{: note}
 
 
 ## Before you begin
