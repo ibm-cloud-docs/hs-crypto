@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-03-15"
 
 keywords: hsm, cloud hsm, tke cli, pkcs11, PKCS11 library, cryptographic operations, cryptographic functions, PKCS 11
 
@@ -37,6 +37,8 @@ Cryptoki isolates an application from the details of the cryptographic device. T
 
 Not all PKCS #11 functions are implemented by {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}. For the implemented PKCS #11 functions, see [Supported PKCS #11 functions](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs11_function_list).
 {: note}
+
+
 
 To review the PKCS #11 standard documentation, see:
 * [Cryptographic Token Interface Usage Guide Version 2.40](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/pkcs11-ug-v2.40.html){: external}
