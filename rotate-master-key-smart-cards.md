@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-14"
+lastupdated: "2023-03-21"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -24,6 +24,8 @@ You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.da
 Master key rotation is currently supported only by the {{site.data.keyword.hscrypto}} Standard Plan.
 {: note}
 
+When the master key is being rotated, you cannot perform any key-related actions except for deleting keys.
+{: note}
 
 Rotating the master key reencrypts the keys in key storage by using the new master key value. After the keys in key storage are reencrypted, the value in the new master key register is promoted to the current master key register. Before you start rotating the master key, you need to:
 
@@ -36,9 +38,6 @@ Rotating the master key reencrypts the keys in key storage by using the new mast
 You can rotate your master key only when PKCS #11 keystores are not enabled in your service instance.
 {: important}
 
-
-When the master key is being rotated, you cannot perform any key-related actions except for deleting keys.
-{: note}
 
 
 
