@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-03-22"
 
 keywords: site map, doc structure, information architecture
 
@@ -18,6 +18,7 @@ subcollection: hs-crypto
 
 Find what you are looking for in the compilation of topics that are available in this documentation set.
 {: shortdesc}
+
 
 
 
@@ -343,7 +344,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 ## Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}
-{: #sitemap_integrating__services_with_}
+{: #sitemap_integrating_services_with_}
 
 
 [Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-integrate-services#integrate-services)
@@ -755,7 +756,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 ## Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan
-{: #sitemap_managing_root_keys,_standard_keys,_and_ep11_keys_and_keystores_-_standard_plan}
+{: #sitemap_managing_root_keys_standard_keys_and_ep11_keys_and_keystores_standard_plan}
 
 
 
@@ -1092,7 +1093,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 ## Managing KMS keys, keystores, and vaults - Unified Key Orchestrator Plan
-{: #sitemap_managing_kms_keys,_keystores,_and_vaults_-_unified_key_orchestrator_plan}
+{: #sitemap_managing_kms_keys_keystores_and_vaults_unified_key_orchestrator_plan}
 
 
 [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token#uko-retrieve-access-token)
@@ -1429,7 +1430,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 ## Enhancing security - Standard Plan
-{: #sitemap_enhancing_security_-_standard_plan}
+{: #sitemap_enhancing_security_standard_plan}
 
 
 [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access#manage-access)
@@ -1528,7 +1529,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 ## Enhancing security - Unified Key Orchestrator Plan
-{: #sitemap_enhancing_security_-_unified_key_orchestrator_plan}
+{: #sitemap_enhancing_security_unified_key_orchestrator_plan}
 
 
 [Managing user access](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-manage-access)
@@ -1764,7 +1765,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 ## Understanding your responsibilities when using {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
-{: #sitemap_understanding_your_responsibilities_when_using__}
+{: #sitemap_understanding_your_responsibilities_when_using_}
 
 
 [Understanding your responsibilities when using {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-shared-responsibilities#shared-responsibilities)
