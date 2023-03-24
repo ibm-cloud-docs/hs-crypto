@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-03-14"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -163,36 +163,37 @@ PKCS #11 attributes define object characteristics that set up how an object can 
 
 | Attribute | Description | Supported key types |
 |--------------|-----------------------|--------|
+| CKA_CHECK_VALUE | The checksum of the key | AES keys, DES keys |
 | CKA_CLASS   | Object class (type) and is common for all objects. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys  |
-| CKA_TOKEN | CK_TRUE if object is a token object; CK_FALSE if object is a session object.  | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys   |
-| CKA_PRIVATE | CK_TRUE if object is a private object; CK_FALSE if object is a public object. Default value is token-specific, and may depend on the values of other attributes of the object. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
-| CKA_LABEL  | Description of the object. Default is empty.  |EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys         |
-| CKA_TRUSTED  | The certificate or key can be trusted for the application that it was created.  |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys        |
-| CKA_KEY_TYPE   | Type of key.  | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
-| CKA_SUBJECT  | DER-encoding of the certificate or key subject name.  | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys         |
-| CKA_ID   | Key identifier for public or private key pair or key. Default is empty. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys        |
-| CKA_SENSITIVE |  CK_TRUE if key is sensitive.  | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
-| CKA_ENCRYPT | CK_TRUE if key supports encryption. |   EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys      |
 | CKA_DECRYPT | CK_TRUE if key supports decryption. |EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
-| CKA_WRAP | CK_TRUE if key supports wrapping (can be used to wrap other keys).  |     EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys      |
-| CKA_UNWRAP |  CK_TRUE if key supports unwrapping (can be used to unwrap other keys). | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
-| CKA_SIGN  |  CK_TRUE if key supports signatures where the signature is an appendix to the data. |EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
-| CKA_VERIFY  | CK_TRUE if key supports verification where the signature is an appendix to the data. |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys |
 | CKA_DERIVE |  CK_TRUE if key supports key derivation (other keys can be derived from this key). Default is CK_FALSE. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys |
-| CKA_START_DATE  |  Start date for the certificate or key. Default is empty. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
-| CKA_END_DATE  |  End date for the certificate or key. Default is empty. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
-| CKA_MODULUS |  Modulus n.  |       RSA private keys    |
-| CKA_MODULUS_BITS  | Length in bits of modulus n. |        RSA public keys    |
-| CKA_PUBLIC_EXPONENT | Public exponent e. |     RSA private keys      |
-| CKA_VALUE_LEN  |  Length in bytes of key value.   |         AES keys  |
-| CKA_EXTRACTABLE  | CK_TRUE if key is extractable and can be wrapped.  | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
-| CKA_LOCAL | CK_TRUE only if the key was generated locally (on the token) with a `C_GenerateKey` or `C_GenerateKeyPair` call or created with a `C_CopyObject` call as a copy of a key that had the CKA_LOCAL attribute set to CK_TRUE. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_EC_PARAMS (CKA_ECDSA_PARAMS) | DER-encoding of an ANSI X9.62 Parameters value. | EC private keys, EC public keys        |
 | CKA_EC_POINT | DER-encoding of ANSI X9.62 ECPoint value Q. |      EC public keys  |
-| CKA_WRAP_WITH_TRUSTED  | CK_TRUE if the key can only be wrapped with a wrapping key that has CKA_TRUSTED set to CK_TRUE. Default is CK_FALSE.  | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
-| CKA_CHECK_VALUE | The checksum of the key | AES keys, DES keys |
-| CKA_MODIFIABLE | Set to CK_TRUE if the object can be modified.| EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys |
+| CKA_ENCRYPT | CK_TRUE if key supports encryption. |   EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys      |
+| CKA_END_DATE  |  End date for the certificate or key. Default is empty. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_EXTRACTABLE  | CK_TRUE if key is extractable and can be wrapped.  | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
 | CKA_IBM_PQC_PARAMS  | Supporting parameters for post-quantum cryptography mechanisms. In the case of the Dilithium mechanism `CKM_IBM_DILITHIUM`, it provides a marshaled object identifier (OID) that represents the strength of Dilithium algorithm to use. Currently, only the strength of [Dilithium 4 round 2](http://oid-info.com/get/1.3.6.1.4.1.2.267.1.6.5){: external} is supported. |  Dilithium keys        |
+| CKA_ID   | Key identifier for public or private key pair or key. Default is empty. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys        |
+| CKA_KEY_TYPE   | Type of key.  | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_LABEL  | Description of the object. Default is empty.  |EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys         |
+| CKA_LOCAL | CK_TRUE only if the key was generated locally (on the token) with a `C_GenerateKey` or `C_GenerateKeyPair` call or created with a `C_CopyObject` call as a copy of a key that had the CKA_LOCAL attribute set to CK_TRUE. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_MODIFIABLE | Set to CK_TRUE if the object can be modified.| EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys |
+| CKA_MODULUS |  Modulus n.  |       RSA private keys    |
+| CKA_MODULUS_BITS  | Length in bits of modulus n. |        RSA public keys    |
+| CKA_PRIVATE | CK_TRUE if object is a private object; CK_FALSE if object is a public object. Default value is token-specific, and may depend on the values of other attributes of the object. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_PUBLIC_EXPONENT | Public exponent e. |     RSA private keys      |
+| CKA_PUBLIC_KEY_INFO | DER-encoding of the SubjectPublicKeyInfo for the public key. The value is derived from the underlying public key data and is empty by default. | RSA public keys, EC public keys |
+| CKA_SENSITIVE |  CK_TRUE if key is sensitive.  | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
+| CKA_SIGN  |  CK_TRUE if key supports signatures where the signature is an appendix to the data. |EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
+| CKA_START_DATE  |  Start date for the certificate or key. Default is empty. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_SUBJECT  | DER-encoding of the certificate or key subject name.  | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys         |
+| CKA_TOKEN | CK_TRUE if object is a token object; CK_FALSE if object is a session object.  | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys   |
+| CKA_TRUSTED  | The certificate or key can be trusted for the application that it was created.  |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys        |
+| CKA_UNWRAP |  CK_TRUE if key supports unwrapping (can be used to unwrap other keys). | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
+| CKA_VALUE_LEN  |  Length in bytes of key value.   |         AES keys  |
+| CKA_VERIFY  | CK_TRUE if key supports verification where the signature is an appendix to the data. |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys |
+| CKA_WRAP | CK_TRUE if key supports wrapping (can be used to wrap other keys).  |     EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys      |
+| CKA_WRAP_WITH_TRUSTED  | CK_TRUE if the key can only be wrapped with a wrapping key that has CKA_TRUSTED set to CK_TRUE. Default is CK_FALSE.  | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
 {: caption="Table 3. Describes the supported attributes" caption-side="bottom"}
 
 ## Supported curves
