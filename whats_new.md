@@ -26,10 +26,10 @@ Stay up to date with the new features that are available for {{site.data.keyword
 {: hs-crypto-march2023}
 {: release-note}
 
-Added: Master key rotation for {{site.data.keyword.uko_full_notm}}
+[New]{: tag-new}: Master key rotation for {{site.data.keyword.uko_full_notm}}
 :   You can now rotate master keys on demand to meet industry standards and cryptographic best practices in your {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance. You can understand how keys are protected during master key rotation and use the {{site.data.keyword.cloud_notm}} console to view the progress. For more information about how master key rotation works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro).
 
-Added: Master key rotation for EP11 keystores
+[New]{: tag-new}: Master key rotation for EP11 keystores
 :   You are now able to rotate master keys when your service instance has EP11 keystores enabled. Previously, this function is not available.
 
 Both of the functions above are currently only supported in the Frankfurt region in Germany.

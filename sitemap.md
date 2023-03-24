@@ -386,9 +386,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [24 March 2023](/docs/hs-crypto?topic=hs-crypto-what-new#24-march-2023)
 
-    * Added: Master key rotation for {{site.data.keyword.uko_full_notm}}
+    * [New]{: tag-new}: Master key rotation for {{site.data.keyword.uko_full_notm}}
 
-    * Added: Master key rotation for EP11 keystores
+    * [New]{: tag-new}: Master key rotation for EP11 keystores
 
     * Both of the functions above are currently only supported in the Frankfurt region in Germany.
 
