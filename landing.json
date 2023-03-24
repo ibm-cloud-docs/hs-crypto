@@ -1,7 +1,6 @@
 {
   "title": "IBM Cloud Hyper Protect Crypto Services docs",
-  "lastupdated": "2023-02-01",
-
+  "lastupdated": "2023-03-24",
   "introduction": "Find useful information about Hyper Protect Crypto Services.",
   "section_devtools": {
     "api": "/docs?tab=api-docs&category=security&subCategory=hs-crypto",
@@ -74,6 +73,11 @@
     "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
     "tiles": [
       {
+        "date": "March 2023",
+        "title": "Added: Master key rotation for Unified Key Orchestrator and EP11 keystores",
+        "description": "You are now able to rotate master keys when you are using the Unified Key Orchestrator service plan or your service instance has EP11 keystores enabled. "
+      },
+      {
         "date": "February 2023",
         "title": "Updated: Hyper Protect Crypto Services key management functions",
         "description": "The Hyper Protect Crypto Services key management service API is updated to version 22.11. "
@@ -92,11 +96,6 @@
         "date": "October 2022",
         "title": "EP11 events auditing is now supported by both Hyper Protect Crypto Services Standard Plan and Hyper Protect Crypto Services with Unified Key Orchestrator",
         "description": "With Hyper Protect Crypto Services Standard Plan and Hyper Protect Crypto Services with Unified Key Orchestrator, you can now monitor Enterprise PKCS #11 (EP11) activities and analyze successful actions. "
-      }, 
-      {
-        "date": "June 2022",
-        "title": "Hyper Protect Crypto Services Unified Key Orchestrator CLI plug-in",
-        "description": "With the command-line interface (CLI) support for Hyper Protect Crypto Services with the Unified Key Orchestrator plan, you can now manage vaults, keystores, and keys by using CLI commands."
       }
     ]
   }
