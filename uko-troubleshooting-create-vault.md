@@ -12,12 +12,6 @@ subcollection: hs-crypto
 
 {{site.data.keyword.attribute-definition-list}}
 
-
-
-
-
-
-
 # Why can't I create vaults?
 {: #troubleshoot-create-vault}
 {: troubleshoot}
@@ -40,5 +34,3 @@ Try the following solutions:
 {: tsResolve}
 * Verify with your administrator that you're assigned the _Vault Administrator_ role in the applicable resource group or service instance. For more information about roles, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles).
 * Try to create the vault again after the master key rotation is complete. For more information, see [Master key rotation](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro).
-
-

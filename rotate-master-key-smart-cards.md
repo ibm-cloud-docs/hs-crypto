@@ -20,7 +20,6 @@ subcollection: hs-crypto
 You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance regularly to meet industry standards and cryptographic best practices. This topic guides you through the steps to rotate the master key by using smart cards and the Management Utilities.
 {: shortdesc}
 
-
 When the master key is being rotated, you can still perform some KMS key actions such as listing keys, retrieving key metadata, or deleting keys, but you cannot create or rotate keys. You cannot call either the PKCS #11 API or GREP11 API during the master key rotation. 
 {: note}
 
