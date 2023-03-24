@@ -87,6 +87,7 @@ toc:
           - topicgroup:
               label: About key rotation
               topics:   
+              - uko-introduce-master-key-rotation.md   
               - uko-introduce-key-rotation.md
       - manage-regulated-workloads.md
       - integrate-services.md

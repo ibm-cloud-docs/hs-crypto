@@ -321,6 +321,16 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_about_key_rotation1}
 
 
+[Master key rotation](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-master-key-rotation-intro)
+
+* [How master key rotation works](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-how-master-key-rotation-works)
+
+* [How keys are protected during master key rotation](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-how-master-key-protect-rotation)
+
+* [How the {{site.data.keyword.cloud_notm}} console reflects master key rotation](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-how-console-display-progress)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-master-key-rotation-next)
+
 [Managed key rotation](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#managed-key-rotation-intro)
 
 * [How managed key rotation works](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#how-managed-key-rotation-works)
@@ -384,9 +394,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [01 Feb 2023](/docs/hs-crypto?topic=hs-crypto-what-new#01-feb-2023)
 
-    * [Updated]{: tag-updated}: {{site.data.keyword.hscrypto}} key management functions 
+    * Added: {{site.data.keyword.hscrypto}} key management functions 
 
-    * [Updated]{: tag-updated}: Activity Tracker event names
+    * Added: Activity Tracker event names
 
 * [19 Dec 2022](/docs/hs-crypto?topic=hs-crypto-what-new#19-dec-2022)
 
