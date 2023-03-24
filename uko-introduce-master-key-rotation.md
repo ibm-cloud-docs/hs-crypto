@@ -21,6 +21,11 @@ After you load a master key to your {{site.data.keyword.hscrypto}} with {{site.d
 
 A master key is used to wrap encryption keys that are managed in the service instance. With the master key rotation, you retire the original master key and load a new master key that reencrypts the entire key storage.
 
+
+When the master key is being rotated, you can still perform some KMS key actions such as listing keys, retrieving key metadata, or deleting keys, but you cannot create or rotate keys. You cannot call either the PKCS #11 API or GREP11 API during the master key rotation.
+{: note}
+
+
 ## How master key rotation works
 {: #uko-how-master-key-rotation-works}
 
