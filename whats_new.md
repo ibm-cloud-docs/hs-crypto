@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-09"
+lastupdated: "2023-03-24"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -21,6 +21,18 @@ content-type: release-note
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+## 24 March 2023
+{: hs-crypto-march2023}
+{: release-note}
+
+Added: Master key rotation for {{site.data.keyword.uko_full_notm}}
+:   You can now rotate master keys on demand to meet industry standards and cryptographic best practices in your {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance. You can understand how keys are protected during master key rotation and use the {{site.data.keyword.cloud_notm}} console to view the progress. For more information about how master key rotation works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro).
+
+Added: Master key rotation for EP11 keystores
+:   You are now able to rotate master keys when your service instance has EP11 keystores enabled. Previously, this function is not available.
+
+Both of the functions above are currently only supported in the Frankfurt region in Germany.
 
 ## 01 Feb 2023
 {: hs-crypto-feb2023}
@@ -41,8 +53,6 @@ Stay up to date with the new features that are available for {{site.data.keyword
 ## 19 Dec 2022
 {: hs-crypto-dec2022}
 {: release-note}
-
-
 
 Added: Managed key rotation support for {{site.data.keyword.uko_full_notm}}
 :   You can now manually rotate a managed key in your {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance. Managed key rotation shortens the cryptoperiod of the keys and reduces the probability for a security breach. For more information about how managed key rotation works, see [Managed key rotation](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro). For more information about the detailed instructions, see [Rotating managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys).
