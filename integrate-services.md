@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-03-10"
+lastupdated: "2023-04-03"
 
 keywords: integration, encryption at rest, cloud object storage, object storage, kmip, containers, vmware, database, compute
 
@@ -36,7 +36,7 @@ The data that you store in {{site.data.keyword.cloud_notm}} storage services is 
 ## Database service integrations
 {: #database-integration}
 
-The data that you store in {{site.data.keyword.cloud_notm}} database services is encrypted by default by using randomly generated keys. If you want to control the encryption keys and use your own keys to encrypt your databases, you can associate root keys that you manage in {{site.data.keyword.hscrypto}} to your database service and leverage [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) to add another layer of protection to your data. As root keys are encrypted by the master key that is owned by the user, no one else including {{site.data.keyword.cloud_notm}} administrators can access your data.
+The data that you store in {{site.data.keyword.cloud_notm}} database services is encrypted by default by using randomly generated keys. If you want to control the encryption keys and use your own keys to encrypt your databases, you can associate root keys that you manage in {{site.data.keyword.hscrypto}} to your database service and leverages [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) to add another layer of protection to your data. As root keys are encrypted by the master key that is owned by the user, no one else including {{site.data.keyword.cloud_notm}} administrators can access your data.
 
 | Service | Description | Integration instruction |
 | ------- | ----------- | ----------------------- |
@@ -75,7 +75,7 @@ By integrating with {{site.data.keyword.hscrypto}}, you can encrypt the Kubernet
 
 | Service | Description | Integration instruction |
 | ------- | ----------- | ----------------------- |
-| [{{site.data.keyword.containerlong_notm}}](/docs/containers){: external} | {{site.data.keyword.containerlong_notm}} is a managed offering built for creating a Kubernetes cluster of compute hosts to deploy and manage containerized applications on {{site.data.keyword.cloud_notm}}.  | [Encrypting the Kubernetes master's local disk and secrets by using a KMS provider](/docs/containers?topic=containers-encryption#keyprotect){: external} |
+| [{{site.data.keyword.containerlong_notm}}](/docs/containers){: external} | {{site.data.keyword.containerlong_notm}} is a managed offering that is built for creating a Kubernetes cluster of compute hosts to deploy and manage containerized applications on {{site.data.keyword.cloud_notm}}.  | [Encrypting the Kubernetes master's local disk and secrets by using a KMS provider](/docs/containers?topic=containers-encryption#keyprotect){: external} |
 | [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift){: external} | {{site.data.keyword.openshiftlong_notm}} is a managed offering to create your own {{site.data.keyword.openshiftshort}} cluster of compute hosts to deploy and manage containerized apps on {{site.data.keyword.cloud_notm}}. In addition to using {{site.data.keyword.hscrypto}} to protect the Kubernetes secrets, you can also deploy the {{site.data.keyword.hscrypto}} Router, which uses the `GREP11` OpenSSL Engine to access private keys that are stored in your {{site.data.keyword.hscrypto}} instance to encrypt routes. | <ul><li>[Encrypting the {{site.data.keyword.openshiftshort}} master's local disk and secrets by using a KMS provider](/docs/openshift?topic=openshift-encryption#keyprotect){: external}</li><li>OpenShift Data Foundation: [Setting up encryption by using {{site.data.keyword.hscrypto}}](/docs/openshift?topic=openshift-deploy-odf-vpc&interface=ui#odf-create-hscrypto-vpc){: external}</li></ul> |
 {: caption="Table 4. Supported container services" caption-side="bottom"}
 
@@ -87,7 +87,7 @@ You can integrate {{site.data.keyword.hscrypto}} with the following ingestion se
 | Service | Description | Integration instruction |
 | ------- | ----------- | ----------------------- |
 | [{{site.data.keyword.mon_full_notm}}](/docs/monitoring){: external} | {{site.data.keyword.mon_full_notm}} is a cloud-native, and container-intelligence management system. You can use it to gain operational visibility into the performance and health of your {{site.data.keyword.hscrypto}} instance. | [Getting started tutorial](/docs/monitoring?topic=monitoring-getting-started){: external} |
-| [{{site.data.keyword.bpfull_notm}}](/docs/schematics){: external} | {{site.data.keyword.bpfull_notm}} provides powerful tools to automate your cloud infrastructure provisioning and management process, the configuration and operation of your cloud resources, and the deployment of your application workloads. All data, user inputs and the data that is generated at runtime during execution of automation code, are stored in {{site.data.keyword.cos_full_notm}}. This data is encrypted by default by using encryption keys from Schematics. If you need to control the encryption keys, you can integrate with your {{site.data.keyword.hscrypto}} instance to use your own root keys. | [Enabling customer-managed keys for Schematics](/docs/schematics?topic=schematics-secure-data#using-byok){: external} |
+| [{{site.data.keyword.bpfull_notm}}](/docs/schematics){: external} | {{site.data.keyword.bpfull_notm}} provides powerful tools to automate your cloud infrastructure provisioning and management process, the configuration and operation of your cloud resources, and the deployment of your application workloads. All data, user inputs, and the data that is generated at runtime during execution of automation code, are stored in {{site.data.keyword.cos_full_notm}}. This data is encrypted by default by using encryption keys from Schematics. If you need to control the encryption keys, you can integrate with your {{site.data.keyword.hscrypto}} instance to use your own root keys. | [Enabling customer-managed keys for Schematics](/docs/schematics?topic=schematics-secure-data#using-byok){: external} |
 | [{{site.data.keyword.messagehub}}](/docs/EventStreams){: external} | The {{site.data.keyword.messagehub}} service is a high-throughput message bus that is built with Apache Kafka. You can use it for event ingestion into {{site.data.keyword.cloud_notm}} and event stream distribution between your services and applications. By default, message payload data in {{site.data.keyword.messagehub}} is encrypted at rest by using a randomly generated key. If you need to control the encryption keys, you can integrate with your {{site.data.keyword.hscrypto}} instance to use your own root keys. | [Enabling a customer-managed key for Event Streams](/docs/EventStreams?topic=EventStreams-managing_encryption#enabling_encryption){: external} |
 {: caption="Table 5. Supported ingestion services." caption-side="bottom"}
 
@@ -111,7 +111,7 @@ You can integrate {{site.data.keyword.hscrypto}} with the following developer to
 
 | Service | Description | Integration instruction |
 | ------- | ----------- | ----------------------- |
-| [{{site.data.keyword.contdelivery_full}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started){: external} | The {{site.data.keyword.contdelivery_short}} service provides a suite of tools that support DevOps best practices. You can use the service to manage toolchains, operate delivery pipelines, gain insights into code quality and vulnerabilities, integrate third party tools, and more. | <ul><li>[Creating a Continuous Delivery service instance](/docs/ContinuousDelivery?topic=ContinuousDelivery-create_cd_service){: external}</li> <li>[Protecting your personal data when you use the Professional plan](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_professional_plan){: external}</li></ul> |
+| [{{site.data.keyword.contdelivery_full}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started){: external} | The {{site.data.keyword.contdelivery_short}} service provides a suite of tools that support DevOps best practices. You can use the service to manage toolchains, operate delivery pipelines, gain insights into code quality and vulnerabilities, integrate third-party tools, and more. | <ul><li>[Creating a Continuous Delivery service instance](/docs/ContinuousDelivery?topic=ContinuousDelivery-create_cd_service){: external}</li> <li>[Protecting your personal data when you use the Professional plan](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_professional_plan){: external}</li></ul> |
 {: caption="Table 7. Supported developer tools services." caption-side="bottom"}
 
 
@@ -124,7 +124,7 @@ For example, you can create a root key, manage the key in {{site.data.keyword.hs
 
 The following diagram illustrates the scene of integrating {{site.data.keyword.hscrypto}} with two services.
 
-![The diagram shows a contextual view of your {{site.data.keyword.hscrypto}} integration.](/images/hpcs-integrations.svg "Cloud services integrates with Hyper Protect Crypto Services"){: caption="Figure 1. Integrating {{site.data.keyword.hscrypto}}" caption-side="bottom"}
+![The diagram shows a contextual view of your {{site.data.keyword.hscrypto}} integration.](/images/hpcs-integrations.svg "Cloud services integrate with Hyper Protect Crypto Services"){: caption="Figure 1. Integrating {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 
 Behind the scenes, the {{site.data.keyword.hscrypto}} key management service API drives the envelope encryption process.
 
