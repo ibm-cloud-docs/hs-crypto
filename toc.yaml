@@ -229,7 +229,7 @@ toc:
               topics:
               - uko-create-vaults.md
               - uko-edit-vaults.md
-              - uko-delete-vaults.md
+              - uko-delete-vaults.md 
           - topicgroup:
               label: Managing keys
               topics:
