@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-04-11"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -26,7 +26,7 @@ For an introduction to the approaches of service instance initialization and the
 The following diagram gives you an overview of steps you need to take to initialize the service instance using master key parts stored in files. Click each step on the diagram for detailed instructions.
 
 <figure>
-    <img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="/images/hsm-initialization-flow.svg" width="750" alt="Click each step to get more details on the flow." />
+    <img usemap="#home_map1" border="0" id="image_ztx_crb_f1b2" src="/images/hsm-initialization-flow.svg" width="750" alt="Click each step to get more details on the flow." />
     <figcaption>Figure 1. Task flow of service instance initialization with the TKE CLI plug-in</figcaption>
 </figure>
 
