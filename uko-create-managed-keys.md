@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-24"
+lastupdated: "2023-04-12"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -188,4 +188,3 @@ To create a managed key through the API, follow these steps:
 - To find out more about managing your key list, check out [Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list) or [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
   
 - To find out instructions on deleting a managed key, check out [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys).
-
