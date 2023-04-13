@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-03-24"
+lastupdated: "2023-04-13"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -22,14 +22,24 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+## 13 April 2023
+{: hs-crypto-apr2023}
+{: release-note}
+
+[New]{: tag-new}: Master key rotation support for all regions
+:   For all regions, you are now able to rotate master keys when you are using the Unified Key Orchestrator service plan or your service instance that has EP11 keystores enabled. For more information about how master key rotation works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro).
+
+[New]{: tag-new}: Master key rotation support for authenticated keystores 
+:   Authenticated keystores are now supported for the master key rotation. Previously, this function is not available. 
+
 ## 24 March 2023
 {: hs-crypto-march2023}
 {: release-note}
 
-[New]{: tag-new}: Master key rotation for {{site.data.keyword.uko_full_notm}}
+Added: Master key rotation for {{site.data.keyword.uko_full_notm}}
 :   You can now rotate master keys on demand to meet industry standards and cryptographic best practices in your {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance. You can understand how keys are protected during master key rotation and use the {{site.data.keyword.cloud_notm}} console to view the progress. For more information about how master key rotation works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro).
 
-[New]{: tag-new}: Master key rotation for EP11 keystores
+Added: Master key rotation for EP11 keystores
 :   You are now able to rotate master keys when your service instance has EP11 keystores enabled. Previously, this function is not available.
 
 Both of the functions above are currently only supported in the Frankfurt region in Germany.
