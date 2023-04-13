@@ -386,9 +386,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [13 April 2023](/docs/hs-crypto?topic=hs-crypto-what-new#13-april-2023)
 
-    * [New]{: tag-new}: Master key rotation support for all regions
-
-    * [New]{: tag-new}: Master key rotation support for authenticated keystores 
+    * [Updated]{: tag-updated}: Master key rotation support for all regions
 
 * [24 March 2023](/docs/hs-crypto?topic=hs-crypto-what-new#24-march-2023)
 

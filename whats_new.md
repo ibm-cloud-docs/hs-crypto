@@ -26,11 +26,11 @@ Stay up to date with the new features that are available for {{site.data.keyword
 {: hs-crypto-apr2023}
 {: release-note}
 
-[New]{: tag-new}: Master key rotation support for all regions
-:   For all regions, you are now able to rotate master keys when you are using the Unified Key Orchestrator service plan or your service instance that has EP11 keystores enabled. For more information about how master key rotation works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro).
+[Updated]{: tag-updated}: Master key rotation support for all regions
+:   You are now able to rotate master keys when you are using the Unified Key Orchestrator service plan or your service instance that has EP11 keystores enabled in all supported regions. Previously, it was only available in Frankfurt, Germany. 
 
-[New]{: tag-new}: Master key rotation support for authenticated keystores 
-:   Authenticated keystores are now supported for the master key rotation. Previously, this function is not available. 
+    For a list of supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions&interface=ui).  For more information about how master key rotation works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro).
+
 
 ## 24 March 2023
 {: hs-crypto-march2023}
