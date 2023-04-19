@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-04-19"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -29,6 +29,8 @@ Before you create a managed key, keep in mind the following considerations:
 - You need to select the keystore type when you create a managed key. The keystore type that you select determines where the managed key is to be stored. The keystore type cannot be changed later.
 - Activating a managed key in multiple keystores enables redundancy.
 - To protect your privacy, do not store your personal data as metadata for your managed key.
+
+
 
 ## Creating managed keys with the {{site.data.keyword.cloud_notm}} console
 {: #create-managed-keys-ui}
@@ -179,6 +181,11 @@ To create a managed key through the API, follow these steps:
     The managed key is to be activated in all keystores in the keystore group that is defined in the key template.
 
     For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-managed-key){: external}.
+
+
+
+
+
 
 ## What's next
 {: #create-managed-keys-next}
