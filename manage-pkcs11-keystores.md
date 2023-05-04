@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-23"
+lastupdated: "2023-05-04"
 
 keywords: pkcs11 keystore, ep11 keystore, create pkcs11 keystore, generate pkcs11 keystore, view ep11 keystore, delete ep11 keystore, view pkcs11 keystore
 
@@ -48,7 +48,7 @@ To view a list of created EP11 keystores, on the {{site.data.keyword.hscrypto}} 
 
 An EP11 keystore table is displayed with the following details.
 
-| Setting | Description |
+| Property | Description |
 | --- | --- |
 | ID  | The unique identifier that is assigned when the keystore is created. |
 | Name | A human-readable alias for easy identification of your keystore. The keystore name might not be unique. You can assign multiple keystores with the same name. If there is no name associated with the keystore, it means the keystore is created using the PKCS #11 API. |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-05-04"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -47,7 +47,7 @@ On the {{site.data.keyword.hscrypto}} dashboard, do the following to view EP11 k
 
     An EP11 key table is displayed with the following details.
 
-    | Setting | Description |
+    | Property | Description |
     | --- | --- |
     | ID  | The unique identifier that is assigned when the key is created. |
     | Name | A human-readable alias for easy identification of your key. The value of the CKA_LABEL key attribute is displayed in this field. The key name might not be unique. You can assign multiple keys with the same name. However, it is suggested to assign a unique name to each key in the same keystore for easy identification. |
