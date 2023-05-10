@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-05-10"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning and operations
 
@@ -27,7 +27,7 @@ Read to get answers for questions about {{site.data.keyword.cloud}} {{site.data.
 
 Each provisioned operational crypto unit is charged $2.13 USD per hour. If you also enable [failover crypto units](/docs/hs-crypto?topic=hs-crypto-understand-concepts#crypto-unit-concept), each failover crypto unit is also charged the same as the operational crypto unit. 
 
-The first five keystores, including KMS key rings and EP11 keystores, are free of charge. Each additional key ring or EP11 keystore is charged with a tiered pricing starting at $225 USD per month. For keystores that are created or connected less than a month, the cost is prorated based on actual days within the month.
+The first 5 keystores, including KMS key rings and EP11 keystores, are free of charge. Each additional key ring or EP11 keystore is charged with a tiered pricing starting at $225 USD per month. For keystores that are created or connected less than a month, the cost is prorated based on actual days within the month.
 
 The detailed [pricing plan](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){: external} is available for your reference.
 
@@ -51,11 +51,11 @@ The following example shows a total charge of 30 days (720 hours). The user enab
 
 Each provisioned operational crypto unit is charged $2.13 USD per hour. After you connect to an external keystore of any type, the {{site.data.keyword.uko_full_notm}} base price of $6.25 USD/hour is charged. 
 
-The first five internal keystores and the very first external keystore are free of charge. Each additional internal or external keystore is charged with a tiered pricing starting at $225 USD per month. For keystores that are created or connected less than a month, the cost is prorated based on actual days within the month.
+The first 5 internal keystores and the very first external keystore are free of charge. Each additional internal or external keystore is charged with a tiered pricing starting at $225 USD per month. For keystores that are created or connected less than a month, the cost is prorated based on actual days within the month.
 
 The detailed [pricing plan](/catalog/services/hyper-protect-crypto-services){: external} is available for your reference.
 
-The following example shows a total charge of 30 days (720 hours). The user enables two operational crypto units in the service instance, and creates 22 internal keystores and 15 external keystores. The first five internal keystores and the first external keystore are free of charge.
+The following example shows a total charge of 30 days (720 hours). The user enables two operational crypto units in the service instance, and creates 22 internal keystores and 15 external keystores. The first 5 internal keystores and the first external keystore are free of charge.
 
 | Pricing components | Cost for 30 days (720 hours) |
 |-----|----------------|
@@ -66,6 +66,10 @@ The following example shows a total charge of 30 days (720 hours). The user enab
 | {{site.data.keyword.uko_full_notm}} connection | $4500 (30x24x6.25) |
 | Total charge| $14512.2  |
 {: caption="Table 2. A {{site.data.keyword.uko_full_notm}} billing example of 30 days" caption-side="bottom"}
+
+
+
+
 
 
 ## Is there a free trial for {{site.data.keyword.hscrypto}}?
