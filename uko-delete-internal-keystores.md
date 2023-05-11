@@ -42,7 +42,7 @@ The internal keystore has been deleted with all the managed keys deactivated in 
 
 
 <key-template>
-The internal keystore has been deleted with all the managed keys deactivated and all the key templates removed. You will no longer be able to access any metadata associated with the keystore. 
+The internal keystore has been deleted with all the managed keys deactivated and key templates removed. You will no longer be able to access any metadata associated with the keystore. 
 </ket-template>
 
 ## Deleting internal keystores with the API
