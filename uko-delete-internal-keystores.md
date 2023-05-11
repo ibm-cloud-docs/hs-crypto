@@ -32,11 +32,18 @@ To delete an internal keystore by using the console, complete the following step
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Target keystores** from the navigation to view all the available keystores.
 3. Click the keystore that you want to delete. The side panel is displayed.
-   If the keystore is assigned to key templates, the details are shown under the **Key templates**.s
+  
+  
 4. Click **Delete** to delete the keystore and all the metadata. 
 5. Click **Delete keystore** to confirm the deletion.
 
+
 The internal keystore has been deleted with all the managed keys deactivated in this keystore and associated resources detached.
+
+
+<key-template>
+The internal keystore has been deleted with all the managed keys deactivated and all the key templates removed. You will no longer be able to access any metadata associated with the keystore. 
+</ket-template>
 
 ## Deleting internal keystores with the API
 {: #delete-internal-keystores-api}
