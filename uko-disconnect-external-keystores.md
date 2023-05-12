@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-05-11"
+lastupdated: "2023-05-12"
 
 keywords: Unified Key Orchestrator, UKO keystore, disconnect keystore, external keystore, KMS keystore
 
@@ -21,7 +21,7 @@ subcollection: hs-crypto
 You can disconnect from keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), and Google Cloud KMS. After you disconnect from an external keystore, all the managed keys in this keystore are detached and resources that are managed are not accessible.
 {: shortdesc}
 
-If you want to disconnect from an external keystore, delete all active keys in this keystore first. In other words, all keys with this keystore as a target are in _Pre-active_ or _Destroyed_ state. For more information about deleting keys, see [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys).
+If you want to disconnect from an external keystore, delete all active keys in this keystore first. In other words, all keys with this keystore as a target are in _Pre-active_ or _Destroyed_ state. For more information about deleting keys, see [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys). 
 {: note}
 
 
@@ -34,14 +34,11 @@ To disconnect from an external keystore by using the console, complete the follo
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Target keystores** from the navigation to view all the available keystores.
 3. Click the keystore that you want to disconnect. The Details side panel is displayed.
-   
-   
 4. Click **Disconnect** to disconnect the keystore and remove it from the keystore list. 
 5. Click **Disconnect keystore** to confirm.
 
 
 The external keystore has been disconnected with all the managed keys in this keystore detached and resources that are managed inaccessible.
-
 
 
 
