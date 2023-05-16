@@ -33,7 +33,7 @@ To filter keys by using the console, complete the following steps:
 3. Click the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the table.
 4. Specify the filter criteria as you need, and click **Apply**.
    
-   <Key-template-old>
+   
    You can set the following filter criteria. 
 
    |       Property	     |                         Description                       |
@@ -50,29 +50,9 @@ To filter keys by using the console, complete the following steps:
    | State                | Key states include _Pre-active_, _Active_, _Deactivated_, and _Destroyed_. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
    | Last rotated        | The time range when the key was last rotated. |
    {: caption="Table 1. Filter managed keys" caption-side="bottom"}
-   </Key-template-old>
    
-   <Key-template>
-   You can set the following filter criteria. 
-
-   |       Property	     |                         Description                        |
-   |----------------------|-----------------------------------------------------------|
-   | Vault                | The vault that controls access to the managed key.        |
-   | Key template         | The key template specifies the properties of the keys to be created.    |
-   | Key template flags   | Select the key that is unaligned with key template.     |
-   | Activation           | Set a date range of when you activate the key.  |
-   | Creation             | Set a date range of when the key was created.             |
-   | Expiration           | Set a date range of when you deactivate the key.  |
-   | Keystore type        | The type of keystore where the key is stored. |
-   | Keystore             | The keystores that the key is activated in.        |
-   | Algorithm            | The encryption algorithm to encrypt data for the key.     |
-   | Minimum key length   | The minimum number of bits that represents the encryption strength of the key.   |
-   | Maximum key length   | The maximum number of bits that represents the encryption strength of the key.   |
-   | States               | Key states include _Pre-active_, _Active_, _Deactivated_, and _Destroyed_. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
-   | State flags          | The flags that reflect the state of the key, such as `Out of sync` or `Unaligned`.      | 
-   | Last rotated         | The time range when the key was last rotated. |
-   {: caption="Table 1. Filter managed keys" caption-side="bottom"}
-   </key-template>
+   
+   
 
 
 ##  Searching for keys with the {{site.data.keyword.cloud_notm}} console
