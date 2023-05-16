@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-05-15"
+lastupdated: "2023-05-16"
 
 keywords: Unified Key Orchestrator, search keys, key management, kms keys
 
@@ -33,8 +33,9 @@ To filter keys by using the console, complete the following steps:
 3. Click the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the table.
 4. Specify the filter criteria as you need, and click **Apply**.
    
-   You can set the following filter criteria. <Key-template-old>
-
+   You can set the following filter criteria. 
+   
+   <Key-template-old>
    |       Property	     |                         Description                       |
    |----------------------|-----------------------------------------------------------|
    | Vault                | The vault that controls access to the managed key.        |
@@ -48,10 +49,11 @@ To filter keys by using the console, complete the following steps:
    | Maximum key length   | The maximum number of bits that represents the encryption strength of the key.   |
    | State                | Key states include _Pre-active_, _Active_, _Deactivated_, and _Destroyed_. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
    | Last rotated        | The time range when the key was last rotated. |
-   {: caption="Table 1. Filter managed keys" caption-side="bottom"}</Key-template-old>  
-
+   {: caption="Table 1. Filter managed keys" caption-side="bottom"}
+   </Key-template-old>
+   
    <Key-template>
-   |       Property	     |                         Description                       |
+   |       Property	     |                         Description                        |
    |----------------------|-----------------------------------------------------------|
    | Vault                | The vault that controls access to the managed key.        |
    | Key template         | The key template specifies the properties of the keys to be created.    |
