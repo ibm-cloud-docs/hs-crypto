@@ -33,9 +33,9 @@ To filter keys by using the console, complete the following steps:
 3. Click the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the table.
 4. Specify the filter criteria as you need, and click **Apply**.
    
-   You can set the following filter criteria. 
-   
    <Key-template-old>
+   You can set the following filter criteria. 
+
    |       Property	     |                         Description                       |
    |----------------------|-----------------------------------------------------------|
    | Vault                | The vault that controls access to the managed key.        |
@@ -53,6 +53,8 @@ To filter keys by using the console, complete the following steps:
    </Key-template-old>
    
    <Key-template>
+   You can set the following filter criteria. 
+
    |       Property	     |                         Description                        |
    |----------------------|-----------------------------------------------------------|
    | Vault                | The vault that controls access to the managed key.        |
