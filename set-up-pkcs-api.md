@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-05-05"
+lastupdated: "2023-05-24"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -129,9 +129,10 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
             tokenspaceID: "<private_keystore_spaceid>"
             iamauth: *defaultiamcredential
             sessionauth: 
-              enabled: false # Enable this option to encrypt and authenticate the keystore.
-              # Authenticated keystore password; must be 6-8 characters in length 
               
+              enabled: false # Enable this option on both keystores to encrypt and authenticate the keystores.
+              # Authenticated keystore password; must be 6-8 characters in length
+              # The authenticated keystore password MUST be identical to the anonymous user's tokenspaceIDPassword.
               
               tokenspaceIDPassword: "<private_keystore_password>"
           2: # The index of the anonymous user MUST be 2.
@@ -144,9 +145,10 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
               # The API key for the anonymous user. All other users can specify API key using the C_Login command.
               apikey: "<apikey_for_anonymous_user>"
             sessionauth: 
-              enabled: false
-              tokenspaceIDPassword: # Authenticated keystore password; must be 6-8 characters in length.
               
+              enabled: false # Enable this option on both keystores to encrypt and authenticate the keystores.
+              # The authenticated keystore password MUST be identical to the normal user's tokenspaceIDPassword.
+              tokenspaceIDPassword: # Authenticated keystore password; must be 6-8 characters in length.
               
 
     logging:
@@ -158,6 +160,9 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
     ```
     {: codeblock}
 
+    
+    If authenticated keystores are used, the `sessionauth` configuration option must be enabled for both keystores and the text passwords that are 6-8 characters in length must be identical for both keystores in the `tokenspaceIDPassword` field.
+    {: important}
     
 
     Replace the variables in the example according to the following table:
@@ -173,7 +178,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
     | `SO_user_name` | The name for the Security Officer (SO) user type. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. For more information about the PKCS #11 user types, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984). |
     | `normal_user_name` | The name for the normal user type. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. For more information about the PKCS #11 user types, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984). |
     | `private_keystore_spaceid` | The 128-bit [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html) of the private keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/). \n \n {{site.data.keyword.hscrypto}} provides you with two database-backed EP11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access. |
-    | `private_keystore_password` | Authorized sessions can be used by enabling the `sessionauth` configuration option. If the `sessionauth` option is enabled, a text password that is 6-8 characters in length is required for the `tokenspaceIDPassword` field. Authorized sessions are specific to the HSM and are used in the PKCS #11 flow to login and logout, and they are required for authenticated key operations. All keys generated using authorized sessions are stored in an authenticated and encrypted keystore. The `tokenspaceIDPassword` field is used to protect the keys in an authenticated and encrypted keystore. For each service instance, a maximum of five authenticated keystores are supported. |
+    | `private_keystore_password` | Authorized sessions can be used by enabling the `sessionauth` configuration option. If the `sessionauth` option is enabled, it must be enabled for both keystores. In addition, a text password that is 6-8 characters in length is required for the `tokenspaceIDPassword` field and the password must be identical for both keystores. Authorized sessions are specific to the HSM and are used in the PKCS #11 flow to login and logout, and they are required for authenticated key operations. All keys generated using authorized sessions are stored in an authenticated and encrypted keystore. The `tokenspaceIDPassword` field is used to protect the keys in an authenticated and encrypted keystore. For each service instance, a maximum of five authenticated keystores are supported. |
     | `anonymous_user_name` | The name for the anonymous user. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. If a user does not log in by using the `C_Login` Cryptoki function, then the user is known as an anonymous user. For more information about the PKCS #11 user types, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984). |
     | `public_keystore_spaceid` | The 128-bit [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html) of the public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/). \n \n {{site.data.keyword.hscrypto}} provides you with two database-backed EP11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access. |
     | `apikey_for_anonymous_user` | The service ID API key that you create for the anonymous user type in the [previous prerequisites step](#prerequisite-pkcs-api). |
