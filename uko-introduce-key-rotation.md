@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-23"
+lastupdated: "2023-05-11"
 
 keywords: rotate managed key, rotate key, managed key rotation, key rotation, key rewrap
 
@@ -42,7 +42,7 @@ Note that key rotation might charge extra fees depending on the type of your man
 ## How managed key rotation works
 {: #how-managed-key-rotation-works}
 
-When you rotate a managed key, new key material is automatically generated and replaces the previous key material. It moves into the *Active* state and becomes available for cryptographic operations. When you use the managed key to perform encryption, {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} uses only the latest key material. Key rotation changes the key material only. The metadata for the managed key, such as the key ID, does not change. 
+When you rotate a managed key, new key material is automatically generated and replaces the previous key material. It moves into the *Active* state and becomes available for cryptographic operations. When you use the managed key to perform encryption, {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} uses only the latest key material. Key rotation changes the key material. The key ID can also change, depending on the keystore type.
 
 The following diagram shows a contextual view of the key rotation functionality.
 ![Manage key rotation](/images/uko-key-rotation.svg "Managed key rotation"){: caption="Figure 1. Managed key rotation" caption-side="bottom"}

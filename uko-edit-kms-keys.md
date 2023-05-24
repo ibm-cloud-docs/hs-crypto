@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-24"
+lastupdated: "2023-05-19"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -33,26 +33,29 @@ To edit the details of a managed key by using the console, complete the followin
 3. Click the Actions icon  ![Actions icon](../icons/action-menu-icon.svg "Actions")  on the key that you want to edit, and choose **Show details**.
 4. Under **Key properties**, click **Edit** on each card to update the key properties. 
 
-    1. You can update the general properties and lifecycle properties. Or, you can also view the key material properties, including algorithm, length, and key check value. The following are a few properties that you can edit.
     
+    1. You can update the general properties and lifecycle properties. Or, you can also view the key material properties, including algorithm, length, and key check value. The following are a few properties that you can edit.
+ 
         |       Property	     |                         Description                       |
-        |----------------------|-----------------------------------------------------------|
-        | Key name             | A unique, human-readable name for easy identification of your key. When you change the name of a managed key, the key is to be renamed in all target keystores where it is activated.  \n \n Depending on the keystore type, name your key with the following rules:  \n - IBM Cloud KMS: 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n - IBM {{site.data.keyword.keymanagementserviceshort}}: 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n - AWS Key Management Service: 1–255 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (/\_-). However, do not start the name with `AWS/`. \n - Azure Key Vault: 1–24 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). \n - Google Cloud KMS: 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (\_-). |
+        |----------------------|-------------------------------------------------------------|
+        | Key name             | A unique, human-readable name for easy identification of your key. When you change the name of a managed key, the key is to be renamed in all target keystores where it is activated. \n \n Depending on the keystore type, name your key with the following rules:  \n - IBM Cloud KMS: 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n - IBM {{site.data.keyword.keymanagementserviceshort}}: 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n - AWS Key Management Service: 1–255 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (/\_-). However, do not start the name with `AWS/`. \n - Azure Key Vault: 1–24 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). \n - Google Cloud KMS: 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (\_-). |
         | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
-        | State                | Key states include _Pre-active_, _Active_, _Deactivated_, and _Destroyed_. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states) |
+        | State                | Key states include _Pre-active_, _Active_, _Deactivated_, and _Destroyed_. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
         | Activation date      | Plan a date to activate the key. No automatic state change is triggered. |
         | Expiration date      | Plan a date to deactivate the key. No automatic state change is triggered. |
         {: caption="Table 1. Key properties" caption-side="bottom"}
 
         You can edit one property card at a time. To make changes to another property card, save your changes first.
-       {: note}
-
-    2. In the **Target keystores** card, click **Edit** to add or remove the target keystores where the key is activated. You can use a key only for encryption and decryption after it is activated in at least one target keystore.
-        
-        - Add target keystores
+        {: note}
     
-            If you want to activate the key in more target keystores, click **Edit** and check the corresponding target keystore cards. The _Active_ key state is synced across all target keystores.
 
+    
+
+    2. In the **Target keystores** card, click **Edit** to add or remove the target keystores where the key is activated. You can use a key only for encryption and decryption after it is activated in at least one target keystore.  
+        - Add target keystores
+          
+            If you want to activate the key in more target keystores, click **Edit** and check the corresponding target keystore cards. The _Active_ key state is synced across all target keystores.
+        
         - Remove target keystores
 
             If you want to deactivate the key in some target keystores, click **Edit** and clear the checkbox in the corresponding target keystore cards. After the removal, the key material remains unless you destroy the key. The key state in the removed target keystores becomes _deactivated_ and cannot be synced with the managed key state in the future. However, you can reactivate the key by reassigning the key to these keystores so that the key state is synced again.
@@ -62,10 +65,8 @@ To edit the details of a managed key by using the console, complete the followin
             If the key state in some target keystores is different from the managed key state, you receive a **Key out of sync** warning message. An **Out of sync** flag is also displayed in the corresponding keystore card. There can be multiple reasons why the key state is out of sync. For example, you have deactivated the key in this target keystore before, or you activate the key through the CLI and the console doesn't reflect the state timely. When you hover over this flag, you can see the specific reason. You can sync the key state by clicking **Sync keys**. 
          
 
-         
             During master key rotation, you can activate {{site.data.keyword.cloud_notm}} KMS key in internal keystores. However, it will be shown as **Out of sync**. You can sync the key after the master key rotation is complete. 
             {: note}
-        
 5. Under **Advanced properties**, click **Edit** to update or add new key tags to the key. Key tags are used as identifications of a key.
 6. When you finish making changes, click **Save** to save the changes.
 

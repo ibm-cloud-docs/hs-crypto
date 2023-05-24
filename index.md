@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-05-11"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -441,7 +441,7 @@ Follow these steps to manage your encryption keys if you are using {{site.data.k
 
 A vault is a single repository that controls a user's or an access group's access to managed keys and target keystores through {{site.data.keyword.iamshort}} (IAM). 
 
-Complete the following steps to create your first vault:
+Complete the following steps to create your first vault. To do so, you need to be an account owner. 
 
 1. From your service instance UI, click **Vaults** from the navigation to view all the available vaults.
 2. To create a vault, click **Create vault**.

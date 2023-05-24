@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-04-12"
+lastupdated: "2023-05-22"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -27,8 +27,10 @@ Before you create a managed key, keep in mind the following considerations:
 - A managed key can be assigned to only one vault.
 - A managed key can be used for encryption and decryption only after you activate it in at least one keystore. 
 - You need to select the keystore type when you create a managed key. The keystore type that you select determines where the managed key is to be stored. The keystore type cannot be changed later.
-- Activating a managed key in multiple keystores enables redundancy.
+- Assigning a managed key in multiple keystores enables redundancy.
 - To protect your privacy, do not store your personal data as metadata for your managed key.
+
+
 
 ## Creating managed keys with the {{site.data.keyword.cloud_notm}} console
 {: #create-managed-keys-ui}
@@ -93,7 +95,7 @@ To create a managed key by using the console, complete the following steps:
     |----------------------|-----------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key. It must be 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (_-). |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
-    | Protection level     | **HSM-protected key** protection level applies to keys that are protected by FIPS 140-2 Level 3 Hardware Security Modules (HSMs) in Google Cloud. This type of keys ensures the highest security. **Software-protected key** protection level applies to keys that are protected by software. You can choose this level to [reduce cost](https://cloud.google.com/kms/pricing){: external}. For more information, see [Cloud KMS software backend: SOFTWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#software-protection-level){: external} and [Cloud KMS HSM backend: HARDWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#hardware-protection-level){: external}. \n \n **Note:** Software-protected keys don't support the Elliptic curve `secp256k1` algorithm.  |
+    | Protection level     | **HSM-protected key** protection level applies to keys that are protected by FIPS 140-2 Level 3 Hardware Security Modules (HSMs) in Google Cloud. This type of keys ensures the higher security. **Software-protected key** protection level applies to keys that are protected by software. You can choose this level to [reduce cost](https://cloud.google.com/kms/pricing){: external}. For more information, see [Cloud KMS software backend: SOFTWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#software-protection-level){: external} and [Cloud KMS HSM backend: HARDWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#hardware-protection-level){: external}. \n \n **Note:** Software-protected keys don't support the Elliptic curve `secp256k1` algorithm.  |
     | Purpose               | The cryptographic capabilities of the key, which is what you are going to do with this key. The purpose also determines the available key algorithms. The supported key purposes are **Symmetric encrypt/decrypt**, **Asymmetric sign**, **Asymmetric decrypt**, and **MAC signing/verification**. For more information, see [Key purpose](https://cloud.google.com/kms/docs/algorithms#key_purposes){: external}.   |
     | Key algorithm |  The corresponding key algorithms that are supported for each key purpose. Algorithms define what parameters are needed for cryptographic operations. For the list of available key algorithms, see [Key purposes and algorithms](https://cloud.google.com/kms/docs/algorithms){: external}.  |
     | State                | _Pre-active_ keys are not to be activated in target keystores until you manually activate them. _Active_ keys are to be automatically activated in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
@@ -179,6 +181,11 @@ To create a managed key through the API, follow these steps:
     The managed key is to be activated in all keystores in the keystore group that is defined in the key template.
 
     For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-managed-key){: external}.
+
+
+
+
+
 
 ## What's next
 {: #create-managed-keys-next}

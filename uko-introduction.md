@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-04-20"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -48,6 +48,8 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
     You can create different vaults based on your organizational or security needs. For example, you can create a vault for each business unit. In this way, you set access control policies at a vault level, and key administrators of each business unit have access only to the keys and keystores that are assigned to the vault of their business unit.
 
     For more information about creating and managing access to vaults, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults) and [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults).
+
+
 
 - **Managed keys**
         

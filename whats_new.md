@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-04-14"
+lastupdated: "2023-05-24"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -22,6 +22,15 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+
+## 24 May 2023
+{: hs-crypto-may2023}
+{: release-note}
+
+[Updated]{: tag-updated}: Master key rotation support for all regions
+:   You are now able to rotate master keys when you are using the Unified Key Orchestrator service plan or your service instance that has EP11 keystores enabled in all supported regions. Previously, it was only available in Frankfurt, Germany. 
+
+    For a list of supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions&interface=ui).  For more information about how master key rotation works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro). 
 
 
 
@@ -47,7 +56,7 @@ Added: {{site.data.keyword.hscrypto}} key management functions
     - [List Keys with sorting](/apidocs/hs-crypto#:~:text=values%3A%20length%20≤%20256-,sort,-string){: external} to include lastRotateDate sorting.
     - [List Keys with advanced filtering](/apidocs/hs-crypto#:~:text=Default%3A%20id-,filter,-string){: external} to including lastRotateDate filtering.
     - [Create key with policy overrides](https://cloud.ibm.com/apidocs/hs-crypto#createkeywithpoliciesoverrides){: external} to enable users with Manager role to create keys with policies in a single call, overriding instance level policies.
-    - [Disable a key rotation policy](/apidocs/hs-crypto#:~:text=policy%2Bjson"%2C%0A%20%20%20%20%20%20%20%20"rotation"%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20"-,enabled,-"%3A%20<true%7Cfalse>%2C%0A%20%20%20%20%20%20%20%20%20%20"interval_month){: external} to allow an automatic key rotation policy to be paused temporarily.
+    - [Disable a key rotation policy](/apidocs/hs-crypto#:~:text=policy%2Bjson%22%2C%0A%20%20%20%20%20%20%20%20%22rotation%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%22-,enabled,-%22%3A%20%3Ctrue%7Cfalse%3E%2C%0A%20%20%20%20%20%20%20%20%20%20%22interval_month){: external} to allow an automatic key rotation policy to be paused temporarily.
 
 Added: Activity Tracker event names
 :    Find the latest event names and mapping in [Historical information regarding events](/docs/hs-crypto?topic=hs-crypto-at-events&interface=ui#historical-mapping-events).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-04-20"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -232,6 +232,8 @@ This section covers concepts that are related to [{{site.data.keyword.uko_full_n
 {: #uko-vault-concept}
 
 A vault is a single repository that controls a user's or an access group's access to keys and keystores through Identity and Access Management (IAM). A managed key or internal keystore can be created only in a vault. When you connect to an external keystore, you need to assign it to a vault. To use a managed key for encryption and decryption, you need to install it in one or more keystores within the same vault. The vault keeps all installations of a managed key in sync.
+
+
 
 ### Managed key
 {: #uko-managed-key-conncept}
