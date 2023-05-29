@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-05-29"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, smart card, trusted key entry application, tke application, management utilities
 
@@ -50,14 +50,14 @@ Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start
 ### Step 1: Generate the signature keys and master key parts
 {: #step1-generate-keys-management-utilities}
 
+If you have created signature keys and master key parts with the TKE CLI plug-in on your workstation, you can copy them to smart cards instead of generating new keys. To do so, on the **Smart card** tab, click **Copy signature key file** or **Copy key part file** and follow the instructions. During the process, you need to provide the password for the key file.
+{: tip}
+
 1. To generate a signature key for an administrator, select the **Smart card** tab, and click **Generate signature key**.
 
     When prompted, insert an [EP11 smart card](/docs/hs-crypto?topic=hs-crypto-understand-concepts#smart-card-concept) in smart card reader 2. Enter a name for the administrator, and enter the personal identification number (PIN) for the smart card on the smart card reader PIN pad.
 
-    An administrator signature key is generated and stored on the smart card. Repeat this step to create multiple signature keys if needed.
-
-    Each smart card can contain only one signature key. If you want to set up multiple administrators, repeat this step by using different EP11 smart cards.
-    {: tip}
+    An administrator signature key is generated and stored on the smart card. Each smart card can contain only one signature key. If you want to set up multiple administrators, repeat this step by using different EP11 smart cards.
 
 2. To generate the master key parts for service instance initialization, on the **Smart card** tab, click **Generate key part**.
 
@@ -71,7 +71,6 @@ Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start
     {: important}
 
 3. (Optional) If you want to create a backup copy of an EP11 smart card, click **Copy smart card** on the **Smart card** tab and follow the prompts.
-4. (Optional) The signature keys and master key parts that are created with the TKE CLI plug-in and saved in a workstation file can be copied to a smart card. To do so, on the **Smart card** tab, click **Copy signature key file** or **Copy key part file** and follow the instructions. To copy the signature key or key part to a smart card, you need to provide the password for the file.
 
 ### Step 2: Select the crypto units where the master key is to be loaded
 {: #step2-select-crypto-units-management-utilities}
