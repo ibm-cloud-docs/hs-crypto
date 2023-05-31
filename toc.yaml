@@ -239,7 +239,7 @@ toc:
               - uko-edit-kms-keys.md
               - uko-install-key-keystores.md
               - uko-view-associate-resource.md
-              - uko-rotate-key.md
+              - uko-rotate-key.md 
               - uko-view-key-versions.md
               - uko-delete-managed-keys.md
           - topicgroup:
