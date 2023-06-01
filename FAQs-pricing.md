@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-05-10"
+lastupdated: "2023-06-01"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning and operations
 
@@ -44,14 +44,16 @@ The following example shows a total charge of 30 days (720 hours). The user enab
 {: caption="Table 1. A standard plan billing example of 30 days" caption-side="bottom"}
 
 
+
+
 ## How am I charged for my use of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}?
 {: #faq-how-charge-hpcs-uko}
 {: faq}
 {: support}
 
-Each provisioned operational crypto unit is charged $2.13 USD per hour. After you connect to an external keystore of any type, the {{site.data.keyword.uko_full_notm}} base price of $6.25 USD/hour is charged. 
+Each provisioned operational crypto unit is charged $2.13 USD per hour. After you connect to an external keystore of any type, the {{site.data.keyword.uko_full_notm}} base price of $5.00 USD/hour is charged. 
 
-The first 5 internal keystores and the very first external keystore are free of charge. Each additional internal or external keystore is charged with a tiered pricing starting at $225 USD per month. For keystores that are created or connected less than a month, the cost is prorated based on actual days within the month.
+The first 5 internal keystores and the very first external keystore are free of charge. Each additional internal or external keystore is charged with a tiered pricing starting at $225 USD or $70 USD per month, respectively. For keystores that are created or connected less than a month, the cost is prorated based on actual days within the month.
 
 The detailed [pricing plan](/catalog/services/hyper-protect-crypto-services){: external} is available for your reference.
 
@@ -62,12 +64,10 @@ The following example shows a total charge of 30 days (720 hours). The user enab
 | Operational crypto unit 1 | $1533.6 (30x24x2.13) |
 | Operational crypto unit 2 | $1533.6 (30x24x2.13) |
 | 22 internal keystores | $3795 (5x0+15x225+2x210) |
-| 15 external keystores | $3150 (1x0+14x225) |
-| {{site.data.keyword.uko_full_notm}} connection | $4500 (30x24x6.25) |
-| Total charge| $14512.2  |
+| 15 external keystores | $980 (1x0+14x70) |
+| {{site.data.keyword.uko_full_notm}} connection | $3600 (30x24x5.00) |
+| Total charge| $11442.2  |
 {: caption="Table 2. A {{site.data.keyword.uko_full_notm}} billing example of 30 days" caption-side="bottom"}
-
-
 
 
 
