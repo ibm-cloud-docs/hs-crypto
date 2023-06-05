@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-24"
+lastupdated: "2023-06-05"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -25,7 +25,7 @@ As a _Vault Administrator_, you can bundle the keys and keystores in your {{site
 
 Vaults are also useful in cases where it is important for one business unit to have access to a set of keys and keystores that another business unit cannot have. An account administrator can create vaults for each business unit and [assign the appropriate level of access](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults) to the appropriate users. In the case where the account administrator wants to delegate platform management of a specific vault to someone else, they can assign a user a [Vault Administrator role](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles). The sub-administrator is then able to manage the vault and grant access to the appropriate users.
 
-Before you create a vault for your {{site.data.keyword.hscrypto}} instance, keep in mind of the following considerations:
+Before you create a vault for your {{site.data.keyword.hscrypto}} instance, keep in mind of the following considerations: 
 
 - Vaults can hold KMS keys and keystores, but not EP11 keys and keystores.
 
@@ -33,10 +33,9 @@ Before you create a vault for your {{site.data.keyword.hscrypto}} instance, keep
 
 - A key or a keystore only can belong to one vault at a time.
 
-    A managed key or a target keystore can belong to only one vault. You need to assign a vault to a managed key or a target keystore upon creation.
+    A managed key or a target keystore can belong to only one vault. You need to assign a vault to a managed key or a target keystore upon creation. 
 
 - During master key rotation, you are not able to create a vault. However, you can create the vault again after the master key rotation process is complete.
-
 
 For more information about granting access, see [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults).
 
