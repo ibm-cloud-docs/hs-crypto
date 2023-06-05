@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-06-01"
+lastupdated: "2023-06-05"
 
 keywords: site map, doc structure, information architecture
 
@@ -1089,8 +1089,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [Syncing associated resources with the API](/docs/hs-crypto?topic=hs-crypto-sync-associated-resources#sync-associated-resources-api)
 
 
-### Managing EP11 keys and keystores
-{: #sitemap_managing_ep11_keys_and_keystores}
+### Managing EP11 keys, keystores, and certificates
+{: #sitemap_managing_ep11_keys_keystores_and_certificates}
 
 
 [Managing EP11 keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui#manage-ep11-keystores-ui)
@@ -1116,6 +1116,18 @@ Find what you are looking for in the compilation of topics that are available in
 * [Deleting EP11 keys](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui#delete-ep11-key-ui)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui#manage-ep11-key-ui-next)
+
+[Managing EP11 certificates with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#manage-ep11-certificate-ui)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#manage-ep11-certificate-ui-before)
+
+* [Viewing EP11 certificates](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#view-ep11-certificate-ui)
+
+* [Downloading EP11 certificates](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#download-ep11-certificate-ui)
+
+* [Deleting EP11 certificates](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#delete-ep11-certificate-ui)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#manage-ep11-certificate-ui-next)
 
 
 ## Managing KMS keys, keystores, and vaults - Unified Key Orchestrator Plan

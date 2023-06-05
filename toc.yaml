@@ -207,10 +207,11 @@ toc:
               - view-protected-resources.md
               - sync-resources.md
           - topicgroup:
-              label: Managing EP11 keys and keystores
+              label: Managing EP11 keys, keystores, and certificates
               topics:
               - manage-pkcs11-keystores.md
               - manage-pkcs11-keys.md
+              - manage-pkcs11-certificates.md
       - topicgroup:
           label: Managing KMS keys, keystores, and vaults - Unified Key Orchestrator Plan
           topics:

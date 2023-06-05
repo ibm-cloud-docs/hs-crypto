@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-03-14"
+lastupdated: "2023-06-05"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of cryptography functions that are executed in a [Hardware Security Module (HSM)](#x6704988){: term} in the cloud. You can perform cryptographic operations by remotely accessing these functions with the Enterprise PKCS #11 (EP11) over gRPC API calls (also referred to as GREP11).
 {: shortdesc}
 
-For more information about how the GREP11 functions are related to PKCS #11 and EP11, see [GREP11 introduction](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm#access-cloud-hsm-pkcs11).
+For more information about how the GREP11 functions are related to PKCS #11 and EP11, see [GREP11 introduction](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm#access-cloud-hsm-pkcs11). 
 
 ## Accessing the API
 {: #access-grep11-functions}

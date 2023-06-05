@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-06-05"
 
 keywords: hsm, cloud hsm, tke cli, trusted key entry plug-in, ep11, grep11, cryptographic operations, cryptographic functions
 
@@ -46,6 +46,8 @@ For some operations, there are a series of sub-operations. For example, the mult
 The following diagram shows the three calling sequence flows of GREP11 functions to perform encryption. The flows can also apply to other operations such as decrypt, digest, sign and verify. For more information about the GREP11 API, see [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
 ![GREP11 functions calling flow for encryption](/images/grep11-encryption-flow.svg "GREP11 functions calling flow for encryption"){: caption="Figure 1. Three calling flows of GREP11 functions for encryption" caption-side="bottom"}
+
+
 
 ## Post-quantum cryptography support
 {: #grep11-support-post-quantum}
