@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-06-06"
 
 keywords: hsm, cloud hsm, ep11, grep11, pkcs, cryptographic operations, cryptographic functions
 
@@ -51,7 +51,7 @@ In addition to the PKCS #11 API, you can also use the Enterprise PKCS #11 over g
 
 {{site.data.keyword.hscrypto}} leverages [gRPC](https://grpc.io/){: external} to enable remote application access to the cloud HSM. gRPC is a modern open source high-performance remote procedure call (RPC) framework that can connect services in and across data centers for load balancing, tracing, health checking, and authentication. With gRPC, applications can remotely access the {{site.data.keyword.hscrypto}} cloud HSM to call EP11 cryptographic functions. For more information about GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro).
 
-With the PKCS #11 and GREP11 APIs, you can perform remote cryptographic procedure calls, and, by default, impose message size limits. The maximum receiving message size is 4 MB and the outgoing message size has no limit.
+With the PKCS #11 and GREP11 APIs, you can perform remote cryptographic procedure calls, and, by default, impose message size limits. The maximum receiving message size is 64 MB and the outgoing message size has no limit.
 {: note}
 
 ### Comparing the PKCS #11 API with the GREP11 API
