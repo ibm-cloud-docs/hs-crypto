@@ -2,7 +2,6 @@ toc:
   properties:
     subcollection: hs-crypto
     service-name: hs-crypto
-    version: 2
     category: security
     audience: service
     href: /docs/hs-crypto
