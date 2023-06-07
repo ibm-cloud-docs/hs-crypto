@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-05-19"
+lastupdated: "2023-06-07"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -63,10 +63,14 @@ To edit the details of a managed key by using the console, complete the followin
         - Sync keys
 
             If the key state in some target keystores is different from the managed key state, you receive a **Key out of sync** warning message. An **Out of sync** flag is also displayed in the corresponding keystore card. There can be multiple reasons why the key state is out of sync. For example, you have deactivated the key in this target keystore before, or you activate the key through the CLI and the console doesn't reflect the state timely. When you hover over this flag, you can see the specific reason. You can sync the key state by clicking **Sync keys**. 
-         
 
             During master key rotation, you can activate {{site.data.keyword.cloud_notm}} KMS key in internal keystores. However, it will be shown as **Out of sync**. You can sync the key after the master key rotation is complete. 
             {: note}
+
+        - Realign with template
+
+            If you activate or deactivate a managed key in target keystores, an **Unaligned** flag can be displayed on the key details card for keys. Note that keys that are created with the key template will no longer be aligned with. If you want to realign your key with the key template, you can click **Actions** and select **Realign with template**. For more information, see [Realigning keys with key templates](/docs/hs-crypto?topic=hs-crypto-uko-align-template).
+
 5. Under **Advanced properties**, click **Edit** to update or add new key tags to the key. Key tags are used as identifications of a key.
 6. When you finish making changes, click **Save** to save the changes.
 
