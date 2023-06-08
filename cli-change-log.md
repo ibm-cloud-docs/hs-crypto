@@ -43,19 +43,15 @@ This is the first release of the certificate manager CLI plug-in. You can use it
 ## {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in
 {: #uko-cli-change-log}
 
-
-
 ### Updates on version 0.0.1
 {: #uko-cli-001-update}
 
-The following updates on the {{site.data.keyword.uko_full_notm}} CLI version 0.0.1 was released on XX XX 2023.
+The following updates on the {{site.data.keyword.uko_full_notm}} CLI version 0.0.1 was released in June 2023.
 
 - Add the command `hpcs uko associated-resources-for-managed-key` to list resources associated with a managed key
 - Add the command `hpcs uko associated-resources-for-target-keystore` to list resources associated with all keys that are activated in a target keystore.
 - Update the options for command `hpcs uko managed-keys` to list managed keys.
 - Update response examples for all the commands.
-
-
 
 ### Version 0.0.1
 {: #uko-cli-001}
