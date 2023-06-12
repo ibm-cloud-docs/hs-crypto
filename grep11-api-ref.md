@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-05"
+lastupdated: "2023-06-12"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -175,6 +175,7 @@ GREP11 attributes define object characteristics that set up how an object can be
 | Attribute    | Description           | Supported key types |
 |--------------|-----------------------|---------------------|
 | CKA_CHECK_VALUE | The checksum of the key | AES keys, DES keys |
+| CKA_COPYABLE | If set to CKA_TRUE, the object can be copied using the PKCS#11 C_CopyObject function | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys  |
 | CKA_DECRYPT  | CK_TRUE if key supports decryption. | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
 | CKA_DERIVE   | CK_TRUE if key supports key derivation (other keys can be derived from this key). Default is CK_FALSE. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_EC_PARAMS (CKA_ECDSA_PARAMS) | DER-encoding of an ANSI X9.62 Parameters value. | EC private keys, EC public keys        |

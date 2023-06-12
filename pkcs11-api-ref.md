@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-03-14"
+lastupdated: "2023-06-12"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -86,11 +86,11 @@ Not all PKCS #11 functions are implemented by {{site.data.keyword.hscrypto}}. Fu
 |[Session management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959742){: external} |C_Login|Yes|Logs into a token.|
 |[Session management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959742){: external} |C_Logout|Yes|Logs out from a token.|
 |[Object management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} |C_CreateObject|Yes<sup>1</sup>|Creates an object.|
-|[Object management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} |C_CopyObject|No|Creates a copy of an object.|
+|[Object management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} |C_CopyObject|Yes|Creates a copy of an object.|
 |[Object management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} |C_DestroyObject|Yes|Destroys an object.|
 |[Object management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} |C_GetObjectSize|Yes|Obtains the size of an object in bytes.|
 |[Object management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} |C_GetAttributeValue|Yes|Obtains an attribute value of an object.|
-|[Object management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} |C_SetAttributeValue|Yes|Modifies an attribute value of an object. Only Boolean attributes may be modified.|
+|[Object management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} |C_SetAttributeValue|Yes|Modifies an attribute value of an object. Only Boolean attributes can be modified.|
 |[Object management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} |C_FindObjectsInit|Yes|Initializes an object search operation.|
 |[Object management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} |C_FindObjects|Yes|Continues an object search operation.|
 |[Object management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} |C_FindObjectsFinal|Yes|Finishes an object search operation.|
@@ -134,7 +134,7 @@ Not all PKCS #11 functions are implemented by {{site.data.keyword.hscrypto}}. Fu
 |[Parallel function management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959751){: external} |C_CancelFunction|No|Legacy function that always returns `CKR_FUNCTION_NOT_PARALLEL`.|
 {: caption="Table 1. Describes the implemented PKCS #11 functions by service backend" caption-side="bottom"}
 
-1: The current implementation of the C_CreateObject function only supports X.509 Public Key Certificate objects.
+1: The current implementation of the C_CreateObject function supports secret key objects, private key objects, public key objects, and X.509 Public Key Certificate objects.
 
 ## Supported mechanisms
 {: #pkcs-mechanism-list}
@@ -163,8 +163,13 @@ PKCS #11 attributes define object characteristics that set up how an object can 
 
 | Attribute | Description | Supported key types |
 |--------------|-----------------------|--------|
-| CKA_CHECK_VALUE | The checksum of the key | AES keys, DES keys |
+| CKA_BASE | DSA Domain parameter and used for C_CreateObject. Base g. | DSA private keys, DSA public keys |
+| CKA_CERTIFICATE_CATEGORY | Used to indicate if a stored certificate is a user certificate for which the corresponding private key is available on the token (“token user”), a CA certificate (“authority”), or another end-entity certificate (“other entity”). Default value is CK_CERTIFICATE_CATEGORY_UNSPECIFIED. | Not applicable |
+| CKA_CERTIFICATE_TYPE | Must be specified when certificate object is created with C_CreateObject. The certificate types are X.509 public key, WTLS public key certificate, and X.509 attribute certificate. | Not applicable |
+| CKA_CHECK_VALUE | The checksum of the key or certificate. | AES keys, DES keys |
 | CKA_CLASS   | Object class (type) and is common for all objects. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys  |
+| CKA_COEFFICIENT | Used for C_CreatObject. | RSA private keys |
+| CKA_COPYABLE | If set to CKA_TRUE, the object can be copied using C_CopyObject. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys  |
 | CKA_DECRYPT | CK_TRUE if key supports decryption. |EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
 | CKA_DERIVE |  CK_TRUE if key supports key derivation (other keys can be derived from this key). Default is CK_FALSE. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys |
 | CKA_EC_PARAMS (CKA_ECDSA_PARAMS) | DER-encoding of an ANSI X9.62 Parameters value. | EC private keys, EC public keys        |
@@ -172,24 +177,40 @@ PKCS #11 attributes define object characteristics that set up how an object can 
 | CKA_ENCRYPT | CK_TRUE if key supports encryption. |   EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys      |
 | CKA_END_DATE  |  End date for the certificate or key. Default is empty. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_EXTRACTABLE  | CK_TRUE if key is extractable and can be wrapped.  | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
+| CKA_EXPONENT_1 | Use for C_CreateObject. Private exponent d modulo q-1. | RSA private keys |
+| CKA_EXPONENT_2 | Use for C_CreateObject. CRT coefficient q-1 mod p. | RSA private keys |
+| CKA_HASH_OF_ISSUER_PUBLIC_KEY | Hash of the issuer public key for a certificate. Default is empty. | Not applicable |
+| CKA_HASH_OF_SUBJECT_PUBLIC_KEY | Hash of the subject public key for a certificate. Default is empty. | Not applicable |
 | CKA_IBM_PQC_PARAMS  | Supporting parameters for post-quantum cryptography mechanisms. In the case of the Dilithium mechanism `CKM_IBM_DILITHIUM`, it provides a marshaled object identifier (OID) that represents the strength of Dilithium algorithm to use. Currently, only the strength of [Dilithium 4 round 2](http://oid-info.com/get/1.3.6.1.4.1.2.267.1.6.5){: external} is supported. |  Dilithium keys        |
+| CKA_IBM_USE_AS_DATA | An object is used for hashing or key derivation operations when CK_TRUE | EC private keys, EC public keys |
 | CKA_ID   | Key identifier for public or private key pair or key. Default is empty. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys        |
+| CKA_ISSUER | DER-encoding of the certificate issuer name. Default is empty. | Not applicable |
+| CKA_JAVA_MIDP_SECURITY_DOMAIN | Java MIDP security domain for a certificate.  Default is CK_SECURITY_DOMAIN_UNSPECIFIED. | Not applicable |
 | CKA_KEY_TYPE   | Type of key.  | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_LABEL  | Description of the object. Default is empty.  |EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys         |
 | CKA_LOCAL | CK_TRUE only if the key was generated locally (on the token) with a `C_GenerateKey` or `C_GenerateKeyPair` call or created with a `C_CopyObject` call as a copy of a key that had the CKA_LOCAL attribute set to CK_TRUE. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_MODIFIABLE | Set to CK_TRUE if the object can be modified.| EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys |
 | CKA_MODULUS |  Modulus n.  |       RSA private keys    |
 | CKA_MODULUS_BITS  | Length in bits of modulus n. |        RSA public keys    |
-| CKA_PRIVATE | CK_TRUE if object is a private object; CK_FALSE if object is a public object. Default value is token-specific, and may depend on the values of other attributes of the object. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
-| CKA_PUBLIC_EXPONENT | Public exponent e. |     RSA private keys      |
+| CKA_NAME_HASH_ALGORITHM | Defines the mechanism used to calculate the hash of the Subject and Issuer public keys for a certificate. Default is SHA-1. | Not applicable | 
+| CKA_PRIME | DSA Domain parameter and used for C_CreateObject. Prime p (512 to 2048 bits in steps of 64 bits). | DSA private keys, DSA public keys |
+| CKA_PRIME_1 | Used for C_CreateObject. Prime q. | RSA private keys |
+| CKA_PRIME_2 | Used for C_CreateObject. Private exponent d modulo p-1. | RSA private keys |
+| CKA_PRIVATE | CK_TRUE if object is a private object; CK_FALSE if object is a public object. Default value is token-specific, and can depend on the values of other attributes of the object. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
+| CKA_PRIVATE_EXPONENT | Used for C_CreateObject. Prime p. | RSA private keys |
+| CKA_PUBLIC_EXPONENT | Public exponent e. |     RSA private keys, RSA public keys      |
 | CKA_PUBLIC_KEY_INFO | DER-encoding of the SubjectPublicKeyInfo for the public key. The value is derived from the underlying public key data and is empty by default. | RSA public keys, EC public keys |
 | CKA_SENSITIVE |  CK_TRUE if key is sensitive.  | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
+| CKA_SERIAL_NUMBER | DER-encoding of the certificate serial number. Default is empty. | Not applicable |
 | CKA_SIGN  |  CK_TRUE if key supports signatures where the signature is an appendix to the data. |EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
 | CKA_START_DATE  |  Start date for the certificate or key. Default is empty. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_SUBJECT  | DER-encoding of the certificate or key subject name.  | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys         |
+| CKA_SUBPRIME | DSA Domain parameter and used for C_CreateObject. Subprime q (160 bits for p <= 1024 bits, 224 bits or 256 bits for p > 1024 bits). | DSA private keys, DSA public keys |
 | CKA_TOKEN | CK_TRUE if object is a token object; CK_FALSE if object is a session object.  | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys   |
 | CKA_TRUSTED  | The certificate or key can be trusted for the application that it was created.  |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys        |
 | CKA_UNWRAP |  CK_TRUE if key supports unwrapping (can be used to unwrap other keys). | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
+| CKA_URL | The URL where the complete certificate can be obtained. Default is empty. | Not applicable |
+| CKA_VALUE | Encoded certificate bytes or key bytes when using C_CreateObject. | EC private keys, EC public keys, RSA private keys, RSA public keys, DSA private keys, DSA public keys |
 | CKA_VALUE_LEN  |  Length in bytes of key value.   |         AES keys  |
 | CKA_VERIFY  | CK_TRUE if key supports verification where the signature is an appendix to the data. |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys |
 | CKA_WRAP | CK_TRUE if key supports wrapping (can be used to wrap other keys).  |     EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys      |
