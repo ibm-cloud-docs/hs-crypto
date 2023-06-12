@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-06-12"
 
 keywords: Unified Key Orchestrator, install keys, activate key, key management, kms keys
 
@@ -15,18 +15,18 @@ subcollection: hs-crypto
 
 
 
-# Setting target keystores for existing keys
+# Reassigning target keystores for existing keys
 {: #install-key-keystores}
 
-You can use a managed key in {{site.data.keyword.uko_full_notm}} for encryption and decryption only after it is activated in at least one keystore. You can activate and deactivate existing keys in target keystores with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can reassigning target keystores for keys after they are created through the {{site.data.keyword.cloud_notm}} console or the API.
 {: shortdesc}
 
 
-## Setting target keystores for existing keys with the {{site.data.keyword.cloud_notm}} console
+## Reassigning target keystores for existing keys with the {{site.data.keyword.cloud_notm}} console
 {: #install-key-keystores-ui}
 {: ui}
 
-To activate or deactivate a managed key in target keystores by using the console, complete the following steps:
+To reassigning target keystores for existing keys by using the {{site.data.keyword.cloud_notm}} console, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
@@ -55,11 +55,11 @@ To activate or deactivate a managed key in target keystores by using the console
 6. Click **Save** to save the changes.
 
 
-## Setting target keystores for existing keys with the API
+## Reassigning target keystores for existing keys with the API
 {: #install-key-keystores-api}
 {: api}
 
-To activate or deactivate a managed key in target keystores through the API, follow these steps:
+To reassigning target keystores for existing keys by using API, complete the following steps:
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
    
