@@ -140,7 +140,7 @@ To create a managed key by using the console, complete the following steps:
     {: tab-group="Managed key properties"}
     {: class="comparison-tab-table"}
 
-7. Under **Target keystores**, you can select one or multiple target keystores to activate the managed key in. Activating a key in multiple keystores enables redundancy. You can also activate the key later by following instructions in [Setting target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
+7. Under **Target keystores**, you can select one or multiple target keystores to activate the managed key in. Activating a key in multiple keystores enables redundancy. You can also activate the key later by following instructions in [Reassigning target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
 
     If there are no existing keystores, you can click **Add keystore** to [create internal KMS keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [connect to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores). The corresponding keystore type is selected for you.
 
