@@ -781,8 +781,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key#signing-service-whats-next)
 
 
-## Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan
-{: #sitemap_managing_root_keys_standard_keys_and_ep11_keys_and_keystores_standard_plan}
+## Standard Plan - Managing root keys, standard keys, and EP11 keys and keystores
+{: #sitemap_standard_plan_managing_root_keys_standard_keys_and_ep11_keys_and_keystores}
 
 
 
@@ -1130,8 +1130,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#manage-ep11-certificate-ui-next)
 
 
-## Managing KMS keys, keystores, and vaults - Unified Key Orchestrator Plan
-{: #sitemap_managing_kms_keys_keystores_and_vaults_unified_key_orchestrator_plan}
+## Unified Key Orchestrator Plan - Managing KMS keys, keystores, and vaults
+{: #sitemap_unified_key_orchestrator_plan_managing_kms_keys_keystores_and_vaults}
 
 
 [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token#uko-retrieve-access-token)
@@ -1467,8 +1467,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-next)
 
 
-## Enhancing security - Standard Plan
-{: #sitemap_enhancing_security_standard_plan}
+## Standard Plan - Enhancing security
+{: #sitemap_standard_plan_enhancing_security}
 
 
 [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access#manage-access)
@@ -1566,8 +1566,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [Governing {{site.data.keyword.hscrypto}} resource configuration with config rules](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#govern-crypto)
 
 
-## Enhancing security - Unified Key Orchestrator Plan
-{: #sitemap_enhancing_security_unified_key_orchestrator_plan}
+## Unified Key Orchestrator Plan - Enhancing security
+{: #sitemap_unified_key_orchestrator_plan_enhancing_security}
 
 
 [Managing user access](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-manage-access)
