@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-20"
+lastupdated: "2023-06-12"
 
 keywords: VMWare encryption, KMIP, Key management and distribution, Data appliance encryption, Netapp, vSphere, vSAN encryption
 
@@ -51,7 +51,7 @@ This tutorial shows how you can configure KMIP with VMWare solution in IBM Cloud
 To complete this tutorial, you need to meet the following prerequisites:
 
 - [Sign up an {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmwaresolutions-signing_required_accounts#signing_required_accounts-cloud).
-- [Provision a {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-provision).
+- [Provision a Standard Plan instance](/docs/hs-crypto?topic=hs-crypto-provision&interface=ui#provision-standard).
 - [Initialize your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm).
 - [Create your {{site.data.keyword.hscrypto}} root key](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys).
 - [Order a KMIP for VMware® instance](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_ordering).
