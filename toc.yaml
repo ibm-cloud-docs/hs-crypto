@@ -9,7 +9,6 @@ toc:
     product-page: https://www.ibm.com/cloud/hyper-protect-crypto
     path: hs-crypto
     label: Hyper Protect Crypto Services
-
   entries:
   - navgroup:
       id: learn
@@ -92,7 +91,6 @@ toc:
       - integrate-services.md
       - topic: whats_new.md
         navtitle: Release notes
-
   - navgroup:
       id: tutorial
       topics:
@@ -140,7 +138,6 @@ toc:
           - link:
               label: "Manage regulatory compliance of company data in Microsoft 365 with Hyper Protect Unified Key Orchestrator"
               href: https://developer.ibm.com/tutorials/manage-regulatory-compliance-of-company-data-in-microsoft-office-365-in-azure/
-
   - navgroup:
       id: howto
       topics:
@@ -292,7 +289,6 @@ toc:
           topics:
           - settings-sysdig-metrics.md
           - monitor-sysdig-metrics.md
-
   - navgroup:
       id: reference
       topics:
@@ -344,7 +340,6 @@ toc:
       - link:
           label: IBM Cloud Hyper Protect Services resources
           href: https://ibm-hyper-protect.github.io/
-
   - navgroup:
       id: help
       topics:
