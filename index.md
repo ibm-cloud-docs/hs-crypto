@@ -407,7 +407,7 @@ You can use a managed key for encryption or decryption only after it is created 
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Length               | The number of bits that represents the encryption strength of the key.   |
-    | State                | The initial state of the key, including _Pre-active_ and _Active_. Pre-active_ keys are not activated in keystores for encrytion. _Active_ keys are automatically activated in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | State                | The initial state of the key, including _Pre-active_ and _Active_. _Pre-active_ keys are not activated in keystores for encrytion. _Active_ keys are automatically activated in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activation date      | Plan a date to activate the _Pre-active_ key. Automatic state change is to be triggered on the planned date. |
     | Expiration date      | Plan a date to deactivate the key. Automatic state change is to be triggered on the planned date. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
