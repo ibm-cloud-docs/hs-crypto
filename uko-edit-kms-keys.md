@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-12"
+lastupdated: "2023-06-13"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -54,11 +54,11 @@ To edit the details of a managed key by using the console, complete the followin
     2. In the **Target keystores** card, click **Edit** to add or remove the target keystores where the key is activated. You can use a key only for encryption and decryption after it is activated in at least one target keystore.  
         - Add target keystores
           
-            If you want to activate the key in more target keystores, click **Edit** and check the corresponding target keystore cards. The _Active_ key state is synced across all target keystores.
+            If you want to assign and activate the key in more target keystores, click **Edit** and check the corresponding target keystore cards. The _Active_ key state is synced across all target keystores.
         
         - Remove target keystores
 
-            If you want to deactivate the key in some target keystores, click **Edit** and clear the checkbox in the corresponding target keystore cards. After the removal, the key material remains unless you destroy the key. The key state in the removed target keystores becomes _deactivated_ and cannot be synced with the managed key state in the future. However, you can reactivate the key by reassigning the key to these keystores so that the key state is synced again.
+            If you want to unassign and deactivate the key in some target keystores, click **Edit** and clear the checkbox in the corresponding target keystore cards. After the removal, the key material remains unless you destroy the key. The key state in the removed target keystores becomes _deactivated_ and cannot be synced with the managed key state in the future. However, you can reactivate the key by reassigning the key to these keystores so that the key state is synced again.
 
         - Sync keys
 
@@ -102,7 +102,7 @@ To edit key details through the API, follow these steps:
   
 - To find out instructions on deleting a managed key, check out [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys).
   
-- To find out how to activate an existing key in a keystore, check out [Reassigning target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
+- To find out how to activate and assign an existing key in a keystore, check out [Reassigning target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
 
 - To find out more about managing your key list, check out [Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list) or [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
 
