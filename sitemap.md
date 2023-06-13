@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-06-12"
+lastupdated: "2023-06-13"
 
 keywords: site map, doc structure, information architecture
 
@@ -633,7 +633,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Next steps](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-next-steps)
 
-[Configuring KMIP in {{site.data.keyword.hscrypto}} for key management and distribution](/docs/hs-crypto?topic=hs-crypto-tutorial-kmip-vmware#tutorial-kmip-vmware)
+[Configuring KMIP in {{site.data.keyword.hscrypto}}  Standard Plan for key management and distribution](/docs/hs-crypto?topic=hs-crypto-tutorial-kmip-vmware#tutorial-kmip-vmware)
 
 * [Objectives](/docs/hs-crypto?topic=hs-crypto-tutorial-kmip-vmware#tutorial-kmip-objectives)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-06-12"
+lastupdated: "2023-06-13"
 
 keywords: VMWare encryption, KMIP, Key management and distribution, Data appliance encryption, Netapp, vSphere, vSAN encryption
 
@@ -19,7 +19,7 @@ completion-time: 2h
 
 
 
-# Configuring KMIP in {{site.data.keyword.hscrypto}} for key management and distribution
+# Configuring KMIP in {{site.data.keyword.hscrypto}}  Standard Plan for key management and distribution
 {: #tutorial-kmip-vmware}
 {: toc-content-type="tutorial"}
 {: toc-services="hs-crypto"}
@@ -34,7 +34,11 @@ The following diagram illustrates the overall workflow of how the KMIP adapter t
 ![KMIP workflow with VMWare customer environment](../images/kmip-vmware-workflow.svg "KMIP adapter"){: caption="Figure 1. KMIP workflow with VMWare customer environment" caption-side="bottom"}
 
 The overall workflow includes the following steps:
-1. Create a {{site.data.keyword.hscrypto}} service instance and your root key.
+
+Only Standard Plan instances of {{site.data.keyword.hscrypto}} can be used to complete these steps.
+{: tip}
+
+1. Create a {{site.data.keyword.hscrypto}} Standard Plan instance and your root key.
 2. Configure the VMWare Solution Service **KMIP for VMWare** with the {{site.data.keyword.hscrypto}} service instance. The **KMIP for VMware** service manages the lifecycle of the KMIP adapter and KMIP client certificates.
 3. Connect your VMware vCenter server to KMIP and enable vSphere encryption or vSAN encryption.
 
