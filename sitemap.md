@@ -1263,15 +1263,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Editing key details with the API](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys-api)
 
+* [Editing target keystores for keys with the API](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#assign-key-keystores-api)
+
 * [What's next](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys-next)
-
-[Reassigning target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores#install-key-keystores)
-
-* [Reassigning target keystores for existing keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-install-key-keystores#install-key-keystores-ui)
-
-* [Reassigning target keystores for existing keys with the API](/docs/hs-crypto?topic=hs-crypto-install-key-keystores#install-key-keystores-api)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-install-key-keystores#install-key-keystores-next)
 
 [Viewing resources associated with managed keys](/docs/hs-crypto?topic=hs-crypto-uko-view-associated-resource#uko-view-associated-resource)
 

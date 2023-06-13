@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-12"
+lastupdated: "2023-06-13"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -240,8 +240,6 @@ If you connect to an external keystore of type Azure Key Vault, a key named `EKM
 - To watch a use case video on using {{site.data.keyword.uko_full_notm}} to manage Azure Key Vault, see [Managing compliance of a Microsoft Office 365 environment using Hyper Protect Crypto Services with Unified Key Orchestrator](https://mediacenter.ibm.com/media/1_1pzzhrb8){: external}.
 
 - To watch a use case video on using {{site.data.keyword.uko_full_notm}} to manage AWS Key Management Service, see [Securely managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator](https://mediacenter.ibm.com/media/1_1a6c6vub){: external}.
-
-- To find out how to activate an existing key in a keystore, check out [Reassigning target keystores for existing keys](/docs/hs-crypto?topic=hs-crypto-install-key-keystores).
 
 - To find out how to update the connection to an external keystore, check out [Editing connection to external keystores](/docs/hs-crypto?topic=hs-crypto-edit-external-keystore-connection).
 
