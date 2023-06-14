@@ -26,7 +26,7 @@ subcollection: hs-crypto
 To work with the API, you need to generate your service and authentication credentials. To gather your credentials:
 
 1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-topic=hs-crypto-retrieve-instance-ID).
+2. [Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 
 ## Generating a GREP11 API request
 {: #form-grep11-api-request}
