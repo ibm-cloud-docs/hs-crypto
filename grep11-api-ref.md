@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-12"
+lastupdated: "2023-06-14"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -23,7 +23,7 @@ For more information about how the GREP11 functions are related to PKCS #11 and 
 ## Accessing the API
 {: #access-grep11-functions}
 
-A GREP11 API endpoint, a service ID API key, an IAM endpoint, and an instance ID are needed for initialization before you perform any GREP11 API function calls. For more information, see [Generating a GREP11 API request](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#form-grep11-api-request).
+A GREP11 API endpoint, a service ID API key, an IAM endpoint are needed for initialization before you perform any GREP11 API function calls. For more information, see [Generating a GREP11 API request](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#form-grep11-api-request).
 
 ## Error handling
 {: #grep11-error-handling}
