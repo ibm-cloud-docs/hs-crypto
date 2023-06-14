@@ -30,9 +30,9 @@ When you use the {{site.data.keyword.uko_full_notm}} API to create IBM Cloud KMS
 
 To work with the API, you need to generate your service and authentication credentials. Complete the following steps to gather your credentials:
 
-1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token).
+1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
 
-2. [Retrieve the instance ID](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID) that uniquely identifies your {{site.data.keyword.hscrypto}} service instance.
+2. [Retrieve the instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID) that uniquely identifies your {{site.data.keyword.hscrypto}} service instance.
 
 ## Forming your {{site.data.keyword.uko_full_notm}} API request
 {: #form-uko-api-request}

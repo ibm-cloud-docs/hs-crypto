@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-06-14"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 
@@ -455,7 +455,7 @@ Failed TKE events have an `outcome` of `failure`. The `reason.reasonType` and `r
 
 If the event has a `reason.reasonCode` of `400`, the action cannot be completed because the operation to the crypto units is not supported or is not valid. Check whether the TKE command that you use is valid by referring to the [TKE CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin){: external}.
 
-If the event has a `reason.reasonCode` of `401` or `403`, the action cannot be completed because your access token is not valid or does not have the necessary permissions to access this instance. [Refresh your access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token) and check whether you have [appropriate permissions](/docs/hs-crypto?topic=hs-crypto-uko-manage-access) to perform the corresponding actions.
+If the event has a `reason.reasonCode` of `401` or `403`, the action cannot be completed because your access token is not valid or does not have the necessary permissions to access this instance. [Refresh your access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token) and check whether you have [appropriate permissions](/docs/hs-crypto?topic=hs-crypto-uko-manage-access) to perform the corresponding actions.
 
 If the event has a `reason.reasonCode` of `500`, check out the value of `reason.reasonForFailure` to identify the reasons of failure and the corresponding actions that you need to take.
 

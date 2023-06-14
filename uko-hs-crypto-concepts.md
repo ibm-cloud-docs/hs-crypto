@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-04-20"
+lastupdated: "2023-06-14"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -180,7 +180,7 @@ The Cryptographic Token Interface defined in the PKCS #11 standard. Cryptoki fol
 ### PKCS #11 library
 {: #uko-pkcs11-library-concept}
 
-A PKCS #11 library that implements the Cryptoki API functions that are specified in the PKCS #11 standard. With the PKCS #11 library, your applications can use the PKCS #11 API to access the {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations. To learn more about how to set up the library, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api).
+A PKCS #11 library that implements the Cryptoki API functions that are specified in the PKCS #11 standard. With the PKCS #11 library, your applications can use the PKCS #11 API to access the {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations. To learn more about how to set up the library, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
 
 ### Cryptoki token
 {: #uko-cryptoki-token-concept}
