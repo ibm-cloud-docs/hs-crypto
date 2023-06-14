@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-06-14"
 
 keywords: set up api, api key, cryptographic operations, use ep11 api, access ep11 api, ep11 over grpc, using api
 
@@ -26,12 +26,12 @@ subcollection: hs-crypto
 To work with the API, you need to generate your service and authentication credentials. To gather your credentials:
 
 1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-2. [Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+topic=hs-crypto-retrieve-instance-ID).
 
 ## Generating a GREP11 API request
 {: #form-grep11-api-request}
 
-In order to remotely access cloud HSM on {{site.data.keyword.hscrypto}} to perform cryptographic operations, you need to generate a GREP11 API request, and pass the GREP11 API endpoint URL, service ID API key, IAM endpoint, and instance ID through the API call.
+In order to remotely access cloud HSM on {{site.data.keyword.hscrypto}} to perform cryptographic operations, you need to generate a GREP11 API request, and pass the GREP11 API endpoint URL, service ID API key, and IAM endpoint through the API call.
 
 You can also enable mutual TLS for GREP11 API to add another layer of authentication. For more information, see [Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11).
 
@@ -58,7 +58,6 @@ import pb "github.com/IBM-Cloud/hpcs-grep11-go/grpc"
 type IAMPerRPCCredentials struct {
 	expiration  time.Time
 	updateLock  sync.Mutex
-	Instance    string // Always Required - IBM Cloud HPCS instance ID
 	AccessToken string // Required if APIKey nor Endpoint are specified - IBM Cloud IAM access token
 	APIKey      string // Required if AccessToken is not specified - IBM Cloud API key
 	Endpoint    string // Required if AccessToken is not specified - IBM Cloud IAM endpoint
@@ -75,7 +74,6 @@ func (cr *IAMPerRPCCredentials) GetRequestMetadata(ctx context.Context, uri ...s
 
 	return map[string]string{
 		"authorization":    cr.AccessToken,
-		"bluemix-instance": cr.Instance,
 	}, nil
 }
 
@@ -142,7 +140,6 @@ var callOpts = []grpc.DialOption{
   grpc.WithPerRPCCredentials(&util.IAMPerRPCCredentials{
     APIKey:   "<ibm_cloud_apikey>",
     Endpoint: "https://iam.cloud.ibm.com",
-    Instance: "<hpcs_instance_id>",
   }),
 }
 
@@ -188,8 +185,6 @@ In the example, update the following variables:
     {: screen}
 
 * Replace `<ibm_cloud_apikey>` with the service ID API key that you created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
-
-* Replace `<instance_ID>` with the instance ID that uniquely identifies your service instance. Retrieve the instance ID by following the instruction in [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 
 If the sample request is processed successfully, random data with a length of 16 bytes will be returned, as specified in `ep11.AES_BLOCKSIZE`.
 
