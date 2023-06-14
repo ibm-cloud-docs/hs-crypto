@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-06-12"
+lastupdated: "2023-06-14"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -30,7 +30,7 @@ To perform a PKCS #11 API call, you need to first [install the PKCS #11 library]
 
 The library file names use the naming convention: `pkcs11-grep11-<**platform**>.so.<**version**>`. The platform is either *amd64* or *s390x* and the version is the standard *major.minor.build* syntax. After you download the library, move the library into a folder that is accessible by your applications. For example, if you are running your application on Linux&reg;, you can move the library to `/usr/local/lib`, `/usr/local/lib64`, or `/usr/lib`.
 
-To access the PKCS #11 API, configure the PKCS #11 library by setting the API endpoint, service instance ID, and API key in the `grep11client.yaml` configuration file. And then, initialize the library. For detailed instructions, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
+To access the PKCS #11 API, configure the PKCS #11 library by setting the API endpoint and API key in the `grep11client.yaml` configuration file. And then, initialize the library. For detailed instructions, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
 
 If you are running a Java PKCS #11 application using the SunPKCS11 provider on the IBM Z (s390x) platform, make sure that you use the latest IBM Semeru JVM and specify the `-Xjit:noResumableTrapHandler` Java option when starting your application. You can download the latest s390x version of the IBM Semeru JVM by changing the **Architecture** filter field to **s390x** on the [IBM Semeru Runtime Downloads page](https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM){: external}.
 {: note}
