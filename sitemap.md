@@ -633,7 +633,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Next steps](/docs/hs-crypto?topic=hs-crypto-tutorial-import-keys#tutorial-import-next-steps)
 
-[Configuring KMIP in {{site.data.keyword.hscrypto}}  Standard Plan for key management and distribution](/docs/hs-crypto?topic=hs-crypto-tutorial-kmip-vmware#tutorial-kmip-vmware)
+[Configuring KMIP for key management and distribution in {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-tutorial-kmip-vmware#tutorial-kmip-vmware)
 
 * [Objectives](/docs/hs-crypto?topic=hs-crypto-tutorial-kmip-vmware#tutorial-kmip-objectives)
 
@@ -817,7 +817,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#set-up-kms-api-next-steps)
 
-[{{site.data.keyword.uko_full_notm}} Plan - Setting up {{site.data.keyword.uko_full_notm}} API calls](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#set-up-uko-api)
+[Setting up {{site.data.keyword.uko_full_notm}} API calls - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#set-up-uko-api)
 
 * [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#retrieve-uko-credentials)
 
@@ -864,11 +864,11 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-whats-next)
 
 
-## Standard Plan - Performing key management operations with the CLI
-{: #sitemap_standard_plan_performing_key_management_operations_with_the_cli}
+## Performing key management operations with the CLI - Standard Plan
+{: #sitemap_performing_key_management_operations_with_the_cli_standard_plan}
 
 
-[Standard Plan - Performing key management operations with the CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli#set-up-cli)
+[Performing key management operations with the CLI - Standard Plan](/docs/hs-crypto?topic=hs-crypto-set-up-cli#set-up-cli)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-cli#cli-next-steps)
 
@@ -890,13 +890,13 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next?](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs#uko-terraform-setup-hpcs-next)
 
 
-## Standard Plan - Managing root keys, standard keys, and EP11 keys and keystores
-{: #sitemap_standard_plan_managing_root_keys_standard_keys_and_ep11_keys_and_keystores}
+## Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan
+{: #sitemap_managing_root_keys_standard_keys_and_ep11_keys_and_keystores_standard_plan}
 
 
 
-### Standard Plan - Managing instance policies
-{: #sitemap_standard_plan_managing_instance_policies}
+### Managing instance policies - Standard Plan
+{: #sitemap_managing_instance_policies_standard_plan}
 
 
 [Managing the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies#managing-network-access-policies)
@@ -932,8 +932,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [Disabling the key create and import access policy for your service instance with the key management service API](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#disable-key-create-import-policy-api)
 
 
-### Standard Plan - Managing key management service keys
-{: #sitemap_standard_plan_managing_key_management_service_keys}
+### Managing key management service keys - Standard Plan
+{: #sitemap_managing_key_management_service_keys_standard_plan}
 
 
 [Creating root keys](/docs/hs-crypto?topic=hs-crypto-create-root-keys#create-root-keys)
@@ -1123,8 +1123,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [Syncing associated resources with the API](/docs/hs-crypto?topic=hs-crypto-sync-associated-resources#sync-associated-resources-api)
 
 
-### Managing EP11 keys, keystores, and certificates
-{: #sitemap_managing_ep11_keys_keystores_and_certificates}
+### Managing EP11 keys, keystores, and certificates  - Standard Plan
+{: #sitemap_managing_ep11_keys_keystores_and_certificates_standard_plan}
 
 
 [Managing EP11 keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui#manage-ep11-keystores-ui)
@@ -1164,13 +1164,13 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#manage-ep11-certificate-ui-next)
 
 
-## Unified Key Orchestrator Plan - Managing KMS keys, keystores, and vaults
-{: #sitemap_unified_key_orchestrator_plan_managing_kms_keys_keystores_and_vaults}
+## Managing KMS keys, keystores, and vaults - Unified Key Orchestrator Plan
+{: #sitemap_managing_kms_keys_keystores_and_vaults_unified_key_orchestrator_plan}
 
 
 
-### Unified Key Orchestrator Plan - Managing vaults
-{: #sitemap_unified_key_orchestrator_plan_managing_vaults}
+### Managing vaults - Unified Key Orchestrator Plan
+{: #sitemap_managing_vaults_unified_key_orchestrator_plan}
 
 
 [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults#create-vaults)
@@ -1198,8 +1198,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-delete-vaults#delete-vaults-next)
 
 
-### Unified Key Orchestrator Plan - Managing keys
-{: #sitemap_unified_key_orchestrator_plan_managing_keys}
+### Managing keys - Unified Key Orchestrator Plan
+{: #sitemap_managing_keys_unified_key_orchestrator_plan}
 
 
 [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys)
@@ -1271,8 +1271,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys#delete-managed-keys-next)
 
 
-### Unified Key Orchestrator Plan - Managing keystores
-{: #sitemap_unified_key_orchestrator_plan_managing_keystores}
+### Managing keystores - Unified Key Orchestrator Plan
+{: #sitemap_managing_keystores_unified_key_orchestrator_plan}
 
 
 [Creating internal KMS keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores)

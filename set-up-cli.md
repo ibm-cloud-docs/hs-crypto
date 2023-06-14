@@ -12,10 +12,10 @@ subcollection: hs-crypto
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Standard Plan - Performing key management operations with the CLI
+# Performing key management operations with the CLI - Standard Plan
 {: #set-up-cli}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is integrated with {{site.data.keyword.keymanagementservicelong_notm}} command-line interface (CLI) plug-in, so that you can use the {{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in to create, import, and manage encryption [root keys](#x6946961){: term} and standard keys.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} Standard Plan is integrated with {{site.data.keyword.keymanagementservicelong_notm}} command-line interface (CLI) plug-in, so that you can use the {{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in to create, import, and manage encryption [root keys](#x6946961){: term} and standard keys.
 {: shortdesc}
 
 Currently, performing key management operations with the CLI is only supported with the Standard Plan.
