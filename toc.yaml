@@ -154,28 +154,33 @@ toc:
           - initialize-hsm-cli-recovery-crypto-unit.md
           - initialize-hsm-cli.md
           - signing-service.md
+      - retrieve-access-token.md
+      - retrieve-instance-id.md
+      - topicgroup:
+          label: Setting up API calls
+          topics:
+          - set-up-kms-api.md
+          - uko-set-up-api.md
+          - set-up-pkcs-api.md
+          - set-up-grep11-api.md
+          - enable-mtls.md
+      - set-up-cli.md
+      - topicgroup:
+          label: Setting up Terraform
+          topics:
+          - terraform.md
+          - uko-terraform.md
       - topicgroup:
           label: Standard Plan - Managing root keys, standard keys, and EP11 keys and keystores
           topics:
           - topicgroup:
-              label: Managing instance policies
+              label: Standard Plan - Managing instance policies
               topics:
               - settings-network-policy.md
               - settings-dual-auth.md
               - settings-key-create-import-access.md
-          - retrieve-access-token.md
-          - retrieve-instance-id.md
           - topicgroup:
-              label: Setting up API calls
-              topics:
-              - set-up-kms-api.md
-              - set-up-pkcs-api.md
-              - set-up-grep11-api.md
-              - enable-mtls.md
-          - set-up-cli.md
-          - terraform.md
-          - topicgroup:
-              label: Managing key management service keys
+              label: Standard Plan - Managing key management service keys
               topics:
               - create-root-keys.md
               - create-standard-keys.md
@@ -211,24 +216,14 @@ toc:
       - topicgroup:
           label: Unified Key Orchestrator Plan - Managing KMS keys, keystores, and vaults
           topics:
-          - uko-retrieve-access-token.md
-          - uko-retrieve-instance-id.md
           - topicgroup:
-              label: Setting up API calls
-              topics:
-              - uko-set-up-api.md
-              - uko-set-up-kms-api.md
-              - uko-set-up-pkcs-api.md
-              - uko-set-up-grep11-api.md
-          - uko-terraform.md
-          - topicgroup:
-              label: Managing vaults
+              label: Unified Key Orchestrator Plan - Managing vaults
               topics:
               - uko-create-vaults.md
               - uko-edit-vaults.md
               - uko-delete-vaults.md 
           - topicgroup:
-              label: Managing keys
+              label: Unified Key Orchestrator Plan - Managing keys
               topics:
               - uko-create-managed-keys.md
               - uko-view-key-list.md
@@ -239,7 +234,7 @@ toc:
               - uko-view-key-versions.md
               - uko-delete-managed-keys.md
           - topicgroup:
-              label: Managing keystores
+              label: Unified Key Orchestrator Plan - Managing keystores
               topics:
               - uko-create-internal-keystores.md
               - uko-connect-external-keystores.md

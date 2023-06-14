@@ -781,52 +781,20 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key#signing-service-whats-next)
 
 
-## Standard Plan - Managing root keys, standard keys, and EP11 keys and keystores
-{: #sitemap_standard_plan_managing_root_keys_standard_keys_and_ep11_keys_and_keystores}
+## Retrieving an access token
+{: #sitemap_retrieving_an_access_token}
 
-
-
-### Managing instance policies
-{: #sitemap_managing_instance_policies}
-
-
-[Managing the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies#managing-network-access-policies)
-
-* [Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the console](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies#update-network-access-policy-ui)
-
-* [Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management service API](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies#update-network-access-policy-api)
-
-* [Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the CLI](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies#update-network-access-policy-cli)
-
-* [Disabling the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management service API](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies#disable-network-access-policy-api)
-
-[Managing dual authorization of your service instance](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth#manage-dual-auth)
-
-* [Understanding dual authorization of your service instance](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth#understand-daul-auth-policy)
-
-* [Enabling dual authorization for your service instance with the console](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth#enable-dual-auth-instance-policy-ui)
-
-* [Enabling dual authorization for your service instance with the API](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth#enable-dual-auth-instance-policy-api)
-
-* [Disabling dual authorization for your service instance with the console](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth#disable-dual-auth-instance-policy-ui)
-
-* [Disabling dual authorization for your service instance with the key management service API](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth#disable-dual-auth-instance-policy-api)
-
-[Managing the key create and import access policy](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#manage-keyCreateImportAccess)
-
-* [Understanding the key create and import access settings](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#understand-keyCreateImportAccess-instance-policy)
-
-* [Enabling or updating the key create and import access policy for your service instance with the console](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#enable-keyCreateImportAccess-policy-console)
-
-* [Enabling and updating the key create and import access policy for your service instance with the API](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#enable-keyCreateImportAccess-policy-api)
-
-* [Disabling the key create and import access policy for your service instance with the key management service API](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#disable-key-create-import-policy-api)
 
 [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token#retrieve-access-token)
 
 * [Retrieving an access token with the CLI](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token#retrieve-token-cli)
 
 * [Retrieving an access token with the API](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token#retrieve-token-api)
+
+
+## Retrieving your instance ID
+{: #sitemap_retrieving_your_instance_id}
+
 
 [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID#retrieve-instance-ID)
 
@@ -837,7 +805,7 @@ Find what you are looking for in the compilation of topics that are available in
 * [Retrieving an instance ID with the API](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID#retrieve-instance-ID-api)
 
 
-### Setting up API calls
+## Setting up API calls
 {: #sitemap_setting_up_api_calls}
 
 
@@ -848,6 +816,14 @@ Find what you are looking for in the compilation of topics that are available in
 * [Forming your key management service API request](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#form-kms-api-request)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#set-up-kms-api-next-steps)
+
+[{{site.data.keyword.uko_full_notm}} Plan - Setting up {{site.data.keyword.uko_full_notm}} API calls](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#set-up-uko-api)
+
+* [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#retrieve-uko-credentials)
+
+* [Forming your {{site.data.keyword.uko_full_notm}} API request](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#form-uko-api-request)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#set-up-uko-api-next-steps)
 
 [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#set-up-pkcs-api)
 
@@ -887,19 +863,77 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-whats-next)
 
-[Performing key management operations with the CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli#set-up-cli)
+
+## Standard Plan - Performing key management operations with the CLI
+{: #sitemap_standard_plan_performing_key_management_operations_with_the_cli}
+
+
+[Standard Plan - Performing key management operations with the CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli#set-up-cli)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-cli#cli-next-steps)
 
-[Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs#terraform-setup-for-hpcs)
+
+## Setting up Terraform
+{: #sitemap_setting_up_terraform}
+
+
+[Setting up Terraform for {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs#terraform-setup-for-hpcs)
 
 * [Example: Provisioning and initializing service instances by using Terraform](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs#terraform-provision-initialize-instance-hpcs)
 
 * [What's next?](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs#terraform-setup-hpcs-next)
 
+[Setting up Terraform for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs#uko-terraform-setup-for-hpcs)
 
-### Managing key management service keys
-{: #sitemap_managing_key_management_service_keys}
+* [Example: Provisioning and initializing service instances by using Terraform](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs#uko-terraform-provision-initialize-instance-hpcs)
+
+* [What's next?](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs#uko-terraform-setup-hpcs-next)
+
+
+## Standard Plan - Managing root keys, standard keys, and EP11 keys and keystores
+{: #sitemap_standard_plan_managing_root_keys_standard_keys_and_ep11_keys_and_keystores}
+
+
+
+### Standard Plan - Managing instance policies
+{: #sitemap_standard_plan_managing_instance_policies}
+
+
+[Managing the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies#managing-network-access-policies)
+
+* [Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the console](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies#update-network-access-policy-ui)
+
+* [Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management service API](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies#update-network-access-policy-api)
+
+* [Updating the network access policy for your {{site.data.keyword.hscrypto}} instance with the CLI](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies#update-network-access-policy-cli)
+
+* [Disabling the network access policy for your {{site.data.keyword.hscrypto}} instance with the key management service API](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies#disable-network-access-policy-api)
+
+[Managing dual authorization of your service instance](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth#manage-dual-auth)
+
+* [Understanding dual authorization of your service instance](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth#understand-daul-auth-policy)
+
+* [Enabling dual authorization for your service instance with the console](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth#enable-dual-auth-instance-policy-ui)
+
+* [Enabling dual authorization for your service instance with the API](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth#enable-dual-auth-instance-policy-api)
+
+* [Disabling dual authorization for your service instance with the console](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth#disable-dual-auth-instance-policy-ui)
+
+* [Disabling dual authorization for your service instance with the key management service API](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth#disable-dual-auth-instance-policy-api)
+
+[Managing the key create and import access policy](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#manage-keyCreateImportAccess)
+
+* [Understanding the key create and import access settings](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#understand-keyCreateImportAccess-instance-policy)
+
+* [Enabling or updating the key create and import access policy for your service instance with the console](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#enable-keyCreateImportAccess-policy-console)
+
+* [Enabling and updating the key create and import access policy for your service instance with the API](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#enable-keyCreateImportAccess-policy-api)
+
+* [Disabling the key create and import access policy for your service instance with the key management service API](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess#disable-key-create-import-policy-api)
+
+
+### Standard Plan - Managing key management service keys
+{: #sitemap_standard_plan_managing_key_management_service_keys}
 
 
 [Creating root keys](/docs/hs-crypto?topic=hs-crypto-create-root-keys#create-root-keys)
@@ -1134,72 +1168,9 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_unified_key_orchestrator_plan_managing_kms_keys_keystores_and_vaults}
 
 
-[Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token#uko-retrieve-access-token)
 
-* [Retrieving an access token with the CLI](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token#uko-retrieve-token-cli)
-
-* [Retrieving an access token with the API](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token#uko-retrieve-token-api)
-
-[Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID#uko-retrieve-instance-ID)
-
-* [Viewing your instance ID with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID#uko-view-instance-ID)
-
-* [Retrieving an instance ID with the CLI](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID#uko-retrieve-instance-ID-cli)
-
-* [Retrieving an instance ID with the API](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID#uko-retrieve-instance-ID-api)
-
-
-### Setting up API calls
-{: #sitemap_setting_up_api_calls1}
-
-
-[Setting up {{site.data.keyword.uko_full_notm}} API calls](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#set-up-uko-api)
-
-* [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#retrieve-uko-credentials)
-
-* [Forming your {{site.data.keyword.uko_full_notm}} API request](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#form-uko-api-request)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api#set-up-uko-api-next-steps)
-
-[Setting up key management service API calls](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#set-up-uko-kms-api)
-
-* [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#retrieve-uko-kms-credentials)
-
-* [Forming your key management service API request](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#form-uko-kms-api-request)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-uko-kms-api#set-up-uko-kms-api-next-steps)
-
-[Setting up PKCS #11 API calls](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-set-up-pkcs-api)
-
-* [Prerequisites](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-prerequisite-pkcs-api)
-
-* [Step 1: Set up the PKCS #11 library](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-step1-setup-pkcs-library)
-
-* [Step 2: (Optional) Verify the integrity and authenticity of the PKCS #11 library](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-step2-verify-pkcs-library)
-
-* [Step 3: Set up the PKCS #11 configuration file](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-step3-setup-configuration-file)
-
-* [Step 4: Use the PKCS #11 library to make PKCS #11 API calls](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-step4-use-pkcs-library)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-set-up-pkcs-api#uko-set-up-pkcs-api-next-steps)
-
-[Setting up GREP11 API calls](/docs/hs-crypto?topic=hs-crypto-uko-set-up-grep11-api#uko-set-up-grep11-api)
-
-* [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-uko-set-up-grep11-api#uko-retrieve-grep11-credentials)
-
-* [Generating a GREP11 API request](/docs/hs-crypto?topic=hs-crypto-uko-set-up-grep11-api#uko-form-grep11-api-request)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-set-up-grep11-api#uko-set-up-grep11-api-next-steps)
-
-[Setting up Terraform for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs#uko-terraform-setup-for-hpcs)
-
-* [Example: Provisioning and initializing service instances by using Terraform](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs#uko-terraform-provision-initialize-instance-hpcs)
-
-* [What's next?](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs#uko-terraform-setup-hpcs-next)
-
-
-### Managing vaults
-{: #sitemap_managing_vaults}
+### Unified Key Orchestrator Plan - Managing vaults
+{: #sitemap_unified_key_orchestrator_plan_managing_vaults}
 
 
 [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults#create-vaults)
@@ -1227,8 +1198,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-delete-vaults#delete-vaults-next)
 
 
-### Managing keys
-{: #sitemap_managing_keys}
+### Unified Key Orchestrator Plan - Managing keys
+{: #sitemap_unified_key_orchestrator_plan_managing_keys}
 
 
 [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys)
@@ -1300,8 +1271,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys#delete-managed-keys-next)
 
 
-### Managing keystores
-{: #sitemap_managing_keystores}
+### Unified Key Orchestrator Plan - Managing keystores
+{: #sitemap_unified_key_orchestrator_plan_managing_keystores}
 
 
 [Creating internal KMS keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores#create-internal-keystores)
