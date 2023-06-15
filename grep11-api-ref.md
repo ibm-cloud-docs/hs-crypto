@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-14"
+lastupdated: "2023-06-15"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -140,7 +140,7 @@ PKCS #11 functions that are marked with an asterisk (*) in the table are impleme
 |N/A   | N/A  | RewrapKeyBlob  | Transfers ownership of a BLOB that is controlled by the current master key to the new master key when the new master key is committed. This function is a special administration command that is supported only by GREP11. |
 |C_DeriveKey*    |m_DeriveKey|DeriveKey|Derives a key from a base key.|
 |C_SeedRandom   |N/A|N/A|Adds seed material to the random number generator.|
-|C_GenerateRandom*|m_GenerateRandom|GenerateRandom|Generates random data. The length of the random data cannot be zero and the pointer that points to the random data location cannot be NULL.|
+|C_GenerateRandom*|m_GenerateRandom|GenerateRandom|Generates random data. The length of the random data cannot be zero and the pointer that points to the random data location cannot be NULL. The maximum length of the random data that can be requested is 1 million bytes.|
 |C_GetFunctionStatus|N/A|N/A|Legacy function that always returns `CKR_FUNCTION_NOT_PARALLEL`.|
 |C_CancelFunction|N/A|N/A|Legacy function that always returns `CKR_FUNCTION_NOT_PARALLEL`.|
 {: caption="Table 1. Describes the implemented functions in EP11 over gRPC" caption-side="bottom"}
