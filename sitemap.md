@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-06-14"
+lastupdated: "2023-06-15"
 
 keywords: site map, doc structure, information architecture
 
@@ -864,11 +864,11 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-whats-next)
 
 
-## Performing key management operations with the CLI - Standard Plan
-{: #sitemap_performing_key_management_operations_with_the_cli_standard_plan}
+## Performing key management operations with the CLI - Standard Plan only
+{: #sitemap_performing_key_management_operations_with_the_cli_standard_plan_only}
 
 
-[Performing key management operations with the CLI - Standard Plan](/docs/hs-crypto?topic=hs-crypto-set-up-cli#set-up-cli)
+[Performing key management operations with the CLI - Standard Plan only](/docs/hs-crypto?topic=hs-crypto-set-up-cli#set-up-cli)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-cli#cli-next-steps)
 
@@ -890,8 +890,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next?](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs#uko-terraform-setup-hpcs-next)
 
 
-## Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan
-{: #sitemap_managing_root_keys_standard_keys_and_ep11_keys_and_keystores_standard_plan}
+## Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan only
+{: #sitemap_managing_root_keys_standard_keys_and_ep11_keys_and_keystores_standard_plan_only}
 
 
 
@@ -1164,8 +1164,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#manage-ep11-certificate-ui-next)
 
 
-## Managing KMS keys, keystores, and vaults - Unified Key Orchestrator Plan
-{: #sitemap_managing_kms_keys_keystores_and_vaults_unified_key_orchestrator_plan}
+## Managing KMS keys, keystores, and vaults - Unified Key Orchestrator Plan only
+{: #sitemap_managing_kms_keys_keystores_and_vaults_unified_key_orchestrator_plan_only}
 
 
 
@@ -1432,8 +1432,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-next)
 
 
-## Standard Plan - Enhancing security
-{: #sitemap_standard_plan_enhancing_security}
+## Enhancing security - Standard Plan only
+{: #sitemap_enhancing_security_standard_plan_only}
 
 
 [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access#manage-access)
@@ -1531,8 +1531,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [Governing {{site.data.keyword.hscrypto}} resource configuration with config rules](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#govern-crypto)
 
 
-## Unified Key Orchestrator Plan - Enhancing security
-{: #sitemap_unified_key_orchestrator_plan_enhancing_security}
+## Enhancing security - Unified Key Orchestrator Plan only
+{: #sitemap_enhancing_security_unified_key_orchestrator_plan_only}
 
 
 [Managing user access](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-manage-access)

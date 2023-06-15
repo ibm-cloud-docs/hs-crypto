@@ -168,7 +168,7 @@ toc:
           - terraform.md
           - uko-terraform.md
       - topicgroup:
-          label: Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan
+          label: Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan only
           topics:
           - topicgroup:
               label: Managing instance policies - Standard Plan 
@@ -211,7 +211,7 @@ toc:
               - manage-pkcs11-keys.md
               - manage-pkcs11-certificates.md
       - topicgroup:
-          label:  Managing KMS keys, keystores, and vaults - Unified Key Orchestrator Plan
+          label:  Managing KMS keys, keystores, and vaults - Unified Key Orchestrator Plan only
           topics:
           - topicgroup:
               label: Managing vaults - Unified Key Orchestrator Plan
@@ -252,7 +252,7 @@ toc:
       - delete-instance.md
       - restore-data.md
       - topicgroup:
-          label: Standard Plan - Enhancing security
+          label: Enhancing security - Standard Plan only
           topics:
           - manage-access.md
           - grant-access-keys.md
@@ -269,7 +269,7 @@ toc:
           - at-events.md
           - manage-security-compliance.md
       - topicgroup:
-          label: Unified Key Orchestrator Plan - Enhancing security
+          label: Enhancing security - Unified Key Orchestrator Plan only
           topics:
           - uko-manage-access.md
           - uko-grant-access-vaults.md
