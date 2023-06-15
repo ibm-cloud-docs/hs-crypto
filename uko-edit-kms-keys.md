@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-13"
+lastupdated: "2023-06-15"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -60,7 +60,7 @@ To edit the details of a managed key by using the console, complete the followin
 
             If you want to unassign and deactivate the key in some target keystores, click **Edit** and clear the checkbox in the corresponding target keystore cards. After the removal, the key material remains unless you destroy the key. The key state in the removed target keystores becomes _deactivated_ and cannot be synced with the managed key state in the future. However, you can reactivate the key by reassigning the key to these keystores so that the key state is synced again.
 
-            A managed keys is cynced across multiple target keystores that it is assigned to. You can fully remove a key from a target keystore only after the key is destroyed. However, you can deactivate the key or remove the target keystores at any time.
+            A managed key is synced across multiple target keystores that it is assigned to. You can fully remove a key from a target keystore only after the key is destroyed. However, you can deactivate the key or remove the target keystores at any time.
 
         - Sync keys
 
@@ -107,7 +107,7 @@ To editing target keystores for keys by using API, complete the following steps:
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
    
-2. Add a keystore to or remove a keystore from a keystore group by making a `PATCH` call to the following endpoint. The keystore group should match the key template that is associated with the managed key.
+2. Add a keystore to or remove a keystore from a keystore group by making a `PATCH` call to the following endpoint. The keystore group must match the key template that is associated with the managed key.
 
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/keystores/<id>
