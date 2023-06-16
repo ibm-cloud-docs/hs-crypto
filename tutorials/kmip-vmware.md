@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-20"
+lastupdated: "2023-06-14"
 
 keywords: VMWare encryption, KMIP, Key management and distribution, Data appliance encryption, Netapp, vSphere, vSAN encryption
 
@@ -19,7 +19,7 @@ completion-time: 2h
 
 
 
-# Configuring KMIP in {{site.data.keyword.hscrypto}} for key management and distribution
+# Configuring KMIP for key management and distribution in {{site.data.keyword.hscrypto}} Standard Plan
 {: #tutorial-kmip-vmware}
 {: toc-content-type="tutorial"}
 {: toc-services="hs-crypto"}
@@ -29,12 +29,16 @@ completion-time: 2h
 Key Management Interoperability Protocol (KMIP) is a communication protocol for the storage and maintenance of key, certificate, and secret objects. The standard is governed by the Organization for the Advancement of Structured Information Standards (OASIS). {{site.data.keyword.hscrypto}} provides a dedicated single-tenant KMIP adapter so that VMware vCenter server instances can use {{site.data.keyword.hscrypto}} as the Key Management Service (KMS) for VMware vSphere encryption and vSAN encryption.
 {: shortdesc}
 
+This tutorial is based on the Standard Plan instance setup only.
+{: note}
+
 The following diagram illustrates the overall workflow of how the KMIP adapter that is provided in the {{site.data.keyword.hscrypto}} instance works with a VMWare customer environment.
 
 ![KMIP workflow with VMWare customer environment](../images/kmip-vmware-workflow.svg "KMIP adapter"){: caption="Figure 1. KMIP workflow with VMWare customer environment" caption-side="bottom"}
 
 The overall workflow includes the following steps:
-1. Create a {{site.data.keyword.hscrypto}} service instance and your root key.
+
+1. Create a {{site.data.keyword.hscrypto}} Standard Plan instance and your root key.
 2. Configure the VMWare Solution Service **KMIP for VMWare** with the {{site.data.keyword.hscrypto}} service instance. The **KMIP for VMware** service manages the lifecycle of the KMIP adapter and KMIP client certificates.
 3. Connect your VMware vCenter server to KMIP and enable vSphere encryption or vSAN encryption.
 
@@ -51,7 +55,7 @@ This tutorial shows how you can configure KMIP with VMWare solution in IBM Cloud
 To complete this tutorial, you need to meet the following prerequisites:
 
 - [Sign up an {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmwaresolutions-signing_required_accounts#signing_required_accounts-cloud).
-- [Provision a {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-provision).
+- [Provision a Standard Plan instance](/docs/hs-crypto?topic=hs-crypto-provision&interface=ui#provision-standard).
 - [Initialize your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm).
 - [Create your {{site.data.keyword.hscrypto}} root key](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys).
 - [Order a KMIP for VMware® instance](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_ordering).

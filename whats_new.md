@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-01"
+lastupdated: "2023-06-14"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -31,7 +31,6 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
     For a detailed pricing sample, see [How am I charged for my use of Hyper Protect Crypto Services with Unified Key Orchestrator?](/docs/hs-crypto?topic=hs-crypto-faq-pricing&interface=ui#faq-how-charge-hpcs-uko). 
 
-
 ## 24 May 2023
 {: hs-crypto-may2023}
 {: release-note}
@@ -40,8 +39,7 @@ Stay up to date with the new features that are available for {{site.data.keyword
 :   You are now able to rotate master keys when you are using the Unified Key Orchestrator service plan or your service instance that has EP11 keystores enabled in all supported regions. Previously, it was only available in Frankfurt, Germany. 
 
     For a list of supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions&interface=ui).  For more information about how master key rotation works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro). 
-
-
+    
 
 ## 24 March 2023
 {: hs-crypto-march2023}

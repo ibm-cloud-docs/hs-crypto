@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-22"
+lastupdated: "2023-06-16"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -51,7 +51,7 @@ Complete the following steps to order smart cards:
 
     For how to calculate the number of smart cards needed, see [FAQ: Are there any recommendations on how to set up smart cards?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup).
 
-2.  Contact your IBM Sales representative, your IBM Business Partner, or send an email to `zcat@ibm.com` and provide the following information:
+2.  Contact your IBM Sales representative or your IBM Business Partner and provide the following information. If you need assist in finding an IBM Sales representative to order the smart cards, you can reach out `zcat@ibm.com`.
 
     * The total number of smart cards needed; minimum of two.
     * Billing contact information, which includes the name, billing address, phone number, email address, and time zone.

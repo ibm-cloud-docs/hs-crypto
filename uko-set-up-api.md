@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-13"
+lastupdated: "2023-06-14"
 
 keywords: set up api, uko api, Unified Key Orchestrator api, 
 
@@ -14,11 +14,14 @@ subcollection: hs-crypto
 
 
 
-# Setting up {{site.data.keyword.uko_full_notm}} API calls
+# Setting up {{site.data.keyword.uko_full_notm}} API calls - {{site.data.keyword.uko_full_notm}} Plan
 {: #set-up-uko-api}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [{{site.data.keyword.uko_full_notm}} API](/apidocs/uko){: external} to create, retrieve, and destroy keys and keystores.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} for {{site.data.keyword.uko_full_notm}} provides a [{{site.data.keyword.uko_full_notm}} API](/apidocs/uko){: external} to create, retrieve, and destroy keys and keystores.  
 {: shortdesc}
+
+Setting up {{site.data.keyword.uko_full_notm}} API calls only applies to the {{site.data.keyword.uko_full_notm}} Plan.
+{: note}
 
 When you use the {{site.data.keyword.uko_full_notm}} API to create IBM Cloud KMS keys that are installed in internal KMS keystores, these keys are root keys and can be used for [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption). You can also use the [key management service API](/apidocs/hs-crypto){: external} to create internal IBM Cloud KMS keys and perform actions towards keys.
 
@@ -27,9 +30,9 @@ When you use the {{site.data.keyword.uko_full_notm}} API to create IBM Cloud KMS
 
 To work with the API, you need to generate your service and authentication credentials. Complete the following steps to gather your credentials:
 
-1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token).
+1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
 
-2. [Retrieve the instance ID](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID) that uniquely identifies your {{site.data.keyword.hscrypto}} service instance.
+2. [Retrieve the instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID) that uniquely identifies your {{site.data.keyword.hscrypto}} service instance.
 
 ## Forming your {{site.data.keyword.uko_full_notm}} API request
 {: #form-uko-api-request}

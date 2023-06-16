@@ -9,7 +9,6 @@ toc:
     product-page: https://www.ibm.com/cloud/hyper-protect-crypto
     path: hs-crypto
     label: Hyper Protect Crypto Services
-
   entries:
   - navgroup:
       id: learn
@@ -92,7 +91,6 @@ toc:
       - integrate-services.md
       - topic: whats_new.md
         navtitle: Release notes
-
   - navgroup:
       id: tutorial
       topics:
@@ -106,17 +104,14 @@ toc:
               label: "Applying end to end security to a cloud application"
               href: https://{DomainName}/docs/tutorials?topic=solution-tutorials-cloud-e2e-security
           - link:
+              label: "Enhancing security of your deployed application"
+              href: https://{DomainName}/docs/tutorials?topic=solution-tutorials-extended-app-security
+          - link:
               label: "Creating secure microservices writing to a consolidated database"
               href: https://developer.ibm.com/patterns/create-a-secured-microservices-and-deploy-it-to-a-consolidated-database/
           - link:
               label: "Encrypting Kubernetes secrets with IBM Cloud Hyper Protect Crypto Services"
               href: https://developer.ibm.com/tutorials/encrypt-kubernetes-secrets-with-hyper-protect-crypto-services/
-          - link:
-              label: "Enhancing security of your deployed application"
-              href: https://{DomainName}/docs/tutorials?topic=solution-tutorials-extended-app-security
-          - link:
-              label: "Secure a digital wallet in the public cloud"
-              href: https://developer.ibm.com/patterns/secure-bitcoin-wallet-with-ibm-cloud-hyper-protect-virtual-servers/
       - topicgroup:
           label: Tutorials on cloud hardware security module
           topics:
@@ -140,7 +135,6 @@ toc:
           - link:
               label: "Manage regulatory compliance of company data in Microsoft 365 with Hyper Protect Unified Key Orchestrator"
               href: https://developer.ibm.com/tutorials/manage-regulatory-compliance-of-company-data-in-microsoft-office-365-in-azure/
-
   - navgroup:
       id: howto
       topics:
@@ -157,28 +151,33 @@ toc:
           - initialize-hsm-cli-recovery-crypto-unit.md
           - initialize-hsm-cli.md
           - signing-service.md
+      - retrieve-access-token.md
+      - retrieve-instance-id.md
       - topicgroup:
-          label: Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan
+          label: Setting up API calls
+          topics:
+          - set-up-kms-api.md
+          - uko-set-up-api.md
+          - set-up-pkcs-api.md
+          - set-up-grep11-api.md
+          - enable-mtls.md
+      - set-up-cli.md
+      - topicgroup:
+          label: Setting up Terraform
+          topics:
+          - terraform.md
+          - uko-terraform.md
+      - topicgroup:
+          label: Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan only
           topics:
           - topicgroup:
-              label: Managing instance policies
+              label: Managing instance policies - Standard Plan 
               topics:
               - settings-network-policy.md
               - settings-dual-auth.md
               - settings-key-create-import-access.md
-          - retrieve-access-token.md
-          - retrieve-instance-id.md
           - topicgroup:
-              label: Setting up API calls
-              topics:
-              - set-up-kms-api.md
-              - set-up-pkcs-api.md
-              - set-up-grep11-api.md
-              - enable-mtls.md
-          - set-up-cli.md
-          - terraform.md
-          - topicgroup:
-              label: Managing key management service keys
+              label: Managing key management service keys - Standard Plan
               topics:
               - create-root-keys.md
               - create-standard-keys.md
@@ -206,44 +205,33 @@ toc:
               - view-protected-resources.md
               - sync-resources.md
           - topicgroup:
-              label: Managing EP11 keys, keystores, and certificates
+              label: Managing EP11 keys, keystores, and certificates  - Standard Plan
               topics:
               - manage-pkcs11-keystores.md
               - manage-pkcs11-keys.md
               - manage-pkcs11-certificates.md
       - topicgroup:
-          label: Managing KMS keys, keystores, and vaults - Unified Key Orchestrator Plan
+          label:  Managing KMS keys, keystores, and vaults - Unified Key Orchestrator Plan only
           topics:
-          - uko-retrieve-access-token.md
-          - uko-retrieve-instance-id.md
           - topicgroup:
-              label: Setting up API calls
-              topics:
-              - uko-set-up-api.md
-              - uko-set-up-kms-api.md
-              - uko-set-up-pkcs-api.md
-              - uko-set-up-grep11-api.md
-          - uko-terraform.md
-          - topicgroup:
-              label: Managing vaults
+              label: Managing vaults - Unified Key Orchestrator Plan
               topics:
               - uko-create-vaults.md
               - uko-edit-vaults.md
               - uko-delete-vaults.md 
           - topicgroup:
-              label: Managing keys
+              label: Managing keys - Unified Key Orchestrator Plan
               topics:
               - uko-create-managed-keys.md
               - uko-view-key-list.md
               - uko-search-key-list.md
               - uko-edit-kms-keys.md
-              - uko-install-key-keystores.md
               - uko-view-associate-resource.md
               - uko-rotate-key.md 
               - uko-view-key-versions.md
               - uko-delete-managed-keys.md
           - topicgroup:
-              label: Managing keystores
+              label: Managing keystores - Unified Key Orchestrator Plan
               topics:
               - uko-create-internal-keystores.md
               - uko-connect-external-keystores.md
@@ -264,7 +252,7 @@ toc:
       - delete-instance.md
       - restore-data.md
       - topicgroup:
-          label: Enhancing security - Standard Plan
+          label: Enhancing security - Standard Plan only
           topics:
           - manage-access.md
           - grant-access-keys.md
@@ -281,7 +269,7 @@ toc:
           - at-events.md
           - manage-security-compliance.md
       - topicgroup:
-          label: Enhancing security - Unified Key Orchestrator Plan
+          label: Enhancing security - Unified Key Orchestrator Plan only
           topics:
           - uko-manage-access.md
           - uko-grant-access-vaults.md
@@ -292,7 +280,6 @@ toc:
           topics:
           - settings-sysdig-metrics.md
           - monitor-sysdig-metrics.md
-
   - navgroup:
       id: reference
       topics:
@@ -344,7 +331,6 @@ toc:
       - link:
           label: IBM Cloud Hyper Protect Services resources
           href: https://ibm-hyper-protect.github.io/
-
   - navgroup:
       id: help
       topics:
