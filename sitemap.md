@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-06-15"
+lastupdated: "2023-06-16"
 
 keywords: site map, doc structure, information architecture
 
@@ -847,7 +847,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#set-up-grep11-api-next-steps)
 
-[Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11)
+[Enabling the second layer of authentication for EP11 connections - Standard Plan only](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11)
 
 * [Security and availability best practices for enabling mutual TLS authentication](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11#enable-authentication-ep11-security-best-practices)
 

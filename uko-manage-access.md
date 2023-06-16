@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-06-16"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -29,7 +29,6 @@ The following table shows the roles that {{site.data.keyword.hscrypto}} supports
 | Service administrator | Manages [platform access](#uko-platform-mgmt-roles) and [service access](#uko-service-access-roles), [grants access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults), creates and deletes service instances, and manages keys. An {{site.data.keyword.cloud_notm}} account owner is automatically assigned the service administrator permission. |
 | Crypto unit administrator | Provides signature keys, and signs Trusted Key Entry (TKE) administrative commands such as for adding another crypto unit administrator. In some cases, a crypto unit administrator can also be a master key custodian. |
 | Master key custodian | Provides master key parts for initializing a service instance. In some cases, a master key custodian can also be a crypto unit administrator. |
-| Certificate administrator | Sets up and manages administrator signature keys and client certificates to enable the second layer of TLS authentication in GREP11 or PKCS #11 API connections. The administrator needs to be assigned the Certificate Manager IAM [service access role](#uko-service-access-roles) to perform the corresponding actions. |
 | Service user | Manages root keys and standard keys through user interface and the API, and performs cryptographic operations through the PKCS #11 API or the Enterprise PKCS #11 over gRPC (GREP11) API. Based on the [platform access roles](#uko-platform-mgmt-roles) and [service access roles](#uko-service-access-roles), service users can be further categorized with various permissions. |
 {: caption="Table 1. Roles and permissions" caption-side="bottom"}
 
@@ -68,7 +67,6 @@ As a service administrator, you can use the service access roles to grant permis
 - As a **Writer**, you can create, modify, rotate, and use keys. Writers cannot delete or disable keys.
 - As a **Manager**, you can perform all actions that a Reader, ReaderPlus and Writer can perform, including the ability to delete keys and set policies for keys. 
 - As a **VMware KMIP Manager**, you can configure KMIP for VMware with {{site.data.keyword.hscrypto}} to enable encryption with your own root keys.
-- As a **Certificate Manager**, you can manage administrator signature keys and client certificates for the second layer of authentication in GREP11 or PKCS #11 API connections.
 - As a **Vault Administrator**, you can manage vaults, keystores, and templates, and perform destructive lifecycle actions on managed keys in {{site.data.keyword.uko_full_notm}}. Different vaults can be used to separate teams, lines of business, or customers. You can also add paid keystores if you already exceed the limit of free keystores.
 - As a **Key Custodian - Creator**, you can create and manage keys in {{site.data.keyword.uko_full_notm}}. For a complete key lifecycle, both the Key Custodian - Creator and Key Custodian - Deployer roles are needed.
 - As a **Key Custodian - Deployer**, you can deploy and manage keys in {{site.data.keyword.uko_full_notm}}. For a complete key lifecycle, both the Key Custodian - Creator and Key Custodian - Deployer roles are needed.  
@@ -87,8 +85,6 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 * HSM APIs (the PKCS #11 API and the GREP11 API) are used for application-level encryption.
 
 * Key Management Interoperability Protocol (KMIP) adapter is used to configure the KMIP for VMware service with {{site.data.keyword.hscrypto}} to enable vSphere encryption or vSAN encryption by using your own root keys.
-
-* Certificate Manager Server receives and processes requests for setting up certificate administrator signature keys and client certificates to enable the second layer of authentication in GREP11 or PKCS #11 API connections.
 
 | Action | Reader | ReaderPlus | Writer | Manager |
 |--------|--------|------------|--------|---------|
@@ -231,24 +227,6 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
 
-| Action | Reader | ReaderPlus | Writer | Manager | Certificate Manager |
-|-----|-----|-----|-----|----|-----|
-| Create the administrator signature key. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-| Refresh and update the administrator signature key. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-| Retrieve the administrator signature key of the certificate administrator. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-| Delete the administrator signature key of the certificate administrator. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
-| Create or update the client certificates. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-| List all client certificates that are managed by the certificate administrator. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-| Retrieve client certificates. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-| Delete client certificates. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-{: #table-9}
-{: caption="Table 9. Lists service access roles as they apply to Certificate Manager" caption-side="bottom"}
-{: tab-title="Certificate Manager Server"}
-{: tab-group="IAM-roles"}
-{: class="comparison-tab-table"}
-
-
-
 ## Assigning access to {{site.data.keyword.hscrypto}} in the console
 {: #assign-access-console}
 {: ui}
@@ -291,7 +269,6 @@ For step-by-step instructions for assigning, removing, and reviewing access, see
 | Writer         | `crn:v1:bluemix:public:hs-crypto::::serviceRole:Writer`        | 
 | Manager        | `crn:v1:bluemix:public:hs-crypto::::serviceRole:Manager`       | 
 | VMware KMIP Manager | `crn:v1:bluemix:public:hs-crypto::::serviceRole:VMwareKMIPManager` | 
-| Certificate Manager         | `crn:v1:bluemix:public:hs-crypto::::serviceRole:CertificateManager`        |
 | Vault Administrator         | `crn:v1:bluemix:public:hs-crypto::::serviceRole:VaultAdministrator`        |
 | Key Custodian - Creator         | `crn:v1:bluemix:public:hs-crypto::::serviceRole:KeyCustodianCreator`   | 
 | Key Custodian - Deployer        | `crn:v1:bluemix:public:hs-crypto::::serviceRole:KeyCustodianDeployer`  | 
