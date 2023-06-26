@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-05-11"
+lastupdated: "2023-06-26"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -53,7 +53,7 @@ The vault has been deleted and removed from the vault list. Access groups that a
 
 To delete a vault through the API, follow these steps:
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
+1. [Retrieve your service and authentication credentials to work with vaults in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
    
 2. Delete a vault by making a `DELETE` call to the following endpoint.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-13"
+lastupdated: "2023-06-26"
 
 keywords: Unified Key Orchestrator, UKO keystore, edit keystore, key management, internal keystore, KMS keystore
 
@@ -50,7 +50,7 @@ You can search for a specific keystore by using the search bar, or filter keysto
 
 To edit the details of an internal keystore through the API, follow these steps:
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
+1. [Retrieve your service and authentication credentials to work with keystores in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
    
 2. Update an internal keystore by making a `PATCH` call to the following endpoint.
 

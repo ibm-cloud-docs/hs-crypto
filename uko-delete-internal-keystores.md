@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-05-16"
+lastupdated: "2023-06-26"
 
 keywords: Unified Key Orchestrator, UKO keystore, delete keystore, internal keystore, KMS keystore
 
@@ -47,7 +47,7 @@ The internal keystore has been deleted with all the managed keys deactivated in 
 
 To delete an internal keystore through the API, follow these steps:
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
+1. [Retrieve your service and authentication credentials to work with keystores in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
    
 2. Delete an internal keystore by making a `DELETE` call to the following endpoint.
 
