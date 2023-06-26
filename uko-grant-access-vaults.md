@@ -21,7 +21,11 @@ subcollection: hs-crypto
 You can enable different levels of access to {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} resources in your {{site.data.keyword.cloud_notm}} account by creating and modifying {{site.data.keyword.cloud_notm}} [Identity and Access Management (IAM)](#x7547040){: term} access policies.
 {: shortdesc}
 
-Access control in {{site.data.keyword.uko_full_notm}} is managed in vaults. Vaults are secure repositories for your key templates, cryptographic keys, and keystores. A key template, managed key or internal keystore can be created only in a vault.
+
+Access control in {{site.data.keyword.uko_full_notm}} is managed in vaults. Vaults are secure repositories for your cryptographic keys and keystores. A managed key or internal keystore can be created only in a vault.
+
+
+
 
 As a _Vault Administrator_, you can create vaults and determine an [access policy type](/docs/account?topic=account-userroles#policytypes) for users, service IDs, and access groups based on your internal access control requirements. 
 

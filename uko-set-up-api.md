@@ -17,8 +17,13 @@ subcollection: hs-crypto
 # Setting up {{site.data.keyword.uko_full_notm}} API calls - {{site.data.keyword.uko_full_notm}} Plan
 {: #set-up-uko-api}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} for {{site.data.keyword.uko_full_notm}} provides a [{{site.data.keyword.uko_full_notm}} API](/apidocs/uko){: external} to create, retrieve, and destroy key templates, keys, and keystores.  
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} for {{site.data.keyword.uko_full_notm}} provides a [{{site.data.keyword.uko_full_notm}} API](/apidocs/uko){: external} to create, retrieve, and destroy keys and keystores.  
 {: shortdesc}
+
+
+
+
 
 Setting up {{site.data.keyword.uko_full_notm}} API calls only applies to the {{site.data.keyword.uko_full_notm}} Plan.
 {: note}
