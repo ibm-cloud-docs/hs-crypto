@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-06-27"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -48,7 +48,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
     | Alias | The human-readable aliases that you specify for easy recognition when you create the key. |
     | Key ring ID | The key ring that the key belongs to. |
     | Type | The type of key that describes your key's designated purpose within the service. |
-    | State | The [key state](/docs/hs-crypto?topic=hs-crypto-key-states) based on [NIST Special Publication 800-57, Recommendation for Key Management](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0). These states include _Pre-active_, _Active_, _Suspended_, _Deactivated_, and _Destroyed_. |
+    | State | The [key state](/docs/hs-crypto?topic=hs-crypto-key-states) based on [NIST Special Publication 800-57, Recommendation for Key Management](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0). These states include Pre-active, Active, Suspended, Deactivated, and Destroyed. |
     | Origin | Indicates whether the key is imported. `Created` indicates that the key is created by the service instance; `Imported` indicates that the key is imported by the user. |
     | Last updated | The date and time that the key was last updated. This field gets updated when the key is created, rotated, or any part of the key metadata is modified. |
     | Last rotated | The date and time that the key was last rotated. |

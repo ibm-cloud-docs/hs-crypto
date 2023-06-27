@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-06-27"
 
 keywords: troubleshoot, problems, known issues, can't destroy managed keys
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 {: #troubleshoot-destroy-managed-keys}
 {: troubleshoot}
 
-You deactivate a managed key first. However, when you try to change the key state to _Destroyed_, an error occurs.
+You deactivate a managed key first. However, when you try to change the key state to Destroyed, an error occurs.
 {: shortdesc}
 
 You receive the following error message when you click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Destroyed** from the UI:

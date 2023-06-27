@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-06-27"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -87,7 +87,7 @@ To learn how to use the {{site.data.keyword.hscrypto}} key management service AP
 ### Rewrapping data after rotating a root key
 {: #rewrap-data-after-key-rotation}
 
-After a root key rotation completes, new root key material becomes available for protecting data encryption keys (DEKs) with [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption). Retired root key material moves to the _Deactivated_ state, where it can only be used to unwrap and access older DEKs that aren't yet protected by the latest root key.
+After a root key rotation completes, new root key material becomes available for protecting data encryption keys (DEKs) with [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption). Retired root key material moves to the Deactivated state, where it can only be used to unwrap and access older DEKs that aren't yet protected by the latest root key.
 
 To secure your envelope encryption workflow, [rewrap your DEKs](/docs/hs-crypto?topic=hs-crypto-rewrap-keys) after you rotate a root key so that your at-rest data is protected by the newest root key. Alternatively if {{site.data.keyword.hscrypto}} detects that you're using retired root key material to unwrap a DEK, the service automatically reencrypts the DEK and returns a wrapped data encryption key (WDEK) that's based on the latest root key. Store and use the new WDEK for future unwrap operations that the DEKs are protected with the newest root key material.
 

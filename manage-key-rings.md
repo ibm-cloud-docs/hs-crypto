@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-06-27"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -339,7 +339,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
 
 You can delete a key ring with the console or with the key management service API.
 
-The `default` key ring cannot be deleted. You are also not able to delete a key ring if the key ring contains at least one key, regardless of the key state (including keys in the _Destroyed_ state).
+The `default` key ring cannot be deleted. You are also not able to delete a key ring if the key ring contains at least one key, regardless of the key state (including keys in the Destroyed state).
 {: important}
 
 ### Deleting key rings with the console

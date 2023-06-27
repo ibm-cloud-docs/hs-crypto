@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-06-27"
 
 keywords: crypto erasure, erase data, enable KYOK, onboard to hyper protect crypto services, hpcs onboarding, internal, key registration, KYOK
 
@@ -59,7 +59,7 @@ Once you locate the key ID, delete the key by making a call to `DELETE /v2/keys`
 ### Step 2. Check for a Hyperwarp deletion event
 {: #crypto-erasure-receive-hyperwarp-event}
 
-When {{site.data.keyword.hscrypto}} receives a delete key request from your cloud service, the content and data with the key is deleted and the key is moved into the _Destroyed_ state. A Hyperwarp notification is sent to all cloud services that have registrations associated with the key.
+When {{site.data.keyword.hscrypto}} receives a delete key request from your cloud service, the content and data with the key is deleted and the key is moved into the Destroyed state. A Hyperwarp notification is sent to all cloud services that have registrations associated with the key.
 
 Your service will only receive Hyperwarp events if the root key has registrations that are associated with it.
 {: note}
