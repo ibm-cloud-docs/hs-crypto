@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-06-27"
 
 keywords: security and compliance, ibmcloud security compliance, compliant, data security, data encryption, data delete, common criteria, fips, iso, gdpr
 
@@ -38,7 +38,7 @@ Access to the service takes place over HTTPS, and internal {{site.data.keyword.h
 ### Data deletion
 {: #uko-data-deletion}
 
-When you delete a key from {{site.data.keyword.hscrypto}}, the service marks the key as deleted, and the key moves to the _Destroyed_ state. Keys in this state can no longer decrypt data that is associated with the key. Therefore, before you delete a key, review the data that is associated with the key and ensure that you no longer require access to it. Do not delete a key that is actively protecting data in your production environments.
+When you delete a key from {{site.data.keyword.hscrypto}}, the service marks the key as deleted, and the key moves to the Destroyed state. Keys in this state can no longer decrypt data that is associated with the key. Therefore, before you delete a key, review the data that is associated with the key and ensure that you no longer require access to it. Do not delete a key that is actively protecting data in your production environments.
 
 Within 30 days after you delete a key, you can restore the key to reverse the deletion. For more information, see [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys).
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-05-12"
+lastupdated: "2023-06-27"
 
 keywords: Unified Key Orchestrator, UKO keystore, disconnect keystore, external keystore, KMS keystore
 
@@ -21,7 +21,7 @@ subcollection: hs-crypto
 You can disconnect from keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), and Google Cloud KMS. After you disconnect from an external keystore, all the managed keys in this keystore are detached and resources that are managed are not accessible.
 {: shortdesc}
 
-If you want to disconnect from an external keystore, delete all active keys in this keystore first. In other words, all keys with this keystore as a target are in _Pre-active_ or _Destroyed_ state. For more information about deleting keys, see [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys). 
+If you want to disconnect from an external keystore, delete all active keys in this keystore first. In other words, all keys with this keystore as a target are in Pre-active or Destroyed state. For more information about deleting keys, see [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys). 
 {: note}
 
 
@@ -51,7 +51,7 @@ After you disconnect from an external keystore, you can reconnect to the keystor
 
 To disconnect from an external keystore through the API, follow these steps:
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
+1. [Retrieve your service and authentication credentials to work with keystores in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
    
 2. Disconnect from an external keystore by making a `DELETE` call to the following endpoint.
 

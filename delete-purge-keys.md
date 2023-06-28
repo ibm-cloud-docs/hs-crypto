@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-06-27"
 
 keywords: delete keys, purge, automatic purge, manual purge, delete, destroy
 
@@ -22,7 +22,7 @@ You can delete an encryption key and the key material if you are a _[Manager](/d
 
 If a key is no longer needed, you can delete and ultimately purge keys. This action shreds the key material and makes any of the data encrypted with the keys inaccessible.
 
-When you delete a key, the key moves into a [_Destroyed_ state](/docs/hs-crypto?topic=hs-crypto-key-states). Within 30 days after the deletion, the key can still be viewed and restored. After 90 days, the key is automatically purged and you will no longer able to view the key. The data that is associated with the key is also permanently removed from the {{site.data.keyword.hscrypto}} instance. If you want to purge a key before 90 days, you can also do it manually 4 hours after it is moved into the _Destroyed_ state.
+When you delete a key, the key moves into a [Destroyed state](/docs/hs-crypto?topic=hs-crypto-key-states). Within 30 days after the deletion, the key can still be viewed and restored. After 90 days, the key is automatically purged and you will no longer able to view the key. The data that is associated with the key is also permanently removed from the {{site.data.keyword.hscrypto}} instance. If you want to purge a key before 90 days, you can also do it manually 4 hours after it is moved into the Destroyed state.
 
 After a key is purged, the associated data can no longer be accessed. As a result, it is not suggested to [destroy resources](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#data-deletion) in production environments unless it is necessary.
 {: important}

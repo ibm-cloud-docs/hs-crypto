@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-06-27"
 
 keywords: restore key, restore a deleted key, recover a deleted key, re-import a key
 
@@ -20,7 +20,7 @@ subcollection: hs-crypto
 You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to restore a previously deleted key and access the associated data on the cloud.
 {: shortdesc}
 
-When a key is deleted, it is moved to a _Destroyed_ state. However, information about the key (such as the metadata) can still be viewed and you have 30 days to restore the key to an _Active_ state. For this reason, a key deletion is considered a _Soft deletion_ where the key still exists but can no longer be used to access the data that is encrypted by the key. This topic describes the process to restore a key and the limitations of the key restoration process.
+When a key is deleted, it is moved to a Destroyed state. However, information about the key (such as the metadata) can still be viewed and you have 30 days to restore the key to an Active state. For this reason, a key deletion is considered a _Soft deletion_ where the key still exists but can no longer be used to access the data that is encrypted by the key. This topic describes the process to restore a key and the limitations of the key restoration process.
 
 This soft deletion period, in which a key has been deleted but can still be restored, lasts for 30 days. Between 30 days and 90 days, the key data can still be accessed, but the key can no longer be restored. After 90 days, the key becomes eligible to be automatically purged, which can occur at any time after 90 days. Purged keys, unlike destroyed keys, are gone forever.
 
@@ -115,7 +115,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/restore
     | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is `default`.<br><br>For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
     {: caption="Table 1. Describes the variables needed to restore keys with the {{site.data.keyword.hscrypto}} API" caption-side="bottom"}
 
-    A successful restore request returns an HTTP `201 Created` response, which indicates that the key was restored to the _Active_ key state and is now available for encrypt and decrypt operations. All attributes and policies that were previously associated with the key are also restored.
+    A successful restore request returns an HTTP `201 Created` response, which indicates that the key was restored to the Active key state and is now available for encrypt and decrypt operations. All attributes and policies that were previously associated with the key are also restored.
 
     You will have access to data associated with the key as soon as the key is restored.
     {: note}
@@ -133,9 +133,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/restore
 
     Where the `<key_id>` is the ID of the key, the `<instance_ID>` is the name of your instance, and your `<IAM_token>` is your IAM token.
 
-    Review the `state` field in the response body to verify that the key moved to the _Active_ key state. The following JSON output shows the metadata details for an _Active_ key.
+    Review the `state` field in the response body to verify that the key moved to the Active key state. The following JSON output shows the metadata details for an Active key.
 
-    The integer mapping for the _Active_ key state is 1. Key states are based on NIST SP 800-57.
+    The integer mapping for the Active key state is 1. Key states are based on NIST SP 800-57.
     {: note}
 
     ```json

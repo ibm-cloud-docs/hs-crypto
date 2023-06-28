@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-06-27"
 
 keywords: disable key, enable key, suspend key, suspend operations on a key
 
@@ -26,11 +26,11 @@ If you are using a cloud service that is integrated with {{site.data.keyword.hsc
 {: note}
 
 When you disable a root key, the key moves to the
-[_Suspended_ state](/docs/hs-crypto?topic=hs-crypto-key-states),
+[Suspended state](/docs/hs-crypto?topic=hs-crypto-key-states),
 and it can no longer be used to cryptographically protect data.
 
 When you enable a root key that was previously disabled, the key moves
-from the _Suspended_ to the _Active_ key state. This action restores the key's
+from the Suspended to the Active key state. This action restores the key's
 encrypt and decrypt operations.
 
 You must wait 30 seconds after you disable a root key before you are able to enable it again.
@@ -94,12 +94,12 @@ enable.
 ### Disabling a root key
 {: #disable-api}
 
-When you disable a root key, the key moves to the [_Suspended_ state](/docs/hs-crypto?topic=hs-crypto-key-states), and it can no longer be used to encrypt data.
+When you disable a root key, the key moves to the [Suspended state](/docs/hs-crypto?topic=hs-crypto-key-states), and it can no longer be used to encrypt data.
 
 For an integrated cloud service that supports revoking access to a disabled root key, the service can take up to 4 hours to revoke access to the associated data of the root key. After access to the associated data is revoked, a corresponding disable event is displayed in the Activity Tracker web UI.
 {: note}
 
-You can disable a root key that's in the _Active_ key state by making a `POST` call to the following endpoint.
+You can disable a root key that's in the Active key state by making a `POST` call to the following endpoint.
 
 ```
 https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/disable
@@ -154,9 +154,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
     ```
     {: codeblock}
 
-    Review the `state` field in the response body to verify that the key moved to the _Suspended_ key state. The following JSON output shows the metadata details for a disabled root key.
+    Review the `state` field in the response body to verify that the key moved to the Suspended key state. The following JSON output shows the metadata details for a disabled root key.
 
-    The integer mapping for the _Suspended_ key state is 2. Key States are based on NIST SP 800-57.
+    The integer mapping for the Suspended key state is 2. Key States are based on NIST SP 800-57.
     {: note}
 
     ```json
@@ -205,12 +205,12 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 ### Enabling a disabled root key
 {: #enable-api}
 
-When you enable a root key that was previously disabled, the key moves from the _Suspended_ to the _Active_ key state. This action restores the key's encrypt and decrypt operations.
+When you enable a root key that was previously disabled, the key moves from the Suspended to the Active key state. This action restores the key's encrypt and decrypt operations.
 
 For an integrated cloud service that supports revoking access to a disabled root key, the service can take up to 4 hours to restore access to the associated data of the root key. After access to the associated data is restored, a corresponding enable event is displayed in the Activity Tracker web UI.
 {: note}
 
-You can enable a root key that's in the _Suspended_ key state by making a `POST` call to the following endpoint.
+You can enable a root key that's in the Suspended key state by making a `POST` call to the following endpoint.
 
 ```
 https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/enable
@@ -268,9 +268,9 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
     ```
     {: codeblock}
 
-    Review the `state` field in the response body to verify that the root key moved to the _Active_ key state. The following JSON output shows the metadata details for an active key.
+    Review the `state` field in the response body to verify that the root key moved to the Active key state. The following JSON output shows the metadata details for an active key.
 
-    The integer mapping for the _Active_ key state is 1. Key States are based on NIST SP 800-57.
+    The integer mapping for the Active key state is 1. Key States are based on NIST SP 800-57.
     {: note}
 
     ```json

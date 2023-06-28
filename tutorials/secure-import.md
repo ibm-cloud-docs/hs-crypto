@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-06-27"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 
@@ -463,7 +463,7 @@ To import the encrypted key:
 
     - The `id` value is a unique identifier that is assigned to your key and is used for subsequent calls to the key management service API. 
     
-    - The `state` value set to 1 indicates that your key is now in the [_Active_ key state](/docs/hs-crypto?topic=hs-crypto-key-states). 
+    - The `state` value set to 1 indicates that your key is now in the [Active key state](/docs/hs-crypto?topic=hs-crypto-key-states). 
     
     - The `crn` value provides the full scoped path to the key that specifies where the resource resides within {{site.data.keyword.cloud_notm}}. 
     

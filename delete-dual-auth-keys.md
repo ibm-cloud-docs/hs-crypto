@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-06-27"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -46,7 +46,7 @@ deletion, and another user who can delete the key. Users with a _Writer_ or
 When the first user authorizes a key for deletion,
 {{site.data.keyword.hscrypto}} sets a 7-day waiting period on
 the key. During this period, the key remains in the
-[_Active_ state](/docs/hs-crypto?topic=hs-crypto-key-states)
+[Active state](/docs/hs-crypto?topic=hs-crypto-key-states)
 and all key operations are allowed on the key. To complete the deletion, the
 second user with a _Manager_ access policy can use the
 {{site.data.keyword.cloud_notm}} console or API to delete the key.
@@ -89,7 +89,7 @@ order to authorize the key for deletion.
 {{site.data.keyword.hscrypto}} sets a 7-day waiting period that
 starts after you provide the first authorization to delete the key. During this
 7-day period, the key remains in the
-[_Active_ state](/docs/hs-crypto?topic=hs-crypto-key-states)
+[Active state](/docs/hs-crypto?topic=hs-crypto-key-states)
 and all key operations are allowed on the key. If no action is taken by the
 second user and the 7-day period expires, you must
 [restart the dual authorization process](#set-key-deletion-api)
@@ -164,7 +164,7 @@ can safely delete the key.
 {{site.data.keyword.hscrypto}} sets a 7-day waiting period that
 starts after you provide the first authorization to delete the key. During this
 7-day period, the key remains in the
-[_Active_ state](/docs/hs-crypto?topic=hs-crypto-key-states)
+[Active state](/docs/hs-crypto?topic=hs-crypto-key-states)
 and all key operations are allowed on the key. If no action is taken by the
 second user and the 7-day period expires, you must
 [restart the dual authorization process](#set-key-deletion-api)

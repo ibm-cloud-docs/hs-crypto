@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-08"
+lastupdated: "2023-06-26"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -47,7 +47,7 @@ To edit vault details by using the console, complete the following steps:
 
 To edit a vault through the API, follow these steps:
 
-1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
+1. [Retrieve your service and authentication credentials to work with vaults in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
    
 2. Edit a vault by making a `PATCH` call to the following endpoint.
 
