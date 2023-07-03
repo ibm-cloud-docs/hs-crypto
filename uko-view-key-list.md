@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-27"
+lastupdated: "2023-07-03"
 
 keywords: Unified Key Orchestrator, view keys, key management, kms keys, UKO
 
@@ -32,7 +32,7 @@ To view a list of your keys by using the console, complete the following steps:
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. Browse the general characteristics of your keys in the table. 
    
-   To customize how the table is to be presented, click the **Settings icon** ![Settings icon](/images/settings.svg "Settings") and check the columns to be displayed.
+   To customize how the table is to be presented, click the **Settings icon** ![Settings icon](../icons/settings.svg "Settings") and check the columns to be displayed.
    {: tip}
 
     |       Property	     |                         Description                       |

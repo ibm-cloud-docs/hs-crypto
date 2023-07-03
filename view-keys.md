@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-27"
+lastupdated: "2023-07-03"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -58,7 +58,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
     | Deletion expiration | The date that an authorization for deletion expires for the key. If this date passes, the authorization is no longer valid. If `False` is the value for the `Dual authorization enabled` or `Set for deletion` column of the key, the `Deletion expiration` column is left empty. |
     {: caption="Table 1. Describes the table of keys" caption-side="bottom"}
 
-    Not all key characteristics are displayed by default. To customize how the **Keys** table is to be presented, click the **Settings icon** ![Settings icon](/images/settings.svg "Settings") and check the columns to be displayed.
+    Not all key characteristics are displayed by default. To customize how the **Keys** table is to be presented, click the **Settings icon** ![Settings icon](../icons/settings.svg "Settings") and check the columns to be displayed.
     {: tip}
 
     Not seeing the full list of keys that are stored in your service instance?
