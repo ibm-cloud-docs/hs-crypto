@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-09"
+lastupdated: "2023-07-04"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -28,7 +28,7 @@ Watch the following video to learn how {{site.data.keyword.hscrypto}} with {{sit
 ## Why {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?
 {: #uko-why_hpcs}
 
-Data and information security is crucial and essential for IT environments. As more data moves to the cloud, keeping data protected becomes a non-trivial challenge. Built on IBM LinuxONE technology, {{site.data.keyword.hscrypto}} helps ensure that only you have access to your keys and data. 
+Data and information security is crucial and essential for IT environments. As more data moves to the cloud, keeping data protected becomes a nontrivial challenge. Built on IBM LinuxONE technology, {{site.data.keyword.hscrypto}} helps ensure that only you have access to your keys and data. 
 
 A single-tenant key management service with key vaulting that is provided by dedicated customer-controlled HSMs helps you easily create and manage your encryption keys. Alternatively, you can bring your own encryption keys to the cloud. The service uses the same key-provider API as {{site.data.keyword.keymanagementserviceshort}}, a multi-tenant key management service, to provide a consistent approach to adopting {{site.data.keyword.cloud_notm}} services.
 
@@ -50,7 +50,7 @@ With the built-in encryption of {{site.data.keyword.hscrypto}}, you can easily b
 
 Many enterprises have the legal obligation to bring their own cryptographic keys when they move sensitive workloads to the cloud. Enterprises are adopting native encryption and key management offerings from cloud providers.
 
-Dealing with multiple clouds means dealing with cryptographic keys in multiple key management services. This presents the following challenges:
+Dealing with multiple clouds means to deal with cryptographic keys in multiple key management services. This presents the following challenges:
 - High manual effort and susceptibility to errors when enterprises operate different key management systems
 - No control over the [master key](#x2908413){: term} in external cloud key management systems
 - Shortage of data centers and skilled staff to operate [hardware security modules (HSMs)](#x6704988){: term} for KYOK or BYOK
@@ -72,7 +72,7 @@ For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service arc
 
 * **Connection to external keystores**
 
-    {{site.data.keyword.uko_full_notm}}, as part of {{site.data.keyword.hscrypto}}, provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores in the service instance or external keystores. With {{site.data.keyword.uko_full_notm}}, you can push your keys to third-party cloud keystores, such as Azure Key Vault, AWS Key Management Service (KMS),Google Cloud KMS, or {{site.data.keyword.keymanagementservicefull_notm}}, distribute keys across keystores, and manage keys and keystores through both the UI and REST API. 
+    {{site.data.keyword.uko_full_notm}}, as part of {{site.data.keyword.hscrypto}}, provides key lifecycle management according to NIST recommendations and secure transfer of keys to internal keystores in the service instance or external keystores. With {{site.data.keyword.uko_full_notm}}, you can push your keys to third-party cloud keystores, such as Azure Key Vault, AWS Key Management Service (KMS), Google Cloud KMS, or {{site.data.keyword.keymanagementservicefull_notm}}, distribute keys across keystores, and manage keys and keystores through both the UI and REST API. 
 
 * **Unified key backup and management system**
 

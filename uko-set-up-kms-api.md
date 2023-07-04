@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-04"
 
 keywords: set up api, kms api, key protect api, key management service API, using api
 
@@ -68,7 +68,7 @@ curl -X GET \
     ```
     {: screen}
 
-    For the key management service, use the `<region>` and `<port>`  in the `kms` section.
+    For the key management service, use the `<region>` and `<port>` in the `kms` section.
 
 * Replace `<access_token>` and `<instance_ID>` with your retrieved service and authentication credentials.
 

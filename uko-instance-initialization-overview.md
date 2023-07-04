@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-04"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -48,7 +48,7 @@ There are two types of signature thresholds on a crypto unit. The main signature
 
 Setting the signature thresholds to a value greater than one enables quorum authentication from multiple administrators for sensitive operations. The maximum value that you can set the signature threshold and revocation signature threshold is eight, which is also the maximum number of administrators that can be added to a crypto unit.
 
-When you configure crypto units, you are automatically prompted for the required number of signatures based on the operation type and whether the crypto units are in imprint mode.  For reference, the following table includes the required number of signatures of each operation.
+When you configure crypto units, you are automatically prompted for the required number of signatures based on the operation type and whether the crypto units are in imprint mode. For reference, the following table includes the required number of signatures of each operation.
 
 | Operation | Commands | Required signatures in imprint mode |Required signatures after leaving imprint mode |
 | ------- | ----------- | ----------------------- |----------------------- |

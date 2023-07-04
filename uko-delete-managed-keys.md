@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-27"
+lastupdated: "2023-07-04"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -21,7 +21,7 @@ subcollection: hs-crypto
 You can delete your managed keys in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
-When you delete a managed key, the key is to be detached from all target keystores and all key materials and the metadata are destroyed permanently.
+When you delete a managed key, the key is to be detached from all target keystores, and all key materials and the metadata are destroyed permanently.
 
 
 ## Deleting managed keys with the {{site.data.keyword.cloud_notm}} console
@@ -30,7 +30,7 @@ When you delete a managed key, the key is to be detached from all target keystor
 
 To delete a key in Active state, you need to first deactivate the key, and then destroy the key and remove it from the vault. 
 
-To delete a key in Pre-active or Deactivated state, you only need to destroy the key and then remove it from the vault.
+To delete a key in Pre-active or Deactivated state, you only need to destroy the key, and then remove it from the vault.
 
 For more information about key states and transitions, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states).
 
@@ -51,7 +51,7 @@ Follow these steps to complete the process:
 5. Click **Destroy key** to confirm.
 6. To remove the key and the metadata from the vault, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**.
    
-   When you remove the managed key from the vault that the key is assigned to, the remaining key metadata is removed permanantly. 
+   When you remove the managed key from the vault that the key is assigned to, the remaining key metadata is removed permanently. 
     {: important}
 
 The managed key has been deleted and detached from all target keystores. All key materials and metadata have been destroyed. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-04"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -45,7 +45,7 @@ For the highest level of security, you can use smart cards together with the {{s
 ### Understanding the Management Utilities
 {: #uko-understand-management-utilities}
 
-The Management Utilities are composed of two applications that use smart cards to configure service instances: the Smart Card Utility Program and the Trusted Key Entry (TKE) application. To use the Management Utilities, you need to [order IBM-supported smart cards and smart card readers](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader) and follow the instructions in [Initializing service instances by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
+The Management Utilities are composed of two applications that use smart cards to configure service instances: The Smart Card Utility Program and the Trusted Key Entry (TKE) application. To use the Management Utilities, you need to [order IBM-supported smart cards and smart card readers](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader) and follow the instructions in [Initializing service instances by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
 The following diagram illustrates the relationship between various components when you use the Management Utilities to initialize a service instance.
 
@@ -166,4 +166,4 @@ The TKE CLI plug-in provides a series of commands to complete the initialization
 ## What's next
 {: #uko-initialize-instance-mode-next}
 
-When you plan your security policy for storing your signature keys and master key parts, take the [Security considerations for initalizing a service instance](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy) into account.
+When you plan your security policy for storing your signature keys and master key parts, take the [Security considerations for initializing a service instance](/docs/hs-crypto?topic=hs-crypto-initialization-security-policy) into account.

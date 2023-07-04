@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-07-04"
 
 keywords: UKO access, UKO account authentication, UKO custom roles, Unified Key Orchestrator
 
@@ -17,7 +17,7 @@ subcollection: hs-crypto
 # Setting up custom roles for {{site.data.keyword.uko_full_notm}} 
 {: #uko-role-best-practices}
 
-To manage users and access to {{site.data.keyword.uko_full_notm}} keys, keystores, and vaults, {{site.data.keyword.hscrypto}} provides [default service-level IAM access roles](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles) to assign and control access. If you want to set up more granular custom roles to manage user access to meet the requirements of your enterprise, here are some best practices you can follow.
+To manage users and access to {{site.data.keyword.uko_full_notm}} keys, keystores, and vaults, {{site.data.keyword.hscrypto}} provides [default service-level IAM access roles](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles) to assign and control access. If you want to set up more granular custom roles to manage user access to meet the requirements of your enterprise, here are some best practices that you can follow.
 
 {: shortdesc}
 

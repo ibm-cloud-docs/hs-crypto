@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2022, 2023
-lastupdated: "2023-04-13"
+lastupdated: "2023-07-04"
 
 keywords: uko, rotate, rotate master key, rotate encryption key, rotate keys automatically, key rotation, rewrap data
 
@@ -45,7 +45,7 @@ The following chart illustrates how the master key register state changes during
 
 Master keys that are created with the Management Utilities can be rotated by using the smart cards, where master key parts are stored. Before you rotate the master key, you need to create the key parts that you are going to use.
 
-You can create a new master key value using either 2 or 3 key parts. To be able to rotate the master key, the current master key registers must be in `Valid` state with the same verification pattern and the new master key registers must be `Empty`.
+You can create a new master key value using either 2 or 3 key parts. To be able to rotate the master key, the current master key registers must be in `Valid` state with the same verification pattern, and the new master key registers must be `Empty`.
 
 You can rotate the master key using the Management Utilities regardless of whether your service instance has recovery crypto units assigned to it or not.
 
@@ -53,7 +53,7 @@ The following flow shows how master key rotation works in this mode:
 
 1. Load the new master key register by clicking the **Load** button in the Trusted Key Entry application. The state of the new master key register is changed from `Empty` to `Full uncommitted`.
 2. Commit the new master key value by clicking the **Commit** button in the Trusted Key Entry application. The new master key register state is changed to `Full committed`.
-3. Reencrypt key storage and activate the new master key by clicking on the **Rotate** button in the Trusted Key Entry application:
+3. Reencrypt key storage and activate the new master key by clicking the **Rotate** button in the Trusted Key Entry application:
     1. Encryption keys in key storage are decrypted by using the value in the current master key register and then reencrypted by using the value in the new master key register. The rewrapping takes place inside the hardware security module (HSM), so it's secure.
     2. The new master key is activated and loaded to the current master key register in `Valid` state, and the new master key register is cleared and back to `Empty` state.
 
