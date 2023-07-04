@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-04"
 
 keywords: failover crypto unit, add failover crypto units, enable failover, enable cross-region recovery
 
@@ -22,7 +22,7 @@ Failover crypto units back up the operational crypto units and keystores in anot
 
 If you have a service instance in the `us-south` or `us-east` region, you can enable failover crypto units for your instance with the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) CLI plug-in or the Management Utilities. If failover crypto units are already assigned to your service instance, you can still add extra ones.
 
-You can specify a total number of failover crypto units that is equal to or less than the number of operational crypto units. However, to meet high availability, at least two failover crypto units need to be assigned. Failover crypto units are also charged. For the detailed pricing information, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
+You can specify a total number of failover crypto units that are equal to or less than the number of operational crypto units. However, to meet high availability, at least two failover crypto units need to be assigned. Failover crypto units are also charged. For the detailed pricing information, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
 {: tip}
 
 ## Using the {{site.data.keyword.cloud_notm}} CLI
@@ -124,7 +124,7 @@ To enable or add failover crypto units by using the {{site.data.keyword.cloud_no
     - [Initializing service instances with smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
     - [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
     
-    To initialize your service instances using recovery crypto units, you need to install administrators, set the signature thresholds, and load the current master key register. Select the failover crypto units to be initialized, and use the following TKE plug-in commands:
+    To initialize your service instances by using recovery crypto units, you need to install administrators, set the signature thresholds, and load the current master key register. Select the failover crypto units to be initialized, and use the following TKE plug-in commands:
 
     - Add administrators: `ibmcloud tke cryptounit-admin-add`.
     - Set the signature thresholds: `ibmcloud tke cryptounit-thrhld-set`.
@@ -172,11 +172,11 @@ To enable or add failover crypto units by using the Management Utilities, follow
     ```
     {: pre}
 
-    When the Trusted Key Entry application is started, the account and resource group that you selected when you logged into IBM Cloud are displayed.
+    When the Trusted Key Entry application is started, the account and resource group that you selected when you logged in to IBM Cloud are displayed.
 
 3. To enable or add failover crypto units, on the **Crypto units** tab, perform the following steps:
 
-    1. Click **Add crypto units**. In the dialog box that is displayed, enter the numbers of all crypto units in the service instance separated by a space.
+    1. Click **Add crypto units**. In the dialog box that is displayed, enter the numbers of all crypto units in the service instance that is separated by a space.
 
     2. Click **Failover enable**, and click **Yes** to continue. 
 

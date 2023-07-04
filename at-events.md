@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-04"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -371,7 +371,7 @@ The following fields include extra information:
 The following fields include extra information:
 
 - The `requestData.initialValue.keyRingId` field includes the ID of the key ring that the key previously belonged to.
-- The `requestData.newValue.keyRingId` field includes the ID of the key ring that the key  belongs to.
+- The `requestData.newValue.keyRingId` field includes the ID of the key ring that the key belongs to.
 
 
 
@@ -517,7 +517,7 @@ For the following TKE events, some specific fields indicate more information.
 {: #tke-remove-admin-success}
 
 - The `requestData.adminId` field includes the SHA-256 hash of the signature key file that is associated with the administrator to be removed.
-- The `responseData.adminIds` field lists the SHA-256 hashes of the signature key files associated with all the administrators that are   added to the crypto unit.
+- The `responseData.adminIds` field lists the SHA-256 hashes of the signature key files that are associated with all the administrators that are added to the crypto unit.
 
 
 #### Set the signature thresholds

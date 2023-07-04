@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-04"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -57,7 +57,7 @@ No. From a technology point of view, {{site.data.keyword.uko_full_notm}} is a fe
 {: #faq-uko-fips}
 {: faq}
 
-{{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} is built on the FIPS 140-2 Level 4 certified HSM as the  {{site.data.keyword.hscrypto}} Standard Plan.
+{{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} is built on the FIPS 140-2 Level 4 certified HSM as the {{site.data.keyword.hscrypto}} Standard Plan.
 
 ## Which cloud vendors or providers are supported by {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} as connected external keystores?
 {: #faq-uko-vendor-cloud}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-07-03"
+lastupdated: "2023-07-04"
 
 keywords: site map, doc structure, information architecture
 
@@ -400,25 +400,25 @@ Find what you are looking for in the compilation of topics that are available in
 
     * Both of the functions above are currently only supported in the Frankfurt region in Germany.
 
-* [01 Feb 2023](/docs/hs-crypto?topic=hs-crypto-what-new#01-feb-2023)
+* [1 Feb 2023](/docs/hs-crypto?topic=hs-crypto-what-new#1-feb-2023)
 
     * Added: {{site.data.keyword.hscrypto}} key management functions 
 
     * Added: Activity Tracker event names
 
-* [19 Dec 2022](/docs/hs-crypto?topic=hs-crypto-what-new#19-dec-2022)
+* [19 December 2022](/docs/hs-crypto?topic=hs-crypto-what-new#19-december-2022)
 
     * Added: Managed key rotation support for {{site.data.keyword.uko_full_notm}}
 
-* [21 Nov 2022](/docs/hs-crypto?topic=hs-crypto-what-new#21-nov-2022)
+* [21 November 2022](/docs/hs-crypto?topic=hs-crypto-what-new#21-november-2022)
 
-    * Added: Managementy Utilities support for Red Hat Enterprise Linux 9.0 and Ubuntu 22.04.1 LTS
+    * Added: Management Utilities support for Red Hat Enterprise Linux 9.0 and Ubuntu 22.04.1 LTS
 
-* [31 Oct 2022](/docs/hs-crypto?topic=hs-crypto-what-new#31-oct-2022)
+* [31 Octorber 2022](/docs/hs-crypto?topic=hs-crypto-what-new#31-octorber-2022)
 
     * Added: Google Cloud KMS support
 
-* [20 Oct 2022](/docs/hs-crypto?topic=hs-crypto-what-new#20-oct-2022)
+* [20 Octorber 2022](/docs/hs-crypto?topic=hs-crypto-what-new#20-octorber-2022)
 
     * Added: EP11 activity tracker events
 

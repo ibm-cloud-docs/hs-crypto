@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-03"
+lastupdated: "2023-07-04"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -298,7 +298,7 @@ For usage notes, check out the following examples for setting your `extractable`
 {: #filter-keys-sort-api}
 {: api}
 
-Using the **`sort`** parameter in the query string [sorts the list of keys](/apidocs/hs-crypto#kms-get-key-sort-api) returned based on one or more key properties. To sort on a property in descending order, prefix the term with "-". To sort on multiple key properties, use a comma to separate each properties. The first property in the comma-separated list is to be evaluated before the next. 
+Using the **`sort`** parameter in the query string [sorts the list of keys](/apidocs/hs-crypto#kms-get-key-sort-api) returned based on one or more key properties. To sort on a property in descending order, prefix the term with "-". To sort on multiple key properties, use a comma to separate each property. The first property in the comma-separated list is to be evaluated before the next. 
 
 ```sh
 $ curl -X GET \

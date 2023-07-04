@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-04"
 
 keywords: view resoure, root key encryption resources, protected resource, protected service, envelope encryption, key registration, view registration, list registrations
 
@@ -68,7 +68,7 @@ You can browse the registrations that are available between your {{site.data.key
     | `Cloud resource name` | Represents the cloud resource that is associated with the key, including the Cloud Resource Name (CRN), `version`, `cname`, `ctype`, and so on. |
     {: caption="Table 3. Describes the properties that are associated with a resource" caption-side="bottom"}
 
-You can use the search field to search for any resources associated with the root key either with the resource name or the key version ID.
+You can use the search field to search for any resources that are associated with the root key either with the resource name or the key version ID.
 {: tip}
 
 ### Viewing resources in your instance
@@ -150,7 +150,7 @@ The following table describes the properties of a registration.
 | `updatedBy` | The unique identifier for the resource that updated the registration. |
 | `lastUpdatedDate` | The date the registration was created. |
 | `description` | A description for the registration.|
-| `preventKeyDeletion` | A boolean that determines whether {{site.data.keyword.hscrypto}} must prevent deletion of the root key. If `true`, the associated resource is non-erasable due to a retention policy, and the {{site.data.keyword.hscrypto}} key that is encrypting the resource cannot be deleted. |
+| `preventKeyDeletion` | A boolean that determines whether {{site.data.keyword.hscrypto}} must prevent deletion of the root key. If `true`, the associated resource is nonerasable due to a retention policy, and the {{site.data.keyword.hscrypto}} key that is encrypting the resource cannot be deleted. |
 | `keyVersion` | The version of the root key that's protecting the cloud resource.|
 {: caption="Table 6. Properties that are associated with a registration" caption-side="bottom"}
 
@@ -284,7 +284,7 @@ When an integrated service calls the {{site.data.keyword.hscrypto}} key manageme
     This query returns Databases for Redis registrations that are associated with all resource types and names for deployment ID _29caf0e7-120f-4da8-9551-3abf57ebcfc7_.
 
 
-- To search for a CRN segment that's prefixed by `<string>`, use a colon followed by `<string>*` on the last segment of the CRN query.
+- To search for a CRN segment that is prefixed by `<string>`, use a colon followed by `<string>*` on the last segment of the CRN query.
 
     ```
     crn:v1:bluemix:public:cloud-object-storage:global:a/e1bb63d6a20dc57c87501ac4c4c99dcb:*:bucket:prod*
