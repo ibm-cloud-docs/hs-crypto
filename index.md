@@ -55,7 +55,7 @@ To manage your keys, you need to initialize your service instance first. Dependi
 
 - Option 2: [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
 
-    If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`) where the recovery crypto units are enabled, you can choose this approach where the master key is randomly generated within a recovery crypto unit and then exported to other crypto units. With this option, your manager key parts are safely stored the recovery crypto units in IBM Cloud. You don't need additional hardware for master key management. 
+    If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`) where the recovery crypto units are enabled, you can choose this approach where the master key is randomly generated within a recovery crypto unit and then exported to other crypto units. With this option, your manager key parts are safely stored in the recovery crypto units of IBM Cloud. You don't need additional hardware for master key management. 
 
 - Option 3: [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
 
