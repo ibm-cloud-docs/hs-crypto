@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-05-29"
+lastupdated: "2023-07-05"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, smart card, trusted key entry application, tke application, management utilities
 
@@ -166,7 +166,7 @@ Perform this step only when you are setting up a service instance for the first 
 
 The crypto units in the current master key register is now in `Valid` status, which indicates that your master key is loaded to your service instance.
 
-If you want to clear your current master key in a later phase, click  **Clear current**.
+If you want to clear your current master key in a later phase, click **Clear current**.
 
 ## What's next
 {: #initialize-crypto-utilities-management-utilities-next}

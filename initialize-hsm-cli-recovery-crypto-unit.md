@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: initialize service instance, load master key, key ceremony, recovery crypto unit
 
@@ -47,7 +47,7 @@ To initialize your service instance using recovery crypto units, complete the fo
 
     1. Select the instance that you want to initialize.
 
-        If you have multiple service instances in the current resource group, this command lists all the available instances with a number associated to each instance. Enter the INSTANCE NUM to select the instance that you want to initialize and press enter to continue.
+        If you have multiple service instances in the current resource group, this command lists all the available instances with a number that is associated to each instance. Enter the INSTANCE NUM to select the instance that you want to initialize and press enter to continue.
 
         The following output is an example that is displayed:
 

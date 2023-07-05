@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: import encryption key, upload encryption key, bring your own key, byok, key material, secure import, import tokens
 
@@ -20,7 +20,7 @@ subcollection: hs-crypto
 Encryption keys contain subsets of information, such as the metadata that helps you identify the key, and the key material that is used to encrypt and decrypt data.
 {: shortdesc}
 
-When you use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to create keys, the service generates cryptographic key material on your behalf that's rooted in the hardware security modules (HSMs) of your {{site.data.keyword.hscrypto}} instance. But depending on your business requirements, you might need to generate key material from your internal solution, and then extend your on-premises key management infrastructure onto the cloud by importing keys into {{site.data.keyword.hscrypto}}.
+When you use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to create keys, the service generates cryptographic key material on your behalf that is rooted in the hardware security modules (HSMs) of your {{site.data.keyword.hscrypto}} instance. But depending on your business requirements, you might need to generate key material from your internal solution, and then extend your on-premises key management infrastructure onto the cloud by importing keys into {{site.data.keyword.hscrypto}}.
 
 | Benefit | Description |
 | --- | --- |
@@ -37,7 +37,7 @@ Review your options for creating key material
 :   Explore your options for creating 256-bit symmetric encryption keys based on your security needs. For example, you can use your internal key management system, backed by a FIPS-validated, on-premises hardware security module (HSM), to generate key material before you bring keys to the cloud. If you're building a proof of concept, you can also use a cryptography toolkit such as [OpenSSL](https://www.openssl.org/) to generate key material that you can import into {{site.data.keyword.hscrypto}} for your testing needs.
 
 Choose an option for importing key material into {{site.data.keyword.hscrypto}}
-:   Choose from two options for importing root keys based on the level of security that's required for your environment or workload. By default, {{site.data.keyword.hscrypto}} encrypts your key material while it's in transit by using the Transport Layer Security (TLS) 1.2 protocol. If you're building a proof of concept or trying out the service for the first time, you can import root key material into {{site.data.keyword.hscrypto}} by using this default option. If your workload requires a security mechanism beyond TLS, you can also [use an import token](#using-import-tokens) to encrypt and import root key material into the service.
+:   Choose from two options for importing root keys based on the level of security that is required for your environment or workload. By default, {{site.data.keyword.hscrypto}} encrypts your key material while it's in transit by using the Transport Layer Security (TLS) 1.2 protocol. If you're building a proof of concept or trying out the service for the first time, you can import root key material into {{site.data.keyword.hscrypto}} by using this default option. If your workload requires a security mechanism beyond TLS, you can also [use an import token](#using-import-tokens) to encrypt and import root key material into the service.
 
 Plan ahead for encrypting your key material
 :   If you choose to encrypt your key material by using an import token, determine a method for running RSA encryption on the key material. You must use the RSAES_OAEP_SHA_1 encryption scheme as specified by the [PKCS #1 v2.1 standard for RSA encryption](https://tools.ietf.org/html/rfc3447){: external}. Review the capabilities of your internal key management system or on-premises HSM to determine your options.
@@ -66,11 +66,11 @@ The following list describes the import token workflow.
 1. **You send a request to create an import token.**
    1. {{site.data.keyword.hscrypto}} generates an RSA key-pair from the crypto units (HSMs).
    2. The public key becomes available for retrieval based on the policy that you specified at creation time.
-   3. The private key becomes non-extractable and never leaves the crypto unit.
+   3. The private key becomes nonextractable and never leaves the crypto unit.
 2. **You send a request to retrieve the import token.**
    1. You receive the import token contents, including:
       - A public key for the encrypting key material that you want to import into the service.
-      - A nonce value that's used to verify the key import request.
+      - A nonce value that is used to verify the key import request.
 3. **You prepare the key that you want to import to the service.**
    1. You generate key material by using an on-premises key management mechanism.
    2. You encrypt the nonce value with the key material by using an AES-GCM encryption method that is compatible with your environment.

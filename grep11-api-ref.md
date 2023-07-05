@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-15"
+lastupdated: "2023-07-05"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -175,7 +175,7 @@ GREP11 attributes define object characteristics that set up how an object can be
 | Attribute    | Description           | Supported key types |
 |--------------|-----------------------|---------------------|
 | CKA_CHECK_VALUE | The checksum of the key | AES keys, DES keys |
-| CKA_COPYABLE | If set to CKA_TRUE, the object can be copied using the PKCS#11 C_CopyObject function | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys  |
+| CKA_COPYABLE | If set to CKA_TRUE, the object can be copied by using the PKCS#11 C_CopyObject function | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys  |
 | CKA_DECRYPT  | CK_TRUE if key supports decryption. | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
 | CKA_DERIVE   | CK_TRUE if key supports key derivation (other keys can be derived from this key). Default is CK_FALSE. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_EC_PARAMS (CKA_ECDSA_PARAMS) | DER-encoding of an ANSI X9.62 Parameters value. | EC private keys, EC public keys        |
@@ -202,7 +202,7 @@ GREP11 attributes define object characteristics that set up how an object can be
 
 The EP11 library supports limited types of curves for certain mechanisms. The following table lists the supported curve names for different mechanisms. The number in the curve name means the supported prime bitcount.
 
-### Supported curves for generating  Elliptic Curve (EC) keys
+### Supported curves for generating Elliptic Curve (EC) keys
 {: #supported-grep11-ec-curve-name}
 
 Mechanism `CKM_EC_KEY_PAIR_GEN` is supported when you call the `GenerateKeyPair` function to generate Elliptic Curve (EC) keys. The curve name parameters must be specified as object identifiers (OIDs) by using `CKA_EC_PARAMS`. You can get the OID by searching the curve name in the [OID repository](http://oid-info.com/basic-search.htm){: external}.
@@ -1172,7 +1172,7 @@ The `UnwrapKey` function unwraps (decrypts) a key.
     <p>Some mechanisms can modify, or attempt to modify. The contents of the <code>pMechanism</code> structure at the same time that the key is unwrapped.</p>
     <p>If a call to <code>C_UnwrapKey</code> cannot support the precise template that is supplied to it, it fails and returns without creating any key object.</p>
     <p>The key object created by a successful call to <code>C_UnwrapKey</code> has its <code>CKA_LOCAL</code> attribute set to <code>CK_FALSE</code>.</p>
-    <p>To partition the unwrapping keys so they can unwrap only a subset of keys the attribute <code>CKA_UNWRAP_TEMPLATE</code> can be used on the unwrapping key to specify an attribute set that is added to attributes of the key to be unwrapped. If the attributes do not conflict with the user supplied attribute template, in <code>pTemplate</code>, the unwrap operation proceeds. The value of this attribute is an attribute template and the size is the number of items in the template times the size of <code>CK_ATTRIBUTE</code>. If this attribute is not present on the unwrapping key, then no extra attributes is added. If any attribute conflict occurs on an attempt to unwrap a key, then the function SHALL return <code>CKR_TEMPLATE_INCONSISTENT</code>.</p>
+    <p>To partition the unwrapping keys so they can unwrap only a subset of keys the attribute <code>CKA_UNWRAP_TEMPLATE</code> can be used on the unwrapping key to specify an attribute set that is added to attributes of the key to be unwrapped. If the attributes do not conflict with the user supplied attribute template, in <code>pTemplate</code>, the unwrap operation proceeds. The value of this attribute is an attribute template and the size is the number of items in the template times the size of <code>CK_ATTRIBUTE</code>. If this attribute is not present on the unwrapping key, then no extra attributes are added. If any attribute conflict occurs on an attempt to unwrap a key, then the function SHALL return <code>CKR_TEMPLATE_INCONSISTENT</code>.</p>
     </td>
     </tr>
     <tr>
@@ -1384,7 +1384,7 @@ The `GetAttributeValue` function obtains an attribute value of an object.
     </ol>
     </p>
     <p>If case 1 applies to any of the requested attributes, then the call needs to return the value <code>CKR_ATTRIBUTE_SENSITIVE</code>. If case 2 applies to any of the requested attributes, then the call needs to return the value <code>CKR_ATTRIBUTE_TYPE_INVALID</code>. If case 5 applies to any of the requested attributes, then the call needs to return the value <code>CKR_BUFFER_TOO_SMALL</code>. As usual, if more than one of these error codes is applicable, <code>Cryptoki</code> can return any of them. Only if none of them applies to any of the requested attributes, <code>CKR_OK</code> is returned.</p>
-    <p>In the special case of an attribute whose value is an array of attributes, for example <code>CKA_WRAP_TEMPLATE</code>, where it is passed in with <code>pValue</code> not NULL, then if the <code>pValue</code> of elements within the array is NULL_PTR then the <code>ulValueLen</code> of elements within the array is set to the required length. If the <code>pValue</code> of elements within the array is not NULL_PTR, then the <code>ulValueLen</code> element of attributes within the array must reflect the space that the corresponding <code>pValue</code> points to, and <code>pValue</code> is filled in if there is sufficient room. Therefore it is important to initialize the contents of a buffer before <code>C_GetAttributeValue</code> is called to get such an array value. If any <code>ulValueLen</code> within the array isn't large enough, it is set to <code>CK_UNAVAILABLE_INFORMATION</code> and the function returns <code>CKR_BUFFER_TOO_SMALL</code>, as it does if an attribute in the <code>pTemplate</code> argument has <code>ulValueLen</code> too small. Any attribute whose value is an array of attributes is identifiable by the <code>CKF_ARRAY_ATTRIBUTE</code> set of the attribute type.</p>
+    <p>In the special case of an attribute whose value is an array of attributes, for example <code>CKA_WRAP_TEMPLATE</code>, where it is passed in with <code>pValue</code> not NULL, then if the <code>pValue</code> of elements within the array is NULL_PTR then the <code>ulValueLen</code> of elements within the array is set to the required length. If the <code>pValue</code> of elements within the array is not NULL_PTR, then the <code>ulValueLen</code> element of attributes within the array must reflect the space that the corresponding <code>pValue</code> points to, and <code>pValue</code> is filled in if there is sufficient room. Therefore, it is important to initialize the contents of a buffer before <code>C_GetAttributeValue</code> is called to get such an array value. If any <code>ulValueLen</code> within the array isn't large enough, it is set to <code>CK_UNAVAILABLE_INFORMATION</code> and the function returns <code>CKR_BUFFER_TOO_SMALL</code>, as it does if an attribute in the <code>pTemplate</code> argument has <code>ulValueLen</code> too small. Any attribute whose value is an array of attributes is identifiable by the <code>CKF_ARRAY_ATTRIBUTE</code> set of the attribute type.</p>
     <p>The error codes <code>CKR_ATTRIBUTE_SENSITIVE</code>, <code>CKR_ATTRIBUTE_TYPE_INVALID</code>, and <code>CKR_BUFFER_TOO_SMALL</code> do not denote true errors for <code>C_GetAttributeValue</code>. If a call to <code>C_GetAttributeValue</code> returns any of these three values, then the call must nonetheless have processed every attribute in the template that is supplied to <code>C_GetAttributeValue</code>. Each attribute in the template whose value can be returned by the call to <code>C_GetAttributeValue</code> is returned by the call to <code>C_GetAttributeValue</code>.</p>
     </td>
     </tr>
@@ -1882,8 +1882,8 @@ The `Encrypt` function encrypts single-part data. You don't need to perform the 
     <p><code>C_Encrypt</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
     <p>The encryption operation must be initialized with <code>C_EncryptInit</code>. A call to <code>C_Encrypt</code> always terminates the active encryption operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call (that is, one that returns <code>CKR_OK</code>) to determine the length of the buffer that is needed to hold the ciphertext.</p>
     <p><code>C_Encrypt</code> cannot be used to terminate a multi-part operation, and must be called after <code>C_EncryptInit</code> without intervening <code>C_EncryptUpdate</code> calls.</p>
-    <p>For some encryption mechanisms, the input plaintext data has certain length constraints (either because the mechanism can encrypt only relatively short pieces of plaintext, or because the mechanism’s input data must consist of an integral number of blocks). If these constraints are not satisfied, then <code>C_Encrypt</code> fails with return code <code>CKR_DATA_LEN_RANGE</code>.</p>
-    <p>The plaintext and ciphertext can be in the same place, that is, it is OK if <code>pData</code> and <code>pEncryptedData</code> point to the same location.</p>
+    <p>For some encryption mechanisms, the input plain text data has certain length constraints (either because the mechanism can encrypt only relatively short pieces of plain text, or because the mechanism’s input data must consist of an integral number of blocks). If these constraints are not satisfied, then <code>C_Encrypt</code> fails with return code <code>CKR_DATA_LEN_RANGE</code>.</p>
+    <p>The plain text and ciphertext can be in the same place, that is, it is OK if <code>pData</code> and <code>pEncryptedData</code> point to the same location.</p>
     <p>For most mechanisms, <code>C_Encrypt</code> is equivalent to a sequence of <code>C_EncryptUpdate</code> operations followed by <code>C_EncryptFinal</code>.</p>
     </td>
     </tr>
@@ -1904,7 +1904,7 @@ The `Encrypt` function encrypts single-part data. You don't need to perform the 
     <tr>
     <th>Return values</th>
     <td>
-    CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_INVALID, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR,CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
+    CKR_ARGUMENTS_BAD, CKR_BUFFER_TOO_SMALL, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DATA_INVALID, CKR_DATA_LEN_RANGE, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_OK, CKR_OPERATION_NOT_INITIALIZED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID.
     </td>
     </tr>
 </table>
@@ -2134,7 +2134,7 @@ The `EncryptFinal` function finishes a multiple-part encryption operation.
     <td><p><code>C_EncryptFinal</code> finishes a multiple-part encryption operation. <code>hSession</code> is the session’s handle; <code>pLastEncryptedPart</code> points to the location that receives the last encrypted data part, if any; <code>pulLastEncryptedPartLen</code> points to the location that holds the length of the last encrypted data part.</p>
     <p><code>C_EncryptFinal</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
     <p>The encryption operation must be initialized with <code>C_EncryptInit</code>. A call to <code>C_EncryptFinal</code> always terminates the active encryption operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call (that is, one that returns <code>CKR_OK</code>) to determine the length of the buffer that is needed to hold the ciphertext.</p>
-    <p>For some multi-part encryption mechanisms, the input plaintext data has certain length constraints, because the mechanism’s input data must consist of an integral number of blocks. If these constraints are not satisfied, then <code>C_EncryptFinal</code> fails with return code <code>CKR_DATA_LEN_RANGE</code>.</p>
+    <p>For some multi-part encryption mechanisms, the input plain text data has certain length constraints because the mechanism’s input data must consist of an integral number of blocks. If these constraints are not satisfied, then <code>C_EncryptFinal</code> fails with return code <code>CKR_DATA_LEN_RANGE</code>.</p>
     </td>
     </tr>
     <tr>
@@ -2593,9 +2593,9 @@ The `Decrypt` function decrypts data in a single part. You don't need to perform
         </ul>
       </p>
     <p><code>C_Decrypt</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The decryption operation needs to be initialized with <code>C_DecryptInit</code>. A call to <code>C_Decrypt</code> always terminates the active decryption operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call with <code>CKR_OK</code> returned to determine the length of the buffer that is needed to hold the plaintext.</p>
+    <p>The decryption operation needs to be initialized with <code>C_DecryptInit</code>. A call to <code>C_Decrypt</code> always terminates the active decryption operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call with <code>CKR_OK</code> returned to determine the length of the buffer that is needed to hold the plain text.</p>
     <p><code>C_Decrypt</code> cannot be used to terminate a multi-part operation, and needs to be called after <code>C_DecryptInit</code> without intervening <code>C_DecryptUpdate</code> calls.</p>
-    <p>The ciphertext and plaintext can be in the same place, which means it is acceptable if pEncryptedData and pData point to the same location.</p>
+    <p>The ciphertext and plain text can be in the same place, which means it is acceptable if pEncryptedData and pData point to the same location.</p>
     <p>If the input ciphertext data cannot be decrypted because it has an inappropriate length, either <code>CKR_ENCRYPTED_DATA_INVALID</code> or <code>CKR_ENCRYPTED_DATA_LEN_RANGE</code> can be returned.</p></td>
     </tr>
     <tr>
@@ -2711,7 +2711,7 @@ The `DecryptUpdate` function continues a multiple-part decryption operation. Bef
     <td><p><code>C_DecryptUpdate</code> continues a multiple-part decryption operation, processing another encrypted data part. <code>hSession</code> is the session’s handle; <code>pEncryptedPart</code> points to the encrypted data part; <code>ulEncryptedPartLen</code> is the length of the encrypted data part; <code>pPart</code> points to the location that receives the recovered data part; <code>pulPartLen</code> points to the location that holds the length of the recovered data part.</p>
     <p><code>C_DecryptUpdate</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
     <p>The decryption operation must be initialized with <code>C_DecryptInit</code>.  This function can be called any number of times in succession.  A call to <code>C_DecryptUpdate</code> which results in an error other than CKR_BUFFER_TOO_SMALL terminates the current decryption operation.</p>
-    <p>The ciphertext and plaintext can be in the same place, that is, it is OK if <code>pEncryptedPart</code> and <code>pPart</code> point to the same location.</p></td>
+    <p>The ciphertext and plain text can be in the same place, that is, it is OK if <code>pEncryptedPart</code> and <code>pPart</code> point to the same location.</p></td>
     </tr>
     <tr>
     <th>Parameters</th>
@@ -2730,7 +2730,7 @@ The `DecryptUpdate` function continues a multiple-part decryption operation. Bef
     <tr>
     <th>Return values</th>
     <td>
-    CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED,CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_FUNCTION_NOT_PERMITTED,CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID,CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED,CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
+    CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_FUNCTION_NOT_PERMITTED, CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
     </tr>
 </table>
@@ -2836,7 +2836,7 @@ The `DecryptFinal` function finishes a multiple-part decryption operation.
     <th>Description</th>
     <td><p><code>C_DecryptFinal</code> finishes a multiple-part decryption operation. <code>hSession</code> is the session’s handle; <code>pLastPart</code> points to the location that receives the last recovered data part, if any; <code>pulLastPartLen</code> points to the location that holds the length of the last recovered data part.</p>
     <p><code>C_DecryptFinal</code> uses the convention that is described in Section 5.2 of the <a href="http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959738" target="_blank">PKCS #11 API specification</a> on producing output.</p>
-    <p>The decryption operation must be initialized with <code>C_DecryptInit</code>.  A call to <code>C_DecryptFinal</code> always terminates the active decryption operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call (that is, one that <code>returns CKR_OK</code>) to determine the length of the buffer that is needed to hold the plaintext.</p>
+    <p>The decryption operation must be initialized with <code>C_DecryptInit</code>.  A call to <code>C_DecryptFinal</code> always terminates the active decryption operation unless it returns <code>CKR_BUFFER_TOO_SMALL</code> or is a successful call (that is, one that <code>returns CKR_OK</code>) to determine the length of the buffer that is needed to hold the plain text.</p>
     <p>If the input ciphertext data cannot be decrypted because it has an inappropriate length, then either <code>CKR_ENCRYPTED_DATA_INVALID</code> or <code>CKR_ENCRYPTED_DATA_LEN_RANGE</code> can be returned.</p>
     </td>
     </tr>
@@ -3072,7 +3072,7 @@ The `SignInit` function initializes a signature operation. You need to call this
     <tr>
     <th>Return values</th>
     <td>
-    CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_FUNCTION_NOT_PERMITTED,CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
+    CKR_ARGUMENTS_BAD, CKR_CRYPTOKI_NOT_INITIALIZED, CKR_DEVICE_ERROR, CKR_DEVICE_MEMORY, CKR_DEVICE_REMOVED, CKR_FUNCTION_CANCELED, CKR_FUNCTION_FAILED, CKR_GENERAL_ERROR, CKR_HOST_MEMORY, CKR_KEY_FUNCTION_NOT_PERMITTED, CKR_KEY_HANDLE_INVALID, CKR_KEY_SIZE_RANGE, CKR_KEY_TYPE_INCONSISTENT, CKR_MECHANISM_INVALID, CKR_MECHANISM_PARAM_INVALID, CKR_OK, CKR_OPERATION_ACTIVE, CKR_PIN_EXPIRED, CKR_SESSION_CLOSED, CKR_SESSION_HANDLE_INVALID, CKR_USER_NOT_LOGGED_IN.
     </td>
     </tr>
 </table>

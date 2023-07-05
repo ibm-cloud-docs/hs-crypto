@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -90,7 +90,7 @@ When you use smart cards, consider the following recommendations:
 
     - Create two EP11 smart cards and two backup EP11 smart cards to store two master key parts, or create three EP11 smart cards and three backup EP11 smart cards to store three master key parts. Generate EP11 master key parts separately on two or three smart cards, depending on the number of key parts when you load your master key. Copy each key part value to a backup EP11 smart card.
 
-    For how to calculate the number of smart cards needed, see [FAQ: Are there any recommendations on how to set up smart cards?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup).
+    For how to calculate the number of smart cards needed, see [FAQ: Are there any recommendations on how to set up smart cards?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup)
 
 - For greater security, generate administrator signature keys on more EP11 smart cards and set the signature thresholds in your crypto units to a value greater than one. You can install up to eight administrators in your crypto units and specify that up to eight signatures are required for some administrative commands.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-04-13"
+lastupdated: "2023-07-05"
 
 keywords: hsm, cloud hsm, tke cli, pkcs11, PKCS11 library, cryptographic operations, cryptographic functions, PKCS 11
 
@@ -72,7 +72,7 @@ The PKCS #11 standard defines two types of users for login: a security officer (
 
 The Cryptoki API requires that an application opens one or more sessions with a token to gain access to the objects and functions of the token. A session provides a logical connection between the application and the token. A session can be a read/write (R/W) session or a read-only (R/O) session.
 
-To gain access to the private objects of the token, the normal user needs to log in and be authenticated. See [PKCS #11 Cryptographic Token Interface Usage Guide](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759989){: external} for an in-depth look at sessions.
+To gain access to the private objects of the token, the normal user needs to log in and is authenticated. See [PKCS #11 Cryptographic Token Interface Usage Guide](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759989){: external} for an in-depth look at sessions.
 
 ### Key object
 {: #pkcs11-object-intro}

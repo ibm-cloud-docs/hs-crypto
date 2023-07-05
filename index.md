@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-07-05"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -93,7 +93,7 @@ Keys that are created in the service are symmetric 256-bit keys, supported by th
 ### Importing your own keys
 {: #import-keys-dashboard}
 
-You can bring your existing keys to the service, so that you can still use the same encryption keys to protect your applications or data.
+You can bring your existing keys to the service so that you can still use the same encryption keys to protect your applications or data.
 
 Complete the following steps to add an existing key.
 
@@ -195,7 +195,7 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
 ### Performing cryptographic operations with the GREP11 API
 {: #cryptographic-operations-with-grep11-dashboard}
 
-To perform cryptographic operations with the GREP11 API, you need to make sure your applications are developed with programming languages supported by gRPC.
+To perform cryptographic operations with the GREP11 API, you need to make sure your applications are developed with programming languages that are supported by gRPC.
 
 The following procedure uses Golang code as an example to test GREP11 functions.
 
@@ -257,7 +257,7 @@ The following procedure uses Golang code as an example to test GREP11 functions.
 {: #get-started-prerequisites}
 {: hide-dashboard}
 
-In order to use {{site.data.keyword.hscrypto}}, make sure that you have a Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account. For details about the {{site.data.keyword.cloud_notm}} account types, see [Account types](/docs/account?topic=account-accounts).
+In order to use {{site.data.keyword.hscrypto}}, make sure that you have a Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account. For more information about the {{site.data.keyword.cloud_notm}} account types, see [Account types](/docs/account?topic=account-accounts).
 
 1. To check your account type, go to [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/login){: external} and click **Management** > **Account** > **Account settings**.
 2. If you have a Lite account and want to use {{site.data.keyword.hscrypto}}, [upgrade your account](/docs/account?topic=account-upgrading-account) to a Pay-As-You-Go or Subscription account. You can also [apply your promo code](/docs/billing-usage?topic=billing-usage-applying-promo-codes) if you have one.
@@ -328,7 +328,7 @@ Keys that are created in the service are symmetric 256-bit keys, supported by th
 {: help}
 {: support}
 
-You can bring your existing keys to the service, so that you can still use the same encryption keys to protect your applications or data.
+You can bring your existing keys to the service so that you can still use the same encryption keys to protect your applications or data.
 
 Complete the following steps to add an existing key.
 
@@ -437,7 +437,7 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
 {: help}
 {: support}
 
-To perform cryptographic operations with the GREP11 API, you need to make sure your applications are developed with programming languages supported by gRPC.
+To perform cryptographic operations with the GREP11 API, you need to make sure your applications are developed with programming languages that are supported by gRPC.
 
 The following procedure uses Golang code as an example to test GREP11 functions.
 

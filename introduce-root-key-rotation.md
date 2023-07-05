@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-06-27"
+lastupdated: "2023-07-05"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -20,7 +20,7 @@ subcollection: hs-crypto
 You can rotate root keys managed in your {{site.data.keyword.hscrypto}} instance on demand or by setting a rotation policy. Key rotation takes place when you retire the original key material of the root key, and you re-key it by generating a new cryptographic key material.
 {: shortdesc}
 
-Rotating keys on a regular basis helps you meet industry standards and cryptographic best practices. The following table describes the main benefits of key rotation:
+Rotating keys regularly helps you meet industry standards and cryptographic best practices. The following table describes the main benefits of key rotation:
 
 | Benefit | Description |
 | --- | --- |
@@ -103,7 +103,7 @@ Rotate your keys regularly, for example every 30 days, to meet cryptographic bes
 
 | Rotation type | Frequency | Description |
 | --- | --- | --- |
-| [Policy-based root key rotation](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy) | Every 1 - 12 months | Choose a rotation interval between 1 - 12 months for your key based on your on-going security needs. After you set an rotation policy for a key, the clock starts immediately based on the initial creation date for the key. For example, if you set a monthly rotation policy for a key that you created on `2019/02/01`, {{site.data.keyword.hscrypto}} automatically rotates the key on `2019/03/01`.|
+| [Policy-based root key rotation](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy) | Every 1 - 12 months | Choose a rotation interval between 1 - 12 months for your key based on your on-going security needs. After you set a rotation policy for a key, the clock starts immediately based on the initial creation date for the key. For example, if you set a monthly rotation policy for a key that you created on `2019/02/01`, {{site.data.keyword.hscrypto}} automatically rotates the key on `2019/03/01`.|
 | [On-demand root key rotation](/docs/hs-crypto?topic=hs-crypto-rotate-keys) | Up to one rotation per hour | If you're rotating a key on demand, {{site.data.keyword.hscrypto}} allows one rotation per hour for each root key. |
 {: caption="Table 2. Rotation frequency options for rotating keys in {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 

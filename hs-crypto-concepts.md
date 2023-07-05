@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-28"
+lastupdated: "2023-07-05"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -71,9 +71,9 @@ A crypto unit is a single unit that represents an HSM and the corresponding soft
 
 - Recovery crypto unit
 
-    If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`), two recovery crypto units are automatically assigned to your service instance without extra costs; one in the same region and one in the disaster recovery region for that region. A recovery crypto unit is used to generate the random master key which is then securely exported to operational crypto units and the other recovery crypto unit to [initialize the service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit).
+    If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`), two recovery crypto units are automatically assigned to your service instance without extra costs; one in the same region and one in the disaster recovery region for that region. A recovery crypto unit is used to generate the random master key, which is then securely exported to operational crypto units and the other recovery crypto unit to [initialize the service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit).
 
-    Recovery crypto units can also be used as backup crypto units that save a copy of the master key value used by the operational crypto units. If the master key is lost or destroyed, you can [recover the master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit) using signed TKE administrative commands.
+    Recovery crypto units can also be used as backup crypto units that save a copy of the master key value used by the operational crypto units. If the master key is lost or destroyed, you can [recover the master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit) by using signed TKE administrative commands.
 
     If smart cards are used to load the master key, the recovery crypto units are not applicable and can be ignored. The backup of the master key relies on the backup of the smart cards in that case.
     {: note}
@@ -90,7 +90,7 @@ Administrators can be added to the target crypto units for issuing commands to t
 ### Signature keys
 {: #signature-key-concept}
 
-An administrator must sign any commands that are issued to the crypto unit with a signature key. The signature keys that are created in {{site.data.keyword.hscrypto}} are P521 Elliptic Curve (EC) keys. The private part of the signature key is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. Commands issued in [imprint mode](#imprint-mode-concept) do not need to be signed with any signature keys.
+An administrator must sign any commands that are issued to the crypto unit with a signature key. The signature keys that are created in {{site.data.keyword.hscrypto}} are P521 Elliptic Curve (EC) keys. The private part of the signature key is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. Commands that are issued in [imprint mode](#imprint-mode-concept) do not need to be signed with any signature keys.
 
 ### Imprint mode
 {: #imprint-mode-concept}
@@ -129,7 +129,7 @@ Trusted Key Entry (TKE) command-line interface (CLI) plug-in is a CLI plug-in wo
 ### Management Utilities
 {: #management-utilities-concept}
 
-The Management Utilities provide an alternate way of configuring service instances with signature keys and master key parts that are stored on smart cards with the highest level of security. To use the Management Utilities, you must order IBM-supported smart card readers and smart cards. For detailed instructions on installing and configuring the Management Utilities, see [Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities) and [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
+The Management Utilities provide an alternative way of configuring service instances with signature keys and master key parts that are stored on smart cards with the highest level of security. To use the Management Utilities, you must order IBM-supported smart card readers and smart cards. For detailed instructions on installing and configuring the Management Utilities, see [Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities) and [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
 
 ### Smart cards
 {: #smart-card-concept}
