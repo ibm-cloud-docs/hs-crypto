@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-06-27"
+lastupdated: "2023-07-04"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -50,7 +50,7 @@ the key. During this period, the key remains in the
 and all key operations are allowed on the key. To complete the deletion, the
 second user with a _Manager_ access policy can use the
 {{site.data.keyword.cloud_notm}} console or API to delete the key.
-- **The key and its associated data become inaccessible 90 days after the key is deleted.** When you delete a key, the key can be restored within 30 days after the deletion. You are able to retrieve associated data such as key metadata, registrations, and policies for up to 90 days. After 90 days, the key becomes eligible to be automatically purged and its associated data will be permanently removed from the your instance.
+- **The key and its associated data become inaccessible 90 days after the key is deleted.** When you delete a key, the key can be restored within 30 days after the deletion. You are able to retrieve associated data such as key metadata, registrations, and policies for up to 90 days. After 90 days, the key becomes eligible to be automatically purged and its associated data will be permanently removed from your instance.
 
 ## Authorize deletion for a key with the {{site.data.keyword.cloud_notm}} console
 {: #set-key-deletion-console}
@@ -150,7 +150,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
     [delete the key](/docs/hs-crypto?topic=hs-crypto-delete-keys)
     by using the {{site.data.keyword.cloud_notm}} console or key management service API.
 
-    If you need to prevent the deletion of a key that's already authorized for
+    If you need to prevent the deletion of a key that is already authorized for
     deletion, you can remove the existing authorization by calling
     `POST /api/v2/keys/<key_ID>/actions/unsetKeyForDeletion`.
     {: tip}

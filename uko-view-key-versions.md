@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-04"
 
 keywords: managed key versions, get key versions, list key versions
 
@@ -45,11 +45,11 @@ You can no longer edit pervious key versions.
 {: #uko-view-key-versions-api}
 {: api}
 
-To view manage key versions through the API, follow these steps:
+To view managed key versions through the API, follow these steps:
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
    
-2. View manage key versions by making a `GET` call based on the following example:
+2. View managed key versions by making a `GET` call based on the following example:
 
     ```
     curl --location --request GET 'https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys/<id>/versions' \

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-04"
 
 keywords: troubleshoot, problems, known issues, can't delete vaults
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 {: #troubleshoot-delete-vault}
 {: troubleshoot}
 
-You are not able to delete vaults using either UI or API.
+You are not able to delete vaults by using either UI or API.
 {: shortdesc}
 
 You try to delete a vault, but it fails with the following message:

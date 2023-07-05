@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: rotate, rotate root key, automatic key rotation, set rotation policy, policy based key rotation
 
@@ -28,7 +28,7 @@ You can create a rotation policy only for root keys that are generated in {{site
 Want to learn more about your key rotation options in {{site.data.keyword.hscrypto}}? Check out [Comparing your key rotation options](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#compare-key-rotation-options) for more information.
 {: tip}
 
-## Managing rotation polices in the console
+## Managing rotation policies in the console
 {: #manage-policies-gui}
 {: ui}
 
@@ -269,6 +269,6 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/policie
 ## What's next
 {: #set-rotation-policy-next}
 
-- After you set a rotation policy and you root key is rotated, new cryptographic key material becomes available for protecting the data encryption keys (DEKs) that are associated with the root key. Learn how to reencrypt or rewrap your DEKS without exposing the keys in their plaintext form, see [Rewrapping keys](/docs/hs-crypto?topic=hs-crypto-rewrap-keys).
+- After you set a rotation policy and you root key is rotated, new cryptographic key material becomes available for protecting the data encryption keys (DEKs) that are associated with the root key. Learn how to reencrypt or rewrap your DEKS without exposing the keys in their plain text form, see [Rewrapping keys](/docs/hs-crypto?topic=hs-crypto-rewrap-keys).
 - To learn how envelope encryption helps you control the security of at-rest data in the cloud, see [Protecting data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
 - To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: troubleshoot, problems, known issues, can't view or list specific keys
 
@@ -24,7 +24,7 @@ When you call the {{site.data.keyword.hscrypto}} key management service API, you
 You call `GET api/v2/keys` to list the keys that are available in your service instance.
 {: tsSymptoms}
 
-You can see a list of keys, but you can't find a specific key that's stored in the instance. You verify with your administrator that you're assigned the applicable [level of access to keys](/docs/hs-crypto?topic=hs-crypto-grant-access-keys) that you're unable to view. You also verify with your administrator that the key belongs to the service instance that you're targeting.
+You can see a list of keys, but you can't find a specific key that is stored in the instance. You verify with your administrator that you're assigned the applicable [level of access to keys](/docs/hs-crypto?topic=hs-crypto-grant-access-keys) that you're unable to view. You also verify with your administrator that the key belongs to the service instance that you're targeting.
 
 The service instance contains a large number of keys, and the specific keys that you're looking for aren't returned by default when you call `GET api/v2/keys` to list keys.
 {: tsCauses}

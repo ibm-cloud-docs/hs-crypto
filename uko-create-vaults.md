@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-26"
+lastupdated: "2023-07-05"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -48,7 +48,10 @@ For more information about granting access, see [Granting access to vaults](/doc
 {: #create-vaults-ui}
 {: ui}
 
-To create a vault by using the console, complete the following steps through the **Vaults** page. Optionally, you can create a vault when you [create a key template](docs/hs-crypto?topic=hs-crypto-create-template), [create a managed key](/docs/hs-crypto?topic=hs-crypto-create-managed-keys), or [add a keystore](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores).
+
+To create a vault by using the console, complete the following steps through the **Vaults** page. Optionally, you can create a vault when you [create a managed key](/docs/hs-crypto?topic=hs-crypto-create-managed-keys) or [add a keystore](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores).
+
+
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Vaults** from the navigation to view all the available vaults.

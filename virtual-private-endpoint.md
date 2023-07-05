@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-04"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway
 
@@ -41,7 +41,7 @@ Before you target a virtual private endpoint for {{site.data.keyword.hscrypto}},
 ## Setting up a VPE for {{site.data.keyword.hscrypto}}
 {: #virtual-private-endpoints-for-vpc-setup}
 
-When you create a VPE gateway by using the CLI or API, you must specify the [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) of the region in which you want connect to {{site.data.keyword.hscrypto}}. Review the following table for the available regions and CRNs to create your VPE gateways.
+When you create a VPE gateway by using the CLI or API, you must specify the [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) of the region in which you want to connect to {{site.data.keyword.hscrypto}}. Review the following table for the available regions and CRNs to create your VPE gateways.
 
 <table>
     <tr>
@@ -223,7 +223,7 @@ After you create an endpoint gateway for your {{site.data.keyword.hscrypto}} ins
 
 - Using the VPE for the [key management service API](/apidocs/hs-crypto)
 
-    To perform key management operations with the key management service API, use the key management service private endpoints in the API request URL to access the service. For example:
+    To perform key management operations with the key management service API, use the key management service private endpoints in the API request URL to access the service. For example,
 
     ```
     curl GET \
@@ -248,14 +248,14 @@ After you create an endpoint gateway for your {{site.data.keyword.hscrypto}} ins
 
 To use VPE with Terraform, set the `service_endpoints` parameter to `private-only` in the resource block. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).
 
-- If you plan to use private endpoints to initialize your service instance, make sure to set the `IBMCLOUD_HPCS_TKE_ENDPOINT` environment variable to target the TKE private endpoint. For example:
+- If you plan to use private endpoints to initialize your service instance, make sure to set the `IBMCLOUD_HPCS_TKE_ENDPOINT` environment variable to target the TKE private endpoint. For example,:
 
     ```
     export IBMCLOUD_HPCS_TKE_ENDPOINT=https://tke.private.<region>.hs-crypto.cloud.ibm.com
     ```
     {: pre}
 
-- If you plan to use private endpoints to manage your key management service keys, make sure to set the `IBMCLOUD_KP_API_ENDPOINT` environment variable to target the key management service private endpoint. For example:
+- If you plan to use private endpoints to manage your key management service keys, make sure to set the `IBMCLOUD_KP_API_ENDPOINT` environment variable to target the key management service private endpoint. For example,:
 
     ```
     export IBMCLOUD_KP_API_ENDPOINT=https://api.private.<region>.hs-crypto.cloud.ibm.com:<port>

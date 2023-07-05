@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-16"
+lastupdated: "2023-07-05"
 
 keywords: hsm, cloud hsm, ep11, grep11, pkcs, cryptographic operations, cryptographic functions
 
@@ -15,7 +15,7 @@ subcollection: hs-crypto
 
 
 
-# Introducing cloud HSM
+# Introducing cloud HSM - {{site.data.keyword.uko_full_notm}} Plan
 {: #uko-introduce-cloud-hsm}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} consists of a cloud-based, FIPS 140-2 Level 4 certified hardware security module (HSM) that provides standardized APIs to manage encryption keys and perform cryptographic operations.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-14"
+lastupdated: "2023-07-04"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -53,7 +53,7 @@ Added: Master key rotation for EP11 keystores
 
 Both of the functions above are currently only supported in the Frankfurt region in Germany.
 
-## 01 Feb 2023
+## 1 Feb 2023
 {: hs-crypto-feb2023}
 {: release-note}
 
@@ -69,7 +69,7 @@ Added: Activity Tracker event names
 :    Find the latest event names and mapping in [Historical information regarding events](/docs/hs-crypto?topic=hs-crypto-at-events&interface=ui#historical-mapping-events).
 
 
-## 19 Dec 2022
+## 19 December 2022
 {: hs-crypto-dec2022}
 {: release-note}
 
@@ -77,24 +77,24 @@ Added: Managed key rotation support for {{site.data.keyword.uko_full_notm}}
 :   You can now manually rotate a managed key in your {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance. Managed key rotation shortens the cryptoperiod of the keys and reduces the probability for a security breach. For more information about how managed key rotation works, see [Managed key rotation](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro). For more information about the detailed instructions, see [Rotating managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys).
 
 
-## 21 Nov 2022
+## 21 November 2022
 {: hs-crypto-nov2022}
 {: release-note}
 
-Added: Managementy Utilities support for Red Hat Enterprise Linux 9.0 and Ubuntu 22.04.1 LTS
+Added: Management Utilities support for Red Hat Enterprise Linux 9.0 and Ubuntu 22.04.1 LTS
 :    To manage your master keys by using smart cards, you can now install the smart card reader driver Identiv SPR332 V2 on Red Hat Enterprise Linux 9.0 and Ubuntu 22.04.1 LTS besides the already supported Red Hat Enterprise Linux 8.0 operating system. For more detailed steps, see [Installing the smart card reader driver](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-smart-card-reader-driver).
 
     You can also find the latest Management Utilities installation files in [Github](https://github.com/IBM-Cloud/hpcs-management-utilities/releases/tag/v1.0.3.8){: external}.
 
 
-## 31 Oct 2022
+## 31 Octorber 2022
 {: hs-crypto-31oct2022}
 {: release-note}
 
 Added: Google Cloud KMS support
 :   You can now use {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} to create and manage Google Cloud KMS keys. For more information, see [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores) and [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys).
 
-## 20 Oct 2022
+## 20 Octorber 2022
 {: hs-crypto-20oct2022}
 {: release-note}
 
@@ -231,7 +231,7 @@ Added: {{site.data.keyword.hscrypto}} expands into the Tokyo region {: #add-toky
 :   You can now create {{site.data.keyword.hscrypto}} instances in the Tokyo (`jp-tok`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
 Added: Using Terraform to initialize the {{site.data.keyword.hscrypto}} instance {: #add-terraform-automation}
-:   With the integration with Terraform, now you can initialize your service instance using Terraform, and then automate actions using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs) and the [Terraform documentation - Hyper Protect Crypto Services](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs){: external}.
+:   With the integration with Terraform, now you can initialize your service instance by using Terraform, and then automate actions by using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs) and the [Terraform documentation - Hyper Protect Crypto Services](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs){: external}.
 
 Added: Using a signing service to manage signature keys for instance initialization {: #add-signing-service}
 :   If you are using Terraform or key part files to initialize a service instance, you can now choose to use a third-party signing service to create, store, and manage the administrator signature keys that are used by Terraform or the Trusted Key Entry (TKE) CLI plug-in. For more information, see [Using a signing service to manage signature keys for instance initialization](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key).
@@ -292,7 +292,7 @@ Added: Using Virtual Private Endpoints for VPC {: #add-vpe-for-vpc}
 :   You can now create virtual private endpoints (VPEs) for your {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) instance to access {{site.data.keyword.hscrypto}} within your VPC network. For more information, see [Using a virtual private endpoint for VPC](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc).
 
 Updated: The cryptography algorithm that is used to generate signature keys {: #update-signature-key-algorithm}
-:   The cryptography algorithm to generate signature keys is updated from Rivest–Shamir–Adleman 2048 (RSA 2048) to P521 Elliptic Curve (P521 EC). The cryptographic strength of P521 EC keys is equivalent to RSA 15360, which means the updated signature keys can provide the higher level of security comparing to the previous signature keys. The previous RSA 2048 signature keys are still valid and can be used.
+:   The cryptography algorithm to generate signature keys is updated from Rivest-Shamir–Adleman 2048 (RSA 2048) to P521 Elliptic Curve (P521 EC). The cryptographic strength of P521 EC keys is equivalent to RSA 15360, which means the updated signature keys can provide the higher level of security comparing to the previous signature keys. The previous RSA 2048 signature keys are still valid and can be used.
 
 ## 28 February 2021
 {: #hs-crypto-february2021}
@@ -304,7 +304,7 @@ Added: Key verification by using the PKCS #11 API {: #add-key-verification}
     For an example of how to retrieve checksum values for AES, DES2, and DES3 keys along with the verification of the key checksums, see [the code sample](https://github.com/IBM-Cloud/hpcs-pkcs11/blob/master/samples/pkcs11-checksum.c){: external}.
 
 Added: Support for the Schnorr algorithm {: #add-schnorr}
-:   {{site.data.keyword.hscrypto}} now supports the Schnorr algorithm, which can be used as a signing scheme to generate digital signatures. It is proposed as an alternative algorithm to the Elliptic Curve Digital Signature Algorithm (ECDSA) for cryptographic signatures in the Bitcoin system. Before you can use the Schnorr algorithm, make sure to enable this feature by following the instructions in [Enabling the  Schnorr algorithm](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-schnorr).
+:   {{site.data.keyword.hscrypto}} now supports the Schnorr algorithm, which can be used as a signing scheme to generate digital signatures. It is proposed as an alternative algorithm to the Elliptic Curve Digital Signature Algorithm (ECDSA) for cryptographic signatures in the Bitcoin system. Before you can use the Schnorr algorithm, make sure to enable this feature by following the instructions in [Enabling the Schnorr algorithm](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-schnorr).
 
 ## 31 January 2021
 {: #hs-crypto-january2021}
@@ -459,7 +459,7 @@ Added: {{site.data.keyword.hscrypto}} adds support for private endpoints {: #add
     To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your infrastructure account. For more information, see [Using service endpoints to privately connect to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-secure-connection).
 
 Added: {{site.data.keyword.hscrypto}} Cloud HSM now supports EP11 cryptographic operations over gRPC {: #added-EP11}
-:   The managed Cloud Hardware Security Module  (HSM) supports Enterprise Public-Key Cryptography Standards (PKCS) #11, so your applications can integrate cryptographic operations like digital signing and validation through Enterprise PKCS #11 (EP11) API. The EP11 library provides an interface similar to the industry-standard PKCS #11 API.
+:   The managed Cloud Hardware Security Module (HSM) supports Enterprise Public-Key Cryptography Standards (PKCS) #11, so your applications can integrate cryptographic operations like digital signing and validation through Enterprise PKCS #11 (EP11) API. The EP11 library provides an interface similar to the industry-standard PKCS #11 API.
 
     {{site.data.keyword.hscrypto}} provides a set of Enterprise PKCS #11 (EP11) over gRPC API calls (also referred to as *GREP11*), with which, all the Crypto functions are executed in HSM on cloud. GREP11 is a stateless interface for cloud programs.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-04"
 
 keywords: data encryption key, key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, unwrap api
 
@@ -114,4 +114,4 @@ When you unwrap a data encryption key, the key material is returned in base64 en
     | `outfile` | The name of the file where your decoded key material is outputted after the command is run. |
     {: caption="Table 2. Describes the variables needed to decode your key material" caption-side="bottom"}
 
-    If you want to output the decoded material in the command line directly rather than a file, run command `openssl enc -base64 -d <<< '<key_material_string>'`, where key_material_string is the returned plaintext from your unwrap request.
+    If you want to output the decoded material in the command line directly rather than a file, run command `openssl enc -base64 -d <<< '<key_material_string>'`, where key_material_string is the returned plain text from your unwrap request.

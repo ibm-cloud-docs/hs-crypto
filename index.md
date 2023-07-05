@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-27"
+lastupdated: "2023-07-05"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -47,17 +47,17 @@ This tutorial guides you on how to initialize your service instance by loading y
 {: hide-in-docs}
 {: notoc}
 
-To manage your keys, you need to initialize your service instance first. Depending on where your service instance locates and your security requirements, {{site.data.keyword.hscrypto}} provides you with the following three approaches to initializing your service instance:
+To manage your keys, you need to initialize your service instance first. Depending on where your service instance locates and your security requirements, {{site.data.keyword.hscrypto}} provides you with the following three options to initializing your service instance:
 
-- [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
+- Option 1: [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
 
-    This approach gives you the highest security, which enables you to store and manage master key parts using smart cards.
+    This option gives you the highest security, which enables you to store and manage master key parts using smart cards.
 
-- [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
+- Option 2: [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
 
-    If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`) where the recovery crypto units are enabled, you can choose this approach where the master key is randomly generated within a recovery crypto unit and then exported to other crypto units.
+    If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`) where the recovery crypto units are enabled, you can choose this approach where the master key is randomly generated within a recovery crypto unit and then exported to other crypto units. With this option, your manager key parts are safely stored in the recovery crypto units of IBM Cloud. You don't need additional hardware for master key management. 
 
-- [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+- Option 3: [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
 
     You can also initialize your service instance using master key parts that are stored in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. 
 
@@ -93,7 +93,7 @@ Keys that are created in the service are symmetric 256-bit keys, supported by th
 ### Importing your own keys
 {: #import-keys-dashboard}
 
-You can bring your existing keys to the service, so that you can still use the same encryption keys to protect your applications or data.
+You can bring your existing keys to the service so that you can still use the same encryption keys to protect your applications or data.
 
 Complete the following steps to add an existing key.
 
@@ -195,7 +195,7 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
 ### Performing cryptographic operations with the GREP11 API
 {: #cryptographic-operations-with-grep11-dashboard}
 
-To perform cryptographic operations with the GREP11 API, you need to make sure your applications are developed with programming languages supported by gRPC.
+To perform cryptographic operations with the GREP11 API, you need to make sure your applications are developed with programming languages that are supported by gRPC.
 
 The following procedure uses Golang code as an example to test GREP11 functions.
 
@@ -257,7 +257,7 @@ The following procedure uses Golang code as an example to test GREP11 functions.
 {: #get-started-prerequisites}
 {: hide-dashboard}
 
-In order to use {{site.data.keyword.hscrypto}}, make sure that you have a Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account. For details about the {{site.data.keyword.cloud_notm}} account types, see [Account types](/docs/account?topic=account-accounts).
+In order to use {{site.data.keyword.hscrypto}}, make sure that you have a Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account. For more information about the {{site.data.keyword.cloud_notm}} account types, see [Account types](/docs/account?topic=account-accounts).
 
 1. To check your account type, go to [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/login){: external} and click **Management** > **Account** > **Account settings**.
 2. If you have a Lite account and want to use {{site.data.keyword.hscrypto}}, [upgrade your account](/docs/account?topic=account-upgrading-account) to a Pay-As-You-Go or Subscription account. You can also [apply your promo code](/docs/billing-usage?topic=billing-usage-applying-promo-codes) if you have one.
@@ -283,15 +283,15 @@ For detailed steps, see [Provisioning the service](/docs/hs-crypto?topic=hs-cryp
 
 To manage your keys, you need to initialize your service instance first. Depending on where your service instance locates and your security requirements, {{site.data.keyword.hscrypto}} provides you with the following three approaches to initializing your service instance:
 
-- [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
+- Option 1: [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
 
-    This approach gives you the highest security, which enables you to store and manage master key parts using smart cards.
+    This option gives you the highest security, which enables you to store and manage master key parts using smart cards.
 
-- [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
+- Option 2: [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
 
-    If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`) where the recovery crypto units are enabled, you can choose this approach where the master key is randomly generated within a recovery crypto unit and then exported to other crypto units.
+    If you create your service instance in Dallas (`us-south`) or Washington DC (`us-east`) where the recovery crypto units are enabled, you can choose this approach where the master key is randomly generated within a recovery crypto unit and then exported to other crypto units. With this option, your manager key parts are safely stored the recovery crypto units in IBM Cloud. You don't need additional hardware for master key management. 
 
-- [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
+- Option 3: [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
 
     You can also initialize your service instance using master key parts that are stored in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. 
 
@@ -328,7 +328,7 @@ Keys that are created in the service are symmetric 256-bit keys, supported by th
 {: help}
 {: support}
 
-You can bring your existing keys to the service, so that you can still use the same encryption keys to protect your applications or data.
+You can bring your existing keys to the service so that you can still use the same encryption keys to protect your applications or data.
 
 Complete the following steps to add an existing key.
 
@@ -437,7 +437,7 @@ To perform cryptographic operations with the PKCS #11 API, complete the followin
 {: help}
 {: support}
 
-To perform cryptographic operations with the GREP11 API, you need to make sure your applications are developed with programming languages supported by gRPC.
+To perform cryptographic operations with the GREP11 API, you need to make sure your applications are developed with programming languages that are supported by gRPC.
 
 The following procedure uses Golang code as an example to test GREP11 functions.
 

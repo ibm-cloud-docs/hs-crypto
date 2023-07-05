@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-14"
+lastupdated: "2023-07-04"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -85,7 +85,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     ```
     {: codeblock}
 
-    In production environments, it is suggested to provide the passwords for the signature key files or the tokens for the signing service during the process of applying Terraform instead of writing it in plaintext in the configuration file. In that case, you are prompted to enter the authentication passwords or tokens when you run Terraform commands. After the instance initialization, the values that you enter for the passwords or tokens are stored in a `.tfstate` file. For more information about securing sensitive data in Terraform, see [Sensitive Data in State](https://www.terraform.io/docs/language/state/sensitive-data.html){: external}.
+    In production environments, it is suggested to provide the passwords for the signature key files or the tokens for the signing service during the process of applying Terraform instead of writing it in plain text in the configuration file. In that case, you are prompted to enter the authentication passwords or tokens when you run Terraform commands. After the instance initialization, the values that you enter for the passwords or tokens are stored in a `.tfstate` file. For more information about securing sensitive data in Terraform, see [Sensitive Data in State](https://www.terraform.io/docs/language/state/sensitive-data.html){: external}.
     {: important}
 
     The following table lists supported parameters when you create and initialize a service instance with Terraform:

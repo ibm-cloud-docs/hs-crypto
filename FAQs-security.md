@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-04"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, data security, compliance
 
@@ -25,7 +25,7 @@ Read to get answers for questions about data security in {{site.data.keyword.clo
 {: faq}
 {: support}
 
-IBM or any third-party users do not have access to your service instances or your keys. By loading the master key to your service instance, you take the ownership of the cloud HSM and you have the exclusive control of your resources managed by {{site.data.keyword.hscrypto}}.
+IBM or any third-party users do not have access to your service instances or your keys. By loading the master key to your service instance, you take the ownership of the cloud HSM and you have the exclusive control of your resources that are managed by {{site.data.keyword.hscrypto}}.
 
 {{site.data.keyword.hscrypto}} follows the {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) standard. You can [manage user access by assigning different IAM roles](/docs/hs-crypto?topic=hs-crypto-manage-access) and [grant access to specific keys](/docs/hs-crypto?topic=hs-crypto-grant-access-keys) to enable more granular access control.
 
@@ -37,7 +37,7 @@ IBM or any third-party users do not have access to your service instances or you
 
 {{site.data.keyword.hscrypto}} sets up signature keys for crypto unit administrators during the service initialization process to ensure that the master key parts are loaded to the HSM with no interception.
 
-A master key is composed of two or three master key parts. Each master key custodian owns one encrypted master key part. In most cases, a master key custodian can also be a crypto unit administrator. In order to load the master key to the service instance, master key custodians need to load their key parts separately using their own administrator signature keys.
+A master key is composed of two or three master key parts. Each master key custodian owns one encrypted master key part. In most cases, a master key custodian can also be a crypto unit administrator. In order to load the master key to the service instance, master key custodians need to load their key parts separately by using their own administrator signature keys.
 
 A signature key is composed of an asymmetric key pair. The private part of the signature key is owned by the crypto unit administrator, while the public part is placed in a certificate that is used to define an administrator and never leaves the crypto unit.
 
@@ -59,8 +59,8 @@ The Federal Information Processing Standard (FIPS) Publication 140-2 is a US gov
 
 - **Level 1**: The lowest level of security. No specific physical security mechanisms are required in a Security Level 1 cryptographic module beyond the basic requirement for production-grade components.
 - **Level 2**: Improves the physical security mechanisms of a Level 1 cryptographic module by requiring features that show evidence of tampering including tamper-evident coatings or seals that must be broken to attain physical access to the plaintext cryptographic keys and critical security parameters (CSPs) within the module, or pick-resistant locks on covers or doors to protect against unauthorized physical access. Security Level 2 requires, at minimum, role-based authentication in which a cryptographic module authenticates the authorization of an operator to assume a specific role and perform a corresponding set of services.
-- **Level 3**: Provides a high probability of detecting and responding to attempts at physical access, use, or modification of the cryptographic module. The physical security mechanisms can include the use of strong enclosures and tamper-detection and response circuitry that zeroizes all plaintext CSPs when the removable covers or doors of the cryptographic module are opened. Security Level 3 requires identity-based authentication mechanisms, enhancing the security provided by the role-based authentication mechanisms specified for Security Level 2.
-- **Level 4**: The highest level of security. At this security level, the physical security mechanisms provide a complete envelope of protection around the cryptographic module with the intent of detecting and responding to all unauthorized attempts at physical access. Penetration of the cryptographic module enclosure from any direction has a high probability of being detected, resulting in the immediate zeroization of all plaintext CSPs.
+- **Level 3**: Provides a high probability of detecting and responding to attempts at physical access, use, or modification of the cryptographic module. The physical security mechanisms can include the use of strong enclosures and tamper-detection and response circuitry that zeroizes all plain text CSPs when the removable covers or doors of the cryptographic module are opened. Security Level 3 requires identity-based authentication mechanisms, enhancing the security provided by the role-based authentication mechanisms specified for Security Level 2.
+- **Level 4**: The highest level of security. At this security level, the physical security mechanisms provide a complete envelope of protection around the cryptographic module with the intent of detecting and responding to all unauthorized attempts at physical access. Penetration of the cryptographic module enclosure from any direction has a high probability of being detected, resulting in the immediate zeroization of all plain text CSPs.
 
     Security Level 4 cryptographic modules are useful for operation in physically unprotected environments. Security Level 4 also protects a cryptographic module against a security compromise because of environmental conditions or fluctuations outside of the module's normal operating ranges for voltage and temperature. Intentional excursions beyond the normal operating ranges can be used by an attacker to prevent a cryptographic module's defenses.
 

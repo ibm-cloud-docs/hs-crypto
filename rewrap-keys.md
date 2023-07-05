@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: rewrap key, reencrypt data encryption key, rewrap api, key id
 
@@ -20,14 +20,14 @@ subcollection: hs-crypto
 Reencrypt your data encryption keys by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management service API.
 {: shortdesc}
 
-When you [rotate a root key in {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro), new cryptographic key material becomes available for protecting the data encryption keys (DEKs) that are associated with the root key. With the rewrap API, you can reencrypt or rewrap your DEKS without exposing the keys in their plaintext form.
+When you [rotate a root key in {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro), new cryptographic key material becomes available for protecting the data encryption keys (DEKs) that are associated with the root key. With the rewrap API, you can reencrypt or rewrap your DEKS without exposing the keys in their plain text form.
 
 To learn how envelope encryption helps you control the security of at-rest data in the cloud, see [Protecting data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
 
 ## Rewrapping keys by using the API
 {: #rewrap-key-api}
 
-You can reencrypt a specified data encryption key (DEK) with a root key that you manage in {{site.data.keyword.hscrypto}}, without exposing the DEK in the plaintext form.
+You can reencrypt a specified data encryption key (DEK) with a root key that you manage in {{site.data.keyword.hscrypto}}, without exposing the DEK in the plain text form.
 
 Rewrapping keys works by combining `unwrap` and `wrap` calls to the service. For example, you can emulate a `rewrap` operation by first calling the `unwrap` API to access a DEK, and then calling the `wrap` API to reencrypt the DEK by using the newest root key material.
 {: note}
@@ -70,7 +70,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
     | `key_ID` | **Required.** The unique identifier for the root key that you used for the initial wrap request. |
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. It is therefore suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
+    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
     | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
     | `encrypted_data_key` | **Required.** The `ciphertext` value that was returned by the original wrap operation. |
     {: caption="Table 1. Describes the variables needed to rewrap keys in {{site.data.keyword.hscrypto}}." caption-side="bottom"}

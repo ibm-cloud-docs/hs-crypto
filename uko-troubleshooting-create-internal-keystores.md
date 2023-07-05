@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-04"
 
 keywords: troubleshoot, problems, known issues, can't create internal keystores
 
@@ -18,10 +18,10 @@ subcollection: hs-crypto
 {: #troubleshoot-create-internal-keystores}
 {: troubleshoot}
 
-When you try to add additional internal KMS keystores, an error occurs.
+When you try to add more internal KMS keystores, an error occurs.
 {: shortdesc}
 
-You receive the following error message when you try to add additional internal KMS keystores:
+You receive the following error message when you try to add more internal KMS keystores:
 {: tsSymptoms}
 
 - From UI:
@@ -36,6 +36,6 @@ You receive the following error message when you try to add additional internal 
 For a single service instance, you can create a maximum of 50 internal KMS keystores. You have reached the limits.
 {: tsCauses}
 
-Empty and delete an existing keystore, so that you can create a new one.
+Empty and delete an existing keystore so that you can create a new one.
 {: tsResolve}
 

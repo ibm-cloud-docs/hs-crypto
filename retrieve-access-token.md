@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: access token, api key, iam token, generate access token, generate iam token, get access token, iam token api, token cli
 
@@ -20,7 +20,7 @@ subcollection: hs-crypto
 Get started with the {{site.data.keyword.hscrypto}} key management service API by authenticating your requests to the service with an {{site.data.keyword.iamlong}} (IAM) access token.
 {: shortdesc}
 
-An access token is a temporary credential that expires after 1 hour. After the acquired token expires, you must generate a new token to continue calling {{site.data.keyword.cloud_notm}} or service APIs. To maintain access to the service, regenerate the access token for your API key on a regular basis.
+An access token is a temporary credential that expires after 1 hour. After the acquired token expires, you must generate a new token to continue calling {{site.data.keyword.cloud_notm}} or service APIs. To maintain access to the service, regenerate the access token for your API key regularly.
 {: important}
 
 ## Retrieving an access token with the CLI

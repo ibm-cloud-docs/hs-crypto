@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-27"
+lastupdated: "2023-07-05"
 
 keywords: security and compliance, ibmcloud security compliance, compliant, data security, data encryption, data delete, common criteria, fips, iso, gdpr
 
@@ -14,7 +14,7 @@ subcollection: hs-crypto
 
 
 
-# Security and compliance
+# Security and compliance - Standard Plan 
 {: #security-and-compliance}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} has data security strategies in place to meet your security and compliance needs and ensure that your data remains protected in the cloud.
@@ -114,4 +114,4 @@ For more information, see [{{site.data.keyword.cloud_notm}} regional compliance 
 ### SOC 2 Type 1
 {: #soc2-type1}
 
-{{site.data.keyword.hscrypto}} is SOC 2 Type 1 certified. For information about requesting an {{site.data.keyword.cloud_notm}} SOC 2 report, see [{{site.data.keyword.cloud_notm}} global compliance programs](https://www.ibm.com/cloud/compliance/global){: external}.
+{{site.data.keyword.hscrypto}} is SOC 2 Type 1 certified. For more information about requesting an {{site.data.keyword.cloud_notm}} SOC 2 report, see [{{site.data.keyword.cloud_notm}} global compliance programs](https://www.ibm.com/cloud/compliance/global){: external}.

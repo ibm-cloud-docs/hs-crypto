@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-04-13"
+lastupdated: "2023-07-05"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -14,7 +14,7 @@ subcollection: hs-crypto
 
 
 
-# Master key rotation
+# Master key rotation - Standard Plan 
 {: #master-key-rotation-intro}
 
 After you load a master key to your {{site.data.keyword.hscrypto}} instance, you can rotate the master key on demand to meet industry standards and cryptographic best practices.
@@ -50,7 +50,7 @@ The following flow shows how master key rotation works in this mode:
 
 1. Load the new master key register by clicking the **Load** button in the Trusted Key Entry application. The state of the new master key register is changed from `Empty` to `Full uncommitted`.
 2. Commit the new master key value by clicking the **Commit** button in the Trusted Key Entry application. The new master key register state is changed to `Full committed`.
-3. Reencrypt key storage and activate the new master key by clicking on the **Rotate** button in the Trusted Key Entry application:
+3. Reencrypt key storage and activate the new master key by clicking the **Rotate** button in the Trusted Key Entry application:
     1. Encryption keys in key storage are decrypted by using the value in the current master key register and then reencrypted by using the value in the new master key register. The rewrapping takes place inside the hardware security module (HSM), so it's secure.
     2. The new master key is activated and loaded to the current master key register in `Valid` state, and the new master key register is cleared and back to `Empty` state.
 

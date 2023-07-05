@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-06-19"
+lastupdated: "2023-07-05"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -49,7 +49,7 @@ Complete the following steps to order smart cards:
     * Two certificate authority smart cards
     * Ten EP11 smart cards
 
-    For how to calculate the number of smart cards needed, see [FAQ: Are there any recommendations on how to set up smart cards?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup).
+    For how to calculate the number of smart cards needed, see [FAQ: Are there any recommendations on how to set up smart cards?](/docs/hs-crypto?topic=hs-crypto-faq-provisioning-operations#faq-smart-card-setup)
 
 2.  Contact your IBM Sales representative or your IBM Business Partner and provide the following information. If you need assist in finding an IBM Sales representative, you can reach out `zcat@ibm.com`.
 
@@ -136,7 +136,7 @@ Before you install the smart card reader driver on a Linux operating system, dow
         {: pre}
 
     2. Run the `install.sh` script, which is included in the downloaded package of the smart card reader driver.
-    3. On some Ubuntu configurations, the PC/SC daemon does not start automatically on the first PC/SC call.  To avoid this problem, run the following command:
+    3. On some Ubuntu configurations, the PC/SC daemon does not start automatically on the first PC/SC call. To avoid this problem, run the following command:
         
         ```
         sudo systemctl enable pcscd.socket

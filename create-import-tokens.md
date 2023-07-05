@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-04"
 
 keywords: create import token, secure import, key material, key wrapping key, import token api, bring your own key, byok
 
@@ -146,7 +146,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/import_token
 {: #retrieve-import-token-cli}
 {: cli}
 
-Complete the following steps to retrieve an import token using the {{site.data.keyword.keymanagementserviceshort}} CLI, which is integrated in {{site.data.keyword.hscrypto}}:
+Complete the following steps to retrieve an import token by using the {{site.data.keyword.keymanagementserviceshort}} CLI, which is integrated in {{site.data.keyword.hscrypto}}:
 
 1. [Set up the {{site.data.keyword.keymanagementserviceshort}} CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli).
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: troubleshoot, problems, known issues, unable to change signature thresholds
 
@@ -28,7 +28,7 @@ You receive an error message similar to the following one:
 > Error reported by EP11 crypto module.
 > Return code: 209
 > Reason code: 71
-> Error message: Change not allowed.  You are not allowed to change a threshold value if the corresponding attribute control bit is reset.
+> Error message: Change not allowed. You are not allowed to change a threshold value if the corresponding attribute control bit is reset.
 
 
 The TKE plug-in through version 0.0.11 restricts the ability to set the signature threshold and revocation signature threshold to a value other than one. The restriction can be removed by zeroizing the crypto unit.

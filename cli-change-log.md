@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-06-08"
+lastupdated: "2023-07-04"
 
 keywords: change log for tke, updates to tke cli plugin, updates to cert manager cli plugin
 
@@ -56,6 +56,6 @@ The following updates on the {{site.data.keyword.uko_full_notm}} CLI version 0.0
 ### Version 0.0.1
 {: #uko-cli-001}
 
-Version 0.0.1 of the {{site.data.keyword.uko_full_notm}} CLI plug-in was released on June 3 2022.
+Version 0.0.1 of the {{site.data.keyword.uko_full_notm}} CLI plug-in was released on 3 June 2022.
 
 This is the first release of the {{site.data.keyword.uko_full_notm}} CLI. You can use it to manage vaults, keystores, and keys for {{site.data.keyword.hscrypto}} instances with the {{site.data.keyword.uko_full_notm}} plan.

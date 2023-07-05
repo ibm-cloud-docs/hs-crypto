@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-26"
+lastupdated: "2023-07-04"
 
 keywords: Unified Key Orchestrator, UKO keystore, create keystore, internal keystore， KMS keystore
 
@@ -24,7 +24,7 @@ An internal keystore is a repository that stores the cryptographic keys within y
 Before you create an internal KMS keystore, keep in mind the following considerations:
 
 - You can create up to five internal KMS keystores to manage your keys for free. The maximum number of internal KMS keystores for a service instance is 50. 
-- To enable cross-region key distribution or specified access permissions, you might want to create additional keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Other currencies are applied based on the region the service instance is provisioned in.
+- To enable cross-region key distribution or specified access permissions, you might want to create additional keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Other currencies are applied based on the region that the service instance is provisioned in.
 - A managed key can be used for encryption and decryption only after you activate it in at least one target keystore. 
 - A target keystore can be assigned to only one vault.
 
@@ -44,7 +44,7 @@ To create an internal KMS keystore by using the console, complete the following 
    If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
 
 5. Under **Keystore type**, select **IBM Cloud KMS Keystore** and click **Next**.
-    You can change the currency displayed by selecting your country or location.
+    You can change the currency that is displayed by selecting your country or location.
     {: tip}
 6. Under **Keystore properties**, enter a name in **Keystore name**. Optionally, you can add an extended description to your keystore in the **Description** section. And then, click **Next**.
   

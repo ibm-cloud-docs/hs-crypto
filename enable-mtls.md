@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-06-16"
+lastupdated: "2023-07-04"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -154,7 +154,7 @@ After you set up the client CA certificate, you are no longer able to access EP1
     ```
     {: pre}
 
-    This command lists all the available client CA certificates that are managed by you on the server. If the list contains the certificate that is previously uploaded, it means the action is successfully completed.
+    This command lists all the available client CA certificates that are managed by you on the server. If the list contains the certificate that is previously uploaded, it means that the action is successfully completed.
 
 ## Step 3: Establish mutual TLS connections for EP11 applications
 {: #enable-authentication-ep11-step3-enable-tls}

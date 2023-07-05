@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-04"
 
 keywords: general frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips
 
@@ -37,7 +37,7 @@ Read to get answers for general questions about {{site.data.keyword.cloud}} {{si
 
 {{site.data.keyword.uko_full_notm}} provides the only cloud native single-point-of-control of encryption keys across hybrid multicloud environments of your enterprise. 
 
-* {{site.data.keyword.uko_full_notm}} enables you with both Keep Your Own Key and Bring Your Own Key capabilities from across hybrid multicloud environments that includes on-premises environments.  
+* {{site.data.keyword.uko_full_notm}} enables you with both Keep Your Own Key and Bring Your Own Key capabilities from across hybrid multicloud environments that include on-premises environments.  
 * {{site.data.keyword.uko_full_notm}} manages and orchestrates all keys from the multicloud environments on {{site.data.keyword.cloud_notm}}.
 
 ## What is a key management service?
@@ -74,7 +74,7 @@ A cloud HSM is a cloud-based hardware security module to manage your own encrypt
 {: faq}
 {: support}
 
-IBM has an IaaS {{site.data.keyword.cloud_notm}} HSM service, which is different from the {{site.data.keyword.hscrypto}}. {{site.data.keyword.cloud_notm}} HSM is FIPS 140-2 Level 3 compliant. {{site.data.keyword.hscrypto}} provides a managed HSM service where no special skills are needed to manage the HSM other than loading of the keys.  {{site.data.keyword.hscrypto}} is the only cloud service that provides HSMs that are built on FIPS 140-2 Level 4 certified hardware and that allow users to have control of the master key.
+IBM has an IaaS {{site.data.keyword.cloud_notm}} HSM service, which is different from the {{site.data.keyword.hscrypto}}. {{site.data.keyword.cloud_notm}} HSM is FIPS 140-2 Level 3 compliant. {{site.data.keyword.hscrypto}} provides a managed HSM service where no special skills are needed to manage the HSM other than loading of the keys. {{site.data.keyword.hscrypto}} is the only cloud service that provides HSMs that are built on FIPS 140-2 Level 4 certified hardware and that allow users to have control of the master key.
 
 ## How is {{site.data.keyword.hscrypto}} different from {{site.data.keyword.keymanagementserviceshort}}?
 {: #faq-differentiators-key-protect}

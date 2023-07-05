@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-04-11"
+lastupdated: "2023-07-05"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -138,7 +138,7 @@ To load the new master key register, complete the following tasks with the {{sit
 ### Step 1: Create one or more signature keys
 {: #step1-create-signature-keys}
 
-To load the new master key register, A crypto unit administrator must sign the command with a unique signature key. The first step is to create one or more signature key files that contain signature keys on your workstation. 
+To load the new master key register, a crypto unit administrator must sign the command with a unique signature key. The first step is to create one or more signature key files that contain signature keys on your workstation. 
 
 For security considerations, the signature key owners can be different people from the master key part owners. The signature key owner needs to be the only person who knows the password that is associated with the signature key file.
 {: important}

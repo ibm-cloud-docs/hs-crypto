@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-07-05"
 
 keywords: grant access, iam, iam access, assign access, access policy, key access
 
@@ -89,7 +89,7 @@ Use the retrieved key ID to create an access policy:
 ## Granting access to key rings in an instance
 {: #grant-access-key-ring-level}
 
-A key ring is a collection of keys located within your service instance, in which you can restrict access through IAM access policy. For information on key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
+A key ring is a collection of keys that are located within your service instance, in which you can restrict access through IAM access policy. For more information on key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
 
 You can grant access to key rings within a {{site.data.keyword.hscrypto}} instance by using the
 {{site.data.keyword.cloud_notm}} console, IAM API, or IAM CLI.

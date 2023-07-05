@@ -37,29 +37,29 @@ toc:
           - data-security.md
           - hs-crypto-concepts.md
           - topicgroup:
-              label: About service instance initialization
+              label: About service instance initialization - Standard Plan
               topics:
               - instance-initialization-overview.md
               - instance-initialization-mode.md
           - topicgroup:
-              label: About key management service
+              label: About key management service - Standard Plan
               topics:
               - importing-keys.md
               - envelope-encryption.md
               - key-states.md
           - topicgroup:
-              label: About cloud hardware security module
+              label: About cloud hardware security module - Standard Plan
               topics:
               - introduce-hsm.md
               - introduce-pkcs11.md
               - introduce-grep11.md
           - topicgroup:
-              label: About key rotation
+              label: About key rotation - Standard Plan
               topics:
               - introduce-master-key-rotation.md
               - introduce-root-key-rotation.md
       - topicgroup:
-          label: Understanding Hyper Protect Crypto Services with Unified Key Orchestrator
+          label: Understanding Hyper Protect Crypto Services with Unified Key Orchestrator Plan
           topics:
           - uko-overview.md
           - uko-architecture-workload-isolation.md
@@ -67,23 +67,23 @@ toc:
           - uko-data-security.md
           - uko-hs-crypto-concepts.md
           - topicgroup:
-              label: About service instance initialization
+              label: About service instance initialization - Unified Key Orchestrator Plan
               topics:
               - uko-instance-initialization-overview.md
               - uko-instance-initialization-mode.md
           - topicgroup:
-              label: About Unified Key Orchestrator
+              label: About Unified Key Orchestrator 
               topics:
               - uko-introduction.md
               - uko-key-states.md
           - topicgroup:
-              label: About cloud hardware security module
+              label: About cloud hardware security module - Unified Key Orchestrator Plan
               topics:
               - uko-introduce-hsm.md
               - uko-introduce-pkcs11.md
               - uko-introduce-grep11.md
           - topicgroup:
-              label: About key rotation
+              label: About key rotation - Unified Key Orchestrator Plan
               topics:   
               - uko-introduce-master-key-rotation.md   
               - uko-introduce-key-rotation.md

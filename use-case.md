@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases
 
@@ -15,7 +15,7 @@ subcollection: hs-crypto
 
 
 
-# Use cases - {{site.data.keyword.hscrypto}} Standard Plan
+# Use cases - Standard Plan 
 {: #use-cases}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} can be used as a key management service to pervasively protect data at rest in the {{site.data.keyword.cloud_notm}} as well as a cloud HSM for general-purpose cryptographic operations.
@@ -33,7 +33,7 @@ Encryption keys that are generated and protected by {{site.data.keyword.hscrypto
 ###  Data at rest encryption with KYOK
 {: #data-at-rest-encryption-kyok}
 
-Keys are protected by customer-managed dedicated HSMs, which means, only you have access to your data. The cryptographic capabilities of  {{site.data.keyword.hscrypto}} are built on top of a FIPS 140-2 Level 4 Certified Hardware Security Module. You can benefit from the cryptographic capabilities of {{site.data.keyword.hscrypto}} for both your new and existing workloads. The {{site.data.keyword.keymanagementservicefull_notm}} API is integrated for generating and protecting encryption keys.
+Keys are protected by customer-managed dedicated HSMs, which means, only you have access to your data. The cryptographic capabilities of {{site.data.keyword.hscrypto}} are built on top of a FIPS 140-2 Level 4 Certified Hardware Security Module. You can benefit from the cryptographic capabilities of {{site.data.keyword.hscrypto}} for both your new and existing workloads. The {{site.data.keyword.keymanagementservicefull_notm}} API is integrated for generating and protecting encryption keys.
 
 Refer to [Apply end to end security to a cloud application](/docs/solution-tutorials?topic=solution-tutorials-cloud-e2e-security) and [Create secure microservices that write to a consolidated database](https://developer.ibm.com/patterns/create-a-secured-microservices-and-deploy-it-to-a-consolidated-database/){: external} for tutorials on how to encrypt cloud applications by using the key management service API of {{site.data.keyword.hscrypto}}.
 
