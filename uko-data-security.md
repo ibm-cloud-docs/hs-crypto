@@ -14,7 +14,7 @@ subcollection: hs-crypto
 
 
 
-# Security and compliance - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}
+# Security and compliance - {{site.data.keyword.uko_full_notm}} Plan
 {: #uko-security-and-compliance}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} has data security strategies in place to meet your security and compliance needs and ensure that your data remains protected in the cloud.

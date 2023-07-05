@@ -14,7 +14,7 @@ subcollection: hs-crypto
 
 
 
-# Master key rotation
+# Master key rotation - Standard Plan 
 {: #master-key-rotation-intro}
 
 After you load a master key to your {{site.data.keyword.hscrypto}} instance, you can rotate the master key on demand to meet industry standards and cryptographic best practices.

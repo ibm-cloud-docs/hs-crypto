@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-06-27"
+lastupdated: "2023-07-05"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle
 
@@ -14,7 +14,7 @@ subcollection: hs-crypto
 
 
 
-# Monitoring the lifecycle of encryption keys
+# Monitoring the lifecycle of encryption keys - Standard Plan 
 {: #key-states}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} follows the security guidelines by [NIST SP 800-57 for key states](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0){: external}.

@@ -14,7 +14,7 @@ subcollection: hs-crypto
 
 
 
-# Components and concepts - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}
+# Components and concepts - {{site.data.keyword.uko_full_notm}} Plan
 {: #uko-understand-concepts}
 
 Before you can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to manage encryption keys and protect data, learn the basic components and concepts of {{site.data.keyword.hscrypto}}.

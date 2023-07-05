@@ -15,7 +15,7 @@ subcollection: hs-crypto
 
 
 
-# Introducing PKCS #11
+# Introducing PKCS #11 - Standard Plan 
 {: #pkcs11-intro}
 
 PKCS #11 is a standard that specifies an application programming interface (API), called *Cryptoki*, for devices that hold cryptographic information and perform cryptographic functions. The Cryptoki API follows a simple object-based approach. The approach addresses the goals of technology independence and resource sharing, presenting to applications a common, logical view of the device called a *cryptographic token*.

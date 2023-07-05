@@ -58,7 +58,7 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_understanding_hyper_protect_crypto_services_standard_plan}
 
 
-[Overview - {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-overview#overview)
+[Overview - Standard Plan](/docs/hs-crypto?topic=hs-crypto-overview#overview)
 
 * [Why {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-overview#why_hpcs)
 
@@ -68,7 +68,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-overview#overview-next)
 
-[Service architecture - {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation#architecture-workload-isolation)
+[Service architecture - Standard Plan](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation#architecture-workload-isolation)
 
 * [{{site.data.keyword.hscrypto}} architecture](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation#architecture)
 
@@ -76,7 +76,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Service dependencies](/docs/hs-crypto?topic=hs-crypto-architecture-workload-isolation#service_dependencies)
 
-[Use cases - {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-use-cases#use-cases)
+[Use cases - Standard Plan](/docs/hs-crypto?topic=hs-crypto-use-cases#use-cases)
 
 * [Pervasively protecting data at rest in the cloud](/docs/hs-crypto?topic=hs-crypto-use-cases#data-at-rest-encryption)
 
@@ -86,24 +86,24 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-use-cases#use-case-next)
 
-[Security and compliance](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#security-and-compliance)
+[Security and compliance - Standard Plan](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#security-and-compliance)
 
 * [Security readiness](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#security-ready)
 
 * [Compliance readiness](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#compliance-ready)
 
-[Components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#understand-concepts)
+[Components and concepts - Standard Plan](/docs/hs-crypto?topic=hs-crypto-understand-concepts#understand-concepts)
 
 * [Key management service](/docs/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts)
 
 * [Cloud hardware security module](/docs/hs-crypto?topic=hs-crypto-understand-concepts#cloud-hsm-concepts)
 
 
-### About service instance initialization
-{: #sitemap_about_service_instance_initialization}
+### About service instance initialization - Standard Plan
+{: #sitemap_about_service_instance_initialization_standard_plan}
 
 
-[Initializing your service instance](/docs/hs-crypto?topic=hs-crypto-introduce-service#introduce-service)
+[Initializing your service instance - Standard Plan](/docs/hs-crypto?topic=hs-crypto-introduce-service#introduce-service)
 
 * [Understanding administrators and signature keys](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-crypto-unit-admin)
 
@@ -113,7 +113,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-introduce-service#introduce-instance-initialization-next)
 
-[Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#initialize-instance-mode)
+[Introducing service instance initialization approaches - Standard Plan](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#initialize-instance-mode)
 
 * [Initializing service instances by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-management-utilities)
 
@@ -124,11 +124,11 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#initialize-instance-mode-next)
 
 
-### About key management service
-{: #sitemap_about_key_management_service}
+### About key management service - Standard Plan
+{: #sitemap_about_key_management_service_standard_plan}
 
 
-[Bringing your encryption keys to the cloud](/docs/hs-crypto?topic=hs-crypto-importing-keys#importing-keys)
+[Bringing your encryption keys to the cloud - Standard Plan](/docs/hs-crypto?topic=hs-crypto-importing-keys#importing-keys)
 
 * [Planning ahead for importing key material](/docs/hs-crypto?topic=hs-crypto-importing-keys#plan-ahead)
 
@@ -136,7 +136,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-importing-keys#importing-keys-next)
 
-[Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption#envelope-encryption)
+[Protecting your data with envelope encryption - Standard Plan](/docs/hs-crypto?topic=hs-crypto-envelope-encryption#envelope-encryption)
 
 * [Keys in envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption#key-types)
 
@@ -148,7 +148,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-envelope-encryption#envelope-encryption-next)
 
-[Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-key-states#key-states)
+[Monitoring the lifecycle of encryption keys - Standard Plan](/docs/hs-crypto?topic=hs-crypto-key-states#key-states)
 
 * [Key states and transitions](/docs/hs-crypto?topic=hs-crypto-key-states#key-transitions)
 
@@ -157,23 +157,23 @@ Find what you are looking for in the compilation of topics that are available in
 * [Monitoring for lifecycle changes](/docs/hs-crypto?topic=hs-crypto-key-states#monitor-lifecycle-changes)
 
 
-### About cloud hardware security module
-{: #sitemap_about_cloud_hardware_security_module}
+### About cloud hardware security module - Standard Plan
+{: #sitemap_about_cloud_hardware_security_module_standard_plan}
 
 
-[Introducing cloud HSM](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm#introduce-cloud-hsm)
+[Introducing cloud HSM - Standard Plan](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm#introduce-cloud-hsm)
 
 * [What is cloud HSM?](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm#what-is-cloud-hsm)
 
 * [Performing cryptographic operations by accessing the cloud HSM](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm#cryptography-cloud-hsm)
 
-[Introducing PKCS #11](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-intro)
+[Introducing PKCS #11 - Standard Plan](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-intro)
 
 * [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-components)
 
 * [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#grep11-support-post-quantum)
 
-[Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11-intro#grep11-intro)
+[Introducing EP11 over gRPC - Standard Plan](/docs/hs-crypto?topic=hs-crypto-grep11-intro#grep11-intro)
 
 * [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-grep11-intro#grep11-support-post-quantum)
 
@@ -182,13 +182,13 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_about_key_rotation}
 
 
-[Master key rotation](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#master-key-rotation-intro)
+[Master key rotation - Standard Plan](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#master-key-rotation-intro)
 
 * [How master key rotation works](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#how-master-key-rotation-works)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#master-key-rotation-next)
 
-[Root key rotation](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#root-key-rotation-intro)
+[Root key rotation - Standard Plan](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#root-key-rotation-intro)
 
 * [Comparing your root key rotation options](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#compare-key-rotation-options)
 
@@ -199,11 +199,11 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#root-key-rotation-next)
 
 
-## Understanding Hyper Protect Crypto Services with Unified Key Orchestrator
-{: #sitemap_understanding_hyper_protect_crypto_services_with_unified_key_orchestrator}
+## Understanding Hyper Protect Crypto Services with Unified Key Orchestrator Plan
+{: #sitemap_understanding_hyper_protect_crypto_services_with_unified_key_orchestrator_plan}
 
 
-[Overview - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-overview)
+[Overview - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-overview)
 
 * [Why {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-why_hpcs)
 
@@ -213,7 +213,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-overview-next)
 
-[Service architecture - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation#uko-architecture-workload-isolation)
+[Service architecture - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation#uko-architecture-workload-isolation)
 
 * [{{site.data.keyword.hscrypto}} architecture](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation#uko-architecture)
 
@@ -221,7 +221,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Service dependencies](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation#uko-service_dependencies)
 
-[Use cases - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-cases)
+[Use cases - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-cases)
 
 * [Pervasively protecting data at rest in the cloud](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-data-at-rest-encryption)
 
@@ -233,13 +233,13 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-case-next)
 
-[Security and compliance - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-security-and-compliance#uko-security-and-compliance)
+[Security and compliance - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-security-and-compliance#uko-security-and-compliance)
 
 * [Security readiness](/docs/hs-crypto?topic=hs-crypto-uko-security-and-compliance#uko-security-ready)
 
 * [Compliance readiness](/docs/hs-crypto?topic=hs-crypto-uko-security-and-compliance#uko-compliance-ready)
 
-[Components and concepts - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-understand-concepts)
+[Components and concepts - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-understand-concepts)
 
 * [Key management service](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-key-management-concepts)
 
@@ -248,11 +248,11 @@ Find what you are looking for in the compilation of topics that are available in
 * [{{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-unified-key-orchestrator-concepts)
 
 
-### About service instance initialization - Hyper Protect Crypto Services with Unified Key Orchestrator
-{: #sitemap_about_service_instance_initialization_hyper_protect_crypto_services_with_unified_key_orchestrator}
+### About service instance initialization - Unified Key Orchestrator Plan
+{: #sitemap_about_service_instance_initialization_unified_key_orchestrator_plan}
 
 
-[Initializing your service instance - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-introduce-service#uko-introduce-service)
+[Initializing your service instance - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-introduce-service#uko-introduce-service)
 
 * [Understanding administrators and signature keys](/docs/hs-crypto?topic=hs-crypto-uko-introduce-service#uko-understand-crypto-unit-admin)
 
@@ -262,7 +262,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-introduce-service#uko-introduce-instance-initialization-next)
 
-[Introducing service instance initialization approaches - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-initialize-instance-mode)
+[Introducing service instance initialization approaches - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-initialize-instance-mode)
 
 * [Initializing service instances by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-instance-initialization-management-utilities)
 
@@ -296,32 +296,32 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-key-states#uko-key-states-next)
 
 
-### About cloud hardware security module - Hyper Protect Crypto Services with Unified Key Orchestrator
-{: #sitemap_about_cloud_hardware_security_module_hyper_protect_crypto_services_with_unified_key_orchestrator}
+### About cloud hardware security module - Unified Key Orchestrator Plan
+{: #sitemap_about_cloud_hardware_security_module_unified_key_orchestrator_plan}
 
 
-[Introducing cloud HSM - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-introduce-cloud-hsm#uko-introduce-cloud-hsm)
+[Introducing cloud HSM - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-introduce-cloud-hsm#uko-introduce-cloud-hsm)
 
 * [What is cloud HSM?](/docs/hs-crypto?topic=hs-crypto-uko-introduce-cloud-hsm#uko-what-is-cloud-hsm)
 
 * [Performing cryptographic operations by accessing the cloud HSM](/docs/hs-crypto?topic=hs-crypto-uko-introduce-cloud-hsm#uko-cryptography-cloud-hsm)
 
-[Introducing PKCS #11 - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-intro)
+[Introducing PKCS #11 - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-intro)
 
 * [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-components)
 
 * [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#grep11-support-post-quantum)
 
-[Introducing EP11 over gRPC - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro#uko-grep11-intro)
+[Introducing EP11 over gRPC - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro#uko-grep11-intro)
 
 * [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro#grep11-support-post-quantum)
 
 
-### About key rotation - Hyper Protect Crypto Services with Unified Key Orchestrator
-{: #sitemap_about_key_rotation_hyper_protect_crypto_services_with_unified_key_orchestrator}
+### About key rotation - Unified Key Orchestrator Plan
+{: #sitemap_about_key_rotation_unified_key_orchestrator_plan}
 
 
-[Master key rotation - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-master-key-rotation-intro)
+[Master key rotation - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-master-key-rotation-intro)
 
 * [How master key rotation works](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-how-master-key-rotation-works)
 
@@ -331,7 +331,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-master-key-rotation-next)
 
-[Managed key rotation - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#managed-key-rotation-intro)
+[Managed key rotation - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#managed-key-rotation-intro)
 
 * [How managed key rotation works](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#how-managed-key-rotation-works)
 

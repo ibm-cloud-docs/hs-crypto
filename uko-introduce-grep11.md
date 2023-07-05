@@ -15,7 +15,7 @@ subcollection: hs-crypto
 
 
 
-# Introducing EP11 over gRPC - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}
+# Introducing EP11 over gRPC - {{site.data.keyword.uko_full_notm}} Plan
 {: #uko-grep11-intro}
 
 Enterprise PKCS #11 (EP11) is designed for customers that are seeking support for open standards and enhanced security. The EP11 library provides a stateless interface, which is similar to the industry-standard [Public-Key Cryptography Standards (PKCS) #11 API](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}. PKCS #11 API defines a platform-independent API to cryptographic tokens, such as hardware security modules (HSM) and smart cards. Existing applications that use PKCS #11 can benefit from enhanced security with secure key cryptography as well as a stateless interface, which makes the cryptographic operations much more efficient.

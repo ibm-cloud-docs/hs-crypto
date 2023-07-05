@@ -14,7 +14,7 @@ subcollection: hs-crypto
 
 
 
-# Introducing service instance initialization approaches - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}
+# Introducing service instance initialization approaches - {{site.data.keyword.uko_full_notm}} Plan
 {: #uko-initialize-instance-mode}
 
 Depending on your business needs and security requirements, {{site.data.keyword.hscrypto}} provides you with the following three approaches to initializing your service instance.

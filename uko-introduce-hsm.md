@@ -15,7 +15,7 @@ subcollection: hs-crypto
 
 
 
-# Introducing cloud HSM - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}
+# Introducing cloud HSM - {{site.data.keyword.uko_full_notm}} Plan
 {: #uko-introduce-cloud-hsm}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} consists of a cloud-based, FIPS 140-2 Level 4 certified hardware security module (HSM) that provides standardized APIs to manage encryption keys and perform cryptographic operations.

@@ -13,7 +13,7 @@ subcollection: hs-crypto
 
 
 
-# Master key rotation - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}
+# Master key rotation - {{site.data.keyword.uko_full_notm}} Plan
 {: #uko-master-key-rotation-intro}
 
 After you load a master key to your {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance, you can rotate the master key on demand to meet industry standards and cryptographic best practices.

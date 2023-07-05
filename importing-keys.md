@@ -14,7 +14,7 @@ subcollection: hs-crypto
 
 
 
-# Bringing your encryption keys to the cloud
+# Bringing your encryption keys to the cloud - Standard Plan 
 {: #importing-keys}
 
 Encryption keys contain subsets of information, such as the metadata that helps you identify the key, and the key material that is used to encrypt and decrypt data.

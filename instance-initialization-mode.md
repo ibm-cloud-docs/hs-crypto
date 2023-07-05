@@ -14,7 +14,7 @@ subcollection: hs-crypto
 
 
 
-# Introducing service instance initialization approaches
+# Introducing service instance initialization approaches - Standard Plan 
 {: #initialize-instance-mode}
 
 Depending on your business needs and security requirements, {{site.data.keyword.hscrypto}} provides you with the following three approaches to initializing your service instance.

@@ -15,7 +15,7 @@ subcollection: hs-crypto
 
 
 
-# Initializing your service instance - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}
+# Initializing your service instance - {{site.data.keyword.uko_full_notm}} Plan
 {: #uko-introduce-service}
 
 Before you can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to manage encryption keys and perform cryptographic operations, you need to initialize your service instance first.

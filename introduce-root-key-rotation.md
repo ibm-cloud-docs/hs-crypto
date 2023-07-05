@@ -14,7 +14,7 @@ subcollection: hs-crypto
 
 
 
-# Root key rotation
+# Root key rotation - Standard Plan 
 {: #root-key-rotation-intro}
 
 You can rotate root keys managed in your {{site.data.keyword.hscrypto}} instance on demand or by setting a rotation policy. Key rotation takes place when you retire the original key material of the root key, and you re-key it by generating a new cryptographic key material.
