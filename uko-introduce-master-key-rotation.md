@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-07-05"
 
 keywords: uko, rotate, rotate master key, rotate encryption key, rotate keys automatically, key rotation, rewrap data
 
@@ -13,7 +13,7 @@ subcollection: hs-crypto
 
 
 
-# Master key rotation
+# Master key rotation - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}
 {: #uko-master-key-rotation-intro}
 
 After you load a master key to your {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance, you can rotate the master key on demand to meet industry standards and cryptographic best practices.

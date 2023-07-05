@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-07-05"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -14,7 +14,7 @@ subcollection: hs-crypto
 
 
 
-# Introducing service instance initialization approaches
+# Introducing service instance initialization approaches - {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}
 {: #uko-initialize-instance-mode}
 
 Depending on your business needs and security requirements, {{site.data.keyword.hscrypto}} provides you with the following three approaches to initializing your service instance.

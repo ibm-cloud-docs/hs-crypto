@@ -67,23 +67,23 @@ toc:
           - uko-data-security.md
           - uko-hs-crypto-concepts.md
           - topicgroup:
-              label: About service instance initialization
+              label: About service instance initialization - Hyper Protect Crypto Services with Unified Key Orchestrator
               topics:
               - uko-instance-initialization-overview.md
               - uko-instance-initialization-mode.md
           - topicgroup:
-              label: About Unified Key Orchestrator
+              label: About Unified Key Orchestrator 
               topics:
               - uko-introduction.md
               - uko-key-states.md
           - topicgroup:
-              label: About cloud hardware security module
+              label: About cloud hardware security module - Hyper Protect Crypto Services with Unified Key Orchestrator
               topics:
               - uko-introduce-hsm.md
               - uko-introduce-pkcs11.md
               - uko-introduce-grep11.md
           - topicgroup:
-              label: About key rotation
+              label: About key rotation - Hyper Protect Crypto Services with Unified Key Orchestrator
               topics:   
               - uko-introduce-master-key-rotation.md   
               - uko-introduce-key-rotation.md
