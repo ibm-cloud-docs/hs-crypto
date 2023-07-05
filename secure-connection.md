@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: securing connection, disabling public service endpoint
 
@@ -58,7 +58,7 @@ instances during this phase of the project.
 The {{site.data.keyword.hscrypto}} instance accepts API
 requests from only private endpoints.
 
-For example, development and testing is complete and the solution that uses
+For example, development and testing are complete and the solution that uses
 {{site.data.keyword.hscrypto}} instances is in production. You
 want to limit API requests to private networks for security reasons. All
 {{site.data.keyword.hscrypto}} API requests must originate from
@@ -66,7 +66,7 @@ within the {{site.data.keyword.cloud_notm}}.
 
 After the network access policy is set to `private-only`, you cannot make any
 {{site.data.keyword.hscrypto}} API calls from the public
-network, including the API to change the policy. Make sure the private
+network, including the API to change the policy. Make sure that the private
 environment is set up before setting the network access policy to
 `private-only`.
 {: note}

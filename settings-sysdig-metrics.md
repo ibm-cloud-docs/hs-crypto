@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: monitoring, monitor metrics
 
@@ -23,11 +23,11 @@ After you set up your {{site.data.keyword.hscrypto}} instance, you can manage Mo
 ## Managing metrics settings
 {: #manage-metrics-policy}
 
-Metrics for {{site.data.keyword.hscrypto}} instances is an extra policy, with which, you can receive the operational metrics for your {{site.data.keyword.hscrypto}} instance. When you enable this policy, {{site.data.keyword.mon_short}} can be used to monitor any operations that are performed on the resources in your {{site.data.keyword.hscrypto}} instance.
+Metrics for {{site.data.keyword.hscrypto}} instances are an extra policy, with which, you can receive the operational metrics for your {{site.data.keyword.hscrypto}} instance. When you enable this policy, {{site.data.keyword.mon_short}} can be used to monitor any operations that are performed on the resources in your {{site.data.keyword.hscrypto}} instance.
 
 Before you enable operational metrics for your {{site.data.keyword.hscrypto}} instance, keep in mind the following considerations:
 
-- When you enable metrics for your {{site.data.keyword.hscrypto}}  instance, metrics are only reported after the time that the policy is enabled.
+- When you enable metrics for your {{site.data.keyword.hscrypto}} instance, metrics are only reported after the time that the policy is enabled.
 
     Once your metrics policy is enabled, you will see operational metrics for all API requests that occur in your instance after the policy is activated. You will not be able to view any metrics prior to the time that the policy is enabled.
 
@@ -99,7 +99,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=met
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     {: caption="Table 1. Describes the variables needed to enable a metrics policy" caption-side="bottom"}
 
-    A successful request returns an HTTP `204 No Content` response, which indicates that your {{site.data.keyword.hscrypto}}  instance is now enabled for reporting operational metrics.
+    A successful request returns an HTTP `204 No Content` response, which indicates that your {{site.data.keyword.hscrypto}} instance is now enabled for reporting operational metrics.
 
     This new policy only reports on operations that occur after the policy is enabled.
     {: note}

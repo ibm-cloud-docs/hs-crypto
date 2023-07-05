@@ -1040,7 +1040,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Rotating root keys based on the rotation policy](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy#set-rotation-policy)
 
-* [Managing rotation polices in the console](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy#manage-policies-gui)
+* [Managing rotation policies in the console](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy#manage-policies-gui)
 
 * [Managing rotation policies with the API](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy#manage-rotation-policies-api)
 

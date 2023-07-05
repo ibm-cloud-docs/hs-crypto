@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-06-27"
+lastupdated: "2023-07-05"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -112,7 +112,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
 {: #transfer-key-key-ring}
 
 As requirements change and new team members are brought into an org, you might create new key rings to reflect these organizational changes. After creating the key rings, it might be necessary to move a key from an existing key ring to a
-new key ring that has different IAM permissions. For example, you might be onboarding a team that will need specific access to a key that belongs to a custom, non-default key ring. You can create a new key ring that is dedicated to the onboarding team and, since keys can only be associated with one key ring at a time, you need to move the key to the new key ring.
+new key ring that has different IAM permissions. For example, you might be onboarding a team that will need specific access to a key that belongs to a custom, non-default key ring. You can create a new key ring that is dedicated to the onboarding team. Since keys can only be associated with one key ring at a time, you need to move the key to the new key ring.
 
 After transferring a key to a different key ring, it can take up to ten minutes for the change to take effect.
 {: important}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: signing service, manage signature keys, customer-writtn signing service, third-party signing service
 
@@ -114,5 +114,5 @@ Instead of using signature key files that are stored on your workstation for sig
 ## What's next
 {: #signing-service-whats-next}
 
-- For the information about the subsequent steps to complete the service instance initialization by using the TKE CLI plug-in, see [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
+- For more information about the subsequent steps to complete the service instance initialization by using the TKE CLI plug-in, see [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 - For how to configure Terraform to use a signing service, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).

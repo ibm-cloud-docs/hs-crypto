@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: instance settings, service settings, key creation/import, key create policy, key creation/import, key policy
 
@@ -97,7 +97,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=key
 
 If you are updating the key create and import access policy of your {{site.data.keyword.hscrypto}}
 instance, keep in mind that if an attribute is
-omitted from the request, the field is set to the default value and the
+omitted from the request, the field is set to the default value, and the
 existing value for the omitted field is overwritten by the default value.
 {: important}
 

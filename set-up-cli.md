@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-15"
+lastupdated: "2023-07-05"
 
 keywords: ibmcloud cli, hpcs cli, ibmcloud commands, ibm cloud command-line interface, key protect cli, kms cli
 
@@ -34,7 +34,7 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
       ```
       {: pre}
 
-      In this command, the *URL* is the `Key management endpoint URL`. You can get the endpoint from your provisioned service instance dashboard through **Overview** &gt; **Connect** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/hs-crypto#getinstance){: external} with an API call. For example:
+      In this command, the *URL* is the `Key management endpoint URL`. You can get the endpoint from your provisioned service instance dashboard through **Overview** &gt; **Connect** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/hs-crypto#getinstance){: external} with an API call. For example,
 
       ```
       export KP_PRIVATE_ADDR="https://api.us-south.hs-crypto.cloud.ibm.com:<port>"

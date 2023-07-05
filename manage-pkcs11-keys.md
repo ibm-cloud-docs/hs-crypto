@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-05-04"
+lastupdated: "2023-07-05"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -51,7 +51,7 @@ On the {{site.data.keyword.hscrypto}} dashboard, do the following to view EP11 k
     | --- | --- |
     | ID  | The unique identifier that is assigned when the key is created. |
     | Name | A human-readable alias for easy identification of your key. The value of the CKA_LABEL key attribute is displayed in this field. The key name might not be unique. You can assign multiple keys with the same name. However, it is suggested to assign a unique name to each key in the same keystore for easy identification. |
-    | Class | The class of the key. Possible values are **Public**, **Private**, and **Secret**. The value is determined by the CKA_CLASS key attribute. **Public** indicates that the key is the public key of an asymmetric key pair. **Private** indicates that the key is the private key of an asymmetric key pair. **Secret** indicates the key is a symmetric key. |
+    | Class | The class of the key. Possible values are **Public**, **Private**, and **Secret**. The value is determined by the CKA_CLASS key attribute. **Public** indicates that the key is the public key of an asymmetric key pair. **Private** indicates that the key is the private key of an asymmetric key pair. **Secret** indicates that the key is a symmetric key. |
     | Version | The version number of the key. When the key is first created, version 0 is assigned. The version number is increased by 1 sequentially upon each update, such as using the `C_SetAttributeValue` function to update a key attribute value. |
     | Keystore | The unique identifier of the keystore the key is stored in. |
     | Type | The type of the EP11 key that is managed in {{site.data.keyword.hscrypto}}. |

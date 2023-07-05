@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: instance settings, service settings, network access policies
 
@@ -31,7 +31,7 @@ For more information about how the network access differs, see [Understanding th
 
 As a security administrator, if you prefer to update the network access policy for your instance by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 
-After the network access policy is set to `private-only`, the UI cannot be used for any {{site.data.keyword.hscrypto}} actions.  Any
+After the network access policy is set to `private-only`, the UI cannot be used for any {{site.data.keyword.hscrypto}} actions. Any
 {{site.data.keyword.hscrypto}} operations in the UI return an unauthorized error (HTTP status code 401).
 {: note}
 
@@ -104,7 +104,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
     {: caption="Table 1. Describes the variables needed to set a network access policy at the instance level" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which indicates that your {{site.data.keyword.hscrypto}} instance
-    now enforces a network access policy. API requests to the service are restricted to the policy you set.
+    now enforces a network access policy. API requests to the service are restricted to the policy that you set.
 
     This policy applies to {{site.data.keyword.hscrypto}} instances only. The network access policy does not apply to specific keys.
 

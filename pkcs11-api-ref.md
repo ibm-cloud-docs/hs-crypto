@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-06-14"
+lastupdated: "2023-07-05"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -21,7 +21,7 @@ subcollection: hs-crypto
 devices that hold cryptographic information and perform cryptographic functions.
 {: shortdesc}
 
-For more information about PKCS #11,  see [Introducing PKCS #11](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro).
+For more information about PKCS #11, see [Introducing PKCS #11](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro).
 
 ## Installing and configuring PKCS #11 library
 {: #setup-pkcs11-library}
@@ -139,7 +139,7 @@ Not all PKCS #11 functions are implemented by {{site.data.keyword.hscrypto}}. Fu
 ## Supported mechanisms
 {: #pkcs-mechanism-list}
 
-A mechanism is referred to as a process to implement a cryptographic operation. It can vary depending on the level of firmware in the crypto card. The following table shows the mechanisms that are  supported and how they relate to common *Cryptoki* function categories.
+A mechanism is referred to as a process to implement a cryptographic operation. It can vary depending on the level of firmware in the crypto card. The following table shows the mechanisms that are supported and how they relate to common *Cryptoki* function categories.
 
 | Function group | Supported mechanisms |
 |--------------|-----------------------|
@@ -185,7 +185,7 @@ PKCS #11 attributes define object characteristics that set up how an object can 
 | CKA_IBM_USE_AS_DATA | An object is used for hashing or key derivation operations when CK_TRUE | EC private keys, EC public keys |
 | CKA_ID   | Key identifier for public or private key pair or key. Default is empty. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys        |
 | CKA_ISSUER | DER-encoding of the certificate issuer name. Default is empty. | Not applicable |
-| CKA_JAVA_MIDP_SECURITY_DOMAIN | Java MIDP security domain for a certificate.  Default is CK_SECURITY_DOMAIN_UNSPECIFIED. | Not applicable |
+| CKA_JAVA_MIDP_SECURITY_DOMAIN | Java MIDP security domain for a certificate. Default is CK_SECURITY_DOMAIN_UNSPECIFIED. | Not applicable |
 | CKA_KEY_TYPE   | Type of key.  | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_LABEL  | Description of the object. Default is empty.  |EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys         |
 | CKA_LOCAL | CK_TRUE only if the key was generated locally (on the token) with a `C_GenerateKey` or `C_GenerateKeyPair` call or created with a `C_CopyObject` call as a copy of a key that had the CKA_LOCAL attribute set to CK_TRUE. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
@@ -205,7 +205,7 @@ PKCS #11 attributes define object characteristics that set up how an object can 
 | CKA_SIGN  |  CK_TRUE if key supports signatures where the signature is an appendix to the data. |EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
 | CKA_START_DATE  |  Start date for the certificate or key. Default is empty. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_SUBJECT  | DER-encoding of the certificate or key subject name.  | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys         |
-| CKA_SUBPRIME | DSA Domain parameter and used for C_CreateObject. Subprime q (160 bits for p <= 1024 bits, 224 bits or 256 bits for p > 1024 bits). | DSA private keys, DSA public keys |
+| CKA_SUBPRIME | DSA Domain parameter and used for C_CreateObject. Subprime q (160 bits for p <= 1024 bits, 224 bits, or 256 bits for p > 1024 bits). | DSA private keys, DSA public keys |
 | CKA_TOKEN | CK_TRUE if object is a token object; CK_FALSE if object is a session object.  | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys   |
 | CKA_TRUSTED  | The certificate or key can be trusted for the application that it was created.  |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys        |
 | CKA_UNWRAP |  CK_TRUE if key supports unwrapping (can be used to unwrap other keys). | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
@@ -222,7 +222,7 @@ PKCS #11 attributes define object characteristics that set up how an object can 
 
 The PKCS #11 library supports limited types of curves for certain mechanisms. The following table lists the supported curve names for different mechanisms. The number in the curve name means the supported prime bitcount.
 
-### Supported curves for generating  Elliptic Curve (EC) keys
+### Supported curves for generating Elliptic Curve (EC) keys
 {: #supported-pkcs11-ec-curve-name}
 
 Mechanism `CKM_EC_KEY_PAIR_GEN` is supported when you call the `C_GenerateKeyPair` function to generate Elliptic Curve (EC) keys. The curve name parameters must be specified as object identifiers (OIDs) by using `CKA_EC_PARAMS`. You can get the OID by searching the curve name in the [OID repository](http://oid-info.com/basic-search.htm){: external}.

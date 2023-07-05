@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -38,7 +38,7 @@ You can create {{site.data.keyword.hscrypto}} resources in one of the supported 
 geographic area where your {{site.data.keyword.hscrypto}} requests are handled and processed. To learn more, see
 [Locations, tenancy, and availability](/docs/hs-crypto?topic=hs-crypto-ha-dr#availability).
 
-Currently, the `us-south` and `us-east` regions are enabled with recovery crypto units by default, which means, when a service instance is provisioned in either regions, you are enabled with the option to back up your master keys in the recovery crypto units located in both regions. For details, see [Introducing service instance initialization modes](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit).
+Currently, the `us-south` and `us-east` regions are enabled with recovery crypto units by default, which means, when a service instance is provisioned in either regions, you are enabled with the option to back up your master keys in the recovery crypto units located in both regions. For more information, see [Introducing service instance initialization modes](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit).
 {: note}
 
 ## Connectivity options
@@ -57,7 +57,7 @@ Private endpoints
 ## Service endpoints
 {: #service-endpoints}
 
-If you are managing your {{site.data.keyword.hscrypto}} resources programmatically, see the following table to determine the API endpoints to use when you connect to the [key management service API](/apidocs/hs-crypto), {{site.data.keyword.uko_full_notm}}, [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref), and  [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+If you are managing your {{site.data.keyword.hscrypto}} resources programmatically, see the following table to determine the API endpoints to use when you connect to the [key management service API](/apidocs/hs-crypto), {{site.data.keyword.uko_full_notm}}, [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref), and [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
 
 | Region        | Public key management service endpoints | Public {{site.data.keyword.uko_full_notm}} service endpoints |Public GREP11 service endpoints |
