@@ -178,8 +178,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-grep11-intro#grep11-support-post-quantum)
 
 
-### About key rotation
-{: #sitemap_about_key_rotation}
+### About key rotation - Standard Plan
+{: #sitemap_about_key_rotation_standard_plan}
 
 
 [Master key rotation - Standard Plan](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#master-key-rotation-intro)

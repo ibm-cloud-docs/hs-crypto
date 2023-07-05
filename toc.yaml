@@ -54,7 +54,7 @@ toc:
               - introduce-pkcs11.md
               - introduce-grep11.md
           - topicgroup:
-              label: About key rotation
+              label: About key rotation - Standard Plan
               topics:
               - introduce-master-key-rotation.md
               - introduce-root-key-rotation.md
