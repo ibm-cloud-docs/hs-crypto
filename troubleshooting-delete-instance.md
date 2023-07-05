@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: troubleshoot, problems, known issues, can't delete an initialized service instance
 
@@ -45,5 +45,5 @@ The procedure varies depending on the method that you use to initialize the serv
 
 -  If you've initialized your service instance through the TKE application, in the user interface of the application, select **Imprint mode** &gt; **Zeroize crypto unit**.
 
-After you zeroize the crypto unit, the administrator signature keys and the master key are cleared from the crypto unit, which means you are not able to access any root keys or standard keys that is protected by the master key. Any resources that are associated with the root keys, such as the [Immutable Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-immutable), cannot be accessed. 
+After you zeroize the crypto unit, the administrator signature keys and the master key are cleared from the crypto unit, which means you are not able to access any root keys or standard keys that are protected by the master key. Any resources that are associated with the root keys, such as the [Immutable Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-immutable), cannot be accessed. 
 {: important}

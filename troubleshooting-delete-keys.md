@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: troubleshoot, problems, known issues, can't delete keys
 
@@ -46,7 +46,7 @@ The following instructions can help you solve the problems:
 
 - To resolve the error that is reported in error message 1, [review the resources](/docs/hs-crypto?topic=hs-crypto-view-protected-resources) that are associated with the key before you delete a key.
 
-    You can [force deletion on a key](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-key-force) that's protecting a cloud resource. However, the action won't succeed if the key's associated resource is non-erasable due to a retention policy. You can verify whether a key is associated with a non-erasable resource by [checking the registration details](/docs/hs-crypto?topic=hs-crypto-view-protected-resources#view-protected-resources-api) for the key. Then, you must contact an account owner to remove the retention policy on each resource that is associated with the key before you can delete the key.
+    You can [force deletion on a key](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-key-force) that's protecting a cloud resource. However, the action won't succeed if the key's associated resource is nonerasable due to a retention policy. You can verify whether a key is associated with a nonerasable resource by [checking the registration details](/docs/hs-crypto?topic=hs-crypto-view-protected-resources#view-protected-resources-api) for the key. Then, you must contact an account owner to remove the retention policy on each resource that is associated with the key before you can delete the key.
 
     If you don't need the resources that are associated with the key any more, you can also first delete the associated resources and then delete the key.
 

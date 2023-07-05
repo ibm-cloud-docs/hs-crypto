@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: troubleshoot, problems, known issues, can't create standard keys
 
@@ -27,7 +27,7 @@ You see the following error message when you try to create a standard key:
 
 > The service was not able to add key "<key_ID>". The HTTP status is 500.
 
-You load another master key to your service instance after you create the root key. Because of this, the root key fails to wrap the standard key and the standard key creation fails. 
+You load another master key to your service instance after you create the root key. Because of this, the root key fails to wrap the standard key, and the standard key creation fails. 
 {: tsCauses}
 
 If you want to change the master key in a regular basis for security reasons, rotate the master key by following [the instructions](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-key-part).

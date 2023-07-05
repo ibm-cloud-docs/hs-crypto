@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-05"
 
 keywords: troubleshoot, problems, known issues, unauthorized when running TKE CLI plug-in commands
 
@@ -32,7 +32,7 @@ The message might be similar to the following one:
 > Message: Unauthorized
 > Your access token is invalid, expired, or does not have the necessary permissions to access this instance.
 
-To run TKE CLI plug-in commands that send requests to the {{site.data.keyword.cloud_notm}}, you must have a valid authentication token. An authentication token is created when you log in to the {{site.data.keyword.cloud_notm}}, but it expires after 1 hour.  After 1 hour, you must log in again to continue to send requests to the {{site.data.keyword.cloud_notm}}.
+To run TKE CLI plug-in commands that send requests to the {{site.data.keyword.cloud_notm}}, you must have a valid authentication token. An authentication token is created when you log in to the {{site.data.keyword.cloud_notm}}, but it expires after 1 hour. After 1 hour, you must log in again to continue to send requests to the {{site.data.keyword.cloud_notm}}.
 {: tsCauses}
 
 Log in to {{site.data.keyword.cloud_notm}} again with the `ibmcloud login` command to refresh the token.
