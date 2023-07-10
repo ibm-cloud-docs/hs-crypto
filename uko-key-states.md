@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-07-10"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator, UKO keys
 
@@ -54,6 +54,7 @@ The following table shows how {{site.data.keyword.uko_full_notm}} handles servic
 | ------ | ------ | ---------- | ----------- | --------- |
 | Get a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
 | List keys. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |
+| Rotate a key. |   | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")  |    |    |
 | Deactivate a key. |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |   |
 | Reactivate a key. |     |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |
 | Destroy a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |
