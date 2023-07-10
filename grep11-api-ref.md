@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-05"
+lastupdated: "2023-07-10"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -19,6 +19,9 @@ subcollection: hs-crypto
 {: shortdesc}
 
 For more information about how the GREP11 functions are related to PKCS #11 and EP11, see [GREP11 introduction](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm#access-cloud-hsm-pkcs11). 
+
+The GREP11 API can process up to 500 requests/second for a single crypto unit.
+{: note}
 
 ## Accessing the API
 {: #access-grep11-functions}

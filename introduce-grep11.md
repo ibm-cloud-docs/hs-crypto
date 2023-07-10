@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-05"
+lastupdated: "2023-07-10"
 
 keywords: hsm, cloud hsm, tke cli, trusted key entry plug-in, ep11, grep11, cryptographic operations, cryptographic functions
 
@@ -48,6 +48,8 @@ The following diagram shows the three calling sequence flows of GREP11 functions
 ![GREP11 functions calling flow for encryption](/images/grep11-encryption-flow.svg "GREP11 functions calling flow for encryption"){: caption="Figure 1. Three calling flows of GREP11 functions for encryption" caption-side="bottom"}
 
 
+The GREP11 API can process up to 500 requests/second for a single crypto unit.
+{: note}
 
 ## Post-quantum cryptography support
 {: #grep11-support-post-quantum}
