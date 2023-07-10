@@ -203,7 +203,7 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_understanding_hyper_protect_crypto_services_with_unified_key_orchestrator_plan}
 
 
-[Overview - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-overview)
+[[{{site.data.keyword.uko_full_notm}} Plan]{: tag-blue} Overview](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-overview)
 
 * [Why {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-why_hpcs)
 
