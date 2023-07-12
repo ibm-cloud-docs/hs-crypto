@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-07-05"
+lastupdated: "2023-07-12"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -199,7 +199,7 @@ PKCS #11 attributes define object characteristics that set up how an object can 
 | CKA_PRIVATE | CK_TRUE if object is a private object; CK_FALSE if object is a public object. Default value is token-specific, and can depend on the values of other attributes of the object. | EC private keys, EC public keys, RSA private keys, RSA public keys, DH private keys, DH public keys, DSA private keys, DSA public keys, AES keys, DES keys, Generic keys          |
 | CKA_PRIVATE_EXPONENT | Used for C_CreateObject. Prime p. | RSA private keys |
 | CKA_PUBLIC_EXPONENT | Public exponent e. |     RSA private keys, RSA public keys      |
-| CKA_PUBLIC_KEY_INFO | DER-encoding of the SubjectPublicKeyInfo for the public key. The value is derived from the underlying public key data and is empty by default. | RSA public keys, EC public keys |
+| CKA_PUBLIC_KEY_INFO | DER-encoding of the SubjectPublicKeyInfo for the public key. The value is derived from the underlying public key data and is empty by default. | RSA public keys, EC public keys, Dilithium public keys |
 | CKA_SENSITIVE |  CK_TRUE if key is sensitive.  | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |
 | CKA_SERIAL_NUMBER | DER-encoding of the certificate serial number. Default is empty. | Not applicable |
 | CKA_SIGN  |  CK_TRUE if key supports signatures where the signature is an appendix to the data. |EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys         |

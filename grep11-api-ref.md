@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-10"
+lastupdated: "2023-07-12"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -156,18 +156,21 @@ A mechanism is referred to as a process to implement a cryptographic operation. 
 | Function group | Supported mechanisms |
 |--------------|-----------------------|
 |Encrypt and decrypt | CKM_RSA_PKCS<sup>1</sup>, CKM_RSA_PKCS_OAEP<sup>1</sup>, CKM_AES_ECB, CKM_AES_CBC, CKM_AES_CBC_PAD, CKM_DES3_ECB, CKM_DES3_CBC, CKM_DES3_CBC_PAD|
-|Sign and verify  | CKM_RSA_PKCS<sup>1</sup>, CKM_RSA_PKCS_PSS<sup>1</sup>, CKM_RSA_X9_31<sup>1</sup>, CKM_SHA1_RSA_PKCS, CKM_SHA256_RSA_PKCS, CKM_SHA224_RSA_PKCS, CKM_SHA384_RSA_PKCS, CKM_SHA512_RSA_PKCS, CKM_SHA1_RSA_PKCS_PSS, CKM_SHA224_RSA_PKCS_PSS, CKM_SHA256_RSA_PKCS_PSS, CKM_SHA384_RSA_PKCS_PSS, CKM_SHA512_RSA_PKCS_PSS, CKM_SHA1_RSA_X9_31, CKM_DSA<sup>1</sup>, CKM_DSA_SHA1, CKM_ECDSA<sup>1</sup>, CKM_ECDSA_SHA1, CKM_ECDSA_SHA224, CKM_ECDSA_SHA256, CKM_ECDSA_SHA384, CKM_ECDSA_SHA512, CKM_SHA1_HMAC, CKM_SHA256_HMAC, CKM_SHA384_HMAC, CKM_SHA512_HMAC, CKM_SHA512_224_HMAC, CKM_SHA512_256_HMAC, CKM_IBM_ED25519_SHA512, CKM_IBM_ECDSA_OTHER<sup>2</sup>, CKM_IBM_DILITHIUM<sup>3</sup> |
+|Sign and verify  | CKM_RSA_PKCS<sup>1</sup>, CKM_RSA_PKCS_PSS<sup>1</sup>, CKM_RSA_X9_31<sup>1</sup>, CKM_SHA1_RSA_PKCS, CKM_SHA256_RSA_PKCS, CKM_SHA224_RSA_PKCS, CKM_SHA384_RSA_PKCS, CKM_SHA512_RSA_PKCS, CKM_SHA1_RSA_PKCS_PSS, CKM_SHA224_RSA_PKCS_PSS, CKM_SHA256_RSA_PKCS_PSS, CKM_SHA384_RSA_PKCS_PSS, CKM_SHA512_RSA_PKCS_PSS, CKM_SHA1_RSA_X9_31, CKM_DSA<sup>1</sup>, CKM_DSA_SHA1, CKM_ECDSA<sup>1</sup>, CKM_ECDSA_SHA1, CKM_ECDSA_SHA224, CKM_ECDSA_SHA256, CKM_ECDSA_SHA384, CKM_ECDSA_SHA512, CKM_SHA1_HMAC, CKM_SHA256_HMAC, CKM_SHA384_HMAC, CKM_SHA512_HMAC, CKM_SHA512_224_HMAC, CKM_SHA512_256_HMAC, CKM_IBM_ED25519_SHA512<sup>4</sup>, CKM_IBM_ECDSA_OTHER<sup>2</sup>, CKM_IBM_DILITHIUM<sup>3</sup> |
 |Digest |CKM_SHA_1, CKM_SHA224, CKM_SHA256, CKM_SHA384, CKM_SHA512, CKM_SHA512_224, CKM_SHA512_256|
 |Generate key or generate key pair 	 |CKM_RSA_PKCS_KEY_PAIR_GEN, CKM_RSA_X9_31_KEY_PAIR_GEN, CKM_DSA_KEY_PAIR_GEN, CKM_DSA_PARAMETER_GEN, CKM_EC_KEY_PAIR_GEN (CKM_ECDSA_KEY_PAIR_GEN), CKM_DH_PKCS_KEY_PAIR_GEN, CKM_DH_PKCS_PARAMETER_GEN, CKM_GENERIC_SECRET_KEY_GEN, CKM_AES_KEY_GEN, CKM_DES2_KEY_GEN, CKM_DES3_KEY_GEN, CKM_IBM_DILITHIUM |
 |Wrap and unwrap | CKM_RSA_PKCS, CKM_RSA_PKCS_OAEP, CKM_AES_ECB, CKM_AES_CBC, CKM_AES_CBC_PAD, CKM_DES3_ECB, CKM_DES3_CBC, CKM_DES3_CBC_PAD|
 |Derive | CKM_ECDH1_DERIVE, CKM_DH_PKCS_DERIVE, CKM_DES3_ECB_ENCRYPT_DATA, CKM_SHA1_KEY_DERIVATION, CKM_SHA224_KEY_DERIVATION, CKM_SHA256_KEY_DERIVATION, CKM_SHA384_KEY_DERIVATION, CKM_SHA512_KEY_DERIVATION|
 {: caption="Table 2. Describes the supported GREP11 mechanisms" caption-side="bottom"}
 
+
 1: This mechanism supports only single-part operations that are not able to utilize any of the Update GREP11 functions, such as `EncryptUpdate`, `DecryptUpdate`, and `DigestUpdate`.
 
 2: This mechanism is only available for GREP11 `SignSingle` and `VerifySingle` operations.
 
 3: This mechanism is not supported by the IBM 4768 crypto card and is not available for `SignUpdate` and `VerifyUpdate` operations.
+
+4: This mechanism supports single-part (`SignInit`, `Sign`, `VerifyInit`, `Verify`), `SignSingle`, and `VerifySingle` operations.
 
 
 ## Supported attributes and key types
