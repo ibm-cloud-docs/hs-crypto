@@ -308,7 +308,7 @@ toc:
           label: CLI reference
           topics:
           - cli-change-log.md
-          - /hs-crypto-cli-plugin/hs-crypto-cli-plugin-hpcs-cli-plugin
+          - include: ../hs-crypto-cli-plugin/hs-crypto-cli.md
       - topicgroup:
           label: Terraform reference
           links:
