@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-07-14"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -50,7 +50,7 @@ No. From a technology point of view, {{site.data.keyword.uko_full_notm}} is a fe
 {: #faq-uko-hpcs}
 {: faq}
 
-{{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} extends the Standard Plan. {{site.data.keyword.cloud_notm}} is the only cloud service provider that offers native cloud encryption key orchestration and lifecycle management across hybrid multicloud environments, including {{site.data.keyword.cloud_notm}}, IBM Satellite, other cloud service providers, and on-premises environments.  
+{{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} extends the Standard Plan. {{site.data.keyword.cloud_notm}} is the only cloud service provider that offers native cloud encryption key orchestration and lifecycle management across hybrid multicloud environments, including {{site.data.keyword.cloud_notm}}, IBM Satellite, other cloud service providers, and on-premises environments. 
 
 
 ## What type of HSM is used for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}?
