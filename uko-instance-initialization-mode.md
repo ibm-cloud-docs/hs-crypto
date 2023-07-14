@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-05"
+lastupdated: "2023-07-14"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -130,7 +130,7 @@ You can also use the TKE CLI plug-in to load the master key using key parts stor
 
 You need to be assigned the appropriate role to perform TKE CLI plug-in operations. For more information about the available service access roles, see [Service access roles](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles).
 
-For a complete list of commands available in the TKE CLI plug-in, see [{{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin).
+For a complete list of commands available in the TKE CLI plug-in, see [{{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin).
 
 ### Understanding operational crypto units
 {: #uko-understand-operational-crypto-unit}

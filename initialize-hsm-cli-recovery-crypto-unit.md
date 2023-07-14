@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-07-05"
+lastupdated: "2023-07-14"
 
 keywords: initialize service instance, load master key, key ceremony, recovery crypto unit
 
@@ -166,4 +166,4 @@ To initialize your service instance using recovery crypto units, complete the fo
 
 - After you have a master key loaded to your service instance, you can rotate the master key on demand to meet industry standards and cryptographic best practices. For detailed instructions, see [Rotating master keys using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit).
 - Recovery crypto units contain a backup copy of the master key value that can be used to recover the master key. For the detailed instructions, see [Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit).
-- For a complete TKE CLI plug-in command reference, see [{{site.data.keyword.cloud_notm}} TKE CLI](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin){: external}.
+- For a complete TKE CLI plug-in command reference, see [{{site.data.keyword.cloud_notm}} TKE CLI](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin){: external}.

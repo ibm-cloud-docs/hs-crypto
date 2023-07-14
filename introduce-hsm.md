@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-07-05"
+lastupdated: "2023-07-14"
 
 keywords: hsm, cloud hsm, ep11, grep11, pkcs, cryptographic operations, cryptographic functions
 
@@ -35,7 +35,7 @@ To use the {{site.data.keyword.hscrypto}} cloud HSM to protect your keys and dat
 
 {{site.data.keyword.hscrypto}} provides a set of cryptographic functions that are executed in the cloud HSM. You can perform cryptographic operations such as key generation, data encryption, and signature verification. To do so, access the cloud HSM with either the PKCS #11 API or the Enterprise PKCS #11 over gRPC (GREP11) API.
 
-To ensure the exclusive control on the execution of cryptographic operations, you can enable the second layer of authentication for GREP11 or PKCS #11 API connections with the [certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#cert-manager-cli-plugin). By enabling this function, you add an extra layer of access control on top of the Identity and Access Management (IAM) token to the EP11 applications. A mutual TLS connection is established to ensure that only EP11 applications with a valid client certificate can perform EP11 operations. For more information about how to enable the TLS authentication, see [Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11).
+To ensure the exclusive control on the execution of cryptographic operations, you can enable the second layer of authentication for GREP11 or PKCS #11 API connections with the [certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#cert-manager-cli-plugin). By enabling this function, you add an extra layer of access control on top of the Identity and Access Management (IAM) token to the EP11 applications. A mutual TLS connection is established to ensure that only EP11 applications with a valid client certificate can perform EP11 operations. For more information about how to enable the TLS authentication, see [Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11).
 
 ### Accessing the cloud HSM with the PKCS #11 API
 {: #access-cloud-hsm-pkcs11}

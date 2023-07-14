@@ -4,7 +4,7 @@
   "introduction": "Find useful information about Hyper Protect Crypto Services.",
   "section_devtools": {
     "api": "/docs?tab=api-docs&category=security&subCategory=hs-crypto",
-    "cli": "/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin",
+    "cli": "/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin",
     "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs"
   },
   "section_recommended": [

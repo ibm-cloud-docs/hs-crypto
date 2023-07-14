@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-13"
+lastupdated: "2023-07-14"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -27,7 +27,7 @@ This tutorial shows you the high-level steps on how to set up your service insta
 
 In order to use {{site.data.keyword.hscrypto}}, make sure that you meet the following prerequisites:
 
-1. You have a Pay-As-You-Go or Subscription [{{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-accounts).
+1. You have a Pay-As-You-Go or Subscription [{{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-accounts){: external}.
 2. You have [provisioned a service instance](/docs/hs-crypto?topic=hs-crypto-provision) with either of the following plans:
 
     - [A standard plan with the Keep Your Own Key capability](/docs/hs-crypto?topic=hs-crypto-overview)
