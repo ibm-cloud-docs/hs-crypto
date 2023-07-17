@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-14"
+lastupdated: "2023-07-17"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -21,6 +21,12 @@ subcollection: hs-crypto
 {: shortdesc}
 
 This tutorial shows you the high-level steps on how to set up your service instance by loading your master keys, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the GREP11 API.
+
+- [Before you begin](#get-started-prerequisites)
+- [Step 1: Initialize your service instance](#initialize-crypto)
+- [Step 2 (Standard Plan only): Create keys](#create-key-standard)
+- [Step 2 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys](#manage-uko-key)
+- [Step 3: Encrypt your data with cloud HSM](#encrypt-data-hsm)
 
 ## Before you begin
 {: #get-started-prerequisites}
