@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-07-14"
 
 keywords: shared responsibilities, shared responsibility model, disaster recovery, incident management, operation management
 
@@ -43,7 +43,7 @@ Change management includes tasks such as deployment, configuration, upgrades, pa
 
 | Task | {{site.data.keyword.IBM_notm}} responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
-| Applications| Provide major, minor, and patch version updates for {{site.data.keyword.hscrypto}} interfaces. | Use the [API](/apidocs/hs-crypto){: external}, [CLI](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin){: external}, or console tools to perform updated functions. |
+| Applications| Provide major, minor, and patch version updates for {{site.data.keyword.hscrypto}} interfaces. | Use the [API](/apidocs/hs-crypto){: external}, [CLI](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin){: external}, or console tools to perform updated functions. |
 {: caption="Table 2. Responsibilities for change management" caption-side="bottom"}
 
 

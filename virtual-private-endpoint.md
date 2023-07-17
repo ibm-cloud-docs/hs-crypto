@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-07-14"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway
 
@@ -185,7 +185,7 @@ After you create an endpoint gateway for your {{site.data.keyword.hscrypto}} ins
 {: #use-vpe-for-hpcs-cli}
 {: cli}
 
-- Using the VPE for the [TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin)
+- Using the VPE for the [TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin)
 
     1. Update the TKE CLI plug-in to the latest version with the following command:
 
@@ -201,7 +201,7 @@ After you create an endpoint gateway for your {{site.data.keyword.hscrypto}} ins
         ```
         {: pre}
 
-- Using the VPE for the [{{site.data.keyword.keymanagementserviceshort}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#kp-cli-plugin)
+- Using the VPE for the [{{site.data.keyword.keymanagementserviceshort}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#kp-cli-plugin)
 
     1. Update the {{site.data.keyword.keymanagementserviceshort}} CLI plug-in to the latest version with the following command:
 

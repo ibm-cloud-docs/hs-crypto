@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-07-14"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -69,7 +69,7 @@ To enable the second layer of authentication, you need to first configure the ad
 
     After the execution of this command, a public and private key pair is generated and stored on your local workstation. The default file path is `/Users/<username>/.hpcs-cert-mgr-cfg/`. Make sure that you store the signature key securely, for example with password protection. The public key is automatically uploaded to your instance certificate manager server for signature verification.
 
-    If you want to refresh and update your signature key, you can use the `ibmcloud hpcs-cert-mgr adminkey update` command to perform the action. For more information about the CLI usage, see [{{site.data.keyword.hscrypto}} certificate manager CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#cert-manager-cli-plugin).
+    If you want to refresh and update your signature key, you can use the `ibmcloud hpcs-cert-mgr adminkey update` command to perform the action. For more information about the CLI usage, see [{{site.data.keyword.hscrypto}} certificate manager CLI reference](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#cert-manager-cli-plugin).
     {: tip}
 
 2. (Optional) Check and confirm whether the public key is uploaded to the server with the following command:
@@ -256,5 +256,5 @@ If you no longer need the second layer of authentication, you can disable the fu
 ## What's next
 {: #enable-authentication-ep11-whats-next}
 
-- For the complete certificate manager CLI command reference, see [{{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#cert-manager-cli-plugin).
+- For the complete certificate manager CLI command reference, see [{{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#cert-manager-cli-plugin).
 - For the GREP11 API and PKCS #11 API reference, see [Cryptographic operations: GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref) and [Cryptographic operations: PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref).

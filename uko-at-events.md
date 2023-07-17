@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-14"
+lastupdated: "2023-07-14"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 
@@ -25,7 +25,7 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 
 To enable {{site.data.keyword.at_full_notm}} for your {{site.data.keyword.hscrypto}} instance, you need to provision an instance of the {{site.data.keyword.at_full_notm}} service in the same region where your {{site.data.keyword.hscrypto}} instance is located. For more information, see the [getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
 
-To see which requests correlate to the following actions, check out the [{{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external} and [TKE CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin){: external}.
+To see which requests correlate to the following actions, check out the [{{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external} and [TKE CLI reference](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin){: external}.
 
 ## Supported events
 {: #uko-at-supported-events}
@@ -453,7 +453,7 @@ action request.
 
 Failed TKE events have an `outcome` of `failure`. The `reason.reasonType` and `reason.reasonForFailure` fields contain information about why the action wasn't able to be completed.
 
-If the event has a `reason.reasonCode` of `400`, the action cannot be completed because the operation to the crypto units is not supported or is not valid. Check whether the TKE command that you use is valid by referring to the [TKE CLI reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#tke-cli-plugin){: external}.
+If the event has a `reason.reasonCode` of `400`, the action cannot be completed because the operation to the crypto units is not supported or is not valid. Check whether the TKE command that you use is valid by referring to the [TKE CLI reference](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin){: external}.
 
 If the event has a `reason.reasonCode` of `401` or `403`, the action cannot be completed because your access token is not valid or does not have the necessary permissions to access this instance. [Refresh your access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token) and check whether you have [appropriate permissions](/docs/hs-crypto?topic=hs-crypto-uko-manage-access) to perform the corresponding actions.
 

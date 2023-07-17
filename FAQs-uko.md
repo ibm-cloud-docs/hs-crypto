@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-07-17"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -50,7 +50,7 @@ No. From a technology point of view, {{site.data.keyword.uko_full_notm}} is a fe
 {: #faq-uko-hpcs}
 {: faq}
 
-{{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} extends the Standard Plan. {{site.data.keyword.cloud_notm}} is the only cloud service provider that offers native cloud encryption key orchestration and lifecycle management across hybrid multicloud environments, including {{site.data.keyword.cloud_notm}}, IBM Satellite, other cloud service providers, and on-premises environments.  
+{{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} extends the Standard Plan. {{site.data.keyword.cloud_notm}} is the only cloud service provider that offers native cloud encryption key orchestration and lifecycle management across hybrid multicloud environments, including {{site.data.keyword.cloud_notm}}, IBM Satellite, other cloud service providers, and on-premises environments. 
 
 
 ## What type of HSM is used for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}?
@@ -101,5 +101,5 @@ Yes. You can choose a data center within your required data residency region and
 {: #faq-uko-keystore-number}
 {: faq}
 
-There is an internal KMS keystore limit of 50, but there is no external keystore limit. The first five internal keystores and the very first external keystore are free of charge. Each additional internal or external keystore is charged with a tiered pricing starting at $225 USD per month. For keystores that are created or connected less than a month, the cost is prorated based on actual days within the month. For more information about pricing, see [the pricing sample](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs-uko).
+There is an internal KMS keystore limit of 50, but there is no external keystore limit. For more information on how the keystores are charged, see [the pricing sample](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs-uko).
 

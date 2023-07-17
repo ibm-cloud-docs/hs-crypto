@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-07-12"
+lastupdated: "2023-07-17"
 
 keywords: site map, doc structure, information architecture
 
@@ -31,27 +31,15 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-get-started#get-started)
 
-* [Step 1: Initialize your service instance](/docs/hs-crypto?topic=hs-crypto-get-started#initialize-crypto-dashboard)
-
-* [Step 2 (Standard Plan only): Manage your encryption keys with the key management service](/docs/hs-crypto?topic=hs-crypto-get-started#manage-data-key-dashboard)
-
-* [Step 2 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys in a multicloud environment using {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-get-started#manage-uko-key-dashboard)
-
-* [Step 3: Encrypt your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm-dashboard)
-
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-prerequisites)
 
-* [Step 1: Provision the service](/docs/hs-crypto?topic=hs-crypto-get-started#provision-service)
+* [Step 1: Initialize your service instance](/docs/hs-crypto?topic=hs-crypto-get-started#initialize-crypto)
 
-* [Step 2: Initialize your service instance](/docs/hs-crypto?topic=hs-crypto-get-started#initialize-crypto)
+* [Step 2 (Standard Plan only): Create keys](/docs/hs-crypto?topic=hs-crypto-get-started#create-key-standard)
 
-* [Step 3 (Standard Plan only): Manage your encryption keys with the key management service](/docs/hs-crypto?topic=hs-crypto-get-started#manage-data-key)
+* [Step 2 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-uko-key)
 
-* [Step 3 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys in a multicloud environment with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-get-started#manage-uko-key)
-
-* [Step 4: Encrypt your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-get-started#get-started-next)
+* [Step 3: Encrypt your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm)
 
 
 ## Understanding Hyper Protect Crypto Services Standard Plan
@@ -1711,6 +1699,16 @@ Find what you are looking for in the compilation of topics that are available in
 * [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#cert-manager-cli-change-log)
 
 * [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#uko-cli-change-log)
+
+[{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} CLI](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#hpcs-cli-plugin)
+
+* [{{site.data.keyword.hscrypto}} key management CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#kp-cli-plugin)
+
+* [{{site.data.keyword.hscrypto}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin)
+
+* [{{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#cert-manager-cli-plugin)
+
+* [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#uko-cli-plugin)
 
 
 ## Terraform reference

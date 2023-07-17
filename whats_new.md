@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-07-14"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -129,7 +129,7 @@ Added: Post-quantum cryptography support {: #add-pqc}
 {: release-note}
 
 Added: {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in {: #add-uko-cli}
-:   With the command-line interface (CLI) support for {{site.data.keyword.hscrypto}} with the {{site.data.keyword.uko_full_notm}} plan, you can now manage vaults, keystores, and keys by using CLI commands. For more information about these commands, see [{{site.data.keyword.uko_full_notm}} CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-cli-plugin-hpcs-cli-plugin#uko-cli-plugin).
+:   With the command-line interface (CLI) support for {{site.data.keyword.hscrypto}} with the {{site.data.keyword.uko_full_notm}} plan, you can now manage vaults, keystores, and keys by using CLI commands. For more information about these commands, see [{{site.data.keyword.uko_full_notm}} CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#uko-cli-plugin).
 
 
 ## 1 April 2022
