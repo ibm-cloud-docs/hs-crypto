@@ -34,7 +34,6 @@ toc:
           - overview.md
           - architecture-workload-isolation.md
           - use-case.md
-          - data-security.md
           - hs-crypto-concepts.md
           - topicgroup:
               label: About service instance initialization - Standard Plan
@@ -64,7 +63,6 @@ toc:
           - uko-overview.md
           - uko-architecture-workload-isolation.md
           - uko-use-case.md
-          - uko-data-security.md
           - uko-hs-crypto-concepts.md
           - topicgroup:
               label: About service instance initialization - Unified Key Orchestrator Plan
@@ -89,6 +87,7 @@ toc:
               - uko-introduce-key-rotation.md
       - manage-regulated-workloads.md
       - integrate-services.md
+      - data-security.md
       - topic: whats_new.md
         navtitle: Release notes
   - navgroup:

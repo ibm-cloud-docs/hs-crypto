@@ -74,12 +74,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-use-cases#use-case-next)
 
-[Security and compliance - Standard Plan](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#security-and-compliance)
-
-* [Security readiness](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#security-ready)
-
-* [Compliance readiness](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#compliance-ready)
-
 [Components and concepts - Standard Plan](/docs/hs-crypto?topic=hs-crypto-understand-concepts#understand-concepts)
 
 * [Key management service](/docs/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts)
@@ -221,12 +215,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-case-next)
 
-[Security and compliance - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-security-and-compliance#uko-security-and-compliance)
-
-* [Security readiness](/docs/hs-crypto?topic=hs-crypto-uko-security-and-compliance#uko-security-ready)
-
-* [Compliance readiness](/docs/hs-crypto?topic=hs-crypto-uko-security-and-compliance#uko-compliance-ready)
-
 [Components and concepts - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-understand-concepts)
 
 * [Key management service](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-key-management-concepts)
@@ -364,6 +352,17 @@ Find what you are looking for in the compilation of topics that are available in
 * [Understanding your integration](/docs/hs-crypto?topic=hs-crypto-integrate-services#understand-integration)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-integrate-services#integration-next-steps)
+
+
+## Security and compliance
+{: #sitemap_security_and_compliance}
+
+
+[Security and compliance](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#security-and-compliance)
+
+* [Security readiness](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#security-ready)
+
+* [Compliance readiness](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#compliance-ready)
 
 
 ## Release notes
