@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-14"
+lastupdated: "2023-07-27"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -22,11 +22,27 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+## 26 July 2023
+{: hs-crypto-july2023}
+{: release-note}
+
+[New]{: tag-new}: Key template support for {{site.data.keyword.uko_full_notm}} 
+:   A key template specifies the properties of the managed keys to be created. After you create the key template, you can then create a group of managed keys with the same key properties that are defined in the key template. 
+    
+    The following topics can help you get started with key templates:
+
+    * [Creating key templates](/docs/hs-crypto?topic=hs-crypto-create-template)
+    * [Viewing a list of key templates](/docs/hs-crypto?topic=hs-crypto-view-key-template)
+    * [Editing key template details](/docs/hs-crypto?topic=hs-crypto-edit-template)
+    * [Archiving and unarchiving key templates](/docs/hs-crypto?topic=hs-crypto-archive-template)
+    * [Deleting key templates](/docs/hs-crypto?topic=hs-crypto-delete-template)
+    * [Realigning keys with key templates](/docs/hs-crypto?topic=hs-crypto-align-key)
+
 ## 1 June 2023
 {: hs-crypto-june2023}
 {: release-note}
 
-[Updated]{: tag-updated}: Pricing plan for {{site.data.keyword.uko_full_notm}} 
+Pricing plan for {{site.data.keyword.uko_full_notm}} 
 :   The pricing plan has been updated for {{site.data.keyword.uko_full_notm}}. You can find more details on the [service catalog page](/catalog/services/hyper-protect-crypto-services){: external}.  
 
     For a detailed pricing sample, see [How am I charged for my use of Hyper Protect Crypto Services with Unified Key Orchestrator?](/docs/hs-crypto?topic=hs-crypto-faq-pricing&interface=ui#faq-how-charge-hpcs-uko). 
@@ -35,7 +51,7 @@ Stay up to date with the new features that are available for {{site.data.keyword
 {: hs-crypto-may2023}
 {: release-note}
 
-[Updated]{: tag-updated}: Master key rotation support for all regions
+Master key rotation support for all regions
 :   You are now able to rotate master keys when you are using the Unified Key Orchestrator service plan or your service instance that has EP11 keystores enabled in all supported regions. Previously, it was only available in Frankfurt, Germany. 
 
     For a list of supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions&interface=ui).  For more information about how master key rotation works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro). 

@@ -73,6 +73,11 @@
     "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
     "tiles": [
       {
+        "date": "July 2023",
+        "title": "Updated: Key template support for Unified Key Orchestrator",
+        "description": "You are now able to create key templates which specify the properties of the managed keys to be created. "
+      },
+      {
         "date": "June 2023",
         "title": "Updated: Pricing plan for Unified Key Orchestrator",
         "description": "The pricing plan has been updated for Unified Key Orchestrator. You can find more details on the service catalog page. "
@@ -91,11 +96,6 @@
         "date": "February 2023",
         "title": "Updated: Hyper Protect Crypto Services key management functions",
         "description": "The Hyper Protect Crypto Services key management service API is updated to version 22.11. "
-      },
-      {
-        "date": "December 2022",
-        "title": "Managed key rotation support for Unified Key Orchestrator",
-        "description": "You can now manually rotate a managed key in your Hyper Protect Crypto Services with Unified Key Orchestrator instance. Managed key rotation shortens the cryptoperiod of the keys and reduces the probability for a security breach."
       }
     ]
   }
