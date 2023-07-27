@@ -27,7 +27,7 @@ Stay up to date with the new features that are available for {{site.data.keyword
 {: release-note}
 
 [New]{: tag-new}: Key template support for {{site.data.keyword.uko_full_notm}} 
-:   A key template specifies the properties of the managed keys to be created. After you create the key template, you can then create a group of managed keys with the same key properties that are defined in the key template. 
+:   You are now able to create key templates which specify the properties of the managed keys to be created. After you create the key template, you can then create a group of managed keys with the same key properties that are defined in the key template. 
     
     The following topics can help you get started with key templates:
 
