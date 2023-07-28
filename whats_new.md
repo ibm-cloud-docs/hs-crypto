@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-27"
+lastupdated: "2023-07-28"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -22,21 +22,8 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
-## 26 July 2023
-{: hs-crypto-july2023}
-{: release-note}
 
-[New]{: tag-new}: Key template support for {{site.data.keyword.uko_full_notm}} 
-:   You are now able to create key templates which specify the properties of the managed keys to be created. After you create the key template, you can then create a group of managed keys with the same key properties that are defined in the key template. 
-    
-    The following topics can help you get started with key templates:
 
-    * [Creating key templates](/docs/hs-crypto?topic=hs-crypto-create-template)
-    * [Viewing a list of key templates](/docs/hs-crypto?topic=hs-crypto-view-key-template)
-    * [Editing key template details](/docs/hs-crypto?topic=hs-crypto-edit-template)
-    * [Archiving and unarchiving key templates](/docs/hs-crypto?topic=hs-crypto-archive-template)
-    * [Deleting key templates](/docs/hs-crypto?topic=hs-crypto-delete-template)
-    * [Realigning keys with key templates](/docs/hs-crypto?topic=hs-crypto-align-key)
 
 ## 1 June 2023
 {: hs-crypto-june2023}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-07-27"
+lastupdated: "2023-07-28"
 
 keywords: site map, doc structure, information architecture
 
@@ -370,10 +370,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
-
-* [26 July 2023](/docs/hs-crypto?topic=hs-crypto-what-new#26-july-2023)
-
-    * [New]{: tag-new}: Key template support for {{site.data.keyword.uko_full_notm}} 
 
 * [1 June 2023](/docs/hs-crypto?topic=hs-crypto-what-new#1-june-2023)
 
@@ -1627,8 +1623,6 @@ Find what you are looking for in the compilation of topics that are available in
 [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API change log](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-change-log)
 
 * [API versioning](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-versioning)
-
-* [July 2023](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-july-2023)
 
 * [December 2022](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-december-2022)
 
