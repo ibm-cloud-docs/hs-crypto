@@ -22,7 +22,6 @@ subcollection: hs-crypto
 
 This tutorial shows you the high-level steps on how to set up your service instance by loading your master keys, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the GREP11 API.
 
-- [Before you begin](#get-started-prerequisites)
 - [Step 1: Initialize your service instance](#initialize-crypto)
 - [Step 2 (Standard Plan only): Create keys](#create-key-standard)
 - [Step 2 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys](#manage-uko-key)
@@ -30,6 +29,7 @@ This tutorial shows you the high-level steps on how to set up your service insta
 
 ## Before you begin
 {: #get-started-prerequisites}
+{: hide-dashboard}
 
 In order to use {{site.data.keyword.hscrypto}}, make sure that you meet the following prerequisites:
 
@@ -73,7 +73,7 @@ The created key is a symmetric 256-bit key, supported by the AES-CBC algorithm. 
 
 Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
 
-### Creating vaults
+### 1. Create vaults
 {: #create-vault}
 
 A vault is a single repository that controls a user's or an access group's access to managed keys and target keystores through {{site.data.keyword.iamshort}} (IAM). Complete the following steps to create your first vault:
@@ -83,7 +83,7 @@ A vault is a single repository that controls a user's or an access group's acces
 3. Enter a name in **Vault name**. The vault name can be of 1 to 100 characters. Optionally, you can add an extended description to your vault in the **Description** section.
 4. Click **Create vault** to confirm.
 
-### Creating target keystores
+### 2. Create target keystores
 {: #create-keystore}
 
 A target keystore is a repository that stores the cryptographic keys. You can create an internal target keystore within the service instance or connect to an external target keystore in another service instance or even in another cloud provider, such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), and Google Cloud KMS.
@@ -98,7 +98,7 @@ Complete the following steps to create your first internal target keystore:
 6. Under **Summary**, you can view the summary of the keystore that you create, including the keystore type, the assigned vault, and general properties.
 7. After you confirm the keystore details, click **Create keystore** to create the keystore.
 
-### Creating key templates
+### 3. Create key templates
 {: #create-key-template}
 
 key template specifies the properties of the managed keys to be created, such as the naming convention, key algorithm, and key length. 
@@ -112,7 +112,7 @@ Complete the following steps to create your first key template:
 5. Under **Key template properties**, specify the following details of the key template. Click **Next** to continue.
 6. Under **Summary**, view the summary of your key template, and then click **Create key template** to complete the key template creation.
 
-### Creating and activating managed keys
+### 4. Create managed keys
 {: #create-managed-key}
 
 You can use a managed key for encryption or decryption only after it is created and activated in at least one keystore. Complete the following steps to create your first IBM Cloud KMS key and activate the key in the keystore that you create:
