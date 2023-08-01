@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-07-12"
+lastupdated: "2023-08-01"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -134,7 +134,7 @@ Not all PKCS #11 functions are implemented by {{site.data.keyword.hscrypto}}. Fu
 |[Parallel function management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959751){: external} |C_CancelFunction|No|Legacy function that always returns `CKR_FUNCTION_NOT_PARALLEL`.|
 {: caption="Table 1. Describes the implemented PKCS #11 functions by service backend" caption-side="bottom"}
 
-1: The current implementation of the C_CreateObject function supports secret key objects, private key objects, public key objects, and X.509 Public Key Certificate objects.
+1: The current implementation of the C_CreateObject function supports secret key objects, private key objects, public key objects, data objects, X.509 Public Key Certificate objects, WTLS public key certificate objects, and X.509 attribute certificate objects.
 
 ## Supported mechanisms
 {: #pkcs-mechanism-list}
@@ -215,6 +215,11 @@ PKCS #11 attributes define object characteristics that set up how an object can 
 | CKA_VERIFY  | CK_TRUE if key supports verification where the signature is an appendix to the data. |    EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys |
 | CKA_WRAP | CK_TRUE if key supports wrapping (can be used to wrap other keys).  |     EC public keys, RSA public keys, DH public keys, DSA public keys, AES keys, DES keys, Generic keys      |
 | CKA_WRAP_WITH_TRUSTED  | CK_TRUE if the key can only be wrapped with a wrapping key that has CKA_TRUSTED set to CK_TRUE. Default is CK_FALSE.  | EC private keys, RSA private keys, DH private keys, DSA private keys, AES keys, DES keys, Generic keys          |
+| CKA_APPLICATION | Description of the application that manages the object (default empty) | Not applicable |
+| CKA_OBJECT_ID | DER-encoding of the object identifier indicating the data object type (default empty) | Not applicable |
+| CKA_OWNER | DER-encoding of the attribute certificate's subject field. This is distinct from the CKA_SUBJECT attribute contained in CKC_X_509 certificates because the ASN.1 syntax and encoding are different. | Not applicable |
+CKA_AC_ISSUER | DER-encoding of the attribute certificate's issuer field. This is distinct from the CKA_ISSUER attribute contained in CKC_X_509 certificates because the ASN.1 syntax and encoding are different. (default empty) | Not applicable |
+CKA_ATTR_TYPES | BER-encoding of a sequence of object identifier values corresponding to the attribute types contained in the certificate. When present, this field offers an opportunity for applications to search for a particular attribute certificate without fetching and parsing the certificate itself. (default empty) | Not applicable |
 {: caption="Table 3. Describes the supported attributes" caption-side="bottom"}
 
 ## Supported curves
