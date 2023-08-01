@@ -35,7 +35,7 @@ The PKCS #11 library, for both the amd64 and s390x platforms, is supported only 
 If you are running a Java PKCS #11 application using the SunPKCS11 provider on the IBM Z (s390x) platform, make sure that you use the latest IBM Semeru JVM and specify the `-Xjit:noResumableTrapHandler` Java option when starting your application. You can download the latest s390x version of the IBM Semeru JVM by changing the **Architecture** filter field to **s390x** on the [IBM Semeru Runtime Downloads page](https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM){: external}.
 {: note}
 
-1. [Download the latest PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external}. The library file names use the naming convention: `pkcs11-grep11-<**platform**>.so.<**version**>`. The platform is either *amd64* or *s390x* and the version is the standard *major.minor.build* syntax.
+1. [Download the latest PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external}. The library file names use the naming convention: `pkcs11-grep11-<platform>.so.<version>`. The platform is either *amd64* or *s390x* and the version is the standard *major.minor.build* syntax.
 2. Move the library into a folder that is accessible by your applications. For example, if you are running your application on Linux, you can move the library to `/usr/local/lib`, `/usr/local/lib64`, or `/usr/lib`.
 
 ## Step 2: (Optional) Verify the integrity and authenticity of the PKCS #11 library
