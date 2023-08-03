@@ -59,7 +59,7 @@ Depending on where your service instance locates and your security requirements,
 ## Step 2 (Standard Plan only): Create keys
 {: #create-key-standard}
 
-With the Standard Plan, you can create root keys or standard keys for data encryption. Complete the following steps to create your first cryptographic key. To complete these steps, make sure that you are assigned the *writer* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the console](/docs/hs-crypto?topic=hs-crypto-manage-access&interface=ui#assign-access-console).
+With the Standard Plan, you can create root keys or standard keys for data encryption. Complete the following steps to create your first cryptographic key. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *writer* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the console](/docs/hs-crypto?topic=hs-crypto-manage-access&interface=ui#assign-access-console).
 
 1. From the {{site.data.keyword.cloud_notm}} console, click **KMS keys** &gt; **Add key**.
 2. Select **Create a key**. 
@@ -71,7 +71,7 @@ The created key is a symmetric 256-bit key, supported by the AES-CBC algorithm. 
 ## Step 2 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys
 {: #manage-uko-key}
 
-Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}. To complete these steps, make sure that you are assigned the *Vault administrator* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the console](/docs/hs-crypto?topic=hs-crypto-uko-manage-access&interface=ui#assign-access-console).
+Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *Vault administrator* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the console](/docs/hs-crypto?topic=hs-crypto-uko-manage-access&interface=ui#assign-access-console).
 
 ### 1. Create vaults
 {: #create-vault}
@@ -116,7 +116,7 @@ You can use a managed key for encryption or decryption only after it is created 
 ## Step 3: Encrypt your data with cloud HSM
 {: #encrypt-data-hsm}
 
-You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations with the PKCS #11 API or with the GREP11 API.
+You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations with the PKCS #11 API or with the GREP11 API. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *writer* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the console](/docs/hs-crypto?topic=hs-crypto-manage-access&interface=ui#assign-access-console).
 
 ### Performing cryptographic operations with the PKCS #11 API
 {: #cryptographic-operations-with-pkcs11}
