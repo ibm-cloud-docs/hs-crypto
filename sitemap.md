@@ -1225,14 +1225,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys-next)
 
-[Viewing resources associated with managed keys](/docs/hs-crypto?topic=hs-crypto-uko-view-associated-resource#uko-view-associated-resource)
-
-* [Viewing associated resources with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-uko-view-associated-resource#uko-view-associated-resource-ui)
-
-* [Viewing associated resources with the API](/docs/hs-crypto?topic=hs-crypto-uko-view-associated-resource#uko-view-associated-resource-api)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-view-associated-resource#uko-view-associated-resource-next)
-
 [Rotating managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys#uko-rotate-keys)
 
 * [Rotating managed keys with the console](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys#uko-rotate-managed-key-gui)

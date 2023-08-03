@@ -225,7 +225,6 @@ toc:
               - uko-view-key-list.md
               - uko-search-key-list.md
               - uko-edit-kms-keys.md
-              - uko-view-associate-resource.md
               - uko-rotate-key.md 
               - uko-view-key-versions.md
               - uko-delete-managed-keys.md
