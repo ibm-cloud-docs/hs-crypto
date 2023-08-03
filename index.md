@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-01"
+lastupdated: "2023-08-03"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -59,7 +59,7 @@ Depending on where your service instance locates and your security requirements,
 ## Step 2 (Standard Plan only): Create keys
 {: #create-key-standard}
 
-With the Standard Plan, you can create root keys or standard keys for data encryption. Complete the following steps to create your first cryptographic key.
+With the Standard Plan, you can create root keys or standard keys for data encryption. Complete the following steps to create your first cryptographic key. To complete these steps, make sure that you are assigned the *writer* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the console](/docs/hs-crypto?topic=hs-crypto-manage-access&interface=ui#assign-access-console).
 
 1. From the {{site.data.keyword.cloud_notm}} console, click **KMS keys** &gt; **Add key**.
 2. Select **Create a key**. 
@@ -71,12 +71,14 @@ The created key is a symmetric 256-bit key, supported by the AES-CBC algorithm. 
 ## Step 2 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys
 {: #manage-uko-key}
 
-Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
+Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}. To complete these steps, make sure that you are assigned the *Vault administrator* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the console](/docs/hs-crypto?topic=hs-crypto-uko-manage-access&interface=ui#assign-access-console).
 
 ### 1. Create vaults
 {: #create-vault}
 
-A vault is a single repository that controls a user's or an access group's access to managed keys and target keystores through {{site.data.keyword.iamshort}} (IAM). Complete the following steps to create your first vault:
+A vault is a single repository that controls a user's or an access group's access to managed keys and target keystores through {{site.data.keyword.iamshort}} (IAM). 
+
+Complete the following steps to create your first vault:
 
 1. From your service instance console, click **Vaults** from the navigation to view all the available vaults.
 2. Click **Create vault**.
