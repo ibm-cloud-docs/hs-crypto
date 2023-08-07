@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-08-03"
+lastupdated: "2023-08-07"
 
 keywords: site map, doc structure, information architecture
 
@@ -370,6 +370,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [09 August 2023](/docs/hs-crypto?topic=hs-crypto-what-new#09-august-2023)
+
+    * [New]{: tag-new}: Context Based Restrictions (CBR) support  
 
 * [1 June 2023](/docs/hs-crypto?topic=hs-crypto-what-new#1-june-2023)
 
