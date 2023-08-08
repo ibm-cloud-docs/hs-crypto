@@ -272,6 +272,7 @@ toc:
           - uko-manage-access.md
           - uko-grant-access-vaults.md
           - uko-role-best-practices.md
+          - cbr.md
           - uko-at-events.md
       - topicgroup:
           label: Logging and monitoring
