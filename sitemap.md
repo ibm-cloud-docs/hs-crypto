@@ -373,7 +373,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [09 August 2023](/docs/hs-crypto?topic=hs-crypto-what-new#09-august-2023)
 
-    * [New]{: tag-new}: Context Based Restrictions (CBR) support  
+    * [New]{: tag-new}: Context Based Restrictions support  
 
 * [1 June 2023](/docs/hs-crypto?topic=hs-crypto-what-new#1-june-2023)
 

@@ -73,6 +73,11 @@
     "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
     "tiles": [
       {
+        "date": "August 2023",
+        "title": "Added: Context Based Restrictions support",
+        "description": "Context Based Restrictions (CBR) enables extra protection on IBM Cloud resources. Essentially, it wraps around IAM polices allowing an admin or account owner configure network rules for the resource/endpoint and network zones to allow/disallow IPs for end user access. With added support of CBR in Hyper Protect Crypto Services, you can enforce these rules while utilizing your Hyper Protect Crypto Services instance. "
+      },
+      {
         "date": "June 2023",
         "title": "Updated: Pricing plan for Unified Key Orchestrator",
         "description": "The pricing plan has been updated for Unified Key Orchestrator. You can find more details on the service catalog page. "
@@ -86,11 +91,6 @@
         "date": "March 2023",
         "title": "Added: Master key rotation for Unified Key Orchestrator and EP11 keystores",
         "description": "You are now able to rotate master keys when you are using the Unified Key Orchestrator service plan or your service instance has EP11 keystores enabled. "
-      },
-      {
-        "date": "February 2023",
-        "title": "Updated: Hyper Protect Crypto Services key management functions",
-        "description": "The Hyper Protect Crypto Services key management service API is updated to version 22.11. "
       }
     ]
   }

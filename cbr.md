@@ -4,7 +4,7 @@ copyright:
   years:  2023
 lastupdated: "2023-08-09"
 
-keywords: restricting access to Hyper Protect Crypto Services, restricting access to HPCS, HPCS cbr
+keywords: restricting access to Hyper Protect Crypto Services, restricting access to HPCS, HPCS cbr, UKO cbr
 
 subcollection: hs-crypto
 
@@ -22,7 +22,7 @@ Context-based restrictions give account owners and administrators the ability to
 
 These restrictions work with traditional IAM policies, which are based on identity, to provide an extra layer of protection. Unlike IAM policies, context-based restrictions don't assign access. Context-based restrictions check that an access request comes from an allowed context that you configure. Since both IAM access and context-based restrictions enforce access, context-based restrictions offer protection even in the face of compromised or mismanaged credentials. For more information, see [What are context-based restrictions](/docs/account?topic=account-context-restrictions-whatis).
 
-A user must have the Administrator role on the {{site.data.keyword.hscrypto}} service to create, update, or delete rules. A user must also have either the Editor or Administrator role on the context-based restrictions service to create, update, or delete network zones. A user with the Viewer role on the context-based restrictions service can add network zones to a rule.
+A user must have the Administrator role on the {{site.data.keyword.hscrypto}} instances to create, update, or delete rules. A user must also have either the Editor or Administrator role on the context-based restrictions service to create, update, or delete network zones. A user with the Viewer role on the context-based restrictions service can add network zones to a rule.
 {: note}
 
 Any {{site.data.keyword.cloudaccesstraillong_notm}} or audit log events generated come from the context-based restrictions service, not {{site.data.keyword.hscrypto}}. {{site.data.keyword.hscrypto}} supports audit events only for customer interactions with context-based restrictions-protected platform endpoint calls. {{site.data.keyword.hscrypto}} does not support audit events when you enable context-based restrictions rules on the control plane API for your instances. For more information, see [Monitoring context-based restrictions](/docs/account?topic=account-cbr-monitor).
@@ -32,7 +32,7 @@ To start protecting your {{site.data.keyword.hscrypto}} resources with context-b
 ## How {{site.data.keyword.hscrypto}} integrates with context-based restrictions
 {: #cbr-overview}
 
-You can create context-based restrictions for the {{site.data.keyword.hscrypto}} service and specific resources.
+You can create context-based restrictions for the {{site.data.keyword.hscrypto}} instances and specific resources.
 
 ### Protecting {{site.data.keyword.hscrypto}} resources
 {: #cbr-overview-protect-services}
