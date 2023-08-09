@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-16"
+lastupdated: "2023-08-09"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -121,9 +121,9 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Distribute a key into assigned keystores. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
 | Write key activation or expiration dates. | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
 | Write key tags. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | |
-| Read target keystore details. |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
-| List target keystores. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-| Write or edit target keystore details. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| |
+| Read keystore details. |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
+| List keystores. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
+| Write or edit keystore details. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| |
 | Delete an internal keystore, or disconnect from an external keystore. | | | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | Read key template details. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 | List key templates. | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|

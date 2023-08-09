@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-08-09"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Editing vault details
 {: #edit-vaults}
 
-You can edit your vaults in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API. With a vault, you cannot only create managed keys or add target keystores, but also manage resources that are contained in the vault.
+You can edit your vaults in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API. With a vault, you cannot only create managed keys or add keystores, but also manage resources that are contained in the vault.
 {: shortdesc}
 
 
@@ -37,7 +37,7 @@ To edit vault details by using the console, complete the following steps:
   
 5. Click **Save** to save the property changes.
 6. The keys and keystores that are assigned to this vault are displayed in tables. 
-7. Optionally, you can add additional keys to the vault by clicking **Create key** under **Keys**, or add a keystore by clicking **Add keystores** under **Target keystores**.
+7. Optionally, you can add additional keys to the vault by clicking **Create key** under **Keys**, or add a keystore by clicking **Add keystores** under **Keystores**.
 
 
 

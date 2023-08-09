@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-14"
+lastupdated: "2023-08-09"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 
@@ -50,11 +50,11 @@ The following table lists the key actions that generate an event.
 
 | Action                            | Description                                                  |
 | --------------------------------- | ------------------------------------------------------------ |
-| `hs-crypto.target-keystores.write`               | Create or update a target keystore.   |
-| `hs-crypto.target-keystores.list `         | Get a list of target keystores.               |
-| `hs-crypto.target-keystores.read`         | Retrieve information about a target keystore.     |
-| `hs-crypto.target-keystores.delete`              | Delete a target keystore.                |
-{: caption="Table 2. Target keystore actions" caption-side="bottom"}
+| `hs-crypto.target-keystores.write`               | Create or update a keystore.   |
+| `hs-crypto.target-keystores.list `         | Get a list of keystores.               |
+| `hs-crypto.target-keystores.read`         | Retrieve information about a keystore.     |
+| `hs-crypto.target-keystores.delete`              | Delete a keystore.                |
+{: caption="Table 2. Keystore actions" caption-side="bottom"}
 
 ### Vault events
 {: #uko-vault-actions}

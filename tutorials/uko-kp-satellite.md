@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-27"
+lastupdated: "2023-08-09"
 
 keywords: key management with satellite, uko satellite, hpcs satellite, kp satellite
 
@@ -79,7 +79,7 @@ Deploy {{site.data.keyword.keymanagementserviceshort}} on Satellite by following
 After you deploy {{site.data.keyword.keymanagementserviceshort}} on Satellite, you can now connect {{site.data.keyword.uko_full_notm}} to {{site.data.keyword.keymanagementserviceshort}} to have a unified key management experience.
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. Click **Target keystores** from the navigation and click **Add keystore**.
+2. Click **Keystores** from the navigation and click **Add keystore**.
 3. Under **Vault**, select a vault for the keystore for access control, and click **Next**. 
 
     If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
@@ -126,13 +126,13 @@ Now you can use {{site.data.keyword.uko_full_notm}} to create and activate keys 
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. For example, `KP on satellite keys for project Tiger DB encryption`|
     | Algorithm            | The encryption algorithm to encrypt data for the key. For example, `AES`.   |
     | Length               | The number of bits that represents the encryption strength of the key. For example, `256`.  |
-    | State                | Pre-active keys are not to be activatedin target keystores until you manually activate them. Active keys are automatically activated in the target keystores. Select `Active` for installation to {{site.data.keyword.keymanagementserviceshort}} on Satellite.For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
+    | State                | Pre-active keys are not to be activatedin keystores until you manually activate them. Active keys are automatically activated in the keystores. Select `Active` for installation to {{site.data.keyword.keymanagementserviceshort}} on Satellite.For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
     | Activation date      | Plan a date to activate the Pre-active key. Automatic state change is to be triggered on the planned date. For this tutorial, you don't need to specify this property as the `Active` state is selected previously. The key will be activated immediately upon its creation. |
     | Expiration date      | Plan a date to deactivate the key. Automatic state change is to be triggered on the planned date. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key. For example, `project: tiger`. |
     {: caption="Table 2. Key properties" caption-side="bottom"}
 
-7. Under **Target keystores**, select the {{site.data.keyword.keymanagementserviceshort}} on Satellite keystore that you create in the previous step.
+7. Under **Keystores**, select the {{site.data.keyword.keymanagementserviceshort}} on Satellite keystore that you create in the previous step.
 8. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.
 
 ## Next steps

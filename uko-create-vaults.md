@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-05"
+lastupdated: "2023-08-09"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -37,7 +37,7 @@ Before you create a vault for your {{site.data.keyword.hscrypto}} instance, keep
 
 - A key or a keystore only can belong to one vault at a time.
 
-    A managed key or a target keystore can belong to only one vault. You need to assign a vault to a managed key or a target keystore upon creation.
+    A managed key or a keystore can belong to only one vault. You need to assign a vault to a managed key or a keystore upon creation.
 
 - During master key rotation, you are not able to create a vault. However, you can create the vault again after the master key rotation process is complete.
 

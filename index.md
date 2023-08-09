@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-01"
+lastupdated: "2023-08-09"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -59,7 +59,7 @@ Depending on where your service instance locates and your security requirements,
 ## Step 2 (Standard Plan only): Create keys
 {: #create-key-standard}
 
-With the Standard Plan, you can create root keys or standard keys for data encryption. Complete the following steps to create your first cryptographic key.
+With the Standard Plan, you can create root keys or standard keys for data encryption. Complete the following steps to create your first cryptographic key. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *writer* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the console](/docs/hs-crypto?topic=hs-crypto-manage-access&interface=ui#assign-access-console).
 
 1. From the {{site.data.keyword.cloud_notm}} console, click **KMS keys** &gt; **Add key**.
 2. Select **Create a key**. 
@@ -71,26 +71,28 @@ The created key is a symmetric 256-bit key, supported by the AES-CBC algorithm. 
 ## Step 2 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys
 {: #manage-uko-key}
 
-Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
+Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *Vault administrator* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the console](/docs/hs-crypto?topic=hs-crypto-uko-manage-access&interface=ui#assign-access-console).
 
 ### 1. Create vaults
 {: #create-vault}
 
-A vault is a single repository that controls a user's or an access group's access to managed keys and target keystores through {{site.data.keyword.iamshort}} (IAM). Complete the following steps to create your first vault:
+A vault is a single repository that controls a user's or an access group's access to managed keys and keystores through {{site.data.keyword.iamshort}} (IAM). 
+
+Complete the following steps to create your first vault:
 
 1. From your service instance console, click **Vaults** from the navigation to view all the available vaults.
 2. Click **Create vault**.
 3. Enter a name in **Vault name**. The vault name can be of 1 to 100 characters. Optionally, you can add an extended description to your vault in the **Description** section.
 4. Click **Create vault** to confirm.
 
-### 2. Create target keystores
+### 2. Create keystores
 {: #create-keystore}
 
-A target keystore is a repository that stores the cryptographic keys. You can create an internal target keystore within the service instance or connect to an external target keystore in another service instance or even in another cloud provider, such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), and Google Cloud KMS.
+A keystore is a repository that stores the cryptographic keys. You can create an internal keystore within the service instance or connect to an external keystore in another service instance or even in another cloud provider, such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), and Google Cloud KMS.
 
-Complete the following steps to create your first internal target keystore:
+Complete the following steps to create your first internal keystore:
 
-1. From your service instance console, click **Target keystores** from the navigation to view all the available keystores.
+1. From your service instance console, click **Keystores** from the navigation to view all the available keystores.
 2. Click **Add keystore**.
 3. Under **Vault**, select the vault that you create, and click **Next**. If you want to assign the keystore to a new vault, click **Create vault**.
 4. Under **Keystore type**, select **IBM Cloud KMS** and click **Next**.
@@ -107,14 +109,14 @@ You can use a managed key for encryption or decryption only after it is created 
 1. From your service instance console, click **Managed keys** from the navigation to view all the available keys.
 2. Click **Create key**.
 3. Under **Vault**, select the vault that you've just created and then click **Next**. 
-4. Under **Target keystores**, select **IBM Cloud KMS** as the keystore type, select the keystore you've just created, and then click **Next**.
-5. Under **Key properties**, specify details of the key. Click **Next** to continue when you are done. Note that `Pre-active` keys are not to be installed in target keystores until you manually activate them. `Active` keys are to be automatically installed in the target keystores. For more information about the key properties, see [Creating managed keys with a key template in the IBM Cloud console](/docs/hs-crypto?topic=hs-crypto-create-managed-keys&interface=ui#create-managed-keys-template-ui).
+4. Under **Keystores**, select **IBM Cloud KMS** as the keystore type, select the keystore you've just created, and then click **Next**.
+5. Under **Key properties**, specify details of the key. Click **Next** to continue when you are done. Note that `Pre-active` keys are not to be installed in keystores until you manually activate them. `Active` keys are to be automatically installed in the keystores. For more information about the key properties, see [Creating managed keys with a key template in the IBM Cloud console](/docs/hs-crypto?topic=hs-crypto-create-managed-keys&interface=ui#create-managed-keys-template-ui).
 6. Under **Summary**, view the summary of your key, and then click **Create key** to create the key.
 
 ## Step 3: Encrypt your data with cloud HSM
 {: #encrypt-data-hsm}
 
-You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations with the PKCS #11 API or with the GREP11 API.
+You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations with the PKCS #11 API or with the GREP11 API. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *writer* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the console](/docs/hs-crypto?topic=hs-crypto-manage-access&interface=ui#assign-access-console).
 
 ### Performing cryptographic operations with the PKCS #11 API
 {: #cryptographic-operations-with-pkcs11}

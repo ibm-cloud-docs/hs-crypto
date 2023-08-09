@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-08-09"
 
 keywords: Unified Key Orchestrator, UKO keystore, delete keystore, internal keystore, KMS keystore
 
@@ -30,7 +30,7 @@ To delete an internal keystore, [delete all activated keys](/docs/hs-crypto?topi
 To delete an internal keystore by using the console, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. Click **Target keystores** from the navigation to view all the available keystores.
+2. Click **Keystores** from the navigation to view all the available keystores.
 3. Click the keystore that you want to delete. The side panel is displayed.
 4. Click **Delete** to delete the keystore and all the metadata. 
 5. Click **Delete keystore** to confirm the deletion.

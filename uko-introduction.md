@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-08-09"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -21,12 +21,12 @@ subcollection: hs-crypto
 
 With {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}, you can manage keys not only for your internal keystores, but across multiple cloud providers, including Microsoft Azure, Amazon Web Services (AWS), and Google Cloud Platform. All your keys in all those places are protected by your own master key, which is stored in a FIPS 140-2 Level 4-certified hardware security module (HSM) for the highest security. You can manage the lifecycles of your keys from a single point of control, while the system keeps keys that are distributed in sync.
 
-With {{site.data.keyword.uko_full_notm}}, you can organize everything in vaults. *Vaults* are secure repositories that bundle your managed keys and the target keystores to distribute managed keys to. You can use vaults to grant access to different Identity and Access Management (IAM) user groups.
+With {{site.data.keyword.uko_full_notm}}, you can organize everything in vaults. *Vaults* are secure repositories that bundle your managed keys and the keystores to distribute managed keys to. You can use vaults to grant access to different Identity and Access Management (IAM) user groups.
 
 ## Use case example
 {: #uko-use-case-example}
 
-In the following example, your retail banking business unit, reflected as one user group, uses a vault called `Retail Banking BU`. Another business unit, reflected as another user group, uses their own vault to keep their managed keys and target keystores separate.
+In the following example, your retail banking business unit, reflected as one user group, uses a vault called `Retail Banking BU`. Another business unit, reflected as another user group, uses their own vault to keep their managed keys and keystores separate.
 
 You connect vault `Retail Banking BU` to three external keystores in different locations, in this example, three Azure Key Vaults. You can also connect your vault to other external keystore types if needed, such as AWS Key Management Service, {{site.data.keyword.keymanagementservicelong}}, or other {{site.data.keyword.hscrypto}} instances. Then, you create managed keys in vault `Retail Banking BU` and distribute the keys to those three external keystores in Azure.
 
@@ -43,7 +43,7 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
 
 - **Vaults**
     
-    A vault is a repository that controls a user's or an access group's access to managed keys and target keystores through IAM. A vault keeps all activations of a managed key in sync. You can assign a managed key or target keystore only in one vault. When you connect to an external keystore, you also need to assign it to a vault first. 
+    A vault is a repository that controls a user's or an access group's access to managed keys and keystores through IAM. A vault keeps all activations of a managed key in sync. You can assign a managed key or keystore only in one vault. When you connect to an external keystore, you also need to assign it to a vault first. 
 
     You can create different vaults based on your organizational or security needs. For example, you can create a vault for each business unit. In this way, you set access control policies at a vault level, and key administrators of each business unit have access only to the keys and keystores that are assigned to the vault of their business unit.
 
@@ -53,13 +53,13 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
 
 - **Managed keys**
         
-    A managed key is a key that is created in and assigned to a vault. You can manage the lifecycle of a managed key and activate it in multiple keystores in the same vault. You can use a managed key for encryption and decryption only when it is activated in at least one target keystore. Activating a managed key in multiple keystores in the same vault enables key redundancy. To use a managed key for encryption and decryption, activate it in one or more keystores within the same vault first. 
+    A managed key is a key that is created in and assigned to a vault. You can manage the lifecycle of a managed key and activate it in multiple keystores in the same vault. You can use a managed key for encryption and decryption only when it is activated in at least one keystore. Activating a managed key in multiple keystores in the same vault enables key redundancy. To use a managed key for encryption and decryption, activate it in one or more keystores within the same vault first. 
 
     For more information about creating managed keys, see [Creating and activating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys).
 
-- **Target keystores**
+- **Keystores**
         
-    A target keystore is keystore that is assigned to a vault. You need to create an internal keystore in only one vault, or assign an external keystore to a vault when you connect your service instance to it. 
+    A keystore is keystore that is assigned to a vault. You need to create an internal keystore in only one vault, or assign an external keystore to a vault when you connect your service instance to it. 
 
     You need to activate a key in a keystore before you can encrypt or decrypt data by using the key.       
     

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-28"
+lastupdated: "2023-08-09"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -52,7 +52,7 @@ The following methods are added or updated:
 The following methods are added:
 
 - List associated resources for a manged key
-- List associated resources for a target keystore
+- List associated resources for a keystore
 
 ## June 2022
 {: #uko-api-june-2022}
@@ -79,13 +79,13 @@ The following methods are introduced:
 - Delete a template
 - Retrieve a key template
 - Update a key template
-- List all target keystores
+- List all keystores
 - Create an internal keystore or a keystore connection
 - Delete an internal keystore or a connection to an external keystore
-- Retrieve a target keystore
+- Retrieve a keystore
 - Update an internal keystore or a keystore connection
-- Retrieve target keystore status
-- List managed keys on the target keystore
+- Retrieve keystore status
+- List managed keys on the keystore
 - List all vaults
 - Create a vault
 - Delete an existing vault

@@ -225,7 +225,6 @@ toc:
               - uko-view-key-list.md
               - uko-search-key-list.md
               - uko-edit-kms-keys.md
-              - uko-view-associate-resource.md
               - uko-rotate-key.md 
               - uko-view-key-versions.md
               - uko-delete-managed-keys.md
@@ -273,6 +272,7 @@ toc:
           - uko-manage-access.md
           - uko-grant-access-vaults.md
           - uko-role-best-practices.md
+          - cbr.md
           - uko-at-events.md
       - topicgroup:
           label: Logging and monitoring

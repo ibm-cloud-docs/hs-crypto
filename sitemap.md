@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-08-01"
+lastupdated: "2023-08-09"
 
 keywords: site map, doc structure, information architecture
 
@@ -370,6 +370,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [09 August 2023](/docs/hs-crypto?topic=hs-crypto-what-new#09-august-2023)
+
+    * [New]{: tag-new}: Context Based Restrictions support  
 
 * [1 June 2023](/docs/hs-crypto?topic=hs-crypto-what-new#1-june-2023)
 
@@ -1221,17 +1225,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Editing key details with the API](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys-api)
 
-* [Editing target keystores for keys with the API](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#assign-key-keystores-api)
+* [Editing keystores for keys with the API](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#assign-key-keystores-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys-next)
-
-[Viewing resources associated with managed keys](/docs/hs-crypto?topic=hs-crypto-uko-view-associated-resource#uko-view-associated-resource)
-
-* [Viewing associated resources with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-uko-view-associated-resource#uko-view-associated-resource-ui)
-
-* [Viewing associated resources with the API](/docs/hs-crypto?topic=hs-crypto-uko-view-associated-resource#uko-view-associated-resource-api)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-view-associated-resource#uko-view-associated-resource-next)
 
 [Rotating managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys#uko-rotate-keys)
 
@@ -1553,6 +1549,14 @@ Find what you are looking for in the compilation of topics that are available in
 * [Step 2: Assign IAM roles to users](/docs/hs-crypto?topic=hs-crypto-uko-role-best-practices#step2-assign-iam-roles-uko)
 
 * [ What's next](/docs/hs-crypto?topic=hs-crypto-uko-role-best-practices#uko-role-best-practices-next)
+
+[Protecting {{site.data.keyword.hscrypto}} resources with context-based restrictions](/docs/hs-crypto?topic=hs-crypto-cbr#cbr)
+
+* [How {{site.data.keyword.hscrypto}} integrates with context-based restrictions](/docs/hs-crypto?topic=hs-crypto-cbr#cbr-overview)
+
+* [Creating network zones](/docs/hs-crypto?topic=hs-crypto-cbr#network-zone)
+
+* [Creating rules](/docs/hs-crypto?topic=hs-crypto-cbr#rules)
 
 [Auditing events for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-at-events)
 
