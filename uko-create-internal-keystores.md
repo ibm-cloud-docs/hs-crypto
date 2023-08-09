@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-08-09"
 
 keywords: Unified Key Orchestrator, UKO keystore, create keystore, internal keystore， KMS keystore
 
@@ -25,8 +25,8 @@ Before you create an internal KMS keystore, keep in mind the following considera
 
 - You can create up to five internal KMS keystores to manage your keys for free. The maximum number of internal KMS keystores for a service instance is 50. 
 - To enable cross-region key distribution or specified access permissions, you might want to create additional keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Other currencies are applied based on the region that the service instance is provisioned in.
-- A managed key can be used for encryption and decryption only after you activate it in at least one target keystore. 
-- A target keystore can be assigned to only one vault.
+- A managed key can be used for encryption and decryption only after you activate it in at least one keystore. 
+- A keystore can be assigned to only one vault.
 
 ## Creating internal KMS keystores with the {{site.data.keyword.cloud_notm}} console
 {: #create-internal-keystores-ui}
@@ -37,7 +37,7 @@ Before you create an internal KMS keystore, keep in mind the following considera
 To create an internal KMS keystore by using the console, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. Click **Target keystores** from the navigation to view all the available keystores.
+2. Click **Keystores** from the navigation to view all the available keystores.
 3. To create a keystore, click **Add keystore**.
 4. Under **Vault**, select a vault for the keystore for access control, and click **Next**. 
 

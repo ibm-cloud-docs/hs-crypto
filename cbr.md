@@ -2,9 +2,9 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-08-08"
+lastupdated: "2023-08-09"
 
-keywords: restricting access to Hyper Protect Crypto Services, restricting access to HPCS, HPCS cbr, UKO cbr
+keywords: restricting access to Hyper Protect Crypto Services, restricting access to HPCS, HPCS cbr
 
 subcollection: hs-crypto
 
@@ -32,18 +32,12 @@ To start protecting your {{site.data.keyword.hscrypto}} resources with context-b
 ## How {{site.data.keyword.hscrypto}} integrates with context-based restrictions
 {: #cbr-overview}
 
-You can create context-based restrictions for the {{site.data.keyword.hscrypto}} service, specific resources, and specific APIs.
+You can create context-based restrictions for the {{site.data.keyword.hscrypto}} service and specific resources.
 
 ### Protecting {{site.data.keyword.hscrypto}} resources
 {: #cbr-overview-protect-services}
 
-You can create context-based restrictions rules to protect specific **regions**, **resource groups**, and **instances**.
-
-Region
-:   Protects {{site.data.keyword.hscrypto}} resources in a specific region. If you include a region in your context-based restrictions rule, resources in the network zones that you associate with the rule can interact with resources only in that region. If you use the CLI, you can specify the `--region` option to protect resources in a specific region. If you use the UI, you can specify *Region* in the resource attributes. 
-
-Resource groups
-:   Protects a specific resource group. If you include a resource group in your context-based restrictions rule, resources in the network zones that you associate with the rule can interact only with resources in that resource group. Scoping a rule to a specific resource group is available only for rules that protect the cluster API type. If you use the CLI, you can specify the `--resource-group-id` option to protect resources in a specific resource group. If you use the UI, you can specify the *Resource group* in the resource attributes.
+You can create context-based restrictions rules to protect specific **instances**.
 
 Instance
 :   Protects a specific instance. If you include an instance in your context-based restrictions rule, resources in the network zones that you associate with the rule can interact only with resources in that instance. Scoping a rule to a specific instance is available only for rules that protect the cluster API type. If you use the CLI, you can specify the `--service-instance` option to protect instances in a specific resource group. If you use the UI, you can specify the *Service instance* in the resource attributes.
@@ -109,12 +103,9 @@ ibmcloud cbr zone-delete <ZONE-ID>
 ## Creating rules
 {: #rules}
 
-Rules restrict access to specific cloud resources based on resource attributes and contexts. A created rule can accept up to 2,000 IP/CIDR values for private endpoints and up to 2,000 IP/CIDR values for public endpoints. This limit is specfic to {{site.data.keyword.hscrypto}}. Other {{site.data.keyword.cloud}} service limits may vary.
+Rules restrict access to specific cloud resources based on resource attributes and contexts.
 
 {{site.data.keyword.hscrypto}} does not support IPv6 addresses. If an IPv6 address is included, it will be ignored.
-
-Full Closure of Access to Non-Allowlisted Endpoints: To provide a more robust security framework, we have implemented a significant change in access control for public and private endpoints. Going forward, access to both public and private endpoints that are not explicitly allowlisted will be fully closed. This restriction ensures only authorized access to your endpoints, minimizing the risk of unauthorized access.
-{: important}
 
 ### Creating rules in the UI
 {: #rules-ui}
@@ -123,13 +114,9 @@ Full Closure of Access to Non-Allowlisted Endpoints: To provide a more robust se
 1. Go to **Manage** > **Context-based restrictions** in the {{site.data.keyword.cloud}} console.
 1. Select **Rules**.
 1. Click **Create**.
-1. Select **Specific APIs** and then select `Data plane`. Any other selection results in an error.
-   
-   {{site.data.keyword.hscrypto}} does not currently support **Control plane** as an option.
-   {: .note}
-
+1. Select **Hyper Protect Crypto Services**.
 1. Click **Next**.
-1. Scope the rule to **All resources** or **Specific resources**. For more information, see [Protecting {{site.data.keyword.hscrypto}} resources](/docs/hs-crypto?topic=hs-crypto-cbr#cbr-overview-protect-services).
+1. Scope the rule to **Specific resources**. For more information, see [Protecting {{site.data.keyword.hscrypto}} resources](/docs/hs-crypto?topic=hs-crypto-cbr#cbr-overview-protect-services).
 1. Click **Continue**.
 1. Define the allowed endpoint types.
    - Keep the toggle set to **No** to allow all endpoint types.
@@ -154,15 +141,7 @@ Full Closure of Access to Non-Allowlisted Endpoints: To provide a more robust se
 To create rules in the CLI, [install the context-based restrictions CLI plug-in](/docs/account?topic=account-cbr-plugin).
 
 To create a rule in the CLI, you need the appropriate {{site.data.keyword.hscrypto}} `service_name`:
-* `databases-for-etcd`
-* `databases-for-elasticsearch`
-* `databases-for-mongodb`
-* `databases-for-postgresql`
-* `databases-for-redis`
-* `messages-for-rabbitmq`
-* `databases-for-cassandra`
-* `databases-for-enterprisedb`
-* `database-for-mysql`
+* `Hyper Protect Crypto Services`
 
 Create a rule by using a command like:
 
@@ -209,15 +188,7 @@ Use `ibmcloud cbr <command> — help` for a full list of options and parameters.
 To create rules using Terraform, see [IBM Cloud Provider](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external} in the [Terraform Registry](https://registry.terraform.io/){: external}.
 
 To create a rule, you need the appropriate {{site.data.keyword.hscrypto}} `service_name`:
-* `databases-for-etcd`
-* `databases-for-elasticsearch`
-* `databases-for-mongodb`
-* `databases-for-postgresql`
-* `databases-for-redis`
-* `messages-for-rabbitmq`
-* `databases-for-cassandra`
-* `databases-for-enterprisedb`
-* `database-for-mysql`
+* `Hyper Protect Crypto Services`
 
 The `ibm_cbr_rule` provides a resource for `cbr_rule` and allows a `cbr_rule` to be created, updated, and deleted.
 

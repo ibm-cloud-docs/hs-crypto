@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-08-09"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -65,7 +65,7 @@ To create a managed key by using the console, complete the following steps:
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Length               | The number of bits that represents the encryption strength of the key.   |
-    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activation date      | Plan a date to activate the Pre-active key. Automatic state change is to be triggered on the planned date. |
     | Expiration date      | Plan a date to deactivate the key. Automatic state change is to be triggered on the planned date. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
@@ -81,7 +81,7 @@ To create a managed key by using the console, complete the following steps:
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Length               | The number of bits that represents the encryption strength of the key.   |
-    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys_ are not activated in keystores for encryption. Active keys are automatically activated in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys_ are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activation date      | Plan a date to activate the Pre-active key. Automatic state change is to be triggered on the planned date. |
     | Expiration date      | Plan a date to deactivate the key. Automatic state change is to be triggered on the planned date. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
@@ -98,7 +98,7 @@ To create a managed key by using the console, complete the following steps:
     | Protection level     | **HSM-protected key** protection level applies to keys that are protected by FIPS 140-2 Level 3 Hardware Security Modules (HSMs) in Google Cloud. This type of keys ensures the higher security. \n \n **Software-protected key** protection level applies to keys that are protected by software. You can choose this level to [reduce cost](https://cloud.google.com/kms/pricing){: external}. For more information, see [Cloud KMS software backend: SOFTWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#software-protection-level){: external} and [Cloud KMS HSM backend: HARDWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#hardware-protection-level){: external}. \n \n **Note:** Software-protected keys don't support the Elliptic curve `secp256k1` algorithm.  |
     | Purpose               | The cryptographic capabilities of the key, which is what you are going to do with this key. The purpose also determines the available key algorithms. The supported key purposes are **Symmetric encrypt/decrypt**, **Asymmetric sign**, **Asymmetric decrypt**, and **MAC signing/verification**. For more information, see [Key purpose](https://cloud.google.com/kms/docs/algorithms#key_purposes){: external}.   |
     | Key algorithm |  The corresponding key algorithms that are supported for each key purpose. Algorithms define what parameters are needed for cryptographic operations. For the list of available key algorithms, see [Key purposes and algorithms](https://cloud.google.com/kms/docs/algorithms){: external}.  |
-    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activation date      | Plan a date to activate the Pre-active key. Automatic state change is to be triggered on the planned date. |
     | Expiration date      | Plan a date to deactivate the key. Automatic state change is to be triggered on the planned date. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
@@ -114,7 +114,7 @@ To create a managed key by using the console, complete the following steps:
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Length               | The number of bits that represents the encryption strength of the key.   |
-    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activation date      | Plan a date to activate the Pre-active key. Automatic state change is to be triggered on the planned date. |
     | Expiration date      | Plan a date to deactivate the key. Automatic state change is to be triggered on the planned date. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
@@ -130,7 +130,7 @@ To create a managed key by using the console, complete the following steps:
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Length               | The number of bits that represents the encryption strength of the key.   |
-    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the target keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activation date      | Plan a date to activate the Pre-active key. Automatic state change is to be triggered on the planned date. |
     | Expiration date      | Plan a date to deactivate the key. Automatic state change is to be triggered on the planned date. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
@@ -140,7 +140,7 @@ To create a managed key by using the console, complete the following steps:
     {: tab-group="Managed key properties"}
     {: class="comparison-tab-table"}
 
-7. Under **Target keystores**, you can select one or multiple target keystores to activate the managed key in. Activating a key in multiple keystores enables redundancy.
+7. Under **Keystores**, you can select one or multiple keystores to activate the managed key in. Activating a key in multiple keystores enables redundancy.
 
     If there are no existing keystores, you can click **Add keystore** to [create internal KMS keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [connect to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores). The corresponding keystore type is selected for you.
 

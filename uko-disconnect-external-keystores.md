@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-27"
+lastupdated: "2023-08-09"
 
 keywords: Unified Key Orchestrator, UKO keystore, disconnect keystore, external keystore, KMS keystore
 
@@ -32,7 +32,7 @@ If you want to disconnect from an external keystore, delete all active keys in t
 To disconnect from an external keystore by using the console, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. Click **Target keystores** from the navigation to view all the available keystores.
+2. Click **Keystores** from the navigation to view all the available keystores.
 3. Click the keystore that you want to disconnect. The Details side panel is displayed.
 4. Click **Disconnect** to disconnect the keystore and remove it from the keystore list. 
 5. Click **Disconnect keystore** to confirm.

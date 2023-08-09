@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-08-09"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -25,8 +25,8 @@ Before you connect to an external keystore, keep in mind the following considera
 
 - You can connect to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), and Google Cloud KMS.
 - You can connect to one external keystore at no initial cost, regardless of the type. You are charged for additional external keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Other currencies are applied based on the region the service instance is provisioned in.
-- A managed key can be used for encryption and decryption only after you activate it in at least one target keystore. 
-- A target keystore can be assigned to only one vault.
+- A managed key can be used for encryption and decryption only after you activate it in at least one keystore. 
+- A keystore can be assigned to only one vault.
 
 ## Setting up required user access in external keystores
 {: #connect-external-keystores-access}
@@ -101,7 +101,7 @@ To set up user access to Google Cloud KMS, complete the following steps:
 To connect to an external keystore by using the console, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. Click **Target keystores** from the navigation to view all the available keystores.
+2. Click **Keystores** from the navigation to view all the available keystores.
 3. To connect to an external keystore, click **Add keystore**.
 4. Under **Vault**, select a vault for the keystore for access control, and click **Next**. 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-08-08"
+lastupdated: "2023-08-09"
 
 keywords: site map, doc structure, information architecture
 
@@ -1225,7 +1225,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Editing key details with the API](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys-api)
 
-* [Editing target keystores for keys with the API](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#assign-key-keystores-api)
+* [Editing keystores for keys with the API](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#assign-key-keystores-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys-next)
 

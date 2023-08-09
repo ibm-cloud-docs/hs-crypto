@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-08-09"
 
 keywords: troubleshoot, problems, known issues, can't delete vaults
 
@@ -26,9 +26,9 @@ You try to delete a vault, but it fails with the following message:
 
 > The service was not able to delete vault `<vault_name>` because it still contains some keys or keystores.
 
-If you want to delete a vault, you need to delete all managed keys, and delete or disconnect from all target keystores that are managed in the vault first. The Delete function is available for empty vaults only. 
+If you want to delete a vault, you need to delete all managed keys, and delete or disconnect from all keystores that are managed in the vault first. The Delete function is available for empty vaults only. 
 {: tsCauses}
 
-Verify with your administrator that you're assigned [the correct role](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) in the applicable resource group or service instance. And then, delete all managed keys, and delete or disconnect from all target keystores that are managed in the vault, and try again.
+Verify with your administrator that you're assigned [the correct role](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) in the applicable resource group or service instance. And then, delete all managed keys, and delete or disconnect from all keystores that are managed in the vault, and try again.
 {: tsResolve}
 
