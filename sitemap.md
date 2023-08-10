@@ -405,11 +405,11 @@ Find what you are looking for in the compilation of topics that are available in
 
     * Added: Management Utilities support for Red Hat Enterprise Linux 9.0 and Ubuntu 22.04.1 LTS
 
-* [31 Octorber 2022](/docs/hs-crypto?topic=hs-crypto-what-new#31-octorber-2022)
+* [31 October 2022](/docs/hs-crypto?topic=hs-crypto-what-new#31-october-2022)
 
     * Added: Google Cloud KMS support
 
-* [20 Octorber 2022](/docs/hs-crypto?topic=hs-crypto-what-new#20-octorber-2022)
+* [20 October 2022](/docs/hs-crypto?topic=hs-crypto-what-new#20-october-2022)
 
     * Added: EP11 activity tracker events
 
