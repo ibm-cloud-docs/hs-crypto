@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-09"
+lastupdated: "2023-08-10"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -25,7 +25,6 @@ Stay up to date with the new features that are available for {{site.data.keyword
 ## 09 August 2023
 {: hs-crypto-aug2023}
 {: release-note}
-
 [New]{: tag-new}: Context Based Restrictions support  
 :   Context Based Restrictions (CBR) enables extra protection on {{site.data.keyword.cloud_notm}} resources. Essentially, it wraps around IAM polices allowing an admin or account owner configure network rules for the resource/endpoint and network zones to allow/disallow IPs for end user access. With added support of CBR in {{site.data.keyword.hscrypto}}, you can enforce these rules while utilizing your {{site.data.keyword.hscrypto}} instance. For more information, see [Protecting {{site.data.keyword.hscrypto}} resources with context-based restrictions](/docs/hs-crypto?topic=hs-crypto-cbr).
 
@@ -97,14 +96,14 @@ Added: Management Utilities support for Red Hat Enterprise Linux 9.0 and Ubuntu 
     You can also find the latest Management Utilities installation files in [Github](https://github.com/IBM-Cloud/hpcs-management-utilities/releases/tag/v1.0.3.8){: external}.
 
 
-## 31 Octorber 2022
+## 31 October 2022
 {: hs-crypto-31oct2022}
 {: release-note}
 
 Added: Google Cloud KMS support
 :   You can now use {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} to create and manage Google Cloud KMS keys. For more information, see [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores) and [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys).
 
-## 20 Octorber 2022
+## 20 October 2022
 {: hs-crypto-20oct2022}
 {: release-note}
 

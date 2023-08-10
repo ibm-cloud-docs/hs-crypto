@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-08-09"
+lastupdated: "2023-08-10"
 
 keywords: restricting access to Hyper Protect Crypto Services, restricting access to HPCS, HPCS cbr, UKO cbr
 
@@ -40,7 +40,7 @@ You can create context-based restrictions for the {{site.data.keyword.hscrypto}}
 You can create context-based restrictions rules to protect specific **instances**.
 
 Instance
-:   Protects a specific instance. If you include an instance in your context-based restrictions rule, resources in the network zones that you associate with the rule can interact only with resources in that instance. Scoping a rule to a specific instance is available only for rules that protect the cluster API type. If you use the CLI, you can specify the `--service-instance` option to protect instances in a specific resource group. If you use the UI, you can specify the *Service instance* in the resource attributes.
+:   Protects a specific instance. If you include an instance in your context-based restrictions rule, resources in the network zones that you associate with the rule can interact only with resources in that instance. If you use the CLI, you can specify the `--service-instance` option to protect instances in a specific resource group. If you use the UI, you can specify the *Service instance* in the resource attributes.
 
 ## Creating network zones
 {: #network-zone}
@@ -146,7 +146,7 @@ To create a rule in the CLI, you need the appropriate {{site.data.keyword.hscryp
 Create a rule by using a command like:
 
 ```sh
-ibmcloud cbr rule-create --enforcement-mode enabled --context-attributes "networkZoneId=<ZONE-ID>" --resource-group-id <RESOURCE_GROUP_ID> --service-name <SERVICE-NAME> --service-instance <SERVICE-INSTANCE> --api-types crn:v1:bluemix:public:context-based-restrictions::::api-type:data-plane --description <DESCRIPTION>
+ibmcloud cbr rule-create --enforcement-mode enabled --context-attributes "networkZoneId=<ZONE-ID>" --resource-group-id <RESOURCE_GROUP_ID> --service-name <SERVICE-NAME> --service-instance <SERVICE-INSTANCE> --description <DESCRIPTION>
 ```
 {: .pre}
 
@@ -159,7 +159,7 @@ ibmcloud cbr rule-create --enforcement-mode enabled --context-attributes "networ
 Update a rule by using a command like:
 
 ```sh
-ibmcloud cbr rule-update <RULE-ID> --enforcement-mode disabled --context-attributes="networkZoneId=<ZONE-ID>" --resource-group-id   <RESOURCE_GROUP_ID> --service-name <SERVICE_NAME> --api-types crn:v1:bluemix:public:context-based-restrictions::::api-type:data-plane --description    <DESCRIPTION>
+ibmcloud cbr rule-update <RULE-ID> --enforcement-mode disabled --context-attributes="networkZoneId=<ZONE-ID>" --resource-group-id  <RESOURCE_GROUP_ID> --service-name <SERVICE_NAME>  --description <DESCRIPTION>
 ```
 {: .pre}
 
@@ -207,11 +207,6 @@ resource "ibm_cbr_rule" "cbr_rule" {
   }
   description = "this is an example of a rule with one context one zone"
   enforcement_mode = "enabled"
-  operations {
-        api_types {
-            api_type_id = "api_type_id"
-        }
-  }
   resources {
         attributes {
             name = "accountId"
