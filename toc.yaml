@@ -210,7 +210,7 @@ toc:
               - manage-pkcs11-keys.md
               - manage-pkcs11-certificates.md
       - topicgroup:
-          label:  Managing vaults, key templates, KMS keys, and keystores - Unified Key Orchestrator Plan only
+          label: Managing vaults, key templates, KMS keys, and keystores - Unified Key Orchestrator Plan only
           topics:
           - topicgroup:
               label: Managing vaults - Unified Key Orchestrator Plan
@@ -234,7 +234,7 @@ toc:
               - uko-view-key-list.md
               - uko-search-key-list.md
               - uko-edit-kms-keys.md
-              - uko-rotate-key.md 
+              - uko-rotate-key.md
               - uko-align-key.md 
               - uko-view-key-versions.md
               - uko-delete-managed-keys.md
