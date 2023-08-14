@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-06-27"
+lastupdated: "2023-08-14"
 
 keywords: Unified Key Orchestrator, search keys, key management, kms keys
 
@@ -34,24 +34,24 @@ To filter keys by using the console, complete the following steps:
 4. Specify the filter criteria as you need, and click **Apply**.
    
    
+   
+   
    You can set the following filter criteria. 
 
-   |       Property	     |                         Description                       |
+   |       Property	     |                         Description                        |
    |----------------------|-----------------------------------------------------------|
    | Vault                | The vault that controls access to the managed key.        |
+   | Key template         | The key template with which the key is created.  |
    | Activation           | Set a date range of when you activate the key.  |
    | Expiration           | Set a date range of when you deactivate the key.  |
    | Creation             | Set a date range of when the key was created.             |
    | Keystore types       | The type of keystore where the key is stored. |
-   | Keystores            | The keystores that the key is activated in.        |
    | Algorithm            | The encryption algorithm to encrypt data for the key.     |
    | Minimum key length   | The minimum number of bits that represents the encryption strength of the key.   |
    | Maximum key length   | The maximum number of bits that represents the encryption strength of the key.   |
-   | State                | Key states include Pre-active, Active, Deactivated, and Destroyed. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
-   | Last rotated        | The time range when the key was last rotated. |
+   | State                | Key states include Pre-active, Active, Deactivated, and Destroyed. |
+   | Last rotated         | The time range when the key was last rotated. |
    {: caption="Table 1. Filter managed keys" caption-side="bottom"}
-   
-   
    
 
 

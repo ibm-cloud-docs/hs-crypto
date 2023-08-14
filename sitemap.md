@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-08-10"
+lastupdated: "2023-08-14"
 
 keywords: site map, doc structure, information architecture
 
@@ -374,6 +374,10 @@ Find what you are looking for in the compilation of topics that are available in
 * [09 August 2023](/docs/hs-crypto?topic=hs-crypto-what-new#09-august-2023)
 
     * [New]{: tag-new}: Context Based Restrictions support  
+
+* [3 Aug 2023](/docs/hs-crypto?topic=hs-crypto-what-new#3-aug-2023)
+
+    * [New]{: tag-new}: Key template support for {{site.data.keyword.uko_full_notm}} 
 
 * [1 June 2023](/docs/hs-crypto?topic=hs-crypto-what-new#1-june-2023)
 
@@ -1155,8 +1159,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#manage-ep11-certificate-ui-next)
 
 
-## Managing KMS keys, keystores, and vaults - Unified Key Orchestrator Plan only
-{: #sitemap_managing_kms_keys_keystores_and_vaults_unified_key_orchestrator_plan_only}
+## Managing vaults, key templates, KMS keys, and keystores - Unified Key Orchestrator Plan only
+{: #sitemap_managing_vaults_key_templates_kms_keys_and_keystores_unified_key_orchestrator_plan_only}
 
 
 
@@ -1189,15 +1193,76 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-delete-vaults#delete-vaults-next)
 
 
+### Managing key templates - Unified Key Orchestrator Plan
+{: #sitemap_managing_key_templates_unified_key_orchestrator_plan}
+
+
+[Creating key templates](/docs/hs-crypto?topic=hs-crypto-create-template#create-template)
+
+* [Creating key templates from scratch with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-create-template#create-template-ui)
+
+* [Creating key templates from scratch through the API](/docs/hs-crypto?topic=hs-crypto-create-template#create-template-api)
+
+* [Creating a copy of an existing key template with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-create-template#copy-template-ui)
+
+* [Creating key templates from an existing key template through the API](/docs/hs-crypto?topic=hs-crypto-create-template#copy-template-api)
+
+* [Defining key naming schemes](/docs/hs-crypto?topic=hs-crypto-create-template#define-naming-scheme)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-create-template#create-template-next)
+
+[Viewing a list of key templates](/docs/hs-crypto?topic=hs-crypto-view-key-template#view-key-template)
+
+* [Viewing a list of key templates with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-view-key-template#view-key-template-ui)
+
+* [Viewing a list of key templates with the API](/docs/hs-crypto?topic=hs-crypto-view-key-template#view-key-template-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-view-key-template#view-key-template-next)
+
+[Editing key template details](/docs/hs-crypto?topic=hs-crypto-edit-template#edit-template)
+
+* [Editing key templates with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-edit-template#edit-key-template-ui)
+
+* [Editing key templates with the API](/docs/hs-crypto?topic=hs-crypto-edit-template#edit-key-template-api)
+
+* [Editing keystores for key templates with the API](/docs/hs-crypto?topic=hs-crypto-edit-template#assign-keystores-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-edit-template#edit-key-template-next)
+
+[Archiving and unarchiving key templates](/docs/hs-crypto?topic=hs-crypto-archive-template#archive-template)
+
+* [Archiving key templates with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-archive-template#archive-key-template-ui)
+
+* [Archiving key templates with the API](/docs/hs-crypto?topic=hs-crypto-archive-template#archive-key-template-api)
+
+* [Unarchiving key templates with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-archive-template#unarchive-key-template-ui)
+
+* [Unarchiving key templates with the API](/docs/hs-crypto?topic=hs-crypto-archive-template#unarchive-key-template-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-archive-template#archive-key-template-next)
+
+[Deleting key templates](/docs/hs-crypto?topic=hs-crypto-delete-template#delete-template)
+
+* [Deleting key templates with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-delete-template#delete-key-template-ui)
+
+* [Deleting key templates with the API](/docs/hs-crypto?topic=hs-crypto-delete-template#delete-key-template-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-delete-template#delete-key-template-next)
+
+
 ### Managing keys - Unified Key Orchestrator Plan
 {: #sitemap_managing_keys_unified_key_orchestrator_plan}
 
 
 [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys)
 
-* [Creating managed keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-ui)
+* [Creating managed keys with a key template in the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-template-ui)
 
-* [Creating managed keys with the API](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-api)
+* [Creating managed keys with a key template through the API](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-template-api)
+
+* [Creating managed keys with custom properties in the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-ui)
+
+* [Creating managed keys with custom properties through the API](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-next)
 
@@ -1236,6 +1301,14 @@ Find what you are looking for in the compilation of topics that are available in
 * [Rotating managed keys with the API](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys#uko-rotate-managed-key-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys#uko-rotate-keys-next)
+
+[Realigning keys with key templates](/docs/hs-crypto?topic=hs-crypto-align-key#align-key)
+
+* [Realigning keys with key templates through the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-align-key#align-key-ui)
+
+* [Realigning keys with key templates through the API](/docs/hs-crypto?topic=hs-crypto-align-key#align-key-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-align-key#align-key-next)
 
 [Viewing managed key versions](/docs/hs-crypto?topic=hs-crypto-uko-view-key-versions#uko-view-key-versions)
 
@@ -1627,6 +1700,8 @@ Find what you are looking for in the compilation of topics that are available in
 [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API change log](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-change-log)
 
 * [API versioning](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-versioning)
+
+* [July 2023](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-july-2023)
 
 * [December 2022](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-december-2022)
 

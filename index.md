@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-09"
+lastupdated: "2023-08-14"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -100,8 +100,21 @@ Complete the following steps to create your first internal keystore:
 6. Under **Summary**, you can view the summary of the keystore that you create, including the keystore type, the assigned vault, and general properties.
 7. After you confirm the keystore details, click **Create keystore** to create the keystore. 
 
+### 3. Create key templates
+{: #create-key-template}
 
-### 3. Create managed keys
+key template specifies the properties of the managed keys to be created, such as the naming convention, key algorithm, and key length. 
+
+Complete the following steps to create your first key template:
+
+1. From your service instance console, click **Key templates** from the navigation.
+2. Click **Create key template**.
+3. Under **Vault**, select the vault that you've just created and then click **Next**. 
+4. Under **Keystores**, select **IBM Cloud KMS** as the keystore type, select the keystore you've just created, and then click **Next**.
+5. Under **Key template properties**, specify the following details of the key template. Click **Next** to continue.
+6. Under **Summary**, view the summary of your key template, and then click **Create key template** to complete the key template creation.
+
+### 4. Create managed keys
 {: #create-managed-key}
 
 You can use a managed key for encryption or decryption only after it is created and activated in at least one keystore. Complete the following steps to create your first IBM Cloud KMS key and activate the key in the keystore that you create:
@@ -109,7 +122,7 @@ You can use a managed key for encryption or decryption only after it is created 
 1. From your service instance console, click **Managed keys** from the navigation to view all the available keys.
 2. Click **Create key**.
 3. Under **Vault**, select the vault that you've just created and then click **Next**. 
-4. Under **Keystores**, select **IBM Cloud KMS** as the keystore type, select the keystore you've just created, and then click **Next**.
+4. Under **Key template**, select **Create from a key template** and then select the key template that you've just created and click **Next**. 
 5. Under **Key properties**, specify details of the key. Click **Next** to continue when you are done. Note that `Pre-active` keys are not to be installed in keystores until you manually activate them. `Active` keys are to be automatically installed in the keystores. For more information about the key properties, see [Creating managed keys with a key template in the IBM Cloud console](/docs/hs-crypto?topic=hs-crypto-create-managed-keys&interface=ui#create-managed-keys-template-ui).
 6. Under **Summary**, view the summary of your key, and then click **Create key** to create the key.
 
