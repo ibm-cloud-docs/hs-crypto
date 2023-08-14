@@ -1701,7 +1701,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [API versioning](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-versioning)
 
-* [July 2023](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-july-2023)
+* [August 2023](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-aug-2023)
 
 * [December 2022](/docs/hs-crypto?topic=hs-crypto-uko-api-change-log#uko-api-december-2022)
 

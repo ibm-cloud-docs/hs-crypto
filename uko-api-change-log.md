@@ -24,12 +24,10 @@ In this change log you can learn about the latest changes, improvements, and upd
 {: #uko-api-versioning}
 
 
-
-
 The latest released version is `4.10.0`. The {{site.data.keyword.uko_full_notm}} API version is aligned with the IBM Enterprise Key Management Foundation - Web Edition (EKMF Web) API version.  
 
-## July 2023
-{: #uko-api-july-2023}
+## August 2023
+{: #uko-api-aug-2023}
 
 The following methods are added: 
 
