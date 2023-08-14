@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-09"
+lastupdated: "2023-08-14"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -49,6 +49,12 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
 
     For more information about creating and managing access to vaults, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults) and [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults).
 
+
+- **Key templates**
+
+    A key template specifies the properties of the managed keys to be created, such as the naming convention, key algorithm, and key length. After you create the key template, you can then create a group of managed keys with the same key properties that are defined in the key template. 
+
+    For more information about creating key templates, see [Creating key templates](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui).
 
 
 - **Managed keys**

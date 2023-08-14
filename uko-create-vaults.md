@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-09"
+lastupdated: "2023-08-14"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -19,25 +19,26 @@ subcollection: hs-crypto
 {: #create-vaults}
 
 
-You can use {{site.data.keyword.hscrypto}} to create a group of keys and keystores for a target group of users that require the same {{site.data.keyword.iamshort}} (IAM) access permissions in a vault. You can create vaults in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+
+
+You can use {{site.data.keyword.hscrypto}} to create a group of key templates, keys, and keystores for a target group of users that require the same {{site.data.keyword.iamshort}} (IAM) access permissions in a vault. You can create vaults in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
-As a _Vault Administrator_, you can bundle the keys and keystores in your {{site.data.keyword.hscrypto}} instance into groups called _vault_. A vault is a collection of keys, internal keystores, and external keystores that require the same IAM access permissions. For example, if you have a group of team members who need a particular type of access to a specific group of keys and keystores, you can create a vault and assign the appropriate IAM access policy to the target user group. The users that are assigned access to the vault can create and manage the resources that exist within the vault.
+As a _Vault Administrator_, you can bundle the key templates, keys, and keystores in your {{site.data.keyword.hscrypto}} instance into groups called _vault_. A vault is a collection of key templates, keys, internal keystores, and external keystores that require the same IAM access permissions. For example, if you have a group of team members who need a particular type of access to a specific group of key templates, keys, and keystores, you can create a vault and assign the appropriate IAM access policy to the target user group. The users that are assigned access to the vault can create and manage the resources that exist within the vault.
 
-Vaults are also useful in cases where it is important for one business unit to have access to a set of keys and keystores that another business unit cannot have. An account administrator can create vaults for each business unit and [assign the appropriate level of access](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults) to the appropriate users. In the case where the account administrator wants to delegate platform management of a specific vault to someone else, they can assign a user a [Vault Administrator role](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles). The sub-administrator is then able to manage the vault and grant access to the appropriate users.
-
+Vaults are also useful in cases where it is important for one business unit to have access to a set of key templates, keys, and keystores that another business unit cannot have. An account administrator can create vaults for each business unit and [assign the appropriate level of access](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults) to the appropriate users. In the case where the account administrator wants to delegate platform management of a specific vault to someone else, they can assign a user a [Vault Administrator role](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles). The sub-administrator is then able to manage the vault and grant access to the appropriate users.
 
 
 
 Before you create a vault for your {{site.data.keyword.hscrypto}} instance, keep in mind of the following considerations:
 
-- Vaults can hold KMS keys and keystores, but not EP11 keys and keystores.
+- Vaults can hold key templates, KMS keys, and keystores. EP11 keys and keystores are not supported.
 
-    Vaults can contain both KMS keys and keystores. There is no limit on how many keys can exist within a vault. Vaults don't apply to Enterprise PKCS #11 (EP11) keys and keystores.
+    There is no limit on how many keys can exist within a vault. Vaults don't apply to Enterprise PKCS #11 (EP11) keys and keystores.
 
-- A key or a keystore only can belong to one vault at a time.
+- A key template, a key, or a keystore only can belong to one vault at a time.
 
-    A managed key or a keystore can belong to only one vault. You need to assign a vault to a managed key or a keystore upon creation.
+    You need to specify a vault to a key template, a managed key, or a keystore upon creation.
 
 - During master key rotation, you are not able to create a vault. However, you can create the vault again after the master key rotation process is complete.
 
@@ -49,8 +50,8 @@ For more information about granting access, see [Granting access to vaults](/doc
 {: ui}
 
 
-To create a vault by using the console, complete the following steps through the **Vaults** page. Optionally, you can create a vault when you [create a managed key](/docs/hs-crypto?topic=hs-crypto-create-managed-keys) or [add a keystore](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores).
 
+To create a vault by using the console, complete the following steps through the **Vaults** page. Optionally, you can create a vault when you [create a key template](/docs/hs-crypto?topic=hs-crypto-create-template), [create a managed key](/docs/hs-crypto?topic=hs-crypto-create-managed-keys), or [add a keystore](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores).
 
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
