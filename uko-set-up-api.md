@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-14"
+lastupdated: "2023-08-15"
 
 keywords: set up api, uko api, Unified Key Orchestrator api, 
 
@@ -16,8 +16,6 @@ subcollection: hs-crypto
 
 # Setting up {{site.data.keyword.uko_full_notm}} API calls - {{site.data.keyword.uko_full_notm}} Plan
 {: #set-up-uko-api}
-
-
 
 
 You can use [{{site.data.keyword.uko_full_notm}} API](/apidocs/uko){: external} to create, retrieve, and destroy key templates, keys and keystores in the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} for {{site.data.keyword.uko_full_notm}}.

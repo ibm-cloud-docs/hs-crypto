@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-14"
+lastupdated: "2023-08-15"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -17,8 +17,6 @@ subcollection: hs-crypto
 
 # Creating vaults
 {: #create-vaults}
-
-
 
 
 You can use {{site.data.keyword.hscrypto}} to create a group of key templates, keys, and keystores for a target group of users that require the same {{site.data.keyword.iamshort}} (IAM) access permissions in a vault. You can create vaults in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
@@ -48,7 +46,6 @@ For more information about granting access, see [Granting access to vaults](/doc
 ## Creating vaults with the {{site.data.keyword.cloud_notm}} console
 {: #create-vaults-ui}
 {: ui}
-
 
 
 To create a vault by using the console, complete the following steps through the **Vaults** page. Optionally, you can create a vault when you [create a key template](/docs/hs-crypto?topic=hs-crypto-create-template), [create a managed key](/docs/hs-crypto?topic=hs-crypto-create-managed-keys), or [add a keystore](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores).
