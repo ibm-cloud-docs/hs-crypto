@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-14"
+lastupdated: "2023-08-15"
 
 keywords: Unified Key Orchestrator, search keys, key management, kms keys
 
@@ -32,8 +32,6 @@ To filter keys by using the console, complete the following steps:
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. Click the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the table.
 4. Specify the filter criteria as you need, and click **Apply**.
-   
-   
    
    
    You can set the following filter criteria. 

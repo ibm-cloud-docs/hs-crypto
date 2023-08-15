@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-14"
+lastupdated: "2023-08-15"
 
 keywords: Unified Key Orchestrator, UKO keystore, delete keystore, internal keystore, KMS keystore
 
@@ -34,8 +34,6 @@ To delete an internal keystore by using the console, complete the following step
 3. Click the keystore that you want to delete. The side panel is displayed.
 4. Click **Delete** to delete the keystore and all the metadata. 
 5. Click **Delete keystore** to confirm the deletion.
-
-
 
 
 The internal keystore has been deleted with all the managed keys deactivated and key templates detached. You will no longer be able to access any metadata associated with the keystore. 

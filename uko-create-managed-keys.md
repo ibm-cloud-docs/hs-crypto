@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-14"
+lastupdated: "2023-08-15"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -31,8 +31,6 @@ Before you create a managed key, keep in mind the following considerations:
 - To protect your privacy, do not store your personal data as metadata for your managed key.
 - You can create a managed key with only one key template. 
 - Currently, importing managed keys is not supported. You can create managed keys with {{site.data.keyword.uko_full_notm}} only.
-
-
 
 
 ## Creating managed keys with a key template in the {{site.data.keyword.cloud_notm}} console

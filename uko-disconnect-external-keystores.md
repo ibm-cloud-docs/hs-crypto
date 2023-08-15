@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-14"
+lastupdated: "2023-08-15"
 
 keywords: Unified Key Orchestrator, UKO keystore, disconnect keystore, external keystore, KMS keystore
 
@@ -36,8 +36,6 @@ To disconnect from an external keystore by using the console, complete the follo
 3. Click the keystore that you want to disconnect. The Details side panel is displayed.
 4. Click **Disconnect** to disconnect the keystore and remove it from the keystore list. 
 5. Click **Disconnect keystore** to confirm.
-
-
 
 The external keystore has been disconnected with all the managed keys and key templates detached. You will no longer be able to access any metadata associated with the keystore. 
 

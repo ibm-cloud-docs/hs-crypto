@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-14"
+lastupdated: "2023-08-15"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -20,8 +20,6 @@ subcollection: hs-crypto
 
 You can delete your vaults in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
-
-
 
 
 If you want to delete a vault, you need to delete all managed keys, delete or archive all key templates, and delete or disconnect from all keystores that are managed in the vault first. The Delete function is available for empty vaults only. Make sure to have an empty vault by referring to the following instructions:  

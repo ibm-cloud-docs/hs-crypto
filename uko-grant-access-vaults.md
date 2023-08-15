@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-14"
+lastupdated: "2023-08-15"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystore, key management, access control
 
@@ -20,8 +20,6 @@ subcollection: hs-crypto
 
 You can enable different levels of access to {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} resources in your {{site.data.keyword.cloud_notm}} account by creating and modifying {{site.data.keyword.cloud_notm}} [Identity and Access Management (IAM)](#x7547040){: term} access policies.
 {: shortdesc}
-
-
 
 
 Access control in {{site.data.keyword.uko_full_notm}} is managed in vaults. Vaults are secure repositories for your key templates, cryptographic keys, and keystores. A key template, managed key or internal keystore can be created only in a vault.
