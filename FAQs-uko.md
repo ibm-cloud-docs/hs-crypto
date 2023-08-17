@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-15"
+lastupdated: "2023-08-17"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -56,7 +56,7 @@ No. From a technology point of view, {{site.data.keyword.uko_full_notm}} is a fe
 |----------------------|------------------------------| ------------------------------|   
 | Multicloud Key Lifecycle Management     | Not supported.   | Supported.    | 
 | Vaults     |    None.   |  Unlimited vaults. | 
-| Key types    | Root keys and standard keys. For more information, see [Creating root keys](/docs/hs-crypto?topic=hs-crypto-create-root-keys&interface=ui) and [Creating standard keys](/docs/hs-crypto?topic=hs-crypto-create-standard-keys&interface=ui).  |  {{site.data.keyword.uko_full_notm}} managed keys. For more information, see [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys&interface=ui).   | 
+| Key types    | EP11 keys, root keys, and standard keys. For more information, see [Managing EP11 keys with the IBM Cloud console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui), [Creating root keys](/docs/hs-crypto?topic=hs-crypto-create-root-keys&interface=ui), and [Creating standard keys](/docs/hs-crypto?topic=hs-crypto-create-standard-keys&interface=ui).  |  {{site.data.keyword.uko_full_notm}} managed keys. For more information, see [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys&interface=ui).   | 
 | Internal keystores | Unlimited internal keystores and the first 5 keystores are free of charge. For more information, see [Pricing sample](/docs/hs-crypto?topic=hs-crypto-faq-pricing&interface=ui#faq-how-charge-hpcs). |  Unlimited internal keystores and the first 5 keystores are free of charge. For more information, see [Pricing sample](/docs/hs-crypto?topic=hs-crypto-faq-pricing&interface=ui#faq-how-charge-hpcs-uko). |    
 | External keystores     |  Not supported.  |   Unlimited external keystores. For more information, see [Pricing sample](/docs/hs-crypto?topic=hs-crypto-faq-pricing&interface=ui#faq-how-charge-hpcs-uko). |
 | Master key rotation     |  Supported. For more information, see [Master key rotation - Standard Plan](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro). |  Supported. For more information, see [Master key rotation -{{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro).  | 
