@@ -20,7 +20,9 @@ subcollection: hs-crypto
 You can integrate {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to build solutions for you to bring and manage your own encryption in the cloud.
 {: shortdesc}
 
-After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision) and [initialize the service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm), you need to establish [service-to-service authorizations](/docs/solution-tutorials?topic=solution-tutorials-resource-sharing#resource-sharing-implementation-s2sauth) to allow one service to access another one through two authorization methods. For detailed instructions, see [Creating an authorization in the console](/docs/account?topic=account-serviceauth) and make sure to select {{site.data.keyword.hscrypto}} as your target service. Then, you can refer to the following integration instruction to integrate {{site.data.keyword.hscrypto}} with each supported service.
+After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision) and [initialize the service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm), you need to establish [service-to-service authorizations](/docs/solution-tutorials?topic=solution-tutorials-resource-sharing#resource-sharing-implementation-s2sauth) to allow one service to access another one through two authorization methods. Make sure that you select {{site.data.keyword.hscrypto}} as your target service. For detailed instructions on how to establish authorizations, see [Creating an authorization in the console](/docs/account?topic=account-serviceauth). 
+
+Refer to the following integration instructions to integrate {{site.data.keyword.hscrypto}} with each supported service.
 
 ## Storage service integrations
 {: #storage-integration}
