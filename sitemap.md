@@ -371,19 +371,19 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
 
-* [3 Aug 2023](/docs/hs-crypto?topic=hs-crypto-what-new#3-aug-2023)
+* [3 Aug 2023](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-august2023)
 
     * [New]{: tag-new}: Key template support for {{site.data.keyword.uko_full_notm}} 
 
-* [1 June 2023](/docs/hs-crypto?topic=hs-crypto-what-new#1-june-2023)
+* [1 June 2023](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-june2023)
 
     * Pricing plan for {{site.data.keyword.uko_full_notm}} 
 
-* [24 May 2023](/docs/hs-crypto?topic=hs-crypto-what-new#24-may-2023)
+* [24 May 2023](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-may2023)
 
     * Master key rotation support for all regions
 
-* [24 March 2023](/docs/hs-crypto?topic=hs-crypto-what-new#24-march-2023)
+* [24 March 2023](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-march2023)
 
     * Added: Master key rotation for {{site.data.keyword.uko_full_notm}}
 
@@ -391,25 +391,25 @@ Find what you are looking for in the compilation of topics that are available in
 
     * Both of the functions above are currently only supported in the Frankfurt region in Germany.
 
-* [1 Feb 2023](/docs/hs-crypto?topic=hs-crypto-what-new#1-feb-2023)
+* [1 Feb 2023](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-feb2023)
 
     * Added: {{site.data.keyword.hscrypto}} key management functions 
 
     * Added: Activity Tracker event names
 
-* [19 December 2022](/docs/hs-crypto?topic=hs-crypto-what-new#19-december-2022)
+* [19 December 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-dec2022)
 
     * Added: Managed key rotation support for {{site.data.keyword.uko_full_notm}}
 
-* [21 November 2022](/docs/hs-crypto?topic=hs-crypto-what-new#21-november-2022)
+* [21 November 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-nov2022)
 
     * Added: Management Utilities support for Red Hat Enterprise Linux 9.0 and Ubuntu 22.04.1 LTS
 
-* [31 October 2022](/docs/hs-crypto?topic=hs-crypto-what-new#31-october-2022)
+* [31 October 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-31oct2022)
 
     * Added: Google Cloud KMS support
 
-* [20 October 2022](/docs/hs-crypto?topic=hs-crypto-what-new#20-october-2022)
+* [20 October 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-20oct2022)
 
     * Added: EP11 activity tracker events
 
