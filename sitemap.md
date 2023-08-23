@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-08-22"
+lastupdated: "2023-08-23"
 
 keywords: site map, doc structure, information architecture
 
@@ -370,10 +370,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
-
-* [09 August 2023](/docs/hs-crypto?topic=hs-crypto-what-new#09-august-2023)
-
-    * [New]{: tag-new}: Context Based Restrictions support  
 
 * [3 Aug 2023](/docs/hs-crypto?topic=hs-crypto-what-new#3-aug-2023)
 
@@ -1622,14 +1618,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Step 2: Assign IAM roles to users](/docs/hs-crypto?topic=hs-crypto-uko-role-best-practices#step2-assign-iam-roles-uko)
 
 * [ What's next](/docs/hs-crypto?topic=hs-crypto-uko-role-best-practices#uko-role-best-practices-next)
-
-[Protecting {{site.data.keyword.hscrypto}} resources with context-based restrictions](/docs/hs-crypto?topic=hs-crypto-cbr#cbr)
-
-* [How {{site.data.keyword.hscrypto}} integrates with context-based restrictions](/docs/hs-crypto?topic=hs-crypto-cbr#cbr-overview)
-
-* [Creating network zones](/docs/hs-crypto?topic=hs-crypto-cbr#network-zone)
-
-* [Creating rules](/docs/hs-crypto?topic=hs-crypto-cbr#rules)
 
 [Auditing events for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-at-events)
 
