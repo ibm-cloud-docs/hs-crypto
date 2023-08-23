@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-15"
+lastupdated: "2023-08-23"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -69,6 +69,7 @@ For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service arc
 {{site.data.keyword.hscrypto}} provides the following features:
 
 ### {{site.data.keyword.uko_full_notm}}
+{: hpcs-uko-overview}
 
 * **Connection to external keystores**
 
