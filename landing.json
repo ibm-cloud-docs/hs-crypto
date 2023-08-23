@@ -73,6 +73,11 @@
     "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
     "tiles": [
       {
+        "date": "August 2023",
+        "title": "Updated: Key template support for Unified Key Orchestrator",
+        "description": "You are now able to create key templates which specify the properties of the managed keys to be created. "
+      },
+      {
         "date": "June 2023",
         "title": "Updated: Pricing plan for Unified Key Orchestrator",
         "description": "The pricing plan has been updated for Unified Key Orchestrator. You can find more details on the service catalog page. "
