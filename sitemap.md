@@ -371,7 +371,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
 
-* [3 Aug 2023](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-august2023)
+* [3 August 2023](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-august2023)
 
     * [New]{: tag-new}: Key template support for {{site.data.keyword.uko_full_notm}} 
 
