@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-14"
+lastupdated: "2023-08-23"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -22,16 +22,10 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
-## 09 August 2023
-{: hs-crypto-aug2023}
-{: release-note}
-[New]{: tag-new}: Context Based Restrictions support  
-:   Context Based Restrictions (CBR) enables extra protection on {{site.data.keyword.cloud_notm}} resources. Essentially, it wraps around IAM polices allowing an admin or account owner configure network rules for the resource/endpoint and network zones to allow/disallow IPs for end user access. With added support of CBR in {{site.data.keyword.hscrypto}}, you can enforce these rules while utilizing your {{site.data.keyword.hscrypto}} instance. For more information, see [Protecting {{site.data.keyword.hscrypto}} resources with context-based restrictions](/docs/hs-crypto?topic=hs-crypto-cbr).
-
 
 
 ## 3 Aug 2023
-{: hs-crypto-august2023}
+{: #hs-crypto-august2023}
 {: release-note}
 
 [New]{: tag-new}: Key template support for {{site.data.keyword.uko_full_notm}} 
@@ -48,7 +42,7 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 
 ## 1 June 2023
-{: hs-crypto-june2023}
+{: #hs-crypto-june2023}
 {: release-note}
 
 Pricing plan for {{site.data.keyword.uko_full_notm}} 
@@ -57,7 +51,7 @@ Pricing plan for {{site.data.keyword.uko_full_notm}}
     For a detailed pricing sample, see [How am I charged for my use of Hyper Protect Crypto Services with Unified Key Orchestrator?](/docs/hs-crypto?topic=hs-crypto-faq-pricing&interface=ui#faq-how-charge-hpcs-uko). 
 
 ## 24 May 2023
-{: hs-crypto-may2023}
+{: #hs-crypto-may2023}
 {: release-note}
 
 Master key rotation support for all regions
@@ -67,7 +61,7 @@ Master key rotation support for all regions
     
 
 ## 24 March 2023
-{: hs-crypto-march2023}
+{: #hs-crypto-march2023}
 {: release-note}
 
 Added: Master key rotation for {{site.data.keyword.uko_full_notm}}
@@ -79,7 +73,7 @@ Added: Master key rotation for EP11 keystores
 Both of the functions above are currently only supported in the Frankfurt region in Germany.
 
 ## 1 Feb 2023
-{: hs-crypto-feb2023}
+{: #hs-crypto-feb2023}
 {: release-note}
 
 Added: {{site.data.keyword.hscrypto}} key management functions 
@@ -95,7 +89,7 @@ Added: Activity Tracker event names
 
 
 ## 19 December 2022
-{: hs-crypto-dec2022}
+{: #hs-crypto-dec2022}
 {: release-note}
 
 Added: Managed key rotation support for {{site.data.keyword.uko_full_notm}}
@@ -103,7 +97,7 @@ Added: Managed key rotation support for {{site.data.keyword.uko_full_notm}}
 
 
 ## 21 November 2022
-{: hs-crypto-nov2022}
+{: #hs-crypto-nov2022}
 {: release-note}
 
 Added: Management Utilities support for Red Hat Enterprise Linux 9.0 and Ubuntu 22.04.1 LTS
@@ -113,14 +107,14 @@ Added: Management Utilities support for Red Hat Enterprise Linux 9.0 and Ubuntu 
 
 
 ## 31 October 2022
-{: hs-crypto-31oct2022}
+{: #hs-crypto-31oct2022}
 {: release-note}
 
 Added: Google Cloud KMS support
 :   You can now use {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} to create and manage Google Cloud KMS keys. For more information, see [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores) and [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys).
 
 ## 20 October 2022
-{: hs-crypto-20oct2022}
+{: #hs-crypto-20oct2022}
 {: release-note}
 
 Added: EP11 activity tracker events

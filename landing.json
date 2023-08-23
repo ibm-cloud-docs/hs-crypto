@@ -73,14 +73,9 @@
     "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
     "tiles": [
       {
-        "date": "Aug 2023",
+        "date": "August 2023",
         "title": "Updated: Key template support for Unified Key Orchestrator",
         "description": "You are now able to create key templates which specify the properties of the managed keys to be created. "
-      },
-      {
-        "date": "August 2023",
-        "title": "Added: Context Based Restrictions support",
-        "description": "Context Based Restrictions (CBR) enables extra protection on IBM Cloud resources. Essentially, it wraps around IAM polices allowing an admin or account owner configure network rules for the resource/endpoint and network zones to allow/disallow IPs for end user access. With added support of CBR in Hyper Protect Crypto Services, you can enforce these rules while utilizing your Hyper Protect Crypto Services instance. "
       },
       {
         "date": "June 2023",
