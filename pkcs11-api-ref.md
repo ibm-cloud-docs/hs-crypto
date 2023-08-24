@@ -218,9 +218,9 @@ PKCS #11 attributes define object characteristics that set up how an object can 
 | CKA_APPLICATION | Description of the application that manages the object (default empty) | Not applicable |
 | CKA_OBJECT_ID | DER-encoding of the object identifier indicating the data object type (default empty) | Not applicable |
 | CKA_OWNER | DER-encoding of the attribute certificate's subject field. This is distinct from the CKA_SUBJECT attribute contained in CKC_X_509 certificates because the ASN.1 syntax and encoding are different. | Not applicable |
-｜ CKA_AC_ISSUER | DER-encoding of the attribute certificate's issuer field. This is distinct from the CKA_ISSUER attribute contained in CKC_X_509 certificates because the ASN.1 syntax and encoding are different. (default empty) | Not applicable |
+｜ CKA_AC_ISSUER | DER-encoding of the attribute certificate's issuer field. This is distinct from the CKA_ISSUER attribute contained in CKC_X_509 certificates because the ASN.1 syntax and encoding are different. (default empty)| Not applicable |
 | CKA_ATTR_TYPES | BER-encoding of a sequence of object identifier values corresponding to the attribute types contained in the certificate. When present, this field offers an opportunity for applications to search for a particular attribute certificate without fetching and parsing the certificate itself. (default empty) | Not applicable |
-{: caption="Table 3. Describes the supported attributes" caption-side="bottom"}
+{: caption="Table 3. Supported attributes and key types" caption-side="bottom"}
 
 ## Supported curves
 {: #supported-pkcs11-curve-name}
