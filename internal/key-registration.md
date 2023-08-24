@@ -106,8 +106,7 @@ To modify a registration, make a `PATCH` call to the following endpoint.
 https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/registrations/<url_encoded_CRN>
 ```
 
-#### **Example request**
-{: example-request-1}
+**Example request**
 
 ```cURL
 curl -X PATCH \
@@ -151,8 +150,7 @@ Replace the variables in the example request according to the following table.
 
 After a resource is no longer within the cloud or protected by a root key, unregister the association with the key.
 
-#### **Example request**
-{: example-request-2}
+**Example request**
 
 ```cURL
 curl -X DELETE \

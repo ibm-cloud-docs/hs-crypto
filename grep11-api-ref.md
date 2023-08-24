@@ -330,8 +330,7 @@ The `GetMechanismList` function obtains a list of mechanism types that are suppo
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-1}
+**Code snippets**
 
 - Golang code snippet
 
@@ -436,8 +435,7 @@ The `GetMechanismInfo` Function obtains information about a particular mechanism
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-2}
+**Code snippets**
 
 - Golang code snippet
 
@@ -569,8 +567,7 @@ The `GenerateKey` function generates a secret key for symmetric encryption.
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-3}
+**Code snippets**
 
 - Golang code snippet
 
@@ -732,8 +729,7 @@ The `GenerateKeyPair` function generates a public key and private key pair.
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-4}
+**Code snippets**
 
 - Golang code snippet
 
@@ -895,8 +891,7 @@ The `DeriveKey` function derives a key from a base key.
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-5}
+**Code snippets**
 
 - Golang code snippet
 
@@ -1073,8 +1068,7 @@ The `WrapKey` function wraps (encrypts) a key.
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-6}
+**Code snippets**
 
 - Golang code snippet
 
@@ -1212,8 +1206,7 @@ The `UnwrapKey` function unwraps (decrypts) a key.
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-7}
+**Code snippets**
 
 - Golang code snippet
 
@@ -1295,8 +1288,7 @@ This function is a special administration command that is supported only by GREP
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-8}
+**Code snippets**
 
 - Golang code snippet
 
@@ -1423,8 +1415,7 @@ The `GetAttributeValue` function obtains an attribute value of an object.
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-9}
+**Code snippets**
 
 - Golang code snippet
 
@@ -1550,8 +1541,7 @@ The `SetAttributeValue` function modifies an attribute value of an object.
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-10}
+**Code snippets**
 
 - Golang code snippet
 
@@ -1674,8 +1664,7 @@ The `GenerateRandom` function generates random data. When you use this function,
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-11}
+**Code snippets**
 
 - Golang code snippet
 
@@ -1793,8 +1782,7 @@ The `EncryptInit` function initializes an encryption operation. You need to call
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-12}
+**Code snippets**
 
 - Golang code snippet
 
@@ -1927,8 +1915,7 @@ The `Encrypt` function encrypts single-part data. You don't need to perform the 
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-13}
+**Code snippets**
 
 - Golang code snippet
 
@@ -2047,8 +2034,7 @@ The `EncryptUpdate` function continues a multiple-part encryption operation. Bef
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-14}
+**Code snippets**
 
 - Golang code snippet
 
@@ -2177,8 +2163,7 @@ The `EncryptFinal` function finishes a multiple-part encryption operation.
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-15}
+**Code snippets**
 
 - Golang code snippet
 
@@ -2264,8 +2249,7 @@ The `EncryptSingle` function processes data in one pass with one call. It does n
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-16}
+**Code snippets**
 
 - Golang code snippet
 
@@ -2372,8 +2356,7 @@ With the `ReencryptSingle` function, you can decrypt data with the original key 
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-17}
+**Code snippets**
 
 - Golang code snippet
 
@@ -2506,8 +2489,7 @@ The `DecryptInit` function initializes a decryption operation. You need to call 
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-18}
+**Code snippets**
 
 - Golang code snippet
 
@@ -2644,8 +2626,7 @@ The `Decrypt` function decrypts data in a single part. You don't need to perform
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-19}
+**Code snippets**
 
 - Golang code snippet
 
@@ -2760,8 +2741,7 @@ The `DecryptUpdate` function continues a multiple-part decryption operation. Bef
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-20}
+**Code snippets**
 
 - Golang code snippet
 
@@ -2886,8 +2866,7 @@ The `DecryptFinal` function finishes a multiple-part decryption operation.
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-21}
+**Code snippets**
 
 - Golang code snippet
 
@@ -2974,8 +2953,7 @@ The `DecryptSingle` function processes data in one pass with one call. It does n
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-22}
+**Code snippets**
 
 - Golang code snippet
 
@@ -3105,8 +3083,7 @@ The `SignInit` function initializes a signature operation. You need to call this
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-23}
+**Code snippets**
 
 - Golang code snippet
 
@@ -3224,8 +3201,7 @@ The `Sign` function signs single-part data. You don't need to perform the `SignU
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-24}
+**Code snippets**
 
 - Golang code snippet
 
@@ -3337,8 +3313,7 @@ The `SignUpdate` function continues a multiple-part signature operation. Before 
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-25}
+**Code snippets**
 
 - Golang code snippet
 
@@ -3458,8 +3433,7 @@ The `SignFinal` function finishes a multiple-part signature operation.
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-26}
+**Code snippets**
 
 - Golang code snippet
 
@@ -3546,8 +3520,7 @@ The `SignSingle` function signs or MACs data in one pass with one call and witho
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-27}
+**Code snippets**
 
 - Golang code snippet
 
@@ -3667,8 +3640,7 @@ The `VerifyInit` function initializes a verification operation. You need to call
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-28}
+**Code snippets**
 
 - Golang code snippet
 
@@ -3789,8 +3761,7 @@ The `Verify` function verifies a signature on single-part data. You don't need t
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-29}
+**Code snippets**
 
 - Golang code snippet
 
@@ -3902,8 +3873,7 @@ The `VerifyUpdate` function continues a multiple-part verification operation. Be
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-30}
+**Code snippets**
 
 - Golang code snippet
 
@@ -4023,8 +3993,7 @@ The `VerifyFinal` function finishes a multiple-part verification operation.
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-31}
+**Code snippets**
 
 - Golang code snippet
 
@@ -4113,8 +4082,7 @@ The `VerifySingle` function signs or MACs data in one pass with one call and wit
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-32}
+**Code snippets**
 
 - Golang code snippet
 
@@ -4233,8 +4201,7 @@ The `DigestInit` function initializes a message-digesting operation. You need to
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-33}
+**Code snippets**
 
 - Golang code snippet
 
@@ -4355,8 +4322,7 @@ The `Digest` function digests single-part data. You don't need to call the `Dige
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-34}
+**Code snippets**
 
 - Golang code snippet
 
@@ -4473,8 +4439,7 @@ The `DigestUpdate` function continues a multiple-part digesting operation. Befor
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-35}
+**Code snippets**
 
 - Golang code snippet
 
@@ -4595,8 +4560,7 @@ The `DigestFinal` function finishes a multiple-part digesting operation.
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-36}
+**Code snippets**
 
 - Golang code snippet
 
@@ -4679,8 +4643,7 @@ The `DigestSingle` function digests data in one pass with one call and without c
     </tr>
 </table>
 
-#### **Code snippets**
-{: code-snippets-37}
+**Code snippets**
 
 - Golang code snippet
 
