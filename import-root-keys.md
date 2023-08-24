@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-27"
+lastupdated: "2023-08-24"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -152,7 +152,7 @@ When importing an existing root key, it is required to include the encrypted key
 2. Base64 encode your key material string by running the following command:
 
     ```
-    $ openssl base64 -in <infile> -out <outfile>
+    openssl base64 -in <infile> -out <outfile>
     ```
     {: codeblock}
 
@@ -174,7 +174,7 @@ When importing an existing root key, it is required to include the encrypted key
 2. Base64 encode your key material string by running the following command:
 
     ```
-    $ openssl rand <byte_length> -base64
+    openssl rand <byte_length> -base64
     ```
     {: codeblock}
 
