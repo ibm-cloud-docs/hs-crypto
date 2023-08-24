@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-08-24"
 
 keywords: hyper protect crypto services integration, kms provider, set up kms provider
 
@@ -29,6 +29,7 @@ Teams can integrate to the following list of KMS providers:
 | [{{site.data.keyword.keymanagementserviceshort}}](/docs/key-protect?topic=key-protect-getting-started-tutorial) | Public, multi-tenant KMS with cloud-based HSM |
 | {{site.data.keyword.hscrypto}}| Dedicated KMS with cloud-based HSM |
 | {{site.data.keyword.keymanagementserviceshort}} for [{{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/docs/en/cloud-private) | Private KMS with on-premises HSM |
+{: caption="Table 1. KMS providers and environment types" caption-side="bottom"}
 
 To integrate with a KMS provider, adopting teams must modify how their service discovers KMS instances for a given user so that the corresponding KMS endpoints are found dynamically, without needing to hardcode to the {{site.data.keyword.hscrypto}} public API.
 

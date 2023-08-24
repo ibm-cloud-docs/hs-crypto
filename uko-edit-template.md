@@ -49,11 +49,11 @@ To edit the details of a key template by using the console, complete the followi
     
            If you want to assign keys to be created with this template to other keystores, click **Edit** and check the corresponding keystore cards. 
 
-        - Remove keystores
+         - Remove keystores
 
            If you want to unassign keys to be created with this template from some of the keystores, click **Edit** and clear the checkbox in the corresponding keystore cards. 
         
-        - Create a keystore
+         - Create a keystore
     
            If you want to activate keys to be created in a new keystore, click **Add keystore**. For more instructions, see [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
     

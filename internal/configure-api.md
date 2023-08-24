@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-08-24"
 
 keywords: create test instance, configure api for test, test hpcs, test service onboarding hpcs, wrap key api, upwrap key api
 
@@ -22,12 +22,9 @@ Create a test instance and add code to use our wrap and unwrap API methods.
 ## Before you begin
 {: #configure-api-test-prereqs}
 
-- You must have {{site.data.keyword.iamshort}} (IAM) enabled for your service. For questions and help with adoption, see the
-[IAM onboarding guide](/docs/get-coding?topic=get-coding-getting-started-iam-onboarding-overview){: external} or the
-[`#iam-adopters` Slack channel](https://ibm-cloudplatform.slack.com/archives/iam-adopters){: external}.
+- You must have {{site.data.keyword.iamshort}} (IAM) enabled for your service. For questions and help with adoption, see the [IAM onboarding guide](/docs/get-coding?topic=get-coding-getting-started-iam-onboarding-overview){: external} or the [`#iam-adopters` Slack channel](https://ibm-cloudplatform.slack.com/archives/iam-adopters){: external}.
 - You must have a basic understanding of IAM key concepts, such as [granting service to service access](/docs/get-coding?topic=get-coding-servicetoservice){: external}.
-- You must have a basic understanding of the [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) process. See [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services) to learn how {{site.data.keyword.hscrypto}} integrates with
-other cloud data services.
+- You must have a basic understanding of the [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) process. See [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services) to learn how {{site.data.keyword.hscrypto}} integrates with other cloud data services.
 
 ## Step 1. Create a test instance
 {: #provision-instance-test}

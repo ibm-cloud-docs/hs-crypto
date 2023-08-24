@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-14"
+lastupdated: "2023-08-24"
 
 keywords: Unified Key Orchestrator, delete key templates, key management, kms key, UKO
 
@@ -32,7 +32,7 @@ Follow these steps to complete the process:
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Key templates** from the navigation to view all the available key templates.
 
-  You can also view archived key templates by clicking the **Show archived templates** icon ![Show archived templates icon](/images/archive.svg "Show archived templates") on the table.
+    You can also view archived key templates by clicking the **Show archived templates** icon ![Show archived templates icon](/images/archive.svg "Show archived templates") on the table.
 
 3. Locate the key template that you want to delete, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions"), and select **Delete** to remove the key template.
 4. Click **Delete key template** to confirm the deletion.

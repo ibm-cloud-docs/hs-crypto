@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-08-24"
 
 keywords: enable KYOK, onboard to Hyper Protect Crypto Services, HPCS onboarding, service onboarding, internal registration, key registration, KYOK, kms onboarding
 
@@ -39,6 +39,7 @@ If you complete all the following steps, your service will meet all the Keep You
 | [Onboard your service to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-onboard-service) | <ol><li>[Submit a request to onboard your service](/docs/hs-crypto?topic=hs-crypto-onboard-service#submit-request)</li><li>[Create a CRN token](/docs/hs-crypto?topic=hs-crypto-onboard-service#submit-request)</li><li>[Discover KMS instances](/docs/hs-crypto?topic=hs-crypto-onboard-service#discover-kms-instances)</li><li>[Submit a request to integrate with Hyperwarp](/docs/hs-crypto?topic=hs-crypto-onboard-service#integrate-hyperwarp)</li></ol> |
 | [Set up the {{site.data.keyword.hscrypto}} key management service API](/docs/hs-crypto?topic=hs-crypto-configure-api-test) | <ol><li>[Create a test instance](/docs/hs-crypto?topic=hs-crypto-configure-api-test#provision-instance-test)</li><li>[Create a root key](/docs/hs-crypto?topic=hs-crypto-configure-api-test#create-root-key-test)</li><li>[Wrap a data encryption key](/docs/hs-crypto?topic=hs-crypto-configure-api-test#wrap-key-test)</li><li>[Unwrap the data encryption key](/docs/hs-crypto?topic=hs-crypto-configure-api-test#unwrap-key-test)</li></ol> |
 | [Map cloud resources to a root key](/docs/hs-crypto?topic=hs-crypto-register-protected-resources)  | <ol><li>[Register cloud resources](/docs/hs-crypto?topic=hs-crypto-register-protected-resources#create-registration)</li><li>[Unregister cloud resources](/docs/hs-crypto?topic=hs-crypto-register-protected-resources#delete-registration)</li></ol> |
+{: caption="Table 1. Required actions" caption-side="bottom"}
 
 ## Features
 {: #kyok-features}
@@ -55,3 +56,4 @@ Use the [adopter's guide](https://github.ibm.com/kms/BYOK_Adopter_services){: ex
 | [Enable or Disable a root key](/docs/hs-crypto?topic=hs-crypto-disable-keys) | 1.  [Disable or Enable a root key](/apidocs/hs-crypto#actiononkey) \n 2.  [Check for a Hyperwarp event from {{site.data.keyword.hscrypto}}](https://github.ibm.com/kms/BYOK_Adopter_services/blob/master/How_to_subscribe_to_hyperwarp.md#event-structure) \n 3.  [Process Hyperwarp enable or disable event](https://github.ibm.com/kms/Adopter_services/blob/master/src/github.ibm.com/skms/key-protect/event_processor.go) \n 4.  [Notify {{site.data.keyword.hscrypto}} that the event was processed](/apidocs/hs-crypto#eventacknowledge) \n 5.  [Verify end to end enable or disable flow in {{site.data.keyword.cloudaccesstrailshort}} logs](/docs/observability?topic=observability-pattern1#pattern1_step4) |
 | [Restore a root key](/docs/hs-crypto?topic=hs-crypto-restore-keys) | 1.  [Restore a root key](/apidocs/hs-crypto#actiononkey) \n 2.  [Check for a Hyperwarp restoration event from {{site.data.keyword.hscrypto}}](https://github.ibm.com/kms/BYOK_Adopter_services/blob/master/How_to_subscribe_to_hyperwarp.md#event-structure) \n 3.  [Process Hyperwarp restoration event](https://github.ibm.com/kms/Adopter_services/blob/master/src/github.ibm.com/skms/key-protect/event_processor.go) \n 4.  [Notify {{site.data.keyword.hscrypto}} that the event was processed](/apidocs/hs-crypto#eventacknowledge) \n 5.  [Verify end to end restoration flow in {{site.data.keyword.cloudaccesstrailshort}} logs](/docs/observability?topic=observability-pattern1#pattern1_step4) |
 | Encryption Key Location | 1.  Your service needs to allow keys from any region to protect resources in the region where service is deployed. \n 2.  Your service needs to not enforce that the key needs to be allocated in the same region where the resource is located. |
+{: caption="Table 2. Features for KYOK enabled services" caption-side="bottom"}

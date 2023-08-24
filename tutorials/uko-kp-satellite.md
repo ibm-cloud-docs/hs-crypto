@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-09"
+lastupdated: "2023-08-24"
 
 keywords: key management with satellite, uko satellite, hpcs satellite, kp satellite
 
@@ -14,8 +14,6 @@ account-plan: paid
 completion-time: 2h
 
 ---
-
-{{site.data.keyword.attribute-definition-list}}
 
 
 

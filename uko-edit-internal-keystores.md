@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-09"
+lastupdated: "2023-08-24"
 
 keywords: Unified Key Orchestrator, UKO keystore, edit keystore, key management, internal keystore, KMS keystore
 
@@ -32,10 +32,10 @@ To edit the details of an internal KMS keystore by using the console, complete t
 3. Click the internal keystore that you want to edit. The Details side panel is displayed.
 4. Click **Edit** to update the **Keystore name** and **Description**. 
 
-  The keystore name must be of 1 to 100 characters in length. The first character must be a letter (case-sensitive) or digit (0-9). The rest can also be symbols (.-_) or spaces. The description can be up to 200 characters in length.
+    The keystore name must be of 1 to 100 characters in length. The first character must be a letter (case-sensitive) or digit (0-9). The rest can also be symbols (.-_) or spaces. The description can be up to 200 characters in length.
   
-  You can filter and search the keys that are assigned to this keystore, but you cannot edit key details or change key states from the side panel. To edit the details of the keys, see [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
-  {: tip}
+    You can filter and search the keys that are assigned to this keystore, but you cannot edit key details or change key states from the side panel. To edit the details of the keys, see [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
+    {: tip}
 
 5. Click **Save** to save the changes.
 

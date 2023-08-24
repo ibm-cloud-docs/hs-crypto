@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-05"
+lastupdated: "2023-08-24"
 
 keywords: uko, rotate, rotate master key, rotate encryption key, rotate keys automatically, key rotation, rewrap data
 
@@ -123,6 +123,7 @@ The following flow shows how master key rotation progress is displayed in the {{
 2. Key rewrapping starts
 
     After the new master key register is loaded, all managed keys are to be rewrapped by the new master key. If the key-rewrapping progress is failed or the master key rotation is manuallly cancelled, a corresponding notification is displayed in the {{site.data.keyword.cloud_notm}} console. Under **Overview** from the navigation, you can view the key progress indicators under **Crypto units** during the key rewrapping process. Three types of keys progress indicators are displayed:
+
 
     * **System internal keys**: Displays the rewrapping progress of any system internal keys that are not accessible by the user, such as the key-encryption keys.
     * **{{site.data.keyword.cloud_notm}} KMS keys**: Displays the rewrapping progress of KMS keys that are stored in the internal KMS keystores.
