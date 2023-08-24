@@ -15,6 +15,8 @@ completion-time: 2h
 
 ---
 
+{{site.data.keyword.attribute-definition-list}}
+
 
 
 # Using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} to manage keys in {{site.data.keyword.keymanagementserviceshort}} on Satellite
