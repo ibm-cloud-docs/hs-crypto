@@ -379,6 +379,7 @@ The following field includes extra information:
 
 - The `responseData.totalResources` field includes the total number of key versions returned in the response.
 
+
 #### Set or unset key for deletion
 {: #dual-auth-set-success}
 
@@ -438,14 +439,15 @@ The following fields include extra information:
 ### Import token events
 {: #import-token-events}
 
+
 #### Create import token
 {: #create-import-token-success}
 
 The following fields include extra information:
 
 - The `responseData.expirationDate` field includes the expiration date of the import token.
-- The `responseData.maxAllowedRetrievals` field includes the maximum number of times the import token can be retrieved within the expiration time before it is no
-longer accessible.
+- The `responseData.maxAllowedRetrievals` field includes the maximum number of times the import token can be retrieved within the expiration time before it is no longer accessible.
+
 
 #### Retrieve import token
 {: #retrieve-import-token-success}
