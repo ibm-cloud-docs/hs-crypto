@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-07-05"
+lastupdated: "2023-08-23"
 
 keywords: pkcs11 access, pkcs 11 authentication, set up PKCS 11 API, best practice for setting up pkcs11 users
 
@@ -178,6 +178,7 @@ For more information about creating services IDs, see [Creating and working with
 You can grant access to service IDs within a {{site.data.keyword.hscrypto}} service instance by using the {{site.data.keyword.cloud_notm}} console.
 
 ### 1. Assign the custom roles to the SO user service ID
+{: #assign-custom-role-SO-user-service}
 
 To assign the custom roles that are defined in [Step 1](#step1-create-custom-roles) to the SO user service ID, follow these steps:
 
@@ -198,6 +199,7 @@ To assign access to the keystores for the SO user, follow these steps:
 
 
 ### 2. Assign the custom roles to the normal user service ID
+{: #assign-custom-role-normal-user-service}
 
 To assign the custom roles that are defined in [Step 1](#step1-create-custom-roles) to the normal user service ID, follow these steps:
 
@@ -216,6 +218,7 @@ To assign access to the keystores for the normal user, follow these steps:
 
 
 ### 3. Assign the custom roles to the anonymous user service ID
+{: #assign-custom-role-anonymous-user-service}
 
 To assign the custom roles that are defined in [Step 1](#step1-create-custom-roles) to the anonymous user service ID, follow these steps:
 

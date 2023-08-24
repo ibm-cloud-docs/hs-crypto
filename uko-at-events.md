@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-09"
+lastupdated: "2023-08-23"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 
@@ -154,7 +154,7 @@ The initiator ID is derived from the TLS (Transport Layer Security) certificate 
 {: caption="Table 8. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
 
 ### EP11 keystore events
-{: uko-ep11-keystore-events}
+{: #uko-ep11-keystore-events}
 
 The following table lists the Enterprise PKCS #11 (EP11) keystore actions that generate an event: 
 | Action                                      | Description                               |
@@ -171,7 +171,7 @@ The following table lists the Enterprise PKCS #11 (EP11) keystore actions that g
 {: caption="Table 9. EP11 keystore actions" caption-side="top"}
 
 ### EP11 crypto events
-{: uko-ep11-crypto-events}
+{: #uko-ep11-crypto-events}
 
 The following table lists the EP11 crypto actions that generate an event:
 | Action                                      | Description                               |
@@ -402,7 +402,7 @@ The following fields include extra information:
 - The `responseData.action` field indicates that the certificate is to be deleted.
 
 ### EP11 keystore events
-{: uko-ep11-keystore}
+{: #uko-ep11-keystore}
 
 The following table lists the returned values that indicate a successful EP11 keystore event:
 
@@ -418,7 +418,7 @@ The following common fields for EP11 keystore events include extra information:
 - The `target.name` field includes the IDs of the keystore or key.
 
 ### EP11 crypto events
-{: uko-ep11-crypto}
+{: #uko-ep11-crypto}
 
 The following table lists the returned values that indicate a successful EP11 crypto event:
 

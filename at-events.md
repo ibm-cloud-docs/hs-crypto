@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-14"
+lastupdated: "2023-08-24"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -200,7 +200,7 @@ The initiator ID is derived from the TLS (Transport Layer Security) certificate 
 {: caption="Table 9. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
 
 ### EP11 keystore events
-{: ep11-keystore-events}
+{: #ep11-keystore-events}
 
 The following table lists the Enterprise PKCS #11 (EP11) keystore actions that generate an event: 
 | Action                                      | Description                               |
@@ -217,7 +217,7 @@ The following table lists the Enterprise PKCS #11 (EP11) keystore actions that g
 {: caption="Table 10. EP11 keystore actions" caption-side="top"}
 
 ### EP11 crypto events
-{: ep11-crypto-events}
+{: #ep11-crypto-events}
 
 The following table lists the EP11 crypto actions that generate an event:
 | Action                                      | Description                               |
@@ -364,7 +364,6 @@ The following fields include extra information:
 - The `responseData.keyVersionCreationDate` field includes the date that the current version of the key was created.
 
 
-
 #### Patch key
 {: #patch-key-success}
 
@@ -372,8 +371,6 @@ The following fields include extra information:
 
 - The `requestData.initialValue.keyRingId` field includes the ID of the key ring that the key previously belonged to.
 - The `requestData.newValue.keyRingId` field includes the ID of the key ring that the key belongs to.
-
-
 
 #### List key versions
 {: #list-key-versions-success}
@@ -388,8 +385,7 @@ The following field includes extra information:
 
 The following fields include extra information:
 
-- The `responseData.initialValue.authID` field includes the initiator ID of the person who set the dual
-authorization policy.
+- The `responseData.initialValue.authID` field includes the initiator ID of the person who set the dual authorization policy.
 - The `responseData.initialValue.authExpiration` field includes the expiration date for the dual
 authorization policy.
 - The `responseData.newValue.authID` field includes the initiator ID of the person who set the dual
@@ -404,7 +400,6 @@ new initiatorID of the person who set the dual authorization policy.
 ### Policy events
 {: #policy-at-events}
 
-
 #### Allowed network policies
 {: #allowed-network-event}
 
@@ -415,7 +410,6 @@ The following fields include extra information:
 - The `requestData.newValue.policyAllowedNetworkEnabled` field includes if your allowed network policy is enabled or disabled.
 - The `requestData.newValue.policyAllowedNetworkAttribute` field includes if your allowed network policy is only for public networks or both public and private networks.
 
-
 #### Dual auth delete policies
 {: #dual-auth-event}
 
@@ -423,7 +417,6 @@ The following fields include extra information:
 
 - The `requestData.initialValue.policyDualAuthDeleteEnabled` field includes if your dual auth delete policy was previously enabled or disabled.
 - The `requestData.newValue.policyDualAuthDeleteEnabled` field includes if your dual auth delete policy is enabled or disabled.
-
 
 #### Key creation and importation access policies
 {: #allowed-key-creation-policy}
@@ -446,14 +439,14 @@ The following fields include extra information:
 ### Import token events
 {: #import-token-events}
 
+
 #### Create import token
 {: #create-import-token-success}
 
 The following fields include extra information:
 
 - The `responseData.expirationDate` field includes the expiration date of the import token.
-- The `responseData.maxAllowedRetrievals` field includes the maximum number of times the import token can be retrieved within the expiration time before it is no
-longer accessible.
+- The `responseData.maxAllowedRetrievals` field includes the maximum number of times the import token can be retrieved within the expiration time before it is no longer accessible.
 
 
 #### Retrieve import token
@@ -469,7 +462,6 @@ accessible.
 
 
 
-
 ### Registration events
 {: #registration-events}
 
@@ -479,7 +471,6 @@ accessible.
 The following field includes extra information:
 
 - The `responseData.totalResources` field includes the total number of registrations that are returned in the response.
-
 
 ### Trusted Key Entry events
 {: #tke-events-success}
@@ -640,7 +631,7 @@ The following fields include extra information:
 - The `responseData.action` field indicates that the certificate is to be deleted.
 
 ### EP11 keystore events
-{: ep11-keystore}
+{: #ep11-keystore}
 
 The following table lists the returned values that indicate a successful EP11 keystore event:
 
@@ -649,14 +640,13 @@ The following table lists the returned values that indicate a successful EP11 ke
 | outcome | success |
 | reason.reasonCode	| 200 |
 | reason.reasonType	| OK |
-
 {: caption="Table 18. Returned values of a successful EP11 keystore event" caption-side="bottom"}
 
 The following common fields for EP11 keystore events include extra information:
 - The `target.name` field includes the IDs of the keystore or key.
 
 ### EP11 crypto events
-{: ep11-crypto}
+{: #ep11-crypto}
 
 The following table lists the returned values that indicate a successful EP11 crypto event:
 
