@@ -9,15 +9,13 @@ keywords: key management with satellite, uko satellite, hpcs satellite, kp satel
 subcollection: hs-crypto
 
 content-type: tutorial
-services: hs-crypto, key-protect, satellite, cloud-databases, activity-tracker
+services: hs-crypto
 account-plan: paid
 completion-time: 2h
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
-
 
 # Using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} to manage keys in {{site.data.keyword.keymanagementserviceshort}} on Satellite
 {: #tutorial-uko-satellite}
