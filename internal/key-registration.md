@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-08-24"
 
 keywords: key registration, register resources, service integration, protected resource, view crn, registraion api
 
@@ -106,7 +106,8 @@ To modify a registration, make a `PATCH` call to the following endpoint.
 https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/registrations/<url_encoded_CRN>
 ```
 
-**Example request**
+#### **Example request**
+{: example-request-1}
 
 ```cURL
 curl -X PATCH \
@@ -150,7 +151,8 @@ Replace the variables in the example request according to the following table.
 
 After a resource is no longer within the cloud or protected by a root key, unregister the association with the key.
 
-**Example request**
+#### **Example request**
+{: example-request-2}
 
 ```cURL
 curl -X DELETE \
