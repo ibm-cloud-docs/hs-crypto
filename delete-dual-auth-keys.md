@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-08-24"
+lastupdated: "2023-08-25"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -37,20 +37,9 @@ Then, a different user provides a second authorization by using the
 
 Before you delete a key by using dual authorization:
 
-- **Determine who can authorize deletion of your {{site.data.keyword.hscrypto}} resources.**
-
-To use dual authorization, be sure to identify a user who can set the key for
-deletion, and another user who can delete the key. Users with a _Writer_ or
- _Manager_ access policy can set keys for deletion. Users with a _Manager_
- access policy can delete keys.
-- **Plan to delete the key within a 7-day waiting period.**
-
-When the first user authorizes a key for deletion,
-{{site.data.keyword.hscrypto}} sets a 7-day waiting period on
-the key. During this period, the key remains in the
-[Active state](/docs/hs-crypto?topic=hs-crypto-key-states)
-and all key operations are allowed on the key. To complete the deletion, the
-second user with a _Manager_ access policy can use the
+- **Determine who can authorize deletion of your {{site.data.keyword.hscrypto}} resources.** To use dual authorization, be sure to identify a user who can set the key for deletion, and another user who can delete the key. Users with a _Writer_ or _Manager_ access policy can set keys for deletion. Users with a _Manager_ access policy can delete keys.
+- **Plan to delete the key within a 7-day waiting period.** When the first user authorizes a key for deletion, {{site.data.keyword.hscrypto}} sets a 7-day waiting period on the key. During this period, the key remains in the [Active state](/docs/hs-crypto?topic=hs-crypto-key-states)
+and all key operations are allowed on the key. To complete the deletion, the second user with a _Manager_ access policy can use the
 {{site.data.keyword.cloud_notm}} console or API to delete the key.
 - **The key and its associated data become inaccessible 90 days after the key is deleted.** When you delete a key, the key can be restored within 30 days after the deletion. You are able to retrieve associated data such as key metadata, registrations, and policies for up to 90 days. After 90 days, the key becomes eligible to be automatically purged and its associated data will be permanently removed from your instance.
 
