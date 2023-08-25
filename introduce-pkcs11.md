@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-07-05"
+lastupdated: "2023-08-25"
 
 keywords: hsm, cloud hsm, tke cli, pkcs11, PKCS11 library, cryptographic operations, cryptographic functions, PKCS 11
 
@@ -94,9 +94,6 @@ As shown in the following diagram, a PKCS #11 key object is an example of a PKCS
     * Secret key: A secret key is a generated stream of bits that is used to encrypt and decrypt messages symmetrically.
 
 ![PKCS #11 object classes](/images/object-class.svg "PKCS #11 object classes"){: caption="Figure 2. PKCS #11 object classes" caption-side="bottom"}
-
-Currently, the data object class is not supported and only X.509 Public Key Certificate objects are supported in this implementation.
-{: note}
 
 ### {{site.data.keyword.iamshort}}
 {: #pkcs11-iam-intro}
