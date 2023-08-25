@@ -1,9 +1,8 @@
 ---
----
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-14"
+lastupdated: "2023-08-24"
 
 keywords: Unified Key Orchestrator, edit key templates, key management, kms keys, UKO
 
@@ -50,22 +49,22 @@ To edit the details of a key template by using the console, complete the followi
     
            If you want to assign keys to be created with this template to other keystores, click **Edit** and check the corresponding keystore cards. 
 
-        - Remove keystores
+         - Remove keystores
 
            If you want to unassign keys to be created with this template from some of the keystores, click **Edit** and clear the checkbox in the corresponding keystore cards. 
         
-        - Create a keystore
+         - Create a keystore
     
            If you want to activate keys to be created in a new keystore, click **Add keystore**. For more instructions, see [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
     
         If you have already created keys with this key template before making the changes, an `Unaligned` flag is displayed on the key details cards of the keys, indicating that those keys are no longer in sync with the key template. If you want to keep these changes, ignore the flag. Otherwise, realign your key with the key template again by selecting **Actions** > **Realign with template**. For more information, see [Realigning keys with key templates](/docs/hs-crypto?topic=hs-crypto-align-key). 
-        {:tip}
+        {: tip}
 
 5. When you finish making changes, click **Save** to save the changes.
 6. Under **Managed Keys**, view the total number of managed keys that are created based on this key template. You can also edit the managed keys by clicking the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key that you want to edit, and select **Show details**. For more information, see [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys&interface=ui).
 
-  To search for a specific key by using the search bar, or filter keys based on your needs, click the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the table. 
-  {: tip}
+    To search for a specific key by using the search bar, or filter keys based on your needs, click the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the table. 
+    {: tip}
 
 
 ## Editing key templates with the API
@@ -129,6 +128,4 @@ To edit keystores for existing key templates through the API, complete the follo
 - To find out more about realigning keys with the key templates, check out [Realigning keys with key templates](/docs/hs-crypto?topic=hs-crypto-align-key).
 
 - To continue to create keys with the key template created, follow the instruction in [Creating managed keys with a key template](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-template).
-
-
 

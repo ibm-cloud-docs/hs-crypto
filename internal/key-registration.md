@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-08-24"
 
 keywords: key registration, register resources, service integration, protected resource, view crn, registraion api
 

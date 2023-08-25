@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-05"
+lastupdated: "2023-08-24"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -237,7 +237,8 @@ To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyw
     | --- | --- |
     | `instance_name` | **Required**. The name of your {{site.data.keyword.hscrypto}} service instance. |
     | `region_name` | **Required**. The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions). \n Currently, the `us-south` and `us-east` regions are enabled with recovery crypto units by default, which means, when a service instance is provisioned in either regions, you are enabled with the option to back up your master keys in the recovery crypto units located in both regions. For details, see [Introducing service instance initialization modes](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit). |
-    | `number_of_operational_crypto_units` | **Optional**. Multiple crypto units are distributed among different supported availability zones in the selected region to increase availability. At least two crypto units are to be enabled for high availability. If you do not specify the number of crypto units, two crypto units are assigned by default. | {: caption="Table 4. Describes command variables to create a {{site.data.keyword.hscrypto}} instance with {{site.data.keyword.uko_full_notm}}" caption-side="bottom"}
+    | `number_of_operational_crypto_units` | **Optional**. Multiple crypto units are distributed among different supported availability zones in the selected region to increase availability. At least two crypto units are to be enabled for high availability. If you do not specify the number of crypto units, two crypto units are assigned by default. | 
+    {: caption="Table 4. Describes command variables to create a {{site.data.keyword.hscrypto}} instance with {{site.data.keyword.uko_full_notm}}" caption-side="bottom"}
 
 5. Verify that the service instance is created successfully. Run the following command to get all the service instances that you create. Check whether the {{site.data.keyword.hscrypto}} service instance is among the list.
 
@@ -252,6 +253,6 @@ To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyw
 
 * As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full_notm}} service to monitor the status of your instance and how administrators, users, and applications interact with {{site.data.keyword.hscrypto}}. To enable {{site.data.keyword.at_full_notm}} for your {{site.data.keyword.hscrypto}} instance, you need to provision an instance of {{site.data.keyword.at_full_notm}} in the same region where your {{site.data.keyword.hscrypto}} instance is located. For more information, see the [getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
 * Initialize your service instance with the [{{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) or the [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) so that {{site.data.keyword.hscrypto}} can provide key management and data management functions.
- * To find out more about programmatically managing your keys, check out the [{{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external} or [{{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external}.
+* To find out more about programmatically managing your keys, check out the [{{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external} or [{{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external}.
 * To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 * If you need to delete your service instance, see [Deleting service instances](/docs/hs-crypto?topic=hs-crypto-delete-instance) for instructions.

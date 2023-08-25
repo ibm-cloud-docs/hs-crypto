@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-27"
+lastupdated: "2023-08-25"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 

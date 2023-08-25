@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-15"
+lastupdated: "2023-08-24"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -33,7 +33,7 @@ To edit vault details by using the console, complete the following steps:
 3. Click the vault that you want to edit. The Details side panel is displayed.
 4. Click **Edit** to update the **Vault name** and **Description**. 
   
-  The vault name must be of 1 to 100 characters in length. The characters can be letters (case-sensitive), digits (0-9), or symbols (#@!$%\’_-).
+    The vault name must be of 1 to 100 characters in length. The characters can be letters (case-sensitive), digits (0-9), or symbols (#@!$%\’_-).
   
 5. Click **Save** to save the property changes.
 

@@ -379,19 +379,15 @@ The following field includes extra information:
 
 - The `responseData.totalResources` field includes the total number of key versions returned in the response.
 
-
 #### Set or unset key for deletion
 {: #dual-auth-set-success}
 
 The following fields include extra information:
 
 - The `responseData.initialValue.authID` field includes the initiator ID of the person who set the dual authorization policy.
-- The `responseData.initialValue.authExpiration` field includes the expiration date for the dual
-authorization policy.
-- The `responseData.newValue.authID` field includes the initiator ID of the person who set the dual
-authorization policy.
-- The `responseData.newValue.authExpiration` field includes the expiration date for the dual authorization
-policy.
+- The `responseData.initialValue.authExpiration` field includes the expiration date for the dual authorization policy.
+- The `responseData.newValue.authID` field includes the initiator ID of the person who set the dual authorization policy.
+- The `responseData.newValue.authExpiration` field includes the expiration date for the dual authorization policy.
 
 `initialValue` is the initiatorID of the person who last set the dual authorization policy and `newValue` is the
 new initiatorID of the person who set the dual authorization policy.
@@ -454,10 +450,8 @@ The following fields include extra information:
 
 The following fields include extra information:
 
-- The `responseData.maxAllowedRetrievals` field includes the maximum number of times the import token can be retrieved within the expiration time before it is no
-longer accessible.
-- The `responseData.remainingRetrievals` field includes the number of times the import token can be retrieved within the expiration time before it is no longer
-accessible.
+- The `responseData.maxAllowedRetrievals` field includes the maximum number of times the import token can be retrieved within the expiration time before it is no longer accessible.
+- The `responseData.remainingRetrievals` field includes the number of times the import token can be retrieved within the expiration time before it is no longer accessible.
 
 
 

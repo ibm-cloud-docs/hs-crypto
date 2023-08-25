@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-09"
+lastupdated: "2023-08-24"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -205,6 +205,7 @@ To connect to an external keystore by using the console, complete the following 
 
     **Test connection** is an optional step. You can complete the subsequent steps even if the test fails. To adjust the connection settings in case of a connection failure, check and adjust the connection properties.
     {: tip}
+    
 8. Under **Summary**, view the summary of your Azure Key Vault and the total estimated cost.
 9. After you confirm the keystore details, click **Connect to keystore** to connect to the keystore.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-09"
+lastupdated: "2023-08-24"
 
 keywords: Unified Key Orchestrator, UKO keystore, create keystore, internal keystore， KMS keystore
 
@@ -46,9 +46,10 @@ To create an internal KMS keystore by using the console, complete the following 
 5. Under **Keystore type**, select **IBM Cloud KMS Keystore** and click **Next**.
     You can change the currency that is displayed by selecting your country or location.
     {: tip}
+    
 6. Under **Keystore properties**, enter a name in **Keystore name**. Optionally, you can add an extended description to your keystore in the **Description** section. And then, click **Next**.
   
-  The keystore name must be of 1 to 100 characters in length. The first character must be a letter (case-sensitive) or digit (0-9). The rest can also be symbols (.-_) or spaces. The description can be up to 200 characters in length.
+    The keystore name must be of 1 to 100 characters in length. The first character must be a letter (case-sensitive) or digit (0-9). The rest can also be symbols (.-_) or spaces. The description can be up to 200 characters in length.
 
 7. Under **Summary**, you can view the summary of the keystore that you create, including the keystore type, the assigned vault, and general properties. 
 8. After you confirm the keystore details, click **Create keystore** to create the keystore.

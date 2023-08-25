@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-24"
+lastupdated: "2023-08-24"
 
 keywords: troubleshoot, problems, known issues, can't create vaults
 
@@ -27,10 +27,12 @@ You might receive an error message similar to one of the following messages when
 
 It might be caused by one of the following reasons:
 {: tsCauses}
+
 * You do not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions.
 * The master key rotation is in progress. 
 
 Try the following solutions: 
 {: tsResolve}
+
 * Verify with your administrator that you're assigned the _Vault Administrator_ role in the applicable resource group or service instance. For more information about roles, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles).
 * Try to create the vault again after the master key rotation is complete. For more information, see [Master key rotation](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro).

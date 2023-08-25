@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-15"
+lastupdated: "2023-08-24"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -42,10 +42,10 @@ To delete a vault by using the console, complete the following steps:
 2. Click **Vaults** from the navigation to view all the available vaults.
 3. Click the vault that you want to delete. The Details side panel is displayed.
 4. Make sure that the vault does not contain any key templates, keys, or keystores, and then click **Delete**.
-  
-  If any archived key templates are assigned to this vault, the archived key templates are also deleted with the vault. 
-  {: note}
-  
+    
+    If any archived key templates are assigned to this vault, the archived key templates are also deleted with the vault. 
+    {: note}
+    
 5. Click **Delete vault** to confirm the deletion.
 
 The vault has been deleted and removed from the vault list. Access groups that are assigned to this vault no longer have access to the vault.

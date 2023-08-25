@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-08-24"
 
 keywords: security for Hyper Protect Crypto Services, compliance for Hyper Protect Crypto Services, security and compliance for Hyper Protect Crypto Services, rules for Hyper Protect Crypto Services,
 
@@ -44,11 +44,11 @@ This service only supports the ability to view the results of your configuration
 
 [Config rules](#x3084914){: term} are used to monitor and optionally enforce the configuration standards that you want to implement across your accounts. To learn more about the available properties that you can use to create a rule for {{site.data.keyword.hscrypto}}, review the following table.
 
-
 | Resource Kind | Property Name | Operator | Value | Description |
 | ------------- | ------------- | -------- | ----- | ----------- |
 | `instance` | `allowed_network`| `string_equals` | public-and-private<br>private-only | Specifies the type of endpoint the {{site.data.keyword.hscrypto}} instance can be accessed from. Refer to <br>[Managing network access policies](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies) for more information. |
-
 {: caption="Table 1. Config rule properties and target attributes for {{site.data.keyword.hscrypto}}" caption-side="bottom"}
+
+
 
 To learn more about config rule capabilities, see [What is a config rule?](/docs/security-compliance?topic=security-compliance-what-is-governance){: external}.

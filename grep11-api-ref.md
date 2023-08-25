@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-12"
+lastupdated: "2023-08-24"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 

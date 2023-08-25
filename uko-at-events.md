@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-23"
+lastupdated: "2023-08-24"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 
@@ -51,7 +51,7 @@ The following table lists the key actions that generate an event.
 | Action                            | Description                                                  |
 | --------------------------------- | ------------------------------------------------------------ |
 | `hs-crypto.target-keystores.write`               | Create or update a keystore.   |
-| `hs-crypto.target-keystores.list `         | Get a list of keystores.               |
+| `hs-crypto.target-keystores.list`         | Get a list of keystores.               |
 | `hs-crypto.target-keystores.read`         | Retrieve information about a keystore.     |
 | `hs-crypto.target-keystores.delete`              | Delete a keystore.                |
 {: caption="Table 2. Keystore actions" caption-side="bottom"}
@@ -411,7 +411,6 @@ The following table lists the returned values that indicate a successful EP11 ke
 | outcome | success |
 | reason.reasonCode	| 200 |
 | reason.reasonType	| OK |
-
 {: caption="Table 15. Returned values of a successful EP11 keystore event" caption-side="bottom"}
 
 The following common fields for EP11 keystore events include extra information:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-08-25"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -37,18 +37,9 @@ Then, a different user provides a second authorization by using the
 
 Before you delete a key by using dual authorization:
 
-- **Determine who can authorize deletion of your {{site.data.keyword.hscrypto}} resources.**
-To use dual authorization, be sure to identify a user who can set the key for
-deletion, and another user who can delete the key. Users with a _Writer_ or
- _Manager_ access policy can set keys for deletion. Users with a _Manager_
- access policy can delete keys.
-- **Plan to delete the key within a 7-day waiting period.**
-When the first user authorizes a key for deletion,
-{{site.data.keyword.hscrypto}} sets a 7-day waiting period on
-the key. During this period, the key remains in the
-[Active state](/docs/hs-crypto?topic=hs-crypto-key-states)
-and all key operations are allowed on the key. To complete the deletion, the
-second user with a _Manager_ access policy can use the
+- **Determine who can authorize deletion of your {{site.data.keyword.hscrypto}} resources.** To use dual authorization, be sure to identify a user who can set the key for deletion, and another user who can delete the key. Users with a _Writer_ or _Manager_ access policy can set keys for deletion. Users with a _Manager_ access policy can delete keys.
+- **Plan to delete the key within a 7-day waiting period.** When the first user authorizes a key for deletion, {{site.data.keyword.hscrypto}} sets a 7-day waiting period on the key. During this period, the key remains in the [Active state](/docs/hs-crypto?topic=hs-crypto-key-states)
+and all key operations are allowed on the key. To complete the deletion, the second user with a _Manager_ access policy can use the
 {{site.data.keyword.cloud_notm}} console or API to delete the key.
 - **The key and its associated data become inaccessible 90 days after the key is deleted.** When you delete a key, the key can be restored within 30 days after the deletion. You are able to retrieve associated data such as key metadata, registrations, and policies for up to 90 days. After 90 days, the key becomes eligible to be automatically purged and its associated data will be permanently removed from your instance.
 
@@ -63,14 +54,10 @@ After you [enable dual authorization for an instance](/docs/hs-crypto?topic=hs-c
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your {{site.data.keyword.cloud_notm}} resource list, select your
-provisioned instance of {{site.data.keyword.hscrypto}}.
-4. On the **KMS keys** page, use the **Keys** table to browse the keys in
-your service.
-5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key that you want to
-delete.
-6. From the options menu, click **Schedule key deletion** and review the key's
-associated resources.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
+4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
+5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key that you want to delete.
+6. From the options menu, click **Schedule key deletion** and review the key's associated resources.
 7. Enter the name of the key that is to be deleted, and click **Schedule key deletion**.
 8. Contact the second approver to complete the deletion of the key.
 

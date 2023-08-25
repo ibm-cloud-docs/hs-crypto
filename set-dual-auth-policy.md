@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-08-25"
 
 keywords: set deletion policy, dual authorization, policy-based, key deletion
 
@@ -42,17 +42,9 @@ To enable dual authorization settings at the instance level, check out
 
 Consider the following items before you enable dual authorization for a key:
 
-- **Determine whether a dual authorization policy is required for the key.**
-As a security admin, assess the sensitivity of your workload to determine
-whether a key requires a dual authorization policy based on your requirements.
-After you enable dual authorization for a key, the policy can no longer be
-changed to allow a single authorization to delete the key.
-- **Determine who can authorize deletion of your {{site.data.keyword.hscrypto}} resources.**
-After you create a dual authorization policy for a key, the key will require
-[an action from two users](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys)
-before it can be deleted. Be sure to identify two distinct users with the
-[appropriate levels of access](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles)
-to the instance or key.
+- **Determine whether a dual authorization policy is required for the key.** As a security admin, assess the sensitivity of your workload to determine whether a key requires a dual authorization policy based on your requirements. After you enable dual authorization for a key, the policy can no longer be changed to allow a single authorization to delete the key.
+- **Determine who can authorize deletion of your {{site.data.keyword.hscrypto}} resources.** After you create a dual authorization policy for a key, the key will require [an action from two users](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys) before it can be deleted. Be sure to identify two distinct users with the
+[appropriate levels of access](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles) to the instance or key.
 
 To learn how to delete a key that has a dual authorization policy, see
 [Deleting keys using dual authorization](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys).

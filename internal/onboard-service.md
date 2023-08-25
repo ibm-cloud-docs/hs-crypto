@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-08-24"
 
 keywords: enable kyok, hyper protect crypto service onboarding, internal, kyok, onboard service, crn token
 
@@ -23,18 +23,11 @@ You can enable Keep Your Own Key (KYOK) for your service by integrating with {{s
 {: #onboard-prereqs}
 
 Keep in mind the following list of prerequisites before you continue to step 1.
-- You must have an {{site.data.keyword.cloud_notm}} account with access to both the
-[staging](https://test.cloud.ibm.com/) and [production](https://cloud.ibm.com/)
-environments.
-- You must have a basic understanding of IAM concepts, such as
-[granting service to service access](/docs/get-coding?topic=get-coding-servicetoservice).
+- You must have an {{site.data.keyword.cloud_notm}} account with access to both the [staging](https://test.cloud.ibm.com/) and [production](https://cloud.ibm.com/) environments.
+- You must have a basic understanding of IAM concepts, such as [granting service to service access](/docs/get-coding?topic=get-coding-servicetoservice).
 
-Need help? You can use the
-[`#hp-crypto-kms` Slack channel](https://app.slack.com/client/T02J3DPUE/CFFC7M3B3){: external}
-or
-[raise a support ticket](https://github.ibm.com/ZaaS/zcrypto-support-tickets/issues/new){: external}.
-For specific questions about your use case, reach out to Marco Pavone (Architect)
-or Chris Smith (OM).
+Need help? You can use the [`#hp-crypto-kms` Slack channel](https://app.slack.com/client/T02J3DPUE/CFFC7M3B3){: external} or [raise a support ticket](https://github.ibm.com/ZaaS/zcrypto-support-tickets/issues/new){: external}.
+For specific questions about your use case, reach out to Marco Pavone (Architect) or Chris Smith (OM).
 {: tip}
 
 ## Step 1. Submit a request to onboard your service
@@ -52,25 +45,16 @@ the user's behalf. Review the
 [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles)
 to determine which roles match your use case. The **Reader** service role provides the necessary permissions for
 performing wrap, unwrap, and list key actions.
-- The environment, staging, or production, where you need to onboard your
-service. After you onboard in the staging environment, you must submit another
-request to onboard in production.
+- The environment, staging, or production, where you need to onboard your service. After you onboard in the staging environment, you must submit another request to onboard in production.
 
-When you submit a request, the {{site.data.keyword.hscrypto}}
-team will update the service registrations to include access for your service.
-Feel free to connect with us on the `#hyper-protect-crypto` Slack channel if you need
-help during this process.
+When you submit a request, the {{site.data.keyword.hscrypto}} team will update the service registrations to include access for your service. Feel free to connect with us on the `#hyper-protect-crypto` Slack channel if you need help during this process.
 
 ## Step 2. Create a CRN token
 {: #retrieve-s2s-token}
 
-To grant access between your service (the "source" service) and
-{{site.data.keyword.hscrypto}} (the "target" service), we
-recommend using a CRN token. This process requires a single extra request
-to IAM.
+To grant access between your service (the "source" service) and {{site.data.keyword.hscrypto}} (the "target" service), we recommend using a CRN token. This process requires a single extra request to IAM.
 
-Do not propagate the user's token through the system because this not good
-security hygiene. Instead, use a CRN token from IAM.
+Do not propagate the user's token through the system because this not good security hygiene. Instead, use a CRN token from IAM.
 {: important}
 
 As you can see in the following table, the subsequent API calls take a CRN token.
@@ -82,35 +66,18 @@ API call | Target | Token Type
 [Register protected resources](/docs/hs-crypto?topic=hs-crypto-register-protected-resources) | {{site.data.keyword.hscrypto}} | CRN token
 Wrap or unwrap DEKs | {{site.data.keyword.hscrypto}} | CRN token
 
-See the
-[#iam-adopters Slack channel](https://ibm-cloudplatform.slack.com/archives/C0NLB2W3B/p1516206027000901){: external}
-or see
-[IAM service to service documentation](/docs/get-coding?topic=get-coding-servicetoservice)
-for official steps and guidance.
+See the [#iam-adopters Slack channel](https://ibm-cloudplatform.slack.com/archives/C0NLB2W3B/p1516206027000901){: external} or see [IAM service to service documentation](/docs/get-coding?topic=get-coding-servicetoservice) for official steps and guidance.
 
 ## Step 3. Discover KMS instances
 {: #discover-kms-instances}
 
 Before you use the {{site.data.keyword.hscrypto}} API to protect customer data, you need to know how to perform two important actions:
-- Gather a list of all {{site.data.keyword.hscrypto}} instances
-that your customer has access to view, which is set by an IAM policy with
-Platform Viewer role.
-- Discover {{site.data.keyword.hscrypto}} regional endpoints
-for each instance.
+- Gather a list of all {{site.data.keyword.hscrypto}} instances that your customer has access to view, which is set by an IAM policy with Platform Viewer role.
+- Discover {{site.data.keyword.hscrypto}} regional endpoints for each instance.
 
-Listing {{site.data.keyword.hscrypto}} instances gives your
-customers the choice of which root keys protect your service's resource and
-which type of KMS provider. The instances that contain root keys might be in any
-MZR - even different from the resource's location. We allow this so that
-customers can centrally manage keys in a region that the customer desires, while
-data is protected and stored elsewhere. Customers choose and own the
-responsibility of the location of their keys.
+Listing {{site.data.keyword.hscrypto}} instances gives your customers the choice of which root keys protect your service's resource and which type of KMS provider. The instances that contain root keys might be in any MZR - even different from the resource's location. We allow this so that customers can centrally manage keys in a region that the customer desires, while data is protected and stored elsewhere. Customers choose and own the responsibility of the location of their keys.
 
-Both list and discover actions can be achieved by using the platform
-Tagging API (that is, GHoST) and a **CRN token** from earlier. Your team can search
-for all KMS instances that are associated with a given user by specifying
-`sub_type` instead of service name. This is done by querying Global Search and
-Tagging (GhoST).
+Both list and discover actions can be achieved by using the platform Tagging API (that is, GHoST) and a **CRN token** from earlier. Your team can search for all KMS instances that are associated with a given user by specifying `sub_type` instead of service name. This is done by querying Global Search and Tagging (GhoST).
 
 ```cURL
 curl -X POST
