@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-24"
+lastupdated: "2023-08-25"
 
 keywords: standard key, import key, key material, import key api, bring your own key, byok, encryption key, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key
 
@@ -151,7 +151,7 @@ When you import an existing standard key, it is required to include the encrypte
 2. Base64 encode your key material string by running the following command:
 
     ```
-    openssl base64 -in <infile> -out <outfile>
+    $ openssl base64 -in <infile> -out <outfile>
     ```
     {: codeblock}
 
@@ -173,7 +173,7 @@ When you import an existing standard key, it is required to include the encrypte
 2. Base64 encode your key material string by running the following command:
 
     ```
-    openssl rand <byte_length> -base64
+    $ openssl rand <byte_length> -base64
     ```
     {: codeblock}
 

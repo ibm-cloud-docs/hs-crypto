@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-24"
+lastupdated: "2023-08-25"
 
 keywords: data encryption key, key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, unwrap api
 
@@ -102,7 +102,7 @@ When you unwrap a data encryption key, the key material is returned in base64 en
 2. Base64 encode your key material string by running the following command:
 
     ```
-    openssl base64 -d -in <infile> -out <outfile>
+    $ openssl base64 -d -in <infile> -out <outfile>
     ```
     {: codeblock}
 
