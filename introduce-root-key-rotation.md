@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-07-05"
+lastupdated: "2023-08-30"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -17,7 +17,7 @@ subcollection: hs-crypto
 # Root key rotation - Standard Plan 
 {: #root-key-rotation-intro}
 
-You can rotate root keys managed in your {{site.data.keyword.hscrypto}} instance on demand or by setting a rotation policy. Key rotation takes place when you retire the original key material of the root key, and you re-key it by generating a new cryptographic key material.
+You can rotate root keys managed in your {{site.data.keyword.hscrypto}} instance on demand or by setting a rotation policy. Key rotation takes place when you retire the original key material and generate a new cryptographic key material for the root key.
 {: shortdesc}
 
 Rotating keys regularly helps you meet industry standards and cryptographic best practices. The following table describes the main benefits of key rotation:
