@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-24"
+lastupdated: "2023-08-31"
 
 keywords: integration, encryption at rest, cloud object storage, object storage, kmip, containers, vmware, database, compute
 
@@ -32,7 +32,8 @@ The data that you store in {{site.data.keyword.cloud_notm}} storage services is 
 | Service | Description | Integration instruction |
 | ------- | ----------- | ----------------------- |
 | [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage){: external} | {{site.data.keyword.cos_full_notm}} is a highly available, durable, and secure platform for storing unstructured data. Object storage is the most efficient way to store PDFs, media files, database backups, disk images, or even large structured datasets. | <ul><li>Demo video: [Integrating {{site.data.keyword.cos_full_notm}} with {{site.data.keyword.hscrypto}}](https://mediacenter.ibm.com/media/0_mgxwp16v){: external}</li><li>Instruction: [Server-side encryption with {{site.data.keyword.hscrypto}}](/docs/cloud-object-storage?topic=cloud-object-storage-hpcs){: external}</li></ul> |
-| [{{site.data.keyword.cloud_notm}} {{site.data.keyword.blockstorageshort}} for Virtual Private Cloud (VPC)](/docs/vpc?topic=vpc-block-storage-about){: external}  | {{site.data.keyword.blockstorageshort}} for VPC provides hypervisor-mounted, high-performance data storage for your virtual server instances that you can provision within your VPC. | [Creating block storage volumes with customer-managed encryption](/docs/vpc?topic=vpc-block-storage-vpc-encryption){: external} |
+| [{{site.data.keyword.block_storage_is_full}}](/docs/vpc?topic=vpc-block-storage-about){: external}  | {{site.data.keyword.block_storage_is_short}} provides hypervisor-mounted, high-performance data storage for your virtual server instances that you can provision within your VPC. | [Creating block storage volumes with customer-managed encryption](/docs/vpc?topic=vpc-block-storage-vpc-encryption){: external} |
+| [{{site.data.keyword.filestorage_vpc_full}}](/docs/vpc?topic=vpc-file-storage-vpc-about){: external} | {{site.data.keyword.filestorage_vpc_full}} is a zonal file storage offering that provides NFS-based file storage services. | [Creating file shares with customer-managed encryption](/docs/vpc?topic=vpc-file-storage-vpc-encryption){: external} | 
 {: caption="Table 1. Supported storage services" caption-side="bottom"}
 
 ## Database service integrations

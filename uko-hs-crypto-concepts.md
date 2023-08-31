@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-14"
+lastupdated: "2023-08-31"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -249,7 +249,7 @@ A managed key is a key that is created in and assigned to a vault. You can use a
 ### Keystore
 {: #uko-target-keystore-concept}
 
-A keystore is keystore that is assigned to a vault. If it is an internal keystore, it can be created only in a vault. 
+A keystore needs to be assigned to a vault. If it is an internal keystore, it can be created only in a vault. 
 
 ### Internal keystore
 {: #uko-internal-keystore-concept}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-14"
+lastupdated: "2023-08-31"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -65,7 +65,7 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
 
 - **Keystores**
         
-    A keystore is keystore that is assigned to a vault. You need to create an internal keystore in only one vault, or assign an external keystore to a vault when you connect your service instance to it. 
+    A keystore needs to be assigned to a vault. You need to create an internal keystore in only one vault, or assign an external keystore to a vault when you connect your service instance to it. 
 
     You need to activate a key in a keystore before you can encrypt or decrypt data by using the key.       
     
