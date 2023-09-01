@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-08-23"
+lastupdated: "2023-09-01"
 
 keywords: pkcs11 access, pkcs 11 authentication, set up PKCS 11 API, best practice for setting up pkcs11 users
 
@@ -46,17 +46,17 @@ To perform the following steps, you need to have the `Administrator` [platform a
 ## Step 1: Create custom IAM roles
 {: #step1-create-custom-roles}
 
-You need to create two custom roles, one for operating keys and one for operating keystores.
+You need to create three custom roles, one for performing crypto operations, one for managing keys and the other one for managing EP11 keystores.
 
-### 1. Create a custom role for operating keys
-{: #create-key-operator}
+### 1. Create a custom role for performing crypto operations
+{: #create-crypto-operator}
 
-This role is used to generate and manage keys in the Enterprise PKCS #11 (EP11) keystores. However, this role does not have permissions to manage EP11 keystores.
+This role is used to generate key objects for performing crypto operations. However, this role does not have permissions to use or manage Enterprise PKCS #11 (EP11) keystores.
 
 1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)**, and select **Roles**.
 2. Click **Create**.
-3. Enter a name for your role; for example, `key operator`. This name must be unique within the account. Users see this role name in the console when they assign access to the service.
-4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `KeyOperator`
+3. Enter a name for your role; for example, `Crypto operator`. This name must be unique within the account. Users see this role name in the console when they assign access to the service.
+4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `CryptoOperator`.
 5. Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the console when a user assigns access to the service.
 6. From the list of services, select **Hyper Protect Crypto Services**.
 7. Select **Add** for the following actions:
@@ -78,23 +78,37 @@ This role is used to generate and manage keys in the Enterprise PKCS #11 (EP11) 
     * hs-crypto.crypto.verify
     * hs-crypto.crypto.wrapkey
     * hs-crypto.ep11.use
+    * hs-crypto.discovery.listservers
+8. After adding actions, click **Create**.
+
+### 2. Create a custom role for managing keys
+{: #create-manage-key-operator}
+
+This role is used to manage keys in the EP11 keystores. However, this role does not have permissions to manage EP11 keystores or perform crypto operations.
+
+1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)**, and select **Roles**.
+2. Click **Create**.
+3. Enter a name for your role; for example, `Key operator`. This name must be unique within the account. Users see this role name in the console when they assign access to the service.
+4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `KeyOperator`
+5. Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the console when a user assigns access to the service.
+6. From the list of services, select **Hyper Protect Crypto Services**.
+7. Select **Add** for the following actions:
     * hs-crypto.keystore.deletekey
     * hs-crypto.keystore.listkeysbyattributes
     * hs-crypto.keystore.listkeysbyids
     * hs-crypto.keystore.listkeystoresbyids
     * hs-crypto.keystore.storenewkey
     * hs-crypto.keystore.updatekey
-    * hs-crypto.discovery.listservers
-8. Click **Create** when you're done adding actions.
+8. After adding actions, click **Create**.
 
-### 2. Create a custom role for operating keystores
+### 3. Create a custom role for managing keystores
 {: #create-keystore-operator}
 
 This role is used to create and delete EP11 keystores but does not have permissions to manage keys.
 
 1. In the {{site.data.keyword.cloud}} console, go to **Manage** > **Access (IAM)**, and select **Roles**.
 2. Click **Create**.
-3. Enter a name for your role; for example, `keystore operator`. This name must be unique within the account. Users see this role name in the console when they assign access to the service.
+3. Enter a name for your role; for example, `Keystore operator`. This name must be unique within the account. Users see this role name in the console when they assign access to the service.
 4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `KeystoreOperator`
 5. Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the console when a user assigns access to the service.
 6. From the list of services, select **Hyper Protect Crypto Services**.
@@ -103,7 +117,7 @@ This role is used to create and delete EP11 keystores but does not have permissi
     * hs-crypto.keystore.deletekeystore
     * hs-crypto.keystore.listkeystoresbyattributes
     * hs-crypto.keystore.listkeystoresbyids
-8. Click **Create** when you're done adding actions.
+8. After adding actions, click **Create**.
 
 For more information about how to create custom roles, see [Creating custom roles](/docs/account?topic=account-custom-roles).
 
@@ -167,7 +181,7 @@ To create a service ID for the anonymous user and the corresponding API key, com
     4. Click **Create**.
     5. Save your API key by copying or downloading it to secure location.
 
-    The API key is to be used as the PIN for the anonymous user logins, and cannot be retrieved. Make sure to make a copy of it in this step.
+    The API key is to be used to perform crypto operations and access keystore for the anonymous user, which cannot be retrieved. Make sure to make a copy of it in this step.
     {: important}
 
 For more information about creating services IDs, see [Creating and working with service IDs](/docs/account?topic=account-serviceids). For detailed instructions on creating service ID API keys, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
@@ -192,6 +206,7 @@ To assign access to the keystores for the SO user, follow these steps:
 6. Under **Resources**, select **Specific resources**.
 7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Next**.
 8. Under **Roles and actions**, check the boxes for the following roles and click **Next**:
+    * `Crypto operator`
     * `Keystore operator`
     * `Key operator`
 9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
@@ -212,17 +227,20 @@ To assign access to the keystores for the normal user, follow these steps:
 5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
 6. Under **Resources**, select **Specific resources**.
 7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Next**.
-8. Under **Roles and actions**, check the boxes for `Key operator` and click **Next**.
+8. Under **Roles and actions**, check the boxes for `Crypto operator` and `Key operator`, and then click **Next**.
 9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
 10. After confirmation, click **Add** &gt; **Assign**.
 
 
-### 3. Assign the custom roles to the anonymous user service ID
-{: #assign-custom-role-anonymous-user-service}
+### 3. Create access policies and assign custom roles to the anonymous user service ID
+{: #create-policy-assign-custom-role-anonymous-user-service}
+
+The anonymous user requires three access policies. The PKCS#11 specification specifies that the anonymous user can only access the public keystore. The following access policies are setup to restrict the anonymous user to the public keystore.
 
 To assign the custom roles that are defined in [Step 1](#step1-create-custom-roles) to the anonymous user service ID, follow these steps:
 
-To assign access to the keystore for the anonymous user, follow these steps:
+#### Create access policy for crypto operations
+{: #create-access-policy-crypto-operations}
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
 2. Hover your mouse over the `Anonymous user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options.
@@ -231,11 +249,37 @@ To assign access to the keystore for the anonymous user, follow these steps:
 5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
 6. Under **Resources**, select **Specific resources**.
 7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Next**.
-8. Under **Roles and actions**, check the boxes for `Key operator` and click **Next**.
+8. Under **Roles and actions**, check the box for `Crypto operator` and click **Next**.
 9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
 10. After confirmation, click **Add** &gt; **Assign**.
 
-     
+#### Create access policy for key access
+{: #create-access-policy-key-access}
+
+1. From the **Access Policies** section of the anonymous user service ID's main panel, click **Assign access**.
+2. Click **Access policy**.
+3. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
+4. Under **Resources**, select **Specific resources**.
+5. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Add a condition**.
+6. Select the **Resource Type** attribute type, enter `key` in the value field of the **Resource Type** attribute, and click **Next**.
+7. Under **Roles and actions**, check the box for `Key operator` and click **Next**.
+8. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
+9. After confirmation, click **Add** &gt; **Assign**.
+
+#### Create access policy for keystore access
+{: #create-access-policy-keystore-access}
+
+1. From the **Access Policies** section of the anonymous user service ID's main panel, click **Assign access**.
+2. Click **Access policy**.
+3. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
+4. Under **Resources**, select **Specific resources**.
+5. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Add a condition**.
+6. Select the **Resource Type** attribute type, enter `keystore` in the value field of the **Resource Type** attribute, and click **Add a condition**.
+7. Select the **Resource ID** attribute type.  The value of the **Resource ID** attribute type must contain a valid [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html) of the PKCS#11 public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/).  The UUID string specified for the **Resource ID** attribute must match the UUID string specified for the anonymous user's **public_keystore_spaceid** configuration parameter within the PKCS#11 client library's **grep11client.yaml** configuration file that is described [here](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file). After entering the UUID string value for the **Resource ID** attribute, click **Next**.
+8. Under **Roles and actions**, check the box for `Key operator`, and click **Next**.
+9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
+10. After confirmation, click **Add** &gt; **Assign**.
+
 ##  What's next
 {: #pkcs11-best-practices-next}
 
