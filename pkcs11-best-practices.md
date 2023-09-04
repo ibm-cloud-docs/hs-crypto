@@ -281,10 +281,10 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 8. Select the **Resource Type** attribute type, enter `keystore` under the value field, and click **Add a condition**.
 9. Select the **Resource ID** attribute type, enter the value, and click **Next**. 
     
-    The value of the **Resource ID** attribute type must contain a valid [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html) of the PKCS#11 public keystore. You can generate the UUID with a third-party tool, for example, [UUID generator](https://www.uuidgenerator.net/). The UUID string specified for the **Resource ID** attribute must match the UUID string specified for the anonymous user's **public_keystore_spaceid** configuration parameter within the PKCS#11 client library's **grep11client.yaml** configuration file that is described [here](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file). 
+    The value of the **Resource ID** attribute type must contain a valid [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html) of the PKCS#11 public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/). The UUID string specified for the **Resource ID** attribute must match the UUID string specified for the anonymous user's **public_keystore_spaceid** configuration parameter within the PKCS#11 client library's `grep11client.yaml` configuration file that is described [here](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file). 
     {: important}
 
-10. Under **Roles and actions**, check the box for `Key operator`, and click **Next**.
+10. Under **Roles and actions**, check the box for `Key operator` and click **Next**.
 11. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
 12. After confirmation, click **Add** &gt; **Assign**.
 
