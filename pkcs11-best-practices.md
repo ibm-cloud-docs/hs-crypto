@@ -89,7 +89,7 @@ This role is used to manage keys in the EP11 keystores. However, this role does 
 1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)**, and select **Roles**.
 2. Click **Create**.
 3. Enter a name for your role; for example, `Key operator`. This name must be unique within the account. Users see this role name in the console when they assign access to the service.
-4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `KeyOperator`
+4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `KeyOperator`.
 5. Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the console when a user assigns access to the service.
 6. From the list of services, select **Hyper Protect Crypto Services**.
 7. Select **Add** for the following actions:
@@ -109,7 +109,7 @@ This role is used to create and delete EP11 keystores but does not have permissi
 1. In the {{site.data.keyword.cloud}} console, go to **Manage** > **Access (IAM)**, and select **Roles**.
 2. Click **Create**.
 3. Enter a name for your role; for example, `Keystore operator`. This name must be unique within the account. Users see this role name in the console when they assign access to the service.
-4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `KeystoreOperator`
+4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `KeystoreOperator`.
 5. Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the console when a user assigns access to the service.
 6. From the list of services, select **Hyper Protect Crypto Services**.
 7. Select **Add** for the following actions:
@@ -256,29 +256,37 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 #### Create access policy for key access
 {: #create-access-policy-key-access}
 
-1. From the **Access Policies** section of the anonymous user service ID's main panel, click **Assign access**.
-2. Click **Access policy**.
-3. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
-4. Under **Resources**, select **Specific resources**.
-5. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Add a condition**.
-6. Select the **Resource Type** attribute type, enter `key` in the value field of the **Resource Type** attribute, and click **Next**.
-7. Under **Roles and actions**, check the box for `Key operator` and click **Next**.
-8. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
-9. After confirmation, click **Add** &gt; **Assign**.
+1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
+2. Hover your mouse over the `Anonymous user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options.
+3. From the options menu, click **Assign access**.
+4. Click **Access policy**.
+5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
+6. Under **Resources**, select **Specific resources**.
+7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Add a condition**.
+8. Select the **Resource Type** attribute type, enter `key` under the value field, and click **Next**.
+9. Under **Roles and actions**, check the box for `Key operator` and click **Next**.
+10. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
+11. After confirmation, click **Add** &gt; **Assign**.
 
 #### Create access policy for keystore access
 {: #create-access-policy-keystore-access}
 
-1. From the **Access Policies** section of the anonymous user service ID's main panel, click **Assign access**.
-2. Click **Access policy**.
-3. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
-4. Under **Resources**, select **Specific resources**.
-5. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Add a condition**.
-6. Select the **Resource Type** attribute type, enter `keystore` in the value field of the **Resource Type** attribute, and click **Add a condition**.
-7. Select the **Resource ID** attribute type. The value of the **Resource ID** attribute type must contain a valid [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html) of the PKCS#11 public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/). The UUID string that is specified for the **Resource ID** attribute must match the UUID string that is specified for the anonymous user's **public_keystore_spaceid** configuration parameter within the PKCS#11 client library's **grep11client.yaml** configuration file that is described [here](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file). After you enter the UUID string value for the **Resource ID** attribute, click **Next**.
-8. Under **Roles and actions**, check the box for `Key operator`, and click **Next**.
-9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
-10. After confirmation, click **Add** &gt; **Assign**.
+1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
+2. Hover your mouse over the `Anonymous user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options.
+3. From the options menu, click **Assign access**.
+4. Click **Access policy**.
+5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
+6. Under **Resources**, select **Specific resources**.
+7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Add a condition**.
+8. Select the **Resource Type** attribute type, enter `keystore` under the value field, and click **Add a condition**.
+9. Select the **Resource ID** attribute type, enter the value, and click **Next**. 
+    
+    The value of the **Resource ID** attribute type must contain a valid [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html) of the PKCS#11 public keystore. You can generate the UUID with a third-party tool, for example, [UUID generator](https://www.uuidgenerator.net/). The UUID string specified for the **Resource ID** attribute must match the UUID string specified for the anonymous user's **public_keystore_spaceid** configuration parameter within the PKCS#11 client library's **grep11client.yaml** configuration file that is described [here](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file). 
+    {: important}
+
+10. Under **Roles and actions**, check the box for `Key operator`, and click **Next**.
+11. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
+12. After confirmation, click **Add** &gt; **Assign**.
 
 ##  What's next
 {: #pkcs11-best-practices-next}
