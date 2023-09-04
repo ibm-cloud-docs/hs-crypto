@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-09-01"
+lastupdated: "2023-09-04"
 
 keywords: pkcs11 access, pkcs 11 authentication, set up PKCS 11 API, best practice for setting up pkcs11 users
 
@@ -79,12 +79,12 @@ This role is used to generate key objects for performing crypto operations. Howe
     * hs-crypto.crypto.wrapkey
     * hs-crypto.ep11.use
     * hs-crypto.discovery.listservers
-8. After adding actions, click **Create**.
+8. After confirmation, click **Create**.
 
 ### 2. Create a custom role for managing keys
 {: #create-manage-key-operator}
 
-This role is used to manage keys in the EP11 keystores. However, this role does not have permissions to manage EP11 keystores or perform crypto operations.
+This role is used to manage keys in the EP11 keystores. However, this role does not have permission to manage EP11 keystores or perform crypto operations.
 
 1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)**, and select **Roles**.
 2. Click **Create**.
@@ -99,7 +99,7 @@ This role is used to manage keys in the EP11 keystores. However, this role does 
     * hs-crypto.keystore.listkeystoresbyids
     * hs-crypto.keystore.storenewkey
     * hs-crypto.keystore.updatekey
-8. After adding actions, click **Create**.
+8. After confirmation, click **Create**.
 
 ### 3. Create a custom role for managing keystores
 {: #create-keystore-operator}
@@ -117,7 +117,7 @@ This role is used to create and delete EP11 keystores but does not have permissi
     * hs-crypto.keystore.deletekeystore
     * hs-crypto.keystore.listkeystoresbyattributes
     * hs-crypto.keystore.listkeystoresbyids
-8. After adding actions, click **Create**.
+8. After confirmation, click **Create**.
 
 For more information about how to create custom roles, see [Creating custom roles](/docs/account?topic=account-custom-roles).
 
@@ -137,11 +137,11 @@ To create a service ID for the SO user and the corresponding API key, complete t
 3. To create an API key for the service ID, follow these steps:
     1. Click the **API keys** tab on the `SO user` service ID page.
     2. Click **Create**.
-    3. Add a name and description to easily identify the API key, for example, `SO user API key`.
+    3. Add a name and description to easily identify the API key. For example, `SO user API key`.
     4. Click **Create**.
-    5. Save your API key by copying or downloading it to secure location.
+    5. Save your API key by copying or downloading it to a secure location.
 
-    The API key is to be used as the PIN for the SO user logins, and cannot be retrieved. Make sure to make a copy of it in this step.
+    The API key is to be used as the PIN for the SO user logins for and cannot be retrieved. Make sure to make a copy of it in this step.
     {: important}
 
 ### 2. Create service IDs and API keys for the normal user
@@ -157,9 +157,9 @@ To create a service ID for the normal user and the corresponding API key, comple
 3. To create an API key for the service ID, follow these steps:
     1. Click the **API keys** tab on the `Normal user` service ID page.
     2. Click **Create**.
-    3. Add a name and description to easily identify the API key, for example, `Normal user API key`.
+    3. Add a name and description to easily identify the API key. For example, `Normal user API key`.
     4. Click **Create**.
-    5. Save your API key by copying or downloading it to secure location.
+    5. Save your API key by copying or downloading it to a secure location.
 
     The API key is to be used as the PIN for the normal user logins, and cannot be retrieved. Make sure to make a copy of it in this step.
     {: important}
@@ -177,14 +177,14 @@ To create a service ID for the anonymous user and the corresponding API key, com
 3. To create an API key for the service ID, follow these steps:
     1. Click the **API keys** tab on the `Anonymous user` service ID page.
     2. Click **Create**.
-    3. Add a name and description to easily identify the API key, for example, `Anonymous user API key`.
+    3. Add a name and description to easily identify the API key. For example, `Anonymous user API key`.
     4. Click **Create**.
-    5. Save your API key by copying or downloading it to secure location.
+    5. Save your API key by copying or downloading it to a secure location.
 
-    The API key is to be used to perform crypto operations and access keystore for the anonymous user, which cannot be retrieved. Make sure to make a copy of it in this step.
+    The API key is to be used to perform crypto operations and access the keystore for the anonymous user, which cannot be retrieved. Make sure to make a copy of it in this step.
     {: important}
 
-For more information about creating services IDs, see [Creating and working with service IDs](/docs/account?topic=account-serviceids). For detailed instructions on creating service ID API keys, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
+For more information about creating service IDs, see [Creating and working with service IDs](/docs/account?topic=account-serviceids). For detailed instructions on creating service ID API keys, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
 
 ## Step 3: Assign IAM roles to the service IDs
 {: #step3-assign-iam-roles}
@@ -235,7 +235,7 @@ To assign access to the keystores for the normal user, follow these steps:
 ### 3. Create access policies and assign custom roles to the anonymous user service ID
 {: #create-policy-assign-custom-role-anonymous-user-service}
 
-The anonymous user requires three access policies. The PKCS#11 specification specifies that the anonymous user can only access the public keystore. The following access policies are setup to restrict the anonymous user to the public keystore.
+The anonymous user requires three access policies. The PKCS#11 specification specifies that the anonymous user can access the public keystore only. The following access policies are set up to restrict the anonymous user to the public keystore.
 
 To assign the custom roles that are defined in [Step 1](#step1-create-custom-roles) to the anonymous user service ID, follow these steps:
 
@@ -275,7 +275,7 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 4. Under **Resources**, select **Specific resources**.
 5. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Add a condition**.
 6. Select the **Resource Type** attribute type, enter `keystore` in the value field of the **Resource Type** attribute, and click **Add a condition**.
-7. Select the **Resource ID** attribute type.  The value of the **Resource ID** attribute type must contain a valid [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html) of the PKCS#11 public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/).  The UUID string specified for the **Resource ID** attribute must match the UUID string specified for the anonymous user's **public_keystore_spaceid** configuration parameter within the PKCS#11 client library's **grep11client.yaml** configuration file that is described [here](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file). After entering the UUID string value for the **Resource ID** attribute, click **Next**.
+7. Select the **Resource ID** attribute type. The value of the **Resource ID** attribute type must contain a valid [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html) of the PKCS#11 public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/). The UUID string that is specified for the **Resource ID** attribute must match the UUID string that is specified for the anonymous user's **public_keystore_spaceid** configuration parameter within the PKCS#11 client library's **grep11client.yaml** configuration file that is described [here](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file). After you enter the UUID string value for the **Resource ID** attribute, click **Next**.
 8. Under **Roles and actions**, check the box for `Key operator`, and click **Next**.
 9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
 10. After confirmation, click **Add** &gt; **Assign**.
