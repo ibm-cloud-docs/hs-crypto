@@ -46,7 +46,7 @@ To perform the following steps, you need to have the `Administrator` [platform a
 ## Step 1: Create custom IAM roles
 {: #step1-create-custom-roles}
 
-You need to create three custom roles, one for performing crypto operations, one for managing keys and the other one for managing EP11 keystores.
+You need to create three custom roles, one for performing crypto operations, one for managing keys, and the other for managing EP11 keystores.
 
 ### 1. Create a custom role for performing crypto operations
 {: #create-crypto-operator}
@@ -79,7 +79,7 @@ This role is used to generate key objects for performing crypto operations. Howe
     * hs-crypto.crypto.wrapkey
     * hs-crypto.ep11.use
     * hs-crypto.discovery.listservers
-8. After confirmation, click **Create**.
+8. Review the actions added under **Summary**, and then click **Create**.
 
 ### 2. Create a custom role for managing keys
 {: #create-manage-key-operator}
@@ -99,7 +99,7 @@ This role is used to manage keys in the EP11 keystores. However, this role does 
     * hs-crypto.keystore.listkeystoresbyids
     * hs-crypto.keystore.storenewkey
     * hs-crypto.keystore.updatekey
-8. After confirmation, click **Create**.
+8. Review the actions added under **Summary**, and then click **Create**.
 
 ### 3. Create a custom role for managing keystores
 {: #create-keystore-operator}
@@ -117,7 +117,7 @@ This role is used to create and delete EP11 keystores but does not have permissi
     * hs-crypto.keystore.deletekeystore
     * hs-crypto.keystore.listkeystoresbyattributes
     * hs-crypto.keystore.listkeystoresbyids
-8. After confirmation, click **Create**.
+8. Review the actions added under **Summary**, and then click **Create**.
 
 For more information about how to create custom roles, see [Creating custom roles](/docs/account?topic=account-custom-roles).
 
@@ -210,7 +210,8 @@ To assign access to the keystores for the SO user, follow these steps:
     * `Keystore operator`
     * `Key operator`
 9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
-10. After confirmation, click **Add** &gt; **Assign**.
+10. Click **Add**.
+11. Review the roles and actons added under **Summary**, and then click **Assign**.
 
 
 ### 2. Assign the custom roles to the normal user service ID
@@ -229,7 +230,8 @@ To assign access to the keystores for the normal user, follow these steps:
 7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Next**.
 8. Under **Roles and actions**, check the boxes for `Crypto operator` and `Key operator`, and then click **Next**.
 9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
-10. After confirmation, click **Add** &gt; **Assign**.
+10. Click **Add**.
+11. Review the roles and actons added under **Summary**, and then click **Assign**.
 
 
 ### 3. Create access policies and assign custom roles to the anonymous user service ID
@@ -251,7 +253,8 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Next**.
 8. Under **Roles and actions**, check the box for `Crypto operator` and click **Next**.
 9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
-10. After confirmation, click **Add** &gt; **Assign**.
+10. Click **Add**.
+11. Review the roles and actons added under **Summary**, and then click **Assign**.
 
 #### Create access policy for key access
 {: #create-access-policy-key-access}
@@ -266,7 +269,8 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 8. Select the **Resource Type** attribute type, enter `key` under the value field, and click **Next**.
 9. Under **Roles and actions**, check the box for `Key operator` and click **Next**.
 10. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
-11. After confirmation, click **Add** &gt; **Assign**.
+11. Click **Add**.
+12. Review the roles and actons added under **Summary**, and then click **Assign**.
 
 #### Create access policy for keystore access
 {: #create-access-policy-keystore-access}
@@ -281,12 +285,13 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 8. Select the **Resource Type** attribute type, enter `keystore` under the value field, and click **Add a condition**.
 9. Select the **Resource ID** attribute type, enter the value, and click **Next**. 
     
-    The value of the **Resource ID** attribute type must contain a valid [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html) of the PKCS#11 public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/). The UUID string specified for the **Resource ID** attribute must match the UUID string specified for the anonymous user's **public_keystore_spaceid** configuration parameter within the PKCS#11 client library's `grep11client.yaml` configuration file that is described [here](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file). 
+    The value of the **Resource ID** attribute type must contain a valid [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html){: external} of the PKCS#11 public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/){: external}. The UUID string specified for the **Resource ID** attribute must match the UUID string specified for the anonymous user's **public_keystore_spaceid** configuration parameter within the `grep11client.yaml` [configuration file]((/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file)) in the PKCS#11 client library.
     {: important}
 
 10. Under **Roles and actions**, check the box for `Key operator` and click **Next**.
 11. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
-12. After confirmation, click **Add** &gt; **Assign**.
+12. Click **Add**.
+13. Review the roles and actons added under **Summary**, and then click **Assign**.
 
 ##  What's next
 {: #pkcs11-best-practices-next}
