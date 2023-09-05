@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-09-04"
+lastupdated: "2023-09-05"
 
 keywords: pkcs11 access, pkcs 11 authentication, set up PKCS 11 API, best practice for setting up pkcs11 users
 
@@ -181,7 +181,7 @@ To create a service ID for the anonymous user and the corresponding API key, com
     4. Click **Create**.
     5. Save your API key by copying or downloading it to a secure location.
 
-    The API key is to be used to perform crypto operations and access the keystore for the anonymous user, which cannot be retrieved. Make sure to make a copy of it in this step.
+    The API key is to be used to perform crypto operations and access the public keystore for the anonymous user, which cannot be retrieved. Make sure to make a copy of it in this step.
     {: important}
 
 For more information about creating service IDs, see [Creating and working with service IDs](/docs/account?topic=account-serviceids). For detailed instructions on creating service ID API keys, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
@@ -285,7 +285,7 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 8. Select the **Resource Type** attribute type, enter `keystore` under the value field, and click **Add a condition**.
 9. Select the **Resource ID** attribute type, enter the value, and click **Next**. 
     
-    The value of the **Resource ID** attribute type must contain a valid [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html){: external} of the PKCS#11 public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/){: external}. The UUID string specified for the **Resource ID** attribute must match the UUID string specified for the anonymous user's **public_keystore_spaceid** configuration parameter within the `grep11client.yaml` [configuration file]((/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file)) in the PKCS#11 client library.
+    The value of the **Resource ID** attribute type must contain a valid [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html){: external} of the PKCS#11 public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/){: external}. The UUID string specified for the **Resource ID** attribute must match the UUID string specified for the anonymous user's **public_keystore_spaceid** configuration parameter within the `grep11client.yaml` [configuration file](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file) in the PKCS#11 client library.
     {: important}
 
 10. Under **Roles and actions**, check the box for `Key operator` and click **Next**.
