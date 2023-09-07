@@ -70,8 +70,6 @@ Added: Master key rotation for {{site.data.keyword.uko_full_notm}}
 Added: Master key rotation for EP11 keystores
 :   You are now able to rotate master keys when your service instance has EP11 keystores enabled. Previously, this function is not available.
 
-Both of the functions above are currently only supported in the Frankfurt region in Germany.
-
 ## 1 Feb 2023
 {: #hs-crypto-feb2023}
 {: release-note}
