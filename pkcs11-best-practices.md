@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-09-05"
+lastupdated: "2023-09-07"
 
 keywords: pkcs11 access, pkcs 11 authentication, set up PKCS 11 API, best practice for setting up pkcs11 users
 
@@ -38,7 +38,7 @@ In the {{site.data.keyword.hscrypto}} PKCS #11 library configuration file `grep1
 * **Anonymous user**: 
     The anonymous user API key can be distributed to anyone in the enterprise so that anonymous users can access the keystore to perform daily work, such as signing a document. The API key is configured in the PKCS #11 library configuration file `grep11client.yaml` and the anonymous user does not need to call the `C_Login` function.
 
-A PKCS #11 application works as only one of the three user types at any time, no matter how many sessions are opened. Each user type needs an API key for authentication. To create the API keys, you need to first create two custom IAM roles. And then, create service IDs for the three user types, and map the custom IAM roles to the service IDs.
+A PKCS #11 application works as only one of the three user types at any time, no matter how many sessions are opened. Each user type needs an API key for authentication. To create the API keys, you need to first create three custom IAM roles. And then, create service IDs for the three user types, and map the custom IAM roles to the service IDs.
 
 To perform the following steps, you need to have the `Administrator` [platform access](/docs/account?topic=account-userroles#platformroles) in your {{site.data.keyword.cloud}} account.
 {: tip}
@@ -51,7 +51,7 @@ You need to create three custom roles, one for performing crypto operations, one
 ### 1. Create a custom role for performing crypto operations
 {: #create-crypto-operator}
 
-This role is used to generate key objects for performing crypto operations. However, this role does not have permissions to use or manage Enterprise PKCS #11 (EP11) keystores.
+This role is used to generate key objects for performing crypto operations. However, this role does not have permission to use or manage Enterprise PKCS #11 (EP11) keystores.
 
 1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)**, and select **Roles**.
 2. Click **Create**.
@@ -59,7 +59,7 @@ This role is used to generate key objects for performing crypto operations. Howe
 4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `CryptoOperator`.
 5. Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the console when a user assigns access to the service.
 6. From the list of services, select **Hyper Protect Crypto Services**.
-7. Select **Add** for the following actions:
+7. Select **Add** for the following 19 actions:
     * hs-crypto.crypto.decrypt
     * hs-crypto.crypto.derivekey
     * hs-crypto.crypto.digest
@@ -77,8 +77,8 @@ This role is used to generate key objects for performing crypto operations. Howe
     * hs-crypto.crypto.unwrapkey
     * hs-crypto.crypto.verify
     * hs-crypto.crypto.wrapkey
-    * hs-crypto.ep11.use
     * hs-crypto.discovery.listservers
+    * hs-crypto.ep11.use
 8. Review the actions added under **Summary**, and then click **Create**.
 
 ### 2. Create a custom role for managing keys
@@ -92,7 +92,7 @@ This role is used to manage keys in the EP11 keystores. However, this role does 
 4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `KeyOperator`.
 5. Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the console when a user assigns access to the service.
 6. From the list of services, select **Hyper Protect Crypto Services**.
-7. Select **Add** for the following actions:
+7. Select **Add** for the following six actions:
     * hs-crypto.keystore.deletekey
     * hs-crypto.keystore.listkeysbyattributes
     * hs-crypto.keystore.listkeysbyids
@@ -112,7 +112,7 @@ This role is used to create and delete EP11 keystores but does not have permissi
 4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `KeystoreOperator`.
 5. Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the console when a user assigns access to the service.
 6. From the list of services, select **Hyper Protect Crypto Services**.
-7. Select **Add** for the following actions:
+7. Select **Add** for the following four actions:
     * hs-crypto.keystore.createkeystore
     * hs-crypto.keystore.deletekeystore
     * hs-crypto.keystore.listkeystoresbyattributes
@@ -207,8 +207,9 @@ To assign access to the keystores for the SO user, follow these steps:
 7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Next**.
 8. Under **Roles and actions**, check the boxes for the following roles and click **Next**:
     * `Crypto operator`
-    * `Keystore operator`
     * `Key operator`
+    * `Keystore operator`
+
 9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
 10. Click **Add**.
 11. Review the roles and actons added under **Summary**, and then click **Assign**.
@@ -291,7 +292,7 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 10. Under **Roles and actions**, check the box for `Key operator` and click **Next**.
 11. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
 12. Click **Add**.
-13. Review the roles and actons added under **Summary**, and then click **Assign**.
+13. Review the roles and actions added under **Summary**, and then click **Assign**.
 
 ##  What's next
 {: #pkcs11-best-practices-next}
