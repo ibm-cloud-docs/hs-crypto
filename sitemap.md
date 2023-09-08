@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-08-31"
+lastupdated: "2023-09-07"
 
 keywords: site map, doc structure, information architecture
 
@@ -377,19 +377,17 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [1 June 2023](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-june2023)
 
-    * Pricing plan for {{site.data.keyword.uko_full_notm}} 
+    * Updated: Pricing plan for {{site.data.keyword.uko_full_notm}} 
 
 * [24 May 2023](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-may2023)
 
-    * Master key rotation support for all regions
+    * Updated: Master key rotation support for all regions
 
 * [24 March 2023](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-march2023)
 
     * Added: Master key rotation for {{site.data.keyword.uko_full_notm}}
 
     * Added: Master key rotation for EP11 keystores
-
-    * Both of the functions above are currently only supported in the Frankfurt region in Germany.
 
 * [1 Feb 2023](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-feb2023)
 
