@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-24"
+lastupdated: "2023-09-18"
 
 keywords: Unified Key Orchestrator, edit key templates, key management, kms keys, UKO
 
@@ -11,7 +11,6 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 
 
@@ -33,6 +32,9 @@ To edit the details of a key template by using the console, complete the followi
 4. Under **Key template properties**, click **Edit** on each card to update the properties. Note that you can edit one property card at a time. To edit another property card, save your changes first.
     
     1. You can update the General properties and Key lifecycle properties. Or, you can view the Key naming and Key material properties. The following are a few properties that you can edit.
+
+    Because the key template is already created, you cannot make changes to key naming and key material properties that are marked with a Lock icon.
+    {: note}
 
         |       Property	     |                         Description                       |
         |----------------------|-----------------------------------------------------------|  
