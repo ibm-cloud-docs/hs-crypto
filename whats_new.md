@@ -22,10 +22,6 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
-## 22 Sept 2023
-{: #hs-crypto-sept2023}
-{: release-note}
-
 
 
 ## 3 August 2023
