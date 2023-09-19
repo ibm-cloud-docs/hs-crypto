@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-07-14"
+lastupdated: "2023-09-19"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway
 
@@ -50,7 +50,7 @@ When you create a VPE gateway by using the CLI or API, you must specify the [Clo
       <th scope="col">CRN</th>
     </tr>
     <tr>
-      <td rowspan="6">Key management service</td>
+      <td rowspan="9">Key management service</td>
       <td><code>api.private.au-syd.hs-crypto.cloud.ibm.com</code></td>
       <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:api.private.au-syd.hs-crypto.cloud.ibm.com</td>
     </tr>
@@ -75,7 +75,19 @@ When you create a VPE gateway by using the CLI or API, you must specify the [Clo
       <td>crn:v1:bluemix:public:hs-crypto:jp-tok:::endpoint:api.vpc.private.jp-tok.hs-crypto.cloud.ibm.com</td>
     </tr>
     <tr>
-      <td rowspan="6">Enterprise PKCS #11 (EP11)</td>
+      <td><code>api.private.eu-es.hs-crypto.cloud.ibm.com</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:eu-es:::endpoint:api.vpc.private.eu-es.hs-crypto.cloud.ibm.com</td>
+    </tr>
+    <tr>
+      <td><code>api.private.br-sao.hs-crypto.cloud.ibm.com</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:br-sao:::endpoint:api.vpc.private.jbr-sao.hs-crypto.cloud.ibm.com</td>
+    </tr>
+    <tr>
+      <td><code>api.private.ca-tor.hs-crypto.cloud.ibm.com</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:ca-tor:::endpoint:api.vpc.private.ca-tor.hs-crypto.cloud.ibm.com</td>
+    </tr>
+    <tr>
+      <td rowspan="9">Enterprise PKCS #11 (EP11)</td>
       <td><code>ep11.private.au-syd.hs-crypto.cloud.ibm.com</code></td>
       <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:ep11.private.au-syd.hs-crypto.cloud.ibm.com</td>
       </tr>
@@ -100,7 +112,19 @@ When you create a VPE gateway by using the CLI or API, you must specify the [Clo
       <td>crn:v1:bluemix:public:hs-crypto:jp-tok:::endpoint:ep11.vpc.private.jp-tok.hs-crypto.cloud.ibm.com</td>
     </tr>
     <tr>
-      <td rowspan="6">Trusted Key Entry (TKE)</td>
+      <td><code>ep11.private.eu-es.hs-crypto.cloud.ibm.com</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:eu-es:::endpoint:ep11.vpc.private.eu-es.hs-crypto.cloud.ibm.com</td>
+    </tr>
+    <tr>
+      <td><code>ep11.private.br-sao.hs-crypto.cloud.ibm.com</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:br-sao:::endpoint:ep11.vpc.private.jbr-sao.hs-crypto.cloud.ibm.com</td>
+    </tr>
+    <tr>
+      <td><code>ep11.private.ca-tor.hs-crypto.cloud.ibm.com</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:ca-tor:::endpoint:ep11.vpc.private.ca-tor.hs-crypto.cloud.ibm.com</td>
+    </tr>
+    <tr>
+      <td rowspan="9">Trusted Key Entry (TKE)</td>
       <td><code>tke.private.au-syd.hs-crypto.cloud.ibm.com</code></td>
       <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:tke.private.au-syd.hs-crypto.cloud.ibm.com</td>
     </tr>
@@ -125,7 +149,19 @@ When you create a VPE gateway by using the CLI or API, you must specify the [Clo
       <td>crn:v1:bluemix:public:hs-crypto:jp-tok:::endpoint:tke.vpc.private.jp-tok.hs-crypto.cloud.ibm.com</td>
     </tr>
     <tr>
-      <td rowspan="6">Key Management Interoperability Protocol (KMIP) adapter</td>
+      <td><code>tke.private.eu-es.hs-crypto.cloud.ibm.com</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:eu-es:::endpoint:tke.vpc.private.eu-es.hs-crypto.cloud.ibm.com</td>
+    </tr>
+    <tr>
+      <td><code>tke.private.br-sao.hs-crypto.cloud.ibm.com</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:br-sao:::endpoint:tke.vpc.private.jbr-sao.hs-crypto.cloud.ibm.com</td>
+    </tr>
+    <tr>
+      <td><code>tke.private.ca-tor.hs-crypto.cloud.ibm.com</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:ca-tor:::endpoint:tke.vpc.private.ca-tor.hs-crypto.cloud.ibm.com</td>
+    </tr>
+    <tr>
+      <td rowspan="9">Key Management Interoperability Protocol (KMIP) adapter</td>
       <td><code>kmip.private.au-syd.hs-crypto.cloud.ibm.com</code></td>
       <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:kmip.private.au-syd.hs-crypto.cloud.ibm.com</td>
     </tr>
@@ -148,6 +184,18 @@ When you create a VPE gateway by using the CLI or API, you must specify the [Clo
     <tr>
       <td><code>kmip.private.jp-tok.hs-crypto.cloud.ibm.com</code></td>
       <td>crn:v1:bluemix:public:hs-crypto:jp-tok:::endpoint:kmip.vpc.private.jp-tok.hs-crypto.cloud.ibm.com</td>
+    </tr>
+    <tr>
+      <td><code>kmip.private.eu-es.hs-crypto.cloud.ibm.com</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:eu-es:::endpoint:kmip.vpc.private.eu-es.hs-crypto.cloud.ibm.com</td>
+    </tr>
+    <tr>
+      <td><code>kmip.private.br-sao.hs-crypto.cloud.ibm.com</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:br-sao:::endpoint:kmip.vpc.private.jbr-sao.hs-crypto.cloud.ibm.com</td>
+    </tr>
+    <tr>
+      <td><code>kmip.private.ca-tor.hs-crypto.cloud.ibm.com</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:ca-tor:::endpoint:kmip.vpc.private.ca-tor.hs-crypto.cloud.ibm.com</td>
     </tr>
     <caption>Table 1. Available region endpoints and CRNs for creating VPE gateways</caption>
 </table>
