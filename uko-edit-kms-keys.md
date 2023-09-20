@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-15"
+lastupdated: "2023-09-18"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -35,6 +35,9 @@ To edit the details of a managed key by using the console, complete the followin
 
     
     1. You can update the general properties and lifecycle properties. Or, you can also view the key material properties, including algorithm, length, and key check value. The following are a few properties that you can edit. Note that you can edit one property card at a time. To edit another property card, save your changes first. 
+
+    Because the key is already created, you cannot make changes to key material properties that are marked with a Lock icon.
+    {: note}
 
         |       Property	     |                         Description                       |
         |----------------------|-------------------------------------------------------------|
@@ -135,4 +138,5 @@ To editing keystores for keys by using API, complete the following steps:
 - To find out instructions on deleting a managed key, check out [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys).
 
 - To find out more about managing your key list, check out [Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list) or [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
+
 
