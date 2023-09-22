@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-09-19"
+lastupdated: "2023-09-22"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -22,6 +22,13 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+
+## 22 Sept 2023
+{: #hs-crypto-sept2023}
+{: release-note}
+
+[New]{: tag-new}: {{site.data.keyword.hscrypto}} expands into the Madrid region 
+:   You can now create {{site.data.keyword.hscrypto}} instances in the Madrid (`eu-es`) region where the infrastructure is based on {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
 
 ## 3 August 2023

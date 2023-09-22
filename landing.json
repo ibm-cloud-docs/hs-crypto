@@ -73,6 +73,11 @@
     "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
     "tiles": [
       {
+        "date": "Sept 2023",
+        "title": "Added: Hyper Protect Crypto Services expands to the Madrid region",
+        "description": "You can now create Hyper Protect Crypto Services instances in the Madrid (`eu-es`) region where the infrastructure is based on IBM Cloud Virtual Private Cloud (VPC). "
+      },
+      {
         "date": "August 2023",
         "title": "Updated: Key template support for Unified Key Orchestrator",
         "description": "You are now able to create key templates which specify the properties of the managed keys to be created. "
@@ -86,11 +91,6 @@
         "date": "May 2023",
         "title": "Added: Master key rotation support for all regions",
         "description": "You are now able to rotate master keys in all supported regions. "
-      },
-      {
-        "date": "March 2023",
-        "title": "Added: Master key rotation for Unified Key Orchestrator and EP11 keystores",
-        "description": "You are now able to rotate master keys when you are using the Unified Key Orchestrator service plan or your service instance has EP11 keystores enabled. "
       }
     ]
   }
