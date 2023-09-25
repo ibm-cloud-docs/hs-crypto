@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-09-20"
+lastupdated: "2023-09-25"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -81,8 +81,8 @@ Not all PKCS #11 functions are implemented by {{site.data.keyword.hscrypto}}. Fu
 |[Session management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959742){: external} | C_CloseSession |Yes|Closes a session.|
 |[Session management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959742){: external} |C_CloseAllSessions|Yes|Closes all sessions with a token.|
 |[Session management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959742){: external} |C_GetSessionInfo|Yes|Obtains information about the session.|
-|[Session management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959742){: external} |C_GetOperationState|No|Obtains the cryptographic operations state of a session.|
-|[Session management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959742){: external} |C_SetOperationState|No|Sets the cryptographic operations state of a session.|
+|[Session management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959742){: external} |C_GetOperationState|Yes|Obtains the cryptographic operations state of a session.|
+|[Session management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959742){: external} |C_SetOperationState|Yes|Sets the cryptographic operations state of a session.|
 |[Session management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959742){: external} |C_Login|Yes|Logs into a token.|
 |[Session management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959742){: external} |C_Logout|Yes|Logs out from a token.|
 |[Object management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959743){: external} |C_CreateObject|Yes<sup>1</sup>|Creates an object.|
