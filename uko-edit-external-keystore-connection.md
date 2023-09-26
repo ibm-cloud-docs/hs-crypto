@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-09"
+lastupdated: "2023-09-26"
 
 keywords: Unified Key Orchestrator, key management, UKO keystore, edit keystore, external keystore, KMS keystore
 
@@ -52,7 +52,8 @@ To edit the connection to an external keystore by using the console, complete th
     {: tab-title="AWS keystore"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
-   
+
+    
     |           Property	        |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1–100 characters in length. The first character must be a letter (case-sensitive) or digit (0–9). The rest can also be symbols (.-_) or spaces. |
@@ -70,6 +71,9 @@ To edit the connection to an external keystore by using the console, complete th
     {: tab-title="Azure Key Vault"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
+    
+    
+    
 
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
