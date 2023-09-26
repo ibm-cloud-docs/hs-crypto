@@ -36,14 +36,14 @@ To edit the details of a key template by using the console, complete the followi
     Because the key template is already created, you cannot make changes to key naming and key material properties that are marked with a Lock icon.
     {: note}
 
-      |       Property	     |                         Description                       |
-      |----------------------|-----------------------------------------------------------|  
-      | Key template name    | A unique, human-readable name for easy identification of your key template. It must be 1–100 characters in length.| 
-      | Description          | (Optional) An extended description for your key template, with up to 200 characters in length. |
-      | Initial key state        | States of keys that are to be created with the key template, including Pre-active and Active. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}.  |
-      | Activate keys after  | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. Automatic state change is to be triggered on the planned date.|
-      | Deactivate keys after| (Optional) Plan a date to deactivate the keys to be created since the key creation. Automatic state change is to be triggered on the planned date. |
-      {: caption="Table 1. Key template properties" caption-side="bottom"}
+    |       Property	     |                         Description                       |
+    |----------------------|-----------------------------------------------------------|  
+    | Key template name    | A unique, human-readable name for easy identification of your key template. It must be 1–100 characters in length.| 
+    | Description          | (Optional) An extended description for your key template, with up to 200 characters in length. |
+    | Initial key state        | States of keys that are to be created with the key template, including Pre-active and Active. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}.  |
+    | Activate keys after  | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. Automatic state change is to be triggered on the planned date.|
+    | Deactivate keys after| (Optional) Plan a date to deactivate the keys to be created since the key creation. Automatic state change is to be triggered on the planned date. |
+    {: caption="Table 1. Key template properties" caption-side="bottom"}
 
     2. In the **Keystores** card, click **Edit** to add or remove the keystores where keys are to be activated. All the displayed keystores belong to the same vault and the same keystore type:
 
