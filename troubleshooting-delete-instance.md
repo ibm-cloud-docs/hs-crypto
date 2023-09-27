@@ -25,7 +25,6 @@ You get an error when you delete an initialized service instance.
 You might receive an error similar to the following one:
 {: tsSymptoms}
 
-
 > FAILED
 > Error Code: RC-ServiceBrokerErrorResponse
 > Message: Service Broker returned error status code 409
@@ -36,11 +35,11 @@ The following reasons might cause the errors:
 - You haven't deleted root keys with the standard plan or managed keys with the {{site.data.keyword.uko_full_notm}} plan.
 - You haven't cleared (zeroized) the initialized service instance before you delete the instance.
 
-
 The following instructions can help you solve the problems:
-{: tsRosolve}
+{: tsResolve} 
 
-- If you haven't deleted root keys with the standard plan or managed keys with the {{site.data.keyword.uko_full_notm}} plan, run the following commands: 
+- If you haven't deleted root keys with the standard plan or managed keys with the {{site.data.keyword.uko_full_notm}} plan, run the following commands:
+
 
   - For root keys: 
     ```
