@@ -73,6 +73,7 @@ ibmcloud kp key delete KEY_ID_OR_ALIAS
 
 - *Key_ID_OR_ALIAS* is the v4 UUID or alias of the key that you want to delete. 
 - *-i, --instance-id* is your [service instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+- For more information about optional parameters, see [Key Protect CLI Reference](/docs/key-protect?topic=key-protect-key-protect-cli-reference&interface=ui#kp-key-delete-optional).
 
 
 
