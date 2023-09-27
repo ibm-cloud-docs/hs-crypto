@@ -25,7 +25,7 @@ You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} i
 2. Log in to {{site.data.keyword.cloud_notm}} also by following [these instructions](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite). 
 
 
-## Step 1: Delete your keys 
+## Step 1: Delete keys 
 {: #delete-all-key-step}
 
 To delete keys in the service instance, you need to delete root keys with the standard plan and managed keys with the {{site.data.keyword.uko_full_notm}} plan through the {{site.data.keyword.cloud_notm}} console or the CLI.
