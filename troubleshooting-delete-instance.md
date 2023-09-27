@@ -39,7 +39,9 @@ The following instructions can help you solve the problems:
 {: tsResolve} 
 
 - If you haven't deleted root keys with the standard plan or managed keys with the {{site.data.keyword.uko_full_notm}} plan, run the following commands:
-
+  
+  If you have zeroized the initialized service instance, you can only use the {{site.data.keyword.cloud_notm}} command-line interface (CLI) or API to delete keys. 
+  {: important}
 
   - For root keys: 
     ```
@@ -56,10 +58,6 @@ The following instructions can help you solve the problems:
     ibmcloud hpcs uko managed-key-delete --id ID --uko-vault UKO-VAULT --if-match IF-MATCH
     ```
     {: codeblock}
-
-    
-  If you have zeroized the initialized service instance, you can only use the {{site.data.keyword.cloud_notm}} command-line interface （CLI） or API to delete keys. 
-  {: important}
 
 - If you haven't cleared (zeroized) the initialized service instance, the procedure varies depending on the method that you use to initialize the service instance.
 
