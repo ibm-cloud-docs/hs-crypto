@@ -40,7 +40,7 @@ The following instructions can help you solve the problems:
 
 - If you haven't deleted root keys with the standard plan or managed keys with the {{site.data.keyword.uko_full_notm}} plan, run the following commands:
   
-  If you have zeroized the initialized service instance, you can only use the {{site.data.keyword.cloud_notm}} command-line interface (CLI) or API to delete keys. 
+  If you have zeroized the initialized service instance before deleting keys, you can only use the {{site.data.keyword.cloud_notm}} command-line interface (CLI) or API to delete keys. 
   {: important}
 
   - For root keys: 
