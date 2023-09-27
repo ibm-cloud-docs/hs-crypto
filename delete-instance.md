@@ -30,7 +30,7 @@ You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} i
 
 To delete keys in the service instance, you need to delete root keys with the standard plan and managed keys with the {{site.data.keyword.uko_full_notm}} plan through the {{site.data.keyword.cloud_notm}} console or the CLI.
 
-### Deleting root keys from the {{site.data.keyword.cloud_notm}} console - Standard Plan
+### Deleting root keys from the {{site.data.keyword.cloud_notm}} console - Standard plan
 {: delete-root-key-gui}
 {: ui}
 
@@ -47,7 +47,7 @@ You can delete root keys of {{site.data.keyword.hscrypto}} from the {{site.data.
 {: delete-managed-key-gui}
 {: ui}
 
-You can delete managed keys of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console resources page by completing the following steps:
+You can delete managed keys of {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} from the {{site.data.keyword.cloud_notm}} console resources page by completing the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
@@ -56,11 +56,11 @@ You can delete managed keys of {{site.data.keyword.hscrypto}} from the {{site.da
 5. Click **Destroy key** to confirm.
 6. To remove the key and the metadata from the vault, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**.
 
-### Deleting roots keys from from the {{site.data.keyword.cloud_notm}} CLI - Standard plan
+### Deleting roots keys from the {{site.data.keyword.cloud_notm}} CLI - Standard plan
 {: delete-root-key-cli}
 {: cli}
 
-You can delete keys of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} CLI by running the following command:
+You can delete root keys of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} CLI by running the following command:
 
 ```
 ibmcloud kp key delete KEY_ID_OR_ALIAS
@@ -71,11 +71,12 @@ ibmcloud kp key delete KEY_ID_OR_ALIAS
 ```
 {: codeblock}
 
-Replace *Key_ID_OR_ALIAS* with the v4 UUID or alias of the key that you want to delete. and *-i* with your [service instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+- *Key_ID_OR_ALIAS* is the v4 UUID or alias of the key that you want to delete. 
+- *-i, --instance-id* is your [service instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 
 
 
-### Deleting managed keys from from the {{site.data.keyword.cloud_notm}} CLI - {{site.data.keyword.uko_full_notm}} plan
+### Deleting managed keys from the {{site.data.keyword.cloud_notm}} CLI - {{site.data.keyword.uko_full_notm}} plan
 {: delete-managed-key-cli}
 {: cli}
 
@@ -86,7 +87,9 @@ ibmcloud hpcs uko managed-key-delete --id ID --uko-vault UKO-VAULT --if-match IF
 ```
 {: codeblock}
 
-Replace *ID* with the UUID of the key, which you can use the `ibmcloud hpcs uko managed-keys` command to retrieve the key UUID. Replace *UKO-VAULT* with the UUID of the vault where the update is to take place, which you can use the `ibmcloud hpcs uko vaults` command to retrieve the vault UUID. Replace *IF-MATCH* with value of the ETag from the header on a GET request, which you can use the `ibmcloud hpcs uko managed-key` command to retrieve the ETag.
+- *ID* is the UUID of the key, which you can use the `ibmcloud hpcs uko managed-keys` command to retrieve the key UUID.
+- *UKO-VAULT* is the UUID of the vault, which you can use the `ibmcloud hpcs uko vaults` command to retrieve the vault UUID. 
+- *IF-MATCH* is value of the ETag from the header on a GET request, which you can use the `ibmcloud hpcs uko managed-key` command to retrieve the ETag.
 
 ## Step 2: Select the crypto units to be deleted 
 {: #select-crypto-unit-step}
