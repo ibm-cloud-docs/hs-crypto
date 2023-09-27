@@ -57,12 +57,13 @@ The following instructions can help you solve the problems:
     ```
     {: codeblock}
 
-    If you have zeroized the initialized service instance, you can only use the {{site.data.keyword.cloud_notm}} CLI or [{{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#delete-managed-key) to delete keys. 
-    {: important}
+    
+  If you have zeroized the initialized service instance, you can only use the {{site.data.keyword.cloud_notm}} command-line interface （CLI） or API to delete keys. 
+  {: important}
 
 - If you haven't cleared (zeroized) the initialized service instance, the procedure varies depending on the method that you use to initialize the service instance.
 
-  -  If you've initialized your service instance through {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) command-line interface (CLI) plug-in, run the following command before you delete the instance:
+  -  If you've initialized your service instance through {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) CLI plug-in, run the following command before you delete the instance:
 
     ```
     ibmcloud tke cryptounit-zeroize
