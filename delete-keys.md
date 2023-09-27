@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-27"
+lastupdated: "2023-09-27"
 
 keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 
@@ -29,10 +29,8 @@ Before you delete keys, make sure you understand [the concept of deleting and pu
 {: support}
 {: ui}
 
-By default, {{site.data.keyword.hscrypto}} requires one
-authorization to delete a key. If you prefer to delete your encryption keys by
-using a graphical interface, you can use the {{site.data.keyword.cloud_notm}}
-console.
+By default, {{site.data.keyword.hscrypto}} requires one authorization to delete a key. If you prefer to delete your encryption keys by
+using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
 
 [After you create or import your existing keys into the service](/docs/hs-crypto?topic=hs-crypto-create-root-keys), complete the following steps to delete a key:
 
