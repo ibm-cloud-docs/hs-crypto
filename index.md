@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-14"
+lastupdated: "2023-10-07"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -137,7 +137,7 @@ You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryp
 To perform cryptographic operations with the PKCS #11 API, complete the following steps:
 
 1. Set up PKCS #11 Service IDs, roles, and actions. For more information, see [Setting up PKCS #11 API user types](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access).
-2. Download, install, and configure the PKCS #11 client library. For more information, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto/hs-crypto-set-up-pkcs-api).
+2. Download, install, and configure the PKCS #11 client library. For more information, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
 
 ### Performing cryptographic operations with the GREP11 API
 {: #cryptographic-operations-with-grep11}
