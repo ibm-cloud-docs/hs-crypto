@@ -29,7 +29,7 @@ Stay up to date with the new features that are available for {{site.data.keyword
 [New]{: tag-new}: {{site.data.keyword.hscrypto}} deprecates from the Sydney region
 :   You cannot create {{site.data.keyword.hscrypto}} instances in the {{site.data.keyword.cloud_notm}} Sydney (`au-syd`) region after 30 November 2023. Existing services and support will be discontinued on 31 March 2024. 
 
-    To continue to use {{site.data.keyword.hscrypto}}, you need to migrate to a region that is based on the {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) infrastructure. For more information about up-to-date list of supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). If you need assist in migration, you can reach out your IBM sales representative or send email to `zaas.client.acceleration@ibm.com`. 
+    To continue to use {{site.data.keyword.hscrypto}}, you need to migrate to a region that is based on the {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) infrastructure. It is suggested to select Tokyo (`jp-tok`) region as an alternative. For more information about up-to-date list of supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). If you need assist in migration, you can reach out your IBM sales representative or send email to `zaas.client.acceleration@ibm.com`. 
 
 
 ## 22 Sept 2023
