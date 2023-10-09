@@ -36,7 +36,7 @@ In order to use {{site.data.keyword.hscrypto}}, make sure that you meet the foll
 1. You have a Pay-As-You-Go or Subscription [{{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-accounts){: external}.
     
     You can use promo code `HPCRYPTO30` to get two crypto units at no charge for 30 days.
-    {: important}
+    {: tips}
 
 2. You have [provisioned a service instance](/docs/hs-crypto?topic=hs-crypto-provision) with either of the following plans:
 
