@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-09-27"
+lastupdated: "2023-10-09"
 
 keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
 
@@ -142,7 +142,7 @@ at query time to delete the key.
 ### Using the `force` query parameter
 {: #delete-key-force}
 
-{{site.data.keyword.hscrypto}} blocks the deletion of a key that's protecting a cloud resource, such as a {{site.data.keyword.cos_full_notm}} bucket. You can force-delete a key and the contents by making a `DELETE` call to the following endpoint.
+{{site.data.keyword.hscrypto}} blocks the deletion of a key that's protecting a cloud resource, such as {{site.data.keyword.cos_full_notm}} buckets. You can force-delete a key and the contents by making a `DELETE` call to the following endpoint.
 
 ```
 https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?force=true
