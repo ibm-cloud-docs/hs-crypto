@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-09-22"
+lastupdated: "2023-10-09"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -30,7 +30,7 @@ You can connect your applications with the {{site.data.keyword.cloud}} {{site.da
 - London, UK: `eu-gb` - Based on the {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) infrastructure
 - Madrid, Spain: `eu-es` - Based on the {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) infrastructure
 - S&atilde;o-Paulo, Brazil: `br-sao` - Based on the {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) infrastructure
-- Sydney, Australia: `au-syd`
+- Sydney, Australia: `au-syd` - [Deprecated]{: tag-deprecated}
 - Tokyo, Japan: `jp-tok` - Based on the {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) infrastructure
 - Toronto, Canada: `ca-tor` - Based on the {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) infrastructure
 - Washington DC, US: `us-east`
@@ -69,7 +69,7 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 | London        | `api.eu-gb.hs-crypto.cloud.ibm.com`  | `uko.eu-gb.hs-crypto.cloud.ibm.com`| `ep11.eu-gb.hs-crypto.cloud.ibm.com`  |
 | Madrid        | `api.eu-es.hs-crypto.cloud.ibm.com`  | `uko.eu-es.hs-crypto.cloud.ibm.com`| `ep11.eu-es.hs-crypto.cloud.ibm.com`  |
 | S&atilde;o-Paulo | `api.br-sao.hs-crypto.cloud.ibm.com`   | `uko.br-sao.hs-crypto.cloud.ibm.com` |`ep11.br-sao.hs-crypto.cloud.ibm.com`   |
-| Sydney        | `api.au-syd.hs-crypto.cloud.ibm.com`   | `uko.au-syd.hs-crypto.cloud.ibm.com`| `ep11.au-syd.hs-crypto.cloud.ibm.com`   |
+| [Deprecated]{: tag-deprecated} Sydney        | `api.au-syd.hs-crypto.cloud.ibm.com`   | `uko.au-syd.hs-crypto.cloud.ibm.com`| `ep11.au-syd.hs-crypto.cloud.ibm.com`   |
 | Tokyo         | `api.jp-tok.hs-crypto.cloud.ibm.com`   | `uko.jp-tok.hs-crypto.cloud.ibm.com`| `ep11.jp-tok.hs-crypto.cloud.ibm.com`  |
 | Toronto | `api.ca-tor.hs-crypto.cloud.ibm.com`   | `uko.ca-tor.hs-crypto.cloud.ibm.com` |`ep11.ca-tor.hs-crypto.cloud.ibm.com`   |
 | Washington DC | `api.us-east.hs-crypto.cloud.ibm.com`  | `uko.us-east.hs-crypto.cloud.ibm.com`| `ep11.us-east.hs-crypto.cloud.ibm.com`  |
@@ -86,7 +86,7 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 | London        | `api.private.eu-gb.hs-crypto.cloud.ibm.com`  | `ep11.private.eu-gb.hs-crypto.cloud.ibm.com`  |
 | Madrid        | `api.private.eu-es.hs-crypto.cloud.ibm.com`  | `ep11.private.eu-es.hs-crypto.cloud.ibm.com`  |
 | S&atilde;o-Paulo | `api.private.br-sao.hs-crypto.cloud.ibm.com`  | `ep11.private.br-sao.hs-crypto.cloud.ibm.com`   |
-| Sydney        | `api.private.au-syd.hs-crypto.cloud.ibm.com`   | `ep11.private.au-syd.hs-crypto.cloud.ibm.com`   |
+| [Deprecated]{: tag-deprecated} Sydney        | `api.private.au-syd.hs-crypto.cloud.ibm.com`   | `ep11.private.au-syd.hs-crypto.cloud.ibm.com`   |
 | Tokyo         | `api.private.jp-tok.hs-crypto.cloud.ibm.com`   | `ep11.private.jp-tok.hs-crypto.cloud.ibm.com`  |
 | Toronto | `api.private.ca-tor.hs-crypto.cloud.ibm.com`   | `ep11.private.ca-tor.hs-crypto.cloud.ibm.com` |
 | Washington DC | `api.private.us-east.hs-crypto.cloud.ibm.com`  | `ep11.private.us-east.hs-crypto.cloud.ibm.com`  |

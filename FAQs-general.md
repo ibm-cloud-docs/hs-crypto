@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-10-09"
 
 keywords: general frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips
 
@@ -164,7 +164,7 @@ If you create your instance in [regions](/docs/hs-crypto?topic=hs-crypto-regions
 {: #faq-hpcs-regions}
 {: faq}
 
-Currently, {{site.data.keyword.hscrypto}} is available in Dallas, Sydney, and Frankfurt. For an up-to-date list of supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
+Currently, {{site.data.keyword.hscrypto}} is available in Dallas and Frankfurt. For an up-to-date list of supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
 ## I have workloads in a data center where {{site.data.keyword.hscrypto}} is not available. Can I still subscribe to this service?
 {: #faq-data-center}
