@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-09"
+lastupdated: "2023-10-12"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -224,6 +224,10 @@ When you select the **Create with custom properties** option, you are creating a
     {: tab-group="Managed key properties without templates"}
     {: class="comparison-tab-table"}
 
+    
+
+    
+
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key. It must be 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). |
@@ -239,6 +243,7 @@ When you select the **Create with custom properties** option, you are creating a
     {: tab-title="Azure Key Vault keys"}
     {: tab-group="Managed key properties without templates"}
     {: class="comparison-tab-table"}
+    
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
@@ -289,7 +294,7 @@ When you select the **Create with custom properties** option, you are creating a
     {: tab-group="Managed key properties without templates"}
     {: class="comparison-tab-table"}
 
-
+    
 
 9. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.
 

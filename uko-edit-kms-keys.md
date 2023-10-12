@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-09-18"
+lastupdated: "2023-10-12"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -39,14 +39,14 @@ To edit the details of a managed key by using the console, complete the followin
     Because the key is already created, you cannot make changes to key material properties that are marked with a Lock icon.
     {: note}
 
-        |       Property	     |                         Description                       |
-        |----------------------|-------------------------------------------------------------|
-        | Key name             | A unique, human-readable name for easy identification of your key. When you change the name of a managed key, the key is to be renamed in all keystores where it is activated. \n \n **Important:** You cannot edit the key name after the managed key is created with key naming schemes.\n \n Depending on the keystore type, name your key with the following rules:  \n - IBM Cloud KMS: 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n - IBM {{site.data.keyword.keymanagementserviceshort}}: 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n - AWS Key Management Service: 1–250 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (/\_-). However, do not start the name with `AWS/`. \n - Azure Key Vault: 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). \n - Google Cloud KMS: 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (\_-). |
-        | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
-        | State            | Key states include Pre-active, Active, Deactivated, and Destroyed. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states).  |
-        | Activation date      | Plan a date to activate the key. Automatic state change is to be triggered on the planned date. |
-        | Expiration date      | Plan a date to deactivate the key. Automatic state change is to be triggered on the planned date.  |
-        {: caption="Table 1. Key properties" caption-side="bottom"}
+    |       Property	     |                         Description                       |
+    |----------------------|-------------------------------------------------------------|
+    | Key name             | A unique, human-readable name for easy identification of your key. When you change the name of a managed key, the key is to be renamed in all keystores where it is activated. \n \n **Important:** You cannot edit the key name after the managed key is created with key naming schemes.\n \n Depending on the keystore type, name your key with the following rules:  \n - IBM Cloud KMS: 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n - IBM {{site.data.keyword.keymanagementserviceshort}}: 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n - AWS Key Management Service: 1–250 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (/\_-). However, do not start the name with `AWS/`. \n - Azure Key Vault: 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). \n - Google Cloud KMS: 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (\_-). |
+    | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
+    | State            | Key states include Pre-active, Active, Deactivated, and Destroyed. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states).  |
+    | Activation date      | Plan a date to activate the key. Automatic state change is to be triggered on the planned date. |
+    | Expiration date      | Plan a date to deactivate the key. Automatic state change is to be triggered on the planned date.  |
+    {: caption="Table 1. Key properties" caption-side="bottom"}
 
     
 
@@ -75,6 +75,8 @@ To edit the details of a managed key by using the console, complete the followin
         - Realign with templates
 
             For a key that is created with a key template, after you edit the keystore assignment, an `Unaligned` flag can be displayed on the key details card for keys. If you want to keep these changes, ignore the flag. Otherwise, realign your key with the key template again by selecting **Actions** > **Realign with template**. For more information, see [Realigning keys with key templates](/docs/hs-crypto?topic=hs-crypto-align-key). 
+
+        
 
 5. Under **Advanced properties**, click **Edit** to update or add new key tags to the key. Key tags are used as identifications of a key.
 6. When you finish making changes, click **Save** to save the changes.
