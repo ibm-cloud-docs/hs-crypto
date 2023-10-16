@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-05"
+lastupdated: "2023-10-16"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, smart card, trusted key entry application, tke application, management utilities
 
@@ -148,6 +148,9 @@ After all master key parts are loaded, the new master key register is in `Full u
 
 #### Commit the new master key register
 {: #step5-commit-new-register-management-utilities}
+
+Make sure that you complete this step immediately after [the previous step](#step5-load-new-register-management-utilities) to move the new master key register to the `Full committed` state. Otherwise, you will not be able to initialize your service instance.
+{: important}
 
 1. Click **Commit** to move the master key to the `Full committed` state.
 2. If prompted, in smart card reader 1, insert an EP11 smart card with an administrator signature key that is defined to the selected crypto units and enter the smart card PIN on the smart card reader PIN pad. Repeat this operation if prompted for more EP11 smart cards with signature keys.

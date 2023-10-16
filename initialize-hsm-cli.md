@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-05"
+lastupdated: "2023-10-16"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -285,7 +285,10 @@ When prompted, enter the key parts to be loaded into the new master key register
 ### Step 6: Commit the new master key register
 {: #step6-commit-master-key}
 
-Loading the new master key register places the new master key register in the full uncommitted state. Before you can use the new master key register to initialize or reencipher key storage, place the new master key register in the committed state. For information about how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-key-ceremony).
+Make sure that you complete this step immediately after the [step 5](#step5-load-master-key) to move the new master key register to the `Full committed` state. Otherwise, you will not be able to initialize your service instance.
+{: important}
+
+Loading the new master key register places the new master key register in the `Full uncommitted` state. Before you can use the new master key register to initialize or reencipher key storage, place the new master key register in the committed state. For information about how the master key is loaded, see the detailed illustrations at [Master key registers](/docs/hs-crypto?topic=hs-crypto-introduce-service#understand-key-ceremony).
 
 To commit the new master key register, use the following command:
 
