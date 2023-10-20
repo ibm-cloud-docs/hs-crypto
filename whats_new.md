@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-10-12"
+lastupdated: "2023-10-20"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -21,7 +21,6 @@ content-type: release-note
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
-
 
 
 
@@ -57,7 +56,7 @@ Added: Key template support for {{site.data.keyword.uko_full_notm}}
 Updated: Pricing plan for {{site.data.keyword.uko_full_notm}} 
 :   The pricing plan has been updated for {{site.data.keyword.uko_full_notm}}. You can find more details on the [service catalog page](/catalog/services/hyper-protect-crypto-services){: external}.  
 
-    For a detailed pricing sample, see [How am I charged for my use of Hyper Protect Crypto Services with Unified Key Orchestrator?](/docs/hs-crypto?topic=hs-crypto-faq-pricing&interface=ui#faq-how-charge-hpcs-uko). 
+    For a detailed pricing sample, see [How am I charged for my use of {{site.data.keyword.hscrypto}} with Unified Key Orchestrator?](/docs/hs-crypto?topic=hs-crypto-faq-pricing&interface=ui#faq-how-charge-hpcs-uko). 
 
 ## 24 May 2023
 {: #hs-crypto-may2023}
