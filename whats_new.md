@@ -24,8 +24,6 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 
 
-
-
 ## 22 Sept 2023
 {: #hs-crypto-sept2023}
 {: release-note}
