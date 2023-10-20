@@ -21,12 +21,6 @@ subcollection: hs-crypto
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is a dedicated key management service and [Hardware Security Module (HSM)](#x6704988){: term} that provides you with the Keep Your Own Key capability for cloud data encryption. Built on FIPS 140-2 Level 4 certified hardware, {{site.data.keyword.hscrypto}} provides you with exclusive control of your encryption keys. With {{site.data.keyword.uko_full_notm}}, you can connect your service instance to keystores in IBM Cloud and third-party cloud providers, back up and manage keys using a unified system, and orchestrate keys across multiple clouds.
 {: shortdesc}
 
-| Data center｜ Tokyo (Recommended region within APAC) ｜ S&atilde;o-Paulo ｜ London ｜ Toronto | Madrid | Washington DC  |
-| --- | ---｜ --- ｜ --- ｜ --- ｜ --- ｜ --- |
-| {{site.data.keyword.hscrypto}}  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")  ｜       ｜
-| Hyper Protect Virtual Servers for Classic   | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     |
-{: caption="Table 1. Supported IBM Cloud VPC data centers" caption-side="bottom"}
-
 Watch the following video to learn how {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} provides you with exclusive encryption key control and unified key management in the cloud:
 
 ![IBM Cloud Hyper Protect Crypto Services Overview](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_1ipwq52p){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
