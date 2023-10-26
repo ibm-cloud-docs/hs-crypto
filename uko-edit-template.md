@@ -62,6 +62,8 @@ To edit the details of a key template by using the console, complete the followi
         If you have already created keys with this key template before making the changes, an `Unaligned` flag is displayed on the key details cards of the keys, indicating that those keys are no longer in sync with the key template. If you want to keep these changes, ignore the flag. Otherwise, realign your key with the key template again by selecting **Actions** > **Realign with template**. For more information, see [Realigning keys with key templates](/docs/hs-crypto?topic=hs-crypto-align-key). 
         {: tip}
 
+        
+
 5. When you finish making changes, click **Save** to save the changes.
 6. Under **Managed Keys**, view the total number of managed keys that are created based on this key template. You can also edit the managed keys by clicking the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key that you want to edit, and select **Show details**. For more information, see [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys&interface=ui).
 

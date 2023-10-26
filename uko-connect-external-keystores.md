@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-10-12"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -119,7 +119,7 @@ To connect to an external keystore by using the console, complete the following 
 
 
 
-    You can change the currency that is displayed by selecting your country or location.
+    You can change the currency that is displayed by selecting your country or location. After you connect to the first external keystore, {{site.data.keyword.uko_full_notm}} base price applies additionally. For more information about pricing, see [the pricing sample](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs-uko).
     {: tip}
 
 6. Under **Keystore properties**, specify the details of based on the keystore type that you want to connect to.
@@ -218,8 +218,8 @@ To connect to an external keystore by using the console, complete the following 
 
     
     
-8. Under **Summary**, view the summary of your Azure Key Vault and the total estimated cost.
-9. After you confirm the keystore details, click **Connect to keystore** to connect to the keystore.
+8. Under **Summary**, view the summary of your Azure Key Vault and the estimated additional cost.
+9. After you confirm the keystore details, click **Connect to keystore**.
 
 If you connect to an external keystore of type Azure Key Vault, a key named `EKMF-BYOK-KEK-FOR-IMPORT` is automatically created in the Azure Key Vault instance that you connect to. You can view the key from the Azure Key Vault instance UI. Don't delete this key. Otherwise, you will not be able to create and assign managed keys to the Azure Key Vault instance. For more information, see [Why can't I assign keys in Azure Key Vault](/docs/hs-crypto?topic=hs-crypto-troubleshoot-import-azure-key).
 {: important}

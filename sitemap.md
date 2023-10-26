@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-09-19"
+lastupdated: "2023-10-26"
 
 keywords: site map, doc structure, information architecture
 
@@ -370,6 +370,14 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [26 October 2023](/docs/hs-crypto?topic=hs-crypto-what-new##hs-crypto-26oct2023)
+
+    * Deprecated: {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} in Sydney
+
+* [22 Sept 2023](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-sept2023)
+
+    * Added: {{site.data.keyword.hscrypto}} expands into the Madrid region 
 
 * [3 August 2023](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-august2023)
 
@@ -1763,16 +1771,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#cert-manager-cli-change-log)
 
 * [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#uko-cli-change-log)
-
-[{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} CLI](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#hpcs-cli-plugin)
-
-* [{{site.data.keyword.hscrypto}} key management CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#kp-cli-plugin)
-
-* [{{site.data.keyword.hscrypto}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin)
-
-* [{{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#cert-manager-cli-plugin)
-
-* [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#uko-cli-plugin)
 
 
 ## Terraform reference
