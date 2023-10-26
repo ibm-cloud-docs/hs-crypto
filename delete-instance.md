@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-09-27"
+lastupdated: "2023-10-26"
 
 keywords: delete, delete service instance, crypto unit, ibm cloud cli, clear crypto unit, uninstall
 
@@ -11,6 +11,8 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
+
 
 # Deleting service instances
 {: #delete-instance}
@@ -227,3 +229,5 @@ ibmcloud resource service-instance-delete <instance_name|instance_ID>
 {: pre}
 
 Replace *instance_name* with your instance name and *instance_ID* with your [service instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). You can use either the instance name or the service instance ID to run the command.
+
+
