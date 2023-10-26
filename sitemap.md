@@ -1464,15 +1464,13 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-delete-instance#delete-instance-prerequisite)
 
-* [Step 1: Delete keys](/docs/hs-crypto?topic=hs-crypto-delete-instance#delete-all-key-step)
+* [Step 1: Select the crypto units to be deleted](/docs/hs-crypto?topic=hs-crypto-delete-instance#select-crypto-unit-step)
 
-* [Step 2: Select the crypto units to be deleted](/docs/hs-crypto?topic=hs-crypto-delete-instance#select-crypto-unit-step)
+* [Step 2: Zeroize crypto units](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step)
 
-* [Step 3: Zeroize crypto units](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step)
+* [Step 3: Optional - Uninstall the {{site.data.keyword.hscrypto}} utilities](/docs/hs-crypto?topic=hs-crypto-delete-instance#uninstall-utilities-step)
 
-* [Step 4: Optional - Uninstall the {{site.data.keyword.hscrypto}} utilities](/docs/hs-crypto?topic=hs-crypto-delete-instance#uninstall-utilities-step)
-
-* [Step 5: Delete your service instance](/docs/hs-crypto?topic=hs-crypto-delete-instance#delete-instance-step)
+* [Step 4: Delete your service instance](/docs/hs-crypto?topic=hs-crypto-delete-instance#delete-instance-step)
 
 
 ## Restoring your data from another region
