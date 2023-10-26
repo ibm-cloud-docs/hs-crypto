@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-10-20"
+lastupdated: "2023-10-26"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -22,7 +22,37 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+## 26 October 2023
+{: ##hs-crypto-26oct2023}
+{: release-note}
 
+Deprecated: {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} in Sydney
+:   {{site.data.keyword.hscrypto}} and [{{site.data.keyword.hpvs}} for Classic](/docs/hp-virtual-servers?topic=hp-virtual-servers-whats-new#hp-virtual-servers-oct2623) will be deprecated from the IBM Cloud data center in `Sydney`. New instances of Hyper Protect Services can no longer be deployed in the IBM Cloud data center in `Sydney` after **30 November 2023**, and existing Hyper Protect services and support in the IBM Cloud data center in Sydney will be decommissioned and discontinued on **31 March 2024**.
+
+:   This announcement does not impact any other services running in the IBM Cloud data center in Sydney, or any other Hyper Protect Services, including support, running in any other data centers where Hyper Protect is supported.
+{: note}
+
+:   Review the following details for this deprecation:
+   - Effective **30 November 2023**, no new instances of {{site.data.keyword.hscrypto}} or Hyper Protect Virtual Servers for Classic can be provisioned in `Sydney`.
+   - Effective **31 March 2024**, {{site.data.keyword.hscrypto}} and {{site.data.keyword.hpvs}} for Classic will no longer be supported, and the services will be decommissioned from the IBM Cloud data center in `Sydney`. It is recommended that all instances and data be migrated to an IBM Cloud VPC data center.
+   - Any Hyper Protect Services instances and data still present in the IBM Cloud data center in `Sydney` will be stopped and terminated on this date. The data center infrastructure will be decommissioned and data and services no longer available. To avoid the risk of data loss, ensure a backup or transfer of any required data is taken before the service is decommissioned on **31 March 2024**. 
+
+:   For existing customers, migration to an IBM Cloud VPC data center is recommended:
+   - To continue using {{site.data.keyword.hscrypto}}, it is recommended to migrate to an IBM Cloud VPC data center. The recommended region for migration within APAC is `Tokyo`.
+   - For {{site.data.keyword.hpvs}} for Classic instances, it is recommended to migrate to an IBM Cloud VPC data center, as well as deploy the latest version of the service, [{{site.data.keyword.hpvs}} for VPC](https://www.ibm.com/cloud/hyper-protect-virtual-servers){: external} ({{site.data.keyword.hpvs}} for Classic is not available in IBM Cloud VPC data centers). The recommended region for migration within APAC is `Tokyo`.
+   - To migrate to an IBM Cloud VPC Data center, support from IBM Team will be available. Contact your local sales representative or send an email to [zaas.client.acceleration@ibm.com](mailto:zaas.client.acceleration@ibm.com) for more information.
+
+:   The following table lists the supported {{site.data.keyword.cloud_notm}} VPC data centers for {{site.data.keyword.hscrypto}} and Hyper Protect Virtual Servers for Classic:
+
+    | Data center | {{site.data.keyword.hscrypto}} | Hyper Protect Virtual Servers for Classic |
+    |--------------|--------------|--------------|
+    | Tokyo (Recommended region within APAC) `jp-tok` | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | 
+    | S&atilde;o-Paulo `br-sao` | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | 
+    | London `eu-gb`  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | 
+    | Toronto `ca-tor`   | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | 
+    | Madrid `eu-es`     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | 
+    | Washington DC `us-east`   | N/A    |  ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")    |  
+    {: caption="Table 1. Supported {{site.data.keyword.cloud_notm}} VPC data centers" caption-side="bottom"}
 
 ## 22 Sept 2023
 {: #hs-crypto-sept2023}

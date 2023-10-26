@@ -371,6 +371,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
 
+* [26 October 2023](/docs/hs-crypto?topic=hs-crypto-what-new##hs-crypto-26oct2023)
+
+    * Deprecated: {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} in Sydney
+
 * [22 Sept 2023](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-sept2023)
 
     * Added: {{site.data.keyword.hscrypto}} expands into the Madrid region 
