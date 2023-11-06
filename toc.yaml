@@ -138,7 +138,7 @@ toc:
           - link:
               label: "Manage regulatory compliance of company data in Microsoft 365 with Hyper Protect Unified Key Orchestrator"
               href: https://developer.ibm.com/tutorials/manage-regulatory-compliance-of-company-data-in-microsoft-office-365-in-azure/
-            - topicgroup:
+      - topicgroup:
           label: Tutorials on Bring Your Own HSM
           topics:
           - tutorials/byohsm.md
