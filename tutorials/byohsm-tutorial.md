@@ -52,7 +52,7 @@ Get started with BYOHSM by completing the following steps:
 - [Step 4: Provision a {{site.data.keyword.hscrypto}} instance with BYOHSM](#tutorial-byohsm-step4)
 - [Step 5: Use your {{site.data.keyword.hscrypto}} instance with BYOHSM](#tutorial-byohsm-step5)
 
-## Step 1: Purchase and set up your on-premises HSMs
+## Purchase and set up your on-premises HSMs
 {: #tutorial-byohsm-step1}
 {: step}
 
@@ -61,7 +61,7 @@ If you don't have an HSM for your enterprise, purchase one to connect to your {{
 To achieve high availability, it is suggested to prepare and use at least two HSMs.
 {: tip}
 
-## Step 2: Configure and deploy your HSMs to work with {{site.data.keyword.hscrypto}}
+## Configure and deploy your HSMs to work with {{site.data.keyword.hscrypto}}
 {: #tutorial-byohsm-step2}
 {: step}
 
@@ -91,7 +91,7 @@ To achieve high availability, it is suggested to prepare and use at least two HS
     | Transit Key Encryption Key label prefix | The label prefix of the Transit Key Encryption Key that is used for securely importing your own keys. |
     {: caption="Table 2. Information needed for Bring Your Own HSM" caption-side="bottom"}
 
-## Step 3: Contact IBM to add your account to the allowlist
+## Contact IBM to add your account to the allowlist
 {: #tutorial-byohsm-step3}
 {: step}
 
@@ -103,7 +103,7 @@ IBM will then provide you with the following information:
 - The **VPC CRN**. In your Transit Gateway configuration, you need to [request a connection to the VPC CRN](/docs/transit-gateway?topic=transit-gateway-adding-cross-account-connections&interface=ui).
 - The **HSM client certificate**. You need to install this certificate on your HSMs to ensure that the communications from {{site.data.keyword.hscrypto}} can be verified.
 
-## Step 4: Provision a {{site.data.keyword.hscrypto}} instance with BYOHSM
+## Provision a {{site.data.keyword.hscrypto}} instance with BYOHSM
 {: #tutorial-byohsm-step4}
 {: step}
 
@@ -116,7 +116,7 @@ Provision a {{site.data.keyword.hscrypto}} instance on the [service catalog page
 
 For more information, see [Provisioning a {{site.data.keyword.hscrypto}} instance with BYOHSM](/docs/hs-crypto?topic=hs-crypto-provision-instance-with-byohsm).
 
-## Step 5: Use your {{site.data.keyword.hscrypto}} instance with BYOHSM
+## Use your {{site.data.keyword.hscrypto}} instance with BYOHSM
 {: #tutorial-byohsm-step5}
 {: step}
 

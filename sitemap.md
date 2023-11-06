@@ -732,15 +732,15 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Task flow](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-steps)
 
-* [Step 1: Purchase and set up your on-premises HSMs](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step1)
+* [Purchase and set up your on-premises HSMs](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step1)
 
-* [Step 2: Configure and deploy your HSMs to work with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step2)
+* [Configure and deploy your HSMs to work with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step2)
 
-* [Step 3: Contact IBM to add your account to the allowlist](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step3)
+* [Contact IBM to add your account to the allowlist](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step3)
 
-* [Step 4: Provision a {{site.data.keyword.hscrypto}} instance with BYOHSM](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step4)
+* [Provision a {{site.data.keyword.hscrypto}} instance with BYOHSM](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step4)
 
-* [Step 5: Use your {{site.data.keyword.hscrypto}} instance with BYOHSM](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step5)
+* [Use your {{site.data.keyword.hscrypto}} instance with BYOHSM](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step5)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-next)
 
