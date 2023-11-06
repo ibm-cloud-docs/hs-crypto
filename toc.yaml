@@ -58,9 +58,9 @@ toc:
               - introduce-master-key-rotation.md
               - introduce-root-key-rotation.md
           - topicgroup:
-              label: About Bring Your Own HSM
+              label: About Bring Your Own HSM  - Standard Plan
               topics:
-              - ibyohsm-overview.md
+              - byohsm-overview.md
       - topicgroup:
           label: Understanding Hyper Protect Crypto Services with Unified Key Orchestrator Plan
           topics:
@@ -141,7 +141,7 @@ toc:
       - topicgroup:
           label: Tutorials on Bring Your Own HSM
           topics:
-          - tutorials/byohsm.md
+          - tutorials/byohsm-tutorial.md
   - navgroup:
       id: howto
       topics:
@@ -159,7 +159,7 @@ toc:
           - initialize-hsm-cli.md
           - signing-service.md
       - topicgroup:
-          label: Bringing your own HSM
+          label: Bringing your own HSM - Standard Plan
           topics:
           - byohsm-deploy.md
           - byohsm-provision.md   
@@ -180,7 +180,7 @@ toc:
           - terraform.md
           - uko-terraform.md
       - topicgroup:
-          label: Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan only
+          label: Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan
           topics:
           - topicgroup:
               label: Managing instance policies - Standard Plan 
@@ -223,7 +223,7 @@ toc:
               - manage-pkcs11-keys.md
               - manage-pkcs11-certificates.md
       - topicgroup:
-          label: Managing vaults, key templates, KMS keys, and keystores - Unified Key Orchestrator Plan only
+          label: Managing vaults, key templates, KMS keys, and keystores - Unified Key Orchestrator Plan
           topics:
           - topicgroup:
               label: Managing vaults - Unified Key Orchestrator Plan

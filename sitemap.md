@@ -181,9 +181,19 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#root-key-rotation-next)
 
 
-### About Bring Your Own HSM
-{: #sitemap_about_bring_your_own_hsm}
+### About Bring Your Own HSM  - Standard Plan
+{: #sitemap_about_bring_your_own_hsm_standard_plan}
 
+
+[Introducing Bring Your Own HSM](/docs/hs-crypto?topic=hs-crypto-introduce-bring-your-own-hsm#introduce-bring-your-own-hsm)
+
+* [What is Bring Your Own HSM?](/docs/hs-crypto?topic=hs-crypto-introduce-bring-your-own-hsm#what-is-byohsm)
+
+* [How to enable Bring Your Own HSM?](/docs/hs-crypto?topic=hs-crypto-introduce-bring-your-own-hsm#how-to-enable-byohsm)
+
+* [Limitations and scope](/docs/hs-crypto?topic=hs-crypto-introduce-bring-your-own-hsm#byohsm-limitation-scope)
+
+* [Responsibilities](/docs/hs-crypto?topic=hs-crypto-introduce-bring-your-own-hsm#byohsm-responsibility)
 
 
 ## Understanding Hyper Protect Crypto Services with Unified Key Orchestrator Plan
@@ -714,6 +724,26 @@ Find what you are looking for in the compilation of topics that are available in
 {: #sitemap_tutorials_on_bring_your_own_hsm}
 
 
+[Managing your keys with BYOHSM in {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm)
+
+* [Objectives](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-objectives)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-prerequisites)
+
+* [Task flow](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-steps)
+
+* [Step 1: Purchase and set up your on-premises HSMs](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step1)
+
+* [Step 2: Configure and deploy your HSMs to work with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step2)
+
+* [Step 3: Contact IBM to add your account to the allowlist](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step3)
+
+* [Step 4: Provision a {{site.data.keyword.hscrypto}} instance with BYOHSM](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step4)
+
+* [Step 5: Use your {{site.data.keyword.hscrypto}} instance with BYOHSM](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step5)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-next)
+
 
 ## Provisioning service instances
 {: #sitemap_provisioning_service_instances}
@@ -788,8 +818,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key#signing-service-whats-next)
 
 
-## Bringing your own HSM
-{: #sitemap_bringing_your_own_hsm}
+## Bringing your own HSM - Standard Plan
+{: #sitemap_bringing_your_own_hsm_standard_plan}
 
 
 [Deploying an HSM to use with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-hsm-for-byohsm)
@@ -924,8 +954,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next?](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs#uko-terraform-setup-hpcs-next)
 
 
-## Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan only
-{: #sitemap_managing_root_keys_standard_keys_and_ep11_keys_and_keystores_standard_plan_only}
+## Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan
+{: #sitemap_managing_root_keys_standard_keys_and_ep11_keys_and_keystores_standard_plan}
 
 
 
@@ -1198,8 +1228,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#manage-ep11-certificate-ui-next)
 
 
-## Managing vaults, key templates, KMS keys, and keystores - Unified Key Orchestrator Plan only
-{: #sitemap_managing_vaults_key_templates_kms_keys_and_keystores_unified_key_orchestrator_plan_only}
+## Managing vaults, key templates, KMS keys, and keystores - Unified Key Orchestrator Plan
+{: #sitemap_managing_vaults_key_templates_kms_keys_and_keystores_unified_key_orchestrator_plan}
 
 
 
