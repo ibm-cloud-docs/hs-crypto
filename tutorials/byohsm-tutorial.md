@@ -22,7 +22,7 @@ subcollection: hs-crypto
 {: shortdesc}
 
 The Bring Your Own HSM (BYOHSM) function is available only in the Standard Plan service instances in the VPC-based regions. For the VPC region list, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions#available-regions).
-{:note}
+{: note}
 
 BYOHSM extends your local key management capability to the cloud and creates a scalable, unified, and secure hybrid cloud ecosystem for your regulated workloads. By connecting your own HSMs to {{site.data.keyword.hscrypto}}, you have complete physical control over your keys to meet the data sovereignty regulations.
 

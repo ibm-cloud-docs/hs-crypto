@@ -19,7 +19,7 @@ In order to use your own on-premises hardware security modules (HSMs) for {{site
 {: shordesc}
 
 The Bring Your Own HSM (BYOHSM) function is available only in the Standard Plan service instances in the VPC-based regions. For the VPC region list, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions#available-regions).
-{:note}
+{: note}
 
 ## Before you begin
 {: #deploy-byohsm-prerequisites}

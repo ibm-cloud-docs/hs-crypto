@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023
-lastupdated: "2023-11-06"
+lastupdated: "2023-11-07"
 
 keywords: restricting access to Hyper Protect Crypto Services, restricting access to HPCS, HPCS cbr, UKO cbr
 
@@ -21,7 +21,7 @@ Context-based restrictions give account owners and administrators the ability to
 {: shortdesc}
 
 The Bring Your Own HSM (BYOHSM) function is available only in the Standard Plan service instances in the VPC-based regions. For the VPC region list, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions#available-regions).
-{:note}
+{: note}
 
 These restrictions work with traditional IAM policies, which are based on identity, to provide an extra layer of protection. Unlike IAM policies, context-based restrictions don't assign access. Context-based restrictions check that an access request comes from an allowed context that you configure. Since both IAM access and context-based restrictions enforce access, context-based restrictions offer protection even in the face of compromised or mismanaged credentials. For more information, see [What are context-based restrictions](/docs/account?topic=account-context-restrictions-whatis).
 

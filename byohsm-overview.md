@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-11-06"
+lastupdated: "2023-11-07"
 
 keywords: bring your own hsm, byohsm, hybrid hpcs, hybrid hsm, hybrid KMS, hybrid hpcs overview, hybrid KMS
 
@@ -19,7 +19,7 @@ By enabling the Bring Your Own Hardware Security Module (BYOHSM) function in {{s
 {: shortdesc}
 
 The Bring Your Own HSM (BYOHSM) function is available only in the Standard Plan service instances in the VPC-based regions. For the VPC region list, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions#available-regions).
-{:note}
+{: note}
 
 ## What is Bring Your Own HSM?
 {: #what-is-byohsm}
