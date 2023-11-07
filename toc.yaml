@@ -231,7 +231,7 @@ toc:
               - uko-create-vaults.md
               - uko-edit-vaults.md
               - uko-delete-vaults.md 
-          - topicgroup:ƒ
+          - topicgroup:
               label: Managing key templates - Unified Key Orchestrator Plan 
               topics:
               - uko-create-template.md 
