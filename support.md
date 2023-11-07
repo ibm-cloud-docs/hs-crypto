@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-11-06"
+lastupdated: "2023-11-07"
 
 keywords: troubleshoot, problems, known issues, support,help
 
@@ -48,4 +48,5 @@ If you need to open a support case for your issue, make sure that you include th
 - BYOHSM: Your instance HSM connector ID. 
 
     You can find the connector ID on your instance dashboard through **Overview** &gt; **Instance** &gt; **HSM connector ID**.
+    
     The Bring Your Own HSM (BYOHSM) function is available only in the Standard Plan service instances in the VPC-based regions. For the VPC region list, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions#available-regions).

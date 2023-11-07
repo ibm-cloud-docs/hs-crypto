@@ -110,7 +110,7 @@ IBM will then provide you with the following information:
 Provision a {{site.data.keyword.hscrypto}} instance on the [service catalog page](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){: external} with the following field values:
 
 - Under **Select a pricing plan**, select **Standard**.
-- Under **Select a location**, select **eu-fr2**. Currently, `eu-fr2` is the only region that supports BYOHSM.
+- Under **Select a location**, select a VPC-based region. For the VPC region list, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions#available-regions).
 - Under **HSM connection**, select **Bring Your Own HSM**.
 - Under **HSM connector ID**, enter the HSM connector ID that you get from IBM. This field is displayed only after you select **Bring Your Own HSM** for the **HSM connection** field.
 

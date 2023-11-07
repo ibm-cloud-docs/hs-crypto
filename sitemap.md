@@ -818,33 +818,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-signing-service-signature-key#signing-service-whats-next)
 
 
-## Bringing your own HSM - Standard Plan
-{: #sitemap_bringing_your_own_hsm_standard_plan}
-
-
-[Deploying an HSM to use with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-hsm-for-byohsm)
-
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-prerequisites)
-
-* [Creating partitions](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-partition)
-
-* [Creating keys](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-key)
-
-* [Network connectivity best practice](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-network-connection)
-
-* [Preparing information for HSM connection](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-prepare-info)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-hsm-next)
-
-[Provisioning a {{site.data.keyword.hscrypto}} instance with BYOHSM](/docs/hs-crypto?topic=hs-crypto-provision-instance-with-byohsm#provision-instance-with-byohsm)
-
-* [Before you begin](/docs/hs-crypto?topic=hs-crypto-provision-instance-with-byohsm#provision-instance-with-byohsm-prerequisites)
-
-* [Provisioning {{site.data.keyword.hscrypto}} with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-provision-instance-with-byohsm#provision-instance-byohsm-ui)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-provision-instance-with-byohsm#provision-instance-byohsm-next)
-
-
 ## Retrieving an access token
 {: #sitemap_retrieving_an_access_token}
 
@@ -952,6 +925,25 @@ Find what you are looking for in the compilation of topics that are available in
 * [Example: Provisioning and initializing service instances by using Terraform](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs#uko-terraform-provision-initialize-instance-hpcs)
 
 * [What's next?](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs#uko-terraform-setup-hpcs-next)
+
+
+## Setting up BYOHSM
+{: #sitemap_setting_up_byohsm}
+
+
+[Setting up BYOHSM](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-hsm-for-byohsm)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-prerequisites)
+
+* [Creating partitions](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-partition)
+
+* [Creating keys](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-key)
+
+* [Network connectivity best practice](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-network-connection)
+
+* [Preparing information for HSM connection](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-prepare-info)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-hsm-next)
 
 
 ## Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-11-06"
+lastupdated: "2023-11-07"
 
 keywords: bring your own hsm, byohsm, hybrid hpcs, deploy hsm, configure own hsm
 
@@ -12,7 +12,7 @@ subcollection: hs-crypto
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Deploying an HSM to use with {{site.data.keyword.hscrypto}}
+# Setting up BYOHSM
 {: #deploy-hsm-for-byohsm}
 
 In order to use your own on-premises hardware security modules (HSMs) for {{site.data.keyword.hscrypto}}, you need to configure and deploy the HSMs to work with your service instance.

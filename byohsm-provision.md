@@ -46,8 +46,8 @@ You cannot enable or disable the BYOHSM function after you provision an instance
 1. Click **Create resource** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
 1. Under **Category**, select **Security**.
 1. From the list of services displayed, click the **{{site.data.keyword.hscrypto}}** tile.
-1. On the service page, under **Select a location**, select **eu-fr2**. Currently, this is the only region that supports the BYOHSM function.
-1. Under **Select a pricing plan**, select **Standard**. 
+1. On the service page, under **Select a location**, select a VPC-based region. For the VPC region list, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions#available-regions).
+1. Under **Select a pricing plan**, select **Standard**.
 1. Under **Configure your resource**, complete the form with the following details:
 
     - Under **Service name**, enter a name for your service instance.

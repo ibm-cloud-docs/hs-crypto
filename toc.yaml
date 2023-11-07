@@ -158,11 +158,6 @@ toc:
           - initialize-hsm-cli-recovery-crypto-unit.md
           - initialize-hsm-cli.md
           - signing-service.md
-      - topicgroup:
-          label: Bringing your own HSM - Standard Plan
-          topics:
-          - byohsm-deploy.md
-          - byohsm-provision.md   
       - retrieve-access-token.md
       - retrieve-instance-id.md
       - topicgroup:
@@ -179,6 +174,7 @@ toc:
           topics:
           - terraform.md
           - uko-terraform.md
+      - byohsm-deploy.md 
       - topicgroup:
           label: Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan
           topics:
