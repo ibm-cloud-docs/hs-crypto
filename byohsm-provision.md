@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-11-06"
+lastupdated: "2023-11-07"
 
 keywords: bring your own hsm, byohsm, hybrid hpcs, provision byohsm
 
@@ -27,7 +27,7 @@ The Bring Your Own HSM (BYOHSM) function is available only in the Standard Plan 
 Before you can provision a {{site.data.keyword.hscrypto}} instance with BYOHSM, make sure that you meet the following prerequisites:
 
 1. [Deploy your on-premises HSMs to work with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm).
-1. Contact IBM by [creating a support case](/docs/get-support?topic=get-support-open-case) to add your account to the allowlist. [Provide the information needed](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-prepare-info) to establish a secure HSM connection. 
+1. Contact IBM by [creating a support case](/docs/get-support?topic=get-support-open-case) to get the required information. [Provide the information needed](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-prepare-info) to establish a secure HSM connection. 
 1. IBM will then provide you with the following information that is needed for provisioning an instance:
 
     - **HSM connector ID**: The unique identifier for your HSM connection. {{site.data.keyword.hscrypto}} uses this ID to refer to the backend infrastructure for BYOHSM on {{site.data.keyword.cloud_notm}}.

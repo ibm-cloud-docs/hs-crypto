@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-11-06"
+lastupdated: "2023-11-07"
 
 keywords: bring your own hsm, byohsm, hybrid hpcs, deploy hsm, hybrid KMS, byohsm get started
 
@@ -48,7 +48,7 @@ Get started with BYOHSM by completing the following steps:
 - [Before you begin](#tutorial-byohsm-prerequisites)
 - [Step 1: Purchase and set up your on-premises HSMs](#tutorial-byohsm-step1)
 - [Step 2: Configure and deploy your HSMs to work with {{site.data.keyword.hscrypto}}](#tutorial-byohsm-step2)
-- [Step 3: Contact IBM to add your account to the allowlist](#tutorial-byohsm-step3)
+- [Step 3: Contact IBM to get the required information](#tutorial-byohsm-step3)
 - [Step 4: Provision a {{site.data.keyword.hscrypto}} instance with BYOHSM](#tutorial-byohsm-step4)
 - [Step 5: Use your {{site.data.keyword.hscrypto}} instance with BYOHSM](#tutorial-byohsm-step5)
 
@@ -91,11 +91,11 @@ To achieve high availability, it is suggested to prepare and use at least two HS
     | Transit Key Encryption Key label prefix | The label prefix of the Transit Key Encryption Key that is used for securely importing your own keys. |
     {: caption="Table 2. Information needed for Bring Your Own HSM" caption-side="bottom"}
 
-## Contact IBM to add your account to the allowlist
+## Contact IBM to get the required information
 {: #tutorial-byohsm-step3}
 {: step}
 
-Contact IBM by [creating a support case](/docs/get-support?topic=get-support-open-case) to add your account to the allowlist. Provide the information that you collect in [Step 2](#get-started-with-byohsm-step2) including the subnets where your HSMs can be reached. Each subnet corresponds to one Availability Zone (AZ).
+Contact IBM by [creating a support case](/docs/get-support?topic=get-support-open-case) to get the required information. Provide the information that you collect in [Step 2](#get-started-with-byohsm-step2) including the subnets where your HSMs can be reached. Each subnet corresponds to one Availability Zone (AZ).
 
 IBM will then provide you with the following information:
 

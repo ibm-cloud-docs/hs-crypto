@@ -231,7 +231,7 @@ toc:
               - uko-create-vaults.md
               - uko-edit-vaults.md
               - uko-delete-vaults.md 
-          - topicgroup:
+          - topicgroup:ƒ
               label: Managing key templates - Unified Key Orchestrator Plan 
               topics:
               - uko-create-template.md 
@@ -273,7 +273,7 @@ toc:
       - delete-instance.md
       - restore-data.md
       - topicgroup:
-          label: Enhancing security - Standard Plan only
+          label: Enhancing security - Standard Plan
           topics:
           - manage-access.md
           - grant-access-keys.md
@@ -291,7 +291,7 @@ toc:
           - at-events.md
           - manage-security-compliance.md
       - topicgroup:
-          label: Enhancing security - Unified Key Orchestrator Plan only
+          label: Enhancing security - Unified Key Orchestrator Plan
           topics:
           - uko-manage-access.md
           - uko-grant-access-vaults.md
