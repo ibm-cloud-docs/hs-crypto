@@ -15,7 +15,7 @@ subcollection: hs-crypto
 # Setting up BYOHSM
 {: #deploy-hsm-for-byohsm}
 
-In order to use your own on-premises hardware security modules (HSMs) for {{site.data.keyword.hscrypto}}, you need to configure and deploy the HSMs to work with your service instance.
+You can enable the Bring Your Own HSM (BYOHSM) function in {{site.data.keyword.hscrypto}} to use your own on-premises hardware security modules (HSMs). To do so, you need to first configure and deploy the HSMs to work with your service instance.
 {: shordesc}
 
 The Bring Your Own HSM (BYOHSM) function is available only in the Standard Plan service instances in the VPC-based regions. For the VPC region list, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions#available-regions).
