@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-11-07"
+lastupdated: "2023-11-08"
 
 keywords: site map, doc structure, information architecture
 
@@ -1568,14 +1568,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Granting access to a single key in an instance](/docs/hs-crypto?topic=hs-crypto-grant-access-keys#grant-access-key-level)
 
 * [Granting access to key rings in an instance](/docs/hs-crypto?topic=hs-crypto-grant-access-keys#grant-access-key-ring-level)
-
-[Protecting {{site.data.keyword.hscrypto}} resources with context-based restrictions](/docs/hs-crypto?topic=hs-crypto-cbr#cbr)
-
-* [How {{site.data.keyword.hscrypto}} integrates with context-based restrictions](/docs/hs-crypto?topic=hs-crypto-cbr#cbr-overview)
-
-* [Creating network zones](/docs/hs-crypto?topic=hs-crypto-cbr#network-zone)
-
-* [Creating rules](/docs/hs-crypto?topic=hs-crypto-cbr#rules)
 
 
 ### Granting users access to manage EP11 keystores and keys

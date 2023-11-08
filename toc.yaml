@@ -273,7 +273,6 @@ toc:
           topics:
           - manage-access.md
           - grant-access-keys.md
-          - cbr.md
           - topicgroup:
               label: Granting users access to manage EP11 keystores and keys
               topics:
