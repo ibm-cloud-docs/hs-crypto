@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-09-22"
+lastupdated: "2023-11-08"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -136,11 +136,15 @@ The following table lists the registration actions that generate an event:
 
 
 
+
+
 | Action                                  | Description                                              |
 | --------------------------------------- | -------------------------------------------------------- |
 | `hs-crypto.registrations.list`          | List registrations for any key.                           |
 | `hs-crypto.registrations.default`       | Invalid registration request event.                       |
 {: caption="Table 6. Registration actions" caption-side="bottom"}
+
+
 
 
 
@@ -453,6 +457,8 @@ The following fields include extra information:
 
 - The `responseData.maxAllowedRetrievals` field includes the maximum number of times the import token can be retrieved within the expiration time before it is no longer accessible.
 - The `responseData.remainingRetrievals` field includes the number of times the import token can be retrieved within the expiration time before it is no longer accessible.
+
+
 
 
 

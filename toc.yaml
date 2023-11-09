@@ -57,6 +57,10 @@ toc:
               topics:
               - introduce-master-key-rotation.md
               - introduce-root-key-rotation.md
+          - topicgroup:
+              label: About Bring Your Own HSM  - Standard Plan
+              topics:
+              - byohsm-overview.md
       - topicgroup:
           label: Understanding Hyper Protect Crypto Services with Unified Key Orchestrator Plan
           topics:
@@ -134,10 +138,14 @@ toc:
           - link:
               label: "Manage regulatory compliance of company data in Microsoft 365 with Hyper Protect Unified Key Orchestrator"
               href: https://developer.ibm.com/tutorials/manage-regulatory-compliance-of-company-data-in-microsoft-office-365-in-azure/
+      - topicgroup:
+          label: Tutorials on Bring Your Own HSM
+          topics:
+          - tutorials/byohsm-tutorial.md
   - navgroup:
       id: howto
       topics:
-      - provision.md
+      - provision.md      
       - topicgroup:
           label: Initializing service instances
           topics:
@@ -166,8 +174,9 @@ toc:
           topics:
           - terraform.md
           - uko-terraform.md
+      - byohsm-deploy.md 
       - topicgroup:
-          label: Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan only
+          label: Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan
           topics:
           - topicgroup:
               label: Managing instance policies - Standard Plan 
@@ -210,7 +219,7 @@ toc:
               - manage-pkcs11-keys.md
               - manage-pkcs11-certificates.md
       - topicgroup:
-          label: Managing vaults, key templates, KMS keys, and keystores - Unified Key Orchestrator Plan only
+          label: Managing vaults, key templates, KMS keys, and keystores - Unified Key Orchestrator Plan
           topics:
           - topicgroup:
               label: Managing vaults - Unified Key Orchestrator Plan
@@ -246,7 +255,7 @@ toc:
               - uko-edit-internal-keystores.md
               - uko-edit-external-keystore-connection.md
               - uko-delete-internal-keystores.md
-              - uko-disconnect-external-keystores.md
+              - uko-disconnect-external-keystores.md           
       - topicgroup:
           label: Managing master keys
           topics:
@@ -260,7 +269,7 @@ toc:
       - delete-instance.md
       - restore-data.md
       - topicgroup:
-          label: Enhancing security - Standard Plan only
+          label: Enhancing security - Standard Plan
           topics:
           - manage-access.md
           - grant-access-keys.md
@@ -277,7 +286,7 @@ toc:
           - at-events.md
           - manage-security-compliance.md
       - topicgroup:
-          label: Enhancing security - Unified Key Orchestrator Plan only
+          label: Enhancing security - Unified Key Orchestrator Plan
           topics:
           - uko-manage-access.md
           - uko-grant-access-vaults.md

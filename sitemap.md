@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-11-09"
 
 keywords: site map, doc structure, information architecture
 
@@ -179,6 +179,21 @@ Find what you are looking for in the compilation of topics that are available in
 * [Frequency of root key rotation](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#rotation-frequency)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#root-key-rotation-next)
+
+
+### About Bring Your Own HSM  - Standard Plan
+{: #sitemap_about_bring_your_own_hsm_standard_plan}
+
+
+[Introducing Bring Your Own HSM](/docs/hs-crypto?topic=hs-crypto-introduce-bring-your-own-hsm#introduce-bring-your-own-hsm)
+
+* [What is Bring Your Own HSM?](/docs/hs-crypto?topic=hs-crypto-introduce-bring-your-own-hsm#what-is-byohsm)
+
+* [How to enable Bring Your Own HSM?](/docs/hs-crypto?topic=hs-crypto-introduce-bring-your-own-hsm#how-to-enable-byohsm)
+
+* [Limitations and scope](/docs/hs-crypto?topic=hs-crypto-introduce-bring-your-own-hsm#byohsm-limitation-scope)
+
+* [Responsibilities](/docs/hs-crypto?topic=hs-crypto-introduce-bring-your-own-hsm#byohsm-responsibility)
 
 
 ## Understanding Hyper Protect Crypto Services with Unified Key Orchestrator Plan
@@ -370,6 +385,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [09 November 2023](/docs/hs-crypto?topic=hs-crypto-what-new##hs-crypto-nov2023)
+
+    * Added: {{site.data.keyword.hscrypto}} adds support for Bring Your Own HSM (BYOHSM)
 
 * [26 October 2023](/docs/hs-crypto?topic=hs-crypto-what-new##hs-crypto-26oct2023)
 
@@ -705,6 +724,31 @@ Find what you are looking for in the compilation of topics that are available in
 * [Next steps](/docs/hs-crypto?topic=hs-crypto-tutorial-uko-satellite#tutorial-uko-satellite-next-step)
 
 
+## Tutorials on Bring Your Own HSM
+{: #sitemap_tutorials_on_bring_your_own_hsm}
+
+
+[Managing your keys with BYOHSM in {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm)
+
+* [Objectives](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-objectives)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-prerequisites)
+
+* [Task flow](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-steps)
+
+* [Purchase and set up your on-premises HSMs](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step1)
+
+* [Configure and deploy your HSMs to work with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step2)
+
+* [Contact IBM to get the required information](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step3)
+
+* [Provision a {{site.data.keyword.hscrypto}} instance with BYOHSM](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step4)
+
+* [Use your {{site.data.keyword.hscrypto}} instance with BYOHSM](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step5)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-next)
+
+
 ## Provisioning service instances
 {: #sitemap_provisioning_service_instances}
 
@@ -887,8 +931,27 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next?](/docs/hs-crypto?topic=hs-crypto-uko-terraform-setup-for-hpcs#uko-terraform-setup-hpcs-next)
 
 
-## Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan only
-{: #sitemap_managing_root_keys_standard_keys_and_ep11_keys_and_keystores_standard_plan_only}
+## Setting up BYOHSM
+{: #sitemap_setting_up_byohsm}
+
+
+[Setting up BYOHSM](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-hsm-for-byohsm)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-prerequisites)
+
+* [Creating partitions](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-partition)
+
+* [Creating keys](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-key)
+
+* [Network connectivity best practice](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-network-connection)
+
+* [Preparing information for HSM connection](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-prepare-info)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-hsm-next)
+
+
+## Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan
+{: #sitemap_managing_root_keys_standard_keys_and_ep11_keys_and_keystores_standard_plan}
 
 
 
@@ -1161,8 +1224,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#manage-ep11-certificate-ui-next)
 
 
-## Managing vaults, key templates, KMS keys, and keystores - Unified Key Orchestrator Plan only
-{: #sitemap_managing_vaults_key_templates_kms_keys_and_keystores_unified_key_orchestrator_plan_only}
+## Managing vaults, key templates, KMS keys, and keystores - Unified Key Orchestrator Plan
+{: #sitemap_managing_vaults_key_templates_kms_keys_and_keystores_unified_key_orchestrator_plan}
 
 
 
@@ -1490,8 +1553,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-next)
 
 
-## Enhancing security - Standard Plan only
-{: #sitemap_enhancing_security_standard_plan_only}
+## Enhancing security - Standard Plan
+{: #sitemap_enhancing_security_standard_plan}
 
 
 [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access#manage-access)
@@ -1589,8 +1652,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [Governing {{site.data.keyword.hscrypto}} resource configuration with config rules](/docs/hs-crypto?topic=hs-crypto-manage-security-compliance#govern-crypto)
 
 
-## Enhancing security - Unified Key Orchestrator Plan only
-{: #sitemap_enhancing_security_unified_key_orchestrator_plan_only}
+## Enhancing security - Unified Key Orchestrator Plan
+{: #sitemap_enhancing_security_unified_key_orchestrator_plan}
 
 
 [Managing user access](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-manage-access)
