@@ -73,6 +73,16 @@
     "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
     "tiles": [
       {
+        "date": "Nov 2023",
+        "title": "Added: Hyper Protect Crypto Services adds support for Bring Your Own HSM (BYOHSM)",
+        "description": "BYOHSM extends your local key management capability to the cloud and creates a scalable, unified, and secure hybrid cloud ecosystem for your regulated workloads."
+      },
+      {
+        "date": "Oct 2023",
+        "title": "Deprecated: Hyper Protect Crypto Services in Sydney",
+        "description": "New instances of Hyper Protect Crypto Services can no longer be deployed in the IBM Cloud data center in `Sydney` after **30 November 2023**, and existing Hyper Protect Crypto Services instances and support in the IBM Cloud data center in Sydney will be decommissioned and discontinued on 31 March 2024. "
+      },
+      {
         "date": "Sept 2023",
         "title": "Added: Hyper Protect Crypto Services expands to the Madrid region",
         "description": "You can now create Hyper Protect Crypto Services instances in the Madrid (`eu-es`) region where the infrastructure is based on IBM Cloud Virtual Private Cloud (VPC). "
@@ -81,16 +91,6 @@
         "date": "August 2023",
         "title": "Updated: Key template support for Unified Key Orchestrator",
         "description": "You are now able to create key templates which specify the properties of the managed keys to be created. "
-      },
-      {
-        "date": "June 2023",
-        "title": "Updated: Pricing plan for Unified Key Orchestrator",
-        "description": "The pricing plan has been updated for Unified Key Orchestrator. You can find more details on the service catalog page. "
-      },
-      {
-        "date": "May 2023",
-        "title": "Added: Master key rotation support for all regions",
-        "description": "You are now able to rotate master keys in all supported regions. "
       }
     ]
   }

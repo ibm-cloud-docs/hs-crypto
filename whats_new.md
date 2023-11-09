@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-10-26"
+lastupdated: "2023-11-09"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -21,6 +21,20 @@ content-type: release-note
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+## 09 November 2023
+{: ##hs-crypto-nov2023}
+{: release-note}
+
+Added: {{site.data.keyword.hscrypto}} adds support for Bring Your Own HSM (BYOHSM)
+:    BYOHSM extends your local key management capability to the cloud and creates a scalable, unified, and secure hybrid cloud ecosystem for your regulated workloads. By connecting your own HSMs to your {{site.data.keyword.hscrypto}} instance, you have complete physical control over your keys to meet the data sovereignty regulations.
+
+    The following topics can help you get started with the BYOHSM function:
+    
+    * [Introducing Bring Your Own HSM](/docs/hs-crypto?topic=hs-crypto-introduce-bring-your-own-hsm)
+    * [Managing your keys with BYOHSM in IBM Cloud Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm)
+    * [Setting up BYOHSM](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm)
+    * [Provisioning an instance with BYOHSM](/docs/hs-crypto?topic=hs-crypto-provision&interface=ui#provision-standard)
 
 ## 26 October 2023
 {: ##hs-crypto-26oct2023}

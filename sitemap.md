@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-11-08"
+lastupdated: "2023-11-09"
 
 keywords: site map, doc structure, information architecture
 
@@ -385,6 +385,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [09 November 2023](/docs/hs-crypto?topic=hs-crypto-what-new##hs-crypto-nov2023)
+
+    * Added: {{site.data.keyword.hscrypto}} adds support for Bring Your Own HSM (BYOHSM)
 
 * [26 October 2023](/docs/hs-crypto?topic=hs-crypto-what-new##hs-crypto-26oct2023)
 
