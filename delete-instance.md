@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-11-07"
+lastupdated: "2023-11-10"
 
 keywords: delete, delete service instance, crypto unit, ibm cloud cli, clear crypto unit, uninstall
 
@@ -11,9 +11,6 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
-
-
 
 
 
@@ -26,11 +23,78 @@ You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} i
 ## Before you begin
 {: #delete-instance-prerequisite}
 
-1. Delete all keys managed in the service instance. 
-2. Follow [these instructions](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite) to set the environment variable `CLOUDTKEFILES` on your workstation to specify the directory where you saved the master key part files and signature key files you created when you initialized your service instance.
-3. Log in to {{site.data.keyword.cloud_notm}} also by following [these instructions](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite). 
+1. Follow [these instructions](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite) to set the environment variable `CLOUDTKEFILES` on your workstation to specify the directory where you saved the master key part files and signature key files you created when you initialized your service instance.
+2. Log in to {{site.data.keyword.cloud_notm}} also by following [these instructions](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite). 
 
-## Step 1: Select the crypto units to be deleted 
+
+## Step 1: Delete keys 
+{: #delete-all-key-step}
+
+To delete keys in the service instance, you need to delete root keys with the standard plan and managed keys with the {{site.data.keyword.uko_full_notm}} plan through the {{site.data.keyword.cloud_notm}} console or the CLI.
+
+### Deleting root keys from the {{site.data.keyword.cloud_notm}} console - Standard plan
+{: #delete-root-key-gui}
+{: ui}
+
+You can delete root keys of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console resources page by completing the following steps:
+
+1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
+4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
+5. Select the key that you want to delete and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key.
+6. From the options menu, click **Delete key**, enter the key name to confirm the key to be deleted, and click **Delete key**.
+
+### Deleting managed keys from the {{site.data.keyword.cloud_notm}} console - {{site.data.keyword.uko_full_notm}} plan
+{: #delete-managed-key-gui}
+{: ui}
+
+You can delete managed keys of {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} from the {{site.data.keyword.cloud_notm}} console resources page by completing the following steps:
+
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
+2. Click **Managed keys** from the navigation to view all the available keys.
+3. If the managed key that you want to delete is in Active state, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Deactivated** to deactivate the key first.
+4. To destroy a Pre-active or Deactivated key, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Destroyed**.
+5. Click **Destroy key** to confirm.
+6. To remove the key and the metadata from the vault, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**.
+
+### Deleting roots keys from the {{site.data.keyword.cloud_notm}} CLI - Standard plan
+{: #delete-root-key-cli}
+{: cli}
+
+You can delete root keys of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} CLI by running the following command:
+
+```
+ibmcloud kp key delete KEY_ID_OR_ALIAS
+        -i, --instance-id INSTANCE_ID
+    [--key-ring          KEY_RING_ID]
+    [-f, --force]
+    [-o, --output      OUTPUT]
+```
+{: codeblock}
+
+- *Key_ID_OR_ALIAS* is the v4 UUID or alias of the key that you want to delete. 
+- *-i, --instance-id* is your [service instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+- For more information about optional parameters, see [Key Protect CLI Reference](/docs/key-protect?topic=key-protect-key-protect-cli-reference&interface=ui#kp-key-delete-optional).
+
+
+
+### Deleting managed keys from the {{site.data.keyword.cloud_notm}} CLI - {{site.data.keyword.uko_full_notm}} plan
+{: #delete-managed-key-cli}
+{: cli}
+
+You can delete managed keys of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} CLI by running the following command:
+
+```
+ibmcloud hpcs uko managed-key-delete --id ID --uko-vault UKO-VAULT --if-match IF-MATCH
+```
+{: codeblock}
+
+- *ID* is the UUID of the key, which you can use the `ibmcloud hpcs uko managed-keys` command to retrieve the key UUID.
+- *UKO-VAULT* is the UUID of the vault, which you can use the `ibmcloud hpcs uko vaults` command to retrieve the vault UUID. 
+- *IF-MATCH* is value of the ETag from the header on a GET request, which you can use the `ibmcloud hpcs uko managed-key` command to retrieve the ETag.
+
+## Step 2: Select the crypto units to be deleted 
 {: #select-crypto-unit-step}
 
 1. To select the administrators to sign TKE commands, use the following command:
@@ -58,7 +122,7 @@ You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} i
 
     A list of the crypto units in the target resource group under the current user account is displayed. When prompted, enter crypto unit numbers to be zeroized to the selected crypto unit list.
 
-## Step 2: Zeroize crypto units
+## Step 3: Zeroize crypto units
 {: #zeroize-crypto-unit-step}
 
 If you initialize your service instance and load the [master key](#x2908413){: term} to the service instance, you need to set the crypto units back to imprint mode with the following steps:
@@ -79,7 +143,7 @@ If you initialize your service instance and load the [master key](#x2908413){: t
 After you zeroize the crypto unit, the administrator [signature keys](#x8250375){: term} and the master key are cleared from the crypto unit, which means you are not able to access keys that are protected by the master key. Any resources that are associated with the root keys cannot be accessed. However, you might still be charged for the resources, such as the [Immutable Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-immutable), as long as the policy is enforced. 
 {: important}
 
-## Step 3: Optional - Uninstall the {{site.data.keyword.hscrypto}} utilities
+## Step 4: Optional - Uninstall the {{site.data.keyword.hscrypto}} utilities
 {: #uninstall-utilities-step}
 
 Before you delete the service instance, you might want to uninstall the utilities that are associated with {{site.data.keyword.hscrypto}} first.
@@ -126,7 +190,7 @@ If you initialize your service instance by loading master key parts from smart c
         ```
         {: pre}
 
-## Step 4: Delete your service instance
+## Step 5: Delete your service instance
 {: #delete-instance-step}
 
 After you set the crypto units to imprint mode, you can choose to delete your service instance through the {{site.data.keyword.cloud_notm}} console resources page, the instance details page, or the CLI.
@@ -165,4 +229,6 @@ ibmcloud resource service-instance-delete <instance_name|instance_ID>
 {: pre}
 
 Replace *instance_name* with your instance name and *instance_ID* with your [service instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). You can use either the instance name or the service instance ID to run the command.
+
+
 
