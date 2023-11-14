@@ -23,7 +23,7 @@ With {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}, yo
 
 With {{site.data.keyword.uko_full_notm}}, you can organize everything in vaults. *Vaults* are secure repositories that bundle your managed keys and the keystores to distribute managed keys to. You can use vaults to grant access to different Identity and Access Management (IAM) user groups.
 
-Watch the following video to learn how {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} manages your keys in a multi-cloud environment:
+Watch the following video to learn how {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} manages your keys in a multicloud environment:
 
 ![Introducing Hyper Protect Crypto Services with Unified Key Orchestrator](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_2q05kgh2){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
 
