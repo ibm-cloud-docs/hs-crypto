@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-12"
+lastupdated: "2023-11-10"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -293,8 +293,6 @@ When you select the **Create with custom properties** option, you are creating a
     {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keys"}
     {: tab-group="Managed key properties without templates"}
     {: class="comparison-tab-table"}
-
-    
 
 9. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.
 
