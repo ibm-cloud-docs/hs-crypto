@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-07-14"
+lastupdated: "2023-11-15"
 
 keywords: initialize service instance, load master key, key ceremony, recovery crypto unit
 
@@ -126,7 +126,7 @@ To initialize your service instance using recovery crypto units, complete the fo
         ```
         {: screen}
 
-        The signature key file is protected by password. You need to remember the passwords that you enter when creating new signature key files and make sure the files are not removed from your workstation. Otherwise, you are not able to perform future administrative actions that need to be signed, such as [rotating master keys](https://test.cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit).
+        The signature key file is protected by password. You need to remember the passwords that you enter when creating new signature key files and make sure the files are not removed from your workstation. Otherwise, you are not able to perform future administrative actions that need to be signed, such as [rotating master keys](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit).
         {: important}
 
     4. Load the master key to crypto units.
