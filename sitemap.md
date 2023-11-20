@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-11-15"
+lastupdated: "2023-11-20"
 
 keywords: site map, doc structure, information architecture
 
