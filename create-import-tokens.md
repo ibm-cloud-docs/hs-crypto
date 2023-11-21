@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-11-20"
 
 keywords: create import token, secure import, key material, key wrapping key, import token api, bring your own key, byok
 
@@ -78,7 +78,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/import_token
 {: #create-import-token-cli}
 {: cli}
 
-Complete the following steps to create an import token using the {{site.data.keyword.keymanagementserviceshort}} CLI, which is integrated in {{site.data.keyword.hscrypto}}:
+Complete the following steps to create an import token by using the {{site.data.keyword.keymanagementserviceshort}} CLI, which is integrated in {{site.data.keyword.hscrypto}}:
 
 1. [Set up the {{site.data.keyword.keymanagementserviceshort}} CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli).
 
@@ -124,7 +124,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/import_token
     | instance_ID | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     {: caption="Table 1. Describes the variables needed to retrieve an import token with the key management service API" caption-side="bottom"}
 
-    A successful `GET api/v2/import_token` request retrieves the import token for your service instance. The response body contains the metadata that is associated with your import token, such as the creation date and policy details. The following snippet shows example output with truncated values.
+    A successful `GET api/v2/import_token` request retrieves the import token for your service instance. The response body contains the metadata that is associated with your import token, such as the creation date and policy details. The following snippet shows an example output with truncated values.
 
     ```json
     {

@@ -344,10 +344,6 @@ toc:
       - shared-responsibilities.md
       - ha-dr.md
       - open-source-licenses.md
-      links:
-      - link:
-          label: IBM Cloud Hyper Protect Services resources
-          href: https://ibm-hyper-protect.github.io/
   - navgroup:
       id: help
       topics:

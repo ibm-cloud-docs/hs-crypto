@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-20"
+lastupdated: "2023-11-21"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -62,6 +62,14 @@ Dealing with multiple clouds means to deal with cryptographic keys in multiple k
 - Secure backup of all keys and easy restoration across multiple clouds
 
 For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service architecture](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation).
+
+Watch the following video to learn how to manage compliance of a Microsoft Office 365 environment using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}:
+
+![Managing compliance of a Microsoft Office 365 environment using IBM Cloud Hyper Protect Crypto Services with Unified Key Orchestrator](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_1pzzhrb8){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
+
+Watch the following video to learn how to securely manage AWS S3 encryption keys using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}:
+
+![Securely managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_1a6c6vub){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
 
 ## Key features
 {: #uko-key-features}

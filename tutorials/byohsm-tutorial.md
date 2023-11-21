@@ -2,11 +2,15 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-11-07"
+lastupdated: "2023-11-20"
 
 keywords: bring your own hsm, byohsm, hybrid hpcs, deploy hsm, hybrid KMS, byohsm get started
 
 subcollection: hs-crypto
+
+content-type: tutorial
+services: hs-crypto
+completion-time: 2h
 
 ---
 
