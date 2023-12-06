@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-15"
+lastupdated: "2023-12-06"
 
 keywords: Unified Key Orchestrator, search keys, key management, kms keys
 
@@ -36,6 +36,7 @@ To filter keys by using the console, complete the following steps:
    
    You can set the following filter criteria. 
 
+   
    |       Property	     |                         Description                        |
    |----------------------|-----------------------------------------------------------|
    | Vault                | The vault that controls access to the managed key.        |
@@ -50,6 +51,8 @@ To filter keys by using the console, complete the following steps:
    | State                | Key states include Pre-active, Active, Deactivated, and Destroyed. |
    | Last rotated         | The time range when the key was last rotated. |
    {: caption="Table 1. Filter managed keys" caption-side="bottom"}
+   
+
    
 
 
