@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-12-05"
+lastupdated: "2023-12-07"
 
 keywords: Unified Key Orchestrator, view keys, key management, kms keys, UKO
 
@@ -41,7 +41,7 @@ To view a list of your keys by using the console, complete the following steps:
     | Version              | The version of the managed key. It is in the format of `V` plus the version number. For example, `V2` means that [the key was rotated](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys) once and this is the second version of the key material. |
     | ID                   | A string that uniquely identifies the key. |
     | Vault                | The vault that controls access to the managed key.           |
-    | State                | Key states include Pre-active, Active, Deactivated, and Destroyed. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). \n \n If your key state is different from the key state in its keystores, an **Out of sync** flag is displayed beside the state. There can be multiple reasons why the key state is out of sync. For example, you have deactivated the key in this keystore before, or you activate the key through the CLI and the console doesn't reflect the state timely. When you hover over this flag, you can see the specific reason. You can sync keys by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync keys**.  |
+    | State                | Key states include Pre-active, Active, Deactivated, and Destroyed. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). \n \n If your key state is different from the key state in its keystores, an **Out of sync** flag is displayed beside the state. There can be multiple reasons why the key state is out of sync. For example, you have deactivated the key in this keystore before, or you activate the key through the CLI and the console doesn't reflect the state timely. When you hover over this flag, you can see the specific reason. You can sync keys by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync key**.  |
     | Key template         | The key template that the key is created with. For more information, see [Creating key templates](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui).| 
     | Activation date      | The date when the key gets activated, or the date on which you plan to activate the key. |
     | Expiration date      | The date when the key gets deactivated, or the date on which you plan to deactivate the key. |
