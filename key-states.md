@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-07-10"
+lastupdated: "2023-12-07"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle
 
@@ -64,4 +64,4 @@ The following table shows how {{site.data.keyword.hscrypto}} handles service act
 
 After you add a root key to the service, use the {{site.data.keyword.cloud_notm}} console or the {{site.data.keyword.hscrypto}} key management REST API to view your key's transition history and configuration.
 
-For audit purposes, you can also monitor the activity trail for a root key by integrating {{site.data.keyword.hscrypto}} with the [{{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started){: external}. After both services are provisioned and running, activity events are generated and automatically collected in a {{site.data.keyword.at_full_notm}} log when you perform actions on keys in {{site.data.keyword.hscrypto}}.
+For audit purposes, you can also monitor the activity trail for a root key by integrating {{site.data.keyword.hscrypto}} with the [{{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started){: external}. After both services are provisioned and running, activity events are generated and automatically collected in an {{site.data.keyword.at_full_notm}} log when you perform actions on keys in {{site.data.keyword.hscrypto}}.
