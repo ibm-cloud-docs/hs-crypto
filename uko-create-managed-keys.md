@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-11-28"
+lastupdated: "2023-12-07"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -143,7 +143,7 @@ When you select the **Create with a key template** option, you are creating a ma
 
 You have successfully created a managed key. 
 
-If you are creating internal KMS keys during the master key rotation, internal KMS keys can still be created successfully. However, an **Out of sync** flag is displayed next to the key state. For each of these keys, you can sync keys by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync keys** after the master key rotation is completed. 
+If you are creating internal KMS keys during the master key rotation, internal KMS keys can still be created successfully. However, an **Out of sync** flag is displayed next to the key state. For each of these keys, you can sync keys by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync key** after the master key rotation is completed. 
 {: note}
 
 ## Creating managed keys with a key template through the API
@@ -298,7 +298,7 @@ When you select the **Create with custom properties** option, you are creating a
 
 You have successfully created a managed key. 
 
-If you are creating internal KMS keys during the master key rotation, internal KMS keys can still be created successfully. However, an **Out of sync** flag is displayed next to the key state. For each of these keys, you can sync keys by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync keys** after the master key rotation is completed. 
+If you are creating internal KMS keys during the master key rotation, internal KMS keys can still be created successfully. However, an **Out of sync** flag is displayed next to the key state. For each of these keys, you can sync keys by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync key** after the master key rotation is completed. 
 {: note}
 
 
