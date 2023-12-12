@@ -15,6 +15,7 @@ subcollection: hs-crypto
 
 
 
+
 # Creating internal KMS keystores
 {: #create-internal-keystores}
 
@@ -61,8 +62,6 @@ You have successfully created an internal KMS keystore.
 
 
 
-
-
 ## Creating internal KMS keystores with the API
 {: #create-internal-keystores-api}
 {: api}
@@ -79,6 +78,9 @@ To create an internal keystore through the API, follow these steps:
     {: codeblock}
 
     For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-keystore){: external}.
+
+
+
 
 
 ## What's next
