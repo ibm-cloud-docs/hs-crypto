@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-11-10"
+lastupdated: "2023-12-12"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -27,7 +27,10 @@ You can create a key template from scratch with full control by yourself. To cre
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Key templates** from the navigation to view all the available key templates.
-3. To create a key template, click **Create key template**.
+3. To create a key template, click **Create key template**. 
+
+   
+
 4. To control access to keys that are to be created with the key template, under **Vault**, select a vault and then click **Next**. All keys to be created with the key template will be managed in the selected vault.
    
    If you want to manage key access in a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
