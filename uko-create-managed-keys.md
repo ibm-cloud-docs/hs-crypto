@@ -184,6 +184,9 @@ When you select the **Create with custom properties** option, you are creating a
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. To create a managed key, click **Create key**.
+   
+   
+   
 4. Under **Vault**, select a vault for the key for access control, and click **Next**. 
    
    If you want to assign the key to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
