@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-24"
+lastupdated: "2023-12-15"
 
 keywords: Unified Key Orchestrator, UKO keystore, edit keystore, key management, internal keystore, KMS keystore
 
@@ -41,6 +41,8 @@ To edit the details of an internal KMS keystore by using the console, complete t
 
 You can search for a specific keystore by using the search bar, or filter keystores based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the **Keystores** table.
 {: tip}
+
+
 
 
 
