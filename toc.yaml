@@ -130,7 +130,7 @@ toc:
       - topicgroup:
           label: Tutorials on Unified Key Orchestrator
           topics:
-          - tutorials/uko-kp-satellite.md
+          - tutorials/uko-kp-satellite.md 
           links:
           - link:
               label: "Securely Managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator"
