@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-12-08"
+lastupdated: "2023-12-18"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -63,7 +63,7 @@ To edit the details of a managed key by using the console, complete the followin
 
         - Sync keys
 
-            If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. An **Out of sync** flag is also displayed in the corresponding keystore card. There can be multiple reasons why the key state is out of sync. For example, you have unlined the key in this keystore before, or you have relinked the key through the CLI and the console doesn't reflect the state timely. When you hover over this flag, you can see the specific reason. You can sync the key state by clicking **Sync key**. 
+            If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. An **Out of sync** flag is also displayed in the corresponding keystore card. There can be multiple reasons why the key state is out of sync. For example, there was an issue in relinking the key in the keystore, or the key was modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. When you hover over this flag, you can see the specific reason. You can sync the key state by clicking **Sync key**. 
 
             During master key rotation, you can activate {{site.data.keyword.cloud_notm}} KMS key in internal keystores. However, it will be shown as **Out of sync**. You can sync the key after the master key rotation is complete. 
             {: note} 
