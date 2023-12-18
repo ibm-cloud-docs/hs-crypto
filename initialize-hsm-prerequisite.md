@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-11-28"
 
 keywords: initialize service, key ceremony, hsm, load master key, key ceremony preparation
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 Before you can initialize your service instance, make sure that you have done the following:
 {: shortdesc}
 
-1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli){: external}.
+1. Install the latest version of [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli){: external}.
 
 2. Install the latest Trusted Key Entry (TKE) CLI plug-in with the following command:
 

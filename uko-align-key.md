@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-14"
+lastupdated: "2023-12-06"
 
 keywords: Unified Key Orchestrator, align template, key template
 
@@ -37,6 +37,8 @@ To realign keys with key templates by using the console, complete the following 
 5. View the details on the confirmation page, check all boxes, and then click **Realign with template** to confirm.
 
 Your key is now aligned again with the key template in terms of assigned keystores. 
+
+
 
 ## Realigning keys with key templates through the API
 {: #align-key-api}

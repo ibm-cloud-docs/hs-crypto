@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2022, 2023
-lastupdated: "2023-09-19"
+lastupdated: "2023-12-07"
 
 keywords: uko, rotate, rotate master key, rotate encryption key, rotate keys automatically, key rotation, rewrap data
 
@@ -103,7 +103,7 @@ In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} p
 - External keys are wrapped by one or more key-encryption keys with advanced encryption. The key-encryption keys are encrypted by the master key. 
 
 If you want to create a managed key or a vault during master key rotation, keep in mind the following considerations: 
-- You can still create or activate internal KMS keys. However, an **Out of sync** flag can be displayed. To sync each of these keys, after the master key rotation is complete, select **Show details** on the Actions  ![Actions icon](../icons/action-menu-icon.svg "Actions")  menu and then click **Sync keys**.  
+- You can still create or activate internal KMS keys. However, an **Out of sync** flag can be displayed. To sync each of these keys, after the master key rotation is complete, select **Show details** on the Actions  ![Actions icon](../icons/action-menu-icon.svg "Actions")  menu and then click **Sync key**.  
 - You can create external keys with no restrictions.  
 - You can create vaults only after the master key rotation process is complete.
 

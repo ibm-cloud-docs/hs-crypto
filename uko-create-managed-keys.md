@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-11-10"
+lastupdated: "2023-12-12"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -42,6 +42,9 @@ When you select the **Create with a key template** option, you are creating a ma
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. To create a managed key, click **Create key**. 
+
+   
+
 4. Under **Vault**, select a vault for the key for access control, and click **Next**. 
    
    If you want to assign the key to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
@@ -92,7 +95,7 @@ When you select the **Create with a key template** option, you are creating a ma
     |----------------------|-----------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key. It must be 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (_-).  \n \n **Important:** If the key naming scheme is defined in the key template, you need to enter values for each custom placeholder. Each placeholder must be at least 2 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. An example of the managed key name must not exceed 50 characters in length. You can also specify the extended description for your key. Note that you cannot modify the key name after the key creation.  |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
-    | Key state                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | Key state                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
     | Activation date      |  Plan a date to activate the Pre-active key. Automatic state change is to be triggered on the planned date. |
     | Expiration date      |  Plan a date to deactivate the key. Automatic state change is to be triggered on the planned date. |
     | Protection level     |  (Read only) **HSM-protected key** protection level applies to keys that are protected by FIPS 140-2 Level 3 Hardware Security Modules (HSMs) in Google Cloud. This type of keys ensures the higher security. **Software-protected key** protection level applies to keys that are protected by software. You can choose this level to [reduce cost](https://cloud.google.com/kms/pricing){: external}. For more information, see [Cloud KMS software backend: SOFTWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#software-protection-level){: external} and [Cloud KMS HSM backend: HARDWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#hardware-protection-level){: external}. \n \n **Note:** Software-protected keys don't support the Elliptic curve `secp256k1` algorithm.  |
@@ -109,7 +112,7 @@ When you select the **Create with a key template** option, you are creating a ma
     |----------------------|-----------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key. It must 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n \n **Important:** If the key naming scheme is defined in the key template, you need to enter values for each custom placeholder. Each placeholder must be at least 2 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. An example of the managed key name must not exceed 50 characters in length. You can also specify the extended description for your key. Note that you cannot modify the key name after the key creation. |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
-    | Key state                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | Key state                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
     | Activation date      |  Plan a date to activate the Pre-active key. Automatic state change is to be triggered on the planned date. |
     | Expiration date      |  Plan a date to deactivate the key. Automatic state change is to be triggered on the planned date. |
     | Key algorithm            |  (Read only) The encryption algorithm to encrypt data for the key.           | 
@@ -125,7 +128,7 @@ When you select the **Create with a key template** option, you are creating a ma
     |----------------------|-----------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key. It must be 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n \n **Important:** If the key naming scheme is defined in the key template, you need to enter values for each custom placeholder. Each placeholder must be at least 2 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. An example of the managed key name must not exceed 50 characters in length. You can also specify the extended description for your key. Note that you cannot modify the key name after the key creation.|
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
-    | Key state                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | Key state                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
     | Activation date      |  Plan a date to activate the Pre-active key. Automatic state change is to be triggered on the planned date. |
     | Expiration date      |  Plan a date to deactivate the key. Automatic state change is to be triggered on the planned date. |
     | Key algorithm |   (Read only) The encryption algorithm to encrypt data for the key.           | 
@@ -143,7 +146,7 @@ When you select the **Create with a key template** option, you are creating a ma
 
 You have successfully created a managed key. 
 
-If you are creating internal KMS keys during the master key rotation, internal KMS keys can still be created successfully. However, an **Out of sync** flag is displayed next to the key state. For each of these keys, you can sync keys by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync keys** after the master key rotation is completed. 
+If you are creating internal KMS keys during the master key rotation, internal KMS keys can still be created successfully. However, an **Out of sync** flag is displayed next to the key state. For each of these keys, you can sync keys by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync key** after the master key rotation is completed. 
 {: note}
 
 ## Creating managed keys with a key template through the API
@@ -181,6 +184,9 @@ When you select the **Create with custom properties** option, you are creating a
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. To create a managed key, click **Create key**.
+   
+   
+   
 4. Under **Vault**, select a vault for the key for access control, and click **Next**. 
    
    If you want to assign the key to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
@@ -298,7 +304,7 @@ When you select the **Create with custom properties** option, you are creating a
 
 You have successfully created a managed key. 
 
-If you are creating internal KMS keys during the master key rotation, internal KMS keys can still be created successfully. However, an **Out of sync** flag is displayed next to the key state. For each of these keys, you can sync keys by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync keys** after the master key rotation is completed. 
+If you are creating internal KMS keys during the master key rotation, internal KMS keys can still be created successfully. However, an **Out of sync** flag is displayed next to the key state. For each of these keys, you can sync keys by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync key** after the master key rotation is completed. 
 {: note}
 
 

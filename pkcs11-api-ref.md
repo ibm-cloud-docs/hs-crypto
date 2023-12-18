@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-09-25"
+lastupdated: "2023-12-18"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -119,10 +119,10 @@ Not all PKCS #11 functions are implemented by {{site.data.keyword.hscrypto}}. Fu
 |[Verifying signatures and MACs](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959747){: external} |C_VerifyFinal  |Yes|Finishes a multiple-part verification operation.|
 |[Verifying signatures and MACs](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959747){: external} |C_VerifyRecoverInit|No|Initializes a verification operation where the data is recovered from the signature.|
 |[Verifying signatures and MACs](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959747){: external} |C_VerifyRecover|No|Verifies a signature on single-part data, where the data is recovered from the signature.|
-|[Dual-purpose cryptographic functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959748){: external} |C_DigestEncryptUpdate|No|Continues simultaneous multiple-part digesting and encryption operations.|
-|[Dual-purpose cryptographic functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959748){: external} |C_DecryptDigestUpdate|No|Continues simultaneous multiple-part decryption and digesting operations.|
-|[Dual-purpose cryptographic functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959748){: external} |C_SignEncryptUpdate|No|Continues simultaneous multiple-part signature and encryption operations.|
-|[Dual-purpose cryptographic functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959748){: external} |C_DecryptVerifyUpdate|No|Continues simultaneous multiple-part decryption and verification operations.|
+|[Dual-purpose cryptographic functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959748){: external} |C_DigestEncryptUpdate|Yes|Continues simultaneous multiple-part digesting and encryption operations.|
+|[Dual-purpose cryptographic functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959748){: external} |C_DecryptDigestUpdate|Yes|Continues simultaneous multiple-part decryption and digesting operations.|
+|[Dual-purpose cryptographic functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959748){: external} |C_SignEncryptUpdate|Yes|Continues simultaneous multiple-part signature and encryption operations.|
+|[Dual-purpose cryptographic functions](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959748){: external} |C_DecryptVerifyUpdate|Yes|Continues simultaneous multiple-part decryption and verification operations.|
 |[Key management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749){: external} |C_GenerateKey  |Yes|Generates a secret key.|
 |[Key management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749){: external} |C_GenerateKeyPair|Yes|Generates a public or private key pair.|
 |[Key management](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959749){: external} |C_WrapKey      |Yes|Wraps (encrypts) a key.|

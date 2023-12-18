@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-15"
+lastupdated: "2023-12-15"
 
 keywords: Unified Key Orchestrator, UKO keystore, delete keystore, internal keystore, KMS keystore
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 
@@ -37,6 +38,9 @@ To delete an internal keystore by using the console, complete the following step
 
 
 The internal keystore has been deleted with all the managed keys deactivated and key templates detached. You will no longer be able to access any metadata associated with the keystore. 
+
+
+
 
 
 ## Deleting internal keystores with the API

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-24"
+lastupdated: "2023-12-15"
 
 keywords: Unified Key Orchestrator, UKO keystore, create keystore, internal keystore， KMS keystore
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 
@@ -39,6 +40,9 @@ To create an internal KMS keystore by using the console, complete the following 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Keystores** from the navigation to view all the available keystores.
 3. To create a keystore, click **Add keystore**.
+
+   
+
 4. Under **Vault**, select a vault for the keystore for access control, and click **Next**. 
 
    If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
@@ -55,8 +59,6 @@ To create an internal KMS keystore by using the console, complete the following 
 8. After you confirm the keystore details, click **Create keystore** to create the keystore.
 
 You have successfully created an internal KMS keystore.
-
-
 
 
 
@@ -78,11 +80,16 @@ To create an internal keystore through the API, follow these steps:
     For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-keystore){: external}.
 
 
+
+
+
 ## What's next
 {: #create-internal-keystores-next}
 
 - To find out instructions on editing an internal keystore, check out [Editing internal keystores](/docs/hs-crypto?topic=hs-crypto-edit-internal-keystores).
 
 - To find out how to delete an internal keystore, check out [Deleting internal keystores](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores).
+
+- To find out how to manage keys in Azure Key Vault, check out [Managing keys in Azure keystores by using Double Key Encryption](/docs/hs-crypto?topic=hs-crypto-manage-dke-keystores).
 
 
