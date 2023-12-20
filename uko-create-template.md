@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-12-18"
+lastupdated: "2023-12-20"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -144,7 +144,7 @@ You can create a key template from scratch with full control by yourself. To cre
     {: caption="Table 5. IBM Key Protect Key templates properties" caption-side="bottom"}
     {: tab-title="IBM Key Protect Key templates"}
     {: tab-group="Key templates from scratch properties"}
-    {: class="comparison-tab-table"}
+    {: class="comparison-tab-table"} 
 
 8. Under **Summary**, view the summary of your key template, and then click **Create key template** to confirm.
 

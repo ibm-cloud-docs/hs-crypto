@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-12-12"
+lastupdated: "2023-12-20"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -138,7 +138,7 @@ When you select the **Create with a key template** option, you are creating a ma
     {: caption="Table 5. {{site.data.keyword.keymanagementserviceshort}} keys properties" caption-side="bottom"}
     {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keys"}
     {: tab-group="Managed key properties with templates"}
-    {: class="comparison-tab-table"}
+    {: class="comparison-tab-table"} 
 
 8. View the key properties defined by the selected key template and click **Next** to continue.
 
@@ -199,8 +199,7 @@ When you select the **Create with custom properties** option, you are creating a
     - **Azure Key Vault**: Create a key to be used and stored in an Azure Key Vault.
     - **Google Cloud KMS**: Create a key to be used and stored in a Google Cloud KMS keystore.
     - **IBM Cloud KMS**: Create a key to be used and stored in an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keystore.
-    - **IBM {{site.data.keyword.keymanagementserviceshort}}**: Create a key to be used and stored in an IBM {{site.data.keyword.keymanagementserviceshort}} key ring.
-    
+    - **IBM {{site.data.keyword.keymanagementserviceshort}}**: Create a key to be used and stored in an IBM {{site.data.keyword.keymanagementserviceshort}} key ring. 
    
    After a keystore type is selected, you can activate the key in keystores of this type only. If you select **IBM Cloud KMS**, the created key is a root key that can be used for [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
    {: note}

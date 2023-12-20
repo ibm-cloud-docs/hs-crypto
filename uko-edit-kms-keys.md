@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-12-18"
+lastupdated: "2023-12-20"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -78,7 +78,8 @@ To edit the details of a managed key by using the console, complete the followin
 
         
 
-5. Under **Advanced properties**, click **Edit** to update or add new key tags to the key. Key tags are used as identifications of a key.
+5. Under **Advanced properties**, click **Edit** to update or add new key tags to the key. Key tags are used as identifications of a key. 
+  
 6. When you finish making changes, click **Save** to save the changes.
 
 You can search for a specific key by using the search bar, or filter keys based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the **Managed keys** table. For more information, see [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
