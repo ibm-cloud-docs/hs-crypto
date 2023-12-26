@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-12-18"
+lastupdated: "2023-12-26"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -53,11 +53,11 @@ To edit the details of a managed key by using the console, complete the followin
     2. In the **Keystores** card, click **Edit** to add or remove the keystores where the key is activated. You can use a key only for encryption and decryption after it is activated in at least one keystore. If the key is created with a key template, an `Unaligned` flag can be displayed if you update the keystore assignment, which means the key is no longer in sync with the key template.  
         - Add keystores
           
-            If you want to assign and activate the key in more keystores, click **Edit** and check the corresponding keystore cards. The Active key state is synced across all keystores.
+            If you want to distribute and activate the key in more keystores, click **Edit** and check the corresponding keystore cards. The Active key state is synced across all keystores.
         
         - Remove keystores
 
-            If you want to unassign and deactivate the key in some keystores, click **Edit** and clear the checkbox in the corresponding keystore cards. After the removal, the key material remains unless you destroy the key. The key state in the removed keystores becomes Deactivated and cannot be synced with the managed key state in the future. However, you can reactivate the key by reassigning the key to these keystores so that the key state is synced again.
+            If you want to unlink and deactivate the key in some keystores, click **Edit** and clear the checkbox in the corresponding keystore cards. After the removal, the key material remains unless you destroy the key. The key state in the removed keystores becomes Deactivated and cannot be synced with the managed key state in the future. However, you can reactivate the key by reassigning the key to these keystores so that the key state is synced again.
 
             A managed key is synced across multiple keystores that it is assigned to. You can fully remove a key from a keystore only after the key is destroyed. However, you can deactivate the key or remove the keystores at any time.
 
@@ -70,7 +70,7 @@ To edit the details of a managed key by using the console, complete the followin
             
         - Create keystores
         
-            Assigning and activating a key in multiple keystores enables redundancy. If you want to assign the key in a new keystore, click **Add keystore**. For more instructions, see [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
+            Assigning and activating a key in multiple keystores enables redundancy. If you want to distribute the key in a new keystore, click **Add keystore**. For more instructions, see [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
 
         - Realign with templates
 
@@ -78,7 +78,10 @@ To edit the details of a managed key by using the console, complete the followin
 
         
 
-5. Under **Advanced properties**, click **Edit** to update or add new key tags to the key. Key tags are used as identifications of a key.
+
+
+5. Under **Advanced properties**, click **Edit** to update or add new key tags to the key. Key tags are used as identifications of a key. 
+  
 6. When you finish making changes, click **Save** to save the changes.
 
 You can search for a specific key by using the search bar, or filter keys based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the **Managed keys** table. For more information, see [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).

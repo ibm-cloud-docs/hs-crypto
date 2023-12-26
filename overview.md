@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-08-15"
+lastupdated: "2023-12-26"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -23,7 +23,7 @@ subcollection: hs-crypto
 
 Watch the following video to learn how {{site.data.keyword.hscrypto}} provides you with exclusive encryption key control and data protection in the cloud:
 
-![IBM Cloud Hyper Protect Crypto Services Explainer](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_zxwh6ixm){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
+![IBM Cloud Hyper Protect Crypto Services Overview](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_1ipwq52p){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
 
 ## Why {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?
 {: #why_hpcs}
