@@ -64,9 +64,9 @@ To edit the details of a key template by using the console, complete the followi
 
         
 
-5. When you finish making changes, click **Save** to save the changes.
+5. When you finish making changes, click **Save** to save the changes. 
 
-6. Under **Managed Keys**, view the total number of managed keys that are created based on this key template. You can also edit the managed keys by clicking the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key that you want to edit, and select **Show details**. For more information, see [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys&interface=ui).
+7. Under **Managed Keys**, view the total number of managed keys that are created based on this key template. You can also edit the managed keys by clicking the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key that you want to edit, and select **Show details**. For more information, see [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys&interface=ui).
 
     To search for a specific key by using the search bar, or filter keys based on your needs, click the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the table. 
     {: tip}
