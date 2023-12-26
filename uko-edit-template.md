@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-12-20"
+lastupdated: "2023-12-26"
 
 keywords: Unified Key Orchestrator, edit key templates, key management, kms keys, UKO
 
@@ -49,11 +49,11 @@ To edit the details of a key template by using the console, complete the followi
 
          - Add keystores
     
-           If you want to assign keys to be created with this template to other keystores, click **Edit** and check the corresponding keystore cards. 
+           If you want to distribute keys to be created with this template to other keystores, click **Edit** and check the corresponding keystore cards. 
 
          - Remove keystores
 
-           If you want to unassign keys to be created with this template from some of the keystores, click **Edit** and clear the checkbox in the corresponding keystore cards. 
+           If you want to unlink keys to be created with this template from some of the keystores, click **Edit** and clear the checkbox in the corresponding keystore cards. 
         
          - Create a keystore
     

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-12-20"
+lastupdated: "2023-12-26"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -27,7 +27,7 @@ Before you create a managed key, keep in mind the following considerations:
 - A managed key can be assigned to only one vault.
 - A managed key can be used for encryption and decryption only after you activate it in at least one keystore. 
 - You need to select the keystore type when you create a managed key. The keystore type that you select determines where the managed key is to be stored. The keystore type cannot be changed later.
-- Assigning a managed key in multiple keystores enables redundancy.
+- Distributing a managed key in multiple keystores enables redundancy.
 - To protect your privacy, do not store your personal data as metadata for your managed key.
 - You can create a managed key with only one key template. 
 - Currently, importing managed keys is not supported. You can create managed keys with {{site.data.keyword.uko_full_notm}} only.
