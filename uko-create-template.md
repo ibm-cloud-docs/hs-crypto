@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-12-20"
+lastupdated: "2023-12-26"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -231,7 +231,7 @@ Note that you need to keep in mind of the following considerations:
     - **Azure Key Vault**: It must be 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). 
     - **Google Cloud KMS**: It must be 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (_-).
     - **IBM Cloud KMS**: It must 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces.
-    - **IBM Key Protect**: It must 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces.
+    - **IBM Key Protect**: It must 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. 
 
 - Enter fixed strings or placeholders for the key naming scheme. Each placeholder must be within 1-20 characters in length. Note that you need to use the angle brackets (<>) to insert placeholders. 
 
