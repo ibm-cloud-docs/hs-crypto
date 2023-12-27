@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-12-26"
+lastupdated: "2023-12-27"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -48,6 +48,7 @@ You can create a key template from scratch with full control by yourself. To cre
     * (Optional) Decide where your keys to be created with the key template are going to be activated or stored under **Keystores**. Activating a key in multiple keystores enables redundancy.
 
         If there are no existing keystores, click **Add keystore** to [create internal KMS keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [connect to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores). 
+
 
         After a keystore type is selected, you can create keys in keystores of this type only.
         {: note}
