@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-12-15"
+lastupdated: "2023-12-27"
 
 keywords: Unified Key Orchestrator, UKO keystore, create keystore, internal keystore， KMS keystore
 
@@ -89,7 +89,5 @@ To create an internal keystore through the API, follow these steps:
 - To find out instructions on editing an internal keystore, check out [Editing internal keystores](/docs/hs-crypto?topic=hs-crypto-edit-internal-keystores).
 
 - To find out how to delete an internal keystore, check out [Deleting internal keystores](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores).
-
-- To find out how to manage keys in Azure Key Vault, check out [Managing keys in Azure keystores by using Double Key Encryption](/docs/hs-crypto?topic=hs-crypto-manage-dke-keystores).
 
 
