@@ -44,6 +44,8 @@ You can create a key template from scratch with full control by yourself. To cre
         - **Google Cloud KMS**: Create a key template for keys to be used and stored in a Google Cloud KMS keystore.
         - **IBM Cloud KMS**: Create a key template for keys to be used and stored in an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keystore.
         - **IBM {{site.data.keyword.keymanagementserviceshort}}**: Create a key template for keys to be used and stored in an IBM {{site.data.keyword.keymanagementserviceshort}} key ring.
+
+        For more information about the keystores, see [Components](/docs/hs-crypto?topic=hs-crypto-introduce-uko&interface=ui#Components).
         
     * (Optional) Decide where your keys to be created with the key template are going to be activated or stored under **Keystores**. Activating a key in multiple keystores enables redundancy. 
 
