@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-12-06"
+lastupdated: "2023-12-28"
 
 keywords: Unified Key Orchestrator, align template, key template
 
@@ -14,21 +14,21 @@ subcollection: hs-crypto
 
 
 
-# Realigning keys with key templates
+# Realigning managed keys with key templates
 {: #align-key}
 
-After a key is created with a key template, you can still update the key template on general properties, key lifecycles, and assigned keystores. If it happens, an `Unaligned` flag can be displayed on the key details card for keys that are created with the key template. You can then manually realign your key with the key template with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API. You can either realign active or deactivated keys with the key template.  
+After a managed key is created with a key template, you can still update the key template on general properties, key lifecycles, and assigned keystores. If it happens, an `Unaligned` flag can be displayed on the key details card for keys that are created with the key template. You can then manually realign your key with the key template with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API. You can either realign active or deactivated keys with the key template.  
 {: shortdesc}
   
 Currently, with the {{site.data.keyword.cloud_notm}} console, you can only realign assigned keystores with the key template. To realign general properties and key lifecycles, use the {{site.data.keyword.uko_full_notm}} API.  
 {: note}
 
 
-## Realigning keys with key templates through the {{site.data.keyword.cloud_notm}} console
+## Realigning managed keys with key templates through the {{site.data.keyword.cloud_notm}} console
 {: #align-key-ui}
 {: ui}
 
-To realign keys with key templates by using the console, complete the following steps:
+To realign managed keys with key templates by using the console, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys. 
