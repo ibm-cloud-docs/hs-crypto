@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-09"
+lastupdated: "2023-12-27"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -106,11 +106,11 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Destroy a preactive key. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | |
 | Deactivate an active key. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | | |
 | Assign an active key. | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Detach an active key.| | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | |
+| Unlink an active key.| | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | |
 | Destroy a deactivated key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| |
 | Assign a deactivated key. | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | |
 | Reactivate a deactivated key. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| | | |
-| Detach a deactivated key. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
+| Unlink a deactivated key. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
 | Remove a destroyed key from Vault. | | | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | Read managed key details. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
 | List managed keys. | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |

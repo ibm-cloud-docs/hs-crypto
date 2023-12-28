@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-12-08"
+lastupdated: "2023-12-27"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator, UKO keys
 
@@ -37,7 +37,7 @@ The following table shows the details of each key state.
 |-------------|-----------------|-------------|
 | Pre-active  |        0        | A Pre-active key is not yet activated in keystores and is therefore not available for use by applications. New keys are initially created in the Pre-active state. |
 | Active      |        1        | An Active key is activated in keystores and is available for use by applications. If the key is used to protect associated resources, the key will be accessible to its associated resources and can be used for data protection. You can set a key to the Active state when you create the key, or manually activate a Pre-active key later. |
-| Deactivated |        3        | A Deactivated key is no longer allowed for operations that generate new cryptographic data, such as encryption or signing, but can still be used for operations on existing data to do decryption or signature verification. When you deactivate a key, the key is detached from all the keystores, and not accessible to all associated resources and their data. However, you can still reactivate the key so that it is accessible to the resources again. |
+| Deactivated |        3        | A Deactivated key is no longer allowed for operations that generate new cryptographic data, such as encryption or signing, but can still be used for operations on existing data to do decryption or signature verification. When you deactivate a key, the key is unlinked from all the keystores, and not accessible to all associated resources and their data. However, you can still reactivate the key so that it is accessible to the resources again. |
 | Destroyed   |        5        | A Destroyed key is a key record for which the actual key material has been permanently erased. The record of the key is retained to be available for later queries or audits until you manually remove the key from the vault. Keys in the Destroyed state cannot be restored in {{site.data.keyword.uko_full_notm}}. However, you can still restore your keys in external keystores depending on the settings of the cloud providers. |
 {: caption="Table 1. Key states and transitions" caption-side="bottom"}
 

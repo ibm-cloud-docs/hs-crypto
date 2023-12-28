@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-12-26"
+lastupdated: "2023-12-28"
 
 keywords: site map, doc structure, information architecture
 
@@ -1331,17 +1331,17 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-create-managed-keys&interface=api#create-managed-keys-next)
 
-[Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list)
+[Viewing a list of managed keys](/docs/hs-crypto?topic=hs-crypto-view-key-list#view-key-list)
 
-* [Viewing a list of keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-view-key-list&interface=ui#view-key-list-ui)
+* [Viewing a list of managed keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-view-key-list&interface=ui#view-key-list-ui)
 
 * [Viewing a list of keys with the API](/docs/hs-crypto?topic=hs-crypto-view-key-list&interface=api#view-key-list-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-view-key-list&interface=api#view-key-list-next)
 
-[Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list#search-key-list)
+[Filtering and searching managed keys](/docs/hs-crypto?topic=hs-crypto-search-key-list#search-key-list)
 
-* [Filtering keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-search-key-list&interface=ui#filter-key-list-ui)
+* [Filtering managed keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-search-key-list&interface=ui#filter-key-list-ui)
 
 * [ Searching for keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-search-key-list&interface=ui#search-key-list-ui)
 
@@ -1349,9 +1349,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-search-key-list&interface=api#search-key-list-next)
 
-[Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys)
+[Editing managed key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys)
 
-* [Editing key details with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys&interface=ui#edit-kms-keys-ui)
+* [Editing managed key details with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys&interface=ui#edit-kms-keys-ui)
 
 * [Editing key details with the API](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys&interface=api#edit-kms-keys-api)
 
@@ -1367,9 +1367,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys&interface=api#uko-rotate-keys-next)
 
-[Realigning keys with key templates](/docs/hs-crypto?topic=hs-crypto-align-key#align-key)
+[Realigning managed keys with key templates](/docs/hs-crypto?topic=hs-crypto-align-key#align-key)
 
-* [Realigning keys with key templates through the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-align-key&interface=ui#align-key-ui)
+* [Realigning managed keys with key templates through the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-align-key&interface=ui#align-key-ui)
 
 * [Realigning keys with key templates through the API](/docs/hs-crypto?topic=hs-crypto-align-key&interface=api#align-key-api)
 

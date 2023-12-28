@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-14"
+lastupdated: "2023-12-27"
 
 keywords: Unified Key Orchestrator, view key templates, key management, kms keys, UKO
 
@@ -20,7 +20,7 @@ subcollection: hs-crypto
 You can archive your key templates if they are not to be used, and unarchive them later if needed. You can perform archive or unarchive a key template in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
-You can view archived key templates by clicking the **Show archived templates** icon ![Show archived templates icon](/images/archive.svg "Show archived templates") on the table. After the template is archived, you cannot edit the keystore assignment of existing keys that are created with the template, and you can no longer create managed keys with the archived key template. However, you can still use the keys for cryptographic operations. 
+You can view archived key templates by clicking the **Show archived templates** icon ![Show archived templates icon](/images/archive.svg "Show archived templates") on the table. After the template is archived, you cannot edit the distribution of keys created with the template, and you can no longer create managed keys with the archived key template. However, you can still use the keys for cryptographic operations. 
 {: important}
 
 
@@ -38,7 +38,7 @@ To archive the key template, complete the following steps:
 
 4. Check the box for **Key template will not be accessible** and click **Archive key template**.
    
-After the template is archived, you cannot edit the keystore assignment of existing keys that are created with the template, and you can no longer create managed keys with this key template. However, you can activate the key template again by unarchiving it. 
+After the template is archived, you cannot edit the distrubution of existing key that are created with the template, and you can no longer create managed keys with this key template. However, you can activate the key template again by unarchiving it. 
 
 
 ## Archiving key templates with the API
