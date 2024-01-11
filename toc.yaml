@@ -255,7 +255,7 @@ toc:
               - uko-edit-internal-keystores.md
               - uko-edit-external-keystore-connection.md
               - uko-delete-internal-keystores.md
-              - uko-disconnect-external-keystores.md           
+              - uko-disconnect-external-keystores.md       
       - topicgroup:
           label: Managing master keys
           topics:
