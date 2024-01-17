@@ -45,13 +45,13 @@ Follow these steps to complete the process:
 
 4. To destroy a Pre-active or Deactivated key, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Destroyed**.
     
-    After you move a key from Deactivated to Destroyed state, the key will be in pending desdruction state in a time period defined by the default destruction policies of the key providers. A key in pending destruction state cannnot be undone. For more information about the key destruction policies, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). A `pending` flag is displayed in the corresponding key card or the key list.
+    
 
-5. Click **Destroy key** to confirm.
+5. Click **Destroy key** to confirm. The key will be pending destrucion and then destroyed after the pending period ends.
 
-    When you destroy a managed key, the key cannot be restored in {{site.data.keyword.uko_full_notm}}. However, you can still restore your keys in external keystores depending on the settings of the cloud providers. For keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, you can still restore a destroyed key in 30 days. The key becomes purged automatically after 90 days in the database. 
+    After the managed key is destroyed, the key cannot be restored in {{site.data.keyword.uko_full_notm}}. However, you can still restore the key in external keystores depending on the settings of the cloud providers. 
 
-    For more policies about restoring external keys, see the following topics:
+    For keys stored in another {{site.data.keyword.cloud_notm}} KMS keystore, you can still restore a destroyed key in 30 days. The key becomes purged automatically after 90 days in the database. For more policies about restoring external keys, see the following topics:
     
         - [Azure Key Vault soft-delete overview](https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview){: external}
         - [Deleting AWS KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html){: external}
