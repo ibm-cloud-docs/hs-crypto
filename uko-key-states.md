@@ -29,7 +29,10 @@ Managed keys in {{site.data.keyword.uko_full_notm}} transition through several s
 
 The following diagram shows how a managed key passes through states between the generation and the destruction.
 
+
 ![Key states and transitions](/images/uko-key-states.svg "Key states and transitions"){: caption="Figure 1. Key states and transitions" caption-side="bottom"}
+
+
 
 The following table shows the details of each key state.
 
