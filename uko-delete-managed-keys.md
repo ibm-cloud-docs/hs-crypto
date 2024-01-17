@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-12-27"
+  years: 2022, 2024
+lastupdated: "2024-01-17"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -45,14 +45,16 @@ Follow these steps to complete the process:
 
 4. To destroy a Pre-active or Deactivated key, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Destroyed**.
     
+    After you move a key from Deactivated to Destroyed state, the key will be in pending desdruction state in a time period defined by the default destruction policies of the key providers. A key in pending destruction state cannnot be undone. For more information about the key destruction policies, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). A `pending` flag is displayed in the corresponding key card or the key list.
+
+5. Click **Destroy key** to confirm.
+
     When you destroy a managed key, the key cannot be restored in {{site.data.keyword.uko_full_notm}}. However, you can still restore your keys in external keystores depending on the settings of the cloud providers. For more information, see [Azure Key Vault soft-delete overview](https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview){: external}, [Deleting AWS KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html){: external}, or [Deleting and purging keys in {{site.data.keyword.keymanagementserviceshort}}](/docs/key-protect?topic=key-protect-delete-purge-keys){: external}.
     {: important}
 
-5. Click **Destroy key** to confirm.
 6. To remove the key and the metadata from the vault, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**.
    
    When you remove the managed key from the vault that the key is assigned to, the remaining key metadata is removed permanently. 
-    {: important}
 
 The managed key has been deleted and unlinked from all keystores. All key materials and metadata have been destroyed. 
 
