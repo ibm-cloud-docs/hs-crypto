@@ -49,8 +49,14 @@ Follow these steps to complete the process:
 
 5. Click **Destroy key** to confirm.
 
-    When you destroy a managed key, the key cannot be restored in {{site.data.keyword.uko_full_notm}}. However, you can still restore your keys in external keystores depending on the settings of the cloud providers. For more information, see [Azure Key Vault soft-delete overview](https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview){: external}, [Deleting AWS KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html){: external}, or [Deleting and purging keys in {{site.data.keyword.keymanagementserviceshort}}](/docs/key-protect?topic=key-protect-delete-purge-keys){: external}.
-    {: important}
+    When you destroy a managed key, the key cannot be restored in {{site.data.keyword.uko_full_notm}}. However, you can still restore your keys in external keystores depending on the settings of the cloud providers. For keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, you can still restore a destroyed key in 30 days. The key becomes purged automatically after 90 days in the database. 
+
+    For more policies about restoring external keys, see the following topics:
+    
+        - [Azure Key Vault soft-delete overview](https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview){: external}
+        - [Deleting AWS KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html){: external}
+        - [Destroy and restore key versions in Google Cloud KMS](https://cloud.google.com/kms/docs/destroy-restore){: external}
+        - [Deleting and purging keys in {{site.data.keyword.keymanagementserviceshort}}](/docs/key-protect?topic=key-protect-delete-purge-keys){: external}
 
 6. To remove the key and the metadata from the vault, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**.
    
