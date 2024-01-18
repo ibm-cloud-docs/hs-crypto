@@ -21,7 +21,7 @@ subcollection: hs-crypto
 If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. You can sync the key state by using {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
-An `Out of sync` flag is also displayed in the corresponding keystore card or the key list. There can be multiple reasons why the key is out of sync. For example, there is an issue in relinking the key in the keystore, or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. When you hover over this flag, you can see the specific reason. Take the following steps to munually sync the state of keys in keystores with the managed key.
+An `Out of sync` flag is also displayed in the corresponding keystore card or the key list. There can be multiple reasons why the key is out of sync. For example, there is an issue in relinking the key in the keystore or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. When you hover over this flag, you can see the specific reason. Take the following steps to munually sync the state of keys in keystores with the managed key.
 
 
 ## Syncing keys with the console
