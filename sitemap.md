@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-12-28"
+  years: 2021, 2024
+lastupdated: "2024-01-18"
 
 keywords: site map, doc structure, information architecture
 
@@ -385,6 +385,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [18 January 2024](/docs/hs-crypto?topic=hs-crypto-what-new##hs-crypto-jan2024)
+
+    * Added: Azure software-protected key support for {{site.data.keyword.cloud_notm}}
 
 * [09 November 2023](/docs/hs-crypto?topic=hs-crypto-what-new##hs-crypto-nov2023)
 
@@ -1366,6 +1370,14 @@ Find what you are looking for in the compilation of topics that are available in
 * [Rotating managed keys with the API](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys&interface=api#uko-rotate-managed-key-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys&interface=api#uko-rotate-keys-next)
+
+[Syncing keys in keystores with managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys#uko-sync-keys)
+
+* [Syncing keys with the console](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=ui#uko-sync-managed-key-gui)
+
+* [Syncing with the API](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=api#uko-sync-managed-key-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=api#uko-sync-keys-next)
 
 [Realigning managed keys with key templates](/docs/hs-crypto?topic=hs-crypto-align-key#align-key)
 

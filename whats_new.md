@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-11-09"
+  years: 2018, 2024
+lastupdated: "2024-01-18"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -21,6 +21,13 @@ content-type: release-note
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+## 18 January 2024
+{: ##hs-crypto-jan2024}
+{: release-note}
+
+Added: Azure software-protected key support for {{site.data.keyword.cloud_notm}}
+:    Besides HSM-protected keys, software-protected keys can now also be created in Azure Key Vault (Premium) keystores of {{site.data.keyword.uko_full_notm}}. However, you can still create and distribute only software-protected keys to Azure Key Vault (Standard).  For more information, see [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys) and [Creating key templates](/docs/hs-crypto?topic=hs-crypto-create-template).
 
 ## 09 November 2023
 {: ##hs-crypto-nov2023}

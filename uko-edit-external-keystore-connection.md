@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-09-26"
+  years: 2022, 2024
+lastupdated: "2024-01-18"
 
 keywords: Unified Key Orchestrator, key management, UKO keystore, edit keystore, external keystore, KMS keystore
 
@@ -54,25 +54,23 @@ To edit the connection to an external keystore by using the console, complete th
     {: class="comparison-tab-table"}
 
     
+    
+    
     |           Property	        |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1–100 characters in length. The first character must be a letter (case-sensitive) or digit (0–9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | Service name on Azure       | Read only. The name must match the name of the Key Vault in Azure. You cannot edit this property after the keystore is connected.   |
     | Resource group name on Azure     | Read only. A logical construct that groups multiple resources together. Obtain it from the Azure portal. You cannot edit this property after the keystore is connected. |
-    | Location on Azure           | The geographical location where the Key Vault is located in.   |
-    | Environment on Azure        | The Azure environment to authenticate with.      |
-    | Service principal client ID on Azure | Application ID that identifies the application of service principal. |    
     | Service principal password on Azure | Only password based authentication is supported for service principals.       |
-    | Tenant ID on Azure          |  Read only. A tenant is the organization that owns and manages a specific instance of Microsoft cloud services. Use Azure Active Directory tenant ID for authenticating requests to the key vault. You cannot edit this property after the keystore is connected.    |
+    | Service principal client ID on Azure | Application ID that identifies the application of service principal. | 
     | Subscription ID on Azure    |  Read only. A GUID that uniquely identifies your subscription to use Azure services. You cannot edit this property after the keystore is connected.    |
+    | Tenant ID on Azure          |  Read only. A tenant is the organization that owns and manages a specific instance of Microsoft cloud services. Use Azure Active Directory tenant ID for authenticating requests to the key vault. You cannot edit this property after the keystore is connected.    |
     {: #table-2}
     {: caption="Table 2. Azure Key Vault properties" caption-side="bottom"}
     {: tab-title="Azure Key Vault"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
-    
-    
     
 
     |           Property	      |                         Description                       |
