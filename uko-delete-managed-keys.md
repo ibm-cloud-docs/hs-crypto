@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-01-17"
+lastupdated: "2024-01-18"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -51,7 +51,7 @@ Follow these steps to complete the process:
 
     After the managed key is destroyed, the key cannot be restored in {{site.data.keyword.uko_full_notm}}. However, you can still restore the key in external keystores depending on the settings of the cloud providers. 
 
-    For keys stored in another {{site.data.keyword.cloud_notm}} KMS keystore, you can still restore a destroyed key in 30 days. The key becomes purged automatically after 90 days in the database. For more policies about restoring external keys, see the following topics:
+    For keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically after 90 days after they move to Destroyed state and you cannot restore the keys. For more policies about restoring external keys, see the following topics:
     
         - [Azure Key Vault soft-delete overview](https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview){: external}
         - [Deleting AWS KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html){: external}
