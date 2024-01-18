@@ -244,6 +244,7 @@ toc:
               - uko-search-key-list.md
               - uko-edit-kms-keys.md
               - uko-rotate-key.md
+              - uko-sync-key.md
               - uko-align-key.md 
               - uko-view-key-versions.md
               - uko-delete-managed-keys.md
