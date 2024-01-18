@@ -27,7 +27,7 @@ Stay up to date with the new features that are available for {{site.data.keyword
 {: release-note}
 
 Added: Azure software-protected key support for {{site.data.keyword.cloud_notm}}
-:    Both software-protected and HSM-protected keys are supported in Azure Key Vault for {{site.data.keyword.hscrypto}}. You can distribute both HSM-protected keys and software-protected keys to Azure Key Vault (Premium). However, you can distribute only software-protected keys to Azure Key Vault (Standard). For more information, see [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys) and [Creating key templates](/docs/hs-crypto?topic=hs-crypto-create-template).
+:    Besides HSM-protected keys, software-protected keys can now also be created in Azure Key Vault (Premium) keystores of {{site.data.keyword.uko_full_notm}}. However, you can still create and distribute only software-protected keys to Azure Key Vault (Standard).  For more information, see [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys) and [Creating key templates](/docs/hs-crypto?topic=hs-crypto-create-template).
 
 ## 09 November 2023
 {: ##hs-crypto-nov2023}

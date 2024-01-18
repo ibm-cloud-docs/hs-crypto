@@ -80,7 +80,7 @@
       {
         "date": "January 2024",
         "title": "Added: Hyper Protect Crypto Services adds support for Azure software-protected key",
-        "description": "You can now distribute both HSM-protected keys and software-protected keys to Azure Key Vault (Premium). However, you can distribute only software-protected keys to Azure Key Vault (Standard). "
+        "description": "Besides HSM-protected keys, software-protected keys can now also be created in Azure Key Vault (Premium) keystores of {{site.data.keyword.uko_full_notm}}. However, you can still create and distribute only software-protected keys to Azure Key Vault (Standard). "
       },
       {
         "date": "Nov 2023",
