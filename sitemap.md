@@ -1367,6 +1367,14 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys&interface=api#uko-rotate-keys-next)
 
+[Syncing keys in keystores with managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys#uko-sync-keys)
+
+* [Syncing keys with the console](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=ui#uko-sync-managed-key-gui)
+
+* [Syncing with the API](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=api#uko-sync-managed-key-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=api#uko-sync-keys-next)
+
 [Realigning managed keys with key templates](/docs/hs-crypto?topic=hs-crypto-align-key#align-key)
 
 * [Realigning managed keys with key templates through the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-align-key&interface=ui#align-key-ui)
