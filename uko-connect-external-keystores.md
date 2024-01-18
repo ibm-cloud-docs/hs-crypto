@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-12-26"
+  years: 2022, 2024
+lastupdated: "2024-01-18"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -110,13 +110,13 @@ To connect to an external keystore by using the console, complete the following 
 5. Under **Keystore type**, select one of the following types and click **Next**:
 
 
+
+
     - **AWS keystore**: Create a keystore that can store AWS KMS keys.
-    - **Azure Key Vault (Premium)**: Create a keystore that can store Azure Key Vault keys.
+    - **Azure Key Vault**: Create a keystore that can store Azure Key Vault keys, both Azure Key Vault (Premium) and Azure Key Vault (Standard) are supported.
     - **Google Cloud KMS keystore**: Create a keystore that can store Google Cloud KMS keys.
     - **{{site.data.keyword.keymanagementserviceshort}}**: Create a keystore that can store {{site.data.keyword.keymanagementserviceshort}} keys.
     - **{{site.data.keyword.cloud_notm}} KMS keystore in another instance**: Create a keystore that can store KMS keys in another {{site.data.keyword.hscrypto}} instance.
-
-
 
 
     You can change the currency that is displayed by selecting your country or location. After you connect to the first external keystore, {{site.data.keyword.uko_full_notm}} base price applies additionally. For more information about pricing, see [the pricing sample](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs-uko).
@@ -138,15 +138,15 @@ To connect to an external keystore by using the console, complete the following 
     {: class="comparison-tab-table"}
 
     
+
+    
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1–100 characters in length. The first character must be a letter (case-sensitive) or digit (0–9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | Service name on Azure       | The name must match the name of the Key Vault in Azure.   |
-    | Resource group name on Azure     | A logical construct that groups multiple resources. Obtain it from the Azure portal. |
-    | Location on Azure           | The geographical location where the Key Vault is located in.   |
-    | Environment on Azure        | The Azure environment to authenticate with.               |
-    | Service principal client ID on Azure | Application ID that identifies the application of service principal. |    
+    | Resource group on Azure     | A logical construct that groups multiple resources. Obtain it from the Azure portal. |
+    | Service principal client ID on Azure | Application ID that identifies the application of service principal.|
     | Service principal password on Azure | Only password based authentication is supported for service principals.       |
     | Tenant ID on Azure          |  A tenant is the organization that owns and manages a specific instance of Microsoft cloud services. Use Azure Active Directory tenant ID for authenticating requests to the Key Vault.     |
     | Subscription ID on Azure    |  A GUID that uniquely identifies your subscription to use Azure services.    |
@@ -155,8 +155,6 @@ To connect to an external keystore by using the console, complete the following 
     {: tab-title="Azure Key Vault"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
-    
-
     
 
 
@@ -212,10 +210,10 @@ To connect to an external keystore by using the console, complete the following 
 7. Optionally, click **Test connection** to test the connection to the external keystore that you configure. When completed, click **Next** to continue.
 
     
-    **Test connection** is an optional step. You can complete the subsequent steps even if the test fails. To adjust the connection settings in case of a connection failure, check and adjust the connection properties.
-    {: tip}
-    
 
+    
+     You can complete the subsequent steps even if the test fails. To adjust the connection settings in case of a connection failure, check and adjust the connection properties. If you connect to an external keystore of type Microsoft Azure Key Vault, after clicking **Test connection**, you will be notified that whether the keystore is Azure Key Vault (Premium) or Azure Key Vault (Standard).
+    {: tip}
     
     
 8. Under **Summary**, view the summary of your Azure Key Vault and the estimated additional cost.

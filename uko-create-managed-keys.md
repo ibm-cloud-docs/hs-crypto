@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-12-26"
+  years: 2022, 2024
+lastupdated: "2024-01-18"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -72,23 +72,24 @@ When you select the **Create with a key template** option, you are creating a ma
     {: class="comparison-tab-table"}
 
     
+
+    
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key. It must be 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). \n \n **Important:** If the key naming scheme is defined in the key template, you need to enter values for each custom placeholder. Each placeholder must be at least 2 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. An example of the managed key name must not exceed 50 characters in length. You can also specify the extended description for your key. Note that you cannot modify the key name after the key creation.   |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
-    | State                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
-    | Activation date      |  Plan a date to activate the Pre-active key. Automatic state change is to be triggered on the planned date. |
-    | Expiration date      |  Plan a date to deactivate the key. Automatic state change is to be triggered on the planned date. |
+    | Protection level     | (Read only) Data protection level of keys to be created with the key template. \n \n **HSM-protected key** is stored and generated in a FIPS-certified Hardware Security Module. It is available in Azure Key Vault (Premium) only. This type of keys ensures the highest security. \n \n **Software-protected key** is available in both Azure Key Valut (Standard) and Key Vault (Premium). You can choose this level to [reduce cost](https://azure.microsoft.com/en-us/pricing/details/key-vault/){: external}.  |
     | Key algorithm        | (Read only) The encryption algorithm to encrypt data for the key.     |
     | Key length           | (Read only) The number of bits that represents the encryption strength of the key.   |
+    | State                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
+    | Activation date      |  Plan a date to activate the Pre-active key. Automatic state change is to be triggered on the planned date. |
+    | Expiration date      |  Plan a date to deactivate the key. Automatic state change is to be triggered on the planned date. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
     {: #table-2}
     {: caption="Table 2. Azure Key Vault keys properties" caption-side="bottom"}
     {: tab-title="Azure Key Vault keys"}
     {: tab-group="Managed key properties with templates"}
     {: class="comparison-tab-table"}
-    
-
     
 
     |       Property	      |                         Description                       |
@@ -230,15 +231,13 @@ When you select the **Create with custom properties** option, you are creating a
     {: class="comparison-tab-table"}
 
     
-
-    
-
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
-    | Key name             | A unique, human-readable name for easy identification of your key. It must be 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). |
+    | Key name             | A unique, human-readable name for easy identification of your key. It must be 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). \n \n **Important:** If the key naming scheme is defined in the key template, you need to enter values for each custom placeholder. Each placeholder must be at least 2 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. An example of the managed key name must not exceed 50 characters in length. You can also specify the extended description for your key. Note that you cannot modify the key name after the key creation.   |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
-    | Key algorithm            | The encryption algorithm to encrypt data for the key.     |
-    | Key length               | The number of bits that represents the encryption strength of the key.   |
+    | Protection level     | Data protection level of keys to be created with the key template. \n \n **HSM-protected key** is stored and generated in a FIPS-certified Hardware Security Module. It is available in Azure Key Vault (Premium) only. This type of keys ensures the highest security. \n \n **Software-protected key** is available in both Azure Key Valut (Standard) and Key Vault (Premium). You can choose this level to [reduce cost](https://azure.microsoft.com/en-us/pricing/details/key-vault/){: external}. \n \n **Note:** If you connect to an external keystore of type Azure Key Vault, you can distribute both HSM-protected keys and software-protected keys to Azure Key Vault (Premium). However, you can distribute only software-protected keys to Azure Key Vault (Standard). |
+    | Key algorithm        | The encryption algorithm to encrypt data for the key.     |
+    | Key length           | The number of bits that represents the encryption strength of the key.   |
     | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activation date      | Plan a date to activate the Pre-active key. Automatic state change is to be triggered on the planned date. |
     | Expiration date      | Plan a date to deactivate the key. Automatic state change is to be triggered on the planned date. |
@@ -248,6 +247,8 @@ When you select the **Create with custom properties** option, you are creating a
     {: tab-title="Azure Key Vault keys"}
     {: tab-group="Managed key properties without templates"}
     {: class="comparison-tab-table"}
+    
+
     
 
     |       Property	      |                         Description                       |

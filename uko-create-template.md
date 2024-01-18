@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-12-27"
+  years: 2022, 2024
+lastupdated: "2024-01-18"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -78,12 +78,15 @@ You can create a key template from scratch with full control by yourself. To cre
     {: class="comparison-tab-table"}
     
     
+
+    
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
     | Key template name    | A unique, human-readable name for easy identification of your key template. It must be 1–100 characters in length.  |
     | Description          | (Optional) An extended description for your key template, with up to 200 characters in length.|
     | Naming scheme        | (Optional) Enter strings or placeholders to enforce the key naming scheme. After defining the key naming scheme, you can then create a group of keys with the same key naming conventions but you cannot edit the key naming scheme any more. For more information, see [Defining key naming schemes](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui#define-naming-scheme).    | 
-    | Managed key name example | Read only. An example of the managed key name based on the key naming scheme is populated automatically for your reference.       | 
+    | Managed key name example | Read only. An example of the managed key name based on the key naming scheme is populated automatically for your reference.       |
+    | Protection level     | Data protection level of keys to be created with the key template. \n \n **HSM-protected key** is stored and generated in a FIPS-certified Hardware Security Module. It is available in Azure Key Vault (Premium) only. This type of keys ensures the highest security. \n \n **Software-protected key** is available in both Azure Key Valut (Standard) and Key Vault (Premium). You can choose this level to [reduce cost](https://azure.microsoft.com/en-us/pricing/details/key-vault/){: external}. \n \n **Note:** If you connect to an external keystore of type Azure Key Vault, you can distribute both HSM-protected keys and software-protected keys to Azure Key Vault (Premium). However, you can distribute only software-protected keys to Azure Key Vault (Standard). |
     | Algorithm            | The encryption algorithm to encrypt data for the key to be created with the template.     |
     | Length               | The number of bits that represents the encryption strength of the key to be created with the template.   |
     | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
@@ -94,8 +97,6 @@ You can create a key template from scratch with full control by yourself. To cre
     {: tab-title="Azure Key templates"}
     {: tab-group="Key templates from scratch properties"}
     {: class="comparison-tab-table"}
-    
-
     
 
     |       Property	      |                         Description                       |
