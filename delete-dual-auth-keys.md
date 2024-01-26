@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-08-25"
+  years: 2020, 2024
+lastupdated: "2024-01-26"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -69,7 +69,7 @@ order to authorize the key for deletion.
 
 1. In the **Keys** table of the **KMS keys** page, you can find keys that are authorized for deletion with the following indicators:
     * The `Set for deletion` column has a value of `True`. The authorization expiration time is displayed in the `Deletion expiration` column.
-    * A **Trash can** icon ![Trash can icon](../icons/icon_trash.svg "Trash can") is displayed in the `State` column. Hover over the icon to view the deletion expiration date.
+    * A **Clock** icon ![Time icon](/images/time-icon.svg "time") is displayed in the `State` column. Hover over the icon to view the deletion expiration date.
 
 2. To delete the key, follow the instructions in [Deleting keys with the console](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-keys-gui).
 
