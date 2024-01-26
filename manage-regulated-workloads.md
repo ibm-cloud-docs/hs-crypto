@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-07-05"
+  years: 2021, 2024
+lastupdated: "2024-01-26"
 
 keywords: regulated workloads, FS Cloud, IBM Cloud for Financial Services, FS Cloud use cases
 
@@ -60,13 +60,6 @@ A detailed tutorial on how to encrypt VMware regulated workloads by using {{site
 {{site.data.keyword.cos_full_notm}} is an {{site.data.keyword.cloud_notm}} service for you to store unlimited amounts of data in the assigned bucket so that the data can be accessed anywhere from the cloud. {{site.data.keyword.hscrypto}} helps you protect encryption keys for data that is stored in {{site.data.keyword.cos_short}} with the highest security level in the industry and gives only you the access to these keys.
 
 For more information about the integration, see [the {{site.data.keyword.cos_short}} reference doc](/docs/cloud-object-storage?topic=cloud-object-storage-encryption). A [demo video](https://mediacenter.ibm.com/media/0_mgxwp16v){: external} is also available for your reference.
-
-### Encrypting {{site.data.keyword.openshiftshort}} routes with keys stored in {{site.data.keyword.hscrypto}}
-{: #openshift-regulated-workloads}
-
-With {{site.data.keyword.hscrypto}}, you can securely create, store, and manage encryption keys in {{site.data.keyword.cloud_notm}}. A private key that is stored in an {{site.data.keyword.hscrypto}} instance can be used by an {{site.data.keyword.openshiftshort}} router in TLS session establishment and in Certificate Signing Request (CSR) signing. To access {{site.data.keyword.hscrypto}}, an {{site.data.keyword.openshiftshort}} router needs to use the OpenSSL Engine grep11 to make calls to the Enterprise PKCS #11 over gRPC (GREP11) API.
-
-For more information about the detailed steps, see [Encrypting routes with keys stored in Hyper Protect Crypto Services](/docs/openshift?topic=openshift-hpcs-router).
 
 ## Getting started to manage your regulated workloads with {{site.data.keyword.hscrypto}}
 {: #get-started-regulated-workloads}
