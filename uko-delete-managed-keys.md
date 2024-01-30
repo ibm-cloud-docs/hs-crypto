@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-01-26"
+lastupdated: "2024-01-30"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -47,7 +47,7 @@ Follow these steps to complete the process:
     
     
 
-5. Click **Destroy key** to confirm. The key will be pending destrucion and then destroyed after the pending period ends.
+5. Click **Destroy key** to confirm. The key will be pending destruction and then destroyed after the pending period ends.
 
     After the managed key is destroyed, you cannot restore keys through the {{site.data.keyword.uko_full_notm}} UI or API. However, you might still do so through the third-party keystores that the keys are created in. 
 
