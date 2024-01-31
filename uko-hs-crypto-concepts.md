@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-12-26"
+  years: 2022, 2024
+lastupdated: "2024-01-31"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -252,7 +252,7 @@ A keystore needs to be assigned to a vault. If it is an internal keystore, it ca
 ### Internal keystore
 {: #uko-internal-keystore-concept}
 
-An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance to store the cryptographic keys in your service instance. You can create up to five free internal keystores to manage your keys. 
+An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance to store the cryptographic keys in your service instance.  You can create up to five free internal keystores to manage your keys. 
 
 ### External keystore
 {: #uko-external-keystore-concept}
