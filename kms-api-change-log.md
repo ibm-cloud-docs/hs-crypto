@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-02-08"
+  years: 2021, 2024
+lastupdated: "2024-02-01"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -23,12 +23,21 @@ In this change log you can learn about the latest changes, improvements, and upd
 ## API versioning
 {: #kms-api-versioning}
 
-The latest released version is `22.11`.
+The latest released version is `23.11`.
+
+## February 2024
+{: #kms-api-feb-2024}
+
+The following methods are updated:
+
+- [Delete key ring](/apidocs/key-protect#deletekeyring){: external}: You can now force delete a key ring. If the keys in this key ring are not deleted before this action is performed, the keys will be moved to the default key ring.
+- [List key versions](/apidocs/hs-crypto#getkeyversions){: external}: You can now view key versions of a key in any state, including the deleted key.
+
 
 ## February 2023
-{: #kms-api-Feb-2023}
+{: #kms-api-feb-2023}
 
-The following functions are added:
+The following methods are added:
 
 - [List Keys with sorting](/apidocs/hs-crypto#:~:text=values%3A%20length%20≤%20256-,sort,-string){: external} to include lastRotateDate sorting.
 - [List Keys with advanced filtering](/apidocs/hs-crypto#:~:text=Default%3A%20id-,filter,-string){: external} to including lastRotateDate filtering.
