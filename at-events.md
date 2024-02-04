@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-11-08"
+  years: 2018, 2024
+lastupdated: "2024-02-01"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -88,7 +88,7 @@ The following table lists the key actions that generate an event:
 | `hs-crypto.secrets.unwrap`              | Unwrap a key.                                                 |
 {: caption="Table 2. Lifecycle key actions" caption-side="bottom"}
 
-## Key Ring events
+### Key Ring events
 {: #keyring-actions}
 
 The following table lists the key ring actions that generate an event:

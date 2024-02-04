@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-01-23"
+lastupdated: "2024-02-04"
 
 keywords: site map, doc structure, information architecture
 
@@ -1651,8 +1651,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Supported events](/docs/hs-crypto?topic=hs-crypto-at-events#at-supported-events)
 
-* [Key Ring events](/docs/hs-crypto?topic=hs-crypto-at-events#keyring-actions)
-
 * [Viewing events](/docs/hs-crypto?topic=hs-crypto-at-events#at-ui)
 
 * [Analyzing successful events](/docs/hs-crypto?topic=hs-crypto-at-events#at-events-analyze)
@@ -1757,7 +1755,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [API versioning](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-versioning)
 
-* [February 2023](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-Feb-2023)
+* [February 2024](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-feb-2024)
+
+* [February 2023](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-feb-2023)
 
 * [January 2022](/docs/hs-crypto?topic=hs-crypto-kms-api-change-log#kms-api-jan-2022)
 

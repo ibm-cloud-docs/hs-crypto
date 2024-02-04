@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-01-18"
+lastupdated: "2024-02-01"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -148,7 +148,7 @@ To connect to an external keystore by using the console, complete the following 
     | Resource group on Azure     | A logical construct that groups multiple resources. Obtain it from the Azure portal. |
     | Service principal client ID on Azure | Application ID that identifies the application of service principal.|
     | Service principal password on Azure | Only password based authentication is supported for service principals.       |
-    | Tenant ID on Azure          |  A tenant is the organization that owns and manages a specific instance of Microsoft cloud services. Use Azure Active Directory tenant ID for authenticating requests to the Key Vault.     |
+    | Tenant ID on Azure          |  A tenant is the organization that owns and manages a specific instance of Microsoft cloud services. Use Microsoft Entra ID for authenticating requests to the Key Vault.     |
     | Subscription ID on Azure    |  A GUID that uniquely identifies your subscription to use Azure services.    |
     {: #table-2}
     {: caption="Table 2. Azure Key Vault properties" caption-side="bottom"}

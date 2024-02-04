@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-01-23"
+lastupdated: "2024-02-04"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -44,19 +44,12 @@ Follow these steps to complete the process:
     {: note}
 
 4. To destroy a Pre-active or Deactivated key, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Destroyed**.
-    
-    
 
-5. Click **Destroy key** to confirm. The key will be pending destrucion and then destroyed after the pending period ends.
+5. Click **Destroy key** to confirm. 
 
-    After the managed key is destroyed, the key cannot be restored in {{site.data.keyword.uko_full_notm}}. However, you can still restore the key in external keystores depending on the settings of the cloud providers. 
+         After the managed key is destroyed, you cannot restore the keys. 
 
-    For keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically after 90 days after they move to Destroyed state and you cannot restore the keys. For more policies about restoring external keys, see the following topics:
-    
-    - [Azure Key Vault soft-delete overview](https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview){: external}
-    - [Deleting AWS KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html){: external}
-    - [Destroy and restore key versions in Google Cloud KMS](https://cloud.google.com/kms/docs/destroy-restore){: external}
-    - [Deleting and purging keys in {{site.data.keyword.keymanagementserviceshort}}](/docs/key-protect?topic=key-protect-delete-purge-keys){: external}
+    For keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically after 90 days after they move to Destroyed state. 
 
 6. To remove the key and the metadata from the vault, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**.
    
