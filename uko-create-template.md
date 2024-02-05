@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-01-18"
+lastupdated: "2024-02-05"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -69,8 +69,8 @@ You can create a key template from scratch with full control by yourself. To cre
     | Algorithm            | The encryption algorithm to encrypt data for the key to be created with the template.     |
     | Length               | The number of bits that represents the encryption strength of the key to be created with the template.   |
     | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
-    | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. Automatic state change is to be triggered on the planned date. |
-    | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. Automatic state change is to be triggered on the planned date. |
+    | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
+    | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-1}
     {: caption="Table 1. AWS Key templates properties" caption-side="bottom"}
     {: tab-title="AWS Key templates"}
@@ -90,8 +90,8 @@ You can create a key template from scratch with full control by yourself. To cre
     | Algorithm            | The encryption algorithm to encrypt data for the key to be created with the template.     |
     | Length               | The number of bits that represents the encryption strength of the key to be created with the template.   |
     | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
-    | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. Automatic state change is to be triggered on the planned date. |
-    | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. Automatic state change is to be triggered on the planned date. |
+    | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
+    | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-2}
     {: caption="Table 2. Azure Key templates properties" caption-side="bottom"}
     {: tab-title="Azure Key templates"}
@@ -108,8 +108,8 @@ You can create a key template from scratch with full control by yourself. To cre
     | Protection level     | Data protection level of keys to be created with the key template. \n \n **HSM-protected key** protection level applies to keys that are protected by FIPS 140-2 Level 3 Hardware Security Modules (HSMs) in Google Cloud. This type of keys ensures the higher security. \n \n **Software-protected key** protection level applies to keys that are protected by software. You can choose this level to [reduce cost](https://cloud.google.com/kms/pricing){: external}. For more information, see [Cloud KMS software backend: SOFTWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#software-protection-level){: external} and [Cloud KMS HSM backend: HARDWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#hardware-protection-level){: external}. \n \n **Note:** Software-protected keys don't support the Elliptic curve `secp256k1` algorithm.  |
     | Purpose               |The cryptographic capabilities of the key, which is what you are going to do with this key. The purpose also determines the available key algorithms. The supported key purposes are **Symmetric encrypt/decrypt**, **Asymmetric sign**, **Asymmetric decrypt**, and **MAC signing/verification**. For more information, see [Key purpose](https://cloud.google.com/kms/docs/algorithms#key_purposes){: external}.   |
     | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
-    | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. Automatic state change is to be triggered on the planned date. |
-    | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. Automatic state change is to be triggered on the planned date. |
+    | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
+    | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-3}
     {: caption="Table 3. Google Key templates properties" caption-side="bottom"}
     {: tab-title="Google Key templates"}
@@ -125,8 +125,8 @@ You can create a key template from scratch with full control by yourself. To cre
     | Algorithm            | The encryption algorithm to encrypt data for the key to be created with the template.     |
     | Length               | The number of bits that represents the encryption strength of the key to be created with the template.   |
     | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
-    | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. Automatic state change is to be triggered on the planned date. |
-    | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. Automatic state change is to be triggered on the planned date. |
+    | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
+    | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-4}
     {: caption="Table 4. IBM Cloud KMS Key templates properties" caption-side="bottom"}
     {: tab-title="IBM Cloud KMS Key templates"}
@@ -142,8 +142,8 @@ You can create a key template from scratch with full control by yourself. To cre
     | Algorithm            | The encryption algorithm to encrypt data for the key to be created with the template.     |
     | Length               | The number of bits that represents the encryption strength of the key to be created with the template.   |
     | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
-    | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. Automatic state change is to be triggered on the planned date. |
-    | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. Automatic state change is to be triggered on the planned date. |
+    | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
+    | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-5}
     {: caption="Table 5. IBM Key Protect Key templates properties" caption-side="bottom"}
     {: tab-title="IBM Key Protect Key templates"}
