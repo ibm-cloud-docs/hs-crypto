@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-20"
+lastupdated: "2024-02-21"
 
 keywords: site map, doc structure, information architecture
 
@@ -67,6 +67,8 @@ Find what you are looking for in the compilation of topics that are available in
 [Use cases - Standard Plan](/docs/hs-crypto?topic=hs-crypto-use-cases#use-cases)
 
 * [Pervasively protecting data at rest in the cloud](/docs/hs-crypto?topic=hs-crypto-use-cases#data-at-rest-encryption)
+
+* [Protecting storage systems with third-party encryption key management tools](/docs/hs-crypto?topic=hs-crypto-use-cases#protecting-storage-systems-with-third-party-encryption-key-management-tools)
 
 * [Using {{site.data.keyword.hscrypto}} as PKCS #11 HSMs](/docs/hs-crypto?topic=hs-crypto-use-cases#pkcs11_hsm)
 
