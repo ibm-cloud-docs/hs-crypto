@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-02-21"
+lastupdated: "2024-02-22"
 
 keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases
 
@@ -117,7 +117,7 @@ For a tutorial on how to offload the SSL workload to a load balancer such as NGI
 
 ![Protecting data in transit with TLS/SSL offloading](/images/ssl-offloading.svg "Protecting data in transit with TLS/SSL offloading"){: caption="Figure 7. Protecting data in transit with TLS/SSL offloading" caption-side="bottom"}
 
-## Using {{site.data.keyword.hscrypto}} as Enterprise PKCS #11 HSMs
+### Using {{site.data.keyword.hscrypto}} as Enterprise PKCS #11 HSMs
 {: #ep11_hsm}
 
 {{site.data.keyword.hscrypto}} provides the [Enterprise PKCS #11 (EP11) API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref). Cloud application can use this function through [gRPC](https://grpc.io){: external}.
