@@ -125,7 +125,7 @@
     <line class="cls-14" x1="318.48" y1="160.72" x2="404.11" y2="160.72"/>
   </g>
   <g id="Text">
-    <text class="cls-2" transform="translate(178.34 191.2)"><tspan x="0" y="0">Key Protect API</tspan></text>
+    <text class="cls-2" transform="translate(265.34 197.2)"><tspan x="0" y="0">KMIP</tspan></text>
     <text class="cls-1" transform="translate(47.45 53.67)"><tspan x="0" y="0">VMware image protection and vSAN encryption with KYOK</tspan></text>
     <text class="cls-2" transform="translate(783 167.8)"><tspan x="0" y="0">VMware</tspan></text>
     <text class="cls-2" transform="translate(383.06 282.22)"><tspan x="0" y="0">Hyper Protect Crypto Services</tspan></text>
