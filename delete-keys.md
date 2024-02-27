@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2024
 lastupdated: "2024-02-27"
 
-keywords: delete, delete key, delete encryption key, curl -x delete, delete key api
+keywords: delete key, delete encryption key, curl -x delete, delete key api
 
 subcollection: hs-crypto
 
