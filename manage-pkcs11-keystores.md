@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-05-04"
+  years: 2020, 2024
+lastupdated: "2024-02-27"
 
 keywords: pkcs11 keystore, ep11 keystore, create pkcs11 keystore, generate pkcs11 keystore, view ep11 keystore, delete ep11 keystore, view pkcs11 keystore
 
@@ -15,13 +15,13 @@ subcollection: hs-crypto
 
 
 
-# Managing EP11 keystores with the {{site.data.keyword.cloud_notm}} console
+# Managing EP11 keystores with the UI
 {: #manage-ep11-keystores-ui}
 
-Enterprise PKCS #11 (EP11) keystores are used to store EP11 keys. Before you create EP11 keys, you need to create EP11 keystores first. Apart from using the {{site.data.keyword.hscrypto}} [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api) to manage EP11 keystores, you can also use the {{site.data.keyword.cloud}} console to view, create, and delete EP11 keystores.
+Enterprise PKCS #11 (EP11) keystores are used to store EP11 keys. Before you create EP11 keys, you need to create EP11 keystores first. Apart from using the {{site.data.keyword.hscrypto}} [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api) to manage EP11 keystores, you can also use the UI to view, create, and delete EP11 keystores.
 {: shortdesc}
 
-EP11 keystores are composed of in-memory keystores and database-backed keystores. The in-memory EP11 keystores are not displayed in the {{site.data.keyword.cloud_notm}} console. You can manage only database-backed EP11 keystores through the console. For more information about the keystores, see [Introducing keystore](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-keystore-intro).
+EP11 keystores are composed of in-memory keystores and database-backed keystores. The in-memory EP11 keystores are not displayed in the UI. You can manage only database-backed EP11 keystores through the UI. For more information about the keystores, see [Introducing keystore](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-keystore-intro).
 {: important}
 
 You can create up to five keystores in a service instance for free, including KMS key rings and EP11 keystores. Each additional key ring or EP11 keystore is charged with a tiered pricing starting at $225 USD per month. For more information about pricing, see [the pricing sample](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs).
@@ -29,9 +29,9 @@ You can create up to five keystores in a service instance for free, including KM
 ## Before you begin
 {: #manage-ep11-keystores-ui-before}
 
-Before you can manage EP11 keystores with the console, complete the following steps to open your {{site.data.keyword.hscrypto}} dashboard:
+Before you can manage EP11 keystores with the UI, complete the following steps to open your {{site.data.keyword.hscrypto}} dashboard:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}} and click the instance name.
 
@@ -102,4 +102,4 @@ After you delete a keystore, you are not able to access any EP11 keys that are s
 ## What's next
 {: #manage-ep11-keystore-ui-next}
 
-Start to create an EP11 key [through the console UI](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui#create-ep11-key-ui) or [through the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
+Start to create an EP11 key [through the UI UI](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui#create-ep11-key-ui) or [through the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).

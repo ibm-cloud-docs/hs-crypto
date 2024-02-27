@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-02-08"
+  years: 2021, 2024
+lastupdated: "2024-02-27"
 
 keywords: create key alias, key alias, delete key alias, add key alias, retrieve encryption key by alias, create alias API examples
 
@@ -44,18 +44,18 @@ Before you manage key alias for keys in {{site.data.keyword.hscrypto}}, keep in 
 ## Creating key aliases
 {: #create-key-alias}
 
-To create a key alias for a key, you can use either the console or the key management service API.
+To create a key alias for a key, you can use either the UI or the key management service API.
 
 Each key can have up to five aliases. It is limited to 1,000 aliases per instance.
 {: note}
 
-### Creating key alias with the console
+### Creating key alias with the UI
 {: #create-key-alias-ui}
 {: ui}
 
-Create a key alias with the console by completing the following steps:
+Create a key alias with the UI by completing the following steps:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. Select the **KMS keys** tab in the side menu and find the key that you want to create key aliases for.
@@ -137,15 +137,15 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/aliases
 ## Deleting key aliases
 {: #delete-key-alias}
 
-To remove a key alias for a key, you can use either the console or the key management service API.
+To remove a key alias for a key, you can use either the UI or the key management service API.
 
-### Deleting key aliases with the console
+### Deleting key aliases with the UI
 {: #delete-key-alias-ui}
 {: ui}
 
-Delete a key alias with the console by completing the following steps:
+Delete a key alias with the UI by completing the following steps:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. Select the **KMS keys** tab in the side menu and find the key that you want to create key aliases for.

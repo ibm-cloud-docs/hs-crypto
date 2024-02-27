@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-09-05"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -156,8 +156,8 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
 
     | Variable | Description |
     | --- | --- |
-    | `instance_id` | The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. You can get the identifier through **Overview** &gt; **Instance** in the {{site.data.keyword.cloud_notm}} console, or you can retrieve it with the {{site.data.keyword.cloud_notm}} Resource Controller API. For detailed instructions, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID). |
-    | `EP11_endpoint_URL` | The {{site.data.keyword.hscrypto}} Enterprise PKCS #11 (EP11) API endpoint. You can get it through **Overview** &gt; **Connect** &gt; **EP11 endpoint URL** in the {{site.data.keyword.cloud_notm}} console, or you can dynamically [retrieve the endpoint URL](/apidocs/hs-crypto#getinstance) with the API. Depending on whether you are using a public or [private network](/docs/hs-crypto?topic=hs-crypto-secure-connection), use the public or private EP11 endpoint URL. |
+    | `instance_id` | The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. You can get the identifier through **Overview** &gt; **Instance** in the UI, or you can retrieve it with the {{site.data.keyword.cloud_notm}} Resource Controller API. For detailed instructions, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID). |
+    | `EP11_endpoint_URL` | The {{site.data.keyword.hscrypto}} Enterprise PKCS #11 (EP11) API endpoint. You can get it through **Overview** &gt; **Connect** &gt; **EP11 endpoint URL** in the UI, or you can dynamically [retrieve the endpoint URL](/apidocs/hs-crypto#getinstance) with the API. Depending on whether you are using a public or [private network](/docs/hs-crypto?topic=hs-crypto-secure-connection), use the public or private EP11 endpoint URL. |
     | `EP11_endpoint_port_number` | The port number of the EP11 API endpoint. It is located after the colon in the endpoint URL. |
     | `enable_mtls` | Valid values are `true` or `false` to indicate whether you want to enable mutual TLS to add a second layer of authentication for PKCS #11 API access. By default, set it `false` as EP11 requires server-only authentication. For more information about the mutual TLS connections, see [Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11). |
     | `client_certificate` | If you enable mutual TLS connections, specify the file path of the client certificate that is uploaded to your instance by the certificate administrator. Otherwise, keep this field empty. |

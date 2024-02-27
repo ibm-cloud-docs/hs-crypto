@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-07-04"
+  years: 2021, 2024
+lastupdated: "2024-02-27"
 
 keywords: VMWare encryption, KMIP, Key management and distribution, Data appliance encryption, Netapp, vSphere, vSAN encryption
 
@@ -94,7 +94,7 @@ Let's start with the service authorization process.
 {: #tutorial-vmware-configure}
 {: step}
 
-1. In the **IBM Cloud for VMware Solutions** console, click **Resources** from the left navigation pane.
+1. In the **IBM Cloud for VMware Solutions** UI, click **Resources** from the left navigation pane.
 
 2. Scroll down to the **KMIP for VMware Instances** table, click the instance that you want to configure the {{site.data.keyword.hscrypto}} with. The status of the KMIP for VMware instance is *Inactive* because it is not configured yet.
 
@@ -123,7 +123,7 @@ Let's start with the service authorization process.
 {: #tutorial-kmip-verify}
 {: step}
 
-1. In your vSphere client console, complete the following steps:
+1. In your vSphere client UI, complete the following steps:
 
     a. Add the KMS to your vCenter Server by using the KMIP server address and port information from the previous step during the configuration.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-07-04"
+  years: 2018, 2024
+lastupdated: "2024-02-27"
 
 keywords: standard key, encryption key, create standard key, create encryption key, add key, key material, key management, create secret, persist secret, create encryption key, encryption key api, api key
 
@@ -17,19 +17,19 @@ subcollection: hs-crypto
 # Creating standard keys
 {: #create-standard-keys}
 
-You can create a standard encryption key with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.hscrypto}} key management service API.
+You can create a standard encryption key with the UI, or programmatically with the {{site.data.keyword.hscrypto}} key management service API.
 {: shortdesc}
 
-## Creating standard keys with the console
+## Creating standard keys with the UI
 {: #standard-key-gui}
 {: ui}
 
-[After you create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision), complete the following steps to create a standard key with the {{site.data.keyword.hscrypto}} console.
+[After you create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision), complete the following steps to create a standard key with the UI.
 
 If you enable [dual authorization settings for your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth), keep in mind that any keys that you add to the service require an authorization from two users to delete keys.
 {: note}
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. To create a new key, select the **KMS keys** tab in the side menu.

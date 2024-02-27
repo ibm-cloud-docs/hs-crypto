@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-07-04"
+  years: 2018, 2024
+lastupdated: "2024-02-27"
 
 keywords: root key, create root key, add key, root key api, api key, symmetric key, key material, key management, create key-wrapping key, create crk, create customer key, key-wrapping key
 
@@ -17,21 +17,21 @@ subcollection: hs-crypto
 # Creating root keys
 {: #create-root-keys}
 
-You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to create [root keys](#x6946961){: term} by using the {{site.data.keyword.hscrypto}} console, or programmatically with the {{site.data.keyword.hscrypto}} key management service API.
+You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to create [root keys](#x6946961){: term} by using the UI, or programmatically with the {{site.data.keyword.hscrypto}} key management service API.
 {: shortdesc}
 
 Root keys are symmetric key-wrapping keys that are used to protect the security of encrypted data in the cloud. For more information about root keys, see [Envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
 
-## Creating root keys with the console
+## Creating root keys with the UI
 {: #root-key-gui}
 {: ui}
 
-[After you create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision), complete the following steps to create a root key with the {{site.data.keyword.cloud_notm}} console.
+[After you create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision), complete the following steps to create a root key with the UI.
 
 If you enable [dual authorization settings for your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth), keep in mind that any keys that you add to the service require an authorization from two users to delete keys.
 {: note}
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. To create a new key, select the **KMS keys** tab in the side menu.

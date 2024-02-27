@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-07-04"
+  years: 2018, 2024
+lastupdated: "2024-02-27"
 
 keywords: key versions, get key versions, list key versions
 
@@ -48,7 +48,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/{id}/versions
     The ID value is used to access detailed information about the key. You can
     find the ID for a key in your service instance by
     [retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys),
-    or by accessing the {{site.data.keyword.cloud_notm}} console.
+    or by accessing the UI.
 
 3. Get a list of versions that are associated with the root key by running the following cURL command.
 

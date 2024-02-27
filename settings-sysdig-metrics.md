@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-07-05"
+  years: 2021, 2024
+lastupdated: "2024-02-27"
 
 keywords: monitoring, monitor metrics
 
@@ -35,13 +35,13 @@ Before you enable operational metrics for your {{site.data.keyword.hscrypto}} in
 
     You need to [provision a {{site.data.keyword.mon_short}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision){: external} that is located in the same region as the {{site.data.keyword.hscrypto}} instance that you want to receive operational metrics for. After you provision the {{site.data.keyword.mon_short}} instance, you need to [enable platform metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics#configure-monitoring).
 
-### Enabling metrics for your {{site.data.keyword.hscrypto}} instance with the console
+### Enabling metrics for your {{site.data.keyword.hscrypto}} instance with the UI
 {: #enable-metrics-instance-policy-ui}
 {: ui}
 
 After you create a {{site.data.keyword.hscrypto}} instance, provision a {{site.data.keyword.mon_short}} instance, and enable platform metrics, complete the following steps to enable a metrics policy:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.

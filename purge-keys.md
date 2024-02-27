@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-06-27"
+  years: 2021, 2024
+lastupdated: "2024-02-27"
 
 keywords: purge key, permanently delete key, remove key, destroy key
 
@@ -25,13 +25,13 @@ Before you purge keys, make sure that you understand [the concept of deleting an
 To manually purge a key, you need to be assigned the _KMS Key Purge_ role. Even a _Manager_ cannot purge a key. For more information about service access roles, see [IAM service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
 {: important}
 
-## Purging keys in the console
+## Purging keys in the UI
 {: #purge-keys-gui}
 {: ui}
 
-If you prefer to purging a key by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console by completing the following steps:
+If you prefer to purging a key by using a graphical interface, you can use the UI by completing the following steps:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
@@ -55,7 +55,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/purge
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 2. Retrieve the ID of the key that you want to delete.
 
-    You can find the ID for a key in your service instance by [retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys), or by accessing the {{site.data.keyword.cloud_notm}} console.
+    You can find the ID for a key in your service instance by [retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys), or by accessing the UI.
 
 3. Run the following cURL command to permanently delete the key and the contents.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-08-25"
+  years: 2018, 2024
+lastupdated: "2024-02-27"
 
 keywords: data encryption key, key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, unwrap api
 
@@ -39,7 +39,7 @@ Root keys that contain the same key material can unwrap the same data encryption
 
 2. Copy the ID of the [root key](#x6946961){: term} that you used to perform the initial wrap request.
 
-    You can retrieve the ID for a key by making a `GET /v2/keys` request, or by viewing your keys in the {{site.data.keyword.cloud_notm}} console.
+    You can retrieve the ID for a key by making a `GET /v2/keys` request, or by viewing your keys in the UI.
 
 3. Copy the `ciphertext` value that was returned during the initial wrap request.
 

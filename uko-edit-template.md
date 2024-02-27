@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-05"
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchestrator, edit key templates, key management, kms keys, UKO
 
@@ -17,14 +17,14 @@ subcollection: hs-crypto
 # Editing key template details
 {: #edit-template}
 
-You can edit your key templates in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can edit your key templates in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
-## Editing key templates with the {{site.data.keyword.cloud_notm}} console
+## Editing key templates with the UI
 {: #edit-key-template-ui}
 {: ui}
 
-To edit the details of a key template by using the console, complete the following steps:
+To edit the details of a key template by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Key templates** from the navigation to view all the available key templates. 

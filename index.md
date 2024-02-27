@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-10-31"
+  years: 2018, 2024
+lastupdated: "2024-02-27"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -20,7 +20,7 @@ subcollection: hs-crypto
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}} for short) is a dedicated key management service and hardware security module (HSM) based on {{site.data.keyword.cloud_notm}}. With this service, you can take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. {{site.data.keyword.hscrypto}} is also the only service in the cloud industry that is built on FIPS 140-2 Level 4-certified hardware. The {{site.data.keyword.uko_full_notm}} function provides the only cloud native single-point-of-control of encryption keys across hybrid multicloud environments of your enterprise.
 {: shortdesc}
 
-This tutorial shows you the high-level steps on how to set up your service instance by loading your master keys, create and manage encryption keys with the {{site.data.keyword.cloud_notm}} console, and perform cryptographic operations with the PKCS #11 API or with the GREP11 API.
+This tutorial shows you the high-level steps on how to set up your service instance by loading your master keys, create and manage encryption keys with the UI, and perform cryptographic operations with the PKCS #11 API or with the GREP11 API.
 
 - [Step 1: Initialize your service instance](#initialize-crypto)
 - [Step 2 (Standard Plan only): Create keys](#create-key-standard)
@@ -63,9 +63,9 @@ Depending on where your service instance locates and your security requirements,
 ## Step 2 (Standard Plan only): Create keys
 {: #create-key-standard}
 
-With the Standard Plan, you can create root keys or standard keys for data encryption. Complete the following steps to create your first cryptographic key. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *writer* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the console](/docs/hs-crypto?topic=hs-crypto-manage-access&interface=ui#assign-access-console).
+With the Standard Plan, you can create root keys or standard keys for data encryption. Complete the following steps to create your first cryptographic key. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *writer* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the UI](/docs/hs-crypto?topic=hs-crypto-manage-access&interface=ui#assign-access-console).
 
-1. From the {{site.data.keyword.cloud_notm}} console, click **KMS keys** &gt; **Add key**.
+1. From the UI, click **KMS keys** &gt; **Add key**.
 2. Select **Create a key**. 
 3. Specify **[Root key](/docs/hs-crypto?topic=hs-crypto-understand-concepts&interface=ui#root-key-concept)** or **[Standard key](/docs/hs-crypto?topic=hs-crypto-understand-concepts&interface=ui#standard-key-concept)** as the key type and enter a unique name for your key. Ensure that the key name doesn't contain personally identifiable information (PII), such as your name or location.
 4. Click **Add key** to confirm.
@@ -75,7 +75,7 @@ The created key is a symmetric 256-bit key, supported by the AES-CBC algorithm. 
 ## Step 2 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys
 {: #manage-uko-key}
 
-Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *Vault administrator* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the console](/docs/hs-crypto?topic=hs-crypto-uko-manage-access&interface=ui#assign-access-console).
+Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *Vault administrator* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the UI](/docs/hs-crypto?topic=hs-crypto-uko-manage-access&interface=ui#assign-access-console).
 
 ### 1. Create vaults
 {: #create-vault}
@@ -84,7 +84,7 @@ A vault is a single repository that controls a user's or an access group's acces
 
 Complete the following steps to create your first vault:
 
-1. From your service instance console, click **Vaults** from the navigation to view all the available vaults.
+1. From your service instance UI, click **Vaults** from the navigation to view all the available vaults.
 2. Click **Create vault**.
 3. Enter a name in **Vault name**. The vault name can be of 1 to 100 characters. Optionally, you can add an extended description to your vault in the **Description** section.
 4. Click **Create vault** to confirm.
@@ -96,7 +96,7 @@ A keystore is a repository that stores the cryptographic keys. You can create an
 
 Complete the following steps to create your first internal keystore:
 
-1. From your service instance console, click **Keystores** from the navigation to view all the available keystores.
+1. From your service instance UI, click **Keystores** from the navigation to view all the available keystores.
 2. Click **Add keystore**.
 3. Under **Vault**, select the vault that you create, and click **Next**. If you want to assign the keystore to a new vault, click **Create vault**.
 4. Under **Keystore type**, select **IBM Cloud KMS** and click **Next**.
@@ -111,7 +111,7 @@ key template specifies the properties of the managed keys to be created, such as
 
 Complete the following steps to create your first key template:
 
-1. From your service instance console, click **Key templates** from the navigation.
+1. From your service instance UI, click **Key templates** from the navigation.
 2. Click **Create key template**.
 3. Under **Vault**, select the vault that you've just created and then click **Next**. 
 4. Under **Keystores**, select **IBM Cloud KMS** as the keystore type, select the keystore you've just created, and then click **Next**.
@@ -123,17 +123,17 @@ Complete the following steps to create your first key template:
 
 You can use a managed key for encryption or decryption only after it is created and activated in at least one keystore. Complete the following steps to create your first IBM Cloud KMS key and activate the key in the keystore that you create:
 
-1. From your service instance console, click **Managed keys** from the navigation to view all the available keys.
+1. From your service instance UI, click **Managed keys** from the navigation to view all the available keys.
 2. Click **Create key**.
 3. Under **Vault**, select the vault that you've just created and then click **Next**. 
 4. Under **Key template**, select **Create from a key template** and then select the key template that you've just created and click **Next**. 
-5. Under **Key properties**, specify details of the key. Click **Next** to continue when you are done. Note that `Pre-active` keys are not to be installed in keystores until you manually activate them. `Active` keys are to be automatically installed in the keystores. For more information about the key properties, see [Creating managed keys with a key template in the IBM Cloud console](/docs/hs-crypto?topic=hs-crypto-create-managed-keys&interface=ui#create-managed-keys-template-ui).
+5. Under **Key properties**, specify details of the key. Click **Next** to continue when you are done. Note that `Pre-active` keys are not to be installed in keystores until you manually activate them. `Active` keys are to be automatically installed in the keystores. For more information about the key properties, see [Creating managed keys with a key template in the IBM Cloud UI](/docs/hs-crypto?topic=hs-crypto-create-managed-keys&interface=ui#create-managed-keys-template-ui).
 6. Under **Summary**, view the summary of your key, and then click **Create key** to create the key.
 
 ## Step 3: Encrypt your data with cloud HSM
 {: #encrypt-data-hsm}
 
-You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations with the PKCS #11 API or with the GREP11 API. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *writer* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the console](/docs/hs-crypto?topic=hs-crypto-manage-access&interface=ui#assign-access-console).
+You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations with the PKCS #11 API or with the GREP11 API. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *writer* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the UI](/docs/hs-crypto?topic=hs-crypto-manage-access&interface=ui#assign-access-console).
 
 ### Performing cryptographic operations with the PKCS #11 API
 {: #cryptographic-operations-with-pkcs11}
@@ -163,7 +163,7 @@ The following procedure uses Golang code as an example to test GREP11 functions.
     {: codeblock}
 
     In the code example,
-    - Replace `<grep11_server_address>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance console, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**.
+    - Replace `<grep11_server_address>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance UI, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**.
     - Replace `<ibm_cloud_apikey>` with the [service ID API key](/docs/account?topic=account-serviceidapikeys){: external} that you created.
 
 4. From the `<your_repository_path>/hpcs-grep11-go/examples` directory, execute the examples by running the `go test -v -run Example` command.

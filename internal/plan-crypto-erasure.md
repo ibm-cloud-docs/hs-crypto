@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-06-27"
+  years: 2020, 2024
+lastupdated: "2024-02-27"
 
 keywords: crypto erasure, erase data, enable KYOK, onboard to hyper protect crypto services, hpcs onboarding, internal, key registration, KYOK
 
@@ -52,7 +52,7 @@ with {{site.data.keyword.hscrypto}}.
 ### Step 1. Delete a root key
 {: #crypto-erasure-delete-root-key}
 
-You can find the ID for a key in your {{site.data.keyword.hscrypto}} instance by [retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys), or by accessing the {{site.data.keyword.cloud_notm}} console.
+You can find the ID for a key in your {{site.data.keyword.hscrypto}} instance by [retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys), or by accessing the UI.
 
 Once you locate the key ID, delete the key by making a call to `DELETE /v2/keys`.
 

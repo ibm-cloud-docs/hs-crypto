@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-01-18"
+lastupdated: "2024-02-27"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -122,7 +122,7 @@ Updated: Master key rotation support for all regions
 {: release-note}
 
 Added: Master key rotation for {{site.data.keyword.uko_full_notm}}
-:   You can now rotate master keys on demand to meet industry standards and cryptographic best practices in your {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance. You can understand how keys are protected during master key rotation and use the {{site.data.keyword.cloud_notm}} console to view the progress. For more information about how master key rotation works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro).
+:   You can now rotate master keys on demand to meet industry standards and cryptographic best practices in your {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance. You can understand how keys are protected during master key rotation and use the UI to view the progress. For more information about how master key rotation works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro).
 
 
 Added: Master key rotation for EP11 keystores
@@ -354,8 +354,8 @@ Added: Initializing the service instance by using recovery crypto units {: #add-
 
     To rotate your master key, see [Rotating master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit).
 
-Added: Managing EP11 keystores and keys with the {{site.data.keyword.cloud_notm}} console {: #add-ep11-keystores-keys-console}
-:   Apart from using the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) to manage Enterprise PKCS #11 (EP11) keystores and keys, you can now use the {{site.data.keyword.cloud_notm}} console to view, create, and delete EP11 keystores and keys. For more information, see [Managing EP11 keystores with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui) and [Managing EP11 keys with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui).
+Added: Managing EP11 keystores and keys with the UI {: #add-ep11-keystores-keys-console}
+:   Apart from using the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) to manage Enterprise PKCS #11 (EP11) keystores and keys, you can now use the UI to view, create, and delete EP11 keystores and keys. For more information, see [Managing EP11 keystores with the UI](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui) and [Managing EP11 keys with the UI](/docs/hs-crypto?topic=hs-crypto-manage-ep11-key-ui).
 
 Added: Managing key aliases for a key {: #add-key-alias}
 :   Key aliases are unique human-readable names that can be used to identify a key. You can now create up to five aliases for a key for easy recognition. For how to use key aliases, see [Managing key aliases](/docs/hs-crypto?topic=hs-crypto-manage-key-alias).

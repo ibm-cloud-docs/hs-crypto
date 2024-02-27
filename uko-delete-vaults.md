@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-08-24"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Deleting vaults
 {: #delete-vaults}
 
-You can delete your vaults in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can delete your vaults in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 
@@ -29,14 +29,14 @@ If you want to delete a vault, you need to delete all managed keys, delete or ar
 {: note}
 
 
-## Deleting vaults with the {{site.data.keyword.cloud_notm}} console
+## Deleting vaults with the UI
 {: #delete-vaults-ui}
 {: ui}
 
 By deleting a vault, access groups that are assigned to this vault can no longer access the vault.
 {: important}
 
-To delete a vault by using the console, complete the following steps:
+To delete a vault by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Vaults** from the navigation to view all the available vaults.

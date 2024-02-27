@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-07-05"
+  years: 2019, 2024
+lastupdated: "2024-02-27"
 
 keywords: disaster recovery, restore, recovery, cross region restore, support ticket, support center
 
@@ -43,7 +43,7 @@ In the process, you're the only person who owns the master key. IBM administrato
 
 To restore a backup to an existing service instance, follow these steps:
 
-1. In the {{site.data.keyword.cloud_notm}} console, click the **Help** icon ![Help icon](../icons/help.svg "Help") > **Support center** from the {{site.data.keyword.cloud_notm}} console menu barto enter the Support Center. Click **View all** in the **Recent support cases** panel and click **Create new case**. Or, you can directly go to the [Manage cases page](https://cloud.ibm.com/unifiedsupport/cases){: external} and click **Create new case**.
+1. In the UI, click the **Help** icon ![Help icon](../icons/help.svg "Help") > **Support center** from the UI menu barto enter the Support Center. Click **View all** in the **Recent support cases** panel and click **Create new case**. Or, you can directly go to the [Manage cases page](https://cloud.ibm.com/unifiedsupport/cases){: external} and click **Create new case**.
 2. On the **Create a case** page displayed, select the offering {{site.data.keyword.hscrypto}}, and then specify the following values:
 
     | Field name | Action |

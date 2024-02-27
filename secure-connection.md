@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-07-05"
+  years: 2020, 2024
+lastupdated: "2024-02-27"
 
 keywords: securing connection, disabling public service endpoint
 
@@ -73,10 +73,10 @@ environment is set up before setting the network access policy to
 
 There are several ways for you to update the network settings. However, before you update the network access policy, you need to initialize the service instance first. See [Initializing service instances with the IBM Cloud TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) or [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) for instructions.
 
-* When you [provision a service instance](/docs/hs-crypto?topic=hs-crypto-provision), you can choose between the `private-only` and `public-and-private` options using either the {{site.data.keyword.cloud_notm}} console or CLI.
+* When you [provision a service instance](/docs/hs-crypto?topic=hs-crypto-provision), you can choose between the `private-only` and `public-and-private` options using either the UI or CLI.
 * [Manage and update the network settings](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies) after you provision and initialize the service instance.
 
-    After you enable a private-only network, you are not able to perform further key management actions in the {{site.data.keyword.cloud_notm}} console. Use either the CLI or API to switch between a private-only network and a public-and-private network instead.
+    After you enable a private-only network, you are not able to perform further key management actions in the UI. Use either the CLI or API to switch between a private-only network and a public-and-private network instead.
 
 The instance access policy, which controls access to the instance from either
 public or private IP addresses, is not enforced after the `ibmcloud resource service-instance-delete (NAME | ID)` command to
@@ -126,7 +126,7 @@ Prepare your VSI or test machine by configuring your routing table for the priva
 ## Step 2: Provision a service instance and select the network access
 {: #service-endpoint-private-endpoints}
 
-When you [provision a service instance](/docs/hs-crypto?topic=hs-crypto-provision), you can choose between the `private-only` and `public-and-private` options using either the {{site.data.keyword.cloud_notm}} console or CLI.
+When you [provision a service instance](/docs/hs-crypto?topic=hs-crypto-provision), you can choose between the `private-only` and `public-and-private` options using either the UI or CLI.
 
 You can always [manage and update the network settings](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies) after you provision and initialize the service instance. Use either the CLI or API to switch between a private-only network and a public-and-private network.
 {: tip}

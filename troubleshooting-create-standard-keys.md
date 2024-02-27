@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-07-05"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: troubleshoot, problems, known issues, can't create standard keys
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 {: troubleshoot}
 {: support}
 
-You are not able to create a standard key through either the {{site.data.keyword.hscrypto}} user interface or the API after you load another master key to the service instance.
+You are not able to create a standard key through either the UI or the API after you load another master key to the service instance.
 {: shortdesc}
 
 You see the following error message when you try to create a standard key:

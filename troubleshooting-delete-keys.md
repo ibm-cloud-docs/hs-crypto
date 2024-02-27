@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-07-05"
+  years: 2020, 2024
+lastupdated: "2024-02-27"
 
 keywords: troubleshoot, problems, known issues, can't delete keys
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 {: #troubleshoot-unable-to-delete-keys}
 {: troubleshoot}
 
-When you use the {{site.data.keyword.hscrypto}} user interface, you're unable to delete a key.
+When you use the UI, you're unable to delete a key.
 {: shortdesc}
 
 From the {{site.data.keyword.cloud_notm}} dashboard, you select your instance of the {{site.data.keyword.hscrypto}} service.

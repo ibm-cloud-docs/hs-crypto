@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-07-05"
+  years: 2018, 2024
+lastupdated: "2024-02-27"
 
 keywords: ibmcloud cli, hpcs cli, ibmcloud commands, ibm cloud command-line interface, key protect cli, kms cli
 
@@ -43,7 +43,7 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
 
       To find out the regions that {{site.data.keyword.hscrypto}} supports, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
-    - On the [Windows]{: tag-windows} operating system, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a KP_PRIVATE_ADDR environment variable and set the value to the endpoint that is displayed on the **Manage** tab of your provisioned {{site.data.keyword.cloud_notm}} console. For example, `https://api.us-south.hs-crypto.cloud.ibm.com:<port>`.
+    - On the [Windows]{: tag-windows} operating system, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a KP_PRIVATE_ADDR environment variable and set the value to the endpoint that is displayed on the **Manage** tab of your provisioned UI. For example, `https://api.us-south.hs-crypto.cloud.ibm.com:<port>`.
 
     You can also retrieve the endpoint URL through the API. For details, [check out the {{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external}.
 
@@ -59,7 +59,7 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
       ```
       {: pre}
 
-      In this command, the *instance_ID* is displayed on the **Manage** tab of your provisioned {{site.data.keyword.cloud_notm}} console. *instance_ID* is in a Universally Unique Identifier (UUID) format.
+      In this command, the *instance_ID* is displayed on the **Manage** tab of your provisioned UI. *instance_ID* is in a Universally Unique Identifier (UUID) format.
 
     - On [Windows]{: tag-windows}, in **Control Panel**, type `environment variable` in the search box to locate the Environment Variables window. Create a KP_INSTANCE_ID environment variable and set the value to the instance ID value that is displayed on the **Manage** tab of your provisioned {{site.data.keyword.hscrypto}} dashboard.
 

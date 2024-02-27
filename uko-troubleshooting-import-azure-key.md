@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-12-26"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: import azure key failure, can't import azure key
 
@@ -28,7 +28,7 @@ After you create a key in {{site.data.keyword.hscrypto}} with {{site.data.keywor
 You might have accidentally deleted a key named `EKMF-BYOK-KEK-FOR-IMPORT` in the Azure Key Vault instance that you connect to. You can distribute keys to your Azure Key Vault only if a key named `EKMF-BYOK-KEK-FOR-IMPORT` exists in the Azure Key Vault instance. By default, this key is automatically created when you successfully connect to your Azure Key Vault instance. 
 {: tsCauses}
 
-Create a key from the Azure Key Vault UI based on the following key settings. And then, activate and distribute keys that you create from the {{site.data.keyword.hscrypto}} UI to keystores again. For detailed instructions, see [Editing key details with the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
+Create a key from the Azure Key Vault UI based on the following key settings. And then, activate and distribute keys that you create from the {{site.data.keyword.hscrypto}} UI to keystores again. For detailed instructions, see [Editing key details with the UI](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
 {: tsResolve}
 
 | Parameter | Value |

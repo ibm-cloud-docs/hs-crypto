@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-05"
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -18,15 +18,15 @@ subcollection: hs-crypto
 # Editing managed key details
 {: #edit-kms-keys}
 
-You can edit your managed keys in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can edit your managed keys in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 
-## Editing managed key details with the {{site.data.keyword.cloud_notm}} console
+## Editing managed key details with the UI
 {: #edit-kms-keys-ui}
 {: ui}
 
-To edit the details of a managed key by using the console, complete the following steps:
+To edit the details of a managed key by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-08-24"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -18,15 +18,15 @@ subcollection: hs-crypto
 # Editing vault details
 {: #edit-vaults}
 
-You can edit your vaults in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API. With a vault, you cannot only create key templates, create managed keys, or add keystores, but also manage resources that are contained in the vault.
+You can edit your vaults in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API. With a vault, you cannot only create key templates, create managed keys, or add keystores, but also manage resources that are contained in the vault.
 {: shortdesc}
 
 
-## Editing vault details with the {{site.data.keyword.cloud_notm}} console
+## Editing vault details with the UI
 {: #edit-vaults-ui}
 {: ui}
 
-To edit vault details by using the console, complete the following steps:
+To edit vault details by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Vaults** from the navigation to view all the available vaults.

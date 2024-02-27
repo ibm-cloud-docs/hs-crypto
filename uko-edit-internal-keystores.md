@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-12-27"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchestrator, UKO keystore, edit keystore, key management, internal keystore, KMS keystore
 
@@ -18,14 +18,14 @@ subcollection: hs-crypto
 # Editing internal keystores
 {: #edit-internal-keystores}
 
-You can edit your internal keystores in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can edit your internal keystores in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
-## Editing internal keystores with the {{site.data.keyword.cloud_notm}} console
+## Editing internal keystores with the UI
 {: #edit-internal-keystores-ui}
 {: ui}
 
-To edit the details of an internal KMS keystore by using the console, complete the following steps:
+To edit the details of an internal KMS keystore by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Keystores** from the navigation to view all the available keystores.

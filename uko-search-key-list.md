@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-01-18"
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchestrator, search keys, key management, kms keys
 
@@ -18,15 +18,15 @@ subcollection: hs-crypto
 # Filtering and searching managed keys
 {: #search-key-list}
 
-You can filter and search for your managed keys in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can filter and search for your managed keys in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 
-## Filtering managed keys with the {{site.data.keyword.cloud_notm}} console
+## Filtering managed keys with the UI
 {: #filter-key-list-ui}
 {: ui}
 
-To filter managed keys by using the console, complete the following steps:
+To filter managed keys by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
@@ -58,11 +58,11 @@ To filter managed keys by using the console, complete the following steps:
    
 
 
-##  Searching for keys with the {{site.data.keyword.cloud_notm}} console
+##  Searching for keys with the UI
 {: #search-key-list-ui}
 {: ui}
 
-To search for a key by using the console, complete the following steps:
+To search for a key by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.

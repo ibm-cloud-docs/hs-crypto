@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-08-24"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: troubleshoot, problems, known issues, can't create vaults
 
@@ -17,7 +17,7 @@ subcollection: hs-crypto
 {: troubleshoot}
 {: support}
 
-You are not able to create a vault through either the {{site.data.keyword.hscrypto}} user interface or the {{site.data.keyword.uko_full_notm}} API.
+You are not able to create a vault through either the UI or the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 You might receive an error message similar to one of the following messages when you create a vault:

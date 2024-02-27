@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-03-13"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: associate resource, key associated resource
 
@@ -17,17 +17,17 @@ subcollection: hs-crypto
 # Viewing resources associated with managed keys
 {: #uko-view-associated-resource}
 
-You can view other {{site.data.keyword.cloud}} resources that are protected by managed keys with [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) by using the {{site.data.keyword.cloud_notm}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can view other {{site.data.keyword.cloud}} resources that are protected by managed keys with [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) by using the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 Currently, envelope encryption applies to IBM Cloud KMS keys and IBM Key Protect keys. Therefore, you can view resources that are associated with these keys only.
 {: note}
 
-## Viewing associated resources with the {{site.data.keyword.cloud_notm}} console
+## Viewing associated resources with the UI
 {: #uko-view-associated-resource-ui}
 {: ui}
 
-To view the associated resources by using the console, complete the following steps:
+To view the associated resources by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-09-20"
+  years: 2018, 2024
+lastupdated: "2024-02-27"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -369,7 +369,7 @@ The `GetMechanismList` function obtains a list of mechanism types that are suppo
     client.GetMechanismList({}, (err, data) => {
       if (err) throw err;
 
-      console.log('MECHANISMS:', data.Mechs);
+      UI.log('MECHANISMS:', data.Mechs);
     });
     ```
     {: codeblock}
@@ -477,7 +477,7 @@ The `GetMechanismInfo` Function obtains information about a particular mechanism
       }, (err, data) => {
         if (err) throw err;
 
-        console.log('MECHANISM INFO:', data.MechInfo);
+        UI.log('MECHANISM INFO:', data.MechInfo);
     });
     ```
     {: codeblock}
@@ -1467,7 +1467,7 @@ The `GetAttributeValue` function obtains an attribute value of an object.
       Attributes: attributeTemplate
     }, (err, response) => {
       callback(err, response);
-      console.log('ATTRIBUTE:', response.Attributes);
+      UI.log('ATTRIBUTE:', response.Attributes);
     });
     ```
     {: codeblock}

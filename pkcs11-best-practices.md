@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-09-07"
+  years: 2020, 2024
+lastupdated: "2024-02-27"
 
 keywords: pkcs11 access, pkcs 11 authentication, set up PKCS 11 API, best practice for setting up pkcs11 users
 
@@ -53,11 +53,11 @@ You need to create three custom roles, one for performing crypto operations, one
 
 This role is used to generate key objects for performing crypto operations. However, this role does not have permission to use or manage Enterprise PKCS #11 (EP11) keystores.
 
-1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)**, and select **Roles**.
+1. In the UI, go to **Manage** > **Access (IAM)**, and select **Roles**.
 2. Click **Create**.
-3. Enter a name for your role; for example, `Crypto operator`. This name must be unique within the account. Users see this role name in the console when they assign access to the service.
+3. Enter a name for your role; for example, `Crypto operator`. This name must be unique within the account. Users see this role name in the UI when they assign access to the service.
 4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `CryptoOperator`.
-5. Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the console when a user assigns access to the service.
+5. Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the UI when a user assigns access to the service.
 6. From the list of services, select **Hyper Protect Crypto Services**.
 7. Select **Add** for the following 19 actions:
     * hs-crypto.crypto.decrypt
@@ -86,11 +86,11 @@ This role is used to generate key objects for performing crypto operations. Howe
 
 This role is used to manage keys in the EP11 keystores. However, this role does not have permission to manage EP11 keystores or perform crypto operations.
 
-1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)**, and select **Roles**.
+1. In the UI, go to **Manage** > **Access (IAM)**, and select **Roles**.
 2. Click **Create**.
-3. Enter a name for your role; for example, `Key operator`. This name must be unique within the account. Users see this role name in the console when they assign access to the service.
+3. Enter a name for your role; for example, `Key operator`. This name must be unique within the account. Users see this role name in the UI when they assign access to the service.
 4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `KeyOperator`.
-5. Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the console when a user assigns access to the service.
+5. Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the UI when a user assigns access to the service.
 6. From the list of services, select **Hyper Protect Crypto Services**.
 7. Select **Add** for the following six actions:
     * hs-crypto.keystore.deletekey
@@ -106,11 +106,11 @@ This role is used to manage keys in the EP11 keystores. However, this role does 
 
 This role is used to create and delete EP11 keystores but does not have permissions to manage keys.
 
-1. In the {{site.data.keyword.cloud}} console, go to **Manage** > **Access (IAM)**, and select **Roles**.
+1. In the UI, go to **Manage** > **Access (IAM)**, and select **Roles**.
 2. Click **Create**.
-3. Enter a name for your role; for example, `Keystore operator`. This name must be unique within the account. Users see this role name in the console when they assign access to the service.
+3. Enter a name for your role; for example, `Keystore operator`. This name must be unique within the account. Users see this role name in the UI when they assign access to the service.
 4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `KeystoreOperator`.
-5. Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the console when a user assigns access to the service.
+5. Optional: Enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description also shows in the UI when a user assigns access to the service.
 6. From the list of services, select **Hyper Protect Crypto Services**.
 7. Select **Add** for the following four actions:
     * hs-crypto.keystore.createkeystore
@@ -129,7 +129,7 @@ For more information about how to create custom roles, see [Creating custom role
 
 To create a service ID for the SO user and the corresponding API key, complete the following steps:
 
-1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
+1. In the UI, go to **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
 2. To create the service ID for the SO user, follow these steps:
     1. Click **Create**.
     2. Create a name `SO user` and description for the SO user service ID.
@@ -149,7 +149,7 @@ To create a service ID for the SO user and the corresponding API key, complete t
 
 To create a service ID for the normal user and the corresponding API key, complete the following steps:
 
-1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
+1. In the UI, go to **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
 2. To create the service ID for the normal user, follow these steps:
     1. Click **Create**.
     2. Create a name `Normal user` and description for the normal user service ID.
@@ -169,7 +169,7 @@ To create a service ID for the normal user and the corresponding API key, comple
 
 To create a service ID for the anonymous user and the corresponding API key, complete the following steps:
 
-1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
+1. In the UI, go to **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
 2. To create the service ID for the anonymous user, follow these steps:
     1. Click **Create**.
     2. Create a name `Anonymous user` and description for the anonymous user service ID.
@@ -189,7 +189,7 @@ For more information about creating service IDs, see [Creating and working with 
 ## Step 3: Assign IAM roles to the service IDs
 {: #step3-assign-iam-roles}
 
-You can grant access to service IDs within a {{site.data.keyword.hscrypto}} service instance by using the {{site.data.keyword.cloud_notm}} console.
+You can grant access to service IDs within a {{site.data.keyword.hscrypto}} service instance by using the UI.
 
 ### 1. Assign the custom roles to the SO user service ID
 {: #assign-custom-role-SO-user-service}

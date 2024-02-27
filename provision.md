@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-11-07"
+  years: 2018, 2024
+lastupdated: "2024-02-27"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -17,7 +17,7 @@ subcollection: hs-crypto
 # Provisioning service instances
 {: #provision}
 
-You can create an instance of {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} by using the {{site.data.keyword.cloud_notm}} console or the {{site.data.keyword.cloud_notm}} CLI.
+You can create an instance of {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} by using the UI or the {{site.data.keyword.cloud_notm}} CLI.
 {: shortdesc}
 
 You can automate the instance creation by using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).
@@ -43,13 +43,13 @@ In order to provision a {{site.data.keyword.hscrypto}} instance, make sure that 
 ## Provisioning an instance of {{site.data.keyword.hscrypto}} Standard Plan
 {: #provision-standard}
 
-You can provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from either the {{site.data.keyword.cloud_notm}} console or CLI.
+You can provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from either the UI or CLI.
 
-### Using the {{site.data.keyword.cloud_notm}} console
+### Using the UI
 {: #provision-gui}
 {: ui}
 
-To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from the {{site.data.keyword.cloud_notm}} console, complete the following steps:
+To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from the UI, complete the following steps:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 2. Click **Create resource** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.
@@ -80,8 +80,8 @@ To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from th
 
     - Under **Allowed network**, choose the network access to your service instance:
 
-        - **Public and private**: Manage your instance through both public and private network using the {{site.data.keyword.cloud_notm}} console, CLI, or API. This is the default option.
-        - **Private only**: Access your service instance only through private network using CLI or API. The {{site.data.keyword.cloud_notm}} console is not available for the private-only network access.
+        - **Public and private**: Manage your instance through both public and private network using the UI, CLI, or API. This is the default option.
+        - **Private only**: Access your service instance only through private network using CLI or API. The UI is not available for the private-only network access.
 
         A private instance accepts API requests through only the private endpoints. The private endpoints are only accessible when your {{site.data.keyword.cloud_notm}} account, along with all associated resources, is enabled with [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint). You cannot access your private only instance through the CLI or API if your server or machine is outside the {{site.data.keyword.cloud_notm}} network.
         {: important}
@@ -144,7 +144,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan with th
     | `instance_name` | **Required**. The name of your {{site.data.keyword.hscrypto}} service instance. |
     | `region_name` | **Required**. The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions). \n \n Currently, the `us-south` and `us-east` regions are enabled with recovery crypto units by default, which means, when a service instance is provisioned in either region, you are enabled with the option to back up your master keys in the recovery crypto units located in both regions. For more information, see [Introducing service instance initialization modes](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit). |
     | `number_of_operational_crypto_units` | **Optional**. Multiple crypto units are distributed among different supported availability zones in the selected region to increase availability. At least two crypto units are to be enabled for high availability. If you do not specify the number of crypto units, two crypto units are assigned by default. |
-    | `network_access` | **Optional**. Use this parameter to specify the network access to your service instance. The default setting is **public and private**, which means you can manage your instance through both public and private network using the {{site.data.keyword.cloud_notm}} console, CLI, or API. \n \n If you set the value to **private-only**, you can access your service instance only through private network using CLI or API. The {{site.data.keyword.cloud_notm}} console is not available for the private-only network access. After you provision the service instance, you can still [update the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies). |
+    | `network_access` | **Optional**. Use this parameter to specify the network access to your service instance. The default setting is **public and private**, which means you can manage your instance through both public and private network using the UI, CLI, or API. \n \n If you set the value to **private-only**, you can access your service instance only through private network using CLI or API. The UI is not available for the private-only network access. After you provision the service instance, you can still [update the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies). |
     | `number_of_failover_crypto_units` | **Optional**. Use this parameter to specify the number of failover crypto units to enable automatic cross-region recovery. \n \n Set the number of failover crypto units equal to or less than the number of operational crypto units. However, to meet high availability, you need to specify at least two failover crypto units. Each failover crypto unit [is also charged](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Failover crypto units are now available in Dallas (`us-south`) and Washington DC (`us-east`). If you do not specify the number of failover crypto units, this feature is disabled by default. After you provision the service instance, you can still [enable or add failover crypto units](/docs/hs-crypto?topic=hs-crypto-enable-add-failover). |
     {: caption="Table 2. Describes command variables to create a {{site.data.keyword.hscrypto}} service instance" caption-side="bottom"}
 
@@ -162,13 +162,13 @@ To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan with th
 ## Provisioning an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} 
 {: #provision-uko}
 
-You can provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from either the {{site.data.keyword.cloud_notm}} console or CLI.
+You can provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from either the UI or CLI.
 
-### Using the {{site.data.keyword.cloud_notm}} console
+### Using the UI
 {: #provision-uko-gui}
 {: ui}
 
-To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from the {{site.data.keyword.cloud_notm}} console, complete the following steps:
+To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from the UI, complete the following steps:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 2. Click **Create resource** to view the list of services that are available on {{site.data.keyword.cloud_notm}}.

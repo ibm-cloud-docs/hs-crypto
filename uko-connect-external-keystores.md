@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-01"
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Connecting to external keystores
 {: #connect-external-keystores}
 
-You can use {{site.data.keyword.uko_full_notm}} to connect to external keystores with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can use {{site.data.keyword.uko_full_notm}} to connect to external keystores with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 Before you connect to an external keystore, keep in mind the following considerations:
@@ -94,11 +94,11 @@ To set up user access to Google Cloud KMS, complete the following steps:
     - `Cloud KMS Admin`
     - `Cloud KMS Crypto Operator`
 
-## Connecting to external keystores with the {{site.data.keyword.cloud_notm}} console
+## Connecting to external keystores with the UI
 {: #connect-external-keystores-ui}
 {: ui}
 
-To connect to an external keystore by using the console, complete the following steps:
+To connect to an external keystore by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Keystores** from the navigation to view all the available keystores.

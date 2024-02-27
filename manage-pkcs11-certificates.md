@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-06-05"
+  years: 2023, 2024
+lastupdated: "2024-02-27"
 
 keywords: pkcs11 certificate, view ep11 certificate, delete ep11 certificate
 
@@ -14,21 +14,21 @@ subcollection: hs-crypto
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Managing EP11 certificates with the {{site.data.keyword.cloud_notm}} console
+# Managing EP11 certificates with the UI
 {: #manage-ep11-certificate-ui}
 
-Enterprise PKCS #11 (EP11) certificates store public key or attribute certificates. Apart from using the {{site.data.keyword.hscrypto}} [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api) to manage EP11 certificates, you can also use the {{site.data.keyword.cloud}} console to view, download, and delete EP11 certificates.
+Enterprise PKCS #11 (EP11) certificates store public key or attribute certificates. Apart from using the {{site.data.keyword.hscrypto}} [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api) to manage EP11 certificates, you can also use the UI to view, download, and delete EP11 certificates.
 {: shortdesc}
 
-Currently, creating EP11 certificates with the {{site.data.keyword.cloud_notm}} console is not supported. If you want to create EP11 certificates, you need to use the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref).
+Currently, creating EP11 certificates with the UI is not supported. If you want to create EP11 certificates, you need to use the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref).
 {: note}
 
 ## Before you begin
 {: #manage-ep11-certificate-ui-before}
 
-Before you can manage EP11 certificates with the console, complete the following steps to open your {{site.data.keyword.hscrypto}} dashboard:
+Before you can manage EP11 certificates with the UI, complete the following steps to open your {{site.data.keyword.hscrypto}} dashboard:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}} and click the instance name.
 

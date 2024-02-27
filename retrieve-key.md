@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-07-05"
+  years: 2018, 2024
+lastupdated: "2024-02-27"
 
 keywords: get key, get encryption key, view encryption key, retrieve encryption key, API examples
 
@@ -46,7 +46,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID_or_alias
     The ID value is used to access detailed information about the standard key, such as
     the key material itself. You can retrieve the ID for a specified key by
     making a `GET /v2/keys` request, or by accessing the
-    {{site.data.keyword.cloud_notm}} console.
+    UI.
 
 3. Run the following cURL command to get details about your key and the key material.
 

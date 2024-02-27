@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-05"
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -33,11 +33,11 @@ Before you create a managed key, keep in mind the following considerations:
 - Currently, importing managed keys is not supported. You can create managed keys with {{site.data.keyword.uko_full_notm}} only.
 
 
-## Creating managed keys with a key template in the {{site.data.keyword.cloud_notm}} console
+## Creating managed keys with a key template in the UI
 {: #create-managed-keys-template-ui}
 {: ui}
 
-When you select the **Create with a key template** option, you are creating a managed key with key properties that are predefined by your administrator. This option ensures that your key is compliant with the predefined standards. To create a managed key with a key template by using the console, complete the following steps:
+When you select the **Create with a key template** option, you are creating a managed key with key properties that are predefined by your administrator. This option ensures that your key is compliant with the predefined standards. To create a managed key with a key template by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
@@ -176,11 +176,11 @@ You can create a managed key with key properties that are predefined by your adm
 
     For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-managed-key){: external}.
 
-## Creating managed keys with custom properties in the {{site.data.keyword.cloud_notm}} console
+## Creating managed keys with custom properties in the UI
 {: #create-managed-keys-ui}
 {: ui}
 
-When you select the **Create with custom properties** option, you are creating a managed key from scratch. This option gives you the flexibility to create a customized key with full control by yourself. To create a managed key with custom properties by using the console, complete the following steps:
+When you select the **Create with custom properties** option, you are creating a managed key from scratch. This option gives you the flexibility to create a customized key with full control by yourself. To create a managed key with custom properties by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.

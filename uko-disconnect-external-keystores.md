@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-12-27"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchestrator, UKO keystore, disconnect keystore, external keystore, KMS keystore
 
@@ -25,11 +25,11 @@ If you want to disconnect from an external keystore, delete all active keys in t
 {: note}
 
 
-## Disconnecting from external keystores with the {{site.data.keyword.cloud_notm}} console
+## Disconnecting from external keystores with the UI
 {: #disconnect-external-keystores-ui}
 {: ui}
 
-To disconnect from an external keystore by using the console, complete the following steps:
+To disconnect from an external keystore by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Keystores** from the navigation to view all the available keystores.

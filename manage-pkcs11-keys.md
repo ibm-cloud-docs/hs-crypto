@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-07-05"
+  years: 2020, 2024
+lastupdated: "2024-02-27"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -15,21 +15,21 @@ subcollection: hs-crypto
 
 
 
-# Managing EP11 keys with the {{site.data.keyword.cloud_notm}} console
+# Managing EP11 keys with the UI
 {: #manage-ep11-key-ui}
 
-Apart from using the {{site.data.keyword.hscrypto}} [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api) to generate and use Enterprise PKCS #11 (EP11) keys, you can also use the {{site.data.keyword.cloud}} console to view, create, and delete EP11 keys.
+Apart from using the {{site.data.keyword.hscrypto}} [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api) to generate and use Enterprise PKCS #11 (EP11) keys, you can also use the UI to view, create, and delete EP11 keys.
 {: shortdesc}
 
 ## Before you begin
 {: #manage-ep11-key-ui-before}
 
-Before you can manage EP11 keystores and keys with the console, complete the following steps to open your {{site.data.keyword.hscrypto}} dashboard:
+Before you can manage EP11 keystores and keys with the UI, complete the following steps to open your {{site.data.keyword.hscrypto}} dashboard:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}} and click the instance name.
-4. Create an EP11 keystore to store the key. The keystore can be created [through the console UI](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui#create-ep11-keystore-ui) or [through the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
+4. Create an EP11 keystore to store the key. The keystore can be created [through the UI UI](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui#create-ep11-keystore-ui) or [through the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
 
 ## Viewing EP11 keys
 {: #view-ep11-key-ui}
@@ -117,7 +117,7 @@ Complete the following steps to create an EP11 key:
 
         1. Verify the key details that are displayed, especially the key type, keystore, and key attributes.
 
-            All the values cannot be modified through the console after the key is created.
+            All the values cannot be modified through the UI after the key is created.
             {: important}
 
         2. Click **Create key** to confirm the creation.
