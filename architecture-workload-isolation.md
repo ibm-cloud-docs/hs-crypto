@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-07-05"
+  years: 2021, 2024
+lastupdated: "2024-02-27"
 
 keywords: hyper protect crypto services architecture, service architecture, architecture diagram, workload isolation, crypto units, secure service container, ssc, public isolation for hyper protect crypto services, compute isolation for hyper protect crypto services
 
@@ -46,7 +46,7 @@ Operational crypto unit
 Recovery crypto unit
 :   The purpose of recovery crypto units is to generate a random master key value and to save a backup copy of the master key value. You can use recovery crypto units to load the master key and restore the master key when it is destroyed or lost.
 
-    Currently, recovery crypto units are enabled only in the region of Dallas (`us-south`) and Washington DC (`us-east`). If you create your instance in either of the two regions, two recovery crypto units are automatically assigned to your instance without extra costs: one is in the `us-south`; the other is in the `us-east`.
+    Currently, service instances in the Madrid (`eu-es`) region don't support recovery crypto units. If you create your instance in regions other than `eu-es`, two recovery crypto units are automatically assigned to your instance without extra costs.
 
     If smart cards are used to load the master key, the recovery crypto units are not applicable and can be ignored. The backup of the master key relies on the backup of the smart cards in that case.
     {: note}

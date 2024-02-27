@@ -51,7 +51,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
 
     The following template is an example configuration file to provision a {{site.data.keyword.hscrypto}} instance with 2 operational crypto units in the `us-south` region. This instance is charged according to the standard pricing plan and is initialized with 2 administrators. The master key is automatically generated in recovery crypto units that are assigned to the instance. The signature keys are created by using the TKE CLI plug-in and stored in local protected files.
 
-    As recovery crypto units are currently available only in the `us-south` and `us-east` regions, using Terraform to initialize {{site.data.keyword.hscrypto}} instances is supported only in these two regions. For more information about manual initialization, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
+    Using Terraform to initialize {{site.data.keyword.hscrypto}} instances is supported in regions other than Madrid (`eu-es`). For more information about manual initialization, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
     {: note}
 
     ```terraform
@@ -94,7 +94,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     | Parameter | Description |
     | --- | --- |
     | `name` | **Required**. The name of your {{site.data.keyword.hscrypto}} instance. |
-    | `location` | **Required**. The region abbreviation, such as `us-south`, that represents the geographic area where the operational crypto units of your service instance are located. For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). As recovery crypto units are available only in `us-south` and `us-east`, only these two regions are supported if you want to use Terraform for instance initialization. |
+    | `location` | **Required**. The region abbreviation, such as `us-south`, that represents the geographic area where the operational crypto units of your service instance are located. For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). As recovery crypto units are not supported in Madrid (`eu-es`), you cannot use Terraform for instance initialization in this region. |
     | `plan` | **Required**. The pricing plan for your service instance. |
     | `units` | **Required**. The number of operational crypto units for your service instance. Valid values are 2 or 3. |
     | `failover_units` | **Optional**. The number of failover crypto units for your service instance. Valid values are 0, 2, or 3, and it must be less than or equal to the number of operational crypto units. If you set it 0, cross-region high availability will not be enabled. Currently, you can enable this option only in the `us-south` and `us-east` region. If you do not specify the value, the default value is 0. |

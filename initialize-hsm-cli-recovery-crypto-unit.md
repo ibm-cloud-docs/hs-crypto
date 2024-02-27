@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-11-15"
+  years: 2020, 2024
+lastupdated: "2024-02-27"
 
 keywords: initialize service instance, load master key, key ceremony, recovery crypto unit
 
@@ -22,7 +22,7 @@ Before you can use your {{site.data.keyword.hscrypto}} instance, you need to fir
 
 For an introduction to the approaches of service instance initialization and the related fundamental concepts, see [Initializing service instances](/docs/hs-crypto?topic=hs-crypto-introduce-service) and [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
 
-Currently, only the `us-south` and `us-east` regions are enabled with the recovery crypto units, which means, when a service instance is provisioned in either regions, you are by default enabled with the option to back up your master keys in the recovery crypto units located in both regions. For more information about supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
+Currently, service instances in the `eu-es` region don't support recovery crypto units. When a service instance is provisioned in other supported regions, you are by default enabled with the option to back up your master keys in the recovery crypto units located in the disaster recovery region. For more information about supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
 If smart cards are used to initialize the service instance, the recovery crypto units are not applicable and can be ignored. The backup of the master key relies on the backup of the smart cards in that case.
 {: note}

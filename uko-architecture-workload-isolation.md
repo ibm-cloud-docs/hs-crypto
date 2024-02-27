@@ -53,7 +53,7 @@ Operational crypto unit
 Recovery crypto unit
 :   The purpose of recovery crypto units is to generate a random master key value and to save a backup copy of the master key value. You can use recovery crypto units to load the master key and restore the master key when it is destroyed or lost.
 
-    Currently, recovery crypto units are enabled only in the region of Dallas (`us-south`) and Washington DC (`us-east`). If you create your instance in either of the two regions, two recovery crypto units are automatically assigned to your instance without extra costs: one is in the `us-south`; the other is in the `us-east`.
+    Currently, service instances in the `eu-es` region don't support recovery crypto units. When a service instance is provisioned in other supported regions, you are by default enabled with the option to back up your master keys in the recovery crypto units located in the disaster recovery region. 
 
     If smart cards are used to load the master key, the recovery crypto units are not applicable and can be ignored. The backup of the master key relies on the backup of the smart cards in that case.
     {: note}

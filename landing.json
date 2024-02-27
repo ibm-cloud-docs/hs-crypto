@@ -15,7 +15,7 @@
     },
     {
       "title": "Initialize service instances using recovery crypto units",
-      "description": "If you create your service instance in Dallas (us-south) or Washington DC (us-east) where the recovery crypto units are enabled, you can choose this approach where the master key is randomly generated within a recovery crypto unit and then exported to other crypto units.",
+      "description": "If you create your service instance in supported regions other than Madrid (`eu-es`) with the recovery crypto units are enabled, you can choose this approach where the master key is randomly generated within a recovery crypto unit and then exported to other crypto units.",
       "href": "/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit"
     },
     {
