@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-07-05"
+  years: 2020, 2024
+lastupdated: "2024-02-27"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -98,6 +98,9 @@ The following flow shows how master key rotation works in this mode:
     2. The new master key is activated and loaded to the current master key register in `Valid` state, and the new master key register is cleared and back to `Empty` state.
 
 For detailed instructions, see [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
+
+
+
 
 ## What's next
 {: #master-key-rotation-next}
