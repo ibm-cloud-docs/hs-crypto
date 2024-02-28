@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-02-28"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -31,10 +31,6 @@ When the master key is being rotated, you can still perform some KMS key actions
 {: #how-master-key-rotation-works}
 
 Master key rotation works by securely transferring the value between two types of master key registers in crypto units: new master key register and current master key register. Depending on [the approach that you use to initialize your service instance](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode), the rotation process is slightly different.
-
-
-Key objects in the in-memory keystore are not automatically rotated after the master key rotation. If PKCS #11 keystores are enabled in your service instance, you need to restart all active PKCS #11 applications to clear the in-memory keystore after the master key rotation is complete. For detailed information, see [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-components).
-{: important}
 
 
 ### Rotating master keys by using smart cards and Management Utilities
