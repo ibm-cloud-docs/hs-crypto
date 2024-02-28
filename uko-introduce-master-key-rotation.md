@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-02-28"
 
 keywords: uko, rotate, rotate master key, rotate encryption key, rotate keys automatically, key rotation, rewrap data
 
@@ -136,6 +136,8 @@ The following flow shows how master key rotation progress is displayed in the UI
 4. Master key rotation is complete
 
     After the master key rotation process is complete, a notification is displayed in the UI. Under **Overview** from the navigation, you can also find the timestamp of the key updates under **Crypto units**.
+
+
 
 ## What's next
 {: #uko-master-key-rotation-next}
