@@ -68,7 +68,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Pervasively protecting data at rest in the cloud](/docs/hs-crypto?topic=hs-crypto-use-cases#data-at-rest-encryption)
 
-* [Protecting storage systems with third-party encryption key management tools](/docs/hs-crypto?topic=hs-crypto-use-cases#protecting-storage-systems-with-third-party-encryption-key-management-tools)
+* [Protecting storage systems with third-party encryption key management tools](/docs/hs-crypto?topic=hs-crypto-use-cases#protect_storage)
 
 * [Using {{site.data.keyword.hscrypto}} as PKCS #11 HSMs](/docs/hs-crypto?topic=hs-crypto-use-cases#pkcs11_hsm)
 
@@ -222,11 +222,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Pervasively protecting data at rest in the cloud](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-data-at-rest-encryption)
 
+* [Protecting storage systems with third-party encryption key management tools](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-protect-storage)
+
 * [Using {{site.data.keyword.uko_full_notm}} for multicloud key orchestration](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-case)
 
 * [Using {{site.data.keyword.hscrypto}} as PKCS #11 HSMs](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-pkcs11_hsm)
-
-* [Using {{site.data.keyword.hscrypto}} as Enterprise PKCS #11 HSMs](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-ep11-hsm)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-case-next)
 
