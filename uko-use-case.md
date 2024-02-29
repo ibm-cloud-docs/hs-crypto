@@ -134,6 +134,8 @@ With {{site.data.keyword.hscrypto}}, you can encrypt Oracle® Database by using 
 
     ![IBM Db2 default encryption by using the standard PKCS #11 API](/images/pkcs-db2.svg "IBM Db2 default encryption by using the standard PKCS #11 API"){: caption="Figure 7. IBM Db2 default encryption by using the standard PKCS #11 API" caption-side="bottom"}
 
+*  Other popular databases like PosgreSQL (Fujitsu Enterprise Postgres and Enterprise DB) and MongoDB can also be integrated with {{site.data.keyword.hscrypto}} in a similar fashion.
+
 With the PKCS #11 library integration, {{site.data.keyword.hscrypto}} supports the industry-standard PKCS #11 API. The {{site.data.keyword.hscrypto}} PKCS #11 library connects your database to {{site.data.keyword.hscrypto}} to perform cryptographic operations. The database system can invoke operations to manage the TDE master encryption keys or the master keys in the {{site.data.keyword.hscrypto}} PKCS #11 library. The {{site.data.keyword.hscrypto}} PKCS #11 library then interacts with your {{site.data.keyword.hscrypto}} instance to provide the highest level of security for storing and managing your TDE master encryption keys or your master keys in the cloud. It, in turn, provides the highest level of security to your data encryption keys and your data.
 
 * For a tutorial on how to use TDE with {{site.data.keyword.hscrypto}}, see [Tutorial: Using Oracle Transparent Database Encryption with Hyper Protect Crypto Services PKCS #11](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11).
