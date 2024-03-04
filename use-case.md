@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-02-29"
+lastupdated: "2024-03-04"
 
 keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases
 
@@ -35,7 +35,7 @@ Encryption keys that are generated and protected by {{site.data.keyword.hscrypto
 
 Keys are protected by customer-managed dedicated HSMs, which means, only you have access to your data. The cryptographic capabilities of {{site.data.keyword.hscrypto}} are built on top of a FIPS 140-2 Level 4 Certified Hardware Security Module. You can benefit from the cryptographic capabilities of {{site.data.keyword.hscrypto}} for both your new and existing workloads. The {{site.data.keyword.keymanagementservicefull_notm}} API is integrated for generating and protecting encryption keys.
 
-Refer to [Apply end to end security to a cloud application](/docs/solution-tutorials?topic=solution-tutorials-cloud-e2e-security) and [Create secure microservices that write to a consolidated database](https://developer.ibm.com/patterns/create-a-secured-microservices-and-deploy-it-to-a-consolidated-database/){: external} for tutorials on how to encrypt cloud applications by using the key management service API of {{site.data.keyword.hscrypto}}.
+Refer to [Apply end to end security to a cloud application](/docs/solution-tutorials?topic=solution-tutorials-cloud-e2e-security) for a tutorial on how to encrypt cloud applications by using the key management service API of {{site.data.keyword.hscrypto}}.
 
 ![data at rest encryption with KYOK](/images/byok.svg "Data at rest encryption with KYOK"){: caption="Figure 1. Data at rest encryption with KYOK" caption-side="bottom"}
 
@@ -64,12 +64,17 @@ For more information, refer to the following tutorials:
 - [Protect storage systems with {{site.data.keyword.hscrypto}} and Guardium Key Lifecycle Manager](https://developer.ibm.com/tutorials/awb-protect-storage-systems-with-ibm-hpcs-and-gklm/){: external}
 - [Integrate Enterprise HashiCorp Vault with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}](https://developer.ibm.com/tutorials/integrate-enterprise-vault-ibm-cloud-hyper-protect-crypto-services/){: external}
 
-## Using {{site.data.keyword.hscrypto}} as PKCS #11 HSMs
+## Using {{site.data.keyword.hscrypto}} as a cloud HSM
+{: #cloud_hsm}
+
+You can use {{site.data.keyword.hscrypto}} as a cloud HSM by using both the PKCS #11 API and Enterprise PKCS #11 API.
+
+### Using {{site.data.keyword.hscrypto}} as a cloud HSM through the PKCS #11 API
 {: #pkcs11_hsm}
 
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} provides the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref). PKCS #11 is defined as one of the Public-Key Cryptography Standards. Cryptographic operations are executed inside the HSMs at the cloud side. This allows for schemes where a cryptographic key is never in the clear outside the HSM, and all corresponding sensitive cryptographic operations are handled inside the HSM boundary as well.
 
-### Application-level encryption using the PKCS #11 API
+#### Application-level encryption using the PKCS #11 API
 {: #app-encryption-pkcs11}
 
 {{site.data.keyword.hscrypto}} allows application programmers to design and develop applications with a standard PKCS #11 API to request encryption or to sign the application data. It means that you can invoke security without having programmers to become encryption experts. Now you can enable and improve data integrity through digital signing and confidentiality through data encryption. Applications can use the {{site.data.keyword.hscrypto}} PKCS #11 library to perform cryptographic operations. This capability helps you to modernize business processes through building applications that have a digital workflow with private data and digital reviews, approvals, and signatures that are secure and trustworthy.
@@ -78,7 +83,7 @@ With the support of PKCS #11, you have access to a full range of advanced crypto
 
 ![Application encryption by using PKCS #11](/images/application-encryption-pkcs11.svg "Application encryption by using PKCS #11"){: caption="Figure 4. Application encryption by using PKCS #11" caption-side="bottom"}
 
-### Databases encryption by using the PKCS #11 API
+#### Databases encryption by using the PKCS #11 API
 {: #database_encryption_pkcs11}
 
 With {{site.data.keyword.hscrypto}}, you can encrypt Oracle® Database by using Transparent Data Encryption (TDE) and encrypt IBM Db2® Database by using Db2 default encryption.
@@ -102,7 +107,7 @@ With the PKCS #11 library integration, {{site.data.keyword.hscrypto}} supports t
 * For a tutorial on how to use TDE with {{site.data.keyword.hscrypto}}, see [Tutorial: Using Oracle Transparent Database Encryption with Hyper Protect Crypto Services PKCS #11](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11).
 * For a tutorial on how to use Db2 default encryption with {{site.data.keyword.hscrypto}}, see [Using IBM Db2 default encryption with {{site.data.keyword.hscrypto}} PKCS #11](/docs/hs-crypto?topic=hs-crypto-tutorial-db2-pkcs11).
 
-### Offloading TLS/SSL traffic
+#### Offloading TLS/SSL traffic
 {: #ssl-offloading}
 
 Transport Layer Security (TLS) and Secure Sockets Layer (SSL) are cryptographic protocols that are designed to provide communication security over a computer network. The TLS/SSL protocol aims primarily to provide privacy and data integrity between two or more communicating computer applications.
@@ -117,7 +122,7 @@ For a tutorial on how to offload the SSL workload to a load balancer such as NGI
 
 ![Protecting data in transit with TLS/SSL offloading](/images/ssl-offloading.svg "Protecting data in transit with TLS/SSL offloading"){: caption="Figure 7. Protecting data in transit with TLS/SSL offloading" caption-side="bottom"}
 
-### Using {{site.data.keyword.hscrypto}} as Enterprise PKCS #11 HSMs
+### Using {{site.data.keyword.hscrypto}} as a cloud HSM through the Enterprise PKCS #11 API
 {: #ep11_hsm}
 
 {{site.data.keyword.hscrypto}} provides the [Enterprise PKCS #11 (EP11) API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref). Cloud application can use this function through [gRPC](https://grpc.io){: external}.

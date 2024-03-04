@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-29"
+lastupdated: "2024-03-04"
 
 keywords: site map, doc structure, information architecture
 
@@ -70,7 +70,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Protecting storage systems with third-party encryption key management tools](/docs/hs-crypto?topic=hs-crypto-use-cases#protect_storage)
 
-* [Using {{site.data.keyword.hscrypto}} as PKCS #11 HSMs](/docs/hs-crypto?topic=hs-crypto-use-cases#pkcs11_hsm)
+* [Using {{site.data.keyword.hscrypto}} as a cloud HSM](/docs/hs-crypto?topic=hs-crypto-use-cases#cloud_hsm)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-use-cases#use-case-next)
 
@@ -226,7 +226,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Using {{site.data.keyword.uko_full_notm}} for multicloud key orchestration](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-case)
 
-* [Using {{site.data.keyword.hscrypto}} as PKCS #11 HSMs](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-pkcs11_hsm)
+* [Using {{site.data.keyword.hscrypto}} as a cloud HSM](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-cloud_hsm)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-case-next)
 
