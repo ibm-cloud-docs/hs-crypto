@@ -111,7 +111,7 @@ You can use {{site.data.keyword.hscrypto}} as a cloud HSM by using both the PKCS
 
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} provides the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref). PKCS #11 is defined as one of the Public-Key Cryptography Standards. Cryptographic operations are executed inside the HSMs at the cloud side. This allows for schemes where a cryptographic key is never in the clear outside the HSM, and all corresponding sensitive cryptographic operations are handled inside the HSM boundary as well.
 
-### Application-level encryption using the PKCS #11 API
+#### Application-level encryption using the PKCS #11 API
 {: #uko-app-encryption-pkcs11}
 
 {{site.data.keyword.hscrypto}} allows application programmers to design and develop applications with a standard PKCS #11 API to request encryption or to sign the application data. It means that you can invoke security without having programmers to become encryption experts. Now you can enable and improve data integrity through digital signing and confidentiality through data encryption. Applications can use the {{site.data.keyword.hscrypto}} PKCS #11 library to perform cryptographic operations. This capability helps you to modernize business processes through building applications that have a digital workflow with private data and digital reviews, approvals, and signatures that are secure and trustworthy.
@@ -122,7 +122,7 @@ You can use the PKCS #11 API to encrypt applications between clouds. With the su
 
 ![Application encryption by using PKCS #11](/images/application-encryption-pkcs11.svg "Application encryption by using PKCS #11"){: caption="Figure 6. Application encryption by using PKCS #11" caption-side="bottom"}
 
-### Databases encryption by using the PKCS #11 API
+#### Databases encryption by using the PKCS #11 API
 {: #uko-database_encryption_pkcs11}
 
 With {{site.data.keyword.hscrypto}}, you can encrypt Oracle® Database by using Transparent Data Encryption (TDE) and encrypt IBM Db2® Database by using Db2 default encryption.
@@ -146,7 +146,7 @@ With the PKCS #11 library integration, {{site.data.keyword.hscrypto}} supports t
 * For a tutorial on how to use TDE with {{site.data.keyword.hscrypto}}, see [Tutorial: Using Oracle Transparent Database Encryption with Hyper Protect Crypto Services PKCS #11](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11).
 * For a tutorial on how to use Db2 default encryption with {{site.data.keyword.hscrypto}}, see [Using IBM Db2 default encryption with {{site.data.keyword.hscrypto}} PKCS #11](/docs/hs-crypto?topic=hs-crypto-tutorial-db2-pkcs11).
 
-### Offloading TLS/SSL traffic
+#### Offloading TLS/SSL traffic
 {: #uko-ssl-offloading}
 
 Transport Layer Security (TLS) and Secure Sockets Layer (SSL) are cryptographic protocols that are designed to provide communication security over a computer network. The TLS/SSL protocol aims primarily to provide privacy and data integrity between two or more communicating computer applications.
