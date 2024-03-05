@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-05"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -404,10 +404,10 @@ const params = {
 iamPolicyManagementService.createPolicy(params)
   .then(res => {
     examplePolicyId = res.result.id;
-    UI.log(JSON.stringify(res.result, null, 2));
+    console.log(JSON.stringify(res.result, null, 2));
   })
   .catch(err => {
-    UI.warn(err)
+    console.warn(err)
   });
 ```
 {: javascript}
