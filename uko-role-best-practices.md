@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-08-24"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: UKO access, UKO account authentication, UKO custom roles, Unified Key Orchestrator
 
@@ -25,11 +25,11 @@ To manage users and access to {{site.data.keyword.uko_full_notm}} keys, keystore
 
 To create a custom role, complete the following steps:
 
-1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** &gt; **Access (IAM)**, and select **Roles**.
+1. In the UI, go to **Manage** &gt; **Access (IAM)**, and select **Roles**.
 2. Click **Create**.
-3. Enter a name for your role. This name must be unique within the account. You can see this role name in the console when you assign access to the service.
+3. Enter a name for your role. This name must be unique within the account. You can see this role name in the UI when you assign access to the service.
 4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `MyVaultAdministrator`.
-5. Optionally, you can enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description is also displayed in the console when you assign access to the service.
+5. Optionally, you can enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description is also displayed in the UI when you assign access to the service.
 6. From the list of services, select **{{site.data.keyword.hscrypto}}**.
 7. Select **Add** to add actions for the role. 
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-07-05"
+  years: 2018, 2024
+lastupdated: "2024-02-27"
 
 keywords: grant access, iam, iam access, assign access, access policy, key access
 
@@ -34,7 +34,7 @@ A good practice is to grant access permissions as you invite new users to your a
 ## Granting access to all keys in an instance
 {: #grant-access-instance-level}
 
-You can grant access to keys within a {{site.data.keyword.hscrypto}} service instance by using the {{site.data.keyword.cloud_notm}} console.
+You can grant access to keys within a {{site.data.keyword.hscrypto}} service instance by using the UI.
 
 Review [roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to learn how {{site.data.keyword.cloud_notm}} IAM roles map to {{site.data.keyword.hscrypto}} actions.
 {: tip}
@@ -64,7 +64,7 @@ Retrieve the unique identifier that is associated with the key that you want to 
 
 To get the ID for a specific key, you can:
 
-- [Access the {{site.data.keyword.cloud_notm}} console](/docs/hs-crypto?topic=hs-crypto-view-keys#view-key-gui) to browse the keys that are stored in your service instance.
+- [Access the UI](/docs/hs-crypto?topic=hs-crypto-view-keys#view-key-gui) to browse the keys that are stored in your service instance.
 - [Use the {{site.data.keyword.hscrypto}} key management service API](/docs/hs-crypto?topic=hs-crypto-view-keys#retrieve-keys-api) to retrieve a list of your keys, along with metadata about the keys.
 
 ### Step 2. Create an access policy
@@ -92,15 +92,15 @@ Use the retrieved key ID to create an access policy:
 A key ring is a collection of keys that are located within your service instance, in which you can restrict access through IAM access policy. For more information on key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings).
 
 You can grant access to key rings within a {{site.data.keyword.hscrypto}} instance by using the
-{{site.data.keyword.cloud_notm}} console, IAM API, or IAM CLI.
+UI, IAM API, or IAM CLI.
 
 Review [roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to learn how {{site.data.keyword.cloud_notm}} IAM roles map to {{site.data.keyword.hscrypto}} actions.
 {: tip}
 
-### Granting access to key rings with the console
+### Granting access to key rings with the UI
 {: #grant-access-key-ring-console}
 
-To assign access to a key ring with the console:
+To assign access to a key ring with the UI:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
 2. Select a table row, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for that user.

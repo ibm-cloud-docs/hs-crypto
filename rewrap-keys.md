@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-07-05"
+  years: 2018, 2024
+lastupdated: "2024-02-27"
 
 keywords: rewrap key, reencrypt data encryption key, rewrap api, key id
 
@@ -42,7 +42,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 2. Copy the ID of the rotated root key that you used to perform the initial wrap request.
 
-    You can retrieve the ID for a key by making a `GET api/v2/keys` request, or by viewing your keys in the {{site.data.keyword.cloud_notm}} console.
+    You can retrieve the ID for a key by making a `GET api/v2/keys` request, or by viewing your keys in the UI.
 3. Copy the `ciphertext` value that was returned during the latest wrap request.
 4. Rewrap the key with the latest root key material by running the following cURL command.
 

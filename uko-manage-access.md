@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-12-27"
+  years: 2022, 2024
+lastupdated: "2024-03-05"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -227,14 +227,14 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
 
-## Assigning access to {{site.data.keyword.hscrypto}} in the console
+## Assigning access to {{site.data.keyword.hscrypto}} in the UI
 {: #assign-access-console}
 {: ui}
 
-There are two common ways to assign access in the console:
+There are two common ways to assign access in the UI:
 
-* Access policies per user. You can manage access policies per user from the **Manage** > **Access (IAM)** > **Users** page in the console. For information about the steps to assign IAM access, see [Managing access to resources](/docs/account?topic=account-assign-access-resources&interface=ui#access-resources-console).
-* Access groups. Access groups are used to streamline access management by assigning access to a group once, then you can add or remove users as needed from the group to control their access. You manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/account?topic=account-groups&interface=ui#access_ag).
+* Access policies per user. You can manage access policies per user from the **Manage** > **Access (IAM)** > **Users** page in the UI. For information about the steps to assign IAM access, see [Managing access to resources](/docs/account?topic=account-assign-access-resources&interface=ui#access-resources-console).
+* Access groups. Access groups are used to streamline access management by assigning access to a group once, then you can add or remove users as needed from the group to control their access. You manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the UI. For more information, see [Assigning access to a group in the UI](/docs/account?topic=account-groups&interface=ui#access_ag).
 
 
 ## Assigning access to {{site.data.keyword.hscrypto}} in the CLI

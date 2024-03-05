@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-12-27"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchestrator, UKO keystore, create keystore, internal keystore， KMS keystore
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Creating internal KMS keystores
 {: #create-internal-keystores}
 
-An internal keystore is a repository that stores the cryptographic keys within your service instance. You can use {{site.data.keyword.uko_full_notm}} to create internal KMS keystores with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+An internal keystore is a repository that stores the cryptographic keys within your service instance. You can use {{site.data.keyword.uko_full_notm}} to create internal KMS keystores with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 Before you create an internal KMS keystore, keep in mind the following considerations:
@@ -29,13 +29,13 @@ Before you create an internal KMS keystore, keep in mind the following considera
 - A managed key can be used for encryption and decryption only after you activate it in at least one keystore. 
 - A keystore can be assigned to only one vault.
 
-## Creating internal KMS keystores with the {{site.data.keyword.cloud_notm}} console
+## Creating internal KMS keystores with the UI
 {: #create-internal-keystores-ui}
 {: ui}
 
 
 
-To create an internal KMS keystore by using the console, complete the following steps:
+To create an internal KMS keystore by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Keystores** from the navigation to view all the available keystores.

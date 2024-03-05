@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-11-10"
+  years: 2018, 2024
+lastupdated: "2024-02-27"
 
 keywords: delete, delete service instance, crypto unit, ibm cloud cli, clear crypto unit, uninstall
 
@@ -17,7 +17,7 @@ subcollection: hs-crypto
 # Deleting service instances
 {: #delete-instance}
 
-You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance with the {{site.data.keyword.cloud_notm}} console or the {{site.data.keyword.cloud_notm}} CLI. To do so, you need to set all the [crypto units](#x9860404){: term} of the service instance back to the [imprint mode](#x9860399){: term} by zeroizing the crypto units.
+You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance with the UI or the {{site.data.keyword.cloud_notm}} CLI. To do so, you need to set all the [crypto units](#x9860404){: term} of the service instance back to the [imprint mode](#x9860399){: term} by zeroizing the crypto units.
 {: shortdesc}
 
 ## Before you begin
@@ -30,26 +30,26 @@ You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} i
 ## Step 1: Delete keys 
 {: #delete-all-key-step}
 
-To delete keys in the service instance, you need to delete root keys with the standard plan and managed keys with the {{site.data.keyword.uko_full_notm}} plan through the {{site.data.keyword.cloud_notm}} console or the CLI.
+To delete keys in the service instance, you need to delete root keys with the standard plan and managed keys with the {{site.data.keyword.uko_full_notm}} plan through the UI or the CLI.
 
-### Deleting root keys from the {{site.data.keyword.cloud_notm}} console - Standard plan
+### Deleting root keys from the UI - Standard plan
 {: #delete-root-key-gui}
 {: ui}
 
-You can delete root keys of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console resources page by completing the following steps:
+You can delete root keys of {{site.data.keyword.hscrypto}} from the UI resources page by completing the following steps:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
 5. Select the key that you want to delete and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key.
 6. From the options menu, click **Delete key**, enter the key name to confirm the key to be deleted, and click **Delete key**.
 
-### Deleting managed keys from the {{site.data.keyword.cloud_notm}} console - {{site.data.keyword.uko_full_notm}} plan
+### Deleting managed keys from the UI - {{site.data.keyword.uko_full_notm}} plan
 {: #delete-managed-key-gui}
 {: ui}
 
-You can delete managed keys of {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} from the {{site.data.keyword.cloud_notm}} console resources page by completing the following steps:
+You can delete managed keys of {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} from the UI resources page by completing the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
@@ -193,26 +193,26 @@ If you initialize your service instance by loading master key parts from smart c
 ## Step 5: Delete your service instance
 {: #delete-instance-step}
 
-After you set the crypto units to imprint mode, you can choose to delete your service instance through the {{site.data.keyword.cloud_notm}} console resources page, the instance details page, or the CLI.
+After you set the crypto units to imprint mode, you can choose to delete your service instance through the UI resources page, the instance details page, or the CLI.
 
-### Deleting instances from the {{site.data.keyword.cloud_notm}} console resources page
+### Deleting instances from the UI resources page
 {: #delete-gui-resource}
 {: ui}
 
-You can delete an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console resources page by completing the following steps:
+You can delete an instance of {{site.data.keyword.hscrypto}} from the UI resources page by completing the following steps:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click **Resource list** from the navigation.
+1. From the UI, click **Resource list** from the navigation.
 2. Find the {{site.data.keyword.hscrypto}} service instance that you want to delete under the **Services** section.
 3. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open the actions menu.
 4. Click **Delete**.
 
-### Deleting instances from the {{site.data.keyword.cloud_notm}} console instance details page
+### Deleting instances from the UI instance details page
 {: #delete-gui-detail}
 {: ui}
 
-You can delete an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} console instance details page by completing the following steps:
+You can delete an instance of {{site.data.keyword.hscrypto}} from the UI instance details page by completing the following steps:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click **Resource list** from the navigation.
+1. From the UI, click **Resource list** from the navigation.
 2. Find the {{site.data.keyword.hscrypto}} service instance that you want to delete under the **Services** section and click the instance name to open the instance details page.
 3. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open the service instance actions menu.
 4. Click **Delete service**.

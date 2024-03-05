@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-10-19"
+  years: 2018, 2024
+lastupdated: "2024-02-27"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -40,7 +40,7 @@ You can create {{site.data.keyword.hscrypto}} resources in one of the supported 
 geographic area where your {{site.data.keyword.hscrypto}} requests are handled and processed. To learn more, see
 [Locations, tenancy, and availability](/docs/hs-crypto?topic=hs-crypto-ha-dr#availability).
 
-Currently, the `us-south` and `us-east` regions are enabled with recovery crypto units by default, which means, when a service instance is provisioned in either region, you are enabled with the option to back up your master keys in the recovery crypto units located in both regions. For more information, see [Introducing service instance initialization modes](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit).
+Currently, service instances in the `eu-es` region don't support recovery crypto units. When a service instance is provisioned in other supported regions, you are by default enabled with the option to back up your master keys in the recovery crypto units located in the disaster recovery region.  For more information, see [Introducing service instance initialization modes](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit).
 {: note}
 
 ## Connectivity options

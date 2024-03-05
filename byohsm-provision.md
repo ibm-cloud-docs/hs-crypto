@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-11-07"
+  years: 2024
+lastupdated: "2024-02-27"
 
 keywords: bring your own hsm, byohsm, hybrid hpcs, provision byohsm
 
@@ -34,7 +34,7 @@ Before you can provision a {{site.data.keyword.hscrypto}} instance with BYOHSM, 
     - **VPC CRN**: In your Transit Gateway configuration, you need to [request a connection to the VPC CRN](/docs/transit-gateway?topic=transit-gateway-adding-cross-account-connections&interface=ui).
     - **HSM client certificate**: The client certificate for establishing NTLS communications between HSMs and your instance. You need to install this certificate on your HSMs to ensure that the communications from {{site.data.keyword.hscrypto}} can be verified.
 
-## Provisioning {{site.data.keyword.hscrypto}} with the {{site.data.keyword.cloud_notm}} console
+## Provisioning {{site.data.keyword.hscrypto}} with the UI
 {: #provision-instance-byohsm-ui}
 
 To provision a {{site.data.keyword.hscrypto}} instance with BYOHSM, complete the following steps:
@@ -55,8 +55,8 @@ You cannot enable or disable the BYOHSM function after you provision an instance
     - (Optional) Under **Tags**, add tags to organize your resources. If your tags are billing related, consider writing tags as `key:value` pairs to help with grouping, such as `costctr:124`. For more information, see [Working with tags](/docs/account?topic=account-tag).
     - Under **Allowed network**, choose the network access to your service instance:
 
-        - **Public and private (default)**: Manage your instance through both public and private network by using the {{site.data.keyword.cloud_notm}} console, CLI, or API. This is the default option.
-        - **Private only**: Access your service instance only through private network by using CLI or API. The {{site.data.keyword.cloud_notm}} console is not available for the private-only network access.
+        - **Public and private (default)**: Manage your instance through both public and private network by using the UI, CLI, or API. This is the default option.
+        - **Private only**: Access your service instance only through private network by using CLI or API. The UI is not available for the private-only network access.
 
             A private instance accepts API requests through the private endpoints only. The private endpoints are only accessible when your {{site.data.keyword.cloud_notm}} account, along with all associated resources, is enabled with [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint). You cannot access your private-only instance through the CLI or API if your server or machine is outside the {{site.data.keyword.cloud_notm}} network.
             {: important}

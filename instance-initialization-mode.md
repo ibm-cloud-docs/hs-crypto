@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-11-15"
+  years: 2020, 2024
+lastupdated: "2024-02-27"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -110,7 +110,7 @@ After a smart card that contains a valid signature key is inserted in smart card
 
 If one or more recovery crypto units are allocated for your service instance, you can choose this approach to initialize your service instance. In this case, a random master key value is automatically generated in a recovery crypto unit and copied to the other crypto units for the service instance. The master key value never appears in the clear outside of the HSMs. This approach is more streamlined and easier to use compared to the other two options.
 
-Currently, only the `us-south` and `us-east` regions are enabled with the recovery crypto units. Therefore, this option is only available in these two regions. For more information about supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
+Currently, supported regions other than Madrid (`eu-es`) are enabled with the recovery crypto units. For more information about supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 {: note}
 
 The following diagram shows the components of an example service instance with two recovery crypto units:
@@ -146,7 +146,7 @@ The sole purpose of the recovery crypto units is to save a backup copy of the ma
 
 
 
-Currently, only the `us-south` and `us-east` regions are enabled with the recovery crypto units, which means, when a service instance is provisioned in either region, you are by default enabled with the option to back up your master keys in the recovery crypto units located in both regions. For more information about supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
+Currently, supported regions other than Madrid (`eu-es`) are enabled with recovery crypto units, which means, when a service instance is provisioned in other supported region, you are by default enabled with the option to back up your master keys in the recovery crypto units located in the disaster recovery region. For more information about supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 {: note}
 
 For detailed instructions on recovering the master key, see [Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit).

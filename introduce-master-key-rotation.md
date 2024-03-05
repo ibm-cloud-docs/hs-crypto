@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-07-05"
+  years: 2020, 2024
+lastupdated: "2024-02-28"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -33,10 +33,6 @@ When the master key is being rotated, you can still perform some KMS key actions
 Master key rotation works by securely transferring the value between two types of master key registers in crypto units: new master key register and current master key register. Depending on [the approach that you use to initialize your service instance](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode), the rotation process is slightly different.
 
 
-Key objects in the in-memory keystore are not automatically rotated after the master key rotation. If PKCS #11 keystores are enabled in your service instance, you need to restart all active PKCS #11 applications to clear the in-memory keystore after the master key rotation is complete. For detailed information, see [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-components).
-{: important}
-
-
 ### Rotating master keys by using smart cards and Management Utilities
 {: #how-master-key-rotation-works-smard-cards}
 
@@ -63,7 +59,7 @@ The following chart illustrates how the master key register state changes during
 
 If your service instance has recovery crypto units assigned to it, apart from using key part files, you can also rotate the master keys using the `ibmcloud tke auto-mk-rotate` command. With this command, a random new master key value is generated in one of the recovery crypto units for the service instance and securely moved to the other crypto units in the service instance.
 
-Use the `ibmcloud tke auto-mk-rotate` command to rotate the master key only when your service instance has recovery crypto units assigned and PKCS #11 keystores are not enabled in your service instance. Currently, only the `us-south` and `us-east` regions are enabled with the recovery crypto units. For more information about the supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
+Use the `ibmcloud tke auto-mk-rotate` command to rotate the master key only when your service instance has recovery crypto units assigned and PKCS #11 keystores are not enabled in your service instance. Currently, supported regions other than Madrid (`eu-es`) are enabled with the recovery crypto units. For more information about the supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 {: important}
 
 You don't need to prepare a new master key before the master key rotation. Before you can rotate the master key with the {{site.data.keyword.IBM_notm}} TKE CLI plug-in, all the current master key registers in both [operational crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-operational-crypto-unit) and [recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-recovery-crypto-unit) need to be in `Valid` state with the current master key loaded and all the new master key registers needs to be empty.
@@ -98,6 +94,9 @@ The following flow shows how master key rotation works in this mode:
     2. The new master key is activated and loaded to the current master key register in `Valid` state, and the new master key register is cleared and back to `Empty` state.
 
 For detailed instructions, see [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
+
+
+
 
 ## What's next
 {: #master-key-rotation-next}

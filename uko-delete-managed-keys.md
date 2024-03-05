@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-04"
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -18,13 +18,13 @@ subcollection: hs-crypto
 # Deleting managed keys
 {: #delete-managed-keys}
 
-You can delete your managed keys in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can delete your managed keys in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 When you delete a managed key, the key is to be unlinked from all keystores, and all key materials and the metadata are destroyed permanently.
 
 
-## Deleting managed keys with the {{site.data.keyword.cloud_notm}} console
+## Deleting managed keys with the UI
 {: #delete-managed-keys-ui}
 {: ui}
 

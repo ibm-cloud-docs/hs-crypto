@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-09-19"
+  years: 2021, 2024
+lastupdated: "2024-02-27"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway
 
@@ -208,7 +208,7 @@ To configure a virtual private endpoint gateway, follow these steps:
 1. List the available services, including {{site.data.keyword.cloud_notm}} infrastructure services available (by default) for all VPC users.
 2. [Create an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway) for your {{site.data.keyword.hscrypto}} instance that you want to be privately available to the VPC.
 
-    If you are creating a VPE gateway by using the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}/vpc-ext){: external}, perform the following steps:
+    If you are creating a VPE gateway by using the [UI](https://{DomainName}/vpc-ext){: external}, perform the following steps:
 
     1. Select the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg "Menu"), and then click **VPC Infrastructure > Virtual private endpoint gateways** in the Network section, and then click **Create**. The **New virtual private endpoint gateway for VPC** page is displayed.
     2. In the **Cloud service** section, enable your {{site.data.keyword.hscrypto}} instance:

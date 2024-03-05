@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-07-05"
+  years: 2020, 2024
+lastupdated: "2024-02-27"
 
 keywords: instance settings, service settings, key creation/import, key create policy, key creation/import, key policy
 
@@ -55,16 +55,16 @@ following considerations:
 
     The `enforce_token` attribute affects imported keys during creation, rotation, and restoration. The `create_root_key`, `import_root_key`, `create_standard_key`, and `import_standard_key` attributes affect keys only at creation time. All other {{site.data.keyword.hscrypto}} actions, such as wrap and unwrap, are not affected and can be invoked on the key as usual.
 
-## Enabling or updating the key create and import access policy for your service instance with the console
+## Enabling or updating the key create and import access policy for your service instance with the UI
 {: #enable-keyCreateImportAccess-policy-console}
 {: ui}
 
-As a security administrator, if you prefer to manage the key create and import access policy settings by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
+As a security administrator, if you prefer to manage the key create and import access policy settings by using a graphical interface, you can use the UI.
 
 After you create a {{site.data.keyword.hscrypto}} instance,
 complete the following steps to enable the key create and import access policy:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
+1. [Log in to the UI](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
@@ -76,10 +76,10 @@ complete the following steps to enable the key create and import access policy:
     - `Allow import of standard keys`: Check the box to allow standard keys to be imported into your {{site.data.keyword.hscrypto}} instance.
     - `Enable secure import`: Check the box to prevent authorized users from importing key material into your {{site.data.keyword.hscrypto}} instance without using an import token.
 
-    After you check the box for `Enable secure import`, it is required that [secure import](/docs/hs-crypto?topic=hs-crypto-create-import-tokens) is enabled for all key import actions. Secure import is not available in the {{site.data.keyword.cloud_notm}} console, and you need to perform further actions through the CLI or API.
+    After you check the box for `Enable secure import`, it is required that [secure import](/docs/hs-crypto?topic=hs-crypto-create-import-tokens) is enabled for all key import actions. Secure import is not available in the UI, and you need to perform further actions through the CLI or API.
     {: note}
 
-Any disabled key actions are not available in the **Add key** panel. After you check the box for `Secure import`, it is required that [secure import](/docs/hs-crypto?topic=hs-crypto-create-import-tokens) is enabled for all key import actions. Key import is not available in the {{site.data.keyword.cloud_notm}} console, and you need to perform further actions through the CLI or API.
+Any disabled key actions are not available in the **Add key** panel. After you check the box for `Secure import`, it is required that [secure import](/docs/hs-crypto?topic=hs-crypto-create-import-tokens) is enabled for all key import actions. Key import is not available in the UI, and you need to perform further actions through the CLI or API.
 {: note}
 
 ## Enabling and updating the key create and import access policy for your service instance with the API

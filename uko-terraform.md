@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-07-04"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -50,7 +50,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
 
     The following template is an example configuration file to provision a {{site.data.keyword.hscrypto}} instance with 2 operational crypto units in the `us-south` region. This instance is charged according to the {{site.data.keyword.uko_full_notm}} pricing plan and is initialized with 2 administrators. The master key is automatically generated in recovery crypto units that are assigned to the instance. The signature keys are created by using the TKE CLI plug-in and stored in local protected files.
 
-    As recovery crypto units are currently available only in the `us-south` and `us-east` regions, using Terraform to initialize {{site.data.keyword.hscrypto}} instances is supported only in these two regions. For more information about manual initialization, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode).
+    As recovery crypto units are currently available in supported regions other than Madrid (`eu-es`), using Terraform to initialize {{site.data.keyword.hscrypto}} instances is not supported in this region. For more information about manual initialization, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode).
     {: note}
 
     ```terraform
@@ -93,7 +93,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     | Parameter | Description |
     | --- | --- |
     | `name` | **Required**. The name of your {{site.data.keyword.hscrypto}} instance. |
-    | `location` | **Required**. The region abbreviation, such as `us-south`, that represents the geographic area where the operational crypto units of your service instance are located. For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). As recovery crypto units are available only in `us-south` and `us-east`, only these two regions are supported if you want to use Terraform for instance initialization. |
+    | `location` | **Required**. The region abbreviation, such as `us-south`, that represents the geographic area where the operational crypto units of your service instance are located. For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). As recovery crypto units are not available in Madrid (`eu-es`), you cannot use Terraform for instance initialization in the `eu-es` region. |
     | `plan` | **Required**. The pricing plan for your service instance. |
     | `units` | **Required**. The number of operational crypto units for your service instance. Valid values are 2 or 3. |
     | `failover_units` | **Not applicable**. Cross-region high availability is not currently supported for {{site.data.keyword.uko_full_notm}}. |
@@ -131,7 +131,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     {: pre}
 
 7. Check whether the {{site.data.keyword.hscrypto}} instance is created and initialized from the [{{site.data.keyword.cloud_notm}} resource list](https://cloud.ibm.com/resources){: external}.
-8. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
+8. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the UI](/docs/account?topic=account-assign-access-resources#review-your-access-console).
 
 ## What's next?
 {: #uko-terraform-setup-hpcs-next}

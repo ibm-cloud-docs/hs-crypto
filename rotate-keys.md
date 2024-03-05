@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-07-05"
+  years: 2018, 2024
+lastupdated: "2024-02-27"
 
 keywords: rotate, rotate key, rotate encryption key, rotate root key, rotate root key manually, key rotation, rotate key api
 
@@ -24,17 +24,17 @@ When you rotate your root key, you shorten the lifetime of the key, and you limi
 
 To learn how key rotation helps you meet industry standards and cryptographic best practices, see [Key rotation](/docs/hs-crypto/concepts?topic=hs-crypto-root-key-rotation-intro).
 
-## Rotating root keys in the console
+## Rotating root keys in the UI
 {: #rotate-root-key-gui}
 {: help}
 {: support}
 {: ui}
 
-If you prefer to rotate your root keys by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
+If you prefer to rotate your root keys by using a graphical interface, you can use the UI.
 
 [After you create or import your existing root keys into the service](/docs/hs-crypto?topic=hs-crypto-create-root-keys), complete the following steps to rotate a key:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
@@ -63,7 +63,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 
 2. Copy the ID of the root key that you want to rotate.
 
-    You can find the ID for a key in your service instance by [retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys), or by accessing the {{site.data.keyword.cloud_notm}} console.
+    You can find the ID for a key in your service instance by [retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys), or by accessing the UI.
 
 3. Replace the key with new key material by running the following cURL command.
 
@@ -173,7 +173,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 
 2. Retrieve the ID of the key that you want to rotate.
 
-    You can retrieve the ID for a specified key by making a `GET /v2/keys` request, or by viewing your keys in the {{site.data.keyword.cloud_notm}} console.
+    You can retrieve the ID for a specified key by making a `GET /v2/keys` request, or by viewing your keys in the UI.
 
 3. [Create and retrieve an import token](/docs/hs-crypto?topic=hs-crypto-create-import-tokens).
 

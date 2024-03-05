@@ -110,9 +110,6 @@ toc:
               label: "Enhancing security of your deployed application"
               href: https://{DomainName}/docs/tutorials?topic=solution-tutorials-extended-app-security
           - link:
-              label: "Creating secure microservices writing to a consolidated database"
-              href: https://developer.ibm.com/patterns/create-a-secured-microservices-and-deploy-it-to-a-consolidated-database/
-          - link:
               label: "Encrypting Kubernetes secrets with IBM Cloud Hyper Protect Crypto Services"
               href: https://developer.ibm.com/tutorials/encrypt-kubernetes-secrets-with-hyper-protect-crypto-services/
       - topicgroup:

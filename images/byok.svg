@@ -1,64 +1,138 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1056" height="390" viewBox="0 0 1056 390">
-    <defs>
-        <style>.cls-1{fill:#e3f6ff;}.cls-1,.cls-11,.cls-12,.cls-13,.cls-2,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke:#000;}.cls-1,.cls-2,.cls-8{stroke-miterlimit:10;}.cls-14,.cls-16,.cls-2,.cls-7{fill:none;}.cls-3,.cls-4,.cls-8,.cls-9{fill:#b3e6ff;}.cls-11,.cls-12,.cls-16,.cls-4,.cls-7{stroke-linecap:round;}.cls-11,.cls-12,.cls-13,.cls-14,.cls-16,.cls-4,.cls-5,.cls-6,.cls-7,.cls-9{stroke-linejoin:round;}.cls-5{fill:#fff;}.cls-6{fill:#f2f4f8;}.cls-10,.cls-11{fill:#e6d6ff;}.cls-12,.cls-13{fill:#87eded;}.cls-14,.cls-16{stroke:#50565b;stroke-width:2px;}.cls-15{fill:#50565b;}.cls-17{font-size:16px;}.cls-17,.cls-18{font-family:IBMPlexSans-SemiBold, IBM Plex Sans;font-weight:600;}.cls-18{font-size:18px;}</style>
-    </defs>
-    <g id="Figure">
-        <g id="Database">
-            <path class="cls-1" d="M711.7284,70.2053H643.3207c-4.7226,0-8.551,3.2815-8.551,7.3294v80.6234c0,4.0479,3.8284,7.3294,8.551,7.3294h68.4077c4.7226,0,8.551-3.2815,8.551-7.3294V77.5347C720.2794,73.4868,716.451,70.2053,711.7284,70.2053Z" />
-            <line class="cls-2" x1="634.4491" y1="101.569" x2="720.6" y2="101.569" />
-            <line class="cls-2" x1="635.8386" y1="134.1237" x2="720.6" y2="134.1237" />
-            <circle cx="653.704" cy="85.6886" r="4.3075" />
-            <circle cx="653.704" cy="117.8464" r="4.3075" />
-            <circle cx="653.704" cy="148.8131" r="4.3075" />
-        </g>
-        <g id="lock">
-            <g id="lock-2" data-name="lock">
-                <rect class="cls-3" x="630.1415" y="149.2299" width="11.0766" height="3.6922" />
-                <path class="cls-4" d="M635.68,167.0755v-4.3076m-6.1536-10.0427v-7.8028a6.1536,6.1536,0,1,1,12.3072,0v7.8028m2.4615,1.8707a12.6084,12.6084,0,0,0-2.4615-1.8707,12.305,12.305,0,0,0-12.3072,0,12.6084,12.6084,0,0,0-2.4615,1.8707,12.3073,12.3073,0,1,0,17.23,0Z" />
-                <circle cx="635.6798" cy="162.7679" r="1.8461" />
-            </g>
-        </g>
-        <rect class="cls-5" x="284.307" y="211.3817" width="449.2157" height="135.3801" />
-        <rect class="cls-6" x="264" y="190.4593" width="449.2157" height="135.3801" />
-        <g id="HP_icon" data-name="HP icon">
-            <line class="cls-7" x1="319.4707" y1="272.6544" x2="347.6016" y2="272.6544" />
-            <polyline class="cls-7" points="347.602 272.654 347.602 254.193 319.471 254.193 319.471 265.841" />
-            <path class="cls-7" d="M342.3258,254.1934V247.16a8.79,8.79,0,1,0-17.5793,0v7.0339" />
-            <path class="cls-7" d="M333.5313,285.8407s-25.0493-14.6852-25.0493-43.515" />
-            <path class="cls-7" d="M358.59,242.3257c0,28.83-25.0589,43.515-25.0589,43.515" />
-            <polyline class="cls-7" points="308.482 242.326 333.536 227.821 358.59 242.326" />
-            <circle class="cls-8" cx="358.5902" cy="242.3257" r="2.6373" />
-            <circle class="cls-8" cx="308.482" cy="242.3257" r="2.6373" />
-            <circle class="cls-8" cx="333.5361" cy="285.8407" r="2.6373" />
-        </g>
-        <path id="Cloud" class="cls-1" d="M491.7109,244.3541a30.798,30.798,0,0,0-30.2745,25.008,23.0985,23.0985,0,0,0,4.0653,45.8275h52.3567a23.0985,23.0985,0,0,0,4.0654-45.8275A30.798,30.798,0,0,0,497.47,244.9084,31.63,31.63,0,0,0,491.7109,244.3541Z" />
-        <g id="Hardware">
-            <rect class="cls-9" x="467.0635" y="289.183" width="49.2291" height="13.0312" />
-            <polygon class="cls-9" points="516.293 288.7 467.064 288.7 475.751 269.877 507.605 269.877 516.293 288.7" />
-            <rect x="498.1937" y="292.8028" width="5.7917" height="5.7917" />
-            <rect x="506.1572" y="292.8028" width="5.7917" height="5.7917" />
-        </g>
-        <g id="lock-3" data-name="lock">
-            <g id="lock-4" data-name="lock">
-                <rect class="cls-10" x="461.4087" y="287.4407" width="8.8612" height="2.9537" />
-                <path class="cls-11" d="M465.8394,301.7171v-3.446m-4.9229-8.0342v-6.2423a4.9229,4.9229,0,1,1,9.8458,0v6.2423m1.9691,1.4965a10.0941,10.0941,0,0,0-1.9691-1.4966,9.8444,9.8444,0,0,0-9.8458,0,10.0918,10.0918,0,0,0-1.9692,1.4966,9.8459,9.8459,0,1,0,13.7841,0Z" />
-                <circle cx="465.8394" cy="298.2711" r="1.8461" />
-            </g>
-        </g>
-        <g id="key">
-            <path class="cls-12" d="M615.4577,287.7637a14.3751,14.3751,0,1,1-.6828-9.7663" />
-            <circle cx="596.974" cy="283.8057" r="3.0768" />
-            <polyline class="cls-13" points="614.775 277.997 643.48 277.997 648.853 283.37 644.222 288.001 626.174 288.001 622.938 284.795 619.97 287.764 615.458 287.764" />
-        </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1056 390">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 18px;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: IBMPlexSans-SmBld, 'IBM Plex Sans';
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13 {
+        stroke: #000;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6, .cls-14 {
+        stroke-linecap: round;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6, .cls-14, .cls-15, .cls-10, .cls-11, .cls-12, .cls-13 {
+        stroke-linejoin: round;
+      }
+
+      .cls-3, .cls-12 {
+        fill: #87eded;
+      }
+
+      .cls-4, .cls-16, .cls-8, .cls-10 {
+        fill: #b3e6ff;
+      }
+
+      .cls-5, .cls-17 {
+        fill: #e6d6ff;
+      }
+
+      .cls-6, .cls-14, .cls-9, .cls-15 {
+        fill: none;
+      }
+
+      .cls-18 {
+        fill: #50565b;
+      }
+
+      .cls-2 {
+        font-size: 16px;
+      }
+
+      .cls-7 {
+        fill: #e3f6ff;
+      }
+
+      .cls-7, .cls-8, .cls-9 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-14, .cls-15 {
+        stroke: #50565b;
+        stroke-width: 2px;
+      }
+
+      .cls-11 {
+        fill: #fff;
+      }
+
+      .cls-13 {
+        fill: #f2f4f8;
+      }
+    </style>
+  </defs>
+  <g id="Figure">
+    <g id="Database">
+      <path class="cls-7" d="M711.73,51.21h-68.41c-4.72,0-8.55,3.28-8.55,7.33v80.62c0,4.05,3.83,7.33,8.55,7.33h68.41c4.72,0,8.55-3.28,8.55-7.33V58.53c0-4.05-3.83-7.33-8.55-7.33Z"/>
+      <line class="cls-9" x1="634.45" y1="82.57" x2="720.6" y2="82.57"/>
+      <line class="cls-9" x1="635.84" y1="115.12" x2="720.6" y2="115.12"/>
+      <circle cx="653.7" cy="66.69" r="4.31"/>
+      <circle cx="653.7" cy="98.85" r="4.31"/>
+      <circle cx="653.7" cy="129.81" r="4.31"/>
     </g>
-    <g id="Line">
-        <line class="cls-14" x1="484.3003" y1="118.8885" x2="484.3003" y2="178.5647" />
-        <polygon class="cls-15" points="480.311 177.398 484.3 184.306 488.289 177.398 480.311 177.398" />
-        <line class="cls-16" x1="484.3003" y1="118.8885" x2="629.5262" y2="118.8885" />
+    <g id="lock">
+      <g id="lock-2" data-name="lock">
+        <rect class="cls-16" x="630.14" y="136.23" width="11.08" height="3.69"/>
+        <path class="cls-4" d="M635.68,154.08v-4.31m-6.15-10.04v-7.8c0-3.4,2.76-6.15,6.15-6.15s6.15,2.76,6.15,6.15v7.8m2.46,1.87c-.74-.71-1.56-1.35-2.46-1.87-1.81-1.05-3.91-1.65-6.15-1.65s-4.34,.6-6.15,1.65c-.9,.52-1.72,1.16-2.46,1.87-2.28,2.24-3.69,5.35-3.69,8.79,0,6.79,5.51,12.31,12.31,12.31s12.31-5.51,12.31-12.31c0-3.43-1.42-6.55-3.69-8.79Z"/>
+        <circle cx="635.68" cy="149.77" r="1.85"/>
+      </g>
     </g>
-    <g id="Text">
-        <text class="cls-17" transform="translate(411.6875 223.6895)">Hyper Protect Crypto Services</text>
-        <text class="cls-18" transform="translate(45 44.915)">Data at rest encryption with KYOK</text>
-        <text class="cls-17" transform="translate(335.9307 152.9912)">Key Protect API</text>
+    <rect class="cls-11" x="284.31" y="211.38" width="449.22" height="135.38"/>
+    <rect class="cls-13" x="264" y="190.46" width="449.22" height="135.38"/>
+    <g id="HP_icon" data-name="HP icon">
+      <line class="cls-6" x1="319.47" y1="272.65" x2="347.6" y2="272.65"/>
+      <polyline class="cls-6" points="347.6 272.65 347.6 254.19 319.47 254.19 319.47 265.84"/>
+      <path class="cls-6" d="M342.33,254.19v-7.03c0-4.85-3.94-8.79-8.79-8.79s-8.79,3.94-8.79,8.79v7.03"/>
+      <g>
+        <g>
+          <path class="cls-6" d="M333.53,285.84s-25.05-14.69-25.05-43.52"/>
+          <path class="cls-6" d="M358.59,242.33c0,28.83-25.06,43.52-25.06,43.52"/>
+          <polyline class="cls-6" points="308.48 242.33 333.54 227.82 358.59 242.33"/>
+        </g>
+        <circle class="cls-8" cx="358.59" cy="242.33" r="2.64"/>
+        <circle class="cls-8" cx="308.48" cy="242.33" r="2.64"/>
+        <circle class="cls-8" cx="333.54" cy="285.84" r="2.64"/>
+      </g>
     </g>
+    <path id="Cloud" class="cls-7" d="M491.71,244.35c-14.79-.01-27.49,10.49-30.27,25.01-12.55,2.27-20.89,14.29-18.61,26.84,1.99,10.97,11.53,18.96,22.68,18.98h52.36c12.76-.03,23.08-10.39,23.05-23.15-.02-11.15-8.01-20.69-18.98-22.68-2.37-12.39-12.06-22.08-24.45-24.45-1.9-.36-3.83-.55-5.76-.55Z"/>
+    <g id="Hardware">
+      <rect class="cls-10" x="467.06" y="289.18" width="49.23" height="13.03"/>
+      <polygon class="cls-10" points="516.29 288.7 467.06 288.7 475.75 269.88 507.61 269.88 516.29 288.7"/>
+      <rect x="498.19" y="292.8" width="5.79" height="5.79"/>
+      <rect x="506.16" y="292.8" width="5.79" height="5.79"/>
+    </g>
+    <g id="lock-3" data-name="lock">
+      <g id="lock-4" data-name="lock">
+        <rect class="cls-17" x="461.41" y="287.44" width="8.86" height="2.95"/>
+        <path class="cls-5" d="M465.84,301.72v-3.45m-4.92-8.03v-6.24c0-2.72,2.21-4.92,4.92-4.92s4.92,2.21,4.92,4.92v6.24m1.97,1.5c-.59-.57-1.25-1.08-1.97-1.5-1.45-.84-3.13-1.32-4.92-1.32s-3.48,.48-4.92,1.32c-.72,.41-1.38,.93-1.97,1.5-1.82,1.79-2.95,4.28-2.95,7.03,0,5.43,4.41,9.85,9.85,9.85s9.85-4.41,9.85-9.85c0-2.75-1.13-5.24-2.95-7.03Z"/>
+        <circle cx="465.84" cy="298.27" r="1.85"/>
+      </g>
+    </g>
+    <g id="key">
+      <path class="cls-3" d="M615.46,287.76c-1.69,6-7.21,10.39-13.77,10.39-7.93,0-14.37-6.41-14.37-14.34s6.44-14.37,14.37-14.37c5.85,0,10.86,3.5,13.09,8.55"/>
+      <circle cx="596.97" cy="283.81" r="3.08"/>
+      <polyline class="cls-12" points="614.77 278 643.48 278 648.85 283.37 644.22 288 626.17 288 622.94 284.8 619.97 287.76 615.46 287.76"/>
+    </g>
+    <rect class="cls-11" x="424.5" y="164.26" width="127" height="26"/>
+  </g>
+  <g id="Line">
+    <g>
+      <line class="cls-15" x1="484.3" y1="98.89" x2="484.3" y2="158.56"/>
+      <polygon class="cls-18" points="480.31 157.4 484.3 164.31 488.29 157.4 480.31 157.4"/>
+    </g>
+    <line class="cls-14" x1="484.3" y1="98.89" x2="629.53" y2="98.89"/>
+  </g>
+  <g id="Text">
+    <text class="cls-2" transform="translate(411.69 223.69)"><tspan x="0" y="0">Hyper Protect Crypto Services</tspan></text>
+    <text class="cls-1" transform="translate(45 44.91)"><tspan x="0" y="0">Data at rest encryption with KYOK</tspan></text>
+    <text class="cls-2" transform="translate(336 152.99)"><tspan x="0" y="0">Key Protect API</tspan></text>
+    <text class="cls-2" transform="translate(444.5 184.03)"><tspan x="0" y="0">API endpoint</tspan></text>
+  </g>
 </svg>

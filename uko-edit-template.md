@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-01-18"
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchestrator, edit key templates, key management, kms keys, UKO
 
@@ -17,14 +17,14 @@ subcollection: hs-crypto
 # Editing key template details
 {: #edit-template}
 
-You can edit your key templates in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can edit your key templates in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
-## Editing key templates with the {{site.data.keyword.cloud_notm}} console
+## Editing key templates with the UI
 {: #edit-key-template-ui}
 {: ui}
 
-To edit the details of a key template by using the console, complete the following steps:
+To edit the details of a key template by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Key templates** from the navigation to view all the available key templates. 
@@ -41,8 +41,8 @@ To edit the details of a key template by using the console, complete the followi
     | Key template name    | A unique, human-readable name for easy identification of your key template. It must be 1–100 characters in length.| 
     | Description          | (Optional) An extended description for your key template, with up to 200 characters in length. |
     | Initial key state        | States of keys that are to be created with the key template, including Pre-active and Active. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}.  |
-    | Activate keys after  | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. Automatic state change is to be triggered on the planned date.|
-    | Deactivate keys after| (Optional) Plan a date to deactivate the keys to be created since the key creation. Automatic state change is to be triggered on the planned date. |
+    | Activate keys after  | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only.|
+    | Deactivate keys after| (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: caption="Table 1. Key template properties" caption-side="bottom"}
 
     2. In the **Keystores** card, click **Edit** to add or remove the keystores where keys are to be activated. All the displayed keystores belong to the same vault and the same keystore type:

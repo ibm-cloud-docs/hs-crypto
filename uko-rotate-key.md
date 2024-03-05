@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-02-08"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: rotate managed key, rotate key, managed key rotation, key rotation, key rewrap
 
@@ -22,15 +22,15 @@ You can rotate your managed keys on demand by using {{site.data.keyword.hscrypto
 
 To learn how managed key rotation works, see [Managed key rotation](/docs/hs-crypto/concepts?topic=hs-crypto-managed-key-rotation-intro).
 
-## Rotating managed keys with the console
+## Rotating managed keys with the UI
 {: #uko-rotate-managed-key-gui}
 {: ui}
 
-If you prefer to rotate your managed keys by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
+If you prefer to rotate your managed keys by using a graphical interface, you can use the UI.
 
 Complete the following steps to rotate a key:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
 4. Click **Managed keys** from the navigation to view all the available keys.

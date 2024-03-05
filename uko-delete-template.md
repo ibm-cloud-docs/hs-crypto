@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-08-24"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchestrator, delete key templates, key management, kms key, UKO
 
@@ -16,11 +16,11 @@ subcollection: hs-crypto
 # Deleting key templates
 {: #delete-template}
 
-You can delete your key templates in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API. After you delete the key template, you can no longer create managed keys based on this key template.
+You can delete your key templates in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API. After you delete the key template, you can no longer create managed keys based on this key template.
 {: shortdesc}
 
 
-## Deleting key templates with the {{site.data.keyword.cloud_notm}} console
+## Deleting key templates with the UI
 {: #delete-key-template-ui}
 {: ui}
 

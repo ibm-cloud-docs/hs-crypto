@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-08-15"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystore, key management, access control
 
@@ -35,7 +35,7 @@ Review [roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to
 
 Retrieve the unique identifier that is associated with the vault that you want to grant someone access to.
 
-Access the {{site.data.keyword.cloud_notm}} UI to browse the keys that are stored in your service instance by following these steps:
+Access the UI to browse the keys that are stored in your service instance by following these steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 
@@ -48,7 +48,7 @@ Access the {{site.data.keyword.cloud_notm}} UI to browse the keys that are store
 You can also [use the {{site.data.keyword.uko_full_notm}} API](/apidocs/uko#get-vault){: external} to retrieve a list of your vaults, along with the metadata of the vaults.
 
 
-## Step 2. Grant access to vaults from the {{site.data.keyword.cloud_notm}} UI
+## Step 2. Grant access to vaults from the UI
 {: #grant-access-vault-console}
 
 To assign access to a vault for a user from the UI, complete the following steps:

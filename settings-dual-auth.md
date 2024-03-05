@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-08-24"
+  years: 2020, 2024
+lastupdated: "2024-02-27"
 
 keywords: instance settings, service settings, dual authorization
 
@@ -38,15 +38,15 @@ following considerations:
 - **When you enable dual authorization for your service instance, the policy is applicable only for new keys.** By enabling dual authorization at the instance level, any new keys that you add to the instance will automatically inherit a dual authorization policy. Your existing keys are not affected by the policy change and will still require a single authorization for deletion.
 - **You can always disable a dual authorization policy for your service instance.** If you want to disable an existing dual authorization policy to allow for single authorization, keep in mind that the change is applicable only for future keys that you add to the instance. Any existing keys that were created under a dual authorization policy will continue to require actions from two users before the keys can be deleted. After a key inherits a dual authorization policy, the policy cannot be reverted.
 
-## Enabling dual authorization for your service instance with the console
+## Enabling dual authorization for your service instance with the UI
 {: #enable-dual-auth-instance-policy-ui}
 {: ui}
 
-As an instance manager, if you prefer to enable a dual authorization policy on your instance by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
+As an instance manager, if you prefer to enable a dual authorization policy on your instance by using a graphical interface, you can use the UI.
 
 After creating a service instance, complete the following steps to create a dual authorization policy:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
+1. [Log in to the UI](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
@@ -135,15 +135,15 @@ the policies that are available for your
     ```
     {: codeblock}
 
-## Disabling dual authorization for your service instance with the console
+## Disabling dual authorization for your service instance with the UI
 {: #disable-dual-auth-instance-policy-ui}
 {: ui}
 
-As an instance manager, if you prefer to disable a dual authorization policy on your instance by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
+As an instance manager, if you prefer to disable a dual authorization policy on your instance by using a graphical interface, you can use the UI.
 
 After creating a service instance, complete the following steps to create a dual authorization policy:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
+1. [Log in to the UI](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.

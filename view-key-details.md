@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-07-04"
+  years: 2018, 2024
+lastupdated: "2024-02-27"
 
 keywords: get details for a key, get key configuration, get details, view encryption key details, view encryption key, retrieve encryption key details, API examples
 
@@ -27,13 +27,13 @@ or configuration, without retrieving the key itself. If you have _Reader_ access
 permissions, you can use the {{site.data.keyword.hscrypto}} key management
 API to retrieve only metadata about a root key or a standard key.
 
-## Viewing key details with the {{site.data.keyword.cloud_notm}} console
+## Viewing key details with the UI
 {: #view-key-details-ui}
 {: ui}
 
-You can view details about a specific key with the {{site.data.keyword.cloud_notm}} console by completing the following steps:
+You can view details about a specific key with the UI by completing the following steps:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
@@ -59,7 +59,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID_or_alias
     The ID value is used to access detailed information about the key. You can
     find the ID for a key in your service instance by
     [retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys),
-    or by accessing the {{site.data.keyword.cloud_notm}} console.
+    or by accessing the UI.
 
 3. Get details about the key by running the following cURL command.
 

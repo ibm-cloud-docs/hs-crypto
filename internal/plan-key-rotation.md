@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-02-08"
+  years: 2020, 2024
+lastupdated: "2024-02-27"
 
 keywords: enable kyok, onboarding hpcs, onboarding hyper protect crypto services, key rotation, key rewrap, dek rewrap
 
@@ -40,7 +40,7 @@ After the BSS team approves your Hyperwarp request, open a new [Hyperwarp Integr
 ### Step 1: Rotate a root key.
 {: #dek-rewrap-rotate-root-key}
 
-You can find the ID for a key in your {{site.data.keyword.hscrypto}} instance by [retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys), or by accessing the {{site.data.keyword.cloud_notm}} console.
+You can find the ID for a key in your {{site.data.keyword.hscrypto}} instance by [retrieving a list of your keys](/docs/hs-crypto?topic=hs-crypto-view-keys), or by accessing the UI.
 
 Once you find the key ID, rotate the key by making a call to `POST /api/v2/keys/{id}?action=rotate`.
 

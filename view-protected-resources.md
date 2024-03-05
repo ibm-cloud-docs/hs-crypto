@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-07-04"
+  years: 2020, 2024
+lastupdated: "2024-02-27"
 
 keywords: view resoure, root key encryption resources, protected resource, protected service, envelope encryption, key registration, view registration, list registrations
 
@@ -32,7 +32,7 @@ When you use a root key to protect at-rest data with envelope encryption, the cl
 Key registration is an extra feature that's available only if the cloud service enables it as part of the integration with {{site.data.keyword.hscrypto}}. To determine whether an [integrated service](/docs/hs-crypto?topic=hs-crypto-integrate-services) supports key registration, see the service documentation for more information.
 {: note}
 
-## Viewing protected resources with the console
+## Viewing protected resources with the UI
 {: #view-protected-resources-gui}
 {: ui}
 
@@ -41,7 +41,7 @@ You can browse the registrations that are available between your {{site.data.key
 ### Viewing protected resources associated with your root key
 {: #view-protected-resources-console-key}
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
+1. [Log in to the UI](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
@@ -74,7 +74,7 @@ You can use the search field to search for any resources that are associated wit
 ### Viewing resources in your instance
 {: #view-protected-resources-console-instance}
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
+1. [Log in to the UI](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS associated resources** page, use the **Key management service associated resources** table to browse the registrations in your service.

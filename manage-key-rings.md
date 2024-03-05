@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-07-05"
+  years: 2021, 2024
+lastupdated: "2024-02-27"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -24,7 +24,7 @@ As an account admin, you can bundle the keys in your {{site.data.keyword.hscrypt
 
 Key rings are also useful in cases where it is important for one business unit to have access to a set of keys that another business unit cannot have. An account admin can create key rings for each business unit and [assign the appropriate level of access](#grant-access-key-ring) to the appropriate users. In the case where the account admin would like to delegate platform management of a specific key ring to someone else, they can assign a user a [platform administrator role at the key ring level](/docs/account?topic=account-userroles#platformroles). The sub administrator will then be able to manage the key ring and grant access to the appropriate users.
 
-You can grant access to key rings within a {{site.data.keyword.hscrypto}} instance by using the {{site.data.keyword.cloud_notm}} console, IAM API, or IAM CLI.
+You can grant access to key rings within a {{site.data.keyword.hscrypto}} instance by using the UI, IAM API, or IAM CLI.
 {: note}
 
 Before you create a key ring for your {{site.data.keyword.hscrypto}} instance, keep in mind the following considerations:
@@ -48,18 +48,18 @@ Before you create a key ring for your {{site.data.keyword.hscrypto}} instance, k
 ## Creating key rings
 {: #create-key-ring}
 
-Before you can group keys into a key ring, you need to create a key ring first. You can use either the console or the key management service API to create a key ring.
+Before you can group keys into a key ring, you need to create a key ring first. You can use either the UI or the key management service API to create a key ring.
 
 You can create up to five keystores in a service instance for free, including key rings and EP11 keystores. Each additional key ring or EP11 keystore is charged with a tiered pricing starting at $225 USD per month. 
 {: note}
 
-### Creating key rings with the console
+### Creating key rings with the UI
 {: #create-key-ring-ui}
 {: ui}
 
-Create a key ring with the console by completing the following steps:
+Create a key ring with the UI by completing the following steps:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. To create a new key ring, select the **KMS key rings** tab in the side menu.
@@ -117,13 +117,13 @@ new key ring that has different IAM permissions. For example, you might be onboa
 After transferring a key to a different key ring, it can take up to ten minutes for the change to take effect.
 {: important}
 
-### Transferring a key to a different key ring with the console
+### Transferring a key to a different key ring with the UI
 {: #transfer-key-ring-ui}
 {: ui}
 
-You can transfer a key to a different key ring with the console by completing the following steps:
+You can transfer a key to a different key ring with the UI by completing the following steps:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. Select the **KMS keys** tab in the side menu to open the **Keys** table.
@@ -229,12 +229,12 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 {: ui}
 
 You can grant access to a key ring within a {{site.data.keyword.hscrypto}} instance by using the
-{{site.data.keyword.cloud_notm}} console, [IAM API](/apidocs/iam-policy-management#create-policy){: external}, or [CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create){: external}.
+UI, [IAM API](/apidocs/iam-policy-management#create-policy){: external}, or [CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create){: external}.
 
 Review [roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to learn how {{site.data.keyword.cloud_notm}} IAM roles map to {{site.data.keyword.hscrypto}} actions.
 {: tip}
 
-To assign access to a key ring with the console, complete the following steps:
+To assign access to a key ring with the UI, complete the following steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
 2. Select the user that you want to assign access to in the table, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions")to open a list of options for that user.
@@ -255,15 +255,15 @@ To assign access to a key ring with the console, complete the following steps:
 ## Listing key rings
 {: #list-key-ring}
 
-You can browse the key rings that are managed in your provisioned instance of {{site.data.keyword.hscrypto}} with the console or the key management KPI.
+You can browse the key rings that are managed in your provisioned instance of {{site.data.keyword.hscrypto}} with the UI or the key management KPI.
 
-### Listing key rings with the console
+### Listing key rings with the UI
 {: #list-key-ring-ui}
 {: ui}
 
-To browse the key rings with the console, complete the following steps:
+To browse the key rings with the UI, complete the following steps:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. To browse the key rings, select the **KMS key rings** tab in the side menu.
@@ -337,18 +337,18 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
 ## Deleting key rings
 {: #delete-key-ring}
 
-You can delete a key ring with the console or with the key management service API.
+You can delete a key ring with the UI or with the key management service API.
 
 The `default` key ring cannot be deleted. You are also not able to delete a key ring if the key ring contains at least one key, regardless of the key state (including keys in the Destroyed state).
 {: important}
 
-### Deleting key rings with the console
+### Deleting key rings with the UI
 {: #delete-key-ring-ui}
 {: ui}
 
-To delete a key ring with the console, complete the following steps:
+To delete a key ring with the UI, complete the following steps:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. Select the **KMS key rings** tab in the side menu to browse the key rings.

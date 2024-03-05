@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-01-18"
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -18,15 +18,15 @@ subcollection: hs-crypto
 # Editing managed key details
 {: #edit-kms-keys}
 
-You can edit your managed keys in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can edit your managed keys in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 
-## Editing managed key details with the {{site.data.keyword.cloud_notm}} console
+## Editing managed key details with the UI
 {: #edit-kms-keys-ui}
 {: ui}
 
-To edit the details of a managed key by using the console, complete the following steps:
+To edit the details of a managed key by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
@@ -44,8 +44,8 @@ To edit the details of a managed key by using the console, complete the followin
     | Key name             | A unique, human-readable name for easy identification of your key. When you change the name of a managed key, the key is to be renamed in all keystores where it is activated. \n \n **Important:** You cannot edit the key name after the managed key is created with key naming schemes.\n \n Depending on the keystore type, name your key with the following rules:  \n - IBM Cloud KMS: 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n - IBM {{site.data.keyword.keymanagementserviceshort}}: 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n - AWS Key Management Service: 1–250 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (/\_-). However, do not start the name with `AWS/`. \n - Azure Key Vault: 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). \n - Google Cloud KMS: 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (\_-). |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | State            | Key states include Pre-active, Active, Deactivated, and Destroyed. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states).  |
-    | Activation date      | Plan a date to activate the key. Automatic state change is to be triggered on the planned date. |
-    | Expiration date      | Plan a date to deactivate the key. Automatic state change is to be triggered on the planned date.  |
+    | Activation date      | Plan a date to activate the key. It is for planning purpose only. |
+    | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only.  |
     {: caption="Table 1. Key properties" caption-side="bottom"}
 
     

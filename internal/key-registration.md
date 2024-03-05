@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-08-24"
+  years: 2020, 2024
+lastupdated: "2024-02-27"
 
 keywords: key registration, register resources, service integration, protected resource, view crn, registraion api
 
@@ -239,4 +239,4 @@ The following table shows how {{site.data.keyword.hscrypto}} handles service act
 You have added a foundational capability that we can now build upon!
 
 - For the full list of services supported for integration, see [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
-- You can also view associations between root keys and encrypted resources with the {{site.data.keyword.cloud_notm}} console, see [Viewing protected resources with the console](/docs/hs-crypto?topic=hs-crypto-view-protected-resources#view-protected-resources-gui) for detailed instructions.
+- You can also view associations between root keys and encrypted resources with the UI, see [Viewing protected resources with the UI](/docs/hs-crypto?topic=hs-crypto-view-protected-resources#view-protected-resources-gui) for detailed instructions.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-01"
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchestrator, key management, UKO keystore, edit keystore, external keystore, KMS keystore
 
@@ -18,19 +18,19 @@ subcollection: hs-crypto
 # Editing connection to external keystores
 {: #edit-external-keystore-connection}
 
-You can use {{site.data.keyword.uko_full_notm}} to edit connection to external keystores with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can use {{site.data.keyword.uko_full_notm}} to edit connection to external keystores with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 You can edit the connection to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), and Google Cloud KMS.
 
-## Editing connection to external keystores with the {{site.data.keyword.cloud_notm}} console
+## Editing connection to external keystores with the UI
 {: #edit-external-keystore-connection-ui}
 {: ui}
 
 You can only change the keystore name and connection properties one by one.
 {: tip}
 
-To edit the connection to an external keystore by using the console, complete the following steps:
+To edit the connection to an external keystore by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Keystores** from the navigation to view all the available keystores.

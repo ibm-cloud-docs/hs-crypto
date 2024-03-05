@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-07-14"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: master key, restore master key, master key backup, recovery crypto unit, master key recover
 
@@ -29,7 +29,7 @@ You might need to use the command to recover the master key value in the followi
 * Your hardware fails and a crypto unit needs to be replaced.
 * You need different service instances in the same resource group to use the same master key value.
 
-Currently only the `us-south` and `us-east` regions support recovery crypto units. Only service instances in these regions can use this command. For more information about supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
+Currently, service instances in the `eu-es` region don't support recovery crypto units, and cannot use this command. For more information about supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 {: note}
 
 ## Before you begin

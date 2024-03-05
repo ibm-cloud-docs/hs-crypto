@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-12-27"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchestrator, view key templates, key management, kms keys, UKO
 
@@ -17,14 +17,14 @@ subcollection: hs-crypto
 # Archiving and unarchiving key templates
 {: #archive-template}
 
-You can archive your key templates if they are not to be used, and unarchive them later if needed. You can perform archive or unarchive a key template in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can archive your key templates if they are not to be used, and unarchive them later if needed. You can perform archive or unarchive a key template in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 You can view archived key templates by clicking the **Show archived templates** icon ![Show archived templates icon](/images/archive.svg "Show archived templates") on the table. After the template is archived, you cannot edit the distribution of keys created with the template, and you can no longer create managed keys with the archived key template. However, you can still use the keys for cryptographic operations. 
 {: important}
 
 
-## Archiving key templates with the {{site.data.keyword.cloud_notm}} console
+## Archiving key templates with the UI
 {: #archive-key-template-ui}
 {: ui}
 
@@ -60,7 +60,7 @@ To archive the key template through the API, complete the following steps:
 
     For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#archive-key-template){: external}.
 
-## Unarchiving key templates with the {{site.data.keyword.cloud_notm}} console
+## Unarchiving key templates with the UI
 {: #unarchive-key-template-ui}
 {: ui}
 

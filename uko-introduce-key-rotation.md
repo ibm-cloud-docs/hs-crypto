@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-08-30"
+  years: 2022, 2024
+lastupdated: "2024-02-29"
 
 keywords: rotate managed key, rotate key, managed key rotation, key rotation, key rewrap
 
@@ -91,6 +91,8 @@ After a managed key rotation is complete, new key material becomes available for
 | {{site.data.keyword.cloud_notm}} KMS keys | [Rewrapping data with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-rewrap-keys). |
 | IBM {{site.data.keyword.keymanagementserviceshort}} keys | [Rewrapping data with IBM {{site.data.keyword.keymanagementserviceshort}}](https://cloud.ibm.com/docs/key-protect?topic=key-protect-rewrap-keys). |
 {: caption="Table 4. Rewrapping data after key rotation" caption-side="bottom"}
+
+
 
 ## What's next
 {: #managed-key-rotation-next}

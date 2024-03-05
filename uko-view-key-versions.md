@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-07-04"
+  years: 2022, 2024
+lastupdated: "2024-02-27"
 
 keywords: managed key versions, get key versions, list key versions
 
@@ -22,15 +22,15 @@ You can view the key versions that are associated with a rotated managed key by 
 
 When you rotate a managed key, the service creates a new version of the key material. As a security administrator, you can audit the rotation history of a managed key by viewing the key version history. 
 
-## Viewing manage key versions with the console
+## Viewing manage key versions with the UI
 {: #uko-view-key-versions-gui}
 {: ui}
 
-If you prefer to view your managed key versions by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
+If you prefer to view your managed key versions by using a graphical interface, you can use the UI.
 
 Complete the following steps to view the key versions:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
 4. Click **Managed keys** from the navigation to view all the available keys.

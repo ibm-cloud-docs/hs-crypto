@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-08-24"
+  years: 2022, 2024
+lastupdated: "2024-02-05"
 
 keywords: key management with satellite, uko satellite, hpcs satellite, kp satellite
 
@@ -125,8 +125,8 @@ Now you can use {{site.data.keyword.uko_full_notm}} to create and activate keys 
     | Algorithm            | The encryption algorithm to encrypt data for the key. For example, `AES`.   |
     | Length               | The number of bits that represents the encryption strength of the key. For example, `256`.  |
     | State                | Pre-active keys are not to be activatedin keystores until you manually activate them. Active keys are automatically activated in the keystores. Select `Active` for installation to {{site.data.keyword.keymanagementserviceshort}} on Satellite.For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
-    | Activation date      | Plan a date to activate the Pre-active key. Automatic state change is to be triggered on the planned date. For this tutorial, you don't need to specify this property as the `Active` state is selected previously. The key will be activated immediately upon its creation. |
-    | Expiration date      | Plan a date to deactivate the key. Automatic state change is to be triggered on the planned date. |
+    | Activation date      | Plan a date to activate the Pre-active key. It is for planning purpose only. For this tutorial, you don't need to specify this property as the `Active` state is selected previously. The key will be activated immediately upon its creation. |
+    | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key. For example, `project: tiger`. |
     {: caption="Table 2. Key properties" caption-side="bottom"}
 

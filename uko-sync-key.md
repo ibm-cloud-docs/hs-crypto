@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-01-18"
+lastupdated: "2024-02-27"
 
 keywords: Unified Key Orchstrator, sync managed key, out of sync
 
@@ -18,13 +18,13 @@ subcollection: hs-crypto
 # Syncing keys in keystores with managed keys manually
 {: #uko-sync-keys}
 
-If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. You can sync the key state by using {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} console, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. You can sync the key state by using {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 An `Out of sync` flag is also displayed in the corresponding keystore card or the key list. There can be multiple reasons why the key is out of sync. For example, there is an issue in relinking the key in the keystore or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. When you hover over this flag, you can see the specific reason. Take the following steps to munually sync the state of keys in keystores with the managed key.
 
 
-## Syncing keys with the console
+## Syncing keys with the UI
 {: #uko-sync-managed-key-gui}
 {: ui}
 
@@ -33,7 +33,7 @@ To sync the key in keystores with managed keys manually, you need to verify the 
 ### Step 1: Verify key state
 {: #verify-key-state-gui}
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
+1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. Select your provisioned instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} from your {{site.data.keyword.cloud_notm}} resource list.
 4. Click **Managed keys** from the navigation to view all the available keys.

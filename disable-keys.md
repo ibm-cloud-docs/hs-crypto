@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-08-24"
+  years: 2021, 2024
+lastupdated: "2024-02-27"
 
 keywords: disable key, enable key, suspend key, suspend operations on a key
 
@@ -42,11 +42,11 @@ data is revoked or restored, a corresponding enable event is displayed in the Ac
 Tracker web UI.
 {: note}
 
-## Disabling and enabling root keys with the console
+## Disabling and enabling root keys with the UI
 {: #disable-enable-ui}
 {: ui}
 
-If you prefer to enable or disable your root keys by using a graphical interface, you can use the {{site.data.keyword.cloud_notm}} console.
+If you prefer to enable or disable your root keys by using a graphical interface, you can use the UI.
 
 ### Disabling a root key
 {: #disable-ui}
@@ -54,7 +54,7 @@ If you prefer to enable or disable your root keys by using a graphical interface
 [After you create or import your existing keys into the service](/docs/hs-crypto?topic=hs-crypto-create-root-keys),
 complete the following steps to disable a key:
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
+1. [Log in to the UI](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service instance.
@@ -72,7 +72,7 @@ complete the following steps:
 You must wait 30 seconds after you disable a root key before you are able to enable it again.
 {: note}
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://{DomainName}/){: external}.
+1. [Log in to the UI](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
@@ -110,7 +110,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 
 3. Retrieve the ID of the root key that you want to disable.
 
-    You can retrieve the ID for a specified key by making a [list keys API request](/apidocs/hs-crypto#getkeys){: external}, or by viewing your keys in the {{site.data.keyword.cloud_notm}} console.
+    You can retrieve the ID for a specified key by making a [list keys API request](/apidocs/hs-crypto#getkeys){: external}, or by viewing your keys in the UI.
 
 4. Disable the root key and suspend the encrypt and decrypt operations by making the following API call.
 

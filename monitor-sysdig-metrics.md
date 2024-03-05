@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-02-08"
+  years: 2021, 2024
+lastupdated: "2024-02-27"
 
 keywords: measure interactions, metrics, monitoring, operational metrics
 
@@ -131,7 +131,7 @@ You can filter your metrics by using the following attributes.
 You need to configure platform metrics and enable a [metrics policy](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics)
 on your service instance in order to view your {{site.data.keyword.hscrypto}} operational metrics dashboard.
 
-### How to find the {{site.data.keyword.mon_short}} dashboard for your {{site.data.keyword.hscrypto}} service instance by using {{site.data.keyword.hscrypto}} console
+### How to find the {{site.data.keyword.mon_short}} dashboard for your {{site.data.keyword.hscrypto}} service instance by using UI
 {: #monitor-dashboard-console}
 
 After you configure your {{site.data.keyword.mon_short}} instance to receive platform metrics, complete the following steps:

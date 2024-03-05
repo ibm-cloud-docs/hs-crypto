@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-08-31"
+  years: 2018, 2024
+lastupdated: "2024-02-27"
 
 keywords: integration, encryption at rest, cloud object storage, object storage, kmip, containers, vmware, database, compute
 
@@ -20,7 +20,7 @@ subcollection: hs-crypto
 You can integrate {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to build solutions for you to bring and manage your own encryption in the cloud.
 {: shortdesc}
 
-After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision) and [initialize the service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm), you need to establish [service-to-service authorizations](/docs/solution-tutorials?topic=solution-tutorials-resource-sharing#resource-sharing-implementation-s2sauth) to allow one service to access another one through either single-account authorization or cross-account authorization. For detailed instructions on how to establish authorizations, see [Creating an authorization in the console](/docs/account?topic=account-serviceauth). Make sure that you follow the process and select {{site.data.keyword.hscrypto}} as the target service.
+After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision) and [initialize the service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm), you need to establish [service-to-service authorizations](/docs/solution-tutorials?topic=solution-tutorials-resource-sharing#resource-sharing-implementation-s2sauth) to allow one service to access another one through either single-account authorization or cross-account authorization. For detailed instructions on how to establish authorizations, see [Creating an authorization in the UI](/docs/account?topic=account-serviceauth). Make sure that you follow the process and select {{site.data.keyword.hscrypto}} as the target service.
 
 Refer to the following integration instructions to integrate {{site.data.keyword.hscrypto}} with each supported service.
 
