@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: VMWare encryption, KMIP, Key management and distribution, Data appliance encryption, Netapp, vSphere, vSAN encryption
 
@@ -57,7 +57,7 @@ To complete this tutorial, you need to meet the following prerequisites:
 - [Sign up an {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmwaresolutions-signing_required_accounts#signing_required_accounts-cloud).
 - [Provision a Standard Plan instance](/docs/hs-crypto?topic=hs-crypto-provision&interface=ui#provision-standard).
 - [Initialize your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm).
-- [Create your {{site.data.keyword.hscrypto}} root key](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys).
+- [Create your {{site.data.keyword.hscrypto}} root key](/docs/hs-crypto?topic=hs-crypto-get-started#create-key-standard).
 - [Order a KMIP for VMware® instance](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_ordering).
 
 ## Task flow
@@ -66,7 +66,7 @@ To complete this tutorial, you need to meet the following prerequisites:
 To complete this solution, we'll walk through the following steps:
 
 1. [Grant the service-to-service authorization in IAM](#tutorial-kmip-s2s).
-2. [Configure KMIP for VMWare with {{site.data.keyword.hscrypto}} instance](#tutorial-kmip-configure).
+2. [Configure KMIP for VMWare with {{site.data.keyword.hscrypto}} instance](#tutorial-vmware-configure).
 3. [Configure a trusted connection between the vCenter Server and KMIP adapter](#tutorial-kmip-verify).
 
 Let's start with the service authorization process.
@@ -104,7 +104,7 @@ Let's start with the service authorization process.
 
     - Select the {{site.data.keyword.hscrypto}} instance ID that stores your root key and key encryption key. You can click the **Retrieve** button to get a list of {{site.data.keyword.hscrypto}} instances under your IBM Cloud account.
     
-        Only IDs of {{site.data.keyword.hscrypto}} instances that contain at least one root key are to be listed. Make sure to [create a root key](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys) first.
+        Only IDs of {{site.data.keyword.hscrypto}} instances that contain at least one root key are to be listed. Make sure to [create a root key](/docs/hs-crypto?topic=hs-crypto-get-started#create-key-standard) first.
         {: note}
 
     - Select the root key to wrap the key encryption key for your data encryption key. You can click the **Retrieve** button to get a list of root keys stored on the selected {{site.data.keyword.hscrypto}} instance.

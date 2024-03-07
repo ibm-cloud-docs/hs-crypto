@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-01-26"
+lastupdated: "2024-03-07"
 
 keywords: regulated workloads, FS Cloud, IBM Cloud for Financial Services, FS Cloud use cases
 
@@ -71,7 +71,6 @@ To manage your regulated workloads with {{site.data.keyword.hscrypto}}, see the 
 
 For more information about setting up your environment in {{site.data.keyword.cloud_notm}} to manage your regulated workloads, see the following topics:
 
-* [Encrypt consumer data at rest and in transit](/docs/allowlist/framework-financial-services?topic=framework-financial-services-best-practices#best-practices-encryption).
 * [VMware encryption](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-encryption#vrw-encryption-keys).
 * [VMware use case 2](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-use-case-2).
 * [VMware architecture overview](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-archi-overview).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -132,7 +132,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     {: pre}
 
 7. Check whether the {{site.data.keyword.hscrypto}} instance is created and initialized from the [{{site.data.keyword.cloud_notm}} resource list](https://cloud.ibm.com/resources){: external}.
-8. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the UI](/docs/account?topic=account-assign-access-resources#review-your-access-console).
+8. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the UI](/docs/account?topic=account-assign-access-resources&interface=ui#review-your-access-console).
 
 ## What's next?
 {: #terraform-setup-hpcs-next}

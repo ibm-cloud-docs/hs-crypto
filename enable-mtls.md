@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -37,7 +37,7 @@ With mutual TLS as a second layer of authentication for accessing EP11, you need
 Before you can enable the second layer of authentication for GREP11 or PKCS #11 API connections, make sure that you complete the following prerequisites:
 
 1. You are assigned the _Certificate Manager_ IAM role to perform the corresponding actions. For more information about assigning IAM roles, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access) and [Managing access to resources](/docs/account?topic=account-assign-access-resources).
-2. You have a client certificate prepared on your workstation that is used for the TLS authentication. It is suggested to use the [{{site.data.keyword.cloud_notm}} Secrets Manager](https://www.ibm.com/cloud/secrets-manager){: external} to manage SSL/TLS certificates for your applications and services. It is free and provides persistent storage for your certificates. With the {{site.data.keyword.cloud_notm}} Certificate Manager service, you can [order free certificates](/docs/certificate-manager?topic=certificate-manager-ordering-certificates), [import your certificates](/docs/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#importing-a-certificate), and [enable notifications for expiring certificates](/docs/certificate-manager?topic=certificate-manager-configuring-notifications).
+2. You have a client certificate prepared on your workstation that is used for the TLS authentication. It is suggested to use the [{{site.data.keyword.cloud_notm}} Secrets Manager](https://www.ibm.com/cloud/secrets-manager){: external} to manage SSL/TLS certificates for your applications and services. It is free and provides persistent storage for your certificates. 
 3. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external}.
 4. Install the latest certificate manager CLI plug-in with the following command:
 
@@ -46,7 +46,7 @@ Before you can enable the second layer of authentication for GREP11 or PKCS #11 
     ```
     {: pre}
 
-5. [Log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cli-getting-started#step3-configure-idt-env){: external}. If you have multiple accounts, select the account that your service instance is created with. Make sure that you log in to the correct region and resource group where the service instance is located with the following command:
+5. Log in to {{site.data.keyword.cloud_notm}} with the CLI. If you have multiple accounts, select the account that your service instance is created with. Make sure that you log in to the correct region and resource group where the service instance is located with the following command:
 
     ```
     ibmcloud target -r <region> -g <resource_group>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: monitoring, monitor metrics
 
@@ -33,7 +33,7 @@ Before you enable operational metrics for your {{site.data.keyword.hscrypto}} in
 
 - You need to provision a {{site.data.keyword.mon_short}} instance first in order to see the metrics.
 
-    You need to [provision a {{site.data.keyword.mon_short}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision){: external} that is located in the same region as the {{site.data.keyword.hscrypto}} instance that you want to receive operational metrics for. After you provision the {{site.data.keyword.mon_short}} instance, you need to [enable platform metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics#configure-monitoring).
+    You need to [provision a {{site.data.keyword.mon_short}} instance](/docs/monitoring?topic=monitoring-provision){: external} that is located in the same region as the {{site.data.keyword.hscrypto}} instance that you want to receive operational metrics for. After you provision the {{site.data.keyword.mon_short}} instance, you need to [enable platform metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics#configure-monitoring).
 
 ### Enabling metrics for your {{site.data.keyword.hscrypto}} instance with the UI
 {: #enable-metrics-instance-policy-ui}

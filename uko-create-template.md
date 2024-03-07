@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -194,7 +194,7 @@ If you want to customize a key template based on an existing template, create a 
     - Keystores
     - Key template properties
 
-    Refer to [Creating key templates from scratch with the UI](#create-template-ui) for detailed explanations.  
+    Refer to [Creating key templates from scratch with the UI](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui#create-template-ui) for detailed explanations.  
 
 7. Under **Summary**, view the summary of your key template, and then click **Create key template** to confirm.
 

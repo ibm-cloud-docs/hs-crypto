@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: standard key, import key, key material, import key api, bring your own key, byok, encryption key, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key
 
@@ -137,7 +137,7 @@ Complete the following steps to import standard keys that use the {{site.data.ke
     ```
     {: pre}
 
-    You can find extra parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference#kp-key-create).
+    You can find extra parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-key-protect-cli-reference#kp-key-create).
 
 ## Base64 encoding your key material
 {: #encode-key-material-standard-key}

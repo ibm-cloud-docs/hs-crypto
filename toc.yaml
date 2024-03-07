@@ -105,10 +105,10 @@ toc:
           links:
           - link:
               label: "Applying end to end security to a cloud application"
-              href: https://{DomainName}/docs/tutorials?topic=solution-tutorials-cloud-e2e-security
+              href: https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-cloud-e2e-security
           - link:
               label: "Enhancing security of your deployed application"
-              href: https://{DomainName}/docs/tutorials?topic=solution-tutorials-extended-app-security
+              href: https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-extended-app-security
           - link:
               label: "Encrypting Kubernetes secrets with IBM Cloud Hyper Protect Crypto Services"
               href: https://developer.ibm.com/tutorials/encrypt-kubernetes-secrets-with-hyper-protect-crypto-services/

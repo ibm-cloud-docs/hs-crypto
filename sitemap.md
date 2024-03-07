@@ -153,7 +153,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-components)
 
-* [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#grep11-support-post-quantum)
+* [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-support-post-quantum)
 
 [Introducing EP11 over gRPC - Standard Plan](/docs/hs-crypto?topic=hs-crypto-grep11-intro#grep11-intro)
 
@@ -301,11 +301,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-components)
 
-* [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#grep11-support-post-quantum)
+* [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-support-post-quantum)
 
 [Introducing EP11 over gRPC - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro#uko-grep11-intro)
 
-* [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro#grep11-support-post-quantum)
+* [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro#uko-grep11-support-post-quantum)
 
 
 ### About key rotation - Unified Key Orchestrator Plan
@@ -442,10 +442,6 @@ Find what you are looking for in the compilation of topics that are available in
 
     * Added: EP11 activity tracker events
 
-* [15 July 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-15july2022)
-
-    * Added: Viewing associated resources with managed keys
-
 * [24 June 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-24june2022)
 
     * Added: Go SDK and Terraform support for {{site.data.keyword.uko_full_notm}}
@@ -470,7 +466,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [22 March 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-march2022)
 
-    * [General availability: Using {{site.data.keyword.uko_full_notm}} to manage and orchestrate keys in a multicloud environment](/docs/hs-crypto?topic=hs-crypto-what-new#add-uko})
+    * General availability: Using {{site.data.keyword.uko_full_notm}} to manage and orchestrate keys in a multicloud environment 
 
 * [28 February 2022](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-28feb2022)
 

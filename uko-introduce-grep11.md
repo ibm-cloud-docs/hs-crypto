@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-09-19"
+  years: 2022, 2024
+lastupdated: "2024-03-07"
 
 keywords: hsm, cloud hsm, tke cli, trusted key entry plug-in, ep11, grep11, cryptographic operations, cryptographic functions
 
@@ -51,7 +51,7 @@ The GREP11 API can process up to 500 requests/second for a single crypto unit.
 {: note}
 
 ## Post-quantum cryptography support
-{: #grep11-support-post-quantum}
+{: #uko-grep11-support-post-quantum}
 
 With the GREP11 API, you can also perform [post-quantum cryptographic](https://en.wikipedia.org/wiki/Post-quantum_cryptography){: external} operations. Traditional cryptography relies on complicated mathematical problems that are difficult for classical computers to solve. However, with the computing capabilities, quantum computers can solve these problems. Post-quantum cryptography is considered to be resistant to cryptanalytic attacks from quantum computers. It usually uses asymmetric algorithms and has multiple approaches.
 

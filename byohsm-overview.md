@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-11-07"
+  years: 2024
+lastupdated: "2024-03-07"
 
 keywords: bring your own hsm, byohsm, hybrid hpcs, hybrid hsm, hybrid KMS, hybrid hpcs overview, hybrid KMS
 
@@ -54,7 +54,7 @@ To enable the Bring Your Own HSM function, you need to complete the following st
 
 3. Provision a {{site.data.keyword.hscrypto}} instance with BYOHSM enabled.
 
-    After you collect all the information needed, you can contact IBM and create a {{site.data.keyword.hscrypto}} instance with the Bring Your Own HSM function enabled. For more information, see [Provisioning instances with Bring Your Own HSM](/docs/hs-crypto?topic=hs-crypto-provision-instance-with-byohsm).
+    After you collect all the information needed, you can contact IBM and create a {{site.data.keyword.hscrypto}} instance with the Bring Your Own HSM function enabled. For more information, see [Provisioning instances with Bring Your Own HSM](/docs/hs-crypto?topic=hs-crypto-provision&interface=ui).
 
     You cannot enable or disable the BYOHSM function after you provision an instance.
     {: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: Unified Key Orchestrator, align template, key template
 
@@ -66,8 +66,8 @@ To realign keys with key templates through the API, complete the following steps
 ## What's next
 {: #align-key-next}
 
-- To find out instructions on editing a key template, check out [Editing key template details](/docs/hs-crypto?topic=hs-crypto-edit-template).
+- To find out instructions on editing a key template, check out [Editing key template details](/docs/hs-crypto?topic=hs-crypto-edit-template&interface=ui).
 
-- To find out more about managing your key template, check out [Viewing a list of key templates](/docs/hs-crypto?topic=hs-crypto-view-template).
+- To find out more about managing your key template, check out [Viewing a list of key templates](/docs/hs-crypto?topic=hs-crypto-view-key-template&interface=ui).
 
 

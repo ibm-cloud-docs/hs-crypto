@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-03-05"
+lastupdated: "2024-03-07"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -511,7 +511,7 @@ If you have multiple {{site.data.keyword.hscrypto}} instances in different accou
 
 1. **Create the enterprise hierarchy**
 
-    With {{site.data.keyword.cloud_notm}} enterprises, you can centrally manage multiple accounts and resources. You can create an enterprise hierarchy as needed by nesting account groups or accounts within the enterprise account. The access management to the enterprise and the child accounts is isolated to provide greater security. To learn how to create an enterprise and add accounts to an enterprise, see [Getting started with an enterprise](/docs/account?topic=account-enterprise-tutorial) and [Best practices for setting up an enterprise](/docs/account?topic=account-enterprise-best-practices).
+    With {{site.data.keyword.cloud_notm}} enterprises, you can centrally manage multiple accounts and resources. You can create an enterprise hierarchy as needed by nesting account groups or accounts within the enterprise account. The access management to the enterprise and the child accounts is isolated to provide greater security. To learn how to create an enterprise and add accounts to an enterprise, see [Best practices for organizing resources and assigning access](/docs/account?topic=account-account_setup).
 
 2. **Organize account resources in resource groups**
 
@@ -519,7 +519,7 @@ If you have multiple {{site.data.keyword.hscrypto}} instances in different accou
 
 3. **Assign access to manage the enterprise and resources**
 
-    Based on the {{site.data.keyword.hscrypto}} IAM [platform roles](#uko-platform-mgmt-roles) and [service roles](#uko-service-access-roles) that are listed, you can assign users respective access to each tier of the enterprise hierarchy. You can also group users or [service IDs](/docs/account?topic=account-serviceids) by defining access groups to streamline the process of assigning access. For more information about assigning access, see [User management for enterprises](/docs/account?topic=account-enterprise-access) and [Managing access to resources](/docs/account?topic=account-assign-access-resources).
+    Based on the {{site.data.keyword.hscrypto}} IAM [platform roles](#uko-platform-mgmt-roles) and [service roles](#uko-service-access-roles) that are listed, you can assign users respective access to each tier of the enterprise hierarchy. You can also group users or [service IDs](/docs/account?topic=account-serviceids) by defining access groups to streamline the process of assigning access. For more information about assigning access, [Access management in the cloud](/docs/account?topic=account-cloudaccess).
 
 4. **Use {{site.data.keyword.cloud_notm}} API keys**
 
