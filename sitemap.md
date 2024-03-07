@@ -153,7 +153,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-components)
 
-* [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#grep11-support-post-quantum)
+* [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-support-post-quantum)
 
 [Introducing EP11 over gRPC - Standard Plan](/docs/hs-crypto?topic=hs-crypto-grep11-intro#grep11-intro)
 
@@ -301,11 +301,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-components)
 
-* [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#grep11-support-post-quantum)
+* [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-support-post-quantum)
 
 [Introducing EP11 over gRPC - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro#uko-grep11-intro)
 
-* [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro#grep11-support-post-quantum)
+* [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-uko-grep11-intro#uko-grep11-support-post-quantum)
 
 
 ### About key rotation - Unified Key Orchestrator Plan

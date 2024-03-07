@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-08-25"
+  years: 2019, 2024
+lastupdated: "2024-03-07"
 
 keywords: hsm, cloud hsm, tke cli, pkcs11, PKCS11 library, cryptographic operations, cryptographic functions, PKCS 11
 
@@ -151,7 +151,7 @@ Refer to the following table for detailed explanations of the relationship betwe
 {: caption="Table 1. Cases of storing EP11 keys in different keystores" caption-side="bottom"}
 
 ## Post-quantum cryptography support
-{: #grep11-support-post-quantum}
+{: #pkcs11-support-post-quantum}
 
 With the PKCS #11 API, you can also perform [post-quantum cryptographic](https://en.wikipedia.org/wiki/Post-quantum_cryptography){: external} operations. Traditional cryptography relies on complicated mathematical problems that are difficult for classical computers to solve. However, with the computing capabilities, quantum computers can solve these problems. Post-quantum cryptography is considered to be resistant to cryptanalytic attacks from quantum computers. It usually uses asymmetric algorithms and has multiple approaches.
 
