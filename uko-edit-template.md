@@ -127,7 +127,7 @@ To edit keystores for existing key templates through the API, complete the follo
 
 - To find out instructions on creating a key template, check out [Creating key templates](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui).
 
-- To find out more about managing your key template, check out [Viewing a list of key templates](/docs/hs-crypto?topic=hs-crypto-view-template&interface=ui).
+- To find out more about managing your key template, check out [Viewing a list of key templates](/docs/hs-crypto?topic=hs-crypto-view-key-template&interface=ui).
   
 - To find out instructions on deleting a key template, check out [Deleting key templates](/docs/hs-crypto?topic=hs-crypto-delete-template&interface=ui).
 
