@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-07-04"
+  years: 2018, 2024
+lastupdated: "2024-03-07"
 
 keywords: root key, wrap key, encrypt data encryption key, protect data encryption key, key wrap api
 
@@ -74,7 +74,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
     | `correlation_ID` | **Optional.** The unique identifier that is used to track and correlate transactions. |
-    | `data_key` | The key material of the DEK that you want to manage and protect. The `plaintext` value must be base64 encoded. For more information about encoding your key material, see [Encoding your key material](/docs/key-protect?topic=key-protect-import-root-keys#open-ssl-encoding-root-new-key-material). To generate a new DEK, omit the `plaintext` attribute. The service generates a random plain text (32 bytes), wraps that value, and then returns both the generated and wrapped values in the response. The generated and wrapped values are base64 encoded and you will need to decode them in order to decrypt the keys. |
+    | `data_key` | The key material of the DEK that you want to manage and protect. The `plaintext` value must be base64 encoded. To generate a new DEK, omit the `plaintext` attribute. The service generates a random plain text (32 bytes), wraps that value, and then returns both the generated and wrapped values in the response. The generated and wrapped values are base64 encoded and you will need to decode them in order to decrypt the keys. |
     {: caption="Table 1. Describes the variables needed to wrap a specified key" caption-side="bottom"}
 
     Your wrapped data encryption key, containing the base64 encoded key material, is returned in the response entity-body. The response body also contains the ID of the key version that was used to wrap the supplied plain text. The following JSON object shows an example returned value.

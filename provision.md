@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -94,7 +94,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan from th
         - **Standard cloud HSM**: Use FIPS 140-2 level 4 certified HSMs that IBM Cloud provides for key generation and management. You take the full ownership of the HSM by [initializing your service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite) after the provision.
         - **Bring Your Own HSM**: Use your own on-premises HSMs to retain physical control over your encryption keys to meet the data sovereignty regulations. Before you can enable this function, you need to prepare and set up on-premises HSMs. For more information, see [Introducing Bring Your Own HSM](/docs/hs-crypto?topic=hs-crypto-introduce-bring-your-own-hsm) and [Setting up BYOHSM](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm).
 
-            After you select this option, the **HSM connector ID** field is displayed. You need to provide the HSM connector ID that you get from IBM. For more information, see [Contact IBM to get the required information](docs/hs-crypto?topic=hs-crypto-tutorial-byohsm#tutorial-byohsm-step3).
+            After you select this option, the **HSM connector ID** field is displayed. You need to provide the HSM connector ID that you get from IBM. For more information, see [Contact IBM to get the required information]/docs/hs-crypto?topic=hs-crypto-tutorial-byohsm&interface=ui#tutorial-byohsm-step3).
    
 6. Click **Create** to provision an instance of {{site.data.keyword.hscrypto}} in the account, region, and resource group where you are logged in.
 

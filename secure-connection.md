@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: securing connection, disabling public service endpoint
 
@@ -259,7 +259,7 @@ To test the private network connection for the key management service, use {{sit
 To perform key management operations, see:
 
 * [The key management service API](/apidocs/hs-crypto){: external}
-* [{{site.data.keyword.keymanagementserviceshort}} CLI](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference)
+* [{{site.data.keyword.keymanagementserviceshort}} CLI](/docs/key-protect?topic=key-protect-key-protect-cli-reference)
 
 To perform cryptographic operations, see:
 

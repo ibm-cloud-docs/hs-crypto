@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: Unified Key Orchestrator, view key templates, key management, kms keys, UKO
 
@@ -106,7 +106,7 @@ To unarchive the key template through the API, complete the following steps:
   
 - To find out instructions on managing a key template, check out [Editing key template details](/docs/hs-crypto?topic=hs-crypto-edit-template).
 
-- To continue to create keys with the key template created, follow the instruction in [Creating managed keys with a key template](/docs/hs-crypto?topic=hs-crypto-create-managed-keys#create-managed-keys-template).
+- To continue to create keys with the key template created, follow the instruction in [Creating managed keys with a key template](/docs/hs-crypto?topic=hs-crypto-create-managed-keys&interface=ui#create-managed-keys-template-ui).
 
 - To find out instructions on deleting a key template, check out [Deleting key templates](/docs/hs-crypto?topic=hs-crypto-delete-template).
 

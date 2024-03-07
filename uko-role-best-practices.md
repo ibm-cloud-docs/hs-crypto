@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: UKO access, UKO account authentication, UKO custom roles, Unified Key Orchestrator
 
@@ -69,7 +69,7 @@ Before users can access {{site.data.keyword.uko_full_notm}} vaults, keystores, o
 7. Under **Roles and actions**, choose a combination of platform and service access roles to assign access for the user and click **Next**. 
 
     - Check the box for at least the **Viewer** role under **Platform access**. For more information about the IAM platform roles, see [Platform access roles](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-platform-mgmt-roles).
-    - Check the box for the corresponding custom role that you set up in [Step 1](#uko-step1-create-custom-roles-uko) based on your needs.
+    - Check the box for the corresponding custom role that you set up in [Step 1](#step1-create-custom-roles-uko) based on your needs.
 
     If you don't have any custom roles, you can select the existing IAM roles that cover the actions that you want to assign to the user. You can view the specific actions that correspond to the role by clicking the number.
     {: tip}

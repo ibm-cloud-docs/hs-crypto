@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-11-08"
+  years: 2021, 2024
+lastupdated: "2024-03-07"
 
 keywords: security for Hyper Protect Crypto Services, compliance for Hyper Protect Crypto Services, security and compliance for Hyper Protect Crypto Services, rules for Hyper Protect Crypto Services,
 
@@ -53,5 +53,3 @@ This service only supports the ability to view the results of your configuration
 {: caption="Table 1. Config rule properties and target attributes for {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 
 
-
-To learn more about config rule capabilities, see [What is a config rule?](/docs/security-compliance?topic=security-compliance-what-is-governance){: external}.

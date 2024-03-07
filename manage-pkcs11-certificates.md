@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: pkcs11 certificate, view ep11 certificate, delete ep11 certificate
 
@@ -72,7 +72,7 @@ To customize how the table is to be presented, click the **Settings icon** ![Set
 {: caption="Table 1. The properties displayed in the EP11 certificates table" caption-side="bottom"}
 
 ### Viewing EP11 certificate details
-{: #view-ep11-certificate-list-ui}
+{: #view-ep11-certificate-details-ui}
 
 To view more details about each certificate, complete the following steps:
 

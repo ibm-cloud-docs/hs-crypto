@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: measure interactions, metrics, monitoring, operational metrics
 
@@ -23,8 +23,6 @@ applications interact with {{site.data.keyword.hscrypto}}.
 
 {{site.data.keyword.mon_full_notm}} records data on the operations that occur inside of {{site.data.keyword.cloud_notm}}. With this service, you can gain operational visibility into the performance and health of your applications, services, and platforms. You can use the advanced features to monitor and troubleshoot, define alerts based on API response codes, and design custom dashboards.
 
-For more information about the {{site.data.keyword.mon_short}} service, see the [getting started tutorial for {{site.data.keyword.mon_full_notm}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started-monitor){: external}.
-
 ## What metrics are available for {{site.data.keyword.hscrypto}}?
 {: #hpcs-metrics-available}
 
@@ -42,9 +40,7 @@ The following list contains examples of metrics that can be measured in your {{s
 ## Before you begin
 {: #operational-metrics-considerations}
 
-Enabling {{site.data.keyword.hscrypto}} service metrics add new metrics to your {{site.data.keyword.mon_short}} instance. For more
-information about {{site.data.keyword.mon_short}} pricing, see [Pricing](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-pricing_plans){: external}.
-{: important}
+Enabling {{site.data.keyword.hscrypto}} service metrics add new metrics to your {{site.data.keyword.mon_short}} instance.
 
 Before you provision an instance of {{site.data.keyword.mon_short}}, consider the following guidance:
 
@@ -62,7 +58,7 @@ Your dashboard show metrics for all {{site.data.keyword.hscrypto}} instances tha
 
 To enable platform metrics in a region, complete the following steps:
 
-1. [Provision an instance of {{site.data.keyword.mon_short}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision){: external} in the region of the {{site.data.keyword.hscrypto}} instance that contains an [enabled metrics policy](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics).
+1. [Provision an instance of {{site.data.keyword.mon_short}}](/docs/monitoring?topic=monitoring-provision){: external} in the region of the {{site.data.keyword.hscrypto}} instance that contains an [enabled metrics policy](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics).
 2. Go to the [monitoring dashboard](/observe/monitoring){: external}.
 3. Click **Configure platform metrics**.
 4. Select the region where the {{site.data.keyword.hscrypto}} instance is created.
@@ -188,4 +184,4 @@ You can set alerts on your {{site.data.keyword.mon_short}} dashboard to notify y
 6. Configure and set up the notification channel and notification interval.
 8. Click **CREATE**.
 
-For more information about configuring metric alerts, see [Metric Alerts](https://docs.sysdig.com/en/metric-alerts.html){: external}.
+For more information about configuring metric alerts, see [Metric Alerts](/docs/monitoring?topic=monitoring-alert-metric){: external}.

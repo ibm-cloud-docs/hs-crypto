@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -31,7 +31,7 @@ Deleting a key that has a
 requires an authorization from two users. With the
 {{site.data.keyword.hscrypto}} key management service API, you can provide the
 first authorization by
-[setting the key for deletion](#set-key-deletion-api).
+[setting the key for deletion](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys&interface=api#set-key-deletion-api).
 Then, a different user provides a second authorization by using the
 UI or key management service API to delete the key.
 
@@ -79,7 +79,7 @@ starts after you provide the first authorization to delete the key. During this
 [Active state](/docs/hs-crypto?topic=hs-crypto-key-states)
 and all key operations are allowed on the key. If no action is taken by the
 second user and the 7-day period expires, you must
-[restart the dual authorization process](#set-key-deletion-api)
+[restart the dual authorization process](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys&interface=api#set-key-deletion-api)
  to delete the key.
 {: note}
 
@@ -154,7 +154,7 @@ starts after you provide the first authorization to delete the key. During this
 [Active state](/docs/hs-crypto?topic=hs-crypto-key-states)
 and all key operations are allowed on the key. If no action is taken by the
 second user and the 7-day period expires, you must
-[restart the dual authorization process](#set-key-deletion-api)
+[restart the dual authorization process](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys&interface=api)
  to delete the key.
 {: note}
 
@@ -211,7 +211,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
     indicates that your key is no longer authorized for deletion. If you need to
     restart the dual authorization process, you can issue another authorization
     to
-    [set the key for deletion](#set-key-deletion-api).
+    [set the key for deletion](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys&interface=api#set-key-deletion-api).
 
 ## What's next
 {: #delete-daul-auth-keys-next}

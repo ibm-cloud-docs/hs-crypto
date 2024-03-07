@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-11-20"
+  years: 2024
+lastupdated: "2024-03-07"
 
 keywords: bring your own hsm, byohsm, hybrid hpcs, deploy hsm, hybrid KMS, byohsm get started
 
@@ -81,7 +81,7 @@ To achieve high availability, it is suggested to prepare and use at least two HS
     {: caption="Table 1. Keys needed for Bring Your Own HSM" caption-side="bottom"}
 
 1. Prepare the network to connect the on-premises HSMs to your {{site.data.keyword.hscrypto}} instance. For more information about how to achieve better network performance, see [Network connectivity best practice](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-network-connection).
-1. Collect the following information that you need to provide when you contact IBM in [Step 3](#get-started-with-byohsm-step3).
+1. Collect the following information that you need to provide when you contact IBM in [Step 3](#tutorial-byohsm-step3).
 
     | Attribute | Description |
     | --------- | ----------- |
@@ -99,11 +99,11 @@ To achieve high availability, it is suggested to prepare and use at least two HS
 {: #tutorial-byohsm-step3}
 {: step}
 
-Contact IBM by [creating a support case](/docs/get-support?topic=get-support-open-case) to get the required information. Provide the information that you collect in [Step 2](#get-started-with-byohsm-step2) including the subnets where your HSMs can be reached. Each subnet corresponds to one Availability Zone (AZ).
+Contact IBM by [creating a support case](/docs/get-support?topic=get-support-open-case) to get the required information. Provide the information that you collect in [Step 2](#tutorial-byohsm-step2) including the subnets where your HSMs can be reached. Each subnet corresponds to one Availability Zone (AZ).
 
 IBM will then provide you with the following information:
 
-- Your unique **HSM connector ID**. You need to provide the ID when you provision an instance in [step 4](#get-started-with-byohsm-step4).
+- Your unique **HSM connector ID**. You need to provide the ID when you provision an instance in [step 4](#tutorial-byohsm-step4).
 - The **VPC CRN**. In your Transit Gateway configuration, you need to [request a connection to the VPC CRN](/docs/transit-gateway?topic=transit-gateway-adding-cross-account-connections&interface=ui).
 - The **HSM client certificate**. You need to install this certificate on your HSMs to ensure that the communications from {{site.data.keyword.hscrypto}} can be verified.
 
@@ -118,7 +118,7 @@ Provision a {{site.data.keyword.hscrypto}} instance on the [service catalog page
 - Under **HSM connection**, select **Bring Your Own HSM**.
 - Under **HSM connector ID**, enter the HSM connector ID that you get from IBM. This field is displayed only after you select **Bring Your Own HSM** for the **HSM connection** field.
 
-For more information, see [Provisioning a {{site.data.keyword.hscrypto}} instance with BYOHSM](/docs/hs-crypto?topic=hs-crypto-provision-instance-with-byohsm).
+For more information, see [Provisioning a {{site.data.keyword.hscrypto}} instance with BYOHSM](/docs/hs-crypto?topic=hs-crypto-provision&interface=ui).
 
 ## Use your {{site.data.keyword.hscrypto}} instance with BYOHSM
 {: #tutorial-byohsm-step5}

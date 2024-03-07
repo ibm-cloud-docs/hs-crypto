@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway
 
@@ -34,7 +34,7 @@ Before you target a virtual private endpoint for {{site.data.keyword.hscrypto}},
 
 - Ensure that you have [provisioned a Virtual Private Cloud](/docs/vpc?topic=vpc-getting-started).
 - Make a [plan for your virtual private endpoints](/docs/vpc?topic=vpc-planning-considerations).
-- Ensure that [correct access controls](/docs/vpc?topic=vpc-vpe-configuring-acls) are set for your virtual private endpoint.
+- Ensure that correct access controls are set for your virtual private endpoint.
 - Understand the [limitations](/docs/vpc?topic=vpc-limitations-vpe) of having a virtual private endpoint.
 - Understand how to [view details](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway) about a virtual private endpoint.
 

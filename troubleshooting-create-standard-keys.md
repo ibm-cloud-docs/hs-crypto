@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: troubleshoot, problems, known issues, can't create standard keys
 
@@ -30,7 +30,7 @@ You see the following error message when you try to create a standard key:
 You load another master key to your service instance after you create the root key. Because of this, the root key fails to wrap the standard key, and the standard key creation fails. 
 {: tsCauses}
 
-If you want to change the master key in a regular basis for security reasons, rotate the master key by following [the instructions](/docs/hs-crypto?topic=hs-crypto-uko-rotate-master-key-cli-key-part).
+If you want to change the master key in a regular basis for security reasons, rotate the master key by following [the instructions](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
 {: tip}
 
 Load the original master key that is used to wrap the root key to the service instance again by following [the instructions](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#load-master-keys).

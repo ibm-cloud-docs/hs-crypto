@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-11-20"
+  years: 2018, 2024
+lastupdated: "2024-03-07"
 
 keywords: create import token, secure import, key material, key wrapping key, import token api, bring your own key, byok
 
@@ -89,7 +89,7 @@ Complete the following steps to create an import token by using the {{site.data.
     ```
     {: pre}
 
-    You can find more parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference#kp-import-token-create).
+    You can find more parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-key-protect-cli-reference#kp-import-token-create).
 
 ## Retrieving an import token with the API
 {: #retrieve-import-token-api}
@@ -157,7 +157,7 @@ Complete the following steps to retrieve an import token by using the {{site.dat
     ```
     {: pre}
 
-    You can find more parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference#kp-import-token-show).
+    You can find more parameters for this command in the [{{site.data.keyword.keymanagementserviceshort}} CLI reference](/docs/key-protect?topic=key-protect-key-protect-cli-reference#kp-import-token-show).
 
 ## What's next
 {: #create-import-token-next-steps}

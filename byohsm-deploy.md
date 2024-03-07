@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-11-07"
+  years: 2024
+lastupdated: "2024-03-07"
 
 keywords: bring your own hsm, byohsm, hybrid hpcs, deploy hsm, configure own hsm
 
@@ -83,7 +83,7 @@ For a better network performance when you connect on-premises HSMs to {{site.dat
 ## Preparing information for HSM connection
 {: #deploy-byohsm-prepare-info}
 
-Before you can [provision a {{site.data.keyword.hscrypto}} instance with Bring Your Own HSM](/docs/hs-crypto?topic=hs-crypto-provision-instance-with-byohsm), you need to prepare the following information:
+Before you can [provision a {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-provision&interface=ui), you need to prepare the following information:
 
 To provision an instance with BYOHSM, you need to contact IBM to add your account to the allowlist and provide this information for all HSMs that you want to use for {{site.data.keyword.hscrypto}}.
 {: important}
@@ -103,5 +103,5 @@ To provision an instance with BYOHSM, you need to contact IBM to add your accoun
 ## What's next
 {: #deploy-hsm-next}
 
-After you collect all the information needed and set up the network connectivity, you can contact IBM and [provision a {{site.data.keyword.hscrypto}} instance with Bring Your Own HSM](/docs/hs-crypto?topic=hs-crypto-provision-instance-with-byohsm).
+After you collect all the information needed and set up the network connectivity, you can contact IBM and [provision a {{site.data.keyword.hscrypto}} instance with Bring Your Own HSM](/docs/hs-crypto?topic=hs-crypto-provision&interface=ui).
 

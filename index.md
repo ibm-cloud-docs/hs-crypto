@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -63,7 +63,7 @@ Depending on where your service instance locates and your security requirements,
 ## Step 2 (Standard Plan only): Create keys
 {: #create-key-standard}
 
-With the Standard Plan, you can create root keys or standard keys for data encryption. Complete the following steps to create your first cryptographic key. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *writer* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the UI](/docs/hs-crypto?topic=hs-crypto-manage-access&interface=ui#assign-access-console).
+With the Standard Plan, you can create root keys or standard keys for data encryption. Complete the following steps to create your first cryptographic key. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *writer* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the UI](/docs/hs-crypto?topic=hs-crypto-manage-access).
 
 1. From the UI, click **KMS keys** &gt; **Add key**.
 2. Select **Create a key**. 
@@ -75,7 +75,7 @@ The created key is a symmetric 256-bit key, supported by the AES-CBC algorithm. 
 ## Step 2 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys
 {: #manage-uko-key}
 
-Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *Vault administrator* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the UI](/docs/hs-crypto?topic=hs-crypto-uko-manage-access&interface=ui#assign-access-console).
+Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *Vault administrator* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the UI](/docs/hs-crypto?topic=hs-crypto-uko-manage-access).
 
 ### 1. Create vaults
 {: #create-vault}

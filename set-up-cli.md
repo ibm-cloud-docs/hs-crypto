@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-07"
 
 keywords: ibmcloud cli, hpcs cli, ibmcloud commands, ibm cloud command-line interface, key protect cli, kms cli
 
@@ -65,7 +65,7 @@ Before you use the {{site.data.keyword.keymanagementserviceshort}} CLI through a
 
     Alternatively, you can use the `-i <instance_ID>` option on the `ibmcloud kp` command to set the instance ID.
 
-4. Run the specific command to perform key management operations. For the full list of commands, check out the [key management CLI reference](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference).
+4. Run the specific command to perform key management operations. For the full list of commands, check out the [key management CLI reference](/docs/key-protect?topic=key-protect-key-protect-cli-reference).
 
 5. [Upgrade the {{site.data.keyword.keymanagementserviceshort}} CLI plug-in](/docs/key-protect?topic=key-protect-set-up-cli#update-cli) to the newest version to enable new features.
 

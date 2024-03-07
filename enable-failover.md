@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-07-04"
+  years: 2021, 2024
+lastupdated: "2024-03-07"
 
 keywords: failover crypto unit, add failover crypto units, enable failover, enable cross-region recovery
 
@@ -44,7 +44,7 @@ To enable or add failover crypto units by using the {{site.data.keyword.cloud_no
     ```
     {: pre}
 
-2. [Log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cli-getting-started#step3-configure-idt-env){: external}.
+2. Log in to {{site.data.keyword.cloud_notm}} with the CLI.
 
     If you have multiple accounts, select the account that your service instance is created with. Make sure that you're logged in to the correct region and resource group where the service instance locates with the following command:
 
@@ -156,7 +156,7 @@ To enable or add failover crypto units by using the Management Utilities, follow
         ```
          {: pre}
 
-    3. [Log in to {{site.data.keyword.cloud_notm}} with the CLI](/docs/cli?topic=cli-getting-started#step3-configure-idt-env){: external}.
+    3. Log in to {{site.data.keyword.cloud_notm}} with the CLI.
 
         If you have multiple accounts, select the account that your service instance is created with. Make sure that you're logged in to the correct region and resource group where the service instance locates with the following command:
 
