@@ -68,8 +68,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Pervasively protecting data at rest in the cloud](/docs/hs-crypto?topic=hs-crypto-use-cases#data-at-rest-encryption)
 
-* [Protecting storage systems with third-party encryption key management tools](/docs/hs-crypto?topic=hs-crypto-use-cases#protect_storage)
-
 * [Using {{site.data.keyword.hscrypto}} as a cloud HSM](/docs/hs-crypto?topic=hs-crypto-use-cases#cloud_hsm)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-use-cases#use-case-next)
