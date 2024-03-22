@@ -2079,7 +2079,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [How do I get support for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-hpcs-support)
 
-* [After the service initialization is done, is there any best practices for managing smart cards or key part files?](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-manage-smartcards)
+* [After the service initialization is done, are there any best practices for managing smart cards or key part files?](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-manage-smartcards)
 
 
 ## Troubleshooting key management service

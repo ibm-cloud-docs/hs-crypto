@@ -34,7 +34,7 @@ If you have technical questions about {{site.data.keyword.hscrypto}}, post your 
 
 For more information about opening an IBM support ticket, or about support levels and ticket severities, see [Using the Support Center](/docs/get-support?topic=get-support-using-avatar).
 
-## After the service initialization is done, is there any best practices for managing smart cards or key part files?
+## After the service initialization is done, are there any best practices for managing smart cards or key part files?
 {: #faq-manage-smartcards}
 {: faq}
 
