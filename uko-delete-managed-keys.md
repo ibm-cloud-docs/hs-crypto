@@ -49,7 +49,7 @@ Follow these steps to complete the process:
 
     After the managed key is destroyed, you cannot restore the keys. 
 
-    For keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically after 60 days after they move to Destroyed state. 
+    For keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically after 90 days after they move to Destroyed state. 
 
         
 
