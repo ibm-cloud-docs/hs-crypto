@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-08-23"
+  years: 2019, 2024
+lastupdated: "2024-03-20"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -57,7 +57,7 @@ Complete the following steps to order smart cards:
     * Billing contact information, which includes the name, billing address, phone number, email address, and time zone.
     * Shipping contact information, which includes the name, shipping address, phone number, email address, and time zone.
 
-    For more information about ordering smart cards through your IBM sales representatives or Business Partners, see [{{site.data.keyword.IBM}} {{site.data.keyword.hscrypto}} hardware announcement](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/6/897/ENUS122-116/index.html){: external}.
+    For more information about ordering smart cards through your IBM sales representatives or Business Partners, see [How to Order](https://www.ibm.com/docs/en/cryptocards?topic=how-order#how_to_order__order_cards__title__1){: external}.
 
 ### Ordering smart card readers
 {: #order-smart-card-reader}

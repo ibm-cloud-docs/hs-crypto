@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-22"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -47,9 +47,11 @@ Follow these steps to complete the process:
 
 5. Click **Destroy key** to confirm. 
 
-         After the managed key is destroyed, you cannot restore the keys. 
+    After the managed key is destroyed, you cannot restore the keys. 
 
     For keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically after 90 days after they move to Destroyed state. 
+
+        
 
 6. To remove the key and the metadata from the vault, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**.
    

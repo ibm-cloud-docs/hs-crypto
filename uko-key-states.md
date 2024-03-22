@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-22"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator, UKO keys
 
@@ -44,7 +44,7 @@ The following table shows the details of each key state.
 | Destroyed<sup>2</sup>   |        5        | A Destroyed key is a key record for which the actual key material has been permanently erased. The record of the key is retained to be available for later queries or audits until you manually remove the key from the vault. You cannot restore keys in Destroyed state.|
 {: caption="Table 1. Key states and transitions" caption-side="bottom"}
 
-1: If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. An `Out of sync` flag is also displayed in the corresponding keystore card or the key list. There can be multiple reasons why the key is out of sync. For example, there is an issue in relinking the key in the keystore or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. When you hover over this flag, you can see the specific reason. You can sync the key state by clicking **Sync key** on the Key details page.
+1: If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. An `Out of sync` flag is also displayed in the corresponding keystore card or the key list. There can be multiple reasons why the key is out of sync. For example, there is an issue in relinking the key in the keystore or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. You can sync the key state by clicking **Sync key** on the Key details page.
 
 ## Key states and service actions
 {: #uko-key-states-service-actions}
