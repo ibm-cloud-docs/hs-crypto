@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-03-07"
+lastupdated: "2024-03-22"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -51,6 +51,9 @@ The following diagram gives you an overview of steps you need to take to initial
 You can also watch the following video to learn how to initialize {{site.data.keyword.hscrypto}} instances with {{site.data.keyword.cloud_notm}} TKE CLI plug-in:
 
 ![Initialize Hyper Protect Crypto Services with IBM Cloud TKE CLI](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_47xngxvg){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
+
+It is your responsibility to secure assets used to initialize the {{site.data.keyword.hscrypto}} instance. For best practices, see [the FAQ](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-manage-smartcards).
+{: note}
 
 ## Before you begin
 {: #initialize-hsm-cli-prerequisite}

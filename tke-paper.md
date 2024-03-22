@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-11-21"
+  years: 2021, 2024
+lastupdated: "2024-03-22"
 
 keywords: trusted key entry plugin, key ceremony, cloud TKE procedure
 
@@ -25,6 +25,6 @@ The management of {{site.data.keyword.hscrypto}} can be subject to internal or e
 View and download the procedures by clicking the following links:
 
 * [Key ceremony through cloud TKE CLI and key part files](https://cloud.ibm.com/media/docs/downloads/hs-crypto/HPCS-Key-Ceremony-using-Key-Part-files.pdf){: external}
-* [Key ceromony through cloud TKE and smart cards](https://cloud.ibm.com/media/docs/downloads/hs-crypto/IBM_Cloud_HyperProtectCryptoSevices_TKE_Procedures.pdf){: external}
+* [Key ceremony through cloud TKE and smart cards](https://cloud.ibm.com/media/docs/downloads/hs-crypto/IBM_Cloud_HyperProtectCryptoSevices_TKE_Procedures.pdf){: external}
 
 

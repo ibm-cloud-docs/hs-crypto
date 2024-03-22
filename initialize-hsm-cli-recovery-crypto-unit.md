@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-03-22"
 
 keywords: initialize service instance, load master key, key ceremony, recovery crypto unit
 
@@ -25,10 +25,11 @@ For an introduction to the approaches of service instance initialization and the
 Currently, service instances in the `eu-es` region don't support recovery crypto units. When a service instance is provisioned in other supported regions, you are by default enabled with the option to back up your master keys in the recovery crypto units located in the disaster recovery region. For more information about supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
 If smart cards are used to initialize the service instance, the recovery crypto units are not applicable and can be ignored. The backup of the master key relies on the backup of the smart cards in that case.
-{: note}
 
 You can automate the instance initialization with recovery crypto units by using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).
-{: tip}
+
+It is your responsibility to secure assets used to initialize the {{site.data.keyword.hscrypto}} instance. For best practices, see [the FAQ](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-manage-smartcards).
+{: note}
 
 ## Initializing service instances
 {: #initialize-hsm-recovery-crypto-unit-steps}

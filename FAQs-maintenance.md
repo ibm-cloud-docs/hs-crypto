@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-02-08"
+  years: 2020, 2024
+lastupdated: "2024-03-22"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, maintenance
 
@@ -33,3 +33,23 @@ If one available zone that contains your provisioned service instance goes down,
 If you have technical questions about {{site.data.keyword.hscrypto}}, post your question on [Stack Overflow](https://stackoverflow.com/questions/tagged/hyper-protect-crypto){: external} and tag your question with `ibm-cloud` and `hyper-protect-crypto`.
 
 For more information about opening an IBM support ticket, or about support levels and ticket severities, see [Using the Support Center](/docs/get-support?topic=get-support-using-avatar).
+
+## After the service initialization is done, is there any best practices for managing smart cards or key part files?
+{: #faq-manage-smartcards}
+{: faq}
+
+It is your responsibility to secure assets used to initialize the {{site.data.keyword.hscrypto}} instance:
+
+* Store smart cards, the associated PINs, and the smart card readers in secure vaults to prevent unauthorized access.
+* Secure key part files in the directory associated with CLOUDTKEFILES in an approved file storage vault.
+
+Make sure you follow these best practice to maintain your secure assets:
+
+* Store the PINS in an approved password vault in the customer environment.
+* Prepare a transition plan for administrators to hand over all crypto assets as they move over to different roles.
+* Update the Disaster Recovery plans to verify crypto assets such as smart cards, PINs, smart card readers.
+
+You can find more detailed instructions by following these links:
+
+* [Key ceremony through cloud TKE CLI and key part files](https://cloud.ibm.com/media/docs/downloads/hs-crypto/HPCS-Key-Ceremony-using-Key-Part-files.pdf){: external}
+* [Key ceremony through cloud TKE and smart cards](https://cloud.ibm.com/media/docs/downloads/hs-crypto/IBM_Cloud_HyperProtectCryptoSevices_TKE_Procedures.pdf){: external}
