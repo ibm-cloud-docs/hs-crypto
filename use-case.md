@@ -129,7 +129,7 @@ Organizations with an existing Thales CipherTrust Manager (CTM) environment can 
 
 Other Thales key management products such as Vormetric Data Security Manager (DSM), CipherTrust Cloud Key Manager (CCKM), Enterprise Key Management can also integrate with {{site.data.keyword.hscrypto}} in a similar way.
 
-![Fortifying Thales environments with cloud HSM](/images/fortify-thales.svg "Fortifying Thales environments with cloud HSM"){: caption="Figure 8. Fortifying Thales environments with cloud HSM}" caption-side="bottom"}
+![Fortifying Thales environments with cloud HSM](/images/fortify-thales.svg "Fortifying Thales environments with cloud HSM"){: caption="Figure 8. Fortifying Thales environments with cloud HSM" caption-side="bottom"}
 
 For more details, refer to [the Thales documentation](https://thalesdocs.com/ctp/cm/2.4/admin/cm_admin/hardware-security-module/index.html){: external}.
 
