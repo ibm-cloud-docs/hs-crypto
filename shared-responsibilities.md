@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-03-07"
+lastupdated: "2024-03-25"
 
 keywords: shared responsibilities, shared responsibility model, disaster recovery, incident management, operation management
 
@@ -69,6 +69,8 @@ Security and regulation compliance includes tasks such as security controls impl
 | Applications| Maintain controls that are commensurate to [various industry compliance standards](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#compliance-ready).  | Set up and maintain security and regulation compliance for your apps and data. For example, you can enable extra security settings to meet your compliance needs by choosing how and when to [import](/docs/hs-crypto?topic=hs-crypto-importing-keys#plan-ahead), [wrap](/docs/hs-crypto?topic=hs-crypto-wrap-keys), [rotate](/docs/hs-crypto?topic=hs-crypto-importing-keys#plan-ahead), [rewrap](/docs/hs-crypto?topic=hs-crypto-rewrap-keys), and [delete](/docs/hs-crypto?topic=hs-crypto-delete-keys) keys. |
 |Encryption| IBM is responsible for the encryption of keys. | Keep your root of trust, the master key parts, on either your workstation or smart cards. |
 |Master key backups| IBM never touches your master key. | Backup your master key in a regular basis to your smart card or workstation. |
+|Smart cards and smart card readers| IBM never touches your smart cards and smart card readers. | Store smart cards, the associated PINs, and the smart card readers in secure vaults to prevent unauthorized access. |
+|Key part files| IBM never touches your key part files. | Secure key part files in the directory associated with CLOUDTKEFILES in an approved file storage vault and securely store the respective passwords. |
 {: caption="Table 4. Responsibilities for security and regulation compliance" caption-side="bottom"}
 
 ## Disaster recovery

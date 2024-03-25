@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-03-22"
+lastupdated: "2024-03-25"
 
 keywords: site map, doc structure, information architecture
 
@@ -2078,6 +2078,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [How is routine maintenance performed on {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-routine-maintenance)
 
 * [How do I get support for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-hpcs-support)
+
+* [After the service initialization is done, are there any best practices for managing smart cards or key part files?](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-manage-smartcards)
 
 
 ## Troubleshooting key management service
