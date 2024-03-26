@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-03-25"
+lastupdated: "2024-03-26"
 
 keywords: site map, doc structure, information architecture
 
@@ -219,8 +219,6 @@ Find what you are looking for in the compilation of topics that are available in
 [Use cases - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-cases)
 
 * [Pervasively protecting data at rest in the cloud](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-data-at-rest-encryption)
-
-* [Protecting storage systems with third-party encryption key management tools](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-protect-storage)
 
 * [Using {{site.data.keyword.uko_full_notm}} for multicloud key orchestration](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-case)
 
