@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-03-28"
+lastupdated: "2024-04-02"
 
 keywords: site map, doc structure, information architecture
 
@@ -1520,9 +1520,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Enabling or adding failover crypto units after you provision a service instance](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#enable-add-failover)
 
-* [Using the {{site.data.keyword.cloud_notm}} CLI](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#enable-add-failover-cli)
+* [Step 1: Add failover crypto units](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#add-failover-cu)
 
-* [Using the Management Utilities](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#enable-add-failover-management-utilities)
+* [Step 2: Raise a support ticket](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#raise-support-ticket)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#enable-add-failover-next)
 

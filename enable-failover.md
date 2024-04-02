@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-03-07"
+lastupdated: "2024-04-02"
 
 keywords: failover crypto unit, add failover crypto units, enable failover, enable cross-region recovery
 
@@ -20,12 +20,17 @@ subcollection: hs-crypto
 Failover crypto units back up the operational crypto units and keystores in another region. If a regional disaster occurs, you can use failover crypto units to automatically restore your data, which can reduce the downtime and data loss. You can either enable failover crypto unit [when you provision a service instance](/docs/hs-crypto?topic=hs-crypto-provision) or after you provision a service instance. This topic guides you through enabling or adding failover crypto units after you provision a service instance.
 {: shortdesc}
 
-If you have a service instance in the `us-south` or `us-east` region, you can enable failover crypto units for your instance with the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) CLI plug-in or the Management Utilities. If failover crypto units are already assigned to your service instance, you can still add extra ones.
+If you have a service instance in the `us-south` or `us-east` region, you can enable failover crypto units for your instance with the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) CLI plug-in or the Management Utilities. If failover crypto units are already assigned to your service instance, you can still add extra ones. After you add failover crypto units, make sure to raise a support ticket to repair the instance and enable the failover units.
 
 You can specify a total number of failover crypto units that are equal to or less than the number of operational crypto units. However, to meet high availability, at least two failover crypto units need to be assigned. Failover crypto units are also charged. For the detailed pricing information, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
 {: tip}
 
-## Using the {{site.data.keyword.cloud_notm}} CLI
+## Step 1: Add failover crypto units
+{: #add-failover-cu}
+
+You can enable or add failover crypto units either by using the {{site.data.keyword.cloud_notm}} CLI or the Management Utilities.
+
+### Using the {{site.data.keyword.cloud_notm}} CLI
 {: #enable-add-failover-cli}
 
 To enable or add failover crypto units by using the {{site.data.keyword.cloud_notm}} CLI, follow these steps:
@@ -133,7 +138,7 @@ To enable or add failover crypto units by using the {{site.data.keyword.cloud_no
     You need to initialize failover crypto units before you use them for a regional disaster recovery. It is suggested you initialize the failover crypto units right after you enable them for your service instance.
     {: note}
 
-## Using the Management Utilities
+### Using the Management Utilities
 {: #enable-add-failover-management-utilities}
 
 To enable or add failover crypto units by using the Management Utilities, follow these steps:
@@ -195,6 +200,25 @@ To enable or add failover crypto units by using the Management Utilities, follow
 
     You need to initialize failover crypto units before you use them for a regional disaster recovery. It is suggested you initialize the failover crypto units right after you enable them for your service instance.
     {: note}
+
+## Step 2: Raise a support ticket
+{: #raise-support-ticket}
+
+After you add the failover crypto units, you need to let IBM Support know about this change by raising a support ticket, so that they can enable the added failover crypto units for you.
+
+1. In your {{site.data.keyword.cloud_notm}} dashboard, click the **Help** icon ![Help icon](../icons/help.svg "Help") > **Support center** from the UI menu bar to enter the Support Center. Click **View all** in the **Recent support cases** panel and click **Create new case**. Or, you can directly go to the [Manage cases page](https://cloud.ibm.com/unifiedsupport/cases){: external} and click **Create new case**.
+2. On the **Create a case** page displayed, select the offering {{site.data.keyword.hscrypto}}, and then specify the following values:
+
+    | Field name | Action |
+    | --- | --- |
+    | Subject | Enter **Enable failover crypto units**. |
+    | Description | Enter your [service instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID), the region that your service instance resides in, and the number of failover crypto units that you add. |
+    | Selected resources | Select your {{site.data.keyword.hscrypto}} service instance. |
+    {: caption="Table 1. Describes the fields that are required to enable failover crypto units" caption-side="bottom"}
+
+3. Check the **Email me updates about this issue** box, and click **Continue to review > Create case**.
+
+    After the operation is completed successfully, you will get an email notification. You can also check the state in the Support Center by clicking the **Help** icon ![Help icon](../icons/help.svg "Help") > **Support center** from the UI menu bar.
 
 ## What's next
 {: #enable-add-failover-next}
