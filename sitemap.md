@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-03-25"
+lastupdated: "2024-04-02"
 
 keywords: site map, doc structure, information architecture
 
@@ -219,8 +219,6 @@ Find what you are looking for in the compilation of topics that are available in
 [Use cases - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-cases)
 
 * [Pervasively protecting data at rest in the cloud](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-data-at-rest-encryption)
-
-* [Protecting storage systems with third-party encryption key management tools](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-protect-storage)
 
 * [Using {{site.data.keyword.uko_full_notm}} for multicloud key orchestration](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-case)
 
@@ -1522,9 +1520,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Enabling or adding failover crypto units after you provision a service instance](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#enable-add-failover)
 
-* [Using the {{site.data.keyword.cloud_notm}} CLI](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#enable-add-failover-cli)
+* [Step 1: Add failover crypto units](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#add-failover-cu)
 
-* [Using the Management Utilities](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#enable-add-failover-management-utilities)
+* [Step 2: Raise a support ticket](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#raise-support-ticket)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#enable-add-failover-next)
 

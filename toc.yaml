@@ -109,6 +109,9 @@ toc:
           - link:
               label: "Encrypting Kubernetes secrets with IBM Cloud Hyper Protect Crypto Services"
               href: https://developer.ibm.com/tutorials/encrypt-kubernetes-secrets-with-hyper-protect-crypto-services/
+          - link:
+              label: "Protecting LUKS encryption keys with IBM Cloud Hyper Protect Crypto Services and IBM Key Protect"
+              href: https://developer.ibm.com/tutorials/protect-luks-encryption-keys-with-ibm-cloud-hyper-protect-crypto-services/
       - topicgroup:
           label: Tutorials on cloud hardware security module
           topics:
