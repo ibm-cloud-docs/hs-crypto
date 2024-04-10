@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-02"
+lastupdated: "2024-04-10"
 
 keywords: site map, doc structure, information architecture
 
@@ -382,15 +382,15 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
 
-* [18 January 2024](/docs/hs-crypto?topic=hs-crypto-what-new##hs-crypto-jan2024)
+* [18 January 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-jan2024)
 
     * Added: Azure software-protected key support for {{site.data.keyword.cloud_notm}}
 
-* [09 November 2023](/docs/hs-crypto?topic=hs-crypto-what-new##hs-crypto-nov2023)
+* [09 November 2023](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-nov2023)
 
     * Added: {{site.data.keyword.hscrypto}} adds support for Bring Your Own HSM (BYOHSM)
 
-* [26 October 2023](/docs/hs-crypto?topic=hs-crypto-what-new##hs-crypto-26oct2023)
+* [26 October 2023](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-26oct2023)
 
     * Deprecated: {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} in Sydney
 

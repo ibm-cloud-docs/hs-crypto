@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-03-07"
+lastupdated: "2024-04-10"
 
 keywords: Unified Key Orchestrator, align template, key template
 
@@ -38,10 +38,8 @@ To realign managed keys with key templates by using the UI, complete the followi
 
 Your key is now aligned again with the key template in terms of assigned keystores. 
 
-
 If the key template is archived, you cannot realign the key with key templates.  
 {: note}
-
 
 ## Realigning keys with key templates through the API
 {: #align-key-api}

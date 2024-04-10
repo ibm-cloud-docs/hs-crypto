@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-03-07"
+lastupdated: "2024-04-10"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -76,10 +76,7 @@ You can create a key template from scratch with full control by yourself. To cre
     {: tab-title="AWS Key templates"}
     {: tab-group="Key templates from scratch properties"}
     {: class="comparison-tab-table"}
-    
-    
 
-    
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
     | Key template name    | A unique, human-readable name for easy identification of your key template. It must be 1–100 characters in length.  |
@@ -97,7 +94,6 @@ You can create a key template from scratch with full control by yourself. To cre
     {: tab-title="Azure Key templates"}
     {: tab-group="Key templates from scratch properties"}
     {: class="comparison-tab-table"}
-    
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|

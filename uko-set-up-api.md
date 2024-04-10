@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-08-15"
+  years: 2022, 2024
+lastupdated: "2024-04-09"
 
 keywords: set up api, uko api, Unified Key Orchestrator api, 
 
@@ -43,6 +43,8 @@ To work with the API, you need to generate your service and authentication crede
 When you make an API call to the service, structure your API request according to how you initially provisioned your instance of {{site.data.keyword.hscrypto}}.
 
 To build your request, pair a [regional service endpoint](/docs/hs-crypto?topic=hs-crypto-regions) with the appropriate authentication credentials. For example, if you created a service instance for the `us-south` region, use the following endpoint and API headers to browse keys in your service:
+
+
 
 ```cURL
 curl --location --request GET 'https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys' \

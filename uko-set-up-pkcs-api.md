@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-04-09"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -153,6 +153,9 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
     {: codeblock}
 
     Replace the variables in the example according to the following table:
+
+    
+
 
     | Variable | Description |
     | --- | --- |

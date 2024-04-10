@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-03-22"
+lastupdated: "2024-04-10"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -76,10 +76,8 @@ To edit the details of a managed key by using the UI, complete the following ste
 
             For a key that is created with a key template, after you edit the keystore distribution list, an `Unaligned` flag can be displayed on the key details card for keys. If you want to keep these changes, ignore the flag. Otherwise, realign your key with the key template again by selecting **Actions** > **Realign with template**. For more information, see [Realigning keys with key templates](/docs/hs-crypto?topic=hs-crypto-align-key). 
 
-        
         If you connect to an external keystore of type Azure Key Vault, you can distribute HSM-protected keys only to the Azure Key Vault (Premium).
         {: note}
-        
 
 
 

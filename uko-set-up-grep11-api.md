@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-04-09"
 
 keywords: set up api, api key, cryptographic operations, use ep11 api, access ep11 api, ep11 over grpc, using api
 
@@ -186,6 +186,9 @@ In the example, update the following variables:
     }
     ```
     {: screen}
+
+	
+
 
 * Replace `<ibm_cloud_apikey>` with the service ID API key that you created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-04-10"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -71,9 +71,6 @@ When you select the **Create with a key template** option, you are creating a ma
     {: tab-group="Managed key properties with templates"}
     {: class="comparison-tab-table"}
 
-    
-
-    
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key. It must be 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). \n \n **Important:** If the key naming scheme is defined in the key template, you need to enter values for each custom placeholder. Each placeholder must be at least 2 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. An example of the managed key name must not exceed 50 characters in length. You can also specify the extended description for your key. Note that you cannot modify the key name after the key creation.   |
@@ -90,7 +87,6 @@ When you select the **Create with a key template** option, you are creating a ma
     {: tab-title="Azure Key Vault keys"}
     {: tab-group="Managed key properties with templates"}
     {: class="comparison-tab-table"}
-    
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
@@ -230,7 +226,6 @@ When you select the **Create with custom properties** option, you are creating a
     {: tab-group="Managed key properties without templates"}
     {: class="comparison-tab-table"}
 
-    
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key. It must be 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). \n \n **Important:** If the key naming scheme is defined in the key template, you need to enter values for each custom placeholder. Each placeholder must be at least 2 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. An example of the managed key name must not exceed 50 characters in length. You can also specify the extended description for your key. Note that you cannot modify the key name after the key creation.   |
@@ -247,9 +242,6 @@ When you select the **Create with custom properties** option, you are creating a
     {: tab-title="Azure Key Vault keys"}
     {: tab-group="Managed key properties without templates"}
     {: class="comparison-tab-table"}
-    
-
-    
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|

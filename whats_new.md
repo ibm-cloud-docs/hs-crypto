@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-03-07"
+lastupdated: "2024-04-09"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -22,19 +22,21 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+
+
 ## 18 January 2024
-{: ##hs-crypto-jan2024}
+{: #hs-crypto-jan2024}
 {: release-note}
 
 Added: Azure software-protected key support for {{site.data.keyword.cloud_notm}}
-:    Besides HSM-protected keys, software-protected keys can now also be created in Azure Key Vault (Premium) keystores of {{site.data.keyword.uko_full_notm}}. However, you can still create and distribute only software-protected keys to Azure Key Vault (Standard).  For more information, see [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys) and [Creating key templates](/docs/hs-crypto?topic=hs-crypto-create-template).
+:   Besides HSM-protected keys, software-protected keys can now also be created in Azure Key Vault (Premium) keystores of {{site.data.keyword.uko_full_notm}}. However, you can still create and distribute only software-protected keys to Azure Key Vault (Standard). For more information, see [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys) and [Creating key templates](/docs/hs-crypto?topic=hs-crypto-create-template).
 
 ## 09 November 2023
-{: ##hs-crypto-nov2023}
+{: #hs-crypto-nov2023}
 {: release-note}
 
 Added: {{site.data.keyword.hscrypto}} adds support for Bring Your Own HSM (BYOHSM)
-:    BYOHSM extends your local key management capability to the cloud and creates a scalable, unified, and secure hybrid cloud ecosystem for your regulated workloads. By connecting your own HSMs to your {{site.data.keyword.hscrypto}} instance, you have complete physical control over your keys to meet the data sovereignty regulations.
+:   BYOHSM extends your local key management capability to the cloud and creates a scalable, unified, and secure hybrid cloud ecosystem for your regulated workloads. By connecting your own HSMs to your {{site.data.keyword.hscrypto}} instance, you have complete physical control over your keys to meet the data sovereignty regulations.
 
     The following topics can help you get started with the BYOHSM function:
     
@@ -44,7 +46,7 @@ Added: {{site.data.keyword.hscrypto}} adds support for Bring Your Own HSM (BYOHS
     * [Provisioning an instance with BYOHSM](/docs/hs-crypto?topic=hs-crypto-provision&interface=ui#provision-standard)
 
 ## 26 October 2023
-{: ##hs-crypto-26oct2023}
+{: #hs-crypto-26oct2023}
 {: release-note}
 
 Deprecated: {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} in Sydney
@@ -54,14 +56,16 @@ Deprecated: {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} in S
 {: note}
 
 :   Review the following details for this deprecation:
-   - Effective **30 November 2023**, no new instances of {{site.data.keyword.hscrypto}} or Hyper Protect Virtual Servers for Classic can be provisioned in `Sydney`.
-   - Effective **31 March 2024**, {{site.data.keyword.hscrypto}} and {{site.data.keyword.hpvs}} for Classic will no longer be supported, and the services will be decommissioned from the IBM Cloud data center in `Sydney`. It is recommended that all instances and data be migrated to an IBM Cloud VPC data center.
-   - Any Hyper Protect Services instances and data still present in the IBM Cloud data center in `Sydney` will be stopped and terminated on this date. The data center infrastructure will be decommissioned and data and services no longer available. To avoid the risk of data loss, ensure a backup or transfer of any required data is taken before the service is decommissioned on **31 March 2024**. 
+
+    - Effective **30 November 2023**, no new instances of {{site.data.keyword.hscrypto}} or Hyper Protect Virtual Servers for Classic can be provisioned in `Sydney`.
+    - Effective **31 March 2024**, {{site.data.keyword.hscrypto}} and {{site.data.keyword.hpvs}} for Classic will no longer be supported, and the services will be decommissioned from the IBM Cloud data center in `Sydney`. It is recommended that all instances and data be migrated to an IBM Cloud VPC data center.
+    - Any Hyper Protect Services instances and data still present in the IBM Cloud data center in `Sydney` will be stopped and terminated on this date. The data center infrastructure will be decommissioned and data and services no longer available. To avoid the risk of data loss, ensure a backup or transfer of any required data is taken before the service is decommissioned on **31 March 2024**. 
 
 :   For existing customers, migration to an IBM Cloud VPC data center is recommended:
-   - To continue using {{site.data.keyword.hscrypto}}, it is recommended to migrate to an IBM Cloud VPC data center. The recommended region for migration within APAC is `Tokyo`.
-   - For {{site.data.keyword.hpvs}} for Classic instances, it is recommended to migrate to an IBM Cloud VPC data center, as well as deploy the latest version of the service, [{{site.data.keyword.hpvs}} for VPC](https://www.ibm.com/cloud/hyper-protect-virtual-servers){: external} ({{site.data.keyword.hpvs}} for Classic is not available in IBM Cloud VPC data centers). The recommended region for migration within APAC is `Tokyo`.
-   - To migrate to an IBM Cloud VPC Data center, support from IBM Team will be available. Contact your local sales representative or send an email to [zaas.client.acceleration@ibm.com](mailto:zaas.client.acceleration@ibm.com) for more information.
+
+    - To continue using {{site.data.keyword.hscrypto}}, it is recommended to migrate to an IBM Cloud VPC data center. The recommended region for migration within APAC is `Tokyo`.
+    - For {{site.data.keyword.hpvs}} for Classic instances, it is recommended to migrate to an IBM Cloud VPC data center, as well as deploy the latest version of the service, [{{site.data.keyword.hpvs}} for VPC](https://www.ibm.com/cloud/hyper-protect-virtual-servers){: external} ({{site.data.keyword.hpvs}} for Classic is not available in IBM Cloud VPC data centers). The recommended region for migration within APAC is `Tokyo`.
+    - To migrate to an IBM Cloud VPC Data center, support from IBM Team will be available. Contact your local sales representative or send an email to [zaas.client.acceleration@ibm.com](mailto:zaas.client.acceleration@ibm.com) for more information.
 
 :   The following table lists the supported {{site.data.keyword.cloud_notm}} VPC data centers for {{site.data.keyword.hscrypto}} and Hyper Protect Virtual Servers for Classic:
 
@@ -87,8 +91,8 @@ Added: {{site.data.keyword.hscrypto}} expands into the Madrid region
 {: release-note}
 
 Added: Key template support for {{site.data.keyword.uko_full_notm}} 
-:   You are now able to create key templates which specify the properties of the managed keys to be created. After you create the key template, you can then create a group of managed keys with the same key properties that are defined in the key template. 
-    
+:   You are now able to create key templates which specify the properties of the managed keys to be created. After you create the key template, you can then create a group of managed keys with the same key properties that are defined in the key template.
+
     The following topics can help you get started with key templates:
 
     * [Creating key templates](/docs/hs-crypto?topic=hs-crypto-create-template)
@@ -112,9 +116,9 @@ Updated: Pricing plan for {{site.data.keyword.uko_full_notm}}
 {: release-note}
 
 Updated: Master key rotation support for all regions
-:   You are now able to rotate master keys when you are using the Unified Key Orchestrator service plan or your service instance that has EP11 keystores enabled in all supported regions. Previously, it was only available in Frankfurt, Germany. 
+:   You are now able to rotate master keys when you are using the Unified Key Orchestrator service plan or your service instance that has EP11 keystores enabled in all supported regions. Previously, it was only available in Frankfurt, Germany.
 
-    For a list of supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions&interface=ui).  For more information about how master key rotation works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro). 
+    For a list of supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions&interface=ui). For more information about how master key rotation works, see [Master key rotation introduction](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro). 
     
 
 ## 24 March 2023

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-03-22"
+lastupdated: "2024-04-10"
 
 keywords: Unified Key Orchstrator, sync managed key, out of sync
 
@@ -11,8 +11,6 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
-
 
 
 # Syncing keys in keystores with managed keys manually
@@ -86,4 +84,3 @@ To sync a managed key through the API, follow these steps:
 
 - To find out more about managing your keys, check out [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list) or [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
 - To find out more about programmatically managing your keys, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external}.
-

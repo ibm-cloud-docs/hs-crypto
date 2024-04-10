@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-11-08"
+  years: 2022, 2024
+lastupdated: "2024-04-10"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 
@@ -200,7 +200,7 @@ see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic
 | `br-sao`                  | `br-sao`                                        |
 | `ca-tor`                  | `ca-tor`                                        |
 | `eu-de`                   | `eu-de`                                         |
-| `eu-es`                | `eu-es`                                      |
+| `eu-es`                   | `eu-es`                                         |
 | `eu-gb`                   | `eu-gb`                                         |
 | `jp-tok`                  | `jp-tok`                                        |
 | `us-east`                 | `us-east`                                       |

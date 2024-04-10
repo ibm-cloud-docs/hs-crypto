@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-04-09"
 
 keywords: set up api, kms api, key protect api, key management service API, using api
 
@@ -37,6 +37,8 @@ To work with the API, you need to generate your service and authentication crede
 When you make an API call to the service, structure your API request according to how you initially provisioned your instance of {{site.data.keyword.hscrypto}}.
 
 To build your request, pair a [regional service endpoint](/docs/hs-crypto?topic=hs-crypto-regions) with the appropriate authentication credentials. For example, if you created a service instance for the `us-south` region, use the following endpoint and API headers to browse keys in your service:
+
+
 
 ```cURL
 curl -X GET \
