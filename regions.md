@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-04-10"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -95,6 +95,7 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 {: tab-title="Private"}
 {: tab-group="region-endpoint"}
 {: class="comparison-tab-table"}
+
 
 
 For more information about authenticating with {{site.data.keyword.hscrypto}}, see the following topics:
