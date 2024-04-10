@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-11-10"
+  years: 2020, 2024
+lastupdated: "2024-04-10"
 
 keywords: troubleshoot, problems, known issues, can't delete an initialized service instance
 
@@ -11,7 +11,6 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 
 # Why can't I delete an initialized service instance?
@@ -72,6 +71,3 @@ The following instructions can help you solve the problems:
 
   After you zeroize the crypto unit, the administrator signature keys and the master key are cleared from the crypto unit, which means you are not able to access any root keys or standard keys that are protected by the master key. Any resources that are associated with the root keys, such as the [Immutable Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-immutable), cannot be accessed. 
   {: important}
-
-
-

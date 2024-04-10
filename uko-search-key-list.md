@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-03-22"
+lastupdated: "2024-04-10"
 
 keywords: Unified Key Orchestrator, search keys, key management, kms keys
 
@@ -36,9 +36,6 @@ To filter managed keys by using the UI, complete the following steps:
    
    You can set the following filter criteria. 
 
-   
-
-   
    |       Property	     |                         Description                        |
    |----------------------|-----------------------------------------------------------|
    | Vault                | The vault that controls access to the managed key.        |
@@ -52,10 +49,9 @@ To filter managed keys by using the UI, complete the following steps:
    | Minimum key length   | The minimum number of bits that represents the encryption strength of the key.   |
    | Maximum key length   | The maximum number of bits that represents the encryption strength of the key.   |
    | State                | Key states include Pre-active, Active, Deactivated, and Destroyed. |
-   | State flags          | Key state flags include `Out of sync`. \n \n If your key state is different from the key state in its keystores, an **Out of sync** flag is displayed beside the state. There can be multiple reasons why the key state is out of sync. For example, there is an issue in relinking the key in the keystore or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. You can sync the key state by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync key**. For more information, see [Syncing keys in keystores with managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=ui).\n \n |
+   | State flags          | Key state flags include `Out of sync`. \n \n If your key state is different from the key state in its keystores, an **Out of sync** flag is displayed beside the state. There can be multiple reasons why the key state is out of sync. For example, there is an issue in relinking the key in the keystore or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. You can sync the key state by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync key**. For more information, see [Syncing keys in keystores with managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=ui). \n \n |
    | Last rotated         | The time range when the key was last rotated. |
    {: caption="Table 1. Filter managed keys" caption-side="bottom"}
-   
 
 
 ##  Searching for keys with the UI

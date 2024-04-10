@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-03-20"
+lastupdated: "2024-04-10"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, PKCS11, PKCS 11 API, encrypt and decrypt, sign and verify, digital signing
 
@@ -241,8 +241,6 @@ Mechanism `CKM_EC_KEY_PAIR_GEN` is supported when you call the `C_GenerateKeyPai
 |CKM_EC_KEY_PAIR_GEN| [Edwards curves](https://tools.ietf.org/html/rfc8032){: external} | <ul><li>Ed25519</li></ul>|
 |CKM_EC_KEY_PAIR_GEN| [Edwards curves](https://tools.ietf.org/html/rfc8032){: external} | <ul><li>Ed448</li></ul>|
 {: caption="Table 4. Supported curve types for generating EC keys" caption-side="bottom"}
-
-
 
 ### Supported curves for encrypting digital assets and generating digital signatures
 {: #supported-pkcs11-dap-curve-name}
