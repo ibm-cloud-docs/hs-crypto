@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-04-09"
+lastupdated: "2024-04-12"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -183,7 +183,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
     To encrypt and authenticate the keystore that is used by PKCS #11, enable the `sessionauth` parameter and configure the password for the keystore. For each service instance, a maximum of five authenticated keystores are supported. The password can be 6-8 characters. The keystore passwords are not stored in the service instance. You, as the keystore administrator, are responsible for maintaining a local copy of the passwords. If a password is lost, you need to contact IBM Support to reset the keystore, which means all data in the keystore is cleared.
     {: note}
 
-2. Move the configuration file into the same directory as the application (for example, pkcs11-tool) that uses the PKCS #11 library. Optionally, the PKCS #11 configuration file can be placed in the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not exist. Alternatively, you can set the environment variable `EP11CLIENT_CFG` to the full path and the file name of the configuration file. By doing this, you are not restricted to the `grep11client` name of the yaml file. Example: `export EP11CLIENT_CFG=/home/user/pkcs11-config.yaml`
+2. Move the configuration file into the `/etc/ep11client` directory. Create the `/etc/ep11client` directory if it does not exist. Alternatively, you can set the environment variable `EP11CLIENT_CFG` to the full path and the file name of the configuration file. By doing this, you are not restricted to the `grep11client` name of the yaml file. Example: `export EP11CLIENT_CFG=/home/user/pkcs11-config.yaml`
 
 ## Step 4: Use the PKCS #11 library to make PKCS #11 API calls
 {: #step4-use-pkcs-library}
