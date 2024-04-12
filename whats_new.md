@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-04-09"
+lastupdated: "2024-04-12"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -22,7 +22,12 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+## 12 April 2024
+{: #hs-crypto-apr2024}
+{: release-note}
 
+Updated: New API endpoints in Washington DC
+:   If you create your instances in Washington DC after April 12, you need to use the new API endpoints for operations against your new instances. For more information about the supported regions and the new endpoint URLs, see [New endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints).
 
 ## 18 January 2024
 {: #hs-crypto-jan2024}

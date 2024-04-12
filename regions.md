@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-04-12"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -96,7 +96,28 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 {: tab-group="region-endpoint"}
 {: class="comparison-tab-table"}
 
+### New endpoints
+{: #new-service-endpoints}
 
+If you create instances after the corresponding availability date in the following regions, you need to use the listed new API endpoints.
+
+| Region        | Availability date | Public key management service endpoints | Public {{site.data.keyword.uko_full_notm}} service endpoints | Public GREP11 service endpoints |
+| ------------- | ----------- | ---------------------------- |---------------------------- |---------------------------- |
+| Washington DC | April 12, 2024 | `<INSTANCE_ID>.api.us-east.hs-crypto.appdomain.cloud`  | `<INSTANCE_ID>.uko.us-east.hs-crypto.appdomain.cloud`| `<INSTANCE_ID>.ep11.us-east.hs-crypto.appdomain.cloud`  |
+{: caption="Table 3. New public endpoints for supported regions" caption-side="bottom"}
+{: #table-3}
+{: tab-title="Public"}
+{: tab-group="new-region-endpoint"}
+{: class="comparison-tab-table"}
+
+| Region        | Availability date | Public key management service endpoints | Public GREP11 service endpoints |
+| ------------- | ----------- | ---------------------------- |---------------------------- |
+| Washington DC | April 12, 2024 | `<INSTANCE_ID>.api.private.us-east.hs-crypto.appdomain.cloud`  |  `<INSTANCE_ID>.ep11.private.us-east.hs-crypto.appdomain.cloud`  |
+{: caption="Table 4. New private endpoints for supported regions" caption-side="bottom"}
+{: #table-4}
+{: tab-title="Private"}
+{: tab-group="new-region-endpoint"}
+{: class="comparison-tab-table"}
 
 For more information about authenticating with {{site.data.keyword.hscrypto}}, see the following topics:
 
