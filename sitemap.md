@@ -382,6 +382,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
 
+* [12 April 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-apr2024)
+
+    * Updated: New API endpoints in Washington DC
+
 * [18 January 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-jan2024)
 
     * Added: Azure software-protected key support for {{site.data.keyword.cloud_notm}}
