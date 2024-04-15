@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-04-12"
+lastupdated: "2024-04-15"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -14,6 +14,7 @@ content-type: release-note
 
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 # Release notes for {{site.data.keyword.hscrypto}}

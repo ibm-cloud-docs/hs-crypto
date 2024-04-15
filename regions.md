@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-04-12"
+lastupdated: "2024-04-15"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -121,6 +121,7 @@ If you create instances after the corresponding availability date in the followi
 
 For more information about authenticating with {{site.data.keyword.hscrypto}}, see the following topics:
 
+* [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID)
 * [Setting up the key management service API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api)
 * [Managing your keys with the {{site.data.keyword.uko_full_notm}} API](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api)
 * [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api)
