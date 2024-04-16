@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-04-16"
 
 keywords: Unified Key Orchestrator, edit key templates, key management, kms keys, UKO
 
@@ -133,5 +133,5 @@ To edit keystores for existing key templates through the API, complete the follo
 
 - To find out more about realigning keys with the key templates, check out [Realigning keys with key templates](/docs/hs-crypto?topic=hs-crypto-align-key&interface=ui).
 
-- To continue to create keys with the key template created, follow the instruction in [Creating managed keys with a key template](/docs/hs-crypto?topic=hs-crypto-create-managed-keys&interface=ui#create-managed-keys-template-ui&interface=ui).
+- To continue to create keys with the key template created, follow the instruction in [Creating managed keys with a key template](/docs/hs-crypto?topic=hs-crypto-create-managed-keys&interface=ui#create-managed-keys-template-ui).
 
