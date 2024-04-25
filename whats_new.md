@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-04-15"
+lastupdated: "2024-04-25"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -29,6 +29,14 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 Updated: New API endpoints in Washington DC
 :   If you create your instances in Washington DC after April 12, you need to use the new API endpoints for operations against your new instances. For more information about the supported regions and the new endpoint URLs, see [New endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints).
+
+## 29 February 2024
+
+Added: New key state `pending destruction` 
+:   After you move a key from Deactivated to Destroyed state, the key will first be pending on destruction for a time period defined by the destruction policies of the external cloud providers. When the time period ends, the key will be moved to Destroyed state. For any pending destruction keys, a pending flag is displayed in the corresponding key card or the key list. For more information, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states).
+
+Added: Connecting to Azure Key Vault through private endpoint
+:   You can use {{site.data.keyword.uko_full_notm}} to connect to Azure Key Vault through the private endpoint with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API. With establishing a private connection between {{site.data.keyword.uko_full_notm}} and Azure Key Vault, exposing your service to the public internet is no longer necessary. For more information, see [Connecting to Azure Key Vault through private endpoint](/docs/hs-crypto?topic=hs-crypto-connect-azure-key-vault-private-endpoint&interface=ui).
 
 ## 18 January 2024
 {: #hs-crypto-jan2024}

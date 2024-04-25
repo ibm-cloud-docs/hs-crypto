@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-12"
+lastupdated: "2024-04-25"
 
 keywords: site map, doc structure, information architecture
 
@@ -385,6 +385,12 @@ Find what you are looking for in the compilation of topics that are available in
 * [12 April 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-apr2024)
 
     * Updated: New API endpoints in Washington DC
+
+* [29 February 2024](/docs/hs-crypto?topic=hs-crypto-what-new#29-february-2024)
+
+    * Added: New key state `pending destruction` 
+
+    * Added: Connecting to Azure Key Vault through private endpoint
 
 * [18 January 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-jan2024)
 
@@ -1453,6 +1459,20 @@ Find what you are looking for in the compilation of topics that are available in
 * [Disconnecting from external keystores with the API](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores&interface=api#disconnect-external-keystores-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores&interface=api#disconnect-external-keystores-next)
+
+[Connecting to Azure Key Vault through private endpoint](/docs/hs-crypto?topic=hs-crypto-connect-azure-key-vault-private-endpoint#connect-azure-key-vault-private-endpoint)
+
+* [Before you begin](/docs/hs-crypto?topic=hs-crypto-connect-azure-key-vault-private-endpoint&interface=ui#prerequisite)
+
+* [Step 1: Create a private endpoint in Azure portal](/docs/hs-crypto?topic=hs-crypto-connect-azure-key-vault-private-endpoint&interface=ui#step1-create-private-endpoint-ui)
+
+* [Step 2: Create and manage connector endpoint](/docs/hs-crypto?topic=hs-crypto-connect-azure-key-vault-private-endpoint&interface=ui#step2-create-manage-endpoint-ui)
+
+* [Step 3: Connect Azure Key Vault to the UI](/docs/hs-crypto?topic=hs-crypto-connect-azure-key-vault-private-endpoint&interface=ui#step3-connect-azure-key-vault-ui)
+
+* [Connecting to Azure Key Vault with API](/docs/hs-crypto?topic=hs-crypto-connect-azure-key-vault-private-endpoint&interface=api#connect-azure-key-vault-api)
+
+* [What's next](/docs/hs-crypto?topic=hs-crypto-connect-azure-key-vault-private-endpoint&interface=api#connect-azure-key-vault-private-endpoint-next)
 
 
 ## Managing master keys

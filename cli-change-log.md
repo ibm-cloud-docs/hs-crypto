@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-08-09"
+  years: 2021, 2024
+lastupdated: "2024-04-16"
 
 keywords: change log for tke, updates to tke cli plugin, updates to cert manager cli plugin
 
@@ -43,8 +43,18 @@ This is the first release of the certificate manager CLI plug-in. You can use it
 ## {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in
 {: #uko-cli-change-log}
 
-### Updates on version 0.0.1
-{: #uko-cli-001-update}
+### Updates on version 0.0.1 - April 2024
+{: #uko-cli-001-update-2404}
+
+The following updates on the {{site.data.keyword.uko_full_notm}} CLI version 0.0.1 was released in April 2024.
+
+- Remove the parameter `--uko-vault`
+- Add key algorithms `ec`, `des`, and `dilithium`
+- Update all commands examples and responses
+- Add headers for each command
+
+### Updates on version 0.0.1 - June 2023
+{: #uko-cli-001-update-2306}
 
 The following updates on the {{site.data.keyword.uko_full_notm}} CLI version 0.0.1 was released in June 2023.
 
