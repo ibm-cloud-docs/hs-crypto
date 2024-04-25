@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-04-25"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -43,7 +43,7 @@ To edit the details of a managed key by using the UI, complete the following ste
     |----------------------|-------------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key. When you change the name of a managed key, the key is to be renamed in all keystores where it is activated. \n \n **Important:** You cannot edit the key name after the managed key is created with key naming schemes.\n \n Depending on the keystore type, name your key with the following rules:  \n - IBM Cloud KMS: 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n - IBM {{site.data.keyword.keymanagementserviceshort}}: 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n - AWS Key Management Service: 1–250 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (/\_-). However, do not start the name with `AWS/`. \n - Azure Key Vault: 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). \n - Google Cloud KMS: 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (\_-). |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
-    | State            | Key states include Pre-active, Active, Deactivated, and Destroyed. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states).  |
+    | State            | Key states include Pre-active, Active, Deactivated, and Destroyed.  A `pending` flag is displayed beside the state after you move a key from Deactivated to Destroyed state, the key will be pending on destruction for a time period defined by the default destruction policies of the external cloud providers. For Azure Key Vault and Google Cloud KMS keystore, the pending destruction time period can also be customized on the external cloud provider side. You cannot cancel pending destruction using the {{site.data.keyword.uko_full_notm}} UI or API. However, you might still do so through the third-party keystores that the keys are created in. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states).  |
     | Activation date      | Plan a date to activate the key. It is for planning purpose only. |
     | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only.  |
     {: caption="Table 1. Key properties" caption-side="bottom"}
@@ -63,7 +63,7 @@ To edit the details of a managed key by using the UI, complete the following ste
 
         - Sync keys
 
-            If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. An **Out of sync** flag is also displayed in the corresponding keystore card. There can be multiple reasons why the key state is out of sync. For example, there is an issue in relinking the key in the keystore or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. You can sync the key state by clicking **Sync key**. For more information, see [Syncing keys in keystores with managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=ui).
+            If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. An **Out of sync** flag is also displayed in the corresponding keystore card. There can be multiple reasons why the key state is out of sync. For example, there is an issue in relinking the key in the keystore,the key is failed to be destroyed in some of the distributed keystores, or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. You can sync the key state by clicking **Sync key**. For more information, see [Syncing keys in keystores with managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=ui).
 
             During master key rotation, you can activate {{site.data.keyword.cloud_notm}} KMS key in internal keystores. However, it will be shown as **Out of sync**. You can sync the key after the master key rotation is complete. 
             {: note} 

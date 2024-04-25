@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-03-22"
+lastupdated: "2024-04-25"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator, UKO keys
 
@@ -30,9 +30,9 @@ Managed keys in {{site.data.keyword.uko_full_notm}} transition through several s
 The following diagram shows how a managed key passes through states between the generation and the destruction.
 
 
-![Key states and transitions](/images/uko-key-states.svg "Key states and transitions"){: caption="Figure 1. Key states and transitions" caption-side="bottom"}
 
 
+![Key states and transitions](/images/uko-key-lifecycle.svg "Key states and transitions"){: caption="Figure 1. Key states and transitions" caption-side="bottom"}
 
 The following table shows the details of each key state.
 
@@ -44,7 +44,29 @@ The following table shows the details of each key state.
 | Destroyed<sup>2</sup>   |        5        | A Destroyed key is a key record for which the actual key material has been permanently erased. The record of the key is retained to be available for later queries or audits until you manually remove the key from the vault. You cannot restore keys in Destroyed state.|
 {: caption="Table 1. Key states and transitions" caption-side="bottom"}
 
-1: If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. An `Out of sync` flag is also displayed in the corresponding keystore card or the key list. There can be multiple reasons why the key is out of sync. For example, there is an issue in relinking the key in the keystore or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. You can sync the key state by clicking **Sync key** on the Key details page.
+1: If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. An `Out of sync` flag is also displayed in the corresponding keystore card or the key list. There can be multiple reasons why the key is out of sync. For example, there is an issue in relinking the key in the keystore,the key is failed to be destroyed in some of the distributed keystores, or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. You can sync the key state by clicking **Sync key** on the Key details page.
+
+2: After you move a key from Deactivated to Destroyed state, the key will first be pending on destruction for a time period defined by the destruction policies of the external cloud providers. When the time period ends, the key will be moved to Destroyed state. For any pending destruction keys, a `pending` flag is displayed in the corresponding key card or the key list. Refer to the following table for detailed destruction policies of keystores.
+
+| Keystore type       | Key pending destruction policy  |  Pending period customizable on the external cloud provider side? (Yes/No)|  
+|-------------|-----------------|-------------|
+| AWS keystore |        7 days       | No|  
+| Azure Key Vault      |        90 days      | Yes| 
+| Google Cloud KMS keystore|        30 days     | Yes| 
+| {{site.data.keyword.cloud_notm}} KMS keystore |        30 days       | No|
+| {{site.data.keyword.keymanagementserviceshort}} |        30 days      | No| 
+{: caption="Table 2. Key destruction policies" caption-side="bottom"}
+
+For Azure Key Vault and Google Cloud KMS keystore, you can customize the pending destruction time period if you want to on the external cloud provider side. If you apply different customized pending destruction periods to more that one keystore that the key is distributed to, the pending destruction period of the key will also vary based on your settings. For more information about customizing destruction pending policies, see the following topics:
+- [Azure Key Vault soft-delete overview](https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview){: external}.
+- [Destroy and restore key versions in Google Cloud KMS](https://cloud.google.com/kms/docs/destroy-restore){: external}.
+
+You cannot cancel pending destruction using the {{site.data.keyword.uko_full_notm}} UI or API. However, you might still do so through the third-party keystores that the keys are created in. For more instructions, check out the following links:
+- [Deleting a key using {{site.data.keyword.keymanagementserviceshort}} API](/apidocs/key-protect#deletekey){: external}
+- [Deleting a key using {{site.data.keyword.cloud_notm}} KMS API](/apidocs/hs-crypto#deletekey){: external}
+- [Azure Key Vault soft-delete overview](https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview){: external}.
+- [Destroy and restore key versions in Google Cloud KMS](https://cloud.google.com/kms/docs/destroy-restore){: external}
+- [Deleting AWS KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html#deleting-keys-how-it-works){: external}
 
 ## Key states and service actions
 {: #uko-key-states-service-actions}

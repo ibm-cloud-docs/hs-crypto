@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-04-25"
 
 keywords: Unified Key Orchestrator, search keys, key management, kms keys
 
@@ -49,7 +49,7 @@ To filter managed keys by using the UI, complete the following steps:
    | Minimum key length   | The minimum number of bits that represents the encryption strength of the key.   |
    | Maximum key length   | The maximum number of bits that represents the encryption strength of the key.   |
    | State                | Key states include Pre-active, Active, Deactivated, and Destroyed. |
-   | State flags          | Key state flags include `Out of sync`. \n \n If your key state is different from the key state in its keystores, an **Out of sync** flag is displayed beside the state. There can be multiple reasons why the key state is out of sync. For example, there is an issue in relinking the key in the keystore or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. You can sync the key state by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync key**. For more information, see [Syncing keys in keystores with managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=ui). \n \n |
+   | State flags          | Key state flags include `Out of sync` and `pending`. \n \n If your key state is different from the key state in its keystores, an **Out of sync** flag is displayed beside the state. There can be multiple reasons why the key state is out of sync. For example, there is an issue in relinking the key in the keystore, the key is failed to be destroyed in some of the distributed keystores, or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. You can sync the key state by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync key**. For more information, see [Syncing keys in keystores with managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=ui). \n \n  A `pending` flag is displayed beside the state after you move a key from Deactivated to Destroyed state, the key will be pending on destruction in a time period defined by the destruction policies of the external cloud providers. For Azure Key Vault and Google Cloud KMS keystore, the pending destruction time period can also be customized on the external cloud provider side. When you hover over the `pending` flag, you can see the date which it will end the pending state. You cannot cancel pending destruction using the {{site.data.keyword.uko_full_notm}} UI or API. However, you might still do so through the third-party keystores that the keys are created in. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states).|
    | Last rotated         | The time range when the key was last rotated. |
    {: caption="Table 1. Filter managed keys" caption-side="bottom"}
 
