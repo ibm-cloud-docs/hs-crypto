@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-02-08"
+  years: 2020, 2024
+lastupdated: "2024-04-26"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -24,8 +24,7 @@ Read to get answers for questions about {{site.data.keyword.cloud}} {{site.data.
 {: #faq-keys-number}
 {: faq}
 
-A {{site.data.keyword.hscrypto}} service instance can hold a maximum of 5000 keys.
-
+A service instance of {{site.data.keyword.hscrypto}} can hold a maximum of 20,000 KMS keys and 20,000 EP11 keys.
 
 ## How many key rings can be created for a {{site.data.keyword.hscrypto}} service instance?
 {: #faq-keyrings-number}
