@@ -20,11 +20,11 @@ subcollection: hs-crypto
 Read to get answers for questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} Standard Plan.
 {: shortdesc}
 
-## How many keys can be stored in a {{site.data.keyword.hscrypto}} service instance?
+## How many keys can be stored in a Standard Plan instance of {{site.data.keyword.hscrypto}}?
 {: #faq-keys-number}
 {: faq}
 
-A service instance of {{site.data.keyword.hscrypto}} can hold a maximum of 20,000 KMS keys and 20,000 EP11 keys.
+A Standard Plan instance of {{site.data.keyword.hscrypto}} can hold a maximum of 50,000 root keys and standard keys, and 20,000 EP11 keys.
 
 ## How many key rings can be created for a {{site.data.keyword.hscrypto}} service instance?
 {: #faq-keyrings-number}
