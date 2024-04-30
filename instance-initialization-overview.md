@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-07-05"
+  years: 2018, 2024
+lastupdated: "2024-04-26"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -28,7 +28,7 @@ To initialize your service instance, you need to create [signature keys](#x82503
 ## Understanding administrators and signature keys
 {: #understand-crypto-unit-admin}
 
-A crypto unit is composed of an HSM and the corresponding software stack that is dedicated to the HSM. Each crypto unit can manage up to 5000 digital keys. If you're setting up a production environment, it is suggested to assign at least two crypto units for high availability when you create a {{site.data.keyword.hscrypto}} instance. The crypto units are located in different availability zones within the region that you select when you create the service instance. All crypto units in a service instance need to be configured the same. If one availability zone cannot be accessed, the crypto units in a service instance can be used interchangeably. Crypto units contain the master key that encrypts the contents of key storage, including root keys and standard keys in the key management keystore and Enterprise PKCS #11 (EP11) keys in the EP11 keystore.
+A crypto unit is composed of an HSM and the corresponding software stack that is dedicated to the HSM. If you're setting up a production environment, it is suggested to assign at least two crypto units for high availability when you create a {{site.data.keyword.hscrypto}} instance. The crypto units are located in different availability zones within the region that you select when you create the service instance. All crypto units in a service instance need to be configured the same. If one availability zone cannot be accessed, the crypto units in a service instance can be used interchangeably. Crypto units contain the master key that encrypts the contents of key storage, including root keys and standard keys in the key management keystore and Enterprise PKCS #11 (EP11) keys in the EP11 keystore.
 
 To issue commands for crypto units to perform actions, you need to assign administrators to the crypto units. Each administrator has an associated signature key for identity authentication. The following flow chart shows how the signature keys are created and assigned to a service instance with two crypto units.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-04-26"
 
 keywords: site map, doc structure, information architecture
 
@@ -1865,6 +1865,16 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#uko-cli-change-log)
 
+[{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} CLI](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#hpcs-cli-plugin)
+
+* [{{site.data.keyword.hscrypto}} key management CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#kp-cli-plugin)
+
+* [{{site.data.keyword.hscrypto}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin)
+
+* [{{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#cert-manager-cli-plugin)
+
+* [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#uko-cli-plugin)
+
 
 ## Terraform reference
 {: #sitemap_terraform_reference}
@@ -2027,7 +2037,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [FAQs: {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-performance-capacity)
 
-* [How many keys can be stored in a {{site.data.keyword.hscrypto}} service instance?](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-keys-number)
+* [How many keys can be stored in a Standard Plan instance of {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-keys-number)
 
 * [How many key rings can be created for a {{site.data.keyword.hscrypto}} service instance?](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-keyrings-number)
 
@@ -2036,6 +2046,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [Is there a Service Level Agreement (SLA) specifically for {{site.data.keyword.hscrypto}}?](/docs/hs-crypto?topic=hs-crypto-faq-performance-capacity#faq-hpcs-sla)
 
 [FAQs: {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko)
+
+* [How many keys can be stored in a {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-keys-number)
 
 * [What is the difference between key management, key orchestration, and key governance?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-differences)
 

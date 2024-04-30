@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-04-26"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -19,6 +19,12 @@ subcollection: hs-crypto
 
 Read to get answers for questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
 {: shortdesc}
+
+## How many keys can be stored in a {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance?
+{: #faq-keys-number}
+{: faq}
+
+A {{site.data.keyword.uko_full_notm}} instance of {{site.data.keyword.hscrypto}} can hold a maximum of 20,000 KMS keys and 20,000 EP11 keys.
 
 ## What is the difference between key management, key orchestration, and key governance?
 {: #faq-uko-differences}
