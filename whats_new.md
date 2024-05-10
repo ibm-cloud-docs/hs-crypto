@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-04-26"
+lastupdated: "2024-05-10"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -22,6 +22,13 @@ content-type: release-note
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
+
+## 8 May 2024
+{: #hs-crypto-may2024}
+{: release-note}
+
+Updated: New API endpoints in Dallas
+:   If you create your instances in Dallas after May 8, you need to use the new API endpoints for operations against your new instances. For more information about the supported regions and the new endpoint URLs, see [New endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints).
 
 ## 12 April 2024
 {: #hs-crypto-apr2024}
