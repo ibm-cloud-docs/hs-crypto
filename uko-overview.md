@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-01-31"
+lastupdated: "2024-05-10"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -144,4 +144,3 @@ In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} p
 - For more information about the compliance certificates that {{site.data.keyword.hscrypto}} receives, see [Security and compliance](/docs/hs-crypto?topic=hs-crypto-security-and-compliance).
 - To find more about available {{site.data.keyword.cloud_notm}} services for integration, see [Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-integrate-services).
 - To find the differences between {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} and {{site.data.keyword.hscrypto}} Standard Plan , see [How is {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} different from the {{site.data.keyword.hscrypto}} Standard Plan?](/docs/hs-crypto?topic=hs-crypto-faq-uko&interface=ui#faq-uko-hpcs)
-
