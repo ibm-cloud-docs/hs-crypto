@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-26"
+lastupdated: "2024-05-20"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -14,11 +14,16 @@ subcollection: hs-crypto
 
 
 
+
 # Components and concepts - {{site.data.keyword.uko_full_notm}} Plan
 {: #uko-understand-concepts}
 
 Before you can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to manage encryption keys and protect data, learn the basic components and concepts of {{site.data.keyword.hscrypto}}.
-{: shortdesc}
+{: shortdesc} 
+
+
+
+
 
 ## Key management service
 {: #uko-key-management-concepts}
@@ -28,7 +33,7 @@ Learn concepts that are related to the {{site.data.keyword.hscrypto}} [key manag
 ### Root keys
 {: #uko-root-key-concept}
 
-Root keys, also known as customer root keys (CRKs), are primary resources in {{site.data.keyword.hscrypto}}. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other data encryption keys (DEKs) that are stored in a data service. With {{site.data.keyword.hscrypto}}, you can create, store, and manage the lifecycle of root keys. Root keys that are created in {{site.data.keyword.hscrypto}} are symmetric 256-bit AES keys. Unlike a standard key, a root key can never leave the bounds of the {{site.data.keyword.hscrypto}} service. To learn more, see Introduction to envelope encryption and [Manage your keys](/docs/hs-crypto?topic=hs-crypto-get-started#create-key-standard).
+Root keys, also known as customer root keys (CRKs), are primary resources in {{site.data.keyword.hscrypto}}. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other data encryption keys (DEKs) that are stored in a data service. With {{site.data.keyword.hscrypto}}, you can create, store, and manage the lifecycle of root keys. Root keys that are created in {{site.data.keyword.hscrypto}} are symmetric 256-bit AES keys. Unlike a standard key, a root key can never leave the bounds of the {{site.data.keyword.hscrypto}} service. To learn more, see [Manage your keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys).
 
 ### Standard keys
 {: #uko-standard-key-concept}
@@ -39,20 +44,18 @@ Standard keys are another resources in {{site.data.keyword.hscrypto}} to directl
 {: #uko-dek-concept}
 
 Data encryption keys (DEKs) are cryptographic keys that you use for data encryption. They are provided by user-owned applications and are used to encrypt data stored in applications. Root keys that you manage in {{site.data.keyword.hscrypto}} serve as wrapping keys to protect DEKs. 
-
 ### Envelope encryption
 {: #uko-envelope-encryption-concept}
 
 Envelope encryption is the practice of encrypting data with a DEK and then encrypting the DEK with a root key that you can fully manage. 
 
-
-
+ 
 
 
 ## Cloud hardware security module
 {: #uko-cloud-hsm-concepts}
 
-This section covers concepts that are related to {{site.data.keyword.hscrypto}} [Cloud Hardware Security Module (HSM) feature](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-cloud-hsm). The list starts with the most fundamental concepts.
+This section covers concepts that are related to {{site.data.keyword.hscrypto}} [Cloud Hardware Security Module (HSM) feature](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-cloud-hsm). The list starts with the most fundamental concepts.  
 
 ### Hardware security module
 {: #uko-hsm-concept}
@@ -66,14 +69,15 @@ A crypto unit is a single unit that represents an HSM and the corresponding soft
 
 - Operational crypto unit
 
-    When you create a {{site.data.keyword.hscrypto}} instance, the number of crypto units that you specify is the number of operational crypto units. For high availability and disaster recovery, you need to set up at least two operational crypto units. These operational crypto units are located in different [availability zones](https://www.ibm.com/cloud/data-centers/){: external} of the same region where your service instance is located. Operational crypto units are used to manage encryption keys and perform cryptographic operations.
+    When you create a {{site.data.keyword.hscrypto}} instance, the number of crypto units that you specify is the number of operational crypto units. For high availability and disaster recovery, you need to set up at least two operational crypto units. These operational crypto units are located in different [availability zones](https://www.ibm.com/cloud/data-centers/){: external} of the same region where your service instance is located. Operational crypto units are used to manage encryption keys and perform cryptographic operations. Each operational crypto unit can manage up to 5000 digital keys.
 
 - Recovery crypto unit
 
     If you create your service instance in supported regions other than Madrid (`eu-es`), two recovery crypto units are automatically assigned to your service instance without extra costs; one in the same region and one in the disaster recovery region for that region. A recovery crypto unit is used to generate the random master key which is then securely exported to operational crypto units and the other recovery crypto unit to [initialize the service instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit).
 
-    Recovery crypto units can also be used as backup crypto units that save a copy of the master key value used by the operational crypto units. If the master key is lost or destroyed, you can [recover the master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit) using signed TKE administrative commands.
+    Recovery crypto units can also be used as backup crypto units that save a copy of the master key value used by the operational crypto units. If the master key is lost or destroyed, you can [recover the master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-uko-recover-master-key-recovery-crypto-unit) using signed TKE administrative commands.
 
+    
     If smart cards are used to load the master key, the recovery crypto units are not applicable and can be ignored. The backup of the master key relies on the backup of the smart cards in that case.
     {: note}
 
@@ -157,7 +161,7 @@ A driver for the smart card reader must be installed on the workstation before t
 The Smart Card Utility Program is one of the two applications that are installed as part of the Management Utilities. It sets up and manages the smart cards that are used by the Trusted Key Entry (TKE) application.
 
 ### Trusted Key Entry application
-{: #uko-tke-client-concept}
+{: #uko-tke-client-concept} 
 
 The Trusted Key Entry (TKE) application is one of the two applications that are installed as part of the Management Utilities. It uses smart cards to load master keys in service instances and to perform other configuration tasks for service instances.
 
@@ -248,6 +252,7 @@ A managed key is a key that is created in and assigned to a vault. You can use a
 
 A keystore needs to be assigned to a vault. If it is an internal keystore, it can be created only in a vault. 
 
+
 ### Internal keystore
 {: #uko-internal-keystore-concept}
 
@@ -257,4 +262,3 @@ An internal keystore is a keystore that is created in your {{site.data.keyword.h
 {: #uko-external-keystore-concept}
 
 An external keystore is a keystore that is not in your {{site.data.keyword.hscrypto}} instance. You can connect your service instance to another key management instance on {{site.data.keyword.cloud_notm}} such as {{site.data.keyword.hscrypto}}, {{site.data.keyword.keymanagementserviceshort}}, or {{site.data.keyword.keymanagementserviceshort}} on Satellite, potentially in another region. Or, you can connect your service instance to external keystores from other cloud providers such as Microsoft Azure Key Vault, AWS Key Management Service (KMS), and Google Cloud KMS. 
-

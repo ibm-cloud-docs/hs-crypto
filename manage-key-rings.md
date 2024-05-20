@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-03-07"
+lastupdated: "2024-05-20"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-06-27"
+  years: 2022, 2024
+lastupdated: "2024-05-20"
 
 keywords: troubleshoot, problems, known issues, can't destroy managed keys
 
@@ -34,4 +34,5 @@ The managed key was deactivated less than 4 hours ago. A managed key can be dest
 
 Wait until it reaches 4 hours, and then try destroying the managed key again by following the same procedure.
 {: tsResolve}
+
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-05-20"
 
 keywords: troubleshoot, problems, known issues, can't create vaults
 
@@ -12,19 +12,20 @@ subcollection: hs-crypto
 
 {{site.data.keyword.attribute-definition-list}}
 
+
+
 # Why can't I create vaults?
 {: #troubleshoot-create-vault}
 {: troubleshoot}
 {: support}
 
-You are not able to create a vault through either the UI or the {{site.data.keyword.uko_full_notm}} API.
+You are not able to create a vault through either the {{site.data.keyword.hscrypto}} user interface or the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 You might receive an error message similar to one of the following messages when you create a vault:
 {: tsSymptoms}
 
 >  The service was not able to create vault "vault-name" or the vault "vault-name" is not created.
-
 It might be caused by one of the following reasons:
 {: tsCauses}
 

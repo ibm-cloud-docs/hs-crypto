@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-05-20"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -12,6 +12,7 @@ subcollection: hs-crypto
 
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 

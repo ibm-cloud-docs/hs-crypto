@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-05-20"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 
@@ -54,6 +55,7 @@ To edit a vault through the API, follow these steps:
 
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/vaults/<vault_id>
+    
     ```
     {: codeblock}
 

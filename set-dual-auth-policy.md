@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-08-25"
+  years: 2017, 2024
+lastupdated: "2024-05-20"
 
 keywords: set deletion policy, dual authorization, policy-based, key deletion
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 

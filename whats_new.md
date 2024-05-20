@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-17"
+lastupdated: "2024-05-20"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -17,18 +17,12 @@ content-type: release-note
 
 
 
+
 # Release notes for {{site.data.keyword.hscrypto}}
 {: #what-new}
 
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
-
-## 15 May 2024
-{: #hs-crypto-may152024}
-{: release-note}
-
-Updated: New API endpoints in S&atilde;o-Paulo
-:   If you create your instances in S&atilde;o-Paulo after May 15, you need to use the new API endpoints for operations against your new instances. For more information about the supported regions and the new endpoint URLs, see [New endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints).
 
 ## 8 May 2024
 {: #hs-crypto-may2024}

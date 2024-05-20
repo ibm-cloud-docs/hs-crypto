@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-05"
+lastupdated: "2024-05-20"
 
 keywords: key management with satellite, uko satellite, hpcs satellite, kp satellite
 
@@ -16,6 +16,7 @@ completion-time: 2h
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 # Using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} to manage keys in {{site.data.keyword.keymanagementserviceshort}} on Satellite
 {: #tutorial-uko-satellite}

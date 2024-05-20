@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-07-05"
+  years: 2018, 2024
+lastupdated: "2024-05-20"
 
 keywords: encryption at rest, envelope encryption, root key, data encryption key, key encryption key, key protect, protect data encryption key, encrypt data encryption key, wrap data encryption key, unwrap data encryption key
 
@@ -14,10 +14,11 @@ subcollection: hs-crypto
 
 
 
+
 # Protecting your data with envelope encryption - Standard Plan 
 {: #envelope-encryption}
 
-Envelope encryption is the practice of encrypting data with a [data encryption key (DEK)](#x4791827){: term} and then wrapping the DEK with a [root key](#x6946961){: term} that you can fully manage. The root keys in {{site.data.keyword.hscrypto}} service instance are also wrapped and protected by the hardware security module (HSM) [master key](#x2908413){: term}.
+Envelope encryption is the practice of encrypting data with a [data encryption key (DEK)](#x4791827){: term} and then wrapping the DEK with a [root key](#x6946961){: term} that you can fully manage. The root keys in your {{site.data.keyword.hscrypto}} service instance are also wrapped and protected by the hardware security module (HSM) [master key](#x2908413){: term}.
 {: shortdesc}
 
 With envelope encryption, {{site.data.keyword.hscrypto}} protects your at-rest data with advanced encryption and offers the following benefits:

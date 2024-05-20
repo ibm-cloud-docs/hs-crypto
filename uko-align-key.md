@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-05-20"
 
 keywords: Unified Key Orchestrator, align template, key template
 
@@ -14,13 +14,15 @@ subcollection: hs-crypto
 
 
 
+
 # Realigning managed keys with key templates
 {: #align-key}
 
-After a managed key is created with a key template, you can still update the key template on general properties, key lifecycles, and assigned keystores. If it happens, an `Unaligned` flag can be displayed on the key details card for keys that are created with the key template. You can then manually realign your key with the key template with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API. You can either realign active or deactivated keys with the key template.  
+After a managed key is created with a key template, you can still update the key template on general properties, key lifecycles, and assigned keystores. If it happens, an `Unaligned` flag can be displayed on the key details card for keys that are created with the key template. You can then manually realign your key with the key template with the {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API. You can either realign active or deactivated keys with the key template.  
 {: shortdesc}
+
   
-Currently, with the UI, you can only realign assigned keystores with the key template. To realign general properties and key lifecycles, use the {{site.data.keyword.uko_full_notm}} API.  
+Currently, with the {{site.data.keyword.uko_full_notm}} with the UI, you can only realign assigned keystores with the key template. To realign general properties and key lifecycles, use the {{site.data.keyword.uko_full_notm}} API.  
 {: note}
 
 
@@ -38,8 +40,11 @@ To realign managed keys with key templates by using the UI, complete the followi
 
 Your key is now aligned again with the key template in terms of assigned keystores. 
 
+
+ 
 If the key template is archived, you cannot realign the key with key templates.  
 {: note}
+
 
 ## Realigning keys with key templates through the API
 {: #align-key-api}
@@ -53,8 +58,10 @@ To realign keys with key templates through the API, complete the following steps
     
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys/<id>/update_from_template
+    
     ```
     {: codeblock}
+    
 
     Replace `<id>` with the ID of your key.
 
@@ -67,5 +74,7 @@ To realign keys with key templates through the API, complete the following steps
 - To find out instructions on editing a key template, check out [Editing key template details](/docs/hs-crypto?topic=hs-crypto-edit-template&interface=ui).
 
 - To find out more about managing your key template, check out [Viewing a list of key templates](/docs/hs-crypto?topic=hs-crypto-view-key-template&interface=ui).
+
+
 
 

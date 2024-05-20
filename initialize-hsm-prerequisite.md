@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-29"
+lastupdated: "2024-05-20"
 
 keywords: initialize service, key ceremony, hsm, load master key, key ceremony preparation
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 # Before you begin
 {: #initialize-hsm-prerequisite}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-07-05"
+  years: 2021, 2024
+lastupdated: "2024-05-20"
 
 keywords: signing service, manage signature keys, customer-writtn signing service, third-party signing service
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 

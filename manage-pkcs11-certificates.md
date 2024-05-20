@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-03-07"
+lastupdated: "2024-05-20"
 
 keywords: pkcs11 certificate, view ep11 certificate, delete ep11 certificate
 
@@ -12,6 +12,7 @@ subcollection: hs-crypto
 
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 # Managing EP11 certificates with the UI

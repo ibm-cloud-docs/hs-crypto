@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-05-20"
 
 keywords: troubleshoot, problems, known issues, can't delete an initialized service instance
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 # Why can't I delete an initialized service instance?

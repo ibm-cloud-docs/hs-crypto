@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-05-20"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystore, key management, access control
 
@@ -27,13 +27,14 @@ Access control in {{site.data.keyword.uko_full_notm}} is managed in vaults. Vaul
 
 As a _Vault Administrator_, you can create vaults and determine an [access policy type](/docs/account?topic=account-userroles#policytypes) for users, service IDs, and access groups based on your internal access control requirements. 
 
+
 Review [roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to learn how {{site.data.keyword.cloud_notm}} IAM roles map to {{site.data.keyword.hscrypto}} actions.
 {: tip}
 
 ## Step 1. Retrieve the vault ID
 {: #access-vault-retrieve-ID}
 
-Retrieve the unique identifier that is associated with the vault that you want to grant someone access to.
+Retrieve the unique identifier that is associated with the vault that you want to grant someone access to. 
 
 Access the UI to browse the keys that are stored in your service instance by following these steps:
 
@@ -65,7 +66,8 @@ To assign access to a vault for a user from the UI, complete the following steps
 10. After confirmation, click **Add** &gt; **Assign**.
 
 You can also create an access policy through IAM [API](/apidocs/iam-policy-management#create-policy){: external} or [CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create){: external}.
-{: note}
+{: note} 
+
 
 ## What's next
 {: #grant-access-vaults-next}
@@ -75,6 +77,3 @@ You can also create an access policy through IAM [API](/apidocs/iam-policy-manag
 - To find out instructions on editing a vault, check out [Editing vault details](/docs/hs-crypto?topic=hs-crypto-edit-vaults).
 
 - To find out how to delete a vault, check out [Deleting vaults](/docs/hs-crypto?topic=hs-crypto-delete-vaults).
-  
-
-

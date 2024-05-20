@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-05-20"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -15,10 +15,11 @@ subcollection: hs-crypto
 
 
 
+
 # Connecting to external keystores
 {: #connect-external-keystores}
 
-You can use {{site.data.keyword.uko_full_notm}} to connect to external keystores with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can use {{site.data.keyword.uko_full_notm}} to connect to external keystores with the {{site.data.keyword.uko_full_notm}} UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 Before you connect to an external keystore, keep in mind the following considerations:
@@ -107,18 +108,18 @@ To connect to an external keystore by using the UI, complete the following steps
 
    If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
 
-5. Under **Keystore type**, select one of the following types and click **Next**:
-
+5. Under **Keystore type**, select one of the following types and click **Next**: 
     - **AWS keystore**: Create a keystore that can store AWS KMS keys.
     - **Azure Key Vault**: Create a keystore that can store Azure Key Vault keys, both Azure Key Vault (Premium) and Azure Key Vault (Standard) are supported.
     - **Google Cloud KMS keystore**: Create a keystore that can store Google Cloud KMS keys.
     - **{{site.data.keyword.keymanagementserviceshort}}**: Create a keystore that can store {{site.data.keyword.keymanagementserviceshort}} keys.
     - **{{site.data.keyword.cloud_notm}} KMS keystore in another instance**: Create a keystore that can store KMS keys in another {{site.data.keyword.hscrypto}} instance.
 
+    
     You can change the currency that is displayed by selecting your country or location. After you connect to the first external keystore, {{site.data.keyword.uko_full_notm}} base price applies additionally. For more information about pricing, see [the pricing sample](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs-uko).
     {: tip}
 
-6. Under **Keystore properties**, specify the details of based on the keystore type that you want to connect to.
+6. Under **Keystore properties**, specify the details of based on the keystore type that you want to connect to. 
 
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
@@ -185,7 +186,7 @@ To connect to an external keystore by using the UI, complete the following steps
     |-----------------------------|-----------------------------------------------------------|
     | Keystore name               | A unique, human-readable name for easy identification of your keystore, with 1–100 characters in length. The first character must be a letter (case-sensitive) or digit (0–9). The rest can also be symbols (.-_) or spaces. |
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
-    | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your service instance. For more information, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).   |
+    | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your service instance. For more information, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).  |
     | Key ring ID on {{site.data.keyword.cloud_notm}}   | The unique identifier of the key ring in the {{site.data.keyword.hscrypto}} instance Standard Plan that you want to connect to. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). If you are not sure which key ring to connect to, specify `default` to connect to the default key ring. |
     | Key management endpoint  | The service endpoint of your {{site.data.keyword.hscrypto}} instance in the format of `https://api.<region>.hs-crypto.cloud.ibm.com:<port>`. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **Connect** &gt; Key managment endpoint URL**.   |
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
@@ -194,19 +195,24 @@ To connect to an external keystore by using the UI, complete the following steps
     {: caption="Table 5. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} KMS keystore properties" caption-side="bottom"}
     {: tab-title="KMS keystore in another instance"}
     {: tab-group="External keystore properties"}
-    {: class="comparison-tab-table"}
+    {: class="comparison-tab-table"} 
 
+ 
+
+    
     You cannot make further changes to identifying properties that are marked with a Lock icon after the keystore is connected.
     {: note}
 
 7. Optionally, click **Test connection** to test the connection to the external keystore that you configure. When completed, click **Next** to continue.
 
+    
      You can complete the subsequent steps even if the test fails. To adjust the connection settings in case of a connection failure, check and adjust the connection properties. If you connect to an external keystore of type Microsoft Azure Key Vault, after clicking **Test connection**, you will be notified that whether the keystore is Azure Key Vault (Premium) or Azure Key Vault (Standard).
     {: tip}
-    
+
 8. Under **Summary**, view the summary of your Azure Key Vault and the estimated additional cost.
 9. After you confirm the keystore details, click **Connect to keystore**.
 
+ 
 If you connect to an external keystore of type Azure Key Vault, a key named `EKMF-BYOK-KEK-FOR-IMPORT` is automatically created in the Azure Key Vault instance that you connect to. You can view the key from the Azure Key Vault instance UI. Don't delete this key. Otherwise, you will not be able to create and distribute managed keys to the Azure Key Vault instance. For more information, see [Why can't I distribute keys in Azure Key Vault](/docs/hs-crypto?topic=hs-crypto-troubleshoot-import-azure-key).
 {: important}
 
@@ -224,11 +230,13 @@ To connect to an external keystore through the API, follow these steps:
 
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/keystores
+    
     ```
     {: codeblock}
 
-    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-keystore){: external}.
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-keystore){: external}. 
 
+ 
 If you connect to an external keystore of type Azure Key Vault, a key named `EKMF-BYOK-KEK-FOR-IMPORT` is automatically created in the Azure Key Vault instance that you connect to. You can view the key from the Azure Key Vault instance UI. Don't delete this key. Otherwise, you will not be able to create and distribute managed keys to the Azure Key Vault instance. For more information, see [Why can't I distribute keys in Azure Key Vault](/docs/hs-crypto?topic=hs-crypto-troubleshoot-import-azure-key).
 {: important}
 
@@ -244,5 +252,8 @@ If you connect to an external keystore of type Azure Key Vault, a key named `EKM
 
 - To find out how to disconnect from an external keystore, check out [Disconnecting from external keystores](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores).
   
+
+
+
 
 

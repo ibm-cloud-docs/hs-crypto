@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-05-20"
 
 keywords: managed key versions, get key versions, list key versions
 
@@ -14,10 +14,11 @@ subcollection: hs-crypto
 
 
 
+
 # Viewing managed key versions
 {: #uko-view-key-versions}
 
-You can view the key versions that are associated with a rotated managed key by using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
+You can view the key versions that are associated with a rotated managed key by using {{site.data.keyword.uko_full_notm}} with the UI.
 {: shortdesc}
 
 When you rotate a managed key, the service creates a new version of the key material. As a security administrator, you can audit the rotation history of a managed key by viewing the key version history. 
@@ -30,7 +31,7 @@ If you prefer to view your managed key versions by using a graphical interface, 
 
 Complete the following steps to view the key versions:
 
-1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
 3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
 4. Click **Managed keys** from the navigation to view all the available keys.
@@ -38,7 +39,8 @@ Complete the following steps to view the key versions:
 6. Click **Show details** from the options menu to open the key details page.
 7. Click the version number next to the key name to open a list of all the previous key versions. The latest version is always displayed at the top. Click the corresponding key version to view its details. You can also search for a specific key version by entering the version number or the rotation date in the search bar. For example, you can enter `11` to search for version 11, or enter `2014` to search for versions that were rotated in year 2014.
 
-You can no longer edit pervious key versions.
+ 
+You can no longer edit pervious key versions. 
 {: note}
 
 ## Viewing managed key versions with the API
@@ -52,13 +54,14 @@ To view managed key versions through the API, follow these steps:
 2. View managed key versions by making a `GET` call based on the following example:
 
     ```
-    curl --location --request GET 'https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys/<id>/versions' \
+    curl --location --request GET 'https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys/<id>/versions'
+     \
     --header 'Authorization: Bearer <IAM_token>' \
     --header 'Accept: application/json'
     ```
     {: codeblock}
 
-    Replace the variables in the example request according to the following table.
+    Replace the variables in the example request according to the following table. 
 
     | Variable | Description |
     | --- | --- |
@@ -68,7 +71,7 @@ To view managed key versions through the API, follow these steps:
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} IAM access token that you retrieve in step 1. Include the full contents of the `IAM` token, including the Bearer value. |
     {: caption="Table 1. Variables needed to view managed key versions" caption-side="bottom"}
 
-    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#list-managed-key-versions){: external}.
+For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#list-managed-key-versions){: external}.
 
 ## What's next
 {: #uko-view-key-versions-next}

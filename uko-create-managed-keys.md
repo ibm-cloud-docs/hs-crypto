@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-05-20"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 
@@ -135,7 +136,9 @@ When you select the **Create with a key template** option, you are creating a ma
     {: caption="Table 5. {{site.data.keyword.keymanagementserviceshort}} keys properties" caption-side="bottom"}
     {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keys"}
     {: tab-group="Managed key properties with templates"}
-    {: class="comparison-tab-table"} 
+    {: class="comparison-tab-table"}  
+
+
 
 8. View the key properties defined by the selected key template and click **Next** to continue.
 
@@ -158,6 +161,7 @@ You can create a managed key with key properties that are predefined by your adm
     
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/templates
+    
     ```
     {: codeblock}
 
@@ -165,12 +169,13 @@ You can create a managed key with key properties that are predefined by your adm
 
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys
+    
     ```
     {: codeblock}
 
     The managed key is to be activated in all keystores in the keystore group that is defined in the key template.
 
-    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-managed-key){: external}.
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-managed-key){: external}. 
 
 ## Creating managed keys with custom properties in the UI
 {: #create-managed-keys-ui}
@@ -197,18 +202,24 @@ When you select the **Create with custom properties** option, you are creating a
     - **Google Cloud KMS**: Create a key to be used and stored in a Google Cloud KMS keystore.
     - **IBM Cloud KMS**: Create a key to be used and stored in an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keystore.
     - **IBM {{site.data.keyword.keymanagementserviceshort}}**: Create a key to be used and stored in an IBM {{site.data.keyword.keymanagementserviceshort}} key ring. 
+    
    
-   After a keystore type is selected, you can activate the key in keystores of this type only. If you select **IBM Cloud KMS**, the created key is a root key that can be used for [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
+     
+   After a keystore type is selected, you can activate the key in keystores of this type only. If you select **IBM Cloud KMS**, the created key is a root key that can be used for [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) .
    {: note}
 
 7. Under **Keystores**, you can select one or multiple keystores to activate the managed key in. Activating a key in multiple keystores enables redundancy.
 
-    If there are no existing keystores, you can click **Add keystore** to [create internal KMS keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [connect to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores). The corresponding keystore type is selected for you.
+    
+    If there are no existing keystores, you can click **Add keystore** to [create internal KMS keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [connect to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores). The corresponding keystore type is selected for you. 
 
-    You can use the key for encryption or decryption only after it is activated in at least one keystore.
+    
+
+     
+    You can use the key for encryption or decryption only after it is activated in at least one keystore. 
     {: important}
 
-8. Under **Key properties**, specify the following details of the key. Click **Next** to continue when you are done.
+8. Under **Key properties**, specify the following details of the key. Click **Next** to continue when you are done. 
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
@@ -290,12 +301,15 @@ When you select the **Create with custom properties** option, you are creating a
     {: caption="Table 10. {{site.data.keyword.keymanagementserviceshort}} keys properties" caption-side="bottom"}
     {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keys"}
     {: tab-group="Managed key properties without templates"}
-    {: class="comparison-tab-table"}
+    {: class="comparison-tab-table"} 
+
+
 
 9. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.
 
 You have successfully created a managed key. 
 
+ 
 If you are creating internal KMS keys during the master key rotation, internal KMS keys can still be created successfully. However, an **Out of sync** flag is displayed next to the key state. For each of these keys, you can sync keys by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync key** after the master key rotation is completed. 
 {: note}
 
@@ -312,6 +326,7 @@ You can create a managed key from scratch. This option gives you the flexibility
     
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/templates
+    
     ```
     {: codeblock}
 
@@ -319,6 +334,7 @@ You can create a managed key from scratch. This option gives you the flexibility
 
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys
+    
     ```
     {: codeblock}
 

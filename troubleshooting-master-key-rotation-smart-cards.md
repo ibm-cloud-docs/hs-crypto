@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-07-05"
+  years: 2021, 2024
+lastupdated: "2024-05-20"
 
 keywords: failed master key rotation, failed to use smart cards to rotate master keys, failed to use the Management Utilities to rotate master keys, master key rotation failure, troubleshoot master key rotation failure
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 

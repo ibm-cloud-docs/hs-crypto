@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-03-07"
+lastupdated: "2024-05-20"
 
 keywords: bring your own hsm, byohsm, hybrid hpcs, deploy hsm, hybrid KMS, byohsm get started
 
@@ -15,6 +15,7 @@ completion-time: 2h
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 # Managing your keys with BYOHSM in {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} 
 {: #tutorial-byohsm}

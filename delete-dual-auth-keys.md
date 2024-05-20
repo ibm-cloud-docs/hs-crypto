@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-03-07"
+lastupdated: "2024-05-20"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 
