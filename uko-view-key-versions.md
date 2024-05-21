@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-21"
 
 keywords: managed key versions, get key versions, list key versions
 
@@ -55,7 +55,7 @@ To view managed key versions through the API, follow these steps:
 
     ```
     curl --location --request GET 'https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys/<id>/versions'
-     \
+     
     --header 'Authorization: Bearer <IAM_token>' \
     --header 'Accept: application/json'
     ```

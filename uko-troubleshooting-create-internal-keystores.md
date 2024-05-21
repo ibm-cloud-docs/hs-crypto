@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-21"
 
 keywords: troubleshoot, problems, known issues, can't create internal keystores
 
@@ -31,6 +31,7 @@ You receive the following error message when you try to add more internal KMS ke
 - From API:
 
     > The operation on the keystore has failed. 
+    
 For a single service instance, you can create a maximum of 50 internal KMS keystores. You have reached the limits.
 {: tsCauses}
 

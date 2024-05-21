@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-21"
 
 keywords: Unified Key Orchestrator, view key templates, key management, kms keys, UKO
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 
 # Viewing a list of key templates
 {: #view-key-template}
-
+ 
 You can view a list of your key templates in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 

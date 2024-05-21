@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-21"
 
 keywords: troubleshoot, problems, known issues, can't create vaults
 
@@ -26,10 +26,12 @@ You might receive an error message similar to one of the following messages when
 {: tsSymptoms}
 
 >  The service was not able to create vault "vault-name" or the vault "vault-name" is not created.
+
 It might be caused by one of the following reasons:
 {: tsCauses}
 
 * You do not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions.
+
 * The master key rotation is in progress. 
 
 Try the following solutions: 

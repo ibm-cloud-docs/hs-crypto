@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-21"
 
 keywords: security and compliance, ibmcloud security compliance, compliant, data security, data encryption, data delete, common criteria, fips, iso, gdpr
 
@@ -33,7 +33,7 @@ To learn more about security controls across {{site.data.keyword.cloud_notm}}, s
 ### Data encryption
 {: #uko-data-encryption}
 
-{{site.data.keyword.hscrypto}} offers a dedicated [hardware security module (HSM)](#x6704988){: term} to generate key material that you manage and perform [envelope encryption operations. {{site.data.keyword.hscrypto}} also supports the management of your own HSM [master keys](#x2908413){: term}. Built on FIPS 140-2 Level 4-certified HSMs, {{site.data.keyword.hscrypto}} offers the highest security level for cloud-based HSMs and stores cryptographic key material without exposing keys outside of a cryptographic boundary.
+{{site.data.keyword.hscrypto}} offers a dedicated [hardware security module (HSM)](#x6704988){: term} to generate key material that you manage and perform envelope encryption operations. {{site.data.keyword.hscrypto}} also supports the management of your own HSM [master keys](#x2908413){: term}. Built on FIPS 140-2 Level 4-certified HSMs, {{site.data.keyword.hscrypto}} offers the highest security level for cloud-based HSMs and stores cryptographic key material without exposing keys outside of a cryptographic boundary.
 
 Access to the service takes place over HTTPS, and internal {{site.data.keyword.hscrypto}} communication uses the Transport Layer Security (TLS) 1.2  protocol to encrypt data in transit.
 
