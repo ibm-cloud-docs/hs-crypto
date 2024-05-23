@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-05-23"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 
@@ -222,7 +222,7 @@ The list of sensitive field values that are hidden using the `[redacted]` placeh
 * api_key
 
 ### Common fields
-{: #uko-at-common fields}
+{: #uko-at-common-fields}
 
 Some common fields are available for {{site.data.keyword.hscrypto}} to use outside of the CADF event model to provide more insight into your data.
 
