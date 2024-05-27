@@ -68,7 +68,7 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 
 <new-url>{{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. This Endpoint URL scheme change applies to the full set of APIs and all API Endpoints of {{site.data.keyword.hscrypto}} in the following regions listed. 
 
-No impact to existing service instances is expected, as the current port-based endpoint scheme stays intact for the time being. In the UI, the new instance-based endpoints scheme is displayed for easy reference, you can still find the port-based endpoint when you hover over. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.</new-url>
+This change does not impact any existing service instances, as the current port-based endpoint scheme stays intact for the time being. In the UI, the new instance-based endpoints scheme is displayed for easy reference, you can still find the port-based endpoint when you hover over. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.
 
 If you create instances after the corresponding availability date in the following regions, you can use only the listed instance-based API endpoints.
 {: note}</new-url>
