@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-21"
+lastupdated: "2024-05-27"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -63,44 +63,17 @@ Private endpoints
 If you are managing your {{site.data.keyword.hscrypto}} resources programmatically, see the following table to determine the API endpoints to use when you connect to the [key management service API](/apidocs/hs-crypto), {{site.data.keyword.uko_full_notm}}, [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref), and [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
 
-| Region        | Public key management service endpoints | Public {{site.data.keyword.uko_full_notm}} service endpoints |Public GREP11 service endpoints |
-| ------------- | ---------------------------- |---------------------------- |---------------------------- |
-| Dallas        | `api.us-south.hs-crypto.cloud.ibm.com` | `uko.us-south.hs-crypto.cloud.ibm.com`| `ep11.us-south.hs-crypto.cloud.ibm.com` |
-| Frankfurt     | `api.eu-de.hs-crypto.cloud.ibm.com`    | `uko.eu-de.hs-crypto.cloud.ibm.com`| `ep11.eu-de.hs-crypto.cloud.ibm.com`    |
-| London        | `api.eu-gb.hs-crypto.cloud.ibm.com`  | `uko.eu-gb.hs-crypto.cloud.ibm.com`| `ep11.eu-gb.hs-crypto.cloud.ibm.com`  |
-| Madrid        | `api.eu-es.hs-crypto.cloud.ibm.com`  | `uko.eu-es.hs-crypto.cloud.ibm.com`| `ep11.eu-es.hs-crypto.cloud.ibm.com`  |
-| S&atilde;o-Paulo | `api.br-sao.hs-crypto.cloud.ibm.com`   | `uko.br-sao.hs-crypto.cloud.ibm.com` |`ep11.br-sao.hs-crypto.cloud.ibm.com`   |
-|Sydney - [Deprecated]{: tag-deprecated}  | `api.au-syd.hs-crypto.cloud.ibm.com`   | `uko.au-syd.hs-crypto.cloud.ibm.com`| `ep11.au-syd.hs-crypto.cloud.ibm.com`   |
-| Tokyo         | `api.jp-tok.hs-crypto.cloud.ibm.com`   | `uko.jp-tok.hs-crypto.cloud.ibm.com`| `ep11.jp-tok.hs-crypto.cloud.ibm.com`  |
-| Toronto | `api.ca-tor.hs-crypto.cloud.ibm.com`   | `uko.ca-tor.hs-crypto.cloud.ibm.com` |`ep11.ca-tor.hs-crypto.cloud.ibm.com`   |
-| Washington DC | `api.us-east.hs-crypto.cloud.ibm.com`  | `uko.us-east.hs-crypto.cloud.ibm.com`| `ep11.us-east.hs-crypto.cloud.ibm.com`  |
-{: caption="Table 1. Lists public endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's public network" caption-side="bottom"}
-{: #table-1}
-{: tab-title="Public"}
-{: tab-group="region-endpoint"}
-{: class="comparison-tab-table"}
-
-| Region        | Private key management service endpoints       | Private GREP11 service endpoints|
-| ------------- | ------------------------------------ |------------------------------------ |
-| Dallas        | `api.private.us-south.hs-crypto.cloud.ibm.com` | `ep11.private.us-south.hs-crypto.cloud.ibm.com` |
-| Frankfurt     | `api.private.eu-de.hs-crypto.cloud.ibm.com`    |  `ep11.private.eu-de.hs-crypto.cloud.ibm.com`    |
-| London        | `api.private.eu-gb.hs-crypto.cloud.ibm.com`  | `ep11.private.eu-gb.hs-crypto.cloud.ibm.com`  |
-| Madrid        | `api.private.eu-es.hs-crypto.cloud.ibm.com`  | `ep11.private.eu-es.hs-crypto.cloud.ibm.com`  |
-| S&atilde;o-Paulo | `api.private.br-sao.hs-crypto.cloud.ibm.com`  | `ep11.private.br-sao.hs-crypto.cloud.ibm.com`   |
-| Sydney - [Deprecated]{: tag-deprecated}         | `api.private.au-syd.hs-crypto.cloud.ibm.com`   | `ep11.private.au-syd.hs-crypto.cloud.ibm.com`   |
-| Tokyo         | `api.private.jp-tok.hs-crypto.cloud.ibm.com`   | `ep11.private.jp-tok.hs-crypto.cloud.ibm.com`  |
-| Toronto | `api.private.ca-tor.hs-crypto.cloud.ibm.com`   | `ep11.private.ca-tor.hs-crypto.cloud.ibm.com` |
-| Washington DC | `api.private.us-east.hs-crypto.cloud.ibm.com`  | `ep11.private.us-east.hs-crypto.cloud.ibm.com`  |
-{: caption="Table 2. Lists private endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's private network" caption-side="bottom"}
-{: #table-2}
-{: tab-title="Private"}
-{: tab-group="region-endpoint"}
-{: class="comparison-tab-table"}
-
-### New endpoints
+### Instance-based endpoints
 {: #new-service-endpoints}
 
-If you create instances after the corresponding availability date in the following regions, you need to use the listed new API endpoints.
+<new-url>{{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. This Endpoint URL scheme change applies to the full set of APIs and all API Endpoints of {{site.data.keyword.hscrypto}} in the following regions listed. 
+
+No impact to existing service instances is expected, as the current port-based endpoint scheme stays intact for the time being. In the UI, the new instance-based endpoints scheme is displayed for easy reference, you can still find the port-based endpoint when you hover over. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.</new-url>
+
+If you create instances after the corresponding availability date in the following regions, you can use only the listed instance-based API endpoints.
+{: note}</new-url>
+
+<api-url>If you create instances after the corresponding availability date in the following regions, you need to use the listed instance-based API endpoints.</api-url>
 
 | Region        | Availability date | Public key management service endpoints | Public {{site.data.keyword.uko_full_notm}} service endpoints | Public GREP11 service endpoints |
 | ------------- | ----------- | ---------------------------- |---------------------------- |---------------------------- |
@@ -118,10 +91,49 @@ If you create instances after the corresponding availability date in the followi
 | Washington DC | April 12, 2024 | `<INSTANCE_ID>.api.private.us-east.hs-crypto.appdomain.cloud`  |  `<INSTANCE_ID>.ep11.private.us-east.hs-crypto.appdomain.cloud`  |
 | Dallas | May 8, 2024 | `<INSTANCE_ID>.api.private.us-south.hs-crypto.appdomain.cloud`  |  `<INSTANCE_ID>.ep11.private.us-south.hs-crypto.appdomain.cloud`  |
 | S&atilde;o-Paulo | May 15, 2024 | `<INSTANCE_ID>.api.private.br-sao.hs-crypto.appdomain.cloud`  |  `<INSTANCE_ID>.ep11.private.br-sao.hs-crypto.appdomain.cloud` |
-{: caption="Table 4. New private endpoints for supported regions" caption-side="bottom"}
-{: #table-4}
+{: caption="Table 1. New private endpoints for supported regions" caption-side="bottom"}
+{: #table-1}
 {: tab-title="Private"}
 {: tab-group="new-region-endpoint"}
+{: class="comparison-tab-table"}
+
+### Port-based endpoints
+{: #existing-service-endpoints}
+
+<new-url>The port-based endpoint scheme will co-exist with the instance-based endpoint scheme for a while. You can still use it for your existing projects. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.</new-url>
+
+| Region        | Public key management service endpoints | Public {{site.data.keyword.uko_full_notm}} service endpoints |Public GREP11 service endpoints |
+| ------------- | ---------------------------- |---------------------------- |---------------------------- |
+| Dallas        | `api.us-south.hs-crypto.cloud.ibm.com` | `uko.us-south.hs-crypto.cloud.ibm.com`| `ep11.us-south.hs-crypto.cloud.ibm.com` |
+| Frankfurt     | `api.eu-de.hs-crypto.cloud.ibm.com`    | `uko.eu-de.hs-crypto.cloud.ibm.com`| `ep11.eu-de.hs-crypto.cloud.ibm.com`    |
+| London        | `api.eu-gb.hs-crypto.cloud.ibm.com`  | `uko.eu-gb.hs-crypto.cloud.ibm.com`| `ep11.eu-gb.hs-crypto.cloud.ibm.com`  |
+| Madrid        | `api.eu-es.hs-crypto.cloud.ibm.com`  | `uko.eu-es.hs-crypto.cloud.ibm.com`| `ep11.eu-es.hs-crypto.cloud.ibm.com`  |
+| S&atilde;o-Paulo | `api.br-sao.hs-crypto.cloud.ibm.com`   | `uko.br-sao.hs-crypto.cloud.ibm.com` |`ep11.br-sao.hs-crypto.cloud.ibm.com`   |
+|Sydney - [Deprecated]{: tag-deprecated}  | `api.au-syd.hs-crypto.cloud.ibm.com`   | `uko.au-syd.hs-crypto.cloud.ibm.com`| `ep11.au-syd.hs-crypto.cloud.ibm.com`   |
+| Tokyo         | `api.jp-tok.hs-crypto.cloud.ibm.com`   | `uko.jp-tok.hs-crypto.cloud.ibm.com`| `ep11.jp-tok.hs-crypto.cloud.ibm.com`  |
+| Toronto | `api.ca-tor.hs-crypto.cloud.ibm.com`   | `uko.ca-tor.hs-crypto.cloud.ibm.com` |`ep11.ca-tor.hs-crypto.cloud.ibm.com`   |
+| Washington DC | `api.us-east.hs-crypto.cloud.ibm.com`  | `uko.us-east.hs-crypto.cloud.ibm.com`| `ep11.us-east.hs-crypto.cloud.ibm.com`  |
+{: caption="Table 2. Lists public endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's public network" caption-side="bottom"}
+{: #table-2}
+{: tab-title="Public"}
+{: tab-group="region-endpoint"}
+{: class="comparison-tab-table"}
+
+| Region        | Private key management service endpoints       | Private GREP11 service endpoints|
+| ------------- | ------------------------------------ |------------------------------------ |
+| Dallas        | `api.private.us-south.hs-crypto.cloud.ibm.com` | `ep11.private.us-south.hs-crypto.cloud.ibm.com` |
+| Frankfurt     | `api.private.eu-de.hs-crypto.cloud.ibm.com`    |  `ep11.private.eu-de.hs-crypto.cloud.ibm.com`    |
+| London        | `api.private.eu-gb.hs-crypto.cloud.ibm.com`  | `ep11.private.eu-gb.hs-crypto.cloud.ibm.com`  |
+| Madrid        | `api.private.eu-es.hs-crypto.cloud.ibm.com`  | `ep11.private.eu-es.hs-crypto.cloud.ibm.com`  |
+| S&atilde;o-Paulo | `api.private.br-sao.hs-crypto.cloud.ibm.com`  | `ep11.private.br-sao.hs-crypto.cloud.ibm.com`   |
+| Sydney - [Deprecated]{: tag-deprecated}         | `api.private.au-syd.hs-crypto.cloud.ibm.com`   | `ep11.private.au-syd.hs-crypto.cloud.ibm.com`   |
+| Tokyo         | `api.private.jp-tok.hs-crypto.cloud.ibm.com`   | `ep11.private.jp-tok.hs-crypto.cloud.ibm.com`  |
+| Toronto | `api.private.ca-tor.hs-crypto.cloud.ibm.com`   | `ep11.private.ca-tor.hs-crypto.cloud.ibm.com` |
+| Washington DC | `api.private.us-east.hs-crypto.cloud.ibm.com`  | `ep11.private.us-east.hs-crypto.cloud.ibm.com`  |
+{: caption="Table 3. Lists private endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's private network" caption-side="bottom"}
+{: #table-3}
+{: tab-title="Private"}
+{: tab-group="region-endpoint"}
 {: class="comparison-tab-table"}
 
 For more information about authenticating with {{site.data.keyword.hscrypto}}, see the following topics:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-21"
+lastupdated: "2024-05-27"
 
 keywords: site map, doc structure, information architecture
 
@@ -690,6 +690,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [1 June 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-june2024)
+
+    * Added: New API endpoints for existing service instances
 
 * [15 May 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-may152024)
 
@@ -2335,7 +2339,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Analyzing successful events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-at-events-analyze)
 
-    * [Common fields](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-at-common)
+    * [Common fields](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-at-common-fields)
 
     * [Registration events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-registration-events)
 
@@ -2648,7 +2652,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints)
 
-    * [New endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints)
+    * [Instance-based endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints)
+
+    * [Port-based endpoints](/docs/hs-crypto?topic=hs-crypto-regions#existing-service-endpoints)
 
 
 ## {{site.data.keyword.hscrypto}} cloud TKE procedures
