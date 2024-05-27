@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-27"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -18,6 +18,7 @@ subcollection: hs-crypto
 
 # Creating managed keys
 {: #create-managed-keys}
+
 
 You can use {{site.data.keyword.uko_full_notm}} to create a managed key with a key template to have predefined key properties, or you can create a managed key with custom properties to have full customized control.
 {: shortdesc}
