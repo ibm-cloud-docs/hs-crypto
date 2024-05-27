@@ -66,14 +66,9 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 ### Instance-based endpoints
 {: #new-service-endpoints}
 
-<new-url>{{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. This Endpoint URL scheme change applies to the full set of APIs and all API Endpoints of {{site.data.keyword.hscrypto}} in the following regions listed. 
 
-This change does not impact any existing service instances, as the current port-based endpoint scheme stays intact for the time being. In the UI, the new instance-based endpoints scheme is displayed for easy reference, you can still find the port-based endpoint when you hover over. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.
 
-If you create instances after the corresponding availability date in the following regions, you can use only the listed instance-based API endpoints.
-{: note}</new-url>
-
-<api-url>If you create instances after the corresponding availability date in the following regions, you need to use the listed instance-based API endpoints.</api-url>
+If you create instances after the corresponding availability date in the following regions, you need to use the listed instance-based API endpoints.
 
 | Region        | Availability date | Public key management service endpoints | Public {{site.data.keyword.uko_full_notm}} service endpoints | Public GREP11 service endpoints |
 | ------------- | ----------- | ---------------------------- |---------------------------- |---------------------------- |
@@ -100,7 +95,7 @@ If you create instances after the corresponding availability date in the followi
 ### Port-based endpoints
 {: #existing-service-endpoints}
 
-<new-url>The port-based endpoint scheme will co-exist with the instance-based endpoint scheme for a while. You can still use it for your existing projects. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.</new-url>
+
 
 | Region        | Public key management service endpoints | Public {{site.data.keyword.uko_full_notm}} service endpoints |Public GREP11 service endpoints |
 | ------------- | ---------------------------- |---------------------------- |---------------------------- |

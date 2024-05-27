@@ -188,13 +188,11 @@ In the example, update the following variables:
     ```
     {: screen}
 
-	<api-url>If you create your instances after April 12 2024 in certain regions, you might need to use the new API endpoints with the new format as `<INSTANCE_ID>.ep11.<REGION>.hs-crypto.appdomain.cloud`. The availability date varies by region. For more information about the supported regions, the availability dates, and the new endpoint URLs, see [New endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints).
+	If you create your instances after April 12 2024 in certain regions, you might need to use the new API endpoints with the new format as `<INSTANCE_ID>.ep11.<REGION>.hs-crypto.appdomain.cloud`. The availability date varies by region. For more information about the supported regions, the availability dates, and the new endpoint URLs, see [New endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints).
 	{: note}
-	</api-url> 
+	 
 
-    <new-url>{{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. For example, for public grep11 endpoint URLs, the format is changed from `ep11.<REGION>.hs-crypto.cloud.ibm.com:<PORT>` to `<INSTANCE_ID>.ep11.<REGION>.hs-crypto.appdomain.cloud`. For a complete list of the endpoint URL schemes and more information about which regions now support instance-based endpoint URLs, see [Instance-based endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints). Note that, for any new service instances created after the dates specified in the table, only instance-based endpoint URLs can be applied. No impact to existing service instances is expected, as the current port-based endpoint scheme stays intact for the time being. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.
-	{: note}
-	</new-url> 
+     
 
 
 * Replace `<ibm_cloud_apikey>` with the service ID API key that you created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
