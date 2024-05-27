@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-27"
 
 keywords: Unified Key Orchestrator, UKO keystore, disconnect keystore, external keystore, KMS keystore
 
@@ -18,6 +18,7 @@ subcollection: hs-crypto
 
 # Disconnecting from external keystores
 {: #disconnect-external-keystores}
+
 
 You can disconnect from keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), and Google Cloud KMS. After you disconnect from an external keystore, all the managed keys in this keystore are unlinked and resources that are managed are not accessible.
 {: shortdesc}
