@@ -230,7 +230,6 @@ toc:
               - uko-create-template.md 
               - uko-view-template.md
               - uko-edit-template.md
-              - uko-define-naming-scheme.md
               - uko-archive-template.md
               - uko-delete-template.md
           - topicgroup:
@@ -253,8 +252,7 @@ toc:
               - uko-edit-internal-keystores.md
               - uko-edit-external-keystore-connection.md
               - uko-delete-internal-keystores.md
-              - uko-disconnect-external-keystores.md   
-              - uko-connect-azure-key-vault-private.md       
+              - uko-disconnect-external-keystores.md       
       - topicgroup:
           label: Managing master keys
           topics:

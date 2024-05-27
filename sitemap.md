@@ -2804,7 +2804,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [FAQs: {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko)
 
-* [How many keys can be stored in a {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-keys-number)
+* [How many keys can be stored in a {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-keys-number-uko)
 
 * [What is the difference between key management, key orchestration, and key governance?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-differences)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-21"
+lastupdated: "2024-05-27"
 
 keywords: hpcs cli, hyper protect crypto services cli, trusted key entry plug-in, cloud tke, tke plug-in, cli plug-in, tke commands, cloud tke reference, cert manager cli plug-in, key management cli, uko cli, united key orchestrator cli
 
@@ -26,7 +26,7 @@ subcollection: hs-crypto
 {{site.data.keyword.hscrypto}} integrates with the {{site.data.keyword.keymanagementserviceshort}} CLI plug-in so that you can use the {{site.data.keyword.keymanagementserviceshort}} CLI plug-in to manage root keys and standard keys in your {{site.data.keyword.hscrypto}} instances.
 
 - For how to set up the {{site.data.keyword.keymanagementserviceshort}} CLI plug-in for {{site.data.keyword.hscrypto}}, see [Performing key management operations with the CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli).
-- For the complete key management CLI reference, see [{{site.data.keyword.keymanagementserviceshort}} CLI command reference](/docs/key-protect?topic=key-protect-cli-plugin-key-protect-cli-reference).
+- For the complete key management CLI reference, see [{{site.data.keyword.keymanagementserviceshort}} CLI command reference](/docs/key-protect?topic=key-protect-key-protect-cli-reference).
 
 ## {{site.data.keyword.hscrypto}} Trusted Key Entry CLI plug-in
 {: #tke-cli-plugin}
