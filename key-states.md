@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-29"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle
 

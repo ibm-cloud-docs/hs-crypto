@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-29"
 
 keywords: crypto erasure, erase data, enable KYOK, onboard to hyper protect crypto services, hpcs onboarding, internal, key registration, KYOK
 

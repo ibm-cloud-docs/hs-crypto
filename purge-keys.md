@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-29"
 
 keywords: purge key, permanently delete key, remove key, destroy key
 

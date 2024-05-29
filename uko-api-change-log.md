@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-29"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 

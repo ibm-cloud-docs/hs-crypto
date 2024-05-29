@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-27"
+lastupdated: "2024-05-29"
 
 keywords: set up api, kms api, key protect api, key management service API, using api
 

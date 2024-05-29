@@ -2,12 +2,11 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-27"
+lastupdated: "2024-05-29"
 
 keywords: hpcs cli, hyper protect crypto services cli, trusted key entry plug-in, cloud tke, tke plug-in, cli plug-in, tke commands, cloud tke reference, cert manager cli plug-in, key management cli, uko cli, united key orchestrator cli
 
 subcollection: hs-crypto
-
 ---
 
 {{site.data.keyword.attribute-definition-list}}

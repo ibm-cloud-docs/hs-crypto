@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-29"
 
 keywords: disaster recovery, restore, recovery, cross region restore, support ticket, support center
 

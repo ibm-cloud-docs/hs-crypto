@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-29"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 

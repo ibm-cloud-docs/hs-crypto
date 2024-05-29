@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-29"
 
 keywords: pkcs11 certificate, view ep11 certificate, delete ep11 certificate
 

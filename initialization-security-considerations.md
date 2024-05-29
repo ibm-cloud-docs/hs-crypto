@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-29"
 
 keywords: smart card vulnerabilities, security policy, maintain workstation security, maintain smart card readers security
 

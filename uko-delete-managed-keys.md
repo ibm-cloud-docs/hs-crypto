@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-29"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -49,7 +49,7 @@ Follow these steps to complete the process:
 
 4. To destroy a Pre-active or Deactivated key, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Destroyed**.
 
-5. Click **Destroy key** to confirm. 
+5. Click **Destroy key** to confirm. The key will first be pending destruction and then destroyed after the pending period ends.
 
     After the managed key is destroyed, you cannot restore the keys. 
 
