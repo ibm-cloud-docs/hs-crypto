@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-14"
+lastupdated: "2024-05-21"
 
 keywords: Unified Key Orchestrator, view key templates, key management, kms keys, UKO
 
@@ -15,9 +15,10 @@ subcollection: hs-crypto
 
 
 
+
 # Viewing a list of key templates
 {: #view-key-template}
-
+ 
 You can view a list of your key templates in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
@@ -32,8 +33,9 @@ To view a list of your key templates by using the UI, complete the following ste
 2. Click **Key templates** from the navigation to view all the available key templates.
 3. Browse the general characteristics of your key templates in the table. 
    
+    
    To customize how the table is to be presented, click the **Settings icon** ![Settings icon](../icons/settings.svg "Settings") and check the columns to be displayed. You can also view archived key templates by clicking the **Show archived templates** icon ![Show archived templates icon](/images/archive.svg "Show archived templates") on the table. For more information, see [Archiving and unarchiving key templates](/docs/hs-crypto?topic=hs-crypto-archive-template&interface=ui).
-   {: tip}
+   {: tip} 
 
     |       Property	     |                         Description                       |
     |----------------------|-----------------------------------------------------------|
@@ -48,7 +50,8 @@ To view a list of your key templates by using the UI, complete the following ste
     | Keystore type        | The type of keystore that the key template properties are compatible with.   |
     | Creation date        | Set a date range of when the key template was created.             |
     {: caption="Table 1. Key templates table" caption-side="bottom"}
-
+    
+     
     You can search for a specific key template by using the search bar, or filter key templates based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the **Key templates** table. 
     {: tip}
 
@@ -66,6 +69,7 @@ To view a list of key templates through the API, follow these steps:
     
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/templates
+    
     ```
     {: codeblock}
 
@@ -81,5 +85,6 @@ To view a list of key templates through the API, follow these steps:
 - To continue to create keys with the key template created, follow the instruction in [Creating managed keys with a key template](/docs/hs-crypto?topic=hs-crypto-create-managed-keys&interface=ui#create-managed-keys-template).
 
 - To find out instructions on archiving and unarchiving the key template, check out [Archiving and unarchiving key templates](/docs/hs-crypto?topic=hs-crypto-archive-template). 
+
 
 

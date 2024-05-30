@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-04-12"
+lastupdated: "2024-05-30"
 
 keywords: set up api, kms api, key protect api, key management service API, using api
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 
@@ -35,8 +36,11 @@ When you make an API call to the service, structure your API request according t
 
 To build your request, pair a [regional service endpoint](/docs/hs-crypto?topic=hs-crypto-regions) with the appropriate authentication credentials. For example, if you created a service instance for the `us-south` region, use the following endpoint and API headers to browse keys in your service:
 
-If you create your instances after April 12 2024 in certain regions, you might need to use the new API endpoints with the new format as `<INSTANCE_ID>.api.<REGION>.hs-crypto.appdomain.cloud`. The availability date varies by region. For more information about the supported regions, the availability dates, and the new endpoint URLs, see [New endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints).
+If you create your instances after April 12 2024 in certain regions, you might need to use the new API endpoints with the new format as `<INSTANCE_ID>.ep11.<REGION>.hs-crypto.appdomain.cloud`. The availability date varies by region. For more information about the supported regions, the availability dates, and the new endpoint URLs, see [New endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints).
 {: note}
+ 
+
+ 
 
 
 ```cURL

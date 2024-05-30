@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-05-21"
 
 keywords: troubleshoot, problems, known issues, can't create vaults
 
@@ -12,12 +12,14 @@ subcollection: hs-crypto
 
 {{site.data.keyword.attribute-definition-list}}
 
+
+
 # Why can't I create vaults?
 {: #troubleshoot-create-vault}
 {: troubleshoot}
 {: support}
 
-You are not able to create a vault through either the UI or the {{site.data.keyword.uko_full_notm}} API.
+You are not able to create a vault through either the {{site.data.keyword.hscrypto}} user interface or the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 You might receive an error message similar to one of the following messages when you create a vault:
@@ -29,6 +31,7 @@ It might be caused by one of the following reasons:
 {: tsCauses}
 
 * You do not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions.
+
 * The master key rotation is in progress. 
 
 Try the following solutions: 

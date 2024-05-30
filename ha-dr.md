@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-02-08"
+  years: 2018, 2024
+lastupdated: "2024-05-30"
 
 keywords: disaster recovery, high availability, ha, dr, recoverablity, availability, failover
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 

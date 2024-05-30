@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-05-20"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator, UKO keys
 
@@ -28,9 +28,6 @@ subcollection: hs-crypto
 Managed keys in {{site.data.keyword.uko_full_notm}} transition through several states that indicate how long the keys are in existence and whether data is protected.
 
 The following diagram shows how a managed key passes through states between the generation and the destruction.
-
-
-
 
 ![Key states and transitions](/images/uko-key-lifecycle.svg "Key states and transitions"){: caption="Figure 1. Key states and transitions" caption-side="bottom"}
 
@@ -91,7 +88,7 @@ The following table shows how {{site.data.keyword.uko_full_notm}} handles servic
 ## Monitoring for lifecycle changes
 {: #uko-monitor-lifecycle-changes}
 
-After you add a managed key to the service, use the UI or the {{site.data.keyword.uko_full_notm}} API to view your key's transition history and configuration.
+After you add a managed key to the service, use the {{site.data.keyword.cloud_notm}} UI or the {{site.data.keyword.uko_full_notm}} API to view your key's transition history and configuration.
 
 For audit purposes, you can also monitor the activity trail for a managed key by integrating {{site.data.keyword.hscrypto}} with the [{{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started){: external}. After both services are provisioned and running, activity events are generated and automatically collected in an {{site.data.keyword.at_full_notm}} log when you perform actions on keys in {{site.data.keyword.hscrypto}}.
 
@@ -102,15 +99,9 @@ For audit purposes, you can also monitor the activity trail for a managed key by
 - To find out instructions on creating a managed key, check out [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys).
 
 - To find out instructions on editing a managed key, check out [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
-  
+
 - To find out more about managing your key list, check out [Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list) or [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
 
 - To find out instructions on deleting a managed key, check out [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys).
 
- 
 - To find out more about the UKO API, see [{{site.data.keyword.uko_full_notm}} API reference](/apidocs/uko){: external}. 
-
-
-
-
-

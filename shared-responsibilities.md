@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-03-25"
+lastupdated: "2024-05-30"
 
 keywords: shared responsibilities, shared responsibility model, disaster recovery, incident management, operation management
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 

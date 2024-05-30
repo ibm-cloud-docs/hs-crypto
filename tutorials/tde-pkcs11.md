@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-02-08"
+  years: 2020, 2024
+lastupdated: "2024-05-30"
 
 keywords: encrypt Oracle Transparent Database, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -16,6 +16,7 @@ completion-time: 2h
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-03-07"
+lastupdated: "2024-05-30"
 
 keywords: securing connection, disabling public service endpoint
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 # Using service endpoints to privately connect to {{site.data.keyword.hscrypto}}
 {: #secure-connection}

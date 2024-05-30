@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-17"
+lastupdated: "2024-05-30"
 
 keywords: site map, doc structure, information architecture
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 # Site map
@@ -381,6 +382,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [29 May 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-may292024)
+
+    * Updated: New API endpoints in Toronto
 
 * [15 May 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-may152024)
 
@@ -1365,7 +1370,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Editing managed key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys#edit-kms-keys)
 
-* [Editing managed key details with the UI](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys&interface=ui#edit-kms-keys-ui)
+* [Editing managed key details with the  UI](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys&interface=ui#edit-kms-keys-ui)
 
 * [Editing key details with the API](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys&interface=api#edit-kms-keys-api)
 
@@ -2055,7 +2060,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 [FAQs: {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko)
 
-* [How many keys can be stored in a {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-keys-number)
+* [How many keys can be stored in a {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-keys-number-uko)
 
 * [What is the difference between key management, key orchestration, and key governance?](/docs/hs-crypto?topic=hs-crypto-faq-uko#faq-uko-differences)
 

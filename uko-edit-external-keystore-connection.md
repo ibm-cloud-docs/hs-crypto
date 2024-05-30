@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-05-20"
 
 keywords: Unified Key Orchestrator, key management, UKO keystore, edit keystore, external keystore, KMS keystore
 
@@ -15,10 +15,11 @@ subcollection: hs-crypto
 
 
 
+
 # Editing connection to external keystores
 {: #edit-external-keystore-connection}
 
-You can use {{site.data.keyword.uko_full_notm}} to edit connection to external keystores with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can use {{site.data.keyword.uko_full_notm}} to edit connection to external keystores with the {{site.data.keyword.uko_full_notm}} UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 You can edit the connection to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), and Google Cloud KMS.
@@ -27,6 +28,7 @@ You can edit the connection to keystores that are external to your service insta
 {: #edit-external-keystore-connection-ui}
 {: ui}
 
+  
 You can only change the keystore name and connection properties one by one.
 {: tip}
 
@@ -37,8 +39,9 @@ To edit the connection to an external keystore by using the UI, complete the fol
 3. Click the external keystore that you want to edit. The Details side panel is displayed.
 4. Click **Edit** in each property card to update keystore properties.
 
+     
     Because the keystore connection is already established, you cannot make changes to identifying properties that are marked with a Lock icon.
-    {: note}
+    {: note} 
 
     |           Property	        |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
@@ -90,7 +93,7 @@ To edit the connection to an external keystore by using the UI, complete the fol
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | {{site.data.keyword.keymanagementserviceshort}} API endpoint  | Read only. The service endpoint of your {{site.data.keyword.keymanagementserviceshort}} instance in the format of `https://<region>.kms.cloud.ibm.com`. You cannot edit this property after the keystore is connected. For more information, see [Regions and endpoints](/docs/key-protect?topic=key-protect-regions).  |
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  Read only. The endpoint of IAM, which is `https://iam.cloud.ibm.com`. You cannot edit this property after the keystore is connected.   |
-    | Service instance ID on {{site.data.keyword.cloud_notm}}   | Read only. The unique identifier that is assigned to your {{site.data.keyword.keymanagementserviceshort}} service instance. You cannot edit this property after the keystore is connected. For more information, see [Retrieving your instance ID and cloud resource name](/docs/key-protect?topic=key-protect-retrieve-instance-ID).  |
+    | Service instance ID on {{site.data.keyword.cloud_notm}}   | Read only. The unique identifier that is assigned to your {{site.data.keyword.keymanagementserviceshort}} service instance. You cannot edit this property after the keystore is connected. For more information, see [Retrieving your instance ID and cloud resource name](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).  |
     | Service ID API key          | A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys). |
     {: #table-4}
     {: caption="Table 4. IBM {{site.data.keyword.keymanagementserviceshort}} keystore properties" caption-side="bottom"}
@@ -104,16 +107,19 @@ To edit the connection to an external keystore by using the UI, complete the fol
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | {{site.data.keyword.hscrypto}} API endpoint  | Read only. The service endpoint of your {{site.data.keyword.hscrypto}} instance in the format of `https://uko.<region>.hs-crypto.cloud.ibm.com:<port>`. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **Connect** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**. You cannot edit this property after the keystore is connected.  |
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  Read only. The endpoint of IAM, which is `https://iam.cloud.ibm.com`. You cannot edit this property after the keystore is connected.  |
-    | Service instance ID on {{site.data.keyword.cloud_notm}}  | Read only. The unique identifier that is assigned to your service instance. You cannot edit this property after the keystore is connected. For more information, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).  |
+    | Service instance ID on {{site.data.keyword.cloud_notm}}  | Read only. The unique identifier that is assigned to your service instance. You cannot edit this property after the keystore is connected. For more information, see [Retrieving your instance ID](/docs/key-protect?topic=key-protect-retrieve-instance-ID).  |
     | Service ID API key          | A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).  |
     {: #table-5}
     {: caption="Table 5. {{site.data.keyword.cloud_notm}} KMS keystore properties" caption-side="bottom"}
     {: tab-title="{{site.data.keyword.cloud_notm}} KMS keystore in another instance"}
     {: tab-group="External keystore properties"}
-    {: class="comparison-tab-table"}
+    {: class="comparison-tab-table"} 
+
+
 
 5. Click **Save** to save the changes.
 
+ 
 You can search for a specific keystore by using the search bar, or filter keystores based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the **Keystores** table.
 {: tip}
 
@@ -131,6 +137,7 @@ To edit the connection to an external keystore through the API, follow these ste
 
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/keystores/<id>
+    
     ```
     {: codeblock}
 
@@ -146,5 +153,7 @@ To edit the connection to an external keystore through the API, follow these ste
 - To find out how to connect to an external keystore, check out [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
 
 - To find out how to disconnect from an external keystore, check out [Disconnecting from external keystores](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores).
+
+
 
 

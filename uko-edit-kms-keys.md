@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-05-29"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -15,14 +15,15 @@ subcollection: hs-crypto
 
 
 
+
 # Editing managed key details
 {: #edit-kms-keys}
 
-You can edit your managed keys in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can edit your managed keys in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 
-## Editing managed key details with the UI
+## Editing managed key details with the  UI
 {: #edit-kms-keys-ui}
 {: ui}
 
@@ -33,11 +34,12 @@ To edit the details of a managed key by using the UI, complete the following ste
 3. Click the Actions icon  ![Actions icon](../icons/action-menu-icon.svg "Actions")  on the key that you want to edit, and choose **Show details**.
 4. Under **Key properties**, click **Edit** on each card to update the key properties. 
 
-    
+
     1. You can update the general properties and lifecycle properties. Or, you can also view the key material properties, including algorithm, length, and key check value. The following are a few properties that you can edit. Note that you can edit one property card at a time. To edit another property card, save your changes first. 
 
+    
     Because the key is already created, you cannot make changes to key material properties that are marked with a Lock icon.
-    {: note}
+    {: note} 
 
     |       Property	     |                         Description                       |
     |----------------------|-------------------------------------------------------------|
@@ -46,45 +48,48 @@ To edit the details of a managed key by using the UI, complete the following ste
     | State            | Key states include Pre-active, Active, Deactivated, and Destroyed.  A `pending` flag is displayed beside the state after you move a key from Deactivated to Destroyed state, the key will be pending on destruction for a time period defined by the default destruction policies of the external cloud providers. For Azure Key Vault and Google Cloud KMS keystore, the pending destruction time period can also be customized on the external cloud provider side. You cannot cancel pending destruction using the {{site.data.keyword.uko_full_notm}} UI or API. However, you might still do so through the third-party keystores that the keys are created in. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states).  |
     | Activation date      | Plan a date to activate the key. It is for planning purpose only. |
     | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only.  |
-    {: caption="Table 1. Key properties" caption-side="bottom"}
-
+    {: caption="Table 1. Key properties" caption-side="bottom"} 
     
-
     2. In the **Keystores** card, click **Edit** to add or remove the keystores where the key is activated. You can use a key only for encryption and decryption after it is activated in at least one keystore. If the key is created with a key template, an `Unaligned` flag can be displayed if you update the keystore distribution list, which means the key is no longer in sync with the key template.  
-        - Add keystores
+    - Add keystores
+
+        If you want to distribute and activate the key in more keystores, click **Edit** and check the corresponding keystore cards. The Active key state is synced across all keystores.
+
+    - Remove keystores
+
+        If you want to unlink and deactivate the key in some keystores, click **Edit** and clear the checkbox in the corresponding keystore cards. After the removal, the key material remains unless you destroy the key. The key state in the removed keystores becomes Deactivated and cannot be synced with the managed key state in the future. However, you can reactivate the key by distributing the key to these keystores again so that the key state is synced again.
+
+        A managed key is synced across multiple keystores that the key is to be distributed to. You can fully remove a key from a keystore only after the key is destroyed. However, you can deactivate the key or remove the keystores at any time.
+
+    - Sync keys
+
+        If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. An **Out of sync** flag is also displayed in the corresponding keystore card. There can be multiple reasons why the key state is out of sync. For example, there is an issue in relinking the key in the keystore,the key is failed to be destroyed in some of the distributed keystores, or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. When you hover over this flag, you can see the specific reason. You can sync the key state by clicking **Sync key**. For more information, see [Syncing keys in keystores with managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=ui).
+
+
           
-            If you want to distribute and activate the key in more keystores, click **Edit** and check the corresponding keystore cards. The Active key state is synced across all keystores.
-        
-        - Remove keystores
-
-            If you want to unlink and deactivate the key in some keystores, click **Edit** and clear the checkbox in the corresponding keystore cards. After the removal, the key material remains unless you destroy the key. The key state in the removed keystores becomes Deactivated and cannot be synced with the managed key state in the future. However, you can reactivate the key by distributing the key to these keystores again so that the key state is synced again.
-
-            A managed key is synced across multiple keystores that the key is to be distributed to. You can fully remove a key from a keystore only after the key is destroyed. However, you can deactivate the key or remove the keystores at any time.
-
-        - Sync keys
-
-            If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. An **Out of sync** flag is also displayed in the corresponding keystore card. There can be multiple reasons why the key state is out of sync. For example, there is an issue in relinking the key in the keystore,the key is failed to be destroyed in some of the distributed keystores, or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. You can sync the key state by clicking **Sync key**. For more information, see [Syncing keys in keystores with managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=ui).
-
-            During master key rotation, you can activate {{site.data.keyword.cloud_notm}} KMS key in internal keystores. However, it will be shown as **Out of sync**. You can sync the key after the master key rotation is complete. 
-            {: note} 
-            
-        - Create keystores
-        
-            Distributing and activating a key in multiple keystores enables redundancy. If you want to distribute the key in a new keystore, click **Add keystore**. For more instructions, see [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
-
-        - Realign with templates
-
-            For a key that is created with a key template, after you edit the keystore distribution list, an `Unaligned` flag can be displayed on the key details card for keys. If you want to keep these changes, ignore the flag. Otherwise, realign your key with the key template again by selecting **Actions** > **Realign with template**. For more information, see [Realigning keys with key templates](/docs/hs-crypto?topic=hs-crypto-align-key). 
-
-        If you connect to an external keystore of type Azure Key Vault, you can distribute HSM-protected keys only to the Azure Key Vault (Premium).
+        During master key rotation, you can activate {{site.data.keyword.cloud_notm}} KMS key in internal keystores. However, it will be shown as **Out of sync**. You can sync the key after the master key rotation is complete.
         {: note}
 
+    - Create keystores 
+
+        Distributing and activating a key in multiple keystores enables redundancy. If you want to distribute the key in a new keystore, click **Add keystore**. For more instructions, see [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
+
+    - Realign with templates
+
+        For a key that is created with a key template, after you edit the keystore distribution list, an `Unaligned` flag can be displayed on the key details card for keys. If you want to keep these changes, ignore the flag. Otherwise, realign your key with the key template again by selecting **Actions** > **Realign with template**. For more information, see [Realigning keys with key templates](/docs/hs-crypto?topic=hs-crypto-align-key). 
+
+    
+    If you connect to an external keystore of type Azure Key Vault, you can distribute HSM-protected keys only to the Azure Key Vault (Premium).
+    {: note}
+     
 
 
-5. Under **Advanced properties**, click **Edit** to update or add new key tags to the key. Key tags are used as identifications of a key. 
+
+1. Under **Advanced properties**, click **Edit** to update or add new key tags to the key. Key tags are used as identifications of a key. 
+
+1. When you finish making changes, click **Save** to save the changes.
+
   
-6. When you finish making changes, click **Save** to save the changes.
-
 You can search for a specific key by using the search bar, or filter keys based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the **Managed keys** table. For more information, see [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
 {: tip}
 
@@ -96,11 +101,12 @@ You can search for a specific key by using the search bar, or filter keys based 
 To edit key details through the API, follow these steps:
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
-   
+
 2. Update the details of a managed key by making a `PATCH` call to the following endpoint.
 
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys/<id>
+    
     ```
     {: codeblock}
 
@@ -115,11 +121,12 @@ To edit key details through the API, follow these steps:
 To editing keystores for keys by using API, complete the following steps:
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
-   
+
 2. Add a keystore to or remove a keystore from a keystore group by making a `PATCH` call to the following endpoint. The keystore group must match the key template that is associated with the managed key.
 
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/keystores/<id>
+    
     ```
     {: codeblock}
 
@@ -129,6 +136,7 @@ To editing keystores for keys by using API, complete the following steps:
 
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys/<id>/update_from_template
+    
     ```
     {: codeblock}
 
@@ -140,7 +148,7 @@ To editing keystores for keys by using API, complete the following steps:
 {: #edit-kms-keys-next}
 
 - To find out instructions on creating a managed key, check out [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys).
-  
+
 - To find out instructions on deleting a managed key, check out [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys).
 
 - To find out more about managing your key list, check out [Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list) or [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).

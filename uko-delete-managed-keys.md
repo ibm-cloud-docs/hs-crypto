@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-25"
+lastupdated: "2024-05-29"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 
@@ -40,18 +41,21 @@ Follow these steps to complete the process:
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. If the managed key that you want to delete is in Active state, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Deactivated** to deactivate the key first.
 
-   When you change the Active key to Deactivated state, the key is unlinked from all the keystores, and not accessible to all associated resources and their data. Make sure that you open the confirmation tile to check all the associated resources before you continue. However, you can still reactivate the key so that it is accessible to the resources again.
-    {: note}
+    
+   When you change the Active key to Deactivated state, the key and all it versions are unlinked from all the keystores, and not accessible to all associated resources and their data. Make sure that you open the confirmation tile to check all the associated resources before you continue. However, you can still reactivate the key so that it is accessible to the resources again.
+   {: note}
+     
+
 
 4. To destroy a Pre-active or Deactivated key, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Destroyed**.
 
-5. Click **Destroy key** to confirm. The key will be pending destruction and then destroyed after the pending period ends.
+5. Click **Destroy key** to confirm. The key will first be pending destruction and then destroyed after the pending period ends.
 
     After the managed key is destroyed, you cannot restore the keys. 
 
-    For keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically after 90 days after they move to Destroyed state. 
+    For keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically after 90 days after they move to Destroyed state.
 
-        
+
         After you move a key from Deactivated to Destroyed state, the key will first be pending on destruction for a time period defined by the destruction policies of the external cloud providers. You cannot cancel pending destruction using the {{site.data.keyword.uko_full_notm}} UI or API. However, you might still do so through the third-party keystores that the keys are created in. When the time period ends, the key will be moved to Destroyed state. For any pending destruction keys, a `pending` flag is displayed in the corresponding key card or the key list. When you hover over the `pending` flag, you can see the date which it will end the pending state. Refer to the following table for detailed destruction policies of keystores.
 
         | Keystore type       | Key pending destruction policy  |  Pending period customizable on the external cloud provider side? (Yes/No)|  
@@ -61,10 +65,9 @@ Follow these steps to complete the process:
         | Google Cloud KMS keystore|        30 days   | Yes| 
         | {{site.data.keyword.cloud_notm}} KMS keystore |        30 days       | No|
         | {{site.data.keyword.keymanagementserviceshort}} |        30 days      | No|
-        {: caption="Table 1. Key destruction policies" caption-side="bottom"} 
-
-        Note that for keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically after 60 days when they move to Destroyed state. 
-        
+        {: caption="Table 1. Key destruction policies" caption-side="bottom"}  
+	
+    Note that for keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically after 60 days when they move to Destroyed state.
 
 6. To remove the key and the metadata from the vault, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**.
    
@@ -84,6 +87,7 @@ To delete a managed key through the API, follow these steps:
 
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys/<id>
+    
     ```
     {: codeblock}
 
@@ -98,8 +102,9 @@ To delete a managed key through the API, follow these steps:
 
 - To find out instructions on creating a managed key, check out [Creating managed keys](/docs/hs-crypto?topic=hs-crypto-create-managed-keys).
   
-- To find out how to delete an internal keystore, check out [Deleting internal keystores](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores).
+- To find out how to delete an internal keystore, check out [Deleting internal keystores](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores). 
 
 - To find out how to delete a vault, check out [Deleting vaults](/docs/hs-crypto?topic=hs-crypto-delete-vaults).
+
 
 

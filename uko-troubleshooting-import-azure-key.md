@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-05-20"
 
 keywords: import azure key failure, can't import azure key
 
@@ -38,3 +38,4 @@ Create a key from the Azure Key Vault UI based on the following key settings. An
 | Key type  | RSA-HSM |
 | Enabled   | Yes     |
 {: caption="Table 1. Key settings" caption-side="bottom"}
+

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-05-20"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 # Creating key templates
@@ -47,17 +48,17 @@ You can create a key template from scratch with full control by yourself. To cre
 
         For more information about the keystores, see [Components](/docs/hs-crypto?topic=hs-crypto-introduce-uko&interface=ui#Components).
         
-    * (Optional) Decide where your keys to be created with the key template are going to be activated or stored under **Keystores**. Activating a key in multiple keystores enables redundancy. 
+    * (Optional) Decide where your keys to be created with the key template are going to be activated or stored under **Keystores** by setting keystore group. Activating a key in multiple keystores enables redundancy. 
 
         If there are no existing keystores, click **Add keystore** to [create internal KMS keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [connect to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores). 
 
-
+        
         After a keystore type is selected, you can create keys in keystores of this type only.
         {: note}
 
 6. Click **Next** to continue.{: #key-template-properties}
 
-7. Under **Key template properties**, specify the following details of the key template. Click **Next** to continue when you are done.
+7. Under **Key template properties**, specify the following details of the key template. Click **Next** to continue when you are done. 
 
 
     |       Property	      |                         Description                       |
@@ -77,6 +78,7 @@ You can create a key template from scratch with full control by yourself. To cre
     {: tab-group="Key templates from scratch properties"}
     {: class="comparison-tab-table"}
 
+
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
     | Key template name    | A unique, human-readable name for easy identification of your key template. It must be 1–100 characters in length.  |
@@ -94,6 +96,7 @@ You can create a key template from scratch with full control by yourself. To cre
     {: tab-title="Azure Key templates"}
     {: tab-group="Key templates from scratch properties"}
     {: class="comparison-tab-table"}
+
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
@@ -144,7 +147,9 @@ You can create a key template from scratch with full control by yourself. To cre
     {: caption="Table 5. IBM Key Protect Key templates properties" caption-side="bottom"}
     {: tab-title="IBM Key Protect Key templates"}
     {: tab-group="Key templates from scratch properties"}
-    {: class="comparison-tab-table"} 
+    {: class="comparison-tab-table"}   
+
+ 
 
 8. Under **Summary**, view the summary of your key template, and then click **Create key template** to confirm.
 
@@ -162,6 +167,7 @@ To create a key template from scratch through the API, follow these steps:
     
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/templates
+    
     ```
     {: codeblock}
 
@@ -190,7 +196,7 @@ If you want to customize a key template based on an existing template, create a 
     - Keystores
     - Key template properties
 
-    Refer to [Creating key templates from scratch with the UI](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui#create-template-ui) for detailed explanations.  
+    Refer to [Creating key templates from scratch with the UI](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui#create-template-ui) for detailed explanations.
 
 7. Under **Summary**, view the summary of your key template, and then click **Create key template** to confirm.
 
@@ -209,6 +215,7 @@ To make a copy from an existing key template through the API, follow these steps
     
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/templates
+    
     ```
     {: codeblock}
 
@@ -230,13 +237,14 @@ Note that you need to keep in mind of the following considerations:
     - **AWS Key Management Service**: It must be 1–250 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (/_-). However, do not start the name with `AWS/`.
     - **Azure Key Vault**: It must be 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). 
     - **Google Cloud KMS**: It must be 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (_-).
-    - **IBM Cloud KMS**: It must 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces.
-    - **IBM Key Protect**: It must 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. 
+    - **IBM Cloud KMS**: It must be 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces.
+    - **IBM Key Protect**: It must be 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. 
 
 - Enter fixed strings or placeholders for the key naming scheme. Each placeholder must be within 1-20 characters in length. Note that you need to use the angle brackets (<>) to insert placeholders. 
 
 - Enter an opening angle bracket (<) or click the system placeholder tag to insert a system placeholder. Each system placeholder consists of letters (case-sensitive), digits (0-9), or a forward slash (/). The following table lists the system placeholders: 
 
+      
     If the key names contain system placeholders, keys to be created cannot be rotated.
     {: note} 
 
@@ -248,9 +256,9 @@ Note that you need to keep in mind of the following considerations:
     | `yy`                 |                           | A 2-digit format of the year when the key is created.     | 
     | `yyyy`               |                           | A 4-digit format of the year when the key is created.     | 
     | `mm`                 |                           | A 2-digit format of the month when the key is created.     | 
-    {: caption="Table 6. System placeholders for naming scheme" caption-side="bottom"}
+    {: caption="Table 8. System placeholders for naming scheme" caption-side="bottom"}
 
--  Do not use the following reserved placeholders for your key naming scheme. 
+-  Do not use the following reserved placeholders for your key naming scheme.
 
     |       Reserved placeholder	      |    Alternative spelling      |     
     |----------------------|-------------------|
@@ -258,9 +266,10 @@ Note that you need to keep in mind of the following considerations:
     | `hierarchy`         | `h`\n \n `hier`| 
     | `keyType`           | `kt`    | 
     | `institutionId`     | `iid` | 
-    {: caption="Table 7. Reserved placeholders for naming scheme" caption-side="bottom"}
+    {: caption="Table 9. Reserved placeholders for naming scheme" caption-side="bottom"}
 
-    
+ 
+
 
 - You can enter an opening angle bracket (<) to insert a custom placeholder. Each custom placeholder consists of letters (case-sensitive) or digits (0-9). To apply the naming scheme to multiple keys, make sure to use at least one custom placeholder.
 
@@ -279,6 +288,5 @@ Note that you need to keep in mind of the following considerations:
 - To find out instructions on archiving and unarchiving the key template, check out [Archiving and unarchiving key templates](/docs/hs-crypto?topic=hs-crypto-archive-template). 
 
 - To find out instructions on deleting a key template, check out [Deleting key templates](/docs/hs-crypto?topic=hs-crypto-delete-template).
-
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-05-20"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -15,17 +15,18 @@ subcollection: hs-crypto
 
 
 
+
 # Deleting vaults
 {: #delete-vaults}
 
 You can delete your vaults in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
-
+ 
 If you want to delete a vault, you need to delete all managed keys, delete or archive all key templates, and delete or disconnect from all keystores that are managed in the vault first. The Delete function is available for empty vaults only. Make sure to have an empty vault by referring to the following instructions:  
 - To delete managed keys, see [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys&interface=ui).
 - To delete or archive all key templates, see [Deleting key templates](/docs/hs-crypto?topic=hs-crypto-delete-template&interface=ui) and [Archiving and unarchiving key templates](/docs/hs-crypto?topic=hs-crypto-archive-template&interface=ui). 
-- To delete or disconnect from all keystores, see [Deleting internal keystores](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores) and [Disconnecting from external keystores](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores).
+- To delete or disconnect from all keystores, see [Deleting internal keystores](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores) and [Disconnecting from external keystores](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores). 
 {: note}
 
 
@@ -33,6 +34,7 @@ If you want to delete a vault, you need to delete all managed keys, delete or ar
 {: #delete-vaults-ui}
 {: ui}
 
+ 
 By deleting a vault, access groups that are assigned to this vault can no longer access the vault.
 {: important}
 
@@ -43,6 +45,7 @@ To delete a vault by using the UI, complete the following steps:
 3. Click the vault that you want to delete. The Details side panel is displayed.
 4. Make sure that the vault does not contain any key templates, keys, or keystores, and then click **Delete**.
     
+     
     If any archived key templates are assigned to this vault, the archived key templates are also deleted with the vault. 
     {: note}
     
@@ -63,6 +66,7 @@ To delete a vault through the API, follow these steps:
 
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/vaults/<vault_id>
+    
     ```
     {: codeblock}
 

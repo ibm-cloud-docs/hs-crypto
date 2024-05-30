@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-27"
+lastupdated: "2024-05-21"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -15,9 +15,9 @@ subcollection: hs-crypto
 
 
 
+
 # Creating vaults
 {: #create-vaults}
-
 
 You can use {{site.data.keyword.hscrypto}} to create a group of key templates, keys, and keystores for a target group of users that require the same {{site.data.keyword.iamshort}} (IAM) access permissions in a vault. You can create vaults in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
@@ -32,13 +32,13 @@ Before you create a vault for your {{site.data.keyword.hscrypto}} instance, keep
 
 - Vaults can hold key templates, KMS keys, and keystores. EP11 keys and keystores are not supported.
 
-    There is no limit on how many keys can exist within a vault. Vaults don't apply to Enterprise PKCS #11 (EP11) keys and keystores.
+    There is no limit on how many keys can exist within a vault. Vaults don't apply to Enterprise PKCS #11 (EP11) keys and keystores. 
 
 - A key template, a key, or a keystore only can belong to one vault at a time.
 
-    You need to specify a vault to a key template, a managed key, or a keystore upon creation.
+    You need to specify a vault to a key template, a managed key, or a keystore upon creation. 
 
-- During master key rotation, you are not able to create a vault. However, you can create the vault again after the master key rotation process is complete.
+- During master key rotation, you are not able to create a vault. However, you can create the vault again after the master key rotation process is complete. 
 
 For more information about granting access, see [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults).
 
@@ -47,18 +47,17 @@ For more information about granting access, see [Granting access to vaults](/doc
 {: #create-vaults-ui}
 {: ui}
 
-
 To create a vault by using the UI, complete the following steps through the **Vaults** page. Optionally, you can create a vault when you [create a key template](/docs/hs-crypto?topic=hs-crypto-create-template), [create a managed key](/docs/hs-crypto?topic=hs-crypto-create-managed-keys), or [add a keystore](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores).
 
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. Click **Vaults** from the navigation to view all the available vaults.
-3. To create a vault, click **Create vault**.
-4. Enter a name in **Vault name**. Optionally, you can add an extended description to your vault in the **Description** section.
+1. Click **Vaults** from the navigation to view all the available vaults.
+1. To create a vault, click **Create vault**.
+1. Enter a name in **Vault name**. Optionally, you can add an extended description to your vault in the **Description** section.
   
-    The vault name must be of 1 to 100 characters in length. The characters can be letters (case-sensitive), digits (0-9), or symbols (#@!$%\’_-).
+    The vault name must be of 1 to 100 characters in length. The characters can be letters (case-sensitive), digits (0-9), or symbols (#@!$%\’_-). 
   
-5. Click **Create vault** to confirm.
+1. Click **Create vault** to confirm.
 
 You have successfully created a vault. 
 
@@ -73,6 +72,7 @@ To create a vault through the API, follow these steps:
 
     ```
     https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/vaults
+    
     ```
     {: codeblock}
 
@@ -86,4 +86,5 @@ To create a vault through the API, follow these steps:
 - To find out how to delete a vault, check out [Deleting vaults](/docs/hs-crypto?topic=hs-crypto-delete-vaults).
   
 - To find out how to grant access to vaults, see [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults).
+
 
