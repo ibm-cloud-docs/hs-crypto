@@ -75,6 +75,7 @@ If you create instances after the corresponding availability date in the followi
 | Washington DC | April 12, 2024 | `<INSTANCE_ID>.api.us-east.hs-crypto.appdomain.cloud`  | `<INSTANCE_ID>.uko.us-east.hs-crypto.appdomain.cloud`| `<INSTANCE_ID>.ep11.us-east.hs-crypto.appdomain.cloud`  |
 | Dallas | May 8, 2024 | `<INSTANCE_ID>.api.us-south.hs-crypto.appdomain.cloud`  | `<INSTANCE_ID>.uko.us-south.hs-crypto.appdomain.cloud`| `<INSTANCE_ID>.ep11.us-south.hs-crypto.appdomain.cloud`  |
 | S&atilde;o-Paulo | May 15, 2024 | `<INSTANCE_ID>.api.br-sao.hs-crypto.appdomain.cloud`  | `<INSTANCE_ID>.uko.br-sao.hs-crypto.appdomain.cloud`| `<INSTANCE_ID>.ep11.br-sao.hs-crypto.appdomain.cloud`  |
+| Toronto | May 29, 2024 | `<INSTANCE_ID>.api.ca-tor.hs-crypto.appdomain.cloud`  | `<INSTANCE_ID>.uko.ca-tor.hs-crypto.appdomain.cloud`| `<INSTANCE_ID>.ep11.ca-tor.hs-crypto.appdomain.cloud`  |
 {: caption="Table 3. New public endpoints for supported regions" caption-side="bottom"}
 {: #table-3}
 {: tab-title="Public"}
@@ -86,6 +87,7 @@ If you create instances after the corresponding availability date in the followi
 | Washington DC | April 12, 2024 | `<INSTANCE_ID>.api.private.us-east.hs-crypto.appdomain.cloud`  |  `<INSTANCE_ID>.ep11.private.us-east.hs-crypto.appdomain.cloud`  |
 | Dallas | May 8, 2024 | `<INSTANCE_ID>.api.private.us-south.hs-crypto.appdomain.cloud`  |  `<INSTANCE_ID>.ep11.private.us-south.hs-crypto.appdomain.cloud`  |
 | S&atilde;o-Paulo | May 15, 2024 | `<INSTANCE_ID>.api.private.br-sao.hs-crypto.appdomain.cloud`  |  `<INSTANCE_ID>.ep11.private.br-sao.hs-crypto.appdomain.cloud` |
+| Toronto | May 29, 2024 | `<INSTANCE_ID>.api.private.ca-tor.hs-crypto.appdomain.cloud`  |  `<INSTANCE_ID>.ep11.private.ca-tor.hs-crypto.appdomain.cloud` |
 {: caption="Table 1. New private endpoints for supported regions" caption-side="bottom"}
 {: #table-1}
 {: tab-title="Private"}
