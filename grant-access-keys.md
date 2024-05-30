@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: grant access, iam, iam access, assign access, access policy, key access
 

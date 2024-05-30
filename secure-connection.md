@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: securing connection, disabling public service endpoint
 

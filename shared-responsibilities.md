@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: shared responsibilities, shared responsibility model, disaster recovery, incident management, operation management
 

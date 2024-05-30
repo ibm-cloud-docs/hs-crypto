@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: UKO access, UKO account authentication, UKO custom roles, Unified Key Orchestrator
 

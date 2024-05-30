@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 

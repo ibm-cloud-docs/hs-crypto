@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: troubleshoot, problems, known issues, can't delete service, no smart card readers found when you start application
 

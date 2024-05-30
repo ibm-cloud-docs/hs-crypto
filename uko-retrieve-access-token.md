@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: access token, api key, iam token, generate access token, generate iam token, get access token, iam token api, token cli
 

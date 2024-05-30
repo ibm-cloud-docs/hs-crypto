@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 

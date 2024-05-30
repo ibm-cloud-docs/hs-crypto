@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: failed master key rotation, failed to use recovery crypto unit to rotate master keys, tke auto-mk-rotate failure, troubleshoot master key rotation failure
 

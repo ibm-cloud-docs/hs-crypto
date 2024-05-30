@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: enable KYOK, onboard to Hyper Protect Crypto Services, HPCS onboarding, service onboarding, internal registration, key registration, KYOK, kms onboarding
 

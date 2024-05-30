@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore, azure key vault
 

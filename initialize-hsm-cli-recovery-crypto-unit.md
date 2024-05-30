@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: initialize service instance, load master key, key ceremony, recovery crypto unit
 

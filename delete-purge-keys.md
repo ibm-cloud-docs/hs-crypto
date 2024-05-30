@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: delete keys, purge, automatic purge, manual purge, delete, destroy
 

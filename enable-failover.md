@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: failover crypto unit, add failover crypto units, enable failover, enable cross-region recovery
 

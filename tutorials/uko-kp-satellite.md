@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: key management with satellite, uko satellite, hpcs satellite, kp satellite
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: enable kyok, hyper protect crypto service onboarding, internal, kyok, onboard service, crn token
 

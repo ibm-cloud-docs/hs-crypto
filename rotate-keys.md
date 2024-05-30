@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: rotate, rotate key, rotate encryption key, rotate root key, rotate root key manually, key rotation, rotate key api
 

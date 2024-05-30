@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: enable mechanisms, BTC, bitcoin mechanism, BIP32, BIP 0032, Schnorr, enable deterministic wallets, Digital Asset Platforms
 

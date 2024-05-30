@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 

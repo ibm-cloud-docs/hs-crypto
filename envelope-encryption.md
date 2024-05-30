@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: encryption at rest, envelope encryption, root key, data encryption key, key encryption key, key protect, protect data encryption key, encrypt data encryption key, wrap data encryption key, unwrap data encryption key
 

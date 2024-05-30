@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: uko, rotate, rotate master key, rotate encryption key, rotate keys automatically, key rotation, rewrap data
 

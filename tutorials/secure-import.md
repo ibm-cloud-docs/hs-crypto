@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: how to import encryption key, upload encryption key tutorial, Bring Your Own Key, BYOK, secure import, Getting started with transporting encryption key
 

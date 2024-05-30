@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-05-30"
 
 keywords: Unified Key Orchestrator, view key templates, key management, kms keys, UKO
 
@@ -17,6 +17,7 @@ subcollection: hs-crypto
 
 # Archiving and unarchiving key templates
 {: #archive-template}
+
 
 You can archive your key templates if they are not to be used, and unarchive them later if needed. You can perform archive or unarchive a key template in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}

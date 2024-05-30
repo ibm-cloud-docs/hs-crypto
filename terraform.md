@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: terraform, set up terraform, automate set up
 

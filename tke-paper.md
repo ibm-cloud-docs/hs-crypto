@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: trusted key entry plugin, key ceremony, cloud TKE procedure
 

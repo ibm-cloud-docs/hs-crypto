@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: encrypt IBM Db2 databases, database encryption, PKCS11, Db2 native encryption using PKCS11
 

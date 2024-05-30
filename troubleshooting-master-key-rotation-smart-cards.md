@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-05-30"
 
 keywords: failed master key rotation, failed to use smart cards to rotate master keys, failed to use the Management Utilities to rotate master keys, master key rotation failure, troubleshoot master key rotation failure
 
