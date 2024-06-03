@@ -78,6 +78,11 @@
     "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
     "tiles": [
       {
+        "date": "June 2024",
+        "title": "Added: New API endpoints for existing service instances",
+        "description": Hyper Protect Crypto Services is continuously replacing port-based API endpoints with instance-based API endpoints. For example, for public key management endpoint URLs, the format is changed from `api.<region>.hs-crypto.cloud.ibm.com:<port>` to `<instance_id>.api.<region>.hs-crypto.appdomain.cloud`.
+      },
+      {
         "date": "January 2024",
         "title": "Added: Hyper Protect Crypto Services adds support for Azure software-protected key",
         "description": "Besides HSM-protected keys, software-protected keys can now also be created in Azure Key Vault (Premium) keystores of {{site.data.keyword.uko_full_notm}}. However, you can still create and distribute only software-protected keys to Azure Key Vault (Standard). "
