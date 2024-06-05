@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-27"
+lastupdated: "2024-06-04"
 
 keywords: set up api, uko api, Unified Key Orchestrator api, 
 
@@ -44,14 +44,14 @@ When you make an API call to the service, structure your API request according t
 
 To build your request, pair a [regional service endpoint](/docs/hs-crypto?topic=hs-crypto-regions) with the appropriate authentication credentials. For example, if you created a service instance for the `us-south` region, use the following endpoint and API headers to browse keys in your service:
 
-If you create your instances after April 12 2024 in certain regions, you might need to use the new API endpoints with the new format as `<INSTANCE_ID>.ep11.<REGION>.hs-crypto.appdomain.cloud`. The availability date varies by region. For more information about the supported regions, the availability dates, and the new endpoint URLs, see [New endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints).
-{: note}
  
 
+{{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. For example, for public {{site.data.keyword.uko_full_notm}} endpoint URLs, the format is changed from `<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud` to `<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud`. For a complete list of the endpoint URL schemes and more information about which regions now support instance-based endpoint URLs, see [Instance-based endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints). Note that, for any new service instances created after the dates specified in the table, only instance-based endpoint URLs can be applied. No impact to existing service instances is expected, as the current port-based endpoint scheme stays intact for the time being. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.
+{: note}
 
 
 ```cURL 
-curl --location --request GET 'https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys' \
+curl --location --request GET 'https://<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud/api/v4/managed_keys' \
     --header 'Authorization: Bearer <access_token>' \ 
     --header 'Content-Type: application/json' \
     --header 'Accept: application/json' \ 
@@ -59,7 +59,7 @@ curl --location --request GET 'https://uko.<region>.hs-crypto.cloud.ibm.com:<por
 ```
 {: codeblock}
 
-* Replace `<region>` and `<port>` with the region and port number of your API endpoint. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/uko#endpoint-urls){: external}. 
+* Replace `<region>` and `<instance_ID>` with the region and port number of your API endpoint. You can get the `<region>` and `<instance_ID>` in your provisioned service instance UI dashboard through **Overview** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/uko#endpoint-urls){: external}. 
 
     Note that the port range of a {{site.data.keyword.hscrypto}} instance is between `8000` - `19999`.
 

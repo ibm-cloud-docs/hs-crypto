@@ -1,6 +1,6 @@
 {
   "title": "IBM Cloud Hyper Protect Crypto Services docs",
-  "lastupdated": "2023-06-01",
+  "lastupdated": "2024-06-05",
   "introduction": "Find useful information about Hyper Protect Crypto Services.",
   "section_devtools": {
     "api": "/docs?tab=api-docs&category=security&subCategory=hs-crypto",
@@ -80,7 +80,7 @@
       {
         "date": "June 2024",
         "title": "Added: New API endpoints for existing service instances",
-        "description": Hyper Protect Crypto Services is continuously replacing port-based API endpoints with instance-based API endpoints. For example, for public key management endpoint URLs, the format is changed from `api.<region>.hs-crypto.cloud.ibm.com:<port>` to `<instance_id>.api.<region>.hs-crypto.appdomain.cloud`.
+        "description": "Hyper Protect Crypto Services is continuously replacing port-based API endpoints with instance-based API endpoints. For example, for public key management endpoint URLs, the format is changed from `api.<region>.hs-crypto.cloud.ibm.com:<port>` to `<instance_ID>.api.<region>.hs-crypto.appdomain.cloud`."
       },
       {
         "date": "January 2024",

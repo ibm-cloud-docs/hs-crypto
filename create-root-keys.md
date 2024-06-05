@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-06-04"
 
 keywords: root key, create root key, add key, root key api, api key, symmetric key, key material, key management, create key-wrapping key, create crk, create customer key, key-wrapping key
 
@@ -60,8 +60,12 @@ Keys that are created in the service are symmetric 256-bit keys, supported by th
 
 Create a root key by making a `POST` call to the following endpoint.
 
+{{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. For example, for public key management endpoint URLs, the format is changed from `api.<region>.hs-crypto.cloud.ibm.com:<port>` to `<instance_ID>.api.<region>.hs-crypto.appdomain.cloud`. For a complete list of the endpoint URL schemes and more information about which regions now support instance-based endpoint URLs, see [Instance-based endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints). Note that, for any new service instances created after the dates specified in the table, only instance-based endpoint URLs can be applied. No impact to existing service instances is expected, as the current port-based endpoint scheme stays intact for the time being. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.
+{: note}
+ 
+
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
+https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys
 ```
 {: codeblock}
 
@@ -71,7 +75,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
     ```sh
     curl -X POST \
-      "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys" \
+      "https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys" \
       -H "authorization: Bearer <IAM_token>" \
       -H "bluemix-instance: <instance_ID>" \
       -H "content-type: application/vnd.ibm.kms.key+json" \
@@ -172,7 +176,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys
 
     ```cURL
     curl -X GET \
-      https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys \
+      https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys \
       -H 'accept: application/vnd.ibm.collection+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \

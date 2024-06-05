@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-06-04"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -77,8 +77,12 @@ Create a key ring with the UI by completing the following steps:
 
 Create a key ring by making a `POST` call to the following endpoint.
 
+{{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. For example, for public key management endpoint URLs, the format is changed from `api.<region>.hs-crypto.cloud.ibm.com:<port>` to `<instance_ID>.api.<region>.hs-crypto.appdomain.cloud`. For a complete list of the endpoint URL schemes and more information about which regions now support instance-based endpoint URLs, see [Instance-based endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints). Note that, for any new service instances created after the dates specified in the table, only instance-based endpoint URLs can be applied. No impact to existing service instances is expected, as the current port-based endpoint scheme stays intact for the time being. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.
+{: note}
+ 
+
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
+https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/key_rings
 ```
 {: codeblock}
 
@@ -87,7 +91,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
 
     ```sh
     $ curl -X POST \
-        "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings/<key_ring_id>" \
+        "https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/key_rings/<key_ring_id>" \
         -H "authorization: Bearer <IAM_token>" \
         -H "bluemix-instance: <instance_ID>" \
         -H "correlation-id: <correlation_ID>"
@@ -139,7 +143,7 @@ You can transfer a key to a different key ring with the UI by completing the fol
 Transfer a key to a different key ring by making a `PATCH` call to the following endpoint.
 
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
+https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID>
 ```
 {: codeblock}
 
@@ -152,7 +156,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
 
     ```sh
     $ curl -X PATCH \
-      "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>" \
+      "https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID>" \
       -H 'accept: application/vnd.ibm.kms.key+json' \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
@@ -285,7 +289,7 @@ The key rings table contains the following information:
 You can browse the key rings by making a GET call to the following endpoint.
 
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
+https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/key_rings
 ```
 {: codeblock}
 
@@ -294,7 +298,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings
 
     ```sh
     $ curl -X GET \
-        "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings" \
+        "https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/key_rings" \
         -H "accept: application/vnd.ibm.kms.key_ring+json" \
         -H "authorization: Bearer <IAM_token>" \
         -H "bluemix-instance: <instance_ID>" \
@@ -363,7 +367,7 @@ To delete a key ring with the UI, complete the following steps:
 You can delete a key ring by making a `DELETE` call to the following endpoint.
 
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings/<key_ring_id>
+https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/key_rings/<key_ring_id>
 ```
 
 1. [Retrieve your authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
@@ -375,7 +379,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings/<key_ring_i
 
     ```sh
     $ curl -X DELETE \
-        "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/key_rings/<key_ring_id>" \
+        "https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/key_rings/<key_ring_id>" \
         -H "authorization: Bearer <IAM_token>" \
         -H "bluemix-instance: <instance_ID>" \
         -H "prefer: <return_preference>"

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-06-04"
 
 keywords: view resoure, root key encryption resources, protected resource, protected service, envelope encryption, key registration, view registration, list registrations
 
@@ -160,8 +160,12 @@ The following table describes the properties of a registration.
 
 You can retrieve the registration details that are associated with a specific root key by making a `GET` call to the following endpoint.
 
+{{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. For example, for public key management endpoint URLs, the format is changed from `api.<region>.hs-crypto.cloud.ibm.com:<port>` to `<instance_ID>.api.<region>.hs-crypto.appdomain.cloud`. For a complete list of the endpoint URL schemes and more information about which regions now support instance-based endpoint URLs, see [Instance-based endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints). Note that, for any new service instances created after the dates specified in the table, only instance-based endpoint URLs can be applied. No impact to existing service instances is expected, as the current port-based endpoint scheme stays intact for the time being. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.
+{: note}
+ 
+
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/registrations
+https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID>/registrations
 ```
 {: codeblock}
 
@@ -171,7 +175,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/registr
 
     ```cURL
     curl -X GET \
-    https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/registrations \
+    https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID>/registrations \
     -H 'authorization: Bearer <IAM_token>' \
     -H 'bluemix-instance: <instance_ID>'
     ```
@@ -240,7 +244,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/registr
 You can also retrieve a list of registrations that are associated with any cloud resource by making a `GET` call to the following endpoint.
 
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/registrations?urlEncodedResourceCRNQuery=<url_encoded_CRN_query>
+https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/registrations?urlEncodedResourceCRNQuery=<url_encoded_CRN_query>
 ```
 {: codeblock}
 
@@ -250,7 +254,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/registrations?ur
 
     ```cURL
     curl -X GET \
-    https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/registrations?urlEncodedResourceCRNQuery=<url_encoded_CRN_query> \
+    https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/registrations?urlEncodedResourceCRNQuery=<url_encoded_CRN_query> \
     -H 'authorization: Bearer <IAM_token>' \
     -H 'bluemix-instance: <instance_ID>'
     ```

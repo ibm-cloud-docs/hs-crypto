@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-06-04"
 
 keywords: import azure key failure, can't import azure key
 
@@ -31,6 +31,7 @@ You might have accidentally deleted a key named `EKMF-BYOK-KEK-FOR-IMPORT` in th
 Create a key from the Azure Key Vault UI based on the following key settings. And then, activate and distribute keys that you create from the {{site.data.keyword.hscrypto}} UI to keystores again. For detailed instructions, see [Editing key details with the UI](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
 {: tsResolve}
 
+
 | Parameter | Value |
 | --------- | ----- |
 | Options   | Generate Key Encryption Key for Importing HSM-protected Keys |
@@ -38,4 +39,5 @@ Create a key from the Azure Key Vault UI based on the following key settings. An
 | Key type  | RSA-HSM |
 | Enabled   | Yes     |
 {: caption="Table 1. Key settings" caption-side="bottom"}
+
 

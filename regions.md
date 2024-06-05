@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-06-04"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -66,16 +66,22 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 ### Instance-based endpoints
 {: #new-service-endpoints}
 
+{{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. This Endpoint URL scheme change applies to the full set of APIs and all API Endpoints of {{site.data.keyword.hscrypto}} in the following regions listed. 
+
+This change does not impact any existing service instances, as the current port-based endpoint scheme stays intact for the time being. In the UI, the new instance-based endpoints scheme is displayed for easy reference, you can still find the port-based endpoint when you hover over. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.
+
+If you create instances after the corresponding availability date in the following regions, you can use only the listed instance-based API endpoints.
+{: note}
 
 
-If you create instances after the corresponding availability date in the following regions, you need to use the listed instance-based API endpoints.
+
 
 | Region        | Availability date | Public key management service endpoints | Public {{site.data.keyword.uko_full_notm}} service endpoints | Public GREP11 service endpoints |
 | ------------- | ----------- | ---------------------------- |---------------------------- |---------------------------- |
-| Washington DC | April 12, 2024 | `<INSTANCE_ID>.api.us-east.hs-crypto.appdomain.cloud`  | `<INSTANCE_ID>.uko.us-east.hs-crypto.appdomain.cloud`| `<INSTANCE_ID>.ep11.us-east.hs-crypto.appdomain.cloud`  |
-| Dallas | May 8, 2024 | `<INSTANCE_ID>.api.us-south.hs-crypto.appdomain.cloud`  | `<INSTANCE_ID>.uko.us-south.hs-crypto.appdomain.cloud`| `<INSTANCE_ID>.ep11.us-south.hs-crypto.appdomain.cloud`  |
-| S&atilde;o-Paulo | May 15, 2024 | `<INSTANCE_ID>.api.br-sao.hs-crypto.appdomain.cloud`  | `<INSTANCE_ID>.uko.br-sao.hs-crypto.appdomain.cloud`| `<INSTANCE_ID>.ep11.br-sao.hs-crypto.appdomain.cloud`  |
-| Toronto | May 29, 2024 | `<INSTANCE_ID>.api.ca-tor.hs-crypto.appdomain.cloud`  | `<INSTANCE_ID>.uko.ca-tor.hs-crypto.appdomain.cloud`| `<INSTANCE_ID>.ep11.ca-tor.hs-crypto.appdomain.cloud`  |
+| Washington DC | April 12, 2024 | `<instance_ID>.api.us-east.hs-crypto.appdomain.cloud`  | `<instance_ID>.uko.us-east.hs-crypto.appdomain.cloud`| `<instance_ID>.ep11.us-east.hs-crypto.appdomain.cloud`  |
+| Dallas | May 8, 2024 | `<instance_ID>.api.us-south.hs-crypto.appdomain.cloud`  | `<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud`| `<instance_ID>.ep11.us-south.hs-crypto.appdomain.cloud`  |
+| S&atilde;o-Paulo | May 15, 2024 | `<instance_ID>.api.br-sao.hs-crypto.appdomain.cloud`  | `<instance_ID>.uko.br-sao.hs-crypto.appdomain.cloud`| `<instance_ID>.ep11.br-sao.hs-crypto.appdomain.cloud`  |
+| Toronto | May 29, 2024 | `<instance_ID>.api.ca-tor.hs-crypto.appdomain.cloud`  | `<instance_ID>.uko.ca-tor.hs-crypto.appdomain.cloud`| `<instance_ID>.ep11.ca-tor.hs-crypto.appdomain.cloud`  |
 {: caption="Table 3. New public endpoints for supported regions" caption-side="bottom"}
 {: #table-3}
 {: tab-title="Public"}
@@ -84,10 +90,10 @@ If you create instances after the corresponding availability date in the followi
 
 | Region        | Availability date | Private key management service endpoints | Private GREP11 service endpoints |
 | ------------- | ----------- | ---------------------------- |---------------------------- |
-| Washington DC | April 12, 2024 | `<INSTANCE_ID>.api.private.us-east.hs-crypto.appdomain.cloud`  |  `<INSTANCE_ID>.ep11.private.us-east.hs-crypto.appdomain.cloud`  |
-| Dallas | May 8, 2024 | `<INSTANCE_ID>.api.private.us-south.hs-crypto.appdomain.cloud`  |  `<INSTANCE_ID>.ep11.private.us-south.hs-crypto.appdomain.cloud`  |
-| S&atilde;o-Paulo | May 15, 2024 | `<INSTANCE_ID>.api.private.br-sao.hs-crypto.appdomain.cloud`  |  `<INSTANCE_ID>.ep11.private.br-sao.hs-crypto.appdomain.cloud` |
-| Toronto | May 29, 2024 | `<INSTANCE_ID>.api.private.ca-tor.hs-crypto.appdomain.cloud`  |  `<INSTANCE_ID>.ep11.private.ca-tor.hs-crypto.appdomain.cloud` |
+| Washington DC | April 12, 2024 | `<instance_ID>.api.private.us-east.hs-crypto.appdomain.cloud`  |  `<instance_ID>.ep11.private.us-east.hs-crypto.appdomain.cloud`  |
+| Dallas | May 8, 2024 | `<instance_ID>.api.private.us-south.hs-crypto.appdomain.cloud`  |  `<instance_ID>.ep11.private.us-south.hs-crypto.appdomain.cloud`  |
+| S&atilde;o-Paulo | May 15, 2024 | `<instance_ID>.api.private.br-sao.hs-crypto.appdomain.cloud`  |  `<instance_ID>.ep11.private.br-sao.hs-crypto.appdomain.cloud` |
+| Toronto | May 29, 2024 | `<instance_ID>.api.private.ca-tor.hs-crypto.appdomain.cloud`  |  `<instance_ID>.ep11.private.ca-tor.hs-crypto.appdomain.cloud` |
 {: caption="Table 1. New private endpoints for supported regions" caption-side="bottom"}
 {: #table-1}
 {: tab-title="Private"}
@@ -97,7 +103,7 @@ If you create instances after the corresponding availability date in the followi
 ### Port-based endpoints
 {: #existing-service-endpoints}
 
-
+The port-based endpoint scheme will co-exist with the instance-based endpoint scheme for a while. You can still use it for your existing projects. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.
 
 | Region        | Public key management service endpoints | Public {{site.data.keyword.uko_full_notm}} service endpoints |Public GREP11 service endpoints |
 | ------------- | ---------------------------- |---------------------------- |---------------------------- |

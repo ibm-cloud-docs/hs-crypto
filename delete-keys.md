@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-06-05"
 
 keywords: delete key, delete encryption key, curl -x delete, delete key api
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Deleting keys by using a single authorization
 {: #delete-keys}
 
-If you are a manager for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance, you can use {{site.data.keyword.hscrypto}} to delete root keys or standard keys and the contents.
+If you are a manager for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance, you can use {{site.data.keyword.hscrypto}} to delete root keys or standard keys and the contents that the keys protected.
 
 Before you delete keys, make sure you understand [the concept of deleting and purging keys](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys) and review the [considerations](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys#delete-purge-keys-considerations).
 
@@ -51,8 +51,12 @@ After you delete a key, the key moves to the Destroyed state. You can [restore t
 By default, {{site.data.keyword.hscrypto}} requires one authorization to delete a key. You can delete a key and the contents by making a
 `DELETE` call to the following endpoint.
 
+{{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. For example, for public key management endpoint URLs, the format is changed from `api.<region>.hs-crypto.cloud.ibm.com:<port>` to `<instance_ID>.api.<region>.hs-crypto.appdomain.cloud`. For a complete list of the endpoint URL schemes and more information about which regions now support instance-based endpoint URLs, see [Instance-based endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints). Note that, for any new service instances created after the dates specified in the table, only instance-based endpoint URLs can be applied. No impact to existing service instances is expected, as the current port-based endpoint scheme stays intact for the time being. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.
+{: note}
+ 
+
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>
+https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID>
 ```
 
 This action can't succeed if the key is actively protecting one or more cloud
@@ -72,7 +76,7 @@ at query time to delete the key.
 
     ```sh
     curl -X DELETE \
-      "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>" \
+      "https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID>" \
       -H "authorization: Bearer <IAM_token>" \
       -H "bluemix-instance: <instance_ID>" \
       -H "x-kms-key-ring: <key_ring_ID>" \
@@ -146,7 +150,7 @@ at query time to delete the key.
 {{site.data.keyword.hscrypto}} blocks the deletion of a key that's protecting a cloud resource, such as {{site.data.keyword.cos_full_notm}} buckets. You can force-delete a key and the contents by making a `DELETE` call to the following endpoint.
 
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?force=true
+https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID>?force=true
 ```
 
 When you delete a key with registrations that are associated, you shred the key's contents and associated data. Any data that is encrypted by the key becomes inaccessible.
@@ -165,7 +169,7 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
 
     ```sh
     curl -X DELETE \
-    "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>?force=true" \
+    "https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID>?force=true" \
     -H 'authorization: Bearer <IAM_token>' \
     -H 'bluemix-instance: <instance_ID>' \
     -H "x-kms-key-ring: <key_ring_ID>" \

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-06-05"
 
 keywords: securing connection, disabling public service endpoint
 
@@ -151,6 +151,7 @@ To perform key management and cryptographic operations thought a private endpoin
 
     ```
     export TKE_PRIVATE_ADDR=https://tke.private.<region>.hs-crypto.cloud.ibm.com
+    export TKE_PRIVATE_ADDR=https://tke.private.us-south.hs-crypto.cloud.ibm.com
     ```
     {: pre}
 
@@ -203,7 +204,7 @@ If you are using the GREP11 service, the service handles the private endpoint co
     Set the KP_PRIVATE_ADDR environment variable to target the private endpoint for the key management service:
 
     ```
-    export KP_PRIVATE_ADDR=https://api.private.<region>.hs-crypto.cloud.ibm.com:<port>
+    export KP_PRIVATE_ADDR=https://<instance_ID>.api.private.<region>.hs-crypto.appdomain.cloud
     ```
     {: pre}
 
@@ -215,12 +216,12 @@ If you are using the GREP11 service, the service handles the private endpoint co
     {
       "instance_id": "<instance_ID>",
       "kms": {
-        "public": "api.<region>.hs-crypto.cloud.ibm.com:<port>",
-        "private":"api.private.<region>.hs-crypto.cloud.ibm.com:<port>"
+        "public": "<instance_ID>.api.<region>.hs-crypto.appdomain.cloud",
+        "private":"<instance_ID>.api.private.<region>.hs-crypto.appdomain.cloud"
         },
         "ep11": {
-        "public": "ep11.<region>.hs-crypto.cloud.ibm.com:<port>",
-        "private":"ep11.private.<region>.hs-crypto.cloud.ibm.com:<port>"
+        "public": "<instance_ID>.ep11.<region>.hs-crypto.appdomain.cloud",
+        "private":"<instance_ID>.ep11.private.<region>.hs-crypto.appdomain.cloud"
       }
     }
     ```

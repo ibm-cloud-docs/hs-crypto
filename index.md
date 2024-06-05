@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-06-04"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -157,14 +157,14 @@ The following procedure uses Golang code as an example to test GREP11 functions.
 
     ```Golang
     var (
-        Address        = "<grep11_server_address>:<port>"
+        Address        = "<instance_ID>.ep11.us-east.hs-crypto.appdomain.cloud"
         APIKey         = "<ibm_cloud_apikey>"
     )
     ```
     {: codeblock}
 
     In the code example,
-    - Replace `<grep11_server_address>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance UI, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**.
+    - Replace `<instance_ID>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance UI, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**.
     - Replace `<ibm_cloud_apikey>` with the [service ID API key](/docs/account?topic=account-serviceidapikeys){: external} that you created.
 
 4. From the `<your_repository_path>/hpcs-grep11-go/examples` directory, execute the examples by running the `go test -v -run Example` command.

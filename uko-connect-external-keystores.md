@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-06-04"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -188,7 +188,7 @@ To connect to an external keystore by using the UI, complete the following steps
     | Description                 | (Optional) An extended description for your keystore, with up to 200 characters in length. |
     | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your service instance. For more information, see [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).  |
     | Key ring ID on {{site.data.keyword.cloud_notm}}   | The unique identifier of the key ring in the {{site.data.keyword.hscrypto}} instance Standard Plan that you want to connect to. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). If you are not sure which key ring to connect to, specify `default` to connect to the default key ring. |
-    | Key management endpoint  | The service endpoint of your {{site.data.keyword.hscrypto}} instance in the format of `https://api.<region>.hs-crypto.cloud.ibm.com:<port>`. You can get the `<region>` and `<port>` in your provisioned service instance UI dashboard through **Overview** &gt; **Connect** &gt; Key managment endpoint URL**.   |
+    | Key management endpoint  | The service endpoint of your {{site.data.keyword.hscrypto}} instance in the format of `https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud`. You can get the `<region>` and `<instance_ID>` in your provisioned service instance UI dashboard through **Overview** &gt; **Connect** &gt; Key managment endpoint URL**.   |
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
     | Service ID API key          |  A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys). |
     {: #table-5}
@@ -228,8 +228,12 @@ To connect to an external keystore through the API, follow these steps:
    
 2. Connect to an external keystore by making a `POST` call to the following endpoint.
 
+    {{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. For example, for public {{site.data.keyword.uko_full_notm}} endpoint URLs, the format is changed from `uko.<region>.hs-crypto.cloud.ibm.com:<port>` to `<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud`. For a complete list of the endpoint URL schemes and more information about which regions now support instance-based endpoint URLs, see [Instance-based endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints). Note that, for any new service instances created after the dates specified in the table, only instance-based endpoint URLs can be applied. No impact to existing service instances is expected, as the current port-based endpoint scheme stays intact for the time being. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.
+    {: note}
+    
+
     ```
-    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/keystores
+    https://<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud/api/v4/keystores
     
     ```
     {: codeblock}

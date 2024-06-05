@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-06-04"
 
 keywords: set up api, api key, cryptographic operations, use ep11 api, access ep11 api, ep11 over grpc, using api
 
@@ -134,7 +134,7 @@ func (cr *IAMPerRPCCredentials) getToken(ctx context.Context) (err error) {
 // Generating a GREP11 API function call
 
 // The following IBM Cloud items need to be changed prior to running the sample program
-const address = "<grep11_server_address>:<port>"
+const address = "<grep11_server_address>"
 
 var callOpts = []grpc.DialOption{
   grpc.WithTransportCredentials(credentials.NewTLS(&tls.Config{})),
@@ -168,28 +168,28 @@ fmt.Println("Generated IV")
 
 In the example, update the following variables:
 
-* Replace `<grep11_server_address>` and `<port>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance UI, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**. Alternatively, you can dynamically [retrieve the API endpoint URL](/apidocs/hs-crypto#getinstance){: external}. The returned value includes the following. Depending on whether you are using public or [private network](/docs/hs-crypto?topic=hs-crypto-secure-connection), use the public or private service endpoint value that is returned in the `ep11` section.
+* Replace `<grep11_server_address>` with the value of your GREP11 API endpoint. To find the service endpoint URL, from your provisioned service instance UI, click **Overview**  &gt; **Connect** &gt; **Enterprise PKCS #11 endpoint URL**. Alternatively, you can dynamically [retrieve the API endpoint URL](/apidocs/hs-crypto#getinstance){: external}. The returned value includes the following. Depending on whether you are using public or [private network](/docs/hs-crypto?topic=hs-crypto-secure-connection), use the public or private service endpoint value that is returned in the `ep11` section.
 
     ```
     {
       "instance_id": "<instance_ID>",
       "kms": {
-        "public": "api.<region>.hs-crypto.cloud.ibm.com:<port>",
-        "private":"api.private.<region>.hs-crypto.cloud.ibm.com:<port>"
+        "public": "<instance_ID>.api.<region>.hs-crypto.appdomain.cloud",
+        "private":"<instance_ID>.api.private.<region>.hs-crypto.appdomain.cloud"
       },
       "ep11": {
-        "public": "ep11.<region>.hs-crypto.cloud.ibm.com:<port>",
-        "private":"ep11.private.<region>.hs-crypto.cloud.ibm.com:<port>"
+        "public": "<instance_ID>.ep11.<region>.hs-crypto.appdomain.cloud",
+        "private":"<instance_ID>.ep11.private.<region>.hs-crypto.appdomain.cloud"
       }
     }
     ```
     {: screen}
 
-	If you create your instances after April 12 2024 in certain regions, you might need to use the new API endpoints with the new format as `<INSTANCE_ID>.ep11.<REGION>.hs-crypto.appdomain.cloud`. The availability date varies by region. For more information about the supported regions, the availability dates, and the new endpoint URLs, see [New endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints).
-	{: note}
 	 
 
-     
+    {{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. For example, for public grep11 endpoint URLs, the format is changed from `ep11.<REGION>.hs-crypto.cloud.ibm.com:<PORT>` to `<instance_ID>.ep11.<REGION>.hs-crypto.appdomain.cloud`. For a complete list of the endpoint URL schemes and more information about which regions now support instance-based endpoint URLs, see [Instance-based endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints). Note that, for any new service instances created after the dates specified in the table, only instance-based endpoint URLs can be applied. No impact to existing service instances is expected, as the current port-based endpoint scheme stays intact for the time being. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.
+	{: note}
+	 
 
 * Replace `<ibm_cloud_apikey>` with the service ID API key that you created. The service ID API Key can be created by following the instruction in [Managing service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
 

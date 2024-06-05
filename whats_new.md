@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-06-03"
+lastupdated: "2024-06-05"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -26,12 +26,12 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 
 
-## 3 June 2024
+## 5 June 2024
 {: #hs-crypto-june2024}
 {: release-note}
 
 Added: New API endpoints for existing service instances
-:   {{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. For example, for public key management endpoint URLs, the format is changed from `api.<region>.hs-crypto.cloud.ibm.com:<port>` to `<instance_id>.api.<region>.hs-crypto.appdomain.cloud`.
+:   {{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. For example, for public key management endpoint URLs, the format is changed from `api.<region>.hs-crypto.cloud.ibm.com:<port>` to `<instance_ID>.api.<region>.hs-crypto.appdomain.cloud`.
 
     Compared with the port-based scheme, the instance-based endpoints are more readable and can easily be identified when addressed. You can still use the deprecated endpoint URLs for existing service instances for the time being. However, it is suggested to use the new instance-based scheme wherever possible especially when you set up new projects.
 

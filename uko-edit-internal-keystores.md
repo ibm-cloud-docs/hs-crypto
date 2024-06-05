@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-06-05"
 
 keywords: Unified Key Orchestrator, UKO keystore, edit keystore, key management, internal keystore, KMS keystore
 
@@ -58,7 +58,7 @@ To edit the details of an internal keystore through the API, follow these steps:
 2. Update an internal keystore by making a `PATCH` call to the following endpoint.
 
     ```
-    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/keystores/<id>
+    https://<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud/api/v4/keystores/<id>
     ```
     {: codeblock}
 

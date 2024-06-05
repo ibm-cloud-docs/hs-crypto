@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-06-05"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway
 
@@ -44,6 +44,10 @@ Before you target a virtual private endpoint for {{site.data.keyword.hscrypto}},
 
 When you create a VPE gateway by using the CLI or API, you must specify the [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) of the region in which you want to connect to {{site.data.keyword.hscrypto}}. Review the following table for the available regions and CRNs to create your VPE gateways.
 
+{{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. For example, for public key management endpoint URLs, the format is changed from `api.private.<region>.hs-crypto.cloud.ibm.com:<port>` to `<instance_ID>.api.private.<region>.hs-crypto.appdomain.cloud`. For a complete list of the endpoint URL schemes and more information about which regions now support instance-based endpoint URLs, see [Instance-based endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints). Note that, for any new service instances created after the dates specified in the table, only instance-based endpoint URLs can be applied. No impact to existing service instances is expected, as the current port-based endpoint scheme stays intact for the time being. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.
+{: note}
+ 
+
 <table>
     <tr>
       <th scope="col">{{site.data.keyword.hscrypto}} feature</th>
@@ -52,151 +56,151 @@ When you create a VPE gateway by using the CLI or API, you must specify the [Clo
     </tr>
     <tr>
       <td rowspan="9">Key management service</td>
-      <td><code>api.private.au-syd.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:api.private.au-syd.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>api.private.au-syd.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:<instance_ID>.api.private.au-syd.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>api.private.eu-de.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:eu-de:::endpoint:api.private.eu-de.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>api.private.eu-de.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:eu-de:::endpoint:<instance_ID>.api.private.eu-de.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>api.private.us-east.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:us-east:::endpoint:api.private.us-east.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>api.private.us-east.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:us-east:::endpoint:<instance_ID>.api.private.us-east.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>api.private.us-south.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:api.private.us-south.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>api.private.us-south.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:<instance_ID>.api.private.us-south.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>api.private.eu-gb.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:eu-gb:::endpoint:api.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>api.private.eu-gb.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:eu-gb:::endpoint:<instance_ID>.api.private.eu-gb.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>api.private.jp-tok.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:jp-tok:::endpoint:api.vpc.private.jp-tok.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>api.private.jp-tok.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:jp-tok:::endpoint:api.private.jp-tok.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>api.private.eu-es.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:eu-es:::endpoint:api.vpc.private.eu-es.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>api.private.eu-es.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:eu-es:::endpoint:api.private.eu-es.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>api.private.br-sao.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:br-sao:::endpoint:api.vpc.private.jbr-sao.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>api.private.br-sao.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:br-sao:::endpoint:api.private.jbr-sao.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>api.private.ca-tor.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:ca-tor:::endpoint:api.vpc.private.ca-tor.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>api.private.ca-tor.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:ca-tor:::endpoint:api.private.ca-tor.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
       <td rowspan="9">Enterprise PKCS #11 (EP11)</td>
-      <td><code>ep11.private.au-syd.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:ep11.private.au-syd.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>.ep11.private.au-syd.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:<instance_ID>.ep11.private.au-syd.hs-crypto.appdomain.cloud</td>
       </tr>
     <tr>
-      <td><code>ep11.private.eu-de.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:eu-de:::endpoint:ep11.private.eu-de.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>ep11.private.eu-de.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:eu-de:::endpoint:<instance_ID>.ep11.private.eu-de.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>ep11.private.us-east.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:us-east:::endpoint:ep11.private.us-east.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>ep11.private.us-east.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:us-east:::endpoint:<instance_ID>.ep11.private.us-east.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>ep11.private.us-south.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:ep11.private.us-south.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>ep11.private.us-south.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:<instance_ID>.ep11.private.us-south.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>ep11.private.eu-gb.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:eu-gb:::endpoint:ep11.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>ep11.private.eu-gb.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:eu-gb:::endpoint:ep11.vpc.private.eu-gb.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>ep11.private.jp-tok.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:jp-tok:::endpoint:ep11.vpc.private.jp-tok.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>ep11.private.jp-tok.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:jp-tok:::endpoint:ep11.vpc.private.jp-tok.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>ep11.private.eu-es.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:eu-es:::endpoint:ep11.vpc.private.eu-es.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>ep11.private.eu-es.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:eu-es:::endpoint:ep11.vpc.private.eu-es.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>ep11.private.br-sao.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:br-sao:::endpoint:ep11.vpc.private.jbr-sao.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>ep11.private.br-sao.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:br-sao:::endpoint:ep11.vpc.private.jbr-sao.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>ep11.private.ca-tor.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:ca-tor:::endpoint:ep11.vpc.private.ca-tor.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>ep11.private.ca-tor.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:ca-tor:::endpoint:ep11.vpc.private.ca-tor.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
       <td rowspan="9">Trusted Key Entry (TKE)</td>
-      <td><code>tke.private.au-syd.hs-crypto.cloud.ibm.com</code></td>
+      <td><code><instance_ID>tke.private.au-syd.hs-crypto.cloud.ibm.com</code></td>
       <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:tke.private.au-syd.hs-crypto.cloud.ibm.com</td>
     </tr>
     <tr>
-      <td><code>tke.private.eu-de.hs-crypto.cloud.ibm.com</code></td>
+      <td><code><instance_ID>tke.private.eu-de.hs-crypto.cloud.ibm.com</code></td>
       <td>crn:v1:bluemix:public:hs-crypto:eu-de:::endpoint:tke.private.eu-de.hs-crypto.cloud.ibm.com</td>
     </tr>
     <tr>
-      <td><code>tke.private.us-east.hs-crypto.cloud.ibm.com</code></td>
+      <td><code><instance_ID>tke.private.us-east.hs-crypto.cloud.ibm.com</code></td>
       <td>crn:v1:bluemix:public:hs-crypto:us-east:::endpoint:tke.private.us-east.hs-crypto.cloud.ibm.com</td>
     </tr>
     <tr>
-      <td><code>tke.private.us-south.hs-crypto.cloud.ibm.com</code></td>
+      <td><code><instance_ID>tke.private.us-south.hs-crypto.cloud.ibm.com</code></td>
       <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:tke.private.us-south.hs-crypto.cloud.ibm.com</td>
     </tr>
     <tr>
-      <td><code>tke.private.eu-gb.hs-crypto.cloud.ibm.com</code></td>
+      <td><code><instance_ID>tke.private.eu-gb.hs-crypto.cloud.ibm.com</code></td>
       <td>crn:v1:bluemix:public:hs-crypto:eu-gb:::endpoint:tke.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
     </tr>
     <tr>
-      <td><code>tke.private.jp-tok.hs-crypto.cloud.ibm.com</code></td>
+      <td><code><instance_ID>tke.private.jp-tok.hs-crypto.cloud.ibm.com</code></td>
       <td>crn:v1:bluemix:public:hs-crypto:jp-tok:::endpoint:tke.vpc.private.jp-tok.hs-crypto.cloud.ibm.com</td>
     </tr>
     <tr>
-      <td><code>tke.private.eu-es.hs-crypto.cloud.ibm.com</code></td>
+      <td><code><instance_ID>tke.private.eu-es.hs-crypto.cloud.ibm.com</code></td>
       <td>crn:v1:bluemix:public:hs-crypto:eu-es:::endpoint:tke.vpc.private.eu-es.hs-crypto.cloud.ibm.com</td>
     </tr>
     <tr>
-      <td><code>tke.private.br-sao.hs-crypto.cloud.ibm.com</code></td>
+      <td><code><instance_ID>tke.private.br-sao.hs-crypto.cloud.ibm.com</code></td>
       <td>crn:v1:bluemix:public:hs-crypto:br-sao:::endpoint:tke.vpc.private.jbr-sao.hs-crypto.cloud.ibm.com</td>
     </tr>
     <tr>
-      <td><code>tke.private.ca-tor.hs-crypto.cloud.ibm.com</code></td>
+      <td><code><instance_ID>tke.private.ca-tor.hs-crypto.cloud.ibm.com</code></td>
       <td>crn:v1:bluemix:public:hs-crypto:ca-tor:::endpoint:tke.vpc.private.ca-tor.hs-crypto.cloud.ibm.com</td>
     </tr>
     <tr>
       <td rowspan="9">Key Management Interoperability Protocol (KMIP) adapter</td>
-      <td><code>kmip.private.au-syd.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:kmip.private.au-syd.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>kmip.private.au-syd.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:au-syd:::endpoint:<instance_ID>.kmip.private.au-syd.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>kmip.private.eu-de.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:eu-de:::endpoint:kmip.private.eu-de.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>kmip.private.eu-de.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:eu-de:::endpoint:<instance_ID>.kmip.private.eu-de.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>kmip.private.us-east.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:us-east:::endpoint:kmip.private.us-east.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>kmip.private.us-east.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:us-east:::endpoint:<instance_ID>.kmip.private.us-east.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>kmip.private.us-south.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:kmip.private.us-south.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>kmip.private.us-south.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:us-south:::endpoint:<instance_ID>.kmip.private.us-south.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>kmip.private.eu-gb.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:eu-gb:::endpoint:kmip.vpc.private.eu-gb.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>kmip.private.eu-gb.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:eu-gb:::endpoint:kmip.private.eu-gb.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>kmip.private.jp-tok.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:jp-tok:::endpoint:kmip.vpc.private.jp-tok.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>kmip.private.jp-tok.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:jp-tok:::endpoint:kmip.private.jp-tok.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>kmip.private.eu-es.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:eu-es:::endpoint:kmip.vpc.private.eu-es.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>kmip.private.eu-es.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:eu-es:::endpoint:kmip.private.eu-es.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>kmip.private.br-sao.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:br-sao:::endpoint:kmip.vpc.private.jbr-sao.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>kmip.private.br-sao.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:br-sao:::endpoint:kmip.private.jbr-sao.hs-crypto.appdomain.cloud</td>
     </tr>
     <tr>
-      <td><code>kmip.private.ca-tor.hs-crypto.cloud.ibm.com</code></td>
-      <td>crn:v1:bluemix:public:hs-crypto:ca-tor:::endpoint:kmip.vpc.private.ca-tor.hs-crypto.cloud.ibm.com</td>
+      <td><code><instance_ID>kmip.private.ca-tor.hs-crypto.appdomain.cloud</code></td>
+      <td>crn:v1:bluemix:public:hs-crypto:ca-tor:::endpoint:kmip.private.ca-tor.hs-crypto.appdomain.cloud</td>
     </tr>
     <caption>Table 1. Available region endpoints and CRNs for creating VPE gateways</caption>
 </table>
@@ -262,7 +266,7 @@ After you create an endpoint gateway for your {{site.data.keyword.hscrypto}} ins
     2. To perform key management operations with the {{site.data.keyword.keymanagementserviceshort}} CLI plug-in, set the KP_PRIVATE_ADDR environment variable to target the key management service private endpoint:
 
         ```
-        export KP_PRIVATE_ADDR=https://api.private.<region>.hs-crypto.cloud.ibm.com:<port>
+        export KP_PRIVATE_ADDR=https://<instance_ID>.api.private.<region>.hs-crypto.appdomain.cloud
         ```
         {: pre}
 
@@ -276,7 +280,7 @@ After you create an endpoint gateway for your {{site.data.keyword.hscrypto}} ins
 
     ```
     curl GET \
-      https://api.private.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys   \
+      https://<instance_ID>.api.private.<region>.hs-crypto.appdomain.cloud/api/v2/keys   \
       -H 'authorization: Bearer <IAM_token>'   \
       -H 'bluemix-instance: <instance_ID>'   \
       -H 'accept: application/vnd.ibm.kms.key+json'
@@ -307,6 +311,6 @@ To use VPE with Terraform, set the `service_endpoints` parameter to `private-onl
 - If you plan to use private endpoints to manage your key management service keys, make sure to set the `IBMCLOUD_KP_API_ENDPOINT` environment variable to target the key management service private endpoint. For example,:
 
     ```
-    export IBMCLOUD_KP_API_ENDPOINT=https://api.private.<region>.hs-crypto.cloud.ibm.com:<port>
+    export IBMCLOUD_KP_API_ENDPOINT=https://<instance_ID>.api.private.<region>.hs-crypto.appdomain.cloud
     ```
     {: pre}

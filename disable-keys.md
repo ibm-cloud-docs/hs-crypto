@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-06-04"
 
 keywords: disable key, enable key, suspend key, suspend operations on a key
 
@@ -97,7 +97,7 @@ For an integrated cloud service that supports revoking access to a disabled root
 You can disable a root key that's in the Active key state by making a `POST` call to the following endpoint.
 
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/disable
+https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID>/actions/disable
 ```
 
 1. [Retrieve your authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#retrieve-kms-credentials).
@@ -117,7 +117,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 
     ```sh
     curl -X POST \
-      "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/disable" \
+      "https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID>/actions/disable" \
       -H "authorization: Bearer <IAM_token>" \
       -H "bluemix-instance: <instance_ID>" \
       -H "x-kms-key-ring: <key_ring_ID>"
@@ -142,7 +142,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 
     ```cURL
     curl -X GET \
-      https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>/metadata \
+      https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_id>/metadata \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
       -H 'accept: application/vnd.ibm.kms.key+json'
@@ -208,7 +208,7 @@ For an integrated cloud service that supports revoking access to a disabled root
 You can enable a root key that's in the Suspended key state by making a `POST` call to the following endpoint.
 
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/enable
+https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID>/actions/enable
 ```
 
 1. [Retrieve your authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#retrieve-kms-credentials).
@@ -231,7 +231,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 
     ```sh
     curl -X POST \
-      "https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions/enable" \
+      "https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID>/actions/enable" \
       -H "authorization: Bearer <IAM_token>" \
       -H "bluemix-instance: <instance_ID>" \
       -H "x-kms-key-ring: <key_ring_ID>"
@@ -256,7 +256,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_ID>/actions
 
     ```cURL
     curl -X GET \
-      https://api.<region>.hs-crypto.cloud.ibm.com:<port>/api/v2/keys/<key_id>/metadata \
+      https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_id>/metadata \
       -H 'authorization: Bearer <IAM_token>' \
       -H 'bluemix-instance: <instance_ID>' \
       -H 'accept: application/vnd.ibm.kms.key+json'

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-06-04"
 
 keywords: instance settings, service settings, network access policies
 
@@ -53,8 +53,12 @@ After you create a {{site.data.keyword.hscrypto}} instance, complete the followi
 
 As a security administrator, update the network access policy for your {{site.data.keyword.hscrypto}} instance by making a `PUT` call to the following endpoint. See these API references to [set](/apidocs/hs-crypto#putinstancepolicy){: external} and [list](/apidocs/hs-crypto#getinstancepolicy){: external} instance policies.
 
+{{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. For example, for public key management endpoint URLs, the format is changed from `api.<region>.hs-crypto.cloud.ibm.com:<port>` to `<instance_ID>.api.<region>.hs-crypto.appdomain.cloud`. For a complete list of the endpoint URL schemes and more information about which regions now support instance-based endpoint URLs, see [Instance-based endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints). Note that, for any new service instances created after the dates specified in the table, only instance-based endpoint URLs can be applied. No impact to existing service instances is expected, as the current port-based endpoint scheme stays intact for the time being. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.
+{: note}
+ 
+
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=allowedNetwork
+https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/instance/policies?policy=allowedNetwork
 ```
 {: codeblock}
 
@@ -67,7 +71,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
 
     ```sh
     $ curl -X PUT \
-        "https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=allowedNetwork" \
+        "https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/instance/policies?policy=allowedNetwork" \
         -H "accept: application/vnd.ibm.kms.policy+json" \
         -H "authorization: Bearer <IAM_token>" \
         -H "bluemix-instance: <instance_ID>" \
@@ -113,7 +117,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
 
     ```sh
     $ curl -X GET \
-        "https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=allowedNetwork" \
+        "https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/instance/policies?policy=allowedNetwork" \
         -H "accept: application/vnd.ibm.kms.policy+json" \
         -H "authorization: Bearer <IAM_token>" \
         -H "bluemix-instance: <instance_ID>"
@@ -133,7 +137,7 @@ You can also update the network access policy for your {{site.data.keyword.hscry
 As a security administrator, disable a network access policy for a {{site.data.keyword.hscrypto}} instance by making a `PUT` call to the following endpoint. See these API references to [set](/apidocs/hs-crypto#putinstancepolicy){: external} and [list](/apidocs/hs-crypto#getinstancepolicy){: external} instance policies.
 
 ```
-https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=allowedNetwork
+https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/instance/policies?policy=allowedNetwork
 ```
 {: codeblock}
 
@@ -146,7 +150,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
 
     ```sh
     $ curl -X PUT \
-        "https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=allowedNetwork" \
+        "https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/instance/policies?policy=allowedNetwork" \
         -H "accept: application/vnd.ibm.kms.policy+json" \
         -H "authorization: Bearer <IAM_token>" \
         -H "bluemix-instance: <instance_ID>" \
@@ -189,7 +193,7 @@ https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=all
 
     ```sh
     $ curl -X GET \
-        "https://api.<region>.hs-crypto.cloud.ibm.com/api/v2/instance/policies?policy=allowedNetwork" \
+        "https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/instance/policies?policy=allowedNetwork" \
         -H "accept: application/vnd.ibm.kms.policy+json" \
         -H "authorization: Bearer <IAM_token>" \
         -H "bluemix-instance: <instance_ID>"
