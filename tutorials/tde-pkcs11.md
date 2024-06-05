@@ -134,7 +134,7 @@ tokens:
   0:
     grep11connection:
       # The EP11 endpoint address starting from 'ep11'.
-      # For example: "ep11.us-south.hs-crypto.cloud.ibm.com"
+      # For example: "<instance_ID>.ep11.us-south.hs-crypto.appdomain.cloud"
       address: "<EP11_endpoint_URL>"
       # The EP11 endpoint port number
       port: "<EP11_endpoint_port_number>"

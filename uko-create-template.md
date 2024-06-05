@@ -166,7 +166,7 @@ To create a key template from scratch through the API, follow these steps:
 2. Create a key template by making a `POST` call to the following endpoint.
     
     ```
-    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/templates
+    https://<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud/api/v4/templates
     
     ```
     {: codeblock}
@@ -214,7 +214,7 @@ To make a copy from an existing key template through the API, follow these steps
 2. Create a key template by making a `POST` call to the following endpoint.
     
     ```
-    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/templates
+    https://<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud/api/v4/templates
     
     ```
     {: codeblock}

@@ -161,7 +161,7 @@ You can create a managed key with key properties that are predefined by your adm
 2. Create a key template by making a `POST` call to the following endpoint.
     
     ```
-    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/templates
+    https://<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud/api/v4/templates
     
     ```
     {: codeblock}
@@ -169,7 +169,7 @@ You can create a managed key with key properties that are predefined by your adm
 3. Create a managed key based on the supplied template by making a `POST` call to the following endpoint.
 
     ```
-    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys
+    https://<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud/api/v4/managed_keys
     
     ```
     {: codeblock}
@@ -326,7 +326,7 @@ You can create a managed key from scratch. This option gives you the flexibility
 2. Create a key template by making a `POST` call to the following endpoint.
     
     ```
-    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/templates
+    https://<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud/api/v4/templates
     
     ```
     {: codeblock}
@@ -334,7 +334,7 @@ You can create a managed key from scratch. This option gives you the flexibility
 3. Create a managed key based on the supplied template by making a `POST` call to the following endpoint.
 
     ```
-    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys
+    https://<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud/api/v4/managed_keys
     
     ```
     {: codeblock}

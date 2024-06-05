@@ -117,7 +117,7 @@ Let's start with the service authorization process.
 
 6. Click **Refresh** and ensure that the status of the KMIP for VMware instance is *Installed*.
 
-7. Identify the KMIP server endpoints information for the next step. For example, `kmip.private.us-south.hs-crypto.cloud.ibm.com:10073`.
+7. Identify the KMIP server endpoints information for the next step. For example, `<instance_ID>.kmip.private.us-south.hs-crypto.appdomain.cloud`.
 
 
 ## Configure a trusted connection between the vCenter Server and KMIP adapter

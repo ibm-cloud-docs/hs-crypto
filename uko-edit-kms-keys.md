@@ -105,7 +105,7 @@ To edit key details through the API, follow these steps:
 2. Update the details of a managed key by making a `PATCH` call to the following endpoint.
 
     ```
-    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys/<id>
+    https://<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud/api/v4/managed_keys/<id>
     
     ```
     {: codeblock}
@@ -125,7 +125,7 @@ To editing keystores for keys by using API, complete the following steps:
 2. Add a keystore to or remove a keystore from a keystore group by making a `PATCH` call to the following endpoint. The keystore group must match the key template that is associated with the managed key.
 
     ```
-    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/keystores/<id>
+    https://<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud/api/v4/keystores/<id>
     
     ```
     {: codeblock}
@@ -135,7 +135,7 @@ To editing keystores for keys by using API, complete the following steps:
 3. Update the managed key to match the latest version of the associated key template by making a `POST` call to the following endpoint.
 
     ```
-    https://uko.<region>.hs-crypto.cloud.ibm.com:<port>/api/v4/managed_keys/<id>/update_from_template
+    https://<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud/api/v4/managed_keys/<id>/update_from_template
     
     ```
     {: codeblock}
