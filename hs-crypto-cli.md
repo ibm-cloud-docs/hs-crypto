@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-29"
+lastupdated: "2024-06-05"
 
 keywords: hpcs cli, hyper protect crypto services cli, trusted key entry plug-in, cloud tke, tke plug-in, cli plug-in, tke commands, cloud tke reference, cert manager cli plug-in, key management cli, uko cli, united key orchestrator cli
 
@@ -1624,33 +1624,33 @@ ibmcloud hpcs uko associated-resources-for-managed-key --id ID [--limit LIMIT] [
       "limit": 20,
       "offset": 0,
       "first": {
-        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/managed_key/5295ad47-2ce9-43c3-b9e7-e5a9482c362b/associated_resources?limit=20"
+        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/managed_key/5295ad47-2ce9-43c3-b9e7-e5a9482c362b/associated_resources?limit=20"
       },
       "last": {
-        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/managed_key/5295ad47-2ce9-43c3-b9e7-e5a9482c362b/associated_resources?limit=20&offset=0"
+        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/managed_key/5295ad47-2ce9-43c3-b9e7-e5a9482c362b/associated_resources?limit=20&offset=0"
       },
       "previous": {
-        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/managed_keys?offset=80"
+        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/managed_keys?offset=80"
       },
       "next": {
-        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/managed_keys?offset=120"
+        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/managed_keys?offset=120"
       },
       "associated_resources": [
         {
           "vault": {
             "id": "5295ad47-2ce9-43c3-b9e7-e5a9482c362b",
             "name": "Test Vault Name",
-            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
+            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
           },
           "managed_key": {
             "id": "93777bca-baef-4070-b9b5-a2e6079df1b4",
             "name": "My Managed Key",
-            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/managed_keys/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
+            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/managed_keys/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
           },
           "referenced_keystore": {
             "id": "93777bca-baef-4070-b9b5-a2e6079df1b4",
             "name": "My Managed Key",
-            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/managed_keys/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
+            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/managed_keys/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
           },
           "key_id_in_keystore": "93777bca-baef-4070-b9b5-a2e6079df1b4",
           "type": "com_ibm_cloud_kms_registration",
@@ -2217,7 +2217,7 @@ ibmcloud hpcs uko managed-key-ds --id ID
             "id": "b28bf13d-f49d-4b00-8b8d-457d38ad1e15",
             "name": "AWS KMS Keystore Name",
             "type": "aws_kms",
-            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/keystores/b28bf13d-f49d-4b00-8b8d-457d38ad1e15"
+            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/keystores/b28bf13d-f49d-4b00-8b8d-457d38ad1e15"
           },
           "status": "not_present"
         }
@@ -2799,7 +2799,7 @@ ibmcloud hpcs uko managed-key-sync --id ID --if-match IF-MATCH
             "id": "b28bf13d-f49d-4b00-8b8d-457d38ad1e15",
             "name": "AWS KMS Keystore Name",
             "type": "aws_kms",
-            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/keystores/b28bf13d-f49d-4b00-8b8d-457d38ad1e15"
+            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/keystores/b28bf13d-f49d-4b00-8b8d-457d38ad1e15"
           },
           "status": "not_present"
         }
@@ -2909,10 +2909,10 @@ ibmcloud hpcs uko key-templates [--name NAME] [--naming-scheme NAME-SCHEME] [--v
       "limit": 20,
       "offset": 0,
       "first": {
-        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/templates?vault.id=5295ad47-2ce9-43c3-b9e7-e5a9482c362b&limit=20"
+        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/templates?vault.id=5295ad47-2ce9-43c3-b9e7-e5a9482c362b&limit=20"
       },
       "last": {
-        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/templates?vault.id=5295ad47-2ce9-43c3-b9e7-e5a9482c362b&limit=20&offset=0"
+        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/templates?vault.id=5295ad47-2ce9-43c3-b9e7-e5a9482c362b&limit=20&offset=0"
       },
       "templates": [
         {
@@ -3447,17 +3447,17 @@ ibmcloud hpcs uko keystores [--type TYPE] [--name NAME] [--description DESCRIPTI
       "limit": 20,
       "offset": 0,
       "first": {
-        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/keystores?limit=20"
+        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/keystores?limit=20"
       },
       "last": {
-        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/keystores?limit=20&offset=0"
+        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/keystores?limit=20&offset=0"
       },
       "keystores": [
         {
           "vault": {
             "id": "5295ad47-2ce9-43c3-b9e7-e5a9482c362b",
             "name": "Test Vault Name",
-            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
+            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
           },
           "id": "5312861e-5b9b-4f40-9264-997afc2cd034",
           "name": "AWS KMS Keystore Name",
@@ -3471,7 +3471,7 @@ ibmcloud hpcs uko keystores [--type TYPE] [--name NAME] [--description DESCRIPTI
           "updated_at": "2022-03-09T10:59:44Z",
           "created_by": "IBMid-1308197YB4",
           "updated_by": "IBMid-1308197YB4",
-          "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/keystores/5312861e-5b9b-4f40-9264-997afc2cd034",
+          "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/keystores/5312861e-5b9b-4f40-9264-997afc2cd034",
           "aws_region": "eu_central_1",
           "aws_access_key_id": "",
           "aws_secret_access_key": ""
@@ -3480,7 +3480,7 @@ ibmcloud hpcs uko keystores [--type TYPE] [--name NAME] [--description DESCRIPTI
           "vault": {
             "id": "5295ad47-2ce9-43c3-b9e7-e5a9482c362b",
             "name": "Test Vault Name",
-            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
+            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
           },
           "id": "314d0c9c-8808-47f0-829a-e63bdbb93854",
           "name": "Azure Keystore Name ",
@@ -3493,7 +3493,7 @@ ibmcloud hpcs uko keystores [--type TYPE] [--name NAME] [--description DESCRIPTI
           "updated_at": "2022-03-09T11:00:04Z",
           "created_by": "IBMid-1308197YB4",
           "updated_by": "IBMid-1308197YB4",
-          "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/keystores/314d0c9c-8808-47f0-829a-e63bdbb93854",
+          "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/keystores/314d0c9c-8808-47f0-829a-e63bdbb93854",
           "azure_resource_group": "EKMF-Web-Tests",
           "azure_location": "europe_north",
           "azure_service_principal_client_id": "c8e8540f-4f15-4b6b-8862-3ccdb389e35d",
@@ -3506,7 +3506,7 @@ ibmcloud hpcs uko keystores [--type TYPE] [--name NAME] [--description DESCRIPTI
           "vault": {
             "id": "5295ad47-2ce9-43c3-b9e7-e5a9482c362b",
             "name": "Test Vault Name",
-            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
+            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
           },
           "id": "f6a5ccc1-7fc3-435e-9637-482e470ba8e8",
           "name": "IBM Keystore Name",
@@ -3519,7 +3519,7 @@ ibmcloud hpcs uko keystores [--type TYPE] [--name NAME] [--description DESCRIPTI
           "updated_at": "2022-03-09T11:00:11Z",
           "created_by": "IBMid-1308197YB4",
           "updated_by": "IBMid-1308197YB4",
-          "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/keystores/f6a5ccc1-7fc3-435e-9637-482e470ba8e8",
+          "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/keystores/f6a5ccc1-7fc3-435e-9637-482e470ba8e8",
           "ibm_api_endpoint": "https://us-south.kms.cloud.ibm.com",
           "ibm_iam_endpoint": "https://iam.bluemix.net/identity/token",
           "ibm_api_key": "",
@@ -3576,7 +3576,7 @@ ibmcloud hpcs uko keystore-create --keystore-body KEYSTORE-BODY [--dry-run DRY-R
       "vault": {
         "id": "5295ad47-2ce9-43c3-b9e7-e5a9482c362b",
         "name": "Test Vault Name",
-        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
+        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
       },
       "id": "f6a5ccc1-7fc3-435e-9637-482e470ba8e8",
       "name": "IBM Keystore Name",
@@ -3589,7 +3589,7 @@ ibmcloud hpcs uko keystore-create --keystore-body KEYSTORE-BODY [--dry-run DRY-R
       "updated_at": "2022-03-09T11:00:11Z",
       "created_by": "IBMid-1308197YB4",
       "updated_by": "IBMid-1308197YB4",
-      "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/keystores/f6a5ccc1-7fc3-435e-9637-482e470ba8e8",
+      "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/keystores/f6a5ccc1-7fc3-435e-9637-482e470ba8e8",
       "ibm_api_endpoint": "https://us-south.kms.cloud.ibm.com",
       "ibm_iam_endpoint": "https://iam.bluemix.net/identity/token",
       "ibm_api_key": "",
@@ -3684,7 +3684,7 @@ ibmcloud hpcs uko keystore --id ID
       "vault": {
         "id": "5295ad47-2ce9-43c3-b9e7-e5a9482c362b",
         "name": "Test Vault Name",
-        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
+        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
       },
       "id": "f6a5ccc1-7fc3-435e-9637-482e470ba8e8",
       "name": "IBM Keystore Name",
@@ -3697,7 +3697,7 @@ ibmcloud hpcs uko keystore --id ID
       "updated_at": "2022-03-09T11:00:11Z",
       "created_by": "IBMid-1308197YB4",
       "updated_by": "IBMid-1308197YB4",
-      "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/keystores/f6a5ccc1-7fc3-435e-9637-482e470ba8e8",
+      "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/keystores/f6a5ccc1-7fc3-435e-9637-482e470ba8e8",
       "ibm_api_endpoint": "https://us-south.kms.cloud.ibm.com",
       "ibm_iam_endpoint": "https://iam.bluemix.net/identity/token",
       "ibm_api_key": "",
@@ -3756,7 +3756,7 @@ ibmcloud hpcs uko keystore-update --id ID --if-match IF-MATCH --keystore-body KE
       "vault": {
         "id": "5295ad47-2ce9-43c3-b9e7-e5a9482c362b",
         "name": "Test Vault Name",
-        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
+        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
       },
       "id": "f6a5ccc1-7fc3-435e-9637-482e470ba8e8",
       "name": "IBM Keystore Name",
@@ -3769,7 +3769,7 @@ ibmcloud hpcs uko keystore-update --id ID --if-match IF-MATCH --keystore-body KE
       "updated_at": "2022-03-09T11:00:11Z",
       "created_by": "IBMid-1308197YB4",
       "updated_by": "IBMid-1308197YB4",
-      "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/keystores/f6a5ccc1-7fc3-435e-9637-482e470ba8e8",
+      "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/keystores/f6a5ccc1-7fc3-435e-9637-482e470ba8e8",
       "ibm_api_endpoint": "https://us-south.kms.cloud.ibm.com",
       "ibm_iam_endpoint": "https://iam.bluemix.net/identity/token",
       "ibm_api_key": "",
@@ -3835,33 +3835,33 @@ ibmcloud hpcs uko associated-resources-for-target-keystore --id ID [--limit LIMI
       "limit": 20,
       "offset": 0,
       "first": {
-        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/managed_key/5295ad47-2ce9-43c3-b9e7-e5a9482c362b/associated_resources?limit=20"
+        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/managed_key/5295ad47-2ce9-43c3-b9e7-e5a9482c362b/associated_resources?limit=20"
       },
       "last": {
-        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/managed_key/5295ad47-2ce9-43c3-b9e7-e5a9482c362b/associated_resources?limit=20&offset=0"
+        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/managed_key/5295ad47-2ce9-43c3-b9e7-e5a9482c362b/associated_resources?limit=20&offset=0"
       },
       "previous": {
-        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/managed_keys?offset=80"
+        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/managed_keys?offset=80"
       },
       "next": {
-        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/managed_keys?offset=120"
+        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/managed_keys?offset=120"
       },
       "associated_resources": [
         {
           "vault": {
             "id": "5295ad47-2ce9-43c3-b9e7-e5a9482c362b",
             "name": "Test Vault Name",
-            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
+            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
           },
           "managed_key": {
             "id": "93777bca-baef-4070-b9b5-a2e6079df1b4",
             "name": "My Managed Key",
-            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/managed_keys/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
+            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/managed_keys/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
           },
           "referenced_keystore": {
             "id": "93777bca-baef-4070-b9b5-a2e6079df1b4",
             "name": "My Managed Key",
-            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/managed_keys/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
+            "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/managed_keys/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
           },
           "key_id_in_keystore": "93777bca-baef-4070-b9b5-a2e6079df1b4",
           "type": "com_ibm_cloud_kms_registration",
@@ -3979,10 +3979,10 @@ ibmcloud hpcs uko vaults [--limit LIMIT] [--offset OFFSET] [--sort SORT] [--name
       "limit": 20,
       "offset": 0,
       "first": {
-        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/vaults?limit=20&limit=20&offset=0"
+        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/vaults?limit=20&limit=20&offset=0"
       },
       "last": {
-        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/vaults?limit=20&limit=20&offset=0&offset=0"
+        "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/vaults?limit=20&limit=20&offset=0&offset=0"
       },
       "vaults": [
         {
@@ -3993,7 +3993,7 @@ ibmcloud hpcs uko vaults [--limit LIMIT] [--offset OFFSET] [--sort SORT] [--name
           "updated_on": "2022-03-07T14:31:09Z",
           "created_by": "IBMid-1308197YB4",
           "updated_by": "IBMid-1308197YB4",
-          "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/vaults/d0564770-1422-420c-945f-10803a2e24de"
+          "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/vaults/d0564770-1422-420c-945f-10803a2e24de"
         },
         {
           "id": "5295ad47-2ce9-43c3-b9e7-e5a9482c362b",
@@ -4003,7 +4003,7 @@ ibmcloud hpcs uko vaults [--limit LIMIT] [--offset OFFSET] [--sort SORT] [--name
           "updated_at": "2022-03-09T10:57:43Z",
           "created_by": "IBMid-1308197YB4",
           "updated_by": "IBMid-1308197YB4",
-          "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
+          "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b"
         }
       ]
     }
@@ -4059,7 +4059,7 @@ ibmcloud hpcs uko vault-create --name NAME [--description DESCRIPTION]
       "created_by": "IBMid-1308197YB4",
       "updated_by": "IBMid-1308197YB4",
       "recovery_key_label": "TEKMF.AES.RECOVERY.00001",
-      "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b",
+      "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b",
       "keys_count": 100,
       "key_templates_count": 10,
       "keystores_count": 0
@@ -4155,7 +4155,7 @@ ibmcloud hpcs uko vault --id ID
       "created_by": "IBMid-1308197YB4",
       "updated_by": "IBMid-1308197YB4",
       "recovery_key_label": "TEKMF.AES.RECOVERY.00001",
-      "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b",
+      "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b",
       "keys_count": 100,
       "key_templates_count": 10,
       "keystores_count": 0
@@ -4220,7 +4220,7 @@ ibmcloud hpcs uko vault-update --id ID --if-match IF-MATCH [--name NAME] [--desc
       "created_by": "IBMid-1308197YB4",
       "updated_by": "IBMid-1308197YB4",
       "recovery_key_label": "TEKMF.AES.RECOVERY.00001",
-      "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud:9549/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b",
+      "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/vaults/5295ad47-2ce9-43c3-b9e7-e5a9482c362b",
       "keys_count": 100,
       "key_templates_count": 10,
       "keystores_count": 0
