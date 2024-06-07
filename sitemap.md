@@ -387,8 +387,6 @@ Find what you are looking for in the compilation of topics that are available in
 
     * Added: New API endpoints for existing service instances
 
-* [5 June 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-june52024)
-
     * Updated: New API endpoints in London
 
 * [29 May 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-may292024)
