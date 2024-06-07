@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-06-05"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -137,15 +137,11 @@ The following table lists the registration actions that generate an event:
 
 
 
-
-
 | Action                                  | Description                                              |
 | --------------------------------------- | -------------------------------------------------------- |
 | `hs-crypto.registrations.list`          | List registrations for any key.                           |
 | `hs-crypto.registrations.default`       | Invalid registration request event.                       |
 {: caption="Table 6. Registration actions" caption-side="bottom"}
-
-
 
 
 

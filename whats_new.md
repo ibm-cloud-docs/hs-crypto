@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-06-05"
+lastupdated: "2024-06-07"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -38,6 +38,8 @@ Added: New API endpoints for existing service instances
     For a complete list of the endpoint URL schemes and more information about which regions now support instance-based endpoint URLs, see [Instance-based endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints). Note that, for any new service instances created after the dates specified in the table, only instance-based endpoint URLs can be applied.
 
 
+Updated: New API endpoints in London
+:   If you create your instances in London after June 5, you need to use the new API endpoints for operations against your new instances. For more information about the supported regions and the new endpoint URLs, see [New endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints).
 
 ## 29 May 2024
 {: #hs-crypto-may292024}
