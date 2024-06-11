@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-06-04"
+lastupdated: "2024-06-11"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -64,19 +64,22 @@ For more information, check out [Assign a Key Vault access policy](https://docs.
 
 {{site.data.keyword.uko_full_notm}} requires the following access to be able to manage keys in AWS KMS:
 
-- `ListKeys`
+- `CancelKeyDeletion`
+- `CreateAlias`
 - `CreateKey`
+- `DeleteAlias`
+- `DeleteImportedKeyMaterial`
+- `DescribeKey`
+- `GetKeyPolicy`
 - `GetParametersForImport`
 - `ImportKeyMaterial`
-- `DeleteAlias`
-- `CreateAlias`
+- `ListAliases`
+- `ListKeys`
+- `ListKeyPolicies`
+- `ListResourceTags`
+- `ScheduleKeyDeletion`
 - `TagResource`
 - `UntagResource`
-- `DescribeKey`
-- `DeleteImportedKeyMaterial`
-- `ListResourceTags`
-- `ListAliases`
-- `ScheduleKeyDeletion`
 
 For more information, check out [AWS KMS permissions](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html){: external}.
 
