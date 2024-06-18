@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-06-04"
+lastupdated: "2024-06-18"
 
 keywords: rotate managed key, rotate key, managed key rotation, key rotation, key rewrap
 
@@ -17,6 +17,7 @@ subcollection: hs-crypto
 
 # Rotating managed keys manually
 {: #uko-rotate-keys}
+
 
 You can rotate your managed keys on demand by using {{site.data.keyword.uko_full_notm}} with the UI.
 {: shortdesc}

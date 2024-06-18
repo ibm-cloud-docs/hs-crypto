@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-06-18"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystore, key management, access control
 
@@ -67,6 +67,7 @@ To assign access to a vault for a user from the UI, complete the following steps
 
 You can also create an access policy through IAM [API](/apidocs/iam-policy-management#create-policy){: external} or [CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create){: external}.
 {: note} 
+
 
 
 ## What's next

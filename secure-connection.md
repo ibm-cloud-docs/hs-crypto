@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-06-05"
+lastupdated: "2024-06-18"
 
 keywords: securing connection, disabling public service endpoint
 
@@ -150,7 +150,6 @@ To perform key management and cryptographic operations thought a private endpoin
 2. Set the TKE_PRIVATE_ADDR environment variable to target the private endpoint for the Trusted Key Entry (TKE) plug-in. Replace *<region>* with the [short name of the location](/docs/hs-crypto?topic=hs-crypto-regions#available-regions) that your service instance is created in.
 
     ```
-    export TKE_PRIVATE_ADDR=https://tke.private.<region>.hs-crypto.cloud.ibm.com
     export TKE_PRIVATE_ADDR=https://tke.private.us-south.hs-crypto.cloud.ibm.com
     ```
     {: pre}
