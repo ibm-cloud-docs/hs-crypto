@@ -72,9 +72,8 @@ Follow these steps to complete the process:
     | {{site.data.keyword.keymanagementserviceshort}} |        30 days      | No|
     {: caption="Table 1. Key destruction policies" caption-side="bottom"}  
 	
-
-
-When the pending-destruction period ends, the key will be automatically moved to Destroyed state and can no longer be restored. 
+     When the pending-destruction period ends, the key will be automatically moved to Destroyed state and can no longer be restored. 
+ 
 
 6. After the pending-destruction period ends, you can purge the key and metadata from the vault by clicking the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**. 
 
