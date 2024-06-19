@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-06-04"
+lastupdated: "2024-06-19"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -56,16 +56,16 @@ Follow these steps to complete the process:
     For keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically after 90 days after they move to Destroyed state.
 
 
-        After you move a key from Deactivated to Destroyed state, the key will first be pending on destruction for a time period defined by the destruction policies of the external cloud providers. You cannot cancel pending destruction using the {{site.data.keyword.uko_full_notm}} UI or API. However, you might still do so through the third-party keystores that the keys are created in. When the time period ends, the key will be moved to Destroyed state. For any pending destruction keys, a `pending` flag is displayed in the corresponding key card or the key list. When you hover over the `pending` flag, you can see the date which it will end the pending state. Refer to the following table for detailed destruction policies of keystores.
+    After you move a key from Deactivated to Destroyed state, the key will first be pending on destruction for a time period defined by the destruction policies of the external cloud providers. You cannot cancel pending destruction using the {{site.data.keyword.uko_full_notm}} UI or API. However, you might still do so through the third-party keystores that the keys are created in. When the time period ends, the key will be moved to Destroyed state. For any pending destruction keys, a `pending` flag is displayed in the corresponding key card or the key list. When you hover over the `pending` flag, you can see the date which it will end the pending state. Refer to the following table for detailed destruction policies of keystores.
 
-        | Keystore type       | Key pending destruction policy  |  Pending period customizable on the external cloud provider side? (Yes/No)|  
-        |-------------|-----------------|-------------|
-        | AWS keystore |        7 days       | No|  
-        | Azure Key Vault      |        90 days      | Yes| 
-        | Google Cloud KMS keystore|        30 days   | Yes| 
-        | {{site.data.keyword.cloud_notm}} KMS keystore |        30 days       | No|
-        | {{site.data.keyword.keymanagementserviceshort}} |        30 days      | No|
-        {: caption="Table 1. Key destruction policies" caption-side="bottom"}  
+    | Keystore type       | Key pending destruction policy  |  Pending period customizable on the external cloud provider side? (Yes/No)|  
+    |-------------|-----------------|-------------|
+    | AWS keystore |        7 days       | No|  
+    | Azure Key Vault      |        90 days      | Yes| 
+    | Google Cloud KMS keystore|        30 days   | Yes| 
+    | {{site.data.keyword.cloud_notm}} KMS keystore |        30 days       | No|
+    | {{site.data.keyword.keymanagementserviceshort}} |        30 days      | No|
+    {: caption="Table 1. Key destruction policies" caption-side="bottom"}  
 	
     Note that for keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically after 60 days when they move to Destroyed state.
 
