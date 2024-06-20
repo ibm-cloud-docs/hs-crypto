@@ -383,6 +383,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
 
+* [19 June 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-june192024)
+
+    * Updated: New API endpoints in Tokyo
+
 * [5 June 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-june2024)
 
     * Added: New API endpoints for existing service instances
