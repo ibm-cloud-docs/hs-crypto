@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-06-19"
+lastupdated: "2024-06-20"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -63,23 +63,13 @@ Follow these steps to complete the process:
     | {{site.data.keyword.cloud_notm}} KMS keystore |        30 days       | No|
     | {{site.data.keyword.keymanagementserviceshort}} |        30 days      | No|
     {: caption="Table 1. Key destruction policies" caption-side="bottom"}  
-    | Keystore type       | Key pending destruction policy  |  Pending period customizable on the external cloud provider side? (Yes/No)|  
-    |-------------|-----------------|-------------|
-    | AWS keystore |        7 days       | No|  
-    | Azure Key Vault      |        90 days      | Yes| 
-    | Google Cloud KMS keystore|        30 days   | Yes| 
-    | {{site.data.keyword.cloud_notm}} KMS keystore |        30 days       | No|
-    | {{site.data.keyword.keymanagementserviceshort}} |        30 days      | No|
-    {: caption="Table 1. Key destruction policies" caption-side="bottom"}  
-	
-     When the pending-destruction period ends, the key will be automatically moved to Destroyed state and can no longer be restored. 
+    
+     When the pending-destruction period ends, the key will be automatically moved to Destroyed state and can no longer be restored. For keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically in 60 days after the pending-destruction period ends.
  
 
-6. After the pending-destruction period ends, you can purge the key and metadata from the vault by clicking the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**. 
+6. After the pending-destruction period ends, you can delete the key and metadata from the vault by clicking the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**. 
 
-   This action proactively purges the managed key. After a key is purged, the associated key metadata is removed permanently. 
-   
-   For keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically in 60 days after the pending-destruction period ends even if you don't perform the `Remove from vault` action.
+   This action proactively deletes the managed key. After a key is removed from vault, the associated key metadata is removed permanently. 
 
 The managed key has been deleted and unlinked from all keystores. All key materials and metadata have been purged. 
 

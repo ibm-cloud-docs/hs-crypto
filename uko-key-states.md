@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-06-19"
+lastupdated: "2024-06-20"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator, UKO keys
 
@@ -43,7 +43,7 @@ The following table shows the details of each key state.
 
 1: If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. An `Out of sync` flag is also displayed in the corresponding keystore card or the key list. There can be multiple reasons why the key is out of sync. For example, there is an issue in relinking the key in the keystore,the key is failed to be destroyed in some of the distributed keystores, or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. You can sync the key state by clicking **Sync key** on the Key details page.
 
-2: After you move a key from Deactivated to Destroyed state, the key will first be pending on destruction for a time period defined by the destruction policies of the external cloud providers. You cannot cancel pending destruction using the {{site.data.keyword.uko_full_notm}} UI or API. However, you might still do so through the third-party keystores that the keys are created in. When the pending-destruction period ends, the key is automatically moved to Destroyed state and can no longer to restored. You can then purge the key. Refer to [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys&interface=ui) for detailed destruction policies of keystores.
+2: After you move a key from Deactivated to Destroyed state, the key will first be pending on destruction for a time period defined by the destruction policies of the external cloud providers. When the pending-destruction period ends, the key is automatically moved to Destroyed state and can no longer to restored. Refer to [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys&interface=ui) for detailed destruction policies of keystores.
 
 For Azure Key Vault and Google Cloud KMS keystore, you can customize the pending destruction time period if you want to on the external cloud provider side. If you apply different customized pending destruction periods to more that one keystore that the key is distributed to, the pending destruction period of the key will also vary based on your settings. For more information about customizing destruction pending policies, see the following topics:
 - [Azure Key Vault soft-delete overview](https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview){: external}.

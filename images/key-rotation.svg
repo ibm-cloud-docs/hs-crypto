@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1056" height="792" viewBox="0 0 1056 792">
+    <defs>
+        <style>.cls-1{fill:#f4f4f4;}.cls-1,.cls-10,.cls-11,.cls-13,.cls-16,.cls-17,.cls-2,.cls-20,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke:#000;}.cls-1,.cls-10,.cls-11,.cls-2,.cls-20,.cls-3,.cls-5{stroke-miterlimit:10;}.cls-10,.cls-2,.cls-23,.cls-29{fill:#fff;}.cls-2,.cls-8{stroke-dasharray:2;}.cls-11,.cls-13,.cls-20,.cls-3,.cls-7,.cls-8{fill:none;}.cls-3{stroke:#50565b;}.cls-20,.cls-3{stroke-width:2px;}.cls-4{fill:#50565b;}.cls-5{fill:#e3f6ff;}.cls-12,.cls-6,.cls-9{fill:#b3e6ff;}.cls-13,.cls-14,.cls-15,.cls-16,.cls-17,.cls-6,.cls-7,.cls-8,.cls-9{stroke-linejoin:round;}.cls-10,.cls-11,.cls-13,.cls-14,.cls-16,.cls-7,.cls-8,.cls-9{stroke-linecap:round;}.cls-7{stroke-dasharray:2 2;}.cls-14,.cls-15{fill:#dbfbfb;stroke:#20d5d2;}.cls-16,.cls-17,.cls-21{fill:#87eded;}.cls-18{fill:#f2f4f8;}.cls-19{fill:#20d5d2;}.cls-22{fill:#333;}.cls-24,.cls-26{font-size:16px;}.cls-24,.cls-25,.cls-29{font-family:IBMPlexSans, IBM Plex Sans;}.cls-25,.cls-29{font-size:14px;}.cls-26,.cls-27,.cls-28{font-family:IBMPlexSans-SemiBold, IBM Plex Sans;font-weight:600;}.cls-28{font-size:18px;}</style>
+    </defs>
+    <g id="Layer_1" data-name="Layer 1">
+        <rect class="cls-1" x="282.1755" y="149.8316" width="395.0645" height="527.9823" />
+        <rect class="cls-2" x="506.1811" y="195.1836" width="143.9066" height="446.6536" />
+        <rect class="cls-1" x="722.0411" y="149.8316" width="295.9589" height="202.2839" />
+        <line class="cls-3" x1="72.4248" y1="226.9891" x2="277.1133" y2="226.9891" />
+        <polygon class="cls-4" points="275.946 230.978 282.854 226.989 275.946 223 275.946 230.978" />
+        <rect class="cls-5" x="306.5871" y="362.5941" width="159.03" height="147.8516" />
+        <g id="Hardware">
+            <rect class="cls-6" x="358.9499" y="412.5786" width="54.3044" height="14.3747" />
+            <polygon class="cls-6" points="413.254 412.046 358.95 412.046 368.533 391.283 403.671 391.283 413.254 412.046" />
+            <rect x="393.2895" y="416.5715" width="6.3888" height="6.3888" />
+            <rect x="402.074" y="416.5715" width="6.3888" height="6.3888" />
+        </g>
+        <line class="cls-7" x1="654.3935" y1="226.9891" x2="738.7783" y2="226.9891" />
+        <polygon points="655.269 229.981 650.088 226.989 655.269 223.997 655.269 229.981" />
+        <polygon points="737.903 229.981 743.084 226.989 737.903 223.997 737.903 229.981" />
+        <line class="cls-8" x1="394.8571" y1="226.9891" x2="504.8235" y2="226.9891" />
+        <line class="cls-7" x1="848.9776" y1="256.9007" x2="900.3339" y2="256.9007" />
+        <polygon points="899.458 259.892 904.64 256.901 899.458 253.909 899.458 259.892" />
+        <g id="key">
+            <path class="cls-9" d="M945.0257,253.261a15.857,15.857,0,1,1-8.15-7.0852" />
+            <circle cx="927.5211" cy="264.5911" r="3.394" />
+            <polyline class="cls-6" points="936.875 246.176 959.266 223.786 967.647 223.786 967.647 231.01 953.57 245.088 948.545 245.111 948.545 249.742 945.026 253.261" />
+        </g>
+        <g id="Doc">
+            <polygon class="cls-10" points="924.244 226.566 924.244 277.476 964.972 277.476 964.972 236.748 954.79 226.566 924.244 226.566" />
+            <polyline class="cls-11" points="954.79 226.566 954.79 236.748 964.972 236.748" />
+            <line class="cls-11" x1="932.3892" y1="258.1304" x2="950.2079" y2="258.1304" />
+            <line class="cls-11" x1="932.3892" y1="242.6876" x2="956.8262" y2="242.6876" />
+            <line class="cls-11" x1="932.3892" y1="250.3241" x2="956.8262" y2="250.3241" />
+        </g>
+        <g id="lock">
+            <g id="lock-2" data-name="lock">
+                <rect class="cls-12" x="960.9804" y="265.4638" width="9.5033" height="5.4304" />
+                <path class="cls-9" d="M976.5929,278.4945a10.8609,10.8609,0,1,1-10.8609-10.8608A10.8607,10.8607,0,0,1,976.5929,278.4945Zm-5.43-9.4076v-6.8837a5.43,5.43,0,0,0-10.8609,0v6.8837m5.43,8.8646v3.8013" />
+                <circle cx="965.732" cy="277.9515" r="1.6291" />
+            </g>
+        </g>
+        <path class="cls-13" d="M954.9933,280.1939c-1.5476-.801-3.1225-1.697-4.738-2.7152-1.8057-1.1269-3.6384-2.403-5.4848-3.7878-1.0046-.76-2.0092-1.5476-3.0139-2.3758a100.0028,100.0028,0,0,1-7.589-6.8695,101.6523,101.6523,0,0,1-7.2089-7.9963c-.9639-1.1811-1.86-2.3623-2.7152-3.53-.4616-.6245-.8961-1.249-1.3169-1.86-.7331-1.0725-1.4391-2.1315-2.0772-3.19-6.3807-10.2907-8.39-19.4138-4.3307-23.4731,3.5569-3.5569,11.0238-2.4573,19.74,2.1722" />
+        <g id="key-2" data-name="key">
+            <path class="cls-14" d="M339.9288,227.9433a15.857,15.857,0,1,1-.7531-10.7731" />
+            <circle cx="319.5396" cy="223.5773" r="3.394" />
+            <polyline class="cls-15" points="339.176 217.17 370.84 217.17 376.767 223.097 371.659 228.205 351.75 228.205 348.181 224.669 344.906 227.943 339.929 227.943" />
+        </g>
+        <g id="key-3" data-name="key">
+            <path class="cls-16" d="M807.7566,253.7693a15.857,15.857,0,1,1-8.15-7.0852" />
+            <circle cx="790.2519" cy="265.0995" r="3.394" />
+            <polyline class="cls-17" points="799.606 246.684 821.996 224.294 830.378 224.294 830.378 231.518 816.3 245.596 811.276 245.619 811.276 250.25 807.757 253.769" />
+        </g>
+        <g id="key-4" data-name="key">
+            <path class="cls-9" d="M802.4767,249.4494a15.857,15.857,0,1,1-8.15-7.0852" />
+            <circle cx="784.9721" cy="260.7796" r="3.394" />
+            <polyline class="cls-6" points="794.326 242.364 816.717 219.974 825.098 219.974 825.098 227.198 811.021 241.276 805.996 241.299 805.996 245.93 802.477 249.449" />
+        </g>
+        <path class="cls-18" d="M755.3025,400.1827h258.0187a4,4,0,0,1,4,4v70.7414a4,4,0,0,1-4,4H755.3025a0,0,0,0,1,0,0V400.1827A0,0,0,0,1,755.3025,400.1827Z" />
+        <path class="cls-18" d="M105.0074,228.4451H223.1195a0,0,0,0,1,0,0v35.3707a4,4,0,0,1-4,4H109.0074a4,4,0,0,1-4-4V228.4451A0,0,0,0,1,105.0074,228.4451Z" />
+        <g id="key-5" data-name="key">
+            <path class="cls-14" d="M563.2593,479.102a15.857,15.857,0,1,1-.7531-10.7731" />
+            <circle class="cls-19" cx="542.87" cy="474.736" r="3.394" />
+            <polyline class="cls-15" points="562.506 468.329 594.171 468.329 600.097 474.256 594.989 479.364 575.08 479.364 571.511 475.828 568.237 479.102 563.259 479.102" />
+        </g>
+        <g id="key-6" data-name="key">
+            <path class="cls-14" d="M563.2593,386.7846a15.857,15.857,0,1,1-.7531-10.7731" />
+            <circle class="cls-19" cx="542.87" cy="382.4186" r="3.394" />
+            <polyline class="cls-15" points="562.506 376.011 594.171 376.011 600.097 381.938 594.989 387.047 575.08 387.047 571.511 383.51 568.237 386.785 563.259 386.785" />
+        </g>
+        <g id="key-7" data-name="key">
+            <path class="cls-14" d="M563.2593,294.4671a15.857,15.857,0,1,1-.7531-10.7731" />
+            <circle class="cls-19" cx="542.87" cy="290.1011" r="3.394" />
+            <polyline class="cls-15" points="562.506 283.694 594.171 283.694 600.097 289.621 594.989 294.729 575.08 294.729 571.511 291.193 568.237 294.467 563.259 294.467" />
+        </g>
+        <g id="key-8" data-name="key">
+            <path class="cls-16" d="M563.2593,570.7412a15.8569,15.8569,0,1,1-.7531-10.7732" />
+            <circle cx="542.87" cy="566.3751" r="3.394" />
+            <polyline class="cls-17" points="562.506 559.968 594.171 559.968 600.097 565.895 594.989 571.003 575.08 571.003 571.511 567.467 568.237 570.741 563.259 570.741" />
+        </g>
+        <line class="cls-20" x1="255.7021" y1="96.206" x2="255.7021" y2="709.7177" />
+        <g id="lock-3" data-name="lock">
+            <g id="lock-4" data-name="lock">
+                <rect class="cls-21" x="818.4314" y="265.7251" width="9.5033" height="5.4304" />
+                <path class="cls-16" d="M823.183,282.0165v-3.8014m-5.43-8.8651v-6.8831a4.1694,4.1694,0,0,1,.0543-.72,5.427,5.427,0,0,1,10.8065.72V269.35m0,0c-.2172-.1222-.448-.2443-.6788-.353a10.7243,10.7243,0,0,0-4.7516-1.1,11.2447,11.2447,0,0,0-2.3622.2579,10.8417,10.8417,0,0,0-2.3894.8417c-.2308.1087-.4617.2308-.6788.353a10.8609,10.8609,0,1,0,10.8608,0Z" />
+                <circle cx="823.183" cy="278.2128" r="1.6291" />
+            </g>
+        </g>
+        <path class="cls-13" d="M779.3729,244.2613c-4.3036-6.7473-5.9192-12.3-3.7063-14.5128,3-3,12.11,1.0182,22.0341,9.2317q2.5251,2.0772,5.091,4.5073c.6652.6245,1.33,1.2761,1.9957,1.9414l.8553.8553c1.6291,1.67,3.1632,3.3533,4.5751,5.0231a72.9535,72.9535,0,0,1,7.5891,10.44" />
+        <path class="cls-13" d="M813.1638,274.5768a38.216,38.216,0,0,1-6.7473-3.4348" />
+        <circle class="cls-22" cx="43.3073" cy="215.7434" r="8.1457" />
+        <path class="cls-22" d="M57.5622,237.4651v4.0728h-28.51v-4.0728a12.2544,12.2544,0,0,1,12.2185-12.2185h4.0729A12.2544,12.2544,0,0,1,57.5622,237.4651Z" />
+        <g id="key-9" data-name="key">
+            <path class="cls-14" d="M339.9288,233.3738a15.8569,15.8569,0,1,1-.7531-10.7732" />
+            <circle cx="319.5396" cy="229.0078" r="3.394" />
+            <polyline class="cls-15" points="339.176 222.601 370.84 222.601 376.767 228.527 371.659 233.636 351.75 233.636 348.181 230.099 344.906 233.374 339.929 233.374" />
+        </g>
+        <g id="key-10" data-name="key">
+            <path class="cls-16" d="M339.9288,238.8042a15.857,15.857,0,1,1-.7531-10.7731" />
+            <circle cx="319.5396" cy="234.4382" r="3.394" />
+            <polyline class="cls-17" points="339.176 228.031 370.84 228.031 376.767 233.958 371.659 239.066 351.75 239.066 348.181 235.53 344.906 238.804 339.929 238.804" />
+        </g>
+        <line class="cls-8" x1="340.5527" y1="296.3255" x2="340.5527" y2="362.8484" />
+        <line class="cls-8" x1="340.5527" y1="510.8279" x2="340.5527" y2="565.1323" />
+        <line class="cls-7" x1="497.8025" y1="565.1323" x2="340.5527" y2="565.1323" />
+        <polygon points="496.927 562.14 502.108 565.132 496.927 568.124 496.927 562.14" />
+        <line class="cls-8" x1="650.0877" y1="565.1323" x2="755.9813" y2="565.1323" />
+        <line class="cls-7" x1="755.9813" y1="565.1323" x2="755.9813" y2="356.2933" />
+        <polygon points="758.973 357.169 755.981 351.988 752.99 357.169 758.973 357.169" />
+        <circle class="cls-19" cx="623.6143" cy="564.4535" r="8.1457" />
+        <polygon class="cls-23" points="622.408 567.053 619.022 563.667 618.32 564.306 621.706 567.692 622.408 568.395 629.181 561.622 628.478 560.92 622.408 567.053" />
+        <circle class="cls-4" cx="161.1444" cy="206.9038" r="11.5397" />
+        <circle class="cls-4" cx="318.8309" cy="326.193" r="11.5397" />
+        <circle class="cls-4" cx="700.3193" cy="206.7232" r="11.5397" />
+        <circle class="cls-4" cx="734.2595" cy="438.8746" r="11.5397" />
+        <circle class="cls-4" cx="44.5938" cy="414.4376" r="11.5397" />
+        <circle class="cls-4" cx="44.5938" cy="473.2674" r="11.5397" />
+        <circle class="cls-4" cx="44.5938" cy="532.0971" r="11.5397" />
+        <circle class="cls-4" cx="44.5938" cy="590.9269" r="11.5397" />
+    </g>
+    <g id="Text">
+        <text class="cls-24" transform="translate(895.8301 310.7879)">Wrapped data</text>
+        <text class="cls-24" transform="translate(318.4883 464.4061)">
+            Hardware security
+            <tspan x="40.3994" y="19.2002">module</tspan>
+        </text>
+        <text class="cls-25" transform="translate(766.4512 427.5838)">
+            Hyper Protect Crypto Services uses
+            <tspan x="0" y="16.7998">the latest root key material to protect </tspan>
+            <tspan x="0" y="33.5996">Data Encryption Keys (DEKs)</tspan>
+        </text>
+        <text class="cls-25" transform="translate(128.3755 249.7372)">Rotate key</text>
+        <text class="cls-26" transform="translate(305.4351 181.4628)">Hyper Protect Crypto Services</text>
+        <text class="cls-26" transform="translate(742.585 181.4628)">Cloud service</text>
+        <text class="cls-24" transform="translate(542.5908 231.5497)">
+            Root key
+            <tspan class="cls-27" x="66.5273" y="0">A</tspan>
+        </text>
+        <text class="cls-24" transform="translate(309.0815 279.0663)">
+            Root key
+            <tspan class="cls-27" x="66.5273" y="0">A</tspan>
+        </text>
+        <text class="cls-24" transform="translate(532.3389 425.6864)">Key 2</text>
+        <text class="cls-24" transform="translate(532.3389 517.326)">Key 3</text>
+        <text class="cls-24" transform="translate(532.6074 608.9647)">Latest key</text>
+        <text class="cls-24" transform="translate(532.3389 334.0467)">Key 1</text>
+        <text class="cls-24" transform="translate(756.9531 310.7879)">Wrapped DEK</text>
+        <text class="cls-26" transform="translate(281.7446 119.3456)">IBM Cloud</text>
+        <text class="cls-28" transform="translate(33.3911 65.2831)">Key rotation</text>
+        <text class="cls-25" transform="translate(72.5005 413.9881)">
+            Hyper Protect Crypto
+            <tspan x="0" y="16.7998">Services receives a request </tspan>
+            <tspan x="0" y="33.5996">to rotate your root key</tspan>
+        </text>
+        <text class="cls-25" transform="translate(72.5005 472.8172)">
+            The service generates new
+            <tspan x="0" y="16.7998">key material and retires </tspan>
+            <tspan x="0" y="33.5996">the previous key material</tspan>
+        </text>
+        <text class="cls-25" transform="translate(72.5005 531.6473)">
+            The latest key material
+            <tspan x="0" y="16.7998">becomes available for </tspan>
+            <tspan x="0" y="33.5996">wrap operations</tspan>
+        </text>
+        <text class="cls-25" transform="translate(72.5005 590.4774)">
+            Retired key material
+            <tspan x="0" y="16.7998">remains available for </tspan>
+            <tspan x="0" y="33.5996">unwrap operations</tspan>
+        </text>
+        <text class="cls-29" transform="translate(156.6655 211.4139)">1</text>
+        <text class="cls-29" transform="translate(314.3521 330.703)">2</text>
+        <text class="cls-29" transform="translate(695.8398 211.2333)">4</text>
+        <text class="cls-29" transform="translate(729.7813 443.3846)">3</text>
+        <text class="cls-29" transform="translate(40.1147 418.9481)">1</text>
+        <text class="cls-29" transform="translate(40.1147 477.7772)">2</text>
+        <text class="cls-29" transform="translate(40.1147 536.6063)">3</text>
+        <text class="cls-29" transform="translate(40.1147 595.4364)">4</text>
+    </g>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1056" height="365" viewBox="0 0 1056 365">
+    <defs>
+        <style>.cls-1{fill:#f2f4f8;}.cls-1,.cls-2,.cls-3,.cls-4,.cls-5{stroke:#000;}.cls-1,.cls-2,.cls-3,.cls-4{stroke-miterlimit:10;}.cls-2{fill:#dbfbfb;}.cls-3{fill:#b3e6ff;}.cls-4{fill:#f7f1ff;}.cls-5{fill:none;stroke-linecap:round;stroke-linejoin:round;}.cls-6{font-size:16px;font-family:IBMPlexSans, IBM Plex Sans;}.cls-7{font-size:18px;font-family:IBMPlexSans-SemiBold, IBM Plex Sans;font-weight:600;}</style>
+    </defs>
+    <g id="Layer_1" data-name="Layer 1">
+        <rect class="cls-1" x="462.3068" y="52.901" width="141.545" height="56.618" rx="4" />
+        <rect class="cls-2" x="271.1022" y="171.5279" width="141.545" height="56.618" rx="4" />
+        <rect class="cls-3" x="271.1022" y="288.5734" width="141.545" height="56.618" rx="4" />
+        <rect class="cls-3" x="462.3068" y="288.5734" width="141.545" height="56.618" rx="4" />
+        <rect class="cls-3" x="653.5115" y="288.5734" width="141.545" height="56.618" rx="4" />
+        <rect class="cls-3" x="462.3068" y="171.0911" width="141.545" height="56.618" rx="4" />
+        <rect class="cls-4" x="653.5115" y="171.0911" width="141.545" height="56.618" rx="4" />
+        <line class="cls-5" x1="342.1231" y1="141.3666" x2="724.2945" y2="141.3666" />
+        <line class="cls-5" x1="341.8747" y1="141.3666" x2="341.8747" y2="168.9679" />
+        <line class="cls-5" x1="724.2839" y1="141.3666" x2="724.2839" y2="168.9679" />
+        <line class="cls-5" x1="533.4918" y1="112.6067" x2="533.4918" y2="169.6756" />
+        <line class="cls-5" x1="342.1231" y1="260.2644" x2="724.2945" y2="260.2644" />
+        <line class="cls-5" x1="341.8747" y1="260.2644" x2="341.8747" y2="287.8657" />
+        <line class="cls-5" x1="724.2839" y1="260.2644" x2="724.2839" y2="287.8657" />
+        <line class="cls-5" x1="533.4918" y1="230.089" x2="533.4918" y2="287.1579" />
+    </g>
+    <g id="text">
+        <text class="cls-6" transform="translate(510.0195 86.165)">Object</text>
+        <text class="cls-6" transform="translate(324.1255 203.6474)">Data</text>
+        <text class="cls-6" transform="translate(303.0811 320.6929)">Public key</text>
+        <text class="cls-6" transform="translate(493.167 320.6929)">Private key</text>
+        <text class="cls-6" transform="translate(684.5049 320.6929)">Secret key</text>
+        <text class="cls-6" transform="translate(519.4629 203.2104)">Key</text>
+        <text class="cls-6" transform="translate(684.8613 203.2104)">Certificate</text>
+        <text class="cls-7" transform="translate(23.1465 36.5156)">Object classes</text>
+    </g>
+</svg>

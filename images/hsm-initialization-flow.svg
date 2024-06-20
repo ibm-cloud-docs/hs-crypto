@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1056" height="535" viewBox="0 0 1056 535">
+    <defs>
+        <style>.cls-1,.cls-6,.cls-7,.cls-8{fill:#f2f4f8;}.cls-13,.cls-14,.cls-15,.cls-17,.cls-2,.cls-3,.cls-4,.cls-5{fill:none;}.cls-13,.cls-14,.cls-2,.cls-3,.cls-4,.cls-5{stroke:#9fa5ad;}.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke-linejoin:round;}.cls-3{stroke-dasharray:2.0079 2.0079;}.cls-4{stroke-dasharray:1.9694 1.9694;}.cls-5{stroke-dasharray:1.9959 1.9959;}.cls-6{stroke:#009e9a;}.cls-7{stroke:#a970ff;}.cls-17,.cls-8,.cls-9{stroke:#1193e8;}.cls-9{fill:#fff;}.cls-10{font-size:16px;}.cls-10,.cls-12{font-family:IBMPlexSans-SemiBold, IBM Plex Sans;font-weight:600;}.cls-11{font-size:12px;font-family:IBMPlexSans, IBM Plex Sans;}.cls-12{font-size:18px;}.cls-13,.cls-14,.cls-15,.cls-17{stroke-miterlimit:10;}.cls-14{stroke-dasharray:1.9994 1.9994;}.cls-15{stroke:#50565b;stroke-width:2px;}.cls-16{fill:#50565b;}</style>
+    </defs>
+    <g id="Square">
+        <rect class="cls-1" x="239.4666" y="400.9369" width="341.334" height="94.5631" />
+        <polyline class="cls-2" points="580.801 494.5 580.801 495.5 579.801 495.5" />
+        <line class="cls-3" x1="577.7927" y1="495.5" x2="241.4706" y2="495.5" />
+        <polyline class="cls-2" points="240.467 495.5 239.467 495.5 239.467 494.5" />
+        <line class="cls-4" x1="239.4666" y1="492.5306" x2="239.4666" y2="402.9216" />
+        <polyline class="cls-2" points="239.467 401.937 239.467 400.937 240.467 400.937" />
+        <line class="cls-3" x1="242.4745" y1="400.9369" x2="578.7967" y2="400.9369" />
+        <polyline class="cls-2" points="579.801 400.937 580.801 400.937 580.801 401.937" />
+        <line class="cls-4" x1="580.8006" y1="403.9063" x2="580.8006" y2="493.5153" />
+        <rect class="cls-1" x="603.4699" y="400.9369" width="391.2063" height="94.5631" />
+        <polyline class="cls-2" points="994.676 494.5 994.676 495.5 993.676 495.5" />
+        <line class="cls-5" x1="991.6802" y1="495.5" x2="605.4678" y2="495.5" />
+        <polyline class="cls-2" points="604.47 495.5 603.47 495.5 603.47 494.5" />
+        <line class="cls-4" x1="603.4698" y1="492.5306" x2="603.4698" y2="402.9216" />
+        <polyline class="cls-2" points="603.47 401.937 603.47 400.937 604.47 400.937" />
+        <line class="cls-5" x1="606.4658" y1="400.9369" x2="992.6782" y2="400.9369" />
+        <polyline class="cls-2" points="993.676 400.937 994.676 400.937 994.676 401.937" />
+        <line class="cls-4" x1="994.6761" y1="403.9063" x2="994.6761" y2="493.5153" />
+        <rect class="cls-6" x="212.9113" y="82.2722" width="129.5385" height="64.7693" rx="4" />
+        <rect class="cls-6" x="386.7088" y="82.2722" width="129.5385" height="64.7693" rx="4" />
+        <rect class="cls-6" x="560.5063" y="82.2722" width="129.5385" height="64.7693" rx="4" />
+        <rect class="cls-7" x="212.9113" y="200.1522" width="129.5385" height="64.7693" rx="4" />
+        <rect class="cls-7" x="386.7088" y="200.1522" width="129.5385" height="64.7693" rx="4" />
+        <rect class="cls-8" x="212.9113" y="318.0322" width="129.5385" height="64.7693" rx="4" />
+        <rect class="cls-8" x="386.7088" y="318.0322" width="129.5385" height="64.7693" rx="4" />
+        <rect class="cls-8" x="560.5063" y="318.0322" width="129.5385" height="64.7693" rx="4" />
+        <rect class="cls-8" x="734.3038" y="318.0322" width="129.5385" height="64.7693" rx="4" />
+        <rect class="cls-9" x="255.659" y="416.4815" width="103.6308" height="64.7693" rx="4" />
+        <rect class="cls-9" x="386.7088" y="416.4815" width="177.8996" height="64.7693" rx="4" />
+        <rect class="cls-9" x="619.6622" y="416.4815" width="103.6308" height="64.7693" rx="4" />
+        <rect class="cls-9" x="747.9053" y="416.4815" width="103.6308" height="64.7693" rx="4" />
+        <rect class="cls-9" x="876.1484" y="416.4815" width="103.6308" height="64.7693" rx="4" />
+        <rect class="cls-6" x="734.3038" y="82.2722" width="129.5385" height="64.7693" rx="4" />
+    </g>
+    <g id="Text">
+        <text class="cls-10" transform="translate(73.0103 107.5684)">
+            Set up the
+            <tspan x="0" y="19.2002">environment</tspan>
+        </text>
+        <text class="cls-10" transform="translate(73.0103 217.6763)">
+            Manage
+            <tspan x="0" y="19.2002">crypto units in a </tspan>
+            <tspan x="0" y="38.3999">service instance</tspan>
+        </text>
+        <text class="cls-10" transform="translate(72.9678 345.1816)">
+            Load
+            <tspan x="0" y="19.2002">master key</tspan>
+        </text>
+        <text class="cls-11" transform="translate(243.4136 110.7305)">
+            Install IBM
+            <tspan x="5.1724" y="14.3999">Cloud CLI</tspan>
+        </text>
+        <text class="cls-11" transform="translate(777.9258 110.7305)">
+            Log in to
+            <tspan x="-5.4717" y="14.3999">IBM Cloud</tspan>
+        </text>
+        <text class="cls-11" transform="translate(422.7534 110.7305)">
+            Install TKE
+            <tspan x="-0.084" y="14.3999">CLI plug-in</tspan>
+        </text>
+        <text class="cls-11" transform="translate(231.2729 227.7656)">
+            Display assigned
+            <tspan x="14.5679" y="14.3999">crypto units</tspan>
+        </text>
+        <text class="cls-11" transform="translate(440.3389 228.125)">
+            Add
+            <tspan x="-21.1138" y="14.3999">crypto units</tspan>
+        </text>
+        <text class="cls-11" transform="translate(256.8428 345.2051)">
+            Create
+            <tspan x="-21.1738" y="14.4004">signature keys</tspan>
+        </text>
+        <text class="cls-11" transform="translate(429.853 345.4238)">
+            Manage
+            <tspan x="-18.2036" y="14.4004">administrators</tspan>
+        </text>
+        <text class="cls-11" transform="translate(586.748 345.5645)">
+            Create master
+            <tspan x="13.4277" y="14.4004">key parts</tspan>
+        </text>
+        <text class="cls-11" transform="translate(765.3428 345.2051)">
+            Load master
+            <tspan x="23.9814" y="14.4004">key</tspan>
+        </text>
+        <text class="cls-11" transform="translate(442.4014 436.3604)">
+            Set quorum
+            <tspan x="-36.3657" y="14.4004">authentication thresholds</tspan>
+            <tspan x="-21.6479" y="28.7998">to exit imprint mode</tspan>
+        </text>
+        <text class="cls-11" transform="translate(625.959 442.043)">
+            Load new master
+            <tspan x="14.6035" y="14.4004">key register</tspan>
+        </text>
+        <text class="cls-11" transform="translate(758.6621 443.7734)">
+            Commit master
+            <tspan x="9.9961" y="14.4004">key register</tspan>
+        </text>
+        <text class="cls-11" transform="translate(906.0645 444.9268)">
+            Activate
+            <tspan x="-7.8066" y="14.4004">master key</tspan>
+        </text>
+        <text class="cls-11" transform="translate(296.876 444.4922)">
+            Add
+            <tspan x="-28.5479" y="14.4004">administrators</tspan>
+        </text>
+        <text class="cls-11" transform="translate(608.1924 103.2056)">
+            Set up
+            <tspan x="-21.2275" y="14.3999">local directory</tspan>
+            <tspan x="-13.8477" y="28.7998">for key files</tspan>
+        </text>
+        <text class="cls-12" transform="translate(29.0892 43.992)">Task flow of service instance initialization with IBM Cloud TKE CLI plug-in</text>
+    </g>
+    <g id="Line">
+        <line class="cls-13" x1="74.9527" y1="174.8922" x2="75.9527" y2="174.8922" />
+        <line class="cls-14" x1="77.9521" y1="174.8922" x2="992.6765" y2="174.8922" />
+        <line class="cls-13" x1="993.6761" y1="174.8922" x2="994.6761" y2="174.8922" />
+        <line class="cls-13" x1="75.2766" y1="291.4768" x2="76.2766" y2="291.4768" />
+        <line class="cls-14" x1="78.276" y1="291.4768" x2="993.0003" y2="291.4768" />
+        <line class="cls-13" x1="994" y1="291.4768" x2="995" y2="291.4768" />
+        <line class="cls-15" x1="346.3359" y1="114.6568" x2="378.1611" y2="114.6568" />
+        <polygon class="cls-16" points="376.994 118.646 383.902 114.657 376.994 110.668 376.994 118.646" />
+        <line class="cls-15" x1="519.9175" y1="114.6568" x2="551.7427" y2="114.6568" />
+        <polygon class="cls-16" points="550.576 118.646 557.484 114.657 550.576 110.668 550.576 118.646" />
+        <line class="cls-15" x1="346.3359" y1="232.5368" x2="378.1611" y2="232.5368" />
+        <polygon class="cls-16" points="376.994 236.526 383.902 232.537 376.994 228.548 376.994 236.526" />
+        <line class="cls-15" x1="346.3359" y1="350.4169" x2="378.1611" y2="350.4169" />
+        <polygon class="cls-16" points="376.994 354.406 383.902 350.417 376.994 346.428 376.994 354.406" />
+        <line class="cls-15" x1="363.1759" y1="448.8661" x2="378.1611" y2="448.8661" />
+        <polygon class="cls-16" points="376.994 452.855 383.902 448.866 376.994 444.877 376.994 452.855" />
+        <line class="cls-15" x1="725.8837" y1="448.8661" x2="740.8689" y2="448.8661" />
+        <polygon class="cls-16" points="739.702 452.855 746.61 448.866 739.702 444.877 739.702 452.855" />
+        <line class="cls-15" x1="854.1269" y1="448.8661" x2="869.1121" y2="448.8661" />
+        <polygon class="cls-16" points="867.945 452.855 874.853 448.866 867.945 444.877 867.945 452.855" />
+        <line class="cls-15" x1="519.9175" y1="350.4169" x2="551.7427" y2="350.4169" />
+        <polygon class="cls-16" points="550.576 354.406 557.484 350.417 550.576 346.428 550.576 354.406" />
+        <line class="cls-15" x1="693.4991" y1="350.4169" x2="725.3243" y2="350.4169" />
+        <polygon class="cls-16" points="724.157 354.406 731.065 350.417 724.157 346.428 724.157 354.406" />
+        <line class="cls-17" x1="449.9667" y1="382.8015" x2="449.9667" y2="400.9369" />
+        <line class="cls-17" x1="800.3684" y1="382.8015" x2="800.3684" y2="400.9369" />
+        <line class="cls-15" x1="693.4991" y1="114.6568" x2="725.3243" y2="114.6568" />
+        <polygon class="cls-16" points="724.157 118.646 731.065 114.657 724.157 110.668 724.157 118.646" />
+    </g>
+</svg>

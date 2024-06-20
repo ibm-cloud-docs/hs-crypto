@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1056" height="506" viewBox="0 0 1056 506">
+    <defs>
+        <style>.cls-1,.cls-6,.cls-7,.cls-9{fill:#f2f4f8;}.cls-13,.cls-14,.cls-15,.cls-16,.cls-18,.cls-2,.cls-3,.cls-4,.cls-5{fill:none;}.cls-13,.cls-14,.cls-15,.cls-2,.cls-3,.cls-4,.cls-5{stroke:#9fa5ad;}.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke-linejoin:round;}.cls-3{stroke-dasharray:2.0071 2.0071;}.cls-4{stroke-dasharray:1.9923 1.9923;}.cls-5{stroke-dasharray:1.9982 1.9982;}.cls-6{stroke:#a970ff;}.cls-18,.cls-7,.cls-8{stroke:#1193e8;}.cls-8{fill:#fff;}.cls-9{stroke:#009e9a;}.cls-10{font-size:16px;}.cls-10,.cls-12{font-family:IBMPlexSans-SemiBold, IBM Plex Sans;font-weight:600;}.cls-11{font-size:12px;font-family:IBMPlexSans, IBM Plex Sans;}.cls-12{font-size:18px;}.cls-13,.cls-14,.cls-15,.cls-16,.cls-18{stroke-miterlimit:10;}.cls-14{stroke-dasharray:2.001 2.001;}.cls-15{stroke-dasharray:2.0031 2.0031;}.cls-16{stroke:#50565b;stroke-width:2px;}.cls-17{fill:#50565b;}</style>
+    </defs>
+    <g id="Square">
+        <rect class="cls-1" x="253.0822" y="401.364" width="345.2068" height="95.636" />
+        <polyline class="cls-2" points="598.289 496 598.289 497 597.289 497" />
+        <line class="cls-3" x1="595.282" y1="497" x2="255.0857" y2="497" />
+        <polyline class="cls-2" points="254.082 497 253.082 497 253.082 496" />
+        <line class="cls-4" x1="253.0822" y1="494.0078" x2="253.0822" y2="403.3601" />
+        <polyline class="cls-2" points="253.082 402.364 253.082 401.364 254.082 401.364" />
+        <line class="cls-3" x1="256.0892" y1="401.364" x2="596.2855" y2="401.364" />
+        <polyline class="cls-2" points="597.289 401.364 598.289 401.364 598.289 402.364" />
+        <line class="cls-4" x1="598.289" y1="404.3562" x2="598.289" y2="495.0038" />
+        <rect class="cls-1" x="613.355" y="401.364" width="395.645" height="95.636" />
+        <polyline class="cls-2" points="1009 496 1009 497 1008 497" />
+        <line class="cls-5" x1="1006.0018" y1="497" x2="615.3541" y2="497" />
+        <polyline class="cls-2" points="614.355 497 613.355 497 613.355 496" />
+        <line class="cls-4" x1="613.355" y1="494.0078" x2="613.355" y2="403.3601" />
+        <polyline class="cls-2" points="613.355 402.364 613.355 401.364 614.355 401.364" />
+        <line class="cls-5" x1="616.3532" y1="401.364" x2="1007.0009" y2="401.364" />
+        <polyline class="cls-2" points="1008 401.364 1009 401.364 1009 402.364" />
+        <line class="cls-4" x1="1009" y1="404.3562" x2="1009" y2="495.0038" />
+        <rect class="cls-6" x="229.5007" y="194.6329" width="124.4579" height="65.5041" rx="4" />
+        <rect class="cls-6" x="388.0207" y="194.6329" width="124.4579" height="65.5041" rx="4" />
+        <rect class="cls-6" x="546.5407" y="194.6329" width="124.4579" height="65.5041" rx="4" />
+        <rect class="cls-7" x="229.5007" y="315.5535" width="124.4579" height="65.5041" rx="4" />
+        <rect class="cls-7" x="388.0207" y="315.5535" width="124.4579" height="65.5041" rx="4" />
+        <rect class="cls-7" x="546.5407" y="315.5535" width="124.4579" height="65.5041" rx="4" />
+        <rect class="cls-7" x="705.0608" y="315.5535" width="124.4579" height="65.5041" rx="4" />
+        <rect class="cls-8" x="269.4582" y="416.9218" width="104.8066" height="65.5041" rx="4" />
+        <rect class="cls-8" x="401.9949" y="416.9218" width="179.918" height="65.5041" rx="4" />
+        <rect class="cls-8" x="629.731" y="416.9218" width="104.8066" height="65.5041" rx="4" />
+        <rect class="cls-8" x="759.4292" y="416.9218" width="104.8066" height="65.5041" rx="4" />
+        <rect class="cls-8" x="889.1274" y="416.9218" width="104.8066" height="65.5041" rx="4" />
+        <rect class="cls-6" x="705.0608" y="194.6329" width="124.4579" height="65.5041" rx="4" />
+        <rect class="cls-6" x="863.5808" y="194.6329" width="124.4579" height="65.5041" rx="4" />
+        <rect class="cls-9" x="229.5007" y="79.4111" width="157.2099" height="65.5041" rx="4" />
+        <rect class="cls-9" x="429.9434" y="79.4111" width="157.2099" height="65.5041" rx="4" />
+        <rect class="cls-9" x="630.386" y="79.4111" width="157.2099" height="65.5041" rx="4" />
+        <rect class="cls-9" x="830.8287" y="79.4111" width="157.2099" height="65.5041" rx="4" />
+    </g>
+    <g id="Text">
+        <text class="cls-10" transform="translate(32.4658 221.2637)">
+            Prepare for the
+            <tspan x="0" y="19.2002">service initialization</tspan>
+        </text>
+        <text class="cls-10" transform="translate(32.4229 335.8057)">
+            Load master key
+            <tspan x="0" y="19.2002">with the Trusted</tspan>
+            <tspan x="0" y="38.4004">Key Entry application</tspan>
+        </text>
+        <text class="cls-11" transform="translate(261.3594 215.292)">
+            Install IBM
+            <tspan x="-6.3354" y="14.3999">Cloud CLI and</tspan>
+            <tspan x="-19.6675" y="28.7998">log in to IBM Cloud</tspan>
+        </text>
+        <text class="cls-11" transform="translate(409.5703 215.9473)">
+            Install Trusted
+            <tspan x="3.3003" y="14.3999">Key Entry CLI </tspan>
+            <tspan x="21.9902" y="28.7998">plug-in</tspan>
+        </text>
+        <text class="cls-11" transform="translate(586.6055 215.292)">
+            Set up a
+            <tspan x="-16.6074" y="14.3999">local directory</tspan>
+            <tspan x="-25.7275" y="28.7998">for reference files</tspan>
+        </text>
+        <text class="cls-11" transform="translate(247.5054 336.4849)">
+            Create signature
+            <tspan x="0.1924" y="14.3999">keys and master</tspan>
+            <tspan x="19.6738" y="28.8003">key parts</tspan>
+        </text>
+        <text class="cls-11" transform="translate(432.2324 344.3457)">
+            Select
+            <tspan x="-13.6733" y="14.4004">crypto units</tspan>
+        </text>
+        <text class="cls-11" transform="translate(589.1055 343.2549)">
+            Manage
+            <tspan x="-18.2041" y="14.4004">administrators</tspan>
+        </text>
+        <text class="cls-11" transform="translate(723.3457 351.5508)">Load master key</text>
+        <text class="cls-11" transform="translate(460.1074 437.9092)">
+            Set quorum
+            <tspan x="-37.7822" y="14.4004">authentication thresholds</tspan>
+            <tspan x="-23.0635" y="28.7998">to exit imprint mode</tspan>
+        </text>
+        <text class="cls-11" transform="translate(658.3145 437.9092)">
+            Load new
+            <tspan x="-5.4727" y="14.4004">master key </tspan>
+            <tspan x="5.0879" y="28.7998">register</tspan>
+        </text>
+        <text class="cls-11" transform="translate(770.7803 445.7695)">
+            Commit master
+            <tspan x="9.9961" y="14.4004">key register</tspan>
+        </text>
+        <text class="cls-11" transform="translate(919.6338 445.7695)">
+            Activate
+            <tspan x="-7.8066" y="14.4004">master key</tspan>
+        </text>
+        <text class="cls-11" transform="translate(311.2651 445.7695)">
+            Add
+            <tspan x="-28.5479" y="14.4004">administrators</tspan>
+        </text>
+        <text class="cls-11" transform="translate(724.167 215.5415)">
+            Plug smart card
+            <tspan x="-2.1006" y="14.3999">readers into your</tspan>
+            <tspan x="11.7295" y="28.7998">workstation</tspan>
+        </text>
+        <text class="cls-11" transform="translate(880.6611 216.8516)">
+            Start the Trusted
+            <tspan x="21.2871" y="14.3999">Key Entry</tspan>
+            <tspan x="17.1113" y="28.7998">application</tspan>
+        </text>
+        <text class="cls-10" transform="translate(32.4658 105.9766)">
+            Set up the
+            <tspan x="0" y="19.2002">Management Utilities</tspan>
+        </text>
+        <text class="cls-11" transform="translate(261.6504 106.8652)">
+            Order smart cards
+            <tspan x="-13.7578" y="14.3999">and smart card readers</tspan>
+        </text>
+        <text class="cls-11" transform="translate(464.2334 107.8652)">
+            Install the smart
+            <tspan x="-3.4258" y="14.3999">card reader driver</tspan>
+        </text>
+        <text class="cls-11" transform="translate(683.293 108.52)">
+            Install the
+            <tspan x="-29.7119" y="14.3999">Management Utilities</tspan>
+        </text>
+        <text class="cls-12" transform="translate(32.5034 38.7146)">Task flow of service instance initialization with smart cards and the Management Utilities</text>
+        <text class="cls-11" transform="translate(853.7451 100.8794)">
+            Configure smart cards
+            <tspan x="7.0439" y="14.3999">with the smart card </tspan>
+            <tspan x="19.7822" y="28.7998">utility program</tspan>
+        </text>
+    </g>
+    <g id="Line">
+        <line class="cls-13" x1="24.5" y1="288.5" x2="25.5" y2="288.4996" />
+        <line class="cls-14" x1="27.501" y1="288.4986" x2="1006.9995" y2="288.0428" />
+        <line class="cls-13" x1="1008" y1="288.0423" x2="1009" y2="288.0418" />
+        <line class="cls-13" x1="27.5" y1="168.5" x2="28.5" y2="168.5003" />
+        <line class="cls-15" x1="30.5031" y1="168.501" x2="1006.9985" y2="168.8236" />
+        <line class="cls-13" x1="1008" y1="168.8239" x2="1009" y2="168.8242" />
+        <line class="cls-16" x1="357.8888" y1="227.1229" x2="378.3495" y2="227.1229" />
+        <polygon class="cls-17" points="377.182 231.112 384.09 227.123 377.182 223.134 377.182 231.112" />
+        <line class="cls-16" x1="516.4088" y1="227.1229" x2="536.8695" y2="227.1229" />
+        <polygon class="cls-17" points="535.702 231.112 542.611 227.123 535.702 223.134 535.702 231.112" />
+        <line class="cls-16" x1="378.1951" y1="449.6739" x2="393.4154" y2="449.6739" />
+        <polygon class="cls-17" points="392.248 453.663 399.156 449.674 392.248 445.685 392.248 453.663" />
+        <line class="cls-16" x1="737.1578" y1="449.837" x2="752.3782" y2="449.837" />
+        <polygon class="cls-17" points="751.211 453.826 758.119 449.837 751.211 445.848 751.211 453.826" />
+        <line class="cls-16" x1="866.856" y1="449.837" x2="882.0764" y2="449.837" />
+        <polygon class="cls-17" points="880.909 453.826 887.817 449.837 880.909 445.848 880.909 453.826" />
+        <line class="cls-16" x1="675.5839" y1="347.6505" x2="696.0446" y2="347.6505" />
+        <polygon class="cls-17" points="694.877 351.64 701.786 347.651 694.877 343.661 694.877 351.64" />
+        <line class="cls-16" x1="515.7538" y1="347.6505" x2="536.2145" y2="347.6505" />
+        <polygon class="cls-17" points="535.047 351.64 541.955 347.651 535.047 343.661 535.047 351.64" />
+        <line class="cls-16" x1="357.2338" y1="347.6505" x2="377.6944" y2="347.6505" />
+        <polygon class="cls-17" points="376.527 351.64 383.435 347.651 376.527 343.661 376.527 351.64" />
+        <line class="cls-18" x1="574.0525" y1="381.7127" x2="574.0525" y2="400.0539" />
+        <line class="cls-18" x1="767.9448" y1="381.7127" x2="767.9448" y2="400.0539" />
+        <line class="cls-16" x1="674.9289" y1="227.1229" x2="695.3895" y2="227.1229" />
+        <polygon class="cls-17" points="694.222 231.112 701.131 227.123 694.222 223.134 694.222 231.112" />
+        <line class="cls-16" x1="833.4489" y1="227.1229" x2="853.9095" y2="227.1229" />
+        <polygon class="cls-17" points="852.742 231.112 859.651 227.123 852.742 223.134 852.742 231.112" />
+        <line class="cls-16" x1="395.2262" y1="111.8356" x2="415.6869" y2="111.8356" />
+        <polygon class="cls-17" points="414.52 115.825 421.428 111.836 414.52 107.847 414.52 115.825" />
+        <line class="cls-16" x1="596.9789" y1="111.8356" x2="617.4396" y2="111.8356" />
+        <polygon class="cls-17" points="616.272 115.825 623.181 111.836 616.272 107.847 616.272 115.825" />
+        <line class="cls-16" x1="797.4216" y1="111.8356" x2="817.8823" y2="111.8356" />
+        <polygon class="cls-17" points="816.715 115.825 823.623 111.836 816.715 107.847 816.715 115.825" />
+    </g>
+</svg>

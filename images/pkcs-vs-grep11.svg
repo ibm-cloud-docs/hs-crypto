@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1056" height="825" viewBox="0 0 1056 825">
+    <defs>
+        <style>.cls-1,.cls-10,.cls-11,.cls-12,.cls-13,.cls-14,.cls-15,.cls-2,.cls-3,.cls-4,.cls-8,.cls-9{fill:none;}.cls-1,.cls-10,.cls-11,.cls-12,.cls-13,.cls-14,.cls-15,.cls-16,.cls-18,.cls-19,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke:#000;}.cls-1,.cls-16{stroke-miterlimit:10;}.cls-1{stroke-width:2px;}.cls-2,.cls-3,.cls-4{stroke:#9fa5ad;}.cls-10,.cls-11,.cls-12,.cls-13,.cls-14,.cls-15,.cls-2,.cls-3,.cls-4,.cls-8,.cls-9{stroke-linecap:round;}.cls-10,.cls-11,.cls-12,.cls-13,.cls-14,.cls-15,.cls-18,.cls-19,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke-linejoin:round;}.cls-3{stroke-dasharray:2.0015 2.0015;}.cls-4{stroke-dasharray:1.9894 1.9894;}.cls-5{fill:#f2f4f8;}.cls-6{fill:#e3f6ff;}.cls-7{fill:#f7f1ff;}.cls-9{stroke-dasharray:1.9399 1.9399;}.cls-10{stroke-dasharray:1.9571 1.9571;}.cls-11{stroke-dasharray:2.0126 2.0126;}.cls-12{stroke-dasharray:1.9924 1.9924;}.cls-13{stroke-dasharray:1.9139 1.9139;}.cls-14{stroke-dasharray:1.9927 1.9927;}.cls-15{stroke-dasharray:2.0209 2.0209;}.cls-16,.cls-17{fill:#dde1e6;}.cls-18{fill:#fff;}.cls-19{fill:#dbfbfb;}.cls-20,.cls-21,.cls-23{font-size:16px;}.cls-20{font-family:IBMPlexSans, IBM Plex Sans;}.cls-21,.cls-22{font-family:IBMPlexSans-SemiBold, IBM Plex Sans;font-weight:600;}.cls-22{font-size:18px;}.cls-23{font-family:IBMPlexSans-Medium, IBM Plex Sans;font-weight:500;}</style>
+    </defs>
+    <g id="Layer_1" data-name="Layer 1">
+        <line class="cls-1" x1="954.298" y1="426.8875" x2="77.8682" y2="426.8875" />
+        <polyline class="cls-2" points="999 123.133 999 124.133 998 124.133" />
+        <line class="cls-3" x1="995.9985" y1="124.1331" x2="688.7642" y2="124.1331" />
+        <polyline class="cls-2" points="687.763 124.133 686.763 124.133 686.763 123.133" />
+        <line class="cls-4" x1="686.7634" y1="121.1438" x2="686.7634" y2="30.6281" />
+        <polyline class="cls-2" points="686.763 29.633 686.763 28.633 687.763 28.633" />
+        <line class="cls-3" x1="689.765" y1="28.6334" x2="996.9992" y2="28.6334" />
+        <polyline class="cls-2" points="998 28.633 999 28.633 999 29.633" />
+        <line class="cls-4" x1="999" y1="31.6228" x2="999" y2="122.1385" />
+        <rect class="cls-5" x="233.7926" y="462.1073" width="372.746" height="311.5593" />
+        <rect class="cls-6" x="266.4179" y="545.4155" width="307.4955" height="69.0849" />
+        <rect class="cls-7" x="266.4179" y="660.557" width="135.8783" height="88.0494" />
+        <rect class="cls-5" x="658.8211" y="462.1073" width="240.5846" height="151.7158" />
+        <line class="cls-8" x1="306.1192" y1="221.6647" x2="306.1192" y2="537.0459" />
+        <polygon points="303.127 536.171 306.119 541.352 309.111 536.171 303.127 536.171" />
+        <line class="cls-8" x1="306.5569" y1="617.2096" x2="306.5569" y2="652.1874" />
+        <polygon points="303.565 651.312 306.557 656.493 309.549 651.312 303.565 651.312" />
+        <line class="cls-8" x1="533.693" y1="617.8869" x2="533.693" y2="618.8869" />
+        <line class="cls-9" x1="533.693" y1="620.8268" x2="533.693" y2="650.8948" />
+        <line class="cls-8" x1="533.693" y1="651.8647" x2="533.693" y2="652.8647" />
+        <polygon points="530.701 651.989 533.693 657.17 536.685 651.989 530.701 651.989" />
+        <line class="cls-8" x1="354.885" y1="618.5642" x2="354.885" y2="619.5642" />
+        <line class="cls-9" x1="354.885" y1="621.5041" x2="354.885" y2="651.5721" />
+        <line class="cls-8" x1="354.885" y1="652.542" x2="354.885" y2="653.542" />
+        <polygon points="351.893 652.667 354.885 657.848 357.877 652.667 351.893 652.667" />
+        <line class="cls-8" x1="654.011" y1="587.4083" x2="575.6857" y2="587.4083" />
+        <polygon points="653.136 584.416 658.317 587.408 653.136 590.4 653.136 584.416" />
+        <line class="cls-8" x1="658.3167" y1="572.5076" x2="657.3167" y2="572.5076" />
+        <line class="cls-10" x1="655.3596" y1="572.5076" x2="581.97" y2="572.5076" />
+        <line class="cls-8" x1="580.9915" y1="572.5076" x2="579.9915" y2="572.5076" />
+        <polygon points="580.867 569.516 575.686 572.508 580.867 575.499 580.867 569.516" />
+        <line class="cls-8" x1="780.2312" y1="292.1042" x2="780.2312" y2="293.1042" />
+        <line class="cls-11" x1="780.2312" y1="295.1168" x2="780.2312" y2="455.1179" />
+        <line class="cls-8" x1="780.2312" y1="456.1242" x2="780.2312" y2="457.1242" />
+        <polygon points="777.239 456.249 780.231 461.43 783.223 456.249 777.239 456.249" />
+        <line class="cls-8" x1="780.2312" y1="292.1042" x2="779.2312" y2="292.1042" />
+        <line class="cls-12" x1="777.2388" y1="292.1042" x2="610.8698" y2="292.1049" />
+        <line class="cls-8" x1="609.8736" y1="292.1049" x2="608.8736" y2="292.1049" />
+        <line class="cls-8" x1="533.693" y1="223.6967" x2="533.693" y2="224.6967" />
+        <line class="cls-13" x1="533.693" y1="226.6106" x2="533.693" y2="260.104" />
+        <line class="cls-8" x1="533.693" y1="261.061" x2="533.693" y2="262.061" />
+        <polygon points="530.701 261.186 533.693 266.367 536.685 261.186 530.701 261.186" />
+        <line class="cls-8" x1="533.693" y1="317.8418" x2="533.693" y2="318.8418" />
+        <line class="cls-14" x1="533.693" y1="320.8344" x2="533.693" y2="535.0496" />
+        <line class="cls-8" x1="533.693" y1="536.0459" x2="533.693" y2="537.0459" />
+        <polygon points="530.701 536.171 533.693 541.352 536.685 536.171 530.701 536.171" />
+        <line class="cls-8" x1="755.6064" y1="97.041" x2="754.6064" y2="97.041" />
+        <line class="cls-15" x1="752.5855" y1="97.041" x2="717.2205" y2="97.041" />
+        <line class="cls-8" x1="716.2101" y1="97.041" x2="715.2101" y2="97.041" />
+        <polygon points="754.731 94.049 759.912 97.041 754.731 100.033 754.731 94.049" />
+        <line class="cls-8" x1="755.6064" y1="57.7575" x2="715.2101" y2="57.7575" />
+        <polygon points="754.731 54.766 759.912 57.757 754.731 60.749 754.731 54.766" />
+        <g id="keystore">
+            <path class="cls-16" d="M573.4809,734.0981c0,7.4523-30.7574,14.5831-68.0132,14.5831S438.02,741.56,438.02,734.1073" />
+            <line class="cls-8" x1="438.0466" y1="734.098" x2="438.0466" y2="667.3807" />
+            <line class="cls-8" x1="573.5072" y1="734.098" x2="573.5072" y2="666.4454" />
+            <rect class="cls-17" x="439.0363" y="666.8902" width="133.4287" height="67.3109" />
+            <ellipse class="cls-16" cx="505.7506" cy="666.2516" rx="67.7303" ry="9.0811" />
+        </g>
+        <rect class="cls-18" x="271.5768" y="115.3282" width="69.0848" height="143.5882" transform="translate(493.2415 -118.9969) rotate(90)" />
+        <rect class="cls-18" x="499.1506" y="115.3282" width="69.0848" height="143.5882" transform="translate(720.8152 -346.5707) rotate(90)" />
+        <rect class="cls-19" x="514.7285" y="220.3102" width="40.6382" height="143.5882" transform="translate(827.1517 -242.9434) rotate(90)" />
+    </g>
+    <g id="Text">
+        <text class="cls-20" transform="translate(767.1318 63.2212)">GREP11 API interactions</text>
+        <text class="cls-20" transform="translate(768.0303 100.6978)">PKCS #11 API interactions</text>
+        <text class="cls-21" transform="translate(98.0957 455.4009)">IBM Cloud</text>
+        <text class="cls-22" transform="translate(47.8115 48.9473)">
+            Performing cryptographic operations with PKCS #11 API
+            <tspan x="0" y="21.6001">or Enterprise PKCS #11 over gRPC (GREP11) API</tspan>
+        </text>
+        <text class="cls-21" transform="translate(366.7114 496.8404)">
+            Hyper Protect
+            <tspan x="-4.6558" y="19.2002">Crypto Services</tspan>
+        </text>
+        <text class="cls-23" transform="translate(364.9644 584.3707)">GREP11 server</text>
+        <text class="cls-23" transform="translate(296.0439 710.3482)">Cloud HSM</text>
+        <text class="cls-23" transform="translate(710.8535 530.816)">
+            Cloud Identity and
+            <tspan x="-27.9443" y="19.2002">Access Management (IAM)</tspan>
+        </text>
+        <text class="cls-23" transform="translate(468.9834 696.1539)">
+            Enterprise
+            <tspan x="1.0718" y="19.2002">PKCS #11</tspan>
+            <tspan x="2.3516" y="38.4004">keystores</tspan>
+        </text>
+        <text class="cls-23" transform="translate(284.5161 180.2823)">
+            gRPC
+            <tspan x="-23.3677" y="19.2002">applications</tspan>
+        </text>
+        <text class="cls-23" transform="translate(496.0059 182.3145)">
+            PKCS #11
+            <tspan x="-7.8159" y="19.2002">applications</tspan>
+        </text>
+        <text class="cls-23" transform="translate(472.4146 297.4561)">PKCS #11 library</text>
+        <text class="cls-20" transform="translate(296.1812 392.8228) rotate(-90)">gRPC</text>
+        <text class="cls-20" transform="translate(524.1924 393.1783) rotate(-90)">gRPC</text>
+    </g>
+</svg>
