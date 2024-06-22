@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-06-20"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator, UKO keys
 
@@ -43,16 +43,7 @@ The following table shows the details of each key state.
 
 1: If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. An `Out of sync` flag is also displayed in the corresponding keystore card or the key list. There can be multiple reasons why the key is out of sync. For example, there is an issue in relinking the key in the keystore,the key is failed to be destroyed in some of the distributed keystores, or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. You can sync the key state by clicking **Sync key** on the Key details page.
 
-2: After you move a key from Deactivated to Destroyed state, the key will first be pending on destruction for a time period defined by the destruction policies of the external cloud providers. When the time period ends, the key will be moved to Destroyed state. For any pending destruction keys, a `pending` flag is displayed in the corresponding key card or the key list. Refer to the following table for detailed destruction policies of keystores.
-
-| Keystore type       | Key pending destruction policy  |  Pending period customizable on the external cloud provider side? (Yes/No)|  
-|-------------|-----------------|-------------|
-| AWS keystore |        7 days       | No|  
-| Azure Key Vault      |        90 days      | Yes| 
-| Google Cloud KMS keystore|        30 days     | Yes| 
-| {{site.data.keyword.cloud_notm}} KMS keystore |        30 days       | No|
-| {{site.data.keyword.keymanagementserviceshort}} |        30 days      | No| 
-{: caption="Table 2. Key destruction policies" caption-side="bottom"}
+2: After you move a key from Deactivated to Destroyed state, the key will first be pending on destruction for a time period defined by the destruction policies of the external cloud providers. When the pending-destruction period ends, the key is automatically moved to Destroyed state and can no longer to restored. Refer to [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys&interface=ui) for detailed destruction policies of keystores.
 
 For Azure Key Vault and Google Cloud KMS keystore, you can customize the pending destruction time period if you want to on the external cloud provider side. If you apply different customized pending destruction periods to more that one keystore that the key is distributed to, the pending destruction period of the key will also vary based on your settings. For more information about customizing destruction pending policies, see the following topics:
 - [Azure Key Vault soft-delete overview](https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview){: external}.
@@ -81,7 +72,7 @@ The following table shows how {{site.data.keyword.uko_full_notm}} handles servic
 | Reactivate a key. |     |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |
 | Destroy a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |   |
 | Remove a key from vault. |     |     |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-{: caption="Table 3. How key states affect service actions" caption-side="bottom"}
+{: caption="Table 2. How key states affect service actions" caption-side="bottom"}
 
 
 
@@ -91,6 +82,7 @@ The following table shows how {{site.data.keyword.uko_full_notm}} handles servic
 After you add a managed key to the service, use the {{site.data.keyword.cloud_notm}} UI or the {{site.data.keyword.uko_full_notm}} API to view your key's transition history and configuration.
 
 For audit purposes, you can also monitor the activity trail for a managed key by integrating {{site.data.keyword.hscrypto}} with the [{{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started){: external}. After both services are provisioned and running, activity events are generated and automatically collected in an {{site.data.keyword.at_full_notm}} log when you perform actions on keys in {{site.data.keyword.hscrypto}}.
+
 
 
 ## What's next

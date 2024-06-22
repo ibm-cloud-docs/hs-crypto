@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-06-12"
+lastupdated: "2024-06-18"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -58,7 +58,7 @@ You can create a key template from scratch with full control by yourself. To cre
 
 6. Click **Next** to continue.{: #key-template-properties}
 
-7. Under **Key template properties**, specify the following details of the key template. Click **Next** to continue when you are done. 
+7. Under **Key template properties**, specify the following details of the key template. Click **Next** to continue when you are done. By default, some configurations are pre-selected. However, you can change it according to your needs.
 
 
     |       Property	      |                         Description                       |

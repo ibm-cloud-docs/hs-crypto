@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-06-04"
+lastupdated: "2024-06-20"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -51,29 +51,27 @@ Follow these steps to complete the process:
 
 5. Click **Destroy key** to confirm. The key will first be pending destruction and then destroyed after the pending period ends.
 
-    After the managed key is destroyed, you cannot restore the keys. 
+    After you move a key from Deactivated to Destroyed state, the key will first be pending on destruction for a time period defined by the destruction policies of the external cloud providers. You cannot cancel pending destruction using the {{site.data.keyword.uko_full_notm}} UI or API. However, you can still do so through the third-party keystores that the keys are created in. 
+    
+    For any pending destruction keys, a `pending` flag is displayed in the corresponding key card or the key list. When you hover over the `pending` flag, you can see the date which it will end the pending state. Refer to the following table for detailed destruction policies of keystores.
 
-    For keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically after 90 days after they move to Destroyed state.
+    | Keystore type       | Key pending destruction policy  |  Pending period customizable on the external cloud provider side? (Yes/No)|  
+    |-------------|-----------------|-------------|
+    | AWS keystore |        7 days       | No|  
+    | Azure Key Vault      |        90 days      | Yes| 
+    | Google Cloud KMS keystore|        30 days   | Yes| 
+    | {{site.data.keyword.cloud_notm}} KMS keystore |        30 days       | No|
+    | {{site.data.keyword.keymanagementserviceshort}} |        30 days      | No|
+    {: caption="Table 1. Key destruction policies" caption-side="bottom"}  
+    
+     When the pending-destruction period ends, the key will be automatically moved to Destroyed state and can no longer be restored. For keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically in 60 days after the pending-destruction period ends.
+ 
 
+6. After the pending-destruction period ends, you can delete the key and metadata from the vault by clicking the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**. 
 
-        After you move a key from Deactivated to Destroyed state, the key will first be pending on destruction for a time period defined by the destruction policies of the external cloud providers. You cannot cancel pending destruction using the {{site.data.keyword.uko_full_notm}} UI or API. However, you might still do so through the third-party keystores that the keys are created in. When the time period ends, the key will be moved to Destroyed state. For any pending destruction keys, a `pending` flag is displayed in the corresponding key card or the key list. When you hover over the `pending` flag, you can see the date which it will end the pending state. Refer to the following table for detailed destruction policies of keystores.
+   This action proactively deletes the managed key. After a key is removed from vault, the associated key metadata is removed permanently. 
 
-        | Keystore type       | Key pending destruction policy  |  Pending period customizable on the external cloud provider side? (Yes/No)|  
-        |-------------|-----------------|-------------|
-        | AWS keystore |        7 days       | No|  
-        | Azure Key Vault      |        90 days      | Yes| 
-        | Google Cloud KMS keystore|        30 days   | Yes| 
-        | {{site.data.keyword.cloud_notm}} KMS keystore |        30 days       | No|
-        | {{site.data.keyword.keymanagementserviceshort}} |        30 days      | No|
-        {: caption="Table 1. Key destruction policies" caption-side="bottom"}  
-	
-    Note that for keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically after 60 days when they move to Destroyed state.
-
-6. To remove the key and the metadata from the vault, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**.
-   
-   When you remove the managed key from the vault that the key is assigned to, the remaining key metadata is removed permanently. 
-
-The managed key has been deleted and unlinked from all keystores. All key materials and metadata have been destroyed. 
+The managed key has been deleted and unlinked from all keystores. All key materials and metadata have been purged. 
 
 ## Deleting managed keys with the API
 {: #delete-managed-keys-api}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-06-18"
 
 keywords: encrypt Oracle Transparent Database, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -117,7 +117,7 @@ Now create a configuration file for the {{site.data.keyword.hscrypto}} PKCS #11 
 The configuration file is named `grep11client.yaml`.
 
 Adapt the following file template and name the file `grep11client.yaml`:
-- Replace `<instance_id>` with the ID of your {{site.data.keyword.hscrypto}} instance.
+- Replace `<instance_ID>` with the ID of your {{site.data.keyword.hscrypto}} instance.
 - Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance.
 - Replace `<your_api_key>` with the value of the API key that you created.
 
@@ -128,7 +128,7 @@ iamcredentialtemplate: &defaultiamcredential
           # Keep the 'apikey' empty. It will be overridden by the Anonymous user API key configured later.
           apikey:
           # The Universally Unique IDentifier (UUID) of your Hyper Protect Crypto Services instance.
-          instance: "<instance_id>"
+          instance: "<instance_ID>"
 
 tokens:
   0:
