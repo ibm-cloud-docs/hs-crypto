@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-06-20"
+lastupdated: "2024-06-25"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -22,7 +22,7 @@ subcollection: hs-crypto
 You can delete your managed keys in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
-When you delete a managed key, the key is to be unlinked from all keystores, and all key materials and the metadata are destroyed permanently.
+When you delete a managed key, the key is to be deleted and unlinked from all keystores, and all key materials and the metadata are destroyed permanently.
 
 
 ## Deleting managed keys with the UI
@@ -42,7 +42,7 @@ Follow these steps to complete the process:
 3. If the managed key that you want to delete is in Active state, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Deactivated** to deactivate the key first.
 
     
-   When you change the Active key to Deactivated state, the key and all it versions are unlinked from all the keystores, and not accessible to all associated resources and their data. Make sure that you open the confirmation tile to check all the associated resources before you continue. However, you can still reactivate the key so that it is accessible to the resources again.
+   When you change the Active key to Deactivated state, the key and all it versions are deleted and unlinked from all the keystores, and not accessible to all associated resources and their data. Make sure that you open the confirmation tile to check all the associated resources before you continue. However, you can still reactivate the key so that it is accessible to the resources again.
    {: note}
      
 
