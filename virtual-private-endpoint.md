@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-06-05"
+lastupdated: "2024-07-01"
 
 keywords: vpc, vpe, network access policy, virtual private endpoints, private gateway
 
@@ -44,8 +44,6 @@ Before you target a virtual private endpoint for {{site.data.keyword.hscrypto}},
 
 When you create a VPE gateway by using the CLI or API, you must specify the [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) of the region in which you want to connect to {{site.data.keyword.hscrypto}}. Review the following table for the available regions and CRNs to create your VPE gateways.
 
-{{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. For example, for public key management endpoint URLs, the format is changed from `api.private.<region>.hs-crypto.cloud.ibm.com:<port>` to `<instance_ID>.api.private.<region>.hs-crypto.appdomain.cloud`. For a complete list of the endpoint URL schemes and more information about which regions now support instance-based endpoint URLs, see [Instance-based endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints). Note that, for any new service instances created after the dates specified in the table, only instance-based endpoint URLs can be applied. No impact to existing service instances is expected, as the current port-based endpoint scheme stays intact for the time being. However, it is suggested to use the new instance-based scheme wherever possible especially for new projects.
-{: note}
  
 
 <table>
