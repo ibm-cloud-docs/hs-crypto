@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-07-02"
 
 keywords: Unified Key Orchestrator, align template, key template
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Realigning managed keys with key templates
 {: #align-key}
 
-After a managed key is created with a key template, you can still update the key template on general properties, key lifecycles, and assigned keystores. If it happens, an `Unaligned` flag can be displayed on the key details card for keys that are created with the key template. You can then manually realign your key with the key template with the {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API. You can either realign active or deactivated keys with the key template.  
+After you create a managed key with a key template, you can still update the key template on general properties, key lifecycles, and assigned keystores. If it happens, an `Unaligned` flag can be displayed on the key details card for keys that are created with the key template. You can then manually realign your key with the key template with the {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API. You can either realign active or deactivated keys with the key template.  
 {: shortdesc}
 
   
