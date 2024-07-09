@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-02"
+lastupdated: "2024-07-09"
 
 keywords: site map, doc structure, information architecture
 
@@ -382,6 +382,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [2 July 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-july22024)
+
+    * Updated: New API endpoints in Madrid
 
 * [19 June 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-june192024)
 
