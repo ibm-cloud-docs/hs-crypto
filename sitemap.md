@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-07-09"
 
 keywords: site map, doc structure, information architecture
 
@@ -40,19 +40,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Step 2 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-uko-key)
 
-    * [1. Create vaults](/docs/hs-crypto?topic=hs-crypto-get-started#create-vault)
-
-    * [2. Create keystores](/docs/hs-crypto?topic=hs-crypto-get-started#create-keystore)
-
-    * [3. Create key templates](/docs/hs-crypto?topic=hs-crypto-get-started#create-key-template)
-
-    * [4. Create managed keys](/docs/hs-crypto?topic=hs-crypto-get-started#create-managed-key)
-
 * [Step 3: Encrypt your data with cloud HSM](/docs/hs-crypto?topic=hs-crypto-get-started#encrypt-data-hsm)
-
-    * [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-get-started#cryptographic-operations-with-pkcs11)
-
-    * [Performing cryptographic operations with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-get-started#cryptographic-operations-with-grep11)
 
 
 ## Understanding Hyper Protect Crypto Services Standard Plan
@@ -66,10 +54,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [How does {{site.data.keyword.hscrypto}} work?](/docs/hs-crypto?topic=hs-crypto-overview#how-hpcs-work)
 
 * [Key features](/docs/hs-crypto?topic=hs-crypto-overview#key-features)
-
-    * [Key management service](/docs/hs-crypto?topic=hs-crypto-overview#key-management)
-
-    * [Cloud hardware security module](/docs/hs-crypto?topic=hs-crypto-overview#cloud-hsm)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-overview#overview-next)
 
@@ -85,19 +69,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Pervasively protecting data at rest in the cloud](/docs/hs-crypto?topic=hs-crypto-use-cases#data-at-rest-encryption)
 
-    * [ Data at rest encryption with KYOK](/docs/hs-crypto?topic=hs-crypto-use-cases#data-at-rest-encryption-kyok)
-
-    * [ VMware image protection with KYOK](/docs/hs-crypto?topic=hs-crypto-use-cases#vmware-encryption-kyok)
-
 * [Using {{site.data.keyword.hscrypto}} as a cloud HSM](/docs/hs-crypto?topic=hs-crypto-use-cases#cloud_hsm)
-
-    * [Using {{site.data.keyword.hscrypto}} as a cloud HSM through the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-use-cases#pkcs11_hsm)
-
-    * [Protecting storage systems with third-party encryption key management tools](/docs/hs-crypto?topic=hs-crypto-use-cases#protect-storage)
-
-    * [Fortifying Thales environments with cloud HSM](/docs/hs-crypto?topic=hs-crypto-use-cases#fortify-thales)
-
-    * [Using {{site.data.keyword.hscrypto}} as a cloud HSM through the Enterprise PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-use-cases#ep11_hsm)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-use-cases#use-case-next)
 
@@ -105,67 +77,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Key management service](/docs/hs-crypto?topic=hs-crypto-understand-concepts#key-management-concepts)
 
-    * [Root keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept)
-
-    * [Standard keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#standard-key-concept)
-
-    * [Data encryption keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#dek-concept)
-
-    * [Envelope encryption](/docs/hs-crypto?topic=hs-crypto-understand-concepts#envelope-encryption-concept)
-
 * [Cloud hardware security module](/docs/hs-crypto?topic=hs-crypto-understand-concepts#cloud-hsm-concepts)
-
-    * [Hardware security module](/docs/hs-crypto?topic=hs-crypto-understand-concepts#hsm-concept)
-
-    * [Crypto units](/docs/hs-crypto?topic=hs-crypto-understand-concepts#crypto-unit-concept)
-
-    * [Administrators](/docs/hs-crypto?topic=hs-crypto-understand-concepts#admin-concept)
-
-    * [Signature keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-key-concept)
-
-    * [Imprint mode](/docs/hs-crypto?topic=hs-crypto-understand-concepts#imprint-mode-concept)
-
-    * [Quorum authentication](/docs/hs-crypto?topic=hs-crypto-understand-concepts#quorum-authenticaion-concept)
-
-    * [Signature thresholds](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-thresholds-concept)
-
-    * [Master key](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-concept)
-
-    * [Master key part](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-part-concept)
-
-    * [{{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-understand-concepts#tke-concept)
-
-    * [Management Utilities](/docs/hs-crypto?topic=hs-crypto-understand-concepts#management-utilities-concept)
-
-    * [Smart cards](/docs/hs-crypto?topic=hs-crypto-understand-concepts#smart-card-concept)
-
-    * [Smart card readers](/docs/hs-crypto?topic=hs-crypto-understand-concepts#smart-card-reader-concept)
-
-    * [Smart Card Utility Program](/docs/hs-crypto?topic=hs-crypto-understand-concepts#smart-card-utility-concept)
-
-    * [Trusted Key Entry application](/docs/hs-crypto?topic=hs-crypto-understand-concepts#tke-client-concept)
-
-    * [Keep Your Own Key](/docs/hs-crypto?topic=hs-crypto-understand-concepts#kyok-concept)
-
-    * [PKCS #11](/docs/hs-crypto?topic=hs-crypto-understand-concepts#pkcs-concept)
-
-    * [Cryptoki](/docs/hs-crypto?topic=hs-crypto-understand-concepts#cryptoki-concept)
-
-    * [PKCS #11 library](/docs/hs-crypto?topic=hs-crypto-understand-concepts#pkcs11-library-concept)
-
-    * [Cryptoki token](/docs/hs-crypto?topic=hs-crypto-understand-concepts#cryptoki-token-concept)
-
-    * [Cryptoki session](/docs/hs-crypto?topic=hs-crypto-understand-concepts#cryptoki-session-concept)
-
-    * [Cryptoki object](/docs/hs-crypto?topic=hs-crypto-understand-concepts#cryptoki-object-concept)
-
-    * [Mechanism](/docs/hs-crypto?topic=hs-crypto-understand-concepts#mechanism-concept)
-
-    * [Enterprise PKCS #11](/docs/hs-crypto?topic=hs-crypto-understand-concepts#ep11-concept)
-
-    * [gRPC](/docs/hs-crypto?topic=hs-crypto-understand-concepts#grpc-concept)
-
-    * [Enterprise PKCS #11 over gRPC](/docs/hs-crypto?topic=hs-crypto-understand-concepts#grep11-concept)
 
 
 ### About service instance initialization - Standard Plan
@@ -186,23 +98,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Initializing service instances by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-management-utilities)
 
-    * [Understanding the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-management-utilities)
-
-    * [Understanding smart cards](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-smart-card)
-
-    * [Understanding smart card readers](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-smart-card-reader)
-
 * [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit)
 
-    * [Understanding {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-tke-plugin)
-
-    * [Understanding operational crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-operational-crypto-unit)
-
-    * [Understanding recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-recovery-crypto-unit)
-
 * [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-key-files)
-
-    * [Understanding master key parts](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-master-key-parts)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#initialize-instance-mode-next)
 
@@ -216,10 +114,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Planning ahead for importing key material](/docs/hs-crypto?topic=hs-crypto-importing-keys#plan-ahead)
 
 * [Using import tokens](/docs/hs-crypto?topic=hs-crypto-importing-keys#using-import-tokens)
-
-    * [How it works](/docs/hs-crypto?topic=hs-crypto-importing-keys#how-import-tokens-work)
-
-    * [API methods](/docs/hs-crypto?topic=hs-crypto-importing-keys#secure-import-api-methods)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-importing-keys#importing-keys-next)
 
@@ -254,29 +148,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Performing cryptographic operations by accessing the cloud HSM](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm#cryptography-cloud-hsm)
 
-    * [Accessing the cloud HSM with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm#access-cloud-hsm-pkcs11)
-
-    * [Accessing the cloud HSM with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm#access-cloud-hsm-grep11)
-
-    * [Comparing the PKCS #11 API with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm#compare-grep11-pkcs11)
-
 [Introducing PKCS #11 - Standard Plan](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-intro)
 
 * [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-components)
-
-    * [Application](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-application-intro)
-
-    * [User](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-user-intro)
-
-    * [Session](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-session-intro)
-
-    * [Key object](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-object-intro)
-
-    * [{{site.data.keyword.iamshort}}](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-iam-intro)
-
-    * [Crypto service](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-crypto-intro)
-
-    * [Keystore](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-keystore-intro)
 
 * [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-support-post-quantum)
 
@@ -293,12 +167,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [How master key rotation works](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#how-master-key-rotation-works)
 
-    * [Rotating master keys by using smart cards and Management Utilities](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#how-master-key-rotation-works-smard-cards)
-
-    * [Rotating master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#how-master-key-rotation-works-recovery-crypto-unit)
-
-    * [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#how-master-key-rotation-works-use-key-part-files)
-
 * [What's next](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro#master-key-rotation-next)
 
 [Root key rotation - Standard Plan](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#root-key-rotation-intro)
@@ -306,12 +174,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Comparing your root key rotation options](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#compare-key-rotation-options)
 
 * [How root key rotation works](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#how-root-key-rotation-works)
-
-    * [Using {{site.data.keyword.hscrypto}} to rotate root keys](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#use-hs-crypto-rotate-keys)
-
-    * [Understanding the root key rotation process](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#understand-key-rotation-process)
-
-    * [Rewrapping data after rotating a root key](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#rewrap-data-after-key-rotation)
 
 * [Frequency of root key rotation](/docs/hs-crypto?topic=hs-crypto-root-key-rotation-intro#rotation-frequency)
 
@@ -345,12 +207,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Key features](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-key-features)
 
-    * [{{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-overview#hpcs-uko-overview)
-
-    * [Key management service](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-key-management)
-
-    * [Cloud hardware security module](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-cloud-hsm)
-
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-overview-next)
 
 [Service architecture - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation#uko-architecture-workload-isolation)
@@ -365,29 +221,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Pervasively protecting data at rest in the cloud](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-data-at-rest-encryption)
 
-    * [ Data at rest encryption with KYOK](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-data-at-rest-encryption-kyok)
-
-    * [ VMware image protection with KYOK](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-vmware-encryption-kyok)
-
 * [Using {{site.data.keyword.uko_full_notm}} for multicloud key orchestration](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-case)
 
-    * [Identity and Access Management (IAM)](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-iam)
-
-    * [Managing your keys through one user experience](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#manage-keys)
-
-    * [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#connect-to-keystores)
-
-    * [Back up all keys of your enterprise centrally](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#back-up-keys)
-
 * [Using {{site.data.keyword.hscrypto}} as a cloud HSM](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-cloud_hsm)
-
-    * [Using {{site.data.keyword.hscrypto}} as a cloud HSM through the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-pkcs11_hsm)
-
-    * [Protecting storage systems with third-party encryption key management tools](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-protect-storage)
-
-    * [Fortifying Thales environments with cloud HSM](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-fortify-thales)
-
-    * [Using {{site.data.keyword.hscrypto}} as a cloud HSM through the Enterprise PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-ep11-hsm)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-case-next)
 
@@ -395,83 +231,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Key management service](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-key-management-concepts)
 
-    * [Root keys](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-root-key-concept)
-
-    * [Standard keys](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-standard-key-concept)
-
-    * [Data encryption keys](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-dek-concept)
-
-    * [Envelope encryption](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-envelope-encryption-concept)
-
 * [Cloud hardware security module](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-cloud-hsm-concepts)
 
-    * [Hardware security module](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-hsm-concept)
-
-    * [Crypto units](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-crypto-unit-concept)
-
-    * [Administrators](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-admin-concept)
-
-    * [Signature keys](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-signature-key-concept)
-
-    * [Imprint mode](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-imprint-mode-concept)
-
-    * [Quorum authentication](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-quorum-authenticaion-concept)
-
-    * [Signature thresholds](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-signature-thresholds-concept)
-
-    * [Master key](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-master-key-concept)
-
-    * [Master key part](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-master-key-part-concept)
-
-    * [{{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-tke-concept)
-
-    * [Management Utilities](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-management-utilities-concept)
-
-    * [Smart cards](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-smart-card-concept)
-
-    * [Smart card readers](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-smart-card-reader-concept)
-
-    * [Smart Card Utility Program](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-smart-card-utility-concept)
-
-    * [Trusted Key Entry application](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-tke-client-concept)
-
-    * [Keep Your Own Key](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-kyok-concept)
-
-    * [PKCS #11](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-pkcs-concept)
-
-    * [Cryptoki](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-cryptoki-concept)
-
-    * [PKCS #11 library](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-pkcs11-library-concept)
-
-    * [Cryptoki token](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-cryptoki-token-concept)
-
-    * [Cryptoki session](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-cryptoki-session-concept)
-
-    * [Cryptoki object](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-cryptoki-object-concept)
-
-    * [Mechanism](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-mechanism-concept)
-
-    * [Enterprise PKCS #11](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-ep11-concept)
-
-    * [gRPC](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-grpc-concept)
-
-    * [Enterprise PKCS #11 over gRPC](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-grep11-concept)
-
 * [{{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-unified-key-orchestrator-concepts)
-
-    * [{{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-unified-key-orchestrator-concept)
-
-    * [Vault](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-vault-concept)
-
-    * [Key template](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-key-template)
-
-    * [Managed key](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-managed-key-conncept)
-
-    * [Keystore](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-target-keystore-concept)
-
-    * [Internal keystore](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-internal-keystore-concept)
-
-    * [External keystore](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-external-keystore-concept)
 
 
 ### About service instance initialization - Unified Key Orchestrator Plan
@@ -492,23 +254,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Initializing service instances by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-instance-initialization-management-utilities)
 
-    * [Understanding the Management Utilities](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-understand-management-utilities)
-
-    * [Understanding smart cards](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-understand-smart-card)
-
-    * [Understanding smart card readers](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-understand-smart-card-reader)
-
 * [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-instance-initialization-recovery-crypto-unit)
 
-    * [Understanding {{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-understand-tke-plugin)
-
-    * [Understanding operational crypto units](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-understand-operational-crypto-unit)
-
-    * [Understanding recovery crypto units](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-understand-recovery-crypto-unit)
-
 * [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-instance-initialization-key-files)
-
-    * [Understanding master key parts](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-understand-master-key-parts)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode#uko-initialize-instance-mode-next)
 
@@ -546,29 +294,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Performing cryptographic operations by accessing the cloud HSM](/docs/hs-crypto?topic=hs-crypto-uko-introduce-cloud-hsm#uko-cryptography-cloud-hsm)
 
-    * [Accessing the cloud HSM with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-uko-introduce-cloud-hsm#uko-access-cloud-hsm-pkcs11)
-
-    * [Accessing the cloud HSM with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-uko-introduce-cloud-hsm#uko-access-cloud-hsm-grep11)
-
-    * [Comparing the PKCS #11 API with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-uko-introduce-cloud-hsm#uko-compare-grep11-pkcs11)
-
 [Introducing PKCS #11 - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-intro)
 
 * [PKCS #11 implementation components](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-components)
-
-    * [Application](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-application-intro)
-
-    * [User](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-user-intro)
-
-    * [Session](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-session-intro)
-
-    * [Key object](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-object-intro)
-
-    * [{{site.data.keyword.iamshort}}](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-iam-intro)
-
-    * [Crypto service](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-crypto-intro)
-
-    * [Keystore](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-keystore-intro)
 
 * [Post-quantum cryptography support](/docs/hs-crypto?topic=hs-crypto-uko-pkcs11-intro#uko-pkcs11-support-post-quantum)
 
@@ -585,12 +313,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [How master key rotation works](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-how-master-key-rotation-works)
 
-    * [Rotating master keys by using smart cards and Management Utilities](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-how-master-key-rotation-works-smard-cards)
-
-    * [Rotating master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-how-master-key-rotation-works-recovery-crypto-unit)
-
-    * [Rotating master keys by using workstation files](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-how-master-key-rotation-works-use-key-part-files)
-
 * [How keys are protected during master key rotation](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-how-master-key-protect-rotation)
 
 * [How the UI reflects master key rotation](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-how-console-display-progress)
@@ -600,12 +322,6 @@ Find what you are looking for in the compilation of topics that are available in
 [Managed key rotation - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#managed-key-rotation-intro)
 
 * [How managed key rotation works](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#how-managed-key-rotation-works)
-
-    * [What happens to the previous key versions?](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#previous-managed-key-versions)
-
-    * [How often should keys be rotated?](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#managed-key-rotation-frequency)
-
-    * [Rewrapping data after rotating a managed key](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#rewrap-data-after-managed-key-rotation)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#managed-key-rotation-next)
 
@@ -619,10 +335,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Encrypting your regulated workloads with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-regulated-workloads#encrypt-regulated-workloads)
 
 * [Regulated workloads use cases](/docs/hs-crypto?topic=hs-crypto-manage-regulated-workloads#regulated-workloads-use-cases)
-
-    * [Managing VMware regulated workloads with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-regulated-workloads#vmware-regulated-workloads)
-
-    * [Managing {{site.data.keyword.cos_full_notm}} regulated workloads with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-regulated-workloads#cos-regulated-workloads)
 
 * [Getting started to manage your regulated workloads with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-manage-regulated-workloads#get-started-regulated-workloads)
 
@@ -662,27 +374,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Security readiness](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#security-ready)
 
-    * [Data encryption](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#data-encryption)
-
-    * [Data deletion](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#data-deletion)
-
 * [Compliance readiness](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#compliance-ready)
-
-    * [Common Criteria EAL4 certified](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#common-criteria-certified)
-
-    * [FIPS 140-2 Level 4](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#fips)
-
-    * [General Data Protection Regulation](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#gdpr)
-
-    * [HIPAA support](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#hipaa-ready)
-
-    * [{{site.data.keyword.cloud_notm}} for Financial Services](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#fscloud-support)
-
-    * [IRAP support](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#IRAP-support)
-
-    * [ISO 27001, 27017, 27018](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#iso)
-
-    * [SOC 2 Type 1](/docs/hs-crypto?topic=hs-crypto-security-and-compliance#soc2-type1)
 
 
 ## Release notes
@@ -690,6 +382,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [2 July 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-july22024)
+
+    * Updated: New API endpoints in Madrid
 
 * [19 June 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-june192024)
 
@@ -1015,16 +711,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Set up the {{site.data.keyword.hscrypto}} PKCS #11 library in your Oracle Database environment](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11#tutorial-tde-pkcs11-setup)
 
-    * [1. Set up the Oracle Database](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11#tutorial-tde-db-setup)
-
-    * [2. Configure the {{site.data.keyword.hscrypto}} PKCS #11 library](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11#tutorial-tde-library-setup)
-
-    * [3. Install the {{site.data.keyword.hscrypto}} PKCS #11 library](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11#tutorial-tde-install-library)
-
-    * [4. Check the library setup](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11#tutorial-tde-library-check)
-
-    * [5. Initialize the {{site.data.keyword.hscrypto}} PKCS #11 library](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11#tutorial-tde-initialize-library)
-
 * [Set up Oracle Database TDE and encrypt your data](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11#tutorial-dte-encrypt)
 
 * [Next steps](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11#tutorial-tde-summary)
@@ -1040,12 +726,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Initialize your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-tutorial-db2-pkcs11#tutorial-db2-initialize)
 
 * [Set up the {{site.data.keyword.hscrypto}} PKCS #11 library](/docs/hs-crypto?topic=hs-crypto-tutorial-db2-pkcs11#tutorial-db2-pkcs11-setup)
-
-    * [1. Run the Db2 Community Edition container](/docs/hs-crypto?topic=hs-crypto-tutorial-db2-pkcs11#tutorial-db2-community-container)
-
-    * [2. Create the {{site.data.keyword.hscrypto}} PKCS #11 configuration file](/docs/hs-crypto?topic=hs-crypto-tutorial-db2-pkcs11#tutorial-db2-config-setup)
-
-    * [3. Install the {{site.data.keyword.hscrypto}} PKCS #11 library](/docs/hs-crypto?topic=hs-crypto-tutorial-db2-pkcs11#tutorial-db2-install-library)
 
 * [Set up Db2 native encryption](/docs/hs-crypto?topic=hs-crypto-tutorial-db2-pkcs11#tutorial-db2-encrypt)
 
@@ -1108,17 +788,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Provisioning an instance of {{site.data.keyword.hscrypto}} Standard Plan](/docs/hs-crypto?topic=hs-crypto-provision#provision-standard)
 
-    * [Using the UI](/docs/hs-crypto?topic=hs-crypto-provision&interface=ui#provision-gui)
+* [Provisioning an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-provision#provision-uko)
 
-    * [Using the {{site.data.keyword.cloud_notm}} CLI](/docs/hs-crypto?topic=hs-crypto-provision&interface=cli#provision-cli)
-
-* [Provisioning an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-provision&interface=cli#provision-uko)
-
-    * [Using the UI](/docs/hs-crypto?topic=hs-crypto-provision&interface=ui#provision-uko-gui)
-
-    * [Using the {{site.data.keyword.cloud_notm}} CLI](/docs/hs-crypto?topic=hs-crypto-provision&interface=cli#provision-uko-cli)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-provision&interface=cli#provision-next)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-provision#provision-next)
 
 
 ## Initializing service instances
@@ -1138,19 +810,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Step 1: Order smart cards and smart card readers](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-and-reader)
 
-    * [Ordering smart cards](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card)
-
-    * [Ordering smart card readers](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#order-smart-card-reader)
-
 * [Step 2: Install the smart card reader driver on your local workstation](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-smart-card-reader-driver)
 
 * [Step 3: Install the Management Utilities on your local workstation](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#install-management-utility-application)
 
 * [Step 4: Configure smart cards with the Smart Card Utility Program](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#configure-smart-card-utility)
-
-    * [Initializing the certificate authority smart card](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#initialize-ca-smart-card)
-
-    * [Initializing the EP11 smart card](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#initialize-ep11-smart-card)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities#prepare-management-utilities-next)
 
@@ -1159,16 +823,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#initialize-hsm-management-utilities-prerequisites)
 
 * [Loading the master key from the smart cards](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#load-master-key-management-utilities)
-
-    * [Step 1: Generate the signature keys and master key parts](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step1-generate-keys-management-utilities)
-
-    * [Step 2: Select the crypto units where the master key is to be loaded](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step2-select-crypto-units-management-utilities)
-
-    * [Step 3: Add administrators to the selected crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step3-add-administrator-management-utilities)
-
-    * [Step 4: Set the signature thresholds to exit imprint mode in the selected crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step4-exit-imprint-mode-management-utilities)
-
-    * [Step 5: Load the master key](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#step5-load-master-key-management-utilities)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities#initialize-crypto-utilities-management-utilities-next)
 
@@ -1185,20 +839,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Selecting target crypto units for service initialization](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#identify_crypto_units)
 
 * [Loading master keys](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#load-master-keys)
-
-    * [Step 1: Create one or more signature keys](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step1-create-signature-keys)
-
-    * [Step 2: Add one or more administrators in the target crypto unit](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step2-load-admin)
-
-    * [Step 3: Set the quorum authentication thresholds to exit imprint mode in the target crypto unit](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step3-exit-imprint-mode)
-
-    * [Step 4: Create a set of master key parts to use](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step4-create-master-key)
-
-    * [Step 5: Load the new master key register](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step5-load-master-key)
-
-    * [Step 6: Commit the new master key register](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step6-commit-master-key)
-
-    * [Step 7: Activate the master key](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step7-activate-master-key)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-crypto-cli-next)
 
@@ -1274,8 +914,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Retrieving your IBM Cloud credentials](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#retrieve-grep11-credentials)
 
 * [Generating a GREP11 API request](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#form-grep11-api-request)
-
-    * [Example: Generating random data using the `GenerateRandomRequest()` function](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#generate-random-request-example)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#set-up-grep11-api-next-steps)
 
@@ -1407,43 +1045,19 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Creating key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#create-key-ring)
 
-    * [Creating key rings with the UI](/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=ui#create-key-ring-ui)
-
-    * [Creating key rings with the API](/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=api#create-key-ring-api)
-
-* [Transferring a key to a different key ring](/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=api#transfer-key-key-ring)
-
-    * [Transferring a key to a different key ring with the UI](/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=ui#transfer-key-ring-ui)
-
-    * [Transferring a key to a different key ring with the API](/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=api#transfer-key-ring-api)
+* [Transferring a key to a different key ring](/docs/hs-crypto?topic=hs-crypto-managing-key-rings#transfer-key-key-ring)
 
 * [Granting access to a key ring](/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=ui#grant-access-key-ring)
 
 * [Listing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=ui#list-key-ring)
 
-    * [Listing key rings with the UI](/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=ui#list-key-ring-ui)
-
-    * [Listing key rings with the API](/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=api#list-key-ring-api)
-
-* [Deleting key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=api#delete-key-ring)
-
-    * [Deleting key rings with the UI](/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=ui#delete-key-ring-ui)
-
-    * [Deleting key rings with the API](/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=api#delete-key-ring-api)
+* [Deleting key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=ui#delete-key-ring)
 
 [Managing key aliases](/docs/hs-crypto?topic=hs-crypto-manage-key-alias#manage-key-alias)
 
 * [Creating key aliases](/docs/hs-crypto?topic=hs-crypto-manage-key-alias#create-key-alias)
 
-    * [Creating key alias with the UI](/docs/hs-crypto?topic=hs-crypto-manage-key-alias&interface=ui#create-key-alias-ui)
-
-    * [Creating key aliases with the API](/docs/hs-crypto?topic=hs-crypto-manage-key-alias&interface=api#create-key-alias-api)
-
-* [Deleting key aliases](/docs/hs-crypto?topic=hs-crypto-manage-key-alias&interface=api#delete-key-alias)
-
-    * [Deleting key aliases with the UI](/docs/hs-crypto?topic=hs-crypto-manage-key-alias&interface=ui#delete-key-alias-ui)
-
-    * [Deleting key aliases with the API](/docs/hs-crypto?topic=hs-crypto-manage-key-alias&interface=api#delete-key-alias-api)
+* [Deleting key aliases](/docs/hs-crypto?topic=hs-crypto-manage-key-alias#delete-key-alias)
 
 * [APIs that use key alias](/docs/hs-crypto?topic=hs-crypto-manage-key-alias&interface=api#key-alias-apis)
 
@@ -1457,10 +1071,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Base64 encoding your key material](/docs/hs-crypto?topic=hs-crypto-import-root-keys&interface=cli#encode-key-material-root-key)
 
-    * [Using OpenSSL to encode existing key material](/docs/hs-crypto?topic=hs-crypto-import-root-keys&interface=cli#open-ssl-encoding-root-key)
-
-    * [Using OpenSSL to create and encode new key material](/docs/hs-crypto?topic=hs-crypto-import-root-keys&interface=cli#open-ssl-encoding-new-key-material-root-key)
-
 * [What's next](/docs/hs-crypto?topic=hs-crypto-import-root-keys&interface=cli#import-root-key-next)
 
 [Importing standard keys](/docs/hs-crypto?topic=hs-crypto-import-standard-keys#import-standard-keys)
@@ -1472,10 +1082,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Importing standard keys with the CLI](/docs/hs-crypto?topic=hs-crypto-import-standard-keys&interface=cli#import-standard-key-cli)
 
 * [Base64 encoding your key material](/docs/hs-crypto?topic=hs-crypto-import-standard-keys&interface=cli#encode-key-material-standard-key)
-
-    * [Using OpenSSL to encode existing key material](/docs/hs-crypto?topic=hs-crypto-import-standard-keys&interface=cli#open-ssl-encoding-standard-key)
-
-    * [Using OpenSSL to create and encode new key material](/docs/hs-crypto?topic=hs-crypto-import-standard-keys&interface=cli#open-ssl-encoding-new-key-material-standard-key)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-import-standard-keys&interface=cli#import-standard-key-next)
 
@@ -1497,16 +1103,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Viewing root keys or standard keys with the key management service API](/docs/hs-crypto?topic=hs-crypto-view-keys&interface=api#view-key-api)
 
-    * [Retrieving a list of your root keys or standard keys](/docs/hs-crypto?topic=hs-crypto-view-keys&interface=api#retrieve-keys-api)
-
-    * [Retrieving a subset of keys](/docs/hs-crypto?topic=hs-crypto-view-keys&interface=api#retrieve-subset-keys-api)
-
-    * [Retrieving keys by state](/docs/hs-crypto?topic=hs-crypto-view-keys&interface=api#filter-keys-state-api)
-
-    * [Retrieving keys by Extractable value](/docs/hs-crypto?topic=hs-crypto-view-keys&interface=api#filter-keys-extractable-state-api)
-
-    * [Sorting a list of keys](/docs/hs-crypto?topic=hs-crypto-view-keys&interface=api#filter-keys-sort-api)
-
 [Viewing details about a root key or a standard key](/docs/hs-crypto?topic=hs-crypto-view-key-details#view-key-details)
 
 * [Viewing key details with the UI](/docs/hs-crypto?topic=hs-crypto-view-key-details&interface=ui#view-key-details-ui)
@@ -1527,8 +1123,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Decoding your key material](/docs/hs-crypto?topic=hs-crypto-unwrap-keys#how-to-decode-key-material)
 
-    * [Using OpenSSL to decode key material](/docs/hs-crypto?topic=hs-crypto-unwrap-keys#open-ssl-encoding-root-unwrap)
-
 [Rewrapping data encryption keys with root keys](/docs/hs-crypto?topic=hs-crypto-rewrap-keys#rewrap-keys)
 
 * [Rewrapping keys by using the API](/docs/hs-crypto?topic=hs-crypto-rewrap-keys#rewrap-key-api)
@@ -1539,12 +1133,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Managing rotation policies with the API](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy&interface=api#manage-rotation-policies-api)
 
-    * [Viewing a rotation policy](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy&interface=api#view-rotation-policy-api)
-
-    * [Creating a rotation policy](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy&interface=api#create-rotation-policy-api)
-
-    * [Updating a rotation policy](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy&interface=api#update-rotation-policy-api)
-
 * [What's next](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy&interface=api#set-rotation-policy-next)
 
 [Rotating root keys manually](/docs/hs-crypto?topic=hs-crypto-rotate-keys#rotate-keys)
@@ -1552,8 +1140,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Rotating root keys in the UI](/docs/hs-crypto?topic=hs-crypto-rotate-keys&interface=ui#rotate-root-key-gui)
 
 * [Rotating root keys with the API](/docs/hs-crypto?topic=hs-crypto-rotate-keys&interface=api#rotate-root-key-api)
-
-    * [Using an import token to rotate a key](/docs/hs-crypto?topic=hs-crypto-rotate-keys&interface=api#rotate-root-keys-secure-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-rotate-keys&interface=api#rotate-key-next)
 
@@ -1565,15 +1151,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Disabling and enabling root keys with the UI](/docs/hs-crypto?topic=hs-crypto-disable-keys&interface=ui#disable-enable-ui)
 
-    * [Disabling a root key](/docs/hs-crypto?topic=hs-crypto-disable-keys&interface=ui#disable-ui)
-
-    * [Enabling a root key](/docs/hs-crypto?topic=hs-crypto-disable-keys&interface=ui#enable-ui)
-
 * [Disabling and enabling root keys with the API](/docs/hs-crypto?topic=hs-crypto-disable-keys&interface=api#disable-enable-api)
-
-    * [Disabling a root key](/docs/hs-crypto?topic=hs-crypto-disable-keys&interface=api#disable-api)
-
-    * [Enabling a disabled root key](/docs/hs-crypto?topic=hs-crypto-disable-keys&interface=api#enable-api)
 
 [About deleting and purging keys](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys#delete-purge-keys)
 
@@ -1587,8 +1165,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Deleting keys with the API](/docs/hs-crypto?topic=hs-crypto-delete-keys&interface=api#delete-keys-api)
 
-    * [Using the `force` query parameter](/docs/hs-crypto?topic=hs-crypto-delete-keys&interface=api#delete-key-force)
-
 * [What's next](/docs/hs-crypto?topic=hs-crypto-delete-keys&interface=api#delete-key-next)
 
 [Deleting keys by using dual authorization](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys#delete-dual-auth-keys)
@@ -1597,27 +1173,13 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Authorize deletion for a key with the UI](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys&interface=ui#set-key-deletion-console)
 
-    * [Step 1. Authorize deletion for a key](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys&interface=ui#set-dual-auth-key-gui)
-
-    * [Step 2. Delete the key](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys&interface=ui#delete-dual-auth-key-gui)
-
 * [Authorize deletion for a key with the API](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys&interface=api#set-key-deletion-api)
-
-    * [Step 1. Authorize deletion for a key](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys&interface=api#set-dual-auth-key-api)
-
-    * [Step 2. Delete the key](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys&interface=api#delete-dual-auth-key-api)
-
-    * [Removing an existing authorization](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys&interface=api#unset-key-deletion-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys&interface=api#delete-daul-auth-keys-next)
 
 [Setting dual authorization policies for keys](/docs/hs-crypto?topic=hs-crypto-set-dual-auth-key-policy#set-dual-auth-key-policy)
 
 * [Managing dual authorization policies with the key management service API](/docs/hs-crypto?topic=hs-crypto-set-dual-auth-key-policy#manage-dual-auth-key-policies-api)
-
-    * [Viewing a dual authorization policy for a key](/docs/hs-crypto?topic=hs-crypto-set-dual-auth-key-policy#view-dual-auth-key-policy-api)
-
-    * [Creating a dual authorization policy for a key](/docs/hs-crypto?topic=hs-crypto-set-dual-auth-key-policy#create-dual-auth-key-policy-api)
 
 [Purging keys manually](/docs/hs-crypto?topic=hs-crypto-purge-keys#purge-keys)
 
@@ -1639,15 +1201,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Viewing protected resources with the UI](/docs/hs-crypto?topic=hs-crypto-view-protected-resources&interface=ui#view-protected-resources-gui)
 
-    * [Viewing protected resources associated with your root key](/docs/hs-crypto?topic=hs-crypto-view-protected-resources&interface=ui#view-protected-resources-console-key)
-
-    * [Viewing resources in your instance](/docs/hs-crypto?topic=hs-crypto-view-protected-resources&interface=ui#view-protected-resources-console-instance)
-
 * [Viewing protected resources with the API](/docs/hs-crypto?topic=hs-crypto-view-protected-resources&interface=api#view-protected-resources-api)
-
-    * [Listing registrations for a specific root key with the API](/docs/hs-crypto?topic=hs-crypto-view-protected-resources&interface=api#view-protected-resources-key-id-api)
-
-    * [Listing registrations for any root keys with the API](/docs/hs-crypto?topic=hs-crypto-view-protected-resources&interface=api#view-protected-resources-any-key-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-view-protected-resources&interface=api#view-protected-resources-next-steps)
 
@@ -1691,10 +1245,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#manage-ep11-certificate-ui-before)
 
 * [Viewing EP11 certificates](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#view-ep11-certificate-ui)
-
-    * [Viewing EP11 certificate list](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#view-ep11-certificate-list-ui)
-
-    * [Viewing EP11 certificate details](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#view-ep11-certificate-details-ui)
 
 * [Downloading EP11 certificates](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#download-ep11-certificate-ui)
 
@@ -1850,10 +1400,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Syncing keys with the UI](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=ui#uko-sync-managed-key-gui)
 
-    * [Step 1: Verify key state](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=ui#verify-key-state-gui)
-
-    * [Step 2: Sync key state](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=ui#sync-key-state-gui)
-
 * [Syncing with the API](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=api#uko-sync-managed-key-api)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=api#uko-sync-keys-next)
@@ -1898,12 +1444,6 @@ Find what you are looking for in the compilation of topics that are available in
 [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores)
 
 * [Setting up required user access in external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores-access)
-
-    * [Setting up required user access in Azure Key Vault](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores-access-azure)
-
-    * [Setting up required user access in AWS keystore](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores-access-aws)
-
-    * [Setting up required user access in Google Cloud KMS](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores#connect-external-keystores-access-google-cloud)
 
 * [Connecting to external keystores with the UI](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores&interface=ui#connect-external-keystores-ui)
 
@@ -2001,21 +1541,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Enabling BIP32 deterministic wallets](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-BIP32)
 
-    * [Step 1: Verify the BIP32 enablement](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#verify-BIP32-enablement)
-
-    * [Step 2: Enable BIP32 manually](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-bip32-manually)
-
 * [Enabling Edwards-curve Digital Signature Algorithm](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-EdDSA)
 
-    * [Step 1: Verify the EdDSA enablement](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#verify-EdDSA-enablement)
-
-    * [Step 2: Enable EdDSA manually](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-EdDSA-manually)
-
 * [Enabling the Schnorr algorithm](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-schnorr)
-
-    * [Step 1: Verify the Schnorr algorithm enablement](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#verify-schnorr-enablement)
-
-    * [Step 2: Enable the Schnorr algorithm manually](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#enable-schnorr-manually)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-enable-mechanisms#next-enable-mechanisms)
 
@@ -2027,12 +1555,6 @@ Find what you are looking for in the compilation of topics that are available in
 [Adding or removing crypto units](/docs/hs-crypto?topic=hs-crypto-add-remove-crypto-units#add-remove-crypto-units)
 
 * [Adding crypto units to an existing service instance](/docs/hs-crypto?topic=hs-crypto-add-remove-crypto-units#add-crypto-units)
-
-    * [Step 1: Request to add crypto units](/docs/hs-crypto?topic=hs-crypto-add-remove-crypto-units#step1-support-ticket-change-number)
-
-    * [Step 2: Initialize the new crypto units](/docs/hs-crypto?topic=hs-crypto-add-remove-crypto-units#step2-initialize-new-crypto-units)
-
-    * [Step 3: Request to activate the new crypto units](/docs/hs-crypto?topic=hs-crypto-add-remove-crypto-units#step3-activate-new-crypto-units)
 
 * [Removing crypto units from an existing service instance](/docs/hs-crypto?topic=hs-crypto-add-remove-crypto-units#remove-crypto-units)
 
@@ -2046,10 +1568,6 @@ Find what you are looking for in the compilation of topics that are available in
 [Enabling or adding failover crypto units after you provision a service instance](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#enable-add-failover)
 
 * [Step 1: Add failover crypto units](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#add-failover-cu)
-
-    * [Using the {{site.data.keyword.cloud_notm}} CLI](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#enable-add-failover-cli)
-
-    * [Using the Management Utilities](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#enable-add-failover-management-utilities)
 
 * [Step 2: Raise a support ticket](/docs/hs-crypto?topic=hs-crypto-enable-add-failover#raise-support-ticket)
 
@@ -2066,31 +1584,13 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Step 1: Delete keys](/docs/hs-crypto?topic=hs-crypto-delete-instance#delete-all-key-step)
 
-    * [Deleting root keys from the UI - Standard plan](/docs/hs-crypto?topic=hs-crypto-delete-instance&interface=ui#delete-root-key-gui)
+* [Step 2: Select the crypto units to be deleted](/docs/hs-crypto?topic=hs-crypto-delete-instance#select-crypto-unit-step)
 
-    * [Deleting managed keys from the UI - {{site.data.keyword.uko_full_notm}} plan](/docs/hs-crypto?topic=hs-crypto-delete-instance&interface=ui#delete-managed-key-gui)
+* [Step 3: Zeroize crypto units](/docs/hs-crypto?topic=hs-crypto-delete-instance#zeroize-crypto-unit-step)
 
-    * [Deleting roots keys from the {{site.data.keyword.cloud_notm}} CLI - Standard plan](/docs/hs-crypto?topic=hs-crypto-delete-instance&interface=cli#delete-root-key-cli)
+* [Step 4: Optional - Uninstall the {{site.data.keyword.hscrypto}} utilities](/docs/hs-crypto?topic=hs-crypto-delete-instance#uninstall-utilities-step)
 
-    * [Deleting managed keys from the {{site.data.keyword.cloud_notm}} CLI - {{site.data.keyword.uko_full_notm}} plan](/docs/hs-crypto?topic=hs-crypto-delete-instance&interface=cli#delete-managed-key-cli)
-
-* [Step 2: Select the crypto units to be deleted](/docs/hs-crypto?topic=hs-crypto-delete-instance&interface=cli#select-crypto-unit-step)
-
-* [Step 3: Zeroize crypto units](/docs/hs-crypto?topic=hs-crypto-delete-instance&interface=cli#zeroize-crypto-unit-step)
-
-* [Step 4: Optional - Uninstall the {{site.data.keyword.hscrypto}} utilities](/docs/hs-crypto?topic=hs-crypto-delete-instance&interface=cli#uninstall-utilities-step)
-
-    * [Uninstall the TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-delete-instance&interface=cli#uninstall-tke-cli-plugin)
-
-    * [Uninstall the Management Utilities](/docs/hs-crypto?topic=hs-crypto-delete-instance&interface=cli#uninstall-management-utilities)
-
-* [Step 5: Delete your service instance](/docs/hs-crypto?topic=hs-crypto-delete-instance&interface=cli#delete-instance-step)
-
-    * [Deleting instances from the UI resources page](/docs/hs-crypto?topic=hs-crypto-delete-instance&interface=ui#delete-gui-resource)
-
-    * [Deleting instances from the UI instance details page](/docs/hs-crypto?topic=hs-crypto-delete-instance&interface=ui#delete-gui-detail)
-
-    * [Deleting instances from the {{site.data.keyword.cloud_notm}} CLI](/docs/hs-crypto?topic=hs-crypto-delete-instance&interface=cli#delete-cli)
+* [Step 5: Delete your service instance](/docs/hs-crypto?topic=hs-crypto-delete-instance#delete-instance-step)
 
 
 ## Restoring your data from another region
@@ -2114,10 +1614,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles)
 
-    * [IAM platform access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#platform-mgmt-roles)
-
-    * [IAM service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles)
-
 * [Managing access to multiple instances](/docs/hs-crypto?topic=hs-crypto-manage-access#manage-multiple-instances)
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-manage-access#manage-access-next)
@@ -2128,13 +1624,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Granting access to a single key in an instance](/docs/hs-crypto?topic=hs-crypto-grant-access-keys#grant-access-key-level)
 
-    * [Step 1. Retrieve the key ID](/docs/hs-crypto?topic=hs-crypto-grant-access-keys#access-key-retrieve-ID)
-
-    * [Step 2. Create an access policy](/docs/hs-crypto?topic=hs-crypto-grant-access-keys#access-key-create-policy)
-
 * [Granting access to key rings in an instance](/docs/hs-crypto?topic=hs-crypto-grant-access-keys#grant-access-key-ring-level)
-
-    * [Granting access to key rings with the UI](/docs/hs-crypto?topic=hs-crypto-grant-access-keys#grant-access-key-ring-console)
 
 
 ### Granting users access to manage EP11 keystores and keys
@@ -2155,27 +1645,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Step 1: Create custom IAM roles](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#step1-create-custom-roles)
 
-    * [1. Create a custom role for performing crypto operations](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#create-crypto-operator)
-
-    * [2. Create a custom role for managing keys](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#create-manage-key-operator)
-
-    * [3. Create a custom role for managing keystores](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#create-keystore-operator)
-
 * [ Step 2: Create service IDs and API keys for the SO user, normal user, and anonymous user](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#step2-create-service-id-api-key)
 
-    * [1. Create service IDs and API keys for the SO user](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#create-service-id-api-key-so-user)
-
-    * [2. Create service IDs and API keys for the normal user](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#create-service-id-api-key-normal-user)
-
-    * [3. Create service IDs and API keys for the anonymous user](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#create-service-id-api-key-ananymous-user)
-
 * [Step 3: Assign IAM roles to the service IDs](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#step3-assign-iam-roles)
-
-    * [1. Assign the custom roles to the SO user service ID](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#assign-custom-role-SO-user-service)
-
-    * [2. Assign the custom roles to the normal user service ID](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#assign-custom-role-normal-user-service)
-
-    * [3. Create access policies and assign custom roles to the anonymous user service ID](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#create-policy-assign-custom-role-anonymous-user-service)
 
 * [ What's next](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#pkcs11-best-practices-next)
 
@@ -2190,23 +1662,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Setting up a VPE for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc#virtual-private-endpoints-for-vpc-setup)
 
-    * [Configuring an endpoint gateway](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc#vpe-gateway-configure-for-hpcs)
-
 * [Using your VPE for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc#use-vpe-for-hpcs)
-
-    * [Using the VPE with the CLI](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc&interface=cli#use-vpe-for-hpcs-cli)
-
-    * [Using the VPE with the API](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc&interface=api#use-vpe-for-hpcs-api)
-
-    * [Using the VPE with Terraform](/docs/hs-crypto?topic=hs-crypto-virtual-private-endpoints-for-vpc&interface=terraform#use-vpe-for-hpcs-terraform)
 
 [Using service endpoints to privately connect to {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-secure-connection#secure-connection)
 
 * [Understanding the network access policy](/docs/hs-crypto?topic=hs-crypto-secure-connection#understand-network-access-policies)
-
-    * [Public and private network access](/docs/hs-crypto?topic=hs-crypto-secure-connection#public-and-private)
-
-    * [Private network access only](/docs/hs-crypto?topic=hs-crypto-secure-connection#private-only)
 
 * [Before you begin](/docs/hs-crypto?topic=hs-crypto-secure-connection#private-endpoint-prereqs)
 
@@ -2230,59 +1690,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Supported events](/docs/hs-crypto?topic=hs-crypto-at-events#at-supported-events)
 
-    * [Key events](/docs/hs-crypto?topic=hs-crypto-at-events#key-actions)
-
-    * [Key Ring events](/docs/hs-crypto?topic=hs-crypto-at-events#keyring-actions)
-
-    * [Policy events](/docs/hs-crypto?topic=hs-crypto-at-events#policy-actions)
-
-    * [Import token events](/docs/hs-crypto?topic=hs-crypto-at-events#import-token-actions)
-
-    * [Registration events](/docs/hs-crypto?topic=hs-crypto-at-events#registration-actions)
-
-    * [Trusted Key Entry events](/docs/hs-crypto?topic=hs-crypto-at-events#tke-actions)
-
-    * [Certificate manager events](/docs/hs-crypto?topic=hs-crypto-at-events#mtlscert-mgr-actions)
-
-    * [KMIP for VMware events](/docs/hs-crypto?topic=hs-crypto-at-events#at-events-kmip)
-
-    * [EP11 keystore events](/docs/hs-crypto?topic=hs-crypto-at-events#ep11-keystore-events)
-
-    * [EP11 crypto events](/docs/hs-crypto?topic=hs-crypto-at-events#ep11-crypto-events)
-
 * [Viewing events](/docs/hs-crypto?topic=hs-crypto-at-events#at-ui)
 
 * [Analyzing successful events](/docs/hs-crypto?topic=hs-crypto-at-events#at-events-analyze)
 
-    * [Common fields](/docs/hs-crypto?topic=hs-crypto-at-events#at-common-fields)
-
-    * [Key action events](/docs/hs-crypto?topic=hs-crypto-at-events#key-action-events)
-
-    * [Policy events](/docs/hs-crypto?topic=hs-crypto-at-events#policy-at-events)
-
-    * [Import token events](/docs/hs-crypto?topic=hs-crypto-at-events#import-token-events)
-
-    * [Registration events](/docs/hs-crypto?topic=hs-crypto-at-events#registration-events)
-
-    * [Trusted Key Entry events](/docs/hs-crypto?topic=hs-crypto-at-events#tke-events-success)
-
-    * [Certificate manager events](/docs/hs-crypto?topic=hs-crypto-at-events#mgr-events-success)
-
-    * [EP11 keystore events](/docs/hs-crypto?topic=hs-crypto-at-events#ep11-keystore)
-
-    * [EP11 crypto events](/docs/hs-crypto?topic=hs-crypto-at-events#ep11-crypto)
-
 * [Analyzing failed events](/docs/hs-crypto?topic=hs-crypto-at-events#at-events-analyze-failed)
-
-    * [Unable to delete a key](/docs/hs-crypto?topic=hs-crypto-at-events#delete-key-failure)
-
-    * [Unable to authenticate while making a request](/docs/hs-crypto?topic=hs-crypto-at-events#authenticate-failure)
-
-    * [Unable to view or list keys in a service instance](/docs/hs-crypto?topic=hs-crypto-at-events#list-keys-failure)
-
-    * [Lifecycle action on a key with registrations did not complete](/docs/hs-crypto?topic=hs-crypto-at-events#protected-resource-key-failure)
-
-    * [Unable to perform Trusted Key Entry actions](/docs/hs-crypto?topic=hs-crypto-at-events#tke-actions-failure)
 
 * [Event severity](/docs/hs-crypto?topic=hs-crypto-at-events#event-severity)
 
@@ -2298,10 +1710,6 @@ Find what you are looking for in the compilation of topics that are available in
 [Managing user access](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-manage-access)
 
 * [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-roles)
-
-    * [IAM platform access roles](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-platform-mgmt-roles)
-
-    * [IAM service access roles](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles)
 
 * [Assigning access to {{site.data.keyword.hscrypto}} in the UI](/docs/hs-crypto?topic=hs-crypto-uko-manage-access&interface=ui#assign-access-console)
 
@@ -2335,47 +1743,11 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Supported events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-at-supported-events)
 
-    * [Key events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-key-actions)
-
-    * [Keystore events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-keystore-actions)
-
-    * [Vault events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-vault-actions)
-
-    * [Template events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-template-actions)
-
-    * [Registration events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-registration-actions)
-
-    * [Trusted Key Entry events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-tke-actions)
-
-    * [Certificate manager events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-mtlscert-mgr-actions)
-
-    * [KMIP for VMware events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-at-events-kmip)
-
-    * [EP11 keystore events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-ep11-keystore-events)
-
-    * [EP11 crypto events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-ep11-crypto-events)
-
 * [Viewing events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-at-ui)
 
 * [Analyzing successful events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-at-events-analyze)
 
-    * [Common fields](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-at-common-fields)
-
-    * [Registration events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-registration-events)
-
-    * [Trusted Key Entry events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-tke-events-success)
-
-    * [Certificate manager events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-mgr-events-success)
-
-    * [EP11 keystore events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-ep11-keystore)
-
-    * [EP11 crypto events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-ep11-crypto)
-
 * [Analyzing failed events](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-at-events-analyze-failed)
-
-    * [Lifecycle action on a key with registrations did not complete](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-protected-resource-key-failure)
-
-    * [Unable to perform Trusted Key Entry actions](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-tke-actions-failure)
 
 * [Event severity](/docs/hs-crypto?topic=hs-crypto-uko-at-events#uko-event-severity)
 
@@ -2388,13 +1760,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Managing metrics settings](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics#manage-metrics-policy)
 
-    * [Enabling metrics for your {{site.data.keyword.hscrypto}} instance with the UI](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics&interface=ui#enable-metrics-instance-policy-ui)
-
-    * [Enabling metrics for your {{site.data.keyword.hscrypto}} instance with the API](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics&interface=api#enable-metrics-instance-policy-api)
-
-    * [Disabling metrics for your {{site.data.keyword.hscrypto}} instance with the API](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics&interface=api#disable-metrics-api)
-
-* [What's next](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics&interface=api#monitor-metrics-next-steps)
+* [What's next](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics#monitor-metrics-next-steps)
 
 [{{site.data.keyword.mon_short}} operational metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics#operational-metrics)
 
@@ -2404,23 +1770,13 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Connecting {{site.data.keyword.mon_short}} with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-operational-metrics#connect-monitoring-hpcs)
 
-    * [Configure a {{site.data.keyword.mon_short}} instance for metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics#configure-monitoring)
-
 * [{{site.data.keyword.hscrypto}} Metrics Details](/docs/hs-crypto?topic=hs-crypto-operational-metrics#hpcs-metrics)
-
-    * [API Hits](/docs/hs-crypto?topic=hs-crypto-operational-metrics#api-hits)
 
 * [Latency](/docs/hs-crypto?topic=hs-crypto-operational-metrics#latency)
 
 * [Attributes for Segmentation](/docs/hs-crypto?topic=hs-crypto-operational-metrics#attributes-for-segmentation)
 
 * [Default Dashboards](/docs/hs-crypto?topic=hs-crypto-operational-metrics#default-dashboards)
-
-    * [How to find the {{site.data.keyword.mon_short}} dashboard for your {{site.data.keyword.hscrypto}} service instance by using UI](/docs/hs-crypto?topic=hs-crypto-operational-metrics#monitor-dashboard-console)
-
-    * [How to find the {{site.data.keyword.mon_short}} dashboard for your {{site.data.keyword.hscrypto}} service instance by using observability page](/docs/hs-crypto?topic=hs-crypto-operational-metrics#monitor-dashboard-observability)
-
-    * [How to scope down your metrics by using Metrics Filter Attributes](/docs/hs-crypto?topic=hs-crypto-operational-metrics#metrics-filter-attributes)
 
 * [Setting Alerts](/docs/hs-crypto?topic=hs-crypto-operational-metrics#set-monitor-alerts)
 
@@ -2483,10 +1839,6 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Supported curves](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#supported-pkcs11-curve-name)
 
-    * [Supported curves for generating Elliptic Curve (EC) keys](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#supported-pkcs11-ec-curve-name)
-
-    * [Supported curves for encrypting digital assets and generating digital signatures](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#supported-pkcs11-dap-curve-name)
-
 * [Standard PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs11-standard-api-ref)
 
 [Cryptographic operations: GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-api-ref)
@@ -2503,101 +1855,23 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [Supported curves](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#supported-grep11-curve-name)
 
-    * [Supported curves for generating Elliptic Curve (EC) keys](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#supported-grep11-ec-curve-name)
-
-    * [Supported curves for encrypting digital assets and generating signatures](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#supported-grep11-dap-curve-name)
-
 * [Performing cryptographic operations with GREP11 functions](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-functions)
 
 * [Retrieving supported crypto algorithms](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-operation-retrieve-mechanisms)
 
-    * [GetMechanismList](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-GetMechanismList)
-
-    * [GetMechanismInfo](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-GetMechanismInfo)
-
 * [Generating and deriving keys](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-operation-generate-keys)
-
-    * [GenerateKey](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-GenerateKey)
-
-    * [GenerateKeyPair](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-GenerateKeyPair)
-
-    * [DeriveKey](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-DeriveKey)
 
 * [Protecting keys](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-operation-manage-keys)
 
-    * [WrapKey](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-WrapKey)
-
-    * [UnwrapKey](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-UnwrapKey)
-
-    * [RewrapKeyBlob](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-rewrapKeyBlob)
-
 * [Retrieving and modifying attributes for keys](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-operation-attribute-value)
-
-    * [GetAttributeValue](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-GetAttributeValue)
-
-    * [SetAttributeValue](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-SetAttributeValue)
 
 * [Generating random data](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-operation-generate-random-data)
 
-    * [GenerateRandom](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-GenerateRandom)
-
 * [Encrypting and decrypting data](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-operation-encrypt-decrypt-data)
-
-    * [EncryptInit](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-EncryptInit)
-
-    * [Encrypt](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-Encrypt)
-
-    * [EncryptUpdate](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-EncryptUpdate)
-
-    * [EncryptFinal](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-EncryptFinal)
-
-    * [EncryptSingle](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-EncryptSingle)
-
-    * [ReencryptSingle](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-ReencryptSingle)
-
-    * [DecryptInit](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-DecryptInit)
-
-    * [Decrypt](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-decrypt)
-
-    * [DecryptUpdate](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-DecryptUpdate)
-
-    * [DecryptFinal](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-DecryptFinal)
-
-    * [DecryptSingle](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-DecryptSingle)
 
 * [Signing and verifying data](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-operation-sign-verify-data)
 
-    * [SignInit](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-SignInit)
-
-    * [Sign](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-Sign)
-
-    * [SignUpdate](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-SignUpdate)
-
-    * [SignFinal](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-SignFinal)
-
-    * [SignSingle](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-SignSingle)
-
-    * [VerifyInit](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-VerifyInit)
-
-    * [Verify](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-Verify)
-
-    * [VerifyUpdate](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-VerifyUpdate)
-
-    * [VerifyFinal](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-VerifyFinal)
-
-    * [VerifySingle](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-VerifySingle)
-
 * [Protecting data integrity through message digests](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-operation-digest-data)
-
-    * [DigestInit](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-DigestInit)
-
-    * [Digest](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-Digest)
-
-    * [DigestUpdate](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-DigestUpdate)
-
-    * [DigestFinal](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-DigestFinal)
-
-    * [DigestSingle](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-DigestSingle)
 
 * [Code examples](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#code-example)
 
@@ -2610,19 +1884,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#tke-cli-change-log)
 
-    * [Version 1.2.3](/docs/hs-crypto?topic=hs-crypto-cli-change-log#tke-cli-123)
-
 * [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#cert-manager-cli-change-log)
 
-    * [Version 1.0.0](/docs/hs-crypto?topic=hs-crypto-cli-change-log#cert-manager-cli-100)
-
 * [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-cli-change-log#uko-cli-change-log)
-
-    * [Updates on version 0.0.1 - April 2024](/docs/hs-crypto?topic=hs-crypto-cli-change-log#uko-cli-001-update-2404)
-
-    * [Updates on version 0.0.1 - June 2023](/docs/hs-crypto?topic=hs-crypto-cli-change-log#uko-cli-001-update-2306)
-
-    * [Version 0.0.1](/docs/hs-crypto?topic=hs-crypto-cli-change-log#uko-cli-001)
 
 [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} CLI](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#hpcs-cli-plugin)
 
@@ -2630,23 +1894,9 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [{{site.data.keyword.hscrypto}} Trusted Key Entry CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin)
 
-    * [Installing the TKE CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#install-tke-cli-plugin)
-
-    * [TKE CLI plug-in commands](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-commands-usage)
-
 * [{{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#cert-manager-cli-plugin)
 
-    * [Installing the certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#install-cert-manager-cli-plugin)
-
-    * [Certificate manager CLI plug-in commands](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#cert-manager-commands-usage)
-
 * [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#uko-cli-plugin)
-
-    * [Installing the {{site.data.keyword.uko_full_notm}} CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#install-uko-cli-plugin)
-
-    * [{{site.data.keyword.uko_full_notm}} CLI plug-in commands](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#uko-commands-usage)
-
-    * [{{site.data.keyword.uko_full_notm}} CLI plug-in commands schema examples](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#uko-schema-examples)
 
 
 ## Terraform reference
@@ -2671,10 +1921,6 @@ Find what you are looking for in the compilation of topics that are available in
 * [Connectivity options](/docs/hs-crypto?topic=hs-crypto-regions#connectivity-options)
 
 * [Service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints)
-
-    * [Instance-based endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints)
-
-    * [Port-based endpoints](/docs/hs-crypto?topic=hs-crypto-regions#existing-service-endpoints)
 
 
 ## {{site.data.keyword.hscrypto}} cloud TKE procedures
