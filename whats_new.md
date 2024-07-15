@@ -29,7 +29,7 @@ Stay up to date with the new features that are available for {{site.data.keyword
 {: release-note}
 
 Updated: Transition to VPC data centers in Dallas, Washington D.C, and Frankfurt
-:   {{site.data.keyword.hscrypto}} and [{{site.data.keyword.hpvs}} for Classic](https://cloud.ibm.com/catalog/services/hyper-protect-virtual-server-for-classic){: external} will be transitioning out of {{site.data.keyword.cloud_notm}}classic data centers in Dallas (`DAL`), Washington D.C (`WDC`), and Frankfurt (`FRA`) to {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) data centers in those respective locations allowing clients to take advantage of the new product features and capabilities that VPC offers.
+:   {{site.data.keyword.hscrypto}} and [{{site.data.keyword.hpvs}} for Classic](https://cloud.ibm.com/catalog/services/hyper-protect-virtual-server-for-classic){: external} will be transitioning out of {{site.data.keyword.cloud_notm}} classic data centers in Dallas (`DAL`), Washington D.C (`WDC`), and Frankfurt (`FRA`) to {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) data centers in those respective locations allowing clients to take advantage of the new product features and capabilities that VPC offers.
 
     Implications for current users of Hyper Protect Services:    
     
