@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-09"
+lastupdated: "2024-07-15"
 
 keywords: site map, doc structure, information architecture
 
@@ -382,6 +382,10 @@ Find what you are looking for in the compilation of topics that are available in
 
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
+
+* [18 July 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-july182024)
+
+    * Updated: Transition to VPC data centers in Dallas, Washington D.C, and Frankfurt
 
 * [2 July 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-july22024)
 
