@@ -33,7 +33,7 @@ Updated: Transition to VPC data centers in Dallas, Washington D.C, and Frankfurt
 
     Implications for current users of Hyper Protect Services:    
     
-    - {{site.data.keyword.hscrypto}}: The transition to VPC data centers will be a service/technology upgrade with the user experience remaining unchanged (henceforth known as a “service action”). Minimal customer interaction is required to complete the transition. There is minimal impact to clients. 
+    - {{site.data.keyword.hscrypto}}: The transition to VPC data centers will be a service/technology upgrade with the user experience remaining unchanged. Minimal customer interaction is required to complete the transition. There is minimal impact to clients. 
     
     - {{site.data.keyword.hpvs}} for Classic: The transition to VPC data centers will be a migration and technology version upgrade from {{site.data.keyword.hpvs}} for Classic to [{{site.data.keyword.hpvs}} for VPC](https://cloud.ibm.com/vpc-ext/provision/vs?architecture=s390x&secureExecution=true){: external}. 
     
