@@ -342,6 +342,7 @@ toc:
       - shared-responsibilities.md
       - ha-dr.md
       - open-source-licenses.md
+      - resources.md
   - navgroup:
       id: help
       topics:

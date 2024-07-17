@@ -1994,6 +1994,17 @@ Find what you are looking for in the compilation of topics that are available in
 * [Hosting appliance notices and information](/docs/hs-crypto?topic=hs-crypto-open-source-licenses#hosting-appliance-notice)
 
 
+## Resource links
+{: #sitemap_resource_links}
+
+
+[Resource links](/docs/hs-crypto?topic=hs-crypto-resources#resources)
+
+* [Videos](/docs/hs-crypto?topic=hs-crypto-resources#videos)
+
+* [blogs](/docs/hs-crypto?topic=hs-crypto-resources#blogs)
+
+
 ## FAQs
 {: #sitemap_faqs}
 
