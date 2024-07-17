@@ -387,6 +387,10 @@ Find what you are looking for in the compilation of topics that are available in
 
     * Updated: Transition to VPC data centers in Dallas, Washington D.C, and Frankfurt
 
+* [15 July 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-july152024)
+
+    * Updated: New API endpoints in Frankfurt
+
 * [2 July 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-july22024)
 
     * Updated: New API endpoints in Madrid
@@ -394,6 +398,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [19 June 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-june192024)
 
     * Updated: New API endpoints in Tokyo
+
+* [5 June 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-june2024)
 
     * Updated: New API endpoints in London
 

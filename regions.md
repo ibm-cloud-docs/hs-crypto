@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-07-09"
+lastupdated: "2024-07-17"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -80,6 +80,7 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 | London | June 5, 2024 | `<INSTANCE_ID>.api.eu-gb.hs-crypto.appdomain.cloud`  | `<INSTANCE_ID>.uko.eu-gb.hs-crypto.appdomain.cloud`| `<INSTANCE_ID>.ep11.eu-gb.hs-crypto.appdomain.cloud`  |
 | Tokyo | June 19, 2024 | `<INSTANCE_ID>.api.jp-tok.hs-crypto.appdomain.cloud`  | `<INSTANCE_ID>.uko.jp-tok.hs-crypto.appdomain.cloud`| `<INSTANCE_ID>.ep11.jp-tok.hs-crypto.appdomain.cloud`  |
 | Madrid | July 2, 2024 |  `<INSTANCE_ID>.api.eu-es.hs-crypto.appdomain.cloud`  | `<INSTANCE_ID>.uko.eu-es.hs-crypto.appdomain.cloud`| `<INSTANCE_ID>.ep11.eu-es.hs-crypto.appdomain.cloud`  |
+| Frankfurt | July 15, 2024 |  `<INSTANCE_ID>.api.eu-de.hs-crypto.appdomain.cloud`  | `<INSTANCE_ID>.uko.eu-de.hs-crypto.appdomain.cloud`| `<INSTANCE_ID>.ep11.eu-de.hs-crypto.appdomain.cloud`  |
 {: caption="Table 3. New public endpoints for supported regions" caption-side="bottom"}
 {: #table-3}
 {: tab-title="Public"}
@@ -95,6 +96,7 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 | London | June 5, 2024 | `<instance_ID>.api.private.eu-gb.hs-crypto.appdomain.cloud`  |  `<instance_ID>.ep11.private.eu-gb.hs-crypto.appdomain.cloud` |
 | Tokyo | June 19, 2024 | `<instance_ID>.api.private.jp-tok.hs-crypto.appdomain.cloud`  |  `<instance_ID>.ep11.private.jp-tok.hs-crypto.appdomain.cloud` |
 | Madrid | July 2, 2024 | `<instance_ID>.api.private.eu-es.hs-crypto.appdomain.cloud`  |  `<instance_ID>.ep11.private.eu-es.hs-crypto.appdomain.cloud` |
+| Frankfurt | July 15, 2024 | `<instance_ID>.api.private.eu-de.hs-crypto.appdomain.cloud`  |  `<instance_ID>.ep11.private.eu-de.hs-crypto.appdomain.cloud` |
 {: caption="Table 1. New private endpoints for supported regions" caption-side="bottom"}
 {: #table-1}
 {: tab-title="Private"}
