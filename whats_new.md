@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-17"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -29,26 +29,20 @@ Stay up to date with the new features that are available for {{site.data.keyword
 {: release-note}
 
 Updated: Transition to VPC data centers in Dallas, Washington D.C, and Frankfurt
-:   {{site.data.keyword.hscrypto}} and [{{site.data.keyword.hpvs}} for Classic](https://cloud.ibm.com/catalog/services/hyper-protect-virtual-server-for-classic){: external} will be transitioning out of {{site.data.keyword.cloud_notm}} classic data centers in Dallas (`DAL`), Washington D.C (`WDC`), and Frankfurt (`FRA`) to {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) data centers in those respective locations allowing clients to take advantage of the new product features and capabilities that VPC offers.
+:   {{site.data.keyword.hscrypto}} will be transitioning out of {{site.data.keyword.cloud_notm}} classic data centers in Dallas (`DAL`), Washington D.C (`WDC`), and Frankfurt (`FRA`) to {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) data centers in those respective locations allowing clients to take advantage of the new product features and capabilities that VPC offers.
 
-    Implications for current users of Hyper Protect Services:    
+    Implications for current users:    
     
-    - {{site.data.keyword.hscrypto}}: The transition to VPC data centers will be a service/technology upgrade with the user experience remaining unchanged. Minimal customer interaction is required to complete the transition. There is minimal impact to clients. 
-    
-    - {{site.data.keyword.hpvs}} for Classic: The transition to VPC data centers will be a migration and technology version upgrade from {{site.data.keyword.hpvs}} for Classic to [{{site.data.keyword.hpvs}} for VPC](https://cloud.ibm.com/vpc-ext/provision/vs?architecture=s390x&secureExecution=true){: external}. 
+    The transition to VPC data centers will be a service/technology upgrade with the user experience remaining unchanged. Minimal customer interaction is required to complete the transition. There is minimal impact to clients.  
     
     Support from the IBM Team is available to ensure the successful deployment of your instances in the VPC data centers, contact your local sales representative or send an email to [zaas.client.acceleration@ibm.com](mailto:zaas.client.acceleration@ibm.com) for more information.
     {: note}
 
     Key dates for this transition:
     
-    - For {{site.data.keyword.hscrypto}} in `DAL` and `WDC`, customer migration will be **August 05, 2024** – **January 31, 2025**. Support remains uninterrupted throughout migration process. After **January 31, 2025**, the services in `DAL` and `WDC` data centers will be decommissioned and no longer available. All non-migrated instances and existing data still present in the `DAL` and `WDC` data centers will be terminated after this date.
+    - For existing instances in `DAL` and `WDC`, customer migration will be **August 05, 2024** – **January 31, 2025**. Support remains uninterrupted throughout migration process. After **January 31, 2025**, the services in `DAL` and `WDC` data centers will be decommissioned and no longer available. All non-migrated instances and existing data still present in the `DAL` and `WDC` data centers will be terminated after this date.
 
-    - For {{site.data.keyword.hpvs}} for Classic in `DAL` and `WDC`, customer migration will be **July 18, 2024** – **December 31, 2024**, with End of Service effective **December 31, 2024**. After **December 31, 2024**, {{site.data.keyword.hpvs}} for Classic in `DAL` and `WDC` data centers will no longer be supported. This includes updates, bug fixes, and technical support for the product. All non-migrated instances and existing data still present in the `DAL` and `WDC` data centers will be terminated after this date.
-
-    - For {{site.data.keyword.hscrypto}} in `FRA`, customer migration will be **August 15, 2024** – **January 31, 2025**. Support remains uninterrupted throughout migration process. After **January 31, 2025**, the services in `FRA` data center will be decommissioned and no longer available. All non-migrated instances and existing data still present in the `FRA` data center will be terminated after this date.
-
-    - For {{site.data.keyword.hpvs}} for Classic in `FRA`, customer migration will be **August 15, 2024** – **January 31, 2025**, with End of Service effective **January 31, 2025**. After **January 31, 2025**, {{site.data.keyword.hpvs}} for Classic in `FRA` data center will no longer be supported. This includes updates, bug fixes, and technical support for the product. All non-migrated instances and existing data still present in the `FRA` data center will be terminated after this date.
+    - For existing instances in `FRA`, customer migration will be **August 15, 2024** – **January 31, 2025**. Support remains uninterrupted throughout migration process. After **January 31, 2025**, the services in `FRA` data center will be decommissioned and no longer available. All non-migrated instances and existing data still present in the `FRA` data center will be terminated after this date.
 
 
 ## 2 July 2024
