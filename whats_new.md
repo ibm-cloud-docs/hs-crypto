@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-07-09"
+lastupdated: "2024-07-17"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -24,6 +24,33 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+## 18 July 2024
+{: #hs-crypto-july182024}
+{: release-note}
+
+Updated: Transition to VPC data centers in Dallas, Washington D.C, and Frankfurt
+:   {{site.data.keyword.hscrypto}} will be transitioning out of {{site.data.keyword.cloud_notm}} classic data centers in Dallas (`DAL`), Washington D.C (`WDC`), and Frankfurt (`FRA`) to {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) data centers in those respective locations allowing you to take advantage of the new product features and capabilities that VPC offers.
+
+    Implications for current users:    
+    
+    The transition to VPC data centers will be a service/technology upgrade with the user experience remaining unchanged. Minimal customer interaction is required to complete the transition. There is minimal impact to clients.  
+    
+    Support from the IBM Team is available to ensure the successful deployment of your instances in the VPC data centers, contact your local sales representative or send an email to [zaas.client.acceleration@ibm.com](mailto:zaas.client.acceleration@ibm.com) for more information.
+    {: note}
+
+    Key dates for this transition:
+    
+    - For existing instances in `DAL` and `WDC`, customer migration will be **August 05, 2024** – **January 31, 2025**. Support remains uninterrupted throughout migration process. After **January 31, 2025**, the services in `DAL` and `WDC` data centers will be decommissioned and no longer available. All non-migrated instances and existing data still present in the `DAL` and `WDC` data centers will be terminated after this date.
+
+    - For existing instances in `FRA`, customer migration will be **August 15, 2024** – **January 31, 2025**. Support remains uninterrupted throughout migration process. After **January 31, 2025**, the services in `FRA` data center will be decommissioned and no longer available. All non-migrated instances and existing data still present in the `FRA` data center will be terminated after this date.
+
+## 15 July 2024
+{: #hs-crypto-july152024}
+{: release-note}
+
+Updated: New API endpoints in Frankfurt
+:   If you create your instances in Frankfurt after July 15, you need to use the new API endpoints for operations against your new instances. For more information about the supported regions and the new endpoint URLs, see [New endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints).
+
 ## 2 July 2024
 {: #hs-crypto-july22024}
 {: release-note}
@@ -37,6 +64,10 @@ Updated: New API endpoints in Madrid
 
 Updated: New API endpoints in Tokyo
 :   If you create your instances in Tokyo after June 19, you need to use the new API endpoints for operations against your new instances. For more information about the supported regions and the new endpoint URLs, see [New endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints).
+
+## 5 June 2024
+{: #hs-crypto-june2024}
+{: release-note}
 
 
 

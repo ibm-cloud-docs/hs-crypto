@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-09"
+lastupdated: "2024-07-17"
 
 keywords: site map, doc structure, information architecture
 
@@ -383,6 +383,14 @@ Find what you are looking for in the compilation of topics that are available in
 
 [Release notes](/docs/hs-crypto?topic=hs-crypto-what-new#what-new)
 
+* [18 July 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-july182024)
+
+    * Updated: Transition to VPC data centers in Dallas, Washington D.C, and Frankfurt
+
+* [15 July 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-july152024)
+
+    * Updated: New API endpoints in Frankfurt
+
 * [2 July 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-july22024)
 
     * Updated: New API endpoints in Madrid
@@ -390,6 +398,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [19 June 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-june192024)
 
     * Updated: New API endpoints in Tokyo
+
+* [5 June 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-june2024)
 
     * Updated: New API endpoints in London
 
@@ -1982,6 +1992,17 @@ Find what you are looking for in the compilation of topics that are available in
 * [{{site.data.keyword.hscrypto}} notices and information](/docs/hs-crypto?topic=hs-crypto-open-source-licenses#notice)
 
 * [Hosting appliance notices and information](/docs/hs-crypto?topic=hs-crypto-open-source-licenses#hosting-appliance-notice)
+
+
+## Resource links
+{: #sitemap_resource_links}
+
+
+[Resource links](/docs/hs-crypto?topic=hs-crypto-resources#resources)
+
+* [Videos](/docs/hs-crypto?topic=hs-crypto-resources#videos)
+
+* [blogs](/docs/hs-crypto?topic=hs-crypto-resources#blogs)
 
 
 ## FAQs
