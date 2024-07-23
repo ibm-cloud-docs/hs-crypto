@@ -173,7 +173,7 @@ toc:
           - uko-terraform.md
       - byohsm-deploy.md 
       - topicgroup:
-          label: Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan
+          label: Managing keys, keystores, and KMIP adapters - Standard Plan
           topics:
           - topicgroup:
               label: Managing instance policies - Standard Plan 
@@ -216,7 +216,7 @@ toc:
               - manage-pkcs11-keys.md
               - manage-pkcs11-certificates.md
       - topicgroup:
-          label: Managing vaults, key templates, KMS keys, and keystores - Unified Key Orchestrator Plan
+          label: Managing keys and keystores - Unified Key Orchestrator Plan
           topics:
           - topicgroup:
               label: Managing vaults - Unified Key Orchestrator Plan
