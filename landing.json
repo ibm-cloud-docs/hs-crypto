@@ -75,33 +75,6 @@
     "developer": "https://developer.ibm.com/components/hyper-protect/"
   },
   "section_updates": {
-    "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
-    "tiles": [
-      {
-        "date": "June 2024",
-        "title": "Added: New API endpoints for existing service instances",
-        "description": "Hyper Protect Crypto Services is continuously replacing port-based API endpoints with instance-based API endpoints. For example, for public key management endpoint URLs, the format is changed from `api.<region>.hs-crypto.cloud.ibm.com:<port>` to `<instance_ID>.api.<region>.hs-crypto.appdomain.cloud`."
-      },
-      {
-        "date": "January 2024",
-        "title": "Added: Hyper Protect Crypto Services adds support for Azure software-protected key",
-        "description": "Besides HSM-protected keys, software-protected keys can now also be created in Azure Key Vault (Premium) keystores of {{site.data.keyword.uko_full_notm}}. However, you can still create and distribute only software-protected keys to Azure Key Vault (Standard). "
-      },
-      {
-        "date": "Nov 2023",
-        "title": "Added: Hyper Protect Crypto Services adds support for Bring Your Own HSM (BYOHSM)",
-        "description": "BYOHSM extends your local key management capability to the cloud and creates a scalable, unified, and secure hybrid cloud ecosystem for your regulated workloads."
-      },
-      {
-        "date": "Oct 2023",
-        "title": "Deprecated: Hyper Protect Crypto Services in Sydney",
-        "description": "New instances of Hyper Protect Crypto Services can no longer be deployed in the IBM Cloud data center in `Sydney` after **30 November 2023**, and existing Hyper Protect Crypto Services instances and support in the IBM Cloud data center in Sydney will be decommissioned and discontinued on 31 March 2024. "
-      },
-      {
-        "date": "Sept 2023",
-        "title": "Added: Hyper Protect Crypto Services expands to the Madrid region",
-        "description": "You can now create Hyper Protect Crypto Services instances in the Madrid (`eu-es`) region where the infrastructure is based on IBM Cloud Virtual Private Cloud (VPC). "
-      }
-    ]
+    "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new"
   }
 }
