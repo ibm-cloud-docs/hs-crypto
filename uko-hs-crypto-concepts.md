@@ -20,11 +20,7 @@ subcollection: hs-crypto
 
 
 Before you can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to manage encryption keys and protect data, learn the basic components and concepts of {{site.data.keyword.hscrypto}}.
-{: shortdesc} 
-
-
-
-
+{: shortdesc}
 
 ## Key management service
 {: #uko-key-management-concepts}
