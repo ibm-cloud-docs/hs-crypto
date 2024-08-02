@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-08-02"
 
 keywords: security for Hyper Protect Crypto Services, compliance for Hyper Protect Crypto Services, security and compliance for Hyper Protect Crypto Services, rules for Hyper Protect Crypto Services,
 
@@ -27,10 +27,7 @@ compliance for your organization.
 With the {{site.data.keyword.compliance_short}}, you can:
 
 
-
 * Define rules for {{site.data.keyword.hscrypto}} that can help to standardize resource configuration.
-
-
 
 
 
