@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-08-02"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -15,7 +15,7 @@ subcollection: hs-crypto
 
 
 
-# Components and concepts - {{site.data.keyword.uko_full_notm}} Plan
+# Components and concepts
 {: #uko-understand-concepts}
 
 

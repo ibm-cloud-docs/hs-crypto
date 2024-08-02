@@ -104,6 +104,7 @@ Updated: New API endpoints in Washington DC
 :   If you create your instances in Washington DC after April 12, you need to use the new API endpoints for operations against your new instances. For more information about the supported regions and the new endpoint URLs, see [New endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints).
 
 ## 29 February 2024
+{: #hs-crypto-feb2024}
 
 Added: New key state `pending destruction` 
 :   After you move a key from Deactivated to Destroyed state, the key will first be pending on destruction for a time period defined by the destruction policies of the external cloud providers. When the time period ends, the key will be moved to Destroyed state. For any pending destruction keys, a pending flag is displayed in the corresponding key card or the key list. For more information, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states).
