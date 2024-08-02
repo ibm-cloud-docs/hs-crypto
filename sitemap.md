@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-17"
+lastupdated: "2024-08-02"
 
 keywords: site map, doc structure, information architecture
 
@@ -989,8 +989,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-hsm-next)
 
 
-## Managing root keys, standard keys, and EP11 keys and keystores - Standard Plan
-{: #sitemap_managing_root_keys_standard_keys_and_ep11_keys_and_keystores_standard_plan}
+## Managing keys, keystores, and KMIP adapters - Standard Plan
+{: #sitemap_managing_keys_keystores_and_kmip_adapters_standard_plan}
 
 
 
@@ -1263,8 +1263,8 @@ Find what you are looking for in the compilation of topics that are available in
 * [What's next](/docs/hs-crypto?topic=hs-crypto-manage-ep11-certificate-ui#manage-ep11-certificate-ui-next)
 
 
-## Managing vaults, key templates, KMS keys, and keystores - Unified Key Orchestrator Plan
-{: #sitemap_managing_vaults_key_templates_kms_keys_and_keystores_unified_key_orchestrator_plan}
+## Managing keys and keystores - Unified Key Orchestrator Plan
+{: #sitemap_managing_keys_and_keystores_unified_key_orchestrator_plan}
 
 
 

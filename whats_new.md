@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-07-17"
+lastupdated: "2024-08-02"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -40,7 +40,7 @@ Updated: Transition to VPC data centers in Dallas, Washington D.C, and Frankfurt
 
     Key dates for this transition:
     
-    - For existing instances in `DAL` and `WDC`, customer migration will be **August 05, 2024** – **January 31, 2025**. Support remains uninterrupted throughout migration process. After **January 31, 2025**, the services in `DAL` and `WDC` data centers will be decommissioned and no longer available. All non-migrated instances and existing data still present in the `DAL` and `WDC` data centers will be terminated after this date.
+    - For existing instances in `DAL` and `WDC`, customer migration will be **August 22, 2024** – **January 31, 2025**. Support remains uninterrupted throughout migration process. After **January 31, 2025**, the services in `DAL` and `WDC` data centers will be decommissioned and no longer available. All non-migrated instances and existing data still present in the `DAL` and `WDC` data centers will be terminated after this date.
 
     - For existing instances in `FRA`, customer migration will be **August 15, 2024** – **January 31, 2025**. Support remains uninterrupted throughout migration process. After **January 31, 2025**, the services in `FRA` data center will be decommissioned and no longer available. All non-migrated instances and existing data still present in the `FRA` data center will be terminated after this date.
 
