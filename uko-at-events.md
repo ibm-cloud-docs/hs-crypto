@@ -91,11 +91,15 @@ The following table lists the registration actions that generate an event.
 
 
 
+
+
 | Action                                  | Description                                              |
 | --------------------------------------- | -------------------------------------------------------- |
 | `hs-crypto.registrations.list`          | List registrations for any key.                           |
 | `hs-crypto.registrations.default`       | Invalid registration request event.                       |
 {: caption="Table 5. Registration actions" caption-side="bottom"}
+
+
 
 
 
