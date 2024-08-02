@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-07-25"
+lastupdated: "2024-08-02"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -468,8 +468,6 @@ The following fields include extra information:
 
 - The `responseData.maxAllowedRetrievals` field includes the maximum number of times the import token can be retrieved within the expiration time before it is no longer accessible.
 - The `responseData.remainingRetrievals` field includes the number of times the import token can be retrieved within the expiration time before it is no longer accessible.
-
-
 
 
 
