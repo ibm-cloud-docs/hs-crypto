@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-07-23"
+lastupdated: "2024-08-02"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -96,43 +96,44 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
 
-| Action | Reader | ReaderPlus | Writer | Manager | KMS Key Purge |KmipAdapterManager｜
-|-----|-----|-----|-----|----|------|------|
-| Create a key. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Import a key. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Retrieve a key. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |  ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Retrieve key metadata. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | | |
-| Retrieve key total. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-| List keys.| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-| Wrap a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Unwrap a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Rewrap a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Patch a key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Rotate a key. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Disable a key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Enable a key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Schedule deletion for a key. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Cancel deletion for a key. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Delete a key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Purge a key.   |   |   |   |   |  ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
-| Restore a key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Set key policies. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| List key policies. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Set instance policies. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| List instance policies. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Create an import token. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Retrieve an import token. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Create a registration.<sup>1</sup> | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| List registrations for a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| List registrations for any key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Update a registration.<sup>1</sup> | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Replace a registration.<sup>1</sup> | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Delete a registration.<sup>1</sup> | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Create a key ring. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| List key rings. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-| Delete a key ring. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Create a key alias.| | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
-| Delete a key alias.| | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | |
+
+| Action | Reader | ReaderPlus | Writer | Manager | KMS Key Purge |
+|-----|-----|-----|-----|----|------|
+| Create a key. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Import a key. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Retrieve a key. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |  ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Retrieve key metadata. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | | 
+| Retrieve key total. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| List keys.| ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Wrap a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Unwrap a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Rewrap a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Patch a key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Rotate a key. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Disable a key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Enable a key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Schedule deletion for a key. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Cancel deletion for a key. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Delete a key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Purge a key.   |   |   |   |   |  ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | 
+| Restore a key. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Set key policies. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| List key policies. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Set instance policies. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| List instance policies. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Create an import token. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Retrieve an import token. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Create a registration.<sup>1</sup> | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| List registrations for a key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| List registrations for any key. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Update a registration.<sup>1</sup> | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Replace a registration.<sup>1</sup> | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Delete a registration.<sup>1</sup> | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Create a key ring. | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| List key rings. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Delete a key ring. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Create a key alias.| | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
+| Delete a key alias.| | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
 {: #table-4}
 {: caption="Table 4. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} key resources" caption-side="bottom"}
 {: tab-title="Key management"}
