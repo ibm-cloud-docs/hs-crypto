@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-08-06"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -193,7 +193,9 @@ To install the applications on Red Hat Enterprise Linux 8.0, Red Hat Enterprise 
 
     5. If the verification fails, cancel the installation and [contact IBM for support](/docs/hs-crypto?topic=hs-crypto-getting-help). Otherwise, proceed with the following steps.
 
-3. From the command line, enter the directory that the downloaded installation file is located, and perform the following steps to install the applications:
+3. (For Red Hat Enterprise Linux only) To install packages on Red Hat Enterprise Linux and receive software updates, register the system and attach a subscription. This can be done using the subscription-manager command. See [Red Hat documentation](https://access.redhat.com/solutions/253273){: external} for details.
+ 
+4. From the command line, enter the directory that the downloaded installation file is located, and perform the following steps to install the applications:
 
     1. Add the execute permission to the installation file by running the following command:
 

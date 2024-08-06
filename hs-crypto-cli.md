@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-06-05"
+lastupdated: "2024-08-06"
 
 keywords: hpcs cli, hyper protect crypto services cli, trusted key entry plug-in, cloud tke, tke plug-in, cli plug-in, tke commands, cloud tke reference, cert manager cli plug-in, key management cli, uko cli, united key orchestrator cli
 
@@ -81,6 +81,7 @@ To install the TKE CLI plug-in, follow these steps:
 | `tke cryptounit-admin-rm` | Removes a crypto unit administrator from the selected crypto units. | `ibmcloud tke cryptounit-admin-rm` |
 | `tke cryptounit-admins` | Lists administrators installed in the selected crypto units. | `ibmcloud tke cryptounit-admins` |
 | `tke cryptounit-compare` | Compares configuration settings of the selected crypto units. | `ibmcloud tke cryptounit-compare` |
+|`tke cryptounit-cp`|Displays or changes the setting of a control point identified by numeric value.|`ibmcloud tke cryptounit-cp`|
 | `tke cryptounit-cp-btc`|Enables bitcoin (BTC) related functions in the selected crypto units.|`ibmcloud tke cryptounit-cp-btc`|
 | `tke cryptounit-cp-eddsa`|Enables Edwards-curve digital signature algorithms (EdDSA) functions in the selected crypto units.|`ibmcloud tke cryptounit-cp-eddsa`|
 | `tke cryptounit-cp-sig-other`| Enables non-Elliptic-curve DSA, non-Edwards-curve DSA digital signature functions in the selected crypto units.|`ibmcloud tke cryptounit-cp-sig-other`|
