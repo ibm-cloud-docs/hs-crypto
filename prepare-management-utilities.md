@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-08-06"
+lastupdated: "2024-08-07"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -89,21 +89,23 @@ Before you install the smart card reader driver on a Linux operating system, dow
 
 - Red Hat Enterprise Linux 8.0 and 9.0
 
-    1. Install the `pcsc-lite` package with the following command:
+    1. To install packages on Red Hat Enterprise Linux and receive software updates, first register the system and attach a subscription. This can be done using the `subscription-manager` command. See [Red Hat documentation](https://access.redhat.com/solutions/253273){: external} for details.
+
+    2. Install the `pcsc-lite` package with the following command:
 
         ```
         sudo yum install pcsc-lite
         ```
         {: pre}
 
-    2. Install the `libusb` package with the following command:
+    3. Install the `libusb` package with the following command:
 
         ```
         sudo yum install libusb
         ```
         {: pre}
 
-    3. Check and make sure that the `opensc` and `esc` packages are not installed. These packages can cause unexpected errors during the operations of the smart card readers.
+    4. Check and make sure that the `opensc` and `esc` packages are not installed. These packages can cause unexpected errors during the operations of the smart card readers.
 
         Run the following command to display all installed `opensc` or `esc` packages. Replace `<package_name>` with `opensc` or `esc`:
 
@@ -119,9 +121,9 @@ Before you install the smart card reader driver on a Linux operating system, dow
         ```
         {: pre}
 
-    4. Run the `install.sh` script, which is included in the downloaded driver package.
+    5. Run the `install.sh` script, which is included in the downloaded driver package.
 
-    5. Start the PC/SC daemon with the following command:
+    6. Start the PC/SC daemon with the following command:
 
         ```
         sudo pcscd
@@ -192,10 +194,8 @@ To install the applications on Red Hat Enterprise Linux 8.0, Red Hat Enterprise 
         When the verification is successful, `Response verify OK` and `signing_cert.pem: good` are displayed in the output.
 
     5. If the verification fails, cancel the installation and [contact IBM for support](/docs/hs-crypto?topic=hs-crypto-getting-help). Otherwise, proceed with the following steps.
-
-3. (For Red Hat Enterprise Linux only) To install packages on Red Hat Enterprise Linux and receive software updates, register the system and attach a subscription. This can be done using the subscription-manager command. See [Red Hat documentation](https://access.redhat.com/solutions/253273){: external} for details.
  
-4. From the command line, enter the directory that the downloaded installation file is located, and perform the following steps to install the applications:
+3. From the command line, enter the directory that the downloaded installation file is located, and perform the following steps to install the applications:
 
     1. Add the execute permission to the installation file by running the following command:
 
