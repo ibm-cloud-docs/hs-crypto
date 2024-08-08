@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-07-17"
+lastupdated: "2024-08-08"
 
 keywords: regions, location, regional service endpoint, resource group, api endpoints, public service endpoint, private service endpoint, available regions, network connection
 
@@ -81,8 +81,8 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 | Tokyo | June 19, 2024 | `<INSTANCE_ID>.api.jp-tok.hs-crypto.appdomain.cloud`  | `<INSTANCE_ID>.uko.jp-tok.hs-crypto.appdomain.cloud`| `<INSTANCE_ID>.ep11.jp-tok.hs-crypto.appdomain.cloud`  |
 | Madrid | July 2, 2024 |  `<INSTANCE_ID>.api.eu-es.hs-crypto.appdomain.cloud`  | `<INSTANCE_ID>.uko.eu-es.hs-crypto.appdomain.cloud`| `<INSTANCE_ID>.ep11.eu-es.hs-crypto.appdomain.cloud`  |
 | Frankfurt | July 15, 2024 |  `<INSTANCE_ID>.api.eu-de.hs-crypto.appdomain.cloud`  | `<INSTANCE_ID>.uko.eu-de.hs-crypto.appdomain.cloud`| `<INSTANCE_ID>.ep11.eu-de.hs-crypto.appdomain.cloud`  |
-{: caption="Table 3. New public endpoints for supported regions" caption-side="bottom"}
-{: #table-3}
+{: caption="Table 1. New public endpoints for supported regions" caption-side="bottom"}
+{: #table-1}
 {: tab-title="Public"}
 {: tab-group="new-region-endpoint"}
 {: class="comparison-tab-table"}
@@ -97,8 +97,8 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 | Tokyo | June 19, 2024 | `<instance_ID>.api.private.jp-tok.hs-crypto.appdomain.cloud`  |  `<instance_ID>.ep11.private.jp-tok.hs-crypto.appdomain.cloud` |
 | Madrid | July 2, 2024 | `<instance_ID>.api.private.eu-es.hs-crypto.appdomain.cloud`  |  `<instance_ID>.ep11.private.eu-es.hs-crypto.appdomain.cloud` |
 | Frankfurt | July 15, 2024 | `<instance_ID>.api.private.eu-de.hs-crypto.appdomain.cloud`  |  `<instance_ID>.ep11.private.eu-de.hs-crypto.appdomain.cloud` |
-{: caption="Table 1. New private endpoints for supported regions" caption-side="bottom"}
-{: #table-1}
+{: caption="Table 2. New private endpoints for supported regions" caption-side="bottom"}
+{: #table-2}
 {: tab-title="Private"}
 {: tab-group="new-region-endpoint"}
 {: class="comparison-tab-table"}
@@ -119,8 +119,8 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 | Tokyo         | `api.jp-tok.hs-crypto.cloud.ibm.com`   | `uko.jp-tok.hs-crypto.cloud.ibm.com`| `ep11.jp-tok.hs-crypto.cloud.ibm.com`  |
 | Toronto | `api.ca-tor.hs-crypto.cloud.ibm.com`   | `uko.ca-tor.hs-crypto.cloud.ibm.com` |`ep11.ca-tor.hs-crypto.cloud.ibm.com`   |
 | Washington DC | `api.us-east.hs-crypto.cloud.ibm.com`  | `uko.us-east.hs-crypto.cloud.ibm.com`| `ep11.us-east.hs-crypto.cloud.ibm.com`  |
-{: caption="Table 2. Lists public endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's public network" caption-side="bottom"}
-{: #table-2}
+{: caption="Table 3. Lists public endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's public network" caption-side="bottom"}
+{: #table-3}
 {: tab-title="Public"}
 {: tab-group="region-endpoint"}
 {: class="comparison-tab-table"}
@@ -136,8 +136,8 @@ If you are managing your {{site.data.keyword.hscrypto}} resources programmatical
 | Tokyo         | `api.private.jp-tok.hs-crypto.cloud.ibm.com`   | `ep11.private.jp-tok.hs-crypto.cloud.ibm.com`  |
 | Toronto | `api.private.ca-tor.hs-crypto.cloud.ibm.com`   | `ep11.private.ca-tor.hs-crypto.cloud.ibm.com` |
 | Washington DC | `api.private.us-east.hs-crypto.cloud.ibm.com`  | `ep11.private.us-east.hs-crypto.cloud.ibm.com`  |
-{: caption="Table 3. Lists private endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's private network" caption-side="bottom"}
-{: #table-3}
+{: caption="Table 4. Lists private endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's private network" caption-side="bottom"}
+{: #table-4}
 {: tab-title="Private"}
 {: tab-group="region-endpoint"}
 {: class="comparison-tab-table"}

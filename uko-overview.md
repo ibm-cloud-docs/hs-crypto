@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-08-08"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -55,8 +55,8 @@ Many enterprises have the legal obligation to bring their own cryptographic keys
 
 Dealing with multiple clouds means to deal with cryptographic keys in multiple key management services. This presents the following challenges:
 - High manual effort and susceptibility to errors when enterprises operate different key management systems
-- No control over the [master key](#x2908413){: term} in external cloud key management systems
-- Shortage of data centers and skilled staff to operate [hardware security modules (HSMs)](#x6704988){: term} for KYOK or BYOK
+- No control over the master key in external cloud key management systems
+- Shortage of data centers and skilled staff to operate hardware security modules (HSMs) for KYOK or BYOK
 
 {{site.data.keyword.uko_full_notm}} alleviates the complexity of maintaining encryption across hybrid environments. You can integrate all your key management use cases into one consistent approach, backed by a trusted IBM zSystems HSM. It provides you with the following features:
 - Consistent user experience
@@ -68,11 +68,11 @@ For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service arc
 
 Watch the following video to learn how to manage compliance of a Microsoft Office 365 environment using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}:
 
-![Managing compliance of a Microsoft Office 365 environment using IBM Cloud Hyper Protect Crypto Services with Unified Key Orchestrator](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_1pzzhrb8){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
+![Managing compliance of a Microsoft Office 365 environment using IBM Cloud Hyper Protect Crypto Services with Unified Key Orchestrator](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_1pzzhrb8){: video output="iframe" data-script="none" id="mediacenterplayer1" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
 
 Watch the following video to learn how to securely manage AWS S3 encryption keys using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}:
 
-![Securely managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_1a6c6vub){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
+![Securely managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_1a6c6vub){: video output="iframe" data-script="none" id="mediacenterplayer2" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
 
 ## Key features
 {: #uko-key-features}
