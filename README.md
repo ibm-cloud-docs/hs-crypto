@@ -7,7 +7,7 @@ This repository stores documentation source files for both Hyper Protect Crypto 
   - To view the live documentation, check out the [IBM Cloud Docs](https://cloud.ibm.com/docs/hs-crypto).
   
 ## Contributing
-If you see a bug, you can contribute to this repository by [raising an issue](https://github.ibm.com/cloud-docs/hs-crypto), or creating a pull request.
+If you see a bug, you can contribute to this repository by [raising an issue](https://github.ibm.com/cloud-docs/hs-crypto/issues/new), or creating a pull request.
 
 ## Editing docs
 Make any changes in the `source` branch of this repository. Commits to source run a build, lint your content, and publish changes to the [IBM Cloud stage docs](https://test.cloud.ibm.com/docs/hs-crypto). 
