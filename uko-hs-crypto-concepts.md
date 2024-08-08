@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-08-02"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -15,16 +15,11 @@ subcollection: hs-crypto
 
 
 
-# Components and concepts - {{site.data.keyword.uko_full_notm}} Plan
+# Components and concepts
 {: #uko-understand-concepts}
 
-
 Before you can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to manage encryption keys and protect data, learn the basic components and concepts of {{site.data.keyword.hscrypto}}.
-{: shortdesc} 
-
-
-
-
+{: shortdesc}
 
 ## Key management service
 {: #uko-key-management-concepts}
@@ -45,6 +40,7 @@ Standard keys are another resources in {{site.data.keyword.hscrypto}} to directl
 {: #uko-dek-concept}
 
 Data encryption keys (DEKs) are cryptographic keys that you use for data encryption. They are provided by user-owned applications and are used to encrypt data stored in applications. Root keys that you manage in {{site.data.keyword.hscrypto}} serve as wrapping keys to protect DEKs. 
+
 ### Envelope encryption
 {: #uko-envelope-encryption-concept}
 

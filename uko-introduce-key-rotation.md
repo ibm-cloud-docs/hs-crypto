@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-08-02"
 
 keywords: rotate managed key, rotate key, managed key rotation, key rotation, key rewrap
 
@@ -15,8 +15,9 @@ subcollection: hs-crypto
 
 
 
-# Managed key rotation - {{site.data.keyword.uko_full_notm}} Plan
+# Managed key rotation
 {: #managed-key-rotation-intro}
+
 
 You can manually rotate managed keys in your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance on demand. Key rotation takes place when you retire the original key material and generate a new cryptographic key material for the root key.
 {: shortdesc}

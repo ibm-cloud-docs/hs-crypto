@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-08-06"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 
@@ -91,15 +91,11 @@ The following table lists the registration actions that generate an event.
 
 
 
-
-
 | Action                                  | Description                                              |
 | --------------------------------------- | -------------------------------------------------------- |
 | `hs-crypto.registrations.list`          | List registrations for any key.                           |
 | `hs-crypto.registrations.default`       | Invalid registration request event.                       |
 {: caption="Table 5. Registration actions" caption-side="bottom"}
-
-
 
 
 

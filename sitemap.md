@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-07"
 
 keywords: site map, doc structure, information architecture
 
@@ -227,7 +227,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-use-cases#uko-use-case-next)
 
-[Components and concepts - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-understand-concepts)
+[Components and concepts](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-understand-concepts)
 
 * [Key management service](/docs/hs-crypto?topic=hs-crypto-uko-understand-concepts#uko-key-management-concepts)
 
@@ -319,7 +319,7 @@ Find what you are looking for in the compilation of topics that are available in
 
 * [What's next](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro#uko-master-key-rotation-next)
 
-[Managed key rotation - {{site.data.keyword.uko_full_notm}} Plan](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#managed-key-rotation-intro)
+[Managed key rotation](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#managed-key-rotation-intro)
 
 * [How managed key rotation works](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#how-managed-key-rotation-works)
 
@@ -419,7 +419,7 @@ Find what you are looking for in the compilation of topics that are available in
 
     * Updated: New API endpoints in Washington DC
 
-* [29 February 2024](/docs/hs-crypto?topic=hs-crypto-what-new#29-february-2024)
+* [29 February 2024](/docs/hs-crypto?topic=hs-crypto-what-new#hs-crypto-feb2024)
 
     * Added: New key state `pending destruction` 
 
