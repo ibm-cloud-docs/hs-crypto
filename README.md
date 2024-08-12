@@ -16,12 +16,12 @@ Make any changes in the `source` branch of this repository. Commits to source ru
 Because some of source files are shared between these two services, the `source` branch of this repository stores documentation source files for both Hyper Protect Crypto Services and UKO for IBM z/OS, and serves as the upstream for both service docs. 
 
 To make changes to Hyper Protect Crypto Services source files, make sure to only touch the following subfolders:
-  - `on cloud`: This is the main folder that hosts the HPCS source files. You need to most of the HPCS source file changes here, but there are some exceptions for file names started with 'uko-'. 
+  - `oncloud`: This is the main folder that hosts the HPCS source files. You need to most of the HPCS source file changes here, but there are some exceptions for file names started with 'uko-'. 
   - `reuse-snippets`: This folder contains files shared between HPCS and UKO for IBM z/OS. Some of the file names started with `uko-` in the `reuse-snippets` don't have actual content. These files should be updated in the `reuse-snippets` folder. For example, to update `uko-archive-template.md`, you need to go to the `reuse-snippets` folder, and update `uko-archive-template-reuse.md` instead.
   - `reuse-pages`: This is a placeholder for reused pages in future releases. For now, no files are included.
 
 To make changes to UKO for IBM z/OS source files, make sure to only touch the following subfolders:
-  - `on prem`: This is the main folder that hosts the UKO for z/OS source files. You need most of the UKO for IBM z/OS source file changes here, but there are some exceptions for file names started with 'uko-'. 
+  - `onprem`: This is the main folder that hosts the UKO for z/OS source files. You need most of the UKO for IBM z/OS source file changes here, but there are some exceptions for file names started with 'uko-'. 
   - `reuse-snippets`: This folder contains files shared between HPCS and UKO for IBM z/OS. Some of the file names started with `uko-` in the `reuse-snippets` don't have actual content. These files should be updated in the `reuse-snippets` folder. For example, to update `uko-archive-template.md`, you need to go to the `reuse-snippets` folder, and update `uko-archive-template-reuse.md` instead.
   - `reuse-pages`: This is a placeholder for reused pages in future releases. For now, no files are included.
   
