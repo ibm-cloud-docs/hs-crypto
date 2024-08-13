@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-08-06"
+lastupdated: "2024-08-13"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -220,21 +220,7 @@ The following table lists the EP11 crypto actions that generate an event:
 | Action                                      | Description                               |
 |--------------------------------------------|------------------------------------------|
 | `hs-crypto.ep11.use` |	Cryptographic operation |
-{: caption="Table 11. EP11 crypto actions" caption-side="top"} 
-
-### KMIP management events
-{: #at-events-kmip-management}
-
-The following table lists the KMIP management actions that generate an event:
-
-| Action | Description |
-| - | - |
-| `hs-crypto.kmip-management.create` | Create a KMIP adapter or KMIP adapter client certificate. |
-| `hs-crypto.kmip-management.delete` | Delete a KMIP adapter, KMIP adapter client certificate, or KMIP object. |
-| `hs-crypto.kmip-management.list` | List KMIP adapters, KMIP adapter client certificates, or KMIP objects. |
-| `hs-crypto.kmip-management.read` | Get a KMIP adapter, KMIP adapter client certificate, or KMIP object. |
-| `hs-crypto.kmip-management.default` | Invalid KMIP managmenet API request. |
-{: caption="Table 12. KMIP management actions" caption-side="bottom"}
+{: caption="Table 11. EP11 crypto actions" caption-side="top"}
 
 ## Viewing events
 {: #at-ui}
