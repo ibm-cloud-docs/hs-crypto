@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -33,7 +33,7 @@ A crypto unit is composed of an HSM and the corresponding software stack that is
 
 To issue commands for crypto units to perform actions, you need to assign administrators to the crypto units. Each administrator has an associated signature key for identity authentication. The following flow chart shows how the signature keys are created and assigned to a service instance with two crypto units.
 
-![Creating and assigning signature keys](/images/sigkey-flow.svg "How to create and assign signature keys"){: caption="Figure 2. Creating and assigning signature keys" caption-side="bottom"}
+![Creating and assigning signature keys](/images/sigkey-flow.svg "How to create and assign signature keys"){: caption="Creating and assigning signature keys" caption-side="bottom"}
 
 Signature keys are created and assigned by following this procedure:
 
@@ -63,7 +63,7 @@ When you configure crypto units, you are automatically prompted for the required
 |Set immediate (finalize master key register)  | `tke cryptounit-mk-setimm`  | Not allowed.|  	One signature. |
 |Set control point  | `tke cryptounit-cp-btc` `tke cryptounit-cp-eddsa` `tke cryptounit-cp-sig-other`  | Not allowed. |  The current signature threshold value. |
 |Zeroize crypto unit  | tke cryptounit-zeroize  | No signature needed. | 	One signature.   |
-{: caption="Table 1. Required number of signatures for TKE operations" caption-side="bottom"}
+{: caption="Required number of signatures for TKE operations" caption-side="bottom"}
 
 ## Understanding the master key
 {: #uko-understand-key-ceremony}
@@ -74,7 +74,7 @@ To load the master key, each crypto unit has two master key registers: a new mas
 
 The following flow chart illustrates how the master key register state changes, and how the master key is loaded.
 
-![Loading master keys](/images/master-key-register.svg "How to load a master key"){: caption="Figure 3. Loading master key" caption-side="bottom"}
+![Loading master keys](/images/master-key-register.svg "How to load a master key"){: caption="Loading master key" caption-side="bottom"}
 
 In the chart, each crypto unit loads the master key with the following steps:
 
@@ -86,4 +86,3 @@ In the chart, each crypto unit loads the master key with the following steps:
 {: #uko-introduce-instance-initialization-next}
 
 Depending on your business needs and security requirements, {{site.data.keyword.hscrypto}} provides you with two tools and three options to initialize your service instance. For more information, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode).
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: delete keys with dual authorization, dual authorization, policy-based, key deletion
 
@@ -132,7 +132,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
     | `key_ID` | **Required.** The unique identifier for the root key that you want to delete. |
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    {: caption="Table 1. Describes the variables needed to set a key for deletion" caption-side="bottom"}
+    {: caption="Describes the variables needed to set a key for deletion" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which
     indicates that your key was authorized for deletion. Another user with a
@@ -208,7 +208,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
     | `key_ID` | **Required.** The unique identifier for the root key that you want to delete. |
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    {: caption="Table 2. Describes the variables needed to unset a key for deletion" caption-side="bottom"}
+    {: caption="Describes the variables needed to unset a key for deletion" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which
     indicates that your key is no longer authorized for deletion. If you need to

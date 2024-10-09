@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -27,7 +27,7 @@ Rotating keys regularly helps you meet industry standards and cryptographic best
 | --- | --- |
 | Cryptoperiod management for keys | Key rotation limits how long your information is protected by a single key. By rotating your root keys at regular intervals, you also shorten the cryptoperiod of the keys. The longer the lifetime of an encryption key, the higher the probability for a security breach. |
 | Incident mitigation | If your organization detects a security issue, you can immediately rotate the key to mitigate or reduce costs that are associated with key compromise. |
-{: caption="Table 1. Describes the benefits of key rotation" caption-side="bottom"}
+{: caption="Describes the benefits of key rotation" caption-side="bottom"}
 
 Key rotation is treated in the NIST Special Publication 800-57, Recommendation for Key Management. To learn more, see [NIST SP 800-57 Pt. 1 Rev. 5](https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-5/final){: external}
 {: tip}
@@ -76,11 +76,11 @@ When you rotate a root key in {{site.data.keyword.hscrypto}}, you're not charged
 Behind the scenes, the {{site.data.keyword.hscrypto}} key management service API drives the key rotation process.
 
 The following diagram shows a contextual view of the key rotation functionality.
-![The diagram shows a contextual view of key rotation.](/images/key-rotation.svg "Key rotation"){: caption="Figure 1. Key rotation" caption-side="bottom"}
+![The diagram shows a contextual view of key rotation.](/images/key-rotation.svg "Key rotation"){: caption="Key rotation" caption-side="bottom"}
 
 With each rotation request, {{site.data.keyword.hscrypto}} associates new key material with your root key.
 
-![The diagram shows a micro view the root key stack.](/images/root-key-stack.svg "Root key stack"){: caption="Figure 2. Root key stack" caption-side="bottom"}
+![The diagram shows a micro view the root key stack.](/images/root-key-stack.svg "Root key stack"){: caption="Root key stack" caption-side="bottom"}
 
 To learn how to use the {{site.data.keyword.hscrypto}} key management service API to rotate your root keys, see [Rotating keys](/docs/hs-crypto?topic=hs-crypto-rotate-keys).
 {: tip}
@@ -106,7 +106,7 @@ Rotate your keys regularly, for example every 30 days, to meet cryptographic bes
 | --- | --- | --- |
 | [Policy-based root key rotation](/docs/hs-crypto?topic=hs-crypto-set-rotation-policy) | Every 1 - 12 months | Choose a rotation interval between 1 - 12 months for your key based on your on-going security needs. After you set a rotation policy for a key, the clock starts immediately based on the initial creation date for the key. For example, if you set a monthly rotation policy for a key that you created on `2019/02/01`, {{site.data.keyword.hscrypto}} automatically rotates the key on `2019/03/01`.|
 | [On-demand root key rotation](/docs/hs-crypto?topic=hs-crypto-rotate-keys) | Up to one rotation per hour | If you're rotating a key on demand, {{site.data.keyword.hscrypto}} allows one rotation per hour for each root key. |
-{: caption="Table 2. Rotation frequency options for rotating keys in {{site.data.keyword.hscrypto}}" caption-side="bottom"}
+{: caption="Rotation frequency options for rotating keys in {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 
 
 

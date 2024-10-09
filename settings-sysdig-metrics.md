@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: monitoring, monitor metrics
 
@@ -100,7 +100,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/instance/pol
     | `port` | **Required.** The port number of the API endpoint. |
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    {: caption="Table 1. Describes the variables needed to enable a metrics policy" caption-side="bottom"}
+    {: caption="Describes the variables needed to enable a metrics policy" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which indicates that your {{site.data.keyword.hscrypto}} instance is now enabled for reporting operational metrics.
 
@@ -168,7 +168,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/instance/pol
     | `port` | **Required.** The port number of the API endpoint. |
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    {: caption="Table 2. Describes the variables needed to disable metrics policies" caption-side="bottom"}
+    {: caption="Describes the variables needed to disable metrics policies" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which indicates that the metrics policy is disabled for your service instance.
 

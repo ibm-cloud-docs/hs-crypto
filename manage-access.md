@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-09"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -33,11 +33,11 @@ The following table shows the roles that {{site.data.keyword.hscrypto}} supports
 | Master key custodian | Provides master key parts for initializing a service instance. In some cases, a master key custodian can also be a crypto unit administrator. |
 | Certificate administrator | Sets up and manages administrator signature keys and client certificates to enable the second layer of TLS authentication in GREP11 or PKCS #11 API connections. The administrator needs to be assigned the Certificate Manager IAM [service access role](#service-access-roles) to perform the corresponding actions. |
 | Service user | Manages root keys and standard keys through user interface and the API, and performs cryptographic operations through the PKCS #11 API or the Enterprise PKCS #11 over gRPC (GREP11) API. Based on the [platform access roles](#platform-mgmt-roles) and [service access roles](#service-access-roles), service users can be further categorized with various permissions. |
-{: caption="Table 1. Roles and permissions" caption-side="bottom"}
+{: caption="Roles and permissions" caption-side="bottom"}
 
 The following diagram illustrates the roles and permissions.
 
-![{{site.data.keyword.hscrypto}} roles](/images/roles-new.svg "{{site.data.keyword.hscrypto}} roles and responsibilities"){: caption="Figure 1. {{site.data.keyword.hscrypto}} roles and responsibilities" caption-side="bottom"}
+![{{site.data.keyword.hscrypto}} roles](/images/roles-new.svg "{{site.data.keyword.hscrypto}} roles and responsibilities"){: caption="{{site.data.keyword.hscrypto}} roles and responsibilities" caption-side="bottom"}
 
 ### IAM platform access roles
 {: #platform-mgmt-roles}
@@ -57,7 +57,7 @@ Use {{site.data.keyword.cloud_notm}} platform access roles to grant permissions 
 | Create {{site.data.keyword.hscrypto}} instances. |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 | Delete {{site.data.keyword.hscrypto}} instances. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 | Invite new users and manage access policies. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-{: caption="Table 2. Lists platform management roles as they apply to {{site.data.keyword.hscrypto}}" caption-side="bottom"}
+{: caption="Lists platform management roles as they apply to {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 
 If you're an account owner, you are automatically assigned _Administrator_ platform access to your {{site.data.keyword.hscrypto}} service instances so you can further assign roles and customize access policies for others.
 {: note}
@@ -91,7 +91,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | TKE Set Admin Quorum Threshold: `ibmcloud tke -cryptounit-thrhld-set.`|  |  |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 | TKE Master Key operations (load, rotate, clear, zeroize, recover): `ibmcloud tke cryptounit-mk-*`, `ibmcloud tke auto-init`, `ibmcloud tke auto-mk-rotate`, `ibmcloud tke auto-recover`. |  |  |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 {: #table-3}
-{: caption="Table 3. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} TKE commands" caption-side="bottom"}
+{: caption="Lists service access roles as they apply to {{site.data.keyword.hscrypto}} TKE commands" caption-side="bottom"}
 {: tab-title="Trusted Key Entry commands"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
@@ -135,7 +135,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Create a key alias.| | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
 | Delete a key alias.| | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | 
 {: #table-4}
-{: caption="Table 4. Lists service access roles as they apply to {{site.data.keyword.hscrypto}} key resources" caption-side="bottom"}
+{: caption="Lists service access roles as they apply to {{site.data.keyword.hscrypto}} key resources" caption-side="bottom"}
 {: tab-title="Key management"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
@@ -163,7 +163,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Verify | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 | Digest | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 {: #table-5}
-{: caption="Table 5. Lists service access roles as they apply to HSM APIs" caption-side="bottom"}
+{: caption="Lists service access roles as they apply to HSM APIs" caption-side="bottom"}
 {: tab-title="HSM APIs"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
@@ -176,7 +176,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Add client certificates to KMIP endpoint for usage of mutual TLS. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")|
 | Delete client certificates from KMIP endpoint for usage of mutual TLS. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 {: #table-6}
-{: caption="Table 6. Lists service access roles as they apply to KMIP adapters connected to {{site.data.keyword.hscrypto}}" caption-side="bottom"}
+{: caption="Lists service access roles as they apply to KMIP adapters connected to {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 {: tab-title="KMIP adapter"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
@@ -192,7 +192,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Retrieve client certificates. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 | Delete client certificates. | | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 {: #table-8}
-{: caption="Table 8. Lists service access roles as they apply to Certificate Manager" caption-side="bottom"}
+{: caption="Lists service access roles as they apply to Certificate Manager" caption-side="bottom"}
 {: tab-title="Certificate Manager Server"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
@@ -219,7 +219,7 @@ If you have multiple {{site.data.keyword.hscrypto}} instances in different accou
 
 The following example shows how to use the enterprise to manage multiple instances and user access. Assume that your organization has two {{site.data.keyword.hscrypto}} instances for development and production, and two separate teams are managing and operating these instances. you can create the following enterprise hierarchy to better manage accounts, instances, and user access:
 
-![An example of the enterprise hierarchy and user access management](/images/enterprise-hierarchy-example.svg "An example of the enterprise hierarchy and user access management"){: caption="Figure 2. An example of the enterprise hierarchy and user access management" caption-side="bottom"}
+![An example of the enterprise hierarchy and user access management](/images/enterprise-hierarchy-example.svg "An example of the enterprise hierarchy and user access management"){: caption="An example of the enterprise hierarchy and user access management" caption-side="bottom"}
 
 - Use separate accounts and distinct resource groups to manage instances for development purpose and production purpose.
 - Assign users the minimum access to the corresponding resources. For example, assign the enterprise managers the administrator role for accounts and billing management. Assign the developer team members the editor and manager roles for performing operations toward the development instance. Assign other members the viewer and reader role for viewing only instance resources.

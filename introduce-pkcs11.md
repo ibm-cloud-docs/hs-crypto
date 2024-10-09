@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: hsm, cloud hsm, tke cli, pkcs11, PKCS11 library, cryptographic operations, cryptographic functions, PKCS 11
 
@@ -51,7 +51,7 @@ To connect and use the PKCS #11 API, you need to understand the PKCS #11 API tha
 
 Before you can use the PKCS #11 API, first install the PKCS #11 library. In this way, the PKCS #11 application can interact with the PKCS #11 library, which then calls cryptographic functions that are implemented by {{site.data.keyword.hscrypto}} through gRPC. The following diagram shows the key components that are implemented by the {{site.data.keyword.hscrypto}} PKCS #11 library and the interactions among different components.
 
-![Performing cryptographic operations with the PKCS #11 API](/images/pkcs-components.svg "Performing cryptographic operations with the PKCS #11 API"){: caption="Figure 1. Performing cryptographic operations with the PKCS #11 API" caption-side="bottom"}
+![Performing cryptographic operations with the PKCS #11 API](/images/pkcs-components.svg "Performing cryptographic operations with the PKCS #11 API"){: caption="Performing cryptographic operations with the PKCS #11 API" caption-side="bottom"}
 
 The following sections explain each PKCS #11 component in detail.
 
@@ -94,7 +94,7 @@ As shown in the following diagram, a PKCS #11 key object is an example of a PKCS
     * Private key: The private component of a key pair that is used to decrypt messages. The private key is also used to create signatures.
     * Secret key: A secret key is a generated stream of bits that is used to encrypt and decrypt messages symmetrically.
 
-![PKCS #11 object classes](/images/object-class.svg "PKCS #11 object classes"){: caption="Figure 2. PKCS #11 object classes" caption-side="bottom"}
+![PKCS #11 object classes](/images/object-class.svg "PKCS #11 object classes"){: caption="PKCS #11 object classes" caption-side="bottom"}
 
 ### {{site.data.keyword.iamshort}}
 {: #pkcs11-iam-intro}
@@ -149,7 +149,7 @@ Refer to the following table for detailed explanations of the relationship betwe
 | Normal user   | `FALSE` |`TRUE`  |In-memory keystore | Private |
 | Normal user   |`TRUE` |`FALSE`  |  Database-backed keystore  |Public|
 | Normal user   | `TRUE` |`TRUE`  | Database-backed keystore  |Private |
-{: caption="Table 1. Cases of storing EP11 keys in different keystores" caption-side="bottom"}
+{: caption="Cases of storing EP11 keys in different keystores" caption-side="bottom"}
 
 ## Post-quantum cryptography support
 {: #pkcs11-support-post-quantum}

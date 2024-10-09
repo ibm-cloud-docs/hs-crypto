@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: import encryption key, upload encryption key, bring your own key, byok, key material, secure import, import tokens
 
@@ -27,7 +27,7 @@ When you use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to creat
 | --- | --- |
 | Keep Your Own Key (KYOK) | If you choose to export symmetric keys from your internal key management infrastructure, you can use {{site.data.keyword.hscrypto}} to securely bring them to the cloud. The KYOK feature ensures that you own the root trust of your key hierarchy and that no one except you have access to your encryption keys. |
 | Secure import of root key material | When you export your keys to the cloud, you want assurance that the key material is protected while it's in flight. Mitigate against man-in-the-middle attacks by using an import token to securely import root key material into your {{site.data.keyword.hscrypto}} service instance. |
-{: caption="Table 1. Describes the benefits of importing key material" caption-side="bottom"}
+{: caption="Describes the benefits of importing key material" caption-side="bottom"}
 
 ## Planning ahead for importing key material
 {: #plan-ahead}
@@ -96,7 +96,7 @@ The following table lists the API methods that set up an import token for your s
 | --- | --- |
 | `POST api/v2/import_token` | Create an import token |
 | `GET api/v2/import_token` | Retrieve an import token |
-{: caption="Table 2. Describes the key management service API methods" caption-side="bottom"}
+{: caption="Describes the key management service API methods" caption-side="bottom"}
 
 ## What's next
 {: #importing-keys-next}

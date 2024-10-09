@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-06-04"
+lastupdated: "2024-10-09"
 
 keywords: import azure key failure, can't import azure key
 
@@ -38,6 +38,4 @@ Create a key from the Azure Key Vault UI based on the following key settings. An
 | Name      | `EKMF-BYOK-KEK-FOR-IMPORT` |
 | Key type  | RSA-HSM |
 | Enabled   | Yes     |
-{: caption="Table 1. Key settings" caption-side="bottom"}
-
-
+{: caption="Key settings" caption-side="bottom"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-09"
 
 keywords: security for Hyper Protect Crypto Services, compliance for Hyper Protect Crypto Services, security and compliance for Hyper Protect Crypto Services, rules for Hyper Protect Crypto Services,
 
@@ -48,6 +48,4 @@ This service only supports the ability to view the results of your configuration
 | Resource Kind | Property Name | Operator | Value | Description |
 | ------------- | ------------- | -------- | ----- | ----------- |
 | `instance` | `allowed_network`| `string_equals` | public-and-private<br>private-only | Specifies the type of endpoint the {{site.data.keyword.hscrypto}} instance can be accessed from. Refer to <br>[Managing network access policies](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies) for more information. |
-{: caption="Table 1. Config rule properties and target attributes for {{site.data.keyword.hscrypto}}" caption-side="bottom"}
-
-
+{: caption="Config rule properties and target attributes for {{site.data.keyword.hscrypto}}" caption-side="bottom"}

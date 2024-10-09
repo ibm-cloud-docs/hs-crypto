@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: bring your own hsm, byohsm, hybrid hpcs, deploy hsm, hybrid KMS, byohsm get started
 
@@ -79,7 +79,7 @@ To achieve high availability, it is suggested to prepare and use at least two HS
     | Signing key (SKEY) |	(256-bit AES key) Used for signing and verification of instance keys and user keys in {{site.data.keyword.hscrypto}}. |
     | Import Key (IKEY)	| (192-bit DES3 key) Used to encrypt and decrypt the key materials to be imported into {{site.data.keyword.hscrypto}}. |
     | Transit Key Encryption Keys (TKEKs)	| (10 pairs of RSA asymmetric keys) Used to securely import your own keys into {{site.data.keyword.hscrypto}}. |
-    {: caption="Table 1. Keys needed for Bring Your Own HSM" caption-side="bottom"}
+    {: caption="Keys needed for Bring Your Own HSM" caption-side="bottom"}
 
 1. Prepare the network to connect the on-premises HSMs to your {{site.data.keyword.hscrypto}} instance. For more information about how to achieve better network performance, see [Network connectivity best practice](/docs/hs-crypto?topic=hs-crypto-deploy-hsm-for-byohsm#deploy-byohsm-network-connection).
 1. Collect the following information that you need to provide when you contact IBM in [Step 3](#tutorial-byohsm-step3).
@@ -94,7 +94,7 @@ To achieve high availability, it is suggested to prepare and use at least two HS
     | Signing key label | The label or name of the Signing key (SKEY). It is used for data authentication such as data signing and verification. |
     | Import key label | The label or name of the Import key (IKEY). {{site.data.keyword.hscrypto}} uses this key to encrypt or decrypt key materials to be imported. |
     | Transit Key Encryption Key label prefix | The label prefix of the Transit Key Encryption Key that is used for securely importing your own keys. |
-    {: caption="Table 2. Information needed for Bring Your Own HSM" caption-side="bottom"}
+    {: caption="Information needed for Bring Your Own HSM" caption-side="bottom"}
 
 ## Contact IBM to get the required information
 {: #tutorial-byohsm-step3}

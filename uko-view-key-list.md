@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: Unified Key Orchestrator, view managed keys, key management, kms keys, UKO
 
@@ -54,7 +54,7 @@ To view a list of your managed keys by using the UI, complete the following step
     | Algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Length               | The number of bits that represents the encryption strength of the key.   |
     | Keystore type        | The type of keystore where the key is stored. |
-    {: caption="Table 1. Managed keys table" caption-side="bottom"}  
+    {: caption="Managed keys table" caption-side="bottom"}  
 
     You can search for a specific key by using the search bar, or filter keys based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the **Managed keys** table. For more information, see [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
     {: tip} 
@@ -91,5 +91,3 @@ To view a list of managed keys through the API, follow these steps:
 - To find out more about managing your keys, check out [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list) or [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
 
 - To find out instructions on deleting a managed key, check out [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys).
-
-

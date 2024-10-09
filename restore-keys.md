@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: restore key, restore a deleted key, recover a deleted key, re-import a key
 
@@ -30,7 +30,7 @@ This soft deletion period, in which a key has been deleted but can still be rest
 | 1–30 days            | Destroyed         | Yes                       | Yes          |
 | 30–90 days             | Destroyed         | Yes                       | No           |
 | After 90 days          | Purged (not a key state technically)        | No                        | No           |
-{: caption="Table 1. Ties key states to the time from a key's deletion to what actions are possible with the key." caption-side="top"}
+{: caption="Ties key states to the time from a key's deletion to what actions are possible with the key." caption-side="top"}
 
 Because purged keys are inaccessible and destroyed, there is technically no _Purged_ key state. However, it can be useful to think of _Purged_ as being a state because nonexistence is part of the lifecycle of a key.
 {: note}
@@ -116,7 +116,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is `default`.<br><br>For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
-    {: caption="Table 1. Describes the variables needed to restore keys with the {{site.data.keyword.hscrypto}} API" caption-side="bottom"}
+    {: caption="Describes the variables needed to restore keys with the {{site.data.keyword.hscrypto}} API" caption-side="bottom"}
 
     A successful restore request returns an HTTP `201 Created` response, which indicates that the key was restored to the Active key state and is now available for encrypt and decrypt operations. All attributes and policies that were previously associated with the key are also restored.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -179,7 +179,7 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
     | `apikey_for_anonymous_user` | The service ID API key that you create for the anonymous user type in the [previous prerequisites step](#uko-prerequisite-pkcs-api). |
     | `logging_level` | The supported logging levels, in an increasing order of verboseness: `panic`, `fatal`, `error`, `warning`/`warn`, `info`, `debug`, and `trace`. The Default value is `warning`. |
     | `log_file_path` | The full path of your logging file. It saves all the logs that are generated when your applications interact with the {{site.data.keyword.hscrypto}} cloud HSM to execute PKCS #11 functions. |
-    {: caption="Table 1. Describes the variables needed to create the PKCS #11 configuration file" caption-side="bottom"}
+    {: caption="Describes the variables needed to create the PKCS #11 configuration file" caption-side="bottom"}
 
     To encrypt and authenticate the keystore that is used by PKCS #11, enable the `sessionauth` parameter and configure the password for the keystore. For each service instance, a maximum of five authenticated keystores are supported. The password can be 6-8 characters. The keystore passwords are not stored in the service instance. You, as the keystore administrator, are responsible for maintaining a local copy of the passwords. If a password is lost, you need to contact IBM Support to reset the keystore, which means all data in the keystore is cleared.
     {: note}
@@ -204,4 +204,3 @@ If you are running a Java PKCS #11 application by using the SunPKCS11 provider o
 
 - Check out the tutorial that shows how to [use {{site.data.keyword.hscrypto}} PKCS #11 library for Oracle Database Transparent Database Encryption](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11) to better understand the PKCS #11 library usage.
 - Check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) for the detailed information about cryptographic functions.
-

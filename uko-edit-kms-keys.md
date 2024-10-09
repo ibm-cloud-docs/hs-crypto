@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -48,7 +48,7 @@ To edit the details of a managed key by using the UI, complete the following ste
     | State            | Key states include Pre-active, Active, Deactivated, and Destroyed.  A `pending` flag is displayed beside the state after you move a key from Deactivated to Destroyed state, the key will be pending on destruction for a time period defined by the default destruction policies of the external cloud providers. For Azure Key Vault and Google Cloud KMS keystore, the pending destruction time period can also be customized on the external cloud provider side. You cannot cancel pending destruction using the {{site.data.keyword.uko_full_notm}} UI or API. However, you might still do so through the third-party keystores that the keys are created in. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states).  |
     | Activation date      | Plan a date to activate the key. It is for planning purpose only. |
     | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only.  |
-    {: caption="Table 1. Key properties" caption-side="bottom"} 
+    {: caption="Key properties" caption-side="bottom"} 
     
     2. In the **Keystores** card, click **Edit** to add or remove the keystores where the key is activated. You can use a key only for encryption and decryption after it is activated in at least one keystore. If the key is created with a key template, an `Unaligned` flag can be displayed if you update the keystore distribution list, which means the key is no longer in sync with the key template.  
     - Add keystores
@@ -154,5 +154,3 @@ To editing keystores for keys by using API, complete the following steps:
 - To find out instructions on deleting a managed key, check out [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys).
 
 - To find out more about managing your key list, check out [Viewing a list of keys](/docs/hs-crypto?topic=hs-crypto-view-key-list) or [Filtering and searching keys](/docs/hs-crypto?topic=hs-crypto-search-key-list).
-
-

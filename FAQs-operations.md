@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning, operations
 
@@ -67,7 +67,7 @@ For calculating the number of smart cards needed, you can refer to the following
 | ----------- | ------------- |
 | - The number of backups per smart card: x \n - The number of administrators (1 to 8): y \n - The number of master key parts (2 or 3): z \n - Store administrator signature keys separately from master key parts | 1 (CA card) + x (CA card backups) + y (administrator signature key EP11 cards)+ y * x (administrator signature key EP11 card backups) + z (master key part EP11 cards)+ z * x (master key part EP11 card backups) = (1+x) * (1+y+z) |
 | - The number of backups per smart card: x \n - The number of administrators (1 to 8): y \n - The number of master key parts (2 or 3): z \n - Store an administrator signature key and a master key part on the same EP11 smart card \n - The number of master key parts equals to the number of administrators (y = z)  | 1 (CA card) + x (CA card backups) + z (administrator signature key and master key part EP11 cards)+ z * x (administrator signature key and master key part EP11 card backups) = (1+x) * (1+z) |
-{: caption="Table 1. Formulas for calculating smart cards number" caption-side="bottom"}
+{: caption="Formulas for calculating smart cards number" caption-side="bottom"}
 
 A backup certificate authority smart card can be created by using the Smart Card Utility Program. Select **CA Smart Card** > **Backup CA smart card** from the menu, and follow the prompts.
 

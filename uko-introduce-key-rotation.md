@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-09"
 
 keywords: rotate managed key, rotate key, managed key rotation, key rotation, key rewrap
 
@@ -28,7 +28,7 @@ Rotating keys regularly helps you meet industry standards and cryptographic best
 | --- | --- |
 | Cryptoperiod management for keys | Key rotation limits how long your information is protected by a single key. By rotating your managed keys at regular intervals, you also shorten the cryptoperiod of the keys. The longer the lifetime of an encryption key, the higher the probability for a security breach. |
 | Incident mitigation | If your organization detects a security issue, you can immediately rotate the key to mitigate or reduce costs that are associated with key compromise. |
-{: caption="Table 1. Describes the benefits of key rotation" caption-side="bottom"}
+{: caption="Describes the benefits of key rotation" caption-side="bottom"}
 
   
 Key rotation is treated in the NIST Special Publication 800-57, Recommendation for Key Management. To learn more, see [NIST SP 800-57 Pt. 1 Rev. 5](https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-5/final){: external}
@@ -48,7 +48,7 @@ Note that key rotation might charge extra fees depending on the type of your man
 When you rotate a managed key, new key material is automatically generated and replaces the previous key material. It moves  into the *Active* state and becomes available for cryptographic operations. When you use the managed key to perform encryption, {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} uses only the latest key material. Key rotation changes the key material. The key ID can also change, depending on the keystore type.
 
 The following diagram shows a contextual view of the key rotation functionality.
-![Manage key rotation](/images/uko-key-rotation.svg "Managed key rotation"){: caption="Figure 1. Managed key rotation" caption-side="bottom"}
+![Manage key rotation](/images/uko-key-rotation.svg "Managed key rotation"){: caption="Managed key rotation" caption-side="bottom"}
 
 Depending on the key type, managed keys in certain states are not eligible for key rotation. Before you rotate a managed key, make sure to check the following table. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the managed key in this state is eligible for rotation. For more information about the different key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states).
 
@@ -59,7 +59,7 @@ Depending on the key type, managed keys in certain states are not eligible for k
 | Google Cloud KMS keys | N/A | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")  | N/A  |
 | {{site.data.keyword.cloud_notm}} KMS keys |  N/A   |  ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")   |N/A | N/A  |
 | IBM {{site.data.keyword.keymanagementserviceshort}} keys | N/A | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | N/A | N/A  |
-{: caption="Table 2. Manage key rotation eligibility" caption-side="bottom"}
+{: caption="Manage key rotation eligibility" caption-side="bottom"}
 
 
 ### What happens to the previous key versions?
@@ -77,7 +77,7 @@ After key rotation, the service retains the previous key versions and materials 
 | Google Cloud KMS keys - AES keys | Automatically move to *Deactivated* state.  | N/A | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | For more information, see [Key rotation](https://cloud.google.com/kms/docs/key-rotation){: external} and [Rotating keys](https://cloud.google.com/kms/docs/rotating-keys){: external}.  |
 | {{site.data.keyword.cloud_notm}} KMS keys | Automatically move to *Deactivated* state.   | N/A | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | The previous key material can no longer be used for encryption, but it remains available for unwrap operations. When you use the rotated manage key to decrypt data, the service uses the same version of the key material that was used for encryption, and then rewraps data by using the latest key material. |
 | IBM {{site.data.keyword.keymanagementserviceshort}} keys | Automatically move to *Deactivated* state.   | N/A | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | The previous key material can no longer be used for encryption, but it remains available for unwrap operations. When you use the rotated manage key to decrypt data, the service uses the same version of the key material that was used for encryption before, and then rewraps data by using the latest key material. For more information, see [Rotating your keys](/docs/key-protect?topic=key-protect-key-rotation){: external}. |
-{: caption="Table 3. Previous key versions changes" caption-side="bottom"} 
+{: caption="Previous key versions changes" caption-side="bottom"} 
 
 
 ### How often should keys be rotated?
@@ -97,10 +97,9 @@ After a managed key rotation is complete, new key material becomes available for
 | Google Cloud KMS keys | [Rewrapping data with Google Cloud KMS](https://cloud.google.com/kms/docs/re-encrypt-data){: external}.  | 
 | {{site.data.keyword.cloud_notm}} KMS keys | [Rewrapping data with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-rewrap-keys). |
 | IBM {{site.data.keyword.keymanagementserviceshort}} keys | [Rewrapping data with IBM {{site.data.keyword.keymanagementserviceshort}}](https://cloud.ibm.com/docs/key-protect?topic=key-protect-rewrap-keys). |
-{: caption="Table 4. Rewrapping data after key rotation" caption-side="bottom"}
+{: caption="Rewrapping data after key rotation" caption-side="bottom"}
 ## What's next
 {: #managed-key-rotation-next}
 
 - For more information about how to manually rotate a managed key, see [Rotating managed keys](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys).
 - For more information about how to edit managed keys, see [Editing key details](/docs/hs-crypto?topic=hs-crypto-edit-kms-keys).
-

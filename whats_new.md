@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-09"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -165,7 +165,7 @@ Deprecated: {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} in S
     | Toronto `ca-tor`   | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | 
     | Madrid `eu-es`     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")     | 
     | Washington DC `us-east`   | N/A    |  ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")    |  
-    {: caption="Table 1. Supported {{site.data.keyword.cloud_notm}} VPC data centers" caption-side="bottom"}
+    {: caption="Supported {{site.data.keyword.cloud_notm}} VPC data centers" caption-side="bottom"}
 
 ## 22 Sept 2023
 {: #hs-crypto-sept2023}

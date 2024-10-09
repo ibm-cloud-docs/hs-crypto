@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: bring your own hsm, byohsm, hybrid hpcs, deploy hsm, configure own hsm
 
@@ -55,7 +55,7 @@ To use your own HSMs for {{site.data.keyword.hscrypto}}, you need to create the 
 | Signing key (SKEY) |	(256-bit AES key) Used for signing and verification of instance keys and user keys in {{site.data.keyword.hscrypto}}. |
 | Import Key (IKEY)	| (192-bit DES3 key) Used to encrypt and decrypt the key materials to be imported into {{site.data.keyword.hscrypto}}. |
 | Transit Key Encryption Keys (TKEKs)	| (10 pairs of RSA asymmetric keys) Used to securely import your own keys into {{site.data.keyword.hscrypto}}. |
-{: caption="Table 1. Keys needed for Bring Your Own HSM" caption-side="bottom"}
+{: caption="Keys needed for Bring Your Own HSM" caption-side="bottom"}
 
 You need to set some specific parameters when you create these keys. Contact IBM for details by [creating a support case](/docs/get-support?topic=get-support-open-case).
 
@@ -99,10 +99,9 @@ To provision an instance with BYOHSM, you need to contact IBM to add your accoun
 | Signing key label | The label or name of the Signing key (SKEY). It is used for data authentication such as data signing and verification. |
 | Import key label | The label or name of the Import key (IKEY). {{site.data.keyword.hscrypto}} uses this key to encrypt or decrypt key materials to be imported. |
 | Transit Key Encryption Key label prefix | The label prefix of the Transit Key Encryption Key that is used for securely importing your own keys. |
-{: caption="Table 2. Information needed for Bring Your Own HSM" caption-side="bottom"}
+{: caption="Information needed for Bring Your Own HSM" caption-side="bottom"}
 
 ## What's next
 {: #deploy-hsm-next}
 
 After you collect all the information needed and set up the network connectivity, you can contact IBM and [provision a {{site.data.keyword.hscrypto}} instance with Bring Your Own HSM](/docs/hs-crypto?topic=hs-crypto-provision&interface=ui).
-

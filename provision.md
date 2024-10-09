@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-08-08"
+lastupdated: "2024-10-09"
 
 keywords: provision, crypto unit, service instance, create service instance, kms service instance, cloud hsm service instance, hpcs cli
 
@@ -129,7 +129,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan with th
     | --- | --- |
     | `region_name` | The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions). |
     | `resource_group_name` | The resource group where you organize and manage the instance. You can select the initial resource group that is named `Default` or other groups that you create. For more information, see [Creating and managing resource groups](/docs/account?topic=account-rgs). |
-    {: caption="Table 1. Describes command variables to set the target region and resource group" caption-side="bottom"}
+    {: caption="Describes command variables to set the target region and resource group" caption-side="bottom"}
 
 4. Run the following command to create a {{site.data.keyword.hscrypto}} instance:
 
@@ -147,7 +147,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} Standard Plan with th
     | `number_of_operational_crypto_units` | **Optional**. Multiple crypto units are distributed among different supported availability zones in the selected region to increase availability. At least two crypto units are to be enabled for high availability. If you do not specify the number of crypto units, two crypto units are assigned by default. |
     | `network_access` | **Optional**. Use this parameter to specify the network access to your service instance. The default setting is **public and private**, which means you can manage your instance through both public and private network using the UI, CLI, or API. \n \n If you set the value to **private-only**, you can access your service instance only through private network using CLI or API. The UI is not available for the private-only network access. After you provision the service instance, you can still [update the network access policy](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies). |
     | `number_of_failover_crypto_units` | **Optional**. Use this parameter to specify the number of failover crypto units to enable automatic cross-region recovery. \n \n Set the number of failover crypto units equal to or less than the number of operational crypto units. However, to meet high availability, you need to specify at least two failover crypto units. Each failover crypto unit [is also charged](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Failover crypto units are now available in Dallas (`us-south`) and Washington DC (`us-east`). If you do not specify the number of failover crypto units, this feature is disabled by default. After you provision the service instance, you can still [enable or add failover crypto units](/docs/hs-crypto?topic=hs-crypto-enable-add-failover). |
-    {: caption="Table 2. Describes command variables to create a {{site.data.keyword.hscrypto}} service instance" caption-side="bottom"}
+    {: caption="Describes command variables to create a {{site.data.keyword.hscrypto}} service instance" caption-side="bottom"}
 
     A private instance accepts API requests through only the private endpoints. The private endpoints are only accessible when your {{site.data.keyword.cloud_notm}} account, along with all associated resources, is enabled with [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint). You cannot access your private only instance through the CLI or API if your server or machine is outside the {{site.data.keyword.cloud_notm}} network.
     {: important}
@@ -230,7 +230,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyw
     | --- | --- |
     | `region_name` | The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions). |
     | `resource_group_name` | The resource group where you organize and manage the instance. You can select the initial resource group that is named `Default` or other groups that you create. For more information, see [Creating and managing resource groups](/docs/account?topic=account-rgs). |
-    {: caption="Table 3. Describes command variables to set the target region and resource group for a {{site.data.keyword.hscrypto}} instance with {{site.data.keyword.uko_full_notm}}" caption-side="bottom"}
+    {: caption="Describes command variables to set the target region and resource group for a {{site.data.keyword.hscrypto}} instance with {{site.data.keyword.uko_full_notm}}" caption-side="bottom"}
 
 4. Run the following command to create a {{site.data.keyword.hscrypto}} instance:
 
@@ -246,7 +246,7 @@ To provision an instance of {{site.data.keyword.hscrypto}} with {{site.data.keyw
     | `instance_name` | **Required**. The name of your {{site.data.keyword.hscrypto}} service instance. |
     | `region_name` | **Required**. The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions). \n Currently, service instances in the `eu-es` region don't support recovery crypto units, which means, when a service instance is provisioned in any supported regions, you are by default enabled with the option to back up your master keys in the recovery crypto units located in the disaster recovery region. For details, see [Introducing service instance initialization modes](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit). |
     | `number_of_operational_crypto_units` | **Optional**. Multiple crypto units are distributed among different supported availability zones in the selected region to increase availability. At least two crypto units are to be enabled for high availability. If you do not specify the number of crypto units, two crypto units are assigned by default. | 
-    {: caption="Table 4. Describes command variables to create a {{site.data.keyword.hscrypto}} instance with {{site.data.keyword.uko_full_notm}}" caption-side="bottom"}
+    {: caption="Describes command variables to create a {{site.data.keyword.hscrypto}} instance with {{site.data.keyword.uko_full_notm}}" caption-side="bottom"}
 
 5. Verify that the service instance is created successfully. Run the following command to get all the service instances that you create. Check whether the {{site.data.keyword.hscrypto}} service instance is among the list.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: troubleshoot, problems, known issues, blocked PIN on EP11 smart card
 
@@ -26,7 +26,7 @@ You try to use an EP11 smart card for an operation that requires personal identi
 You might receive an error message similar to the following one:
 {: tsSymptoms}
 
-![Blocked PIN on EP11 smart card](/images/blocked-pin.gif "Blocked PIN on EP11 smart card"){: caption="Figure 1. Blocked PIN on EP11 smart card" caption-side="bottom"}
+![Blocked PIN on EP11 smart card](/images/blocked-pin.gif "Blocked PIN on EP11 smart card"){: caption="Blocked PIN on EP11 smart card" caption-side="bottom"}
 
 If an incorrect PIN is entered on an EP11 smart card 3 times, the smart card becomes blocked and can't be used for operations that require PIN entry.
 {: tsCauses}

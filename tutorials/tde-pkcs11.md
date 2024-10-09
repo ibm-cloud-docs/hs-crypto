@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-10-09"
 
 keywords: encrypt Oracle Transparent Database, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -42,7 +42,7 @@ This tutorial shows how you can keep complete and exclusive control of your TDE 
 
 With this tutorial, you are going to implement the setup that is depicted in the following illustration.
 
-![Transparent Database Encryption by using the standard PKCS #11 API](../images/pkcs-database.svg "Transparent Database Encryption by using the standard PKCS #11 API"){: caption="Figure 1. Transparent Database Encryption by using the standard PKCS #11 API" caption-side="bottom"}
+![Transparent Database Encryption by using the standard PKCS #11 API](../images/pkcs-database.svg "Transparent Database Encryption by using the standard PKCS #11 API"){: caption="Transparent Database Encryption by using the standard PKCS #11 API" caption-side="bottom"}
 
 In this setup, the Oracle Database is to call operations to manage the TDE master encryption keys on the {{site.data.keyword.hscrypto}} PKCS #11 library. The {{site.data.keyword.hscrypto}} PKCS #11 library interacts with your {{site.data.keyword.hscrypto}} instance, which provides the best of class technology for storing and managing your TDE master encryption keys.
 

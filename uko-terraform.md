@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: terraform, set up terraform, automate set up
 
@@ -105,7 +105,7 @@ Complete the following steps to create and initialize a {{site.data.keyword.hscr
     | `revocation_threshold` | **Required**. The number of administrator signatures that is required to remove an administrator after you leave imprint mode. The valid value is in the range 1 - 8. |
     | `admins` | **Required**. The list of administrators for the instance crypto units. You can set up to eight administrators and the number needs to be equal to or greater than the thresholds that you specify. The following values need to be set for each administrator: \n \n **name:** \n The name of the administrator. It needs to be no more than 30 characters in length. \n \n **key:** \n * If you are using signature key files on the local workstation that are created by the TKE CLI plug-in and are not using a third-party signing service, specify the absolute path and file name of the signature key file that is to be used. \n * If you are using a signing service to provide signature keys, specify the name of the signature key depending on the signing service definition. The character string for the key name is appended to a URI that is sent to the signing service and must contain only unreserved characters as defined by section 2.3 of [RFC3986](https://datatracker.ietf.org/doc/html/rfc3986). \n \n **token:** \n * If you are using signature key files on the local workstation that are created by the TKE CLI plug-in and are not using a third-party signing service, specify the administrator password to access the corresponding signature key file. \n * If you are using a signing service to provide signature keys, specify the token that authorizes use of the signature key depending on the signing service definition. \n \n **Note:** The token parameter is optional. If you don't specify the token, you are prompted to enter the token value when you run Terraform commands. After the instance initialization, the value that you enter for the token parameter is stored in a `.tfstate` file. For more information about securing sensitive data in Terraform, see [Sensitive Data in State](https://www.terraform.io/docs/language/state/sensitive-data.html). |
     | `signature_server_url` | **Optional**. The URL and port number where the signing service is running. If you are using a third-party signing service to provide administrator signature keys, you need to specify this parameter. |
-    {: caption="Table 1. Supported parameters for provisioning a service instance with Terraform" caption-side="bottom"}
+    {: caption="Supported parameters for provisioning a service instance with Terraform" caption-side="bottom"}
 
     If you manage multiple service instances in the `main.tf` file, make sure to set the same `signature_server_url` parameter for each instance. Otherwise, you will not be able to perform the actions successfully.
     {: important}
@@ -143,6 +143,3 @@ For more information about using Terraform to manage {{site.data.keyword.hscrypt
 - [Managing keystores](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs_keystore){: external}
 - [Managing key templates](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs_key_template){: external}
 - [Managing vaults](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs_vault){: external}
-
-
-

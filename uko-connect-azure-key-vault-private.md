@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore, azure key vault
 
@@ -70,7 +70,7 @@ To create a private endpoint in the Azure portal, complete the following steps:
     | Name	 | Enter the instance name.   | 
     | Network Interface Name | The default network interface name is automatically generated. |
     | Region |	Select the region.  | 
-    {: caption="Table 1. Private endpoint basics properties" caption-side="bottom"}
+    {: caption="Private endpoint basics properties" caption-side="bottom"}
 
 5. Under **Resource**, enter the following information and click **Next: Virtual Network**
     |           Setting	      |               Value                       |
@@ -80,7 +80,7 @@ To create a private endpoint in the Azure portal, complete the following steps:
     | Resource type |	Select the vault. | 
     | Resource   |	Select the key vault. |
     | Target     | Select the vault. |
-    {: caption="Table 2. Private endpoint resource properties" caption-side="bottom"}
+    {: caption="Private endpoint resource properties" caption-side="bottom"}
 
 6. Under **Virtual Network**, enter the following information and click **Next: DNS**.
     |           Setting	      |               Value                       |
@@ -88,7 +88,7 @@ To create a private endpoint in the Azure portal, complete the following steps:
     | Virtual network |	Select the network. |
     | Subnet | Select the subnet. |
     | Private IP configuration | Select Dynamically allocate IP address. |
-    {: caption="Table 3. Private endpoint virtual network properties" caption-side="bottom"}
+    {: caption="Private endpoint virtual network properties" caption-side="bottom"}
 
 7. Under **DNS**, confirm the information and click **Next: Tags**.
 
@@ -116,7 +116,7 @@ To connect {{site.data.keyword.cloud_notm}} to the Azure private endpoint create
     | Endpoint name |	Specify the endpoint name. |
     | Destination FQDN or IP  | Enter the fully qualified domain name. For example, `<Azure-key-vault-name>.privatelink.vaultcore.azure.net`, where `Azure-key-vault-name` is the key vault name you used in Step 1. |
     | Destination port | Enter the port that your destination resource listens for incoming requests, for example `443`.|
-    {: caption="Table 4. Connector endpoint resource properties" caption-side="bottom"}
+    {: caption="Connector endpoint resource properties" caption-side="bottom"}
 
 4. Under **Protocol**, select `TCP` as the source protocol and click **Next**.
 
@@ -157,7 +157,7 @@ To connect to an Azure Key Vault by using the UI, complete the following steps:
     | Tenant ID on Azure          |  A tenant is the organization that owns and manages a specific instance of Microsoft cloud services. Use Microsoft Entra ID for authenticating requests to the Key Vault.     |
     | Subscription ID on Azure    |  A GUID that uniquely identifies your subscription to use Azure services.    |
     | Private endpoint URL of TLS proxy | (Optional) Copy and paste the endpoint address in Step 2. For more information, see [Creating and managing Connector endpoints](/docs/satellite?topic=satellite-connector-create-endpoints).   | 
-    {: caption="Table 5. Azure Key Vault properties" caption-side="bottom"}
+    {: caption="Azure Key Vault properties" caption-side="bottom"}
 
     You cannot make further changes to identifying properties that are marked with a Lock icon after the keystore is connected.
     {: note}
@@ -206,4 +206,3 @@ If you connect to the Azure Key Vault, a key that is named `EKMF-BYOK-KEK-FOR-IM
 - To find out how to update the connection to an external keystore, check out [Editing connection to external keystores](/docs/hs-crypto?topic=hs-crypto-edit-external-keystore-connection).
 
 - To find out how to disconnect from an external keystore, check out [Disconnecting from external keystores](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores).
-

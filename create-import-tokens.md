@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: create import token, secure import, key material, key wrapping key, import token api, bring your own key, byok
 
@@ -63,7 +63,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/import_token
     | instance_ID | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | expiration_time | The time in seconds from the creation of an import token that determines how long it remains valid. The minimum value is 300 seconds (5 minutes), and the maximum value is 86400 (24 hours). The default value is 600 (10 minutes). |
     | use_count | The number of times that an import token can be retrieved within the expiration time before it is no longer accessible. The default value is 1. |
-    {: caption="Table 1. Describes the variables needed to create an import token with the API" caption-side="bottom"}
+    {: caption="Describes the variables needed to create an import token with the API" caption-side="bottom"}
 
     A successful `POST api/v2/import_token` request creates an import token for your service instance. The response body contains the metadata that is associated with your import token, such as the creation date and policy details. The following snippet shows example output.
 
@@ -125,7 +125,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/import_token
     | port | **Required.** The port number of the API endpoint. |
     | IAM_token | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | instance_ID | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    {: caption="Table 1. Describes the variables needed to retrieve an import token with the key management service API" caption-side="bottom"}
+    {: caption="Describes the variables needed to retrieve an import token with the key management service API" caption-side="bottom"}
 
     A successful `GET api/v2/import_token` request retrieves the import token for your service instance. The response body contains the metadata that is associated with your import token, such as the creation date and policy details. The following snippet shows an example output with truncated values.
 

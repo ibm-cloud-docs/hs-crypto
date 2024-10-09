@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: general frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips
 
@@ -109,7 +109,7 @@ The following table details the differences between KYOK and BYOK.
 | Highest level security - FIPS 140-2 Level 4 HSM.           |                No                  |                   Yes                |
 | Managing your master key with smart cards.                |                No                  |                   Yes                |
 | Performing key ceremony.                                  |                No                  |                    Yes               |
-{: caption="Table 1. Comparing BYOK with KYOK" caption-side="bottom"}
+{: caption="Comparing BYOK with KYOK" caption-side="bottom"}
 
 ## What can I do with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?
 {: #faq-what-do-with-hpcs}

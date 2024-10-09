@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: rotate managed key, rotate key, managed key rotation, key rotation, key rewrap
 
@@ -71,7 +71,7 @@ To rotate a managed key through the API, follow these steps:
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} IAM access token that you retrieve in step 1. Include the full contents of the `IAM` token, including the Bearer value. |
     | `vault_id` | **Required.** The Universally Unique Identifier (UUID) of the vault that your manage key is assigned to. |
     | `ETag` | **Required.** The precondition of the update, which is the value of ETag from the header on a GET request. |
-    {: caption="Table 1. Variables needed to rotate a managed key" caption-side="bottom"} 
+    {: caption="Variables needed to rotate a managed key" caption-side="bottom"} 
 
     For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#rotate-managed-key){: external}.
     
@@ -85,5 +85,3 @@ To rotate a managed key through the API, follow these steps:
 - To confirm whether the key rotation is successfully proceeded, you can [view managed key versions](/docs/hs-crypto?topic=hs-crypto-uko-view-key-versions).
 - After you rotate a managed key, new cryptographic key material becomes available for encryption. To learn how to rewrap data by using the latest key material, see [Rewrapping data after rotating a managed key](/docs/hs-crypto?topic=hs-crypto-managed-key-rotation-intro#rewrap-data-after-managed-key-rotation).
 - To find out more about programmatically managing your keys, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external}.
-
-

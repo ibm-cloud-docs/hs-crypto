@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -73,7 +73,7 @@ No. From a technology point of view, {{site.data.keyword.uko_full_notm}} is a fe
 | KMS key types (policy) |  Keys are symmetric 256-bit keys, supported by the AES-CBC algorithm.  | Not supported.   | 
 | key create and import access policy | Supported. For more information, see [Managing the key create and import access policy](/docs/hs-crypto?topic=hs-crypto-manage-keyCreateImportAccess).    | Managed keys are supported through IAM. |
 | Export keys    |  Supported. |  Not supported. | 
-{: caption="Table 1. Key differences between {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} and {{site.data.keyword.hscrypto}} Standard Plan " caption-side="bottom"} 
+{: caption="Key differences between {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} and {{site.data.keyword.hscrypto}} Standard Plan " caption-side="bottom"} 
 
 
 ## What type of HSM is used for {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}?
@@ -125,4 +125,3 @@ Yes. You can choose a data center within your required data residency region and
 {: faq}
 
 There is an internal KMS keystore limit of 50, but there is no external keystore limit. For more information on how the keystores are charged, see [the pricing sample](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs-uko).
-

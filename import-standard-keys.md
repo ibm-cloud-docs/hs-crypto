@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: standard key, import key, key material, import key api, bring your own key, byok, encryption key, import standard encryption key, upload standard encryption key, import secret, persist secret, store secret, upload secret, store encryption key
 
@@ -43,7 +43,7 @@ You can add your existing encryption keys with the UI, or programmatically with 
     | Key material | The base64 encoded key material, such as a symmetric key, that you want to manage in the service. For more information, see [Base64 encoding your key material](#encode-key-material-standard-key). Ensure that the key material meets the following requirements: \n * The key can be up to 7,500 bytes. \n * The key must be base64-encoded. |
     | Expiration date | (Optional) Set the date and time when the key gets expired. After the expiration date, the key moves into the Deactivated state. For more information about key state, see [Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-key-states). |
     | Description | (Optional) Add an extended description for your key. It needs to be two to 240 characters in length. |
-    {: caption="Table 1. Describes the settings to import a standard key" caption-side="bottom"}
+    {: caption="Describes the settings to import a standard key" caption-side="bottom"}
 
 6. When you finish filling out the key's details, click **Import key** to confirm.
 
@@ -106,7 +106,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys
     | `YYYY-MM-DD` \n \n `HH:MM:SS.SS` | Optional: The date and time that the key expires in the system, in RFC 3339 format. If the `expirationDate` attribute is omitted, the key does not expire. |
     | `key_material` | The base64 encoded key material, such as a symmetric key, that you want to manage in the service. For more information, see [Base64 encoding your key material](#encode-key-material-standard-key).<br><br>Ensure that the key material meets the following requirements:<br><br>* The key can be up to 7,500 bytes.<br>* The key must be base64-encoded. |
     | `key_type` | A boolean value that determines whether the key material can leave the service.<br><br>When you set the `extractable` attribute to `true`, the service designates the key as a standard key that you can store in your apps or services. | 
-    {: caption="Table 2. Describes the variables needed to add a standard key with the Hyper Protect Crypto Services key management service API." caption-side="bottom"}
+    {: caption="Describes the variables needed to add a standard key with the Hyper Protect Crypto Services key management service API." caption-side="bottom"}
 
     To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-122.pdf){: external}.
     {: tip}
@@ -164,7 +164,7 @@ When you import an existing standard key, it is required to include the encrypte
     | --- | --- |
     | `infile` | The name of the file where your key material string resides. |
     | `outfile`| The name of the file where your base64-encoded key material is created when the command is run. |
-    {: caption="Table 3. Describes the variables needed to base64 encode your key material" caption-side="bottom"}
+    {: caption="Describes the variables needed to base64 encode your key material" caption-side="bottom"}
 
     If you want to output the base64 material in the command line directly rather than a file, run the command `openssl enc -base64 <<< '<key_material_string>'`, where *key_material_string* is the key material input for your imported key.
     {: note}

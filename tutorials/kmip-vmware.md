@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: VMWare encryption, KMIP, Key management and distribution, Data appliance encryption, Netapp, vSphere, vSAN encryption
 
@@ -35,7 +35,7 @@ This tutorial is based on the Standard Plan instance setup only.
 
 The following diagram illustrates the overall workflow of how the KMIP adapter that is provided in the {{site.data.keyword.hscrypto}} instance works with a VMWare customer environment.
 
-![KMIP workflow with VMWare customer environment](../images/kmip-vmware-workflow.svg "KMIP adapter"){: caption="Figure 1. KMIP workflow with VMWare customer environment" caption-side="bottom"}
+![KMIP workflow with VMWare customer environment](../images/kmip-vmware-workflow.svg "KMIP adapter"){: caption="KMIP workflow with VMWare customer environment" caption-side="bottom"}
 
 The overall workflow includes the following steps:
 

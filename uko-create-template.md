@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -73,7 +73,7 @@ You can create a key template from scratch with full control by yourself. To cre
     | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
     | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-1}
-    {: caption="Table 1. AWS Key templates properties" caption-side="bottom"}
+    {: caption="AWS Key templates properties" caption-side="bottom"}
     {: tab-title="AWS Key templates"}
     {: tab-group="Key templates from scratch properties"}
     {: class="comparison-tab-table"}
@@ -92,7 +92,7 @@ You can create a key template from scratch with full control by yourself. To cre
     | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
     | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-2}
-    {: caption="Table 2. Azure Key templates properties" caption-side="bottom"}
+    {: caption="Azure Key templates properties" caption-side="bottom"}
     {: tab-title="Azure Key templates"}
     {: tab-group="Key templates from scratch properties"}
     {: class="comparison-tab-table"}
@@ -110,7 +110,7 @@ You can create a key template from scratch with full control by yourself. To cre
     | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
     | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-3}
-    {: caption="Table 3. Google Key templates properties" caption-side="bottom"}
+    {: caption="Google Key templates properties" caption-side="bottom"}
     {: tab-title="Google Key templates"}
     {: tab-group="Key templates from scratch properties"}
     {: class="comparison-tab-table"}
@@ -127,7 +127,7 @@ You can create a key template from scratch with full control by yourself. To cre
     | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
     | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-4}
-    {: caption="Table 4. IBM Cloud KMS Key templates properties" caption-side="bottom"}
+    {: caption="IBM Cloud KMS Key templates properties" caption-side="bottom"}
     {: tab-title="IBM Cloud KMS Key templates"}
     {: tab-group="Key templates from scratch properties"}
     {: class="comparison-tab-table"}
@@ -144,7 +144,7 @@ You can create a key template from scratch with full control by yourself. To cre
     | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
     | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-5}
-    {: caption="Table 5. IBM Key Protect Key templates properties" caption-side="bottom"}
+    {: caption="IBM Key Protect Key templates properties" caption-side="bottom"}
     {: tab-title="IBM Key Protect Key templates"}
     {: tab-group="Key templates from scratch properties"}
     {: class="comparison-tab-table"}   
@@ -258,7 +258,7 @@ Note that you need to keep in mind of the following considerations:
     | `yy`                 |                           | A 2-digit format of the year when the key is created.     | 
     | `yyyy`               |                           | A 4-digit format of the year when the key is created.     | 
     | `mm`                 |                           | A 2-digit format of the month when the key is created.     | 
-    {: caption="Table 8. System placeholders for naming scheme" caption-side="bottom"}
+    {: caption="System placeholders for naming scheme" caption-side="bottom"}
 
 -  Do not use the following reserved placeholders for your key naming scheme.
 
@@ -268,7 +268,7 @@ Note that you need to keep in mind of the following considerations:
     | `hierarchy`         | `h`\n \n `hier`| 
     | `keyType`           | `kt`    | 
     | `institutionId`     | `iid` | 
-    {: caption="Table 9. Reserved placeholders for naming scheme" caption-side="bottom"}
+    {: caption="Reserved placeholders for naming scheme" caption-side="bottom"}
 
  
 
@@ -290,5 +290,3 @@ Note that you need to keep in mind of the following considerations:
 - To find out instructions on archiving and unarchiving the key template, check out [Archiving and unarchiving key templates](/docs/hs-crypto?topic=hs-crypto-archive-template). 
 
 - To find out instructions on deleting a key template, check out [Deleting key templates](/docs/hs-crypto?topic=hs-crypto-delete-template).
-
-

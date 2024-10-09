@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: Unified Key Orchestrator, key management, UKO keystore, edit keystore, external keystore, KMS keystore
 
@@ -51,7 +51,7 @@ To edit the connection to an external keystore by using the UI, complete the fol
     | Access key ID on AWS        | All requests to AWS KMS must be signed by using an access key ID and a secret access key. For more information, see [Understanding and getting your AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).   |
     | Secret access key on AWS    | All requests to AWS KMS must be signed by using an access key ID and a secret access key. The secret access key is available for download only when you create it.    |
     {: #table-1}
-    {: caption="Table 1. AWS Key Management Service properties" caption-side="bottom"}
+    {: caption="AWS Key Management Service properties" caption-side="bottom"}
     {: tab-title="AWS keystore"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
@@ -67,7 +67,7 @@ To edit the connection to an external keystore by using the UI, complete the fol
     | Subscription ID on Azure    |  Read only. A GUID that uniquely identifies your subscription to use Azure services. You cannot edit this property after the keystore is connected.    |
     | Tenant ID on Azure          |  Read only. A tenant is the organization that owns and manages a specific instance of Microsoft cloud services. Use Microsoft Entra ID for authenticating requests to the key vault. You cannot edit this property after the keystore is connected.    |
     {: #table-2}
-    {: caption="Table 2. Azure Key Vault properties" caption-side="bottom"}
+    {: caption="Azure Key Vault properties" caption-side="bottom"}
     {: tab-title="Azure Key Vault"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
@@ -82,7 +82,7 @@ To edit the connection to an external keystore by using the UI, complete the fol
     | Key ring on Google Cloud | A human-readable name of the key ring that organizes your keys. The name must be unique within a location. You cannot edit this property after the keystore is connected.  For more information about key rings, see [Key rings](https://cloud.google.com/kms/docs/resource-hierarchy#key_rings){: external}.  |
     | Private key ID on Google Cloud | Read only. The ID of the public/private RSA key pair in Google. It is used for establishing a secure connection to Google Cloud Platform. It is automatically extracted from the JSON key file that you upload. You cannot edit this property after the keystore is connected. |
     {: #table-3}
-    {: caption="Table 3. Google Cloud KMS keystore properties" caption-side="bottom"}
+    {: caption="Google Cloud KMS keystore properties" caption-side="bottom"}
     {: tab-title="Google Cloud KMS keystore"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
@@ -96,7 +96,7 @@ To edit the connection to an external keystore by using the UI, complete the fol
     | Service instance ID on {{site.data.keyword.cloud_notm}}   | Read only. The unique identifier that is assigned to your {{site.data.keyword.keymanagementserviceshort}} service instance. You cannot edit this property after the keystore is connected. For more information, see [Retrieving your instance ID and cloud resource name](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).  |
     | Service ID API key          | A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys). |
     {: #table-4}
-    {: caption="Table 4. IBM {{site.data.keyword.keymanagementserviceshort}} keystore properties" caption-side="bottom"}
+    {: caption="IBM {{site.data.keyword.keymanagementserviceshort}} keystore properties" caption-side="bottom"}
     {: tab-title="IBM {{site.data.keyword.keymanagementserviceshort}} keystore"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
@@ -110,7 +110,7 @@ To edit the connection to an external keystore by using the UI, complete the fol
     | Service instance ID on {{site.data.keyword.cloud_notm}}  | Read only. The unique identifier that is assigned to your service instance. You cannot edit this property after the keystore is connected. For more information, see [Retrieving your instance ID](/docs/key-protect?topic=key-protect-retrieve-instance-ID).  |
     | Service ID API key          | A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).  |
     {: #table-5}
-    {: caption="Table 5. {{site.data.keyword.cloud_notm}} KMS keystore properties" caption-side="bottom"}
+    {: caption="{{site.data.keyword.cloud_notm}} KMS keystore properties" caption-side="bottom"}
     {: tab-title="{{site.data.keyword.cloud_notm}} KMS keystore in another instance"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"} 
@@ -155,7 +155,3 @@ To edit the connection to an external keystore through the API, follow these ste
 - To find out how to connect to an external keystore, check out [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
 
 - To find out how to disconnect from an external keystore, check out [Disconnecting from external keystores](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores).
-
-
-
-

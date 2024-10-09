@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: Unified Key Orchestrator, view key templates, key management, kms keys, UKO
 
@@ -49,7 +49,7 @@ To view a list of your key templates by using the UI, complete the following ste
     | Keys                 | The number of keys that created based on the key template.                | 
     | Keystore type        | The type of keystore that the key template properties are compatible with.   |
     | Creation date        | Set a date range of when the key template was created.             |
-    {: caption="Table 1. Key templates table" caption-side="bottom"}
+    {: caption="Key templates table" caption-side="bottom"}
     
      
     You can search for a specific key template by using the search bar, or filter key templates based on your needs by clicking the **Filter** icon ![Filter icon](../icons/filter.svg "Filter") in the **Key templates** table. 
@@ -87,6 +87,3 @@ To view a list of key templates through the API, follow these steps:
 - To continue to create keys with the key template created, follow the instruction in [Creating managed keys with a key template](/docs/hs-crypto?topic=hs-crypto-create-managed-keys&interface=ui#create-managed-keys-template).
 
 - To find out instructions on archiving and unarchiving the key template, check out [Archiving and unarchiving key templates](/docs/hs-crypto?topic=hs-crypto-archive-template). 
-
-
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-10-09"
 
 keywords: encrypt IBM Db2 databases, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -42,7 +42,7 @@ This tutorial shows how you can keep complete and exclusive control of your mast
 
 With this tutorial, you are going to implement the setup that is depicted in the following illustration.
 
-![IBM Db2 default encryption with the standard PKCS #11 API](../images/pkcs-db2.svg "IBM Db2 default encryption with the standard PKCS #11 API"){: caption="Figure 1. IBM Db2 default encryption with the standard PKCS #11 API" caption-side="bottom"}
+![IBM Db2 default encryption with the standard PKCS #11 API](../images/pkcs-db2.svg "IBM Db2 default encryption with the standard PKCS #11 API"){: caption="IBM Db2 default encryption with the standard PKCS #11 API" caption-side="bottom"}
 
 In this setup, Db2 is to call operations to manage the master keys on the {{site.data.keyword.hscrypto}} PKCS #11 library. The {{site.data.keyword.hscrypto}} PKCS #11 library interacts with your {{site.data.keyword.hscrypto}} instance, which provides the best of class technology for storing and managing your master keys.
 

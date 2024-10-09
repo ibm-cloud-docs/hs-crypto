@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-06"
+lastupdated: "2024-10-09"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event, Unified Key Orchestrator, UKO events
 
@@ -42,7 +42,7 @@ The following table lists the key actions that generate an event.
 | `hs-crypto.managed-keys.list`                | Get a list of managed keys.                             |
 | `hs-crypto.managed-keys.read`                |Retrieve information about a managed key.                |
 | `hs-crypto.managed-keys.delete`              | Delete a managed key.   |
-{: caption="Table 1. Managed key actions" caption-side="bottom"}
+{: caption="Managed key actions" caption-side="bottom"}
 
 ### Keystore events
 {: #uko-keystore-actions}
@@ -55,7 +55,7 @@ The following table lists the key actions that generate an event.
 | `hs-crypto.target-keystores.list`         | Get a list of keystores.               |
 | `hs-crypto.target-keystores.read`         | Retrieve information about a keystore.     |
 | `hs-crypto.target-keystores.delete`              | Delete a keystore.                |
-{: caption="Table 2. Keystore actions" caption-side="bottom"}
+{: caption="Keystore actions" caption-side="bottom"}
 
 ### Vault events
 {: #uko-vault-actions}
@@ -68,7 +68,7 @@ The following table lists the key actions that generate an event.
 | `hs-crypto.vaults.write`             | Create or update a vault.                                    |
 | `hs-crypto.vaults.read`             | Retrieve information about a vault.                                    |
 | `hs-crypto.vaults.delete`             | Delete a vault.                                    |
-{: caption="Table 3. Vault actions" caption-side="bottom"}
+{: caption="Vault actions" caption-side="bottom"}
 
 ### Template events
 {: #uko-template-actions}
@@ -81,7 +81,7 @@ The following table lists the key actions that generate an event.
 | `hs-crypto.key-templates.read`             | Retrieve template information.                                    |
 | `hs-crypto.key-templates.delete`             | Delete a template.                                    |
 | `hs-crypto.key-templates.list`             | List all key templates.                                    |
-{: caption="Table 4. Template actions" caption-side="bottom"}
+{: caption="Template actions" caption-side="bottom"}
 
 ### Registration events
 {: #uko-registration-actions}
@@ -95,7 +95,7 @@ The following table lists the registration actions that generate an event.
 | --------------------------------------- | -------------------------------------------------------- |
 | `hs-crypto.registrations.list`          | List registrations for any key.                           |
 | `hs-crypto.registrations.default`       | Invalid registration request event.                       |
-{: caption="Table 5. Registration actions" caption-side="bottom"}
+{: caption="Registration actions" caption-side="bottom"}
 
 
 
@@ -116,7 +116,7 @@ The following table lists the Trusted Key Entry (TKE) actions that generate an e
 | `hs-crypto.tke-cryptounit-new-master-key-register.clear` | Clear the new master key register. |
 | `hs-crypto.tke-cryptounit-current-master-key-register.clear` | Clear the current master key register. |
 | `hs-crypto.tke-cryptounit.reset`   | Zeroize and reset the selected crypto units |
-{: caption="Table 6. Trusted Key Entry actions" caption-side="bottom"}
+{: caption="Trusted Key Entry actions" caption-side="bottom"}
 
 ### Certificate manager events
 {: #uko-mtlscert-mgr-actions}
@@ -133,7 +133,7 @@ The following table lists the certificate manager actions that generate an event
 | `hs-crypto.mtlscert-cert.list` | List all certificates that are managed by the certificate administrator.  |
 | `hs-crypto.mtlscert-cert.read` | Get certificates by the certificate administrator.|
 | `hs-crypto.mtlscert-cert.delete` | Delete certificates by the certificate administrator. |
-{: caption="Table 7. Certificate manager actions" caption-side="bottom"}
+{: caption="Certificate manager actions" caption-side="bottom"}
 
 ### KMIP for VMware events
 {: #uko-at-events-kmip}
@@ -152,7 +152,7 @@ The initiator ID is derived from the TLS (Transport Layer Security) certificate 
 | `hs-crypto.kmip-key.activate` | A KMIP key is activated. |
 | `hs-crypto.kmip-key.revoke` | A KMIP key is revoked. |
 | `hs-crypto.kmip-key.destroy` | A KMIP key is destroyed. |
-{: caption="Table 8. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
+{: caption="Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
 
 ### EP11 keystore events
 {: #uko-ep11-keystore-events}
@@ -169,7 +169,7 @@ The following table lists the Enterprise PKCS #11 (EP11) keystore actions that g
 | `hs-crypto.keystore.listkeystoresbyids` |View EP11 keystores. |
 | `hs-crypto.keystore.storenewkey` | Store an EP11 key. |
 | `hs-crypto.keystore.updatekey` | Update an EP11 key. |
-{: caption="Table 9. EP11 keystore actions" caption-side="top"}
+{: caption="EP11 keystore actions" caption-side="top"}
 
 ### EP11 crypto events
 {: #uko-ep11-crypto-events}
@@ -178,7 +178,7 @@ The following table lists the EP11 crypto actions that generate an event:
 | Action                                      | Description                               |
 |--------------------------------------------|------------------------------------------|
 | `hs-crypto.ep11.use` |	Cryptographic operation |
-{: caption="Table 10. EP11 crypto actions" caption-side="top"} 
+{: caption="EP11 crypto actions" caption-side="top"} 
 
 
 ## Viewing events
@@ -202,7 +202,7 @@ see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic
 | `jp-tok`                  | `jp-tok`                                        |
 | `us-east`                 | `us-east`                                       |
 | `us-south`                | `us-south`                                      |
-{: caption="Table 11. Activity Tracker regions" caption-side="bottom"}
+{: caption="Activity Tracker regions" caption-side="bottom"}
 
 ## Analyzing successful events
 {: #uko-at-events-analyze}
@@ -227,7 +227,7 @@ Some common fields are available for {{site.data.keyword.hscrypto}} to use outsi
 | --- | --- |
 | `requestData.requestURI` | The URI of the API request that was made. |
 | `requestData.instanceID` | The unique identifier of your {{site.data.keyword.hscrypto}} service instance. |
-{: caption="Table 12. Common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
+{: caption="Common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
 
 For more information about the event fields in the Cloud Auditing Data Federation (CADF) event model, see [Event Fields](/docs/activity-tracker?topic=activity-tracker-event){: external}.
 
@@ -255,7 +255,7 @@ The following table lists the returned values that indicate a successful TKE eve
 |`outcome` | `success`  |
 | `reason.reasonCode`  | `200`  |
 | `reason.reasonType`  |`OK`  |
-{: caption="Table 13. Returned values of a successful TKE event" caption-side="bottom"}
+{: caption="Returned values of a successful TKE event" caption-side="bottom"}
 
 The following common fields for TKE events include extra information:
 
@@ -323,7 +323,7 @@ The following table lists the returned values that indicate a successful certifi
 |`outcome` | `success`  |
 | `reason.reasonCode`  | `200`  |
 | `reason.reasonType`  |`OK`  |
-{: caption="Table 14. Returned values of a successful mTLS certificate manager event" caption-side="bottom"}
+{: caption="Returned values of a successful mTLS certificate manager event" caption-side="bottom"}
 
 The following common fields for certificate manager events include extra information:
 
@@ -413,7 +413,7 @@ The following table lists the returned values that indicate a successful EP11 ke
 | outcome | success |
 | reason.reasonCode	| 200 |
 | reason.reasonType	| OK |
-{: caption="Table 15. Returned values of a successful EP11 keystore event" caption-side="bottom"}
+{: caption="Returned values of a successful EP11 keystore event" caption-side="bottom"}
 
 The following common fields for EP11 keystore events include extra information:
 - The `target.name` field includes the IDs of the keystore or key.
@@ -428,7 +428,7 @@ The following table lists the returned values that indicate a successful EP11 cr
 | outcome | success |
 | reason.reasonCode	| 200 |
 | reason.reasonType	| OK |
-{: caption="Table 16. Returned values of a successful EP11 crypto event" caption-side="bottom"}
+{: caption="Returned values of a successful EP11 crypto event" caption-side="bottom"}
 
 
 ## Analyzing failed events
@@ -481,7 +481,7 @@ The following table lists the actions that are associated with each severity lev
 | Critical | `hs-crypto.target-keystores.delete` \n \n `hs-crypto.managed-keys.delete` \n \n `hs-crypto.vaults.delete` \n \n `hs-crypto.registrations.delete` \n \n `hs-crypto.tke-cryptounit-admin.add` \n \n `hs-crypto.tke-cryptounit-admin.remove` \n \n `hs-crypto.tke-cryptounit-current-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-new-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-master-key-register.add` \n \n `hs-crypto.tke-cryptounit-master-key-register.commit` \n \n `hs-crypto.tke-cryptounit-master-key-register.activate` \n \n `hs-crypto.tke-cryptounit-threshold.set` \n \n `hs-crypto.tke-cryptounit.reset` \n \n `hs-crypto.mtlscert-admin-key.create` \n \n `hs-crypto.mtlscert-admin-key.update` \n \n `hs-crypto.mtlscert-admin-key.delete` \n \n `hs-crypto.mtlscert-cert.set` \n \n `hs-crypto.mtlscert-cert.set` \n \n `hs-crypto.keystore.deletekey` \n \n `hs-crypto.keystore.deletekeystore` \n \n `hs-crypto.keystore.updatekey` |
 | Warning | `hs-crypto.managed-keys.write` \n \n Note that when this event is triggered to change the key state to `destroyed`, the severity level is `Critical` instead of `Warning`. |
 | Normal | `hs-crypto.managed-keys.list` \n \n `hs-crypto.managed-keys.read` \n \n `hs-crypto.target-keystores.write` \n \n `hs-crypto.target-keystores.list` \n \n `hs-crypto.target-keystores.read` \n \n `hs-crypto.vaults.list` \n \n `hs-crypto.vaults.write` \n \n `hs-crypto.vaults.read` \n \n `hs-crypto.keystore.createkeystore` \n \n `hs-crypto.keystore.listkeysbyattributes` \n \n `hs-crypto.keystore.listkeysbyids` \n \n `hs-crypto.keystore.listkeystoresbyattributes` \n \n `hs-crypto.keystore.listkeystoresbyids` \n \n `hs-crypto.keystore.storenewkey` \n \n `hs-crypto.ep11.use` |
-{: caption="Table 17. Severity level for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
+{: caption="Severity level for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
 
 The following table lists the status codes that are associated with each severity level.
 
@@ -489,5 +489,4 @@ The following table lists the status codes that are associated with each severit
 | -------- | ----------- |
 | Critical | `400` (For TKE events only), `401`, `403`, `500`, `503`, `507`  |
 | Warning  | `400`, `409`, `424`, `502`, `504`, `505`  |
-{: caption="Table 18. Severity level for {{site.data.keyword.hscrypto}} response status codes" caption-side="bottom"}
-
+{: caption="Severity level for {{site.data.keyword.hscrypto}} response status codes" caption-side="bottom"}

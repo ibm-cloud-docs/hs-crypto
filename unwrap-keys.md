@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: data encryption key, key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, unwrap api
 
@@ -75,7 +75,7 @@ Root keys that contain the same key material can unwrap the same data encryption
     | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. It is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
     | `correlation_ID` | **Optional.** The unique identifier that is used to track and correlate transactions. |
     | `encrypted_data_key` | The `ciphertext` value that was returned during a wrap operation. |
-    {: caption="Table 1. Describes the variables needed to unwrap keys in {{site.data.keyword.hscrypto}}" caption-side="bottom"}
+    {: caption="Describes the variables needed to unwrap keys in {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 
     The original key material is returned in the response entity-body. The response body also contains the ID of the key version that was used to unwrap the supplied ciphertext. The following JSON object shows a sample returned value.
 
@@ -115,6 +115,6 @@ When you unwrap a data encryption key, the key material is returned in base64 en
     | --- | --- |
     | `infile` | The name of the file where your base64 encoded key material string resides. |
     | `outfile` | The name of the file where your decoded key material is outputted after the command is run. |
-    {: caption="Table 2. Describes the variables needed to decode your key material" caption-side="bottom"}
+    {: caption="Describes the variables needed to decode your key material" caption-side="bottom"}
 
     If you want to output the decoded material in the command line directly rather than a file, run command `openssl enc -base64 -d <<< '<key_material_string>'`, where key_material_string is the returned plain text from your unwrap request.

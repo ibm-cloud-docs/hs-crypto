@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: UKO access, UKO account authentication, UKO custom roles, Unified Key Orchestrator
 
@@ -44,7 +44,7 @@ To create a custom role, complete the following steps:
     | My key custodian - creator | Manages and creates keys. For a complete key lifecycle, both Creator and Deployer roles are needed. To implement separation of duties, assign Creator and Deployer role to different people. | * `hs-crypto.managed-keys.preactivation-destroy` \n * `hs-crypto.managed-keys.active-install` \n * `hs-crypto.managed-keys.active-uninstall` \n * `hs-crypto.managed-keys.deactivated-install` \n * `hs-crypto.managed-keys.deactivated-uninstall` \n * `hs-crypto.managed-keys.read` \n * `hs-crypto.managed-keys.list` \n * `hs-crypto.managed-keys.write` \n * `hs-crypto.managed-keys.generate` \n * `hs-crypto.managed-keys.distribute` \n * `hs-crypto.managed-keys.write-dates` \n * `hs-crypto.managed-keys.write-tags` \n * `hs-crypto.target-keystores.read` \n * `hs-crypto.target-keystores.list` \n * `hs-crypto.key-templates.read` \n * `hs-crypto.key-templates.list` \n * `hs-crypto.key-templates.write` \n * `hs-crypto.vaults.read` \n * `hs-crypto.vaults.list` |
     | My key custodian - deployer | Manages and deploys keys. For a complete key lifecycle, both Creator and Deployer roles are needed. To implement separation of duties, assign Creator and Deployer role to different people. | * `hs-crypto.managed-keys.preactivation-activate` \n * `hs-crypto.managed-keys.preactivation-destroy` \n * `hs-crypto.managed-keys.active-deactivate` \n * `hs-crypto.managed-keys.active-install` \n * `hs-crypto.managed-keys.active-uninstall` \n * `hs-crypto.managed-keys.deactivated-install` \n * `hs-crypto.managed-keys.deactivated-reactivate` \n * `hs-crypto.managed-keys.deactivated-uninstall` \n * `hs-crypto.managed-keys.read` \n * `hs-crypto.managed-keys.list` \n * `hs-crypto.managed-keys.write` \n * `hs-crypto.managed-keys.distribute` \n * `hs-crypto.managed-keys.write-dates` \n * `hs-crypto.managed-keys.write-tags` \n * `hs-crypto.target-keystores.read` \n * `hs-crypto.target-keystores.list` \n * `hs-crypto.key-templates.read` \n * `hs-crypto.key-templates.list` \n * `hs-crypto.vaults.read` \n * `hs-crypto.vaults.list` |
     | My reader | Performs read-only actions for auditing purposes. | * `hs-crypto.managed-keys.read` \n * `hs-crypto.managed-keys.list` \n * `hs-crypto.target-keystores.read` \n * `hs-crypto.target-keystores.list` \n * `hs-crypto.key-templates.read` \n * `hs-crypto.key-templates.list` \n * `hs-crypto.vaults.read` \n * `hs-crypto.vaults.list` |
-    {: caption="Table 1. Custom roles and actions corresponding to the {{site.data.keyword.uko_full_notm}} operations" caption-side="bottom"}
+    {: caption="Custom roles and actions corresponding to the {{site.data.keyword.uko_full_notm}} operations" caption-side="bottom"}
 
 8. Click **Create** after you select the appropriate actions for your custom role.
 
@@ -83,4 +83,3 @@ Before users can access {{site.data.keyword.uko_full_notm}} vaults, keystores, o
 {: #uko-role-best-practices-next}
 
 - To find out how to grant access to vaults, see [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults).
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: Unified Key Orchestrator, delete key, key management, kms key, UKO
 
@@ -62,7 +62,7 @@ Follow these steps to complete the process:
     | Google Cloud KMS keystore|        30 days   | Yes| 
     | {{site.data.keyword.cloud_notm}} KMS keystore |        30 days       | No|
     | {{site.data.keyword.keymanagementserviceshort}} |        30 days      | No|
-    {: caption="Table 1. Key destruction policies" caption-side="bottom"}  
+    {: caption="Key destruction policies" caption-side="bottom"}  
     
      When the pending-destruction period ends, the key will be automatically moved to Destroyed state and can no longer be restored. For keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically in 60 days after the pending-destruction period ends.
  
@@ -105,6 +105,3 @@ To delete a managed key through the API, follow these steps:
 - To find out how to delete an internal keystore, check out [Deleting internal keystores](/docs/hs-crypto?topic=hs-crypto-delete-internal-keystores). 
 
 - To find out how to delete a vault, check out [Deleting vaults](/docs/hs-crypto?topic=hs-crypto-delete-vaults).
-
-
-

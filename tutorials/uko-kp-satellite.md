@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: key management with satellite, uko satellite, hpcs satellite, kp satellite
 
@@ -37,7 +37,7 @@ This tutorial shows how you can keep complete and exclusive control of your encr
 
 The following diagram illustrates the architecture:
 
-![{{site.data.keyword.uko_full_notm}} connects to {{site.data.keyword.keymanagementserviceshort}} on Satellite](../images/uko-kp-satellite.svg "Unified Key Orchestrator connects to Key Protect on satellite"){: caption="Figure 1. Unified Key Orchestrator connects to Key Protect on Satellite" caption-side="bottom"}
+![{{site.data.keyword.uko_full_notm}} connects to {{site.data.keyword.keymanagementserviceshort}} on Satellite](../images/uko-kp-satellite.svg "Unified Key Orchestrator connects to Key Protect on satellite"){: caption="Unified Key Orchestrator connects to Key Protect on Satellite" caption-side="bottom"}
 
 ## Before you begin
 {: #tutorial-uko-satellite-prerequisites}
@@ -94,7 +94,7 @@ After you deploy {{site.data.keyword.keymanagementserviceshort}} on Satellite, y
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
     | Service instance ID on {{site.data.keyword.cloud_notm}}   | The unique identifier that is assigned to your {{site.data.keyword.keymanagementserviceshort}} service instance. For more information, see [Retrieving your instance ID and cloud resource name](/docs/key-protect?topic=key-protect-retrieve-instance-ID).  |
     | Service ID API key          | A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys). |
-    {: caption="Table 1. Key store properties" caption-side="bottom"}
+    {: caption="Key store properties" caption-side="bottom"}
 
 6. Optionally, click **Test connection** to test the connection to the external keystore that you configure. When completed, click **Next** to continue.
 
@@ -129,7 +129,7 @@ Now you can use {{site.data.keyword.uko_full_notm}} to create and activate keys 
     | Activation date      | Plan a date to activate the Pre-active key. It is for planning purpose only. For this tutorial, you don't need to specify this property as the `Active` state is selected previously. The key will be activated immediately upon its creation. |
     | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key. For example, `project: tiger`. |
-    {: caption="Table 2. Key properties" caption-side="bottom"}
+    {: caption="Key properties" caption-side="bottom"}
 
 7. Under **Keystores**, select the {{site.data.keyword.keymanagementserviceshort}} on Satellite keystore that you create in the previous step.
 8. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.

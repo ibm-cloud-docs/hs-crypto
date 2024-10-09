@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle
 
@@ -28,7 +28,7 @@ Cryptographic keys, in their lifetime, transition through several states that ar
 
 {{site.data.keyword.hscrypto}} provides a graphical user interface and a REST API for tracking keys as they move through several states in their lifecycle. The following diagram shows how a key passes through states between the generation and the destruction.
 
-![Encryption key states and transitions](/images/key-states.svg "Encryption key states and transitions"){: caption="Figure 1. Key states and transitions" caption-side="bottom"}
+![Encryption key states and transitions](/images/key-states.svg "Encryption key states and transitions"){: caption="Key states and transitions" caption-side="bottom"}
 
 | State       | Integer Mapping | Description |
 |-------------|-----------------|-------------|
@@ -37,7 +37,7 @@ Cryptographic keys, in their lifetime, transition through several states that ar
 | Suspended   |       2        | A key moves into the Suspended state when it is [disabled for encrypt and decrypt operations](/docs/hs-crypto?topic=hs-crypto-disable-keys). In this state, the key is unable to cryptographically protect data and can be moved only to the Active or Destroyed states. |
 | Deactivated |       3        | A key moves into the Deactivated state on the expiration date, if one is assigned. In this state, the key is unable to cryptographically protect data and can be moved only to the Destroyed state. |
 | Destroyed   |       5        | Deleted keys are in the Destroyed state. Keys in this state are not recoverable. Metadata that is associated with a key, such as the key's transition history and name, is kept in the {{site.data.keyword.hscrypto}} database. |
-{: caption="Table 1. Describes key states and transitions." caption-side="bottom"}
+{: caption="Describes key states and transitions." caption-side="bottom"}
 
 ## Key states and service actions
 {: #key-states-service-actions}
@@ -58,7 +58,7 @@ The following table shows how {{site.data.keyword.hscrypto}} handles service act
 | Enable key. |    |   | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |     |
 | Delete key. |    | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |     |
 | Restore key. |     |    |     |     | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-{: caption="Table 2. Describes how key states affect service actions." caption-side="bottom"}
+{: caption="Describes how key states affect service actions." caption-side="bottom"}
 
 ## Monitoring for lifecycle changes
 {: #monitor-lifecycle-changes}

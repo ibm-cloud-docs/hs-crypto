@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: root key, create root key, add key, root key api, api key, symmetric key, key material, key management, create key-wrapping key, create crk, create customer key, key-wrapping key
 
@@ -48,7 +48,7 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
     | Key ring ID | Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key is added to the `default` key ring. For more information about key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
     | Expiration date | (Optional) Set the date and time when the key gets expired. After the expiration date, the key moves into the Deactivated state. For more information about key state, see [Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-key-states). |
     | Description | (Optional) Add an extended description for your key. It can be two to 240 characters in length. |
-    {: caption="Table 1. Describes the settings to create a key" caption-side="bottom"}
+    {: caption="Describes the settings to create a key" caption-side="bottom"}
 
 6. When you finish filling out the key's details, click **Create key** to confirm.
 
@@ -113,7 +113,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys
     | `key_description` | Optional: An extended description of your key. \n \n **Important:** To protect your privacy, do not store your personal data as metadata for your key. |
     | `YYYY-MM-DD` \n \n `HH:MM:SS.SS` | Optional: The date and time that the key expires in the system, in RFC 3339 format. If the `expirationDate` attribute is omitted, the key does not expire. |
     | `key_type` | A boolean value that determines whether the key material can leave the service. \n \n When you set the `extractable` attribute to `false`, the service creates a root key that you can use for `wrap` or `unwrap` operations. |
-    {: caption="Table 2. Describes the variables needed to add a root key with the API" caption-side="bottom"}
+    {: caption="Describes the variables needed to add a root key with the API" caption-side="bottom"}
 
     To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-122.pdf){: external}.
     {: tip}
