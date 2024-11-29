@@ -28,17 +28,17 @@ To make changes to Hyper Protect Crypto Services source files, make sure to only
 
 To make changes to UKO for IBM z/OS or Containers source files, make sure to only touch the following subfolders:
 
-- `onprem`: This is the main folder that hosts the UKO for z/OS source files. You need most of the UKO for IBM z/OS source file changes here, but there are some exceptions for file names started with 'uko-'. 
+- `onprem` (will be renamed to `zos`): This is the main folder that hosts the UKO for z/OS source files. You need most of the UKO for IBM z/OS source file changes here, but there are some exceptions for file names started with 'uko-'. 
 - `containers`: This is the main folder that hosts the UKO for Containers files. 
 - `reuse-snippets`: This folder contains files shared between HPCS and UKO for z/OS and UKO for Containers. Some of the file names started with `uko-` in the `reuse-snippets` don't have actual content. These files should be updated in the `reuse-snippets` folder. For example, to update `uko-archive-template.md`, you need to go to the `reuse-snippets` folder, and update `uko-archive-template-reuse.md` instead.
 - `reuse-pages`: This is a placeholder for reused pages in future releases. For now, no files are included.
 
 Variables:
 - There is a central file for variable names called [cloudoekeyrefs.yml](https://github.ibm.com/cloud-doc-build/markdown/blob/master/cloudoekeyrefs.yml) that the cloud is using and that can be used. Here you find `uko_full_notm` which resolves to `Unified Key Orchestrator` for all platforms
-- In addition, the local [keyref.yaml](https://github.ibm.com/cloud-docs/hs-crypto/blob/source/keyref.yaml) file is used to resolve additional variables for `onprem` and `containers`. 
+- In addition, the local [keyref.yaml](https://github.ibm.com/cloud-docs/hs-crypto/blob/source/keyref.yaml) file is used to resolve additional variables for the `onprem` (`zos`) and `containers` folders. 
 - Finally, the reuse-snippets contain [phrases.json](https://github.ibm.com/cloud-docs/hs-crypto/blob/source/reuse-snippets/phrases.json) which for example is used to resolve `uko_full` in the following way
   - `Unified Key Orchestrator`
-  - ``
+  - `<zos>Unified Key Orchestrator for IBM&reg; z/OS&reg;</zos>`
   - ``
   
 ## Publishing
@@ -70,7 +70,9 @@ Locations:
 * `containers-publish` location builds only the containers directory and all others are removed. Pushes to https://github.ibm.com/cccc/ekmf-web-docs/tree/release/containers
 
 Feature flags:
-* There is now a feature flag called `containers` in addition to `onprem` and `oncloud` that can be used in the reuse-snippets
+* There is now a feature flag called `containers` that can be used in the reuse-snippets to build to UKO for Containers only.
+* The `onprem` feature flag will build to both, UKO for z/OS and UKO for Containers.
+* The `zos` feature flag will build to UKO for z/OS exclusively
 
 ## Tagging 
 
