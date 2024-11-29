@@ -31,6 +31,7 @@ To make changes to UKO for IBM z/OS source files, make sure to only touch the fo
 - `onprem`: This is the main folder that hosts the UKO for z/OS source files. You need most of the UKO for IBM z/OS source file changes here, but there are some exceptions for file names started with 'uko-'. 
 - `reuse-snippets`: This folder contains files shared between HPCS and UKO for IBM z/OS. Some of the file names started with `uko-` in the `reuse-snippets` don't have actual content. These files should be updated in the `reuse-snippets` folder. For example, to update `uko-archive-template.md`, you need to go to the `reuse-snippets` folder, and update `uko-archive-template-reuse.md` instead.
 - `reuse-pages`: This is a placeholder for reused pages in future releases. For now, no files are included.
+- There is a central file for variable names called [cloudoekeyrefs.yml](https://github.ibm.com/cloud-doc-build/markdown/blob/master/cloudoekeyrefs.yml) that the cloud is using and that can be used. In addition, the local [keyref.yaml](https://github.ibm.com/cloud-docs/hs-crypto/blob/source/keyref.yaml) file is used to resolve additional variables. 
   
 ## Publishing
 
@@ -49,6 +50,19 @@ Changes you have made in the `source` branch will be built to the `release/3.1.0
 After you have reviewed the contents on the staging site, you can push the documentation to the production site through the [WFM](https://wfm.dcs.ibm.com/product/SSUAEQ_3.1/88ae68df00eba23ef8b7dd9b5a17fb62) by clicking the **Run**. 
 
 Note that you also need to build the [installation PDF](https://wfm.dcs.ibm.com/product/SSUAEQ_3.1/583e92737381a7a4e447a6712e090912) and the [User PDF](https://wfm.dcs.ibm.com/product/SSUAEQ_3.1/a4680178e2637467760d7b2266669bfe).
+
+### UKO for Containers
+
+Changes you have made in the `source` branch will be built to the `release/containers` and `release/containers-copy` branch automatically. 
+The [release/containers repo](https://github.ibm.com/cccc/ekmf-web-docs/tree/release/containers) is picked up by the [WFM SSTPB5_3.1 pipeline](https://wfm.dcs.ibm.com/product/SSTPB5_3.1) from where you can build to staging and production. 
+In the future, we will setup a staging pipeline for the [release/containers-copy repo](https://github.ibm.com/cccc/ekmf-web-docs/tree/release/containers-copy).
+
+Locations:
+* `containers-draft` location builds only the containers directory and all others are removed. Pushes to https://github.ibm.com/cccc/ekmf-web-docs/tree/release/containers-copy
+* `containers-publish` location builds only the containers directory and all others are removed. Pushes to https://github.ibm.com/cccc/ekmf-web-docs/tree/release/containers
+
+Feature flags:
+* There is now a feature flag called `containers` in addition to `onprem` and `oncloud` that can be used in the reuse-snippets
 
 ## Tagging 
 
