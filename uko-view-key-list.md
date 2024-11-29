@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-29"
 
 keywords: Unified Key Orchestrator, view managed keys, key management, kms keys, UKO
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Viewing a list of managed keys
 {: #view-key-list}
 
-You can view a list of your managed keys in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can view a list of your managed keys in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}}.
 {: shortdesc}
 
 

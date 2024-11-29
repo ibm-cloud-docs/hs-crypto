@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-29"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Editing managed key details
 {: #edit-kms-keys}
 
-You can edit your managed keys in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can edit your managed keys in {{site.data.keyword.uko_full_notm}} with the {{site.data.keyword.cloud}} UI, or programmatically with the {{site.data.keyword.uko_full_notm}}.
 {: shortdesc}
 
 

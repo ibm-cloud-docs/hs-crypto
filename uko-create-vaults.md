@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-11-29"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Creating vaults
 {: #create-vaults}
 
-You can use {{site.data.keyword.hscrypto}} to create a group of key templates, keys, and keystores for a target group of users that require the same {{site.data.keyword.iamshort}} (IAM) access permissions in a vault. You can create vaults in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can use {{site.data.keyword.hscrypto}} to create a group of key templates, keys, and keystores for a target group of users that require the same {{site.data.keyword.iamshort}} (IAM) access permissions in a vault. You can create vaults in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}}.
 {: shortdesc}
 
 As a _Vault Administrator_, you can bundle the key templates, keys, and keystores in your {{site.data.keyword.hscrypto}} instance into groups called _vault_. A vault is a collection of key templates, keys, internal keystores, and external keystores that require the same IAM access permissions. For example, if you have a group of team members who need a particular type of access to a specific group of key templates, keys, and keystores, you can create a vault and assign the appropriate IAM access policy to the target user group. The users that are assigned access to the vault can create and manage the resources that exist within the vault.
@@ -88,5 +88,3 @@ To create a vault through the API, follow these steps:
 - To find out how to delete a vault, check out [Deleting vaults](/docs/hs-crypto?topic=hs-crypto-delete-vaults).
   
 - To find out how to grant access to vaults, see [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults).
-
-

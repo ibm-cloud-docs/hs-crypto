@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-29"
 
 keywords: associate resource, key associated resource
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Viewing resources associated with managed keys
 {: #uko-view-associated-resource}
 
-You can view other {{site.data.keyword.cloud}} resources that are protected by managed keys with [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) by using the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can view other {{site.data.keyword.cloud}} resources that are protected by managed keys with [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) by using the UI, or programmatically with the {{site.data.keyword.uko_full_notm}}.
 {: shortdesc}
 
 

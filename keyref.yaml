@@ -1,12 +1,12 @@
 keyword:
+  uko_full: 
+    Unified Key Orchestrator
   uko_short_wp: 
-    UKO for z/OS
+    
   uko_workflow_url: 
     'https://github.com/cicsabel/zorow/blob/UKO-workflow-introduction'
   ekmf_short: 
     EKMF
-  uko_full: 
-    Unified Key Orchestrator
   uko_short: 
     UKO
   cc_short:

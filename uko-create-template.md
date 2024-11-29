@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-29"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -17,7 +17,7 @@ subcollection: hs-crypto
 # Creating key templates
 {: #create-template}
 
-A key template specifies the properties of the managed keys to be created, such as the naming convention, key algorithm, and key length. You can create a key template from scratch or make a copy from an existing key template. After you create the key template, you can then create a group of keys with the same key properties that are defined in the key template. You can use {{site.data.keyword.uko_full_notm}} to create key templates with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API. 
+A key template specifies the properties of the managed keys to be created, such as the naming convention, key algorithm, and key length. You can create a key template from scratch or make a copy from an existing key template. After you create the key template, you can then create a group of keys with the same key properties that are defined in the key template. You can use {{site.data.keyword.uko_full_notm}} to create key templates with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}}. 
 {: shortdesc}
 
 ## Creating key templates from scratch with the UI

@@ -38,7 +38,7 @@ Variables:
 - In addition, the local [keyref.yaml](https://github.ibm.com/cloud-docs/hs-crypto/blob/source/keyref.yaml) file is used to resolve additional variables for the `onprem` (`zos`) and `containers` folders. 
 - Finally, the reuse-snippets contain [phrases.json](https://github.ibm.com/cloud-docs/hs-crypto/blob/source/reuse-snippets/phrases.json) which for example is used to resolve `uko_full` in the following way
   - `Unified Key Orchestrator`
-  - `<zos>Unified Key Orchestrator for IBM&reg; z/OS&reg;</zos>`
+  - ``
   - ``
   
 ## Publishing

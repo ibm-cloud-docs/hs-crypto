@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-11-29"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystore, key management, access control
 
@@ -46,7 +46,7 @@ Access the UI to browse the keys that are stored in your service instance by fol
 
 4. In the **General properties** card, copy the vault ID by clicking the copy icon.
 
-You can also [use the {{site.data.keyword.uko_full_notm}} API](/apidocs/uko#get-vault){: external} to retrieve a list of your vaults, along with the metadata of the vaults.
+You can also [use the {{site.data.keyword.uko_full_notm}}](/apidocs/uko#get-vault){: external} to retrieve a list of your vaults, along with the metadata of the vaults.
 
 
 ## Step 2. Grant access to vaults from the UI

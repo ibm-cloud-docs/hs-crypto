@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-29"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator, UKO keys
 
@@ -79,7 +79,7 @@ The following table shows how {{site.data.keyword.uko_full_notm}} handles servic
 ## Monitoring for lifecycle changes
 {: #uko-monitor-lifecycle-changes}
 
-After you add a managed key to the service, use the {{site.data.keyword.cloud_notm}} UI or the {{site.data.keyword.uko_full_notm}} API to view your key's transition history and configuration.
+After you add a managed key to the service, use the {{site.data.keyword.cloud_notm}} UI or the {{site.data.keyword.uko_full_notm}} to view your key's transition history and configuration.
 
 For audit purposes, you can also monitor the activity trail for a managed key by integrating {{site.data.keyword.hscrypto}} with the [{{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started){: external}. After both services are provisioned and running, activity events are generated and automatically collected in an {{site.data.keyword.at_full_notm}} log when you perform actions on keys in {{site.data.keyword.hscrypto}}.
 
