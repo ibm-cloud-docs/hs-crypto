@@ -64,6 +64,9 @@ Dealing with multiple clouds means to deal with cryptographic keys in multiple k
 - One point of control for multiple keys in multiple clouds
 - Secure backup of all keys and easy restoration across multiple clouds
 
+**-Note-** {{site.data.keyword.uko_full_notm}} does not offer an option to export your data.
+
+
 For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service architecture](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation).
 
 Watch the following video to learn how to manage compliance of a Microsoft Office 365 environment using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}:
