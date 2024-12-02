@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-08"
+lastupdated: "2024-12-02"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -21,7 +21,7 @@ subcollection: hs-crypto
 # Overview - {{site.data.keyword.uko_full_notm}} Plan
 {: #uko-overview}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is a dedicated key management service and [Hardware Security Module (HSM)](#x6704988){: term} that provides you with the Keep Your Own Key capability for cloud data encryption. Built on FIPS 140-2 Level 4 certified hardware, {{site.data.keyword.hscrypto}} provides you with exclusive control of your encryption keys. With {{site.data.keyword.uko_full_notm}}, you can connect your service instance to keystores in IBM Cloud and third-party cloud providers, back up and manage keys using a unified system, and orchestrate keys across multiple clouds.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is a dedicated key management service and [Hardware Security Module (HSM)](#x6704988){: term} that provides you with the Keep Your Own Key capability for cloud data encryption. Built on FIPS 140-2 Level 4 certified hardware, {{site.data.keyword.hscrypto}} provides you with exclusive control of your encryption keys. With {{site.data.keyword.uko_full_notm}}, you can connect your service instance to keystores in IBM Cloud and third-party cloud providers, back up and manage keys by using a unified system, and orchestrate keys across multiple clouds.
 {: shortdesc}
 
 Watch the following video to learn how {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} provides you with exclusive encryption key control and unified key management in the cloud:
@@ -31,7 +31,7 @@ Watch the following video to learn how {{site.data.keyword.hscrypto}} with {{sit
 ## Why {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}?
 {: #uko-why_hpcs}
 
-Data and information security is crucial and essential for IT environments. As more data moves to the cloud, keeping data protected becomes a nontrivial challenge. Built on IBM LinuxONE technology, {{site.data.keyword.hscrypto}} helps ensure that only you have access to your keys and data. 
+Data and information security is crucial and essential for IT environments. As more data moves to the cloud, keeping data protected becomes a nontrivial challenge. Built on IBM LinuxONE technology, {{site.data.keyword.hscrypto}} helps ensure that only you have access to your keys and data.
 
 A single-tenant key management service that is provided by dedicated customer-controlled HSMs helps you easily create and manage your encryption keys. Alternatively, you can bring your own encryption keys to the cloud. The service uses the same key-provider API as {{site.data.keyword.keymanagementserviceshort}}, a multi-tenant key management service, to provide a consistent approach to adopting {{site.data.keyword.cloud_notm}} services.
 
@@ -61,7 +61,7 @@ Dealing with multiple clouds means to deal with cryptographic keys in multiple k
 {{site.data.keyword.uko_full_notm}} alleviates the complexity of maintaining encryption across hybrid environments. You can integrate all your key management use cases into one consistent approach, backed by a trusted IBM zSystems HSM. It provides you with the following features:
 - Consistent user experience
 - Seamless integration into the existing cloud framework
-- One point of control for multiple keys in multiple clouds 
+- One point of control for multiple keys in multiple clouds
 - Secure backup of all keys and easy restoration across multiple clouds
 
 For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service architecture](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation).
@@ -99,8 +99,8 @@ For more information about {{site.data.keyword.uko_full_notm}}, see [Introducing
 ### Key management service
 {: #uko-key-management}
 
- 
-In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} plan, currently you can manage key management service (KMS) root keys and standard keys only through the API. For more information about the KMS API, see the [KMS API reference](/apidocs/hs-crypto){: external}. 
+
+In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} plan, currently you can manage key management service (KMS) root keys and standard keys only through the API. For more information about the KMS API, see the [KMS API reference](/apidocs/hs-crypto){: external}.
 {: note}
 
 * **Key lifecycle management**
@@ -128,10 +128,10 @@ In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} p
 
     {{site.data.keyword.hscrypto}} supports the standard PKCS #11 API and the Enterprise PKCS #11 over gRPC (GREP11) API for cryptographic operations. The operations include generating keys, encrypting and decrypting data, signing data, and verifying signatures. The cryptographic functions are executed in HSMs and can be accessed through APIs to provide hardware-based protection for your applications.
 
-     
+    
     In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} plan, currently you can perform the cryptographic operations only through the APIs. For more information about the APIs, see the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and the [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
     {: note}
-     
+
 
 
 * **Security certification**
@@ -151,7 +151,3 @@ In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} p
 - For more information about the compliance certificates that {{site.data.keyword.hscrypto}} receives, see [Security and compliance](/docs/hs-crypto?topic=hs-crypto-security-and-compliance).
 - To find more about available {{site.data.keyword.cloud_notm}} services for integration, see [Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-integrate-services).
 - To find the differences between {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} and {{site.data.keyword.hscrypto}} Standard Plan , see [How is {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} different from the {{site.data.keyword.hscrypto}} Standard Plan?](/docs/hs-crypto?topic=hs-crypto-faq-uko&interface=ui#faq-uko-hpcs) 
-
-
-
-
