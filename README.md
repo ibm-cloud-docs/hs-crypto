@@ -28,7 +28,7 @@ To make changes to Hyper Protect Crypto Services source files, make sure to only
 
 To make changes to UKO for IBM z/OS or Containers source files, make sure to only touch the following subfolders:
 
-- `onprem` (will be renamed to `zos`): This is the main folder that hosts the UKO for z/OS source files. You need most of the UKO for IBM z/OS source file changes here, but there are some exceptions for file names started with 'uko-'. 
+- `zos`: This is the main folder that hosts the UKO for z/OS source files. You need most of the UKO for IBM z/OS source file changes here, but there are some exceptions for file names started with 'uko-'. 
 - `containers`: This is the main folder that hosts the UKO for Containers files. 
 - `reuse-snippets`: This folder contains files shared between HPCS and UKO for z/OS and UKO for Containers. Some of the file names started with `uko-` in the `reuse-snippets` don't have actual content. These files should be updated in the `reuse-snippets` folder. For example, to update `uko-archive-template.md`, you need to go to the `reuse-snippets` folder, and update `uko-archive-template-reuse.md` instead.
 - `reuse-pages`: This is a placeholder for reused pages in future releases. For now, no files are included.
