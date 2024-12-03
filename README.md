@@ -69,16 +69,17 @@ Locations:
 * `containers-draft` location builds only the containers directory and all others are removed. Pushes to https://github.ibm.com/cccc/ekmf-web-docs/tree/release/containers-copy
 * `containers-publish` location builds only the containers directory and all others are removed. Pushes to https://github.ibm.com/cccc/ekmf-web-docs/tree/release/containers
 
-Feature flags:
-* There is now a feature flag called `containers` that can be used in the reuse-snippets to build to UKO for Containers only.
-* The `onprem` feature flag will build to both, UKO for z/OS and UKO for Containers.
-* The `zos` feature flag will build to UKO for z/OS exclusively
-
 ## Tagging 
 
 If you are working on documentation for a new feature, make sure to tag your changes with a feature tag and include the tag in the `feature-flags.json` file. This will keep the `Next prod push` pull request clean if it is necessary to merge the `Next prod push` pull request before the documentation relating to the new feature is ready. 
   
 For more information about how tags can be used, see [HPCS documentation Travis build guideline](https://github.ibm.com/cloud-docs/hs-crypto/wiki/HPCS-documentation-Travis-build-guideline/).
+
+Platform related feature flags:
+* The `oncloud` will build to UKO in the cloud on HPCS only
+* The `onprem` feature flag will build to both, UKO for z/OS and UKO for Containers
+* The `containers` feature flag can be used in the reuse-snippets to build to UKO for Containers only
+* The `zos` feature flag will build to UKO for z/OS exclusively
 
 ## Repository contacts
 
