@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-02"
+lastupdated: "2024-12-10"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -64,7 +64,7 @@ Dealing with multiple clouds means to deal with cryptographic keys in multiple k
 - One point of control for multiple keys in multiple clouds
 - Secure backup of all keys and easy restoration across multiple clouds
 
-**-Note-** {{site.data.keyword.uko_full_notm}} does not offer an option to export your data.
+
 
 
 For an architectural diagram of {{site.data.keyword.hscrypto}}, see [Service architecture](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation).
