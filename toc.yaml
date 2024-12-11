@@ -74,7 +74,7 @@ toc:
               - uko-instance-initialization-overview.md
               - uko-instance-initialization-mode.md
           - topicgroup:
-              label: About Unified Key Orchestrator 
+              label: About Unified Key Orchestrator
               topics:
               - uko-introduction.md
               - uko-key-states.md
@@ -86,8 +86,8 @@ toc:
               - uko-introduce-grep11.md
           - topicgroup:
               label: About key rotation - Unified Key Orchestrator Plan
-              topics:   
-              - uko-introduce-master-key-rotation.md   
+              topics:
+              - uko-introduce-master-key-rotation.md
               - uko-introduce-key-rotation.md
       - manage-regulated-workloads.md
       - integrate-services.md
@@ -142,7 +142,7 @@ toc:
   - navgroup:
       id: howto
       topics:
-      - provision.md      
+      - provision.md
       - topicgroup:
           label: Initializing service instances
           topics:
@@ -171,12 +171,12 @@ toc:
           topics:
           - terraform.md
           - uko-terraform.md
-      - byohsm-deploy.md 
+      - byohsm-deploy.md
       - topicgroup:
           label: Managing keys, keystores, and KMIP adapters - Standard Plan
           topics:
           - topicgroup:
-              label: Managing instance policies - Standard Plan 
+              label: Managing instance policies - Standard Plan
               topics:
               - settings-network-policy.md
               - settings-dual-auth.md
@@ -223,11 +223,11 @@ toc:
               topics:
               - uko-create-vaults.md
               - uko-edit-vaults.md
-              - uko-delete-vaults.md 
+              - uko-delete-vaults.md
           - topicgroup:
-              label: Managing key templates - Unified Key Orchestrator Plan 
+              label: Managing key templates - Unified Key Orchestrator Plan
               topics:
-              - uko-create-template.md 
+              - uko-create-template.md
               - uko-view-template.md
               - uko-edit-template.md
               - uko-archive-template.md
@@ -241,7 +241,7 @@ toc:
               - uko-edit-kms-keys.md
               - uko-rotate-key.md
               - uko-sync-key.md
-              - uko-align-key.md 
+              - uko-align-key.md
               - uko-view-key-versions.md
               - uko-delete-managed-keys.md
           - topicgroup:
@@ -252,8 +252,8 @@ toc:
               - uko-edit-internal-keystores.md
               - uko-edit-external-keystore-connection.md
               - uko-delete-internal-keystores.md
-              - uko-disconnect-external-keystores.md   
-              - uko-connect-azure-key-vault-private.md       
+              - uko-disconnect-external-keystores.md 
+              - uko-connect-azure-key-vault-private.md 
       - topicgroup:
           label: Managing master keys
           topics:
@@ -341,6 +341,7 @@ toc:
       - initialization-security-considerations.md
       - shared-responsibilities.md
       - ha-dr.md
+      - data-portability.md 
       - open-source-licenses.md
       - resources.md
   - navgroup:
@@ -369,7 +370,7 @@ toc:
           - troubleshooting-ui-session-timeout.md
           - troubleshooting-rotate-root-keys.md
           - troubleshooting-list-keys-api.md
-          - troubleshooting-list-specific-keys.md   
+          - troubleshooting-list-specific-keys.md
       - topicgroup:
           label: Troubleshooting master key rotation
           topics:
