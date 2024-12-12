@@ -340,8 +340,8 @@ toc:
       - tke-paper.md
       - initialization-security-considerations.md
       - shared-responsibilities.md
+      - data-portability.md
       - ha-dr.md
-      - data-portability.md 
       - open-source-licenses.md
       - resources.md
   - navgroup:

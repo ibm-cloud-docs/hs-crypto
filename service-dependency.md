@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-10"
+lastupdated: "2024-12-12"
 
 keywords:
 
@@ -38,15 +38,15 @@ The following table provides the dependency listing of this service following a 
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
-|  [IBM Cloud Identity and Access Management](/docs/overview?topic=overview-service-dependencies)  | Availability, Change management, Instance control, Security compliance | No | Both |  Same region  |
-|  [IBM Cloud Classic DNS Servers](/docs/classic-external-dns?topic=classic-external-dns-service-dependencies)  | Availability, Change management, Instance control | No | Both |  Same data center  |
+| IBM Cloud Identity and Access Management | Availability, Change management, Instance control, Security compliance | No | Both |  Same region  |
+| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
 {: row-headers}
 {: caption="IBM Cloud Hyper Protect Crypto service dependency information - Critical dependencies" caption-side="top"}
 {: tab-title="Critical dependencies"}
 {: tab-group="service-dependency-data-for-hs-crypto"}
 {: class="comparison-tab-table"}
 {: #critical-deps}
-{: summary="Use the buttons for the dependency level to change the context of the table. This table has row and column headers. The row headers details about the dependency. The column headers identify the dependency. To understand the details about each dependency, navigate to the row to find the depedency that you need more information about interested in."}
+{: summary="Use the buttons for the dependency level to change the context of the table. This table has row and column headers. The row headers details about the dependency. The column headers identify the dependency. To understand the details about each dependency, navigate to the row to find the dependency that you need more information about interested in."}
 
 This table can be used to answer the following questions:
 
@@ -55,10 +55,7 @@ This table can be used to answer the following questions:
    Services that are regional are not impacted by a severe outage of a single availability zone because of the failover that is built in to default to another zone. For these occurrences, there might be a slight performance impact, if any, while the system fails over to the other location. This also applies to global services where the impact is lowered even more as it can fail over to other regions if necessary. This reduces the frequency at which these items might have the impact that is shown.
    {: note}
 
-- **What services does my service depend on?** The Dependencies column lists the services. These are the major service to service dependencies including major internal dependencies that might not be visible externally. If you select the dependency service, you are directed to more information about the dependencies of that service.
-
-   Additional information is available only for the catalog services. Internal services do not have links to more information.
-   {: note}
+- **What services does my service depend on?** The Dependencies column lists the services. These are the major service to service dependencies including major internal dependencies that might not be visible externally.
 
 - **What function does the dependency impact?** Functions include access management, availability, change management, configuration management, customer responsibility, disaster recovery, instance control, none, operations or security compliance. If the dependency goes offline, these functions might be impacted. Definitions for each available values are as follows:
 
@@ -69,19 +66,19 @@ This table can be used to answer the following questions:
    :   Availability of the service and service instances.
 
    change management
-   :   Deployment, upgrade, patch, etc. of the service and service instances.
+   :   Deployment, upgrade, patch, and so on of the service and service instances.
 
    configuration management
-   :   Deployment, upgrade, patch, etc. of the service and service instances.
+   :   Deployment, upgrade, patch, and so on of the service and service instances.
 
    customer responsibility
-   :   Functions provides by customers to support specific service and service instances function. E.g. Key Protect instances provided by customer to support service BYOK encryption.
+   :   Functions provides by customers to support specific service and service instances function. For example: Key Protect instances provided by customer to support service BYOK encryption.
 
    disaster recovery
    :   Backup, recovery, restart of the service and service instances in case of disruption.
 
    instance control
-   :   Creation, deletion, start, stop, etc. actions on lifecycle of the service instances.
+   :   Creation, deletion, start, stop actions on lifecycle of the service instances.
 
    none
    :   No function impacted.
@@ -92,7 +89,9 @@ This table can be used to answer the following questions:
    security compliance
    :   Vulnerability management and other security and compliance management of the service and service instances.
 
-- **Where do dependency services need to be deployed with regard to my service?** In the Location of dependency column you can view if the dependency is located in the same region or deployed to a specific data center. You can use this data with the data in the Control or data plane column for a quick reference to identify if your data leaves the region or not in a standard setup.
+- The **Customer provided** column will show if there is any dependency that has been provided by the customer to enable specific functionality. (for example: In order to properly configure and set up using BYOK into a service, the customer would provision a service like Keyprotect. But there may be other examples like this.) For details on how to enable the features and which services you need to provision, please see the documentation on the service.
+
+- **Where do dependency services need to be deployed regarding my service?** In the Location of dependency column you can view if the dependency is located in the same region or deployed to a specific data center. You can use this data with the data in the Control or data plane column for a quick reference to identify if your data leaves the region or not in a standard setup.
 
    To find where your service can be deployed, see [Service and infrastructure availability by location](/docs/overview?topic=overview-services_region).
 

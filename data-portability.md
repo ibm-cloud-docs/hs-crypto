@@ -16,7 +16,7 @@ subcollection: hs-crypto
 
 # Data portability for Hyper Protect Crypto Services
 {: #data-portability}
-{: #staging}
+{: #publish}
 
 Hyper Protect Crypto Services does not support data portability. You cannot export the digital artifacts that are needed to implement similar workload and data processing on different service providers or on-premises software.
 {: shortdesc}
