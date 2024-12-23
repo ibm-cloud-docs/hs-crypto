@@ -2,9 +2,9 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-12"
+lastupdated: "2024-12-23"
 
-keywords:data portability
+keywords: data portability
 
 subcollection: hs-crypto
 
