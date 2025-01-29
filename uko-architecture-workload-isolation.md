@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: hyper protect crypto services architecture, service architecture, architecture diagram, workload isolation, crypto units, secure service container, ssc, public isolation for hyper protect crypto services, compute isolation for hyper protect crypto services
 
@@ -26,7 +26,7 @@ Review the service architecture, workload isolation characteristics, and service
 
 The following architecture diagram shows how you interact with {{site.data.keyword.hscrypto}} components to protect your sensitive data and keys.
 
-![Service instance components](/images/hs-crypto-components-uko.svg "Service instance components"){: caption="Figure 1. Interaction with {{site.data.keyword.hscrypto}} components" caption-side="bottom"}
+![Service instance components](/images/hs-crypto-components-uko.svg "Service instance components"){: caption="Interaction with {{site.data.keyword.hscrypto}} components" caption-side="bottom"}
 
 The following list explains each component in detail.
 
@@ -72,7 +72,7 @@ For more information about the {{site.data.keyword.hscrypto}} components, see [C
 
 The following diagram illustrates how {{site.data.keyword.hscrypto}} workload of each tenant is isolated.
 
-![{{site.data.keyword.hscrypto}} workload isolation](/images/architecture-workload-isolation.svg "{{site.data.keyword.hscrypto}} workload isolation"){: caption="Figure 2. {{site.data.keyword.hscrypto}} workload isolation" caption-side="bottom"}
+![{{site.data.keyword.hscrypto}} workload isolation](/images/architecture-workload-isolation.svg "{{site.data.keyword.hscrypto}} workload isolation"){: caption="{{site.data.keyword.hscrypto}} workload isolation" caption-side="bottom"}
 
 ## Service dependencies
 {: #uko-service_dependencies}
@@ -85,4 +85,3 @@ The following diagram illustrates how {{site.data.keyword.hscrypto}} workload of
 - [{{site.data.keyword.la_full_notm}}](/docs/log-analysis?topic=log-analysis-getting-started)
 - [{{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started)
 - [{{site.data.keyword.mon_full_notm}}](/docs/monitoring?topic=monitoring-getting-started)
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: delete keys, purge, automatic purge, manual purge, delete, destroy
 
@@ -36,7 +36,7 @@ The following table lists the timeframes in which you can view, restore, and pur
 | 4 hours–30 days       | Destroyed         | Yes                       | Yes          | Yes                      |
 | 30–90 days              | Destroyed         | Yes                       | No           | Yes                      |
 | After 90 days           | Purged (not a key state technically)        | No                        | No           | Yes                      |
-{: caption="Table 1. Lists how users can interact with keys during certain time intervals after a key is deleted." caption-side="bottom"}
+{: caption="Lists how users can interact with keys during certain time intervals after a key is deleted." caption-side="bottom"}
 
 Because purged keys are inaccessible and no longer restorable, _Purged_ is not a key state technically. However, it can be useful to think of _Purged_ as being a state because nonexistence is part of the lifecycle of a key.
 {: note}
@@ -48,7 +48,7 @@ The following table lists the APIs that you can use to retrieve data that is rel
 | [Get a key](/docs/hs-crypto?topic=hs-crypto-retrieve-key)                       | Retrieve key details.                                     |
 | [Get key metadata](/docs/hs-crypto?topic=hs-crypto-view-key-details)     | Retrieve key metadata.                                    |
 | [Get registrations](/docs/hs-crypto?topic=hs-crypto-view-protected-resources) | Retrieve a list of registrations associated with the key. |
-{: caption="Table 2. Lists the API that users can use to view details about a key and the registrations." caption-side="bottom"}
+{: caption="Lists the API that users can use to view details about a key and the registrations." caption-side="bottom"}
 
 After a key is purged, you receive a 404 HTTP Not Found error when you call any API methods that use the key ID of a purged key. If you need to retain any data that is associated with a purged key, it is suggested to make the necessary API or CLI calls to retrieve and store that data in your own storage device.
 {: tip}

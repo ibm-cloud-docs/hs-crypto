@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-08-06"
+lastupdated: "2024-10-09"
 
 keywords: event, security, monitor event, audit event, activity tracker, activity tracker event
 
@@ -52,7 +52,7 @@ To see which action requests correlate to the following actions, check out the [
 | `hs-crypto.secrets.eventack`             | `hs-crypto.secrets-event.ack`               |
 | `hs-crypto.secrets.listkeyversions`      | `hs-crypto.secrets-key-versions.list`       |
 | `hs-crypto.secrets.readmetadata`         | `hs-crypto.secrets-metadata.read`           |
-{: caption="Table 1. Historical reference mapping of event names" caption-side="bottom"}
+{: caption="Historical reference mapping of event names" caption-side="bottom"}
 
 ## Supported events
 {: #at-supported-events}
@@ -87,7 +87,7 @@ The following table lists the key actions that generate an event:
 | `hs-crypto.secrets.setkeyfordeletion`   | Authorize deletion for a key with Dual Authorization policy.  |
 | `hs-crypto.secrets.unsetkeyfordeletion` | Cancel deletion for a key with Dual Authorization policy.     |
 | `hs-crypto.secrets.unwrap`              | Unwrap a key.                                                 |
-{: caption="Table 2. Lifecycle key actions" caption-side="bottom"}
+{: caption="Lifecycle key actions" caption-side="bottom"}
 
 ### Key Ring events
 {: #keyring-actions}
@@ -100,7 +100,7 @@ The following table lists the key ring actions that generate an event:
 | `hs-crypto.key-rings.delete`          | Delete a key ring.             |
 | `hs-crypto.key-rings.list`            | List key rings in an instance. |
 | `hs-crypto.key-rings.request`         | Invalid key ring request.      |
-{: caption="Table 3. Key ring actions" caption-side="bottom"}
+{: caption="Key ring actions" caption-side="bottom"}
 
 ### Policy events
 {: #policy-actions}
@@ -115,7 +115,7 @@ The following table lists the policy actions that generate an event:
 | `hs-crypto.instance-policies.write`   | Set instance policies.        |
 | `hs-crypto.policies.default`         | Invalid policy request event. |
 | `hs-crypto.instance-policies.request` | Invalid policy request event. |
-{: caption="Table 4. Policy actions" caption-side="bottom"}
+{: caption="Policy actions" caption-side="bottom"}
 
 ### Import token events
 {: #import-token-actions}
@@ -127,7 +127,7 @@ The following table lists the import token actions that generate an event:
 | `hs-crypto.import-token.create`  | Create an import token.             |
 | `hs-crypto.import-token.read`    | Retrieve an import token.           |
 | `hs-crypto.import-token.request` | Invalid import token request event. |
-{: caption="Table 5. Import token actions" caption-side="bottom"}
+{: caption="Import token actions" caption-side="bottom"}
 
 ### Registration events
 {: #registration-actions}
@@ -139,7 +139,7 @@ The following table lists the registration actions that generate an event:
 | --------------------------------------- | -------------------------------------------------------- |
 | `hs-crypto.registrations.list`          | List registrations for any key.                           |
 | `hs-crypto.registrations.default`       | Invalid registration request event.                       |
-{: caption="Table 6. Registration actions" caption-side="bottom"}
+{: caption="Registration actions" caption-side="bottom"}
 
 
 ### Trusted Key Entry events
@@ -158,7 +158,7 @@ The following table lists the Trusted Key Entry (TKE) actions that generate an e
 | `hs-crypto.tke-cryptounit-new-master-key-register.clear` | Clear the new master key register. |
 | `hs-crypto.tke-cryptounit-current-master-key-register.clear` | Clear the current master key register. |
 | `hs-crypto.tke-cryptounit.reset`   | Zeroize and reset the selected crypto units |
-{: caption="Table 7. Trusted Key Entry actions" caption-side="bottom"}
+{: caption="Trusted Key Entry actions" caption-side="bottom"}
 
 ### Certificate manager events
 {: #mtlscert-mgr-actions}
@@ -175,7 +175,7 @@ The following table lists the certificate manager actions that generate an event
 | `hs-crypto.mtlscert-cert.list` | List all certificates that are managed by the certificate administrator.  |
 | `hs-crypto.mtlscert-cert.read` | Get certificates by the certificate administrator.|
 | `hs-crypto.mtlscert-cert.delete` | Delete certificates by the certificate administrator. |
-{: caption="Table 8. Certificate manager actions" caption-side="bottom"}
+{: caption="Certificate manager actions" caption-side="bottom"}
 
 ### KMIP for VMware events
 {: #at-events-kmip}
@@ -194,7 +194,7 @@ The initiator ID is derived from the TLS (Transport Layer Security) certificate 
 | `hs-crypto.kmip-key.activate` | A KMIP key is activated. |
 | `hs-crypto.kmip-key.revoke` | A KMIP key is revoked. |
 | `hs-crypto.kmip-key.destroy` | A KMIP key is destroyed. |
-{: caption="Table 9. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
+{: caption="Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
 
 ### EP11 keystore events
 {: #ep11-keystore-events}
@@ -211,7 +211,7 @@ The following table lists the Enterprise PKCS #11 (EP11) keystore actions that g
 | `hs-crypto.keystore.listkeystoresbyids` |View EP11 keystores. |
 | `hs-crypto.keystore.storenewkey` | Store an EP11 key. |
 | `hs-crypto.keystore.updatekey` | Update an EP11 key. |
-{: caption="Table 10. EP11 keystore actions" caption-side="top"}
+{: caption="EP11 keystore actions" caption-side="top"}
 
 ### EP11 crypto events
 {: #ep11-crypto-events}
@@ -220,21 +220,7 @@ The following table lists the EP11 crypto actions that generate an event:
 | Action                                      | Description                               |
 |--------------------------------------------|------------------------------------------|
 | `hs-crypto.ep11.use` |	Cryptographic operation |
-{: caption="Table 11. EP11 crypto actions" caption-side="top"} 
-
-### KMIP management events
-{: #at-events-kmip-management}
-
-The following table lists the KMIP management actions that generate an event:
-
-| Action | Description |
-| - | - |
-| `hs-crypto.kmip-management.create` | Create a KMIP adapter or KMIP adapter client certificate. |
-| `hs-crypto.kmip-management.delete` | Delete a KMIP adapter, KMIP adapter client certificate, or KMIP object. |
-| `hs-crypto.kmip-management.list` | List KMIP adapters, KMIP adapter client certificates, or KMIP objects. |
-| `hs-crypto.kmip-management.read` | Get a KMIP adapter, KMIP adapter client certificate, or KMIP object. |
-| `hs-crypto.kmip-management.default` | Invalid KMIP managmenet API request. |
-{: caption="Table 12. KMIP management actions" caption-side="bottom"}
+{: caption="EP11 crypto actions" caption-side="top"}
 
 ## Viewing events
 {: #at-ui}
@@ -257,7 +243,7 @@ see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic
 | `jp-tok`                  | `jp-tok`                                        |
 | `us-east`                 | `us-east`                                       |
 | `us-south`                | `us-south`                                      |
-{: caption="Table 14. Activity Tracker regions" caption-side="bottom"}
+{: caption="Activity Tracker regions" caption-side="bottom"}
 
 ## Analyzing successful events
 {: #at-events-analyze}
@@ -277,7 +263,7 @@ Some common fields are available for {{site.data.keyword.hscrypto}} to use outsi
 | `requestData.requestURI` | The URI of the API request that was made. |
 | `requestData.instanceID` | The unique identifier of your {{site.data.keyword.hscrypto}} service instance. |
 | `correlationId` | The unique identifier of the API request that generated the event. Note: This field is not supported in TKE events. |
-{: caption="Table 13. Common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
+{: caption="Common fields in Activity Tracker events for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
 
 For more information about the event fields in the Cloud Auditing Data Federation (CADF) event model, see [Event Fields](/docs/activity-tracker?topic=activity-tracker-event){: external}.
 
@@ -490,7 +476,7 @@ The following table lists the returned values that indicate a successful TKE eve
 |`outcome` | `success`  |
 | `reason.reasonCode`  | `200`  |
 | `reason.reasonType`  |`OK`  |
-{: caption="Table 14. Returned values of a successful TKE event" caption-side="bottom"}
+{: caption="Returned values of a successful TKE event" caption-side="bottom"}
 
 The following common fields for TKE events include extra information:
 
@@ -558,7 +544,7 @@ The following table lists the returned values that indicate a successful certifi
 |`outcome` | `success`  |
 | `reason.reasonCode`  | `200`  |
 | `reason.reasonType`  |`OK`  |
-{: caption="Table 15. Returned values of a successful mTLS certificate manager event" caption-side="bottom"}
+{: caption="Returned values of a successful mTLS certificate manager event" caption-side="bottom"}
 
 The following common fields for certificate manager events include extra information:
 
@@ -648,7 +634,7 @@ The following table lists the returned values that indicate a successful EP11 ke
 | outcome | success |
 | reason.reasonCode	| 200 |
 | reason.reasonType	| OK |
-{: caption="Table 18. Returned values of a successful EP11 keystore event" caption-side="bottom"}
+{: caption="Returned values of a successful EP11 keystore event" caption-side="bottom"}
 
 The following common fields for EP11 keystore events include extra information:
 - The `target.name` field includes the IDs of the keystore or key.
@@ -663,7 +649,7 @@ The following table lists the returned values that indicate a successful EP11 cr
 | outcome | success |
 | reason.reasonCode	| 200 |
 | reason.reasonType	| OK |
-{: caption="Table 19. Returned values of a successful EP11 crypto event" caption-side="bottom"}
+{: caption="Returned values of a successful EP11 crypto event" caption-side="bottom"}
 
 ## Analyzing failed events
 {: #at-events-analyze-failed}
@@ -740,7 +726,7 @@ The following table lists the actions that are associated with each severity lev
 | `Critical` | `hs-crypto.secrets.delete` \n \n `hs-crypto.registrations.delete` \n \n `hs-crypto.tke-cryptounit-admin.add` \n \n `hs-crypto.tke-cryptounit-admin.remove` \n \n `hs-crypto.tke-cryptounit-current-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-new-master-key-register.clear` \n \n `hs-crypto.tke-cryptounit-master-key-register.add` \n \n `hs-crypto.tke-cryptounit-master-key-register.commit` \n \n `hs-crypto.tke-cryptounit-master-key-register.activate` \n \n `hs-crypto.tke-cryptounit-threshold.set` \n \n `hs-crypto.tke-cryptounit.reset` \n \n `hs-crypto.mtlscert-admin-key.create` \n \n `hs-crypto.mtlscert-admin-key.update` \n \n `hs-crypto.mtlscert-admin-key.delete` \n \n `hs-crypto.mtlscert-cert.set` \n \n `hs-crypto.mtlscert-cert.set` \n \n `hs-crypto.keystore.deletekey` \n \n `hs-crypto.keystore.deletekeystore` \n \n `hs-crypto.keystore.updatekey` |
 | `Warning` | `hs-crypto.secrets.rotate` \n \n `hs-crypto.secrets.restore` \n \n `hs-crypto.secrets.enable` \n \n `hs-crypto.secrets.disable` \n \n `hs-crypto.secrets.setkeyfordeletion` \n \n `hs-crypto.secrets.unsetkeyfordeletion` \n \n `hs-crypto.policies.write` \n \n `hs-crypto.hs-crypto.instance-policies.write` |
 | `Normal` | `hs-crypto.secrets.create`\n \n `hs-crypto.secrets.read` \n \n `hs-crypto.secrets-metadata.read`\n \n `hs-crypto.secrets.head` \n \n  `hs-crypto.secrets.list`\n \n`hs-crypto.secrets.wrap`  \n \n `hs-crypto.secrets.unwrap`\n \n `hs-crypto.secrets.rewrap`  \n \n  `hs-crypto.secrets-key-versions.list`\n \n `hs-crypto.secrets-event.ack`  \n \n `hs-crypto.policies.read`\n \n `hs-crypto.instance-policies.read`  \n  `hs-crypto.import-token.create`\n \n `hs-crypto.import-token.read`  \n \n  `hs-crypto.registrations.create`\n \n `hs-crypto.registrations.write`  \n \n `hs-crypto.registrations.merge`\n \n `hs-crypto.registrations.list`  \n \n  `hs-crypto.secrets.ack-delete`\n \n `hs-crypto.secrets.ack-restore`  \n \n  `hs-crypto.secrets.ack-rotate`\n \n `hs-crypto.secrets.ack-enable`  \n \n  `hs-crypto.secrets.ack-disable` \n \n `hs-crypto.mtlscert-cert.read` \n \n `hs-crypto.mtlscert-cert.list` \n \n `hs-crypto.mtlscert-admin-key.read` \n \n `hs-crypto.keystore.createkeystore` \n \n `hs-crypto.keystore.listkeysbyattributes` \n \n `hs-crypto.keystore.listkeysbyids` \n \n `hs-crypto.keystore.listkeystoresbyattributes` \n \n `hs-crypto.keystore.listkeystoresbyids` \n \n `hs-crypto.keystore.storenewkey` \n \n `hs-crypto.ep11.use`|
-{: caption="Table 20. Severity level for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
+{: caption="Severity level for {{site.data.keyword.hscrypto}} service actions" caption-side="bottom"}
 
 
 The following table lists the status codes that are associated with each severity level:

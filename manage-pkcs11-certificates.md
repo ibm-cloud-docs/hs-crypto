@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: pkcs11 certificate, view ep11 certificate, delete ep11 certificate
 
@@ -70,7 +70,7 @@ To customize how the table is to be presented, click the **Settings icon** ![Set
 | Label | The description of the certificate. |
 | Version | The version number of the certificate. |
 | Keystore | The keystore ID where the certificate is stored. |
-{: caption="Table 1. The properties displayed in the EP11 certificates table" caption-side="bottom"}
+{: caption="The properties displayed in the EP11 certificates table" caption-side="bottom"}
 
 ### Viewing EP11 certificate details
 {: #view-ep11-certificate-details-ui}
@@ -99,7 +99,7 @@ To view more details about each certificate, complete the following steps:
     | CKA_SUBJECT | DER-encoding or WTLS-encoding of the certificate subject depending on the certificate type. By default, the value is empty.  |
     | CKA_ID | Key identifier for public and private key pair. By default, the value is empty. |
     | CKA_LABEL | Description of the certificate. By default, the value is empty. |
-    {: caption="Table 2. The attributes for each certificate" caption-side="bottom"}
+    {: caption="The attributes for each certificate" caption-side="bottom"}
 
 ## Downloading EP11 certificates
 {: #download-ep11-certificate-ui}
@@ -152,5 +152,3 @@ After you delete a certificate, you are not able to access any resources that ar
 {: #manage-ep11-certificate-ui-next}
 
 To learn more about the PKCS #11 API, see [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref).
-
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: managed key versions, get key versions, list key versions
 
@@ -71,7 +71,7 @@ To view managed key versions through the API, follow these steps:
     | `port` | **Required.** The port number of the API endpoint. |
     | `id` | **Required.** The unique identifier for the managed key that you want to rotate. |
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} IAM access token that you retrieve in step 1. Include the full contents of the `IAM` token, including the Bearer value. |
-    {: caption="Table 1. Variables needed to view managed key versions" caption-side="bottom"}
+    {: caption="Variables needed to view managed key versions" caption-side="bottom"}
 
 For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#list-managed-key-versions){: external}.
 

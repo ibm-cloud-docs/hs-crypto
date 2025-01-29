@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: pkcs11 ui access, pkcs 11 account authentication
 
@@ -44,7 +44,7 @@ To create a custom role, complete the following steps:
     | View EP11 keys. | * `hs-crypto.keystore.listkeystoresbyids` \n * `hs-crypto.keystore.listkeysbyids` |
     | Create EP11 keys. | * `hs-crypto.keystore.listkeystoresbyids` \n * `hs-crypto.keystore.listkeysbyids` \n * `hs-crypto.crypto.generatekey` \n * `hs-crypto.crypto.generatekeypair` \n * `hs-crypto.keystore.storenewkey` |
     | View EP11 keys. | * `hs-crypto.keystore.listkeystoresbyids` \n * `hs-crypto.keystore.listkeysbyids` \n * `hs-crypto.keystore.deletekey` |
-    {: caption="Table 1. Actions corresponding to the EP11 keystore or key operations with the UI" caption-side="bottom"}
+    {: caption="Actions corresponding to the EP11 keystore or key operations with the UI" caption-side="bottom"}
 
 8. Click **Create** after you select the appropriate actions for your custom role.
 

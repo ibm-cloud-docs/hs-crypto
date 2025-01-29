@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -106,7 +106,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/key_rings
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
-    {: caption="Table 1. Describes the variables needed to create a key ring with the key management service API" caption-side="bottom"}
+    {: caption="Describes the variables needed to create a key ring with the key management service API" caption-side="bottom"}
 
     A successful `POST api/v2/key_rings` request returns an HTTP `201 Created` response, which indicates that the key ring is created and is now available for holding standard and root keys.
 
@@ -178,7 +178,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
     | `original_key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: If you create a key without an `x-kms-key-ring` header, the key ring for the key is: `default`. |
     | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
     | `new_key_ring_ID` | **Required.** The unique identifier for the target key ring that you want to move the key to. |
-    {: caption="Table 2. Describes the variables needed to update a key's key ring with the key management service API" caption-side="bottom"}
+    {: caption="Describes the variables needed to update a key's key ring with the key management service API" caption-side="bottom"}
 
     A successful `PATCH api/v2/keys/key_ID` request returns the key's metadata, including the ID of the key ring that the key now belongs to.
 
@@ -278,7 +278,7 @@ The key rings table contains the following information:
 | Key ring ID   | The unique identifier that you specify when you create the key ring. |
 | Last updated  | The date and time that the key ring was last updated. This field gets updated when the keyring is created or modified.  |
 | Created   | The date and time that the key ring was created. |
-{: caption="Table 3. Describes the columns for the key ring table" caption-side="bottom"}
+{: caption="Describes the columns for the key ring table" caption-side="bottom"}
 
 ### Listing key rings with the API
 {: #list-key-ring-api}
@@ -313,7 +313,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/key_rings
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
-    {: caption="Table 4. Describes the variables needed to view key rings with the key management service API" caption-side="bottom"}
+    {: caption="Describes the variables needed to view key rings with the key management service API" caption-side="bottom"}
 
     A successful `GET api/v2/key_rings` request returns a collection of key rings that are available in your {{site.data.keyword.hscrypto}} service instance.
 
@@ -393,6 +393,6 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/key_rings/<k
     | `key_ring_id` | **Required.** The unique identifier for the key ring that you would like to delete. |
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    {: caption="Table 5. Describes the variables needed to delete keys with the key management service API" caption-side="bottom"}
+    {: caption="Describes the variables needed to delete keys with the key management service API" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which indicates that the key ring is successfully deleted.

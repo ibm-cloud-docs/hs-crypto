@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -56,7 +56,7 @@ On the {{site.data.keyword.hscrypto}} dashboard, do the following to view EP11 k
     | Version | The version number of the key. When the key is first created, version 0 is assigned. The version number is increased by 1 sequentially upon each update, such as using the `C_SetAttributeValue` function to update a key attribute value. |
     | Keystore | The unique identifier of the keystore the key is stored in. |
     | Type | The type of the EP11 key that is managed in {{site.data.keyword.hscrypto}}. |
-    {: caption="Table 1. Describes the EP11 keys table" caption-side="bottom"}
+    {: caption="Describes the EP11 keys table" caption-side="bottom"}
 
 2. To view details of the [key attributes](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list), click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") of the key row, and then select **Show more details**.
 
@@ -90,7 +90,7 @@ Complete the following steps to create an EP11 key:
         | Key name | A human-readable alias for easy identification of your key. The key name length can be 1-32 characters. To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location. The key name might not be unique. You can assign multiple keys with the same name. However, it is suggested to assign a unique name to each key in the same keystore for easy identification. |
         | Key type | The type of the EP11 key that you want to manage in {{site.data.keyword.hscrypto}}. |
         | Keystore | The unique identifier of the keystore with the keystore type appended. Choose one that you want the key to be stored in from the list. For an asymmetric key pair, you need to specify the keystore separately to store the public key and the private key. You can find all available keystores by clicking the **EP11 keystores** tab in the side menu. |
-        {: caption="Table 2. Describes the Identifier page" caption-side="bottom"}
+        {: caption="Describes the Identifier page" caption-side="bottom"}
 
         By default, two key IDs are automatically generated. One is for the public key, and the other is for the private key. However, if you select a symmetric key type, such as an AES key, a DES key, or a Generic key, only one key ID is shown on the page.
 

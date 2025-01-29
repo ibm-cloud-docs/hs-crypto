@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: pkcs11 keystore, ep11 keystore, create pkcs11 keystore, generate pkcs11 keystore, view ep11 keystore, delete ep11 keystore, view pkcs11 keystore
 
@@ -54,7 +54,7 @@ An EP11 keystore table is displayed with the following details.
 | ID  | The unique identifier that is assigned when the keystore is created. |
 | Name | A human-readable alias for easy identification of your keystore. The keystore name might not be unique. You can assign multiple keystores with the same name. If there is no name associated with the keystore, it means the keystore is created using the PKCS #11 API. |
 | Type | The type of the keystore. Possible values are **Public** and **Private**. The database-backed EP11 keystores are composed of two types of keystores: public keystores for storing less sensitive EP11 keys that can be accessed by any user types (security officers, normal users, and anonymous users) and private keystores for storing sensitive EP11 keys that can be accessed by normal users only. For more information about keystores, see [Introducing keystore](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-keystore-intro). |
-{: caption="Table 1. Describes the EP11 keystores table" caption-side="bottom"}
+{: caption="Describes the EP11 keystores table" caption-side="bottom"}
 
 ## Creating EP11 keystores
 {: #create-ep11-keystore-ui}

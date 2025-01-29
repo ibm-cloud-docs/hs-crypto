@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-11-29"
 
 keywords: Unified Key Orchestrator, edit key templates, key management, kms keys, UKO
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Editing key template details
 {: #edit-template}
 
-You can edit your key templates in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can edit your key templates in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}}.
 {: shortdesc}
 
 ## Editing key templates with the UI
@@ -45,7 +45,7 @@ To edit the details of a key template by using the UI, complete the following st
     | Initial key state        | States of keys that are to be created with the key template, including Pre-active and Active. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}.  |
     | Activate keys after  | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only.|
     | Deactivate keys after| (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
-    {: caption="Table 1. Key template properties" caption-side="bottom"} 
+    {: caption="Key template properties" caption-side="bottom"} 
     
     1. In the **Keystores** card, click **Edit** to add or remove the keystores where keys are to be activated. All the displayed keystores belong to the same vault and the same keystore type:
 
@@ -152,5 +152,3 @@ To edit keystores for existing key templates through the API, complete the follo
 - To find out more about realigning keys with the key templates, check out [Realigning keys with key templates](/docs/hs-crypto?topic=hs-crypto-align-key&interface=ui).
 
 - To continue to create keys with the key template created, follow the instruction in [Creating managed keys with a key template](/docs/hs-crypto?topic=hs-crypto-create-managed-keys&interface=ui#create-managed-keys-template-ui).
-
-

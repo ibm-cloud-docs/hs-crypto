@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: failover crypto unit, add failover crypto units, enable failover, enable cross-region recovery
 
@@ -215,7 +215,7 @@ After you add the failover crypto units, you need to let IBM Support know about 
     | Subject | Enter **Enable failover crypto units**. |
     | Description | Enter your [service instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID), the region that your service instance resides in, and the number of failover crypto units that you add. |
     | Selected resources | Select your {{site.data.keyword.hscrypto}} service instance. |
-    {: caption="Table 1. Describes the fields that are required to enable failover crypto units" caption-side="bottom"}
+    {: caption="Describes the fields that are required to enable failover crypto units" caption-side="bottom"}
 
 3. Check the **Email me updates about this issue** box, and click **Continue to review > Create case**.
 

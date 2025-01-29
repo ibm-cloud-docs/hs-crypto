@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-06-05"
+lastupdated: "2024-10-09"
 
 keywords: encryption at rest, envelope encryption, root key, data encryption key, key encryption key, key protect, protect data encryption key, encrypt data encryption key, wrap data encryption key, unwrap data encryption key
 
@@ -29,7 +29,7 @@ With envelope encryption, {{site.data.keyword.hscrypto}} protects your at-rest d
 | Confidentiality and integrity protection | {{site.data.keyword.hscrypto}} uses the Advanced Encryption Standard (AES) algorithm in Cipher Blocker Chaining (CBC) mode to create and protect keys. When you create keys in the service, {{site.data.keyword.hscrypto}} generates them in the {{site.data.keyword.hscrypto}} instance and the master key encrypts the keys to ensure only you have the access. |
 | Cryptographic shredding of data | If your organization detects a security issue, or your application no longer needs a set of data, you can choose to shred the data permanently from the cloud. When you delete a root key that protects other DEKs, you ensure that the keys' associated data can no longer be accessed or decrypted. |
 | Delegated user access control | By assigning {{site.data.keyword.iamshort}} (IAM) roles, {{site.data.keyword.hscrypto}} supports a centralized access control system to enable granular access for your keys. For more information, see [Granting access to keys](/docs/hs-crypto?topic=hs-crypto-grant-access-keys). |
-{: caption="Table 1. Describes the benefits of customer-managed encryption" caption-side="bottom"}
+{: caption="Describes the benefits of customer-managed encryption" caption-side="bottom"}
 
 ## Keys in envelope encryption
 {: #key-types}
@@ -56,7 +56,7 @@ Root keys that are managed in a {{site.data.keyword.hscrypto}} service instance 
 
 The following diagram shows a contextual view of envelope encryption.
 
-![The diagram shows a contextual view of envelope encryption.](/images/envelope-encryption.svg "The diagram shows a contextual view of envelope encryption."){: caption="Figure 1. Contextual view of envelope encryption" caption-side="bottom"}
+![The diagram shows a contextual view of envelope encryption.](/images/envelope-encryption.svg "The diagram shows a contextual view of envelope encryption."){: caption="Contextual view of envelope encryption" caption-side="bottom"}
 
 Envelope encryption is treated briefly in the NIST Special Publication 800-57, Recommendation for Key Management. To learn more, see [NIST SP 800-57 Pt. 1 Rev. 4](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0){: external}
 
@@ -70,7 +70,7 @@ The key wrap operation provides both confidentiality and integrity protection fo
 
 The following diagram shows the key wrapping process in action.
 
-![Wrapping data](/images/wrapping-keys.svg "The diagram shows key wrapping in action."){: caption="Figure 2. Wrapping data" caption-side="bottom"}
+![Wrapping data](/images/wrapping-keys.svg "The diagram shows key wrapping in action."){: caption="Wrapping data" caption-side="bottom"}
 
 ## Unwrapping keys
 {: #unwrapping}
@@ -82,7 +82,7 @@ unwrap request to the service. To unwrap a DEK, you specify the ID value of the 
 
 The following diagram shows key unwrapping in action.
 
-![Unwrapping data](/images/unwrapping-keys.svg "The diagram shows key unwrapping in action."){: caption="Figure 3. Unwrapping data" caption-side="bottom"}
+![Unwrapping data](/images/unwrapping-keys.svg "The diagram shows key unwrapping in action."){: caption="Unwrapping data" caption-side="bottom"}
 
 After you send the unwrap request, the system reverses the key wrapping process by using the same AES algorithms. A successful unwrap operation returns the base64 encoded `plaintext` value to your {{site.data.keyword.cloud_notm}} data at rest service.
 

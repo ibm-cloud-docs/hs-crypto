@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-11-29"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Connecting to external keystores
 {: #connect-external-keystores}
 
-You can use {{site.data.keyword.uko_full_notm}} to connect to external keystores with the {{site.data.keyword.uko_full_notm}} UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can use {{site.data.keyword.uko_full_notm}} to connect to external keystores with the {{site.data.keyword.uko_full_notm}} UI, or programmatically with the {{site.data.keyword.uko_full_notm}}.
 {: shortdesc}
 
 Before you connect to an external keystore, keep in mind the following considerations:
@@ -132,7 +132,7 @@ To connect to an external keystore by using the UI, complete the following steps
     | Access key ID on AWS        | All requests to AWS KMS must be signed by using an access key ID and a secret access key. For more information, see [Understanding and getting your AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html).    |
     | Secret access key on AWS    | All requests to AWS KMS must be signed by using an access key ID and a secret access key. The secret access key is available for download only when you create it.     |
     {: #table-1}
-    {: caption="Table 1. AWS Key Management Service properties" caption-side="bottom"}
+    {: caption="AWS Key Management Service properties" caption-side="bottom"}
     {: tab-title="AWS keystore"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
@@ -148,7 +148,7 @@ To connect to an external keystore by using the UI, complete the following steps
     | Tenant ID on Azure          |  A tenant is the organization that owns and manages a specific instance of Microsoft cloud services. Use Microsoft Entra ID for authenticating requests to the Key Vault.     |
     | Subscription ID on Azure    |  A GUID that uniquely identifies your subscription to use Azure services.    |
     {: #table-2}
-    {: caption="Table 2. Azure Key Vault properties" caption-side="bottom"}
+    {: caption="Azure Key Vault properties" caption-side="bottom"}
     {: tab-title="Azure Key Vault"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
@@ -164,7 +164,7 @@ To connect to an external keystore by using the UI, complete the following steps
     | Key ring on Google Cloud | A human-readable name of the key ring that organizes your keys. The name must be unique within a location. For more information about key rings, see [Key rings](https://cloud.google.com/kms/docs/resource-hierarchy#key_rings){: external}.  |
     | Private key ID on Google Cloud | Read only. The ID of the public/private RSA key pair in Google. It is used for establishing a secure connection to Google Cloud Platform. It is automatically extracted from the JSON key file that you upload. |
     {: #table-3}
-    {: caption="Table 3. Google Cloud KMS keystore properties" caption-side="bottom"}
+    {: caption="Google Cloud KMS keystore properties" caption-side="bottom"}
     {: tab-title="Google Cloud KMS keystore"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
@@ -179,7 +179,7 @@ To connect to an external keystore by using the UI, complete the following steps
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
     | Service ID API key          | A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys). |
     {: #table-4}
-    {: caption="Table 4. {{site.data.keyword.keymanagementserviceshort}} keystore properties" caption-side="bottom"}
+    {: caption="{{site.data.keyword.keymanagementserviceshort}} keystore properties" caption-side="bottom"}
     {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keystore"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
@@ -195,7 +195,7 @@ To connect to an external keystore by using the UI, complete the following steps
     | {{site.data.keyword.cloud_notm}} Identity and Access Management endpoint  |  The endpoint of IAM, which is `https://iam.cloud.ibm.com`.  |
     | Service ID API key          |  A unique code that is passed to an API to identify the calling application. For more information, see [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys). |
     {: #table-5}
-    {: caption="Table 5. {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} KMS keystore properties" caption-side="bottom"}
+    {: caption="{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} KMS keystore properties" caption-side="bottom"}
     {: tab-title="KMS keystore in another instance"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"} 
@@ -257,8 +257,3 @@ If you connect to an external keystore of type Azure Key Vault, a key named `EKM
 
 - To find out how to disconnect from an external keystore, check out [Disconnecting from external keystores](/docs/hs-crypto?topic=hs-crypto-disconnect-external-keystores).
   
-
-
-
-
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-02"
+lastupdated: "2024-11-29"
 
 keywords: Unified Key Orchestrator, align template, key template
 
@@ -18,11 +18,11 @@ subcollection: hs-crypto
 # Realigning managed keys with key templates
 {: #align-key}
 
-After you create a managed key with a key template, you can still update the key template on general properties, key lifecycles, and assigned keystores. If it happens, an `Unaligned` flag can be displayed on the key details card for keys that are created with the key template. You can then manually realign your key with the key template with the {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API. You can either realign active or deactivated keys with the key template.  
+After you create a managed key with a key template, you can still update the key template on general properties, key lifecycles, and assigned keystores. If it happens, an `Unaligned` flag can be displayed on the key details card for keys that are created with the key template. You can then manually realign your key with the key template with the {{site.data.keyword.uko_full_notm}} UI, or programmatically with the {{site.data.keyword.uko_full_notm}}. You can either realign active or deactivated keys with the key template.  
 {: shortdesc}
 
   
-Currently, with the {{site.data.keyword.uko_full_notm}} with the UI, you can only realign assigned keystores with the key template. To realign general properties and key lifecycles, use the {{site.data.keyword.uko_full_notm}} API.  
+Currently, with the {{site.data.keyword.uko_full_notm}} UI, you can only realign assigned keystores with the key template. To realign general properties and key lifecycles, use the {{site.data.keyword.uko_full_notm}}.  
 {: note}
 
 
@@ -76,7 +76,3 @@ To realign keys with key templates through the API, complete the following steps
 - To find out instructions on editing a key template, check out [Editing key template details](/docs/hs-crypto?topic=hs-crypto-edit-template&interface=ui).
 
 - To find out more about managing your key template, check out [Viewing a list of key templates](/docs/hs-crypto?topic=hs-crypto-view-key-template&interface=ui).
-
-
-
-

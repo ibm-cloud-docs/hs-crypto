@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-20"
+lastupdated: "2024-10-09"
 
 keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases
 
@@ -38,7 +38,7 @@ Keys are protected by customer-managed dedicated HSMs, which means, only you hav
 
 Refer to [Apply end to end security to a cloud application](/docs/solution-tutorials?topic=solution-tutorials-cloud-e2e-security) for a tutorial on how to encrypt cloud applications by using the key management service API of {{site.data.keyword.hscrypto}}.
 
-![data at rest encryption with KYOK](/images/byok.svg "Data at rest encryption with KYOK"){: caption="Figure 1. Data at rest encryption with KYOK" caption-side="bottom"}
+![data at rest encryption with KYOK](/images/byok.svg "Data at rest encryption with KYOK"){: caption="Data at rest encryption with KYOK" caption-side="bottom"}
 
 ###  VMware image protection with KYOK
 {: #uko-vmware-encryption-kyok}
@@ -49,7 +49,7 @@ As a single-tenant service, {{site.data.keyword.hscrypto}} offers dedicated cont
 
 Check out the [overview video on {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} and VMware on {{site.data.keyword.cloud_notm}} solutions](https://mediacenter.ibm.com/id/0_4wm4bq4s){: external} for more information. For a step-to-step tutorial, see [Configuring KMIP in {{site.data.keyword.hscrypto}} for key management and distribution](/docs/hs-crypto?topic=hs-crypto-tutorial-kmip-vmware) and the [demo video](https://mediacenter.ibm.com/media/1_e5gk6ktn){: external}.
 
-![VMware image protection and vSAN encryption with KYOK](/images/byok-vm.svg "VMware image protection with KYOK"){: caption="Figure 2. VMware image protection with KYOK" caption-side="bottom"}
+![VMware image protection and vSAN encryption with KYOK](/images/byok-vm.svg "VMware image protection with KYOK"){: caption="VMware image protection with KYOK" caption-side="bottom"}
 
 
 ## Using {{site.data.keyword.uko_full_notm}} for multicloud key orchestration
@@ -57,7 +57,7 @@ Check out the [overview video on {{site.data.keyword.cloud_notm}} {{site.data.ke
 
 You can use {{site.data.keyword.uko_full_notm}} to securely create and manage your keys and internal keystores across multiple clouds. 
 
-![Connecting to {{site.data.keyword.uko_full_notm}}](/images/unified-key-orchestrator-v2.svg "External keystores connecting to {{site.data.keyword.uko_full_notm}}"){: caption="Figure 3. Connecting to {{site.data.keyword.uko_full_notm}}" caption-side="bottom"}
+![Connecting to {{site.data.keyword.uko_full_notm}}](/images/unified-key-orchestrator-v2.svg "External keystores connecting to {{site.data.keyword.uko_full_notm}}"){: caption="Connecting to {{site.data.keyword.uko_full_notm}}" caption-side="bottom"}
 
 
 The following is a few use cases on how you can use {{site.data.keyword.uko_full_notm}} to manage your keys.
@@ -107,7 +107,7 @@ You can use the PKCS #11 API to encrypt applications between clouds. With the su
 
 
 
-![Application encryption by using PKCS #11](/images/application-encryption-pkcs11.svg "Application encryption by using PKCS #11"){: caption="Figure 6. Application encryption by using PKCS #11" caption-side="bottom"}
+![Application encryption by using PKCS #11](/images/application-encryption-pkcs11.svg "Application encryption by using PKCS #11"){: caption="Application encryption by using PKCS #11" caption-side="bottom"}
 
 #### Databases encryption by using the PKCS #11 API
 {: #uko-database_encryption_pkcs11}
@@ -118,13 +118,13 @@ With {{site.data.keyword.hscrypto}}, you can encrypt Oracle® Database by using 
 
     TDE uses a two-tiered key hierarchy that is composed of a TDE master encryption key and a TDE data encryption key. The TDE data encryption key is used to encrypt and decrypt data, while the TDE master encryption key is used to encrypt and decrypt the TDE data encryption key.
 
-    ![Transparent Database Encryption by using the standard PKCS #11 API](/images/pkcs-database.svg "Transparent Database Encryption by using the standard PKCS #11 API"){: caption="Figure 7. Transparent Database Encryption by using the standard PKCS #11 API" caption-side="bottom"}
+    ![Transparent Database Encryption by using the standard PKCS #11 API](/images/pkcs-database.svg "Transparent Database Encryption by using the standard PKCS #11 API"){: caption="Transparent Database Encryption by using the standard PKCS #11 API" caption-side="bottom"}
 
 * IBM Db2 default encryption protects key database files and database backup images from inappropriate access while they are stored on external storage media. The database system automatically encrypts and decrypts data when it is used by authorized users and applications. Typically, database users do not need to be aware of default encryption and database client applications do not need to be adapted specifically.
 
     Db2 default encryption uses a two-tiered key hierarchy: Data is encrypted with a data encryption key (DEK). The DEK is encrypted with a master key and is stored in encrypted form with the database or the backup image. A unique DEK is generated by Db2 for each encrypted database and for each encrypted backup. A master key is used to encrypt a DEK. Each encrypted database is associated with one master key at one time.
 
-    ![IBM Db2 default encryption by using the standard PKCS #11 API](/images/pkcs-db2.svg "IBM Db2 default encryption by using the standard PKCS #11 API"){: caption="Figure 8. IBM Db2 default encryption by using the standard PKCS #11 API" caption-side="bottom"}
+    ![IBM Db2 default encryption by using the standard PKCS #11 API](/images/pkcs-db2.svg "IBM Db2 default encryption by using the standard PKCS #11 API"){: caption="IBM Db2 default encryption by using the standard PKCS #11 API" caption-side="bottom"}
 
 *  Other popular databases like PosgreSQL (Fujitsu Enterprise Postgres and Enterprise DB) and MongoDB can also be integrated with {{site.data.keyword.hscrypto}} in a similar fashion.
 
@@ -146,7 +146,7 @@ TLS/SSL offloading to the {{site.data.keyword.hscrypto}} HSM enables data in tra
 
 For a tutorial on how to offload the SSL workload to a load balancer such as NGINX while managing keys by using {{site.data.keyword.hscrypto}}, see [Using {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} to offload NGINX TLS](https://developer.ibm.com/components/ibmz/tutorials/use-hyper-protect-crypto-services-to-offload-nginx-tls/){: external}.
 
-![Protecting data in transit with TLS/SSL offloading](/images/ssl-offloading.svg "Protecting data in transit with TLS/SSL offloading"){: caption="Figure 9. Protecting data in transit with TLS/SSL offloading" caption-side="bottom"}
+![Protecting data in transit with TLS/SSL offloading](/images/ssl-offloading.svg "Protecting data in transit with TLS/SSL offloading"){: caption="Protecting data in transit with TLS/SSL offloading" caption-side="bottom"}
 
 ### Protecting storage systems with third-party encryption key management tools
 {: #uko-protect-storage}
@@ -155,7 +155,7 @@ You can protect storage subsystems by integrating popular products, such as IBM 
 
 Envelope encryption is the practice of encrypting plain text data with data encryption keys (DEK), and then encrypting those keys with a key encryption key (KEK). This process can be used to encrypt blobs or buckets of data in object storage, block storage, and entire data volumes. For sensitive data repositories in the cloud, and workloads like high-performance computing, KEKs should be sourced from an HSM. For high-performance storage subsystems that have to adhere to performance boundaries, it is vitally important for key management systems to be close to the storage subsystems. Most interaction between storage subsystems and key management systems happens over the Key Management Interoperability Protocol (KMIP).
 
-![Protecting storage systems with {{site.data.keyword.hscrypto}}](/images/integrate-storage-systems.svg "Protecting storage systems with {{site.data.keyword.hscrypto}}"){: caption="Figure 10. Protecting storage systems with {{site.data.keyword.hscrypto}}" caption-side="bottom"}
+![Protecting storage systems with {{site.data.keyword.hscrypto}}](/images/integrate-storage-systems.svg "Protecting storage systems with {{site.data.keyword.hscrypto}}"){: caption="Protecting storage systems with {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 
 For more information, refer to the following tutorials:
 
@@ -169,7 +169,7 @@ Organizations with an existing Thales CipherTrust Manager (CTM) environment can 
 
 Other Thales key management products such as Vormetric Data Security Manager (DSM), CipherTrust Cloud Key Manager (CCKM), Enterprise Key Management can also integrate with {{site.data.keyword.hscrypto}} in a similar way.
 
-![Fortifying Thales environments with cloud HSM](/images/fortify-thales.svg "Fortifying Thales environments with cloud HSM"){: caption="Figure 11. Fortifying Thales environments with cloud HSM" caption-side="bottom"}
+![Fortifying Thales environments with cloud HSM](/images/fortify-thales.svg "Fortifying Thales environments with cloud HSM"){: caption="Fortifying Thales environments with cloud HSM" caption-side="bottom"}
 
 For more details, refer to [the Thales documentation](https://thalesdocs.com/ctp/cm/2.4/admin/cm_admin/hardware-security-module/index.html){: external}.
 
@@ -186,7 +186,7 @@ As IBM is starting to provide a new set of capabilities to support your workload
 
 Some code samples for [using GREP11 with Golang](https://github.com/IBM-Cloud/hpcs-grep11-go) and [JavaScript](https://github.com/IBM-Cloud/hpcs-grep11-js){: external} are available for you to try out.
 
-![EP11 HSM](/images/PKCS11.svg "Cryptographic operations with Enterprise PKCS #11"){: caption="Figure 12. Cryptographic operations with Enterprise PKCS #11" caption-side="bottom"}
+![EP11 HSM](/images/PKCS11.svg "Cryptographic operations with Enterprise PKCS #11"){: caption="Cryptographic operations with Enterprise PKCS #11" caption-side="bottom"}
 
 ## What's next
 {: #uko-use-case-next}
@@ -195,4 +195,3 @@ Some code samples for [using GREP11 with Golang](https://github.com/IBM-Cloud/hp
 - Use {{site.data.keyword.hscrypto}} to provide multicloud key orchestration capability for your encryption keys. To find out more about programmatically managing your keys, check out the [{{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external}.
 - To find out more about programmatically managing your KMS keys, check out the [{{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external}.
 - To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
-

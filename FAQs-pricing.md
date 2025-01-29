@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, provisioning and operations
 
@@ -42,7 +42,7 @@ The following example shows a total charge of 30 days (720 hours). The user enab
 | Failover crypto unit 2 | $1533.6 (30x24x2.13) |
 | 10 KMS key rings and 12 GREP11 keystores | $3795 (5x0+15x225+2x210) |
 | Total charge| $9929.4  |
-{: caption="Table 1. A standard plan billing example of 30 days" caption-side="bottom"}
+{: caption="A standard plan billing example of 30 days" caption-side="bottom"}
 
 ## How am I charged for my use of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}?
 {: #faq-how-charge-hpcs-uko}
@@ -65,7 +65,7 @@ The following example shows a total charge of 30 days (720 hours). The user enab
 | 15 external keystores | $980 (1x0+14x70) |
 | {{site.data.keyword.uko_full_notm}} connection | $3600 (30x24x5.00) |
 | Total charge| $11442.2  |
-{: caption="Table 2. A {{site.data.keyword.uko_full_notm}} billing example of 30 days" caption-side="bottom"}
+{: caption="A {{site.data.keyword.uko_full_notm}} billing example of 30 days" caption-side="bottom"}
 
 
 

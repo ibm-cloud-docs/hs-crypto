@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, data security, compliance
 
@@ -82,7 +82,7 @@ The following table lists the keys that are needed for {{site.data.keyword.hscry
 | Master key   | 256-bit AES | You need to load your master key to the crypto units to take the ownership of the cloud HSM and own the root of trust that encrypts the entire hierarchy of encryption keys, including root keys and standard keys in the key management keystore and Enterprise PKCS #11 (EP11) keys in the EP11 keystore. Depending on [the method that you use to load the master key](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode), the master key is stored in different locations. |
 | Root key   | 256-bit AES  | Root keys are primary resources in {{site.data.keyword.hscrypto}} and are protected by the master key. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other data encryption keys (DEKs) that are stored in a data service. This practice of root key encryption is also called envelope encryption. For more information, see [Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption). |
 | Data encryption key (DEK)  | Controlled by the data service | Data encryption keys are used to encrypt data that is stored and managed by other customer-owned applications or data services. Root keys that you manage in {{site.data.keyword.hscrypto}} serve as wrapping keys to protect DEKs. For services that support the integration of {{site.data.keyword.hscrypto}} for envelope encryption, see [Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-integrate-services).  |
-{: caption="Table 1. {{site.data.keyword.hscrypto}} key types and algorithms" caption-side="bottom"}
+{: caption="{{site.data.keyword.hscrypto}} key types and algorithms" caption-side="bottom"}
 
 ## How does EP11 differ from PKCS #11?
 {: #faq-ep11-pkcs11}

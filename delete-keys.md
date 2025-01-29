@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: delete key, delete encryption key, curl -x delete, delete key api
 
@@ -93,7 +93,7 @@ at query time to delete the key.
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is `default`. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
     | `return_preference` | A header that alters server behavior for `POST` and `DELETE` operations. When you set the `return_preference` variable to `return=minimal`, the service returns a successful deletion response. When you set the variable to `return=representation`, the service returns both the key material and the key metadata. |
-    {: caption="Table 1. Describes the variables needed to delete keys with the API" caption-side="bottom"}
+    {: caption="Describes the variables needed to delete keys with the API" caption-side="bottom"}
 
     If the `return_preference` variable is set to `return=representation`, the details of the `DELETE` request are returned in the response entity-body.
 
@@ -186,7 +186,7 @@ This action can't succeed if the key is protecting a resource that's non-erasabl
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is `default`. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
     | `return_preference` | A header that alters server behavior for `POST` and `DELETE` operations. When you set the `return_preference` variable to `return=minimal`, the service returns a successful deletion response. When you set the variable to `return=representation`, the service returns both the key material and the key metadata. |
-    {: caption="Table 2. Describes the variables needed to delete keys with the API" caption-side="bottom"}
+    {: caption="Describes the variables needed to delete keys with the API" caption-side="bottom"}
 
     If the `return_preference` variable is set to `return=representation`, the details of the `DELETE` request are returned in the response entity-body.
 

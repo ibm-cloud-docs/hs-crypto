@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: uko, rotate, rotate master key, rotate encryption key, rotate keys automatically, key rotation, rewrap data
 
@@ -39,7 +39,7 @@ Key objects in the in-memory keystore are not automatically rotated after the ma
 
 The following chart illustrates how the master key register state changes during the master key rotation. 
 
-![How master key register state changes during master key rotation](/images/rotate-master-key.svg "How master key register state changes during master key rotation"){: caption="Figure 1. How master key register state changes during master key rotation" caption-side="bottom"}
+![How master key register state changes during master key rotation](/images/rotate-master-key.svg "How master key register state changes during master key rotation"){: caption="How master key register state changes during master key rotation" caption-side="bottom"}
 
 ### Rotating master keys by using smart cards and Management Utilities
 {: #uko-how-master-key-rotation-works-smard-cards}
@@ -147,4 +147,3 @@ For more detailed instructions on options to rotate master keys, see:
 - [Rotating master keys by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards).
 - [Rotating master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit).
 - [Rotating master keys by using workstation files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
-

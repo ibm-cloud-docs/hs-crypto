@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: root key, import key, key material, import key api, bring your own key, byok, symmetric key, import symmetric key, upload symmetric key, import root key, upload root key, import key-wrapping key, upload key-wrapping key, import crk
 
@@ -48,7 +48,7 @@ After you [create an instance of the service](/docs/hs-crypto?topic=hs-crypto-pr
     | Key material | The base64 encoded key material, such as an existing key-wrapping key, that you want to store and manage in the service. For more information, see [Base64 encoding your key material](#encode-key-material-root-key). Ensure that the key material meets the following requirements: \n * The key must be 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits. \n * The key must be base64-encoded. |
     | Expiration date | (Optional) Set the date and time when the key gets expired. After the expiration date, the key moves into the Deactivated state. For more information about key state, see [Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-key-states). |
     | Description | (Optional) Add an extended description for your key. It needs to be two to 240 characters in length. |
-    {: caption="Table 1. Describes the settings for importing a root key" caption-side="bottom"}
+    {: caption="Describes the settings for importing a root key" caption-side="bottom"}
 
 6. When you finish filling out the key's details, click **Import key** to confirm.
 
@@ -108,7 +108,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys
     | `YYYY-MM-DD` \n \n `HH:MM:SS.SS` | The date and time that the key expires in the system, in RFC 3339 format. If the `expirationDate` attribute is omitted, the key does not expire. |
     | `key_material` | The base64 encoded key material, such as an existing key-wrapping key, that you want to store and manage in the service. For more information, see [Base64 encoding your key material](#encode-key-material-root-key). Ensure that the key material meets the following requirements: \n * The key must be 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits. \n * The key must be base64-encoded. |
     | `key_type` | A boolean value that determines whether the key material can leave the service. When you set the `extractable` attribute to `false`, the service designates the key as a root key that you can use for `wrap` or `unwrap` operations. |
-    {: caption="Table 2. Describes the variables needed to add a root key with the API" caption-side="bottom"}
+    {: caption="Describes the variables needed to add a root key with the API" caption-side="bottom"}
 
     To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://www.nist.gov/publications/guide-protecting-confidentiality-personally-identifiable-information-pii){: external}.
     {: important}
@@ -165,7 +165,7 @@ When importing an existing root key, it is required to include the encrypted key
     | --- | --- |
     | `infile` | The name of the file where your key material string is located. Ensure that the key is 16, 24, or 32 bytes long, corresponding to 128, 192, or 256 bits. |
     | `outfile` | The name of the file where your base64-encoded key material will be created when the command has run. |
-    {: caption="Table 3. Describes the variables needed to base64 encode your key material" caption-side="bottom"}
+    {: caption="Describes the variables needed to base64 encode your key material" caption-side="bottom"}
 
     If you want to output the base64 material in the command line directly rather than a file, run the command `openssl enc -base6<<< '<key_material_string>'`, where *key_material_string* is the key material input for your imported key.
     {: note}

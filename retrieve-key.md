@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: get key, get encryption key, view encryption key, retrieve encryption key, API examples
 
@@ -74,7 +74,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
     | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
-    {: caption="Table 4. Describes the variables needed to view a specified key with the API" caption-side="bottom"}
+    {: caption="Describes the variables needed to view a specified key with the API" caption-side="bottom"}
 
     A successful `GET api/v2/keys/<key_ID_or_alias>` response returns details about your
     key and the key material. The following JSON object shows an example

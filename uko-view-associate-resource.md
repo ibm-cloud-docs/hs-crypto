@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-11-29"
 
 keywords: associate resource, key associated resource
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Viewing resources associated with managed keys
 {: #uko-view-associated-resource}
 
-You can view other {{site.data.keyword.cloud}} resources that are protected by managed keys with [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) by using the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can view other {{site.data.keyword.cloud}} resources that are protected by managed keys with [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) by using the UI, or programmatically with the {{site.data.keyword.uko_full_notm}}.
 {: shortdesc}
 
 
@@ -41,7 +41,7 @@ To view the associated resources by using the UI, complete the following steps:
     | Resource name      | The name of the cloud resource that is associated with the key.|
     | Service name       | The name of the cloud service, such as `cloud-object-storage` for {{site.data.keyword.cos_full_notm}}. |
     | Retention policy   | Indicates whether the cloud resource can be erased. If the value is `Enabled`, the cloud resource cannot be erased, and the key that is associated with the cloud resource cannot be deleted. If the value is `Disabled`, the cloud resource can be erased. You can delete the key that is associated with the cloud resource if needed. |
-    {: caption="Table 1. Associated resources properties" caption-side="bottom"} 
+    {: caption="Associated resources properties" caption-side="bottom"} 
 
 ## Viewing associated resources with the API
 {: #uko-view-associated-resource-api}
@@ -81,4 +81,3 @@ For detailed instructions and code examples about using the API method, check ou
 
 - For more information about envelope encryption, see [Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
 - For a list of cloud services that supports envelope encryption, see [Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-integrate-services). 
-

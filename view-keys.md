@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -57,7 +57,7 @@ If you prefer to inspect the keys in your service by using a graphical interface
     | Dual authorization enabled | The status of a dual authorization policy on the key. \n * `True`: Dual authorization is required to delete the key. \n * `False`: No prior authorization is required to delete the key. |
     | Set for deletion | Indicates whether a delete authorization is issued for a key. \n * `True`: An authorization to delete this key is issued by the first user. A second user with a Manager access policy can safely delete the key. \n * `False`: The key is not set for deletion. No further action is needed. |
     | Deletion expiration | The date that an authorization for deletion expires for the key. If this date passes, the authorization is no longer valid. If `False` is the value for the `Dual authorization enabled` or `Set for deletion` column of the key, the `Deletion expiration` column is left empty. |
-    {: caption="Table 1. Describes the table of keys" caption-side="bottom"}
+    {: caption="Describes the table of keys" caption-side="bottom"}
 
     Not all key characteristics are displayed by default. To customize how the **Keys** table is to be presented, click the **Settings icon** ![Settings icon](../icons/settings.svg "Settings") and check the columns to be displayed.
     {: tip}
@@ -114,7 +114,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys
     | `instance_ID` | The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
     | `correlation_ID` | **Optional.** The unique identifier that is used to track and correlate transactions. |
-    {: caption="Table 2. Describes the variables needed to view keys with the API" caption-side="bottom"}
+    {: caption="Describes the variables needed to view keys with the API" caption-side="bottom"}
 
     A successful `GET /v2/keys` request returns a collection of keys that are available in your {{site.data.keyword.hscrypto}} instance.
 
@@ -206,7 +206,7 @@ following table.
 | --- | --- |
 | offset | The number of keys to skip. For example, if you have 50 keys in your instance, and you want to list keys 26 - 50, use `../keys?offset=25`. You can also pair `offset` with `limit` to page through your available resources. |
 | limit | The number of keys to retrieve. For example, if you have 100 keys in your instance, and you want to list only 10 keys, use `../keys?limit=10`. The maximum value for `limit` is 5000. |
-{: caption="Table 2. Describes the limit and offset variables" caption-side="bottom"}
+{: caption="Describes the limit and offset variables" caption-side="bottom"}
 
 For usage notes, check out the following examples for setting your `limit` and `offset` query parameters.
 
@@ -216,7 +216,7 @@ For usage notes, check out the following examples for setting your `limit` and `
 | `.../keys?limit=10` | Lists the first 10 keys. |
 | `.../keys?offset=25&limit=50` | Lists keys 26 - 75. |
 | `.../keys?offset=3000&limit=50` | Lists keys 3001 - 3050. |
-{: caption="Table 3. Provides usage notes for the limit and offset query parameters" caption-side="bottom"}
+{: caption="Provides usage notes for the limit and offset query parameters" caption-side="bottom"}
 
 Offset is the location of a particular key in a data set. The `offset` value is zero-based, which means that the 10th encryption key in a data set is at offset 9.
 {: tip}
@@ -247,7 +247,7 @@ Replace the `state` variable in your request according to the following table.
 | Variable | Description |
 | --- | --- |
 | `state` | The states of the keys to be retrieved. States are integers and correspond to the Pre-active = 0, Active = 1, Suspended = 2, Deactivated = 3, and Destroyed = 5 values. For example, if you want to only list keys in the active state in your service instance, use `../keys?state=1`. You can also pair `state` with`offset` with `limit` to page through your available resources. |
-{: caption="Table 4. Describes the state variable" caption-side="bottom"}
+{: caption="Describes the state variable" caption-side="bottom"}
 
 For usage notes, check out the following examples for setting your `state` query
 parameter.
@@ -257,7 +257,7 @@ parameter.
 | `.../keys` | Lists all of your available resources, up to the first 200 keys. |
 | `.../keys?state=5` | Lists keys in the deleted state. |
 | `.../keys?state=2,3` | Lists keys in the suspended and deactivated state. |
-{: caption="Table 5. Provides usage notes for the stage query parameter" caption-side="bottom"}
+{: caption="Provides usage notes for the stage query parameter" caption-side="bottom"}
 
 ### Retrieving keys by Extractable value
 {: #filter-keys-extractable-state-api}
@@ -286,7 +286,7 @@ Replace the `extractable` variable in your request according to the following ta
 |Variable|Description|
 |--- |--- |
 |extractable|The type of keys to be retrieved. Filters keys based on the extractable property. You can use this query parameter to search for keys whose material can leave the service. If you set the parameter to true, standard keys are retrieved. If you set the parameter to false, root keys are retrieved. If the parameter is omitted, both root and standard keys are retrieved. For example, if you want to only list keys with extractable material in your service instance, use `../keys?extractable=true`. You can also pair extractable with `offset`, `limit`, and `state` to page through your available resources.|
-{: caption="Table 5. Describes the extractable variable" caption-side="top"}
+{: caption="Describes the extractable variable" caption-side="top"}
 
 For usage notes, check out the following examples for setting your `extractable` query parameter.
 
@@ -295,7 +295,7 @@ For usage notes, check out the following examples for setting your `extractable`
 |`../keys`|Lists all of your available resources, up to the first 200 keys.|
 |`../keys?extractable=true`|Lists standard keys.|
 |`../keys?extractable=false`|Lists root keys.|
-{: caption="Table 6. Provides usage notes for the extractable query parameter" caption-side="top"}
+{: caption="Provides usage notes for the extractable query parameter" caption-side="top"}
 
 ### Sorting a list of keys
 {: #filter-keys-sort-api}
@@ -315,5 +315,4 @@ $ curl -X GET \
 |Variable|Description|
 |--- |--- |
 | sort-value | The list of properties for sorting. The key properties that can be sorted at this time are:  \n \n- id \n- state \n- extractable \n- imported \n- creationDate \n- lastUpdateDate \n- lastRotateDate \n- deletionDate \n- expirationDate |
-{: caption="Table 7. Usage notes for the sort query parameter" caption-side="top"}
-
+{: caption="Usage notes for the sort query parameter" caption-side="top"}

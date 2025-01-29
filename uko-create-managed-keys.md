@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -68,7 +68,7 @@ When you select the **Create with a key template** option, you are creating a ma
     | Key length           | (Read only) The number of bits that represents the encryption strength of the key.   |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
     {: #table-1}
-    {: caption="Table 1. AWS Key Management Service keys properties" caption-side="bottom"}
+    {: caption="AWS Key Management Service keys properties" caption-side="bottom"}
     {: tab-title="AWS Key Management Service keys"}
     {: tab-group="Managed key properties with templates"}
     {: class="comparison-tab-table"}
@@ -85,7 +85,7 @@ When you select the **Create with a key template** option, you are creating a ma
     | Expiration date      |  Plan a date to deactivate the key. It is for planning purpose only. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
     {: #table-2}
-    {: caption="Table 2. Azure Key Vault keys properties" caption-side="bottom"}
+    {: caption="Azure Key Vault keys properties" caption-side="bottom"}
     {: tab-title="Azure Key Vault keys"}
     {: tab-group="Managed key properties with templates"}
     {: class="comparison-tab-table"}
@@ -102,7 +102,7 @@ When you select the **Create with a key template** option, you are creating a ma
     | Key algorithm |   (Read only) The corresponding key algorithms that are supported for each key purpose. Algorithms define what parameters are needed for cryptographic operations. For the list of available key algorithms, see [Key purposes and algorithms](https://cloud.google.com/kms/docs/algorithms){: external}.  |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
     {: #table-3}
-    {: caption="Table 3. Google Cloud KMS keys properties" caption-side="bottom"}
+    {: caption="Google Cloud KMS keys properties" caption-side="bottom"}
     {: tab-title="Google Cloud KMS keys"}
     {: tab-group="Managed key properties with templates"}
     {: class="comparison-tab-table"}
@@ -118,7 +118,7 @@ When you select the **Create with a key template** option, you are creating a ma
     | Key length           | (Read only) The number of bits that represents the encryption strength of the key.   |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
     {: #table-4}
-    {: caption="Table 4. IBM Cloud KMS keys properties" caption-side="bottom"}
+    {: caption="IBM Cloud KMS keys properties" caption-side="bottom"}
     {: tab-title="IBM Cloud KMS keys"}
     {: tab-group="Managed key properties with templates"}
     {: class="comparison-tab-table"}
@@ -134,7 +134,7 @@ When you select the **Create with a key template** option, you are creating a ma
     | Key length           | (Read only) The number of bits that represents the encryption strength of the key.   |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
     {: #table-5}
-    {: caption="Table 5. {{site.data.keyword.keymanagementserviceshort}} keys properties" caption-side="bottom"}
+    {: caption="{{site.data.keyword.keymanagementserviceshort}} keys properties" caption-side="bottom"}
     {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keys"}
     {: tab-group="Managed key properties with templates"}
     {: class="comparison-tab-table"}  
@@ -235,7 +235,7 @@ When you select the **Create with custom properties** option, you are creating a
     | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
     {: #table-6}
-    {: caption="Table 6. AWS Key Management Service keys properties" caption-side="bottom"}
+    {: caption="AWS Key Management Service keys properties" caption-side="bottom"}
     {: tab-title="AWS Key Management Service keys"}
     {: tab-group="Managed key properties without templates"}
     {: class="comparison-tab-table"}
@@ -252,7 +252,7 @@ When you select the **Create with custom properties** option, you are creating a
     | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
     {: #table-7}
-    {: caption="Table 7. Azure Key Vault keys properties" caption-side="bottom"}
+    {: caption="Azure Key Vault keys properties" caption-side="bottom"}
     {: tab-title="Azure Key Vault keys"}
     {: tab-group="Managed key properties without templates"}
     {: class="comparison-tab-table"}
@@ -269,7 +269,7 @@ When you select the **Create with custom properties** option, you are creating a
     | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
     {: #table-8}
-    {: caption="Table 8. Google Cloud KMS keys properties" caption-side="bottom"}
+    {: caption="Google Cloud KMS keys properties" caption-side="bottom"}
     {: tab-title="Google Cloud KMS keys"}
     {: tab-group="Managed key properties without templates"}
     {: class="comparison-tab-table"}
@@ -285,7 +285,7 @@ When you select the **Create with custom properties** option, you are creating a
     | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
     {: #table-9}
-    {: caption="Table 9. IBM Cloud KMS keys properties" caption-side="bottom"}
+    {: caption="IBM Cloud KMS keys properties" caption-side="bottom"}
     {: tab-title="IBM Cloud KMS keys"}
     {: tab-group="Managed key properties without templates"}
     {: class="comparison-tab-table"}
@@ -301,7 +301,7 @@ When you select the **Create with custom properties** option, you are creating a
     | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
     {: #table-10}
-    {: caption="Table 10. {{site.data.keyword.keymanagementserviceshort}} keys properties" caption-side="bottom"}
+    {: caption="{{site.data.keyword.keymanagementserviceshort}} keys properties" caption-side="bottom"}
     {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keys"}
     {: tab-group="Managed key properties without templates"}
     {: class="comparison-tab-table"} 

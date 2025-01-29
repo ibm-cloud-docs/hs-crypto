@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: sync resources, sync registrations, key registration, notify key state to resources
 
@@ -75,7 +75,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
     | `key_ID` | **Required.** The identifier for the root key that is associated with the cloud resources that you want to view. For more information, see [View Keys](/docs/hs-crypto?topic=hs-crypto-view-keys). |
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    {: caption="Table 1. Describes the variables needed to initiate a renotification of a key lifecycle event" caption-side="bottom"}
+    {: caption="Describes the variables needed to initiate a renotification of a key lifecycle event" caption-side="bottom"}
 
     A successful sync API request returns an HTTP `204 No Content` response, which indicates that the IBM cloud service that is associated with the specified key is notified.
 

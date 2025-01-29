@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-08-06"
+lastupdated: "2024-10-09"
 
 keywords: hpcs cli, hyper protect crypto services cli, trusted key entry plug-in, cloud tke, tke plug-in, cli plug-in, tke commands, cloud tke reference, cert manager cli plug-in, key management cli, uko cli, united key orchestrator cli
 
@@ -107,7 +107,7 @@ To install the TKE CLI plug-in, follow these steps:
 | `tke sigkey-sel` | Selects the signature keys to use to sign commands. | `ibmcloud tke sigkey-sel` |
 | `tke sigkeys` | Lists the signature keys that are stored on this workstation. | `ibmcloud tke sigkeys` |
 | `tke help`, `tke h` | Shows help. | `ibmcloud tke help` |
-{: caption="Table 1. Describes the TKE CLI plug-in commands" caption-side="top"}
+{: caption="Describes the TKE CLI plug-in commands" caption-side="top"}
 
 For more information on each command, run the following command in the TKE CLI plug-in:
 

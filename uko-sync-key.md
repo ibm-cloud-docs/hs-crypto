@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: Unified Key Orchstrator, sync managed key, out of sync
 
@@ -78,7 +78,7 @@ To sync a managed key through the API, follow these steps:
     | `id` | **Required.** The unique identifier for the managed key that you want to sync. |
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} IAM access token that you retrieve in step 1. Include the full contents of the `IAM` token, including the Bearer value. |
     | `ETag` | **Required.** The precondition of the update, which is the value of ETag from the header on a GET request. |
-    {: caption="Table 1. Variables needed to sync a managed key" caption-side="bottom"}
+    {: caption="Variables needed to sync a managed key" caption-side="bottom"}
 
     For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#sync-managed-key){: external}.
 

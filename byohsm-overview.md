@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: bring your own hsm, byohsm, hybrid hpcs, hybrid hsm, hybrid KMS, hybrid hpcs overview, hybrid KMS
 
@@ -27,7 +27,7 @@ The Bring Your Own HSM (BYOHSM) function is available only in the Standard Plan 
 
 Instead of using IBM-provided cloud HSMs for key generation and management, you can use your own on-premises HSMs for your {{site.data.keyword.hscrypto}} instance. Bring Your Own HSM extends your local key management capability to the cloud and creates a scalable, unified, and secure hybrid cloud eco-system for your regulated workloads. The following architecture diagram shows the difference between {{site.data.keyword.hscrypto}} instances with and without this function enabled.
 
-![BYOHSM architecture](/images/byohsm-archi.svg "BYOHSM architecture"){: caption="Figure 1. Architecture comparison between {{site.data.keyword.hscrypto}} with and without BYOHSM" caption-side="bottom"}
+![BYOHSM architecture](/images/byohsm-archi.svg "BYOHSM architecture"){: caption="Architecture comparison between {{site.data.keyword.hscrypto}} with and without BYOHSM" caption-side="bottom"}
 
 With the Bring Your Own HSM function, you can benefit from the following aspects:
 

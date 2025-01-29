@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-06-06"
+lastupdated: "2024-10-09"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -39,7 +39,7 @@ For development and test purposes, you create a few more keys in the same vault 
 
 You activate a key in multiple internal or external keystores in the same vault. When you make changes to the key, for example, changing the key state from Active to Deactivated, the change is applied to all keystores that the key is activated in.
 
-![{{site.data.keyword.uko_full_notm}} use case example](/images/uko-example.png "Illustration that explains how to use vault to manage access while connecting to external Azure Key Vaults"){: caption="Figure 1. {{site.data.keyword.uko_full_notm}} use case example"  caption-side="bottom"}
+![{{site.data.keyword.uko_full_notm}} use case example](/images/uko-example.png "Illustration that explains how to use vault to manage access while connecting to external Azure Key Vaults"){: caption="{{site.data.keyword.uko_full_notm}} use case example"  caption-side="bottom"}
 
 ## Components
 {: #Components}
@@ -132,11 +132,3 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
 
 
 - To find out more about the {{site.data.keyword.uko_full_notm}} API, see [{{site.data.keyword.uko_full_notm}} API reference](/apidocs/uko){: external}.
-
-
-
-
-
-
-
-

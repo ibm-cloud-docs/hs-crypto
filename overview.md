@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-12-03"
 
 keywords: key management, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest, secure service container, ssc
 
@@ -16,7 +16,7 @@ subcollection: hs-crypto
 
 
 
-# Overview - Standard Plan 
+# Overview - Standard Plan
 {: #overview}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is a dedicated key management service and [Hardware Security Module (HSM)](#x6704988){: term} that provides you with the Keep Your Own Key capability for cloud data encryption. Built on FIPS 140-2 Level 4 certified hardware, {{site.data.keyword.hscrypto}} provides you with exclusive control of your encryption keys.
@@ -44,6 +44,8 @@ With the built-in encryption of {{site.data.keyword.hscrypto}}, you can easily b
 
 
 
+
+**-Note-** {{site.data.keyword.uko_full_notm}} does not offer an option to export your data.
 
 ## How does {{site.data.keyword.hscrypto}} work?
 {: #how-hpcs-work}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -33,7 +33,7 @@ The following table compares the three approaches:
 | Using smart cards and the {{site.data.keyword.hscrypto}} Management Utilities   | The Management Utilities  | The master key is composed of two or three master key parts that are stored on smart cards.  | You are responsible for backing up the master key using smart cards.  | You need to prepare new master key parts on your smart card before you can rotate the master key for your service instance. |
 | Using recovery crypto units   | {{site.data.keyword.cloud_notm}} TKE CLI plug-in  | The master key is automatically generated and stored within the recovery crypto units of your service instance.  | The master key is automatically backed up in recovery crypto units. You can recover your master key from the backups if the master key is lost or destroyed.  | You don't need to prepare a new master key for the rotation. The new master key is automatically generated in a recovery crypto unit and then propagated to the operational crypto units and other recovery crypto units. |
 | Using key part files   | {{site.data.keyword.cloud_notm}} TKE CLI plug-in  | The master key is composed of two or three master key parts that are stored on your local workstation files.  | The local files serve as a backup of the master key. You need to make sure that the files are properly saved and only the master key custodian knows the password. | You need to prepare new master key parts on your local workstation before you can rotate the master key for your service instance.  |
-{: caption="Table 1. Comparing three approaches to initializing service instances" caption-side="bottom"}
+{: caption="Comparing three approaches to initializing service instances" caption-side="bottom"}
 
 If smart cards are used to load the master key, the recovery crypto units are not applicable and can be ignored. The backup of the master key relies on the backup of the smart cards in that case.
 {: note}
@@ -50,7 +50,7 @@ The Management Utilities are composed of two applications that use smart cards t
 
 The following diagram illustrates the relationship between various components when you use the Management Utilities to initialize a service instance.
 
-![The architecture of using smart cards and the Management Utilities](/images/tke-application-architecture.svg "Using the Management Utilities"){: caption="Figure 1. Using smart cards and the Management Utilities to initialize service instances" caption-side="bottom"}
+![The architecture of using smart cards and the Management Utilities](/images/tke-application-architecture.svg "Using the Management Utilities"){: caption="Using smart cards and the Management Utilities to initialize service instances" caption-side="bottom"}
 
 - The Smart Card Utility Program
 
@@ -116,7 +116,7 @@ Currently, service instances in the `eu-es` region don't support recovery crypto
 
 The following diagram shows the components of an example service instance with two recovery crypto units:
 
-![The architecture of using recovery crypto units to initialize service instances](/images/minimum-touch-architecture.svg "Using recovery crypto units to initialize service instances"){: caption="Figure 2. Initializing service instances by using recovery crypto units" caption-side="bottom"}
+![The architecture of using recovery crypto units to initialize service instances](/images/minimum-touch-architecture.svg "Using recovery crypto units to initialize service instances"){: caption="Initializing service instances by using recovery crypto units" caption-side="bottom"}
 
 The following sections explain each component in detail.
 

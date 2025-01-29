@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -53,7 +53,7 @@ The following flow shows how master key rotation works in this mode:
 
 The following chart illustrates how the master key register state changes during the master key rotation. For detailed instructions, see [Rotating master keys by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards).
 
-![How master key register state changes during master key rotation](/images/rotate-master-key.svg "How master key register state changes during master key rotation"){: caption="Figure 1. How master key register state changes during master key rotation" caption-side="bottom"}
+![How master key register state changes during master key rotation](/images/rotate-master-key.svg "How master key register state changes during master key rotation"){: caption="How master key register state changes during master key rotation" caption-side="bottom"}
 
 ### Rotating master keys by using recovery crypto units
 {: #how-master-key-rotation-works-recovery-crypto-unit}
@@ -106,4 +106,3 @@ For more detailed instructions on options to rotate master keys, see:
 - [Rotating master keys by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-smart-cards).
 - [Rotating master keys by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit).
 - [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).
-

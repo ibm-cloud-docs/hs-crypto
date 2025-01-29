@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-05-30"
+lastupdated: "2024-10-09"
 
 keywords: measure interactions, metrics, monitoring, operational metrics
 
@@ -83,7 +83,7 @@ The type and number of API requests that are made to your {{site.data.keyword.hs
 | Metric Type | Gauge |
 | Value Type | none |
 | Segment By | [Attributes for Segmentation](#attributes-for-segmentation) |
-{: caption="Table 1. Describes the API Hits metrics."}
+{: caption="Describes the API Hits metrics."}
 
 ## Latency
 {: #latency}
@@ -99,7 +99,7 @@ The latency is calculated by getting the average of all requests of the same typ
 | Metric Type | Gauge |
 | Value Type | Milliseconds |
 | Segment By | [Attributes for Segmentation](#attributes-for-segmentation) |
-{: caption="Table 2. Describes the Latency metrics."}
+{: caption="Describes the Latency metrics."}
 
 ## Attributes for Segmentation
 {: #attributes-for-segmentation}
@@ -119,7 +119,7 @@ You can filter your metrics by using the following attributes.
 | `ibm_resource_group_name` | Resource group name associated with the {{site.data.keyword.hscrypto}} service instance. |
 | `ibm_service_instance_name` | {{site.data.keyword.hscrypto}} service instance name. |
 | `ibm_service_instance` | {{site.data.keyword.hscrypto}} service instance ID. |
-{: caption="Table 3. Describes the attributes use for segmenting metrics."}
+{: caption="Describes the attributes use for segmenting metrics."}
 
 
 ## Default Dashboards
@@ -167,7 +167,7 @@ You can scope down your metrics by using the following scope filters.
 | `ibmScope` | The account, organization, or space GUID associated with the metric. |
 | `ibmServiceInstanceName` | The service instance associated with the metric. |
 | `ibmHpcsApi` | The {{site.data.keyword.hscrypto}} API calls associated with the metric. |
-{: caption="Table 4. Describes the scope filters for {{site.data.keyword.hscrypto}} metrics."}
+{: caption="Describes the scope filters for {{site.data.keyword.hscrypto}} metrics."}
 
 Because of {{site.data.keyword.mon_short}} limitations, you are able to see the values in the filters for up to 6 hours at a time. You can manually type in value into scope variables to use scope filters for given time periods.
 {: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-10-09"
 
 keywords: view resoure, root key encryption resources, protected resource, protected service, envelope encryption, key registration, view registration, list registrations
 
@@ -28,7 +28,7 @@ When you use a root key to protect at-rest data with envelope encryption, the cl
 | --- | --- |
 | Centralized view of protected resources | As an administrator for your {{site.data.keyword.hscrypto}} instance, you want to quickly understand which cloud resources are protected by a root key. |
 | Security and compliance | As a security admin, you need a way to determine the risk that's involved with [destroying a root key](/docs/hs-crypto?topic=hs-crypto-delete-keys). You want to examine which keys are actively protecting what data so that you can evaluate exposures based on your organization's security or compliance needs. |
-{: caption="Table 1. Describes the benefits of key registration" caption-side="bottom"}
+{: caption="Describes the benefits of key registration" caption-side="bottom"}
 
 Key registration is an extra feature that's available only if the cloud service enables it as part of the integration with {{site.data.keyword.hscrypto}}. To determine whether an [integrated service](/docs/hs-crypto?topic=hs-crypto-integrate-services) supports key registration, see the service documentation for more information.
 {: note}
@@ -53,7 +53,7 @@ You can browse the registrations that are available between your {{site.data.key
     | `Resource name` | The name of the cloud resource, such as a Cloud Object Storage bucket, that is associated with the key. |
     | `Service name` | The name of the {{site.data.keyword.cloud_notm}} service instance that the resource resides in. |
     | `Retention policy` | Whether the cloud resource has a retention policy. If the value is `True`, a retention policy is enabled for the cloud resource, and the key that is associated with the cloud resource can't be deleted. If the value is `False`, the retention policy isn't enabled. |
-    {: caption="Table 2. Describes the table of viewing associated resources" caption-side="bottom"}
+    {: caption="Describes the table of viewing associated resources" caption-side="bottom"}
 
 6. To view details of each resource, expand the resource details by clicking the caret (^) icon under the `Resource name` column.
 
@@ -67,7 +67,7 @@ You can browse the registrations that are available between your {{site.data.key
     | `Key version ID` | The version of the root key that's protecting the cloud resource. |
     | `Key version date` | The date and time that the root key version was updated. |
     | `Cloud resource name` | Represents the cloud resource that is associated with the key, including the Cloud Resource Name (CRN), `version`, `cname`, `ctype`, and so on. |
-    {: caption="Table 3. Describes the properties that are associated with a resource" caption-side="bottom"}
+    {: caption="Describes the properties that are associated with a resource" caption-side="bottom"}
 
 You can use the search field to search for any resources that are associated with the root key either with the resource name or the key version ID.
 {: tip}
@@ -87,7 +87,7 @@ You can use the search field to search for any resources that are associated wit
     | `Key ID` | The ID that identifies the root key that is associated with the specified cloud resource. |
     | `Service name` | The name of the {{site.data.keyword.cloud_notm}} service instance that the resource resides in. |
     | `Retention policy` | Indicates whether the cloud resource can be erased. If the value is `Enabled`, the cloud resource can't be erased, and the key that is associated with the cloud resource can't be deleted. If the value is `Disabled`, the cloud resource can be erased. You can delete the key that is associated with the cloud resource if needed. | 
-    {: caption="Table 4. Describes the table of associated resources" caption-side="bottom"}
+    {: caption="Describes the table of associated resources" caption-side="bottom"}
 
 5. Click the caret (^) icon under the `Resource name` column to view a list of details for a specific registration.
 
@@ -101,7 +101,7 @@ You can use the search field to search for any resources that are associated wit
     | `Key version ID` | The version of the root key that's protecting the cloud resource. |
     | `Key version date` | The date and time that the root key version was updated. |
     | `Cloud resource name` | Represents the cloud resource that is associated with the key, including the Cloud Resource Name (CRN), `version`, `cname`, `ctype`, and so on. |
-    {: caption="Table 5. Describes the properties that are associated with a resource" caption-side="bottom"}
+    {: caption="Describes the properties that are associated with a resource" caption-side="bottom"}
 
 Besides searching for a resource, you can also for resources by Resource Name, key ID, and retention policy. To do so, click the `Filter` button, select the filter options from the list, and click **Apply**.
 {: tip}
@@ -153,7 +153,7 @@ The following table describes the properties of a registration.
 | `description` | A description for the registration.|
 | `preventKeyDeletion` | A boolean that determines whether {{site.data.keyword.hscrypto}} must prevent deletion of the root key. If `true`, the associated resource is nonerasable due to a retention policy, and the {{site.data.keyword.hscrypto}} key that is encrypting the resource cannot be deleted. |
 | `keyVersion` | The version of the root key that's protecting the cloud resource.|
-{: caption="Table 6. Properties that are associated with a registration" caption-side="bottom"}
+{: caption="Properties that are associated with a registration" caption-side="bottom"}
 
 ### Listing registrations for a specific root key with the API
 {: #view-protected-resources-key-id-api}
@@ -187,7 +187,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
     | `port` | **Required.** The port number of the API endpoint. |
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    {: caption="Table 7. Describes the variables needed to list all registrations that are associated with a root key" caption-side="bottom"}
+    {: caption="Describes the variables needed to list all registrations that are associated with a root key" caption-side="bottom"}
 
     A successful `GET api/v2/keys/<key_ID>/registrations` request returns a collection of registrations that are mapped to the specified key ID.
 
@@ -267,7 +267,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/registr
     | `url_encoded_CRN_query` | Filters for resources that are associated with a specified [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) by using URL encoded wildcard characters (`*`). The parameter needs to contain all CRN segments and must be URL encoded. To view examples, see [CRN query examples](#crn-query-examples). |
     | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
     | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    {: caption="Table 8. Describes the variables needed to list registrations by CRN query." caption-side="bottom"}
+    {: caption="Describes the variables needed to list registrations by CRN query." caption-side="bottom"}
 
 #### CRN query examples
 {: #crn-query-examples}
@@ -310,7 +310,7 @@ The following tables provide a list of CRN query examples before and after URL e
 |`crn:v1:bluemix:public:databases-for-redis:us-south:a/274074dce64e9c423ffc238516c755e1:29caf0e7-120f-4da8-9551-3abf57ebcfc7:*:*` |
 |`crn:v1:bluemix:public:cloud-object-storage:global:a/e1bb63d6a20dc57c87501ac4c4c99dcb:*:bucket:prod*`  |
 |`crn:v1:bluemix:public:cloudantnosqldb:us-south:a/f586c28d154d4c65a4a4a34cf75f55d0:94255ea3-af1c-41b7-9805-61f775e20702:*:prod*`. |
-{: caption="Table 9. CRN query examples" caption-side="bottom"}
+{: caption="CRN query examples" caption-side="bottom"}
 {: #table-9}
 {: tab-group="CRN-query"}
 {: tab-title="Original"}
@@ -321,7 +321,7 @@ The following tables provide a list of CRN query examples before and after URL e
 |`crn%3Av1%3Abluemix%3Apublic%3Adatabases-for-redis%3Aus-south%3Aa%2F274074dce64e9c423ffc238516c755e1%3A29caf0e7-120f-4da8-9551-3abf57ebcfc7%3A*%3A*` |
 |`crn%3Av1%3Abluemix%3Apublic%3Acloud-object-storage%3Aglobal%3Aa%2Fe1bb63d6a20dc57c87501ac4c4c99dcb%3A*%3Abucket%3Aprod*`  |
 |`crn%3Av1%3Abluemix%3Apublic%3Acloudantnosqldb%3Aus-south%3Aa%2Ff586c28d154d4c65a4a4a34cf75f55d0%3A94255ea3-af1c-41b7-9805-61f775e20702%3A%2A%3Aprod%2A` |
-{: caption="Table 9. CRN query examples" caption-side="bottom"}
+{: caption="CRN query examples" caption-side="bottom"}
 {: #table-10}
 {: tab-group="CRN-query"}
 {: tab-title="URL encoded"}
