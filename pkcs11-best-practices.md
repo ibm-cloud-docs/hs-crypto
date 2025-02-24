@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-05-30"
+  years: 2020, 2025
+lastupdated: "2025-02-24"
 
 keywords: pkcs11 access, pkcs 11 authentication, set up PKCS 11 API, best practice for setting up pkcs11 users
 
@@ -239,7 +239,7 @@ To assign access to the keystores for the normal user, follow these steps:
 ### 3. Create access policies and assign custom roles to the anonymous user service ID
 {: #create-policy-assign-custom-role-anonymous-user-service}
 
-The anonymous user requires three access policies. The PKCS#11 specification specifies that the anonymous user can access the public keystore only. The following access policies are set up to restrict the anonymous user to the public keystore.
+The anonymous user requires two access policies. The PKCS#11 specification specifies that the anonymous user can access the public keystore only. The following access policies are set up to restrict the anonymous user to the public keystore.
 
 To assign the custom roles that are defined in [Step 1](#step1-create-custom-roles) to the anonymous user service ID, follow these steps:
 
@@ -258,7 +258,7 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 10. Click **Add**.
 11. Review the roles and actons added under **Summary**, and then click **Assign**.
 
-#### Create access policy for key access
+#### Create access policy for public key store and key access
 {: #create-access-policy-key-access}
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
@@ -267,33 +267,25 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 4. Click **Access policy**.
 5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
 6. Under **Resources**, select **Specific resources**.
-7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Add a condition**.
-8. Select the **Resource Type** attribute type, enter `key` under the value field, and click **Next**.
-9. Under **Roles and actions**, check the box for `Key operator` and click **Next**.
-10. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
-11. Click **Add**.
-12. Review the roles and actons added under **Summary**, and then click **Assign**.
-
-#### Create access policy for keystore access
-{: #create-access-policy-keystore-access}
-
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs** to browse the existing service IDs in your account.
-2. Hover your mouse over the `Anonymous user` service ID, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options.
-3. From the options menu, click **Assign access**.
-4. Click **Access policy**.
-5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
-6. Under **Resources**, select **Specific resources**.
-7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Add a condition**.
-8. Select the **Resource Type** attribute type, enter `keystore` under the value field, and click **Add a condition**.
-9. Select the **Resource ID** attribute type, enter the value, and click **Next**. 
-    
+7. Select the **Service Instance ID** attribute, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Next**.
+8. Under **Roles and actions**, check the box for `Key operator` and click **Next**.
+10. Under **Conditions (optional)**, click **Add condition**.
+11. Click **Advanced condition builder** and click **Next**.
+12. Within the **Create a condition** dialog, click the down arrow to the right of **Service Instance ID** and select **Resource Type** from the drop-down list.
+13. Enter **key** in the text box that is displaying **Enter a value**.
+14. Click **Add condition group**.
+15. Click the **OR** radio button located directly under the **JSON** text.  Do **NOT** select the **OR** radio button within the condition group.
+16. Within the condition group, click the down arrow to the right of **Service Instance ID** and select **Resource Type** from the drop-down list.
+17. Enter **keystore** for the value of the **Resource Type** attribute.
+18. Within the condition group, click the down arrow to the right of **Region** and select **Resource ID** from the drop-down list.
+19. Enter the value of the **Resource ID** in the text box to the right of the **Resource ID** and **string equals** text. 
+     
     The value of the **Resource ID** attribute type must contain a valid [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html){: external} of the PKCS#11 public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/){: external}. The UUID string specified for the **Resource ID** attribute must match the UUID string specified for the anonymous user's **public_keystore_spaceid** configuration parameter within the `grep11client.yaml` [configuration file](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api#step3-setup-configuration-file) in the PKCS#11 client library.
     {: important}
-
-10. Under **Roles and actions**, check the box for `Key operator` and click **Next**.
-11. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
-12. Click **Add**.
-13. Review the roles and actions added under **Summary**, and then click **Assign**.
+20. Click **Create** to create the advanced condition.
+21. Click **Review** to check the access policy.
+22. Click **Add**.
+23. Review the roles and actions added under **Summary**, and then click **Assign**.
 
 ##  What's next
 {: #pkcs11-best-practices-next}
