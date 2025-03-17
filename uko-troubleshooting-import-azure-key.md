@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-09"
+  years: 2022, 2025
+lastupdated: "2025-03-17"
 
 keywords: import azure key failure, can't import azure key
 
@@ -14,7 +14,7 @@ subcollection: hs-crypto
 
 
 
-# Why can't I distribute keys to Azure Key Vault?
+## Why can't I distribute keys to Azure Key Vault?
 {: #troubleshoot-import-azure-key}
 {: troubleshoot}
 {: support}
