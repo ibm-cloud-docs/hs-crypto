@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-02-08"
+  years: 2022, 2025
+lastupdated: "2025-03-17"
 
 keywords: troubleshoot, problems, known issues, failed to see azure key changes
 
@@ -14,7 +14,7 @@ subcollection: hs-crypto
 
 
 
-# Why do I fail to see the changes to my key in Azure Key Vault?
+## Why do I fail to see the changes to my key in Azure Key Vault?
 {: #troubleshoot-azure-delay}
 {: troubleshoot}
 {: support}
@@ -30,5 +30,3 @@ When you make changes to a managed key in {{site.data.keyword.uko_full_notm}}, i
 
 Wait for 2 minutes and refresh the Azure UI to see the changes.
 {: tsResolve}
-
-

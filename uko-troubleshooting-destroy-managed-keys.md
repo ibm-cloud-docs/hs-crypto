@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-05-20"
+  years: 2022, 2025
+lastupdated: "2025-03-17"
 
 keywords: troubleshoot, problems, known issues, can't destroy managed keys
 
@@ -14,7 +14,7 @@ subcollection: hs-crypto
 
 
 
-# Why can't I destroy managed keys?
+## Why can't I destroy managed keys?
 {: #troubleshoot-destroy-managed-keys}
 {: troubleshoot}
 
@@ -34,5 +34,3 @@ The managed key was deactivated less than 4 hours ago. A managed key can be dest
 
 Wait until it reaches 4 hours, and then try destroying the managed key again by following the same procedure.
 {: tsResolve}
-
-

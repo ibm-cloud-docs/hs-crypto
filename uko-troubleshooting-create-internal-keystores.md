@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-05-21"
+  years: 2022, 2025
+lastupdated: "2025-03-17"
 
 keywords: troubleshoot, problems, known issues, can't create internal keystores
 
@@ -14,7 +14,7 @@ subcollection: hs-crypto
 
 
 
-# Why can't I create internal keystores?
+## Why can't I create internal keystores?
 {: #troubleshoot-create-internal-keystores}
 {: troubleshoot}
 
@@ -37,5 +37,3 @@ For a single service instance, you can create a maximum of 50 internal KMS keyst
 
 Empty and delete an existing keystore so that you can create a new one.
 {: tsResolve}
-
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-16"
+lastupdated: "2025-03-12"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: hs-crypto
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Service dependency map for IBM Cloud Hyper Protect Crypto
+# Service dependency map for IBM Cloud Hyper Protect Crypto Services
 {: #service-dependencies}
 
 If a service depends on other {{site.data.keyword.cloud_notm}} services, there can be impacts if any of the dependent services are having issues. The dependency severity indicates the impact to the service when the dependency is down.
@@ -38,14 +38,19 @@ The following table provides the dependency listing of this service following a 
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
-| IBM Cloud Identity and Access Management | Availability, Change management, Instance control, Security compliance | No | Both |  Same region  |
-| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
+| IBM Cloud Identity and Access Management | Access management, Availability, Change management, Instance control, Security compliance | No | Both |  Same region  |
+| IBM Cloudant for IBM Cloud | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
+| IBM Cloud Classic NTP Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
+| IBM Cloud Internet Services | Availability, Change management, Disaster recovery, Operations | No | Both |  [Global](https://cloud.ibm.com/docs/overview?topic=overview-zero-downtime#global-platform)  |
+| IBM Cloud Object Storage | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
+| IBM Cloud Databases - databases-for-postgresql | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
+| IBM Cloud Activity Tracker event routing | Access management, Availability, Operations, Security compliance | No | Both |  Same region  |
 {: row-headers}
-{: caption="IBM Cloud Hyper Protect Crypto service dependency information - Critical dependencies" caption-side="top"}
-{: tab-title="Critical dependencies"}
+{: caption="IBM Cloud Hyper Protect Crypto Services service dependency information - Significant dependencies" caption-side="top"}
+{: tab-title="Significant dependencies"}
 {: tab-group="service-dependency-data-for-hs-crypto"}
 {: class="comparison-tab-table"}
-{: #critical-deps}
+{: #significant-deps}
 {: summary="Use the buttons for the dependency level to change the context of the table. This table has row and column headers. The row headers details about the dependency. The column headers identify the dependency. To understand the details about each dependency, navigate to the row to find the dependency that you need more information about interested in."}
 
 This table can be used to answer the following questions:

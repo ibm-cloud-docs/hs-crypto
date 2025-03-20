@@ -337,6 +337,7 @@ toc:
               label: Managing keys with Terraform - Unified Key Orchestrator
               href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs_managed_key
       - regions.md
+      - service-dependency.md
       - tke-paper.md
       - initialization-security-considerations.md
       - shared-responsibilities.md

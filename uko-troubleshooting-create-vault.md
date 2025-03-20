@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-05-21"
+  years: 2022, 2025
+lastupdated: "2025-03-17"
 
 keywords: troubleshoot, problems, known issues, can't create vaults
 
@@ -14,7 +14,7 @@ subcollection: hs-crypto
 
 
 
-# Why can't I create vaults?
+## Why can't I create vaults?
 {: #troubleshoot-create-vault}
 {: troubleshoot}
 {: support}
