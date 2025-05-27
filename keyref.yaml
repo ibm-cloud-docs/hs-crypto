@@ -17,3 +17,7 @@ keyword:
    ACSP
   cat_short:
    CC CAT
+  cdi_full:
+    IBM Z Crypto Discovery and Inventory
+  cdi_short:
+    CDI
