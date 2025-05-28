@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-29"
+  years: 2022, 2025
+lastupdated: "2025-05-28"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -45,12 +45,15 @@ You can create a key template from scratch with full control by yourself. To cre
         - **Google Cloud KMS**: Create a key template for keys to be used and stored in a Google Cloud KMS keystore.
         - **IBM Cloud KMS**: Create a key template for keys to be used and stored in an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keystore.
         - **IBM {{site.data.keyword.keymanagementserviceshort}}**: Create a key template for keys to be used and stored in an IBM {{site.data.keyword.keymanagementserviceshort}} key ring.
+	    - **Microsoft DKE**: Create a key template for keys to be used and stored in a Microsfot Double Key Encryption (DKE) keystore.
 
         For more information about the keystores, see [Components](/docs/hs-crypto?topic=hs-crypto-introduce-uko&interface=ui#Components).
         
     * (Optional) Decide where your keys to be created with the key template are going to be activated or stored under **Keystores** by setting keystore group. Activating a key in multiple keystores enables redundancy. 
 
         If there are no existing keystores, click **Add keystore** to [create internal KMS keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [connect to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores). 
+
+        If there are no existing keystores, click **Add keystore** to [create internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [connect to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores). 
 
         
         After a keystore type is selected, you can create keys in keystores of this type only.
@@ -147,7 +150,25 @@ You can create a key template from scratch with full control by yourself. To cre
     {: caption="IBM Key Protect Key templates properties" caption-side="bottom"}
     {: tab-title="IBM Key Protect Key templates"}
     {: tab-group="Key templates from scratch properties"}
-    {: class="comparison-tab-table"}   
+    {: class="comparison-tab-table"}
+
+    |       Property	      |                         Description                       |
+    |----------------------|-----------------------------------------------------------|
+    | Key template name    | A unique, human-readable name for easy identification of your key template. It must be 1–100 characters in length.  |
+    | Description          | (Optional) An extended description for your key template, with up to 200 characters in length. |
+    | Naming scheme        | (Optional) Enter strings or placeholders to enforce the key naming scheme. After defining the key naming scheme, you can then create a group of keys with the same key naming conventions but you cannot edit the key naming scheme any more. For more information, see [Defining key naming schemes](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui#define-naming-scheme).    | 
+    | Managed key name example | Read only. An example of the managed key name based on the key naming scheme is populated automatically for your reference.       |
+    | Algorithm            | The encryption algorithm to encrypt data for the key to be created with the template.     |
+    | Length               | The number of bits that represents the encryption strength of the key to be created with the template.   |
+    | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
+    | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
+    | Microsoft Entra ID | Select the security groups to grant access to key templates in {{site.data.keyword.uko_full_notm}}. You can select multiple security groups for each key. \n \n Note that you must have access to both [Microsoft Purview compliance portal](https://learn.microsoft.com/en-us/purview/purview-compliance-portal){: external} for each sensitivity label and the {{site.data.keyword.uko_full_notm}}. You need to use separate security groups for managing access. | 
+    {: #table-6}
+    {: caption="Microsoft DKE Key templates properties" caption-side="bottom"}
+    {: tab-title="Microsoft DKE Key templates"}
+    {: tab-group="Key templates from scratch properties"}
+    {: class="comparison-tab-table"} 
 
  
 
@@ -240,7 +261,8 @@ Note that you need to keep in mind of the following considerations:
     - **Azure Key Vault**: It must be 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). 
     - **Google Cloud KMS**: It must be 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (_-).
     - **IBM Cloud KMS**: It must be 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces.
-    - **IBM Key Protect**: It must be 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. 
+    - **IBM Key Protect**: It must be 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces.
+    - **Microsoft Double Key Encryption (DKE)**: It must 1-100 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces.
 
 - Enter fixed strings or placeholders for the key naming scheme. Each placeholder must be within 1-20 characters in length. Note that you need to use the angle brackets (<>) to insert placeholders. 
 
