@@ -117,7 +117,6 @@ To connect to an external keystore by using the UI, complete the following steps
     - **Google Cloud KMS keystore**: Create a keystore that can store Google Cloud KMS keys.
     - **{{site.data.keyword.keymanagementserviceshort}}**: Create a keystore that can store {{site.data.keyword.keymanagementserviceshort}} keys.
     - **{{site.data.keyword.cloud_notm}} KMS keystore in another instance**: Create a keystore that can store KMS keys in another {{site.data.keyword.hscrypto}} instance.
-    - **Microsoft DKE**: Create a keystore that can store Microsfot Double Key Encryption (DKE) keys.
 
     
     You can change the currency that is displayed by selecting your country or location. After you connect to the first external keystore, {{site.data.keyword.uko_full_notm}} base price applies additionally. For more information about pricing, see [the pricing sample](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs-uko).
