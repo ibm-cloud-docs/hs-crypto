@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-05-30"
+  years: 2018, 2025
+lastupdated: "2025-06-11"
 
 keywords: security and compliance, ibmcloud security compliance, compliant, data security, data encryption, data delete, common criteria, fips, iso, gdpr
 
@@ -98,19 +98,16 @@ If you or your company is a covered entity as defined by HIPAA, you can enable t
 
 {{site.data.keyword.hscrypto}} is {{site.data.keyword.cloud_notm}} for Financial Services certified. For information about requesting an {{site.data.keyword.cloud_notm}} for Financial Services report, see [{{site.data.keyword.cloud_notm}} industry compliance programs](https://www.ibm.com/cloud/compliance/industry){: external}.
 
-### IRAP support
-{: #IRAP-support}
+ 
 
-{{site.data.keyword.hscrypto}} meets the requirements of the Information Security Registered Assessors Program (IRAP) to provide high-quality information and communications technology services to government in support of Australia’s security.
 
-For more information, see [{{site.data.keyword.cloud_notm}} regional compliance programs](https://www.ibm.com/cloud/compliance/regional){: external}.
+
 
 ### ISO 27001, 27017, 27018
 {: #iso}
 
 {{site.data.keyword.hscrypto}} is ISO 27001, 27017, 27018 certified. You can view compliance certifications by visiting [{{site.data.keyword.cloud_notm}} global compliance programs](https://www.ibm.com/cloud/compliance/global){: external}.
 
-### SOC 2 Type 1
-{: #soc2-type1}
 
-{{site.data.keyword.hscrypto}} is SOC 2 Type 1 certified. For more information about requesting an {{site.data.keyword.cloud_notm}} SOC 2 report, see [{{site.data.keyword.cloud_notm}} global compliance programs](https://www.ibm.com/cloud/compliance/global){: external}.
+
+ 

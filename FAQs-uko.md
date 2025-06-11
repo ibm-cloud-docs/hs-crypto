@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-09"
+  years: 2022, 2025
+lastupdated: "2025-06-11"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -57,7 +57,7 @@ No. From a technology point of view, {{site.data.keyword.uko_full_notm}} is a fe
 {: #faq-uko-hpcs}
 {: faq}
 
-{{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} extends the Standard Plan. {{site.data.keyword.cloud_notm}} is the only cloud service provider that offers native cloud encryption key orchestration and lifecycle management across hybrid multicloud environments, including {{site.data.keyword.cloud_notm}}, IBM Satellite, other cloud service providers, and on-premises environments. The following table lists the key differences between {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} and {{site.data.keyword.hscrypto}} Standard Plan: 
+{{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} extends the Standard Plan. {{site.data.keyword.cloud_notm}} is the only cloud service provider that offers native cloud encryption key orchestration and lifecycle management across hybrid multicloud environments, including {{site.data.keyword.cloud_notm}}, other cloud service providers, and on-premises environments. The following table lists the key differences between {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} and {{site.data.keyword.hscrypto}} Standard Plan: 
 
 |       Feature	     |   {{site.data.keyword.hscrypto}} Standard Plan    |   {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}    |
 |----------------------|------------------------------| ------------------------------|   
@@ -90,7 +90,7 @@ The following list contains a few cloud providers:
 
 - Keystores of another {{site.data.keyword.hscrypto}} instance
 - Keystores of {{site.data.keyword.keymanagementservicefull}}
-- Keystores of {{site.data.keyword.keymanagementservicefull}} on Satellite
+
 - Microsoft Azure Key Vault
 - AWS Key Management Service
 - Google Cloud Key Management Service
