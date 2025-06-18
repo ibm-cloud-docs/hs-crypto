@@ -1,96 +1,52 @@
 {
+  "version": 2,
   "title": "IBM Cloud Hyper Protect Crypto Services docs",
-  "lastupdated": "2023-06-01",
   "introduction": "Find useful information about Hyper Protect Crypto Services.",
+  "product_page": "https://www.ibm.com/products/product-value",
+  "console_page": "/relative/console/path",
+  "section_topics": {
+    "links": [
+      {
+        "title": "Initialize service instances using smart cards and the Management Utilities",
+        "href": "/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities"
+      },
+      {
+        "title": "Initialize service instances using recovery crypto units",
+        "href": "/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit"
+      },
+      {
+        "title": "Initialize service instances using key part files",
+        "href": "/docs/hs-crypto?topic=hs-crypto-initialize-hsm"
+      }
+    ]
+  },
+  "section_highlights": [
+    {
+      "title": "Introducing Hyper Protect Crypto Services with Unified Key Orchestrator",
+      "description": "Overview of deploying Hyper Protect Crypto Services with Unified Key Orchestrator.",
+      "href": "https://mediacenter.ibm.com/media/1_2q05kgh2",
+      "type": "video"
+    }
+  ],
   "section_devtools": {
     "api": "/docs?tab=api-docs&category=security&subCategory=hs-crypto",
     "cli": "/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin",
     "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs"
   },
-  "section_recommended": [
-    {
-      "title": "Initialize service instances using smart cards and the Management Utilities",
-      "description": "This approach gives you the highest security, which enables you to store and manage master key parts using smart cards.",
-      "href": "/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities"
-    },
-    {
-      "title": "Initialize service instances using recovery crypto units",
-      "description": "If you create your service instance in Dallas (us-south) or Washington DC (us-east) where the recovery crypto units are enabled, you can choose this approach where the master key is randomly generated within a recovery crypto unit and then exported to other crypto units.",
-      "href": "/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit"
-    },
-    {
-      "title": "Initialize service instances using key part files",
-      "description": "You can also initialize your service instance using master key parts that are stored in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. ",
-      "href": "/docs/hs-crypto?topic=hs-crypto-initialize-hsm"
-    }
-  ],
-  "section_videos": [
-    {
-      "title": "IBM Cloud Hyper Protect Crypto Services overview",
-      "href": "https://mediacenter.ibm.com/media/1_1ipwq52p",
-      "thumbnail": "/images/thumbnail_overview_video.png"
-    },
-    {
-      "title": "Initializing Hyper Protect Crypto Services with key parts",
-      "href": "https://mediacenter.ibm.com/media/1_9mybz1cr",
-      "thumbnail": "/images/thumbnail_initialize_cli.png"
-    },
-    {
-      "title": "Initializing Hyper Protect Crypto Services with smart cards",
-      "href": "https://mediacenter.ibm.com/media/1_lo2fmwbb",
-      "thumbnail": "/images/thumbnail_initialize_smart_card.png"
-    },
-    {
-      "title": "Managing compliance of a Microsoft Office 365 environment using Hyper Protect Crypto Services with Unified Key Orchestrator",
-      "href": "https://mediacenter.ibm.com/media/1_1pzzhrb8",
-      "thumbnail": "/images/thumbnail_uko_o365.png"
-    },
-    {
-      "title": "Securely managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator",
-      "href": "https://mediacenter.ibm.com/media/1_1a6c6vub",
-      "thumbnail": "/images/thumbnail_uko_aws.png"
-    },
-    {
-      "title": "Configuring KMIP in Hyper Protect Crypto Services for key management and distribution",
-      "href": "https://mediacenter.ibm.com/media/1_e5gk6ktn",
-      "thumbnail": "/images/thumbnail_vmware_integration.png"
-    },
-    {
-      "title": "Hyper Protect Crypto Services and KMIP for VMware on IBM Cloud",
-      "href": "https://mediacenter.ibm.com/media/0_4wm4bq4s",
-      "thumbnail": "/images/thumbnail_vmware_intro.png"
-    },
-    {
-      "title": "Integrating Cloud Object Storage with Hyper Protect Crypto Services",
-      "href": "https://mediacenter.ibm.com/media/0_mgxwp16v",
-      "thumbnail": "/images/thumbnail_cos_integration.png"
-    }
-  ],
-  "section_learn": {
-    "developer": "https://developer.ibm.com/components/hyper-protect/"
-  },
   "section_updates": {
     "view_more": "/docs/hs-crypto?topic=hs-crypto-what-new",
     "tiles": [
       {
-        "date": "August 2023",
-        "title": "Added: Context Based Restrictions support",
-        "description": "Context Based Restrictions (CBR) enables extra protection on IBM Cloud resources. Essentially, it wraps around IAM polices allowing an admin or account owner configure network rules for the resource/endpoint and network zones to allow/disallow IPs for end user access. With added support of CBR in Hyper Protect Crypto Services, you can enforce these rules while utilizing your Hyper Protect Crypto Services instance. "
+        "date": "10 October 2024",
+        "title": "Integrating IBM Cloud services with Hyper Protect Crypto Services"
       },
       {
-        "date": "June 2023",
-        "title": "Updated: Pricing plan for Unified Key Orchestrator",
-        "description": "The pricing plan has been updated for Unified Key Orchestrator. You can find more details on the service catalog page. "
+        "date": "10 October 2024",
+        "title": "Initialize service instances using smart cards and the Management Utilities"
       },
       {
-        "date": "May 2023",
-        "title": "Added: Master key rotation support for all regions",
-        "description": "You are now able to rotate master keys in all supported regions. "
-      },
-      {
-        "date": "March 2023",
-        "title": "Added: Master key rotation for Unified Key Orchestrator and EP11 keystores",
-        "description": "You are now able to rotate master keys when you are using the Unified Key Orchestrator service plan or your service instance has EP11 keystores enabled. "
+        "date": "10 October 2024",
+        "title": "Initialize service instances using key part files"
       }
     ]
   }
