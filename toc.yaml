@@ -4,7 +4,7 @@ toc:
     service-name: hs-crypto
     category: security
     audience: service
-    href: /docs/hs-crypto
+    href: /docs/hs-crypto/oncloud
     console-page: /catalog/services/hyper-protect-crypto-services
     product-page: https://www.ibm.com/cloud/hyper-protect-crypto
     path: hs-crypto
@@ -126,8 +126,6 @@ toc:
               href: https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-offload-nginx-tls/
       - topicgroup:
           label: Tutorials on Unified Key Orchestrator
-          topics:
-          - tutorials/uko-kp-satellite.md 
           links:
           - link:
               label: "Securely Managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator"
@@ -252,8 +250,8 @@ toc:
               - uko-edit-internal-keystores.md
               - uko-edit-external-keystore-connection.md
               - uko-delete-internal-keystores.md
-              - uko-disconnect-external-keystores.md 
-              - uko-connect-azure-key-vault-private.md 
+              - uko-disconnect-external-keystores.md
+              - uko-connect-azure-key-vault-private.md
       - topicgroup:
           label: Managing master keys
           topics:
@@ -289,6 +287,7 @@ toc:
           - uko-manage-access.md
           - uko-grant-access-vaults.md
           - uko-role-best-practices.md
+          - cbr.md
           - uko-at-events.md
       - topicgroup:
           label: Logging and monitoring

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-06-18"
+  years: 2022, 2025
+lastupdated: "2025-06-11"
 
 keywords: security and compliance, ibmcloud security compliance, compliant, data security, data encryption, data delete, common criteria, fips, iso, gdpr
 
@@ -46,7 +46,6 @@ Within 30 days after you delete a key, you can restore the key to reverse the de
 
 Note that even if the key is not restored, your data remains in those services in the encrypted form. Metadata that is associated with a key, such as the key's transition history and name, is kept in the {{site.data.keyword.hscrypto}} database.
 
- 
 To help you determine what data is protected by a key, you can use the key management service API to [view associations between a key and your cloud resources](/docs/hs-crypto?topic=hs-crypto-view-protected-resources).
 {: note}
 
@@ -61,6 +60,7 @@ For a complete listing of {{site.data.keyword.cloud_notm}} compliance certificat
 
 ### Common Criteria EAL4 certified
 {: #uko-common-criteria-certified}
+
 
 The Hardware Security Module (HSM) used by {{site.data.keyword.hscrypto}} is the {{site.data.keyword.IBM_notm}} PCIe Cryptographic Coprocessor Version 3 (PCIeCC3) or Version 4 (PCIeCC4). PCIeCC3 is also referred to as the {{site.data.keyword.IBM_notm}} 4768 crypto card or the Crypto Express 6S (CEX6S). PCIeCC4 is also referred to as the {{site.data.keyword.IBM_notm}} 4769 crypto card or the Crypto Express 7S (CEX7S). Both CEX6S and CEX7S are Common Criteria EAL4 certified to meet the security requirements defined by the Common Criteria for Information Technology Security Evaluation.
 
@@ -100,19 +100,15 @@ To ensure GDPR compliance for your {{site.data.keyword.hscrypto}} resources, [en
 
 If you or your company is a covered entity as defined by HIPAA, you can enable the HIPAA Supported setting for your {{site.data.keyword.cloud_notm}} account. To find out more, see [Enabling the HIPAA Supported setting](/docs/account?topic=account-enabling-hipaa).
 
-### IRAP support
-{: #uko-IRAP-support}
+ 
 
-{{site.data.keyword.hscrypto}} meets the requirements of the Information Security Registered Assessors Program (IRAP) to provide high-quality information and communications technology services to government in support of Australia’s security.
 
-For more information, see [{{site.data.keyword.cloud_notm}} regional compliance programs](https://www.ibm.com/cloud/compliance/regional){: external}.
 
 ### ISO 27001, 27017, 27018
 {: #uko-iso}
 
 {{site.data.keyword.hscrypto}} is ISO 27001, 27017, 27018 certified. You can view compliance certifications by visiting [{{site.data.keyword.cloud_notm}} global compliance programs](https://www.ibm.com/cloud/compliance/global){: external}
 
-### SOC 2 Type 1
-{: #uko-soc2-type1}
 
-{{site.data.keyword.hscrypto}} is SOC 2 Type 1 certified. For information about requesting an {{site.data.keyword.cloud_notm}} SOC 2 report, see [{{site.data.keyword.cloud_notm}} global compliance programs](https://www.ibm.com/cloud/compliance/global){: external}. 
+
+ 

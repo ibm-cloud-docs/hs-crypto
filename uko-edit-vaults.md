@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-29"
+  years: 2022, 2025
+lastupdated: "2025-04-09"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -39,7 +39,7 @@ To edit vault details by using the UI, complete the following steps:
 5. Click **Save** to save the property changes.
 
 6. The key templates, keys, and keystores that are assigned to this vault are displayed in tables. 
-7.  Optionally, you can add additional key templates to the vault by clicking **Create key template** under **Key templates**, add keys by clicking **Create key** under **Managed Keys**, or add keystores by clicking **Add keystores** under **Keystores**.
+7.  Optionally, you can add additional key templates to the vault by clicking **Create key template** under **Key templates**, add keys by clicking **Create key** under **Managed keys**, or connect to keystores by clicking **Connect to keystore** under **Keystores**.
 
 
 

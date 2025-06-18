@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-29"
+  years: 2022, 2025
+lastupdated: "2025-06-03"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -45,12 +45,15 @@ You can create a key template from scratch with full control by yourself. To cre
         - **Google Cloud KMS**: Create a key template for keys to be used and stored in a Google Cloud KMS keystore.
         - **IBM Cloud KMS**: Create a key template for keys to be used and stored in an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keystore.
         - **IBM {{site.data.keyword.keymanagementserviceshort}}**: Create a key template for keys to be used and stored in an IBM {{site.data.keyword.keymanagementserviceshort}} key ring.
+	    - **Microsoft DKE**: Create a key template for keys to be used and stored in a Microsfot Double Key Encryption (DKE) keystore.
 
         For more information about the keystores, see [Components](/docs/hs-crypto?topic=hs-crypto-introduce-uko&interface=ui#Components).
         
     * (Optional) Decide where your keys to be created with the key template are going to be activated or stored under **Keystores** by setting keystore group. Activating a key in multiple keystores enables redundancy. 
 
         If there are no existing keystores, click **Add keystore** to [create internal KMS keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [connect to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores). 
+
+        If there are no existing keystores, click **Add keystore** to [create internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [connect to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores). 
 
         
         After a keystore type is selected, you can create keys in keystores of this type only.
@@ -147,9 +150,7 @@ You can create a key template from scratch with full control by yourself. To cre
     {: caption="IBM Key Protect Key templates properties" caption-side="bottom"}
     {: tab-title="IBM Key Protect Key templates"}
     {: tab-group="Key templates from scratch properties"}
-    {: class="comparison-tab-table"}   
-
- 
+    {: class="comparison-tab-table"} 
 
 8. Under **Summary**, view the summary of your key template, and then click **Create key template** to confirm.
 
@@ -240,7 +241,8 @@ Note that you need to keep in mind of the following considerations:
     - **Azure Key Vault**: It must be 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). 
     - **Google Cloud KMS**: It must be 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (_-).
     - **IBM Cloud KMS**: It must be 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces.
-    - **IBM Key Protect**: It must be 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. 
+    - **IBM Key Protect**: It must be 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces.
+    - **Microsoft Double Key Encryption (DKE)**: It must 1-100 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces.
 
 - Enter fixed strings or placeholders for the key naming scheme. Each placeholder must be within 1-20 characters in length. Note that you need to use the angle brackets (<>) to insert placeholders. 
 

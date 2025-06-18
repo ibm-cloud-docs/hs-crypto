@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-08-02"
+  years: 2022, 2025
+lastupdated: "2025-06-11"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -29,7 +29,7 @@ Learn concepts that are related to the {{site.data.keyword.hscrypto}} [key manag
 ### Root keys
 {: #uko-root-key-concept}
 
-Root keys, also known as customer root keys (CRKs), are primary resources in {{site.data.keyword.hscrypto}}. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other data encryption keys (DEKs) that are stored in a data service. With {{site.data.keyword.hscrypto}}, you can create, store, and manage the lifecycle of root keys. Root keys that are created in {{site.data.keyword.hscrypto}} are symmetric 256-bit AES keys. Unlike a standard key, a root key can never leave the bounds of the {{site.data.keyword.hscrypto}} service. To learn more, see [Manage your keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-keys).
+Root keys, also known as customer root keys (CRKs), are primary resources in {{site.data.keyword.hscrypto}}. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other data encryption keys (DEKs) that are stored in a data service. With {{site.data.keyword.hscrypto}}, you can create, store, and manage the lifecycle of root keys. Root keys that are created in {{site.data.keyword.hscrypto}} are symmetric 256-bit AES keys. Unlike a standard key, a root key can never leave the bounds of the {{site.data.keyword.hscrypto}} service. To learn more, see [Manage your keys](/docs/hs-crypto?topic=hs-crypto-get-started#manage-key).
 
 ### Standard keys
 {: #uko-standard-key-concept}
@@ -44,15 +44,13 @@ Data encryption keys (DEKs) are cryptographic keys that you use for data encrypt
 ### Envelope encryption
 {: #uko-envelope-encryption-concept}
 
-Envelope encryption is the practice of encrypting data with a DEK and then encrypting the DEK with a root key that you can fully manage. 
-
- 
+Envelope encryption is the practice of encrypting data with a DEK and then encrypting the DEK with a root key that you can fully manage.
 
 
 ## Cloud hardware security module
 {: #uko-cloud-hsm-concepts}
 
-This section covers concepts that are related to {{site.data.keyword.hscrypto}} [Cloud Hardware Security Module (HSM) feature](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-cloud-hsm). The list starts with the most fundamental concepts.  
+This section covers concepts that are related to {{site.data.keyword.hscrypto}} [Cloud Hardware Security Module (HSM) feature](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-cloud-hsm). The list starts with the most fundamental concepts. 
 
 ### Hardware security module
 {: #uko-hsm-concept}
@@ -74,7 +72,6 @@ A crypto unit is a single unit that represents an HSM and the corresponding soft
 
     Recovery crypto units can also be used as backup crypto units that save a copy of the master key value used by the operational crypto units. If the master key is lost or destroyed, you can [recover the master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit) using signed TKE administrative commands.
 
-    
     If smart cards are used to load the master key, the recovery crypto units are not applicable and can be ignored. The backup of the master key relies on the backup of the smart cards in that case.
     {: note}
 
@@ -253,9 +250,9 @@ A keystore needs to be assigned to a vault. If it is an internal keystore, it ca
 ### Internal keystore
 {: #uko-internal-keystore-concept}
 
-An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance to store the cryptographic keys in your service instance. You can create up to five free internal keystores to manage your keys. 
+An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance to store the cryptographic keys in your service instance. You can create up to five free internal keystores to manage your keys.
 
 ### External keystore
 {: #uko-external-keystore-concept}
 
-An external keystore is a keystore that is not in your {{site.data.keyword.hscrypto}} instance. You can connect your service instance to another key management instance on {{site.data.keyword.cloud_notm}} such as {{site.data.keyword.hscrypto}}, {{site.data.keyword.keymanagementserviceshort}}, or {{site.data.keyword.keymanagementserviceshort}} on Satellite, potentially in another region. Or, you can connect your service instance to external keystores from other cloud providers such as Microsoft Azure Key Vault, AWS Key Management Service (KMS), and Google Cloud KMS. 
+An external keystore is a keystore that is not in your {{site.data.keyword.hscrypto}} instance. You can connect your service instance to another key management instance on {{site.data.keyword.cloud_notm}} such as {{site.data.keyword.hscrypto}} or {{site.data.keyword.keymanagementserviceshort}}, potentially in another region. Or, you can connect your service instance to external keystores from other cloud providers such as Microsoft Azure Key Vault, AWS Key Management Service (KMS), and Google Cloud KMS. 

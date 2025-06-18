@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-10-09"
+  years: 2018, 2025
+lastupdated: "2025-06-16"
 
 keywords: root key, create root key, add key, root key api, api key, symmetric key, key material, key management, create key-wrapping key, create crk, create customer key, key-wrapping key
 
@@ -46,7 +46,7 @@ If you enable [dual authorization settings for your {{site.data.keyword.hscrypto
     | Key name | A unique, human-readable name for easy identification of your key. Length must be within 2 - 90 characters. To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location. |
     | Key alias | (Optional) One or more unique, human-readable aliases that you want to assign to your key for easy recognition. Alias size can be 2 - 90 characters. You can set up to five key aliases for the key, with each separated by a comma. \n \n Note: Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. |
     | Key ring ID | Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key is added to the `default` key ring. For more information about key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
-    | Expiration date | (Optional) Set the date and time when the key gets expired. After the expiration date, the key moves into the Deactivated state. For more information about key state, see [Monitoring the lifecycle of encryption keys](/docs/hs-crypto?topic=hs-crypto-key-states). |
+    | Expiration date | **Optional**. The date and time that the key expires in the system, in RFC 3339 format (YYYY-MM-DD HH:MM:SS.SS, for example 2019-10-12T07:20:50.52Z). Use caution when setting an expiration date, as keys created with an expiration date automatically transition to the Deactivated state within one hour after expiration. In this state, the only allowed actions on the key are unwrap, rewrap, rotate, and delete. Deactivated keys cannot be used to encrypt (wrap) new data, even if rotated while deactivated. Rotation does not reset or extend the expiration date, nor does it allow the date to be changed. It is recommended that any data encrypted with an expiring or expired key be re-encrypted using a new customer root key (CRK) before the original CRK expires, to prevent service disruptions. Deleting and restoring a deactivated key does not move it back to the Active state. If the expiration_date attribute is omitted, the key does not expire. |
     | Description | (Optional) Add an extended description for your key. It can be two to 240 characters in length. |
     {: caption="Describes the settings to create a key" caption-side="bottom"}
 
@@ -111,15 +111,20 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys
     | `key_name` | **Required.** A unique, human-readable name for easy identification of your key. \n \n **Important:** To protect your privacy, do not store your personal data as metadata for your key. |
     | `alias_list` | **Optional.** One or more unique, human-readable aliases assigned to your key. \n \n **Important:** To protect your privacy, do not store your personal data as metadata for your key. \n \n Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive). |
     | `key_description` | Optional: An extended description of your key. \n \n **Important:** To protect your privacy, do not store your personal data as metadata for your key. |
-    | `YYYY-MM-DD` \n \n `HH:MM:SS.SS` | Optional: The date and time that the key expires in the system, in RFC 3339 format. If the `expirationDate` attribute is omitted, the key does not expire. |
+    | `expiration_date` | **Optional**. The date and time that the key expires in the system, in RFC 3339 format (YYYY-MM-DD HH:MM:SS.SS, for example 2019-10-12T07:20:50.52Z). Use caution when setting an expiration date, as keys created with an expiration date automatically transition to the Deactivated state within one hour after expiration. In this state, the only allowed actions on the key are unwrap, rewrap, rotate, and delete. Deactivated keys cannot be used to encrypt (wrap) new data, even if rotated while deactivated. Rotation does not reset or extend the expiration date, nor does it allow the date to be changed. It is recommended that any data encrypted with an expiring or expired key be re-encrypted using a new customer root key (CRK) before the original CRK expires, to prevent service disruptions. Deleting and restoring a deactivated key does not move it back to the Active state. If the expiration_date attribute is omitted, the key does not expire. |
     | `key_type` | A boolean value that determines whether the key material can leave the service. \n \n When you set the `extractable` attribute to `false`, the service creates a root key that you can use for `wrap` or `unwrap` operations. |
     {: caption="Describes the variables needed to add a root key with the API" caption-side="bottom"}
 
-    To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-122.pdf){: external}.
-    {: tip}
+
 
     If you set the `expirationDate` in your request, the key is moved to the deactivated state within 1 hour past the key's expiration date.
-    {: note}
+    The date and time that the key expires in the system, in RFC 3339 format (YYYY-MM-DD HH:MM:SS.SS, for example 2019-10-12T07:20:50.52Z). Use caution when setting an expiration date, as keys created with an expiration date automatically transition to the Deactivated state within one hour after expiration. In this state, the only allowed actions on the key are unwrap, rewrap, rotate, and delete. Deactivated keys cannot be used to encrypt (wrap) new data, even if rotated while deactivated. Rotation does not reset or extend the expiration date, nor does it allow the date to be changed. It is recommended that any data encrypted with an expiring or expired key be re-encrypted using a new customer root key (CRK) before the original CRK expires, to prevent service disruptions. Deleting and restoring a deactivated key does not move it back to the Active state. If the expirationDate attribute is omitted, the key does not expire.
+    {: Important}
+    
+    You can monitor the usage of keys with expiration dates using [IBM Cloud Logs](https://cloud.ibm.com/docs/cloud-logs). The logs indicate the expiration date and the number of days remaining using the JSON properties `responseData.expirationDate` and `responseData.daysToKeyExpire` for keys that have expiration date and for the following `action` values: `kms.secrets.wrap`, `kms.secrets.unwrap`, `kms.secrets.rewrap`, `kms.secrets.read`, `kms.secrets.readmetadata`, `kms.secrets.create`, `kms.secrets-with-policy-overrides.create` and `kms.secrets.expire`. In addition, a successful REST call to `GET /api/v2/keys` returns the `expirationDate` property for each key that has an expiration date.
+    
+    To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-122.pdf){: external}.
+    {: Note}
 
     A successful `POST /v2/keys` response returns the ID value for your key, along with other metadata. The ID is a unique identifier that is assigned to your key and is used for subsequent calls to the {{site.data.keyword.hscrypto}} key management service API.
 
