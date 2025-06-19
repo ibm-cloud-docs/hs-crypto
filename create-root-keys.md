@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-06-16"
+lastupdated: "2025-06-19"
 
 keywords: root key, create root key, add key, root key api, api key, symmetric key, key material, key management, create key-wrapping key, create crk, create customer key, key-wrapping key
 
@@ -11,9 +11,6 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
-
-
 
 # Creating root keys
 {: #create-root-keys}
@@ -115,16 +112,14 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys
     | `key_type` | A boolean value that determines whether the key material can leave the service. \n \n When you set the `extractable` attribute to `false`, the service creates a root key that you can use for `wrap` or `unwrap` operations. |
     {: caption="Describes the variables needed to add a root key with the API" caption-side="bottom"}
 
-
-
     If you set the `expirationDate` in your request, the key is moved to the deactivated state within 1 hour past the key's expiration date.
     The date and time that the key expires in the system, in RFC 3339 format (YYYY-MM-DD HH:MM:SS.SS, for example 2019-10-12T07:20:50.52Z). Use caution when setting an expiration date, as keys created with an expiration date automatically transition to the Deactivated state within one hour after expiration. In this state, the only allowed actions on the key are unwrap, rewrap, rotate, and delete. Deactivated keys cannot be used to encrypt (wrap) new data, even if rotated while deactivated. Rotation does not reset or extend the expiration date, nor does it allow the date to be changed. It is recommended that any data encrypted with an expiring or expired key be re-encrypted using a new customer root key (CRK) before the original CRK expires, to prevent service disruptions. Deleting and restoring a deactivated key does not move it back to the Active state. If the expirationDate attribute is omitted, the key does not expire.
-    {: Important}
+    {: important}
     
     You can monitor the usage of keys with expiration dates using [IBM Cloud Logs](https://cloud.ibm.com/docs/cloud-logs). The logs indicate the expiration date and the number of days remaining using the JSON properties `responseData.expirationDate` and `responseData.daysToKeyExpire` for keys that have expiration date and for the following `action` values: `kms.secrets.wrap`, `kms.secrets.unwrap`, `kms.secrets.rewrap`, `kms.secrets.read`, `kms.secrets.readmetadata`, `kms.secrets.create`, `kms.secrets-with-policy-overrides.create` and `kms.secrets.expire`. In addition, a successful REST call to `GET /api/v2/keys` returns the `expirationDate` property for each key that has an expiration date.
     
     To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-122.pdf){: external}.
-    {: Note}
+    {: note}
 
     A successful `POST /v2/keys` response returns the ID value for your key, along with other metadata. The ID is a unique identifier that is assigned to your key and is used for subsequent calls to the {{site.data.keyword.hscrypto}} key management service API.
 
