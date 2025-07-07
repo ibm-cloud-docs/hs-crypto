@@ -13,10 +13,16 @@ keyword:
     UKO
   cc_short:
     CC
+  cc_full:
+    Crypto Connect
   acsp_short:
-   ACSP
+    ACSP
   cat_short:
-   CC CAT
+    CC CAT
+  cat_agent_short:
+    CAT Agent
+  kmg_agent_short:
+    KMG Agent
   cdi_full:
     IBM Z Crypto Discovery and Inventory
   cdi_short:
