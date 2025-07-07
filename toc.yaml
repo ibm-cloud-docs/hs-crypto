@@ -4,7 +4,7 @@ toc:
     service-name: hs-crypto
     category: security
     audience: service
-    href: /docs/hs-crypto/oncloud
+    href: /docs/hs-crypto
     console-page: /catalog/services/hyper-protect-crypto-services
     product-page: https://www.ibm.com/cloud/hyper-protect-crypto
     path: hs-crypto
