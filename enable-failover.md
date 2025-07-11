@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-09"
+  years: 2021, 2025
+lastupdated: "2025-07-11"
 
 keywords: failover crypto unit, add failover crypto units, enable failover, enable cross-region recovery
 
@@ -21,7 +21,7 @@ subcollection: hs-crypto
 Failover crypto units back up the operational crypto units and keystores in another region. If a regional disaster occurs, you can use failover crypto units to automatically restore your data, which can reduce the downtime and data loss. You can either enable failover crypto unit [when you provision a service instance](/docs/hs-crypto?topic=hs-crypto-provision) or after you provision a service instance. This topic guides you through enabling or adding failover crypto units after you provision a service instance.
 {: shortdesc}
 
-If you have a service instance in the `us-south` or `us-east` region, you can enable failover crypto units for your instance with the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) CLI plug-in or the Management Utilities. If failover crypto units are already assigned to your service instance, you can still add extra ones. After you add failover crypto units, make sure to raise a support ticket to repair the instance and enable the failover units.
+If you have a service instance in the `us-south`, `us-east`, or `eu-es` region, you can enable failover crypto units for your instance with the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) CLI plug-in or the Management Utilities. If failover crypto units are already assigned to your service instance, you can still add extra ones. After you add failover crypto units, make sure to raise a support ticket to repair the instance and enable the failover units.
 
 You can specify a total number of failover crypto units that are equal to or less than the number of operational crypto units. However, to meet high availability, at least two failover crypto units need to be assigned. Failover crypto units are also charged. For the detailed pricing information, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
 {: tip}
@@ -95,14 +95,14 @@ To enable or add failover crypto units by using the {{site.data.keyword.cloud_no
 
     2. Type `y` to confirm the action. The failover crypto units are assigned in the target failover region.
 
-        Failover crypto units are now available in `us-south` and `us-east`. The two regions are the target failover regions of each other. For example, if your instance is located in `us-south`, the failover region for your instance is `us-east`.
+        Failover crypto units are now available in `us-south`, `us-east`, and `eu-es`.
 
         The following output is a sample display:
 
         ```
-        Instance 00000a09-0563-4e00-b259-06a4edfc4cba targetting backup region us-south
+        Instance 00000a09-0563-4e00-b259-06a4edfc4cba targeting backup region us-south
         2 failover crypto units have been assigned.
-        Getting cryptounit info... this may take a moment
+        Getting crypto unit info... this may take a moment
 
         API endpoint:    https://cloud.ibm.com
         Region:          us-south
@@ -192,7 +192,7 @@ To enable or add failover crypto units by using the Management Utilities, follow
         
     4. Click **Yes** to confirm the action. The failover crypto units are assigned in the target failover region.
 
-        Failover crypto units are now available in `us-south` and `us-east`. The two regions are the target failover regions of each other. For example, if your instance is located in `us-south`, the failover region for your instance is `us-east`.
+        Failover crypto units are now available in `us-south`, `us-east`, and `eu-es`. 
 
 4. Initialize failover crypto units by using the same master key for the operational crypto units initialization and the same initialization approach:
 
