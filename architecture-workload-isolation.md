@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-09"
+  years: 2021, 2025
+lastupdated: "2025-07-11"
 
 keywords: hyper protect crypto services architecture, service architecture, architecture diagram, workload isolation, crypto units, secure service container, ssc, public isolation for hyper protect crypto services, compute isolation for hyper protect crypto services
 
@@ -55,7 +55,7 @@ Recovery crypto unit
 Failover crypto unit
 :   Failover crypto units back up the operational crypto units in another region, which includes keystores that store encryption keys. When a regional disaster occurs, you can use failover crypto units to ensure production workloads and avoid data loss.
 
-    Currently, failover crypto units are available only in the region of Dallas (`us-south`) and Washington DC (`us-east`). If you create your instance in either of the two regions, you can choose whether to enable the failover crypto units with [extra charges](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
+    Currently, failover crypto units are available only in the regions of Dallas (`us-south`), Washington DC (`us-east`), and Madrid (`eu-es`). If you create your instance in any of the three regions, you can choose whether to enable the failover crypto units with [extra charges](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
     {: note}
 
 For more information about the {{site.data.keyword.hscrypto}} components, see [Components and concepts](/docs/hs-crypto?topic=hs-crypto-understand-concepts).

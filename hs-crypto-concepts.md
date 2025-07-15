@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-05-30"
+  years: 2018, 2025
+lastupdated: "2025-07-11"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -81,7 +81,7 @@ A crypto unit is a single unit that represents an HSM and the corresponding soft
 
 - Failover crypto unit
 
-    Failover crypto units back up the operational crypto units and keystores in another region, and are initialized to provide quick failover in case of disaster. Failover crypto units [charge extra fees](/docs/hs-crypto?topic=hs-crypto-faq-pricing) and this option is now available only in regions of `us-south` and `us-east`, which means if you create your instance in either of the two regions, the failover crypto units are located in the other region. For more information about using failover crypto units in a regional disaster, see [Restoring your data by using failover crypto units](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-failover-crypto-units).
+    Failover crypto units back up the operational crypto units and keystores in another region, and are initialized to provide quick failover in case of disaster. Failover crypto units [charge extra fees](/docs/hs-crypto?topic=hs-crypto-faq-pricing) and this option is now available only in regions of `us-south`, `us-east`, and `eu-es` which means if you create your instance in one of the three regions, the failover crypto units are automatically located in the predetermined failover region. For more information about using failover crypto units in a regional disaster, see [Restoring your data by using failover crypto units](/docs/hs-crypto?topic=hs-crypto-restore-data#restore-data-failover-crypto-units).
 
 ### Administrators
 {: #admin-concept}
@@ -217,5 +217,3 @@ gRPC is a modern open source high performance remote procedure call (RPC) framew
 {: #grep11-concept}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of the Enterprise PKCS #11 (EP11) over [gRPC](https://grpc.io){: external} API calls (also referred to as GREP11), with which all the Crypto functions are executed in a cloud HSM. EP11 over gRPC is a stateless interface for cryptographic operations on cloud. For more information about the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11-intro) and [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
-
-

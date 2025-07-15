@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-09"
+  years: 2022, 2025
+lastupdated: "2025-07-09"
 
 keywords: rotate managed key, rotate key, managed key rotation, key rotation, key rewrap
 
@@ -38,7 +38,7 @@ Note that key rotation might charge extra fees depending on the type of your man
 
 - AWS Key Management Service keys: [AWS Key Management Service Pricing](https://aws.amazon.com/kms/pricing/){: external}
 - Azure Key Vault keys: [Azure Key Vault pricing](https://azure.microsoft.com/en-us/pricing/details/key-vault/){: external}
-- Google Cloud KMS keys: [Google Cloud Key Management Service Pricing](https://cloud.google.com/security-key-management#section-11){: external}.
+- Google Cloud KMS keys: [Google Cloud Key Management Service Pricing](https://cloud.google.com/security/products/security-key-management#pricing){: external}.
 - {{site.data.keyword.cloud_notm}} KMS keys: No extra fees. For more information, see [{{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs-uko). 
 - IBM {{site.data.keyword.keymanagementserviceshort}} keys: No extra fees. For more information, see [{{site.data.keyword.keymanagementserviceshort}} pricing](https://cloud.ibm.com/docs/key-protect?topic=key-protect-pricing-plan){: external}. 
 
