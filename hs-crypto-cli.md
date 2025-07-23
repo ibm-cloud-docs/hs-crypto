@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-10-09"
+  years: 2018, 2025
+lastupdated: "2025-07-23"
 
 keywords: hpcs cli, hyper protect crypto services cli, trusted key entry plug-in, cloud tke, tke plug-in, cli plug-in, tke commands, cloud tke reference, cert manager cli plug-in, key management cli, uko cli, united key orchestrator cli
 
@@ -37,7 +37,7 @@ You can use the TKE CLI plug-in to manage crypto units that are assigned to your
 
 To install the TKE CLI plug-in, follow these steps:
 
-1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started){: external}.
+1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external}.
 
     {{site.data.keyword.cloud_notm}} CLI requires Java&trade; 1.8.0. The prefix for running commands by using the {{site.data.keyword.cloud_notm}} CLI is `ibmcloud`.
 
