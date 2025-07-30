@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-03"
+lastupdated: "2025-07-30"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -76,9 +76,9 @@ You can create a key template from scratch with full control by yourself. To cre
     | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
     | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-1}
-    {: caption="AWS Key templates properties" caption-side="bottom"}
-    {: tab-title="AWS Key templates"}
-    {: tab-group="Key templates from scratch properties"}
+    {: caption="AWS key templates properties" caption-side="bottom"}
+    {: tab-title="AWS key templates"}
+    {: tab-group="key templates from scratch properties"}
     {: class="comparison-tab-table"}
 
 
@@ -95,9 +95,9 @@ You can create a key template from scratch with full control by yourself. To cre
     | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
     | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-2}
-    {: caption="Azure Key templates properties" caption-side="bottom"}
-    {: tab-title="Azure Key templates"}
-    {: tab-group="Key templates from scratch properties"}
+    {: caption="Azure key templates properties" caption-side="bottom"}
+    {: tab-title="Azure key templates"}
+    {: tab-group="key templates from scratch properties"}
     {: class="comparison-tab-table"}
 
 
@@ -113,9 +113,9 @@ You can create a key template from scratch with full control by yourself. To cre
     | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
     | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-3}
-    {: caption="Google Key templates properties" caption-side="bottom"}
-    {: tab-title="Google Key templates"}
-    {: tab-group="Key templates from scratch properties"}
+    {: caption="Google key templates properties" caption-side="bottom"}
+    {: tab-title="Google key templates"}
+    {: tab-group="key templates from scratch properties"}
     {: class="comparison-tab-table"}
 
     |       Property	      |                         Description                       |
@@ -130,9 +130,9 @@ You can create a key template from scratch with full control by yourself. To cre
     | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
     | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-4}
-    {: caption="IBM Cloud KMS Key templates properties" caption-side="bottom"}
-    {: tab-title="IBM Cloud KMS Key templates"}
-    {: tab-group="Key templates from scratch properties"}
+    {: caption="IBM Cloud KMS key templates properties" caption-side="bottom"}
+    {: tab-title="IBM Cloud KMS key templates"}
+    {: tab-group="key templates from scratch properties"}
     {: class="comparison-tab-table"}
 
     |       Property	      |                         Description                       |
@@ -147,9 +147,9 @@ You can create a key template from scratch with full control by yourself. To cre
     | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
     | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-5}
-    {: caption="IBM Key Protect Key templates properties" caption-side="bottom"}
-    {: tab-title="IBM Key Protect Key templates"}
-    {: tab-group="Key templates from scratch properties"}
+    {: caption="IBM Key Protect key templates properties" caption-side="bottom"}
+    {: tab-title="IBM Key Protect key templates"}
+    {: tab-group="key templates from scratch properties"}
     {: class="comparison-tab-table"} 
 
 8. Under **Summary**, view the summary of your key template, and then click **Create key template** to confirm.
