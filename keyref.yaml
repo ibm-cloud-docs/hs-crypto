@@ -26,6 +26,6 @@ keyword:
   cdi_full:
     IBM Z Crypto Discovery and Inventory
   cdi_short:
-    CDI
+    zCDI
   ekmf_ws:
     EKMF Workstation
