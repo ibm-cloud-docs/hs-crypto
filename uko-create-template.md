@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-30"
+lastupdated: "2025-08-13"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -45,7 +45,7 @@ You can create a key template from scratch with full control by yourself. To cre
         - **Google Cloud KMS**: Create a key template for keys to be used and stored in a Google Cloud KMS keystore.
         - **IBM Cloud KMS**: Create a key template for keys to be used and stored in an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keystore.
         - **IBM {{site.data.keyword.keymanagementserviceshort}}**: Create a key template for keys to be used and stored in an IBM {{site.data.keyword.keymanagementserviceshort}} key ring.
-	    - **Microsoft DKE**: Create a key template for keys to be used and stored in a Microsfot Double Key Encryption (DKE) keystore.
+	    - **Microsoft DKE**: Create a key template for keys to be used and stored in a Microsoft Double Key Encryption (DKE) keystore.
 
         For more information about the keystores, see [Components](/docs/hs-crypto?topic=hs-crypto-introduce-uko&interface=ui#Components).
         
@@ -61,14 +61,14 @@ You can create a key template from scratch with full control by yourself. To cre
 
 6. Click **Next** to continue.{: #key-template-properties}
 
-7. Under **Key template properties**, specify the following details of the key template. Click **Next** to continue when you are done. By default, some configurations are pre-selected. However, you can change it according to your needs.
+7. Under **Key template properties**, specify the following details of the key template. Click **Next** to continue when you are done. By default, some configurations are preselected. However, you can change it according to your needs.
 
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
     | Key template name    | A unique, human-readable name for easy identification of your key template. It must be 1–100 characters in length.  |
     | Description          | (Optional) An extended description for your key template, with up to 200 characters in length. |
-    | Naming scheme        | (Optional) Enter strings or placeholders to enforce the key naming scheme. After defining the key naming scheme, you can then create a group of keys with the same key naming conventions but you cannot edit the key naming scheme any more. For more information, see [Defining key naming schemes](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui#define-naming-scheme).    | 
+    | Naming scheme        | (Optional) Enter strings or placeholders to enforce the key naming scheme. After defining the key naming scheme, you can then create a group of keys with the same key naming conventions but you cannot edit the key naming scheme anymore. For more information, see [Defining key naming schemes](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui#define-naming-scheme).    | 
     | Managed key name example | Read only. An example of the managed key name based on the key naming scheme is populated automatically for your reference.       |
     | Algorithm            | The encryption algorithm to encrypt data for the key to be created with the template.     |
     | Length               | The number of bits that represents the encryption strength of the key to be created with the template.   |
@@ -86,9 +86,9 @@ You can create a key template from scratch with full control by yourself. To cre
     |----------------------|-----------------------------------------------------------|
     | Key template name    | A unique, human-readable name for easy identification of your key template. It must be 1–100 characters in length.  |
     | Description          | (Optional) An extended description for your key template, with up to 200 characters in length.|
-    | Naming scheme        | (Optional) Enter strings or placeholders to enforce the key naming scheme. After defining the key naming scheme, you can then create a group of keys with the same key naming conventions but you cannot edit the key naming scheme any more. For more information, see [Defining key naming schemes](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui#define-naming-scheme).    | 
+    | Naming scheme        | (Optional) Enter strings or placeholders to enforce the key naming scheme. After defining the key naming scheme, you can then create a group of keys with the same key naming conventions but you cannot edit the key naming scheme anymore. For more information, see [Defining key naming schemes](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui#define-naming-scheme).    | 
     | Managed key name example | Read only. An example of the managed key name based on the key naming scheme is populated automatically for your reference.       |
-    | Protection level     | Data protection level of keys to be created with the key template. \n \n **HSM-protected key** is stored and generated in a FIPS-certified Hardware Security Module. It is available in Azure Key Vault (Premium) only. This type of keys ensures the highest security. \n \n **Software-protected key** is available in both Azure Key Valut (Standard) and Key Vault (Premium). You can choose this level to [reduce cost](https://azure.microsoft.com/en-us/pricing/details/key-vault/){: external}. \n \n **Note:** If you connect to an external keystore of type Azure Key Vault, you can distribute both HSM-protected keys and software-protected keys to Azure Key Vault (Premium). However, you can distribute only software-protected keys to Azure Key Vault (Standard). |
+    | Protection level     | Data protection level of keys are to be created with the key template. \n \n **HSM-protected key** is stored and generated in a FIPS-certified Hardware Security Module. It is available in Azure Key Vault (Premium) only. This type of keys ensures the highest security. \n \n **Software-protected key** is available in both Azure Key Vault (Standard) and Key Vault (Premium). You can choose this level to [reduce cost](https://azure.microsoft.com/en-us/pricing/details/key-vault/){: external}. \n \n **Note:** If you connect to an external keystore of type Azure Key Vault, you can distribute both HSM-protected keys and software-protected keys to Azure Key Vault (Premium). However, you can distribute only software-protected keys to Azure Key Vault (Standard). |
     | Algorithm            | The encryption algorithm to encrypt data for the key to be created with the template.     |
     | Length               | The number of bits that represents the encryption strength of the key to be created with the template.   |
     | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
@@ -105,7 +105,7 @@ You can create a key template from scratch with full control by yourself. To cre
     |----------------------|-----------------------------------------------------------|
     | Key template name    | A unique, human-readable name for easy identification of your key template. It must be 1–100 characters in length.  |
     | Description          | (Optional) An extended description for your key template, with up to 200 characters in length.|
-    | Naming scheme        | (Optional) Enter strings or placeholders to enforce the key naming scheme. After defining the key naming scheme, you can then create a group of keys with the same key naming conventions but you cannot edit the key naming scheme any more. For more information, see [Defining key naming schemes](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui#define-naming-scheme).    | 
+    | Naming scheme        | (Optional) Enter strings or placeholders to enforce the key naming scheme. After defining the key naming scheme, you can then create a group of keys with the same key naming conventions but you cannot edit the key naming scheme anymore. For more information, see [Defining key naming schemes](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui#define-naming-scheme).    | 
     | Managed key name example | Read only. An example of the managed key name based on the key naming scheme is populated automatically for your reference.       |
     | Protection level     | Data protection level of keys to be created with the key template. \n \n **HSM-protected key** protection level applies to keys that are protected by FIPS 140-2 Level 3 Hardware Security Modules (HSMs) in Google Cloud. This type of keys ensures the higher security. \n \n **Software-protected key** protection level applies to keys that are protected by software. You can choose this level to [reduce cost](https://cloud.google.com/kms/pricing){: external}. For more information, see [Cloud KMS software backend: SOFTWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#software-protection-level){: external} and [Cloud KMS HSM backend: HARDWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#hardware-protection-level){: external}. \n \n **Note:** Software-protected keys don't support the Elliptic curve `secp256k1` algorithm.  |
     | Purpose               |The cryptographic capabilities of the key, which is what you are going to do with this key. The purpose also determines the available key algorithms. The supported key purposes are **Symmetric encrypt/decrypt**, **Asymmetric sign**, **Asymmetric decrypt**, and **MAC signing/verification**. For more information, see [Key purpose](https://cloud.google.com/kms/docs/algorithms#key_purposes){: external}.   |
@@ -122,7 +122,7 @@ You can create a key template from scratch with full control by yourself. To cre
     |----------------------|-----------------------------------------------------------|
     | Key template name    | A unique, human-readable name for easy identification of your key template. It must be 1–100 characters in length.  |
     | Description          | (Optional) An extended description for your key template, with up to 200 characters in length.|
-    | Naming scheme        | (Optional) Enter strings or placeholders to enforce the key naming scheme. After defining the key naming scheme, you can then create a group of keys with the same key naming conventions but you cannot edit the key naming scheme any more. For more information, see [Defining key naming schemes](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui#define-naming-scheme).    | 
+    | Naming scheme        | (Optional) Enter strings or placeholders to enforce the key naming scheme. After defining the key naming scheme, you can then create a group of keys with the same key naming conventions but you cannot edit the key naming scheme anymore. For more information, see [Defining key naming schemes](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui#define-naming-scheme).    | 
     | Managed key name example | Read only. An example of the managed key name based on the key naming scheme is populated automatically for your reference.       |
     | Algorithm            | The encryption algorithm to encrypt data for the key to be created with the template.     |
     | Length               | The number of bits that represents the encryption strength of the key to be created with the template.   |
@@ -139,7 +139,7 @@ You can create a key template from scratch with full control by yourself. To cre
     |----------------------|-----------------------------------------------------------|
     | Key template name    | A unique, human-readable name for easy identification of your key template. It must be 1–100 characters in length.  |
     | Description          | (Optional) An extended description for your key template, with up to 200 characters in length. |
-    | Naming scheme        | (Optional) Enter strings or placeholders to enforce the key naming scheme. After defining the key naming scheme, you can then create a group of keys with the same key naming conventions but you cannot edit the key naming scheme any more. For more information, see [Defining key naming schemes](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui#define-naming-scheme).    | 
+    | Naming scheme        | (Optional) Enter strings or placeholders to enforce the key naming scheme. After defining the key naming scheme, you can then create a group of keys with the same key naming conventions but you cannot edit the key naming scheme anymore. For more information, see [Defining key naming schemes](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui#define-naming-scheme).    | 
     | Managed key name example | Read only. An example of the managed key name based on the key naming scheme is populated automatically for your reference.       |
     | Algorithm            | The encryption algorithm to encrypt data for the key to be created with the template.     |
     | Length               | The number of bits that represents the encryption strength of the key to be created with the template.   |
@@ -230,7 +230,7 @@ To make a copy from an existing key template through the API, follow these steps
 {: #define-naming-scheme}
 {: ui}
 
-By defining the key naming scheme for the key template, you can create a group of keys with the same key naming conventions. You can specify different naming scheme placeholders. The naming schemes consist of fixed strings, custom placeholders, and system placeholders, which will be populated during the creation of each key.
+By defining the key naming scheme for the key template, you can create a group of keys with the same key naming conventions. You can specify different naming scheme placeholders. The naming schemes consist of fixed strings, custom placeholders, and system placeholders, which is populated during the creation of each key.
 
 When you define a key naming scheme, an example of a managed key name based on the key naming scheme is populated automatically for your reference under **Managed key naming example**. For example, if you enter `akms-<PROJECT>-<LOCATION>-<ENV>-appdata` for your key naming scheme, an example of a managed key name is displayed `akms-XYZ-XYZ-XYZ-appdata`. In this example, `akms` and `appdata` are the fixed strings, and `XYZ` is the value for `PROJECT`, `LOCATION`, and `ENV` that you need to provide each time during the key creation with this key template.
 
@@ -249,7 +249,7 @@ Note that you need to keep in mind of the following considerations:
 - Enter an opening angle bracket (<) or click the system placeholder tag to insert a system placeholder. Each system placeholder consists of letters (case-sensitive), digits (0-9), or a forward slash (/). The following table lists the system placeholders: 
 
       
-    If the key names contain system placeholders, keys to be created cannot be rotated.
+    If the key names contain system placeholders, the keys to be created cannot be rotated.
     {: note} 
 
     |       System placeholder	      |    Alternative spelling      |                     Description                       |
