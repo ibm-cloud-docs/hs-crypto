@@ -1,0 +1,32 @@
+# copy of keyref file to workaround pdf resolve issue
+keyword:
+  uko_full: 
+    Unified Key Orchestrator
+  uko_short_wp: 
+    
+  uko_workflow_url: 
+    'https://github.com/cicsabel/zorow/blob/UKO-workflow-introduction'
+  ekmf_short: 
+    EKMF
+  uko_for_sr_short: 
+    EKMF Workstation
+  uko_short: 
+    UKO
+  cc_short:
+    CC
+  cc_full:
+    Crypto Connect
+  acsp_short:
+    CC ACSP
+  cat_short:
+    CC CAT
+  cat_agent_short:
+    CAT Agent
+  kmg_agent_short:
+    UKO KMG Agent
+  cdi_full:
+    IBM Z Crypto Discovery and Inventory
+  cdi_short:
+    zCDI
+  ekmf_ws:
+    EKMF Workstation
