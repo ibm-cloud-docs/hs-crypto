@@ -47,6 +47,7 @@ To view a list of your managed keys by using the UI, complete the following step
     | Key template         | The key template that the key is created with. For more information, see [Creating key templates](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui).\n \n After you create a managed key with a key template, you can still update the key template on general properties, key lifecycles, and assigned keystores. If it happens, an **Unaligned** flag appears for the keys that are created with the key template. | 
     | Activation date      | The date when the key gets activated, or the date on which you plan to activate the key. |
     | Expiration date      | The date when the key gets deactivated, or the date on which you plan to deactivate the key. |
+    | Access level      | The level of privilege that you have for the key. |
     | Last updated         | The date and time when the key was last updated. This field gets updated when the key is created, edited, or any part of the key metadata is modified.   |
     | Last rotated         | The date and time when the key was last rotated. If the key was not rotated before, it shows `Never`. |
     | Creation date        | Set a date range of when the key was created.             |
