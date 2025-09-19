@@ -30,3 +30,7 @@ keyword:
     zCDI
   ekmf_ws:
     EKMF Workstation
+  acsp_full:
+    Crypto Connect Advanced Cryptographic Service Provider
+  acsp_sh:
+    CC ACSP
