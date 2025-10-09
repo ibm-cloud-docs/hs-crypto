@@ -17,20 +17,18 @@ toc:
           label: Getting started
           topics:
           - index.md
-          links:
           - link:
-              label: "Video: Initializing Hyper Protect Crypto Services with IBM Cloud TKE CLI"
+              label: 'Video: Initializing Hyper Protect Crypto Services with IBM Cloud TKE CLI'
               href: https://mediacenter.ibm.com/media/1_47xngxvg
           - link:
-              label: "Video: Initializing Hyper Protect Crypto Services with smart cards"
+              label: 'Video: Initializing Hyper Protect Crypto Services with smart cards'
               href: https://mediacenter.ibm.com/media/1_lo2fmwbb
       - topicgroup:
           label: Understanding Hyper Protect Crypto Services Standard Plan
-          links:
-          - link:
-              label: "Video: IBM Cloud Hyper Protect Crypto Services overview"
-              href: https://mediacenter.ibm.com/media/1_zxwh6ixm
           topics:
+          - link:
+              label: 'Video: IBM Cloud Hyper Protect Crypto Services overview'
+              href: https://mediacenter.ibm.com/media/1_zxwh6ixm
           - overview.md
           - architecture-workload-isolation.md
           - use-case.md
@@ -102,36 +100,34 @@ toc:
           topics:
           - tutorials/secure-import.md
           - tutorials/kmip-vmware.md
-          links:
           - link:
-              label: "Applying end to end security to a cloud application"
+              label: Applying end to end security to a cloud application
               href: https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-cloud-e2e-security
           - link:
-              label: "Encrypting Kubernetes secrets with IBM Cloud Hyper Protect Crypto Services"
+              label: Encrypting Kubernetes secrets with IBM Cloud Hyper Protect Crypto Services
               href: https://developer.ibm.com/tutorials/encrypt-kubernetes-secrets-with-hyper-protect-crypto-services/
           - link:
-              label: "Protecting LUKS encryption keys with IBM Cloud Hyper Protect Crypto Services and IBM Key Protect"
+              label: Protecting LUKS encryption keys with IBM Cloud Hyper Protect Crypto Services and IBM Key Protect
               href: https://developer.ibm.com/tutorials/protect-luks-encryption-keys-with-ibm-cloud-hyper-protect-crypto-services/
       - topicgroup:
           label: Tutorials on cloud hardware security module
           topics:
           - tutorials/tde-pkcs11.md
           - tutorials/db2-pkcs11.md
-          links:
           - link:
-              label: "Integrate Enterprise HashiCorp Vault with IBM Cloud Hyper Protect Crypto Services"
+              label: Integrate Enterprise HashiCorp Vault with IBM Cloud Hyper Protect Crypto Services
               href: https://developer.ibm.com/tutorials/integrate-enterprise-vault-ibm-cloud-hyper-protect-crypto-services/
           - link:
-              label: "Using IBM Cloud Hyper Protect Crypto Services to offload NGINX TLS"
+              label: Using IBM Cloud Hyper Protect Crypto Services to offload NGINX TLS
               href: https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-offload-nginx-tls/
       - topicgroup:
           label: Tutorials on Unified Key Orchestrator
           links:
           - link:
-              label: "Securely Managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator"
+              label: Securely Managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator
               href: https://developer.ibm.com/tutorials/securely-manage-aws-s3-encryption-keys-with-ibm-cloud-hyper-protect-crypto-services-with-unified-key-orchestrator/
           - link:
-              label: "Manage regulatory compliance of company data in Microsoft 365 with Hyper Protect Unified Key Orchestrator"
+              label: Manage regulatory compliance of company data in Microsoft 365 with Hyper Protect Unified Key Orchestrator
               href: https://developer.ibm.com/tutorials/manage-regulatory-compliance-of-company-data-in-microsoft-office-365-in-azure/
       - topicgroup:
           label: Tutorials on Bring Your Own HSM
@@ -304,7 +300,6 @@ toc:
               label: Key management service API
               topics:
               - kms-api-change-log.md
-              links:
               - link:
                   label: Key management service API reference
                   href: https://{DomainName}/apidocs/hs-crypto
@@ -312,7 +307,6 @@ toc:
               label: Unified Key Orchestrator API
               topics:
               - uko-api-change-log.md
-              links:
               - link:
                   label: Unified Key Orchestrator API reference
                   href: https://{DomainName}/apidocs/uko
