@@ -122,7 +122,7 @@ toc:
               href: https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-offload-nginx-tls/
       - topicgroup:
           label: Tutorials on Unified Key Orchestrator
-          links:
+          topics:
           - link:
               label: Securely Managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator
               href: https://developer.ibm.com/tutorials/securely-manage-aws-s3-encryption-keys-with-ibm-cloud-hyper-protect-crypto-services-with-unified-key-orchestrator/
@@ -319,7 +319,7 @@ toc:
           - hs-crypto-cli.md
       - topicgroup:
           label: Terraform reference
-          links:
+          topics:
           - link:
               label: Provisioning and initializing service instances with Terraform
               href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs
