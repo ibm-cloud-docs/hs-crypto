@@ -101,13 +101,13 @@ toc:
           - tutorials/secure-import.md
           - tutorials/kmip-vmware.md
           - link:
-              label: Applying end to end security to a cloud application
+              label: "Applying end to end security to a cloud application"
               href: https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-cloud-e2e-security
           - link:
-              label: Encrypting Kubernetes secrets with IBM Cloud Hyper Protect Crypto Services
+              label: "Encrypting Kubernetes secrets with IBM Cloud Hyper Protect Crypto Services"
               href: https://developer.ibm.com/tutorials/encrypt-kubernetes-secrets-with-hyper-protect-crypto-services/
           - link:
-              label: Protecting LUKS encryption keys with IBM Cloud Hyper Protect Crypto Services and IBM Key Protect
+              label: "Protecting LUKS encryption keys with IBM Cloud Hyper Protect Crypto Services and IBM Key Protect"
               href: https://developer.ibm.com/tutorials/protect-luks-encryption-keys-with-ibm-cloud-hyper-protect-crypto-services/
       - topicgroup:
           label: Tutorials on cloud hardware security module
@@ -115,19 +115,19 @@ toc:
           - tutorials/tde-pkcs11.md
           - tutorials/db2-pkcs11.md
           - link:
-              label: Integrate Enterprise HashiCorp Vault with IBM Cloud Hyper Protect Crypto Services
+              label: "Integrate Enterprise HashiCorp Vault with IBM Cloud Hyper Protect Crypto Services"
               href: https://developer.ibm.com/tutorials/integrate-enterprise-vault-ibm-cloud-hyper-protect-crypto-services/
           - link:
-              label: Using IBM Cloud Hyper Protect Crypto Services to offload NGINX TLS
+              label: "Using IBM Cloud Hyper Protect Crypto Services to offload NGINX TLS"
               href: https://developer.ibm.com/tutorials/use-hyper-protect-crypto-services-to-offload-nginx-tls/
       - topicgroup:
           label: Tutorials on Unified Key Orchestrator
           topics:
           - link:
-              label: Securely Managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator
+              label: "Securely Managing AWS S3 encryption keys using Hyper Protect Crypto Services with Unified Key Orchestrator"
               href: https://developer.ibm.com/tutorials/securely-manage-aws-s3-encryption-keys-with-ibm-cloud-hyper-protect-crypto-services-with-unified-key-orchestrator/
           - link:
-              label: Manage regulatory compliance of company data in Microsoft 365 with Hyper Protect Unified Key Orchestrator
+              label: "Manage regulatory compliance of company data in Microsoft 365 with Hyper Protect Unified Key Orchestrator"
               href: https://developer.ibm.com/tutorials/manage-regulatory-compliance-of-company-data-in-microsoft-office-365-in-azure/
       - topicgroup:
           label: Tutorials on Bring Your Own HSM
