@@ -1,5 +1,5 @@
 {
-  "faq-how-to-initialize":[
+  "faq-how-to-initialize": [
     "initialize hyper protect crypto services instances",
     "configure the master key in HPCS",
     "load the master key to my hyper protect crypto services instance",
@@ -10,7 +10,7 @@
     "can't create keys in my hyper protect crypto services instance",
     "can't add keys in my hyper protect crypto services instance"
   ],
-  "faq-smart-card-setup":[
+  "faq-smart-card-setup": [
     "set up smart cards in hyper protect crypto services",
     "configure smart cards in hyper protect crypto services",
     "use smart cards in hyper protect crypto services",
@@ -19,9 +19,8 @@
     "recommendations on smart cards settings in hyper protect crypto services",
     "how many smart cards do I need to make my hyper protect crypto services instance work",
     "how many smart cards are needed in hyper protect crypto services"
-
   ],
-  "faq-hpcs-with-cloud-services":[
+  "faq-hpcs-with-cloud-services": [
     "use hyper protect crypto services with other IBM cloud services",
     "use hyper protect crypto services to protect other services",
     "integrate hyper protect crypto services with other services",
@@ -32,7 +31,7 @@
     "use hyper protect crypto services with containers",
     "use HPCS with vmware"
   ],
-  "faq-add-remove-crypto-unit":[
+  "faq-add-remove-crypto-unit": [
     "add crypto units after I provision a hyper protect crypto services instance",
     "add more crypto units to my hyper protect crypto services instance",
     "increase the number of crypto units in hyper protect crypto services",
@@ -42,7 +41,7 @@
     "change the number of crypto units in HPCS",
     "update the number of crypto units in hyper protect crypto services"
   ],
-  "faq-hpcs-user-access":[
+  "faq-hpcs-user-access": [
     "manage access to my hyper protect crypto services instance",
     "manage user access to my keys in hyper protect crypto services",
     "assign access to my hyper protect crypto services instance",
@@ -54,7 +53,7 @@
     "access to HPCS",
     "access management in hyper protect crypto services"
   ],
-  "faq-cryptographic-algorithms":[
+  "faq-cryptographic-algorithms": [
     "supported cryptographic algorithms in hyper protect crypto services",
     "cryptographic algorithms in hyper protect crypto services",
     "algorithms to create keys in hyper protect crypto services",
@@ -66,7 +65,7 @@
     "standard keys in hyper protect crypto services are symmetric or asymmetric",
     "choose an algorithm when creating keys in hyper protect crypto services"
   ],
-  "faq-EP11-mechanisms":[
+  "faq-EP11-mechanisms": [
     "supported algorithms in grep11 functions in hyper protect crypto services",
     "supported mechanisms in grep11 functions in hyper protect crypto services",
     "supported algorithms in ep11 functions in hyper protect crypto services",
@@ -77,7 +76,7 @@
     "algorithms to generate keys when using grep11 functions in HPCS",
     "algorithms to sign data when using grep11 functions in hyper protect crypto services"
   ],
-  "faq-compliance-standards":[
+  "faq-compliance-standards": [
     "hyper protect crypto services compliance standards",
     "hyper protect crypto services security compliance",
     "hyper protect crypto services security certifications",
@@ -88,7 +87,7 @@
     "does HPCS comply with HIPAA",
     "does hyper protect crypto services comply with ISO"
   ],
-  "faq-monitor-instance":[
+  "faq-monitor-instance": [
     "monitor my hyper protect crypto services instance",
     "monitor the status of my hyper protect crypto services instance",
     "monitor hyper protect crypto services activities",
@@ -98,7 +97,7 @@
     "see logs for HPCS activity",
     "view log recording my hyper protect crypto services instance activities"
   ],
-  "faq-ha-configuration":[
+  "faq-ha-configuration": [
     "ha configuration in hyper protect crypto services",
     "high availability configuration in hyper protect crypto services",
     "ha settings in hyper protect crypto services",
@@ -108,7 +107,7 @@
     "mechanisms to support high availability requirements in hyper protect crypto services",
     "configure my hyper protect crypto services instance to increase availability"
   ],
-  "faq-instance-fail":[
+  "faq-instance-fail": [
     "What happens if my hyper protect crypto services instance fails",
     "hyper protect crypto services instance fails",
     "my hyper protect crypto services instance crashes",
@@ -117,7 +116,7 @@
     "back up my hyper protect crypto services instance",
     "back up keys in hyper protect crypto services"
   ],
-  "faq-store-backup":[
+  "faq-store-backup": [
     "restore my hyper protect crypto services instance",
     "recover my hyper protect crypto services instance",
     "restore my keys in hyper protect crypto services",
@@ -127,14 +126,14 @@
     "disaster recovery in hyper protect crypto services",
     "dr in hyper protect crypto services"
   ],
-  "faq-hpcs-ibm-access":[
+  "faq-hpcs-ibm-access": [
     "grant IAM rights to allow use hpcs resource",
     "grant IAM access to hpcs",
     "hyper protect crypto services IAM roles",
     "hpcs resource IAM rights",
     "authorize hyper protect crypto services rights"
   ],
-  "troubleshoot-block-smart-card":[
+  "troubleshoot-block-smart-card": [
     "blocked PIN on EP11 smart card",
     "smart card PIN failure count exceeded",
     "personal identification number for smart card failed",
@@ -144,7 +143,7 @@
     "in hyper protect crypto services my smart card blocked",
     "what can I do if the smart card is blocked for hyper protect crypto services"
   ],
-  "troubleshoot-master-key-rotation":[
+  "troubleshoot-master-key-rotation": [
     "failed to activate the new master key during the master key rotation process",
     "unable to activate the new master key",
     "master key rotation failed in HPCS",
@@ -153,7 +152,7 @@
     "unable to resume master key rolling",
     "how to activate the new master key in hyper protect crypto services"
   ],
-  "troubleshoot-error-CLI-API":[
+  "troubleshoot-error-CLI-API": [
     "got a CKR_IBM_WK_NOT_INITIALIZED error when you use CLI or API",
     "troubleshoot CKR_IBM_WK_NOT_INITIALIZED",
     "bad request CKR_IBM_WK_NOT_INITIALIZED",
@@ -161,7 +160,7 @@
     "wrapping key not initialized for HPCS",
     "master key not initialized"
   ],
-  "troubleshoot-no-smart-card":[
+  "troubleshoot-no-smart-card": [
     "no smart card readers found when you start the application",
     "error when starting the Smart Card Utility Program",
     "error when starting the Trusted Key Entry application",
@@ -170,7 +169,7 @@
     "troubleshoot the smart card application error",
     "how to start the smart card applications in HPCS"
   ],
-  "troubleshoot-unable-to-authenticate-api":[
+  "troubleshoot-unable-to-authenticate-api": [
     "unable to authenticate through the key management service API",
     "troubleshoot 401 unauthorized error in hyper protect crypto services",
     "unable to make the key management service API request for HPCS",
@@ -178,7 +177,7 @@
     "unauthorized error in API request in HPCS",
     "not unauthorized to perform API calls in hyper protect crypto services"
   ],
-  "troubleshoot-unable-to-change-signature-thresholds":[
+  "troubleshoot-unable-to-change-signature-thresholds": [
     "unable to change signature thresholds",
     "unable to change revocation signature thresholds",
     "not allowed to change a threshold value in HPCS",
@@ -188,7 +187,7 @@
     "change a signature threshold value for hyper protect crypto services",
     "to change a signature threshold value"
   ],
-  "troubleshoot-unable-to-delete-keys":[
+  "troubleshoot-unable-to-delete-keys": [
     "unable to delete keys in hyper protect crypto services",
     "unable to delete root keys for hyper protect crypto services",
     "not able to delete root keys within HPCS",
@@ -197,7 +196,7 @@
     "to delete a root key in hyper protect crypto services",
     "delete a hyper protect crypto services root key"
   ],
-  "troubleshoot-delete-instance":[
+  "troubleshoot-delete-instance": [
     "unable to delete an initialized HPCS service instance",
     "not able to delete a hyper protect crypto services instance",
     "failed to delete a hyper protect crypto services instance",
@@ -207,7 +206,7 @@
     "not able to delete an initialized service instance of HPCS",
     "delete an initialized service instance for hyper protect crypto services"
   ],
-  "troubleshoot-unable-to-rotate-root-keys":[
+  "troubleshoot-unable-to-rotate-root-keys": [
     "unable to rotate root keys in hyper protect crypto services",
     "not able to rotate root keys for HPCS",
     "failed to rotate a root key in hyper protect crypto services",
@@ -216,7 +215,7 @@
     "not able to rotate root keys in hyper protect crypto services",
     "hyper protect crypto services roles and permissions for rotating keys"
   ],
-  "troubleshoot-unable-to-create-standard-keys":[
+  "troubleshoot-unable-to-create-standard-keys": [
     "unable to delete standard keys in hyper protect crypto services",
     "not able to delete standard keys within HPCS",
     "in hyper protect crypto services not able to delete a standard key",
@@ -224,7 +223,7 @@
     "to delete a standard key in hyper protect crypto services",
     "delete a hyper protect crypto services standard key"
   ],
-  "troubleshoot-unable-to-list-keys-api":[
+  "troubleshoot-unable-to-list-keys-api": [
     "unable to view keys for hyper protect crypto services",
     "unable to list keys in hyper protect crypto services",
     "not able to view root keys in hyper protect crypto services",
@@ -233,7 +232,7 @@
     "why am I not able to view HPCS root keys with API",
     "why can't I list root keys with API in HPCS"
   ],
-  "troubleshoot-unauthorized-token":[
+  "troubleshoot-unauthorized-token": [
     "unauthorized when you run TKE CLI plug-in commands",
     "HPCS gives 401 unauthorized using TKE CLI",
     "how to authorize with TKE CLI",
@@ -242,7 +241,7 @@
     "why did I get a 401 unauthorized error for hyper protect crypto services",
     "what shall I do if I got a 401 unauthorized error in hyper protect crypto services"
   ],
-  "troubleshoot-unauthorized-token-tke-application":[
+  "troubleshoot-unauthorized-token-tke-application": [
     "unauthorized when you start the Trusted Key Entry application",
     "not authorized when you start the TKE application in hyper protect crypto services",
     "access token expired when using the Trusted Key Entry application for hyper protect crypto services",
@@ -251,7 +250,7 @@
     "access token invalid when using the Trusted Key Entry application in HPCS",
     "access token expired when using the Trusted Key Entry application"
   ],
-  "troubleshoot-create-internal-keystores":[
+  "troubleshoot-create-internal-keystores": [
     "not able to create internal keystore",
     "fail to create internal keystore",
     "error when creating internal keystore",
@@ -260,7 +259,7 @@
     "not able to add KMS keystore",
     "error occurs when you add internal keystore"
   ],
-  "troubleshoot-create-vault":[
+  "troubleshoot-create-vault": [
     "not able to create vault",
     "fail to create vault",
     "creating vault failed",
@@ -269,7 +268,7 @@
     "not authorized to create vault",
     "unauthorized to create vault"
   ],
-  "troubleshoot-delete-vault":[
+  "troubleshoot-delete-vault": [
     "not able to delete vault",
     "fail to delete vault",
     "deleting vault failed",
@@ -277,7 +276,7 @@
     "error when deleting vault",
     "vault still contains some keys or keystores"
   ],
-  "troubleshoot-delete-keystore":[
+  "troubleshoot-delete-keystore": [
     "not able to delete internal keystore",
     "can't delete internal keystore",
     "fail to delete internal keystore",
@@ -285,7 +284,7 @@
     "deleting internal keystore failed",
     "internal keystore still contains some keys"
   ],
-  "troubleshoot-azure-delay":[
+  "troubleshoot-azure-delay": [
     "fail to see changes to my key in Azure Key Vault",
     "Azure key not updated",
     "key state not changed in Azure UI",
@@ -293,7 +292,7 @@
     "Azure key installation status not changed",
     "installed key changes not reflected in Azure UI"
   ],
-  "troubleshoot-master-key-rotation-uko":[
+  "troubleshoot-master-key-rotation-uko": [
     "can't rotate master key when using the Unified Key Orchestrator Plan",
     "not able to rotate master key by using the TKE CLI commands",
     "fail to rotate master key with the TKE CLI commands",
@@ -301,7 +300,7 @@
     "master key not rotated when using the Unified Key Orchestrator Plan",
     "error sending start key rotate request to target service instance"
   ],
-  "faq-uko-differences":[
+  "faq-uko-differences": [
     "key management or key orchestration or key governance",
     "what is key orchestration",
     "key orchestration definition",
@@ -309,14 +308,14 @@
     "how is key orchestration different from key governance",
     "what is the difference between key management key orchestration and key governance"
   ],
-  "faq-uko-functions":[
+  "faq-uko-functions": [
     "what does Unified Key Orchestrator provide",
     "does Unified Key Orchestrator provide key management",
     "key orchestration with UKO",
     "what are the functions of Unified Key Orchestrator",
     "use Unified Key Orchestrator for key governance"
   ],
-  "faq-uko-offering":[
+  "faq-uko-offering": [
     "is Unified Key Orchestrator a separate offering",
     "how to use Unified Key Orchestrator",
     "how to implement Unified Key Orchestrator",
@@ -324,7 +323,7 @@
     "using the Unified Key Orchestrator Plan",
     "can I use Hyper Protect Crypto Services with Unified Key Orchestrator"
   ],
-  "faq-uko-hpcs":[
+  "faq-uko-hpcs": [
     "how is UKO Plan different from Standard Plan",
     "Unified Key Orchestrator Plan and Standard Plan difference",
     "why use Unified Key Orchestrator Plan",
@@ -332,7 +331,7 @@
     "what's new with Unified Key Orchestrator Plan",
     "HPCS with UKO updates"
   ],
-  "faq-uko-vendor-cloud":[
+  "faq-uko-vendor-cloud": [
     "Unified Key Orchestrator supported cloud vendors",
     "what external keystores can I connect to with UKO",
     "what cloud providers does Unified Key Orchestrator support",
@@ -340,14 +339,14 @@
     "external keystore connection using Unified Key Orchestrator",
     "connect to third party cloud providers in UKO"
   ],
-  "faq-uko-ekmf":[
+  "faq-uko-ekmf": [
     "how is Unified Key Orchestrator different from EKMF Web",
     "Unified Key Orchestrator and EKMF Web difference",
     "difference between Unified Key Orchestrator and EKMF Web",
     "UKO and EKMF Web comparison",
     "HPCS UKO compared with EKMF Web"
   ],
-  "faq-uko-mzr":[
+  "faq-uko-mzr": [
     "multizone regions that have Unified Key Orchestrator",
     "which regions is UKO available in",
     "available regions of HPCS with UKO",
@@ -355,11 +354,11 @@
     "regions and locations for Unified Key Orchestrator",
     "which multizone regions support UKO"
   ],
-  "faq-uko-region":[
+  "faq-uko-region": [
     "HPCS is not available in my service region",
     "Hyper Protect Crypto Services supported regions and locations",
     "my service region does not have HPCS",
     "use UKO for key management in my service region",
     "data residency region for Unified Key Orchestrator"
-  ]  
+  ]
 }
