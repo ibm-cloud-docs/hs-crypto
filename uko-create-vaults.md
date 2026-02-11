@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2025
-lastupdated: "2025-04-04"
+  years: 2022, 2026
+lastupdated: "2026-02-11"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -63,7 +63,7 @@ To create a vault by using the UI, complete the following steps through the **Va
   
 1. Click **Create vault** to confirm.
 
-You have successfully created a vault. 
+You have successfully created a vault.
 
 ## Creating vaults through the API
 {: #create-vaults-api}
