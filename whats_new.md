@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2025
-lastupdated: "2025-07-11"
+  years: 2018, 2026
+lastupdated: "2026-02-17"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -24,7 +24,19 @@ content-type: release-note
 Stay up to date with the new features that are available for {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
+## 20 Jan 2026
+{: #hs-crypto-november282025}
+{: release-note}
 
+Updated: IBM 4770 CEX8S card support
+:    IBM Cloud Trusted Key Entry (TKE) CLI and Management Utilities now support IBM 4770 CEX8S card. For more information about the supported regions and the new endpoint URLs, see [Supported Regions and Endpoints] (/docs/hs-crypto?topic=hs-crypto-cli-change-log&q=card&tags=hs-crypto)
+
+acsp-6000-06-info
+acsp-6020-06-cprog
+uko-data-security-reuse
+
+
+[New endpoints](/docs/hs-crypto?topic=hs-crypto-regions#new-service-endpoints).
 
 ## 18 July 2024
 {: #hs-crypto-july182024}

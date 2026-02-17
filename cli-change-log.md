@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-05-30"
+  years: 2021, 2026
+lastupdated: "2026-02-17"
 
 keywords: change log for tke, updates to tke cli plugin, updates to cert manager cli plugin
 
@@ -30,6 +30,8 @@ In this change log, you can learn about the latest changes, improvements, and up
 Version 1.2.3 of the Trusted Key Entry (TKE) CLI was released on 30 June 2021.
 
 Added the `ibmcloud tke failover-enable` command to enable or add failover crypto units after provisioning a {{site.data.keyword.hscrypto}} instance.
+
+IBM Cloud Trusted Key Entry (TKE) CLI and Management Utilities now support IBM 4770 CryptoExpress8S (CEX8S) cards.
 
 ## {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} certificate manager CLI plug-in
 {: #cert-manager-cli-change-log}
