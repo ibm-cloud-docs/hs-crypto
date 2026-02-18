@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-02-11"
+lastupdated: "2026-02-18"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -37,7 +37,7 @@ Before you create a vault for your {{site.data.keyword.hscrypto}} instance, keep
 
     There is no limit on how many keys can exist within a vault. Vaults don't apply to Enterprise PKCS #11 (EP11) keys and keystores. 
 
-- A key template, a key, or a keystore only can belong to one vault at a time.
+- A key template, a key, or a keystore can only belong to one vault at a time.
 
     You need to specify a vault to a key template, a managed key, or a keystore upon creation. 
 

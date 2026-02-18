@@ -290,6 +290,10 @@ toc:
           topics:
           - settings-sysdig-metrics.md
           - monitor-sysdig-metrics.md
+      - topicgroup:
+          label: Migrating IBM Cloud Hyper Protect Crypto Services
+          topics:
+          - migrating-hpcs-cloudHSM(grep11).md
   - navgroup:
       id: reference
       topics:
@@ -352,6 +356,7 @@ toc:
           - FAQs-security.md
           - FAQs-ha-dr.md
           - FAQs-maintenance.md
+          - FAQ-deprecation-of-hpcs.md
       - topicgroup:
           label: Troubleshooting key management service
           topics:
