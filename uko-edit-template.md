@@ -35,7 +35,7 @@ To edit the details of a key template by using the UI, complete the following st
     1. You can update the General properties and Key lifecycle properties. Or, you can view the Key naming and Key material properties. The following are a few properties that you can edit.
 
     
-    Because the key template is already created, you cannot make changes to key naming and key material properties that are marked with a Lock icon.
+    Because the key template is already created, you cannot change key naming and key material properties that are marked with a Lock icon.
     {: note}
 
     |       Property	     |                         Description                       |
