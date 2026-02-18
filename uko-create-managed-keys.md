@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-09"
+  years: 2022, 2026
+lastupdated: "2026-02-18"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -55,7 +55,7 @@ When you select the **Create with a key template** option, you are creating a ma
 
 6. Select a key template for the key and click **Next**. You can select only one key template for a key. 
 
-7. Under **Key properties**, specify the following details of the key. 
+7. Under **Key properties**, specify the following details of the key.
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
@@ -138,8 +138,6 @@ When you select the **Create with a key template** option, you are creating a ma
     {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keys"}
     {: tab-group="Managed key properties with templates"}
     {: class="comparison-tab-table"}  
-
-
 
 8. View the key properties defined by the selected key template and click **Next** to continue.
 

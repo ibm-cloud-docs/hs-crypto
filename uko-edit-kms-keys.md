@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-29"
+  years: 2022, 2026
+lastupdated: "2026-02-18"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -39,16 +39,16 @@ To edit the details of a managed key by using the UI, complete the following ste
 
     
     Because the key is already created, you cannot make changes to key material properties that are marked with a Lock icon.
-    {: note} 
+    {: note}
 
     |       Property	     |                         Description                       |
     |----------------------|-------------------------------------------------------------|
-    | Key name             | A unique, human-readable name for easy identification of your key. When you change the name of a managed key, the key is to be renamed in all keystores where it is activated. \n \n **Important:** You cannot edit the key name after the managed key is created with key naming schemes.\n \n Depending on the keystore type, name your key with the following rules:  \n - IBM Cloud KMS: 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n - IBM {{site.data.keyword.keymanagementserviceshort}}: 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n - AWS Key Management Service: 1–250 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (/\_-). However, do not start the name with `AWS/`. \n - Azure Key Vault: 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). \n - Google Cloud KMS: 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (\_-). |
+    | Key name             | A unique, human-readable name for easy identification of your key. When you change the name of a managed key, the key is to be renamed in all keystores where it is activated. \n \n **Important:** You cannot edit the key name after the managed key is created with key naming schemes.\n \n Depending on the keystore type, name your key with the following rules:  \n - IBM Cloud KMS: 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n - IBM {{site.data.keyword.keymanagementserviceshort}}: 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n - AWS Key Management Service: 1–250 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (/\_-). However, do not start the name with `AWS/`. \n - Azure Key Vault: 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). \n - Google Cloud KMS: 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (\_-).  |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | State            | Key states include Pre-active, Active, Deactivated, and Destroyed.  A `pending` flag is displayed beside the state after you move a key from Deactivated to Destroyed state, the key will be pending on destruction for a time period defined by the default destruction policies of the external cloud providers. For Azure Key Vault and Google Cloud KMS keystore, the pending destruction time period can also be customized on the external cloud provider side. You cannot cancel pending destruction using the {{site.data.keyword.uko_full_notm}} UI or API. However, you might still do so through the third-party keystores that the keys are created in. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states).  |
     | Activation date      | Plan a date to activate the key. It is for planning purpose only. |
-    | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only.  |
-    {: caption="Key properties" caption-side="bottom"} 
+    | Deactivation date      | Plan a date to deactivate the key. It is for planning purpose only.  |
+    {: caption="Key properties" caption-side="bottom"}
     
     2. In the **Keystores** card, click **Edit** to add or remove the keystores where the key is activated. You can use a key only for encryption and decryption after it is activated in at least one keystore. If the key is created with a key template, an `Unaligned` flag can be displayed if you update the keystore distribution list, which means the key is no longer in sync with the key template.  
     - Add keystores

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-29"
+  years: 2022, 2026
+lastupdated: "2026-02-18"
 
 keywords: Unified Key Orchestrator, edit key templates, key management, kms keys, UKO
 
@@ -45,7 +45,7 @@ To edit the details of a key template by using the UI, complete the following st
     | Initial key state        | States of keys that are to be created with the key template, including Pre-active and Active. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}.  |
     | Activate keys after  | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only.|
     | Deactivate keys after| (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
-    {: caption="Key template properties" caption-side="bottom"} 
+    {: caption="Key template properties" caption-side="bottom"}
     
     1. In the **Keystores** card, click **Edit** to add or remove the keystores where keys are to be activated. All the displayed keystores belong to the same vault and the same keystore type:
 
