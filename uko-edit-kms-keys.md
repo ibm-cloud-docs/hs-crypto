@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-02-18"
+lastupdated: "2026-02-19"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -15,6 +15,9 @@ subcollection: hs-crypto
 
 
 
+
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Editing managed key details
 {: #edit-kms-keys}
