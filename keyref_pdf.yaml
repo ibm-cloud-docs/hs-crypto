@@ -7,12 +7,13 @@ keyword:
   uko_short: UKO
   cc_short: CC
   cc_full: Crypto Connect
-  acsp_short: CC ACSP
   cat_short: CC CAT
   cat_agent_short: CAT Agent
   kmg_agent_short: UKO KMG Agent
   cdi_full: IBM Z Crypto Discovery and Inventory
   cdi_short: zCDI
   ekmf_ws: EKMF Workstation
-  acsp_full: Crypto Connect Advanced Cryptographic Service Provider
-  acsp_sh: CC ACSP
+  acsp_short: CC ACSP
+  acsp_full: Crypto Connect ACSP
+  acsp_full_power: IBM&reg; Unified Key Orchestrator Crypto Connect ACSP for IBM Power
+  acsp_full_zlinux: IBM&reg; Unified Key Orchestrator Crypto Connect ACSP for IBM Z and LinuxONE
