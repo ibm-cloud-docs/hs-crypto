@@ -18,7 +18,7 @@ subcollection: hs-crypto
 ## 1. Purpose and Scope 
 {: #purpose-and-scope}
 
-This document provides a structured guide for migrating from **IBM Cloud Hyper Protect Crypto Services (HPCS) with Unified Key Orchestrator (UKO)** to:
+This topic provides structured guidance for migrating from **IBM Cloud Hyper Protect Crypto Services (HPCS) with Unified Key Orchestrator (UKO)** to:
 
 - **Unified Key Orchestrator for Containers on IBM LinuxONE**, or  
 - **Unified Key Orchestrator for z/OS**.
@@ -135,26 +135,26 @@ For each application:
 
 Steps:
 
-- Deploy Red Hat OpenShift on IBM LinuxONE  
-- Configure secure networking and TLS  
-- Integrate target HSMs  
-- Validate container‑security posture  
+1. Deploy Red Hat OpenShift on IBM LinuxONE  
+1. Configure secure networking and TLS  
+1. Integrate target HSMs  
+1. Validate container‑security posture  
 
 ### 5.2 Prepare z/OS Environment 
 {: #prepare-zos}
 
 Steps:
 
-- Configure ICSF and cryptographic domains  
-- Set up certificate and RACF controls  
-- Validate the availability of hardware cryptography  
+1. Configure ICSF and cryptographic domains  
+1. Set up certificate and RACF controls  
+1. Validate the availability of hardware cryptography  
 
 ### 5.3 Deploy Unified Key Orchestrator 
 {: #deploy-uko}
 
-- Install UKO components on LinuxONE or z/OS  
-- Configure identity management (LDAP or RACF)  
-- Enable high availability, as required  
+1. Install UKO components on LinuxONE or z/OS  
+1. Configure identity management (LDAP or RACF)  
+1. Enable high availability, as required  
 
 ## 6. Phase 3 – Policy and Configuration Migration 
 {: #phase-3-policy-migration}
@@ -164,10 +164,10 @@ Steps:
 
 Recreate or migrate:
 
-- Key naming conventions  
-- Grouping and labels  
-- Rotation schedules  
-- Notification and approval workflows  
+1. Key naming conventions  
+1. Grouping and labels  
+1. Rotation schedules  
+1. Notification and approval workflows  
 
 > **Recommendation:** Review and rationalize policies rather than replicate them directly.
 
@@ -176,9 +176,9 @@ Recreate or migrate:
 
 Map:
 
-- IBM Cloud IAM roles → on‑premises identity providers  
-- Cloud‑based UKO users → LinuxONE or z/OS identities  
-- API credentials → certificate‑based or token‑based authentication  
+1. IBM Cloud IAM roles → on‑premises identity providers  
+1. Cloud‑based UKO users → LinuxONE or z/OS identities  
+1. API credentials → certificate‑based or token‑based authentication  
 
 ## 7. Phase 4 – Key Migration or Regeneration 
 {: #phase-4-key-migration}
@@ -188,20 +188,20 @@ Map:
 
 Steps:
 
-- Establish trusted wrapping keys on both platforms  
-- Export keys from cloud UKO in wrapped format  
-- Import keys into on‑premises UKO keystores  
-- Validate attributes and key usability  
+1. Establish trusted wrapping keys on both platforms  
+1. Export keys from cloud UKO in wrapped format  
+1. Import keys into on‑premises UKO keystores  
+1. Validate attributes and key usability  
 
 ### 7.2 Regeneration and Re‑Encryption (Preferred Model)
 {: #regeneration-reencryption}
 
 Steps:
 
-- Generate new keys under on‑premises governance  
-- Enable dual‑key operation in applications  
-- Re‑encrypt data progressively  
-- Revoke and archive cloud‑managed keys  
+1. Generate new keys under on‑premises governance  
+1. Enable dual‑key operation in applications  
+1. Re‑encrypt data progressively  
+1. Revoke and archive cloud‑managed keys  
 
 ## 8. Phase 5 – Application Migration and Validation 
 {: #phase-5-app-migration}
@@ -209,26 +209,26 @@ Steps:
 ### 8.1 Application Reconfiguration 
 {: #application-reconfiguration}
 
-- Update UKO endpoints  
-- Adjust authentication mechanisms  
-- Validate z/OS or container‑based SDKs  
+1. Update UKO endpoints  
+1. Adjust authentication mechanisms  
+1. Validate z/OS or container‑based SDKs  
 
 ### 8.2 Functional and Compliance Testing 
 {: #functional-compliance-testing}
 
 Validate:
 
-- Cryptographic correctness  
-- Policy‑enforcement behavior  
-- Completeness of audit trails  
-- Error and exception handling  
+1. Cryptographic correctness  
+1. Policy‑enforcement behavior  
+1. Completeness of audit trails  
+1. Error and exception handling  
 
 ### 8.3 Performance Validation 
 {: #performance-validation}
 
-- Benchmark latency and throughput  
-- Validate scale‑out behavior on LinuxONE  
-- Confirm workload impact on z/OS  
+1. Benchmark latency and throughput  
+1. Validate scale‑out behavior on LinuxONE  
+1. Confirm workload impact on z/OS  
 
 ## 9. Phase 6 – Cutover and Decommissioning 
 {: #phase-6-cutover}
@@ -236,24 +236,24 @@ Validate:
 ### 9.1 Production Cutover 
 {: #production-cutover}
 
-- Freeze changes to cloud‑hosted UKO  
-- Redirect applications to on‑premises UKO  
-- Monitor keys, policies, and audit logs  
+1. Freeze changes to cloud‑hosted UKO  
+1. Redirect applications to on‑premises UKO  
+1. Monitor keys, policies, and audit logs  
 
 ### 9.2 Decommission IBM Cloud Resources 
 {: #cloud-decommissioning}
 
-- Remove application access to cloud UKO  
-- Destroy or archive cloud keys according to compliance rules  
-- Retain audit records as required  
+1. Remove application access to cloud UKO  
+1. Destroy or archive cloud keys according to compliance rules  
+1. Retain audit records as required  
 
 ## 10. Operational, Security, and Compliance Considerations 
 {: #operational-considerations}
 
-- Enforce separation of duties  
-- Maintain key backups and test recovery procedures  
-- Update operational runbooks  
-- Align with regulatory and audit requirements  
+1. Enforce separation of duties  
+1. Maintain key backups and test recovery procedures  
+1. Update operational runbooks  
+1. Align with regulatory and audit requirements  
 
 ## 11. Risks and Mitigations 
 {: #risks-mitigations}
@@ -264,6 +264,7 @@ Validate:
 | Key‑migration constraints | Prefer key regeneration strategy |
 | Application incompatibility | Staged migration and thorough testing |
 | Operational complexity | Automation and documentation |
+{: caption="Risks and Mitigations" caption-side="bottom"}
 
 ## 12. Summary 
 {: #summary}
