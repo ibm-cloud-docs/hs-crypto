@@ -2,14 +2,17 @@
 
 copyright:
   years: 2026, 2026
+
 lastupdated: "2026-02-25"
 
 keywords: migration guide for Hyper Protect Crypto Services, rules for Hyper Protect Crypto Services
 
 subcollection: hs-crypto
 
-content-type: migration-guide
+
 ---
+
+
 
 
 {{site.data.keyword.attribute-definition-list}}
@@ -17,7 +20,7 @@ content-type: migration-guide
 
 
 # Migrating {{site.data.keyword.hscrypto}} to Onpremises IBM Hyper Protect Virtual Server (HPVS) 
-
+{: #migrate-hpcs-to-hpvs}
 
 This topic describes a structured approach for migrating cryptographic workloads, keys, and applications from  **IBM Cloud Hyper Protect Crypto Services (HPCS)** using CloudHSM to **Onpremises IBM Hyper Protect Virtual Server (HPVS)** with IBM Crypto Appliances and GREP11. 
 

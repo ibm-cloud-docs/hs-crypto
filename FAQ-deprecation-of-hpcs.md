@@ -68,14 +68,14 @@ Migration tooling will support key migration from HPCS to Key Protect. Follow [H
 :
   - On‑premises deployment on IBM LinuxONE technology 
   - IBM Cloud Key Protect Dedicated PKCS#11 (planned availability: Q2 2026) 
-Follow [HPCS to HPVS on-prem migration guide]().
+Follow [HPCS to HPVS on-prem migration guide](/docs/hs-crypto?topic=hs-crypto-migrate-hpcs-to-hpvs).
 
 **Unified Key Orchestrator**
 :
   - Unified Key Orchestrator for Containers (on‑premises) 
   - Unified Key Orchestrator for z/OS (on‑premises) 
 
-Follow [UKO to UKO on-prem migration guide]().
+Follow [UKO to UKO on-prem migration guide](/docs/hs-crypto?topic=hs-crypto-migration-guide).
 
 |Product / Capability |Alternative / Recommendation|
 |---------------------|----------------------------|
