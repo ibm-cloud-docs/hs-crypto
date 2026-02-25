@@ -36,9 +36,9 @@ Stay up to date with the new features that are available for {{site.data.keyword
     - IBM Cloud Hyper Protect Crypto Services with Unified Key Orchestrator
    
 Review the following details for this deprecation
-:   - End of Marketing and End of Service Announcement – **20 February 2026** 
-    - End of Marketing (EoM) – **28 February 2026** (*new instance provisioning disabled; instances provisioned prior to this date - will be supported until EoS*) 
-    - End of Service (EoS) – **20 February 2027** (*all instances will be terminated*) 
+:   - End of Marketing and End of Service Announcement – **20 March 2026** 
+    - End of Marketing (EoM) – **28 March 2026** (*new instance provisioning is disabled; instances provisioned prior to this date - will be supported until EoS*) 
+    - End of Service (EoS) – **20 March 2027** (*all instances will be terminated*) 
    
 
 This announcement does not impact any other services running in the IBM Cloud data center or any other Hyper Protect Services, including support, running in any other data centers where Hyper Protect is supported.
@@ -49,15 +49,14 @@ For existing customers, migration to an alternative solution is recommended
 :   1. **Move to IBM Cloud Key Protect Dedicated**: a single‑tenant, KYOK‑enabled service for centralized key management and KMIP for VMware support, where available. In other regions, migrate to the Key Protect Multi‑Tenant tier.  
     2. **Prepare your environment by reviewing the migration guide**. Also, create a Key Protect instance in your dev or test environment and set up a Cloud Object Storage instance encrypted with an HPCS key.
     3. **Use IBM Cloud’s migration tools**: available by March 20, 2026 to migrate keys from HPCS to Key Protect Dedicated or Multi‑Tenant tiers. 
-    4. **Use On-Premises migration options**: for scenarios with IBM Cloud Hyper Protect Crypto Services CloudHSM (GREP11) and Unified Key Orchestrator requirements. (As described in our FAQ). 
+    4. **Use On-Premises migration options**: for scenarios with IBM Cloud Hyper Protect Crypto Services CloudHSM (GREP11) and Unified Key Orchestrator requirements. (As described in our [FAQ](./FAQ-deprecation-of-hpcs.md)). 
 
 For assistance, please reach out to your IBM Representative or Customer Service Manager, who will coordinate with the Z Client Acceleration team for technical matters.  
   
 If the appropriate point of contact is unknown, please open an IBM Cloud Support ticket.   
-
-To do this
-:   1. Go to https://cloud.ibm.com/unifiedsupport/supportcenter.
-    2. Create a case and provide title and description: “Help with <insert product name(s)>migration" and your instance id, if you have it. 
+To do this,
+    1. Go to https://cloud.ibm.com/unifiedsupport/supportcenter.
+    2. Create a case and provide title and description: “Help with <insert product name(s)> migration" and your instance id, if you have it. 
 
 ## 20 Jan 2026
 {: #hs-crypto-november282025}

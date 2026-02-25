@@ -13,7 +13,7 @@ subcollection: hs-crypto
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Deprecation of IBM Cloud Hyper Protect Crypto Services 
+# FAQs: Deprecation of IBM Cloud Hyper Protect Crypto Services 
 
 
 ## What is happening?
@@ -24,10 +24,10 @@ IBM Cloud will withdraw IBM Cloud Hyper Protect Crypto Services in the following
 ## Key dates
 {: #key-dates}
 
-    - **External announcement**: February 20, 2026Delayed 
-    - **End of marketing**: February 28, 2026 
-    - **Customer migration window**: March 1, 2026 – January 31, 2027 
-    - **End of support / service shutdown**: February 20, 2027 
+    - External announcement: Delayed
+    - End of marketing: To be updated
+    - Customer migration window:  To be updated
+    - End of support / service shutdown:  To be updated
 
 ## What does this mean for customers?
 {: #what-does-this-mean-for-customers}
