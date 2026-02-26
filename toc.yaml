@@ -137,6 +137,7 @@ toc:
       id: howto
       topics:
       - provision.md
+      - migrating-hpcs-cloudHSM(grep11).md
       - topicgroup:
           label: Initializing service instances
           topics:
@@ -290,10 +291,6 @@ toc:
           topics:
           - settings-sysdig-metrics.md
           - monitor-sysdig-metrics.md
-      - topicgroup:
-          label: Migrating IBM Cloud Hyper Protect Crypto Services
-          topics:
-          - migrating-hpcs-cloudHSM(grep11).md
   - navgroup:
       id: reference
       topics:

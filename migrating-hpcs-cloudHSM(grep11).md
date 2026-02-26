@@ -1,25 +1,19 @@
---- 
+---
 
 copyright:
   years: 2026, 2026
+lastupdated: "2026-02-26"
 
-lastupdated: "2026-02-25"
-
-keywords: migration guide for Hyper Protect Crypto Services, rules for Hyper Protect Crypto Services
+keywords: security for Hyper Protect Crypto Services, compliance for Hyper Protect Crypto Services, Migration guide for deprecation of Hyper Protect Crypto Services, rules for Hyper Protect Crypto Services,
 
 subcollection: hs-crypto
 
-
 ---
-
-
-
 
 {{site.data.keyword.attribute-definition-list}}
 
 
-
-# Migrating {{site.data.keyword.hscrypto}} to Onpremises IBM Hyper Protect Virtual Server (HPVS) 
+# Migrating {{site.data.keyword.hscrypto}} (HPCS) to Onpremises IBM Hyper Protect Virtual Server (HPVS) 
 {: #migrate-hpcs-to-hpvs}
 
 This topic describes a structured approach for migrating cryptographic workloads, keys, and applications from  **IBM Cloud Hyper Protect Crypto Services (HPCS)** using CloudHSM to **Onpremises IBM Hyper Protect Virtual Server (HPVS)** with IBM Crypto Appliances and GREP11. 
@@ -29,7 +23,7 @@ This migration topics is intended for security architects, infrastructure engine
 
 ## Source and Target Architecture Overview
 {: #source-target-arch-overview}
-### Source: IBM Cloud HPCS (CloudHSM)
+### Source: IBM Cloud {{site.data.keyword.hscrypto}} (CloudHSM)
 {: #source-cloudhsm}
 
 Key characteristics
@@ -58,13 +52,13 @@ Key characteristics
 {: #migration-technology}
 
 The migration follows a phased approach
-:   
-    1. Assessment and readiness
+:   1. Assessment and readiness
     2. Target environment preparation 
     3. Cryptographic configuration alignment 
     4. Key migration or re-keying 
     5. Application migration and validation 
     6. Cutover and decommissioning 
+
 
 
 ## Phase 1 – Assessment and Readiness
@@ -74,30 +68,30 @@ The migration follows a phased approach
 {: #inventory-cryptographic-assets}
 
 Identify and document
-:   
-    - Key types (AES, RSA, EC, HMAC, wrapping keys) 
+:   - Key types (AES, RSA, EC, HMAC, wrapping keys) 
     - Key sizes and attributes 
     - Key usage (encrypt/decrypt, sign/verify, wrap/unwrap) 
     - Key lifecycle state (active, suspended, rotation schedule) 
     - HPCS access patterns (PKCS#11 vs GREP11) 
 
+
 ### Application Dependency Analysis 
 {: #application-dependency-analysis}
 
 For each application 
-:   
-    - HSM interface used (For example, GREP11, PKCS11)
+:   - HSM interface used (For example, GREP11, PKCS11)
     - Sessions per second and performance requirements
     - Latency sensitivity 
     - Compliance requirements (For example, PCI DSS, GDPR, financial regulations)
+
 
 ### Migration Model Decision 
 {: #migration-model-decision}
 
 Decide per application and key set 
-:
-    - Key migration (export/import where allowed) 
+:   - Key migration (export/import where allowed) 
     - Logical migration (re-key and re-encrypt data) 
+
 
 Many HSM deployments or key attributes prohibit raw key export. Hence, wrapping-based migration or re-keying is typically preferred.
 {: note}
@@ -161,21 +155,21 @@ Map
 {: #optiona-wrapped-key-migration}
 
 If allowed by policy 
-:
-    1. Create a symmetric or asymmetric wrapping key in both environments 
+:   1. Create a symmetric or asymmetric wrapping key in both environments 
     2. Export keys from HPCS in wrapped form 
     3. Import wrapped keys into GREP11 
     4. Verify attributes and usage flags 
+
 
 ### Option B: ReKey and Data ReEncryption (Recommended)
 {: #optionb-rekey-and-data-reencryption}
 
 Steps 
-:
-    1. Generate new keys in onprem GREP11
+:   1. Generate new keys in onprem GREP11
     2. Update applications to support dual-key operation 
     3. Gradually re-encrypt data with new keys 
     4. Retire old HPCS-backed keys 
+
 
 ## Phase 5 – Application Migration and Validation
 {: #phase5-application-migration-and-validation}
