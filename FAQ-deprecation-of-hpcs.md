@@ -22,14 +22,14 @@ subcollection: hs-crypto
 IBM Cloud is withdrawing (service deprecation) IBM Cloud Hyper Protect Crypto Services (HPCS) across selected regions. This aligns with IBM’s strategy to deliver a more consistent experience across key management services and to unify BYOK/KYOK capabilities via IBM Cloud Key Protect Dedicated. This withdrawal affects all HPCS capabilities, including CloudKMS (KMIP), CloudHSM/GREP11, and Unified Key Orchestrator.
 
 Impacted regions
-: - Dallas (us-east)
-  - Washington D.C. (us-south)
-  - Toronto (ca-tor)
-  - Frankfurt (eu-de)
-  - London (eu-gb)
-  - Madrid (eu-es)
-  - Tokyo (jp-tok)
-  - São Paulo (br-sao) 
+:   - Dallas (us-east)
+    - Washington D.C. (us-south)
+    - Toronto (ca-tor)
+    - Frankfurt (eu-de)
+    - London (eu-gb)
+    - Madrid (eu-es)
+    - Tokyo (jp-tok)
+    - São Paulo (br-sao) 
 
 ## 2. Which HPCS capabilities are affected?
 
@@ -46,6 +46,8 @@ Impacted regions
 |**End of marketing**| To be updated|
 |**Customer migration window**:| To be updated|
 |**End of support / service shutdown**: | To be updated|
+{: caption="Key dates and milestones"}
+
 
 ## 4. Supported migration paths (by use case) 
 
@@ -163,28 +165,31 @@ After February 13, 2027, any remaining HPCS instances will be terminated and cry
 {: which-migration-options-are-available-by-use-case}
 
 CloudKMS and KMIP for VMware
-: - IBM Cloud Key Protect Dedicated (single‑tenant, KYOK; selected regions)
-  - IBM Cloud Key Protect Multi‑Tenant (all regions) 
-Migration tooling will support key migration from HPCS to Key Protect. Follow [HPCS to Key Protect Migration guide](/docs/hs-crypto?topic=migrating-hpcs-cloud(grep11)).
+:   - IBM Cloud Key Protect Dedicated (single‑tenant, KYOK; selected regions)
+    - IBM Cloud Key Protect Multi‑Tenant (all regions) 
+
+
+Migration tooling will support key migration from HPCS to Key Protect. Follow [HPCS to Key Protect Migration guide]().
 
 
 CloudHSM (GREP11 and PKCS#11)
-: - On‑premises deployment on IBM LinuxONE technology
-  - IBM Cloud Key Protect Dedicated PKCS#11 (planned availability: Q2 2026) 
+:   - On‑premises deployment on IBM LinuxONE technology
+    - IBM Cloud Key Protect Dedicated PKCS#11 (planned availability: Q2 2026) 
+
 Follow [HPCS to HPVS on-prem migration guide](/docs/hs-crypto?topic=hs-crypto-migrate-hpcs-to-hpvs).
   
 
 Unified Key Orchestrator
-: - Unified Key Orchestrator for Containers (on‑premises) 
-  - Unified Key Orchestrator for z/OS (on‑premises) 
+:   - Unified Key Orchestrator for Containers (on‑premises) 
+    - Unified Key Orchestrator for z/OS (on‑premises) 
 
 Follow [UKO to UKO on-prem migration guide](/docs/hs-crypto?topic=hs-crypto-migration-guide).
 
 |Product / Capability |Alternative / Recommendation|
 |---------------------|----------------------------|
 |IBM Cloud Hyper Protect Crypto Services \n IBM CloudKMS including KMIP for vmware  | Migrate to \n - IBM Cloud Key Protect Dedicated (select regions) \n - IBM Cloud Key Protect Multi-Tenant (all regions). For more information, refer to KP-Dedicated Migration Guide.|
-|IBM Cloud Hyper Protect Crypto Services \n CloudHSM / GREP11 | Migrate to \n - On-premises deployment (if you plan to continue IBM LinuxONE technology). For more information, refer to [GREP11/PKCS#11 Migration Guide](/docs/hs-crypto?topic=migrating-hpcs-cloud(grep11)). \n - IBM Cloud Key Protect Dedicated PKCS#11 planed for 2Q 2026 (*requires migration to PKCS#11). For more information, refer to KP-Dedicated Migration Guide.| 
-| IBM Cloud Hyper Protect Crypto Services \n CloudHSM PKCS#11 | Migrate to \n - On-premises deployment (if you plan to continue IBM LinuxONE technology). For more information, refer to [GREP11/PKCS#11 Migration Guide](/docs/hs-crypto?topic=migrating-hpcs-cloud(grep11)). \n - IBM Cloud Key Protect Dedicated PKCS#11 planned for 2Q 2026. For more information, refer to KP-Dedicated Migration Guide|
+|IBM Cloud Hyper Protect Crypto Services \n CloudHSM / GREP11 | Migrate to \n - On-premises deployment (if you plan to continue IBM LinuxONE technology). For more information, refer to [GREP11/PKCS#11 Migration Guide](/docs/hs-crypto?topic=hs-crypto-migrate-hpcs-to-hpvs). \n - IBM Cloud Key Protect Dedicated PKCS#11 planed for 2Q 2026 (*requires migration to PKCS#11). For more information, refer to KP-Dedicated Migration Guide.| 
+| IBM Cloud Hyper Protect Crypto Services \n CloudHSM PKCS#11 | Migrate to \n - On-premises deployment (if you plan to continue IBM LinuxONE technology). For more information, refer to [GREP11/PKCS#11 Migration Guide](/docs/hs-crypto?topic=hs-crypto-migrate-hpcs-to-hpvs). \n - IBM Cloud Key Protect Dedicated PKCS#11 planned for 2Q 2026. For more information, refer to KP-Dedicated Migration Guide|
 |IBM Cloud Hyper Protect Crypto Services \n Unified Key Orchestrator| Migrate to \n - on premises deployment \n - Unified Key Orchestrator for Containers \n - Unified Key Orchestrator for z/OS. For more information, refer to [UKO Migration Guide](/docs/hs-crypto?topic=hs-crypto-migration-guide)| 
 {: caption="Product/Capability and their Alternative / Recommendation"}
 
@@ -210,7 +215,7 @@ On‑premises migrations represent a significant transformation, including new o
 
 **Important documents**
   - Unified Key Orchestrator to UKO on-prem migration guide. Refer [UKO on-prem migration guide](/docs/hs-crypto?topic=hs-crypto-migration-guide)
-  - IBM Cloud Hyper Protect Crypto Services CloudHSM to on-prem migration guide. Refer [IBM Cloud Hyper Protect Crypto Services CloudHSM to on-prem migration guide](/docs/hs-crypto?topic=migrating-hpcs-cloud(grep11))
+  - IBM Cloud Hyper Protect Crypto Services CloudHSM to on-prem migration guide. Refer [IBM Cloud Hyper Protect Crypto Services CloudHSM to on-prem migration guide](/docs/hs-crypto?topic=hs-crypto-migrate-hpcs-to-hpvs)
 
 
 ## 20. Support during the transition

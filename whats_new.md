@@ -54,9 +54,9 @@ For existing customers, migration to an alternative solution is recommended
 For assistance, please reach out to your IBM Representative or Customer Service Manager, who will coordinate with the Z Client Acceleration team for technical matters.  
   
 If the appropriate point of contact is unknown, please open an IBM Cloud Support ticket.   
-To do this
-:   1. Go to https://cloud.ibm.com/unifiedsupport/supportcenter.
-    2. Create a case and provide title and description: “Help with <insert product name(s)> migration" and your instance id, if you have it. 
+**To do this**,
+1. Go to https://cloud.ibm.com/unifiedsupport/supportcenter.
+2. Create a case and provide title and description: “Help with <insert product name(s)> migration" and your instance id, if you have it. 
 
 ## 20 Jan 2026
 {: #hs-crypto-january202026}
