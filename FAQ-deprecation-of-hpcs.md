@@ -40,7 +40,8 @@ Impacted regions
 ## 3. Key dates and milestones
 {: #key-dates}
 
-|Milestone|Date|
+| Milestone | Date |
+|-----------|------|
 |**Internal announcement** | Now |
 |**External announcement** | Delayed |
 |**End of marketing**| To be updated|
@@ -214,8 +215,8 @@ Follow [UKO to UKO on-prem migration guide](/docs/hs-crypto?topic=hs-crypto-migr
 On‑premises migrations represent a significant transformation, including new operational responsibilities, hardware/software procurement, and updated security/compliance processes. Perform a full cryptographic asset inventory, review applicable migration guides, and plan a phased migration with testing and validation. 
 
 **Important documents**
-  - Unified Key Orchestrator to UKO on-prem migration guide. Refer [UKO on-prem migration guide](/docs/hs-crypto?topic=hs-crypto-migration-guide)
-  - IBM Cloud Hyper Protect Crypto Services CloudHSM to on-prem migration guide. Refer [IBM Cloud Hyper Protect Crypto Services CloudHSM to on-prem migration guide](/docs/hs-crypto?topic=hs-crypto-migrate-hpcs-to-hpvs)
+1. Unified Key Orchestrator to UKO on-prem migration guide. Refer [UKO on-prem migration guide](/docs/hs-crypto?topic=hs-crypto-migration-guide)
+2. IBM Cloud Hyper Protect Crypto Services CloudHSM to on-prem migration guide. Refer [IBM Cloud Hyper Protect Crypto Services CloudHSM to on-prem migration guide](/docs/hs-crypto?topic=hs-crypto-migrate-hpcs-to-hpvs)
 
 
 ## 20. Support during the transition
