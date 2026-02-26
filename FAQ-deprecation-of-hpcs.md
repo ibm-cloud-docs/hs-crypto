@@ -52,16 +52,16 @@ Impacted regions
 
 ## 4. Supported migration paths (by use case) 
 
-1. CloudKMS (including KMIP for VMware)
-: a. Migrate to IBM Cloud Key Protect Dedicated (where available).
-  b. If Dedicated is not available in-region, migrate to IBM Cloud Key Protect (multi-tenant). 
+1. CloudKMS (including KMIP for VMware):
+   1. Migrate to IBM Cloud Key Protect Dedicated (where available).
+   2. If Dedicated is not available in-region, migrate to IBM Cloud Key Protect (multi-tenant). 
 
 2. CloudHSM / GREP11 (PKCS#11)
-: a. Migrate to on-premises deployment to continue on IBM LinuxONE technology. 
-  b. IBM Cloud Key Protect Dedicated PKCS#11 is planned for 2Q 2026 (where supported). 
+   1. Migrate to on-premises deployment to continue on IBM LinuxONE technology. 
+   2. IBM Cloud Key Protect Dedicated PKCS#11 is planned for 2Q 2026 (where supported). 
 
 3. Unified Key Orchestrator (UKO)
-: a. Migrate to on-premises: UKO for Containers or UKO for z/OS. 
+   1. Migrate to on-premises: UKO for Containers or UKO for z/OS. 
 
 ## 5. Migration tooling availability
 IBM Cloud migration tooling for HPCS → Key Protect is planned to be available on March 20, 2026. CSMs should factor this date into migration planning and avoid committing to earlier tooling availability. 
@@ -79,14 +79,14 @@ IBM Cloud migration tooling for HPCS → Key Protect is planned to be available 
 ## 7. Migration Checklist for Customers for IBM Cloud Key Protect  
 
 1. Choose Your Target Key Protect Tier
-   a. Use Key Protect Dedicated (single‑tenant, KYOK‑enabled with KMIP for VMware) in regions where it is available. 
-   b. Use Key Protect Multi‑Tenant in regions where the Dedicated tier is not available. 
+   1. Use Key Protect Dedicated (single‑tenant, KYOK‑enabled with KMIP for VMware) in regions where it is available. 
+   2. Use Key Protect Multi‑Tenant in regions where the Dedicated tier is not available. 
 2. Prepare Your Environment 
-   a. Review the HPCS to Key Protecet Migration guide
-   b. Create a Key Protect instance in your development or test environment. 
+   1. Review the HPCS to Key Protecet Migration guide
+   2. Create a Key Protect instance in your development or test environment. 
    For test purposes we recommend to set up a Cloud Object Storage instance encrypted with a key from Hyper Protect Crypto Services, to get familiar with the migration tool once it is available 
 3. Plan and Execute Migration 
-   a. Use the IBM Cloud migration tools to move keys from HPCS to Key Protect Dedicated or Multi‑Tenant tiers. You can test the tool with the COS instance setup in step 2. 
+   1. Use the IBM Cloud migration tools to move keys from HPCS to Key Protect Dedicated or Multi‑Tenant tiers. You can test the tool with the COS instance setup in step 2. 
    
    Migration tools will be available on March 20, 2026.
    {: Note}
