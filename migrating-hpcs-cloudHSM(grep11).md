@@ -101,7 +101,7 @@ Many HSM deployments or key attributes prohibit raw key export. Hence, wrapping-
 ### Deploy IBM Crypto Appliance
 {: #deploy-ibm-crypto-appliance}
 
-Steps 
+To deploy IBM Crypto Appliance, perform the following steps 
 :   1. Install and rack the crypto appliance 
     2. Perform initial trusted initialization (TKE or equivalent) 
     3. Configure:
@@ -110,10 +110,10 @@ Steps
        3. Audit logging 
 
    
-### Deploy HPVS OnPremises
+### Deploy HPVS On-Premises
 {: #deploy-hpvs-onpremises}
 
-Steps 
+To deploy HPVS On-Premises, perform the following steps 
 :   1. Install HPVS infrastructure
     2. Configure secure networking between HPVS and crypto appliance 
     3. Enable confidential workload support 
@@ -133,7 +133,7 @@ To enable GREP11 service, perform the following steps
 ### Policy Alignment
 {: #policy-alignment}
 
-Ensure consistency between cloud and onprem environments 
+Ensure consistency between cloud and on-premises environments 
 :   - Key usage policies 
     - Rotation requirements 
     - Audit and logging rules 
@@ -164,7 +164,7 @@ If allowed by policy
 ### Option B: ReKey and Data ReEncryption (Recommended)
 {: #optionb-rekey-and-data-reencryption}
 
-Steps 
+Perform the following steps 
 :   1. Generate new keys in onprem GREP11
     2. Update applications to support dual-key operation 
     3. Gradually re-encrypt data with new keys 
