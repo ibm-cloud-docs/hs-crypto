@@ -8,6 +8,7 @@ keyword:
   cc_short: CC
   cc_full: Crypto Connect
   cat_short: CC CAT
+  cat_full: Crypto Connect CAT
   cat_agent_short: CAT Agent
   kmg_agent_short: UKO KMG Agent
   cdi_full: IBM Z Crypto Discovery and Inventory
