@@ -51,9 +51,9 @@ Action Required
    1. Move to IBM Cloud Key Protect Dedicated-- a single‑tenant, KYOK‑enabled service for centralized key management and KMIP for VMware support, where available. In other regions, migrate to the Key Protect Multi‑Tenant tier.  
        - Prepare your environment by reviewing the migration guide. Also, create a Key Protect instance in your dev or test environment and set up a Cloud Object Storage instance encrypted with an HPCS key.
        - Use IBM Cloud’s migration tools: available by March 20, 2026 to migrate keys from HPCS to Key Protect Dedicated or Multi‑Tenant tiers. 
-   2. **Use On-Premises migration options** for scenarios with IBM Cloud Hyper Protect Crypto Services CloudHSM (GREP11) and Unified Key Orchestrator requirements. 
+   2. **Use On-Premises migration options**  for scenarios with IBM Cloud Hyper Protect Crypto Services CloudHSM (GREP11) and Unified Key Orchestrator requirements. 
     
-Please refer to our [FAQ](/docs/hs-crypto?topic=hs-crypto-faqs-deprecation-of-ibm-cloud-hyper-protect-crypto-services)) as described. 
+Please refer to our [FAQ](/docs/hs-crypto?topic=hs-crypto-faqs-deprecation-of-ibm-cloud-hyper-protect-crypto-services) as described. 
 
 For assistance, please reach out to your IBM Representative or Customer Service Manager, who will coordinate with the Z Client Acceleration team for technical matters.  
 
