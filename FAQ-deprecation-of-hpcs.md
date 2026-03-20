@@ -115,7 +115,7 @@ Some migration options shift from managed cloud service to customer‑managed de
 1. HPCS → Key Protect Migration Guide (Refer to [KP-Dedicated Migration Guide](/docs/key-protect?topic=key-protect-migrate-st))
 2. GREP11/PKCS#11 On‑prem Migration Guide (Refer to [GREP11/PKCS#11 Migration Guide](/docs/hs-crypto?topic=hs-crypto-migrate-hpcs-to-CCRT)) 
 3. UKO Migration Guide (Refer to [UKO Migration Guide](/docs/hs-crypto?topic=hs-crypto-migration-guide)) 
-4. ServiceNow request templates (Refer to [support during the transition](/docs/hs-crypto?topic=hs-crypto-faqs-deprecation-of-ibm-cloud-hyper-protect-crypto-services#16-support-during-the-transition){: external}) 
+4. ServiceNow request templates (Refer to [support during the transition](./FAQ-deprecation-of-hpcs.md#16-support-during-the-transition) 
 
 ## 11. What does this mean for customers?
 {: #what-does-this-mean-for-customers}
@@ -214,7 +214,7 @@ Help with IBM Cloud Hyper Protect Crypto Services migration
 
 
 **For any additional matters**
--**IBM Cloud Hyper Protect Crypto Services**: Christopher Smith – chsmith@de.ibm.com 
+- **IBM Cloud Hyper Protect Crypto Services**: Christopher Smith – chsmith@de.ibm.com 
 - **KeyProtect**: Damneet Basak - damneet@us.ibm.com 
 
 ## 17. Recommended next steps for customers
