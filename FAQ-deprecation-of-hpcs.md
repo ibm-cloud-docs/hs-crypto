@@ -22,8 +22,8 @@ subcollection: hs-crypto
 IBM Cloud is withdrawing (service deprecation) IBM Cloud Hyper Protect Crypto Services (HPCS) across selected regions. This aligns with IBM’s strategy to deliver a more consistent experience across key management services and to unify BYOK/KYOK capabilities via IBM Cloud Key Protect Dedicated. This withdrawal affects all HPCS capabilities, including CloudKMS (KMIP), CloudHSM/GREP11, and Unified Key Orchestrator.
 
 Impacted regions
-:   - Dallas (us-east)
-    - Washington D.C. (us-south)
+:   - Dallas (us-south)
+    - Washington D.C. (us-east)
     - Toronto (ca-tor)
     - Frankfurt (eu-de)
     - London (eu-gb)
@@ -62,9 +62,9 @@ Impacted regions
    1. Migrate to on-premises: UKO for Containers or UKO for z/OS. 
 
 ## 5. Migration tooling availability
-IBM Cloud migration tooling for HPCS → Key Protect is planned to be available on March 20, 2026. CSMs should factor this date into migration planning and avoid committing to earlier tooling availability. 
+IBM Cloud migration tooling for HPCS → Key Protect is planned to be available on March 20, 2026.  
 
-## 6. How to prepare(in a phased approach)?
+## 6. How to prepare (in a phased approach)?
 
 1. Understand changes and target options going forward 
 2. Assess affected assets/services and cryptographic dependencies 
@@ -94,80 +94,56 @@ Please refer to our detailed Migration Guide for further details (Migration Guid
 
 ## 8. On‑premises migration (CloudHSM / UKO) 
 
-- Review the detailed migration guide for your use case (GREP11/PKCS#11 or UKO). 
-- Assess and validate datacenter requirements and capacity. 
-- Build a complete crypto asset/dependency inventory to manage interdependencies. 
-- Plan for operational model changes (people/process/monitoring). 
-- Provision target environment and conduct stability/performance testing.x 
+1. Review the detailed migration guide for your use case (GREP11/PKCS#11 or UKO). 
+2. Assess and validate datacenter requirements and capacity. 
+3. Build a complete crypto asset/dependency inventory to manage interdependencies. 
+4. Plan for operational model changes (people/process/monitoring). 
+5. Provision target environment and conduct stability/performance testing.x 
 
 On‑prem migration may require purchase of hardware, software, and services.
 {: Note} 
 
 ## 9. Roles, responsibilities, and financial planning 
 
-Customers are responsible for planning and executing migration activities based on their current HPCS usage. CSMs should proactively engage to support planning and risk identification. 
+Customers are responsible for planning and executing migration activities based on their current HPCS usage. Please work with your Customer Success Manager (CSM) on planning and risk identification. 
 
 Some migration options shift from managed cloud service to customer‑managed deployments; budget and financial planning may be required. 
 
 ## 10. IBM support during the transition 
 
-Primary path
-: raise development/support requests via ServiceNow using prepared templates. 
-
-Internal Slack channel
-: #ask-hyper-protect. 
+1. Work with your Customer Success Manager (CSM)
+2. Raise Support Tickets through ServiceNow using prepared templates.(Refer to [support during the transition](#17-support-during-the-transition)) 
 
 Contacts
 : Christopher Smith (HPCS) and Damneet Basak (Key Protect Dedicated / tooling). 
 
-## 11. CSM actions (CTA) 
 
-- Review all client deployments using affected HPCS services. 
-- Map each workload to a supported target (Key Protect tier or on‑prem) and a proposed timeline. 
-- After the external announcement, contact customers to inform them and align on next steps. 
-- Track migration progress, risks, and issues; escalate via internal paths as needed. 
+## 11. References (internal) 
 
-## 12. References (internal) 
+1. HPCS → Key Protect Migration Guide (Refer to [KP-Dedicated Migration Guide](/docs/key-protect?topic=key-protect-migrate-st))
+2. GREP11/PKCS#11 On‑prem Migration Guide (Refer to [GREP11/PKCS#11 Migration Guide](/docs/hs-crypto?topic=hs-crypto-migrate-hpcs-to-CCRT)) 
+3. UKO Migration Guide (Refer to [UKO Migration Guide](/docs/hs-crypto?topic=hs-crypto-migration-guide)) 
+4. ServiceNow request templates (Refer to [support during the transition](#17-support-during-the-transition)) 
 
-- HPCS → Key Protect Migration Guide (internal link) 
-- GREP11/PKCS#11 On‑prem Migration Guide (internal link) 
-- UKO Migration Guide (internal link) 
-- ServiceNow request templates (internal link) 
-
-## 13. What does this mean for customers?
+## 12. What does this mean for customers?
 {: #what-does-this-mean-for-customers}
 
-Customers are responsible for planning and executing their migration based on how they currently use HPCS. Depending on the use case, this may include migrating to Key Protect (Dedicated or multitenant) or moving to an onpremises deployment for CloudHSM or UKO scenarios. Migration tooling is planned to become available starting March 20, 2026. 
+Customers are responsible for planning and executing their migration based on how they currently use HPCS. Depending on the use case, this may include migrating to Key Protect Dedicated Migration tooling is planned to become available starting March 20, 2026 or moving to an onpremises deployment for CloudHSM or UKO scenarios.  
  
 
-## 14. Why is IBM Cloud retiring Hyper Protect Crypto Services?
-{: #why-is-ibm-cloud-retiring-hyper-protect-crypto-services} 
-
-IBM Cloud is evolving its key management portfolio to deliver a more consistent customer experience and clearer choices between multi‑tenant BYOK and single‑tenant KYOK.  
-
-IBM is offering a set of Migration Options depending on use case, and customer operational requirements. 
-
-## 15. What is expected from you?
-{: #what-is-expected-from-you}
-
-  1. Identify all customer accounts using affected HPCS services 
-  2. Review supported migration paths and timelines 
-  3. Proactively engage customers after the external announcement 
-  4. Track migration progress and escalate risks as needed 
-
-## 16. What happens if no action is taken?
+## 13. What happens if no action is taken?
 {: #what-happens-if-no-action-is-taken} 
 
 After March 20, 2027, any remaining HPCS instances will be terminated and cryptographic material will be deleted. Applications depending on HPCS will stop functioning. Customers will receive advance notifications. 
 
-## 17. Which migration options are available by Use Case?
+## 14. Which migration options are available by Use Case?
 {: which-migration-options-are-available-by-use-case}
 
 CloudKMS and KMIP for VMware
 :   - IBM Cloud Key Protect Dedicated (single‑tenant, supports Keep Your Own Key; available in selected regions)
     - IBM Cloud Key Protect Multi‑Tenant (all regions) 
 
-Migration tooling will support key migration from HPCS to Key Protect. For more details, refer to HPCS‑to‑Key Protect migration guide.
+Migration tooling will support key migration from HPCS to Key Protect. For more details, refer to [HPCS‑to‑KP-Dedicated Migration Guide](/docs/key-protect?topic=key-protect-migrate-st).
 
 
 CloudHSM (GREP11 and PKCS#11)
@@ -188,14 +164,14 @@ If the customer is using ISV applications that are affected by the migration, th
 
 |Product / Capability |Alternative / Recommendation|
 |---------------------|----------------------------|
-|IBM Cloud Hyper Protect Crypto Services \n IBM CloudKMS including KMIP for vmware  | Migrate to \n - IBM Cloud Key Protect Dedicated (select regions) \n - IBM Cloud Key Protect Multi-Tenant (all regions). For more information, refer to [KP-Dedicated Migration Guide](/docs/key-protect?topic=key-protect-migrate-st) |
+|IBM Cloud Hyper Protect Crypto Services \n IBM CloudKMS including KMIP for vmware  | Migrate to \n - IBM Cloud Key Protect Dedicated (select regions). For more information, refer to [KP-Dedicated Migration Guide](/docs/key-protect?topic=key-protect-migrate-st) \n - IBM Cloud Key Protect Multi-Tenant (all regions). For more information, refer to [KP-Dedicated Migration Guide](/docs/key-protect?topic=key-protect-migrate-st) |
 |IBM Cloud Hyper Protect Crypto Services \n CloudHSM / GREP11 | Migrate to \n - On-premises deployment (if you plan to continue IBM LinuxONE technology). For more information, refer to [GREP11/PKCS#11 Migration Guide](/docs/hs-crypto?topic=hs-crypto-migrate-hpcs-to-CCRT). \n - IBM Cloud Key Protect Dedicated PKCS#11 planed for 2Q 2026 (*requires migration to PKCS#11). For more information, refer to [KP-Dedicated Migration Guide](/docs/key-protect?topic=key-protect-migrate-st).| 
 | IBM Cloud Hyper Protect Crypto Services \n CloudHSM PKCS#11 | Migrate to \n - On-premises deployment (if you plan to continue IBM LinuxONE technology). For more information, refer to [KP-Dedicated Migration Guide](/docs/key-protect?topic=key-protect-migrate-st). \n - IBM Cloud Key Protect Dedicated PKCS#11 planned for 2Q 2026. For more information, refer to [KP-Dedicated Migration Guide](/docs/key-protect?topic=key-protect-migrate-st).|
-|IBM Cloud Hyper Protect Crypto Services \n Unified Key Orchestrator| Migrate to \n - on premises deployment \n - Unified Key Orchestrator for Containers \n - Unified Key Orchestrator for z/OS. For more information, refer to [UKO Migration Guide](/docs/hs-crypto?topic=hs-crypto-migration-guide)| 
+|IBM Cloud Hyper Protect Crypto Services \n Unified Key Orchestrator| Migrate to \n - on premises deployment \n - Unified Key Orchestrator for Containers \n - Unified Key Orchestrator for z/OS. \n For more information, refer to [UKO Migration Guide](/docs/hs-crypto?topic=hs-crypto-migration-guide)| 
 {: caption="Product/Capability and their Alternative / Recommendation"}
 
 
-## 18. How can I migrate my CloudKMS and KMIP for vmware keys to IBM Cloud Key Protect (Dedicated) – High level? 
+## 15. How can I migrate my CloudKMS and KMIP for vmware keys to IBM Cloud Key Protect (Dedicated) – High level? 
 **Migration Checklist for Customers for IBM Cloud Key Protect**
  1. Choose Your Target Key Protect Tier
     1. **Use Key Protect Dedicated** (single‑tenant, KYOK‑enabled with KMIP for VMware) in regions where it is available.
@@ -211,7 +187,7 @@ If the customer is using ISV applications that are affected by the migration, th
     {: note}
 
 For further details, please refer to [KP-Dedicated Migration Guide](/docs/key-protect?topic=key-protect-migrate-st).
-## 19. How can I migrate to on‑premises environments?
+## 16. How can I migrate to on‑premises environments?
 
 On‑premises migrations represent a significant transformation, including new operational responsibilities, hardware/software procurement, and updated security/compliance processes. Perform a full cryptographic asset inventory, review applicable migration guides, and plan a phased migration with testing and validation. 
 
@@ -220,7 +196,8 @@ On‑premises migrations represent a significant transformation, including new o
 2. IBM Cloud Hyper Protect Crypto Services CloudHSM to on-prem migration guide. Refer [IBM Cloud Hyper Protect Crypto Services CloudHSM to on-prem migration guide](/docs/hs-crypto?topic=hs-crypto-migrate-hpcs-to-CCRT)
 
 
-## 20. Support during the transition
+## 17. Support during the transition
+{: #support-during-the-transition}
 
 IBM provides documentation and expert assistance throughout the migration period. Engage your IBM account team or Customer Success Manager, and raise technical requests via ServiceNow. 
 
@@ -237,7 +214,7 @@ If the appropriate point of contact is unknown, please open an IBM Cloud Support
 -**IBM Cloud Hyper Protect Crypto Services**: Christopher Smith – chsmith@de.ibm.com 
 - **KeyProtect**: Damneet Basak - damneet@us.ibm.com 
 
-## 21. Recommended next steps for customers
+## 18. Recommended next steps for customers
  
 1. Perform inventory of all applications and services using HPCS. If ISV applications are affected, coordinate migration (planning and implementation) with the ISV.
 2. Select target platform per use case. 
