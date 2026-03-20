@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-11"
+lastupdated: "2025-10-13"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -52,7 +52,7 @@ Envelope encryption is the practice of encrypting data with a DEK and then encry
 
 This section covers concepts that are related to {{site.data.keyword.hscrypto}} [Cloud Hardware Security Module (HSM) feature](/docs/hs-crypto?topic=hs-crypto-uko-overview#uko-cloud-hsm). The list starts with the most fundamental concepts. 
 
-### Hardware security module
+## Hardware security module
 {: #uko-hsm-concept}
 
 A hardware security module (HSM) is a physical device that safeguards and manages digital keys for strong authentication and provides crypto-processing. HSMs of {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} are FIPS 140-2 Level 4 certified, which is the highest level of security for cryptographic hardware. At this security level, the physical security mechanisms provide a complete envelope of protection around the cryptographic module with the intent of detecting and responding to all unauthorized attempts at physical access.
@@ -154,12 +154,12 @@ A driver for the smart card reader must be installed on the workstation before t
 
 The Smart Card Utility Program is one of the two applications that are installed as part of the Management Utilities. It sets up and manages the smart cards that are used by the Trusted Key Entry (TKE) application.
 
-### Trusted Key Entry application
+## Trusted Key Entry application
 {: #uko-tke-client-concept} 
 
 The Trusted Key Entry (TKE) application is one of the two applications that are installed as part of the Management Utilities. It uses smart cards to load master keys in service instances and to perform other configuration tasks for service instances.
 
-### Keep Your Own Key
+## Keep Your Own Key
 {: #uko-kyok-concept}
 
 {{site.data.keyword.hscrypto}} supports the Keep Your Own Key (KYOK) feature. You can configure the master key to take the full control of the cloud HSM, so that you have full control and authority over encryption keys that you can bring, control, and manage. No one except you have access to your encryption keys.

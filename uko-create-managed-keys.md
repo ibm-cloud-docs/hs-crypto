@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-09"
+  years: 2022, 2026
+lastupdated: "2026-02-18"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -55,7 +55,7 @@ When you select the **Create with a key template** option, you are creating a ma
 
 6. Select a key template for the key and click **Next**. You can select only one key template for a key. 
 
-7. Under **Key properties**, specify the following details of the key. 
+7. Under **Key properties**, specify the following details of the key.
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
@@ -77,7 +77,7 @@ When you select the **Create with a key template** option, you are creating a ma
     |----------------------|-----------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key. It must be 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). \n \n **Important:** If the key naming scheme is defined in the key template, you need to enter values for each custom placeholder. Each placeholder must be at least 2 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. An example of the managed key name must not exceed 50 characters in length. You can also specify the extended description for your key. Note that you cannot modify the key name after the key creation.   |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
-    | Protection level     | (Read only) Data protection level of keys to be created with the key template. \n \n **HSM-protected key** is stored and generated in a FIPS-certified Hardware Security Module. It is available in Azure Key Vault (Premium) only. This type of keys ensures the highest security. \n \n **Software-protected key** is available in both Azure Key Valut (Standard) and Key Vault (Premium). You can choose this level to [reduce cost](https://azure.microsoft.com/en-us/pricing/details/key-vault/){: external}.  |
+    | Protection level     | (Read only) Data protection level of keys to be created with the key template. \n \n **HSM-protected key** is stored and generated in a FIPS-certified Hardware Security Module. It is available in Azure Key Vault (Premium) only. This type of keys ensures the highest security. \n \n **Software-protected key** is available in both Azure Key Vault (Standard) and Key Vault (Premium). You can choose this level to [reduce cost](https://azure.microsoft.com/en-us/pricing/details/key-vault/){: external}.  |
     | Key algorithm        | (Read only) The encryption algorithm to encrypt data for the key.     |
     | Key length           | (Read only) The number of bits that represents the encryption strength of the key.   |
     | State                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
@@ -92,7 +92,7 @@ When you select the **Create with a key template** option, you are creating a ma
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
-    | Key name             | A unique, human-readable name for easy identification of your key. It must be 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (_-).  \n \n **Important:** If the key naming scheme is defined in the key template, you need to enter values for each custom placeholder. Each placeholder must be at least 2 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. An example of the managed key name must not exceed 50 characters in length. You can also specify the extended description for your key. Note that you cannot modify the key name after the key creation.  |
+    | Key name             | A unique, human-readable name for easy identification of your key. It must be 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (_-).  \n \n **Important:** If the key naming scheme is defined in the key template, you need to enter values for each custom placeholder. Each placeholder must be at least 2 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. An example of the managed key name must not exceed 50 characters in length. You can also specify the extended description for your key. Note that you cannot modify the key name after the key creation. |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Key state                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
     | Activation date      |  Plan a date to activate the Pre-active key. It is for planning purpose only. |
@@ -139,9 +139,9 @@ When you select the **Create with a key template** option, you are creating a ma
     {: tab-group="Managed key properties with templates"}
     {: class="comparison-tab-table"}  
 
+    
 
-
-8. View the key properties defined by the selected key template and click **Next** to continue.
+8. View the key properties that are defined by the selected key template and click **Next** to continue.
 
 9. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.
 
@@ -154,7 +154,7 @@ If you are creating internal KMS keys during the master key rotation, internal K
 {: #create-managed-keys-template-api}
 {: api}
 
-You can create a managed key with key properties that are predefined by your administrator. This option ensures your key is compliant with the predefined standards. To create a managed key with a key template through the API, follow these steps:
+You can create a managed key with key properties that are predefined by your administrator. This option ensures that your key is compliant with the predefined standards. To create a managed key with a key template through the API, follow these steps:
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
    
@@ -244,7 +244,7 @@ When you select the **Create with custom properties** option, you are creating a
     |----------------------|-----------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key. It must be 1–127 characters in length. The characters can be letters (case-sensitive), digits (0–9), or hyphens (-). \n \n **Important:** If the key naming scheme is defined in the key template, you need to enter values for each custom placeholder. Each placeholder must be at least 2 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. An example of the managed key name must not exceed 50 characters in length. You can also specify the extended description for your key. Note that you cannot modify the key name after the key creation.   |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
-    | Protection level     | Data protection level of keys to be created with the key template. \n \n **HSM-protected key** is stored and generated in a FIPS-certified Hardware Security Module. It is available in Azure Key Vault (Premium) only. This type of keys ensures the highest security. \n \n **Software-protected key** is available in both Azure Key Valut (Standard) and Key Vault (Premium). You can choose this level to [reduce cost](https://azure.microsoft.com/en-us/pricing/details/key-vault/){: external}. \n \n **Note:** If you connect to an external keystore of type Azure Key Vault, you can distribute both HSM-protected keys and software-protected keys to Azure Key Vault (Premium). However, you can distribute only software-protected keys to Azure Key Vault (Standard). |
+    | Protection level     | Data protection level of keys to be created with the key template. \n \n **HSM-protected key** is stored and generated in a FIPS-certified Hardware Security Module. It is available in Azure Key Vault (Premium) only. This type of keys ensures the highest security. \n \n **Software-protected key** is available in both Azure Key Vault (Standard) and Key Vault (Premium). You can choose this level to [reduce cost](https://azure.microsoft.com/en-us/pricing/details/key-vault/){: external}. \n \n **Note:** If you connect to an external keystore of type Azure Key Vault, you can distribute both HSM-protected keys and software-protected keys to Azure Key Vault (Premium). However, you can distribute only software-protected keys to Azure Key Vault (Standard). |
     | Key algorithm        | The encryption algorithm to encrypt data for the key.     |
     | Key length           | The number of bits that represents the encryption strength of the key.   |
     | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |

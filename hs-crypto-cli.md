@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-07-23"
+lastupdated: "2025-08-18"
 
 keywords: hpcs cli, hyper protect crypto services cli, trusted key entry plug-in, cloud tke, tke plug-in, cli plug-in, tke commands, cloud tke reference, cert manager cli plug-in, key management cli, uko cli, united key orchestrator cli
 
@@ -72,6 +72,7 @@ To install the TKE CLI plug-in, follow these steps:
 
 | Command name | Description | Example |
 | ------------ | ----------- | ------- |
+|`tke cryptounit-cp`| Displays or changes the setting of a control point identified by numeric value. | `ibmcloud tke cryptounit-cp` |
 | `tke auto-init` | Automatically initializes the service instance. | `ibmcloud tke auto-init` |
 | `tke auto-mk-rotate` | Automatically rotates the master key with a randomly generated master key value in the recovery HSM. | `ibmcloud tke auto-mk-rotate` |
 | `tke auto-recover` | Automatically copies the current master key value from the recovery HSM to other crypto units in the same resource group. | `ibmcloud tke auto-recover` |

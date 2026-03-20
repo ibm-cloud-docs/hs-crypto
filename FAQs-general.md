@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-09"
+  years: 2020, 2025
+lastupdated: "2025-10-30"
 
-keywords: general frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips
+keywords: general frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security level, fips
 
 subcollection: hs-crypto
 

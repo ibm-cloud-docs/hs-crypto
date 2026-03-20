@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-10-09"
+  years: 2019, 2025
+lastupdated: "2025-08-18"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -87,7 +87,7 @@ Before you install the smart card reader driver on a Linux operating system, dow
 
 
 
-- Red Hat Enterprise Linux 8.0 and 9.0
+- Red Hat Enterprise Linux 8.0, 9.0, and 10.0
 
     1. To install packages on Red Hat Enterprise Linux and receive software updates, first register the system and attach a subscription. This can be done using the `subscription-manager` command. See [Red Hat documentation](https://access.redhat.com/solutions/253273){: external} for details.
 
@@ -130,7 +130,7 @@ Before you install the smart card reader driver on a Linux operating system, dow
         ```
         {: pre}
 
-- Ubuntu 22.04.1 LTS
+- Ubuntu 22.04 LTS and 24.04 LTS
 
     1. Install the `pcscd` and `libccid` packages with the following command:
 
@@ -156,7 +156,7 @@ Two applications are provided as part of the Management Utilities: the [Smart Ca
 
 
 
-To install the applications on Red Hat Enterprise Linux 8.0, Red Hat Enterprise Linux 9.0, or Ubuntu 22.04.1 LTS, complete the following steps:
+To install the applications on Red Hat Enterprise Linux 8.0, Red Hat Enterprise Linux 9.0, Red Hat Enterprise Linux 10.0, Ubuntu 22.04 LTS, or Ubuntu 24.04 LTS, complete the following steps:
 
 1. Download the latest installation file, `cloudtke.bin`, from [GitHub](https://github.com/IBM-Cloud/hpcs-management-utilities/releases){: external} to your workstation.
 2. (Optional) For maximum security, verify the integrity and authenticity of the Management Utilities installation file `cloudtke.bin` before you install or update the applications.
@@ -194,6 +194,8 @@ To install the applications on Red Hat Enterprise Linux 8.0, Red Hat Enterprise 
         When the verification is successful, `Response verify OK` and `signing_cert.pem: good` are displayed in the output.
 
     5. If the verification fails, cancel the installation and [contact IBM for support](/docs/hs-crypto?topic=hs-crypto-getting-help). Otherwise, proceed with the following steps.
+ 3. To install packages on Red Hat Enterprise Linux 8.0, Red Hat Enterprise Linux 9.0, and Red Hat Enterprise Linux 10.0 and to receive software updates, you must register the system and attach a subscription.  This can be done using the subscription-manager command.  
+ See [Red Hat documentation](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10) for details."
  
 3. From the command line, enter the directory that the downloaded installation file is located, and perform the following steps to install the applications:
 
@@ -212,6 +214,8 @@ To install the applications on Red Hat Enterprise Linux 8.0, Red Hat Enterprise 
         {: pre}
 
     3. When prompted, choose the installation folder for the Management Utilities and then select the **Don't create links** option.
+   
+To install packages on Red Hat Enterprise Linux and receive software updates, you must register the system and attach a subscription.  This can be done using the subscription-manager command.  For more details, see [Red Hat documentation] (https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10).
 
 ## Step 4: Configure smart cards with the Smart Card Utility Program
 {: #configure-smart-card-utility}

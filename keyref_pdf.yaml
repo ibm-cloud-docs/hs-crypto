@@ -1,0 +1,20 @@
+keyword:
+  uko_full: Unified Key Orchestrator
+  uko_short_wp: 
+  uko_workflow_url: https://github.com/cicsabel/zorow/blob/UKO-workflow-introduction
+  ekmf_short: EKMF
+  uko_for_sr_short: EKMF Workstation
+  uko_short: UKO
+  cc_short: CC
+  cc_full: Crypto Connect
+  cat_short: CC CAT
+  cat_full: Crypto Connect CAT
+  cat_agent_short: CAT Agent
+  kmg_agent_short: UKO KMG Agent
+  cdi_full: IBM Z Crypto Discovery and Inventory
+  cdi_short: zCDI
+  ekmf_ws: EKMF Workstation
+  acsp_short: CC ACSP
+  acsp_full: Crypto Connect ACSP
+  acsp_full_power: IBM&reg; Unified Key Orchestrator Crypto Connect ACSP for IBM Power
+  acsp_full_zlinux: IBM&reg; Unified Key Orchestrator Crypto Connect ACSP for IBM Z and LinuxONE
