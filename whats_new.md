@@ -57,7 +57,7 @@ Please refer to our [FAQ](/docs/hs-crypto?topic=hs-crypto-faqs-deprecation-of-ib
 
 For assistance, please reach out to your IBM Representative or Customer Service Manager, who will coordinate with the Z Client Acceleration team for technical matters.  
 
-Consider Expert-Labs-Services to help guide and support this migration. 
+Consider Expert-Labs-Services to help, guide, and support this migration. 
 {: tip}
   
 If the appropriate point of contact is unknown, please open an IBM Cloud Support ticket.   
