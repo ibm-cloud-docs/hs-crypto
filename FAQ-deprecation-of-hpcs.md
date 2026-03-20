@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026, 2026
-lastupdated: "2026-02-26"
+lastupdated: "2026-03-20"
 
 keywords: security for Hyper Protect Crypto Services, compliance for Hyper Protect Crypto Services, FAQ for deprecation of Hyper Protect Crypto Services, rules for Hyper Protect Crypto Services,
 
@@ -177,7 +177,7 @@ CloudHSM (GREP11 and PKCS#11)
 :   - On‑premises deployment on IBM LinuxONE technology
     - IBM Cloud Key Protect Dedicated PKCS#11 (planned availability: Q2 2026) 
 
-Follow [HPCS to HPVS on-prem migration guide](/docs/hs-crypto?topic=hs-crypto-migrate-hpcs-to-hpvs).
+Follow [HPCS to CCRT migration guide](/docs/hs-crypto?topic=hs-crypto-migrate-hpcs-to-hpvs).
   
 
 Unified Key Orchestrator

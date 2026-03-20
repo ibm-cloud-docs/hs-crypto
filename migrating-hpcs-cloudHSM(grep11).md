@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026, 2026
-lastupdated: "2026-02-26"
+lastupdated: "2026-03-20"
 
 keywords: security for Hyper Protect Crypto Services, compliance for Hyper Protect Crypto Services, Migration guide for deprecation of Hyper Protect Crypto Services, rules for Hyper Protect Crypto Services,
 
@@ -13,10 +13,10 @@ subcollection: hs-crypto
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Migrating {{site.data.keyword.hscrypto}} (HPCS) to Onpremises IBM Hyper Protect Virtual Server (HPVS) 
-{: #migrate-hpcs-to-hpvs}
+# Migrating {{site.data.keyword.hscrypto}} (HPCS) to Confidential Computing Container Runtime (CCRT) 
+{: #migrate-hpcs-to-CCRT}
 
-This topic describes a structured approach for migrating cryptographic workloads, keys, and applications from  **IBM Cloud Hyper Protect Crypto Services (HPCS)** using CloudHSM to **Onpremises IBM Hyper Protect Virtual Server (HPVS)** with IBM Crypto Appliances and GREP11. 
+This topic describes a structured approach for migrating cryptographic workloads, keys, and applications from  **IBM Cloud Hyper Protect Crypto Services (HPCS)** using CloudHSM to **Confidential Computing Container Runtime (CCRT)** with IBM Crypto Appliances and GREP11. 
 
 This migration topics is intended for security architects, infrastructure engineers, and application owners responsible for HSM-backed key management and cryptographic operations. 
 {: note}
@@ -35,14 +35,14 @@ Key characteristics
         - GREP11 
         - Enterprise Key Management APIs 
 
-### Target: OnPremises HPVS + Crypto Express Network API 
-{: #Target-onprem-hpvs+crpto-api}
+### Target: Confidential Computing Container Runtime (CCRT) + Crypto Express Network API 
+{: #Target-onprem-ccrt+crpto-api}
 
 Key characteristics
 :   - Customer-controlled onpremises environment 
     - IBM Crypto Appliances (For example, CEX or dedicated Crypto Express hardware) 
     - GREP11 server exposes GREP11 interface to workloads 
-    - HPVS provides secure, isolated virtual servers with:  
+    - CCRT provides secure, isolated virtual servers with:  
       - Secure boot 
       - Memory encryption 
       - Confidential computing guarantees 
@@ -110,13 +110,13 @@ To deploy IBM Crypto Appliance, perform the following steps
        3. Audit logging 
 
    
-### Deploy HPVS On-Premises
-{: #deploy-hpvs-onpremises}
+### Deploy CCRT On-Premises
+{: #deploy-ccrt-onpremises}
 
-To deploy HPVS On-Premises, perform the following steps 
-:   1. Install HPVS infrastructure
-    2. Configure secure networking between HPVS and crypto appliance 
-    3. Enable confidential workload support 
+To deploy CCRT, perform the following steps 
+:   1. Install CCRT infrastructure
+    1. Configure secure networking between CCRT and crypto appliance 
+    2. Enable confidential workload support 
 
 
 ### Enable GREP11 Service
@@ -125,7 +125,7 @@ To deploy HPVS On-Premises, perform the following steps
 To enable GREP11 service, perform the following steps
 :   1. Configure GREP11 endpoint on the crypto appliance 
     2. Define GREP11 domains and roles 
-    3. Validate connectivity from HPVS workloads 
+    3. Validate connectivity from CCRT workloads 
 
 
 ## Phase 3 – Cryptographic Configuration Alignment
@@ -201,7 +201,7 @@ Validate
 ### Cutover Execution
 {: #cutover-execution}
     - Freeze key changes in HPCS 
-    - Switch production traffic to onprem HPVS 
+    - Switch production traffic to CCRT 
     - Monitor logs and metrics closely
 
 ### Decommission Cloud Resources
@@ -232,4 +232,4 @@ Validate
 ## Summary
 {: #summary}
 
-Migrating from IBM Cloud HPCS to an onpremises HPVS solution with Crypto Appliance and GREP11 provides greater control, data residency assurance, and isolation. A phased migration approach focusing on policy alignment, secure key handling, and thorough validation minimizes risk and ensures continuity of cryptographic operations. 
+Migrating from IBM Cloud HPCS to CCRT solution with Crypto Appliance and GREP11 provides greater control, data residency assurance, and isolation. A phased migration approach focusing on policy alignment, secure key handling, and thorough validation minimizes risk and ensures continuity of cryptographic operations. 
