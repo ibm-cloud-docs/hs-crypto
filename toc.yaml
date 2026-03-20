@@ -133,6 +133,7 @@ toc:
           label: Tutorials on Bring Your Own HSM
           topics:
           - tutorials/byohsm-tutorial.md
+      - uko-migration.md
   - navgroup:
       id: howto
       topics:
