@@ -42,11 +42,9 @@ Impacted regions
 
 | Milestone | Date |
 |-----------|------|
-|**Internal announcement** | Now |
-|**External announcement** | Delayed |
-|**End of marketing**| To be updated|
-|**Customer migration window**:| To be updated|
-|**End of support / service shutdown**: | To be updated|
+|**External announcement** | March 20, 2026 |
+|**End of marketing**| March 28, 2026 |
+|**End of support / service shutdown**: | March 20, 2027 |
 {: caption="Key dates and milestones"}
 
 
@@ -190,7 +188,7 @@ Follow [UKO to UKO on-prem migration guide](/docs/hs-crypto?topic=hs-crypto-migr
 |---------------------|----------------------------|
 |IBM Cloud Hyper Protect Crypto Services \n IBM CloudKMS including KMIP for vmware  | Migrate to \n - IBM Cloud Key Protect Dedicated (select regions) \n - IBM Cloud Key Protect Multi-Tenant (all regions). For more information, refer to KP-Dedicated Migration Guide.|
 |IBM Cloud Hyper Protect Crypto Services \n CloudHSM / GREP11 | Migrate to \n - On-premises deployment (if you plan to continue IBM LinuxONE technology). For more information, refer to [GREP11/PKCS#11 Migration Guide](/docs/hs-crypto?topic=hs-crypto-migrate-hpcs-to-hpvs). \n - IBM Cloud Key Protect Dedicated PKCS#11 planed for 2Q 2026 (*requires migration to PKCS#11). For more information, refer to KP-Dedicated Migration Guide.| 
-| IBM Cloud Hyper Protect Crypto Services \n CloudHSM PKCS#11 | Migrate to \n - On-premises deployment (if you plan to continue IBM LinuxONE technology). For more information, refer to [GREP11/PKCS#11 Migration Guide](/docs/hs-crypto?topic=hs-crypto-migrate-hpcs-to-hpvs). \n - IBM Cloud Key Protect Dedicated PKCS#11 planned for 2Q 2026. For more information, refer to KP-Dedicated Migration Guide|
+| IBM Cloud Hyper Protect Crypto Services \n CloudHSM PKCS#11 | Migrate to \n - On-premises deployment (if you plan to continue IBM LinuxONE technology). For more information, refer to KP-Dedicated Migration Guide. \n - IBM Cloud Key Protect Dedicated PKCS#11 planned for 2Q 2026. For more information, refer to KP-Dedicated Migration Guide|
 |IBM Cloud Hyper Protect Crypto Services \n Unified Key Orchestrator| Migrate to \n - on premises deployment \n - Unified Key Orchestrator for Containers \n - Unified Key Orchestrator for z/OS. For more information, refer to [UKO Migration Guide](/docs/hs-crypto?topic=hs-crypto-migration-guide)| 
 {: caption="Product/Capability and their Alternative / Recommendation"}
 
