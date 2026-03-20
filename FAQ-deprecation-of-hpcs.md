@@ -110,12 +110,12 @@ Customers are responsible for planning and executing migration activities based 
 Some migration options shift from managed cloud service to customer‑managed deployments; budget and financial planning may be required. 
 
 
-## 10. References (internal) 
+## 10. References 
 
 1. HPCS → Key Protect Migration Guide (Refer to [KP-Dedicated Migration Guide](/docs/key-protect?topic=key-protect-migrate-st))
 2. GREP11/PKCS#11 On‑prem Migration Guide (Refer to [GREP11/PKCS#11 Migration Guide](/docs/hs-crypto?topic=hs-crypto-migrate-hpcs-to-CCRT)) 
 3. UKO Migration Guide (Refer to [UKO Migration Guide](/docs/hs-crypto?topic=hs-crypto-migration-guide)) 
-4. ServiceNow request templates (Refer to [support during the transition](/docs/hs-crypto?topic=hs-crypto-faqs-deprecation-of-ibm-cloud-hyper-protect-crypto-services#16-support-during-the-transition)) 
+4. ServiceNow request templates (Refer to [support during the transition](/docs/hs-crypto?topic=hs-crypto-faqs-deprecation-of-ibm-cloud-hyper-protect-crypto-services#16-support-during-the-transition){: external}) 
 
 ## 11. What does this mean for customers?
 {: #what-does-this-mean-for-customers}
