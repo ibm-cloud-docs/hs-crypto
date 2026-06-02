@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2025
-lastupdated: "2025-04-09"
+  years: 2022, 2026
+lastupdated: "2026-06-02"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -16,8 +16,6 @@ subcollection: hs-crypto
 
 
 
-
-{{site.data.keyword.attribute-definition-list}}
 
 # Deleting vaults
 {: #delete-vaults}

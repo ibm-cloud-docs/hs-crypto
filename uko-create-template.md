@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-02-19"
+lastupdated: "2026-06-02"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -14,8 +14,6 @@ subcollection: hs-crypto
 
 
 
-
-{{site.data.keyword.attribute-definition-list}}
 
 # Creating key templates
 {: #create-template}
