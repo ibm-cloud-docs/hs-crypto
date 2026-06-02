@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-02-18"
+lastupdated: "2026-06-02"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -11,6 +11,7 @@ subcollection: hs-crypto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 
@@ -42,20 +43,18 @@ Before you create a managed key, keep in mind the following considerations:
 When you select the **Create with a key template** option, you are creating a managed key with key properties that are predefined by your administrator. This option ensures that your key is compliant with the predefined standards. To create a managed key with a key template by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. Click **Managed keys** from the navigation to view all the available keys.
-3. To create a managed key, click **Create key**. 
+1. Click **Managed keys** from the navigation to view all the available keys.
+1. To create a managed key, click **Create key**. 
 
    
 
-4. Under **Vault**, select a vault for the key for access control, and click **Next**. 
+1. Under **Vault**, select a vault for the key for access control, and click **Next**. 
    
-   If you want to assign the key to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
+   If you want to assign the key to a new vault, click **Create vault**. For more information, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui).
 
-5. Under **Key template**, select **Create from a key template** to create a key by following predefined properties.
+1. Select a key template to create a key by following predefined properties and click **Next**. If you want to create a new template, click **Create new template**. For more information, see [Creating key templates](/docs/hs-crypto?topic=hs-crypto-create-vaults).
 
-6. Select a key template for the key and click **Next**. You can select only one key template for a key. 
-
-7. Under **Key properties**, specify the following details of the key.
+1. Under **Key properties**, specify the following details of the key and click **Next**.
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
@@ -141,9 +140,9 @@ When you select the **Create with a key template** option, you are creating a ma
 
     
 
-8. View the key properties that are defined by the selected key template and click **Next** to continue.
+1. View the key properties that are defined by the selected key template and click **Next** to continue.
 
-9. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.
+1. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.
 
 You have successfully created a managed key. 
 
@@ -158,7 +157,7 @@ You can create a managed key with key properties that are predefined by your adm
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
    
-2. Create a key template by making a `POST` call to the following endpoint.
+1. Create a key template by making a `POST` call to the following endpoint.
 
     
     
@@ -168,7 +167,7 @@ You can create a managed key with key properties that are predefined by your adm
     ```
     {: codeblock}
 
-3. Create a managed key based on the supplied template by making a `POST` call to the following endpoint.
+1. Create a managed key based on the supplied template by making a `POST` call to the following endpoint.
 
     ```
     https://<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud/api/v4/managed_keys
@@ -187,18 +186,18 @@ You can create a managed key with key properties that are predefined by your adm
 When you select the **Create with custom properties** option, you are creating a managed key from scratch. This option gives you the flexibility to create a customized key with full control by yourself. To create a managed key with custom properties by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. Click **Managed keys** from the navigation to view all the available keys.
-3. To create a managed key, click **Create key**.
+1. Click **Managed keys** from the navigation to view all the available keys.
+1. To create a managed key, click **Create key**.
    
    
    
-4. Under **Vault**, select a vault for the key for access control, and click **Next**. 
+1. Under **Vault**, select a vault for the key for access control, and click **Next**.
    
    If you want to assign the key to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
 
-5. Under **Key template**, select **Create with custom properties** to create a key without a key template.
+1. Under **Key template**, select **Create with custom properties** to create a key without a key template.
 
-6. Under **Keystore type**, select one of the following keystore types depending on which type of keystore you want to create the key in. And then, click **Next**. 
+1. Under **Keystore type**, select one of the following keystore types depending on which type of keystore you want to create the key in. And then, click **Next**.
 
     - **AWS Key Management Service**: Create a key to be used and stored in an AWS Key Management Service instance.
     - **Azure Key Vault**: Create a key to be used and stored in an Azure Key Vault.
@@ -211,7 +210,7 @@ When you select the **Create with custom properties** option, you are creating a
    After a keystore type is selected, you can activate the key in keystores of this type only. If you select **IBM Cloud KMS**, the created key is a root key that can be used for [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) .
    {: note}
 
-7. Under **Keystores**, you can select one or multiple keystores to activate the managed key in. Activating a key in multiple keystores enables redundancy.
+1. Under **Keystores**, you can select one or multiple keystores to activate the managed key in. Activating a key in multiple keystores enables redundancy.
 
     
     If there are no existing keystores, you can click **Add keystore** to [create internal KMS keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores) or [connect to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores). The corresponding keystore type is selected for you. 
@@ -222,7 +221,7 @@ When you select the **Create with custom properties** option, you are creating a
     You can use the key for encryption or decryption only after it is activated in at least one keystore. 
     {: important}
 
-8. Under **Key properties**, specify the following details of the key. Click **Next** to continue when you are done. 
+1. Under **Key properties**, specify the following details of the key. Click **Next** to continue when you are done. 
 
     |       Property	      |                         Description                       |
     |----------------------|-----------------------------------------------------------|
@@ -308,11 +307,10 @@ When you select the **Create with custom properties** option, you are creating a
 
 
 
-9. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.
+1. Under **Summary**, view the summary of your key, and then click **Create key** to confirm.
 
 You have successfully created a managed key. 
 
- 
 If you are creating internal KMS keys during the master key rotation, internal KMS keys can still be created successfully. However, an **Out of sync** flag is displayed next to the key state. For each of these keys, you can sync keys by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync key** after the master key rotation is completed. 
 {: note}
 
@@ -325,7 +323,7 @@ You can create a managed key from scratch. This option gives you the flexibility
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
    
-2. Create a key template by making a `POST` call to the following endpoint.
+1. Create a key template by making a `POST` call to the following endpoint.
     
     ```
     https://<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud/api/v4/templates
@@ -333,7 +331,7 @@ You can create a managed key from scratch. This option gives you the flexibility
     ```
     {: codeblock}
 
-3. Create a managed key based on the supplied template by making a `POST` call to the following endpoint.
+1. Create a managed key based on the supplied template by making a `POST` call to the following endpoint.
 
     ```
     https://<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud/api/v4/managed_keys
