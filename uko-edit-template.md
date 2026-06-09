@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-06-02"
+lastupdated: "2026-06-09"
 
 keywords: Unified Key Orchestrator, edit key templates, key management, kms keys, UKO
 
@@ -41,7 +41,7 @@ To edit the details of a key template by using the UI, complete the following st
 
     |       Property	     |                         Description                       |
     |----------------------|-----------------------------------------------------------|  
-    | Key template name    | A unique, human-readable name for easy identification of your key template. It must be 1–100 characters in length.| 
+    | Key template name    | A unique, human-readable name for easy identification of your key template. It must be 1–100 characters in length.|
     | Description          | (Optional) An extended description for your key template, with up to 200 characters in length. |
     | Initial key state        | States of keys that are to be created with the key template, including Pre-active and Active. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}.  |
     | Activate keys after  | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only.|
